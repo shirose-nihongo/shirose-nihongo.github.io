@@ -52,3 +52,8 @@ Belum ada sumber baru yang diunduh sesi ini.
 1b. Auto-maintenance: ganti sumber ke teks resmi MLIT (perlu dicari dan diunduh).
 2. Livestock: hubungkan kosakata ke subbab, tambah soal per subbab.
 3. Industrial / Machine-Metal: perluas.
+
+## Auto Maintenance – update (sumber resmi)
+- Sumber: JASPA (cakupan & format ujian 1号/2号), MLIT, JICA「みてまなぶ！自動車整備の日本語」+ Koleksi Ilustrasi (bahan bebas unduh; diakses 2026-11). PDF sumber tidak di-commit.
+- Ditambah: +184 kosakata (am-j###, arti Indonesia orisinal), +44 soal orisinal (bab*-qx ○×, bab7-qj1..3 simulasi 実技). Berlabel latihan, bukan soal resmi (soal resmi tidak dipublikasikan).
+- Belum: soal bergambar dari halaman JICA, uji klik UI di browser.
