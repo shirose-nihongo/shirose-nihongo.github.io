@@ -43,7 +43,7 @@ async function render() {
   const aktif = true;
   return `<div class="panel"><h1>🎰 Gacha</h1>
     <p>Saldo: <b>${(st.gami?.koin || 0).toLocaleString("id-ID")} 🪙</b> (dompet satu untuk semua fitur)</p>
-    <p style="font-size:12px;color:var(--gray);">Pity: epic+ dijamin ≤ ${CONFIG.PITY_EPIC} tarikan (sekarang ${g.sinceEpic || 0}) · legendary+ dijamin ≤ ${CONFIG.PITY_LEGENDARY} (sekarang ${g.sinceLegend || 0}). Hasil diundi di server.</p>
+    <p style="font-size:12px;color:var(--gray);">Pity: epic+ dijamin ≤ ${CONFIG.PITY_EPIC} tarikan (sekarang ${g.sinceEpic || 0}) · legendary+ dijamin ≤ ${CONFIG.PITY_LEGENDARY} (sekarang ${g.sinceLegend || 0}). Hasil diundi di perangkat ini.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;">
       <button class="btn" ${busy ? "disabled" : ""} onclick="GACHA.tarik(1)">Tarik ×1 · ${CONFIG.PRICE_1.toLocaleString("id-ID")} 🪙</button>
       <button class="btn gold" ${busy ? "disabled" : ""} onclick="GACHA.tarik(10)">Tarik ×10 · ${CONFIG.PRICE_10.toLocaleString("id-ID")} 🪙</button></div>
