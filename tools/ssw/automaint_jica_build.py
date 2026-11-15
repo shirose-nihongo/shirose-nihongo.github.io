@@ -7,6 +7,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from vocab_auto import romaji
 import pymupdf
 from PIL import Image, ImageDraw, ImageFont
+from automaint_overlay import overlay
 
 ROOT = "data/ssw/auto-maintenance/"; ASS = "assets/ssw/auto-maintenance/"
 KANJI = re.compile(r"[㐀-鿿々]")
@@ -51,7 +52,9 @@ def parse():
             elif ln.startswith("~"): cur["notes"].append(ln[1:].strip())
             else:
                 x = (ln.split("|") + ["", "", "", ""])[:6]
-                cur["items"].append({"kata": x[0], "kana": x[1], "arti": x[2], "alias": x[3], "cj": x[4], "ci": x[5]})
+                it = {"kata": x[0], "kana": x[1], "arti": x[2], "alias": x[3], "cj": x[4], "ci": x[5], "desc": False}
+                if it["cj"] and not it["ci"]: it["ci"] = it["cj"]; it["cj"] = it["alias"]; it["alias"] = ""; it["desc"] = True
+                cur["items"].append(it)
     return blocks
 
 def circ(n): return "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳"[n - 1] if 1 <= n <= 20 else (str(n) + ".")
@@ -72,10 +75,11 @@ def build_text(blocks):
                 a = " (%s)" % it["alias"] if it["alias"] else ""
                 lid = "%s**%s** (%s · %s) — %s" % (n, it["kata"], kana.replace("・", ""), rom.strip(), it["arti"])
                 if it["alias"]: lid += "; alias/keterangan: " + it["alias"]
-                if it["ci"]: lid += ". Contoh: " + it["cj"] + " → " + it["ci"]
+                if it["desc"]: lid += ". Keterangan: " + it["ci"]
+                elif it["ci"]: lid += ". Contoh: " + it["cj"] + " → " + it["ci"]
                 elif it["cj"]: lid += ". " + it["cj"]
                 ljp = "%s**%s**%s" % (n, rb(it["kata"], kana), (a if it["alias"] else ""))
-                if it["cj"]: ljp += "：" + it["cj"]
+                if it["cj"]: ljp += ("：" if not it["desc"] else "：") + it["cj"]
                 ul_id.append(lid); ul_jp.append(ljp)
             if ul_id: idb.append({"ul": ul_id}); jpb.append({"ul": ul_jp})
         s["full"] = {"id": idb, "jp": jpb}
@@ -105,7 +109,8 @@ def vocab(subs):
                  "romaji": romaji(it["kana"].replace("・", " ").replace("（", " ").replace("）", "")).strip(), "arti": it["arti"],
                  "cat": SUBS[sid][0], "bab": "bab" + sid[1], "src": [sid], "sumber": "JICA"}
             if it["alias"]: v["alias"] = it["alias"]
-            if it["ci"]: v["contoh"] = it["cj"]; v["arti_contoh"] = it["ci"]
+            if it["ci"] and not it["desc"]: v["contoh"] = it["cj"]; v["arti_contoh"] = it["ci"]
+            elif it["ci"]: v["catatan"] = it["ci"]
             seen[k] = v; items.append(v)
     return items
 
@@ -189,6 +194,37 @@ def draw_page(path, page, blocks, title=None):
             for j, l in enumerate(ls): d.text((x + 10, yy + 62 + j * 24), l, font=fs, fill="#555")
     im.save(path, "WEBP", quality=82)
 
+def draw_table(path, page, blocks, babt):
+    W = 1240; fb = ImageFont.truetype(FONT % "Bold", 26); fr = ImageFont.truetype(FONT % "Regular", 22); fs = ImageFont.truetype(FONT % "Regular", 19)
+    tmp = ImageDraw.Draw(Image.new("RGB", (10, 10))); cx = [50, 470, 860, 1190]; rows = []; y = 150
+    for b in blocks:
+        rows.append(("t", b["title"], y)); y += 52; rows.append(("h", None, y)); y += 46
+        for i, it in enumerate(b["items"]):
+            c0 = wrap(tmp, "%s%s" % ((circ(b["start"] + i) + " ") if b["start"] else "", it["arti"]), fb, cx[1] - cx[0] - 20) + wrap(tmp, it["kata"] + ("" if it["kata"] == it["kana"] else " (" + it["kana"].replace("・", "") + ")"), fs, cx[1] - cx[0] - 20)
+            c1 = wrap(tmp, it["cj"], fs, cx[2] - cx[1] - 20) + wrap(tmp, "→ " + it["ci"], fs, cx[2] - cx[1] - 20)
+            c2 = wrap(tmp, it["alias"], fs, cx[3] - cx[2] - 20)
+            hh = max(len(c0) * 26 + 12, len(c1) * 26, len(c2) * 26) + 24
+            rows.append(("r", (c0, c1, c2), y, hh)); y += hh
+        y += 24
+    H_ = max(1754, y + 80); im = Image.new("RGB", (W, H_), "white"); d = ImageDraw.Draw(im)
+    d.text((50, 40), babt, font=ImageFont.truetype(FONT % "Bold", 34), fill="#0b5d8a")
+    d.text((50, 92), "Hal. %d · Versi Indonesia (disusun Shirose Nihongo dari buku JICA)" % page, font=fs, fill="#777")
+    for r in rows:
+        if r[0] == "t": d.text((50, r[2]), r[1], font=ImageFont.truetype(FONT % "Bold", 28), fill="#111")
+        elif r[0] == "h":
+            d.rectangle([cx[0], r[2], cx[3], r[2] + 40], fill="#e8eef3", outline="#555")
+            for k, t in enumerate(("Kata kerja (動詞)", "Contoh kalimat (例文)", "Cara bilang lain (言い方)")): d.text((cx[k] + 12, r[2] + 6), t, font=fr, fill="#222")
+        else:
+            c0, c1, c2 = r[1]; hh = r[3]
+            for k in range(3): d.rectangle([cx[k], r[2], cx[k + 1], r[2] + hh], outline="#555")
+            for k, cl in enumerate((c0, c1, c2)):
+                for j, t in enumerate(cl):
+                    f = fb if (k == 0 and j == 0) else fs
+                    d.text((cx[k] + 10, r[2] + 10 + (j * 26 + (10 if (k == 0 and j > 0) else 0))), t, font=f, fill="#b00020" if (k == 0 and j == 0) else "#222")
+    im.save(path, "WEBP", quality=82)
+
+def SUBSID(sid): return SUBS[sid][0]
+
 def main():
     pdf = sys.argv[1]
     blocks = parse(); subs = build_text(blocks); vl = vocab(subs)
@@ -222,8 +258,19 @@ def main():
         pno = 0 if n == 0 else n + 4    # berkas p(n+1): n=0 sampul, n>=1 halaman cetak n = PDF hal. n+5
         pix = d[pno].get_pixmap(dpi=100); pix.save("/tmp/_p.png"); Image.open("/tmp/_p.png").convert("RGB").save(ASS + "jp/p%02d.webp" % (n + 1), "WEBP", quality=80)
         bl = [b for b in blocks if b["page"] == n]
-        if n == 0: bl = [{"title": "Sampul / 表紙: 自動車整備の日本語 みてまなぶ！(JICA, 2023)", "start": 0, "items": [], "notes": ["Versi Indonesia disusun Shirose Nihongo dari buku JICA. Halaman Jepang = buku asli."]}]
-        elif not bl: bl = [{"title": "(Halaman ini berisi gambar/penjelasan tanpa daftar istilah baru)", "start": 0, "items": [], "notes": []}]
-        draw_page(ASS + "id/p%02d.webp" % (n + 1), n, bl)
+        pth = ASS + "id/p%02d.webp" % (n + 1)
+        if n == 0:
+            draw_page(pth, n, [{"title": "Sampul / 表紙: 自動車整備の日本語 みてまなぶ！(JICA, 2023)", "start": 0, "items": [], "notes": ["Versi Indonesia disusun Shirose Nihongo dari buku JICA. Halaman Jepang = buku asli."]}]); continue
+        babt = "Bab %s — %s" % (bl[0]["sub"][1], BABS[int(bl[0]["sub"][1]) - 1][1]) if bl else ""
+        if bl and 39 <= n <= 42: draw_table(pth, n, bl, babt); continue
+        m = {}
+        for b in bl:
+            if b["start"]:
+                for i, it in enumerate(b["items"]): m[b["start"] + i] = it
+        head = ()
+        if bl: head = [babt, SUBSID(bl[0]["sub"])] + ([bl[0]["notes"][0]] if bl[0]["notes"] else [])
+        if m and overlay(d, pno, m, pth, head): continue
+        if not bl: bl = [{"title": "(Halaman ini berisi gambar/penjelasan tanpa daftar istilah baru)", "start": 0, "items": [], "notes": []}]
+        draw_page(pth, n, bl)
     print("vocab", len(vl), "subs", len(subs), "soal", sum(len(g["items"]) for b in json.load(open(ROOT + "quiz.json"))["bab"].values() for g in b))
 main()

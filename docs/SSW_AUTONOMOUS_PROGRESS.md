@@ -68,3 +68,4 @@ Modul lama (7 bab/31 subbab buatan sendiri) DIHAPUS dan diganti dengan struktur 
 - Diuji: paket data dimuat oleh ssw-core (4 bab, 27 subbab, tanpa error); uji klik UI butuh login siswa — belum.
 - Belum: koleksi ilustrasi lengkap (36 gambar) sebagai soal bergambar; furigana pada kalimat contoh; Indonesian penerjemahan video JAPIA.
 - +117 soal bergambar (20 gambar dari JICA イラスト集 versi tanpa label; grup bab4-qimg-NN, rev=true agar tidak masuk ujian lengkap). Skrip: tools/ssw/automaint_img2.py (jalankan setelah automaint_jica_build.py).
+- Halaman Indonesia (assets/.../id) kini meniru tata letak buku asli: halaman PDF asli dengan teks Jepang pada sel bernomor diganti Indonesia (30 hal.), tabel kata kerja bab 3 (hal. 39–42) bergaya tabel asli, sisanya tata letak daftar. Skrip: tools/ssw/automaint_overlay.py.
