@@ -10,7 +10,7 @@ function gambarItem(id, rar, px = 96) {
   if (String(id).startsWith("theme_")) return `<div class="ga-fig" style="width:${px}px;height:${px}px;--gc:${c};animation:gaBob 2s ease-in-out infinite"><div style="font-size:${px * .5}px;display:flex;align-items:center;justify-content:center;height:100%">🎨</div></div>`;
   const k = KAT_OF[id]; if (!k) return `<div class="ga-fig" style="width:${px}px;height:${px}px;--gc:${c}"></div>`;
   const VB = { rambut: "110 40 180 190", aksesori: "110 20 180 200", pakaian: "90 170 220 190", celana: "130 330 140 140", sepatu: "120 405 160 90", item_tangan: "70 150 260 240", sayap: "-110 -40 620 520" };
-  const svg = renderCharacter({ ...DEFAULT_EQUIPPED, [k]: id }).replace(/viewBox="[^"]*"/, 'viewBox="' + (VB[k] || "0 0 400 500") + '"');
+  const svg = renderCharacter({ ...DEFAULT_EQUIPPED, [k]: id }).replace(/viewBox="[^"]*"/, 'viewBox="' + (VB[k] || "0 0 400 500") + '"').replace('style="overflow:visible"', 'style="overflow:hidden"');   // potong sesuai viewBox, jangan meluber keluar kartu
   return `<div class="ga-fig" style="width:${px}px;height:${px * 1.15}px;--gc:${c};animation:${ANIM[k] || "gaBob"} ${k === "item_tangan" ? "1.6s" : "2.2s"} ease-in-out infinite">${svg}</div>`;
 }
 (function () { if (typeof document === "undefined" || document.getElementById("ga-css")) return; const st = document.createElement("style"); st.id = "ga-css";
