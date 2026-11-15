@@ -36,7 +36,7 @@ export const upgradeHands = (svg) => svg ? svg.replace(/<circle cx="(123|277)" c
 export function baseBody(skinKey = "light", hasOutfit = false) {
   const s = SKIN_TONES[skinKey] || SKIN_TONES.light;
   return `
-    <ellipse cx="200" cy="470" rx="92" ry="12" fill="#1a0f3a" opacity=".28"/><!--@L-->
+    <ellipse cx="200" cy="470" rx="92" ry="12" fill="#1a0f3a" opacity=".28"/>
     <g data-slot="legs" ${CEL}>
       <path d="M167 340 H231 V372 L229 450 H203 L200 380 L197 450 H171 L169 372 Z" fill="#f7f8fc" stroke="#c7cde0" stroke-width="1.6"/>
       <path d="M200 380 V446" stroke="#c7cde0" stroke-width="1.6"/>
@@ -47,7 +47,7 @@ export function baseBody(skinKey = "light", hasOutfit = false) {
       <path d="M170 452 Q184 448 200 453" stroke="#5a64b0" stroke-width="1.6" fill="none" opacity=".7"/>
       <path d="M230 452 Q216 448 200 453" stroke="#5a64b0" stroke-width="1.6" fill="none" opacity=".7"/>
     </g>
-    <!--@U--><g data-slot="pakaian" ${CEL}>
+    <g data-slot="pakaian" ${CEL}>
       <path d="M116 252 Q112 285 115 300 L135 330 L145 325 L140 295 Q141 272 142 258 Z" fill="${s.skin}"/>
       <path d="M284 252 Q288 285 285 300 L265 330 L255 325 L260 295 Q259 272 258 258 Z" fill="${s.skin}"/>
       ${hasOutfit ? "" : `      <path d="M135 200 Q200 180 265 200 L270 345 L130 345 Z" fill="#ffffff" stroke="#c7cde0" stroke-width="1.6"/>
@@ -57,7 +57,7 @@ export function baseBody(skinKey = "light", hasOutfit = false) {
       <circle cx="123" cy="325" r="11" fill="${s.skin}"/>
       <circle cx="277" cy="325" r="11" fill="${s.skin}"/>
     </g>
-    <!--@H--><g data-slot="head" ${CEL}>
+    <g data-slot="head" ${CEL}>
       <rect x="187" y="172" width="26" height="30" fill="${s.skin}"/>
       <path d="M187 188 Q200 196 213 188 L213 202 L187 202Z" fill="${s.shade}"/>
       <path d="M147 112 Q147 68 200 65 Q253 68 253 112 L252 150 Q248 190 200 194 Q152 190 148 150 Z" fill="${s.skin}"/>
@@ -877,27 +877,13 @@ export const DEFAULT_EQUIPPED = {
   sayap: "none",
 };
 
-/* ====== Proporsi v3 (berisi/chibi): kepala x1.1, torso lebar x1.1, kaki tebal x1.12 & pendek x.9 ======
-   Semua item tetap digambar di koordinat kontrak; transformasi ini diterapkan seragam ke semua slot. */
-const HT = 'transform="translate(200 195) scale(1.1) translate(-200 -195)"';
-const TT = 'transform="translate(200 0) scale(1.1 1) translate(-200 0)"';
-const LOWER_T = "translate(200 466) scale(1.12 .9) translate(-200 -466)", UPY = 12.1, LEG_T = 55, LEG_S = 66, KNEE_Y = 400;
-const rad = d => d * Math.PI / 180;
-/* turunan tinggi pinggul akibat kaki menekuk (satuan lokal) */
-const dropOf = v => (LEG_T + LEG_S) - (LEG_T * Math.cos(rad(v.a)) + LEG_S * Math.cos(rad(v.a - v.b)));
-const f1 = n => Math.round(n * 10) / 10;
-const CLIPS = `<defs>
-  <clipPath id="shiro-clt"><rect x="-400" y="320" width="600" height="${KNEE_Y - 320}"/></clipPath><clipPath id="shiro-cls"><rect x="-400" y="${KNEE_Y - 1}" width="600" height="200"/></clipPath><clipPath id="shiro-clj"><circle cx="183" cy="${KNEE_Y}" r="12"/></clipPath>
-  <clipPath id="shiro-crt"><rect x="200" y="320" width="600" height="${KNEE_Y - 320}"/></clipPath><clipPath id="shiro-crs"><rect x="200" y="${KNEE_Y - 1}" width="600" height="200"/></clipPath><clipPath id="shiro-crj"><circle cx="217" cy="${KNEE_Y}" r="12"/></clipPath></defs>`;
-/* kaki: paha berputar dari pinggul, betis+sepatu berputar dari lutut; sendi lutut ditambal dengan salinan setengah sudut */
+/* kaki melebar per stance senjata: salin elemen kaki jadi kiri/kanan (dipotong di x=200) lalu putar dari pinggul */
 function splitLegs(inner, st) {
-  const dur = st.dur.toFixed(2) + "s";
-  const an = (vals, hx, hy) => `<animateTransform attributeName="transform" type="rotate" values="${vals.map(x => `${f1(x)} ${hx} ${hy}`).join(";")}" dur="${dur}" repeatCount="indefinite"/>`;
-  const leg = (sg, hx, c) => `<g>${an(st.vals.map(v => sg * v.a), hx, 345)}
-    <g clip-path="url(#shiro-c${c}t)">${inner}</g>
-    <g>${an(st.vals.map(v => -sg * v.b), hx, KNEE_Y)}<g clip-path="url(#shiro-c${c}s)">${inner}</g></g>
-    <g clip-path="url(#shiro-c${c}j)"><g>${an(st.vals.map(v => -sg * v.b / 2), hx, KNEE_Y)}${inner}</g></g></g>`;
-  return leg(1, 183, "l") + leg(-1, 217, "r");
+  if (!inner || !st) return inner;
+  const f = n => (Math.round(n * 10) / 10), dur = st.dur.toFixed(2) + "s";
+  const rot = (sg, hx) => `<animateTransform attributeName="transform" type="rotate" values="${st.vals.map(a => `${f(sg * a)} ${hx} 345`).join(";")}" dur="${dur}" repeatCount="indefinite"/>`;
+  return `<g><clipPath id="shiro-cl-l"><rect x="-400" y="330" width="600" height="260"/></clipPath><g clip-path="url(#shiro-cl-l)"><g>${rot(1, 183)}${inner}</g></g></g>
+  <g><clipPath id="shiro-cl-r"><rect x="200" y="330" width="600" height="260"/></clipPath><g clip-path="url(#shiro-cl-r)"><g>${rot(-1, 217)}${inner}</g></g></g>`;
 }
 
 /* ====== Render the full character given equipped state ====== */
@@ -909,7 +895,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   let base = baseBody(skinKey, !!(eq.pakaian && eq.pakaian !== "seragam_default" && OUTFITS[eq.pakaian]?.svg));
   // Celana (kategori baru) digambar di bawah baju: disisipkan sebelum grup pakaian bawaan
   const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana" ${CEL}>${CELANA[eq.celana].svg()}</g>` : "";
-  if (celanaSvg) base = base.replace("<!--@U-->", celanaSvg + "<!--@U-->");
+  if (celanaSvg) base = base.replace(`<g data-slot="pakaian" ${CEL}>`, celanaSvg + `<g data-slot="pakaian" ${CEL}>`);
   // Sayap (baru) — di belakang badan, setelah aura
   const sayapSvg = (eq.sayap && eq.sayap !== "none" && SAYAP[eq.sayap]?.svg) ? `<g data-slot="sayap">${SAYAP[eq.sayap].svg()}</g>` : "";
 
@@ -946,22 +932,23 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     else handheldSvg = `<g data-slot="item_tangan">${hItem.svg()}</g>`;
   }
 
+  if (stance) {
+    for (const slot of ["legs", "shoes"]) base = base.replace(new RegExp(`<g data-slot="${slot}"[^>]*>[\\s\\S]*?</g>`), m => splitLegs(m, stance));
+    if (celanaSvg) base = base.replace(celanaSvg, splitLegs(celanaSvg, stance));
+    if (sepatuOverlay) sepatuOverlay = splitLegs(sepatuOverlay, stance);
+  }
   base = upgradeHands(base); pakaianOverlay = upgradeHands(pakaianOverlay);
-  const [pre, rest] = base.split("<!--@U-->"), [shadow, lowerBase] = pre.split("<!--@L-->"), [torsoBase, headBase] = rest.split("<!--@H-->");
-  const lowerInner = lowerBase + sepatuOverlay;
-  const lowerG = `<g transform="${LOWER_T}">${stance ? splitLegs(lowerInner, stance) : lowerInner}</g>`;
-  const upper = inner => stance
-    ? `<g transform="translate(0 ${UPY})"><animateTransform attributeName="transform" type="translate" values="${stance.vals.map(v => `0 ${f1(UPY + .9 * dropOf(v))}`).join(";")}" dur="${stance.dur.toFixed(2)}s" repeatCount="indefinite"/>${inner}</g>`
-    : `<g transform="translate(0 ${UPY})">${inner}</g>`;
-  const wrap = (t, x) => x ? `<g ${t}>${x}</g>` : "";
   return `
     <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
-      ${CEL_DEFS}${CLIPS}
+      ${CEL_DEFS}
       ${auraSvg}
-      ${upper(sayapSvg)}
-      ${shadow}
-      ${lowerG}
-      ${upper(wrap(TT, torsoBase) + wrap(HT, headBase) + wrap(TT, pakaianOverlay) + wrap(HT, hairSvg) + wrap(HT, aksesoriSvg) + handheldSvg)}
+      ${sayapSvg}
+      ${base}
+      ${pakaianOverlay}
+      ${sepatuOverlay}
+      ${hairSvg}
+      ${aksesoriSvg}
+      ${handheldSvg}
     </svg>
   `;
 }
@@ -978,10 +965,10 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261116a";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116a";
-import { extendShirose } from "./shirose-set.js?v=20261116a";
-import { extend2 } from "./character-more2.js?v=20261116a";
+import { extend } from "./character-more.js?v=20261115z";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261115z";
+import { extendShirose } from "./shirose-set.js?v=20261115z";
+import { extend2 } from "./character-more2.js?v=20261115z";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
