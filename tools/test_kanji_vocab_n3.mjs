@@ -73,5 +73,30 @@ for (const lv of ["n5", "n4", "n3", "n2", "n1", "ir0", "ir1", "ir2"]) for (const
   const bad = scan(J(`data/${kind}-${lv}.json`)).filter(t => !/Pokémon/.test(t));   // Pokémon = nama asli, bukan Vietnam
   ok(bad.length === 0, `${kind}-${lv}: tidak ada teks Vietnam${bad.length ? " (" + bad.slice(0, 3).join(" | ") + ")" : ""}`);
 }
+
+// Soal latihan (jlpt/*) + data SSW + kata Vietnam tanpa tanda + sisa bahasa Inggris
+import { readdirSync, readFileSync as RF, statSync } from "node:fs";
+const walkJ = (d) => readdirSync(d).flatMap(f => { const p = d + "/" + f; return statSync(p).isDirectory() ? walkJ(p) : p.endsWith(".json") ? [p] : []; });
+const VT = new Set("tinh xoay treo giao quanh cung khinh nhau suy duy nghi xua hoan nhung gieo khua canh giam ngoan giai vung khay nhu danh phun khoe khoang ngang vun nho truy nguy oai lanh khoan khen xong thay tha phi huy phong coi can anh".split(" "));
+const EN = new Set("the of and or is are was with from this that which something someone often usually especially used being person people thing things way very to for in on at by sooner later swift expedited hand-made".split(" "));
+const strs = (o) => typeof o === "string" ? [o] : Array.isArray(o) ? o.flatMap(strs) : o && typeof o === "object" ? Object.entries(o).filter(([k]) => !["id","voices","img","ref","ck","oimg","jp","instrVoice","title"].includes(k)).flatMap(([, v]) => strs(v)) : [];
+console.log("\n=== Audit bahasa (soal latihan + SSW + data) ===");
+const files = [...walkJ("jlpt"), ...walkJ("data/ssw"), ...["kanji","kosakata","bunpou"].flatMap(k => ["n5","n4","n3","n2","n1","ir0","ir1","ir2"].map(l => `data/${k}-${l}.json`))];
+let nVN = [], nTok = [], nEN = [];
+for (const f of files) for (const t of strs(JSON.parse(RF(f, "utf8")))) {
+  if (VN.test(t) && !/Pok[eé]mon|Oboré|À la carte|à la carte|entrée|sauté|FUGÔ|GÔKAKU/i.test(t)) nVN.push(f + ": " + t.slice(0, 60));
+  const plain = t.replace(/<[^>]+>/g, "").toLowerCase();
+  if (/(kanji|kosakata)-/.test(f) || f.startsWith("jlpt/")) {
+    for (const w of plain.match(/[a-z]+/g) || []) { if (VT.has(w)) { nTok.push(f + ": " + t.slice(0, 60)); break; } }
+  }
+  if (/data\/(kanji|kosakata)-/.test(f)) { const w = (plain.match(/[a-z']+/g) || []); if (w.filter(x => EN.has(x)).length >= 2) nEN.push(f + ": " + t.slice(0, 60)); }
+}
+ok(nVN.length === 0, "soal+SSW+data: tidak ada huruf khas Vietnam" + (nVN.length ? " (" + nVN.slice(0, 3).join(" | ") + ")" : ""));
+ok(nTok.length === 0, "kosakata Vietnam tanpa tanda (thay, nhau, ...) tidak ada" + (nTok.length ? " (" + nTok.slice(0, 3).join(" | ") + ")" : ""));
+ok(nEN.length === 0, "arti kanji/kosakata tidak berisi kalimat Inggris" + (nEN.length ? " (" + nEN.slice(0, 3).join(" | ") + ")" : ""));
+import { spawnSync } from "node:child_process";
+{ const r = spawnSync("python3", ["-I", "tools/check_english.py"], { encoding: "utf8" });
+  if (r.error || /ModuleNotFoundError/.test(r.stderr || "")) console.log("  (lewati cek Inggris: butuh python3 + wordfreq)");
+  else ok(r.status === 0, "arti kanji/kosakata tidak berbahasa Inggris" + (r.status ? " (" + r.stdout.split("\n").slice(1, 4).join(" | ") + ")" : "")); }
 console.log("\nRINGKAS:\n" + summary.join("\n"));
 console.log(fail ? `${fail} tes GAGAL` : "SEMUA TES LULUS"); process.exit(fail ? 1 : 0);
