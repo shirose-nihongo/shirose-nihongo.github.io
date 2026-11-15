@@ -1,0 +1,496 @@
+{
+ "schema": 1,
+ "bidang": "auto-maintenance",
+ "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 自動車整備 (MLIT, MOJ/ISA); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab4",
+  "no": 4,
+  "title": {
+   "id": "Kelistrikan",
+   "jp": "{電気|でんき}{装置|そうち}"
+  },
+  "intro": {
+   "id": "Aki, starter dan alternator, lampu, sekring dan dasar listrik, serta keselamatan hybrid dan EV.",
+   "jp": "バッテリ、スタータとオルタネータ、ライト、ヒューズと{電気|でんき}の{基本|きほん}、ハイブリッド{車|しゃ}と{電気|でんき}{自動|じどう}{車|くるま}の{安全|あんぜん}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b4s1",
+    "no": 1,
+    "title": {
+     "id": "Aki (Baterai)",
+     "jp": "バッテリ"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Dasar"
+      },
+      {
+       "p": "Aki mobil biasa bertegangan **12 V**. Isinya **elektrolit (cairan aki: asam sulfat encer)** dan pelat timbal. Aki menyimpan listrik untuk menyalakan mesin dan menyuplai listrik saat mesin mati."
+      },
+      {
+       "h": "Memasang dan melepas terminal"
+      },
+      {
+       "ul": [
+        "Saat **melepas**: lepas terminal **minus (−)** dulu, lalu plus (+).",
+        "Saat **memasang**: pasang terminal **plus (+)** dulu, **minus (−)** paling akhir.",
+        "Alasannya: jika kunci menyentuh bodi saat terminal plus dipegang, bisa terjadi hubung singkat dan percikan."
+       ]
+      },
+      {
+       "h": "Keselamatan"
+      },
+      {
+       "ul": [
+        "Aki mengeluarkan **gas hidrogen yang mudah terbakar**. **Jauhkan api dan percikan.**",
+        "Cairan aki adalah **asam**; jika kena kulit atau mata, bilas dengan banyak air dan segera cari pertolongan.",
+        "Jangan menyentuh kedua terminal dengan logam sekaligus.",
+        "Pakai **kacamata pelindung dan sarung tangan**."
+       ]
+      },
+      {
+       "h": "Pemeriksaan"
+      },
+      {
+       "ul": [
+        "Cairan di antara **UPPER** dan **LOWER**.",
+        "Terminal berkarat atau longgar.",
+        "Retak atau cairan bocor dari badan aki."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "きほん"
+      },
+      {
+       "p": "ふつうの{自動|じどう}{車|くるま}のバッテリは**12V**です。{中|なか}に**バッテリ{液|えき}（うすい{硫酸|りゅうさん}）**と{鉛|なまり}の{板|いた}があります。エンジンをかけるための{電気|でんき}をためておき、エンジンが{止|と}まっているときも{電気|でんき}をおくります。"
+      },
+      {
+       "h": "{端子|たんし}のはずし{方|かた}・つけ{方|かた}"
+      },
+      {
+       "ul": [
+        "**はずす**とき：**マイナス（−）**を{先|さき}に、つぎにプラス（+）。",
+        "**つける**とき：**プラス（+）**を{先|さき}に、**マイナス（−）**を{最後|さいご}に。",
+        "{理由|りゆう}：プラスを{持|も}っているときに{工具|こうぐ}が{車体|しゃたい}にふれると、ショートして{火花|ひばな}が{出|で}るから。"
+       ]
+      },
+      {
+       "h": "あんぜん"
+      },
+      {
+       "ul": [
+        "バッテリから**{燃|も}えやすい{水素|すいそ}ガス**が{出|で}る。**{火|ひ}や{火花|ひばな}を{近|ちか}づけない。**",
+        "バッテリ{液|えき}は**{酸|さん}**。{体|からだ}や{目|め}についたら、たくさんの{水|みず}で{洗|あら}い、すぐ{医者|いしゃ}に{行|い}く。",
+        "{工具|こうぐ}で、2つの{端子|たんし}に{同時|どうじ}にふれない。",
+        "**{保護|ほご}めがねと{手|て}ぶくろ**を{使|つか}う。"
+       ]
+      },
+      {
+       "h": "{点検|てんけん}"
+      },
+      {
+       "ul": [
+        "{液|えき}が**UPPER**と**LOWER**のあいだにあるか。",
+        "{端子|たんし}がさびていないか、ゆるんでいないか。",
+        "{本体|ほんたい}にひびがないか、{液|えき}がもれていないか。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Aki 12 V; lepas minus dulu, pasang plus dulu; ada gas hidrogen, jauhkan api; cairan aki asam; periksa antara UPPER dan LOWER.",
+      "points": [
+       "Lepas: minus (−) dulu.",
+       "Pasang: plus (+) dulu.",
+       "Gas hidrogen → jauhkan api.",
+       "Cairan aki = asam."
+      ],
+      "avoid": [
+       "Melepas terminal plus lebih dulu.",
+       "Menyalakan api dekat aki."
+      ],
+      "exam": [
+       "Urutan lepas/pasang terminal.",
+       "Bahaya aki."
+      ]
+     },
+     "jp": {
+      "core": "バッテリは12Vです。はずすときはマイナスから、つけるときはプラスからです。{水素|すいそ}ガスと{酸|さん}に{注意|ちゅうい}します。",
+      "points": [
+       "はずすときはマイナスから。",
+       "つけるときはプラスから。",
+       "{水素|すいそ}ガス→{火|ひ}を{近|ちか}づけない。",
+       "バッテリ{液|えき}は{酸|さん}。"
+      ],
+      "avoid": [
+       "プラス{端子|たんし}を{先|さき}にはずすこと。",
+       "バッテリの{近|ちか}くで{火|ひ}を{使|つか}うこと。"
+      ],
+      "exam": [
+       "{端子|たんし}をはずす、つける{順番|じゅんばん}。",
+       "バッテリのきけん。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s2",
+    "no": 2,
+    "title": {
+     "id": "Sistem Start dan Pengisian",
+     "jp": "{始動|しどう}{装置|そうち}と{充電装置|じゅうでんそうち}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Starter (始動装置)"
+      },
+      {
+       "p": "**スタータ (セルモータ)** adalah motor listrik yang memutar mesin saat start. Giginya (**ピニオンギヤ**) mengait **リングギヤ** di **フライホイール** dan memutarkan poros engkol."
+      },
+      {
+       "ul": [
+        "Starter diputar oleh listrik dari aki.",
+        "Jika starter tidak berputar sama sekali: aki lemah, terminal longgar, atau starter rusak.",
+        "Jika starter berputar tetapi mesin tidak hidup: periksa bahan bakar dan pengapian."
+       ]
+      },
+      {
+       "h": "Pengisian (充電装置)"
+      },
+      {
+       "p": "**オルタネータ (発電機)** diputar oleh sabuk dari mesin dan menghasilkan listrik untuk mengisi aki dan menyuplai perlengkapan listrik."
+      },
+      {
+       "ul": [
+        "Lampu **充電警告灯** (bergambar aki) menyala saat mesin hidup berarti pengisian bermasalah.",
+        "Penyebab umum: sabuk kendur atau putus, alternator rusak, kabel longgar.",
+        "Jika pengisian berhenti, aki akan habis dan mesin akhirnya mati."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{始動|しどう}{装置|そうち}"
+      },
+      {
+       "p": "**スタータ（セルモータ）**は、エンジンをかけるときにエンジンをまわす{電気|でんき}のモータです。**ピニオンギヤ**が、**フライホイール**の**リングギヤ**にかみあって、クランクシャフトをまわします。"
+      },
+      {
+       "ul": [
+        "スタータは、バッテリの{電気|でんき}で{回|まわ}る。",
+        "スタータがまったく{回|かい}らない：バッテリが{弱|よわ}い、{端子|たんし}がゆるい、スタータがこわれた。",
+        "スタータは{回|まわ}るがエンジンがかからない：{燃料|ねんりょう}と{点火|てんか}を{調|しら}べる。"
+       ]
+      },
+      {
+       "h": "{充電装置|じゅうでんそうち}"
+      },
+      {
+       "p": "**オルタネータ（{発電機|はつでんき}）**は、ベルトでエンジンにまわされ、{電気|でんき}をつくります。バッテリに{電気|でんき}を{入|い}れ、{電気|でんき}{製|せい}{品|ひん}にも{送|おく}ります。"
+      },
+      {
+       "ul": [
+        "エンジン{中|なか}に**{充電警告灯|じゅうでんけいこくとう}**（バッテリの{絵|え}）がついたら、{充電|じゅうでん}のふぐあい。",
+        "よくある{原因|げんいん}：ベルトのゆるみやきれ、オルタネータのこわれ、{配線|はいせん}のゆるみ。",
+        "{充電|じゅうでん}されないと、バッテリがなくなり、エンジンがとまる。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Starter memutar mesin saat start; alternator membuat listrik dan mengisi aki; 充電警告灯 menyala = pengisian bermasalah.",
+      "points": [
+       "スタータ: ピニオンギヤ mengait リングギヤ.",
+       "オルタネータ diputar sabuk.",
+       "充電警告灯 menyala → cek sabuk & alternator."
+      ],
+      "avoid": [
+       "Mengabaikan 充電警告灯."
+      ],
+      "exam": [
+       "Fungsi スタータ dan オルタネータ.",
+       "Arti 充電警告灯."
+      ]
+     },
+     "jp": {
+      "core": "スタータはエンジンをまわし、オルタネータは{発電|はつでん}してバッテリに{充電|じゅうでん}します。{充電警告灯|じゅうでんけいこくとう}がついたら{充電|じゅうでん}のふぐあいです。",
+      "points": [
+       "ピニオンギヤがリングギヤにかみあう。",
+       "オルタネータはベルトでまわる。",
+       "{充電警告灯|じゅうでんけいこくとう}→ベルトとオルタネータを{調|しら}べる。"
+      ],
+      "avoid": [
+       "{充電警告灯|じゅうでんけいこくとう}をむしすること。"
+      ],
+      "exam": [
+       "スタータとオルタネータのはたらき。",
+       "{充電警告灯|じゅうでんけいこくとう}の{意味|いみ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s3",
+    "no": 3,
+    "title": {
+     "id": "Lampu, Sekring, dan Dasar Listrik",
+     "jp": "ライト・ヒューズ・{電気|でんき}のきほん"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Lampu"
+      },
+      {
+       "ul": [
+        "**ヘッドライト**: lampu depan. **テールランプ**: lampu belakang. **ブレーキランプ**: menyala saat rem diinjak.",
+        "**ウインカ (方向指示器)**: lampu sein. **ハザード**: lampu darurat.",
+        "Di pemeriksaan harian, pastikan semua lampu menyala dan lensa tidak pecah."
+       ]
+      },
+      {
+       "h": "Sekring (ヒューズ) dan relay"
+      },
+      {
+       "ul": [
+        "**ヒューズ** putus jika arus terlalu besar dan melindungi kabel.",
+        "Ganti dengan sekring **berkapasitas (A) yang sama**. **Jangan memakai kapasitas lebih besar** atau kawat, karena kabel bisa terbakar.",
+        "**リレー** adalah sakelar listrik: arus kecil mengendalikan arus besar."
+       ]
+      },
+      {
+       "h": "Dasar listrik"
+      },
+      {
+       "ul": [
+        "**電圧 (V)** volt, **電流 (A)** ampere, **抵抗 (Ω)** ohm.",
+        "**オームの法則**: **V = I × R** (tegangan = arus × hambatan).",
+        "**ショート (短絡)**: arus mengalir lewat jalan pintas dan menjadi sangat besar. **断線**: kabel putus dan arus tidak mengalir."
+       ]
+      },
+      {
+       "h": "Alat ukur"
+      },
+      {
+       "p": "**回路計 (テスタ)** dipakai untuk mengukur tegangan, arus, hambatan, dan memeriksa kontinuitas."
+      }
+     ],
+     "jp": [
+      {
+       "h": "ライト"
+      },
+      {
+       "ul": [
+        "**ヘッドライト**：{前|まえ}のライト。**テールランプ**：{後|うし}ろのライト。**ブレーキランプ**：ブレーキをふむとつく。",
+        "**ウインカ（{方向|ほうこう}{指示|しじ}{器|き}）**。**ハザード**：きんきゅうのライト。",
+        "{日常点検|にちじょうてんけん}では、ライトがぜんぶつくか、レンズがわれていないかを{見|み}る。"
+       ]
+      },
+      {
+       "h": "ヒューズとリレー"
+      },
+      {
+       "ul": [
+        "**ヒューズ**は、{電流|でんりゅう}が{大|おお}きすぎると{切|き}れて、{配線|はいせん}を{守|まも}る。",
+        "{交換|こうかん}するときは、**{同|おな}じ{容量|ようりょう}（A）**のものを{使|つか}う。**{大|おお}きい{容量|ようりょう}のヒューズや{針金|はりがね}は{使|つか}わない**。{配線|はいせん}が{燃|も}えるから。",
+        "**リレー**は、{電気|でんき}のスイッチ。{小|ちい}さい{電流|でんりゅう}で、{大|おお}きい{電流|でんりゅう}を{入|はい}り{切|き}りする。"
+       ]
+      },
+      {
+       "h": "{電気|でんき}のきほん"
+      },
+      {
+       "ul": [
+        "**{電圧|でんあつ}（V）**ボルト、**{電流|でんりゅう}（A）**アンペア、**{抵抗|ていこう}（Ω）**オーム。",
+        "**オームの{法則|ほうそく}**：**V = I × R**（{電圧|でんあつ}＝{電流|でんりゅう}×{抵抗|ていこう}）。",
+        "**ショート（{短絡|たんらく}）**：ちかみちを{電気|でんき}が{流|なが}れて、{電流|でんりゅう}がとても{大|おお}きくなること。**{断線|だんせん}**：{配線|はいせん}が{切|き}れて、{電気|でんき}が{流|なが}れないこと。"
+       ]
+      },
+      {
+       "h": "はかる{道具|どうぐ}"
+      },
+      {
+       "p": "**{回路計|かいろけい}（テスタ）**で、{電圧|でんあつ}、{電流|でんりゅう}、{抵抗|ていこう}をはかり、つながっているかを{調|しら}べます。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sekring melindungi kabel; ganti dengan kapasitas sama; V = I × R; ショート = jalan pintas, 断線 = kabel putus; テスタ untuk mengukur.",
+      "points": [
+       "ヒューズ: kapasitas sama.",
+       "V = I × R.",
+       "ショート ≠ 断線.",
+       "テスタ mengukur V, A, Ω."
+      ],
+      "avoid": [
+       "Memakai sekring berkapasitas lebih besar atau kawat."
+      ],
+      "exam": [
+       "Hukum Ohm.",
+       "Beda ショート dan 断線.",
+       "Aturan mengganti ヒューズ."
+      ]
+     },
+     "jp": {
+      "core": "ヒューズは{配線|はいせん}を{守|まも}ります。{同|おな}じ{容量|ようりょう}のものと{交換|こうかん}します。オームの{法則|ほうそく}はV＝I×Rです。",
+      "points": [
+       "ヒューズは{同|おな}じ{容量|ようりょう}。",
+       "V＝I×R。",
+       "ショートと{断線|だんせん}はちがう。",
+       "テスタで{電圧|でんあつ}、{電流|でんりゅう}、{抵抗|ていこう}をはかる。"
+      ],
+      "avoid": [
+       "{大|おお}きい{容量|ようりょう}のヒューズや{針金|はりがね}を{使|つか}うこと。"
+      ],
+      "exam": [
+       "オームの{法則|ほうそく}。",
+       "ショートと{断線|だんせん}のちがい。",
+       "ヒューズ{交換|こうかん}の{決|き}まり。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s4",
+    "no": 4,
+    "title": {
+     "id": "Hybrid dan EV: Dasar Keselamatan",
+     "jp": "ハイブリッド{車|しゃ}・{電気|でんき}{自動|じどう}{車|くるま}のあんぜん"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Ciri"
+      },
+      {
+       "ul": [
+        "**ハイブリッド車 (HEV)** memakai mesin dan **motor listrik**. **電気自動車 (EV)** hanya motor listrik.",
+        "Memiliki **aki tegangan tinggi (beberapa ratus volt)** untuk menggerakkan motor. Aki 12 V biasa tetap ada untuk lampu dan lain-lain.",
+        "**回生ブレーキ**: saat memperlambat, motor berubah menjadi generator dan mengisi aki."
+       ]
+      },
+      {
+       "h": "Bahaya"
+      },
+      {
+       "ul": [
+        "Listrik tegangan tinggi **bisa membunuh**.",
+        "Kabel tegangan tinggi biasanya berwarna **oranye**.",
+        "Mobil hybrid yang **diam tanpa suara** belum tentu mati. Mesin atau motor bisa tiba-tiba aktif."
+       ]
+      },
+      {
+       "h": "Aturan kerja"
+      },
+      {
+       "ul": [
+        "**Hanya orang yang sudah menjalani pelatihan khusus** yang boleh mengerjakan sistem tegangan tinggi.",
+        "Ikuti buku pedoman: **matikan sistem**, lepas **サービスプラグ**, tunggu sampai kapasitor kosong, pakai **sarung tangan isolasi**.",
+        "Jangan menyentuh kabel oranye atau komponen tegangan tinggi tanpa izin dan pelatihan.",
+        "Jika belum dilatih, **jangan menyentuhnya**. Laporkan ke atasan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "とくちょう"
+      },
+      {
+       "ul": [
+        "**ハイブリッド{車|しゃ}（HEV）**はエンジンと**モーター**を{使|つか}う。**{電気|でんき}{自動|じどう}{車|くるま}（EV）**はモーターだけ。",
+        "モーターを{動|うご}かす**{高|こう}{電圧|でんあつ}のバッテリ（{数百|すうひゃく}ボルト）**がある。ライトなどのための12Vバッテリもある。",
+        "**{回|かい}{生|せい}ブレーキ**：スピードを{落|お}とすとき、モーターが{発電機|はつでんき}になって、バッテリに{電気|でんき}を{入|い}れる。"
+       ]
+      },
+      {
+       "h": "きけん"
+      },
+      {
+       "ul": [
+        "{高|こう}{電圧|でんあつ}は**{命|いのち}にかかわる**。",
+        "{高|こう}{電圧|でんあつ}の{配線|はいせん}は、ふつう**オレンジ{色|いろ}**。",
+        "ハイブリッド{車|しゃ}は、**{音|おと}がしなくても**、{止|と}まっているとはかぎらない。エンジンやモーターが{急|きゅう}に{動|うご}くことがある。"
+       ]
+      },
+      {
+       "h": "{作業|さぎょう}のルール"
+      },
+      {
+       "ul": [
+        "**{特別|とくべつ}な{教育|きょういく}を{受|う}けた{人|ひと}**だけが、{高|こう}{電圧|でんあつ}の{部分|ぶぶん}の{作業|さぎょう}をする。",
+        "{作業書|さぎょうしょ}どおりに、**システムを{切|き}り**、**サービスプラグ**をはずし、{電気|でんき}がなくなるまで{待|ま}ち、**{絶縁|ぜつえん}{手|て}ぶくろ**を{使|つか}う。",
+        "{許可|きょか}と{教育|きょういく}がなければ、オレンジ{色|いろ}の{配線|はいせん}や{高|こう}{電圧|でんあつ}の{部品|ぶひん}にふれない。",
+        "{教育|きょういく}を{受|う}けていないときは、**さわらない**。{上|うえ}の{人|ひと}に{報告|ほうこく}する。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "HEV dan EV punya aki tegangan tinggi (beberapa ratus volt), kabel oranye; hanya orang terlatih yang boleh mengerjakan; senyap bukan berarti mati.",
+      "points": [
+       "Kabel oranye = tegangan tinggi.",
+       "Hanya orang terlatih.",
+       "Pakai sarung tangan isolasi.",
+       "回生ブレーキ mengisi aki saat memperlambat."
+      ],
+      "avoid": [
+       "Menyentuh kabel oranye tanpa pelatihan.",
+       "Mengira mobil hybrid yang senyap pasti mati."
+      ],
+      "exam": [
+       "Warna kabel tegangan tinggi.",
+       "Siapa yang boleh mengerjakan."
+      ]
+     },
+     "jp": {
+      "core": "ハイブリッド{車|しゃ}と{電気|でんき}{自動|じどう}{車|くるま}には{高|こう}{電圧|でんあつ}のバッテリがあります。{教育|きょういく}を{受|う}けた{人|ひと}だけが{作業|さぎょう}します。{音|おと}がしなくても{止|と}まっているとはかぎりません。",
+      "points": [
+       "オレンジ{色|いろ}の{配線|はいせん}＝{高|こう}{電圧|でんあつ}。",
+       "{教育|きょういく}を{受|う}けた{人|ひと}だけ。",
+       "{絶縁|ぜつえん}{手|て}ぶくろを{使|つか}う。",
+       "{回|かい}{生|せい}ブレーキは{減速|げんそく}で{充電|じゅうでん}する。"
+      ],
+      "avoid": [
+       "{教育|きょういく}なしでオレンジ{色|いろ}の{配線|はいせん}にさわること。",
+       "{音|おと}がしないハイブリッド{車|しゃ}を{止|と}まっていると{思|おも}うこと。"
+      ],
+      "exam": [
+       "{高|こう}{電圧|でんあつ}の{配線|はいせん}の{色|いろ}。",
+       "{作業|さぎょう}してよい{人|ひと}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

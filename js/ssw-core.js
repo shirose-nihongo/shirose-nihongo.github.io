@@ -70,6 +70,7 @@ export const DEFAULT_BIDANG = [
   { slug: "accommodation", nama: "Accommodation (Penginapan)", jp: "宿泊", aktif: true, urut: 7, tema: "hotel", hasContent: true },
   { slug: "livestock", nama: "Livestock (Peternakan)", jp: "畜産業", aktif: true, urut: 8, tema: "farm", hasContent: true },
   { slug: "fishery", nama: "Fishery (Perikanan)", jp: "漁業", aktif: true, urut: 9, tema: "generic", hasContent: true },
+  { slug: "auto-maintenance", nama: "Auto Maintenance (Perawatan Mobil)", jp: "自動車整備", aktif: true, urut: 10, tema: "generic", hasContent: true },
 ];
 
 let _bidang = null;
@@ -310,6 +311,7 @@ export const EXAM_SPEC = {
   "kaigo": { n: 45, img: 0, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
   "kaigo-jp": { n: 45, img: 4, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
   "fishery": { n: 30, img: 2, mb: 6, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
+  "auto-maintenance": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Info resmi (MLIT): ujian tulis 30 soal ○× / 60 menit, lulus ≥65%; ujian praktik 3 tugas / 20 menit, lulus ≥60%." },
 };
 /** 10 ujian penuh = sampel deterministik dari seluruh bank soal; komposisi mengikuti ujian resmi bidangnya. */
 export function fullQuizzes(pack, perQuizArg, count = 10) {

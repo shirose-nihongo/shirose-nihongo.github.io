@@ -1,0 +1,516 @@
+{
+ "schema": 1,
+ "bidang": "auto-maintenance",
+ "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 自動車整備 (MLIT, MOJ/ISA); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab1",
+  "no": 1,
+  "title": {
+   "id": "Dasar Mobil dan Pekerjaan Perawatan",
+   "jp": "{自動|じどう}{車|くるま}と{整備|せいび}のきほん"
+  },
+  "intro": {
+   "id": "Jenis mobil, bagian utamanya, hukum perawatan di Jepang, istilah kerja, dan alur pekerjaan di bengkel.",
+   "jp": "{自動|じどう}{車|くるま}の{種類|しゅるい}と{主|おも}な{部分|ぶぶん}、{整備|せいび}の{法律|ほうりつ}、{整備|せいび}のことば、{工場|こうじょう}での{仕事|しごと}の{流|なが}れを{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b1s1",
+    "no": 1,
+    "title": {
+     "id": "Jenis dan Bagian Utama Mobil",
+     "jp": "{自動|じどう}{車|くるま}の{種類|しゅるい}と{主|おも}な{部分|ぶぶん}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Jenis mobil"
+      },
+      {
+       "ul": [
+        "**乗用車**: mobil penumpang. **トラック**: truk untuk barang. **バス**: bus.",
+        "**軽自動車**: mobil kecil menurut standar Jepang, dengan mesin dan badan yang lebih kecil dari mobil biasa.",
+        "Menurut bahan bakar dan tenaga: **ガソリン車**, **ディーゼル車**, **ハイブリッド車** (mesin + motor listrik), **電気自動車** (hanya motor listrik)."
+       ]
+      },
+      {
+       "h": "Pembagian bagian mobil"
+      },
+      {
+       "p": "Mobil dibagi menjadi empat kelompok besar di buku ini:"
+      },
+      {
+       "ul": [
+        "**エンジン (原動機)**: pembuat tenaga.",
+        "**シャシ**: bagian bawah dan penggerak: penerus tenaga, roda dan suspensi, kemudi, rem.",
+        "**ボデー (車体)**: badan, pintu, kaca, jok.",
+        "**電装品**: bagian listrik: aki, lampu, alternator, starter, sekring."
+       ]
+      },
+      {
+       "h": "Tenaga mengalir"
+      },
+      {
+       "ol": [
+        "Mesin membuat tenaga.",
+        "Kopling dan transmisi mengatur tenaga.",
+        "Poros dan gardan meneruskan tenaga ke roda.",
+        "Roda berputar dan mobil bergerak."
+       ]
+      },
+      {
+       "note": "Nama bagian berbeda-beda di tiap buku. Pelajari istilah Jepangnya karena soal ujian memakai bahasa Jepang."
+      }
+     ],
+     "jp": [
+      {
+       "h": "{自動|じどう}{車|くるま}の{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "**{乗用車|じょうようしゃ}**：{人|ひと}をのせる{車|くるま}。**トラック**：{荷物|にもつ}をはこぶ{車|くるま}。**バス**：たくさんの{人|ひと}をのせる{車|くるま}。",
+        "**{軽自動車|けいじどうしゃ}**：{日本|にほん}の{決|き}まりで、エンジンも{車体|しゃたい}も{小|ちい}さい{車|くるま}。",
+        "{燃料|ねんりょう}や{動|どう}{力|ちから}で{分|わ}けると、**ガソリン{車|しゃ}**、**ディーゼル{車|しゃ}**、**ハイブリッド{車|しゃ}**（エンジンとモーター）、**{電気|でんき}{自動|じどう}{車|くるま}**（モーターだけ）があります。"
+       ]
+      },
+      {
+       "h": "{自動|じどう}{車|くるま}の{主|おも}な{部分|ぶぶん}"
+      },
+      {
+       "p": "この{教材|きょうざい}では、{自動|じどう}{車|くるま}を4つに{分|わ}けます。"
+      },
+      {
+       "ul": [
+        "**エンジン（{原動機|げんどうき}）**：{力|ちから}をつくる{部分|ぶぶん}。",
+        "**シャシ**：{下|した}の{部分|ぶぶん}と、{力|ちから}をつたえる{部分|ぶぶん}。{動力伝達|どうりょくでんたつ}、{足|あし}まわり、ステアリング、ブレーキ。",
+        "**ボデー（{車体|しゃたい}）**：{車体|しゃたい}、ドア、ガラス、シート。",
+        "**{電装品|でんそうひん}**：{電気|でんき}の{部品|ぶひん}。バッテリ、ライト、オルタネータ、スタータ、ヒューズ。"
+       ]
+      },
+      {
+       "h": "{力|ちから}のながれ"
+      },
+      {
+       "ol": [
+        "エンジンが{力|ちから}をつくる。",
+        "クラッチとトランスミッションが{力|ちから}を{調整|ちょうせい}する。",
+        "プロペラシャフトとデファレンシャルが{力|ちから}を{車輪|しゃりん}へつたえる。",
+        "{車輪|しゃりん}がまわって、{車|くるま}が{動|うご}く。"
+       ]
+      },
+      {
+       "note": "{部品|ぶひん}の{名前|なまえ}は{本|ほん}によって{少|すこ}しちがいます。{試験|しけん}は{日本語|にほんご}なので、{日本語|にほんご}の{名前|なまえ}をおぼえましょう。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Mobil terdiri dari mesin, シャシ, ボデー, dan 電装品; tenaga mengalir dari mesin ke roda.",
+      "points": [
+       "乗用車, トラック, バス, 軽自動車.",
+       "ガソリン車, ディーゼル車, ハイブリッド車, 電気自動車.",
+       "Urutan tenaga: エンジン → クラッチ/トランスミッション → プロペラシャフト/デファレンシャル → 車輪."
+      ],
+      "avoid": [
+       "Mengira hybrid hanya memakai motor listrik."
+      ],
+      "exam": [
+       "Nama kelompok bagian mobil.",
+       "Urutan aliran tenaga."
+      ]
+     },
+     "jp": {
+      "core": "{自動|じどう}{車|くるま}はエンジン、シャシ、ボデー、{電装品|でんそうひん}でできています。{力|ちから}はエンジンから{車輪|しゃりん}へ{伝|つた}わります。",
+      "points": [
+       "{乗用車|じょうようしゃ}、トラック、バス、{軽自動車|けいじどうしゃ}。",
+       "{車|くるま}の{種類|しゅるい}：ガソリン、ディーゼル、ハイブリッド、{電気|でんき}。",
+       "{力|ちから}の{順番|じゅんばん}：エンジン→クラッチ→プロペラシャフト→{車輪|しゃりん}。"
+      ],
+      "avoid": [
+       "ハイブリッド{車|しゃ}を、モーターだけで{走|はし}る{車|くるま}だと{思|おも}うこと。"
+      ],
+      "exam": [
+       "{車|くるま}の{部分|ぶぶん}の{名前|なまえ}。",
+       "{力|ちから}が{伝|つた}わる{順番|じゅんばん}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s2",
+    "no": 2,
+    "title": {
+     "id": "Hukum dan Jenis Perawatan",
+     "jp": "{法律|ほうりつ}と{整備|せいび}の{種類|しゅるい}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hukum"
+      },
+      {
+       "p": "Perawatan mobil di Jepang diatur oleh **道路運送車両法**. Tujuannya adalah keselamatan di jalan dan perlindungan lingkungan."
+      },
+      {
+       "h": "Tiga jenis perawatan"
+      },
+      {
+       "ul": [
+        "**日常点検整備**: pemeriksaan harian sebelum jalan oleh pemakai: oli, air pendingin, tekanan ban, lampu, rem.",
+        "**定期点検整備**: pemeriksaan berkala sesuai jangka waktu yang ditetapkan hukum. Jangka waktunya berbeda menurut jenis mobil; mobil pribadi umumnya tiap **12 bulan**.",
+        "**分解整備**: perawatan dengan membongkar bagian penting seperti mesin, rem, dan kemudi. Saat ini hukum menyebutnya **特定整備**, dan hanya boleh dilakukan bengkel yang punya **認証** (izin)."
+       ]
+      },
+      {
+       "h": "Pemeriksaan kendaraan"
+      },
+      {
+       "p": "**車検 (継続検査)** adalah pemeriksaan resmi agar mobil boleh dipakai di jalan. Mobil pribadi baru menjalaninya setelah 3 tahun, lalu **tiap 2 tahun**."
+      },
+      {
+       "h": "Pekerjaan pekerja SSW"
+      },
+      {
+       "p": "Pekerja 特定技能 bidang ini mengerjakan 日常点検整備, 定期点検整備, dan 分解整備. Pekerjaan tambahan seperti menjelaskan perawatan, menjual suku cadang, dan membersihkan boleh dilakukan sebagai pekerjaan sampingan."
+      },
+      {
+       "note": "Aturan tepat jangka waktu tergantung jenis mobil. Untuk ujian, ingat tiga jenis perawatan dan arti masing-masing."
+      }
+     ],
+     "jp": [
+      {
+       "h": "{法律|ほうりつ}"
+      },
+      {
+       "p": "{日本|にほん}の{自動|じどう}{車|くるま}の{整備|せいび}は、**{道路運送車両法|どうろうんそうしゃりょうほう}**で{決|き}まっています。{道路|どうろ}の{安全|あんぜん}と{環境|かんきょう}を{守|まも}るためです。"
+      },
+      {
+       "h": "{整備|せいび}の3つの{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "**{日常点検整備|にちじょうてんけんせいび}**：{使|つか}う{人|ひと}が{走|はし}る{前|まえ}に{行|おこな}う{点検|てんけん}。オイル、{冷却水|れいきゃくすい}、タイヤ、ライト、ブレーキを{見|み}る。",
+        "**{定期点検整備|ていきてんけんせいび}**：{法律|ほうりつ}で{決|き}まった{期間|きかん}ごとに{行|おこな}う{点検|てんけん}。{車|くるま}の{種類|しゅるい}で{期間|きかん}がちがう。{自家用|じかよう}の{乗用車|じょうようしゃ}はふつう**12か{月|げつ}**ごと。",
+        "**{分解整備|ぶんかいせいび}**：エンジン、ブレーキ、ステアリングなど{大事|だいじ}な{部分|ぶぶん}をはずして{行|おこな}う{整備|せいび}。{今|いま}の{法律|ほうりつ}では**{特定整備|とくていせいび}**といい、**{認証|にんしょう}**を{受|う}けた{工場|こうじょう}だけができる。"
+       ]
+      },
+      {
+       "h": "{車検|しゃけん}"
+      },
+      {
+       "p": "**{車検|しゃけん}（{継続検査|けいぞくけんさ}）**は、{道路|どうろ}を{走|はし}ってよいか{調|しら}べる{国|くに}の{検査|けんさ}です。{自家用|じかよう}の{乗用車|じょうようしゃ}は、{新|あたら}しいときは3{年|ねん}、そのあとは**2{年|ねん}ごと**に{受|う}けます。"
+      },
+      {
+       "h": "{特定技能|とくていぎのう}の{仕事|しごと}"
+      },
+      {
+       "p": "{特定技能|とくていぎのう}の{外国人|がいこくじん}は、{日常点検整備|にちじょうてんけんせいび}、{定期点検整備|ていきてんけんせいび}、{分解整備|ぶんかいせいび}をします。{整備|せいび}のせつめい、{部品|ぶひん}の{販売|はんばい}、そうじなどは、いっしょにしてよい{仕事|しごと}です。"
+      },
+      {
+       "note": "{期間|きかん}の{細|こま}かい{決|き}まりは{車|くるま}の{種類|しゅるい}でちがいます。{試験|しけん}では、3つの{整備|せいび}の{名前|なまえ}と{意味|いみ}をおぼえましょう。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tiga jenis perawatan: 日常点検整備, 定期点検整備, 分解整備 (特定整備); hukum dasarnya 道路運送車両法.",
+      "points": [
+       "日常点検 = pemakai, sebelum jalan.",
+       "定期点検 = berkala sesuai hukum; mobil pribadi 12 bulan.",
+       "分解整備 (特定整備) = hanya bengkel 認証.",
+       "車検 = 3 tahun lalu tiap 2 tahun (mobil pribadi)."
+      ],
+      "avoid": [
+       "Mencampur arti 日常点検 dan 定期点検.",
+       "Membongkar bagian penting di bengkel tanpa izin."
+      ],
+      "exam": [
+       "Arti tiga jenis perawatan.",
+       "Nama hukum 道路運送車両法."
+      ]
+     },
+     "jp": {
+      "core": "{整備|せいび}は{日常点検整備|にちじょうてんけんせいび}、{定期点検整備|ていきてんけんせいび}、{分解整備|ぶんかいせいび}（{特定整備|とくていせいび}）の3つです。{法律|ほうりつ}は{道路運送車両法|どうろうんそうしゃりょうほう}です。",
+      "points": [
+       "{日常点検|にちじょうてんけん}＝{使|つか}う{人|ひと}、{走|はし}る{前|まえ}。",
+       "{定期点検|ていきてんけん}＝{決|き}まった{期間|きかん}、{自家用乗用車|じかようじょうようしゃ}は12か{月|げつ}。",
+       "{分解整備|ぶんかいせいび}（{特定整備|とくていせいび}）＝{認証工場|にんしょうこうじょう}だけ。",
+       "{車検|しゃけん}＝3{年|ねん}、あとは2{年|ねん}ごと（{自家用乗用車|じかようじょうようしゃ}）。"
+      ],
+      "avoid": [
+       "{日常点検|にちじょうてんけん}と{定期点検|ていきてんけん}を{混|ま}ぜること。",
+       "{認証|にんしょう}のない{工場|こうじょう}で{分解整備|ぶんかいせいび}をすること。"
+      ],
+      "exam": [
+       "3つの{整備|せいび}の{意味|いみ}。",
+       "{道路運送車両法|どうろうんそうしゃりょうほう}の{名前|なまえ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s3",
+    "no": 3,
+    "title": {
+     "id": "Istilah Perawatan",
+     "jp": "{整備|せいび}のことば"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Kata kerja kerja"
+      },
+      {
+       "ul": [
+        "**点検**: memeriksa tanpa mengubah.",
+        "**調整**: menyetel agar sesuai nilai yang benar.",
+        "**交換**: mengganti dengan baru.",
+        "**修理**: memperbaiki yang rusak.",
+        "**分解 / 組立て**: membongkar / merakit.",
+        "**清掃**: membersihkan. **給油**: mengisi atau melumasi dengan oli atau gemuk.",
+        "**締め付け**: mengencangkan baut dan mur."
+       ]
+      },
+      {
+       "h": "Nilai"
+      },
+      {
+       "ul": [
+        "**規定値 (基準値)**: nilai yang seharusnya.",
+        "**限度**: batas pemakaian. Kalau melewati batas, harus diganti.",
+        "**測定**: mengukur dengan alat."
+       ]
+      },
+      {
+       "h": "Tanda masalah"
+      },
+      {
+       "ul": [
+        "**異音**: suara aneh. **異臭**: bau aneh. **振動**: getaran.",
+        "**漏れ**: bocor, misalnya オイル漏れ.",
+        "**警告灯**: lampu peringatan di dasbor."
+       ]
+      },
+      {
+       "note": "Hasil pemeriksaan sering dicatat sebagai **良** (baik) atau **否** (tidak baik)."
+      }
+     ],
+     "jp": [
+      {
+       "h": "{作業|さぎょう}のことば"
+      },
+      {
+       "ul": [
+        "**{点検|てんけん}**：かえないで、よく{見|み}て{調|しら}べること。",
+        "**{調整|ちょうせい}**：{正|ただ}しい{値|ち}にあわせること。",
+        "**{交換|こうかん}**：{新|あたら}しい{部品|ぶひん}にかえること。",
+        "**{修理|しゅうり}**：こわれた{所|ところ}をなおすこと。",
+        "**{分解|ぶんかい}・{組立|くみた}て**：はずすこと、くみたてること。",
+        "**{清掃|せいそう}**：きれいにすること。**{給油|きゅうゆ}**：オイルやグリースを{入|い}れる、ぬること。",
+        "**{締|し}め{付|つ}け**：ボルトやナットをしめること。"
+       ]
+      },
+      {
+       "h": "{値|ち}のことば"
+      },
+      {
+       "ul": [
+        "**{規定値|きていち}（{基準値|きじゅんち}）**：{本来|ほんらい}の{正|ただ}しい{値|ち}。",
+        "**{限度|げんど}**：{使|つか}ってよい、さいごの{値|ち}。こえたら{交換|こうかん}する。",
+        "**{測定|そくてい}**：{道具|どうぐ}ではかること。"
+       ]
+      },
+      {
+       "h": "ふぐあいのしるし"
+      },
+      {
+       "ul": [
+        "**{異音|いおん}**：ふだんとちがう{音|おと}。**{異臭|いしゅう}**：ふだんとちがうにおい。**{振動|しんどう}**：ふるえ。",
+        "**{漏|も}れ**：もれること。{例|れい}：オイル{漏|も}れ。",
+        "**{警告|けいこく}{灯|ひ}**：メーターのあたりの{注意|ちゅうい}のランプ。"
+       ]
+      },
+      {
+       "note": "{点検|てんけん}の{結果|けっか}は、**{良|りょう}**（よい）か**{否|ひ}**（よくない）で{書|か}くことがあります。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "点検 (periksa), 調整 (setel), 交換 (ganti), 修理 (perbaiki); bandingkan hasil ukur dengan 規定値 dan 限度.",
+      "points": [
+       "点検 ≠ 修理.",
+       "限度をこえたら交換.",
+       "異音・異臭・振動・漏れ = tanda masalah.",
+       "良 = baik, 否 = tidak baik."
+      ],
+      "avoid": [
+       "Memakai part yang sudah melewati 限度."
+      ],
+      "exam": [
+       "Beda 点検 dan 調整 dan 交換.",
+       "Arti 規定値 dan 限度."
+      ]
+     },
+     "jp": {
+      "core": "{点検|てんけん}は{調|しら}べること、{調整|ちょうせい}はあわせること、{交換|こうかん}はかえること、{修理|しゅうり}はなおすことです。{測|はか}った{値|ち}は{規定値|きていち}と{限度|げんど}で{見|み}ます。",
+      "points": [
+       "{点検|てんけん}と{修理|しゅうり}はちがう。",
+       "{限度|げんど}をこえたら{交換|こうかん}。",
+       "{異音|いおん}、{異臭|いしゅう}、{振動|しんどう}、{漏|も}れはふぐあいのしるし。",
+       "{良|りょう}＝よい、{否|ひ}＝よくない。"
+      ],
+      "avoid": [
+       "{限度|げんど}をこえた{部品|ぶひん}をそのまま{使|つか}うこと。"
+      ],
+      "exam": [
+       "{点検|てんけん}、{調整|ちょうせい}、{交換|こうかん}のちがい。",
+       "{規定値|きていち}と{限度|げんど}の{意味|いみ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s4",
+    "no": 4,
+    "title": {
+     "id": "Alur Kerja di Bengkel",
+     "jp": "{整備|せいび}{工場|こうじょう}の{仕事|しごと}の{流|なが}れ"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Alur kerja"
+      },
+      {
+       "ol": [
+        "**受付**: dengarkan keluhan pelanggan dan catat.",
+        "**点検・診断**: periksa dan cari penyebab.",
+        "**見積り・説明**: jelaskan pekerjaan dan biaya, dapat persetujuan pelanggan.",
+        "**整備作業**: kerjakan sesuai prosedur.",
+        "**完成検査**: periksa ulang hasil pekerjaan.",
+        "**引き渡し**: serahkan mobil dan jelaskan hasilnya."
+       ]
+      },
+      {
+       "h": "Catatan"
+      },
+      {
+       "p": "Hasil pemeriksaan dan pekerjaan dicatat di **整備記録簿**. Catatan menjadi bukti dan membantu perawatan berikutnya."
+      },
+      {
+       "h": "Menjaga mobil pelanggan"
+      },
+      {
+       "ul": [
+        "Pasang **cover jok, cover setir, dan alas lantai** sebelum bekerja di dalam mobil.",
+        "Jangan membuat kotor atau tergores.",
+        "Kembalikan part, barang, dan setelan jok ke keadaan semula."
+       ]
+      },
+      {
+       "h": "Pelaporan"
+      },
+      {
+       "p": "Jika menemukan masalah atau ragu, segera lapor ke atasan: **報告・連絡・相談**. Jangan memutuskan sendiri."
+      }
+     ],
+     "jp": [
+      {
+       "h": "{仕事|しごと}の{流|なが}れ"
+      },
+      {
+       "ol": [
+        "**{受付|うけつけ}**：お{客|きゃく}さまの{話|はなし}をきいて、{書|か}く。",
+        "**{点検|てんけん}・{診断|しんだん}**：{調|しら}べて、{原因|げんいん}をさがす。",
+        "**{見積|みつも}り・{説明|せつめい}**：{作業|さぎょう}と{料金|りょうきん}をせつめいして、お{客|きゃく}さまにOKをもらう。",
+        "**{整備|せいび}{作業|さぎょう}**：{手順|てじゅん}どおりに{作業|さぎょう}する。",
+        "**{完成検査|かんせいけんさ}**：{作業|さぎょう}のあとで、もう{一度|いちど}{調|しら}べる。",
+        "**{引|ひ}き{渡|わた}し**：{車|くるま}をかえして、{結果|けっか}をせつめいする。"
+       ]
+      },
+      {
+       "h": "{記録|きろく}"
+      },
+      {
+       "p": "{点検|てんけん}と{作業|さぎょう}の{結果|けっか}は、**{整備記録簿|せいびきろくぼ}**に{書|か}きます。{記録|きろく}はしょうこになり、つぎの{整備|せいび}に{役立|やくだ}ちます。"
+      },
+      {
+       "h": "お{客|きゃく}さまの{車|くるま}を{守|まも}る"
+      },
+      {
+       "ul": [
+        "{車|くるま}の{中|なか}で{作業|さぎょう}するときは、**シートカバー、ハンドルカバー、フロアマット**を{使|つか}う。",
+        "よごさない、きずをつけない。",
+        "{部品|ぶひん}や{荷物|にもつ}、シートの{位置|いち}は、もとにもどす。"
+       ]
+      },
+      {
+       "h": "ほうこく"
+      },
+      {
+       "p": "{問題|もんだい}を{見|み}つけたとき、わからないときは、すぐに{上|うえ}の{人|ひと}に{言|い}います。**{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}**です。ひとりで{決|き}めません。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Alur: 受付 → 点検 → 見積り → 作業 → 完成検査 → 引き渡し; catat di 整備記録簿; lindungi mobil pelanggan; lapor bila ragu.",
+      "points": [
+       "Dapat persetujuan pelanggan sebelum kerja.",
+       "完成検査 sebelum serah-terima.",
+       "整備記録簿.",
+       "Pasang cover jok, setir, alas lantai."
+      ],
+      "avoid": [
+       "Bekerja tanpa persetujuan pelanggan.",
+       "Memutuskan sendiri saat ragu."
+      ],
+      "exam": [
+       "Urutan alur kerja.",
+       "Fungsi 整備記録簿."
+      ]
+     },
+     "jp": {
+      "core": "{受付|うけつけ}、{点検|てんけん}、{見積|みつも}り、{作業|さぎょう}、{完成検査|かんせいけんさ}、{引|ひ}き{渡|わた}しの{順|じゅん}です。{記録|きろく}を{書|か}き、お{客|きゃく}さまの{車|くるま}を{守|まも}り、わからないときは{相談|そうだん}します。",
+      "points": [
+       "{作業|さぎょう}の{前|まえ}にお{客|きゃく}さまのOKをもらう。",
+       "{引|ひ}き{渡|わた}しの{前|まえ}に{完成検査|かんせいけんさ}。",
+       "{整備記録簿|せいびきろくぼ}に{書|か}く。",
+       "シート、ハンドル、フロアをカバーする。"
+      ],
+      "avoid": [
+       "お{客|きゃく}さまのOKなしに{作業|さぎょう}すること。",
+       "わからないのにひとりで{決|き}めること。"
+      ],
+      "exam": [
+       "{仕事|しごと}の{流|なが}れの{順番|じゅんばん}。",
+       "{整備記録簿|せいびきろくぼ}のやくわり。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,2538 @@
+{
+ "items": [
+  {
+   "id": "am-001",
+   "kata": "自動車",
+   "kana": "じどうしゃ",
+   "romaji": "jidousha",
+   "arti": "mobil, kendaraan bermotor",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{自動|じどう}{車|くるま}は{便利|べんり}な{乗|の}り{物|もの}です。",
+   "arti_contoh": "Mobil adalah kendaraan yang praktis."
+  },
+  {
+   "id": "am-002",
+   "kata": "乗用車",
+   "kana": "じょうようしゃ",
+   "romaji": "jouyousha",
+   "arti": "mobil penumpang",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{乗用車|じょうようしゃ}は{人|ひと}をのせます。",
+   "arti_contoh": "Mobil penumpang mengangkut orang."
+  },
+  {
+   "id": "am-003",
+   "kata": "軽自動車",
+   "kana": "けいじどうしゃ",
+   "romaji": "keijidousha",
+   "arti": "mobil kei (mobil kecil)",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{軽自動車|けいじどうしゃ}は{小|ちい}さい{車|くるま}です。",
+   "arti_contoh": "Mobil kei adalah mobil kecil."
+  },
+  {
+   "id": "am-004",
+   "kata": "ハイブリッド車",
+   "kana": "はいぶりっどしゃ",
+   "romaji": "haiburiddo sha",
+   "arti": "mobil hybrid",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "ハイブリッド{車|しゃ}はモーターも{使|つか}います。",
+   "arti_contoh": "Mobil hybrid juga memakai motor listrik."
+  },
+  {
+   "id": "am-005",
+   "kata": "電気自動車",
+   "kana": "でんきじどうしゃ",
+   "romaji": "denki jidousha",
+   "arti": "mobil listrik",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{電気|でんき}{自動|じどう}{車|くるま}はモーターで{走|はし}ります。",
+   "arti_contoh": "Mobil listrik berjalan dengan motor."
+  },
+  {
+   "id": "am-006",
+   "kata": "原動機",
+   "kana": "げんどうき",
+   "romaji": "gendouki",
+   "arti": "penggerak utama (mesin)",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "エンジンは{原動機|げんどうき}です。",
+   "arti_contoh": "Mesin adalah penggerak utama."
+  },
+  {
+   "id": "am-007",
+   "kata": "車体",
+   "kana": "しゃたい",
+   "romaji": "shatai",
+   "arti": "badan mobil",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{車体|しゃたい}にドアがあります。",
+   "arti_contoh": "Badan mobil punya pintu."
+  },
+  {
+   "id": "am-008",
+   "kata": "電装品",
+   "kana": "でんそうひん",
+   "romaji": "densouhin",
+   "arti": "bagian listrik",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "バッテリは{電装品|でんそうひん}です。",
+   "arti_contoh": "Aki adalah bagian listrik."
+  },
+  {
+   "id": "am-009",
+   "kata": "車輪",
+   "kana": "しゃりん",
+   "romaji": "sharin",
+   "arti": "roda",
+   "cat": "Dasar mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{力|ちから}は{車輪|しゃりん}に{伝|つた}わります。",
+   "arti_contoh": "Tenaga diteruskan ke roda."
+  },
+  {
+   "id": "am-010",
+   "kata": "整備",
+   "kana": "せいび",
+   "romaji": "seibi",
+   "arti": "perawatan, servis",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{車|くるま}の{整備|せいび}をします。",
+   "arti_contoh": "Merawat mobil."
+  },
+  {
+   "id": "am-011",
+   "kata": "点検",
+   "kana": "てんけん",
+   "romaji": "tenken",
+   "arti": "pemeriksaan",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{毎日|まいにち}、{点検|てんけん}をします。",
+   "arti_contoh": "Memeriksa setiap hari."
+  },
+  {
+   "id": "am-012",
+   "kata": "日常点検整備",
+   "kana": "にちじょうてんけんせいび",
+   "romaji": "nichijou tenken seibi",
+   "arti": "perawatan pemeriksaan harian",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{日常点検整備|にちじょうてんけんせいび}は{走|はし}る{前|まえ}に{行|おこな}います。",
+   "arti_contoh": "Pemeriksaan harian dilakukan sebelum jalan."
+  },
+  {
+   "id": "am-013",
+   "kata": "定期点検整備",
+   "kana": "ていきてんけんせいび",
+   "romaji": "teiki tenken seibi",
+   "arti": "pemeriksaan berkala",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{定期点検整備|ていきてんけんせいび}は{期間|きかん}が{決|き}まっています。",
+   "arti_contoh": "Pemeriksaan berkala jangka waktunya ditentukan."
+  },
+  {
+   "id": "am-014",
+   "kata": "分解整備",
+   "kana": "ぶんかいせいび",
+   "romaji": "bunkai seibi",
+   "arti": "perawatan bongkar (特定整備)",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{分解整備|ぶんかいせいび}は{認証工場|にんしょうこうじょう}でします。",
+   "arti_contoh": "Perawatan bongkar dilakukan di bengkel bersertifikat."
+  },
+  {
+   "id": "am-015",
+   "kata": "特定整備",
+   "kana": "とくていせいび",
+   "romaji": "tokutei seibi",
+   "arti": "perawatan khusus (istilah baru 分解整備)",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{今|いま}は{特定整備|とくていせいび}ともいいます。",
+   "arti_contoh": "Sekarang juga disebut 特定整備."
+  },
+  {
+   "id": "am-016",
+   "kata": "認証",
+   "kana": "にんしょう",
+   "romaji": "ninshou",
+   "arti": "sertifikasi, izin bengkel",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "この{工場|こうじょう}は{認証|にんしょう}を{受|う}けています。",
+   "arti_contoh": "Bengkel ini bersertifikat."
+  },
+  {
+   "id": "am-017",
+   "kata": "車検",
+   "kana": "しゃけん",
+   "romaji": "shaken",
+   "arti": "pemeriksaan kendaraan resmi",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{車検|しゃけん}は2{年|ねん}ごとです。",
+   "arti_contoh": "Pemeriksaan kendaraan tiap 2 tahun."
+  },
+  {
+   "id": "am-018",
+   "kata": "道路運送車両法",
+   "kana": "どうろうんそうしゃりょうほう",
+   "romaji": "douro unsou sharyou hou",
+   "arti": "UU Angkutan Jalan (kendaraan)",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{道路運送車両法|どうろうんそうしゃりょうほう}を{学|まな}びます。",
+   "arti_contoh": "Belajar UU kendaraan."
+  },
+  {
+   "id": "am-019",
+   "kata": "使用者",
+   "kana": "しようしゃ",
+   "romaji": "shiyousha",
+   "arti": "pemakai kendaraan",
+   "cat": "Hukum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{使用者|しようしゃ}が{日常点検|にちじょうてんけん}をします。",
+   "arti_contoh": "Pemakai melakukan pemeriksaan harian."
+  },
+  {
+   "id": "am-020",
+   "kata": "調整",
+   "kana": "ちょうせい",
+   "romaji": "chousei",
+   "arti": "penyetelan",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "ブレーキを{調整|ちょうせい}します。",
+   "arti_contoh": "Menyetel rem."
+  },
+  {
+   "id": "am-021",
+   "kata": "交換",
+   "kana": "こうかん",
+   "romaji": "koukan",
+   "arti": "penggantian",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "オイルを{交換|こうかん}します。",
+   "arti_contoh": "Mengganti oli."
+  },
+  {
+   "id": "am-022",
+   "kata": "修理",
+   "kana": "しゅうり",
+   "romaji": "shuuri",
+   "arti": "perbaikan",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "こわれた{所|ところ}を{修理|しゅうり}します。",
+   "arti_contoh": "Memperbaiki bagian yang rusak."
+  },
+  {
+   "id": "am-023",
+   "kata": "分解",
+   "kana": "ぶんかい",
+   "romaji": "bunkai",
+   "arti": "membongkar",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{部品|ぶひん}を{分解|ぶんかい}します。",
+   "arti_contoh": "Membongkar part."
+  },
+  {
+   "id": "am-024",
+   "kata": "組立て",
+   "kana": "くみたて",
+   "romaji": "kumitate",
+   "arti": "merakit",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{分解|ぶんかい}したあと、{組立|くみた}てます。",
+   "arti_contoh": "Setelah dibongkar, dirakit."
+  },
+  {
+   "id": "am-025",
+   "kata": "清掃",
+   "kana": "せいそう",
+   "romaji": "seisou",
+   "arti": "pembersihan",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{工場|こうじょう}を{清掃|せいそう}します。",
+   "arti_contoh": "Membersihkan bengkel."
+  },
+  {
+   "id": "am-026",
+   "kata": "給油",
+   "kana": "きゅうゆ",
+   "romaji": "kyuuyu",
+   "arti": "pengisian / pelumasan oli",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{部品|ぶひん}に{給油|きゅうゆ}します。",
+   "arti_contoh": "Memberi oli pada part."
+  },
+  {
+   "id": "am-027",
+   "kata": "締め付け",
+   "kana": "しめつけ",
+   "romaji": "shimetsuke",
+   "arti": "pengencangan",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "ボルトを{締|し}め{付|つ}けます。",
+   "arti_contoh": "Mengencangkan baut."
+  },
+  {
+   "id": "am-028",
+   "kata": "測定",
+   "kana": "そくてい",
+   "romaji": "sokutei",
+   "arti": "pengukuran",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{長|なが}さを{測定|そくてい}します。",
+   "arti_contoh": "Mengukur panjang."
+  },
+  {
+   "id": "am-029",
+   "kata": "規定値",
+   "kana": "きていち",
+   "romaji": "kiteichi",
+   "arti": "nilai standar",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{規定値|きていち}を{確認|かくにん}します。",
+   "arti_contoh": "Memastikan nilai standar."
+  },
+  {
+   "id": "am-030",
+   "kata": "限度",
+   "kana": "げんど",
+   "romaji": "gendo",
+   "arti": "batas pakai",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{限度|げんど}をこえたら{交換|こうかん}します。",
+   "arti_contoh": "Jika melewati batas, ganti."
+  },
+  {
+   "id": "am-031",
+   "kata": "異音",
+   "kana": "いおん",
+   "romaji": "ion",
+   "arti": "suara aneh",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "エンジンから{異音|いおん}がします。",
+   "arti_contoh": "Ada suara aneh dari mesin."
+  },
+  {
+   "id": "am-032",
+   "kata": "異臭",
+   "kana": "いしゅう",
+   "romaji": "ishuu",
+   "arti": "bau aneh",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{異臭|いしゅう}がしたら{止|と}めます。",
+   "arti_contoh": "Jika ada bau aneh, hentikan."
+  },
+  {
+   "id": "am-033",
+   "kata": "振動",
+   "kana": "しんどう",
+   "romaji": "shindou",
+   "arti": "getaran",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "ハンドルに{振動|しんどう}があります。",
+   "arti_contoh": "Setir bergetar."
+  },
+  {
+   "id": "am-034",
+   "kata": "漏れ",
+   "kana": "もれ",
+   "romaji": "more",
+   "arti": "bocor",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "オイル{漏|も}れを{見|み}つけました。",
+   "arti_contoh": "Menemukan kebocoran oli."
+  },
+  {
+   "id": "am-035",
+   "kata": "警告灯",
+   "kana": "けいこくとう",
+   "romaji": "keikokutou",
+   "arti": "lampu peringatan",
+   "cat": "Istilah kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{警告|けいこく}{灯|ひ}がつきました。",
+   "arti_contoh": "Lampu peringatan menyala."
+  },
+  {
+   "id": "am-036",
+   "kata": "受付",
+   "kana": "うけつけ",
+   "romaji": "uketsuke",
+   "arti": "penerimaan",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "{受付|うけつけ}でお{客|きゃく}さまの{話|はなし}をききます。",
+   "arti_contoh": "Mendengar pelanggan di penerimaan."
+  },
+  {
+   "id": "am-037",
+   "kata": "診断",
+   "kana": "しんだん",
+   "romaji": "shindan",
+   "arti": "diagnosa",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "{原因|げんいん}を{診断|しんだん}します。",
+   "arti_contoh": "Mendiagnosa penyebab."
+  },
+  {
+   "id": "am-038",
+   "kata": "見積り",
+   "kana": "みつもり",
+   "romaji": "mitsumori",
+   "arti": "perkiraan biaya",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "{見積|みつも}りを{説明|せつめい}します。",
+   "arti_contoh": "Menjelaskan perkiraan biaya."
+  },
+  {
+   "id": "am-039",
+   "kata": "完成検査",
+   "kana": "かんせいけんさ",
+   "romaji": "kansei kensa",
+   "arti": "pemeriksaan akhir",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "{引|ひ}き{渡|わた}しの{前|まえ}に{完成検査|かんせいけんさ}をします。",
+   "arti_contoh": "Sebelum serah terima, lakukan pemeriksaan akhir."
+  },
+  {
+   "id": "am-040",
+   "kata": "引き渡し",
+   "kana": "ひきわたし",
+   "romaji": "hikiwatashi",
+   "arti": "serah terima",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "{車|くるま}の{引|ひ}き{渡|わた}しをします。",
+   "arti_contoh": "Menyerahkan mobil."
+  },
+  {
+   "id": "am-041",
+   "kata": "整備記録簿",
+   "kana": "せいびきろくぼ",
+   "romaji": "seibi kirokubo",
+   "arti": "buku catatan perawatan",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "{整備記録簿|せいびきろくぼ}に{書|か}きます。",
+   "arti_contoh": "Menulis di buku catatan perawatan."
+  },
+  {
+   "id": "am-042",
+   "kata": "報告",
+   "kana": "ほうこく",
+   "romaji": "houkoku",
+   "arti": "laporan",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "{上|うえ}の{人|ひと}に{報告|ほうこく}します。",
+   "arti_contoh": "Melapor ke atasan."
+  },
+  {
+   "id": "am-043",
+   "kata": "連絡",
+   "kana": "れんらく",
+   "romaji": "renraku",
+   "arti": "kontak, kabar",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "すぐに{連絡|れんらく}します。",
+   "arti_contoh": "Segera memberi kabar."
+  },
+  {
+   "id": "am-044",
+   "kata": "相談",
+   "kana": "そうだん",
+   "romaji": "soudan",
+   "arti": "konsultasi",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "わからないときは{相談|そうだん}します。",
+   "arti_contoh": "Jika tidak tahu, konsultasi."
+  },
+  {
+   "id": "am-045",
+   "kata": "お客さま",
+   "kana": "おきゃくさま",
+   "romaji": "okyakusama",
+   "arti": "pelanggan",
+   "cat": "Alur kerja",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "contoh": "お{客|きゃく}さまの{車|くるま}を{大切|たいせつ}にします。",
+   "arti_contoh": "Menjaga mobil pelanggan."
+  },
+  {
+   "id": "am-046",
+   "kata": "エンジン",
+   "kana": "えんじん",
+   "romaji": "enjin",
+   "arti": "mesin",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "エンジンをかけます。",
+   "arti_contoh": "Menghidupkan mesin."
+  },
+  {
+   "id": "am-047",
+   "kata": "シリンダ",
+   "kana": "しりんだ",
+   "romaji": "shirinda",
+   "arti": "silinder",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "ピストンはシリンダの{中|なか}で{動|うご}きます。",
+   "arti_contoh": "Piston bergerak di dalam silinder."
+  },
+  {
+   "id": "am-048",
+   "kata": "ピストン",
+   "kana": "ぴすとん",
+   "romaji": "piston",
+   "arti": "piston",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "ピストンが{上|うえ}{下|した}に{動|うご}きます。",
+   "arti_contoh": "Piston bergerak naik-turun."
+  },
+  {
+   "id": "am-049",
+   "kata": "クランクシャフト",
+   "kana": "くらんくしゃふと",
+   "romaji": "kuranku shafuto",
+   "arti": "poros engkol",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "クランクシャフトが{回|かい}ります。",
+   "arti_contoh": "Poros engkol berputar."
+  },
+  {
+   "id": "am-050",
+   "kata": "吸入",
+   "kana": "きゅうにゅう",
+   "romaji": "kyuunyuu",
+   "arti": "langkah isap",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{吸入|きゅうにゅう}で{空気|くうき}が{入|はい}ります。",
+   "arti_contoh": "Udara masuk saat isap."
+  },
+  {
+   "id": "am-051",
+   "kata": "圧縮",
+   "kana": "あっしゅく",
+   "romaji": "asshuku",
+   "arti": "kompresi",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{圧縮|あっしゅく}で{空気|くうき}をおします。",
+   "arti_contoh": "Menekan udara saat kompresi."
+  },
+  {
+   "id": "am-052",
+   "kata": "燃焼",
+   "kana": "ねんしょう",
+   "romaji": "nenshou",
+   "arti": "pembakaran",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{燃焼|ねんしょう}で{力|ちから}が{出|で}ます。",
+   "arti_contoh": "Tenaga keluar dari pembakaran."
+  },
+  {
+   "id": "am-053",
+   "kata": "排気",
+   "kana": "はいき",
+   "romaji": "haiki",
+   "arti": "pembuangan gas",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{排気|はいき}でガスを{出|で}します。",
+   "arti_contoh": "Gas dikeluarkan saat buang."
+  },
+  {
+   "id": "am-054",
+   "kata": "上死点",
+   "kana": "じょうしてん",
+   "romaji": "joushiten",
+   "arti": "titik mati atas",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "ピストンが{上|うえ}{死点|してん}にあります。",
+   "arti_contoh": "Piston ada di titik mati atas."
+  },
+  {
+   "id": "am-055",
+   "kata": "下死点",
+   "kana": "かしてん",
+   "romaji": "kashiten",
+   "arti": "titik mati bawah",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{下|した}{死点|してん}はいちばん{下|した}です。",
+   "arti_contoh": "Titik mati bawah adalah paling bawah."
+  },
+  {
+   "id": "am-056",
+   "kata": "点火プラグ",
+   "kana": "てんかぷらぐ",
+   "romaji": "tenka puragu",
+   "arti": "busi",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{点火|てんか}プラグが{火花|ひばな}を{出|で}します。",
+   "arti_contoh": "Busi mengeluarkan percikan."
+  },
+  {
+   "id": "am-057",
+   "kata": "圧縮着火",
+   "kana": "あっしゅくちゃっか",
+   "romaji": "asshuku chakka",
+   "arti": "penyalaan kompresi (diesel)",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "ディーゼルは{圧縮着火|あっしゅくちゃっか}です。",
+   "arti_contoh": "Diesel menyala karena kompresi."
+  },
+  {
+   "id": "am-058",
+   "kata": "ガソリン",
+   "kana": "がそりん",
+   "romaji": "gasorin",
+   "arti": "bensin",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "ガソリンは{燃|も}えやすいです。",
+   "arti_contoh": "Bensin mudah terbakar."
+  },
+  {
+   "id": "am-059",
+   "kata": "軽油",
+   "kana": "けいゆ",
+   "romaji": "keiyu",
+   "arti": "solar",
+   "cat": "Mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "ディーゼルは{軽油|けいゆ}を{使|つか}います。",
+   "arti_contoh": "Diesel memakai solar."
+  },
+  {
+   "id": "am-060",
+   "kata": "シリンダブロック",
+   "kana": "しりんだぶろっく",
+   "romaji": "shirinda burokku",
+   "arti": "blok silinder",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "シリンダブロックはエンジンの{本体|ほんたい}です。",
+   "arti_contoh": "Blok silinder adalah badan mesin."
+  },
+  {
+   "id": "am-061",
+   "kata": "シリンダヘッド",
+   "kana": "しりんだへっど",
+   "romaji": "shirinda heddo",
+   "arti": "kepala silinder",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "シリンダヘッドにバルブがあります。",
+   "arti_contoh": "Kepala silinder punya katup."
+  },
+  {
+   "id": "am-062",
+   "kata": "ヘッドガスケット",
+   "kana": "へっどがすけっと",
+   "romaji": "heddo gasuketto",
+   "arti": "paking kepala silinder",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "ヘッドガスケットがもれをふせぎます。",
+   "arti_contoh": "Paking mencegah kebocoran."
+  },
+  {
+   "id": "am-063",
+   "kata": "ピストンリング",
+   "kana": "ぴすとんりんぐ",
+   "romaji": "piston ringu",
+   "arti": "cincin piston",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "ピストンリングがすりへりました。",
+   "arti_contoh": "Cincin piston sudah aus."
+  },
+  {
+   "id": "am-064",
+   "kata": "コネクティングロッド",
+   "kana": "こねくてぃんぐろっど",
+   "romaji": "konekuchingu roddo",
+   "arti": "batang penghubung",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "コンロッドはピストンとつながっています。",
+   "arti_contoh": "Batang penghubung tersambung ke piston."
+  },
+  {
+   "id": "am-065",
+   "kata": "フライホイール",
+   "kana": "ふらいほいーる",
+   "romaji": "furai hoiiru",
+   "arti": "roda gila",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "フライホイールが{回転|かいてん}をなめらかにします。",
+   "arti_contoh": "Roda gila menghaluskan putaran."
+  },
+  {
+   "id": "am-066",
+   "kata": "バルブ",
+   "kana": "ばるぶ",
+   "romaji": "barubu",
+   "arti": "katup",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "{吸気|きゅうき}バルブが{開|ひら}きます。",
+   "arti_contoh": "Katup masuk terbuka."
+  },
+  {
+   "id": "am-067",
+   "kata": "カムシャフト",
+   "kana": "かむしゃふと",
+   "romaji": "kamu shafuto",
+   "arti": "poros nok",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "カムシャフトがバルブを{開|あ}けます。",
+   "arti_contoh": "Poros nok membuka katup."
+  },
+  {
+   "id": "am-068",
+   "kata": "タイミングベルト",
+   "kana": "たいみんぐべると",
+   "romaji": "taimingu beruto",
+   "arti": "sabuk timing",
+   "cat": "Bagian mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "contoh": "タイミングベルトを{交換|こうかん}します。",
+   "arti_contoh": "Mengganti sabuk timing."
+  },
+  {
+   "id": "am-069",
+   "kata": "オイルパン",
+   "kana": "おいるぱん",
+   "romaji": "oiru pan",
+   "arti": "bak oli",
+   "cat": "Pelumasan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "オイルパンにオイルがたまります。",
+   "arti_contoh": "Oli tertampung di bak oli."
+  },
+  {
+   "id": "am-070",
+   "kata": "潤滑",
+   "kana": "じゅんかつ",
+   "romaji": "junkatsu",
+   "arti": "pelumasan",
+   "cat": "Pelumasan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "オイルは{潤滑|じゅんかつ}をします。",
+   "arti_contoh": "Oli melumasi."
+  },
+  {
+   "id": "am-071",
+   "kata": "オイルポンプ",
+   "kana": "おいるぽんぷ",
+   "romaji": "oiru ponpu",
+   "arti": "pompa oli",
+   "cat": "Pelumasan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "オイルポンプがオイルをおします。",
+   "arti_contoh": "Pompa oli menekan oli."
+  },
+  {
+   "id": "am-072",
+   "kata": "オイルフィルタ",
+   "kana": "おいるふぃるた",
+   "romaji": "oiru firuta",
+   "arti": "filter oli",
+   "cat": "Pelumasan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "オイルフィルタでごみをとります。",
+   "arti_contoh": "Filter oli menyaring kotoran."
+  },
+  {
+   "id": "am-073",
+   "kata": "レベルゲージ",
+   "kana": "れべるげーじ",
+   "romaji": "reberu geeji",
+   "arti": "batang pengukur oli",
+   "cat": "Pelumasan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "レベルゲージでオイルの{量|りょう}を{見|み}ます。",
+   "arti_contoh": "Melihat oli dengan batang ukur."
+  },
+  {
+   "id": "am-074",
+   "kata": "油圧警告灯",
+   "kana": "ゆあつけいこくとう",
+   "romaji": "yuatsu keikokutou",
+   "arti": "lampu peringatan tekanan oli",
+   "cat": "Pelumasan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{油圧警告灯|ゆあつけいこくとう}がついたら{止|と}めます。",
+   "arti_contoh": "Jika lampu tekanan oli menyala, hentikan."
+  },
+  {
+   "id": "am-075",
+   "kata": "冷却",
+   "kana": "れいきゃく",
+   "romaji": "reikyaku",
+   "arti": "pendinginan",
+   "cat": "Pendinginan",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "エンジンを{冷却|れいきゃく}します。",
+   "arti_contoh": "Mendinginkan mesin."
+  },
+  {
+   "id": "am-076",
+   "kata": "ラジエータ",
+   "kana": "らじえーた",
+   "romaji": "rajieeta",
+   "arti": "radiator",
+   "cat": "Pendinginan",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "ラジエータで{水|みず}を{冷|ひ}やします。",
+   "arti_contoh": "Mendinginkan air dengan radiator."
+  },
+  {
+   "id": "am-077",
+   "kata": "ウォータポンプ",
+   "kana": "うぉーたぽんぷ",
+   "romaji": "wootaponpu",
+   "arti": "pompa air",
+   "cat": "Pendinginan",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "ウォータポンプが{水|みず}をおくります。",
+   "arti_contoh": "Pompa air mengalirkan air."
+  },
+  {
+   "id": "am-078",
+   "kata": "サーモスタット",
+   "kana": "さーもすたっと",
+   "romaji": "saamosutatto",
+   "arti": "termostat",
+   "cat": "Pendinginan",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "サーモスタットが{温度|おんど}を{調整|ちょうせい}します。",
+   "arti_contoh": "Termostat mengatur suhu."
+  },
+  {
+   "id": "am-079",
+   "kata": "冷却水",
+   "kana": "れいきゃくすい",
+   "romaji": "reikyakusui",
+   "arti": "air pendingin",
+   "cat": "Pendinginan",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "{冷却水|れいきゃくすい}の{量|りょう}を{見|み}ます。",
+   "arti_contoh": "Memeriksa jumlah air pendingin."
+  },
+  {
+   "id": "am-080",
+   "kata": "LLC",
+   "kana": "えるえるしー",
+   "romaji": "eru eru shii",
+   "arti": "cairan pendingin tahan lama",
+   "cat": "Pendinginan",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "LLCをまぜます。",
+   "arti_contoh": "Mencampur LLC."
+  },
+  {
+   "id": "am-081",
+   "kata": "オーバーヒート",
+   "kana": "おーばーひーと",
+   "romaji": "oobaa hiito",
+   "arti": "panas berlebih",
+   "cat": "Pendinginan",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "オーバーヒートしたら{止|と}めます。",
+   "arti_contoh": "Jika overheat, hentikan."
+  },
+  {
+   "id": "am-082",
+   "kata": "燃料",
+   "kana": "ねんりょう",
+   "romaji": "nenryou",
+   "arti": "bahan bakar",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "{燃料|ねんりょう}が{少|すく}なくなりました。",
+   "arti_contoh": "Bahan bakar tinggal sedikit."
+  },
+  {
+   "id": "am-083",
+   "kata": "燃料タンク",
+   "kana": "ねんりょうたんく",
+   "romaji": "nenryou tanku",
+   "arti": "tangki bahan bakar",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "{燃料|ねんりょう}タンクに{入|い}れます。",
+   "arti_contoh": "Mengisi ke tangki bahan bakar."
+  },
+  {
+   "id": "am-084",
+   "kata": "燃料ポンプ",
+   "kana": "ねんりょうぽんぷ",
+   "romaji": "nenryou ponpu",
+   "arti": "pompa bahan bakar",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "{燃料|ねんりょう}ポンプが{燃料|ねんりょう}を{送|おく}ります。",
+   "arti_contoh": "Pompa mengirim bahan bakar."
+  },
+  {
+   "id": "am-085",
+   "kata": "インジェクタ",
+   "kana": "いんじぇくた",
+   "romaji": "injekuta",
+   "arti": "injektor",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "インジェクタが{燃料|ねんりょう}をふきます。",
+   "arti_contoh": "Injektor menyemprotkan bahan bakar."
+  },
+  {
+   "id": "am-086",
+   "kata": "エアクリーナ",
+   "kana": "えあくりーな",
+   "romaji": "ea kuriina",
+   "arti": "saringan udara",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "エアクリーナがよごれました。",
+   "arti_contoh": "Saringan udara kotor."
+  },
+  {
+   "id": "am-087",
+   "kata": "触媒コンバータ",
+   "kana": "しょくばいこんばーた",
+   "romaji": "shokubai konbaata",
+   "arti": "katalis konverter",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "{触媒|しょくばい}コンバータが{排気|はいき}をきれいにします。",
+   "arti_contoh": "Katalis membersihkan gas buang."
+  },
+  {
+   "id": "am-088",
+   "kata": "マフラ",
+   "kana": "まふら",
+   "romaji": "mafura",
+   "arti": "knalpot (peredam)",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "マフラは{音|おと}を{小|ちい}さくします。",
+   "arti_contoh": "Knalpot mengecilkan suara."
+  },
+  {
+   "id": "am-089",
+   "kata": "一酸化炭素",
+   "kana": "いっさんかたんそ",
+   "romaji": "issanka tanso",
+   "arti": "karbon monoksida (CO)",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "{一酸化炭素|いっさんかたんそ}は{毒|どく}です。",
+   "arti_contoh": "Karbon monoksida beracun."
+  },
+  {
+   "id": "am-090",
+   "kata": "排気ガス",
+   "kana": "はいきがす",
+   "romaji": "haikigasu",
+   "arti": "gas buang",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "{排気|はいき}ガスを{吸|す}わないでください。",
+   "arti_contoh": "Jangan menghirup gas buang."
+  },
+  {
+   "id": "am-091",
+   "kata": "イグニッションコイル",
+   "kana": "いぐにっしょんこいる",
+   "romaji": "igunisshon koiru",
+   "arti": "koil pengapian",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "コイルが{高|たか}い{電圧|でんあつ}をつくります。",
+   "arti_contoh": "Koil menghasilkan tegangan tinggi."
+  },
+  {
+   "id": "am-092",
+   "kata": "グロープラグ",
+   "kana": "ぐろーぷらぐ",
+   "romaji": "guroo puragu",
+   "arti": "busi pijar (diesel)",
+   "cat": "Bahan bakar & gas buang",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "contoh": "グロープラグはディーゼルで{使|つか}います。",
+   "arti_contoh": "Busi pijar dipakai di diesel."
+  },
+  {
+   "id": "am-093",
+   "kata": "ベルト",
+   "kana": "べると",
+   "romaji": "beruto",
+   "arti": "sabuk",
+   "cat": "Pemeriksaan mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s6"
+   ],
+   "contoh": "ベルトがゆるんでいます。",
+   "arti_contoh": "Sabuk kendur."
+  },
+  {
+   "id": "am-094",
+   "kata": "圧縮圧力",
+   "kana": "あっしゅくあつりょく",
+   "romaji": "asshuku atsuryoku",
+   "arti": "tekanan kompresi",
+   "cat": "Pemeriksaan mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s6"
+   ],
+   "contoh": "{圧縮圧力|あっしゅくあつりょく}をはかります。",
+   "arti_contoh": "Mengukur tekanan kompresi."
+  },
+  {
+   "id": "am-095",
+   "kata": "コンプレッションゲージ",
+   "kana": "こんぷれっしょんげーじ",
+   "romaji": "konpuresshon geeji",
+   "arti": "alat ukur kompresi",
+   "cat": "Pemeriksaan mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s6"
+   ],
+   "contoh": "コンプレッションゲージを{使|つか}います。",
+   "arti_contoh": "Memakai alat ukur kompresi."
+  },
+  {
+   "id": "am-096",
+   "kata": "アイドリング",
+   "kana": "あいどりんぐ",
+   "romaji": "aidoringu",
+   "arti": "putaran idle",
+   "cat": "Pemeriksaan mesin",
+   "bab": "bab2",
+   "src": [
+    "b2s6"
+   ],
+   "contoh": "アイドリングの{音|おと}を{聞|き}きます。",
+   "arti_contoh": "Mendengar suara idle."
+  },
+  {
+   "id": "am-097",
+   "kata": "動力伝達装置",
+   "kana": "どうりょくでんたつそうち",
+   "romaji": "douryoku dentatsu souchi",
+   "arti": "penerus tenaga",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{動力伝達|どうりょくでんたつ}{装置|そうち}は{力|ちから}を{車輪|しゃりん}に{送|おく}ります。",
+   "arti_contoh": "Penerus tenaga mengirim tenaga ke roda."
+  },
+  {
+   "id": "am-098",
+   "kata": "クラッチ",
+   "kana": "くらっち",
+   "romaji": "kuracchi",
+   "arti": "kopling",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "クラッチをふみます。",
+   "arti_contoh": "Menginjak kopling."
+  },
+  {
+   "id": "am-099",
+   "kata": "トランスミッション",
+   "kana": "とらんすみっしょん",
+   "romaji": "toransumisshon",
+   "arti": "transmisi",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "トランスミッションで{速|はや}さを{変|か}えます。",
+   "arti_contoh": "Mengubah kecepatan dengan transmisi."
+  },
+  {
+   "id": "am-100",
+   "kata": "プロペラシャフト",
+   "kana": "ぷろぺらしゃふと",
+   "romaji": "puropera shafuto",
+   "arti": "poros propeler",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "プロペラシャフトが{力|ちから}を{後|うし}ろへ{送|おく}ります。",
+   "arti_contoh": "Poros propeler mengirim tenaga ke belakang."
+  },
+  {
+   "id": "am-101",
+   "kata": "デファレンシャル",
+   "kana": "でふぁれんしゃる",
+   "romaji": "defarensharu",
+   "arti": "diferensial",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "デファレンシャルは{左右|さゆう}の{回転|かいてん}をゆるします。",
+   "arti_contoh": "Diferensial mengizinkan beda putaran kiri-kanan."
+  },
+  {
+   "id": "am-102",
+   "kata": "ドライブシャフト",
+   "kana": "どらいぶしゃふと",
+   "romaji": "doraibu shafuto",
+   "arti": "as roda penggerak",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "ドライブシャフトのブーツを{見|み}ます。",
+   "arti_contoh": "Memeriksa karet penutup as roda."
+  },
+  {
+   "id": "am-103",
+   "kata": "駆動",
+   "kana": "くどう",
+   "romaji": "kudou",
+   "arti": "penggerak",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "4{輪|わ}{駆動|くどう}は4WDといいます。",
+   "arti_contoh": "Penggerak 4 roda disebut 4WD."
+  },
+  {
+   "id": "am-104",
+   "kata": "手動",
+   "kana": "しゅどう",
+   "romaji": "shudou",
+   "arti": "manual",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "MTは{手|て}{動|どう}です。",
+   "arti_contoh": "MT itu manual."
+  },
+  {
+   "id": "am-105",
+   "kata": "自動",
+   "kana": "じどう",
+   "romaji": "jidou",
+   "arti": "otomatis",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "ATは{自動|じどう}です。",
+   "arti_contoh": "AT itu otomatis."
+  },
+  {
+   "id": "am-106",
+   "kata": "遊び",
+   "kana": "あそび",
+   "romaji": "asobi",
+   "arti": "kelonggaran (jarak bebas)",
+   "cat": "Penerus tenaga",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "ペダルの{遊|あそ}びを{見|み}ます。",
+   "arti_contoh": "Memeriksa jarak bebas pedal."
+  },
+  {
+   "id": "am-107",
+   "kata": "サスペンション",
+   "kana": "さすぺんしょん",
+   "romaji": "sasupenshon",
+   "arti": "suspensi",
+   "cat": "Suspensi",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "サスペンションがしょうげきをやわらげます。",
+   "arti_contoh": "Suspensi meredam kejutan."
+  },
+  {
+   "id": "am-108",
+   "kata": "緩衝装置",
+   "kana": "かんしょうそうち",
+   "romaji": "kanshou souchi",
+   "arti": "peredam (suspensi)",
+   "cat": "Suspensi",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "{緩衝装置|かんしょうそうち}はゆれを{少|すく}なくします。",
+   "arti_contoh": "Peredam mengurangi guncangan."
+  },
+  {
+   "id": "am-109",
+   "kata": "スプリング",
+   "kana": "すぷりんぐ",
+   "romaji": "supuringu",
+   "arti": "pegas",
+   "cat": "Suspensi",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "スプリングが{車|くるま}の{重|おも}さをささえます。",
+   "arti_contoh": "Pegas menahan berat mobil."
+  },
+  {
+   "id": "am-110",
+   "kata": "ショックアブソーバ",
+   "kana": "しょっくあぶそーば",
+   "romaji": "shokku abusooba",
+   "arti": "peredam kejut",
+   "cat": "Suspensi",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "ショックアブソーバがもれています。",
+   "arti_contoh": "Peredam kejut bocor."
+  },
+  {
+   "id": "am-111",
+   "kata": "スタビライザ",
+   "kana": "すたびらいざ",
+   "romaji": "sutabiraiza",
+   "arti": "batang penstabil",
+   "cat": "Suspensi",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "スタビライザがかたむきを{少|すく}なくします。",
+   "arti_contoh": "Penstabil mengurangi kemiringan."
+  },
+  {
+   "id": "am-112",
+   "kata": "乗り心地",
+   "kana": "のりごこち",
+   "romaji": "norigokochi",
+   "arti": "kenyamanan berkendara",
+   "cat": "Suspensi",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "{乗|の}り{心地|ごこち}がよくなりました。",
+   "arti_contoh": "Kenyamanan jadi lebih baik."
+  },
+  {
+   "id": "am-113",
+   "kata": "ステアリング",
+   "kana": "すてありんぐ",
+   "romaji": "sutearingu",
+   "arti": "kemudi",
+   "cat": "Kemudi",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "contoh": "ステアリングを{点検|てんけん}します。",
+   "arti_contoh": "Memeriksa kemudi."
+  },
+  {
+   "id": "am-114",
+   "kata": "操縦装置",
+   "kana": "そうじゅうそうち",
+   "romaji": "soujuu souchi",
+   "arti": "sistem kemudi",
+   "cat": "Kemudi",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "contoh": "{操縦装置|そうじゅうそうち}は{車|くるま}のむきをかえます。",
+   "arti_contoh": "Sistem kemudi mengubah arah mobil."
+  },
+  {
+   "id": "am-115",
+   "kata": "ハンドル",
+   "kana": "はんどる",
+   "romaji": "handoru",
+   "arti": "setir",
+   "cat": "Kemudi",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "contoh": "ハンドルをまわします。",
+   "arti_contoh": "Memutar setir."
+  },
+  {
+   "id": "am-116",
+   "kata": "タイロッド",
+   "kana": "たいろっど",
+   "romaji": "tairoddo",
+   "arti": "tie rod",
+   "cat": "Kemudi",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "contoh": "タイロッドが{車輪|しゃりん}を{動|うご}かします。",
+   "arti_contoh": "Tie rod menggerakkan roda."
+  },
+  {
+   "id": "am-117",
+   "kata": "パワーステアリング",
+   "kana": "ぱわーすてありんぐ",
+   "romaji": "paawaa sutearingu",
+   "arti": "power steering",
+   "cat": "Kemudi",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "contoh": "パワーステアリングでハンドルが{軽|かる}くなります。",
+   "arti_contoh": "Setir jadi ringan karena power steering."
+  },
+  {
+   "id": "am-118",
+   "kata": "アライメント",
+   "kana": "あらいめんと",
+   "romaji": "araimento",
+   "arti": "pelurusan roda",
+   "cat": "Kemudi",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "contoh": "アライメントを{調整|ちょうせい}します。",
+   "arti_contoh": "Menyetel pelurusan roda."
+  },
+  {
+   "id": "am-119",
+   "kata": "制動装置",
+   "kana": "せいどうそうち",
+   "romaji": "seidou souchi",
+   "arti": "sistem rem",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "{制動装置|せいどうそうち}は{車|くるま}をとめます。",
+   "arti_contoh": "Sistem rem menghentikan mobil."
+  },
+  {
+   "id": "am-120",
+   "kata": "ブレーキ",
+   "kana": "ぶれーき",
+   "romaji": "bureeki",
+   "arti": "rem",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ブレーキをかけます。",
+   "arti_contoh": "Mengerem."
+  },
+  {
+   "id": "am-121",
+   "kata": "ブレーキ液",
+   "kana": "ぶれーきえき",
+   "romaji": "bureeki eki",
+   "arti": "minyak rem",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ブレーキ{液|えき}は{水分|すいぶん}をすいます。",
+   "arti_contoh": "Minyak rem menyerap air."
+  },
+  {
+   "id": "am-122",
+   "kata": "マスタシリンダ",
+   "kana": "ますたしりんだ",
+   "romaji": "masuta shirinda",
+   "arti": "silinder master",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "マスタシリンダが{圧力|あつりょく}をつくります。",
+   "arti_contoh": "Silinder master menciptakan tekanan."
+  },
+  {
+   "id": "am-123",
+   "kata": "ディスクブレーキ",
+   "kana": "でぃすくぶれーき",
+   "romaji": "disuku bureeki",
+   "arti": "rem cakram",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ディスクブレーキはパッドを{使|つか}います。",
+   "arti_contoh": "Rem cakram memakai pad."
+  },
+  {
+   "id": "am-124",
+   "kata": "ドラムブレーキ",
+   "kana": "どらむぶれーき",
+   "romaji": "doramu bureeki",
+   "arti": "rem tromol",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ドラムブレーキはシューを{使|つか}います。",
+   "arti_contoh": "Rem tromol memakai shoe."
+  },
+  {
+   "id": "am-125",
+   "kata": "パッド",
+   "kana": "ぱっど",
+   "romaji": "paddo",
+   "arti": "kampas rem cakram",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "パッドがうすくなりました。",
+   "arti_contoh": "Kampas sudah tipis."
+  },
+  {
+   "id": "am-126",
+   "kata": "ローター",
+   "kana": "ろーたー",
+   "romaji": "rootaa",
+   "arti": "cakram rem",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ローターをパッドがはさみます。",
+   "arti_contoh": "Pad menjepit cakram."
+  },
+  {
+   "id": "am-127",
+   "kata": "ブレーキシュー",
+   "kana": "ぶれーきしゅー",
+   "romaji": "bureeki shuu",
+   "arti": "kampas rem tromol",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ブレーキシューを{点検|てんけん}します。",
+   "arti_contoh": "Memeriksa kampas tromol."
+  },
+  {
+   "id": "am-128",
+   "kata": "エア抜き",
+   "kana": "えあぬき",
+   "romaji": "ea nuki",
+   "arti": "membuang udara",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ブレーキのエア{抜|ぬ}きをします。",
+   "arti_contoh": "Membuang udara dari rem."
+  },
+  {
+   "id": "am-129",
+   "kata": "パーキングブレーキ",
+   "kana": "ぱーきんぐぶれーき",
+   "romaji": "paakingu bureeki",
+   "arti": "rem parkir",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "パーキングブレーキをかけます。",
+   "arti_contoh": "Menarik rem parkir."
+  },
+  {
+   "id": "am-130",
+   "kata": "踏みしろ",
+   "kana": "ふみしろ",
+   "romaji": "fumishiro",
+   "arti": "jarak injak pedal",
+   "cat": "Rem",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ペダルの{踏|ふ}みしろを{見|み}ます。",
+   "arti_contoh": "Memeriksa jarak injak pedal."
+  },
+  {
+   "id": "am-131",
+   "kata": "タイヤ",
+   "kana": "たいや",
+   "romaji": "taiya",
+   "arti": "ban",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "タイヤの{空気圧|くうきあつ}を{見|み}ます。",
+   "arti_contoh": "Memeriksa tekanan ban."
+  },
+  {
+   "id": "am-132",
+   "kata": "ホイール",
+   "kana": "ほいーる",
+   "romaji": "hoiiru",
+   "arti": "roda (velg)",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "ホイールを{取|と}りつけます。",
+   "arti_contoh": "Memasang roda."
+  },
+  {
+   "id": "am-133",
+   "kata": "空気圧",
+   "kana": "くうきあつ",
+   "romaji": "kuuki atsu",
+   "arti": "tekanan angin",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "{空気圧|くうきあつ}が{低|ひく}いです。",
+   "arti_contoh": "Tekanan angin rendah."
+  },
+  {
+   "id": "am-134",
+   "kata": "溝",
+   "kana": "みぞ",
+   "romaji": "mizo",
+   "arti": "alur (ban)",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "タイヤの{溝|みぞ}がへりました。",
+   "arti_contoh": "Alur ban menipis."
+  },
+  {
+   "id": "am-135",
+   "kata": "スリップサイン",
+   "kana": "すりっぷさいん",
+   "romaji": "surippu sain",
+   "arti": "tanda batas alur ban",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "スリップサインが{出|で}ました。",
+   "arti_contoh": "Tanda batas alur muncul."
+  },
+  {
+   "id": "am-136",
+   "kata": "ホイールナット",
+   "kana": "ほいーるなっと",
+   "romaji": "hoiiru natto",
+   "arti": "mur roda",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "ホイールナットをしめます。",
+   "arti_contoh": "Mengencangkan mur roda."
+  },
+  {
+   "id": "am-137",
+   "kata": "トルクレンチ",
+   "kana": "とるくれんち",
+   "romaji": "toruku renchi",
+   "arti": "kunci torsi",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "トルクレンチでしめます。",
+   "arti_contoh": "Mengencangkan dengan kunci torsi."
+  },
+  {
+   "id": "am-138",
+   "kata": "増し締め",
+   "kana": "ましじめ",
+   "romaji": "mashijime",
+   "arti": "kencangkan ulang",
+   "cat": "Ban & roda",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "contoh": "{走|はし}ったあと{増|ま}し{締|し}めをします。",
+   "arti_contoh": "Setelah jalan, kencangkan ulang."
+  },
+  {
+   "id": "am-139",
+   "kata": "バッテリ",
+   "kana": "ばってり",
+   "romaji": "batteri",
+   "arti": "aki",
+   "cat": "Aki",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "バッテリが{弱|よわ}いです。",
+   "arti_contoh": "Aki lemah."
+  },
+  {
+   "id": "am-140",
+   "kata": "電圧",
+   "kana": "でんあつ",
+   "romaji": "den atsu",
+   "arti": "tegangan",
+   "cat": "Aki",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{電圧|でんあつ}は12Vです。",
+   "arti_contoh": "Tegangan 12 V."
+  },
+  {
+   "id": "am-141",
+   "kata": "端子",
+   "kana": "たんし",
+   "romaji": "tanshi",
+   "arti": "terminal",
+   "cat": "Aki",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{端子|たんし}をはずします。",
+   "arti_contoh": "Melepas terminal."
+  },
+  {
+   "id": "am-142",
+   "kata": "バッテリ液",
+   "kana": "ばってりえき",
+   "romaji": "batteri eki",
+   "arti": "cairan aki",
+   "cat": "Aki",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "バッテリ{液|えき}は{酸|さん}です。",
+   "arti_contoh": "Cairan aki adalah asam."
+  },
+  {
+   "id": "am-143",
+   "kata": "水素ガス",
+   "kana": "すいそがす",
+   "romaji": "suiso gasu",
+   "arti": "gas hidrogen",
+   "cat": "Aki",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{水素|すいそ}ガスは{燃|も}えやすいです。",
+   "arti_contoh": "Gas hidrogen mudah terbakar."
+  },
+  {
+   "id": "am-144",
+   "kata": "スタータ",
+   "kana": "すたーた",
+   "romaji": "sutaata",
+   "arti": "starter",
+   "cat": "Start & pengisian",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "contoh": "スタータが{回|かい}りません。",
+   "arti_contoh": "Starter tidak berputar."
+  },
+  {
+   "id": "am-145",
+   "kata": "オルタネータ",
+   "kana": "おるたねーた",
+   "romaji": "orutaneeta",
+   "arti": "alternator",
+   "cat": "Start & pengisian",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "contoh": "オルタネータが{発電|はつでん}します。",
+   "arti_contoh": "Alternator menghasilkan listrik."
+  },
+  {
+   "id": "am-146",
+   "kata": "発電",
+   "kana": "はつでん",
+   "romaji": "hatsuden",
+   "arti": "pembangkitan listrik",
+   "cat": "Start & pengisian",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "contoh": "エンジンで{発電|はつでん}します。",
+   "arti_contoh": "Menghasilkan listrik dengan mesin."
+  },
+  {
+   "id": "am-147",
+   "kata": "充電",
+   "kana": "じゅうでん",
+   "romaji": "juuden",
+   "arti": "pengisian listrik",
+   "cat": "Start & pengisian",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "contoh": "バッテリに{充電|じゅうでん}します。",
+   "arti_contoh": "Mengisi aki."
+  },
+  {
+   "id": "am-148",
+   "kata": "充電警告灯",
+   "kana": "じゅうでんけいこくとう",
+   "romaji": "juuden keikokutou",
+   "arti": "lampu peringatan pengisian",
+   "cat": "Start & pengisian",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "contoh": "{充電警告灯|じゅうでんけいこくとう}がつきました。",
+   "arti_contoh": "Lampu pengisian menyala."
+  },
+  {
+   "id": "am-149",
+   "kata": "ヘッドライト",
+   "kana": "へっどらいと",
+   "romaji": "heddo raito",
+   "arti": "lampu depan",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "ヘッドライトがつきません。",
+   "arti_contoh": "Lampu depan tidak menyala."
+  },
+  {
+   "id": "am-150",
+   "kata": "ブレーキランプ",
+   "kana": "ぶれーきらんぷ",
+   "romaji": "bureeki ranpu",
+   "arti": "lampu rem",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "ブレーキランプを{見|み}ます。",
+   "arti_contoh": "Memeriksa lampu rem."
+  },
+  {
+   "id": "am-151",
+   "kata": "ウインカ",
+   "kana": "ういんか",
+   "romaji": "uinka",
+   "arti": "lampu sein",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "ウインカをだします。",
+   "arti_contoh": "Menyalakan lampu sein."
+  },
+  {
+   "id": "am-152",
+   "kata": "ヒューズ",
+   "kana": "ひゅーず",
+   "romaji": "hyuuzu",
+   "arti": "sekring",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "ヒューズが{切|き}れました。",
+   "arti_contoh": "Sekring putus."
+  },
+  {
+   "id": "am-153",
+   "kata": "リレー",
+   "kana": "りれー",
+   "romaji": "reree",
+   "arti": "relay",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "リレーが{入|はい}り{切|き}りします。",
+   "arti_contoh": "Relay menyambung dan memutus."
+  },
+  {
+   "id": "am-154",
+   "kata": "電流",
+   "kana": "でんりゅう",
+   "romaji": "denryuu",
+   "arti": "arus listrik",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "{電流|でんりゅう}が{大|おお}きすぎます。",
+   "arti_contoh": "Arus terlalu besar."
+  },
+  {
+   "id": "am-155",
+   "kata": "抵抗",
+   "kana": "ていこう",
+   "romaji": "teikou",
+   "arti": "hambatan",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "{抵抗|ていこう}をはかります。",
+   "arti_contoh": "Mengukur hambatan."
+  },
+  {
+   "id": "am-156",
+   "kata": "オームの法則",
+   "kana": "おーむのほうそく",
+   "romaji": "oomu no housoku",
+   "arti": "hukum Ohm",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "オームの{法則|ほうそく}はV＝I×Rです。",
+   "arti_contoh": "Hukum Ohm adalah V = I × R."
+  },
+  {
+   "id": "am-157",
+   "kata": "ショート",
+   "kana": "しょーと",
+   "romaji": "shooto",
+   "arti": "hubung singkat",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "{配線|はいせん}がショートしました。",
+   "arti_contoh": "Kabel korslet."
+  },
+  {
+   "id": "am-158",
+   "kata": "断線",
+   "kana": "だんせん",
+   "romaji": "dansen",
+   "arti": "kabel putus",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "{断線|だんせん}で{電気|でんき}が{流|なが}れません。",
+   "arti_contoh": "Listrik tidak mengalir karena kabel putus."
+  },
+  {
+   "id": "am-159",
+   "kata": "回路計",
+   "kana": "かいろけい",
+   "romaji": "kairokei",
+   "arti": "multimeter (tester)",
+   "cat": "Lampu & listrik",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "contoh": "{回路計|かいろけい}で{電圧|でんあつ}をはかります。",
+   "arti_contoh": "Mengukur tegangan dengan tester."
+  },
+  {
+   "id": "am-160",
+   "kata": "高電圧",
+   "kana": "こうでんあつ",
+   "romaji": "kou den atsu",
+   "arti": "tegangan tinggi",
+   "cat": "Hybrid & EV",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "contoh": "{高|こう}{電圧|でんあつ}はあぶないです。",
+   "arti_contoh": "Tegangan tinggi berbahaya."
+  },
+  {
+   "id": "am-161",
+   "kata": "回生ブレーキ",
+   "kana": "かいせいぶれーき",
+   "romaji": "kaisei bureeki",
+   "arti": "rem regeneratif",
+   "cat": "Hybrid & EV",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "contoh": "{回|かい}{生|せい}ブレーキで{充電|じゅうでん}します。",
+   "arti_contoh": "Mengisi aki dengan rem regeneratif."
+  },
+  {
+   "id": "am-162",
+   "kata": "感電",
+   "kana": "かんでん",
+   "romaji": "kanden",
+   "arti": "tersengat listrik",
+   "cat": "Hybrid & EV",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "contoh": "{感電|かんでん}に{注意|ちゅうい}します。",
+   "arti_contoh": "Waspada sengatan listrik."
+  },
+  {
+   "id": "am-163",
+   "kata": "絶縁",
+   "kana": "ぜつえん",
+   "romaji": "zetsuen",
+   "arti": "isolasi",
+   "cat": "Hybrid & EV",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "contoh": "{絶縁|ぜつえん}{手|て}ぶくろを{使|つか}います。",
+   "arti_contoh": "Memakai sarung tangan isolasi."
+  },
+  {
+   "id": "am-164",
+   "kata": "ウォッシャ液",
+   "kana": "うぉっしゃえき",
+   "romaji": "wosshaeki",
+   "arti": "cairan wiper",
+   "cat": "Pemeriksaan",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "ウォッシャ{液|えき}を{足|た}します。",
+   "arti_contoh": "Menambah cairan wiper."
+  },
+  {
+   "id": "am-165",
+   "kata": "ランプ類",
+   "kana": "らんぷるい",
+   "romaji": "ranpurui",
+   "arti": "lampu-lampu",
+   "cat": "Pemeriksaan",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "ランプ{類|るい}を{見|み}ます。",
+   "arti_contoh": "Memeriksa lampu-lampu."
+  },
+  {
+   "id": "am-166",
+   "kata": "ワイパ",
+   "kana": "わいぱ",
+   "romaji": "waipa",
+   "arti": "wiper",
+   "cat": "Pemeriksaan",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "ワイパがきれいにふけません。",
+   "arti_contoh": "Wiper tidak bersih menyapu."
+  },
+  {
+   "id": "am-167",
+   "kata": "点検整備記録簿",
+   "kana": "てんけんせいびきろくぼ",
+   "romaji": "tenken seibi kirokubo",
+   "arti": "buku catatan pemeriksaan",
+   "cat": "Pemeriksaan",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{点検|てんけん}{整備記録簿|せいびきろくぼ}に{書|か}きます。",
+   "arti_contoh": "Menulis di buku catatan pemeriksaan."
+  },
+  {
+   "id": "am-168",
+   "kata": "こしょう",
+   "kana": "こしょう",
+   "romaji": "koshou",
+   "arti": "kerusakan",
+   "cat": "Pemeriksaan",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "こしょうをふせぎます。",
+   "arti_contoh": "Mencegah kerusakan."
+  },
+  {
+   "id": "am-169",
+   "kata": "ジャッキ",
+   "kana": "じゃっき",
+   "romaji": "jakki",
+   "arti": "dongkrak",
+   "cat": "Keselamatan",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "ジャッキで{車|くるま}をあげます。",
+   "arti_contoh": "Mengangkat mobil dengan dongkrak."
+  },
+  {
+   "id": "am-170",
+   "kata": "リジッドラック",
+   "kana": "りじっどらっく",
+   "romaji": "rijiddo rakku",
+   "arti": "jack stand (ウマ)",
+   "cat": "Keselamatan",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "リジッドラックで{車|くるま}をささえます。",
+   "arti_contoh": "Menopang mobil dengan jack stand."
+  },
+  {
+   "id": "am-171",
+   "kata": "車止め",
+   "kana": "くるまどめ",
+   "romaji": "kurumadome",
+   "arti": "pengganjal roda",
+   "cat": "Keselamatan",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{車|くるま}{止|と}めをおきます。",
+   "arti_contoh": "Memasang pengganjal roda."
+  },
+  {
+   "id": "am-172",
+   "kata": "安全靴",
+   "kana": "あんぜんぐつ",
+   "romaji": "anzengutsu",
+   "arti": "sepatu keselamatan",
+   "cat": "Keselamatan",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{安全|あんぜん}{靴|くつ}をはきます。",
+   "arti_contoh": "Memakai sepatu keselamatan."
+  },
+  {
+   "id": "am-173",
+   "kata": "保護めがね",
+   "kana": "ほごめがね",
+   "romaji": "hogo megane",
+   "arti": "kacamata pelindung",
+   "cat": "Keselamatan",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{保護|ほご}めがねを{使|つか}います。",
+   "arti_contoh": "Memakai kacamata pelindung."
+  },
+  {
+   "id": "am-174",
+   "kata": "消火器",
+   "kana": "しょうかき",
+   "romaji": "shoukaki",
+   "arti": "alat pemadam api",
+   "cat": "Keselamatan",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{消火器|しょうかき}の{場所|ばしょ}を{知|し}っています。",
+   "arti_contoh": "Tahu letak alat pemadam."
+  },
+  {
+   "id": "am-175",
+   "kata": "ヒヤリハット",
+   "kana": "ひやりはっと",
+   "romaji": "hiyari hatto",
+   "arti": "nyaris celaka",
+   "cat": "Keselamatan",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "ヒヤリハットを{報告|ほうこく}します。",
+   "arti_contoh": "Melaporkan nyaris celaka."
+  },
+  {
+   "id": "am-176",
+   "kata": "整理",
+   "kana": "せいり",
+   "romaji": "seiri",
+   "arti": "memilah (5S)",
+   "cat": "5S & limbah",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "いるものを{整理|せいり}します。",
+   "arti_contoh": "Memilah yang diperlukan."
+  },
+  {
+   "id": "am-177",
+   "kata": "整頓",
+   "kana": "せいとん",
+   "romaji": "seiton",
+   "arti": "menata (5S)",
+   "cat": "5S & limbah",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{道具|どうぐ}を{整頓|せいとん}します。",
+   "arti_contoh": "Menata alat."
+  },
+  {
+   "id": "am-178",
+   "kata": "清潔",
+   "kana": "せいけつ",
+   "romaji": "seiketsu",
+   "arti": "menjaga bersih (5S)",
+   "cat": "5S & limbah",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{清潔|せいけつ}をたもちます。",
+   "arti_contoh": "Menjaga kebersihan."
+  },
+  {
+   "id": "am-179",
+   "kata": "廃油",
+   "kana": "はいゆ",
+   "romaji": "haiyu",
+   "arti": "oli bekas",
+   "cat": "5S & limbah",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{廃油|はいゆ}は{決|き}まりどおりにすてます。",
+   "arti_contoh": "Oli bekas dibuang sesuai aturan."
+  },
+  {
+   "id": "am-180",
+   "kata": "廃液",
+   "kana": "はいえき",
+   "romaji": "haieki",
+   "arti": "cairan bekas",
+   "cat": "5S & limbah",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{廃液|はいえき}を{分|わ}けてすてます。",
+   "arti_contoh": "Memisahkan dan membuang cairan bekas."
+  },
+  {
+   "id": "am-181",
+   "kata": "ウエス",
+   "kana": "うえす",
+   "romaji": "uesu",
+   "arti": "kain lap",
+   "cat": "5S & limbah",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "ウエスで{油|あぶら}をふきます。",
+   "arti_contoh": "Mengelap oli dengan kain lap."
+  }
+ ]
+}
