@@ -922,7 +922,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   }
 
   return `
-    <svg viewBox="${sayapSvg ? "-30 -10 460 510" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
+    <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
       ${sayapSvg}
       ${base}
@@ -947,8 +947,8 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261115q";
-import { extend2 } from "./character-more2.js?v=20261115q";
+import { extend } from "./character-more.js?v=20261115r";
+import { extend2 } from "./character-more2.js?v=20261115r";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
