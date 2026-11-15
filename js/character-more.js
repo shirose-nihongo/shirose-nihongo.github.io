@@ -239,7 +239,9 @@ const WING = [
 /* level pakai & harga sayap (tidak dijual di shop — hanya gacha; harga = nilai tampilan) */
 const WING_LV = { common: 50, uncommon: 50, rare: 55, epic: 62, legendary: 75, mythic: 90 };
 const WING_HARGA = { common: 15000, uncommon: 25000, rare: 45000, epic: 80000, legendary: 150000, mythic: 300000 };
-const buildWings = (list, pre) => { const o = build(list, pre || "sy_"); Object.values(o).forEach(x => { x.unlock_lv = WING_LV[x.rarity]; x.harga = WING_HARGA[x.rarity]; x.gachaOnly = !["epic", "legendary", "mythic"].includes(x.rarity); /* dijual di shop mulai epic; di bawahnya hanya gacha */ }); return o; };
+const EPIC_UP = { common: "epic", uncommon: "epic", rare: "epic", epic: "epic", legendary: "legendary", mythic: "mythic" };
+/* Semua sayap minimal EPIC (langka di gacha); level & harga mengikuti kelangkaan asli desainnya; semua dijual di shop */
+const buildWings = (list, pre) => { const o = build(list, pre || "sy_"); Object.values(o).forEach(x => { x.unlock_lv = WING_LV[x.rarity]; x.harga = WING_HARGA[x.rarity]; x.rarity = EPIC_UP[x.rarity]; x.gachaOnly = false; }); return o; };
 
 /* ======================= EKSPOR ======================= */
 export const H = { SK, mk, build, U, outfit, pants, shoe, aura, blade, gl, orb, staff, PAIR, FLAP, wingFeather, wingBat, wingLeaf, wingCrystal, wingWind, wingFlame, paperWing, buildWings, tier, angel, phoenix, dragon, spirit, crystal };

@@ -2171,7 +2171,7 @@ export const ITEMS = [
  {
   "id": "sy_kardus",
   "nama": "Sayap Kardus",
-  "rarity": "common",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 15000
@@ -2179,7 +2179,7 @@ export const ITEMS = [
  {
   "id": "sy_kertas",
   "nama": "Sayap Kertas Origami",
-  "rarity": "common",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 15000
@@ -2187,7 +2187,7 @@ export const ITEMS = [
  {
   "id": "sy_plastik",
   "nama": "Sayap Plastik Kresek",
-  "rarity": "common",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 15000
@@ -2195,7 +2195,7 @@ export const ITEMS = [
  {
   "id": "sy_kain_lusuh",
   "nama": "Sayap Kain Lusuh",
-  "rarity": "common",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 15000
@@ -2203,7 +2203,7 @@ export const ITEMS = [
  {
   "id": "sy_ayam",
   "nama": "Sayap Ayam",
-  "rarity": "common",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 15000
@@ -2211,7 +2211,7 @@ export const ITEMS = [
  {
   "id": "sy_bebek_karet",
   "nama": "Sayap Bebek Karet",
-  "rarity": "common",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 15000
@@ -2219,7 +2219,7 @@ export const ITEMS = [
  {
   "id": "sy_daun",
   "nama": "Sayap Daun Hutan",
-  "rarity": "uncommon",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 25000
@@ -2227,7 +2227,7 @@ export const ITEMS = [
  {
   "id": "sy_capung",
   "nama": "Sayap Capung",
-  "rarity": "uncommon",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 25000
@@ -2235,7 +2235,7 @@ export const ITEMS = [
  {
   "id": "sy_angin",
   "nama": "Sayap Angin Puyuh",
-  "rarity": "rare",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 45000
@@ -2243,7 +2243,7 @@ export const ITEMS = [
  {
   "id": "sy_es",
   "nama": "Sayap Es Kristal",
-  "rarity": "rare",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 45000
@@ -2251,7 +2251,7 @@ export const ITEMS = [
  {
   "id": "sy_daun_besar",
   "nama": "Sayap Pohon Dunia",
-  "rarity": "rare",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 45000
@@ -2331,7 +2331,7 @@ export const ITEMS = [
  {
   "id": "sy2_kupu",
   "nama": "Sayap Kupu-kupu",
-  "rarity": "uncommon",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 25000
@@ -2339,7 +2339,7 @@ export const ITEMS = [
  {
   "id": "sy2_malam",
   "nama": "Sayap Kelelawar Malam",
-  "rarity": "rare",
+  "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap (khusus Gacha)",
   "harga": 45000
