@@ -38,7 +38,8 @@ Catatan: kolom "Kosakata" Building Cleaning dkk. dihitung dari `vocab.json` apa 
 ## Status pekerjaan
 
 - Audit: selesai (dokumen ini).
-- Bidang selesai: belum ada.
+- Fishery: latihan per subbab selesai (33 grup `bXsY-q`, 165 soal orisinal, teks Indonesia; JP untuk soal subbab belum, sama seperti Agriculture). Skrip: `tools/ssw/fishery_subquiz.py`. Soal ujian akhir menunggu info format resmi dari Raditya.
+- Tes: JSON valid, ID unik, kunci jawaban valid, grup lama identik, `loadPack` memuat tanpa error di headless Chrome. Tes klik UI belum dijalankan.
 - Commit/deploy: belum.
 
 ## Sumber dan lisensi
@@ -47,6 +48,7 @@ Belum ada sumber baru yang diunduh sesi ini.
 
 ## Pekerjaan berikutnya
 
-1. Fishery: soal latihan per subbab (orisinal) + soal ujian latihan lebih banyak.
+1. Fishery: soal ujian akhir sesuai format resmi (menunggu info dari Raditya).
+1b. Auto-maintenance: ganti sumber ke teks resmi MLIT (perlu dicari dan diunduh).
 2. Livestock: hubungkan kosakata ke subbab, tambah soal per subbab.
 3. Industrial / Machine-Metal: perluas.

@@ -197,6 +197,730 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "b1s1-q",
+    "title": {
+     "id": "Latihan: Perikanan Dunia dan Jepang, Jenis Ikan",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Tiga negara dengan produksi perikanan + budidaya terbesar di dunia (2021) adalah…"
+      },
+      "opts": [
+       {
+        "id": "Jepang, Cina, India"
+       },
+       {
+        "id": "India, Norwegia, Cina"
+       },
+       {
+        "id": "Cina, Indonesia, India"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Urutannya Cina (sekitar 89 juta ton), Indonesia (sekitar 22 juta ton), India (sekitar 16 juta ton). (Modul hal. 2–7.)"
+      },
+      "ref": {
+       "p": 2
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Produksi perikanan Jepang mencapai puncak pada tahun 1984, lalu menurun.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar, puncaknya 1984. (Modul hal. 2–7.)"
+      },
+      "ref": {
+       "p": 2
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Perikanan dengan kapal kecil di sepanjang pantai (termasuk jaring tetap) disebut…"
+      },
+      "opts": [
+       {
+        "id": "Perikanan laut jauh (遠洋漁業)"
+       },
+       {
+        "id": "Perikanan perairan darat (内水面漁業)"
+       },
+       {
+        "id": "Perikanan pantai (沿岸漁業)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Perikanan pantai memakai kapal kecil dekat pantai. (Modul hal. 2–7.)"
+      },
+      "ref": {
+       "p": 2
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Perikanan pantai tidak mencakup jaring tetap (定置網).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jaring tetap termasuk perikanan pantai. (Modul hal. 2–7.)"
+      },
+      "ref": {
+       "p": 2
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mengapa kapal dan alat tangkap harus disesuaikan?"
+      },
+      "opts": [
+       {
+        "id": "Karena aturan warna kapal"
+       },
+       {
+        "id": "Karena jumlah awak selalu sama"
+       },
+       {
+        "id": "Karena perikanan dipengaruhi alam dan ikan sasaran berbeda-beda"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kapal dan alat disesuaikan dengan ikan sasaran dan kondisi alam. (Modul hal. 2–7.)"
+      },
+      "ref": {
+       "p": 2
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "title": {
+     "id": "Latihan: Kapal dan Awak Kapal",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lampu navigasi di lambung kiri (左舷灯) berwarna…"
+      },
+      "opts": [
+       {
+        "id": "Hijau"
+       },
+       {
+        "id": "Putih"
+       },
+       {
+        "id": "Merah"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Lambung kiri merah, lambung kanan hijau; tiang dan buritan putih. (Modul hal. 7–9.)"
+      },
+      "ref": {
+       "p": 7
+      }
+     },
+     {
+      "q": {
+       "id": "取舵 (torikaji) berarti mengemudikan kapal ke…"
+      },
+      "opts": [
+       {
+        "id": "Kanan"
+       },
+       {
+        "id": "Mundur"
+       },
+       {
+        "id": "Kiri"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "取舵 = kiri; 面舵 (omokaji) = kanan. (Modul hal. 7–9.)"
+      },
+      "ref": {
+       "p": 7
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tateyure adalah goyangan kapal memanjang (pitching) dan yokoyure goyangan ke samping (rolling).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 7–9.)"
+      },
+      "ref": {
+       "p": 7
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Siapa yang bertanggung jawab atas seluruh operasi penangkapan ikan?"
+      },
+      "opts": [
+       {
+        "id": "機関長 (kepala mesin)"
+       },
+       {
+        "id": "漁労長 (kepala operasi penangkapan)"
+       },
+       {
+        "id": "船長 (nakhoda, pelayaran)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "漁労長 memimpin penangkapan; 船長 mengurus pelayaran. (Modul hal. 7–9.)"
+      },
+      "ref": {
+       "p": 7
+      }
+     },
+     {
+      "q": {
+       "id": "機関長 bertanggung jawab atas…"
+      },
+      "opts": [
+       {
+        "id": "Seluruh operasi penangkapan"
+       },
+       {
+        "id": "Mesin dan pendingin"
+       },
+       {
+        "id": "Pelayaran kapal"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "機関長 = kepala kamar mesin dan pendingin. (Modul hal. 7–9.)"
+      },
+      "ref": {
+       "p": 7
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s3-q",
+    "title": {
+     "id": "Latihan: Kompas, Peta Laut, Navigasi, Arus",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Huruf “S” untuk dasar laut pada peta laut berarti…"
+      },
+      "opts": [
+       {
+        "id": "Pasir"
+       },
+       {
+        "id": "Lumpur"
+       },
+       {
+        "id": "Batu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "S = pasir, G = lumpur, R = batu. (Modul hal. 9–14.)"
+      },
+      "ref": {
+       "p": 9
+      }
+     },
+     {
+      "q": {
+       "id": "Deviasi (偏差) adalah selisih antara…"
+      },
+      "opts": [
+       {
+        "id": "Arah kapal dan arah angin"
+       },
+       {
+        "id": "Utara sejati dan utara magnetik"
+       },
+       {
+        "id": "Kedalaman dan pasang surut"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Deviasi = selisih utara sejati dan utara magnetik. (Modul hal. 9–14.)"
+      },
+      "ref": {
+       "p": 9
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kedalaman pada peta laut diukur dari permukaan air terendah.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar; ketinggian di darat dari permukaan air rata-rata. (Modul hal. 9–14.)"
+      },
+      "ref": {
+       "p": 9
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Menurut aturan navigasi, jika berpapasan dengan kapal dari depan, kapal harus…"
+      },
+      "opts": [
+       {
+        "id": "Belok ke kanan"
+       },
+       {
+        "id": "Belok ke kiri"
+       },
+       {
+        "id": "Berhenti total"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Berpapasan dari depan: masing-masing belok kanan. (Modul hal. 9–14.)"
+      },
+      "ref": {
+       "p": 9
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Ketinggian di darat pada peta laut diukur dari permukaan air terendah.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: ketinggian di darat dari permukaan air rata-rata. (Modul hal. 9–14.)"
+      },
+      "ref": {
+       "p": 9
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s4-q",
+    "title": {
+     "id": "Latihan: Istilah Perikanan dan Bahan Jaring",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pasang merah (赤潮) menyebabkan ikan dan kerang mati karena…"
+      },
+      "opts": [
+       {
+        "id": "Salinitas menjadi nol"
+       },
+       {
+        "id": "Plankton meningkat, oksigen berkurang, dan insang tersumbat"
+       },
+       {
+        "id": "Suhu air turun drastis"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Plankton meningkat sehingga oksigen berkurang dan insang tersumbat. (Modul hal. 14–20.)"
+      },
+      "ref": {
+       "p": 14
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Upwelling (湧昇流) membawa air dingin kaya nutrisi ke atas dan sering menjadi tempat penangkapan yang baik.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 14–20.)"
+      },
+      "ref": {
+       "p": 14
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Salinitas air laut kira-kira…"
+      },
+      "opts": [
+       {
+        "id": "3–7‰"
+       },
+       {
+        "id": "133–137‰"
+       },
+       {
+        "id": "33–37‰"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Salinitas laut sekitar 33–37 permil. (Modul hal. 14–20.)"
+      },
+      "ref": {
+       "p": 14
+      }
+     },
+     {
+      "q": {
+       "id": "Jaring dibagi menjadi dua jenis berdasarkan…"
+      },
+      "opts": [
+       {
+        "id": "Kayu dan besi"
+       },
+       {
+        "id": "Bersimpul dan tanpa simpul"
+       },
+       {
+        "id": "Siang dan malam"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Jaring: bersimpul (結節網) dan tanpa simpul (無結節網). (Modul hal. 14–20.)"
+      },
+      "ref": {
+       "p": 14
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pasang merah terjadi karena plankton berkurang.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: plankton meningkat secara berlebihan. (Modul hal. 14–20.)"
+      },
+      "ref": {
+       "p": 14
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s5-q",
+    "title": {
+     "id": "Latihan: Tali dan Simpul",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "本結び (reef knot) dipakai untuk…"
+      },
+      "opts": [
+       {
+        "id": "Menambat tali di tiang"
+       },
+       {
+        "id": "Menyambung tali berbeda tebal dan licin"
+       },
+       {
+        "id": "Menyambung dua tali yang sama tebal"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "本結び menyambung dua tali sama tebal. (Modul hal. 20–33.)"
+      },
+      "ref": {
+       "p": 20
+      }
+     },
+     {
+      "q": {
+       "id": "もやい結び dipakai terutama sebagai…"
+      },
+      "opts": [
+       {
+        "id": "Penyambung dua tali licin"
+       },
+       {
+        "id": "Pengunci kail"
+       },
+       {
+        "id": "Tali tambat pada tiang; aman dan mudah dilepas"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "もやい結び kuat tetapi mudah dilepas. (Modul hal. 20–33.)"
+      },
+      "ref": {
+       "p": 20
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “二重つなぎ dipakai bila tali berbeda tebal atau licin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 20–33.)"
+      },
+      "ref": {
+       "p": 20
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Back splice, eye splice, dan short splice adalah…"
+      },
+      "opts": [
+       {
+        "id": "Tiga jenis kail"
+       },
+       {
+        "id": "Anyaman untuk merapikan atau menyambung ujung tali"
+       },
+       {
+        "id": "Tiga jenis jangkar"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Itu adalah teknik anyaman tali. (Modul hal. 20–33.)"
+      },
+      "ref": {
+       "p": 20
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “もやい結び sulit dilepas setelah dibebani.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: もやい結び aman namun mudah dilepas. (Modul hal. 20–33.)"
+      },
+      "ref": {
+       "p": 20
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s6-q",
+    "title": {
+     "id": "Latihan: Kail, Mesin Tangkap, Alat Ukur",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Untuk ikan bergigi tajam, senar (ハリス) sebaiknya memakai…"
+      },
+      "opts": [
+       {
+        "id": "Kawat"
+       },
+       {
+        "id": "Benang katun"
+       },
+       {
+        "id": "Tali plastik tipis"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Ikan bergigi tajam memotong senar biasa. (Modul hal. 33–45.)"
+      },
+      "ref": {
+       "p": 33
+      }
+     },
+     {
+      "q": {
+       "id": "Fungsi kili-kili (より戻し) adalah…"
+      },
+      "opts": [
+       {
+        "id": "Menambah daya apung"
+       },
+       {
+        "id": "Mengukur kedalaman"
+       },
+       {
+        "id": "Mencegah tali terpelintir"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "より戻し mencegah tali terpilin. (Modul hal. 33–45.)"
+      },
+      "ref": {
+       "p": 33
+      }
+     },
+     {
+      "q": {
+       "id": "ライン ホーラー adalah mesin untuk…"
+      },
+      "opts": [
+       {
+        "id": "Mengukur kedalaman"
+       },
+       {
+        "id": "Menarik tali utama longline"
+       },
+       {
+        "id": "Menarik jaring insang"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ライン ホーラー = penarik tali utama. (Modul hal. 33–45.)"
+      },
+      "ref": {
+       "p": 33
+      }
+     },
+     {
+      "q": {
+       "id": "ネット ホーラー adalah mesin untuk…"
+      },
+      "opts": [
+       {
+        "id": "Menggulung tali cabang"
+       },
+       {
+        "id": "Menarik jaring insang"
+       },
+       {
+        "id": "Menarik tali utama longline"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ネット ホーラー menarik jaring insang. (Modul hal. 33–45.)"
+      },
+      "ref": {
+       "p": 33
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Senar (ハリス) menghubungkan kail dengan tali.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 33–45.)"
+      },
+      "ref": {
+       "p": 33
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab2": [
@@ -368,6 +1092,366 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "b2s1-q",
+    "title": {
+     "id": "Latihan: Pakaian dan Alat Pelindung",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Ujung baju sebaiknya dimasukkan ke dalam celana agar tidak tersangkut mesin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 48–51.)"
+      },
+      "ref": {
+       "p": 48
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Alat pelindung yang dipakai agar tetap mengapung bila jatuh ke laut adalah…"
+      },
+      "opts": [
+       {
+        "id": "Penutup telinga"
+       },
+       {
+        "id": "Kacamata pelindung"
+       },
+       {
+        "id": "Jaket pelampung"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Jaket pelampung menjaga tubuh tetap mengapung. (Modul hal. 48–51.)"
+      },
+      "ref": {
+       "p": 48
+      }
+     },
+     {
+      "q": {
+       "id": "Pakaian kerja di kapal sebaiknya…"
+      },
+      "opts": [
+       {
+        "id": "Lengan panjang dan pas ukuran"
+       },
+       {
+        "id": "Lengan pendek dan longgar"
+       },
+       {
+        "id": "Sangat longgar agar leluasa"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pakaian longgar mudah tersangkut. (Modul hal. 48–51.)"
+      },
+      "ref": {
+       "p": 48
+      }
+     },
+     {
+      "q": {
+       "id": "Mana yang BUKAN alat pelindung di kapal?"
+      },
+      "opts": [
+       {
+        "id": "Sandal terbuka"
+       },
+       {
+        "id": "Helm"
+       },
+       {
+        "id": "Sarung tangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sandal tidak boleh dipakai di geladak. (Modul hal. 48–51.)"
+      },
+      "ref": {
+       "p": 48
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bekerja di ketinggian cukup berpegangan tanpa sabuk pengaman.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: wajib memakai sabuk pengaman. (Modul hal. 48–51.)"
+      },
+      "ref": {
+       "p": 48
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s2-q",
+    "title": {
+     "id": "Latihan: Sikap di Kapal dan Rambu Keselamatan",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Duduk atau memanjat pagar kapal (舷側) diperbolehkan jika berhati-hati.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Dilarang; sangat mudah jatuh ke laut. (Modul hal. 51–55.)"
+      },
+      "ref": {
+       "p": 51
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jika harus ke geladak pada malam hari…"
+      },
+      "opts": [
+       {
+        "id": "Matikan semua lampu"
+       },
+       {
+        "id": "Beri tahu awak lain dan jangan sendirian"
+       },
+       {
+        "id": "Pergi diam-diam agar tidak mengganggu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Jangan sendirian di geladak malam hari. (Modul hal. 51–55.)"
+      },
+      "ref": {
+       "p": 51
+      }
+     },
+     {
+      "q": {
+       "id": "Rambu keselamatan yang menyatakan suatu tindakan dilarang disebut rambu…"
+      },
+      "opts": [
+       {
+        "id": "Panduan"
+       },
+       {
+        "id": "Larangan"
+       },
+       {
+        "id": "Instruksi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Rambu terbagi: larangan, instruksi, peringatan, umum, panduan. (Modul hal. 51–55.)"
+      },
+      "ref": {
+       "p": 51
+      }
+     },
+     {
+      "q": {
+       "id": "Palka (lubang geladak) sebaiknya…"
+      },
+      "opts": [
+       {
+        "id": "Ditutup bila tidak dipakai"
+       },
+       {
+        "id": "Dibiarkan terbuka"
+       },
+       {
+        "id": "Dipakai sebagai tempat duduk"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Palka terbuka berbahaya. (Modul hal. 51–55.)"
+      },
+      "ref": {
+       "p": 51
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Alat sebaiknya disimpan kembali di tempatnya.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 51–55.)"
+      },
+      "ref": {
+       "p": 51
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s3-q",
+    "title": {
+     "id": "Latihan: Pencegahan Kecelakaan dan Jatuh ke Laut",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh memasukkan kaki ke dalam lingkaran gulungan tali asalkan sebentar.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Dilarang; kaki bisa terlilit dan tertarik. (Modul hal. 55–57.)"
+      },
+      "ref": {
+       "p": 55
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Penyebab utama kecelakaan di kapal ikan antara lain…"
+      },
+      "opts": [
+       {
+        "id": "Salah memilih umpan"
+       },
+       {
+        "id": "Terlilit winch atau tali, jatuh dari derek, jatuh ke laut"
+       },
+       {
+        "id": "Kekurangan air tawar"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Itulah tiga kecelakaan utama. (Modul hal. 55–57.)"
+      },
+      "ref": {
+       "p": 55
+      }
+     },
+     {
+      "q": {
+       "id": "Untuk mengangkat beban berat sebaiknya…"
+      },
+      "opts": [
+       {
+        "id": "Dibantu beberapa orang"
+       },
+       {
+        "id": "Dikerjakan sendirian dengan cepat"
+       },
+       {
+        "id": "Ditarik sambil berlari"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Beban berat dikerjakan bersama. (Modul hal. 55–57.)"
+      },
+      "ref": {
+       "p": 55
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh bekerja membelakangi bukaan kapal.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan membelakangi bukaan karena risiko jatuh. (Modul hal. 55–57.)"
+      },
+      "ref": {
+       "p": 55
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Untuk mengurangi risiko terpeleset, pakailah…"
+      },
+      "opts": [
+       {
+        "id": "Sepatu anti-selip"
+       },
+       {
+        "id": "Sandal karet"
+       },
+       {
+        "id": "Kaus kaki saja"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sepatu anti-selip mencegah terpeleset. (Modul hal. 55–57.)"
+      },
+      "ref": {
+       "p": 55
+      }
+     }
+    ]
    }
   ],
   "bab3": [
@@ -516,6 +1600,368 @@
       "exp": {
        "id": "Benar.",
        "jp": "そのとおりです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "title": {
+     "id": "Latihan: Gambaran, Ikan Sasaran, Kapal",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Dua cara operasi pukat cincin adalah…"
+      },
+      "opts": [
+       {
+        "id": "Siang saja dan malam saja"
+       },
+       {
+        "id": "Kapal besi dan kapal kayu"
+       },
+       {
+        "id": "Kapal tunggal dan armada (kapal pengiring)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Ada kapal tunggal dan armada. (Modul hal. 62–64.)"
+      },
+      "ref": {
+       "p": 62
+      }
+     },
+     {
+      "q": {
+       "id": "Pada pukat cincin malam hari, ikan dikumpulkan dengan…"
+      },
+      "opts": [
+       {
+        "id": "Lampu"
+       },
+       {
+        "id": "Umpan hidup"
+       },
+       {
+        "id": "Bunyi sonar"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Lampu mengumpulkan ikan. (Modul hal. 62–64.)"
+      },
+      "ref": {
+       "p": 62
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pukat cincin tidak pernah dipakai untuk menangkap tuna.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sasarannya antara lain teri, sarden, aji, saba, katsuo, tuna, buri. (Modul hal. 62–64.)"
+      },
+      "ref": {
+       "p": 62
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tujuan menarik tali cincin adalah…"
+      },
+      "opts": [
+       {
+        "id": "Menaikkan layar"
+       },
+       {
+        "id": "Mematikan mesin"
+       },
+       {
+        "id": "Agar ikan tidak lolos dari bawah jaring"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Tali cincin menutup bagian bawah jaring. (Modul hal. 62–64.)"
+      },
+      "ref": {
+       "p": 62
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada cara armada, ada kapal pengiring selain kapal jaring.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 62–64.)"
+      },
+      "ref": {
+       "p": 62
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s2-q",
+    "title": {
+     "id": "Latihan: Mesin, Alat, Anjungan",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Power block berfungsi…"
+      },
+      "opts": [
+       {
+        "id": "Mengangkat bundel jaring ke posisi tinggi untuk dirapikan"
+       },
+       {
+        "id": "Menarik tali cincin"
+       },
+       {
+        "id": "Mencari gerombolan ikan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Power block mengangkat jaring agar tertata. (Modul hal. 64–69.)"
+      },
+      "ref": {
+       "p": 64
+      }
+     },
+     {
+      "q": {
+       "id": "Pursue winch dipakai untuk…"
+      },
+      "opts": [
+       {
+        "id": "Menyemprot air"
+       },
+       {
+        "id": "Mengukur kedalaman"
+       },
+       {
+        "id": "Menarik tali cincin"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pursue winch menarik tali cincin. (Modul hal. 64–69.)"
+      },
+      "ref": {
+       "p": 64
+      }
+     },
+     {
+      "q": {
+       "id": "Alat di anjungan untuk mencari gerombolan ikan adalah…"
+      },
+      "opts": [
+       {
+        "id": "Kompas saja"
+       },
+       {
+        "id": "Pelampung bola"
+       },
+       {
+        "id": "Sonar dan fish finder"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sonar dan fish finder. (Modul hal. 64–69.)"
+      },
+      "ref": {
+       "p": 64
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Side roller dipasang di sisi kanan dan jaring ditarik dengan gesekan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 64–69.)"
+      },
+      "ref": {
+       "p": 64
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mana yang BUKAN peralatan mesin pukat cincin?"
+      },
+      "opts": [
+       {
+        "id": "Power block"
+       },
+       {
+        "id": "Line shooter (rawai)"
+       },
+       {
+        "id": "Net hauler"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Line shooter adalah alat rawai tuna. (Modul hal. 64–69.)"
+      },
+      "ref": {
+       "p": 64
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s3-q",
+    "title": {
+     "id": "Latihan: Metode dan Prosedur Operasi",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Setelah ikan dikumpulkan dengan lampu, langkah berikutnya adalah…"
+      },
+      "opts": [
+       {
+        "id": "Mematikan sonar"
+       },
+       {
+        "id": "Menebar jaring"
+       },
+       {
+        "id": "Pulang ke pelabuhan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Urutan: cari, kumpulkan, tebar jaring, kencangkan cincin, ambil ikan. (Modul hal. 69–74.)"
+      },
+      "ref": {
+       "p": 69
+      }
+     },
+     {
+      "q": {
+       "id": "Kapal pukat cincin harian biasanya…"
+      },
+      "opts": [
+       {
+        "id": "Berangkat pagi, pulang sore"
+       },
+       {
+        "id": "Berlayar berbulan-bulan"
+       },
+       {
+        "id": "Berangkat sore, pulang pagi, mendarat di pasar"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kapal harian berangkat sore dan pulang pagi. (Modul hal. 69–74.)"
+      },
+      "ref": {
+       "p": 69
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat menebar jaring, kaki bisa terlilit tali atau jaring.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar, karena itu harus waspada. (Modul hal. 69–74.)"
+      },
+      "ref": {
+       "p": 69
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Untuk mencari gerombolan ikan dipakai…"
+      },
+      "opts": [
+       {
+        "id": "Sonar dan fish finder"
+       },
+       {
+        "id": "Kompas"
+       },
+       {
+        "id": "Lampu navigasi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sonar dan fish finder. (Modul hal. 69–74.)"
+      },
+      "ref": {
+       "p": 69
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kapal harian berangkat pagi dan pulang sore.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: berangkat sore, pulang pagi. (Modul hal. 69–74.)"
+      },
+      "ref": {
+       "p": 69
       },
       "mb": true
      }
@@ -672,6 +2118,248 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "b4s1-q",
+    "title": {
+     "id": "Latihan: Jenis Jaring Insang dan Bahan Jaring",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "“Menusuk” (刺す) pada jaring insang berarti…"
+      },
+      "opts": [
+       {
+        "id": "Ikan dikurung dalam lingkaran"
+       },
+       {
+        "id": "Ikan terjepit di mata jaring"
+       },
+       {
+        "id": "Duri terlilit benang jaring"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Menusuk = terjepit di mata jaring. (Modul hal. 74–77.)"
+      },
+      "ref": {
+       "p": 74
+      }
+     },
+     {
+      "q": {
+       "id": "“Menjerat” (からめる) berarti…"
+      },
+      "opts": [
+       {
+        "id": "Duri atau sirip terlilit benang jaring"
+       },
+       {
+        "id": "Ikan terjepit di mata jaring"
+       },
+       {
+        "id": "Ikan dikurung lampu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Menjerat = duri/sirip terlilit. (Modul hal. 74–77.)"
+      },
+      "ref": {
+       "p": 74
+      }
+     },
+     {
+      "q": {
+       "id": "Jaring insang digolongkan menurut…"
+      },
+      "opts": [
+       {
+        "id": "Lapisan air dan cara pasang (tetap atau hanyut)"
+       },
+       {
+        "id": "Warna jaring"
+       },
+       {
+        "id": "Panjang kapal"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Lapisan air dan cara pasang. (Modul hal. 74–77.)"
+      },
+      "ref": {
+       "p": 74
+      }
+     },
+     {
+      "q": {
+       "id": "Berapa kombinasi lapisan air × cara pasang jaring insang?"
+      },
+      "opts": [
+       {
+        "id": "2 kombinasi"
+       },
+       {
+        "id": "12 kombinasi"
+       },
+       {
+        "id": "6 kombinasi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "3 lapisan × 2 cara pasang = 6. (Modul hal. 74–77.)"
+      },
+      "ref": {
+       "p": 74
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jaring insang hanya bisa dipasang di dasar laut.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Bisa di permukaan, tengah, atau dasar. (Modul hal. 74–77.)"
+      },
+      "ref": {
+       "p": 74
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b4s2-q",
+    "title": {
+     "id": "Latihan: Pelampung, Pemberat, Tali, Teknik Rajut",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pelampung jaring insang zaman sekarang umumnya terbuat dari…"
+      },
+      "opts": [
+       {
+        "id": "Plastik resin sintetis"
+       },
+       {
+        "id": "Kayu atau bambu"
+       },
+       {
+        "id": "Gabus alami"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Dulu kayu/bambu/gabus; kini resin sintetis. (Modul hal. 77–82.)"
+      },
+      "ref": {
+       "p": 77
+      }
+     },
+     {
+      "q": {
+       "id": "Bahan pemberat yang umum dipakai adalah…"
+      },
+      "opts": [
+       {
+        "id": "Timbal"
+       },
+       {
+        "id": "Kayu"
+       },
+       {
+        "id": "Karet"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pemberat umumnya dari timbal. (Modul hal. 77–82.)"
+      },
+      "ref": {
+       "p": 77
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pelampung harus punya daya apung lebih dan tahan tekanan air.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 77–82.)"
+      },
+      "ref": {
+       "p": 77
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Dua tali utama pada jaring insang adalah…"
+      },
+      "opts": [
+       {
+        "id": "Tali layar dan tali kemudi"
+       },
+       {
+        "id": "Tali pelampung dan tali pemberat"
+       },
+       {
+        "id": "Tali jangkar dan tali kail"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tali pelampung dan tali pemberat. (Modul hal. 77–82.)"
+      },
+      "ref": {
+       "p": 77
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pemberat timbal berbentuk tong dengan lubang untuk tali.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 77–82.)"
+      },
+      "ref": {
+       "p": 77
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab5": [
@@ -824,6 +2512,246 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "b5s1-q",
+    "title": {
+     "id": "Latihan: Bagian Jaring dan Metode Otter Trawl",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Tiga bagian utama jaring pukat dasar adalah…"
+      },
+      "opts": [
+       {
+        "id": "Sayap, badan, dan kantong"
+       },
+       {
+        "id": "Kepala, ekor, dan sirip"
+       },
+       {
+        "id": "Pelampung, pemberat, dan tali"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sayap (袖網), badan (身網), kantong (袋網). (Modul hal. 82–83.)"
+      },
+      "ref": {
+       "p": 82
+      }
+     },
+     {
+      "q": {
+       "id": "Mata jaring terbesar ada di…"
+      },
+      "opts": [
+       {
+        "id": "Kantong"
+       },
+       {
+        "id": "Badan tengah"
+       },
+       {
+        "id": "Ujung depan sayap"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Besar di depan, terkecil di kantong. (Modul hal. 82–83.)"
+      },
+      "ref": {
+       "p": 82
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Papan pembuka (オッターボード) membuka mulut jaring.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 82–83.)"
+      },
+      "ref": {
+       "p": 82
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Papan pembuka umumnya terbuat dari…"
+      },
+      "opts": [
+       {
+        "id": "Kertas"
+       },
+       {
+        "id": "Besi, kayu, atau FRP"
+       },
+       {
+        "id": "Kaca"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Besi, kayu, atau FRP. (Modul hal. 82–83.)"
+      },
+      "ref": {
+       "p": 82
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Otter trawl tetap bisa dioperasikan saat cuaca buruk.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar, menurut modul. (Modul hal. 82–83.)"
+      },
+      "ref": {
+       "p": 82
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b5s2-q",
+    "title": {
+     "id": "Latihan: Dua Kapal, Dogol, Pencegahan Bahaya",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada pukat dua kapal, jaring ditarik oleh…"
+      },
+      "opts": [
+       {
+        "id": "Dua kapal pada jarak tertentu"
+       },
+       {
+        "id": "Satu kapal kecil"
+       },
+       {
+        "id": "Pelampung otomatis"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Dua kapal menarik ujung jaring. (Modul hal. 83–87.)"
+      },
+      "ref": {
+       "p": 83
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kapal pendukung menyerahkan ujung tali penarik kepada kapal utama.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 83–87.)"
+      },
+      "ref": {
+       "p": 83
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tali tarik yang panjang berfungsi…"
+      },
+      "opts": [
+       {
+        "id": "Menggiring ikan ke arah jaring"
+       },
+       {
+        "id": "Mengukur kedalaman"
+       },
+       {
+        "id": "Mengikat umpan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Tali panjang menggiring ikan. (Modul hal. 83–87.)"
+      },
+      "ref": {
+       "p": 83
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pukat dua kapal bisa dilakukan dengan sedikit kapal dan tenaga.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: butuh banyak kapal dan tenaga. (Modul hal. 83–87.)"
+      },
+      "ref": {
+       "p": 83
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bahaya yang perlu diwaspadai saat jaring ditarik adalah…"
+      },
+      "opts": [
+       {
+        "id": "Kekurangan es"
+       },
+       {
+        "id": "Pasang merah"
+       },
+       {
+        "id": "Terlilit tali"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Awak bisa terlilit tali. (Modul hal. 83–87.)"
+      },
+      "ref": {
+       "p": 83
+      }
+     }
+    ]
    }
   ],
   "bab6": [
@@ -973,6 +2901,366 @@
       "exp": {
        "id": "Naik 1, kotak 1, naik 2, kotak 2.",
        "jp": "{昇|のぼ}{網|あみ}1、{箱網|はこあみ}1、{昇|のぼ}{網|あみ}2、{箱網|はこあみ}2です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b6s1-q",
+    "title": {
+     "id": "Latihan: Ciri, Unsur, dan Bagian Jaring",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Mata jaring pagar (垣網) berukuran…"
+      },
+      "opts": [
+       {
+        "id": "30–90 cm"
+       },
+       {
+        "id": "1–3 cm"
+       },
+       {
+        "id": "3–9 cm"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Mata jaring pagar sangat besar. (Modul hal. 87–89.)"
+      },
+      "ref": {
+       "p": 87
+      }
+     },
+     {
+      "q": {
+       "id": "Keunggulan jaring tetap menurut modul adalah…"
+      },
+      "opts": [
+       {
+        "id": "Selalu menangkap satu jenis ikan"
+       },
+       {
+        "id": "Tidak memerlukan kapal"
+       },
+       {
+        "id": "Tangkapan hidup sehingga pengiriman mudah diatur"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Ikan hidup memudahkan pengaturan pengiriman. (Modul hal. 87–89.)"
+      },
+      "ref": {
+       "p": 87
+      }
+     },
+     {
+      "q": {
+       "id": "運動場 pada jaring tetap adalah…"
+      },
+      "opts": [
+       {
+        "id": "Pintu masuk jaring"
+       },
+       {
+        "id": "Pemberat jaring"
+       },
+       {
+        "id": "Area gerak ikan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "運動場 = area gerak. (Modul hal. 87–89.)"
+      },
+      "ref": {
+       "p": 87
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jaring kotak (箱網) termasuk unsur jaring tetap.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 87–89.)"
+      },
+      "ref": {
+       "p": 87
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tangkapan jaring tetap selalu mati.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tangkapan bisa dipertahankan hidup. (Modul hal. 87–89.)"
+      },
+      "ref": {
+       "p": 87
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b6s2-q",
+    "title": {
+     "id": "Latihan: Struktur dan Pengangkatan Jaring",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Jaring tetap digantung pada…"
+      },
+      "opts": [
+       {
+        "id": "Satu tiang kapal"
+       },
+       {
+        "id": "Jangkar"
+       },
+       {
+        "id": "Tali sisi (dua tali sejajar sisi laut dan sisi darat)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Tali sisi. (Modul hal. 89–94.)"
+      },
+      "ref": {
+       "p": 89
+      }
+     },
+     {
+      "q": {
+       "id": "Pada jaring tetap tipe kotak dua tingkat, setelah area gerak adalah…"
+      },
+      "opts": [
+       {
+        "id": "Jaring naik 1"
+       },
+       {
+        "id": "Kotak 2"
+       },
+       {
+        "id": "Jaring naik 2"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Urutan: area gerak, jaring naik 1, kotak 1, jaring naik 2, kotak 2. (Modul hal. 89–94.)"
+      },
+      "ref": {
+       "p": 89
+      }
+     },
+     {
+      "q": {
+       "id": "Pengangkatan jaring dilakukan dengan…"
+      },
+      "opts": [
+       {
+        "id": "1–3 perahu"
+       },
+       {
+        "id": "10 kapal besar"
+       },
+       {
+        "id": "Tanpa perahu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pengangkatan dengan 1–3 perahu. (Modul hal. 89–94.)"
+      },
+      "ref": {
+       "p": 89
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Perahu pengangkat jaring berukuran sekitar 5–20 ton.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 89–94.)"
+      },
+      "ref": {
+       "p": 89
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tali sisi hanya satu tali.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: ada dua tali sejajar. (Modul hal. 89–94.)"
+      },
+      "ref": {
+       "p": 89
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b6s3-q",
+    "title": {
+     "id": "Latihan: Pengolahan Tangkapan dan Bahaya",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Tangkapan dijaga tetap segar dengan…"
+      },
+      "opts": [
+       {
+        "id": "Dibiarkan di geladak"
+       },
+       {
+        "id": "Air laut + es atau tangki ikan hidup"
+       },
+       {
+        "id": "Dijemur"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Air laut dan es, atau tangki ikan hidup. (Modul hal. 94–96.)"
+      },
+      "ref": {
+       "p": 94
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada musim panas dipakai lebih banyak es.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 94–96.)"
+      },
+      "ref": {
+       "p": 94
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Salah satu bahaya pada pekerjaan jaring tetap adalah…"
+      },
+      "opts": [
+       {
+        "id": "Jari terjepit dan tali jangkar"
+       },
+       {
+        "id": "Kekurangan umpan"
+       },
+       {
+        "id": "Lampu terlalu terang"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Poros putar, derek, jari terjepit, tali jangkar. (Modul hal. 94–96.)"
+      },
+      "ref": {
+       "p": 94
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Perahu berlambung rendah berisiko membuat awak jatuh ke laut.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 94–96.)"
+      },
+      "ref": {
+       "p": 94
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mana yang termasuk bahaya di jaring tetap?"
+      },
+      "opts": [
+       {
+        "id": "Terkena poros putar"
+       },
+       {
+        "id": "Terlalu banyak es"
+       },
+       {
+        "id": "Jaring terlalu longgar"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Waspada poros putar dan derek. (Modul hal. 94–96.)"
+      },
+      "ref": {
+       "p": 94
       }
      }
     ]
@@ -1128,6 +3416,368 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "b7s1-q",
+    "title": {
+     "id": "Latihan: Bubu dan Klasifikasinya",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Keuntungan bubu berbentuk kerucut adalah…"
+      },
+      "opts": [
+       {
+        "id": "Tidak butuh umpan"
+       },
+       {
+        "id": "Bisa terbang"
+       },
+       {
+        "id": "Stabil di kapal dan mudah ditumpuk"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Bubu kerucut stabil dan mudah ditumpuk. (Modul hal. 96–98.)"
+      },
+      "ref": {
+       "p": 96
+      }
+     },
+     {
+      "q": {
+       "id": "Cara kerja bubu adalah…"
+      },
+      "opts": [
+       {
+        "id": "Mengurung dengan tali cincin"
+       },
+       {
+        "id": "Hewan masuk lewat lubang tetapi tidak bisa keluar"
+       },
+       {
+        "id": "Menjerat dengan mata jaring"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Masuk tetapi tidak bisa keluar. (Modul hal. 96–98.)"
+      },
+      "ref": {
+       "p": 96
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bubu dilengkapi umpan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 96–98.)"
+      },
+      "ref": {
+       "p": 96
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bubu dibenamkan ke…"
+      },
+      "opts": [
+       {
+        "id": "Dasar laut"
+       },
+       {
+        "id": "Permukaan"
+       },
+       {
+        "id": "Langit-langit kapal"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Bubu dibenamkan ke dasar. (Modul hal. 96–98.)"
+      },
+      "ref": {
+       "p": 96
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bubu udang umumnya punya dua lubang di samping.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 96–98.)"
+      },
+      "ref": {
+       "p": 96
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b7s2-q",
+    "title": {
+     "id": "Latihan: Bubu Kepiting",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Perikanan bubu kepiting terutama dilakukan di…"
+      },
+      "opts": [
+       {
+        "id": "Laut Karibia"
+       },
+       {
+        "id": "Laut Jepang"
+       },
+       {
+        "id": "Samudra Hindia"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kepiting salju merah dan salju di Laut Jepang. (Modul hal. 98–102.)"
+      },
+      "ref": {
+       "p": 98
+      }
+     },
+     {
+      "q": {
+       "id": "Satu deret bubu kepiting kira-kira berisi…"
+      },
+      "opts": [
+       {
+        "id": "1.500 bubu"
+       },
+       {
+        "id": "150 bubu"
+       },
+       {
+        "id": "5 bubu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sekitar 150 bubu per deret. (Modul hal. 98–102.)"
+      },
+      "ref": {
+       "p": 98
+      }
+     },
+     {
+      "q": {
+       "id": "Panjang tali pelampung adalah…"
+      },
+      "opts": [
+       {
+        "id": "2–3 kali kedalaman air"
+       },
+       {
+        "id": "Sama dengan kedalaman"
+       },
+       {
+        "id": "10 kali kedalaman"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "2–3 kali kedalaman. (Modul hal. 98–102.)"
+      },
+      "ref": {
+       "p": 98
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kapal 70–100 ton umumnya berawak 8–10 orang.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 98–102.)"
+      },
+      "ref": {
+       "p": 98
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lokasi penebaran bubu ditentukan dari…"
+      },
+      "opts": [
+       {
+        "id": "Warna kapal"
+       },
+       {
+        "id": "Nama nakhoda"
+       },
+       {
+        "id": "Suhu air, kedalaman, dan jenis dasar laut"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Suhu, kedalaman, jenis dasar. (Modul hal. 98–102.)"
+      },
+      "ref": {
+       "p": 98
+      }
+     }
+    ]
+   },
+   {
+    "id": "b7s3-q",
+    "title": {
+     "id": "Latihan: Bubu Udang",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Udang yang paling banyak tertangkap bubu udang adalah…"
+      },
+      "opts": [
+       {
+        "id": "Udang windu"
+       },
+       {
+        "id": "Udang karang"
+       },
+       {
+        "id": "Udang merah utara (あまえび)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "あまえび. (Modul hal. 102–107.)"
+      },
+      "ref": {
+       "p": 102
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bubu udang bukaan samping berbentuk kerucut.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 102–107.)"
+      },
+      "ref": {
+       "p": 102
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jarak antar bubu ditentukan oleh…"
+      },
+      "opts": [
+       {
+        "id": "Jumlah awak"
+       },
+       {
+        "id": "Warna umpan"
+       },
+       {
+        "id": "Lebar habitat udang"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai lebar habitat. (Modul hal. 102–107.)"
+      },
+      "ref": {
+       "p": 102
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jumlah bubu diatur oleh tiap prefektur.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 102–107.)"
+      },
+      "ref": {
+       "p": 102
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tangkapan sampingan bubu udang antara lain…"
+      },
+      "opts": [
+       {
+        "id": "Hiu paus"
+       },
+       {
+        "id": "Kerang dan siput laut"
+       },
+       {
+        "id": "Paus"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kerang dan siput laut. (Modul hal. 102–107.)"
+      },
+      "ref": {
+       "p": 102
+      }
+     }
+    ]
    }
   ],
   "bab8": [
@@ -1258,6 +3908,248 @@
       }
      }
     ]
+   },
+   {
+    "id": "b8s1-q",
+    "title": {
+     "id": "Latihan: Metode, Alat, dan Kapal",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada jaring batang (棒受網), ikan sauri dikumpulkan dengan…"
+      },
+      "opts": [
+       {
+        "id": "Suara"
+       },
+       {
+        "id": "Lampu"
+       },
+       {
+        "id": "Umpan hidup"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Lampu menarik sauri. (Modul hal. 107–111.)"
+      },
+      "ref": {
+       "p": 107
+      }
+     },
+     {
+      "q": {
+       "id": "Satu sisi jaring persegi panjang diikat pada…"
+      },
+      "opts": [
+       {
+        "id": "Jangkar"
+       },
+       {
+        "id": "Tiang layar"
+       },
+       {
+        "id": "Galah (向竹) yang mengapung"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sisi jaring diikat pada galah. (Modul hal. 107–111.)"
+      },
+      "ref": {
+       "p": 107
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jaring digantung pada galah bambu yang terpisah dari kapal.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 107–111.)"
+      },
+      "ref": {
+       "p": 107
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Cahaya yang memandu ikan ke arah jaring adalah…"
+      },
+      "opts": [
+       {
+        "id": "Lampu biru"
+       },
+       {
+        "id": "Lampu merah"
+       },
+       {
+        "id": "Lampu hijau"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Lampu merah memandu ikan. (Modul hal. 107–111.)"
+      },
+      "ref": {
+       "p": 107
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pemberat dan tali penarik dipasang di sisi atas jaring.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: di sisi bawah jaring. (Modul hal. 107–111.)"
+      },
+      "ref": {
+       "p": 107
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b8s2-q",
+    "title": {
+     "id": "Latihan: Operasi dan Ikan Sasaran",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Sifat sauri yang dipakai dalam operasi ini adalah…"
+      },
+      "opts": [
+       {
+        "id": "Tertarik suara"
+       },
+       {
+        "id": "Fototaksis (tertarik cahaya)"
+       },
+       {
+        "id": "Takut cahaya"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sauri berkumpul di bawah cahaya. (Modul hal. 111–114.)"
+      },
+      "ref": {
+       "p": 111
+      }
+     },
+     {
+      "q": {
+       "id": "Operasi dilakukan…"
+      },
+      "opts": [
+       {
+        "id": "Hanya saat tengah hari"
+       },
+       {
+        "id": "Dari matahari terbenam sampai fajar"
+       },
+       {
+        "id": "Siang hari"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Malam hari. (Modul hal. 111–114.)"
+      },
+      "ref": {
+       "p": 111
+      }
+     },
+     {
+      "q": {
+       "id": "Lampu sisi kiri dimatikan agar…"
+      },
+      "opts": [
+       {
+        "id": "Ikan pindah ke sisi kanan"
+       },
+       {
+        "id": "Kapal tenggelam"
+       },
+       {
+        "id": "Jaring terangkat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Ikan berpindah ke sisi terang. (Modul hal. 111–114.)"
+      },
+      "ref": {
+       "p": 111
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kapal berukuran 10–200 ton dengan awak 6–18 orang.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 111–114.)"
+      },
+      "ref": {
+       "p": 111
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tahap pertama operasi jaring batang adalah…"
+      },
+      "opts": [
+       {
+        "id": "Penarikan jaring"
+       },
+       {
+        "id": "Pengemasan"
+       },
+       {
+        "id": "Pencarian ikan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pencarian, pengumpulan, pengarahan, penarikan. (Modul hal. 111–114.)"
+      },
+      "ref": {
+       "p": 111
+      }
+     }
+    ]
    }
   ],
   "bab9": [
@@ -1381,6 +4273,246 @@
       "exp": {
        "id": "Benar.",
        "jp": "そのとおりです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b9s1-q",
+    "title": {
+     "id": "Latihan: Tempat, Ikan, dan Alat",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Mana yang termasuk ikan sasaran pancing cakalang?"
+      },
+      "opts": [
+       {
+        "id": "Binnaga (albakor)"
+       },
+       {
+        "id": "Teri"
+       },
+       {
+        "id": "Sarden"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Katsuo, binnaga, kihadamaguro, mebachi. (Modul hal. 119–120.)"
+      },
+      "ref": {
+       "p": 119
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Perikanan ini memakai umpan hidup.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 119–120.)"
+      },
+      "ref": {
+       "p": 119
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Joran pendek dipakai untuk…"
+      },
+      "opts": [
+       {
+        "id": "Kail tiruan"
+       },
+       {
+        "id": "Umpan hidup besar"
+       },
+       {
+        "id": "Jaring"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Joran pendek untuk kail tiruan. (Modul hal. 119–120.)"
+      },
+      "ref": {
+       "p": 119
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Ada mesin pancing otomatis untuk cakalang.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 119–120.)"
+      },
+      "ref": {
+       "p": 119
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Perikanan ini dilakukan di…"
+      },
+      "opts": [
+       {
+        "id": "Hanya sungai"
+       },
+       {
+        "id": "Hanya danau"
+       },
+       {
+        "id": "Pesisir Jepang, Pasifik, dan perairan tropis"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pesisir Jepang, Pasifik, tropis. (Modul hal. 119–120.)"
+      },
+      "ref": {
+       "p": 119
+      }
+     }
+    ]
+   },
+   {
+    "id": "b9s2-q",
+    "title": {
+     "id": "Latihan: Metode Operasi dan Penanganan",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Setelah gerombolan ditemukan, kapal…"
+      },
+      "opts": [
+       {
+        "id": "Mundur"
+       },
+       {
+        "id": "Melaju penuh dengan haluan di belakang gerombolan"
+       },
+       {
+        "id": "Berhenti dan menunggu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Haluan di belakang gerombolan. (Modul hal. 120–124.)"
+      },
+      "ref": {
+       "p": 120
+      }
+     },
+     {
+      "q": {
+       "id": "Untuk membuat ikan bersemangat, dilakukan…"
+      },
+      "opts": [
+       {
+        "id": "Mematikan semua lampu"
+       },
+       {
+        "id": "Menurunkan jangkar"
+       },
+       {
+        "id": "Menebar umpan hidup dan menyemprotkan air laut"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Umpan ditebar dan air disemprot. (Modul hal. 120–124.)"
+      },
+      "ref": {
+       "p": 120
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pemancing berpengalaman berada di haluan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 120–124.)"
+      },
+      "ref": {
+       "p": 120
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pemula ditempatkan di…"
+      },
+      "opts": [
+       {
+        "id": "Belakang sisi kiri buritan"
+       },
+       {
+        "id": "Ujung haluan"
+       },
+       {
+        "id": "Ruang mesin"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pemula di belakang sisi kiri buritan. (Modul hal. 120–124.)"
+      },
+      "ref": {
+       "p": 120
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Air laut disemprot agar ikan bersemangat.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 120–124.)"
+      },
+      "ref": {
+       "p": 120
       },
       "mb": true
      }
@@ -1511,6 +4643,246 @@
       "exp": {
        "id": "Benar.",
        "jp": "そのとおりです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b10s1-q",
+    "title": {
+     "id": "Latihan: Target dan Teknik",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Mana yang termasuk cumi sasaran?"
+      },
+      "opts": [
+       {
+        "id": "Surume-ika"
+       },
+       {
+        "id": "Gurita"
+       },
+       {
+        "id": "Teripang"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Surume, yari, kensaki, aka-ika. (Modul hal. 124–127.)"
+      },
+      "ref": {
+       "p": 124
+      }
+     },
+     {
+      "q": {
+       "id": "Parachute anchor (para-anchor) dipakai agar…"
+      },
+      "opts": [
+       {
+        "id": "Jaring terangkat"
+       },
+       {
+        "id": "Kapal hanyut mengikuti arus dan senar tidak kusut"
+       },
+       {
+        "id": "Kapal melaju kencang"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Para-anchor mencegah senar kusut. (Modul hal. 124–127.)"
+      },
+      "ref": {
+       "p": 124
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Memancing cumi malam hari memakai fish lamp dan umpan tiruan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 124–127.)"
+      },
+      "ref": {
+       "p": 124
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mesin pancing cumi otomatis memiliki…"
+      },
+      "opts": [
+       {
+        "id": "Layar"
+       },
+       {
+        "id": "Power block"
+       },
+       {
+        "id": "Reel (drum)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Mesin otomatis punya reel. (Modul hal. 124–127.)"
+      },
+      "ref": {
+       "p": 124
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Para-anchor mencegah senar kusut.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 124–127.)"
+      },
+      "ref": {
+       "p": 124
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b10s2-q",
+    "title": {
+     "id": "Latihan: Prosedur dan Pengemasan",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lampu paling banyak dinyalakan…"
+      },
+      "opts": [
+       {
+        "id": "Menjelang fajar"
+       },
+       {
+        "id": "Saat pulang"
+       },
+       {
+        "id": "Saat pertama dinyalakan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Awal menyala paling banyak. (Modul hal. 127–130.)"
+      },
+      "ref": {
+       "p": 127
+      }
+     },
+     {
+      "q": {
+       "id": "Spanker sail berfungsi…"
+      },
+      "opts": [
+       {
+        "id": "Mendinginkan ikan"
+       },
+       {
+        "id": "Mengarahkan kapal melawan angin"
+       },
+       {
+        "id": "Mengumpulkan cumi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Spanker sail mengarahkan haluan. (Modul hal. 127–130.)"
+      },
+      "ref": {
+       "p": 127
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lokasi ditentukan sebelum matahari terbenam.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 127–130.)"
+      },
+      "ref": {
+       "p": 127
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Sebelum menyalakan lampu, kapal…"
+      },
+      "opts": [
+       {
+        "id": "Melempar para-anchor"
+       },
+       {
+        "id": "Mengemas hasil"
+       },
+       {
+        "id": "Memasang bubu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Persiapan mesin, para-anchor, lampu. (Modul hal. 127–130.)"
+      },
+      "ref": {
+       "p": 127
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lampu dikurangi bila cumi sudah di dalam sebelum fajar.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 127–130.)"
+      },
+      "ref": {
+       "p": 127
       },
       "mb": true
      }
@@ -1667,6 +5039,368 @@
       }
      }
     ]
+   },
+   {
+    "id": "b11s1-q",
+    "title": {
+     "id": "Latihan: Gambaran, Ikan, Umpan, Alat",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Rawai tuna dilakukan di seluruh perairan dunia.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 130–133.)"
+      },
+      "ref": {
+       "p": 130
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Ikan sasaran rawai tuna antara lain…"
+      },
+      "opts": [
+       {
+        "id": "Sarden, teri"
+       },
+       {
+        "id": "Udang, kepiting"
+       },
+       {
+        "id": "Kuromaguro, mebachi, kihada, binnaga"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Jenis tuna dan marlin. (Modul hal. 130–133.)"
+      },
+      "ref": {
+       "p": 130
+      }
+     },
+     {
+      "q": {
+       "id": "Rawai tuna terdiri atas…"
+      },
+      "opts": [
+       {
+        "id": "Satu joran"
+       },
+       {
+        "id": "Tali utama panjang, tali cabang berkail, dan pelampung bola"
+       },
+       {
+        "id": "Satu jaring besar"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tali utama + tali cabang + pelampung bola. (Modul hal. 130–133.)"
+      },
+      "ref": {
+       "p": 130
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Marlin termasuk ikan sasaran rawai tuna.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 130–133.)"
+      },
+      "ref": {
+       "p": 130
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Kuromaguro juga disebut…"
+      },
+      "opts": [
+       {
+        "id": "Binnaga"
+       },
+       {
+        "id": "Kihada"
+       },
+       {
+        "id": "Honmaguro"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kuromaguro = honmaguro. (Modul hal. 130–133.)"
+      },
+      "ref": {
+       "p": 130
+      }
+     }
+    ]
+   },
+   {
+    "id": "b11s2-q",
+    "title": {
+     "id": "Latihan: Mesin, Penyimpanan Tali, Menunggu",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Line shooter berfungsi…"
+      },
+      "opts": [
+       {
+        "id": "Menarik tali utama"
+       },
+       {
+        "id": "Mengangkat ikan"
+       },
+       {
+        "id": "Menebar tali utama"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Line shooter menebar tali utama. (Modul hal. 133–134.)"
+      },
+      "ref": {
+       "p": 133
+      }
+     },
+     {
+      "q": {
+       "id": "Master hooking berfungsi…"
+      },
+      "opts": [
+       {
+        "id": "Menggulung tali cabang"
+       },
+       {
+        "id": "Menjual ikan"
+       },
+       {
+        "id": "Memberi sinyal suara berbeda untuk tali cabang dan pelampung"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sinyal suara. (Modul hal. 133–134.)"
+      },
+      "ref": {
+       "p": 133
+      }
+     },
+     {
+      "q": {
+       "id": "Blanc reel dipakai untuk…"
+      },
+      "opts": [
+       {
+        "id": "Menyalakan lampu"
+       },
+       {
+        "id": "Menggulung tali cabang"
+       },
+       {
+        "id": "Menebar tali utama"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Blanc reel menggulung tali cabang. (Modul hal. 133–134.)"
+      },
+      "ref": {
+       "p": 133
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Line hauler dapat bertenaga hidrolik atau listrik.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 133–134.)"
+      },
+      "ref": {
+       "p": 133
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mesin yang menarik tali utama ke kapal adalah…"
+      },
+      "opts": [
+       {
+        "id": "Line shooter"
+       },
+       {
+        "id": "Blanc reel"
+       },
+       {
+        "id": "Line hauler"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Line hauler. (Modul hal. 133–134.)"
+      },
+      "ref": {
+       "p": 133
+      }
+     }
+    ]
+   },
+   {
+    "id": "b11s3-q",
+    "title": {
+     "id": "Latihan: Penarikan Tali dan Penanganan Ikan",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Penarikan tali utama dilakukan sekitar…"
+      },
+      "opts": [
+       {
+        "id": "12 jam, bergiliran oleh semua awak"
+       },
+       {
+        "id": "30 menit oleh 1 orang"
+       },
+       {
+        "id": "1 minggu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sekitar 12 jam bergiliran. (Modul hal. 134–139.)"
+      },
+      "ref": {
+       "p": 134
+      }
+     },
+     {
+      "q": {
+       "id": "Mana yang termasuk metode penanganan ikan?"
+      },
+      "opts": [
+       {
+        "id": "Fry"
+       },
+       {
+        "id": "Steam"
+       },
+       {
+        "id": "Semi-dress"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Round, semi-dress, dress, fillet. (Modul hal. 134–139.)"
+      },
+      "ref": {
+       "p": 134
+      }
+     },
+     {
+      "q": {
+       "id": "締める (shimeru) pada penanganan ikan berarti…"
+      },
+      "opts": [
+       {
+        "id": "Membekukan"
+       },
+       {
+        "id": "Memotong sirip"
+       },
+       {
+        "id": "Mematikan ikan seketika"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Mematikan seketika agar mutu terjaga. (Modul hal. 134–139.)"
+      },
+      "ref": {
+       "p": 134
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada ikan besar dibuat lubang di kepala dan kawat dimasukkan ke sumsum tulang belakang.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 134–139.)"
+      },
+      "ref": {
+       "p": 134
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Penarikan tali utama dikerjakan oleh satu orang saja.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: oleh semua awak bergiliran. (Modul hal. 134–139.)"
+      },
+      "ref": {
+       "p": 134
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab12": [
@@ -1795,6 +5529,246 @@
        "id": "Mengatur kedalaman.",
        "jp": "{水深|すいしん}と{高|たか}さを{決|き}めます。"
       }
+     }
+    ]
+   },
+   {
+    "id": "b12s1-q",
+    "title": {
+     "id": "Latihan: Gambaran dan Konfigurasi Alat",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Longline dasar vertikal disebut…"
+      },
+      "opts": [
+       {
+        "id": "底立 (sokotate)"
+       },
+       {
+        "id": "延縄 saja"
+       },
+       {
+        "id": "浮き"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Ada longline dasar dan 底立. (Modul hal. 139–143.)"
+      },
+      "ref": {
+       "p": 139
+      }
+     },
+     {
+      "q": {
+       "id": "Pelampung dan pemberat mengatur…"
+      },
+      "opts": [
+       {
+        "id": "Warna tali"
+       },
+       {
+        "id": "Jumlah umpan"
+       },
+       {
+        "id": "Kedalaman dan tinggi tali dari dasar"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Mengatur kedalaman dan tinggi. (Modul hal. 139–143.)"
+      },
+      "ref": {
+       "p": 139
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tali jangkar dipasang di ujung bawah tali pelampung.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 139–143.)"
+      },
+      "ref": {
+       "p": 139
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Kail pada tali utama dipasang…"
+      },
+      "opts": [
+       {
+        "id": "Hanya di ujung"
+       },
+       {
+        "id": "Secara acak tanpa aturan"
+       },
+       {
+        "id": "Berkala dengan jarak tertentu"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Dipasang berkala. (Modul hal. 139–143.)"
+      },
+      "ref": {
+       "p": 139
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tali utama longline dasar membentang vertikal di permukaan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: horizontal dekat dasar. (Modul hal. 139–143.)"
+      },
+      "ref": {
+       "p": 139
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b12s2-q",
+    "title": {
+     "id": "Latihan: Metode Operasi",
+     "jp": "{練習問題|れんしゅうもんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Urutan operasi longline dasar adalah…"
+      },
+      "opts": [
+       {
+        "id": "Lempar tali, tunggu, tarik tali"
+       },
+       {
+        "id": "Tarik, tunggu, lempar"
+       },
+       {
+        "id": "Tunggu, lempar, tarik"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Lempar, tunggu, tarik. (Modul hal. 143–145.)"
+      },
+      "ref": {
+       "p": 143
+      }
+     },
+     {
+      "q": {
+       "id": "Tali dilempar dari…"
+      },
+      "opts": [
+       {
+        "id": "Haluan"
+       },
+       {
+        "id": "Ruang mesin"
+       },
+       {
+        "id": "Buritan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Dari buritan. (Modul hal. 143–145.)"
+      },
+      "ref": {
+       "p": 143
+      }
+     },
+     {
+      "q": {
+       "id": "Setelah jangkar dijatuhkan, berikutnya dilempar…"
+      },
+      "opts": [
+       {
+        "id": "Tali apung lalu tali utama"
+       },
+       {
+        "id": "Kapal lain"
+       },
+       {
+        "id": "Kompas"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Tali apung lalu tali utama. (Modul hal. 143–145.)"
+      },
+      "ref": {
+       "p": 143
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tiang bendera atau pelampung radio dipasang pada ujung atas tali pelampung.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 143–145.)"
+      },
+      "ref": {
+       "p": 143
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Umpan dipasang pada kail sebelum penebaran.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. (Modul hal. 143–145.)"
+      },
+      "ref": {
+       "p": 143
+      },
+      "mb": true
      }
     ]
    }
