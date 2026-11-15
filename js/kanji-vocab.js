@@ -1,6 +1,6 @@
 /* KOSAKATA BERBASIS KANJI (N3 dulu; pola yang sama bisa dipakai level lain)
  *
- * Aturan: Kanji satuan = indeks/pengelompokan. Kosakata contoh (field `c` di data/kanji-<lv>.json)
+ * Aturan: Kanji satuan = indeks/pengelompokan (tidak otomatis jadi kartu). Kosakata contoh (field `c` di data/kanji-<lv>.json)
  * = materi hafalan, flashcard, dan latihan. Modul ini murni (tanpa DOM) supaya bisa dites di Node.
  *
  * Identitas kartu (kunci SRS):
@@ -31,7 +31,9 @@ export function buildKanjiVocab(kanjiList, kosakataList = []) {
     (kj.c || []).forEach((c) => {
       const kata = cleanKata(c.k);
       if (!kata || !Array.from(kata).some(isKanjiChar)) return;     // wajib mengandung kanji
-      if (kata === main) return;                                      // kanji satuan BUKAN kosakata
+      // Kanji utama yang TIDAK tercantum sebagai kata di `c` tidak pernah jadi kartu (mis. 駐, 政).
+      // Kata satu-kanji yang memang dicantumkan database sebagai contoh kosakata (昔 むかし, 猫 ねこ, 米 こめ)
+      // adalah kata utuh dengan bacaan & arti sendiri -> boleh jadi kartu.
       let e = byKata.get(kata);
       if (!e) {
         const link = kos.get(kata);

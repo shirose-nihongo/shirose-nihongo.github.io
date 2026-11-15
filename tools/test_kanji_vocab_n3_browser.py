@@ -115,7 +115,11 @@ with sync_playwright() as p:
     mains = set(json.load(open(ROOT/"data/kanji-n3.json", encoding="utf8"))[i]["k"] for i in range(367))
     ok(len(q) > 800, f"deck Kosakata Kanji N3: {len(q)} kartu")
     ok(not any(c["t"] == "kanji" for c in q), "tidak ada kartu bertipe kanji")
-    ok(not any(c["f"] in mains for c in q), "tidak ada kartu berisi Kanji satuan")
+    kj = json.load(open(ROOT/"data/kanji-n3.json", encoding="utf8"))
+    listed = {c["k"] for k in kj for c in k["c"] if c["k"] == k["k"]}
+    ok(all(c["f"] in listed for c in q if c["f"] in mains), "kartu satu-Kanji hanya kata yang eksplisit ada di database (昔, 猫, ...)")
+    ok(not any(c["f"] in (mains - listed) for c in q), "Kanji satuan yang bukan kata (政, 駐, ...) tidak ada di deck")
+    ok(any(c["f"] == "昔" for c in q) and any(c["f"] == "王様" for c in q), "昔 dan 王様 ada di deck")
     ok(len({c['k'] for c in q}) == len(q), "tanpa kartu ganda")
     # semua
     pg.evaluate("() => hafCfg('tipe','semua')"); pg.wait_for_timeout(800)

@@ -9,13 +9,20 @@ let fail = 0; const ok = (c, m) => { if (!c) { fail++; console.log("GAGAL:", m);
 ok(K.length === 367, `Kanji utama N3 = ${K.length}`);
 ok(idx.perKanji.length === K.length, "setiap Kanji utama punya daftar kosakata (terindeks)");
 const noVocab = K.filter((k, i) => !idx.perKanji[i].length);
-ok(noVocab.every(k => (k.c || []).every(c => cleanKata(c.k) === k.k)), `Kanji tanpa kosakata hanya yang datanya kosong / contohnya cuma dirinya sendiri: ${noVocab.map(k => k.k)}`);
+ok(noVocab.length === 0, `setiap Kanji utama punya minimal 1 kosakata (tanpa: ${noVocab.map(k => k.k)})`);
+const kk = (k) => K.find(x => x.k === k);
+ok(idx.byKata.has("昔") && idx.byKata.get("昔").kana === "むかし", "昔 (むかし) jadi kartu karena berdiri sendiri sebagai kata");
+ok(idx.byKata.has("王様") && idx.byKata.get("王様").kana === "おうさま" && idx.byKata.get("王様").kanji.includes("王"), "王様 (おうさま) jadi kartu untuk Kanji 王");
 // 1. Kanji satuan tidak pernah jadi kartu
 const mains = new Set(K.map(k => k.k));
 ok(cards.every(c => c.tipe === "kosakata"), "semua kartu bertipe kosakata (tidak ada tipe kanji)");
-ok(cards.every(c => !mains.has(c.front)), "tidak ada kartu yang isinya hanya satu Kanji utama (Kanji satuan)");
+// Kanji satuan hanya boleh jadi kartu bila database mencantumkannya sebagai kata di `c` miliknya sendiri (kata utuh, bukan karakter)
+const explicitSelf = new Set(K.flatMap(k => (k.c || []).map(c => cleanKata(c.k)).filter(x => x === k.k)));
+const singles = cards.filter(c => mains.has(c.front));
+ok(singles.every(c => explicitSelf.has(c.front) && c.reading && c.back), `kartu satu-Kanji (${singles.length}) semuanya kata eksplisit di database dengan bacaan+arti`);
+const unlisted = K.filter(k => !explicitSelf.has(k.k));
+ok(unlisted.length > 300 && unlisted.every(k => !cards.some(c => c.front === k.k && !K.some(o => o.k !== k.k && (o.c || []).some(x => cleanKata(x.k) === k.k)))), `Kanji yang tidak tercantum sebagai kata (${unlisted.length}, mis. 政 駐) TIDAK pernah jadi kartu`);
 ok(cards.every(c => Array.from(c.front).some(isKanjiChar)), "semua kartu mengandung kanji");
-ok(cards.every(c => c.front.length >= 2 || c.front.length === 1 && !mains.has(c.front)), "tidak ada kartu 1 karakter yang sama dengan Kanji utama");
 // 2. Tanpa duplikat
 const keys = cards.map(c => c.skey);
 ok(new Set(keys).size === keys.length, `kunci kartu unik (${keys.length} kartu)`);
