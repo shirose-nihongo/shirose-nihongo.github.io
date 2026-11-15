@@ -101,6 +101,7 @@ with sync_playwright() as p:
     ok(len(q) >= 2 and all(c["t"] == "kosakata" and c["kv"] for c in q), f"flashcard dari Kanji 1 hanya berisi kosakata: {[c['f'] for c in q]}")
     ok(all(c["f"] != "政" for c in q), "Kanji satuan 政 tidak ada di flashcard")
     ok(pg.locator("#app .flash-card, #app .flashcard, #app [class*=flash]").count() > 0, "tampilan flashcard terbuka")
+    ok(pg.locator("#haf-rk-btn").count() == 1 and pg.locator("text=Buka").count() >= 1, "flashcard punya tombol 📒 + Rangkum dan 📒 Buka")
     pg.screenshot(path=f"/tmp/kv-flash-{MODE}.png")
     pg.evaluate("() => kvStudy(0, 'multiple')"); pg.wait_for_timeout(1200)
     ok(pg.evaluate("() => window.__SHIROSE_STATE.hafalan.mode") == "multiple" and pg.locator("#app button").count() >= 3, "pilihan ganda dari satu Kanji (3 kosakata) terbuka tanpa error")

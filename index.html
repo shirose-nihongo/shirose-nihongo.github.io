@@ -768,7 +768,7 @@ html{overflow-x:hidden;}
 
 /* ========== HAFALAN selection + session ========== */
 .haf-topbar{
-  display:flex; justify-content:space-between; align-items:center;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
   gap:8px; margin-bottom:10px;
 }
 .haf-type-row{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;}
@@ -2931,7 +2931,7 @@ window.showMateri = async (tipe, idx, vno) => {
           <button class="btn" data-say="${SV.escAttr(k)}" data-role="kanji" onclick="SV.btn(this)">🔊 Dengar</button>
           <button class="btn ghost" onclick="showStrokeOrder('${(k||"").replace(/'/g,"")}')">書き順を見る</button>
           <button class="btn" onclick="KC.openKanji(${idx},'latihan')">書いてみよう ✍️</button>
-          <button class="btn gold" onclick='rangkumPopup({jp:"${(k||"").replace(/"/g,"\\&quot;")}",kana:"${(bagikana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kanji ${no}")'>➕ Rangkum</button>
+          <button class="btn gold" onclick='rangkumCepat({jp:"${(k||"").replace(/"/g,"\\&quot;")}",kana:"${(bagikana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kanji ${no}")'>➕ Rangkum</button>
         </div>
         ${_commentsPlaceholder("kanji", state.level, itemNo(it, idx))}
       </div>
@@ -2964,7 +2964,7 @@ window.showMateri = async (tipe, idx, vno) => {
           <button class="btn" data-say="${SV.escAttr(kata)}" data-read="${SV.escAttr(kana||kata)}" data-role="kosakata" onclick="SV.btn(this)">🔊 Dengar</button>
           <button class="btn ghost" onclick="showStrokeOrder('${(kata||"").replace(/'/g,"")}')">✍️ Urutan Goresan</button>
           ${/[\u3400-\u9fff]/.test(kata) ? `<button class="btn" onclick="KC.openWord(${idx},'latihan')">書いてみよう ✍️</button>` : ""}
-          <button class="btn gold" onclick='rangkumPopup({jp:"${(kata||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kosakata ${no}")'>➕ Rangkum</button>
+          <button class="btn gold" onclick='rangkumCepat({jp:"${(kata||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kosakata ${no}")'>➕ Rangkum</button>
         </div>
         ${_commentsPlaceholder("kosakata", state.level, itemNo(it, idx))}
       </div>
@@ -2996,7 +2996,7 @@ window.showMateri = async (tipe, idx, vno) => {
         <div style="font-size:14px; margin:12px 0; line-height:1.6; text-align:left; background:rgba(255,255,255,.04); padding:14px; border-radius:10px; white-space:pre-wrap;">${penjelasan}</div>
         ${contohHtml}`}
         <div style="margin-top:14px; text-align:center;">
-          <button class="btn gold" onclick='rangkumPopup({jp:"${(pola||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Rangkum pola ini</button>
+          <button class="btn gold" onclick='rangkumCepat({jp:"${(pola||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Rangkum pola ini</button>
         </div>
         ${_commentsPlaceholder("bunpou", state.level, itemNo(it, idx))}
       </div>
@@ -3877,6 +3877,27 @@ function _hafApplyFuri(){ document.body.classList.toggle("haf-furi-on", _hafFuri
 window.hafToggleFuri = function hafToggleFuri(){ try { localStorage.setItem("shirose-haf-furi", _hafFuriOn() ? "0" : "1"); } catch(_) {} _hafApplyFuri(); const b = document.getElementById("haf-furi-btn"); if (b){ b.textContent = _hafFuriOn() ? "ふりがな ON" : "ふりがな OFF"; b.setAttribute("aria-pressed", String(_hafFuriOn())); } }
 _hafApplyFuri();
 /* ========== MODE 1: FLASHCARD v2 — front-only, tap = reveal, center btn = prev ========== */
+
+/* ===== RANGKUM CEPAT: simpan langsung (tanpa popup) dari flashcard / detail materi — JLPT N5–N1 & JFT A1–A2.2 ===== */
+const _plain = (h) => String(h == null ? "" : h).replace(/<rt>.*?<\/rt>/g, "").replace(/<[^>]+>/g, "").replace(/&quot;/g, '"').trim();
+window.rangkumCepat = async (d, sumber) => {
+  if (!state.user) return toast("Login dulu untuk menyimpan rangkuman");
+  const jp = _plain(d && d.jp); if (!jp) return toast("Kata kosong");
+  try {
+    const r = await FB.tambahRangkuman({ jp, kana: _plain(d.kana), arti: _plain(d.arti), sumber: sumber || "" });
+    toast(r && r.synced === false ? `✓ "${jp}" masuk rangkuman (offline, disinkron nanti)` : `✓ "${jp}" masuk rangkuman`);
+    return true;
+  } catch (e) { toast("❌ " + e.message); return false; }
+};
+window.hafRangkum = async () => {
+  const it = (state.hafalan_queue || [])[state.hafalan_pos || 0]; if (!it) return;
+  const ok = await rangkumCepat({ jp: it.fraw || it.front, kana: it.reading, arti: it.back }, `Flashcard ${_hafBadge(it)}`);
+  const b = document.getElementById("haf-rk-btn"); if (ok && b) { b.textContent = "📒 ✓ Masuk"; b.disabled = true; }
+};
+window.hafBukaRangkuman = () => route("rangkuman");
+const _hafRkBtn = () => { const it = (state.hafalan_queue || [])[state.hafalan_pos || 0];
+  if (!it || it.tipe === "ssw" || it.tipe === "rangkuman" || _hafSSW()) return "";
+  return `<button class="btn ghost sm" id="haf-rk-btn" onclick="hafRangkum()" title="Simpan kartu ini ke Rangkuman">📒 + Rangkum</button><button class="btn ghost sm" onclick="hafBukaRangkuman()" title="Buka Rangkuman">📒 Buka</button>`; };
 function renderHafalanFlashcard(){
   const q = state.hafalan_queue;
   const pos = state.hafalan_pos;
@@ -3898,7 +3919,7 @@ function renderHafalanFlashcard(){
       <div class="haf-topbar">
         <button class="btn ghost sm" onclick="route('${_hafMenu()}')">← Kembali</button>
         <span style="color:var(--gray); font-size:14px; font-weight:700;">${pos+1} / ${q.length}</span>
-        ${_hafFuriBtn()}
+        ${_hafFuriBtn()}${_hafRkBtn()}
         <button class="btn ghost sm" onclick="route('${_hafHome()}')">${_hafHomeLbl()}</button>
       </div>
 
