@@ -862,6 +862,8 @@ export const CATALOG_LABELS = {
   aksesori: "Aksesori",
   item_tangan: "Item Tangan",
   aura: "Aura",
+  celana: "Celana",
+  sayap: "Sayap (Lv 50)",
 };
 
 /* ====== Default equipped state (botak, kaos putih + celana putih polos, sepatu standar) ====== */
@@ -872,6 +874,8 @@ export const DEFAULT_EQUIPPED = {
   aksesori: "none",
   item_tangan: "none",
   aura: "none",
+  celana: "none",
+  sayap: "none",
 };
 
 /* ====== Render the full character given equipped state ====== */
@@ -880,7 +884,12 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
 
   const auraSvg = (eq.aura && eq.aura !== "none" && AURAS[eq.aura]?.svg) ? AURAS[eq.aura].svg() : "";
 
-  const base = baseBody(skinKey);
+  let base = baseBody(skinKey);
+  // Celana (kategori baru) digambar di bawah baju: disisipkan sebelum grup pakaian bawaan
+  const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana">${CELANA[eq.celana].svg()}</g>` : "";
+  if (celanaSvg) base = base.replace('<g data-slot="pakaian">', celanaSvg + '<g data-slot="pakaian">');
+  // Sayap (baru) — di belakang badan, setelah aura
+  const sayapSvg = (eq.sayap && eq.sayap !== "none" && SAYAP[eq.sayap]?.svg) ? `<g data-slot="sayap">${SAYAP[eq.sayap].svg()}</g>` : "";
 
   // Overlay pakaian (replace default)
   let pakaianOverlay = "";
@@ -915,6 +924,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   return `
     <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
+      ${sayapSvg}
       ${base}
       ${pakaianOverlay}
       ${sepatuOverlay}
@@ -935,3 +945,10 @@ export function itemCardSvg(kategori, itemId) {
   eq[kategori] = itemId;
   return renderCharacter(eq);
 }
+
+/* ====== Koleksi tambahan (js/character-more.js) ====== */
+import { extend } from "./character-more.js";
+const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS };
+extend(__X);
+export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
+CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;

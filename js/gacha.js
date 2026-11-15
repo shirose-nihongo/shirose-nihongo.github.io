@@ -34,9 +34,9 @@ async function render() {
       <button class="btn gold" ${busy ? "disabled" : ""} onclick="GACHA.tarik(10)">Tarik ×10 · ${CONFIG.PRICE_10.toLocaleString("id-ID")} 🪙</button></div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 10px;padding:10px;border:1px dashed var(--border,#444);border-radius:12px;"><b>🔁 Auto spin</b>
       <select id="ga-mode"><option value="1">tarik ×1</option><option value="10">tarik ×10</option></select>
-      <span>sebanyak</span><select id="ga-count">${[3, 5, 10, 20, 50, 100].map(v => `<option value="${v}">${v} kali</option>`).join("")}</select>
+      <span>sebanyak</span><select id="ga-count">${[3, 5, 10, 20, 50, 100, 200].map(v => `<option value="${v}">${v} kali</option>`).join("")}</select>
       <button class="btn ghost" ${busy ? "disabled" : ""} onclick="GACHA.auto()">▶ Mulai</button>
-      <small style="color:var(--gray);flex-basis:100%;">Berhenti sendiri kalau koin tidak cukup. Tanpa animasi; hasil diringkas di akhir.</small></div>
+      <small style="color:var(--gray);flex-basis:100%;">Setiap putaran tetap menampilkan slot, bisa dipercepat 1×/2×/4×/8× atau Stop kapan saja. Berhenti sendiri kalau koin tidak cukup; ringkasan di akhir.</small></div>
     ${FB.hasUnlimitedCoins && FB.hasUnlimitedCoins() ? '<p style="font-size:12px;color:#ffb703;">🛡️ Akun moderator: tarik GRATIS, tapi peluang lebih rendah (Epic 1.3% · Legendary 0.19% · Mythic 0.01%) dan tanpa pity.</p>' : ""}<p style="font-size:11px;color:var(--gray);">Peluang: ${CONFIG.RARITY.map(r => RAR[r.id][0] + " " + r.pct + "%").join(" · ")}</p>
     ${GACHA_URL ? "" : '<p style="font-size:11px;color:var(--gray);">Mode sementara: undian dijalankan di perangkat (server gacha belum dipasang).</p>'}</div>${hasil}
     <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item duplikat tidak mendapat pengembalian koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
@@ -55,7 +55,8 @@ function pola(r) {
   return [s, s, s];
 }
 function kartuHadiah(x, dl) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;${dl ? "animation-delay:" + dl + "s;" : ""}"><div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat (tanpa pengembalian)</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
-function playSlot(res) {
+let autoSpeed = 1;
+function playSlot(res, au) {
   return new Promise((done) => {
     const list = res.results.slice().sort((a, b) => ORDR.indexOf(a.rarity) - ORDR.indexOf(b.rarity)), best = list[0], target = pola(best.rarity), c = RAR[best.rarity][1];
     const hi = ORDR.indexOf(best.rarity) <= 1, mid = ORDR.indexOf(best.rarity) <= 3, H = 96, N = 26;
@@ -97,8 +98,15 @@ function playSlot(res) {
 <div class="mach" id="gfx-mach"><div class="bulbs">${bulbs}</div><div class="reels">${target.map(t => `<div class="win"><div class="strip mv">${strip(t)}</div></div>`).join("")}</div></div>
 <div id="gfx-out" style="min-height:120px;"></div><div id="gfx-btn"><button id="gfx-skip">Lewati ⏭</button></div></div>`;
     document.body.appendChild(o);
+    if (au) {
+      const bar = document.createElement("div"); bar.style.cssText = "position:absolute;top:8px;left:0;right:0;z-index:5;display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap;color:#fff;font-size:13px";
+      bar.innerHTML = `<b>🔁 Auto ${au.i}/${au.kali}</b>${[1, 2, 4, 8].map(v => `<button data-sp="${v}" style="padding:5px 10px;margin:0">${v}×</button>`).join("")}<button id="gfx-stop" style="padding:5px 10px;margin:0;background:#ef4444;color:#fff">⏹ Stop</button>`;
+      o.appendChild(bar);
+      bar.querySelectorAll("[data-sp]").forEach(b => { b.style.opacity = +b.dataset.sp === autoSpeed ? 1 : .55; b.onclick = () => { autoSpeed = +b.dataset.sp; bar.querySelectorAll("[data-sp]").forEach(x => x.style.opacity = +x.dataset.sp === autoSpeed ? 1 : .55); tampil(); }; });
+      bar.querySelector("#gfx-stop").onclick = () => { autoStop = true; tampil(); };
+    }
     const wins = [...o.querySelectorAll(".win")], strips = [...o.querySelectorAll(".strip")], tm = [];
-    const durs = [2.0, 2.9, 3.8];
+    const sp = au ? autoSpeed : 1, durs = [2.0, 2.9, 3.8].map(d => d / sp);
     requestAnimationFrame(() => requestAnimationFrame(() => strips.forEach((s, i) => { s.style.setProperty("--d", durs[i] + "s"); s.style.transform = `translateY(${-(N - 1) * H}px)`; })));
     let finished = false;
     const kunci = (i) => { strips[i].classList.remove("mv"); wins[i].classList.add("lock"); };
@@ -110,11 +118,12 @@ function playSlot(res) {
       if (hi) for (let i = 0; i < 36; i++) { const e = document.createElement("i"); e.className = "conf"; e.textContent = rnd(["✨", "⭐", "🎉", "💎", "👑"]); e.style.left = Math.random() * 100 + "vw"; e.style.animationDuration = 1.6 + Math.random() * 1.8 + "s"; e.style.animationDelay = Math.random() * .6 + "s"; o.appendChild(e); }
       const sisa = list.slice(1);
       o.querySelector("#gfx-out").innerHTML = (res.results.length > 1 ? '<div style="opacity:.85;font-size:13px;">Hadiah terbaik</div>' : "") + `<div class="best">${kartuHadiah(best)}</div>` + (sisa.length ? `<div style="opacity:.85;font-size:13px;margin-top:10px;">Hadiah lainnya</div><div class="grid">${sisa.map((x, i) => kartuHadiah(x, (.5 + i * .12).toFixed(2))).join("")}</div>` : "");
-      o.querySelector("#gfx-btn").innerHTML = '<button id="gfx-ok">Tutup</button>'; o.querySelector("#gfx-ok").onclick = tutup;
+      if (au) { tm.push(setTimeout(tutup, (autoStop ? 300 : 1700 / autoSpeed))); o.querySelector("#gfx-btn").innerHTML = ""; } else { o.querySelector("#gfx-btn").innerHTML = '<button id="gfx-ok">Tutup</button>'; o.querySelector("#gfx-ok").onclick = tutup; }
     };
     durs.forEach((d, i) => tm.push(setTimeout(() => kunci(i), d * 1000)));
-    tm.push(setTimeout(tampil, durs[2] * 1000 + 350));
+    tm.push(setTimeout(tampil, durs[2] * 1000 + 350 / sp));
     o.querySelector("#gfx-skip").onclick = tampil;
+    o.style.setProperty("--sp", sp);
   });
 }
 let autoStop = false;
@@ -158,18 +167,13 @@ window.GACHA = {
     if (busy) return;
     const n = +document.getElementById("ga-mode").value === 10 ? 10 : 1, kali = Math.max(1, Math.min(200, +document.getElementById("ga-count").value || 1));
     busy = true; autoStop = false;
-    const bar = document.createElement("div"); bar.id = "gauto";
-    bar.style.cssText = "position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:16px";
-    bar.innerHTML = `<div><div style="font-size:34px;">🎰</div><div id="gauto-t" style="font-size:16px;margin:8px 0;">Memulai…</div><button id="gauto-s" style="background:#fff;color:#111;border:0;border-radius:10px;padding:9px 18px;font-weight:800;cursor:pointer;">⏹ Stop</button></div>`;
-    document.body.appendChild(bar); bar.querySelector("#gauto-s").onclick = () => { autoStop = true; };
     const all = []; let dipakai = 0, alasan = "", unl = !!(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins());
     for (let i = 0; i < kali && !autoStop; i++) {
-      bar.querySelector("#gauto-t").textContent = `Auto spin ${i + 1}/${kali} (×${n}) · ${all.length} hadiah`;
-      try { const r = await satuTarik(n); all.push(...r.results); if (!unl) dipakai += n === 10 ? CONFIG.PRICE_10 : CONFIG.PRICE_1; }
+      try { const r = await satuTarik(n); all.push(...r.results); if (!unl) dipakai += n === 10 ? CONFIG.PRICE_10 : CONFIG.PRICE_1; await playSlot(r, { i: i + 1, kali }); }
       catch (e) { alasan = (e.message || "gagal") + " — dihentikan"; break; }
     }
     if (autoStop) alasan = "dihentikan";
-    bar.remove(); busy = false;
+    busy = false;
     if (all.length) await ringkasan(all, dipakai, alasan); else if (window.toast) window.toast(alasan || "Tidak ada tarikan");
     route("gacha");
   },

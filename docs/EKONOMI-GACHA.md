@@ -29,3 +29,5 @@ Pool = 48 barang SHOP (rarity dari katalog) + 8 tema (🎨, hanya epic/legendary
 
 ## Pembaruan peluang & harga (terbaru)
 Harga: ×1 = 800, ×10 = 7.200. Peluang: Common 40 · Uncommon 28 · Rare 18 · Epic 9 · Legendary 4 · Mythic 1 (%). Pity: epic+ ≤20, legendary+ ≤80. **Duplikat tidak ada pengembalian koin.** Auto spin: pilih ×1/×10 dan jumlah (3–100), berhenti sendiri jika koin kurang atau ditekan Stop; hasil diringkas di akhir. Akun moderator: gratis, peluang rendah (Epic 1.3 · Legendary 0.19 · Mythic 0.01), tanpa pity.
+
+### Revisi: harga ×1=100, ×10=900. Peluang: Common 40 · Uncommon 28 · Rare 18 · Epic 9 · Legendary 4.9 · **Mythic 0.1%**. Auto spin menampilkan slot tiap putaran, kecepatan 1×–8×, tombol Stop.

@@ -1445,7 +1445,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
-import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115i";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115j";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -4566,6 +4566,8 @@ async function renderShop(){
     { key: "aksesori",    label: "🎩 Aksesori" },
     { key: "item_tangan", label: "⚔️ Senjata" },
     { key: "aura",        label: "✨ Aura" },
+    { key: "celana",      label: "👖 Celana" },
+    { key: "sayap",       label: "🪽 Sayap (Lv 50)" },
   ];
   const activeCat = state._shopCat && CAT_TABS.some(t => t.key === state._shopCat) ? state._shopCat : "rambut";
   state._shopCat = activeCat;
@@ -4698,8 +4700,17 @@ window.shopConfirmBeli = (cat, id, harga, unlock) => {
   if (!confirm(msg)) return;
   beliItem(cat, id, harga, unlock);
 };
+/* Sayap baru bisa dipakai di Lv 50 (akun developer/moderator bebas) */
+window.__lvOk = (kat, id) => {
+  if (kat !== "sayap" || !id || id === "none") return true;
+  if (FB.hasUnlimitedCoins && FB.hasUnlimitedCoins()) return true;
+  const need = CATALOG.sayap?.[id]?.unlock_lv || 50;
+  if ((state.gami?.level_karakter || 1) >= need) return true;
+  toast(`🔒 Sayap baru terbuka di Level ${need}`); return false;
+};
 window.shopEquip = async (cat, id) => {
   if (!state.user) return;
+  if (!__lvOk(cat, id)) return;
   try {
     await FB.equipItem(cat, id);
     if (state.siswa){
@@ -4729,6 +4740,7 @@ window.beliItem = async (kat, id, harga, unlock) => {
 };
 window.equipNow = async (kat, id) => {
   if (!state.user) return;
+  if (!__lvOk(kat, id)) return;
   await FB.equipItem(kat, id);
   toast("✓ Dipakai");
   renderShop().then(h => document.getElementById("app").innerHTML = h);
@@ -4774,6 +4786,7 @@ async function renderInventory(){
 }
 window.equipNowInv = async (kat, id) => {
   if (!state.user) return;
+  if (!__lvOk(kat, id)) return;
   await FB.equipItem(kat, id);
   toast("✓ Dipakai");
   route("inventory");
@@ -4802,10 +4815,18 @@ async function renderWardrobe(){
         <div style="flex:1; min-width:280px;">
           ${Object.keys(CATALOG).map(kat => {
             const items = inv.filter(id => CATALOG[kat][id]);
-            if (!items.length) return "";
+            const NONE = { rambut: null, pakaian: "seragam_default", sepatu: "shoes_default" }, noneId = kat in NONE ? NONE[kat] : "none";
+            const noneNama = { rambut: "Botak (Default)", pakaian: "Kaos Putih (Default)", sepatu: "Sepatu Sekolah (Default)", celana: "Tanpa celana (Default)", sayap: "Tanpa sayap (Default)" }[kat] || "Tidak memakai (Default)";
+            const noneEq = (eq[kat] ?? null) === noneId || (noneId === null && !eq[kat]);
+            const arg = noneId === null ? "null" : `'${noneId}'`;
             return `
               <h3>${CATALOG_LABELS[kat]}</h3>
               <div class="grid grid-3">
+                <div class="item-card ${noneEq?'equipped':''}" onclick="equipThenWardrobe('${kat}',${arg})">
+                  <div class="icon-wrap">${renderCharacter({ ...DEFAULT_EQUIPPED, [kat]: noneId })}</div>
+                  <div class="nama">🚫 ${noneNama}</div>
+                  <div class="harga">${noneEq?"✓ Dipakai":"Klik pakai"}</div>
+                </div>
                 ${items.map(id => {
                   const it = CATALOG[kat][id];
                   const isEq = eq[kat] === id;
@@ -4816,11 +4837,6 @@ async function renderWardrobe(){
                     <div class="harga">${isEq?"✓ Dipakai":"Klik pakai"}</div>
                   </div>`;
                 }).join("")}
-                ${kat === "rambut" ? `<div class="item-card ${!eq.rambut?'equipped':''}" onclick="equipThenWardrobe('rambut',null)">
-                  <div class="icon-wrap">${renderCharacter({...DEFAULT_EQUIPPED, rambut:null})}</div>
-                  <div class="nama">Botak (Default)</div>
-                  <div class="harga">${!eq.rambut?"✓ Dipakai":"Klik pakai"}</div>
-                </div>` : ""}
               </div>
             `;
           }).join("")}
@@ -4831,6 +4847,7 @@ async function renderWardrobe(){
 }
 window.equipThenWardrobe = async (kat, id) => {
   if (!state.user) return toast("Login dulu");
+  if (!__lvOk(kat, id)) return;
   await FB.equipItem(kat, id);
   toast("✓ Dipakai");
   route("wardrobe");

@@ -3,10 +3,10 @@ import { ITEMS } from "./gacha-items.js";
 function poolDari(items) { const p = { common: [], uncommon: [], rare: [], epic: [], legendary: [], mythic: [] }; items.forEach(x => p[x.rarity] && p[x.rarity].push(x.id)); return p; }
 export const CONFIG = {
   // ⚠ USULAN harga — tinjau sebelum produksi.
-  PRICE_1: 800, PRICE_10: 7200,
+  PRICE_1: 100, PRICE_10: 900,
   RARITY: [ // persen, total 100
     { id: "common", pct: 40 }, { id: "uncommon", pct: 28 }, { id: "rare", pct: 18 },
-    { id: "epic", pct: 9 }, { id: "legendary", pct: 4 }, { id: "mythic", pct: 1 },
+    { id: "epic", pct: 9 }, { id: "legendary", pct: 4.9 }, { id: "mythic", pct: 0.1 },
   ],
   PITY_EPIC: 20,       // maks 20 tarikan tanpa epic+  → epic dijamin
   PITY_LEGENDARY: 80,  // maks 80 tarikan tanpa legendary+ → legendary dijamin

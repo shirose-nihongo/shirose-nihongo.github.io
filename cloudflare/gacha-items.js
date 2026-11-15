@@ -97,6 +97,206 @@ export const ITEMS = [
   "harga": 25000
  },
  {
+  "id": "o_tee_merah",
+  "nama": "Kaos Merah",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 400
+ },
+ {
+  "id": "o_tee_biru",
+  "nama": "Kaos Biru Langit",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 600
+ },
+ {
+  "id": "o_tee_hijau",
+  "nama": "Kaos Hijau Mint",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 850
+ },
+ {
+  "id": "o_tank_hitam",
+  "nama": "Tank Top Hitam",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 1050
+ },
+ {
+  "id": "o_kemeja_kotak",
+  "nama": "Kemeja Kotak Merah",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 1300
+ },
+ {
+  "id": "o_sweater_krem",
+  "nama": "Sweater Krem",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 1500
+ },
+ {
+  "id": "o_hoodie_abu",
+  "nama": "Hoodie Abu",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 2500
+ },
+ {
+  "id": "o_hoodie_biru",
+  "nama": "Hoodie Biru Laut",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 3000
+ },
+ {
+  "id": "o_jaket_denim",
+  "nama": "Jaket Denim",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 3500
+ },
+ {
+  "id": "o_jaket_bomber",
+  "nama": "Jaket Bomber Hijau",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 4000
+ },
+ {
+  "id": "o_yukata_biru",
+  "nama": "Yukata Biru",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 4500
+ },
+ {
+  "id": "o_tee_stripe",
+  "nama": "Kaos Garis Pelaut",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 5000
+ },
+ {
+  "id": "o_jas_navy",
+  "nama": "Jas Navy Formal",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 9000
+ },
+ {
+  "id": "o_yukata_sakura",
+  "nama": "Yukata Sakura",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 11350
+ },
+ {
+  "id": "o_hakama_miko",
+  "nama": "Pakaian Miko",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 13650
+ },
+ {
+  "id": "o_jaket_kulit",
+  "nama": "Jaket Kulit Biker",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 16000
+ },
+ {
+  "id": "o_armor_besi",
+  "nama": "Armor Besi Ksatria",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 25000
+ },
+ {
+  "id": "o_kimono_biru",
+  "nama": "Kimono Biru Malam",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 28650
+ },
+ {
+  "id": "o_jubah_penyihir",
+  "nama": "Jubah Penyihir",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 32350
+ },
+ {
+  "id": "o_haori_ninja",
+  "nama": "Seragam Ninja",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 36000
+ },
+ {
+  "id": "o_armor_samurai",
+  "nama": "Armor Samurai Merah",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 50000
+ },
+ {
+  "id": "o_jubah_emas",
+  "nama": "Jubah Kaisar Emas",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 65000
+ },
+ {
+  "id": "o_armor_naga",
+  "nama": "Armor Sisik Naga",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 80000
+ },
+ {
+  "id": "o_jubah_galaxy",
+  "nama": "Jubah Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 100000
+ },
+ {
+  "id": "o_armor_surya",
+  "nama": "Armor Cahaya Surya",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 130000
+ },
+ {
   "id": "sneakers_putih",
   "nama": "Sneakers Putih",
   "rarity": "common",
@@ -127,6 +327,158 @@ export const ITEMS = [
   "kind": "shop",
   "kat": "Sepatu",
   "harga": 13000
+ },
+ {
+  "id": "sh_biru",
+  "nama": "Sneakers Biru",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 400
+ },
+ {
+  "id": "sh_kuning",
+  "nama": "Sneakers Kuning",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 750
+ },
+ {
+  "id": "sh_hitam",
+  "nama": "Sneakers Hitam",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 1150
+ },
+ {
+  "id": "sh_sandal_hijau",
+  "nama": "Sandal Jepit Hijau",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 1500
+ },
+ {
+  "id": "sh_high_merah",
+  "nama": "High-top Merah",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 2500
+ },
+ {
+  "id": "sh_high_hitam",
+  "nama": "High-top Hitam",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 3350
+ },
+ {
+  "id": "sh_boot_cokelat",
+  "nama": "Boots Cokelat",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 4150
+ },
+ {
+  "id": "sh_zori",
+  "nama": "Zori Merah",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 5000
+ },
+ {
+  "id": "sh_neon",
+  "nama": "Sneakers Neon",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 9000
+ },
+ {
+  "id": "sh_boot_ninja",
+  "nama": "Boots Ninja",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 12500
+ },
+ {
+  "id": "sh_high_pink",
+  "nama": "High-top Sakura",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 16000
+ },
+ {
+  "id": "sh_boot_baja",
+  "nama": "Boots Baja Ksatria",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 25000
+ },
+ {
+  "id": "sh_duri",
+  "nama": "Sepatu Berduri",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 30500
+ },
+ {
+  "id": "sh_neon_ungu",
+  "nama": "Sneakers Neon Ungu",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 36000
+ },
+ {
+  "id": "sh_bersayap",
+  "nama": "Sepatu Bersayap",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 50000
+ },
+ {
+  "id": "sh_emas",
+  "nama": "Sepatu Emas",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 65000
+ },
+ {
+  "id": "sh_boot_api",
+  "nama": "Boots Api",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 80000
+ },
+ {
+  "id": "sh_cahaya",
+  "nama": "Sepatu Cahaya Dewa",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 100000
+ },
+ {
+  "id": "sh_galaxy",
+  "nama": "Sneakers Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 130000
  },
  {
   "id": "kacamata",
@@ -167,6 +519,174 @@ export const ITEMS = [
   "kind": "shop",
   "kat": "Aksesori",
   "harga": 1500
+ },
+ {
+  "id": "ac_topi_biru",
+  "nama": "Topi Baseball Biru",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 400
+ },
+ {
+  "id": "ac_pita_merah",
+  "nama": "Pita Rambut Merah",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 700
+ },
+ {
+  "id": "ac_masker",
+  "nama": "Masker Putih",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 950
+ },
+ {
+  "id": "ac_syal_merah",
+  "nama": "Syal Merah",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 1250
+ },
+ {
+  "id": "ac_kalung_hati",
+  "nama": "Kalung Hati",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 1500
+ },
+ {
+  "id": "ac_telinga_kucing",
+  "nama": "Telinga Kucing",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 2500
+ },
+ {
+  "id": "ac_telinga_kelinci",
+  "nama": "Telinga Kelinci",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 3150
+ },
+ {
+  "id": "ac_headphone",
+  "nama": "Headphone",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 3750
+ },
+ {
+  "id": "ac_bandana_ninja",
+  "nama": "Bandana Ninja",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 4400
+ },
+ {
+  "id": "ac_tanduk_kecil",
+  "nama": "Tanduk Setan Kecil",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 5000
+ },
+ {
+  "id": "ac_topi_penyihir",
+  "nama": "Topi Penyihir",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 9000
+ },
+ {
+  "id": "ac_kacamata_hitam",
+  "nama": "Kacamata Hitam Keren",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 12500
+ },
+ {
+  "id": "ac_topeng_kitsune",
+  "nama": "Topeng Kitsune",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 16000
+ },
+ {
+  "id": "ac_tanduk_iblis",
+  "nama": "Tanduk Iblis",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 25000
+ },
+ {
+  "id": "ac_hachimaki",
+  "nama": "Hachimaki Juara",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 30500
+ },
+ {
+  "id": "ac_mahkota_permata",
+  "nama": "Mahkota Permata",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 36000
+ },
+ {
+  "id": "ac_halo",
+  "nama": "Halo Malaikat",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 50000
+ },
+ {
+  "id": "ac_mahkota_api",
+  "nama": "Mahkota Api",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 65000
+ },
+ {
+  "id": "ac_tiara_es",
+  "nama": "Tiara Es",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 80000
+ },
+ {
+  "id": "ac_mahkota_dewa",
+  "nama": "Mahkota Dewa Cahaya",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 100000
+ },
+ {
+  "id": "ac_mata_naga",
+  "nama": "Mata Naga Merah",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 130000
  },
  {
   "id": "tas_sekolah",
@@ -345,6 +865,214 @@ export const ITEMS = [
   "harga": 50000
  },
  {
+  "id": "hh_katana",
+  "nama": "Katana",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 400
+ },
+ {
+  "id": "hh_pedang_kayu",
+  "nama": "Pedang Kayu",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 600
+ },
+ {
+  "id": "hh_pensil_raksasa",
+  "nama": "Pensil Raksasa",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 850
+ },
+ {
+  "id": "hh_payung",
+  "nama": "Payung Merah",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 1050
+ },
+ {
+  "id": "hh_bunga",
+  "nama": "Buket Bunga",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 1300
+ },
+ {
+  "id": "hh_kipas",
+  "nama": "Sensu (Kipas)",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 1500
+ },
+ {
+  "id": "hh_kunai",
+  "nama": "Kunai Ninja",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 2500
+ },
+ {
+  "id": "hh_shuriken",
+  "nama": "Shuriken",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 3150
+ },
+ {
+  "id": "hh_busur",
+  "nama": "Busur & Panah",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 3750
+ },
+ {
+  "id": "hh_tongkat_sihir",
+  "nama": "Tongkat Sihir",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 4400
+ },
+ {
+  "id": "hh_lentera",
+  "nama": "Lentera Chochin",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 5000
+ },
+ {
+  "id": "hh_yari",
+  "nama": "Yari (Tombak)",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 9000
+ },
+ {
+  "id": "hh_kapak",
+  "nama": "Kapak Perang",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 10750
+ },
+ {
+  "id": "hh_palu",
+  "nama": "Palu Raksasa",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 12500
+ },
+ {
+  "id": "hh_perisai",
+  "nama": "Perisai Ksatria",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 14250
+ },
+ {
+  "id": "hh_gitar",
+  "nama": "Gitar Listrik",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 16000
+ },
+ {
+  "id": "hh_pedang_api",
+  "nama": "Pedang Api",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 25000
+ },
+ {
+  "id": "hh_pedang_es",
+  "nama": "Pedang Es",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 27750
+ },
+ {
+  "id": "hh_pedang_petir",
+  "nama": "Pedang Petir",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 30500
+ },
+ {
+  "id": "hh_sabit",
+  "nama": "Sabit Dewa Maut",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 33250
+ },
+ {
+  "id": "hh_tongkat_es",
+  "nama": "Tongkat Kristal Es",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 36000
+ },
+ {
+  "id": "hh_trisula",
+  "nama": "Trisula Dewa Laut",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 50000
+ },
+ {
+  "id": "hh_pedang_naga",
+  "nama": "Pedang Naga Emas",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 65000
+ },
+ {
+  "id": "hh_sabit_api",
+  "nama": "Sabit Api Neraka",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 80000
+ },
+ {
+  "id": "hh_excalibur",
+  "nama": "Pedang Cahaya Suci",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 100000
+ },
+ {
+  "id": "hh_tongkat_galaxy",
+  "nama": "Tongkat Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 130000
+ },
+ {
   "id": "aura_hijau",
   "nama": "💚 Aura Hijau",
   "rarity": "uncommon",
@@ -383,6 +1111,470 @@ export const ITEMS = [
   "kind": "shop",
   "kat": "Aura",
   "harga": 2500
+ },
+ {
+  "id": "au_merah",
+  "nama": "❤️ Aura Merah Membara",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 2500
+ },
+ {
+  "id": "au_biru",
+  "nama": "💙 Aura Biru Samudra",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 3750
+ },
+ {
+  "id": "au_kuning",
+  "nama": "💛 Aura Kuning Cerah",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 5000
+ },
+ {
+  "id": "au_putih",
+  "nama": "🤍 Aura Putih Suci",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 9000
+ },
+ {
+  "id": "au_sakura",
+  "nama": "🌸 Aura Kelopak Sakura",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 12500
+ },
+ {
+  "id": "au_daun",
+  "nama": "🍃 Aura Angin Daun",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 16000
+ },
+ {
+  "id": "au_es",
+  "nama": "❄️ Aura Salju Beku",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 25000
+ },
+ {
+  "id": "au_petir",
+  "nama": "⚡ Aura Petir Biru",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 30500
+ },
+ {
+  "id": "au_gelap",
+  "nama": "🖤 Aura Kegelapan",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 36000
+ },
+ {
+  "id": "au_kanji",
+  "nama": "漢 Aura Aksara Kanji",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 50000
+ },
+ {
+  "id": "au_naga_api",
+  "nama": "🐉 Aura Naga Api",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 65000
+ },
+ {
+  "id": "au_pelangi",
+  "nama": "🌈 Aura Pelangi",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 80000
+ },
+ {
+  "id": "au_galaxy",
+  "nama": "🌌 Aura Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 100000
+ },
+ {
+  "id": "au_dewa",
+  "nama": "☀️ Aura Dewa Matahari",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 130000
+ },
+ {
+  "id": "cl_jeans_biru",
+  "nama": "Jeans Biru",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 400
+ },
+ {
+  "id": "cl_jeans_hitam",
+  "nama": "Jeans Hitam",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 600
+ },
+ {
+  "id": "cl_chino_krem",
+  "nama": "Chino Krem",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 750
+ },
+ {
+  "id": "cl_pendek_biru",
+  "nama": "Celana Pendek Biru",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 950
+ },
+ {
+  "id": "cl_pendek_putih",
+  "nama": "Celana Pendek Putih",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 1150
+ },
+ {
+  "id": "cl_training_hitam",
+  "nama": "Training Hitam Garis Putih",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 1300
+ },
+ {
+  "id": "cl_sekolah_navy",
+  "nama": "Celana Sekolah Navy",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 1500
+ },
+ {
+  "id": "cl_jogger_abu",
+  "nama": "Jogger Abu",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 2500
+ },
+ {
+  "id": "cl_cargo_hijau",
+  "nama": "Cargo Hijau Army",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 3350
+ },
+ {
+  "id": "cl_pendek_cargo",
+  "nama": "Cargo Pendek Cokelat",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 4150
+ },
+ {
+  "id": "cl_kotak_merah",
+  "nama": "Celana Kotak Merah",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 5000
+ },
+ {
+  "id": "cl_kain_hakama",
+  "nama": "Hakama Hitam",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 9000
+ },
+ {
+  "id": "cl_camo",
+  "nama": "Celana Kamuflase",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 11350
+ },
+ {
+  "id": "cl_kulit_hitam",
+  "nama": "Celana Kulit",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 13650
+ },
+ {
+  "id": "cl_pink_sakura",
+  "nama": "Celana Pink Sakura",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 16000
+ },
+ {
+  "id": "cl_ninja_hitam",
+  "nama": "Celana Ninja",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 25000
+ },
+ {
+  "id": "cl_hakama_merah",
+  "nama": "Hakama Merah Miko",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 28650
+ },
+ {
+  "id": "cl_samurai_biru",
+  "nama": "Hakama Samurai Biru",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 32350
+ },
+ {
+  "id": "cl_es_kristal",
+  "nama": "Celana Kristal Es",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 36000
+ },
+ {
+  "id": "cl_api_membara",
+  "nama": "Celana Api Membara",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 50000
+ },
+ {
+  "id": "cl_emas_kaisar",
+  "nama": "Celana Kaisar Emas",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 65000
+ },
+ {
+  "id": "cl_naga_hijau",
+  "nama": "Celana Sisik Naga",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 80000
+ },
+ {
+  "id": "cl_galaxy",
+  "nama": "Celana Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 100000
+ },
+ {
+  "id": "cl_cahaya_dewa",
+  "nama": "Celana Cahaya Dewa",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 130000
+ },
+ {
+  "id": "sy_kardus",
+  "nama": "Sayap Kardus",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 400
+ },
+ {
+  "id": "sy_kertas",
+  "nama": "Sayap Kertas Origami",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 600
+ },
+ {
+  "id": "sy_plastik",
+  "nama": "Sayap Plastik Kresek",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 850
+ },
+ {
+  "id": "sy_kain_lusuh",
+  "nama": "Sayap Kain Lusuh",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 1050
+ },
+ {
+  "id": "sy_ayam",
+  "nama": "Sayap Ayam",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 1300
+ },
+ {
+  "id": "sy_bebek_karet",
+  "nama": "Sayap Bebek Karet",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 1500
+ },
+ {
+  "id": "sy_daun",
+  "nama": "Sayap Daun Hutan",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 2500
+ },
+ {
+  "id": "sy_capung",
+  "nama": "Sayap Capung",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 5000
+ },
+ {
+  "id": "sy_angin",
+  "nama": "Sayap Angin Puyuh",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 9000
+ },
+ {
+  "id": "sy_es",
+  "nama": "Sayap Es Kristal",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 12500
+ },
+ {
+  "id": "sy_daun_besar",
+  "nama": "Sayap Pohon Dunia",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 16000
+ },
+ {
+  "id": "sy_badai",
+  "nama": "Sayap Angin Badai",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 25000
+ },
+ {
+  "id": "sy_api",
+  "nama": "Sayap Api",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 30500
+ },
+ {
+  "id": "sy_gargoyle",
+  "nama": "Sayap Gargoyle",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 36000
+ },
+ {
+  "id": "sy_gargoyle_batu",
+  "nama": "Sayap Gargoyle Batu Hitam",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 50000
+ },
+ {
+  "id": "sy_malaikat",
+  "nama": "Sayap Malaikat Emas",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 60000
+ },
+ {
+  "id": "sy_phoenix",
+  "nama": "Sayap Phoenix Abadi",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 70000
+ },
+ {
+  "id": "sy_naga_es",
+  "nama": "Sayap Naga Es",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 80000
+ },
+ {
+  "id": "sy_galaxy",
+  "nama": "Sayap Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 100000
+ },
+ {
+  "id": "sy_dewa_angin",
+  "nama": "Sayap Dewa Angin & Petir",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 130000
  },
  {
   "id": "theme_ungu",
