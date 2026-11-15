@@ -26,7 +26,7 @@ import {
 import {
   getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc,
   collection, getDocs, onSnapshot, query, orderBy, limit, addDoc,
-  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction
+  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction, increment
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -490,9 +490,25 @@ export async function tambahKoin(delta, alasan) {
   if (!currentUser || !delta) return null;
   for (let i = 0; i < 2; i++) {   // coba lagi sekali: error jaringan sesaat tidak boleh mematikan dompet
     try { const k = await walletTx(delta, alasan); _walletOff = false; _walletErr = ""; return k; }
-    catch (e) { if (/tidak cukup/i.test(e.message)) throw e; console.warn("wallet gagal:", e.message); _walletErr = e.code || e.message; _walletOff = true; if (/permission|denied/i.test(_walletErr)) break; await new Promise(r => setTimeout(r, 600)); }
+    catch (e) {
+      if (/tidak cukup/i.test(e.message)) throw e;
+      console.warn("wallet gagal:", e.message); _walletErr = e.code || e.message; _walletOff = true;
+      if (/resource-exhausted|quota/i.test(_walletErr + " " + e.message)) return await _koinTulisSaja(delta, alasan);   // kuota BACA habis → pakai tulis saja
+      if (/permission|denied/i.test(_walletErr)) break; await new Promise(r => setTimeout(r, 600));
+    }
   }
   return null;
+}
+/* Cadangan saat kuota BACA Firestore habis (transaksi butuh baca): ubah saldo dengan increment() = tulis murni, tanpa baca.
+ * Saldo awal diambil dari data yang sudah dimuat (state/cache). Kurang dari 0 ditolak di klien. */
+async function _koinTulisSaja(delta, alasan) {
+  const st = window.__SHIROSE_STATE; const sekarang = Number(st && st.gami && st.gami.koin) || 0;
+  if (delta < 0 && sekarang + delta < 0) throw new Error("Koin tidak cukup!");
+  const wref = doc(db, "siswa", currentUser.uid, "wallet", "main");
+  await setDoc(wref, { koin: increment(delta), uid: currentUser.uid, updated: serverTimestamp() }, { merge: true });
+  const baru = sekarang + delta; if (st && st.gami) st.gami.koin = baru;
+  try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || "") + " (mode tulis)", saldo: baru }); } catch (e) {}
+  return baru;
 }
 export async function getGachaState() {
   if (!currentUser) return null;
