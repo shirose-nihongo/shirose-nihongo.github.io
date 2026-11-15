@@ -941,6 +941,66 @@ export async function ringkasanTerakhir() {
   try { const c = curLevel(); const l = (await riwayat()).filter(h => !c || h.lv === c); return l[0] || null; } catch (e) { return null; }
 }
 
+/* ---------------- 8c. DETAIL KANJI & KOSAKATA: contoh kata + kalimat bisa dipencet ---------------- */
+(function jxAutoLink() {
+  if (window.__jxAuto) return; window.__jxAuto = true;
+  const kjCache = {};
+  const getKj = (lv) => kjCache[lv] || (kjCache[lv] = fetch(`./data/kanji-${lv}.json`).then(r => r.ok ? r.json() : []).catch(() => []));
+  const cleanK = (s) => String(s || "").replace(/[（(][^）)]*[）)]|[～〜○]/g, "").trim();
+  function linkBoxes(boxes, D) {
+    for (const box of boxes) {
+      const tw = document.createTreeWalker(box, NodeFilter.SHOW_TEXT, { acceptNode: (n) => n.parentElement.closest("rt,rp,.jx-w,script,style,button") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+      const nodes = []; let n; while ((n = tw.nextNode())) if (hasKj(n.nodeValue)) nodes.push(n);
+      for (const nd of nodes) {
+        const whole = cleanK(nd.nodeValue);
+        let toks;
+        if (box.classList.contains("jx-cw") && D.words.has(whole) && whole === nd.nodeValue.trim()) toks = [{ t: nd.nodeValue, ty: "w", key: whole }];
+        else toks = tokenKanji(nd.nodeValue, D);
+        if (!toks.some(t => t.ty)) continue;
+        const fr = document.createDocumentFragment();
+        for (const t of toks) {
+          if (!t.ty) { fr.append(t.t); continue; }
+          const sp = document.createElement("span"); sp.className = "jx-w"; sp.dataset.ty = t.ty; sp.dataset.key = t.key; sp.tabIndex = 0; sp.setAttribute("role", "button");
+          sp.textContent = t.t; fr.append(sp);
+        }
+        nd.replaceWith(fr);
+      }
+    }
+  }
+  async function enhance(box) {
+    if (box.dataset.jxa) return; box.dataset.jxa = "1";
+    try {
+      const lv = String(S().level || "n5").toLowerCase();
+      const D = await loadKD(lv); if (!D || !box.isConnected) return;
+      const isKanji = !!box.querySelector(".contoh-list") || !!box.querySelector(".readings .lbl");
+      const boxes = [];
+      if (isKanji) {
+        box.querySelectorAll(".contoh-list .contoh-item .jp").forEach(el => { el.classList.add("jx-cw"); boxes.push(el); });
+        const ch = (box.querySelector(".big-k")?.textContent || "").trim();
+        const items = await getKj(lv);
+        const e = items.find(x => (x.k || x.kanji) === ch);
+        const kal = (e && e.kal) || [];
+        if (kal.length && !box.querySelector(".jx-kal")) {
+          const sec = document.createElement("div"); sec.className = "contoh-list jx-kal";
+          sec.innerHTML = `<h3>Contoh kalimat</h3>` + kal.map(k => `<div class="contoh-item" style="flex-direction:column; align-items:flex-start; text-align:left;">
+            <div class="jp" style="font-size:22px; line-height:2;">${brRuby(k.j)} <button class="say-mini" title="Dengarkan" data-say="${esc(String(k.j).replace(/\[[^\]]*\]/g, "").replace(/\s+/g, ""))}" data-role="kosakata-contoh" onclick="SV.btn(this)">🔊</button></div>
+            <div class="id" style="text-align:left; font-size:16px;">${esc(k.a)}</div></div>`).join("");
+          const anchor = box.querySelector(".contoh-list:not(.jx-kal)");
+          if (anchor) anchor.after(sec); else (box.querySelector(".kanji-detail > div:last-of-type") || box).before(sec);
+          sec.querySelectorAll(".contoh-item .jp").forEach(el => boxes.push(el));
+        }
+      } else {
+        box.querySelectorAll(".contoh-item .jp").forEach(el => boxes.push(el));
+      }
+      linkBoxes(boxes, D);
+    } catch (_) { /* tampilan tetap jalan tanpa fitur pencet */ }
+  }
+  let t = 0;
+  const scan = () => { t = 0; document.querySelectorAll(".kanji-detail:not([data-jxa])").forEach(enhance); };
+  new MutationObserver(() => { if (!t) t = setTimeout(scan, 60); }).observe(document.documentElement, { childList: true, subtree: true });
+  scan();
+})();
+
 window.JLPT = {
   pilihWaktu, mulai, batalSesi, jawab, geser, lompat, tandai, putar: () => putar(), konfirmasi,
   bukaReview, kwClose, kwSay, filter: filterReview, revGeser, revLompat, kembaliHasil, putarReview,
