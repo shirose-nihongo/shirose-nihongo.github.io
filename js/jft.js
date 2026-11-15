@@ -7,7 +7,8 @@
  * Data: ./data/{kosakata,kanji,bunpou}-ir{0,1,2}.json, ./data/jft/bank.json
  * Kosakata bersumber dari buku "Irodori: Japanese for Life in Japan" (The Japan Foundation),
  * dipakai untuk pembelajaran non-komersial; penjelasan bunpou ditulis ulang oleh Shirose Nihongo.
- * Route: #jft, #jft-ujian, #jft-paket/{b0p0|sim0}, #jft-tes, #jft-hasil
+ * TRYOUT (模擬試験): paket tetap orisinal di data/jft/tryout.json (50 soal · 60 menit · 4 bagian). Latihan: soal isian dari data/jft/isi.json + tombol Cek jawaban.
+ * Route: #jft, #jft-ujian, #jft-tryout, #jft-paket/{b0p0|sim0|try0}, #jft-tes, #jft-hasil
  * ===================================================================== */
 const S = () => window.__SHIROSE_STATE || window.state || {};
 const $ = (id) => document.getElementById(id);
@@ -52,6 +53,14 @@ function withOpts(q, opts, ans, extra) { const idx = shuffle(opts.map((o, i) => 
 const _cache = {};
 async function dat(url) { if (!_cache[url]) { try { _cache[url] = await (await fetch(url)).json(); } catch (e) { _cache[url] = []; } } return _cache[url]; }
 const bank = () => dat("./data/jft/bank.json");
+const tryoutD = async () => { const d = await dat("./data/jft/tryout.json"); return d && d.paket ? d : { paket: [] }; };
+const isiD = async () => { const d = await dat("./data/jft/isi.json"); return d && !Array.isArray(d) ? d : {}; };
+/* soal isian: normalisasi (spasi, huruf lebar, kapital) lalu cocok ke kunci / alternatif */
+const normIsi = (t) => String(t ?? "").normalize("NFKC").replace(/[\s　]+/g, "").toLowerCase();
+const adaJawab = (q, u) => q.tipe === "isi" ? normIsi(u) !== "" : u != null;
+const bener = (q, u) => q.tipe === "isi" ? (normIsi(u) !== "" && [q.a, ...(q.alt || [])].some(k => normIsi(k) === normIsi(u))) : u === q.a;
+const tampilKunci = (q) => q.tipe === "isi" ? esc(q.a) : `${"ABCD"[q.a]}. ${fmtOpt(q.o[q.a])}`;
+const tampilJwb = (q, u) => !adaJawab(q, u) ? "—" : q.tipe === "isi" ? esc(u) : `${"ABCD"[u]}. ${fmtOpt(q.o[u])}`;
 const gambarD = async () => { const g = await dat("./data/jft/gambar.json"); return Array.isArray(g) ? { w: {}, k: {} } : g; };
 const choukaiPool = async (pk) => { const d = await dat(`./choukai/paket/n5-p${pk}.json`); return (d && d.sections && d.sections[0] && d.sections[0].items) || []; };
 const CK_PK = { ir0: 901, ir1: 902, ir2: 903, sim: 904 };
@@ -232,23 +241,27 @@ const mmss = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s %
 function parseKode(kode) {
   const m = /^b([0-2])p([0-2])$/.exec(kode || ""); if (m) return { jenis: "bab", blok: +m[1], p: +m[2] };
   const s = /^sim([0-4])$/.exec(kode || ""); if (s) return { jenis: "sim", p: +s[1] };
+  const t = /^try([0-9]+)$/.exec(kode || ""); if (t) return { jenis: "try", p: +t[1] };
   return null;
 }
-const judulKode = (lv, k) => k.jenis === "bab" ? `${LV[lv].nama} · Bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]} · Paket ${k.p + 1}` : `Simulasi JFT-Basic · Paket ${k.p + 1}${k.p === 4 ? " (ulangan Paket 1)" : ""}`;
+const judulKode = (lv, k) => k.jenis === "try" ? `Tryout JFT-Basic · Paket ${k.p + 1}` : k.jenis === "bab" ? `${LV[lv].nama} · Bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]} · Paket ${k.p + 1}` : `Simulasi JFT-Basic · Paket ${k.p + 1}${k.p === 4 ? " (ulangan Paket 1)" : ""}`;
 
 async function mulaiPaket(kode, menit) {
-  const lv = S().level; const k = parseKode(kode);
-  if (!LV[lv] || !k) return false;
-  let qs, daftar, flat, mode;
-  if (k.jenis === "bab") { qs = await paketBab(lv, k.blok, k.p); daftar = ["kotoba", "kanji", "bunpou", "choukai", "reading"]; flat = true; mode = "bab"; menit = menit || 25; }
+  const k = parseKode(kode); const lv = k && k.jenis === "try" ? "tryout" : S().level;
+  if (!k || (k.jenis !== "try" && !LV[lv])) return false;
+  let qs, daftar, flat, mode, judulT;
+  if (k.jenis === "try") { const pk = (await tryoutD()).paket[k.p]; if (!pk) return false; qs = pk.soal.map(x => ({ ...x })); daftar = URUT; flat = false; mode = "sim"; menit = pk.menit || 60; judulT = `Tryout JFT-Basic · ${pk.judul}`; }
+  else if (k.jenis === "bab") { qs = await paketBab(lv, k.blok, k.p); daftar = ["kotoba", "kanji", "bunpou", "choukai", "reading"]; flat = true; mode = "bab"; menit = menit || 25; }
   else { qs = await paketSim(k.p); daftar = URUT; flat = false; mode = "sim"; menit = 60; }
-  J = { mode, kode, lv, judul: judulKode(lv, k), daftar, flat, qs, ans: {}, plays: {}, idx: 0, mulai: Date.now(), endAt: Date.now() + menit * 60000, menit, selesai: false, konfirm: false };
+  J = { mode, kode, lv, judul: judulT || judulKode(lv, k), daftar, flat, qs, ans: {}, plays: {}, idx: 0, mulai: Date.now(), endAt: Date.now() + menit * 60000, menit, selesai: false, konfirm: false };
   simpanSesi(); return true;
 }
 async function mulaiLatihan(sek) {
   setSeed("x" + Math.random()); unseed();
-  const qs = await soalSek(sek, SEK[sek].n, [S().level && LV[S().level] ? S().level : "ir0"]);
-  J = { mode: "latihan", kode: "latihan-" + sek, lv: S().level, judul: "Latihan " + SEK[sek].nama, daftar: [sek], flat: false, qs, ans: {}, plays: {}, idx: 0, mulai: Date.now(), endAt: 0, menit: 0, selesai: false, konfirm: false };
+  let qs = await soalSek(sek, SEK[sek].n, [S().level && LV[S().level] ? S().level : "ir0"]);
+  const isi = pick(((await isiD())[sek]) || [], 4).map(x => ({ ...x }));
+  if (isi.length) qs = [...qs.slice(0, Math.max(0, qs.length - isi.length)), ...isi];
+  J = { mode: "latihan", kode: "latihan-" + sek, lv: S().level, judul: "Latihan " + SEK[sek].nama, daftar: [sek], flat: false, qs, ans: {}, cek: {}, plays: {}, idx: 0, mulai: Date.now(), endAt: 0, menit: 0, selesai: false, konfirm: false };
 }
 
 function startTick() {
@@ -282,13 +295,20 @@ function renderSoal() {
   const dengar = sek === "listening" || sek === "choukai";
   const terkunciMaju = sim && sek === "listening";
   const main = (J.plays[J.idx] || 0); const maxPlay = sim ? 2 : 99;
-  const nomor = idxSek.map((gi, k) => `<button class="no ${J.ans[gi] != null ? "terjawab" : ""} ${gi === J.idx ? "aktif" : ""}" ${terkunciMaju ? "disabled" : ""} onclick="JFT.ke(${gi})">${k + 1}</button>`).join("");
+  const nomor = idxSek.map((gi, k) => `<button class="no ${adaJawab(J.qs[gi], J.ans[gi]) ? "terjawab" : ""} ${gi === J.idx ? "aktif" : ""}" ${terkunciMaju ? "disabled" : ""} onclick="JFT.ke(${gi})">${k + 1}</button>`).join("");
   const teks = q.fl ? renderFlyer(q.fl) : q.p ? `<div class="jft-passage">${nl(q.p)}</div>` : "";
   const audio = dengar ? `<div class="jft-audio">
       <button class="btn" id="jft-play" ${main >= maxPlay ? "disabled" : ""} onclick="JFT.play()">▶ Putar audio ${sim ? `(${main}/${maxPlay})` : ""}</button>
       <div class="jft-hint">${sim ? "Audio hanya bisa diputar 2 kali. Soal tidak bisa kembali." : "Latihan: audio bisa diputar berulang."} Teks audio tidak ditampilkan saat ujian.</div></div>` : "";
-  const picO = isPicOpts(q.o);
-  const opsi = q.o.map((o, i) => `<button class="jft-opt ${J.ans[J.idx] === i ? "on" : ""} ${picO ? "pic" : ""}" onclick="JFT.jawab(${i})"><b>${"ABCD"[i]}</b> ${fmtOpt(o)}</button>`).join("");
+  const isi = q.tipe === "isi"; const latih = J.mode === "latihan"; const sudahCek = latih && J.cek && J.cek[J.idx];
+  const picO = !isi && isPicOpts(q.o);
+  const opsiMc = isi ? "" : q.o.map((o, i) => `<button class="jft-opt ${J.ans[J.idx] === i ? "on" : ""} ${picO ? "pic" : ""}" onclick="JFT.jawab(${i})" ${sudahCek ? "disabled" : ""}><b>${"ABCD"[i]}</b> ${fmtOpt(o)}</button>`).join("");
+  const opsi = isi ? `<div class="jft-isi"><input type="text" id="jft-isi" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Ketik jawabanmu di sini" value="${esc(J.ans[J.idx] ?? "")}" ${sudahCek ? "disabled" : ""} oninput="JFT.isi(this.value)" onkeydown="if(event.key==='Enter'){JFT.cek();}"></div>` : opsiMc;
+  const kunciBox = sudahCek ? (() => { const u = J.ans[J.idx]; const ok = bener(q, u);
+    return `<div class="jft-cek ${ok ? "ok" : "ng"}"><div class="h">${ok ? "✅ Benar" : "❌ Salah"}</div>
+      <div>Jawabanmu: <b>${tampilJwb(q, u)}</b></div>${ok ? "" : `<div>Jawaban benar: <b>${tampilKunci(q)}</b></div>`}
+      ${q.n ? `<div class="n">💡 ${esc(q.n)}</div>` : ""}${q.ref ? `<div class="r">📚 Referensi: ${esc(q.ref)}</div>` : ""}</div>`; })() : "";
+  const tombolCek = latih && !sudahCek ? `<div class="jft-cekbar"><button class="btn gold" ${adaJawab(q, J.ans[J.idx]) ? "" : "disabled"} onclick="JFT.cek()">✔ Kirim &amp; cek jawaban</button></div>` : "";
   const adaNext = posSek < idxSek.length - 1;
   const bagianAkhir = J.flat || J.daftar.indexOf(sek) === J.daftar.length - 1;
   const nav = `<div class="jft-nav">
@@ -297,7 +317,7 @@ function renderSoal() {
         (J.konfirm ? `<button class="btn danger" onclick="JFT.lanjutBagian()">${bagianAkhir ? "Ya, kumpulkan" : "Ya, lanjut (tidak bisa kembali)"}</button>`
           : `<button class="btn" onclick="JFT.minta()">${bagianAkhir ? "Selesai & kumpulkan ✓" : "Selesai bagian ini ▶"}</button>`)}
     </div>`;
-  const belum = idxSek.filter(gi => J.ans[gi] == null).length;
+  const belum = idxSek.filter(gi => !adaJawab(J.qs[gi], J.ans[gi])).length;
   const peringatan = J.konfirm ? `<div class="jft-warn">${belum ? `Masih ${belum} soal belum dijawab. ` : "Semua soal terjawab. "}${bagianAkhir ? "Ujian akan dikumpulkan." : "Setelah lanjut, bagian ini tidak bisa dibuka lagi."} <button class="btn ghost" onclick="JFT.batalKonfirm()">Batal</button></div>` : "";
   const judulSek = J.flat ? `${SEK[sek].jp} · ${SEK[sek].nama}` : `${SEK[sek].jp} · ${SEK[sek].nama}`;
   return `
@@ -308,7 +328,7 @@ function renderSoal() {
       ${timed ? `<div class="jft-timer" id="jft-timer">${mmss(sisaDetik())}</div>` : `<button class="btn ghost" onclick="JFT.minta()">Selesai</button>`}
     </div>
     <div class="jft-nomor">${nomor}</div>
-    <div class="panel jft-q">${teks}${audio}${q.pre ? `<div class="jft-pre">${esc(q.pre)}</div>` : ""}${q.emo ? `<div class="jft-bigemo">${q.emo}</div>` : ""}<div class="jft-qtext">${rb(q.q)}</div><div class="jft-opts ${picO ? "pics" : ""}">${opsi}</div></div>
+    <div class="panel jft-q">${teks}${audio}${q.pre ? `<div class="jft-pre">${esc(q.pre)}</div>` : ""}${q.emo ? `<div class="jft-bigemo">${q.emo}</div>` : ""}<div class="jft-qtext">${rb(q.q)}</div><div class="jft-opts ${picO ? "pics" : ""}">${opsi}</div>${tombolCek}${kunciBox}</div>
     ${peringatan}${nav}
   </div>`;
 }
@@ -317,11 +337,11 @@ function selesaiSesi() {
   clearInterval(_tick); try { speechSynthesis.cancel(); } catch (e) {}
   J.selesai = true;
   const per = {};
-  J.daftar.forEach(s => { const gi = rentang(s); per[s] = { benar: gi.filter(i => J.ans[i] === J.qs[i].a).length, total: gi.length }; });
+  J.daftar.forEach(s => { const gi = rentang(s); per[s] = { benar: gi.filter(i => bener(J.qs[i], J.ans[i])).length, total: gi.length }; });
   const benar = Object.values(per).reduce((a, x) => a + x.benar, 0), total = J.qs.length;
   const pct = total ? benar / total : 0;
   const rec = { t: Date.now(), mode: J.mode, kode: J.kode, lv: J.lv, judul: J.judul, per, benar, total, pct, skor: J.mode === "sim" ? skalaJft(pct) : null, detik: Math.round((Date.now() - J.mulai) / 1000) };
-  rec.review = J.qs.map((q, i) => ({ sec: q.sec, q: q.q, o: q.o, a: q.a, u: J.ans[i] ?? null, n: q.n || "", p: q.p || "", fl: q.fl || null, emo: q.emo || "", say: q.say || "", pre: q.pre || "" }));
+  rec.review = J.qs.map((q, i) => ({ sec: q.sec, tipe: q.tipe || "mc", alt: q.alt || [], ref: q.ref || "", q: q.q, o: q.o || [], a: q.a, u: J.ans[i] ?? null, n: q.n || "", p: q.p || "", fl: q.fl || null, emo: q.emo || "", say: q.say || "", pre: q.pre || "" }));
   if (J.mode !== "latihan") {
     const his = LS.get(HIS_KEY(), []); his.unshift({ ...rec, review: undefined }); LS.set(HIS_KEY(), his.slice(0, 40));
     const best = LS.get(BEST_KEY(), {}); const bk = `${J.lv}:${J.kode}`; if (!best[bk] || pct > best[bk].pct) best[bk] = { pct, skor: rec.skor, t: rec.t }; LS.set(BEST_KEY(), best);
@@ -333,10 +353,12 @@ function selesaiSesi() {
 
 /* ---------- aksi publik ---------- */
 window.JFT = {
-  async mulai(kode, menit) { $("app").innerHTML = '<div class="loading">Menyiapkan soal…</div>'; if (!(await mulaiPaket(kode, menit))) { toastP("Paket tidak ditemukan"); return route("jft-ujian"); } window._routeStack = ["jft-ujian"]; history.replaceState(null, "", "#jft-tes"); startTick(); draw(); },
+  async mulai(kode, menit) { $("app").innerHTML = '<div class="loading">Menyiapkan soal…</div>'; if (!(await mulaiPaket(kode, menit))) { toastP("Paket tidak ditemukan"); return route("jft-ujian"); } window._routeStack = [/^try/.test(kode) ? "jft-tryout" : "jft-ujian"]; history.replaceState(null, "", "#jft-tes"); startTick(); draw(); },
   async latihan(sek) { $("app").innerHTML = '<div class="loading">Menyiapkan soal…</div>'; await mulaiLatihan(sek); history.replaceState(null, "", "#jft-tes"); draw(); },
   lanjutSesi() { const s = pulihSesi(); if (!s) return; J = s; history.replaceState(null, "", "#jft-tes"); startTick(); draw(); },
   jawab(i) { J.ans[J.idx] = i; J.konfirm = false; simpanSesi(); draw(); },
+  isi(v) { J.ans[J.idx] = v; J.konfirm = false; simpanSesi(); const b = document.querySelector(".jft-cekbar .btn"); if (b) b.disabled = !adaJawab(J.qs[J.idx], v); const no = document.querySelector(".jft-nomor .no.aktif"); if (no) no.classList.toggle("terjawab", adaJawab(J.qs[J.idx], v)); },
+  cek() { if (!J || J.mode !== "latihan" || !adaJawab(J.qs[J.idx], J.ans[J.idx])) return; (J.cek = J.cek || {})[J.idx] = true; draw(); },
   ke(i) { J.idx = i; J.konfirm = false; simpanSesi(); draw(); },
   play() {
     const sim = J.mode === "sim"; const n = (J.plays[J.idx] || 0);
@@ -392,7 +414,12 @@ async function renderHub() {
   <div class="jlpt-pick">
     <div class="head"><div class="jp">JFT-Basic · いろどり</div><h1>JFT-Basic A2</h1>
       <p>Pilih level Irodori untuk belajar kosakata, kanji, bunpou &amp; hafalan — atau masuk ke ujian CBT tiap level.</p></div>
-    <div class="jlpt-grid">${kartu}</div>
+    <div class="jlpt-grid">${kartu}
+      <div class="jlpt-card jft jft-tryoutcard" data-kanji="試" role="button" tabindex="0" onclick="route('jft-tryout')">
+        <span class="lv">TRYOUT</span><span class="jpname">模擬試験</span>
+        <span class="desc">Simulasi ujian penuh JFT-Basic: 50 soal · 60 menit · 4 bagian, tanpa kembali ke bagian sebelumnya.<br><small>${(await tryoutD()).paket.length} paket orisinal</small></span>
+        <span class="st">Mulai tryout →</span>
+      </div></div>
     <div style="text-align:center;margin:14px 0"><button class="btn gold" onclick="route('jft-slide')">🎞️ Slide Bunpou Irodori (A1 · A2) — dengan audio</button></div>
     <div class="foot"><small style="color:var(--gray-dim)">Kosakata bersumber dari buku Irodori — The Japan Foundation (pemakaian edukasi non-komersial). Skor di sini hanya perkiraan latihan, bukan skor resmi JFT-Basic.</small></div>
   </div>`;
@@ -427,21 +454,49 @@ async function renderUjian() {
   </div>`;
 }
 
+async function renderTryout() {
+  const st = S();
+  if (!st.user) { setTimeout(() => route("login"), 0); return '<div class="loading">Memuat…</div>'; }
+  const T = await tryoutD(); const sesi = pulihSesi();
+  const his = LS.get(HIS_KEY(), []).filter(h => h.lv === "tryout").slice(0, 8);
+  const paket = T.paket.map((p, i) => `<button class="jft-pk" onclick="route('jft-paket/try${i}')"><b>Paket ${i + 1}</b><small>${esc(p.judul.replace(/^Paket \d+ · /, ""))}</small>${lencana("tryout", `try${i}`, true)}</button>`).join("");
+  return `
+  <div class="jft-wrap">
+    <div class="jft-crumb">JFT-Basic › Tryout</div>
+    <h2 style="margin:4px 0 12px">🏁 TRYOUT — 模擬試験</h2>
+    ${sesi && sesi.lv === "tryout" ? `<div class="panel"><button class="btn" onclick="JFT.lanjutSesi()">▶ Lanjutkan: ${esc(sesi.judul)} (sisa ${mmss(Math.max(0, Math.round((sesi.endAt - Date.now()) / 1000)))})</button></div>` : ""}
+    <div class="panel jft-simcard"><h3>Simulasi ujian penuh</h3>
+      <div class="jft-sub">Setiap paket: <b>50 soal · 60 menit · 4 bagian</b> — 文字と語彙 (Huruf &amp; Kosakata) → 会話と表現 (Percakapan &amp; Ungkapan) → 聴解 (Pendengaran) → 読解 (Bacaan). Berbasis Can-do A1–A2 kehidupan di Jepang.</div>
+      <div class="jft-paket">${paket || "<small>Paket tryout belum tersedia.</small>"}</div>
+    </div>
+    <div class="panel"><h3>Aturan tryout</h3><ul class="jft-ul">
+      <li>Dalam satu bagian kamu boleh meninjau dan mengubah jawaban. Setelah pindah ke bagian berikutnya, bagian sebelumnya <b>terkunci</b>.</li>
+      <li>Bagian Listening: audio hanya dua kali putar dan tidak bisa kembali ke soal sebelumnya.</li>
+      <li>Timer 60 menit terus berjalan walau halaman ditutup. Waktu habis = otomatis dikumpulkan.</li>
+      <li>Hasil: skor estimasi, benar/salah per bagian, kunci, pembahasan, dan rekomendasi belajar.</li></ul>
+      <div class="jft-note">⚠ Soal dibuat orisinal oleh Shirose Nihongo untuk latihan. Skor adalah <b>estimasi</b>, bukan sertifikasi atau skor resmi JFT-Basic dari Japan Foundation.</div></div>
+    ${his.length ? `<div class="panel" style="margin-top:12px"><h3>Riwayat tryout</h3>${his.map(h => `<div class="jft-his"><span>${new Date(h.t).toLocaleString("id-ID", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" })}</span><b>${h.skor ?? Math.round(h.pct * 100) + "%"}</b><small>${esc(h.judul)}</small></div>`).join("")}</div>` : ""}
+    <div style="margin-top:12px"><button class="btn ghost" onclick="route('jft')">← Kembali ke JFT-Basic</button></div>
+  </div>`;
+}
+
 async function renderPaket(params) {
-  const st = S(); const lv = st.level; const kode = (params || [])[0]; const k = parseKode(kode);
-  if (!st.user || !LV[lv] || !k) { setTimeout(() => route("jft-ujian"), 0); return '<div class="loading">Memuat…</div>'; }
+  const st = S(); const kode = (params || [])[0]; const k = parseKode(kode); const lv = k && k.jenis === "try" ? "tryout" : st.level;
+  if (!st.user || !k || (k.jenis !== "try" && !LV[lv])) { setTimeout(() => route(k && k.jenis === "try" ? "jft-tryout" : "jft-ujian"), 0); return '<div class="loading">Memuat…</div>'; }
+  if (k.jenis === "try" && !(await tryoutD()).paket[k.p]) { setTimeout(() => route("jft-tryout"), 0); return '<div class="loading">Memuat…</div>'; }
   window.__jftMenit = 25;
   let isi = "";
   if (k.jenis === "bab") isi = `<li>語彙 Kotoba (8)</li><li>漢字 Kanji (6)</li><li>文法 Bunpou (6)</li><li>聴解 Choukai (5) — suara VOICEVOX</li><li>読解 Dokkai (4) — panflet</li><li>Total <b>29 soal</b> dari bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]}</li>`;
   else isi = URUT.map(s => `<li>${SEK[s].jp} ${SEK[s].nama} (${SEK[s].n})</li>`).join("") + "<li>Total <b>50 soal</b></li>";
+  const namaLv = lv === "tryout" ? "Tryout" : LV[lv].nama;
   const waktu = k.jenis === "bab" ? `<h3>⏱ Pengaturan waktu</h3><div class="jft-sub">Rekomendasi: <b>25 menit</b>. Kamu boleh memilih sendiri.</div>
       <div class="jft-wk">${[15, 20, 25, 30].map(m => `<button class="${m === 25 ? "on" : ""}" onclick="JFT.waktu(${m},this)">${m} menit${m === 25 ? " ★" : ""}</button>`).join("")}<button id="jft-wk-c" onclick="JFT.waktuCustom()">Custom</button></div>`
     : `<h3>⏱ Waktu</h3><div class="jft-sub">60 menit (tetap, seperti ujian asli).</div>`;
   const aturan = k.jenis === "bab" ? `<li>Soal bebas dibuka ulang sebelum dikumpulkan.</li>` : `<li>Dalam satu bagian soal bebas dibuka ulang; bagian yang sudah selesai terkunci.</li><li>Listening: audio 2× putar, tidak bisa kembali ke soal sebelumnya.</li><li>Skor dihitung estimasi skala 10–250 (lulus A2 ≥ 200).</li>`;
   return `
   <div class="jft-wrap">
-    <div class="jft-crumb">JFT-Basic › ${LV[lv].nama} › ${k.jenis === "bab" ? `Bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]}` : "Simulasi"}</div>
-    <h2 style="margin:4px 0 12px">${esc(judulKode(lv, k))}</h2>
+    <div class="jft-crumb">JFT-Basic › ${namaLv} › ${k.jenis === "bab" ? `Bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]}` : k.jenis === "try" ? "Paket " + (k.p + 1) : "Simulasi"}</div>
+    <h2 style="margin:4px 0 12px">${esc(k.jenis === "try" ? judulKode(lv, k) + " — " + (await tryoutD()).paket[k.p].judul.replace(/^Paket \d+ · /, "") : judulKode(lv, k))}</h2>
     <div class="jft-grid2">
       <div class="panel"><h3>Isi paket</h3><ul class="jft-ul">${isi}</ul></div>
       <div class="panel">${waktu}
@@ -457,18 +512,29 @@ function renderTes() {
   setTimeout(() => route("jft-ujian"), 0); return '<div class="loading">Memuat…</div>';
 }
 
+const SARAN = {
+  vocab: ["文字・語彙", "Ulangi Kotoba dan Kanji tiap bab (menu materi JFT), lalu kerjakan Latihan cepat 文字・語彙."],
+  conv: ["会話・表現", "Pelajari ulang Bunpou & ungkapan sehari-hari lewat Slide Bunpou Irodori, lalu Latihan cepat 会話・表現."],
+  listening: ["聴解", "Perbanyak mendengar: Latihan cepat 聴解, dengarkan audio Kotoba, dan tirukan (shadowing) dialognya."],
+  reading: ["読解", "Biasakan membaca pengumuman, jadwal, dan pesan pendek; cari kata kunci (tanggal, jam, tempat, harga) lebih dulu."],
+};
+function rekomendasi(r) {
+  const lemah = Object.entries(r.per).filter(([s, x]) => x.total && x.benar / x.total < 0.7).sort((a, b) => a[1].benar / a[1].total - b[1].benar / b[1].total);
+  if (!lemah.length) return `<div class="jft-note" style="border-color:#22c55e">🎯 <b>Rekomendasi belajar:</b> semua bagian ≥ 70%. Coba paket tryout lain untuk menjaga kestabilan skor.</div>`;
+  return `<div class="jft-note"><b>🎯 Rekomendasi belajar</b><ul class="jft-ul">${lemah.map(([s, x]) => `<li><b>${SARAN[s][0]}</b> (${Math.round(100 * x.benar / x.total)}%): ${SARAN[s][1]}</li>`).join("")}</ul></div>`;
+}
 function renderHasil() {
   const r = LS.get(HIS_KEY() + ":last", null);
   if (!r) { setTimeout(() => route("jft-ujian"), 0); return '<div class="loading">Memuat…</div>'; }
   const sim = r.mode === "sim"; const b = sim ? bandJft(r.skor) : gradeBab(r.pct);
   const bars = Object.entries(r.per).map(([s, x]) => { const p = x.total ? Math.round(100 * x.benar / x.total) : 0; return `<div class="jft-bar"><div class="l">${SEK[s].jp} ${SEK[s].nama}</div><div class="t"><i style="width:${p}%"></i></div><div class="v">${x.benar}/${x.total} · ${p}%</div></div>`; }).join("");
   const rv = r.review.map((x, i) => {
-    const ok = x.u === x.a;
+    const ok = bener(x, x.u);
     return `<div class="jft-rv ${ok ? "ok" : "ng"}"><div class="h">${i + 1}. ${ok ? "✅" : "❌"} <small>${SEK[x.sec].jp}</small></div>
       ${x.fl ? renderFlyer(x.fl) : x.p ? `<div class="jft-passage">${nl(x.p)}</div>` : ""}${x.say ? `<div class="jft-passage">🎧 ${nl(x.say)}</div>` : ""}${x.emo ? `<div class="jft-bigemo">${x.emo}</div>` : ""}
       ${x.pre ? `<div class="jft-pre">${esc(x.pre)}</div>` : ""}<div class="q">${rb(x.q)}</div>
-      <div class="a">Jawabanmu: ${x.u == null ? "—" : `${"ABCD"[x.u]}. ${fmtOpt(x.o[x.u])}`}${ok ? "" : `<br>Benar: <b>${"ABCD"[x.a]}. ${fmtOpt(x.o[x.a])}</b>`}</div>
-      ${x.n ? `<div class="n">💡 ${esc(x.n)}</div>` : ""}</div>`;
+      <div class="a">Jawabanmu: ${tampilJwb(x, x.u)}${ok ? "" : `<br>Benar: <b>${tampilKunci(x)}</b>`}</div>
+      ${x.n ? `<div class="n">💡 ${esc(x.n)}</div>` : ""}${x.ref ? `<div class="n">📚 Referensi: ${esc(x.ref)}</div>` : ""}</div>`;
   }).join("");
   return `
   <div class="jft-wrap">
@@ -481,7 +547,8 @@ function renderHasil() {
       <div class="jft-sub">Benar ${r.benar} dari ${r.total} soal · ${Math.floor(r.detik / 60)} menit ${r.detik % 60} detik</div>
       <div class="jft-bars">${bars}</div>
       ${sim ? `<div class="jft-note">⚠ Ini <b>estimasi latihan</b>. Skor JFT-Basic resmi dihitung dengan equating (IRT) sehingga bobot tiap soal berbeda. Skor di bawah 145 tampil “*” di ujian asli.</div>` : ""}
-      <div class="jft-aksi"><button class="btn" onclick="JFT.tampilReview();this.remove()">📋 Lihat kunci &amp; pembahasan</button> <button class="btn ghost" onclick="route('jft-ujian')">↩ Daftar ujian</button></div>
+      ${sim ? rekomendasi(r) : ""}
+      <div class="jft-aksi"><button class="btn" onclick="JFT.tampilReview();this.remove()">📋 Lihat kunci &amp; pembahasan</button> <button class="btn ghost" onclick="route('${r.lv === "tryout" ? "jft-tryout" : "jft-ujian"}')">↩ ${r.lv === "tryout" ? "Daftar tryout" : "Daftar ujian"}</button></div>
     </div>
     <div id="jft-review" hidden>${rv}</div>
   </div>`;
@@ -492,6 +559,7 @@ export const JFT_ROUTES = {
   ...JFTS_ROUTES,
   jft: () => renderHub(),
   "jft-ujian": () => renderUjian(),
+  "jft-tryout": () => renderTryout(),
   "jft-paket": (p) => renderPaket(p),
   "jft-tes": () => renderTes(),
   "jft-hasil": () => renderHasil(),

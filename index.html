@@ -1443,7 +1443,7 @@ import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTer
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
-import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261113n";
+import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115a";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
 initJlpt(FB);
 initKana(FB);
@@ -2142,7 +2142,8 @@ const _parentOf = (path) => {
   if (n === "ssw-progres") return "ssw";
   if (n.startsWith("ssw-")) return `ssw-peta/${slug}`;
   if (n === "jft") return "pilih-level";
-  if (n === "jft-ujian") return "jft";
+  if (n === "jft-ujian" || n === "jft-tryout") return "jft";
+  if (n === "jft-paket" && /^try/.test(slug)) return "jft-tryout";
   if (n.startsWith("jft-")) return "jft-ujian";
   if (n === "kana") return "pilih-level";
   if (n.startsWith("kana-")) return "kana";
@@ -2361,14 +2362,17 @@ function renderCharaOrbital(){
           <div class="ico">🛠️</div>
           <div class="info"><div class="ttl">Dashboard Guru</div><div class="sub">Kelola siswa, bank soal &amp; laporan</div></div>
         </div>` : ""}
-        <div class="hub-card jx-home" onclick="route('jlpt')">
+        ${String(state.level).startsWith("ir") ? `<div class="hub-card jx-home" onclick="route('jft-tryout')">
+          <div class="ico">📝</div>
+          <div class="info"><div class="ttl">Tryout JFT-Basic</div><div class="sub">Simulasi 60 menit, 4 bagian</div></div>
+        </div>` : `        <div class="hub-card jx-home" onclick="route('jlpt')">
           <div class="ico">🏯</div>
           <div class="info"><div class="ttl">JLPT Center</div><div class="sub" id="jx-home-last">Full Exam &amp; latihan Kanji/Kotoba/Bunpou</div></div>
         </div>
         <div class="hub-card" onclick="route('jlpt-riwayat')">
           <div class="ico">📊</div>
           <div class="info"><div class="ttl">Riwayat JLPT</div><div class="sub">Nilai &amp; grafik perkembangan</div></div>
-        </div>
+        </div>`}
         <div class="hub-card" onclick="route('hafalan')">
           <div class="ico">🧠</div>
           <div class="info"><div class="ttl">Hafalan (SRS)</div><div class="sub">Pengulangan berjarak</div></div>
