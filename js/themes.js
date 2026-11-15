@@ -56,7 +56,7 @@
     var tr=document.querySelector(".topbar-right");if(!tr||document.getElementById("tb-sm"))return;
     var ig=document.querySelector("#sosmed .sm-ig"),tt=document.querySelector("#sosmed .sm-tt");if(!ig||!tt)return;
     var w=document.createElement("span");w.className="tb-sm";w.id="tb-sm";
-    [[ig,""],[tt,"tt"]].forEach(function(p){var a=p[0].cloneNode(true);a.className=p[1];a.removeAttribute("style");w.appendChild(a)});
+    [[ig,""],[tt,"tt"]].forEach(function(p){var a=document.createElement("a");a.href=p[0].href;a.target="_blank";a.rel="noopener";a.className=p[1];a.setAttribute("aria-label",p[0].getAttribute("aria-label")||"");var sv=p[0].querySelector("svg");if(sv){var c=sv.cloneNode(true);c.removeAttribute("style");c.removeAttribute("class");c.setAttribute("fill","#fff");a.appendChild(c)}w.appendChild(a)});
     tr.insertBefore(w,tr.firstChild);
   }
   function init(){

@@ -155,5 +155,5 @@ html[data-theme="putih"] .th-menu button{color:#111}html[data-theme="putih"] .th
 .tb-sm{display:inline-flex;gap:6px;align-items:center;margin-right:4px}
 .tb-sm a{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:linear-gradient(135deg,#a855f7,#6d28d9);box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .tb-sm a.tt{background:linear-gradient(135deg,#111,#c026d3)}
-.tb-sm svg{width:16px;height:16px;fill:#fff}
+.tb-sm svg{width:16px;height:16px;fill:#fff;background:none!important;padding:0!important;box-shadow:none!important;border-radius:0!important;display:block}
 @media (max-width:420px){.tb-sm a{width:26px;height:26px}.tb-sm svg{width:14px;height:14px}}
