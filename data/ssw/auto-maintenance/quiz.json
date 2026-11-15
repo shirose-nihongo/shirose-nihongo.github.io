@@ -5401,6 +5401,3228 @@
       }
      }
     ]
+   },
+   {
+    "id": "bab4-qimg-02",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 2 — Langkah hisap mesin"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 2 (Langkah hisap mesin), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "cakram"
+       },
+       {
+        "id": "mekanisme gigi kemudi"
+       },
+       {
+        "id": "katup hisap"
+       },
+       {
+        "id": "roda dan ban"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "インテーク・バルブ = katup hisap. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 2 (Langkah hisap mesin), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "suspensi"
+       },
+       {
+        "id": "sistem lampu"
+       },
+       {
+        "id": "pegas keong"
+       },
+       {
+        "id": "katup buang"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "エキゾースト・バルブ = katup buang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 2 (Langkah hisap mesin), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "karter oli"
+       },
+       {
+        "id": "lengan bawah suspensi"
+       },
+       {
+        "id": "campuran udara-bahan bakar"
+       },
+       {
+        "id": "saringan udara"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "混合気 = campuran udara-bahan bakar. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 2 (Langkah hisap mesin), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pipa bahan bakar"
+       },
+       {
+        "id": "saluran oli (oil gallery)"
+       },
+       {
+        "id": "torak"
+       },
+       {
+        "id": "katup buang"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ピストン = torak. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 2 (Langkah hisap mesin), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "motor starter"
+       },
+       {
+        "id": "silinder"
+       },
+       {
+        "id": "sakelar tekanan oli"
+       },
+       {
+        "id": "motor kipas"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "シリンダ = silinder. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 2 (Langkah hisap mesin), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "poros engkol"
+       },
+       {
+        "id": "mekanisme operasi kemudi"
+       },
+       {
+        "id": "rem hidrolik tromol"
+       },
+       {
+        "id": "konverter katalis"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "クランクシャフト = poros engkol. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-06",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 6 — Mesin DOHC 4 silinder"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kepala silinder"
+       },
+       {
+        "id": "pegas"
+       },
+       {
+        "id": "pipa gas buang"
+       },
+       {
+        "id": "selang bawah radiator"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "シリンダ・ヘッド = kepala silinder. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "suspensi"
+       },
+       {
+        "id": "rem hidrolik tromol"
+       },
+       {
+        "id": "poros bubungan"
+       },
+       {
+        "id": "lengan rocker"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "カムシャフト = poros bubungan. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "termostat"
+       },
+       {
+        "id": "pegas"
+       },
+       {
+        "id": "blok silinder"
+       },
+       {
+        "id": "katup buang"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "シリンダ・ブロック = blok silinder. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "katup"
+       },
+       {
+        "id": "lengan rocker"
+       },
+       {
+        "id": "pelat belakang"
+       },
+       {
+        "id": "filter oli"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "バルブ = katup. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pipa rem"
+       },
+       {
+        "id": "sensor sudut poros engkol"
+       },
+       {
+        "id": "torak"
+       },
+       {
+        "id": "injektor"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ピストン = torak. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "lengan rocker"
+       },
+       {
+        "id": "pedal rem"
+       },
+       {
+        "id": "silinder"
+       },
+       {
+        "id": "selang atas radiator"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "シリンダ = silinder. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 7 adalah…"
+      },
+      "opts": [
+       {
+        "id": "nosel semprot oli"
+       },
+       {
+        "id": "batang penghubung"
+       },
+       {
+        "id": "poros penggerak"
+       },
+       {
+        "id": "tangki bahan bakar"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "コンロッド = batang penghubung. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 6 (Mesin DOHC 4 silinder), bagian bernomor 8 adalah…"
+      },
+      "opts": [
+       {
+        "id": "katup hisap"
+       },
+       {
+        "id": "poros engkol"
+       },
+       {
+        "id": "koil pengapian"
+       },
+       {
+        "id": "penegang"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クランクシャフト = poros engkol. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig06.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-08",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 8 — Mekanisme katup tipe OHC (sabuk)"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 8 (Mekanisme katup tipe OHC (sabuk)), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kampas rem"
+       },
+       {
+        "id": "transmisi"
+       },
+       {
+        "id": "pipa penyalur oli"
+       },
+       {
+        "id": "sabuk timing"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "タイミング・ベルト = sabuk timing. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig08.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 8 (Mekanisme katup tipe OHC (sabuk)), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "poros bubungan"
+       },
+       {
+        "id": "mekanisme gigi kemudi"
+       },
+       {
+        "id": "manifold buang"
+       },
+       {
+        "id": "master silinder"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "カムシャフト = poros bubungan. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig08.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 8 (Mekanisme katup tipe OHC (sabuk)), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "lengan rocker"
+       },
+       {
+        "id": "perangkat EGR"
+       },
+       {
+        "id": "sensor sudut cam"
+       },
+       {
+        "id": "poros propeller"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ロッカ・アーム = lengan rocker. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig08.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 8 (Mekanisme katup tipe OHC (sabuk)), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kopling"
+       },
+       {
+        "id": "poros engkol"
+       },
+       {
+        "id": "saringan udara"
+       },
+       {
+        "id": "kunci kontak"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クランクシャフト = poros engkol. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig08.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 8 (Mekanisme katup tipe OHC (sabuk)), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "penegang sabuk"
+       },
+       {
+        "id": "kepala silinder"
+       },
+       {
+        "id": "kunci kontak (saklar starter)"
+       },
+       {
+        "id": "poros propeller"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "テンショナ = penegang sabuk. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig08.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-09",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 9 — Mekanisme katup tipe DOHC (rantai)"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 9 (Mekanisme katup tipe DOHC (rantai)), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "sensor sudut poros engkol"
+       },
+       {
+        "id": "rantai timing"
+       },
+       {
+        "id": "as roda depan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "タイミング・チェーン = rantai timing. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig09.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 9 (Mekanisme katup tipe DOHC (rantai)), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "poros bubungan"
+       },
+       {
+        "id": "konverter katalis"
+       },
+       {
+        "id": "peredam kejut"
+       },
+       {
+        "id": "mekanisme gigi kemudi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "カムシャフト = poros bubungan. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig09.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 9 (Mekanisme katup tipe DOHC (rantai)), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "mekanisme sambungan kemudi"
+       },
+       {
+        "id": "pemandu rantai"
+       },
+       {
+        "id": "katup buang"
+       },
+       {
+        "id": "batang penghubung"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "チェーン・ガイド = pemandu rantai. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig09.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 9 (Mekanisme katup tipe DOHC (rantai)), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "seal piston"
+       },
+       {
+        "id": "poros engkol"
+       },
+       {
+        "id": "manifold buang"
+       },
+       {
+        "id": "injektor"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クランクシャフト = poros engkol. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig09.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 9 (Mekanisme katup tipe DOHC (rantai)), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "lengan penegang"
+       },
+       {
+        "id": "busi"
+       },
+       {
+        "id": "katup"
+       },
+       {
+        "id": "pipa bahan bakar"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "テンショナ・アーム = lengan penegang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig09.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 9 (Mekanisme katup tipe DOHC (rantai)), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "lengan penegang"
+       },
+       {
+        "id": "penegang"
+       },
+       {
+        "id": "katup"
+       },
+       {
+        "id": "katup hisap"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "テンショナ = penegang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig09.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-10",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 10 — Sirkulasi oli"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "katup hisap"
+       },
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "sakelar tekanan oli"
+       },
+       {
+        "id": "peredam kejut"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "オイル・プレッシャ・スイッチ = sakelar tekanan oli. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "selang rem"
+       },
+       {
+        "id": "motor starter"
+       },
+       {
+        "id": "kunci kontak"
+       },
+       {
+        "id": "pipa penyalur oli"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "オイル・デリバリ・パイプ = pipa penyalur oli. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "nosel semprot oli"
+       },
+       {
+        "id": "saluran oli (oil gallery)"
+       },
+       {
+        "id": "selang bawah radiator"
+       },
+       {
+        "id": "penerus tenaga"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "オイル・ギャラリ = saluran oli (oil gallery). (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "suspensi"
+       },
+       {
+        "id": "termostat"
+       },
+       {
+        "id": "kanister arang"
+       },
+       {
+        "id": "nosel semprot oli"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "オイル・ジェット = nosel semprot oli. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "lengan rocker"
+       },
+       {
+        "id": "saringan oli (strainer)"
+       },
+       {
+        "id": "katup"
+       },
+       {
+        "id": "kunci kontak"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "オイル・ストレーナ = saringan oli (strainer). (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "saluran oli (oil gallery)"
+       },
+       {
+        "id": "poros propeller"
+       },
+       {
+        "id": "sensor sudut poros engkol"
+       },
+       {
+        "id": "karter oli"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "オイル・パン = karter oli. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 7 adalah…"
+      },
+      "opts": [
+       {
+        "id": "filter oli"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "mekanisme sambungan kemudi"
+       },
+       {
+        "id": "sistem kemudi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "オイル・フィルタ = filter oli. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 10 (Sirkulasi oli), bagian bernomor 8 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pompa oli"
+       },
+       {
+        "id": "poros engkol"
+       },
+       {
+        "id": "pegas"
+       },
+       {
+        "id": "sabuk timing"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "オイル・ポンプ = pompa oli. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig10.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-11",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 11 — Sistem pendingin air"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 11 (Sistem pendingin air), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pelat belakang"
+       },
+       {
+        "id": "pompa air"
+       },
+       {
+        "id": "selang atas radiator"
+       },
+       {
+        "id": "pipa bahan bakar"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ラジエータ・アッパ・ホース = selang atas radiator. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig11.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 11 (Sistem pendingin air), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "seal piston"
+       },
+       {
+        "id": "sensor sudut poros engkol"
+       },
+       {
+        "id": "selang atas radiator"
+       },
+       {
+        "id": "pompa air"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ウォータ・ポンプ = pompa air. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig11.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 11 (Sistem pendingin air), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "penerus tenaga"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "termostat"
+       },
+       {
+        "id": "selang atas radiator"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "サーモスタット = termostat. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig11.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 11 (Sistem pendingin air), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "termostat"
+       },
+       {
+        "id": "kaliper"
+       },
+       {
+        "id": "selang bawah radiator"
+       },
+       {
+        "id": "konverter katalis"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ラジエータ・ロアー・ホース = selang bawah radiator. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig11.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 11 (Sistem pendingin air), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "silinder"
+       },
+       {
+        "id": "blok silinder"
+       },
+       {
+        "id": "motor kipas"
+       },
+       {
+        "id": "knalpot utama"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ファン・モータ = motor kipas. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig11.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 11 (Sistem pendingin air), bagian bernomor 7 adalah…"
+      },
+      "opts": [
+       {
+        "id": "saluran bypass"
+       },
+       {
+        "id": "roda dan ban"
+       },
+       {
+        "id": "mekanisme sambungan kemudi"
+       },
+       {
+        "id": "perangkat EGR"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "バイパス通路 = saluran bypass. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig11.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 11 (Sistem pendingin air), bagian bernomor 8 adalah…"
+      },
+      "opts": [
+       {
+        "id": "karter oli"
+       },
+       {
+        "id": "radiator"
+       },
+       {
+        "id": "pompa oli"
+       },
+       {
+        "id": "tangki surja"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ラジエータ = radiator. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig11.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-13",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 13 — Injeksi bahan bakar elektronik"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 13 (Injeksi bahan bakar elektronik), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "rem hidrolik tromol"
+       },
+       {
+        "id": "selang atas radiator"
+       },
+       {
+        "id": "pin geser"
+       },
+       {
+        "id": "pompa bahan bakar"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フューエル・ポンプ = pompa bahan bakar. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig13.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 13 (Injeksi bahan bakar elektronik), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "tangki bahan bakar"
+       },
+       {
+        "id": "sistem lampu"
+       },
+       {
+        "id": "selang rem"
+       },
+       {
+        "id": "manifold buang"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "フューエル・タンク = tangki bahan bakar. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig13.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 13 (Injeksi bahan bakar elektronik), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pemandu rantai"
+       },
+       {
+        "id": "pipa pernapasan tangki"
+       },
+       {
+        "id": "campuran udara-bahan bakar"
+       },
+       {
+        "id": "mekanisme operasi kemudi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "フューエル・ブリーザ・パイプ = pipa pernapasan tangki. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig13.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 13 (Injeksi bahan bakar elektronik), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kanister arang"
+       },
+       {
+        "id": "sistem rem"
+       },
+       {
+        "id": "pedal rem"
+       },
+       {
+        "id": "rem hidrolik cakram"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "チャコール・キャニスタ = kanister arang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig13.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 13 (Injeksi bahan bakar elektronik), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "konverter katalis"
+       },
+       {
+        "id": "as roda depan"
+       },
+       {
+        "id": "mekanisme gigi kemudi"
+       },
+       {
+        "id": "pipa bahan bakar"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フューエル・パイプ = pipa bahan bakar. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig13.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 13 (Injeksi bahan bakar elektronik), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "injektor"
+       },
+       {
+        "id": "pedal rem"
+       },
+       {
+        "id": "pompa air"
+       },
+       {
+        "id": "as roda depan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "インジェクタ = injektor. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig13.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-14",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 14 — Sistem hisap dan buang"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "saringan udara"
+       },
+       {
+        "id": "nosel semprot oli"
+       },
+       {
+        "id": "poros propeller"
+       },
+       {
+        "id": "pipa pernapasan tangki"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "エア・クリーナ = saringan udara. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kopling"
+       },
+       {
+        "id": "pipa pernapasan tangki"
+       },
+       {
+        "id": "sambungan universal"
+       },
+       {
+        "id": "selang hisap udara"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "エア・インテーク・ホース = selang hisap udara. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "cakram"
+       },
+       {
+        "id": "kanister arang"
+       },
+       {
+        "id": "kunci kontak (saklar starter)"
+       },
+       {
+        "id": "throttle body"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "スロットル・ボデー = throttle body. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pompa oli"
+       },
+       {
+        "id": "tangki surja"
+       },
+       {
+        "id": "penerus tenaga"
+       },
+       {
+        "id": "silinder"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サージ・タンク = tangki surja. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "manifold hisap"
+       },
+       {
+        "id": "sensor sudut cam"
+       },
+       {
+        "id": "kanister arang"
+       },
+       {
+        "id": "pipa bahan bakar"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "インテーク・マニホールド = manifold hisap. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "knalpot utama"
+       },
+       {
+        "id": "poros propeller"
+       },
+       {
+        "id": "stabilizer"
+       },
+       {
+        "id": "katup"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "メイン・マフラ = knalpot utama. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 7 adalah…"
+      },
+      "opts": [
+       {
+        "id": "knalpot tambahan"
+       },
+       {
+        "id": "rantai timing"
+       },
+       {
+        "id": "pedal rem"
+       },
+       {
+        "id": "rem hidrolik tromol"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "サブ・マフラ = knalpot tambahan. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 8 adalah…"
+      },
+      "opts": [
+       {
+        "id": "poros penggerak"
+       },
+       {
+        "id": "pipa gas buang"
+       },
+       {
+        "id": "aki"
+       },
+       {
+        "id": "bodi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "エキゾースト・パイプ = pipa gas buang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 9 adalah…"
+      },
+      "opts": [
+       {
+        "id": "transmisi"
+       },
+       {
+        "id": "konverter katalis"
+       },
+       {
+        "id": "pedal rem"
+       },
+       {
+        "id": "radiator"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "触媒コンバータ = konverter katalis. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 10 adalah…"
+      },
+      "opts": [
+       {
+        "id": "manifold buang"
+       },
+       {
+        "id": "nosel semprot oli"
+       },
+       {
+        "id": "pegas keong"
+       },
+       {
+        "id": "roda dan ban"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "エキゾースト・マニホールド = manifold buang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 14 (Sistem hisap dan buang), bagian bernomor 11 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kepala silinder"
+       },
+       {
+        "id": "perangkat EGR"
+       },
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "sistem kemudi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "EGR装置 = perangkat EGR. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig14.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-15",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 15 — Sistem starter"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 15 (Sistem starter), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "selang bawah radiator"
+       },
+       {
+        "id": "selang rem"
+       },
+       {
+        "id": "kunci kontak (saklar starter)"
+       },
+       {
+        "id": "kopling"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "イグニッション・スイッチ = kunci kontak (saklar starter). (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig15.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 15 (Sistem starter), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "perangkat EGR"
+       },
+       {
+        "id": "pegas"
+       },
+       {
+        "id": "pompa air"
+       },
+       {
+        "id": "aki"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "バッテリ = aki. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig15.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 15 (Sistem starter), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "mekanisme sambungan kemudi"
+       },
+       {
+        "id": "pompa bahan bakar"
+       },
+       {
+        "id": "motor starter"
+       },
+       {
+        "id": "pegas"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "スタータ = motor starter. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig15.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-16",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 16 — Sistem pengisian"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 16 (Sistem pengisian), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem lampu"
+       },
+       {
+        "id": "kunci kontak"
+       },
+       {
+        "id": "nosel semprot oli"
+       },
+       {
+        "id": "poros penggerak"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "イグニッション・スイッチ = kunci kontak. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig16.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 16 (Sistem pengisian), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "aki"
+       },
+       {
+        "id": "pompa air"
+       },
+       {
+        "id": "kunci kontak (saklar starter)"
+       },
+       {
+        "id": "sensor sudut cam"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "バッテリ = aki. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig16.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 16 (Sistem pengisian), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "mekanisme sambungan kemudi"
+       },
+       {
+        "id": "rantai timing"
+       },
+       {
+        "id": "saringan udara"
+       },
+       {
+        "id": "alternator"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "オルタネータ = alternator. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig16.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-17",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 17 — Sistem pengapian"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 17 (Sistem pengapian), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "katup"
+       },
+       {
+        "id": "saringan oli (strainer)"
+       },
+       {
+        "id": "rantai timing"
+       },
+       {
+        "id": "koil pengapian"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "イグニッション・コイル = koil pengapian. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig17.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 17 (Sistem pengapian), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "mekanisme gigi kemudi"
+       },
+       {
+        "id": "poros engkol"
+       },
+       {
+        "id": "tangki bahan bakar"
+       },
+       {
+        "id": "busi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "スパーク・プラグ = busi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig17.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 17 (Sistem pengapian), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pin geser"
+       },
+       {
+        "id": "kunci kontak"
+       },
+       {
+        "id": "sistem kemudi"
+       },
+       {
+        "id": "nosel semprot oli"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "イグニッション・スイッチ = kunci kontak. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig17.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 17 (Sistem pengapian), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "unit kontrol elektronik (ECU)"
+       },
+       {
+        "id": "kunci kontak (saklar starter)"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "katup"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ECU = unit kontrol elektronik (ECU). (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig17.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 17 (Sistem pengapian), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kampas rem"
+       },
+       {
+        "id": "suspensi"
+       },
+       {
+        "id": "aki"
+       },
+       {
+        "id": "pemandu rantai"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "バッテリ = aki. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig17.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 17 (Sistem pengapian), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sensor sudut cam"
+       },
+       {
+        "id": "pin geser"
+       },
+       {
+        "id": "unit kontrol elektronik (ECU)"
+       },
+       {
+        "id": "koil pengapian"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "カム角センサ = sensor sudut cam. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig17.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 17 (Sistem pengapian), bagian bernomor 7 adalah…"
+      },
+      "opts": [
+       {
+        "id": "stabilizer"
+       },
+       {
+        "id": "pipa penyalur oli"
+       },
+       {
+        "id": "selang bawah radiator"
+       },
+       {
+        "id": "sensor sudut poros engkol"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "クランク角センサ = sensor sudut poros engkol. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig17.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-20",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 20 — Susunan mobil"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem kemudi"
+       },
+       {
+        "id": "manifold buang"
+       },
+       {
+        "id": "mekanisme operasi kemudi"
+       },
+       {
+        "id": "karter oli"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ステアリング装置 = sistem kemudi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "roda dan ban"
+       },
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "gigi akhir dan diferensial"
+       },
+       {
+        "id": "sistem lampu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ボデー = bodi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "roda dan ban"
+       },
+       {
+        "id": "poros engkol"
+       },
+       {
+        "id": "katup"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ホイール及びタイヤ = roda dan ban. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "seal piston"
+       },
+       {
+        "id": "suspensi"
+       },
+       {
+        "id": "pipa penyalur oli"
+       },
+       {
+        "id": "kopling"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サスペンション = suspensi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem rem"
+       },
+       {
+        "id": "silinder"
+       },
+       {
+        "id": "sistem lampu"
+       },
+       {
+        "id": "saringan udara"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ブレーキ装置 = sistem rem. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "as roda belakang"
+       },
+       {
+        "id": "saluran oli (oil gallery)"
+       },
+       {
+        "id": "kunci kontak"
+       },
+       {
+        "id": "penerus tenaga"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "動力伝達装置 = penerus tenaga. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 7 adalah…"
+      },
+      "opts": [
+       {
+        "id": "katup hisap"
+       },
+       {
+        "id": "sistem lampu"
+       },
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "selang rem"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "灯火装置 = sistem lampu. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 20 (Susunan mobil), bagian bernomor 8 adalah…"
+      },
+      "opts": [
+       {
+        "id": "torak"
+       },
+       {
+        "id": "pipa rem"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "sistem lampu"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "エンジン = mesin. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig20.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-21",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 21 — Mesin depan penggerak belakang (FR)"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 21 (Mesin depan penggerak belakang (FR)), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "manifold buang"
+       },
+       {
+        "id": "sepatu rem"
+       },
+       {
+        "id": "pin geser"
+       },
+       {
+        "id": "mesin"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "エンジン = mesin. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig21.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 21 (Mesin depan penggerak belakang (FR)), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "nosel semprot oli"
+       },
+       {
+        "id": "penerus tenaga"
+       },
+       {
+        "id": "unit kontrol elektronik (ECU)"
+       },
+       {
+        "id": "gigi akhir dan diferensial"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ファイナル・ギヤ及びディファレンシャル = gigi akhir dan diferensial. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig21.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 21 (Mesin depan penggerak belakang (FR)), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem rem"
+       },
+       {
+        "id": "manifold hisap"
+       },
+       {
+        "id": "poros propeller"
+       },
+       {
+        "id": "pemandu rantai"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "プロペラ・シャフト = poros propeller. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig21.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 21 (Mesin depan penggerak belakang (FR)), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pipa gas buang"
+       },
+       {
+        "id": "sambungan universal"
+       },
+       {
+        "id": "alternator"
+       },
+       {
+        "id": "pegas"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ユニバーサル・ジョイント = sambungan universal. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig21.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 21 (Mesin depan penggerak belakang (FR)), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "mekanisme gigi kemudi"
+       },
+       {
+        "id": "pompa bahan bakar"
+       },
+       {
+        "id": "pipa rem"
+       },
+       {
+        "id": "transmisi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "トランスミッション = transmisi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig21.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 21 (Mesin depan penggerak belakang (FR)), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "karter oli"
+       },
+       {
+        "id": "seal piston"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "kopling"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "クラッチ = kopling. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig21.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-22",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 22 — Mesin depan penggerak depan (FF)"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 22 (Mesin depan penggerak depan (FF)), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "gigi akhir dan diferensial"
+       },
+       {
+        "id": "motor kipas"
+       },
+       {
+        "id": "saringan oli (strainer)"
+       },
+       {
+        "id": "injektor"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ファイナル・ギヤ及びディファレンシャル = gigi akhir dan diferensial. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig22.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 22 (Mesin depan penggerak depan (FF)), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "katup hisap"
+       },
+       {
+        "id": "poros penggerak"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ドライブ・シャフト = poros penggerak. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig22.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 22 (Mesin depan penggerak depan (FF)), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "transmisi"
+       },
+       {
+        "id": "kunci kontak (saklar starter)"
+       },
+       {
+        "id": "batang penghubung"
+       },
+       {
+        "id": "throttle body"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "トランスミッション = transmisi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig22.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 22 (Mesin depan penggerak depan (FF)), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "as roda belakang"
+       },
+       {
+        "id": "kopling"
+       },
+       {
+        "id": "sabuk timing"
+       },
+       {
+        "id": "mekanisme sambungan kemudi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クラッチ = kopling. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig22.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 22 (Mesin depan penggerak depan (FF)), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pedal rem"
+       },
+       {
+        "id": "poros propeller"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "cakram"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "エンジン = mesin. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig22.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-23",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 23 — Axle dan suspensi tipe gandar"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 23 (Axle dan suspensi tipe gandar), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pipa bahan bakar"
+       },
+       {
+        "id": "peredam kejut"
+       },
+       {
+        "id": "cakram"
+       },
+       {
+        "id": "saluran bypass"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ショック・アブソーバ = peredam kejut. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig23.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 23 (Axle dan suspensi tipe gandar), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "as roda belakang"
+       },
+       {
+        "id": "transmisi"
+       },
+       {
+        "id": "kampas rem"
+       },
+       {
+        "id": "penerus tenaga"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "リヤ・アクスル = as roda belakang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig23.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 23 (Axle dan suspensi tipe gandar), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "katup buang"
+       },
+       {
+        "id": "pin geser"
+       },
+       {
+        "id": "busi"
+       },
+       {
+        "id": "pegas"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "スプリング = pegas. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig23.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 23 (Axle dan suspensi tipe gandar), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "as roda depan"
+       },
+       {
+        "id": "throttle body"
+       },
+       {
+        "id": "selang hisap udara"
+       },
+       {
+        "id": "torak"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "フロント・アクスル = as roda depan. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig23.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-24",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 24 — Suspensi independen"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 24 (Suspensi independen), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "pipa penyalur oli"
+       },
+       {
+        "id": "knalpot tambahan"
+       },
+       {
+        "id": "kunci kontak"
+       },
+       {
+        "id": "pegas keong"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "コイル・スプリング = pegas keong. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig24.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 24 (Suspensi independen), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "suspensi"
+       },
+       {
+        "id": "peredam kejut"
+       },
+       {
+        "id": "kopling"
+       },
+       {
+        "id": "batang penghubung"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ショック・アブソーバ = peredam kejut. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig24.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 24 (Suspensi independen), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "stabilizer"
+       },
+       {
+        "id": "kaliper"
+       },
+       {
+        "id": "selang atas radiator"
+       },
+       {
+        "id": "kampas rem"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "スタビライザ = stabilizer. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig24.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 24 (Suspensi independen), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kaliper"
+       },
+       {
+        "id": "kampas rem"
+       },
+       {
+        "id": "lengan bawah suspensi"
+       },
+       {
+        "id": "tangki surja"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ロアー・サスペンション・アーム = lengan bawah suspensi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig24.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-27",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 27 — Kemudi rack & pinion"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 27 (Kemudi rack & pinion), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "injektor"
+       },
+       {
+        "id": "transmisi"
+       },
+       {
+        "id": "suspensi"
+       },
+       {
+        "id": "mekanisme operasi kemudi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ステアリング操作機構 = mekanisme operasi kemudi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig27.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 27 (Kemudi rack & pinion), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "saluran bypass"
+       },
+       {
+        "id": "tangki bahan bakar"
+       },
+       {
+        "id": "mekanisme gigi kemudi"
+       },
+       {
+        "id": "selang bawah radiator"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ステアリング・ギヤ機構 = mekanisme gigi kemudi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig27.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 27 (Kemudi rack & pinion), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "mekanisme sambungan kemudi"
+       },
+       {
+        "id": "mekanisme operasi kemudi"
+       },
+       {
+        "id": "poros penggerak"
+       },
+       {
+        "id": "pedal rem"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ステアリング・リンク機構 = mekanisme sambungan kemudi. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig27.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-33",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 33 — Struktur rem hidrolik"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 33 (Struktur rem hidrolik), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "master silinder"
+       },
+       {
+        "id": "manifold hisap"
+       },
+       {
+        "id": "pegas"
+       },
+       {
+        "id": "alternator"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "マスタ・シリンダ = master silinder. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig33.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 33 (Struktur rem hidrolik), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem rem"
+       },
+       {
+        "id": "sensor sudut cam"
+       },
+       {
+        "id": "pedal rem"
+       },
+       {
+        "id": "selang rem"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ブレーキ・ペダル = pedal rem. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig33.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 33 (Struktur rem hidrolik), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "termostat"
+       },
+       {
+        "id": "selang rem"
+       },
+       {
+        "id": "sakelar tekanan oli"
+       },
+       {
+        "id": "knalpot utama"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ブレーキ・ホース = selang rem. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig33.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 33 (Struktur rem hidrolik), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem kemudi"
+       },
+       {
+        "id": "pipa pernapasan tangki"
+       },
+       {
+        "id": "sensor sudut poros engkol"
+       },
+       {
+        "id": "rem hidrolik cakram"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ディスク式油圧ブレーキ = rem hidrolik cakram. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig33.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 33 (Struktur rem hidrolik), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "konverter katalis"
+       },
+       {
+        "id": "pipa rem"
+       },
+       {
+        "id": "as roda belakang"
+       },
+       {
+        "id": "busi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ブレーキ・パイプ = pipa rem. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig33.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 33 (Struktur rem hidrolik), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "throttle body"
+       },
+       {
+        "id": "sistem lampu"
+       },
+       {
+        "id": "mekanisme operasi kemudi"
+       },
+       {
+        "id": "rem hidrolik tromol"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ドラム式油圧ブレーキ = rem hidrolik tromol. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig33.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-35",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 35 — Rem tromol (2)"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 35 (Rem tromol (2)), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "saluran bypass"
+       },
+       {
+        "id": "sepatu rem"
+       },
+       {
+        "id": "master silinder"
+       },
+       {
+        "id": "koil pengapian"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ブレーキ・シュー = sepatu rem. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig35.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 35 (Rem tromol (2)), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "silinder roda"
+       },
+       {
+        "id": "selang hisap udara"
+       },
+       {
+        "id": "mesin"
+       },
+       {
+        "id": "lengan bawah suspensi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ホイール・シリンダ = silinder roda. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig35.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 35 (Rem tromol (2)), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "tromol rem"
+       },
+       {
+        "id": "mekanisme operasi kemudi"
+       },
+       {
+        "id": "selang atas radiator"
+       },
+       {
+        "id": "katup hisap"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ブレーキ・ドラム = tromol rem. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig35.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 35 (Rem tromol (2)), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "saluran oli (oil gallery)"
+       },
+       {
+        "id": "lengan rocker"
+       },
+       {
+        "id": "selang rem"
+       },
+       {
+        "id": "pelat belakang"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "バック・プレート = pelat belakang. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig35.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab4-qimg-36",
+    "rev": true,
+    "title": {
+     "id": "Soal bergambar: Gambar 36 — Kaliper rem cakram mengambang"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada Gambar 36 (Kaliper rem cakram mengambang), bagian bernomor 1 adalah…"
+      },
+      "opts": [
+       {
+        "id": "cakram"
+       },
+       {
+        "id": "konverter katalis"
+       },
+       {
+        "id": "bodi"
+       },
+       {
+        "id": "pipa bahan bakar"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ディスク = cakram. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig36.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 36 (Kaliper rem cakram mengambang), bagian bernomor 2 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kampas rem"
+       },
+       {
+        "id": "pin geser"
+       },
+       {
+        "id": "selang atas radiator"
+       },
+       {
+        "id": "sakelar tekanan oli"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "スライド・ピン = pin geser. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig36.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 36 (Kaliper rem cakram mengambang), bagian bernomor 3 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem rem"
+       },
+       {
+        "id": "torak"
+       },
+       {
+        "id": "saluran bypass"
+       },
+       {
+        "id": "termostat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ピストン = torak. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig36.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 36 (Kaliper rem cakram mengambang), bagian bernomor 4 adalah…"
+      },
+      "opts": [
+       {
+        "id": "rantai timing"
+       },
+       {
+        "id": "lengan rocker"
+       },
+       {
+        "id": "silinder"
+       },
+       {
+        "id": "sambungan universal"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "シリンダ = silinder. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig36.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 36 (Kaliper rem cakram mengambang), bagian bernomor 5 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sepatu rem"
+       },
+       {
+        "id": "seal piston"
+       },
+       {
+        "id": "saringan udara"
+       },
+       {
+        "id": "kopling"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ピストン・シール = seal piston. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig36.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 36 (Kaliper rem cakram mengambang), bagian bernomor 6 adalah…"
+      },
+      "opts": [
+       {
+        "id": "kunci kontak"
+       },
+       {
+        "id": "kaliper"
+       },
+       {
+        "id": "rantai timing"
+       },
+       {
+        "id": "pegas"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "キャリパ = kaliper. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig36.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada Gambar 36 (Kaliper rem cakram mengambang), bagian bernomor 7 adalah…"
+      },
+      "opts": [
+       {
+        "id": "sistem lampu"
+       },
+       {
+        "id": "kepala silinder"
+       },
+       {
+        "id": "sistem rem"
+       },
+       {
+        "id": "kampas rem"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "パッド = kampas rem. (Gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig36.webp"
+      }
+     }
+    ]
    }
   ]
  },
