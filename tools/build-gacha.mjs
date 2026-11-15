@@ -8,7 +8,7 @@ const THEMES = [ // tema: lebih sulit didapat daripada barang biasa (epic/legend
   ["gugur", "Tema Gugur", "legendary"], ["semi", "Tema Semi", "legendary"],
 ];
 const items = [
-  ...allShopItems().map(x => ({ id: x.id, nama: x.nama, rarity: x.rarity, kind: "shop" })),
+  ...allShopItems().map(x => ({ id: x.id, nama: x.nama, rarity: x.rarity, kind: "shop", kat: x.kategori_label || x.kategori, harga: x.harga })),
   ...THEMES.map(([t, n, r]) => ({ id: "theme_" + t, nama: n, rarity: r, kind: "theme" })),
 ];
 fs.writeFileSync("cloudflare/gacha-items.js", "/* DIHASILKAN oleh tools/build-gacha.mjs — jangan edit manual */\nexport const ITEMS = " + JSON.stringify(items, null, 1) + ";\n");

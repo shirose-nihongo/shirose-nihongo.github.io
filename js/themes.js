@@ -51,7 +51,17 @@
   }
   function set(t){try{localStorage.setItem(KEY,t)}catch(e){}apply(t)}
   function setOwned(ids){OWNED={};(ids||[]).forEach(function(i){if(/^theme_/.test(i))OWNED[i.slice(6)]=1});apply(get())}
-  window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH,setOwned:setOwned,refresh:function(){apply(get())}};
+  window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH,setOwned:setOwned,preview:preview,closePreview:closePreview,refresh:function(){apply(get())}};
+  /* Pratinjau tema yang belum terbuka (tidak disimpan; hilang saat ditutup/muat ulang) */
+  function clearPrev(){var p=document.getElementById("th-prev");if(p)p.remove()}
+  function preview(t){
+    var x=TH.filter(function(q){return q[0]===t})[0];if(!x)return;
+    apply(t);clearPrev();
+    var p=document.createElement("div");p.id="th-prev";
+    p.innerHTML='<span>👀 Pratinjau <b>'+x[2]+'</b> · 🔒 terbuka di Level '+x[4]+' atau dari 🎰 Gacha</span><button onclick="SHIROSE_THEME.closePreview()">Tutup pratinjau</button><button onclick="SHIROSE_THEME.closePreview();route(\'gacha\')">🎰 Ke Gacha</button>';
+    document.body.appendChild(p);
+  }
+  function closePreview(){clearPrev();apply(get())}
   function sosmedTop(){
     var tr=document.querySelector(".topbar-right");if(!tr||document.getElementById("tb-sm"))return;
     var ig=document.querySelector("#sosmed .sm-ig"),tt=document.querySelector("#sosmed .sm-tt");if(!ig||!tt)return;
@@ -69,7 +79,7 @@
       d.querySelector("#th-btn").onclick=function(e){e.stopPropagation();document.getElementById("th-menu").classList.toggle("open")};
       function mark(){[].forEach.call(document.querySelectorAll("#th-menu button"),function(b){var L=locked(b.dataset.t),m=TH.filter(function(t){return t[0]===b.dataset.t})[0][4];b.classList.toggle("lock",L);b.querySelector(".th-lk").textContent=L?"🔒 Lv "+m:""})}
       d.querySelector("#th-btn").addEventListener("click",mark);
-      d.querySelector("#th-menu").onclick=function(e){var b=e.target.closest("button");if(b){if(locked(b.dataset.t)){var m=TH.filter(function(t){return t[0]===b.dataset.t})[0][4];if(window.toast)window.toast("Tema terbuka di Level "+m);return}set(b.dataset.t);document.getElementById("th-menu").classList.remove("open")}};
+      d.querySelector("#th-menu").onclick=function(e){var b=e.target.closest("button");if(b){if(locked(b.dataset.t)){preview(b.dataset.t);document.getElementById("th-menu").classList.remove("open");return}clearPrev();set(b.dataset.t);document.getElementById("th-menu").classList.remove("open")}};
       document.addEventListener("click",function(){var m=document.getElementById("th-menu");if(m)m.classList.remove("open")});
       apply(get());
     }

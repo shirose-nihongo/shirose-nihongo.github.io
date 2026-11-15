@@ -15,7 +15,15 @@ async function render() {
   const g = (FB && FB.getGachaState ? await FB.getGachaState() : null) || { sinceEpic: 0, sinceLegend: 0, inv: [] };
   const inv = g.inv || [];
   const items = Object.entries(CONFIG.POOL).flatMap(([r, a]) => a.map(i => ({ i, r }))).sort((x, y) => ["common","uncommon","rare","epic","legendary","mythic"].indexOf(y.r) - ["common","uncommon","rare","epic","legendary","mythic"].indexOf(x.r));
-  const koleksi = items.map(({ i, r }) => `<span style="display:inline-block;margin:3px;padding:5px 9px;border-radius:10px;border:1px solid ${RAR[r][1]};color:${inv.includes(i) ? RAR[r][1] : "#666"};opacity:${inv.includes(i) ? 1 : .5};font-size:12px;">${inv.includes(i) ? "" : "🔒 "}${esc(NAMA[i] || i)}</span>`).join("");
+  const ORD = ["mythic", "legendary", "epic", "rare", "uncommon", "common"];
+  const byId = Object.fromEntries(ITEMS.map(x => [x.id, x]));
+  const pctOf = Object.fromEntries(CONFIG.RARITY.map(r => [r.id, r.pct]));
+  const fmt = (n) => (n >= 1 ? n.toFixed(2) : n >= 0.1 ? n.toFixed(3) : n.toFixed(4)).replace(/\.?0+$/, "") + "%";
+  const IKON = { rambut: "💇", pakaian: "👕", sepatu: "👟", aksesori: "🎩", item_tangan: "⚔️", aura: "✨" };
+  const tabelRate = ORD.map(r => { const n = (CONFIG.POOL[r] || []).length; return `<tr><td style="color:${RAR[r][1]};font-weight:800;">${RAR[r][0]}</td><td><div style="background:#8883;border-radius:6px;height:8px;min-width:90px;"><div style="width:${Math.min(100, pctOf[r] * 2.2)}%;height:100%;border-radius:6px;background:${RAR[r][1]};"></div></div></td><td><b>${fmt(pctOf[r])}</b></td><td>${n} item</td><td>${n ? fmt(pctOf[r] / n) : "–"}</td></tr>`; }).join("");
+  const galeri = ORD.map(r => { const a = CONFIG.POOL[r] || []; if (!a.length) return "";
+    return `<h4 style="margin:14px 0 6px;color:${RAR[r][1]};">${RAR[r][0]} · ${fmt(pctOf[r])} <small style="color:var(--gray);">(${a.length} item, tiap item ≈ ${fmt(pctOf[r] / a.length)})</small></h4><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;">` + a.map(i => { const x = byId[i] || {}, own = inv.includes(i) || (st.siswa?.karakter?.inventory || []).includes(i), th = x.kind === "theme";
+      return `<div style="padding:10px;border-radius:12px;border:1px solid ${RAR[r][1]};opacity:${own ? 1 : .92};${own ? "" : "filter:saturate(.8);"}"><div style="font-size:22px;">${th ? "🎨" : IKON[String(x.kat || "").toLowerCase().replace(/ /g, "_")] || "🎁"}</div><div style="font-weight:700;font-size:13px;margin:4px 0;">${esc(x.nama || i)}</div><div style="font-size:11px;color:var(--gray);">${th ? "Tema tampilan" : esc(x.kat || "Barang shop")}${x.harga ? " · 🪙 " + x.harga.toLocaleString("id-ID") : ""}</div><div style="font-size:11px;margin-top:3px;">≈ ${fmt(pctOf[r] / a.length)} per tarikan</div>${own ? '<div style="font-size:11px;color:#3cc878;margin-top:3px;">✓ Dimiliki</div>' : ""}${th ? `<button class="btn ghost" style="margin-top:6px;padding:4px 8px;font-size:12px;" onclick="SHIROSE_THEME.preview('${i.slice(6)}')">👀 Pratinjau</button>` : ""}</div>`; }).join("") + "</div>"; }).join("");
   const hasil = last ? `<div class="panel" style="margin-top:12px;"><h3>Hasil tarikan</h3>${last.results.map(x => `<div style="padding:6px 0;border-bottom:1px solid var(--border,#333);color:${RAR[x.rarity][1]};"><b>${RAR[x.rarity][0]}</b> · ${esc(NAMA[x.item] || x.item)}${x.dup ? ' <small style="color:var(--gray);">(duplikat → +' + CONFIG.DUP_REFUND[x.rarity] + ' 🪙)</small>' : " ✨ baru!"}</div>`).join("")}</div>` : "";
   const aktif = !!GACHA_URL;
   return `<div class="panel"><h1>🎰 Gacha</h1>
@@ -26,7 +34,8 @@ async function render() {
       <button class="btn gold" ${busy ? "disabled" : ""} onclick="GACHA.tarik(10)">Tarik ×10 · ${CONFIG.PRICE_10.toLocaleString("id-ID")} 🪙</button></div>
     <p style="font-size:11px;color:var(--gray);">Peluang: ${CONFIG.RARITY.map(r => RAR[r.id][0] + " " + r.pct + "%").join(" · ")}</p>
     ${aktif ? "" : '<p style="color:#ffb703;">⚠ Server gacha belum aktif.</p>'}</div>${hasil}
-    <div class="panel" style="margin-top:12px;"><h3>Koleksi (${items.filter(x => inv.includes(x.i)).length}/${items.length})</h3>${koleksi}</div>`;
+    <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item yang sudah dimiliki diganti koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
+    <div class="panel" style="margin-top:12px;"><h3>🎁 Semua hadiah (${items.length}) — dimiliki ${items.filter(x => inv.includes(x.i) || (st.siswa?.karakter?.inventory || []).includes(x.i)).length}</h3>${galeri}</div>`;
 }
 window.GACHA = {
   async tarik(n) {
