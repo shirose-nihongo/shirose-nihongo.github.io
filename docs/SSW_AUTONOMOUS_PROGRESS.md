@@ -57,3 +57,4 @@ Belum ada sumber baru yang diunduh sesi ini.
 - Sumber: JASPA (cakupan & format ujian 1号/2号), MLIT, JICA「みてまなぶ！自動車整備の日本語」+ Koleksi Ilustrasi (bahan bebas unduh; diakses 2026-11). PDF sumber tidak di-commit.
 - Ditambah: +184 kosakata (am-j###, arti Indonesia orisinal), +44 soal orisinal (bab*-qx ○×, bab7-qj1..3 simulasi 実技). Berlabel latihan, bukan soal resmi (soal resmi tidak dipublikasikan).
 - Belum: soal bergambar dari halaman JICA, uji klik UI di browser.
+- +6 soal bergambar (bab2-qimg) dari JICA イラスト集 hal.38 (Gambar 2, versi tanpa label); sumber gambar dikreditkan di penjelasan soal. Belum: gambar lain (DOHC, rem, dll.) dan uji UI.

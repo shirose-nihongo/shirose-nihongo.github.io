@@ -2072,6 +2072,170 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "bab2-qimg",
+    "title": {
+     "id": "Soal bergambar: langkah hisap mesin"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada gambar langkah hisap, bagian bernomor ① adalah…"
+      },
+      "opts": [
+       {
+        "id": "Katup hisap (インテーク・バルブ)"
+       },
+       {
+        "id": "Busi"
+       },
+       {
+        "id": "Poros bubungan (camshaft)"
+       },
+       {
+        "id": "Torak (piston)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "インテーク・バルブ = katup yang memasukkan campuran udara-bahan bakar. (Sumber gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar langkah hisap, bagian bernomor ② adalah…"
+      },
+      "opts": [
+       {
+        "id": "Silinder"
+       },
+       {
+        "id": "Katup buang (エキゾースト・バルブ)"
+       },
+       {
+        "id": "Katup hisap"
+       },
+       {
+        "id": "Poros engkol"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "エキゾースト・バルブ = katup untuk gas buang. (Sumber gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar langkah hisap, bagian bernomor ③ adalah…"
+      },
+      "opts": [
+       {
+        "id": "Oli mesin"
+       },
+       {
+        "id": "Cairan pendingin"
+       },
+       {
+        "id": "Campuran udara-bahan bakar (混合気)"
+       },
+       {
+        "id": "Gas buang"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "混合気 masuk saat langkah hisap. (Sumber gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar langkah hisap, bagian bernomor ④ adalah…"
+      },
+      "opts": [
+       {
+        "id": "Silinder"
+       },
+       {
+        "id": "Poros engkol"
+       },
+       {
+        "id": "Katup buang"
+       },
+       {
+        "id": "Torak (ピストン)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ピストン bergerak naik-turun di dalam silinder. (Sumber gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar langkah hisap, bagian bernomor ⑤ adalah…"
+      },
+      "opts": [
+       {
+        "id": "Silinder (シリンダ)"
+       },
+       {
+        "id": "Torak"
+       },
+       {
+        "id": "Busi"
+       },
+       {
+        "id": "Poros engkol"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "シリンダ = tabung tempat torak bergerak. (Sumber gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar langkah hisap, bagian bernomor ⑥ adalah…"
+      },
+      "opts": [
+       {
+        "id": "Silinder"
+       },
+       {
+        "id": "Poros engkol (クランクシャフト)"
+       },
+       {
+        "id": "Poros bubungan"
+       },
+       {
+        "id": "Torak"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クランクシャフト mengubah gerak naik-turun torak menjadi putar. (Sumber gambar: JICA, イラスト集)"
+      },
+      "img": {
+       "src": "./assets/ssw/auto-maintenance/fig/jica-fig02.webp"
+      }
+     }
+    ]
    }
   ],
   "bab3": [
