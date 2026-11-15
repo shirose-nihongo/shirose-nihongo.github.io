@@ -11,70 +11,71 @@ export const SKIN_TONES = {
   tan:    { skin:"#b98858", shade:"#9a6d42", darker:"#7d5531" },
 };
 
-/* ====== STANDAR BADAN v2 (mengikuti sheet referensi Shirose) ======
-   KONTRAK koordinat (dipakai semua item, JANGAN diubah): torso M135 200…270 345, lengan SLV_L/SLV_R, tangan (123,325)/(277,325),
-   celana y336–452, sepatu y450–466, mata (178/222,130), kepala pusat (200,130).
-   Filter "shiro-cel" = outline tipis berwarna + rim light + bayangan sisi, diterapkan per-slot agar semua item (lama & baru) seragam. */
-export const CEL_DEFS = `<defs><filter id="shiro-cel" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB">
-  <feMorphology in="SourceAlpha" operator="dilate" radius="1.3" result="d"/>
-  <feFlood flood-color="#1b1433" flood-opacity=".9"/><feComposite in2="d" operator="in" result="ol"/>
-  <feOffset in="SourceAlpha" dx="-3" dy="-4" result="o1"/><feComposite in="SourceAlpha" in2="o1" operator="out" result="e1"/>
-  <feGaussianBlur in="e1" stdDeviation="1.6" result="b1"/><feFlood flood-color="#24124a" flood-opacity=".3"/><feComposite in2="b1" operator="in" result="s1"/><feComposite in="s1" in2="SourceAlpha" operator="in" result="shade"/>
-  <feOffset in="SourceAlpha" dx="2.5" dy="3" result="o2"/><feComposite in="SourceAlpha" in2="o2" operator="out" result="e2"/>
-  <feGaussianBlur in="e2" stdDeviation="1.4" result="b2"/><feFlood flood-color="#fff6d8" flood-opacity=".5"/><feComposite in2="b2" operator="in" result="s2"/><feComposite in="s2" in2="SourceAlpha" operator="in" result="hl"/>
-  <feMerge><feMergeNode in="ol"/><feMergeNode in="SourceGraphic"/><feMergeNode in="shade"/><feMergeNode in="hl"/></feMerge></filter></defs>`;
-export const CEL = 'filter="url(#shiro-cel)"';
-/* tangan "mitten" ala referensi: kepalan bulat + jempol; side "L"=tangan kiri layar (jempol ke dalam/kanan) */
-export const mittenPath = (side) => { const m = side === "L" ? 1 : -1;
-  return `M${-9 * m} -9 Q${-10 * m} -15 ${-2 * m} -15 L${6 * m} -15 Q${12 * m} -14 ${12 * m} -6 L${12 * m} 6 Q${12 * m} 14 ${4 * m} 15 L${-4 * m} 15 Q${-10 * m} 14 ${-10 * m} 6 Z`; };
-export const mittenSvg = (cx, cy, fill, side) => `<g transform="translate(${cx} ${cy}) scale(1.32)"><path d="${mittenPath(side)}" fill="${fill}" stroke="rgba(120,70,40,.55)" stroke-width="1.1"/>
-  <path d="M${side === "L" ? 8 : -8} -4 Q${side === "L" ? 16 : -16} -2 ${side === "L" ? 14 : -14} 6 Q${side === "L" ? 11 : -11} 9 ${side === "L" ? 7 : -7} 5" fill="${fill}" stroke="rgba(120,70,40,.55)" stroke-width="1.1"/>
-  <path d="M-5 8 H5" stroke="rgba(120,70,40,.35)" stroke-width="1"/></g>`;
-/* ganti lingkaran tangan lama (123/277,325 r=11) di SVG item mana pun dengan mitten */
-export const upgradeHands = (svg) => svg ? svg.replace(/<circle cx="(123|277)" cy="325" r="11" fill="([^"]+)"[^>]*\/>/g, (m, x, f) => mittenSvg(+x, 325, f, x === "123" ? "L" : "R")) : svg;
-
-export function baseBody(skinKey = "light", hasOutfit = false) {
+/* ====== Base body (always drawn) — kepala BOTAK, mata, mulut, telinga, leher ====== */
+export function baseBody(skinKey = "light") {
   const s = SKIN_TONES[skinKey] || SKIN_TONES.light;
   return `
-    <ellipse cx="200" cy="470" rx="92" ry="12" fill="#1a0f3a" opacity=".28"/>
-    <g data-slot="legs" ${CEL}>
-      <path d="M167 340 H231 V372 L229 450 H203 L200 380 L197 450 H171 L169 372 Z" fill="#f7f8fc" stroke="#c7cde0" stroke-width="1.6"/>
-      <path d="M200 380 V446" stroke="#c7cde0" stroke-width="1.6"/>
+    <!-- Shadow -->
+    <ellipse cx="200" cy="470" rx="90" ry="12" fill="#000" opacity=".15"/>
+
+    <!-- Legs — default: celana putih polos -->
+    <g data-slot="legs">
+      <rect x="170" y="340" width="26" height="110" rx="10" fill="#f7f8fc" stroke="#c7cde0" stroke-width="2"/>
+      <rect x="204" y="340" width="26" height="110" rx="10" fill="#f7f8fc" stroke="#c7cde0" stroke-width="2"/>
     </g>
-    <g data-slot="shoes" ${CEL}>
-      <path d="M163 452 Q168 444 184 446 L206 450 Q212 456 210 466 L161 466 Z" fill="#14141f"/>
-      <path d="M237 452 Q232 444 216 446 L194 450 Q188 456 190 466 L239 466 Z" fill="#14141f"/>
-      <path d="M170 452 Q184 448 200 453" stroke="#5a64b0" stroke-width="1.6" fill="none" opacity=".7"/>
-      <path d="M230 452 Q216 448 200 453" stroke="#5a64b0" stroke-width="1.6" fill="none" opacity=".7"/>
+
+    <!-- Shoes default -->
+    <g data-slot="shoes">
+      <ellipse cx="183" cy="460" rx="20" ry="9" fill="#1a1f33"/>
+      <ellipse cx="217" cy="460" rx="20" ry="9" fill="#1a1f33"/>
     </g>
-    <g data-slot="pakaian" ${CEL}>
+
+    <!-- Torso + arms — default: kaos putih polos lengan pendek -->
+    <g data-slot="pakaian">
+      <!-- Lengan bawah (kulit) -->
       <path d="M116 252 Q112 285 115 300 L135 330 L145 325 L140 295 Q141 272 142 258 Z" fill="${s.skin}"/>
       <path d="M284 252 Q288 285 285 300 L265 330 L255 325 L260 295 Q259 272 258 258 Z" fill="${s.skin}"/>
-      ${hasOutfit ? "" : `      <path d="M135 200 Q200 180 265 200 L270 345 L130 345 Z" fill="#ffffff" stroke="#c7cde0" stroke-width="1.6"/>
+      <!-- Badan kaos -->
+      <path d="M135 200 Q200 180 265 200 L270 345 L130 345 Z" fill="#ffffff" stroke="#c7cde0" stroke-width="2"/>
+      <!-- Kerah bulat kaos -->
       <path d="M182 196 Q200 214 218 196" fill="none" stroke="#c7cde0" stroke-width="3" stroke-linecap="round"/>
-      <path d="M135 203 Q114 222 110 256 L145 264 Q146 236 156 214 Z" fill="#ffffff" stroke="#c7cde0" stroke-width="1.6"/>
-      <path d="M265 203 Q286 222 290 256 L255 264 Q254 236 244 214 Z" fill="#ffffff" stroke="#c7cde0" stroke-width="1.6"/>`}
+      <!-- Lengan pendek -->
+      <path d="M135 203 Q114 222 110 256 L145 264 Q146 236 156 214 Z" fill="#ffffff" stroke="#c7cde0" stroke-width="2"/>
+      <path d="M265 203 Q286 222 290 256 L255 264 Q254 236 244 214 Z" fill="#ffffff" stroke="#c7cde0" stroke-width="2"/>
+      <!-- Hands -->
       <circle cx="123" cy="325" r="11" fill="${s.skin}"/>
       <circle cx="277" cy="325" r="11" fill="${s.skin}"/>
     </g>
-    <g data-slot="head" ${CEL}>
-      <rect x="187" y="172" width="26" height="30" fill="${s.skin}"/>
-      <path d="M187 188 Q200 196 213 188 L213 202 L187 202Z" fill="${s.shade}"/>
-      <path d="M147 112 Q147 68 200 65 Q253 68 253 112 L252 150 Q248 190 200 194 Q152 190 148 150 Z" fill="${s.skin}"/>
-      <path d="M152 140 Q148 160 156 176 Q166 184 172 176" fill="${s.shade}" opacity=".45"/>
-      <path d="M248 140 Q252 160 244 176 Q234 184 228 176" fill="${s.shade}" opacity=".45"/>
-      <ellipse cx="146" cy="136" rx="7" ry="11" fill="${s.skin}"/><ellipse cx="254" cy="136" rx="7" ry="11" fill="${s.skin}"/>
-      <ellipse cx="164" cy="152" rx="11" ry="6.5" fill="#f4a0a8" opacity=".55"/><ellipse cx="236" cy="152" rx="11" ry="6.5" fill="#f4a0a8" opacity=".55"/>
-      <g data-slot="mata">
-        <defs><radialGradient id="shiro-iris" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#7a68e0"/><stop offset="1" stop-color="#2d3a9a"/></radialGradient></defs>
-        <ellipse cx="178" cy="130" rx="7.5" ry="9.5" fill="#ffffff"/><ellipse cx="222" cy="130" rx="7.5" ry="9.5" fill="#ffffff"/>
-        <ellipse cx="178" cy="132" rx="5.6" ry="7.2" fill="url(#shiro-iris)"/><ellipse cx="222" cy="132" rx="5.6" ry="7.2" fill="url(#shiro-iris)"/>
-        <circle cx="178" cy="133" r="2.6" fill="#141a4a"/><circle cx="222" cy="133" r="2.6" fill="#141a4a"/>
-        <circle cx="180" cy="129.5" r="2" fill="#ffffff"/><circle cx="224" cy="129.5" r="2" fill="#ffffff"/><circle cx="176.5" cy="135" r="1" fill="#fff" opacity=".8"/><circle cx="220.5" cy="135" r="1" fill="#fff" opacity=".8"/>
-        <path d="M169 120 Q178 114 187 120" stroke="#3a2518" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-        <path d="M213 120 Q222 114 231 120" stroke="#3a2518" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-      </g>
-      <g data-slot="mulut"><path d="M190 159 Q200 167 210 159" stroke="#d9455f" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+
+    <!-- Neck -->
+    <rect x="186" y="170" width="28" height="30" fill="${s.skin}"/>
+    <path d="M186 185 Q200 192 214 185" fill="${s.shade}"/>
+
+    <!-- HEAD (botak permanent) -->
+    <ellipse cx="200" cy="130" rx="55" ry="63" fill="${s.skin}"/>
+    <path d="M152 140 Q145 155 150 170 Q160 175 165 165" fill="${s.shade}" opacity=".5"/>
+    <path d="M248 140 Q255 155 250 170 Q240 175 235 165" fill="${s.shade}" opacity=".5"/>
+
+    <!-- Ears -->
+    <ellipse cx="148" cy="135" rx="7" ry="11" fill="${s.skin}"/>
+    <ellipse cx="252" cy="135" rx="7" ry="11" fill="${s.skin}"/>
+
+    <!-- Eyes -->
+    <g data-slot="mata">
+      <ellipse cx="178" cy="130" rx="6" ry="8" fill="#ffffff"/>
+      <ellipse cx="222" cy="130" rx="6" ry="8" fill="#ffffff"/>
+      <circle cx="178" cy="132" r="4" fill="#2a3758"/>
+      <circle cx="222" cy="132" r="4" fill="#2a3758"/>
+      <circle cx="179" cy="130" r="1.5" fill="#ffffff"/>
+      <circle cx="223" cy="130" r="1.5" fill="#ffffff"/>
+      <!-- Eyebrows -->
+      <path d="M170 118 Q178 115 186 118" stroke="#3a2518" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M214 118 Q222 115 230 118" stroke="#3a2518" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Mouth -->
+    <g data-slot="mulut">
+      <path d="M190 158 Q200 164 210 158" stroke="#8b4a3a" stroke-width="2" fill="none" stroke-linecap="round"/>
     </g>
   `;
 }
@@ -877,70 +878,54 @@ export const DEFAULT_EQUIPPED = {
   sayap: "none",
 };
 
-/* kaki melebar per stance senjata: salin elemen kaki jadi kiri/kanan (dipotong di x=200) lalu putar dari pinggul */
-function splitLegs(inner, st) {
-  if (!inner || !st) return inner;
-  const f = n => (Math.round(n * 10) / 10), dur = st.dur.toFixed(2) + "s";
-  const rot = (sg, hx) => `<animateTransform attributeName="transform" type="rotate" values="${st.vals.map(a => `${f(sg * a)} ${hx} 345`).join(";")}" dur="${dur}" repeatCount="indefinite"/>`;
-  return `<g><clipPath id="shiro-cl-l"><rect x="-400" y="330" width="600" height="260"/></clipPath><g clip-path="url(#shiro-cl-l)"><g>${rot(1, 183)}${inner}</g></g></g>
-  <g><clipPath id="shiro-cl-r"><rect x="200" y="330" width="600" height="260"/></clipPath><g clip-path="url(#shiro-cl-r)"><g>${rot(-1, 217)}${inner}</g></g></g>`;
-}
-
 /* ====== Render the full character given equipped state ====== */
 export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const eq = { ...DEFAULT_EQUIPPED, ...equipped };
 
   const auraSvg = (eq.aura && eq.aura !== "none" && AURAS[eq.aura]?.svg) ? AURAS[eq.aura].svg() : "";
 
-  let base = baseBody(skinKey, !!(eq.pakaian && eq.pakaian !== "seragam_default" && OUTFITS[eq.pakaian]?.svg));
+  let base = baseBody(skinKey);
   // Celana (kategori baru) digambar di bawah baju: disisipkan sebelum grup pakaian bawaan
-  const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana" ${CEL}>${CELANA[eq.celana].svg()}</g>` : "";
-  if (celanaSvg) base = base.replace(`<g data-slot="pakaian" ${CEL}>`, celanaSvg + `<g data-slot="pakaian" ${CEL}>`);
+  const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana">${CELANA[eq.celana].svg()}</g>` : "";
+  if (celanaSvg) base = base.replace('<g data-slot="pakaian">', celanaSvg + '<g data-slot="pakaian">');
   // Sayap (baru) — di belakang badan, setelah aura
   const sayapSvg = (eq.sayap && eq.sayap !== "none" && SAYAP[eq.sayap]?.svg) ? `<g data-slot="sayap">${SAYAP[eq.sayap].svg()}</g>` : "";
 
   // Overlay pakaian (replace default)
   let pakaianOverlay = "";
   if (eq.pakaian && eq.pakaian !== "seragam_default" && OUTFITS[eq.pakaian]?.svg) {
-    pakaianOverlay = `<g data-slot="pakaian-overlay" ${CEL}>${OUTFITS[eq.pakaian].svg()}</g>`;
+    pakaianOverlay = `<g data-slot="pakaian-overlay">${OUTFITS[eq.pakaian].svg()}</g>`;
   }
 
   // Overlay sepatu
   let sepatuOverlay = "";
   if (eq.sepatu && eq.sepatu !== "shoes_default" && SHOES[eq.sepatu]?.svg) {
-    sepatuOverlay = `<g data-slot="sepatu-overlay" ${CEL}>${SHOES[eq.sepatu].svg()}</g>`;
+    sepatuOverlay = `<g data-slot="sepatu-overlay">${SHOES[eq.sepatu].svg()}</g>`;
   }
 
   // Hair (OPTIONAL — default botak)
   let hairSvg = "";
   if (eq.rambut && HAIR_STYLES[eq.rambut]?.svg) {
-    hairSvg = `<g data-slot="rambut" ${CEL}>${HAIR_STYLES[eq.rambut].svg(opts.hairColor)}</g>`;
+    hairSvg = `<g data-slot="rambut">${HAIR_STYLES[eq.rambut].svg(opts.hairColor)}</g>`;
   }
 
   // Accessories
   let aksesoriSvg = "";
   if (eq.aksesori && eq.aksesori !== "none" && ACCESSORIES[eq.aksesori]?.svg) {
-    aksesoriSvg = `<g data-slot="aksesori" ${CEL}>${ACCESSORIES[eq.aksesori].svg()}</g>`;
+    aksesoriSvg = `<g data-slot="aksesori">${ACCESSORIES[eq.aksesori].svg()}</g>`;
   }
 
   // Handheld — senjata ber-animType otomatis memakai pose + animasi bawaannya (weapon-anim.js)
-  let handheldSvg = "", stance = null;
+  let handheldSvg = "";
   if (eq.item_tangan && eq.item_tangan !== "none" && HANDHELD[eq.item_tangan]?.svg) {
     const hItem = HANDHELD[eq.item_tangan];
     const wp = hItem.animType ? applyWeaponPose({ item: hItem, base, pakaianOverlay, skin: (SKIN_TONES[skinKey] || SKIN_TONES.light).skin, state: opts.wstate || "idle" }) : null;
-    if (wp) { stance = wp.stance; base = wp.base; pakaianOverlay = wp.pakaianOverlay; handheldSvg = `<g data-slot="item_tangan">${wp.handheld}</g>`; }
+    if (wp) { base = wp.base; pakaianOverlay = wp.pakaianOverlay; handheldSvg = `<g data-slot="item_tangan">${wp.handheld}</g>`; }
     else handheldSvg = `<g data-slot="item_tangan">${hItem.svg()}</g>`;
   }
 
-  if (stance) {
-    for (const slot of ["legs", "shoes"]) base = base.replace(new RegExp(`<g data-slot="${slot}"[^>]*>[\\s\\S]*?</g>`), m => splitLegs(m, stance));
-    if (celanaSvg) base = base.replace(celanaSvg, splitLegs(celanaSvg, stance));
-    if (sepatuOverlay) sepatuOverlay = splitLegs(sepatuOverlay, stance);
-  }
-  base = upgradeHands(base); pakaianOverlay = upgradeHands(pakaianOverlay);
   return `
     <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
-      ${CEL_DEFS}
       ${auraSvg}
       ${sayapSvg}
       ${base}
@@ -965,10 +950,10 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261116b";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116b";
-import { extendShirose } from "./shirose-set.js?v=20261116b";
-import { extend2 } from "./character-more2.js?v=20261116b";
+import { extend } from "./character-more.js?v=20261116c";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116c";
+import { extendShirose } from "./shirose-set.js?v=20261116c";
+import { extend2 } from "./character-more2.js?v=20261116c";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);

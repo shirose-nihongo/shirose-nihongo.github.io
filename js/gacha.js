@@ -1,7 +1,7 @@
 /* Halaman Gacha (#gacha). RNG & potong koin di server (cloudflare/gacha-worker.js). Klien hanya menampilkan hasil. */
 import { CONFIG, CONFIG_FREE, rollMany } from "../cloudflare/gacha-core.js";
 import { ITEMS } from "../cloudflare/gacha-items.js";
-import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261116b";
+import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261116c";
 /* gambar barang: karakter memakai barang itu (SVG animasi bawaan item + efek melayang/bersinar per kelangkaan) */
 const KAT_OF = {}; for (const [k, o] of Object.entries(CATALOG)) for (const id of Object.keys(o)) if (id !== "none") KAT_OF[id] = k;
 const ANIM = { item_tangan: "gaSwing", aura: "gaPulse", sayap: "gaFlap", aksesori: "gaBob", pakaian: "gaBob", celana: "gaBob", sepatu: "gaBob", rambut: "gaBob" };
