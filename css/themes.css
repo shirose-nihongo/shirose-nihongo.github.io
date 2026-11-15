@@ -131,3 +131,8 @@ html[data-theme]:not([data-theme="ungu"]) .sosmed a:hover svg{background:linear-
 .th-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;white-space:nowrap}
 .th-btn .th-txt{font-size:12px}
 @media (max-width:420px){.th-btn{padding:7px 8px}.th-btn .th-txt{font-size:11px}}
+
+/* Monokrom (bawaan Lv1): hitam-putih, aksen putih */
+html[data-theme="mono"]{--navy:#141414;--navy-2:#1f1f1f;--navy-3:#2b2b2b;--navy-4:#0b0b0b;--pink:#f2f2f2;--pink-light:#ffffff;--pink-dark:#bdbdbd;--purple:#9e9e9e;--border:#333;--border-light:#4a4a4a;--shadow-glow:0 0 24px rgba(255,255,255,.12)}
+html[data-theme="mono"] body{background:linear-gradient(to bottom,var(--navy-4),var(--navy))}
+.th-menu button.lock{opacity:.55}.th-lk{margin-left:auto;font-size:11px;color:var(--gray)}

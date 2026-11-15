@@ -1375,7 +1375,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/ssw.css?v=20261112zh"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261113d"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/themes.css?v=20261114f"/>
+<link rel="stylesheet" href="./css/themes.css?v=20261115a"/>
 </head>
 <body>
 
@@ -1420,7 +1420,7 @@ html{overflow-x:hidden;}
 
 <!-- ============ TOASTS ============ -->
 <div class="toast-wrap" id="toasts"></div>
-<script src="./js/themes.js?v=20261114f"></script>
+<script src="./js/themes.js?v=20261115a"></script>
 
 <!-- ============ LEVEL UP OVERLAY ============ -->
 <div class="levelup-overlay" id="levelup">
@@ -5468,6 +5468,7 @@ FB.onAuth(async (user, siswa) => {
   _authFiredOnce = true;
 
   state.user = user; state.siswa = siswa;
+  try { window.SHIROSE_THEME_FREE = !!(user && FB.userIsGuru()); } catch(e){}
   const btn = document.getElementById("btn-auth");
   if (user) {
     try { localStorage.setItem("shirose-returning","1"); } catch(e){}

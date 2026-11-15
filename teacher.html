@@ -1939,10 +1939,92 @@ window.studentProfile = async (uid) => {
     </div>
 
     <div style="margin-top:14px; display:flex; justify-content:flex-end;">
-      <button class="btn ghost" onclick="closeModal()">Tutup</button>
+      <button class="btn" onclick="studentActivity('${uid}')">📚 Detail Aktivitas Belajar</button> <button class="btn ghost" onclick="closeModal()">Tutup</button>
     </div>
   `);
 };
+/* ========== DETAIL AKTIVITAS SISWA (JLPT / SSW / MENSETSU) — hanya BACA data yang sudah ada ========== */
+const _tglId = (ms) => ms ? new Date(ms).toLocaleDateString("id-ID", { day:"2-digit", month:"short", year:"numeric" }) : "–";
+const _msOf = (x) => x?.tgl?.seconds ? x.tgl.seconds * 1000 : x?.tgl?.toMillis ? x.tgl.toMillis() : (x?.selesai || x?.t || 0);
+const _bar = (p) => `<div style="background:var(--navy-3,#2b2b2b); border-radius:6px; height:8px; min-width:80px;"><div style="width:${Math.max(0,Math.min(100,p))}%; height:100%; border-radius:6px; background:var(--pink);"></div></div>`;
+const _kartuInfo = (kartu) => {
+  const v = Object.entries(kartu || {}); const g = { k:[0,0], b:[0,0], r:[0,0], s:[0,0] };
+  v.forEach(([key, c]) => { const t = String(key)[0]; if (g[t]) { g[t][1]++; if (c && c.mastered) g[t][0]++; } });
+  return g;
+};
+window.studentActivity = async (uid, tab) => {
+  const siswa = (state.siswaList||[]).find(s => s.uid === uid); if (!siswa) return toast("Siswa tidak ditemukan");
+  tab = tab || "jlpt";
+  modal(`<div style="text-align:center; padding:20px;">Memuat aktivitas...</div>`);
+  const tabs = [["jlpt","📘 JLPT"],["ssw","🌏 SSW"],["mensetsu","🎙️ Mensetsu"]].map(([k,l]) => `<button class="btn ${k===tab?"":"ghost"}" onclick="studentActivity('${uid}','${k}')">${l}</button>`).join(" ");
+  const head = `<h2 style="color:var(--pink);">📚 Aktivitas: ${_mxEsc(siswa.nama||siswa.email)}</h2><div style="display:flex; gap:6px; flex-wrap:wrap; margin:10px 0;">${tabs}</div>`;
+  const foot = `<div style="margin-top:14px; display:flex; gap:8px; justify-content:flex-end;"><button class="btn ghost" onclick="studentProfile('${uid}')">‹ Profil</button><button class="btn ghost" onclick="closeModal()">Tutup</button></div>`;
+  let body = "";
+  try {
+    if (tab === "jlpt") {
+      const [gami, srs, nilai, hasil] = await Promise.all([FB.getSiswaGami(uid).catch(()=>({})), FB.getSiswaSrsAll(uid).catch(()=>({})), FB.listNilaiOf(uid, 100).catch(()=>[]), FB.listHasilJLPTOf(uid, 100).catch(()=>[])]);
+      const lv = ["n5","n4","n3","n2","n1"];
+      const rows = lv.map(l => { const g = gami[l] || {}, k = _kartuInfo(srs[l]), tot = Object.keys(srs[l]||{}).length;
+        return `<tr><td><b>${l.toUpperCase()}</b></td><td>${siswa.aksesLevel?.[l] ? "✓" : "🔒"}</td><td>Lv ${g.level_karakter||1} · ${g.xp||0} XP</td><td>🔥 ${g.streak||0}</td><td>${k.k[0]}/${k.k[1]}</td><td>${k.b[0]}/${k.b[1]}</td><td>${k.r[0]}/${k.r[1]}</td><td>${tot}</td><td>${_tglId(g.lastAktivitas?.seconds ? g.lastAktivitas.seconds*1000 : (typeof g.lastAktivitas === "number" ? g.lastAktivitas : Date.parse(g.lastAktivitas||"")||0))}</td></tr>`; }).join("");
+      const jenis = {}; hasil.forEach(h => { const k = (h.lv||"?").toUpperCase() + " · " + (h.jenis||"?"); (jenis[k] = jenis[k] || []).push(h); });
+      const jr = Object.entries(jenis).map(([k, a]) => { const sk = a.map(h => h.persen ?? h.skor ?? h.pct ?? null).filter(x => typeof x === "number"); return `<tr><td>${_mxEsc(k)}</td><td>${a.length}×</td><td>${sk.length ? Math.round(sk[0]) : "–"}</td><td>${sk.length ? Math.round(Math.max(...sk)) : "–"}</td><td>${_tglId(_msOf(a[0]))}</td></tr>`; }).join("") || '<tr><td colspan="5" style="color:var(--gray); text-align:center;">Belum ada ujian JLPT Center</td></tr>';
+      const nr = nilai.slice(0, 15).map(n => `<tr><td>${_tglId(_msOf(n))}</td><td>${_mxEsc(n.level||n.lvl||"")} ${_mxEsc(n.tipe||n.jenis||"")}</td><td><b>${n.skor||0}</b></td><td>${n.benar||0}/${(n.benar||0)+(n.salah||0)}</td></tr>`).join("") || '<tr><td colspan="4" style="color:var(--gray); text-align:center;">Belum ada riwayat nilai</td></tr>';
+      body = `<h3>Belajar per level</h3><div class="table-wrap"><table><thead><tr><th>Level</th><th>Akses</th><th>Level karakter</th><th>Streak</th><th>Kosakata/Kanji hafal</th><th>Bunpou hafal</th><th>Rangkuman hafal</th><th>Total kartu</th><th>Terakhir aktif</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p style="font-size:11px; color:var(--gray);">Kosakata &amp; kanji memakai awalan kunci SRS yang sama, jadi dihitung gabung. Kartu hafal = status "mastered".</p>
+        <h3 style="margin-top:12px;">Ujian JLPT Center (per level &amp; jenis)</h3><div class="table-wrap"><table><thead><tr><th>Ujian</th><th>Dikerjakan</th><th>Terakhir</th><th>Terbaik</th><th>Tanggal terakhir</th></tr></thead><tbody>${jr}</tbody></table></div>
+        <h3 style="margin-top:12px;">Riwayat nilai (15 terakhir)</h3><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ujian</th><th>Nilai</th><th>Benar</th></tr></thead><tbody>${nr}</tbody></table></div>`;
+    } else if (tab === "ssw") {
+      const core = await import("./js/ssw-core.js?v=20261113zl");
+      const kls = state.kelasList || [];
+      const items = await Promise.all(_SSW_8.map(async ([slug, nama]) => {
+        const blokTotal = siswa.aksesSsw === false;
+        const punya = !blokTotal && _sswEfektif(siswa, kls, slug);
+        let P = null; try { P = await FB.loadSswProgres(slug, uid); } catch(e) {}
+        let babs = []; try { const base = `data/ssw/${slug}`; const idx = await (await fetch(`${base}/index.json`)).json();
+          babs = await Promise.all(idx.bab.map(async b => (await (await fetch(`${base}/${b.file}`)).json()).bab)); } catch(e) {}
+        return { slug, nama, punya, P, babs };
+      }));
+      const ring = items.map(it => {
+        if (!it.punya && !it.P) return `<tr><td>${it.nama}</td><td colspan="5" style="color:var(--gray);">Tidak memiliki akses</td></tr>`;
+        const P = it.P || { read:{}, cards:{}, quiz:{}, log:[] };
+        const bp = it.babs.map(b => core.babProgress({ read:P.read||{}, cards:P.cards||{}, quiz:P.quiz||{} }, b, []));
+        const pct = bp.length ? Math.round(bp.reduce((a,x)=>a+x.pct,0)/bp.length) : null;
+        const selesai = bp.filter(x => x.status==="selesai").length, proses = bp.filter(x => x.status==="proses"||x.status==="ulang").length;
+        return `<tr style="cursor:pointer;" onclick="sswDetailSiswa('${uid}','${it.slug}')"><td>${it.nama}${it.punya?"":" <small style='color:var(--gray);'>(akses dicabut)</small>"}</td><td>${pct===null?"–":pct+"%"}${pct===null?"":_bar(pct)}</td><td>${selesai} selesai · ${proses} berjalan / ${bp.length} bab</td><td>${Object.keys(P.read||{}).length}</td><td>${_tglId(P.last?.t||P.u||0)}</td><td>Detail ›</td></tr>`;
+      }).join("");
+      window._sswAct = { items, core };
+      body = `<h3>Progres per bidang</h3><div class="table-wrap"><table><thead><tr><th>Bidang</th><th>Progres</th><th>Bab</th><th>Subbab dibaca</th><th>Terakhir</th><th></th></tr></thead><tbody>${ring}</tbody></table></div><p style="font-size:11px; color:var(--gray);">Progres = subbab dibaca + 3 kuis per bab. Klik bidang untuk rincian bab.</p><div id="ssw-act-detail"></div>`;
+    } else {
+      const [hasil, prep] = await Promise.all([FB.listHasilMensetsuOf(uid, 200).catch(()=>[]), (FB.listPersiapanMensetsuOf ? FB.listPersiapanMensetsuOf(uid) : Promise.resolve([])).catch(()=>[])]);
+      const list = (hasil||[]).slice().sort((a,b)=>_mxMs(a)-_mxMs(b));
+      const per = {}; list.forEach(h => { const k = h.bidangNama || h.bidang; (per[k] = per[k] || []).push(h); });
+      const pr = Object.entries(per).map(([k,a]) => { const s = a.map(h => h.skor?.total).filter(x => typeof x==="number"); return `<tr><td>${_mxEsc(k)}</td><td>${a.length}</td><td>${s.length?s[0]:"–"} → <b>${s.length?s[s.length-1]:"–"}</b></td><td>${s.length?Math.round(s.reduce((x,y)=>x+y,0)/s.length):"–"}</td></tr>`; }).join("") || '<tr><td colspan="4" style="color:var(--gray); text-align:center;">Belum ada simulasi</td></tr>';
+      const pp = (prep||[]).map(p => { const a = Object.values(p.answers||{}); const diterima = a.filter(x=>x.diterima).length, dikoreksi = a.filter(x=>x.koreksi||x.ev).length;
+        return `<tr><td>${_mxEsc(String(p.id||p.bidang).replace(/_/g," "))}</td><td>${(p.sel||[]).length}</td><td>${a.filter(x=>x.asli).length}</td><td>${dikoreksi}</td><td>${diterima}</td><td>${_tglId(_msOf(p) || (p.updated?.seconds ? p.updated.seconds*1000 : 0))}</td></tr>`; }).join("") || '<tr><td colspan="6" style="color:var(--gray); text-align:center;">Belum ada persiapan</td></tr>';
+      const lemah = _mxWeak(list);
+      body = `<h3>Simulasi per bidang (nilai awal → terakhir)</h3><div class="table-wrap"><table><thead><tr><th>Bidang</th><th>Jumlah simulasi</th><th>Peningkatan</th><th>Rata-rata</th></tr></thead><tbody>${pr}</tbody></table></div>
+        <h3 style="margin-top:12px;">Persiapan jawaban</h3><div class="table-wrap"><table><thead><tr><th>Bidang</th><th>Pertanyaan dipilih</th><th>Jawaban ditulis</th><th>Sudah dikoreksi AI</th><th>Jawaban diterima</th><th>Update</th></tr></thead><tbody>${pp}</tbody></table></div>
+        <h3 style="margin-top:12px;">Riwayat nilai simulasi</h3><div class="table-wrap" style="max-height:28vh; overflow:auto;"><table><thead><tr><th>Tanggal</th><th>Bidang</th><th>Mode</th><th>Nilai</th><th>Soal dilatih</th><th></th></tr></thead><tbody>${list.slice().reverse().map(h => `<tr style="cursor:pointer;" onclick="mensetsuDetail('${uid}','${h.id}')"><td>${_tglId(_mxMs(h))}</td><td>${_mxEsc(h.bidangNama||h.bidang)}</td><td>${_mxMode[h.mode]||h.mode}</td><td><b>${h.skor?.total??"–"}</b></td><td>${h.dijawab}/${h.jumlahSoal}</td><td>Transkrip ›</td></tr>`).join("") || '<tr><td colspan="6" style="color:var(--gray); text-align:center;">–</td></tr>'}</tbody></table></div>
+        ${lemah ? `<h3 style="margin-top:12px;">Kelemahan yang sering muncul</h3><p>Kategori terlemah: <b>${_mxEsc(_mxCat[lemah.k] || lemah.k)}</b> (rata-rata ${lemah.v}/10)</p>` : ""}`;
+    }
+  } catch (e) { body = `<p style="color:#ff8080;">Gagal memuat: ${_mxEsc(e.message||e)}</p>`; }
+  modal(head + body + foot);
+};
+window.sswDetailSiswa = (uid, slug) => {
+  const A = window._sswAct; const it = A?.items.find(x => x.slug === slug); const box = document.getElementById("ssw-act-detail"); if (!it || !box) return;
+  const P = it.P || { read:{}, cards:{}, quiz:{}, log:[] }; const L = { belum:"Belum dibuka", proses:"Sedang dipelajari", selesai:"Sudah selesai", ulang:"Perlu pengulangan" };
+  const T = (x) => (x && typeof x === "object") ? (x.id || x.ja || Object.values(x)[0]) : x;
+  const rows = it.babs.map(b => { const bp = A.core.babProgress({ read:P.read||{}, cards:P.cards||{}, quiz:P.quiz||{} }, b, []);
+    const qs = [1,2,3].map(n => { const q = (P.quiz||{})[`${b.id}-q${n}`]; return q ? (q.best>=60 ? `✅${Math.round(q.best)}` : `❌${Math.round(q.best)}`) : "·"; }).join(" ");
+    const lulus = [1,2,3].every(n => ((P.quiz||{})[`${b.id}-q${n}`]?.best ?? -1) >= 60);
+    return `<tr><td>${b.no ?? ""}. ${_mxEsc(plainT(T(b.title)))}</td><td>${bp.read}/${bp.subsTotal}</td><td>${qs}</td><td>${bp.pct}%</td><td>${L[bp.status]||bp.status}${lulus?" · 🎓 lulus evaluasi":""}</td></tr>`; }).join("");
+  const cards = Object.values(P.cards||{}); const hafal = cards.filter(c => c.reps >= 3 || c.st==="kuasa").length;
+  const log = (P.log||[]).slice(0,8).map(l => `<li>${_tglId(l.t)} — ${_mxEsc(l.x)}</li>`).join("");
+  box.innerHTML = `<h3 style="margin-top:14px;">${it.nama}</h3><p style="font-size:12px; color:var(--gray);">Kosakata dipelajari: <b>${cards.length}</b> (kuasa ${hafal}) · Terakhir: ${_mxEsc(P.last?.label||"–")} (${_tglId(P.last?.t||0)})</p>
+    <div class="table-wrap"><table><thead><tr><th>Bab</th><th>Subbab dibaca</th><th>Kuis 1·2·3 (terbaik)</th><th>Progres</th><th>Status</th></tr></thead><tbody>${rows||'<tr><td colspan="5">Materi bidang ini belum ada.</td></tr>'}</tbody></table></div>${log?`<ul style="font-size:12px; color:var(--gray);">${log}</ul>`:""}`;
+};
+const plainT = (s) => String(s ?? "").replace(/\{([^|{}]+)\|([^{}]+)\}/g, "$1").replace(/\*\*/g, "");
+
 window.newKelas = () => editKelas(null);
 window.editKelas = (id) => {
   const k = id ? state.kelasList.find(x => x.id === id) : { nama:"", deskripsi:"" };

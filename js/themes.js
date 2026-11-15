@@ -1,8 +1,11 @@
 /* Tema SHIROSE: ungu (bawaan) + 4 cuaca. Disimpan di localStorage 'shirose-theme'. */
 (function(){
   var KEY="shirose-theme";
-  var TH=[["ungu","🟣","Ungu (bawaan)","#161b36"],["cerah","☀️","Cerah","#12345f"],["hujan","🌧️","Hujan","#1c2733"],["salju","❄️","Salju / Dingin","#243a52"],["gugur","🍁","Gugur","#2d1a14"],["panas","🌊","Panas","#0b3b5c"],["semi","🌸","Semi","#2e1f4a"],["badai","⛈️","Badai","#1a1a24"]];
-  function get(){try{var v=localStorage.getItem(KEY);return TH.some(function(t){return t[0]===v})?v:"ungu"}catch(e){return "ungu"}}
+  /* [id, ikon, nama, warna-bar, level-minimal]. Level = level karakter (XP). Guru/admin bebas. */
+  var TH=[["mono","⚫","Monokrom (bawaan)","#111111",1],["ungu","🟣","Ungu","#161b36",10],["cerah","☀️","Cerah","#12345f",15],["hujan","🌧️","Hujan","#1c2733",20],["salju","❄️","Salju / Dingin","#243a52",40],["panas","🌊","Musim Panas","#0b3b5c",50],["badai","⛈️","Badai","#1a1a24",50],["gugur","🍁","Gugur","#2d1a14",75],["semi","🌸","Semi","#2e1f4a",75]];
+  function myLevel(){var s=window.__SHIROSE_STATE||{};if(window.SHIROSE_THEME_FREE)return 999;return (s.gami&&s.gami.level_karakter)||1}
+  function locked(t){for(var i=0;i<TH.length;i++)if(TH[i][0]===t)return myLevel()<TH[i][4];return false}
+  function get(){try{var v=localStorage.getItem(KEY);return TH.some(function(t){return t[0]===v})?v:"mono"}catch(e){return "mono"}}
 
   /* ===== Pemandangan siluet (diburamkan, menyatu dengan latar) ===== */
   function pole(x,h,c){return '<g fill="'+c+'"><rect x="'+(x-3)+'" y="'+(300-h)+'" width="6" height="'+h+'"/><rect x="'+(x-34)+'" y="'+(300-h+16)+'" width="68" height="5"/><rect x="'+(x-24)+'" y="'+(300-h+44)+'" width="48" height="4"/></g>'}
@@ -44,16 +47,18 @@
     var mn=document.getElementById("th-menu");if(mn)[].forEach.call(mn.querySelectorAll("button"),function(b){b.classList.toggle("on",b.dataset.t===t)});
   }
   function set(t){try{localStorage.setItem(KEY,t)}catch(e){}apply(t)}
-  window.SHIROSE_THEME={set:set,get:get};
+  window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH};
   function init(){
     apply(get());
     var tr=document.querySelector(".topbar-right");
     if(tr&&!document.getElementById("th-menu")){
       var d=document.createElement("div");d.className="th-wrap";
-      d.innerHTML='<button class="th-btn" id="th-btn" title="Ganti tema" aria-label="Ganti tema">🎨 <span class="th-txt">Ganti tema</span></button><div class="th-menu" id="th-menu">'+TH.map(function(t){return '<button data-t="'+t[0]+'">'+t[1]+' '+t[2]+'</button>'}).join("")+'</div>';
+      d.innerHTML='<button class="th-btn" id="th-btn" title="Ganti tema" aria-label="Ganti tema">🎨 <span class="th-txt">Ganti tema</span></button><div class="th-menu" id="th-menu">'+TH.map(function(t){return '<button data-t="'+t[0]+'">'+t[1]+' '+t[2]+'<small class="th-lk"></small></button>'}).join("")+'</div>';
       tr.insertBefore(d,tr.firstChild);
       d.querySelector("#th-btn").onclick=function(e){e.stopPropagation();document.getElementById("th-menu").classList.toggle("open")};
-      d.querySelector("#th-menu").onclick=function(e){var b=e.target.closest("button");if(b){set(b.dataset.t);document.getElementById("th-menu").classList.remove("open")}};
+      function mark(){[].forEach.call(document.querySelectorAll("#th-menu button"),function(b){var L=locked(b.dataset.t),m=TH.filter(function(t){return t[0]===b.dataset.t})[0][4];b.classList.toggle("lock",L);b.querySelector(".th-lk").textContent=L?"🔒 Lv "+m:""})}
+      d.querySelector("#th-btn").addEventListener("click",mark);
+      d.querySelector("#th-menu").onclick=function(e){var b=e.target.closest("button");if(b){if(locked(b.dataset.t)){var m=TH.filter(function(t){return t[0]===b.dataset.t})[0][4];if(window.toast)window.toast("Tema terbuka di Level "+m);return}set(b.dataset.t);document.getElementById("th-menu").classList.remove("open")}};
       document.addEventListener("click",function(){var m=document.getElementById("th-menu");if(m)m.classList.remove("open")});
       apply(get());
     }
