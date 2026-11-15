@@ -21,3 +21,7 @@ Sistem animasi SMIL + palet rarity, siluet aksesori, banyak variasi sayap, struk
 
 ## Blocker jujur
 Kualitas referensi (shading sel, ornamen, rim light) adalah ilustrasi raster. SVG tangan tidak bisa menyamainya; skill melarang pengganti SVG untuk permintaan raster. Image-generation belum terhubung di sesi ini (lihat setup-image-generation.md).
+
+## Update — Shirose Signature Set (SVG, bukan raster)
+Ditambahkan di `js/shirose-set.js`: `shirose_gakuran`, `shirose_poni`, `shirose_hitam`, `shirose_sepatu`, `shirose_emas` (sayap 4 lapis), `shirose_api` (aura); senjata baru `wa_daggers_*` & `wa_greatsword_*` (6 rarity, pose idle/ready/attack, dua tangan untuk greatsword, dua belati untuk daggers).
+QC `validate_identity.py --no-ssim` (idle): palette wing_gold 0.93, hair_navy 0.87, skin 0.85, glasses_pink 0.55, emblem_purple 0.5 — lulus; histogram korelasi 0.25 → FAIL (latar & gaya render berbeda dari raster). Cek mata: identitas cocok; beda proporsi (badan lebih tinggi-kurus, kepala lebih kecil), tanpa rim light/shading sel. Masih ≈ "dekat", belum "setara" referensi.

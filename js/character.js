@@ -950,10 +950,12 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261115x";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261115x";
-import { extend2 } from "./character-more2.js?v=20261115x";
+import { extend } from "./character-more.js?v=20261115y";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261115y";
+import { extendShirose } from "./shirose-set.js?v=20261115y";
+import { extend2 } from "./character-more2.js?v=20261115y";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
+extendShirose(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;

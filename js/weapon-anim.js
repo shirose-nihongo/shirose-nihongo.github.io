@@ -28,7 +28,7 @@ const RAINBOW = "#fb7185;#fbbf24;#4ade80;#60a5fa;#a78bfa;#fb7185";
 /* ------------------------------ pose engine ------------------------------ */
 /* K: nilai default pose. wx,wy,wr = tangan senjata (x,y,rotasi); fx,fy = tangan bebas;
    two=1 → tangan bebas ikut memegang senjata di y lokal g2; by = tinggi buku melayang. */
-const K = o => ({ wx: 262, wy: 328, wr: 0, fx: 138, fy: 328, two: 0, g2: 0, by: 0, ...o });
+const K = o => ({ wx: 262, wy: 328, wr: 0, fx: 138, fy: 328, two: 0, g2: 0, by: 0, fr: 0, ...o });
 function track(p, fr) {
   for (let i = 0; i < fr.length - 1; i++) {
     const [a, A] = fr[i], [b, B] = fr[i + 1];
@@ -91,13 +91,23 @@ const SPEC = {
     ready: ST(1.7, loop2(K({ wx: 152, wy: 284, wr: 0, fx: 266, fy: 292 }), K({ wx: 152, wy: 281, wr: 0, fx: 266, fy: 290 }))),
     attack: (() => { const R = K({ wx: 152, wy: 284, wr: 0, fx: 266, fy: 292 }), E = K({ wx: 196, wy: 262, wr: 0, fx: 262, fy: 270 });
       return ST(1.3, [[0, R], [.25, K({ wx: 140, wy: 296, wr: 0, fx: 270, fy: 290 })], [.4, E], [.6, E], [1, R]]); })() },
+  daggers: { side: "R", win: [.25, .5],
+    idle: ST(2.8, loop2(K({ wx: 292, wy: 326, wr: 158, fx: 108, fy: 326, fr: -158 }), K({ wx: 292, wy: 322, wr: 160, fx: 108, fy: 322, fr: -160 }))),
+    ready: ST(1.6, loop2(K({ wx: 298, wy: 304, wr: 124, fx: 102, fy: 304, fr: -124 }), K({ wx: 298, wy: 300, wr: 120, fx: 102, fy: 300, fr: -120 }))),
+    attack: (() => { const R = K({ wx: 298, wy: 304, wr: 124, fx: 102, fy: 304, fr: -124 }), E = K({ wx: 138, wy: 262, wr: -38, fx: 262, fy: 262, fr: 38 });
+      return ST(1.2, [[0, R], [.22, K({ wx: 300, wy: 250, wr: 70, fx: 100, fy: 250, fr: -70 })], [.4, E], [.62, E], [1, R]]); })() },
+  greatsword: { side: "R", win: [.2, .46],
+    idle: ST(3.2, loop2(K({ wx: 242, wy: 322, wr: 22, two: 1, g2: 34 }), K({ wx: 242, wy: 318, wr: 24, two: 1, g2: 34 }))),
+    ready: ST(1.8, loop2(K({ wx: 234, wy: 300, wr: 52, two: 1, g2: 34 }), K({ wx: 234, wy: 296, wr: 55, two: 1, g2: 34 }))),
+    attack: (() => { const R = K({ wx: 234, wy: 300, wr: 52, two: 1, g2: 34 }), E = K({ wx: 204, wy: 320, wr: 168, two: 1, g2: 34 });
+      return ST(1.5, [[0, R], [.2, K({ wx: 250, wy: 232, wr: -30, two: 1, g2: 34 })], [.4, E], [.64, E], [1, R]]); })() },
   carry: { side: "R", win: [.3, .6],
     idle: ST(3, [[0, K({ wx: 266, wy: 326, wr: -6 })], [.5, K({ wx: 266, wy: 326, wr: 8 })], [1, K({ wx: 266, wy: 326, wr: -6 })]]),
     ready: ST(1.8, loop2(K({ wx: 276, wy: 306, wr: 14, fx: 134, fy: 304 }), K({ wx: 276, wy: 302, wr: 18, fx: 134, fy: 300 }))),
     attack: (() => { const R = K({ wx: 276, wy: 306, wr: 14, fx: 134, fy: 304 });
       return ST(1.4, [[0, R], [.3, K({ wx: 284, wy: 250, wr: 40, fx: 130, fy: 300 })], [.5, K({ wx: 276, wy: 290, wr: -14, fx: 134, fy: 304 })], [.75, K({ wx: 276, wy: 290, wr: -14, fx: 134, fy: 304 })], [1, R]]); })() },
 };
-const TIP = { sword: 124, katana: 142, spear: 170, scythe: 150, hammer: 0, grimoire_held: 0, grimoire_float: 0, staff: 0, bow: 0, shield: 0, carry: 0 };
+const TIP = { sword: 124, katana: 142, daggers: 70, greatsword: 192, spear: 170, scythe: 150, hammer: 0, grimoire_held: 0, grimoire_float: 0, staff: 0, bow: 0, shield: 0, carry: 0 };
 
 /* urutan state → daftar segmen; showcase = idle → ready → attack */
 function segsFor(type, state) {
@@ -163,7 +173,35 @@ function hammerArt(pal, ti) {
   ${ti >= 3 ? `<path d="M-20 -108 h40" stroke="${pal.glow}" stroke-width="2" opacity=".9"/>` : ""}
   ${ti >= 4 ? `<path d="M-14 -142 Q-18 -156 -10 -164 Q-8 -152 -2 -148 Q2 -158 8 -166 Q12 -152 14 -142Z" fill="#f97316" opacity=".9"><animate attributeName="opacity" values=".5;1;.5" dur=".9s" repeatCount="indefinite"/></path>` : ""}`;
 }
+function daggerArt(pal, ti) {
+  const edge = ti >= 1 ? "#fbbf24" : pal.m2;
+  return `<path d="M-6 -12 Q-11 -44 0 -76 Q11 -44 6 -12Z" fill="${pal.m}" stroke="${ti >= 4 ? "#fbbf24" : pal.m2}" stroke-width="${ti >= 4 ? 2 : 1.4}"/>
+  <path d="M0 -14 Q-1 -44 0 -70" stroke="${ti >= 2 ? pal.glow : pal.m2}" stroke-width="${ti >= 2 ? 2.2 : 1.2}" fill="none" opacity=".9"/>
+  <path d="M-16 -13 Q0 -3 16 -13 L13 -7 Q0 2 -13 -7Z" fill="${edge}" stroke="${pal.ac2}" stroke-width="1.3"/>
+  ${ti >= 3 ? `<path d="M-16 -13 L-22 -20 L-12 -15 M16 -13 L22 -20 L12 -15" fill="${edge}" stroke="${pal.ac2}" stroke-width="1"/>` : ""}
+  <rect x="-3.4" y="-6" width="6.8" height="22" rx="2" fill="${pal.ac2}" stroke="${pal.ac}" stroke-width=".8"/>
+  <path d="M-3.4 -1 L3.4 3 M-3.4 6 L3.4 10 M-3.4 11 L3.4 15" stroke="${pal.ac}" stroke-width="1.1"/>
+  <circle cy="19" r="4.6" fill="${ti >= 1 ? "#fbbf24" : "#9ca3af"}" stroke="${pal.ac2}"/>
+  ${ti >= 2 ? `<circle cy="-8" r="2.4" fill="${pal.glow}"/>` : ""}`;
+}
+function greatArt(pal, ti) {
+  const gd = ti >= 4 ? "#fbbf24" : pal.ac;
+  return `<path d="M-12 -28 L-13 -152 L0 -196 L13 -152 L12 -28Z" fill="${pal.m}" stroke="${ti >= 4 ? "#fbbf24" : pal.m2}" stroke-width="${ti >= 4 ? 2.6 : 1.8}"/>
+  <path d="M-12 -28 L-13 -152 L-4 -184 L-4 -28Z" fill="#ffffff" opacity=".28"/>
+  <path d="M0 -34 V-180" stroke="${pal.m2}" stroke-width="2.4"/>
+  ${ti >= 1 ? `<path d="M-13 -60 L-13 -150 M13 -60 L13 -150" stroke="#fbbf24" stroke-width="1.6" opacity=".9"/>` : ""}
+  ${ti >= 2 ? [-60, -88, -116, -144].map(y => `<path d="M0 ${y} l4 6 -4 6 -4 -6Z" fill="${pal.glow}"/>`).join("") : ""}
+  <path d="M-36 -28 Q0 -14 36 -28 L${ti >= 3 ? 44 : 33} ${ti >= 3 ? -42 : -20} Q0 -4 -${ti >= 3 ? 44 : 33} ${ti >= 3 ? -42 : -20}Z" fill="${gd}" stroke="${pal.ac2}" stroke-width="1.6"/>
+  ${ti >= 3 ? `<path d="M-44 -42 L-40 -52 L-34 -40 M44 -42 L40 -52 L34 -40" fill="${gd}" stroke="${pal.ac2}" stroke-width="1"/>` : ""}
+  <circle cy="-22" r="4.4" fill="${ti >= 2 ? pal.glow : "#fbbf24"}" stroke="${pal.ac2}" stroke-width="1"/>
+  <rect x="-4.4" y="-18" width="8.8" height="62" rx="2.4" fill="${pal.ac2}" stroke="${pal.ac}" stroke-width="1"/>
+  <path d="M-4.4 -8 L4.4 -2 M-4.4 2 L4.4 8 M-4.4 12 L4.4 18 M-4.4 22 L4.4 28 M-4.4 32 L4.4 38" stroke="${pal.ac}" stroke-width="1.3"/>
+  <circle cy="50" r="7" fill="${ti >= 1 ? "#fbbf24" : "#9ca3af"}" stroke="${pal.ac2}" stroke-width="1.4"/>
+  ${ti >= 5 ? `<path d="M0 -196 L4 -210 L0 -204 L-4 -210Z" fill="#fff"><animate attributeName="opacity" values=".3;1;.3" dur="1.2s" repeatCount="indefinite"/></path>` : ""}`;
+}
 function artFor(type, ti, pal) {
+  if (type === "daggers") return daggerArt(pal, ti);
+  if (type === "greatsword") return greatArt(pal, ti);
   if (type === "sword") return swordArt(pal, ti);
   if (type === "katana") return katanaArt(pal, ti);
   if (type === "hammer") return hammerArt(pal, ti);
@@ -204,7 +242,7 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
   const skin = ctx.skin || "#f5d4b3", sl = ctx.sleeve || { c: "#ffffff", d: "#c7cde0" };
   const state = ctx.state || "idle", segs = segsFor(type, state);
   const D = segs.reduce((a, s) => a + s.st.period, 0), N = Math.max(12, Math.round(D * 8));
-  const A = { aw: [], af: [], hwx: [], hwy: [], hfx: [], hfy: [], wt: [], wr: [], fo: [], fs: [], orb: [], orbo: [] };
+  const A = { fa: [], far: [], aw: [], af: [], hwx: [], hwy: [], hfx: [], hfy: [], wt: [], wr: [], fo: [], fs: [], orb: [], orbo: [] };
   const wSh = sp.side === "R" ? SHR : SHL, fSh = sp.side === "R" ? SHL : SHR, out = sp.side === "R" ? 1 : -1;
   const winp = sp.win;
   let fxPts = [];
@@ -213,6 +251,7 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
     const wh = { x: P.wx, y: P.wy, rot: P.wr }; let fh = { x: P.fx, y: P.fy };
     if (P.two > 0) { const g = loc(wh, 0, P.g2); fh = { x: lerp(fh.x, g.x, P.two), y: lerp(fh.y, g.y, P.two) }; }
     A.aw.push(armPath(wSh[0], wSh[1], wh.x, wh.y, out)); A.af.push(armPath(fSh[0], fSh[1], fh.x, fh.y, -out));
+    A.fa.push(`${f1(fh.x)} ${f1(fh.y)}`); A.far.push(`${f1(P.fr)} 0 0`);
     A.hwx.push(f1(wh.x)); A.hwy.push(f1(wh.y)); A.hfx.push(f1(fh.x)); A.hfy.push(f1(fh.y));
     if (type === "grimoire_float") { A.wt.push(`200 ${f1(P.by)}`); A.wr.push("0 0 0"); } else { A.wt.push(`${f1(wh.x)} ${f1(wh.y)}`); A.wr.push(`${f1(wh.rot)} 0 0`); }
     const inWin = n === "attack" && p > winp[0] && p < winp[1], u = inWin ? (p - winp[0]) / (winp[1] - winp[0]) : 0;
@@ -260,12 +299,13 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
   const weaponG = `<g><animateTransform attributeName="transform" type="translate" values="${A.wt.join(";")}" ${dur}/>
     <g><animateTransform attributeName="transform" type="rotate" values="${A.wr.join(";")}" ${dur}/>
       <g ${pal.gl ? `filter="url(#wa-f-${rarity})"` : ""}>${lg ? `<g transform="translate(0 ${lg.lift || 0}) scale(${lg.scale || 1}) translate(${-lg.ax} ${-lg.ay})">${lg.svg}</g>` : artFor(type, ti, pal)}</g>${auraLocal(type, ti, pal)}</g></g>`;
+  const dag2 = type === "daggers" ? `<g><animateTransform attributeName="transform" type="translate" values="${A.fa.join(";")}" ${dur}/><g><animateTransform attributeName="transform" type="rotate" values="${A.far.join(";")}" ${dur}/><g ${pal.gl ? `filter="url(#wa-f-${rarity})"` : ""}>${artFor(type, ti, pal)}</g></g></g>` : "";
   const ring = type === "grimoire_float" && (!lg || lg.ring) ? `<g><animateTransform attributeName="transform" type="translate" values="${A.wt.join(";")}" ${dur}/>
     <ellipse cy="46" rx="72" ry="15" fill="none" stroke="${pal.glow || "#a78bfa"}" stroke-width="2.5" stroke-dasharray="10 8" opacity=".85"><animate attributeName="stroke-dashoffset" values="0;-36" dur="2s" repeatCount="indefinite"/></ellipse>
     <ellipse cy="46" rx="52" ry="10" fill="none" stroke="#ddd6fe" stroke-width="1.8" stroke-dasharray="4 7" opacity=".8"><animate attributeName="stroke-dashoffset" values="0;22" dur="1.4s" repeatCount="indefinite"/></ellipse></g>` : "";
   void gc;
   return `<defs>${filt}</defs><g data-wa="${type}" data-rarity="${rarity}" data-state="${state}">
-    ${arm("aw")}${arm("af")}${ring}${weaponG}${hand("hwx", "hwy")}${hand("hfx", "hfy")}${orb}${fx}</g>`;
+    ${arm("aw")}${arm("af")}${ring}${dag2}${weaponG}${hand("hwx", "hwy")}${hand("hfx", "hfy")}${orb}${fx}</g>`;
 }
 
 /* ------------------------------ integrasi ke renderCharacter ------------------------------ */
@@ -278,6 +318,7 @@ const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 function stripArms(svg) {
   if (!svg) return svg;
   for (const d of [SLV_L, SLV_R, SH_L, SH_R, FA_L, FA_R]) svg = svg.replace(new RegExp(`<path d="${esc(d)}"[^>]*/>`, "g"), "");
+  svg = svg.replace(/<path d="M(?:115 296 L135 326|285 296 L265 326)"[^>]*\/>/g, "");
   return svg.replace(/<circle cx="(?:123|277)" cy="325" r="11"[^>]*\/>/g, "");
 }
 function sleeveOf(overlaySvg) {
@@ -302,12 +343,15 @@ const NAMES = {
   katana:         ["Katana Latihan Dojo", "Katana Giok Hijau", "Katana Safir Biru", "Katana Ametis Kegelapan", "Katana Emas Kenjutsu", "Katana Mythic Bulan Merah"],
   hammer:         ["Palu Tukang Besi", "Palu Zamrud Bumi", "Palu Baja Safir", "Palu Petir Ungu", "Palu Dewa Emas", "Palu Mythic Matahari"],
   grimoire_held:  ["Grimoire Dasar", "Grimoire Zamrud", "Grimoire Safir", "Grimoire Arcane Ungu", "Grimoire Emas Legendaris", "Grimoire Mythic Bintang"],
+  daggers:        ["Belati Kembar Latihan", "Belati Kembar Zamrud", "Belati Kembar Safir", "Belati Kembar Bayangan Ungu", "Belati Kembar Emas Senja", "Belati Kembar Mythic Eklips"],
+  greatsword:     ["Pedang Besar Besi", "Pedang Besar Zamrud", "Pedang Besar Safir Ksatria", "Pedang Besar Arcane", "Pedang Besar Surya Emas", "Pedang Besar Mythic Fajar"],
   grimoire_float: ["Buku Terbang Dasar", "Buku Terbang Zamrud", "Buku Terbang Safir", "Buku Terbang Arcane", "Buku Terbang Emas Legendaris", "Buku Terbang Mythic Galaksi"],
 };
-const ICON = { sword: "🗡️", katana: "⚔️", hammer: "🔨", grimoire_held: "📖", grimoire_float: "📘" };
+const ICON = { sword: "🗡️", katana: "⚔️", hammer: "🔨", grimoire_held: "📖", grimoire_float: "📘", daggers: "🗡️", greatsword: "⚔️" };
 const RT = { common: [[400, 1500], 1], uncommon: [[2500, 5000], 10], rare: [[9000, 16000], 25], epic: [[25000, 36000], 50], legendary: [[50000, 80000], 80], mythic: [[100000, 130000], 90] };
 const TYPES = ["grimoire_held", "grimoire_float", "hammer", "sword", "katana"];
-export const WEAPON_ANIM_TYPES = TYPES.concat(["staff", "spear", "scythe", "bow", "shield", "carry"]);
+const NEW_TYPES = ["daggers", "greatsword"];
+export const WEAPON_ANIM_TYPES = TYPES.concat(NEW_TYPES, ["staff", "spear", "scythe", "bow", "shield", "carry"]);
 
 /* Senjata lama: dipetakan ke tipe animasi; gambar aslinya dipertahankan, hanya dipasang ke pose + lengan.
    [tipe, anchorX, anchorY, skala, lift, ring]  — hand-anchor (277,325) | center-anchor = pusat bbox gambar */
@@ -335,6 +379,10 @@ const LEGACY = {
 };
 
 export function extendWeaponAnim(C) {
+  NEW_TYPES.forEach((type, k) => RARITIES.forEach((rar, ti) => {
+    const [[a, b], lv] = RT[rar], harga = Math.round((a + (b - a) * (k / (NEW_TYPES.length - 1))) / 50) * 50;
+    C.HANDHELD[`wa_${type}_${rar}`] = { nama: `${ICON[type]} ${NAMES[type][ti]}`, rarity: rar, harga, unlock_lv: lv, animType: type, svg: () => buildWeaponLayer(type, rar, {}) };
+  }));
   for (const [id, [type, ax, ay, scale, lift, ring]] of Object.entries(LEGACY)) {
     const it = C.HANDHELD[id]; if (!it) continue;
     it.animType = type; it.animLegacy = { ax, ay, scale, lift: lift || 0, ring: ring === undefined ? 1 : ring };
