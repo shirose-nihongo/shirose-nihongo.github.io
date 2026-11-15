@@ -751,6 +751,104 @@
       }
      }
     ]
+   },
+   {
+    "id": "bab1-qx",
+    "title": {
+     "id": "Tambahan ○× sesuai cakupan JASPA"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Mobil sedan, station wagon, dan van satu boks termasuk jenis bentuk bodi mobil.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu contoh jenis bentuk bodi."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lampu rem (制動灯) menyala saat pedal gas diinjak.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Lampu rem menyala saat pedal rem diinjak."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kap mesin (ボンネット) menutup ruang mesin di bagian depan mobil.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Betul, kap mesin ada di depan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Perawatan pencegahan (予防保全) bertujuan mencegah kerusakan sebelum terjadi.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itulah inti perawatan pencegahan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pelat nomor dipasang hanya di bagian belakang mobil.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Pelat nomor dipasang di depan dan belakang."
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab2": [
@@ -1876,6 +1974,104 @@
       }
      }
     ]
+   },
+   {
+    "id": "bab2-qx",
+    "title": {
+     "id": "Tambahan ○× sesuai cakupan JASPA"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Urutan mesin 4 langkah adalah hisap, kompresi, usaha (ledakan), buang.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu urutan yang benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Oli mesin hanya berfungsi melumasi dan tidak ikut mendinginkan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Oli juga membantu pendinginan, perapat, dan pembersih."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Busi (点火プラグ) berfungsi memercikkan api untuk membakar campuran pada mesin bensin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Busi menyalakan campuran bahan bakar dan udara."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tutup radiator boleh dibuka saat mesin masih sangat panas.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Berbahaya: air panas bertekanan dapat menyembur."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Coolant (cairan pendingin) bagian dari sistem pendingin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Coolant bersirkulasi melalui radiator dan mesin."
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab3": [
@@ -2661,6 +2857,104 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "bab3-qx",
+    "title": {
+     "id": "Tambahan ○× sesuai cakupan JASPA"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Rem cakram terdiri dari cakram (disc), kaliper, dan kampas (pad).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu komponen utamanya."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tekanan angin ban yang terlalu rendah tidak memengaruhi keausan ban.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tekanan rendah membuat ban cepat aus dan boros bahan bakar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pegas keong (コイルスプリング) adalah bagian dari suspensi.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pegas menyerap guncangan jalan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Minyak rem (ブレーキフルード) boleh dicampur dengan oli mesin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Jangan dicampur; jenisnya berbeda dan merusak sistem."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada rem tromol, silinder roda mendorong kampas ke tromol.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Betul."
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab4": [
@@ -3305,6 +3599,104 @@
       }
      }
     ]
+   },
+   {
+    "id": "bab4-qx",
+    "title": {
+     "id": "Tambahan ○× sesuai cakupan JASPA"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat melepas kabel aki, lepas terminal negatif (−) terlebih dahulu.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu mencegah korsleting dengan bodi."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sekring (ヒューズ) yang putus boleh diganti dengan kawat biasa.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus diganti sekring dengan kapasitas ampere yang sama."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Alternator berfungsi mengisi aki saat mesin hidup.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Alternator membangkitkan listrik."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada kendaraan hybrid, kabel tegangan tinggi biasanya berwarna oranye.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Warna oranye menandakan tegangan tinggi."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lampu peringatan aki yang menyala saat mesin hidup selalu berarti normal.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Itu menandakan masalah pengisian."
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab5": [
@@ -3909,6 +4301,104 @@
       "exp": {
        "id": "Benar.",
        "jp": "すぐふきます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "bab5-qx",
+    "title": {
+     "id": "Tambahan ○× sesuai cakupan JASPA"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pemeriksaan harian mencakup cek oli, air pendingin, tekanan ban, dan lampu.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu bagian pemeriksaan harian."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat menggunakan dongkrak, cukup berdiri di bawah mobil yang hanya ditopang dongkrak.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Wajib pakai jack stand; jangan di bawah mobil yang hanya didongkrak."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “5S: seiri, seiton, seisō, seiketsu, shitsuke.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itulah lima unsur 5S."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Oli bekas boleh dibuang ke selokan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus ditampung dan dibuang sesuai aturan limbah."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Menggunakan alat pelindung diri (APD) adalah bagian dari keselamatan kerja.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Misalnya sarung tangan, kacamata, sepatu safety."
       },
       "mb": true
      }
@@ -4591,6 +5081,104 @@
        "id": "割りピン.",
        "jp": "{割|わ}りピンです。"
       }
+     }
+    ]
+   },
+   {
+    "id": "bab6-qx",
+    "title": {
+     "id": "Tambahan ○× sesuai cakupan JASPA"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kunci torsi dipakai untuk mengencangkan baut sesuai torsi yang ditentukan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu fungsinya."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Obeng boleh dipakai sebagai pahat atau pengungkit.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Itu merusak alat dan berbahaya."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jangka sorong (ノギス) dapat mengukur diameter luar dan dalam.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Betul."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Palu karet cocok dipakai bila tidak ingin merusak permukaan komponen.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Karet lebih lembut dari baja."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Oli mesin dan minyak rem dapat saling menggantikan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Fungsi dan jenisnya berbeda."
+      },
+      "mb": true
      }
     ]
    }
@@ -5325,6 +5913,308 @@
        "jp": "{手|て}のあぶらで{短|みじか}くなります。"
       },
       "mb": true
+     }
+    ]
+   },
+   {
+    "id": "bab7-qx",
+    "title": {
+     "id": "Tambahan ○× sesuai cakupan JASPA"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Sebelum bekerja, periksa kondisi alat dan siapkan area kerja yang rapi.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Persiapan adalah langkah awal."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat merakit, baut dikencangkan sesuai torsi yang ditentukan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Hindari terlalu kencang atau longgar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada ganti oli, kuras oli bekas lalu pasang kembali baut pembuang dengan paking yang layak.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Paking yang rusak diganti."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah memasang roda, baut roda cukup dikencangkan dengan tangan saja.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus dikencangkan sesuai torsi, dikencangkan bersilang."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hasil kerja perlu dicek kembali dan dilaporkan kepada atasan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)"
+       },
+       {
+        "id": "Salah (×)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pelaporan bagian dari alur kerja."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "bab7-qj1",
+    "title": {
+     "id": "Simulasi 実技 tugas 1: Ganti oli"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Urutan benar dalam ganti oli adalah…"
+      },
+      "opts": [
+       {
+        "id": "Naikkan mobil dengan aman → buka baut pembuang → kuras oli → pasang baut dan paking → isi oli baru → cek level"
+       },
+       {
+        "id": "Isi oli baru → buka baut pembuang → turunkan mobil"
+       },
+       {
+        "id": "Pasang baut pembuang → kuras oli → naikkan mobil"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kuras dulu, baru isi oli baru, lalu cek level."
+      }
+     },
+     {
+      "q": {
+       "id": "Setelah isi oli baru, yang harus dilakukan adalah…"
+      },
+      "opts": [
+       {
+        "id": "Menambah oli sampai tumpah"
+       },
+       {
+        "id": "Cek level oli dengan dipstick dan periksa kebocoran"
+       },
+       {
+        "id": "Langsung jalankan mobil tanpa cek"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Level dan kebocoran harus dicek."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa yang dilakukan dengan paking baut pembuang yang rusak?"
+      },
+      "opts": [
+       {
+        "id": "Dipakai lagi"
+       },
+       {
+        "id": "Diganti dengan lakban"
+       },
+       {
+        "id": "Diganti baru"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Paking rusak menyebabkan bocor."
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab7-qj2",
+    "title": {
+     "id": "Simulasi 実技 tugas 2: Ganti roda dan cek ban"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Urutan kerja yang aman melepas roda adalah…"
+      },
+      "opts": [
+       {
+        "id": "Longgarkan baut → dongkrak → pasang jack stand → lepas baut"
+       },
+       {
+        "id": "Dongkrak → lepas baut → longgarkan baut"
+       },
+       {
+        "id": "Lepas semua baut → dongkrak"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Longgarkan dulu saat roda masih menapak."
+      }
+     },
+     {
+      "q": {
+       "id": "Baut roda dikencangkan dengan…"
+      },
+      "opts": [
+       {
+        "id": "Hanya tangan"
+       },
+       {
+        "id": "Kunci torsi sesuai nilai yang ditentukan, bersilang"
+       },
+       {
+        "id": "Tenaga sebesar mungkin"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Pakai torsi dan pola bersilang."
+      }
+     },
+     {
+      "q": {
+       "id": "Alat untuk mengukur tekanan ban adalah…"
+      },
+      "opts": [
+       {
+        "id": "Jangka sorong"
+       },
+       {
+        "id": "Feeler gauge"
+       },
+       {
+        "id": "Pengukur tekanan ban (タイヤゲージ)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Tire gauge mengukur tekanan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab7-qj3",
+    "title": {
+     "id": "Simulasi 実技 tugas 3: Pemeriksaan sederhana"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Alat untuk mengukur celah dengan lembar tipis adalah…"
+      },
+      "opts": [
+       {
+        "id": "Feeler gauge (シックネスゲージ)"
+       },
+       {
+        "id": "Dial gauge"
+       },
+       {
+        "id": "Tire gauge"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Feeler gauge cocok untuk celah."
+      }
+     },
+     {
+      "q": {
+       "id": "Sebelum membuka tutup radiator, pastikan…"
+      },
+      "opts": [
+       {
+        "id": "Kipas mati saja"
+       },
+       {
+        "id": "Mesin sudah dingin"
+       },
+       {
+        "id": "Mesin hidup"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tekanan panas berbahaya."
+      }
+     },
+     {
+      "q": {
+       "id": "Setelah selesai kerja, hal yang dilakukan adalah…"
+      },
+      "opts": [
+       {
+        "id": "Tinggalkan alat"
+       },
+       {
+        "id": "Langsung pulang"
+       },
+       {
+        "id": "Cek hasil, bereskan alat, laporkan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Itu bagian 5S dan alur kerja."
+      }
      }
     ]
    }
