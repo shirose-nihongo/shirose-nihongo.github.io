@@ -1433,7 +1433,7 @@ html{overflow-x:hidden;}
 <script type="module">
 import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261116j";
 import { allShopItems } from "./js/shop-seed.js?v=20261116j";
-import * as KV from "./js/kanji-vocab.js?v=20261116m";   // kosakata berbasis Kanji (N5-N1)
+import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
 import * as FB from "./js/firebase-sync.js?v=20261116j";
@@ -2909,9 +2909,9 @@ window.showMateri = async (tipe, idx, vno) => {
           ${kun ? `<div class="r"><span class="lbl">Kunyomi</span>${kun}</div>` : ""}
         </div>
         <div style="font-size:16px; margin:12px 0;"><b>${arti}</b></div>
-        ${kvList ? `<p class="kv-note">Kanji <b>${k}</b> adalah <b>kategori</b>. Yang dihafalkan adalah <b>kosakata</b> di bawah (ketuk untuk belajar).</p>` : ""}
+        ${kvList ? (kvList.length === 1 && kvList[0].fallback ? `<p class="kv-note">Kanji <b>${k}</b> belum punya kosakata di database, jadi kartu hafalannya berisi <b>Kanji ini sendiri</b> (bacaan + arti).</p>` : `<p class="kv-note">Kanji <b>${k}</b> adalah <b>kategori</b>. Yang dihafalkan adalah <b>kosakata</b> di bawah (ketuk untuk belajar).</p>`) : ""}
         ${kvList ? (kvList.length ? `<div class="contoh-list">
-          <h3>Kosakata dengan Kanji ini <small style="color:var(--gray-dim); font-weight:400;">(${kvList.length})</small></h3>
+          <h3>${kvList.length === 1 && kvList[0].fallback ? "Kartu hafalan" : "Kosakata dengan Kanji ini"} <small style="color:var(--gray-dim); font-weight:400;">(${kvList.length})</small></h3>
           ${kvList.map((v, vi) => `<div class="contoh-item kv-item" role="button" tabindex="0" onclick="kvOpen(${idx},${vi})" onkeydown="if(event.key==='Enter')kvOpen(${idx},${vi})">
             <div><div class="jp">${_kvEsc(v.kata)} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(v.kata)}" data-read="${SV.escAttr(v.kana||v.kata)}" data-role="kanji-contoh" onclick="event.stopPropagation();SV.btn(this)">🔊</button></div><div class="r">${_kvEsc(v.kana)}</div></div>
             <div class="id">${_kvEsc(v.arti)} <span class="kv-go">›</span></div>
@@ -3371,8 +3371,8 @@ async function _kvPaint(){
   const sayK = SV.escAttr(v.kata), sayR = SV.escAttr(v.kana || v.kata);
   m.innerHTML = `<div class="modal kv-card" role="dialog" aria-label="Detail kosakata">
     <button class="panel-close" onclick="kvClose()" title="Tutup">✕</button>
-    <div class="kv-tag">KOSAKATA · ${state.level.toUpperCase()} <span class="kv-main">Kanji utama: ${v.kanji.map(_kvEsc).join(" ")}</span></div>
-    <div class="kv-kata"><ruby>${_kvEsc(v.kata)}<rt>${_kvEsc(v.kana)}</rt></ruby></div>
+    <div class="kv-tag">${v.fallback ? "KANJI (belum ada kosakata)" : "KOSAKATA"} · ${state.level.toUpperCase()} <span class="kv-main">Kanji utama: ${v.kanji.map(_kvEsc).join(" ")}</span></div>
+    <div class="kv-kata">${v.fallback ? _kvEsc(v.kata) : `<ruby>${_kvEsc(v.kata)}<rt>${_kvEsc(v.kana)}</rt></ruby>`}</div>
     <div class="kv-read">${_kvEsc(v.kana)}</div>
     <div class="kv-arti"><b>${_kvEsc(v.arti)}</b></div>
     ${sent ? `<div class="contoh-item" style="flex-direction:column; text-align:left; align-items:flex-start;"><div class="jp">${_rubyJp(sent.j)} <button class="say-mini" data-say="${SV.escAttr(String(sent.j).replace(/\[[^\]]*\]/g, ""))}" data-role="kosakata-contoh" onclick="SV.btn(this)">🔊</button></div><div class="id" style="text-align:left;">${_kvEsc(sent.a)}</div></div>` : ""}
@@ -3680,7 +3680,7 @@ async function _renderHafalanSelectImpl(){
         `}
       </div>
 
-      ${_kvOn() && cfg.tipe === "kanji" ? `<p class="kv-note">🈷️ Kartu berisi <b>kosakata contoh</b> dari Kanji ${state.level.toUpperCase()} (cara baca + arti), <b>bukan</b> Kanji satuan. Kanji utama hanya jadi pengelompokan.</p>` : ""}
+      ${_kvOn() && cfg.tipe === "kanji" ? `<p class="kv-note">🈷️ Kartu berisi <b>kosakata contoh</b> dari Kanji ${state.level.toUpperCase()} (cara baca + arti), <b>bukan</b> Kanji satuan. Kanji utama hanya jadi pengelompokan. Kanji yang belum punya kosakata di database ikut sebagai kartu Kanji itu sendiri.</p>` : ""}
       ${cfg.tipe === "kosakata" ? `<h3 style="margin:16px 0 8px;">Pilih kategori hafalan</h3>${posBar(kos, POS_DEF.some(d => d.k === cfg.pos) ? cfg.pos : "all", "hafPos")}` : ""}
       <h3 style="margin:16px 0 8px;">2. Rentang nomor <small style="color:var(--gray-dim); font-weight:400;">(bucket per 50)</small></h3>
       <div class="haf-chip-row">
@@ -3828,7 +3828,7 @@ const _hafHome = () => (_hafSSW() && state.hafalan_back) || "home";
 const _hafHomeLbl = () => _hafSSW() ? "↩ Kembali" : "🏠 Home";
 // Dokumen SRS per bidang SSW: Building Cleaning tetap "ssw-bc" (data lama), bidang lain "ssw-<slug>".
 const _sswLvl = (slug) => { slug = slug || (window.__sswSlug && window.__sswSlug()) || "building-cleaning"; return slug === "building-cleaning" ? "ssw-bc" : "ssw-" + slug; };
-const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${state.level.toUpperCase()}`;
+const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.fb ? "KANJI (belum ada kosakata)" : it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${state.level.toUpperCase()}`;
 function _sswSaveSess(){ try { sessionStorage.setItem(_SSW_SESS, JSON.stringify({ lvl: state._srsLevel, q: state.hafalan_queue, pos: state.hafalan_pos, mode: (state.hafalan||{}).mode, back: state.hafalan_back, score: state.hafalan_score })); } catch(e){} }
 window.sswHafalStart = async ({ items, mode, back }) => {
   if (!items || !items.length) { toast("Tidak ada kosakata untuk sesi ini"); return false; }

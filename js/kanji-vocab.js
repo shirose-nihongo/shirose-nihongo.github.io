@@ -79,6 +79,21 @@ export function buildKanjiVocab(kanjiList, kosakataList = []) {
       for (const ki of kis) if (!perKanji[ki].includes(v)) perKanji[ki].push(v);
     }
   });
+  // Kanji yang BENAR-BENAR belum punya kosakata di database: kartunya = Kanji itu sendiri (bacaan on/kun + arti).
+  // Kunci terpisah "kj:<kanji>" (tidak bentrok dengan kartu Kanji lama k:<no>). Hanya sebagai cadangan.
+  const tidyRd = (s) => String(s || "").replace(/[.\-]/g, "").trim();
+  (kanjiList || []).forEach((kj, ki) => {
+    if (perKanji[ki].length) return;
+    const main = kanjiOf(kj), arti = kj.arti || kj.a || "";
+    const kana = [tidyRd(kj.on || kj.onyomi), tidyRd(kj.kun || kj.kunyomi)].filter(Boolean).join(" / ");
+    if (!main || !arti || !kana) return;
+    let e = byKata.get(main);
+    if (!e) {
+      e = { kata: main, kana, arti, kosNo: null, key: "kj:" + main, chars: Array.from(main).filter((ch) => WRITABLE_RE.test(ch)), src: null, kanji: [main], fallback: true, id: vocab.length + 1 };
+      byKata.set(main, e); vocab.push(e);
+    }
+    perKanji[ki].push(e);
+  });
   return { vocab, perKanji, byKata };
 }
 
@@ -90,7 +105,7 @@ export function vocabToCard(v) {
     skey: v.key, kv: true,
     front: v.kata, fraw: v.kata, fr: "", reading: v.kana, back: v.arti,
     pos: undefined, src: undefined, kimg: "",
-    kanjiMain: v.kanji,
+    kanjiMain: v.kanji, fb: !!v.fallback,
   };
 }
 

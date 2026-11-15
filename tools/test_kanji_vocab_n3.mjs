@@ -19,10 +19,13 @@ for (const lv of ["n5", "n4", "n3", "n2", "n1"]) {
   const explicitSelf = new Set(K.flatMap(k => (k.c || []).map(c => cleanKata(c.k)).filter(x => x === k.k)));
   const inKos = new Set(V.map(x => cleanKata(x.kata || x.k)));
   const singles = cards.filter(c => mains.has(c.front));
-  ok(singles.every(c => (explicitSelf.has(c.front) || inKos.has(c.front)) && c.reading && c.back), `${lv}: kartu satu-Kanji (${singles.length}) hanya kata eksplisit di database (c / tabel kosakata), ber-baca & ber-arti`);
+  ok(singles.every(c => (explicitSelf.has(c.front) || inKos.has(c.front) || c.skey === "kj:" + c.front) && c.reading && c.back), `${lv}: kartu satu-Kanji (${singles.length}) hanya kata eksplisit di database atau cadangan Kanji-tanpa-kosakata, ber-baca & ber-arti`);
   const asWordElsewhere = (ch) => K.some(o => o.k !== ch && (o.c || []).some(x => cleanKata(x.k) === ch));
   const unlisted = K.filter(k => !explicitSelf.has(k.k) && !asWordElsewhere(k.k) && !inKos.has(k.k));
-  ok(unlisted.every(k => !cards.some(c => c.front === k.k)), `${lv}: Kanji yang bukan kata (${unlisted.length}) TIDAK pernah jadi kartu`);
+  const fbs = idx.vocab.filter(v => v.fallback);
+  ok(unlisted.every(k => !cards.some(c => c.front === k.k && !c.skey.startsWith("kj:"))), `${lv}: Kanji yang bukan kata (${unlisted.length}) tidak jadi kartu kosakata`);
+  ok(fbs.every(v => v.key === "kj:" + v.kata && K.every((k, i) => k.k !== v.kata || (idx.perKanji[i].length === 1 && idx.perKanji[i][0] === v))), `${lv}: ${fbs.length} kartu cadangan Kanji hanya untuk Kanji yang tidak punya kosakata lain`);
+  ok(K.every((k, i) => idx.perKanji[i].length >= 1), `${lv}: setiap Kanji utama punya >= 1 kartu`);
   ok(cards.every(c => Array.from(c.front).some(isKanjiChar)), `${lv}: semua kartu mengandung kanji`);
   // 2. Tanpa duplikat
   const keys = cards.map(c => c.skey), fronts = cards.map(c => c.front);
@@ -42,24 +45,24 @@ for (const lv of ["n5", "n4", "n3", "n2", "n1"]) {
   const byNo = new Map(V.map((x, i) => [noOf(x, i), x]));
   const linked = idx.vocab.filter(v => v.kosNo != null);
   ok(linked.every(v => v.key === "k:" + v.kosNo && cleanKata(byNo.get(v.kosNo).kata || byNo.get(v.kosNo).k) === v.kata), `${lv}: ${linked.length} kata tertaut ke kosakata-${lv} memakai kunci lama k:<no> (progres lama aman)`);
-  ok(idx.vocab.filter(v => v.kosNo == null).every(v => v.key === "kv:" + v.kata), `${lv}: kata baru memakai kunci kv:<kata>`);
+  ok(idx.vocab.filter(v => v.kosNo == null && !v.fallback).every(v => v.key === "kv:" + v.kata), `${lv}: kata baru memakai kunci kv:<kata>`);
   // 5. Data lengkap
   ok(cards.every(c => c.reading && c.back), `${lv}: semua kartu punya cara baca & arti`);
   const miss = new Set(); idx.vocab.forEach(v => v.chars.forEach(ch => { if (!strokeCh.has(ch)) miss.add(ch); }));
   ok(miss.size === 0, `${lv}: data goresan lokal ada untuk semua karakter kanji${miss.size ? " (kurang: " + [...miss].join("") + ")" : ""}`);
-  const noVocab = K.filter((k, i) => !idx.perKanji[i].length);
-  console.log(`info : ${lv}: Kanji tanpa kosakata di database: ${noVocab.length}${noVocab.length && noVocab.length < 12 ? " (" + noVocab.map(k => k.k).join("") + ")" : ""}`);
+  const noVocab = K.filter((k, i) => idx.perKanji[i].every(v => v.fallback));
+  console.log(`info : ${lv}: Kanji tanpa kosakata di database (pakai kartu Kanji sendiri): ${noVocab.length}${noVocab.length && noVocab.length < 12 ? " (" + noVocab.map(k => k.k).join("") + ")" : ""}`);
   // 6. Pilihan latihan
   const v0 = idx.vocab[0];
   const ch = makeChoices(idx, v0, "kana"), ch2 = makeChoices(idx, v0, "arti");
   ok(ch.length === 4 && ch.includes(v0.kana) && new Set(ch).size === 4 && ch2.length === 4 && ch2.includes(v0.arti), `${lv}: pilihan latihan membaca/arti 4 opsi unik`);
-  summary.push(`${lv.toUpperCase()}: Kanji ${K.length} | kosakata ${idx.vocab.length} (tertaut ${linked.length}, baru ${idx.vocab.length - linked.length}) | kata multi-Kanji ${shared.length} | Kanji tanpa kosakata ${noVocab.length}`);
+  summary.push(`${lv.toUpperCase()}: Kanji ${K.length} | kosakata ${idx.vocab.length} (tertaut ${linked.length}, baru ${idx.vocab.length - linked.length}) | kata multi-Kanji ${shared.length} | Kanji tanpa kosakata (kartu Kanji sendiri) ${noVocab.length}`);
 
   if (lv === "n3") {   // kasus khusus yang diminta
     ok(idx.byKata.get("昔")?.kana === "むかし", "n3: 昔 (むかし) jadi kartu");
     ok(idx.byKata.get("王様")?.kana === "おうさま" && idx.byKata.get("王様").kanji.includes("王"), "n3: 王様 (おうさま) jadi kartu untuk Kanji 王");
     ok(!cards.some(c => c.front === "政" || c.front === "駐"), "n3: 政 / 駐 tidak jadi kartu");
-    ok(noVocab.length === 0, "n3: setiap Kanji utama punya minimal 1 kosakata");
+    ok(noVocab.length === 0, "n3: setiap Kanji utama punya minimal 1 kosakata asli");
   }
 }
 console.log("\nRINGKAS:\n" + summary.join("\n"));

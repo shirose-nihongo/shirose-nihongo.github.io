@@ -119,7 +119,7 @@ with sync_playwright() as p:
     kos3 = json.load(open(ROOT/"data/kosakata-n3.json", encoding="utf8"))
     listed = {c["k"] for k in kj for c in k["c"] if c["k"] == k["k"]} | {re.sub(r"\[[^\]]*\]", "", v["kata"]).strip() for v in kos3}
     ok(all(c["f"] in listed for c in q if c["f"] in mains), "kartu satu-Kanji hanya kata yang eksplisit ada di database (昔, 猫, ...)")
-    ok(not any(c["f"] in (mains - listed) for c in q), "Kanji satuan yang bukan kata (政, 駐, ...) tidak ada di deck")
+    ok(not any(c["f"] in (mains - listed) for c in q if not c["k"].startswith("kj:")), "Kanji satuan yang bukan kata (政, 駐, ...) tidak ada di deck")
     ok(any(c["f"] == "昔" for c in q) and any(c["f"] == "王様" for c in q), "昔 dan 王様 ada di deck")
     ok(len({c['k'] for c in q}) == len(q), "tanpa kartu ganda")
     # semua
@@ -152,8 +152,9 @@ with sync_playwright() as p:
         q = pg.evaluate("() => window.__SHIROSE_STATE.hafalan_queue.map(c => ({t: c.tipe, f: c.front, k: c.skey || (c.tipe[0] + ':' + c.no)}))")
         ok(len(q) > 50 and not any(c["t"] == "kanji" for c in q), f"{lv}: deck Kosakata Kanji {len(q)} kartu, tanpa kartu bertipe kanji")
         ok(len({c['k'] for c in q}) == len(q), f"{lv}: tanpa kartu ganda")
-        ok(all(c["f"] in listed or c["f"] in inkos for c in q if c["f"] in mains), f"{lv}: kartu satu-Kanji hanya kata eksplisit di database")
-        ok(not any(c["f"] in (mains - listed - inkos) for c in q), f"{lv}: Kanji satuan yang bukan kata tidak ada di deck")
+        ok(all(c["f"] in listed or c["f"] in inkos or c["k"].startswith("kj:") for c in q if c["f"] in mains), f"{lv}: kartu satu-Kanji hanya kata eksplisit / cadangan Kanji-tanpa-kosakata")
+        fbn = sum(1 for c in q if c["k"].startswith("kj:"))
+        ok(not any(c["f"] in (mains - listed - inkos) for c in q if not c["k"].startswith("kj:")), f"{lv}: Kanji satuan yang bukan kata tidak jadi kartu kosakata (cadangan kj: = {fbn})")
     ok(not errs, f"tidak ada error JS di {MODE}: {errs[:3]}")
     b.close()
 srv.shutdown()
