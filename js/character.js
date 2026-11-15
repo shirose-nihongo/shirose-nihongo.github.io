@@ -952,10 +952,10 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261116g";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116g";
-import { extendShirose } from "./shirose-set.js?v=20261116g";
-import { extend2 } from "./character-more2.js?v=20261116g";
+import { extend } from "./character-more.js?v=20261116h";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116h";
+import { extendShirose } from "./shirose-set.js?v=20261116h";
+import { extend2 } from "./character-more2.js?v=20261116h";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
