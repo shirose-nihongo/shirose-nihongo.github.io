@@ -460,6 +460,13 @@ export async function equipItem(kategori, itemId) {
  * Saldo lama di gami/{lvl}.koin dimigrasi SEKALI per level (ditandai migrasi[lvl]) lalu tidak dipakai lagi (dokumen lama tidak dihapus).
  * Jika dompet tidak bisa diakses (rules/jaringan) → kembali ke perilaku lama per level, tidak ada koin hilang.
  * Log transaksi: siswa/{uid}/wallet_log/{id} (best-effort). */
+/* ===== GACHA 100% LOKAL (tanpa Firestore): pity, inventaris, dan koin yang sudah dibelanjakan disimpan di perangkat siswa. =====
+ * Saldo efektif = saldo dompet server − koin yang dipakai gacha di perangkat ini. */
+function _gLocal() { try { return JSON.parse(localStorage.getItem("shirose-gacha:" + (currentUser && currentUser.uid)) || "null") || {}; } catch (e) { return {}; } }
+function _gSave(o) { try { localStorage.setItem("shirose-gacha:" + currentUser.uid, JSON.stringify(o)); } catch (e) {} }
+function _gSpent() { return Number(_gLocal().spent) || 0; }
+export function gachaSpend(price) { const o = _gLocal(); o.spent = (Number(o.spent) || 0) + price; _gSave(o); }
+export function gachaRefund(price) { const o = _gLocal(); o.spent = Math.max(0, (Number(o.spent) || 0) - price); _gSave(o); }
 const WALLET_LVLS = ["n5","n4","n3","n2","n1","ir0","ir1","ir2"];
 let _walletOff = false, _walletErr = "";
 export function walletError() { return _walletErr; }
@@ -478,8 +485,9 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
     tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp() }, { merge: true });
     return w.koin;
   });
+  const _eff = out - _gSpent();
   if (delta) { try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || ""), saldo: out }); } catch (e) {} }
-  return out;
+  return _eff;
 }
 export async function getWalletKoin() {
   if (!currentUser) return null;
@@ -512,18 +520,15 @@ async function _koinTulisSaja(delta, alasan) {
 }
 export async function getGachaState() {
   if (!currentUser) return null;
-  try { const s = await getDoc(doc(db, "siswa", currentUser.uid, "wallet", "gacha")); return s.exists() ? s.data() : { sinceEpic: 0, sinceLegend: 0, inv: [] }; } catch (e) { return null; }
+  const o = _gLocal(); return { sinceEpic: o.sinceEpic || 0, sinceLegend: o.sinceLegend || 0, inv: o.inv || [] };
 }
-/* Mode lokal gacha (sementara, sampai Worker server aktif): simpan status & inventaris dari klien. */
+/* Simpan status & inventaris gacha di perangkat (localStorage). Barang toko ikut dimasukkan ke inventaris karakter di memori. */
 export async function saveGachaState(state, shopIds) {
   if (!currentUser) throw new Error("Belum login");
-  await setDoc(doc(db, "siswa", currentUser.uid, "wallet", "gacha"), { sinceEpic: state.sinceEpic || 0, sinceLegend: state.sinceLegend || 0, inv: state.inv || [], updated: serverTimestamp() }, { merge: true });
-  if (shopIds && shopIds.length) {
-    const ref = doc(db, "siswa", currentUser.uid);
-    const cur = (await getDoc(ref)).data() || {};
-    const inv = Array.from(new Set([...(cur.karakter?.inventory || []), ...shopIds]));
-    await updateDoc(ref, { "karakter.inventory": inv });
-    if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.inventory = inv;
+  const o = _gLocal(); o.sinceEpic = state.sinceEpic || 0; o.sinceLegend = state.sinceLegend || 0; o.inv = state.inv || []; _gSave(o);
+  if (shopIds && shopIds.length && currentSiswaDoc) {
+    currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
+    currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), ...shopIds]));
   }
 }
 export function ownedShopIds() { return (currentSiswaDoc && currentSiswaDoc.karakter && currentSiswaDoc.karakter.inventory) || []; }
