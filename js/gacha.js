@@ -49,39 +49,66 @@ function pola(r) {
   if (r === "common" || r === "uncommon") { const o = rnd(FILL.filter(x => x !== s && x !== SYM.epic && x !== SYM.legendary && x !== SYM.mythic)); const a = [s, s, o]; const p = Math.floor(Math.random() * 3); [a[p], a[2]] = [a[2], a[p]]; return a; }
   return [s, s, s];
 }
-function kartuHadiah(x) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;"><div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat → +${CONFIG.DUP_REFUND[x.rarity]} 🪙</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
+function kartuHadiah(x, dl) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;${dl ? "animation-delay:" + dl + "s;" : ""}"><div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat → +${CONFIG.DUP_REFUND[x.rarity]} 🪙</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
 function playSlot(res) {
   return new Promise((done) => {
     const list = res.results.slice().sort((a, b) => ORDR.indexOf(a.rarity) - ORDR.indexOf(b.rarity)), best = list[0], target = pola(best.rarity), c = RAR[best.rarity][1];
-    const o = document.createElement("div"); o.id = "gfx";
-    o.innerHTML = `<style>#gfx{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.82);display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto;color:#fff}
-#gfx .box{width:min(560px,100%);text-align:center}#gfx .reels{display:flex;gap:10px;justify-content:center;margin:16px 0;padding:16px;border-radius:18px;background:linear-gradient(#222,#111);border:3px solid #ffd166;box-shadow:0 0 30px #ffd16655 inset}
-#gfx .reel{width:88px;height:96px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:52px;color:#000;box-shadow:inset 0 0 14px #0005;transition:transform .15s}
-#gfx .reel.spin{filter:blur(1.2px);animation:gfxShake .12s infinite}@keyframes gfxShake{50%{transform:translateY(5px)}}
-#gfx .reel.lock{animation:gfxPop .35s}@keyframes gfxPop{40%{transform:scale(1.18)}}
-#gfx .win{animation:gfxWin .9s infinite}@keyframes gfxWin{50%{box-shadow:0 0 34px 8px var(--c)}}
-#gfx .gfx-card{display:inline-block;min-width:200px;margin:6px;padding:12px 16px;border-radius:14px;border:2px solid;background:#161616}
+    const hi = ORDR.indexOf(best.rarity) <= 1, mid = ORDR.indexOf(best.rarity) <= 3, H = 96, N = 26;
+    const o = document.createElement("div"); o.id = "gfx"; o.style.setProperty("--c", c);
+    const strip = (t) => { const a = []; for (let i = 0; i < N - 1; i++) a.push(rnd(FILL)); a.push(t); return a.map(s => `<div class="sym">${s}</div>`).join(""); };
+    const bulbs = Array.from({ length: 14 }, (_, i) => `<i style="animation-delay:${(i % 2) * .4}s"></i>`).join("");
+    o.innerHTML = `<style>
+#gfx{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto;color:#fff;background:radial-gradient(ellipse at 50% 40%,#2a1459 0%,#0b0620 60%,#000 100%);animation:gfxBg 3s ease-in-out infinite alternate}
+@keyframes gfxBg{to{filter:hue-rotate(40deg) brightness(1.15)}}
+#gfx .stars{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+#gfx .stars i{position:absolute;bottom:-20px;font-style:normal;animation:gfxUp linear infinite;opacity:.7}
+@keyframes gfxUp{to{transform:translateY(-110vh) rotate(180deg)}}
+#gfx .rays{position:absolute;left:50%;top:38%;width:160vmax;height:160vmax;margin:-80vmax 0 0 -80vmax;pointer-events:none;opacity:0;background:repeating-conic-gradient(from 0deg,var(--c) 0 6deg,transparent 6deg 18deg);-webkit-mask:radial-gradient(circle,#000 0,transparent 55%);mask:radial-gradient(circle,#000 0,transparent 55%);animation:gfxSpin 14s linear infinite;transition:opacity .6s}
+#gfx.show .rays{opacity:.5}@keyframes gfxSpin{to{transform:rotate(360deg)}}
+#gfx .box{position:relative;width:min(560px,100%);text-align:center}
+#gfx .mach{position:relative;margin:14px auto;padding:22px 16px 16px;border-radius:22px;background:linear-gradient(#7a1f3d,#3d0f20);border:4px solid #ffd166;box-shadow:0 0 40px #ffd16666,inset 0 0 22px #0008;width:fit-content;max-width:100%}
+#gfx .bulbs{position:absolute;left:12px;right:12px;top:6px;display:flex;justify-content:space-between}
+#gfx .bulbs i{width:9px;height:9px;border-radius:50%;background:#ffd166;box-shadow:0 0 10px #ffd166;animation:gfxBlink .8s infinite}@keyframes gfxBlink{50%{opacity:.2}}
+#gfx .reels{display:flex;gap:10px;justify-content:center;padding:10px;border-radius:14px;background:#111}
+#gfx .win{width:88px;height:${H}px;overflow:hidden;border-radius:10px;background:#fff;box-shadow:inset 0 0 14px #0007;position:relative}
+#gfx .win:after{content:"";position:absolute;inset:0;background:linear-gradient(#0005,transparent 25%,transparent 75%,#0005);pointer-events:none}
+#gfx .strip{transition:transform var(--d,2s) cubic-bezier(.1,.75,.2,1);will-change:transform}
+#gfx .strip.mv{filter:blur(2px)}
+#gfx .sym{height:${H}px;display:flex;align-items:center;justify-content:center;font-size:52px;color:#000}
+#gfx .win.lock{animation:gfxPop .4s}@keyframes gfxPop{40%{transform:scale(1.14)}}
+#gfx .mach.glow{animation:gfxGlow .9s infinite}@keyframes gfxGlow{50%{box-shadow:0 0 60px 14px var(--c),inset 0 0 22px #0008}}
+#gfx .gfx-card{display:inline-block;min-width:200px;margin:6px;padding:12px 16px;border-radius:14px;border:2px solid;background:#161616cc;backdrop-filter:blur(3px);animation:gfxCard .7s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes gfxCard{from{transform:scale(.2) rotateY(90deg);opacity:0}to{transform:none;opacity:1}}
+#gfx .best .gfx-card{transform-origin:center;font-size:110%;animation:gfxCard .8s cubic-bezier(.2,1.4,.4,1) both,gfxFloat 2.4s ease-in-out .9s infinite}
+@keyframes gfxFloat{50%{transform:translateY(-6px) scale(1.03)}}
 #gfx .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px}
+#gfx .grid .gfx-card{margin:2px;min-width:0;animation:gfxFly .5s ease-out both}
+@keyframes gfxFly{from{transform:translateY(40px) scale(.6);opacity:0}to{transform:none;opacity:1}}
 #gfx button{background:#fff;color:#111;border:0;border-radius:10px;padding:9px 18px;font-weight:800;cursor:pointer;margin:6px}
-#gfx .conf{position:fixed;top:-20px;font-size:22px;animation:gfxFall linear forwards;pointer-events:none}@keyframes gfxFall{to{transform:translateY(110vh) rotate(360deg);opacity:.9}}</style>
-<div class="box"><div style="font-size:14px;letter-spacing:.2em;opacity:.8;">🎰 GACHA ${res.results.length > 1 ? "×" + res.results.length : ""}</div>
-<div class="reels" id="gfx-reels"><div class="reel spin">?</div><div class="reel spin">?</div><div class="reel spin">?</div></div>
+#gfx .conf{position:fixed;top:-20px;font-size:22px;animation:gfxFall linear forwards;pointer-events:none}@keyframes gfxFall{to{transform:translateY(110vh) rotate(360deg);opacity:.9}}
+</style>
+<div class="rays"></div><div class="stars">${Array.from({ length: 18 }, () => `<i style="left:${Math.random() * 100}%;font-size:${12 + Math.random() * 16}px;animation-duration:${4 + Math.random() * 5}s;animation-delay:-${Math.random() * 6}s">${rnd(["✨", "⭐", "🌟", "💫"])}</i>`).join("")}</div>
+<div class="box"><div style="font-size:14px;letter-spacing:.25em;opacity:.9;">🎰 GACHA ${res.results.length > 1 ? "×" + res.results.length : ""}</div>
+<div class="mach" id="gfx-mach"><div class="bulbs">${bulbs}</div><div class="reels">${target.map(t => `<div class="win"><div class="strip mv">${strip(t)}</div></div>`).join("")}</div></div>
 <div id="gfx-out" style="min-height:120px;"></div><div id="gfx-btn"><button id="gfx-skip">Lewati ⏭</button></div></div>`;
     document.body.appendChild(o);
-    const reels = [...o.querySelectorAll(".reel")], tm = [];
-    const spin = reels.map(r => setInterval(() => { r.textContent = rnd(FILL); }, 75));
+    const wins = [...o.querySelectorAll(".win")], strips = [...o.querySelectorAll(".strip")], tm = [];
+    const durs = [2.0, 2.9, 3.8];
+    requestAnimationFrame(() => requestAnimationFrame(() => strips.forEach((s, i) => { s.style.setProperty("--d", durs[i] + "s"); s.style.transform = `translateY(${-(N - 1) * H}px)`; })));
     let finished = false;
-    const stop = (i) => { clearInterval(spin[i]); reels[i].classList.remove("spin"); reels[i].classList.add("lock"); reels[i].textContent = target[i]; };
-    const tutup = () => { tm.forEach(clearTimeout); spin.forEach(clearInterval); o.remove(); done(); };
+    const kunci = (i) => { strips[i].classList.remove("mv"); wins[i].classList.add("lock"); };
+    const tutup = () => { tm.forEach(clearTimeout); o.remove(); done(); };
     const tampil = () => {
-      if (finished) return; finished = true; [0, 1, 2].forEach(stop);
-      const rs = o.querySelector("#gfx-reels"); rs.style.setProperty("--c", c); if (ORDR.indexOf(best.rarity) <= 3) rs.classList.add("win");
-      if (ORDR.indexOf(best.rarity) <= 1) for (let i = 0; i < 30; i++) { const e = document.createElement("i"); e.className = "conf"; e.textContent = rnd(["✨", "⭐", "🎉", "💎"]); e.style.left = Math.random() * 100 + "vw"; e.style.animationDuration = 1.6 + Math.random() * 1.6 + "s"; o.appendChild(e); }
+      if (finished) return; finished = true;
+      strips.forEach((s, i) => { s.style.transition = "none"; s.style.transform = `translateY(${-(N - 1) * H}px)`; kunci(i); });
+      if (mid) o.querySelector("#gfx-mach").classList.add("glow"); o.classList.add("show");
+      if (hi) for (let i = 0; i < 36; i++) { const e = document.createElement("i"); e.className = "conf"; e.textContent = rnd(["✨", "⭐", "🎉", "💎", "👑"]); e.style.left = Math.random() * 100 + "vw"; e.style.animationDuration = 1.6 + Math.random() * 1.8 + "s"; e.style.animationDelay = Math.random() * .6 + "s"; o.appendChild(e); }
       const sisa = list.slice(1);
-      o.querySelector("#gfx-out").innerHTML = (res.results.length > 1 ? '<div style="opacity:.8;font-size:13px;">Hadiah terbaik</div>' : "") + kartuHadiah(best) + (sisa.length ? `<div style="opacity:.8;font-size:13px;margin-top:10px;">Hadiah lainnya</div><div class="grid">${sisa.map(kartuHadiah).join("")}</div>` : "") + (res.refund ? `<div style="margin-top:8px;color:#ffd166;">+${res.refund} 🪙 dari duplikat</div>` : "");
+      o.querySelector("#gfx-out").innerHTML = (res.results.length > 1 ? '<div style="opacity:.85;font-size:13px;">Hadiah terbaik</div>' : "") + `<div class="best">${kartuHadiah(best)}</div>` + (sisa.length ? `<div style="opacity:.85;font-size:13px;margin-top:10px;">Hadiah lainnya</div><div class="grid">${sisa.map((x, i) => kartuHadiah(x, (.5 + i * .12).toFixed(2))).join("")}</div>` : "") + (res.refund ? `<div style="margin-top:8px;color:#ffd166;">+${res.refund} 🪙 dari duplikat</div>` : "");
       o.querySelector("#gfx-btn").innerHTML = '<button id="gfx-ok">Tutup</button>'; o.querySelector("#gfx-ok").onclick = tutup;
     };
-    tm.push(setTimeout(() => stop(0), 1100), setTimeout(() => stop(1), 1800), setTimeout(() => stop(2), 2600), setTimeout(tampil, 3000));
+    durs.forEach((d, i) => tm.push(setTimeout(() => kunci(i), d * 1000)));
+    tm.push(setTimeout(tampil, durs[2] * 1000 + 350));
     o.querySelector("#gfx-skip").onclick = tampil;
   });
 }
