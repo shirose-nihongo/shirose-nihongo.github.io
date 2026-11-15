@@ -947,7 +947,7 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js";
+import { extend } from "./character-more.js?v=20261115m";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS };
 extend(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
