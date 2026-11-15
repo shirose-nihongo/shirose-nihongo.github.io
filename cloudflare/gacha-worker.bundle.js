@@ -2173,192 +2173,200 @@ const ITEMS = [
   "nama": "Sayap Kardus",
   "rarity": "common",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 400
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 15000
  },
  {
   "id": "sy_kertas",
   "nama": "Sayap Kertas Origami",
   "rarity": "common",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 600
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 15000
  },
  {
   "id": "sy_plastik",
   "nama": "Sayap Plastik Kresek",
   "rarity": "common",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 850
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 15000
  },
  {
   "id": "sy_kain_lusuh",
   "nama": "Sayap Kain Lusuh",
   "rarity": "common",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 1050
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 15000
  },
  {
   "id": "sy_ayam",
   "nama": "Sayap Ayam",
   "rarity": "common",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 1300
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 15000
  },
  {
   "id": "sy_bebek_karet",
   "nama": "Sayap Bebek Karet",
   "rarity": "common",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 1500
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 15000
  },
  {
   "id": "sy_daun",
   "nama": "Sayap Daun Hutan",
   "rarity": "uncommon",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 2500
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 25000
  },
  {
   "id": "sy_capung",
   "nama": "Sayap Capung",
   "rarity": "uncommon",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 5000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 25000
  },
  {
   "id": "sy_angin",
   "nama": "Sayap Angin Puyuh",
   "rarity": "rare",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 9000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 45000
  },
  {
   "id": "sy_es",
   "nama": "Sayap Es Kristal",
   "rarity": "rare",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 12500
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 45000
  },
  {
   "id": "sy_daun_besar",
   "nama": "Sayap Pohon Dunia",
   "rarity": "rare",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 16000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 45000
  },
  {
   "id": "sy_badai",
   "nama": "Sayap Angin Badai",
   "rarity": "epic",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 25000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 80000
  },
  {
   "id": "sy_api",
   "nama": "Sayap Api",
   "rarity": "epic",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 30500
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 80000
  },
  {
   "id": "sy_gargoyle",
   "nama": "Sayap Gargoyle",
   "rarity": "epic",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 36000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 80000
  },
  {
   "id": "sy_gargoyle_batu",
   "nama": "Sayap Gargoyle Batu Hitam",
   "rarity": "legendary",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 50000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 150000
  },
  {
   "id": "sy_malaikat",
-  "nama": "Sayap Malaikat Emas",
+  "nama": "Sayap Malaikat Agung",
   "rarity": "legendary",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 60000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 150000
  },
  {
   "id": "sy_phoenix",
   "nama": "Sayap Phoenix Abadi",
   "rarity": "legendary",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 70000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 150000
  },
  {
   "id": "sy_naga_es",
-  "nama": "Sayap Naga Es",
+  "nama": "Sayap Naga Es Bangsawan",
   "rarity": "legendary",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 80000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 150000
  },
  {
   "id": "sy_galaxy",
   "nama": "Sayap Galaksi",
   "rarity": "mythic",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 100000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 300000
  },
  {
   "id": "sy_dewa_angin",
-  "nama": "Sayap Dewa Angin & Petir",
+  "nama": "Sayap Dewa Roh Biru",
   "rarity": "mythic",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 130000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 300000
  },
  {
   "id": "sy2_kupu",
   "nama": "Sayap Kupu-kupu",
   "rarity": "uncommon",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 2500
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 25000
  },
  {
   "id": "sy2_malam",
   "nama": "Sayap Kelelawar Malam",
   "rarity": "rare",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 9000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 45000
  },
  {
   "id": "sy2_kristal_ungu",
   "nama": "Sayap Kristal Ungu",
   "rarity": "epic",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 25000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 80000
  },
  {
   "id": "sy2_pelangi",
   "nama": "Sayap Pelangi",
   "rarity": "legendary",
   "kind": "shop",
-  "kat": "Sayap (Lv 50)",
-  "harga": 50000
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 150000
+ },
+ {
+  "id": "sy2_emas_agung",
+  "nama": "Sayap Emas Dewa Cahaya",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Sayap (khusus Gacha)",
+  "harga": 300000
  },
  {
   "id": "theme_ungu",

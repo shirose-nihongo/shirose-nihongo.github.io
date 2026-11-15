@@ -1431,8 +1431,8 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261115n";
-import { allShopItems } from "./js/shop-seed.js?v=20261115n";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261115p";
+import { allShopItems } from "./js/shop-seed.js?v=20261115p";
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
 import * as FB from "./js/firebase-sync.js?v=20261115b";
@@ -1445,7 +1445,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
-import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115n";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115p";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -4567,7 +4567,6 @@ async function renderShop(){
     { key: "item_tangan", label: "⚔️ Senjata" },
     { key: "aura",        label: "✨ Aura" },
     { key: "celana",      label: "👖 Celana" },
-    { key: "sayap",       label: "🪽 Sayap (Lv 50)" },
   ];
   const activeCat = state._shopCat && CAT_TABS.some(t => t.key === state._shopCat) ? state._shopCat : "rambut";
   state._shopCat = activeCat;

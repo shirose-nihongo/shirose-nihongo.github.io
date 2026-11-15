@@ -1,6 +1,6 @@
 /* Koleksi tambahan ke-2: RAMBUT baru + lebih banyak baju, celana, sepatu, aksesori, senjata, aura, sayap. */
 import { H } from "./character-more.js";
-const { SK, build, U, outfit, pants, shoe, aura, blade, gl, orb, staff, PAIR, wingFeather, wingBat, wingLeaf, wingCrystal, wingWind, wingFlame } = H;
+const { SK, build, U, outfit, pants, shoe, aura, blade, gl, orb, staff, PAIR, wingFeather, wingBat, wingLeaf, wingCrystal, wingWind, wingFlame, buildWings, tier, angel, phoenix, dragon, spirit, crystal } = H;
 
 /* ---------- RAMBUT (svg menerima warna dasar c; yang punya warna tetap mengabaikannya) ---------- */
 const BASE = (f) => `<path d="M150 90 Q155 72 180 68 Q200 65 220 68 Q245 72 250 90 Q252 105 250 115 Q245 95 220 92 L220 100 Q200 90 180 100 L180 92 Q155 95 150 115 Z" fill="${f}"/>`;
@@ -110,9 +110,10 @@ const AURA = [
 
 /* ---------- SAYAP (Lv 50) ---------- */
 const WING = [
-  ["kupu", "Sayap Kupu-kupu", "uncommon", () => PAIR(`<path d="M252 226 Q340 130 352 200 Q344 240 252 230Z M252 232 Q330 250 330 296 Q300 320 252 236Z" fill="#fb923c" stroke="#7c2d12" stroke-width="2"/><circle cx="318" cy="200" r="7" fill="#fde047"/><circle cx="304" cy="286" r="5" fill="#fde047"/>`, 1)],
-  ["malam", "Sayap Kelelawar Malam", "rare", () => PAIR(wingBat("#4c1d95", "#c4b5fd", 4), 1)], ["kristal_ungu", "Sayap Kristal Ungu", "epic", () => PAIR(wingCrystal("#c4b5fd", "#6d28d9", 7), 1)],
-  ["pelangi", "Sayap Pelangi", "legendary", () => PAIR(["#ef4444", "#f59e0b", "#22c55e", "#3b82f6", "#a855f7"].map((c, i) => wingFeather(c, "#fff", 3, 100 - i * 4, 1.2 - i * .12)).join(""), 1)],
+  ["kupu", "Sayap Kupu-kupu", "uncommon", () => PAIR(`<path d="M252 226 Q344 120 372 196 Q360 244 252 230Z M252 232 Q340 252 342 306 Q304 336 252 236Z" fill="#fb923c" stroke="#7c2d12" stroke-width="2"/><circle cx="334" cy="196" r="9" fill="#fde047"/><circle cx="312" cy="294" r="6" fill="#fde047"/>`, 1)],
+  ["malam", "Sayap Kelelawar Malam", "rare", () => PAIR(dragon("#4c1d95", "#c4b5fd"), 1)], ["kristal_ungu", "Sayap Kristal Ungu", "epic", () => PAIR(crystal("#c4b5fd", "#6d28d9", 8), 1)],
+  ["pelangi", "Sayap Pelangi", "legendary", () => PAIR(["#a855f7", "#3b82f6", "#22c55e", "#f59e0b", "#ef4444"].map((c, i) => tier(7 - i, -100 + i * 6, 10 - i * 4, 175 - i * 22, 14 - i, c, "#fff")).join(""), 1)],
+  ["emas_agung", "Sayap Emas Dewa Cahaya", "mythic", () => PAIR(angel("#fef08a", "#facc15", "#a16207") + `<circle cx="256" cy="224" r="22" fill="#fff" opacity=".5"><animate attributeName="r" values="16;28;16" dur="2s" repeatCount="indefinite"/></circle>`, 1)],
 ].map(([id, n, r, f]) => [id, n, r, f]);
 
 export function extend2(C) {
@@ -120,5 +121,5 @@ export function extend2(C) {
   Object.assign(C.OUTFITS, build(OUT, "o2_")); Object.assign(C.SHOES, build(SHOESL, "sh2_"));
   Object.assign(C.ACCESSORIES, build(ACCS, "ac2_")); Object.assign(C.HANDHELD, build(HOLD, "hh2_")); Object.assign(C.AURAS, build(AURA, "au2_"));
   Object.assign(C.CELANA, build(PANTS, "cl2_"));
-  const w = build(WING, "sy2_"); Object.values(w).forEach(x => x.unlock_lv = 50); Object.assign(C.SAYAP, w);
+  Object.assign(C.SAYAP, buildWings(WING, "sy2_"));
 }

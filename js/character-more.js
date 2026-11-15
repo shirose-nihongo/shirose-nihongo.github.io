@@ -199,35 +199,50 @@ const AURA = [
   ["galaxy", "🌌 Aura Galaksi", "mythic", { c: "#a78bfa", c2: "#1e1b4b", p: "star", ring: 1, r: 158 }], ["dewa", "☀️ Aura Dewa Matahari", "mythic", { c: "#fde047", c2: "#f97316", p: "star", ring: 1, r: 165, dur: "1.8s" }],
 ].map(([id, n, r, o]) => [id, n, r, () => aura(o)]);
 
-/* ======================= SAYAP (baru kebuka Lv 50) ======================= */
-const FLAP = (inner, px = 250, py = 225, a = 5, dur = "2.4s") => `<g>${inner}<animateTransform attributeName="transform" type="rotate" values="${-a} ${px} ${py};${a} ${px} ${py};${-a} ${px} ${py}" dur="${dur}" repeatCount="indefinite"/></g>`;
-const PAIR = (inner, flap) => `<g data-wing="1"><g>${flap ? FLAP(inner) : inner}</g><g transform="translate(400 0) scale(-1 1)">${flap ? FLAP(inner) : inner}</g></g>`;
-const feather = (a, k, f, st, dly = "") => `<path d="M0 0 Q44 -26 128 -8 Q64 14 0 0Z" fill="${f}" stroke="${st}" stroke-width="1.4" transform="translate(252 226) rotate(${a}) scale(${k})"/>`;
-function wingFeather(f, st, n = 9, span = 150, big = 1) { let s = ""; for (let i = 0; i < n; i++) s += feather(-80 + (span / (n - 1)) * i, big * (.7 + .3 * Math.sin((i / (n - 1)) * Math.PI)), f, st); return s; }
-function wingBat(m, bone, tips = 4) { let s = ""; const T = [[330, 120], [352, 190], [334, 262], [296, 304]].slice(0, tips); s += `<path d="M252 226 ${T.map(t => `L${t[0]} ${t[1]}`).join(" ")} L270 280 Q262 250 252 226Z" fill="${m}" stroke="${bone}" stroke-width="2"/>`; T.forEach(t => s += `<path d="M252 226 L${t[0]} ${t[1]}" stroke="${bone}" stroke-width="3.5" stroke-linecap="round"/>`); return s; }
-function wingLeaf(f, vein, n = 6) { let s = ""; for (let i = 0; i < n; i++) { const a = -70 + i * (130 / (n - 1)), k = .8 + .2 * Math.sin((i / (n - 1)) * Math.PI); s += `<g transform="translate(252 226) rotate(${a}) scale(${k})"><path d="M0 0 Q50 -34 120 0 Q50 34 0 0Z" fill="${f}" stroke="${vein}" stroke-width="1.5"/><path d="M6 0 H112" stroke="${vein}" stroke-width="1.5"/></g>`; } return s; }
-function wingCrystal(f, st, n = 6) { let s = ""; for (let i = 0; i < n; i++) { const a = -75 + i * (140 / (n - 1)), k = .8 + .3 * Math.sin((i / (n - 1)) * Math.PI); s += `<path d="M0 -6 L112 -3 L132 0 L112 3 L0 6Z" fill="${f}" stroke="${st}" stroke-width="1.5" opacity=".92" transform="translate(252 226) rotate(${a}) scale(${k})"/>`; } return s + `<circle cx="252" cy="226" r="8" fill="${f}" stroke="${st}" stroke-width="1.5"/>`; }
-function wingWind(c, n = 5) { let s = ""; for (let i = 0; i < n; i++) { const a = -65 + i * 28; s += `<path d="M0 0 Q60 ${-30 + i * 6} 130 ${-10 + i * 4} Q70 ${8 + i * 4} 0 0Z" fill="${c}" opacity=".55" stroke="#fff" stroke-width="1.5" transform="translate(252 226) rotate(${a})"><animate attributeName="opacity" values=".25;.7;.25" dur="${1.4 + i * .25}s" repeatCount="indefinite"/></path>`; } return s; }
-function wingFlame(c1, c2, n = 7) { const g = U("gf"); let s = `<defs><linearGradient id="${g}" x1="0" x2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>`; for (let i = 0; i < n; i++) { const a = -78 + i * (150 / (n - 1)); s += `<path d="M0 0 C30 -26 70 -20 96 -6 C112 -26 128 -2 150 -4 C120 8 70 22 0 0Z" fill="url(#${g})" opacity=".92" transform="translate(252 226) rotate(${a})"><animate attributeName="opacity" values=".65;1;.65" dur="${.9 + (i % 3) * .3}s" repeatCount="indefinite"/></path>`; } return s; }
+/* ======================= SAYAP (hanya dari GACHA; level pakai naik sesuai kelangkaan) ======================= */
+const PV = "translate(252 226)";
+const FLAP = (inner, a = 4, dur = "2.6s") => `<g>${inner}<animateTransform attributeName="transform" type="rotate" values="${-a} 252 226;${a} 252 226;${-a} 252 226" dur="${dur}" repeatCount="indefinite"/></g>`;
+/* PAIR: sayap kanan digambar, kiri = cermin. k = skala, flap = animasi kepak */
+const PAIR = (inner, flap, k = 1.35) => { const g = `<g transform="translate(252 226) scale(${k}) translate(-252 -226)">${inner}</g>`; return `<g data-wing="1">${flap ? FLAP(g) : g}<g transform="translate(400 0) scale(-1 1)">${flap ? FLAP(g) : g}</g></g>`; };
+const lens = (L, w) => `M0 0 C${L * .25} ${-w} ${L * .8} ${-w} ${L} 0 C${L * .8} ${w} ${L * .25} ${w} 0 0Z`;
+const tier = (n, a0, a1, L, w, f, st, op = 1) => { let s = ""; for (let i = 0; i < n; i++) { const a = a0 + (a1 - a0) * (n > 1 ? i / (n - 1) : 0), l = L * (.82 + .18 * Math.sin((i / Math.max(1, n - 1)) * Math.PI)); s += `<path d="${lens(l, w)}" fill="${f}" stroke="${st}" stroke-width="1.4" opacity="${op}" transform="${PV} rotate(${a})"/>`; } return s; };
+/* sayap malaikat berlapis 3 tingkat (terinspirasi sayap bulu besar) */
+const angel = (f1, f2, st) => tier(8, -102, 18, 175, 15, f2, st) + tier(7, -88, 6, 130, 14, f1, st) + tier(6, -72, -2, 86, 12, f1, st) + `<ellipse cx="256" cy="224" rx="16" ry="12" fill="${f1}" stroke="${st}" stroke-width="1.4"/>`;
+function flameTier(n, a0, a1, L, w, fill, dur) { let s = ""; for (let i = 0; i < n; i++) { const a = a0 + (a1 - a0) * (n > 1 ? i / (n - 1) : 0), l = L * (.82 + .18 * Math.sin((i / Math.max(1, n - 1)) * Math.PI)); s += `<path d="M0 0 C${l * .2} ${-w * 1.2} ${l * .5} ${-w * .4} ${l * .62} ${-w} C${l * .7} ${-w * .2} ${l * .85} ${-w * .6} ${l} 0 C${l * .7} ${w * .6} ${l * .3} ${w} 0 0Z" fill="${fill}" transform="${PV} rotate(${a})"><animate attributeName="opacity" values=".6;1;.6" dur="${(dur + (i % 3) * .3).toFixed(1)}s" repeatCount="indefinite"/></path>`; } return s; }
+const phoenix = (c1, c2, c3) => { const g = U("gf"); return `<defs><linearGradient id="${g}" x1="0" x2="1"><stop offset="0" stop-color="${c1}"/><stop offset=".55" stop-color="${c2}"/><stop offset="1" stop-color="${c3}"/></linearGradient></defs>` + flameTier(8, -100, 16, 185, 18, `url(#${g})`, 1.0) + flameTier(7, -86, 6, 135, 16, `url(#${g})`, .8) + flameTier(5, -70, -4, 88, 13, c1, .7); };
+/* sayap naga / gargoyle: membran bergerigi + tulang + cakar */
+function dragon(mem, bone, glow) { const T = [[372, 96], [438, 160], [448, 246], [410, 322], [336, 356]]; const mid = (p, q) => [(p[0] + q[0]) / 2 * .86 + 252 * .14, (p[1] + q[1]) / 2 * .86 + 226 * .14];
+  let m = `M252 226 L${T[0][0]} ${T[0][1]}`; for (let i = 1; i < T.length; i++) { const c = mid(T[i - 1], T[i]); m += ` Q${c[0].toFixed(0)} ${c[1].toFixed(0)} ${T[i][0]} ${T[i][1]}`; } m += " L268 300 Q258 262 252 226Z";
+  return (glow ? `<path d="${m}" fill="${glow}" opacity=".35" transform="translate(0 0) scale(1.03)"/>` : "") + `<path d="${m}" fill="${mem}" stroke="${bone}" stroke-width="2.2"/>` + T.map(t => `<path d="M252 226 L${t[0]} ${t[1]}" stroke="${bone}" stroke-width="5" stroke-linecap="round"/><path d="M${t[0]} ${t[1]} l5 -12 -12 6Z" fill="${bone}"/>`).join("") + `<path d="M252 226 Q300 160 372 96" stroke="${bone}" stroke-width="7" fill="none" stroke-linecap="round"/>`; }
+const spirit = (f, st) => tier(7, -98, 14, 172, 11, f, st, .6) + tier(6, -84, 4, 124, 11, f, st, .7) + tier(5, -66, -2, 80, 10, "#fff", st, .8);
+const crystal = (f, st, n = 7) => { let s = ""; for (let i = 0; i < n; i++) { const a = -95 + i * (130 / (n - 1)), k = 1 + .25 * Math.sin((i / (n - 1)) * Math.PI), L = 170 * k; s += `<path d="M0 -6 L${L - 20} -10 L${L} 0 L${L - 20} 10 L0 6Z" fill="${f}" stroke="${st}" stroke-width="1.5" opacity=".92" transform="${PV} rotate(${a})"/>`; } return s + `<circle cx="252" cy="226" r="9" fill="${f}" stroke="${st}" stroke-width="1.5"/>`; };
+const wingFeather = (f, st, n = 9, span = 150, big = 1) => tier(n, -90, -90 + span, 120 * big, 14, f, st);
+const wingBat = (m, bone) => dragon(m, bone);
+const wingLeaf = (f, vein, n = 6) => { let s = ""; for (let i = 0; i < n; i++) { const a = -88 + i * (125 / (n - 1)), k = .85 + .25 * Math.sin((i / (n - 1)) * Math.PI); s += `<g transform="${PV} rotate(${a}) scale(${k})"><path d="M0 0 Q60 -34 140 0 Q60 34 0 0Z" fill="${f}" stroke="${vein}" stroke-width="1.5"/><path d="M6 0 H128" stroke="${vein}" stroke-width="1.5"/></g>`; } return s; };
+const wingCrystal = (f, st, n = 6) => crystal(f, st, n);
+const wingWind = (c, n = 5) => { let s = ""; for (let i = 0; i < n; i++) { const a = -85 + i * (120 / Math.max(1, n - 1)); s += `<path d="M0 0 Q70 ${-34 + i * 5} 160 ${-12 + i * 4} Q80 ${10 + i * 4} 0 0Z" fill="${c}" opacity=".55" stroke="#fff" stroke-width="1.5" transform="${PV} rotate(${a})"><animate attributeName="opacity" values=".25;.75;.25" dur="${1.4 + i * .25}s" repeatCount="indefinite"/></path>`; } return s; };
+const wingFlame = (c1, c2) => phoenix(c1, c2, c1);
 const paperWing = (f, st) => `<path d="M252 226 L336 150 L350 232 L318 262 L330 304 L270 270Z" fill="${f}" stroke="${st}" stroke-width="2"/><path d="M252 226 L350 232 M252 226 L318 262" stroke="${st}" stroke-width="1.2" opacity=".7"/>`;
 const WING = [
-  ["kardus", "Sayap Kardus", "common", () => PAIR(paperWing("#c8a06b", "#7c5a2a"))], ["kertas", "Sayap Kertas Origami", "common", () => PAIR(paperWing("#f8fafc", "#94a3b8"))],
-  ["plastik", "Sayap Plastik Kresek", "common", () => PAIR(paperWing("#fecaca", "#dc2626"))], ["kain_lusuh", "Sayap Kain Lusuh", "common", () => PAIR(wingBat("#a8a29e", "#57534e", 3))],
-  ["ayam", "Sayap Ayam", "common", () => PAIR(wingFeather("#f5e6c8", "#a8854a", 5, 90, .6))], ["bebek_karet", "Sayap Bebek Karet", "common", () => PAIR(wingFeather("#fde047", "#a16207", 4, 70, .55))],
-  ["daun", "Sayap Daun Hutan", "uncommon", () => PAIR(wingLeaf("#4ade80", "#166534"), 1)], ["capung", "Sayap Capung", "uncommon", () => PAIR(`<path d="M252 226 Q320 190 350 214 Q316 238 252 226Z M252 230 Q316 250 340 282 Q300 280 252 230Z" fill="#a5f3fc" opacity=".6" stroke="#0891b2" stroke-width="1.5"/>`, 1)],
+  ["kardus", "Sayap Kardus", "common", () => PAIR(paperWing("#c8a06b", "#7c5a2a"), 0, 1.5)], ["kertas", "Sayap Kertas Origami", "common", () => PAIR(paperWing("#f8fafc", "#94a3b8"), 0, 1.5)],
+  ["plastik", "Sayap Plastik Kresek", "common", () => PAIR(paperWing("#fecaca", "#dc2626"), 0, 1.5)], ["kain_lusuh", "Sayap Kain Lusuh", "common", () => PAIR(dragon("#a8a29e", "#57534e"), 0, 1.0)],
+  ["ayam", "Sayap Ayam", "common", () => PAIR(tier(6, -70, 10, 70, 11, "#f5e6c8", "#a8854a"), 0, 1.4)], ["bebek_karet", "Sayap Bebek Karet", "common", () => PAIR(tier(5, -60, 10, 60, 11, "#fde047", "#a16207"), 0, 1.4)],
+  ["daun", "Sayap Daun Hutan", "uncommon", () => PAIR(wingLeaf("#4ade80", "#166534"), 1)], ["capung", "Sayap Capung", "uncommon", () => PAIR(`<path d="M252 226 Q330 176 372 208 Q330 240 252 230Z M252 232 Q326 256 360 300 Q312 296 252 236Z" fill="#a5f3fc" opacity=".6" stroke="#0891b2" stroke-width="1.5"/>`, 1)],
   ["angin", "Sayap Angin Puyuh", "rare", () => PAIR(wingWind("#d1fae5"), 1)], ["es", "Sayap Es Kristal", "rare", () => PAIR(wingCrystal("#bae6fd", "#0284c7"), 1)],
-  ["daun_besar", "Sayap Pohon Dunia", "rare", () => PAIR(wingLeaf("#22c55e", "#14532d", 8), 1)], ["badai", "Sayap Angin Badai", "epic", () => PAIR(wingWind("#93c5fd", 7), 1)],
-  ["api", "Sayap Api", "epic", () => PAIR(wingFlame("#facc15", "#dc2626"), 1)], ["gargoyle", "Sayap Gargoyle", "epic", () => PAIR(wingBat("#4b5563", "#111827", 4), 1)],
-  ["gargoyle_batu", "Sayap Gargoyle Batu Hitam", "legendary", () => PAIR(wingBat("#1f2937", "#9ca3af", 4) + `<circle cx="338" cy="196" r="4" fill="#ef4444"/>`, 1)], ["malaikat", "Sayap Malaikat Emas", "legendary", () => PAIR(wingFeather("#fef9c3", "#ca8a04", 10, 150, 1.15), 1)],
-  ["phoenix", "Sayap Phoenix Abadi", "legendary", () => PAIR(wingFlame("#fde047", "#ea580c", 9), 1)], ["naga_es", "Sayap Naga Es", "legendary", () => PAIR(wingBat("#7dd3fc", "#0369a1", 4) + `<path d="M330 120 l6 30 M352 190 l-10 6" stroke="#e0f2fe" stroke-width="3"/>`, 1)],
-  ["galaxy", "Sayap Galaksi", "mythic", () => PAIR(wingFeather("#4c1d95", "#c4b5fd", 10, 150, 1.2) + `<g fill="#fff"><circle cx="318" cy="196" r="2"/><circle cx="296" cy="236" r="1.6"/><circle cx="344" cy="226" r="2"/></g>`, 1)],
-  ["dewa_angin", "Sayap Dewa Angin & Petir", "mythic", () => PAIR(wingWind("#bfdbfe", 8) + `<path d="M330 150 l-10 24 12 4-12 26" stroke="#fde047" stroke-width="3" fill="none"><animate attributeName="opacity" values="0;1;0" dur=".9s" repeatCount="indefinite"/></path>`, 1)],
+  ["daun_besar", "Sayap Pohon Dunia", "rare", () => PAIR(wingLeaf("#22c55e", "#14532d", 9), 1)], ["badai", "Sayap Angin Badai", "epic", () => PAIR(wingWind("#93c5fd", 8), 1)],
+  ["api", "Sayap Api", "epic", () => PAIR(wingFlame("#facc15", "#dc2626"), 1)], ["gargoyle", "Sayap Gargoyle", "epic", () => PAIR(dragon("#4b5563", "#111827"), 1)],
+  ["gargoyle_batu", "Sayap Gargoyle Batu Hitam", "legendary", () => PAIR(dragon("#1f2937", "#9ca3af", "#ef4444") + `<circle cx="372" cy="96" r="5" fill="#ef4444"/>`, 1)], ["malaikat", "Sayap Malaikat Agung", "legendary", () => PAIR(angel("#ffffff", "#fef3c7", "#d4a017"), 1)],
+  ["phoenix", "Sayap Phoenix Abadi", "legendary", () => PAIR(phoenix("#fde047", "#f97316", "#dc2626"), 1)], ["naga_es", "Sayap Naga Es Bangsawan", "legendary", () => PAIR(dragon("#7dd3fc", "#0369a1", "#e0f2fe"), 1)],
+  ["galaxy", "Sayap Galaksi", "mythic", () => PAIR(angel("#4c1d95", "#312e81", "#c4b5fd") + `<g fill="#fff"><circle cx="330" cy="150" r="2"/><circle cx="352" cy="214" r="2"/><circle cx="300" cy="250" r="1.6"/><circle cx="388" cy="170" r="2"/></g>`, 1)],
+  ["dewa_angin", "Sayap Dewa Roh Biru", "mythic", () => PAIR(spirit("#67e8f9", "#0e7490") + `<path d="M372 120 l-10 28 12 4-12 28" stroke="#fde047" stroke-width="3" fill="none"><animate attributeName="opacity" values="0;1;0" dur=".9s" repeatCount="indefinite"/></path>`, 1)],
 ].map(([id, n, r, f]) => [id, n, r, f]);
-const WING_OVER = { unlock_lv: 50 };   // SEMUA sayap baru bisa dipakai di Lv 50
-const buildWings = () => { const o = build(WING, "sy_"); Object.values(o).forEach(x => x.unlock_lv = 50); return o; };
+/* level pakai & harga sayap (tidak dijual di shop — hanya gacha; harga = nilai tampilan) */
+const WING_LV = { common: 50, uncommon: 50, rare: 55, epic: 62, legendary: 75, mythic: 90 };
+const WING_HARGA = { common: 15000, uncommon: 25000, rare: 45000, epic: 80000, legendary: 150000, mythic: 300000 };
+const buildWings = (list, pre) => { const o = build(list, pre || "sy_"); Object.values(o).forEach(x => { x.unlock_lv = WING_LV[x.rarity]; x.harga = WING_HARGA[x.rarity]; x.gachaOnly = true; }); return o; };
 
 /* ======================= EKSPOR ======================= */
-export const H = { SK, mk, build, U, outfit, pants, shoe, aura, blade, gl, orb, staff, PAIR, FLAP, wingFeather, wingBat, wingLeaf, wingCrystal, wingWind, wingFlame, paperWing };
+export const H = { SK, mk, build, U, outfit, pants, shoe, aura, blade, gl, orb, staff, PAIR, FLAP, wingFeather, wingBat, wingLeaf, wingCrystal, wingWind, wingFlame, paperWing, buildWings, tier, angel, phoenix, dragon, spirit, crystal };
 export function extend(C) {
   Object.assign(C.OUTFITS, build(OUT, "o_"));
   Object.assign(C.SHOES, build(SHOESL, "sh_"));
@@ -235,5 +250,5 @@ export function extend(C) {
   Object.assign(C.HANDHELD, build(HOLD, "hh_"));
   Object.assign(C.AURAS, build(AURA, "au_"));
   C.CELANA = { none: { nama: "Tidak memakai celana (default)", harga: 0, equipped_default: true, svg: null }, ...build(PANTS, "cl_") };
-  C.SAYAP = { none: { nama: "Tanpa sayap (default)", harga: 0, equipped_default: true, svg: null }, ...buildWings() };
+  C.SAYAP = { none: { nama: "Tanpa sayap (default)", harga: 0, equipped_default: true, svg: null }, ...buildWings(WING) };
 }

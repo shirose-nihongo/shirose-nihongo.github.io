@@ -863,7 +863,7 @@ export const CATALOG_LABELS = {
   item_tangan: "Item Tangan",
   aura: "Aura",
   celana: "Celana",
-  sayap: "Sayap (Lv 50)",
+  sayap: "Sayap (khusus Gacha)",
 };
 
 /* ====== Default equipped state (botak, kaos putih + celana putih polos, sepatu standar) ====== */
@@ -922,7 +922,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   }
 
   return `
-    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
+    <svg viewBox="${sayapSvg ? "-110 -60 620 580" : "0 0 400 500"}" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
       ${sayapSvg}
       ${base}
@@ -947,8 +947,8 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261115n";
-import { extend2 } from "./character-more2.js?v=20261115n";
+import { extend } from "./character-more.js?v=20261115p";
+import { extend2 } from "./character-more2.js?v=20261115p";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
