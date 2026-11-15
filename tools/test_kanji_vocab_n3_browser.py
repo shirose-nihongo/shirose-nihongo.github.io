@@ -129,7 +129,7 @@ with sync_playwright() as p:
     ok(not any(c["t"] == "kanji" for c in q) and len({c['k'] for c in q}) == len(q), f"mode 'Semua' N3: {len(q)} kartu, tanpa kanji satuan & tanpa duplikat")
     # --- level lain (N5, N4, N2, N1): alur yang sama, pola N3
     cl = lambda t: re.sub(r"\[[^\]]*\]", "", t).strip()
-    for lv in ["n5", "n4", "n2", "n1"]:
+    for lv in ["n5", "n4", "n2", "n1", "ir0", "ir1", "ir2"]:
         K = json.load(open(ROOT/f"data/kanji-{lv}.json", encoding="utf8")); V = json.load(open(ROOT/f"data/kosakata-{lv}.json", encoding="utf8"))
         mains = {k["k"] for k in K}; inkos = {cl(v["kata"]) for v in V}
         listed = {cl(c["k"]) for k in K for c in k["c"] if cl(c["k"]) == k["k"]}

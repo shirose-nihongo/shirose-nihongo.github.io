@@ -8,7 +8,7 @@ for (const f of fs.readdirSync(new URL("../data/kanji-strokes/", import.meta.url
 const noOf = (it, i) => (Number.isFinite(it?.no) ? it.no : i + 1);
 const summary = [];
 
-for (const lv of ["n5", "n4", "n3", "n2", "n1"]) {
+for (const lv of ["n5", "n4", "n3", "n2", "n1", "ir0", "ir1", "ir2"]) {
   console.log(`\n=== ${lv.toUpperCase()} ===`);
   const K = J(`data/kanji-${lv}.json`), V = J(`data/kosakata-${lv}.json`);
   const idx = buildKanjiVocab(K, V), cards = kanjiVocabCards(idx);
@@ -64,6 +64,14 @@ for (const lv of ["n5", "n4", "n3", "n2", "n1"]) {
     ok(!cards.some(c => c.front === "政" || c.front === "駐"), "n3: 政 / 駐 tidak jadi kartu");
     ok(noVocab.length === 0, "n3: setiap Kanji utama punya minimal 1 kosakata asli");
   }
+}
+// Regresi bahasa: data JFT (A1/A2.1/A2.2) tidak boleh berisi huruf khas bahasa Vietnam
+console.log("\n=== Audit bahasa JFT ===");
+const VN = /[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/i;
+const scan = (o) => typeof o === "string" ? (VN.test(o) ? [o] : []) : Array.isArray(o) ? o.flatMap(scan) : o && typeof o === "object" ? Object.values(o).flatMap(scan) : [];
+for (const lv of ["ir0", "ir1", "ir2"]) for (const kind of ["kanji", "kosakata", "bunpou"]) {
+  const bad = scan(J(`data/${kind}-${lv}.json`));
+  ok(bad.length === 0, `${kind}-${lv}: tidak ada teks Vietnam${bad.length ? " (" + bad.slice(0, 3).join(" | ") + ")" : ""}`);
 }
 console.log("\nRINGKAS:\n" + summary.join("\n"));
 console.log(fail ? `${fail} tes GAGAL` : "SEMUA TES LULUS"); process.exit(fail ? 1 : 0);

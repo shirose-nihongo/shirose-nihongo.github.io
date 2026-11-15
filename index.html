@@ -3371,7 +3371,7 @@ async function _kvPaint(){
   const sayK = SV.escAttr(v.kata), sayR = SV.escAttr(v.kana || v.kata);
   m.innerHTML = `<div class="modal kv-card" role="dialog" aria-label="Detail kosakata">
     <button class="panel-close" onclick="kvClose()" title="Tutup">✕</button>
-    <div class="kv-tag">${v.fallback ? "KANJI (belum ada kosakata)" : "KOSAKATA"} · ${state.level.toUpperCase()} <span class="kv-main">Kanji utama: ${v.kanji.map(_kvEsc).join(" ")}</span></div>
+    <div class="kv-tag">${v.fallback ? "KANJI (belum ada kosakata)" : "KOSAKATA"} · ${_kvLv()} <span class="kv-main">Kanji utama: ${v.kanji.map(_kvEsc).join(" ")}</span></div>
     <div class="kv-kata">${v.fallback ? _kvEsc(v.kata) : `<ruby>${_kvEsc(v.kata)}<rt>${_kvEsc(v.kana)}</rt></ruby>`}</div>
     <div class="kv-read">${_kvEsc(v.kana)}</div>
     <div class="kv-arti"><b>${_kvEsc(v.arti)}</b></div>
@@ -3443,7 +3443,8 @@ function _srsKey(tipe, it, idx){ if (it && it.skey) return it.skey; return tipe[
 
 /* ===== KOSAKATA BERBASIS KANJI (N3) =====
  * Kanji utama = indeks/kategori. Kartu hafalan = kosakata contoh (js/kanji-vocab.js). Berlaku untuk N5-N1 (struktur data sama). */
-const _kvOn = () => ["n5", "n4", "n3", "n2", "n1"].includes(state.level);
+const _kvOn = () => ["n5", "n4", "n3", "n2", "n1", "ir0", "ir1", "ir2"].includes(state.level);   // JLPT N5-N1 + JFT (Irodori) A1/A2.1/A2.2
+const _kvLv = () => ({ ir0: "A1", ir1: "A2.1", ir2: "A2.2" })[state.level] || String(state.level).toUpperCase();
 async function _kvIndex(){
   const lvl = state.level, c = window.__kvCache;
   if (c && c.lvl === lvl) return c.idx;
@@ -3680,7 +3681,7 @@ async function _renderHafalanSelectImpl(){
         `}
       </div>
 
-      ${_kvOn() && cfg.tipe === "kanji" ? `<p class="kv-note">🈷️ Kartu berisi <b>kosakata contoh</b> dari Kanji ${state.level.toUpperCase()} (cara baca + arti), <b>bukan</b> Kanji satuan. Kanji utama hanya jadi pengelompokan. Kanji yang belum punya kosakata di database ikut sebagai kartu Kanji itu sendiri.</p>` : ""}
+      ${_kvOn() && cfg.tipe === "kanji" ? `<p class="kv-note">🈷️ Kartu berisi <b>kosakata contoh</b> dari Kanji ${_kvLv()} (cara baca + arti), <b>bukan</b> Kanji satuan. Kanji utama hanya jadi pengelompokan. Kanji yang belum punya kosakata di database ikut sebagai kartu Kanji itu sendiri.</p>` : ""}
       ${cfg.tipe === "kosakata" ? `<h3 style="margin:16px 0 8px;">Pilih kategori hafalan</h3>${posBar(kos, POS_DEF.some(d => d.k === cfg.pos) ? cfg.pos : "all", "hafPos")}` : ""}
       <h3 style="margin:16px 0 8px;">2. Rentang nomor <small style="color:var(--gray-dim); font-weight:400;">(bucket per 50)</small></h3>
       <div class="haf-chip-row">
@@ -3828,7 +3829,7 @@ const _hafHome = () => (_hafSSW() && state.hafalan_back) || "home";
 const _hafHomeLbl = () => _hafSSW() ? "↩ Kembali" : "🏠 Home";
 // Dokumen SRS per bidang SSW: Building Cleaning tetap "ssw-bc" (data lama), bidang lain "ssw-<slug>".
 const _sswLvl = (slug) => { slug = slug || (window.__sswSlug && window.__sswSlug()) || "building-cleaning"; return slug === "building-cleaning" ? "ssw-bc" : "ssw-" + slug; };
-const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.fb ? "KANJI (belum ada kosakata)" : it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${state.level.toUpperCase()}`;
+const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.fb ? "KANJI (belum ada kosakata)" : it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${(it.kv || it.fb) ? _kvLv() : state.level.toUpperCase()}`;
 function _sswSaveSess(){ try { sessionStorage.setItem(_SSW_SESS, JSON.stringify({ lvl: state._srsLevel, q: state.hafalan_queue, pos: state.hafalan_pos, mode: (state.hafalan||{}).mode, back: state.hafalan_back, score: state.hafalan_score })); } catch(e){} }
 window.sswHafalStart = async ({ items, mode, back }) => {
   if (!items || !items.length) { toast("Tidak ada kosakata untuk sesi ini"); return false; }

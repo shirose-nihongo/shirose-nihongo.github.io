@@ -17,3 +17,11 @@ Alur migrasi yang disarankan:
 
 Hal ini sesuai aturan master prompt section 7: "Hapus hanya konten soal simulasi lama setelah membuat backup. Jangan menghapus struktur sistem ujian."
 Struktur sistem ujian dipertahankan utuh (engine timer, navigasi nomor, penilaian otomatis, pembahasan, reward XP+koin).
+
+## jft-vietnamese/
+Backup `data/kanji-ir0.json`, `kanji-ir1.json`, `kanji-ir2.json` (JFT A1 / A2.1 / A2.2) sebelum 83 arti Kanji
+yang berbahasa Vietnam / campuran Vietnam-Indonesia diganti dengan arti Indonesia dari data Kanji JLPT yang sudah dikoreksi (15 Nov 2026).
+Hanya field `a` yang berubah; field lain tidak disentuh.
+
+## n3-kanji-vocab/
+Backup `index.html`, `js/kana-center.js`, `sw.js` sebelum fitur Kosakata Kanji (flashcard = kosakata contoh, Kanji = indeks).
