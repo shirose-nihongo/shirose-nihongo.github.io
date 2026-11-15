@@ -1,0 +1,866 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "bab1-q1",
+    "title": {
+     "id": "Latihan Bab 1",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Bor membuat lubang dengan ドリル.”",
+       "jp": "○か×か。「ボール{盤|ばん}は、ドリルであなをあけます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "あなです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Frais cocok untuk bidang rata dan alur.”",
+       "jp": "○か×か。「フライス{盤|ばん}は、{平|たい}らな{面|めん}やみぞに{合|あ}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{合|あ}います。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Putaran per menit disebut…",
+       "jp": "1{分|ぶん}{間|あいだ}の{回転|かいてん}{数|かず}を{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "rpm",
+        "jp": "rpm"
+       },
+       {
+        "id": "kg",
+        "jp": "kg"
+       },
+       {
+        "id": "μm",
+        "jp": "μm"
+       },
+       {
+        "id": "℃",
+        "jp": "℃"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "rpm.",
+       "jp": "rpmです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Serpihan dibuang dengan sikat setelah mesin berhenti.”",
+       "jp": "○か×か。「{切|き}りくずは、{機械|きかい}が{止|と}まってからブラシでとります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{止|と}まってからです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "sub": "b1s1",
+    "title": {
+     "id": "Subbab 1.1 · Bubut dan Frais",
+     "jp": "1.1 {旋盤|せんばん}とフライス{盤|ばん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada bubut, yang berputar adalah…",
+       "jp": "{旋盤|せんばん}で{回|まわ}るのはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Benda kerja",
+        "jp": "{材料|ざいりょう}"
+       },
+       {
+        "id": "Pahat",
+        "jp": "{刃物|はもの}"
+       },
+       {
+        "id": "Meja",
+        "jp": "{台|だい}"
+       },
+       {
+        "id": "Ragum",
+        "jp": "バイス"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benda berputar.",
+       "jp": "{材料|ざいりょう}が{回|まわ}ります。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada frais, yang berputar adalah…",
+       "jp": "フライス{盤|ばん}で{回|まわ}るのはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Pahat",
+        "jp": "{刃物|はもの}"
+       },
+       {
+        "id": "Benda kerja",
+        "jp": "{材料|ざいりょう}"
+       },
+       {
+        "id": "Rem",
+        "jp": "ブレーキ"
+       },
+       {
+        "id": "Kunci",
+        "jp": "かぎ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pahat berputar.",
+       "jp": "{刃物|はもの}が{回|まわ}ります。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kunci chuck dilepas sebelum bubut dinyalakan.”",
+       "jp": "○か×か。「{旋盤|せんばん}を{動|うご}かす{前|まえ}に、チャックハンドルをはずします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "はずします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Memakai sarung tangan di bubut itu aman.”",
+       "jp": "○か×か。「{旋盤|せんばん}で{手袋|てぶくろ}をするのは{安全|あんぜん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Bisa terlilit.",
+       "jp": "まきこまれます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bubut cocok untuk benda…",
+       "jp": "{旋盤|せんばん}に{合|あ}う{形|かたち}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Bulat",
+        "jp": "{丸|まるい}い{物|もの}"
+       },
+       {
+        "id": "Kotak datar",
+        "jp": "{四角|しかくい}い{板|いた}"
+       },
+       {
+        "id": "Tipis",
+        "jp": "うすい{布|ぬの}"
+       },
+       {
+        "id": "Cair",
+        "jp": "{液|えき}{体|からだ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benda bulat.",
+       "jp": "{丸|まるい}い{物|もの}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "sub": "b1s2",
+    "title": {
+     "id": "Subbab 1.2 · Bor dan Gerinda",
+     "jp": "1.2 ボール{盤|ばん}と{研削盤|けんさくばん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Benda yang dibor harus dipegang dengan tangan.”",
+       "jp": "○か×か。「ボール{盤|ばん}では、{材料|ざいりょう}を{手|て}でもちます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus diklem.",
+       "jp": "クランプでとめます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Hal yang dilakukan sebelum memakai gerinda adalah…",
+       "jp": "グラインダを{使|つか}う{前|まえ}にすることはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Periksa retak dan uji putar",
+        "jp": "ひびの{点検|てんけん}と{試運転|しうんてん}"
+       },
+       {
+        "id": "Berdiri di depan batu",
+        "jp": "ま{正面|しょうめん}に{立|た}つ"
+       },
+       {
+        "id": "Lepas penutup",
+        "jp": "カバーをはずす"
+       },
+       {
+        "id": "Pakai sarung tangan",
+        "jp": "{手袋|てぶくろ}をする"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Periksa dan uji putar.",
+       "jp": "{点検|てんけん}と{試運転|しうんてん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Berdiri tepat di depan batu gerinda saat dinyalakan itu baik.”",
+       "jp": "○か×か。「{動|うご}かすとき、といしのま{正面|しょうめん}に{立|た}ちます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Berbahaya.",
+       "jp": "{立|た}ちません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pakai kacamata pelindung saat menggerinda.”",
+       "jp": "○か×か。「{研削|けんさく}のときは、{保護|ほご}めがねをつけます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "つけます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Alat penjepit benda pada bor adalah…",
+       "jp": "ボール{盤|ばん}で{材料|ざいりょう}をとめる{道具|どうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "バイスやクランプ",
+        "jp": "バイスやクランプ"
+       },
+       {
+        "id": "ハンマ",
+        "jp": "ハンマ"
+       },
+       {
+        "id": "ノギス",
+        "jp": "ノギス"
+       },
+       {
+        "id": "といし",
+        "jp": "といし"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Ragum atau klem.",
+       "jp": "バイスやクランプです。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "title": {
+     "id": "Latihan Bab 2",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Cetakan pada press disebut…",
+       "jp": "プレスの{型|かた}を{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "金型",
+        "jp": "{金|かね}{型|かた}"
+       },
+       {
+        "id": "バイト",
+        "jp": "バイト"
+       },
+       {
+        "id": "チャック",
+        "jp": "チャック"
+       },
+       {
+        "id": "バイス",
+        "jp": "バイス"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "金型.",
+       "jp": "{金|かね}{型|かた}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Cahaya busur las merusak mata tanpa pelindung.”",
+       "jp": "○か×か。「アークの{光|ひかり}は、{保護|ほご}なしだと{目|め}をいためます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "いためます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengelasan boleh dilakukan siapa saja tanpa pendidikan.”",
+       "jp": "○か×か。「{溶接|ようせつ}は、{教育|きょういく}がなくてもだれでもできます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Perlu pendidikan.",
+       "jp": "{特別|とくべつ}{教育|きょういく}が{必要|ひつよう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sarung tangan kulit dipakai saat mengelas.”",
+       "jp": "○か×か。「{溶接|ようせつ}では、{革|かわ}の{手袋|てぶくろ}を{使|つか}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{使|つか}います。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "sub": "b2s1",
+    "title": {
+     "id": "Subbab 2.1 · Mesin Press",
+     "jp": "2.1 プレス{機械|きかい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bahaya utama mesin press adalah…",
+       "jp": "プレス{機械|きかい}の{大|おお}きなきけんはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "はさまれ",
+        "jp": "はさまれ"
+       },
+       {
+        "id": "感電",
+        "jp": "{感電|かんでん}"
+       },
+       {
+        "id": "熱中症",
+        "jp": "{熱中症|ねっちゅうしょう}"
+       },
+       {
+        "id": "騒音のみ",
+        "jp": "{騒音|そうおん}のみ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Terjepit.",
+       "jp": "はさまれです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat mengganti cetakan, slide harus diganjal.”",
+       "jp": "○か×か。「{金|かね}{型|かた}{交換|こうかん}のときは、スライドが{下|さ}がらないようにとめます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "とめます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengaman press boleh dilepas jika repot.”",
+       "jp": "○か×か。「めんどうなら、プレスの{安全装置|あんぜんそうち}をはずしてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tidak boleh.",
+       "jp": "はずしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tombol dua tangan disebut…",
+       "jp": "プレスの{両手|りょうて}でおすボタンの{方法|ほうほう}は{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "両手操作",
+        "jp": "{両手操作|りょうてそうさ}"
+       },
+       {
+        "id": "片手操作",
+        "jp": "{片手|かたて}{操作|そうさ}"
+       },
+       {
+        "id": "自動停止",
+        "jp": "{自動|じどう}{停止|ていし}"
+       },
+       {
+        "id": "試運転",
+        "jp": "{試運転|しうんてん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "両手操作.",
+       "jp": "{両手操作|りょうてそうさ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengoperasian press perlu pendidikan khusus.”",
+       "jp": "○か×か。「プレスの{運転|うんてん}には{特別|とくべつ}{教育|きょういく}が{必要|ひつよう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{必要|ひつよう}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s2-q",
+    "sub": "b2s2",
+    "title": {
+     "id": "Subbab 2.2 · Pengelasan",
+     "jp": "2.2 {溶接|ようせつ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pelindung wajah saat mengelas adalah…",
+       "jp": "{溶接|ようせつ}で{顔|かお}と{目|め}を{守|まも}る{物|もの}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "溶接面",
+        "jp": "{溶接|ようせつ}{面|めん}"
+       },
+       {
+        "id": "耳栓",
+        "jp": "{耳栓|みみせん}"
+       },
+       {
+        "id": "ヘルメットのみ",
+        "jp": "ヘルメットのみ"
+       },
+       {
+        "id": "マスクのみ",
+        "jp": "マスクのみ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Topeng las.",
+       "jp": "{溶接|ようせつ}{面|めん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Asap las (ヒューム) perlu ventilasi dan masker khusus.”",
+       "jp": "○か×か。「ヒュームには、{換気|かんき}と{専用|せんよう}マスクが{必要|ひつよう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{必要|ひつよう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tabung gas dibaringkan tanpa diikat.”",
+       "jp": "○か×か。「ガスボンベは、{固定|こてい}しないでたおしておきます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus diikat berdiri.",
+       "jp": "{立|た}てて{固定|こてい}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bahan mudah terbakar disingkirkan dari sekitar las.”",
+       "jp": "○か×か。「{溶接|ようせつ}のまわりの{燃|も}えやすい{物|もの}は、かたづけます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "かたづけます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jenis las yang memakai busur listrik adalah…",
+       "jp": "{電気|でんき}の{火花|ひばな}で{金属|きんぞく}をとかす{溶接|ようせつ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "アーク溶接",
+        "jp": "アーク{溶接|ようせつ}"
+       },
+       {
+        "id": "ガス切断",
+        "jp": "ガス{切|き}{断|だん}"
+       },
+       {
+        "id": "鋳造",
+        "jp": "{鋳造|ちゅうぞう}"
+       },
+       {
+        "id": "鍛造",
+        "jp": "{鍛造|たんぞう}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "アーク溶接.",
+       "jp": "アーク{溶接|ようせつ}です。"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "tema": [
+  {
+   "id": "tema-mm",
+   "tema": true,
+   "title": {
+    "id": "Tema: Keselamatan Mesin",
+    "jp": "テーマ：{機械|きかい}の{安全|あんぜん}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Hentikan dan kunci mesin sebelum membersihkan.”",
+      "jp": "○か×か。「そうじの{前|まえ}に、{機械|きかい}を{止|と}めて{施錠|せじょう}します。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{止|と}めます。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Rambut panjang diikat di dekat mesin berputar.”",
+      "jp": "○か×か。「{回|まわ}る{機械|きかい}の{近|ちか}くでは、{長|なが}いかみをむすびます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "むすびます。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Alat pelindung mata umum di bengkel adalah…",
+      "jp": "{工場|こうじょう}で{目|め}を{守|まも}る{物|もの}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "保護めがね",
+       "jp": "{保護|ほご}めがね"
+      },
+      {
+       "id": "耳栓",
+       "jp": "{耳栓|みみせん}"
+      },
+      {
+       "id": "手袋",
+       "jp": "{手袋|てぶくろ}"
+      },
+      {
+       "id": "安全靴",
+       "jp": "{安全|あんぜん}{靴|くつ}"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Kacamata pelindung.",
+      "jp": "{保護|ほご}めがねです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Pengaman mesin boleh dilepas jika terburu-buru.”",
+      "jp": "○か×か。「いそぐときは{安全装置|あんぜんそうち}をはずしてよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Tidak boleh.",
+      "jp": "はずしません。"
+     },
+     "mb": true
+    }
+   ]
+  }
+ ]
+}

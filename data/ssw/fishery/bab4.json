@@ -1,154 +1,185 @@
 {
  "schema": 1,
  "bidang": "fishery",
- "source": "Shirose Nihongo — tulisan orisinal berdasarkan standar kompetensi resmi bidang Perikanan (MOJ/ISA, MAFF/Badan Perikanan, MHLW) dan materi keselamatan MHLW untuk pekerja asing; bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "source": "Teks dan gambar halaman: 特定技能 漁業技能測定試験 学習用テキスト (一般社団法人大日本水産会, 初版2019年12月, 一部改訂2025年9月) — 漁業一般・漁業安全・網漁業・釣漁業, versi Jepang dan versi bahasa Indonesia. Ringkasan, kosakata, dan soal latihan: Shirose Nihongo (bukan soal resmi).",
  "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
  "bab": {
   "id": "bab4",
   "no": 4,
   "title": {
-   "id": "Penangkapan dengan Pancing",
-   "jp": "{釣|つ}り{漁業|ぎょぎょう}"
+   "id": "Jaring Insang (刺し網)",
+   "jp": "{刺|さ}し{網漁業|あみぎょぎょう}"
   },
   "intro": {
-   "id": "Peralatan pancing dasar, pancing joran tunggal (cakalang), rawai, dan pancing cumi, termasuk keselamatan dengan mata pancing dan lampu.",
-   "jp": "{釣|つ}り{道具|どうぐ}の{基本|きほん}、{一本|いっぽん}{釣|づ}り、はえ{縄|なわ}、イカ{釣|つ}りと、{針|はり}や{明|あ}かりの{安全|あんぜん}を{学|まな}びます。"
+   "id": "Jaring insang: jenis, bahan, pelampung, pemberat.",
+   "jp": "{刺|さ}し{網漁業|あみぎょぎょう}：{種類|しゅるい}、{網地|あみじ}、{浮|あ}{子|ば}、{沈子|ちんし}。"
   },
   "pages": [
-   1,
-   1
+   74,
+   82
   ],
   "subs": [
    {
     "id": "b4s1",
     "no": 1,
     "title": {
-     "id": "Peralatan Pancing Dasar",
-     "jp": "{釣|つ}り{道具|どうぐ}の{基本|きほん}"
+     "id": "Jenis Jaring Insang dan Bahan Jaring",
+     "jp": "{刺|さ}し{網|あみ}の{種類|しゅるい}と{網地|あみじ}"
     },
     "pages": [
-     1,
-     1
+     74,
+     77
     ],
     "full": {
      "id": [
       {
-       "h": "Bagian peralatan"
+       "h": "Berbagai Jenis Jaring Insang & Metodenya"
       },
       {
-       "ul": [
-        "**Joran (竿)**: batang untuk menarik atau mengangkat ikan.",
-        "**Tali utama (道糸 / 幹糸)**: tali panjang dari joran atau gulungan.",
-        "**Tali kail (ハリス)**: tali pendek dan halus antara tali utama dan mata pancing; tidak mudah terlihat ikan.",
-        "**Mata pancing (釣り針)**: bagian yang menusuk mulut ikan; ada yang berkait (カエシあり) dan **tanpa kait (カエシなし)**.",
-        "**Pemberat (おもり)** dan **pelampung (浮き)**: mengatur kedalaman umpan."
-       ]
+       "p": "Ada dua fungsi penangkapan jaring insang, yaitu “Penangkapan menusuk” dimana benang jaring mengencang dan mengimpit tubuh ikan yang telah masuk ke dalam mata jaring. Kemudian \"Penangkapan menjerat\", di mana duri atau sirip terjerat dalam benang jaring."
       },
       {
-       "h": "Umpan"
+       "p": "Jaring insang dapat diklasifikasikan berdasarkan 2 sudut pandang. Salah satunya adalah berdasarkan lapisan kedalaman laut yang akan dipasang, yaitu lapisan permukaan, lapisan pertengahan, dan lapisan dasar. Kemudian, berdasarkan metode pemasangannya dibagi menjadi dua, yaitu metode pemasangan tetap dan tidak tetap (hanyut). Jadi, ada enam jenis jaring insang berdasarkan kombinasi sudut pandang pembagian tersebut, tetapi sebagian besar jenis jaring insang yang sering diterapkan adalah salah satu dari tiga jenis, yakni jaring insang: metode hanyut di permukaan laut, metode tetap di permukaan laut, metode tetap di bagian dasar laut (Gambar: 17)."
       },
       {
-       "ul": [
-        "**Umpan hidup (活き餌)**: ikan kecil hidup yang menarik ikan besar.",
-        "**Umpan mati (餌)**: potongan ikan atau cumi.",
-        "**Umpan tiruan (疑似餌)**: umpan buatan yang bergerak seperti mangsa."
-       ]
+       "p": "Gambar 17 Jaring aliran permukaan (atas) dan jaring insang tipe dasar tetap (bawah) Umumnya, sebagian besar yang disebut jaring insang adalah jaring insang tetap didasar laut (jaring insang 1 lembar / single gillnet). Digunakan dalam perikanan pesisir dan perikaan lepas pantai, ini adalah perikanan jaring insang yang paling umum dan memiliki variasi desain dan metode (Tabel :1) Hewan sasaran utama dari berbagai jenis alat tangkap jaring insang penangkapan yang banyak."
       },
       {
-       "h": "Memilih alat"
+       "p": "Hewan sasaran utama dari berbagai jenis alat tangkap jaring insang adalah sebagai berikut (Tabel :1). Jenis jaring insang Hewan Sasaran Utama Nishin (Ikan Haring), Gigi (Catfish), Guchi/Nibe (Gulama), jenis Tai (Sea Jaring insang dasar laut bream), jenis Aji (Mackerel kuda), Hirame (Ikan Sebelah), jenis Same (Hiu), jenis Kani (Kepiting) Jaring insang tetap di Nishin (Ikan Haring), Iwashi (Sarden), Tobiuo (ikan Terbang), Saba permukaan laut (Makarel), jenis Sake/Masu (Salmon), jenis Same (Hiu) jenis Kajiki (Marlin), Katsuo (Calarang), Sawara (Tenggiri), jenis Jaring insang hanyut Sake/Masu (Salmon), Saba (Mackerel), jenis Hiu, Nishin (Ikan Haring), Sanma (Sauri pasifik), Buri (Ekor Kuning) Buri (Ekor kuning) , Konoshiro (selangat/Kohada), Suzuki (seabass Jaring insang tiga lembar Jepang), jenis Hirame/Karei (ikan Sebelah), Mebaru (Rockfish), Kochi (Trammel Net) (ikan Baji-Baji) , Koika (Sotong), Ika (Cumi-cumi), udang Kuruma"
       },
       {
-       "p": "Pilih mata pancing, tali, dan umpan sesuai **jenis ikan, kedalaman, dan arus**. Tali yang terlalu lemah putus, tali yang terlalu tebal mudah terlihat ikan."
+       "h": "Jaring Ikan"
       },
       {
-       "h": "Perawatan"
+       "p": "Sifat umum yang dibutuhkan untuk jaring insang dan bahannya adalah sebagai berikut:"
       },
       {
-       "ol": [
-        "Bilas alat dengan air tawar atau air bersih setelah dipakai.",
-        "Periksa tali yang aus dan mata pancing yang berkarat atau tumpul.",
-        "Simpan mata pancing di kotak agar tidak menusuk orang."
-       ]
+       "h": "(1) Sulit kelihatan di dalam air"
       },
       {
-       "note": "Mata pancing selalu dipegang pada bagian lengkungnya dan tidak diarahkan ke orang lain."
+       "h": "(2) Benang jaring yang lembut"
+      },
+      {
+       "p": "(3) Benang jaring harus memiliki kekuatan putus ( breaking strength) yang cukup untuk menahan gaya renang ikan (4) Benang jaring memiliki sifat merenggang yang cukup untuk menahan ikan di dalam mata jaring."
+      },
+      {
+       "h": "(5) Mata jaring harus kuat untuk menahan ikan dengan kuat"
+      },
+      {
+       "h": "(1) Ukuran mata jaring"
+      },
+      {
+       "p": "Ukuran mata jaring merupakan faktor terpenting dalam menentukan sifat jaring insang dan ditentukan berdasarkan target spesies ikan serta ukuran ikan yang paling dominan di dalam kawanan ikan tersebut. Untuk jaring insang pada umumnya (jaring insang 1 lembar ), ketika ikan melewati mata jaring maka benang jaring akan mengimpit tubuh ikan sehingga Gambar 18: Lingkaran Ikan & ikan tertusuk pada mata jaring. (Gambar 18) Mata Jaring Dalam hal jaring tusuk yang menangkap ikan dengan fungsi lilitannya, kebanyakan ukuran mata jaring yang digunakan lebih kecil."
+      },
+      {
+       "h": "(2) Simpul"
+      },
+      {
+       "p": "Rasio penggantungan adalah, elemen desain jaring insang paling dasar. Rasio penggantungan adalah rasio yang ditentukan oleh panjang jaring dan panjang tali di mana jaring tersebut dipasang, dan bentuk belah ketupat yang terbentuk saat mata jaring terbuka ditentukan dengan ini. Perbandingan tersebut adalah perbandingan antara panjang jaring saat jaring direntangkan dengan panjang bagian yang dikerutkan dan dipendekkan saat jaring dipasang di tali. Secara umum, jaring insang bertujuan agar ikan menusuk mata jaring dan terimpit badannya, seringkali memiliki rasio penggantungan yang relatif kecil, dan sebaliknya, yang bertujuan agar ikan terlilit di jaring kebanyakan memiliki rasio penggantungan yang besar."
+      },
+      {
+       "p": "Pada jaring insang, tali pelampung dan tali pemberat pada dasarnya berbeda, dan tali pemberat 3- 10% lebih panjang dari tali pelampung. Oleh karena itu, rasio penggantungan di sisi tali pelampung dan sisi tali pemberat pun terdapat sedikit perbedaan. Hal ini karena jaring pada sisi tali pemberat lebih cenderung menyusut daripada sisi tali pelampung saat penebaran jaring, dan jaring pada sisi tali pemberat sulit untuk merenggang, sehingga sejak awal sisi pemberat dibuat lebih renggang. Namun pada jenis jaring insang dasar, dengan mempertimbangkan bentuk jaring (tegaknya jaring) di dasar lanaut setelah pemasang, jika jaring harus direbahkan menyesuaikan target tangkapan maka justru sebaliknya, tali pemberat dibuat lebih pendek."
+      },
+      {
+       "h": "(3) Mesh Depth (Lebar jaring ) dan Panjang jaring"
+      },
+      {
+       "p": "Besar kecilnya jaring ditunjukkan dengan mesh depth dan panjang jaring. Mesh depth adalah jumlah mata jaring yang ada dalam arah lebar jaring (panjang, tinggi, kedalaman). Panjang jaring (ke arah horizontal saat jaring insang sudah terpasang ) ditunjukkan dalam meter. Dalam hal produk siap pakai, lebar jaring tergantung pada lebar mesin rajut, 100 mata dan 200 mata menjadi standar umum. Panjang hasil akhir 1 lembar jaring sekitar 50 m."
+      },
+      {
+       "h": "(4) Warna dan visibilitas"
+      },
+      {
+       "p": "Banyak spesies ikan yang memiliki ketajaman visual dan kemampuan membedakan warna untuk mengidentifikasi keberadaan jaring di air secara visual. Saat ini diyakini bahwa kontras dengan latar belakanglah yang mengontrol apakah ikan dapat melihat keberadaan jaring di air atau tidak. Untuk benang multi-filamen berwarna ke abu abuan atau nilon berwarna biru muda yang sering digunakan untuk bahan jaring insang saat ini, selain untuk transparansi juga untuk memberikan kontras rendah dengan latar belakang."
       }
      ],
      "jp": [
       {
-       "h": "{道具|どうぐ}の{部分|ぶぶん}"
+       "h": "１．さまざまな{刺|さ}し{網|あみ}と{利用法|りようほう}"
       },
       {
-       "ul": [
-        "**{竿|さお}**：{魚|さかな}をひく、{上|あ}げるための{棒|ぼう}。",
-        "**{道|みち}{糸|いと}・{幹糸|みきいと}**：{竿|さお}やまき{機|き}から{出|で}る{長|なが}い{糸|いと}。",
-        "**ハリス**：{道|みち}{糸|いと}と{針|はり}のあいだの、{短|みじか}くて{細|ほそ}い{糸|いと}。{魚|さかな}に{見|み}えにくい。",
-        "**{釣|つ}り{針|ばり}**：{魚|さかな}の{口|くち}にささる{部分|ぶぶん}。**カエシ**のある{針|はり}と、**カエシなし**の{針|はり}がある。",
-        "**おもり**と**{浮|う}き**：えさの{深|ふか}さを{決|き}める。"
-       ]
+       "p": "{刺|さ}し{網|あみ}の{漁獲機能|ぎょかくきのう}は、{網目|あみめ}に{入|はい}った{魚体|ぎょたい}を{網糸|あみいと}が{締|し}め{付|つ}ける「{刺|さ}し{漁獲|ぎょかく}」と、{魚体|ぎょたい}の{棘|とげ}や{鰭|ひれ}などが{網糸|あみいと}に絡まる「{絡|から}み{漁獲|ぎょかく}」がある。"
       },
       {
-       "h": "えさ"
+       "p": "{刺|さ}し{網|あみ}は{二|ふた}つの{視点|してん}から{分類|ぶんるい}できる。{一|ひと}つは{設置|せっち}する{海|うみ}の{層|そう}で{表層|ひょうそう}、{中層|ちゅうそう}、{底層|ていそう}の{三|みっ}つに、{他|ほか}は{設置法|せっちほう}で{固定式|こていしき}と{非固定|ひこてい}（{流|なが}し）{式|しき}の{二|ふた}つに{分|わ}かれる。{視点|してん}の{組|く}み{合|あ}わせから{六|ろく}{種類|しゅるい}の{刺|さ}し{網|あみ}が{考|かんが}えられるが、{多|おお}くの{刺|さ}し{網|あみ}は、{表層流|ひょうそうなが}し{式|しき}、{表層固定式|ひょうそうこていしき}、{底層固定式|ていそうこていしき}{刺|さ}し{網|あみ}の{三種類|さんしゅるい}のいずれかである（{図|ず}１７）。"
       },
       {
-       "ul": [
-        "**{活|い}き{餌|えさ}**：{生|い}きている{小|ちい}さい{魚|さかな}。{大|おお}きい{魚|さかな}をよぶ。",
-        "**{餌|えさ}**：{魚|さかな}やイカのきった{身|み}。",
-        "**{疑似餌|ぎじえ}**：つくったえさ。{生|い}き{物|もの}のように{動|うご}く。"
-       ]
+       "p": "{図|ず}１７{表層流|ひょうそうなが}し{網|あみ}（{上図|じょうず}）と{底層固定式|ていそうこていしき}{刺|さ}し{網|あみ}"
       },
       {
-       "h": "{道具|どうぐ}のえらび{方|かた}"
+       "p": "{一般|いっぱん}に{単|たん}に{刺|さ}し{網|あみ}と{呼|よ}ばれるものの{大半|たいはん}は{底層固定式|ていそうこていしき}{刺|さ}し{網|あみ}（{一枚網|いちまいあみ}）である。{沿岸|えんがん}{漁業|ぎょぎょう}、{沖合漁業|おきあいぎょぎょう}で{使用|しよう}され、{刺|さ}し{網漁業|あみぎょぎょう}の{中|なか}では{最|もっと}も{一般的|いっぱんてき}なもので、デザインや{操業法|そうぎょうほう}のバリエーションも{大|おお}きい。"
       },
       {
-       "p": "**{魚|さかな}の{種類|しゅるい}、{深|ふか}さ、{流|なが}れ**にあわせて、{針|はり}、{糸|いと}、えさを{選|えら}びます。{糸|いと}が{弱|よわ}いと{切|き}れ、{太|ふと}すぎると{魚|さかな}に{見|み}えます。"
+       "p": "さまざまな{刺|さ}し{網類漁具|あみるいぎょぐ}の{主|おも}な{対象動物|たいしょうどうぶつ}は{以|い}{下|か}のようなものである（{表|ひょう}１）。"
       },
       {
-       "h": "{手|て}{入|い}れ"
+       "p": "{表|ひょう}１さまざまな{刺|さ}し{網類漁具|あみるいぎょぐ}の{主|おも}な{対象動物|たいしょうどうぶつ}"
       },
       {
-       "ol": [
-        "{使|つか}ったあとは、きれいな{水|みず}で{洗|あら}う。",
-        "{糸|いと}が{古|ふる}くなっていないか、{針|はり}がさびたり、にぶくなったりしていないか{見|み}る。",
-        "{針|はり}は{箱|はこ}に{入|い}れて、{人|ひと}にささらないようにしまう。"
-       ]
+       "p": "{刺|さ}し{網|あみ}の{種類|しゅるい}{主|おも}な{対象動物|たいしょうどうぶつ}{底刺|そこさ}し{網|あみ}にしん、ぎぎ、ぐち・にべ、たい{類|るい}、あじ{類|るい}、ひらめ、さめ"
       },
       {
-       "note": "{針|はり}は、まがった{所|ところ}を{持|も}ちます。{人|ひと}のほうにむけません。"
+       "p": "{類|るい}、かに{類|るい}{固定式表層刺|こていしきひょうそうさ}し{網|あみ}にしん、いわし、とびうお、さば、さけ・ます{類|るい}、さめ{類|るい}{流|なが}し{網|あみ}かじき{類|るい}、かつお、さわら、さけ・ます{類|るい}、さば、さめ{類|るい}、"
+      },
+      {
+       "p": "にしん、さんま、ぶり{三枚網|さんまいあみ}ぶり、このしろ、すずき、たい{類|るい}、ひらめ・かれい{類|るい}、めば"
+      },
+      {
+       "p": "る、こち、こういか、いか、くるまえび"
+      },
+      {
+       "h": "２．{網地|あみじ}"
+      },
+      {
+       "p": "{刺|さ}し{網|あみ}の{網地及|あみじおよ}びその{材料|ざいりょう}に{求|もと}められる{一般的|いっぱんてき}な{性質|せいしつ}は、{以|い}{下|か}のようなものである。(1){水中|すいちゅう}で{見|み}えにくいこと(2){網糸|あみいと}は{柔|やわ}らかであること(3){網糸|あみいと}は{魚|さかな}の{遊泳力|ゆうえいりょく}に{耐|た}えられる{十分|じゅうぶん}な{破断強度|はだんきょうど}を{持|も}っていること(4){網糸|あみいと}は{網目内|あみめない}に{魚体|ぎょたい}を{保|ほ}{持|じ}するために{適度|てきど}に{延|の}びる{性質|せいしつ}を{持|も}っていること(5){網目|あみめ}の{結節|けっせつ}は{魚体|ぎょたい}をしっかりと{保|ほ}{持|じ}するよう{強固|きょうこ}なこと（１）{目|め}{合|あ}い"
+      },
+      {
+       "p": "{目|め}{合|あ}いは、{刺|さ}し{網|あみ}の{性質|せいしつ}を{決定|けってい}する{最|もっと}も{重要|じゅうよう}な{要因|よういん}であり、{対象魚種|たいしょうぎょしゅ}とその{魚群中|ぎょぐんちゅう}で{多数|たすう}を{占|し}めるサイズによって{決|き}める。{一般|いっぱん}の{刺|さ}し{網|あみ}（{一枚網|いちまいあみ}）は、{魚|さかな}が{網目|あみめ}を{通過|つうか}する{際|さい}に{網糸|あみいと}が{魚体|ぎょたい}に{食込|くいこ}むことで{刺|さ}し{漁獲|ぎょかく}となる。({図|ず}１８)"
+      },
+      {
+       "p": "{絡|から}み{機能|きのう}による{漁獲|ぎょかく}を{目|め}{指|ざ}す{刺|さ}し{網|あみ}の{場合|ばあい}、や"
+      },
+      {
+       "p": "{図|ず}１８{魚|さかな}の{周長|しゅうちょう}と{網目内周長|あみめないしゅうちょう}や{小|ちい}さめの{目|め}{合|あ}いが{用|もち}いられることが{多|おお}い。（２）{縮|い}{結|せ}"
+      },
+      {
+       "p": "{縮|い}{結|せ}は、{最|もっと}も{基本的|きほんてき}な{刺|さ}し{網|あみ}の{設計要素|せっけいようそ}である。{縮|い}{結|せ}とは、{網地|あみじ}の{長|なが}さとこれを{仕|し}{付|つ}けるロープの{長|なが}さによって{決|き}まる{比|ひ}であり、{網目|あみめ}が{開|ひら}いて{出|で}{来|き}{上|あ}がる{菱形|ひしがた}の{形|かたち}がこれで{決|き}まる。{網地|あみじ}を{引|ひ}き{延|の}ばした{時|とき}の{長|なが}さと、その{後|あと}ロープに{仕|し}{付|つ}ける{時|とき}に、{縮|ちぢ}めて{短|みじか}くする{部分|ぶぶん}の{長|なが}さの{比|ひ}である。{刺|さ}し{漁獲|ぎょかく}を{目|め}{指|ざ}す{刺|さ}し{網|あみ}は{一般|いっぱん}に{比較的小|ひかくてきちい}さな{縮|い}{結|せ}を、{逆|ぎゃく}に{絡|から}み{漁獲|ぎょかく}を{目|め}{指|ざ}すものでは{大|おお}きな{縮|い}{結|せ}を{持|も}つことが{多|おお}い。"
+      },
+      {
+       "p": "{刺|さ}し{網|あみ}は、{基本的|きほんてき}に{浮|あ}{子|ば}{綱|つな}の{長|なが}さと{沈|い}{子|わ}{綱|つな}の長さが異なり、{沈|い}{子|わ}{綱|つな}の{方|ほう}が3～10％{浮|あ}{子|ば}{綱|つな}より{長|なが}い。{従|したが}って、{縮|い}{結|せ}も{浮|あ}{子|ば}{綱側|つながわ}と{沈|い}{子|わ}{綱側|つながわ}では、{多少|たしょう}の{違|ちが}いがある。これは、{投網時|とうもうじ}に{浮|あ}{子|ば}{綱側|つながわ}より{沈|い}{子|わ}{綱側|つながわ}の{網地|あみじ}が{縮|ちぢ}み{易|やす}く、{拡|ひろ}がり{難|づら}いので、{予|あらかじ}め{沈|い}子{側|わ}を{広|ひろ}げておくためである。しかし、{底刺|そこさ}し{網系|あみけい}では{設|せ}置{後|ご}の{海底|かいてい}における{網形状|あみけいじょう}（{網立|あみた}ち）を{考慮|こうりょ}し、{対象魚|たいしょうぎょ}により、{網|あみ}を{寝|ね}かせる{場合|ばあい}は{逆|ぎゃく}に{沈|い}{子|わ}{綱|つな}を{短|みじか}くすることもある。（３）{掛目|かけめ}と{網長|あみなが}さ"
+      },
+      {
+       "p": "{網地|あみじ}のサイズは{掛目|かけめ}と{網長|あみなが}さで{示|しめ}す。{掛目|かけめ}とは、{網地|あみじ}の{幅|はば}({丈|たけ}、{高|たか}さ、{深|ふか}さ){方向|ほうこう}に{含|ふく}まれる{目|め}の{数|かず}である。{網地|あみじ}の{長|なが}さ（{刺|さ}し{網|あみ}に{仕|し}{立|た}てた{時|とき}の{横方向|よこほうこう}）はメートルで{示|しめ}す。{既製品|きせいひん}の{場合|ばあい}、{掛目|かけめ}は{編網機|へんもうき}の{幅|はば}に{依|よ}るので100{掛|かけ}（{目|め}）、200{掛|かけ}が{基本|きほん}となる。{網地長|あみじちょう}は、{一反|いったん}の{仕|し}{上|あ}がり{長|ちょう}で、50m{前後|ぜんご}が{多|おお}い。（４）{色及|いろおよ}び{視認性|しにんせい}{多|おお}くの{魚種|ぎょしゅ}は{水中|すいちゅう}での{網地|あみじ}の{存在|そんざい}を{視認|しにん}できる{視力|しりょく}と{色|いろ}の{識別能力|しきべつのうりょく}を{持|も}っている。{現在|げんざい}は、{魚|さかな}が{水中|すいちゅう}で{網|あみ}の{存在|そんざい}を{視認|しにん}できるか{否|いな}かを{支配|しはい}しているのは、{背景|はいけい}とのコントラストであると{考|かんが}えられている。{今日刺|こんにちさ}し{網|あみ}の{材料|ざいりょう}としてよく{用|もち}いられる{薄墨|うすずみ}{色|いろ}のマルチフィラメント{糸|いと}や{薄青色|うすあおいろ}のテグス{製|せい}の{場合|ばあい}、{透明性|とうめいせい}に{加|くわ}えて{背景|はいけい}との{低|てい}コントラストが{得|え}られる。"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Pancing terdiri dari joran, tali utama, ハリス, mata pancing, dan umpan; pilih sesuai ikan dan arus.",
+      "core": "Jaring insang menangkap dengan menusuk (ikan terjepit di mata jaring) atau menjerat (duri/sirip terlilit). Dibagi menurut lapisan air dan cara pasang (tetap/hanyut).",
       "points": [
-       "道糸 = tali utama; ハリス = tali kail.",
-       "カエシなし = tanpa kait.",
-       "活き餌, 餌, 疑似餌.",
-       "Simpan mata pancing di kotak."
+       "Lapisan: permukaan, tengah, dasar; cara: tetap atau hanyut.",
+       "Yang paling umum: jaring insang tetap di dasar.",
+       "Ada 6 kombinasi lapisan × cara pasang; 3 yang paling umum."
       ],
       "avoid": [
-       "Mengarahkan mata pancing ke orang."
+       "Menyamakan 'menusuk' dan 'menjerat'."
       ],
       "exam": [
-       "Beda 道糸 dan ハリス.",
-       "Jenis umpan."
+       "Dua fungsi penangkapan."
       ]
      },
      "jp": {
-      "core": "{釣|つ}りは{竿|さお}・{道|みち}{糸|いと}・ハリス・{針|はり}・えさ。{魚|さかな}と{流|なが}れにあわせて{選|えら}ぶ。",
+      "core": "{刺|さ}し{網|あみ}は{魚|さかな}を{網目|あみめ}にさす、またはからめてとる。{層|そう}と{設置|せっち}{方法|ほうほう}で{分|わ}ける。",
       "points": [
-       "{道|みち}{糸|いと}＝{長|なが}い{糸|いと}、ハリス＝{針|はり}につなぐ{細|ほそ}い{糸|いと}。",
-       "カエシなし＝かえしのない{針|はり}。",
-       "{活|い}き{餌|えさ}・{餌|えさ}・{疑似餌|ぎじえ}。",
-       "{針|はり}は{箱|はこ}に{入|い}れる。"
+       "{層|そう}は{表層|ひょうそう}、{中層|ちゅうそう}、{底層|ていそう}。{方法|ほうほう}は{固定式|こていしき}と{流|なが}し{式|しき}。",
+       "{底層固定式|ていそうこていしき}がもっとも{多|おお}い。",
+       "{組|く}み{合|あ}わせは6つあるが、よく{使|つか}うのは3つ。"
       ],
       "avoid": [
-       "{針|はり}を{人|ひと}のほうにむけること。"
+       "「さす」と「からめる」を{同|おな}じと{思|おも}うこと。"
       ],
       "exam": [
-       "{道|みち}{糸|いと}とハリスのちがい。",
-       "えさの{種類|しゅるい}。"
+       "2つのとり{方|かた}。"
       ]
      }
     }
@@ -157,364 +188,133 @@
     "id": "b4s2",
     "no": 2,
     "title": {
-     "id": "Pancing Joran Tunggal (一本釣り)",
-     "jp": "{一本|いっぽん}{釣|づ}り{漁業|ぎょぎょう}"
+     "id": "Pelampung, Pemberat, Tali, Teknik Rajut",
+     "jp": "{浮|あ}{子|ば}・{沈子|ちんし}・ロープ・{仕|し}{立|た}て"
     },
     "pages": [
-     1,
-     1
+     77,
+     82
     ],
     "full": {
      "id": [
       {
-       "h": "Cara kerja"
+       "h": "Pelampung dan Pemberat"
       },
       {
-       "p": "**一本釣り (ippon-zuri)** memancing ikan **satu per satu** memakai joran dan satu mata pancing. Contoh terkenal: **カツオ一本釣り** (cakalang) dan マグロ一本釣り. Ikan ditarik langsung ke dek. Cara ini menjaga ikan tidak lecet sehingga **kualitasnya tinggi**."
+       "p": "Untuk pelampung jaring insang, dahulu sering digunakan benda yang lebih ringan dari air seperti kayu, bambu, gabus, dll. Tapi saat ini produk plastik resin sintetis sudah umum digunakan. Sifat terpenting dari pelampung adalah kelebihan daya apung dan ketahanan terhadap tekanan. Ada dua jenis pelampung, yang satu adalah jenis padat berisi dan yang lainnya adalah jenis berongga tengah. Bentuknya ada yang Gambar 19: Pelampung Datar jenis tembus yang memiliki lubang yang bisa dilalui tali dari (Gambar atas) dan Pelampung Dalam (gambar bawah) tengahnya, dan jenis pipih yang diikat dengan dua tali. Untuk yang jenis berongga tengah mempunyai kelebihan yakni tidak mudah lepas.untuk yang jenis pipih kelebihannya tidak saat rusak mudah diganti, mudah dalam pengaturan pelampungnya.(Gambar 19) Pemberat dapat menggunakan bahan apa saja seperti batu, tembikar, besi, timah, dll., yang lebih berat dari air. Tetapi pada jaring insang, pemberat timah (timbal) adalah yang paling umum digunakan. Biasanya berbentuk tong dan memiliki lubang untuk dilewati tali. Belakangan ini, tali timbal yang dibuat dengan cara memuntir timbal menjadi tali telah digunakan sebagai tali pemberat."
       },
       {
-       "h": "Cakalang (カツオ一本釣り)"
+       "h": "Jenis-jenis tali"
       },
       {
-       "ol": [
-        "Menemukan kawanan カツオ dengan penjaga pandang (見張り) dan pencari ikan.",
-        "Menebar **umpan hidup (活き餌)** ke laut untuk memancing ikan naik.",
-        "**Menyemprotkan air (散水)** agar ikan tidak melihat kapal dan mengira umpan hidup.",
-        "Para pemancing berdiri di tepi kapal dan menyentak ikan ke dek dengan **mata pancing tanpa kait** sehingga cepat lepas.",
-        "Ikan segera dimasukkan ke palka dan didinginkan."
-       ]
+       "p": "Tali yang terutama digunakan pada jaring insang adalah tali pelampung dan tali pemberat, namun ada pula yang tanpa tali pemberat dan terkadang menggunakan tali penguat (bolch line) pelampung. Pertimbangan utamanya, dipilih berdasarkan pertimbangan berat jenis, efektivitas pengoperasian (kekasaran permukaan), kekuatan putus, dan harga. Dari segi berat jenis, tali pelampung yang banyak digunakan terbuat dari bahan polietilen, polipropilen, yang lebih ringan dari air laut. Polivinil alkohol (cremona, claron, dll.) dan polypropylene sering digunakan untuk tali pemberat."
       },
       {
-       "h": "Keselamatan dan kerja"
+       "h": "Teknik merajut jaring"
       },
       {
-       "ul": [
-        "Tepi kapal licin dan bergoyang; pakai jaket pelampung dan sepatu anti licin.",
-        "Beban pada lengan dan punggung sangat berat. Gunakan **posisi yang benar** dan istirahat bergantian.",
-        "Hati-hati terhadap ikan yang melompat dan mata pancing yang melayang saat menyentak."
-       ]
+       "h": "(1) Badan Jaring dan jaring Srampat (Selvage)"
       },
       {
-       "note": "Teknik ini membutuhkan kerja sama: ikut aba-aba, jangan memancing terlalu dekat dengan orang lain."
+       "p": "Pada dasarnya, metode terbaik adalah merajut beberapa mata baru sambil menambah ketebalan benang secara bertahap. Benang pada bagian paling tepi tebalnya sekitar 2 kali lipat tebal benang jaring. Pada bagian kedua ujung dari selembar jaring insang, tali ris samping (side line) diselipkan melalui mata jaring dalam arah lebar jaring, atau mata jaring paling ujung dibiarkan saling terpisah. Untuk memperkuat bagian ini, simpul jaring akan diikatkan dengan benang pengikat. (Gambar 20) Selain itu, jika ada bagian dari jaring yang robek, sudah lazim bagi nelayan untuk melakukan pekerjaan perbaikan sendiri Fuchiami (Srampat) Tomeito (Tali pengikat) M imiito (Tali ris samping) M iami (Badan jaring) Fuchiami (Srampat ) Gambar 20 Rajutan tepi dan jahitan tepi"
+      },
+      {
+       "h": "(2) Webbing Jaring"
+      },
+      {
+       "p": "Ada banyak variasi metode untuk webbing badan jaring, pelampung, pemberat, dan tali (Gambar 21). Untuk metode pemasangan pelampung, dengan metode pilinan tali S (arah pilinan tali ke kanan) , atau kebalikannya yakni pilinan tali Z (arah pilinan tali ke kiri), dan masukkan salah satu sisi tali melalui lubang pelampung atau jepit pelampung dengan tali. Jika diameter satu tali dibuat sedikit lebih kecil, maka disebut tali penguat. Benang yang memasang jaring pada tali disebut benang pemikat. Untuk menghindari terkonsentrasinya kekuatan pada salah satu bagian jaring saja, semua mata jaring tidak diikat mati pada tali, tapi diikat pada benang pemikat agar bisa bergerak feksibel. Ada dua cara memasang jaring di atas tali. Salah satunya adalah metode di mana tali direntangkan di udara, beberapa tempat pada tali ditandai dengan interval antar tanda tersebut dihitung pada saat desain, dan pada jaring juga diberi tanda dengan jumlah tanda dan interval yang sama pada tali , dan jaring diikatkan ke tali di posisi yang ditandai. Cara yang lainnya adalah tidak perlu meregangkan atau menandai tali, yakni metode pengukuran jarak antar bagian pengikatan dengan menghitung jumlah mata jaring, dan pengikatan pada posisi balik sesuai dengan penyusutan (misalnya, renggangkan jaring dari salah satu posisi pengikatan hingga jumlah mata ke-10 selanjutnya, bila penyusutannya 40%, pengikatan selanjutnya berada di posisi yang kembali ke 4 mata jaring). Yang pertama membutuhkan area kerja yang besar, sedangkan yang kedua tidak leluasa menentukan penyusutan (hanya bisa setiap setengah mata ), jadi masing-masing memiliki kelemahan. Benang pintal poliamida sering digunakan untuk memasang bagian jaring di mana pun bagian tersebut. Ini karena permukaan bahan ini memiliki tingkat kekasaran yang cukup untuk pengikatan dan tidak mahal. Jaring pemberat pemberat Tali bidai pemberat pemberat Tali keranjang Jaring Tali keranjang pemberat (jalinan) keranjang jalinan tali Jaring pemberat pemberat Tali penyambung Batu pemberat Tali pemberat timah Tali batu Batu pemberat Tali keranjang (jalinan) Tali pemberat Tali keranjang (jalinan) Tali jalinan penghubung Batu pemberat pemberat pemberat Gambar 21. Berbagai macam metode pengapungan jaring Perikanan Pukat Hela Dasar"
       }
      ],
      "jp": [
       {
-       "h": "しくみ"
+       "h": "３．{浮|あ}{子|ば}{及|およ}び{沈|い}{子|わ}"
       },
       {
-       "p": "**{一本|いっぽん}{釣|づ}り**は、{竿|さお}と{針|はり}1{本|ほん}で、{魚|さかな}を**1ぴきずつ**{釣|つ}る{漁|りょう}です。{有名|ゆうめい}なのは**カツオ{一本|いっぽん}{釣|づ}り**とマグロ{一本|いっぽん}{釣|づ}りです。{魚|さかな}を{直接|ちょくせつ}、{甲板|かんぱん}に{上|あ}げます。{魚|さかな}にきずがつきにくいので、**{品質|ひんしつ}が{高|たか}い**です。"
+       "p": "{刺|さ}し{網用|あみよう}の{浮|あ}{子|ば}には、{木|き}、{竹|たけ}、コルク{等水|などみず}より{軽|かる}いさまざまな{材質|ざいしつ}のものが{用|もち}いられてきたが、{今日|こんにち}、{合成樹脂製品|ごうせいじゅしせいひん}が{一般的|いっぱんてき}である。{浮|あ}{子|ば}にとって{最|もっと}も{重要|じゅうよう}な{性質|せいしつ}は、{余剰浮力|よじょうふりょく}と{耐圧性|たいあつせい}である。{浮|あ}{子|ば}には{充填式|じゅうてんしき}と{中空式|ちゅうくうしき}があり、{形状|けいじょう}は、ロープが{通|とお}る{穴|あな}を{有|ゆう}する{中通|なかとお}し{型|かた}と、2{本|ほん}のロープで{挟|はさ}み{込|こ}むようにして{使用|しよう}する{平型|ひらがた}がある。{中通|なかとお}し{浮|あ}{子|ば}は{外|はず}れる{可能性|かのうせい}がないのが{利点|りてん}で、{平型|ひらがた}は{壊|こわ}れた{時|とき}の{交換|こうかん}や{浮力|ふりょく}の{調節|ちょうせつ}のための{脱着|だっちゃく}が{容易|ようい}であるとい{図|ず}１９{平浮|ひらあ}{子|ば}（{上図|じょうず}）とう{利点|りてん}がある（{図|ず}１９）。{中通|なかとお}し{浮|あ}{子|ば}（{下図|したず}）"
       },
       {
-       "h": "カツオ{一本|いっぽん}{釣|づ}り"
+       "p": "{沈|い}{子|わ}は、{水|みず}より{十分|じゅうぶん}に{重|おも}い、{石|いし}、{陶器|とうき}、{鉄|てつ}、{鉛|なまり}{等|など}、いずれの{材質|ざいしつ}も{利用|りよう}することができるが、{刺|さ}し{網|あみ}には{鉛沈|なまりい}{子|わ}が{最|もっと}も{一般的|いっぱんてき}である。{樽型|たるがた}でロープが{通|とお}る{穴|あな}を{有|ゆう}する{形|かたち}が{一般的|いっぱんてき}である。{近年|きんねん}では、{鉛|なまり}をロープに{撚|よ}り{込|こ}んだ{鉛|なまり}ロープが{沈|い}{子|わ}{綱|つな}として{利用|りよう}されている。"
       },
       {
-       "ol": [
-        "{見張|みは}りと{魚群探知機|ぎょぐんたんちき}でカツオの{群|む}れを{見|み}つける。",
-        "**{活|い}き{餌|えさ}**を{海|うみ}にまいて、{魚|さかな}をよぶ。",
-        "**{散水|さんすい}**（{水|みず}をまく）して、{魚|さかな}に{船|ふね}が{見|み}えないようにし、{活|い}き{餌|えさ}とまちがえさせる。",
-        "{釣|つ}り{人|ひと}は{船|ふね}のはしに{立|た}ち、**カエシなしの{針|はり}**で{魚|さかな}を{甲板|かんぱん}にはね{上|あ}げる。すぐに{針|はり}がはずれる。",
-        "{魚|さかな}をすぐ{魚倉|ぎょそう}に{入|い}れて、{冷|ひ}やす。"
-       ]
+       "h": "４.ロープ{類|るい}"
       },
       {
-       "h": "{安全|あんぜん}と{仕事|しごと}"
+       "p": "{刺|さ}し{網|あみ}でロープが{用|もち}いられるのは{主|おも}に{浮|あ}{子|ば}{綱|つな}と{沈|い}{子|わ}{綱|つな}であるが、{沈|い}{子|わ}{綱|つな}を{欠|か}くものも、{浮|あ}{子|ば}{添|そ}え{綱|つな}を{用|もち}いることもある。{主|おも}に{比重|ひじゅう}、{操作性|そうさせい}（{表面|ひょうめん}の{粗|そ}{度|ど}）、{破断強度|はだんきょうど}、{価格|かかく}の{点|てん}から{選|えら}ぶ。{比重等|ひじゅうなど}の{点|てん}から、{浮|あ}{子|ば}{綱|つな}には{海水|かいすい}より{軽|かる}いポリエチレン、ポリプロピレン{製|せい}、{沈|い}{子|わ}{綱|つな}にポリビニールアルコール（クレモナ、クラロン{等|など}）、ポリプロピレン{製|せい}が{多用|たよう}される。"
       },
       {
-       "ul": [
-        "{船|ふね}のはしはすべって、ゆれる。ライフジャケットとすべりにくい{靴|くつ}をつける。",
-        "うでと{背中|せなか}の{負担|ふたん}がとても{大|おお}きい。**{正|ただ}しい{姿勢|しせい}**で、{交代|こうたい}で{休|やす}む。",
-        "とび{上|あ}がる{魚|さかな}と、はね{上|あ}げるときの{針|はり}に{気|き}をつける。"
-       ]
+       "h": "５．{仕|し}{立|た}て{技術|ぎじゅつ}"
       },
       {
-       "note": "この{漁|りょう}は{協力|きょうりょく}が{大切|たいせつ}です。{合図|あいず}を{聞|き}いて、ほかの{人|ひと}の{近|ちか}くで{釣|つ}りすぎないようにします。"
+       "p": "（１）{網地|あみじ}と{縁網|ふちあみ}（{編|あ}み）"
+      },
+      {
+       "p": "{基本的|きほんてき}には、{網糸太|あみいとふと}さを{徐々|じょじょ}に{増|ま}しながら{数目|すうめ}の{新|あたら}しい{網目|あみめ}を{編|あ}み{込|こ}むのが{最良|さいりょう}の{方法|ほうほう}であり、{最縁部|さいえんぶ}の{網糸|あみいと}は{網地|あみじ}のそれの{倍程度|ばいていど}にするのが{標準|ひょうじゅん}である。"
+      },
+      {
+       "p": "{一反|いったん}の{刺|さ}し{網両端部|あみりょうたんぶ}は、{網丈方向|あみたけほうこう}の{網目|あみめ}に{耳糸|みみいと}が{通|とお}されているか、{網目|あみめ}が{切|き}りっ{放|ぱな}しになる。この{部分|ぶぶん}の{強化|きょうか}のため、{留|と}め{糸|いと}を{使|つか}い{結節|けっせつ}を{固|こ}{縛|ばく}していく。（{図|ず}２０）また、{網地|あみち}が{一部破|いちぶやぶ}れた{際|さい}は、{漁業者自|ぎょぎょうしゃみずか}ら{補修作業|ほしゅうさぎょう}を{行|おこな}うのが{一般的|いっぱんてき}である。"
+      },
+      {
+       "p": "{縁網|ふちあみ}"
+      },
+      {
+       "p": "{留糸|とめいと}"
+      },
+      {
+       "p": "{耳糸|みみいと}"
+      },
+      {
+       "p": "{身網|みあみ}"
+      },
+      {
+       "p": "{縁網|ふちあみ}"
+      },
+      {
+       "p": "{図|ず}２０{縁編|ふちあ}み（{網|あみ}）と{端留|はしどめ}（２）{仕|し}{立|た}て"
+      },
+      {
+       "p": "{網地|あみじ}、{浮|あ}{子|ば}、{沈|い}{子|わ}、ロープを{仕|し}{立|た}て{上|あ}げる{方法|ほうほう}はバリエーションに{富|と}んでいる（{図|ず}２１）。{浮|あ}{子|ば}{方|かた}の{仕|し}{立|た}てでは、S{撚|よ}り、Z{撚|よ}りの{逆撚|ぎゃくよ}りのロープを{用|もち}い、{一方|いっぽう}のロープを{浮|あ}{子|ば}の{穴|あな}に{通|とお}すか、2{本|ほん}のロープで{浮|あ}{子|ば}を{挟|はさ}むように{仕|し}{立|た}てる。{一方|いっぽう}のロープの{直径|ちょっけい}を{少|すこ}し{小|ちい}さくした{場合|ばあい}には、{添|そ}え{綱|つな}と{呼|よ}ばれる。{網地|あみじ}をロープに{仕|し}{付|つ}けていく{糸|いと}は{目通|めとお}し{糸|いと}と{呼|よ}ぶ。{網地|あみじ}の{一部|いちぶ}への{力|ちから}の{集中|しゅうちゅう}を{避|さ}けるためには、すべての{網目|あみめ}をロープには{固定|こてい}せず、{目通|めとお}し{糸上|いとじょう}で{自由|じゆう}に{動|うご}くようにしておくのがよい。"
+      },
+      {
+       "p": "ロープに{網地|あみじ}を{仕|し}{付|つ}けて{行|い}くには{二|ふた}つの方法がある。{一|ひと}つは、ロープを{空中|くうちゅう}に{張|は}り、{設計時|せっけいじ}に{計算|けいさん}しておいた{間隔|かんかく}で{印|しるし}を{付|つ}けておき、{同|おな}じく{決|き}められた{目数|めかず}を{目印|めじるし}ごとに{仕|し}{付|つ}けていく{方法|ほうほう}である。もう{一|ひと}つは、ロープを{張|は}ったり{印|しるし}を{付|つ}けたりせず、{手元|てもと}で、{固|こ}縛{部|ぶ}から{固|こ}縛{部|ぶ}までを{目数|めかず}を{用|もち}いて{測|はか}り、{縮|い}{結|せ}に{従|したが}って{戻|もど}った{点|てん}に{仕|し}{付|つ}ける{方法|ほうほう}である（{例|たと}えば、{一|ひと}つの{固|こ}縛{部|ぶ}から10{目分|めぶん}を{引|ひ}き{伸|の}ばし、{縮|い}{結|せ}が40%であれば4{目|め}{戻|もど}ったところを{次|つぎ}の{固縛|こばく}{部|ぶ}とする）。{前者|ぜんしゃ}が{大|おお}きな{作業|さぎょうす}スペースを{必要|ひつよう}とするのに{対|たい}して、{後者|こうしゃ}は{縮|い}{結|せ}を{完全|かんぜん}に{自由|じゆう}には{選|えら}べない（{半目|はんめ}ずつでしかできない）といったそれぞれ{弱点|じゃくてん}がある。いかなる{部分|ぶぶん}であれ、{部品|ぶひん}の{仕|し}{立|た}てにはポリアミドのスパン{糸|いと}が{多用|たよう}される。この{材料|ざいりょう}の{表面|ひょうめん}が{固縛|こばく}に{必要|ひつよう}な{十分|じゅうぶん}な{粗|そ}{度|ど}を{持|も}っていることと{安価|あんか}であるためである。"
+      },
+      {
+       "p": "{図|ず}２１{浮|あ}{子方|ばかた}、{沈|い}子{方|た}の{様々|さまざま}な{仕|し}{立|た}て{方法|ほうほう}"
+      },
+      {
+       "p": "そこあみぎょぎょう"
+      },
+      {
+       "p": "底びき網漁業"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Pancing joran tunggal menangkap ikan satu per satu dengan kualitas tinggi; pakai umpan hidup, air semprot, dan kail tanpa kait.",
+      "core": "Pelampung harus punya daya apung lebih dan tahan tekanan; pemberat umum dari timbal. Tali: tali pelampung dan tali pemberat.",
       "points": [
-       "一本釣り = ikan ditarik satu per satu.",
-       "カツオ一本釣り: 活き餌 + 散水.",
-       "Mata pancing tanpa kait mudah lepas.",
-       "Jaga postur lengan/punggung."
+       "Pelampung kini plastik resin sintetis (dulu kayu/bambu/gabus).",
+       "Pelampung: jenis padat atau berongga.",
+       "Pemberat timbal berbentuk tong dengan lubang tali."
       ],
       "avoid": [
-       "Memancing terlalu dekat dengan orang lain."
+       "Memakai pemberat yang lebih ringan dari air."
       ],
       "exam": [
-       "Alasan kualitas ikan lebih baik.",
-       "Fungsi 散水."
+       "Sifat penting pelampung."
       ]
      },
      "jp": {
-      "core": "{一本|いっぽん}{釣|づ}りは1ぴきずつ{釣|つ}るので{品質|ひんしつ}が{高|たか}い。{活|い}き{餌|えさ}・{散水|さんすい}・カエシなしの{針|はり}を{使|つか}う。",
+      "core": "{浮|あ}{子|ば}は{余剰浮力|よじょうふりょく}と{耐圧性|たいあつせい}が{大切|たいせつ}。{沈子|ちんし}は{鉛|なまり}がよく{使|つか}われる。",
       "points": [
-       "{一本|いっぽん}{釣|づ}り＝1ぴきずつ{釣|つ}る。",
-       "カツオ{一本|いっぽん}{釣|づ}り：{活|い}き{餌|えさ}＋{散水|さんすい}。",
-       "カエシなしの{針|はり}は{外|はず}れやすい。",
-       "うでと{背中|せなか}の{姿勢|しせい}に{注意|ちゅうい}。"
+       "いまの{浮|あ}{子|ば}は{合|あ}{成|な}{樹脂|じゅし}{製|せい}が{多|おお}い。",
+       "{浮|あ}{子|ば}には{充填式|じゅうてんしき}と{中空式|ちゅうくうしき}がある。",
+       "{鉛|なまり}の{沈子|ちんし}は{樽型|たるがた}で、ロープを{通|とお}す{穴|あな}がある。"
       ],
       "avoid": [
-       "ほかの{人|ひと}の{近|ちか}くで{釣|つ}ること。"
+       "{水|みず}より{軽|かる}いものを{沈子|ちんし}に{使|つか}うこと。"
       ],
       "exam": [
-       "{品質|ひんしつ}が{高|たか}い{理由|りゆう}。",
-       "{散水|さんすい}のはたらき。"
-      ]
-     }
-    }
-   },
-   {
-    "id": "b4s3",
-    "no": 3,
-    "title": {
-     "id": "Rawai (はえ縄)",
-     "jp": "はえ{縄|なわ}{漁業|ぎょぎょう}"
-    },
-    "pages": [
-     1,
-     1
-    ],
-    "full": {
-     "id": [
-      {
-       "h": "Cara kerja"
-      },
-      {
-       "p": "**Rawai (はえ縄 / 延縄)** adalah **tali utama (幹縄)** yang sangat panjang, kadang puluhan kilometer, dengan banyak **tali cabang (枝縄)** yang masing-masing berisi mata pancing berumpan. Dipakai untuk マグロ, メカジキ, タラ, dan ikan besar lain."
-      },
-      {
-       "h": "Bagian utama"
-      },
-      {
-       "ul": [
-        "**Tali utama (幹縄)**: tali panjang di air.",
-        "**Tali cabang (枝縄)**: tali pendek berkail yang digantung pada tali utama.",
-        "**Pelampung (浮き) dan tiang bendera**: menandai posisi dan menahan tali.",
-        "**Pelampung bola (ブイ)** dan lampu: terlihat dari jauh, terutama di malam hari."
-       ]
-      },
-      {
-       "h": "Urutan kerja"
-      },
-      {
-       "ol": [
-        "**Memasang umpan (餌付け)** pada tiap mata pancing.",
-        "**Menurunkan rawai (投縄)** dari buritan sambil kapal bergerak; tali, cabang, dan pelampung dipasang berurutan.",
-        "Membiarkan rawai beberapa jam.",
-        "**Menarik rawai (揚縄)** dengan mesin; hasil tangkapan dinaikkan satu per satu.",
-        "Menyimpan tali cabang dan mata pancing dengan rapi."
-       ]
-      },
-      {
-       "h": "Keselamatan"
-      },
-      {
-       "ul": [
-        "Saat diturunkan, kail terayun ke belakang cepat. **Jangan berdiri di jalur tali.**",
-        "Tali cabang bisa melilit kaki. Berhati-hati dan jangan berdiri di antara gulungan tali.",
-        "Mata pancing besar sangat berbahaya. Jika tertusuk, **segera lapor**, jangan mencabutnya sendiri secara paksa."
-       ]
-      }
-     ],
-     "jp": [
-      {
-       "h": "しくみ"
-      },
-      {
-       "p": "**はえ{縄|なわ}**は、とても{長|なが}い**{幹縄|みきなわ}**（ときには{何|なん}{十|じゅう}キロメートルも）に、えさをつけた{針|はり}のついた**{枝縄|えだなわ}**をたくさんつけた{漁具|ぎょぐ}です。マグロ、メカジキ、タラなど、{大|おお}きい{魚|さかな}をとります。"
-      },
-      {
-       "h": "おもな{部分|ぶぶん}"
-      },
-      {
-       "ul": [
-        "**{幹縄|みきなわ}**：{水|みず}の{中|なか}の{長|なが}いロープ。",
-        "**{枝縄|えだなわ}**：{幹縄|みきなわ}からたれる、{針|はり}のついた{短|みじか}いロープ。",
-        "**{浮|う}き**と**{旗|はた}ざお**：{場所|ばしょ}の{目|め}じるしで、ロープをささえる。",
-        "**ブイ**とライト：{遠|とお}くからも{見|み}える。{夜|よる}は{特|とく}に{大切|たいせつ}。"
-       ]
-      },
-      {
-       "h": "{仕事|しごと}の{順番|じゅんばん}"
-      },
-      {
-       "ol": [
-        "{針|はり}に**えさをつける**（**{餌付|えづけ}け**）。",
-        "{船|ふね}を{動|うご}かしながら、{船尾|せんび}から**{投縄|なげなわ}**する。{幹縄|みきなわ}、{枝縄|えだなわ}、{浮|う}きを{順|じゅん}に{出|だ}す。",
-        "{何|なん}{時間|じかん}か、おいておく。",
-        "{機械|きかい}で**{揚縄|あげなわ}**（ロープを{上|あ}げる）する。{魚|さかな}を1ぴきずつ{船|ふね}に{上|あ}げる。",
-        "{枝縄|えだなわ}と{針|はり}をきれいにしまう。"
-       ]
-      },
-      {
-       "h": "{安全|あんぜん}"
-      },
-      {
-       "ul": [
-        "{出|だ}すとき、{針|はり}は{後|うし}ろへ{速|はや}くとぶ。**ロープの{通|とお}り{道|みち}に{立|た}たない。**",
-        "{枝縄|えだなわ}が{足|あし}にからまることがある。ロープの{間|あいだ}に{立|た}たない。",
-        "{大|おお}きい{針|はり}はとてもあぶない。ささったら**すぐ{報告|ほうこく}**し、{自分|じぶん}でむりにぬかない。"
-       ]
-      }
-     ]
-    },
-    "summary": {
-     "id": {
-      "core": "Rawai = tali utama panjang + tali cabang berkail; waspadai kail yang terayun dan tali yang melilit.",
-      "points": [
-       "幹縄 = tali utama; 枝縄 = tali cabang.",
-       "餌付け → 投縄 → 揚縄.",
-       "Jangan berdiri di jalur tali.",
-       "Kail menusuk: lapor, jangan cabut paksa."
-      ],
-      "avoid": [
-       "Mencabut mata pancing yang menusuk dengan paksa."
-      ],
-      "exam": [
-       "Beda 幹縄 dan 枝縄.",
-       "Urutan kerja rawai."
-      ]
-     },
-     "jp": {
-      "core": "はえ{縄|なわ}は{長|なが}い{幹縄|みきなわ}と{針|はり}つきの{枝縄|えだなわ}。{針|はり}のふりと{縄|なわ}のからまりに{注意|ちゅうい}。",
-      "points": [
-       "{幹縄|みきなわ}＝メインのロープ、{枝縄|えだなわ}＝{針|はり}のついたロープ。",
-       "{餌付|えづけ}け→{投縄|なげなわ}→{揚縄|あげなわ}。",
-       "ロープの{通|とお}り{道|みち}に{立|た}たない。",
-       "{針|はり}がささったら{報告|ほうこく}。"
-      ],
-      "avoid": [
-       "ささった{針|はり}をむりにぬくこと。"
-      ],
-      "exam": [
-       "{幹縄|みきなわ}と{枝縄|えだなわ}のちがい。",
-       "はえ{縄|なわ}の{仕事|しごと}の{順番|じゅんばん}。"
-      ]
-     }
-    }
-   },
-   {
-    "id": "b4s4",
-    "no": 4,
-    "title": {
-     "id": "Pancing Cumi (イカ釣り)",
-     "jp": "イカ{釣|つ}り{漁業|ぎょぎょう}"
-    },
-    "pages": [
-     1,
-     1
-    ],
-    "full": {
-     "id": [
-      {
-       "h": "Cara kerja"
-      },
-      {
-       "p": "Cumi (イカ), terutama **スルメイカ**, ditangkap di **malam hari**. Lampu sangat terang (**集魚灯**) menarik cumi dan ikan kecil ke dekat kapal. Mata pancing khusus cumi tidak berumpan: **kait berbentuk mahkota (イカ角 / 擬似針)** menjerat tentakel cumi."
-      },
-      {
-       "h": "Mesin pancing cumi"
-      },
-      {
-       "p": "**Mesin pancing cumi otomatis (自動イカ釣り機)** menaik-turunkan tali panjang berisi banyak kail. Cumi yang tersangkut ikut naik, lalu dilepas otomatis dan jatuh ke palka atau meja sortir."
-      },
-      {
-       "h": "Urutan kerja"
-      },
-      {
-       "ol": [
-        "Berangkat sore hari dan mencari lokasi.",
-        "Menyalakan lampu pengumpul ikan setelah gelap.",
-        "Menurunkan tali kail dengan mesin.",
-        "Memeriksa mesin dan memilah cumi: **jenis, ukuran, dan kondisi**.",
-        "Mendinginkan atau membekukan cumi dengan cepat."
-       ]
-      },
-      {
-       "h": "Keselamatan"
-      },
-      {
-       "ul": [
-        "Bekerja di malam hari sehingga **kantuk** dan lelah menyebabkan kecelakaan. Atur istirahat bergantian.",
-        "Lampu panas dan sangat terang; jangan menyentuh lampu atau kabel, dan jangan menatapnya langsung.",
-        "Tali dan kail mesin bergerak cepat; jangan menyentuh saat berjalan. Matikan mesin sebelum memperbaiki.",
-        "Cumi menyemprotkan tinta dan membuat dek licin."
-       ]
-      }
-     ],
-     "jp": [
-      {
-       "h": "しくみ"
-      },
-      {
-       "p": "イカ、とくに**スルメイカ**は、**{夜|よる}**にとります。とても{明|あか}るい**{集魚灯|しゅうぎょとう}**で、イカや{小|ちい}さい{魚|さかな}を{船|ふね}の{近|ちか}くにあつめます。イカをとる{針|はり}は、えさがありません。**イカ{角|つの}（{疑似針|ぎじばり}）**がイカの{足|あし}にひっかかります。"
-      },
-      {
-       "h": "イカ{釣|つ}り{機|き}"
-      },
-      {
-       "p": "**{自動|じどう}イカ{釣|つ}り{機|き}**は、たくさんの{針|はり}がついた{長|なが}い{糸|いと}を、{上|あ}げ{下|さ}げします。イカがかかったまま{上|あ}がり、{自動|じどう}ではずれて、{魚倉|ぎょそう}や{選別台|せんべつだい}に{落|お}ちます。"
-      },
-      {
-       "h": "{仕事|しごと}の{順番|じゅんばん}"
-      },
-      {
-       "ol": [
-        "{夕方|ゆうがた}に{出|で}て、{場所|ばしょ}を{探|さが}す。",
-        "{暗|くら}くなったら{集魚灯|しゅうぎょとう}をつける。",
-        "{機械|きかい}で、{針|はり}のついた{糸|いと}を{海|うみ}に{入|い}れる。",
-        "{機械|きかい}を{見回|みまわ}り、イカを**{種類|しゅるい}・{大|おお}きさ・{状態|じょうたい}**で{選別|せんべつ}する。",
-        "イカをすばやく{冷|ひ}やす、または{凍|こお}らせる。"
-       ]
-      },
-      {
-       "h": "{安全|あんぜん}"
-      },
-      {
-       "ul": [
-        "{夜|よる}の{仕事|しごと}なので、**ねむけ**とつかれで{事故|じこ}がおきる。{交代|こうたい}で{休|やす}む。",
-        "ライトは{熱|あつ}く、とても{明|あか}るい。ライトやケーブルにさわらない。じかに{見|み}ない。",
-        "{機械|きかい}の{糸|いと}と{針|はり}は{速|はや}くうごく。{動|うご}いているときはさわらない。{直|なお}すときは、{先|さき}に{機械|きかい}をとめる。",
-        "イカは{墨|すみ}をはいて、{甲板|かんぱん}がすべる。"
-       ]
-      }
-     ]
-    },
-    "summary": {
-     "id": {
-      "core": "Cumi ditangkap malam hari dengan lampu dan kait tanpa umpan; mesin otomatis; waspadai kantuk, lampu panas, dan mesin berputar.",
-      "points": [
-       "スルメイカ, malam hari.",
-       "集魚灯 menarik cumi.",
-       "イカ角 = kait cumi tanpa umpan.",
-       "Kantuk dan lampu panas berbahaya."
-      ],
-      "avoid": [
-       "Memperbaiki mesin yang masih hidup."
-      ],
-      "exam": [
-       "Fungsi 集魚灯 dan イカ角.",
-       "Bahaya kerja malam."
-      ]
-     },
-     "jp": {
-      "core": "イカは{夜|よる}、{灯|ひ}と{針|はり}でとる。ねむけ・{熱|あつ}いライト・{機械|きかい}に{注意|ちゅうい}。",
-      "points": [
-       "スルメイカは{夜|よる}にとる。",
-       "{集魚灯|しゅうぎょとう}でイカをあつめる。",
-       "イカ{角|つの}＝えさなしの{針|はり}。",
-       "ねむけと{熱|あつ}いライトに{注意|ちゅうい}。"
-      ],
-      "avoid": [
-       "{動|うご}いている{機械|きかい}を{直|なお}すこと。"
-      ],
-      "exam": [
-       "{集魚灯|しゅうぎょとう}とイカ{角|つの}のはたらき。",
-       "{夜|よる}の{仕事|しごと}のきけん。"
+       "{浮|あ}{子|ば}の{大切|たいせつ}な{性質|せいしつ}。"
       ]
      }
     }

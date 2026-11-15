@@ -318,3 +318,8 @@ body.sw-figopen{padding-bottom:62vh;}
 
 .sw-tsub{margin:2px 0 8px;font-size:.92rem;color:var(--muted,#6b7280);font-weight:500}
 .sw-qrow .sw-tsub{margin-left:6px;font-size:.8rem}
+
+/* ===== tambahan standar baru: popup kanji & tata bahasa (hanya aktif bila bidang menyediakan data) ===== */
+.sw-k{border-bottom:1px dotted rgba(80,140,230,.7); cursor:pointer; border-radius:3px;} .sw-k:hover,.sw-k:focus{background:rgba(80,140,230,.18); outline:none;}
+.sw-g{border-bottom:2px dashed rgba(60,170,110,.8); cursor:pointer; border-radius:3px;} .sw-g:hover,.sw-g:focus{background:rgba(60,170,110,.18); outline:none;}
+.sw-kr{margin:4px 0;} .sw-kc{font-size:26px; margin-right:8px;}

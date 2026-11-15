@@ -701,8 +701,49 @@ const SSW = window.SSW = {
         } catch (e) { /* lewati */ }
       }
     }
-    const open = (e) => { const w = e.target.closest?.(".sw-w"); if (!w) return; e.preventDefault(); SSW.vsheet(slug, w.dataset.v); };
+    /* tambahan: kanji yang belum ada di kosakata -> ketuk untuk arti kanji; pola tata bahasa -> ketuk untuk penjelasan */
+    if (pack.kanji) root.querySelectorAll("ruby").forEach((ru) => {
+      if (ru.closest(".sw-w,.sw-k")) return;
+      const base = [...ru.childNodes].filter(n => n.nodeType === 3).map(n => n.nodeValue).join("");
+      if (![...base].some(c => pack.kanji[c])) return;
+      const sp = document.createElement("span"); sp.className = "sw-k"; sp.dataset.k = base; sp.dataset.r = ru.querySelector("rt")?.textContent || ""; sp.tabIndex = 0; sp.setAttribute("role", "button");
+      ru.replaceWith(sp); sp.appendChild(ru);
+    });
+    if (pack.bunpou && pack.bunpou.length) {
+      const gre = pack.bunpou.map((g, i) => { try { return { i, re: new RegExp(g.rx, "g") }; } catch (e) { return null; } }).filter(Boolean);
+      const tw2 = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: (n) => n.parentElement.closest("rt,rp,.sw-w,.sw-k,.sw-g,button,a,script,style") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+      const nodes2 = []; let n2; while ((n2 = tw2.nextNode())) nodes2.push(n2);
+      for (const nd of nodes2) {
+        let hit = null; for (const g of gre) { g.re.lastIndex = 0; const m = g.re.exec(nd.nodeValue); if (m && m[0] && (!hit || m.index < hit.idx)) hit = { idx: m.index, len: m[0].length, i: g.i }; }
+        if (!hit) continue;
+        try { const r = document.createRange(); r.setStart(nd, hit.idx); r.setEnd(nd, hit.idx + hit.len);
+          const sp = document.createElement("span"); sp.className = "sw-g"; sp.dataset.g = pack.bunpou[hit.i].id; sp.tabIndex = 0; sp.setAttribute("role", "button");
+          sp.appendChild(r.extractContents()); r.insertNode(sp); } catch (e) { /* lewati */ }
+      }
+    }
+    const open = (e) => { const k = e.target.closest?.(".sw-k"); if (k) { e.preventDefault(); SSW.ksheet(slug, k.dataset.k, k.dataset.r); return; } const g = e.target.closest?.(".sw-g"); if (g) { e.preventDefault(); SSW.gsheet(slug, g.dataset.g); return; } const w = e.target.closest?.(".sw-w"); if (!w) return; e.preventDefault(); SSW.vsheet(slug, w.dataset.v); };
     root.addEventListener("click", open); root.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") open(e); });
+  },
+  async ksheet(slug, kata, rd) {
+    const pack = await loadPack(slug); if (!pack.kanji) return;
+    const rows = [...kata].filter(c => pack.kanji[c]).map(c => `<p class="sw-kr"><span class="jp sw-kc">${esc(c)}</span> <b>${esc(pack.kanji[c])}</b></p>`).join("");
+    const rel = (pack.vocab || []).filter(v => [...kata].some(c => v.kata.includes(c)) && v.kata !== kata).slice(0, 6).map(v => `<button class="sw-vc" onclick="SSW.vsheet('${slug}','${v.id}')"><span class="jp">${esc(v.kata)}</span><small>${esc(v.arti)}</small></button>`).join("");
+    let sh = document.getElementById("sw-vs"); if (!sh) { sh = document.createElement("div"); sh.id = "sw-vs"; document.body.append(sh); }
+    sh.innerHTML = `<div class="sw-vs-bg" onclick="SSW.vclose()"></div><div class="sw-vs-in" role="dialog" aria-label="Arti kanji">
+      <div class="sw-vs-h"><div class="jp k"><ruby>${esc(kata)}<rt>${esc(rd)}</rt></ruby></div><button type="button" class="sw-vs-x" onclick="SSW.vclose()" aria-label="Tutup">✕</button></div>
+      <div class="sw-vs-m">${rows}</div>${rel ? `<p class="sw-muted">Kata lain dengan kanji ini:</p><div class="sw-vchips">${rel}</div>` : ""}
+      <div class="sw-vs-b"><button class="btn ghost" onclick="SSW.vclose()">↩ Kembali ke materi</button></div></div>`;
+    sh.hidden = false; document.body.classList.add("sw-lbopen");
+  },
+  async gsheet(slug, id) {
+    const pack = await loadPack(slug), g = (pack.bunpou || []).find(x => x.id === id); if (!g) return;
+    let sh = document.getElementById("sw-vs"); if (!sh) { sh = document.createElement("div"); sh.id = "sw-vs"; document.body.append(sh); }
+    sh.innerHTML = `<div class="sw-vs-bg" onclick="SSW.vclose()"></div><div class="sw-vs-in" role="dialog" aria-label="Tata bahasa">
+      <div class="sw-vs-h"><div class="jp k">${rich(g.pola)}</div><button type="button" class="sw-vs-x" onclick="SSW.vclose()" aria-label="Tutup">✕</button></div>
+      <div class="sw-vs-m"><b>${esc(g.arti)}</b></div>${g.cara ? `<p class="sw-muted">Cara pakai: ${esc(g.cara)}</p>` : ""}
+      ${g.contoh ? `<div class="sw-vs-ex"><p class="jp">${rich(g.contoh)}</p><p class="sw-muted">${esc(g.arti_contoh || "")}</p></div>` : ""}
+      <div class="sw-vs-b"><button class="btn ghost" onclick="SSW.vclose()">↩ Kembali ke materi</button></div></div>`;
+    sh.hidden = false; document.body.classList.add("sw-lbopen");
   },
   async vsheet(slug, id) {
     const pack = await loadPack(slug), v = pack.vocab.find(x => x.id === id); if (!v) return;

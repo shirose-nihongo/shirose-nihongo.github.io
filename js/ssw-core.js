@@ -69,8 +69,10 @@ export const DEFAULT_BIDANG = [
   { slug: "construction-lifeline", nama: "Construction (Lifeline & Peralatan)", jp: "建設（ライフライン・設備）", label: "🔧 Lifeline & Peralatan ›", induk: "construction", aktif: true, urut: 6.2, tema: "construction", hasContent: true },
   { slug: "accommodation", nama: "Accommodation (Penginapan)", jp: "宿泊", aktif: true, urut: 7, tema: "hotel", hasContent: true },
   { slug: "livestock", nama: "Livestock (Peternakan)", jp: "畜産業", aktif: true, urut: 8, tema: "farm", hasContent: true },
-  { slug: "fishery", nama: "Fishery (Perikanan)", jp: "漁業", aktif: true, urut: 9, tema: "generic", hasContent: true },
-  { slug: "auto-maintenance", nama: "Auto Maintenance (Perawatan Mobil)", jp: "自動車整備", aktif: true, urut: 10, tema: "generic", hasContent: true },
+  { slug: "fishery", nama: "Fishery (Perikanan)", jp: "漁業", aktif: true, urut: 9, tema: "fishery", hasContent: true },
+  { slug: "auto-maintenance", nama: "Auto Maintenance (Perawatan Mobil)", jp: "自動車整備", aktif: true, urut: 10, tema: "automobile", hasContent: true },
+  { slug: "industrial-mfg", nama: "Industrial Manufacturing (Dasar Pabrik)", jp: "工業製品製造業", aktif: true, urut: 11, tema: "generic", hasContent: true },
+  { slug: "mfg-machine-metal", nama: "Machine Metal (Mesin & Logam)", jp: "機械金属加工", label: "⚙️ Mesin & Logam ›", induk: "industrial-mfg", aktif: true, urut: 11.1, tema: "generic", hasContent: true },
 ];
 
 let _bidang = null;
@@ -103,7 +105,10 @@ export async function loadPack(slug) {
     let figs = [];   // gambar/diagram potongan dari buku (hanya bidang yang menyebut "figs" di index.json)
     if (idx.figs) { try { figs = (await getJSON(`${base}/${idx.figs}`)).figs || []; } catch (e) {} }
     const chapters = babs.map((d, i) => ({ ...d.bab, source: d.source, order: i, subs: d.bab.subs }));
-    return { slug, idx, chapters, vocab: vocab.items || vocab, quiz, figs };
+    let kanji = null, bunpou = null;   // opsional: arti per kanji & pola tata bahasa (hanya bidang yang menyebut di index.json)
+    if (idx.kanji) { try { kanji = await getJSON(`${base}/${idx.kanji}`); } catch (e) {} }
+    if (idx.bunpou) { try { bunpou = (await getJSON(`${base}/${idx.bunpou}`)).items || null; } catch (e) {} }
+    return { slug, idx, chapters, vocab: vocab.items || vocab, quiz, figs, kanji, bunpou };
   })();
   try { return await _pack[slug]; } catch (e) { delete _pack[slug]; throw e; }
 }
@@ -310,8 +315,10 @@ export const EXAM_SPEC = {
   "accommodation": { n: 36, img: 4, mb: 10, info: "Resmi (宿泊業技能試験センター): tulis 30 + praktik 6 = 36 soal, 60 menit." },
   "kaigo": { n: 45, img: 0, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
   "kaigo-jp": { n: 45, img: 4, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
-  "fishery": { n: 30, img: 2, mb: 6, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
+  "fishery": { n: 30, img: 0, mb: 12, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
   "auto-maintenance": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Info resmi (MLIT): ujian tulis 30 soal ○× / 60 menit, lulus ≥65%; ujian praktik 3 tugas / 20 menit, lulus ≥60%." },
+  "industrial-mfg": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Materi dasar bersama 工業製品製造業: keselamatan, mutu, pengukuran, bahan. Ujian resmi per kategori (MOJ): tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
+  "mfg-machine-metal": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Kategori 機械金属加工 (MOJ): ujian tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
 };
 /** 10 ujian penuh = sampel deterministik dari seluruh bank soal; komposisi mengikuti ujian resmi bidangnya. */
 export function fullQuizzes(pack, perQuizArg, count = 10) {

@@ -1,0 +1,700 @@
+{
+ "schema": 1,
+ "bidang": "fishery",
+ "source": "Teks dan gambar halaman: 特定技能 漁業技能測定試験 学習用テキスト (一般社団法人大日本水産会, 初版2019年12月, 一部改訂2025年9月) — 漁業一般・漁業安全・網漁業・釣漁業, versi Jepang dan versi bahasa Indonesia. Ringkasan, kosakata, dan soal latihan: Shirose Nihongo (bukan soal resmi).",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab12",
+  "no": 12,
+  "title": {
+   "id": "Longline Dasar (底延縄)",
+   "jp": "{底延縄|そこはえなわ}{漁業|ぎょぎょう}"
+  },
+  "intro": {
+   "id": "Longline dasar: susunan alat dan metode operasi.",
+   "jp": "{底延縄|そこはえなわ}{漁業|ぎょぎょう}：{漁具|ぎょぐ}の{構成|こうせい}と{操業方法|そうぎょうほうほう}。"
+  },
+  "pages": [
+   139,
+   145
+  ],
+  "subs": [
+   {
+    "id": "b12s1",
+    "no": 1,
+    "title": {
+     "id": "Gambaran dan Konfigurasi Alat",
+     "jp": "{概要|がいよう}・{対象魚|たいしょうぎょ}・{漁具構成|ぎょぐこうせい}"
+    },
+    "pages": [
+     139,
+     143
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Ringkasan"
+      },
+      {
+       "p": "Penangkapan ikan dengan longline merupakan salah satu metode penangkapan ikan yang banyak dilakukan di perairan pesisir negara kita, dan jenis ikan yang ditangkap pun sangat beragam, mulai dari ikan pelagis hingga ikan dasar laut. Struktur roda gigi longline bervariasi tergantung pada jenisnya, tetapi dasarnya sama. Di sini akan dijelaskan tentang pemancingan dengan longline dasar dan pemancingan longline dasar vertikal."
+      },
+      {
+       "p": "Konfigurasi alat tangkap longline dasar dan longline dasar vertikal serupa. Alat ini terdiri dari tali utama yang direntangkan horizontal sepanjang dasar laut, dengan pelampung dan pemberat untuk mengatur tali utama pada kedalaman tertentu di dekat dasar laut, dan kail pancing diikatkan pada tali utama secara berkala. Pelampung dan pemberat berfungsi untuk mengatur kedalaman dari permukaan laut dan ketinggian dari dasar laut dengan menggunakan tali pelampung dan tali pemberat. Tali jangkar diikatkan pada ujung bawah tali pelampung. Dalam penangkapan ikan dengan longline dasar, mata kail yang dipasang pada tali utama secara berkala dilengkapi dengan sambungan untuk mengikat tali cabang, ikatan (disebut \"tsubo\") atau pengencang mata kail untuk mengencangkan kaitan tali cabang. Di sisi lain, tali penghubung atau klip dipasang pada ujung tali cabang yang terhubung ke tali utama. Terkadang tali dipasang langsung ke tali utama tanpa menghubungkan tali utama dan tali cabang. Pada longline dasar vertikal, tali yang bercabang menjadi tali cabang, dan swivel induk-anak (cabang yang dipelintir) dipasang pada interval yang teratur untuk memungkinkan pemasangan beberapa kail pancing. Swivel kemudian digunakan untuk mengikat tali dan kail pancing ke tali, membentuk rig (konstruksi)."
+      },
+      {
+       "p": "Gambar 26. Longline dasar (kiri) dan longline dasar vertikal (kanan)"
+      },
+      {
+       "h": "Target ikan"
+      },
+      {
+       "ul": [
+        "Longline dasar: ikan pipih, ikan sebelah, ikan tile, ikan bream laut merah, ikan kod Pasifik,"
+       ]
+      },
+      {
+       "p": "ikan kod Pasifik, ikan karang, ikan tenggiri Atka, dan lain-lain."
+      },
+      {
+       "ul": [
+        "Longline dasar vertikal: alfonsino, mediocre, rockfish, rosy seabass, black porgy, Pacific cod,"
+       ]
+      },
+      {
+       "p": "dan lainnya"
+      },
+      {
+       "h": "Konfigurasi alat tangkap longline dasar"
+      },
+      {
+       "p": "Peralatan dasar penangkapan ikan dengan longline dasar terdiri atas tali utama, tali cabang (main line, disebut juga leader), tali apung, tiang (tiang bendera), kail pancing, pemberat, dan jangkar. Peralatan pancing yang jumlahnya setara dengan satu batang atau satu tali disusun dalam satu keranjang. (gambar 27) Tali vertikal Tiang bendera simpul Tali utama Tali jangkar pemberat Mata kail Tali cabang jangkar Gambar 27. Konfigurasi longline dasar"
+      },
+      {
+       "h": "(1) Tali utama"
+      },
+      {
+       "ul": [
+        "Tali utama memiliki berat jenis yang lebih berat daripada air, tipis, kuat, dan panjang.",
+        "Pemberat dipasang dengan jarak teratur untuk menenggelamkan peralatan penangkap ikan"
+       ]
+      },
+      {
+       "p": "ke dasar laut."
+      },
+      {
+       "ul": [
+        "Pada peralatan yang tali utamanya dan tali cabangnya terpisah, simpul benang (simpul tali)"
+       ]
+      },
+      {
+       "p": "dipasang pada jarak yang teratur untuk menghubungkan tali cabang; simpul ini disebut \"tsubo.\""
+      },
+      {
+       "ul": [
+        "Ada pula peralatan di mana tali utama dan tali cabang diintegrasikan menjadi satu unit dan"
+       ]
+      },
+      {
+       "p": "diikat bersama pada panjang tetap (100 hingga 200 m) untuk membentuk mangkuk atau keranjang tunggal."
+      },
+      {
+       "h": "(2) Tali cabang (tali pancing, tali haris)"
+      },
+      {
+       "ul": [
+        "Tali yang diikatkan pada tali tempat kail disambungkan ke tali utama disebut tali cabang."
+       ]
+      },
+      {
+       "p": "Kadang-kadang tali pancing dihilangkan dan tali haris tersebut dihubungkan langsung ke tali utama. Hanya ada satu kail pancing per tali cabang."
+      },
+      {
+       "h": "(3) Tali pelampung"
+      },
+      {
+       "ul": [
+        "Disebut juga tali berdiri, diikatkan pada ikatan dengan tiang bendera, dan diikatkan pada tali"
+       ]
+      },
+      {
+       "p": "jangkar serta tali utama. Digunakan saat mengambil tali jangkar dan tali utama. Tali tersebut juga berfungsi sebagai alas dalam menyiapkan alat pancing."
+      },
+      {
+       "h": "(4) Bonden (tiang bendera)"
+      },
+      {
+       "ul": [
+        "Pelampung ini berfungsi untuk menggantungkan tali penerima dan berfungsi sebagai"
+       ]
+      },
+      {
+       "p": "penanda tempat memasang alat pancing. Biasanya digunakan dengan tiang bendera yang terpasang."
+      },
+      {
+       "h": "(5) Mata kail"
+      },
+      {
+       "ul": [
+        "Mata kail diikatkan pada tali pancing dengan menggunakan tali haris. Tali pancing adalah"
+       ]
+      },
+      {
+       "p": "tali yang sedikit lebih tebal dari tali haris dan mudah diikatkan ke tali utama."
+      },
+      {
+       "ul": [
+        "Mata kail yang digunakan untuk memasang umpan memiliki duri."
+       ]
+      },
+      {
+       "p": "Duri ini memiliki fungsi untuk mencegah ikan yang tersangkut di kail lepas."
+      },
+      {
+       "h": "(6) Jangkar"
+      },
+      {
+       "ul": [
+        "Alat yang digunakan untuk menambatkan peralatan penangkapan ikan ke dasar laut.",
+        "Kadang-kadang pemberat atau batu digunakan sebagai pengganti jangkar."
+       ]
+      },
+      {
+       "h": "Konfigurasi alat pancing longline dasat"
+      },
+      {
+       "p": "Peralatan penangkapan ikan longline dasar terdiri dari tali utama, tali cabang, tali pelampung, pelampung, tiang bendera, tali pancing, kail, pemberat, dan jangkar (Gambar 28). Susun alat pancing yang setara dengan satu tali utama sebagai satu pot (satu keranjang) pelampung Tali utama Tali haris kail pemberat Tali cabang Gambar 28. Konfigurasi longline dasar"
+      },
+      {
+       "h": "(1) Tali utama"
+      },
+      {
+       "ul": [
+        "Tali utama adalah tali yang tipis, kuat, dan panjang dengan berat jenis lebih ringan daripada"
+       ]
+      },
+      {
+       "p": "air."
+      },
+      {
+       "ul": [
+        "Pelampung kecil dipasang pada jarak teratur dan dibiarkan mengapungkan peralatan"
+       ]
+      },
+      {
+       "p": "penangkap ikan agak jauh dari dasar laut ke tali vertikal yang terikat padanya."
+      },
+      {
+       "ul": [
+        "Tali pengikat diikatkan pada tali utama untuk mengikat tali cabang pada interval yang teratur."
+       ]
+      },
+      {
+       "p": "Cincin ini disebut \"pot\". Beberapa peralatan memiliki braket logam, sebagai pengganti cincin, untuk menahan klip pada tali cabang."
+      },
+      {
+       "h": "(2) Tali cabang"
+      },
+      {
+       "ul": [
+        "Tali pancing dengan beberapa kail yang diikatkan pada tali utama disebut tali cabang.",
+        "Peralatan pancing utama terdiri dari beberapa tali pancing (biasanya 5 hingga 10) dengan kail"
+       ]
+      },
+      {
+       "p": "pancing yang dipasang secara berkala, pemberat di bagian bawah, dan bagian atas biasanya dihubungkan ke tali pancing utama dengan klip. Biasanya ada 5 hingga 10 kail pada setiap tali cabang."
+      },
+      {
+       "ul": [
+        "Pelampung dipasangkan pada titik tempat tali cabang terikat pada tali utama, sehingga tali"
+       ]
+      },
+      {
+       "p": "cabang mengapung dari dasar laut."
+      },
+      {
+       "ul": [
+        "Saat mengikatkan tali cabang ke tali utama, sisakan celah di antara keduanya agar tali cabang"
+       ]
+      },
+      {
+       "p": "tidak kusut."
+      },
+      {
+       "p": "(3) Bagian-bagian lain yang menyusun alat tangkap ikan, seperti tali apung, bonden (tiang bendera), kail, dan jangkar, sama halnya dengan bagian-bagian yang dipakai pada alat tangkap longline dasar."
+      }
+     ],
+     "jp": [
+      {
+       "h": "１．{概要|がいよう}"
+      },
+      {
+       "p": "「{延縄漁|はえなわりょう}」は{我|わ}が{国|くに}の{沿岸域|えんがんいき}で{広|ひろ}く{行|おこな}われている{漁法|ぎょほう}であり、{漁獲対象魚類|ぎょかくたいしょうぎょるい}も{浮|う}き{魚類|ぎょるい}から{底層魚類|ていそうぎょるい}まで{多種類|たしゅるい}である。{延縄|はえなわ}は、{種類|しゅるい}により{漁具構成|ぎょぐこうせい}が{多少異|たしょうこと}なるが、{基本|きほん}は{同|おな}じである。ここでは、{底延縄|そこはえなわ}と{底立延縄|そこたてはえなわ}について{説明|せつめい}する。"
+      },
+      {
+       "p": "{底延縄|そこはえなわ}と{底立延縄|そこたてはえなわ}の{基本漁具構成|きほんぎょぐこうせい}は{似|に}ている。{海底|かいてい}に{沿|そ}って{水平的|すいへいてき}に{延|の}ばされる{幹|みき}{縄|なわ}が{主体|しゅたい}となる{構成|こうせい}で、{幹縄|みきなわ}を{海底近|かいていちか}くの{所定|しょてい}の{水深層|すいしんそう}に{設置|せっち}するための{浮|あ}{子|ば}と{錘|おもり}があり、{幹縄|みきなわ}に{一定間隔|いっていかんかく}で{釣|つ}り{針|ばり}の{仕|し}{掛|か}け（ハリス）が{取|と}り{付|つ}けられる。{浮|あ}{子及|ばおよ}び{錘|おもり}は{浮縄|うけなわ}（{瀬縄|せなわ}）{及|およ}び{錘綱|おもりづな}で{海面|かいめん}からの{深|ふか}さ{及|およ}び{海底|かいてい}からの{高|たか}さを{調整|ちょうせい}する。{浮縄|うけなわ}の{下端|かたん}（{錘綱|おもりづな}の{上部|じょうぶ}の{端|はし}・{繋部|つなぎぶ}）から{錨綱|いかりづな}を{繋|つな}げる。"
+      },
+      {
+       "p": "{幹縄|みきなわ}に{一定間隔|いっていかんかく}で{取|と}り{付|つ}ける{釣針|つりばり}の{仕|し}{掛|か}け（ハリス{類|するい}）は、{底延縄|そこはえなわ}の{場合|ばあい}、{幹縄|みきなわ}に{一定間隔|いっていかんかく}で{枝糸|えだいと}（ハリス）を{結|むす}ぶ{継手|つぎて}、{繫輪|つぎわ}（ツボと{呼|よ}ぶ）{或|ある}いは{枝糸|えだいと}（ハリス）のスナッチフックを{留|とど}めるフック{留|くどめ}を{取|と}り{付|つ}ける。{一方|いっぽう}、{幹縄|みきなわ}に{接続|せつぞく}する{枝糸先端|えだいとせんたん}には{繫糸或|つなぎいとある}いはクリップを{取|と}り{付|つ}ける。{幹縄|みきなわ}と{枝糸|えだいと}を{繋|つな}がずに{幹縄|みきなわ}に{直接|ちょくせつは}ハリスを{取|と}り{付|つ}けて{使|つか}う{場合|ばあい}もある。"
+      },
+      {
+       "p": "{底立延縄|そこたてはえなわ}では、{枝糸|えだいと}が{枝縄|えだなわ}になり、{複数|ふくすう}の{釣|つ}り{針|ばり}を{取|と}り{付|つ}けるため{一定間隔|いっていかんかく}で{親子|おやこ}サルカン（{分枝|ぶんし}{撚|よ}り{戻|もど}し）を{取付|とりつ}け、サルカンにハリスと{釣針|つりばり}を{結|むす}ぶ{仕|し}{掛|か}け（{構成|こうせい}）となる。"
+      },
+      {
+       "p": "{図|ず}２６{底延縄|そこはえなわ}（{左|ひだり}）と{底立延縄|そこたてはえなわ}（{右|みぎ}）"
+      },
+      {
+       "h": "２．{対象魚|たいしょうぎょ}"
+      },
+      {
+       "ul": [
+        "{底延縄|そこはえなわ}：カレイ{類|いるい}、ヒラメ、アマダイ、マダイ、マダラ、メヌケ、カサゴ、ホッケ、"
+       ]
+      },
+      {
+       "p": "その{他|ほか}"
+      },
+      {
+       "ul": [
+        "{底立延縄|そこたてはえなわ}：キンメ、メダイ、メバル{類|るるい}、アカムツ、クロムツ、メヌケ、その{他|ほか}"
+       ]
+      },
+      {
+       "h": "３．{底延縄|そこはえなわ}の{漁具構成|ぎょぐこうせい}"
+      },
+      {
+       "p": "{基本|きほん}となる{底延縄|そこはえなわ}の{漁具|ぎょぐ}は、{幹縄|みきなわ}、{枝糸|えだいと}（{道糸|みちいと}、ハリス）、{浮縄|うけなわ}（うけなわ）、ぼんでん（{旗竿|はたざお}）、{釣針|つりばり}、{重|おも}り、{錨|いかり}で{構成|こうせい}されている。{幹縄一本分|みきなわいっぽんぶん}の{漁具|ぎょぐ}を{一鉢|ひとはち}（{一篭|ひとかご}）として{整理|せいり}する。（{図|ず}２７）"
+      },
+      {
+       "p": "{図|ず}２７{底延縄|そこはえなわ}の{構成|こうせい}（１）{幹縄|みきなわ}"
+      },
+      {
+       "ul": [
+        "{幹縄|みきなわ}は{比重|ひじゅう}が{水|みず}より{重|おも}い{細|ほそ}くて{丈夫|じょうぶ}で{長|なが}い{縄|なわ}。",
+        "{一定|いってい}の{間隔|かんかく}で{重|おも}りを{付|つ}けて{漁具|ぎょぐ}を{海底|かいてい}に{沈|しず}めておく。",
+        "{幹縄|みきなわ}と{枝糸|えだいと}が{分|わ}かれている{道具|どうぐ}の{場合|ばあい}は、{一定間隔|いっていかんかく}で{枝糸|えだいと}を{取|と}り{付|つ}けるために{繋|つな}ぐ"
+       ]
+      },
+      {
+       "p": "ための{糸輪|いとわ}（{紐輪|ひもわ}）を{付|つ}けておくこの{輪|わ}を「つぼ」と{呼|よ}ぶ。"
+      },
+      {
+       "ul": [
+        "{幹縄|みきなわ}と{枝糸|えだいと}を{一体化|いったいか}して{一定|いってい}の{長|なが}さ（100～200m）{毎|ごと}に{纏|まと}めて{一鉢|ひとはち}、{一篭|ひとかご}とした{道具|どうぐ}"
+       ]
+      },
+      {
+       "p": "もある。（２）{枝糸|えだいと}（{道糸|みちいと}、ハリス）"
+      },
+      {
+       "ul": [
+        "{幹縄|みきなわ}に{取|と}り{付|つ}ける{釣針|つりばり}を{結|むす}んだハリスに{付|つ}けた{道糸|みちいと}を{枝糸|えだいと}という。{道糸|みちいと}を{省|はぶ}いて"
+       ]
+      },
+      {
+       "p": "ハリスを{直接幹縄|ちょくせつみきなわ}に{付|つ}けることもある。{釣針|つりばり}は{枝糸|えだいと}1{本|ほん}に1{針|はり}（{個|こ}）だけである。（３）{浮縄|うけなわ}"
+      },
+      {
+       "ul": [
+        "{立縄|たてなわ}とも{呼|よ}ばれるが、{旗竿|はたざお}の{付|つ}いたボンデンに{取|と}り{付|つ}けられており、{錨綱|いかりづな}と{幹縄|みきなわ}が"
+       ]
+      },
+      {
+       "p": "{繋|つな}げられている。{錨綱|いかりづな}や{幹縄|みきなわ}を{引揚|ひきあ}げるときに{使|つか}う。また、{漁具|ぎょぐ}の{設置場所|せっちばしょ}の{基|もと}に"
+      },
+      {
+       "p": "なる{縄|なわ}である。（４）ぼんでん（{旗竿|はたざお}）"
+      },
+      {
+       "ul": [
+        "{受縄|うけなわ}を{吊|つ}るしておく{浮|あ}{子|ば}で、{漁具|ぎょぐ}の{設置|せっち}した{場所|ばしょ}を{示|しめ}す{目印|めじるし}になる。{通常|つうじょう}、{旗竿|はたざお}を"
+       ]
+      },
+      {
+       "p": "{取|と}り{付|つ}けて{使|つか}う。（５）{釣針|つりばり}"
+      },
+      {
+       "ul": [
+        "{釣針|つりばり}は、ハリスで{道糸|みちいと}に{繋|つな}がれる。{道糸|みちいと}はハリスより{少|すこ}し{太|ふと}く、{幹縄|みきなわ}に{結|むす}びやすい"
+       ]
+      },
+      {
+       "p": "{糸|いと}を{使|つか}う。"
+      },
+      {
+       "ul": [
+        "{餌|えさ}を{付|つ}ける{釣針|つりばり}には{返|かえ}しがある。"
+       ]
+      },
+      {
+       "p": "{返|かえ}しには{針|はり}に{掛|か}かった{魚|さかな}が{逃|に}げるのを{防|ふせ}ぐ{働|はたら}きがある。（６）{錨|いかり}"
+      },
+      {
+       "ul": [
+        "{漁具|ぎょぐ}を{海底|かいてい}に{固定|こてい}するための{道具|どうぐ}。",
+        "{錨|いかり}の{代|か}わりに{重|おも}りや{石|いし}を{使|つか}うこともある。"
+       ]
+      },
+      {
+       "h": "４．{底立延縄|そこたてはえなわ}の{漁具構成|ぎょぐこうせい}"
+      },
+      {
+       "p": "{底立延縄|そこたてはえなわ}の{漁具|ぎょぐ}の{構成|こうせい}は、{幹縄|みきなわ}、{枝縄|えだなわ}、{浮縄|うけなわ}、{玉浮|たまうき}、ぼんでん（{旗竿|はたざお}）、ハリス、{釣針|つりばり}、{重|おも}り、{錨|いかり}でできている（{図|ず}２８）。{幹縄一本分|みきなわいっぽんぶん}の{漁具|ぎょぐ}を{一鉢|ひとはち}（{一篭|ひとかご}）として{整理|せいり}する。"
+      },
+      {
+       "p": "あば"
+      },
+      {
+       "p": "みきなわ"
+      },
+      {
+       "p": "ハリス"
+      },
+      {
+       "p": "はり"
+      },
+      {
+       "p": "おもり"
+      },
+      {
+       "p": "えだなわ"
+      },
+      {
+       "p": "{図|ず}２８{底立延縄漁具|そこたてはえなわぎょぐ}の{構成|こうせい}（１）{幹縄|みきなわ}"
+      },
+      {
+       "ul": [
+        "{幹縄|みきなわ}は{比重|ひじゅう}が{水|みず}より{軽|かる}い{細|ほそ}くて{丈夫|じょうぶ}で{長|なが}い{縄|なわ}。",
+        "{一定|いってい}の{間隔|かんかく}で{小|ちい}さな{浮|あ}{子|ば}（{玉浮|たまうき}）を{付|つ}けて{漁具|ぎょぐ}を{海底|かいてい}から{取|と}り{付|つ}ける{立縄|たてなわ}の{距離|きょり}だ"
+       ]
+      },
+      {
+       "p": "け{浮|う}かせて{置|お}く。"
+      },
+      {
+       "ul": [
+        "{幹縄|みきなわ}に、{一定間隔|いっていかんかく}で{枝縄|えだなわ}を{取|と}り{付|つ}けるために{繋|つな}ぎ{糸|いと}（{繋|つな}ぎ{紐|ひも}）を{付|つ}けておく。この"
+       ]
+      },
+      {
+       "p": "{輪|わ}を「つぼ」と{呼|よ}ぶ。{輪|わ}の{代|か}わりに{枝縄|えだなわ}のクリップを{留|と}める{金具類|かなぐるい}を{付|つ}けてある{道具|どうぐ}"
+      },
+      {
+       "p": "もある。（２）{枝縄|えだなわ}"
+      },
+      {
+       "ul": [
+        "{幹縄|みきなわ}に{吊|つ}り{下|さ}げる{複数|ふくすう}の{釣|つ}り{針|ばり}の{付|つ}いた{仕|し}{掛|か}け{縄|なわ}（{道糸|みちいと}）を{枝縄|えだなわ}と{呼|よ}ぶ。",
+        "{道糸|みちいと}の{仕|し}{掛|か}けは{釣針|つりばり}を{結|むす}んだハリスを{一定間隔|いっていかんかく}で{複数|ふくすう}（5～10{本程度|ほんていど}が{多|おお}い）{付|つ}け"
+       ]
+      },
+      {
+       "p": "{一番下|いちばんした}には{重|おも}りを、{上部|じょうぶ}は{多|おお}くがクリップで{幹縄|みきなわ}に{繋|つな}げる。{釣針|つりばり}は{枝縄|えだなわ}1{本|ほん}に5～10"
+      },
+      {
+       "p": "{本程度|ほんていど}が{多|おお}い。"
+      },
+      {
+       "ul": [
+        "{枝縄|えだなわ}を{幹縄|みきなわ}に{取|と}り{付|つ}ける{位|い}{置|ち}に{浮|あ}{子|ば}（{玉浮|たまうき}）を{付|つ}けて、{枝縄|えだなわ}が{海底|かいてい}から{浮|う}き{上|あ}がる"
+       ]
+      },
+      {
+       "p": "ようにする。"
+      },
+      {
+       "ul": [
+        "{枝縄|えだなわ}を{幹縄|みきなわ}に{付|つ}けるときは、{枝縄同士|えだなわどうし}が{絡|から}まないよう{間|あいだ}を{空|あ}けておく。"
+       ]
+      },
+      {
+       "p": "（３）その{他|た}の{漁具|ぎょぐ}を{構成|こうせい}する{部|ぶ}{位|い}の{浮縄|うけなわ}、ぼんでん（{旗竿|はたざお}）、{釣針|つりばり}、{錨|いかり}は{底延縄漁具|そこはえなわぎょぐ}"
+      },
+      {
+       "p": "と{同|おな}じである。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Longline dasar: tali utama membentang horizontal dekat dasar, diatur pelampung & pemberat; kail dipasang berkala; tali jangkar di ujung bawah tali pelampung.",
+      "points": [
+       "Ada longline dasar dan longline dasar vertikal (底立).",
+       "Pelampung/pemberat mengatur kedalaman dan tinggi dari dasar."
+      ],
+      "avoid": [
+       "Mengira longline dasar mengambang di permukaan."
+      ],
+      "exam": [
+       "Susunan alat tangkap."
+      ]
+     },
+     "jp": {
+      "core": "{底延縄|そこはえなわ}は{海底近|かいていちか}くに{幹縄|みきなわ}を{横|よこ}にはり、{浮|あ}{子|ば}と{沈子|ちんし}で{深|ふか}さを{調整|ちょうせい}する。",
+      "points": [
+       "{底延縄|そこはえなわ}と{底立延縄|そこたてはえなわ}がある。",
+       "{浮|あ}{子|ば}と{沈子|ちんし}で{水深|すいしん}と{海底|かいてい}からの{高|たか}さを{決|き}める。"
+      ],
+      "avoid": [
+       "{底延縄|そこはえなわ}が{水面|すいめん}にうくと{思|おも}うこと。"
+      ],
+      "exam": [
+       " {漁具|ぎょぐ}の{構成|こうせい}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s2",
+    "no": 2,
+    "title": {
+     "id": "Metode Operasi",
+     "jp": "{操業方法|そうぎょうほうほう}"
+    },
+    "pages": [
+     143,
+     145
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Cara pengoperasian"
+      },
+      {
+       "p": "Metode pengoperasian longline dasar dan longline dasar vertikal hampir identik. Keduanya melibatkan proses memasukkan peralatan penangkapan ikan ke laut"
+      },
+      {
+       "h": "(1) melemparkan tali, (2)"
+      },
+      {
+       "p": "menunggu tali, lalu menarik peralatan dan ikan ke atas kapal (3) menarik tali ke atas. (Gambar 29) Gambar 29. pengoperasian longline"
+      },
+      {
+       "h": "(1) Pekerjaan melempar tali"
+      },
+      {
+       "ul": [
+        "Sebelum memulai pekerjaan melempar tali pancing, lakukan persiapan dengan cara"
+       ]
+      },
+      {
+       "p": "mengikatkan umpan pada kail dan menatanya secara teratur."
+      },
+      {
+       "ul": [
+        "Pekerjaan melempar tali dilakukan di bagian buritan kapal.",
+        "Pekerjaan melempar tali dilakukan dengan cara mengarahkan perahu ke arah hilir mengikuti"
+       ]
+      },
+      {
+       "p": "arus pasang surut."
+      },
+      {
+       "ul": [
+        "Pertama, jangkar dijatuhkan ke laut, dan tali jangkar dihubungkan ke ujung bawah tali apung,"
+       ]
+      },
+      {
+       "p": "diikuti oleh tali utama. Sambil memanjangkankan tali penyangga pelampung dan tali utama secara bersamaan, pasang tiang bendera atau pelampung radio pada ujung atas tali penyangga pelampung dan lemparkan ke dalam laut."
+      },
+      {
+       "ul": [
+        "Setelah itu, pada saat tali utama dilepas ke laut, tali cabang diikatkan pada longline dasar,"
+       ]
+      },
+      {
+       "p": "dan tali cabang serta pelampung bola diikatkan pada longline dasar vertikal."
+      },
+      {
+       "ul": [
+        "Kecepatan kapal saat melempar tali biasanya sekitar 2 hingga 3 knot untuk kapal kecil"
+       ]
+      },
+      {
+       "p": "(kurang dari 5 ton) dan sekitar 3 hingga 5 knot untuk kapal besar (lebih dari 5 ton)."
+      },
+      {
+       "h": "(2) Menunggu tali"
+      },
+      {
+       "ul": [
+        "Setelah tali pancing longline dasar atau tali pancing longline dasar vertikal dilepas ke laut,"
+       ]
+      },
+      {
+       "p": "tali pancing tersebut dibiarkan beberapa saat hingga alat tangkap menjadi stabil di dalam air dan ikan berhasil ditangkap. Periode waktu ini disebut \"menunggu tali.\" Waktunya bervariasi dari sekitar satu jam hingga sekitar satu hari, tergantung pada ikan yang ditargetkan dan wilayah. Waktu tunggu ini bisa dimanfaatkan untuk kembali ke tempat mulai memasang peralatan menangkap ikan untuk bersiap menarik tali pancing longline."
+      },
+      {
+       "h": "(3) Pekerjaan mengangkat tali"
+      },
+      {
+       "ul": [
+        "Lokasi pekerjaan mengangkat tali bervariasi tergantung pada ukuran kapal. Kapal kecil"
+       ]
+      },
+      {
+       "p": "(kurang dari 5 ton) dengan 2-3 awak kapal bekerja di buritan kapal, sedangkan kapal besar (di atas 5 ton) dengan 5-10 awak kapal bekerja di bagian depan kapal (dek di sisi haluan)."
+      },
+      {
+       "ul": [
+        "Untuk pekerjaan pengangkatan tali, digunakan mesin pengangkat tali atau roller tiga arah."
+       ]
+      },
+      {
+       "p": "Ada banyak jenis mesin penarik, mulai dari penarik tali kecil yang digunakan oleh kapal penangkap ikan tuna di laut hingga mesin besar seukuran oven microwave. Kedua jenis mesin ini dirancang untuk menjepit tali utama di antara rol karet dan mengangkatnya."
+      },
+      {
+       "ul": [
+        "Pekerjaan menaikkan tali diawali dengan memuat tiang bonden ke atas kapal, kemudian"
+       ]
+      },
+      {
+       "p": "menarik tali pelampung dan tali jangkar, dan menaikkan jangkar. Setelah itu tali utama dilewatkan melalui roller tiga arah dan digantung pada sisi mesin tali pengangkat (dimasukkan) dan diangkat ke atas. Pada waktu menarik tali utama, lepaskan tali cabang untuk tali longline dasar, dan tali cabang serta pelampung bola untuk tali longline dasar vertikal. Pada saat ini, ikan yang tertangkap di kail dikeluarkan dan ditaruh dalam palka ikan atau kotak ikan. (Gambar 30)"
+      },
+      {
+       "ul": [
+        "Kecepatan kapal saat melakukan operasi pengangkatan tali biasanya 2 hingga 3 knot untuk"
+       ]
+      },
+      {
+       "p": "kapal kecil (kurang dari 5 ton) dan 3 hingga 5 knot untuk kapal besar (lebih dari 5 ton). Mesin pengangkat tali （Line hauler） Penggulung jangkar （Roller vertikal） Roller 3 arah Gambar 30. Pekerjaan mengangkat tali longline"
+      }
+     ],
+     "jp": [
+      {
+       "h": "５．{操業方法|そうぎょうほうほう}"
+      },
+      {
+       "p": "{底延縄|そこはえなわ}と{底立延縄|そこたてはえなわ}の{操業|そうぎょう}{方法|ほうほう}（{工程|こうてい}）はほとんど{同|おな}じである。どちらも{漁具|ぎょぐ}を{海|うみ}に{入|い}れる（１）{投縄作業|とうなわさぎょう}、（２）{縄待|なわま}ち、そして{漁具|ぎょぐ}と{魚|さかな}を{船|ふね}に{揚|あ}げる（３）{揚|あ}げ{縄作業|なわさぎょう}の{工程|こうてい}である。（{図|ず}２９）"
+      },
+      {
+       "p": "{図|ず}２９{延縄操業図|はえなわそうぎょうず}（１）{投縄作業|とうなわさぎょう}"
+      },
+      {
+       "ul": [
+        "{投縄作業|とうなわさぎょう}の{前|まえ}に{準備|じゅんび}として{釣針|つりばり}に{餌|えさ}を{付|つ}けて、{一鉢毎|ひとはちごと}に{整理|せいり}しておく。",
+        "{投縄作業|とうなわさぎょう}は{船|ふね}の{艫|とも}で{行|おこな}う。",
+        "{投縄作業|とうなわさぎょう}は{潮流|ちょうりゅう}の{流|なが}れに{沿|そ}って{潮下|しおしも}（{潮流|ちょうりゅう}の{流|なが}れる{方向|ほうこう}）へ{船|ふね}を{進|すす}めながら{行|おこな}"
+       ]
+      },
+      {
+       "p": "う。"
+      },
+      {
+       "ul": [
+        "{最初|さいしょ}に{錨|いかり}（アンカー）を{海|うみ}に{入|い}れ、{錨綱|いかりづな}を{浮縄|うけなわ}の{下|か}{部|ぶ}の{端|はし}に{繋|つな}げ、{続|つづ}けて{幹縄|みきなわ}を"
+       ]
+      },
+      {
+       "p": "{繋|つな}ぐ。{浮縄|うけなわ}と{幹縄|みきなわ}を{同時|どうじ}に{伸|の}ばしながら{浮縄上端|うけなわじょうたん}に{旗竿|はたざお}の{付|つ}いたボンデンや"
+      },
+      {
+       "p": "ラジオブイを{取|と}り{付|つ}けて{投入|とうにゅう}する。"
+      },
+      {
+       "ul": [
+        "その{後|ご}、{幹縄|みきなわ}を{海|うみ}に{入|い}れながら、{底延縄|そこはえなわ}は{枝糸|えだいと}、{底立延縄|そこたてはえなわ}では{枝縄|えだなわ}と{玉浮|たまうき}を{取|と}り{付|つ}"
+       ]
+      },
+      {
+       "p": "けていく。"
+      },
+      {
+       "ul": [
+        "{投縄作業|とうなわさぎょう}を{行|おこな}うときの{船|ふね}の{速力|そくりょく}は{小|ちい}さな{船|ふね}（5㌧{未満|みまん}）で２～３ノット、{大|おお}きな"
+       ]
+      },
+      {
+       "p": "{船|ふね}（5㌧{以上|いじょう}）で3～5ノットが{多|おお}い。（２）{縄待|なわま}ち"
+      },
+      {
+       "ul": [
+        "{底延縄|そこはえなわ}や{底立延縄|そこたてはえなわ}を{海|うみ}に{入|い}れた{後|あと}、{漁具|ぎょぐ}が{海中|かいちゅう}で{安定|あんてい}した{状態|じょうたい}になり、{魚|さかな}が{掛|か}か"
+       ]
+      },
+      {
+       "p": "るまで、しばらく{時間|じかん}を{置|お}く。この{時間|じかん}を「{縄待|なわま}ち」と{呼|よ}ぶ。{時間|じかん}は1{時間位|じかんくらい}から"
+      },
+      {
+       "p": "1{日位|にちくらい}まで{対象魚|たいしょうぎょ}や{地域|ちいき}により{異|こと}なる。この{時間|じかん}を{利用|りよう}して{漁具|ぎょぐ}を{入|い}れ{始|はじ}めた"
+      },
+      {
+       "p": "{場所|ばしょ}へ{戻|もど}り{延縄|はえなわ}を{揚|あ}げる{準備|じゅんび}をする。（３）{揚|あ}げ{縄作業|なわさぎょう}"
+      },
+      {
+       "ul": [
+        "{揚|あ}げ{縄作業|なわさぎょう}は{船|ふね}の{大|おお}きさで{作業場所|さぎょうばしょ}が{異|こと}なる。{乗組員|のりくみいん}が2～3{人|にん}の{小|ちい}さな{船|ふね}（5㌧"
+       ]
+      },
+      {
+       "p": "{未満|みまん}）は{船|ふね}の{艫|とも}で{作業|さぎょう}をし、5～10{人|にん}の{大|おお}きな{船|ふね}（5㌧{以上|いじょう}）は{船|ふね}の{表|おもて}（{船首側|せんしゅがわ}の"
+      },
+      {
+       "p": "{甲板|こうはん}）で{作業|さぎょう}をする。"
+      },
+      {
+       "ul": [
+        "{揚|あ}げ{縄作業|なわさぎょう}には、{揚|あ}げ{縄機|なわき}や{三方|さんぽうろ}ローラーを{使|つか}う。{揚|あ}げ{縄機|なわき}は{遠洋|えんようま}マグロ{漁船|ろぎょせん}が{使|つか}"
+       ]
+      },
+      {
+       "p": "うラインホーラーの{小型|こがた}のものから、サイズ{感|かん}として{小型|こがた}の{電子|でんし}レンジくらいの{大|おお}"
+      },
+      {
+       "p": "きさのものまで{様々|さまざま}ある。いずれも{幹縄|みきなわ}をゴムローラーで{挟|はさ}んで{揚|あ}げる{構造|こうぞう}の{機械|きかい}。"
+      },
+      {
+       "ul": [
+        "{揚|あ}げ{縄作業|なわさぎょう}は、{先|ま}ず{旗竿|はたざお}の{付|つ}いたボンデンを{船|ふね}に{取|と}り{込|こ}み、{浮縄|うけなわ}や{錨綱|いかりづな}を{引揚|ひきあ}げて"
+       ]
+      },
+      {
+       "p": "{錨|いかり}を{揚|あ}げる。その{後|ご}、{三方|さんぽう}ローラーを{通|とお}して{幹縄|みきなわ}を{揚|あ}げ{縄機|なわき}に{掛|か}けて（{取|と}り{込|こ}み）"
+      },
+      {
+       "p": "{揚|あ}げていく。{幹縄|みきなわ}を{揚|あ}げながら{底延縄|そこはえなわ}は{枝糸|えだいと}、{底立延縄|そこたてはえなわ}では{枝縄|えだなわ}と{玉浮|たまうき}を{外|はず}す。こ"
+      },
+      {
+       "p": "の{時|とき}、{針|はり}に{掛|か}かった{魚|さかな}を{外|はず}して{魚艙|ぎょそう}や{魚箱|ぎょばこ}に{入|い}れていく。（{図|ず}３０）"
+      },
+      {
+       "ul": [
+        "{揚|あ}げ{縄作業|なわさぎょう}を{行|おこな}うときの{船|ふね}の{速力|そくりょく}は{小|ちい}さな{船|ふね}（5㌧{未満|みまん}）で２～３ノット、{大|おお}き"
+       ]
+      },
+      {
+       "p": "な{船|ふね}（5㌧{以上|いじょう}）で3～5ノットが{多|おお}い。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Urutan: lempar tali → tunggu → tarik tali. Lempar dari buritan, kapal mengikuti arus; jangkar dijatuhkan dulu, lalu tali apung dan tali utama.",
+      "points": [
+       "Pasang tiang bendera atau pelampung radio pada ujung atas tali pelampung.",
+       "Siapkan umpan di kail sebelum menebar."
+      ],
+      "avoid": [
+       "Menebar tali tanpa menjatuhkan jangkar dahulu."
+      ],
+      "exam": [
+       "Urutan tiga tahap."
+      ]
+     },
+     "jp": {
+      "core": "{投縄|とうなわ}、{縄待|なわま}ち、{揚縄|あげなわ}の{順|じゅん}。{船尾|せんび}から{投縄|とうなわ}し、まずいかりを{落|お}とす。",
+      "points": [
+       "{浮縄|うけなわ}の{上|あ}に{旗竿|はたざお}やラジオブイをつける。",
+       "{投縄|とうなわ}の{前|まえ}に{餌|えさ}を{針|はり}につける。"
+      ],
+      "avoid": [
+       "いかりを{落|お}とさずに{縄|なわ}を{入|い}れること。"
+      ],
+      "exam": [
+       " 3つの{作業|さぎょう}の{順|じゅん}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

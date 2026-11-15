@@ -1,0 +1,1614 @@
+{
+ "items": [
+  {
+   "id": "im-001",
+   "kata": "製造",
+   "kana": "せいぞう",
+   "romaji": "seizou",
+   "arti": "manufaktur, produksi",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{工場|こうじょう}で{製|せい}{品|ひん}を{製造|せいぞう}します。",
+   "arti_contoh": "Memproduksi barang di pabrik."
+  },
+  {
+   "id": "im-002",
+   "kata": "設計",
+   "kana": "せっけい",
+   "romaji": "sekkei",
+   "arti": "desain, perancangan",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{設計|せっけい}をして{図|ず}{面|めん}をかきます。",
+   "arti_contoh": "Mendesain dan membuat gambar."
+  },
+  {
+   "id": "im-003",
+   "kata": "材料",
+   "kana": "ざいりょう",
+   "romaji": "zairyou",
+   "arti": "bahan baku",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{材料|ざいりょう}を{用意|ようい}します。",
+   "arti_contoh": "Menyiapkan bahan."
+  },
+  {
+   "id": "im-004",
+   "kata": "部品",
+   "kana": "ぶひん",
+   "romaji": "buhin",
+   "arti": "komponen",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{部品|ぶひん}を{組|くみたてます}み立てます。",
+   "arti_contoh": "Merakit komponen."
+  },
+  {
+   "id": "im-005",
+   "kata": "製品",
+   "kana": "せいひん",
+   "romaji": "seihin",
+   "arti": "produk",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{製|せい}{品|ひん}を{検査|けんさ}します。",
+   "arti_contoh": "Memeriksa produk."
+  },
+  {
+   "id": "im-006",
+   "kata": "加工",
+   "kana": "かこう",
+   "romaji": "kakou",
+   "arti": "pengerjaan, pemrosesan",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{材料|ざいりょう}を{加工|かこう}します。",
+   "arti_contoh": "Memproses bahan."
+  },
+  {
+   "id": "im-007",
+   "kata": "組立て",
+   "kana": "くみたて",
+   "romaji": "kumitate",
+   "arti": "perakitan",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{組立|くみた}ての{作業|さぎょう}をします。",
+   "arti_contoh": "Melakukan pekerjaan perakitan."
+  },
+  {
+   "id": "im-008",
+   "kata": "検査",
+   "kana": "けんさ",
+   "romaji": "kensa",
+   "arti": "pemeriksaan, inspeksi",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{出荷|しゅっか}の{前|まえ}に{検査|けんさ}をします。",
+   "arti_contoh": "Memeriksa sebelum pengiriman."
+  },
+  {
+   "id": "im-009",
+   "kata": "出荷",
+   "kana": "しゅっか",
+   "romaji": "shukka",
+   "arti": "pengiriman",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{製|せい}{品|ひん}を{出荷|しゅっか}します。",
+   "arti_contoh": "Mengirim produk."
+  },
+  {
+   "id": "im-010",
+   "kata": "工程",
+   "kana": "こうてい",
+   "romaji": "koutei",
+   "arti": "tahap kerja, proses",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "つぎの{工程|こうてい}に{送|おく}ります。",
+   "arti_contoh": "Mengirim ke tahap berikutnya."
+  },
+  {
+   "id": "im-011",
+   "kata": "仕掛品",
+   "kana": "しかかりひん",
+   "romaji": "shikakarihin",
+   "arti": "barang setengah jadi",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{仕掛品|しかかりひん}を{台|だい}にのせます。",
+   "arti_contoh": "Menaruh barang setengah jadi di rak."
+  },
+  {
+   "id": "im-012",
+   "kata": "在庫",
+   "kana": "ざいこ",
+   "romaji": "zaiko",
+   "arti": "stok",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{在庫|ざいこ}を{数|かず}えます。",
+   "arti_contoh": "Menghitung stok."
+  },
+  {
+   "id": "im-013",
+   "kata": "納期",
+   "kana": "のうき",
+   "romaji": "nouki",
+   "arti": "batas waktu penyerahan",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{納期|のうき}をまもります。",
+   "arti_contoh": "Menepati tenggat penyerahan."
+  },
+  {
+   "id": "im-014",
+   "kata": "作業指示書",
+   "kana": "さぎょうしじしょ",
+   "romaji": "sagyoushijisho",
+   "arti": "lembar instruksi kerja",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{作業|さぎょう}{指示|しじ}{書|か}を{読|よ}みます。",
+   "arti_contoh": "Membaca lembar instruksi kerja."
+  },
+  {
+   "id": "im-015",
+   "kata": "生産",
+   "kana": "せいさん",
+   "romaji": "seisan",
+   "arti": "produksi",
+   "cat": "Alur pabrik",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{今日|きょう}の{生産数|せいさんすう}は100{個|こ}です。",
+   "arti_contoh": "Produksi hari ini 100 buah."
+  },
+  {
+   "id": "im-016",
+   "kata": "品質",
+   "kana": "ひんしつ",
+   "romaji": "hinshitsu",
+   "arti": "mutu, kualitas",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{品質|ひんしつ}をまもります。",
+   "arti_contoh": "Menjaga mutu."
+  },
+  {
+   "id": "im-017",
+   "kata": "良品",
+   "kana": "りょうひん",
+   "romaji": "ryouhin",
+   "arti": "produk baik",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{良|りょう}{品|ひん}を{箱|はこ}に{入|い}れます。",
+   "arti_contoh": "Memasukkan produk baik ke kotak."
+  },
+  {
+   "id": "im-018",
+   "kata": "不良品",
+   "kana": "ふりょうひん",
+   "romaji": "furyouhin",
+   "arti": "produk cacat",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{不良|ふりょう}{品|ひん}を{分|わ}けます。",
+   "arti_contoh": "Memisahkan produk cacat."
+  },
+  {
+   "id": "im-019",
+   "kata": "全数検査",
+   "kana": "ぜんすうけんさ",
+   "romaji": "zensuukensa",
+   "arti": "pemeriksaan semua",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{全数検査|ぜんすうけんさ}をします。",
+   "arti_contoh": "Melakukan pemeriksaan semua produk."
+  },
+  {
+   "id": "im-020",
+   "kata": "抜き取り検査",
+   "kana": "ぬきとりけんさ",
+   "romaji": "nukitorikensa",
+   "arti": "pemeriksaan sampel",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{抜|ぬ}き{取|と}り{検査|けんさ}で{調|しら}べます。",
+   "arti_contoh": "Memeriksa dengan sampel."
+  },
+  {
+   "id": "im-021",
+   "kata": "自主検査",
+   "kana": "じしゅけんさ",
+   "romaji": "jishukensa",
+   "arti": "pemeriksaan mandiri",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{自主検査|じしゅけんさ}をします。",
+   "arti_contoh": "Melakukan pemeriksaan mandiri."
+  },
+  {
+   "id": "im-022",
+   "kata": "不具合",
+   "kana": "ふぐあい",
+   "romaji": "fuguai",
+   "arti": "kerusakan, masalah",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{機械|きかい}に{不具合|ふぐあい}があります。",
+   "arti_contoh": "Mesin bermasalah."
+  },
+  {
+   "id": "im-023",
+   "kata": "原因",
+   "kana": "げんいん",
+   "romaji": "genin",
+   "arti": "penyebab",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{原因|げんいん}を{調|しら}べます。",
+   "arti_contoh": "Menyelidiki penyebab."
+  },
+  {
+   "id": "im-024",
+   "kata": "傷",
+   "kana": "きず",
+   "romaji": "kizu",
+   "arti": "goresan, cacat",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{製|せい}{品|ひん}に{傷|きず}があります。",
+   "arti_contoh": "Ada goresan pada produk."
+  },
+  {
+   "id": "im-025",
+   "kata": "異常",
+   "kana": "いじょう",
+   "romaji": "ijou",
+   "arti": "keanehan, abnormal",
+   "cat": "Mutu",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{異常|いじょう}を{見|み}つけたら{止|と}めます。",
+   "arti_contoh": "Jika menemukan keanehan, hentikan."
+  },
+  {
+   "id": "im-026",
+   "kata": "整理",
+   "kana": "せいり",
+   "romaji": "seiri",
+   "arti": "menyortir (5S)",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{整理|せいり}して、いらない{物|もの}をすてます。",
+   "arti_contoh": "Menyortir dan membuang yang tidak perlu."
+  },
+  {
+   "id": "im-027",
+   "kata": "整頓",
+   "kana": "せいとん",
+   "romaji": "seiton",
+   "arti": "menata (5S)",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{道具|どうぐ}を{整頓|せいとん}します。",
+   "arti_contoh": "Menata alat."
+  },
+  {
+   "id": "im-028",
+   "kata": "清掃",
+   "kana": "せいそう",
+   "romaji": "seisou",
+   "arti": "membersihkan (5S)",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{機械|きかい}を{清掃|せいそう}します。",
+   "arti_contoh": "Membersihkan mesin."
+  },
+  {
+   "id": "im-029",
+   "kata": "清潔",
+   "kana": "せいけつ",
+   "romaji": "seiketsu",
+   "arti": "kebersihan (5S)",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{清潔|せいけつ}をたもちます。",
+   "arti_contoh": "Menjaga kebersihan."
+  },
+  {
+   "id": "im-030",
+   "kata": "作業手順書",
+   "kana": "さぎょうてじゅんしょ",
+   "romaji": "sagyoutejunsho",
+   "arti": "prosedur kerja tertulis",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{作業|さぎょう}{手順|てじゅん}{書|か}のとおりにします。",
+   "arti_contoh": "Bekerja sesuai prosedur tertulis."
+  },
+  {
+   "id": "im-031",
+   "kata": "指差呼称",
+   "kana": "ゆびさしこしょう",
+   "romaji": "yubisashikoshou",
+   "arti": "menunjuk dan menyebut",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{指差呼称|ゆびさしこしょう}で{確認|かくにん}します。",
+   "arti_contoh": "Memeriksa dengan menunjuk dan menyebut."
+  },
+  {
+   "id": "im-032",
+   "kata": "報告",
+   "kana": "ほうこく",
+   "romaji": "houkoku",
+   "arti": "laporan",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "{上|うえ}の{人|ひと}に{報告|ほうこく}します。",
+   "arti_contoh": "Melapor kepada atasan."
+  },
+  {
+   "id": "im-033",
+   "kata": "連絡",
+   "kana": "れんらく",
+   "romaji": "renraku",
+   "arti": "kabar, kontak",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "おくれるときは{連絡|れんらく}します。",
+   "arti_contoh": "Memberi kabar jika terlambat."
+  },
+  {
+   "id": "im-034",
+   "kata": "相談",
+   "kana": "そうだん",
+   "romaji": "soudan",
+   "arti": "konsultasi",
+   "cat": "5S dan aturan",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "contoh": "わからないときは{相談|そうだん}します。",
+   "arti_contoh": "Berkonsultasi jika tidak mengerti."
+  },
+  {
+   "id": "im-035",
+   "kata": "労働災害",
+   "kana": "ろうどうさいがい",
+   "romaji": "roudousaigai",
+   "arti": "kecelakaan kerja",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{労働災害|ろうどうさいがい}をふせぎます。",
+   "arti_contoh": "Mencegah kecelakaan kerja."
+  },
+  {
+   "id": "im-036",
+   "kata": "ヒヤリハット",
+   "kana": "ひやりはっと",
+   "romaji": "hiyarihatto",
+   "arti": "nyaris celaka",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "ヒヤリハットを{報告|ほうこく}します。",
+   "arti_contoh": "Melaporkan nyaris celaka."
+  },
+  {
+   "id": "im-037",
+   "kata": "保護具",
+   "kana": "ほごぐ",
+   "romaji": "hogogu",
+   "arti": "alat pelindung diri",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{保護具|ほごぐ}をつけます。",
+   "arti_contoh": "Memakai alat pelindung."
+  },
+  {
+   "id": "im-038",
+   "kata": "ヘルメット",
+   "kana": "へるめっと",
+   "romaji": "herumetto",
+   "arti": "helm",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "ヘルメットをかぶります。",
+   "arti_contoh": "Memakai helm."
+  },
+  {
+   "id": "im-039",
+   "kata": "保護めがね",
+   "kana": "ほごめがね",
+   "romaji": "hogomegane",
+   "arti": "kacamata pelindung",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{保護|ほご}めがねで{目|め}を{守|まも}ります。",
+   "arti_contoh": "Melindungi mata dengan kacamata pelindung."
+  },
+  {
+   "id": "im-040",
+   "kata": "安全靴",
+   "kana": "あんぜんぐつ",
+   "romaji": "anzengutsu",
+   "arti": "sepatu keselamatan",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{安全|あんぜん}{靴|くつ}をはきます。",
+   "arti_contoh": "Memakai sepatu keselamatan."
+  },
+  {
+   "id": "im-041",
+   "kata": "耳栓",
+   "kana": "みみせん",
+   "romaji": "mimisen",
+   "arti": "penyumbat telinga",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{耳栓|みみせん}をつけます。",
+   "arti_contoh": "Memakai penyumbat telinga."
+  },
+  {
+   "id": "im-042",
+   "kata": "防じんマスク",
+   "kana": "ぼうじんますく",
+   "romaji": "boujinmasuku",
+   "arti": "masker debu",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{防|ぼう}じんマスクをつけます。",
+   "arti_contoh": "Memakai masker debu."
+  },
+  {
+   "id": "im-043",
+   "kata": "手袋",
+   "kana": "てぶくろ",
+   "romaji": "tebukuro",
+   "arti": "sarung tangan",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{回|まわ}る{機械|きかい}では{手袋|てぶくろ}をしません。",
+   "arti_contoh": "Tidak memakai sarung tangan di mesin berputar."
+  },
+  {
+   "id": "im-044",
+   "kata": "巻き込まれ",
+   "kana": "まきこまれ",
+   "romaji": "makikomare",
+   "arti": "terlilit",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{巻|ま}き{込|こ}まれに{注意|ちゅうい}します。",
+   "arti_contoh": "Waspada terlilit."
+  },
+  {
+   "id": "im-045",
+   "kata": "はさまれ",
+   "kana": "はさまれ",
+   "romaji": "hasamare",
+   "arti": "terjepit",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "はさまれに{注意|ちゅうい}します。",
+   "arti_contoh": "Waspada terjepit."
+  },
+  {
+   "id": "im-046",
+   "kata": "非常停止ボタン",
+   "kana": "ひじょうていしぼたん",
+   "romaji": "hijouteishibotan",
+   "arti": "tombol berhenti darurat",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{非常停止|ひじょうていし}ボタンをおします。",
+   "arti_contoh": "Menekan tombol berhenti darurat."
+  },
+  {
+   "id": "im-047",
+   "kata": "安全カバー",
+   "kana": "あんぜんかばー",
+   "romaji": "anzenkaba-",
+   "arti": "penutup pengaman",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{安全|あんぜん}カバーをはずしません。",
+   "arti_contoh": "Tidak melepas penutup pengaman."
+  },
+  {
+   "id": "im-048",
+   "kata": "インターロック",
+   "kana": "いんたーろっく",
+   "romaji": "inta-rokku",
+   "arti": "interlock",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "インターロックが{作動|さどう}します。",
+   "arti_contoh": "Interlock bekerja."
+  },
+  {
+   "id": "im-049",
+   "kata": "電源",
+   "kana": "でんげん",
+   "romaji": "dengen",
+   "arti": "sumber listrik",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{電源|でんげん}を{切|き}ります。",
+   "arti_contoh": "Mematikan sumber listrik."
+  },
+  {
+   "id": "im-050",
+   "kata": "施錠",
+   "kana": "せじょう",
+   "romaji": "sejou",
+   "arti": "mengunci",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{電源|でんげん}を{施錠|せじょう}します。",
+   "arti_contoh": "Mengunci sumber listrik."
+  },
+  {
+   "id": "im-051",
+   "kata": "玉掛け",
+   "kana": "たまがけ",
+   "romaji": "tamagake",
+   "arti": "menggantung beban pada kait crane",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{玉掛|たまがけ}けは{資格|しかく}が{必要|ひつよう}です。",
+   "arti_contoh": "Penggantungan beban butuh kualifikasi."
+  },
+  {
+   "id": "im-052",
+   "kata": "合図",
+   "kana": "あいず",
+   "romaji": "aizu",
+   "arti": "isyarat",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{合図|あいず}をします。",
+   "arti_contoh": "Memberi isyarat."
+  },
+  {
+   "id": "im-053",
+   "kata": "台車",
+   "kana": "だいしゃ",
+   "romaji": "daisha",
+   "arti": "kereta dorong",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{台|だい}{車|くるま}で{運|はこ}びます。",
+   "arti_contoh": "Mengangkut dengan kereta dorong."
+  },
+  {
+   "id": "im-054",
+   "kata": "腰痛",
+   "kana": "ようつう",
+   "romaji": "youtsuu",
+   "arti": "sakit pinggang",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{腰痛|ようつう}をふせぎます。",
+   "arti_contoh": "Mencegah sakit pinggang."
+  },
+  {
+   "id": "im-055",
+   "kata": "フォークリフト",
+   "kana": "ふぉーくりふと",
+   "romaji": "fuぉ-kurifuto",
+   "arti": "forklift",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "フォークリフトは{資格|しかく}が{必要|ひつよう}です。",
+   "arti_contoh": "Forklift butuh kualifikasi."
+  },
+  {
+   "id": "im-056",
+   "kata": "感電",
+   "kana": "かんでん",
+   "romaji": "kanden",
+   "arti": "tersengat listrik",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{感電|かんでん}に{注意|ちゅうい}します。",
+   "arti_contoh": "Waspada tersengat listrik."
+  },
+  {
+   "id": "im-057",
+   "kata": "漏電",
+   "kana": "ろうでん",
+   "romaji": "rouden",
+   "arti": "kebocoran listrik",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{漏電|ろうでん}を{調|しら}べます。",
+   "arti_contoh": "Memeriksa kebocoran listrik."
+  },
+  {
+   "id": "im-058",
+   "kata": "消火器",
+   "kana": "しょうかき",
+   "romaji": "shoukaki",
+   "arti": "alat pemadam",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{消火器|しょうかき}の{場所|ばしょ}を{覚|おぼ}えます。",
+   "arti_contoh": "Menghafal letak alat pemadam."
+  },
+  {
+   "id": "im-059",
+   "kata": "火花",
+   "kana": "ひばな",
+   "romaji": "hibana",
+   "arti": "percikan api",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{火花|ひばな}に{注意|ちゅうい}します。",
+   "arti_contoh": "Waspada percikan api."
+  },
+  {
+   "id": "im-060",
+   "kata": "有機溶剤",
+   "kana": "ゆうきようざい",
+   "romaji": "yuukiyouzai",
+   "arti": "pelarut organik",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{有機溶剤|ゆうきようざい}は{風|かぜ}{通|とお}しのよい{所|ところ}で{使|つか}います。",
+   "arti_contoh": "Pelarut organik dipakai di tempat berventilasi."
+  },
+  {
+   "id": "im-061",
+   "kata": "安全データシート",
+   "kana": "あんぜんでーたしーと",
+   "romaji": "anzende-tashi-to",
+   "arti": "lembar data keselamatan (SDS)",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{安全|あんぜん}データシートを{読|よ}みます。",
+   "arti_contoh": "Membaca lembar data keselamatan."
+  },
+  {
+   "id": "im-062",
+   "kata": "熱中症",
+   "kana": "ねっちゅうしょう",
+   "romaji": "necchuushou",
+   "arti": "sengatan panas",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{熱中症|ねっちゅうしょう}をふせぎます。",
+   "arti_contoh": "Mencegah sengatan panas."
+  },
+  {
+   "id": "im-063",
+   "kata": "健康診断",
+   "kana": "けんこうしんだん",
+   "romaji": "kenkoushindan",
+   "arti": "pemeriksaan kesehatan",
+   "cat": "Keselamatan",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "contoh": "{健康|けんこう}{診断|しんだん}をうけます。",
+   "arti_contoh": "Mengikuti pemeriksaan kesehatan."
+  },
+  {
+   "id": "im-064",
+   "kata": "単位",
+   "kana": "たんい",
+   "romaji": "tani",
+   "arti": "satuan",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{単位|たんい}を{書|か}きます。",
+   "arti_contoh": "Menulis satuan."
+  },
+  {
+   "id": "im-065",
+   "kata": "測定",
+   "kana": "そくてい",
+   "romaji": "sokutei",
+   "arti": "pengukuran",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{長|なが}さを{測定|そくてい}します。",
+   "arti_contoh": "Mengukur panjang."
+  },
+  {
+   "id": "im-066",
+   "kata": "ノギス",
+   "kana": "のぎす",
+   "romaji": "nogisu",
+   "arti": "jangka sorong",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "ノギスではかります。",
+   "arti_contoh": "Mengukur dengan jangka sorong."
+  },
+  {
+   "id": "im-067",
+   "kata": "マイクロメータ",
+   "kana": "まいくろめーた",
+   "romaji": "maikurome-ta",
+   "arti": "mikrometer",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "マイクロメータで{細|こま}かくはかります。",
+   "arti_contoh": "Mengukur teliti dengan mikrometer."
+  },
+  {
+   "id": "im-068",
+   "kata": "ダイヤルゲージ",
+   "kana": "だいやるげーじ",
+   "romaji": "daiyaruge-ji",
+   "arti": "dial gauge",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "ダイヤルゲージでぶれをはかります。",
+   "arti_contoh": "Mengukur goyangan dengan dial gauge."
+  },
+  {
+   "id": "im-069",
+   "kata": "直尺",
+   "kana": "ちょくしゃく",
+   "romaji": "chokushaku",
+   "arti": "penggaris baja",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{直尺|ちょくしゃく}で{大|おお}まかにはかります。",
+   "arti_contoh": "Mengukur kasar dengan penggaris baja."
+  },
+  {
+   "id": "im-070",
+   "kata": "限界ゲージ",
+   "kana": "げんかいげーじ",
+   "romaji": "genkaige-ji",
+   "arti": "gauge go/no-go",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{限界|げんかい}ゲージで{調|しら}べます。",
+   "arti_contoh": "Memeriksa dengan gauge go/no-go."
+  },
+  {
+   "id": "im-071",
+   "kata": "ゼロ点",
+   "kana": "ぜろてん",
+   "romaji": "zeroten",
+   "arti": "titik nol",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "ゼロ{点|てん}を{確認|かくにん}します。",
+   "arti_contoh": "Memeriksa titik nol."
+  },
+  {
+   "id": "im-072",
+   "kata": "目盛り",
+   "kana": "めもり",
+   "romaji": "memori",
+   "arti": "skala",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{目盛|めも}りを{正面|しょうめん}から{読|よ}みます。",
+   "arti_contoh": "Membaca skala dari depan."
+  },
+  {
+   "id": "im-073",
+   "kata": "図面",
+   "kana": "ずめん",
+   "romaji": "zumen",
+   "arti": "gambar kerja",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{図|ず}{面|めん}を{読|よ}みます。",
+   "arti_contoh": "Membaca gambar kerja."
+  },
+  {
+   "id": "im-074",
+   "kata": "第三角法",
+   "kana": "だいさんかくほう",
+   "romaji": "daisankakuhou",
+   "arti": "proyeksi sudut ketiga",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{図|ず}{面|めん}は{第三角法|だいさんかくほう}でかきます。",
+   "arti_contoh": "Gambar dibuat dengan proyeksi sudut ketiga."
+  },
+  {
+   "id": "im-075",
+   "kata": "寸法",
+   "kana": "すんぽう",
+   "romaji": "sunpou",
+   "arti": "ukuran, dimensi",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{寸法|すんぽう}を{確認|かくにん}します。",
+   "arti_contoh": "Memeriksa dimensi."
+  },
+  {
+   "id": "im-076",
+   "kata": "直径",
+   "kana": "ちょっけい",
+   "romaji": "chokkei",
+   "arti": "diameter",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{直径|ちょっけい}をはかります。",
+   "arti_contoh": "Mengukur diameter."
+  },
+  {
+   "id": "im-077",
+   "kata": "半径",
+   "kana": "はんけい",
+   "romaji": "hankei",
+   "arti": "radius",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{半径|はんけい}を{読|よ}みます。",
+   "arti_contoh": "Membaca radius."
+  },
+  {
+   "id": "im-078",
+   "kata": "面取り",
+   "kana": "めんとり",
+   "romaji": "mentori",
+   "arti": "chamfer",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{面|めん}{取|と}りをします。",
+   "arti_contoh": "Membuat chamfer."
+  },
+  {
+   "id": "im-079",
+   "kata": "表題欄",
+   "kana": "ひょうだいらん",
+   "romaji": "hyoudairan",
+   "arti": "kolom judul gambar",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{表題欄|ひょうだいらん}を{読|よ}みます。",
+   "arti_contoh": "Membaca kolom judul gambar."
+  },
+  {
+   "id": "im-080",
+   "kata": "材質",
+   "kana": "ざいしつ",
+   "romaji": "zaishitsu",
+   "arti": "jenis bahan",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{材質|ざいしつ}を{確認|かくにん}します。",
+   "arti_contoh": "Memeriksa jenis bahan."
+  },
+  {
+   "id": "im-081",
+   "kata": "公差",
+   "kana": "こうさ",
+   "romaji": "kousa",
+   "arti": "toleransi",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{公差|こうさ}の{中|なか}に{入|はい}っています。",
+   "arti_contoh": "Berada dalam toleransi."
+  },
+  {
+   "id": "im-082",
+   "kata": "最大寸法",
+   "kana": "さいだいすんぽう",
+   "romaji": "saidaisunpou",
+   "arti": "ukuran maksimum",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{最大寸法|さいだいすんぽう}は10.1です。",
+   "arti_contoh": "Ukuran maksimum 10,1."
+  },
+  {
+   "id": "im-083",
+   "kata": "最小寸法",
+   "kana": "さいしょうすんぽう",
+   "romaji": "saishousunpou",
+   "arti": "ukuran minimum",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{最小寸法|さいしょうすんぽう}は9.9です。",
+   "arti_contoh": "Ukuran minimum 9,9."
+  },
+  {
+   "id": "im-084",
+   "kata": "合格",
+   "kana": "ごうかく",
+   "romaji": "goukaku",
+   "arti": "lulus",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{公差|こうさ}の{中|なか}なら{合格|ごうかく}です。",
+   "arti_contoh": "Di dalam toleransi berarti lulus."
+  },
+  {
+   "id": "im-085",
+   "kata": "不適合品",
+   "kana": "ふてきごうひん",
+   "romaji": "futekigouhin",
+   "arti": "produk tidak sesuai",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{不適合品|ふてきごうひん}を{分|わ}けます。",
+   "arti_contoh": "Memisahkan produk tidak sesuai."
+  },
+  {
+   "id": "im-086",
+   "kata": "記録",
+   "kana": "きろく",
+   "romaji": "kiroku",
+   "arti": "catatan",
+   "cat": "Ukur dan gambar",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{検査|けんさ}の{記録|きろく}を{書|か}きます。",
+   "arti_contoh": "Menulis catatan pemeriksaan."
+  },
+  {
+   "id": "im-087",
+   "kata": "鉄鋼",
+   "kana": "てっこう",
+   "romaji": "tekkou",
+   "arti": "besi dan baja",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{鉄|てつ}{鋼|はがね}はさびやすいです。",
+   "arti_contoh": "Baja mudah berkarat."
+  },
+  {
+   "id": "im-088",
+   "kata": "ステンレス鋼",
+   "kana": "すてんれすこう",
+   "romaji": "sutenresukou",
+   "arti": "baja tahan karat",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "ステンレス{鋼|はがね}はさびにくいです。",
+   "arti_contoh": "Baja tahan karat tidak mudah berkarat."
+  },
+  {
+   "id": "im-089",
+   "kata": "アルミニウム",
+   "kana": "あるみにうむ",
+   "romaji": "aruminiumu",
+   "arti": "aluminium",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "アルミニウムは{軽|かる}いです。",
+   "arti_contoh": "Aluminium ringan."
+  },
+  {
+   "id": "im-090",
+   "kata": "銅",
+   "kana": "どう",
+   "romaji": "dou",
+   "arti": "tembaga",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{銅|どう}は{電気|でんき}を{通|とお}します。",
+   "arti_contoh": "Tembaga menghantar listrik."
+  },
+  {
+   "id": "im-091",
+   "kata": "真ちゅう",
+   "kana": "しんちゅう",
+   "romaji": "shinchuu",
+   "arti": "kuningan",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{真|しん}ちゅうは{加工|かこう}しやすいです。",
+   "arti_contoh": "Kuningan mudah dikerjakan."
+  },
+  {
+   "id": "im-092",
+   "kata": "硬さ",
+   "kana": "かたさ",
+   "romaji": "katasa",
+   "arti": "kekerasan",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{硬|かたさ}さを{調|しら}べます。",
+   "arti_contoh": "Memeriksa kekerasan."
+  },
+  {
+   "id": "im-093",
+   "kata": "強度",
+   "kana": "きょうど",
+   "romaji": "kyoudo",
+   "arti": "kekuatan",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{強度|きょうど}が{足|あし}りません。",
+   "arti_contoh": "Kekuatannya kurang."
+  },
+  {
+   "id": "im-094",
+   "kata": "耐食性",
+   "kana": "たいしょくせい",
+   "romaji": "taishokusei",
+   "arti": "ketahanan karat",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{耐食性|たいしょくせい}が{高|たか}いです。",
+   "arti_contoh": "Tahan karat tinggi."
+  },
+  {
+   "id": "im-095",
+   "kata": "さび",
+   "kana": "さび",
+   "romaji": "sabi",
+   "arti": "karat",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "さびをとります。",
+   "arti_contoh": "Menghilangkan karat."
+  },
+  {
+   "id": "im-096",
+   "kata": "切削",
+   "kana": "せっさく",
+   "romaji": "sessaku",
+   "arti": "pemotongan (machining)",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{切削|せっさく}で{形|かたち}をつくります。",
+   "arti_contoh": "Membentuk dengan pemotongan."
+  },
+  {
+   "id": "im-097",
+   "kata": "研削",
+   "kana": "けんさく",
+   "romaji": "kensaku",
+   "arti": "penggerindaan",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{研削|けんさく}でみがきます。",
+   "arti_contoh": "Menghaluskan dengan gerinda."
+  },
+  {
+   "id": "im-098",
+   "kata": "旋盤",
+   "kana": "せんばん",
+   "romaji": "senban",
+   "arti": "mesin bubut",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{旋盤|せんばん}で{丸|まるい}い{物|もの}をつくります。",
+   "arti_contoh": "Membuat benda bulat dengan bubut."
+  },
+  {
+   "id": "im-099",
+   "kata": "フライス盤",
+   "kana": "ふらいすばん",
+   "romaji": "furaisuban",
+   "arti": "mesin frais",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "フライス{盤|ばん}で{面|めん}をけずります。",
+   "arti_contoh": "Memotong bidang dengan mesin frais."
+  },
+  {
+   "id": "im-100",
+   "kata": "ボール盤",
+   "kana": "ぼーるばん",
+   "romaji": "bo-ruban",
+   "arti": "mesin bor",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "ボール{盤|ばん}で{穴|あな}をあけます。",
+   "arti_contoh": "Membuat lubang dengan mesin bor."
+  },
+  {
+   "id": "im-101",
+   "kata": "プレス加工",
+   "kana": "ぷれすかこう",
+   "romaji": "puresukakou",
+   "arti": "pengerjaan press",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "プレス{加工|かこう}で{板|いた}をまげます。",
+   "arti_contoh": "Menekuk pelat dengan press."
+  },
+  {
+   "id": "im-102",
+   "kata": "鋳造",
+   "kana": "ちゅうぞう",
+   "romaji": "chuuzou",
+   "arti": "pengecoran",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{鋳造|ちゅうぞう}で{形|かたち}をつくります。",
+   "arti_contoh": "Membentuk dengan pengecoran."
+  },
+  {
+   "id": "im-103",
+   "kata": "鍛造",
+   "kana": "たんぞう",
+   "romaji": "tanzou",
+   "arti": "penempaan",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{鍛造|たんぞう}で{強|つよ}くします。",
+   "arti_contoh": "Memperkuat dengan penempaan."
+  },
+  {
+   "id": "im-104",
+   "kata": "溶接",
+   "kana": "ようせつ",
+   "romaji": "yousetsu",
+   "arti": "pengelasan",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{溶接|ようせつ}で{金属|きんぞく}をつなぎます。",
+   "arti_contoh": "Menyambung logam dengan las."
+  },
+  {
+   "id": "im-105",
+   "kata": "熱処理",
+   "kana": "ねつしょり",
+   "romaji": "netsushori",
+   "arti": "perlakuan panas",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{熱処理|ねつしょり}をします。",
+   "arti_contoh": "Melakukan perlakuan panas."
+  },
+  {
+   "id": "im-106",
+   "kata": "焼入れ",
+   "kana": "やきいれ",
+   "romaji": "yakiire",
+   "arti": "pengerasan (quenching)",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{焼入|やきいれ}れでかたくします。",
+   "arti_contoh": "Mengeraskan dengan quenching."
+  },
+  {
+   "id": "im-107",
+   "kata": "焼なまし",
+   "kana": "やきなまし",
+   "romaji": "yakinamashi",
+   "arti": "anil (annealing)",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{焼|やきなまし}なましでやわらかくします。",
+   "arti_contoh": "Melunakkan dengan annealing."
+  },
+  {
+   "id": "im-108",
+   "kata": "表面処理",
+   "kana": "ひょうめんしょり",
+   "romaji": "hyoumenshori",
+   "arti": "perlakuan permukaan",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{表面処理|ひょうめんしょり}をします。",
+   "arti_contoh": "Melakukan perlakuan permukaan."
+  },
+  {
+   "id": "im-109",
+   "kata": "切削油",
+   "kana": "せっさくゆ",
+   "romaji": "sessakuyu",
+   "arti": "oli pemotong",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{切削油|せっさくゆ}をかけます。",
+   "arti_contoh": "Menyiram oli pemotong."
+  },
+  {
+   "id": "im-110",
+   "kata": "切りくず",
+   "kana": "きりくず",
+   "romaji": "kirikuzu",
+   "arti": "serpihan potong",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{切|き}りくずを{素|そ}{手|て}でとりません。",
+   "arti_contoh": "Tidak mengambil serpihan dengan tangan kosong."
+  },
+  {
+   "id": "im-111",
+   "kata": "刃物",
+   "kana": "はもの",
+   "romaji": "hamono",
+   "arti": "pahat, pisau",
+   "cat": "Bahan dan proses",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "contoh": "{刃物|はもの}をかえます。",
+   "arti_contoh": "Mengganti pahat."
+  },
+  {
+   "id": "im-112",
+   "kata": "産業廃棄物",
+   "kana": "さんぎょうはいきぶつ",
+   "romaji": "sangyouhaikibutsu",
+   "arti": "limbah industri",
+   "cat": "Lingkungan",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{産業廃棄物|さんぎょうはいきぶつ}を{分別|ぶんべつ}します。",
+   "arti_contoh": "Memilah limbah industri."
+  },
+  {
+   "id": "im-113",
+   "kata": "分別",
+   "kana": "ぶんべつ",
+   "romaji": "bunbetsu",
+   "arti": "memilah",
+   "cat": "Lingkungan",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "ごみを{分別|ぶんべつ}します。",
+   "arti_contoh": "Memilah sampah."
+  },
+  {
+   "id": "im-114",
+   "kata": "リサイクル",
+   "kana": "りさいくる",
+   "romaji": "risaikuru",
+   "arti": "daur ulang",
+   "cat": "Lingkungan",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{金属|きんぞく}をリサイクルします。",
+   "arti_contoh": "Mendaur ulang logam."
+  },
+  {
+   "id": "im-115",
+   "kata": "環境",
+   "kana": "かんきょう",
+   "romaji": "kankyou",
+   "arti": "lingkungan",
+   "cat": "Lingkungan",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{環境|かんきょう}を{守|まも}ります。",
+   "arti_contoh": "Menjaga lingkungan."
+  }
+ ]
+}

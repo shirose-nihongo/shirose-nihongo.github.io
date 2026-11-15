@@ -1,132 +1,134 @@
 {
  "schema": 1,
  "bidang": "fishery",
- "source": "Shirose Nihongo — tulisan orisinal berdasarkan standar kompetensi resmi bidang Perikanan (MOJ/ISA, MAFF/Badan Perikanan, MHLW) dan materi keselamatan MHLW untuk pekerja asing; bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "source": "Teks dan gambar halaman: 特定技能 漁業技能測定試験 学習用テキスト (一般社団法人大日本水産会, 初版2019年12月, 一部改訂2025年9月) — 漁業一般・漁業安全・網漁業・釣漁業, versi Jepang dan versi bahasa Indonesia. Ringkasan, kosakata, dan soal latihan: Shirose Nihongo (bukan soal resmi).",
  "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
  "bab": {
   "id": "bab5",
   "no": 5,
   "title": {
-   "id": "Penanganan Hasil Tangkapan",
-   "jp": "{漁獲物|ぎょかくぶつ}の{取|と}り{扱|あつか}い"
+   "id": "Pukat Hela Dasar (底引き網)",
+   "jp": "{底|そこ}{引|ひ}き{網漁業|あみぎょぎょう}"
   },
   "intro": {
-   "id": "Menjaga kesegaran ikan, memilah dan mengemas, kebersihan dan keamanan pangan, serta pembongkaran di pelabuhan.",
-   "jp": "{魚|さかな}の{鮮度|せんど}、{選別|せんべつ}と{箱詰|はこづ}め、{衛生|えいせい}{管理|かんり}、{水揚|みずあ}げ{作業|さぎょう}を{学|まな}びます。"
+   "id": "Pukat hela dasar: bagian jaring, otter trawl, dua kapal.",
+   "jp": "{底|そこ}{引|ひ}き{網漁業|あみぎょぎょう}：{網|あみ}の{部分|ぶぶん}、オッタートロール、{二艘|にそう}びき。"
   },
   "pages": [
-   1,
-   1
+   82,
+   87
   ],
   "subs": [
    {
     "id": "b5s1",
     "no": 1,
     "title": {
-     "id": "Menjaga Kesegaran Ikan",
-     "jp": "{鮮度|せんど}の{保|たも}ち{方|かた}"
+     "id": "Bagian Jaring dan Metode Otter Trawl",
+     "jp": "{網|あみ}{部|ぶ}{位|い}とオッタートロール"
     },
     "pages": [
-     1,
-     1
+     82,
+     83
     ],
     "full": {
      "id": [
       {
-       "h": "Mengapa kesegaran penting"
+       "h": "Deskripsi bagian-bagian jaring utama"
       },
       {
-       "p": "Ikan cepat rusak. Setelah ditangkap, **kesegaran (鮮度)** turun cepat karena bakteri dan enzim, apalagi pada suhu hangat. Ikan segar lebih mahal dan lebih aman dimakan."
+       "p": "Jaring pada umumnya, terdiri dari Kantong jaring Sayap Jaring untuk mengumpulkan T T a a li l i K k e e p p al a a l a Kantong jaring hewan di bagian depan mulut jaring, Badan Jaring, dan Kantong Jaring untuk S S e e l l o a n n g gs s a o n n g g jaring mengumpulkan ikan. Ukuran mata jaring adalah yang terbesar di ujung depan Sayap Jaring dari bagian tersebut secara bertahap mengecil dan menjadi terkecil di Kantong Jaring. Tali Ris Atas memanjang dari ujung atas Sayap Jaring JaJarriinngg uutatmama a ke bagian atas ujung depan Badan Jaring, dan Tali Ris Bawah memanjang Tali utama Tali utama dari ujung bawah Sayap Jaring ke bagian bawah ujung depan badan Jaring (lihat Gambar 22)."
       },
       {
-       "h": "Prinsip: dinginkan cepat, jaga tetap dingin"
+       "p": "Gambar 22 Bagian-bagian utama jaring pukat dasar"
       },
       {
-       "ul": [
-        "**Es (氷)**: letakkan ikan berlapis es di palka; es harus menyentuh ikan.",
-        "**Es air laut (海水氷 / シャーベット氷)** atau **air laut dingin (冷海水)**: mendinginkan lebih cepat dan merata.",
-        "**Pembekuan (冷凍)**: untuk penyimpanan lama di atas kapal besar.",
-        "Hindari sinar matahari langsung dan tumpukan ikan yang terlalu tinggi."
-       ]
+       "h": "Metode pukat berang-berang"
       },
       {
-       "h": "Teknik penanganan"
+       "p": "Metode penangkapan Pukat Hela Dasar Berpapan adalah metode penangkapan ikan di mana jaring disebarkan ke kiri dan ke kanan menggunakan Papan pembuka mulut jaring (Gambar 23)."
       },
       {
-       "ul": [
-        "**Mengeluarkan darah (血抜き)**: memutus insang atau ekor lalu mencelupkan ke air agar darah keluar; daging lebih bersih dan awet.",
-        "**Mematikan ikan dengan cepat (活け締め)**: mengurangi stres dan menjaga kualitas.",
-        "**Tidak melukai** kulit dan daging: jangan menusuk dengan tongkat sembarangan, jangan menginjak ikan."
-       ]
+       "p": "Metode ini digunakan di seluruh dunia karena dapat dioperasikan oleh satu kapal dan dapat dioperasikan bahkan dalam cuaca badai."
       },
       {
-       "note": "Prinsip singkat: **cepat, dingin, bersih, lembut**."
+       "h": "(1) Papan pembuka mulut jaring dan tali-temali Gambar 23: Pukat Hela Dasar"
+      },
+      {
+       "p": "Papan pembuka mulut jaring adalah papan yang terbuat Berpapan dari besi, kayu, FRP, dll. Dengan mempertahankan sudut yang konstan (sudut penjemputan) terhadap arah jaring tarik, perbedaan tekanan yang dihasilkan antara bagian depan dan belakang papan, seperti sayap pesawat terbang, menciptakan gaya mengembang jaring yang mengembangkan jaring."
+      },
+      {
+       "p": "Papan pembuka mulut jaring juga berfungsi mengintimidasi ikan-ikan di sekitarnya dengan “asap pasir” yang berhembus ke dasar laut dan mengarahkannya ke mulut jaring."
+      },
+      {
+       "h": "(2) Cara melempar dan Menarik jaring."
+      },
+      {
+       "p": "Ketika pekerjaan dimulai, jaring akan dilemparkan secara berurutan dari bagian Cod end (kantong jaring)."
+      },
+      {
+       "p": "Pada saat itu jaring, Pennent jaring, Hand rope (tali tangan) , Asobi wire (kawat fleksibel) dan Warp (tali penarik) dihubungkan secara berurutan ( Gambar 24 ). Papan pembuka mulut jaring tidak terhubung, tapi dipindahkan dengan posisi gantung dari Top roller di Gallose buritan, Warp (tali penarik) dijalin dengan rantai derek, Warp (tali penarink), papan pembuka mulut jaring dan jaring disambungkan. Saat jaring diangkat, kurangi kecepatan pengangkatan saat Warp (tali penarink) menjadi lebih pendek, dan angkat sampai papan pembuka mulut jaring digantung di Gallose. Proses selanjutnya adalah kebalikan dari prosedur pelemparan jaring."
+      },
+      {
+       "p": "Gambar 24: Tali-temali papan pembuka mulut jaring Trawl"
       }
      ],
      "jp": [
       {
-       "h": "{鮮度|せんど}が{大切|たいせつ}な{理由|りゆう}"
+       "h": "1.{主要網部|しゅようあみぶ}{位|い}の{名称|めいしょう}"
       },
       {
-       "p": "{魚|さかな}はすぐにいたみます。とったあと、{細菌|さいきん}や{酵素|こうそ}で**{鮮度|せんど}**が{早|はや}く{下|さ}がります。あたたかいと、もっと{早|はや}いです。{新鮮|しんせん}な{魚|さかな}は{高|たか}く{売|う}れ、{食|た}べても{安全|あんぜん}です。"
+       "p": "{網|あみ}は{一般|いっぱん}に、{網口前方|あみくちぜんぽう}の{生物|せいぶつ}を{集|あつ}めるための{袖網|そであみ}、{身網|みあみ}および{魚|さかな}を{蓄積|ちくせき}するためのコッドエンドから{構成|こうせい}される。{目合|めあい}は{袖網|そであみ}の{先端部|せんたんぶ}が{最|もっと}も{大|おお}きく、ここから{徐々|じょじょ}に{小|ちい}さくなり、コッドエンドで{最小|さいしょう}となる。{袖網上端部|そであみじょうたんぶ}から{身網前端上部|みあみぜんたんじょうぶ}に{沿|そ}ってヘッドロープが、{袖網|そであみか}下端{部|ぶ}から{身網前端下|みあみぜんたんか}{部|ぶ}に{沿|そ}ってはグランドロープが{取|と}り{付|つ}けられる（{図|ず}２２）。"
       },
       {
-       "h": "{考|かんが}え{方|かた}：{早|はや}く{冷|ひ}やして、{冷|つめ}たくたもつ"
+       "h": "２．オッタートロール{漁法|ぎょほう}"
       },
       {
-       "ul": [
-        "**{氷|こおり}**：{魚倉|ぎょそう}で、{魚|さかな}と{氷|こおり}を{重|かさ}ねる。{氷|こおり}が{魚|さかな}にふれるようにする。",
-        "**{海|うみ}{水|みず}{氷|こおり}（シャーベット{氷|こおり}）**と**{冷|ひ}{海|うみ}{水|みず}**：{早|はや}く、まんべんなく{冷|ひ}える。",
-        "**{冷凍|れいとう}**：{大|おお}きい{船|ふね}で、{長|なが}くとっておくとき。",
-        "{直射日光|ちょくしゃにっこう}と、{魚|さかな}の{積|つ}みすぎをさける。"
-       ]
+       "p": "オッターボードを{用|もち}いて{網|あみ}を{左右|さゆう}に{展開|てんかい}する{漁法|ぎょほう}である。（{図|ず}２３）"
       },
       {
-       "h": "{取|と}り{扱|あつか}いのわざ"
+       "p": "{単船|たんせん}で{操業|そうぎょう}でき、ある{程度|ていど}の{荒天|こうてん}でも{操業|そうぎょう}できるため、{世界中|せかいじゅう}で{行|おこな}われている。"
       },
       {
-       "ul": [
-        "**{血抜|ちぬき}き**：えらや{尾|び}を{切|き}って{水|みず}に{入|い}れ、{血|ち}を{出|だ}す。{肉|にく}がきれいで、{長|なが}{持|も}ちする。",
-        "**{活|い}け{締|じ}め**：すばやく{魚|さかな}をしめる。ストレスをへらして、{品質|ひんしつ}をたもつ。",
-        "{皮|かわ}や{身|み}に**きずをつけない**。{棒|ぼう}でむやみにさしたり、{魚|さかな}をふんだりしない。"
-       ]
+       "p": "{図|ず}２３オッタートロール{漁法|ぎょほう}（１）オッターボードと{索|さく}{具|ぐ}"
       },
       {
-       "note": "みじかく{言|い}うと、**{早|はや}く・{冷|つめ}たく・きれいに・やさしく**。"
+       "p": "オッターボードは{鉄|てつ}や{木|き}、FRPなどで{製作|せいさく}された{板|いた}である。{曳網方向|ひきあみほうこう}に{対|たい}して{一定|いってい}の{角|かく}{度|ど}（{迎|むか}え{角|かく}）を{保|たも}つことで、{飛|ひ}行{機|き}の{翼|つばさ}のように{板|いた}の{表|おもて}と{裏|うら}に{生|しょう}じる{圧力差|あつりょくさ}が{拡網力|かくもうりょく}となって{網|あみ}を{展開|てんかい}させる。"
+      },
+      {
+       "p": "オッターボードは{海底|かいてい}との{接触|せっしょく}で{巻|ま}き{上|あ}がる“{砂煙|すなけむり}”で{周辺|しゅうへん}の{魚|さかな}を{威嚇|いかく}して{網口|あみくち}へと{誘導|ゆうどう}する{機能|きのう}もある。（２）{投|とう}・{揚網方法|ようもうほうほう}"
+      },
+      {
+       "p": "{操業|そうぎょう}が{始|はじ}まると、コッドエンドから{順|じゅん}に{網|あみ}を{投入|とうにゅう}する。この{時点|じてん}では、{網|あみ}と{網|あみ}ペンネント、ハンドロープ、{遊|あそ}びワイヤー、ワープが{順|じゅん}に{連結|れんけつ}されているが（{図|ず}２４）、オッターボードはつながっておらず、{船尾|せんび}ギャロースにあるトップローラーから{吊|つ}り{下|さ}げられた{状態|じょうたい}で{移|うつ}し、ワープにトーイングチェーンを{連結|れんけつ}しワープ、オッターボード、{網|あみ}が{連結|れんけつ}された{状態|じょうたい}となる。{揚網|ようもう}のときには、ワープが{短|みじか}くなってきたら{巻|ま}き{上|あ}げ{速度|そくど}を{落|お}とし、オッターボードがギャロースに{吊|つ}り{上|あ}がるまで{巻|ま}き{上|あ}げる。その{後|あと}は{投網|とうもう}の{逆|ぎゃく}の{手順|てじゅん}を{行|おこな}う。"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Dinginkan ikan cepat dengan es atau es air laut, hindari matahari, dan jangan melukai ikan.",
+      "core": "Jaring pukat dasar: sayap, badan, kantong; mata jaring terbesar di ujung depan, terkecil di kantong. Otter trawl membuka mulut jaring dengan papan pembuka.",
       "points": [
-       "鮮度 turun cepat saat hangat.",
-       "氷, 海水氷, 冷海水 mendinginkan.",
-       "血抜き = membuang darah.",
-       "Cepat, dingin, bersih, lembut."
+       "Ukuran mata: besar di depan → kecil di kantong.",
+       "Otter trawl bisa oleh satu kapal, bahkan saat cuaca buruk.",
+       "Papan pembuka dari besi/kayu/FRP."
       ],
       "avoid": [
-       "Menumpuk ikan terlalu tinggi dan membiarkannya di bawah matahari."
+       "Mengira kantong jaring bermata paling besar."
       ],
       "exam": [
-       "Alasan menurunkan suhu.",
-       "Arti 血抜き dan 活け締め."
+       "Tiga bagian jaring."
       ]
      },
      "jp": {
-      "core": "{魚|さかな}は{早|はや}く{冷|ひ}やす。{氷|こおり}や{海|うみ}{水|みず}{氷|こおり}を{使|つか}い、{日光|にっこう}をさけ、きずをつけない。",
+      "core": "{底|そこ}{曳網|ひきあみ}は{袖網|そであみ}、{身網|みあみ}、{袋|るぶくろ}{網|あみ}でできる。オッタートロールは{拡網板|かくもうばん}で{網口|あみくち}をひらく。",
       "points": [
-       "{暖|あたた}かいと{鮮度|せんど}が{早|はや}く{下|さ}がる。",
-       "{氷|こおり}・{海|うみ}{水|みず}{氷|こおり}・{冷|ひ}{海|うみ}{水|みず}で{冷|ひ}やす。",
-       "{血抜|ちぬき}き＝{血|ち}を{出|だ}す。",
-       "{早|はや}く・{冷|つめ}たく・きれいに・やさしく。"
+       "{目合|めあい}は{前|まえ}が{大|おお}きく、{袋|るぶくろ}{網|あみ}が{小|ちい}さい。",
+       "オッタートロールは1{隻|せき}でできる。",
+       "{拡網板|かくもうばん}は{鉄|てつ}、{木|き}、FRPなどで{作|つく}る。"
       ],
       "avoid": [
-       "{魚|さかな}を{積|つ}みすぎ、{日光|にっこう}にあてること。"
+       "{袋|るぶくろ}{網|あみ}の{目|め}がいちばん{大|おお}きいと{思|おも}うこと。"
       ],
       "exam": [
-       "{冷|ひ}やす{理由|りゆう}。",
-       "{血抜|ちぬき}きと{活|い}け{締|じ}めの{意味|いみ}。"
+       "{網|あみ}の3つの{部分|ぶぶん}。"
       ]
      }
     }
@@ -135,342 +137,141 @@
     "id": "b5s2",
     "no": 2,
     "title": {
-     "id": "Memilah, Menimbang, dan Mengemas",
-     "jp": "{選別|せんべつ}・{計量|けいりょう}・{箱詰|はこづ}め"
+     "id": "Dua Kapal, Dogol, Pencegahan Bahaya",
+     "jp": "{二艘|にそう}びき・{駆|か}け{廻|まわ}し・{危険防止|きけんぼうし}"
     },
     "pages": [
-     1,
-     1
+     83,
+     87
     ],
     "full": {
      "id": [
       {
-       "h": "Memilah (選別)"
+       "h": "Metode pukat dua perahu"
       },
       {
-       "p": "Hasil tangkapan dipilah berdasarkan **jenis (魚種)**, **ukuran (大・中・小)**, dan **mutu (品質)**. Ikan rusak, kecil, atau bukan target dipisahkan. Ikan yang masih hidup dan jenis yang dilindungi dikembalikan ke laut sesuai aturan."
+       "p": "Ini adalah metode penangkapan ikan di mana dua perahu, dengan jarak tertentu di antara keduanya, menarik ujung jaring, menyebarkan jaring, dan menariknya masuk (Gambar 25). Karena merupakan metode penangkapan ikan dengan pukat sederhana, metode ini dipraktikkan di seluruh dunia, tetapi memerlukan lebih banyak perahu dan tenaga kerja daripada metode penangkapan ikan dengan pukat atau penangkapan ikan melingkar. Gambar 25 Penangkapan ikan dengan pukat dua perahu"
       },
       {
-       "h": "Menimbang (計量)"
+       "h": "(1) Tali penarik dan perlengkapannya"
+      },
+      {
+       "p": "Kedua perahu tersebut memanfaatkan jaring yang terbuka lebar untuk menarik jaring, dan menggunakan tali majemuk yang panjang dan tebal untuk mengagetkan dan mengumpulkan ikan."
+      },
+      {
+       "h": "(2) Cara melempar dan menarik jaring"
+      },
+      {
+       "p": "Operasi penarikan dengan dua perahu terdiri atas satu perahu utama dan satu perahu pendukung. Setelah perahu utama melemparkan jaringnya, perahu pendukung mendekati perahu utama, untuk menyerahkan ujung tali penariknya kepada perahu utama, lalu menyambung dengan tali penarik pada satu sisi jaring perahu utama dan mulai menarik jaring tersebut. Pada waktu menarik jaring, perahu pendukung mendekati perahu utama dan menyerahkan ujung tali penarik kepada perahu utama. Perahu utama menggunakan mesin derek di kedua sisi untuk menarik tali penarik dan bersiap menarik jaring. Sementara itu, perahu pendukung mulai bertugas melemparkan jaring yang dibawanya. 3. Metode penangkapan ikan berputar Pelampung dipasang di ujung tali penarik dan dilemparkan ke laut. Perahu kemudian berlayar mulai dari posisi ini dengan jalur membentuk wajik di permukaan laut, secara bertahap melemparkan tali penarik, jaring, dan kemudian tali penarik berikutnya ke laut. Metode penangkapan ikan ini dilakukan dengan membawa pelampung ke atas perahu dan menarik jaring dengan dua perahu tunda (Gambar 26)."
+      },
+      {
+       "p": "Gambar 26 Metode penangkapan berputar Dibandingkan dengan metode penangkapan ikan pukat dasar lainnya, metode pukat ini memiliki kecepatan pukat yang relatif lambat dan alat tangkapnya ringan."
+      },
+      {
+       "p": "Tali majemuk konvensional memiliki diameter yang berbeda pada sisi kapal dan sisi jaring, sehingga setelah jaring ditarik, perlu untuk mengatur tali penarik dalam urutan terbalik sebagai persiapan untuk melempar jaring berikutnya. Dalam beberapa tahun terakhir, tali penarik yang ketebalannya seragam atau simetris dari depan ke belakang,telah menjadi umum digunakan, dan keduanya dapat dihubungkan ke sisi jaring. Selain itu, gulungan untuk menggulung tali penarik dan mesin pengangkat jaring juga telah digunakan secara populer."
+      },
+      {
+       "h": "Pencegahan bahaya"
+      },
+      {
+       "p": "Di dalam perahu penangkap ikan pukat dasar terasa sempit dan bergoyang, dan karena ada penarik kawat dan mesin derek yang beroperasi, para kru harus sangat berhati-hati saat bekerja di tempat- tempat sebagai berikut."
       },
       {
        "ul": [
-        "Gunakan timbangan yang diperiksa dan diatur nol.",
-        "Tulis berat dalam **kilogram (kg)** dan catat dengan benar.",
-        "Jangan menambahkan es atau air berlebihan sehingga berat palsu."
+        "Di dekat sisi winch selama pengoperasian",
+        "Di sekitar tali atau kawat yang dikencangkan dengan kuat",
+        "Di sekitar landasan tarik",
+        "Bagian bawah menara derek saat jaring digantung",
+        "Di sekitar sisi (kedua sisi) kapal saat kapal bergoyang",
+        "Dek yang menjadi licin karena darah dan lemak ikan"
        ]
       },
       {
-       "h": "Mengemas (箱詰め)"
-      },
-      {
-       "ol": [
-        "Siapkan kotak bersih (**発泡スチロール箱** atau kotak plastik).",
-        "Susun ikan dengan rapi, kepala atau perut ke arah yang sama.",
-        "Beri **es (氷詰め)** di atas dan di bawah ikan; jangan tekan terlalu keras.",
-        "Tutup rapat dan beri **label (ラベル)**: nama ikan, ukuran, berat, daerah tangkapan, dan tanggal."
-       ]
-      },
-      {
-       "note": "Label yang salah membuat pembeli salah paham dan dapat menyebabkan masalah. Tulis informasi benar."
+       "p": "Perikanan Jaring Tetap"
       }
      ],
      "jp": [
       {
-       "h": "{選別|せんべつ}"
+       "h": "３.{二艘|にそう}びき{漁法|ぎょほう}"
       },
       {
-       "p": "とれたものを、**{魚種|ぎょしゅ}**、**{大|おお}きさ（{大|だい}・{中|ちゅう}・{小|しょう}）**、**{品質|ひんしつ}**で{分|わ}けます。きずのある{魚|さかな}、{小|ちい}さい{魚|さかな}、ねらっていない{魚|さかな}は{別|べつ}にします。{生|い}きている{魚|さかな}や、{守|まも}る{必要|ひつよう}のある{種類|しゅるい}は、ルールに{従|したが}って{海|うみ}にもどします。"
+       "p": "2{隻|せき}の{船|ふね}が{一定|いってい}の{間隔|かんかく}を{保|たも}ちながら{網|あみ}の{両端|りょうたん}を{曳|ひ}くことで、{網|あみ}を{展開|てんかい}して{曳網|ひきあみ}する{漁法|ぎょほう}である（{図|ず}２５）。{単純|たんじゅん}な{曳網方法|ひきあみほうほう}であるため、{世界各地|せかいかくち}で{行|おこな}われているが、オッタートロールや{駆|か}け{廻|まわ}し{漁法|ぎょほう}に{比|くら}べて、{船|ふね}と{労働力|ろうどうりょく}が{多|おお}く{必要|ひつよう}である。"
       },
       {
-       "h": "{計量|けいりょう}"
+       "p": "{図|ず}２５{二艘|にそう}{曳|ひ}き{漁法|ぎょほう}（１）{曳綱|ひきつな}と{索|さく}{具|ぐ}"
+      },
+      {
+       "p": "{二隻|にせき}の{漁船|ぎょせん}で{網口|あみくち}を{拡|ひろ}げながら{曳網|ひきあみ}し、{長|なが}くて{太|ふと}いコンパウンドロープで{魚介類|ぎょかいるい}を{脅|おど}かして{駆集|くしゅう}する。（２）{投|とう}・{揚網方法|ようもうほうほう}"
+      },
+      {
+       "p": "{二艘|にそう}{曳|ひ}き{漁法|ぎょほう}は、{主船|しゅせん}と{従船|じゅうせん}の2{隻|せき}の{漁船|ぎょせん}が{一組|ひとくみ}となり、{主船|しゅせん}が{投網|とうもう}した{後|あと}、{従船|じゅうせん}が{主船|しゅせん}に{接近|せっきん}して{自船|じせん}の{曳綱|ひきつな}の{端|はし}を{主船|しゅせん}に{渡|わた}し、{主船|しゅせん}の{網|あみ}の{片側|かたがわ}の{曳索|えいさく}に{連結|れんけつ}して{曳網|ひきあみ}を{開始|かいし}する。{揚網|ようもう}は、{従船|じゅうせん}が{主船|しゅせん}に{接近|せっきん}して{曳綱|ひきつな}の{端|はし}を{主船|しゅせん}に渡す。{主船|しゅせん}は{両舷|りょうげん}のウインチにより{曳綱|ひきつな}を{巻|ま}き{上|あ}げ、{揚網|ようもう}する。{一方|いっぽう}、{従船|じゅうせん}は{自船|じせん}が{持|も}っている{網|あみ}の{投入|とうにゅう}{作業|さぎょう}を{開始|かいし}する。"
+      },
+      {
+       "h": "４．{駆|か}け{廻|まわ}し{漁法|ぎょほう}"
+      },
+      {
+       "p": "{曳綱|ひきつな}の{端|はし}にブイを{取|と}り{付|つ}けて{海中|かいちゅう}に{投入|とうにゅう}し、この{位|い}{置|ち}を{起点|きてん}に{海面上|かいめんじょう}に{菱形|ひしがた}を{描|えが}くように{船|ふね}が{航走|こうそう}して、{曳綱|ひきつな}、{網|あみ}、もう{一方|いっぽう}の{曳綱|ひきつな}を{順|じゅん}に{投入|とうにゅう}していく。そしてブイを{船上|せんじょう}に{取|と}り{込|こ}み、2{本|ほん}の{曳綱|ひきつな}により{網|あみ}を{曳|ひ}く{漁法|ぎょほう}である（{図|ず}２６）。"
+      },
+      {
+       "p": "{図|ず}２６{駆|か}け{廻|わ}し{漁法|ぎょほう}"
+      },
+      {
+       "p": "{駆|か}け{廻|まわ}しは{他|ほか}の{底曳網漁法|そこひきあみぎょほう}に{比|くら}べて、{曳網速力|えいもうそくりょく}が{比較的遅|ひかくてきおそ}く、{漁具|ぎょぐ}も{軽量|けいりょう}である。"
+      },
+      {
+       "p": "{従来|じゅうらい}の{曳綱|ひきつな}（コンパウンドロープ）は、{船側|せんがわ}と{網側|あみがわ}の{直径|ちょっけい}が{異|こと}なったので、{揚網後|ようもうご}に{次|つぎ}の{投網|とうあみ}に{備|そな}えて{曳綱|ひきつな}を{逆|ぎゃく}の{順序|じゅんじょ}にする{作業|さぎょう}があった。{近年|きんねん}では{均一|きんいつ}、{或|ある}いは{前後|ぜんご}で{対称|たいしょう}な{太|ふと}さの{曳綱|ひきつな}が{使用|しよう}されることが{多|おお}く、どちらを{網側|あみがわ}に{連結|れんけつ}しても{良|よ}いようになっている。また、{曳綱|ひきつな}を{巻|ま}きとるリール、ネットウインチなどが{普及|ふきゅう}している。"
+      },
+      {
+       "h": "５．{危険防止|きけんぼうし}"
+      },
+      {
+       "p": "{底曳網漁船|そこひきあみぎょせん}は{船|ふね}の{中|なか}が{狭|せま}く、{揺|ゆ}れるうえにワイヤーやウインチが{稼働|かどう}しているため、{下|か}{記|き}のような{場所|ばしょ}では{十分注意|じゅうぶんちゅうい}して{作業|さぎょう}を{行|おこな}う。"
       },
       {
        "ul": [
-        "{点検|てんけん}してゼロにあわせたはかりを{使|つか}う。",
-        "{重|おも}さは**キログラム（kg）**で、{正|ただ}しく{記録|きろく}する。",
-        "{氷|こおり}や{水|みず}を{入|い}れすぎて、{重|おも}さをごまかさない。"
+        "{稼働中|かどうちゅう}のウインチの{側|そば}",
+        "{強|つよ}く{張|は}っているロープやワイヤー{付近|ふきん}",
+        "{船尾付近|せんびふきん}のスリップウェイや{舷門付近|げんもんふきん}",
+        "{網|あみ}を{吊|つ}り{下|さ}げている{際|さい}のデリック{下|か}方{部|ぶ}",
+        "ローリングしている{際|さい}の{船|ふね}のサイド（{両脇|りょうわき}）{近辺|きんぺん}",
+        "{魚|さかな}の{血|ち}や{脂|あぶら}で{滑|すべ}りやすくなっているデッキ"
        ]
       },
       {
-       "h": "{箱詰|はこづ}め"
+       "p": "ていちあみぎょぎょう"
       },
       {
-       "ol": [
-        "きれいな{箱|はこ}（**{発泡|はっぽう}スチロール{箱|はこ}**やプラスチックの{箱|はこ}）を{用意|ようい}する。",
-        "{魚|さかな}の{向|む}きをそろえて、きれいにならべる。",
-        "{魚|さかな}の{上|うえ}と{下|した}に**{氷|こおり}**を{入|い}れる（**{氷詰|こおりづ}め**）。つよくおさえない。",
-        "しっかりふたをして、**ラベル**をはる。{魚|さかな}の{名前|なまえ}、{大|おお}きさ、{重|おも}さ、とれた{場所|ばしょ}、{日|ひ}づけを{書|か}く。"
-       ]
-      },
-      {
-       "note": "まちがったラベルは、{買|か}う{人|ひと}をまちがえさせます。{正|ただ}しく{書|か}きます。"
+       "p": "定置網漁業"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Pilah menurut jenis, ukuran, mutu; timbang dengan benar; kemas dengan es dan label akurat.",
+      "core": "Pukat dua kapal: dua kapal menarik ujung jaring dengan jarak tertentu; butuh banyak kapal dan tenaga. Ada kapal utama dan kapal pendukung.",
       "points": [
-       "選別 = jenis, ukuran, mutu.",
-       "計量 dalam kg.",
-       "箱詰め + 氷詰め.",
-       "Label: nama, ukuran, berat, tempat, tanggal."
+       "Menggunakan tali tarik panjang untuk menggiring ikan.",
+       "Kapal pendukung menyerahkan ujung tali penarik ke kapal utama.",
+       "Hati-hati terlilit tali saat jaring ditarik."
       ],
       "avoid": [
-       "Memberi label yang salah atau menambah air untuk menambah berat."
+       "Berdiri di dekat tali tarik yang tegang."
       ],
       "exam": [
-       "Hal yang ada di label.",
-       "Langkah mengemas ikan."
+       "Peran kapal utama dan pendukung."
       ]
      },
      "jp": {
-      "core": "{種類|しゅるい}・{大|おお}きさ・{品質|ひんしつ}で{分|わ}け、{正|ただ}しくはかり、{氷|こおり}と{正|ただ}しいラベルで{箱詰|はこづ}めする。",
+      "core": "{二艘|にそう}びきは2{隻|せき}の{船|ふね}で{網|あみ}をひく{漁法|ぎょほう}。{主船|しゅせん}と{従船|じゅうせん}がある。",
       "points": [
-       "{選別|せんべつ}＝{種類|しゅるい}・{大|おお}きさ・{品質|ひんしつ}。",
-       "{計量|けいりょう}はkg。",
-       "{箱詰|はこづ}め＋{氷詰|こおりづ}め。",
-       "ラベル：{名前|なまえ}・{大|おお}きさ・{重|おも}さ・{場所|ばしょ}・{日|ひ}づけ。"
+       "{長|なが}い{曳索|えいさく}で{魚|さかな}をおどして{集|あつ}める。",
+       "{従船|じゅうせん}は{曳索|えいさく}の{端|はし}を{主船|しゅせん}にわたす。",
+       "{網|あみ}やロープにからまれないよう{注意|ちゅうい}する。"
       ],
       "avoid": [
-       "まちがったラベルや{水|みず}で{重|おも}さをごまかすこと。"
+       "ぴんと{張|は}った{曳索|えいさく}の{近|ちか}くに{立|た}つこと。"
       ],
       "exam": [
-       "ラベルに{書|か}くこと。",
-       "{魚|さかな}の{箱詰|はこづ}めの{手順|てじゅん}。"
-      ]
-     }
-    }
-   },
-   {
-    "id": "b5s3",
-    "no": 3,
-    "title": {
-     "id": "Kebersihan dan Keamanan Pangan",
-     "jp": "{衛生|えいせい}{管理|かんり}と{食|しょく}{品|ひん}の{安全|あんぜん}"
-    },
-    "pages": [
-     1,
-     1
-    ],
-    "full": {
-     "id": [
-      {
-       "h": "Kebersihan dasar"
-      },
-      {
-       "ul": [
-        "**Cuci tangan (手洗い)** sebelum bekerja dengan ikan dan setelah dari toilet atau menyentuh sampah.",
-        "Pakai pakaian kerja bersih, sarung tangan, dan sepatu bot bersih; rambut rapi.",
-        "**Cuci dan sanitasi alat dan meja (洗浄)** setelah dipakai.",
-        "Bersihkan hasil tangkapan dengan **air laut bersih atau air bersih**, bukan air kotor dari dek."
-       ]
-      },
-      {
-       "h": "Mencegah kontaminasi silang (交差汚染)"
-      },
-      {
-       "p": "Jangan mencampur ikan segar dengan sampah, umpan, atau bahan kimia. Gunakan wadah dan alat berbeda. Ikan tidak diletakkan di lantai."
-      },
-      {
-       "h": "Bahaya keamanan pangan"
-      },
-      {
-       "ul": [
-        "**Histamin (ヒスタミン)**: pada ikan seperti サバ dan マグロ yang tidak didinginkan dengan benar; bisa menyebabkan keracunan walau dimasak. Dinginkan cepat.",
-        "**Parasit Anisakis (アニサキス)**: ada pada サバ, イカ, サケ, dll. Pembekuan (kira-kira -20℃ selama 24 jam atau lebih) atau pemanasan mematikannya; periksa dan buang.",
-        "**Ikan beracun (フグ)** dan jenis tidak dikenal: jangan dijual atau dimakan; **tanyakan kepada penanggung jawab**."
-       ]
-      },
-      {
-       "note": "Jika Anda sakit perut atau diare, laporkan dan jangan menangani makanan."
-      }
-     ],
-     "jp": [
-      {
-       "h": "{基本|きほん}の{衛生|えいせい}"
-      },
-      {
-       "ul": [
-        "{魚|さかな}をさわる{前|まえ}、トイレやごみにさわったあとは**{手|て}{洗|あら}い**をする。",
-        "{清潔|せいけつ}な{作業服|さぎょうふく}、{手袋|てぶくろ}、{長靴|ながぐつ}を{使|つか}い、{髪|かみ}を{整|ととの}える。",
-        "{使|つか}ったあとの{道具|どうぐ}とテーブルは**{洗浄|せんじょう}**する。",
-        "{魚|さかな}は、きれいな**{海|うみ}{水|みず}や{水|みず}**で{洗|あら}う。{甲板|かんぱん}のよごれた{水|みず}は{使|つか}わない。"
-       ]
-      },
-      {
-       "h": "{交差汚染|こうさおせん}を{防|ふせ}ぐ"
-      },
-      {
-       "p": "{新鮮|しんせん}な{魚|さかな}を、ごみ、えさ、{薬|くすり}{品|ひん}と{混|ま}ぜない。{入|い}れ{物|もの}と{道具|どうぐ}を{分|わ}ける。{魚|さかな}を{床|ゆか}におかない。"
-      },
-      {
-       "h": "{食|しょく}{品|ひん}の{安全|あんぜん}のきけん"
-      },
-      {
-       "ul": [
-        "**ヒスタミン**：サバやマグロなど、{正|ただ}しく{冷|ひ}やさないとできる。{加熱|かねつ}しても{食中毒|しょくちゅうどく}になる。{早|はや}く{冷|ひ}やす。",
-        "**アニサキス**：サバ、イカ、サケなどにいる{寄生虫|きせいちゅう}。{凍|こお}らせる（およそ-20℃で24{時間|じかん}{以上|いじょう}）か{加熱|かねつ}すると{死|し}ぬ。{見|み}つけてとる。",
-        "**{毒|どく}のある{魚|さかな}（フグ）**や、{知|し}らない{種類|しゅるい}は、{売|う}ったり{食|た}べたりしない。**{責任者|せきにんしゃ}に{聞|き}く**。"
-       ]
-      },
-      {
-       "note": "おなかがいたい、{下痢|げり}のときは{報告|ほうこく}して、{食|た}べ{物|もの}をあつかわない。"
-      }
-     ]
-    },
-    "summary": {
-     "id": {
-      "core": "Cuci tangan, bersihkan alat, hindari kontaminasi silang, dan waspadai histamin, Anisakis, serta ikan beracun.",
-      "points": [
-       "手洗い, 洗浄.",
-       "交差汚染 = mencampur bahan kotor dan bersih.",
-       "ヒスタミン = ikan tidak didinginkan; アニサキス = parasit.",
-       "Ikan tak dikenal: tanyakan."
-      ],
-      "avoid": [
-       "Menangani ikan saat sakit perut atau diare.",
-       "Menjual ikan beracun yang tak dikenal."
-      ],
-      "exam": [
-       "Arti 交差汚染.",
-       "Penyebab dan pencegahan ヒスタミン dan アニサキス."
-      ]
-     },
-     "jp": {
-      "core": "{手|て}{洗|あら}い、{洗浄|せんじょう}、{交差汚染|こうさおせん}を{防|ふせ}ぐ。ヒスタミン・アニサキス・{毒|どく}{魚|さかな}に{注意|ちゅうい}。",
-      "points": [
-       "{手|て}{洗|あら}い・{洗浄|せんじょう}。",
-       "{交差汚染|こうさおせん}＝よごれとあたらしいものをまぜる。",
-       "ヒスタミン＝{冷|ひ}やさない{魚|さかな}、アニサキス＝{寄生虫|きせいちゅう}。",
-       "{知|し}らない{魚|さかな}は{聞|き}く。"
-      ],
-      "avoid": [
-       "おなかがいたいのに{魚|さかな}をあつかうこと。",
-       "{知|し}らない{毒|どく}の{魚|さかな}を{売|う}ること。"
-      ],
-      "exam": [
-       "{交差汚染|こうさおせん}の{意味|いみ}。",
-       "ヒスタミンとアニサキスの{原因|げんいん}と{防|ふせ}ぎ{方|かた}。"
-      ]
-     }
-    }
-   },
-   {
-    "id": "b5s4",
-    "no": 4,
-    "title": {
-     "id": "Pembongkaran di Pelabuhan (水揚げ)",
-     "jp": "{水揚|みずあ}げ{作業|さぎょう}"
-    },
-    "pages": [
-     1,
-     1
-    ],
-    "full": {
-     "id": [
-      {
-       "h": "Alur pembongkaran"
-      },
-      {
-       "ol": [
-        "Kapal bersandar di **dermaga (岸壁)** dan diikat dengan tali tambat.",
-        "Hasil tangkapan dikeluarkan dari palka ke **kotak ikan (魚箱)**.",
-        "Kotak diangkat ke dermaga dengan **derek atau forklift (クレーン / フォークリフト)**, atau pompa ikan.",
-        "Hasil tangkapan ditimbang dan dibawa ke **pasar ikan (市場)**.",
-        "Pasar mengadakan **lelang (競り)** atau penjualan; pembeli membeli menurut jenis dan mutu."
-       ]
-      },
-      {
-       "h": "Mengapa cepat dan dingin"
-      },
-      {
-       "p": "Di pelabuhan matahari dan angin mempercepat kerusakan ikan. Bekerja cepat, tutup kotak, dan jaga **es** tetap cukup."
-      },
-      {
-       "h": "Keselamatan di dermaga"
-      },
-      {
-       "ul": [
-        "**Jatuh dari dermaga atau di antara kapal dan dermaga** sangat berbahaya. Jaga jarak dari tepi dan pakai jaket pelampung.",
-        "Alat berat (**フォークリフト, クレーン**) bergerak. Jangan berdiri di bawah beban atau di jalur forklift; lihat pemberi isyarat.",
-        "Lantai dermaga licin karena air dan es. Pakai bot dan berjalan hati-hati.",
-        "Mengangkat kotak berat: lutut ditekuk, punggung lurus, atau gunakan alat."
-       ]
-      },
-      {
-       "note": "Selama pembongkaran, tetap saling memberi aba-aba: 「上げます！」「下ろします！」."
-      }
-     ],
-     "jp": [
-      {
-       "h": "{水揚|みずあ}げの{流|なが}れ"
-      },
-      {
-       "ol": [
-        "{船|ふね}が**{岸壁|がんぺき}**につき、ロープで{船|ふね}をつなぐ。",
-        "{魚倉|ぎょそう}から**{魚|さかな}{箱|はこ}**に{魚|さかな}を{出|だ}す。",
-        "**クレーンやフォークリフト**、または{魚|さかな}ポンプで、{岸壁|がんぺき}に{魚|さかな}{箱|はこ}を{上|あ}げる。",
-        "{重|おも}さをはかって、**{市場|いちば}**に{運|はこ}ぶ。",
-        "{市場|いちば}で**{競|せ}り**や{売|う}ることをする。{買|か}う{人|ひと}が、{種類|しゅるい}と{品質|ひんしつ}で{買|か}う。"
-       ]
-      },
-      {
-       "h": "{早|はや}く、{冷|つめ}たくする{理由|りゆう}"
-      },
-      {
-       "p": "{港|みなと}では、{日光|にっこう}と{風|かぜ}で{魚|さかな}が{早|はや}くいたみます。すばやく{作業|さぎょう}し、{箱|はこ}にふたをして、**{氷|こおり}**を{切|き}らさないようにします。"
-      },
-      {
-       "h": "{岸壁|がんぺき}の{安全|あんぜん}"
-      },
-      {
-       "ul": [
-        "**{岸壁|がんぺき}から{落|お}ちる、{船|ふね}と{岸壁|がんぺき}のあいだに{落|お}ちる**のはとてもあぶない。はしから{離|はな}れ、ライフジャケットを{着|き}る。",
-        "**フォークリフトやクレーン**は{動|うご}く。{荷物|にもつ}の{下|した}や、フォークリフトの{通|とお}り{道|みち}に{立|た}たない。{合図|あいず}の{人|ひと}を{見|み}る。",
-        "{岸壁|がんぺき}の{床|ゆか}は{水|みず}と{氷|こおり}ですべる。{長靴|ながぐつ}をはき、{気|き}をつけて{歩|ある}く。",
-        "{重|おも}い{魚|さかな}{箱|はこ}：ひざをまげて、{背|せ}すじをのばす。または{道具|どうぐ}を{使|つか}う。"
-       ]
-      },
-      {
-       "note": "{水揚|みずあ}げのあいだも、「{上|あ}げます！」「{下|お}ろします！」と{声|こえ}をかけ{合|あ}います。"
-      }
-     ]
-    },
-    "summary": {
-     "id": {
-      "core": "Bongkar hasil tangkapan cepat dan dingin; waspadai jatuh dari dermaga dan alat berat.",
-      "points": [
-       "岸壁, 魚箱, 市場, 競り.",
-       "Jaga es tetap cukup.",
-       "Jangan berdiri di bawah beban/jalur forklift.",
-       "Pakai jaket pelampung di dermaga."
-      ],
-      "avoid": [
-       "Berdiri di bawah beban yang diangkat.",
-       "Berjalan dekat tepi dermaga tanpa jaket pelampung."
-      ],
-      "exam": [
-       "Alur pembongkaran.",
-       "Bahaya di dermaga."
-      ]
-     },
-     "jp": {
-      "core": "{水揚|みずあ}げは{早|はや}く{冷|つめ}たく。{岸壁|がんぺき}からの{転落|てんらく}と{重|じゅう}{機|き}に{注意|ちゅうい}。",
-      "points": [
-       "{岸壁|がんぺき}・{魚|さかな}{箱|はこ}・{市場|いちば}・{競|せ}り。",
-       "{氷|こおり}をたやさない。",
-       "{荷物|にもつ}の{下|した}とフォークリフトの{通|とお}り{道|みち}に{立|た}たない。",
-       "{岸壁|がんぺき}でもライフジャケット。"
-      ],
-      "avoid": [
-       "{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{立|た}つこと。",
-       "{岸壁|がんぺき}のはしをライフジャケットなしで{歩|ある}くこと。"
-      ],
-      "exam": [
-       "{水揚|みずあ}げの{流|なが}れ。",
-       "{岸壁|がんぺき}のきけん。"
+       " {主船|しゅせん}と{従船|じゅうせん}の{役割|やくわり}。"
       ]
      }
     }

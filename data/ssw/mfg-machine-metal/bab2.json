@@ -1,0 +1,220 @@
+{
+ "schema": 1,
+ "bidang": "mfg-machine-metal",
+ "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 機械金属加工 (MOJ/ISA 製造分野評価試験の範囲); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab2",
+  "no": 2,
+  "title": {
+   "id": "Press, Pelat, dan Las",
+   "jp": "プレス・{板金|ばんきん}・{溶接|ようせつ}"
+  },
+  "intro": {
+   "id": "Dasar mesin press, pengerjaan pelat, pengelasan, dan keselamatannya.",
+   "jp": "プレス{機械|きかい}、{板金|ばんきん}、{溶接|ようせつ}のきほんと{安全|あんぜん}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b2s1",
+    "no": 1,
+    "title": {
+     "id": "Mesin Press",
+     "jp": "プレス{機械|きかい}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Dasar"
+      },
+      {
+       "ul": [
+        "Pelat ditekan di antara **cetakan (金型)** atas dan bawah untuk **memotong, menekuk, atau membentuk**.",
+        "Bahaya terbesar: **tangan terjepit (はさまれ)**.",
+        "Masukkan dan ambil benda dengan **alat bantu (pinset, penjepit)**, bukan tangan, bila perlu.",
+        "Gunakan **pengaman**: sensor cahaya, penutup, atau tombol dua tangan (**両手操作**)."
+       ]
+      },
+      {
+       "h": "Aturan"
+      },
+      {
+       "ul": [
+        "Pengoperasian butuh **pendidikan khusus**.",
+        "Saat **mengganti atau menyetel cetakan**, hentikan mesin dan **ganjal slide** agar tidak turun.",
+        "**Jangan melepas pengaman.** Jangan menyentuh cetakan saat mesin bekerja.",
+        "Periksa **tombol berhenti darurat** setiap hari."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "きほん"
+      },
+      {
+       "ul": [
+        "{板|いた}を、{上|うえ}と{下|した}の**{金|かね}{型|かた}**のあいだでおして、**{切|き}る、まげる、かたちをつくる**。",
+        "いちばんのきけんは、**{手|て}がはさまれること**。",
+        "{必要|ひつよう}なら、{手|て}ではなく**ピンセットやトングなどの{道具|どうぐ}**で{材料|ざいりょう}を{入|い}れたり{出|で}したりする。",
+        "**{安全装置|あんぜんそうち}**を{使|つか}う：{光|ひかり}{線|せん}{式|しき}、カバー、**{両手操作|りょうてそうさ}**ボタンなど。"
+       ]
+      },
+      {
+       "h": "きまり"
+      },
+      {
+       "ul": [
+        "{運転|うんてん}には**{特別|とくべつ}{教育|きょういく}**が{必要|ひつよう}。",
+        "**{金|かね}{型|かた}の{交換|こうかん}や{調整|ちょうせい}**のときは、{機械|きかい}を{止|と}めて、**スライドが{下|さ}がらないようにとめる**。",
+        "**{安全装置|あんぜんそうち}をはずさない。**{動|うご}いているとき、{金|かね}{型|かた}にさわらない。",
+        "{毎日|まいにち}、**{非常停止|ひじょうていし}ボタン**を{点検|てんけん}する。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Press: cetakan atas-bawah; bahaya terjepit; pakai pengaman dan alat bantu; ganjal slide saat ganti cetakan.",
+      "points": [
+       "金型.",
+       "はさまれ.",
+       "両手操作.",
+       "Ganjal slide."
+      ],
+      "avoid": [
+       "Memasukkan tangan ke cetakan saat mesin hidup."
+      ],
+      "exam": [
+       "Bahaya press.",
+       "Aturan ganti cetakan."
+      ]
+     },
+     "jp": {
+      "core": "プレスは{手|て}がはさまれるきけんがあります。{金|かね}{型|かた}{交換|こうかん}のときはスライドをとめます。",
+      "points": [
+       "{金|かね}{型|かた}。",
+       "はさまれ。",
+       "{両手操作|りょうてそうさ}。",
+       "スライドをとめる。"
+      ],
+      "avoid": [
+       "{動|うご}いているとき{金|かね}{型|かた}に{手|て}を{入|い}れること。"
+      ],
+      "exam": [
+       "プレスのきけん。",
+       "{金|かね}{型|かた}{交換|こうかん}のきまり。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s2",
+    "no": 2,
+    "title": {
+     "id": "Pengelasan",
+     "jp": "{溶接|ようせつ}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Jenis"
+      },
+      {
+       "ul": [
+        "**アーク溶接**: busur listrik meleburkan logam.",
+        "**半自動溶接 (CO2/MAG)**: kawat las otomatis dengan gas pelindung.",
+        "**ガス溶接 / ガス切断**: api gas."
+       ]
+      },
+      {
+       "h": "Keselamatan"
+      },
+      {
+       "ul": [
+        "**溶接面 (topeng las)**, **sarung tangan kulit**, pakaian tahan api; cahaya busur merusak mata dan kulit.",
+        "**ヒューム (asap las)**: pakai ventilasi atau penghisap, **masker khusus**.",
+        "Sekitar harus bebas **bahan mudah terbakar**; siapkan alat pemadam.",
+        "Risiko **sengatan listrik**: kabel utuh, tangan kering.",
+        "Tabung gas **diikat berdiri** dan disimpan jauh dari api.",
+        "Pengelasan butuh **pendidikan khusus atau kualifikasi**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "**アーク{溶接|ようせつ}**：{電気|でんき}の{火花|ひばな}（アーク）で{金属|きんぞく}をとかす。",
+        "**{半自動溶接|はんじどうようせつ}（CO2、MAG）**：ワイヤが{自動|じどう}で{出|で}る。ガスで{守|まも}る。",
+        "**ガス{溶接|ようせつ}・ガス{切|き}{断|だん}**：ガスの{火|ひ}を{使|つか}う。"
+       ]
+      },
+      {
+       "h": "{安全|あんぜん}"
+      },
+      {
+       "ul": [
+        "**{溶接|ようせつ}{面|めん}**、**{革|かわ}の{手袋|てぶくろ}**、{燃|も}えにくい{服|ふく}。アークの{光|ひかり}は{目|め}と{皮|かわ}ふをいためる。",
+        "**ヒューム**：{換気|かんき}か{吸|すいこみ}い込み{装置|そうち}、**{専用|せんよう}のマスク**を{使|つか}う。",
+        "まわりに**{燃|も}えやすい{物|もの}**をおかない。{消火器|しょうかき}を{用意|ようい}する。",
+        "**{感電|かんでん}**に{注意|ちゅうい}。ケーブルをいため、{手|て}をかわかす。",
+        "ガスのボンベは**{立|た}てて、{固定|こてい}**し、{火|ひ}から{遠|とお}くにおく。",
+        "{溶接|ようせつ}には**{特別|とくべつ}{教育|きょういく}や{資格|しかく}**が{必要|ひつよう}。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Las: topeng, sarung tangan kulit, ventilasi untuk asap, bebaskan bahan mudah terbakar, tabung gas diikat.",
+      "points": [
+       "溶接面.",
+       "ヒューム.",
+       "Tabung gas diikat.",
+       "Perlu pendidikan khusus."
+      ],
+      "avoid": [
+       "Melihat busur tanpa topeng.",
+       "Menyimpan bahan mudah terbakar di dekat las."
+      ],
+      "exam": [
+       "Alat pelindung las.",
+       "Bahaya ヒューム."
+      ]
+     },
+     "jp": {
+      "core": "{溶接|ようせつ}では{溶接|ようせつ}{面|めん}と{革|かわ}の{手袋|てぶくろ}を{使|つか}い、{換気|かんき}をし、{燃|も}えやすい{物|もの}をおきません。",
+      "points": [
+       "{溶接|ようせつ}{面|めん}。",
+       "ヒューム。",
+       "ボンベは{固定|こてい}。",
+       "{特別|とくべつ}{教育|きょういく}。"
+      ],
+      "avoid": [
+       "{溶接|ようせつ}{面|めん}なしでアークを{見|み}ること。",
+       "{燃|も}えやすい{物|もの}を{近|ちか}くにおくこと。"
+      ],
+      "exam": [
+       "{溶接|ようせつ}の{保護具|ほごぐ}。",
+       "ヒュームのきけん。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,612 @@
+{
+ "schema": 1,
+ "bidang": "fishery",
+ "source": "Teks dan gambar halaman: 特定技能 漁業技能測定試験 学習用テキスト (一般社団法人大日本水産会, 初版2019年12月, 一部改訂2025年9月) — 漁業一般・漁業安全・網漁業・釣漁業, versi Jepang dan versi bahasa Indonesia. Ringkasan, kosakata, dan soal latihan: Shirose Nihongo (bukan soal resmi).",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab7",
+  "no": 7,
+  "title": {
+   "id": "Perikanan Bubu (かご漁業)",
+   "jp": "かご{漁業|ぎょぎょう}"
+  },
+  "intro": {
+   "id": "Perikanan bubu: bentuk bubu, kepiting, udang.",
+   "jp": "かご{漁業|ぎょぎょう}：かごの{形|かたち}、カニ、エビ。"
+  },
+  "pages": [
+   96,
+   107
+  ],
+  "subs": [
+   {
+    "id": "b7s1",
+    "no": 1,
+    "title": {
+     "id": "Bubu dan Klasifikasinya",
+     "jp": "かご{漁業|ぎょぎょう}と{漁具|ぎょぐ}の{分類|ぶんるい}"
+    },
+    "pages": [
+     96,
+     98
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Menangkap Ikan dengan Keramba"
+      },
+      {
+       "p": "Tali panjang berbentuk taji diikatkan pada tali bercabang, dan jaring keramba yang diberi simpul agar kepiting, udang, dsb. tidak dapat keluar begitu berada di dalam diikatkan pada ujung tali bercabang, dan jaring dibenamkan ke dasar laut. Umpan ditaruh di dalam keramba untuk menarik perhatian makhluk air dan menangkapnya."
+      },
+      {
+       "h": "Jenis alat tangkap keramba"
+      },
+      {
+       "p": "Keramba dengan berbagai bentuk digunakan di seluruh dunia, dan jika diklasifikasikan berdasarkan bentuknya, adalah seperti yang ditunjukkan pada Gambar 29."
+      },
+      {
+       "p": "(1) Keramba berbentuk kerucut: Keramba ini memberikan kestabilan yang baik saat diletakkan di perahu, dan juga praktis saat menumpuk keranjang di atas perahu. Keramba ini tidak hanya digunakan di Jepang, tetapi juga di Amerika Serikat, Kanada, dan negara-negara lain. Jenis keramba utama yang digunakan di Jepang adalah keramba kepiting (Gambar 33-a), keramba udang (Gambar 33b), dan keramba siput/kerang (Gbr. 33-c). Umumnya, keramba kepiting memiliki satu lubang di bagian atas keramba, dan keramba udang memiliki dua lubang di bagian samping. (2) Keramba persegi panjang: Keramba ini cenderung mengikis sudut jaring selama penangkapan ikan. Ada keramba untuk belut conger di Prefektur Saga dan keramba lobster berduri di Prefektur Miyazaki (Gambar 33-d), tetapi jumlahnya sedikit dan jarang di Jepang. Akan tetapi, di Amerika Serikat, keramba untuk kepiting raja dan kepiting salju digunakan dalam industri penangkapan ikan dengan keramba. (Gambar 33-e) (3) Keramba berbentuk kamaboko: Keramba ini praktis untuk membuat rangka keramba dari kayu atau bambu. Keramba berbentuk kamaboko ini disebut uke dan digunakan di seluruh dunia untuk menangkap lobster berduri (Gambar 33-f). Di Jepang, keramba ikan buntal digunakan di Prefektur Nagasaki, Prefektur Kumamoto, dan daerah lainnya, dan sotong ditangkap di Prefektur Wakayama (Gambar 33-g)."
+      },
+      {
+       "p": "(4) Keramba lipat: Keramba ini dapat dilipat, sehingga memiliki kelebihan karena banyak keramba dapat digunakan di perahu kecil. Keramba ini digunakan untuk menangkap kepiting biru di Prefektur Shizuoka, Prefektur Kagoshima, dan daerah lainnya. (Gambar 33-h) Gambar 33: Berbagai bentuk bubu (Shoichi Takeuchi 2-1: Metode perikanan bubu Studi perikanan seri 36. Memancing dengan bubu, Koseisha Koseikaku.19811）"
+      },
+      {
+       "h": "Hasil Tangkapan Perikanan Bubu"
+      },
+      {
+       "p": "Sebagian besar hasil tangkapannya adalah kepiting dan udang, tetapi juga Bai/Tsubu （ivory shell）, Anago (Conger eel), ikan buntal, belut, dan cumi-cumi yang semuanya merupakan hasil laut bermutu tinggi. Di antaranya yang utama adalah \"Kepiting Salju Merah\", \"Udang merah muda\" dll."
+      },
+      {
+       "h": "Jenis Tangkapan Menurut Jenis Perikanan Bubu."
+      },
+      {
+       "p": "(1) Perikanan Bubu kepiting: Berbagai kepiting seperti Kepiting Salju Merah, Kepiting Salju, kepiting bulu kuda, Kepiting Gazami, Kepiting Hanasaki, Kepiting Raja Alaska, kepiting raja ditangkap. (2) Perikanan Bubu udang: udang Merah Muda Alaska (Hokkoku akaebi, Ama ebi, Namban ebi), Toyama ebi (Botan ebi), Morotoge akaebi (Shima ebi) ditangkap di Lautan Jepang."
+      },
+      {
+       "h": "(3) Perikanan Bubu Tsubu: Tsubu/Bai（ivory shell）ditangkap."
+      },
+      {
+       "h": "(4) Lainnya: Gurita, cumi-cumi, belut, ikan buntal ditangkap."
+      }
+     ],
+     "jp": [
+      {
+       "h": "１．かご{漁業|ぎょぎょう}"
+      },
+      {
+       "p": "{長|なが}い{幹縄|みきなわ}に{枝縄|えだなわ}を{付|つ}け、その{枝縄|えだなわ}の{先|さき}に、カニ、エビなどが{一度入|いちどはい}ったら{外|そと}に{出|で}られないような{返|かえ}しの{付|つ}いたかご{網|あみ}を{結|むす}び、{海底|かいてい}に{沈|しず}める。かごの{中|なか}に{餌|えさ}をいれ、{水産生物|すいさんせいぶつ}を{誘|さそ}い{込|こ}み、{獲|と}る{漁業|ぎょぎょう}である。"
+      },
+      {
+       "h": "２．かご{漁具|ぎょぐ}の{分類|ぶんるい}"
+      },
+      {
+       "p": "{世界|せかい}では{色々|いろいろ}な{形|かたち}のかごが{使|つか}われており、かごをその{形|かたち}によって{分類|ぶんるい}すると{図|ず}２９のとおりである。(1){円錐台|えんすいだい}かご：{海底|かいてい}に{入|い}れた{時|とき}、{安定|あんてい}が{良|よ}く、{船|ふね}の{上|うえ}でかごを{積|つ}み{重|かさ}ねる{時|とき}にも{便利|べんり}で"
+      },
+      {
+       "p": "ある。{日本|にほん}だけではなく、アメリカ、カナダなどでも使われている。{日本|にほん}で{使|つか}われて"
+      },
+      {
+       "p": "いるのは{主|おも}にカニかご（{図|ず}３３-a）、エビかご（{図|ず}３３-b）、バイ・ツブかご（{図|ず}３３"
+      },
+      {
+       "p": "-c）などである。{一般|いっぱん}にカニかごはかごの{上|うえ}に1{個|こ}の{入|い}り{口|ぐち}（{落|お}とし{口|ぐち}）を{持|も}つ{物|もの}が{多|おお}"
+      },
+      {
+       "p": "く、エビかごはかごの{横|よこ}に2{個|こ}の{入|い}り{口|ぐち}を{付|つ}けた{物|もの}が{多|おお}い。(2){直方体|ちょくほうたい}かご：これは{操業中|そうぎょうちゅう}にかごの{隅|すみ}の{網地|あみじ}が{擦|す}り{切|き}れ{易|やす}い。{佐賀県|さがけん}のアナゴ、"
+      },
+      {
+       "p": "{宮崎県|みやざきけん}のイセエビかご（{図|ず}３３-d）などがあるが{全国的|ぜんこくてき}には{数|かず}は{少|すく}ない。しかし、"
+      },
+      {
+       "p": "アメリカではタラバガニ、ズワイガニかご{漁業|ぎょぎょう}でこの{直方体|ちょくほうたい}かごを使っている。（{図|ず}"
+      },
+      {
+       "p": "２９-e）(3)かまぼこ{型|がた}かご：{木|き}や{竹|たけ}でかごの{枠|わく}を{作|つく}るのに{便利|べんり}であり、このかまぼこ{型|がた}かごは、"
+      },
+      {
+       "p": "うけ（{筌|うけ}）とよばれ、イセエビを{獲|と}るため{世界各地|せかいかくち}で{使|つか}われている（{図|ず}３３-f）。{日本|にほん}"
+      },
+      {
+       "p": "ではフグかごが{長崎県|ながさきけん}、{熊本県等|くまもとけんなど}で{行|おこな}われ、{和歌山県|わかやまけん}などではコウイカを{漁獲|ぎょかく}してい"
+      },
+      {
+       "p": "る。（{図|ず}３３-g）(4){折|お}りたたみ{式|しき}かご：かごを{折|お}りたたむことができるため、{小型船|こがたせん}でも{多|おお}くのかごを{使|つか}"
+      },
+      {
+       "p": "えるといった{良|よ}い{点|てん}がある。{静岡県|しずおかけん}、{鹿児島県|かごしまけん}など{各地|かくち}で、ガザミの{漁獲|ぎょかく}に{使|つか}われて"
+      },
+      {
+       "p": "いる。（{図|ず}３３-h）"
+      },
+      {
+       "p": "{図|ず}３３{各種|かくしゅ}のかごの{形|かたち}（{竹内正一|たけうちしょういち}：2-1かご{漁業|ぎょぎょう}の{漁撈法|ぎょろうほう}，"
+      },
+      {
+       "p": "{水産学|すいさんがく}シリーズ36.かご{漁業|ぎょぎょう}，{恒生社厚生閣|こうせいしゃこうせいかく}.19811）"
+      },
+      {
+       "h": "３．かご{漁業|ぎょぎょう}による{漁獲物|ぎょかくぶつ}"
+      },
+      {
+       "p": "{漁獲物|ぎょかくぶつ}はカニ{類|にるい}、エビ{類|びるい}が{主|しゅ}で、その{他|ほか}にバイ・ツブ、フグ、アナゴ、イカなどを{獲|と}るが、{何|いず}れも{高級|こうきゅう}な{水産物|すいさんぶつ}である。これらの{内|うち}、{主|おも}な{物|もの}は「ベニズワイガニ」、「ホッコクアカエビ」などである。"
+      },
+      {
+       "h": "４．かご{漁業種類別|ぎょぎょうしゅるいべつ}の{漁獲種類|ぎょかくしゅるい}"
+      },
+      {
+       "p": "(1)カニかご{漁業|ぎょぎょう}：ベニズワイガニ、ズワイガニ、ケガニ、ガザミ、ハナサキガニ、"
+      },
+      {
+       "p": "イバラガニモドキなどの{色々|いろいろ}なカニを{獲|と}る。(2)エビかご{漁業|ぎょぎょう}：{日本海|にほんかい}などでホッコクアカエビ（アマエビ、ナンバンエビ）、トヤマエビ（ボタンエビ）、モロトゲアカエビ（シマエビ）を{獲|と}る。(3)ツブかご{漁業|ぎょぎょう}：ツブ（バイ）を{獲|と}る。(4)その{他|た}：タコ、イカ、アナゴ、フグなどを{獲|と}る。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bubu: keranjang jaring dengan umpan yang dibenamkan ke dasar; kepiting/udang masuk tapi tidak bisa keluar. Bentuk: kerucut, persegi panjang, dll.",
+      "points": [
+       "Bubu kerucut stabil di kapal dan mudah ditumpuk.",
+       "Bubu kepiting 1 lubang di atas; bubu udang 2 lubang di samping."
+      ],
+      "avoid": [
+       "Menaruh umpan di luar bubu."
+      ],
+      "exam": [
+       "Bentuk dan jenis bubu."
+      ]
+     },
+     "jp": {
+      "core": "かご{漁業|ぎょぎょう}は{餌|えさ}を{入|い}れたかごをしずめ、カニやエビをとる{漁法|ぎょほう}。{形|かたち}は{円錐形|えんすいけい}や{角形|かくけい}など。",
+      "points": [
+       "{円錐形|えんすいけい}かごは{船|ふね}で{安定|あんてい}し、{重|おも}ねやすい。",
+       "カニかごは{上|あ}に1つ、エビかごは{横|よこ}に2つ{穴|あな}がある。"
+      ],
+      "avoid": [
+       "{餌|えさ}をかごの{外|はず}に{置|ち}くこと。"
+      ],
+      "exam": [
+       " かごの{形|かたち}と{種類|しゅるい}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b7s2",
+    "no": 2,
+    "title": {
+     "id": "Bubu Kepiting",
+     "jp": "カニかご{漁業|ぎょぎょう}"
+    },
+    "pages": [
+     98,
+     102
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Perikanan Bubu Kepiting"
+      },
+      {
+       "p": "Perikanan bubu kepiting terutama dilakukan di Laut Jepang, dan spesies tangkapan utama adalah Kepiting Salju Merah dan Kepiting Salju."
+      },
+      {
+       "h": "Metode Operasional"
+      },
+      {
+       "p": "Untuk kapal penangkap ikan berukuran 70 hingga 100 ton jumlah awak 8 hingga 10 orang. Untuk kapal yang lebih kecil jumlah awak 6 hingga 7 orang. Gambar 34 menunjukkan kondisi tangkap bubu telah dipasang."
+      },
+      {
+       "p": "1 deret 150 keramba 6 ~ 10 km bendera Tali punggung Kedalaman laut 2~3 kali kedalaman laut Tali utama Tali cabang Tali lempar batu Keramba Keramba Tali lempkaerp iting kepiting Gambar 34 Kondisi pemasangan alat tangkap keramba"
+      },
+      {
+       "h": "(1) Tentang keramba lempar (keramba di masukkan)"
+      },
+      {
+       "p": "1) Pertama, cari tempat-tempat yang kemungkinan besar akan banyak terdapat kepiting berdasarkan kondisi penangkapan sejauh ini, suhu air, kedalaman air, kualitas dasar, dll., dan tentukan lokasi untuk keramba."
+      },
+      {
+       "p": "2) Dari sisi kiri buritan, pasang tali arus dangkal (tali pelampung; panjangnya bervariasi tergantung pada kedalaman laut. Panjangnya sekitar 2 hingga 3 kali kedalaman air) dengan bendera (penanda) yang terpasang."
+      },
+      {
+       "p": "3) Ikat tali utama, tali lempar, dan pemberat batu ke ujung tali arus dangkal, dan lemparkan. 4) Kemudian, ujung tali (tali cabang) yang mengikat jaring keramba ke tali utama dimasukkan ke laut."
+      },
+      {
+       "p": "5) Ikan tenggiri, cakalang, dll. digunakan sebagai umpan."
+      },
+      {
+       "p": "6) Saat menarik keramba, bagian bawah jaring keramba dibiarkan tidak terikat dengan tali dan ditumpuk di buritan, lalu diikat saat waktunya melempar. Hal ini untuk memudahkan penumpukan keramba di buritan."
+      },
+      {
+       "p": "7) Jumlah alat keramba tidak lebih dari tiga (3 x 150 = 450 keramba). Pertama, masukkan set pertama, lalu masukkan set kedua, lalu set yang agak jauh, lalu masukkan set ketiga. 8) Saat melempar keramba, berhati-hatilah agar kaki tidak terlilit tali (agar tidak tersangkut)."
+      },
+      {
+       "h": "(2) Tentang keramba angkat"
+      },
+      {
+       "p": "1) Cara kerja dengan menggunakan keramba pengangkat ditunjukkan pada Gambar 35. Tali dilewatkan melalui rol pada haluan kiri dan tali utama dililitkan dengan drum di bagian tengah haluan kiri. Dalam hal ini, pengangkatan keramba dilakukan dengan menerima angin pada sisi kiri atau haluan."
+      },
+      {
+       "p": "Roller Lepas tali cabang."
+      },
+      {
+       "p": "Keramba Keluarkan kepiting dan kepiting kirim ke conveyor Palka Kerekan Keranjang tempat Kerekan umpan Drum Angkut keranjang ke Drum buritan dengan conveyor Gulung tali di buritan, dan letakkan keramba di atasnya Keramba kepiting Gambar 35 Metode operasi perangkapan kepiting salju merah, terutama menggunakan keramba angkat 2) Saat keramba muncul ke permukaan, keramba ditarik ke tiang dengan pengait di ujungnya dan diangkat dengan derek."
+      },
+      {
+       "p": "3) Jika ada ikan yang tertangkap di keramba, tali di dasar jaring dilepas dan ikan dikeluarkan. Jika ada kepiting yang tertangkap, kepiting dipisahkan menjadi kepiting besar, sedang, dan kecil dan ditempatkan di saringan berisi es, lalu dimasukkan ke dalam tangki."
+      },
+      {
+       "p": "4) Jika ada kepiting salju merah yang tertangkap, kepiting betina dan kepiting jantan di bawah 9 cm dilepaskan ke laut karena ada larangan menangkap kepiting tersebut."
+      },
+      {
+       "p": "5) Keranjang kosong diisi dengan umpan tanpa tali yang terpasang, dan diangkut dengan konveyor kanan ke buritan untuk disiapkan keranjang berikutnya."
+      },
+      {
+       "p": "6) Tali pancing utama yang digulung dikirim dari haluan ke buritan di sisi kiri, di mana tali tersebut digulung dengan baik untuk persiapan keramba berikutnya. Kemudian tali cabang yang sudah terpasang keramba diikatkan ke tali pancing utama, dan keramba ditumpuk dan diangkat ke atas buritan."
+      },
+      {
+       "p": "7) Selain kepiting salju merah, spesies lain yang tertangkap dalam penangkapan kepiting pot termasuk ikan air, kerang, dan siput, yang tertangkap sebagai tangkapan sampingan."
+      },
+      {
+       "p": "8) Setelah satu keramba diangkat, jika tangkapannya bagus, keramba berikutnya segera dibawa masuk dari buritan."
+      },
+      {
+       "p": "9) Jika tangkapan keramba pertama kurang bagus, nelayan mencari tempat untuk melempar keramba (fishing ground), menemukan tempat yang bagus untuk melemparnya, dan kemudian menarik keramba kedua yang telah dilemparkan sebelumnya."
+      },
+      {
+       "p": "10) Proses ini diulang sampai keramba ketiga diangkat, dan ketika keramba ketiga selesai, para nelayan kembali ke pelabuhan untuk menurunkan hasil tangkapan untuk dipasarkan."
+      },
+      {
+       "p": "11) Satu keramba diangkat, dan jika tangkapannya bagus, keramba itu dibuang begitu saja. Dalam kasus seperti itu, dibutuhkan waktu 4 hingga 5 jam untuk mengangkat dan melempar keramba. Dalam kasus seperti ini, waktu per pelayaran adalah 3 keramba x (4 hingga 5 jam) = 12 hingga 15 jam, jadi dibutuhkan waktu sekitar 20 hingga 23 jam. Jika perjalanan dari dan ke daerah penangkapan memakan waktu sekitar 8 jam, waktu operasinya adalah 3 keramba x (4 hingga 5 jam) = 12 hingga 15 jam. Jika kondisi penangkapan buruk dan operasi penangkapan harus dilakukan di daerah penangkapan lain, maka akan memakan waktu lebih lama untuk berpindah-pindah daerah penangkapan."
+      },
+      {
+       "h": "Hal-hal yang perlu diperhatikan saat menangkap kepiting salju merah"
+      },
+      {
+       "p": "(1) Periode yang diperbolehkan untuk menangkap kepiting salju merah berbeda-beda di setiap wilayah."
+      },
+      {
+       "h": "(2) Ada musim penangkapan yang ditutup."
+      },
+      {
+       "p": "(3) Harga kepiting salju merah ditentukan oleh ukurannya, sehingga hasil tangkapan disortir di atas kapal menjadi besar, sedang, dan kecil sesuai dengan lebar cangkangnya. Berdasarkan ukuran cangkangnya, dikelompokkan sebagai berikut Besar: 12 cm atau lebih, Sedang: 10-12 cm atau kurang, Kecil: 9 cm atau lebih. (4) Untuk melindungi sumber daya, penangkapan kepiting jantan dengan lebar 9 cm atau kurang dilarang, dan untuk semua kepiting betina, dan mereka dilepaskan segera setelah penangkapan. Penangkapan kepiting salju dilarang dalam perikanan perangkap, tetapi tidak ada risiko penangkapan silang karena mereka hidup di kedalaman yang berbeda."
+      },
+      {
+       "p": "(5) Perikanan perangkap untuk kepiting salju merah tidak boleh dilakukan dengan tujuan menangkap jenis kepiting lain (seperti kepiting salju) sejak awal."
+      },
+      {
+       "p": "(6) Penangkapan kepiting salju merah dengan alat tangkap dilarang di daerah yang kedalamannya lebih dari 800 m."
+      },
+      {
+       "h": "(7) Ukuran mata jaringnya 15 cm atau lebih."
+      },
+      {
+       "h": "(8) Setiap keramba tidak boleh memuat lebih dari 150 ekor."
+      },
+      {
+       "p": "(9) Setelah kembali ke pelabuhan, kepiting-kepiting tersebut langsung dikirim ke pelabuhan penangkapan ikan dan diolah dengan cara direbus. Kepiting hidup dijual dalam keadaan hidup atau dipelihara di peternakan ikan milik asosiasi penangkapan ikan dan dikirim pada waktu yang tepat. (10) Volume tangkapan yang sedikit diduga lebih dipengaruhi oleh kondisi cuaca, seperti apakah penangkapan dapat dilakukan atau tidak, daripada oleh musim atau daerah penangkapan."
+      }
+     ],
+     "jp": [
+      {
+       "h": "５．カニかご{漁業|ぎょぎょう}"
+      },
+      {
+       "p": "カニかご{漁業|ぎょぎょう}は主として{日本海|にほんかい}で{行|おこな}われ、{主|おも}な{漁獲種|ぎょかくしゅ}はベニズワイガニ、ズワイガニである。"
+      },
+      {
+       "h": "６．{操業法|そうぎょうほう}"
+      },
+      {
+       "p": "{乗組員|のりくみいん}は70～100トンの{漁船|ぎょせん}では8～10{人|にん}である。それより{小|ちい}さい{船|ふね}では6～7{人|にん}である。かごを{入|い}れ{終|お}わった{時|とき}の{漁具|ぎょぐ}の{設置状況|せっちじょうきょう}は、{図|ず}３４のとおりである。"
+      },
+      {
+       "p": "{図|ず}３４{漁具|ぎょぐ}の{設置状況|せっちじょうきょう}（１）{投|な}げかご（かごをいれること）について①まず、それまでの{漁獲|ぎょかく}の{状況|じょうきょう}、{水温|すいおん}、{水深|すいしん}、{底質|ていしつ}などから、カニが{多|おお}くとれそうな"
+      },
+      {
+       "p": "{所|ところ}を{探|さが}し、{投|な}げかごをする{場所|ばしょ}を{決|き}める。②{船尾左舷|せんびさげん}から、ボンデン（{目印|めじるし}）を{付|つ}けた{瀬縄|せなわ}（{浮|あ}{子縄|ばなわ}；{長|なが}さは{海|うみ}の{深|ふか}さで{異|こと}なる。"
+      },
+      {
+       "p": "{水深|すいしん}の{約|やく}2～3{倍|ばい}）を{入|い}れる。③{瀬縄|せなわ}の{先|さき}に{幹縄|みきなわ}、{捨|す}て{縄|なわ}、{重|おも}りの{石|いし}を{結|むす}び、これらを{投|な}げ{入|い}れる。④そして、{幹縄|みきなわ}とかご{網|あみ}を{結|むす}んだロープ（{枝縄|えだなわ}）の{先|さき}のかご{網|あみ}を{海|うみ}に{入|い}れる。⑤{餌|えさ}はサバ、シイラ、ソウダガツオなどを{使|つか}う。⑥{揚|あ}げかごの{時|とき}には、かご{網|あみ}の{底|そこ}をロープで{縛|しば}らないまま{船尾|せんび}に{積|つ}んでおき、{投|な}げかご"
+      },
+      {
+       "p": "の{時|とき}に{縛|しば}ります。これは、かごを{船尾|せんび}に{積|つ}み{易|やす}くするためである。⑦{漁具数|ぎょぐすう}は3{連|れん}（3×150＝450かご）{以内|いない}である。まず1{連|れん}を{入|い}れ、そして、これより{離|はな}し、"
+      },
+      {
+       "p": "2{連目|れんめ}、{少|すこ}し{離|はな}し、さらに3{連目|れんめ}を{入|い}れる。⑧{投|な}げかごの{時|とき}、{足|あし}をロープに{絡|から}めないよう（{取|と}られないよう）、{十分注意|じゅうぶんちゅうい}する。（２）{揚|あ}げかご（かごを{揚|あ}げること）について①{揚|あ}げかごを{主体|しゅたい}とした{操業|そうぎょう}の{方法|ほうほう}を{示|しめ}すと、{図|ず}３５のとおりである。{左舷船首|さげんせんしゅ}の"
+      },
+      {
+       "p": "ローラーを{通|とお}し、{左舷中央|さげんちゅうおう}にあるドラムで{幹縄|みきなわ}を{捲|ま}く。この{場合|ばあい}、かごを{揚|あ}げる{舷|げん}（{左舷|さげん}）または{船首|せんしゅ}に{風|かぜ}を{受|う}けて{行|おこな}う。"
+      },
+      {
+       "p": "{図|ず}３５{揚|あ}げかごを{主体|しゅたい}としたベニズワイガニかご{漁業|ぎょぎょう}の操業法②かごが{海面|かいめん}に{来|き}たら、{先|さき}にフックの{付|つ}いた{棒|ぼう}でかごを{引|ひ}っかけ、デリックでつり{上|あ}げ"
+      },
+      {
+       "p": "る。③かごの{中|なか}に{漁獲物|ぎょかくぶつ}があれば{網底|あみそこ}のロープをほどき{漁獲物|ぎょかくぶつ}を{取|と}り{出|だ}す。かにが{獲|と}れた"
+      },
+      {
+       "p": "{場合|ばあい}は{大|だい}・{中|ちゅう}・{小別|しょうべつ}に{分|わ}け、{氷|こおり}を{入|い}れたざるにいれ、{魚艙|ぎょそう}に{入|い}れる。④ベニズワイガニが{獲|と}れた{場合|ばあい}、{雌|めすが}ガニと9cm{未満|みまん}の{雄|おすが}ガニは{漁獲禁止|ぎょかくきんし}のため、{放流|ほうりゅう}す"
+      },
+      {
+       "p": "る。⑤{空|から}になったかごは{網底|あみそこ}のロープを{結|むす}ばないまま、えさを{入|い}れて、{右舷側|うげんがわ}のコンベアー"
+      },
+      {
+       "p": "で{船尾|せんび}に{運|はこ}び、{次|つぎ}の{投|な}げかごに{備|そな}える。⑥{巻|ま}き{上|あ}げられた{幹縄|みきなわ}は{左舷側|さげんがわ}で{船首|せんしゅ}から{船尾|せんび}に{送|おく}り、{次|つぎ}の{投|な}げかごに{備|そな}えて{順序良|じゅんじょよ}く"
+      },
+      {
+       "p": "コイルします。そして、かごの{付|つ}いた{枝縄|えだなわ}を{幹縄|みきなわ}に{結|むす}び、そのかごを{船尾|せんび}に{積|つ}み{上|あ}げ"
+      },
+      {
+       "p": "ておきます。⑦ベニズワイガニかご{漁業|ぎょぎょう}で{漁獲|ぎょかく}される{物|もの}として、ベニズワイガニの{他|ほか}に、ノロゲンゲ（{水魚|すいぎょ}）、バイ・ツブなどが{混獲|こんかく}されている。⑧1{連|れん}のかごを{揚|あ}げ{終|お}わると、{漁獲|ぎょかく}が{良|よ}い{場合|ばあい}はすぐに{船尾|せんび}から{次|つぎ}の1{連|れん}のかごを{投入|とうにゅう}"
+      },
+      {
+       "p": "する。⑨1{連目|れんめ}のかごの{漁獲|ぎょかく}が{悪|わる}い{時|とき}は、{投|な}げかごする{場所|ばしょ}（{漁場|ぎょじょう}）を{探|さが}し、{良|よ}い{場所|ばしょ}を{見|み}つ"
+      },
+      {
+       "p": "けて{投|な}げかごし、その{後|あと}、{先|さき}に{投|な}げかごしておいた2{連目|れんめ}のかごを{揚|あ}げる。⑩このようなことを{繰|く}り{返|かえ}し、3{連目|れんめ}のかごを{揚|あ}げ、そして、3{連目|れんめ}の{投|な}げかごが{終|お}わる"
+      },
+      {
+       "p": "と{漁獲物|ぎょかくぶつ}を{市場|いちば}に{水揚|みずあ}げするため、{港|みなと}に{帰|かえ}る。⑪1{連|れん}のかごを{揚|あ}げ、{漁獲|ぎょかく}が{良|よ}いと、そのまま{投|な}げかごするが、そのような{場合|ばあい}、{揚|あ}げか"
+      },
+      {
+       "p": "ご、{投|な}げかごに4～5{時間|じかん}{掛|か}かる。このような{場合|ばあい}の1{航海当|こうかいあ}たりの{時間数|じかんすう}は、{漁場|ぎょじょう}ま"
+      },
+      {
+       "p": "での{往復航海|おうふくこうかい}に{約|やく}８{時間|じかん}{掛|か}かるとすると、{操業時間|そうぎょうじかん}は3{連|れん}×（4～5{時間|じかん}）＝12～15"
+      },
+      {
+       "p": "{時間|じかん}であるため、{計|けい}20～23{時間|じかん}を{要|よう}する。{漁|りょう}が{悪|わる}く、{他|ほか}の{漁場|ぎょじょう}を{選|えら}んで{操業|そうぎょう}する{場合|ばあい}"
+      },
+      {
+       "p": "はさらに{漁場|ぎょじょう}を{移動|いどう}する{時間|じかん}がかかる。"
+      },
+      {
+       "h": "７．ベニズワイガニかご{漁|りょう}をする{時|とき}の{注意|ちゅうい}など"
+      },
+      {
+       "p": "(1)ベニズワイガニかご{漁|りょう}をしても{良|よ}い{期間|きかん}は、{地域|ちいき}によって{決|き}まっている。(2){禁漁期|きんりょうき}がある。(3)ベニズワイガニの{値段|ねだん}は{大|おお}きさにより{決|き}まるため、{漁獲物|ぎょかくぶつ}は{船上|せんじょう}で、{甲|こう}の{巾|はば}（{甲羅|こうら}の"
+      },
+      {
+       "p": "{幅|はば}）の{大|おお}きさにより{大|だい}・{中|ちゅう}・{小別|しょうべつ}に{分|わ}けている。{甲羅|こうら}の{大|おお}きさ（サイズ）で、"
+      },
+      {
+       "p": "{大|だい}：12cm{以上|いじょう}、{中|ちゅう}：10～12cm{未満|みまん}、{小|しょう}：9cm{以上|いじょう}、にわけられる。(4){資源|しげん}{保|ほ}{護|ご}のため、{甲巾|こうはば}が9cm{以|い}{下|か}の{雄|おすが}ガニ、そして、すべての{雌|めすが}ガニも{漁獲禁止|ぎょかくきんし}とし、"
+      },
+      {
+       "p": "{漁獲後|ぎょかくご}、すぐに{放流|ほうりゅう}している。ズワイガニは、ベニズワイガニかご{漁業|ぎょぎょう}で{獲|と}ること"
+      },
+      {
+       "p": "は{禁止|きんし}されているが、{生息水深|せいそくすいしん}が{違|ちが}うため、{混獲|こんかく}はない。(5){最初|さいしょ}から{他|ほか}の{種類|しゅるい}のカニ（ズワイガニ）などを{獲|と}る{目的|もくてき}でベニズワイガニかご{漁|りょう}をし"
+      },
+      {
+       "p": "てはいけない。(6)ベニズワイガニかご{漁|りょう}は{水深|すいしん}800mより{浅|あさ}い{所|ところ}では{操業禁止|そうぎょうきんし}。(7){網目|あみめ}の{大|おお}きさは15cm{以上|いじょう}。(8)1{連|れん}のかごは150{個|こ}{以内|いない}。(9){帰港後|きこうご}、すぐ{加工場|かこうじょう}に{送|おく}り、ボイル{処理|しょり}（{茹|ゆ}でること）などが{行|おこな}われる。{漁獲物|ぎょかくぶつ}の{内|うち}、"
+      },
+      {
+       "p": "{生|い}きているかには{生|い}きたまま{販売|はんばい}したり、{漁協|ぎょきょう}の{生|い}け{簀|す}に{入|い}れ、{適当|てきとう}な{時|とき}に{出荷|しゅっか}する。(10){漁獲量|ぎょかくりょう}の{多|おお}い{少|すく}ないは、{時|じ}{期|き}、{漁場等|ぎょじょうなど}に{影響|えいきょう}されるよりも、{天気|てんき}が{良|よ}いか{悪|わる}いか"
+      },
+      {
+       "p": "など、{天候|てんこう}により{操業出|そうぎょうで}{来|き}るかどうかの{影響|えいきょう}の{方|ほう}が{大|おお}きいと{思|おも}われる。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bubu kepiting terutama di Laut Jepang (kepiting salju merah dan salju). Satu deret sekitar 150 bubu; tali pelampung 2–3 kali kedalaman.",
+      "points": [
+       "Kapal 70–100 ton: awak 8–10 orang.",
+       "Tentukan lokasi dari suhu air, kedalaman, jenis dasar."
+      ],
+      "avoid": [
+       "Menghitung tali pelampung tanpa mempertimbangkan kedalaman."
+      ],
+      "exam": [
+       "Jumlah awak kapal."
+      ]
+     },
+     "jp": {
+      "core": "カニかごは{主|おも}に{日本海|にほんかい}。1{連|れん}150かご、{浮縄|うけなわ}は{水深|すいしん}の2〜3{倍|ばい}。",
+      "points": [
+       "70〜100トンの{船|ふね}の{乗組員|のりくみいん}は8〜10{人|ひと}。",
+       "{水温|すいおん}、{水深|すいしん}、{底質|ていしつ}で{場所|ばしょ}を{決|き}める。"
+      ],
+      "avoid": [
+       "{水深|すいしん}を{考|かんが}えずに{浮縄|うけなわ}をきめること。"
+      ],
+      "exam": [
+       " {乗組員|のりくみいん}の{数|かず}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b7s3",
+    "no": 3,
+    "title": {
+     "id": "Bubu Udang",
+     "jp": "エビかご{漁業|ぎょぎょう}"
+    },
+    "pages": [
+     102,
+     107
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Perikanan keramba udang"
+      },
+      {
+       "p": "Dalam perikanan keramba udang, udang utara (udang Nanban), udang Toyamaebi (udang Botan), dan udang Morotoge Akaebi (Shimaebi) semuanya ditangkap, tetapi udang utara (Hokkoku Akaebi) adalah yang paling melimpah dalam hal tangkapan. Ia juga dikenal dengan nama lain, Amaebi (udang manis), dan digemari di seluruh negeri. Udang merah utara adalah sumber daya udang terbesar di Laut Jepang dan sebagian besar ditangkap oleh jaring pukat dasar lepas pantai, jaring pukat dasar kecil, dan jaring keramba, yang terakhir ditangkap di Laut Jepang dari Hokkaido hingga lepas pantai Prefektur Tottori. Spesies tangkapan sampingan lainnya termasuk orogenge (ikan air), kerang, dan siput laut."
+      },
+      {
+       "h": "Tentang alat keramba udang"
+      },
+      {
+       "p": "Umumnya, seperti yang ditunjukkan pada Gambar 36, keramba bukaan samping digunakan. Sebagian besar keramba berbentuk kerucut. Jumlah keramba yang akan digunakan ditentukan oleh setiap prefektur, tergantung pada hubungan dengan industri perikanan lainnya, dll. Gambar 36: Bentuk bubu udang Jarak antar keramba harus ditentukan oleh lebar area tempat udang hidup saat keramba diikatkan ke tali utama, yaitu sejauh mana satu keramba dapat menangkap udang. Namun, dalam praktiknya, panjangnya ditentukan oleh pekerjaan yang dilakukan (apakah mengikat tali cabang dengan keramba ke tali utama sebelum melempar, atau mengikat tali cabang ke tali utama saat melempar), dan waktu yang dibutuhkan untuk mengangkat keramba ditentukan oleh panjang tali utama di antara keramba dan kecepatan pengangkatan keramba, jadi jarak antar keramba ditentukan oleh faktor-faktor ini. Umpannya antara lain tombak pasir, makarel Atka, kepiting salju, dan ikan haring"
+      },
+      {
+       "h": "Cara penangkapan"
+      },
+      {
+       "h": "(1) Tentang keramba lempar"
+      },
+      {
+       "p": "1) Lokasi pelemparan ditentukan dengan menyelidiki kondisi penangkapan udang sejauh ini, suhu air, dan menggunakan fish finder untuk memeriksa kedalaman air, kualitas dasar, dan topografi dasar laut."
+      },
+      {
+       "p": "2) Setelah lokasi ditentukan, bendera (penanda), tali umpan, dan tali air dangkal (2 hingga 3 kali kedalaman air) dipasang dari buritan perahu."
+      },
+      {
+       "p": "3) Ikat tali utama, tali lempar sepanjang 25 hingga 45 m, dan pemberat batu di ujung tali air dangkal, dan lemparkan ke dalamnya."
+      },
+      {
+       "p": "4) Kemudian, perahu dipacu dengan kecepatan penuh, dan ujung tali (tali cabang, sekitar 3 m panjangnya) yang mengikat tali utama dan jaring keramba diturunkan ke laut. Jarak antara setiap keramba adalah 5 hingga 8 m."
+      },
+      {
+       "p": "5) Umpan ditempatkan di dalam keramba pengangkat, tali diikatkan ke dasar keramba, dan keramba disiapkan untuk dilempar."
+      },
+      {
+       "p": "6) Gambar 37 menunjukkan keramba udang setelah diturunkan ke laut."
+      },
+      {
+       "p": "1 rangkaian 2 ~3 km 1 bendera tali punggung 2~3 kali kedalaman laut kedalaman laut tali cabang kira- kira 3m Tali utama tali lempar kira- kira 25~45m batu Tali lempar Keramba udang Keramba udang Gambar 37 Gambar keramba udang yang ditempatkan di bawah air"
+      },
+      {
+       "h": "(2) Tentang keramba angkat"
+      },
+      {
+       "p": "1) Seperti yang ditunjukkan pada Gambar 38, gunakan drum gunting yang terletak di bagian depan sisi kanan untuk menggulung tali bonden dan trolling sesuai urutan tersebut. 2) Ketika batu pemberat, tali utama, tali cabang, dan keramba di ujung tali cabang tiba, keramba dan tali cabang dilepaskan dari tali utama."
+      },
+      {
+       "p": "3) Lepaskan tali pada dasar jaring keramba, keluarkan hasil tangkapan, lalu pisahkan udang beserta ikan lainnya. Udang ditempatkan di tangki ikan hidup. Keramba kosong ditaruh di ban berjalan di sisi kanan dan dikirim ke buritan."
+      },
+      {
+       "p": "4) Tali utama yang dililitkan oleh drum dikirim dari haluan ke buritan di sisi kiri kapal, dan digulung dengan baik sebagai persiapan untuk peluncuran berikutnya. Kemudian tali cabang yang sudah dililitkan dengan keramba diikatkan pada tali utama, kemudian keramba ditumpuk dan diangkat pada buritan perahu."
+      },
+      {
+       "p": "Drum penjepit Arah maju Lepas tali canang, keluarkan udang dari keramba Belt conveyor Palkan Tali Masukkan umpan Gulung tali, letakkan keramba di atasnya Gambar 38 Metode penangkapan udang dengan Keramba angkat"
+      },
+      {
+       "h": "Hal-hal yang perlu diperhatikan saat melakukan penangkapan dengan keramba udang"
+      },
+      {
+       "h": "(1) Ada jangka waktu tertentu saat udang dapat ditampung di keramba."
+      },
+      {
+       "p": "(2) Setelah ditangkap, udang dikeluarkan dari keramba dan langsung dimasukkan ke dalam tangki ikan hidup. Tangki ikan hidup berisi air laut yang didinginkan hingga sekitar 0°C, dan oksigen dipompa dari dasar. (3) Setelah dikembalikan ke pelabuhan, udang disortir menjadi udang hidup dan udang mati, udang besar dan udang kecil, serta udang dengan dan tanpa telur."
+      },
+      {
+       "p": "(4) Di Jepang, harga udang dengan dan tanpa telur bervariasi tergantung pada wilayahnya. Di wilayah Kanazawa, udang dengan telur lebih mahal, sedangkan di wilayah Kansai, udang tanpa telur dan udang besar lebih disukai. Hal ini disebabkan oleh perbedaan antara kelezatan telur dan tekstur kenyal daging udang tanpa telur."
+      },
+      {
+       "p": "Penangkapan ikan dengan jaring bertiang"
+      }
+     ],
+     "jp": [
+      {
+       "h": "８．エビかご{漁業|ぎょぎょう}"
+      },
+      {
+       "p": "エビかご{漁業|ぎょぎょう}では、ホッコクアカエビ（ナンバンエビ）、トヤマエビ（ボタンエビ）、モロトゲアカエビ（シマエビ）などが{漁獲|ぎょかく}されるが、{漁獲量|ぎょかくりょう}はホッコクアカエビが{最|もっと}も{多|おお}い。{別名|べつめい}「アマエビ」という{名|な}で{全国的|ぜんこくてき}に{親|した}しまれている。ホッコクアカエビは{日本海|にほんかい}{最大|さいだい}のエビ{資源|しげん}であり、{主|しゅ}として{沖合底曳網|おきあいそこびきあみ}，{小型底曳網|こがたそこびきあみ}、かご{網|あみ}によって{漁獲|ぎょかく}されるが、かご{網|あみ}は{北海道|ほっかいどう}から{鳥取県沖|とっとりけんおき}の{日本海|にほんかい}で{行|おこな}われている。その{他|ほか}、ノロゲンゲ（{水魚|すいぎょ}）、バイ・ツブなどが{混獲|こんかく}されている。"
+      },
+      {
+       "h": "９．エビかご{漁具|ぎょぐ}について"
+      },
+      {
+       "p": "{一般|いっぱん}には、{図|ず}３６に{示|しめ}すように、かごの{横|よこ}（サイド）に{入|い}り{口|ぐち}をつけた{横口|よこぐち}かごが{使|つか}われている。かごの{形|かたち}はほとんどが{円錐台形|えんすいだいけい}である。{使用|しよう}するかごの{数|かず}は、{他|ほか}の{漁業|ぎょぎょう}との{関係等|かんけいなど}により{各県毎|かくけんごと}に{決|き}められている。"
+      },
+      {
+       "p": "{図|ず}３６エビかごの{形状|けいじょう}"
+      },
+      {
+       "p": "かごとかごとの{間|あいだ}の{長|なが}さは、{幹縄|みきなわ}にかごをとりつける{時|とき}、エビがすんでいる{範囲|はんい}の{広|ひろ}さ（{長|なが}さ）、すなわち、１{個|こ}のかごでどの{位|ぐらい}の{範囲|はんい}に{分布|ぶんぷ}するエビを{獲|と}ることが{出|で}{来|き}るかによって{決|き}めるべきである。しかし、{実際|じっさい}には{作業上|さぎょうじょう}の{問題|もんだい}（{投|な}げかご{前|まえ}に、かごのついた{枝縄|えだなわ}を{幹縄|みきなわ}に{結|むす}びつけておくか、あるいは、{投|な}げかご{中|ちゅう}に{幹縄|みきなわ}に{枝縄|えだなわ}を{結|むす}びつけながら{投|な}げかごするか）、また、かごを{揚|あ}げる時間がかごとかごとの{間|あいだ}の{幹縄|みきなわ}の{長|なが}さ、{揚|あ}げかごの{速度|そくど}によって{決|き}まるため、これらのこと{考|かんが}えて、かごとかごとの{間|あいだ}の{長|なが}さを{決|き}めている。{餌|えさ}はイカナゴ、ホッケ、ズワイガニ、ニシンなどである。"
+      },
+      {
+       "h": "１０．{操業法|そうぎょうほう}"
+      },
+      {
+       "p": "（１）{投|な}げかごについて①{投|な}げかごする{場所|ばしょ}は、それまでの{漁獲状況|ぎょかくじょうきょう}、{水温|すいおん}、{魚探|ぎょたん}で{水深|すいしん}、{底質|ていしつ}、{海底地形|かいていちけい}な"
+      },
+      {
+       "p": "どを{調|しら}べて、{決|き}める。②{位|い}{置|ち}が{決|き}まったら、{船尾|せんび}から、ボンデン（{標識|ひょうしき}）、あば、{瀬縄|せなわ}（{水深|すいしん}の2～3{倍|ばい}の{長|なが}さ）"
+      },
+      {
+       "p": "を{入|い}れる。③{瀬縄|せなわ}の{一番端|いちばんはし}に、{幹縄|みきなわ}、{捨|す}て{縄|なわ}25～45m、{重|おも}りの{石|いし}を{結|むす}び、これらを{投入|とうにゅう}する。④そして、{船|ふね}の{速|はや}さを{全速|ぜんそく}にし、{幹縄|みきなわ}とかご{網|あみ}を{結|むす}んだロープ（{枝縄|えだなわ}、{長|なが}さ{約|やく}3m）のさ"
+      },
+      {
+       "p": "きのかご{網|あみ}を{海|うみ}に{入|い}れる。かごとかごとの{間|あいだ}は5～8mである。⑤かごは、{揚|あ}げかご{中|ちゅう}から、かごにえさを入れ、かご{底|そこ}のロープを{結|むす}び、{投|な}げかごに{備|そな}"
+      },
+      {
+       "p": "え、{用意|ようい}しておく。⑥{図|ず}３７は、エビかごを{海中|かいちゅう}に{入|い}れ{終|お}わった{様子|ようす}。"
+      },
+      {
+       "p": "{図|ず}３７エビかごを{海中|かいちゅう}に{入|い}れた{時|とき}の{図|ず}（２）{揚|あ}げかごについて①{図|ず}３８の{通|とお}り、{右舷前方|うげんぜんぽう}にあるはさみドラムで、ぼんでん、{瀬縄|せなわ}の{順|じゅん}に{巻|ま}きあげる。②{重|おも}りの{石|いし}、{幹縄|みきなわ}が{揚|あ}がり、{枝縄|えだなわ}、その{先|さき}のかごが{来|き}たらかごを{枝縄|えだなわ}ごと{幹縄|みきなわ}から{外|はず}す。③かご{網|あみ}の{底|そこ}のロープを{解|ほど}き、{漁獲物|ぎょかくぶつ}を{取|と}り{出|だ}し、エビその{他|た}を{選|よ}り{分|わ}け、エビは{活魚槽|かつぎょそう}"
+      },
+      {
+       "p": "に{入|い}れる。{空|から}になったかごは{右舷側|うげんがわ}にあるベルトコンベアーに{載|の}せて、{船尾|せんび}へ{送|おく}る。④ドラムにより{巻|ま}き{上|あ}げられた{幹縄|みきなわ}は{左舷側|さげんがわ}で{船首|せんしゅ}から{船尾|せんび}に{送|おく}り、{次|つぎ}の{投|な}げかごに{備|そな}"
+      },
+      {
+       "p": "えて{順序良|じゅんじょよ}くコイルする。そして、かごのついた{枝縄|えだなわ}を{幹縄|みきなわ}に{結|むす}び、そのかごを{船|せん}"
+      },
+      {
+       "p": "{尾部分|びぶぶん}に{積|つ}み{上|あ}げる。"
+      },
+      {
+       "p": "{図|ず}３８エビかご{漁業|ぎょぎょう}の{揚|あ}げかご{方法|ほうほう}"
+      },
+      {
+       "h": "１１．エビかご{漁業|ぎょぎょう}をする{時|とき}の{注意|ちゅうい}など"
+      },
+      {
+       "p": "(1)エビかご{漁|りょう}をできる{期間|きかん}は{決|き}まっている。(2){漁獲後|ぎょかくご}、かごから{出|だ}したエビは{直|ただ}ちに{活魚槽|かつぎょそう}に入れる。{活魚槽|かつぎょそう}は{海水|かいすい}を{約|やく}０℃に{冷|ひ}や"
+      },
+      {
+       "p": "し、{底|そこ}から{酸素|さんそ}を入れている。(3){港|みなと}に{帰|かえ}ってきたら、{生死|せいし}、{大小|だいしょう}、{子|こ}{持|も}ちと{子|こ}{持|も}ちでないエビを{選別|せんべつ}する。(4){日本|にほん}では{地域|ちいき}により、{子|こ}{持|も}ちと{子|こ}{持|も}ちでないエビとでは{値段|ねだん}が{違|ちが}う。{金沢近辺|かなざわきんぺん}では{子|こ}"
+      },
+      {
+       "p": "{持|も}ちのエビの{方|ほう}が{値段|ねだん}が{高|たか}く、{関西|かんさい}では{子供|こども}を{持|も}っていないエビで、{大|おお}きいエビの{方|ほう}"
+      },
+      {
+       "p": "が{好|この}まれている。これは{卵|たまご}の{美|お}{味|い}しさと{卵|たまご}の{無|な}いエビの{肉|にく}の{歯応|はごた}えの{良|よ}さとの{差|さ}に"
+      },
+      {
+       "p": "よる。"
+      },
+      {
+       "p": "ぼううけあみぎょぎょう"
+      },
+      {
+       "p": "棒受網漁業"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bubu udang: yang paling banyak tertangkap udang merah utara (あまえび); bubu bukaan samping berbentuk kerucut. Jarak antar bubu ditentukan oleh lebar habitat udang.",
+      "points": [
+       "Jumlah bubu diatur tiap prefektur.",
+       "Tangkapan sampingan: kerang, siput laut."
+      ],
+      "avoid": [
+       "Memakai bubu bukaan atas untuk udang."
+      ],
+      "exam": [
+       "Udang sasaran utama."
+      ]
+     },
+     "jp": {
+      "core": "エビかごではホッコクアカエビ(あまえび)が{多|おお}い。{横|よこ}あきの{円錐形|えんすいけい}かごを{使|つか}う。",
+      "points": [
+       "かごの{数|かず}は{県|けん}ごとに{決|き}まる。",
+       "ほかに{貝|かい}などがとれる。"
+      ],
+      "avoid": [
+       "エビに{上|あ}あきのかごを{使|つか}うこと。"
+      ],
+      "exam": [
+       " {主|おも}な{対象|たいしょう}のエビ。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}
