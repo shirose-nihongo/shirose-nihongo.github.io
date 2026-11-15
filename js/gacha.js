@@ -1,6 +1,21 @@
 /* Halaman Gacha (#gacha). RNG & potong koin di server (cloudflare/gacha-worker.js). Klien hanya menampilkan hasil. */
 import { CONFIG, CONFIG_FREE, rollMany } from "../cloudflare/gacha-core.js";
 import { ITEMS } from "../cloudflare/gacha-items.js";
+import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js";
+/* gambar barang: karakter memakai barang itu (SVG animasi bawaan item + efek melayang/bersinar per kelangkaan) */
+const KAT_OF = {}; for (const [k, o] of Object.entries(CATALOG)) for (const id of Object.keys(o)) if (id !== "none") KAT_OF[id] = k;
+const ANIM = { item_tangan: "gaSwing", aura: "gaPulse", sayap: "gaFlap", aksesori: "gaBob", pakaian: "gaBob", celana: "gaBob", sepatu: "gaBob", rambut: "gaBob" };
+function gambarItem(id, rar, px = 96) {
+  const c = ({ common: "#9aa0a6", uncommon: "#5bd16b", rare: "#4aa3ff", epic: "#b266ff", legendary: "#ffb703", mythic: "#ff4d94" })[rar] || "#999";
+  if (String(id).startsWith("theme_")) return `<div class="ga-fig" style="width:${px}px;height:${px}px;--gc:${c};animation:gaBob 2s ease-in-out infinite"><div style="font-size:${px * .5}px;display:flex;align-items:center;justify-content:center;height:100%">🎨</div></div>`;
+  const k = KAT_OF[id]; if (!k) return `<div class="ga-fig" style="width:${px}px;height:${px}px;--gc:${c}"></div>`;
+  const VB = { rambut: "110 40 180 190", aksesori: "110 20 180 200", pakaian: "90 170 220 190", celana: "130 330 140 140", sepatu: "120 405 160 90", item_tangan: "70 150 260 240", sayap: "20 100 360 330" };
+  const svg = renderCharacter({ ...DEFAULT_EQUIPPED, [k]: id }).replace('viewBox="0 0 400 500"', 'viewBox="' + (VB[k] || "0 0 400 500") + '"');
+  return `<div class="ga-fig" style="width:${px}px;height:${px * 1.15}px;--gc:${c};animation:${ANIM[k] || "gaBob"} ${k === "item_tangan" ? "1.6s" : "2.2s"} ease-in-out infinite">${svg}</div>`;
+}
+(function () { if (typeof document === "undefined" || document.getElementById("ga-css")) return; const st = document.createElement("style"); st.id = "ga-css";
+  st.textContent = `.ga-fig{margin:0 auto;filter:drop-shadow(0 0 8px var(--gc));transform-origin:50% 90%}.ga-fig svg{width:100%;height:100%}
+@keyframes gaBob{50%{transform:translateY(-6px) scale(1.04)}}@keyframes gaSwing{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg) scale(1.05)}}@keyframes gaPulse{50%{transform:scale(1.08);filter:drop-shadow(0 0 18px var(--gc))}}@keyframes gaFlap{50%{transform:scale(1.06) translateY(-4px)}}`; document.head.appendChild(st); })();
 export const GACHA_URL = ""; // ⚠ isi URL Worker setelah di-deploy (docs/EKONOMI-GACHA.md), mis. https://shirose-gacha.<akun>.workers.dev
 let FB = null;
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -23,7 +38,7 @@ async function render() {
   const tabelRate = ORD.map(r => { const n = (CONFIG.POOL[r] || []).length; return `<tr><td style="color:${RAR[r][1]};font-weight:800;">${RAR[r][0]}</td><td><div style="background:#8883;border-radius:6px;height:8px;min-width:90px;"><div style="width:${Math.min(100, pctOf[r] * 2.2)}%;height:100%;border-radius:6px;background:${RAR[r][1]};"></div></div></td><td><b>${fmt(pctOf[r])}</b></td><td>${n} item</td><td>${n ? fmt(pctOf[r] / n) : "–"}</td></tr>`; }).join("");
   const galeri = ORD.map(r => { const a = CONFIG.POOL[r] || []; if (!a.length) return "";
     return `<h4 style="margin:14px 0 6px;color:${RAR[r][1]};">${RAR[r][0]} · ${fmt(pctOf[r])} <small style="color:var(--gray);">(${a.length} item, tiap item ≈ ${fmt(pctOf[r] / a.length)})</small></h4><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;">` + a.map(i => { const x = byId[i] || {}, own = inv.includes(i) || (st.siswa?.karakter?.inventory || []).includes(i), th = x.kind === "theme";
-      return `<div style="padding:10px;border-radius:12px;border:1px solid ${RAR[r][1]};opacity:${own ? 1 : .92};${own ? "" : "filter:saturate(.8);"}"><div style="font-size:22px;">${th ? "🎨" : IKON[String(x.kat || "").toLowerCase().replace(/ /g, "_")] || "🎁"}</div><div style="font-weight:700;font-size:13px;margin:4px 0;">${esc(x.nama || i)}</div><div style="font-size:11px;color:var(--gray);">${th ? "Tema tampilan" : esc(x.kat || "Barang shop")}${x.harga ? " · 🪙 " + x.harga.toLocaleString("id-ID") : ""}</div><div style="font-size:11px;margin-top:3px;">≈ ${fmt(pctOf[r] / a.length)} per tarikan</div>${own ? '<div style="font-size:11px;color:#3cc878;margin-top:3px;">✓ Dimiliki</div>' : ""}${th ? `<button class="btn ghost" style="margin-top:6px;padding:4px 8px;font-size:12px;" onclick="SHIROSE_THEME.preview('${i.slice(6)}')">👀 Pratinjau</button>` : ""}</div>`; }).join("") + "</div>"; }).join("");
+      return `<div style="padding:10px;border-radius:12px;border:1px solid ${RAR[r][1]};opacity:${own ? 1 : .92};${own ? "" : "filter:saturate(.8);"}">${gambarItem(i, r, 84)}<div style="font-weight:700;font-size:13px;margin:4px 0;">${esc(x.nama || i)}</div><div style="font-size:11px;color:var(--gray);">${th ? "Tema tampilan" : esc(x.kat || "Barang shop")}${x.harga ? " · 🪙 " + x.harga.toLocaleString("id-ID") : ""}</div><div style="font-size:11px;margin-top:3px;">≈ ${fmt(pctOf[r] / a.length)} per tarikan</div>${own ? '<div style="font-size:11px;color:#3cc878;margin-top:3px;">✓ Dimiliki</div>' : ""}${th ? `<button class="btn ghost" style="margin-top:6px;padding:4px 8px;font-size:12px;" onclick="SHIROSE_THEME.preview('${i.slice(6)}')">👀 Pratinjau</button>` : ""}</div>`; }).join("") + "</div>"; }).join("");
   const hasil = last ? `<div class="panel" style="margin-top:12px;"><h3>Hasil tarikan</h3>${last.results.map(x => `<div style="padding:6px 0;border-bottom:1px solid var(--border,#333);color:${RAR[x.rarity][1]};"><b>${RAR[x.rarity][0]}</b> · ${esc(NAMA[x.item] || x.item)}${x.dup ? ' <small style="color:var(--gray);">(duplikat, tidak ada pengembalian)</small>' : " ✨ baru!"}</div>`).join("")}</div>` : "";
   const aktif = true;
   return `<div class="panel"><h1>🎰 Gacha</h1>
@@ -54,7 +69,7 @@ function pola(r) {
   if (r === "common" || r === "uncommon") { const o = rnd(FILL.filter(x => x !== s && x !== SYM.epic && x !== SYM.legendary && x !== SYM.mythic)); const a = [s, s, o]; const p = Math.floor(Math.random() * 3); [a[p], a[2]] = [a[2], a[p]]; return a; }
   return [s, s, s];
 }
-function kartuHadiah(x, dl) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;${dl ? "animation-delay:" + dl + "s;" : ""}"><div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat (tanpa pengembalian)</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
+function kartuHadiah(x, dl, px) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;${dl ? "animation-delay:" + dl + "s;" : ""}">${gambarItem(x.item, x.rarity, px || (dl === undefined ? 120 : 64))}<div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat (tanpa pengembalian)</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
 let autoSpeed = 1;
 function playSlot(res, au) {
   return new Promise((done) => {
@@ -149,7 +164,7 @@ function ringkasan(all, dipakai, berhenti) {
     o.innerHTML = `<div style="width:min(560px,100%);text-align:center"><h3>🎰 Auto spin selesai</h3><p style="opacity:.85;font-size:13px;">${all.length} tarikan · ${berhenti ? esc(berhenti) : "selesai"}${dipakai ? " · dipakai " + dipakai.toLocaleString("id-ID") + " 🪙" : " · gratis"}</p>
 <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0;">${ORDR.map(r => `<span style="padding:5px 10px;border-radius:10px;border:1px solid ${RAR[r][1]};color:${RAR[r][1]};font-weight:800;">${RAR[r][0]} ×${cnt[r] || 0}</span>`).join("")}</div>
 <div style="opacity:.85;font-size:13px;">Barang baru (${baru.length}) · duplikat ${all.length - baru.length}</div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px;max-height:48vh;overflow:auto;margin-top:6px;">${baru.map(x => kartuHadiah(x)).join("") || '<div style="opacity:.7;padding:10px;">Tidak ada barang baru</div>'}</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px;max-height:48vh;overflow:auto;margin-top:6px;">${baru.map(x => kartuHadiah(x, 0, 64)).join("") || '<div style="opacity:.7;padding:10px;">Tidak ada barang baru</div>'}</div>
 <button id="gfx-ok" style="background:#fff;color:#111;border:0;border-radius:10px;padding:9px 18px;font-weight:800;cursor:pointer;margin-top:12px;">Tutup</button></div>`;
     document.body.appendChild(o); o.querySelector("#gfx-ok").onclick = () => { o.remove(); done(); };
   });
