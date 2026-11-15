@@ -272,7 +272,7 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
   const arm = (key, o) => `<path d="${A[key][0]}" stroke="${sl.d}" stroke-width="24" fill="none" stroke-linecap="round">${an("d", A[key])}</path><path d="${A[key][0]}" stroke="${sl.c}" stroke-width="20" fill="none" stroke-linecap="round">${an("d", A[key])}</path>`;
   const hand = (cxk, cyk) => sp.palm
     ? `<ellipse rx="13" ry="7" cx="${A[cxk][0]}" cy="${A[cyk][0]}" fill="${skin}" stroke="${darken(skin, .25)}" stroke-width="1.2">${an("cx", A[cxk])}${an("cy", A[cyk])}</ellipse>`
-    : `<circle r="10.5" cx="${A[cxk][0]}" cy="${A[cyk][0]}" fill="${skin}">${an("cx", A[cxk])}${an("cy", A[cyk])}</circle>`;
+    : `<circle r="13.5" cx="${A[cxk][0]}" cy="${A[cyk][0]}" fill="${skin}">${an("cx", A[cxk])}${an("cy", A[cyk])}</circle>`;
 
   /* efek serangan: tebasan (sword/katana), dentuman (hammer), ledakan sihir (grimoire) */
   let fx = "";
