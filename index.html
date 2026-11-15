@@ -2091,10 +2091,10 @@ const routes = {
   profile: renderProfile,
   achievements: renderAchievements,
   leaderboard: renderLeaderboard,
-  choukai: (params) => renderChoukaiJLPT(params),
+  choukai: (params) => _bukanJft(() => renderChoukaiJLPT(params)),
   // JLPT Center: Full Exam + Individual Practice (js/jlpt-center.js)
-  jlpt: (params) => renderJlpt(params),
-  "jlpt-riwayat": () => renderRiwayatJlpt(),
+  jlpt: (params) => _bukanJft(() => renderJlpt(params)),
+  "jlpt-riwayat": () => _bukanJft(() => renderRiwayatJlpt()),
   "jlpt-review": (params) => renderReviewJlpt(params),
   // Hiragana & Katakana (js/kana-center.js): #kana, #kana-tabel, #kana-order, #kana-tulis, #kana-hafalan, #kana-tes, #kana-progres
   ...KANA_ROUTES,
@@ -2141,6 +2141,8 @@ window.addEventListener("popstate", () => {
 // Mapel dipisah: JLPT, Kana, dan SSW tidak saling terhubung. Pindah mapel hanya lewat layar "pilih-level".
 const _subjectOf = (path) => { const n = String(path || "").split("/")[0]; if (n.startsWith("ssw")) return "ssw"; if (n.startsWith("kana")) return "kana"; if (n === "jft" || n.startsWith("jft-")) return "jft";
   if (n === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess"))) return "ssw"; return "jlpt"; };
+// Halaman JLPT (Center/Choukai/Riwayat) tidak dipakai di mode JFT-Basic (level ir*) → arahkan ke Ujian JFT.
+const _bukanJft = (fn) => { if (String(state.level).startsWith("ir")) { setTimeout(() => route("jft-ujian"), 0); return '<div class="loading">Memuat…</div>'; } return fn(); };
 const _parentOf = (path) => {
   const [n, slug = "building-cleaning", a2] = String(path || "").split("/");
   if (n === "ssw") return "pilih-level";
@@ -2829,10 +2831,11 @@ async function renderMateriList(tipe){
 
   const kanjiBar = tipe !== "kanji" ? "" : (() => {
     const c = (window.KC && window.KC.kanjiCounts(state.level)) || { studied: 0, mastered: 0 };
-    return `<div class="kc-kwrap"><span class="lv">Level:</span>${["n5","n4","n3","n2","n1"].map(l => {
+    const _jft = String(state.level).startsWith("ir");   // JFT: tanpa pilihan level JLPT N5–N1
+    return `<div class="kc-kwrap">${_jft ? "" : `<span class="lv">Level:</span>${["n5","n4","n3","n2","n1"].map(l => {
       const ok = canAccessLevel(l);
       return `<button class="kc-lvchip ${l === state.level ? "on" : ""} ${ok ? "" : "lock"}" onclick="kanjiSetLevel('${l}')">${l.toUpperCase()}${ok ? "" : " 🔒"}</button>`;
-    }).join("")}<span class="lv">· ${c.studied}/${data.length} dipelajari · ${c.mastered} hafal</span></div>
+    }).join("")}`}<span class="lv">· ${c.studied}/${data.length} dipelajari · ${c.mastered} hafal</span></div>
       <div class="kc-note" style="margin:0 0 8px;">Klik kanji untuk detail, lalu <b>書き順を見る</b> (animasi urutan goresan) atau <b>書いてみよう</b> (latihan menulis).</div>`;
   })();
   return `
@@ -4163,10 +4166,10 @@ async function renderUjianList(){
   return `
     <div class="panel">
       <h2>📝 Ujian ${state.level.toUpperCase()}</h2>
-      <div class="hub-card jx-home" onclick="route('jlpt/${state.level}')" style="margin-bottom:14px;">
+      ${String(state.level).startsWith("ir") ? "" : `<div class="hub-card jx-home" onclick="route('jlpt/${state.level}')" style="margin-bottom:14px;">
         <div class="ico">🏯</div>
         <div class="info"><div class="ttl">JLPT Center ${state.level.toUpperCase()}</div><div class="sub">10 Full Exam + 60 paket latihan (Kanji · Kotoba · Bunpou) dengan timer &amp; pembahasan lengkap</div></div>
-      </div>
+      </div>`}
       <p style="color:var(--gray); font-size:13px; margin-bottom:12px;">Pilih kategori ujian untuk mulai mengerjakan.</p>
       ${pub.length ? `
         <div class="hub-grid">
