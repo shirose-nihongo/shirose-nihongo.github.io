@@ -145,8 +145,15 @@ export async function setUnlimitedCoins(uid, enable) {
 // Unlimited coins when developer OR siswa doc explicitly has the permission.
 // Note: permission must come from a trusted write (admin/dev) — client shouldn't
 // grant it to itself. See firestore.rules.example.
+/* Akun dengan akses penuh equipment + koin tak terbatas (diatur pemilik). Hanya berlaku di sisi klien (shop/inventory/wardrobe). */
+const FULL_ACCESS_EMAILS = ["arumiganteng@gmail.com"];
+export function hasFullAccess(user = currentUser) {
+  const em = (user && user.email || "").trim().toLowerCase();
+  return !!em && FULL_ACCESS_EMAILS.includes(em);
+}
 export function hasUnlimitedCoins() {
   if (isDeveloper(currentUser)) return true;
+  if (hasFullAccess(currentUser)) return true;
   return !!(currentSiswaDoc?.permissions?.unlimited_coins);
 }
 export function getUser() { return currentUser; }
@@ -418,7 +425,7 @@ export async function beliItem(kategori, itemId, harga, level) {
   const ref = doc(db, "siswa", uid);
   const siswa = (await getDoc(ref)).data();
   // Developer / permission-granted accounts bypass coin deduction entirely.
-  const unlimited = isDeveloper(currentUser) || !!(siswa?.permissions?.unlimited_coins);
+  const unlimited = isDeveloper(currentUser) || hasFullAccess(currentUser) || !!(siswa?.permissions?.unlimited_coins);
   const inv0 = siswa.karakter?.inventory || [];
   if (inv0.includes(itemId)) throw new Error("Sudah dimiliki");
   const gamiRef = doc(db, "siswa", uid, "gami", level);
