@@ -32,3 +32,7 @@ QC `validate_identity.py --no-ssim` (idle): palette wing_gold 0.93, hair_navy 0.
 - Generator pakaian/celana/sepatu diberi detail: bayangan kain, lipatan, hem, cuff, kerah, jahitan, sol, highlight.
 - Tee dasar tidak lagi mengintip di bawah pakaian lengan panjang.
 - Stance kaki per senjata (kaki melebar saat ready/attack) untuk SEMUA celana/sepatu via clip kiri/kanan.
+
+## Update 3 — Proporsi v3 + lutut menekuk
+- Proporsi berisi: kepala x1.1, torso lebar x1.1, kaki tebal x1.12 & pendek x0.9; diterapkan seragam ke semua slot (rambut/aksesori ikut kepala, baju ikut torso, celana/sepatu ikut kaki) → tidak ada item yang perlu digambar ulang satu per satu.
+- Lutut: paha berputar dari pinggul, betis+sepatu dari lutut, sendi ditambal; tubuh turun otomatis saat menekuk. Tiap senjata punya sudut (Daggers = jongkok dalam). Berlaku untuk semua celana & sepatu.

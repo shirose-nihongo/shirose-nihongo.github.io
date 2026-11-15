@@ -233,7 +233,7 @@ function darken(hex, k = .3) {
   const h = v => Math.round(v * (1 - k)).toString(16).padStart(2, "0"); return "#" + h(r) + h(g) + h(b);
 }
 const armPath = (sx, sy, hx, hy, out) => `M${f1(sx)} ${f1(sy)} Q${f1((sx + hx) / 2 + out * 16)} ${f1((sy + hy) / 2 + 14)} ${f1(hx)} ${f1(hy)}`;
-const SHL = [146, 218], SHR = [254, 218];
+const SHL = [141, 218], SHR = [259, 218];
 /* tangan kepal mitten + jempol (inner side = ke arah badan) */
 const fist = (skin, side) => { const m = side === "L" ? 1 : -1, st = "rgba(120,70,40,.55)";
   return `<path d="M${-9 * m} -9 Q${-10 * m} -15 ${-2 * m} -15 L${6 * m} -15 Q${12 * m} -14 ${12 * m} -6 L${12 * m} 6 Q${12 * m} 14 ${4 * m} 15 L${-4 * m} 15 Q${-10 * m} 14 ${-10 * m} 6 Z" fill="${skin}" stroke="${st}" stroke-width="1.1"/>
@@ -273,7 +273,7 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
   const gc = ti === 5 ? "" : (pal.glow || "");
   const filt = pal.gl ? `<filter id="wa-f-${rarity}" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="${pal.gl}" flood-color="${pal.glow}" flood-opacity=".95">${ti === 5 ? `<animate attributeName="flood-color" values="${RAINBOW}" dur="3s" repeatCount="indefinite"/>` : ""}</feDropShadow></filter>` : "";
 
-  const arm = (key, o) => `<path d="${A[key][0]}" stroke="${sl.d}" stroke-width="24" fill="none" stroke-linecap="round">${an("d", A[key])}</path><path d="${A[key][0]}" stroke="${sl.c}" stroke-width="20" fill="none" stroke-linecap="round">${an("d", A[key])}</path>`;
+  const arm = (key, o) => `<path d="${A[key][0]}" stroke="${sl.d}" stroke-width="28" fill="none" stroke-linecap="round">${an("d", A[key])}</path><path d="${A[key][0]}" stroke="${sl.c}" stroke-width="24" fill="none" stroke-linecap="round">${an("d", A[key])}</path>`;
   const hand = (cxk, cyk) => sp.palm
     ? `<ellipse rx="13" ry="7" cx="${A[cxk][0]}" cy="${A[cyk][0]}" fill="${skin}" stroke="${darken(skin, .25)}" stroke-width="1.2">${an("cx", A[cxk])}${an("cy", A[cyk])}</ellipse>`
     : `<g transform="translate(${A[cxk][0]} ${A[cyk][0]})"><animateTransform attributeName="transform" type="translate" values="${A[cxk].map((x, i) => x + " " + A[cyk][i]).join(";")}" ${dur}/>${fist(skin, cxk === "hwx" ? sp.side : (sp.side === "R" ? "L" : "R"))}</g>`;
@@ -331,10 +331,10 @@ function sleeveOf(overlaySvg) {
   return { c: "#ffffff", d: "#c7cde0" };
 }
 /* stance kaki: sudut ayun kaki (derajat, keluar) per tipe; state ready/attack melebar. Diterapkan ke SEMUA celana/sepatu lewat clip kiri/kanan. */
-const STANCE = { sword: 7, katana: 6, hammer: 5, spear: 8, scythe: 7, staff: 3, bow: 9, shield: 10, greatsword: 9, daggers: 15, grimoire_held: 1.5, grimoire_float: 0, carry: 2 };
+const STANCE = { sword: [10, 14], katana: [9, 12], hammer: [8, 10], spear: [12, 16], scythe: [11, 14], staff: [5, 6], bow: [13, 18], shield: [14, 18], greatsword: [13, 18], daggers: [26, 34], grimoire_held: [3, 4], grimoire_float: [0, 0], carry: [3, 4] };
 export function stanceOf(type, state) {
-  const a = STANCE[type] || 0, segs = segsFor(type, state), D = segs.reduce((x, y) => x + y.st.period, 0), N = Math.max(12, Math.round(D * 8)), vals = [];
-  for (let i = 0; i <= N; i++) { const { n } = poseAt(type, segs, D * i / N); vals.push(n === "attack" ? a * 1.4 + 1.5 : n === "ready" ? a * 1.15 + .5 : a); }
+  const [a, b] = STANCE[type] || [0, 0], segs = segsFor(type, state), D = segs.reduce((x, y) => x + y.st.period, 0), N = Math.max(12, Math.round(D * 8)), vals = [];
+  for (let i = 0; i <= N; i++) { const { n } = poseAt(type, segs, D * i / N), k = n === "attack" ? 1.7 : n === "ready" ? 1.4 : 1; vals.push({ a: a * k, b: b * k }); }
   return { vals, dur: D };
 }
 export function animTypeOf(item) { return item && item.animType && SPEC[item.animType] ? item.animType : null; }

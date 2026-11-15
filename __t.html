@@ -1,0 +1,7 @@
+<!doctype html><meta charset=utf-8><body style="background:#1a1233;margin:0"><div id=o style="display:flex;flex-wrap:wrap"></div>
+<script type=module>
+import {renderCharacter,CATALOG,DEFAULT_EQUIPPED} from "http://localhost:8765/js/character.js?v=20261116a";
+window.R=renderCharacter;window.C=CATALOG;window.D=DEFAULT_EQUIPPED;
+window.show=(ids,st,extra={})=>{o.innerHTML=ids.map(id=>`<div style="width:300px;height:380px">${renderCharacter({...D,item_tangan:id,...extra},'light',{wstate:st,hairColor:'#1e2f6b'})}</div>`).join('')};
+window.ready=true;
+</script>
