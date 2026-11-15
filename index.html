@@ -336,7 +336,7 @@ html{overflow-x:hidden;}
 .jlpt-pick .head h1{font-size:clamp(20px,3.4vw,30px); margin-top:6px; color:var(--white);}
 .jlpt-pick .head p{color:var(--gray); margin-top:8px; font-size:clamp(14px,2vw,17px);}
 .jlpt-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr)); gap:16px;}
-.jlpt-card{position:relative; text-align:left; border-radius:22px; padding:22px 20px 20px; cursor:pointer;
+.jlpt-card{touch-action:manipulation; -webkit-tap-highlight-color:transparent; position:relative; text-align:left; border-radius:22px; padding:22px 20px 20px; cursor:pointer;
   border:2px solid rgba(255,255,255,.08); color:var(--white); font-family:inherit;
   background:linear-gradient(160deg, var(--navy-2), var(--navy)); overflow:hidden;
   transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; min-height:200px;
@@ -348,7 +348,7 @@ html{overflow-x:hidden;}
 .jlpt-card .desc{font-size:14px; color:var(--gray); line-height:1.5; flex:1;}
 .jlpt-card .st{align-self:flex-start; font-size:12px; font-weight:800; padding:5px 12px; border-radius:999px;
   background:rgba(16,185,129,.18); color:#7ef0c3;}
-.jlpt-card:not(.locked):hover{transform:translateY(-4px); border-color:var(--pink); box-shadow:0 14px 36px rgba(239,106,154,.3);}
+@media (hover:hover){.jlpt-card:not(.locked):hover{transform:translateY(-4px); border-color:var(--pink); box-shadow:0 14px 36px rgba(239,106,154,.3);}}
 .jlpt-card.current{border-color:var(--pink); box-shadow:0 0 0 3px rgba(239,106,154,.35);}
 .jlpt-card.locked{cursor:not-allowed; filter:grayscale(.85); opacity:.55;}
 .jlpt-card.locked .st{background:rgba(255,255,255,.08); color:var(--gray);}
@@ -1431,11 +1431,11 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261116i";
-import { allShopItems } from "./js/shop-seed.js?v=20261116i";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261116j";
+import { allShopItems } from "./js/shop-seed.js?v=20261116j";
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261116i";
+import * as FB from "./js/firebase-sync.js?v=20261116j";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261114f";
@@ -1445,7 +1445,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
-import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261116i";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261116j";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -2430,9 +2430,10 @@ function levelSudahDipilih(){
   if (!state.user) return false;
   let uid = null;
   try { uid = sessionStorage.getItem(_KEY_PILIH); } catch(_){}
+  if (!uid){ try { const u2 = localStorage.getItem("shirose-level-uid"); if (u2 === state.user.uid){ uid = u2; sessionStorage.setItem(_KEY_PILIH, u2); } } catch(_){} }
   return uid === state.user.uid && canAccessLevel(state.level);
 }
-function _lupakanPilihanLevel(){ try { sessionStorage.removeItem(_KEY_PILIH); } catch(_){} }
+function _lupakanPilihanLevel(){ try { sessionStorage.removeItem(_KEY_PILIH); localStorage.removeItem("shirose-level-uid"); } catch(_){} }
 window.levelSudahDipilih = levelSudahDipilih;
 
 // Label level: JLPT N5..N1 atau JFT (Irodori) ir0/ir1/ir2.
@@ -2524,17 +2525,21 @@ window.kanjiSetLevel = async (lvl) => {
   await loadGami(); updateChips(); renderLevelPills();
   route("kanji");
 };
-window.pilihLevel = async (lvl) => {
+window._pilihBusy = false;
+window.pilihLevel = (lvl) => {
+  // Satu ketukan cukup: langsung pindah ke character, data dimuat di latar belakang.
+  if (window._pilihBusy) return;
   if (!canAccessLevel(lvl)){ toast("🔒 Level " + lvl.toUpperCase() + " dikunci guru"); return; }
+  window._pilihBusy = true; setTimeout(() => { window._pilihBusy = false; }, 1200);
   state.level = lvl;
-  localStorage.setItem("shirose-lvl", lvl);
+  try { localStorage.setItem("shirose-lvl", lvl); } catch(_){}
   try { sessionStorage.setItem(_KEY_PILIH, state.user.uid); } catch(_){}
-  await loadGami();
-  updateChips();
-  renderLevelPills();
+  try { localStorage.setItem("shirose-level-uid", state.user.uid); } catch(_){}
   // Riwayat dimulai dari pemilihan JLPT supaya tombol ← dari character kembali ke sini.
   window._routeStack = ["pilih-level"];
+  try { updateChips(); renderLevelPills(); } catch(_){}
   route("home");
+  Promise.resolve().then(() => loadGami()).then(() => { try { updateChips(); renderLevelPills(); } catch(_){} }).catch(e => console.warn("loadGami", e));
 };
 
 function renderHome(){
