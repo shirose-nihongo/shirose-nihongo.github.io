@@ -1,4 +1,4 @@
-/* KOSAKATA BERBASIS KANJI (N3 dulu; pola yang sama bisa dipakai level lain)
+/* KOSAKATA BERBASIS KANJI (N5-N1; struktur data Kanji tiap level sama)
  *
  * Aturan: Kanji satuan = indeks/pengelompokan (tidak otomatis jadi kartu). Kosakata contoh (field `c` di data/kanji-<lv>.json)
  * = materi hafalan, flashcard, dan latihan. Modul ini murni (tanpa DOM) supaya bisa dites di Node.
@@ -10,6 +10,7 @@
  */
 
 const KANJI_RE = /[㐀-䶿一-鿿豈-﫿々]/;
+const WRITABLE_RE = /[㐀-䶿一-鿿豈-﫿]/;     // 々 (tanda ulang) tidak punya goresan sendiri
 export const isKanjiChar = (ch) => KANJI_RE.test(ch);
 export const cleanKata = (k) => String(k || "").replace(/\[[^\]]*\]/g, "").trim();
 const kanjiOf = (it) => it.kanji || it.k || "";
@@ -44,7 +45,8 @@ export function buildKanjiVocab(kanjiList, kosakataList = []) {
           arti: c.a || (src && (src.arti || src.a)) || "",
           kosNo: link ? link.no : null,
           key: link ? "k:" + link.no : "kv:" + kata,
-          chars: Array.from(kata).filter(isKanjiChar),
+          chars: Array.from(kata).filter((ch) => WRITABLE_RE.test(ch)),
+          src: src || null,                 // baris kosakata yang tertaut (kalimat contoh, dll.)
           kanji: [],
         };
         byKata.set(kata, e);
@@ -55,8 +57,28 @@ export function buildKanjiVocab(kanjiList, kosakataList = []) {
     perKanji[ki] = list;
   });
 
+  // Kata dari tabel kosakata level yang memuat Kanji utama level ini (belum ada di `c`) ikut dihubungkan.
+  // Identitasnya tetap baris kosakata aslinya (kunci k:<no>) -> tidak ada kartu ganda, progres lama dipakai ulang.
+  const mainIdx = new Map();
+  (kanjiList || []).forEach((kj, ki) => { const m = kanjiOf(kj); if (m) (mainIdx.get(m) || mainIdx.set(m, []).get(m)).push(ki); });
+  (kosakataList || []).forEach((it, i) => {
+    const kata = cleanKata(it.kata || it.k);
+    if (!kata || byKata.has(kata) || !Array.from(kata).some((ch) => mainIdx.has(ch))) return;
+    const kana = it.kana || it.f || "", arti = it.arti || it.a || "";
+    if (!kana || !arti) return;                                     // kartu wajib punya bacaan & arti
+    const no = noOf(it, i);
+    byKata.set(kata, { kata, kana, arti, kosNo: no, key: "k:" + no, chars: Array.from(kata).filter((ch) => WRITABLE_RE.test(ch)), src: it, kanji: [], extra: true });
+  });
+  // Satu kata yang memuat beberapa Kanji utama = SATU entri, muncul di daftar setiap Kanji utamanya.
   const vocab = Array.from(byKata.values());
-  vocab.forEach((v, i) => { v.id = i + 1; });
+  vocab.forEach((v, i) => {
+    v.id = i + 1;
+    for (const ch of new Set(Array.from(v.kata))) {
+      const kis = mainIdx.get(ch); if (!kis) continue;
+      if (!v.kanji.includes(ch)) v.kanji.push(ch);
+      for (const ki of kis) if (!perKanji[ki].includes(v)) perKanji[ki].push(v);
+    }
+  });
   return { vocab, perKanji, byKata };
 }
 

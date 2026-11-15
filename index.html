@@ -1433,7 +1433,7 @@ html{overflow-x:hidden;}
 <script type="module">
 import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261116j";
 import { allShopItems } from "./js/shop-seed.js?v=20261116j";
-import * as KV from "./js/kanji-vocab.js?v=20261116l";   // kosakata berbasis Kanji (N3 dulu)
+import * as KV from "./js/kanji-vocab.js?v=20261116m";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
 import * as FB from "./js/firebase-sync.js?v=20261116j";
@@ -2891,6 +2891,8 @@ window.showMateri = async (tipe, idx, vno) => {
   const no = fmtNo(vno || itemNo(it, idx));   // vno = nomor dalam daftar terfilter (kelas kata)
   const app = document.getElementById("app");
   let body = "";
+  let kvList = null;   // kosakata tertaut (c + tabel kosakata level) untuk Kanji ini
+  if (tipe === "kanji" && _kvOn()) { try { kvList = (await _kvIndex()).perKanji[idx] || []; } catch (e) { kvList = null; } }
   if (tipe === "kanji") {
     const k = it.kanji || it.k || "";
     const on = it.onyomi || it.on || "";
@@ -2907,18 +2909,24 @@ window.showMateri = async (tipe, idx, vno) => {
           ${kun ? `<div class="r"><span class="lbl">Kunyomi</span>${kun}</div>` : ""}
         </div>
         <div style="font-size:16px; margin:12px 0;"><b>${arti}</b></div>
-        ${_kvOn() ? `<p class="kv-note">Kanji <b>${k}</b> adalah <b>kategori</b>. Yang dihafalkan adalah <b>kosakata</b> di bawah (ketuk untuk belajar).</p>` : ""}
-        ${contoh.length ? `<div class="contoh-list">
-          <h3>Contoh kosakata</h3>
-          ${contoh.map((c, ci) => { const kv = _kvOn() && Array.from(c.k).some(KV.isKanjiChar); return `<div class="contoh-item ${kv ? "kv-item" : ""}" ${kv ? `role="button" tabindex="0" onclick="kvOpen(${idx},${ci})" onkeydown="if(event.key==='Enter')kvOpen(${idx},${ci})"` : ""}>
-            <div><div class="jp">${c.k} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(c.k)}" data-read="${SV.escAttr(c.r||c.k)}" data-role="kanji-contoh" onclick="event.stopPropagation();SV.btn(this)">🔊</button></div><div class="r">${c.r||""}</div></div>
-            <div class="id">${c.a||""}${kv ? ` <span class="kv-go">›</span>` : ""}</div>
-          </div>`; }).join("")}
-        </div>` : (_kvOn() ? `<p class="kv-note">Belum ada kosakata contoh untuk Kanji ini di database.</p>` : "")}
-        ${_kvOn() && contoh.some(c => Array.from(c.k).some(KV.isKanjiChar)) ? `<div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
+        ${kvList ? `<p class="kv-note">Kanji <b>${k}</b> adalah <b>kategori</b>. Yang dihafalkan adalah <b>kosakata</b> di bawah (ketuk untuk belajar).</p>` : ""}
+        ${kvList ? (kvList.length ? `<div class="contoh-list">
+          <h3>Kosakata dengan Kanji ini <small style="color:var(--gray-dim); font-weight:400;">(${kvList.length})</small></h3>
+          ${kvList.map((v, vi) => `<div class="contoh-item kv-item" role="button" tabindex="0" onclick="kvOpen(${idx},${vi})" onkeydown="if(event.key==='Enter')kvOpen(${idx},${vi})">
+            <div><div class="jp">${_kvEsc(v.kata)} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(v.kata)}" data-read="${SV.escAttr(v.kana||v.kata)}" data-role="kanji-contoh" onclick="event.stopPropagation();SV.btn(this)">🔊</button></div><div class="r">${_kvEsc(v.kana)}</div></div>
+            <div class="id">${_kvEsc(v.arti)} <span class="kv-go">›</span></div>
+          </div>`).join("")}
+        </div>
+        <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
           <button class="btn gold" onclick="kvStudy(${idx},'flashcard')">🃏 Flashcard kosakata Kanji ini</button>
           <button class="btn ghost" onclick="kvStudy(${idx},'multiple')">✅ Pilihan ganda</button>
-        </div>` : ""}
+        </div>` : `<p class="kv-note">Belum ada kosakata untuk Kanji ini di database.</p>`) : (contoh.length ? `<div class="contoh-list">
+          <h3>Contoh kosakata</h3>
+          ${contoh.map(c => `<div class="contoh-item">
+            <div><div class="jp">${c.k} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(c.k)}" data-read="${SV.escAttr(c.r||c.k)}" data-role="kanji-contoh" onclick="SV.btn(this)">🔊</button></div><div class="r">${c.r||""}</div></div>
+            <div class="id">${c.a||""}</div>
+          </div>`).join("")}
+        </div>` : "")}
         <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:16px;">
           <button class="btn" data-say="${SV.escAttr(k)}" data-role="kanji" onclick="SV.btn(this)">🔊 Dengar</button>
           <button class="btn ghost" onclick="showStrokeOrder('${(k||"").replace(/'/g,"")}')">書き順を見る</button>
@@ -3332,7 +3340,7 @@ function _autoSpeakJP(txt){
   try { window.speakJP(txt); } catch(e){}
 }
 
-/* ========== KOSAKATA KANJI N3: detail, latihan, flashcard ========== */
+/* ========== KOSAKATA KANJI (N5-N1): detail, latihan, flashcard ========== */
 const _kvEsc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 const _kvLatNo = (v) => v.kosNo != null ? 100000 + v.kosNo : 200000 + v.id;   // nomor progres menulis (tidak bentrok dgn kanji/kosakata)
 function _kvCardState(v){ const c = state.srs && state.srs[v.key]; return c ? _cardStatus(c) : null; }
@@ -3341,14 +3349,15 @@ async function _kvEnsureCard(v){
   return false;
 }
 async function _kvSentence(v){
+  const sj = v.src && (v.src.contoh || v.src.ej);   // kosakata tertaut punya kalimat contoh sendiri (N5/N4/N2/N1)
+  if (sj) return { j: sj, a: v.src.arti_contoh || v.src.et || "" };
   const knj = await loadMateri("kanji", state.level);
   for (const kj of knj) for (const s of (kj.kal || [])) { if (String(s.j).replace(/\[[^\]]*\]/g, "").replace(/\s/g, "").includes(v.kata)) return s; }
   return null;
 }
-window.kvOpen = async (ki, ci) => {
-  const [idx, knj] = await Promise.all([_kvIndex(), loadMateri("kanji", state.level)]);
-  const c = (knj[ki]?.c || [])[ci]; if (!c) return;
-  const v = idx.byKata.get(KV.cleanKata(c.k));
+window.kvOpen = async (ki, vi) => {
+  const idx = await _kvIndex();
+  const v = (idx.perKanji[ki] || [])[vi];
   if (!v) { toast("Entri ini bukan kosakata hafalan"); return; }
   await _loadSrs();
   window._kvM = { v, list: (idx.perKanji[ki] || []).slice(), i: Math.max(0, (idx.perKanji[ki] || []).indexOf(v)), idx };
@@ -3433,8 +3442,8 @@ window.kvStudy = async (ki, mode) => {
 function _srsKey(tipe, it, idx){ if (it && it.skey) return it.skey; return tipe[0] + ":" + itemNo(it, idx); }
 
 /* ===== KOSAKATA BERBASIS KANJI (N3) =====
- * Kanji utama = indeks/kategori. Kartu hafalan = kosakata contoh (js/kanji-vocab.js). Fase 1: hanya N3. */
-const _kvOn = () => state.level === "n3";
+ * Kanji utama = indeks/kategori. Kartu hafalan = kosakata contoh (js/kanji-vocab.js). Berlaku untuk N5-N1 (struktur data sama). */
+const _kvOn = () => ["n5", "n4", "n3", "n2", "n1"].includes(state.level);
 async function _kvIndex(){
   const lvl = state.level, c = window.__kvCache;
   if (c && c.lvl === lvl) return c.idx;
@@ -3443,7 +3452,7 @@ async function _kvIndex(){
   window.__kvCache = { lvl, idx };
   return idx;
 }
-// Kartu untuk tipe hafalan "kanji"/"semua". N3: kosakata contoh (BUKAN Kanji satuan). Level lain: perilaku lama.
+// Kartu untuk tipe hafalan "kanji"/"semua": kosakata contoh (BUKAN Kanji satuan).
 function _kanjiDeckCards(knj, kos, tipe){
   if (!_kvOn()) return null;
   let cards = KV.kanjiVocabCards(KV.buildKanjiVocab(knj, kos));
@@ -3671,7 +3680,7 @@ async function _renderHafalanSelectImpl(){
         `}
       </div>
 
-      ${_kvOn() && cfg.tipe === "kanji" ? `<p class="kv-note">🈷️ Kartu berisi <b>kosakata contoh</b> dari Kanji N3 (cara baca + arti), <b>bukan</b> Kanji satuan. Kanji utama hanya jadi pengelompokan.</p>` : ""}
+      ${_kvOn() && cfg.tipe === "kanji" ? `<p class="kv-note">🈷️ Kartu berisi <b>kosakata contoh</b> dari Kanji ${state.level.toUpperCase()} (cara baca + arti), <b>bukan</b> Kanji satuan. Kanji utama hanya jadi pengelompokan.</p>` : ""}
       ${cfg.tipe === "kosakata" ? `<h3 style="margin:16px 0 8px;">Pilih kategori hafalan</h3>${posBar(kos, POS_DEF.some(d => d.k === cfg.pos) ? cfg.pos : "all", "hafPos")}` : ""}
       <h3 style="margin:16px 0 8px;">2. Rentang nomor <small style="color:var(--gray-dim); font-weight:400;">(bucket per 50)</small></h3>
       <div class="haf-chip-row">
