@@ -199,7 +199,60 @@ function greatArt(pal, ti) {
   <circle cy="50" r="7" fill="${ti >= 1 ? "#fbbf24" : "#9ca3af"}" stroke="${pal.ac2}" stroke-width="1.4"/>
   ${ti >= 5 ? `<path d="M0 -196 L4 -210 L0 -204 L-4 -210Z" fill="#fff"><animate attributeName="opacity" values=".3;1;.3" dur="1.2s" repeatCount="indefinite"/></path>` : ""}`;
 }
+function staffArt(pal, ti) {
+  const g = pal.glow || "#60a5fa";
+  return `<rect x="-3.6" y="-150" width="7.2" height="210" rx="3" fill="${pal.ac2}" stroke="${pal.ac}" stroke-width="1"/>
+  <path d="M-3.6 -20 L3.6 -14 M-3.6 -6 L3.6 0 M-3.6 8 L3.6 14" stroke="#fbbf24" stroke-width="1.2"/>
+  <path d="M-3.6 55 L0 66 L3.6 55Z" fill="#fbbf24"/>
+  <circle cy="-168" r="${ti >= 3 ? 21 : 17}" fill="none" stroke="#fbbf24" stroke-width="3"/>
+  ${ti >= 2 ? `<circle cy="-168" r="${ti >= 3 ? 27 : 23}" fill="none" stroke="#fde68a" stroke-width="1.4" stroke-dasharray="4 5"/>` : ""}
+  <circle cy="-168" r="10" fill="${g}" stroke="#fff" stroke-width="1.4"/><circle cx="-3" cy="-171" r="3" fill="#fff" opacity=".85"/>
+  ${ti >= 1 ? `<path d="M-18 -150 L0 -146 L18 -150 L0 -140Z" fill="#fbbf24" stroke="${pal.ac2}" stroke-width="1"/>` : ""}
+  ${ti >= 4 ? `<path d="M0 -194 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3Z" fill="#fde68a"><animate attributeName="opacity" values=".4;1;.4" dur="1.4s" repeatCount="indefinite"/></path>` : ""}`;
+}
+function spearArt(pal, ti) {
+  return `<rect x="-3.4" y="-150" width="6.8" height="200" rx="3" fill="${pal.ac2}" stroke="${pal.ac}" stroke-width="1"/>
+  <path d="M-3.4 -30 L3.4 -24 M-3.4 -18 L3.4 -12 M-3.4 -6 L3.4 0" stroke="#fbbf24" stroke-width="1.2"/>
+  <path d="M0 -172 L11 -150 L5 -150 L5 -142 L-5 -142 L-5 -150 L-11 -150Z" fill="${pal.m}" stroke="${ti >= 4 ? "#fbbf24" : pal.m2}" stroke-width="1.6"/>
+  <path d="M0 -168 V-146" stroke="${pal.m2}" stroke-width="1.4"/>
+  <path d="M-5 -146 L-20 -156 L-12 -142Z M5 -146 L20 -156 L12 -142Z" fill="${ti >= 3 ? pal.glow || "#c4b5fd" : pal.m2}" stroke="${pal.ac2}" stroke-width="1"/>
+  <rect x="-6" y="-142" width="12" height="6" rx="2" fill="#fbbf24" stroke="${pal.ac2}" stroke-width="1"/>
+  <path d="M-4 50 L0 62 L4 50Z" fill="${pal.m}" stroke="${pal.m2}" stroke-width="1.2"/>
+  ${ti >= 2 ? `<circle cy="-139" r="2.6" fill="${pal.glow}"/>` : ""}`;
+}
+function scytheArt(pal, ti) {
+  return `<rect x="-3.6" y="-135" width="7.2" height="200" rx="3" fill="${pal.ac2}" stroke="${pal.ac}" stroke-width="1"/>
+  <path d="M-3.6 20 L3.6 26 M-3.6 32 L3.6 38" stroke="#fbbf24" stroke-width="1.2"/>
+  <path d="M0 -132 Q-60 -170 -88 -118 Q-58 -144 0 -118Z" fill="${pal.m}" stroke="${ti >= 4 ? "#fbbf24" : pal.m2}" stroke-width="2"/>
+  <path d="M-4 -126 Q-52 -148 -80 -122" stroke="${ti >= 2 ? pal.glow : pal.m2}" stroke-width="${ti >= 2 ? 2.2 : 1.2}" fill="none" opacity=".9"/>
+  <rect x="-8" y="-138" width="16" height="9" rx="3" fill="#fbbf24" stroke="${pal.ac2}" stroke-width="1"/>
+  ${ti >= 3 ? `<path d="M-30 -146 l-3 -9 8 5 M-58 -140 l-4 -9 8 5" fill="${pal.m2}" stroke="${pal.ac2}" stroke-width="1"/>` : ""}
+  <path d="M-4 60 L0 72 L4 60Z" fill="#fbbf24"/>`;
+}
+function bowArt(pal, ti) {
+  const lim = ti >= 1 ? "#fbbf24" : pal.ac2;
+  return `<path d="M6 -78 Q-34 0 6 78" fill="none" stroke="${pal.ac2}" stroke-width="7" stroke-linecap="round"/>
+  <path d="M6 -78 Q-34 0 6 78" fill="none" stroke="${lim}" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="-6" y="-10" width="9" height="20" rx="3" fill="${pal.ac}" stroke="${pal.ac2}" stroke-width="1"/>
+  <path d="M6 -78 L-14 -2 L6 78" fill="none" stroke="#f1f5f9" stroke-width="1.2"/>
+  ${ti >= 2 ? `<circle cx="6" cy="-78" r="3.4" fill="${pal.glow}"/><circle cx="6" cy="78" r="3.4" fill="${pal.glow}"/>` : ""}
+  <path d="M-14 -2 H96" stroke="${pal.m2}" stroke-width="2.4"/><path d="M96 -7 L112 -2 L96 3Z" fill="${ti >= 2 ? pal.glow : pal.m}" stroke="${pal.ac2}" stroke-width="1"/>
+  <path d="M-12 -2 l-8 -5 M-12 -2 l-8 5" stroke="${ti >= 2 ? pal.glow : "#94a3b8"}" stroke-width="2"/>`;
+}
+function shieldArt(pal, ti) {
+  const rim = ti >= 1 ? "#fbbf24" : pal.m2;
+  return `<path d="M0 -50 Q34 -46 38 -30 Q38 22 0 54 Q-38 22 -38 -30 Q-34 -46 0 -50Z" fill="${ti === 0 ? "#64748b" : pal.ac}" stroke="${rim}" stroke-width="4"/>
+  <path d="M0 -44 Q28 -41 32 -28 Q32 18 0 46 Q-32 18 -32 -28 Q-28 -41 0 -44Z" fill="none" stroke="${pal.m2}" stroke-width="1.4" opacity=".8"/>
+  <path d="M0 -30 L5 -8 L24 -2 L5 4 L0 26 L-5 4 L-24 -2 L-5 -8Z" fill="${ti >= 1 ? "#fde047" : pal.m}" stroke="${pal.ac2}" stroke-width="1.2"/>
+  <circle cy="-2" r="5" fill="${ti >= 2 ? pal.glow : "#fff"}"/>
+  ${ti >= 3 ? `<path d="M-38 -30 l-8 -6 M38 -30 l8 -6" stroke="#fbbf24" stroke-width="3"/>` : ""}`;
+}
 function artFor(type, ti, pal) {
+  if (type === "staff") return staffArt(pal, ti);
+  if (type === "spear") return spearArt(pal, ti);
+  if (type === "scythe") return scytheArt(pal, ti);
+  if (type === "bow") return bowArt(pal, ti);
+  if (type === "shield") return shieldArt(pal, ti);
   if (type === "daggers") return daggerArt(pal, ti);
   if (type === "greatsword") return greatArt(pal, ti);
   if (type === "sword") return swordArt(pal, ti);
@@ -233,6 +286,11 @@ function darken(hex, k = .3) {
   const h = v => Math.round(v * (1 - k)).toString(16).padStart(2, "0"); return "#" + h(r) + h(g) + h(b);
 }
 const armPath = (sx, sy, hx, hy, out) => `M${f1(sx)} ${f1(sy)} Q${f1((sx + hx) / 2 + out * 16)} ${f1((sy + hy) / 2 + 14)} ${f1(hx)} ${f1(hy)}`;
+/* tangan mengepal: telapak besar + 4 jari terlihat melingkari gagang (vertikal) + jempol */
+const fistArt = skin => { const st = darken(skin, .3);
+  return `<rect x="-12" y="-11" width="24" height="22" rx="8" fill="${skin}" stroke="${st}" stroke-width="1.3"/>
+  <path d="M-12 -4 H12 M-12 2 H12 M-12 8 H12" stroke="${st}" stroke-width="1.1" opacity=".75"/>
+  <path d="M-12 -9 Q-17 -5 -14 3 Q-12 6 -9 4" fill="${skin}" stroke="${st}" stroke-width="1.2"/>`; };
 const SHL = [146, 218], SHR = [254, 218];
 
 export function buildWeaponLayer(type, rarity, ctx = {}) {
@@ -242,7 +300,7 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
   const skin = ctx.skin || "#f5d4b3", sl = ctx.sleeve || { c: "#ffffff", d: "#c7cde0" };
   const state = ctx.state || "idle", segs = segsFor(type, state);
   const D = segs.reduce((a, s) => a + s.st.period, 0), N = Math.max(12, Math.round(D * 8));
-  const A = { fa: [], far: [], aw: [], af: [], hwx: [], hwy: [], hfx: [], hfy: [], wt: [], wr: [], fo: [], fs: [], orb: [], orbo: [] };
+  const A = { hwr: [], hfr: [], fa: [], far: [], aw: [], af: [], hwx: [], hwy: [], hfx: [], hfy: [], wt: [], wr: [], fo: [], fs: [], orb: [], orbo: [] };
   const wSh = sp.side === "R" ? SHR : SHL, fSh = sp.side === "R" ? SHL : SHR, out = sp.side === "R" ? 1 : -1;
   const winp = sp.win;
   let fxPts = [];
@@ -252,6 +310,7 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
     if (P.two > 0) { const g = loc(wh, 0, P.g2); fh = { x: lerp(fh.x, g.x, P.two), y: lerp(fh.y, g.y, P.two) }; }
     A.aw.push(armPath(wSh[0], wSh[1], wh.x, wh.y, out)); A.af.push(armPath(fSh[0], fSh[1], fh.x, fh.y, -out));
     A.fa.push(`${f1(fh.x)} ${f1(fh.y)}`); A.far.push(`${f1(P.fr)} 0 0`);
+    A.hwr.push(`${f1(wh.rot)} 0 0`); A.hfr.push(`${P.two > .5 ? f1(wh.rot) : (type === "daggers" ? f1(P.fr) : 0)} 0 0`);
     A.hwx.push(f1(wh.x)); A.hwy.push(f1(wh.y)); A.hfx.push(f1(fh.x)); A.hfy.push(f1(fh.y));
     if (type === "grimoire_float") { A.wt.push(`200 ${f1(P.by)}`); A.wr.push("0 0 0"); } else { A.wt.push(`${f1(wh.x)} ${f1(wh.y)}`); A.wr.push(`${f1(wh.rot)} 0 0`); }
     const inWin = n === "attack" && p > winp[0] && p < winp[1], u = inWin ? (p - winp[0]) / (winp[1] - winp[0]) : 0;
@@ -272,7 +331,7 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
   const arm = (key, o) => `<path d="${A[key][0]}" stroke="${sl.d}" stroke-width="24" fill="none" stroke-linecap="round">${an("d", A[key])}</path><path d="${A[key][0]}" stroke="${sl.c}" stroke-width="20" fill="none" stroke-linecap="round">${an("d", A[key])}</path>`;
   const hand = (cxk, cyk) => sp.palm
     ? `<ellipse rx="13" ry="7" cx="${A[cxk][0]}" cy="${A[cyk][0]}" fill="${skin}" stroke="${darken(skin, .25)}" stroke-width="1.2">${an("cx", A[cxk])}${an("cy", A[cyk])}</ellipse>`
-    : `<circle r="13.5" cx="${A[cxk][0]}" cy="${A[cyk][0]}" fill="${skin}">${an("cx", A[cxk])}${an("cy", A[cyk])}</circle>`;
+    : `<g transform="translate(${A[cxk][0]} ${A[cyk][0]})"><animateTransform attributeName="transform" type="translate" values="${A[cxk].map((x, i) => x + " " + A[cyk][i]).join(";")}" ${dur}/><g><animateTransform attributeName="transform" type="rotate" values="${(cxk === "hwx" ? A.hwr : A.hfr).join(";")}" ${dur}/>${fistArt(skin)}</g></g>`;
 
   /* efek serangan: tebasan (sword/katana), dentuman (hammer), ledakan sihir (grimoire) */
   let fx = "";
@@ -345,12 +404,17 @@ const NAMES = {
   grimoire_held:  ["Grimoire Dasar", "Grimoire Zamrud", "Grimoire Safir", "Grimoire Arcane Ungu", "Grimoire Emas Legendaris", "Grimoire Mythic Bintang"],
   daggers:        ["Belati Kembar Latihan", "Belati Kembar Zamrud", "Belati Kembar Safir", "Belati Kembar Bayangan Ungu", "Belati Kembar Emas Senja", "Belati Kembar Mythic Eklips"],
   greatsword:     ["Pedang Besar Besi", "Pedang Besar Zamrud", "Pedang Besar Safir Ksatria", "Pedang Besar Arcane", "Pedang Besar Surya Emas", "Pedang Besar Mythic Fajar"],
+  staff:          ["Tongkat Kayu Latihan", "Tongkat Zamrud", "Tongkat Safir Penyihir", "Tongkat Arcane Cincin", "Tongkat Surya Emas", "Tongkat Mythic Galaksi"],
+  spear:          ["Tombak Besi Latihan", "Tombak Zamrud", "Tombak Safir Ksatria", "Tombak Petir Ungu", "Tombak Surya Emas", "Tombak Mythic Fajar"],
+  scythe:         ["Sabit Petani", "Sabit Zamrud", "Sabit Safir", "Sabit Bayangan Ungu", "Sabit Emas Senja", "Sabit Mythic Eklips"],
+  bow:            ["Busur Kayu Latihan", "Busur Zamrud", "Busur Safir Pemburu", "Busur Arcane", "Busur Emas Surya", "Busur Mythic Bintang"],
+  shield:         ["Perisai Besi Latihan", "Perisai Zamrud", "Perisai Safir Ksatria", "Perisai Arcane", "Perisai Surya Emas", "Perisai Mythic Fajar"],
   grimoire_float: ["Buku Terbang Dasar", "Buku Terbang Zamrud", "Buku Terbang Safir", "Buku Terbang Arcane", "Buku Terbang Emas Legendaris", "Buku Terbang Mythic Galaksi"],
 };
-const ICON = { sword: "🗡️", katana: "⚔️", hammer: "🔨", grimoire_held: "📖", grimoire_float: "📘", daggers: "🗡️", greatsword: "⚔️" };
+const ICON = { sword: "🗡️", katana: "⚔️", hammer: "🔨", grimoire_held: "📖", grimoire_float: "📘", daggers: "🗡️", greatsword: "⚔️", staff: "🪄", spear: "🔱", scythe: "🌙", bow: "🏹", shield: "🛡️" };
 const RT = { common: [[400, 1500], 1], uncommon: [[2500, 5000], 10], rare: [[9000, 16000], 25], epic: [[25000, 36000], 50], legendary: [[50000, 80000], 80], mythic: [[100000, 130000], 90] };
 const TYPES = ["grimoire_held", "grimoire_float", "hammer", "sword", "katana"];
-const NEW_TYPES = ["daggers", "greatsword"];
+const NEW_TYPES = ["daggers", "greatsword", "staff", "spear", "scythe", "bow", "shield"];
 export const WEAPON_ANIM_TYPES = TYPES.concat(NEW_TYPES, ["staff", "spear", "scythe", "bow", "shield", "carry"]);
 
 /* Senjata lama: dipetakan ke tipe animasi; gambar aslinya dipertahankan, hanya dipasang ke pose + lengan.
