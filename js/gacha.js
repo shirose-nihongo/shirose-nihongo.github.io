@@ -37,22 +37,72 @@ async function render() {
     <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item yang sudah dimiliki diganti koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
     <div class="panel" style="margin-top:12px;"><h3>🎁 Semua hadiah (${items.length}) — dimiliki ${items.filter(x => inv.includes(x.i) || (st.siswa?.karakter?.inventory || []).includes(x.i)).length}</h3>${galeri}</div>`;
 }
+
+/* ===== Animasi mesin slot ===== */
+const ORDR = ["mythic", "legendary", "epic", "rare", "uncommon", "common"];
+const SYM = { common: "🍒", uncommon: "🍋", rare: "🔔", epic: "💎", legendary: "7️⃣", mythic: "👑" };
+const FILL = ["🍒", "🍋", "🔔", "💎", "7️⃣", "👑", "🍀", "⭐"];
+const rnd = (a) => a[Math.floor(Math.random() * a.length)];
+/* Kombinasi mengikuti hasil undian ASLI (peluang tidak berubah): 2 sama = common/uncommon, 3 sama = rare ke atas */
+function pola(r) {
+  const s = SYM[r];
+  if (r === "common" || r === "uncommon") { const o = rnd(FILL.filter(x => x !== s && x !== SYM.epic && x !== SYM.legendary && x !== SYM.mythic)); const a = [s, s, o]; const p = Math.floor(Math.random() * 3); [a[p], a[2]] = [a[2], a[p]]; return a; }
+  return [s, s, s];
+}
+function kartuHadiah(x) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;"><div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat → +${CONFIG.DUP_REFUND[x.rarity]} 🪙</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
+function playSlot(res) {
+  return new Promise((done) => {
+    const list = res.results.slice().sort((a, b) => ORDR.indexOf(a.rarity) - ORDR.indexOf(b.rarity)), best = list[0], target = pola(best.rarity), c = RAR[best.rarity][1];
+    const o = document.createElement("div"); o.id = "gfx";
+    o.innerHTML = `<style>#gfx{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.82);display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto;color:#fff}
+#gfx .box{width:min(560px,100%);text-align:center}#gfx .reels{display:flex;gap:10px;justify-content:center;margin:16px 0;padding:16px;border-radius:18px;background:linear-gradient(#222,#111);border:3px solid #ffd166;box-shadow:0 0 30px #ffd16655 inset}
+#gfx .reel{width:88px;height:96px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:52px;color:#000;box-shadow:inset 0 0 14px #0005;transition:transform .15s}
+#gfx .reel.spin{filter:blur(1.2px);animation:gfxShake .12s infinite}@keyframes gfxShake{50%{transform:translateY(5px)}}
+#gfx .reel.lock{animation:gfxPop .35s}@keyframes gfxPop{40%{transform:scale(1.18)}}
+#gfx .win{animation:gfxWin .9s infinite}@keyframes gfxWin{50%{box-shadow:0 0 34px 8px var(--c)}}
+#gfx .gfx-card{display:inline-block;min-width:200px;margin:6px;padding:12px 16px;border-radius:14px;border:2px solid;background:#161616}
+#gfx .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px}
+#gfx button{background:#fff;color:#111;border:0;border-radius:10px;padding:9px 18px;font-weight:800;cursor:pointer;margin:6px}
+#gfx .conf{position:fixed;top:-20px;font-size:22px;animation:gfxFall linear forwards;pointer-events:none}@keyframes gfxFall{to{transform:translateY(110vh) rotate(360deg);opacity:.9}}</style>
+<div class="box"><div style="font-size:14px;letter-spacing:.2em;opacity:.8;">🎰 GACHA ${res.results.length > 1 ? "×" + res.results.length : ""}</div>
+<div class="reels" id="gfx-reels"><div class="reel spin">?</div><div class="reel spin">?</div><div class="reel spin">?</div></div>
+<div id="gfx-out" style="min-height:120px;"></div><div id="gfx-btn"><button id="gfx-skip">Lewati ⏭</button></div></div>`;
+    document.body.appendChild(o);
+    const reels = [...o.querySelectorAll(".reel")], tm = [];
+    const spin = reels.map(r => setInterval(() => { r.textContent = rnd(FILL); }, 75));
+    let finished = false;
+    const stop = (i) => { clearInterval(spin[i]); reels[i].classList.remove("spin"); reels[i].classList.add("lock"); reels[i].textContent = target[i]; };
+    const tutup = () => { tm.forEach(clearTimeout); spin.forEach(clearInterval); o.remove(); done(); };
+    const tampil = () => {
+      if (finished) return; finished = true; [0, 1, 2].forEach(stop);
+      const rs = o.querySelector("#gfx-reels"); rs.style.setProperty("--c", c); if (ORDR.indexOf(best.rarity) <= 3) rs.classList.add("win");
+      if (ORDR.indexOf(best.rarity) <= 1) for (let i = 0; i < 30; i++) { const e = document.createElement("i"); e.className = "conf"; e.textContent = rnd(["✨", "⭐", "🎉", "💎"]); e.style.left = Math.random() * 100 + "vw"; e.style.animationDuration = 1.6 + Math.random() * 1.6 + "s"; o.appendChild(e); }
+      const sisa = list.slice(1);
+      o.querySelector("#gfx-out").innerHTML = (res.results.length > 1 ? '<div style="opacity:.8;font-size:13px;">Hadiah terbaik</div>' : "") + kartuHadiah(best) + (sisa.length ? `<div style="opacity:.8;font-size:13px;margin-top:10px;">Hadiah lainnya</div><div class="grid">${sisa.map(kartuHadiah).join("")}</div>` : "") + (res.refund ? `<div style="margin-top:8px;color:#ffd166;">+${res.refund} 🪙 dari duplikat</div>` : "");
+      o.querySelector("#gfx-btn").innerHTML = '<button id="gfx-ok">Tutup</button>'; o.querySelector("#gfx-ok").onclick = tutup;
+    };
+    tm.push(setTimeout(() => stop(0), 1100), setTimeout(() => stop(1), 1800), setTimeout(() => stop(2), 2600), setTimeout(tampil, 3000));
+    o.querySelector("#gfx-skip").onclick = tampil;
+  });
+}
 window.GACHA = {
   async tarik(n) {
-    if (busy) return; busy = true;
+    if (busy) return; busy = true; let fresh = null;
     try {
       if (GACHA_URL) {
         const tok = await FB.getIdToken();
         const r = await fetch(GACHA_URL, { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer " + tok }, body: JSON.stringify({ n }) });
         const j = await r.json();
         if (!r.ok) throw new Error(j.error || "Gagal");
-        last = j;
-      } else last = await tarikLokal(n);   // MODE LOKAL sementara (belum ada server)
+        last = fresh = j;
+      } else last = fresh = await tarikLokal(n);   // MODE LOKAL sementara (belum ada server)
       const gs = await FB.getGachaState(); if (window.SHIROSE_THEME) window.SHIROSE_THEME.setOwned(gs && gs.inv || []);
       if (window.__SHIROSE_STATE) window.__SHIROSE_STATE.gami.koin = last.koin;
       const c = document.getElementById("chip-coin"); if (c && !(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins())) c.textContent = last.koin;
     } catch (e) { if (window.toast) window.toast("❌ " + (e.message || e)); }
-    busy = false; route("gacha");
+    busy = false;
+    if (fresh && fresh.results) { try { await playSlot(fresh); } catch (e) {} }
+    route("gacha");
   },
 };
 /* Mode lokal: undian di perangkat, saldo lewat dompet tunggal. Cukup untuk dipakai sekarang; ganti ke server (GACHA_URL) agar tak bisa dicurangi. */
