@@ -25,3 +25,10 @@ Kualitas referensi (shading sel, ornamen, rim light) adalah ilustrasi raster. SV
 ## Update — Shirose Signature Set (SVG, bukan raster)
 Ditambahkan di `js/shirose-set.js`: `shirose_gakuran`, `shirose_poni`, `shirose_hitam`, `shirose_sepatu`, `shirose_emas` (sayap 4 lapis), `shirose_api` (aura); senjata baru `wa_daggers_*` & `wa_greatsword_*` (6 rarity, pose idle/ready/attack, dua tangan untuk greatsword, dua belati untuk daggers).
 QC `validate_identity.py --no-ssim` (idle): palette wing_gold 0.93, hair_navy 0.87, skin 0.85, glasses_pink 0.55, emblem_purple 0.5 — lulus; histogram korelasi 0.25 → FAIL (latar & gaya render berbeda dari raster). Cek mata: identitas cocok; beda proporsi (badan lebih tinggi-kurus, kepala lebih kecil), tanpa rim light/shading sel. Masih ≈ "dekat", belum "setara" referensi.
+
+## Update 2 — Standar badan v2 (fondasi)
+- `baseBody` digambar ulang: kepala persegi-membulat, mata besar berkilau, pipi blush, mulut merah, tangan mitten+jempol, kaki & sepatu dasar lebih tebal. Kontrak koordinat item tidak berubah → 51 pakaian, 36 celana, 33 sepatu, 31 rambut, 40 aksesori, 105 senjata tetap cocok (diuji 840 kombinasi senjata×state×outfit tanpa error).
+- Filter `shiro-cel` (outline berwarna + rim light + bayangan sisi) per-slot → semua item lama & baru seragam.
+- Generator pakaian/celana/sepatu diberi detail: bayangan kain, lipatan, hem, cuff, kerah, jahitan, sol, highlight.
+- Tee dasar tidak lagi mengintip di bawah pakaian lengan panjang.
+- Stance kaki per senjata (kaki melebar saat ready/attack) untuk SEMUA celana/sepatu via clip kiri/kanan.

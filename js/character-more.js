@@ -40,6 +40,14 @@ function outfit(o) {
   if (st === "robe") s += `<path d="M200 196 V345" stroke="${d}" stroke-width="3"/><path d="M135 300 H265" stroke="${o.obi || "#ffd700"}" stroke-width="8"/>`;
   if (st === "yukata") for (let i = 0; i < 9; i++) s += `<circle cx="${150 + (i % 3) * 50}" cy="${225 + Math.floor(i / 3) * 40}" r="7" fill="${o.s2 || "#fff"}" opacity=".7"/>`;
   if (st === "sweater") for (let y = 232; y < 345; y += 26) s += `<path d="M131 ${y} q10 6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="${o.s2 || "#fff"}" stroke-width="3" opacity=".8"/>`;
+  /* detail standar v2: bayangan kain, lipatan, hem, cuff, kerah (mengikuti referensi) */
+  const long = st !== "tee" && st !== "tank", dk = d.length >= 7 ? d.slice(0, 7) : "#000";
+  s += `<defs><linearGradient id="shiro-ofl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".2"/></linearGradient></defs>
+    <path d="${TORSO}" fill="url(#shiro-ofl)"/>
+    <path d="M150 300 Q160 285 158 262 M250 300 Q242 285 244 262 M186 334 Q192 312 190 296 M214 334 Q210 316 212 300" stroke="${dk}" stroke-width="1.6" fill="none" opacity=".28" stroke-linecap="round"/>
+    <path d="M131 338 H269" stroke="${dk}" stroke-width="3.2" opacity=".42"/>
+    ${st === "tank" || st === "suit" || st === "jacket" || st === "hoodie" || st === "kimono" || st === "armor" || st === "robe" ? "" : `<path d="M182 197 Q200 214 218 197" fill="none" stroke="${dk}" stroke-width="3" opacity=".5" stroke-linecap="round"/>`}
+    ${long ? `<path d="M115 296 L135 326" stroke="${dk}" stroke-width="5" opacity=".45"/><path d="M285 296 L265 326" stroke="${dk}" stroke-width="5" opacity=".45"/>` : ""}`;
   return s + deco + t;
 }
 const OUT = [
@@ -80,6 +88,11 @@ function pants(o) {
   if (st === "gold") s += `<path d="M164 360 H236 M${lb} ${end - 12} H${lb + 31} M${rb - 31} ${end - 12} H${rb}" stroke="${c2}" stroke-width="3"/>`;
   if (st === "wrap") s += `<path d="M${lb} 418 l31-8 M${lb} 428 l31-8 M${lb} 438 l31-8 M${rb - 31} 418 l31-8 M${rb - 31} 428 l31-8 M${rb - 31} 438 l31-8" stroke="${c2}" stroke-width="3"/>`;
   if (st === "rip") s += `<path d="M176 400 l12 4 M178 408 l10 3 M214 425 l12 4" stroke="${SK}" stroke-width="3"/>`;
+  /* detail standar v2: pinggang, jahitan, lipatan lutut, hem, highlight sisi */
+  s += `<path d="M167 346 H233" stroke="${d}" stroke-width="1.4" opacity=".5"/><rect x="190" y="336" width="20" height="9" rx="2" fill="none" stroke="${d}" stroke-width="1" opacity=".5"/>
+    <path d="M${lx + 9} 352 L${lb + 6} ${end - 6} M${rb - 6 + 25} 352 L${rb + 8} ${end - 6}" stroke="#fff" stroke-width="2.4" opacity=".16"/>
+    <path d="M178 ${Math.min(end - 40, 405)} q8 5 16 0 M206 ${Math.min(end - 40, 405)} q8 5 16 0" stroke="${d}" stroke-width="1.4" fill="none" opacity=".4"/>
+    <path d="M${lb} ${end - 3} H${lb + 31} M${rb - 31} ${end - 3} H${rb}" stroke="${d}" stroke-width="2.4" opacity=".5"/>`;
   return s;
 }
 const PANTS = [
@@ -108,6 +121,7 @@ function shoe(o) {
   else if (st === "wing") s = twin(x => `<path d="M${x} 450 L${x + 40} 450 L${x + 42} 465 L${x - 2} 465 Z" ${sw}/>`) + `<path d="M160 452 q-24-6-26 -22 q16 6 26 8Z M240 452 q24-6 26-22 q-16 6-26 8Z" fill="${c2}" stroke="${d}" stroke-width="1"/>`;
   else if (st === "glow") s = twin(x => `<path d="M${x} 450 L${x + 40} 450 L${x + 42} 465 L${x - 2} 465 Z" ${sw}/><rect x="${x - 2}" y="464" width="44" height="3" fill="${c2}"><animate attributeName="opacity" values=".3;1;.3" dur="1.2s" repeatCount="indefinite"/></rect>`);
   else if (st === "spike") s = twin(x => `<path d="M${x} 450 L${x + 40} 450 L${x + 42} 465 L${x - 2} 465 Z" ${sw}/><path d="M${x + 2} 450 l4-8 4 8 4-8 4 8 4-8 4 8 4-8 4 8" fill="${c2}"/>`);
+  if (st !== "sandal" && st !== "wing") s += twin(x => `<path d="M${x - 1} 463 H${x + 42}" stroke="#fff" stroke-width="2" opacity=".55"/><path d="M${x + 6} 453 Q${x + 18} 449 ${x + 32} 453" stroke="#fff" stroke-width="1.6" fill="none" opacity=".5"/><path d="M${x + 20} 452 V462" stroke="${d}" stroke-width="1" opacity=".4"/>`);
   return s;
 }
 const SHOESL = [
