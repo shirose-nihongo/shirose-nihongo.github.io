@@ -1,7 +1,7 @@
 /* Halaman Gacha (#gacha). RNG & potong koin di server (cloudflare/gacha-worker.js). Klien hanya menampilkan hasil. */
 import { CONFIG, CONFIG_FREE, rollMany } from "../cloudflare/gacha-core.js";
 import { ITEMS } from "../cloudflare/gacha-items.js";
-import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261115s";
+import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261116j";
 /* gambar barang: karakter memakai barang itu (SVG animasi bawaan item + efek melayang/bersinar per kelangkaan) */
 const KAT_OF = {}; for (const [k, o] of Object.entries(CATALOG)) for (const id of Object.keys(o)) if (id !== "none") KAT_OF[id] = k;
 const ANIM = { item_tangan: "gaSwing", aura: "gaPulse", sayap: "gaFlap", aksesori: "gaBob", pakaian: "gaBob", celana: "gaBob", sepatu: "gaBob", rambut: "gaBob" };
@@ -53,7 +53,7 @@ async function render() {
       <button class="btn ghost" ${busy ? "disabled" : ""} onclick="GACHA.auto()">▶ Mulai</button>
       <small style="color:var(--gray);flex-basis:100%;">Setiap putaran tetap menampilkan slot, bisa dipercepat 1×/2×/4×/8× atau Stop kapan saja. Berhenti sendiri kalau koin tidak cukup; ringkasan di akhir.</small></div>
     ${FB.hasUnlimitedCoins && FB.hasUnlimitedCoins() ? '<p style="font-size:12px;color:#ffb703;">🛡️ Akun moderator: tarik GRATIS, tapi peluang lebih rendah (Epic 1.3% · Legendary 0.19% · Mythic 0.01%) dan tanpa pity.</p>' : ""}<p style="font-size:11px;color:var(--gray);">Peluang: ${CONFIG.RARITY.map(r => RAR[r.id][0] + " " + r.pct + "%").join(" · ")}</p>
-    ${GACHA_URL ? "" : '<p style="font-size:11px;color:var(--gray);">Mode sementara: undian dijalankan di perangkat (server gacha belum dipasang).</p>'}</div>${hasil}
+    ${GACHA_URL ? "" : '<p style="font-size:11px;color:var(--gray);">Undian, pity, dan inventaris gacha disimpan di perangkat ini (tanpa server).</p>'}</div>${hasil}
     <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item duplikat tidak mendapat pengembalian koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
     <div class="panel" style="margin-top:12px;"><h3>🎁 Semua hadiah (${items.length}) — dimiliki ${items.filter(x => inv.includes(x.i) || (st.siswa?.karakter?.inventory || []).includes(x.i)).length}</h3>${galeri}</div>`;
 }
@@ -198,16 +198,15 @@ async function tarikLokal(n) {
   const price = n === 10 ? CONFIG.PRICE_10 : CONFIG.PRICE_1;
   const unl = !!(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins());
   const g = (await FB.getGachaState()) || { sinceEpic: 0, sinceLegend: 0, inv: [] };
-  let saldo = null;
-  if (!unl) { saldo = await FB.tambahKoin(-price, "gacha x" + n); if (saldo === null) throw new Error("Dompet belum siap, coba lagi"); }
+  const st = window.__SHIROSE_STATE; const saldo = Number(st && st.gami && st.gami.koin) || 0;
+  if (!unl && saldo < price) throw new Error("Koin tidak cukup!");
   const own = Array.from(new Set([...(g.inv || []), ...(FB.ownedShopIds ? FB.ownedShopIds() : [])]));
   const r = rollMany(n, { sinceEpic: g.sinceEpic || 0, sinceLegend: g.sinceLegend || 0 }, own, undefined, unl ? CONFIG_FREE : CONFIG);
   const kind = Object.fromEntries(ITEMS.map(x => [x.id, x.kind]));
   const baru = r.results.filter(x => !x.dup).map(x => x.item);
-  try {
-    await FB.saveGachaState({ sinceEpic: r.pity.sinceEpic, sinceLegend: r.pity.sinceLegend, inv: Array.from(new Set([...(g.inv || []), ...baru])) }, baru.filter(i => kind[i] === "shop"));
-  } catch (e) { if (!unl) { try { await FB.tambahKoin(price, "gacha batal (gagal simpan)"); } catch (x) {} } throw new Error("Gagal menyimpan hasil, koin dikembalikan"); }
-  const akhir = saldo;
-  return { results: r.results, refund: 0, koin: unl ? (window.__SHIROSE_STATE?.gami?.koin || 0) : akhir, pity: r.pity };
+  await FB.saveGachaState({ sinceEpic: r.pity.sinceEpic, sinceLegend: r.pity.sinceLegend, inv: Array.from(new Set([...(g.inv || []), ...baru])) }, baru.filter(i => kind[i] === "shop"));
+  let akhir = saldo;
+  if (!unl) { FB.gachaSpend(price); akhir = saldo - price; if (st && st.gami) st.gami.koin = akhir; }
+  return { results: r.results, refund: 0, koin: unl ? saldo : akhir, pity: r.pity };
 }
 export const GACHA_ROUTES = { gacha: () => render() };

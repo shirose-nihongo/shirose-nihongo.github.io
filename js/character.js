@@ -19,7 +19,7 @@ export function baseBody(skinKey = "light") {
     <ellipse cx="200" cy="470" rx="90" ry="12" fill="#000" opacity=".15"/>
 
     <!-- Legs — default: celana putih polos -->
-    <g data-slot="legs">
+    <g data-slot="lower" transform="translate(200 0) scale(1.15 1) translate(-200 0)"><g data-slot="legs">
       <rect x="170" y="340" width="26" height="110" rx="10" fill="#f7f8fc" stroke="#c7cde0" stroke-width="2"/>
       <rect x="204" y="340" width="26" height="110" rx="10" fill="#f7f8fc" stroke="#c7cde0" stroke-width="2"/>
     </g>
@@ -28,7 +28,7 @@ export function baseBody(skinKey = "light") {
     <g data-slot="shoes">
       <ellipse cx="183" cy="460" rx="20" ry="9" fill="#1a1f33"/>
       <ellipse cx="217" cy="460" rx="20" ry="9" fill="#1a1f33"/>
-    </g>
+    </g><!--@C--></g>
 
     <!-- Torso + arms — default: kaos putih polos lengan pendek -->
     <g data-slot="pakaian">
@@ -887,7 +887,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   let base = baseBody(skinKey);
   // Celana (kategori baru) digambar di bawah baju: disisipkan sebelum grup pakaian bawaan
   const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana">${CELANA[eq.celana].svg()}</g>` : "";
-  if (celanaSvg) base = base.replace('<g data-slot="pakaian">', celanaSvg + '<g data-slot="pakaian">');
+  if (celanaSvg) base = base.replace("<!--@C-->", celanaSvg);
   // Sayap (baru) — di belakang badan, setelah aura
   const sayapSvg = (eq.sayap && eq.sayap !== "none" && SAYAP[eq.sayap]?.svg) ? `<g data-slot="sayap">${SAYAP[eq.sayap].svg()}</g>` : "";
 
@@ -900,7 +900,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   // Overlay sepatu
   let sepatuOverlay = "";
   if (eq.sepatu && eq.sepatu !== "shoes_default" && SHOES[eq.sepatu]?.svg) {
-    sepatuOverlay = `<g data-slot="sepatu-overlay">${SHOES[eq.sepatu].svg()}</g>`;
+    sepatuOverlay = `<g data-slot="sepatu-overlay" transform="translate(200 0) scale(1.15 1) translate(-200 0)">${SHOES[eq.sepatu].svg()}</g>`;
   }
 
   // Hair (OPTIONAL — default botak)
@@ -915,12 +915,17 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     aksesoriSvg = `<g data-slot="aksesori">${ACCESSORIES[eq.aksesori].svg()}</g>`;
   }
 
-  // Handheld
+  // Handheld — senjata ber-animType otomatis memakai pose + animasi bawaannya (weapon-anim.js)
   let handheldSvg = "";
   if (eq.item_tangan && eq.item_tangan !== "none" && HANDHELD[eq.item_tangan]?.svg) {
-    handheldSvg = `<g data-slot="item_tangan">${HANDHELD[eq.item_tangan].svg()}</g>`;
+    const hItem = HANDHELD[eq.item_tangan];
+    const wp = hItem.animType ? applyWeaponPose({ item: hItem, base, pakaianOverlay, skin: (SKIN_TONES[skinKey] || SKIN_TONES.light).skin, state: opts.wstate || "idle" }) : null;
+    if (wp) { base = wp.base; pakaianOverlay = wp.pakaianOverlay; handheldSvg = `<g data-slot="item_tangan">${wp.handheld}</g>`; }
+    else handheldSvg = `<g data-slot="item_tangan">${hItem.svg()}</g>`;
   }
 
+  const bigHand = (x) => x ? x.replace(/<circle cx="(123|277)" cy="325" r="11"/g, '<circle cx="$1" cy="325" r="14"') : x;
+  base = bigHand(base); pakaianOverlay = bigHand(pakaianOverlay);
   return `
     <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
@@ -947,9 +952,12 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261115s";
-import { extend2 } from "./character-more2.js?v=20261115s";
+import { extend } from "./character-more.js?v=20261116j";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116j";
+import { extendShirose } from "./shirose-set.js?v=20261116j";
+import { extend2 } from "./character-more2.js?v=20261116j";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
-extend(__X); extend2(__X);
+extend(__X); extend2(__X); extendWeaponAnim(__X);
+extendShirose(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;

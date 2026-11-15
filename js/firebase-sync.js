@@ -26,7 +26,7 @@ import {
 import {
   getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc,
   collection, getDocs, onSnapshot, query, orderBy, limit, addDoc,
-  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction
+  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction, increment
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -145,8 +145,15 @@ export async function setUnlimitedCoins(uid, enable) {
 // Unlimited coins when developer OR siswa doc explicitly has the permission.
 // Note: permission must come from a trusted write (admin/dev) — client shouldn't
 // grant it to itself. See firestore.rules.example.
+/* Akun dengan akses penuh equipment + koin tak terbatas (diatur pemilik). Hanya berlaku di sisi klien (shop/inventory/wardrobe). */
+const FULL_ACCESS_EMAILS = ["arumiganteng@gmail.com"];
+export function hasFullAccess(user = currentUser) {
+  const em = (user && user.email || "").trim().toLowerCase();
+  return !!em && FULL_ACCESS_EMAILS.includes(em);
+}
 export function hasUnlimitedCoins() {
   if (isDeveloper(currentUser)) return true;
+  if (hasFullAccess(currentUser)) return true;
   return !!(currentSiswaDoc?.permissions?.unlimited_coins);
 }
 export function getUser() { return currentUser; }
@@ -418,7 +425,7 @@ export async function beliItem(kategori, itemId, harga, level) {
   const ref = doc(db, "siswa", uid);
   const siswa = (await getDoc(ref)).data();
   // Developer / permission-granted accounts bypass coin deduction entirely.
-  const unlimited = isDeveloper(currentUser) || !!(siswa?.permissions?.unlimited_coins);
+  const unlimited = isDeveloper(currentUser) || hasFullAccess(currentUser) || !!(siswa?.permissions?.unlimited_coins);
   const inv0 = siswa.karakter?.inventory || [];
   if (inv0.includes(itemId)) throw new Error("Sudah dimiliki");
   const gamiRef = doc(db, "siswa", uid, "gami", level);
@@ -453,47 +460,75 @@ export async function equipItem(kategori, itemId) {
  * Saldo lama di gami/{lvl}.koin dimigrasi SEKALI per level (ditandai migrasi[lvl]) lalu tidak dipakai lagi (dokumen lama tidak dihapus).
  * Jika dompet tidak bisa diakses (rules/jaringan) → kembali ke perilaku lama per level, tidak ada koin hilang.
  * Log transaksi: siswa/{uid}/wallet_log/{id} (best-effort). */
+/* ===== GACHA 100% LOKAL (tanpa Firestore): pity, inventaris, dan koin yang sudah dibelanjakan disimpan di perangkat siswa. =====
+ * Saldo efektif = saldo dompet server − koin yang dipakai gacha di perangkat ini. */
+function _gLocal() { try { return JSON.parse(localStorage.getItem("shirose-gacha:" + (currentUser && currentUser.uid)) || "null") || {}; } catch (e) { return {}; } }
+function _gSave(o) { try { localStorage.setItem("shirose-gacha:" + currentUser.uid, JSON.stringify(o)); } catch (e) {} }
+function _gSpent() { return Number(_gLocal().spent) || 0; }
+export function gachaSpend(price) { const o = _gLocal(); o.spent = (Number(o.spent) || 0) + price; _gSave(o); }
+export function gachaRefund(price) { const o = _gLocal(); o.spent = Math.max(0, (Number(o.spent) || 0) - price); _gSave(o); }
 const WALLET_LVLS = ["n5","n4","n3","n2","n1","ir0","ir1","ir2"];
-let _walletOff = false;
+let _walletOff = false, _walletErr = "";
+export function walletError() { return _walletErr; }
 async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   const uid = currentUser.uid, wref = doc(db, "siswa", uid, "wallet", "main");
   const grefs = WALLET_LVLS.map(l => doc(db, "siswa", uid, "gami", l));
   const out = await runTransaction(db, async (tx) => {
-    const ws = await tx.get(wref); const gs = await Promise.all(grefs.map(r => tx.get(r)));
+    const ws = await tx.get(wref);
     const w = ws.exists() ? ws.data() : { koin: 0, migrasi: {} }; w.migrasi = { ...(w.migrasi || {}) }; w.koin = w.koin || 0;
-    WALLET_LVLS.forEach((l, i) => { if (!w.migrasi[l]) { w.koin += gs[i].exists() ? (gs[i].data().koin || 0) : 0; w.migrasi[l] = true; } });
+    // Baca dokumen gami lama HANYA untuk level yang belum dimigrasi (hemat kuota Firestore: 1 baca, bukan 9, untuk akun yang sudah migrasi)
+    const sisa = WALLET_LVLS.map((l, i) => [l, grefs[i]]).filter(([l]) => !w.migrasi[l]);
+    const gs = await Promise.all(sisa.map(([, r]) => tx.get(r)));
+    sisa.forEach(([l], i) => { w.koin += gs[i].exists() ? (gs[i].data().koin || 0) : 0; w.migrasi[l] = true; });
     if (delta < 0 && !allowNegative && w.koin + delta < 0) throw new Error("Koin tidak cukup!");
     w.koin += delta;
     tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp() }, { merge: true });
     return w.koin;
   });
+  const _eff = out - _gSpent();
   if (delta) { try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || ""), saldo: out }); } catch (e) {} }
-  return out;
+  return _eff;
 }
 export async function getWalletKoin() {
-  if (!currentUser || _walletOff) return null;
-  try { return await walletTx(0, ""); } catch (e) { console.warn("wallet gagal, pakai saldo per level:", e.message); _walletOff = true; return null; }
+  if (!currentUser) return null;
+  try { const k = await walletTx(0, ""); _walletOff = false; _walletErr = ""; return k; } catch (e) { console.warn("wallet gagal, pakai saldo per level:", e.message); _walletErr = e.code || e.message; _walletOff = true; return null; }
 }
 /* Tambah (atau kurangi, delta<0) koin dari fitur apa pun. Mengembalikan saldo baru atau null. */
 export async function tambahKoin(delta, alasan) {
   if (!currentUser || !delta) return null;
-  if (!_walletOff) { try { return await walletTx(delta, alasan); } catch (e) { if (/tidak cukup/i.test(e.message)) throw e; console.warn("wallet gagal:", e.message); _walletOff = true; } }
+  for (let i = 0; i < 2; i++) {   // coba lagi sekali: error jaringan sesaat tidak boleh mematikan dompet
+    try { const k = await walletTx(delta, alasan); _walletOff = false; _walletErr = ""; return k; }
+    catch (e) {
+      if (/tidak cukup/i.test(e.message)) throw e;
+      console.warn("wallet gagal:", e.message); _walletErr = e.code || e.message; _walletOff = true;
+      if (/resource-exhausted|quota/i.test(_walletErr + " " + e.message)) return await _koinTulisSaja(delta, alasan);   // kuota BACA habis → pakai tulis saja
+      if (/permission|denied/i.test(_walletErr)) break; await new Promise(r => setTimeout(r, 600));
+    }
+  }
   return null;
+}
+/* Cadangan saat kuota BACA Firestore habis (transaksi butuh baca): ubah saldo dengan increment() = tulis murni, tanpa baca.
+ * Saldo awal diambil dari data yang sudah dimuat (state/cache). Kurang dari 0 ditolak di klien. */
+async function _koinTulisSaja(delta, alasan) {
+  const st = window.__SHIROSE_STATE; const sekarang = Number(st && st.gami && st.gami.koin) || 0;
+  if (delta < 0 && sekarang + delta < 0) throw new Error("Koin tidak cukup!");
+  const wref = doc(db, "siswa", currentUser.uid, "wallet", "main");
+  await setDoc(wref, { koin: increment(delta), uid: currentUser.uid, updated: serverTimestamp() }, { merge: true });
+  const baru = sekarang + delta; if (st && st.gami) st.gami.koin = baru;
+  try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || "") + " (mode tulis)", saldo: baru }); } catch (e) {}
+  return baru;
 }
 export async function getGachaState() {
   if (!currentUser) return null;
-  try { const s = await getDoc(doc(db, "siswa", currentUser.uid, "wallet", "gacha")); return s.exists() ? s.data() : { sinceEpic: 0, sinceLegend: 0, inv: [] }; } catch (e) { return null; }
+  const o = _gLocal(); return { sinceEpic: o.sinceEpic || 0, sinceLegend: o.sinceLegend || 0, inv: o.inv || [] };
 }
-/* Mode lokal gacha (sementara, sampai Worker server aktif): simpan status & inventaris dari klien. */
+/* Simpan status & inventaris gacha di perangkat (localStorage). Barang toko ikut dimasukkan ke inventaris karakter di memori. */
 export async function saveGachaState(state, shopIds) {
   if (!currentUser) throw new Error("Belum login");
-  await setDoc(doc(db, "siswa", currentUser.uid, "wallet", "gacha"), { sinceEpic: state.sinceEpic || 0, sinceLegend: state.sinceLegend || 0, inv: state.inv || [], updated: serverTimestamp() }, { merge: true });
-  if (shopIds && shopIds.length) {
-    const ref = doc(db, "siswa", currentUser.uid);
-    const cur = (await getDoc(ref)).data() || {};
-    const inv = Array.from(new Set([...(cur.karakter?.inventory || []), ...shopIds]));
-    await updateDoc(ref, { "karakter.inventory": inv });
-    if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.inventory = inv;
+  const o = _gLocal(); o.sinceEpic = state.sinceEpic || 0; o.sinceLegend = state.sinceLegend || 0; o.inv = state.inv || []; _gSave(o);
+  if (shopIds && shopIds.length && currentSiswaDoc) {
+    currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
+    currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), ...shopIds]));
   }
 }
 export function ownedShopIds() { return (currentSiswaDoc && currentSiswaDoc.karakter && currentSiswaDoc.karakter.inventory) || []; }
@@ -1378,7 +1413,16 @@ export async function leaderboard(level, topN = 20) {
  *   kind = "global"                 — sum XP across all 5 JLPTs
  *   kind = "weekly" / "monthly"     — ranked by activity count in window
  */
-export async function leaderboardAdvanced(kind = "global", topN = 20) {
+const _LB_TTL = 15 * 60 * 1000;   // cache 15 menit: hemat kuota baca Firestore (tiap buka leaderboard = ribuan baca)
+export async function leaderboardAdvanced(kind = "global", topN = 20, { force = false } = {}) {
+  const ck = "shirose-lb:" + kind + ":" + topN;
+  if (!force) { try { const c = JSON.parse(localStorage.getItem(ck) || "null"); if (c && Date.now() - c.t < _LB_TTL) return c.v; } catch (e) {} }
+  const v = await _leaderboardAdvancedRaw(kind, topN);
+  if (v && v.length) { try { localStorage.setItem(ck, JSON.stringify({ t: Date.now(), v })); } catch (e) {} }
+  else { try { const c = JSON.parse(localStorage.getItem(ck) || "null"); if (c) return c.v; } catch (e) {} }   // gagal/kosong → pakai cache lama
+  return v;
+}
+async function _leaderboardAdvancedRaw(kind = "global", topN = 20) {
   try {
     const snap = await getDocs(collection(db, "siswa"));
     const result = [];
@@ -1420,7 +1464,8 @@ export async function leaderboardAdvanced(kind = "global", topN = 20) {
           // Sum activity counts within window
           const now = new Date();
           const windowDays = kind === "weekly" ? 7 : 30;
-          const col = await getDocs(collection(db, "siswa", d.id, "activity"));
+          const _p = (x) => String(x.getFullYear()) + String(x.getMonth() + 1).padStart(2, "0") + String(x.getDate()).padStart(2, "0");
+          const col = await getDocs(query(collection(db, "siswa", d.id, "activity"), where(documentId(), ">=", _p(new Date(now.getTime() - windowDays * 86400000)))));
           let total = 0, days = 0;
           col.forEach(ad => {
             const ymd = ad.id;

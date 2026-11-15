@@ -336,7 +336,7 @@ html{overflow-x:hidden;}
 .jlpt-pick .head h1{font-size:clamp(20px,3.4vw,30px); margin-top:6px; color:var(--white);}
 .jlpt-pick .head p{color:var(--gray); margin-top:8px; font-size:clamp(14px,2vw,17px);}
 .jlpt-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr)); gap:16px;}
-.jlpt-card{position:relative; text-align:left; border-radius:22px; padding:22px 20px 20px; cursor:pointer;
+.jlpt-card{touch-action:manipulation; -webkit-tap-highlight-color:transparent; position:relative; text-align:left; border-radius:22px; padding:22px 20px 20px; cursor:pointer;
   border:2px solid rgba(255,255,255,.08); color:var(--white); font-family:inherit;
   background:linear-gradient(160deg, var(--navy-2), var(--navy)); overflow:hidden;
   transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease; min-height:200px;
@@ -348,7 +348,7 @@ html{overflow-x:hidden;}
 .jlpt-card .desc{font-size:14px; color:var(--gray); line-height:1.5; flex:1;}
 .jlpt-card .st{align-self:flex-start; font-size:12px; font-weight:800; padding:5px 12px; border-radius:999px;
   background:rgba(16,185,129,.18); color:#7ef0c3;}
-.jlpt-card:not(.locked):hover{transform:translateY(-4px); border-color:var(--pink); box-shadow:0 14px 36px rgba(239,106,154,.3);}
+@media (hover:hover){.jlpt-card:not(.locked):hover{transform:translateY(-4px); border-color:var(--pink); box-shadow:0 14px 36px rgba(239,106,154,.3);}}
 .jlpt-card.current{border-color:var(--pink); box-shadow:0 0 0 3px rgba(239,106,154,.35);}
 .jlpt-card.locked{cursor:not-allowed; filter:grayscale(.85); opacity:.55;}
 .jlpt-card.locked .st{background:rgba(255,255,255,.08); color:var(--gray);}
@@ -1369,7 +1369,7 @@ html{overflow-x:hidden;}
 .kimg{display:block;max-width:min(100%,360px);max-height:240px;margin:10px auto;border-radius:12px;object-fit:contain}
 .vf-row{margin:8px 0;font-size:13px;color:var(--gray);display:flex;gap:8px;align-items:center;flex-wrap:wrap}.vf-sw{display:inline-flex;gap:6px}
 </style>
-<link rel="stylesheet" href="./css/shirose-extra.css?v=20261109b"/>
+<link rel="stylesheet" href="./css/shirose-extra.css?v=20261116k"/>
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
 <link rel="stylesheet" href="./css/ssw.css?v=20261112zh"/>
@@ -1381,7 +1381,7 @@ html{overflow-x:hidden;}
 
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
-  <a href="#" class="brand" onclick="route('home'); return false;" title="SHIROSE NIHONGO by SSW no Ou">シ<span class="rose">🌹</span>ロセ <span style="font-family:var(--font-sans); font-size:13px; letter-spacing:.5px;">NIHONGO</span></a>
+  <a href="./landing.html" class="brand" title="SHIROSE NIHONGO by SSW no Ou">シ<span class="rose">🌹</span>ロセ <span style="font-family:var(--font-sans); font-size:13px; letter-spacing:.5px;">NIHONGO</span></a>
   <div class="lvl-pill-group" id="lvl-pills">
     <!-- JS filled -->
   </div>
@@ -1431,21 +1431,22 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261115s";
-import { allShopItems } from "./js/shop-seed.js?v=20261115s";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261116j";
+import { allShopItems } from "./js/shop-seed.js?v=20261116j";
+import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261115b";
+import * as FB from "./js/firebase-sync.js?v=20261116t";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261114f";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
-import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
+import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116k";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
-import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115s";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261116t";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -1779,7 +1780,7 @@ function renderLogin(){
         <button class="btn" id="auth-page-submit" onclick="submitAuthPage()">${isDaftar ? "Daftar Sekarang" : "Masuk"}</button>
         <button class="btn ghost" onclick="kirimResetPassword()" style="font-size:12px;">Lupa password?</button>
         <p style="font-size:13px; color:var(--gray); margin:10px 0 0; text-align:center;">Belum punya akun? Akun siswa dibuat oleh guru/moderator.</p>
-        <button class="btn ghost" onclick="route('home')" style="margin-top:12px;">← Kembali ke beranda</button>
+        <button class="btn ghost" onclick="location.href='./landing.html'" style="margin-top:12px;">← Kembali ke beranda</button>
 
         <div id="auth-page-err" class="auth-err">${deniedMsg}</div>
 
@@ -2430,9 +2431,10 @@ function levelSudahDipilih(){
   if (!state.user) return false;
   let uid = null;
   try { uid = sessionStorage.getItem(_KEY_PILIH); } catch(_){}
+  if (!uid){ try { const u2 = localStorage.getItem("shirose-level-uid"); if (u2 === state.user.uid){ uid = u2; sessionStorage.setItem(_KEY_PILIH, u2); } } catch(_){} }
   return uid === state.user.uid && canAccessLevel(state.level);
 }
-function _lupakanPilihanLevel(){ try { sessionStorage.removeItem(_KEY_PILIH); } catch(_){} }
+function _lupakanPilihanLevel(){ try { sessionStorage.removeItem(_KEY_PILIH); localStorage.removeItem("shirose-level-uid"); } catch(_){} }
 window.levelSudahDipilih = levelSudahDipilih;
 
 // Label level: JLPT N5..N1 atau JFT (Irodori) ir0/ir1/ir2.
@@ -2524,17 +2526,21 @@ window.kanjiSetLevel = async (lvl) => {
   await loadGami(); updateChips(); renderLevelPills();
   route("kanji");
 };
-window.pilihLevel = async (lvl) => {
+window._pilihBusy = false;
+window.pilihLevel = (lvl) => {
+  // Satu ketukan cukup: langsung pindah ke character, data dimuat di latar belakang.
+  if (window._pilihBusy) return;
   if (!canAccessLevel(lvl)){ toast("🔒 Level " + lvl.toUpperCase() + " dikunci guru"); return; }
+  window._pilihBusy = true; setTimeout(() => { window._pilihBusy = false; }, 1200);
   state.level = lvl;
-  localStorage.setItem("shirose-lvl", lvl);
+  try { localStorage.setItem("shirose-lvl", lvl); } catch(_){}
   try { sessionStorage.setItem(_KEY_PILIH, state.user.uid); } catch(_){}
-  await loadGami();
-  updateChips();
-  renderLevelPills();
+  try { localStorage.setItem("shirose-level-uid", state.user.uid); } catch(_){}
   // Riwayat dimulai dari pemilihan JLPT supaya tombol ← dari character kembali ke sini.
   window._routeStack = ["pilih-level"];
+  try { updateChips(); renderLevelPills(); } catch(_){}
   route("home");
+  Promise.resolve().then(() => loadGami()).then(() => { try { updateChips(); renderLevelPills(); } catch(_){} }).catch(e => console.warn("loadGami", e));
 };
 
 function renderHome(){
@@ -2885,6 +2891,8 @@ window.showMateri = async (tipe, idx, vno) => {
   const no = fmtNo(vno || itemNo(it, idx));   // vno = nomor dalam daftar terfilter (kelas kata)
   const app = document.getElementById("app");
   let body = "";
+  let kvList = null;   // kosakata tertaut (c + tabel kosakata level) untuk Kanji ini
+  if (tipe === "kanji" && _kvOn()) { try { kvList = (await _kvIndex()).perKanji[idx] || []; } catch (e) { kvList = null; } }
   if (tipe === "kanji") {
     const k = it.kanji || it.k || "";
     const on = it.onyomi || it.on || "";
@@ -2901,13 +2909,24 @@ window.showMateri = async (tipe, idx, vno) => {
           ${kun ? `<div class="r"><span class="lbl">Kunyomi</span>${kun}</div>` : ""}
         </div>
         <div style="font-size:16px; margin:12px 0;"><b>${arti}</b></div>
-        ${contoh.length ? `<div class="contoh-list">
+        ${kvList ? (kvList.length === 1 && kvList[0].fallback ? `<p class="kv-note">Kanji <b>${k}</b> belum punya kosakata di database, jadi kartu hafalannya berisi <b>Kanji ini sendiri</b> (bacaan + arti).</p>` : `<p class="kv-note">Kanji <b>${k}</b> adalah <b>kategori</b>. Yang dihafalkan adalah <b>kosakata</b> di bawah (ketuk untuk belajar).</p>`) : ""}
+        ${kvList ? (kvList.length ? `<div class="contoh-list">
+          <h3>${kvList.length === 1 && kvList[0].fallback ? "Kartu hafalan" : "Kosakata dengan Kanji ini"} <small style="color:var(--gray-dim); font-weight:400;">(${kvList.length})</small></h3>
+          ${kvList.map((v, vi) => `<div class="contoh-item kv-item" role="button" tabindex="0" onclick="kvOpen(${idx},${vi})" onkeydown="if(event.key==='Enter')kvOpen(${idx},${vi})">
+            <div><div class="jp">${_kvEsc(v.kata)} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(v.kata)}" data-read="${SV.escAttr(v.kana||v.kata)}" data-role="kanji-contoh" onclick="event.stopPropagation();SV.btn(this)">🔊</button></div><div class="r">${_kvEsc(v.kana)}</div></div>
+            <div class="id">${_kvEsc(v.arti)} <span class="kv-go">›</span></div>
+          </div>`).join("")}
+        </div>
+        <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
+          <button class="btn gold" onclick="kvStudy(${idx},'flashcard')">🃏 Flashcard kosakata Kanji ini</button>
+          <button class="btn ghost" onclick="kvStudy(${idx},'multiple')">✅ Pilihan ganda</button>
+        </div>` : `<p class="kv-note">Belum ada kosakata untuk Kanji ini di database.</p>`) : (contoh.length ? `<div class="contoh-list">
           <h3>Contoh kosakata</h3>
           ${contoh.map(c => `<div class="contoh-item">
             <div><div class="jp">${c.k} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(c.k)}" data-read="${SV.escAttr(c.r||c.k)}" data-role="kanji-contoh" onclick="SV.btn(this)">🔊</button></div><div class="r">${c.r||""}</div></div>
             <div class="id">${c.a||""}</div>
           </div>`).join("")}
-        </div>` : ""}
+        </div>` : "")}
         <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:16px;">
           <button class="btn" data-say="${SV.escAttr(k)}" data-role="kanji" onclick="SV.btn(this)">🔊 Dengar</button>
           <button class="btn ghost" onclick="showStrokeOrder('${(k||"").replace(/'/g,"")}')">書き順を見る</button>
@@ -3321,9 +3340,126 @@ function _autoSpeakJP(txt){
   try { window.speakJP(txt); } catch(e){}
 }
 
+/* ========== KOSAKATA KANJI (N5-N1): detail, latihan, flashcard ========== */
+const _kvEsc = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+const _kvLatNo = (v) => v.kosNo != null ? 100000 + v.kosNo : 200000 + v.id;   // nomor progres menulis (tidak bentrok dgn kanji/kosakata)
+function _kvCardState(v){ const c = state.srs && state.srs[v.key]; return c ? _cardStatus(c) : null; }
+async function _kvEnsureCard(v){
+  if (!state.srs[v.key]) { state.srs[v.key] = { n: 0, interval: 1, due: Date.now() }; await _saveSrs(); return true; }
+  return false;
+}
+async function _kvSentence(v){
+  const sj = v.src && (v.src.contoh || v.src.ej);   // kosakata tertaut punya kalimat contoh sendiri (N5/N4/N2/N1)
+  if (sj) return { j: sj, a: v.src.arti_contoh || v.src.et || "" };
+  const knj = await loadMateri("kanji", state.level);
+  for (const kj of knj) for (const s of (kj.kal || [])) { if (String(s.j).replace(/\[[^\]]*\]/g, "").replace(/\s/g, "").includes(v.kata)) return s; }
+  return null;
+}
+window.kvOpen = async (ki, vi) => {
+  const idx = await _kvIndex();
+  const v = (idx.perKanji[ki] || [])[vi];
+  if (!v) { toast("Entri ini bukan kosakata hafalan"); return; }
+  await _loadSrs();
+  window._kvM = { v, list: (idx.perKanji[ki] || []).slice(), i: Math.max(0, (idx.perKanji[ki] || []).indexOf(v)), idx };
+  await _kvPaint();
+};
+async function _kvPaint(){
+  const M = window._kvM; if (!M) return;
+  const v = M.v, st = _kvCardState(v), sent = await _kvSentence(v);
+  let m = document.getElementById("kv-modal");
+  if (!m) { m = document.createElement("div"); m.id = "kv-modal"; m.className = "modal-backdrop open"; m.style.zIndex = "90"; m.onclick = (e) => { if (e.target === m) kvClose(); }; document.body.appendChild(m); }
+  const sayK = SV.escAttr(v.kata), sayR = SV.escAttr(v.kana || v.kata);
+  m.innerHTML = `<div class="modal kv-card" role="dialog" aria-label="Detail kosakata">
+    <button class="panel-close" onclick="kvClose()" title="Tutup">✕</button>
+    <div class="kv-tag">${v.fallback ? "KANJI (belum ada kosakata)" : "KOSAKATA"} · ${_kvLv()} <span class="kv-main">Kanji utama: ${v.kanji.map(_kvEsc).join(" ")}</span></div>
+    <div class="kv-kata">${v.fallback ? _kvEsc(v.kata) : `<ruby>${_kvEsc(v.kata)}<rt>${_kvEsc(v.kana)}</rt></ruby>`}</div>
+    <div class="kv-read">${_kvEsc(v.kana)}</div>
+    <div class="kv-arti"><b>${_kvEsc(v.arti)}</b></div>
+    ${sent ? `<div class="contoh-item" style="flex-direction:column; text-align:left; align-items:flex-start;"><div class="jp">${_rubyJp(sent.j)} <button class="say-mini" data-say="${SV.escAttr(String(sent.j).replace(/\[[^\]]*\]/g, ""))}" data-role="kosakata-contoh" onclick="SV.btn(this)">🔊</button></div><div class="id" style="text-align:left;">${_kvEsc(sent.a)}</div></div>` : ""}
+    <div class="kv-status">${st ? `Status flashcard: <b style="color:${st.color}">${st.label}</b>` : "Belum ada di flashcard"}${state.srs[v.key]?.lat ? ` · latihan baca ${state.srs[v.key].lat.bb||0}✔/${state.srs[v.key].lat.bs||0}✘ · arti ${state.srs[v.key].lat.ab||0}✔/${state.srs[v.key].lat.as||0}✘` : ""}</div>
+    <div class="kv-btns">
+      <button class="btn" data-say="${sayK}" data-read="${sayR}" data-role="kosakata" onclick="SV.btn(this)">🔊 Dengar</button>
+      <button class="btn ghost" onclick="showStrokeOrder('${v.kata.replace(/'/g, "")}')">書き順 Urutan goresan</button>
+      <button class="btn" onclick="KC.openVocab('${v.kata.replace(/'/g, "")}','${(v.kana || "").replace(/'/g, "")}','${(v.arti || "").replace(/'/g, "").replace(/"/g, "")}',${_kvLatNo(v)},'latihan')">書いてみよう ✍️</button>
+      <button class="btn ${st ? "ghost" : "gold"}" onclick="kvAddCard()">${st ? "✓ Sudah di flashcard" : "➕ Masukkan ke flashcard"}</button>
+    </div>
+    <div class="kv-btns">
+      <button class="btn ghost" onclick="kvQuiz('baca')">🔤 Latihan membaca</button>
+      <button class="btn ghost" onclick="kvQuiz('arti')">💡 Latihan arti</button>
+    </div>
+    <div id="kv-quiz"></div>
+    ${M.list.length > 1 ? `<div class="kv-nav"><button class="btn ghost sm" onclick="kvStep(-1)">‹ Sebelumnya</button><span>${M.i + 1}/${M.list.length} · kosakata dari Kanji ini</span><button class="btn ghost sm" onclick="kvStep(1)">Berikutnya ›</button></div>` : ""}
+  </div>`;
+}
+window.kvClose = () => { const m = document.getElementById("kv-modal"); if (m) m.remove(); window._kvM = null; };
+window.kvStep = async (d) => { const M = window._kvM; if (!M) return; M.i = (M.i + d + M.list.length) % M.list.length; M.v = M.list[M.i]; await _kvPaint(); };
+window.kvAddCard = async () => {
+  const M = window._kvM; if (!M) return;
+  if (await _kvEnsureCard(M.v)) toast("Ditambahkan ke flashcard ✓");
+  await _kvPaint();
+};
+window.kvQuiz = (kind) => {
+  const M = window._kvM; if (!M) return;
+  const v = M.v, field = kind === "baca" ? "kana" : "arti";
+  const opts = KV.makeChoices(M.idx, v, field, 4);
+  const box = document.getElementById("kv-quiz"); if (!box) return;
+  M.q = { kind, opts, done: false };
+  box.innerHTML = `<div class="kv-q"><div class="kv-qh">${kind === "baca" ? `Bagaimana cara baca <b>${_kvEsc(v.kata)}</b>?` : `Apa arti <b>${_kvEsc(v.kata)}</b>?`}</div>
+    ${opts.map((o, i) => `<button class="kv-opt" data-i="${i}" onclick="kvAnswer(${i})">${_kvEsc(o)}</button>`).join("")}<div id="kv-fb"></div></div>`;
+};
+window.kvAnswer = async (i) => {
+  const M = window._kvM; if (!M || !M.q || M.q.done) return;
+  const v = M.v, q = M.q, field = q.kind === "baca" ? "kana" : "arti", ok = q.opts[i] === v[field];
+  q.done = true;
+  document.querySelectorAll("#kv-quiz .kv-opt").forEach((b) => { const o = q.opts[+b.dataset.i]; b.disabled = true; if (o === v[field]) b.classList.add("ok"); else if (+b.dataset.i === i) b.classList.add("bad"); });
+  const fb = document.getElementById("kv-fb"); if (fb) fb.innerHTML = ok ? `<p class="kv-ok">Benar! ✓</p>` : `<p class="kv-bad">Kurang tepat. Jawaban: <b>${_kvEsc(v[field])}</b></p>`;
+  // simpan hasil latihan di kartu kosakata ini (per akun/identitas kosakata); kartu otomatis masuk flashcard
+  try {
+    await _kvEnsureCard(v);
+    const c = state.srs[v.key], L = (c.lat = c.lat || {}), a = q.kind === "baca" ? "b" : "a";
+    L[a + (ok ? "b" : "s")] = (L[a + (ok ? "b" : "s")] || 0) + 1; L.t = Date.now();
+    await _saveSrs();
+  } catch (e) { console.warn("kv save:", e.message); }
+  if (ok) { try { playJurus(); await awardXP(2, 0); } catch (_) {} }
+  setTimeout(() => { if (window._kvM && window._kvM.v === v) _kvPaint(); }, 1400);
+};
+// Mulai sesi hafalan khusus kosakata dari SATU Kanji utama (memakai mesin flashcard/pilihan ganda yang sama)
+window.kvStudy = async (ki, mode) => {
+  const idx = await _kvIndex(); const list = idx.perKanji[ki] || [];
+  if (!list.length) { toast("Belum ada kosakata untuk Kanji ini"); return; }
+  state._srsLevel = null; state.hafalan_ctx = null; state.hafalan_back = null;
+  await _loadSrs();
+  state.hafalan = { tipe: "kanji", mode: mode || "flashcard", range: "all", filter: "all", pos: "all" };
+  const q = list.map(KV.vocabToCard);
+  if (mode === "multiple" && q.length < 2) { toast("Butuh minimal 2 kosakata untuk pilihan ganda"); return; }
+  state.hafalan_queue = q.sort(() => Math.random() - 0.5);
+  state.hafalan_pos = 0; state.hafalan_score = { benar: 0, salah: 0 };
+  route("hafalan/go");
+};
+
 /* ========== HAFALAN (Selection + 3 modes: Flashcard / Matching / Multiple Choice) ========== */
 // SRS key is namespaced per type so kanji and kosakata don't collide.
-function _srsKey(tipe, it, idx){ return tipe[0] + ":" + itemNo(it, idx); }
+function _srsKey(tipe, it, idx){ if (it && it.skey) return it.skey; return tipe[0] + ":" + itemNo(it, idx); }
+
+/* ===== KOSAKATA BERBASIS KANJI (N3) =====
+ * Kanji utama = indeks/kategori. Kartu hafalan = kosakata contoh (js/kanji-vocab.js). Berlaku untuk N5-N1 (struktur data sama). */
+const _kvOn = () => ["n5", "n4", "n3", "n2", "n1", "ir0", "ir1", "ir2"].includes(state.level);   // JLPT N5-N1 + JFT (Irodori) A1/A2.1/A2.2
+const _kvLv = () => ({ ir0: "A1", ir1: "A2.1", ir2: "A2.2" })[state.level] || String(state.level).toUpperCase();
+async function _kvIndex(){
+  const lvl = state.level, c = window.__kvCache;
+  if (c && c.lvl === lvl) return c.idx;
+  const [knj, kos] = await Promise.all([loadMateri("kanji", lvl), loadMateri("kosakata", lvl)]);
+  const idx = KV.buildKanjiVocab(knj, kos);
+  window.__kvCache = { lvl, idx };
+  return idx;
+}
+// Kartu untuk tipe hafalan "kanji"/"semua": kosakata contoh (BUKAN Kanji satuan).
+function _kanjiDeckCards(knj, kos, tipe){
+  if (!_kvOn()) return null;
+  let cards = KV.kanjiVocabCards(KV.buildKanjiVocab(knj, kos));
+  if (tipe === "semua"){ const have = new Set(kos.map((it, i) => "k:" + itemNo(it, i))); cards = cards.filter(c => !have.has(c.skey)); }
+  return cards;
+}
 
 // Normalize an item from kanji or kosakata into a common pair for drills.
 /* penanda homonim [1] / [×yomi] di data kosakata tidak ditampilkan */
@@ -3474,7 +3610,7 @@ async function _renderHafalanSelectImpl(){
       rangList.forEach((r, i) => pool.push({ tipe:"rangkuman", idx:i, no:i+1, front:r.jp, reading:r.kana||"", back:r.arti||"" }));
     } else {
       if (cfg.tipe === "kosakata" || cfg.tipe === "semua") push("kosakata", kos);
-      if (cfg.tipe === "kanji"    || cfg.tipe === "semua") push("kanji", knj);
+      if (cfg.tipe === "kanji"    || cfg.tipe === "semua") { const kv = _kanjiDeckCards(knj, kos, cfg.tipe); if (kv) kv.forEach(c => pool.push(c)); else push("kanji", knj); }
     }
     return pool;
   }
@@ -3505,7 +3641,7 @@ async function _renderHafalanSelectImpl(){
     preview = preview.filter(p => p.dno >= lo && p.dno <= hi);
   }
   preview = preview.filter(p => {
-    const key = _srsKey(p.tipe, {no:p.no}, p.idx);
+    const key = _srsKey(p.tipe, {no:p.no, skey:p.skey}, p.idx);
     const card = state.srs[key];
     if (cfg.filter === "new")         return !card;
     if (cfg.filter === "due")         return card && card.due <= now;
@@ -3517,7 +3653,7 @@ async function _renderHafalanSelectImpl(){
   // Counters by status, across the filtered set
   const counters = { mastered:0, review:0, learning:0, fresh:0, new:0 };
   preview.forEach(p => {
-    const key = _srsKey(p.tipe, {no:p.no}, p.idx);
+    const key = _srsKey(p.tipe, {no:p.no, skey:p.skey}, p.idx);
     counters[_cardStatus(state.srs[key]).key]++;
   });
 
@@ -3538,11 +3674,14 @@ async function _renderHafalanSelectImpl(){
       <div class="haf-type-row">
         ${state._rangkumanContext ? typeBtn("rangkuman", "📒 Rangkuman", rangList.length + " kata") : `
           ${typeBtn("kosakata", "📖 Kosakata", kos.length + " kata")}
-          ${typeBtn("kanji",    "🈷️ Kanji",    knj.length + " kanji")}
-          ${typeBtn("semua",    "✨ Semua",     (kos.length + knj.length) + " item")}
+          ${_kvOn()
+            ? typeBtn("kanji", "🈷️ Kosakata Kanji", (_kanjiDeckCards(knj, kos, "kanji") || []).length + " kata")
+            : typeBtn("kanji", "🈷️ Kanji", knj.length + " kanji")}
+          ${typeBtn("semua",    "✨ Semua",     (kos.length + (_kvOn() ? (_kanjiDeckCards(knj, kos, "semua") || []).length : knj.length)) + " item")}
         `}
       </div>
 
+      ${_kvOn() && cfg.tipe === "kanji" ? `<p class="kv-note">🈷️ Kartu berisi <b>kosakata contoh</b> dari Kanji ${_kvLv()} (cara baca + arti), <b>bukan</b> Kanji satuan. Kanji utama hanya jadi pengelompokan. Kanji yang belum punya kosakata di database ikut sebagai kartu Kanji itu sendiri.</p>` : ""}
       ${cfg.tipe === "kosakata" ? `<h3 style="margin:16px 0 8px;">Pilih kategori hafalan</h3>${posBar(kos, POS_DEF.some(d => d.k === cfg.pos) ? cfg.pos : "all", "hafPos")}` : ""}
       <h3 style="margin:16px 0 8px;">2. Rentang nomor <small style="color:var(--gray-dim); font-weight:400;">(bucket per 50)</small></h3>
       <div class="haf-chip-row">
@@ -3571,7 +3710,7 @@ async function _renderHafalanSelectImpl(){
           <summary><b>Lihat daftar kartu (${preview.length})</b> · klik untuk buka/tutup</summary>
           <div class="status-list">
             ${preview.slice(0, 200).map(p => {
-              const key = _srsKey(p.tipe, {no:p.no}, p.idx);
+              const key = _srsKey(p.tipe, {no:p.no, skey:p.skey}, p.idx);
               const s = _cardStatus(state.srs[key]);
               return `
                 <div class="status-item" style="background:${s.bg}; border-color:${s.color}44;">
@@ -3644,7 +3783,7 @@ window.hafStart = async () => {
     rangList.forEach((r, i) => pool.push({ tipe:"rangkuman", idx:i, no:i+1, front:r.jp, reading:r.kana||"", back:r.arti||"" }));
   } else {
     if (cfg.tipe === "kosakata" || cfg.tipe === "semua") push("kosakata", kos);
-    if (cfg.tipe === "kanji"    || cfg.tipe === "semua") push("kanji", knj);
+    if (cfg.tipe === "kanji"    || cfg.tipe === "semua") { const kv = _kanjiDeckCards(knj, kos, cfg.tipe); if (kv) kv.forEach(c => pool.push(c)); else push("kanji", knj); }
   }
   pool = _posPool(pool, cfg);
 
@@ -3658,7 +3797,7 @@ window.hafStart = async () => {
   // Status filter
   const now = Date.now();
   const filtered = inRange.filter(p => {
-    const key = _srsKey(p.tipe, {no:p.no}, p.idx);
+    const key = _srsKey(p.tipe, {no:p.no, skey:p.skey}, p.idx);
     const card = state.srs[key];
     if (cfg.filter === "new")         return !card;
     if (cfg.filter === "due")         return card && card.due <= now;
@@ -3690,7 +3829,7 @@ const _hafHome = () => (_hafSSW() && state.hafalan_back) || "home";
 const _hafHomeLbl = () => _hafSSW() ? "↩ Kembali" : "🏠 Home";
 // Dokumen SRS per bidang SSW: Building Cleaning tetap "ssw-bc" (data lama), bidang lain "ssw-<slug>".
 const _sswLvl = (slug) => { slug = slug || (window.__sswSlug && window.__sswSlug()) || "building-cleaning"; return slug === "building-cleaning" ? "ssw-bc" : "ssw-" + slug; };
-const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${state.level.toUpperCase()}`;
+const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.fb ? "KANJI (belum ada kosakata)" : it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${(it.kv || it.fb) ? _kvLv() : state.level.toUpperCase()}`;
 function _sswSaveSess(){ try { sessionStorage.setItem(_SSW_SESS, JSON.stringify({ lvl: state._srsLevel, q: state.hafalan_queue, pos: state.hafalan_pos, mode: (state.hafalan||{}).mode, back: state.hafalan_back, score: state.hafalan_score })); } catch(e){} }
 window.sswHafalStart = async ({ items, mode, back }) => {
   if (!items || !items.length) { toast("Tidak ada kosakata untuk sesi ini"); return false; }
@@ -3894,7 +4033,7 @@ window.hafRate = async (rate) => {
   const normalized = (rate === "lupa" || rate === "salah") ? "lupa"
                    : (rate === "ingat" || rate === "benar" || rate === "mudah" || rate === "ragu") ? "ingat"
                    : "ingat";
-  const key = _srsKey(it.tipe, {no:it.no}, it.idx);
+  const key = _srsKey(it.tipe, {no:it.no, skey:it.skey}, it.idx);
   const now = Date.now();
   const card = state.srs[key] || { n:0, interval:1, due:now };
   const dayMs = 86400000;
@@ -4005,7 +4144,7 @@ async function matchAfterPair(correct, iInBatch){
   const q = state.hafalan_queue;
   const it = q[state.hafalan_pos + iInBatch];
   if (!it) return;
-  const key = _srsKey(it.tipe, {no:it.no}, it.idx);
+  const key = _srsKey(it.tipe, {no:it.no, skey:it.skey}, it.idx);
   const now = Date.now();
   const card = state.srs[key] || { n:0, interval:1, due:now };
   const mult = correct ? 2 : 1;
@@ -4108,7 +4247,7 @@ window.mcPick = async (encoded, btn) => {
   }
   // SRS update
   const it = state.hafalan_queue[state.hafalan_pos];
-  const key = _srsKey(it.tipe, {no:it.no}, it.idx);
+  const key = _srsKey(it.tipe, {no:it.no, skey:it.skey}, it.idx);
   const now = Date.now();
   const card = state.srs[key] || { n:0, interval:1, due:now };
   card.n = (card.n || 0) + 1;
@@ -4597,7 +4736,7 @@ async function renderShop(){
 
   // Character with the previewed slot swapped in
   const previewEq = { ...DEFAULT_EQUIPPED, ...eq, [activeCat]: preview };
-  const charaSvg = renderCharacter(previewEq, skin, { hairColor });
+  const charaSvg = renderCharacter(previewEq, skin, { hairColor, wstate: "showcase" });
 
   const previewItem = items.find(it => it.id === preview);
   const isOwned = preview && inv.includes(preview);
@@ -5514,7 +5653,7 @@ FB.onAuth(async (user, siswa) => {
   _authFiredOnce = true;
 
   state.user = user; state.siswa = siswa;
-  try { window.SHIROSE_THEME_FREE = !!(user && FB.userIsGuru()); } catch(e){}
+  try { window.SHIROSE_THEME_FREE = !!(user && (FB.userIsGuru() || FB.hasUnlimitedCoins())); if (window.SHIROSE_THEME) window.SHIROSE_THEME.refresh(); } catch(e){}
   const btn = document.getElementById("btn-auth");
   if (user) {
     try { localStorage.setItem("shirose-returning","1"); } catch(e){}
