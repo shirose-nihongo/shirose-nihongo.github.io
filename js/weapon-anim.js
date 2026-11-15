@@ -66,8 +66,38 @@ const SPEC = {
     ready: ST(1.8, loop2(K({ wx: 232, wy: 300, wr: -70, two: 1, g2: 16 }), K({ wx: 232, wy: 300, wr: -66, two: 1, g2: 16 }))),
     attack: (() => { const R = K({ wx: 232, wy: 300, wr: -70, two: 1, g2: 16 }), E = K({ wx: 176, wy: 292, wr: 105, two: 1, g2: 16 });
       return ST(1.3, [[0, R], [.18, K({ wx: 246, wy: 316, wr: -104, two: 1, g2: 16 })], [.34, K({ wx: 215, wy: 255, wr: -10, two: 1, g2: 16 })], [.46, E], [.62, E], [1, R]]); })() },
+  staff: { side: "R", win: [.3, .7],
+    idle: ST(3.2, loop2(K({ wx: 270, wy: 318, wr: 6, fx: 138, fy: 328 }), K({ wx: 270, wy: 316, wr: 8, fx: 138, fy: 326 }))),
+    ready: ST(1.8, loop2(K({ wx: 278, wy: 298, wr: 14, fx: 132, fy: 282 }), K({ wx: 278, wy: 294, wr: 16, fx: 130, fy: 278 }))),
+    attack: (() => { const R = K({ wx: 278, wy: 298, wr: 14, fx: 132, fy: 282 }), E = K({ wx: 292, wy: 262, wr: 38, fx: 176, fy: 238 });
+      return ST(1.5, [[0, R], [.3, K({ wx: 262, wy: 236, wr: -8, fx: 150, fy: 240 })], [.45, E], [.7, E], [1, R]]); })() },
+  spear: { side: "R", win: [.28, .5],
+    idle: ST(3, loop2(K({ wx: 266, wy: 318, wr: 18, two: 1, g2: 32 }), K({ wx: 266, wy: 314, wr: 20, two: 1, g2: 32 }))),
+    ready: ST(1.7, loop2(K({ wx: 262, wy: 300, wr: 64, two: 1, g2: 34 }), K({ wx: 262, wy: 297, wr: 66, two: 1, g2: 34 }))),
+    attack: (() => { const R = K({ wx: 262, wy: 300, wr: 64, two: 1, g2: 34 }), E = K({ wx: 300, wy: 286, wr: 70, two: 1, g2: 34 });
+      return ST(1.3, [[0, R], [.2, K({ wx: 228, wy: 314, wr: 60, two: 1, g2: 34 })], [.34, E], [.55, E], [1, R]]); })() },
+  scythe: { side: "R", win: [.2, .5],
+    idle: ST(3.2, loop2(K({ wx: 266, wy: 306, wr: 10, two: 1, g2: 34 }), K({ wx: 266, wy: 302, wr: 12, two: 1, g2: 34 }))),
+    ready: ST(1.8, loop2(K({ wx: 250, wy: 296, wr: 24, two: 1, g2: 34 }), K({ wx: 250, wy: 292, wr: 26, two: 1, g2: 34 }))),
+    attack: (() => { const R = K({ wx: 250, wy: 296, wr: 24, two: 1, g2: 34 }), E = K({ wx: 262, wy: 300, wr: 150, two: 1, g2: 34 });
+      return ST(1.5, [[0, R], [.2, K({ wx: 236, wy: 250, wr: -70, two: 1, g2: 34 })], [.4, E], [.6, E], [1, R]]); })() },
+  bow: { side: "L", win: [.4, .62],
+    idle: ST(3, loop2(K({ wx: 122, wy: 304, wr: 0, fx: 254, fy: 312 }), K({ wx: 122, wy: 300, wr: 0, fx: 254, fy: 308 }))),
+    ready: ST(1.7, loop2(K({ wx: 116, wy: 270, wr: 0, fx: 176, fy: 270 }), K({ wx: 116, wy: 267, wr: 0, fx: 176, fy: 268 }))),
+    attack: (() => { const R = K({ wx: 116, wy: 270, wr: 0, fx: 176, fy: 270 }), E = K({ wx: 112, wy: 262, wr: 0, fx: 214, fy: 262 });
+      return ST(1.5, [[0, R], [.3, K({ wx: 112, wy: 262, wr: 0, fx: 166, fy: 262 })], [.4, K({ wx: 112, wy: 262, wr: 0, fx: 166, fy: 262 })], [.5, E], [.75, E], [1, R]]); })() },
+  shield: { side: "L", win: [.3, .56],
+    idle: ST(3, loop2(K({ wx: 126, wy: 300, wr: 0, fx: 262, fy: 316 }), K({ wx: 126, wy: 297, wr: 0, fx: 262, fy: 313 }))),
+    ready: ST(1.7, loop2(K({ wx: 152, wy: 284, wr: 0, fx: 266, fy: 292 }), K({ wx: 152, wy: 281, wr: 0, fx: 266, fy: 290 }))),
+    attack: (() => { const R = K({ wx: 152, wy: 284, wr: 0, fx: 266, fy: 292 }), E = K({ wx: 196, wy: 262, wr: 0, fx: 262, fy: 270 });
+      return ST(1.3, [[0, R], [.25, K({ wx: 140, wy: 296, wr: 0, fx: 270, fy: 290 })], [.4, E], [.6, E], [1, R]]); })() },
+  carry: { side: "R", win: [.3, .6],
+    idle: ST(3, [[0, K({ wx: 266, wy: 326, wr: -6 })], [.5, K({ wx: 266, wy: 326, wr: 8 })], [1, K({ wx: 266, wy: 326, wr: -6 })]]),
+    ready: ST(1.8, loop2(K({ wx: 276, wy: 306, wr: 14, fx: 134, fy: 304 }), K({ wx: 276, wy: 302, wr: 18, fx: 134, fy: 300 }))),
+    attack: (() => { const R = K({ wx: 276, wy: 306, wr: 14, fx: 134, fy: 304 });
+      return ST(1.4, [[0, R], [.3, K({ wx: 284, wy: 250, wr: 40, fx: 130, fy: 300 })], [.5, K({ wx: 276, wy: 290, wr: -14, fx: 134, fy: 304 })], [.75, K({ wx: 276, wy: 290, wr: -14, fx: 134, fy: 304 })], [1, R]]); })() },
 };
-const TIP = { sword: 124, katana: 142, hammer: 0, grimoire_held: 0, grimoire_float: 0 };
+const TIP = { sword: 124, katana: 142, spear: 170, scythe: 150, hammer: 0, grimoire_held: 0, grimoire_float: 0, staff: 0, bow: 0, shield: 0, carry: 0 };
 
 /* urutan state → daftar segmen; showcase = idle → ready → attack */
 function segsFor(type, state) {
@@ -169,7 +199,8 @@ const SHL = [146, 218], SHR = [254, 218];
 
 export function buildWeaponLayer(type, rarity, ctx = {}) {
   const sp = SPEC[type]; if (!sp) return "";
-  const ti = Math.max(0, RARITIES.indexOf(rarity)), pal = PAL[rarity] || PAL.common;
+  const lg = ctx.legacy || null;
+  const ti = Math.max(0, RARITIES.indexOf(rarity)), pal = lg ? { ...PAL.common, gl: 0, pt: 0, glow: null } : (PAL[rarity] || PAL.common);
   const skin = ctx.skin || "#f5d4b3", sl = ctx.sleeve || { c: "#ffffff", d: "#c7cde0" };
   const state = ctx.state || "idle", segs = segsFor(type, state);
   const D = segs.reduce((a, s) => a + s.st.period, 0), N = Math.max(12, Math.round(D * 8));
@@ -207,15 +238,18 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
   /* efek serangan: tebasan (sword/katana), dentuman (hammer), ledakan sihir (grimoire) */
   let fx = "";
   const fadeG = (inner, extra = "") => `<g opacity="0">${an("opacity", A.fo)}${extra}${inner}</g>`;
-  if (type === "sword" || type === "katana") {
+  if (TIP[type]) {
     if (fxPts.length > 2) {
       const d = "M" + fxPts.map(q => `${f1(q[0])} ${f1(q[1])}`).join(" L");
       const c1 = ti === 5 ? "#fda4af" : (pal.glow || "#bae6fd");
       fx = fadeG(`<path d="${d}" stroke="${c1}" stroke-width="14" fill="none" stroke-linecap="round" opacity=".55"/><path d="${d}" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>`);
     }
   } else {
-    const [cx, cy, R] = type === "hammer" ? [228, 450, 110] : type === "grimoire_float" ? [200, 214, 130] : [346, 202, 90];
-    const col = pal.glow || (type === "hammer" ? "#fde68a" : "#c4b5fd");
+    const mid = track((winp[0] + winp[1]) / 2, sp.attack.frames), mh = { x: mid.wx, y: mid.wy, rot: mid.wr};
+    const tipP = loc(mh, 0, -150);
+    const [cx, cy, R] = type === "hammer" ? [228, 450, 110] : type === "grimoire_float" ? [200, 214, 130] : type === "grimoire_held" ? [346, 202, 90]
+      : type === "staff" ? [tipP.x, tipP.y, 90] : type === "bow" ? [200, 238, 100] : type === "shield" ? [mh.x, mh.y, 80] : [mh.x, mh.y - 10, 55];
+    const col = pal.glow || (type === "hammer" || type === "carry" ? "#fde68a" : "#c4b5fd");
     let ray = ""; for (let i = 0; i < 12; i++) { const a = rad(i * 30); ray += `<line x1="${f1(Math.cos(a) * R * .45)}" y1="${f1(Math.sin(a) * R * .45)}" x2="${f1(Math.cos(a) * R)}" y2="${f1(Math.sin(a) * R)}" stroke="${col}" stroke-width="3" stroke-linecap="round"/>`; }
     const sc = `<animateTransform attributeName="transform" type="scale" values="${A.fs.join(";")}" ${dur}/>`;
     fx = `<g transform="translate(${cx} ${cy})"><g opacity="0">${an("opacity", A.fo)}<g>${sc}${ray}<circle r="${R * .85}" fill="none" stroke="#fff" stroke-width="3"/></g></g></g>`;
@@ -225,8 +259,8 @@ export function buildWeaponLayer(type, rarity, ctx = {}) {
 
   const weaponG = `<g><animateTransform attributeName="transform" type="translate" values="${A.wt.join(";")}" ${dur}/>
     <g><animateTransform attributeName="transform" type="rotate" values="${A.wr.join(";")}" ${dur}/>
-      <g ${pal.gl ? `filter="url(#wa-f-${rarity})"` : ""}>${artFor(type, ti, pal)}</g>${auraLocal(type, ti, pal)}</g></g>`;
-  const ring = type === "grimoire_float" ? `<g><animateTransform attributeName="transform" type="translate" values="${A.wt.join(";")}" ${dur}/>
+      <g ${pal.gl ? `filter="url(#wa-f-${rarity})"` : ""}>${lg ? `<g transform="translate(0 ${lg.lift || 0}) scale(${lg.scale || 1}) translate(${-lg.ax} ${-lg.ay})">${lg.svg}</g>` : artFor(type, ti, pal)}</g>${auraLocal(type, ti, pal)}</g></g>`;
+  const ring = type === "grimoire_float" && (!lg || lg.ring) ? `<g><animateTransform attributeName="transform" type="translate" values="${A.wt.join(";")}" ${dur}/>
     <ellipse cy="46" rx="72" ry="15" fill="none" stroke="${pal.glow || "#a78bfa"}" stroke-width="2.5" stroke-dasharray="10 8" opacity=".85"><animate attributeName="stroke-dashoffset" values="0;-36" dur="2s" repeatCount="indefinite"/></ellipse>
     <ellipse cy="46" rx="52" ry="10" fill="none" stroke="#ddd6fe" stroke-width="1.8" stroke-dasharray="4 7" opacity=".8"><animate attributeName="stroke-dashoffset" values="0;22" dur="1.4s" repeatCount="indefinite"/></ellipse></g>` : "";
   void gc;
@@ -258,7 +292,7 @@ export function applyWeaponPose({ item, base, pakaianOverlay, skin, state }) {
   const type = animTypeOf(item); if (!type) return null;
   return {
     base: stripArms(base), pakaianOverlay: stripArms(pakaianOverlay),
-    handheld: buildWeaponLayer(type, item.rarity, { skin, sleeve: sleeveOf(pakaianOverlay), state }),
+    handheld: buildWeaponLayer(type, item.rarity, { skin, sleeve: sleeveOf(pakaianOverlay), state, legacy: item.animLegacy ? { ...item.animLegacy, svg: item.svg() } : null }),
   };
 }
 
@@ -273,9 +307,38 @@ const NAMES = {
 const ICON = { sword: "🗡️", katana: "⚔️", hammer: "🔨", grimoire_held: "📖", grimoire_float: "📘" };
 const RT = { common: [[400, 1500], 1], uncommon: [[2500, 5000], 10], rare: [[9000, 16000], 25], epic: [[25000, 36000], 50], legendary: [[50000, 80000], 80], mythic: [[100000, 130000], 90] };
 const TYPES = ["grimoire_held", "grimoire_float", "hammer", "sword", "katana"];
-export const WEAPON_ANIM_TYPES = TYPES;
+export const WEAPON_ANIM_TYPES = TYPES.concat(["staff", "spear", "scythe", "bow", "shield", "carry"]);
+
+/* Senjata lama: dipetakan ke tipe animasi; gambar aslinya dipertahankan, hanya dipasang ke pose + lengan.
+   [tipe, anchorX, anchorY, skala, lift, ring]  — hand-anchor (277,325) | center-anchor = pusat bbox gambar */
+const H = [277, 325];
+const LEGACY = {
+  buku_emas: ["grimoire_held", 283, 335, 1.3, -26], n5_buku_common: ["grimoire_held", 280, 334, 1.9, -26], n5_buku_rare: ["grimoire_held", 280, 334, 1.4, -26],
+  n4_dualbooks_epic: ["grimoire_held", 280, 334, 1.3, -26], hh2_buku_sihir: ["grimoire_held", 275, 321, 1.9, -26],
+  n3_grimoire_epic: ["grimoire_float", 280, 300, 1.4, 0, 1], flying_book_green: ["grimoire_float", 200, 200, 1, 0, 1], flying_book_purple: ["grimoire_float", 200, 200, .85, 0, 1],
+  flying_book_mythic: ["grimoire_float", 200, 200, .7, 0, 1], legendary_golden_tome: ["grimoire_float", 280, 332, 1.2, 0, 1],
+  hh2_bola_api: ["grimoire_float", 278, 306, 1.5, 0, 0], hh2_bola_es: ["grimoire_float", 278, 306, 1.5, 0, 0], hh2_bola_petir: ["grimoire_float", 278, 304, 1.4, 0, 0],
+  n2_hammer_rare: ["hammer", ...H, 1.3], hammer_green: ["hammer", ...H, 1.25], hammer_purple: ["hammer", ...H, 1.25], hammer_fire_gold: ["hammer", ...H, 1.2],
+  legendary_golden_hammer: ["hammer", ...H, 1.25], hh_palu: ["hammer", ...H, 1], hh_gada_naga: ["hammer", ...H, 1], hh_kapak: ["hammer", ...H, 1], hh2_gada_naga: ["hammer", ...H, 1],
+  pedang_bambu: ["sword", ...H, 1.25], hh_pedang_kayu: ["sword", ...H, 1], hh_pedang_api: ["sword", ...H, 1], hh_pedang_es: ["sword", ...H, 1], hh_pedang_petir: ["sword", ...H, 1],
+  hh_pedang_naga: ["sword", ...H, 1], hh_excalibur: ["sword", ...H, 1], hh2_pedang_kristal: ["sword", ...H, 1], hh2_pedang_dewa: ["sword", ...H, 1],
+  hh_kunai: ["sword", ...H, 1.2], hh2_pisau: ["sword", ...H, 1.4], hh2_tongkat_bisbol: ["sword", ...H, 1], hh_pensil_raksasa: ["sword", ...H, 1],
+  hh_katana: ["katana", ...H, 1],
+  hh_tongkat_sihir: ["staff", ...H, 1], hh_tongkat_es: ["staff", ...H, 1], hh_tongkat_galaxy: ["staff", ...H, 1],
+  hh_yari: ["spear", ...H, 1], hh_trisula: ["spear", ...H, 1], hh2_tombak_petir: ["spear", ...H, 1],
+  hh_sabit: ["scythe", ...H, 1], hh_sabit_api: ["scythe", ...H, 1], hh2_sabit_galaxy: ["scythe", ...H, 1],
+  hh_busur: ["bow", ...H, 1], hh2_busur_emas: ["bow", ...H, 1],
+  hh_perisai: ["shield", 123, 325, 1],
+  tas_sekolah: ["carry", ...H, 1.1], briefcase_common: ["carry", ...H, 1.1], briefcase_leather: ["carry", ...H, 1], briefcase_executive_gold: ["carry", ...H, 1],
+  tas_green: ["carry", ...H, 1], tas_purple: ["carry", ...H, 1], tas_fire_gold: ["carry", ...H, 1], hh_payung: ["carry", ...H, 1], hh_bunga: ["carry", ...H, 1.1],
+  hh_kipas: ["carry", ...H, 1], hh_gitar: ["carry", ...H, 1], hh2_mic: ["carry", ...H, 1.1], hh2_gulungan: ["carry", ...H, 1.4], hh_lentera: ["carry", ...H, 1.1], hh_shuriken: ["carry", ...H, 1.2],
+};
 
 export function extendWeaponAnim(C) {
+  for (const [id, [type, ax, ay, scale, lift, ring]] of Object.entries(LEGACY)) {
+    const it = C.HANDHELD[id]; if (!it) continue;
+    it.animType = type; it.animLegacy = { ax, ay, scale, lift: lift || 0, ring: ring === undefined ? 1 : ring };
+  }
   TYPES.forEach((type, k) => {
     RARITIES.forEach((rar, ti) => {
       const [[a, b], lv] = RT[rar], harga = Math.round((a + (b - a) * (k / (TYPES.length - 1))) / 50) * 50;
