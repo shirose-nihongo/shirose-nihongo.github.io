@@ -26,3 +26,6 @@ Bawaan: **Putih Ungu** (Lv1) + Monokrom (Lv1). Tema yang masih terkunci otomatis
 
 ## Hadiah gacha (diperbarui)
 Pool = 48 barang SHOP (rarity dari katalog) + 8 tema (🎨, hanya epic/legendary → jauh lebih sulit). Barang shop masuk `karakter.inventory`, tema masuk `wallet/gacha.inv` (`theme_<id>`). Barang yang sudah dibeli dihitung duplikat (refund koin). Ubah daftar di `tools/build-gacha.mjs` lalu `node tools/build-gacha.mjs`. Deploy lewat dashboard: tempel **`cloudflare/gacha-worker.bundle.js`** (satu file, dihasilkan script itu).
+
+## Pembaruan peluang & harga (terbaru)
+Harga: ×1 = 800, ×10 = 7.200. Peluang: Common 40 · Uncommon 28 · Rare 18 · Epic 9 · Legendary 4 · Mythic 1 (%). Pity: epic+ ≤20, legendary+ ≤80. **Duplikat tidak ada pengembalian koin.** Auto spin: pilih ×1/×10 dan jumlah (3–100), berhenti sendiri jika koin kurang atau ditekan Stop; hasil diringkas di akhir. Akun moderator: gratis, peluang rendah (Epic 1.3 · Legendary 0.19 · Mythic 0.01), tanpa pity.

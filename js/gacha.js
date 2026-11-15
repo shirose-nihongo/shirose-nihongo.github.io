@@ -24,7 +24,7 @@ async function render() {
   const galeri = ORD.map(r => { const a = CONFIG.POOL[r] || []; if (!a.length) return "";
     return `<h4 style="margin:14px 0 6px;color:${RAR[r][1]};">${RAR[r][0]} · ${fmt(pctOf[r])} <small style="color:var(--gray);">(${a.length} item, tiap item ≈ ${fmt(pctOf[r] / a.length)})</small></h4><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;">` + a.map(i => { const x = byId[i] || {}, own = inv.includes(i) || (st.siswa?.karakter?.inventory || []).includes(i), th = x.kind === "theme";
       return `<div style="padding:10px;border-radius:12px;border:1px solid ${RAR[r][1]};opacity:${own ? 1 : .92};${own ? "" : "filter:saturate(.8);"}"><div style="font-size:22px;">${th ? "🎨" : IKON[String(x.kat || "").toLowerCase().replace(/ /g, "_")] || "🎁"}</div><div style="font-weight:700;font-size:13px;margin:4px 0;">${esc(x.nama || i)}</div><div style="font-size:11px;color:var(--gray);">${th ? "Tema tampilan" : esc(x.kat || "Barang shop")}${x.harga ? " · 🪙 " + x.harga.toLocaleString("id-ID") : ""}</div><div style="font-size:11px;margin-top:3px;">≈ ${fmt(pctOf[r] / a.length)} per tarikan</div>${own ? '<div style="font-size:11px;color:#3cc878;margin-top:3px;">✓ Dimiliki</div>' : ""}${th ? `<button class="btn ghost" style="margin-top:6px;padding:4px 8px;font-size:12px;" onclick="SHIROSE_THEME.preview('${i.slice(6)}')">👀 Pratinjau</button>` : ""}</div>`; }).join("") + "</div>"; }).join("");
-  const hasil = last ? `<div class="panel" style="margin-top:12px;"><h3>Hasil tarikan</h3>${last.results.map(x => `<div style="padding:6px 0;border-bottom:1px solid var(--border,#333);color:${RAR[x.rarity][1]};"><b>${RAR[x.rarity][0]}</b> · ${esc(NAMA[x.item] || x.item)}${x.dup ? ' <small style="color:var(--gray);">(duplikat → +' + CONFIG.DUP_REFUND[x.rarity] + ' 🪙)</small>' : " ✨ baru!"}</div>`).join("")}</div>` : "";
+  const hasil = last ? `<div class="panel" style="margin-top:12px;"><h3>Hasil tarikan</h3>${last.results.map(x => `<div style="padding:6px 0;border-bottom:1px solid var(--border,#333);color:${RAR[x.rarity][1]};"><b>${RAR[x.rarity][0]}</b> · ${esc(NAMA[x.item] || x.item)}${x.dup ? ' <small style="color:var(--gray);">(duplikat, tidak ada pengembalian)</small>' : " ✨ baru!"}</div>`).join("")}</div>` : "";
   const aktif = true;
   return `<div class="panel"><h1>🎰 Gacha</h1>
     <p>Saldo: <b>${(st.gami?.koin || 0).toLocaleString("id-ID")} 🪙</b> (dompet satu untuk semua fitur)</p>
@@ -32,9 +32,14 @@ async function render() {
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;">
       <button class="btn" ${busy ? "disabled" : ""} onclick="GACHA.tarik(1)">Tarik ×1 · ${CONFIG.PRICE_1.toLocaleString("id-ID")} 🪙</button>
       <button class="btn gold" ${busy ? "disabled" : ""} onclick="GACHA.tarik(10)">Tarik ×10 · ${CONFIG.PRICE_10.toLocaleString("id-ID")} 🪙</button></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 10px;padding:10px;border:1px dashed var(--border,#444);border-radius:12px;"><b>🔁 Auto spin</b>
+      <select id="ga-mode"><option value="1">tarik ×1</option><option value="10">tarik ×10</option></select>
+      <span>sebanyak</span><select id="ga-count">${[3, 5, 10, 20, 50, 100].map(v => `<option value="${v}">${v} kali</option>`).join("")}</select>
+      <button class="btn ghost" ${busy ? "disabled" : ""} onclick="GACHA.auto()">▶ Mulai</button>
+      <small style="color:var(--gray);flex-basis:100%;">Berhenti sendiri kalau koin tidak cukup. Tanpa animasi; hasil diringkas di akhir.</small></div>
     ${FB.hasUnlimitedCoins && FB.hasUnlimitedCoins() ? '<p style="font-size:12px;color:#ffb703;">🛡️ Akun moderator: tarik GRATIS, tapi peluang lebih rendah (Epic 1.3% · Legendary 0.19% · Mythic 0.01%) dan tanpa pity.</p>' : ""}<p style="font-size:11px;color:var(--gray);">Peluang: ${CONFIG.RARITY.map(r => RAR[r.id][0] + " " + r.pct + "%").join(" · ")}</p>
     ${GACHA_URL ? "" : '<p style="font-size:11px;color:var(--gray);">Mode sementara: undian dijalankan di perangkat (server gacha belum dipasang).</p>'}</div>${hasil}
-    <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item yang sudah dimiliki diganti koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
+    <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item duplikat tidak mendapat pengembalian koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
     <div class="panel" style="margin-top:12px;"><h3>🎁 Semua hadiah (${items.length}) — dimiliki ${items.filter(x => inv.includes(x.i) || (st.siswa?.karakter?.inventory || []).includes(x.i)).length}</h3>${galeri}</div>`;
 }
 
@@ -49,7 +54,7 @@ function pola(r) {
   if (r === "common" || r === "uncommon") { const o = rnd(FILL.filter(x => x !== s && x !== SYM.epic && x !== SYM.legendary && x !== SYM.mythic)); const a = [s, s, o]; const p = Math.floor(Math.random() * 3); [a[p], a[2]] = [a[2], a[p]]; return a; }
   return [s, s, s];
 }
-function kartuHadiah(x, dl) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;${dl ? "animation-delay:" + dl + "s;" : ""}"><div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat → +${CONFIG.DUP_REFUND[x.rarity]} 🪙</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
+function kartuHadiah(x, dl) { const c = RAR[x.rarity][1]; return `<div class="gfx-card" style="border-color:${c};box-shadow:0 0 22px ${c}66;${dl ? "animation-delay:" + dl + "s;" : ""}"><div style="color:${c};font-weight:900;letter-spacing:.08em;font-size:12px;">${RAR[x.rarity][0].toUpperCase()}</div><div style="font-size:15px;font-weight:800;margin:4px 0;">${esc(NAMA[x.item] || x.item)}</div>${x.dup ? `<div style="font-size:11px;color:#bbb;">Duplikat (tanpa pengembalian)</div>` : '<div style="font-size:11px;color:#3cc878;">✨ Baru!</div>'}</div>`; }
 function playSlot(res) {
   return new Promise((done) => {
     const list = res.results.slice().sort((a, b) => ORDR.indexOf(a.rarity) - ORDR.indexOf(b.rarity)), best = list[0], target = pola(best.rarity), c = RAR[best.rarity][1];
@@ -104,7 +109,7 @@ function playSlot(res) {
       if (mid) o.querySelector("#gfx-mach").classList.add("glow"); o.classList.add("show");
       if (hi) for (let i = 0; i < 36; i++) { const e = document.createElement("i"); e.className = "conf"; e.textContent = rnd(["✨", "⭐", "🎉", "💎", "👑"]); e.style.left = Math.random() * 100 + "vw"; e.style.animationDuration = 1.6 + Math.random() * 1.8 + "s"; e.style.animationDelay = Math.random() * .6 + "s"; o.appendChild(e); }
       const sisa = list.slice(1);
-      o.querySelector("#gfx-out").innerHTML = (res.results.length > 1 ? '<div style="opacity:.85;font-size:13px;">Hadiah terbaik</div>' : "") + `<div class="best">${kartuHadiah(best)}</div>` + (sisa.length ? `<div style="opacity:.85;font-size:13px;margin-top:10px;">Hadiah lainnya</div><div class="grid">${sisa.map((x, i) => kartuHadiah(x, (.5 + i * .12).toFixed(2))).join("")}</div>` : "") + (res.refund ? `<div style="margin-top:8px;color:#ffd166;">+${res.refund} 🪙 dari duplikat</div>` : "");
+      o.querySelector("#gfx-out").innerHTML = (res.results.length > 1 ? '<div style="opacity:.85;font-size:13px;">Hadiah terbaik</div>' : "") + `<div class="best">${kartuHadiah(best)}</div>` + (sisa.length ? `<div style="opacity:.85;font-size:13px;margin-top:10px;">Hadiah lainnya</div><div class="grid">${sisa.map((x, i) => kartuHadiah(x, (.5 + i * .12).toFixed(2))).join("")}</div>` : "");
       o.querySelector("#gfx-btn").innerHTML = '<button id="gfx-ok">Tutup</button>'; o.querySelector("#gfx-ok").onclick = tutup;
     };
     durs.forEach((d, i) => tm.push(setTimeout(() => kunci(i), d * 1000)));
@@ -112,23 +117,60 @@ function playSlot(res) {
     o.querySelector("#gfx-skip").onclick = tampil;
   });
 }
+let autoStop = false;
+async function satuTarik(n) {
+  let res;
+  if (GACHA_URL) {
+    const tok = await FB.getIdToken();
+    const r = await fetch(GACHA_URL, { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer " + tok }, body: JSON.stringify({ n }) });
+    const j = await r.json(); if (!r.ok) throw new Error(j.error || "Gagal"); res = j;
+  } else res = await tarikLokal(n);   // MODE LOKAL sementara (belum ada server)
+  last = res;
+  const gs = await FB.getGachaState(); if (window.SHIROSE_THEME) window.SHIROSE_THEME.setOwned(gs && gs.inv || []);
+  if (window.__SHIROSE_STATE) window.__SHIROSE_STATE.gami.koin = res.koin;
+  const c = document.getElementById("chip-coin"); if (c && !(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins())) c.textContent = res.koin;
+  return res;
+}
+function ringkasan(all, dipakai, berhenti) {
+  return new Promise((done) => {
+    const cnt = {}; all.forEach(x => cnt[x.rarity] = (cnt[x.rarity] || 0) + 1);
+    const baru = all.filter(x => !x.dup).sort((a, b) => ORDR.indexOf(a.rarity) - ORDR.indexOf(b.rarity));
+    const o = document.createElement("div"); o.id = "gfx";
+    o.style.cssText = "position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto;color:#fff";
+    o.innerHTML = `<div style="width:min(560px,100%);text-align:center"><h3>🎰 Auto spin selesai</h3><p style="opacity:.85;font-size:13px;">${all.length} tarikan · ${berhenti ? esc(berhenti) : "selesai"}${dipakai ? " · dipakai " + dipakai.toLocaleString("id-ID") + " 🪙" : " · gratis"}</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0;">${ORDR.map(r => `<span style="padding:5px 10px;border-radius:10px;border:1px solid ${RAR[r][1]};color:${RAR[r][1]};font-weight:800;">${RAR[r][0]} ×${cnt[r] || 0}</span>`).join("")}</div>
+<div style="opacity:.85;font-size:13px;">Barang baru (${baru.length}) · duplikat ${all.length - baru.length}</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px;max-height:48vh;overflow:auto;margin-top:6px;">${baru.map(x => kartuHadiah(x)).join("") || '<div style="opacity:.7;padding:10px;">Tidak ada barang baru</div>'}</div>
+<button id="gfx-ok" style="background:#fff;color:#111;border:0;border-radius:10px;padding:9px 18px;font-weight:800;cursor:pointer;margin-top:12px;">Tutup</button></div>`;
+    document.body.appendChild(o); o.querySelector("#gfx-ok").onclick = () => { o.remove(); done(); };
+  });
+}
 window.GACHA = {
   async tarik(n) {
     if (busy) return; busy = true; let fresh = null;
-    try {
-      if (GACHA_URL) {
-        const tok = await FB.getIdToken();
-        const r = await fetch(GACHA_URL, { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer " + tok }, body: JSON.stringify({ n }) });
-        const j = await r.json();
-        if (!r.ok) throw new Error(j.error || "Gagal");
-        last = fresh = j;
-      } else last = fresh = await tarikLokal(n);   // MODE LOKAL sementara (belum ada server)
-      const gs = await FB.getGachaState(); if (window.SHIROSE_THEME) window.SHIROSE_THEME.setOwned(gs && gs.inv || []);
-      if (window.__SHIROSE_STATE) window.__SHIROSE_STATE.gami.koin = last.koin;
-      const c = document.getElementById("chip-coin"); if (c && !(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins())) c.textContent = last.koin;
-    } catch (e) { if (window.toast) window.toast("❌ " + (e.message || e)); }
+    try { fresh = await satuTarik(n); } catch (e) { if (window.toast) window.toast("❌ " + (e.message || e)); }
     busy = false;
     if (fresh && fresh.results) { try { await playSlot(fresh); } catch (e) {} }
+    route("gacha");
+  },
+  /* Auto spin: ulangi tarik ×1 / ×10 sebanyak N kali tanpa animasi, berhenti kalau koin habis atau ditekan Stop. */
+  async auto() {
+    if (busy) return;
+    const n = +document.getElementById("ga-mode").value === 10 ? 10 : 1, kali = Math.max(1, Math.min(200, +document.getElementById("ga-count").value || 1));
+    busy = true; autoStop = false;
+    const bar = document.createElement("div"); bar.id = "gauto";
+    bar.style.cssText = "position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:16px";
+    bar.innerHTML = `<div><div style="font-size:34px;">🎰</div><div id="gauto-t" style="font-size:16px;margin:8px 0;">Memulai…</div><button id="gauto-s" style="background:#fff;color:#111;border:0;border-radius:10px;padding:9px 18px;font-weight:800;cursor:pointer;">⏹ Stop</button></div>`;
+    document.body.appendChild(bar); bar.querySelector("#gauto-s").onclick = () => { autoStop = true; };
+    const all = []; let dipakai = 0, alasan = "", unl = !!(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins());
+    for (let i = 0; i < kali && !autoStop; i++) {
+      bar.querySelector("#gauto-t").textContent = `Auto spin ${i + 1}/${kali} (×${n}) · ${all.length} hadiah`;
+      try { const r = await satuTarik(n); all.push(...r.results); if (!unl) dipakai += n === 10 ? CONFIG.PRICE_10 : CONFIG.PRICE_1; }
+      catch (e) { alasan = (e.message || "gagal") + " — dihentikan"; break; }
+    }
+    if (autoStop) alasan = "dihentikan";
+    bar.remove(); busy = false;
+    if (all.length) await ringkasan(all, dipakai, alasan); else if (window.toast) window.toast(alasan || "Tidak ada tarikan");
     route("gacha");
   },
 };
@@ -146,8 +188,7 @@ async function tarikLokal(n) {
   try {
     await FB.saveGachaState({ sinceEpic: r.pity.sinceEpic, sinceLegend: r.pity.sinceLegend, inv: Array.from(new Set([...(g.inv || []), ...baru])) }, baru.filter(i => kind[i] === "shop"));
   } catch (e) { if (!unl) { try { await FB.tambahKoin(price, "gacha batal (gagal simpan)"); } catch (x) {} } throw new Error("Gagal menyimpan hasil, koin dikembalikan"); }
-  let akhir = saldo;
-  if (r.refund) { const s2 = await FB.tambahKoin(r.refund, "gacha refund duplikat"); if (s2 !== null) akhir = s2; }
-  return { results: r.results, refund: r.refund, koin: unl ? (window.__SHIROSE_STATE?.gami?.koin || 0) : akhir, pity: r.pity };
+  const akhir = saldo;
+  return { results: r.results, refund: 0, koin: unl ? (window.__SHIROSE_STATE?.gami?.koin || 0) : akhir, pity: r.pity };
 }
 export const GACHA_ROUTES = { gacha: () => render() };
