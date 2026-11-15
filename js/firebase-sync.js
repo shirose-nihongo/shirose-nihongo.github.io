@@ -484,6 +484,19 @@ export async function getGachaState() {
   if (!currentUser) return null;
   try { const s = await getDoc(doc(db, "siswa", currentUser.uid, "wallet", "gacha")); return s.exists() ? s.data() : { sinceEpic: 0, sinceLegend: 0, inv: [] }; } catch (e) { return null; }
 }
+/* Mode lokal gacha (sementara, sampai Worker server aktif): simpan status & inventaris dari klien. */
+export async function saveGachaState(state, shopIds) {
+  if (!currentUser) throw new Error("Belum login");
+  await setDoc(doc(db, "siswa", currentUser.uid, "wallet", "gacha"), { sinceEpic: state.sinceEpic || 0, sinceLegend: state.sinceLegend || 0, inv: state.inv || [], updated: serverTimestamp() }, { merge: true });
+  if (shopIds && shopIds.length) {
+    const ref = doc(db, "siswa", currentUser.uid);
+    const cur = (await getDoc(ref)).data() || {};
+    const inv = Array.from(new Set([...(cur.karakter?.inventory || []), ...shopIds]));
+    await updateDoc(ref, { "karakter.inventory": inv });
+    if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.inventory = inv;
+  }
+}
+export function ownedShopIds() { return (currentSiswaDoc && currentSiswaDoc.karakter && currentSiswaDoc.karakter.inventory) || []; }
 export async function getWalletOf(uid) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
   const s = await getDoc(doc(db, "siswa", uid, "wallet", "main")); return s.exists() ? s.data() : null;
