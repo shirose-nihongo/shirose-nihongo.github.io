@@ -4554,6 +4554,14 @@ window.reviewJump = (idx) => {
   renderReviewHasil();
 };
 
+/* Moderator/developer (koin tak terbatas): semua item dianggap MILIK sejak awal (hanya tampilan; DB tidak diubah) */
+function invEfektif(){
+  const real = state.siswa?.karakter?.inventory || [];
+  if (!(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins())) return real;
+  const all = new Set(real);
+  for (const [k, o] of Object.entries(CATALOG)) for (const [id, it] of Object.entries(o)) if (id !== "none" && !it.equipped_default) all.add(id);
+  return [...all];
+}
 /* ========== SHOP ========== */
 /* ========== SHOP — all categories + side-by-side preview (Parts 18 + 23) ========== */
 async function renderShop(){
@@ -4575,7 +4583,7 @@ async function renderShop(){
   const allItems = allShopItems();   // sayap epic+ dijual; common–rare hanya dari gacha
   const items = allItems.filter(it => it.kategori === activeCat);
 
-  const inv = state.siswa?.karakter?.inventory || [];
+  const inv = invEfektif();
   const eq = state.siswa?.karakter?.equipped || {};
   const skin = state.siswa?.karakter?.skinTone || "light";
   const hairColor = state.siswa?.karakter?.hairColor;
@@ -4750,7 +4758,7 @@ window.equipNow = async (kat, id) => {
 
 /* ========== INVENTORY ========== */
 async function renderInventory(){
-  const inv = state.siswa?.karakter?.inventory || [];
+  const inv = invEfektif();
   if (!inv.length) return `<div class="panel"><h2>🎒 Inventory</h2><div class="empty"><div class="emoji">📭</div>Inventorymu masih kosong.<br><button class="btn" onclick="route('shop')">Ke Shop</button></div></div>`;
 
   const grouped = {};
@@ -4797,7 +4805,7 @@ window.equipNowInv = async (kat, id) => {
 /* ========== WARDROBE ========== */
 async function renderWardrobe(){
   const eq = state.siswa?.karakter?.equipped || DEFAULT_EQUIPPED;
-  const inv = state.siswa?.karakter?.inventory || [];
+  const inv = invEfektif();
   const skin = state.siswa?.karakter?.skinTone || "light";
   const chara = renderCharacter(eq, skin);
 
