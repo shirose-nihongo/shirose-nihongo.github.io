@@ -1,0 +1,3227 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "bab1-q1",
+    "title": {
+     "id": "Latihan Bab 1",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Barang jadi yang siap dikirim disebut 製品.”",
+       "jp": "○か×か。「できあがって{出荷|しゅっか}する{物|もの}は{製|せい}{品|ひん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{製|せい}{品|ひん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Produk cacat yang ditemukan boleh disembunyikan agar tidak dimarahi.”",
+       "jp": "○か×か。「{不良|ふりょう}{品|ひん}を{見|み}つけても、おこられないようにかくします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus dilaporkan.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Singkatan 5S dimulai dari…",
+       "jp": "5Sのはじめの2つはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "整理と整頓",
+        "jp": "{整理|せいり}と{整頓|せいとん}"
+       },
+       {
+        "id": "清掃と清潔",
+        "jp": "{清掃|せいそう}と{清潔|せいけつ}"
+       },
+       {
+        "id": "しつけと整理",
+        "jp": "しつけと{整理|せいり}"
+       },
+       {
+        "id": "整頓としつけ",
+        "jp": "{整頓|せいとん}としつけ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "整理 dan 整頓.",
+       "jp": "{整理|せいり}と{整頓|せいとん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tahap kerja di pabrik disebut 工程.”",
+       "jp": "○か×か。「{工場|こうじょう}の{作業|さぎょう}の{段階|だんかい}を{工程|こうてい}といいます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{工程|こうてい}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "sub": "b1s1",
+    "title": {
+     "id": "Subbab 1.1 · Alur Kerja Pabrik",
+     "jp": "1.1 {製造|せいぞう}の{流|なが}れ"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Urutan alur pabrik: 設計 → 材料 → 加工 → 組立て → 検査 → 出荷.”",
+       "jp": "○か×か。「{工場|こうじょう}の{流|なが}れは、{設計|せっけい}、{材料|ざいりょう}、{加工|かこう}、{組立|くみた}て、{検査|けんさ}、{出荷|しゅっか}の{順|じゅん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu urutan umum.",
+       "jp": "これがふつうの{順番|じゅんばん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Barang yang masih dalam proses disebut…",
+       "jp": "まだ{途中|とちゅう}の{物|もの}を{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "仕掛品",
+        "jp": "{仕掛品|しかかりひん}"
+       },
+       {
+        "id": "良品",
+        "jp": "{良|りょう}{品|ひん}"
+       },
+       {
+        "id": "在庫",
+        "jp": "{在庫|ざいこ}"
+       },
+       {
+        "id": "製品",
+        "jp": "{製|せい}{品|ひん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "仕掛品 = barang setengah jadi.",
+       "jp": "{途中|とちゅう}の{物|もの}は{仕掛品|しかかりひん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "納期 berarti…",
+       "jp": "{納期|のうき}の{意味|いみ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Batas waktu penyerahan",
+        "jp": "わたす{期限|きげん}"
+       },
+       {
+        "id": "Jumlah stok",
+        "jp": "しまってある{数|かず}"
+       },
+       {
+        "id": "Cara kerja",
+        "jp": "{作業|さぎょう}のやり{方|かた}"
+       },
+       {
+        "id": "Nama produk",
+        "jp": "{製|せい}{品|ひん}の{名前|なまえ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "納期 = tenggat penyerahan.",
+       "jp": "{納期|のうき}はわたす{期限|きげん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pekerja pemula boleh mengubah cara kerja sesuka hati.”",
+       "jp": "○か×か。「はじめの{人|ひと}は、{作業|さぎょう}のやり{方|かた}をかってにかえてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Ikuti 作業指示書.",
+       "jp": "{作業|さぎょう}{指示|しじ}{書|か}のとおりにします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Satu kelompok produk yang dibuat bersama disebut…",
+       "jp": "いっしょにつくる1つのまとまりを{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "ロット",
+        "jp": "ロット"
+       },
+       {
+        "id": "ライン",
+        "jp": "ライン"
+       },
+       {
+        "id": "工程",
+        "jp": "{工程|こうてい}"
+       },
+       {
+        "id": "納期",
+        "jp": "{納期|のうき}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ロット = kelompok produksi.",
+       "jp": "ロットはまとまりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "sub": "b1s2",
+    "title": {
+     "id": "Subbab 1.2 · Dasar Pengendalian Mutu",
+     "jp": "1.2 {品質|ひんしつ}{管理|かんり}のきほん"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Produk yang memenuhi standar disebut…",
+       "jp": "{決|き}まりにあっている{製|せい}{品|ひん}を{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "良品",
+        "jp": "{良|りょう}{品|ひん}"
+       },
+       {
+        "id": "不良品",
+        "jp": "{不良|ふりょう}{品|ひん}"
+       },
+       {
+        "id": "仕掛品",
+        "jp": "{仕掛品|しかかりひん}"
+       },
+       {
+        "id": "在庫",
+        "jp": "{在庫|ざいこ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "良品 = produk baik.",
+       "jp": "{良|りょう}{品|ひん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Prinsip mutu: tidak membuat, tidak meneruskan, dan tidak menerima produk cacat.”",
+       "jp": "○か×か。「{品質|ひんしつ}の{約束|やくそく}は、{不良|ふりょう}{品|ひん}をつくらない、{流|なが}さない、{受|う}けとらないです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Itu tiga prinsipnya.",
+       "jp": "3つの{約束|やくそく}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “抜き取り検査 memeriksa seluruh produk.”",
+       "jp": "○か×か。「{抜|ぬ}き{取|と}り{検査|けんさ}は、ぜんぶの{製|せい}{品|ひん}を{調|しら}べます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Itu 全数検査.",
+       "jp": "ぜんぶは{全数検査|ぜんすうけんさ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jika menemukan produk cacat, yang benar adalah…",
+       "jp": "{不良|ふりょう}{品|ひん}を{見|み}つけたとき、{正|ただ}しいのはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Hentikan, pisahkan, dan laporkan",
+        "jp": "{止|と}めて、{分|わ}けて、{報告|ほうこく}する"
+       },
+       {
+        "id": "Campur dengan produk baik",
+        "jp": "{良|りょう}{品|ひん}とまぜる"
+       },
+       {
+        "id": "Diam saja",
+        "jp": "だまっている"
+       },
+       {
+        "id": "Teruskan ke tahap berikut",
+        "jp": "つぎの{工程|こうてい}に{流|なが}す"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Hentikan, pisahkan, laporkan.",
+       "jp": "{止|と}めて、{分|わ}けて、{報告|ほうこく}します。"
+      }
+     },
+     {
+      "q": {
+       "id": "4M terdiri dari 人, 機械, 材料, dan…",
+       "jp": "4Mは、{人|ひと}、{機械|きかい}、{材料|ざいりょう}と、あと{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "方法",
+        "jp": "{方法|ほうほう}"
+       },
+       {
+        "id": "時間",
+        "jp": "{時間|じかん}"
+       },
+       {
+        "id": "お金",
+        "jp": "お{金|かね}"
+       },
+       {
+        "id": "場所",
+        "jp": "{場所|ばしょ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Method = 方法.",
+       "jp": "{方法|ほうほう}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s3-q",
+    "sub": "b1s3",
+    "title": {
+     "id": "Subbab 1.3 · 5S dan Aturan Tempat Kerja",
+     "jp": "1.3 5Sと{職場|しょくば}のルール"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "S pertama dalam 5S adalah…",
+       "jp": "5Sの{最初|さいしょ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "整理",
+        "jp": "{整理|せいり}"
+       },
+       {
+        "id": "整頓",
+        "jp": "{整頓|せいとん}"
+       },
+       {
+        "id": "清掃",
+        "jp": "{清掃|せいそう}"
+       },
+       {
+        "id": "清潔",
+        "jp": "{清潔|せいけつ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Urutan: 整理 dulu.",
+       "jp": "{整理|せいり}からです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “整頓 berarti menata barang pada tempat tetap.”",
+       "jp": "○か×か。「{整頓|せいとん}は、{決|き}まった{場所|ばしょ}に{物|もの}をおくことです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{整頓|せいとん}は{決|き}まった{場所|ばしょ}におくことです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "指差呼称 adalah…",
+       "jp": "{指差呼称|ゆびさしこしょう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Menunjuk dan mengucapkan untuk memastikan",
+        "jp": "{指|ゆび}でさして{声|こえ}に{出|で}して{確認|かくにん}する"
+       },
+       {
+        "id": "Menghitung barang",
+        "jp": "{物|もの}を{数|かず}える"
+       },
+       {
+        "id": "Membersihkan lantai",
+        "jp": "ゆかをそうじする"
+       },
+       {
+        "id": "Menulis laporan",
+        "jp": "{報告|ほうこく}を{書|か}く"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Menunjuk dan menyebut.",
+       "jp": "{指|ゆび}でさして{声|こえ}に{出|で}します。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika tidak mengerti, tanya setelah pekerjaan selesai.”",
+       "jp": "○か×か。「わからないときは、{作業|さぎょう}が{終|お}わってから{聞|き}きます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tanya sebelum bekerja.",
+       "jp": "{作業|さぎょう}の{前|まえ}に{聞|き}きます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika mesin tidak seperti biasa, hentikan dan beri tahu.”",
+       "jp": "○か×か。「{機械|きかい}がいつもとちがうときは、{止|と}めて{知|し}らせます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{止|と}めて{知|し}らせます。"
+      },
+      "mb": true
+     }
+    ]
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "title": {
+     "id": "Latihan Bab 2",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengaman mesin tidak boleh dibuat tidak berfungsi.”",
+       "jp": "○か×か。「{安全装置|あんぜんそうち}を{動|うご}かないようにしてはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "してはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Menjepit tangan di antara bagian bergerak disebut…",
+       "jp": "{動|うご}く{部分|ぶぶん}のあいだに{手|て}がはさまれることを{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "はさまれ",
+        "jp": "はさまれ"
+       },
+       {
+        "id": "巻き込まれ",
+        "jp": "{巻|ま}き{込|こ}まれ"
+       },
+       {
+        "id": "飛来",
+        "jp": "{飛来|ひらい}"
+       },
+       {
+        "id": "漏電",
+        "jp": "{漏電|ろうでん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "はさまれ.",
+       "jp": "はさまれです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pelarut organik boleh didekatkan ke api.”",
+       "jp": "○か×か。「{有機溶剤|ゆうきようざい}を、{火|ひ}に{近|ちか}づけてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Berbahaya.",
+       "jp": "{近|ちか}づけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pelindung dari debu logam adalah…",
+       "jp": "{金属|きんぞく}のこなを{吸|す}わないための{物|もの}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "防じんマスク",
+        "jp": "{防|ぼう}じんマスク"
+       },
+       {
+        "id": "耳栓",
+        "jp": "{耳栓|みみせん}"
+       },
+       {
+        "id": "安全靴",
+        "jp": "{安全|あんぜん}{靴|くつ}"
+       },
+       {
+        "id": "手袋",
+        "jp": "{手袋|てぶくろ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Masker debu.",
+       "jp": "{防|ぼう}じんマスクです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "sub": "b2s1",
+    "title": {
+     "id": "Subbab 2.1 · Kecelakaan Kerja dan Alat Pelindung",
+     "jp": "2.1 {労働災害|ろうどうさいがい}と{保護具|ほごぐ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Di dekat bor atau bubut, tidak boleh memakai sarung tangan.”",
+       "jp": "○か×か。「ボール{盤|ばん}や{旋盤|せんばん}の{近|ちか}くでは、{手袋|てぶくろ}をしてはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Bisa terlilit.",
+       "jp": "まきこまれるからです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pelindung untuk benda jatuh ke kepala adalah…",
+       "jp": "{上|うえ}から{落|お}ちる{物|もの}から{頭|あたま}を{守|まも}る{物|もの}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ヘルメット",
+        "jp": "ヘルメット"
+       },
+       {
+        "id": "耳栓",
+        "jp": "{耳栓|みみせん}"
+       },
+       {
+        "id": "手袋",
+        "jp": "{手袋|てぶくろ}"
+       },
+       {
+        "id": "マスク",
+        "jp": "マスク"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ヘルメット.",
+       "jp": "ヘルメットです。"
+      }
+     },
+     {
+      "q": {
+       "id": "ヒヤリハット berarti…",
+       "jp": "ヒヤリハットの{意味|いみ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Nyaris celaka",
+        "jp": "あぶなかったがけがはなかったこと"
+       },
+       {
+        "id": "Cedera berat",
+        "jp": "{大|おお}けが"
+       },
+       {
+        "id": "Libur",
+        "jp": "{休|やす}み"
+       },
+       {
+        "id": "Rapat",
+        "jp": "{会議|かいぎ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Nyaris celaka.",
+       "jp": "あぶなかったことです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Rambut panjang diikat dan perhiasan dilepas.”",
+       "jp": "○か×か。「{長|なが}いかみはむすび、ゆびわははずします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "まきこまれをふせぎます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pelindung dari serpihan dan percikan untuk mata adalah…",
+       "jp": "{切|き}りくずや{火花|ひばな}から{目|め}を{守|まも}る{物|もの}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "保護めがね",
+        "jp": "{保護|ほご}めがね"
+       },
+       {
+        "id": "耳栓",
+        "jp": "{耳栓|みみせん}"
+       },
+       {
+        "id": "安全靴",
+        "jp": "{安全|あんぜん}{靴|くつ}"
+       },
+       {
+        "id": "ヘルメット",
+        "jp": "ヘルメット"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "保護めがね.",
+       "jp": "{保護|ほご}めがねです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s2-q",
+    "sub": "b2s2",
+    "title": {
+     "id": "Subbab 2.2 · Bahaya Mesin dan Pengaman",
+     "jp": "2.2 {機械|きかい}のきけんと{安全装置|あんぜんそうち}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Terlilit pada bagian berputar disebut…",
+       "jp": "{回|まわ}る{部分|ぶぶん}にまきこまれることを{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "巻き込まれ",
+        "jp": "{巻|ま}き{込|こ}まれ"
+       },
+       {
+        "id": "はさまれ",
+        "jp": "はさまれ"
+       },
+       {
+        "id": "飛来",
+        "jp": "{飛来|ひらい}"
+       },
+       {
+        "id": "感電",
+        "jp": "{感電|かんでん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "巻き込まれ.",
+       "jp": "{巻|ま}き{込|こ}まれです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin tidak jalan jika pintu terbuka karena…",
+       "jp": "ドアが{開|あ}いていると{機械|きかい}が{動|うご}かないのは{何|なに}のはたらきですか。"
+      },
+      "opts": [
+       {
+        "id": "インターロック",
+        "jp": "インターロック"
+       },
+       {
+        "id": "非常停止",
+        "jp": "{非常停止|ひじょうていし}"
+       },
+       {
+        "id": "ロット",
+        "jp": "ロット"
+       },
+       {
+        "id": "ゲージ",
+        "jp": "ゲージ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "インターロック.",
+       "jp": "インターロックです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengaman boleh dilepas agar kerja lebih cepat.”",
+       "jp": "○か×か。「{仕事|しごと}をはやくするために、{安全装置|あんぜんそうち}をはずしてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tidak boleh.",
+       "jp": "はずしてはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat membersihkan mesin, matikan mesin dan putuskan listrik.”",
+       "jp": "○か×か。「そうじのときは、{機械|きかい}を{止|と}めて{電源|でんげん}を{切|き}ります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{止|と}めて{切|き}ります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Setelah mematikan sumber tenaga, langkah agar tidak dinyalakan orang lain adalah…",
+       "jp": "{電源|でんげん}を{切|き}ったあと、ほかの{人|ひと}が{入|い}れないようにするのはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "施錠と表示",
+        "jp": "{施錠|せじょう}と{表|ひょう}{示|じ}"
+       },
+       {
+        "id": "ゆっくり待つ",
+        "jp": "ゆっくり{待|ま}つ"
+       },
+       {
+        "id": "手袋をする",
+        "jp": "{手袋|てぶくろ}をする"
+       },
+       {
+        "id": "音楽をかける",
+        "jp": "{音楽|おんがく}をかける"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kunci dan beri tanda.",
+       "jp": "{錠|じょう}と{表|ひょう}{示|じ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s3-q",
+    "sub": "b2s3",
+    "title": {
+     "id": "Subbab 2.3 · Pengangkutan dan Pengangkatan",
+     "jp": "2.3 {運搬|うんぱん}と{玉掛|たまがけ}け"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat mengangkat barang berat, tekuk lutut dan punggung lurus.”",
+       "jp": "○か×か。「{重|おも}い{物|もの}を{持|も}つとき、ひざをまげて、せなかをのばします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "こしを{守|まも}ります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh masuk di bawah beban yang digantung jika sebentar.”",
+       "jp": "○か×か。「すこしの{間|あいだ}なら、つり{荷|に}の{下|した}に{入|はい}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Dilarang.",
+       "jp": "{入|はい}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mengoperasikan forklift memerlukan…",
+       "jp": "フォークリフトの{運転|うんてん}に{必要|ひつよう}なものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Pendidikan atau kualifikasi",
+        "jp": "{教育|きょういく}や{資格|しかく}"
+       },
+       {
+        "id": "Tidak perlu apa pun",
+        "jp": "なにもいらない"
+       },
+       {
+        "id": "Sarung tangan",
+        "jp": "{手袋|てぶくろ}"
+       },
+       {
+        "id": "Izin teman",
+        "jp": "{友|ともだち}だちのゆるし"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Perlu kualifikasi.",
+       "jp": "{教育|きょういく}や{資格|しかく}が{必要|ひつよう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Isyarat tangan kepada operator crane disebut…",
+       "jp": "クレーンの{運転|うんてん}する{人|ひと}への{手|て}の{知|し}らせは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "合図",
+        "jp": "{合図|あいず}"
+       },
+       {
+        "id": "報告",
+        "jp": "{報告|ほうこく}"
+       },
+       {
+        "id": "検査",
+        "jp": "{検査|けんさ}"
+       },
+       {
+        "id": "分別",
+        "jp": "{分別|ぶんべつ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "合図.",
+       "jp": "{合図|あいず}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Berlari di pabrik boleh jika terburu-buru.”",
+       "jp": "○か×か。「いそぐときは、{工場|こうじょう}で{走|はし}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Dilarang.",
+       "jp": "{走|はし}ってはいけません。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s4-q",
+    "sub": "b2s4",
+    "title": {
+     "id": "Subbab 2.4 · Listrik, Api, dan Bahan Kimia",
+     "jp": "2.4 {電気|でんき}・{火災|かさい}・{化学物質|かがくぶっしつ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Menyentuh listrik dengan tangan basah itu berbahaya.”",
+       "jp": "○か×か。「ぬれた{手|て}で{電気|でんき}にさわるのはあぶないです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Risiko sengatan.",
+       "jp": "{感電|かんでん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lembar yang berisi sifat bahaya dan cara menangani bahan kimia adalah…",
+       "jp": "{化学物質|かがくぶっしつ}のきけんな{性質|せいしつ}やあつかい{方|かた}がのっているものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "SDS",
+        "jp": "SDS"
+       },
+       {
+        "id": "図面",
+        "jp": "{図|ず}{面|めん}"
+       },
+       {
+        "id": "作業日報",
+        "jp": "{作業日報|さぎょうにっぽう}"
+       },
+       {
+        "id": "ロット表",
+        "jp": "ロット{表|ひょう}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "SDS.",
+       "jp": "SDSです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pelarut organik dipakai di tempat berventilasi baik.”",
+       "jp": "○か×か。「{有機溶剤|ゆうきようざい}は{風|かぜ}{通|とお}しのよい{所|ところ}で{使|つか}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{風|かぜ}{通|とお}しが{大切|たいせつ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jika bahan kimia mengenai mata, lakukan…",
+       "jp": "{化学物質|かがくぶっしつ}が{目|め}に{入|い}ったとき、どうしますか。"
+      },
+      "opts": [
+       {
+        "id": "Bilas dengan banyak air dan lapor",
+        "jp": "たくさんの{水|みず}で{洗|あらって}って{報告|ほうこく}する"
+       },
+       {
+        "id": "Gosok mata",
+        "jp": "{目|め}をこする"
+       },
+       {
+        "id": "Diamkan",
+        "jp": "そのままにする"
+       },
+       {
+        "id": "Tutup mata",
+        "jp": "{目|め}をとじるだけ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Bilas dengan air.",
+       "jp": "{水|みず}で{洗|あら}います。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Percikan api dari las dan gerinda bisa menyulut bahan mudah terbakar.”",
+       "jp": "○か×か。「{溶接|ようせつ}や{研削|けんさく}の{火花|ひばな}は、{燃|も}えやすい{物|もの}に{火|ひ}をつけることがあります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "まわりをかたづけます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s5-q",
+    "sub": "b2s5",
+    "title": {
+     "id": "Subbab 2.5 · Menjaga Kesehatan",
+     "jp": "2.5 {健康管理|けんこうかんり}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pencegahan 熱中症 yang benar adalah…",
+       "jp": "{熱中症|ねっちゅうしょう}の{予防|よぼう}で{正|ただ}しいのはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Minum air dan garam, istirahat",
+        "jp": "{水|みず}と{塩分|えんぶん}をとり、{休|やす}む"
+       },
+       {
+        "id": "Menahan minum",
+        "jp": "{水|みず}をのまない"
+       },
+       {
+        "id": "Terus bekerja",
+        "jp": "{休|やす}まず{続|つづ}ける"
+       },
+       {
+        "id": "Memakai baju tebal",
+        "jp": "あつい{服|ふく}を{重|かさ}ねる"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Air + garam + istirahat.",
+       "jp": "{水|みず}と{塩分|えんぶん}と{休|やす}みです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika pusing dan mual, lapor dan istirahat segera.”",
+       "jp": "○か×か。「めまいやはきけがしたら、すぐ{休|やす}んで{報告|ほうこく}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "むりをしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Di tempat bising, pakai…",
+       "jp": "うるさい{所|ところ}で{使|つか}うものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "耳栓",
+        "jp": "{耳栓|みみせん}"
+       },
+       {
+        "id": "防じんマスク",
+        "jp": "{防|ぼう}じんマスク"
+       },
+       {
+        "id": "保護めがね",
+        "jp": "{保護|ほご}めがね"
+       },
+       {
+        "id": "安全靴",
+        "jp": "{安全|あんぜん}{靴|くつ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "耳栓.",
+       "jp": "{耳栓|みみせん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “健康診断 dilakukan secara berkala.”",
+       "jp": "○か×か。「{健康|けんこう}{診断|しんだん}は、きまった{時期|じき}にうけます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "うけます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat kurang sehat, memaksakan diri tidak masalah.”",
+       "jp": "○か×か。「{調子|ちょうし}がわるくても、むりをしてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Mudah celaka.",
+       "jp": "むりをしません。"
+      },
+      "mb": true
+     }
+    ]
+   }
+  ],
+  "bab3": [
+   {
+    "id": "bab3-q1",
+    "title": {
+     "id": "Latihan Bab 3",
+     "jp": "{第|だい}3{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Simbol R pada gambar berarti…",
+       "jp": "{図|ず}{面|めん}のRは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Radius",
+        "jp": "{半径|はんけい}"
+       },
+       {
+        "id": "Diameter",
+        "jp": "{直径|ちょっけい}"
+       },
+       {
+        "id": "Persegi",
+        "jp": "{正方形|せいほうけい}"
+       },
+       {
+        "id": "Tebal",
+        "jp": "{厚|あつさ}さ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "R = radius.",
+       "jp": "Rは{半径|はんけい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Garis tengah 中心線 menunjukkan pusat lubang atau poros.”",
+       "jp": "○か×か。「{中心線|ちゅうしんせん}は、あなや{軸|じく}の{中心|ちゅうしん}を{表|あらわ}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{中心|ちゅうしん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Alat ukur kedalaman, luar, dan dalam sekaligus adalah…",
+       "jp": "{外側|そとがわ}、{内側|うちがわ}、{深|ふか}さをはかれる{道具|どうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ノギス",
+        "jp": "ノギス"
+       },
+       {
+        "id": "直尺",
+        "jp": "{直尺|ちょくしゃく}"
+       },
+       {
+        "id": "ブロックゲージ",
+        "jp": "ブロックゲージ"
+       },
+       {
+        "id": "限界ゲージ",
+        "jp": "{限界|げんかい}ゲージ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ノギス.",
+       "jp": "ノギスです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Catatan pemeriksaan membantu menelusuri penyebab.”",
+       "jp": "○か×か。「{検査|けんさ}の{記録|きろく}は、{原因|げんいん}をさがすのに{役立|やくだ}ちます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{役立|やくだ}ちます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "sub": "b3s1",
+    "title": {
+     "id": "Subbab 3.1 · Satuan dan Alat Ukur",
+     "jp": "3.1 {単位|たんい}と{測定|そくてい}{器|き}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "1 mm sama dengan berapa μm?",
+       "jp": "1mmは{何|なに}μmですか。"
+      },
+      "opts": [
+       {
+        "id": "1000",
+        "jp": "1000"
+       },
+       {
+        "id": "100",
+        "jp": "100"
+       },
+       {
+        "id": "10",
+        "jp": "10"
+       },
+       {
+        "id": "10000",
+        "jp": "10000"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "1 mm = 1000 μm.",
+       "jp": "1000μmです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Alat yang lebih teliti dari jangka sorong adalah…",
+       "jp": "ノギスより{細|こま}かくはかれる{道具|どうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "マイクロメータ",
+        "jp": "マイクロメータ"
+       },
+       {
+        "id": "直尺",
+        "jp": "{直尺|ちょくしゃく}"
+       },
+       {
+        "id": "ハンマ",
+        "jp": "ハンマ"
+       },
+       {
+        "id": "ゲージ板",
+        "jp": "ゲージ{板|いた}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Mikrometer ± 0,01 mm.",
+       "jp": "マイクロメータです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Periksa titik nol alat ukur sebelum dipakai.”",
+       "jp": "○か×か。「{使|つか}う{前|まえ}に、{測定|そくてい}{器|き}のゼロ{点|てん}を{確認|かくにん}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ゼロ{点|てん}を{見|み}ます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Skala dibaca dari samping.”",
+       "jp": "○か×か。「{目盛|めも}りは{横|よこ}から{読|よ}みます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Dari depan.",
+       "jp": "{正面|しょうめん}から{読|よ}みます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Satuan gaya adalah…",
+       "jp": "{力|ちから}の{単位|たんい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "N",
+        "jp": "N"
+       },
+       {
+        "id": "kg",
+        "jp": "kg"
+       },
+       {
+        "id": "℃",
+        "jp": "℃"
+       },
+       {
+        "id": "MPa",
+        "jp": "MPa"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "N = Newton.",
+       "jp": "Nです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s2-q",
+    "sub": "b3s2",
+    "title": {
+     "id": "Subbab 3.2 · Membaca Gambar Kerja",
+     "jp": "3.2 {図|ず}{面|めん}の{読|よ}み{方|かた}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Simbol φ pada gambar berarti…",
+       "jp": "{図|ず}{面|めん}のφは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Diameter",
+        "jp": "{直径|ちょっけい}"
+       },
+       {
+        "id": "Radius",
+        "jp": "{半径|はんけい}"
+       },
+       {
+        "id": "Chamfer",
+        "jp": "{面|めん}{取|と}り"
+       },
+       {
+        "id": "Tebal",
+        "jp": "{厚|あつさ}さ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "φ = diameter.",
+       "jp": "φは{直径|ちょっけい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Garis putus-putus pada gambar menunjukkan…",
+       "jp": "{図|ず}{面|めん}の{点|てん}{線|せん}は{何|なに}を{表|あらわ}しますか。"
+      },
+      "opts": [
+       {
+        "id": "Bagian tersembunyi",
+        "jp": "かくれた{部分|ぶぶん}"
+       },
+       {
+        "id": "Pusat",
+        "jp": "{中心|ちゅうしん}"
+       },
+       {
+        "id": "Ukuran",
+        "jp": "{寸法|すんぽう}"
+       },
+       {
+        "id": "Bentuk terlihat",
+        "jp": "{見|み}える{形|かたち}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "かくれ線.",
+       "jp": "かくれ{線|せん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Gambar kerja mesin di Jepang memakai 第三角法.”",
+       "jp": "○か×か。「{日本|にほん}の{機械|きかい}の{図|ず}{面|めん}は{第三角法|だいさんかくほう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{第三角法|だいさんかくほう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bahan 'SUS304' adalah…",
+       "jp": "SUS304はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Baja tahan karat",
+        "jp": "ステンレス"
+       },
+       {
+        "id": "Aluminium",
+        "jp": "アルミ"
+       },
+       {
+        "id": "Tembaga",
+        "jp": "{銅|どう}"
+       },
+       {
+        "id": "Plastik",
+        "jp": "プラスチック"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "SUS = stainless.",
+       "jp": "ステンレスです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pertama baca 表題欄 pada gambar.”",
+       "jp": "○か×か。「{図|ず}{面|めん}は、まず{表題欄|ひょうだいらん}を{読|よ}みます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{表題欄|ひょうだいらん}からです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s3-q",
+    "sub": "b3s3",
+    "title": {
+     "id": "Subbab 3.3 · Toleransi",
+     "jp": "3.3 {公差|こうさ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "φ10±0.1: ukuran maksimum adalah…",
+       "jp": "φ10±0.1で、{最大寸法|さいだいすんぽう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "10.1",
+        "jp": "10.1"
+       },
+       {
+        "id": "10.0",
+        "jp": "10.0"
+       },
+       {
+        "id": "9.9",
+        "jp": "9.9"
+       },
+       {
+        "id": "10.2",
+        "jp": "10.2"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "10 + 0,1.",
+       "jp": "10.1です。"
+      }
+     },
+     {
+      "q": {
+       "id": "φ10±0.1: hasil ukur 9.85 adalah…",
+       "jp": "φ10±0.1で、9.85は{合格|ごうかく}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Tidak lulus",
+        "jp": "{不合格|ふごうかく}"
+       },
+       {
+        "id": "Lulus",
+        "jp": "{合格|ごうかく}"
+       },
+       {
+        "id": "Tidak tahu",
+        "jp": "わからない"
+       },
+       {
+        "id": "Lulus jika dilap",
+        "jp": "ふけば{合格|ごうかく}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Di bawah 9,9.",
+       "jp": "9.9より{小|ちい}さいので{不合格|ふごうかく}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Produk di luar toleransi tetap diteruskan.”",
+       "jp": "○か×か。「{公差|こうさ}の{外|そと}の{製|せい}{品|ひん}も、そのまま{進|すすめます}めます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Laporkan.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Toleransi adalah…",
+       "jp": "{公差|こうさ}とは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Selisih ukuran yang diizinkan",
+        "jp": "ゆるされるちがい"
+       },
+       {
+        "id": "Berat",
+        "jp": "{重|おも}さ"
+       },
+       {
+        "id": "Warna",
+        "jp": "{色|いろ}"
+       },
+       {
+        "id": "Harga",
+        "jp": "ねだん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Selisih yang diizinkan.",
+       "jp": "ゆるされるちがいです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Baca toleransi pada gambar sebelum bekerja.”",
+       "jp": "○か×か。「{作業|さぎょう}の{前|まえ}に、{図|ず}{面|めん}の{公差|こうさ}を{読|よ}みます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{読|よ}みます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s4-q",
+    "sub": "b3s4",
+    "title": {
+     "id": "Subbab 3.4 · Catatan Pemeriksaan dan Produk Tidak Sesuai",
+     "jp": "3.4 {検査|けんさ}の{記録|きろく}と{不適合品|ふてきごうひん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Nilai ukur dicatat apa adanya.”",
+       "jp": "○か×か。「{測定|そくてい}{値|ち}は、そのままの{数字|すうじ}を{書|か}きます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "そのまま{書|か}きます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Cara memperbaiki salah tulis pada catatan adalah…",
+       "jp": "{記録|きろく}をまちがえたときは、どうしますか。"
+      },
+      "opts": [
+       {
+        "id": "Coret satu garis dan paraf",
+        "jp": "1{本|ほん}{線|せん}で{消|けして}してサインする"
+       },
+       {
+        "id": "Hapus sampai bersih",
+        "jp": "きれいに{消|け}す"
+       },
+       {
+        "id": "Sobek kertas",
+        "jp": "{紙|かみ}をやぶる"
+       },
+       {
+        "id": "Biarkan salah",
+        "jp": "そのままにする"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Satu garis + paraf.",
+       "jp": "1{本|ほん}{線|せん}で{消|けします}します。"
+      }
+     },
+     {
+      "q": {
+       "id": "Produk tidak sesuai harus…",
+       "jp": "{不適合品|ふてきごうひん}はどうしますか。"
+      },
+      "opts": [
+       {
+        "id": "Dipisah dan diberi label",
+        "jp": "{分|わ}けて{札|ふだ}をつける"
+       },
+       {
+        "id": "Dicampur",
+        "jp": "{良|りょう}{品|ひん}とまぜる"
+       },
+       {
+        "id": "Dikirim",
+        "jp": "{出荷|しゅっか}する"
+       },
+       {
+        "id": "Dibuang sendiri",
+        "jp": "{自分|じぶん}ですてる"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pisahkan + label.",
+       "jp": "{分|わ}けて{札|ふだ}をつけます。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Memutuskan sendiri memakai ulang produk tidak sesuai itu boleh.”",
+       "jp": "○か×か。「{不適合品|ふてきごうひん}を、ひとりで{決|き}めて{使|つか}いなおしてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus lapor.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "トレーサビリティ berarti…",
+       "jp": "トレーサビリティの{意味|いみ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Dapat ditelusuri",
+        "jp": "あとから{追跡|ついせき}できる"
+       },
+       {
+        "id": "Harga murah",
+        "jp": "ねだんが{安|やす}い"
+       },
+       {
+        "id": "Cepat",
+        "jp": "はやい"
+       },
+       {
+        "id": "Ringan",
+        "jp": "かるい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Penelusuran.",
+       "jp": "{追跡|ついせき}できることです。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab4": [
+   {
+    "id": "bab4-q1",
+    "title": {
+     "id": "Latihan Bab 4",
+     "jp": "{第|だい}4{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Bubut (旋盤) cocok untuk membuat benda bulat.”",
+       "jp": "○か×か。「{旋盤|せんばん}は、{丸|まるい}い{物|もの}をつくるのに{合|あ}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{丸|まるい}い{物|もの}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Perlakuan panas yang mengurangi getas setelah 焼入れ adalah…",
+       "jp": "{焼入|やきいれ}れのあと、もろさを{少|すく}なくする{熱処理|ねつしょり}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "焼戻し",
+        "jp": "{焼戻|やきもどし}し"
+       },
+       {
+        "id": "焼なまし",
+        "jp": "{焼|やきなまし}なまし"
+       },
+       {
+        "id": "研削",
+        "jp": "{研削|けんさく}"
+       },
+       {
+        "id": "鋳造",
+        "jp": "{鋳造|ちゅうぞう}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "焼戻し.",
+       "jp": "{焼戻|やきもどし}しです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Aluminium lebih berat daripada baja.”",
+       "jp": "○か×か。「アルミニウムは、{鉄|てつ}より{重|おも}いです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Lebih ringan.",
+       "jp": "{軽|かる}いです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pengelasan adalah…",
+       "jp": "{溶接|ようせつ}とは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Menyambung logam dengan panas",
+        "jp": "{熱|ねつ}で{金属|きんぞく}をつなぐこと"
+       },
+       {
+        "id": "Mengecat",
+        "jp": "{色|いろ}をぬること"
+       },
+       {
+        "id": "Menimbang",
+        "jp": "{重|おも}さをはかること"
+       },
+       {
+        "id": "Membersihkan",
+        "jp": "きれいにすること"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sambung dengan panas.",
+       "jp": "{熱|ねつ}でつなぎます。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s1-q",
+    "sub": "b4s1",
+    "title": {
+     "id": "Subbab 4.1 · Bahan Logam",
+     "jp": "4.1 {金属材料|きんぞくざいりょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Baja karbon S45C termasuk…",
+       "jp": "S45Cはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Baja karbon",
+        "jp": "{炭素鋼|たんそこう}"
+       },
+       {
+        "id": "Aluminium",
+        "jp": "アルミ"
+       },
+       {
+        "id": "Tembaga",
+        "jp": "{銅|どう}"
+       },
+       {
+        "id": "Karet",
+        "jp": "ゴム"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "S45C = baja karbon.",
+       "jp": "{炭素鋼|たんそこう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ステンレス (SUS) tahan karat.”",
+       "jp": "○か×か。「ステンレスはさびにくいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "さびにくいです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Logam yang ringan dan menghantar panas baik adalah…",
+       "jp": "{軽|かる}くて{熱|ねつ}をよく{通|とお}す{金属|きんぞく}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "アルミニウム",
+        "jp": "アルミニウム"
+       },
+       {
+        "id": "鉄",
+        "jp": "{鉄|てつ}"
+       },
+       {
+        "id": "鉛",
+        "jp": "{鉛|なまり}"
+       },
+       {
+        "id": "SUS",
+        "jp": "SUS"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Aluminium.",
+       "jp": "アルミです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Sifat yang dapat ditarik memanjang disebut…",
+       "jp": "のびる{性質|せいしつ}を{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "延性",
+        "jp": "{延性|えんせい}"
+       },
+       {
+        "id": "展性",
+        "jp": "{展性|てんせい}"
+       },
+       {
+        "id": "硬さ",
+        "jp": "{硬|かたさ}さ"
+       },
+       {
+        "id": "もろさ",
+        "jp": "もろさ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "延性.",
+       "jp": "{延性|えんせい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Baja sebaiknya disimpan di tempat basah.”",
+       "jp": "○か×か。「{鉄|てつ}は、{水|みず}がつく{所|ところ}においてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Mudah berkarat.",
+       "jp": "さびます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b4s2-q",
+    "sub": "b4s2",
+    "title": {
+     "id": "Subbab 4.2 · Jenis Proses Pengerjaan",
+     "jp": "4.2 {加工|かこう}の{種類|しゅるい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Mesin yang membuat lubang adalah…",
+       "jp": "あなをあける{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ボール盤",
+        "jp": "ボール{盤|ばん}"
+       },
+       {
+        "id": "旋盤",
+        "jp": "{旋盤|せんばん}"
+       },
+       {
+        "id": "プレス",
+        "jp": "プレス"
+       },
+       {
+        "id": "研削盤",
+        "jp": "{研削盤|けんさくばん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ボール盤.",
+       "jp": "ボール{盤|ばん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Menuang logam cair ke cetakan disebut…",
+       "jp": "とけた{金属|きんぞく}を{型|かた}に{流|なが}す{加工|かこう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "鋳造",
+        "jp": "{鋳造|ちゅうぞう}"
+       },
+       {
+        "id": "鍛造",
+        "jp": "{鍛造|たんぞう}"
+       },
+       {
+        "id": "研削",
+        "jp": "{研削|けんさく}"
+       },
+       {
+        "id": "溶接",
+        "jp": "{溶接|ようせつ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "鋳造.",
+       "jp": "{鋳造|ちゅうぞう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “焼入れ membuat logam keras.”",
+       "jp": "○か×か。「{焼入|やきいれ}れをすると、かたくなります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "かたくなります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “焼なまし membuat logam lebih keras.”",
+       "jp": "○か×か。「{焼|やきなまし}なましは、もっとかたくします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Melunakkan.",
+       "jp": "やわらかくします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Menekan pelat dengan cetakan untuk membentuk adalah…",
+       "jp": "{型|かた}で{板|いた}をおして{形|かたち}をかえる{加工|かこう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "プレス加工",
+        "jp": "プレス{加工|かこう}"
+       },
+       {
+        "id": "旋盤",
+        "jp": "{旋盤|せんばん}"
+       },
+       {
+        "id": "溶接",
+        "jp": "{溶接|ようせつ}"
+       },
+       {
+        "id": "熱処理",
+        "jp": "{熱処理|ねつしょり}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "プレス.",
+       "jp": "プレス{加工|かこう}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s3-q",
+    "sub": "b4s3",
+    "title": {
+     "id": "Subbab 4.3 · Oli Pemotong dan Perkakas",
+     "jp": "4.3 {切削油|せっさくゆ}と{工具|こうぐ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Salah satu fungsi 切削油 adalah…",
+       "jp": "{切削油|せっさくゆ}のはたらきはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Mendinginkan",
+        "jp": "{冷|ひ}やす"
+       },
+       {
+        "id": "Merekatkan",
+        "jp": "つなぐ"
+       },
+       {
+        "id": "Mewarnai",
+        "jp": "{色|いろ}をつける"
+       },
+       {
+        "id": "Menambah suara",
+        "jp": "{音|おと}を{大|おお}きくする"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Mendinginkan.",
+       "jp": "{冷|ひ}やします。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pahat tumpul sebaiknya diganti.”",
+       "jp": "○か×か。「にぶった{刃物|はもの}は、かえます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "かえます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Serpihan boleh diambil dengan tangan kosong.”",
+       "jp": "○か×か。「{切|き}りくずは、{素|そ}{手|て}でとってよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Panas dan tajam.",
+       "jp": "{素|そ}{手|て}でとりません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Benda dan pahat dipasang dengan kencang.”",
+       "jp": "○か×か。「{材料|ざいりょう}と{刃物|はもの}は、しっかり{取|と}りつけます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "しっかり{取|と}りつけます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Fungsi pelumasan oli pemotong adalah…",
+       "jp": "{切削油|せっさくゆ}の{潤滑|じゅんかつ}とは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Mengurangi gesekan",
+        "jp": "こすれる{力|ちから}を{小|ちい}さくする"
+       },
+       {
+        "id": "Menambah gesekan",
+        "jp": "こすれる{力|ちから}を{大|おお}きくする"
+       },
+       {
+        "id": "Memanaskan",
+        "jp": "{熱|あつ}くする"
+       },
+       {
+        "id": "Mengecat",
+        "jp": "{色|いろ}をぬる"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kurangi gesekan.",
+       "jp": "こすれる{力|ちから}を{小|ちい}さくします。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab5": [
+   {
+    "id": "bab5-q1",
+    "title": {
+     "id": "Latihan Bab 5",
+     "jp": "{第|だい}5{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Laporan yang jelas memuat kapan, di mana, dan apa yang terjadi.”",
+       "jp": "○か×か。「{報告|ほうこく}は、いつ、どこで、{何|なに}がおきたかをはっきりつたえます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "はっきりつたえます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Limbah rumah tangga dan kantor disebut…",
+       "jp": "{家|いえ}や{事務所|じむしょ}のごみを{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "一般廃棄物",
+        "jp": "{一般廃棄物|いっぱんはいきぶつ}"
+       },
+       {
+        "id": "産業廃棄物",
+        "jp": "{産業廃棄物|さんぎょうはいきぶつ}"
+       },
+       {
+        "id": "不良品",
+        "jp": "{不良|ふりょう}{品|ひん}"
+       },
+       {
+        "id": "仕掛品",
+        "jp": "{仕掛品|しかかりひん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "一般廃棄物.",
+       "jp": "{一般廃棄物|いっぱんはいきぶつ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Mematikan mesin yang tidak dipakai menghemat listrik.”",
+       "jp": "○か×か。「{使|つか}わない{機械|きかい}を{止|と}めると、{電気|でんき}をたいせつにできます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{大切|たいせつ}にします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Minta diulang atau ditulis bila tidak mengerti itu baik.”",
+       "jp": "○か×か。「わからないとき、もう{一度|いちど}{言|い}ってもらうのはよいことです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "よいことです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b5s1-q",
+    "sub": "b5s1",
+    "title": {
+     "id": "Subbab 5.1 · Lapor, Kabar, Konsultasi",
+     "jp": "5.1 {報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kabar buruk dilaporkan dengan cepat.”",
+       "jp": "○か×か。「わるい{知|し}らせは{早|はや}く{報告|ほうこく}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{早|はや}く{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Menanyakan hal yang tidak dimengerti disebut…",
+       "jp": "わからないことを{聞|き}くことを{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "相談",
+        "jp": "{相談|そうだん}"
+       },
+       {
+        "id": "報告",
+        "jp": "{報告|ほうこく}"
+       },
+       {
+        "id": "連絡",
+        "jp": "{連絡|れんらく}"
+       },
+       {
+        "id": "検査",
+        "jp": "{検査|けんさ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "相談.",
+       "jp": "{相談|そうだん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika tidak mengerti bahasanya, cukup mengangguk.”",
+       "jp": "○か×か。「{日本語|にほんご}がわからなくても、うなずけばよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Minta ulang.",
+       "jp": "{聞|き}きなおします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jika terlambat, Anda…",
+       "jp": "おくれるとき、どうしますか。"
+      },
+      "opts": [
+       {
+        "id": "Memberi kabar sebelum jam kerja",
+        "jp": "{仕事|しごと}の{前|まえ}に{連絡|れんらく}する"
+       },
+       {
+        "id": "Diam saja",
+        "jp": "なにも{言|い}わない"
+       },
+       {
+        "id": "Datang tanpa kabar",
+        "jp": "{連絡|れんらく}しないで{行|い}く"
+       },
+       {
+        "id": "Memberi kabar besok",
+        "jp": "つぎの{日|ひ}に{言|い}う"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Beri kabar dulu.",
+       "jp": "{仕事|しごと}の{前|まえ}に{連絡|れんらく}します。"
+      }
+     },
+     {
+      "q": {
+       "id": "Hasil atau kemajuan kerja disampaikan sebagai…",
+       "jp": "{仕事|しごと}の{結果|けっか}をつたえることはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "報告",
+        "jp": "{報告|ほうこく}"
+       },
+       {
+        "id": "相談",
+        "jp": "{相談|そうだん}"
+       },
+       {
+        "id": "整理",
+        "jp": "{整理|せいり}"
+       },
+       {
+        "id": "合図",
+        "jp": "{合図|あいず}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "報告.",
+       "jp": "{報告|ほうこく}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b5s2-q",
+    "sub": "b5s2",
+    "title": {
+     "id": "Subbab 5.2 · Limbah dan Lingkungan",
+     "jp": "5.2 {廃棄物|はいきぶつ}と{環境|かんきょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Oli bekas tidak boleh dibuang ke saluran air.”",
+       "jp": "○か×か。「{古|ふる}い{油|あぶら}を{水路|すいろ}に{流|なが}してはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{流|なが}しません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "3R: Reduce, Reuse, dan…",
+       "jp": "3Rのうち、リデュース、リユース、あと1つは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "リサイクル",
+        "jp": "リサイクル"
+       },
+       {
+        "id": "リスク",
+        "jp": "リスク"
+       },
+       {
+        "id": "リセット",
+        "jp": "リセット"
+       },
+       {
+        "id": "リード",
+        "jp": "リード"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Recycle.",
+       "jp": "リサイクルです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Limbah dari kegiatan usaha disebut…",
+       "jp": "{会社|かいしゃ}の{仕事|しごと}から{出|で}るごみを{何|なに}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "産業廃棄物",
+        "jp": "{産業廃棄物|さんぎょうはいきぶつ}"
+       },
+       {
+        "id": "一般廃棄物",
+        "jp": "{一般廃棄物|いっぱんはいきぶつ}"
+       },
+       {
+        "id": "良品",
+        "jp": "{良|りょう}{品|ひん}"
+       },
+       {
+        "id": "仕掛品",
+        "jp": "{仕掛品|しかかりひん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "産業廃棄物.",
+       "jp": "{産業廃棄物|さんぎょうはいきぶつ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika bahan tumpah, tutup sumbernya dan lapor.”",
+       "jp": "○か×か。「こぼれたら、{元|もと}をとめて{報告|ほうこく}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{元|もと}をとめます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pemilahan (分別) tidak perlu.”",
+       "jp": "○か×か。「{分別|ぶんべつ}はしなくてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Harus dipilah.",
+       "jp": "{分別|ぶんべつ}します。"
+      },
+      "mb": true
+     }
+    ]
+   }
+  ]
+ },
+ "tema": [
+  {
+   "id": "tema-aman",
+   "tema": true,
+   "title": {
+    "id": "Tema: Keselamatan",
+    "jp": "テーマ：{安全|あんぜん}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Tombol berhenti darurat dipakai saat darurat.”",
+      "jp": "○か×か。「{非常停止|ひじょうていし}ボタンは、きんきゅうのときにおします。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "おします。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Pelindung diri dipakai sebelum bekerja.”",
+      "jp": "○か×か。「{保護具|ほごぐ}は、{作業|さぎょう}の{前|まえ}につけます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{前|まえ}につけます。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Alat yang menghentikan mesin jika tangan masuk sensor cahaya adalah…",
+      "jp": "{手|て}が{入|はい}ると{止|とまる}まる{光|ひかり}のセンサーはどれですか。"
+     },
+     "opts": [
+      {
+       "id": "光線式安全装置",
+       "jp": "{光|ひかり}{線|せん}{式|しき}{安全装置|あんぜんそうち}"
+      },
+      {
+       "id": "ゲージ",
+       "jp": "ゲージ"
+      },
+      {
+       "id": "ノギス",
+       "jp": "ノギス"
+      },
+      {
+       "id": "合図",
+       "jp": "{合図|あいず}"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Sensor cahaya.",
+      "jp": "{光|ひかり}{線|せん}{式|しき}です。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Dilarang masuk di bawah beban gantung.”",
+      "jp": "○か×か。「つり{荷|に}の{下|した}に{入|はい}ってはいけません。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{入|はい}りません。"
+     },
+     "mb": true
+    }
+   ]
+  },
+  {
+   "id": "tema-mutu",
+   "tema": true,
+   "title": {
+    "id": "Tema: Mutu dan Ukur",
+    "jp": "テーマ：{品質|ひんしつ}と{測定|そくてい}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “良品 adalah produk yang sesuai standar.”",
+      "jp": "○か×か。「{良|りょう}{品|ひん}は、{決|き}まりにあっている{製|せい}{品|ひん}です。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{良|りょう}{品|ひん}です。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "φ20±0.2: ukuran minimum adalah…",
+      "jp": "φ20±0.2で、{最小寸法|さいしょうすんぽう}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "19.8",
+       "jp": "19.8"
+      },
+      {
+       "id": "20.2",
+       "jp": "20.2"
+      },
+      {
+       "id": "20.0",
+       "jp": "20.0"
+      },
+      {
+       "id": "19.2",
+       "jp": "19.2"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "20 − 0,2.",
+      "jp": "19.8です。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Gauge go/no-go cepat untuk memeriksa lulus atau tidak.”",
+      "jp": "○か×か。「{限界|げんかい}ゲージは、{入|はい}るか{入|はい}らないかで、すばやく{調|しら}べられます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "すばやく{調|しら}べます。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Mengubah nilai ukur diperbolehkan.”",
+      "jp": "○か×か。「{測定|そくてい}{値|ち}は、かえてよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Tidak boleh.",
+      "jp": "かえません。"
+     },
+     "mb": true
+    }
+   ]
+  },
+  {
+   "id": "tema-kerja",
+   "tema": true,
+   "title": {
+    "id": "Tema: Bahan dan Kerja",
+    "jp": "テーマ：{材料|ざいりょう}と{作業|さぎょう}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “鋳造 membentuk logam dengan menuang logam cair.”",
+      "jp": "○か×か。「{鋳造|ちゅうぞう}は、とけた{金属|きんぞく}を{流|なが}して{形|かたち}をつくります。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{流|なが}します。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “焼なまし melunakkan logam.”",
+      "jp": "○か×か。「{焼|やきなまし}なましは、{金属|きんぞく}をやわらかくします。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "やわらかくします。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "報連相 yang pertama adalah…",
+      "jp": "{報連相|ほうれんそう}の{最初|さいしょ}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "報告",
+       "jp": "{報告|ほうこく}"
+      },
+      {
+       "id": "連絡",
+       "jp": "{連絡|れんらく}"
+      },
+      {
+       "id": "相談",
+       "jp": "{相談|そうだん}"
+      },
+      {
+       "id": "分別",
+       "jp": "{分別|ぶんべつ}"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "報告.",
+      "jp": "{報告|ほうこく}です。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Mengikuti 作業手順書 itu penting.”",
+      "jp": "○か×か。「{作業|さぎょう}{手順|てじゅん}{書|か}にしたがうことは{大切|たいせつ}です。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{大切|たいせつ}です。"
+     },
+     "mb": true
+    }
+   ]
+  }
+ ]
+}

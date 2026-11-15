@@ -1,0 +1,242 @@
+{
+ "schema": 1,
+ "bidang": "mfg-machine-metal",
+ "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 機械金属加工 (MOJ/ISA 製造分野評価試験の範囲); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab1",
+  "no": 1,
+  "title": {
+   "id": "Mesin Perkakas",
+   "jp": "{工作機械|こうさくきかい}"
+  },
+  "intro": {
+   "id": "Cara kerja dan keselamatan bubut, frais, bor, dan gerinda.",
+   "jp": "{旋盤|せんばん}、フライス{盤|ばん}、ボール{盤|ばん}、{研削盤|けんさくばん}のしくみと{安全|あんぜん}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b1s1",
+    "no": 1,
+    "title": {
+     "id": "Bubut dan Frais",
+     "jp": "{旋盤|せんばん}とフライス{盤|ばん}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Bubut (旋盤)"
+      },
+      {
+       "ul": [
+        "Benda **berputar**, pahat (**バイト**) **diam dan bergerak** untuk memotong.",
+        "Cocok untuk benda **bulat**: poros, silinder.",
+        "Benda dijepit dengan **チャック**. Kunci chuck **dilepas** sebelum mesin dinyalakan.",
+        "**回転数 (rpm)** dan **送り (laju pemakanan)** diatur sesuai bahan dan diameter."
+       ]
+      },
+      {
+       "h": "Frais (フライス盤)"
+      },
+      {
+       "ul": [
+        "Pahat (**フライスカッタ, エンドミル**) **berputar**, benda **bergerak**.",
+        "Cocok untuk bidang rata, alur, dan bentuk kotak.",
+        "Benda dijepit di **バイス (ragum)** atau dijepit langsung pada meja."
+       ]
+      },
+      {
+       "h": "Keselamatan"
+      },
+      {
+       "ul": [
+        "Jangan memakai sarung tangan; ikat rambut dan lengan baju.",
+        "Pasang benda dan pahat dengan kencang sebelum menyalakan.",
+        "Jangan mengukur atau menyentuh benda yang sedang berputar.",
+        "Pakai **kacamata pelindung**; buang serpihan dengan sikat setelah mesin berhenti."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{旋盤|せんばん}"
+      },
+      {
+       "ul": [
+        "{材料|ざいりょう}が**{回|まわ}り**、{刃物|はもの}（**バイト**）が**{動|うご}いて**{切|き}る。",
+        "**{丸|まるい}い{物|もの}**（{軸|じく}、{筒|つつ}）に{合|あ}う。",
+        "{材料|ざいりょう}は**チャック**でつかむ。**チャックハンドル**は、{機械|きかい}を{動|うご}かす{前|まえ}に**はずす**。",
+        "**{回転|かいてん}{数|かず}**と**{送|おく}り**は、{材料|ざいりょう}と{太|ふと}さに{合|あ}わせて{決|き}める。"
+       ]
+      },
+      {
+       "h": "フライス{盤|ばん}"
+      },
+      {
+       "ul": [
+        "{刃物|はもの}（**フライスカッタ、エンドミル**）が**{回|まわ}り**、{材料|ざいりょう}が**{動|うご}く**。",
+        "{平|たい}らな{面|めん}、みぞ、{四角|しかくい}い{形|かたち}に{合|あ}う。",
+        "{材料|ざいりょう}は**バイス**か、{台|だい}に{直接|ちょくせつ}とめる。"
+       ]
+      },
+      {
+       "h": "{安全|あんぜん}"
+      },
+      {
+       "ul": [
+        "{手袋|てぶくろ}はしない。かみはむすび、そでをとめる。",
+        "{動|うご}かす{前|まえ}に、{材料|ざいりょう}と{刃物|はもの}をしっかりつける。",
+        "{回|まわ}っている{物|もの}をはかったり、さわったりしない。",
+        "**{保護|ほご}めがね**をつける。{切|き}りくずは、{機械|きかい}が{止|と}まってからブラシでとる。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bubut: benda berputar, pahat bergerak; frais: pahat berputar, benda bergerak; lepas kunci chuck; tanpa sarung tangan.",
+      "points": [
+       "旋盤 = benda berputar.",
+       "フライス盤 = pahat berputar.",
+       "Lepas チャックハンドル.",
+       "Tanpa sarung tangan."
+      ],
+      "avoid": [
+       "Mengukur benda yang berputar."
+      ],
+      "exam": [
+       "Perbedaan bubut dan frais.",
+       "Aturan kunci chuck."
+      ]
+     },
+     "jp": {
+      "core": "{旋盤|せんばん}は{材料|ざいりょう}が{回|まわ}り、フライス{盤|ばん}は{刃物|はもの}が{回|まわ}ります。チャックハンドルははずします。",
+      "points": [
+       "{旋盤|せんばん}は{材料|ざいりょう}が{回|まわ}る。",
+       "フライス{盤|ばん}は{刃物|はもの}が{回|まわ}る。",
+       "チャックハンドルをはずす。",
+       "{手袋|てぶくろ}をしない。"
+      ],
+      "avoid": [
+       "{回|まわ}っている{物|もの}をはかること。"
+      ],
+      "exam": [
+       "{旋盤|せんばん}とフライス{盤|ばん}のちがい。",
+       "チャックハンドルのきまり。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s2",
+    "no": 2,
+    "title": {
+     "id": "Bor dan Gerinda",
+     "jp": "ボール{盤|ばん}と{研削盤|けんさくばん}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Bor (ボール盤)"
+      },
+      {
+       "ul": [
+        "Membuat **lubang** dengan **ドリル**.",
+        "Benda **dijepit dengan ragum atau klem**; **jangan dipegang dengan tangan**.",
+        "Mata bor berputar; **tanpa sarung tangan**.",
+        "Saat lubang hampir tembus, kurangi tekanan."
+       ]
+      },
+      {
+       "h": "Gerinda (研削盤, グラインダ)"
+      },
+      {
+       "ul": [
+        "Menghaluskan dengan **batu gerinda (といし)**.",
+        "**Periksa batu gerinda** dari retak sebelum dipakai; **uji putar** beberapa saat sebelum bekerja.",
+        "Jangan berdiri **tepat di depan** batu saat dinyalakan.",
+        "**Jarak antara penyangga benda dan batu** dijaga sempit.",
+        "Pakai **kacamata pelindung** dan masker debu.",
+        "Jangan memakai sisi batu jika tidak dirancang."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ボール{盤|ばん}"
+      },
+      {
+       "ul": [
+        "**ドリル**で**あな**をあける。",
+        "{材料|ざいりょう}は**バイスやクランプでとめる**。**{手|て}でもたない**。",
+        "ドリルは{回|まわ}る。**{手袋|てぶくろ}はしない**。",
+        "あなが{通|とお}りぬけるときは、おす{力|ちから}を{弱|よわく}くする。"
+       ]
+      },
+      {
+       "h": "{研削盤|けんさくばん}・グラインダ"
+      },
+      {
+       "ul": [
+        "**といし**でみがく。",
+        "{使|つか}う{前|まえ}に、**といしにひびがないか**{調|しら}べる。{作業|さぎょう}の{前|まえ}に、**{試運転|しうんてん}**をする。",
+        "{動|うご}かすとき、といしの**ま{正面|しょうめん}**に{立|た}たない。",
+        "**{受|う}け{台|だい}**と、といしのすきまを{小|ちい}さくする。",
+        "**{保護|ほご}めがね**と{防|ぼう}じんマスクをつける。",
+        "といしの{横|よこ}の{面|めん}は、{使|つか}ってはいけない（そのように{作|つくられて}られていない{場合|ばあい}）。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bor: benda diklem, tanpa sarung tangan; gerinda: periksa retak, uji putar, jangan di depan batu.",
+      "points": [
+       "Benda diklem, bukan dipegang.",
+       "Periksa batu gerinda.",
+       "Uji putar.",
+       "Jangan di depan batu."
+      ],
+      "avoid": [
+       "Memegang benda bor dengan tangan.",
+       "Memakai batu gerinda retak."
+      ],
+      "exam": [
+       "Aturan benda saat dibor.",
+       "Pemeriksaan batu gerinda."
+      ]
+     },
+     "jp": {
+      "core": "ボール{盤|ばん}は{材料|ざいりょう}をとめ、{手袋|てぶくろ}をしません。グラインダはといしの{点検|てんけん}と{試運転|しうんてん}をします。",
+      "points": [
+       "{材料|ざいりょう}はとめる。",
+       "といしの{点検|てんけん}。",
+       "{試運転|しうんてん}。",
+       "ま{正面|しょうめん}に{立|た}たない。"
+      ],
+      "avoid": [
+       "{手|て}で{材料|ざいりょう}をもつこと。",
+       "ひびのあるといしを{使|つか}うこと。"
+      ],
+      "exam": [
+       "ボール{盤|ばん}の{材料|ざいりょう}のきまり。",
+       "といしの{点検|てんけん}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,666 @@
+{
+ "schema": 1,
+ "bidang": "industrial-mfg",
+ "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 工業製品製造業（共通・基礎） (MOJ/ISA 製造分野評価試験の範囲); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab2",
+  "no": 2,
+  "title": {
+   "id": "Keselamatan dan Kesehatan Kerja",
+   "jp": "{安全|あんぜん}{衛生|えいせい}"
+  },
+  "intro": {
+   "id": "Kecelakaan kerja, alat pelindung diri, bahaya mesin, pengangkutan, listrik, api, bahan kimia, dan kesehatan.",
+   "jp": "{労働災害|ろうどうさいがい}、{保護具|ほごぐ}、{機械|きかい}のきけん、{運搬|うんぱん}、{電気|でんき}・{火災|かさい}・{化学物質|かがくぶっしつ}、{健康管理|けんこうかんり}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b2s1",
+    "no": 1,
+    "title": {
+     "id": "Kecelakaan Kerja dan Alat Pelindung",
+     "jp": "{労働災害|ろうどうさいがい}と{保護具|ほごぐ}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Kecelakaan kerja"
+      },
+      {
+       "p": "**労働災害** adalah cedera atau penyakit akibat pekerjaan. **ヒヤリハット** adalah kejadian nyaris celaka. Kejadian kecil yang dilaporkan dapat mencegah kecelakaan besar."
+      },
+      {
+       "h": "Alat pelindung diri (保護具)"
+      },
+      {
+       "ul": [
+        "**ヘルメット**: melindungi kepala dari benda jatuh.",
+        "**保護めがね**: melindungi mata dari serpihan, percikan, dan cairan.",
+        "**耳栓 (イヤープラグ)**: tempat bising.",
+        "**安全靴**: ujung baja melindungi kaki dari benda berat.",
+        "**手袋**: melindungi tangan; jenis disesuaikan pekerjaan.",
+        "**防じんマスク**: melindungi dari debu dan serbuk logam."
+       ]
+      },
+      {
+       "h": "Aturan penting"
+      },
+      {
+       "ul": [
+        "**Dekat mesin berputar** seperti bor, bubut, atau penggiling, **jangan memakai sarung tangan** karena bisa terlilit.",
+        "Ikat rambut panjang; lepas kalung, cincin, dan jam; kancingkan lengan baju.",
+        "Pakai pelindung diri **sebelum** mulai bekerja, dalam keadaan baik.",
+        "Alat pelindung yang rusak diganti."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{労働災害|ろうどうさいがい}"
+      },
+      {
+       "p": "**{労働災害|ろうどうさいがい}**は、{仕事|しごと}でけがをしたり、{病気|びょうき}になったりすることです。**ヒヤリハット**は、あぶなかったけれど、けがをしなかったことです。{小|ちい}さなことでも{報告|ほうこく}すれば、{大|おお}きな{事故|じこ}をふせげます。"
+      },
+      {
+       "h": "{保護具|ほごぐ}"
+      },
+      {
+       "ul": [
+        "**ヘルメット**：{上|うえ}から{落|お}ちる{物|もの}から{頭|あたま}を{守|まも}る。",
+        "**{保護|ほご}めがね**：{切|き}りくず、{火花|ひばな}、{液|えき}{体|からだ}から{目|め}を{守|まも}る。",
+        "**{耳栓|みみせん}**：うるさい{所|ところ}で{使|つか}う。",
+        "**{安全|あんぜん}{靴|くつ}**：つま{先|さき}が{鉄|てつ}で、{重|おも}い{物|もの}から{足|あし}を{守|まも}る。",
+        "**{手袋|てぶくろ}**：{手|て}を{守|まも}る。{仕事|しごと}にあった{物|もの}を{使|つか}う。",
+        "**{防|ぼう}じんマスク**：ほこりや{金属|きんぞく}のこなを{吸|す}わない。"
+       ]
+      },
+      {
+       "h": "{大事|だいじ}なきまり"
+      },
+      {
+       "ul": [
+        "ボール{盤|ばん}、{旋盤|せんばん}、{研削盤|けんさくばん}など**{回|まわ}る{機械|きかい}の{近|ちか}くでは、{手袋|てぶくろ}をしない**。まきこまれるから。",
+        "{長|なが}いかみはむすぶ。ネックレス、ゆびわ、{時計|とけい}ははずす。そでのボタンをとめる。",
+        "{保護具|ほごぐ}は、**{作業|さぎょう}の{前|まえ}に**、よいじょうたいでつける。",
+        "こわれた{保護具|ほごぐ}は{交換|こうかん}する。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "労働災害 dan ヒヤリハット; APD: ヘルメット, 保護めがね, 耳栓, 安全靴, 手袋, 防じんマスク; dekat mesin berputar jangan pakai sarung tangan.",
+      "points": [
+       "ヒヤリハット dilaporkan.",
+       "6 jenis 保護具.",
+       "Mesin berputar: tanpa sarung tangan.",
+       "Ikat rambut, lepas perhiasan."
+      ],
+      "avoid": [
+       "Memakai sarung tangan di dekat bor atau bubut.",
+       "Bekerja tanpa pelindung."
+      ],
+      "exam": [
+       "Fungsi tiap 保護具.",
+       "Larangan sarung tangan."
+      ]
+     },
+     "jp": {
+      "core": "{保護具|ほごぐ}を{作業|さぎょう}の{前|まえ}につけます。{回|まわ}る{機械|きかい}の{近|ちか}くでは、{手袋|てぶくろ}をしません。",
+      "points": [
+       "ヒヤリハットを{報告|ほうこく}する。",
+       "6つの{保護具|ほごぐ}。",
+       "{回|まわ}る{機械|きかい}では{手袋|てぶくろ}をしない。",
+       "かみをむすぶ、ゆびわをはずす。"
+      ],
+      "avoid": [
+       "ボール{盤|ばん}や{旋盤|せんばん}で{手袋|てぶくろ}をすること。",
+       "{保護具|ほごぐ}なしで{作業|さぎょう}すること。"
+      ],
+      "exam": [
+       "{保護具|ほごぐ}のはたらき。",
+       "{手袋|てぶくろ}をしてはいけない{場合|ばあい}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s2",
+    "no": 2,
+    "title": {
+     "id": "Bahaya Mesin dan Pengaman",
+     "jp": "{機械|きかい}のきけんと{安全装置|あんぜんそうち}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Jenis bahaya"
+      },
+      {
+       "ul": [
+        "**巻き込まれ**: tangan, pakaian, atau rambut terlilit bagian berputar.",
+        "**はさまれ**: terjepit di antara bagian bergerak (misalnya mesin press).",
+        "**切れ・こすれ**: terluka oleh pisau, pahat, atau tepi tajam.",
+        "**飛来**: serpihan atau benda lepas dan terbang.",
+        "**感電, やけど**: listrik dan panas."
+       ]
+      },
+      {
+       "h": "Perangkat pengaman"
+      },
+      {
+       "ul": [
+        "**安全カバー**: menutup bagian berbahaya.",
+        "**非常停止ボタン**: menghentikan mesin segera saat darurat.",
+        "**インターロック**: mesin tidak jalan jika pintu atau tutup terbuka.",
+        "**光線式安全装置**: sensor cahaya yang menghentikan mesin jika tangan masuk."
+       ]
+      },
+      {
+       "h": "Aturan kerja"
+      },
+      {
+       "ul": [
+        "**Jangan melepas atau mengakali perangkat pengaman.**",
+        "Periksa pengaman sebelum mulai.",
+        "Saat **membersihkan, memperbaiki, atau mengganti pahat**, **hentikan mesin dan putuskan listrik**. Jangan menyentuh mesin yang masih berputar.",
+        "Jangan membersihkan serpihan dengan tangan kosong; pakai sikat atau penjepit."
+       ]
+      },
+      {
+       "h": "Menghentikan dan mengunci (ロックアウト・タグアウト)"
+      },
+      {
+       "ol": [
+        "Hentikan mesin.",
+        "Putuskan sumber listrik dan sumber tenaga lain (tekanan udara, oli).",
+        "**Kunci (施錠)** dan beri **tanda (表示)** agar orang lain tidak menyalakan.",
+        "Pastikan tenaga sisa sudah hilang.",
+        "Baru bekerja."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "きけんの{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "**{巻|ま}き{込|こ}まれ**：{手|て}、{服|ふく}、かみが{回|まわ}る{部分|ぶぶん}にまきこまれる。",
+        "**はさまれ**：{動|うご}く{部分|ぶぶん}のあいだにはさまれる（プレス{機|き}など）。",
+        "**{切|き}れ・こすれ**：{刃物|はもの}、{工具|こうぐ}、とがった{所|ところ}でけがをする。",
+        "**{飛来|ひらい}**：{切|き}りくずや{部品|ぶひん}がとんでくる。",
+        "**{感電|かんでん}・やけど**：{電気|でんき}と{熱|ねつ}。"
+       ]
+      },
+      {
+       "h": "{安全装置|あんぜんそうち}"
+      },
+      {
+       "ul": [
+        "**{安全|あんぜん}カバー**：あぶない{部分|ぶぶん}をおおう。",
+        "**{非常停止|ひじょうていし}ボタン**：きんきゅうのとき、すぐ{機械|きかい}を{止|と}める。",
+        "**インターロック**：ドアやカバーが{開|あ}いていると、{機械|きかい}が{動|うご}かない。",
+        "**{光|ひかり}{線|せん}{式|しき}{安全装置|あんぜんそうち}**：{光|ひかり}のセンサー。{手|て}が{入|はい}ると{機械|きかい}が{止|とまる}まる。"
+       ]
+      },
+      {
+       "h": "{作業|さぎょう}のきまり"
+      },
+      {
+       "ul": [
+        "**{安全装置|あんぜんそうち}をはずしたり、{動|うご}かないようにしたりしない。**",
+        "{作業|さぎょう}の{前|まえ}に、{安全装置|あんぜんそうち}を{点検|てんけん}する。",
+        "**そうじ、{修理|しゅうり}、{工具|こうぐ}の{交換|こうかん}**のときは、**{機械|きかい}を{止|と}めて、{電源|でんげん}を{切|き}る**。{回|まわ}っている{機械|きかい}にさわらない。",
+        "{切|き}りくずは、{素|そ}{手|て}でとらない。ブラシやピンセットを{使|つか}う。"
+       ]
+      },
+      {
+       "h": "{停止|ていし}と{施錠|せじょう}（ロックアウト・タグアウト）"
+      },
+      {
+       "ol": [
+        "{機械|きかい}を{止|と}める。",
+        "{電気|でんき}やそのほかの{動|どう}{力|ちから}（{空気|くうき}の{圧力|あつりょく}、{油|あぶら}）を{切|き}る。",
+        "**{錠|じょう}（{施錠|せじょう}）**をかけて、**{表|ひょう}{示|じ}**をつけ、ほかの{人|ひと}が{入|い}れないようにする。",
+        "のこっている{力|ちから}がないか{確認|かくにん}する。",
+        "それから{作業|さぎょう}する。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bahaya: 巻き込まれ, はさまれ, 切れ・こすれ, 飛来; pengaman: カバー, 非常停止, インターロック, 光線式; jangan akali pengaman; saat perawatan matikan dan kunci (ロックアウト).",
+      "points": [
+       "巻き込まれ, はさまれ.",
+       "非常停止ボタン.",
+       "インターロック.",
+       "Mesin mati + kunci sebelum kerja."
+      ],
+      "avoid": [
+       "Melepas pengaman.",
+       "Membersihkan mesin yang masih menyala."
+      ],
+      "exam": [
+       "Arti 巻き込まれ dan はさまれ.",
+       "Fungsi インターロック.",
+       "Langkah ロックアウト."
+      ]
+     },
+     "jp": {
+      "core": "{安全装置|あんぜんそうち}をはずしません。そうじや{修理|しゅうり}のときは、{機械|きかい}を{止|と}めて{電源|でんげん}を{切|き}り、{施錠|せじょう}して{表|ひょう}{示|じ}します。",
+      "points": [
+       "{巻|ま}き{込|こ}まれ、はさまれ。",
+       "{非常停止|ひじょうていし}ボタン。",
+       "インターロック。",
+       "{止|と}めて{施錠|せじょう}してから{作業|さぎょう}。"
+      ],
+      "avoid": [
+       "{安全装置|あんぜんそうち}をはずすこと。",
+       "{動|うご}いている{機械|きかい}をそうじすること。"
+      ],
+      "exam": [
+       "{巻|ま}き{込|こ}まれとはさまれの{意味|いみ}。",
+       "インターロックのはたらき。",
+       "ロックアウトの{手順|てじゅん}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s3",
+    "no": 3,
+    "title": {
+     "id": "Pengangkutan dan Pengangkatan",
+     "jp": "{運搬|うんぱん}と{玉掛|たまがけ}け"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Mengangkat barang berat"
+      },
+      {
+       "ul": [
+        "Jangan memaksakan; gunakan **kereta dorong, hoist, atau minta bantuan**.",
+        "Cara mengangkat yang benar: **berjongkok**, punggung lurus, barang dekat badan, **jangan membungkuk dan menarik**.",
+        "Cedera **pinggang (腰痛)** sering terjadi; perhatikan batas bobot."
+       ]
+      },
+      {
+       "h": "Forklift dan crane"
+      },
+      {
+       "ul": [
+        "**フォークリフト**: butuh **pendidikan atau sertifikat** (kursus keterampilan atau pendidikan khusus tergantung kapasitas). Yang tidak berkualifikasi tidak boleh mengoperasikannya.",
+        "**玉掛け**: menggantung beban pada kait crane. Butuh kualifikasi atau pelatihan.",
+        "**Jangan masuk ke bawah beban yang tergantung.**",
+        "**合図**: isyarat tangan yang disepakati dengan operator."
+       ]
+      },
+      {
+       "h": "Lingkungan"
+      },
+      {
+       "ul": [
+        "Jangan berlari. Lewati jalur pejalan kaki. Waspada forklift di tikungan.",
+        "Jangan menumpuk barang terlalu tinggi dan tidak stabil.",
+        "Gunakan **pallet** dan tali pengikat dengan benar."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{重|おも}い{物|もの}をはこぶ"
+      },
+      {
+       "ul": [
+        "むりをしない。**{台|だい}{車|くるま}、ホイスト、{人|ひと}の{助|たす}け**を{使|つか}う。",
+        "{正|ただ}しい{持|も}ち{方|かた}：**ひざをまげて**、せなかをのばし、{物|もの}を{体|からだ}に{近|ちか}づける。**こしをまげて{引|ひっぱらない}っぱらない**。",
+        "**{腰痛|ようつう}**になりやすい。{重|おも}さの{限度|げんど}に{気|き}をつける。"
+       ]
+      },
+      {
+       "h": "フォークリフトとクレーン"
+      },
+      {
+       "ul": [
+        "**フォークリフト**は、**{教育|きょういく}や{資格|しかく}**が{必要|ひつよう}（{荷物|にもつ}の{重|おも}さによって、{技能講習|ぎのうこうしゅう}か{特別|とくべつ}{教育|きょういく}）。{資格|しかく}のない{人|ひと}は{運転|うんてん}してはいけない。",
+        "**{玉掛|たまがけ}け**は、{荷物|にもつ}をクレーンのフックにかける{作業|さぎょう}。{資格|しかく}や{教育|きょういく}が{必要|ひつよう}。",
+        "**つり{上|あ}げた{荷物|にもつ}の{下|した}に{入|はい}らない。**",
+        "**{合図|あいず}**：{運転|うんてん}する{人|ひと}と{決|き}めた{手|て}の{合図|あいず}をする。"
+       ]
+      },
+      {
+       "h": "まわりの{環境|かんきょう}"
+      },
+      {
+       "ul": [
+        "{走|はし}らない。{歩|ある}く{道|みち}を{歩|ある}く。かどでは、フォークリフトに{注意|ちゅうい}する。",
+        "{物|もの}を{高|たか}く、あぶなく{積|つまない}まない。",
+        "**パレット**やベルトを{正|ただ}しく{使|つか}う。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Angkat dengan berjongkok; forklift dan 玉掛け butuh kualifikasi; jangan masuk di bawah beban; ikuti 合図.",
+      "points": [
+       "Berjongkok, punggung lurus.",
+       "Forklift = butuh kualifikasi.",
+       "Jangan masuk di bawah beban gantung.",
+       "合図."
+      ],
+      "avoid": [
+       "Masuk di bawah beban gantung.",
+       "Mengoperasikan forklift tanpa kualifikasi."
+      ],
+      "exam": [
+       "Cara mengangkat yang benar.",
+       "Aturan di bawah beban gantung."
+      ]
+     },
+     "jp": {
+      "core": "{重|おも}い{物|もの}はひざをまげて{持|も}ちます。フォークリフトや{玉掛|たまがけ}けには{資格|しかく}や{教育|きょういく}が{必要|ひつよう}です。つり{荷|に}の{下|した}に{入|はい}りません。",
+      "points": [
+       "ひざをまげて{持|も}つ。",
+       "フォークリフトは{資格|しかく}が{必要|ひつよう}。",
+       "つり{荷|に}の{下|した}に{入|はい}らない。",
+       "{合図|あいず}。"
+      ],
+      "avoid": [
+       "つり{荷|に}の{下|した}に{入|はい}ること。",
+       "{資格|しかく}なしでフォークリフトを{運転|うんてん}すること。"
+      ],
+      "exam": [
+       "{重|おも}い{物|もの}の{持|も}ち{方|かた}。",
+       "つり{荷|に}の{下|した}のきまり。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s4",
+    "no": 4,
+    "title": {
+     "id": "Listrik, Api, dan Bahan Kimia",
+     "jp": "{電気|でんき}・{火災|かさい}・{化学物質|かがくぶっしつ}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Listrik"
+      },
+      {
+       "ul": [
+        "**感電**: tersengat listrik; bisa fatal. **Jangan menyentuh dengan tangan basah.**",
+        "Kabel rusak, colokan longgar, dan kebocoran listrik (**漏電**) berbahaya.",
+        "Perbaikan listrik hanya oleh orang berkualifikasi."
+       ]
+      },
+      {
+       "h": "Api"
+      },
+      {
+       "ul": [
+        "Jauhkan **bahan mudah terbakar** (oli, kain, kertas, pelarut) dari percikan dan panas.",
+        "Saat mengelas atau menggerinda, **percikan api** bisa menyulut api; bersihkan sekitar dan siapkan **alat pemadam**.",
+        "Ketahui **letak alat pemadam, jalur evakuasi, dan titik kumpul**."
+       ]
+      },
+      {
+       "h": "Bahan kimia"
+      },
+      {
+       "ul": [
+        "**SDS (安全データシート)**: lembar data keselamatan; berisi sifat bahaya, cara penanganan, dan pertolongan pertama.",
+        "**ラベル (label) dan 絵表示**: tanda bahaya pada wadah.",
+        "**有機溶剤**: pelarut organik; **ventilasi baik**, jauhkan dari api, pakai masker dan sarung tangan yang sesuai.",
+        "**Jangan mencampur** bahan kimia sembarangan.",
+        "Simpan di wadah tertutup dengan label."
+       ]
+      },
+      {
+       "h": "Jika terjadi"
+      },
+      {
+       "ul": [
+        "Terkena mata atau kulit: **bilas dengan banyak air** dan lapor.",
+        "Api kecil: ikuti pelatihan; api besar: **evakuasi dan hubungi bantuan**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{電気|でんき}"
+      },
+      {
+       "ul": [
+        "**{感電|かんでん}**：{電気|でんき}でしびれること。{命|いのち}にかかわる。**ぬれた{手|て}で{電気|でんき}にさわらない。**",
+        "やぶれたコード、ゆるんだプラグ、**{漏電|ろうでん}**はあぶない。",
+        "{電気|でんき}の{修理|しゅうり}は、{資格|しかく}のある{人|ひと}がする。"
+       ]
+      },
+      {
+       "h": "{火|ひ}"
+      },
+      {
+       "ul": [
+        "{油|あぶら}、ぬの、{紙|かみ}、うすめ{液|えき}など、**{燃|も}えやすい{物|もの}**を、{火花|ひばな}や{熱|ねつ}から{遠|とお}ざける。",
+        "{溶接|ようせつ}や{研削|けんさく}のとき、**{火花|ひばな}**で{火事|かじ}になることがある。まわりをかたづけ、**{消火器|しょうかき}**を{用意|ようい}する。",
+        "**{消火器|しょうかき}の{場所|ばしょ}、にげる{道|みち}、あつまる{場所|ばしょ}**を{知|し}っておく。"
+       ]
+      },
+      {
+       "h": "{化学物質|かがくぶっしつ}"
+      },
+      {
+       "ul": [
+        "**SDS（{安全|あんぜん}データシート）**：きけんな{性質|せいしつ}、あつかい{方|かた}、{応急手当|おうきゅうてあて}てがのっている。",
+        "**ラベル**と**{絵|え}{表|ひょう}{示|じ}**：{入|い}れ{物|もの}についている、きけんのしるし。",
+        "**{有機溶剤|ゆうきようざい}**：**{風|かぜ}{通|とお}しをよく**し、{火|ひ}を{近|ちか}づけない。{合|あ}ったマスクと{手|て}ぶくろを{使|つか}う。",
+        "{化学物質|かがくぶっしつ}を**かってにまぜない**。",
+        "ふたのある{入|い}れ{物|もの}に{入|い}れ、{名前|なまえ}を{書|か}く。"
+       ]
+      },
+      {
+       "h": "おきたとき"
+      },
+      {
+       "ul": [
+        "{目|め}や{皮|かわ}ふについたら、**たくさんの{水|みず}で{洗|あら}い**、{報告|ほうこく}する。",
+        "{小|ちい}さい{火|ひ}：{教育|きょういく}のとおりに{消|け}す。{大|おお}きい{火|ひ}：**にげて、{助|たす}けをよぶ**。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Jangan menyentuh listrik dengan tangan basah; percikan api bisa menyulut bahan mudah terbakar; SDS dan label untuk bahan kimia; jangan mencampur; bilas dengan banyak air jika terkena.",
+      "points": [
+       "感電: tangan basah dilarang.",
+       "Percikan api + bahan mudah terbakar.",
+       "SDS = lembar data keselamatan.",
+       "有機溶剤: ventilasi."
+      ],
+      "avoid": [
+       "Mencampur bahan kimia sembarangan.",
+       "Menyentuh listrik dengan tangan basah."
+      ],
+      "exam": [
+       "Arti SDS.",
+       "Aturan 有機溶剤."
+      ]
+     },
+     "jp": {
+      "core": "ぬれた{手|て}で{電気|でんき}にさわりません。{化学物質|かがくぶっしつ}はSDSとラベルで{確認|かくにん}し、まぜません。",
+      "points": [
+       "ぬれた{手|て}で{電気|でんき}にさわらない。",
+       "{火花|ひばな}と{燃|も}えやすい{物|もの}に{注意|ちゅうい}。",
+       "SDS＝{安全|あんぜん}データシート。",
+       "{有機溶剤|ゆうきようざい}は{風|かぜ}{通|とお}しをよくする。"
+      ],
+      "avoid": [
+       "{化学物質|かがくぶっしつ}をかってにまぜること。",
+       "ぬれた{手|て}で{電気|でんき}にさわること。"
+      ],
+      "exam": [
+       "SDSの{意味|いみ}。",
+       "{有機溶剤|ゆうきようざい}のきまり。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s5",
+    "no": 5,
+    "title": {
+     "id": "Menjaga Kesehatan",
+     "jp": "{健康管理|けんこうかんり}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Sengatan panas (熱中症)"
+      },
+      {
+       "ul": [
+        "Gejala: pusing, mual, keringat berlebihan atau berhenti, kram, kesadaran menurun.",
+        "Pencegahan: **minum air dan garam sedikit-sedikit**, istirahat, pakaian yang menyerap keringat, tempat teduh.",
+        "Jika merasa tidak enak badan, **segera istirahat dan lapor**. Teman yang tampak aneh juga ditolong."
+       ]
+      },
+      {
+       "h": "Pinggang dan postur"
+      },
+      {
+       "ul": [
+        "Hindari posisi yang sama terlalu lama; **regangkan** badan di sela kerja.",
+        "Atur tinggi meja kerja agar tidak membungkuk."
+       ]
+      },
+      {
+       "h": "Bising, debu, dan lainnya"
+      },
+      {
+       "ul": [
+        "Tempat bising: pakai **耳栓**. Tempat berdebu: **防じんマスク**.",
+        "Cuci tangan setelah bekerja dengan oli dan bahan kimia."
+       ]
+      },
+      {
+       "h": "Kondisi tubuh"
+      },
+      {
+       "ul": [
+        "Tidur cukup, sarapan, hindari alkohol sebelum bekerja.",
+        "**健康診断** (pemeriksaan kesehatan) dilakukan berkala; ikuti.",
+        "Jika kurang sehat, **jangan memaksakan diri**; kecelakaan mudah terjadi."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{熱中症|ねっちゅうしょう}"
+      },
+      {
+       "ul": [
+        "{症状|しょうじょう}：めまい、はきけ、あせがたくさん{出|で}る（または{出|で}ない）、{足|あし}がつる、{意識|いしき}がうすくなる。",
+        "{予防|よぼう}：**{水|みず}と{塩分|えんぶん}を{少|すこ}しずつとる**、{休|やす}む、あせをすう{服|ふく}、すずしい{所|ところ}。",
+        "{体|からだ}の{調子|ちょうし}がわるいときは、**すぐ{休|やす}んで{報告|ほうこく}する**。ほかの{人|ひと}のようすがおかしいときも{助|たす}ける。"
+       ]
+      },
+      {
+       "h": "こしと{姿勢|しせい}"
+      },
+      {
+       "ul": [
+        "{同|おな}じ{姿勢|しせい}を{長|なが}くしない。{仕事|しごと}の{合|あ}{間|あいだ}に**のびをする**。",
+        "{作業|さぎょう}{台|だい}の{高|たか}さを、かがまなくてすむようにする。"
+       ]
+      },
+      {
+       "h": "{音|おと}、ほこりなど"
+      },
+      {
+       "ul": [
+        "うるさい{所|ところ}は**{耳栓|みみせん}**。ほこりが{多|おお}い{所|ところ}は**{防|ぼう}じんマスク**。",
+        "{油|あぶら}や{化学物質|かがくぶっしつ}をさわったあとは、{手|て}を{洗|あら}う。"
+       ]
+      },
+      {
+       "h": "{体|からだ}のようす"
+      },
+      {
+       "ul": [
+        "よくねる、{朝|あさ}ごはんを{食|た}べる、{仕事|しごと}の{前|まえ}にお{酒|さけ}をのまない。",
+        "**{健康|けんこう}{診断|しんだん}**は、きまった{時期|じき}にうける。",
+        "{調子|ちょうし}がわるいときは、**むりをしない**。{事故|じこ}がおきやすい。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "熱中症: air dan garam, istirahat, lapor; jaga postur dan pinggang; 耳栓/防じんマスク; ikuti 健康診断; jangan memaksakan diri saat sakit.",
+      "points": [
+       "熱中症: air + garam + istirahat.",
+       "Regangkan badan.",
+       "健康診断.",
+       "Jangan memaksakan diri."
+      ],
+      "avoid": [
+       "Menahan diri saat pusing atau mual."
+      ],
+      "exam": [
+       "Pencegahan 熱中症.",
+       "Alat pelindung telinga dan pernapasan."
+      ]
+     },
+     "jp": {
+      "core": "{熱中症|ねっちゅうしょう}には{水|みず}と{塩分|えんぶん}と{休|やす}みです。{調子|ちょうし}がわるいときはむりをせず{報告|ほうこく}します。",
+      "points": [
+       "{熱中症|ねっちゅうしょう}：{水|みず}と{塩分|えんぶん}と{休|やす}み。",
+       "のびをする。",
+       "{健康|けんこう}{診断|しんだん}。",
+       "むりをしない。"
+      ],
+      "avoid": [
+       "めまいやはきけをがまんして{続|つづ}けること。"
+      ],
+      "exam": [
+       "{熱中症|ねっちゅうしょう}の{予防|よぼう}。",
+       "{耳|みみ}と{呼吸|こきゅう}の{保護具|ほごぐ}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

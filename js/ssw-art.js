@@ -205,6 +205,58 @@ const BLD_SETS = {
   "kaigo": ["kg_home", "kg_bed", "kg_chair", "kg_heart"],
   "kaigo-jp": ["kg_home", "kg_chair", "kg_heart"],
 };
+/* ===== tambahan: tema pulau Fishery & Otomotif + bangunan khusus tiap bab (hanya menambah, tidak mengubah yang lama) ===== */
+const boat = (x, y, s = 1, hull = "#d65a55", cab = "#f4f7fc") => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-26 -8 L26 -8 L20 4 L-20 4Z" fill="${hull}"/><rect x="-26" y="-10" width="52" height="3" fill="#fff" opacity=".85"/><rect x="-6" y="-22" width="16" height="12" rx="2" fill="${cab}"/><rect x="-3" y="-19" width="10" height="5" fill="#9fd0f5"/><rect x="12" y="-34" width="2" height="24" fill="#8892a6"/><path d="M14 -33 l10 3 l-10 3z" fill="#f2b230"/></g>`;
+const fish = (x, y, s = 1, c = "#7aa9e6") => `<g transform="translate(${x} ${y}) scale(${s})"><ellipse cx="0" cy="0" rx="6" ry="3" fill="${c}"/><path d="M5 0 l5 -3 v6z" fill="${c}"/><circle cx="-3" cy="-0.6" r=".8" fill="#fff"/></g>`;
+const sea = (c = "#4aa3c8") => `<ellipse cx="60" cy="96" rx="54" ry="11" fill="${c}"/><ellipse cx="60" cy="94" rx="46" ry="8" fill="rgba(255,255,255,.18)"/>`;
+const buoy = (x, y, c = "#f0685b") => `<g transform="translate(${x} ${y})"><circle cx="0" cy="0" r="4" fill="${c}"/><path d="M-4 0h8" stroke="#fff" stroke-width="1.2"/></g>`;
+const car = (x, y, s = 1, c = "#d65a55") => `<g transform="translate(${x} ${y}) scale(${s})"><ellipse cx="0" cy="2" rx="22" ry="4" fill="rgba(0,0,0,.18)"/><path d="M-22 -2 L-22 -10 Q-22 -13 -18 -13 L-12 -13 L-7 -21 L9 -21 L15 -13 L20 -13 Q22 -13 22 -10 L22 -2Z" fill="${c}"/><path d="M-6 -13 L-2 -19 L7 -19 L11 -13Z" fill="#bfe3ff"/><circle cx="-12" cy="-1" r="5" fill="#2f3547"/><circle cx="-12" cy="-1" r="2" fill="#aaa"/><circle cx="12" cy="-1" r="5" fill="#2f3547"/><circle cx="12" cy="-1" r="2" fill="#aaa"/></g>`;
+const cone = (x, y) => `<g transform="translate(${x} ${y})"><path d="M-4 0 L-1.5 -10 L1.5 -10 L4 0Z" fill="#f08f2e"/><rect x="-5" y="0" width="10" height="2" fill="#444"/><path d="M-2.4 -5h4.8" stroke="#fff" stroke-width="1.6"/></g>`;
+const tire = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><ellipse cx="0" cy="0" rx="8" ry="4" fill="#2f3547"/><ellipse cx="0" cy="-2" rx="8" ry="4" fill="#444c63"/><ellipse cx="0" cy="-2" rx="3.4" ry="1.7" fill="#aab"/></g>`;
+Object.assign(THEMES, {
+  fishery() {
+    return base("#56b6d4", "#2f8fb0", "#6f7f8f") +
+      iso(204, 148, 30, 26, 30, COL.cream) + winsRight(204, 148, 30, 30, 2, 1, "#cfe8ff") +
+      `<rect x="195" y="90" width="18" height="6" rx="2" fill="#d65a55"/>` +
+      `<polygon points="70,126 126,152 140,145 84,119" fill="#a8704a"/><polygon points="70,126 126,152 126,157 70,131" fill="#8a5a36"/>` +
+      boat(104, 150, 1.4) + fish(70, 148, 1.4) + fish(150, 164, 1.1, "#f2b230") +
+      `<g stroke="#7d869a" stroke-width="1.6"><path d="M172 128 V104 M186 134 V110"/></g><path d="M172 108 Q179 122 186 114" stroke="#e9eef9" stroke-width="1.4" fill="none"/>` +
+      crate(170, 160, "#e0b45a") + crate(184, 164, "#7aa9e6") + person(150, 156, "#3f6fd8", "#ffd23d", .85) + buoy(66, 112) + buoy(82, 108, "#f2b230");
+  },
+  automobile() {
+    return base("#9aa6c2", "#6c7898", "#6a6f80") +
+      iso(188, 140, 44, 34, 34, COL.gray) + winsRight(188, 140, 44, 34, 3, 1, "#cfe8ff") + winsLeft(188, 140, 34, 34, 2, 1, "#b7d9f7") +
+      `<rect x="172" y="80" width="34" height="8" rx="2" fill="#2f6fd0"/>` +
+      car(112, 150, 1.5, "#d65a55") + car(224, 164, 1.0, "#4d86d4") +
+      tire(66, 120, 1.1) + tire(66, 113, 1.1) + cone(250, 142) + cone(78, 152) + person(150, 168, "#3f6fd8", "#ffd23d", .85) + cone(160, 134);
+  },
+});
+Object.assign(BLD2, {
+  fy_dock: () => sea() + `<polygon points="16,88 70,66 96,74 42,98" fill="#a8704a"/>` + boat(60, 84, .9) + buoy(98, 84),
+  fy_safe: () => sea() + boat(60, 84, .9, "#f2b230") + `<g transform="translate(94 66)"><circle r="8" fill="none" stroke="#f0685b" stroke-width="4"/><path d="M-8 0h16M0 -8v16" stroke="#fff" stroke-width="2" opacity=".7"/></g>` + person(24, 90, "#f08f2e", "#ffd23d", .65),
+  fy_purse: () => sea() + boat(40, 84, .8) + `<g fill="none" stroke="#e9eef9" stroke-width="2"><ellipse cx="78" cy="82" rx="26" ry="9"/></g><g fill="#f0685b"><circle cx="54" cy="82" r="2.4"/><circle cx="66" cy="75" r="2.4"/><circle cx="82" cy="73" r="2.4"/><circle cx="96" cy="78" r="2.4"/><circle cx="98" cy="87" r="2.4"/><circle cx="76" cy="91" r="2.4"/></g>` + fish(76, 82, 1),
+  fy_gill: () => sea() + `<path d="M18 62 L102 62" stroke="#444" stroke-width="2"/><path d="M18 62 L18 90 M102 62 L102 90 M18 90 L102 90" stroke="#9aa5ba" stroke-width="1" fill="none"/><g stroke="#9aa5ba" stroke-width=".8" opacity=".9">${[...Array(10)].map((_, i) => `<path d="M${22 + i * 8} 62V90"/>`).join("")}</g>` + [24, 44, 64, 84, 100].map(x => buoy(x, 62)).join("") + fish(56, 78, 1) + fish(78, 70, 1, "#f2b230"),
+  fy_trawl: () => sea() + boat(36, 82, .8) + `<path d="M58 84 L102 70 L102 94 Z" fill="#d6dff0" stroke="#9aa5ba" stroke-width="1.4" opacity=".9"/><path d="M58 84 L102 82" stroke="#444" stroke-width="1.6"/>` + fish(92, 82, 1),
+  fy_trap: () => sea() + `<g stroke="#9aa5ba" stroke-width="1.4" fill="none"><path d="M12 60 L52 78 M52 78 L52 94 M52 78 L100 70 L100 94 M52 94 L100 94"/><rect x="56" y="72" width="40" height="18" rx="2" fill="rgba(214,223,240,.5)"/></g>` + [14, 34, 52, 76, 98].map(x => buoy(x, 62 + (x < 52 ? x / 5 : 12), "#f2b230")).join("") + fish(76, 82, 1),
+  fy_pot: () => sea("#3f93b0") + `<g fill="#c68e64" stroke="#8a5a36" stroke-width="1.4"><rect x="26" y="72" width="26" height="20" rx="6"/><rect x="58" y="72" width="26" height="20" rx="6"/><rect x="42" y="52" width="26" height="20" rx="6"/></g><g stroke="#8a5a36" stroke-width="1"><path d="M30 78h18M62 78h18M46 58h18"/></g><path d="M96 90 q10 -6 6 -14" stroke="#e8805a" stroke-width="6" fill="none" stroke-linecap="round"/>` + buoy(102, 64),
+  fy_stick: () => sea() + boat(50, 84, .95) + `<path d="M74 70 L102 62" stroke="#7a5638" stroke-width="2.4"/><path d="M102 62 L102 88" stroke="#fff" stroke-width="1" stroke-dasharray="2 2"/>` + `<g fill="#ffe27a"><circle cx="30" cy="60" r="3.4"/><circle cx="46" cy="55" r="3.4"/><circle cx="62" cy="52" r="3.4"/></g>` + fish(94, 88, 1) + fish(104, 82, .9),
+  fy_pole: () => sea() + boat(52, 84, .95, "#2f6fd0") + `<g stroke="#7a5638" stroke-width="1.8" fill="none"><path d="M26 76 Q10 60 8 50"/><path d="M30 76 Q16 56 18 44"/></g><path d="M8 50 L8 82" stroke="#e9eef9" stroke-width=".9"/>` + fish(10, 86, 1.2, "#3b6fb8") + fish(92, 78, 1.1, "#3b6fb8"),
+  fy_squid: () => sea() + boat(58, 84, .95, "#2f6fd0") + `<g fill="#ffe27a"><circle cx="36" cy="62" r="3.2"/><circle cx="50" cy="58" r="3.2"/><circle cx="64" cy="55" r="3.2"/><circle cx="78" cy="58" r="3.2"/></g><path d="M36 64V76M50 60V74M64 57V72M78 60V74" stroke="#ffe27a" stroke-width=".8" opacity=".7"/>` + `<g transform="translate(96 88)"><ellipse rx="7" ry="4" fill="#f4a9b4"/><path d="M-5 2 q-2 5 -4 6 M0 3 q0 5 -1 7 M5 2 q2 5 4 6" stroke="#f4a9b4" stroke-width="1.6" fill="none"/></g>`,
+  fy_longl: () => sea() + boat(32, 84, .75, "#d65a55") + `<path d="M50 84 Q72 72 100 84" stroke="#444" stroke-width="1.6" fill="none"/>` + buoy(60, 79) + buoy(78, 78, "#f2b230") + buoy(98, 83) + `<g stroke="#444" stroke-width="1"><path d="M66 78v10M84 79v9"/></g>` + fish(66, 92, 1.2, "#3b6fb8") + fish(84, 93, 1.2, "#3b6fb8"),
+  fy_bottom: () => `<ellipse cx="60" cy="98" rx="54" ry="9" fill="#8a7a62"/><ellipse cx="60" cy="52" rx="50" ry="8" fill="#4aa3c8"/>` + buoy(36, 52) + buoy(86, 52, "#f2b230") + `<path d="M36 56 V88 M86 56 V88 M36 88 H86" stroke="#444" stroke-width="1.6" fill="none"/><g stroke="#444" stroke-width="1"><path d="M48 88v8M60 88v8M72 88v8"/></g><g fill="#8892a6"><path d="M32 90 l4 8 l4 -8z"/><path d="M82 90 l4 8 l4 -8z"/></g>` + fish(54, 80, 1, "#c68e64") + fish(70, 84, 1, "#c68e64"),
+  au_shop: () => iso(58, 94, 48, 36, 32, COL.gray) + `<polygon points="8,62 58,36 112,60 62,82" fill="#c4584d"/>` + `<rect x="44" y="66" width="22" height="22" rx="2" fill="#2f3547" transform="skewY(26) translate(0 -26)"/>` + car(98, 102, .7, "#4d86d4"),
+  au_engine: () => iso(52, 94, 40, 32, 24, COL.dark) + `<g fill="#8892a6" stroke="#c3cbdb"><rect x="30" y="54" width="14" height="22" rx="2"/><rect x="46" y="50" width="14" height="22" rx="2"/><rect x="62" y="54" width="14" height="22" rx="2"/></g><path d="M80 80 q14 -4 20 8" stroke="#f08f2e" stroke-width="4" fill="none"/>` + person(100, 102, "#3f6fd8", "#ffd23d", .65),
+  au_brake: () => `<g transform="translate(46 80)"><circle r="24" fill="#c3cbdb" stroke="#8892a6" stroke-width="2"/><circle r="16" fill="#8892a6"/><circle r="6" fill="#444c63"/><g fill="#444c63"><circle cx="0" cy="-11" r="2"/><circle cx="10" cy="-4" r="2"/><circle cx="6" cy="9" r="2"/><circle cx="-6" cy="9" r="2"/><circle cx="-10" cy="-4" r="2"/></g></g><rect x="62" y="54" width="22" height="30" rx="4" fill="#d65a55"/>` + cone(100, 98),
+  au_tire: () => tire(44, 94, 2) + tire(44, 80, 2) + tire(44, 66, 2) + car(92, 100, .7, "#2f9a6a") + cone(104, 70),
+  au_elec: () => iso(54, 94, 40, 32, 24, COL.white) + `<g transform="translate(54 66)"><rect x="-16" y="-10" width="32" height="20" rx="3" fill="#2f3547"/><rect x="-9" y="-14" width="6" height="5" fill="#d65a55"/><rect x="3" y="-14" width="6" height="5" fill="#444"/><path d="M-2 -4 l-4 8 l6 -2 l-2 8" stroke="#ffd23d" stroke-width="2.4" fill="none"/></g>` + person(100, 102, "#f08f2e", "#ffd23d", .65),
+  au_lift: () => `<g stroke="#8892a6" stroke-width="5" fill="none"><path d="M28 96V30M92 96V30"/></g><rect x="22" y="26" width="76" height="6" fill="#f2b230"/><rect x="30" y="52" width="60" height="6" fill="#c3cbdb"/>` + car(60, 52, .8, "#d65a55") + person(60, 102, "#3f6fd8", "#ffd23d", .6),
+  au_test: () => iso(52, 94, 46, 34, 26, COL.cream) + `<rect x="34" y="40" width="38" height="9" rx="2" fill="#2f9a6a"/><path d="M44 44h18" stroke="#fff" stroke-width="2.4"/>` + car(98, 100, .7, "#f2b230") + `<g transform="translate(98 56)"><path d="M0 0 l-8 14 h16z" fill="#fff" stroke="#d65a55" stroke-width="2"/></g>`,
+});
+Object.assign(BLD_SETS, {
+  "fishery": ["fy_dock", "fy_safe", "fy_purse", "fy_gill", "fy_trawl", "fy_trap", "fy_pot", "fy_stick", "fy_pole", "fy_squid", "fy_longl", "fy_bottom"],
+  "auto-maintenance": ["au_shop", "au_engine", "au_brake", "au_tire", "au_elec", "au_lift", "au_test"],
+});
+
 /** Jenis bangunan peta untuk bab ke-i pada bidang tertentu (BC / tidak dikenal = set bawaan). */
 export function bldFor(slug, i) {
   const set = BLD_SETS[slug];

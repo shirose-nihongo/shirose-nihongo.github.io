@@ -1,150 +1,250 @@
 {
  "schema": 1,
  "bidang": "fishery",
- "source": "Shirose Nihongo — tulisan orisinal berdasarkan standar kompetensi resmi bidang Perikanan (MOJ/ISA, MAFF/Badan Perikanan, MHLW) dan materi keselamatan MHLW untuk pekerja asing; bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "source": "Teks dan gambar halaman: 特定技能 漁業技能測定試験 学習用テキスト (一般社団法人大日本水産会, 初版2019年12月, 一部改訂2025年9月) — 漁業一般・漁業安全・網漁業・釣漁業, versi Jepang dan versi bahasa Indonesia. Ringkasan, kosakata, dan soal latihan: Shirose Nihongo (bukan soal resmi).",
  "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
  "bab": {
   "id": "bab1",
   "no": 1,
   "title": {
-   "id": "Pengetahuan Umum Perikanan",
-   "jp": "{漁業|ぎょぎょう}の{基礎知識|きそちしき}"
+   "id": "Perikanan Umum",
+   "jp": "{漁業|ぎょぎょう}{一般|いっぱん}"
   },
   "intro": {
-   "id": "Mengenal dunia perikanan Jepang: jenis usaha, ikan dan hasil laut utama, kapal dan bagian-bagiannya, awak kapal, navigasi, tali dan simpul, jaring dan alat tangkap, serta cuaca dan laut.",
-   "jp": "{日本|にほん}の{漁業|ぎょぎょう}のしくみ、{魚|さかな}、{船|ふね}、{航海|こうかい}、ロープ、{漁具|ぎょぐ}、{天気|てんき}と{海|うみ}の{基本|きほん}を{学|まな}びます。"
+   "id": "Pengetahuan umum perikanan: produksi, kapal, navigasi, istilah, tali, kail & mesin.",
+   "jp": "{漁業|ぎょぎょう}の{一般|いっぱん}{知識|ちしき}：{生産量|せいさんりょう}、{船|ふね}、{航法|こうほう}、{用語|ようご}、ロープ、{釣針|つりばり}、{機械|きかい}。"
   },
   "pages": [
-   1,
-   1
+   2,
+   45
   ],
   "subs": [
    {
     "id": "b1s1",
     "no": 1,
     "title": {
-     "id": "Mengenal Perikanan Jepang",
-     "jp": "{日本|にほん}の{漁業|ぎょぎょう}のしくみ"
+     "id": "Perikanan Dunia dan Jepang, Jenis Ikan",
+     "jp": "{世界|せかい}と{日本|にほん}の{漁業|ぎょぎょう}・{主|おも}な{魚|さかな}"
     },
     "pages": [
-     1,
-     1
+     2,
+     7
     ],
     "full": {
      "id": [
       {
-       "h": "Apa itu perikanan (漁業)?"
+       "h": "Jumlah Produksi Perikanan dan Budidaya Dunia"
       },
       {
-       "p": "**Perikanan (漁業)** adalah kegiatan menangkap atau membudidayakan ikan dan hasil laut lain seperti kerang, udang, cumi, dan rumput laut. Hasilnya dijual sebagai bahan pangan di seluruh Jepang."
+       "p": "Jumlah gabungan produksi perikanan dan budidaya dunia terus meningkat. Produksi perikanan dan budidaya dunia berjumlah 218.470.000 ton (tahun 2021), di mana jumlah produksi perikanan dengan kapal ikan cenderung mendatar sejak pertengahan tahun 1980an. Urutan negara yang perikanan dan budidaya memiliki volume produksi tertinggi, yaitu Cina (sekitar 89 juta ton), Indonesia (sekitar 22 juta ton), dan India (sekitar 16 juta ton)."
       },
       {
-       "h": "Jenis perikanan menurut tempat dan ukuran kapal"
+       "p": "(Gambar 1) Cina Indonesia India Jepang Gambar 1: Jumlah produksi perikanan & budidaya (Berdasarkan negara) (Sumber: Dibuat berdasarkan Laporan Buku Putih Perikanan tah un 2021)"
       },
       {
-       "ol": [
-        "**Perikanan pantai (沿岸漁業)**: kapal kecil atau alat tetap di dekat pantai. Biasanya berangkat dan pulang di hari yang sama.",
-        "**Perikanan lepas pantai (沖合漁業)**: kapal berukuran menengah, bekerja di laut yang lebih jauh dan bisa beberapa hari di laut.",
-        "**Perikanan samudra (遠洋漁業)**: kapal besar yang berlayar jauh, sering berbulan-bulan, ke samudra atau perairan negara lain.",
-        "**Budidaya laut (海面養殖業)**: memelihara ikan, kerang, atau rumput laut di laut sampai siap panen.",
-        "**Perikanan perairan darat (内水面漁業)**: di sungai dan danau."
+       "h": "Jumlah Produksi Perikanan dan Budidaya Jepang"
+      },
+      {
+       "p": "Industri perikanan telah berkembang sebagai industri yang memasok makanan laut sebagai protein hewani secara luas kepada masyarakat, dan telah membentuk budaya makanannya tersendiri. Selain itu, industri perikanan yang mengambil dan menangkap makhluk hidup di air sangat dipengaruhi oleh kondisi alam, maka kapal ikan dan peralatan penangkap ikan yang digunakan sesuai dengan organisme yang menjadi target penangkapan, sehingga ada berbagai teknik penangkapan. Perikanan Jepang terutama meliputi perikanan pantai, perikanan lepas pantai, perikanan pelagis, budidaya permukaan laut, penangkapan dan budidaya perairan pedalaman. Setelah memuncak pada 1984, volume produksi menurun tajam sampai 1995, dan setelah itu secara bertahap menurun. (Gambar. 2-1 dan 2-2)"
+      },
+      {
+       "ul": [
+        "Penangkapan ikan di pesisir pantai"
        ]
       },
       {
-       "note": "Ujian bidang Perikanan dibagi menjadi 漁業 (penangkapan ikan) dan 養殖業 (budidaya). Modul ini membahas 漁業."
+       "p": "Perikanan yang menggunakan kapal nelayan kecil di sepanjang pantai. Ini juga termasuk jaring tetap dan budidaya."
       },
       {
-       "h": "Aturan: tidak boleh menangkap sesuka hati"
-      },
-      {
-       "p": "Sumber daya ikan terbatas. Karena itu ada aturan: **izin perikanan (許可)**, **hak perikanan (漁業権)** untuk memakai perairan tertentu, batas jumlah tangkapan, **musim larangan tangkap (禁漁期)**, dan batas ukuran ikan. Nelayan biasanya tergabung dalam **koperasi perikanan (漁業協同組合, disingkat 漁協)**."
-      },
-      {
-       "h": "Alur pekerjaan sehari"
-      },
-      {
-       "ol": [
-        "Persiapan dan berangkat dari pelabuhan (出港).",
-        "Menuju daerah penangkapan (漁場).",
-        "Menangkap ikan (操業).",
-        "Pulang ke pelabuhan (帰港).",
-        "Membongkar hasil tangkapan (水揚げ) dan mengirim ke pasar ikan (市場)."
+       "ul": [
+        "Penangkapan ikan di lepas pantai"
        ]
+      },
+      {
+       "p": "Utamanya perikanan yang beroperasi di dalam radius jarak 200 mil wilayah laut Jepang."
+      },
+      {
+       "ul": [
+        "Penangkapan ikan di laut dalam"
+       ]
+      },
+      {
+       "p": "Utamanya perikanan yang beroperasi di luar radius jarak 200 mil wilayah laut Jepang."
+      },
+      {
+       "ul": [
+        "Budidaya permukaan laut"
+       ]
+      },
+      {
+       "p": "Perikanan yang memelihara ikan secara manual dengan menggunakan keramba dan peralatan lain yang dipasang di laut, serta menangkapnya."
+      },
+      {
+       "ul": [
+        "Penangkapan ikan di perairan pedalaman"
+       ]
+      },
+      {
+       "p": "Perikanan di air tawar (sungai dan danau)."
+      },
+      {
+       "ul": [
+        "Budidaya perikanan perairan pedalaman"
+       ]
+      },
+      {
+       "p": "Perikanan yang memelihara ikan secara manual dengan menggunakan keramba dan peralatan lain yang dipasang di air tawar (sungai dan danau), serta menangkapnya."
+      },
+      {
+       "p": "(10.000 ton) Penangkapan & budidaya perairan pedalaman Budidaya permukaan laut Penangkapan ikan pesisir pantai Penangkapan ikan lepas pantai Perikanan pelagis (Tahun) Gambar 2-1: Jumlah Produksi Perikanan & Budidaya Jepang (Sumber: Dibuat berdasarkan Laporan Buku Putih Perikanan tahun 2021) Jumlah Produksi Perikanan & budidaya perairan pedalaman 1.800.000 t Budidaya permukaan laut 910.000 t Perikanan pantai 890.000 t Perikanan lepas pantai 260.000 t Perikanan pelagis 50.000 t Gambar 2-2: Jumlah Produksi Perikanan & Budidaya di Jepang (tahun 2022) (Sumber: Dibuat berdasarkan Laporan Buku Putih Perikanan tahun 2021)"
+      },
+      {
+       "h": "Jenis Ikan Utama Yang Ditangkap di Jepang"
+      },
+      {
+       "p": "Banyak lautan hangat dan dingin mengalir di sepanjang garis pantai panjang Jepang dari utara ke selatan, dan berbagai ikan ditangkap di perairan sekitarnya. Kedalaman laut yang menjadi habitat ikan berbeda tergantung pada spesies ikan, Katsuo (Cakalang), Iwashi (Sarden), Maguro (Tuna) dan Suzuki (Sea bass) terutama hidup di dekat permukaan laut, Kani (kepiting), Tara (Cod), Ebi (udang) dan Ika (cumi-cumi) menghuni sekitar dasar laut."
+      },
+      {
+       "p": "Berikut ini jenis ikan utama yang ditangkap di Jepang:"
+      },
+      {
+       "p": "Anko (Monk fish) Nishin (Haring) Hokke (Okhotsk atka mackerel) Kani (kepiting) Ebi (udang) Buri (Sirip kuning) Aji (horse mackerel) Saba (ikan Makarel) Iwashi (ikan Sarden) Tai (ikan kakap) Sake (Salmon) Hirame (ikan sebelah) Tara (Cod) Katsuo (Cakalang) Maguro (Tuna) Fugu (ikan Buntal) Kajiki (ikan Marlin) Samma (Pacific saury) Sawara (ikan Tenggiri) Ika (Cumi-cumi) Gambar 3: Jenis-jenis ikan yang umum ditangkap di perairan lepas Pantai Jepang"
       }
      ],
      "jp": [
       {
-       "h": "{漁業|ぎょぎょう}とは"
+       "h": "１．{世界|せかい}の{漁業|ぎょぎょう}・{養殖業生産量|ようしょくぎょうせいさんりょう}"
       },
       {
-       "p": "**{漁業|ぎょぎょう}**は、{魚|さかな}や{貝|かい}、エビ、イカ、{海藻|かいそう}などをとったり{育|そだ}てたりする{仕事|しごと}です。とった{魚|さかな}は{日本中|にほんじゅう}の{食|た}べ{物|もの}になります。"
+       "p": "{世界|せかい}の{漁業|ぎょぎょう}・{養殖業|ようしょくぎょう}を{合|あ}わせた{生産量|せいさんりょう}は{増加|ぞうか}し{続|つづ}けている。{世界|せかい}の{漁業|ぎょぎょう}・{養殖業生産量|ようしょくぎょうせいさんりょう}は２{億|おく}１,８４７{万|まん}トン（２０２１{年|ねん}）となり、このうち{漁船漁業生産量|ぎょせんぎょぎょうせいさんりょう}は１９８０{年代後半以降|ねんだいこうはんいこう}は{横|よこ}ばい{傾向|けいこう}となっている。{国別|くにべつ}に{見|み}た{漁業|ぎょぎょう}・{養殖業生産量|ようしょくぎょうせいさんりょう}の{最|もっと}も{多|おお}い{国|くに}は{上位|じょうい}より、{中国|ちゅうごく}（{約|やく}８，９００{万|まん}ｔ）、インドネシア（{約|やく}２，２００{万|まん}ｔ）、インド（約１，６００{万|まん}ｔ）の{順|じゅん}に{続|つづ}いている。（{図|ず}１）"
       },
       {
-       "h": "{場所|ばしょ}と{船|ふね}の{大|おお}きさで{分|わ}ける{漁業|ぎょぎょう}"
+       "p": "{図|ず}１{漁業|ぎょぎょう}・{養殖業生産量|ようしょくぎょうせいさんりょう}（{国別|くにべつ}）（{出典|しゅってん}：{令和|れいわ}6{年度水産白書|ねんどすいさんはくしょ}より{作成|さくせい}）"
       },
       {
-       "ol": [
-        "**{沿岸漁業|えんがんぎょぎょう}**：{小|ちい}さい{船|ふね}や、{海岸|かいがん}の{近|ちか}くにおく{漁具|ぎょぐ}を{使|つか}います。たいてい、その{日|ひ}のうちに{帰|かえ}ります。",
-        "**{沖合漁業|おきあいぎょぎょう}**：{中|ちゅう}くらいの{船|ふね}で、{少|すこ}し{遠|とお}い{海|うみ}へ{行|い}きます。{何日|なんにち}か{海|うみ}にいることもあります。",
-        "**{遠洋漁業|えんようぎょぎょう}**：{大|おお}きい{船|ふね}で{遠|とお}くの{海|うみ}へ{行|い}きます。{何|なん}か{月|げつ}も{海|うみ}にいることがあります。",
-        "**{海面養殖業|かいめんようしょくぎょう}**：{海|うみ}で{魚|さかな}や{貝|かい}、{海藻|かいそう}を{育|そだ}てます。",
-        "**{内水面漁業|ないすいめんぎょぎょう}**：{川|かわ}や{湖|みずうみ}でする{漁業|ぎょぎょう}です。"
+       "h": "２．{日本|にほん}の{漁業|ぎょぎょう}・{養殖業生産量|ようしょくぎょうせいさんりょう}"
+      },
+      {
+       "p": "{漁業|ぎょぎょう}は{動物性|どうぶつせいた}タンパク{質|つ}の{魚介類|ぎょかいるい}を{広|ひろ}く{国民|こくみん}に{供給|きょうきゅう}する{産業|さんぎょう}として{発達|はったつ}し、{独自|どくじ}の{食文化|しょくぶんか}を{形成|けいせい}してきた。また、{水|みず}に{住|す}む{生物|せいぶつ}を{採捕|さいほ}・{漁獲|ぎょかく}する{漁業|ぎょぎょう}は、{自然条件|しぜんじょうけん}の{影響|えいきょう}を{強|つよ}く{受|う}け、{対象生物|たいしょうせいぶつ}に{適応|てきおう}した{漁船|ぎょせん}や{漁具|ぎょぐ}が{使用|しよう}されるため、{漁獲技術|ぎょかくぎじゅつ}は{様々|さまざま}である。{日本|にほん}の{漁業|ぎょぎょう}は、{主|おも}に{沿岸漁業|えんがんぎょぎょう}、{沖合漁業|おきあいぎょぎょう}、{遠洋漁業|えんようぎょぎょう}、{海面養殖業|かいめんようしょくぎょう}、{内水面漁業|ないすいめんぎょぎょう}・{養殖業|ようしょくぎょう}が{存在|そんざい}する。１９８４{年|ねん}をピークに１９９５{年頃|ねんごろ}にかけて{生産量|せいさんりょう}が{急速|きゅうそく}に{減少|げんしょう}し、その{後|ご}は{緩|ゆる}やかな{減少傾向|げんしょうけいこう}が{続|つづ}いている。（{図|ず}２－１、２－２）"
+      },
+      {
+       "ul": [
+        "{沿岸漁業|えんがんぎょぎょう}"
        ]
       },
       {
-       "note": "{試験|しけん}の{分野|ぶんや}は、{漁業|ぎょぎょう}（{魚|さかな}をとる）と{養殖業|ようしょくぎょう}（{魚|さかな}を{育|そだ}てる）に{分|わ}かれています。このモジュールは{漁業|ぎょぎょう}を{学|まな}びます。"
+       "p": "{沿岸|えんがん}で{小|ちい}さな{漁船|ぎょせん}を{使|つか}い{行|おこな}う{漁業|ぎょぎょう}。{定置網|ていちあみ}や{養殖業|ようしょくぎょう}も{含|ふく}まれる。"
       },
       {
-       "h": "ルールがあります"
-      },
-      {
-       "p": "{魚|さかな}の{数|かず}には{限|かぎ}りがあります。だから、**{許可|きょか}**、**{漁業権|ぎょぎょうけん}**、とってよい{量|りょう}の{制限|せいげん}、**{禁漁期|きんりょうき}**（とってはいけない{時期|じき}）、{魚|さかな}の{大|おお}きさの{制限|せいげん}などのルールがあります。{漁師|りょうし}は**{漁業協同組合|ぎょぎょうきょうどうくみあい}（{漁協|ぎょきょう}）**に{入|はい}ることが{多|おお}いです。"
-      },
-      {
-       "h": "1{日|ひ}の{流|なが}れ"
-      },
-      {
-       "ol": [
-        "{準備|じゅんび}をして**{出港|しゅっこう}**する。",
-        "**{漁場|ぎょば}**（{魚|さかな}をとる{場所|ばしょ}）へ{行|い}く。",
-        "**{操業|そうぎょう}**（{漁|りょう}をする）。",
-        "**{帰港|きこう}**（{港|みなと}へ{帰|かえ}る）。",
-        "**{水揚|みずあ}げ**をして、**{市場|いちば}**へ{出|だ}す。"
+       "ul": [
+        "{沖合漁業|おきあいぎょぎょう}"
        ]
+      },
+      {
+       "p": "{主|おも}に{日本|にほん}の２００{海里|かいり}（マイル）{水域内|すいいきない}で{操業|そうぎょう}する{漁業|ぎょぎょう}。"
+      },
+      {
+       "ul": [
+        "{遠洋漁業|えんようぎょぎょう}"
+       ]
+      },
+      {
+       "p": "{主|おも}に{日本|にほん}の２００{海里|かいり}（マイル）{水域外|すいいきがい}で{操業|そうぎょう}する{漁業|ぎょぎょう}。"
+      },
+      {
+       "ul": [
+        "{海面養殖業|かいめんようしょくぎょう}"
+       ]
+      },
+      {
+       "p": "{海面|かいめん}に{設置|せっち}した{生簀等|いけすなど}を{用|もち}いて{魚介類|ぎょかいるい}を{人工的|じんこうてき}に{育|そだ}て、{漁獲|ぎょかく}する{漁業|ぎょぎょう}。"
+      },
+      {
+       "ul": [
+        "{内水面漁業|ないすいめんぎょぎょう}"
+       ]
+      },
+      {
+       "p": "{淡水|たんすい}（{川|かわ}や{湖|みずうみ}）で{行|おこな}う{漁業|ぎょぎょう}。"
+      },
+      {
+       "ul": [
+        "{内水面養殖業|ないすいめんようしょくぎょう}"
+       ]
+      },
+      {
+       "p": "{淡水|たんすい}（{川|かわ}や{湖|みずうみ}）に{設置|せっち}した{生簀等|いけすなど}を{用|もち}いて{魚介類|ぎょかいるい}を{人工的|じんこうてき}に{育|そだ}て、{漁獲|ぎょかく}する{漁業|ぎょぎょう}。"
+      },
+      {
+       "p": "{図|ず}２－１{日本|にほん}の{漁業|ぎょぎょう}・{養殖業生産量|ようしょくぎょうせいさんりょう}（{出典|しゅってん}：{令和|れいわ}6{年度水産白書|ねんどすいさんはくしょ}より{作成|さくせい}）"
+      },
+      {
+       "p": "{生産量|せいさんりょう}"
+      },
+      {
+       "p": "おきあいぎょぎょう１８０まんｔ"
+      },
+      {
+       "p": "かいめんようしょくぎょう９１まんｔ"
+      },
+      {
+       "p": "えんがんぎょぎょう８９まんｔ"
+      },
+      {
+       "p": "えんようぎょぎょう２６まんｔ"
+      },
+      {
+       "p": "ないすいめんぎょぎょう・"
+      },
+      {
+       "p": "５まんｔ"
+      },
+      {
+       "p": "ようしょくぎょう"
+      },
+      {
+       "p": "{図|ず}２－２{日本|にほん}の{漁業|ぎょぎょう}・{養殖業生産量|ようしょくぎょうせいさんりょう}（２０２２{年|ねん}）（{出典|しゅってん}：{令和|れいわ}6{年度水産白書|ねんどすいさんはくしょ}より{作成|さくせい}）"
+      },
+      {
+       "h": "３．{日本|にほん}で{漁獲|ぎょかく}される{主|おも}な{魚|さかな}"
+      },
+      {
+       "p": "{南北|なんぼく}に{長|なが}い{日本|にほん}の{沿岸|えんがん}には{多|おお}くの{暖|あたた}かい{海|うみ}や{冷|つめ}たい{海|うみ}が{流|なが}れ、その{周辺|しゅうへん}{水域|すいいき}では{様々|さまざま}な{魚|さかな}が{漁獲|ぎょかく}される。{魚種|ぎょしゅ}によって{生息|せいそく}する{海|うみ}の{深|ふか}さは{違|ちが}い、{海|うみ}の{表面近|ひょうめんちか}くには、かつお、いわし、まぐろ、すずきなどが{主|おも}に{生息|せいそく}し、{海底近|かいていちか}くでは、かに、たら、えび、いかなどが{生息|せいそく}している。{以|い}{下|か}は{日本近海|にほんきんかい}で{漁獲|ぎょかく}される{主|おも}な{魚|さかな}の{一部|いちぶ}である。"
+      },
+      {
+       "p": "{図|ず}３{日本近海|にほんきんかい}で{漁獲|ぎょかく}される{一般的|いっぱんてき}な{魚|さかな}"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Perikanan Jepang dibagi pantai, lepas pantai, samudra, budidaya, dan perairan darat, dan semuanya diatur izin dan aturan sumber daya.",
+      "core": "Produksi perikanan+budidaya dunia 2021: sekitar 218,47 juta ton; terbesar Cina, Indonesia, India. Perikanan Jepang: pantai, lepas pantai, laut jauh, budidaya permukaan, perairan darat.",
       "points": [
-       "Pantai (沿岸) = kapal kecil; lepas pantai (沖合) = menengah; samudra (遠洋) = kapal besar berbulan-bulan.",
-       "Budidaya (養殖) memelihara sampai panen.",
-       "Ada izin (許可), hak perikanan (漁業権), musim larangan (禁漁期).",
-       "Alur: 出港 → 漁場 → 操業 → 帰港 → 水揚げ."
+       "Perikanan pantai = kapal kecil di sepanjang pantai (termasuk jaring tetap).",
+       "Produksi Jepang puncak 1984, lalu turun.",
+       "Perikanan dipengaruhi alam, jadi kapal & alat disesuaikan dengan ikan sasaran."
       ],
       "avoid": [
-       "Menganggap boleh menangkap ikan di mana saja dan kapan saja."
+       "Menyamakan perikanan pantai dengan laut jauh."
       ],
       "exam": [
-       "Urutan jenis: 沿岸 < 沖合 < 遠洋 (jarak dan ukuran kapal).",
-       "Arti 禁漁期 dan 漁業権."
+       "5 jenis perikanan Jepang.",
+       "Negara penghasil terbesar."
       ]
      },
      "jp": {
-      "core": "{漁業|ぎょぎょう}は{沿岸|えんがん}・{沖合|おきあい}・{遠洋|えんよう}・{養殖|ようしょく}・{内水面|ないすいめん}に{分|わ}かれ、{許可|きょか}とルールで{資源|しげん}を{守|まも}ります。",
+      "core": "2021{年|ねん}の{世界|せかい}の{漁獲量|ぎょかくりょう}と{養殖|ようしょく}{量|りょう}は{約|やく}2{億|おく}1847{万|まん}トン。{中国|ちゅうごく}、インドネシア、インドの{順|じゅん}に{多|おお}い。{日本|にほん}の{漁業|ぎょぎょう}は{沿岸|えんがん}、{沖|おき}{合|あ}、{遠洋|えんよう}、{海面|かいめん}{養殖|ようしょく}、{内水面|ないすいめん}の{分類|ぶんるい}。",
       "points": [
-       "{沿岸|えんがん}＝{小|ちい}さい{船|ふね}、{沖合|おきあい}＝{中|ちゅう}くらい、{遠洋|えんよう}＝{大|おお}きい{船|ふね}。",
-       "{養殖|ようしょく}は{育|そだ}てて{収穫|しゅうかく}する。",
-       "{許可|きょか}・{漁業権|ぎょぎょうけん}・{禁漁期|きんりょうき}がある。",
-       "{出港|しゅっこう}→{漁場|ぎょば}→{操業|そうぎょう}→{帰港|きこう}→{水揚|みずあ}げ。"
+       "{沿岸漁業|えんがんぎょぎょう}は{海岸|かいがん}に{近|ちか}い{小|ちい}さな{船|ふね}の{漁業|ぎょぎょう}。",
+       "{日本|にほん}の{生産量|せいさんりょう}は1984{年|ねん}がピークで、その{後|あと}へった。",
+       "{漁業|ぎょぎょう}は{自然|しぜん}の{影響|えいきょう}を{受|う}けるので、{魚|さかな}に{合|あ}わせて{船|ふね}と{漁具|ぎょぐ}を{変|か}える。"
       ],
       "avoid": [
-       "どこでも、いつでも{魚|さかな}をとってよいと{思|おも}うこと。"
+       "{沿岸漁業|えんがんぎょぎょう}と{遠洋漁業|えんようぎょぎょう}を{同|おな}じだと{思|おも}うこと。"
       ],
       "exam": [
-       "{沿岸|えんがん}・{沖合|おきあい}・{遠洋|えんよう}の{順番|じゅんばん}と{意味|いみ}。",
-       "{禁漁期|きんりょうき}と{漁業権|ぎょぎょうけん}の{意味|いみ}。"
+       "{日本|にほん}の{漁業|ぎょぎょう}の5つの{種類|しゅるい}。",
+       "{生産量|せいさんりょう}が{多|おお}い{国|くに}。"
       ]
      }
     }
@@ -153,110 +253,111 @@
     "id": "b1s2",
     "no": 2,
     "title": {
-     "id": "Ikan dan Hasil Laut Utama",
-     "jp": "{主|おも}な{魚介類|ぎょかいるい}"
+     "id": "Kapal dan Awak Kapal",
+     "jp": "{漁船|ぎょせん}と{乗組員|のりくみいん}"
     },
     "pages": [
-     1,
-     1
+     7,
+     9
     ],
     "full": {
      "id": [
       {
-       "h": "Kelompok hasil laut"
+       "h": "Kapal Penangkap Ikan"
       },
       {
-       "ul": [
-        "**Ikan (魚類)**: イワシ (sarden), サバ (makerel), アジ (kembung/horse mackerel), カツオ (cakalang), マグロ (tuna), サケ (salmon), タイ (kakap merah Jepang).",
-        "**Kerang (貝類)**: ホタテ (scallop), カキ (tiram), アサリ.",
-        "**Krustasea (甲殻類)**: エビ (udang), カニ (kepiting).",
-        "**Cephalopoda (頭足類)**: イカ (cumi), タコ (gurita).",
-        "**Rumput laut (海藻)**: ノリ, ワカメ, コンブ."
-       ]
+       "p": "La m p u Bri dg e Lampu tian g C er ob ong Ti an g B ur ita n H al ua n Lampu B uritan K e mu di Ba lin g-b al ing Ru an g me si n P en yim p anan P en do ro ng ikan さLげam pu kiri Lampu buritan さSisげi ki ri Keりmu di k an an Ke mu di k iri K em ud i S isi kげan an Laげmp u k ana n K em ud i Gambar 4, Contoh Kapal Penangkap Ikan Pengemudian Omokaji: kemudikan ke kanan Torijaji: kemudikan ke kiri Warna Lampu navigasi Masuto lamp (Masuto to): shiro (putih) Sembito: shiro (putih) Sagento: aka (merah) Ugento: midori (hijau) Bagaimana kapal itu bergoyang Tateyure: pitching (gerakan vertikal) Yokoyure: rolling (gerakan horizontal)"
       },
       {
-       "h": "Dua cara membedakan ikan"
+       "h": "Awak Kapal Penangkap Ikan"
       },
       {
-       "ul": [
-        "**Menurut kebiasaan hidup**: ikan migran (回遊魚) berenang jauh mengikuti musim, misalnya カツオ, マグロ, サバ, イワシ, サンマ. Ikan dasar (底魚) hidup dekat dasar laut, misalnya タラ, カレイ, ヒラメ.",
-        "**Menurut warna daging**: ikan berpunggung biru (青魚) seperti イワシ, アジ, サバ, サンマ; ikan berdaging putih (白身魚) seperti タイ, ヒラメ, タラ; ikan berdaging merah (赤身) seperti マグロ dan カツオ."
-       ]
+       "p": "Gyorocho/Sendo (Kepala Bertanggung jawab untuk seluruh operasi. Terkadang Kapten Kapal) juga bisa merangkap sebagai fishing master."
       },
       {
-       "h": "Musim (旬)"
+       "p": "Sencho/Kapten Orang yang bertanggung jawab untuk mengoperasikan kapal. Kikancho (Kepala Teknisi) Penanggung jawab mesin, pendingin, dll. Kokaishi (Navigator) Membantu kapten dan bekerja pada pengoperasian kapal. Kikanshi (Teknisi) Membantu Kepala Teknisi dan mengelola mesin."
       },
       {
-       "p": "Setiap hasil laut punya **musim terbaik (旬)**, yaitu saat rasanya paling enak dan jumlahnya banyak. Contohnya カツオ ditangkap di musim semi (初ガツオ) dan kembali lagi di musim gugur (戻りガツオ). サケ naik ke sungai tempat ia lahir untuk bertelur (遡上)."
+       "p": "Tsushincho (Kepala Orang yang bertanggung jawab untuk komunikasi nirkabel."
       },
       {
-       "note": "Mengenal nama ikan dalam bahasa Jepang membantu saat menerima perintah, misalnya memilah hasil tangkapan di dek."
+       "p": "Komunikasi) Kohancho (Kepala kelasi) Memberi instruksi kepada kelasi."
+      },
+      {
+       "p": "Reitocho (Kepala Pendingin) Menangani tangkapan dan mengelola pendingin (freezer). Shichucho/Kokkucho (Kepala Memasak untuk awak kapal."
+      },
+      {
+       "p": "koki) Melakukan pekerjaan seperti penjaga kapal, pekerjaan di dek, Kohanin (Kelasi/Sailor) penangkapan ikan dan pekerjaan pembekuan."
+      },
+      {
+       "p": "Selain pekerjaan di kamar mesin, membantu pekerjaan Kikanin (Teknisi) penangkapan ikan dan pembekuan."
       }
      ],
      "jp": [
       {
-       "h": "{魚介類|ぎょかいるい}のなかま"
+       "h": "４．{漁船|ぎょせん}"
       },
       {
-       "ul": [
-        "**{魚類|ぎょるい}**：イワシ、サバ、アジ、カツオ、マグロ、サケ、タイ。",
-        "**{貝類|かいるい}**：ホタテ、カキ、アサリ。",
-        "**{甲殻類|こうかくるい}**：エビ、カニ。",
-        "**{頭足類|とうそくるい}**：イカ、タコ。",
-        "**{海藻|かいそう}**：ノリ、ワカメ、コンブ。"
-       ]
+       "p": "{図|ず}４{漁船例|ぎょせんれい}{舵取|かじと}り"
       },
       {
-       "h": "{魚|さかな}の{分|わ}け{方|かた}"
+       "p": "{面舵|おもかじ}：{舵|かじ}を{右|みぎ}にとる{取|と}り{舵|かじ}：{舵|かじ}を{左|ひだり}にとる{航海灯|こうかいとう}の{色|いろ}"
       },
       {
-       "ul": [
-        "**くらし{方|かた}**：**{回遊魚|かいゆうぎょ}**は{季節|きせつ}にあわせて{遠|とお}くまで{泳|およ}ぎます（カツオ、マグロ、サバ、イワシ、サンマ）。**{底魚|そこうお}**は{海|うみ}の{底|そこ}の{近|ちか}くにいます（タラ、カレイ、ヒラメ）。",
-        "**{肉|にく}の{色|いろ}**：{背中|せなか}が{青|あお}い**{青魚|あおざかな}**（イワシ、アジ、サバ、サンマ）、**{白身魚|しろみざかな}**（タイ、ヒラメ、タラ）、**{赤身|あかみ}**（マグロ、カツオ）。"
-       ]
+       "p": "マストランプ（マスト{灯|ととう}）：{白|しろ}{船尾灯|せんびとう}：{白|しろ}"
       },
       {
-       "h": "{旬|しゅん}"
+       "p": "{左舷灯|さげんとう}（さげんとう）：{赤|あか}{右舷灯|うげんとう}（みぎげんとう）：{緑|みどり}{船|ふね}の{揺|ゆ}れ{方|かた}"
       },
       {
-       "p": "{魚|さかな}や{貝|かい}には、いちばんおいしくて、たくさんとれる{時期|じき}があります。これを**{旬|しゅん}**といいます。カツオは{春|はる}の**{初|はつ}ガツオ**と、{秋|あき}の**{戻|もど}りガツオ**があります。サケは{生|う}まれた{川|かわ}にもどって{卵|たまご}をうみます（**{遡上|そじょう}**）。"
+       "p": "{縦揺|たてゆ}れ：ピッチング{横揺|よこゆ}れ：ローリング"
       },
       {
-       "note": "{魚|さかな}の{日本語|にほんご}の{名前|なまえ}を{知|し}っていると、{船|ふね}の{上|うえ}で{仕事|しごと}の{指示|しじ}がわかりやすくなります。"
+       "h": "５．{漁船|ぎょせん}の{乗組員|のりくみいん}"
+      },
+      {
+       "p": "{漁労長|ぎょろうちょう}（{船頭|せんどう}）{操業全体|そうぎょうぜんたい}の{責任者|せきにんしゃ}。{船長|せんちょう}が{漁労長|ぎょろうちょう}を{兼|か}ねることもある。{船長|せんちょう}{船|ふね}の{運航|うんこう}の{責任者|せきにんしゃ}。{機関長|きかんちょう}エンジン、{冷凍機|れいとうき}などの{責任者|せきにんしゃ}。{航海士|こうかいし}{船長|せんちょう}を{補|ほ}{佐|さ}し、{船|ふね}の{運航|うんこう}の{仕事|しごと}を{行|おこな}う。{機関士|きかんし}{機関長|きかんちょう}を{補|ほ}{佐|さ}し、{機械|きかい}の{管理|かんり}を{行|おこな}う。{通信長|つうしんちょう}{無線通信|むせんつうしん}の{責任者|せきにんしゃ}。{甲板長|こうはんちょう}{甲板員|こうはんいん}の{指|し}{揮|き}を{行|おこなう}う。{冷凍長|れいとうちょう}{漁獲物|ぎょかくぶつ}の{処理|しょり}や{冷凍庫|れいとうこ}の{管理|かんり}を{行|おこな}う。{司厨長|しちゅうちょう}"
+      },
+      {
+       "p": "{船員|せんいん}たちの{食事|しょくじ}を{作|つく}る。（コック{長|くちょう}）"
+      },
+      {
+       "p": "{船|ふね}の{当直|とうちょく}、{甲板|こうはん}（デッキ）の{作業|さぎょう}、{漁労作業|ぎょろうさぎょう}、{冷凍作業|れいとうさぎょう}な{甲板員|こうはんいん}"
+      },
+      {
+       "p": "どを{行|おこな}う。{機関員|きかんいん}{機関|きかん}の{作業|さぎょう}の{他|ほか}、{漁労|ぎょろう}や{冷凍作業|れいとうさぎょう}を{補|ほ}{佐|さ}する。"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Hasil laut: ikan, kerang, krustasea, cephalopoda, rumput laut; ikan dibedakan migran/dasar dan biru/putih/merah.",
+      "core": "Kapal ikan punya lampu navigasi berwarna dan awak dengan peran jelas. Kemudi: omokaji = kanan, torikaji = kiri.",
       "points": [
-       "Ikan migran (回遊魚): カツオ, マグロ, サバ, イワシ.",
-       "Ikan dasar (底魚): タラ, カレイ, ヒラメ.",
-       "Ikan biru (青魚): イワシ, アジ, サバ, サンマ.",
-       "旬 = musim terbaik."
+       "Lampu: masuto & buritan putih, lambung kiri (sagen) merah, kanan (ugen) hijau.",
+       "Tateyure = pitching (memanjang), yokoyure = rolling (samping).",
+       "漁労長 = penanggung jawab seluruh operasi; 船長 = pelayaran; 機関長 = mesin & pendingin."
       ],
       "avoid": [
-       "Menyamakan ikan dasar dengan ikan migran."
+       "Tertukar warna lampu kiri dan kanan."
       ],
       "exam": [
-       "Menggolongkan nama ikan ke kelompoknya.",
-       "Arti 旬."
+       "Arti 面舵・取舵.",
+       "Peran tiap awak kapal."
       ]
      },
      "jp": {
-      "core": "{魚介類|ぎょかいるい}は{魚|さかな}・{貝|かい}・エビカニ・イカタコ・{海藻|かいそう}。{回遊魚|かいゆうぎょ}と{底魚|そこうお}、{青魚|あおざかな}と{白身魚|しろみざかな}に{分|わ}ける。",
+      "core": "{漁船|ぎょせん}には{航海灯|こうかいとう}があり、{乗組員|のりくみいん}にはそれぞれ{役割|やくわり}がある。{面舵|おもかじ}は{右|みぎ}、{取|と}{舵|かじ}は{左|ひだり}。",
       "points": [
-       "{回遊魚|かいゆうぎょ}：カツオ・マグロ・サバ・イワシ。",
-       "{底魚|そこうお}：タラ・カレイ・ヒラメ。",
-       "{青魚|あおざかな}：イワシ・アジ・サバ・サンマ。",
-       "{旬|しゅん}＝いちばんおいしい{時期|じき}。"
+       "マスト{灯|ひ}と{船尾灯|せんびとう}は{白|しろ}、{左舷灯|さげんとう}は{赤|あか}、{右舷灯|うげんとう}は{緑|みどり}。",
+       "{縦揺|たてゆ}れはピッチング、{横揺|よこゆ}れはローリング。",
+       "{漁労長|ぎょろうちょう}は{操業全体|そうぎょうぜんたい}、{船長|せんちょう}は{運航|うんこう}、{機関長|きかんちょう}は{機関|きかん}と{冷凍機|れいとうき}の{責任者|せきにんしゃ}。"
       ],
       "avoid": [
-       "{底魚|そこうお}と{回遊魚|かいゆうぎょ}をまちがえること。"
+       "{左右|さゆう}の{灯|ひ}の{色|いろ}をまちがえること。"
       ],
       "exam": [
-       "{魚|さかな}の{名前|なまえ}をなかまに{分|わ}ける。",
-       "{旬|しゅん}の{意味|いみ}。"
+       "{面舵|おもかじ}と{取|と}{舵|かじ}の{意|い}{味|み}。",
+       "{乗組員|のりくみいん}の{役割|やくわり}。"
       ]
      }
     }
@@ -265,114 +366,240 @@
     "id": "b1s3",
     "no": 3,
     "title": {
-     "id": "Kapal Ikan dan Bagian-Bagiannya",
-     "jp": "{漁船|ぎょせん}と{船|ふね}の{各部|かくぶ}"
+     "id": "Kompas, Peta Laut, Navigasi, Arus",
+     "jp": "コンパス・{海図|かいず}・{航法|こうほう}・{海流|かいりゅう}"
     },
     "pages": [
-     1,
-     1
+     9,
+     14
     ],
     "full": {
      "id": [
       {
-       "h": "Arah dan sisi kapal"
+       "h": "Kompas, Peta Laut, Navigasi"
+      },
+      {
+       "h": "(1) Kompas"
+      },
+      {
+       "p": "Gambar 5: Kompas Kompas adalah alat penting untuk memastikan posisi kapal dan menentukan arahnya. Posisi- posisi utama diberikan tanda dalam huruf Romawi."
+      },
+      {
+       "p": "N: (Kita/Utara) NE: (Hokuto/Timur Laut) E: (Higashi/Timur) SE: (Nanto/Tenggara) S: (Minami/Selatan) SW: (Nansei/Barat Daya) W: (Nishi/Barat) NW: (Hokusei/ Barat Laut)"
+      },
+      {
+       "h": "(2) Peta laut"
+      },
+      {
+       "p": "Peta laut adalah peta yang menggambarkan apa yang diperlukan untuk berlayar, seperti kedalaman laut dan arah arus air laut. Peta laut juga menggambarkan geologi dasar laut. S: Pasir G: Lumpur R: Bebatuan Peta laut adalah peta laut yang digunakan untuk navigasi, berisi informasi yang diperlukan untuk navigasi, seperti bentuk pantai, titik acuan yang diketahui, kedalaman air, kualitas air, dan rintangan. Permukaan laut naik dan turun mengikuti pasang surut, tetapi \"ketinggian\" dan \"kedalaman\" yang ditunjukkan pada peta laut didasarkan pada standar berikut:"
+      },
+      {
+       "p": "Seperti ditunjukkan dalam diagram di bawah, ketinggian gunung dan mercusuar di daratan mewakili ketinggiannya di atas permukaan air rata-rata. Di sisi lain, kedalaman air menunjukkan kedalaman dari permukaan air terendah. Batuan kering merupakan batuan yang muncul di atas permukaan air pada level air terendah, sehingga mewakili ketinggian di atas level air terendah. Ketinggian gunung Ketinggian Gambar 6: Contoh Peta Laut mercusuar Ketinggian pulau Ketinggian daratan saat surut Permukaan air tertinggi Permukaan air rata-rata Permu kaan air terendah Kedalaman laut Kompas yang digambar pada peta laut merupakan peta arah yang menunjukkan arah pada peta. Kompas diwakili oleh dua lingkaran konsentris. Cincin luar menunjukkan arah sebenarnya (orientasi), dan cincin dalam menunjukkan arah magnetik. Utara sebenarnya merujuk pada Kutub Utara geografis, sementara utara magnetik merujuk pada Kutub Utara Magnetik (tempat jarum magnetik menunjuk). Perbedaan antara kedua sudut utara ini disebut deviasi, dan bervariasi bergantung pada lokasi dan tahun."
+      },
+      {
+       "p": "Diagram di bawah menunjukkan penyimpangannya adalah 10 derajat ke barat. Saat menggunakan kompas magnetik untuk mengukur arah gunung atau mercusuar di darat, perlu untuk mengoreksinya ke arah yang benar sebelum menggunakannya."
+      },
+      {
+       "p": "Gambar 7: Contoh Kompas mawar yang digambarkan pada peta"
+      },
+      {
+       "h": "(3) Navigasi"
       },
       {
        "ul": [
-        "**Haluan (船首)**: bagian depan kapal.",
-        "**Buritan (船尾)**: bagian belakang kapal.",
-        "**Lambung kiri (左舷)** dan **lambung kanan (右舷)**: kiri dan kanan jika menghadap haluan."
+        "Jika sebuah kapal datang dari depan,"
        ]
       },
       {
-       "note": "Lampu navigasi malam hari: sisi kiri (左舷) merah, sisi kanan (右舷) hijau."
-      },
-      {
-       "h": "Bagian-bagian kapal"
+       "p": "setir ke kanan dan hindari."
       },
       {
        "ul": [
-        "**Dek (甲板)**: lantai terbuka tempat bekerja.",
-        "**Ruang kemudi (操舵室)**: tempat kapten mengendalikan kapal dan melihat peralatan navigasi.",
-        "**Palka ikan (魚倉)**: ruang penyimpanan hasil tangkapan, dijaga dingin dengan es atau pendingin.",
-        "**Kamar mesin (機関室)**: tempat mesin utama.",
-        "**Kemudi (舵)** dan **baling-baling (スクリュー)**: mengarahkan dan menggerakkan kapal.",
-        "**Jangkar (錨)**: menahan kapal agar tidak hanyut saat berhenti."
+        "Pada Umumnya, kapal harus tetap"
        ]
       },
       {
-       "h": "Ukuran kapal"
+       "p": "berada di jalur sebelah kanan."
       },
       {
-       "p": "Ukuran kapal dinyatakan dengan **tonase kotor (総トン数)**. Kapal kecil bekerja dekat pantai, kapal besar bisa berlayar jauh. Kapal bergerak naik-turun dan miring oleh ombak (**動揺**), jadi jaga keseimbangan saat berjalan."
+       "ul": [
+        "Saat ada kapal berlayar di"
+       ]
+      },
+      {
+       "p": "depan, dan terlihat di sebelah kanan, kemudikan kapal ke arah kanan atau kurangi kecepatan untuk menghindarinya."
+      },
+      {
+       "ul": [
+        "Jika ada kapal melintas di depan dari"
+       ]
+      },
+      {
+       "p": "arah kiri, kapal harus melaju lurus ke depan untuk menghindarinya. Namun, berhati-hatilah untuk memastikan kapal lawan menghindarinya dengan benar."
+      },
+      {
+       "p": "Gambar 8: Navigasi"
+      },
+      {
+       "h": "Arus Samudera, Landas Kontinen"
+      },
+      {
+       "h": "(1) Arus samudera"
+      },
+      {
+       "p": "Arus Kuroshio Gambar 9: Navigasi Arus laut merupakan fenomena alam di mana air laut mengalir ke arah tertentu. Arus laut secara garis besar dapat dibagi menjadi dua jenis: arus hangat dan arus dingin. Arus hangat yang paling representatif di dekat Jepang adalah Arus Kuroshio, yang mengalir ke utara dari Laut Cina Selatan di sepanjang kepulauan Jepang. Arus Kuroshio terbagi menjadi dua arus, Arus Kuroshio (Arus Jepang) dan Arus Tsushima, di perbatasan Kyushu. Arus Jepang merupakan arus laut yang mengalir menuju Samudra Pasifik, sedangkan Arus Tsushima merupakan arus laut yang mengalir melintasi Selat Tsushima menuju Laut Jepang. Di sisi lain, arus dingin representatif di laut dekat Jepang meliputi Arus Oyashio (Arus Kuril), arus laut yang mengalir ke selatan sepanjang Kepulauan Kuril, dan Arus Liman, arus laut yang mengalir ke selatan dari wilayah Sakhalin di sepanjang benua Eurasia. Di sepanjang pantai, ada arus yang mengalir ke arah yang berlawanan dengan arus laut utama di lepas pantai, dan ini disebut arus berlawanan."
+      },
+      {
+       "h": "(2) Landas Kontinen"
+      },
+      {
+       "p": "Di sekitar pulau dan daratan dikekelilingi laut dangkal yang datar dan tempat seperti itu disebut landas kontinen. Landas kontinen adalah tempat penting bagi negara dan juga tempat penangkapan ikan yang baik."
+      },
+      {
+       "p": "Pantai Garis air pasang Garis air surut Gun ung laut Landas kontinen Lereng landas kontinen Gambar 10: Landas kontinen"
       }
      ],
      "jp": [
       {
-       "h": "{船|ふね}の{方向|ほうこう}"
+       "h": "６．コンパス、{海図|かいず}、{航法|こうほう}"
+      },
+      {
+       "p": "（１）コンパス"
+      },
+      {
+       "p": "{図|ず}５コンパス"
+      },
+      {
+       "p": "コンパスは{船|ふね}の{位|い}{置|ち}を{割|わ}り{出|だ}したり、コース（{進路|しんろ}）を{決|き}めたりする{重要|じゅうよう}な{道具|どうぐ}である。{主|おも}な{箇所|かしょ}にローマ{字|じ}でマークが{記載|きさい}してある。"
+      },
+      {
+       "p": "Ｎ：（{北|きた}）ＮＥ：（{北東|ほくとう}）"
+      },
+      {
+       "p": "Ｅ：（{東|ひがし}）ＳＥ：（{南東|なんとう}）"
+      },
+      {
+       "p": "Ｓ：（{南|みなみ}）ＳＷ：（{南西|なんせい}）"
+      },
+      {
+       "p": "Ｗ：（{西|にし}）ＮＷ：（{北西|ほくせい}）（２）{海図|かいず}"
+      },
+      {
+       "p": "{海図|かいず}とは、{海|うみ}の{深|ふか}さ、{潮流|ちょうりゅう}の{方向|ほうこう}など、{航海|こうかい}をするのに{必要|ひつよう}なことを{描|か}いた{図|ず}。{海図|かいず}には{海底|かいてい}の{質|しつ}も{記載|きさい}している。"
+      },
+      {
+       "p": "Ｓ：{砂|すな}Ｍ：{泥|どろ}Ｒ：{岩|いわ}"
+      },
+      {
+       "p": "{海図|かいず}は、{航海|こうかい}に{用|もち}いる{海|うみ}の{地|ち}{図|ず}で、{沿岸|えんがん}の{形状|けいじょう}、たしかな{目標物|もくひょうぶつ}、{水深|すいしん}、{低質|ていしつ}、{障害物|しょうがいぶつ}など{航海|こうかい}を{行|おこなう}うために{必要|ひつよう}な{情報|じょうほう}が{記載|きさい}されている。{海面|かいめん}は{潮汐|ちょうせき}によって{上下|じょうげ}しているが、{海図|かいず}に{示|しめ}されている「{高|たか}さ」や「{深|ふか}さ」は、{次|つぎ}の{基準|きじゅん}に{基|もと}づいている。"
+      },
+      {
+       "p": "{下図|したず}に{示|しめ}すように{陸上|りくじょう}の{山|やま}や{灯台|とうだい}の{高|たか}さは{平均水面|へいきんすいめん}からの{高|たか}さを{表|あらわ}している。{一方|いっぽう}、{水深|すいしん}は、{最低水面|さいていすいめん}からの{深|ふかさ}さを{表|あらわ}している。{干出岩|かんしゅつがん}は{最低水面|さいていすいめん}で{水|すい}{面上|めんじょう}に{露出|ろしゅつ}する{岩|いわ}なので、{最低水面|さいていすいめん}からの{高|たか}さを{表|あらわ}している。"
+      },
+      {
+       "p": "{図|ず}６{海図|かいず}の{例|れい}"
+      },
+      {
+       "p": "{海図|かいず}に{書|か}かれている{羅|ら}{針図|しんず}は、{海図上|かいずじょう}で{方位|ほうい}を{示方位|しめすほうい}位{図|ず}である。{羅|ら}{針図|しんず}は2つの{同心円|どうしんえん}で{表|あらわ}されている。{外側|そとがわ}の{環|わ}は{真|しん}の{方位|ほうい}（{真方位|しんほうい}）を{示|しめ}し、{内側|うちがわ}の{環|わ}は{磁|じ}{方位|ほうい}を{示|しめ}している。{真北|しんぽく}は{地理上|ちりじょう}の{北極点|ほっきょくてん}を{指|さ}し、{磁北|じほく}は（{磁針|じしん}が{指|さ}す）{北磁極|ほくじきょく}を{指|さ}している。この2つの{北|きた}の{角度|かくど}の{差|さ}を{偏差|へんさ}と{呼|よ}び、{場所|ばしょ}や{年|とし}により{変|か}わる。"
+      },
+      {
+       "p": "{下|した}の{羅|ら}{針図|しんず}では、{偏差|へんさ}が10{度西|どにし}へ{偏|かたよ}っていることを{示|しめ}している。{羅針盤|らしんばん}の{磁針方位|じしんほうい}で{陸|りく}の{山|やま}や{灯台|とうだい}の{方位|ほうい}を{図|はか}った{場合|ばあい}、{真方位|しんほうい}に{修正|しゅうせい}して{使|つか}う{必要|ひつよう}がある。"
+      },
+      {
+       "p": "図７{海図|かいず}にかかれた{羅|ら}{針図|しんず}（コンパスローズ）の{例|れい}（３）{航法|こうほう}"
       },
       {
        "ul": [
-        "**{船首|せんしゅ}**：{船|ふね}の{前|まえ}。",
-        "**{船尾|せんび}**：{船|ふね}の{後|うし}ろ。",
-        "**{左舷|さげん}**と**{右舷|うげん}**：{船首|せんしゅ}のほうを{向|む}いて、{左|ひだり}と{右|みぎ}。"
+        "{正面|しょうめん}から{船|ふね}が{来|き}た{場合|ばあい}は{右|みぎ}に{舵|かじ}を"
        ]
       },
       {
-       "note": "{夜|よる}の{航海灯|こうかいとう}：{左舷|さげん}は{赤|あか}、{右舷|うげん}は{緑|みどり}です。"
-      },
-      {
-       "h": "{船|ふね}の{各部|かくぶ}"
+       "p": "とって{避|よ}ける。"
       },
       {
        "ul": [
-        "**{甲板|かんぱん}**：{外|そと}にあって、{仕事|しごと}をする{床|ゆか}。",
-        "**{操舵室|そうだしつ}**：{船長|せんちょう}が{船|ふね}をうごかし、{機械|きかい}を{見|み}る{部屋|へや}。",
-        "**{魚倉|ぎょそう}**：とった{魚|さかな}をおく{場所|ばしょ}。{氷|こおり}や{冷|ひ}やす{機械|きかい}で{冷|つめ}たくします。",
-        "**{機関室|きかんしつ}**：エンジンがある{部屋|へや}。",
-        "**{舵|かじ}**と**スクリュー**：{船|ふね}の{向|む}きをかえ、{船|ふね}をすすめる。",
-        "**{錨|いかり}**：{船|ふね}がとまっているとき、{流|なが}されないようにする。"
+        "{船|ふね}は{右側通行|みぎがわつうこう}が{基本|きほん}である。",
+        "{前|まえ}を{横切|よこぎ}る{船|ふね}が{来|き}たとき"
        ]
       },
       {
-       "h": "{船|ふね}の{大|おお}きさ"
+       "p": "は、その{船|ふね}が{右|みぎ}に{見|み}えたとき"
       },
       {
-       "p": "{船|ふね}の{大|おお}きさは**{総|そう}トン{数|すう}**で{表|あらわ}します。{小|ちい}さい{船|ふね}は{海岸|かいがん}の{近|ちか}く、{大|おお}きい{船|ふね}は{遠|とお}くの{海|うみ}で{仕事|しごと}をします。{船|ふね}は{波|なみ}でゆれるので（**{動揺|どうよう}**）、{歩|ある}くときはバランスに{気|き}をつけます。"
+       "p": "には{右|みぎ}に{舵|かじ}をとるか、{速力|そくりょく}を"
+      },
+      {
+       "p": "{落|お}として{避|よ}ける。"
+      },
+      {
+       "ul": [
+        "{左|ひだり}から{前|まえ}を{横切|よこぎ}る{船|ふね}が来た{場合|ばあい}"
+       ]
+      },
+      {
+       "p": "は、その{船|ふね}が{避|よ}けるため、{直進|ちょくしん}す"
+      },
+      {
+       "p": "る。ただし、{相手|あいて}の{船|ふね}が{正|ただ}しく{避|よ}け"
+      },
+      {
+       "p": "るか{十分気|じゅうぶんき}を{付|つ}ける。"
+      },
+      {
+       "p": "{図|ず}８{航法|こうほう}"
+      },
+      {
+       "h": "７．{海流|かいりゅう}、{大陸棚|たいりくだな}"
+      },
+      {
+       "p": "（１）{海流|かいりゅう}"
+      },
+      {
+       "p": "{図|ず}９{海流|かいりゅう}"
+      },
+      {
+       "p": "{海流|かいりゅう}とは{海水|かいすい}が{一定方向|いっていほうこう}に{向|む}かって{流|なが}れる{自然現象|しぜんげんしょう}を「{海流|かいりゅう}」と{呼|よ}ぶ。{海流|かいりゅう}には{大|おお}きく{分|わ}けて{暖流|てだんりゅう}と{寒流|かんりゅう}という2つの{種類|しゅるい}がある。{日本近海|にほんきんかい}の{暖流|だんりゅう}で{代表的|だいひょうてき}なものは{南|みなみし}シナ{海|なかい}から{日本列島|にほんれっとう}に{沿|そ}って{北上|ほくじょう}する{海流|かいりゅう}「{黒潮|くろしお}」である。{黒潮|くろしお}は{九州|きゅうしゅう}を{境|さかい}にして{黒潮|くろしお}（{日本海流|にほんかいりゅう}）と{対馬海流|つしまかいりゅう}の2つに{分|わ}かれる。{日本海流|にほんかいりゅう}とは{太平洋側|たいへいようがわ}へ{流|なが}れる{海流|かいりゅう}のことで、{対馬海流|つしまかいりゅう}は{対馬海峡|つしまかいきょう}を{越|こ}えて{日本海|にほんかい}へと{流|なが}れる{海流|かいりゅう}のことをいう。{一方|いっぽう}、{日本近海|にほんきんかい}の{寒流|かんりゅう}の{代表的|だいひょうてき}なものは{千島列島|ちしまれっとう}に{沿|そ}いながら{南下|なんか}してくる{海流|かいりゅう}の{親潮|おやしお}（{千島海流|ちしまかいりゅう}）と{樺太方面|からふとほうめん}からユーラシア{大陸|あたいりく}に{沿|そ}って{南下|なんか}してくる{海流|かいりゅう}のリマン{海流|んかいりゅう}がある。"
+      },
+      {
+       "p": "{沿岸|えんがん}では{沖|おき}の{主|おも}な{海流|かいりゅう}とは{反対方向|はんたいほうこう}の{流|なが}れが{存在|そんざい}し、これを{反流|はんりゅう}という。（２）{大陸棚|たいりくだな}"
+      },
+      {
+       "p": "{島|しま}や{大陸|たいりく}の{周|まわ}りは{平|たい}らな{浅|あさ}い{海|うみ}に{囲|かこ}まれており、そのような{場所|ばしょ}を{大陸棚|たいりくだな}という。{大陸棚|たいりくだな}は{国|くに}にとって{大切|たいせつ}な{場所|ばしょ}であり、{良|よ}い{漁場|ぎょじょう}ができるところでもある。"
+      },
+      {
+       "p": "{図|ず}１０{大陸棚|たいりくだな}"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Hafal haluan/buritan/kiri/kanan dan fungsi bagian kapal.",
+      "core": "Kompas menunjukkan arah; peta laut memuat kedalaman, jenis dasar, rintangan. Ketinggian di darat dari permukaan air rata-rata, kedalaman dari permukaan air terendah.",
       "points": [
-       "船首 = depan; 船尾 = belakang.",
-       "左舷 = kiri (lampu merah); 右舷 = kanan (lampu hijau).",
-       "魚倉 = palka ikan; 操舵室 = ruang kemudi; 機関室 = kamar mesin.",
-       "Ukuran kapal: 総トン数."
+       "Dasar laut di peta: S = pasir, G = lumpur, R = batu.",
+       "Deviasi = selisih utara sejati dan utara magnetik.",
+       "Aturan navigasi: kapal dari depan → belok kanan; jalur kanan; kapal dari kiri depan → lurus, tetap waspada."
       ],
       "avoid": [
-       "Tertukar kiri-kanan: 左舷 dan 右舷 ditentukan saat menghadap haluan."
+       "Membaca kedalaman peta laut dari permukaan rata-rata."
       ],
       "exam": [
-       "Gambar kapal: tunjuk bagian yang ditanya.",
-       "Warna lampu kiri dan kanan."
+       "Arti S, G, R di peta laut.",
+       "Dasar ukuran kedalaman/ketinggian."
       ]
      },
      "jp": {
-      "core": "{船首|せんしゅ}・{船尾|せんび}・{左舷|さげん}・{右舷|うげん}と、{船|ふね}の{各部|かくぶ}のはたらきを{覚|おぼ}える。",
+      "core": "コンパスで{方位|ほうい}を{知|し}る。{海図|かいず}には{水深|すいしん}や{底質|ていしつ}、{障害物|しょうがいぶつ}がかいてある。",
       "points": [
-       "{船首|せんしゅ}＝{前|まえ}、{船尾|せんび}＝{後|うし}ろ。",
-       "{左舷|さげん}＝{左|ひだり}（{赤|あか}）、{右舷|うげん}＝{右|みぎ}（{緑|みどり}）。",
-       "{魚倉|ぎょそう}・{操舵室|そうだしつ}・{機関室|きかんしつ}。",
-       "{大|おお}きさは{総|そう}トン{数|すう}。"
+       "{底質|ていしつ}は、Sがすな、Gがどろ、Rがいわ。",
+       "{偏差|へんさ}は{真北|しんぽく}と{磁北|じほく}のちがい。",
+       "{正面|しょうめん}から{来|き}る{船|ふね}には{右|みぎ}へ{避|よ}ける。{右側通行|みぎがわつうこう}が{基本|きほん}。"
       ],
       "avoid": [
-       "{左舷|さげん}と{右舷|うげん}を{逆|ぎゃく}に{覚|おぼ}えること。"
+       "{水深|すいしん}を{平均水面|へいきんすいめん}から{読|よ}むこと。"
       ],
       "exam": [
-       "{船|ふね}の{図|ず}で{場所|ばしょ}を{答|こた}える。",
-       "{左右|さゆう}の{航海灯|こうかいとう}の{色|いろ}。"
+       "{海図|かいず}のS、G、Rの{意|い}{味|み}。",
+       "{水深|すいしん}と{高|たか}さの{基準|きじゅん}。"
       ]
      }
     }
@@ -381,120 +608,236 @@
     "id": "b1s4",
     "no": 4,
     "title": {
-     "id": "Awak Kapal dan Komunikasi",
-     "jp": "{乗組員|のりくみいん}の{役割|やくわり}と{報連相|ほうれんそう}"
+     "id": "Istilah Perikanan dan Bahan Jaring",
+     "jp": "{漁業用語|ぎょぎょうようご}と{網地|あみじ}"
     },
     "pages": [
-     1,
-     1
+     14,
+     20
     ],
     "full": {
      "id": [
       {
-       "h": "Pembagian tugas di kapal"
+       "h": "Istilah Terminologi Perikanan"
+      },
+      {
+       "p": "Aka shio (Pasang merah):"
+      },
+      {
+       "p": "Ketika jumlah plankton (khususnya fitoplankton) meningkat dalam air dan warna air berubah menjadi merah atau coklat, itu disebut Aka shio. Bertambahnya jumlah plankton menggunakan banyak oksigen di dalam air. Ikan dan kerang mati kerena insang ikan tersumbat. Sehingga menimbulkan dampak besar pada perikanan."
+      },
+      {
+       "p": "Eiyo en (Garam nutrisi):"
+      },
+      {
+       "p": "Eiyo en mengacu pada Chisso (nitrogen [N]), Rin (fosfor [P]), Keiso (silikon [Si]) dan sejenisnya yang diperlukan agar organisme hidup dapat bertahan hidup."
+      },
+      {
+       "p": "Fueiyoka (Eutrofikasi):"
+      },
+      {
+       "p": "Fueiyoka berarti terlalu banyak Chisso (nitrogen [N]), Rin (fosfor [P]), Keiso (silikon [Si]) dan sejenisnya di dalam air. Penyebabnya adalah pembuangan air dari pabrik dan rumah tangga yang banyak mengandung zat tersebut."
+      },
+      {
+       "p": "Kaiyo osen boshi (Pencegahan pencemaran laut):"
+      },
+      {
+       "p": "Membuang minyak, tanah, plastik, sampah, dan alat tangkap ikan yang tidak dipakai lagi di laut menyebabkan pencemaran laut. Untuk mencegah pencemaran, undang-undang menetapkan bahwa barang-barang tersebut tidak boleh dibuang ke laut."
+      },
+      {
+       "p": "Yushoryu /Upwelling (Pembalikan massa air):"
+      },
+      {
+       "p": "Yushoryu berarti air di sekitar dasar laut naik ke permukaan laut. Air yang naik ke permukaan laut memiliki suhu air yang rendah dan sejumlah besar garam nutrisi, sehingga banyak plankton berkumpul dan menjadi tempat penangkapan ikan yang baik."
+      },
+      {
+       "p": "Kaisui no embun (Salinitas air laut):"
+      },
+      {
+       "p": "Jumlah garam terkandung dalam air laut. Ini dinyatakan dengan jumlah berapa gram dalam 1000 g air laut (‰, permil). Jumlah garam dalam air laut pada umumnya sekitar 33-37‰ (33-37g / 1000g)."
+      },
+      {
+       "h": "Bahan Jaring"
+      },
+      {
+       "h": "(4) Struktur jaring"
+      },
+      {
+       "p": "Jaring dibagi menjadi jaring bersimpul dan jaring tanpa simpul tergantung pada ada tidaknya simpul. Jaring bersimpul terdiri dari empat simpul dan empat kaki (Gambar 11). Di jaring tanpa simpul, ada bagian persimpangan benang jaring sebagai pengganti simpul. Simpul mati mudah lepas, dan simpul pukat harimau tidak mudah lepas."
+      },
+      {
+       "p": "Mata Mata jaring jaring Simpul Simpul Kaki (bar) Gambar 11: Nama bagian-bagian jaring"
+      },
+      {
+       "h": "(2) Cara mengikat tali"
+      },
+      {
+       "p": "Gambar 12 menunjukkan metode ikatan yang paling sederhana dan paling umum. Hasilnya sama dengan simpul pukat harimau dan simpul bendera (sheet band) untuk tali. Jika tali yang licin, menggunakan simpul ganda yang membuat lingkaran 2 kali seperti Gambar 12 - ②. ① ② ③ ④ ⑤ Gambar 12: Nama bagian-bagian jaring"
+      },
+      {
+       "h": "(3) Arah sambungan jaring"
+      },
+      {
+       "p": "Hana Tsugi (mesh dengan mesh [searah panjang jaring]):"
+      },
+      {
+       "p": "Saat menyambung searah panjang jaring seperti pada Gambar 13 sebelah kiri, benang jaring di bagian simpul pada ujung jaringnya adalah 1 lembar. Pada kondisi tersebut, sambungkan dengan metode simpul pukat harimau dan pada bagian awal dan terakhir gunakan metode simpul pukat harimau ganda. Jika menggunakan tali nilon, karena licin, sambungkan dengan kuat menggunakan metode simpul pukat harimau ganda."
+      },
+      {
+       "p": "Wakisetsu Awase (sambungan point dengan point [searah sambungan point]):"
+      },
+      {
+       "p": "Saat menyambung searah sambungan point seperti pada Gambar 13 sebelah kanan, mengikat dalam simpul mati dan pada bagian awal dan akhir gunakan metode simpul pukat harimau ganda. Pada kondisi tersebut, karena dua buah benang di simpul tepi tidak bersambung, pastikan simpul saling mengikat dengan kencang."
+      },
+      {
+       "p": "Gambar 13: Cara menyambung jaring: (kiri) Hana Tsugi, (kanan) Wakisetsu Awase"
+      },
+      {
+       "h": "(4) Cara menjahit jaring"
+      },
+      {
+       "p": "Ada dua metode menjahit jaring, yaitu “Awase (matching/penyambungan)” dan “Kakiawase (mixing/penggabungan)”. Metode Awase adalah cara menjahit jaring sambil menyambung 2 simpul pada ujung jaring, metode Kakiawase adalah hanya menjahit tanpa membentuk simpul. Dari sisi tampilan bersentuhan dibagi menjadi “Yama-Yama (gunung- gunung)”, “Yama-Tani (gunung-lembah)” dan “Tani-Tani (lembah-lembah)”. (Gambar 14). Penggabungan Penggabungan Penyeragaman Penyeragaman Yama-Yama Tani-Tani Yama-Yama Yama-Tani (3 kali gulung) (3 kali gulung) (3 kali gulung) (3 kali gulung) Gambar 14: Cara menjahit jaring Selain itu, sebagai metode perbaikan bahan jaring yang sobek, metode Hon shuzen (perbaikan utama /tambal) dan metode Watari shuzen (perbaikan cepat/jurai) ditunjukkan di bawah ini."
       },
       {
        "ul": [
-        "**Kapten (船長)**: penanggung jawab keselamatan kapal dan keputusan akhir.",
-        "**Kepala kamar mesin (機関長)**: bertanggung jawab atas mesin.",
-        "**Kepala penangkapan (漁労長)**: memimpin kegiatan menangkap ikan, terutama di kapal besar.",
-        "**Awak dek (甲板員)**: mengerjakan jaring, tali, dan tugas di dek.",
-        "**Juru masak (司厨)**: menyiapkan makanan awak."
+        "Hon shuzen (Perbaikan utama /tambal)"
        ]
       },
       {
-       "h": "Aturan emas: ikuti perintah dan konfirmasi"
+       "p": "Gunakan benang dengan ketebalan yang sama dengan bahan jaring dan memperbaiki dengan menyeragamkan simpul dan mata jaring yang sama. Jahitannya tidak mencolok, tetapi perbaikannya membutuhkan waktu. (Gambar 15) Kessettsu (simpul) Meai (mata jaring) Ashi (Kaki) Gambar 15: Perbaikan Hon shuzen dan cara membawa jarum jarring"
       },
       {
-       "ol": [
-        "Dengarkan perintah sampai selesai.",
-        "**Ulangi perintah (復唱)** untuk memastikan tidak salah paham, misalnya 「はい、網を上げます」.",
-        "Jika tidak mengerti, katakan 「もう一度お願いします」. Jangan menebak."
+       "ul": [
+        "Watari shuzen (Perbaikan cepat/jurai)"
        ]
       },
       {
-       "h": "Lapor, kabari, konsultasi (報告・連絡・相談)"
-      },
-      {
-       "p": "Disingkat **ほうれんそう**. **報告** = melapor hasil; **連絡** = memberi kabar; **相談** = bertanya sebelum memutuskan. Laporkan juga hal kecil seperti luka, alat rusak, atau badan tidak enak, karena di laut masalah kecil cepat jadi besar."
-      },
-      {
-       "h": "Isyarat di tempat bising"
-      },
-      {
-       "p": "Suara mesin dan ombak membuat suara sulit terdengar. Karena itu dipakai **isyarat tangan (合図)** dan seruan (声かけ), misalnya 「あぶない！」 saat ada bahaya. Selalu ada orang yang **berjaga (見張り / 当直)**."
+       "p": "Cara memperbaiki tanpa Menyusun sekitar jaring yang sobek. Jahitannya menonjol, tetapi perbaikan tidak butuh waktu lama (Gambar 16) Gambar 16: Perbaikan Watari shuzen dan cara membawa jarum jaring"
       }
      ],
      "jp": [
       {
-       "h": "{船|ふね}の{仕事|しごと}のわけ{方|かた}"
+       "h": "８．{漁業用語|ぎょぎょうようご}"
+      },
+      {
+       "p": "{赤潮|あかしお}："
+      },
+      {
+       "p": "{水|みず}の{中|なか}でプランクトン（{特|とく}に{植物|しょくぶつぷ}プランクトン）が{増|ふ}えすぎ、{水|みず}の{色|いろ}が{赤色|あかいろ}や{茶色|ちゃいろ}に{変化|へんか}することを{赤潮|あかしお}という。{増|ふ}えたプランクトンは{水中|すいちゅう}の{酸素|さんそ}を{多|おお}く{使用|しよう}し、また、{魚|さかな}のえらに{詰|つ}まることで{魚|さかな}や{貝|かい}が{死亡|しぼう}し、{漁業|ぎょぎょう}に{大影響|おおきなえいきょう}影響を{与|あた}える。{栄養塩|えいようえん}："
+      },
+      {
+       "p": "{栄養塩|えいようえん}とは{生物|せいぶつ}が{生|い}きていくために{必要|ひつよう}なチッソ（Ｎ）、リン（Ｐ）、ケイ{素|そ}（Ｓｉ）などのことをいう。{富|ふ}{栄養化|えいようか}："
+      },
+      {
+       "p": "{富|ふ}{栄養化|えいようか}とは{水|みず}の{中|なか}でチッソ（Ｎ）、リン（Ｐ）、ケイ{素|そ}（Ｓｉ）などが{増|ふ}えすぎることをいう。これらを{多|おお}く{含|ふく}む{工場|こうじょう}や{家庭|かてい}の{水|みず}を{捨|す}てることが{原因|げんいん}である。{海洋汚染防止|かいようおせんぼうし}："
+      },
+      {
+       "p": "{海|うみ}に{油|あぶら}、{土|つち}、プラスチック、ゴミ、{使|つか}わなくなった{漁具|ぎょぐ}などを{捨|す}てると{海|うみ}を{汚染|おせん}することにつながる。{汚染|おせん}を{防|ふせ}ぐため、これらのものを{海|うみ}に{捨|す}ててはいけないことが{法律|ほうりつ}で{決|き}められている。{湧昇流|ゆうしょうりゅう}："
+      },
+      {
+       "p": "{湧昇流|ゆうしょうりゅう}とは{海底近|かいていちか}くの{水|みず}が{海面|かいめん}に{昇|のぼ}ってくることをいう。{海面|かいめん}に{昇|のぼ}ってきた{水|みず}は{水温|すいおん}が{低|ひく}く、{栄養塩|えいようえん}が{多|おお}いためプランクトンが{多|おお}く{集|あつ}まり{良|よ}い{漁場|ぎょじょう}となる。{海水|かいすい}の{塩分|えんぶん}："
+      },
+      {
+       "p": "{海水|かいすい}に{含|ふく}まれている{塩|しお}などの{量|りょう}。{海水|かいすい}１０００ｇ（ぐらむ）{中|ちゅう}のぐらむ{数|すう}（‰・ぱーみる）で{表|あらわ}す。{海水中|かいすいちゅう}の{塩分|えんぶん}の{量|りょう}は{一般的|いっぱんてき}に{約|やく}３３～３７‰（３３～３７ｇ／１０００ｇ）である。"
+      },
+      {
+       "h": "９．{網地|あみじ}"
+      },
+      {
+       "p": "（１）{網地|あみじ}の{構造|こうぞう}"
+      },
+      {
+       "p": "{網地|あみじ}は{結節|けっせつ}の{有|う}{無|む}により、{結節網|けっせつあみ}、{無結節網|むけっせつあみ}に{分|わ}けられる。{結節網|けっせつあみ}では、ひとつの{網目|あみめ}３{個|こ}の{結節|けっせつ}と４{本|ほん}の{脚|あし}からなる（{図|ず}１１）。{無結節網|むけっせつあみ}では、{結節|けっせつ}の{代|か}わりに{網糸|あみいと}の{交差部等|こうさぶなど}がある。{本目結節|ほんめけっせつ}はずれやすく、かえるまた{結節|けっせつ}はずれにくい。"
+      },
+      {
+       "p": "{網目|あみめ}{網目|あみめ}"
+      },
+      {
+       "p": "{結節|けっせつ}{結節|けっせつ}"
+      },
+      {
+       "p": "{図|ず}１１{網地各部|あみじかくぶ}の{呼称|こしょう}（２）{糸|いと}のつなぎ方"
+      },
+      {
+       "p": "{最|もっと}も{簡単|かんたん}で{一般的|いっぱんてき}な{結|むす}び{方|かた}を{図|ず}１２に{示|しめす}す。{出|で}{来|き}{上|あ}がりは{蛙又結節|かえるまたけっせつ}、ロープのシートベンドと{同|おな}じである。{滑|すべ}りやすい{糸|いと}の{場合|ばあい}は、{図|ず}１２の②で{輪|わ}を2{回作|かいつく}る{二重結|ふたえむす}びを{用|もち}いる。"
+      },
+      {
+       "p": "①②③④⑤"
+      },
+      {
+       "p": "{図|ず}１２{一般的|いっぱんてき}な{結|むす}び{方|かた}（３）{網地|あみじ}を{繋|つな}ぐ{方向|ほうこう}はな{継|つ}ぎ（{長|なが}さ{方向|ほうこう}）："
+      },
+      {
+       "p": "{図|ず}１３{左|ひだり}のように{長|なが}さ{方向同士|ほうこうどうし}で{繋|つな}ぐ{場合|ばあい}、{網地端|あみじはし}の{結節部|けっせつぶ}の{網糸|あみいと}は1{本|ほん}の{糸|いと}である。この{場合|ばあい}はかえるまたで{繋|つな}ぎ{最初|さいしょ}と{最後|さいご}は{二重|にじゅう}かえるまたにする。テグスの{場合|ばあい}は{滑|すべ}りやすいので{二重|にじゅう}かえるまたでしっかり{繋|つな}ぐ。{脇節合|わきせつあ}わせ（{掛目方向|かけめほうこう}）："
+      },
+      {
+       "p": "{図|ず}１３{右|みぎ}のように{掛目方向|かけめほうこう}に{繋|つな}ぐ{場合|ばあい}、{本目|ほんめ}で{繋|つな}ぎ{最初|さいしょ}と{最後|さいご}は{二重|にじゅう}かえるまたにする。この{場合|ばあい}は、{端|はし}の{結節|けっせつ}の2{脚|きゃく}の{糸|いと}は{連続|れんぞく}していないので、必ず{結節|けっせつ}をはさみ{込|こ}んで{締|し}める。"
+      },
+      {
+       "p": "{図|ず}１３{網地|あみじ}の{繋|つな}ぎ{方|かた}：{左|ひだり}はな{継|つ}ぎ、{右|みぎ}{脇節合|わきせつあ}わせ（４）{網地|あみじ}の{縫|ぬ}い{合|あ}わせ{方|かた}"
+      },
+      {
+       "p": "2{枚|まい}の{網地|あみじ}の{縫|ぬ}い{合|あ}わせ{方|かた}には、「{合|あ}わせ」と「かき{合|あ}わせ」の{二|ふた}つの{方法|ほうほう}がある。{合|あ}わせとは2{枚|まい}の{網地|あみじ}の{端|はし}の{結節|けっせつ}を{結|むす}びながら{縫|ぬ}い{合|あ}わせる{方法|ほうほう}、かき{合|あわ}せとは{結|むす}び{目|め}を{作|つく}らずかがっていくだけの{方法|ほうほう}をいう。2{枚|まい}の{接|せっ}し{方|かた}により「{山山|やまやま}」、「{山谷|やまたに}」、「{谷谷|たにたに}」の別がある（{図|ず}１４）。"
+      },
+      {
+       "p": "{図|ず}１４{網地|あみじ}のかき{合|あ}わせ{法|ほう}"
+      },
+      {
+       "p": "また、{破|やぶ}れた{網地|あみじ}の{基本的|きほんてき}な{修繕方法|しゅうぜんほうほう}として、{本修繕及|ほんしゅうぜんおよ}び{渡|わた}り{修繕|しゅうぜん}の{修繕|しゅうぜん}{方法|ほうほう}を{次|つぎ}に{示|しめ}す。"
       },
       {
        "ul": [
-        "**{船長|せんちょう}**：{船|ふね}の{安全|あんぜん}にせきにんがあり、{最後|さいご}に{決|き}める{人|ひと}。",
-        "**{機関長|きかんちょう}**：エンジンのせきにんしゃ。",
-        "**{漁労長|ぎょろうちょう}**：{漁|りょう}のリーダー。{大|おお}きい{船|ふね}にいます。",
-        "**{甲板員|かんぱんいん}**：{甲板|かんぱん}で、{網|あみ}やロープなどの{仕事|しごと}をする{人|ひと}。",
-        "**{司厨|しちゅう}**：{船|ふね}の{食事|しょくじ}をつくる{人|ひと}。"
+        "{本修繕|ほんしゅうぜん}"
        ]
       },
       {
-       "h": "{大切|たいせつ}なルール：{指示|しじ}をきいて、{確認|かくにん}する"
+       "p": "{網地|あみじ}と{同|おな}じ{太|ふと}さの{糸|いと}を{使|つか}い、{同|おな}じ{結節及|けっせつおよ}び{目|め}{合|あ}いにしながら{修理|しゅうり}する。{縫|ぬ}い{目|め}は{目|め}{立|だ}たないが{修理|しゅうり}に{時間|じかん}を{要|よう}する。（{図|ず}１５）"
       },
       {
-       "ol": [
-        "{指示|しじ}を{最後|さいご}まできく。",
-        "**{復唱|ふくしょう}**する。{例|れい}：「はい、{網|あみ}を{上|あ}げます」。",
-        "わからないときは「もう{一度|いちど}お{願|ねが}いします」と{言|い}う。{想像|そうぞう}でやらない。"
+       "p": "{図|ず}１５{本修繕|ほんしゅうぜん}と{網針|あばり}の{運|はこ}び{方|かた}"
+      },
+      {
+       "ul": [
+        "{渡|わた}り{修繕|しゅうぜん}"
        ]
       },
       {
-       "h": "{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}"
+       "p": "{破|やぶ}れた{網|あみ}の{周|まわ}りを{整理|せいり}することなく{修理|しゅうり}する{方法|ほうほう}。{縫|ぬ}い{目|め}は{目|め}{立|だ}つが{修理|しゅうり}にあまり{時間|じかん}を{要|よう}しない（{図|ず}１６）。"
       },
       {
-       "p": "**ほうれんそう**といいます。**{報告|ほうこく}**＝{結果|けっか}をつたえる、**{連絡|れんらく}**＝{知|し}らせる、**{相談|そうだん}**＝{決|き}める{前|まえ}に{聞|き}く。けがや{道具|どうぐ}のこわれ、{体|からだ}の{調子|ちょうし}が{悪|わる}いときも、すぐに{言|い}います。{海|うみ}では{小|ちい}さな{問題|もんだい}が{大|おお}きくなりやすいです。"
-      },
-      {
-       "h": "うるさい{場所|ばしょ}の{合図|あいず}"
-      },
-      {
-       "p": "エンジンや{波|なみ}の{音|おと}で{声|こえ}が{聞|き}こえにくいので、**{合図|あいず}**（{手|て}の{合図|あいず}）や**{声|こえ}かけ**（「あぶない！」）を{使|つか}います。いつも**{見張|みは}り**や**{当直|とうちょく}**の{人|ひと}がいます。"
+       "p": "{図|ず}１６{渡|わた}り{修繕|しゅうぜん}と{網針|あばり}の{運|はこ}び{方|かた}"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Ikuti perintah, ulangi untuk konfirmasi, dan laporkan semuanya (ほうれんそう).",
+      "core": "Istilah penting: pasang merah, garam nutrisi, eutrofikasi, upwelling, salinitas. Jaring dibagi: bersimpul vs tanpa simpul.",
       "points": [
-       "船長 memutuskan; 機関長 = mesin; 漁労長 = penangkapan.",
-       "復唱 = mengulang perintah.",
-       "ほうれんそう = 報告・連絡・相談.",
-       "Gunakan 合図 di tempat bising."
+       "赤潮: plankton meningkat, oksigen berkurang, insang tersumbat, ikan/kerang mati.",
+       "湧昇流: air dingin kaya nutrisi naik → tempat tangkap bagus.",
+       "Salinitas laut sekitar 33–37‰."
       ],
       "avoid": [
-       "Menebak perintah yang tidak jelas.",
-       "Menyembunyikan luka atau alat rusak."
+       "Membuang minyak/sampah/alat tangkap bekas ke laut."
       ],
       "exam": [
-       "Tugas tiap jabatan.",
-       "Arti ほうれんそう."
+       "Arti istilah 赤潮・湧昇流・富栄養化.",
+       "Kisaran salinitas."
       ]
      },
      "jp": {
-      "core": "{指示|しじ}を{復唱|ふくしょう}し、{小|ちい}さなことでも{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}する。",
+      "core": "{赤潮|あかしお}、{栄養塩|えいようえん}、{富|ふ}{栄養化|えいようか}、{湧昇流|ゆうしょうりゅう}、{塩分|えんぶん}などの{用語|ようご}と、{網地|あみじ}の{種類|しゅるい}。",
       "points": [
-       "{船長|せんちょう}が{決|き}める。{機関長|きかんちょう}＝エンジン、{漁労長|ぎょろうちょう}＝{漁|りょう}。",
-       "{復唱|ふくしょう}＝{指示|しじ}をくりかえす。",
-       "ほうれんそう＝{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}。",
-       "うるさい{所|ところ}では{合図|あいず}。"
+       "{赤潮|あかしお}はプランクトンがふえて、さかなや{貝|かい}が{死|し}ぬこと。",
+       "{湧昇流|ゆうしょうりゅう}は{冷|ひ}たい{水|みず}が{上|あ}がり、よい{漁場|ぎょじょう}になる。",
+       "{海水|かいすい}の{塩分|えんぶん}は33〜37‰ぐらい。"
       ],
       "avoid": [
-       "わからない{指示|しじ}を{想像|そうぞう}でやること。",
-       "けがや{故障|こしょう}をかくすこと。"
+       "{油|あぶら}やごみや{古|ふる}い{漁具|ぎょぐ}を{海|うみ}にすてること。"
       ],
       "exam": [
-       "{役割|やくわり}のちがい。",
-       "ほうれんそうの{意味|いみ}。"
+       "{赤潮|あかしお}、{湧昇流|ゆうしょうりゅう}、{富|ふ}{栄養化|えいようか}の{意|い}{味|み}。",
+       "{塩分|えんぶん}の{範囲|はんい}。"
       ]
      }
     }
@@ -503,120 +846,322 @@
     "id": "b1s5",
     "no": 5,
     "title": {
-     "id": "Navigasi Dasar dan Peralatan",
-     "jp": "{航海|こうかい}の{基本|きほん}と{機器|きき}"
+     "id": "Tali dan Simpul",
+     "jp": "ロープワーク"
     },
     "pages": [
-     1,
-     1
+     20,
+     33
     ],
     "full": {
      "id": [
       {
-       "h": "Arah dan posisi"
+       "h": "Simpul Tali"
       },
       {
-       "p": "Arah ditentukan dengan **kompas (コンパス)**. Empat arah utama: 北 (utara), 東 (timur), 南 (selatan), 西 (barat). Posisi di bumi dinyatakan dengan **lintang (緯度)** dan **bujur (経度)**. **Peta laut (海図)** menunjukkan kedalaman, batu karang, dan pelabuhan."
+       "h": "(1) Simpul Hitoe (Simpul Tunggal)"
       },
       {
-       "h": "Satuan jarak dan kecepatan di laut"
+       "p": "Simpul berbentuk dasar dan sederhana. Sekali dikencangkan, talinya sulit dilepas. ① ② ③"
       },
       {
-       "ul": [
-        "**Mil laut (海里)**: 1 mil laut = 1.852 m.",
-        "**Knot (ノット)**: kecepatan 1 mil laut per jam."
-       ]
+       "h": "(2) Hitoe tsunagi (Bunga geti tunggal)"
       },
       {
-       "h": "Peralatan utama"
+       "p": "Ini digunakan untuk menghubungkan dua tali dengan ketebalan yang sama. Ini adalah metode simpul penting yang sering digunakan. Yang atas adalah Hitoe tsunagi (Bunga geti tunggal/Single sheet bend), dan yang bawah adalah Futae tsunagi (Bunga geti ganda/Double sheet bend). Jika tali memiliki ketebalan yang berbeda atau tali mudah licin, gunakan Futae tsunagi."
       },
       {
-       "ul": [
-        "**GPS**: menunjukkan posisi kapal.",
-        "**Radar (レーダー)**: menampakkan kapal lain, pulau, dan daratan, juga saat berkabut atau malam.",
-        "**Pencari ikan (魚群探知機)**: mengirim gelombang suara (超音波) ke bawah; pantulannya menunjukkan kawanan ikan dan dasar laut.",
-        "**Radio (無線)**: untuk berkomunikasi dengan kapal lain dan kantor di darat."
-       ]
+       "p": "① ② ③ ① ② ③"
       },
       {
-       "note": "Keadaan darurat di laut: hubungi **Penjaga Pantai Jepang (海上保安庁) di nomor 118**."
+       "h": "(3) Maki musubi (Simpul Pangkal)"
       },
       {
-       "h": "Memeriksa sebelum berlayar"
+       "p": "Ini sering digunakan untuk menahan sementara ujung tali pada batang. Untuk kapal kecil, digunakan untuk menghentikan sementara pada tiang tambat. Jika dikencangkan, ada kalanya sulit untuk dilepaskan."
       },
       {
-       "p": "Pastikan bahan bakar cukup, radio dan GPS hidup, dan prakiraan cuaca sudah dicek. Jangan memaksa berlayar dengan alat yang rusak."
+       "p": "① ② ③ ④ ⑤"
+      },
+      {
+       "h": "(4) Moyai musubi (Simpul Tiang)"
+      },
+      {
+       "p": "Digunakan saat menahan tali pada tiang tambat. Ini adalah cara yang aman dan dapat diandalkan untuk mengikat. Selain itu, karena mudah dilepaskan, simpul ini yang sering digunakan di kapal. Gerakan tangan berbeda tergantung pada saat tali ditambatkan pada benda atau tidak."
+      },
+      {
+       "p": "① ② ③ ④ ① ② ③ ④"
+      },
+      {
+       "h": "(5) Reef Knot (Hon musubi/Ma musubi/ Simpul Mati)"
+      },
+      {
+       "p": "Ini adalah simpul penting yang digunakan saat menghubungkan tali dengan ketebalan yang sama, seperti penanganan darurat pada tali yang terkelupas/sobek."
+      },
+      {
+       "p": "① ② ③ ④"
+      },
+      {
+       "h": "(6) Anchor Bend (Ikari musubi/ Simpul anchor bend)"
+      },
+      {
+       "p": "Juga disebut Fisherman’s Bend (Simpul nelayan), digunakan saat mengikat pada cincin jangkar kecil."
+      },
+      {
+       "p": "① ② ③ ④ ⑤"
+      },
+      {
+       "h": "(7) Cow hitch (Hibari musubi/Simpul Jangkar)"
+      },
+      {
+       "p": "Efektif untuk mengaitkan sementara bagian tengah tali pada suatu benda."
+      },
+      {
+       "h": "Penanganan Ujung Tali"
+      },
+      {
+       "h": "(1) Back Splice (Anyaman Balik)"
+      },
+      {
+       "p": "① Setiap helaian dianggap “a”, “b”, “c”."
+      },
+      {
+       "p": "② Tekuk helaian “a” ke depan."
+      },
+      {
+       "p": "③ Tindihkan helaian “b” ke sisi luar helaian “a”."
+      },
+      {
+       "p": "④ Himpitkan “c” dari sisi luar “b” dan masukkan ke lingkaran “a”. Ini disebut “Crown Knot” (simpul mahkota) ⑤ Kencangkan anyaman helaian tersebut dengan kuat, melipat setiap helaian dan selipkan ke masing2 celah helaian."
+      },
+      {
+       "p": "⑥ Anyam setiap helaian 3 kali dan lebih untuk menyelesaikan."
+      },
+      {
+       "p": "a b c ① ② ③ ④ ⑤ ⑥"
+      },
+      {
+       "h": "(2) Eye Splice (membuat mata)"
+      },
+      {
+       "p": "① Setiap helaian dianggap “a”, “b”, “c”."
+      },
+      {
+       "p": "② Sisipkan “a” ke dalam celah tali."
+      },
+      {
+       "p": "③ Sisipkan helaian b di bawah helaian dimana helaian a telah disisipkan. ④ Balikkan talinya ke belakang."
+      },
+      {
+       "p": "⑤ Menyelipkan helaian c ke helaian lainnya searah tanda panah."
+      },
+      {
+       "p": "⑥ , ⑦ Kencangkan ketiga helaian dengan kuat, lalu lakukan anyaman kedua. ⑧ Anyam setiap helaian 3 kali dan lebih untuk menyelesaikan."
+      },
+      {
+       "p": "a c a b b ① ② ③ ④ c ⑤ ⑥ ⑦ ⑧"
+      },
+      {
+       "h": "(3) Short Splice (Sambungan Pendek)"
+      },
+      {
+       "p": "① Mengurai helai kedua tali."
+      },
+      {
+       "p": "② Gabungkan setiap helaian."
+      },
+      {
+       "p": "③ Menyisipkan setiap helain tali sisi kanan ke sisi kiri satu kali."
+      },
+      {
+       "p": "④ Anyam sebanyak 3 kali."
+      },
+      {
+       "p": "⑤ Anyam helaian tali yang lainnya 3 kali."
+      },
+      {
+       "p": "⑥ Lakukan anyaman helaian tali dari masing-masing sisi sebanyak 3 kali dan lebih untuk menyelesaikannya."
+      },
+      {
+       "p": "① ② ③ ④ ⑤ ⑥"
+      },
+      {
+       "h": "Penyimpanan dan penataan tali"
+      },
+      {
+       "p": "Banyak tali yang digunakan pada pekerjaan perahu penangkap ikan. Jika tali dibiarkan tergulung dan berantakan, tali akan kusut dan sulit dikeluarkan saat perlu menggunakannya. Agar tali dapat segera digunakan tanpa menjadi kusut, tali perlu digulung dan diikat menjadi satu. Ada berbagai cara untuk menggabungkannya, tetapi cara utama (sederhana) ditunjukkan di bawah ini."
+      },
+      {
+       "h": "(1) Tali tipis"
+      },
+      {
+       "p": "Bagian ini menjelaskan tiga metode untuk mengikat tali tipis dengan diameter sekitar 30 mm atau kurang dan panjang hingga 100 m. Ini dapat digantung di dinding dll."
+      },
+      {
+       "p": "① Gulungan gantung A ② Gulungan gantung B Sisi depan Sisi belakang ③ Gulungan gantung C"
+      },
+      {
+       "h": "(2) Tali tebal"
+      },
+      {
+       "p": "Di sini akan ditunjukkan dua metode yang dapat digunakan untuk menggulung dan mengikat tali tebal saat masih berada di dek."
+      },
+      {
+       "p": "① Gulungan datar A ② Gulungan datar B"
+      },
+      {
+       "h": "Tali Temali Praktis"
+      },
+      {
+       "h": "(1) Mengikat tali ke pasak"
+      },
+      {
+       "p": "Di lokasi penangkapan ikan, seperti ditunjukkan pada Gambar 17, banyak pekerjaan yang menggunakan tali, seperti mengikat perahu satu sama lain atau ke dermaga, serta mengikat spatbor dan jaring. Sebagai bagian dasar pekerjaan, akan ditunjukkan cara mengikatkan tali tambatan yang digunakan untuk menambatkan perahu ke dermaga."
+      },
+      {
+       "p": "Gambar 17. Kerja tali di lokasi penangkapan ikan"
+      },
+      {
+       "h": "(2) Menggulung tali pada benda"
+      },
+      {
+       "p": "Saat menerima tali yang dilemparkan dari perahu di dermaga, harus bergegas dan melakukan tindakan (tugas) berikutnya sebelum dapat menambatkan perahu. Selain itu, dibutuhkan tenaga yang besar untuk menarik tali tersebut. Begitu menerima talinya, lilitkan pada bagian terdekat (cincin, tiang pembatas, dsb.) sekali atau dua kali. Ini akan mengurangi gaya pada tali."
+      },
+      {
+       "p": "Dengan tali yang masih terlilit di pasak satu atau dua kali, panjang tali yang menahan perahu dapat disesuaikan dengan menggeser tali. Setelah itu, bila gaya pada tali sudah kuat, lilitkan tali pada pasak sebanyak empat atau lima kali. Jika tali tersebut kemudian diikat dengan simpul mati, tali tersebut dapat ditarik dengan kuat dan menjadi begitu erat sehingga tidak mungkin lagi dilepaskan. Untuk mencegah hal ini, digunakan metode pengikatan berikut."
+      },
+      {
+       "h": "(3) Lipat kembali tali terlilit dan gulung ulang,"
+      },
+      {
+       "p": "Lipat tali yang dililitkan pada pasak dan lilitkan pada pasak sebanyak 1-2 kali. Dengan melilitkan tali pada pasak, akan dapat melemahkan gaya pada tali."
+      },
+      {
+       "p": "Gambar 19. Kerja tali melipat dan gulung ulang Gambar 18. Kiri: Situasi berbahaya karena ditarik oleh perahu; Kanan: Terlilit di pasak"
+      },
+      {
+       "h": "(4) Menggulung tali dengan simpul lingkar"
+      },
+      {
+       "p": "Biasanya, untuk mengikatkan tali pada suatu pasak (lingkaran, pipa, rel, dan sebagainya) dengan mudah, tali diikat dengan simpul bowline atau simpul lingkar (Gbr. 20). Simpul lingkar digunakan ketika pekerjaan ketat atau ketika ada ketegangan pada tali."
+      },
+      {
+       "h": "(3) Lipat tali ke belakang dan lilitkan di sekitar Gambar 20. Simpul lingkar"
+      },
+      {
+       "p": "pasak 1 atau 2 kali lagi, lalu ikat simpul untuk mengikat tali ke pasak (Gambar 21). Jika tali dilipat lalu diikatkan pada simpul, tali tidak akan tersangkut sekalipun ada gaya yang diberikan, sehingga lebih mudah dilepaskan."
+      },
+      {
+       "p": "Gambar 21. Lilitan pada tali dilipat"
       }
      ],
      "jp": [
       {
-       "h": "{方位|ほうい}と{位置|いち}"
+       "h": "１０．ロープの{結|むす}び"
       },
       {
-       "p": "{方位|ほうい}は**コンパス**で{調|しら}べます。{四|よっ}つの{方位|ほうい}は、{北|きた}・{東|ひがし}・{南|みなみ}・{西|にし}です。{地球|ちきゅう}の{上|うえ}の{場所|ばしょ}は**{緯度|いど}**と**{経度|けいど}**で{表|あらわ}します。**{海図|かいず}**には、{水|みず}の{深|ふか}さ、{岩|いわ}、{港|みなと}などがかいてあります。"
+       "p": "（１）ひとえ{結|むす}び"
       },
       {
-       "h": "{海|うみ}の{距離|きょり}と{速|はや}さ"
+       "p": "{基本形|きほんけい}で{簡単|かんたん}な{結|むす}びである。ロープが{一旦締|いったんし}まると{解|と}くのがむずかしい。（２）ひとえつなぎ"
       },
       {
-       "ul": [
-        "**{海里|かいり}**：1{海里|かいり}は1,852メートル。",
-        "**ノット**：1{時間|じかん}に1{海里|かいり}すすむ{速|はや}さ。"
-       ]
+       "p": "{同|おな}じ{太|ふと}さの2{本|ほん}のロープの{端|はし}と{端|はし}を{繋|つな}ぐときに{使|つか}われる。{使|し}{用度|ようど}が{多|おお}い{大切|たいせつ}な{繋|つな}ぎ{方|かた}である。{上|うえ}がひとえつなぎ（シングル・シート・ベンド）、{下|した}がふたえつなぎ（ダブル・シート・ベンﾄﾞ）。ロープの{太|ふと}さが{違|ちが}うときやすべりやすいロープの{場合|ばあい}は、ダブル・シート・ベンﾄﾞを{用|もち}いる。（３）まき{結|むす}び"
       },
       {
-       "h": "おもな{機器|きき}"
+       "p": "{棒状|ぼうじょう}の{物|もの}にロープの{端|はし}を{一時的|いちじてき}に{止|と}めるときに{多|おお}く{使|つか}われる。{小型船舶|こがたせんぱく}ではビット{等|となど}に{一時的|いちじてき}に{止|と}めるときに{使|つか}われる。{締|し}まると{解|ほど}きにくくなる{場合|ばあい}がある。（４）もやい{結|むす}びロープをビットに{止|と}めるとき{等|など}に{使|つか}われる。{安全|あんぜん}で{確実|かくじつ}な{結|むす}び{方|かた}である。しかも{解|ほど}きやすいので{船舶|せんぱく}でも{多|おお}く{使|つか}われる{結|むす}びである。{物|もの}にロープを{掛|か}けない{結|むす}び{方|かた}と{掛|か}ける{結|むす}び{方|かた}では{手|て}の{動|うご}きが{異|こと}なる。（５）リーフ・ノット（{本結|ほんむす}びまたは{真結|まむす}び）"
       },
       {
-       "ul": [
-        "**GPS**：{船|ふね}の{位置|いち}がわかる。",
-        "**レーダー**：ほかの{船|ふね}や{島|しま}、{陸|りく}が{見|み}える。{霧|きり}や{夜|よる}でも{使|つか}える。",
-        "**{魚群探知機|ぎょぐんたんちき}**：{音|おと}（**{超音波|ちょうおんぱ}**）を{下|した}に{送|おく}り、はね{返|かえ}りで{魚|さかな}の{群|む}れや{海底|かいてい}がわかる。",
-        "**{無線|むせん}**：ほかの{船|ふね}や{陸|りく}の{事務所|じむしょ}と{話|はな}す。"
-       ]
+       "p": "ロープのきずの{手当|てあて}のための{応急処置等|おうきゅうしょちなど}、{同|おな}じ{太|ふと}さのロープを{繋|つな}ぎ{合|あ}わすとき{用|もち}いられる{大切|たいせつ}な{結|むす}びである。（６）アンカー・ベンド（いかり{結|むす}び）"
       },
       {
-       "note": "{海|うみ}の{事故|じこ}のとき：**{海上保安庁|かいじょうほあんちょう} 118{番|ばん}**に{連絡|れんらく}します。"
+       "p": "フィッシャーマンズ・ベンﾄﾞとも{呼|よ}ばれ、{小型錨|こがたいかり}のリングに{結|むす}ぶときに{使|つか}われる。（７）カウ・ヒッチ（ひばり{結|むす}び）ロープの{中間|ちゅうかん}を{一時的|いちじてき}に{物|もの}に{引|ひ}っ{掛|か}けるときに{有効|ゆうこう}である。"
       },
       {
-       "h": "{出港前|しゅっこうまえ}の{確認|かくにん}"
+       "h": "１１．ロープの{端|はし}の{処理|しょり}"
       },
       {
-       "p": "{燃料|ねんりょう}は{足|た}りるか、{無線|むせん}とGPSは{動|うご}くか、{天気予報|てんきよほう}はどうか、を{確|たし}かめます。{機器|きき}がこわれているときは、{無理|むり}に{出|で}ません。"
+       "p": "（１）バックスプライス①{各|かくす}ストランドをa、b、cとする。②aを{手前|てまえ}にもってくる。③bでaストランドの{外側|そとがわ}から{押|お}さえる。④cはｂの{外側|そとがわ}から{押|お}さえ、aの{輪|わ}に{入|い}れる。「クラウン･ノット」と{呼|よ}ばれる。⑤{組|く}み{合|あ}わせたストランドをしっかり{締|し}めてから{各|かくす}ストランドを{折|お}り{返|かえ}し、そ"
+      },
+      {
+       "p": "れぞれのストランドに{差|さ}す。⑥{各|か}ストランドを3{回以上差|かいいじょうさ}し{入|い}れて{完了|かんりょう}。（２）アイスプライス①{各|かくす}ストランドをa、b、cとする。②aをストランドに{差|さ}し{入|い}れる。③aを{入|い}れたストランドの{下側|したがわ}にbをのストランドを{差|さ}し{入|い}れる。④ロープを{裏|うら}に{返|かえ}す。⑤cは{他|ほか}のストランドに{矢印|やじるし}の{方向|ほうこう}に{差|さ}し{入|い}れる。⑥,⑦3{本|ほん}のストランドをしっかり{締|し}めて、2{回目|かいめ}を{入|い}れる。⑧{各|か}ストランドを3{回以上差|かいいじょうさ}して{完了|かんりょう}。（３）ショートスプライス①{両方|りょうほう}のロープのストランドを{解|と}く。②{各|か}ストランドを{組|く}み{合|あ}わせる。③{右側|みぎがわ}のロープの{各|か}ストランドを{左側|ひだりがわ}に1{回差|かいさ}し、④{計|けい}3回{差|さ}す。⑤{他方|たほう}のロープのストランドを3{回差|かいさ}す。⑥{双方|そうほう}から{各|か}ストランドを3回{以上差|いじょうさ}して{完了|かんりょう}。"
+      },
+      {
+       "h": "１２．ロープの{収納|しゅうのう}・{整理|せいり}"
+      },
+      {
+       "p": "{漁船|ぎょせん}の{作業|さぎょう}では{多|おお}くのロープが{使|つか}われている。ロープを{丸|まる}めたまま{乱雑|らんざつ}にしていると、{使|つか}いたい{時|とき}にすぐ{使|つか}うために{取|と}り{出|だ}すことはロープが{絡|から}まって{不可能|ふかのう}になる。{使|つか}いたいときに{絡|から}まることなく、すぐに{使|つか}うことが{出|で}{来|き}るようにするためにはロープを{丸|まる}めて{束|たば}ねておく{必要|ひつよう}がある。{色々|いろいろ}な{束|たば}ね{方|かた}があるが、{主|しゅ}（{簡単|かんたん}）なものを{次|つぎ}に{示|しめ}す。（１）{細|ほそ}いロープ"
+      },
+      {
+       "p": "おおよそ{直径|ちょっけい}30mm{以|い}{下|か}、{長|なが}さ100mまでの{細|ほそ}いロープをまとめる（{束|たば}ねる）{方法|ほうほう}を3{種示|しゅしめ}す。これらは{壁|かべ}などに{吊|つ}り{下|さ}げておくことが{出|で}{来|き}る。①{吊|つ}り{束|たば}Ａ②{吊|つ}り{束|たば}Ｂ"
+      },
+      {
+       "p": "{表側|おもてがわ}"
+      },
+      {
+       "p": "{裏側|うらがわ}③{吊|つ}り{束|たば}Ｃ（２）{太|ふと}めのロープ"
+      },
+      {
+       "p": "{太|ふと}めのロープを{丸|まる}めたら{甲板|こうはん}に{置|お}いたまま{束|たば}ねられる{方法|ほうほう}を2{種類示|しゅるいしめ}す。①{平置|ひらお}き{束|たば}Ａ②{平置|ひらお}き{束|たば}Ｂ"
+      },
+      {
+       "h": "１３．{実用的|じつようてき}なロープワーク"
+      },
+      {
+       "p": "（１）ビットにロープを{留|と}める"
+      },
+      {
+       "p": "{漁業|ぎょぎょう}の{現場|げんば}では{図|ず}１７に{示|しめ}すように{船船同士|ふねふねどうし}や{岸壁|がんぺき}に{留|と}めたり、{防舷材|ぼうげんざい}や{網|あみ}を{留|と}めるなど{多|おお}くのロープ{作業|ぷさぎょう}が{行|おこな}われる。{作業|さぎょう}の{基本|きほん}として{岸壁|がんぺき}に{船|ふね}を{留|と}める{舫綱|もやいづな}の{留|と}め{方|かた}を{示|しめ}す。"
+      },
+      {
+       "p": "{図|ず}１７{漁業現場|ぎょぎょうげんば}でのロープワーク（２）ビットにロープを{巻|ま}く"
+      },
+      {
+       "p": "{岸壁|がんぺき}で{船|ふね}から{投|な}げられたロープを{受取|うけと}ったら{急|いそ}いで{次|つぎ}の{動作|どうさ}（{作業|さぎょう}）をしないと、{船|ふね}を{繋|つな}ぐことはできない。また、ロープをそのまま{引|ひ}っ{張|は}るには{大|おお}きな{力|ちから}が{必要|ひつよう}になる。ロープを{受取|うけと}ったら{直|す}ぐに{近|ちか}くのビット（リング、ボラードなど）に1～2{回巻付|かいまきつ}ける。これでロープに{掛|か}かる{力|ちから}を{弱|よわ}められる。{図|ず}１８{左|ひだり}：{船|ふね}に{引|ひ}っ{張|ぱ}られる{危|あぶ}ない{状況|じょうきょう}、{右|みぎ}：ビットに{巻|ま}{付|つ}けて{力|ちから}を{弱|よわ}める"
+      },
+      {
+       "p": "ビットにロープを1～2{回巻|かいま}き{付|つ}けたまま、ロープをずらして{舩|ふね}を{留|と}めるロープの{長|なが}さを{調整|ちょうせい}する。その{後|ご}、ロープに{掛|か}かる{力|ちから}が{大|おお}きい{時|とき}は、ビットに{巻付|まきつ}ける{回数|かいすう}を4～5{回|かい}にする。この{後|あと}、{巻結|まきむす}びでロープを{留|と}めるとロープが{大|おお}きな{力|ちから}で{引|ひ}っ{張|は}られてロープが{固|かた}く{締|し}まって{解|と}けなくなることがある。これを{防|ふせ}ぐために、{次|つぎ}の{縛|しば}り{方|かた}をする。（３）{巻|ま}いたロープを{折返|おりかえ}して{更|さら}に{巻|ま}く"
+      },
+      {
+       "p": "ビットに{巻|ま}いているロープで{力|ちから}の{掛|か}かっているロープを{折返|おりかえ}してビットに1～2{回巻|かいま}き{返|かえ}す。ロープを{巻|ま}き{返|かえ}すことで、ロープに{掛|か}かる{力|ちから}を{弱|よわ}めることができる。{図|ず}１９{折|お}り{返|かえ}して{巻|ま}くロープワーク（４）まき{結|むす}びでロープを巻く"
+      },
+      {
+       "p": "{普通|ふつう}、ロープを{簡単|かんたん}にビット（{環|かん}、パイプ、レールなど）に{留|と}めるには、もやい{結|むす}びやまき{結|むす}び（クラブ・ヒッチ）で{結|むす}ぶ（{図|ず}２０）。{時間的|じかんてき}に{余裕|よゆう}が{無|な}い{作業時|さぎょうじ}や、{張力|ちょうりょく}がロープに{掛|か}かっている{時|とき}は、まき{結|むす}びが{使|つか}われる。"
+      },
+      {
+       "p": "{図|ず}２０まき{結|むす}び（クラブ・ヒッチ）（３）でロープを{折返|おりかえ}してビットに{更|さら}に1～2{回巻|かいま}いた{後|あと}にまき{結|むす}びでビットにロープを{留|と}める（{図|ず}２１）。ロープを{折返|おりかえ}した{後|あと}にまき{結|むす}びをするとロープに{力|ちから}が{掛|か}かってもロープが{固着|こちゃく}しないので{解|と}きやすくなる。"
+      },
+      {
+       "p": "{図|ず}２１{折返|おりかえ}したロープでまき{結|むす}び"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Navigasi memakai kompas, peta laut, GPS, radar, pencari ikan, dan radio; 1 knot = 1 mil laut/jam.",
+      "core": "Simpul dan tali: tiap simpul punya fungsi. Ujung tali dirapikan dengan anyaman (back splice, eye splice, short splice).",
       "points": [
-       "海里 = 1.852 m; ノット = mil laut per jam.",
-       "魚群探知機 = gelombang suara untuk melihat ikan.",
-       "レーダー berguna saat kabut/malam.",
-       "Darurat laut: 118."
+       "本結び (reef knot) = sambung dua tali sama tebal, juga untuk darurat.",
+       "もやい結び = tali tambat di tiang; aman & mudah dilepas.",
+       "二重つなぎ dipakai bila tali beda tebal atau licin."
       ],
       "avoid": [
-       "Berangkat tanpa memeriksa radio, GPS, dan BBM."
+       "Memakai simpul yang salah untuk pekerjaan penting."
       ],
       "exam": [
-       "Fungsi tiap alat.",
-       "Nomor darurat laut."
+       "Nama dan fungsi simpul."
       ]
      },
      "jp": {
-      "core": "コンパス・{海図|かいず}・GPS・レーダー・{魚群探知機|ぎょぐんたんちき}・{無線|むせん}で{航海|こうかい}する。",
+      "core": "{結|むす}びには{用途|ようと}がある。ロープの{端|はし}はスプライスで{処理|しょり}する。",
       "points": [
-       "1{海里|かいり}＝1,852m。ノット＝1{時間|じかん}の{海里|かいり}。",
-       "{魚群探知機|ぎょぐんたんちき}＝{音|おと}で{魚|さかな}を{見|み}つける。",
-       "レーダーは{霧|きり}や{夜|よる}に{役|やく}{立|だ}つ。",
-       "{海|うみ}の{事故|じこ}は118{番|ばん}。"
+       "{本結|ほんむす}びは{同|おな}じ{太|ふと}さのロープをつなぐ。",
+       "もやい{結|むす}びはくいにとめる。{安全|あんぜん}で、ほどきやすい。",
+       "{太|ふと}さがちがうときや、すべるときは{二重|にじゅう}つなぎ。"
       ],
       "avoid": [
-       "{機器|きき}と{燃料|ねんりょう}を{確認|かくにん}しないで{出|で}ること。"
+       "{大切|たいせつ}な{作業|さぎょう}でちがう{結|むす}びを{使|つか}うこと。"
       ],
       "exam": [
-       "{機器|きき}のはたらき。",
-       "{海|うみ}の{緊急電話番号|きんきゅうでんわばんごう}。"
+       "{結|むす}びの{名|な}{前|まえ}と{用途|ようと}。"
       ]
      }
     }
@@ -625,346 +1170,382 @@
     "id": "b1s6",
     "no": 6,
     "title": {
-     "id": "Tali dan Simpul",
-     "jp": "ロープワーク"
+     "id": "Kail, Mesin Tangkap, Alat Ukur",
+     "jp": "{釣針|つりばり}・{漁労機|ぎょろうき}{器|き}・{漁業計測機器|ぎょぎょうけいそくきき}"
     },
     "pages": [
-     1,
-     1
+     33,
+     45
     ],
     "full": {
      "id": [
       {
-       "h": "Mengapa simpul penting"
+       "h": "Kail Pancing"
       },
       {
-       "p": "Di kapal, tali dipakai untuk menambatkan kapal, mengikat alat, dan menarik jaring. Simpul yang salah bisa lepas atau tidak bisa dibuka. Simpul yang baik **kuat, tidak mudah lepas, dan mudah dibuka**."
+       "p": "Chimoto (Mata) . Di Jepang banyak mata kail pancing dibuat dan Ken (Pedang) Hara (Perut) digunakan sesuai dengan jenis dan ukuran ikan."
       },
       {
-       "h": "Simpul dasar"
+       "p": "Harisaki (Ujung Futokor (Gap) Gambar 22 menunjukkan struktur dasar mata kail pancing) Se (Pungung) Kaeshi pancing dan nama setiap bagiannya. (Mata kail) Do (Panjang) Koshimage Sakimage (Bengkokan) (Bengkokan Ujung) Haba (Lebar)r) Gambar 22: Kontruksi mata kail pancing"
       },
       {
-       "ul": [
-        "**もやい結び (bowline)**: membuat lingkaran yang tidak mengecil. Dipakai untuk menambatkan kapal. Tetap mudah dibuka setelah ditarik kencang.",
-        "**本結び (simpul pipih)**: menyambung dua tali yang ukurannya sama. Tidak cocok untuk beban berat atau tali yang licin.",
-        "**一重継ぎ (sheet bend)**: menyambung dua tali yang ukurannya berbeda.",
-        "**巻き結び (clove hitch)**: mengikat tali pada tiang atau pagar dengan cepat.",
-        "**8の字結び (angka delapan)**: simpul penahan di ujung tali agar tidak lepas dari lubang."
-       ]
+       "h": "(1) Harris (senar pancing) dan cara mengikatnya"
       },
       {
-       "h": "Aturan keselamatan dengan tali"
+       "p": "Benang tipis yang diikat pada mata kail pancing disebut Harris (senar pancing). Ini memainkan peran menghubungkan mata kail pancing dengan tali utama atau dengan tali utama melalui tali cabang. Jika target adalah ikan dengan gigi tajam seperti ikan Ishidai (Beakfish bergaris), ikan buntal, ikan layur, digunakan tipe kawat kail logam (wire). Dalam hal ini, pada bagian yang dekat dengan mata kail pancing (10 hingga 30 cm) digunakan kawat, dan kemudian disambungkan dengan benang nilon untuk membentuk Harris secara keseluruhan. Ada banyak metode mengikat mata kail pancing dengan benang nilon, metode simpul yang sederhana namun banyak digunakan ditunjukkan pada Gambar 23. Sotogake musubi Ryoshi musubi (Simpul Snell knot) (Simpul Nelayan) Gambar 23: Metode simpul pada mata kail pancing yang sederhana"
       },
       {
-       "ul": [
-        "Jangan melilitkan tali di tangan atau kaki.",
-        "Jangan berdiri di dalam lingkaran tali yang bisa mengencang.",
-        "Jangan berdiri di garis tali yang sedang tegang. Jika putus, tali bisa melesat (跳ね返り).",
-        "Periksa tali yang aus, berserabut, atau berjamur, dan ganti."
-       ]
+       "h": "(2) Cara mengikat Yorimodishi (kili-kili)"
+      },
+      {
+       "p": "Yorimodoshi adalah bagian yang digunakan untuk mencegah benang utama, benang cabang, atau Harris (senar pancing) terpelintir. Yang besar biasanya disebut Yorimodoshi, yang kecil disebut Sarukan. Gambar 24 menunjukkan cara sederhana untuk mengikat Yorimodoshi dan benang nilon."
+      },
+      {
+       "p": "Ryoshi musubi Palomar knot (Simpul Nelayan) Gambar 24: Cara mengikat Yorimodoshi"
+      },
+      {
+       "h": "Peralatan Penangkap Ikan"
+      },
+      {
+       "p": "Proses mekanisasi kapal penangkap ikan saat ini terus berkembang, peningkatan efisiensi diukur dengan melihat sedikitnya awak kapal dan penggunaan alat tangkap yang lebih besar. Pemakaian mesin derek, crane, kapstan (paksi jangkar) sudah relatif umum, tetapi peralatan utama penangkapan ikan berbeda tergantung pada jenis perikanan, dan peralatan yang secara umum dipakai adalah sebagai berikut."
+      },
+      {
+       "p": "Haenawa Gyogyo (Perikanan Rawai)"
+      },
+      {
+       "h": "(1) Line Hauler (mesin penarik rawai)"
+      },
+      {
+       "p": "Mesin untuk menarik tali utama rawai"
+      },
+      {
+       "h": "(2) Penggulung tali cabang"
+      },
+      {
+       "p": "Sebuah mesin yang digunakan untuk menggulung tali cabang rawai menjadi gulungan."
+      },
+      {
+       "h": "(3) Mesin Pelempar tali (Line casting/throwing)"
+      },
+      {
+       "p": "Mesin pelempar tali utama rawai yang dipasangi tali cabang dari kapal."
+      },
+      {
+       "p": "Sashiami gyogyo (Perikanan jaring insang)"
+      },
+      {
+       "h": "(1) Mesin Penarik Jaring (Net Hauler)"
+      },
+      {
+       "p": "Mesin untuk menggulung jaring insang. Mengangkat jaring di sisi pelampung dan sisi pemberat biasanya dilakukan secara terpisah, tetapi ada kalanya mengangkat bersama."
+      },
+      {
+       "h": "(2) Pipa pemindah jaring"
+      },
+      {
+       "p": "Sebuah pipa untuk memindahkan jaring insang yang diangkat di atas kapal ke area penyimpanan di sisi buritan kapal."
+      },
+      {
+       "h": "(3) Tempat penyimpanan jaring insang dan Net carrier (Mesin angkut jaring untuk"
+      },
+      {
+       "p": "merapikan jaring)."
+      },
+      {
+       "p": "Katsuo Ipponzuri (Perikanan Huhate Cakalang)"
+      },
+      {
+       "h": "(1) Mesin Penyemprot Air"
+      },
+      {
+       "p": "Mesin penyemprot air untuk mengumpulkan dan menahan pergerakan cakalang. Makiami gyogyo (Perikanan pukat cincin)"
+      },
+      {
+       "h": "(1) Net Hauler (Mesin Penarik Jaring)"
+      },
+      {
+       "p": "Mesin penggulung dan penarik pukat cincin"
+      },
+      {
+       "h": "(2) Purse Winch (Kerekan Penggulung)"
+      },
+      {
+       "p": "Kerekan untuk menarik dan menggulung kawat yang berfungsi mengencangkan kaki jaring pukat cincin."
+      },
+      {
+       "h": "(3) Davit penggulung"
+      },
+      {
+       "p": "Davit untuk mengangkat kawat yang berfungsi mengencangkan ujung kaki jaring"
+      },
+      {
+       "h": "(4) Power block untuk menangani jaring"
+      },
+      {
+       "p": "Mesin yang digunakan untuk mengangkat dan merapikan jaring yang telah diangkat dengan Net Hauler (penarik jarring)."
+      },
+      {
+       "h": "(5) Side Roller"
+      },
+      {
+       "p": "Mesin penarik jaring berupa batangan yang berputar dan dipasang di samping lambung kapal yang digunakan untuk mengangkat jaring ke geladak."
+      },
+      {
+       "p": "Perikanan jaring tarik dasar"
+      },
+      {
+       "h": "(1) Warping Winch (Derek Penggulung Tali)"
+      },
+      {
+       "p": "Tali penarik (warp) atau kerekan yang menggulung tali penarik"
+      },
+      {
+       "h": "(2) Otter board (Papan pembuka jaring)"
+      },
+      {
+       "p": "Papan pembuka mulut jaring yang berfungsi melebar mulut jaring"
+      },
+      {
+       "h": "(3) Ami no Grand (tempat meletakkan jaring)"
+      },
+      {
+       "h": "(1) Mesin otomatis memancing cumi-cumi"
+      },
+      {
+       "p": "Mesin penangkapan cumi-cumi dengan menggantung benang nilon yang dipasangkan beberapa alat pancing cumi-cumi ke dalam laut, dan secara otomatis melakukan gerakan naik turun."
+      },
+      {
+       "h": "(2) Shugyoto (Fish Lamp)"
+      },
+      {
+       "p": "Lampu listrik untuk mengumpulkan cumi-cumi Perikanan Jaring Tetap"
+      },
+      {
+       "h": "(1) Ball Roller (Catch Horror)"
+      },
+      {
+       "p": "Mesin untuk mengangkat jaring dengan menjepit dengan 2 bola yang berputar yang digunakan saat memeras bagian kantung pada jaring tetap"
+      },
+      {
+       "h": "(2) Tate roller (Rope Winding roller)"
+      },
+      {
+       "p": "Roller penggulung tali penarik yang dipasangkan pada jaring yang digunakan saat memeras bagian kantung pada jaring tetap."
+      },
+      {
+       "h": "(2) Rope Hoist (Standing Roller)"
+      },
+      {
+       "p": "Kotak Roller jaring tetap untuk mengencangkan tali pengangkat yang terpasang ke jaring yang digunakan saat mengikat Perikanan Bubu"
+      },
+      {
+       "h": "(1) Mesin penarik tali"
+      },
+      {
+       "p": "Mesin penggulung tali utama yang telah dipasangkan pada bubu Perikanan Bouke Ami (Tangkul bergalah)"
+      },
+      {
+       "h": "(1) Kerekan Penggulung Bertahap"
+      },
+      {
+       "p": "Mesin penggulung yang secara bersamaan tali pengangkat (kawat) yang dipasangkan di sisi dasar jaring"
+      },
+      {
+       "h": "(2) Mukaitake (bambu kerangka)"
+      },
+      {
+       "p": "Pipa (bambu, tiang) yang menggantung jaring"
+      },
+      {
+       "h": "(3) Shugyoto sao (tiang Fish Lamp)"
+      },
+      {
+       "p": "Tiang yang dipasangkan lampu untuk mengumpulkan ikan."
+      },
+      {
+       "h": "Detektor Kawanan Ikan (Gyogun Tanchiki)"
+      },
+      {
+       "h": "(1) Gyoguntanchiki (Detektor kawanan ikan)"
+      },
+      {
+       "p": "Detektor Kawanan Ikan (fish finder) adalah alat elektronik yang memancarkan gelombang ultrasonik ke dalam air dan memantulkannya kembali bila gelombang ultrasonik tersebut mengenai suatu benda, sehingga bisa memproyeksikan ukuran dan lokasi kawanan ikan, kedalaman air, keadaan dasar laut dan lain-lain, pada suatu gambar. Gambar pada Detektor Kawanan Ikan bergerak menuju layar dari dari sisi yang ada skala (skala kedalaman) dengan arah berlawanan, sisi yang ada skala menjadi informasi yang terbaru. Selain itu, semakin tinggi massa jenis benda yang terkena gelombang ultrasonik, semakin kuat reaksinya, yang reaksinya kuat ditampilkan dalam warna merah atau oranye, dan yang reaksinya lemah ditampilkan dalam warna biru atau hijau. Oleh karena itu, dimungkinkan untuk menilai jumlah dan ukuran ikan dengan melihat kekuatan reaksi (warna). Dalam gambar, kawanan ikan ditampilkan seperti tumpukan awan yang mengambang di langit, dan seekor ikan ditampilkan dalam bentuk bumerang (\"∧\")."
+      },
+      {
+       "p": "Reaksi berlapis pada bagian paling atas layar menunjukkan permukaan laut. Di ujung kanan gambar, terdapat skala yang menunjukkan kedalaman air, yang dapat digunakan untuk menilai kedalaman air pada reaksi."
+      },
+      {
+       "p": "Permukaan laut kumpulan ikan kumpulan ikan kumpulan ikan dasar laut Gambar 25: Detektor kawanan ikan"
+      },
+      {
+       "h": "(2) Koukai purotta・Gyorou purotta (Plotter bahari dan plotter penangkapan ikan)"
+      },
+      {
+       "p": "Secara tradisional, kapal secara teratur akan mencatat posisi mereka sendiri pada peta laut dan menggunakan informasi tersebut untuk navigasi dan penangkapan ikan (operasi). Saat ini, dengan kemajuan IT, plotter laut seperti yang ada pada Gambar 26 digunakan. Plotter memiliki bagan elektronik bawaan, dan dengan memasukkan informasi GPS (posisi) dan informasi radar sebagai Gambar 26 Plotter konversi informasi elektronik tentang kapal, posisi kapal (Foto: Perusahaan tenaga listrik) dapat ditampilkan di layar gambar bagan plotter. Hal ini memungkinkan untuk memahami hubungan dengan daratan dan kapal lainnya (Gambar 27). Saat menggunakan plotter untuk menangkap ikan, dapat dengan bebas menampilkan dan menyimpan penanda di layar gambar plotter, yang memungkinkan untuk melacak area berbahaya dan operasi penangkapan ikan. Lebih jauh lagi, dengan memanfaatkan data dari pencari ikan dan sonar, Gambar 27 Video plotter dapat digunakan dalam industri perikanan (Foto: Perusahaan tenaga listrik) sebagai pelacak informasi perikanan. Misalnya, seperti yang ditunjukkan pada diagram plotter pada Gambar 28, pergerakan kapal sendiri dapat dilihat dari jejaknya, dan pergerakan kapal lainnya dapat dilihat, seperti Kapal A yang sedang berlabuh, Kapal BCD yang sedang berlayar, dan Kapal D yang sedang cepat. Dengan menandai lokasi lokasi pemancingan atau rintangan masa lalu, kita dapat menggunakan penanda cincin jarak untuk mengukur jarak ke sana (2 mil). C B D A Legenda Posisi kapal: 42°＊＊’N ：K a p a l l a i n ：J ejak pelayaran 144°＊＊’BT kapal sendiri Kecepatan: 12kn ：K a p a l b er g e ra k ：R intangan/ (jejak selama 2 menit) hambatan Jarak Jangkauan Cincin: 2nm ：P osisi operasi Gambar 28. Diagram skematik dari plotter laut"
       }
      ],
      "jp": [
       {
-       "h": "なぜロープワークが{大切|たいせつ}か"
+       "h": "１４．{釣針|つりばり}"
       },
       {
-       "p": "{船|ふね}では、ロープで{船|ふね}をとめたり、{道具|どうぐ}をしばったり、{網|あみ}をひいたりします。{結|むす}び{方|かた}をまちがえると、ほどけたり、あけられなくなったりします。よい{結|むす}びは**{強|つよ}く、ほどけにくく、すぐほどける**{結|むす}びです。"
+       "p": "{日本|にほん}では{魚|さかな}の{種類|しゅるい}や{大|おお}きさにちもと"
       },
       {
-       "h": "{基本|きほん}の{結|むす}び{方|かた}"
+       "p": "けん{合|あ}わせて{数多|かずおお}くの{釣針|つりばり}が{作|つく}られ{使|つか}はら"
       },
       {
-       "ul": [
-        "**もやい{結|むす}び**：{小|ちい}さくならない{輪|わ}をつくる。{船|ふね}をつなぐときに{使|つか}う。{強|つよ}くひいても、あとでほどける。",
-        "**{本|ほん}{結|むす}び**：{同|おな}じ{太|ふと}さのロープ2{本|ほん}をつなぐ。{重|おも}いものや、すべりやすいロープには{向|む}かない。",
-        "**{一重|ひとえ}{継|つ}ぎ**：{太|ふと}さがちがうロープ2{本|ほん}をつなぐ。",
-        "**{巻|ま}き{結|むす}び**：{柱|はしら}やてすりにロープをすぐに{結|むす}ぶ。",
-        "**8の{字|じ}{結|むす}び**：ロープの{先|さき}がぬけないようにする{止|と}め{結|むす}び。"
-       ]
+       "p": "はりさきふところわれている。{基本的|きほんてき}な{釣針|つりばり}の{構造|こうぞう}せ"
       },
       {
-       "h": "ロープの{安全|あんぜん}ルール"
+       "p": "かえしどう（じく）および{各部名称|かくぶめいしょう}は、{図|ず}２２の{通|とお}り。"
       },
       {
-       "ul": [
-        "ロープを{手|て}や{足|あし}に{巻|ま}かない。",
-        "しまる{輪|わ}のなかに{立|た}たない。",
-        "ぴんと{張|は}ったロープのまっすぐ{前|まえ}に{立|た}たない。{切|き}れると**{跳|は}ね{返|かえ}り**があり、あぶない。",
-        "{古|ふる}い、{毛羽立|けばだ}った、カビのあるロープは{点検|てんけん}してかえる。"
-       ]
+       "p": "こしまげ"
+      },
+      {
+       "p": "さきまげ（１）ハリスと{結|むす}び{方|かた}{釣針|つりばり}に{結|むす}ぶ{細|ほそ}めの{糸類|いとるい}をハリス（{先糸|さきいと}）と{呼|よ}ぶ。{釣針|つりばり}と{幹縄|みきなわ}あるいは{枝縄|えだなわ}をかいして{幹縄|みきなわ}に{繋|つな}ぐ{役割|やくわり}を{果|は}たす。{対象魚類|たいしょうぎょるい}が、いしだい、ふぐ{類|るい}、たちうおのような{歯|は}が{鋭|するど}い{魚|さかな}の{場合|ばあい}は、{金属|きんぞく}の{針金|はりがね}（ワイヤー）{類|るい}が{使|つか}われる。この{場合|ばあい}、{釣|つ}り{針|ばり}に{近|ちか}い{部分|ぶぶん}（10～30cm）を{針金|はりがね}にして、それに{続|つづ}けてナイロンテグスを{繋|つな}げて{全体|ぜんたい}としてハリスとする。{釣針|つりばり}とテグスの{結|むす}び{方|かた}は、{多|おお}いが{簡単|かんたん}な{釣針|つりばり}の{結|むす}び{方|かた}を{図|ず}２３に{示|しめ}す。（２）よりもどしの{結|むす}び{方|かた}よりもどしは{幹縄|みきなわ}、{枝縄|えだなわ}およびハリスに{撚|よ}りが{入|はい}るのを{防止|ぼうし}する{部品|ぶひん}。{通常大|つうじょうおお}きなものはよりもどし、{小|ちい}さいものはサルカンと{呼|よ}ばれる。よりもどしとテグスの{簡単|かんたん}な{結|むす}び{方|かた}を{図|ず}２４に{示|しめ}す。"
+      },
+      {
+       "p": "ぱろまーのっと"
+      },
+      {
+       "p": "りょうしむすび"
+      },
+      {
+       "h": "１５．{漁労機|ぎょろうき}{器|き}"
+      },
+      {
+       "p": "{現在|げんざい}の{漁船|ぎょせん}は、{機械化|きかいか}が{進|すす}められ、{少|すく}ない{乗組員|のりくみいん}で{大|おお}きな{漁具|ぎょぐ}を{使|つか}い{効率化|こうりつか}が{図|はか}られている。デリック、クレーン、キャプスタン{等|んなど}は{比較的共通|ひかくてききょうつう}して{搭載|とうさい}されているが、{主体|しゅたい}の{漁労機|ぎょろうき}{器|き}は、{漁業種類|ぎょぎょうしゅるい}により{異|こと}なり、{主|おも}なものは{次|つぎ}の{通|とお}りである。{延縄漁業|はえなわぎょぎょう}（１）ラインホーラー({揚|あ}げ{縄機|なわき})"
+      },
+      {
+       "p": "{延縄|はえなわ}の{幹縄|みきなわ}を{巻上|まきあ}げる{機械|きかい}（２）{枝縄巻|えだなわま}き{取|と}り{機|き}"
+      },
+      {
+       "p": "{延縄|はえなわ}の{枝縄|えだなわ}を{巻|ま}き{取|と}りコイル{状|こいるじょう}にする{機械|きかい}（３）{投縄機|なげなわき}"
+      },
+      {
+       "p": "{延縄|はえなわ}の{枝縄|えだなわ}をとりつけた{幹縄|みきなわ}を{船|ふね}から{投|な}げ{飛|と}ばす{機械|きかい}。{刺|さ}し{網漁業|あみぎょぎょう}（１）{揚網機|ようもうき}"
+      },
+      {
+       "p": "{刺|さ}し{網|あみ}を{巻上|まきあ}げる{機械|きかい}。{浮|あ}{子側|ばがわ}と{沈|い}{子側|わがわ}を{別々|べつべつ}に{揚|あ}げるのが{一般的|いっぱんてき}だが、まとめて{揚|あ}げることもある。（２）{送網管|そうもうかん}"
+      },
+      {
+       "p": "{船上|せんじょう}へ{揚|あ}げた{刺|さ}し{網|あみ}を{艫側|ともがわ}の{収納場所|しゅうのうばしょ}へ{移送|いそう}するためのパイプ。（３）{刺|さ}し{網|あみ}の{収納場所|しゅうのうばしょ}と{製反|せいたん}のための{網捌機|あみさばきき}（ネットキャリアー）。かつお{一本釣|いっぽんづ}り{漁業|ぎょぎょう}（１）{散水装置|さんすいそうち}"
+      },
+      {
+       "p": "かつおを{集魚|しゅうぎょ}・とどまらせるための{散水機械|さんすいきかい}まき{網漁業|あみぎょぎょう}（１）{揚網機|ようもうき}（ネットホーラー）"
+      },
+      {
+       "p": "まき{網|あみ}を{揚|あ}げる{機械|きかい}（２）{環巻|かんまきう}ウインチ（パースウインチ）"
+      },
+      {
+       "p": "まき{網|あみ}の{網裾|あみすそ}を{締|し}めるためのワイヤーを{巻上|まきあ}げるウインチ（３）{環巻|かんまきだ}ダビッド"
+      },
+      {
+       "p": "{網裾|あみすそ}を{締|し}めるためのワイヤーを{吊上|つりあ}げるダビッド（４）{網|あみ}を{捌|さば}くパワーブロック"
+      },
+      {
+       "p": "{網揚機|ようもうき}（ネットホーラー）で{揚|あ}げた{網|あみ}を{吊上|つりあ}げて{製反作業|せいたんさぎょう}に{使|つか}う{機械|きかい}（５）サイドローラー"
+      },
+      {
+       "p": "{網|あみ}を{甲板|こうはん}に{揚|あ}げるために{使|つか}う{舷側|げんがわ}に{取|と}り{付|つ}けた{回転|かいてん}する{棒状|ぼうじょう}の{網揚機|ようもうき}{底曳網漁業|そこびきあみぎょぎょう}（１）{曳索|えいさく}（ワープ）ウインチ（ワープウインチ）"
+      },
+      {
+       "p": "{網|あみ}を{曳|ひ}く{曳索|えいさく}（ワープ）あるいは{曳綱|ひきづな}を{巻|ま}き{込|こ}むウインチ（２）オッターボード"
+      },
+      {
+       "p": "{網口|あみぐち}を{拡|ひろ}げる{拡網板|かくもうばん}（３）{網|あみ}のグランドいか{釣|つ}り{漁業|ぎょぎょう}（１）{自動|じどう}いか{釣|つ}り{機|き}"
+      },
+      {
+       "p": "{複数|ふくすう}のいか{釣具|つりぐ}が{付|つ}いたテグスを{海中|かいちゅう}に{吊下|つりさ}げ、{自動的|じどうてき}に{上下|じょうげ}させていかを{漁獲|ぎょかく}する{機械|きかい}（２）{集魚灯|しゅうぎょとう}"
+      },
+      {
+       "p": "いかを{集魚|しゅうぎょ}する{電灯|でんとう}{定置網漁業|ていちあみぎょぎょう}（１）ボールローラー（キャッチホーラー）"
+      },
+      {
+       "p": "{定置網|ていちあみ}の{箱網|はこあみ}を{絞|しぼ}るときに{使|つか}う2{個|こ}の{回転|かいてんぼ}ボールで{網|あみ}を{挟|はさ}んで{揚網|ようもう}する{機械|きかい}（２）ロープ{巻|ま}き{上|あ}げローラー（{立|た}てローラー）、{定置網|ていちあみ}の{箱網|はこあみ}を{絞|しぼ}るときに{使|つか}う{網|あみ}に{取付|とりつ}けた{引揚|ひきあ}げロープを{巻上|まきあ}げるローラーかご{漁業|ぎょぎょう}（１）{揚|あ}げ{縄機|なわき}かごが{取|と}り{付|つ}けられている{幹縄|みきなわ}を{巻上|まきあ}げる{機械|きかい}{棒受網漁業|ぼううけあみぎょぎょう}（１）{多段式巻上|ただんしきまきあげう}ウインチ{網|あみ}の{下側|したがわ}に{取|と}り{付|つ}けた{引揚|ひきあ}げ{綱|つな}（ワイヤー）を{同時|どうじ}に{巻上|まきあ}げる{機械|きかい}（２）{向竹|むかいたけ}{網|あみ}を{吊下|つりさ}げるパイプ（{竹|たけ}・ポール）（３）{集魚灯竿|しゅうぎょとうさお}{魚|さかな}を{集魚|しゅうぎょ}するための{灯|あか}りを{取|と}り{付|つ}けた{竿|さお}"
+      },
+      {
+       "h": "１６．{漁業計測機器|ぎょぎょうけいそくきき}"
+      },
+      {
+       "p": "（１）{魚群探知機|ぎょぐんたんちき}"
+      },
+      {
+       "p": "{魚群探知機|ぎょぐんたんちき}（{魚探|ぎょたん}）とは、{水中|すいちゅう}に{超音波|ちょうおんぱ}を{発射|はっしゃ}し、その{超音波|ちょうおんぱ}が{物体|ぶったい}に{当|あ}たり{反射|はんしゃ}することで{魚群|ぎょぐん}の{位|い}{置|ち}や{大|おお}きさ、{水深|すいしん}、{海底|かいてい}の{様子|ようす}などを{画像上|がぞうじょう}に{映|うつ}し{出|だ}す{電子|でんし}{機|き}{器|き}である。{魚探画像|ぎょたんがぞう}は{画面|がめん}に{向|む}かってスケール（{深|ふか}さの{目盛|めもり}）のある{側|がわ}から{反対方向|はんたいほうこう}へ{動|うご}き、スケールのある{側|がわ}が{一番新|いちばんあたら}しい{情報|じょうほう}となる。"
+      },
+      {
+       "p": "また、{超音波|ちょうおんぱ}が{当|あ}たる{物体|ぶったい}の{密度|みつど}が{高|たか}いほど{反応|はんのう}が{強|つよ}くなり、{反応|はんのう}が{強|つよ}いものは{赤色|あかいろ}やオレンジ{色|じいろ}で、{弱|よわ}い{反応|はんのう}は{青色|あおいろ}や{緑色|みどりいろ}で{表示|ひょうじ}される。そのため、{反応|はんのう}の{強|つよ}さ（{色|いろ}）で{魚|さかな}の{量|りょう}や{大|おお}きさを{判断|はんだん}することができる。{画像|がぞう}の{中|なか}で{魚群|ぎょぐん}は{空|そら}に{浮|う}かぶ{雲|くも}のような{塊|かたまり}で、{一匹|いっぴき}の{魚|さかな}はブーメラン（「∧」）のような{形|かたち}で{表示|ひょうじ}される。"
+      },
+      {
+       "p": "また、{画面一番上|がめんいちばんうえ}の{層状|そうじょう}の{反応|はんのう}は{海面|かいめん}を{示|しめ}している。{画像右端|がぞうみぎはし}には{水深|すいしん}を{示|しめ}す{目|め}{盛|も}りがあり、これを{利用|りよう}して{反応|はんのう}の{水深|すいしん}を{判断|はんだん}することができる。"
+      },
+      {
+       "p": "{図|ず}２５{魚群探知機|ぎょぐんたんちき}（２）{航海|こうかいぷ}プロッター・{漁労|ぎょろうぷ}プロッター"
+      },
+      {
+       "p": "{従来|じゅうらい}は、{定期的|ていきてき}に{海図|かいず}に{自船|じせん}の{位|い}{置情報|ちじょうほう}を{記入|きにゅう}して{航海|こうかい}や{漁労|ぎょろう}（{操業|そうぎょう}）に{利用|りよう}していた。{現在|げんざい}はIT{化|か}が{進|すす}み、{図|ず}２６のような{航海|こうかい}プロッターが使われている。プロッターには{電子|でんし}{海図|かいず}が{組|く}み{込|こ}まれており、これに{自船|じせん}の{電子情報|でんしじょうほう}として、GPS（{位|い}{置|ち}）{情報|じょうほう}、レーダー{情報|ーじょうほう}を{取|と}"
+      },
+      {
+       "p": "{図|ず}２６{航海|こうかいぷ}プロッターり{込|こ}むことでプロッターの{海図映像画面上|かいずえいぞうがめんじょう}に{自船|じせん}（{写真提供|しゃしんていきょう}：{古野電気株式会社|ふるのでんきかぶしきがいしゃ}）{位|い}{置|ち}を{表示|ひょうじ}することができる。これにより、{陸岸|りくがん}や{他船|たせん}との{関係|かんけい}を{把握|はあく}することができる（{図|ず}２７）。プロッターを{漁労|ぎょろう}に{使|つか}う{時|とき}には、プロッター{映像画面上|えいぞうがめんじょう}に{自由|じゆう}にマーカーを{表示|ひょうじ}・{記憶|きおく}させることで、{危険場所|きけんばしょ}や{操業記録|そうぎょうきろく}を{保|ほ}{持|じ}することができる。{更|さら}に、{魚探|ぎょたん}やソナーなどのデータを{利用|りよう}することで{漁労情報|ぎょろうじょうほう}プロッターとして{漁業|ぎょぎょう}に{利用|りよう}されている。{例|たと}え"
+      },
+      {
+       "p": "{図|ず}２７プロッター{映像|ーえいぞう}ば、{図|ず}２８に{示|しめ}すプロッター{模式図|もしきず}に{見|み}るよう（{写真提供|しゃしんていきょう}：{古野電気株式会社|ふるのでんきかぶしきがいしゃ}）に{自船|じせん}がどのように{動|うご}いてきたか{航跡|こうせき}から{分|わ}かり、A{船|せん}は{停泊中|ていはくちゅう}、BCD{船|せん}は{航行中|こうこうちゅう}で、D{船|せん}が{速|はや}いなどの{他船|たせん}の{動|うご}きが{分|わ}かる。{過|か}{去|こ}に{操業|そうぎょう}した{場所|ばしょ}や{障害物|しょうがいぶつ}の{位|い}{置|ち}をマークしておけば、{距離環|きょりわ}マーカーを{使|つか}い、それらまでの{距離|きょり}が2マイル（{浬|り}）であることを{測|はか}ることもできる。"
+      },
+      {
+       "p": "C"
+      },
+      {
+       "p": "BD"
+      },
+      {
+       "p": "A船位：42゜＊＊’Nマーカー"
+      },
+      {
+       "p": "144゜＊＊’E"
+      },
+      {
+       "p": "：{他船|たせん}：{自船航跡|じせんこうせき}{速度|そくど}：12kn{距離環|きょりかんれ}レンジ：：{移動船|いどうせん}（2{分間軌跡|ふんかんきせき}）：{障害物|しょうがいぶつ}"
+      },
+      {
+       "p": "2nm"
+      },
+      {
+       "p": "：{操業位|そうぎょうい}{置|ち}"
+      },
+      {
+       "p": "{図|ず}２８{航海|こうかいぷ}プロッター{映像|ーえいぞう}の{模式図|もしきず}"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Pilih simpul sesuai tujuan; jangan berdiri di garis tali yang tegang.",
+      "core": "Kail punya bagian bernama; senar (ハリス) menghubungkan kail ke tali. Kili-kili (より戻し) mencegah tali terpelintir. Mesin tangkap berbeda per jenis perikanan.",
       "points": [
-       "もやい結び = lingkaran tetap untuk menambat.",
-       "本結び = sambung tali sama besar.",
-       "一重継ぎ = tali beda ukuran.",
-       "巻き結び = ikat ke tiang; 8の字結び = penahan."
+       "Ikan bergigi tajam → senar kawat.",
+       "より戻し besar/kecil (さる環) mencegah tali terpilin.",
+       "ライン ホーラー = penarik tali utama longline; ネット ホーラー = penarik jaring insang."
       ],
       "avoid": [
-       "Memakai 本結び untuk beban berat.",
-       "Berdiri di depan tali tegang."
+       "Memasang kili-kili sembarangan sehingga tali kusut."
       ],
       "exam": [
-       "Nama simpul dan gunanya.",
-       "Posisi aman dekat tali tegang."
+       "Fungsi ハリス dan より戻し."
       ]
      },
      "jp": {
-      "core": "{目的|もくてき}にあう{結|むす}びを{選|えら}ぶ。{張|は}ったロープの{線上|せんじょう}に{立|た}たない。",
+      "core": "{釣針|つりばり}の{部分|ぶぶん}の{名|な}{前|まえ}、ハリス、よりもどし、{漁労機|ぎょろうき}{器|き}の{種類|しゅるい}。",
       "points": [
-       "もやい{結|むす}び＝つなぐ{輪|わ}。",
-       "{本|ほん}{結|むす}び＝{同|おな}じ{太|ふと}さをつなぐ。",
-       "{一重|ひとえ}{継|つ}ぎ＝ちがう{太|ふと}さをつなぐ。",
-       "{巻|ま}き{結|むす}び＝{柱|はしら}に{結|むす}ぶ。8の{字|じ}＝{止|と}め{結|むす}び。"
+       "{歯|は}がするどい{魚|さかな}には、ワイヤーのハリスを{使|つか}う。",
+       "より{戻|もど}しは{糸|いと}がねじれるのをふせぐ。",
+       "ラインホーラーは{幹縄|みきなわ}をひく{機械|きかい}。"
       ],
       "avoid": [
-       "{本|ほん}{結|むす}びで{重|おも}いものを{引|ひ}くこと。",
-       "{張|は}ったロープの{前|まえ}に{立|た}つこと。"
+       "より{戻|もど}しをつけずに{糸|いと}をからませること。"
       ],
       "exam": [
-       "{結|むす}びの{名前|なまえ}とつかい{方|かた}。",
-       "{張|は}ったロープのまわりで{安全|あんぜん}な{位置|いち}。"
-      ]
-     }
-    }
-   },
-   {
-    "id": "b1s7",
-    "no": 7,
-    "title": {
-     "id": "Jaring dan Alat Tangkap Dasar",
-     "jp": "{網|あみ}と{漁具|ぎょぐ}の{基礎|きそ}"
-    },
-    "pages": [
-     1,
-     1
-    ],
-    "full": {
-     "id": [
-      {
-       "h": "Bagian jaring"
-      },
-      {
-       "ul": [
-        "**Kain jaring (網地)**: bagian berlubang yang menahan ikan.",
-        "**Pelampung (浮き)**: membuat bagian atas jaring mengapung.",
-        "**Pemberat (おもり／沈子)**: membuat bagian bawah jaring tenggelam.",
-        "**Mata jaring (目合)**: ukuran lubang. Mata kecil menangkap ikan kecil juga, sehingga ada aturan ukuran mata."
-       ]
-      },
-      {
-       "h": "Jenis alat tangkap"
-      },
-      {
-       "ul": [
-        "**Jaring insang (刺網)**: dipasang tegak; ikan tersangkut di mata jaring.",
-        "**Pukat cincin (巻網)**: melingkari kawanan ikan lalu mengerutkan bagian bawah.",
-        "**Pukat tarik dasar (底びき網)**: ditarik kapal di dasar laut.",
-        "**Jaring tetap (定置網)**: dipasang di tempat tertentu dan ikan masuk sendiri.",
-        "**Pancing (釣り)**: memakai mata pancing (釣り針), tali (釣り糸), dan umpan (餌).",
-        "**Bubu (かご・つぼ)**: perangkap untuk kepiting, gurita, dan sebagainya."
-       ]
-      },
-      {
-       "h": "Merawat alat tangkap"
-      },
-      {
-       "ol": [
-        "Setelah dipakai, bilas dari lumpur dan sisa ikan.",
-        "Periksa robekan; **perbaiki jaring (網の補修)** dengan jarum jaring dan benang.",
-        "Keringkan dan simpan di tempat yang tidak terkena matahari langsung.",
-        "Jangan membuang jaring atau tali bekas ke laut karena mencemari dan bisa menjerat makhluk laut."
-       ]
-      }
-     ],
-     "jp": [
-      {
-       "h": "{網|あみ}の{部分|ぶぶん}"
-      },
-      {
-       "ul": [
-        "**{網地|あみじ}**：あみの、あなのあいた{部分|ぶぶん}。",
-        "**{浮|う}き**：{網|あみ}の{上|うえ}をうかせる。",
-        "**おもり（{沈子|ちんし}）**：{網|あみ}の{下|した}をしずめる。",
-        "**{目合|めあい}**：あなの{大|おお}きさ。{小|ちい}さいと{小|ちい}さい{魚|さかな}もとれるので、ルールがあります。"
-       ]
-      },
-      {
-       "h": "{漁具|ぎょぐ}の{種類|しゅるい}"
-      },
-      {
-       "ul": [
-        "**{刺網|さしあみ}**：{立|た}てておき、{魚|さかな}が{網|あみ}の{目|め}にかかる。",
-        "**{巻網|まきあみ}**：{魚|さかな}の{群|む}れをぐるっとかこんで、{下|した}をしぼる。",
-        "**{底|そこ}びき{網|あみ}**：{船|ふね}が{海|うみ}の{底|そこ}をひく。",
-        "**{定置網|ていちあみ}**：{決|き}まった{場所|ばしょ}において、{魚|さかな}が{入|はい}る。",
-        "**{釣|つ}り**：**{釣|つ}り{針|ばり}**、**{釣|つ}り{糸|いと}**、**{餌|えさ}**を{使|つか}う。",
-        "**かご・つぼ**：カニやタコなどを{入|い}れる{入|い}れ{物|もの}。"
-       ]
-      },
-      {
-       "h": "{漁具|ぎょぐ}の{手|て}{入|い}れ"
-      },
-      {
-       "ol": [
-        "{使|つか}ったあとは、どろや{魚|さかな}のかすを{水|みず}で{洗|あら}う。",
-        "やぶれを{点検|てんけん}して、**{網|あみ}の{補修|ほしゅう}**（{網|あみ}をつくろう）をする。",
-        "かわかして、{日光|にっこう}があたらない{所|ところ}にしまう。",
-        "{古|ふる}い{網|あみ}やロープを{海|うみ}にすてない。{海|うみ}をよごし、{生|い}き{物|もの}がからまるからです。"
-       ]
-      }
-     ]
-    },
-    "summary": {
-     "id": {
-      "core": "Jaring = kain, pelampung, pemberat; pilih alat sesuai ikan dan rawat setelah dipakai.",
-      "points": [
-       "浮き di atas, おもり di bawah.",
-       "Mata jaring (目合) diatur aturan.",
-       "刺網, 巻網, 底びき網, 定置網, 釣り, かご.",
-       "Jangan buang jaring bekas ke laut."
-      ],
-      "avoid": [
-       "Membuang jaring rusak ke laut."
-      ],
-      "exam": [
-       "Nama bagian jaring.",
-       "Cara kerja tiap alat tangkap."
-      ]
-     },
-     "jp": {
-      "core": "{網|あみ}は{網地|あみじ}・{浮|う}き・おもりでできている。{漁具|ぎょぐ}は{魚|さかな}にあわせて{選|えら}び、{手|て}{入|い}れする。",
-      "points": [
-       "{浮|う}きは{上|うえ}、おもりは{下|した}。",
-       "{目合|めあい}にはルールがある。",
-       "{刺網|さしあみ}・{巻網|まきあみ}・{底|そこ}びき{網|あみ}・{定置網|ていちあみ}・{釣|つ}り・かご。",
-       "{古|ふる}い{網|あみ}を{海|うみ}にすてない。"
-      ],
-      "avoid": [
-       "こわれた{網|あみ}を{海|うみ}にすてること。"
-      ],
-      "exam": [
-       "{網|あみ}の{部分|ぶぶん}の{名前|なまえ}。",
-       "{漁具|ぎょぐ}ごとのしくみ。"
-      ]
-     }
-    }
-   },
-   {
-    "id": "b1s8",
-    "no": 8,
-    "title": {
-     "id": "Cuaca, Ombak, dan Keputusan Melaut",
-     "jp": "{天気|てんき}と{海|うみ}の{知識|ちしき}"
-    },
-    "pages": [
-     1,
-     1
-    ],
-    "full": {
-     "id": [
-      {
-       "h": "Hal yang perlu diketahui"
-      },
-      {
-       "ul": [
-        "**Angin (風)**: arah (風向) dan kecepatan (風速).",
-        "**Ombak (波)**: tinggi ombak disebut 波高. **Ombak angin (風浪)** dibuat angin setempat; **gelombang jauh (うねり)** datang dari badai yang jauh, panjang dan bisa datang walau cuaca tampak tenang.",
-        "**Pasang surut (潮)**: pasang tinggi (満潮) dan surut (干潮); arus (潮流) mempengaruhi alat tangkap dan kapal.",
-        "**Topan (台風)** dan **kabut (霧)**: sangat berbahaya, jarak pandang (視界) turun."
-       ]
-      },
-      {
-       "h": "Sumber informasi"
-      },
-      {
-       "p": "**Badan Meteorologi Jepang (気象庁)**, peta cuaca (天気図), prakiraan laut, peringatan (注意報・警報), dan radio nelayan (漁業無線)."
-      },
-      {
-       "h": "Memutuskan berangkat atau tidak (出漁判断)"
-      },
-      {
-       "ol": [
-        "Cek prakiraan angin, ombak, dan peringatan.",
-        "Kapten memutuskan berdasarkan keselamatan, bukan hasil tangkapan.",
-        "Jika kondisi memburuk, **pulang lebih awal (早めの帰港)**.",
-        "Awak boleh dan harus menyampaikan kekhawatiran kepada kapten."
-       ]
-      },
-      {
-       "note": "Ikan yang hilang bisa dicari lagi besok. Nyawa tidak."
-      }
-     ],
-     "jp": [
-      {
-       "h": "{知|し}っておくこと"
-      },
-      {
-       "ul": [
-        "**{風|かぜ}**：**{風向|ふうこう}**（むき）と**{風速|ふうそく}**（はやさ）。",
-        "**{波|なみ}**：{波|なみ}の{高|たか}さは**{波高|はこう}**。**{風浪|ふうろう}**はその{場|ば}の{風|かぜ}でできる{波|なみ}。**うねり**は{遠|とお}くの{嵐|あらし}からくる、{長|なが}い{波|なみ}で、{天気|てんき}がよく{見|み}えてもきます。",
-        "**{潮|しお}**：**{満潮|まんちょう}**と**{干潮|かんちょう}**。**{潮流|ちょうりゅう}**は{船|ふね}や{漁具|ぎょぐ}にえいきょうします。",
-        "**{台風|たいふう}**と**{霧|きり}**：とてもあぶない。{霧|きり}で**{視界|しかい}**（{見|み}える{範囲|はんい}）がせまくなる。"
-       ]
-      },
-      {
-       "h": "{情報|じょうほう}の{入手|にゅうしゅ}"
-      },
-      {
-       "p": "**{気象庁|きしょうちょう}**、**{天気図|てんきず}**、{海|うみ}の{予報|よほう}、**{注意報|ちゅういほう}・{警報|けいほう}**、**{漁業無線|ぎょぎょうむせん}**で{調|しら}べます。"
-      },
-      {
-       "h": "{出|で}るか{出|で}ないか（{出漁判断|しゅつりょうはんだん}）"
-      },
-      {
-       "ol": [
-        "{風|かぜ}、{波|なみ}、{警報|けいほう}の{予報|よほう}を{確認|かくにん}する。",
-        "{船長|せんちょう}は、{魚|さかな}のりょうではなく、{安全|あんぜん}を{第一|だいいち}に{決|き}める。",
-        "{天気|てんき}が{悪|わる}くなったら、**{早|はや}めに{帰港|きこう}**する。",
-        "{乗組員|のりくみいん}は、{不安|ふあん}なことを{船長|せんちょう}につたえてよい。つたえるべきです。"
-       ]
-      },
-      {
-       "note": "{魚|さかな}はまたあした{探|さが}せます。{命|いのち}はもどりません。"
-      }
-     ]
-    },
-    "summary": {
-     "id": {
-      "core": "Keselamatan lebih penting daripada hasil tangkapan; pulang lebih awal jika cuaca memburuk.",
-      "points": [
-       "風浪 = ombak angin lokal; うねり = gelombang dari badai jauh.",
-       "満潮 = pasang; 干潮 = surut.",
-       "Info: 気象庁, 天気図, 注意報・警報.",
-       "Keputusan melaut oleh kapten, dengan prioritas keselamatan."
-      ],
-      "avoid": [
-       "Memaksa melaut karena takut rugi."
-      ],
-      "exam": [
-       "Beda 風浪 dan うねり.",
-       "Tindakan jika cuaca memburuk."
-      ]
-     },
-     "jp": {
-      "core": "{安全|あんぜん}が{第一|だいいち}。{天気|てんき}が{悪|わる}くなったら{早|はや}めに{帰|かえ}る。",
-      "points": [
-       "{風浪|ふうろう}＝その{場|ば}の{風|かぜ}の{波|なみ}。うねり＝{遠|とお}くの{嵐|あらし}の{波|なみ}。",
-       "{満潮|まんちょう}＝{高|たか}い、{干潮|かんちょう}＝{低|ひく}い。",
-       "{気象庁|きしょうちょう}・{天気図|てんきず}・{警報|けいほう}。",
-       "{出漁|しゅつりょう}は{船長|せんちょう}が{安全|あんぜん}を{第一|だいいち}に{決|き}める。"
-      ],
-      "avoid": [
-       "{損|そん}をしたくなくて{無理|むり}に{出|で}ること。"
-      ],
-      "exam": [
-       "{風浪|ふうろう}とうねりのちがい。",
-       "{天気|てんき}が{悪|わる}いときの{行動|こうどう}。"
+       "ハリスとより{戻|もど}しのはたらき。"
       ]
      }
     }
