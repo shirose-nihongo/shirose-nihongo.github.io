@@ -199,7 +199,7 @@ async function tarikLokal(n) {
   const unl = !!(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins());
   const g = (await FB.getGachaState()) || { sinceEpic: 0, sinceLegend: 0, inv: [] };
   let saldo = null;
-  if (!unl) { saldo = await FB.tambahKoin(-price, "gacha x" + n); if (saldo === null) throw new Error("Dompet belum siap, coba lagi"); }
+  if (!unl) { saldo = await FB.tambahKoin(-price, "gacha x" + n); if (saldo === null) throw new Error("Dompet belum siap" + (FB.walletError && FB.walletError() ? " (" + FB.walletError() + ")" : "") + (/permission|denied/i.test(FB.walletError ? FB.walletError() : "") ? " — akun belum terdaftar/aktif, hubungi guru" : ", coba lagi")); }
   const own = Array.from(new Set([...(g.inv || []), ...(FB.ownedShopIds ? FB.ownedShopIds() : [])]));
   const r = rollMany(n, { sinceEpic: g.sinceEpic || 0, sinceLegend: g.sinceLegend || 0 }, own, undefined, unl ? CONFIG_FREE : CONFIG);
   const kind = Object.fromEntries(ITEMS.map(x => [x.id, x.kind]));

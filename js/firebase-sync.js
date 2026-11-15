@@ -461,7 +461,8 @@ export async function equipItem(kategori, itemId) {
  * Jika dompet tidak bisa diakses (rules/jaringan) → kembali ke perilaku lama per level, tidak ada koin hilang.
  * Log transaksi: siswa/{uid}/wallet_log/{id} (best-effort). */
 const WALLET_LVLS = ["n5","n4","n3","n2","n1","ir0","ir1","ir2"];
-let _walletOff = false;
+let _walletOff = false, _walletErr = "";
+export function walletError() { return _walletErr; }
 async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   const uid = currentUser.uid, wref = doc(db, "siswa", uid, "wallet", "main");
   const grefs = WALLET_LVLS.map(l => doc(db, "siswa", uid, "gami", l));
@@ -478,13 +479,16 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   return out;
 }
 export async function getWalletKoin() {
-  if (!currentUser || _walletOff) return null;
-  try { return await walletTx(0, ""); } catch (e) { console.warn("wallet gagal, pakai saldo per level:", e.message); _walletOff = true; return null; }
+  if (!currentUser) return null;
+  try { const k = await walletTx(0, ""); _walletOff = false; _walletErr = ""; return k; } catch (e) { console.warn("wallet gagal, pakai saldo per level:", e.message); _walletErr = e.code || e.message; _walletOff = true; return null; }
 }
 /* Tambah (atau kurangi, delta<0) koin dari fitur apa pun. Mengembalikan saldo baru atau null. */
 export async function tambahKoin(delta, alasan) {
   if (!currentUser || !delta) return null;
-  if (!_walletOff) { try { return await walletTx(delta, alasan); } catch (e) { if (/tidak cukup/i.test(e.message)) throw e; console.warn("wallet gagal:", e.message); _walletOff = true; } }
+  for (let i = 0; i < 2; i++) {   // coba lagi sekali: error jaringan sesaat tidak boleh mematikan dompet
+    try { const k = await walletTx(delta, alasan); _walletOff = false; _walletErr = ""; return k; }
+    catch (e) { if (/tidak cukup/i.test(e.message)) throw e; console.warn("wallet gagal:", e.message); _walletErr = e.code || e.message; _walletOff = true; if (/permission|denied/i.test(_walletErr)) break; await new Promise(r => setTimeout(r, 600)); }
+  }
   return null;
 }
 export async function getGachaState() {
