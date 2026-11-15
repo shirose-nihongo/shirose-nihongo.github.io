@@ -65,12 +65,12 @@ for (const lv of ["n5", "n4", "n3", "n2", "n1", "ir0", "ir1", "ir2"]) {
     ok(noVocab.length === 0, "n3: setiap Kanji utama punya minimal 1 kosakata asli");
   }
 }
-// Regresi bahasa: data JFT (A1/A2.1/A2.2) tidak boleh berisi huruf khas bahasa Vietnam
-console.log("\n=== Audit bahasa JFT ===");
+// Regresi bahasa: data JLPT & JFT tidak boleh berisi huruf khas bahasa Vietnam
+console.log("\n=== Audit bahasa (JLPT + JFT) ===");
 const VN = /[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/i;
 const scan = (o) => typeof o === "string" ? (VN.test(o) ? [o] : []) : Array.isArray(o) ? o.flatMap(scan) : o && typeof o === "object" ? Object.values(o).flatMap(scan) : [];
-for (const lv of ["ir0", "ir1", "ir2"]) for (const kind of ["kanji", "kosakata", "bunpou"]) {
-  const bad = scan(J(`data/${kind}-${lv}.json`));
+for (const lv of ["n5", "n4", "n3", "n2", "n1", "ir0", "ir1", "ir2"]) for (const kind of ["kanji", "kosakata", "bunpou"]) {
+  const bad = scan(J(`data/${kind}-${lv}.json`)).filter(t => !/Pokémon/.test(t));   // Pokémon = nama asli, bukan Vietnam
   ok(bad.length === 0, `${kind}-${lv}: tidak ada teks Vietnam${bad.length ? " (" + bad.slice(0, 3).join(" | ") + ")" : ""}`);
 }
 console.log("\nRINGKAS:\n" + summary.join("\n"));

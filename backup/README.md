@@ -25,3 +25,7 @@ Hanya field `a` yang berubah; field lain tidak disentuh.
 
 ## n3-kanji-vocab/
 Backup `index.html`, `js/kana-center.js`, `sw.js` sebelum fitur Kosakata Kanji (flashcard = kosakata contoh, Kanji = indeks).
+
+## jlpt-sisa-vietnam/
+Backup `kanji-n1`, `kanji-n3`, `kosakata-n2`, `kosakata-n5` sebelum 5 sisa teks Vietnam/salah ketik dirapikan
+("secara đồng thời" dihapus; "rõmaji" -> "romaji"). Hanya 5 field yang berubah (15 Nov 2026).
