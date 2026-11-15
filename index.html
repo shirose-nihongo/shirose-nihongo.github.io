@@ -1435,7 +1435,7 @@ import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js
 import { allShopItems } from "./js/shop-seed.js";
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261114f";
+import * as FB from "./js/firebase-sync.js?v=20261115a";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261114f";
@@ -1443,13 +1443,15 @@ import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTer
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
-import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115a";
+import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115a";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
 // MENSETSU 面接: simulasi wawancara kerja Jepang 8 bidang SSW (js/mensetsu.js)
 initMensetsu(FB);
+initGacha(FB);
 initJft(FB, (t, l) => loadMateri(t, l));
 
 /* ========== STATE ========== */
@@ -2034,6 +2036,12 @@ function updateChips(){
   document.getElementById("chip-streak").textContent = state.gami.streak || 0;
 }
 window.awardXP = awardXP;
+/* Koin dari fitur non-JLPT (SSW / JFT / Mensetsu) → dompet tunggal. */
+window.__koinBaru = (saldo, d) => { state.gami.koin = saldo; updateChips(); toast(`+${d} 🪙`); };
+window.awardKoin = async (d, alasan) => {
+  if (!state.user || !d) return null;
+  try { const s = await FB.tambahKoin(d, alasan); if (s !== null) window.__koinBaru(s, d); return s; } catch (e) { return null; }
+};
 
 /* ========== DATA LOAD (cached) ========== */
 async function loadMateri(tipe, lvl){
@@ -2094,6 +2102,7 @@ const routes = {
   ...SSW_ROUTES,
   // MENSETSU: #mensetsu, #mensetsu-bidang/{key}, #mensetsu-bank/{key}, #mensetsu-sesi/{key}, #mensetsu-hasil/{id}, #mensetsu-riwayat
   ...MENSETSU_ROUTES,
+  ...GACHA_ROUTES,
   // JFT-Basic / Irodori (js/jft.js)
   ...JFT_ROUTES,
 };
@@ -2373,6 +2382,10 @@ function renderCharaOrbital(){
           <div class="ico">📊</div>
           <div class="info"><div class="ttl">Riwayat JLPT</div><div class="sub">Nilai &amp; grafik perkembangan</div></div>
         </div>`}
+        <div class="hub-card" onclick="route('gacha')">
+          <div class="ico">🎰</div>
+          <div class="info"><div class="ttl">Gacha</div><div class="sub">Koleksi bingkai &amp; lencana</div></div>
+        </div>
         <div class="hub-card" onclick="route('hafalan')">
           <div class="ico">🧠</div>
           <div class="info"><div class="ttl">Hafalan (SRS)</div><div class="sub">Pengulangan berjarak</div></div>

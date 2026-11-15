@@ -219,7 +219,7 @@ tr.stat-row td{padding-top:0; border-top:none;}
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script type="module">
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261113y3";
+import * as FB from "./js/firebase-sync.js?v=20261115a";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261112d";
 
 const state = {
@@ -1845,12 +1845,13 @@ window.studentProfile = async (uid) => {
   const siswa = (state.siswaList||[]).find(s => s.uid === uid);
   if (!siswa) return toast("Siswa tidak ditemukan");
   modal(`<div style="text-align:center; padding:20px;">Memuat profil...</div>`);
-  const [gami, nilai, mastery, mxHasil, kelasAkses] = await Promise.all([
+  const [gami, nilai, mastery, mxHasil, kelasAkses, dompet] = await Promise.all([
     FB.getSiswaGami(uid),
     FB.listNilaiOf(uid, 20).catch(()=>[]),
     FB.getSiswaMasteryCounts(uid).catch(()=>({})),
     FB.listHasilMensetsuOf(uid, 100).catch(()=>[]),
     FB.listKelas().catch(()=>state.kelasList||[]),
+    (FB.getWalletOf ? FB.getWalletOf(uid) : Promise.resolve(null)).catch(()=>null),
   ]);
   if (Array.isArray(kelasAkses) && kelasAkses.length) state.kelasList = kelasAkses;
   // Hasil MENSETSU siswa ini: simpan ke cache _mx agar mensetsuDetail() bisa membuka detail/transkrip.
@@ -1910,6 +1911,7 @@ window.studentProfile = async (uid) => {
       <div class="panel" style="text-align:center; padding:12px;"><div style="font-size:22px; font-weight:800; color:var(--gold);">${avgSkor}</div><div style="font-size:11px; color:var(--gray);">Rata-rata nilai</div></div>
     </div>
 
+    <p style="margin-top:12px; font-size:13px;">🪙 Dompet koin (semua fitur): <b>${dompet ? (dompet.koin||0).toLocaleString("id-ID") : "belum dimigrasi (muncul setelah siswa membuka aplikasi)"}</b></p>
     <h3 style="margin-top:14px;">Progres per Level</h3>
     <div class="table-wrap">
       <table>

@@ -376,5 +376,7 @@ export function recordQuiz(P, quizId, score, total, wrongIds) {
   q.best = Math.max(q.best, pct); q.last = pct; q.n++; q.ts = Date.now(); q.wrong = wrongIds || [];
   q.hist = [...(q.hist || []), { t: Date.now(), p: pct }].slice(-10);
   P.quiz[quizId] = q;
+  // Koin sekali per kuis saat pertama lulus (≥60%) — dompet tunggal.
+  if (pct >= 60 && !q.paid) { q.paid = 1; try { if (typeof window !== "undefined" && window.awardKoin) window.awardKoin(15, "ssw kuis " + quizId); } catch (e) {} }
   return pct;
 }

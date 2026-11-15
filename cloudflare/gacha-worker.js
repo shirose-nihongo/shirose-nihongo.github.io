@@ -1,7 +1,7 @@
 /* Gacha server — Cloudflare Worker. RNG & potong koin HANYA di server.
  * Secret/Var: FIREBASE_SA (JSON service account, secret), FIREBASE_PROJECT (id proyek), FIREBASE_API_KEY (web api key), ALLOW_ORIGIN.
- * POST /  {n:1|10, lvl:"n5"}  Authorization: Bearer <Firebase ID token>
- * Koin dipotong dari siswa/{uid}/gami/{lvl}.koin (dompet yang ada sekarang). Status gacha: siswa/{uid}/wallet/gacha.
+ * POST /  {n:1|10}  Authorization: Bearer <Firebase ID token>
+ * Koin dipotong dari dompet tunggal siswa/{uid}/wallet/main.koin. Status gacha: siswa/{uid}/wallet/gacha.
  * Setiap tarikan ditulis ke koleksi siswa/{uid}/wallet_log (jejak transaksi). ⚠ BELUM diuji ke Firebase asli — lihat docs/EKONOMI-GACHA.md.
  * Firestore Rules: klien TIDAK boleh menulis wallet/gacha & wallet_log (hanya baca). */
 import { rollMany, CONFIG } from "./gacha-core.js";
@@ -40,13 +40,14 @@ export default {
     const user = await verifyToken((req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, ""));
     if (!user) return J(401, { error: "Harus login" }, cors);
     let p; try { p = await req.json(); } catch (x) { return J(400, { error: "JSON salah" }, cors); }
-    const n = p.n === 10 ? 10 : p.n === 1 ? 1 : 0; const lvl = /^(n[1-5]|ir[0-2])$/.test(p.lvl) ? p.lvl : null;
-    if (!n || !lvl) return J(400, { error: "n harus 1/10 & lvl valid" }, cors);
+    const n = p.n === 10 ? 10 : p.n === 1 ? 1 : 0;
+    if (!n) return J(400, { error: "n harus 1 atau 10" }, cors);
     const price = n === 10 ? CONFIG.PRICE_10 : CONFIG.PRICE_1;
     try {
-      const tok = await saToken(), gp = `siswa/${user.uid}/gami/${lvl}`, wp = `siswa/${user.uid}/wallet/gacha`;
+      const tok = await saToken(), gp = `siswa/${user.uid}/wallet/main`, wp = `siswa/${user.uid}/wallet/gacha`;
       const [g, w, s] = await Promise.all([getDoc(tok, gp), getDoc(tok, wp), getDoc(tok, `siswa/${user.uid}`)]);
       const unlimited = s.fields?.permissions?.mapValue?.fields?.unlimited_coins?.booleanValue === true;
+      if (!g.updateTime) return J(409, { error: "Dompet belum siap — buka aplikasi sekali dulu" }, cors);
       const koin = num(g.fields?.koin); if (!unlimited && koin < price) return J(402, { error: "Koin tidak cukup", koin, price }, cors);
       const pity = { sinceEpic: num(w.fields?.sinceEpic), sinceLegend: num(w.fields?.sinceLegend) };
       const inv = (w.fields?.inv?.arrayValue?.values || []).map(x => x.stringValue);
@@ -55,9 +56,9 @@ export default {
       const logId = Date.now() + "-" + crypto.randomUUID().slice(0, 8);
       const pre = (d) => d.updateTime ? { updateTime: d.updateTime } : { exists: false };
       const writes = [
-        { update: { name: `${DB()}/${gp}`, fields: { ...g.fields, koin: fv(koinBaru) } }, updateMask: { fieldPaths: ["koin"] }, currentDocument: pre(g) },
+        { update: { name: `${DB()}/${gp}`, fields: { koin: fv(koinBaru) } }, updateMask: { fieldPaths: ["koin"] }, currentDocument: pre(g) },
         { update: { name: `${DB()}/${wp}`, fields: { sinceEpic: fv(r.pity.sinceEpic), sinceLegend: fv(r.pity.sinceLegend), inv: fv(r.inv) } }, currentDocument: pre(w) },
-        { update: { name: `${DB()}/siswa/${user.uid}/wallet_log/${logId}`, fields: { t: { timestampValue: new Date().toISOString() }, tipe: fv("gacha"), n: fv(n), lvl: fv(lvl), harga: fv(unlimited ? 0 : price), refund: fv(r.refund), koinSetelah: fv(koinBaru), hasil: fv(r.results) } } },
+        { update: { name: `${DB()}/siswa/${user.uid}/wallet_log/${logId}`, fields: { t: { timestampValue: new Date().toISOString() }, tipe: fv("gacha"), n: fv(n), harga: fv(unlimited ? 0 : price), refund: fv(r.refund), koinSetelah: fv(koinBaru), hasil: fv(r.results) } } },
       ];
       const c = await fetch(`https://firestore.googleapis.com/v1/${DB()}:commit`, { method: "POST", headers: { Authorization: "Bearer " + tok, "Content-Type": "application/json" }, body: JSON.stringify({ writes }) });
       if (!c.ok) return J(409, { error: "Konflik/gagal simpan, coba lagi" }, cors); // precondition gagal → tidak ada koin berubah

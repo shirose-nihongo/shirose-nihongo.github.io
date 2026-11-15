@@ -26,7 +26,7 @@ import {
 import {
   getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc,
   collection, getDocs, onSnapshot, query, orderBy, limit, addDoc,
-  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId
+  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -419,18 +419,23 @@ export async function beliItem(kategori, itemId, harga, level) {
   const siswa = (await getDoc(ref)).data();
   // Developer / permission-granted accounts bypass coin deduction entirely.
   const unlimited = isDeveloper(currentUser) || !!(siswa?.permissions?.unlimited_coins);
-  // Cek koin
+  const inv0 = siswa.karakter?.inventory || [];
+  if (inv0.includes(itemId)) throw new Error("Sudah dimiliki");
   const gamiRef = doc(db, "siswa", uid, "gami", level);
-  const gamiSnap = await getDoc(gamiRef);
-  const gami = gamiSnap.exists() ? gamiSnap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
-  if (!unlimited && (gami.koin || 0) < harga) throw new Error("Koin tidak cukup!");
-  // Deduct koin (skip for unlimited)
-  if (!unlimited) gami.koin -= harga;
+  let gami, saldoW = null;
+  if (!unlimited && !_walletOff) { try { saldoW = await walletTx(-harga, "toko: " + itemId); } catch (e) { if (/tidak cukup/i.test(e.message)) throw e; _walletOff = true; } }
+  if (saldoW !== null) gami = { koin: saldoW };
+  else {
+    const gamiSnap = await getDoc(gamiRef);
+    gami = gamiSnap.exists() ? gamiSnap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
+    if (!unlimited && (gami.koin || 0) < harga) throw new Error("Koin tidak cukup!");
+    if (!unlimited) gami.koin -= harga;
+  }
   // Add to inventory
   const inv = siswa.karakter?.inventory || [];
   if (inv.includes(itemId)) throw new Error("Sudah dimiliki");
   inv.push(itemId);
-  await setDoc(gamiRef, gami, { merge: true });
+  if (saldoW === null) await setDoc(gamiRef, gami, { merge: true });
   await updateDoc(ref, { "karakter.inventory": inv });
   currentSiswaDoc.karakter.inventory = inv;
   return { newKoin: gami.koin, unlimited };
@@ -443,12 +448,60 @@ export async function equipItem(kategori, itemId) {
   currentSiswaDoc.karakter.equipped = eq;
 }
 
-/* ========== GAMI (XP / Koin / Streak per level JLPT) ========== */
+/* ========== DOMPET KOIN TUNGGAL ==========
+ * Satu saldo untuk semua level JLPT / JFT / SSW / Mensetsu / toko / gacha: siswa/{uid}/wallet/main { koin, migrasi:{lvl:true} }.
+ * Saldo lama di gami/{lvl}.koin dimigrasi SEKALI per level (ditandai migrasi[lvl]) lalu tidak dipakai lagi (dokumen lama tidak dihapus).
+ * Jika dompet tidak bisa diakses (rules/jaringan) → kembali ke perilaku lama per level, tidak ada koin hilang.
+ * Log transaksi: siswa/{uid}/wallet_log/{id} (best-effort). */
+const WALLET_LVLS = ["n5","n4","n3","n2","n1","ir0","ir1","ir2"];
+let _walletOff = false;
+async function walletTx(delta, alasan, { allowNegative = false } = {}) {
+  const uid = currentUser.uid, wref = doc(db, "siswa", uid, "wallet", "main");
+  const grefs = WALLET_LVLS.map(l => doc(db, "siswa", uid, "gami", l));
+  const out = await runTransaction(db, async (tx) => {
+    const ws = await tx.get(wref); const gs = await Promise.all(grefs.map(r => tx.get(r)));
+    const w = ws.exists() ? ws.data() : { koin: 0, migrasi: {} }; w.migrasi = { ...(w.migrasi || {}) }; w.koin = w.koin || 0;
+    WALLET_LVLS.forEach((l, i) => { if (!w.migrasi[l]) { w.koin += gs[i].exists() ? (gs[i].data().koin || 0) : 0; w.migrasi[l] = true; } });
+    if (delta < 0 && !allowNegative && w.koin + delta < 0) throw new Error("Koin tidak cukup!");
+    w.koin += delta;
+    tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp() }, { merge: true });
+    return w.koin;
+  });
+  if (delta) { try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || ""), saldo: out }); } catch (e) {} }
+  return out;
+}
+export async function getWalletKoin() {
+  if (!currentUser || _walletOff) return null;
+  try { return await walletTx(0, ""); } catch (e) { console.warn("wallet gagal, pakai saldo per level:", e.message); _walletOff = true; return null; }
+}
+/* Tambah (atau kurangi, delta<0) koin dari fitur apa pun. Mengembalikan saldo baru atau null. */
+export async function tambahKoin(delta, alasan) {
+  if (!currentUser || !delta) return null;
+  if (!_walletOff) { try { return await walletTx(delta, alasan); } catch (e) { if (/tidak cukup/i.test(e.message)) throw e; console.warn("wallet gagal:", e.message); _walletOff = true; } }
+  return null;
+}
+export async function getGachaState() {
+  if (!currentUser) return null;
+  try { const s = await getDoc(doc(db, "siswa", currentUser.uid, "wallet", "gacha")); return s.exists() ? s.data() : { sinceEpic: 0, sinceLegend: 0, inv: [] }; } catch (e) { return null; }
+}
+export async function getWalletOf(uid) {
+  if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  const s = await getDoc(doc(db, "siswa", uid, "wallet", "main")); return s.exists() ? s.data() : null;
+}
+export async function listWalletLogOf(uid, n = 30) {
+  if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  const snap = await getDocs(query(collection(db, "siswa", uid, "wallet_log"), orderBy("t", "desc"), limit(n)));
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+}
+
+/* ========== GAMI (XP / Streak per level; koin → dompet tunggal) ========== */
 export async function getGami(level) {
   if (!currentUser) return null;
   try {
     const snap = await getDoc(doc(db, "siswa", currentUser.uid, "gami", level));
-    return snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
+    const g = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
+    const k = await getWalletKoin(); if (k !== null) g.koin = k;
+    return g;
   } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:0, streak:0, level_karakter:1 }; }
 }
 export async function tambahXP(level, dXP, dKoin = 0) {
@@ -458,7 +511,6 @@ export async function tambahXP(level, dXP, dKoin = 0) {
     const snap = await getDoc(ref);
     const cur = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
     cur.xp = (cur.xp || 0) + dXP;
-    cur.koin = (cur.koin || 0) + dKoin;
     cur.level_karakter = Math.floor(Math.sqrt(cur.xp / 50)) + 1;
     const today = new Date().toISOString().slice(0,10);
     if (cur.lastDate !== today) {
@@ -466,7 +518,11 @@ export async function tambahXP(level, dXP, dKoin = 0) {
       cur.streak = cur.lastDate === yesterday ? (cur.streak || 0) + 1 : 1;
       cur.lastDate = today;
     }
+    let saldo = null;
+    if (dKoin) { try { saldo = await tambahKoin(dKoin, "hadiah belajar"); } catch (e) {} }
+    if (dKoin && saldo === null) cur.koin = (cur.koin || 0) + dKoin;   // fallback lama
     await setDoc(ref, cur, { merge: true });
+    if (saldo !== null) cur.koin = saldo; else { const k = await getWalletKoin(); if (k !== null) cur.koin = k; }
     return cur;
   } catch (e) { console.warn("tambahXP failed:", e.message); return null; }
 }
@@ -588,6 +644,9 @@ export async function simpanHasilMensetsu(hasil) {
   const { id, ...rest } = hasil || {};
   const clean = JSON.parse(JSON.stringify(rest));   // buang undefined (Firestore menolak)
   const d = await addDoc(collection(db, "siswa", currentUser.uid, "mensetsu_hasil"), { ...clean, uid: currentUser.uid, tgl: serverTimestamp() });
+  // Hadiah koin simulasi (dompet tunggal): +20, maks 3x per hari per perangkat.
+  try { const k = "shirose-mx-koin:" + currentUser.uid + ":" + new Date().toISOString().slice(0, 10), n = +(localStorage.getItem(k) || 0);
+    if (n < 3) { localStorage.setItem(k, String(n + 1)); const sd = await tambahKoin(20, "mensetsu"); if (sd !== null && window.__koinBaru) window.__koinBaru(sd, 20); } } catch (e) {}
   return d.id;
 }
 export async function listHasilMensetsu(limitN = 50) {

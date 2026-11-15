@@ -344,7 +344,8 @@ function selesaiSesi() {
   rec.review = J.qs.map((q, i) => ({ sec: q.sec, tipe: q.tipe || "mc", alt: q.alt || [], ref: q.ref || "", q: q.q, o: q.o || [], a: q.a, u: J.ans[i] ?? null, n: q.n || "", p: q.p || "", fl: q.fl || null, emo: q.emo || "", say: q.say || "", pre: q.pre || "" }));
   if (J.mode !== "latihan") {
     const his = LS.get(HIS_KEY(), []); his.unshift({ ...rec, review: undefined }); LS.set(HIS_KEY(), his.slice(0, 40));
-    const best = LS.get(BEST_KEY(), {}); const bk = `${J.lv}:${J.kode}`; if (!best[bk] || pct > best[bk].pct) best[bk] = { pct, skor: rec.skor, t: rec.t }; LS.set(BEST_KEY(), best);
+    const best = LS.get(BEST_KEY(), {}); const bk = `${J.lv}:${J.kode}`; if (!best[bk] && pct >= 0.6 && window.awardKoin) { try { window.awardKoin(J.mode === "sim" ? 100 : 30, "jft " + bk); } catch (e) {} }
+    if (!best[bk] || pct > best[bk].pct) best[bk] = { pct, skor: rec.skor, t: rec.t }; LS.set(BEST_KEY(), best);
   }
   LS.set(HIS_KEY() + ":last", rec);
   LS.del(SESI_KEY());
