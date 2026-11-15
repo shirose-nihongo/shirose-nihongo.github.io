@@ -58,3 +58,12 @@ Belum ada sumber baru yang diunduh sesi ini.
 - Ditambah: +184 kosakata (am-j###, arti Indonesia orisinal), +44 soal orisinal (bab*-qx ○×, bab7-qj1..3 simulasi 実技). Berlabel latihan, bukan soal resmi (soal resmi tidak dipublikasikan).
 - Belum: soal bergambar dari halaman JICA, uji klik UI di browser.
 - +6 soal bergambar (bab2-qimg) dari JICA イラスト集 hal.38 (Gambar 2, versi tanpa label); sumber gambar dikreditkan di penjelasan soal. Belum: gambar lain (DOHC, rem, dll.) dan uji UI.
+
+## Auto Maintenance – ROMBAK TOTAL (atas permintaan pemilik, 2026-11-15)
+Modul lama (7 bab/31 subbab buatan sendiri) DIHAPUS dan diganti dengan struktur & isi dari buku resmi JICA「みてまなぶ！自動車整備の日本語」(2023-12-30, bebas diunduh/dipakai; file asli ada di `assets/ssw/auto-maintenance/pdf/`).
+- 4 bab / 27 subbab mengikuti daftar isi buku: 車の名前, 工具・検査装置, 動詞, 部品. 406 kosakata (semua istilah buku) lengkap dengan bacaan, romaji, arti Indonesia, alias, contoh kalimat.
+- Buku Jepang = halaman PDF asli (assets/.../jp, 67 hal.). Buku Indonesia = halaman yang disusun dari data (assets/.../id) + teks JP/ID per subbab (semua kosakata ada di kedua versi).
+- Kuis dibangkitkan dari kosakata buku (229 soal) + 6 soal bergambar (Koleksi Ilustrasi JICA). Latihan, bukan soal resmi.
+- Pembangun: `tools/ssw/automaint_jica_build.py` + data `tools/ssw/jica_data/*.txt` (idempoten; bisa diedit lalu dijalankan ulang).
+- Diuji: paket data dimuat oleh ssw-core (4 bab, 27 subbab, tanpa error); uji klik UI butuh login siswa — belum.
+- Belum: koleksi ilustrasi lengkap (36 gambar) sebagai soal bergambar; furigana pada kalimat contoh; Indonesian penerjemahan video JAPIA.

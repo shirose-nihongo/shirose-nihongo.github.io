@@ -1,146 +1,226 @@
 {
  "schema": 1,
  "bidang": "auto-maintenance",
- "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 自動車整備 (MLIT, MOJ/ISA); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
- "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "source": "JICA「みてまなぶ！自動車整備の日本語」(2023年12月30日第1版) https://www.jica.go.jp/activities/issues/transport/mechanic/health_safety_text/index.html",
+ "markup": "Teks JP memakai {kanji|furigana}; **tebal**.",
  "bab": {
   "id": "bab2",
   "no": 2,
   "title": {
-   "id": "Mesin",
-   "jp": "エンジン"
+   "id": "Perkakas dan alat pemeriksaan",
+   "jp": "{自動車整備|じどうしゃせいび}に{使|つか}う{道具|どうぐ}"
   },
   "intro": {
-   "id": "Prinsip mesin 4 langkah, bagian utama mesin, pelumasan, pendinginan, bahan bakar, pembuangan, pengapian, dan pemeriksaan mesin.",
-   "jp": "4サイクルエンジンのしくみ、{主|おも}な{部品|ぶひん}、{潤滑|じゅんかつ}、{冷却|れいきゃく}、{燃料|ねんりょう}、{排気|はいき}、{点火|てんか}、エンジンの{点検|てんけん}を{学|まな}びます。"
+   "id": "Nama perkakas, alat ukur, alat uji, dan mesin bengkel beserta fungsinya.",
+   "jp": "{工具|こうぐ}・{測|はか}る{道具|どうぐ}・{検査装置|けんさそうち}の{名前|なまえ}と{使|つか}いかたをおぼえます。"
   },
   "pages": [
-   1,
-   1
+   26,
+   37
   ],
   "subs": [
    {
     "id": "b2s1",
     "no": 1,
     "title": {
-     "id": "Prinsip Mesin 4 Langkah",
-     "jp": "4サイクルエンジンのしくみ"
+     "id": "Perkakas dasar",
+     "jp": "{工具|こうぐ}"
     },
     "pages": [
-     1,
-     1
+     26,
+     30
     ],
     "full": {
      "id": [
       {
-       "h": "Mesin pembakaran dalam"
-      },
-      {
-       "p": "Mesin mobil membakar campuran **bahan bakar dan udara** di dalam silinder. Tekanan pembakaran mendorong **ピストン** (piston) turun-naik, lalu **クランクシャフト** mengubahnya menjadi putaran."
-      },
-      {
-       "h": "Empat langkah"
-      },
-      {
-       "ol": [
-        "**吸入**: piston turun, katup masuk terbuka, campuran atau udara masuk.",
-        "**圧縮**: kedua katup tertutup, piston naik dan menekan.",
-        "**燃焼 (膨張)**: pembakaran mendorong piston turun. Inilah langkah yang menghasilkan tenaga.",
-        "**排気**: katup buang terbuka, piston naik dan mendorong gas bekas keluar."
-       ]
-      },
-      {
-       "h": "Hal yang perlu diingat"
+       "h": "Hal. 26 — Perkakas dasar (1)"
       },
       {
        "ul": [
-        "Satu siklus = piston bergerak 4 kali, poros engkol berputar **2 kali**.",
-        "**上死点** = posisi piston paling atas. **下死点** = paling bawah.",
-        "Pada langkah kompresi dan pembakaran, kedua katup **tertutup**."
+        "① **スパナ** (すぱな · supana) — kunci pas",
+        "② **モンキーレンチ** (もんきーれんち · monkiirenchi) — kunci inggris; alias/keterangan: モンキー（正式にはモンキ・レンチ）",
+        "③ **眼鏡レンチ** (めがねれんち · meganerenchi) — kunci ring; alias/keterangan: めがね（正式にはオフセット・レンチ）",
+        "④ **スピンナ・ハンドル** (すぴんなはんどる · supinna handoru) — tangkai putar socket; alias/keterangan: スピンナ、ヒンジハンドル",
+        "⑤ **ソケットレンチ** (そけっとれんち · sokettorenchi) — kunci socket; alias/keterangan: ソケット",
+        "⑥ **ディープ・ソケット** (でぃーぷそけっと · deぃぃpu soketto) — socket panjang (deep socket); alias/keterangan: ディープ",
+        "⑦ **ラチェット・ハンドル** (らちぇっとはんどる · rachiぇtto handoru) — tangkai ratchet; alias/keterangan: ラチェット",
+        "⑧ **Tレンチ** (てぃーれんち · teぃぃrenchi) — kunci T (slide handle); alias/keterangan: Tレン、T型スライドハンドル",
+        "⑨ **エア・インパクト・レンチ** (えあいんぱくとれんち · ea inpakuto renchi) — kunci impak angin; alias/keterangan: インパクト"
        ]
       },
       {
-       "h": "Bensin dan diesel"
+       "h": "Hal. 27 — Perkakas dasar (2)"
       },
       {
        "ul": [
-        "**ガソリンエンジン**: campuran bensin dan udara dinyalakan oleh **busi (点火プラグ)**.",
-        "**ディーゼルエンジン**: hanya udara ditekan sangat kuat sehingga panas, lalu solar disemprot dan terbakar sendiri (**圧縮着火**). Tidak memakai busi."
+        "⑩ **電動インパクト・レンチ** (でんどういんぱくとれんち · dendouinpakuto renchi) — kunci impak listrik; alias/keterangan: 電パク",
+        "⑪ **六角レンチ** (ろっかくれんち · rokkakurenchi) — kunci L (heksagon); alias/keterangan: 六角棒スパナ、ヘキサゴン・レンチ",
+        "⑫ **パイプレンチ** (ぱいぷれんち · paipurenchi) — kunci pipa; alias/keterangan: パイレン",
+        "⑬ **プラス・ドライバ** (ぷらすどらいば · purasu doraiba) — obeng plus",
+        "⑭ **マイナス・ドライバ** (まいなすどらいば · mainasu doraiba) — obeng minus",
+        "⑮ **普通型ドライバ** (ふつうがたどらいば · futsuugatadoraiba) — obeng biasa; alias/keterangan: 軸が柄の途中まで入っている。たたいて使えない。. Poros hanya sampai tengah gagang; tidak boleh dipukul.",
+        "⑯ **貫通型ドライバ** (かんつうがたどらいば · kantsuugatadoraiba) — obeng tembus; alias/keterangan: 軸が柄の中を通っている。より強い。たたいて使える。. Poros menembus gagang; lebih kuat dan boleh dipukul.",
+        "⑰ **スタッビ・ドライバ** (すたっびどらいば · sutabbi doraiba) — obeng pendek; alias/keterangan: 柄が短い。せまいところで使える。. Gagang pendek; dipakai di tempat sempit.",
+        "⑱ **ショック・ドライバ** (しょっくどらいば · shokku doraiba) — obeng kejut; alias/keterangan: 強く締められたねじなどをたたきながらゆるめるときに使う。. Dipukul untuk melonggarkan sekrup yang terpasang kuat."
+       ]
+      },
+      {
+       "h": "Hal. 28 — Perkakas dasar (3): palu dan tang"
+      },
+      {
+       "ul": [
+        "⑲ **ハンマ** (はんま · hanma) — palu; alias/keterangan: 片手ハンマ",
+        "⑳ **木ハンマ** (きはんま · kihanma) — palu kayu; alias/keterangan: モクハン",
+        "21. **ゴムハンマ** (ごむはんま · gomuhanma) — palu karet; alias/keterangan: ゴムハン",
+        "22. **銅ハンマ** (どうはんま · douhanma) — palu tembaga; alias/keterangan: ドウハン",
+        "23. **プラスチック・ハンマ** (ぷらすちっくはんま · purasuchikku hanma) — palu plastik; alias/keterangan: プラハン",
+        "24. **テスト・ハンマ** (てすとはんま · tesuto hanma) — palu uji; alias/keterangan: 点検ハンマ：ボルト・ナットのゆるみをたしかめます。. Dipakai mengecek kekendoran baut dan mur.",
+        "25. **プライヤ** (ぷらいや · puraiya) — tang",
+        "26. **コンビネーション・プライヤ** (こんびねーしょんぷらいや · konbineeshon puraiya) — tang kombinasi; alias/keterangan: 支点の穴をかえることによって、口の開きを大きくと小さくの２つにかえることができます。. Bukaan rahang bisa dua tingkat dengan mengganti lubang titik tumpu.",
+        "27. **ペンチ** (ぺんち · penchi) — tang potong; alias/keterangan: カッティング・プライヤ：銅線や鉄線を切るときに使います。. Dipakai memotong kawat tembaga/besi."
+       ]
+      },
+      {
+       "h": "Hal. 29 — Perkakas dasar (4)"
+      },
+      {
+       "ul": [
+        "28. **ラジオ・ペンチ** (らじおぺんち · rajio penchi) — tang lancip; alias/keterangan: ラジペン：口の先がとても細く、口の側面に刃があります。せまいところで使います。. Ujung rahang sangat ramping, ada mata potong di sisi; dipakai di tempat sempit.",
+        "29. **ニッパ** (にっぱ · nippa) — tang pemotong (nipper); alias/keterangan: 刃がななめで先がとがっている。細い針金を切るときや電線の膜をむくときに使います。. Dipakai memotong kawat tipis dan mengupas kabel.",
+        "30. **スナップ・リング・プライヤ** (すなっぷりんぐぷらいや · sunappu ringu puraiya) — tang cincin snap",
+        "31. **ウォーターポンプ・プライヤ** (うぉーたーぽんぷぷらいや · uぉぉtaaponpu puraiya) — tang pompa air",
+        "32. **スライド・ハンマ** (すらいどはんま · suraido hanma) — palu geser (slide hammer)",
+        "33. **たがね** (たがね · tagane) — pahat besi",
+        "34. **油圧プレス** (ゆあつぷれす · yuatsupuresu) — pres hidrolik; alias/keterangan: プレス：ベアリング、ブッシュなどをつけたり、とったりするときに使います。. Dipakai memasang/melepas bearing dan bushing.",
+        "35. **バイス** (ばいす · baisu) — ragum; alias/keterangan: 万力"
+       ]
+      },
+      {
+       "h": "Hal. 30 — Perkakas dasar (5): kikir, bor, tap"
+      },
+      {
+       "ul": [
+        "36. **やすり** (やすり · yasuri) — kikir; alias/keterangan: 平、半丸、丸、角、三角などいろいろなかたちがあります。. Ada berbagai bentuk: datar, setengah bulat, bulat, persegi, segitiga.",
+        "37. **弓のこ** (ゆみのこ · yuminoko) — gergaji busur",
+        "38. **リーマ** (りーま · riima) — reamer; alias/keterangan: ドリルであけた穴を仕上げるときに使います。内面仕上げで使います。. Dipakai menghaluskan lubang hasil bor (finishing bagian dalam).",
+        "39. **ベンチ・グラインダ** (べんちぐらいんだ · benchi gurainda) — gerinda duduk",
+        "40. **ドリル** (どりる · doriru) — bor; alias/keterangan: 電気ドリルや卓上ボール盤にとりつけ、金属に穴をあけます。. Dipasang pada bor listrik/bor meja untuk melubangi logam.",
+        "41. **タップ** (たっぷ · tappu) — tap; alias/keterangan: めねじをたてるときに使います。. Dipakai membuat ulir dalam.",
+        "42. **タップ・レンチ** (たっぷれんち · tappu renchi) — tangkai tap; alias/keterangan: タップをまわすときに使います。. Dipakai memutar tap."
        ]
       }
      ],
      "jp": [
       {
-       "h": "エンジンのしくみ"
-      },
-      {
-       "p": "{自動|じどう}{車|くるま}のエンジンは、シリンダの{中|なか}で、**{燃料|ねんりょう}と{空気|くうき}**をまぜて{燃|も}やします。{燃|も}えた{力|ちから}で**ピストン**が{上|うえ}{下|した}に{動|うご}き、**クランクシャフト**が{回|まわ}る{動|うご}きにかえます。"
-      },
-      {
-       "h": "4つの{行程|こうてい}"
-      },
-      {
-       "ol": [
-        "**{吸入|きゅうにゅう}**：ピストンが{下|さ}がり、{吸気|きゅうき}バルブが{開|あ}いて、{混合気|こんごうき}や{空気|くうき}が{入|はい}る。",
-        "**{圧縮|あっしゅく}**：2つのバルブがしまり、ピストンが{上|あ}がって、おしつぶす。",
-        "**{燃焼|ねんしょう}（{膨張|ぼうちょう}）**：{燃|も}えてピストンをおし{下|さ}げる。{力|ちから}が{出|で}るのはこの{行程|こうてい}。",
-        "**{排気|はいき}**：{排気|はいき}バルブが{開|ひら}き、ピストンが{上|あ}がって、ガスを{外|そと}に{出|だ}す。"
-       ]
-      },
-      {
-       "h": "おぼえること"
+       "h": "ページ 26"
       },
       {
        "ul": [
-        "1サイクルで、ピストンは4{回|かい}{動|うご}き、クランクシャフトは**2{回|かい}**まわる。",
-        "**{上|うえ}{死点|してん}**はピストンがいちばん{上|うえ}。**{下|した}{死点|してん}**はいちばん{下|した}。",
-        "{圧縮|あっしゅく}と{燃焼|ねんしょう}のとき、バルブは2つとも**しまっている**。"
+        "① **スパナ**",
+        "② **モンキーレンチ** (モンキー（正式にはモンキ・レンチ）)",
+        "③ **{眼鏡レンチ|めがねれんち}** (めがね（正式にはオフセット・レンチ）)",
+        "④ **スピンナ・ハンドル** (スピンナ、ヒンジハンドル)",
+        "⑤ **ソケットレンチ** (ソケット)",
+        "⑥ **ディープ・ソケット** (ディープ)",
+        "⑦ **ラチェット・ハンドル** (ラチェット)",
+        "⑧ **Tレンチ** (Tレン、T型スライドハンドル)",
+        "⑨ **エア・インパクト・レンチ** (インパクト)"
        ]
       },
       {
-       "h": "ガソリンとディーゼル"
+       "h": "ページ 27"
       },
       {
        "ul": [
-        "**ガソリンエンジン**：ガソリンと{空気|くうき}のまざったものに、**{点火|てんか}プラグ**で{火|ひ}をつける。",
-        "**ディーゼルエンジン**：{空気|くうき}だけを{強|つよ}くおして{熱|あつ}くし、そこに{軽油|けいゆ}をふきかけて{自然|しぜん}に{燃|も}やす（**{圧縮着火|あっしゅくちゃっか}**）。{点火|てんか}プラグは{使|つか}わない。"
+        "⑩ **{電動インパクト・レンチ|でんどういんぱくとれんち}** (電パク)",
+        "⑪ **{六角レンチ|ろっかくれんち}** (六角棒スパナ、ヘキサゴン・レンチ)",
+        "⑫ **パイプレンチ** (パイレン)",
+        "⑬ **プラス・ドライバ**",
+        "⑭ **マイナス・ドライバ**",
+        "⑮ **{普通型ドライバ|ふつうがたどらいば}** (軸が柄の途中まで入っている。たたいて使えない。)：Poros hanya sampai tengah gagang; tidak boleh dipukul.",
+        "⑯ **{貫通型ドライバ|かんつうがたどらいば}** (軸が柄の中を通っている。より強い。たたいて使える。)：Poros menembus gagang; lebih kuat dan boleh dipukul.",
+        "⑰ **スタッビ・ドライバ** (柄が短い。せまいところで使える。)：Gagang pendek; dipakai di tempat sempit.",
+        "⑱ **ショック・ドライバ** (強く締められたねじなどをたたきながらゆるめるときに使う。)：Dipukul untuk melonggarkan sekrup yang terpasang kuat."
+       ]
+      },
+      {
+       "h": "ページ 28"
+      },
+      {
+       "ul": [
+        "⑲ **ハンマ** (片手ハンマ)",
+        "⑳ **{木ハンマ|きはんま}** (モクハン)",
+        "21. **ゴムハンマ** (ゴムハン)",
+        "22. **{銅ハンマ|どうはんま}** (ドウハン)",
+        "23. **プラスチック・ハンマ** (プラハン)",
+        "24. **テスト・ハンマ** (点検ハンマ：ボルト・ナットのゆるみをたしかめます。)：Dipakai mengecek kekendoran baut dan mur.",
+        "25. **プライヤ**",
+        "26. **コンビネーション・プライヤ** (支点の穴をかえることによって、口の開きを大きくと小さくの２つにかえることができます。)：Bukaan rahang bisa dua tingkat dengan mengganti lubang titik tumpu.",
+        "27. **ペンチ** (カッティング・プライヤ：銅線や鉄線を切るときに使います。)：Dipakai memotong kawat tembaga/besi."
+       ]
+      },
+      {
+       "h": "ページ 29"
+      },
+      {
+       "ul": [
+        "28. **ラジオ・ペンチ** (ラジペン：口の先がとても細く、口の側面に刃があります。せまいところで使います。)：Ujung rahang sangat ramping, ada mata potong di sisi; dipakai di tempat sempit.",
+        "29. **ニッパ** (刃がななめで先がとがっている。細い針金を切るときや電線の膜をむくときに使います。)：Dipakai memotong kawat tipis dan mengupas kabel.",
+        "30. **スナップ・リング・プライヤ**",
+        "31. **ウォーターポンプ・プライヤ**",
+        "32. **スライド・ハンマ**",
+        "33. **たがね**",
+        "34. **{油圧プレス|ゆあつぷれす}** (プレス：ベアリング、ブッシュなどをつけたり、とったりするときに使います。)：Dipakai memasang/melepas bearing dan bushing.",
+        "35. **バイス** (万力)"
+       ]
+      },
+      {
+       "h": "ページ 30"
+      },
+      {
+       "ul": [
+        "36. **やすり** (平、半丸、丸、角、三角などいろいろなかたちがあります。)：Ada berbagai bentuk: datar, setengah bulat, bulat, persegi, segitiga.",
+        "37. **{弓のこ|ゆみのこ}**",
+        "38. **リーマ** (ドリルであけた穴を仕上げるときに使います。内面仕上げで使います。)：Dipakai menghaluskan lubang hasil bor (finishing bagian dalam).",
+        "39. **ベンチ・グラインダ**",
+        "40. **ドリル** (電気ドリルや卓上ボール盤にとりつけ、金属に穴をあけます。)：Dipasang pada bor listrik/bor meja untuk melubangi logam.",
+        "41. **タップ** (めねじをたてるときに使います。)：Dipakai membuat ulir dalam.",
+        "42. **タップ・レンチ** (タップをまわすときに使います。)：Dipakai memutar tap."
        ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Mesin 4 langkah: 吸入 → 圧縮 → 燃焼 → 排気; bensin pakai busi, diesel pakai 圧縮着火.",
+      "core": "Subbab ini memuat 42 istilah Jepang dari buku JICA (hal. 26–30).",
       "points": [
-       "Urutan 吸入 → 圧縮 → 燃焼 → 排気.",
-       "1 siklus = 2 putaran poros engkol.",
-       "Tenaga hanya di 燃焼.",
-       "Diesel: tanpa busi."
+       "**スパナ** = kunci pas",
+       "**モンキーレンチ** = kunci inggris",
+       "**眼鏡レンチ** = kunci ring",
+       "**スピンナ・ハンドル** = tangkai putar socket",
+       "**ソケットレンチ** = kunci socket"
       ],
       "avoid": [
-       "Tertukar urutan langkah.",
-       "Mengira diesel memakai busi."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Urutan 4 langkah.",
-       "Beda bensin dan diesel."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "{吸入|きゅうにゅう}、{圧縮|あっしゅく}、{燃焼|ねんしょう}、{排気|はいき}の{順|じゅん}です。ガソリンは{点火|てんか}プラグで{点火|てんか}、ディーゼルは{圧縮着火|あっしゅくちゃっか}です。",
+      "core": "このところのことばを42こおぼえます。",
       "points": [
-       "{吸入|きゅうにゅう}→{圧縮|あっしゅく}→{燃焼|ねんしょう}→{排気|はいき}。",
-       "1サイクル＝クランクシャフト2{回転|かいてん}。",
-       "{力|ちから}が{出|で}るのは{燃焼|ねんしょう}。",
-       "ディーゼルは{点火|てんか}プラグなし。"
+       "**スパナ**",
+       "**モンキーレンチ**",
+       "**{眼鏡レンチ|めがねれんち}**",
+       "**スピンナ・ハンドル**",
+       "**ソケットレンチ**"
       ],
       "avoid": [
-       "{行程|こうてい}の{順番|じゅんばん}をまちがえること。",
-       "ディーゼルが{点火|てんか}プラグを{使|つか}うと{思|おも}うこと。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "4{行程|こうてい}の{順番|じゅんばん}。",
-       "ガソリンとディーゼルのちがい。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -149,122 +229,76 @@
     "id": "b2s2",
     "no": 2,
     "title": {
-     "id": "Bagian Utama Mesin",
-     "jp": "エンジン{本体|ほんたい}の{部品|ぶひん}"
+     "id": "Alat ukur",
+     "jp": "{測|はか}る{道具|どうぐ}"
     },
     "pages": [
-     1,
-     1
+     31,
+     31
     ],
     "full": {
      "id": [
       {
-       "h": "Badan mesin"
+       "h": "Hal. 31 — Alat ukur"
       },
       {
        "ul": [
-        "**シリンダブロック**: badan utama; di dalamnya ada silinder.",
-        "**シリンダヘッド**: tutup atas silinder; ada katup dan busi.",
-        "**ヘッドガスケット**: paking antara blok dan kepala silinder; mencegah bocor gas dan air pendingin.",
-        "**オイルパン**: bak oli di bagian bawah."
+        "43. **ダイス** (だいす · daisu) — dies; alias/keterangan: おねじをたてるときに使います。. Dipakai membuat ulir luar.",
+        "44. **スケール** (すけーる · sukeeru) — penggaris; alias/keterangan: ものさし",
+        "45. **ノギス** (のぎす · nogisu) — jangka sorong; alias/keterangan: デジタル型とダイヤル型",
+        "46. **マイクロメータ** (まいくろめーた · maikuromeeta) — mikrometer; alias/keterangan: ピストンの外径などをはかるときに使います。. Dipakai mengukur diameter luar piston dan sebagainya.",
+        "47. **ダイヤル・ゲージ** (だいやるげーじ · daiyaru geeji) — dial gauge; alias/keterangan: フライホイールの面揺れ、シャフトの振れ、クランクシャフトの曲がりをはかるときに使います。. Mengukur olengan flywheel, poros, dan bengkoknya poros engkol.",
+        "48. **シックネス・ゲージ** (しっくねすげーじ · shikkunesu geeji) — feeler gauge (pengukur celah); alias/keterangan: ものとものの間（すきま）をはかる。バルブ・クリアランスの測定で使います。. Mengukur celah antar benda, misalnya celah katup."
        ]
-      },
-      {
-       "h": "Bagian bergerak"
-      },
-      {
-       "ul": [
-        "**ピストン**: bergerak naik-turun di dalam silinder.",
-        "**ピストンリング**: cincin piston. **圧縮リング** menjaga kerapatan, **オイルリング** mengikis oli dari dinding silinder.",
-        "**コネクティングロッド**: batang penghubung piston dan poros engkol.",
-        "**クランクシャフト**: poros engkol; mengubah gerak naik-turun menjadi putaran.",
-        "**フライホイール**: roda gila; membuat putaran halus."
-       ]
-      },
-      {
-       "h": "Pengatur katup"
-      },
-      {
-       "ul": [
-        "**バルブ**: katup masuk (吸気) dan katup buang (排気).",
-        "**カムシャフト**: poros nok; menekan katup agar terbuka.",
-        "**タイミングベルト / タイミングチェーン**: menyambung poros engkol dan poros nok agar waktunya tepat. Sabuk karet punya jadwal ganti."
-       ]
-      },
-      {
-       "note": "Jika タイミングベルト putus, katup dan piston bisa bertabrakan dan mesin rusak parah pada banyak tipe mesin."
       }
      ],
      "jp": [
       {
-       "h": "エンジンの{本体|ほんたい}"
+       "h": "ページ 31"
       },
       {
        "ul": [
-        "**シリンダブロック**：エンジンの{大|おお}きな{本体|ほんたい}。{中|なか}にシリンダがある。",
-        "**シリンダヘッド**：シリンダの{上|うえ}のふた。バルブや{点火|てんか}プラグがある。",
-        "**ヘッドガスケット**：ブロックとヘッドのあいだのパッキン。ガスや{冷却水|れいきゃくすい}がもれるのをふせぐ。",
-        "**オイルパン**：{下|した}にあるオイルを{入|い}れる{入|い}れ{物|もの}。"
+        "43. **ダイス** (おねじをたてるときに使います。)：Dipakai membuat ulir luar.",
+        "44. **スケール** (ものさし)",
+        "45. **ノギス** (デジタル型とダイヤル型)",
+        "46. **マイクロメータ** (ピストンの外径などをはかるときに使います。)：Dipakai mengukur diameter luar piston dan sebagainya.",
+        "47. **ダイヤル・ゲージ** (フライホイールの面揺れ、シャフトの振れ、クランクシャフトの曲がりをはかるときに使います。)：Mengukur olengan flywheel, poros, dan bengkoknya poros engkol.",
+        "48. **シックネス・ゲージ** (ものとものの間（すきま）をはかる。バルブ・クリアランスの測定で使います。)：Mengukur celah antar benda, misalnya celah katup."
        ]
-      },
-      {
-       "h": "{動|うご}く{部品|ぶひん}"
-      },
-      {
-       "ul": [
-        "**ピストン**：シリンダの{中|なか}を{上|うえ}{下|した}に{動|うご}く。",
-        "**ピストンリング**：ピストンのわ。**{圧縮|あっしゅく}リング**はすきまをふさぎ、**オイルリング**はシリンダのオイルをかきおとす。",
-        "**コネクティングロッド**：ピストンとクランクシャフトをつなぐ{棒|ぼう}。",
-        "**クランクシャフト**：{上|うえ}{下|した}の{動|うご}きを{回|まわ}る{動|うご}きにかえる{軸|じく}。",
-        "**フライホイール**：{回転|かいてん}をなめらかにする{重|おも}い{円|えん}ばん。"
-       ]
-      },
-      {
-       "h": "バルブをうごかす{部品|ぶひん}"
-      },
-      {
-       "ul": [
-        "**バルブ**：{吸気|きゅうき}バルブと{排気|はいき}バルブ。",
-        "**カムシャフト**：バルブをおして{開|あ}ける{軸|じく}。",
-        "**タイミングベルト・タイミングチェーン**：クランクシャフトとカムシャフトをつなぎ、{動|うご}くタイミングをあわせる。ゴムのベルトは{交換|こうかん}の{時期|じき}がある。"
-       ]
-      },
-      {
-       "note": "タイミングベルトが{切|き}れると、エンジンによってはバルブとピストンがぶつかって、ひどくこわれます。"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Badan: ブロック, ヘッド, ガスケット, オイルパン. Bergerak: ピストン, リング, コンロッド, クランクシャフト. Katup: バルブ, カムシャフト, タイミングベルト.",
+      "core": "Subbab ini memuat 6 istilah Jepang dari buku JICA (hal. 31–31).",
       "points": [
-       "ピストン → コンロッド → クランクシャフト.",
-       "圧縮リング = rapat; オイルリング = kikis oli.",
-       "カムシャフトが開けるのはバルブ.",
-       "タイミングベルトは時期に交換."
+       "**ダイス** = dies",
+       "**スケール** = penggaris",
+       "**ノギス** = jangka sorong",
+       "**マイクロメータ** = mikrometer",
+       "**ダイヤル・ゲージ** = dial gauge"
       ],
       "avoid": [
-       "Membiarkan タイミングベルト melewati jadwal ganti."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Fungsi ピストンリング.",
-       "Fungsi カムシャフト dan タイミングベルト."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "エンジンはブロック、ヘッド、ピストン、コンロッド、クランクシャフト、バルブ、カムシャフトなどでできています。",
+      "core": "このところのことばを6こおぼえます。",
       "points": [
-       "ピストン→コンロッド→クランクシャフト。",
-       "{圧縮|あっしゅく}リング＝すきまをふさぐ、オイルリング＝オイルをかきおとす。",
-       "カムシャフトがバルブを{開|あ}ける。",
-       "タイミングベルトは{時期|じき}に{交換|こうかん}する。"
+       "**ダイス**",
+       "**スケール**",
+       "**ノギス**",
+       "**マイクロメータ**",
+       "**ダイヤル・ゲージ**"
       ],
       "avoid": [
-       "タイミングベルトを{交換時期|こうかんじき}をこえて{使|つか}うこと。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "ピストンリングのやくわり。",
-       "カムシャフトとタイミングベルトのやくわり。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -273,148 +307,102 @@
     "id": "b2s3",
     "no": 3,
     "title": {
-     "id": "Sistem Pelumasan",
-     "jp": "{潤滑装置|じゅんかつそうち}"
+     "id": "Alat pemeriksaan mesin, ban, aki",
+     "jp": "{点検|てんけん}に{使|つか}う{道具|どうぐ}"
     },
     "pages": [
-     1,
-     1
+     32,
+     33
     ],
     "full": {
      "id": [
       {
-       "h": "Fungsi oli mesin"
+       "h": "Hal. 32 — Alat pemeriksaan mesin"
       },
       {
        "ul": [
-        "**潤滑**: mengurangi gesekan dan keausan.",
-        "**冷却**: membawa panas.",
-        "**清浄**: membawa kotoran ke filter.",
-        "**密封**: menutup celah antara piston dan silinder.",
-        "**防錆**: mencegah karat."
+        "① **コンプレッション・ゲージ** (こんぷれっしょんげーじ · konpuresshon geeji) — pengukur kompresi; alias/keterangan: エンジンの圧縮圧力をはかるときに使います。. Mengukur tekanan kompresi mesin.",
+        "② **サーキット・テスタ** (さーきっとてすた · saakitto tesuta) — multimeter; alias/keterangan: 電流や電圧、抵抗をはかるときに使います。. Mengukur arus, tegangan, dan hambatan.",
+        "③ **バッテリ・クーラント・テスタ** (ばってりくーらんとてすた · batteri kuuranto tesuta) — penguji aki dan coolant; alias/keterangan: バッテリ液やクーラントの比重や濃度、凍結温度をはかります。. Mengukur berat jenis, konsentrasi, dan titik beku cairan aki/coolant.",
+        "④ **バッテリ・テスタ** (ばってりてすた · batteri tesuta) — penguji aki; alias/keterangan: バッテリの電圧や劣化をはかります。. Mengukur tegangan dan penurunan kondisi aki.",
+        "⑤ **COHCテスタ** (しーおーえいちしーてすた · shiioo eichishiitesuta) — penguji gas buang CO/HC; alias/keterangan: 一酸化炭素・炭化水素測定器：排気ガスの中のCOやHCをはかります。. Mengukur CO dan HC dalam gas buang.",
+        "⑥ **オパシ・メータ** (おぱしめーた · opashi meeta) — opasimeter; alias/keterangan: 排気ガスの中のPM（粒子状物質）をはかり、空気の汚染度をはかります。ディーゼル車のみ。. Mengukur partikel (PM) pada gas buang; hanya mobil diesel.",
+        "⑦ **スキャンツール** (すきゃんつーる · sukyantsuuru) — alat scan; alias/keterangan: OBDテスタ：車の故障を診断します。. Mendiagnosis kerusakan mobil (OBD)."
        ]
       },
       {
-       "h": "Alur oli"
-      },
-      {
-       "ol": [
-        "**オイルパン** menampung oli.",
-        "**オイルストレーナ** menyaring kotoran besar.",
-        "**オイルポンプ** menekan oli.",
-        "**オイルフィルタ** menyaring kotoran kecil.",
-        "Oli dialirkan ke bagian bergerak, lalu kembali ke オイルパン."
-       ]
-      },
-      {
-       "h": "Memeriksa oli"
-      },
-      {
-       "ol": [
-        "Parkir di tempat datar, matikan mesin, tunggu beberapa menit.",
-        "Cabut **オイルレベルゲージ**, lap, masukkan, lalu cabut lagi.",
-        "Oli harus di antara tanda **上限 (F)** dan **下限 (L)**.",
-        "Lihat juga warna dan kekentalan. Oli yang sangat hitam atau encer perlu diganti."
-       ]
-      },
-      {
-       "h": "Peringatan"
+       "h": "Hal. 33 — Alat ban, aki, dan pembersihan"
       },
       {
        "ul": [
-        "Lampu **油圧警告灯** (merah) menyala saat mesin hidup = tekanan oli rendah. **Segera matikan mesin** di tempat aman.",
-        "Oli terlalu sedikit merusak mesin. Oli terlalu banyak juga tidak baik.",
-        "Oli bekas adalah limbah; buang sesuai aturan."
+        "① **エア・ゲージ** (えあげーじ · ea geeji) — pengukur tekanan udara ban",
+        "② **デプス・ゲージ** (でぷすげーじ · depusu geeji) — pengukur kedalaman alur ban",
+        "③ **バッテリー充電器** (ばってりーじゅうでんき · batteriijuudenki) — pengisi aki (charger)",
+        "④ **エア・ガン** (えあがん · ea gan) — pistol udara",
+        "⑤ **洗車機** (せんしゃき · senshaki) — mesin cuci mobil; alias/keterangan: 洗浄機"
        ]
-      },
-      {
-       "note": "Kekentalan oli ditulis seperti 5W-30. Angka sebelum W kecil = tidak mudah kental saat dingin."
       }
      ],
      "jp": [
       {
-       "h": "エンジンオイルのはたらき"
+       "h": "ページ 32"
       },
       {
        "ul": [
-        "**{潤滑|じゅんかつ}**：こすれる{力|ちから}を{小|ちい}さくして、すりへりをへらす。",
-        "**{冷却|れいきゃく}**：{熱|ねつ}をはこぶ。",
-        "**{清浄|せいじょう}**：よごれをフィルタへはこぶ。",
-        "**{密封|みっぷう}**：ピストンとシリンダのすきまをふさぐ。",
-        "**{防錆|ぼうせい}**：さびをふせぐ。"
+        "① **コンプレッション・ゲージ** (エンジンの圧縮圧力をはかるときに使います。)：Mengukur tekanan kompresi mesin.",
+        "② **サーキット・テスタ** (電流や電圧、抵抗をはかるときに使います。)：Mengukur arus, tegangan, dan hambatan.",
+        "③ **バッテリ・クーラント・テスタ** (バッテリ液やクーラントの比重や濃度、凍結温度をはかります。)：Mengukur berat jenis, konsentrasi, dan titik beku cairan aki/coolant.",
+        "④ **バッテリ・テスタ** (バッテリの電圧や劣化をはかります。)：Mengukur tegangan dan penurunan kondisi aki.",
+        "⑤ **COHCテスタ** (一酸化炭素・炭化水素測定器：排気ガスの中のCOやHCをはかります。)：Mengukur CO dan HC dalam gas buang.",
+        "⑥ **オパシ・メータ** (排気ガスの中のPM（粒子状物質）をはかり、空気の汚染度をはかります。ディーゼル車のみ。)：Mengukur partikel (PM) pada gas buang; hanya mobil diesel.",
+        "⑦ **スキャンツール** (OBDテスタ：車の故障を診断します。)：Mendiagnosis kerusakan mobil (OBD)."
        ]
       },
       {
-       "h": "オイルのながれ"
-      },
-      {
-       "ol": [
-        "**オイルパン**にオイルがたまる。",
-        "**オイルストレーナ**で{大|おお}きいごみをとる。",
-        "**オイルポンプ**でおしだす。",
-        "**オイルフィルタ**で{細|こま}かいごみをとる。",
-        "{動|うご}く{部品|ぶひん}にいきわたり、またオイルパンにもどる。"
-       ]
-      },
-      {
-       "h": "オイルの{点検|てんけん}"
-      },
-      {
-       "ol": [
-        "{平|たい}らな{所|ところ}にとめて、エンジンを{止|と}め、{数分|すうふん}まつ。",
-        "**オイルレベルゲージ**をぬいてふき、さしこんで、もう{一度|いちど}ぬく。",
-        "オイルが**{上限|じょうげん}（F）**と**{下限|かげん}（L）**のあいだにあるか{見|み}る。",
-        "{色|いろ}とかたさも{見|み}る。とてもくろい、またはさらさらなら{交換|こうかん}する。"
-       ]
-      },
-      {
-       "h": "けいこく"
+       "h": "ページ 33"
       },
       {
        "ul": [
-        "エンジンがかかっているときに**{油圧警告灯|ゆあつけいこくとう}**（{赤|あか}）がついたら、{油圧|ゆあつ}がひくい。**すぐ{安全|あんぜん}な{所|ところ}でエンジンを{止|と}める**。",
-        "オイルが{少|すく}ないとエンジンがこわれる。{多|おお}すぎてもよくない。",
-        "{使|つか}ったオイルは{廃棄物|はいきぶつ}。{決|き}まりどおりにすてる。"
+        "① **エア・ゲージ**",
+        "② **デプス・ゲージ**",
+        "③ **{バッテリー充電器|ばってりーじゅうでんき}**",
+        "④ **エア・ガン**",
+        "⑤ **{洗車機|せんしゃき}** (洗浄機)"
        ]
-      },
-      {
-       "note": "オイルのかたさは5W-30のように{書|か}きます。Wの{前|まえ}の{数字|すうじ}が{小|ちい}さいと、{寒|さむ}いときにかたくなりにくいです。"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Oli mesin: melumasi, mendinginkan, membersihkan, menyekat, mencegah karat; periksa dengan oil level gauge antara F dan L; lampu tekanan oli menyala = matikan mesin.",
+      "core": "Subbab ini memuat 12 istilah Jepang dari buku JICA (hal. 32–33).",
       "points": [
-       "5 fungsi oli.",
-       "Oli di antara 上限 dan 下限.",
-       "Periksa di tempat datar, mesin mati.",
-       "油圧警告灯 menyala → matikan mesin."
+       "**コンプレッション・ゲージ** = pengukur kompresi",
+       "**サーキット・テスタ** = multimeter",
+       "**バッテリ・クーラント・テスタ** = penguji aki dan coolant",
+       "**バッテリ・テスタ** = penguji aki",
+       "**COHCテスタ** = penguji gas buang CO/HC"
       ],
       "avoid": [
-       "Terus berkendara saat 油圧警告灯 menyala.",
-       "Menambah oli sampai jauh melewati batas atas."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Fungsi oli.",
-       "Cara membaca レベルゲージ."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "オイルは{潤滑|じゅんかつ}、{冷却|れいきゃく}、{清浄|せいじょう}、{密封|みっぷう}、{防錆|ぼうせい}をします。レベルゲージでFとLのあいだを{見|み}ます。{油圧警告灯|ゆあつけいこくとう}がついたらエンジンを{止|と}めます。",
+      "core": "このところのことばを12こおぼえます。",
       "points": [
-       "オイルの5つのはたらき。",
-       "オイルは{上限|じょうげん}と{下限|かげん}のあいだ。",
-       "{平|たい}らな{所|ところ}、エンジンを{止|と}めて{見|み}る。",
-       "{油圧警告灯|ゆあつけいこくとう}がついたら{止|と}める。"
+       "**コンプレッション・ゲージ**",
+       "**サーキット・テスタ**",
+       "**バッテリ・クーラント・テスタ**",
+       "**バッテリ・テスタ**",
+       "**COHCテスタ**"
       ],
       "avoid": [
-       "{油圧警告灯|ゆあつけいこくとう}がついたまま{走|はし}ること。",
-       "オイルを{上限|じょうげん}よりずっと{多|おお}く{入|い}れること。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "オイルのはたらき。",
-       "レベルゲージの{見|み}{方|かた}。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -423,122 +411,76 @@
     "id": "b2s4",
     "no": 4,
     "title": {
-     "id": "Sistem Pendingin",
-     "jp": "{冷却装置|れいきゃくそうち}"
+     "id": "Alat pelumasan dan pengangkat",
+     "jp": "{給油|きゅうゆ}・{持|も}ち{上|あ}げる{道具|どうぐ}"
     },
     "pages": [
-     1,
-     1
+     34,
+     34
     ],
     "full": {
      "id": [
       {
-       "h": "Mengapa perlu pendingin"
-      },
-      {
-       "p": "Pembakaran membuat mesin sangat panas. Sistem pendingin menjaga suhu mesin tetap sesuai. **Terlalu panas** (overheat) merusak mesin; **terlalu dingin** membuat mesin boros dan kurang efisien."
-      },
-      {
-       "h": "Mesin berpendingin air"
+       "h": "Hal. 34 — Alat pelumasan dan pengangkat"
       },
       {
        "ul": [
-        "**ウォータジャケット**: saluran air di sekitar silinder.",
-        "**ウォータポンプ**: memompa air pendingin.",
-        "**ラジエータ**: radiator; membuang panas air ke udara.",
-        "**サーモスタット**: tertutup saat mesin dingin agar cepat panas, terbuka saat panas agar air mengalir ke radiator.",
-        "**冷却ファン**: kipas yang meniup radiator.",
-        "**リザーバタンク**: tangki cadangan air pendingin."
-       ]
-      },
-      {
-       "h": "Air pendingin"
-      },
-      {
-       "p": "**LLC (ロングライフクーラント)** dicampur dengan air. LLC mencegah air **membeku** dan mencegah **karat**. Jangan memakai air biasa saja."
-      },
-      {
-       "h": "Keselamatan"
-      },
-      {
-       "ul": [
-        "**Jangan membuka tutup radiator saat mesin panas.** Air panas bertekanan bisa menyembur dan melukai.",
-        "Periksa jumlah air di リザーバタンク di antara tanda **FULL** dan **LOW** saat mesin dingin.",
-        "Jika lampu atau jarum suhu air menunjukkan panas berlebih, hentikan mobil di tempat aman dan matikan mesin."
+        "① **グリースガン** (ぐりーすがん · guriisugan) — pistol gemuk",
+        "② **ルブリケータ** (るぶりけーた · ruburikeeta) — lubricator (alat pelumas)",
+        "③ **ジャッキ** (じゃっき · jakki) — dongkrak; alias/keterangan: ガレージジャッキ",
+        "④ **リフト** (りふと · rifuto) — lift mobil",
+        "⑤ **チェーン・ブロック** (ちぇーんぶろっく · chiぇぇn burokku) — katrol rantai",
+        "⑥ **うま** (うま · uma) — jack stand (penyangga); alias/keterangan: リジット・ラック"
        ]
       }
      ],
      "jp": [
       {
-       "h": "なぜ{冷|ひ}やすのか"
-      },
-      {
-       "p": "{燃焼|ねんしょう}でエンジンはとても{熱|あつ}くなります。{冷却装置|れいきゃくそうち}は、エンジンの{温度|おんど}をちょうどよくたもちます。**{熱|ねつ}すぎる**（オーバーヒート）とこわれ、**つめたすぎる**と{燃料|ねんりょう}がむだになります。"
-      },
-      {
-       "h": "{水冷式|すいれいしき}エンジン"
+       "h": "ページ 34"
       },
       {
        "ul": [
-        "**ウォータジャケット**：シリンダのまわりの{水|みず}の{通|とお}り{道|みち}。",
-        "**ウォータポンプ**：{冷却水|れいきゃくすい}をおくる。",
-        "**ラジエータ**：{水|みず}の{熱|ねつ}を{空気|くうき}にすてる。",
-        "**サーモスタット**：{冷|つめ}たいときはしまって{早|はや}くあたため、{熱|あつ}いときは{開|あ}いて{水|みず}をラジエータへ{流|なが}す。",
-        "**{冷却|れいきゃく}ファン**：ラジエータに{風|かぜ}をおくる。",
-        "**リザーバタンク**：{冷却水|れいきゃくすい}のよびのタンク。"
-       ]
-      },
-      {
-       "h": "{冷却水|れいきゃくすい}"
-      },
-      {
-       "p": "**LLC（ロングライフクーラント）**を{水|みず}とまぜて{使|つか}います。LLCは{水|みず}が**こおる**のをふせぎ、**さび**をふせぎます。{水|みず}だけを{使|つか}ってはいけません。"
-      },
-      {
-       "h": "あんぜん"
-      },
-      {
-       "ul": [
-        "**エンジンが{熱|あつ}いとき、ラジエータキャップをあけない。**{圧力|あつりょく}のある{熱|あつ}い{水|みず}がふき{出|で}して、やけどをする。",
-        "{冷却水|れいきゃくすい}の{量|りょう}は、エンジンが{冷|ひ}えているときに、リザーバタンクの**FULL**と**LOW**のあいだか{見|み}る。",
-        "{水温計|すいおんけい}や{警告|けいこく}{灯|ひ}で{熱|ねつ}すぎるとわかったら、{安全|あんぜん}な{所|ところ}でとめて、エンジンを{止|と}める。"
+        "① **グリースガン**",
+        "② **ルブリケータ**",
+        "③ **ジャッキ** (ガレージジャッキ)",
+        "④ **リフト**",
+        "⑤ **チェーン・ブロック**",
+        "⑥ **うま** (リジット・ラック)"
        ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Pendingin menjaga suhu mesin: ラジエータ, ウォータポンプ, サーモスタット, 冷却ファン; air + LLC; jangan buka tutup radiator saat panas.",
+      "core": "Subbab ini memuat 6 istilah Jepang dari buku JICA (hal. 34–34).",
       "points": [
-       "サーモスタット: tutup saat dingin, buka saat panas.",
-       "LLC: anti beku dan karat.",
-       "Periksa air saat mesin dingin.",
-       "Jangan buka tutup saat panas."
+       "**グリースガン** = pistol gemuk",
+       "**ルブリケータ** = lubricator (alat pelumas)",
+       "**ジャッキ** = dongkrak",
+       "**リフト** = lift mobil",
+       "**チェーン・ブロック** = katrol rantai"
       ],
       "avoid": [
-       "Membuka tutup radiator saat panas.",
-       "Mengisi hanya air biasa."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Fungsi サーモスタット.",
-       "Fungsi LLC."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "{冷却装置|れいきゃくそうち}はエンジンの{温度|おんど}をたもちます。{冷却水|れいきゃくすい}はLLCと{水|みず}です。{熱|あつ}いときラジエータキャップを{開|あ}けてはいけません。",
+      "core": "このところのことばを6こおぼえます。",
       "points": [
-       "サーモスタットは{冷|つめ}たいときしまり、{熱|あつ}いとき{開|ひら}く。",
-       "LLCはこおりとさびをふせぐ。",
-       "{冷|ひ}えているときに{水|みず}{量|りょう}を{見|み}る。",
-       "{熱|あつ}いときキャップをあけない。"
+       "**グリースガン**",
+       "**ルブリケータ**",
+       "**ジャッキ**",
+       "**リフト**",
+       "**チェーン・ブロック**"
       ],
       "avoid": [
-       "{熱|あつ}いときにラジエータキャップを{開|あ}けること。",
-       "{水|みず}だけを{入|い}れること。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "サーモスタットのはたらき。",
-       "LLCのはたらき。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -547,274 +489,130 @@
     "id": "b2s5",
     "no": 5,
     "title": {
-     "id": "Bahan Bakar, Pemasukan, Pembuangan, Pengapian",
-     "jp": "{燃料|ねんりょう}・{吸排気|きゅうはいき}・{点火|てんか}"
+     "id": "Alat uji kendaraan dan mesin bengkel",
+     "jp": "{検査用|けんさよう}{機械|きかい}"
     },
     "pages": [
-     1,
-     1
+     35,
+     37
     ],
     "full": {
      "id": [
       {
-       "h": "Jalur bahan bakar"
-      },
-      {
-       "ol": [
-        "**燃料タンク** menyimpan bahan bakar.",
-        "**燃料ポンプ** mengirim bahan bakar.",
-        "**燃料フィルタ** menyaring kotoran.",
-        "**インジェクタ** menyemprotkan bahan bakar dalam bentuk kabut."
-       ]
-      },
-      {
-       "p": "Bensin dan solar tidak boleh tertukar: **ガソリン** untuk mesin bensin, **軽油** untuk mesin diesel."
-      },
-      {
-       "h": "Pemasukan udara"
-      },
-      {
-       "p": "Udara masuk lewat **エアクリーナ** (saringan udara) yang membersihkan debu, lalu lewat **スロットルバルブ** yang mengatur jumlah udara. Saringan kotor membuat tenaga turun dan bahan bakar boros."
-      },
-      {
-       "h": "Pembuangan"
-      },
-      {
-       "ol": [
-        "**エキゾーストマニホールド** mengumpulkan gas bekas.",
-        "**触媒コンバータ** membersihkan gas berbahaya (CO, HC, NOx).",
-        "**マフラ** mengecilkan suara."
-       ]
-      },
-      {
-       "p": "Gas buang berbahaya, terutama **一酸化炭素 (CO)** yang tidak berbau dan beracun. **Jangan menghidupkan mesin di ruang tertutup.**"
-      },
-      {
-       "h": "Pengapian (mesin bensin)"
+       "h": "Hal. 35 — Alat uji kendaraan (1)"
       },
       {
        "ul": [
-        "**点火プラグ**: busi, memercikkan api.",
-        "**イグニッションコイル**: mengubah listrik tegangan rendah menjadi tegangan tinggi untuk busi.",
-        "Mesin diesel memakai **グロープラグ** untuk membantu menyalakan saat mesin dingin."
+        "① **ラジエータ・キャップ・テスタ** (らじえーたきゃっぷてすた · rajieeta kyappu tesuta) — penguji tutup radiator; alias/keterangan: 冷却系統の点検に使う工具",
+        "② **ブレーキ・スピード複合機** (ぶれーきすぴーどふくごうき · bureeki supiido fukugouki) — alat uji gabungan rem dan spidometer; alias/keterangan: ブレーキ・テスタとスピードメーター・テスタがいっしょになって検査できるもの",
+        "③ **サイドスリップ・ブレーキ・スピード複合試験機** (さいどすりっぷぶれーきすぴーどふくごうしけんき · saidosurippu bureeki supiido fukugoushikenki) — alat uji gabungan selip samping, rem, dan spidometer; alias/keterangan: サイドスリップ、ブレーキ、スピードメーターの3つがいっしょになったもの",
+        "④ **ブレーキ・テスタ** (ぶれーきてすた · bureeki tesuta) — alat uji rem; alias/keterangan: ブレーキのききかたをはかるときに使います。. Mengukur daya kerja rem.",
+        "⑤ **スピードメーター・テスタ** (すぴーどめーたーてすた · supiidomeetaa tesuta) — alat uji spidometer; alias/keterangan: スピードメーターの指示誤差をはかるときに使います。. Mengukur kesalahan penunjukan spidometer.",
+        "⑥ **サイドスリップ・テスタ** (さいどすりっぷてすた · saidosurippu tesuta) — alat uji selip samping; alias/keterangan: タイヤの横滑りの量をはかるときに使います。. Mengukur besar selip samping ban."
+       ]
+      },
+      {
+       "h": "Hal. 36 — Alat uji kendaraan (2) dan alat bengkel"
+      },
+      {
+       "ul": [
+        "③ **騒音計** (そうおんけい · souonkei) — alat ukur kebisingan; alias/keterangan: 音量計：ホーン（警音器）の音量や騒音量をはかります。. Mengukur volume klakson dan tingkat kebisingan.",
+        "④ **ヘッドライト・テスタ** (へっどらいとてすた · heddoraito tesuta) — penguji lampu depan; alias/keterangan: ヘッドランプの光度と主光軸の照射方向をはかります。. Mengukur intensitas dan arah sinar utama lampu depan.",
+        "⑤ **ホイール・バランサ** (ほいーるばらんさ · hoiiru baransa) — alat balancing roda; alias/keterangan: ホイールのアンバランスをはかる、調整するときに使います。. Mengukur dan menyetel ketidakseimbangan roda.",
+        "⑥ **タイヤ・チェンジャ** (たいやちぇんじゃ · taiya chiぇnja) — mesin pasang-lepas ban; alias/keterangan: ホイールへタイヤをつける、外すときに使います。. Memasang dan melepas ban dari pelek.",
+        "⑦ **ガス溶接器** (がすようせつき · gasuyousetsuki) — alat las gas; alias/keterangan: アセチレン・ガスで金属を溶接する、切る、加工するときに使います。. Mengelas, memotong, dan memproses logam dengan gas asetilen.",
+        "⑧ **アーク溶接機** (あーくようせつき · aakuyousetsuki) — mesin las busur (arc); alias/keterangan: アークによる金属の溶接などに使います。. Dipakai mengelas logam dengan busur listrik.",
+        "⑨ **半自動溶接機** (はんじどうようせつき · hanjidouyousetsuki) — mesin las semi-otomatis; alias/keterangan: 不活性ガス電気溶接機：炭酸ガスなどの不活性ガスを使い、アークによる金属の溶接などに使います。. Las busur dengan gas pelindung seperti CO2."
+       ]
+      },
+      {
+       "h": "Hal. 37 — Kolom 5–6: pelat nomor dan bahan bakar"
+      },
+      {
+       "p": "Kolom 5 (warna pelat nomor): hijau dengan huruf putih = kendaraan perusahaan/usaha; putih dengan huruf hijau = kendaraan pribadi; kuning dengan huruf hitam = kei car (mobil kecil) pribadi; hitam dengan huruf kuning = kei car untuk usaha."
+      },
+      {
+       "p": "Kolom 6 (jenis bahan bakar): merah = レギュラー (bensin reguler); kuning = ハイオク (bensin oktan tinggi); hijau = 軽油 (solar untuk mobil diesel). Jangan mengisi kei car/mobil bensin dengan solar — mesin bisa rusak!"
+      },
+      {
+       "ul": [
+        "**レギュラー** (れぎゅらー · regyuraa) — bensin reguler; alias/keterangan: 赤色",
+        "**ハイオク** (はいおく · haioku) — bensin oktan tinggi; alias/keterangan: 黄色",
+        "**軽油** (けいゆ · keiyu) — solar (diesel); alias/keterangan: 緑色。ディーゼル車の燃料"
        ]
       }
      ],
      "jp": [
       {
-       "h": "{燃料|ねんりょう}のながれ"
-      },
-      {
-       "ol": [
-        "**{燃料|ねんりょう}タンク**に{燃料|ねんりょう}をためる。",
-        "**{燃料|ねんりょう}ポンプ**で{送|おく}る。",
-        "**{燃料|ねんりょう}フィルタ**でごみをとる。",
-        "**インジェクタ**で、きりのようにふきつける。"
-       ]
-      },
-      {
-       "p": "ガソリンと{軽油|けいゆ}をまちがえてはいけません。**ガソリン**はガソリンエンジン、**{軽油|けいゆ}**はディーゼルエンジンです。"
-      },
-      {
-       "h": "{空気|くうき}の{吸入|きゅうにゅう}"
-      },
-      {
-       "p": "{空気|くうき}は、ほこりをとる**エアクリーナ**を{通|とお}り、{量|りょう}を{決|き}める**スロットルバルブ**を{通|とお}ります。エアクリーナがよごれると、{力|ちから}が{出|で}ず、{燃料|ねんりょう}もむだになります。"
-      },
-      {
-       "h": "{排気|はいき}"
-      },
-      {
-       "ol": [
-        "**エキゾーストマニホールド**が、{排気|はいき}ガスを{集|あつ}める。",
-        "**{触媒|しょくばい}コンバータ**が、{体|からだ}に{悪|わる}いガス（CO、HC、NOx）をきれいにする。",
-        "**マフラ**が、{音|おと}を{小|ちい}さくする。"
-       ]
-      },
-      {
-       "p": "{排気|はいき}ガスはあぶないです。とくに**{一酸化炭素|いっさんかたんそ}（CO）**は、においがなく、{毒|どく}があります。**しめきった{部屋|へや}でエンジンをかけてはいけません。**"
-      },
-      {
-       "h": "{点火|てんか}（ガソリンエンジン）"
+       "h": "ページ 35"
       },
       {
        "ul": [
-        "**{点火|てんか}プラグ**：{火花|ひばな}を{出|だ}す。",
-        "**イグニッションコイル**：{低|ひく}い{電圧|でんあつ}を{高|たか}い{電圧|でんあつ}にして、プラグにおくる。",
-        "ディーゼルエンジンでは、{冷|つめ}たいときに**グロープラグ**が{助|たす}ける。"
+        "① **ラジエータ・キャップ・テスタ** (冷却系統の点検に使う工具)",
+        "② **{ブレーキ・スピード複合機|ぶれーきすぴーどふくごうき}** (ブレーキ・テスタとスピードメーター・テスタがいっしょになって検査できるもの)",
+        "③ **{サイドスリップ・ブレーキ・スピード複合試験機|さいどすりっぷぶれーきすぴーどふくごうしけんき}** (サイドスリップ、ブレーキ、スピードメーターの3つがいっしょになったもの)",
+        "④ **ブレーキ・テスタ** (ブレーキのききかたをはかるときに使います。)：Mengukur daya kerja rem.",
+        "⑤ **スピードメーター・テスタ** (スピードメーターの指示誤差をはかるときに使います。)：Mengukur kesalahan penunjukan spidometer.",
+        "⑥ **サイドスリップ・テスタ** (タイヤの横滑りの量をはかるときに使います。)：Mengukur besar selip samping ban."
+       ]
+      },
+      {
+       "h": "ページ 36"
+      },
+      {
+       "ul": [
+        "③ **{騒音計|そうおんけい}** (音量計：ホーン（警音器）の音量や騒音量をはかります。)：Mengukur volume klakson dan tingkat kebisingan.",
+        "④ **ヘッドライト・テスタ** (ヘッドランプの光度と主光軸の照射方向をはかります。)：Mengukur intensitas dan arah sinar utama lampu depan.",
+        "⑤ **ホイール・バランサ** (ホイールのアンバランスをはかる、調整するときに使います。)：Mengukur dan menyetel ketidakseimbangan roda.",
+        "⑥ **タイヤ・チェンジャ** (ホイールへタイヤをつける、外すときに使います。)：Memasang dan melepas ban dari pelek.",
+        "⑦ **{ガス溶接器|がすようせつき}** (アセチレン・ガスで金属を溶接する、切る、加工するときに使います。)：Mengelas, memotong, dan memproses logam dengan gas asetilen.",
+        "⑧ **{アーク溶接機|あーくようせつき}** (アークによる金属の溶接などに使います。)：Dipakai mengelas logam dengan busur listrik.",
+        "⑨ **{半自動溶接機|はんじどうようせつき}** (不活性ガス電気溶接機：炭酸ガスなどの不活性ガスを使い、アークによる金属の溶接などに使います。)：Las busur dengan gas pelindung seperti CO2."
+       ]
+      },
+      {
+       "h": "ページ 37"
+      },
+      {
+       "ul": [
+        "**レギュラー** (赤色)",
+        "**ハイオク** (黄色)",
+        "**{軽油|けいゆ}** (緑色。ディーゼル車の燃料)"
        ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Bahan bakar: タンク → ポンプ → フィルタ → インジェクタ; udara lewat エアクリーナ; gas buang lewat 触媒 dan マフラ; busi untuk bensin.",
+      "core": "Subbab ini memuat 16 istilah Jepang dari buku JICA (hal. 35–37).",
       "points": [
-       "ガソリン ≠ 軽油.",
-       "エアクリーナ kotor → tenaga turun.",
-       "CO tidak berbau, beracun.",
-       "点火プラグ hanya bensin; グロープラグ diesel."
+       "**ラジエータ・キャップ・テスタ** = penguji tutup radiator",
+       "**ブレーキ・スピード複合機** = alat uji gabungan rem dan spidometer",
+       "**サイドスリップ・ブレーキ・スピード複合試験機** = alat uji gabungan selip samping, rem, dan spidometer",
+       "**ブレーキ・テスタ** = alat uji rem",
+       "**スピードメーター・テスタ** = alat uji spidometer"
       ],
       "avoid": [
-       "Menyalakan mesin di ruang tertutup.",
-       "Salah mengisi bensin / solar."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Urutan jalur bahan bakar.",
-       "Fungsi 触媒 dan マフラ."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "{燃料|ねんりょう}はタンク、ポンプ、フィルタ、インジェクタの{順|じゅん}です。{空気|くうき}はエアクリーナを{通|とお}り、{排気|はいき}は{触媒|しょくばい}とマフラを{通|とお}ります。",
+      "core": "このところのことばを16こおぼえます。",
       "points": [
-       "ガソリンと{軽油|けいゆ}をまちがえない。",
-       "エアクリーナがよごれると{力|ちから}が{落|お}ちる。",
-       "COはにおいがなく{毒|どく}。",
-       "{点火|てんか}プラグはガソリン、グロープラグはディーゼル。"
+       "**ラジエータ・キャップ・テスタ**",
+       "**{ブレーキ・スピード複合機|ぶれーきすぴーどふくごうき}**",
+       "**{サイドスリップ・ブレーキ・スピード複合試験機|さいどすりっぷぶれーきすぴーどふくごうしけんき}**",
+       "**ブレーキ・テスタ**",
+       "**スピードメーター・テスタ**"
       ],
       "avoid": [
-       "しめきった{所|ところ}でエンジンをかけること。",
-       "ガソリンと{軽油|けいゆ}をまちがえて{入|い}れること。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "{燃料|ねんりょう}のながれの{順番|じゅんばん}。",
-       "{触媒|しょくばい}とマフラのはたらき。"
-      ]
-     }
-    }
-   },
-   {
-    "id": "b2s6",
-    "no": 6,
-    "title": {
-     "id": "Pemeriksaan Mesin",
-     "jp": "エンジンの{点検|てんけん}"
-    },
-    "pages": [
-     1,
-     1
-    ],
-    "full": {
-     "id": [
-      {
-       "h": "Pemeriksaan harian"
-      },
-      {
-       "ul": [
-        "Jumlah dan kondisi **エンジンオイル**.",
-        "Jumlah **冷却水**.",
-        "Kondisi **ベルト** (kendur, retak, aus).",
-        "Kebocoran oli, air, bahan bakar di bawah dan sekitar mesin.",
-        "Apakah mesin mudah hidup, suara dan getaran saat idle dan saat gas ditekan.",
-        "**警告灯** menyala atau tidak."
-       ]
-      },
-      {
-       "h": "Warna asap knalpot"
-      },
-      {
-       "ul": [
-        "**Putih** pekat terus-menerus: kemungkinan air pendingin ikut terbakar.",
-        "**Hitam**: bahan bakar terlalu banyak atau saringan udara kotor.",
-        "**Biru**: oli ikut terbakar."
-       ]
-      },
-      {
-       "h": "Tekanan kompresi"
-      },
-      {
-       "p": "**圧縮圧力** diukur dengan **コンプレッションゲージ**. Jika rendah, kemungkinan ada **ピストンリング aus** atau **katup bocor**."
-      },
-      {
-       "h": "Gejala dan kemungkinan sebab"
-      },
-      {
-       "ul": [
-        "Mesin overheat: air kurang, サーモスタット macet, kipas rusak, radiator tersumbat.",
-        "Starter berputar tapi mesin tidak hidup: bahan bakar atau pengapian bermasalah.",
-        "Mesin tidak berputar sama sekali: aki atau starter (lihat bab kelistrikan)."
-       ]
-      },
-      {
-       "note": "Catat gejala dengan jelas. Jangan menebak. Laporkan ke atasan."
-      }
-     ],
-     "jp": [
-      {
-       "h": "{毎日|まいにち}の{点検|てんけん}"
-      },
-      {
-       "ul": [
-        "**エンジンオイル**の{量|りょう}と{汚|よご}れ。",
-        "**{冷却水|れいきゃくすい}**の{量|りょう}。",
-        "**ベルト**のたるみ、ひび、すりへり。",
-        "エンジンの{下|した}やまわりに、オイル、{水|みず}、{燃料|ねんりょう}のもれがないか。",
-        "エンジンのかかりやすさ、アイドリングやアクセルをふんだときの{音|おと}とふるえ。",
-        "**{警告|けいこく}{灯|ひ}**がついていないか。"
-       ]
-      },
-      {
-       "h": "{排気|はいき}ガスの{色|いろ}"
-      },
-      {
-       "ul": [
-        "**{白|しろ}**くて、ずっと{出|で}る：{冷却水|れいきゃくすい}が{燃|も}えているかもしれない。",
-        "**{黒|くろ}**：{燃料|ねんりょう}が{多|おお}すぎる、またはエアクリーナがよごれている。",
-        "**{青|あお}**：オイルが{燃|も}えている。"
-       ]
-      },
-      {
-       "h": "{圧縮圧力|あっしゅくあつりょく}"
-      },
-      {
-       "p": "**{圧縮圧力|あっしゅくあつりょく}**は、**コンプレッションゲージ**ではかります。ひくいときは、**ピストンリングのすりへり**や**バルブのもれ**が{考|かんが}えられます。"
-      },
-      {
-       "h": "ふぐあいと{考|かんが}えられる{原因|げんいん}"
-      },
-      {
-       "ul": [
-        "オーバーヒート：{水|みず}が{少|すく}ない、サーモスタットがこわれた、ファンがこわれた、ラジエータがつまった。",
-        "スタータは{回|まわ}るのにエンジンがかからない：{燃料|ねんりょう}か{点火|てんか}のふぐあい。",
-        "スタータもまったく{回|まわ}らない：バッテリかスタータ（{電気|でんき}の{章|しょう}を{見|み}る）。"
-       ]
-      },
-      {
-       "note": "ふぐあいは、はっきり{書|か}いて{記録|きろく}します。あてずっぽうで{言|い}いません。{上|うえ}の{人|ひと}に{報告|ほうこく}します。"
-      }
-     ]
-    },
-    "summary": {
-     "id": {
-      "core": "Periksa harian: oli, air, ベルト, kebocoran, suara, 警告灯; asap putih/hitam/biru; ukur 圧縮圧力 dengan コンプレッションゲージ.",
-      "points": [
-       "Asap putih = air; hitam = bahan bakar berlebih; biru = oli.",
-       "圧縮圧力 rendah = ring aus atau katup bocor.",
-       "Catat gejala, lapor."
-      ],
-      "avoid": [
-       "Menebak sebab tanpa memeriksa.",
-       "Mengabaikan kebocoran kecil."
-      ],
-      "exam": [
-       "Arti warna asap knalpot.",
-       "Alat ukur 圧縮圧力."
-      ]
-     },
-     "jp": {
-      "core": "{毎日|まいにち}、オイル、{冷却水|れいきゃくすい}、ベルト、もれ、{音|おと}、{警告|けいこく}{灯|ひ}を{見|み}ます。{排気|はいき}の{色|いろ}と{圧縮圧力|あっしゅくあつりょく}もふぐあいのヒントです。",
-      "points": [
-       "{白|しろ}＝{冷却水|れいきゃくすい}、{黒|くろ}＝{燃料|ねんりょう}が{多|おお}い、{青|あお}＝オイル。",
-       "{圧縮圧力|あっしゅくあつりょく}がひくい＝リングのすりへり、バルブのもれ。",
-       "ふぐあいを{書|か}いて{報告|ほうこく}。"
-      ],
-      "avoid": [
-       "{調|しら}べないで{原因|げんいん}を{決|き}めること。",
-       "{小|ちい}さいもれをむしすること。"
-      ],
-      "exam": [
-       "{排気|はいき}の{色|いろ}の{意味|いみ}。",
-       "{圧縮圧力|あっしゅくあつりょく}をはかる{道具|どうぐ}。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }

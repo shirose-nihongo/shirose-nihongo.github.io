@@ -1,146 +1,205 @@
 {
  "schema": 1,
  "bidang": "auto-maintenance",
- "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 自動車整備 (MLIT, MOJ/ISA); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
- "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "source": "JICA「みてまなぶ！自動車整備の日本語」(2023年12月30日第1版) https://www.jica.go.jp/activities/issues/transport/mechanic/health_safety_text/index.html",
+ "markup": "Teks JP memakai {kanji|furigana}; **tebal**.",
  "bab": {
   "id": "bab1",
   "no": 1,
   "title": {
-   "id": "Dasar Mobil dan Pekerjaan Perawatan",
-   "jp": "{自動|じどう}{車|くるま}と{整備|せいび}のきほん"
+   "id": "Nama-nama dalam mobil",
+   "jp": "{車|くるま}の{名前|なまえ}"
   },
   "intro": {
-   "id": "Jenis mobil, bagian utamanya, hukum perawatan di Jepang, istilah kerja, dan alur pekerjaan di bengkel.",
-   "jp": "{自動|じどう}{車|くるま}の{種類|しゅるい}と{主|おも}な{部分|ぶぶん}、{整備|せいび}の{法律|ほうりつ}、{整備|せいび}のことば、{工場|こうじょう}での{仕事|しごと}の{流|なが}れを{学|まな}びます。"
+   "id": "Nama bagian dalam, luar, ruang mesin, kaki-kaki, bagian bawah, jenis kendaraan, dan istilah lain.",
+   "jp": "{車|くるま}の{中|なか}・{外|そと}・エンジンルーム・{足回|あしまわ}り・{下回|したまわ}りの{名前|なまえ}をおぼえます。"
   },
   "pages": [
    1,
-   1
+   24
   ],
   "subs": [
    {
     "id": "b1s1",
     "no": 1,
     "title": {
-     "id": "Jenis dan Bagian Utama Mobil",
-     "jp": "{自動|じどう}{車|くるま}の{種類|しゅるい}と{主|おも}な{部分|ぶぶん}"
+     "id": "Di dalam mobil",
+     "jp": "{車|くるま}の{中|なか}"
     },
     "pages": [
      1,
-     1
+     4
     ],
     "full": {
      "id": [
       {
-       "h": "Jenis mobil"
+       "h": "Hal. 1 — Di dalam mobil (1)"
+      },
+      {
+       "p": "Ada video; scan kode QR untuk mendengar pengucapan orang Jepang. Nama bisa berbeda di tiap bengkel — tanyakan juga ke rekan kerja."
       },
       {
        "ul": [
-        "**乗用車**: mobil penumpang. **トラック**: truk untuk barang. **バス**: bus.",
-        "**軽自動車**: mobil kecil menurut standar Jepang, dengan mesin dan badan yang lebih kecil dari mobil biasa.",
-        "Menurut bahan bakar dan tenaga: **ガソリン車**, **ディーゼル車**, **ハイブリッド車** (mesin + motor listrik), **電気自動車** (hanya motor listrik)."
+        "① **運転席** (うんてんせき · untenseki) — kursi pengemudi; alias/keterangan: ドライバーのせき",
+        "② **助手席** (じょしゅせき · joshuseki) — kursi penumpang depan",
+        "③ **後部座席** (こうぶざせき · koubuzaseki) — kursi penumpang belakang; alias/keterangan: うしろのせき",
+        "④ **バック・ミラー** (ばっくみらー · bakku miraa) — spion tengah (kabin); alias/keterangan: ルーム・ミラー",
+        "⑤ **エアコンの吹き出し口** (えあこんのふきだしぐち · eakonnofukidashiguchi) — lubang hembusan AC",
+        "⑥ **カーナビ** (かーなび · kaanabi) — navigasi mobil; alias/keterangan: カー・ナビゲーションシステム",
+        "⑦ **ハンドル** (はんどる · handoru) — setir",
+        "⑧ **ホーン** (ほーん · hoon) — klakson; alias/keterangan: クラクション",
+        "⑨ **ウィンカー・レバー** (うぃんかーればー · uぃnkaa rebaa) — tuas lampu sein",
+        "⑩ **ライティング・スイッチ** (らいてぃんぐすいっち · raiteぃngu suicchi) — saklar lampu"
        ]
       },
       {
-       "h": "Pembagian bagian mobil"
-      },
-      {
-       "p": "Mobil dibagi menjadi empat kelompok besar di buku ini:"
+       "h": "Hal. 2 — Di dalam mobil (2)"
       },
       {
        "ul": [
-        "**エンジン (原動機)**: pembuat tenaga.",
-        "**シャシ**: bagian bawah dan penggerak: penerus tenaga, roda dan suspensi, kemudi, rem.",
-        "**ボデー (車体)**: badan, pintu, kaca, jok.",
-        "**電装品**: bagian listrik: aki, lampu, alternator, starter, sekring."
+        "⑪ **パッシング・ライト・スイッチ** (ぱっしんぐらいとすいっち · passhingu raito suicchi) — saklar lampu passing",
+        "⑫ **メーター** (めーたー · meetaa) — panel instrumen (meteran)",
+        "⑬ **ウォッシャー・スイッチ** (うぉっしゃーすいっち · uぉsshaa suicchi) — saklar penyemprot kaca",
+        "⑭ **グローブ・ボックス** (ぐろーぶぼっくす · guroobu bokkusu) — laci dasbor; alias/keterangan: 助手席の前にある",
+        "⑮ **ダッシュボード** (だっしゅぼーど · dasshuboodo) — dasbor",
+        "⑯ **センター・パネル** (せんたーぱねる · sentaa paneru) — panel tengah",
+        "⑰ **車のカギ（キー）** (くるまのかぎ（きー） · kurumanokagi kii) — kunci mobil",
+        "⑱ **ハザード・スイッチ** (はざーどすいっち · hazaado suicchi) — saklar lampu hazard",
+        "⑲ **シフト・レバー** (しふとればー · shifuto rebaa) — tuas persneling"
        ]
       },
       {
-       "h": "Tenaga mengalir"
+       "h": "Hal. 3 — Di dalam mobil (3)"
       },
       {
-       "ol": [
-        "Mesin membuat tenaga.",
-        "Kopling dan transmisi mengatur tenaga.",
-        "Poros dan gardan meneruskan tenaga ke roda.",
-        "Roda berputar dan mobil bergerak."
+       "ul": [
+        "⑳ **アクセル・ペダル** (あくせるぺだる · akuseru pedaru) — pedal gas; alias/keterangan: ※AT車",
+        "21. **ブレーキ・ペダル** (ぶれーきぺだる · bureeki pedaru) — pedal rem; alias/keterangan: フット・ペダル（AT車）",
+        "22. **クラッチ・ペダル** (くらっちぺだる · kuracchi pedaru) — pedal kopling; alias/keterangan: ※マニュアル車",
+        "23. **パーキング・ブレーキ** (ぱーきんぐぶれーき · paakingu bureeki) — rem parkir; alias/keterangan: レバー式・足踏み式・電動（電子）式",
+        "24. **ルームランプ** (るーむらんぷ · ruumuranpu) — lampu kabin",
+        "25. **サン・バイザー** (さんばいざー · san baizaa) — pelindung silau",
+        "26. **エアバッグ** (えあばっぐ · eabaggu) — kantong udara (airbag); alias/keterangan: ふくらんだとき",
+        "27. **シートベルト** (しーとべると · shiitoberuto) — sabuk pengaman",
+        "28. **シートベルトのバックル** (しーとべるとのばっくる · shiitoberutonobakkuru) — kait sabuk pengaman",
+        "29. **センター・コンソール** (せんたーこんそーる · sentaa konsooru) — konsol tengah"
        ]
       },
       {
-       "note": "Nama bagian berbeda-beda di tiap buku. Pelajari istilah Jepangnya karena soal ujian memakai bahasa Jepang."
+       "h": "Hal. 4 — Di dalam mobil (4): lampu peringatan"
+      },
+      {
+       "ul": [
+        "30. **ヘッド・レスト** (へっどれすと · heddo resuto) — sandaran kepala",
+        "31. **エンジン・チェック・ランプ** (えんじんちぇっくらんぷ · enjin chiぇkku ranpu) — lampu peringatan mesin; alias/keterangan: エンジン警告灯. Contoh: エンジンに異常があるときに、つきます。 → Menyala saat ada kelainan pada mesin.",
+        "32. **ブレーキ・ウォーニング・ランプ** (ぶれーきうぉーにんぐらんぷ · bureeki uぉぉningu ranpu) — lampu peringatan rem; alias/keterangan: ブレーキ警告灯. Contoh: ブレーキ液がたりないとき、パーキング・ブレーキをひいたときに、つきます。 → Menyala saat minyak rem kurang atau rem parkir ditarik.",
+        "33. **SRSエアバッグ・ウォーニング・ランプ** (えすあーるえす えあばっぐうぉーにんぐらんぷ · esuaaruesu eabaggu uぉぉningu ranpu) — lampu peringatan airbag SRS; alias/keterangan: SRSエアバッグ警告灯. Contoh: エアバッグに異常があるときに、つきます。 → Menyala saat ada kelainan pada airbag.",
+        "34. **ABS・ウォーニング・ランプ** (えーびーえすうぉーにんぐらんぷ · eebiiesu uぉぉningu ranpu) — lampu peringatan ABS; alias/keterangan: ABS警告灯. Contoh: ABS（Antilock Brake System）に異常があるときに、つきます。 → Menyala saat ada kelainan pada sistem ABS.",
+        "35. **バッテリー・ウォーニング・ランプ** (ばってりーうぉーにんぐらんぷ · batterii uぉぉningu ranpu) — lampu peringatan aki; alias/keterangan: 充電警告灯. Contoh: バッテリーを充電できないときに、つきます。 → Menyala saat aki tidak bisa diisi.",
+        "36. **半ドア・ウォーニング・ランプ** (はんどあうぉーにんぐらんぷ · handoa uぉぉningu ranpu) — lampu peringatan pintu belum rapat; alias/keterangan: 半ドア警告灯. Contoh: ドアが開いているときに、つきます。 → Menyala saat pintu terbuka/belum tertutup rapat.",
+        "37. **オイルプレッシャー・ウォーニング・ランプ** (おいるぷれっしゃーうぉーにんぐらんぷ · oirupuresshaa uぉぉningu ranpu) — lampu peringatan tekanan oli; alias/keterangan: 油圧警告灯. Contoh: エンジン・オイルの油圧に異常があるときに、つきます。 → Menyala saat tekanan oli mesin tidak normal."
+       ]
       }
      ],
      "jp": [
       {
-       "h": "{自動|じどう}{車|くるま}の{種類|しゅるい}"
+       "h": "ページ 1"
       },
       {
        "ul": [
-        "**{乗用車|じょうようしゃ}**：{人|ひと}をのせる{車|くるま}。**トラック**：{荷物|にもつ}をはこぶ{車|くるま}。**バス**：たくさんの{人|ひと}をのせる{車|くるま}。",
-        "**{軽自動車|けいじどうしゃ}**：{日本|にほん}の{決|き}まりで、エンジンも{車体|しゃたい}も{小|ちい}さい{車|くるま}。",
-        "{燃料|ねんりょう}や{動|どう}{力|ちから}で{分|わ}けると、**ガソリン{車|しゃ}**、**ディーゼル{車|しゃ}**、**ハイブリッド{車|しゃ}**（エンジンとモーター）、**{電気|でんき}{自動|じどう}{車|くるま}**（モーターだけ）があります。"
+        "① **{運転席|うんてんせき}** (ドライバーのせき)",
+        "② **{助手席|じょしゅせき}**",
+        "③ **{後部座席|こうぶざせき}** (うしろのせき)",
+        "④ **バック・ミラー** (ルーム・ミラー)",
+        "⑤ **{エアコンの吹き出し口|えあこんのふきだしぐち}**",
+        "⑥ **カーナビ** (カー・ナビゲーションシステム)",
+        "⑦ **ハンドル**",
+        "⑧ **ホーン** (クラクション)",
+        "⑨ **ウィンカー・レバー**",
+        "⑩ **ライティング・スイッチ**"
        ]
       },
       {
-       "h": "{自動|じどう}{車|くるま}の{主|おも}な{部分|ぶぶん}"
-      },
-      {
-       "p": "この{教材|きょうざい}では、{自動|じどう}{車|くるま}を4つに{分|わ}けます。"
+       "h": "ページ 2"
       },
       {
        "ul": [
-        "**エンジン（{原動機|げんどうき}）**：{力|ちから}をつくる{部分|ぶぶん}。",
-        "**シャシ**：{下|した}の{部分|ぶぶん}と、{力|ちから}をつたえる{部分|ぶぶん}。{動力伝達|どうりょくでんたつ}、{足|あし}まわり、ステアリング、ブレーキ。",
-        "**ボデー（{車体|しゃたい}）**：{車体|しゃたい}、ドア、ガラス、シート。",
-        "**{電装品|でんそうひん}**：{電気|でんき}の{部品|ぶひん}。バッテリ、ライト、オルタネータ、スタータ、ヒューズ。"
+        "⑪ **パッシング・ライト・スイッチ**",
+        "⑫ **メーター**",
+        "⑬ **ウォッシャー・スイッチ**",
+        "⑭ **グローブ・ボックス** (助手席の前にある)",
+        "⑮ **ダッシュボード**",
+        "⑯ **センター・パネル**",
+        "⑰ **{車のカギ（キー）|くるまのかぎ（きー）}**",
+        "⑱ **ハザード・スイッチ**",
+        "⑲ **シフト・レバー**"
        ]
       },
       {
-       "h": "{力|ちから}のながれ"
+       "h": "ページ 3"
       },
       {
-       "ol": [
-        "エンジンが{力|ちから}をつくる。",
-        "クラッチとトランスミッションが{力|ちから}を{調整|ちょうせい}する。",
-        "プロペラシャフトとデファレンシャルが{力|ちから}を{車輪|しゃりん}へつたえる。",
-        "{車輪|しゃりん}がまわって、{車|くるま}が{動|うご}く。"
+       "ul": [
+        "⑳ **アクセル・ペダル** (※AT車)",
+        "21. **ブレーキ・ペダル** (フット・ペダル（AT車）)",
+        "22. **クラッチ・ペダル** (※マニュアル車)",
+        "23. **パーキング・ブレーキ** (レバー式・足踏み式・電動（電子）式)",
+        "24. **ルームランプ**",
+        "25. **サン・バイザー**",
+        "26. **エアバッグ** (ふくらんだとき)",
+        "27. **シートベルト**",
+        "28. **シートベルトのバックル**",
+        "29. **センター・コンソール**"
        ]
       },
       {
-       "note": "{部品|ぶひん}の{名前|なまえ}は{本|ほん}によって{少|すこ}しちがいます。{試験|しけん}は{日本語|にほんご}なので、{日本語|にほんご}の{名前|なまえ}をおぼえましょう。"
+       "h": "ページ 4"
+      },
+      {
+       "ul": [
+        "30. **ヘッド・レスト**",
+        "31. **エンジン・チェック・ランプ** (エンジン警告灯)：エンジンに異常があるときに、つきます。",
+        "32. **ブレーキ・ウォーニング・ランプ** (ブレーキ警告灯)：ブレーキ液がたりないとき、パーキング・ブレーキをひいたときに、つきます。",
+        "33. **SRSエアバッグ・ウォーニング・ランプ** (SRSエアバッグ警告灯)：エアバッグに異常があるときに、つきます。",
+        "34. **ABS・ウォーニング・ランプ** (ABS警告灯)：ABS（Antilock Brake System）に異常があるときに、つきます。",
+        "35. **バッテリー・ウォーニング・ランプ** (充電警告灯)：バッテリーを充電できないときに、つきます。",
+        "36. **{半ドア・ウォーニング・ランプ|はんどあうぉーにんぐらんぷ}** (半ドア警告灯)：ドアが開いているときに、つきます。",
+        "37. **オイルプレッシャー・ウォーニング・ランプ** (油圧警告灯)：エンジン・オイルの油圧に異常があるときに、つきます。"
+       ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Mobil terdiri dari mesin, シャシ, ボデー, dan 電装品; tenaga mengalir dari mesin ke roda.",
+      "core": "Subbab ini memuat 37 istilah Jepang dari buku JICA (hal. 1–4).",
       "points": [
-       "乗用車, トラック, バス, 軽自動車.",
-       "ガソリン車, ディーゼル車, ハイブリッド車, 電気自動車.",
-       "Urutan tenaga: エンジン → クラッチ/トランスミッション → プロペラシャフト/デファレンシャル → 車輪."
+       "**運転席** = kursi pengemudi",
+       "**助手席** = kursi penumpang depan",
+       "**後部座席** = kursi penumpang belakang",
+       "**バック・ミラー** = spion tengah (kabin)",
+       "**エアコンの吹き出し口** = lubang hembusan AC"
       ],
       "avoid": [
-       "Mengira hybrid hanya memakai motor listrik."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Nama kelompok bagian mobil.",
-       "Urutan aliran tenaga."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "{自動|じどう}{車|くるま}はエンジン、シャシ、ボデー、{電装品|でんそうひん}でできています。{力|ちから}はエンジンから{車輪|しゃりん}へ{伝|つた}わります。",
+      "core": "このところのことばを37こおぼえます。",
       "points": [
-       "{乗用車|じょうようしゃ}、トラック、バス、{軽自動車|けいじどうしゃ}。",
-       "{車|くるま}の{種類|しゅるい}：ガソリン、ディーゼル、ハイブリッド、{電気|でんき}。",
-       "{力|ちから}の{順番|じゅんばん}：エンジン→クラッチ→プロペラシャフト→{車輪|しゃりん}。"
+       "**{運転席|うんてんせき}**",
+       "**{助手席|じょしゅせき}**",
+       "**{後部座席|こうぶざせき}**",
+       "**バック・ミラー**",
+       "**{エアコンの吹き出し口|えあこんのふきだしぐち}**"
       ],
       "avoid": [
-       "ハイブリッド{車|しゃ}を、モーターだけで{走|はし}る{車|くるま}だと{思|おも}うこと。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "{車|くるま}の{部分|ぶぶん}の{名前|なまえ}。",
-       "{力|ちから}が{伝|つた}わる{順番|じゅんばん}。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -149,114 +208,116 @@
     "id": "b1s2",
     "no": 2,
     "title": {
-     "id": "Hukum dan Jenis Perawatan",
-     "jp": "{法律|ほうりつ}と{整備|せいび}の{種類|しゅるい}"
+     "id": "Luar mobil: depan",
+     "jp": "{車|くるま}の{外|そと}：フロント"
     },
     "pages": [
-     1,
-     1
+     5,
+     6
     ],
     "full": {
      "id": [
       {
-       "h": "Hukum"
-      },
-      {
-       "p": "Perawatan mobil di Jepang diatur oleh **道路運送車両法**. Tujuannya adalah keselamatan di jalan dan perlindungan lingkungan."
-      },
-      {
-       "h": "Tiga jenis perawatan"
+       "h": "Hal. 5 — Di luar mobil: bagian depan"
       },
       {
        "ul": [
-        "**日常点検整備**: pemeriksaan harian sebelum jalan oleh pemakai: oli, air pendingin, tekanan ban, lampu, rem.",
-        "**定期点検整備**: pemeriksaan berkala sesuai jangka waktu yang ditetapkan hukum. Jangka waktunya berbeda menurut jenis mobil; mobil pribadi umumnya tiap **12 bulan**.",
-        "**分解整備**: perawatan dengan membongkar bagian penting seperti mesin, rem, dan kemudi. Saat ini hukum menyebutnya **特定整備**, dan hanya boleh dilakukan bengkel yang punya **認証** (izin)."
+        "**ボンネット** (ぼんねっと · bonnetto) — kap mesin",
+        "**前照灯** (ぜんしょうとう · zenshoutou) — lampu depan; alias/keterangan: ヘッドライト",
+        "**フロント・バンパー** (ふろんとばんぱー · furonto banpaa) — bemper depan",
+        "**フロント・グリル** (ふろんとぐりる · furonto guriru) — gril depan",
+        "**ナンバー・プレート** (なんばーぷれーと · nanbaa pureeto) — pelat nomor",
+        "**ワイパー** (わいぱー · waipaa) — wiper",
+        "**ワイパー・アーム** (わいぱーあーむ · waipaa aamu) — lengan wiper",
+        "**フロント・ガラス** (ふろんとがらす · furonto garasu) — kaca depan",
+        "**車幅灯** (しゃはばとう · shahabatou) — lampu posisi (lebar kendaraan)"
        ]
       },
       {
-       "h": "Pemeriksaan kendaraan"
+       "h": "Hal. 6 — Di luar mobil: depan (bernomor)"
       },
       {
-       "p": "**車検 (継続検査)** adalah pemeriksaan resmi agar mobil boleh dipakai di jalan. Mobil pribadi baru menjalaninya setelah 3 tahun, lalu **tiap 2 tahun**."
-      },
-      {
-       "h": "Pekerjaan pekerja SSW"
-      },
-      {
-       "p": "Pekerja 特定技能 bidang ini mengerjakan 日常点検整備, 定期点検整備, dan 分解整備. Pekerjaan tambahan seperti menjelaskan perawatan, menjual suku cadang, dan membersihkan boleh dilakukan sebagai pekerjaan sampingan."
-      },
-      {
-       "note": "Aturan tepat jangka waktu tergantung jenis mobil. Untuk ujian, ingat tiga jenis perawatan dan arti masing-masing."
+       "ul": [
+        "① **ボンネット** (ぼんねっと · bonnetto) — kap mesin",
+        "② **前照灯** (ぜんしょうとう · zenshoutou) — lampu depan; alias/keterangan: ヘッドライト",
+        "③ **車幅灯** (しゃはばとう · shahabatou) — lampu posisi",
+        "④ **フォグ・ランプ** (ふぉぐらんぷ · fuぉgu ranpu) — lampu kabut",
+        "⑤ **フロント・バンパー** (ふろんとばんぱー · furonto banpaa) — bemper depan",
+        "⑥ **フロント・グリル** (ふろんとぐりる · furonto guriru) — gril depan",
+        "⑦ **ナンバー・プレート** (なんばーぷれーと · nanbaa pureeto) — pelat nomor",
+        "⑧ **ワイパー** (わいぱー · waipaa) — wiper",
+        "⑨ **ワイパー・アーム** (わいぱーあーむ · waipaa aamu) — lengan wiper",
+        "⑩ **フロント・ガラス** (ふろんとがらす · furonto garasu) — kaca depan"
+       ]
       }
      ],
      "jp": [
       {
-       "h": "{法律|ほうりつ}"
-      },
-      {
-       "p": "{日本|にほん}の{自動|じどう}{車|くるま}の{整備|せいび}は、**{道路運送車両法|どうろうんそうしゃりょうほう}**で{決|き}まっています。{道路|どうろ}の{安全|あんぜん}と{環境|かんきょう}を{守|まも}るためです。"
-      },
-      {
-       "h": "{整備|せいび}の3つの{種類|しゅるい}"
+       "h": "ページ 5"
       },
       {
        "ul": [
-        "**{日常点検整備|にちじょうてんけんせいび}**：{使|つか}う{人|ひと}が{走|はし}る{前|まえ}に{行|おこな}う{点検|てんけん}。オイル、{冷却水|れいきゃくすい}、タイヤ、ライト、ブレーキを{見|み}る。",
-        "**{定期点検整備|ていきてんけんせいび}**：{法律|ほうりつ}で{決|き}まった{期間|きかん}ごとに{行|おこな}う{点検|てんけん}。{車|くるま}の{種類|しゅるい}で{期間|きかん}がちがう。{自家用|じかよう}の{乗用車|じょうようしゃ}はふつう**12か{月|げつ}**ごと。",
-        "**{分解整備|ぶんかいせいび}**：エンジン、ブレーキ、ステアリングなど{大事|だいじ}な{部分|ぶぶん}をはずして{行|おこな}う{整備|せいび}。{今|いま}の{法律|ほうりつ}では**{特定整備|とくていせいび}**といい、**{認証|にんしょう}**を{受|う}けた{工場|こうじょう}だけができる。"
+        "**ボンネット**",
+        "**{前照灯|ぜんしょうとう}** (ヘッドライト)",
+        "**フロント・バンパー**",
+        "**フロント・グリル**",
+        "**ナンバー・プレート**",
+        "**ワイパー**",
+        "**ワイパー・アーム**",
+        "**フロント・ガラス**",
+        "**{車幅灯|しゃはばとう}**"
        ]
       },
       {
-       "h": "{車検|しゃけん}"
+       "h": "ページ 6"
       },
       {
-       "p": "**{車検|しゃけん}（{継続検査|けいぞくけんさ}）**は、{道路|どうろ}を{走|はし}ってよいか{調|しら}べる{国|くに}の{検査|けんさ}です。{自家用|じかよう}の{乗用車|じょうようしゃ}は、{新|あたら}しいときは3{年|ねん}、そのあとは**2{年|ねん}ごと**に{受|う}けます。"
-      },
-      {
-       "h": "{特定技能|とくていぎのう}の{仕事|しごと}"
-      },
-      {
-       "p": "{特定技能|とくていぎのう}の{外国人|がいこくじん}は、{日常点検整備|にちじょうてんけんせいび}、{定期点検整備|ていきてんけんせいび}、{分解整備|ぶんかいせいび}をします。{整備|せいび}のせつめい、{部品|ぶひん}の{販売|はんばい}、そうじなどは、いっしょにしてよい{仕事|しごと}です。"
-      },
-      {
-       "note": "{期間|きかん}の{細|こま}かい{決|き}まりは{車|くるま}の{種類|しゅるい}でちがいます。{試験|しけん}では、3つの{整備|せいび}の{名前|なまえ}と{意味|いみ}をおぼえましょう。"
+       "ul": [
+        "① **ボンネット**",
+        "② **{前照灯|ぜんしょうとう}** (ヘッドライト)",
+        "③ **{車幅灯|しゃはばとう}**",
+        "④ **フォグ・ランプ**",
+        "⑤ **フロント・バンパー**",
+        "⑥ **フロント・グリル**",
+        "⑦ **ナンバー・プレート**",
+        "⑧ **ワイパー**",
+        "⑨ **ワイパー・アーム**",
+        "⑩ **フロント・ガラス**"
+       ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Tiga jenis perawatan: 日常点検整備, 定期点検整備, 分解整備 (特定整備); hukum dasarnya 道路運送車両法.",
+      "core": "Subbab ini memuat 19 istilah Jepang dari buku JICA (hal. 5–6).",
       "points": [
-       "日常点検 = pemakai, sebelum jalan.",
-       "定期点検 = berkala sesuai hukum; mobil pribadi 12 bulan.",
-       "分解整備 (特定整備) = hanya bengkel 認証.",
-       "車検 = 3 tahun lalu tiap 2 tahun (mobil pribadi)."
+       "**ボンネット** = kap mesin",
+       "**前照灯** = lampu depan",
+       "**フロント・バンパー** = bemper depan",
+       "**フロント・グリル** = gril depan",
+       "**ナンバー・プレート** = pelat nomor"
       ],
       "avoid": [
-       "Mencampur arti 日常点検 dan 定期点検.",
-       "Membongkar bagian penting di bengkel tanpa izin."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Arti tiga jenis perawatan.",
-       "Nama hukum 道路運送車両法."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "{整備|せいび}は{日常点検整備|にちじょうてんけんせいび}、{定期点検整備|ていきてんけんせいび}、{分解整備|ぶんかいせいび}（{特定整備|とくていせいび}）の3つです。{法律|ほうりつ}は{道路運送車両法|どうろうんそうしゃりょうほう}です。",
+      "core": "このところのことばを19こおぼえます。",
       "points": [
-       "{日常点検|にちじょうてんけん}＝{使|つか}う{人|ひと}、{走|はし}る{前|まえ}。",
-       "{定期点検|ていきてんけん}＝{決|き}まった{期間|きかん}、{自家用乗用車|じかようじょうようしゃ}は12か{月|げつ}。",
-       "{分解整備|ぶんかいせいび}（{特定整備|とくていせいび}）＝{認証工場|にんしょうこうじょう}だけ。",
-       "{車検|しゃけん}＝3{年|ねん}、あとは2{年|ねん}ごと（{自家用乗用車|じかようじょうようしゃ}）。"
+       "**ボンネット**",
+       "**{前照灯|ぜんしょうとう}**",
+       "**フロント・バンパー**",
+       "**フロント・グリル**",
+       "**ナンバー・プレート**"
       ],
       "avoid": [
-       "{日常点検|にちじょうてんけん}と{定期点検|ていきてんけん}を{混|ま}ぜること。",
-       "{認証|にんしょう}のない{工場|こうじょう}で{分解整備|ぶんかいせいび}をすること。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "3つの{整備|せいび}の{意味|いみ}。",
-       "{道路運送車両法|どうろうんそうしゃりょうほう}の{名前|なまえ}。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -265,124 +326,120 @@
     "id": "b1s3",
     "no": 3,
     "title": {
-     "id": "Istilah Perawatan",
-     "jp": "{整備|せいび}のことば"
+     "id": "Luar mobil: samping",
+     "jp": "{車|くるま}の{外|そと}：サイド"
     },
     "pages": [
-     1,
-     1
+     7,
+     8
     ],
     "full": {
      "id": [
       {
-       "h": "Kata kerja kerja"
+       "h": "Hal. 7 — Di luar mobil: sisi samping"
       },
       {
        "ul": [
-        "**点検**: memeriksa tanpa mengubah.",
-        "**調整**: menyetel agar sesuai nilai yang benar.",
-        "**交換**: mengganti dengan baru.",
-        "**修理**: memperbaiki yang rusak.",
-        "**分解 / 組立て**: membongkar / merakit.",
-        "**清掃**: membersihkan. **給油**: mengisi atau melumasi dengan oli atau gemuk.",
-        "**締め付け**: mengencangkan baut dan mur."
+        "**給油口** (きゅうゆこう · kyuuyukou) — lubang pengisian bahan bakar; alias/keterangan: フューエル・リッド",
+        "**ウィンカー** (うぃんかー · uぃnkaa) — lampu sein; alias/keterangan: 方向指示器",
+        "**ドア・ハンドル** (どあはんどる · doa handoru) — pegangan pintu",
+        "**フロント・ピラー** (ふろんとぴらー · furonto piraa) — tiang depan (pilar A)",
+        "**ドア・ミラー・ウィンカー** (どあみらーうぃんかー · doa miraa uぃnkaa) — lampu sein di spion pintu",
+        "**左サイド・ミラー** (ひだりさいどみらー · hidarisaido miraa) — spion samping kiri",
+        "**フェンダー** (ふぇんだー · fuぇndaa) — spatbor",
+        "**ドア** (どあ · doa) — pintu",
+        "**リア・ドア** (りあどあ · ria doa) — pintu belakang",
+        "**キー・シリンダー** (きーしりんだー · kii shirindaa) — lubang kunci"
        ]
       },
       {
-       "h": "Nilai"
+       "h": "Hal. 8 — Di luar mobil: samping (bernomor)"
       },
       {
        "ul": [
-        "**規定値 (基準値)**: nilai yang seharusnya.",
-        "**限度**: batas pemakaian. Kalau melewati batas, harus diganti.",
-        "**測定**: mengukur dengan alat."
+        "① **フェンダー** (ふぇんだー · fuぇndaa) — spatbor",
+        "② **ウィンカー** (うぃんかー · uぃnkaa) — lampu sein; alias/keterangan: 方向指示器",
+        "③ **左サイド・ミラー** (ひだりさいどみらー · hidarisaido miraa) — spion samping kiri",
+        "④ **右サイド・ミラー** (みぎさいどみらー · migisaido miraa) — spion samping kanan",
+        "⑤ **ドア** (どあ · doa) — pintu",
+        "⑥ **ドア・ハンドル** (どあはんどる · doa handoru) — pegangan pintu",
+        "⑦ **キー・シリンダー** (きーしりんだー · kii shirindaa) — lubang kunci",
+        "⑧ **ドア・ミラー・ウィンカー** (どあみらーうぃんかー · doa miraa uぃnkaa) — lampu sein di spion pintu",
+        "⑨ **フロント・ピラー** (ふろんとぴらー · furonto piraa) — tiang depan (pilar A)",
+        "⑩ **給油口** (きゅうゆこう · kyuuyukou) — lubang pengisian bahan bakar; alias/keterangan: フューエル・リッド",
+        "⑪ **リア・ドア** (りあどあ · ria doa) — pintu belakang"
        ]
-      },
-      {
-       "h": "Tanda masalah"
-      },
-      {
-       "ul": [
-        "**異音**: suara aneh. **異臭**: bau aneh. **振動**: getaran.",
-        "**漏れ**: bocor, misalnya オイル漏れ.",
-        "**警告灯**: lampu peringatan di dasbor."
-       ]
-      },
-      {
-       "note": "Hasil pemeriksaan sering dicatat sebagai **良** (baik) atau **否** (tidak baik)."
       }
      ],
      "jp": [
       {
-       "h": "{作業|さぎょう}のことば"
+       "h": "ページ 7"
       },
       {
        "ul": [
-        "**{点検|てんけん}**：かえないで、よく{見|み}て{調|しら}べること。",
-        "**{調整|ちょうせい}**：{正|ただ}しい{値|ち}にあわせること。",
-        "**{交換|こうかん}**：{新|あたら}しい{部品|ぶひん}にかえること。",
-        "**{修理|しゅうり}**：こわれた{所|ところ}をなおすこと。",
-        "**{分解|ぶんかい}・{組立|くみた}て**：はずすこと、くみたてること。",
-        "**{清掃|せいそう}**：きれいにすること。**{給油|きゅうゆ}**：オイルやグリースを{入|い}れる、ぬること。",
-        "**{締|し}め{付|つ}け**：ボルトやナットをしめること。"
+        "**{給油口|きゅうゆこう}** (フューエル・リッド)",
+        "**ウィンカー** (方向指示器)",
+        "**ドア・ハンドル**",
+        "**フロント・ピラー**",
+        "**ドア・ミラー・ウィンカー**",
+        "**{左サイド・ミラー|ひだりさいどみらー}**",
+        "**フェンダー**",
+        "**ドア**",
+        "**リア・ドア**",
+        "**キー・シリンダー**"
        ]
       },
       {
-       "h": "{値|ち}のことば"
+       "h": "ページ 8"
       },
       {
        "ul": [
-        "**{規定値|きていち}（{基準値|きじゅんち}）**：{本来|ほんらい}の{正|ただ}しい{値|ち}。",
-        "**{限度|げんど}**：{使|つか}ってよい、さいごの{値|ち}。こえたら{交換|こうかん}する。",
-        "**{測定|そくてい}**：{道具|どうぐ}ではかること。"
+        "① **フェンダー**",
+        "② **ウィンカー** (方向指示器)",
+        "③ **{左サイド・ミラー|ひだりさいどみらー}**",
+        "④ **{右サイド・ミラー|みぎさいどみらー}**",
+        "⑤ **ドア**",
+        "⑥ **ドア・ハンドル**",
+        "⑦ **キー・シリンダー**",
+        "⑧ **ドア・ミラー・ウィンカー**",
+        "⑨ **フロント・ピラー**",
+        "⑩ **{給油口|きゅうゆこう}** (フューエル・リッド)",
+        "⑪ **リア・ドア**"
        ]
-      },
-      {
-       "h": "ふぐあいのしるし"
-      },
-      {
-       "ul": [
-        "**{異音|いおん}**：ふだんとちがう{音|おと}。**{異臭|いしゅう}**：ふだんとちがうにおい。**{振動|しんどう}**：ふるえ。",
-        "**{漏|も}れ**：もれること。{例|れい}：オイル{漏|も}れ。",
-        "**{警告|けいこく}{灯|ひ}**：メーターのあたりの{注意|ちゅうい}のランプ。"
-       ]
-      },
-      {
-       "note": "{点検|てんけん}の{結果|けっか}は、**{良|りょう}**（よい）か**{否|ひ}**（よくない）で{書|か}くことがあります。"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "点検 (periksa), 調整 (setel), 交換 (ganti), 修理 (perbaiki); bandingkan hasil ukur dengan 規定値 dan 限度.",
+      "core": "Subbab ini memuat 21 istilah Jepang dari buku JICA (hal. 7–8).",
       "points": [
-       "点検 ≠ 修理.",
-       "限度をこえたら交換.",
-       "異音・異臭・振動・漏れ = tanda masalah.",
-       "良 = baik, 否 = tidak baik."
+       "**給油口** = lubang pengisian bahan bakar",
+       "**ウィンカー** = lampu sein",
+       "**ドア・ハンドル** = pegangan pintu",
+       "**フロント・ピラー** = tiang depan (pilar A)",
+       "**ドア・ミラー・ウィンカー** = lampu sein di spion pintu"
       ],
       "avoid": [
-       "Memakai part yang sudah melewati 限度."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Beda 点検 dan 調整 dan 交換.",
-       "Arti 規定値 dan 限度."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "{点検|てんけん}は{調|しら}べること、{調整|ちょうせい}はあわせること、{交換|こうかん}はかえること、{修理|しゅうり}はなおすことです。{測|はか}った{値|ち}は{規定値|きていち}と{限度|げんど}で{見|み}ます。",
+      "core": "このところのことばを21こおぼえます。",
       "points": [
-       "{点検|てんけん}と{修理|しゅうり}はちがう。",
-       "{限度|げんど}をこえたら{交換|こうかん}。",
-       "{異音|いおん}、{異臭|いしゅう}、{振動|しんどう}、{漏|も}れはふぐあいのしるし。",
-       "{良|りょう}＝よい、{否|ひ}＝よくない。"
+       "**{給油口|きゅうゆこう}**",
+       "**ウィンカー**",
+       "**ドア・ハンドル**",
+       "**フロント・ピラー**",
+       "**ドア・ミラー・ウィンカー**"
       ],
       "avoid": [
-       "{限度|げんど}をこえた{部品|ぶひん}をそのまま{使|つか}うこと。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "{点検|てんけん}、{調整|ちょうせい}、{交換|こうかん}のちがい。",
-       "{規定値|きていち}と{限度|げんど}の{意味|いみ}。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -391,122 +448,819 @@
     "id": "b1s4",
     "no": 4,
     "title": {
-     "id": "Alur Kerja di Bengkel",
-     "jp": "{整備|せいび}{工場|こうじょう}の{仕事|しごと}の{流|なが}れ"
+     "id": "Luar mobil: belakang",
+     "jp": "{車|くるま}の{外|そと}：リア"
     },
     "pages": [
-     1,
-     1
+     9,
+     11
     ],
     "full": {
      "id": [
       {
-       "h": "Alur kerja"
-      },
-      {
-       "ol": [
-        "**受付**: dengarkan keluhan pelanggan dan catat.",
-        "**点検・診断**: periksa dan cari penyebab.",
-        "**見積り・説明**: jelaskan pekerjaan dan biaya, dapat persetujuan pelanggan.",
-        "**整備作業**: kerjakan sesuai prosedur.",
-        "**完成検査**: periksa ulang hasil pekerjaan.",
-        "**引き渡し**: serahkan mobil dan jelaskan hasilnya."
-       ]
-      },
-      {
-       "h": "Catatan"
-      },
-      {
-       "p": "Hasil pemeriksaan dan pekerjaan dicatat di **整備記録簿**. Catatan menjadi bukti dan membantu perawatan berikutnya."
-      },
-      {
-       "h": "Menjaga mobil pelanggan"
+       "h": "Hal. 9 — Di luar mobil: bagian belakang"
       },
       {
        "ul": [
-        "Pasang **cover jok, cover setir, dan alas lantai** sebelum bekerja di dalam mobil.",
-        "Jangan membuat kotor atau tergores.",
-        "Kembalikan part, barang, dan setelan jok ke keadaan semula."
+        "**リア・ガラス** (りあがらす · ria garasu) — kaca belakang",
+        "**リア・ワイパー** (りあわいぱー · ria waipaa) — wiper belakang",
+        "**リア・ゲート** (りあげーと · ria geeto) — pintu bagasi belakang",
+        "**リア・バンパー** (りあばんぱー · ria banpaa) — bemper belakang",
+        "**クオーター・パネル** (くおーたーぱねる · kuootaa paneru) — panel samping belakang; alias/keterangan: リア・フェンダー",
+        "**ルーフ** (るーふ · ruufu) — atap",
+        "**後退灯** (こうたいとう · koutaitou) — lampu mundur; alias/keterangan: バック・ランプ",
+        "**ライセンス・ランプ** (らいせんすらんぷ · raisensu ranpu) — lampu pelat nomor; alias/keterangan: ナンバー灯",
+        "**ブレーキ・ランプ** (ぶれーきらんぷ · bureeki ranpu) — lampu rem; alias/keterangan: 制動灯、ストップ・ランプ",
+        "**ハイ・マウント・ストップ・ランプ** (はいまうんとすとっぷらんぷ · hai maunto sutoppu ranpu) — lampu rem tambahan (posisi tinggi)",
+        "**テール・レンズ** (てーるれんず · teeru renzu) — lensa lampu belakang"
        ]
       },
       {
-       "h": "Pelaporan"
+       "h": "Hal. 10 — Di luar mobil: belakang (bernomor)"
       },
       {
-       "p": "Jika menemukan masalah atau ragu, segera lapor ke atasan: **報告・連絡・相談**. Jangan memutuskan sendiri."
+       "ul": [
+        "① **リア・ガラス** (りあがらす · ria garasu) — kaca belakang",
+        "② **テール・レンズ** (てーるれんず · teeru renzu) — lensa lampu belakang",
+        "③ **ブレーキ・ランプ** (ぶれーきらんぷ · bureeki ranpu) — lampu rem; alias/keterangan: 制動灯、ストップ・ランプ",
+        "④ **ハイ・マウント・ストップ・ランプ** (はいまうんとすとっぷらんぷ · hai maunto sutoppu ranpu) — lampu rem tambahan",
+        "⑤ **リア・ワイパー** (りあわいぱー · ria waipaa) — wiper belakang",
+        "⑥ **リア・ゲート** (りあげーと · ria geeto) — pintu bagasi belakang",
+        "⑦ **リア・バンパー** (りあばんぱー · ria banpaa) — bemper belakang",
+        "⑧ **クォータ・パネル** (くぉーたぱねる · kuぉぉta paneru) — panel samping belakang; alias/keterangan: リア・フェンダー",
+        "⑨ **トランク** (とらんく · toranku) — bagasi",
+        "⑩ **ルーフ** (るーふ · ruufu) — atap",
+        "⑪ **ライセンス・ランプ** (らいせんすらんぷ · raisensu ranpu) — lampu pelat nomor; alias/keterangan: ナンバー灯",
+        "⑫ **後退灯** (こうたいとう · koutaitou) — lampu mundur; alias/keterangan: バック・ランプ"
+       ]
+      },
+      {
+       "h": "Hal. 11 — Kolom istirahat 1–2"
+      },
+      {
+       "p": "Kolom 1: bahasa Jepang suka menyingkat kata katakana yang panjang. Contoh: カーナビゲーション → カーナビ; エア・コンディショナー → エアコン; パワーステアリング → パワステ; エキゾースト・マニホールド → エキマニ; インテーク・マニホールド → インマニ."
+      },
+      {
+       "p": "Kolom 2: negara yang berkendara di sisi kiri memakai setir kanan (Indonesia, India, Thailand, Malaysia, Nepal, Bangladesh, Sri Lanka, Pakistan, Inggris, Australia, Jepang). Negara berkendara sisi kanan memakai setir kiri (Vietnam, Laos, Kamboja, Myanmar, Filipina, Tiongkok, Jerman, Prancis, Swiss, Italia, Spanyol, Amerika, Kanada)."
+      },
+      {
+       "ul": [
+        "**カーナビ** (かーなび · kaanabi) — navigasi mobil (singkatan); alias/keterangan: カー・ナビゲーション",
+        "**エアコン** (えあこん · eakon) — AC (singkatan); alias/keterangan: エア・コンディショナー",
+        "**パワステ** (ぱわすて · pawasute) — power steering (singkatan); alias/keterangan: パワーステアリング",
+        "**エキマニ** (えきまに · ekimani) — manifold buang (singkatan); alias/keterangan: エキゾースト・マニホールド",
+        "**インマニ** (いんまに · inmani) — manifold hisap (singkatan); alias/keterangan: インテーク・マニホールド",
+        "**右ハンドル** (みぎはんどる · migihandoru) — setir kanan",
+        "**左ハンドル** (ひだりはんどる · hidarihandoru) — setir kiri"
+       ]
       }
      ],
      "jp": [
       {
-       "h": "{仕事|しごと}の{流|なが}れ"
-      },
-      {
-       "ol": [
-        "**{受付|うけつけ}**：お{客|きゃく}さまの{話|はなし}をきいて、{書|か}く。",
-        "**{点検|てんけん}・{診断|しんだん}**：{調|しら}べて、{原因|げんいん}をさがす。",
-        "**{見積|みつも}り・{説明|せつめい}**：{作業|さぎょう}と{料金|りょうきん}をせつめいして、お{客|きゃく}さまにOKをもらう。",
-        "**{整備|せいび}{作業|さぎょう}**：{手順|てじゅん}どおりに{作業|さぎょう}する。",
-        "**{完成検査|かんせいけんさ}**：{作業|さぎょう}のあとで、もう{一度|いちど}{調|しら}べる。",
-        "**{引|ひ}き{渡|わた}し**：{車|くるま}をかえして、{結果|けっか}をせつめいする。"
-       ]
-      },
-      {
-       "h": "{記録|きろく}"
-      },
-      {
-       "p": "{点検|てんけん}と{作業|さぎょう}の{結果|けっか}は、**{整備記録簿|せいびきろくぼ}**に{書|か}きます。{記録|きろく}はしょうこになり、つぎの{整備|せいび}に{役立|やくだ}ちます。"
-      },
-      {
-       "h": "お{客|きゃく}さまの{車|くるま}を{守|まも}る"
+       "h": "ページ 9"
       },
       {
        "ul": [
-        "{車|くるま}の{中|なか}で{作業|さぎょう}するときは、**シートカバー、ハンドルカバー、フロアマット**を{使|つか}う。",
-        "よごさない、きずをつけない。",
-        "{部品|ぶひん}や{荷物|にもつ}、シートの{位置|いち}は、もとにもどす。"
+        "**リア・ガラス**",
+        "**リア・ワイパー**",
+        "**リア・ゲート**",
+        "**リア・バンパー**",
+        "**クオーター・パネル** (リア・フェンダー)",
+        "**ルーフ**",
+        "**{後退灯|こうたいとう}** (バック・ランプ)",
+        "**ライセンス・ランプ** (ナンバー灯)",
+        "**ブレーキ・ランプ** (制動灯、ストップ・ランプ)",
+        "**ハイ・マウント・ストップ・ランプ**",
+        "**テール・レンズ**"
        ]
       },
       {
-       "h": "ほうこく"
+       "h": "ページ 10"
       },
       {
-       "p": "{問題|もんだい}を{見|み}つけたとき、わからないときは、すぐに{上|うえ}の{人|ひと}に{言|い}います。**{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}**です。ひとりで{決|き}めません。"
+       "ul": [
+        "① **リア・ガラス**",
+        "② **テール・レンズ**",
+        "③ **ブレーキ・ランプ** (制動灯、ストップ・ランプ)",
+        "④ **ハイ・マウント・ストップ・ランプ**",
+        "⑤ **リア・ワイパー**",
+        "⑥ **リア・ゲート**",
+        "⑦ **リア・バンパー**",
+        "⑧ **クォータ・パネル** (リア・フェンダー)",
+        "⑨ **トランク**",
+        "⑩ **ルーフ**",
+        "⑪ **ライセンス・ランプ** (ナンバー灯)",
+        "⑫ **{後退灯|こうたいとう}** (バック・ランプ)"
+       ]
+      },
+      {
+       "h": "ページ 11"
+      },
+      {
+       "ul": [
+        "**カーナビ** (カー・ナビゲーション)",
+        "**エアコン** (エア・コンディショナー)",
+        "**パワステ** (パワーステアリング)",
+        "**エキマニ** (エキゾースト・マニホールド)",
+        "**インマニ** (インテーク・マニホールド)",
+        "**{右ハンドル|みぎはんどる}**",
+        "**{左ハンドル|ひだりはんどる}**"
+       ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Alur: 受付 → 点検 → 見積り → 作業 → 完成検査 → 引き渡し; catat di 整備記録簿; lindungi mobil pelanggan; lapor bila ragu.",
+      "core": "Subbab ini memuat 30 istilah Jepang dari buku JICA (hal. 9–11).",
       "points": [
-       "Dapat persetujuan pelanggan sebelum kerja.",
-       "完成検査 sebelum serah-terima.",
-       "整備記録簿.",
-       "Pasang cover jok, setir, alas lantai."
+       "**リア・ガラス** = kaca belakang",
+       "**リア・ワイパー** = wiper belakang",
+       "**リア・ゲート** = pintu bagasi belakang",
+       "**リア・バンパー** = bemper belakang",
+       "**クオーター・パネル** = panel samping belakang"
       ],
       "avoid": [
-       "Bekerja tanpa persetujuan pelanggan.",
-       "Memutuskan sendiri saat ragu."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Urutan alur kerja.",
-       "Fungsi 整備記録簿."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "{受付|うけつけ}、{点検|てんけん}、{見積|みつも}り、{作業|さぎょう}、{完成検査|かんせいけんさ}、{引|ひ}き{渡|わた}しの{順|じゅん}です。{記録|きろく}を{書|か}き、お{客|きゃく}さまの{車|くるま}を{守|まも}り、わからないときは{相談|そうだん}します。",
+      "core": "このところのことばを30こおぼえます。",
       "points": [
-       "{作業|さぎょう}の{前|まえ}にお{客|きゃく}さまのOKをもらう。",
-       "{引|ひ}き{渡|わた}しの{前|まえ}に{完成検査|かんせいけんさ}。",
-       "{整備記録簿|せいびきろくぼ}に{書|か}く。",
-       "シート、ハンドル、フロアをカバーする。"
+       "**リア・ガラス**",
+       "**リア・ワイパー**",
+       "**リア・ゲート**",
+       "**リア・バンパー**",
+       "**クオーター・パネル**"
       ],
       "avoid": [
-       "お{客|きゃく}さまのOKなしに{作業|さぎょう}すること。",
-       "わからないのにひとりで{決|き}めること。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "{仕事|しごと}の{流|なが}れの{順番|じゅんばん}。",
-       "{整備記録簿|せいびきろくぼ}のやくわり。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s5",
+    "no": 5,
+    "title": {
+     "id": "Di dalam ruang mesin",
+     "jp": "エンジンルームの{中|なか}"
+    },
+    "pages": [
+     12,
+     16
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 12 — Di dalam ruang mesin (1)"
+      },
+      {
+       "p": "Sebagian foto dan ilustrasi bab ini dipakai dengan izin Kementerian Pertanahan, Infrastruktur, Transportasi dan Pariwisata Jepang (MLIT), dari materi \"Cara Pemeriksaan Harian\"."
+      },
+      {
+       "ul": [
+        "**エンジン** (えんじん · enjin) — mesin",
+        "**エンジン・オイル** (えんじんおいる · enjin oiru) — oli mesin",
+        "**ブレーキ・リザーバ・タンク** (ぶれーきりざーばたんく · bureeki rizaaba tanku) — tangki cadangan minyak rem",
+        "**ブレーキ・フルード** (ぶれーきふるーど · bureeki furuudo) — minyak rem; alias/keterangan: ブレーキ液",
+        "**ウィンド・ウォッシャ液** (うぃんどうぉっしゃえき · uぃndo uぉsshaeki) — cairan penyemprot kaca",
+        "**ラジエータ・リザーバ・タンク** (らじえーたりざーばたんく · rajieeta rizaaba tanku) — tangki cadangan radiator",
+        "**クーラント** (くーらんと · kuuranto) — cairan pendingin; alias/keterangan: 冷却水",
+        "**冷却ファン** (れいきゃくふぁん · reikyakufuぁn) — kipas pendingin; alias/keterangan: ラジエーターファン",
+        "**バッテリのターミナル部** (ばってりのたーみなるぶ · batterinotaaminarubu) — bagian terminal aki",
+        "**バッテリ** (ばってり · batteri) — aki",
+        "**バッテリ液** (ばってりえき · batterieki) — cairan aki"
+       ]
+      },
+      {
+       "h": "Hal. 13 — Di dalam ruang mesin (2)"
+      },
+      {
+       "ul": [
+        "**パワー・ステアリング・ベルト** (ぱわーすてありんぐべると · pawaa sutearingu beruto) — sabuk power steering",
+        "**ファン・ベルト** (ふぁんべると · fuぁn beruto) — sabuk kipas",
+        "**スパーク・プラグ** (すぱーくぷらぐ · supaaku puragu) — busi",
+        "**ディストリビュータのキャップ** (でぃすとりびゅーたのきゃっぷ · deぃsutoribyuutanokyappu) — tutup distributor"
+       ]
+      },
+      {
+       "h": "Hal. 14 — Di dalam ruang mesin (bernomor 1)"
+      },
+      {
+       "ul": [
+        "① **バッテリ** (ばってり · batteri) — aki",
+        "② **バッテリのターミナル部** (ばってりのたーみなるぶ · batterinotaaminarubu) — bagian terminal aki",
+        "③ **バッテリ液** (ばってりえき · batterieki) — cairan aki; alias/keterangan: この中に入っているものは、バッテリ液です。",
+        "④ **エンジンECU** (えんじんいーしーゆー · enjiniishiiyuu) — unit kontrol mesin (ECU); alias/keterangan: エンジン・コントロール・ユニット",
+        "⑤ **アッパー・ホース** (あっぱーほーす · appaa hoosu) — selang atas radiator",
+        "⑥ **クーラントのリザーバ・タンク** (くーらんとのりざーばたんく · kuurantonorizaaba tanku) — tangki cadangan coolant; alias/keterangan: ラジエータ・リザーバ・タンク",
+        "⑦ **クーラント** (くーらんと · kuuranto) — cairan pendingin; alias/keterangan: 冷却水",
+        "⑧ **エア・クリーナー・ボックス** (えあくりーなーぼっくす · ea kuriinaa bokkusu) — kotak saringan udara",
+        "⑨ **イグニッション・コイル** (いぐにっしょんこいる · igunisshon koiru) — koil pengapian"
+       ]
+      },
+      {
+       "h": "Hal. 15 — Di dalam ruang mesin (bernomor 2)"
+      },
+      {
+       "ul": [
+        "⑩ **エンジン** (えんじん · enjin) — mesin",
+        "⑪ **エンジン・オイル** (えんじんおいる · enjin oiru) — oli mesin; alias/keterangan: この中に入っているものは、エンジン・オイルです。",
+        "⑫ **スパーク・プラグ** (すぱーくぷらぐ · supaaku puragu) — busi",
+        "⑬ **ヘッド・カバー** (へっどかばー · heddo kabaa) — tutup kepala silinder",
+        "⑭ **フィラー・キャップ** (ふぃらーきゃっぷ · fuぃraa kyappu) — tutup pengisian oli",
+        "⑮ **レベル・ゲージ** (れべるげーじ · reberu geeji) — batang celup oli (dipstick)",
+        "⑯ **ブレーキ・リザーバ・タンク** (ぶれーきりざーばたんく · bureeki rizaaba tanku) — tangki cadangan minyak rem",
+        "⑰ **ブレーキ・フルード** (ぶれーきふるーど · bureeki furuudo) — minyak rem; alias/keterangan: ブレーキ液",
+        "⑱ **ウィンド・ウォッシャ液のリザーバ・タンク** (うぃんどうぉっしゃえきのりざーばたんく · uぃndo uぉsshaekinorizaaba tanku) — tangki cairan penyemprot kaca"
+       ]
+      },
+      {
+       "h": "Hal. 16 — Di dalam ruang mesin (bernomor 3)"
+      },
+      {
+       "ul": [
+        "⑲ **ウィンド・ウォッシャ液** (うぃんどうぉっしゃえき · uぃndo uぉsshaeki) — cairan penyemprot kaca",
+        "⑳ **エンジン・マウント** (えんじんまうんと · enjin maunto) — dudukan mesin",
+        "21. **ファン・ベルト** (ふぁんべると · fuぁn beruto) — sabuk kipas",
+        "22. **パワー・ステアリング・ベルト** (ぱわーすてありんぐべると · pawaa sutearingu beruto) — sabuk power steering",
+        "23. **オルタネータ** (おるたねーた · orutaneeta) — alternator (dinamo pengisi); alias/keterangan: オルタネーター",
+        "24. **インテーク・マニホールド** (いんてーくまにほーるど · inteeku manihoorudo) — manifold hisap",
+        "25. **冷却ファン** (れいきゃくふぁん · reikyakufuぁn) — kipas pendingin; alias/keterangan: ラジエーター・ファン",
+        "26. **ラジエーター・キャップ** (らじえーたーきゃっぷ · rajieetaa kyappu) — tutup radiator",
+        "27. **ブレーキ・マスタ・シリンダ** (ぶれーきますたしりんだ · bureeki masuta shirinda) — master silinder rem",
+        "28. **マスター・バック** (ますたーばっく · masutaa bakku) — servo rem (master back)"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 12"
+      },
+      {
+       "ul": [
+        "**エンジン**",
+        "**エンジン・オイル**",
+        "**ブレーキ・リザーバ・タンク**",
+        "**ブレーキ・フルード** (ブレーキ液)",
+        "**{ウィンド・ウォッシャ液|うぃんどうぉっしゃえき}**",
+        "**ラジエータ・リザーバ・タンク**",
+        "**クーラント** (冷却水)",
+        "**{冷却ファン|れいきゃくふぁん}** (ラジエーターファン)",
+        "**{バッテリのターミナル部|ばってりのたーみなるぶ}**",
+        "**バッテリ**",
+        "**{バッテリ液|ばってりえき}**"
+       ]
+      },
+      {
+       "h": "ページ 13"
+      },
+      {
+       "ul": [
+        "**パワー・ステアリング・ベルト**",
+        "**ファン・ベルト**",
+        "**スパーク・プラグ**",
+        "**ディストリビュータのキャップ**"
+       ]
+      },
+      {
+       "h": "ページ 14"
+      },
+      {
+       "ul": [
+        "① **バッテリ**",
+        "② **{バッテリのターミナル部|ばってりのたーみなるぶ}**",
+        "③ **{バッテリ液|ばってりえき}** (この中に入っているものは、バッテリ液です。)",
+        "④ **エンジンECU** (エンジン・コントロール・ユニット)",
+        "⑤ **アッパー・ホース**",
+        "⑥ **クーラントのリザーバ・タンク** (ラジエータ・リザーバ・タンク)",
+        "⑦ **クーラント** (冷却水)",
+        "⑧ **エア・クリーナー・ボックス**",
+        "⑨ **イグニッション・コイル**"
+       ]
+      },
+      {
+       "h": "ページ 15"
+      },
+      {
+       "ul": [
+        "⑩ **エンジン**",
+        "⑪ **エンジン・オイル** (この中に入っているものは、エンジン・オイルです。)",
+        "⑫ **スパーク・プラグ**",
+        "⑬ **ヘッド・カバー**",
+        "⑭ **フィラー・キャップ**",
+        "⑮ **レベル・ゲージ**",
+        "⑯ **ブレーキ・リザーバ・タンク**",
+        "⑰ **ブレーキ・フルード** (ブレーキ液)",
+        "⑱ **{ウィンド・ウォッシャ液のリザーバ・タンク|うぃんどうぉっしゃえきのりざーばたんく}**"
+       ]
+      },
+      {
+       "h": "ページ 16"
+      },
+      {
+       "ul": [
+        "⑲ **{ウィンド・ウォッシャ液|うぃんどうぉっしゃえき}**",
+        "⑳ **エンジン・マウント**",
+        "21. **ファン・ベルト**",
+        "22. **パワー・ステアリング・ベルト**",
+        "23. **オルタネータ** (オルタネーター)",
+        "24. **インテーク・マニホールド**",
+        "25. **{冷却ファン|れいきゃくふぁん}** (ラジエーター・ファン)",
+        "26. **ラジエーター・キャップ**",
+        "27. **ブレーキ・マスタ・シリンダ**",
+        "28. **マスター・バック**"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 43 istilah Jepang dari buku JICA (hal. 12–16).",
+      "points": [
+       "**エンジン** = mesin",
+       "**エンジン・オイル** = oli mesin",
+       "**ブレーキ・リザーバ・タンク** = tangki cadangan minyak rem",
+       "**ブレーキ・フルード** = minyak rem",
+       "**ウィンド・ウォッシャ液** = cairan penyemprot kaca"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを43こおぼえます。",
+      "points": [
+       "**エンジン**",
+       "**エンジン・オイル**",
+       "**ブレーキ・リザーバ・タンク**",
+       "**ブレーキ・フルード**",
+       "**{ウィンド・ウォッシャ液|うぃんどうぉっしゃえき}**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s6",
+    "no": 6,
+    "title": {
+     "id": "Kaki-kaki",
+     "jp": "{足回|あしまわ}り"
+    },
+    "pages": [
+     17,
+     17
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 17 — Kaki-kaki (足回り)"
+      },
+      {
+       "ul": [
+        "① **足回り** (あしまわり · ashimawari) — kaki-kaki; alias/keterangan: 足廻り：車のタイヤとサスペンションのこと",
+        "② **タイヤ** (たいや · taiya) — ban; alias/keterangan: ゴムのところ",
+        "③ **ホイール** (ほいーる · hoiiru) — pelek; alias/keterangan: 金属のところ",
+        "④ **ホイール・ナット** (ほいーるなっと · hoiiru natto) — mur roda",
+        "⑤ **エアー・バルブ** (えあーばるぶ · eaa barubu) — pentil ban",
+        "⑥ **ブレーキ・ディスク** (ぶれーきでぃすく · bureeki deぃsuku) — cakram rem",
+        "⑦ **ブレーキ・ディスク・キャリパ** (ぶれーきでぃすくきゃりぱ · bureeki deぃsuku kyaripa) — kaliper cakram rem",
+        "⑧ **ブレーキ・パッド** (ぶれーきぱっど · bureeki paddo) — kampas rem cakram",
+        "⑨ **ブレーキ・ドラム** (ぶれーきどらむ · bureeki doramu) — tromol rem",
+        "⑩ **ブレーキ・ホイール・シリンダ** (ぶれーきほいーるしりんだ · bureeki hoiiru shirinda) — silinder roda rem",
+        "⑪ **ブレーキ・シュー** (ぶれーきしゅー · bureeki shuu) — sepatu rem (kampas rem tromol)",
+        "⑫ **空気圧** (くうきあつ · kuukiatsu) — tekanan udara ban; alias/keterangan: エア・ゲージではかることができるもの"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 17"
+      },
+      {
+       "ul": [
+        "① **{足回り|あしまわり}** (足廻り：車のタイヤとサスペンションのこと)",
+        "② **タイヤ** (ゴムのところ)",
+        "③ **ホイール** (金属のところ)",
+        "④ **ホイール・ナット**",
+        "⑤ **エアー・バルブ**",
+        "⑥ **ブレーキ・ディスク**",
+        "⑦ **ブレーキ・ディスク・キャリパ**",
+        "⑧ **ブレーキ・パッド**",
+        "⑨ **ブレーキ・ドラム**",
+        "⑩ **ブレーキ・ホイール・シリンダ**",
+        "⑪ **ブレーキ・シュー**",
+        "⑫ **{空気圧|くうきあつ}** (エア・ゲージではかることができるもの)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 12 istilah Jepang dari buku JICA (hal. 17–17).",
+      "points": [
+       "**足回り** = kaki-kaki",
+       "**タイヤ** = ban",
+       "**ホイール** = pelek",
+       "**ホイール・ナット** = mur roda",
+       "**エアー・バルブ** = pentil ban"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを12こおぼえます。",
+      "points": [
+       "**{足回り|あしまわり}**",
+       "**タイヤ**",
+       "**ホイール**",
+       "**ホイール・ナット**",
+       "**エアー・バルブ**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s7",
+    "no": 7,
+    "title": {
+     "id": "Bagian bawah mobil",
+     "jp": "{下回|したまわ}り"
+    },
+    "pages": [
+     18,
+     19
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 18 — Bagian bawah mobil (1)"
+      },
+      {
+       "ul": [
+        "① **下回り** (したまわり · shitamawari) — bagian bawah mobil; alias/keterangan: ジャッキで上げた車の下からみえる部品",
+        "② **ドライブ・シャフト** (どらいぶしゃふと · doraibu shafuto) — poros penggerak (drive shaft)",
+        "③ **プロペラ・シャフト** (ぷろぺらしゃふと · puropera shafuto) — poros propeller",
+        "④ **ナックル** (なっくる · nakkuru) — knuckle (penyangga roda)",
+        "⑤ **ブレーキ・ホース** (ぶれーきほーす · bureeki hoosu) — selang rem",
+        "⑥ **トランスミッション** (とらんすみっしょん · toransumisshon) — transmisi",
+        "⑦ **ディファレンシャル** (でぃふぁれんしゃる · deぃfuぁrensharu) — diferensial (gardan); alias/keterangan: デフ",
+        "⑧ **ロア・アーム** (ろああーむ · roa aamu) — lengan bawah",
+        "⑨ **オイル・フィルター** (おいるふぃるたー · oiru fuぃrutaa) — filter oli; alias/keterangan: オイル・エレメント"
+       ]
+      },
+      {
+       "h": "Hal. 19 — Bagian bawah mobil (2)"
+      },
+      {
+       "ul": [
+        "⑩ **エアコン・コンプレッサー** (えあこんこんぷれっさー · eakon konpuressaa) — kompresor AC",
+        "⑪ **ロア・ホース** (ろあほーす · roa hoosu) — selang bawah radiator",
+        "⑫ **オイルパン** (おいるぱん · oirupan) — karter oli",
+        "⑬ **ドレーンボルト** (どれーんぼると · doreenboruto) — baut pembuang oli; alias/keterangan: ドレーンプラグ",
+        "⑭ **O2センサー** (おーつーせんさー · ootsuusensaa) — sensor oksigen (O2)",
+        "⑮ **触媒** (しょくばい · shokubai) — katalis (converter gas buang)",
+        "⑯ **サブ・フレーム** (さぶふれーむ · sabu fureemu) — rangka bantu (subframe)",
+        "⑰ **タイロッド** (たいろっど · tairoddo) — tie rod (batang kemudi)",
+        "⑱ **ホーシング** (ほーしんぐ · hooshingu) — rumah gardan",
+        "⑲ **コイル・スプリング** (こいるすぷりんぐ · koiru supuringu) — pegas keong",
+        "⑳ **ブレーキ・パイプ** (ぶれーきぱいぷ · bureeki paipu) — pipa rem",
+        "21. **ショック・アブソーバー** (しょっくあぶそーばー · shokku abusoobaa) — peredam kejut"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 18"
+      },
+      {
+       "ul": [
+        "① **{下回り|したまわり}** (ジャッキで上げた車の下からみえる部品)",
+        "② **ドライブ・シャフト**",
+        "③ **プロペラ・シャフト**",
+        "④ **ナックル**",
+        "⑤ **ブレーキ・ホース**",
+        "⑥ **トランスミッション**",
+        "⑦ **ディファレンシャル** (デフ)",
+        "⑧ **ロア・アーム**",
+        "⑨ **オイル・フィルター** (オイル・エレメント)"
+       ]
+      },
+      {
+       "h": "ページ 19"
+      },
+      {
+       "ul": [
+        "⑩ **エアコン・コンプレッサー**",
+        "⑪ **ロア・ホース**",
+        "⑫ **オイルパン**",
+        "⑬ **ドレーンボルト** (ドレーンプラグ)",
+        "⑭ **O2センサー**",
+        "⑮ **{触媒|しょくばい}**",
+        "⑯ **サブ・フレーム**",
+        "⑰ **タイロッド**",
+        "⑱ **ホーシング**",
+        "⑲ **コイル・スプリング**",
+        "⑳ **ブレーキ・パイプ**",
+        "21. **ショック・アブソーバー**"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 21 istilah Jepang dari buku JICA (hal. 18–19).",
+      "points": [
+       "**下回り** = bagian bawah mobil",
+       "**ドライブ・シャフト** = poros penggerak (drive shaft)",
+       "**プロペラ・シャフト** = poros propeller",
+       "**ナックル** = knuckle (penyangga roda)",
+       "**ブレーキ・ホース** = selang rem"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを21こおぼえます。",
+      "points": [
+       "**{下回り|したまわり}**",
+       "**ドライブ・シャフト**",
+       "**プロペラ・シャフト**",
+       "**ナックル**",
+       "**ブレーキ・ホース**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s8",
+    "no": 8,
+    "title": {
+     "id": "Jenis kendaraan",
+     "jp": "{車種|しゃしゅ}"
+    },
+    "pages": [
+     20,
+     21
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 20 — Jenis kendaraan (1)"
+      },
+      {
+       "ul": [
+        "22. **エキゾースト・パイプ** (えきぞーすとぱいぷ · ekizoosuto paipu) — pipa gas buang",
+        "23. **マフラー** (まふらー · mafuraa) — knalpot; alias/keterangan: マフラ",
+        "24. **フューエル・タンク** (ふゅーえるたんく · fyuueru tanku) — tangki bahan bakar",
+        "25. **遮熱板** (しゃねつばん · shanetsuban) — pelindung panas",
+        "26. **セダン** (せだん · sedan) — sedan; alias/keterangan: エンジンルームと車室、トランクルームの３つからなる。３ボックスカー。４ドア。. Terdiri dari tiga bagian: ruang mesin, kabin, dan bagasi (3 box), 4 pintu.",
+        "27. **ステーションワゴン** (すてーしょんわごん · suteeshonwagon) — station wagon; alias/keterangan: ２ボックスカー。後ろのにもつをおくところと後部座席がつながっていて、ひろい。. Mobil 2 box; ruang barang belakang menyatu dengan kursi belakang sehingga luas. Biasanya 5 penumpang, lebih rendah daripada SUV/minivan.",
+        "28. **ワンボックス** (わんぼっくす · wanbokkusu) — mobil satu boks (van); alias/keterangan: エンジンルームが車室の下に収められている。. Ruang mesin berada di bawah kabin sehingga ruangnya menyatu seperti satu kotak."
+       ]
+      },
+      {
+       "h": "Hal. 21 — Jenis kendaraan (2) dan kata lain"
+      },
+      {
+       "ul": [
+        "④ **バス** (ばす · basu) — bus",
+        "⑤ **トラック** (とらっく · torakku) — truk",
+        "⑥ **軽トラ** (けいとら · keitora) — truk mini (kei truck); alias/keterangan: 軽トラック",
+        "⑦ **パトカー** (ぱとかー · patokaa) — mobil patroli polisi; alias/keterangan: けいさつの車",
+        "⑧ **車検** (しゃけん · shaken) — uji kendaraan (shaken); alias/keterangan: 法律にそって国が車を点検する制度。. Sistem pemeriksaan kendaraan oleh negara sesuai hukum; di Jepang diperiksa apakah kendaraan memenuhi standar keselamatan.",
+        "⑨ **免許証** (めんきょしょう · menkyoshou) — surat izin mengemudi (SIM); alias/keterangan: 車を運転するためにひつような許可証"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 20"
+      },
+      {
+       "ul": [
+        "22. **エキゾースト・パイプ**",
+        "23. **マフラー** (マフラ)",
+        "24. **フューエル・タンク**",
+        "25. **{遮熱板|しゃねつばん}**",
+        "26. **セダン** (エンジンルームと車室、トランクルームの３つからなる。３ボックスカー。４ドア。)：Terdiri dari tiga bagian: ruang mesin, kabin, dan bagasi (3 box), 4 pintu.",
+        "27. **ステーションワゴン** (２ボックスカー。後ろのにもつをおくところと後部座席がつながっていて、ひろい。)：Mobil 2 box; ruang barang belakang menyatu dengan kursi belakang sehingga luas. Biasanya 5 penumpang, lebih rendah daripada SUV/minivan.",
+        "28. **ワンボックス** (エンジンルームが車室の下に収められている。)：Ruang mesin berada di bawah kabin sehingga ruangnya menyatu seperti satu kotak."
+       ]
+      },
+      {
+       "h": "ページ 21"
+      },
+      {
+       "ul": [
+        "④ **バス**",
+        "⑤ **トラック**",
+        "⑥ **{軽トラ|けいとら}** (軽トラック)",
+        "⑦ **パトカー** (けいさつの車)",
+        "⑧ **{車検|しゃけん}** (法律にそって国が車を点検する制度。)：Sistem pemeriksaan kendaraan oleh negara sesuai hukum; di Jepang diperiksa apakah kendaraan memenuhi standar keselamatan.",
+        "⑨ **{免許証|めんきょしょう}** (車を運転するためにひつような許可証)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 13 istilah Jepang dari buku JICA (hal. 20–21).",
+      "points": [
+       "**エキゾースト・パイプ** = pipa gas buang",
+       "**マフラー** = knalpot",
+       "**フューエル・タンク** = tangki bahan bakar",
+       "**遮熱板** = pelindung panas",
+       "**セダン** = sedan"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを13こおぼえます。",
+      "points": [
+       "**エキゾースト・パイプ**",
+       "**マフラー**",
+       "**フューエル・タンク**",
+       "**{遮熱板|しゃねつばん}**",
+       "**セダン**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s9",
+    "no": 9,
+    "title": {
+     "id": "Istilah lain di bengkel",
+     "jp": "そのほかのことば"
+    },
+    "pages": [
+     22,
+     24
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 22 — Pemeriksaan berkala dan catatannya"
+      },
+      {
+       "ul": [
+        "③ **定期点検** (ていきてんけん · teikitenken) — pemeriksaan berkala; alias/keterangan: 故障する前に悪くなる部品を事前に交換する。. Di Jepang mobil diperiksa secara berkala dan komponen yang akan memburuk diganti sebelum rusak.",
+        "④ **予防保全** (よぼうほぜん · yobouhozen) — perawatan pencegahan; alias/keterangan: この考えかたを予防保全といいます。",
+        "⑤ **定期点検整備記録簿** (ていきてんけんせいびきろくぼ · teikitenkenseibikirokubo) — buku catatan pemeriksaan berkala; alias/keterangan: 1年点検、2年点検、3ヶ月点検、6ヶ月点検、12ヶ月点検",
+        "⑥ **A** (えー · ee) — A = disetel (調整した)",
+        "⑦ **×** (ばつ · batsu) — × = komponen diganti (部品を交換した)",
+        "⑧ **L** (える · eru) — L = diberi pelumas/cairan ditambah (給油)",
+        "⑨ **C** (しー · shii) — C = dibersihkan (清掃した)",
+        "⑩ **△** (さんかく · sankaku) — △ = diperbaiki (修理した)",
+        "⑪ **T** (てぃー · teぃぃ) — T = dikencangkan (締付けた)",
+        "⑫ **レ** (れ · re) — レ = tidak ada kelainan, baik (異常なし、大丈夫)"
+       ]
+      },
+      {
+       "h": "Hal. 23 — Istilah kerja dan kolom 3"
+      },
+      {
+       "p": "Kolom 3: di Jepang semua orang di dalam mobil (pengemudi, penumpang depan, dan belakang) wajib memakai sabuk pengaman. Pengecualian hanya bagi yang dilarang dokter atau ibu hamil, tetapi pada dasarnya semua memakainya."
+      },
+      {
+       "ul": [
+        "⑪ **指示書** (しじしょ · shijisho) — lembar instruksi kerja; alias/keterangan: 作業のないようが書いてある",
+        "⑫ **朝礼** (ちょうれい · chourei) — apel pagi",
+        "⑬ **ラジオ体操** (らじおたいそう · rajiotaisou) — senam radio; alias/keterangan: 朝、仕事が始まる前に、けがをしないよう、みんなで体操をする。. Senam bersama sebelum kerja agar tidak cedera; semua orang Jepang mengenalnya."
+       ]
+      },
+      {
+       "h": "Hal. 24 — Kolom 4: kursi anak"
+      },
+      {
+       "p": "Di Jepang anak wajib memakai kursi khusus; melanggar berarti pelanggaran lalu lintas."
+      },
+      {
+       "ul": [
+        "**ベビーシート** (べびーしーと · bebiishiito) — kursi bayi; alias/keterangan: 0〜1歳、身長70cm以下、体重10kg以下くらい",
+        "**チャイルドシート** (ちゃいるどしーと · chairudoshiito) — kursi anak; alias/keterangan: 1〜4歳ごろ、身長100cm以下、体重9〜18kg",
+        "**ジュニアシート** (じゅにあしーと · juniashiito) — kursi junior; alias/keterangan: 4〜10歳ごろ、体重15〜36kg"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 22"
+      },
+      {
+       "ul": [
+        "③ **{定期点検|ていきてんけん}** (故障する前に悪くなる部品を事前に交換する。)：Di Jepang mobil diperiksa secara berkala dan komponen yang akan memburuk diganti sebelum rusak.",
+        "④ **{予防保全|よぼうほぜん}** (この考えかたを予防保全といいます。)",
+        "⑤ **{定期点検整備記録簿|ていきてんけんせいびきろくぼ}** (1年点検、2年点検、3ヶ月点検、6ヶ月点検、12ヶ月点検)",
+        "⑥ **A**",
+        "⑦ **×**",
+        "⑧ **L**",
+        "⑨ **C**",
+        "⑩ **△**",
+        "⑪ **T**",
+        "⑫ **レ**"
+       ]
+      },
+      {
+       "h": "ページ 23"
+      },
+      {
+       "ul": [
+        "⑪ **{指示書|しじしょ}** (作業のないようが書いてある)",
+        "⑫ **{朝礼|ちょうれい}**",
+        "⑬ **{ラジオ体操|らじおたいそう}** (朝、仕事が始まる前に、けがをしないよう、みんなで体操をする。)：Senam bersama sebelum kerja agar tidak cedera; semua orang Jepang mengenalnya."
+       ]
+      },
+      {
+       "h": "ページ 24"
+      },
+      {
+       "ul": [
+        "**ベビーシート** (0〜1歳、身長70cm以下、体重10kg以下くらい)",
+        "**チャイルドシート** (1〜4歳ごろ、身長100cm以下、体重9〜18kg)",
+        "**ジュニアシート** (4〜10歳ごろ、体重15〜36kg)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 16 istilah Jepang dari buku JICA (hal. 22–24).",
+      "points": [
+       "**定期点検** = pemeriksaan berkala",
+       "**予防保全** = perawatan pencegahan",
+       "**定期点検整備記録簿** = buku catatan pemeriksaan berkala",
+       "**A** = A = disetel (調整した)",
+       "**×** = × = komponen diganti (部品を交換した)"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを16こおぼえます。",
+      "points": [
+       "**{定期点検|ていきてんけん}**",
+       "**{予防保全|よぼうほぜん}**",
+       "**{定期点検整備記録簿|ていきてんけんせいびきろくぼ}**",
+       "**A**",
+       "**×**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
