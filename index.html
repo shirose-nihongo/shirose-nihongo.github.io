@@ -1375,7 +1375,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/ssw.css?v=20261112zh"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261113d"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/themes.css?v=20261115a"/>
+<link rel="stylesheet" href="./css/themes.css?v=20261115b"/>
 </head>
 <body>
 
@@ -1420,7 +1420,7 @@ html{overflow-x:hidden;}
 
 <!-- ============ TOASTS ============ -->
 <div class="toast-wrap" id="toasts"></div>
-<script src="./js/themes.js?v=20261115a"></script>
+<script src="./js/themes.js?v=20261115b"></script>
 
 <!-- ============ LEVEL UP OVERLAY ============ -->
 <div class="levelup-overlay" id="levelup">
@@ -1445,7 +1445,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
-import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115a";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115b";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -1994,9 +1994,11 @@ async function loadGami(){
     // Guest from localStorage
     const key = `shirose-gami-${state.level}`;
     state.gami = JSON.parse(localStorage.getItem(key) || '{"xp":0,"koin":0,"streak":0,"level_karakter":1}');
+    if (window.SHIROSE_THEME) window.SHIROSE_THEME.refresh();
     return;
   }
   state.gami = await FB.getGami(state.level);
+  try { const g = FB.getGachaState ? await FB.getGachaState() : null; if (window.SHIROSE_THEME) window.SHIROSE_THEME.setOwned(g && g.inv || []); } catch (e) {}
 }
 async function awardXP(dXP, dKoin = 0){
   const oldLvl = state.gami.level_karakter || 1;
@@ -2386,7 +2388,7 @@ function renderCharaOrbital(){
         </div>`}
         <div class="hub-card" onclick="route('gacha')">
           <div class="ico">🎰</div>
-          <div class="info"><div class="ttl">Gacha</div><div class="sub">Koleksi bingkai &amp; lencana</div></div>
+          <div class="info"><div class="ttl">Gacha</div><div class="sub">Barang shop &amp; tema langka</div></div>
         </div>
         <div class="hub-card" onclick="route('hafalan')">
           <div class="ico">🧠</div>

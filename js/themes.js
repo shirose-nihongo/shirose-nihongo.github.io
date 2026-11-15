@@ -2,10 +2,13 @@
 (function(){
   var KEY="shirose-theme";
   /* [id, ikon, nama, warna-bar, level-minimal]. Level = level karakter (XP). Guru/admin bebas. */
-  var TH=[["mono","⚫","Monokrom (bawaan)","#111111",1],["ungu","🟣","Ungu","#161b36",10],["cerah","☀️","Cerah","#12345f",15],["hujan","🌧️","Hujan","#1c2733",20],["salju","❄️","Salju / Dingin","#243a52",40],["panas","🌊","Musim Panas","#0b3b5c",50],["badai","⛈️","Badai","#1a1a24",50],["gugur","🍁","Gugur","#2d1a14",75],["semi","🌸","Semi","#2e1f4a",75]];
+  var TH=[["putih","🤍","Putih Ungu (bawaan)","#f4f0ff",1],["mono","⚫","Monokrom","#111111",1],["ungu","🟣","Ungu","#161b36",10],["cerah","☀️","Cerah","#12345f",15],["hujan","🌧️","Hujan","#1c2733",20],["salju","❄️","Salju / Dingin","#243a52",40],["panas","🌊","Musim Panas","#0b3b5c",50],["badai","⛈️","Badai","#1a1a24",50],["gugur","🍁","Gugur","#2d1a14",75],["semi","🌸","Semi","#2e1f4a",75]];
+  var DEF="putih", OWNED={};  /* OWNED: tema dari gacha (id tanpa awalan theme_) → terbuka tanpa syarat level */
   function myLevel(){var s=window.__SHIROSE_STATE||{};if(window.SHIROSE_THEME_FREE)return 999;return (s.gami&&s.gami.level_karakter)||1}
-  function locked(t){for(var i=0;i<TH.length;i++)if(TH[i][0]===t)return myLevel()<TH[i][4];return false}
-  function get(){try{var v=localStorage.getItem(KEY);return TH.some(function(t){return t[0]===v})?v:"mono"}catch(e){return "mono"}}
+  function locked(t){if(OWNED[t])return false;for(var i=0;i<TH.length;i++)if(TH[i][0]===t)return myLevel()<TH[i][4];return false}
+  function raw(){try{var v=localStorage.getItem(KEY);return TH.some(function(t){return t[0]===v})?v:DEF}catch(e){return DEF}}
+  /* tema efektif: kalau pilihan tersimpan masih terkunci (level kurang & belum punya dari gacha) → kembali ke bawaan */
+  function get(){var v=raw();return locked(v)?DEF:v}
 
   /* ===== Pemandangan siluet (diburamkan, menyatu dengan latar) ===== */
   function pole(x,h,c){return '<g fill="'+c+'"><rect x="'+(x-3)+'" y="'+(300-h)+'" width="6" height="'+h+'"/><rect x="'+(x-34)+'" y="'+(300-h+16)+'" width="68" height="5"/><rect x="'+(x-24)+'" y="'+(300-h+44)+'" width="48" height="4"/></g>'}
@@ -47,7 +50,8 @@
     var mn=document.getElementById("th-menu");if(mn)[].forEach.call(mn.querySelectorAll("button"),function(b){b.classList.toggle("on",b.dataset.t===t)});
   }
   function set(t){try{localStorage.setItem(KEY,t)}catch(e){}apply(t)}
-  window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH};
+  function setOwned(ids){OWNED={};(ids||[]).forEach(function(i){if(/^theme_/.test(i))OWNED[i.slice(6)]=1});apply(get())}
+  window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH,setOwned:setOwned,refresh:function(){apply(get())}};
   function init(){
     apply(get());
     var tr=document.querySelector(".topbar-right");

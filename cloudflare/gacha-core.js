@@ -1,4 +1,6 @@
 /* Gacha: logika murni (tanpa I/O) — dipakai Worker & simulasi. RNG HARUS dari server (crypto). */
+import { ITEMS } from "./gacha-items.js";
+function poolDari(items) { const p = { common: [], uncommon: [], rare: [], epic: [], legendary: [], mythic: [] }; items.forEach(x => p[x.rarity] && p[x.rarity].push(x.id)); return p; }
 export const CONFIG = {
   // ⚠ USULAN harga — tinjau sebelum produksi.
   PRICE_1: 1000, PRICE_10: 9000,
@@ -8,12 +10,8 @@ export const CONFIG = {
   ],
   PITY_EPIC: 30,       // maks 30 tarikan tanpa epic+  → epic dijamin
   PITY_LEGENDARY: 120, // maks 120 tarikan tanpa legendary+ → legendary dijamin
-  // Hadiah per rarity. Duplikat → refund koin (DUP_REFUND).
-  POOL: {
-    common: ["frame_basic1", "frame_basic2", "badge_star"], uncommon: ["frame_wave", "badge_fuji"],
-    rare: ["frame_sakura", "badge_koi"], epic: ["frame_gold", "badge_dragon"],
-    legendary: ["frame_aurora", "title_master"], mythic: ["frame_shirose_prism"],
-  },
+  // Hadiah per rarity: barang SHOP + tema (dibangun dari cloudflare/gacha-items.js).
+  POOL: poolDari(ITEMS),
   DUP_REFUND: { common: 100, uncommon: 250, rare: 700, epic: 2000, legendary: 6000, mythic: 20000 },
 };
 const ORDER = CONFIG.RARITY.map(r => r.id);

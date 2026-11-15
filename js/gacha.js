@@ -1,10 +1,11 @@
 /* Halaman Gacha (#gacha). RNG & potong koin di server (cloudflare/gacha-worker.js). Klien hanya menampilkan hasil. */
 import { CONFIG } from "../cloudflare/gacha-core.js";
+import { ITEMS } from "../cloudflare/gacha-items.js";
 export const GACHA_URL = ""; // ⚠ isi URL Worker setelah di-deploy (docs/EKONOMI-GACHA.md), mis. https://shirose-gacha.<akun>.workers.dev
 let FB = null;
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const RAR = { common: ["Common", "#9aa0a6"], uncommon: ["Uncommon", "#5bd16b"], rare: ["Rare", "#4aa3ff"], epic: ["Epic", "#b266ff"], legendary: ["Legendary", "#ffb703"], mythic: ["Mythic", "#ff4d94"] };
-const NAMA = { frame_basic1: "Bingkai Polos", frame_basic2: "Bingkai Garis", badge_star: "Lencana Bintang", frame_wave: "Bingkai Ombak", badge_fuji: "Lencana Fuji", frame_sakura: "Bingkai Sakura", badge_koi: "Lencana Koi", frame_gold: "Bingkai Emas", badge_dragon: "Lencana Naga", frame_aurora: "Bingkai Aurora", title_master: "Gelar Master", frame_shirose_prism: "Bingkai Prisma Shirose" };
+const NAMA = Object.fromEntries(ITEMS.map(x => [x.id, (x.kind === "theme" ? "🎨 " : "") + x.nama]));
 const S = () => window.__SHIROSE_STATE || {};
 let last = null, busy = false;
 export function initGacha(fb) { FB = fb; }
@@ -13,7 +14,7 @@ async function render() {
   if (!st.user) { setTimeout(() => route("login"), 0); return '<div class="loading">Memuat…</div>'; }
   const g = (FB && FB.getGachaState ? await FB.getGachaState() : null) || { sinceEpic: 0, sinceLegend: 0, inv: [] };
   const inv = g.inv || [];
-  const items = Object.entries(CONFIG.POOL).flatMap(([r, a]) => a.map(i => ({ i, r })));
+  const items = Object.entries(CONFIG.POOL).flatMap(([r, a]) => a.map(i => ({ i, r }))).sort((x, y) => ["common","uncommon","rare","epic","legendary","mythic"].indexOf(y.r) - ["common","uncommon","rare","epic","legendary","mythic"].indexOf(x.r));
   const koleksi = items.map(({ i, r }) => `<span style="display:inline-block;margin:3px;padding:5px 9px;border-radius:10px;border:1px solid ${RAR[r][1]};color:${inv.includes(i) ? RAR[r][1] : "#666"};opacity:${inv.includes(i) ? 1 : .5};font-size:12px;">${inv.includes(i) ? "" : "🔒 "}${esc(NAMA[i] || i)}</span>`).join("");
   const hasil = last ? `<div class="panel" style="margin-top:12px;"><h3>Hasil tarikan</h3>${last.results.map(x => `<div style="padding:6px 0;border-bottom:1px solid var(--border,#333);color:${RAR[x.rarity][1]};"><b>${RAR[x.rarity][0]}</b> · ${esc(NAMA[x.item] || x.item)}${x.dup ? ' <small style="color:var(--gray);">(duplikat → +' + CONFIG.DUP_REFUND[x.rarity] + ' 🪙)</small>' : " ✨ baru!"}</div>`).join("")}</div>` : "";
   const aktif = !!GACHA_URL;
@@ -36,6 +37,7 @@ window.GACHA = {
       const j = await r.json();
       if (!r.ok) throw new Error(j.error || "Gagal");
       last = j; if (window.__SHIROSE_STATE) window.__SHIROSE_STATE.gami.koin = j.koin;
+      try { const gs = await FB.getGachaState(); if (window.SHIROSE_THEME) window.SHIROSE_THEME.setOwned(gs && gs.inv || []); } catch (e) {}
       const c = document.getElementById("chip-coin"); if (c) c.textContent = j.koin;
     } catch (e) { if (window.toast) window.toast("❌ " + (e.message || e)); }
     busy = false; route("gacha");
