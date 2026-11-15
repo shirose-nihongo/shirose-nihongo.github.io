@@ -58,9 +58,10 @@
     var x=TH.filter(function(q){return q[0]===t})[0];if(!x)return;
     apply(t);clearPrev();
     var p=document.createElement("div");p.id="th-prev";
-    p.innerHTML='<span>👀 Pratinjau <b>'+x[2]+'</b> · 🔒 terbuka di Level '+x[4]+' atau dari 🎰 Gacha</span><button onclick="SHIROSE_THEME.closePreview()">Tutup pratinjau</button><button onclick="SHIROSE_THEME.closePreview();route(\'gacha\')">🎰 Ke Gacha</button>';
+    p.innerHTML='<span>👀 <b>'+x[2]+'</b> · 🔒 Lv '+x[4]+' / 🎰 Gacha</span><button onclick="SHIROSE_THEME.closePreview();route(\'gacha\')">🎰</button><button onclick="SHIROSE_THEME.closePreview()">✕</button>';
     document.body.appendChild(p);
   }
+  window.addEventListener("hashchange",function(){clearPrev();apply(get())});
   function closePreview(){clearPrev();apply(get())}
   function sosmedTop(){
     var tr=document.querySelector(".topbar-right");if(!tr||document.getElementById("tb-sm"))return;

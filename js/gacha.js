@@ -1,5 +1,5 @@
 /* Halaman Gacha (#gacha). RNG & potong koin di server (cloudflare/gacha-worker.js). Klien hanya menampilkan hasil. */
-import { CONFIG, rollMany } from "../cloudflare/gacha-core.js";
+import { CONFIG, CONFIG_FREE, rollMany } from "../cloudflare/gacha-core.js";
 import { ITEMS } from "../cloudflare/gacha-items.js";
 export const GACHA_URL = ""; // ⚠ isi URL Worker setelah di-deploy (docs/EKONOMI-GACHA.md), mis. https://shirose-gacha.<akun>.workers.dev
 let FB = null;
@@ -32,7 +32,7 @@ async function render() {
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;">
       <button class="btn" ${busy ? "disabled" : ""} onclick="GACHA.tarik(1)">Tarik ×1 · ${CONFIG.PRICE_1.toLocaleString("id-ID")} 🪙</button>
       <button class="btn gold" ${busy ? "disabled" : ""} onclick="GACHA.tarik(10)">Tarik ×10 · ${CONFIG.PRICE_10.toLocaleString("id-ID")} 🪙</button></div>
-    <p style="font-size:11px;color:var(--gray);">Peluang: ${CONFIG.RARITY.map(r => RAR[r.id][0] + " " + r.pct + "%").join(" · ")}</p>
+    ${FB.hasUnlimitedCoins && FB.hasUnlimitedCoins() ? '<p style="font-size:12px;color:#ffb703;">🛡️ Akun moderator: tarik GRATIS, tapi peluang lebih rendah (Epic 1.3% · Legendary 0.19% · Mythic 0.01%) dan tanpa pity.</p>' : ""}<p style="font-size:11px;color:var(--gray);">Peluang: ${CONFIG.RARITY.map(r => RAR[r.id][0] + " " + r.pct + "%").join(" · ")}</p>
     ${GACHA_URL ? "" : '<p style="font-size:11px;color:var(--gray);">Mode sementara: undian dijalankan di perangkat (server gacha belum dipasang).</p>'}</div>${hasil}
     <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item yang sudah dimiliki diganti koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
     <div class="panel" style="margin-top:12px;"><h3>🎁 Semua hadiah (${items.length}) — dimiliki ${items.filter(x => inv.includes(x.i) || (st.siswa?.karakter?.inventory || []).includes(x.i)).length}</h3>${galeri}</div>`;
@@ -63,7 +63,7 @@ async function tarikLokal(n) {
   let saldo = null;
   if (!unl) { saldo = await FB.tambahKoin(-price, "gacha x" + n); if (saldo === null) throw new Error("Dompet belum siap, coba lagi"); }
   const own = Array.from(new Set([...(g.inv || []), ...(FB.ownedShopIds ? FB.ownedShopIds() : [])]));
-  const r = rollMany(n, { sinceEpic: g.sinceEpic || 0, sinceLegend: g.sinceLegend || 0 }, own);
+  const r = rollMany(n, { sinceEpic: g.sinceEpic || 0, sinceLegend: g.sinceLegend || 0 }, own, undefined, unl ? CONFIG_FREE : CONFIG);
   const kind = Object.fromEntries(ITEMS.map(x => [x.id, x.kind]));
   const baru = r.results.filter(x => !x.dup).map(x => x.item);
   try {

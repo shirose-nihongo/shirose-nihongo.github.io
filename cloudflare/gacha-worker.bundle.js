@@ -474,6 +474,12 @@ function rollMany(n, pity, inv, rnd = secureRandom, C = CONFIG) {
   return { results: out, pity: p, refund, inv: [...own] };
 }
 
+/* Akun gratis (moderator / koin tak terbatas): tarikan tidak memotong koin, tapi peluang lebih rendah & tanpa pity. */
+const CONFIG_FREE = { ...CONFIG, RARITY: [
+  { id: "common", pct: 70 }, { id: "uncommon", pct: 22 }, { id: "rare", pct: 6.5 },
+  { id: "epic", pct: 1.3 }, { id: "legendary", pct: 0.19 }, { id: "mythic", pct: 0.01 },
+], PITY_EPIC: 1e9, PITY_LEGENDARY: 1e9 };
+
 /* Gacha server — Cloudflare Worker. RNG & potong koin HANYA di server.
  * Secret/Var: FIREBASE_SA (JSON service account, secret), FIREBASE_PROJECT (id proyek), FIREBASE_API_KEY (web api key), ALLOW_ORIGIN.
  * POST /  {n:1|10}  Authorization: Bearer <Firebase ID token>
@@ -529,7 +535,7 @@ const __worker = {
       const pity = { sinceEpic: num(w.fields?.sinceEpic), sinceLegend: num(w.fields?.sinceLegend) };
       const strs = (f) => (f?.arrayValue?.values || []).map(x => x.stringValue);
       const invW = strs(w.fields?.inv), karInv = strs(s.fields?.karakter?.mapValue?.fields?.inventory);
-      const r = rollMany(n, pity, [...new Set([...invW, ...karInv])]);   // barang shop yang sudah dibeli dihitung duplikat
+      const r = rollMany(n, pity, [...new Set([...invW, ...karInv])], undefined, unlimited ? CONFIG_FREE : CONFIG);   // barang shop yang sudah dibeli dihitung duplikat
       const kind = Object.fromEntries(ITEMS.map(x => [x.id, x.kind]));
       const baru = r.results.filter(x => !x.dup).map(x => x.item);
       const karBaru = [...new Set([...karInv, ...baru.filter(i => kind[i] === "shop")])];

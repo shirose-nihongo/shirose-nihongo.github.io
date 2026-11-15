@@ -4,7 +4,7 @@
  * Koin dipotong dari dompet tunggal siswa/{uid}/wallet/main.koin. Status gacha: siswa/{uid}/wallet/gacha.
  * Setiap tarikan ditulis ke koleksi siswa/{uid}/wallet_log (jejak transaksi). ⚠ BELUM diuji ke Firebase asli — lihat docs/EKONOMI-GACHA.md.
  * Firestore Rules: klien TIDAK boleh menulis wallet/gacha & wallet_log (hanya baca). */
-import { rollMany, CONFIG } from "./gacha-core.js";
+import { rollMany, CONFIG, CONFIG_FREE } from "./gacha-core.js";
 import { ITEMS } from "./gacha-items.js";
 let env = {};
 const J = (code, o, h = {}) => new Response(JSON.stringify(o), { status: code, headers: { "Content-Type": "application/json", "Cache-Control": "no-store", ...h } });
@@ -53,7 +53,7 @@ export default {
       const pity = { sinceEpic: num(w.fields?.sinceEpic), sinceLegend: num(w.fields?.sinceLegend) };
       const strs = (f) => (f?.arrayValue?.values || []).map(x => x.stringValue);
       const invW = strs(w.fields?.inv), karInv = strs(s.fields?.karakter?.mapValue?.fields?.inventory);
-      const r = rollMany(n, pity, [...new Set([...invW, ...karInv])]);   // barang shop yang sudah dibeli dihitung duplikat
+      const r = rollMany(n, pity, [...new Set([...invW, ...karInv])], undefined, unlimited ? CONFIG_FREE : CONFIG);   // barang shop yang sudah dibeli dihitung duplikat
       const kind = Object.fromEntries(ITEMS.map(x => [x.id, x.kind]));
       const baru = r.results.filter(x => !x.dup).map(x => x.item);
       const karBaru = [...new Set([...karInv, ...baru.filter(i => kind[i] === "shop")])];

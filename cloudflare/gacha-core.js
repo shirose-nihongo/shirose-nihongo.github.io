@@ -37,3 +37,9 @@ export function rollMany(n, pity, inv, rnd = secureRandom, C = CONFIG) {
   }
   return { results: out, pity: p, refund, inv: [...own] };
 }
+
+/* Akun gratis (moderator / koin tak terbatas): tarikan tidak memotong koin, tapi peluang lebih rendah & tanpa pity. */
+export const CONFIG_FREE = { ...CONFIG, RARITY: [
+  { id: "common", pct: 70 }, { id: "uncommon", pct: 22 }, { id: "rare", pct: 6.5 },
+  { id: "epic", pct: 1.3 }, { id: "legendary", pct: 0.19 }, { id: "mythic", pct: 0.01 },
+], PITY_EPIC: 1e9, PITY_LEGENDARY: 1e9 };
