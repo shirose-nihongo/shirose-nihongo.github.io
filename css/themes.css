@@ -137,8 +137,23 @@ html[data-theme="mono"]{--navy:#141414;--navy-2:#1f1f1f;--navy-3:#2b2b2b;--navy-
 html[data-theme="mono"] body{background:linear-gradient(to bottom,var(--navy-4),var(--navy))}
 .th-menu button.lock{opacity:.55}.th-lk{margin-left:auto;font-size:11px;color:var(--gray)}
 
-/* Putih Ungu (bawaan): latar putih-lavender, aksen ungu. Teks gelap. */
-html[data-theme="putih"]{--navy:#f7f4ff;--navy-2:#ffffff;--navy-3:#ece6ff;--navy-4:#efeaff;--pink:#7c4dff;--pink-light:#6a3de8;--pink-dark:#5b2fd6;--purple:#9b7bff;--gold:#b7791f;--white:#241a3d;--off:#241a3d;--gray:#5b5478;--gray-dim:#8a83a5;--border:#d9cffa;--border-light:#c4b5f5;--shadow-glow:0 0 24px rgba(124,77,255,.2)}
-html[data-theme="putih"] body{background:radial-gradient(ellipse at 20% 20%,rgba(155,123,255,.18) 0%,transparent 55%),radial-gradient(ellipse at 85% 80%,rgba(124,77,255,.12) 0%,transparent 50%),linear-gradient(to bottom,#ffffff,#f1ecff);color:#241a3d}
-html[data-theme="putih"] .btn:not(.ghost):not(.gold){color:#fff}
-html[data-theme="putih"] .panel,html[data-theme="putih"] .hub-card{background:#fff;border-color:var(--border);box-shadow:0 2px 10px rgba(91,47,214,.08)}
+/* Putih (bawaan): web biasa — putih + hitam, minimalis. */
+html[data-theme="putih"]{--navy:#ffffff;--navy-2:#f5f5f5;--navy-3:#ebebeb;--navy-4:#fafafa;--pink:#111111;--pink-light:#333333;--pink-dark:#000000;--purple:#444444;--gold:#8a6d00;--cyan:#0b7285;--white:#111111;--off:#111111;--gray:#555555;--gray-dim:#8a8a8a;--border:#dddddd;--border-light:#c8c8c8;--shadow-glow:0 0 0 rgba(0,0,0,0)}
+html[data-theme="putih"] body{background:#ffffff;color:#111}
+html[data-theme="putih"] .topbar{background:rgba(255,255,255,.96);border-bottom:1px solid #e3e3e3}
+html[data-theme="putih"] .orbit-node,html[data-theme="putih"] .side-node{background:#fff;color:#111;border:2px solid #111;box-shadow:0 3px 12px rgba(0,0,0,.12)}
+html[data-theme="putih"] .orbit-node:hover,html[data-theme="putih"] .side-node:hover{border-color:#000;box-shadow:0 6px 18px rgba(0,0,0,.22);filter:none}
+html[data-theme="putih"] .btn:not(.ghost):not(.gold){background:#111;color:#fff;border-color:#111}
+html[data-theme="putih"] .btn.ghost{color:#111;border-color:#bdbdbd;background:#fff}
+html[data-theme="putih"] .panel,html[data-theme="putih"] .hub-card,html[data-theme="putih"] .materi-item,html[data-theme="putih"] .jlpt-card,html[data-theme="putih"] .modal-box{background:#fff;color:#111;border:1px solid #ddd;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+html[data-theme="putih"] .chip{background:#f3f3f3;color:#111;border-color:#ddd}
+html[data-theme="putih"] input,html[data-theme="putih"] select,html[data-theme="putih"] textarea{background:#fff;color:#111;border-color:#c8c8c8}
+html[data-theme="putih"] .th-menu{background:#fff;border-color:#ccc}
+html[data-theme="putih"] .th-menu button{color:#111}html[data-theme="putih"] .th-menu button:hover,html[data-theme="putih"] .th-menu button.on{background:#eee}
+
+/* IG & TikTok selalu terlihat di topbar (footer sosmed sering tertutup konten) */
+.tb-sm{display:inline-flex;gap:6px;align-items:center;margin-right:4px}
+.tb-sm a{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:linear-gradient(135deg,#a855f7,#6d28d9);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.tb-sm a.tt{background:linear-gradient(135deg,#111,#c026d3)}
+.tb-sm svg{width:16px;height:16px;fill:#fff}
+@media (max-width:420px){.tb-sm a{width:26px;height:26px}.tb-sm svg{width:14px;height:14px}}
