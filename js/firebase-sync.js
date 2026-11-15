@@ -1408,7 +1408,16 @@ export async function leaderboard(level, topN = 20) {
  *   kind = "global"                 — sum XP across all 5 JLPTs
  *   kind = "weekly" / "monthly"     — ranked by activity count in window
  */
-export async function leaderboardAdvanced(kind = "global", topN = 20) {
+const _LB_TTL = 15 * 60 * 1000;   // cache 15 menit: hemat kuota baca Firestore (tiap buka leaderboard = ribuan baca)
+export async function leaderboardAdvanced(kind = "global", topN = 20, { force = false } = {}) {
+  const ck = "shirose-lb:" + kind + ":" + topN;
+  if (!force) { try { const c = JSON.parse(localStorage.getItem(ck) || "null"); if (c && Date.now() - c.t < _LB_TTL) return c.v; } catch (e) {} }
+  const v = await _leaderboardAdvancedRaw(kind, topN);
+  if (v && v.length) { try { localStorage.setItem(ck, JSON.stringify({ t: Date.now(), v })); } catch (e) {} }
+  else { try { const c = JSON.parse(localStorage.getItem(ck) || "null"); if (c) return c.v; } catch (e) {} }   // gagal/kosong → pakai cache lama
+  return v;
+}
+async function _leaderboardAdvancedRaw(kind = "global", topN = 20) {
   try {
     const snap = await getDocs(collection(db, "siswa"));
     const result = [];
@@ -1450,7 +1459,8 @@ export async function leaderboardAdvanced(kind = "global", topN = 20) {
           // Sum activity counts within window
           const now = new Date();
           const windowDays = kind === "weekly" ? 7 : 30;
-          const col = await getDocs(collection(db, "siswa", d.id, "activity"));
+          const _p = (x) => String(x.getFullYear()) + String(x.getMonth() + 1).padStart(2, "0") + String(x.getDate()).padStart(2, "0");
+          const col = await getDocs(query(collection(db, "siswa", d.id, "activity"), where(documentId(), ">=", _p(new Date(now.getTime() - windowDays * 86400000)))));
           let total = 0, days = 0;
           col.forEach(ad => {
             const ymd = ad.id;
