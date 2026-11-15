@@ -1431,8 +1431,8 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261115p";
-import { allShopItems } from "./js/shop-seed.js?v=20261115p";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261115q";
+import { allShopItems } from "./js/shop-seed.js?v=20261115q";
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
 import * as FB from "./js/firebase-sync.js?v=20261115b";
@@ -1445,7 +1445,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261114f";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
-import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115p";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261115q";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -4567,11 +4567,12 @@ async function renderShop(){
     { key: "item_tangan", label: "⚔️ Senjata" },
     { key: "aura",        label: "✨ Aura" },
     { key: "celana",      label: "👖 Celana" },
+    { key: "sayap",       label: "🪽 Sayap (Gacha)" },
   ];
   const activeCat = state._shopCat && CAT_TABS.some(t => t.key === state._shopCat) ? state._shopCat : "rambut";
   state._shopCat = activeCat;
 
-  const allItems = allShopItems();
+  const allItems = allShopItems(true);   // sayap ikut ditampilkan (pratinjau), tapi tidak bisa dibeli
   const items = allItems.filter(it => it.kategori === activeCat);
 
   const inv = state.siswa?.karakter?.inventory || [];
@@ -4606,6 +4607,8 @@ async function renderShop(){
     actionHtml = `<button class="btn ghost" style="width:100%;" disabled>✓ Sedang dipakai</button>`;
   } else if (isOwned){
     actionHtml = `<button class="btn gold" style="width:100%;" onclick="shopEquip('${activeCat}','${preview}')">👔 Pakai</button>`;
+  } else if (previewItem.gachaOnly){
+    actionHtml = `<button class="btn gold" style="width:100%;" onclick="route('gacha')">🎰 Hanya dari Gacha · dipakai di Lv ${previewItem.unlock_lv}</button>`;
   } else if (locked){
     actionHtml = `<button class="btn" style="width:100%;" disabled>🔒 Butuh Lv ${previewItem.unlock_lv}</button>`;
   } else if (!canAfford){
