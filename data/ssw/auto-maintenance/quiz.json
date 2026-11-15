@@ -3046,7 +3046,7 @@
      {
       "q": {
        "id": "Benar atau salah: “Jika starter tidak berputar sama sekali, hal pertama yang dicurigai adalah aki.”",
-       "jp": "○か×か。「スタータがまったく{回|かい}らないとき、まずバッテリが{弱|よわ}いかもしれません。」"
+       "jp": "○か×か。「スタータがまったく{回|まわ}らないとき、まずバッテリが{弱|よわ}いかもしれません。」"
       },
       "opts": [
        {
@@ -3180,7 +3180,7 @@
      {
       "q": {
        "id": "Benar atau salah: “リレー mengendalikan arus besar dengan arus kecil.”",
-       "jp": "○か×か。「リレーは、{小|ちい}さい{電流|でんりゅう}で{大|おお}きい{電流|でんりゅう}を{入|はい}り{切|き}りします。」"
+       "jp": "○か×か。「リレーは、{小|ちい}さい{電流|でんりゅう}で{大|おお}きい{電流|でんりゅう}を{入|い}り{切|き}りします。」"
       },
       "opts": [
        {
@@ -3914,7 +3914,1751 @@
      }
     ]
    }
+  ],
+  "bab6": [
+   {
+    "id": "bab6-q1",
+    "title": {
+     "id": "Alat dan alat ukur",
+     "jp": "{工具|こうぐ}と{測定|そくてい}{器|き}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “メガネレンチ cocok untuk baut yang kencang.”",
+       "jp": "○か×か。「メガネレンチは、かたくしまったボルトに{合|あ}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Memegang seluruh sisi.",
+       "jp": "まわり{全部|ぜんぶ}でつかみます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jangka sorong disebut…",
+       "jp": "{外|そと}の{大|おお}きさ、{中|なか}の{大|おお}きさ、{深|ふか}さがはかれる{道具|どうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ノギス",
+        "jp": "ノギス"
+       },
+       {
+        "id": "回路計",
+        "jp": "{回路計|かいろけい}"
+       },
+       {
+        "id": "ジャッキ",
+        "jp": "ジャッキ"
+       },
+       {
+        "id": "ブーツ",
+        "jp": "ブーツ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ノギス.",
+       "jp": "ノギスです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “トルクレンチ ditarik hingga lewat klik.”",
+       "jp": "○か×か。「トルクレンチは、カチッのあともひきつづけます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Berhenti saat klik.",
+       "jp": "カチッで{止|と}めます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "bab6-q2",
+    "title": {
+     "id": "Oli, bahan bakar, bahan",
+     "jp": "{油脂|ゆし}・{燃料|ねんりょう}・{材料|ざいりょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Ganti ガスケット dengan yang baru saat merakit.”",
+       "jp": "○か×か。「{組立|くみた}てるとき、ガスケットは{新|あたら}しい{物|もの}にかえます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{新|あたら}しい{物|もの}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bahan bakar mesin diesel adalah…",
+       "jp": "ディーゼルエンジンの{燃料|ねんりょう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "軽油",
+        "jp": "{軽油|けいゆ}"
+       },
+       {
+        "id": "ガソリン",
+        "jp": "ガソリン"
+       },
+       {
+        "id": "LLC",
+        "jp": "LLC"
+       },
+       {
+        "id": "ATF",
+        "jp": "ATF"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "軽油.",
+       "jp": "{軽油|けいゆ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Cairan sebaiknya disimpan dalam wadah bertutup dan berlabel.”",
+       "jp": "○か×か。「{液|えき}は、ふたがあって{名前|なまえ}を{書|か}いた{入|い}れ{物|もの}にしまいます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{名前|なまえ}を{書|か}きます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b6s1-q",
+    "sub": "b6s1",
+    "title": {
+     "id": "Subbab 6.1 · Perkakas dan Kunci Torsi",
+     "jp": "6.1 {工具|こうぐ}とトルクレンチ"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Perkakas yang memegang kepala baut di seluruh sisinya adalah…",
+       "jp": "ボルトの{頭|あたま}をまわり{全部|ぜんぶ}でつかむ{工具|こうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "メガネレンチ",
+        "jp": "メガネレンチ"
+       },
+       {
+        "id": "スパナ",
+        "jp": "スパナ"
+       },
+       {
+        "id": "ニッパ",
+        "jp": "ニッパ"
+       },
+       {
+        "id": "ハンマ",
+        "jp": "ハンマ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "メガネレンチ.",
+       "jp": "メガネレンチです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “トルクレンチ dihentikan saat terdengar klik.”",
+       "jp": "○か×か。「トルクレンチは、カチッと{音|おと}がしたら{止|と}めます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "カチッで{止|と}めます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “トルクレンチ boleh dipakai untuk mengendurkan baut yang sangat keras.”",
+       "jp": "○か×か。「トルクレンチは、かたいボルトをゆるめるために{使|つか}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Bukan alat untuk mengendurkan.",
+       "jp": "ゆるめる{道具|どうぐ}ではありません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Satuan torsi adalah…",
+       "jp": "トルクの{単位|たんい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "N·m",
+        "jp": "N·m"
+       },
+       {
+        "id": "mm",
+        "jp": "mm"
+       },
+       {
+        "id": "V",
+        "jp": "V"
+       },
+       {
+        "id": "kg",
+        "jp": "kg"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "N·m.",
+       "jp": "N·mです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Menarik kunci lebih aman daripada mendorongnya.”",
+       "jp": "○か×か。「{工具|こうぐ}は、おすよりひくほうが{安全|あんぜん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Jika terlepas, tangan tidak menghantam.",
+       "jp": "すべっても、{手|て}をぶつけにくいです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b6s2-q",
+    "sub": "b6s2",
+    "title": {
+     "id": "Subbab 6.2 · Alat Ukur",
+     "jp": "6.2 {測定|そくてい}{器|き}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Alat untuk mengukur celah adalah…",
+       "jp": "すきまをはかる{道具|どうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "シックネスゲージ",
+        "jp": "シックネスゲージ"
+       },
+       {
+        "id": "タイヤゲージ",
+        "jp": "タイヤゲージ"
+       },
+       {
+        "id": "回路計",
+        "jp": "{回路計|かいろけい}"
+       },
+       {
+        "id": "トルクレンチ",
+        "jp": "トルクレンチ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "シックネスゲージ.",
+       "jp": "シックネスゲージです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “マイクロメータ lebih teliti daripada ノギス.”",
+       "jp": "○か×か。「マイクロメータは、ノギスより{細|こま}かくはかれます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sekitar 0,01 mm.",
+       "jp": "{約|やく}0.01mmです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Alat untuk mengukur ketidaklurusan putaran (振れ) adalah…",
+       "jp": "ぶれをはかる{道具|どうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ダイヤルゲージ",
+        "jp": "ダイヤルゲージ"
+       },
+       {
+        "id": "ノギス",
+        "jp": "ノギス"
+       },
+       {
+        "id": "ハンマ",
+        "jp": "ハンマ"
+       },
+       {
+        "id": "ジャッキ",
+        "jp": "ジャッキ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ダイヤルゲージ.",
+       "jp": "ダイヤルゲージです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Skala dibaca dari samping sebarang arah.”",
+       "jp": "○か×か。「{目盛|めも}りは、どの{方向|ほうこう}から{読|よ}んでもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Dari depan.",
+       "jp": "{正面|しょうめん}から{読|よ}みます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b6s3-q",
+    "sub": "b6s3",
+    "title": {
+     "id": "Subbab 6.3 · Oli, Cairan, dan Bahan Bakar",
+     "jp": "6.3 {油脂|ゆし}・{液|えき}・{燃料|ねんりょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Cairan rem berbeda jenis tidak boleh dicampur sembarangan.”",
+       "jp": "○か×か。「ちがう{種類|しゅるい}のブレーキ{液|えき}を、かってにまぜてはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Ikuti spesifikasi.",
+       "jp": "{決|き}まった{種類|しゅるい}を{使|つか}います。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pelumas setengah padat yang menempel di bantalan adalah…",
+       "jp": "{半分|はんぶん}かたまっていて、ベアリングなどにつくあぶらはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "グリース",
+        "jp": "グリース"
+       },
+       {
+        "id": "ガソリン",
+        "jp": "ガソリン"
+       },
+       {
+        "id": "LLC",
+        "jp": "LLC"
+       },
+       {
+        "id": "ウォッシャ液",
+        "jp": "ウォッシャ{液|えき}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "グリース.",
+       "jp": "グリースです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bensin mudah menguap dan terbakar.”",
+       "jp": "○か×か。「ガソリンは、{蒸発|じょうはつ}しやすく、{燃|も}えやすいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Jauhkan api.",
+       "jp": "{火|ひ}に{注意|ちゅうい}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bahan bakar diesel adalah bensin.”",
+       "jp": "○か×か。「ディーゼルエンジンの{燃料|ねんりょう}はガソリンです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Solar (軽油).",
+       "jp": "{軽油|けいゆ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Oli untuk transmisi manual dan diferensial adalah…",
+       "jp": "MTやデファレンシャルに{使|つか}うオイルはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ギヤオイル",
+        "jp": "ギヤオイル"
+       },
+       {
+        "id": "ウォッシャ液",
+        "jp": "ウォッシャ{液|えき}"
+       },
+       {
+        "id": "LLC",
+        "jp": "LLC"
+       },
+       {
+        "id": "ガソリン",
+        "jp": "ガソリン"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ギヤオイル.",
+       "jp": "ギヤオイルです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b6s4-q",
+    "sub": "b6s4",
+    "title": {
+     "id": "Subbab 6.4 · Baut, Paking, dan Bahan",
+     "jp": "6.4 ボルト・ガスケット・{材料|ざいりょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada 右ねじ, memutar ke kanan (searah jarum jam) mengencangkan.”",
+       "jp": "○か×か。「{右|みぎ}ねじは、{右|みぎ}にまわすとしまります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{右|みぎ}でしまります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ガスケット lama boleh dipakai ulang setiap kali.”",
+       "jp": "○か×か。「ガスケットは、{古|ふる}い{物|もの}を{毎回|まいかい}{使|つか}ってよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Diganti baru.",
+       "jp": "{新|あたら}しい{物|もの}にかえます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bahan ringan, tidak mudah berkarat, tetapi lunak adalah…",
+       "jp": "{軽|かる}くて、さびにくいが、やわらかい{材料|ざいりょう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "アルミ",
+        "jp": "アルミ"
+       },
+       {
+        "id": "鉄",
+        "jp": "{鉄|てつ}"
+       },
+       {
+        "id": "銅",
+        "jp": "{銅|どう}"
+       },
+       {
+        "id": "ガラス",
+        "jp": "ガラス"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "アルミ.",
+       "jp": "アルミです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ゴム menua karena panas, oli, dan waktu.”",
+       "jp": "○か×か。「ゴムは、{熱|ねつ}、オイル、{時間|じかん}で{古|ふる}くなります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{古|ふる}くなります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pengunci yang dimasukkan ke lubang baut agar tidak lepas adalah…",
+       "jp": "ボルトのあなに{入|い}れて、ゆるみをふせぐ{部品|ぶひん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "割りピン",
+        "jp": "{割|わ}りピン"
+       },
+       {
+        "id": "ウエス",
+        "jp": "ウエス"
+       },
+       {
+        "id": "ブーツ",
+        "jp": "ブーツ"
+       },
+       {
+        "id": "フィルタ",
+        "jp": "フィルタ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "割りピン.",
+       "jp": "{割|わ}りピンです。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab7": [
+   {
+    "id": "bab7-q1",
+    "title": {
+     "id": "Soal bergambar",
+     "jp": "{図|ず}の{問題|もんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pada gambar, huruf A menunjukkan…",
+       "jp": "{図|ず}のAは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "オイルレベルゲージ",
+        "jp": "オイルレベルゲージ"
+       },
+       {
+        "id": "バッテリ",
+        "jp": "バッテリ"
+       },
+       {
+        "id": "マフラ",
+        "jp": "マフラ"
+       },
+       {
+        "id": "ラジエータキャップ",
+        "jp": "ラジエータキャップ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "A = tongkat ukur oli.",
+       "jp": "Aはオイルレベルゲージです。"
+      },
+      "img": {
+       "src": "assets/ssw/auto-maintenance/enjin-room.svg"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar, B (tangki biru muda) adalah…",
+       "jp": "{図|ず}のBは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "冷却水のリザーバタンク",
+        "jp": "{冷却水|れいきゃくすい}のリザーバタンク"
+       },
+       {
+        "id": "ブレーキ液タンク",
+        "jp": "ブレーキ{液|えき}タンク"
+       },
+       {
+        "id": "バッテリ",
+        "jp": "バッテリ"
+       },
+       {
+        "id": "ウォッシャ液タンク",
+        "jp": "ウォッシャ{液|えき}タンク"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "B = tangki air pendingin.",
+       "jp": "Bは{冷却水|れいきゃくすい}のリザーバタンクです。"
+      },
+      "img": {
+       "src": "assets/ssw/auto-maintenance/enjin-room.svg"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar, C (tangki oranye) adalah…",
+       "jp": "{図|ず}のCは{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ液タンク",
+        "jp": "ブレーキ{液|えき}タンク"
+       },
+       {
+        "id": "冷却水のタンク",
+        "jp": "{冷却水|れいきゃくすい}のタンク"
+       },
+       {
+        "id": "バッテリ",
+        "jp": "バッテリ"
+       },
+       {
+        "id": "オイルパン",
+        "jp": "オイルパン"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "C = minyak rem.",
+       "jp": "Cはブレーキ{液|えき}のタンクです。"
+      },
+      "img": {
+       "src": "assets/ssw/auto-maintenance/enjin-room.svg"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar, E yang bertuliskan 12V adalah…",
+       "jp": "{図|ず}のE（12V）は{何|なに}ですか。"
+      },
+      "opts": [
+       {
+        "id": "バッテリ",
+        "jp": "バッテリ"
+       },
+       {
+        "id": "オルタネータ",
+        "jp": "オルタネータ"
+       },
+       {
+        "id": "スタータ",
+        "jp": "スタータ"
+       },
+       {
+        "id": "ヒューズ",
+        "jp": "ヒューズ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "E = aki.",
+       "jp": "Eはバッテリです。"
+      },
+      "img": {
+       "src": "assets/ssw/auto-maintenance/enjin-room.svg"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar roda, jika A dikencangkan pertama, mur berikutnya dalam pola bintang adalah…",
+       "jp": "{図|ず}のように、Aを{最初|さいしょ}にしめたとき、たすきがけの{次|つぎ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "C",
+        "jp": "C"
+       },
+       {
+        "id": "B",
+        "jp": "B"
+       },
+       {
+        "id": "E",
+        "jp": "E"
+       },
+       {
+        "id": "D",
+        "jp": "D"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "A → C → E → B → D.",
+       "jp": "A→C→E→B→Dの{順|じゅん}です。"
+      },
+      "img": {
+       "src": "assets/ssw/auto-maintenance/wheel-nut.svg"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada gambar roda, setelah A lalu C, mur berikutnya adalah…",
+       "jp": "{図|ず}で、A、Cの{次|つぎ}にしめるのはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "E",
+        "jp": "E"
+       },
+       {
+        "id": "B",
+        "jp": "B"
+       },
+       {
+        "id": "D",
+        "jp": "D"
+       },
+       {
+        "id": "A",
+        "jp": "A"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "A → C → E → B → D.",
+       "jp": "つぎはEです。"
+      },
+      "img": {
+       "src": "assets/ssw/auto-maintenance/wheel-nut.svg"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab7-q2",
+    "title": {
+     "id": "Urutan kerja",
+     "jp": "{作業|さぎょう}の{順番|じゅんばん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Baut dengan panjang berbeda harus dijaga agar tidak tertukar saat membongkar.”",
+       "jp": "○か×か。「{分解|ぶんかい}するとき、{長|なが}さがちがうボルトをまちがえないようにします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "もとの{場所|ばしょ}にもどすためです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pasang パーキングブレーキ dan 車止め sebelum mengangkat mobil.”",
+       "jp": "○か×か。「{車|くるま}をあげる{前|まえ}に、パーキングブレーキと{車|くるま}{止|と}めをかけます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{動|うご}かないようにします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Isi oli baru dilakukan setelah…",
+       "jp": "{新|あたら}しいオイルを{入|い}れるのは、いつですか。"
+      },
+      "opts": [
+       {
+        "id": "Oli lama keluar dan drain plug dipasang",
+        "jp": "{古|ふる}いオイルがぜんぶ{出|で}て、ドレンプラグをしめたあと"
+       },
+       {
+        "id": "Sebelum melepas drain plug",
+        "jp": "ドレンプラグをはずす{前|まえ}"
+       },
+       {
+        "id": "Saat oli lama masih mengalir",
+        "jp": "{古|ふる}いオイルがまだ{出|で}ているとき"
+       },
+       {
+        "id": "Setelah mobil jalan 100 km",
+        "jp": "100km{走|はし}ったあと"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Setelah plug terpasang.",
+       "jp": "しめてからです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b7s1-q",
+    "sub": "b7s1",
+    "title": {
+     "id": "Subbab 7.1 · Persiapan Sebelum Kerja",
+     "jp": "7.1 {作業|さぎょう}の{前|まえ}の{準備|じゅんび}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Mulai bekerja dengan membaca 作業書.”",
+       "jp": "○か×か。「{作業|さぎょう}は、{作業書|さぎょうしょ}を{読|よ}むことから{始|はじ}めます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{作業書|さぎょうしょ}が{先|さき}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Part boleh diletakkan di lantai karena bisa dibersihkan nanti.”",
+       "jp": "○か×か。「{部品|ぶひん}は、ゆかにおいてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Pakai alas bersih.",
+       "jp": "きれいな{台|だい}におきます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Hal yang dipasang agar mobil tidak bergerak adalah…",
+       "jp": "{車|くるま}が{動|うご}かないようにするものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "車止めとパーキングブレーキ",
+        "jp": "{車|くるま}{止|と}めとパーキングブレーキ"
+       },
+       {
+        "id": "ウエス",
+        "jp": "ウエス"
+       },
+       {
+        "id": "ブーツ",
+        "jp": "ブーツ"
+       },
+       {
+        "id": "シックネスゲージ",
+        "jp": "シックネスゲージ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "車止め + パーキングブレーキ.",
+       "jp": "この2つです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Memakai pelindung diri sebelum bekerja adalah bagian persiapan.”",
+       "jp": "○か×か。「{作業|さぎょう}の{前|まえ}に、{保護具|ほごぐ}をつけるのは{準備|じゅんび}の1つです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{安全|あんぜん}のためです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b7s2-q",
+    "sub": "b7s2",
+    "title": {
+     "id": "Subbab 7.2 · Membongkar dan Merakit",
+     "jp": "7.2 {分解|ぶんかい}と{組立|くみた}て"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Merakit dilakukan dengan urutan terbalik dari membongkar.”",
+       "jp": "○か×か。「{組立|くみた}ては、{分解|ぶんかい}と{逆|ぎゃく}の{順番|じゅんばん}で{行|おこな}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{逆|ぎゃく}の{順番|じゅんばん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Posisi dan arah part sebaiknya dicatat sebelum dibongkar.”",
+       "jp": "○か×か。「{分解|ぶんかい}する{前|まえ}に、{部品|ぶひん}の{位置|いち}とむきをのこしておきます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "メモや{写真|しゃしん}でのこします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Baut yang tersisa setelah merakit tidak masalah.”",
+       "jp": "○か×か。「{組立|くみた}てたあとにボルトがのこっていても、{問題|もんだい}ありません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Pasti ada yang terlewat.",
+       "jp": "どこかに{忘|わす}れがあります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bagian yang diganti baru saat merakit adalah…",
+       "jp": "{組立|くみた}てるとき、{新|あたら}しい{物|もの}にかえるものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ガスケットやOリング",
+        "jp": "ガスケットやOリング"
+       },
+       {
+        "id": "ハンマ",
+        "jp": "ハンマ"
+       },
+       {
+        "id": "スパナ",
+        "jp": "スパナ"
+       },
+       {
+        "id": "ノギス",
+        "jp": "ノギス"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ガスケットやOリング.",
+       "jp": "ガスケットやOリングです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b7s3-q",
+    "sub": "b7s3",
+    "title": {
+     "id": "Subbab 7.3 · Urutan Ganti Oli dan Roda",
+     "jp": "7.3 オイル{交換|こうかん}とタイヤ{交換|こうかん}の{順番|じゅんばん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Langkah pertama ganti oli mesin (setelah persiapan) yang benar adalah…",
+       "jp": "エンジンオイル{交換|こうかん}で、まずすることはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Panaskan sebentar lalu matikan mesin",
+        "jp": "{少|すこ}しあたためて、エンジンを{止|と}める"
+       },
+       {
+        "id": "Lepas drain plug sambil mesin hidup",
+        "jp": "エンジンをかけたままドレンプラグをはずす"
+       },
+       {
+        "id": "Isi oli baru dulu",
+        "jp": "{先|さき}に{新|あたら}しいオイルを{入|い}れる"
+       },
+       {
+        "id": "Langsung jalan",
+        "jp": "すぐ{走|はし}る"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Mesin harus mati.",
+       "jp": "エンジンを{止|と}めてからです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Paking drain plug diganti dengan yang baru.”",
+       "jp": "○か×か。「ドレンプラグのパッキンは、{新|あたら}しい{物|もの}にかえます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "もれをふせぎます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Mur roda dikendurkan sedikit setelah mobil digantung tinggi.”",
+       "jp": "○か×か。「ホイールナットは、{車|くるま}をあげたあとで、ゆるめはじめます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kendurkan saat roda masih di tanah.",
+       "jp": "タイヤが{地面|じめん}にあるうちにゆるめます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mur roda terakhir dikencangkan dengan…",
+       "jp": "ホイールナットを{最後|さいご}にしめるときに{使|つか}う{道具|どうぐ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "トルクレンチ",
+        "jp": "トルクレンチ"
+       },
+       {
+        "id": "ハンマ",
+        "jp": "ハンマ"
+       },
+       {
+        "id": "プライヤ",
+        "jp": "プライヤ"
+       },
+       {
+        "id": "ニッパ",
+        "jp": "ニッパ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "トルクレンチ.",
+       "jp": "トルクレンチです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah mengganti oli, periksa kebocoran dan レベルゲージ.”",
+       "jp": "○か×か。「オイル{交換|こうかん}のあとは、もれとレベルゲージを{確認|かくにん}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{最後|さいご}の{確認|かくにん}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b7s4-q",
+    "sub": "b7s4",
+    "title": {
+     "id": "Subbab 7.4 · Pemeriksaan dan Penyetelan Sederhana",
+     "jp": "7.4 かんたんな{点検|てんけん}と{調整|ちょうせい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Probe merah テスタ dihubungkan ke plus (+).”",
+       "jp": "○か×か。「テスタの{赤|あか}い{棒|ぼう}は、プラス（+）につなぎます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{赤|あか}がプラスです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tegangan aki yang sehat saat mesin mati kira-kira…",
+       "jp": "{元気|げんき}なバッテリの{電圧|でんあつ}は、エンジンが{止|と}まっているとき、{約|やく}いくつですか。"
+      },
+      "opts": [
+       {
+        "id": "12V",
+        "jp": "12V"
+       },
+       {
+        "id": "1.5V",
+        "jp": "1.5V"
+       },
+       {
+        "id": "100V",
+        "jp": "100V"
+       },
+       {
+        "id": "0V",
+        "jp": "0V"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sekitar 12 V.",
+       "jp": "{約|やく}12Vです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Ukur tekanan ban saat ban dingin.”",
+       "jp": "○か×か。「タイヤの{空気圧|くうきあつ}は、{冷|ひ}えているときにはかります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{冷|ひ}えているときです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kaca bohlam halogen boleh disentuh dengan tangan telanjang.”",
+       "jp": "○か×か。「ハロゲン{球|きゅう}のガラスは、{素|そ}{手|て}でさわってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Minyak kulit memperpendek umur bohlam.",
+       "jp": "{手|て}のあぶらで{短|みじか}くなります。"
+      },
+      "mb": true
+     }
+    ]
+   }
   ]
  },
- "tema": []
+ "tema": [
+  {
+   "id": "tema-mesin",
+   "tema": true,
+   "title": {
+    "id": "Tema: Mesin",
+    "jp": "テーマ：エンジン"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Mesin bensin menyala dengan busi.”",
+      "jp": "○か×か。「ガソリンエンジンは、{点火|てんか}プラグで{火|ひ}をつけます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{点火|てんか}プラグです。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Bagian yang menyaring udara masuk adalah…",
+      "jp": "{入|はい}る{空気|くうき}のほこりをとる{部品|ぶひん}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "エアクリーナ",
+       "jp": "エアクリーナ"
+      },
+      {
+       "id": "マフラ",
+       "jp": "マフラ"
+      },
+      {
+       "id": "ラジエータ",
+       "jp": "ラジエータ"
+      },
+      {
+       "id": "フライホイール",
+       "jp": "フライホイール"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "エアクリーナ.",
+      "jp": "エアクリーナです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Oli mesin sedikit tidak masalah selama lampu tidak menyala.”",
+      "jp": "○か×か。「オイルは、{警告|けいこく}{灯|ひ}がつくまで{少|すく}なくても{問題|もんだい}ありません。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Periksa berkala.",
+      "jp": "つくまえに{点検|てんけん}します。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Tutup radiator dibuka…",
+      "jp": "ラジエータキャップを{開|あ}けるのは、いつですか。"
+     },
+     "opts": [
+      {
+       "id": "Saat mesin sudah dingin",
+       "jp": "エンジンが{冷|ひ}えているとき"
+      },
+      {
+       "id": "Saat mesin sangat panas",
+       "jp": "エンジンが{熱|あつ}いとき"
+      },
+      {
+       "id": "Saat jalan",
+       "jp": "{走|はし}っているとき"
+      },
+      {
+       "id": "Kapan saja",
+       "jp": "いつでもよい"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Hanya saat dingin.",
+      "jp": "{冷|ひ}えているときだけです。"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tema-sasis",
+   "tema": true,
+   "title": {
+    "id": "Tema: Sasis",
+    "jp": "テーマ：シャシ"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Bagian rem cakram yang dijepit pad adalah…",
+      "jp": "ディスクブレーキで、パッドがはさむ{部品|ぶひん}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "ローター",
+       "jp": "ローター"
+      },
+      {
+       "id": "ドラム",
+       "jp": "ドラム"
+      },
+      {
+       "id": "ブーツ",
+       "jp": "ブーツ"
+      },
+      {
+       "id": "タイロッド",
+       "jp": "タイロッド"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "ローター.",
+      "jp": "ローターです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Minyak rem menyerap air.”",
+      "jp": "○か×か。「ブレーキ{液|えき}は{水分|すいぶん}をすいます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{水分|すいぶん}に{注意|ちゅうい}します。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Batas alur ban menurut aturan adalah 1,6 mm.”",
+      "jp": "○か×か。「タイヤの{溝|みぞ}の{限度|げんど}は、1.6mmです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "スリップサインで{分|ぶん}かります。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Bagian yang menggerakkan roda ke kiri dan kanan pada kemudi adalah…",
+      "jp": "ステアリングで、{車輪|しゃりん}を{左右|さゆう}に{動|うご}かす{棒|ぼう}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "タイロッド",
+       "jp": "タイロッド"
+      },
+      {
+       "id": "スタビライザ",
+       "jp": "スタビライザ"
+      },
+      {
+       "id": "クラッチ",
+       "jp": "クラッチ"
+      },
+      {
+       "id": "マフラ",
+       "jp": "マフラ"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "タイロッド.",
+      "jp": "タイロッドです。"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tema-keselamatan",
+   "tema": true,
+   "title": {
+    "id": "Tema: Keselamatan",
+    "jp": "テーマ：あんぜん"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Orang yang belum dilatih tidak boleh menyentuh kabel oranye hybrid.”",
+      "jp": "○か×か。「{教育|きょういく}を{受|う}けていない{人|ひと}は、ハイブリッド{車|しゃ}のオレンジ{色|いろ}の{配線|はいせん}にさわってはいけません。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Tegangan tinggi.",
+      "jp": "{命|いのち}にかかわります。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Terminal aki: lepas minus lebih dulu.”",
+      "jp": "○か×か。「バッテリの{端子|たんし}は、マイナスから{先|さき}にはずします。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "マイナスが{先|さき}です。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Mesin boleh dihidupkan di…",
+      "jp": "エンジンをかけてよい{場所|ばしょ}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "Tempat berventilasi baik",
+       "jp": "{風|かぜ}{通|とお}しのよい{所|ところ}"
+      },
+      {
+       "id": "Ruang tertutup",
+       "jp": "しめきった{部屋|へや}"
+      },
+      {
+       "id": "Gudang tanpa jendela",
+       "jp": "まどのない{倉庫|そうこ}"
+      },
+      {
+       "id": "Di bawah mobil",
+       "jp": "{車|くるま}の{下|した}"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Karena gas CO.",
+      "jp": "COガスのためです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Oli bekas dibuang sesuai aturan.”",
+      "jp": "○か×か。「{使|つか}ったオイルは、{決|き}まりどおりにすてます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{環境|かんきょう}を{守|まも}ります。"
+     },
+     "mb": true
+    }
+   ]
+  }
+ ]
 }

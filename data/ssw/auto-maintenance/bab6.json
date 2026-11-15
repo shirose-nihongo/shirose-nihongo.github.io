@@ -1,0 +1,542 @@
+{
+ "schema": 1,
+ "bidang": "auto-maintenance",
+ "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 自動車整備 (MLIT, MOJ/ISA); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab6",
+  "no": 6,
+  "title": {
+   "id": "Alat, Alat Ukur, dan Bahan",
+   "jp": "{工具|こうぐ}・{測定|そくてい}{器|き}・{材料|ざいりょう}"
+  },
+  "intro": {
+   "id": "Perkakas dasar dan kunci torsi, alat ukur, oli dan cairan, bahan bakar, serta baut, paking, dan bahan.",
+   "jp": "{基本|きほん}の{工具|こうぐ}とトルクレンチ、{測定|そくてい}{器|き}、{油脂|ゆし}と{液|えき}、{燃料|ねんりょう}、ボルト・ガスケット・{材料|ざいりょう}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b6s1",
+    "no": 1,
+    "title": {
+     "id": "Perkakas dan Kunci Torsi",
+     "jp": "{工具|こうぐ}とトルクレンチ"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Perkakas dasar"
+      },
+      {
+       "ul": [
+        "**メガネレンチ**: kunci ring; memegang baut di seluruh sisinya sehingga tidak mudah merusak kepala baut. Dipakai untuk baut yang kencang.",
+        "**スパナ (開口レンチ)**: kunci pas; mudah dipakai di tempat sempit, tetapi hanya memegang dua sisi.",
+        "**ソケットレンチ / ラチェット**: kunci sok; cepat dan kuat.",
+        "**ドライバ**: obeng. **プラス (+)** dan **マイナス (−)**; pilih ukuran yang cocok dengan alur sekrup.",
+        "**プライヤ**: tang. **ニッパ**: pemotong kabel. **ハンマ**: palu."
+       ]
+      },
+      {
+       "h": "Aturan memakai perkakas"
+      },
+      {
+       "ul": [
+        "Pakai perkakas yang **sesuai ukuran dan fungsinya**. Ukuran tidak cocok merusak baut dan melukai tangan.",
+        "Menarik kunci lebih aman daripada mendorongnya.",
+        "Jangan memperpanjang kunci dengan pipa kecuali memang diizinkan.",
+        "Jangan memakai kunci pas sebagai palu."
+       ]
+      },
+      {
+       "h": "Kunci torsi (トルクレンチ)"
+      },
+      {
+       "p": "**トルクレンチ** mengencangkan baut dengan **gaya yang ditentukan (規定トルク)**. Satuannya **N·m**."
+      },
+      {
+       "ol": [
+        "Atur nilai sesuai buku pedoman.",
+        "Pasang tegak lurus dan tarik **perlahan**.",
+        "Berhenti saat terdengar atau terasa **klik**.",
+        "Jangan menarik lagi setelah klik.",
+        "Setelah dipakai, kembalikan ke nilai terendah (untuk tipe yang diset) dan simpan dengan hati-hati."
+       ]
+      },
+      {
+       "note": "Kunci torsi bukan alat untuk mengendurkan baut dan jangan dijatuhkan karena ketelitiannya hilang."
+      }
+     ],
+     "jp": [
+      {
+       "h": "{基本|きほん}の{工具|こうぐ}"
+      },
+      {
+       "ul": [
+        "**メガネレンチ**：ボルトの{頭|あたま}を、まわりぜんぶでつかむ。{頭|あたま}をいためにくい。かたくしまったボルトに{使|つか}う。",
+        "**スパナ（{開|かい}{口|くち}レンチ）**：せまい{所|ところ}で{使|つか}いやすいが、2か{所|ところ}しかつかめない。",
+        "**ソケットレンチ・ラチェット**：{早|はや}くて、{強|つよ}い{力|ちから}がかけられる。",
+        "**ドライバ**：**プラス（+）**と**マイナス（−）**がある。ねじのみぞにあう{大|おお}きさを{使|つか}う。",
+        "**プライヤ**：つかむ{道具|どうぐ}。**ニッパ**：{線|せん}を{切|き}る{道具|どうぐ}。**ハンマ**：たたく{道具|どうぐ}。"
+       ]
+      },
+      {
+       "h": "{工具|こうぐ}を{使|つか}うときのきまり"
+      },
+      {
+       "ul": [
+        "**{大|おお}きさと{目的|もくてき}にあった**{工具|こうぐ}を{使|つか}う。{大|おお}きさがあわないと、ボルトをいため、{手|て}をけがする。",
+        "{工具|こうぐ}は、おすより**ひく**ほうが{安全|あんぜん}。",
+        "パイプなどをつけて{工具|こうぐ}をのばさない（{許可|きょか}がある{場合|ばあい}をのぞく）。",
+        "スパナをハンマのかわりに{使|つか}わない。"
+       ]
+      },
+      {
+       "h": "トルクレンチ"
+      },
+      {
+       "p": "**トルクレンチ**は、**{決|き}まった{力|ちから}（{規定|きてい}トルク）**でボルトをしめる{道具|どうぐ}です。{単位|たんい}は**N·m**です。"
+      },
+      {
+       "ol": [
+        "{作業書|さぎょうしょ}のとおりに、{値|ち}をあわせる。",
+        "まっすぐにかけて、**ゆっくり**ひく。",
+        "**カチッ**と{音|おと}や{感|かん}じがしたら{止|と}める。",
+        "カチッのあとは、それ{以上|いじょう}ひかない。",
+        "{使|つか}ったあとは（セット{式|しき}なら）いちばん{小|ちい}さい{値|ち}にもどして、{大事|だいじ}にしまう。"
+       ]
+      },
+      {
+       "note": "トルクレンチは、ボルトをゆるめる{道具|どうぐ}ではありません。{落|お}とすと{正|ただ}しくはかれなくなります。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "メガネレンチ lebih aman untuk baut kencang; pakai perkakas sesuai ukuran; トルクレンチ: set nilai, tarik perlahan, berhenti saat klik, satuan N·m.",
+      "points": [
+       "メガネレンチ memegang seluruh sisi.",
+       "Tarik, jangan dorong.",
+       "トルクレンチ: berhenti saat klik.",
+       "N·m = satuan torsi."
+      ],
+      "avoid": [
+       "Memakai トルクレンチ untuk mengendurkan baut.",
+       "Menarik lagi setelah klik."
+      ],
+      "exam": [
+       "Beda メガネレンチ dan スパナ.",
+       "Cara memakai トルクレンチ."
+      ]
+     },
+     "jp": {
+      "core": "{工具|こうぐ}は{大|おお}きさと{目的|もくてき}にあったものを{使|つか}います。トルクレンチは{規定|きてい}トルクにあわせ、カチッで{止|と}めます。",
+      "points": [
+       "メガネレンチは{全体|ぜんたい}をつかむ。",
+       "おすよりひく。",
+       "トルクレンチはカチッで{止|と}める。",
+       "N·mはトルクの{単位|たんい}。"
+      ],
+      "avoid": [
+       "トルクレンチでボルトをゆるめること。",
+       "カチッのあとにさらにひくこと。"
+      ],
+      "exam": [
+       "メガネレンチとスパナのちがい。",
+       "トルクレンチの{使|つか}い{方|かた}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s2",
+    "no": 2,
+    "title": {
+     "id": "Alat Ukur",
+     "jp": "{測定|そくてい}{器|き}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Alat ukur panjang"
+      },
+      {
+       "ul": [
+        "**ノギス (jangka sorong)**: mengukur diameter luar, diameter dalam, dan kedalaman. Ketelitian sekitar 0,05 mm.",
+        "**マイクロメータ**: mengukur dengan lebih teliti (sekitar 0,01 mm), misalnya diameter poros.",
+        "**ダイヤルゲージ**: jarum penunjuk; mengukur **gerak goyang** atau **ketidaklurusan (振れ)**.",
+        "**シックネスゲージ (すきまゲージ)**: lembaran tipis untuk mengukur **celah**, misalnya celah busi atau celah katup."
+       ]
+      },
+      {
+       "h": "Alat ukur lain"
+      },
+      {
+       "ul": [
+        "**タイヤゲージ**: mengukur tekanan ban.",
+        "**回路計 (テスタ)**: mengukur tegangan, arus, hambatan.",
+        "**コンプレッションゲージ**: mengukur tekanan kompresi.",
+        "**トルクレンチ**: mengukur dan menetapkan torsi.",
+        "**直定規 / ストレートエッジ**: memeriksa kerataan."
+       ]
+      },
+      {
+       "h": "Cara memakai"
+      },
+      {
+       "ul": [
+        "Bersihkan benda dan alat ukur sebelum mengukur.",
+        "Ukur di **suhu yang sama** dan dengan cara yang benar.",
+        "Baca skala dari **depan** (tegak lurus).",
+        "Bandingkan hasil dengan **規定値 dan 限度**.",
+        "Alat ukur adalah alat teliti: jangan dijatuhkan, simpan bersih dan kering, dan kalibrasi berkala."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{長|なが}さをはかる{道具|どうぐ}"
+      },
+      {
+       "ul": [
+        "**ノギス**：{外|そと}の{大|おお}きさ、{中|なか}の{大|おお}きさ、{深|ふか}さがはかれる。{細|こま}かさは{約|やく}0.05mm。",
+        "**マイクロメータ**：もっと{細|こま}かく（{約|やく}0.01mm）はかる。たとえば、{軸|じく}の{太|ふと}さ。",
+        "**ダイヤルゲージ**：はりがうごく。**ぶれ**や、{動|うご}きの{大|おお}きさをはかる。",
+        "**シックネスゲージ（すきまゲージ）**：うすい{板|いた}で、**すきま**をはかる。{点火|てんか}プラグやバルブのすきまなど。"
+       ]
+      },
+      {
+       "h": "そのほかの{道具|どうぐ}"
+      },
+      {
+       "ul": [
+        "**タイヤゲージ**：タイヤの{空気圧|くうきあつ}。",
+        "**{回路計|かいろけい}（テスタ）**：{電圧|でんあつ}、{電流|でんりゅう}、{抵抗|ていこう}。",
+        "**コンプレッションゲージ**：{圧縮圧力|あっしゅくあつりょく}。",
+        "**トルクレンチ**：しめる{力|ちから}をはかる、{決|き}める。",
+        "**{直定規|ちょくじょうぎ}・ストレートエッジ**：{平|たい}らかどうか{調|しら}べる。"
+       ]
+      },
+      {
+       "h": "{使|つか}い{方|かた}"
+      },
+      {
+       "ul": [
+        "はかる{前|まえ}に、{物|もの}と{道具|どうぐ}をきれいにする。",
+        "**{同|おな}じ{温度|おんど}**で、{正|ただ}しい{方法|ほうほう}ではかる。",
+        "{目盛|めも}りは**{正面|しょうめん}**から{読|よ}む。",
+        "はかった{値|ち}は**{規定値|きていち}**と**{限度|げんど}**でくらべる。",
+        "{測定|そくてい}{器|き}は{大事|だいじ}な{道具|どうぐ}。{落|お}とさない、きれいでかわいた{所|ところ}にしまう、{時期|じき}に{検査|けんさ}をうける。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "ノギス (luar, dalam, kedalaman), マイクロメータ (lebih teliti), ダイヤルゲージ (振れ), シックネスゲージ (celah), タイヤゲージ, 回路計, コンプレッションゲージ.",
+      "points": [
+       "ノギス ±0,05 mm; マイクロメータ ±0,01 mm.",
+       "ダイヤルゲージ = 振れ.",
+       "シックネスゲージ = celah.",
+       "Baca skala dari depan."
+      ],
+      "avoid": [
+       "Mengukur benda yang kotor.",
+       "Menjatuhkan alat ukur."
+      ],
+      "exam": [
+       "Alat untuk mengukur celah.",
+       "Alat untuk mengukur 振れ."
+      ]
+     },
+     "jp": {
+      "core": "ノギス、マイクロメータ、ダイヤルゲージ、シックネスゲージで{長|なが}さやすきまをはかります。",
+      "points": [
+       "ノギス{約|やく}0.05mm、マイクロメータ{約|やく}0.01mm。",
+       "ダイヤルゲージ＝ぶれ。",
+       "シックネスゲージ＝すきま。",
+       "{目盛|めも}りは{正面|しょうめん}から{読|よ}む。"
+      ],
+      "avoid": [
+       "よごれた{物|もの}をはかること。",
+       "{測定|そくてい}{器|き}をおとすこと。"
+      ],
+      "exam": [
+       "すきまをはかる{道具|どうぐ}。",
+       "ぶれをはかる{道具|どうぐ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s3",
+    "no": 3,
+    "title": {
+     "id": "Oli, Cairan, dan Bahan Bakar",
+     "jp": "{油脂|ゆし}・{液|えき}・{燃料|ねんりょう}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Pelumas"
+      },
+      {
+       "ul": [
+        "**エンジンオイル**: untuk mesin. Kekentalan seperti 5W-30.",
+        "**ギヤオイル**: untuk transmisi manual dan diferensial.",
+        "**ATF**: cairan transmisi otomatis.",
+        "**グリース**: pelumas setengah padat; menempel di sasis, bantalan, dan sambungan."
+       ]
+      },
+      {
+       "h": "Cairan lain"
+      },
+      {
+       "ul": [
+        "**ブレーキ液**: minyak rem; menyerap air; ada jenis yang tidak boleh dicampur.",
+        "**LLC**: air pendingin; dicampur air.",
+        "**ウォッシャ液**: cairan wiper."
+       ]
+      },
+      {
+       "h": "Bahan bakar"
+      },
+      {
+       "ul": [
+        "**ガソリン**: untuk mesin bensin; mudah menguap dan terbakar. Pakai jenis yang ditentukan pabrik (**レギュラー / ハイオク**).",
+        "**軽油**: untuk mesin diesel."
+       ]
+      },
+      {
+       "h": "Cara menangani"
+      },
+      {
+       "ul": [
+        "**Pakai jenis dan kekentalan yang ditentukan** buku pedoman.",
+        "**Jangan mencampur** jenis yang berbeda.",
+        "Simpan di wadah bertutup, diberi label, jauh dari api, dan di tempat sejuk.",
+        "Tumpahan dibersihkan; cairan bekas dibuang sesuai aturan.",
+        "Oli dan minyak rem menempel di kulit: cuci dengan sabun."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{油脂|ゆし}"
+      },
+      {
+       "ul": [
+        "**エンジンオイル**：エンジン{用|よう}。かたさは5W-30のように{書|か}く。",
+        "**ギヤオイル**：MTやデファレンシャル{用|よう}。",
+        "**ATF**：ATの{液|えき}。",
+        "**グリース**：{半分|はんぶん}かたまっているあぶら。{足|あし}まわりやベアリングにくっつく。"
+       ]
+      },
+      {
+       "h": "そのほかの{液|えき}"
+      },
+      {
+       "ul": [
+        "**ブレーキ{液|えき}**：{水分|すいぶん}をすう。まぜてはいけない{種類|しゅるい}がある。",
+        "**LLC**：{冷却水|れいきゃくすい}。{水|みず}とまぜる。",
+        "**ウォッシャ{液|えき}**：ワイパー{用|よう}の{液|えき}。"
+       ]
+      },
+      {
+       "h": "{燃料|ねんりょう}"
+      },
+      {
+       "ul": [
+        "**ガソリン**：ガソリンエンジン{用|よう}。{蒸発|じょうはつ}しやすく、{燃|も}えやすい。メーカーが{決|き}めた{種類|しゅるい}（**レギュラー・ハイオク**）を{使|つか}う。",
+        "**{軽油|けいゆ}**：ディーゼルエンジン{用|よう}。"
+       ]
+      },
+      {
+       "h": "あつかい{方|かた}"
+      },
+      {
+       "ul": [
+        "{作業書|さぎょうしょ}にある**{種類|しゅるい}とかたさを{使|つか}う**。",
+        "ちがう{種類|しゅるい}を**まぜない**。",
+        "ふたのある{入|い}れ{物|もの}に{入|い}れ、{名前|なまえ}を{書|か}き、{火|ひ}から{遠|とお}く、すずしい{所|ところ}に{置|お}く。",
+        "こぼしたらふく。{使|つか}ったものは{決|き}まりどおりにすてる。",
+        "オイルやブレーキ{液|えき}が{手|て}につくときは、せっけんで{洗|あら}う。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pakai oli dan cairan sesuai spesifikasi; jangan campur; simpan bertutup dan berlabel jauh dari api; bensin mudah terbakar, solar untuk diesel.",
+      "points": [
+       "エンジンオイル, ギヤオイル, ATF, グリース.",
+       "ブレーキ液 jangan dicampur.",
+       "ガソリン ≠ 軽油.",
+       "Simpan bertutup, berlabel."
+      ],
+      "avoid": [
+       "Mencampur jenis cairan berbeda.",
+       "Menyimpan bensin dekat api."
+      ],
+      "exam": [
+       "Fungsi ギヤオイル dan グリース.",
+       "Aturan menyimpan bahan bakar."
+      ]
+     },
+     "jp": {
+      "core": "{油脂|ゆし}や{液|えき}は{決|き}まった{種類|しゅるい}を{使|つか}い、まぜません。ガソリンは{燃|も}えやすいので{火|ひ}に{注意|ちゅうい}します。",
+      "points": [
+       "エンジンオイル、ギヤオイル、ATF、グリース。",
+       "ブレーキ{液|えき}はまぜない。",
+       "ガソリンと{軽油|けいゆ}はちがう。",
+       "ふたをして、{名前|なまえ}を{書|か}く。"
+      ],
+      "avoid": [
+       "ちがう{種類|しゅるい}の{液|えき}をまぜること。",
+       "{火|ひ}の{近|ちか}くにガソリンをおくこと。"
+      ],
+      "exam": [
+       "ギヤオイルとグリースの{用途|ようと}。",
+       "{燃料|ねんりょう}の{保管|ほかん}のきまり。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s4",
+    "no": 4,
+    "title": {
+     "id": "Baut, Paking, dan Bahan",
+     "jp": "ボルト・ガスケット・{材料|ざいりょう}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Baut dan mur"
+      },
+      {
+       "ul": [
+        "**ボルト** dan **ナット** menyambung bagian. **ワッシャ (ring)** menyebarkan tekanan.",
+        "**右ねじ**: diputar searah jarum jam untuk mengencangkan, berlawanan untuk mengendurkan.",
+        "Kencangkan sesuai **規定トルク** dan **urutan** (misalnya dari tengah ke luar, atau bersilang).",
+        "Gunakan **pengunci**: **割りピン**, **ばね座金**, atau **ダブルナット** agar tidak mengendur."
+       ]
+      },
+      {
+       "h": "Paking dan seal"
+      },
+      {
+       "ul": [
+        "**ガスケット** dan **Oリング** menutup celah agar tidak bocor.",
+        "Pada prinsipnya **ganti dengan yang baru** setiap membongkar.",
+        "Pasang rata, tanpa kotoran, dan tanpa terlipat."
+       ]
+      },
+      {
+       "h": "Sifat bahan"
+      },
+      {
+       "ul": [
+        "**鉄 (besi, baja)**: kuat; menempel magnet; berkarat.",
+        "**アルミ**: ringan, tidak mudah berkarat, tetapi lebih lunak.",
+        "**銅**: penghantar listrik dan panas yang baik.",
+        "**ゴム**: elastis, tetapi **menua** oleh panas, oli, dan waktu.",
+        "**樹脂 (plastik)**: ringan; ada yang retak karena panas atau bahan kimia."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ボルトとナット"
+      },
+      {
+       "ul": [
+        "**ボルト**と**ナット**で、{部品|ぶひん}をつなぐ。**ワッシャ**は、{力|ちから}を{広|ひろ}げる。",
+        "**{右|みぎ}ねじ**：{右|みぎ}（{時計|とけい}{回|まわ}り）にまわすとしまり、{左|ひだり}にまわすとゆるむ。",
+        "**{規定|きてい}トルク**と**{順番|じゅんばん}**（{中|なか}から{外|そと}へ、またはたすきがけ）でしめる。",
+        "ゆるみどめを{使|つか}う：**{割|わ}りピン**、**ばね{座金|ざがね}**、**ダブルナット**。"
+       ]
+      },
+      {
+       "h": "パッキン"
+      },
+      {
+       "ul": [
+        "**ガスケット**と**Oリング**は、すきまをふさいで、もれをふせぐ。",
+        "{分解|ぶんかい}したら、**{新|あたら}しい{物|もの}にかえる**のが{原則|げんそく}。",
+        "よごれをとり、ねじれないように、{平|たい}らにつける。"
+       ]
+      },
+      {
+       "h": "{材料|ざいりょう}の{性質|せいしつ}"
+      },
+      {
+       "ul": [
+        "**{鉄|てつ}**：{強|つよ}い。{磁石|じしゃく}につく。さびる。",
+        "**アルミ**：{軽|かる}い。さびにくい。やわらかい。",
+        "**{銅|どう}**：{電気|でんき}や{熱|ねつ}をよく{通|とお}す。",
+        "**ゴム**：のびる。でも、{熱|ねつ}やオイル、{時間|じかん}で**{古|ふる}くなる**。",
+        "**{樹脂|じゅし}**：{軽|かる}い。{熱|ねつ}や{薬|くすり}{品|ひん}でわれるものがある。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "右ねじ: searah jarum jam mengencang; kencangkan sesuai torsi dan urutan; ganti ガスケット/Oリング baru; ゴム menua; アルミ ringan.",
+      "points": [
+       "右ねじ: kanan = kencang.",
+       "Urutan dan torsi.",
+       "Ganti paking baru.",
+       "ゴム menua oleh panas dan oli."
+      ],
+      "avoid": [
+       "Memakai ガスケット lama.",
+       "Mengencangkan tanpa urutan."
+      ],
+      "exam": [
+       "Arah putar 右ねじ.",
+       "Sifat bahan アルミ dan ゴム."
+      ]
+     },
+     "jp": {
+      "core": "{右|みぎ}ねじは{右|みぎ}{回|まわ}しでしまります。{規定|きてい}トルクと{順番|じゅんばん}でしめ、ガスケットは{新|あたら}しくします。",
+      "points": [
+       "{右|みぎ}ねじは{右|みぎ}でしまる。",
+       "{順番|じゅんばん}とトルク。",
+       "パッキンは{新|あたら}しく。",
+       "ゴムは{熱|ねつ}とオイルで{古|ふる}くなる。"
+      ],
+      "avoid": [
+       "{古|ふる}いガスケットを{使|つか}うこと。",
+       "{順番|じゅんばん}をむしして、しめること。"
+      ],
+      "exam": [
+       "{右|みぎ}ねじのまわす{向|む}き。",
+       "アルミとゴムの{性質|せいしつ}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

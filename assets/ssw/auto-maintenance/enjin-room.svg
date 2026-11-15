@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Skema ruang mesin dilihat dari atas (模式図)">
+<rect x="4" y="4" width="472" height="292" rx="14" fill="#f3f6f8" stroke="#34495e" stroke-width="3"/>
+<text x="240" y="26" text-anchor="middle" font-size="14" fill="#34495e" font-family="sans-serif">模式図 (skema, bukan gambar asli)</text>
+<rect x="150" y="60" width="180" height="150" rx="10" fill="#dfe6ea" stroke="#7f8c8d" stroke-width="2"/>
+<text x="240" y="140" text-anchor="middle" font-size="16" fill="#7f8c8d" font-family="sans-serif">エンジン</text>
+<!-- A: tongkat ukur oli -->
+<rect x="196" y="70" width="6" height="48" fill="#e1b12c" stroke="#8a6d00"/><circle cx="199" cy="66" r="7" fill="#e1b12c" stroke="#8a6d00"/>
+<circle cx="199" cy="40" r="13" fill="#fff" stroke="#c0392b" stroke-width="2"/><text x="199" y="46" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b" font-family="sans-serif">A</text>
+<!-- B: reservoir air pendingin -->
+<rect x="360" y="70" width="70" height="50" rx="6" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/><rect x="360" y="96" width="70" height="24" rx="3" fill="#85c1e9"/>
+<circle cx="395" cy="48" r="13" fill="#fff" stroke="#c0392b" stroke-width="2"/><text x="395" y="54" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b" font-family="sans-serif">B</text>
+<!-- C: tangki minyak rem -->
+<rect x="360" y="150" width="70" height="46" rx="6" fill="#fdebd0" stroke="#b9770e" stroke-width="2"/><rect x="360" y="172" width="70" height="24" rx="3" fill="#f5b041"/>
+<circle cx="395" cy="226" r="13" fill="#fff" stroke="#c0392b" stroke-width="2"/><text x="395" y="232" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b" font-family="sans-serif">C</text>
+<!-- D: tangki wiper -->
+<rect x="50" y="70" width="70" height="50" rx="6" fill="#d5f5e3" stroke="#1e8449" stroke-width="2"/><rect x="50" y="98" width="70" height="22" rx="3" fill="#82e0aa"/>
+<circle cx="85" cy="48" r="13" fill="#fff" stroke="#c0392b" stroke-width="2"/><text x="85" y="54" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b" font-family="sans-serif">D</text>
+<!-- E: aki -->
+<rect x="50" y="170" width="90" height="55" rx="4" fill="#2c3e50"/><rect x="62" y="162" width="14" height="8" fill="#c0392b"/><rect x="114" y="162" width="14" height="8" fill="#1c2833" stroke="#95a5a6"/>
+<text x="95" y="203" text-anchor="middle" font-size="16" fill="#ecf0f1" font-family="sans-serif">12V</text>
+<circle cx="95" cy="250" r="13" fill="#fff" stroke="#c0392b" stroke-width="2"/><text x="95" y="256" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b" font-family="sans-serif">E</text>
+</svg>

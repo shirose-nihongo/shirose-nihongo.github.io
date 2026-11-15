@@ -683,7 +683,7 @@
    "src": [
     "b2s1"
    ],
-   "contoh": "クランクシャフトが{回|かい}ります。",
+   "contoh": "クランクシャフトが{回|まわ}ります。",
    "arti_contoh": "Poros engkol berputar."
   },
   {
@@ -2013,7 +2013,7 @@
    "src": [
     "b4s2"
    ],
-   "contoh": "スタータが{回|かい}りません。",
+   "contoh": "スタータが{回|まわ}りません。",
    "arti_contoh": "Starter tidak berputar."
   },
   {
@@ -2139,7 +2139,7 @@
    "src": [
     "b4s3"
    ],
-   "contoh": "リレーが{入|はい}り{切|き}りします。",
+   "contoh": "リレーが{入|い}り{切|き}りします。",
    "arti_contoh": "Relay menyambung dan memutus."
   },
   {
@@ -2533,6 +2533,650 @@
    ],
    "contoh": "ウエスで{油|あぶら}をふきます。",
    "arti_contoh": "Mengelap oli dengan kain lap."
+  },
+  {
+   "id": "am-182",
+   "kata": "メガネレンチ",
+   "kana": "めがねれんち",
+   "romaji": "megane renchi",
+   "arti": "kunci ring",
+   "cat": "Perkakas",
+   "bab": "bab6",
+   "src": [
+    "b6s1"
+   ],
+   "contoh": "メガネレンチでボルトをしめます。",
+   "arti_contoh": "Mengencangkan baut dengan kunci ring."
+  },
+  {
+   "id": "am-183",
+   "kata": "スパナ",
+   "kana": "すぱな",
+   "romaji": "supana",
+   "arti": "kunci pas",
+   "cat": "Perkakas",
+   "bab": "bab6",
+   "src": [
+    "b6s1"
+   ],
+   "contoh": "スパナはせまい{所|ところ}で{使|つか}います。",
+   "arti_contoh": "Kunci pas dipakai di tempat sempit."
+  },
+  {
+   "id": "am-184",
+   "kata": "ソケットレンチ",
+   "kana": "そけっとれんち",
+   "romaji": "soketto renchi",
+   "arti": "kunci sok",
+   "cat": "Perkakas",
+   "bab": "bab6",
+   "src": [
+    "b6s1"
+   ],
+   "contoh": "ソケットレンチで{早|はや}くまわします。",
+   "arti_contoh": "Memutar cepat dengan kunci sok."
+  },
+  {
+   "id": "am-185",
+   "kata": "ドライバ",
+   "kana": "どらいば",
+   "romaji": "doraiba",
+   "arti": "obeng",
+   "cat": "Perkakas",
+   "bab": "bab6",
+   "src": [
+    "b6s1"
+   ],
+   "contoh": "プラスのドライバを{使|つか}います。",
+   "arti_contoh": "Memakai obeng plus."
+  },
+  {
+   "id": "am-186",
+   "kata": "プライヤ",
+   "kana": "ぷらいや",
+   "romaji": "puraiya",
+   "arti": "tang",
+   "cat": "Perkakas",
+   "bab": "bab6",
+   "src": [
+    "b6s1"
+   ],
+   "contoh": "プライヤでつかみます。",
+   "arti_contoh": "Menjepit dengan tang."
+  },
+  {
+   "id": "am-187",
+   "kata": "ハンマ",
+   "kana": "はんま",
+   "romaji": "hanma",
+   "arti": "palu",
+   "cat": "Perkakas",
+   "bab": "bab6",
+   "src": [
+    "b6s1"
+   ],
+   "contoh": "ハンマでたたきます。",
+   "arti_contoh": "Memukul dengan palu."
+  },
+  {
+   "id": "am-188",
+   "kata": "規定トルク",
+   "kana": "きていとるく",
+   "romaji": "kitei toruku",
+   "arti": "torsi standar",
+   "cat": "Perkakas",
+   "bab": "bab6",
+   "src": [
+    "b6s1"
+   ],
+   "contoh": "{規定|きてい}トルクでしめます。",
+   "arti_contoh": "Mengencangkan dengan torsi standar."
+  },
+  {
+   "id": "am-189",
+   "kata": "ノギス",
+   "kana": "のぎす",
+   "romaji": "nogisu",
+   "arti": "jangka sorong",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "ノギスで{太|ふと}さをはかります。",
+   "arti_contoh": "Mengukur ketebalan dengan jangka sorong."
+  },
+  {
+   "id": "am-190",
+   "kata": "マイクロメータ",
+   "kana": "まいくろめーた",
+   "romaji": "maikuro meeta",
+   "arti": "mikrometer",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "マイクロメータは{細|こま}かくはかれます。",
+   "arti_contoh": "Mikrometer mengukur lebih teliti."
+  },
+  {
+   "id": "am-191",
+   "kata": "ダイヤルゲージ",
+   "kana": "だいやるげーじ",
+   "romaji": "daiyaru geeji",
+   "arti": "dial gauge",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "ダイヤルゲージでぶれをはかります。",
+   "arti_contoh": "Mengukur run-out dengan dial gauge."
+  },
+  {
+   "id": "am-192",
+   "kata": "シックネスゲージ",
+   "kana": "しっくねすげーじ",
+   "romaji": "shikkunesu geeji",
+   "arti": "feeler gauge",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "シックネスゲージですきまをはかります。",
+   "arti_contoh": "Mengukur celah dengan feeler gauge."
+  },
+  {
+   "id": "am-193",
+   "kata": "タイヤゲージ",
+   "kana": "たいやげーじ",
+   "romaji": "taiya geeji",
+   "arti": "pengukur tekanan ban",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "タイヤゲージで{空気圧|くうきあつ}を{見|み}ます。",
+   "arti_contoh": "Memeriksa tekanan dengan pengukur ban."
+  },
+  {
+   "id": "am-194",
+   "kata": "目盛り",
+   "kana": "めもり",
+   "romaji": "memori",
+   "arti": "skala",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "{目盛|めも}りを{正面|しょうめん}から{読|よ}みます。",
+   "arti_contoh": "Membaca skala dari depan."
+  },
+  {
+   "id": "am-195",
+   "kata": "ぶれ",
+   "kana": "ぶれ",
+   "romaji": "bure",
+   "arti": "run-out (goyangan)",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "{軸|じく}にぶれがあります。",
+   "arti_contoh": "Poros goyang."
+  },
+  {
+   "id": "am-196",
+   "kata": "すきま",
+   "kana": "すきま",
+   "romaji": "sukima",
+   "arti": "celah",
+   "cat": "Alat ukur",
+   "bab": "bab6",
+   "src": [
+    "b6s2"
+   ],
+   "contoh": "すきまを{調|しら}べます。",
+   "arti_contoh": "Memeriksa celah."
+  },
+  {
+   "id": "am-197",
+   "kata": "ギヤオイル",
+   "kana": "ぎやおいる",
+   "romaji": "giya oiru",
+   "arti": "oli gigi",
+   "cat": "Oli & bahan bakar",
+   "bab": "bab6",
+   "src": [
+    "b6s3"
+   ],
+   "contoh": "ギヤオイルを{交換|こうかん}します。",
+   "arti_contoh": "Mengganti oli gigi."
+  },
+  {
+   "id": "am-198",
+   "kata": "ATF",
+   "kana": "えーてぃーえふ",
+   "romaji": "ee tii efu",
+   "arti": "cairan transmisi otomatis",
+   "cat": "Oli & bahan bakar",
+   "bab": "bab6",
+   "src": [
+    "b6s3"
+   ],
+   "contoh": "ATFの{量|りょう}を{見|み}ます。",
+   "arti_contoh": "Memeriksa jumlah ATF."
+  },
+  {
+   "id": "am-199",
+   "kata": "グリース",
+   "kana": "ぐりーす",
+   "romaji": "guriisu",
+   "arti": "gemuk (grease)",
+   "cat": "Oli & bahan bakar",
+   "bab": "bab6",
+   "src": [
+    "b6s3"
+   ],
+   "contoh": "グリースをぬります。",
+   "arti_contoh": "Mengoleskan gemuk."
+  },
+  {
+   "id": "am-200",
+   "kata": "レギュラー",
+   "kana": "れぎゅらー",
+   "romaji": "regyuraa",
+   "arti": "bensin reguler",
+   "cat": "Oli & bahan bakar",
+   "bab": "bab6",
+   "src": [
+    "b6s3"
+   ],
+   "contoh": "この{車|くるま}はレギュラーです。",
+   "arti_contoh": "Mobil ini pakai reguler."
+  },
+  {
+   "id": "am-201",
+   "kata": "ハイオク",
+   "kana": "はいおく",
+   "romaji": "haioku",
+   "arti": "bensin oktan tinggi",
+   "cat": "Oli & bahan bakar",
+   "bab": "bab6",
+   "src": [
+    "b6s3"
+   ],
+   "contoh": "ハイオクを{入|い}れます。",
+   "arti_contoh": "Mengisi oktan tinggi."
+  },
+  {
+   "id": "am-202",
+   "kata": "保管",
+   "kana": "ほかん",
+   "romaji": "hokan",
+   "arti": "penyimpanan",
+   "cat": "Oli & bahan bakar",
+   "bab": "bab6",
+   "src": [
+    "b6s3"
+   ],
+   "contoh": "ガソリンは{決|き}まりどおり{保管|ほかん}します。",
+   "arti_contoh": "Bensin disimpan sesuai aturan."
+  },
+  {
+   "id": "am-203",
+   "kata": "ボルト",
+   "kana": "ぼると",
+   "romaji": "boruto",
+   "arti": "baut",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "ボルトをしめます。",
+   "arti_contoh": "Mengencangkan baut."
+  },
+  {
+   "id": "am-204",
+   "kata": "ナット",
+   "kana": "なっと",
+   "romaji": "natto",
+   "arti": "mur",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "ナットをまわします。",
+   "arti_contoh": "Memutar mur."
+  },
+  {
+   "id": "am-205",
+   "kata": "ワッシャ",
+   "kana": "わっしゃ",
+   "romaji": "wasshya",
+   "arti": "ring (washer)",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "ワッシャを{入|い}れます。",
+   "arti_contoh": "Memasang ring."
+  },
+  {
+   "id": "am-206",
+   "kata": "右ねじ",
+   "kana": "みぎねじ",
+   "romaji": "migi neji",
+   "arti": "ulir kanan",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "{右|みぎ}ねじは{右|みぎ}でしまります。",
+   "arti_contoh": "Ulir kanan mengencang ke kanan."
+  },
+  {
+   "id": "am-207",
+   "kata": "割りピン",
+   "kana": "わりぴん",
+   "romaji": "wari pin",
+   "arti": "pen belah",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "{割|わ}りピンでゆるみをふせぎます。",
+   "arti_contoh": "Mencegah kendur dengan pen belah."
+  },
+  {
+   "id": "am-208",
+   "kata": "ガスケット",
+   "kana": "がすけっと",
+   "romaji": "gasuketto",
+   "arti": "paking",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "ガスケットを{新|あたら}しくします。",
+   "arti_contoh": "Mengganti paking."
+  },
+  {
+   "id": "am-209",
+   "kata": "Oリング",
+   "kana": "おーりんぐ",
+   "romaji": "oo ringu",
+   "arti": "O-ring",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "Oリングにオイルをぬります。",
+   "arti_contoh": "Mengoleskan oli ke O-ring."
+  },
+  {
+   "id": "am-210",
+   "kata": "アルミ",
+   "kana": "あるみ",
+   "romaji": "arumi",
+   "arti": "aluminium",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "アルミは{軽|かる}いです。",
+   "arti_contoh": "Aluminium itu ringan."
+  },
+  {
+   "id": "am-211",
+   "kata": "鉄",
+   "kana": "てつ",
+   "romaji": "tetsu",
+   "arti": "besi",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "{鉄|てつ}は{磁石|じしゃく}につきます。",
+   "arti_contoh": "Besi menempel magnet."
+  },
+  {
+   "id": "am-212",
+   "kata": "銅",
+   "kana": "どう",
+   "romaji": "dou",
+   "arti": "tembaga",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "{銅|どう}は{電気|でんき}を{通|とお}します。",
+   "arti_contoh": "Tembaga menghantarkan listrik."
+  },
+  {
+   "id": "am-213",
+   "kata": "ゴム",
+   "kana": "ごむ",
+   "romaji": "gomu",
+   "arti": "karet",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "ゴムは{古|ふる}くなります。",
+   "arti_contoh": "Karet menua."
+  },
+  {
+   "id": "am-214",
+   "kata": "樹脂",
+   "kana": "じゅし",
+   "romaji": "jushi",
+   "arti": "resin (plastik)",
+   "cat": "Baut & bahan",
+   "bab": "bab6",
+   "src": [
+    "b6s4"
+   ],
+   "contoh": "{樹脂|じゅし}の{部品|ぶひん}はわれることがあります。",
+   "arti_contoh": "Part plastik bisa pecah."
+  },
+  {
+   "id": "am-215",
+   "kata": "作業書",
+   "kana": "さぎょうしょ",
+   "romaji": "sagyousho",
+   "arti": "lembar/manual kerja",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s1"
+   ],
+   "contoh": "{作業書|さぎょうしょ}を{読|よ}みます。",
+   "arti_contoh": "Membaca lembar kerja."
+  },
+  {
+   "id": "am-216",
+   "kata": "準備",
+   "kana": "じゅんび",
+   "romaji": "junbi",
+   "arti": "persiapan",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s1"
+   ],
+   "contoh": "{作業|さぎょう}の{準備|じゅんび}をします。",
+   "arti_contoh": "Menyiapkan pekerjaan."
+  },
+  {
+   "id": "am-217",
+   "kata": "手順",
+   "kana": "てじゅん",
+   "romaji": "tejun",
+   "arti": "urutan prosedur",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s1"
+   ],
+   "contoh": "{手順|てじゅん}どおりにします。",
+   "arti_contoh": "Mengerjakan sesuai prosedur."
+  },
+  {
+   "id": "am-218",
+   "kata": "保護具",
+   "kana": "ほごぐ",
+   "romaji": "hogogu",
+   "arti": "alat pelindung diri",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s1"
+   ],
+   "contoh": "{保護具|ほごぐ}をつけます。",
+   "arti_contoh": "Memakai APD."
+  },
+  {
+   "id": "am-219",
+   "kata": "洗浄",
+   "kana": "せんじょう",
+   "romaji": "senjou",
+   "arti": "pencucian",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s2"
+   ],
+   "contoh": "{部品|ぶひん}を{洗浄|せんじょう}します。",
+   "arti_contoh": "Mencuci part."
+  },
+  {
+   "id": "am-220",
+   "kata": "変形",
+   "kana": "へんけい",
+   "romaji": "henkei",
+   "arti": "perubahan bentuk",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s2"
+   ],
+   "contoh": "{部品|ぶひん}が{変形|へんけい}しています。",
+   "arti_contoh": "Part berubah bentuk."
+  },
+  {
+   "id": "am-221",
+   "kata": "ドレンプラグ",
+   "kana": "どれんぷらぐ",
+   "romaji": "doren puragu",
+   "arti": "baut pembuangan oli",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s3"
+   ],
+   "contoh": "ドレンプラグをはずします。",
+   "arti_contoh": "Melepas baut pembuangan."
+  },
+  {
+   "id": "am-222",
+   "kata": "ジャッキポイント",
+   "kana": "じゃっきぽいんと",
+   "romaji": "jakki pointo",
+   "arti": "titik dongkrak",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s3"
+   ],
+   "contoh": "ジャッキポイントにかけます。",
+   "arti_contoh": "Memasang dongkrak di titik dongkrak."
+  },
+  {
+   "id": "am-223",
+   "kata": "暖機",
+   "kana": "だんき",
+   "romaji": "danki",
+   "arti": "pemanasan mesin",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s3"
+   ],
+   "contoh": "{少|すこ}し{暖機|だんき}します。",
+   "arti_contoh": "Memanaskan mesin sebentar."
+  },
+  {
+   "id": "am-224",
+   "kata": "たわみ",
+   "kana": "たわみ",
+   "romaji": "tawami",
+   "arti": "lenturan",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s4"
+   ],
+   "contoh": "ベルトのたわみを{見|み}ます。",
+   "arti_contoh": "Memeriksa lenturan sabuk."
+  },
+  {
+   "id": "am-225",
+   "kata": "直流",
+   "kana": "ちょくりゅう",
+   "romaji": "chokuryuu",
+   "arti": "arus searah (DC)",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s4"
+   ],
+   "contoh": "{直流電圧|ちょくりゅうでんあつ}をはかります。",
+   "arti_contoh": "Mengukur tegangan DC."
+  },
+  {
+   "id": "am-226",
+   "kata": "本尺",
+   "kana": "ほんじゃく",
+   "romaji": "honjaku",
+   "arti": "skala utama",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s4"
+   ],
+   "contoh": "{本|ほん}{尺|じゃく}を{読|よ}みます。",
+   "arti_contoh": "Membaca skala utama."
+  },
+  {
+   "id": "am-227",
+   "kata": "副尺",
+   "kana": "ふくじゃく",
+   "romaji": "fukujaku",
+   "arti": "skala nonius",
+   "cat": "Praktik",
+   "bab": "bab7",
+   "src": [
+    "b7s4"
+   ],
+   "contoh": "{副尺|ふくじゃく}で{細|こま}かく{読|よ}みます。",
+   "arti_contoh": "Membaca halus dengan nonius."
   }
  ]
 }
