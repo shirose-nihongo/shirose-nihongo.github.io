@@ -53,12 +53,16 @@
   function setOwned(ids){OWNED={};(ids||[]).forEach(function(i){if(/^theme_/.test(i))OWNED[i.slice(6)]=1});apply(get())}
   window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH,setOwned:setOwned,preview:preview,closePreview:closePreview,refresh:function(){apply(get())}};
   /* Pratinjau tema yang belum terbuka (tidak disimpan; hilang saat ditutup/muat ulang) */
-  function clearPrev(){var p=document.getElementById("th-prev");if(p)p.remove()}
+  function clearPrev(){var p=document.getElementById("th-prev");if(p)p.remove();var o=document.getElementById("th-lock");if(o)o.remove();document.documentElement.classList.remove("th-previewing")}
   function preview(t){
     var x=TH.filter(function(q){return q[0]===t})[0];if(!x)return;
     apply(t);clearPrev();
+    /* Kunci layar: selama pratinjau tidak ada yang bisa diklik kecuali tombol Batalkan */
+    var o=document.createElement("div");o.id="th-lock";
+    ["click","mousedown","touchstart","contextmenu"].forEach(function(ev){o.addEventListener(ev,function(e){e.preventDefault();e.stopPropagation()},true)});
+    document.body.appendChild(o);document.documentElement.classList.add("th-previewing");
     var p=document.createElement("div");p.id="th-prev";
-    p.innerHTML='<span>👀 <b>'+x[2]+'</b> · 🔒 Lv '+x[4]+' / 🎰 Gacha</span><button onclick="SHIROSE_THEME.closePreview();route(\'gacha\')">🎰</button><button onclick="SHIROSE_THEME.closePreview()">✕</button>';
+    p.innerHTML='<span>👀 Pratinjau <b>'+x[2]+'</b> · 🔒 Lv '+x[4]+' atau dari 🎰 Gacha</span><button class="pv-x" onclick="SHIROSE_THEME.closePreview()">✕ Batalkan pratinjau</button>';
     document.body.appendChild(p);
   }
   window.addEventListener("hashchange",function(){clearPrev();apply(get())});
