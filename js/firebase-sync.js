@@ -467,9 +467,12 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   const uid = currentUser.uid, wref = doc(db, "siswa", uid, "wallet", "main");
   const grefs = WALLET_LVLS.map(l => doc(db, "siswa", uid, "gami", l));
   const out = await runTransaction(db, async (tx) => {
-    const ws = await tx.get(wref); const gs = await Promise.all(grefs.map(r => tx.get(r)));
+    const ws = await tx.get(wref);
     const w = ws.exists() ? ws.data() : { koin: 0, migrasi: {} }; w.migrasi = { ...(w.migrasi || {}) }; w.koin = w.koin || 0;
-    WALLET_LVLS.forEach((l, i) => { if (!w.migrasi[l]) { w.koin += gs[i].exists() ? (gs[i].data().koin || 0) : 0; w.migrasi[l] = true; } });
+    // Baca dokumen gami lama HANYA untuk level yang belum dimigrasi (hemat kuota Firestore: 1 baca, bukan 9, untuk akun yang sudah migrasi)
+    const sisa = WALLET_LVLS.map((l, i) => [l, grefs[i]]).filter(([l]) => !w.migrasi[l]);
+    const gs = await Promise.all(sisa.map(([, r]) => tx.get(r)));
+    sisa.forEach(([l], i) => { w.koin += gs[i].exists() ? (gs[i].data().koin || 0) : 0; w.migrasi[l] = true; });
     if (delta < 0 && !allowNegative && w.koin + delta < 0) throw new Error("Koin tidak cukup!");
     w.koin += delta;
     tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp() }, { merge: true });
