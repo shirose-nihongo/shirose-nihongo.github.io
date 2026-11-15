@@ -236,8 +236,8 @@ const armPath = (sx, sy, hx, hy, out) => `M${f1(sx)} ${f1(sy)} Q${f1((sx + hx) /
 const SHL = [146, 218], SHR = [254, 218];
 /* tangan kepal mitten + jempol (inner side = ke arah badan) */
 const fist = (skin, side) => { const m = side === "L" ? 1 : -1, st = "rgba(120,70,40,.55)";
-  return `<path d="M${-9 * m} -9 Q${-10 * m} -15 ${-2 * m} -15 L${6 * m} -15 Q${12 * m} -14 ${12 * m} -6 L${12 * m} 6 Q${12 * m} 14 ${4 * m} 15 L${-4 * m} 15 Q${-10 * m} 14 ${-10 * m} 6 Z" fill="${skin}" stroke="${st}" stroke-width="1.1"/>
-  <path d="M${-8 * m} -3 Q${-16 * m} -1 ${-14 * m} 7 Q${-11 * m} 10 ${-7 * m} 6" fill="${skin}" stroke="${st}" stroke-width="1.1"/><path d="M-4 5 H4 M-4 -1 H4" stroke="${st}" stroke-width=".9" opacity=".7"/>`; };
+  return `<g transform="scale(1.32)"><path d="M${-9 * m} -9 Q${-10 * m} -15 ${-2 * m} -15 L${6 * m} -15 Q${12 * m} -14 ${12 * m} -6 L${12 * m} 6 Q${12 * m} 14 ${4 * m} 15 L${-4 * m} 15 Q${-10 * m} 14 ${-10 * m} 6 Z" fill="${skin}" stroke="${st}" stroke-width="1.1"/>
+  <path d="M${-8 * m} -3 Q${-16 * m} -1 ${-14 * m} 7 Q${-11 * m} 10 ${-7 * m} 6" fill="${skin}" stroke="${st}" stroke-width="1.1"/><path d="M-4 5 H4 M-4 -1 H4" stroke="${st}" stroke-width=".9" opacity=".7"/></g>`; };
 
 export function buildWeaponLayer(type, rarity, ctx = {}) {
   const sp = SPEC[type]; if (!sp) return "";
@@ -343,7 +343,7 @@ export function animTypeOf(item) { return item && item.animType && SPEC[item.ani
 export function applyWeaponPose({ item, base, pakaianOverlay, skin, state }) {
   const type = animTypeOf(item); if (!type) return null;
   return {
-    stance: stanceOf(type, state || "idle"), base: stripArms(base), pakaianOverlay: stripArms(pakaianOverlay),
+    base: stripArms(base), pakaianOverlay: stripArms(pakaianOverlay),
     handheld: buildWeaponLayer(type, item.rarity, { skin, sleeve: sleeveOf(pakaianOverlay), state, legacy: item.animLegacy ? { ...item.animLegacy, svg: item.svg() } : null }),
   };
 }

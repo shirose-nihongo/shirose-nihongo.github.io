@@ -27,7 +27,7 @@ export const CEL = 'filter="url(#shiro-cel)"';
 /* tangan "mitten" ala referensi: kepalan bulat + jempol; side "L"=tangan kiri layar (jempol ke dalam/kanan) */
 export const mittenPath = (side) => { const m = side === "L" ? 1 : -1;
   return `M${-9 * m} -9 Q${-10 * m} -15 ${-2 * m} -15 L${6 * m} -15 Q${12 * m} -14 ${12 * m} -6 L${12 * m} 6 Q${12 * m} 14 ${4 * m} 15 L${-4 * m} 15 Q${-10 * m} 14 ${-10 * m} 6 Z`; };
-export const mittenSvg = (cx, cy, fill, side) => `<g transform="translate(${cx} ${cy})"><path d="${mittenPath(side)}" fill="${fill}" stroke="rgba(120,70,40,.55)" stroke-width="1.1"/>
+export const mittenSvg = (cx, cy, fill, side) => `<g transform="translate(${cx} ${cy}) scale(1.32)"><path d="${mittenPath(side)}" fill="${fill}" stroke="rgba(120,70,40,.55)" stroke-width="1.1"/>
   <path d="M${side === "L" ? 8 : -8} -4 Q${side === "L" ? 16 : -16} -2 ${side === "L" ? 14 : -14} 6 Q${side === "L" ? 11 : -11} 9 ${side === "L" ? 7 : -7} 5" fill="${fill}" stroke="rgba(120,70,40,.55)" stroke-width="1.1"/>
   <path d="M-5 8 H5" stroke="rgba(120,70,40,.35)" stroke-width="1"/></g>`;
 /* ganti lingkaran tangan lama (123/277,325 r=11) di SVG item mana pun dengan mitten */
@@ -965,10 +965,10 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261115z";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261115z";
-import { extendShirose } from "./shirose-set.js?v=20261115z";
-import { extend2 } from "./character-more2.js?v=20261115z";
+import { extend } from "./character-more.js?v=20261116b";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116b";
+import { extendShirose } from "./shirose-set.js?v=20261116b";
+import { extend2 } from "./character-more2.js?v=20261116b";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
