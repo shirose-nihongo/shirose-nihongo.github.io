@@ -915,10 +915,13 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     aksesoriSvg = `<g data-slot="aksesori">${ACCESSORIES[eq.aksesori].svg()}</g>`;
   }
 
-  // Handheld
+  // Handheld — senjata ber-animType otomatis memakai pose + animasi bawaannya (weapon-anim.js)
   let handheldSvg = "";
   if (eq.item_tangan && eq.item_tangan !== "none" && HANDHELD[eq.item_tangan]?.svg) {
-    handheldSvg = `<g data-slot="item_tangan">${HANDHELD[eq.item_tangan].svg()}</g>`;
+    const hItem = HANDHELD[eq.item_tangan];
+    const wp = hItem.animType ? applyWeaponPose({ item: hItem, base, pakaianOverlay, skin: (SKIN_TONES[skinKey] || SKIN_TONES.light).skin, state: opts.wstate || "idle" }) : null;
+    if (wp) { base = wp.base; pakaianOverlay = wp.pakaianOverlay; handheldSvg = `<g data-slot="item_tangan">${wp.handheld}</g>`; }
+    else handheldSvg = `<g data-slot="item_tangan">${hItem.svg()}</g>`;
   }
 
   return `
@@ -947,9 +950,10 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261115s";
-import { extend2 } from "./character-more2.js?v=20261115s";
+import { extend } from "./character-more.js?v=20261115w";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261115w";
+import { extend2 } from "./character-more2.js?v=20261115w";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
-extend(__X); extend2(__X);
+extend(__X); extend2(__X); extendWeaponAnim(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;
