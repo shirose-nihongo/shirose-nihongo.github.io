@@ -1,5 +1,5 @@
 /* Shop items that match character.js CATALOG. Seeded at runtime. */
-import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261115m";
+import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261115n";
 
 export function allShopItems() {
   const out = [];

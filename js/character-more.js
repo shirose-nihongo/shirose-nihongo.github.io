@@ -227,6 +227,7 @@ const WING_OVER = { unlock_lv: 50 };   // SEMUA sayap baru bisa dipakai di Lv 50
 const buildWings = () => { const o = build(WING, "sy_"); Object.values(o).forEach(x => x.unlock_lv = 50); return o; };
 
 /* ======================= EKSPOR ======================= */
+export const H = { SK, mk, build, U, outfit, pants, shoe, aura, blade, gl, orb, staff, PAIR, FLAP, wingFeather, wingBat, wingLeaf, wingCrystal, wingWind, wingFlame, paperWing };
 export function extend(C) {
   Object.assign(C.OUTFITS, build(OUT, "o_"));
   Object.assign(C.SHOES, build(SHOESL, "sh_"));

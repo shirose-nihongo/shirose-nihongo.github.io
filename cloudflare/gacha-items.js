@@ -57,6 +57,190 @@ export const ITEMS = [
   "harga": 500
  },
  {
+  "id": "hr_spiky",
+  "nama": "Rambut Spiky",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 400
+ },
+ {
+  "id": "hr_bob",
+  "nama": "Rambut Bob",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 750
+ },
+ {
+  "id": "hr_ponytail",
+  "nama": "Rambut Ekor Kuda",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 1150
+ },
+ {
+  "id": "hr_undercut",
+  "nama": "Rambut Undercut",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 1500
+ },
+ {
+  "id": "hr_bun",
+  "nama": "Rambut Cepol Bun",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 2500
+ },
+ {
+  "id": "hr_long",
+  "nama": "Rambut Panjang Lurus",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 3150
+ },
+ {
+  "id": "hr_twin",
+  "nama": "Rambut Kuncir Dua",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 3750
+ },
+ {
+  "id": "hr_curly",
+  "nama": "Rambut Keriting",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 4400
+ },
+ {
+  "id": "hr_emo",
+  "nama": "Rambut Poni Emo",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 5000
+ },
+ {
+  "id": "hr_afro",
+  "nama": "Rambut Afro",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 9000
+ },
+ {
+  "id": "hr_mohawk",
+  "nama": "Rambut Mohawk",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 10750
+ },
+ {
+  "id": "hr_topknot",
+  "nama": "Rambut Chonmage Samurai",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 12500
+ },
+ {
+  "id": "hr_pink",
+  "nama": "Rambut Pink Sakura",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 14250
+ },
+ {
+  "id": "hr_biru",
+  "nama": "Rambut Biru Laut",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 16000
+ },
+ {
+  "id": "hr_perak",
+  "nama": "Rambut Perak Spiky",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 25000
+ },
+ {
+  "id": "hr_ungu",
+  "nama": "Rambut Ungu Panjang",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 28650
+ },
+ {
+  "id": "hr_twinbuns_hijau",
+  "nama": "Rambut Dua Cepol Hijau",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 32350
+ },
+ {
+  "id": "hr_serigala_perak",
+  "nama": "Rambut Serigala Perak",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 36000
+ },
+ {
+  "id": "hr_api",
+  "nama": "Rambut Api Menyala",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 50000
+ },
+ {
+  "id": "hr_es",
+  "nama": "Rambut Es Kristal",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 65000
+ },
+ {
+  "id": "hr_emas",
+  "nama": "Rambut Emas Dewa",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 80000
+ },
+ {
+  "id": "hr_pelangi",
+  "nama": "Rambut Pelangi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 100000
+ },
+ {
+  "id": "hr_galaxy",
+  "nama": "Rambut Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Rambut",
+  "harga": 130000
+ },
+ {
   "id": "kemeja_navy",
   "nama": "Kemeja Navy",
   "rarity": "common",
@@ -297,6 +481,158 @@ export const ITEMS = [
   "harga": 130000
  },
  {
+  "id": "o2_kaos_kuning",
+  "nama": "Kaos Kuning Ceria",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 400
+ },
+ {
+  "id": "o2_kaos_ungu",
+  "nama": "Kaos Ungu",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 700
+ },
+ {
+  "id": "o2_kaos_oranye",
+  "nama": "Kaos Oranye",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 950
+ },
+ {
+  "id": "o2_tank_putih",
+  "nama": "Tank Top Putih",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 1250
+ },
+ {
+  "id": "o2_kemeja_putih",
+  "nama": "Kemeja Putih Lengan Panjang",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 1500
+ },
+ {
+  "id": "o2_hoodie_hijau",
+  "nama": "Hoodie Hijau Hutan",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 2500
+ },
+ {
+  "id": "o2_jaket_olahraga",
+  "nama": "Jaket Olahraga Merah",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 3350
+ },
+ {
+  "id": "o2_sweater_biru",
+  "nama": "Sweater Rajut Biru",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 4150
+ },
+ {
+  "id": "o2_yukata_hijau",
+  "nama": "Yukata Hijau",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 5000
+ },
+ {
+  "id": "o2_pelaut",
+  "nama": "Seragam Pelaut",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 9000
+ },
+ {
+  "id": "o2_jas_putih",
+  "nama": "Jas Putih Elegan",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 11350
+ },
+ {
+  "id": "o2_jaket_neon",
+  "nama": "Jaket Neon Cyber",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 13650
+ },
+ {
+  "id": "o2_hoodie_naga",
+  "nama": "Hoodie Naga Hitam",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 16000
+ },
+ {
+  "id": "o2_armor_es",
+  "nama": "Armor Kristal Es",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 25000
+ },
+ {
+  "id": "o2_jubah_api",
+  "nama": "Jubah Penyihir Api",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 30500
+ },
+ {
+  "id": "o2_kimono_sakura",
+  "nama": "Kimono Sakura",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 36000
+ },
+ {
+  "id": "o2_armor_petir",
+  "nama": "Armor Petir Dewa",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 50000
+ },
+ {
+  "id": "o2_kimono_emas",
+  "nama": "Kimono Emas Kerajaan",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 80000
+ },
+ {
+  "id": "o2_jubah_phoenix",
+  "nama": "Jubah Phoenix",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Pakaian",
+  "harga": 100000
+ },
+ {
   "id": "sneakers_putih",
   "nama": "Sneakers Putih",
   "rarity": "common",
@@ -479,6 +815,70 @@ export const ITEMS = [
   "kind": "shop",
   "kat": "Sepatu",
   "harga": 130000
+ },
+ {
+  "id": "sh2_hijau",
+  "nama": "Sneakers Hijau",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 400
+ },
+ {
+  "id": "sh2_sandal_biru",
+  "nama": "Sandal Jepit Biru",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 1500
+ },
+ {
+  "id": "sh2_high_putih",
+  "nama": "High-top Putih",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 2500
+ },
+ {
+  "id": "sh2_boot_hijau",
+  "nama": "Boots Hutan",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 9000
+ },
+ {
+  "id": "sh2_boot_putih",
+  "nama": "Boots Putih Emas",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 16000
+ },
+ {
+  "id": "sh2_es",
+  "nama": "Sepatu Es Kristal",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 25000
+ },
+ {
+  "id": "sh2_petir",
+  "nama": "Sepatu Petir",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 50000
+ },
+ {
+  "id": "sh2_phoenix",
+  "nama": "Sepatu Phoenix",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Sepatu",
+  "harga": 100000
  },
  {
   "id": "kacamata",
@@ -687,6 +1087,110 @@ export const ITEMS = [
   "kind": "shop",
   "kat": "Aksesori",
   "harga": 130000
+ },
+ {
+  "id": "ac2_topi_hijau",
+  "nama": "Topi Baseball Hijau",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 400
+ },
+ {
+  "id": "ac2_topi_pink",
+  "nama": "Topi Baseball Pink",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 750
+ },
+ {
+  "id": "ac2_kacamata_biru",
+  "nama": "Kacamata Bulat Biru",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 1150
+ },
+ {
+  "id": "ac2_bandana_merah",
+  "nama": "Bandana Merah",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 1500
+ },
+ {
+  "id": "ac2_topi_koki",
+  "nama": "Topi Koki",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 2500
+ },
+ {
+  "id": "ac2_topi_jerami",
+  "nama": "Topi Jerami",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 5000
+ },
+ {
+  "id": "ac2_kacamata_gamer",
+  "nama": "Kacamata Gamer",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 9000
+ },
+ {
+  "id": "ac2_tanduk_rusa",
+  "nama": "Tanduk Rusa",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 12500
+ },
+ {
+  "id": "ac2_topi_bajak",
+  "nama": "Topi Bajak Laut",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 16000
+ },
+ {
+  "id": "ac2_mahkota_bunga",
+  "nama": "Mahkota Bunga",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 25000
+ },
+ {
+  "id": "ac2_helm_ksatria",
+  "nama": "Helm Ksatria",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 36000
+ },
+ {
+  "id": "ac2_mahkota_petir",
+  "nama": "Mahkota Petir",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 50000
+ },
+ {
+  "id": "ac2_halo_ganda",
+  "nama": "Halo Ganda Cahaya",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Aksesori",
+  "harga": 100000
  },
  {
   "id": "tas_sekolah",
@@ -1073,6 +1577,118 @@ export const ITEMS = [
   "harga": 130000
  },
  {
+  "id": "hh2_pisau",
+  "nama": "Pisau Dapur",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 400
+ },
+ {
+  "id": "hh2_tongkat_bisbol",
+  "nama": "Tongkat Bisbol",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 950
+ },
+ {
+  "id": "hh2_mic",
+  "nama": "Mikrofon",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 1500
+ },
+ {
+  "id": "hh2_buku_sihir",
+  "nama": "Buku Sihir",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 2500
+ },
+ {
+  "id": "hh2_gulungan",
+  "nama": "Gulungan Ninja",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 5000
+ },
+ {
+  "id": "hh2_bola_api",
+  "nama": "Bola Api",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 9000
+ },
+ {
+  "id": "hh2_bola_es",
+  "nama": "Bola Es",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 12500
+ },
+ {
+  "id": "hh2_pedang_kristal",
+  "nama": "Pedang Kristal",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 16000
+ },
+ {
+  "id": "hh2_bola_petir",
+  "nama": "Bola Petir",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 25000
+ },
+ {
+  "id": "hh2_tombak_petir",
+  "nama": "Tombak Petir",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 36000
+ },
+ {
+  "id": "hh2_busur_emas",
+  "nama": "Busur Emas Dewa",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 50000
+ },
+ {
+  "id": "hh2_gada_naga",
+  "nama": "Gada Naga Merah",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 80000
+ },
+ {
+  "id": "hh2_sabit_galaxy",
+  "nama": "Sabit Galaksi",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 100000
+ },
+ {
+  "id": "hh2_pedang_dewa",
+  "nama": "Pedang Dewa Surya",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Item Tangan",
+  "harga": 130000
+ },
+ {
   "id": "aura_hijau",
   "nama": "💚 Aura Hijau",
   "rarity": "uncommon",
@@ -1223,6 +1839,62 @@ export const ITEMS = [
   "kind": "shop",
   "kat": "Aura",
   "harga": 130000
+ },
+ {
+  "id": "au2_oranye",
+  "nama": "🧡 Aura Oranye Senja",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 2500
+ },
+ {
+  "id": "au2_tosca",
+  "nama": "🩵 Aura Tosca Segar",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 5000
+ },
+ {
+  "id": "au2_emas_bintang",
+  "nama": "⭐ Aura Bintang Emas",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 9000
+ },
+ {
+  "id": "au2_hati",
+  "nama": "💗 Aura Cinta",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 16000
+ },
+ {
+  "id": "au2_badai",
+  "nama": "🌪️ Aura Badai Ungu",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 25000
+ },
+ {
+  "id": "au2_lava",
+  "nama": "🌋 Aura Lava",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 50000
+ },
+ {
+  "id": "au2_bintang_jatuh",
+  "nama": "🌠 Aura Bintang Jatuh",
+  "rarity": "mythic",
+  "kind": "shop",
+  "kat": "Aura",
+  "harga": 100000
  },
  {
   "id": "cl_jeans_biru",
@@ -1417,6 +2089,86 @@ export const ITEMS = [
   "harga": 130000
  },
  {
+  "id": "cl2_pendek_hijau",
+  "nama": "Celana Pendek Hijau",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 400
+ },
+ {
+  "id": "cl2_pendek_kuning",
+  "nama": "Celana Pendek Kuning",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 750
+ },
+ {
+  "id": "cl2_training_merah",
+  "nama": "Training Merah",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 1150
+ },
+ {
+  "id": "cl2_cargo_abu",
+  "nama": "Cargo Abu",
+  "rarity": "common",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 1500
+ },
+ {
+  "id": "cl2_jogger_hitam",
+  "nama": "Jogger Hitam",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 2500
+ },
+ {
+  "id": "cl2_kotak_biru",
+  "nama": "Celana Kotak Biru",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 3750
+ },
+ {
+  "id": "cl2_jeans_pudar",
+  "nama": "Jeans Pudar Robek",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 5000
+ },
+ {
+  "id": "cl2_neon",
+  "nama": "Celana Neon Bintang",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 9000
+ },
+ {
+  "id": "cl2_petir",
+  "nama": "Celana Petir Kuning",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 25000
+ },
+ {
+  "id": "cl2_hutan_naga",
+  "nama": "Celana Penjaga Hutan",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Celana",
+  "harga": 50000
+ },
+ {
   "id": "sy_kardus",
   "nama": "Sayap Kardus",
   "rarity": "common",
@@ -1575,6 +2327,38 @@ export const ITEMS = [
   "kind": "shop",
   "kat": "Sayap (Lv 50)",
   "harga": 130000
+ },
+ {
+  "id": "sy2_kupu",
+  "nama": "Sayap Kupu-kupu",
+  "rarity": "uncommon",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 2500
+ },
+ {
+  "id": "sy2_malam",
+  "nama": "Sayap Kelelawar Malam",
+  "rarity": "rare",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 9000
+ },
+ {
+  "id": "sy2_kristal_ungu",
+  "nama": "Sayap Kristal Ungu",
+  "rarity": "epic",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 25000
+ },
+ {
+  "id": "sy2_pelangi",
+  "nama": "Sayap Pelangi",
+  "rarity": "legendary",
+  "kind": "shop",
+  "kat": "Sayap (Lv 50)",
+  "harga": 50000
  },
  {
   "id": "theme_ungu",

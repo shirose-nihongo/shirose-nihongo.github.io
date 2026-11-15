@@ -947,8 +947,9 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261115m";
-const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS };
-extend(__X);
+import { extend } from "./character-more.js?v=20261115n";
+import { extend2 } from "./character-more2.js?v=20261115n";
+const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
+extend(__X); extend2(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;
