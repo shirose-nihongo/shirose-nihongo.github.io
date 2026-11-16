@@ -254,11 +254,14 @@ function figAnchors(pack, s, lang, blocks) {
 function figsBar(pick) {
   return pick.length ? `<div class="sw-figbar"><button type="button" class="btn ghost" onclick="SSW.figOpen(CUR_SLUG_PLACEHOLDER,null,0)">🖼 ${pick.length} gambar subbab ini</button><small class="sw-muted">Ketuk tombol 🖼 di samping paragraf untuk membuka gambar di pop-up.</small></div>` : "";
 }
-function summaryHTML(s) {
+function summaryHTML(s, ttl = "") {
   if (!s) return "";
-  const box = (t, cls, arr) => arr && arr.length ? `<div class="sw-sbox ${cls}"><h4>${t}</h4><ul>${arr.map(x => `<li>${rich(x)}</li>`).join("")}</ul></div>` : "";
-  return `<div class="sw-core">${rich(s.core)}</div>` +
-    box("Poin yang harus diingat", "pt", s.points) + box("Kesalahan yang harus dihindari", "av", s.avoid) + box("Berpotensi keluar di ujian", "ex", s.exam);
+  const rk = (lbl, x, n) => { const front = (ttl ? ttl + " · " : "") + lbl + (n ? " " + n : ""), back = plain(x); return `<button type="button" class="sw-rk" title="Masukkan ke Rangkuman" aria-label="Masukkan ke Rangkuman" data-f="${esc(front)}" data-b="${esc(back)}" onclick="SSW.rk(this)">📒＋</button>`; };
+  const box = (t, cls, arr, lbl) => arr && arr.length ? `<div class="sw-sbox ${cls}"><h4>${t}</h4><ul>${arr.map((x, i) => `<li>${rich(x)} ${rk(lbl, x, i + 1)}</li>`).join("")}</ul></div>` : "";
+  const all = [["Inti", [s.core]], ["Poin", s.points || []], ["Hindari", [].concat(s.avoid || [])], ["Ujian", [].concat(s.exam || [])]];
+  const allBtn = `<div class="sw-actions left" style="margin:6px 0"><button type="button" class="btn ghost sm" onclick="SSW.rkAll(this)" data-t="${esc(ttl)}" data-j="${esc(JSON.stringify(all.flatMap(([l, a]) => a.map((x, i) => [l, a.length > 1 ? i + 1 : 0, plain(x)]))))}">📒 Masukkan semua ringkasan ke Rangkuman</button></div>`;
+  return `<div class="sw-core">${rich(s.core)} ${rk("Inti", s.core, 0)}</div>` + allBtn +
+    box("Poin yang harus diingat", "pt", s.points, "Poin") + box("Kesalahan yang harus dihindari", "av", s.avoid, "Hindari") + box("Berpotensi keluar di ujian", "ex", s.exam, "Ujian");
 }
 function flatSubs(b, pack) { const out = []; for (const c of visibleChapters(b, pack)) for (const s of c.subs) out.push({ c, s }); return out; }
 // Tombol ganti bahasa melayang (muncul saat halaman di-scroll turun) di halaman baca materi.
@@ -296,7 +299,7 @@ async function renderBaca([slug, subId, mode, lang]) {
   const fgBlocks = s.full?.[lang] || s.full?.id;
   const fg = mode === "lengkap" ? figAnchors(pack, s, lang, fgBlocks) : { pick: [], map: new Map() };
   window.__swFig = { slug, subId: s.id, lang, pick: fg.pick, n: 0, title: plain(L(s.title, lang)) };
-  const body = mode === "lengkap" ? blocksHTML(fgBlocks, fg.map) : summaryHTML(s.summary?.[lang] || s.summary?.id);
+  const body = mode === "lengkap" ? blocksHTML(fgBlocks, fg.map) : summaryHTML(s.summary?.[lang] || s.summary?.id, plain(L(s.title, lang)));
   setTimeout(() => window.SSW.linkVocab(slug), 0);
   setTimeout(() => window.__swLangFloat && window.__swLangFloat(slug, subId, mode, lang), 0);
   return wrap(`
@@ -793,6 +796,8 @@ const SSW = window.SSW = {
     let m = mode; if (mode === "mixed") { const ms = ["flashcard", "multiple", "matching"]; m = ms[Math.floor(Math.random() * ms.length)]; toast("Mode acak: " + { flashcard: "Flashcard", multiple: "Pilihan ganda", matching: "Matching" }[m]); }
     await window.sswHafalStart({ items: hafItems(rows), mode: m, back: `ssw-hafal/${slug}` });
   },
+  async rk(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); const ok = await window.rangkumCepat({ jp: b.dataset.f, arti: b.dataset.b }, "SSW"); if (ok) { b.textContent = "✓"; b.classList.add("on"); } },
+  async rkAll(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); let rows = []; try { rows = JSON.parse(b.dataset.j || "[]"); } catch (_) {} const t = b.dataset.t || ""; let n = 0; for (const [l, i, x] of rows) { if (!x) continue; if (await window.rangkumCepat({ jp: (t ? t + " · " : "") + l + (i ? " " + i : ""), arti: x }, "SSW")) n++; } b.textContent = "✓ " + n + " kartu masuk Rangkuman"; },
   async vadd(slug, id) { const pack = await loadPack(slug), v = pack.vocab.find(x => x.id === id); if (!v || !window.sswAddCard) return; await window.sswAddCard(vnum(v), vnum(v) - 1); const P = await getProgress(slug); await syncCards(P, pack.vocab, true); toast("Masuk daftar hafalan ✓"); },
   /* --- hub hafalan --- */
   hafalCount() {

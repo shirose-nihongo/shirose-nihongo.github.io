@@ -330,3 +330,5 @@ body.sw-figopen{padding-bottom:62vh;}
 .bk-pgw img{display:block; width:100%; height:auto; cursor:zoom-in;}
 .bk-pgno{position:absolute; top:6px; left:8px; background:rgba(0,0,0,.55); color:#fff; font-size:11px; padding:2px 8px; border-radius:99px; pointer-events:none;}
 .sw-book-scroll + .sw-book-nav{position:sticky; bottom:0; background:linear-gradient(#0f1330cc,#0f1330); padding:8px 4px; z-index:5; border-radius:12px 12px 0 0;}
+
+.sw-rk{border:1px solid var(--border);background:transparent;color:inherit;border-radius:10px;padding:1px 7px;font-size:12px;margin-left:6px;cursor:pointer;vertical-align:middle;opacity:.8}.sw-rk.on{background:rgba(34,211,238,.2);opacity:1}
