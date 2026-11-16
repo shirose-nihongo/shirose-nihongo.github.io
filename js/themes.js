@@ -47,7 +47,7 @@
   function apply(t){
     document.documentElement.setAttribute("data-theme",t);
     var m=document.querySelector('meta[name="theme-color"]');if(m){for(var i=0;i<TH.length;i++)if(TH[i][0]===t)m.setAttribute("content",TH[i][3])}
-    layer(t);
+    cfClear();layer(t);cfSoon();
     var mn=document.getElementById("th-menu");if(mn)[].forEach.call(mn.querySelectorAll("button"),function(b){b.classList.toggle("on",b.dataset.t===t)});
   }
   /* Animasi dipisah: KARAKTER (SMIL senjata/sayap/aura) dan TEMA (hujan, salju, daun, dll).
@@ -90,6 +90,40 @@
   function fset(f){try{localStorage.setItem(FK,f)}catch(e){}fapply(f)}
   fapply(fget());
   window.SHIROSE_JPFONT={get:fget,set:fset,list:FN};
+  /* ===== Keterbacaan: tema Putih = teks hitam penuh, tema Monokrom = teks putih penuh =====
+     Memindai teks yang kontrasnya rendah (atau abu-abu) terhadap latar efektifnya, lalu dipaksa hitam/putih. */
+  var cfSet=[],cfT=0;
+  function rgba(c){var m=/rgba?\(([^)]+)\)/.exec(c||"");if(!m)return null;var a=m[1].split(/[ ,\/]+/).filter(Boolean).map(parseFloat);return{r:a[0],g:a[1],b:a[2],a:a.length>3?a[3]:1}}
+  function lum(c){function f(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}return .2126*f(c.r)+.7152*f(c.g)+.0722*f(c.b)}
+  function ratio(a,b){var x=lum(a),y=lum(b);if(x<y){var t=x;x=y;y=t}return(x+.05)/(y+.05)}
+  function effBg(el,def){
+    for(var n=el;n&&n.nodeType===1;n=n.parentElement){
+      var cs=getComputedStyle(n),c=rgba(cs.backgroundColor);
+      if(c&&c.a>=.6)return c;
+      if(n===document.body||n===document.documentElement)return def;
+      if(cs.backgroundImage&&cs.backgroundImage!=="none")return null; /* gradasi/gambar: lewati */
+    }
+    return def;
+  }
+  function cfClear(){cfSet.forEach(function(e){try{e.style.removeProperty("color");e.__cf=0}catch(x){}});cfSet=[]}
+  function cfRun(){
+    var t=document.documentElement.getAttribute("data-theme");if(t!=="putih"&&t!=="mono"){if(cfSet.length)cfClear();return}
+    var light=t==="putih",def=light?{r:255,g:255,b:255}:{r:20,g:20,b:20};
+    var root=document.getElementById("app");if(!root)return;
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),seen=[],n;
+    while((n=w.nextNode())){if(/\S/.test(n.nodeValue)){var e=n.parentElement;if(e&&seen.indexOf(e)<0&&!e.__cf)seen.push(e)}}
+    seen.forEach(function(e){
+      if(/^(SCRIPT|STYLE|SVG|TEXT|TSPAN)$/i.test(e.tagName)||e.closest("svg"))return;
+      var cs=getComputedStyle(e);if(cs.visibility==="hidden"||cs.display==="none")return;
+      var fg=rgba(cs.color),bg=effBg(e,def);if(!fg||!bg)return;
+      var r=ratio(fg,bg),gray=Math.max(fg.r,fg.g,fg.b)-Math.min(fg.r,fg.g,fg.b)<45,bgLight=lum(bg)>.4,want=bgLight?"#000":"#fff";
+      var need=r<4.5||(gray&&((bgLight&&lum(fg)>.02)||(!bgLight&&lum(fg)<.9)));
+      /* tema Putih: abu-abu di latar terang → hitam; tema Mono: abu-abu di latar gelap → putih */
+      if(need&&(r<4.5||(light===bgLight))){e.style.setProperty("color",want,"important");e.__cf=1;cfSet.push(e)}
+    });
+  }
+  function cfSoon(){clearTimeout(cfT);cfT=setTimeout(cfRun,220)}
+  try{new MutationObserver(cfSoon).observe(document.documentElement,{childList:true,subtree:true})}catch(e){}
   function set(t){try{localStorage.setItem(KEY,t)}catch(e){}apply(t)}
   function setOwned(ids){OWNED={};(ids||[]).forEach(function(i){if(/^theme_/.test(i))OWNED[i.slice(6)]=1});apply(get())}
   window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH,setOwned:setOwned,preview:preview,closePreview:closePreview,refresh:function(){apply(get())}};
