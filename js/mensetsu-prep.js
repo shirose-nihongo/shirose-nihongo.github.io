@@ -245,6 +245,7 @@ function editor(q, a) {
     <p class="ms-note"><b>Pertanyaan:</b> <span class="jp">${esc(q.ja)}</span> — ${esc(q.id)} <button class="btn ghost sm" onclick="PP.sayQ('${q.i}')">🔊 Dengar pertanyaan</button></p>
     <label class="pp-lb">Jawabanmu (bahasa Jepang)
       <textarea id="pp-ta" rows="5" placeholder="Tulis jawaban dalam bahasa Jepang… (boleh bahasa Indonesia dulu, nanti AI bantu ubah ke Jepang)" oninput="PP.input('${q.i}')">${esc(a.asli)}</textarea></label>
+    <div class="pp-act"><button type="button" class="btn ghost sm pp-mic" id="mic-pp-ta" onclick="PP.dikte('pp-ta')" ${EN.sttSupported() ? "" : "disabled title='Browser tidak mendukung mikrofon (pakai Chrome/Edge)'"}>🎤 Isi dengan suara</button></div>
     <div class="pp-act"><button class="btn" onclick="PP.simpan('${q.i}')">💾 Simpan</button>
       <button class="btn big" id="pp-kor" onclick="PP.koreksi('${q.i}')">🤖 AI添削 — Periksa Jawaban</button>
       <button class="btn ghost" onclick="PP.contoh('${q.i}')">💡 Lihat contoh dari bank soal</button></div>
@@ -265,7 +266,18 @@ function editor(q, a) {
 
 /* ---------------- aksi PERSIAPAN ---------------- */
 function rerender() { return X.refresh(); }
+let _dk = null;
 const PP = {
+  dikte(id) {
+    const ta = document.getElementById(id), btn = document.getElementById("mic-" + id); if (!ta || !EN.sttSupported()) return;
+    if (_dk) { _dk.stop(); return; }
+    const awal = ta.value ? ta.value.replace(/\s+$/, "") + " " : ""; if (btn) btn.textContent = "⏹ Selesai bicara (mendengarkan…)";
+    const fin = () => { _dk = null; const b = document.getElementById("mic-" + id); if (b) b.textContent = "🎤 Isi dengan suara"; };
+    _dk = EN.listen({ lang: "ja-JP",
+      onInterim: (t) => { ta.value = awal + t; },
+      onEnd: ({ text }) => { fin(); if (text) { ta.value = awal + text; ta.dispatchEvent(new Event("input", { bubbles: true })); } else toast("Suara tidak terdengar. Coba lagi lebih dekat ke mikrofon."); },
+      onError: (e) => { if (e === "not-allowed" || e === "service-not-allowed") { fin(); toast("Izin mikrofon ditolak."); } else if (e === "network") toast("Pengenalan suara butuh internet."); } });
+  },
   cat(k) { flushTextarea(); P.cat = k; rerender(); },
   toggle(id, on) {
     flushTextarea(); const d = P.data; const j = jikoOf(P.bank);
@@ -389,7 +401,8 @@ export async function renderHafalan(p) {
       <p class="pp-big jp">${esc(q.ja)}</p>
       <div class="pp-act"><button class="btn ghost" onclick="PP.sayQ('${id}')">🔊 Ulangi pertanyaan</button><button class="btn ghost" onclick="PP.hTrans()">${H.trans ? "Sembunyikan" : "Lihat"} arti</button></div>
       ${H.trans ? `<p class="ms-note">${esc(q.id)}</p>` : ""}
-      ${act ? `<label class="pp-lb">Coba jawab dulu dari ingatan (opsional)<textarea id="pp-try" rows="3" placeholder="Ketik jawabanmu tanpa melihat…"></textarea></label>
+      ${act ? `<label class="pp-lb">Coba jawab dulu dari ingatan (opsional)<textarea id="pp-try" rows="3" placeholder="Ketik atau ucapkan jawabanmu tanpa melihat…"></textarea></label>
+        <div class="pp-act"><button type="button" class="btn ghost sm pp-mic" id="mic-pp-try" onclick="PP.dikte('pp-try')" ${EN.sttSupported() ? "" : "disabled title='Browser tidak mendukung mikrofon (pakai Chrome/Edge)'"}>🎤 Isi dengan suara</button></div>
         <div class="pp-act"><button class="btn big" onclick="PP.hShow()">${H.show ? "🙈 Tutup jawaban" : "👁 Tampilkan jawaban"}</button><button class="btn ghost" onclick="PP.hHide()">${H.hide ? "Tampilkan teks" : "Sembunyikan teks (dengar saja)"}</button></div>
         ${H.show ? `<div class="pp-box jp ${H.hide ? "blur" : ""}" id="pp-ans">${actHtml}</div>
           ${a.ev && a.ev.terjemahan && a.diterima ? `<p class="ms-note">${esc(a.ev.terjemahan)}</p>` : ""}

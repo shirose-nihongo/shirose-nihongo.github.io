@@ -10,7 +10,6 @@
  * ===================================================================== */
 import * as EN from "./mensetsu-engine.js";
 import { initPrep, PREP_ROUTES } from "./mensetsu-prep.js";
-import { initWawancara, renderSesi } from "./mensetsu-wawancara.js?v=20261116a";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
 import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261113zl";
 
@@ -18,7 +17,6 @@ let FB = null;
 export function initMensetsu(fb) {
   FB = fb;
   initSswCore(fb);   // aman dipanggil ulang: hanya menyimpan referensi FB
-  initWawancara({ getFB: () => FB, esc, toast, LS, param, BIDANG, avatarSvg });
   initPrep({ getFB: () => FB, esc, toast, LS, uid, isGuest, param, setPage, refresh, BIDANG, cfgGet, getProv: () => PROV, loadProviders });
 }
 
@@ -160,7 +158,6 @@ async function renderBidang(p) {
     </div>
     <section class="ms-panel"><h2>Pilih yang ingin kamu lakukan</h2>
       <div class="ms-modes">
-        ${card("🎤", "Simulasi wawancara (suara)", "Pewawancara berbicara otomatis, kamu menjawab dengan suara. Furigana bisa dihidupkan. Tanpa AI berbayar.", "mensetsu-sesi")}
         ${card("✍️", "Persiapan jawaban", "Pilih pertanyaan, tulis jawaban Jepang, periksa dengan AI (benar/salah + perbaikan), dengarkan audionya.", "mensetsu-persiapan")}
         ${card("🧠", "Mode hafalan", "Lihat pertanyaan, coba jawab, buka jawaban, dengar, shadowing, tandai hafal/sulit.", "mensetsu-hafalan")}
         ${card("🤖", "Wawancara di Claude / ChatGPT", "お願いします — pilih pertanyaan yang ingin ditanyakan, lalu salin prompt siap pakai ke Claude atau ChatGPT.", "mensetsu-prompt")}
@@ -215,7 +212,6 @@ export const MENSETSU_ROUTES = {
   mensetsu: () => renderHub(),
   "mensetsu-bidang": jaga(renderBidang),
   "mensetsu-bank": jaga(renderBank),
-  "mensetsu-sesi": jaga(renderSesi),
   ...Object.fromEntries(Object.entries(PREP_ROUTES).map(([r, f]) => [r, jaga(f)])),
 };
 export const MENSETSU_PUBLIC = Object.keys(MENSETSU_ROUTES);
