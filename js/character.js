@@ -880,7 +880,7 @@ export const DEFAULT_EQUIPPED = {
 
 /* ====== Render the full character given equipped state ====== */
 
-/* ====== Mode 2D datar (ringan): tanpa gradasi, filter, dan animasi SVG ====== */
+/* ====== Mode 2D datar: tanpa gradasi & filter (tidak 3D); animasi pose senjata tetap ====== */
 function flatten2D(svg) {
   const col = {};
   svg.replace(/<(linear|radial)Gradient\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/\1Gradient>/g, (m, t, id, inner) => {
@@ -891,10 +891,6 @@ function flatten2D(svg) {
   return svg
     .replace(/<(linear|radial)Gradient\b[\s\S]*?<\/\1Gradient>/g, "")
     .replace(/<filter\b[\s\S]*?<\/filter>/g, "")
-    .replace(/<animateTransform\b[^>]*?(\/>|>[\s\S]*?<\/animateTransform>)/g, "")
-    .replace(/<animateMotion\b[^>]*?(\/>|>[\s\S]*?<\/animateMotion>)/g, "")
-    .replace(/<animate\b[^>]*?(\/>|>[\s\S]*?<\/animate>)/g, "")
-    .replace(/<set\b[^>]*\/>/g, "")
     .replace(/\s(?:filter|style)="[^"]*(?:filter|blur)[^"]*"/g, "")
     .replace(/\sfilter="[^"]*"/g, "")
     .replace(/\b(fill|stroke)="url\(#([^)]+)\)"/g, (m, a, id) => { const v = col[id]; return v ? `${a}="${v[0]}"${v[1] < 1 ? ` ${a}-opacity="${v[1]}"` : ""}` : `${a}="#888"`; });
@@ -973,18 +969,12 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261116k";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116k";
-import { extendShirose } from "./shirose-set.js?v=20261116k";
-import { extend2 } from "./character-more2.js?v=20261116k";
+import { extend } from "./character-more.js?v=20261116m";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
+import { extendShirose } from "./shirose-set.js?v=20261116m";
+import { extend2 } from "./character-more2.js?v=20261116m";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;
-/* ====== Katalog diringkas (performa): senjata & sayap hanya yang sederhana ====== */
-const KEEP_SENJATA = new Set(["none","tas_sekolah","pedang_bambu","n5_buku_common","briefcase_common","hh_katana","hh_pedang_kayu","hh_pensil_raksasa","hh_payung","hh_bunga","hh_kipas","hh_kunai","hh_shuriken","hh_busur","hh_tongkat_sihir","hh_lentera","hh_yari","hh_kapak","hh_palu","hh_perisai","hh_gitar","hh_trisula","hh2_mic","hh2_pisau","hh2_tongkat_bisbol"]);
-const KEEP_SAYAP = new Set(["none","sy_kardus","sy_kertas","sy_daun","sy_capung","sy2_kupu","sy_malaikat"]);
-for (const k of Object.keys(HANDHELD)) if (!KEEP_SENJATA.has(k)) delete HANDHELD[k];
-for (const k of Object.keys(SAYAP)) if (!KEEP_SAYAP.has(k)) delete SAYAP[k];
-
