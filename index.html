@@ -2272,6 +2272,7 @@ function _renderRoute(name, rest){
 
 window.route = (path) => {
   window._materiDetail = null;
+  if (location.hash.slice(1) !== path) window._navByRoute = true;   // hashchange ini dari route(), bukan tombol back
   location.hash = path;
   const [name, ...rest] = path.split("/");
 
@@ -2281,16 +2282,7 @@ window.route = (path) => {
   if (window._routeStack.length > 40) window._routeStack.shift();
 
   _updateFabNav(name);
-
-  // Tombol back bawaan HP/browser di lobby (pilih-level) → halaman Profil (tempat tombol Keluar),
-  // bukan nyasar ke halaman sebelumnya. Dilakukan sekali per sesi login.
-  try {
-    if (name === "pilih-level" && state.user && !sessionStorage.getItem("_lobbyGuard")) {
-      sessionStorage.setItem("_lobbyGuard", "1");
-      history.replaceState({ prof: 1 }, "", "#profile");
-      history.pushState({ lobby: 1 }, "", "#pilih-level");
-    }
-  } catch (_) {}
+  window._curName = name;
 
   // Alur wajib: LOGIN → PEMILIHAN JLPT → CHARACTER → fitur. Selama siswa
   // belum memilih level di sesi ini, semua halaman diarahkan ke #pilih-level.
@@ -5786,7 +5778,13 @@ updateChips();
 })();
 window.addEventListener("hashchange", () => {
   const h = location.hash.slice(1) || "home";
-  // Sudah login lalu back sampai ke halaman login lama → teruskan mundur (keluar web), jangan balik ke login.
+  const byRoute = window._navByRoute; window._navByRoute = false;
+  if (state.user && !byRoute) {
+    // Tombol back bawaan HP/browser: dari lobby (pilih-level) → Profil; dari Profil → keluar ke web penjelasan.
+    if (window._curName === "pilih-level" && h !== "pilih-level") { try { history.replaceState(null, "", "#profile"); } catch (_) {} route("profile"); return; }
+    if (window._curName === "profile") { location.replace("./landing.html"); return; }
+  }
+  // Sudah login lalu back sampai ke halaman login lama → teruskan mundur, jangan balik ke login.
   if (state.user && /^(login|masuk|daftar)$/.test(h.split("/")[0])) { history.back(); return; }
   route(h);
 });
