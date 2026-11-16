@@ -968,7 +968,7 @@ html{overflow-x:hidden;}
   user-select:none; -webkit-user-select:none; touch-action:pan-y;
 }
 .flash-card{
-  position:relative; width:100%; max-width:520px; min-height:min(60vh, 440px);
+  position:relative; width:100%; max-width:520px; height:clamp(380px, 62vh, 500px); min-height:0; overflow-x:hidden; overflow-y:auto; box-sizing:border-box;   /* ukuran kartu tetap, tidak berubah mengikuti isi */
   background:linear-gradient(160deg, rgba(42,50,112,.85), rgba(22,27,54,.85));
   border:1px solid var(--border); border-radius:24px;
   padding:32px 24px; text-align:center;
@@ -3959,7 +3959,7 @@ window._hafFit = function(){
   const over = () => {   // ada baris/ruby yang keluar dari kartu?
     const r = document.createRange(); r.selectNodeContents(f);
     for (const q of r.getClientRects()) if (q.right > lim() || q.left < lim0()) return true;
-    return f.scrollWidth > maxW || f.scrollHeight > maxH;
+    return f.scrollWidth > maxW || f.scrollHeight > maxH || card.scrollHeight > card.clientHeight + 1;
   };
   while (n++ < 40 && fs > 18 && over()) { fs *= 0.9; f.style.fontSize = fs + "px"; }
 };
