@@ -78,6 +78,18 @@
   try{new MutationObserver(freezeSoon).observe(document.documentElement,{childList:true,subtree:true})}catch(e){}
   function unfreeze(){[].forEach.call(document.querySelectorAll("svg"),function(v){try{v.unpauseAnimations()}catch(e){}})}
   window.SHIROSE_ANIM={char:animChar,theme:animTheme,set:setAnim};
+  /* ===== Font Jepang (dipilih di samping "Ganti tema"). Disimpan di localStorage 'shirose-jpfont' ===== */
+  var FK="shirose-jpfont";
+  /* [id, nama, keterangan, font-family contoh] */
+  var FN=[["mincho","Mincho (bawaan)","さ・き menyambung","'Shippori Mincho B1','Noto Serif JP',serif"],["kyokasho","Kyokasho (buku pelajaran)","さ・き terpisah","'Klee One','Noto Serif JP',serif"],["gothic","Gothic","さ・き terpisah","'Zen Kaku Gothic New','Noto Sans JP',sans-serif"],["maru","Maru (bulat)","さ・き terpisah","'Zen Maru Gothic','Noto Sans JP',sans-serif"],["pena","Tulisan pena","さ・き terpisah","'Zen Kurenaido','Noto Sans JP',sans-serif"]];
+  function fget(){try{var v=localStorage.getItem(FK);return FN.some(function(f){return f[0]===v})?v:"mincho"}catch(e){return "mincho"}}
+  function fapply(f){
+    document.documentElement.setAttribute("data-jpfont",f);
+    var mn=document.getElementById("fn-menu");if(mn)[].forEach.call(mn.querySelectorAll("button"),function(b){b.classList.toggle("on",b.dataset.f===f)});
+  }
+  function fset(f){try{localStorage.setItem(FK,f)}catch(e){}fapply(f)}
+  fapply(fget());
+  window.SHIROSE_JPFONT={get:fget,set:fset,list:FN};
   function set(t){try{localStorage.setItem(KEY,t)}catch(e){}apply(t)}
   function setOwned(ids){OWNED={};(ids||[]).forEach(function(i){if(/^theme_/.test(i))OWNED[i.slice(6)]=1});apply(get())}
   window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH,setOwned:setOwned,preview:preview,closePreview:closePreview,refresh:function(){apply(get())}};
@@ -116,6 +128,17 @@
       d.querySelector("#th-menu").onclick=function(e){var b=e.target.closest("button");if(b&&b.dataset.anim){var kk=b.dataset.anim;setAnim(kk,!(kk==="char"?animChar():animTheme()));return}if(b){if(locked(b.dataset.t)){preview(b.dataset.t);document.getElementById("th-menu").classList.remove("open");return}clearPrev();set(b.dataset.t);document.getElementById("th-menu").classList.remove("open")}};
       document.addEventListener("click",function(){var m=document.getElementById("th-menu");if(m)m.classList.remove("open")});
       applyAnim();apply(get());
+    }
+    if(tr&&!document.getElementById("fn-menu")){
+      var f=document.createElement("div");f.className="th-wrap";
+      f.innerHTML='<button class="th-btn" id="fn-btn" title="Ganti font Jepang" aria-label="Ganti font Jepang">あ <span class="th-txt">Font</span></button><div class="th-menu fn-menu" id="fn-menu">'+FN.map(function(x){return '<button data-f="'+x[0]+'"><span class="fn-s" style="font-family:'+x[3]+'">さきあ</span><span class="fn-n">'+x[1]+'<small>'+x[2]+'</small></span></button>'}).join("")+'</div>';
+      var anchor=document.querySelector(".th-wrap");
+      tr.insertBefore(f,anchor?anchor.nextSibling:tr.firstChild);
+      f.querySelector("#fn-btn").onclick=function(e){e.stopPropagation();var t=document.getElementById("th-menu");if(t)t.classList.remove("open");document.getElementById("fn-menu").classList.toggle("open")};
+      f.querySelector("#fn-menu").onclick=function(e){var b=e.target.closest("button");if(b){fset(b.dataset.f);document.getElementById("fn-menu").classList.remove("open")}};
+      document.addEventListener("click",function(){var m=document.getElementById("fn-menu");if(m)m.classList.remove("open")});
+      var tb=document.getElementById("th-btn");if(tb)tb.addEventListener("click",function(){document.getElementById("fn-menu").classList.remove("open")},true);
+      fapply(fget());
     }
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();

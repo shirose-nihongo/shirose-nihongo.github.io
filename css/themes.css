@@ -171,3 +171,15 @@ html[data-anim-theme=off] #wx *{animation:none!important}
 
 /* Menu tema bisa di-scroll di layar pendek */
 .th-menu{max-height:calc(100vh - 90px);max-height:calc(100dvh - 90px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+
+/* ===== Pilihan font Jepang ===== */
+html[data-jpfont="kyokasho"]{--font-jp:'Klee One','Shippori Mincho B1','Noto Serif JP',serif}
+html[data-jpfont="gothic"]{--font-jp:'Zen Kaku Gothic New','Noto Sans JP',sans-serif}
+html[data-jpfont="maru"]{--font-jp:'Zen Maru Gothic','Noto Sans JP',sans-serif}
+html[data-jpfont="pena"]{--font-jp:'Zen Kurenaido','Noto Sans JP',sans-serif}
+.fn-menu{min-width:260px}
+.fn-menu .fn-s{font-size:24px;min-width:84px;white-space:nowrap;flex:none;line-height:1.2;color:var(--pink-light)}
+.fn-menu .fn-n{display:flex;flex-direction:column;font-size:14px;line-height:1.25}
+.fn-menu .fn-n small{font-size:11px;color:var(--gray)}
+html[data-theme="putih"] .fn-menu .fn-s{color:#111}
+@media (max-width:520px){.fn-menu{position:fixed;left:8px;right:8px;top:60px;min-width:0}}
