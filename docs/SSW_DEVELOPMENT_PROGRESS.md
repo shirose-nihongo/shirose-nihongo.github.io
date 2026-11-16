@@ -61,9 +61,18 @@ Statistik nyata dari repo (`python3 tools/ssw/stats.py --md`):
 - QA otomatis: 248/248 cek lulus (4 bidang × mobile+desktop), lihat `SSW_QA_REPORT.md`.
 
 ### Belum / batasan
-- Bidang belum ada: Shipbuilding, Aviation, Forestry, Wood Industry, Automobile Transportation, Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.
+- Bidang belum ada: Shipbuilding, Aviation, Forestry, Automobile Transportation, Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.
 - Construction Tutorial 5–7 belum.
 - PDF baru tidak diunduh sesi ini (jaringan sandbox dibatasi); hanya 2 PDF JICA di repo.
 - Industrial-mfg & mfg-machine-metal tanpa sumber PDF resmi (materi orisinal).
 - Belum diuji: Firestore nyata, perangkat fisik, Safari/iOS, klik dashboard guru.
 - Pencarian/filter kategori kartu gambar sebatas filter kelompok & status.
+
+### Tambahan (17 Nov 2026, siang): Wood Industry (木材産業)
+- PDF resmi 学習用テキスト 第1版 (67 hal.) diunduh lewat Claude Desktop (sandbox tetap diblokir); disimpan di `assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf`.
+- Bidang baru `wood-industry`: 4 bab, 24 subbab, kosakata, soal latihan (Shirose, bukan soal resmi), dibangun oleh `tools/ssw/wood_build.py` dari `tools/ssw/wood_content.py`. Furigana dibuat otomatis (pykakasi) dengan kamus istilah sendiri; bacaan perlu dicek ulang oleh guru.
+- QA otomatis wood-industry: 50/50 lulus (mobile + desktop).
+- Akses bidang baru default tertutup; guru perlu membukanya per siswa/kelas (sama seperti bidang lain).
+- Belum ada: kartu gambar & diagram untuk Wood Industry; soal bab 3–4 hanya 3–5 butir per subbab.
+
+Total terbaru setelah Wood Industry: 17 bidang, 82 bab, 374 subbab, 23.980 kosakata, 728 kelompok soal / 8.078 butir, 188 kartu gambar, 21 diagram.

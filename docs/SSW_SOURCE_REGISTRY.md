@@ -20,12 +20,14 @@ Diperbarui: 2026-11-17. Angka dari `tools/ssw/stats.py` (data aktual repo).
 | kaigo-jp | Materi_Kaigo.pdf hal. 204–267 (Bahasa Jepang) | modul pemberian pengelola | selesai (tanpa halaman buku bergambar) |
 | livestock | Modul Peternakan | modul pemberian pengelola | selesai; kosakata dan teks Jepang masih tipis |
 | mfg-machine-metal | Tidak ada buku (nobook): materi tulisan Shirose mesin & logam | orisinal Shirose | selesai (dasar) + 5 diagram; tipis |
+| wood-industry | 木材産業特定技能1号測定試験 学習用テキスト 第1版 (全国木材組合連合会 / 林野庁, 2025-05, 67 hal.) — https://www.rinya.maff.go.jp/j/mokusan/seisankakou/foreigner.html | PDF resmi tersedia gratis dari situs林野庁; PDF disimpan di assets/ssw/wood-industry/pdf/; isi di app = ringkasan & soal latihan ditulis ulang Shirose (bukan salinan) | selesai (4 bab, 24 subbab); belum ada kartu gambar/diagram; soal resmi tidak tersedia |
 
 ## PDF yang ada di repositori
+- `assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf`
 - `assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf`
 - `assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf`
 
 PDF modul bidang lain tidak di-commit (hanya hasil render halaman WebP di `assets/ssw/<slug>/`). Tidak ada PDF yang diunduh sesi ini: sandbox hanya mengizinkan registri paket dan GitHub, jadi situs sumber (JICA, MHLW, JASPA, dll.) tidak bisa dijangkau dari sini.
 
 ## Bidang SSW yang belum ada
-Shipbuilding, Aviation, Forestry, Wood Industry, Automobile Transportation, Railway, Linen Supply, Distribution/Warehousing, Resource Recycling — perlu sumber resmi dulu.
+Shipbuilding, Aviation, Forestry, Automobile Transportation, Railway, Linen Supply, Distribution/Warehousing, Resource Recycling — perlu sumber resmi dulu.

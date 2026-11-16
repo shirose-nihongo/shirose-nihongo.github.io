@@ -1,0 +1,532 @@
+{
+ "schema": 1,
+ "bidang": "wood-industry",
+ "source": "木材産業特定技能1号測定試験 学習用テキスト(第1版, 全国木材組合連合会, 2025-05) — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab2",
+  "no": 2,
+  "title": {
+   "id": "Produk Kayu dan Kegunaannya",
+   "jp": "{各製品|かくせいひん}とその{利用|りよう}"
+  },
+  "intro": {
+   "id": "Papan gergajian, kayu laminasi, kayu lapis, LVL, veneer hias, lantai, chip, dan precut.",
+   "jp": "{製材品|せいざいひん}、{集成材|しゅうせいざい}、{合板|ごうはん}、LVL、{ツキ板|つきいた}、フローリング、チップ、プレカットの{種類|しゅるい}と{使い方|つかいかた}を{学|まな}びます。"
+  },
+  "pages": [
+   16,
+   30
+  ],
+  "subs": [
+   {
+    "id": "b2s1",
+    "no": 1,
+    "title": {
+     "id": "Papan Gergajian (製材品)",
+     "jp": "{製材品|せいざいひん}"
+    },
+    "pages": [
+     16,
+     17
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Bentuk penampang"
+      },
+      {
+       "ul": [
+        "**板類**: sisi pendek ujung < 75 mm dan sisi panjang ≥ 4× sisi pendek.",
+        "**角類**: sisi pendek ≥ 75 mm; atau < 75 mm tetapi sisi panjang < 4× sisi pendek.",
+        "**円柱類**: ujung bulat, diameter sama sepanjang batang (hanya untuk struktur)."
+       ]
+      },
+      {
+       "h": "Golongan menurut JAS"
+      },
+      {
+       "ul": [
+        "**造作用製材**: konifer; untuk ambang, interior bangunan.",
+        "**構造用製材**: konifer; bagian struktur. **目視等級区分** (dinilai mata: mata kayu, retak, lengkung; kelas 1–3; 甲種 untuk balok lentur, 乙種 untuk tiang) dan **機械等級区分** (ukur modulus Young; E50–E150, makin besar makin kuat).",
+        "**下地用製材**: konifer; bagian tak terlihat (atap, lantai, dinding).",
+        "**広葉樹製材**: dari kayu daun lebar."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{断面|だんめん}の{形|かたち}"
+      },
+      {
+       "ul": [
+        "{板類|いたるい}は、{木口|きぐち}の{短辺|たんぺん}が75mm{未満|みまん}で、{長辺|ちょうへん}が{短辺|たんぺん}の4{倍以上|ばいいじょう}のものです。",
+        "{角類|かくるい}は、{木口|きぐち}の{短辺|たんぺん}が75mm{以上|いじょう}のものなどです。",
+        "{円柱|えんちゅう}{類|たぐ}は、{木口|きぐち}が{円形|えんけい}のものです。"
+       ]
+      },
+      {
+       "h": "JAS{規格|きかく}の{区分|くぶん}"
+      },
+      {
+       "ul": [
+        "{造作用製材|ぞうさくようせいざい}は、{針葉樹|しんようじゅ}で、{建物|たてもの}の{内装|ないそう}に{使|つか}います。",
+        "{構造用製材|こうぞうようせいざい}は、{針葉樹|しんようじゅ}で、{建物|たてもの}の{構造|こうぞう}に{使|つか}います。{目視|もくし}{等級区分|とうきゅうくぶん}と{機械|きかい}{等級区分|とうきゅうくぶん}があります。",
+        "{機械|きかい}{等級区分|とうきゅうくぶん}は、E50からE150までの6{段階|だんかい}で、{数字|すうじ}が{大|おお}きいほど{強|つよ}いです。",
+        "{下地用製材|したじようせいざい}は、{外|そと}から{見|み}えない{部分|ぶぶん}に{使|つか}います。{広葉樹|こうようじゅ}{製材|せいざい}は{広葉樹|こうようじゅ}の{製材|せいざい}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "板類: sisi pendek ujung < 75 mm dan sisi panjang ≥ 4× sisi pendek.",
+      "points": [
+       "角類: sisi pendek ≥ 75 mm; atau < 75 mm tetapi sisi panjang < 4× sisi pendek.",
+       "円柱類: ujung bulat, diameter sama sepanjang batang (hanya untuk struktur).",
+       "造作用製材: konifer; untuk ambang, interior bangunan."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 製材品, 板類, 角類, 造作用製材."
+      ]
+     },
+     "jp": {
+      "core": "{板類|いたるい}は、{木口|きぐち}の{短辺|たんぺん}が75mm{未満|みまん}で、{長辺|ちょうへん}が{短辺|たんぺん}の4{倍以上|ばいいじょう}のものです。",
+      "points": [
+       "{角類|かくるい}は、{木口|きぐち}の{短辺|たんぺん}が75mm{以上|いじょう}のものなどです。",
+       "{円柱|えんちゅう}{類|たぐ}は、{木口|きぐち}が{円形|えんけい}のものです。",
+       "{造作用製材|ぞうさくようせいざい}は、{針葉樹|しんようじゅ}で、{建物|たてもの}の{内装|ないそう}に{使|つか}います。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{製材品|せいざいひん}、{板類|いたるい}、{角類|かくるい}、{造作用製材|ぞうさくようせいざい}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s2",
+    "no": 2,
+    "title": {
+     "id": "Kayu Laminasi (集成材)",
+     "jp": "{集成材|しゅうせいざい}"
+    },
+    "pages": [
+     18,
+     20
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Dibuat dari **ラミナ** (papan) kering yang direkat → ukuran **akurat dan stabil**, kekuatan seragam karena cacat dibuang.",
+        "Ukuran dan bentuk bebas; bisa panjang, besar, bahkan melengkung (lengkung/arch).",
+        "**構造用集成材**: tiang, balok, sloof. Besar penampang: **大断面** (sisi pendek ≥ 15 cm, luas ≥ 300 cm²), **中断面**, **小断面**. Kecil/menengah untuk rumah; besar untuk gedung olahraga dan bangunan komersial.",
+        "Kekuatan ditulis **E○○○-F△△△** (E = modulus lentur, F = kekuatan lentur); makin besar angka makin kuat.",
+        "**造作用集成材**: interior dan furnitur. Yang dilapisi veneer hias disebut **化粧ばり**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{集成材|しゅうせいざい}は、{乾燥|かんそう}したラミナを{接着|せっちゃく}してつくります。{寸法|すんぽう}が{正確|せいかく}で{安定|あんてい}しています。",
+        "{節|ふし}などの{欠点|けってん}を{取り除|とりのぞ}くので、{強|つよ}さのばらつきが{少|すく}ないです。",
+        "{大|おお}きさや{形|かたち}が{自由|じゆう}で、{長|なが}いものや{曲|ま}がったものもつくれます。",
+        "{構造用集成材|こうぞうようしゅうせいざい}は、{柱|はしら}、はり、{土台|どだい}に{使|つか}います。{大断面|だいだんめん}、{中断|ちゅうだん}{面|めん}、{小|しょう}{断面|だんめん}に{分|わ}けます。",
+        "{強度|きょうど}はE○○○-F△△△で{表|あらわ}します。{数字|すうじ}が{大|おお}きいほど{強|つよ}いです。",
+        "{造作用集成材|ぞうさくようしゅうせいざい}は、{内装|ないそう}や{家具|かぐ}に{使|つか}います。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dibuat dari ラミナ (papan) kering yang direkat → ukuran akurat dan stabil, kekuatan seragam karena cacat dibuang.",
+      "points": [
+       "Ukuran dan bentuk bebas; bisa panjang, besar, bahkan melengkung (lengkung/arch).",
+       "構造用集成材: tiang, balok, sloof. Besar penampang: 大断面 (sisi pendek ≥ 15 cm, luas ≥ 300 cm²), 中断面, 小断面. Kecil/menengah untuk rumah; besar untuk gedung olahraga dan bangunan komersial.",
+       "Kekuatan ditulis E○○○-F△△△ (E = modulus lentur, F = kekuatan lentur); makin besar angka makin kuat."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 集成材, ラミナ, 構造用集成材, 造作用集成材."
+      ]
+     },
+     "jp": {
+      "core": "{集成材|しゅうせいざい}は、{乾燥|かんそう}したラミナを{接着|せっちゃく}してつくります。{寸法|すんぽう}が{正確|せいかく}で{安定|あんてい}しています。",
+      "points": [
+       "{節|ふし}などの{欠点|けってん}を{取り除|とりのぞ}くので、{強|つよ}さのばらつきが{少|すく}ないです。",
+       "{大|おお}きさや{形|かたち}が{自由|じゆう}で、{長|なが}いものや{曲|ま}がったものもつくれます。",
+       "{構造用集成材|こうぞうようしゅうせいざい}は、{柱|はしら}、はり、{土台|どだい}に{使|つか}います。{大断面|だいだんめん}、{中断|ちゅうだん}{面|めん}、{小|しょう}{断面|だんめん}に{分|わ}けます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{集成材|しゅうせいざい}、ラミナ、{構造用集成材|こうぞうようしゅうせいざい}、{造作用集成材|ぞうさくようしゅうせいざい}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s3",
+    "no": 3,
+    "title": {
+     "id": "Kayu Lapis (合板)",
+     "jp": "{合板|ごうはん}"
+    },
+    "pages": [
+     21,
+     23
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Keunggulan: permukaan luas, **stabil dimensinya** (sedikit memuai/menyusut), kuat sebagai bidang. Dipakai untuk rumah, furnitur, alat musik, interior kereta, bak truk.",
+        "**普通合板**: umum, bahan utama kayu daun lebar (lauan, シナ). Ukuran umum **910×1820 mm** = **3×6 (さぶろく)**.",
+        "**コンクリート型枠用合板**: bekisting beton; kuat dan tahan air; ada yang dilapisi agar beton tak menempel.",
+        "**構造用合板**: bagian struktur penting (dasar dinding, lantai, atap); biasanya konifer dalam negeri. Tebal dinding 9/12 mm, lantai 12–28 mm; **24 dan 28 mm = 厚物構造用合板** (balok lantai bisa dihilangkan).",
+        "JAS: uji kekuatan **1級/2級**; kemampuan rekat **特類/1類**. Biasanya dasar dinding/lantai/atap pakai **2級 特類**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{合板|ごうはん}は、{広|ひろ}い{面積|めんせき}が{得|え}られ、{寸法|すんぽう}が{安定|あんてい}していて、{面|めん}として{強|つよ}いです。",
+        "{普通合板|ふつうごうはん}は、{家具|かぐ}など{一般|いっぱん}の{用途|ようと}に{使|つか}います。サイズは910mm×1820mmで、さぶろくといいます。",
+        "コンクリート{型枠用合板|かたわくようごうはん}は、コンクリートを{流|なが}し{込|こ}む{型枠|かたわく}に{使|つか}います。",
+        "{構造用合板|こうぞうようごうはん}は、{壁|かべ}や{床|とこ}や{屋根|やね}の{下地|したじ}に{使|つか}います。{国産|こくさん}の{針葉樹|しんようじゅ}が{多|おお}いです。",
+        "{厚|あつ}さ24mmと28mmのものは{厚物|あつもの}{構造用合板|こうぞうようごうはん}といいます。",
+        "JAS{規格|きかく}では、{強度|きょうど}の{等級|とうきゅう}は1{級|きゅう}と2{級|きゅう}、{接着|せっちゃく}{性能|せいのう}は{特類|とくるい}と1{類|るい}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Keunggulan: permukaan luas, stabil dimensinya (sedikit memuai/menyusut), kuat sebagai bidang. Dipakai untuk rumah, furnitur, alat musik, interior kereta, bak truk.",
+      "points": [
+       "普通合板: umum, bahan utama kayu daun lebar (lauan, シナ). Ukuran umum 910×1820 mm = 3×6 (さぶろく).",
+       "コンクリート型枠用合板: bekisting beton; kuat dan tahan air; ada yang dilapisi agar beton tak menempel.",
+       "構造用合板: bagian struktur penting (dasar dinding, lantai, atap); biasanya konifer dalam negeri. Tebal dinding 9/12 mm, lantai 12–28 mm; 24 dan 28 mm = 厚物構造用合板 (balok lantai bisa dihilangkan)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 合板, 普通合板, 構造用合板, 型枠用合板."
+      ]
+     },
+     "jp": {
+      "core": "{合板|ごうはん}は、{広|ひろ}い{面積|めんせき}が{得|え}られ、{寸法|すんぽう}が{安定|あんてい}していて、{面|めん}として{強|つよ}いです。",
+      "points": [
+       "{普通合板|ふつうごうはん}は、{家具|かぐ}など{一般|いっぱん}の{用途|ようと}に{使|つか}います。サイズは910mm×1820mmで、さぶろくといいます。",
+       "コンクリート{型枠用合板|かたわくようごうはん}は、コンクリートを{流|なが}し{込|こ}む{型枠|かたわく}に{使|つか}います。",
+       "{構造用合板|こうぞうようごうはん}は、{壁|かべ}や{床|とこ}や{屋根|やね}の{下地|したじ}に{使|つか}います。{国産|こくさん}の{針葉樹|しんようじゅ}が{多|おお}いです。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{合板|ごうはん}、{普通合板|ふつうごうはん}、{構造用合板|こうぞうようごうはん}、{型枠用合板|かたわくようごうはん}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s4",
+    "no": 4,
+    "title": {
+     "id": "LVL (Kayu Veneer Berlapis)",
+     "jp": "LVL（{単板積層材|たんぱんせきそうざい}）"
+    },
+    "pages": [
+     23,
+     24
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**LVL** = veneer tebal **2–4 mm** ditumpuk beberapa sampai puluhan lapis, serat **sejajar**; lebih tebal dari kayu lapis, dipakai sebagai **bahan batang (軸材)**.",
+        "Kekuatan seragam; bisa panjang dan lebar.",
+        "**構造用LVL**: bagian penahan beban. **A種** = tanpa veneer menyilang atau hanya di lapisan ke-2 dari luar; **B種** = selain itu (penyilangan diatur lebih rinci → lebih stabil, bisa jadi bahan bidang).",
+        "**造作用LVL**: non-struktural; dasar furnitur, pintu, interior."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "LVLは、2〜4mmの{単板|たんぱん}を、{繊維|せんい}{方向|ほうこう}をそろえて{何層|なんそう}も{重|おも}ねたものです。",
+        "{合板|ごうはん}より{厚|あつ}く、{柱|はしら}やはりなどの{軸材料|じくざいりょう}に{使|つか}います。",
+        "{強|つよ}さのばらつきが{少|すく}なく、{長|なが}いものや{幅|はば}の{広|ひろ}いものもつくれます。",
+        "{構造|こうぞう}{用|よう}には{A種|えーしゅ}と{B種|びーしゅ}があります。{B種|びーしゅ}は{寸法安定性|すんぽうあんていせい}が{高|たか}いです。",
+        "{造作|ぞうさ}{用|よう}{単板積層材|たんぱんせきそうざい}は、{家具|かぐ}や{建具|たてぐ}の{基材|きざい}、{内装|ないそう}に{使|つか}います。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "LVL = veneer tebal 2–4 mm ditumpuk beberapa sampai puluhan lapis, serat sejajar; lebih tebal dari kayu lapis, dipakai sebagai bahan batang (軸材).",
+      "points": [
+       "Kekuatan seragam; bisa panjang dan lebar.",
+       "構造用LVL: bagian penahan beban. A種 = tanpa veneer menyilang atau hanya di lapisan ke-2 dari luar; B種 = selain itu (penyilangan diatur lebih rinci → lebih stabil, bisa jadi bahan bidang).",
+       "造作用LVL: non-struktural; dasar furnitur, pintu, interior."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 単板積層材, 単板, 軸材料, A種."
+      ]
+     },
+     "jp": {
+      "core": "LVLは、2〜4mmの{単板|たんぱん}を、{繊維|せんい}{方向|ほうこう}をそろえて{何層|なんそう}も{重|おも}ねたものです。",
+      "points": [
+       "{合板|ごうはん}より{厚|あつ}く、{柱|はしら}やはりなどの{軸材料|じくざいりょう}に{使|つか}います。",
+       "{強|つよ}さのばらつきが{少|すく}なく、{長|なが}いものや{幅|はば}の{広|ひろ}いものもつくれます。",
+       "{構造|こうぞう}{用|よう}には{A種|えーしゅ}と{B種|びーしゅ}があります。{B種|びーしゅ}は{寸法安定性|すんぽうあんていせい}が{高|たか}いです。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{単板積層材|たんぱんせきそうざい}、{単板|たんぱん}、{軸材料|じくざいりょう}、{A種|えーしゅ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s5",
+    "no": 5,
+    "title": {
+     "id": "Veneer Hias (ツキ板)",
+     "jp": "{ツキ板|つきいた}"
+    },
+    "pages": [
+     25,
+     26
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**ツキ板 (化粧単板)** = veneer tipis untuk **dekorasi permukaan** furnitur, pintu, interior. Hampir selalu dipakai dengan **ditempel** pada bahan lain.",
+        "Ditempel pada: **kayu** (lauan, MDF, papan partikel), **pelat logam** (stabil, bisa tak mudah terbakar, interior lift/kereta), **kaca** (serat jelas, tembus cahaya), **kain nirtenun/kertas Jepang** (tidak mudah sobek, fleksibel, cocok permukaan lengkung), **papan tak mudah terbakar** (untuk ruang berbatasan interior menurut UU Standar Bangunan)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{ツキ板|つきいた}は、{家具|かぐ}や{内装|ないそう}の{表面|ひょうめん}をかざる{薄|うす}い{単板|たんぱん}です。{化粧単板|けしょうたんぱん}ともいいます。",
+        "ふつうは、ほかの{材料|ざいりょう}にはりつけて{使|つか}います。",
+        "{木質|もくしつ}{材料|ざいりょう}、{金属板|きんぞくばん}、ガラス、{不織布|ふしょくふ}や{和紙|わし}、{不燃板|ふねんばん}などにはります。",
+        "{不織布|ふしょくふ}や{和紙|わし}にはると、やぶれにくく、{曲面|きょくめん}にも{使|つか}えます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "ツキ板 (化粧単板) = veneer tipis untuk dekorasi permukaan furnitur, pintu, interior. Hampir selalu dipakai dengan ditempel pada bahan lain.",
+      "points": [
+       "Ditempel pada: kayu (lauan, MDF, papan partikel), pelat logam (stabil, bisa tak mudah terbakar, interior lift/kereta), kaca (serat jelas, tembus cahaya), kain nirtenun/kertas Jepang (tidak mudah sobek, fleksibel, cocok permukaan lengkung), papan tak mudah terbakar (untuk ruang berbatasan interior menurut UU Standar Bangunan)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: ツキ板, 化粧単板, 基材, 不燃板."
+      ]
+     },
+     "jp": {
+      "core": "{ツキ板|つきいた}は、{家具|かぐ}や{内装|ないそう}の{表面|ひょうめん}をかざる{薄|うす}い{単板|たんぱん}です。{化粧単板|けしょうたんぱん}ともいいます。",
+      "points": [
+       "ふつうは、ほかの{材料|ざいりょう}にはりつけて{使|つか}います。",
+       "{木質|もくしつ}{材料|ざいりょう}、{金属板|きんぞくばん}、ガラス、{不織布|ふしょくふ}や{和紙|わし}、{不燃板|ふねんばん}などにはります。",
+       "{不織布|ふしょくふ}や{和紙|わし}にはると、やぶれにくく、{曲面|きょくめん}にも{使|つか}えます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{ツキ板|つきいた}、{化粧単板|けしょうたんぱん}、{基材|きざい}、{不燃板|ふねんばん}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s6",
+    "no": 6,
+    "title": {
+     "id": "Lantai Kayu (フローリング)",
+     "jp": "フローリング"
+    },
+    "pages": [
+     27,
+     28
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "JAS: **単層フローリング** (dasar papan gergajian, lapisan tebal 1) dan **複合フローリング** (selain itu).",
+        "**単層**: bila permukaan aus bisa **diampelas dan dicat ulang**, awet. Jenis: **フローリングボード**, **フローリングブロック**, **モザイクパーケット** (potongan kecil ≤ 22,5 cm).",
+        "**複合**: umumnya dasar **kayu lapis + MDF + veneer kayu alam atau lembar olefin**. Sedikit berubah bentuk akibat air, stabil, dan **lebih murah** → dipakai di rumah, apartemen, kantor."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "フローリングには、{単層フローリング|たんそうふろーりんぐ}と{複合フローリング|ふくごうふろーりんぐ}があります。",
+        "{単層フローリング|たんそうふろーりんぐ}は、{表面|ひょうめん}をみがいて{再塗装|さいとそう}すれば、{長|なが}く{使|つか}えます。",
+        "{複合フローリング|ふくごうふろーりんぐ}は、{合板|ごうはん}にMDFをはり、{ツキ板|つきいた}やオレフィンシートをはったものが{多|おお}いです。",
+        "{複合フローリング|ふくごうふろーりんぐ}は、{水分|すいぶん}による{変形|へんけい}が{少|すく}なく、{値段|ねだん}も{安|やす}いです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "JAS: 単層フローリング (dasar papan gergajian, lapisan tebal 1) dan 複合フローリング (selain itu).",
+      "points": [
+       "単層: bila permukaan aus bisa diampelas dan dicat ulang, awet. Jenis: フローリングボード, フローリングブロック, モザイクパーケット (potongan kecil ≤ 22,5 cm).",
+       "複合: umumnya dasar kayu lapis + MDF + veneer kayu alam atau lembar olefin. Sedikit berubah bentuk akibat air, stabil, dan lebih murah → dipakai di rumah, apartemen, kantor."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 単層フローリング, 複合フローリング, モザイクパーケット, オレフィンシート."
+      ]
+     },
+     "jp": {
+      "core": "フローリングには、{単層フローリング|たんそうふろーりんぐ}と{複合フローリング|ふくごうふろーりんぐ}があります。",
+      "points": [
+       "{単層フローリング|たんそうふろーりんぐ}は、{表面|ひょうめん}をみがいて{再塗装|さいとそう}すれば、{長|なが}く{使|つか}えます。",
+       "{複合フローリング|ふくごうふろーりんぐ}は、{合板|ごうはん}にMDFをはり、{ツキ板|つきいた}やオレフィンシートをはったものが{多|おお}いです。",
+       "{複合フローリング|ふくごうふろーりんぐ}は、{水分|すいぶん}による{変形|へんけい}が{少|すく}なく、{値段|ねだん}も{安|やす}いです。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{単層フローリング|たんそうふろーりんぐ}、{複合フローリング|ふくごうふろーりんぐ}、モザイクパーケット、オレフィンシート。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s7",
+    "no": 7,
+    "title": {
+     "id": "Chip Kayu (チップ)",
+     "jp": "{木材チップ|もくざいちっぷ}"
+    },
+    "pages": [
+     29,
+     29
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Kegunaan tergantung bahan: dari kayu bulat/sisa pabrik/sisa hutan → **bahan kertas, bahan bakar**; dari kayu bongkaran/limbah → **bahan bakar boiler, bahan papan kayu**.",
+        "**製紙用**: bahan baku pulp. **ボード用**: bahan papan serat dan papan partikel.",
+        "**燃料用**: pembangkit listrik **biomassa kayu**; permintaan naik karena energi terbarukan.",
+        "Lain-lain: mulsa taman, jalan setapak taman, lintasan latihan kuda pacu (empuk)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{木材チップ|もくざいちっぷ}の{用途|ようと}は、{原料|げんりょう}によってちがいます。",
+        "{製紙|せいし}{用|よう}は、{紙|かみ}のパルプの{原料|げんりょう}になります。",
+        "ボード{用|よう}は、{繊維|せんい}{板|いた}やパーティクルボードの{原料|げんりょう}になります。",
+        "{燃料|ねんりょう}{用|よう}は、{木質|もくしつ}{バイオマス発電|ばいおますはつでん}{所|ところ}の{燃料|ねんりょう}になります。",
+        "{庭|にわ}のマルチ{材|ざい}や{公園|こうえん}の{道|みち}にも{使|つか}います。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kegunaan tergantung bahan: dari kayu bulat/sisa pabrik/sisa hutan → bahan kertas, bahan bakar; dari kayu bongkaran/limbah → bahan bakar boiler, bahan papan kayu.",
+      "points": [
+       "製紙用: bahan baku pulp. ボード用: bahan papan serat dan papan partikel.",
+       "燃料用: pembangkit listrik biomassa kayu; permintaan naik karena energi terbarukan.",
+       "Lain-lain: mulsa taman, jalan setapak taman, lintasan latihan kuda pacu (empuk)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 木材チップ, 工場残材, 林地残材, バイオマス発電."
+      ]
+     },
+     "jp": {
+      "core": "{木材チップ|もくざいちっぷ}の{用途|ようと}は、{原料|げんりょう}によってちがいます。",
+      "points": [
+       "{製紙|せいし}{用|よう}は、{紙|かみ}のパルプの{原料|げんりょう}になります。",
+       "ボード{用|よう}は、{繊維|せんい}{板|いた}やパーティクルボードの{原料|げんりょう}になります。",
+       "{燃料|ねんりょう}{用|よう}は、{木質|もくしつ}{バイオマス発電|ばいおますはつでん}{所|ところ}の{燃料|ねんりょう}になります。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{木材チップ|もくざいちっぷ}、{工場残材|こうじょうざんざい}、{林地残材|りんちざんざい}、{バイオマス発電|ばいおますはつでん}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s8",
+    "no": 8,
+    "title": {
+     "id": "Precut (プレカット)",
+     "jp": "プレカット"
+    },
+    "pages": [
+     30,
+     30
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**プレカット**: memotong dan membuat **継手・仕口** di **pabrik** dengan mesin sebelum dibawa ke lokasi bangunan.",
+        "Informasi desain bangunan diubah menjadi data pengerjaan dan diproses **mesin kontrol komputer**.",
+        "Keuntungan: komponen **presisi dan berkualitas stabil**, **waktu pembangunan lebih singkat**, **limbah kayu di lokasi berkurang**.",
+        "Terutama dipakai pada **木造軸組工法** (rumah rangka kayu)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "プレカットは、{部材|ぶざい}の{切断|せつだん}や{継手|つぎて}・{仕口|しぐち}の{加工|かこう}を、{工場|こうじょう}で{機械|きかい}を{使|つか}ってあらかじめ{行|おこな}うことです。",
+        "コンピュータで{制御|せいぎょ}した{機械|きかい}で、{精度|せいど}の{高|たか}い{部材|ぶざい}がつくれます。",
+        "{建築現場|けんちくげんば}の{工事|こうじ}{期間|きかん}が{短|みじか}くなり、{木|き}くずなどのごみも{減|へ}ります。",
+        "{木造軸組工法|もくぞうじくぐみこうほう}に{多|おお}く{使|つか}われます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "プレカット: memotong dan membuat 継手・仕口 di pabrik dengan mesin sebelum dibawa ke lokasi bangunan.",
+      "points": [
+       "Informasi desain bangunan diubah menjadi data pengerjaan dan diproses mesin kontrol komputer.",
+       "Keuntungan: komponen presisi dan berkualitas stabil, waktu pembangunan lebih singkat, limbah kayu di lokasi berkurang.",
+       "Terutama dipakai pada 木造軸組工法 (rumah rangka kayu)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: プレカット, 木造軸組工法, 工期, 部材."
+      ]
+     },
+     "jp": {
+      "core": "プレカットは、{部材|ぶざい}の{切断|せつだん}や{継手|つぎて}・{仕口|しぐち}の{加工|かこう}を、{工場|こうじょう}で{機械|きかい}を{使|つか}ってあらかじめ{行|おこな}うことです。",
+      "points": [
+       "コンピュータで{制御|せいぎょ}した{機械|きかい}で、{精度|せいど}の{高|たか}い{部材|ぶざい}がつくれます。",
+       "{建築現場|けんちくげんば}の{工事|こうじ}{期間|きかん}が{短|みじか}くなり、{木|き}くずなどのごみも{減|へ}ります。",
+       "{木造軸組工法|もくぞうじくぐみこうほう}に{多|おお}く{使|つか}われます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：プレカット、{木造軸組工法|もくぞうじくぐみこうほう}、{工期|こうき}、{部材|ぶざい}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

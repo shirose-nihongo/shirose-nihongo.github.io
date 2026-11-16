@@ -77,6 +77,7 @@ export const DEFAULT_BIDANG = [
   { slug: "auto-maintenance", nama: "Auto Maintenance (Perawatan Mobil)", jp: "自動車整備", aktif: true, urut: 10, tema: "automobile", hasContent: true },
   { slug: "industrial-mfg", nama: "Industrial Manufacturing (Dasar Pabrik)", jp: "工業製品製造業", aktif: true, urut: 11, tema: "generic", hasContent: true },
   { slug: "mfg-machine-metal", nama: "Machine Metal (Mesin & Logam)", jp: "機械金属加工", label: "⚙️ Mesin & Logam ›", induk: "industrial-mfg", aktif: true, urut: 11.1, tema: "generic", hasContent: true },
+  { slug: "wood-industry", nama: "Wood Industry (Industri Kayu)", jp: "木材産業", aktif: true, urut: 12, tema: "generic", hasContent: true },
 ];
 
 let _bidang = null;
@@ -340,6 +341,7 @@ export const EXAM_SPEC = {
   "fishery": { n: 30, img: 0, mb: 12, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
   "auto-maintenance": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Info resmi (MLIT): ujian tulis 30 soal ○× / 60 menit, lulus ≥65%; ujian praktik 3 tugas / 20 menit, lulus ≥60%." },
   "industrial-mfg": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Materi dasar bersama 工業製品製造業: keselamatan, mutu, pengukuran, bahan. Ujian resmi per kategori (MOJ): tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
+  "wood-industry": { n: 35, img: 0, mb: 32, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Format resmi 木材産業特定技能1号測定試験: CBT, 60 menit, 35 soal (tulis 32 soal ○× + praktik 3 soal pertimbangan); huruf kanji berfurigana." },
   "mfg-machine-metal": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Kategori 機械金属加工 (MOJ): ujian tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
 };
 /** 10 ujian penuh = sampel deterministik dari seluruh bank soal; komposisi mengikuti ujian resmi bidangnya. */

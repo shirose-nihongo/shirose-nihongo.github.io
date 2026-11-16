@@ -1,0 +1,3032 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "bab1-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 1",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Sekitar 2/3 wilayah Jepang adalah hutan.”",
+       "jp": "○か×か。「{日本|にっぽん}の{国土|こくど}の{約|やく}3{分|ふん}の2は{森林|しんりん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: sekitar 2/3.",
+       "jp": "{約|やく}3{分|ふん}の2です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu teras (心材) dekat pusat batang dan berwarna pekat.”",
+       "jp": "○か×か。「{心材|しんざい}は{丸太|まるた}の{中心|ちゅうしん}に{近|ちか}く、{色|いろ}がこい{部分|ぶぶん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{心材|しんざい}はこい{色|いろ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika berisiko terlilit mata gergaji, pakailah sarung tangan.”",
+       "jp": "○か×か。「のこ{歯|は}に{巻き込|まきこ}まれるおそれがあるときは、{手袋|てぶくろ}を{着|つ}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan pakai sarung tangan.",
+       "jp": "{手袋|てぶくろ}は{着|つ}けません。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "sub": "b1s1",
+    "title": {
+     "id": "Subbab 1.1 · Hutan dan Industri Kayu Jepang",
+     "jp": "1.1 {日本|にっぽん}の{森林|しんりん}と{木材|もくざい}{産業|さんぎょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Sekitar 2/3 wilayah Jepang adalah hutan.”",
+       "jp": "○か×か。「{日本|にっぽん}の{国土|こくど}の{約|やく}3{分|ふん}の2は{森林|しんりん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: sekitar 2/3.",
+       "jp": "{約|やく}3{分|ふん}の2です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Mengolah kayu membutuhkan energi lebih banyak daripada besi atau beton.”",
+       "jp": "○か×か。「{木材|もくざい}を{使|つか}うと、{鉄|てつ}やコンクリートより{多|おお}くのエネルギーが{必要|ひつよう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: kayu butuh energi lebih sedikit.",
+       "jp": "{木材|もくざい}のほうが{少|すく}ないです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Fungsi hutan yang menopang kehidupan (cegah longsor, simpan air, dll.) disebut…",
+       "jp": "{森林|しんりん}のさまざまなはたらきを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "多面的機能",
+        "jp": "{多面的機能|ためんてききのう}"
+       },
+       {
+        "id": "継手",
+        "jp": "{継手|つぎて}"
+       },
+       {
+        "id": "人工林",
+        "jp": "{人工林|じんこうりん}"
+       },
+       {
+        "id": "国産材",
+        "jp": "{国産材|こくさんざい}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "多面的機能.",
+       "jp": "{多面的機能|ためんてききのう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Persentase kayu bulat dalam negeri di pabrik kayu lapis saat ini sekitar…",
+       "jp": "{合板|ごうはん}{工場|こうじょう}の{原木|げんぼく}で、{国産材|こくさんざい}は{今|いま}、{約|やく}どれくらいですか。"
+      },
+      "opts": [
+       {
+        "id": "±50%",
+        "jp": "{約|やく}5{割|わり}"
+       },
+       {
+        "id": "±90%",
+        "jp": "{約|やく}9{割|わり}"
+       },
+       {
+        "id": "±10%",
+        "jp": "{約|やく}1{割|わり}"
+       },
+       {
+        "id": "±30%",
+        "jp": "{約|やく}3{割|わり}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sekitar 90%.",
+       "jp": "{約|やく}9{割|わり}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "sub": "b1s2",
+    "title": {
+     "id": "Subbab 1.2 · Dasar-dasar Sifat Kayu",
+     "jp": "1.2 {木材|もくざい}の{基礎知識|きそちしき}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu teras (心材) dekat pusat batang dan berwarna pekat.”",
+       "jp": "○か×か。「{心材|しんざい}は{丸太|まるた}の{中心|ちゅうしん}に{近|ちか}く、{色|いろ}がこい{部分|ぶぶん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{心材|しんざい}はこい{色|いろ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kadar air keseimbangan di Jepang rata-rata sekitar 50%.”",
+       "jp": "○か×か。「{日本|にっぽん}の{平衡|へいこう}{含水率|がんすいりつ}は、{平均|へいきん}で{約|やく}50%です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: sekitar 15%.",
+       "jp": "{約|やく}15%です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Sisi kulit pada papan penampang tangensial disebut…",
+       "jp": "{板目|いため}{面|めん}で、{樹皮|じゅひ}{側|がわ}の{面|めん}を{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "元口",
+        "jp": "{元口|もとくち}"
+       },
+       {
+        "id": "木裏",
+        "jp": "{木裏|きうら}"
+       },
+       {
+        "id": "末口",
+        "jp": "{末口|すえぐち}"
+       },
+       {
+        "id": "木表",
+        "jp": "{木表|きおもて}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "木表 = sisi kulit.",
+       "jp": "{木表|きおもて}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Kekuatan tekan dan tarik kayu paling besar pada arah…",
+       "jp": "{圧縮|あっしゅく}・{引張|ひっぱり}の{強|つよ}さが{最|もっと}も{大|おお}きい{方向|ほうこう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Tegak lurus serat",
+        "jp": "{繊維|せんい}と{直角|ちょっかく}"
+       },
+       {
+        "id": "Arah singgung cincin",
+        "jp": "{接線方向|せっせんほうこう}"
+       },
+       {
+        "id": "Arah jari-jari",
+        "jp": "{半径|はんけい}{方向|ほうこう}"
+       },
+       {
+        "id": "Searah serat",
+        "jp": "{繊維|せんい}{方向|ほうこう}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Searah serat paling kuat.",
+       "jp": "{繊維|せんい}{方向|ほうこう}がいちばん{強|つよ}いです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s3-q",
+    "sub": "b1s3",
+    "title": {
+     "id": "Subbab 1.3 · Keselamatan Kerja",
+     "jp": "1.3 {作業|さぎょう}{安全|あんぜん}の{基礎知識|きそちしき}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika berisiko terlilit mata gergaji, pakailah sarung tangan.”",
+       "jp": "○か×か。「のこ{歯|は}に{巻き込|まきこ}まれるおそれがあるときは、{手袋|てぶくろ}を{着|つ}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan pakai sarung tangan.",
+       "jp": "{手袋|てぶくろ}は{着|つ}けません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat memeriksa mesin, matikan listrik dan pastikan mesin berhenti total.”",
+       "jp": "○か×か。「{機械|きかい}を{点検|てんけん}するときは、{電源|でんげん}をOFFにして、{機械|きかい}が{完全|かんぜん}に{止|と}まったことを{確認|かくにん}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{電源|でんげん}をOFFにします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Alat pengaman boleh dilepas bila mengganggu.”",
+       "jp": "○か×か。「{安全装置|あんぜんそうち}はじゃまなときは{取り外|とりはず}してもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: dilarang dilepas.",
+       "jp": "{取り外|とりはず}してはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Desain yang menganggap manusia bisa salah (misal penutup bagian berputar) disebut…",
+       "jp": "「{人|にん}は{間違|まちが}える」と{考|かんが}えてつくる{安全|あんぜん}の{考え方|かんがえかた}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "リスクアセスメント",
+        "jp": "リスクアセスメント"
+       },
+       {
+        "id": "4S活動",
+        "jp": "{4S活動|よんえすかつどう}"
+       },
+       {
+        "id": "フール・プルーフ",
+        "jp": "フール・プルーフ"
+       },
+       {
+        "id": "フェール・セーフ",
+        "jp": "フェール・セーフ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Fool proof.",
+       "jp": "フール・プルーフです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Urutan 4S yang benar adalah…",
+       "jp": "4Sの{正|ただ}しい{組み合|くみあ}わせはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "点検・修理・保管・出荷",
+        "jp": "{点検|てんけん}・{修理|しゅうり}・{保管|ほかん}・{出荷|しゅっか}"
+       },
+       {
+        "id": "整理・整頓・清潔・清掃",
+        "jp": "{整理|せいり}・{整頓|せいとん}・{清潔|せいけつ}・{清掃|せいそう}"
+       },
+       {
+        "id": "整理・整頓・清算・清書",
+        "jp": "{整理|せいり}・{整頓|せいとん}・{清算|せいさん}・{清書|せいしょ}"
+       },
+       {
+        "id": "安全・整備・清潔・速度",
+        "jp": "{安全|あんぜん}・{整備|せいび}・{清潔|せいけつ}・{速度|そくど}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "整理・整頓・清潔・清掃.",
+       "jp": "{整理|せいり}・{整頓|せいとん}・{清潔|せいけつ}・{清掃|せいそう}です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 2",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu struktural kelas mesin dibagi 6 tingkat, E50 sampai E150.”",
+       "jp": "○か×か。「{機械|きかい}{等級区分|とうきゅうくぶん}{構造用製材|こうぞうようせいざい}は、E50からE150の6{段階|だんかい}に{分|わ}けられます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "6{段階|だんかい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Glulam dibuat dengan membuang cacat seperti mata kayu, sehingga kekuatannya seragam.”",
+       "jp": "○か×か。「{集成材|しゅうせいざい}は、{節|ふし}などの{欠点|けってん}を{取り除|とりのぞ}いてつくるので、{強|つよ}さのばらつきが{少|すく}ないです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ばらつきが{少|すく}ないです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Ukuran “saburoku” adalah 910 mm × 1820 mm.”",
+       "jp": "○か×か。「さぶろくサイズは、910 mm×1820 mmです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "910×1820です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “LVL dibuat dengan menumpuk veneer terutama dengan arah serat sejajar.”",
+       "jp": "○か×か。「LVLは、{主|おも}に{繊維|せんい}{方向|ほうこう}が{平行|へいこう}になるように{単板|たんぱん}を{重|おも}ねてつくります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{平行|へいこう}にそろえます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Veneer hias jarang dipakai apa adanya; biasanya ditempel pada bahan lain.”",
+       "jp": "○か×か。「{ツキ板|つきいた}は、そのままではあまり{使|つか}われず、ほかの{材料|ざいりょう}にはりつけて{使|つか}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ほかの{材料|ざいりょう}にはります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lantai kayu tunggal tetap awet meski permukaannya aus, bila diampelas dan dicat ulang.”",
+       "jp": "○か×か。「{単層フローリング|たんそうふろーりんぐ}は、{表面|ひょうめん}が{古|ふる}くなっても、みがいて{再塗装|さいとそう}すれば{長|なが}く{使|つか}えます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{再塗装|さいとそう}できます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Chip bahan bakar dipakai di pembangkit listrik biomassa kayu.”",
+       "jp": "○か×か。「{燃料|ねんりょう}{用|よう}チップは、{木質|もくしつ}{バイオマス発電|ばいおますはつでん}{所|ところ}で{使|つか}われます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{発電|はつでん}に{使|つか}います。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Salah satu keuntungan precut adalah masa pengerjaan di lokasi bangunan lebih singkat.”",
+       "jp": "○か×か。「プレカットのメリットの{一|ひと}つは、{建築現場|けんちくげんば}の{工期|こうき}を{短|みじか}くできることです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{工期|こうき}が{短|みじか}くなります。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "sub": "b2s1",
+    "title": {
+     "id": "Subbab 2.1 · Papan Gergajian (製材品)",
+     "jp": "2.1 {製材品|せいざいひん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu struktural kelas mesin dibagi 6 tingkat, E50 sampai E150.”",
+       "jp": "○か×か。「{機械|きかい}{等級区分|とうきゅうくぶん}{構造用製材|こうぞうようせいざい}は、E50からE150の6{段階|だんかい}に{分|わ}けられます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "6{段階|だんかい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu gergajian untuk dasar hanya dibuat dari kayu daun lebar.”",
+       "jp": "○か×か。「{下地用製材|したじようせいざい}は、{広葉樹|こうようじゅ}だけを{材料|ざいりょう}とします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: konifer.",
+       "jp": "{針葉樹|しんようじゅ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pada E50–E150, makin besar angka berarti…",
+       "jp": "E50〜E150では、{数字|すうじ}が{大|おお}きいほどどうなりますか。"
+      },
+      "opts": [
+       {
+        "id": "Kekuatan lentur makin tinggi",
+        "jp": "{曲|ま}げ{強度|きょうど}が{高|たか}い"
+       },
+       {
+        "id": "Makin murah",
+        "jp": "{安|やす}い"
+       },
+       {
+        "id": "Makin ringan",
+        "jp": "{軽|かる}い"
+       },
+       {
+        "id": "Makin banyak mata kayu",
+        "jp": "{節|ふし}が{多|おお}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Makin tinggi.",
+       "jp": "{曲|ま}げ{強度|きょうど}が{高|たか}くなります。"
+      }
+     },
+     {
+      "q": {
+       "id": "Papan gergajian untuk bagian tak terlihat (atap/lantai/dinding) disebut…",
+       "jp": "{屋根|やね}・{床|とこ}・{壁|かべ}の{外|そと}から{見|み}えない{部分|ぶぶん}に{使|つか}う{製材|せいざい}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "下地用製材",
+        "jp": "{下地用製材|したじようせいざい}"
+       },
+       {
+        "id": "広葉樹製材",
+        "jp": "{広葉樹|こうようじゅ}{製材|せいざい}"
+       },
+       {
+        "id": "円柱類",
+        "jp": "{円柱|えんちゅう}{類|るい}"
+       },
+       {
+        "id": "造作用製材",
+        "jp": "{造作用製材|ぞうさくようせいざい}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "下地用製材.",
+       "jp": "{下地用製材|したじようせいざい}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s2-q",
+    "sub": "b2s2",
+    "title": {
+     "id": "Subbab 2.2 · Kayu Laminasi (集成材)",
+     "jp": "2.2 {集成材|しゅうせいざい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Glulam dibuat dengan membuang cacat seperti mata kayu, sehingga kekuatannya seragam.”",
+       "jp": "○か×か。「{集成材|しゅうせいざい}は、{節|ふし}などの{欠点|けってん}を{取り除|とりのぞ}いてつくるので、{強|つよ}さのばらつきが{少|すく}ないです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ばらつきが{少|すく}ないです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Glulam tidak bisa dibuat berbentuk melengkung.”",
+       "jp": "○か×か。「{集成材|しゅうせいざい}は、{曲|ま}がった{形|かたち}にはつくれません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: bisa melengkung.",
+       "jp": "{曲|ま}がった{形|かたち}もつくれます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Papan penyusun kayu laminasi disebut…",
+       "jp": "{集成材|しゅうせいざい}をつくる{板|いた}を{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "フリッチ",
+        "jp": "フリッチ"
+       },
+       {
+        "id": "単板",
+        "jp": "{単板|たんぱん}"
+       },
+       {
+        "id": "チップ",
+        "jp": "チップ"
+       },
+       {
+        "id": "ラミナ",
+        "jp": "ラミナ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ラミナ.",
+       "jp": "ラミナです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada tulisan E○○○-F△△△, huruf F menunjukkan…",
+       "jp": "E○○○-F△△△のFは{何|なに}を{表|あらわ}しますか。"
+      },
+      "opts": [
+       {
+        "id": "Modulus lentur",
+        "jp": "{曲|ま}げ{ヤング係数|やんぐけいすう}"
+       },
+       {
+        "id": "Kekuatan lentur",
+        "jp": "{曲|ま}げ{強|つよ}さ"
+       },
+       {
+        "id": "Kadar air",
+        "jp": "{含水率|がんすいりつ}"
+       },
+       {
+        "id": "Ketebalan",
+        "jp": "{厚|あつ}さ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "F = kekuatan lentur.",
+       "jp": "Fは{曲|ま}げ{強|つよ}さです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s3-q",
+    "sub": "b2s3",
+    "title": {
+     "id": "Subbab 2.3 · Kayu Lapis (合板)",
+     "jp": "2.3 {合板|ごうはん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Ukuran “saburoku” adalah 910 mm × 1820 mm.”",
+       "jp": "○か×か。「さぶろくサイズは、910 mm×1820 mmです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "910×1820です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu lapis struktural dibuat terutama dari kayu daun lebar impor saja.”",
+       "jp": "○か×か。「{構造用合板|こうぞうようごうはん}は、{主|おも}に{広葉樹|こうようじゅ}の{輸入材|ゆにゅうざい}だけで{作|つく}られます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: banyak konifer dalam negeri.",
+       "jp": "{国産|こくさん}{針葉樹|しんようじゅ}が{多|おお}いです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Kayu lapis tebal 24 mm dan 28 mm disebut…",
+       "jp": "{厚|あつ}さ24mmと28mmの{構造用合板|こうぞうようごうはん}を{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "普通合板",
+        "jp": "{普通合板|ふつうごうはん}"
+       },
+       {
+        "id": "型枠用合板",
+        "jp": "{型枠用合板|かたわくようごうはん}"
+       },
+       {
+        "id": "薄物合板",
+        "jp": "{薄物|うすもの}{合板|ごうはん}"
+       },
+       {
+        "id": "厚物構造用合板",
+        "jp": "{厚物|あつもの}{構造用合板|こうぞうようごうはん}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Karena balok lantai bisa dihilangkan.",
+       "jp": "{根太|ねだ}が{省略|しょうりゃく}できます。"
+      }
+     },
+     {
+      "q": {
+       "id": "Kayu lapis untuk dasar dinding/lantai/atap biasanya berkelas…",
+       "jp": "{壁|かべ}・{床|とこ}・{屋根|やね}の{下地|したじ}に{一般的|いっぱんてき}に{使|つか}う{等級|とうきゅう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "2級 特類",
+        "jp": "2{級|きゅう}の{特類|とくるい}"
+       },
+       {
+        "id": "1級 1類",
+        "jp": "1{級|きゅう}の1{類|るい}"
+       },
+       {
+        "id": "特級 2類",
+        "jp": "{特級|とっきゅう}の2{類|るい}"
+       },
+       {
+        "id": "3級 特類",
+        "jp": "3{級|きゅう}の{特類|とくるい}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "2級 特類.",
+       "jp": "2{級|きゅう}の{特類|とくるい}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s4-q",
+    "sub": "b2s4",
+    "title": {
+     "id": "Subbab 2.4 · LVL (Kayu Veneer Berlapis)",
+     "jp": "2.4 LVL（{単板積層材|たんぱんせきそうざい}）"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “LVL dibuat dengan menumpuk veneer terutama dengan arah serat sejajar.”",
+       "jp": "○か×か。「LVLは、{主|おも}に{繊維|せんい}{方向|ほうこう}が{平行|へいこう}になるように{単板|たんぱん}を{重|おも}ねてつくります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{平行|へいこう}にそろえます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tebal veneer untuk LVL sekitar 20–40 mm.”",
+       "jp": "○か×か。「LVLに{使|つか}う{単板|たんぱん}の{厚|あつ}さは、およそ20〜40mmです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: 2–4 mm.",
+       "jp": "2〜4mmです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "LVL terutama dipakai sebagai…",
+       "jp": "LVLは{主|おも}に{何|なん}として{使|つか}われますか。"
+      },
+      "opts": [
+       {
+        "id": "Pelapis permukaan",
+        "jp": "{表面|ひょうめん}の{化粧|けしょう}"
+       },
+       {
+        "id": "Bahan batang (軸材料)",
+        "jp": "{軸材料|じくざいりょう}"
+       },
+       {
+        "id": "Bahan kertas",
+        "jp": "{紙|かみ}の{原料|げんりょう}"
+       },
+       {
+        "id": "Bahan bakar",
+        "jp": "{燃料|ねんりょう}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "軸材料.",
+       "jp": "{軸材料|じくざいりょう}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s5-q",
+    "sub": "b2s5",
+    "title": {
+     "id": "Subbab 2.5 · Veneer Hias (ツキ板)",
+     "jp": "2.5 {ツキ板|つきいた}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Veneer hias jarang dipakai apa adanya; biasanya ditempel pada bahan lain.”",
+       "jp": "○か×か。「{ツキ板|つきいた}は、そのままではあまり{使|つか}われず、ほかの{材料|ざいりょう}にはりつけて{使|つか}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ほかの{材料|ざいりょう}にはります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Veneer yang ditempel pada kain nirtenun atau kertas Jepang jadi…",
+       "jp": "{ツキ板|つきいた}を{不織布|ふしょくふ}や{和紙|わし}にはると、どうなりますか。"
+      },
+      "opts": [
+       {
+        "id": "Berat sekali",
+        "jp": "とても{重|おも}い"
+       },
+       {
+        "id": "Tidak bisa ditekuk",
+        "jp": "{曲|ま}げられない"
+       },
+       {
+        "id": "Mudah terbakar",
+        "jp": "{燃|も}えやすい"
+       },
+       {
+        "id": "Tidak mudah sobek, cocok untuk lengkung",
+        "jp": "やぶれにくく、{曲面|きょくめん}に{向|む}いている"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Fleksibel dan kuat.",
+       "jp": "やぶれにくいです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s6-q",
+    "sub": "b2s6",
+    "title": {
+     "id": "Subbab 2.6 · Lantai Kayu (フローリング)",
+     "jp": "2.6 フローリング"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Lantai kayu tunggal tetap awet meski permukaannya aus, bila diampelas dan dicat ulang.”",
+       "jp": "○か×か。「{単層フローリング|たんそうふろーりんぐ}は、{表面|ひょうめん}が{古|ふる}くなっても、みがいて{再塗装|さいとそう}すれば{長|なが}く{使|つか}えます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{再塗装|さいとそう}できます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Dasar lantai komposit yang umum di Jepang adalah…",
+       "jp": "{日本|にっぽん}で{多|おお}くつくられる{複合フローリング|ふくごうふろーりんぐ}の{基材|きざい}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Kaca",
+        "jp": "ガラス"
+       },
+       {
+        "id": "Logam",
+        "jp": "{金属板|きんぞくばん}"
+       },
+       {
+        "id": "Batu",
+        "jp": "{石|いし}"
+       },
+       {
+        "id": "Kayu lapis",
+        "jp": "{合板|ごうはん}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Kayu lapis + MDF + veneer.",
+       "jp": "{合板|ごうはん}が{基材|きざい}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s7-q",
+    "sub": "b2s7",
+    "title": {
+     "id": "Subbab 2.7 · Chip Kayu (チップ)",
+     "jp": "2.7 {木材チップ|もくざいちっぷ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Chip bahan bakar dipakai di pembangkit listrik biomassa kayu.”",
+       "jp": "○か×か。「{燃料|ねんりょう}{用|よう}チップは、{木質|もくしつ}{バイオマス発電|ばいおますはつでん}{所|ところ}で{使|つか}われます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{発電|はつでん}に{使|つか}います。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Chip untuk bahan pulp kertas disebut keperluan…",
+       "jp": "{紙|かみ}のパルプの{原料|げんりょう}になるチップの{用途|ようと}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "燃料用",
+        "jp": "{燃料|ねんりょう}{用|よう}"
+       },
+       {
+        "id": "庭用",
+        "jp": "{庭|にわ}{用|よう}"
+       },
+       {
+        "id": "ボード用",
+        "jp": "ボード{用|よう}"
+       },
+       {
+        "id": "製紙用",
+        "jp": "{製紙|せいし}{用|よう}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "製紙用.",
+       "jp": "{製紙|せいし}{用|よう}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s8-q",
+    "sub": "b2s8",
+    "title": {
+     "id": "Subbab 2.8 · Precut (プレカット)",
+     "jp": "2.8 プレカット"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Salah satu keuntungan precut adalah masa pengerjaan di lokasi bangunan lebih singkat.”",
+       "jp": "○か×か。「プレカットのメリットの{一|ひと}つは、{建築現場|けんちくげんば}の{工期|こうき}を{短|みじか}くできることです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{工期|こうき}が{短|みじか}くなります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Precut paling sering dipakai pada metode…",
+       "jp": "プレカットは{主|おも}にどの{工法|こうほう}に{使|つか}われますか。"
+      },
+      "opts": [
+       {
+        "id": "木造軸組工法",
+        "jp": "{木造軸組工法|もくぞうじくぐみこうほう}"
+       },
+       {
+        "id": "鉄骨造",
+        "jp": "{鉄骨|てっこつ}{造|ぞう}"
+       },
+       {
+        "id": "テント",
+        "jp": "テント"
+       },
+       {
+        "id": "コンクリート造",
+        "jp": "コンクリート{造|ぞう}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Rangka kayu.",
+       "jp": "{木造軸組工法|もくぞうじくぐみこうほう}です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab3": [
+   {
+    "id": "bab3-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 3",
+     "jp": "{第|だい}3{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengupasan kulit juga dilakukan agar mata gergaji tidak rusak oleh kulit dan tanah.”",
+       "jp": "○か×か。「はく{皮|ひ}は、のこ{歯|は}が{樹皮|じゅひ}や{土砂|どしゃ}で{傷|いた}むのを{防|ふせ}ぐためにも{行|おこな}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "のこ{歯|は}を{守|まも}ります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kadar air lamina untuk glulam harus 15% atau kurang.”",
+       "jp": "○か×か。「{集成材|しゅうせいざい}に{使|つか}うラミナの{含水率|がんすいりつ}は、15%{以下|いか}にする{必要|ひつよう}があります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "15%{以下|いか}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu lapis dibuat dengan menumpuk veneer sehingga arah seratnya saling tegak lurus.”",
+       "jp": "○か×か。「{合板|ごうはん}は、{繊維|せんい}{方向|ほうこう}が{直角|ちょっかく}になるように{単板|たんぱん}を{重|おも}ねてはり{合|あ}わせます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{直角|ちょっかく}にクロスさせます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Veneer hias di Jepang umumnya setebal sekitar 0,2 mm.”",
+       "jp": "○か×か。「{日本|にっぽん}の{ツキ板|つきいた}は、{一般的|いっぱんてき}に0.2mm{程度|ていど}の{厚|あつ}さが{主流|しゅりゅう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "0.2mmが{主流|しゅりゅう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sisi lantai kayu dikerjakan “sane” (lidah-alur) untuk menyambung antarpapan.”",
+       "jp": "○か×か。「フローリングの{側面|そくめん}には、{板|いた}{同士|どうし}をつなぐために「{実|み}」の{加工|かこう}をします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{実|み}で{連結|れんけつ}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Chip bahan bakar umumnya dibuat tanpa mengupas kulit.”",
+       "jp": "○か×か。「{燃料|ねんりょう}{用|よう}チップは、{一般|いっぱん}に{樹皮|じゅひ}を{取|と}らずにチップにします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{樹皮|じゅひ}をつけたままです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Mesin precut dikontrol komputer dan memproses dengan galat 1 mm atau kurang.”",
+       "jp": "○か×か。「プレカット{加工|かこう}{機械|きかい}は、コンピュータ{制御|せいぎょ}で、{誤差|ごさ}1mm{以下|いか}の{精度|せいど}で{加工|かこう}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{誤差|ごさ}1mm{以下|いか}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "sub": "b3s1",
+    "title": {
+     "id": "Subbab 3.1 · Proses Penggergajian (製材)",
+     "jp": "3.1 {製材|せいざい}の{工程|こうてい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengupasan kulit juga dilakukan agar mata gergaji tidak rusak oleh kulit dan tanah.”",
+       "jp": "○か×か。「はく{皮|ひ}は、のこ{歯|は}が{樹皮|じゅひ}や{土砂|どしゃ}で{傷|いた}むのを{防|ふせ}ぐためにも{行|おこな}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "のこ{歯|は}を{守|まも}ります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada pengeringan buatan, yang paling umum adalah mesin pengering alami.”",
+       "jp": "○か×か。「{人工乾燥|じんこうかんそう}でもっとも{一般的|いっぱんてき}なのは、{天然乾燥|てんねんかんそう}{機|き}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tipe uap (蒸気式).",
+       "jp": "{蒸気式|じょうきしき}がいちばん{一般的|いっぱんてき}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada pengeringan alami, tumpukan harus diberi atap agar tak terkena sinar matahari langsung dan hujan.”",
+       "jp": "○か×か。「{天然乾燥|てんねんかんそう}では、{必|かなら}ず{屋根|やね}がけをして、{直射日光|ちょくしゃにっこう}や{雨|あめ}があたらないようにします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{屋根|やね}がけをします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Rasio volume produk terhadap volume kayu bulat yang dipakai disebut…",
+       "jp": "{使|つか}った{丸太|まるた}の{材積|ざいせき}に{対|たい}する、{製品|せいひん}の{材積|ざいせき}の{割合|わりあい}を{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "歩止り",
+        "jp": "{歩止|ぶどま}り"
+       },
+       {
+        "id": "等級",
+        "jp": "{等級|とうきゅう}"
+       },
+       {
+        "id": "密度",
+        "jp": "{密度|みつど}"
+       },
+       {
+        "id": "含水率",
+        "jp": "{含水率|がんすいりつ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "歩止り (rendemen).",
+       "jp": "{歩止|ぶどま}りです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin untuk memotong sisi bulat papan dan menentukan lebar adalah…",
+       "jp": "{耳|みみ}つき{板|いた}の{耳|みみ}を{落|お}として{幅|はば}を{決|き}める{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "バーカ",
+        "jp": "バーカ"
+       },
+       {
+        "id": "トリマ",
+        "jp": "トリマ"
+       },
+       {
+        "id": "チッパ",
+        "jp": "チッパ"
+       },
+       {
+        "id": "エジャ",
+        "jp": "エジャ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "エジャ (edger).",
+       "jp": "エジャです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s2-q",
+    "sub": "b3s2",
+    "title": {
+     "id": "Subbab 3.2 · Proses Kayu Laminasi",
+     "jp": "3.2 {集成材|しゅうせいざい}の{工程|こうてい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kadar air lamina untuk glulam harus 15% atau kurang.”",
+       "jp": "○か×か。「{集成材|しゅうせいざい}に{使|つか}うラミナの{含水率|がんすいりつ}は、15%{以下|いか}にする{必要|ひつよう}があります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "15%{以下|いか}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sambungan finger joint pada lamina bersebelahan disejajarkan.”",
+       "jp": "○か×か。「フィンガジョイントのつぎ{目|め}は、となり{同士|どうし}でそろえて{並|なら}べます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: harus digeser ≥ 15 cm.",
+       "jp": "15cm{以上|いじょう}ずらします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Proses menyambung lamina pendek memanjang disebut…",
+       "jp": "{短|みじか}いラミナを{長|なが}さ{方向|ほうこう}につなぐことを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "横切り",
+        "jp": "{横切|よこぎ}り"
+       },
+       {
+        "id": "幅はぎ",
+        "jp": "{幅|はば}はぎ"
+       },
+       {
+        "id": "耳すり",
+        "jp": "{耳|みみ}すり"
+       },
+       {
+        "id": "たて継ぎ",
+        "jp": "たて{継|つ}ぎ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "たて継ぎ.",
+       "jp": "たて{継|つ}ぎです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada glulam beda kelas (balok), lamina modulus tinggi diletakkan di…",
+       "jp": "{異等級構成|いとうきゅうこうせい}{集成材|しゅうせいざい}では、{ヤング係数|やんぐけいすう}の{高|たか}いラミナをどこに{置|お}きますか。"
+      },
+      "opts": [
+       {
+        "id": "Sisi luar",
+        "jp": "{外側|そとがわ}"
+       },
+       {
+        "id": "Sisi dalam",
+        "jp": "{内側|うちがわ}"
+       },
+       {
+        "id": "Acak",
+        "jp": "ばらばら"
+       },
+       {
+        "id": "Tidak dipakai",
+        "jp": "{使|つか}わない"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Luar.",
+       "jp": "{外側|そとがわ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s3-q",
+    "sub": "b3s3",
+    "title": {
+     "id": "Subbab 3.3 · Proses Kayu Lapis dan LVL",
+     "jp": "3.3 {合板|ごうはん}・LVLの{工程|こうてい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kayu lapis dibuat dengan menumpuk veneer sehingga arah seratnya saling tegak lurus.”",
+       "jp": "○か×か。「{合板|ごうはん}は、{繊維|せんい}{方向|ほうこう}が{直角|ちょっかく}になるように{単板|たんぱん}を{重|おも}ねてはり{合|あ}わせます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{直角|ちょっかく}にクロスさせます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jumlah lapisan kayu lapis pada umumnya genap.”",
+       "jp": "○か×か。「{合板|ごうはん}のはり{合|あ}わせる{枚数|まいすう}は、{一般|いっぱん}に{偶数|ぐうすう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: ganjil.",
+       "jp": "{奇数|きすう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pengepresan dengan pemanasan 110–135 ℃ disebut…",
+       "jp": "110〜135℃で{加熱|かねつ}しながら{圧締|あってい}することを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "冷圧",
+        "jp": "{冷圧|れいあつ}"
+       },
+       {
+        "id": "養生",
+        "jp": "{養生|ようじょう}"
+       },
+       {
+        "id": "熱圧",
+        "jp": "{熱圧|ねつあつ}"
+       },
+       {
+        "id": "蒸煮",
+        "jp": "{蒸煮|じょうしゃ}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "熱圧 (hot press).",
+       "jp": "{熱圧|ねつあつ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Perekat yang umumnya dipakai untuk kayu lapis struktural adalah…",
+       "jp": "{構造用合板|こうぞうようごうはん}に{一般的|いっぱんてき}に{使|つか}う{接着剤|せっちゃくざい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Lem kertas",
+        "jp": "{紙|かみ}{用|よう}のり"
+       },
+       {
+        "id": "Resin fenol",
+        "jp": "フェノール{樹脂|じゅし}{接着剤|せっちゃくざい}"
+       },
+       {
+        "id": "Lilin",
+        "jp": "ろう"
+       },
+       {
+        "id": "Perekat nasi",
+        "jp": "{米|こめ}のり"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Fenol.",
+       "jp": "フェノール{樹脂|じゅし}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin yang memutar kayu bulat dan menyayat veneer tipis adalah…",
+       "jp": "{丸太|まるた}を{回|まわ}して、うすい{単板|たんぱん}をけずる{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "スライサ",
+        "jp": "スライサ"
+       },
+       {
+        "id": "チッパ",
+        "jp": "チッパ"
+       },
+       {
+        "id": "サンダ",
+        "jp": "サンダ"
+       },
+       {
+        "id": "ロータリーレース",
+        "jp": "ロータリーレース"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Rotary lathe.",
+       "jp": "ロータリーレースです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s4-q",
+    "sub": "b3s4",
+    "title": {
+     "id": "Subbab 3.4 · Proses Veneer Hias",
+     "jp": "3.4 {ツキ板|つきいた}の{工程|こうてい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Veneer hias di Jepang umumnya setebal sekitar 0,2 mm.”",
+       "jp": "○か×か。「{日本|にっぽん}の{ツキ板|つきいた}は、{一般的|いっぱんてき}に0.2mm{程度|ていど}の{厚|あつ}さが{主流|しゅりゅう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "0.2mmが{主流|しゅりゅう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Penempelan veneer hias biasanya dilakukan hanya oleh mesin otomatis penuh.”",
+       "jp": "○か×か。「{ツキ板|つきいた}の{貼り付|はりつ}けは、ふつう{全自動|ぜんじどう}の{機械|きかい}だけで{行|おこな}われます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: umumnya manual oleh ahli.",
+       "jp": "{熟練者|じゅくれんしゃ}の{手作業|てさぎょう}が{一般的|いっぱんてき}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pola yang dihasilkan jika disayat tegak lurus cincin tahun adalah…",
+       "jp": "{年輪|ねんりん}に{対|たい}して{直角方向|ちょっかくほうこう}にスライスすると、どんな{木目|もくめ}になりますか。"
+      },
+      "opts": [
+       {
+        "id": "板目",
+        "jp": "{板目|いため}"
+       },
+       {
+        "id": "節",
+        "jp": "{節|ふし}"
+       },
+       {
+        "id": "杢目",
+        "jp": "{杢目|もくめ}"
+       },
+       {
+        "id": "柾目",
+        "jp": "{柾目|まさめ}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "柾目.",
+       "jp": "{柾目|まさめ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pengeringan veneer yang paling banyak dilakukan adalah…",
+       "jp": "{ツキ板|つきいた}の{乾燥|かんそう}でいちばん{多|おお}く{行|おこな}われる{方法|ほうほう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "高周波乾燥",
+        "jp": "{高周波乾燥|こうしゅうはかんそう}"
+       },
+       {
+        "id": "水に入れる",
+        "jp": "{水|みず}につける"
+       },
+       {
+        "id": "冷凍",
+        "jp": "{冷凍|れいとう}"
+       },
+       {
+        "id": "天日だけ",
+        "jp": "{日|にち}なたに{置|お}くだけ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Frekuensi tinggi.",
+       "jp": "{高周波乾燥|こうしゅうはかんそう}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s5-q",
+    "sub": "b3s5",
+    "title": {
+     "id": "Subbab 3.5 · Proses Lantai Kayu",
+     "jp": "3.5 フローリングの{工程|こうてい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Sisi lantai kayu dikerjakan “sane” (lidah-alur) untuk menyambung antarpapan.”",
+       "jp": "○か×か。「フローリングの{側面|そくめん}には、{板|いた}{同士|どうし}をつなぐために「{実|み}」の{加工|かこう}をします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{実|み}で{連結|れんけつ}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Ukuran umum lantai kayu adalah…",
+       "jp": "{一般的|いっぱんてき}なフローリングのサイズはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "50 × 50 mm",
+        "jp": "50mm×50mm"
+       },
+       {
+        "id": "5 × 10 m",
+        "jp": "5m×10m"
+       },
+       {
+        "id": "300 × 1800 mm",
+        "jp": "300mm×1800mm"
+       },
+       {
+        "id": "910 × 1820 mm",
+        "jp": "910mm×1820mm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "300×1800 mm.",
+       "jp": "300mm×1800mmです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Alur (cekungan) di sisi lantai kayu disebut…",
+       "jp": "フローリング{側面|そくめん}の{凹|おう}の{加工|かこう}を{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "耳",
+        "jp": "{耳|みみ}"
+       },
+       {
+        "id": "木口",
+        "jp": "{木口|きぐち}"
+       },
+       {
+        "id": "オス実",
+        "jp": "{オス実|おすざね}"
+       },
+       {
+        "id": "メス実",
+        "jp": "{メス実|めすざね}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "メス実.",
+       "jp": "{メス実|めすざね}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s6-q",
+    "sub": "b3s6",
+    "title": {
+     "id": "Subbab 3.6 · Proses Chip Kayu",
+     "jp": "3.6 チップの{工程|こうてい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Chip bahan bakar umumnya dibuat tanpa mengupas kulit.”",
+       "jp": "○か×か。「{燃料|ねんりょう}{用|よう}チップは、{一般|いっぱん}に{樹皮|じゅひ}を{取|と}らずにチップにします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{樹皮|じゅひ}をつけたままです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada penyimpanan chip, tidak pernah terjadi panas dan terbakar sendiri.”",
+       "jp": "○か×か。「チップの{保管|ほかん}では、{発熱|はつねつ}して{自然発火|しぜんはっか}することはありません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: bisa terjadi.",
+       "jp": "{自然発火|しぜんはっか}することがあります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Chip yang dipukul dengan hammer crusher disebut…",
+       "jp": "ハンマークラッシャで{得|え}られるチップを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "切削チップ",
+        "jp": "{切削チップ|せっさくちっぷ}"
+       },
+       {
+        "id": "板チップ",
+        "jp": "{板|いた}チップ"
+       },
+       {
+        "id": "破砕チップ",
+        "jp": "{破砕チップ|はさいちっぷ}"
+       },
+       {
+        "id": "燃料チップ",
+        "jp": "{燃料|ねんりょう}チップ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "破砕チップ.",
+       "jp": "{破砕チップ|はさいちっぷ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Sebelum masuk silo tertutup, yang harus dilakukan adalah…",
+       "jp": "{密閉|みっぺい}されたチップサイロに{入|い}る{前|まえ}に、まず{何|なに}をしますか。"
+      },
+      "opts": [
+       {
+        "id": "Menutup pintu rapat",
+        "jp": "ドアを{閉|し}めきる"
+       },
+       {
+        "id": "Menyalakan api",
+        "jp": "{火|ひ}をつける"
+       },
+       {
+        "id": "Ventilasi yang cukup",
+        "jp": "{十分|じゅうぶん}に{換気|かんき}する"
+       },
+       {
+        "id": "Menyiram minyak",
+        "jp": "{油|あぶら}をまく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Ventilasi.",
+       "jp": "{換気|かんき}します。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s7-q",
+    "sub": "b3s7",
+    "title": {
+     "id": "Subbab 3.7 · Proses Precut",
+     "jp": "3.7 プレカットの{工程|こうてい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Mesin precut dikontrol komputer dan memproses dengan galat 1 mm atau kurang.”",
+       "jp": "○か×か。「プレカット{加工|かこう}{機械|きかい}は、コンピュータ{制御|せいぎょ}で、{誤差|ごさ}1mm{以下|いか}の{精度|せいど}で{加工|かこう}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{誤差|ごさ}1mm{以下|いか}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "CAM berarti…",
+       "jp": "CAMとは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Alat pemotong kayu",
+        "jp": "{木材|もくざい}を{切|き}る{道具|どうぐ}"
+       },
+       {
+        "id": "Desain berbantuan komputer",
+        "jp": "コンピュータによる{設計支援|せっけいしえん}"
+       },
+       {
+        "id": "Manufaktur berbantuan komputer",
+        "jp": "コンピュータによる{製造|せいぞう}{支援|しえん}"
+       },
+       {
+        "id": "Kadar air maksimum",
+        "jp": "{最大|さいだい}{含水率|がんすいりつ}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "CAM = manufaktur.",
+       "jp": "{製造|せいぞう}{支援|しえん}です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab4": [
+   {
+    "id": "bab4-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 4",
+     "jp": "{第|だい}4{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Edger adalah mesin yang membuang tepi bulat papan agar menjadi papan berlebar tertentu.”",
+       "jp": "○か×か。「エジャは、{耳|みみ}つき{板|いた}の{耳|みみ}（{丸|まる}み）を{落|お}として、{決|き}まった{幅|はば}の{板|いた}にする{機械|きかい}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{耳|みみ}を{落|お}とします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di pabrik glulam, terutama dipakai mesin grading tipe kontinu.”",
+       "jp": "○か×か。「{集成材|しゅうせいざい}{工場|こうじょう}では、{主|おも}に{連続式|れんぞくしき}のグレーディングマシンが{使|つか}われます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{高速|こうそく}で{測定|そくてい}できます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Rotary lathe adalah mesin yang menempelkan pisau pada kayu bulat berputar untuk membuat veneer menerus.”",
+       "jp": "○か×か。「ロータリーレースは、{回転|かいてん}する{原木|げんぼく}に{刃物|はもの}を{当|あ}てて、{単板|たんぱん}を{連続|れんぞく}してつくる{機械|きかい}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{連続|れんぞく}してつくります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “End tenoner juga disebut mesin pembuat purus.”",
+       "jp": "○か×か。「エンドテノーナは、ほぞ{取り盤|とりばん}とも{呼|よ}ばれます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ほぞ{取り盤|とりばん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di pabrik chip, yang umum adalah disk chipper dengan pisau terpasang pada cakram berputar.”",
+       "jp": "○か×か。「チップ{工場|こうじょう}では、{回転|かいてん}{円盤|えんばん}にチッパナイフをつけたディスクチッパが{一般的|いっぱんてき}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ディスクチッパが{一般的|いっぱんてき}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada lini balok horizontal, diproses sloof, balok, dan gording.”",
+       "jp": "○か×か。「{横架材|おうかざい}{加工|かこう}ラインでは、{土台|どだい}や{梁|はり}・{桁|けた}などを{加工|かこう}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{土台|どだい}や{梁|はり}{桁|けた}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b4s1-q",
+    "sub": "b4s1",
+    "title": {
+     "id": "Subbab 4.1 · Mesin Penggergajian",
+     "jp": "4.1 {製材|せいざい}の{機械|きかい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Edger adalah mesin yang membuang tepi bulat papan agar menjadi papan berlebar tertentu.”",
+       "jp": "○か×か。「エジャは、{耳|みみ}つき{板|いた}の{耳|みみ}（{丸|まる}み）を{落|お}として、{決|き}まった{幅|はば}の{板|いた}にする{機械|きかい}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{耳|みみ}を{落|お}とします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Cross cut saw adalah mesin yang menggergaji membujur untuk menentukan lebar.”",
+       "jp": "○か×か。「クロスカットソーは、{材|ざい}を{縦|たて}びきして{幅|はば}を{決|き}める{機械|きかい}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: potong melintang untuk panjang.",
+       "jp": "{横|よこ}びきで{長|なが}さを{決|き}めます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pengumpul debu yang memisahkan serbuk dengan gaya sentrifugal adalah tipe…",
+       "jp": "{遠心力|えんしん}でのこ{屑|くず}を{分|わ}ける{集じん機|しゅうじんき}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "水洗式",
+        "jp": "{水洗|すいせん}{式|しき}"
+       },
+       {
+        "id": "サイクロン式",
+        "jp": "サイクロン{式|しき}"
+       },
+       {
+        "id": "バグフィルター式",
+        "jp": "バグフィルター{式|しき}"
+       },
+       {
+        "id": "磁石式",
+        "jp": "{磁石|じしゃく}{式|しき}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サイクロン式.",
+       "jp": "サイクロン{式|しき}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin yang memotong dua sisi sejajar sekaligus dengan dua gergaji bundar adalah…",
+       "jp": "2{枚|まい}の{丸|まる}のこで、{材|ざい}の{両側|りょうがわ}を{同時|どうじ}にひく{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "エジャ",
+        "jp": "エジャ"
+       },
+       {
+        "id": "チッパ",
+        "jp": "チッパ"
+       },
+       {
+        "id": "ツイン丸のこ盤",
+        "jp": "ツイン{丸のこ盤|まるのこばん}"
+       },
+       {
+        "id": "サンダ",
+        "jp": "サンダ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ツイン丸のこ盤.",
+       "jp": "ツイン{丸のこ盤|まるのこばん}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s2-q",
+    "sub": "b4s2",
+    "title": {
+     "id": "Subbab 4.2 · Mesin Kayu Laminasi",
+     "jp": "4.2 {集成材|しゅうせいざい}の{機械|きかい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Di pabrik glulam, terutama dipakai mesin grading tipe kontinu.”",
+       "jp": "○か×か。「{集成材|しゅうせいざい}{工場|こうじょう}では、{主|おも}に{連続式|れんぞくしき}のグレーディングマシンが{使|つか}われます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{高速|こうそく}で{測定|そくてい}できます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mesin yang membentuk ujung lamina seperti jari adalah…",
+       "jp": "ラミナの{端|はじ}を{指|ゆび}の{形|かたち}に{加工|かこう}する{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "モルダ",
+        "jp": "モルダ"
+       },
+       {
+        "id": "ドライヤ",
+        "jp": "ドライヤ"
+       },
+       {
+        "id": "サンダ",
+        "jp": "サンダ"
+       },
+       {
+        "id": "フィンガカッタ",
+        "jp": "フィンガカッタ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フィンガカッタ.",
+       "jp": "フィンガカッタです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin untuk mengetam 4 sisi sekaligus, mengatur tebal & lebar, dan bisa membuat alur…",
+       "jp": "4{面|めん}を{同時|どうじ}にけずり、{溝|みぞ}{加工|かこう}もできる{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "グルースプレッダ",
+        "jp": "グルースプレッダ"
+       },
+       {
+        "id": "チッパ",
+        "jp": "チッパ"
+       },
+       {
+        "id": "バーカ",
+        "jp": "バーカ"
+       },
+       {
+        "id": "モルダ",
+        "jp": "モルダ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "モルダ.",
+       "jp": "モルダです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s3-q",
+    "sub": "b4s3",
+    "title": {
+     "id": "Subbab 4.3 · Mesin Kayu Lapis, LVL, dan Veneer",
+     "jp": "4.3 {合板|ごうはん}・LVL・{ツキ板|つきいた}の{機械|きかい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Rotary lathe adalah mesin yang menempelkan pisau pada kayu bulat berputar untuk membuat veneer menerus.”",
+       "jp": "○か×か。「ロータリーレースは、{回転|かいてん}する{原木|げんぼく}に{刃物|はもの}を{当|あ}てて、{単板|たんぱん}を{連続|れんぞく}してつくる{機械|きかい}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{連続|れんぞく}してつくります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mesin yang mengoleskan perekat pada veneer dengan rol adalah…",
+       "jp": "{単板|たんぱん}に{接着剤|せっちゃくざい}をローラでぬる{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "グルースプレッダ",
+        "jp": "グルースプレッダ"
+       },
+       {
+        "id": "ドライヤ",
+        "jp": "ドライヤ"
+       },
+       {
+        "id": "サンダ",
+        "jp": "サンダ"
+       },
+       {
+        "id": "クリッパ",
+        "jp": "クリッパ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "グルースプレッダ.",
+       "jp": "グルースプレッダです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin untuk menghaluskan permukaan kayu lapis dengan kertas amplas adalah…",
+       "jp": "{研磨|けんま}{布|ぬの}{紙|かみ}で{合板|ごうはん}の{表面|ひょうめん}を{滑|なめ}らかにする{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "チッパ",
+        "jp": "チッパ"
+       },
+       {
+        "id": "サンダ",
+        "jp": "サンダ"
+       },
+       {
+        "id": "スライサ",
+        "jp": "スライサ"
+       },
+       {
+        "id": "エジャ",
+        "jp": "エジャ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サンダ.",
+       "jp": "サンダです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s4-q",
+    "sub": "b4s4",
+    "title": {
+     "id": "Subbab 4.4 · Mesin Lantai Kayu",
+     "jp": "4.4 フローリングの{機械|きかい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “End tenoner juga disebut mesin pembuat purus.”",
+       "jp": "○か×か。「エンドテノーナは、ほぞ{取り盤|とりばん}とも{呼|よ}ばれます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ほぞ{取り盤|とりばん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mesin yang memotong, membentuk, dan mengalur kedua ujung kayu sekaligus adalah…",
+       "jp": "{左右|さゆう}の{両端|りょうたん}の{切断|せつだん}、{成形|せいけい}、{溝|みぞ}{加工|かこう}ができる{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "チッパ",
+        "jp": "チッパ"
+       },
+       {
+        "id": "エンドテノーナ",
+        "jp": "エンドテノーナ"
+       },
+       {
+        "id": "ドライヤ",
+        "jp": "ドライヤ"
+       },
+       {
+        "id": "バーカ",
+        "jp": "バーカ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "エンドテノーナ.",
+       "jp": "エンドテノーナです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s5-q",
+    "sub": "b4s5",
+    "title": {
+     "id": "Subbab 4.5 · Mesin Chip Kayu",
+     "jp": "4.5 チップの{機械|きかい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Di pabrik chip, yang umum adalah disk chipper dengan pisau terpasang pada cakram berputar.”",
+       "jp": "○か×か。「チップ{工場|こうじょう}では、{回転|かいてん}{円盤|えんばん}にチッパナイフをつけたディスクチッパが{一般的|いっぱんてき}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ディスクチッパが{一般的|いっぱんてき}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Chip terlalu besar yang dipisahkan ayakan disebut…",
+       "jp": "チップスクリーンでふるい{分|わ}けた{大|おお}きすぎるチップを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "ラミナ",
+        "jp": "ラミナ"
+       },
+       {
+        "id": "スリーバー",
+        "jp": "スリーバー"
+       },
+       {
+        "id": "ダスト",
+        "jp": "ダスト"
+       },
+       {
+        "id": "製品チップ",
+        "jp": "{製品|せいひん}チップ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "スリーバー.",
+       "jp": "スリーバーです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin yang memukul dan memotong sekaligus dengan rotor besar adalah…",
+       "jp": "{大型|おおがた}ロータで{打撃|だげき}と{切削|せっさく}を{同時|どうじ}に{行|い}ってチップにする{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "モルダ",
+        "jp": "モルダ"
+       },
+       {
+        "id": "ディスクチッパ",
+        "jp": "ディスクチッパ"
+       },
+       {
+        "id": "サンダ",
+        "jp": "サンダ"
+       },
+       {
+        "id": "ドラムチッパ",
+        "jp": "ドラムチッパ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ドラムチッパ.",
+       "jp": "ドラムチッパです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s6-q",
+    "sub": "b4s6",
+    "title": {
+     "id": "Subbab 4.6 · Mesin Precut",
+     "jp": "4.6 プレカットの{機械|きかい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada lini balok horizontal, diproses sloof, balok, dan gording.”",
+       "jp": "○か×か。「{横架材|おうかざい}{加工|かこう}ラインでは、{土台|どだい}や{梁|はり}・{桁|けた}などを{加工|かこう}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{土台|どだい}や{梁|はり}{桁|けた}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Kayu pelengkap berpenampang kecil seperti kasau dan tiang pengisi disebut…",
+       "jp": "{間柱|まばしら}や{垂木|たるき}のように、{断面|だんめん}が{小|ちー}さい{補|おぎな}う{部材|ぶざい}を{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "集成材",
+        "jp": "{集成材|しゅうせいざい}"
+       },
+       {
+        "id": "羽柄材",
+        "jp": "{羽柄材|はがらざい}"
+       },
+       {
+        "id": "単板",
+        "jp": "{単板|たんぱん}"
+       },
+       {
+        "id": "横架材",
+        "jp": "{横架材|おうかざい}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "羽柄材.",
+       "jp": "{羽柄材|はがらざい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Metode yang menyambung tiang dan balok dengan logam khusus disebut…",
+       "jp": "{柱|はしら}やはりの{接合部|せつごうぶ}を{特殊|とくしゅ}な{金物|かなもの}で{接合|せつごう}する{工法|こうほう}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "金物工法",
+        "jp": "{金物工法|かなものこうほう}"
+       },
+       {
+        "id": "天然乾燥",
+        "jp": "{天然乾燥|てんねんかんそう}"
+       },
+       {
+        "id": "幅はぎ",
+        "jp": "{幅|はば}はぎ"
+       },
+       {
+        "id": "冷圧",
+        "jp": "{冷圧|れいあつ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "金物工法.",
+       "jp": "{金物工法|かなものこうほう}です。"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "tema": [
+  {
+   "id": "tema-wd",
+   "tema": true,
+   "title": {
+    "id": "Tema: Keselamatan Kerja Kayu",
+    "jp": "テーマ：{木材|もくざい}{加工|かこう}の{安全|あんぜん}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Jika berisiko terlilit mata gergaji, pakailah sarung tangan.”",
+      "jp": "○か×か。「のこ{歯|は}に{巻き込|まきこ}まれるおそれがあるときは、{手袋|てぶくろ}を{着|つ}けます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: jangan pakai sarung tangan.",
+      "jp": "{手袋|てぶくろ}は{着|つ}けません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Saat memeriksa mesin, matikan listrik dan pastikan mesin berhenti total.”",
+      "jp": "○か×か。「{機械|きかい}を{点検|てんけん}するときは、{電源|でんげん}をOFFにして、{機械|きかい}が{完全|かんぜん}に{止|と}まったことを{確認|かくにん}します。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{電源|でんげん}をOFFにします。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Alat pengaman boleh dilepas bila mengganggu.”",
+      "jp": "○か×か。「{安全装置|あんぜんそうち}はじゃまなときは{取り外|とりはず}してもよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: dilarang dilepas.",
+      "jp": "{取り外|とりはず}してはいけません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Desain yang menganggap manusia bisa salah (misal penutup bagian berputar) disebut…",
+      "jp": "「{人|にん}は{間違|まちが}える」と{考|かんが}えてつくる{安全|あんぜん}の{考え方|かんがえかた}は{何|なん}ですか。"
+     },
+     "opts": [
+      {
+       "id": "リスクアセスメント",
+       "jp": "リスクアセスメント"
+      },
+      {
+       "id": "4S活動",
+       "jp": "{4S活動|よんえすかつどう}"
+      },
+      {
+       "id": "フール・プルーフ",
+       "jp": "フール・プルーフ"
+      },
+      {
+       "id": "フェール・セーフ",
+       "jp": "フェール・セーフ"
+      }
+     ],
+     "a": 2,
+     "exp": {
+      "id": "Fool proof.",
+      "jp": "フール・プルーフです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Urutan 4S yang benar adalah…",
+      "jp": "4Sの{正|ただ}しい{組み合|くみあ}わせはどれですか。"
+     },
+     "opts": [
+      {
+       "id": "点検・修理・保管・出荷",
+       "jp": "{点検|てんけん}・{修理|しゅうり}・{保管|ほかん}・{出荷|しゅっか}"
+      },
+      {
+       "id": "整理・整頓・清潔・清掃",
+       "jp": "{整理|せいり}・{整頓|せいとん}・{清潔|せいけつ}・{清掃|せいそう}"
+      },
+      {
+       "id": "整理・整頓・清算・清書",
+       "jp": "{整理|せいり}・{整頓|せいとん}・{清算|せいさん}・{清書|せいしょ}"
+      },
+      {
+       "id": "安全・整備・清潔・速度",
+       "jp": "{安全|あんぜん}・{整備|せいび}・{清潔|せいけつ}・{速度|そくど}"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "整理・整頓・清潔・清掃.",
+      "jp": "{整理|せいり}・{整頓|せいとん}・{清潔|せいけつ}・{清掃|せいそう}です。"
+     }
+    }
+   ]
+  }
+ ]
+}

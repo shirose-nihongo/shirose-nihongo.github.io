@@ -1,0 +1,361 @@
+{
+ "schema": 1,
+ "bidang": "wood-industry",
+ "source": "木材産業特定技能1号測定試験 学習用テキスト(第1版, 全国木材組合連合会, 2025-05) — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab1",
+  "no": 1,
+  "title": {
+   "id": "Dasar Kehutanan, Kayu, dan Keselamatan Kerja",
+   "jp": "{森林|しんりん}・{林業|りんぎょう}・{木材|もくざい}{産業|さんぎょう}の{基礎知識|きそちしき}"
+  },
+  "intro": {
+   "id": "Hutan Jepang, industri kayu, sifat dasar kayu, dan keselamatan kerja di pabrik kayu.",
+   "jp": "{日本|にっぽん}の{森林|しんりん}、{木材|もくざい}{産業|さんぎょう}、{木材|もくざい}の{性質|せいしつ}、{作業|さぎょう}の{安全|あんぜん}について{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   15
+  ],
+  "subs": [
+   {
+    "id": "b1s1",
+    "no": 1,
+    "title": {
+     "id": "Hutan dan Industri Kayu Jepang",
+     "jp": "{日本|にっぽん}の{森林|しんりん}と{木材|もくざい}{産業|さんぎょう}"
+    },
+    "pages": [
+     1,
+     5
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hutan Jepang"
+      },
+      {
+       "ul": [
+        "Sekitar **2/3** wilayah Jepang adalah **hutan**; sekitar **4 dari 10** bagiannya adalah **hutan tanam (人工林)**.",
+        "Banyak hutan tanam berumur **50 tahun lebih**, sudah masuk masa panen sehingga perlu dimanfaatkan.",
+        "Fungsi hutan selain kayu: mencegah longsor, menyimpan dan membersihkan air, mencegah pemanasan global. Semua ini disebut **多面的機能 (fungsi majemuk)**."
+       ]
+      },
+      {
+       "h": "Makna memakai kayu"
+      },
+      {
+       "ul": [
+        "Pohon menyerap CO₂ dan menyimpannya sebagai karbon; kayu di bangunan **menyimpan karbon lama**.",
+        "Mengolah kayu butuh energi lebih sedikit dibanding besi dan beton, sehingga mengurangi emisi CO₂.",
+        "Siklus yang benar: tebang → pakai kayu dengan baik → **tanam kembali**."
+       ]
+      },
+      {
+       "h": "Jenis industri kayu"
+      },
+      {
+       "ul": [
+        "**製材 (penggergajian)**: sekitar 4.000 pabrik, jumlahnya menurun; sekitar 80% hasilnya untuk bahan bangunan; ±80% kayu bulat dari dalam negeri.",
+        "**集成材 (kayu laminasi)**: 140 pabrik; produksi 2022 sekitar 1,66 juta m³; sekitar 47% memakai kayu dalam negeri.",
+        "**合板・LVL**: sekitar 90% kayu bulat kini dari dalam negeri; sugi paling banyak (±60%). Pabrik kayu lapis 155, LVL 12.",
+        "**フローリング**: 38 pabrik; **チップ**: 1.110 pabrik; **プレカット**: tingkat pemrosesan precut rumah rangka kayu 95% (2023)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{日本|にっぽん}の{森林|しんりん}"
+      },
+      {
+       "ul": [
+        "{日本|にっぽん}の{国土|こくど}の{約|やく}3{分|ふん}の2は{森林|しんりん}です。その{約|やく}4{割|わり}は{人|にん}が{植|う}えた「{人工林|じんこうりん}」です。",
+        "{人工林|じんこうりん}は50{年以上|ねんいじょう}たったものが{多|おお}く、{木材|もくざい}として{使|つか}う{時期|じき}です。",
+        "{森林|しんりん}には、{土砂|どしゃ}くずれを{防|ふせ}ぐ、{水|みず}をためてきれいにする、{地球温暖化|ちきゅうおんだんか}を{防|ふせ}ぐなどの「{多面的機能|ためんてききのう}」があります。"
+       ]
+      },
+      {
+       "h": "{木材|もくざい}を{使|つか}う{意味|いみ}"
+      },
+      {
+       "ul": [
+        "{木|き}は{二酸化炭素|にさんかたんそ}を{吸|す}って{炭素|たんそ}としてためます。{建物|たてもの}に{使|つか}うと{長|なが}い{間|かん}ためておけます。",
+        "{木材|もくざい}は{鉄|てつ}やコンクリートよりつくるときのエネルギーが{少|すく}ないです。",
+        "{木|き}を{切|き}って{使|つか}い、また{植|う}えて{育|そだ}てることが{大切|たいせつ}です。"
+       ]
+      },
+      {
+       "h": "{木材|もくざい}{産業|さんぎょう}の{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "{製材|せいざい}{業|ぎょう}：{工場|こうじょう}は{約|やく}4,000で、{減|へ}っています。{使|つか}う{原木|げんぼく}の{約|やく}8{割|わり}は{国産材|こくさんざい}です。",
+        "{集成材|しゅうせいざい}{製造業|せいぞうぎょう}：{工場|こうじょう}は140です。{国産材|こくさんざい}は{約|やく}47%です。",
+        "{合板|ごうはん}・LVL{製造業|せいぞうぎょう}：{原木|げんぼく}の{約|やく}9{割|わり}は{国産材|こくさんざい}で、スギが{一番|いちばん}{多|おお}いです。",
+        "フローリング、{木材チップ|もくざいちっぷ}、プレカットの{工場|こうじょう}もあります。プレカットの{加工|かこう}{率|りつ}は95%です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sekitar 2/3 wilayah Jepang adalah hutan; sekitar 4 dari 10 bagiannya adalah hutan tanam (人工林).",
+      "points": [
+       "Banyak hutan tanam berumur 50 tahun lebih, sudah masuk masa panen sehingga perlu dimanfaatkan.",
+       "Fungsi hutan selain kayu: mencegah longsor, menyimpan dan membersihkan air, mencegah pemanasan global. Semua ini disebut 多面的機能 (fungsi majemuk).",
+       "Pohon menyerap CO₂ dan menyimpannya sebagai karbon; kayu di bangunan menyimpan karbon lama."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 森林, 人工林, 多面的機能, 丸太."
+      ]
+     },
+     "jp": {
+      "core": "{日本|にっぽん}の{国土|こくど}の{約|やく}3{分|ふん}の2は{森林|しんりん}です。その{約|やく}4{割|わり}は{人|にん}が{植|う}えた「{人工林|じんこうりん}」です。",
+      "points": [
+       "{人工林|じんこうりん}は50{年以上|ねんいじょう}たったものが{多|おお}く、{木材|もくざい}として{使|つか}う{時期|じき}です。",
+       "{森林|しんりん}には、{土砂|どしゃ}くずれを{防|ふせ}ぐ、{水|みず}をためてきれいにする、{地球温暖化|ちきゅうおんだんか}を{防|ふせ}ぐなどの「{多面的機能|ためんてききのう}」があります。",
+       "{木|き}は{二酸化炭素|にさんかたんそ}を{吸|す}って{炭素|たんそ}としてためます。{建物|たてもの}に{使|つか}うと{長|なが}い{間|かん}ためておけます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{森林|しんりん}、{人工林|じんこうりん}、{多面的機能|ためんてききのう}、{丸太|まるた}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s2",
+    "no": 2,
+    "title": {
+     "id": "Dasar-dasar Sifat Kayu",
+     "jp": "{木材|もくざい}の{基礎知識|きそちしき}"
+    },
+    "pages": [
+     6,
+     10
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Bagian dan penampang"
+      },
+      {
+       "ul": [
+        "Tiga penampang: **木口面** (tegak lurus batang, pola lingkaran), **柾目面** (membelah lewat pusat, pola garis sejajar), **板目面** (arah singgung, pola lengkung).",
+        "**年輪 (cincin tahun)**: kayu awal (早材, terang) + kayu akhir (晩材, gelap) = 1 cincin per tahun.",
+        "**心材** = bagian dalam, gelap; **辺材** = bagian luar, terang. Sugi: beda jelas; hinoki: kurang jelas.",
+        "**末口** = ujung atas (kecil); **元口** = ujung bawah/pangkal (besar). Tiang dipasang dengan 元口 di bawah.",
+        "**木表** = sisi kulit; **木裏** = sisi dalam (pusat)."
+       ]
+      },
+      {
+       "h": "Jenis kayu"
+      },
+      {
+       "ul": [
+        "**針葉樹** (daun jarum): batang lurus, untuk tiang dan balok. Contoh: **スギ** (terbanyak, ada di 47 prefektur), **ヒノキ**, **カラマツ**.",
+        "**広葉樹** (daun lebar): bentuk, kekerasan, dan serat beragam; contoh ミズナラ, ブナ, ケヤキ. Pola khas disebut **杢**."
+       ]
+      },
+      {
+       "h": "Kadar air dan kekuatan"
+      },
+      {
+       "ul": [
+        "**含水率 (%) = (massa basah − massa kering oven) ÷ massa kering oven × 100.**",
+        "**平衡含水率**: kadar air setelah lama didiamkan di udara; di Jepang rata-rata sekitar **15%**.",
+        "Kekuatan: tekan, tarik, lentur, geser, belah. Makin besar **kerapatan** → makin kuat. Kekuatan tekan/tarik paling besar **searah serat**.",
+        "**節 (mata kayu)** menurunkan kekuatan, terutama kekuatan tarik. Titik jenuh serat sekitar **30%**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{断面|だんめん}と{部分|ぶぶん}"
+      },
+      {
+       "ul": [
+        "{木材|もくざい}の3{断面|だんめん}は{木口面|こぐちめん}、{柾目|まさめ}{面|めん}、{板目|いため}{面|めん}です。",
+        "{年輪|ねんりん}は、{色|いろ}のうすい{早材|そうざい}と{色|いろ}のこい{晩材|ばんざい}のくり{返|かえ}しです。1{年|ねん}に1つできます。",
+        "{丸太|まるた}の{中心|ちゅうしん}に{近|ちか}い{色|いろ}のこい{部分|ぶぶん}が{心材|しんざい}、まわりの{色|いろ}のうすい{部分|ぶぶん}が{辺材|へんざい}です。",
+        "{丸太|まるた}の{上側|うえがわ}（{細|こま}いほう）を{末口|すえぐち}、{下側|したがわ}（{太|ふと}いほう）を{元口|もとくち}といいます。{柱|はしら}は{元口|もとくち}を{下|した}にして{使|つか}います。",
+        "{板目|いため}{面|めん}のうち、{樹皮|じゅひ}{側|がわ}を{木表|きおもて}、{中心|ちゅうしん}{側|がわ}を{木裏|きうら}といいます。"
+       ]
+      },
+      {
+       "h": "{木|き}の{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "{針葉樹|しんようじゅ}は{幹|かん}がまっすぐで、{柱|はしら}やはりに{使|つか}います。スギ、ヒノキ、カラマツなどがあります。",
+        "{広葉樹|こうようじゅ}は、かたさや{模様|もよう}がいろいろです。{模様|もよう}のめずらしいものを{杢|もく}といいます。"
+       ]
+      },
+      {
+       "h": "{含水率|がんすいりつ}と{強|つよ}さ"
+      },
+      {
+       "ul": [
+        "{含水率|がんすいりつ}は、{水分|すいぶん}の{重|おも}さを{全乾|ぜんかん}{質量|しつりょう}でわって100をかけた{数字|すうじ}です。",
+        "{平衡|へいこう}{含水率|がんすいりつ}は、{日本|にっぽん}では{平均|へいきん}で{約|やく}15%です。",
+        "{密度|みつど}が{大|おお}きいほど、{木材|もくざい}は{強|つよ}くなります。{繊維|せんい}の{方向|ほうこう}がいちばん{強|つよ}いです。",
+        "{節|ふし}があると、{強|つよ}さが{小|ちー}さくなります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tiga penampang: 木口面 (tegak lurus batang, pola lingkaran), 柾目面 (membelah lewat pusat, pola garis sejajar), 板目面 (arah singgung, pola lengkung).",
+      "points": [
+       "年輪 (cincin tahun): kayu awal (早材, terang) + kayu akhir (晩材, gelap) = 1 cincin per tahun.",
+       "心材 = bagian dalam, gelap; 辺材 = bagian luar, terang. Sugi: beda jelas; hinoki: kurang jelas.",
+       "末口 = ujung atas (kecil); 元口 = ujung bawah/pangkal (besar). Tiang dipasang dengan 元口 di bawah."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 木口面, 柾目, 板目, 年輪."
+      ]
+     },
+     "jp": {
+      "core": "{木材|もくざい}の3{断面|だんめん}は{木口面|こぐちめん}、{柾目|まさめ}{面|めん}、{板目|いため}{面|めん}です。",
+      "points": [
+       "{年輪|ねんりん}は、{色|いろ}のうすい{早材|そうざい}と{色|いろ}のこい{晩材|ばんざい}のくり{返|かえ}しです。1{年|ねん}に1つできます。",
+       "{丸太|まるた}の{中心|ちゅうしん}に{近|ちか}い{色|いろ}のこい{部分|ぶぶん}が{心材|しんざい}、まわりの{色|いろ}のうすい{部分|ぶぶん}が{辺材|へんざい}です。",
+       "{丸太|まるた}の{上側|うえがわ}（{細|こま}いほう）を{末口|すえぐち}、{下側|したがわ}（{太|ふと}いほう）を{元口|もとくち}といいます。{柱|はしら}は{元口|もとくち}を{下|した}にして{使|つか}います。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{木口面|こぐちめん}、{柾目|まさめ}、{板目|いため}、{年輪|ねんりん}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s3",
+    "no": 3,
+    "title": {
+     "id": "Keselamatan Kerja",
+     "jp": "{作業|さぎょう}{安全|あんぜん}の{基礎知識|きそちしき}"
+    },
+    "pages": [
+     11,
+     15
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Kecelakaan kerja"
+      },
+      {
+       "ul": [
+        "Korban kecelakaan di industri kayu sekitar **1.000 orang/tahun**, korban jiwa sekitar 10. Tingkat kecelakaan **4,4 kali** industri manufaktur lain.",
+        "Hampir separuh kecelakaan: **tergores/tergesek (切れ・こすれ)** dan **terjepit/terlilit (挟まれ・巻き込まれ)** oleh alat berputar, sabuk, atau pengumpan bahan."
+       ]
+      },
+      {
+       "h": "Pakaian dan APD"
+      },
+      {
+       "ul": [
+        "Pakaian pas di lengan dan ujung kaki. Dekat mata gergaji/rol: **jangan** pakai sarung tangan, celemek, handuk; waspada tali dan pakaian longgar.",
+        "APD: helm, sepatu pengaman, penutup telinga, topi kerja, masker dan kacamata pelindung bila ada gas/debu. Rambut jangan keluar dari helm/topi."
+       ]
+      },
+      {
+       "h": "Penilaian risiko dan mesin"
+      },
+      {
+       "ul": [
+        "**リスクアセスメント**: temukan bahaya → nilai besar kerusakan × kemungkinan → kurangi risiko yang prioritasnya tinggi dulu.",
+        "Bahaya yang belum bisa diperbaiki harus **diberi tanda**; area terlarang dipasang tali.",
+        "**フール・プルーフ**: desain dengan anggapan manusia bisa salah (penutup bagian berputar, interlock). **フェール・セーフ**: bila ada kerusakan, mesin bergerak ke sisi aman.",
+        "**Jangan melepas alat pengaman.** Periksa sebelum dipakai dan berkala."
+       ]
+      },
+      {
+       "h": "Perawatan, 4S, kesehatan"
+      },
+      {
+       "ul": [
+        "Saat periksa/rawat/bersihkan: **matikan listrik**, pastikan mesin berhenti total, pasang papan **「点検中」**.",
+        "Bahan bakar/bahan kimia disimpan di wadah yang benar; depan APAR dan hidran tidak boleh ada barang.",
+        "**4S** = 整理 (pilah), 整頓 (rapikan), 清潔 (bersih/jaga kebersihan), 清掃 (bersihkan). Lantai kotor serbuk/kulit memicu terpeleset.",
+        "Meninggalkan mesin: matikan dan pastikan pisau berhenti. Cegah **熱中症** (sengatan panas): istirahat, minum air dan garam. Laporkan **ヒヤリ・ハット** (nyaris celaka)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{労働災害|ろうどうさいがい}"
+      },
+      {
+       "ul": [
+        "{木材|もくざい}{産業|さんぎょう}の{労働災害|ろうどうさいがい}による{死傷者|ししょうしゃ}は{年|ねん}に{約|やく}1,000{人|にん}で、{他|ほか}の{製造業|せいぞうぎょう}の4.4{倍|ばい}です。",
+        "{事故|じこ}の{約半分|やくはんぶん}は「{切|き}れ・こすれ」と「{挟|はさ}まれ・{巻き込|まきこ}まれ」です。"
+       ]
+      },
+      {
+       "h": "{服装|ふくそう}と{保護具|ほごぐ}"
+      },
+      {
+       "ul": [
+        "のこ{歯|は}やローラのそばでは、{手袋|てぶくろ}、{前掛|まえかけ}け、タオルを{使|つか}いません。",
+        "ヘルメット、{安全靴|あんぜんぐつ}、{耳栓|みみせん}、{保護|ほご}メガネ、{防護|ぼうご}マスクなどを{正|ただ}しく{着|つ}けます。"
+       ]
+      },
+      {
+       "h": "リスクアセスメントと{安全装置|あんぜんそうち}"
+      },
+      {
+       "ul": [
+        "リスクアセスメントは、{危|あぶ}ないところを{見|み}つけて、{優先度|ゆうせんど}の{高|たか}いものから{減|へ}らすことです。",
+        "フール・プルーフは、{人|にん}は{間違|まちが}えるものと{考|かんが}えてつくる{安全|あんぜん}の{考え方|かんがえかた}です。",
+        "フェール・セーフは、{異常|いじょう}があっても{安全|あんぜん}な{側|がわ}に{動|うご}く{考え方|かんがえかた}です。",
+        "{安全装置|あんぜんそうち}は{取り外|とりはず}してはいけません。"
+       ]
+      },
+      {
+       "h": "{点検|てんけん}と4S"
+      },
+      {
+       "ul": [
+        "{点検|てんけん}や{掃除|そうじ}の{前|まえ}に{電源|でんげん}を{切|き}り、「{点検|てんけん}{中|なか}」の{表示|ひょうじ}を{出|だ}します。",
+        "4Sは、{整理|せいり}、{整頓|せいとん}、{清潔|せいけつ}、{清掃|せいそう}です。",
+        "ヒヤリ・ハットも{集|あつ}めて、{事故|じこ}を{防|ふせ}ぎます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Korban kecelakaan di industri kayu sekitar 1.000 orang/tahun, korban jiwa sekitar 10. Tingkat kecelakaan 4,4 kali industri manufaktur lain.",
+      "points": [
+       "Hampir separuh kecelakaan: tergores/tergesek (切れ・こすれ) dan terjepit/terlilit (挟まれ・巻き込まれ) oleh alat berputar, sabuk, atau pengumpan bahan.",
+       "Pakaian pas di lengan dan ujung kaki. Dekat mata gergaji/rol: jangan pakai sarung tangan, celemek, handuk; waspada tali dan pakaian longgar.",
+       "APD: helm, sepatu pengaman, penutup telinga, topi kerja, masker dan kacamata pelindung bila ada gas/debu. Rambut jangan keluar dari helm/topi."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 労働災害, 保護具, 巻き込まれ, 挟まれ."
+      ]
+     },
+     "jp": {
+      "core": "{木材|もくざい}{産業|さんぎょう}の{労働災害|ろうどうさいがい}による{死傷者|ししょうしゃ}は{年|ねん}に{約|やく}1,000{人|にん}で、{他|ほか}の{製造業|せいぞうぎょう}の4.4{倍|ばい}です。",
+      "points": [
+       "{事故|じこ}の{約半分|やくはんぶん}は「{切|き}れ・こすれ」と「{挟|はさ}まれ・{巻き込|まきこ}まれ」です。",
+       "のこ{歯|は}やローラのそばでは、{手袋|てぶくろ}、{前掛|まえかけ}け、タオルを{使|つか}いません。",
+       "ヘルメット、{安全靴|あんぜんぐつ}、{耳栓|みみせん}、{保護|ほご}メガネ、{防護|ぼうご}マスクなどを{正|ただ}しく{着|つ}けます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{労働災害|ろうどうさいがい}、{保護具|ほごぐ}、{巻き込|まきこ}まれ、{挟|はさ}まれ。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

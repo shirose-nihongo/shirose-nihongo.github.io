@@ -1,0 +1,422 @@
+{
+ "schema": 1,
+ "bidang": "wood-industry",
+ "source": "木材産業特定技能1号測定試験 学習用テキスト(第1版, 全国木材組合連合会, 2025-05) — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab4",
+  "no": 4,
+  "title": {
+   "id": "Mesin dan Peralatan Pabrik Kayu",
+   "jp": "{製造|せいぞう}{作業|さぎょう}で{使|つか}われる{主|おも}な{機械|きかい}・{装置|そうち}"
+  },
+  "intro": {
+   "id": "Nama dan fungsi mesin yang dipakai di tiap proses.",
+   "jp": "{各|かく}{工程|こうてい}で{使|つか}う{機械|きかい}・{装置|そうち}の{名前|なまえ}とはたらきを{学|まな}びます。"
+  },
+  "pages": [
+   51,
+   63
+  ],
+  "subs": [
+   {
+    "id": "b4s1",
+    "no": 1,
+    "title": {
+     "id": "Mesin Penggergajian",
+     "jp": "{製材|せいざい}の{機械|きかい}"
+    },
+    "pages": [
+     51,
+     54
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "バーカ (mesin pengupas kulit)"
+      },
+      {
+       "ul": [
+        "**リングバーカ**: kayu dikirim rantai; pisau di lengan cincin berputar mengupas.",
+        "**ヘッドバーカ**: kayu diputar; pisau putar di ujung lengan ditekan.",
+        "**チェーンバーカ**: kayu diputar; rantai/pemotong rantai ditekan."
+       ]
+      },
+      {
+       "h": "丸のこ盤 (gergaji bundar)"
+      },
+      {
+       "ul": [
+        "**ツイン丸のこ盤**: dua mata gergaji; menggergaji dua sisi sejajar sekaligus (untuk 正角 dari kayu kecil).",
+        "**エジャ**: membuang tepi bulat papan; ada single/double/multiple.",
+        "**リッパ**: menggergaji membujur dengan pengumpan rol/katerpilar; ada 押えローラ pencegah kayu terpental.",
+        "**クロスカットソー**: potong melintang untuk penentuan panjang. **トリマ**: banyak gergaji bundar memotong melintang bahan yang dikirim ke samping."
+       ]
+      },
+      {
+       "h": "帯のこ盤 (gergaji pita) dan 集じん機"
+      },
+      {
+       "ul": [
+        "**自動送材車付帯のこ盤**: 大割り・中割り. **テーブル帯のこ盤**: 中割り・小割り. **自動ローラ送り帯のこ盤**. **ツイン帯のこ盤**: dua mesin berhadapan.",
+        "**集じん機**: menyedot serbuk gergaji; tipe **サイクロン式** (gaya sentrifugal) dan **バグフィルター式** (filter)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "バーカ"
+      },
+      {
+       "ul": [
+        "バーカは{樹皮|じゅひ}を{取|と}る{機械|きかい}です。リングバーカ、ヘッドバーカ、チェーンバーカがあります。"
+       ]
+      },
+      {
+       "h": "{丸のこ盤|まるのこばん}"
+      },
+      {
+       "ul": [
+        "ツイン{丸のこ盤|まるのこばん}は、{材|ざい}の{両側|りょうがわ}を{同時|どうじ}に{縦|たて}びきします。",
+        "エジャは、{耳|みみ}つき{板|いた}の{耳|みみ}を{落|お}として、{決|き}まった{幅|はば}の{板|いた}にします。",
+        "リッパは、{材|ざい}を{縦|たて}びきする{丸のこ盤|まるのこばん}です。",
+        "クロスカットソーとトリマは、{材|ざい}を{横|よこ}びきして{長|なが}さを{決|き}めます。"
+       ]
+      },
+      {
+       "h": "{帯のこ盤|おびのこばん}と{集じん機|しゅうじんき}"
+      },
+      {
+       "ul": [
+        "{帯のこ盤|おびのこばん}は、{帯|おび}のこをかけて{動|うご}かし、{木材|もくざい}をひく{機械|きかい}です。",
+        "{集じん機|しゅうじんき}は、のこ{屑|くず}や{粉|こな}じんを{風|かぜ}の{力|ちから}で{集|あつ}める{機械|きかい}です。サイクロン{式|しき}とバグフィルター{式|しき}があります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "リングバーカ: kayu dikirim rantai; pisau di lengan cincin berputar mengupas.",
+      "points": [
+       "ヘッドバーカ: kayu diputar; pisau putar di ujung lengan ditekan.",
+       "チェーンバーカ: kayu diputar; rantai/pemotong rantai ditekan.",
+       "ツイン丸のこ盤: dua mata gergaji; menggergaji dua sisi sejajar sekaligus (untuk 正角 dari kayu kecil)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: バーカ, 丸のこ盤, エジャ, リッパ."
+      ]
+     },
+     "jp": {
+      "core": "バーカは{樹皮|じゅひ}を{取|と}る{機械|きかい}です。リングバーカ、ヘッドバーカ、チェーンバーカがあります。",
+      "points": [
+       "ツイン{丸のこ盤|まるのこばん}は、{材|ざい}の{両側|りょうがわ}を{同時|どうじ}に{縦|たて}びきします。",
+       "エジャは、{耳|みみ}つき{板|いた}の{耳|みみ}を{落|お}として、{決|き}まった{幅|はば}の{板|いた}にします。",
+       "リッパは、{材|ざい}を{縦|たて}びきする{丸のこ盤|まるのこばん}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：バーカ、{丸のこ盤|まるのこばん}、エジャ、リッパ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s2",
+    "no": 2,
+    "title": {
+     "id": "Mesin Kayu Laminasi",
+     "jp": "{集成材|しゅうせいざい}の{機械|きかい}"
+    },
+    "pages": [
+     54,
+     57
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**グレーディングマシン**: mengukur modulus Young dengan getaran pukulan atau beban. Tipe: **バッチ式**, **連続式** (paling umum di pabrik glulam; menyemprot warna sesuai kelas), **打撃振動方式**.",
+        "**フィンガカッタ**: memotong ujung lamina berbentuk jari; direkat memanjang.",
+        "**圧締機 (プレス)**: menekan lamina berperekat. Tipe 中・小断面: **コールドプレス** suhu ruang (30–60 menit). 大断面: perekat **レゾルシノール**, cold press atau **ねじ締め (clamp)** manual untuk lengkung (±12 jam); **高周波プレス** (≤ 30 menit). Musim dingin: tempat simpan harus hangat.",
+        "**プレーナ**: ketam putar; bisa 4 sisi sekaligus. **モルダ**: seperti プレーナ, mengatur tebal/lebar, bisa membuat alur dan profil."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "グレーディングマシンは、{木材|もくざい}の{ヤング係数|やんぐけいすう}をはかる{機械|きかい}です。{集成材|しゅうせいざい}{工場|こうじょう}では{連続式|れんぞくしき}がよく{使|つか}われます。",
+        "フィンガカッタは、ラミナの{端|はじ}を{指|ゆび}の{形|かたち}に{加工|かこう}する{機械|きかい}です。",
+        "{圧締機|あっていき}（プレス）は、{接着剤|せっちゃくざい}をぬったラミナを{圧力|あつりょく}でおさえる{機械|きかい}です。",
+        "{中|なか}・{小|しょう}{断面|だんめん}にはコールドプレス、{大断面|だいだんめん}にはレゾルシノール{接着剤|せっちゃくざい}を{使|つか}います。",
+        "プレーナは、{木材|もくざい}の{表面|ひょうめん}を{滑|なめ}らかにけずる{機械|きかい}です。",
+        "モルダは、4{面|めん}を{同時|どうじ}にけずって、{厚|あつ}さや{幅|はば}をととのえ、{溝|みぞ}{加工|かこう}もできます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "グレーディングマシン: mengukur modulus Young dengan getaran pukulan atau beban. Tipe: バッチ式, 連続式 (paling umum di pabrik glulam; menyemprot warna sesuai kelas), 打撃振動方式.",
+      "points": [
+       "フィンガカッタ: memotong ujung lamina berbentuk jari; direkat memanjang.",
+       "圧締機 (プレス): menekan lamina berperekat. Tipe 中・小断面: コールドプレス suhu ruang (30–60 menit). 大断面: perekat レゾルシノール, cold press atau ねじ締め (clamp) manual untuk lengkung (±12 jam); 高周波プレス (≤ 30 menit). Musim dingin: tempat simpan harus hangat.",
+       "プレーナ: ketam putar; bisa 4 sisi sekaligus. モルダ: seperti プレーナ, mengatur tebal/lebar, bisa membuat alur dan profil."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: グレーディングマシン, 連続式, フィンガカッタ, 圧締機."
+      ]
+     },
+     "jp": {
+      "core": "グレーディングマシンは、{木材|もくざい}の{ヤング係数|やんぐけいすう}をはかる{機械|きかい}です。{集成材|しゅうせいざい}{工場|こうじょう}では{連続式|れんぞくしき}がよく{使|つか}われます。",
+      "points": [
+       "フィンガカッタは、ラミナの{端|はじ}を{指|ゆび}の{形|かたち}に{加工|かこう}する{機械|きかい}です。",
+       "{圧締機|あっていき}（プレス）は、{接着剤|せっちゃくざい}をぬったラミナを{圧力|あつりょく}でおさえる{機械|きかい}です。",
+       "{中|なか}・{小|しょう}{断面|だんめん}にはコールドプレス、{大断面|だいだんめん}にはレゾルシノール{接着剤|せっちゃくざい}を{使|つか}います。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：グレーディングマシン、{連続式|れんぞくしき}、フィンガカッタ、{圧締機|あっていき}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s3",
+    "no": 3,
+    "title": {
+     "id": "Mesin Kayu Lapis, LVL, dan Veneer",
+     "jp": "{合板|ごうはん}・LVL・{ツキ板|つきいた}の{機械|きかい}"
+    },
+    "pages": [
+     58,
+     60
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**ロータリーレース**: pisau ditempelkan ke kayu bulat yang berputar → veneer menerus. Di Jepang banyak tipe **スピンドルレス** (kayu didukung rol, diputar oleh cakram bergigi **ガンギ**); bisa mengupas kayu berujung kecil (±14 cm).",
+        "**スライサ**: seperti ketam raksasa; フリッチ atau pisau bolak-balik → veneer hias. Pisau miring. **縦突き** (serat sejajar arah potong; untuk veneer tebal) dan **横突き**.",
+        "**ドライヤ**: veneer dijepit rol dan dikeringkan udara panas dari boiler.",
+        "**グルースプレッダ**: mengoleskan perekat dengan rol ke veneer yang dikirim otomatis.",
+        "**ダブルサイザ**: dua gergaji bundar paralel, memotong kedua ujung sekaligus (manual = ダブルソー). **サンダ**: amplas; **ワイドベルトサンダ** dan **ドラムサンダ**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "ロータリーレースは、{回転|かいてん}する{原木|げんぼく}に{刃物|はもの}を{当|あ}てて、うすい{単板|たんぱん}を{連続|れんぞく}してつくる{機械|きかい}です。",
+        "スライサは、フリッチを{刃物|はもの}でスライスして、{ツキ板|つきいた}をつくる{機械|きかい}です。",
+        "ドライヤは、{単板|たんぱん}を{熱風|ねっぷう}で{乾燥|かんそう}する{機械|きかい}です。",
+        "グルースプレッダは、{単板|たんぱん}に{接着剤|せっちゃくざい}をぬる{機械|きかい}です。",
+        "ダブルサイザは、{合板|ごうはん}の{両端|りょうたん}を{同時|どうじ}に{切|き}る{機械|きかい}です。",
+        "サンダは、{研磨|けんま}{布|ぬの}{紙|かみ}で{表面|ひょうめん}を{滑|なめ}らかにする{機械|きかい}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "ロータリーレース: pisau ditempelkan ke kayu bulat yang berputar → veneer menerus. Di Jepang banyak tipe スピンドルレス (kayu didukung rol, diputar oleh cakram bergigi ガンギ); bisa mengupas kayu berujung kecil (±14 cm).",
+      "points": [
+       "スライサ: seperti ketam raksasa; フリッチ atau pisau bolak-balik → veneer hias. Pisau miring. 縦突き (serat sejajar arah potong; untuk veneer tebal) dan 横突き.",
+       "ドライヤ: veneer dijepit rol dan dikeringkan udara panas dari boiler.",
+       "グルースプレッダ: mengoleskan perekat dengan rol ke veneer yang dikirim otomatis."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: ロータリーレース, スピンドルレス, スライサ, ドライヤ."
+      ]
+     },
+     "jp": {
+      "core": "ロータリーレースは、{回転|かいてん}する{原木|げんぼく}に{刃物|はもの}を{当|あ}てて、うすい{単板|たんぱん}を{連続|れんぞく}してつくる{機械|きかい}です。",
+      "points": [
+       "スライサは、フリッチを{刃物|はもの}でスライスして、{ツキ板|つきいた}をつくる{機械|きかい}です。",
+       "ドライヤは、{単板|たんぱん}を{熱風|ねっぷう}で{乾燥|かんそう}する{機械|きかい}です。",
+       "グルースプレッダは、{単板|たんぱん}に{接着剤|せっちゃくざい}をぬる{機械|きかい}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：ロータリーレース、スピンドルレス、スライサ、ドライヤ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s4",
+    "no": 4,
+    "title": {
+     "id": "Mesin Lantai Kayu",
+     "jp": "フローリングの{機械|きかい}"
+    },
+    "pages": [
+     60,
+     60
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**エンドテノーナ** (ほぞ取り盤): kayu dikirim rantai katerpilar; kedua ujung dipotong, dibentuk, dialur oleh banyak poros pisau; presisi tinggi.",
+        "**エンドマッチャ**: エンドテノーナ khusus untuk membuat sambungan memanjang di ujung (木口) papan lantai."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "エンドテノーナは、{左右|さゆう}の{両端|りょうたん}の{切断|せつだん}、{成形|せいけい}、{溝|みぞ}{加工|かこう}ができる{機械|きかい}です。ほぞ{取り盤|とりばん}ともいいます。",
+        "エンドマッチャは、フローリングボードの{木口|きぐち}に、たて{継|つ}ぎ{用|よう}の{加工|かこう}をする{専用|せんよう}のほぞ{取り盤|とりばん}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "エンドテノーナ (ほぞ取り盤): kayu dikirim rantai katerpilar; kedua ujung dipotong, dibentuk, dialur oleh banyak poros pisau; presisi tinggi.",
+      "points": [
+       "エンドマッチャ: エンドテノーナ khusus untuk membuat sambungan memanjang di ujung (木口) papan lantai."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: エンドテノーナ, ほぞ取り盤, エンドマッチャ."
+      ]
+     },
+     "jp": {
+      "core": "エンドテノーナは、{左右|さゆう}の{両端|りょうたん}の{切断|せつだん}、{成形|せいけい}、{溝|みぞ}{加工|かこう}ができる{機械|きかい}です。ほぞ{取り盤|とりばん}ともいいます。",
+      "points": [
+       "エンドマッチャは、フローリングボードの{木口|きぐち}に、たて{継|つ}ぎ{用|よう}の{加工|かこう}をする{専用|せんよう}のほぞ{取り盤|とりばん}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：エンドテノーナ、ほぞ{取り盤|とりばん}、エンドマッチャ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s5",
+    "no": 5,
+    "title": {
+     "id": "Mesin Chip Kayu",
+     "jp": "チップの{機械|きかい}"
+    },
+    "pages": [
+     61,
+     62
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**チッパ (chipper)**: mesin pembuat chip; tipe **ディスクチッパ** (pisau di cakram putar; paling umum) dan **ドラムチッパ** (rotor putar besar; memukul dan memotong sekaligus).",
+        "Pada ディスクチッパ: sudut lubang masuk menentukan sudut potong; pisau tetap **ベットナイフ (受刃)** harus diatur jaraknya dengan **チッパナイフ (切刃)**.",
+        "Ada juga chipper **bergerak** dan **terpasang di kendaraan**.",
+        "**チップスクリーン**: memisah chip menjadi **スリーバー** (terlalu besar), **ダスト** (terlalu kecil), dan **製品チップ** (ukuran standar). Tipe: putar, ayun, getar."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "チッパはチップをつくる{機械|きかい}です。ディスクチッパとドラムチッパがあります。",
+        "ディスクチッパは、{回転|かいてん}{円盤|えんばん}にチッパナイフをつけています。ベットナイフとの{間隔|かんかく}の{調整|ちょうせい}が{必要|ひつよう}です。",
+        "チップスクリーンは、チップをスリーバー、ダスト、{製品|せいひん}チップにふるい{分|わ}ける{機械|きかい}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "チッパ (chipper): mesin pembuat chip; tipe ディスクチッパ (pisau di cakram putar; paling umum) dan ドラムチッパ (rotor putar besar; memukul dan memotong sekaligus).",
+      "points": [
+       "Pada ディスクチッパ: sudut lubang masuk menentukan sudut potong; pisau tetap ベットナイフ (受刃) harus diatur jaraknya dengan チッパナイフ (切刃).",
+       "Ada juga chipper bergerak dan terpasang di kendaraan.",
+       "チップスクリーン: memisah chip menjadi スリーバー (terlalu besar), ダスト (terlalu kecil), dan 製品チップ (ukuran standar). Tipe: putar, ayun, getar."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: チッパ, ディスクチッパ, ドラムチッパ, チッパナイフ."
+      ]
+     },
+     "jp": {
+      "core": "チッパはチップをつくる{機械|きかい}です。ディスクチッパとドラムチッパがあります。",
+      "points": [
+       "ディスクチッパは、{回転|かいてん}{円盤|えんばん}にチッパナイフをつけています。ベットナイフとの{間隔|かんかく}の{調整|ちょうせい}が{必要|ひつよう}です。",
+       "チップスクリーンは、チップをスリーバー、ダスト、{製品|せいひん}チップにふるい{分|わ}ける{機械|きかい}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：チッパ、ディスクチッパ、ドラムチッパ、チッパナイフ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s6",
+    "no": 6,
+    "title": {
+     "id": "Mesin Precut",
+     "jp": "プレカットの{機械|きかい}"
+    },
+    "pages": [
+     62,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**横架材・柱材加工ライン**: lini untuk 土台・梁桁 (横架材) dan 柱・束 (柱材). Kayu bergerak di lini; **6 sisi** (atas, bawah, samping, ujung) dikerjakan. Pada poros terpasang **チップソー, 角ノミ, ドリル, カッター**.",
+        "**金物工法専用加工ライン**: metode sambungan dengan **logam khusus**; pengerjaan alur (スリット) dan lubang pemasangan; kadang mengganti alat di lini biasa.",
+        "**羽柄材加工機**: untuk 羽柄材 (間柱, 垂木, 根太) penampang kecil, bentuk sederhana, jumlah besar; bisa memilih alat otomatis.",
+        "**合板加工機**: memproses kayu lapis atap/lantai/dinding sesuai bentuk; poros gergaji dan poros router; bisa potongan takik (切欠き)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{横架材|おうかざい}{加工|かこう}ラインでは{土台|どだい}やはり、{柱材|はしらざい}{加工|かこう}ラインでは{柱|はしら}や{束|そく}を{加工|かこう}します。",
+        "{材|ざい}は、ラインの{上|うえ}を{移動|いどう}しながら、6{面|めん}が{加工|かこう}されます。",
+        "{金物工法|かなものこうほう}は、{柱|はしら}やはりの{接合部|せつごうぶ}を、{特別|とくべつ}な{金物|かなもの}で{接合|せつごう}する{工法|こうほう}です。",
+        "{羽柄材|はがらざい}{加工|かこう}{機|き}は、{間柱|まばしら}や{垂木|たるき}などの{小|ちー}さい{部材|ぶざい}を{大量|たいりょう}に{加工|かこう}します。",
+        "{合板|ごうはん}{加工|かこう}{機|き}は、{合板|ごうはん}を{形|かたち}に{合|あ}わせて{切断|せつだん}したり、{切欠|きりか}き{加工|かこう}をしたりします。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "横架材・柱材加工ライン: lini untuk 土台・梁桁 (横架材) dan 柱・束 (柱材). Kayu bergerak di lini; 6 sisi (atas, bawah, samping, ujung) dikerjakan. Pada poros terpasang チップソー, 角ノミ, ドリル, カッター.",
+      "points": [
+       "金物工法専用加工ライン: metode sambungan dengan logam khusus; pengerjaan alur (スリット) dan lubang pemasangan; kadang mengganti alat di lini biasa.",
+       "羽柄材加工機: untuk 羽柄材 (間柱, 垂木, 根太) penampang kecil, bentuk sederhana, jumlah besar; bisa memilih alat otomatis.",
+       "合板加工機: memproses kayu lapis atap/lantai/dinding sesuai bentuk; poros gergaji dan poros router; bisa potongan takik (切欠き)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 横架材, 柱材, 金物工法, 羽柄材."
+      ]
+     },
+     "jp": {
+      "core": "{横架材|おうかざい}{加工|かこう}ラインでは{土台|どだい}やはり、{柱材|はしらざい}{加工|かこう}ラインでは{柱|はしら}や{束|そく}を{加工|かこう}します。",
+      "points": [
+       "{材|ざい}は、ラインの{上|うえ}を{移動|いどう}しながら、6{面|めん}が{加工|かこう}されます。",
+       "{金物工法|かなものこうほう}は、{柱|はしら}やはりの{接合部|せつごうぶ}を、{特別|とくべつ}な{金物|かなもの}で{接合|せつごう}する{工法|こうほう}です。",
+       "{羽柄材|はがらざい}{加工|かこう}{機|き}は、{間柱|まばしら}や{垂木|たるき}などの{小|ちー}さい{部材|ぶざい}を{大量|たいりょう}に{加工|かこう}します。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{横架材|おうかざい}、{柱材|はしらざい}、{金物工法|かなものこうほう}、{羽柄材|はがらざい}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -2,6 +2,7 @@
  "dibuat": "2026-11-17",
  "catatan": "Angka dihitung dari data/ssw oleh tools/ssw/stats.py.",
  "pdf_di_repo": [
+  "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf",
   "assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf",
   "assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf"
  ],
@@ -213,20 +214,33 @@
    "diagram": 5,
    "soal": 36,
    "soal_bergambar": 0
+  },
+  {
+   "slug": "wood-industry",
+   "sumber": "木材産業特定技能1号測定試験 学習用テキスト 第1版 (全国木材組合連合会 / 林野庁, 2025-05, 67 hal.) — https://www.rinya.maff.go.jp/j/mokusan/seisankakou/foreigner.html",
+   "lisensi_catatan": "PDF resmi tersedia gratis dari situs林野庁; PDF disimpan di assets/ssw/wood-industry/pdf/; isi di app = ringkasan & soal latihan ditulis ulang Shirose (bukan salinan)",
+   "status": "selesai (4 bab, 24 subbab); belum ada kartu gambar/diagram; soal resmi tidak tersedia",
+   "bab": 4,
+   "subbab": 24,
+   "kosakata": 168,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 110,
+   "soal_bergambar": 0
   }
  ],
  "total": {
-  "bab": 78,
-  "sub": 350,
-  "vocab": 23812,
+  "bab": 82,
+  "sub": 374,
+  "vocab": 23980,
   "kartu_gambar": 188,
-  "grup": 699,
-  "soal": 7968,
+  "grup": 728,
+  "soal": 8078,
   "soal_img": 414,
   "diagram": 21,
   "bagian": 148,
-  "gambar": 3916,
+  "gambar": 3917,
   "halaman": 0
  },
- "flashcard_total": 24000
+ "flashcard_total": 24168
 }

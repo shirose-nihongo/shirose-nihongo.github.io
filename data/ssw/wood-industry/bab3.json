@@ -1,0 +1,470 @@
+{
+ "schema": 1,
+ "bidang": "wood-industry",
+ "source": "木材産業特定技能1号測定試験 学習用テキスト(第1版, 全国木材組合連合会, 2025-05) — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab3",
+  "no": 3,
+  "title": {
+   "id": "Proses Pembuatan Tiap Produk",
+   "jp": "{各製品|かくせいひん}の{製造工程|せいぞうこうてい}"
+  },
+  "intro": {
+   "id": "Urutan kerja dari kayu gelondongan sampai produk jadi untuk setiap jenis produk.",
+   "jp": "{丸太|まるた}から{製品|せいひん}になるまでの{作業|さぎょう}の{流|なが}れを、{製品|せいひん}ごとに{学|まな}びます。"
+  },
+  "pages": [
+   31,
+   50
+  ],
+  "subs": [
+   {
+    "id": "b3s1",
+    "no": 1,
+    "title": {
+     "id": "Proses Penggergajian (製材)",
+     "jp": "{製材|せいざい}の{工程|こうてい}"
+    },
+    "pages": [
+     31,
+     33
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**はく皮 (pengupasan kulit)** dengan **バーカ**: melindungi mata gergaji dari kulit dan tanah, memudahkan 木取り, dan agar chip bebas kulit.",
+        "**木取り**: memutuskan bagian mana produk apa yang digergaji. Sangat penting karena mengubah **歩止り** (rasio volume produk ÷ volume kayu bulat) dan nilai.",
+        "**製材**: 大割り (kayu bulat → 仕掛材 seperti フリッチ), 中割り, 小割り. **耳すり** (potong sisi bulat; mesin エジャ) dan **横切り** (tentukan panjang; トリマ/クロスカットソー).",
+        "**乾燥**: kayu basah menyusut, bengkok, retak → keringkan sesuai lingkungan pakai. **天然乾燥** (桟積み di luar, beratap, tegak lurus arah angin; lambat) dan **人工乾燥** (mesin pengering dengan 乾燥スケジュール; tipe **蒸気式** paling umum).",
+        "**選別・結束・出荷**: sortir menurut ukuran/kelas/kegunaan, ikat, bungkus plastik, kirim."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "はく{皮|ひ}は、バーカで{丸太|まるた}の{樹皮|じゅひ}を{取|と}ることです。のこ{歯|は}を{守|まも}り、{木取|きど}りをしやすくします。",
+        "{木取|きど}りは、{丸太|まるた}のどこからどんな{製材品|せいざいひん}をひくか{決|き}めることです。{歩止|ぶどま}りや{価値|かち}が{大|おお}きく{変|か}わります。",
+        "{製材|せいざい}は、{大割|おおわ}り、{中割|なかわ}り、{小割|こわ}りの{順|じゅん}に{丸太|まるた}をひいていきます。",
+        "{耳|みみ}すりで{幅|はば}を{決|き}め、{横切|よこぎ}りで{長|なが}さを{決|き}めます。",
+        "{木材|もくざい}は{乾燥|かんそう}させます。{天然乾燥|てんねんかんそう}と{人工乾燥|じんこうかんそう}があり、{蒸気式|じょうきしき}の{乾燥機|かんそうき}が{一般的|いっぱんてき}です。",
+        "{最後|さいご}に{選別|せんべつ}、{結束|けっそく}をして、ビニールで{包|つつ}んで{出荷|しゅっか}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "はく皮 (pengupasan kulit) dengan バーカ: melindungi mata gergaji dari kulit dan tanah, memudahkan 木取り, dan agar chip bebas kulit.",
+      "points": [
+       "木取り: memutuskan bagian mana produk apa yang digergaji. Sangat penting karena mengubah 歩止り (rasio volume produk ÷ volume kayu bulat) dan nilai.",
+       "製材: 大割り (kayu bulat → 仕掛材 seperti フリッチ), 中割り, 小割り. 耳すり (potong sisi bulat; mesin エジャ) dan 横切り (tentukan panjang; トリマ/クロスカットソー).",
+       "乾燥: kayu basah menyusut, bengkok, retak → keringkan sesuai lingkungan pakai. 天然乾燥 (桟積み di luar, beratap, tegak lurus arah angin; lambat) dan 人工乾燥 (mesin pengering dengan 乾燥スケジュール; tipe 蒸気式 paling umum)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: はく皮, 木取り, 歩止り, 大割り."
+      ]
+     },
+     "jp": {
+      "core": "はく{皮|ひ}は、バーカで{丸太|まるた}の{樹皮|じゅひ}を{取|と}ることです。のこ{歯|は}を{守|まも}り、{木取|きど}りをしやすくします。",
+      "points": [
+       "{木取|きど}りは、{丸太|まるた}のどこからどんな{製材品|せいざいひん}をひくか{決|き}めることです。{歩止|ぶどま}りや{価値|かち}が{大|おお}きく{変|か}わります。",
+       "{製材|せいざい}は、{大割|おおわ}り、{中割|なかわ}り、{小割|こわ}りの{順|じゅん}に{丸太|まるた}をひいていきます。",
+       "{耳|みみ}すりで{幅|はば}を{決|き}め、{横切|よこぎ}りで{長|なが}さを{決|き}めます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：はく{皮|ひ}、{木取|きど}り、{歩止|ぶどま}り、{大割|おおわ}り。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s2",
+    "no": 2,
+    "title": {
+     "id": "Proses Kayu Laminasi",
+     "jp": "{集成材|しゅうせいざい}の{工程|こうてい}"
+    },
+    "pages": [
+     34,
+     37
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**原材料**: ラミナ; sekitar separuh glulam Jepang memakai lamina kering impor (terutama Eropa).",
+        "**含水率検査・予備切削**: lamina harus **kadar air ≤ 15%** (diukur alat microwave); ukuran dirapikan dengan **モルダ**.",
+        "**等級区分 (grading)**: dipilah menurut kekuatan memakai **グレーディングマシン** (modulus Young).",
+        "**たて継ぎ** (sambung memanjang, biasanya **フィンガジョイント**) dan **幅はぎ** (rekat melebar).",
+        "**ラミナの切削**: haluskan permukaan dengan **プレーナ**.",
+        "**仕組み**: susun lamina; sambungan finger yang bersebelahan harus **berjarak ≥ 15 cm**. **同一等級構成** vs **異等級構成** (kelas modulus tinggi di luar; dipakai untuk balok).",
+        "**積層接着**: olesi perekat, tumpuk, tekan (perekat: isosianat polimer berbasis air, resorsinol).",
+        "**仕上げ・検査**: ketam keempat sisi dengan プレーナ; periksa tampilan; lubang mata kayu ditutup resin."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{集成材|しゅうせいざい}の{原料|げんりょう}はラミナです。{約半分|やくはんぶん}は{海外|かいがい}の{乾燥|かんそう}ずみのラミナです。",
+        "ラミナの{含水率|がんすいりつ}は15%{以下|いか}でなければなりません。",
+        "グレーディングマシンで、{強|つよ}さごとに{等級区分|とうきゅうくぶん}をします。",
+        "{短|みじか}いラミナはフィンガジョイントでたて{継|つ}ぎをして、{幅|はば}が{足|た}りないときは{幅|はば}はぎをします。",
+        "{仕組|しく}みでは、フィンガジョイントのつぎ{目|め}を15cm{以上|いじょう}ずらします。",
+        "{接着剤|せっちゃくざい}をぬって{重|おも}ね、{圧力|あつりょく}をかけて{積層接着|せきそうせっちゃく}します。{最後|さいご}にプレーナで{仕上|しあ}げます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "原材料: ラミナ; sekitar separuh glulam Jepang memakai lamina kering impor (terutama Eropa).",
+      "points": [
+       "含水率検査・予備切削: lamina harus kadar air ≤ 15% (diukur alat microwave); ukuran dirapikan dengan モルダ.",
+       "等級区分 (grading): dipilah menurut kekuatan memakai グレーディングマシン (modulus Young).",
+       "たて継ぎ (sambung memanjang, biasanya フィンガジョイント) dan 幅はぎ (rekat melebar)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 含水率検査, 等級区分, たて継ぎ, 幅はぎ."
+      ]
+     },
+     "jp": {
+      "core": "{集成材|しゅうせいざい}の{原料|げんりょう}はラミナです。{約半分|やくはんぶん}は{海外|かいがい}の{乾燥|かんそう}ずみのラミナです。",
+      "points": [
+       "ラミナの{含水率|がんすいりつ}は15%{以下|いか}でなければなりません。",
+       "グレーディングマシンで、{強|つよ}さごとに{等級区分|とうきゅうくぶん}をします。",
+       "{短|みじか}いラミナはフィンガジョイントでたて{継|つ}ぎをして、{幅|はば}が{足|た}りないときは{幅|はば}はぎをします。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{含水率検査|がんすいりつけんさ}、{等級区分|とうきゅうくぶん}、たて{継|つ}ぎ、{幅|はば}はぎ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s3",
+    "no": 3,
+    "title": {
+     "id": "Proses Kayu Lapis dan LVL",
+     "jp": "{合板|ごうはん}・LVLの{工程|こうてい}"
+    },
+    "pages": [
+     38,
+     41
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**原木の処理**: kupas kulit (バーカ), potong sesuai panjang (玉切り), **蒸煮** (rebus uap agar mudah disayat); cek dan buang logam yang menempel.",
+        "**切削**: pakai **ロータリーレース**; tentukan pusat putar dengan **チャージャ**; veneer tebal **0,6–5,0 mm**; **クリッパ** membuang cacat dan memotong panjang.",
+        "**単板の乾燥**: dengan **ドライヤ** sampai kadar air ±**10%**; suhu naik 160–180 ℃.",
+        "**調板**: perbaiki cacat, 幅はぎ, pilah menjadi **フェイス (muka)**, **バック (belakang)**, **中板** (センターコア, クロスバンド). **仕組み**: serat **saling tegak lurus**; mesin **ベニヤセッタ**.",
+        "**接着**: oles perekat dengan **グルースプレッダ**; jumlah lapis **ganjil** (3, 5, 7). Struktural: perekat **fenol**; interior/furnitur: **melamin / urea**.",
+        "**冷圧** (cold press, suhu ruang, ±20 menit) lalu **熱圧** (hot press 110–135 ℃, 8–12 kgf/cm²). Setelah itu **養生** 3–7 hari.",
+        "**寸法裁断・研磨仕上げ・検査**: **ダブルサイザ**, **サンダ**, **プレーナ**; hanya yang lulus inspeksi yang dikirim."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{原木|げんぼく}は、{樹皮|じゅひ}を{取|と}り、{蒸煮|じょうしゃ}をして{切削|せっさく}しやすくします。",
+        "ロータリーレースで{丸太|まるた}をうすくけずり、0.6〜5.0mmの{単板|たんぱん}にします。",
+        "{単板|たんぱん}は、ドライヤで{含水率|がんすいりつ}10%ほどまで{乾燥|かんそう}させます。",
+        "{調板|ちょうばん}では、{単板|たんぱん}を{選別|せんべつ}して、{繊維|せんい}{方向|ほうこう}を{直角|ちょっかく}にして{組み合|くみあ}わせます。これを{仕組|しく}みといいます。",
+        "{接着剤|せっちゃくざい}をぬって、3{枚|まい}、5{枚|まい}、7{枚|まい}など{奇数|きすう}{枚|まい}をはり{合|あ}わせます。",
+        "{冷圧|れいあつ}のあとに{熱圧|ねつあつ}をして、そのあと{養生|ようじょう}します。",
+        "ダブルサイザで{切|き}って、サンダで{研磨|けんま}し、{検査|けんさ}に{合格|ごうかく}したものを{出荷|しゅっか}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "原木の処理: kupas kulit (バーカ), potong sesuai panjang (玉切り), 蒸煮 (rebus uap agar mudah disayat); cek dan buang logam yang menempel.",
+      "points": [
+       "切削: pakai ロータリーレース; tentukan pusat putar dengan チャージャ; veneer tebal 0,6–5,0 mm; クリッパ membuang cacat dan memotong panjang.",
+       "単板の乾燥: dengan ドライヤ sampai kadar air ±10%; suhu naik 160–180 ℃.",
+       "調板: perbaiki cacat, 幅はぎ, pilah menjadi フェイス (muka), バック (belakang), 中板 (センターコア, クロスバンド). 仕組み: serat saling tegak lurus; mesin ベニヤセッタ."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 蒸煮, 玉切り, 生単板, 調板."
+      ]
+     },
+     "jp": {
+      "core": "{原木|げんぼく}は、{樹皮|じゅひ}を{取|と}り、{蒸煮|じょうしゃ}をして{切削|せっさく}しやすくします。",
+      "points": [
+       "ロータリーレースで{丸太|まるた}をうすくけずり、0.6〜5.0mmの{単板|たんぱん}にします。",
+       "{単板|たんぱん}は、ドライヤで{含水率|がんすいりつ}10%ほどまで{乾燥|かんそう}させます。",
+       "{調板|ちょうばん}では、{単板|たんぱん}を{選別|せんべつ}して、{繊維|せんい}{方向|ほうこう}を{直角|ちょっかく}にして{組み合|くみあ}わせます。これを{仕組|しく}みといいます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{蒸煮|じょうしゃ}、{玉切|たまぎ}り、{生単板|なまたんぱん}、{調板|ちょうばん}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s4",
+    "no": 4,
+    "title": {
+     "id": "Proses Veneer Hias",
+     "jp": "{ツキ板|つきいた}の{工程|こうてい}"
+    },
+    "pages": [
+     42,
+     44
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Bahan: kayu **bagus** (diameter besar, serat dan warna bagus) dari dalam dan luar negeri.",
+        "**製材**: dipotong menjadi blok **フリッチ** sambil memeriksa arah serat dan cacat.",
+        "**煮沸**: rebus フリッチ di air **40–90 ℃** agar lunak; kadar air seragam, getah keluar, warna bagus.",
+        "**切削**: **スライサ** atau ロータリーレース → tebal **0,2–3,0 mm** (di Jepang umumnya **0,2 mm**). Sayatan singgung = **板目**, tegak lurus = **柾目**; rotary = **杢目**.",
+        "**乾燥**: alami, udara panas, rol, **高周波 (frekuensi tinggi, paling banyak)**.",
+        "**Penempelan** umumnya manual oleh ahli: olesi perekat rata, susun tanpa celah/tumpang tindih. Pola: **ブックマッチ** (dibalik tiap lembar), **スリップマッチ** (searah), 矢羽根貼り, ダイヤモンド貼り."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{ツキ板|つきいた}の{原木|げんぼく}は、{太|ふと}くて、{木目|もくめ}や{色|いろ}つやのよい{木|き}を{使|つか}います。",
+        "{製材所|せいざいしょ}でフリッチというブロックにして、40〜90℃のお{湯|ゆ}で{煮沸|しゃふつ}します。",
+        "スライサなどで、0.2〜3.0mmの{厚|あつ}さにけずります。{日本|にっぽん}では0.2mmが{主流|しゅりゅう}です。",
+        "{接線方向|せっせんほうこう}にスライスすると{板目|いため}、{直角方向|ちょっかくほうこう}にスライスすると{柾目|まさめ}になります。",
+        "{乾燥|かんそう}は{高周波乾燥|こうしゅうはかんそう}がいちばん{多|おお}いです。",
+        "{接着|せっちゃく}は、ふつう{熟練者|じゅくれんしゃ}が{手作業|てさぎょう}で{行|おこな}います。{貼|は}り{方|ほう}には、ブックマッチやスリップマッチなどがあります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bahan: kayu bagus (diameter besar, serat dan warna bagus) dari dalam dan luar negeri.",
+      "points": [
+       "製材: dipotong menjadi blok フリッチ sambil memeriksa arah serat dan cacat.",
+       "煮沸: rebus フリッチ di air 40–90 ℃ agar lunak; kadar air seragam, getah keluar, warna bagus.",
+       "切削: スライサ atau ロータリーレース → tebal 0,2–3,0 mm (di Jepang umumnya 0,2 mm). Sayatan singgung = 板目, tegak lurus = 柾目; rotary = 杢目."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: フリッチ, 煮沸, スライス, 杢目."
+      ]
+     },
+     "jp": {
+      "core": "{ツキ板|つきいた}の{原木|げんぼく}は、{太|ふと}くて、{木目|もくめ}や{色|いろ}つやのよい{木|き}を{使|つか}います。",
+      "points": [
+       "{製材所|せいざいしょ}でフリッチというブロックにして、40〜90℃のお{湯|ゆ}で{煮沸|しゃふつ}します。",
+       "スライサなどで、0.2〜3.0mmの{厚|あつ}さにけずります。{日本|にっぽん}では0.2mmが{主流|しゅりゅう}です。",
+       "{接線方向|せっせんほうこう}にスライスすると{板目|いため}、{直角方向|ちょっかくほうこう}にスライスすると{柾目|まさめ}になります。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：フリッチ、{煮沸|しゃふつ}、スライス、{杢目|もくめ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s5",
+    "no": 5,
+    "title": {
+     "id": "Proses Lantai Kayu",
+     "jp": "フローリングの{工程|こうてい}"
+    },
+    "pages": [
+     45,
+     46
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**合板の検品・調整**: dasar kayu lapis ±9 mm; cek ketebalan dan rekat, sesuaikan dengan サンダ.",
+        "**MDF・単板の接着**: MDF ±3 mm lalu veneer atau olefin direkat; tekan dengan **ホットプレス**. Perekat: poliuretan / epoksi.",
+        "**寸法裁断**: potong dengan gergaji bundar/pita ke ukuran umum **300 × 1800 mm**.",
+        "**表面加工**: buat alur permukaan dengan **ルータ** atau pisau alur.",
+        "**実加工**: sisi dibuat tonjolan (**オス実**) dan cekungan (**メス実**) agar papan saling mengunci; mesin **エンドテノーナ**, モルダ.",
+        "**着色・塗装**: dengan **ロールコータ** atau **フローコータ**; cat dikeraskan dengan **sinar UV**. Lembar olefin sudah dicat, jadi tidak dicat lagi."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{複合フローリング|ふくごうふろーりんぐ}は、{厚|あつ}さ9mmほどの{合板|ごうはん}を{基材|きざい}にします。",
+        "{合板|ごうはん}にMDFをはり、その{上|うえ}に{ツキ板|つきいた}やオレフィンシートをはって、ホットプレスで{圧締|あってい}します。",
+        "{丸のこ盤|まるのこばん}や{帯のこ盤|おびのこばん}で、300mm×1800mmに{裁断|さいだん}します。",
+        "ルータなどで、{表面|ひょうめん}に{溝|みぞ}を{加工|かこう}します。",
+        "{側面|そくめん}に{オス実|おすざね}と{メス実|めすざね}を{加工|かこう}して、{板|いた}{同士|どうし}を{連結|れんけつ}します。",
+        "ロールコータなどで{塗装|とそう}し、{紫外線|しがいせん}で{塗膜|とまく}をかたくします。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "合板の検品・調整: dasar kayu lapis ±9 mm; cek ketebalan dan rekat, sesuaikan dengan サンダ.",
+      "points": [
+       "MDF・単板の接着: MDF ±3 mm lalu veneer atau olefin direkat; tekan dengan ホットプレス. Perekat: poliuretan / epoksi.",
+       "寸法裁断: potong dengan gergaji bundar/pita ke ukuran umum 300 × 1800 mm.",
+       "表面加工: buat alur permukaan dengan ルータ atau pisau alur."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 実加工, オス実, メス実, ルータ."
+      ]
+     },
+     "jp": {
+      "core": "{複合フローリング|ふくごうふろーりんぐ}は、{厚|あつ}さ9mmほどの{合板|ごうはん}を{基材|きざい}にします。",
+      "points": [
+       "{合板|ごうはん}にMDFをはり、その{上|うえ}に{ツキ板|つきいた}やオレフィンシートをはって、ホットプレスで{圧締|あってい}します。",
+       "{丸のこ盤|まるのこばん}や{帯のこ盤|おびのこばん}で、300mm×1800mmに{裁断|さいだん}します。",
+       "ルータなどで、{表面|ひょうめん}に{溝|みぞ}を{加工|かこう}します。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{実加工|さねかこう}、{オス実|おすざね}、{メス実|めすざね}、ルータ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s6",
+    "no": 6,
+    "title": {
+     "id": "Proses Chip Kayu",
+     "jp": "チップの{工程|こうてい}"
+    },
+    "pages": [
+     47,
+     48
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**樹皮・異物の除去**: chip kertas — kulit dikupas dengan バーカ; chip bahan bakar — biasanya **tanpa dikupas**. Dari kayu bongkaran: buang **batu, beton, logam** dulu; paku/baut kecil dibuang setelah jadi chip dengan **マグネットセパレータ**.",
+        "**切削・破砕**: **切削チップ** (disayat pisau, bentuk kepingan persegi) dan **破砕チップ** (dipukul ハンマークラッシャ, bentuk pin panjang tipis).",
+        "**選別**: ayak dengan **チップスクリーン**.",
+        "**保管**: **サイロ** atau **野積み**. Waspada **panas dan terbakar sendiri** akibat mikroba. Sebelum masuk silo: **ventilasi** dahulu (kekurangan oksigen, jamur, debu)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{製紙|せいし}{用|よう}チップはバーカで{樹皮|じゅひ}を{取|と}ります。{燃料|ねんりょう}{用|よう}は、{樹皮|じゅひ}をつけたままチップにするのが{一般的|いっぱんてき}です。",
+        "{解体|かいたい}{材|ざい}は、{石|いし}、コンクリート、{金属|きんぞく}などの{異物|いぶつ}を{先|さき}に{取り除|とりのぞ}きます。",
+        "チッパナイフでけずったものを{切削チップ|せっさくちっぷ}、ハンマークラッシャでくだいたものを{破砕チップ|はさいちっぷ}といいます。",
+        "チップスクリーンで、{大|おお}きさごとに{選別|せんべつ}します。",
+        "{保管|ほかん}では、{発熱|はつねつ}による{自然発火|しぜんはっか}に{注意|ちゅうい}します。サイロに{入|い}る{前|まえ}に、{十分|じゅうぶん}に{換気|かんき}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "樹皮・異物の除去: chip kertas — kulit dikupas dengan バーカ; chip bahan bakar — biasanya tanpa dikupas. Dari kayu bongkaran: buang batu, beton, logam dulu; paku/baut kecil dibuang setelah jadi chip dengan マグネットセパレータ.",
+      "points": [
+       "切削・破砕: 切削チップ (disayat pisau, bentuk kepingan persegi) dan 破砕チップ (dipukul ハンマークラッシャ, bentuk pin panjang tipis).",
+       "選別: ayak dengan チップスクリーン.",
+       "保管: サイロ atau 野積み. Waspada panas dan terbakar sendiri akibat mikroba. Sebelum masuk silo: ventilasi dahulu (kekurangan oksigen, jamur, debu)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 切削チップ, 破砕チップ, 異物, マグネットセパレータ."
+      ]
+     },
+     "jp": {
+      "core": "{製紙|せいし}{用|よう}チップはバーカで{樹皮|じゅひ}を{取|と}ります。{燃料|ねんりょう}{用|よう}は、{樹皮|じゅひ}をつけたままチップにするのが{一般的|いっぱんてき}です。",
+      "points": [
+       "{解体|かいたい}{材|ざい}は、{石|いし}、コンクリート、{金属|きんぞく}などの{異物|いぶつ}を{先|さき}に{取り除|とりのぞ}きます。",
+       "チッパナイフでけずったものを{切削チップ|せっさくちっぷ}、ハンマークラッシャでくだいたものを{破砕チップ|はさいちっぷ}といいます。",
+       "チップスクリーンで、{大|おお}きさごとに{選別|せんべつ}します。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{切削チップ|せっさくちっぷ}、{破砕チップ|はさいちっぷ}、{異物|いぶつ}、マグネットセパレータ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s7",
+    "no": 7,
+    "title": {
+     "id": "Proses Precut",
+     "jp": "プレカットの{工程|こうてい}"
+    },
+    "pages": [
+     49,
+     50
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Banyak pabrik memakai sistem **CAD/CAM**: data desain rumah → otomatis menjadi data pengerjaan komponen → mesin kontrol komputer.",
+        "**原材料・品質検査**: memakai **kayu kering atau glulam** (agar tak berubah ukuran/terpuntir). Periksa jenis, ukuran, retak, lengkung, kadar air.",
+        "**CAD入力**: **CAD** = bantuan desain komputer; buat data ukuran komponen dan bentuk 継手・仕口.",
+        "**部材の加工**: **CAM** = bantuan manufaktur komputer; presisi **kurang dari 1 mm**.",
+        "**検品・梱包・出荷**: periksa kesesuaian data, kemas per bangunan, muat truk sesuai **urutan perakitan**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "プレカット{工場|こうじょう}では、CAD/CAMシステムが{使|つか}われています。",
+        "プレカットでは、{乾燥材|かんそうざい}や{集成材|しゅうせいざい}を{使|つか}うことが{増|ふ}えています。",
+        "CADは、コンピュータによる{設計支援|せっけいしえん}です。",
+        "CAMは、コンピュータによる{製造|せいぞう}{支援|しえん}で、{誤差|ごさ}1mm{以下|いか}で{部材|ぶざい}を{加工|かこう}します。",
+        "{加工|かこう}した{部材|ぶざい}は{検品|けんぴん}して、1{棟|とう}ごとに{梱包|こんぽう}し、{組み立|くみた}てる{順番|じゅんばん}に{合|あ}わせてトラックに{積|つ}みます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Banyak pabrik memakai sistem CAD/CAM: data desain rumah → otomatis menjadi data pengerjaan komponen → mesin kontrol komputer.",
+      "points": [
+       "原材料・品質検査: memakai kayu kering atau glulam (agar tak berubah ukuran/terpuntir). Periksa jenis, ukuran, retak, lengkung, kadar air.",
+       "CAD入力: CAD = bantuan desain komputer; buat data ukuran komponen dan bentuk 継手・仕口.",
+       "部材の加工: CAM = bantuan manufaktur komputer; presisi kurang dari 1 mm."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: CAD, CAM, 検品, 梱包."
+      ]
+     },
+     "jp": {
+      "core": "プレカット{工場|こうじょう}では、CAD/CAMシステムが{使|つか}われています。",
+      "points": [
+       "プレカットでは、{乾燥材|かんそうざい}や{集成材|しゅうせいざい}を{使|つか}うことが{増|ふ}えています。",
+       "CADは、コンピュータによる{設計支援|せっけいしえん}です。",
+       "CAMは、コンピュータによる{製造|せいぞう}{支援|しえん}で、{誤差|ごさ}1mm{以下|いか}で{部材|ぶざい}を{加工|かこう}します。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：CAD、CAM、{検品|けんぴん}、{梱包|こんぽう}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}
