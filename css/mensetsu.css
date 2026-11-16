@@ -131,3 +131,17 @@
 .pp-big{font-size:clamp(22px,5vw,32px); font-weight:800; margin:10px 0;} .pp-prog{color:var(--gray); font-size:13px;}
 .pp-fil{display:flex; gap:6px; flex-wrap:wrap;}
 @media (max-width:640px){ .pp-chk{grid-template-columns:1fr;} .pp-ih{flex-wrap:wrap;} .pp-tts select{max-width:100%;} }
+
+/* ---- simulasi wawancara suara ---- */
+.ms-wrap ruby rt{font-size:.55em;letter-spacing:0}
+.ms-b-ja ruby{ruby-position:over}
+.ms-mic{width:56px;height:56px;border-radius:50%;border:2px solid var(--line,#ccc);background:#fff;font-size:26px;cursor:pointer}
+.ms-mic.on{background:#e53935;border-color:#e53935;animation:mwpulse 1s infinite}
+@keyframes mwpulse{50%{box-shadow:0 0 0 10px rgba(229,57,53,.2)}}
+.ms-status{display:inline-block;font-size:12px;padding:2px 10px;border-radius:99px;background:rgba(0,0,0,.08);margin-top:4px}
+.ms-status[data-ph="listening"]{background:#e53935;color:#fff}
+.ms-status[data-ph="speaking"]{background:#1e88e5;color:#fff}
+.ms-input textarea{width:100%;box-sizing:border-box;margin:8px 0;font:inherit;padding:8px;border-radius:10px;border:1px solid var(--line,#ccc)}
+.ms-ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ms-ctrl .ck{font-size:13px}
+.ms-chat{max-height:46vh;overflow:auto}
