@@ -3386,11 +3386,6 @@ async function _kvPaint(){
       <button class="btn ${window._kvRk && window._kvRk[v.key] ? "ghost" : "gold"}" onclick="kvAddCard()">${window._kvRk && window._kvRk[v.key] ? "✓ Sudah di rangkuman" : "➕ Masukkan ke rangkuman"}</button>
       <button class="btn ghost" onclick="kvClose();route('rangkuman')">📒 Buka rangkuman</button>
     </div>
-    <div class="kv-btns">
-      <button class="btn ghost" onclick="kvQuiz('baca')">🔤 Latihan membaca</button>
-      <button class="btn ghost" onclick="kvQuiz('arti')">💡 Latihan arti</button>
-    </div>
-    <div id="kv-quiz"></div>
     ${M.list.length > 1 ? `<div class="kv-nav"><button class="btn ghost sm" onclick="kvStep(-1)">‹ Sebelumnya</button><span>${M.i + 1}/${M.list.length} · kosakata dari Kanji ini</span><button class="btn ghost sm" onclick="kvStep(1)">Berikutnya ›</button></div>` : ""}
   </div>`;
 }
@@ -3403,31 +3398,6 @@ window.kvAddCard = async () => {
   const ok = await rangkumCepat({ jp: v.kata, kana: v.kana, arti: v.arti }, `Kosakata ${_kvLv()}`);
   if (ok) window._kvRk[v.key] = 1;
   await _kvPaint();
-};
-window.kvQuiz = (kind) => {
-  const M = window._kvM; if (!M) return;
-  const v = M.v, field = kind === "baca" ? "kana" : "arti";
-  const opts = KV.makeChoices(M.idx, v, field, 4);
-  const box = document.getElementById("kv-quiz"); if (!box) return;
-  M.q = { kind, opts, done: false };
-  box.innerHTML = `<div class="kv-q"><div class="kv-qh">${kind === "baca" ? `Bagaimana cara baca <b>${_kvEsc(v.kata)}</b>?` : `Apa arti <b>${_kvEsc(v.kata)}</b>?`}</div>
-    ${opts.map((o, i) => `<button class="kv-opt" data-i="${i}" onclick="kvAnswer(${i})">${_kvEsc(o)}</button>`).join("")}<div id="kv-fb"></div></div>`;
-};
-window.kvAnswer = async (i) => {
-  const M = window._kvM; if (!M || !M.q || M.q.done) return;
-  const v = M.v, q = M.q, field = q.kind === "baca" ? "kana" : "arti", ok = q.opts[i] === v[field];
-  q.done = true;
-  document.querySelectorAll("#kv-quiz .kv-opt").forEach((b) => { const o = q.opts[+b.dataset.i]; b.disabled = true; if (o === v[field]) b.classList.add("ok"); else if (+b.dataset.i === i) b.classList.add("bad"); });
-  const fb = document.getElementById("kv-fb"); if (fb) fb.innerHTML = ok ? `<p class="kv-ok">Benar! ✓</p>` : `<p class="kv-bad">Kurang tepat. Jawaban: <b>${_kvEsc(v[field])}</b></p>`;
-  // simpan hasil latihan di kartu kosakata ini (per akun/identitas kosakata); kartu otomatis masuk flashcard
-  try {
-    await _kvEnsureCard(v);
-    const c = state.srs[v.key], L = (c.lat = c.lat || {}), a = q.kind === "baca" ? "b" : "a";
-    L[a + (ok ? "b" : "s")] = (L[a + (ok ? "b" : "s")] || 0) + 1; L.t = Date.now();
-    await _saveSrs();
-  } catch (e) { console.warn("kv save:", e.message); }
-  if (ok) { try { playJurus(); await awardXP(2, 0); } catch (_) {} }
-  setTimeout(() => { if (window._kvM && window._kvM.v === v) _kvPaint(); }, 1400);
 };
 // Mulai sesi hafalan khusus kosakata dari SATU Kanji utama (memakai mesin flashcard/pilihan ganda yang sama)
 window.kvStudy = async (ki, mode) => {
