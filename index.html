@@ -2199,6 +2199,7 @@ window.closeTopOverlay = () => {
   return true;
 };
 window.goBack = () => {
+  if (!state.user) { location.href = "./landing.html"; return; }   // belum login: kembali = web penjelasan Shirose Nihongo
   if (window.closeTopOverlay()) return;   // popup terbuka: tutup popup-nya saja, halaman di belakang tetap
   if (window._materiDetail && (location.hash.slice(1) || "") === window._materiDetail.back){ window.backFromDetail(); return; }
   const here = location.hash.slice(1) || "home";
@@ -2227,6 +2228,7 @@ window.goBack = () => {
 // Home: JLPT → halaman karakter, SSW → pulau awal (hub), Kana → awal kana.
 // Kalau sudah di halaman awal itu, tekan lagi → kembali ke pilih level.
 window.goHomeFab = () => {
+  if (!state.user) { location.href = "./landing.html"; return; }
   for (let i = 0; i < 6 && window.closeTopOverlay(); i++) {}
   const here = location.hash.slice(1) || "home";
   const cur = here.split("/")[0];
@@ -2306,7 +2308,7 @@ window.route = (path) => {
         <div class="empty"><div class="emoji">🔑</div>
           Materi dan ujian hanya untuk siswa terdaftar.<br>Masuk dengan akun yang diberikan guru.</div>
         <button class="btn" onclick="route('login')">Masuk</button>
-        <button class="btn ghost" onclick="route('home')">🏠 Kembali Home</button>
+        <button class="btn ghost" onclick="location.href='./landing.html'">🏠 Kembali Home</button>
       </div>`;
     return;
   }
@@ -2325,7 +2327,7 @@ window.route = (path) => {
           ${unlocked.length ? `Kamu bisa belajar di: <b>${unlocked.join(", ")}</b>` : "Hubungi guru untuk membuka akses."}
         </div>
         ${unlocked.length ? `<button class="btn" onclick="setLevel('${unlocked[0].toLowerCase()}')">Pindah ke ${unlocked[0]}</button>` : ""}
-        <button class="btn ghost" onclick="route('home')">🏠 Kembali Home</button>
+        <button class="btn ghost" onclick="location.href='./landing.html'">🏠 Kembali Home</button>
       </div>`;
     return;
   }
