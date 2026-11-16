@@ -1396,10 +1396,10 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/shirose-extra.css?v=20261116m"/>
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/ssw.css?v=20261117a"/>
+<link rel="stylesheet" href="./css/ssw.css?v=20261117d"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261116c"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/themes.css?v=20261116w"/>
+<link rel="stylesheet" href="./css/themes.css?v=20261117a"/>
 </head>
 <body>
 
@@ -1468,7 +1468,7 @@ import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTer
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116m";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261117a";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261117c";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261116c";
 const GACHA_ON = true;    // ← ubah ke true untuk menghidupkan gacha lagi (kode gacha tidak dihapus)
@@ -3848,12 +3848,12 @@ const _hafHomeLbl = () => _hafSSW() ? "↩ Kembali" : "🏠 Home";
 // Dokumen SRS per bidang SSW: Building Cleaning tetap "ssw-bc" (data lama), bidang lain "ssw-<slug>".
 const _sswLvl = (slug) => { slug = slug || (window.__sswSlug && window.__sswSlug()) || "building-cleaning"; return slug === "building-cleaning" ? "ssw-bc" : "ssw-" + slug; };
 const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.fb ? "KANJI (belum ada kosakata)" : it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${(it.kv || it.fb) ? _kvLv() : state.level.toUpperCase()}`;
-function _sswSaveSess(){ try { sessionStorage.setItem(_SSW_SESS, JSON.stringify({ lvl: state._srsLevel, q: state.hafalan_queue, pos: state.hafalan_pos, mode: (state.hafalan||{}).mode, back: state.hafalan_back, score: state.hafalan_score })); } catch(e){} }
-window.sswHafalStart = async ({ items, mode, back }) => {
+function _sswSaveSess(){ try { sessionStorage.setItem(_SSW_SESS, JSON.stringify({ lvl: state._srsLevel, q: state.hafalan_queue, pos: state.hafalan_pos, mode: (state.hafalan||{}).mode, dir: (state.hafalan||{}).dir, back: state.hafalan_back, score: state.hafalan_score })); } catch(e){} }
+window.sswHafalStart = async ({ items, mode, back, dir }) => {
   if (!items || !items.length) { toast("Tidak ada kosakata untuk sesi ini"); return false; }
   state._srsLevel = _sswLvl(); state.hafalan_ctx = "ssw"; state.hafalan_back = back || "ssw";
   await _loadSrs();
-  state.hafalan = { tipe: "ssw", mode: mode || "flashcard", range: "all", filter: "all" };
+  state.hafalan = { tipe: "ssw", mode: mode || "flashcard", dir: dir || "jp2id", range: "all", filter: "all" };
   state.hafalan_queue = items.slice().sort(() => Math.random() - 0.5);
   state.hafalan_pos = 0; state.hafalan_score = { benar: 0, salah: 0 };
   _sswSaveSess();
@@ -3871,7 +3871,7 @@ async function _sswRestore(){
     const d = JSON.parse(sessionStorage.getItem(_SSW_SESS) || "null"); if (!d || !d.q || !d.q.length) return false;
     state._srsLevel = d.lvl || "ssw-bc"; state.hafalan_ctx = "ssw"; state.hafalan_back = d.back || "ssw";
     await _loadSrs();
-    state.hafalan = { tipe: "ssw", mode: d.mode || "flashcard", range: "all", filter: "all" };
+    state.hafalan = { tipe: "ssw", mode: d.mode || "flashcard", dir: d.dir || "jp2id", range: "all", filter: "all" };
     state.hafalan_queue = d.q; state.hafalan_pos = d.pos || 0; state.hafalan_score = d.score || { benar: 0, salah: 0 };
     return true;
   } catch (e) { return false; }
@@ -4260,14 +4260,18 @@ function renderHafalanMultiple(){
   setTimeout(_mountCompanion, 0);
   const it = q[pos];
 
+  // Arah pertanyaan: jp2id (default: Jepang → pilih arti) atau id2jp (SSW: arti/gambar → pilih nama Jepang).
+  const dir = (_hafSSW() && (state.hafalan || {}).dir === "id2jp") ? "id2jp" : "jp2id";
+  const val = (x) => dir === "id2jp" ? _plain(x.fraw || x.front) : x.back;
+  const correctVal = val(it);
   // Build 4 options: 1 correct, 3 distractors drawn from the rest of the queue (or pool).
-  const distractors = q.filter((_, i) => i !== pos).map(x => x.back).filter(b => b && b !== it.back);
+  const distractors = q.filter((_, i) => i !== pos).map(val).filter(b => b && b !== correctVal);
   const shuffled = Array.from(new Set(distractors)).sort(() => Math.random() - 0.5).slice(0, 3);
   while (shuffled.length < 3) shuffled.push("—");
-  const options = [it.back, ...shuffled].sort(() => Math.random() - 0.5);
-  state.mc_correct = it.back;
-  state.mc_map = {}; q.forEach(x => { if (x.back && !state.mc_map[x.back]) state.mc_map[x.back] = x; });
-  state.mc_map[it.back] = it;
+  const options = [correctVal, ...shuffled].sort(() => Math.random() - 0.5);
+  state.mc_correct = correctVal;
+  state.mc_map = {}; q.forEach(x => { const k = val(x); if (k && !state.mc_map[k]) state.mc_map[k] = x; });
+  state.mc_map[correctVal] = it;
 
   return `
     <div class="panel">
@@ -4279,7 +4283,8 @@ function renderHafalanMultiple(){
       </div>
       <div class="kanji-detail" style="padding:12px 0;">
         <div class="no-pill">${fmtNo(it.dno ?? it.no)} · ${_hafBadge(it)}</div>
-        ${it.img ? `<img class="mc-img" src="${it.img}" alt="Alat" draggable="false"><p style="color:var(--gray); margin-top:8px;">Alat apa ini? (pilih namanya)</p>`
+        ${it.img ? `<img class="mc-img" src="${it.img}" alt="Gambar" draggable="false"><p style="color:var(--gray); margin-top:8px;">${dir === "id2jp" ? "Gambar ini bernama apa dalam bahasa Jepang?" : "Apa arti/nama bagian ini?"}</p>`
+          : dir === "id2jp" ? `<div class="big-k" style="font-size:30px;line-height:1.3">${_plain(it.back)}</div><p style="color:var(--gray); margin-top:8px;">Apa bahasa Jepangnya?</p>`
           : `<div class="big-k haf-r" style="font-size:72px;">${_hafFront(it)}</div>
         <p style="color:var(--gray); margin-top:8px;">Apa arti kata di atas?</p>`}
       </div>

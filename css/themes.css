@@ -183,3 +183,12 @@ html[data-jpfont="pena"]{--font-jp:'Zen Kurenaido','Noto Sans JP',sans-serif}
 .fn-menu .fn-n small{font-size:11px;color:var(--gray)}
 html[data-theme="putih"] .fn-menu .fn-s{color:#111}
 @media (max-width:520px){.fn-menu{position:fixed;left:8px;right:8px;top:60px;min-width:0}}
+
+/* Tema Putih: kartu hafalan terang (sebelumnya latar gelap + teks hitam → tak terbaca) */
+html[data-theme="putih"] .flash-card{background:#fff;border-color:#cfcfcf;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+html[data-theme="putih"] .flash-card .reading{background:#f0f0f0;color:#111}
+html[data-theme="putih"] .flash-card .front{color:#111}
+html[data-theme="putih"] .flash-card .contoh{background:rgba(0,0,0,.04);color:#333}
+html[data-theme="putih"] .flash-card .tap-hint{color:#666}
+html[data-theme="putih"] .flash-card .no-pill{background:#f0f0f0;color:#111}
+html[data-theme="putih"] .flash-card .fungsi,html[data-theme="putih"] .flash-card .jpname{color:#222}

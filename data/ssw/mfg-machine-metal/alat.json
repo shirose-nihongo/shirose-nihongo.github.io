@@ -1,0 +1,356 @@
+{
+ "schema": 2,
+ "info": {
+  "title": "Flashcard Gambar Mesin",
+  "jp": "機械の絵カード",
+  "desc": "Gambar bagian mesin tampil di depan — tebak nama Jepangnya. Ketuk kartu untuk membalik."
+ },
+ "groups": [
+  {
+   "id": "bubut",
+   "title": "Bagian-bagian mesin bubut"
+  },
+  {
+   "id": "frais",
+   "title": "Bagian-bagian mesin frais"
+  },
+  {
+   "id": "bor",
+   "title": "Bagian-bagian mesin bor"
+  },
+  {
+   "id": "las",
+   "title": "Pengelasan busur dan keselamatannya"
+  },
+  {
+   "id": "press",
+   "title": "Mesin press dan cetakan"
+  }
+ ],
+ "items": [
+  {
+   "id": "dg-bubut-p1",
+   "no": 21,
+   "jp": "ベッド",
+   "kana": "ベッド",
+   "romaji": "beddo",
+   "arti": "alas mesin (bed)",
+   "fungsi": "Alas/rel mesin: menopang semua bagian dan menjadi jalur gerak kereta.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bubut-p1.svg",
+   "p": "bubut",
+   "vid": "mm-021"
+  },
+  {
+   "id": "dg-bubut-p2",
+   "no": 22,
+   "jp": "主軸台",
+   "kana": "しゅじくだい",
+   "romaji": "shujikudai",
+   "arti": "kepala tetap mesin bubut",
+   "fungsi": "Kepala tetap: berisi poros utama yang memutar benda kerja.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bubut-p2.svg",
+   "p": "bubut",
+   "vid": "mm-022"
+  },
+  {
+   "id": "dg-bubut-p3",
+   "no": 3,
+   "jp": "チャック",
+   "kana": "ちゃっく",
+   "romaji": "chakku",
+   "arti": "chuck (penjepit)",
+   "fungsi": "Chuck: penjepit benda kerja pada poros utama.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bubut-p3.svg",
+   "p": "bubut",
+   "vid": "mm-003"
+  },
+  {
+   "id": "dg-bubut-p4",
+   "no": 23,
+   "jp": "往復台",
+   "kana": "おうふくだい",
+   "romaji": "oufukudai",
+   "arti": "kereta mesin bubut (carriage)",
+   "fungsi": "Kereta: bergerak sepanjang bed membawa pahat.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bubut-p4.svg",
+   "p": "bubut",
+   "vid": "mm-023"
+  },
+  {
+   "id": "dg-bubut-p5",
+   "no": 24,
+   "jp": "刃物台",
+   "kana": "かたなだい",
+   "romaji": "katanadai",
+   "arti": "dudukan pahat (tool post)",
+   "fungsi": "Dudukan pahat: menjepit dan mengatur posisi pahat.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bubut-p5.svg",
+   "p": "bubut",
+   "vid": "mm-024"
+  },
+  {
+   "id": "dg-bubut-p6",
+   "no": 2,
+   "jp": "バイト",
+   "kana": "ばいと",
+   "romaji": "baito",
+   "arti": "pahat bubut",
+   "fungsi": "Pahat bubut: mata potong yang mengikis benda kerja.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bubut-p6.svg",
+   "p": "bubut",
+   "vid": "mm-002"
+  },
+  {
+   "id": "dg-bubut-p7",
+   "no": 25,
+   "jp": "心押台",
+   "kana": "しんおしだい",
+   "romaji": "shinoshidai",
+   "arti": "kepala lepas (tailstock)",
+   "fungsi": "Kepala lepas: menahan ujung benda kerja panjang agar tidak bergetar.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bubut-p7.svg",
+   "p": "bubut",
+   "vid": "mm-025"
+  },
+  {
+   "id": "dg-frais-p1",
+   "no": 26,
+   "jp": "コラム",
+   "kana": "コラム",
+   "romaji": "koramu",
+   "arti": "tiang mesin (column)",
+   "fungsi": "Tiang mesin: menopang kepala dan menjadi jalur gerak vertikal.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/frais-p1.svg",
+   "p": "frais",
+   "vid": "mm-026"
+  },
+  {
+   "id": "dg-frais-p2",
+   "no": 27,
+   "jp": "主軸",
+   "kana": "しゅじく",
+   "romaji": "shujiku",
+   "arti": "poros utama (spindle)",
+   "fungsi": "Spindle: poros yang memutar alat potong.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/frais-p2.svg",
+   "p": "frais",
+   "vid": "mm-027"
+  },
+  {
+   "id": "dg-frais-p3",
+   "no": 7,
+   "jp": "エンドミル",
+   "kana": "えんどみる",
+   "romaji": "endomiru",
+   "arti": "end mill",
+   "fungsi": "End mill: alat potong untuk membuat alur, tingkat, dan kontur.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/frais-p3.svg",
+   "p": "frais",
+   "vid": "mm-007"
+  },
+  {
+   "id": "dg-frais-p4",
+   "no": 6,
+   "jp": "バイス",
+   "kana": "ばいす",
+   "romaji": "baisu",
+   "arti": "ragum",
+   "fungsi": "Ragum: menjepit benda kerja pada meja.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/frais-p4.svg",
+   "p": "frais",
+   "vid": "mm-006"
+  },
+  {
+   "id": "dg-frais-p5",
+   "no": 28,
+   "jp": "テーブル",
+   "kana": "テーブル",
+   "romaji": "teeburu",
+   "arti": "meja kerja mesin",
+   "fungsi": "Meja kerja: menggerakkan benda ke kiri-kanan dan depan-belakang.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/frais-p5.svg",
+   "p": "frais",
+   "vid": "mm-028"
+  },
+  {
+   "id": "dg-bor-p1",
+   "no": 26,
+   "jp": "コラム",
+   "kana": "コラム",
+   "romaji": "koramu",
+   "arti": "tiang mesin (column)",
+   "fungsi": "Tiang mesin.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bor-p1.svg",
+   "p": "bor",
+   "vid": "mm-026"
+  },
+  {
+   "id": "dg-bor-p2",
+   "no": 27,
+   "jp": "主軸",
+   "kana": "しゅじく",
+   "romaji": "shujiku",
+   "arti": "poros utama (spindle)",
+   "fungsi": "Poros yang memutar mata bor.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bor-p2.svg",
+   "p": "bor",
+   "vid": "mm-027"
+  },
+  {
+   "id": "dg-bor-p3",
+   "no": 3,
+   "jp": "チャック",
+   "kana": "ちゃっく",
+   "romaji": "chakku",
+   "arti": "chuck (penjepit)",
+   "fungsi": "Penjepit mata bor.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bor-p3.svg",
+   "p": "bor",
+   "vid": "mm-003"
+  },
+  {
+   "id": "dg-bor-p4",
+   "no": 8,
+   "jp": "ドリル",
+   "kana": "どりる",
+   "romaji": "doriru",
+   "arti": "mata bor",
+   "fungsi": "Mata bor: membuat lubang pada benda kerja.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bor-p4.svg",
+   "p": "bor",
+   "vid": "mm-008"
+  },
+  {
+   "id": "dg-bor-p5",
+   "no": 6,
+   "jp": "バイス",
+   "kana": "ばいす",
+   "romaji": "baisu",
+   "arti": "ragum",
+   "fungsi": "Ragum: menjepit benda agar tidak ikut berputar (berbahaya jika dipegang tangan).",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bor-p5.svg",
+   "p": "bor",
+   "vid": "mm-006"
+  },
+  {
+   "id": "dg-bor-p6",
+   "no": 28,
+   "jp": "テーブル",
+   "kana": "テーブル",
+   "romaji": "teeburu",
+   "arti": "meja kerja mesin",
+   "fungsi": "Meja tempat benda kerja.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/bor-p6.svg",
+   "p": "bor",
+   "vid": "mm-028"
+  },
+  {
+   "id": "dg-las-p1",
+   "no": 17,
+   "jp": "溶接面",
+   "kana": "ようせつめん",
+   "romaji": "yousetsumen",
+   "arti": "topeng las",
+   "fungsi": "Topeng las: melindungi mata dan wajah dari cahaya busur dan percikan.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/las-p1.svg",
+   "p": "las",
+   "vid": "mm-017"
+  },
+  {
+   "id": "dg-las-p2",
+   "no": 16,
+   "jp": "アーク溶接",
+   "kana": "あーくようせつ",
+   "romaji": "a-kuyousetsu",
+   "arti": "las busur listrik",
+   "fungsi": "Las busur listrik: panas busur melelehkan logam dan kawat las.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/las-p2.svg",
+   "p": "las",
+   "vid": "mm-016"
+  },
+  {
+   "id": "dg-las-p3",
+   "no": 18,
+   "jp": "ヒューム",
+   "kana": "ひゅーむ",
+   "romaji": "hyu-mu",
+   "arti": "asap las",
+   "fungsi": "Asap las berisi partikel logam; berbahaya jika terhirup (butuh ventilasi/masker).",
+   "img": "assets/ssw/mfg-machine-metal/diagram/las-p3.svg",
+   "p": "las",
+   "vid": "mm-018"
+  },
+  {
+   "id": "dg-las-p4",
+   "no": 19,
+   "jp": "ボンベ",
+   "kana": "ぼんべ",
+   "romaji": "bonbe",
+   "arti": "tabung gas",
+   "fungsi": "Tabung gas: berisi gas pelindung/gas las bertekanan — ikat agar tidak roboh.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/las-p4.svg",
+   "p": "las",
+   "vid": "mm-019"
+  },
+  {
+   "id": "dg-las-p5",
+   "no": 14,
+   "jp": "板金",
+   "kana": "ばんきん",
+   "romaji": "bankin",
+   "arti": "pelat logam",
+   "fungsi": "Pelat logam yang dilas atau diproses.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/las-p5.svg",
+   "p": "las",
+   "vid": "mm-014"
+  },
+  {
+   "id": "dg-press-p1",
+   "no": 29,
+   "jp": "スライド",
+   "kana": "スライド",
+   "romaji": "suraido",
+   "arti": "slide (bagian bergerak mesin press)",
+   "fungsi": "Bagian bergerak yang membawa cetakan atas naik-turun.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/press-p1.svg",
+   "p": "press",
+   "vid": "mm-029"
+  },
+  {
+   "id": "dg-press-p2",
+   "no": 13,
+   "jp": "金型",
+   "kana": "かながた",
+   "romaji": "kanagata",
+   "arti": "cetakan (die)",
+   "fungsi": "Cetakan (die): memberi bentuk pada pelat.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/press-p2.svg",
+   "p": "press",
+   "vid": "mm-013"
+  },
+  {
+   "id": "dg-press-p3",
+   "no": 14,
+   "jp": "板金",
+   "kana": "ばんきん",
+   "romaji": "bankin",
+   "arti": "pelat logam",
+   "fungsi": "Pelat logam yang ditekan.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/press-p3.svg",
+   "p": "press",
+   "vid": "mm-014"
+  },
+  {
+   "id": "dg-press-p4",
+   "no": 15,
+   "jp": "両手操作",
+   "kana": "りょうてそうさ",
+   "romaji": "ryoutesousa",
+   "arti": "operasi dua tangan",
+   "fungsi": "Kendali dua tangan: kedua tombol harus ditekan agar tangan tidak berada di area bahaya.",
+   "img": "assets/ssw/mfg-machine-metal/diagram/press-p4.svg",
+   "p": "press",
+   "vid": "mm-015"
+  }
+ ]
+}

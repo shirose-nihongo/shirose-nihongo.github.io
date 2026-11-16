@@ -1,0 +1,275 @@
+{
+ "schema": 1,
+ "note": "Diagram skematis orisinal Shirose; tiap bagian menunjuk kosakata di vocab.json (vid).",
+ "diagrams": [
+  {
+   "id": "apd",
+   "title": {
+    "id": "Alat pelindung diri (APD)",
+    "jp": "保護具"
+   },
+   "intro": "Pakaian dan perlengkapan wajib sesuai pekerjaan. Ketuk bagian untuk melihat namanya.",
+   "svg": "assets/ssw/industrial-mfg/diagram/apd.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "im-038",
+     "jp": "ヘルメット",
+     "kana": "へるめっと",
+     "romaji": "herumetto",
+     "arti": "helm",
+     "fungsi": "Melindungi kepala dari benda jatuh dan benturan."
+    },
+    {
+     "pid": "p2",
+     "vid": "im-039",
+     "jp": "保護めがね",
+     "kana": "ほごめがね",
+     "romaji": "hogomegane",
+     "arti": "kacamata pelindung",
+     "fungsi": "Melindungi mata dari serpihan, percikan, dan debu."
+    },
+    {
+     "pid": "p3",
+     "vid": "im-041",
+     "jp": "耳栓",
+     "kana": "みみせん",
+     "romaji": "mimisen",
+     "arti": "penyumbat telinga",
+     "fungsi": "Mengurangi kebisingan mesin agar pendengaran terjaga."
+    },
+    {
+     "pid": "p4",
+     "vid": "im-042",
+     "jp": "防じんマスク",
+     "kana": "ぼうじんますく",
+     "romaji": "boujinmasuku",
+     "arti": "masker debu",
+     "fungsi": "Menyaring debu dan serbuk logam agar tidak terhirup."
+    },
+    {
+     "pid": "p5",
+     "vid": "im-043",
+     "jp": "手袋",
+     "kana": "てぶくろ",
+     "romaji": "tebukuro",
+     "arti": "sarung tangan",
+     "fungsi": "Melindungi tangan dari panas, goresan, dan bahan kimia (jangan dipakai dekat bagian berputar)."
+    },
+    {
+     "pid": "p6",
+     "vid": "im-040",
+     "jp": "安全靴",
+     "kana": "あんぜんぐつ",
+     "romaji": "anzengutsu",
+     "arti": "sepatu keselamatan",
+     "fungsi": "Sepatu keselamatan: ujung keras melindungi kaki dari benda berat dan tertusuk."
+    }
+   ]
+  },
+  {
+   "id": "alat-ukur",
+   "title": {
+    "id": "Alat ukur dasar",
+    "jp": "測定器具"
+   },
+   "intro": "Alat yang dipakai untuk mengukur dan memeriksa dimensi produk.",
+   "svg": "assets/ssw/industrial-mfg/diagram/alat-ukur.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "im-066",
+     "jp": "ノギス",
+     "kana": "のぎす",
+     "romaji": "nogisu",
+     "arti": "jangka sorong",
+     "fungsi": "Jangka sorong: ukuran luar, dalam, dan kedalaman (ketelitian 0,05 mm)."
+    },
+    {
+     "pid": "p2",
+     "vid": "im-067",
+     "jp": "マイクロメータ",
+     "kana": "まいくろめーた",
+     "romaji": "maikurome-ta",
+     "arti": "mikrometer",
+     "fungsi": "Mikrometer: ukuran sangat kecil (ketelitian 0,01 mm)."
+    },
+    {
+     "pid": "p3",
+     "vid": "im-068",
+     "jp": "ダイヤルゲージ",
+     "kana": "だいやるげーじ",
+     "romaji": "daiyaruge-ji",
+     "arti": "dial gauge",
+     "fungsi": "Dial gauge: membaca selisih ukuran/kerataan lewat jarum."
+    },
+    {
+     "pid": "p4",
+     "vid": "im-069",
+     "jp": "直尺",
+     "kana": "ちょくしゃく",
+     "romaji": "chokushaku",
+     "arti": "penggaris baja",
+     "fungsi": "Penggaris baja: mengukur panjang secara kasar dan memeriksa kelurusan."
+    },
+    {
+     "pid": "p5",
+     "vid": "im-070",
+     "jp": "限界ゲージ",
+     "kana": "げんかいげーじ",
+     "romaji": "genkaige-ji",
+     "arti": "gauge go/no-go",
+     "fungsi": "Gauge go/no-go: memeriksa cepat apakah ukuran masuk toleransi."
+    }
+   ]
+  },
+  {
+   "id": "jangka-sorong",
+   "title": {
+    "id": "Bagian-bagian jangka sorong",
+    "jp": "ノギスの各部"
+   },
+   "intro": "Bagian jangka sorong yang perlu dikenali sebelum membaca ukuran.",
+   "svg": "assets/ssw/industrial-mfg/diagram/jangka-sorong.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "im-116",
+     "jp": "本尺",
+     "kana": "ほんじゃく",
+     "romaji": "honjaku",
+     "arti": "skala utama (jangka sorong)",
+     "fungsi": "Skala utama (dalam mm) pada batang tetap."
+    },
+    {
+     "pid": "p2",
+     "vid": "im-117",
+     "jp": "副尺",
+     "kana": "ふくしゃく",
+     "romaji": "fukushaku",
+     "arti": "skala nonius (jangka sorong)",
+     "fungsi": "Skala nonius: memberi ketelitian 0,05 mm pada angka di skala utama."
+    },
+    {
+     "pid": "p3",
+     "vid": "im-118",
+     "jp": "外側用ジョウ",
+     "kana": "そとがわようジョウ",
+     "romaji": "sotogawa-you jou",
+     "arti": "rahang luar (jangka sorong)",
+     "fungsi": "Rahang luar: menjepit benda untuk mengukur diameter/tebal luar."
+    },
+    {
+     "pid": "p4",
+     "vid": "im-119",
+     "jp": "内側用ジョウ",
+     "kana": "うちがわようジョウ",
+     "romaji": "uchigawa-you jou",
+     "arti": "rahang dalam (jangka sorong)",
+     "fungsi": "Rahang dalam: mengukur diameter lubang atau lebar alur."
+    },
+    {
+     "pid": "p5",
+     "vid": "im-120",
+     "jp": "デプスバー",
+     "kana": "デプスバー",
+     "romaji": "depusu baa",
+     "arti": "batang pengukur kedalaman",
+     "fungsi": "Batang kedalaman: mengukur kedalaman lubang atau tingkat."
+    },
+    {
+     "pid": "p6",
+     "vid": "im-072",
+     "jp": "目盛り",
+     "kana": "めもり",
+     "romaji": "memori",
+     "arti": "skala",
+     "fungsi": "Garis-garis skala yang dibaca untuk mendapat hasil ukur."
+    }
+   ]
+  },
+  {
+   "id": "proses",
+   "title": {
+    "id": "Mesin perkakas dan proses pengerjaan",
+    "jp": "工作機械と加工方法"
+   },
+   "intro": "Delapan mesin/proses dasar di pabrik logam (gambar skematis).",
+   "svg": "assets/ssw/industrial-mfg/diagram/proses.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "im-098",
+     "jp": "旋盤",
+     "kana": "せんばん",
+     "romaji": "senban",
+     "arti": "mesin bubut",
+     "fungsi": "Mesin bubut: benda diputar, pahat bergerak memotong — untuk bentuk silinder."
+    },
+    {
+     "pid": "p2",
+     "vid": "im-099",
+     "jp": "フライス盤",
+     "kana": "ふらいすばん",
+     "romaji": "furaisuban",
+     "arti": "mesin frais",
+     "fungsi": "Mesin frais: alat potong berputar memotong benda yang bergerak di meja — untuk permukaan datar/alur."
+    },
+    {
+     "pid": "p3",
+     "vid": "im-100",
+     "jp": "ボール盤",
+     "kana": "ぼーるばん",
+     "romaji": "bo-ruban",
+     "arti": "mesin bor",
+     "fungsi": "Mesin bor: mata bor berputar membuat lubang."
+    },
+    {
+     "pid": "p4",
+     "vid": "im-097",
+     "jp": "研削",
+     "kana": "けんさく",
+     "romaji": "kensaku",
+     "arti": "penggerindaan",
+     "fungsi": "Penggerindaan: batu gerinda berputar menghaluskan atau mengikis dengan presisi tinggi."
+    },
+    {
+     "pid": "p5",
+     "vid": "im-101",
+     "jp": "プレス加工",
+     "kana": "ぷれすかこう",
+     "romaji": "puresukakou",
+     "arti": "pengerjaan press",
+     "fungsi": "Pengerjaan press: pelat ditekan dengan cetakan menjadi bentuk tertentu."
+    },
+    {
+     "pid": "p6",
+     "vid": "im-104",
+     "jp": "溶接",
+     "kana": "ようせつ",
+     "romaji": "yousetsu",
+     "arti": "pengelasan",
+     "fungsi": "Pengelasan: menyambung logam dengan panas (busur listrik/gas)."
+    },
+    {
+     "pid": "p7",
+     "vid": "im-102",
+     "jp": "鋳造",
+     "kana": "ちゅうぞう",
+     "romaji": "chuuzou",
+     "arti": "pengecoran",
+     "fungsi": "Pengecoran: logam cair dituang ke cetakan lalu dibiarkan membeku."
+    },
+    {
+     "pid": "p8",
+     "vid": "im-103",
+     "jp": "鍛造",
+     "kana": "たんぞう",
+     "romaji": "tanzou",
+     "arti": "penempaan",
+     "fungsi": "Penempaan: logam dipukul/ditekan hingga berbentuk dan menjadi lebih kuat."
+    }
+   ]
+  }
+ ]
+}
