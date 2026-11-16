@@ -441,6 +441,7 @@ html{overflow-x:hidden;}
   border-radius:12px; padding:10px 8px; cursor:pointer;
   transition:transform .12s, border-color .15s, box-shadow .15s;
   text-align:center;
+  content-visibility:auto; contain-intrinsic-size:auto 160px;   /* tile di luar layar tidak digambar → shop 100+ item tetap ringan */
 }
 .shop-tile:hover{border-color:var(--pink-light); transform:translateY(-2px);}
 .shop-tile:active{transform:scale(.97);}
@@ -1446,7 +1447,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116k";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261116b";
-import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261116u";
+import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261116w";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -4791,7 +4792,8 @@ async function renderShop(){
   }
 
   // Thumbnail for each item (character SVG with just that slot populated)
-  const thumbFor = (it) => renderCharacter({ ...DEFAULT_EQUIPPED, [activeCat]: it.id }, skin, { hairColor, wide: true });
+  const _tc = (window.__thumbCache = window.__thumbCache || new Map());
+  const thumbFor = (it) => { const ck = activeCat + "|" + it.id + "|" + skin + "|" + (hairColor || ""); let v = _tc.get(ck); if (v === undefined) { v = renderCharacter({ ...DEFAULT_EQUIPPED, [activeCat]: it.id }, skin, { hairColor, wide: true }); if (_tc.size > 600) _tc.clear(); _tc.set(ck, v); } return v; };
 
   const tabHtml = CAT_TABS.map(t => `
     <button class="shop-tab ${activeCat===t.key?'on':''}" onclick="shopSetCat('${t.key}')">${t.label}</button>
