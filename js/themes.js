@@ -35,6 +35,7 @@
   function layer(t){
     var w=document.getElementById("wx");
     if(!w){w=document.createElement("div");w.id="wx";document.body.insertBefore(w,document.body.firstChild)}
+    if(!animOn()){w.innerHTML=scene(t);return}
     var h=scene(t),i,r=function(a,b){return a+Math.random()*(b-a)};
     if(t==="hujan"||t==="badai"){for(i=0;i<(t==="badai"?55:40);i++)h+='<i class="drop" style="left:'+r(0,100).toFixed(1)+'%;animation-duration:'+r(.7,1.3).toFixed(2)+'s;animation-delay:-'+r(0,2).toFixed(2)+'s;opacity:'+r(.35,.8).toFixed(2)+'"></i>'}
     if(t==="badai")h+='<i class="flash"></i>';
@@ -49,6 +50,28 @@
     layer(t);
     var mn=document.getElementById("th-menu");if(mn)[].forEach.call(mn.querySelectorAll("button"),function(b){b.classList.toggle("on",b.dataset.t===t)});
   }
+  /* Animasi ON/OFF (untuk HP kentang). Disimpan di localStorage 'shirose-anim' ('0' = mati). */
+  function animOn(){try{return localStorage.getItem("shirose-anim")!=="0"}catch(e){return true}}
+  function applyAnim(){
+    var on=animOn();document.documentElement.setAttribute("data-anim",on?"on":"off");
+    var b=document.getElementById("th-anim");if(b)b.innerHTML=on?"✨ Animasi: <b>ON</b>":"🚫 Animasi: <b>OFF</b>";
+  }
+  function setAnim(on){
+    try{localStorage.setItem("shirose-anim",on?"1":"0")}catch(e){}
+    applyAnim();if(on)unfreeze();else freeze();layer(get());
+    /* gambar ulang halaman aktif supaya karakter & senjata ikut berubah */
+    try{if(typeof window.route==="function")window.route(location.hash.slice(1)||"home")}catch(e){}
+  }
+  /* Saat OFF: bekukan semua animasi SMIL di pose awal (item tetap tampil, tidak bergerak) */
+  var frT=0;
+  function freeze(){
+    if(animOn())return;
+    [].forEach.call(document.querySelectorAll("svg"),function(v){try{v.pauseAnimations();v.setCurrentTime(0)}catch(e){}});
+  }
+  function freezeSoon(){if(animOn())return;clearTimeout(frT);frT=setTimeout(freeze,60)}
+  try{new MutationObserver(freezeSoon).observe(document.documentElement,{childList:true,subtree:true})}catch(e){}
+  function unfreeze(){[].forEach.call(document.querySelectorAll("svg"),function(v){try{v.unpauseAnimations()}catch(e){}})}
+  window.SHIROSE_ANIM={on:animOn,set:setAnim};
   function set(t){try{localStorage.setItem(KEY,t)}catch(e){}apply(t)}
   function setOwned(ids){OWNED={};(ids||[]).forEach(function(i){if(/^theme_/.test(i))OWNED[i.slice(6)]=1});apply(get())}
   window.SHIROSE_THEME={set:set,get:get,locked:locked,list:TH,setOwned:setOwned,preview:preview,closePreview:closePreview,refresh:function(){apply(get())}};
@@ -75,18 +98,18 @@
     tr.insertBefore(w,tr.firstChild);
   }
   function init(){
-    apply(get());sosmedTop();
+    applyAnim();apply(get());sosmedTop();
     var tr=document.querySelector(".topbar-right");
     if(tr&&!document.getElementById("th-menu")){
       var d=document.createElement("div");d.className="th-wrap";
-      d.innerHTML='<button class="th-btn" id="th-btn" title="Ganti tema" aria-label="Ganti tema">🎨 <span class="th-txt">Ganti tema</span></button><div class="th-menu" id="th-menu">'+TH.map(function(t){return '<button data-t="'+t[0]+'">'+t[1]+' '+t[2]+'<small class="th-lk"></small></button>'}).join("")+'</div>';
+      d.innerHTML='<button class="th-btn" id="th-btn" title="Ganti tema" aria-label="Ganti tema">🎨 <span class="th-txt">Ganti tema</span></button><div class="th-menu" id="th-menu">'+TH.map(function(t){return '<button data-t="'+t[0]+'">'+t[1]+' '+t[2]+'<small class="th-lk"></small></button>'}).join("")+'<button data-anim="1" id="th-anim" class="th-anim"></button></div>';
       tr.insertBefore(d,tr.firstChild);
       d.querySelector("#th-btn").onclick=function(e){e.stopPropagation();document.getElementById("th-menu").classList.toggle("open")};
       function mark(){[].forEach.call(document.querySelectorAll("#th-menu button"),function(b){var L=locked(b.dataset.t),m=TH.filter(function(t){return t[0]===b.dataset.t})[0][4];b.classList.toggle("lock",L);b.querySelector(".th-lk").textContent=L?"🔒 Lv "+m:""})}
       d.querySelector("#th-btn").addEventListener("click",mark);
-      d.querySelector("#th-menu").onclick=function(e){var b=e.target.closest("button");if(b){if(locked(b.dataset.t)){preview(b.dataset.t);document.getElementById("th-menu").classList.remove("open");return}clearPrev();set(b.dataset.t);document.getElementById("th-menu").classList.remove("open")}};
+      d.querySelector("#th-menu").onclick=function(e){var b=e.target.closest("button");if(b&&b.dataset.anim){setAnim(!animOn());return}if(b){if(locked(b.dataset.t)){preview(b.dataset.t);document.getElementById("th-menu").classList.remove("open");return}clearPrev();set(b.dataset.t);document.getElementById("th-menu").classList.remove("open")}};
       document.addEventListener("click",function(){var m=document.getElementById("th-menu");if(m)m.classList.remove("open")});
-      apply(get());
+      applyAnim();apply(get());
     }
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
