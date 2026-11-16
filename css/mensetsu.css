@@ -145,3 +145,5 @@
 .ms-ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .ms-ctrl .ck{font-size:13px}
 .ms-chat{max-height:46vh;overflow:auto}
+.ms-furi-tg{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border,#555);border-radius:999px;font-size:13px;cursor:pointer}
+.ms-q-ja ruby rt,.pp-q ruby rt,.pp-big ruby rt,.ms-ans ruby rt{font-size:.5em}

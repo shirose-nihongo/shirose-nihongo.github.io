@@ -9,7 +9,7 @@
  * Global: window.MS (dipakai onclick di HTML)
  * ===================================================================== */
 import * as EN from "./mensetsu-engine.js";
-import { initPrep, PREP_ROUTES } from "./mensetsu-prep.js";
+import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ } from "./mensetsu-prep.js?v=20261116c";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
 import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261113zl";
 
@@ -177,23 +177,23 @@ async function renderBank(p) {
   const lvl = ["", "Mudah", "Sedang", "Sulit"];
   const list = bank.soal.filter(q => q.k === BANKCAT).map(q => `
     <details class="ms-q">
-      <summary><span class="ms-q-ja">${esc(q.ja)}</span><span class="ms-q-lv l${q.l}">${lvl[q.l]}</span>
+      <summary><span class="ms-q-ja">${qj(q)}</span><span class="ms-q-lv l${q.l}">${lvl[q.l]}</span>
         <button class="ms-say" onclick="event.stopPropagation(); MS.say(this)" data-t="${esc(q.ja)}" title="Dengarkan">🔊</button></summary>
       <div class="ms-q-body">
         <p class="ms-q-id">${esc(q.id)}</p>
         <h4>Kosakata penting</h4><ul class="ms-voc">${q.v.map(([j, i]) => `<li><b>${esc(j)}</b> — ${esc(i)}</li>`).join("")}</ul>
         <h4>Maksud pertanyaan</h4><p>${esc(q.m)}</p>
         <h4>Contoh jawaban <small>(referensi, jangan dihafal mentah-mentah)</small></h4>
-        <p class="ms-ans">${esc(q.aj)} <button class="ms-say" onclick="MS.say(this)" data-t="${esc(q.aj)}" title="Dengarkan">🔊</button></p>
+        <p class="ms-ans">${ajh(q)} <button class="ms-say" onclick="MS.say(this)" data-t="${esc(q.aj)}" title="Dengarkan">🔊</button></p>
         <p class="ms-ans-id">${esc(q.ai)}</p>
         <h4>Yang ingin diketahui pewawancara</h4><p>${esc(q.c)}</p>
-        ${q.f && q.f.length ? `<h4>Pertanyaan lanjutan yang mungkin muncul</h4><ul class="ms-voc">${q.f.map(x => `<li><b>${esc(x.ja)}</b> — ${esc(x.id)}</li>`).join("")}</ul>` : ""}
+        ${q.f && q.f.length ? `<h4>Pertanyaan lanjutan yang mungkin muncul</h4><ul class="ms-voc">${q.f.map(x => `<li><b>${furiQ() && x.jf ? furiHtml(x.jf) : esc(x.ja)}</b> — ${esc(x.id)}</li>`).join("")}</ul>` : ""}
       </div>
     </details>`).join("");
   return `<div class="ms-wrap">
     <div class="ms-crumbs"><a onclick="route('mensetsu')">MENSETSU</a> › <a onclick="route('mensetsu-bidang/${key}')">${b.id}</a> › <b>Bank soal</b></div>
     <div class="ms-head compact"><div class="jp">${b.jp}</div><h1>Bank soal · ${b.id}</h1></div>
-    <div class="ms-chips">${tabs}</div>
+    <div class="ms-chips">${tabs}${furiToggleHtml()}</div>
     <div class="ms-qlist">${list}</div>
     <div class="ms-actions"><button class="btn big" onclick="route('mensetsu-persiapan/${key}')">✍️ Siapkan jawabanku</button></div>
   </div>`;

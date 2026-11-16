@@ -68,6 +68,11 @@ export function furiHtml(markup) {
   const e = esc(markup); return e.replace(/([㐀-鿿々〆ヶ]+)\[([^\]]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>");
 }
 const hasKanji = (t) => /[㐀-鿿]/.test(t);
+/* Furigana pertanyaan & contoh jawaban: data statis (jf/ajf), tanpa AI. Bawaan: HIDUP. */
+export const furiQ = () => X.LS.get("shirose-mensetsu-furi", true) !== false;
+export const qj = (q) => (furiQ() && q.jf ? furiHtml(q.jf) : esc(q.ja));
+export const ajh = (q) => (furiQ() && q.ajf ? furiHtml(q.ajf) : esc(q.aj || "—"));
+export const furiToggleHtml = () => `<label class="ck ms-furi-tg"><input type="checkbox" ${furiQ() ? "checked" : ""} onchange="PP.furiQ(this.checked)"/> ふりがな</label>`;
 
 /* ---------------- TTS (speechSynthesis) ---------------- */
 const TS_KEY = "shirose-mensetsu-tts";
@@ -179,18 +184,18 @@ export async function renderPersiapan(p) {
   const b = X.BIDANG[key]; const { bank, data } = P; const cats = EN.CATS.filter(c => c.k !== "saigo");
   const jiko = jikoOf(bank);
   const filled = data.order.filter(i => aktif(data.answers[i]).trim()).length;
-  const chips = [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${bank.soal.filter(q => q.k === c.k).length}</small></button>`)].join("");
+  const chips = [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
   const pool = bank.soal.filter(q => q.k !== "saigo" && (P.cat === "semua" || q.k === P.cat));
   const checklist = pool.map(q => {
     const on = data.sel.includes(q.i); const lock = jiko && q.i === jiko.i;
-    return `<label class="pp-ck ${on ? "on" : ""}"><input type="checkbox" ${on ? "checked" : ""} ${lock ? "disabled" : ""} onchange="PP.toggle('${q.i}',this.checked)"/><span><b class="jp">${esc(q.ja)}</b><small>${esc(q.id)}${lock ? " · 🔒 wajib, selalu pertama" : ""}</small></span></label>`;
+    return `<label class="pp-ck ${on ? "on" : ""}"><input type="checkbox" ${on ? "checked" : ""} ${lock ? "disabled" : ""} onchange="PP.toggle('${q.i}',this.checked)"/><span><b class="jp">${qj(q)}</b><small>${esc(q.id)}${lock ? " · 🔒 wajib, selalu pertama" : ""}</small></span></label>`;
   }).join("");
   const list = data.order.map((id, n) => {
     const q = qOf(id); if (!q) return ""; const a = data.answers[id]; const has = aktif(a).trim(); const op = P.open === id;
     const lock = jiko && id === jiko.i;
     return `<div class="pp-item ${op ? "open" : ""}" id="pp-it-${id}">
       <div class="pp-ih"><span class="pp-n">${n + 1}</span>
-        <div class="pp-q" onclick="PP.open('${id}')"><b class="jp">${esc(q.ja)}</b><small>${esc(q.id)}</small>
+        <div class="pp-q" onclick="PP.open('${id}')"><b class="jp">${qj(q)}</b><small>${esc(q.id)}</small>
           <span class="pp-tags">${has ? `<i class="t ok">Ada jawaban</i>` : `<i class="t">Kosong</i>`}${a && a.diterima ? `<i class="t ai">Versi AI dipakai</i>` : ""}${a && a.status && a.status !== "baru" ? `<i class="t ${a.status}">${STAT[a.status]}</i>` : ""}</span></div>
         <div class="pp-mv"><button class="btn ghost sm" ${n <= 1 || lock ? "disabled" : ""} onclick="PP.move('${id}',-1)" title="Naik">↑</button><button class="btn ghost sm" ${lock || n === data.order.length - 1 ? "disabled" : ""} onclick="PP.move('${id}',1)" title="Turun">↓</button>
           <button class="btn ghost sm" ${lock ? "disabled" : ""} onclick="PP.toggle('${id}',false)" title="${lock ? "Wajib" : "Hapus dari daftar"}">✕</button></div></div>
@@ -219,7 +224,7 @@ function evHtml(q, a) {
   const sec = (h, body) => `<div class="pp-sec"><h4>${h}</h4>${body}</div>`;
   const sal = ev.salah.length ? `<ul class="pp-ul">${ev.salah.map(x => `<li>${x.asli ? `<span class="bad">${esc(x.asli)}</span>` : ""}${x.benar ? ` → <span class="good">${esc(x.benar)}</span>` : ""}${x.jenis ? ` <em>[${esc(x.jenis)}]</em>` : ""}<br><small>${esc(x.penjelasan)}</small></li>`).join("")}</ul>` : `<p class="ms-note">Tidak ada bagian yang perlu diperbaiki.</p>`;
   const lvl = ev.kealamian.skor ? `<div class="pp-meter"><i style="width:${ev.kealamian.skor}%"></i></div><p><b>${ev.kealamian.skor}/100</b> ${esc(ev.kealamian.level)}<br><small>${esc(ev.kealamian.catatan)}</small></p>` : `<p class="ms-note">—</p>`;
-  const furiOn = X.LS.get("shirose-mensetsu-furi", false);
+  const furiOn = furiQ();
   const benarHtml = ev.benar ? (furiOn && ev.furigana && stripFuri(ev.furigana).replace(/\s/g, "") === ev.benar.replace(/\s/g, "") ? furiHtml(ev.furigana) : esc(ev.benar)) : "";
   const head = ev.sumber === "dasar" ? `<div class="pp-warn">Pemeriksaan dasar tanpa AI — tidak ada versi perbaikan otomatis.</div>` : `<div class="pp-warn ok">Diperiksa AI (${esc(ev.sumber)}). AI bisa keliru — pakai penilaian sendiri dan tanyakan guru bila ragu.</div>`;
   return `<div class="pp-ev">${head}
@@ -238,11 +243,11 @@ function evHtml(q, a) {
   </div>`;
 }
 function editor(q, a) {
-  const act = aktif(a); const furiOn = X.LS.get("shirose-mensetsu-furi", false);
+  const act = aktif(a); const furiOn = furiQ();
   const actHtml = act ? (furiOn && a.furi && a.furi.t === act ? furiHtml(a.furi.m) : (furiOn && a.ev && a.ev.furigana && a.diterima && stripFuri(a.ev.furigana).replace(/\s/g, "") === act.replace(/\s/g, "") ? furiHtml(a.ev.furigana) : esc(act))) : "";
   const rh = (a.riwayat || []).slice().reverse();
   return `<div class="pp-ed">
-    <p class="ms-note"><b>Pertanyaan:</b> <span class="jp">${esc(q.ja)}</span> — ${esc(q.id)} <button class="btn ghost sm" onclick="PP.sayQ('${q.i}')">🔊 Dengar pertanyaan</button></p>
+    <p class="ms-note"><b>Pertanyaan:</b> <span class="jp">${qj(q)}</span> — ${esc(q.id)} <button class="btn ghost sm" onclick="PP.sayQ('${q.i}')">🔊 Dengar pertanyaan</button></p>
     <label class="pp-lb">Jawabanmu (bahasa Jepang)
       <textarea id="pp-ta" rows="5" placeholder="Tulis jawaban dalam bahasa Jepang… (boleh bahasa Indonesia dulu, nanti AI bantu ubah ke Jepang)" oninput="PP.input('${q.i}')">${esc(a.asli)}</textarea></label>
     <div class="pp-act"><button type="button" class="btn ghost sm pp-mic" id="mic-pp-ta" onclick="PP.dikte('pp-ta')" ${EN.sttSupported() ? "" : "disabled title='Browser tidak mendukung mikrofon (pakai Chrome/Edge)'"}>🎤 Isi dengan suara</button></div>
@@ -307,7 +312,7 @@ const PP = {
   async simpan(id) { flushTextarea(); const ok = await persist(true); toast(ok ? "Jawaban disimpan." : "Disimpan di perangkat; sinkron akun gagal."); },
   contoh(id) {
     const q = qOf(id), box = document.getElementById("pp-contoh"); if (!box) return;
-    box.classList.toggle("hidden"); box.innerHTML = `<b>Contoh dari bank soal (hanya referensi — jangan dihafal mentah):</b><p class="jp">${esc(q.aj || "—")}</p><p class="ms-note">${esc(q.ai || "")}</p>${q.aj ? `<button class="btn ghost sm" onclick="PP.pakaiContoh('${id}')">Salin contoh ke editor</button>` : ""}`;
+    box.classList.toggle("hidden"); box.innerHTML = `<b>Contoh dari bank soal (hanya referensi — jangan dihafal mentah):</b><p class="jp">${ajh(q)}</p><p class="ms-note">${esc(q.ai || "")}</p>${q.aj ? `<button class="btn ghost sm" onclick="PP.pakaiContoh('${id}')">Salin contoh ke editor</button>` : ""}`;
   },
   pakaiContoh(id) { const q = qOf(id), ta = document.getElementById("pp-ta"); if (ta && q.aj) { if (ta.value.trim() && !confirm("Timpa teks di editor dengan contoh? (teks lama masuk riwayat bila sudah diperiksa AI)")) return; ta.value = q.aj; PP.input(id); } },
   async koreksi(id) {
@@ -341,6 +346,7 @@ const PP = {
   },
   pulih(id, idx) { const a = ans(id); const r = a.riwayat[idx]; if (!r) return; a.asli = r.asli; a.diterima = false; a.updated = Date.now(); persist(); rerender(); },
   status(id, s) { flushTextarea(); const a = ans(id); a.status = s; a.updated = Date.now(); persist(); rerender(); },
+  furiQ(on) { flushTextarea(); X.LS.set("shirose-mensetsu-furi", !!on); rerender(); },
   async furi(on) {
     X.LS.set("shirose-mensetsu-furi", !!on); flushTextarea();
     if (on && P && P.open) {
@@ -391,14 +397,14 @@ export async function renderHafalan(p) {
       <span class="pp-fil">${[["semua", "Semua"], ["belum", "Belum hafal"], ["sulit", "Sulit"]].map(([k, l]) => `<button class="ms-chip ${H.filter === k ? "on" : ""}" onclick="PP.hFilter('${k}')">${l}</button>`).join("")}</span></div>`;
   if (!items.length) return `<div class="ms-wrap pp">${head}<div class="ms-panel"><p>${d.order.length ? "Tidak ada pertanyaan pada filter ini." : "Belum ada pertanyaan dipilih."}</p><button class="btn big" onclick="route('mensetsu-persiapan/${key}')">✍️ Ke persiapan jawaban</button></div></div>`;
   const id = items[H.i], q = qOf(id), a = d.answers[id] || {}; const act = aktif(a).trim();
-  const furiOn = X.LS.get("shirose-mensetsu-furi", false);
+  const furiOn = furiQ();
   const actHtml = act ? (furiOn && a.furi && a.furi.t === act ? furiHtml(a.furi.m) : (furiOn && a.ev && a.diterima && a.ev.furigana && stripFuri(a.ev.furigana).replace(/\s/g, "") === act.replace(/\s/g, "") ? furiHtml(a.ev.furigana) : esc(act))) : "";
   const sh = H.shadow;
   const shHtml = sh ? `<div class="pp-sec"><h4>Hasil shadowing (perkiraan)</h4><p class="pp-box jp">${sh.chars.map((c, i) => `<span class="${sh.hit[i] ? "good" : "bad"}">${esc(c)}</span>`).join("")}</p>
       <p><b>${Math.round(sh.recall * 100)}%</b> huruf cocok. <small>Ini perkiraan dari pengenalan suara browser (bisa salah dengar), bukan penilaian pelafalan.</small></p><p class="ms-note">Kamu bilang: <span class="jp">${esc(sh.said)}</span></p></div>` : "";
   return `<div class="ms-wrap pp">${head}
     <section class="ms-panel pp-card"><div class="pp-prog">${H.i + 1} / ${items.length}</div>
-      <p class="pp-big jp">${esc(q.ja)}</p>
+      <p class="pp-big jp">${qj(q)}</p>
       <div class="pp-act"><button class="btn ghost" onclick="PP.sayQ('${id}')">🔊 Ulangi pertanyaan</button><button class="btn ghost" onclick="PP.hTrans()">${H.trans ? "Sembunyikan" : "Lihat"} arti</button></div>
       ${H.trans ? `<p class="ms-note">${esc(q.id)}</p>` : ""}
       ${act ? `<label class="pp-lb">Coba jawab dulu dari ingatan (opsional)<textarea id="pp-try" rows="3" placeholder="Ketik atau ucapkan jawabanmu tanpa melihat…"></textarea></label>
@@ -488,13 +494,13 @@ async function pmData(key) {
 }
 function chipsHtml() {
   const cats = EN.CATS.filter(c => c.k !== "saigo");
-  return [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${P.bank.soal.filter(q => q.k === c.k).length}</small></button>`)].join("");
+  return [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${P.bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
 }
 function checkHtml() {
   const jiko = jikoOf(P.bank);
   return P.bank.soal.filter(q => q.k !== "saigo" && (P.cat === "semua" || q.k === P.cat)).map(q => {
     const on = P.data.sel.includes(q.i); const lock = jiko && q.i === jiko.i;
-    return `<label class="pp-ck ${on ? "on" : ""}"><input type="checkbox" ${on ? "checked" : ""} ${lock ? "disabled" : ""} onchange="PP.toggle('${q.i}',this.checked)"/><span><b class="jp">${esc(q.ja)}</b><small>${esc(q.id)}${lock ? " · 🔒 wajib, selalu pertama" : ""}</small></span></label>`;
+    return `<label class="pp-ck ${on ? "on" : ""}"><input type="checkbox" ${on ? "checked" : ""} ${lock ? "disabled" : ""} onchange="PP.toggle('${q.i}',this.checked)"/><span><b class="jp">${qj(q)}</b><small>${esc(q.id)}${lock ? " · 🔒 wajib, selalu pertama" : ""}</small></span></label>`;
   }).join("");
 }
 export async function renderPrompt(p) {
