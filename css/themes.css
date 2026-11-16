@@ -168,3 +168,6 @@ html[data-anim-char=off] .chara-svg *{animation:none!important;transition:none!i
 html[data-anim-theme=off] #wx *{animation:none!important}
 .th-menu .th-anim{border-top:1px solid var(--border-light);border-radius:0;margin-top:4px}
 .th-menu .th-anim+.th-anim{border-top:0;margin-top:0;border-radius:0 0 10px 10px}
+
+/* Menu tema bisa di-scroll di layar pendek */
+.th-menu{max-height:calc(100vh - 90px);max-height:calc(100dvh - 90px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
