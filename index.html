@@ -981,7 +981,7 @@ html{overflow-x:hidden;}
 .flash-card .front{
   font-family:var(--font-jp); font-weight:800;
   font-size:min(22vw, 140px); line-height:1.05; color:var(--pink-light);
-  margin:14px 0 10px; word-break:break-all;
+  margin:14px 0 10px; word-break:break-all; max-width:100%; overflow-wrap:anywhere;
 }
 .flash-card .reading{
   display:inline-block; padding:8px 18px; border-radius:999px;
@@ -3947,7 +3947,23 @@ function _hafPostRender(){
   // Suara TIDAK diputar di sisi depan — baru diputar saat kartu dibalik.
   _bindFlashSwipe(card);
   _mountCompanion();  // Part 24: companion presence
+  _hafFit();
 }
+// Ukuran huruf otomatis: kata panjang / banyak furigana dikecilkan sampai muat di kartu (HP).
+window._hafFit = function(){
+  const card = document.getElementById("flash-card"); const f = card && card.querySelector(".front"); if (!f) return;
+  f.style.fontSize = "";                                   // mulai dari ukuran CSS
+  const maxW = card.clientWidth - 40, maxH = Math.max(120, Math.min(window.innerHeight * 0.42, 300));
+  let fs = parseFloat(getComputedStyle(f).fontSize) || 72, n = 0;
+  const lim = () => card.getBoundingClientRect().right - 20, lim0 = () => card.getBoundingClientRect().left + 20;
+  const over = () => {   // ada baris/ruby yang keluar dari kartu?
+    const r = document.createRange(); r.selectNodeContents(f);
+    for (const q of r.getClientRects()) if (q.right > lim() || q.left < lim0()) return true;
+    return f.scrollWidth > maxW || f.scrollHeight > maxH;
+  };
+  while (n++ < 40 && fs > 18 && over()) { fs *= 0.9; f.style.fontSize = fs + "px"; }
+};
+window.addEventListener("resize", () => { try { window._hafFit && window._hafFit(); } catch (e) {} });
 
 // Tap kartu = bolak-balik depan ↔ belakang, bisa berulang kali.
 window.hafCardTap = (ev) => {
@@ -3957,6 +3973,7 @@ window.hafCardTap = (ev) => {
   if (!card) return;
   state._flashRevealed = !state._flashRevealed;
   card.classList.toggle("revealed", state._flashRevealed);
+  _hafFit();
   // Sisi belakang terbuka → putar suara (kalau auto-audio aktif).
   if (state._flashRevealed) _autoSpeakJP(card.dataset.say);
 };
