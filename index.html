@@ -5457,21 +5457,25 @@ async function renderProfile(){
   const akses = state.siswa?.aksesLevel || {};
   const nama = state.siswa?.nama || "Tamu";
 
-  // Load gami all levels
+  // Semua dimuat PARALEL dan dibatasi 3 dtk (dulu berurutan: 5 level x 2 baca + riwayat = lama di HP).
   const allGami = {};
+  let riwayat = [];
   if (state.user) {
-    for (const lvl of ["n5","n4","n3","n2","n1"]) {
-      allGami[lvl] = await FB.getGami(lvl);
-    }
+    const _tm = (p, fb) => new Promise(res => { const t = setTimeout(() => res(fb), 3000); Promise.resolve(p).then(v => { clearTimeout(t); res(v); }, () => { clearTimeout(t); res(fb); }); });
+    const lv = ["n5","n4","n3","n2","n1"];
+    const [gs, rw] = await Promise.all([
+      Promise.all(lv.map(l => _tm(FB.getGami(l), null))),
+      _tm(FB.listNilai(10), []),
+    ]);
+    lv.forEach((l, i) => { if (gs[i]) allGami[l] = gs[i]; });
+    riwayat = rw || [];
   }
-
-  // Nilai history
-  const riwayat = state.user ? await FB.listNilai(10) : [];
 
   return `
     <div class="panel">
       <h2>👤 Profil</h2>
       <h3>${nama}</h3>
+      ${state.user ? `<button class="btn ghost danger" style="margin:0 0 10px;" onclick="logout()">⎋ Keluar / ganti akun</button>` : ""}
       <p style="color:var(--gray); font-size:13px;">${state.user?.email || "Tamu"} ${state.siswa?.kelas ? `· Kelas ${state.siswa.kelas}` : ""}</p>
       ${FB.userIsGuru() ? `<div class="kc-guru-box"><div><b>🛠️ Akun ${FB.userIsDeveloper() ? "Moderator" : FB.userIsAdmin() ? "Admin" : "Guru"} terdaftar</b><br><small>Kamu punya akses ke Dashboard Guru: kelola siswa, bank soal, hasil ujian, dan laporan.</small></div><a class="btn" href="./teacher.html">Buka Dashboard Guru</a></div>` : ""}
 
