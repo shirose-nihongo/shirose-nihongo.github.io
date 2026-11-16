@@ -5501,11 +5501,13 @@ async function renderProfile(){
   `;
 }
 window.logout = async () => {
+  // Tampilan langsung pindah ke halaman login; signOut jalan di latar belakang (tidak menunggu jaringan).
   _lupakanPilihanLevel();
-  await FB.keluar();
   state.user = null; state.siswa = null;
+  try { document.getElementById("btn-auth").innerHTML = "🔑 Masuk"; document.getElementById("guru-link").classList.add("hidden"); } catch (_) {}
   toast("Dadah 👋");
   route("login");
+  try { await FB.keluar(); } catch (e) { console.warn("signOut", e); }
 };
 
 /* ========== ACHIEVEMENTS ========== */
@@ -5722,7 +5724,10 @@ FB.onAuth(async (user, siswa) => {
   if (user && siswa) enforceLevelAccess();
   // Jangan biarkan UI menunggu jaringan: tunggu data XP/koin paling lama 1,2 dtk, sisanya dimuat di latar belakang.
   const _gp = loadGami();
-  await Promise.race([_gp.catch(() => {}), new Promise(r => setTimeout(r, 1200))]);
+  const _hashNow = (location.hash.slice(1) || "").split("/")[0];
+  const _barusLogin = user && (_hashNow === "login" || _hashNow === "masuk" || _hashNow === "daftar");
+  // Baru login → halaman pilih level tidak butuh data XP: tampil sekarang, data menyusul di latar belakang.
+  await Promise.race([_gp.catch(() => {}), new Promise(r => setTimeout(r, _barusLogin ? 0 : 500))]);
   renderLevelPills();
   updateChips();
   _gp.then(() => {
