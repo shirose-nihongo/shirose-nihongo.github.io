@@ -12,6 +12,8 @@ Audit 16 Nov 2026. Semua angka dihitung langsung dari `data/ssw/<slug>/` dan `as
 
 ## Inventaris per bidang
 
+> Angka dihitung sebelum commit `f88805b` (kuis per subbab livestock, kaigo-jp, food-service-jp, dan perluasan soal bidang tipis oleh sesi lain). Jumlah soal bidang-bidang itu kini lebih besar; hitung ulang sebelum dipakai.
+
 Kolom: bab, subbab, subbab berisi teks lengkap (`full`), kosakata, kelompok soal, butir soal, soal bergambar, PDF sumber tersimpan, halaman buku (webp).
 
 | Bidang (slug) | Bab | Sub | Full | Kosakata | Kelompok | Soal | Bergambar | PDF | Hal. | Status |
