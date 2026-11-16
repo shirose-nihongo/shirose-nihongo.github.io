@@ -2058,6 +2058,11 @@ window.awardKoin = async (d, alasan) => {
 async function loadMateri(tipe, lvl){
   const key = `${tipe}-${lvl}`;
   if (state.materi[tipe][lvl]) return state.materi[tipe][lvl];
+  window.__mPending = window.__mPending || {};
+  if (window.__mPending[key]) return window.__mPending[key];
+  return (window.__mPending[key] = _loadMateri(tipe, lvl).finally(() => { delete window.__mPending[key]; }));
+}
+async function _loadMateri(tipe, lvl){
   try {
     const r = await fetch(`./data/${tipe}-${lvl}.json`);
     const d = await r.json();
