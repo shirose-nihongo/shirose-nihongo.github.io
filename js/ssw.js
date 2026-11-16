@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261116z";
+} from "./ssw-core.js?v=20261117a";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 let FB = null;
@@ -519,7 +519,7 @@ async function renderKuis([slug, quizId]) {
   if (!quizId) {
     return wrap(`
       ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Kuis & Evaluasi" }])}
-      <div class="sw-head compact"><div class="jp">試験センター</div><h1>Evaluasi — Examination Center</h1><p>Kuis tiap subbab, 3 kuis tiap bab, dan 10 ujian penuh (pilihan ganda, ○× dan soal bergambar). Skor terbaik tersimpan di akunmu.</p></div>
+      <div class="sw-head compact"><div class="jp">試験センター</div><h1>Evaluasi — Examination Center</h1><p class="sw-label own">🏷️ Soal di sini adalah <b>latihan buatan Shirose</b> (bukan soal resmi ujian SSW), kecuali kuis yang diberi label <b>Soal resmi</b>.</p><p>Kuis tiap subbab, 3 kuis tiap bab, dan 10 ujian penuh (pilihan ganda, ○× dan soal bergambar). Skor terbaik tersimpan di akunmu.</p></div>
       ${chs.map(c => `<div class="sw-panel"><h2>BAB ${c.no} — ${esc(L(c.title, "id"))}</h2><div class="sw-qlist">${(pack.quiz.bab?.[c.id] || []).map((q, i) => row(q, `Kuis ${i + 1} · ${esc(L(q.title, "id"))}${q.title && q.title.jp ? ` <span class="jp sw-tsub">${rich(q.title.jp, { ruby: false })}</span>` : ""}`)).join("") || '<p class="sw-muted">Belum ada kuis.</p>'}</div></div>`).join("")}
       ${(pack.quiz.tema || []).length ? `<div class="sw-panel"><h2>Kuis Tema</h2><p class="sw-muted">${slug === "building-cleaning" ? "Satu kuis untuk satu topik: rute pembersihan, jenis lantai, karpet, dan pH." : "Latihan kosakata per kategori: arti ↔ kata Jepang (10 soal tiap kuis)."}</p><div class="sw-qlist">${pack.quiz.tema.map(q => row(q, esc(L(q.title, "id")))).join("")}</div></div>` : ""}
       <div class="sw-panel"><h2>Tes Membaca Kosakata</h2><p class="sw-muted">Kanji dari kosakata buku → pilih bacaannya (hiragana/katakana). 15 soal acak.</p><div class="sw-qlist">${row({ id: "baca-kosakata", items: { length: 15 } }, "読み方テスト · Tes Membaca")}</div></div>
@@ -536,7 +536,7 @@ async function renderKuis([slug, quizId]) {
   P.last = { route: `ssw-kuis/${slug}/${quizId}`, label: `Kuis ${L(q.title, "id")}`, t: Date.now() };
   QZ = { slug, q, items: shuffle(items, rnd), i: 0, sel: null, score: 0, wrong: [], lang, P };
   setTimeout(() => window.SSW.qzDraw(), 0);
-  return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: "Kuis", go: `route('ssw-kuis/${slug}')` }, { t: esc(L(q.title, "id")) }])}<div id="qz-root"></div>`);
+  return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: "Kuis", go: `route('ssw-kuis/${slug}')` }, { t: esc(L(q.title, "id")) }])}<div class="sw-label ${q.resmi ? "off" : "own"}">${q.resmi ? "✅ Soal resmi" : "🏷️ Latihan buatan Shirose — bukan soal resmi ujian"}</div><div id="qz-root"></div>`);
 }
 
 /* ============================== DASHBOARD SISWA ============================== */
@@ -1057,12 +1057,14 @@ const SSW = window.SSW = {
     const root = document.getElementById("qz-root"); if (!root || !QZ) return;
     const Q = QZ, total = Q.items.length;
     if (Q.i >= total) {
-      const pct = recordQuiz(Q.P, Q.q.id, Q.score, total, Q.wrong.map(w => w.id));
-      if (window.awardXP && !Q.paid) { Q.paid = 1; window.awardXP(pct >= 80 ? 5 : 2, pct >= 80 ? 3 : 1); }
-      logAct(Q.slug, `Kuis ${plain(L(Q.q.title, "id"))}: ${pct}%`); touch(Q.slug); flush(Q.slug);
+      const pct = Q.retry ? Math.round(100 * Q.score / Math.max(1, total)) : recordQuiz(Q.P, Q.q.id, Q.score, total, Q.wrong.map(w => w.id));
+      if (!Q.retry) {
+        if (window.awardXP && !Q.paid) { Q.paid = 1; window.awardXP(pct >= 80 ? 5 : 2, pct >= 80 ? 3 : 1); }
+        logAct(Q.slug, `Kuis ${plain(L(Q.q.title, "id"))}: ${pct}%`); touch(Q.slug); flush(Q.slug);
+      }
       root.innerHTML = `<div class="sw-panel sw-center"><div class="sw-emoji">${pct >= 80 ? "🏆" : pct >= 60 ? "👍" : "📖"}</div><h2>Skor: ${pct}%</h2><p>${Q.score} benar dari ${total} soal.</p>
         ${Q.wrong.length ? `<div class="sw-review"><h3>Yang perlu diulang</h3>${Q.wrong.map(w => `<div class="sw-rv"><p>${rich(L(w.q, Q.lang))}</p><p class="ok">✓ ${rich(L(w.opts[w.a], Q.lang))}</p><p class="sw-muted">${rich(L(w.exp, Q.lang))}</p></div>`).join("")}</div>` : '<p class="ok">Sempurna!</p>'}
-        <div class="sw-actions"><button class="btn" onclick="route('ssw-kuis/${Q.slug}/${Q.q.id}')">Ulangi kuis</button><button class="btn ghost" onclick="route('ssw-kuis/${Q.slug}')">Daftar kuis</button></div></div>`; return;
+        <div class="sw-actions">${Q.wrong.length ? `<button class="btn gold" onclick="SSW.qzRetryWrong()">🔁 Ulangi soal yang salah (${Q.wrong.length})</button>` : ""}<button class="btn" onclick="route('ssw-kuis/${Q.slug}/${Q.q.id}')">Ulangi kuis</button><button class="btn ghost" onclick="route('ssw-kuis/${Q.slug}')">Daftar kuis</button></div></div>`; return;
     }
     const it = Q.items[Q.i], lang = Q.lang, answered = Q.sel != null;
     root.innerHTML = `
@@ -1082,6 +1084,12 @@ const SSW = window.SSW = {
   qzRuby() { LSset("shirose-ssw-ruby", ruby() ? "0" : "1"); applyRuby(); if (QZ) SSW.qzDraw(); },
   qzLang(l) { if (!QZ) return; QZ.lang = l; setLang(l); SSW.qzDraw(); },
   qzPick(k) { if (!QZ || QZ.sel != null) return; const it = QZ.items[QZ.i]; QZ.sel = k; if (k === it.a) { QZ.score++; window.awardXP && window.awardXP(2, 1); } else QZ.wrong.push(it); SSW.qzDraw(); },
+  qzRetryWrong() {
+    if (!QZ || !QZ.wrong.length) return;
+    const items = shuffle(QZ.wrong.map(w => ({ ...w, order: w.mb ? w.opts.map((_, k) => k) : shuffle(w.opts.map((_, k) => k)) })));
+    QZ = { ...QZ, items, i: 0, sel: null, score: 0, wrong: [], retry: true, paid: 1 };
+    SSW.qzDraw(); window.scrollTo(0, 0);
+  },
   qzNext() { if (!QZ) return; QZ.i++; QZ.sel = null; SSW.qzDraw(); window.scrollTo(0, 0); },
   dashCard,
 };

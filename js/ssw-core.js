@@ -94,7 +94,7 @@ export async function loadBidang(force = false) {
     }
   } catch (e) { console.warn("ssw: gagal memuat konfigurasi bidang:", e.message || e); }
   const map = new Map(DEFAULT_BIDANG.map(b => [b.slug, { ...b }]));
-  for (const r of remote) {
+  for (const r of (remote || [])) {
     const base = map.get(r.slug) || { slug: r.slug, tema: "generic", urut: 99 };
     map.set(r.slug, { ...base, ...r });
   }
