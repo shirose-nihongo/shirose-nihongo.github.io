@@ -863,7 +863,7 @@ export const CATALOG_LABELS = {
   item_tangan: "Item Tangan",
   aura: "Aura",
   celana: "Celana",
-  sayap: "Sayap (khusus Gacha)",
+  sayap: "Sayap",
 };
 
 /* ====== Default equipped state (botak, kaos putih + celana putih polos, sepatu standar) ====== */
