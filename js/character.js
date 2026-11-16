@@ -879,6 +879,27 @@ export const DEFAULT_EQUIPPED = {
 };
 
 /* ====== Render the full character given equipped state ====== */
+
+/* ====== Mode 2D datar (ringan): tanpa gradasi, filter, dan animasi SVG ====== */
+function flatten2D(svg) {
+  const col = {};
+  svg.replace(/<(linear|radial)Gradient\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/\1Gradient>/g, (m, t, id, inner) => {
+    const st = inner.match(/<stop\b[^>]*>/g) || []; const pick = st[Math.floor(st.length / 2)] || st[0] || "";
+    const cc = (pick.match(/stop-color="([^"]+)"/) || [])[1] || "#888"; const op = parseFloat((pick.match(/stop-opacity="([^"]+)"/) || [])[1] || 1);
+    col[id] = [cc, t === "radial" ? Math.min(op, 0.45) : op]; return m;
+  });
+  return svg
+    .replace(/<(linear|radial)Gradient\b[\s\S]*?<\/\1Gradient>/g, "")
+    .replace(/<filter\b[\s\S]*?<\/filter>/g, "")
+    .replace(/<animateTransform\b[^>]*?(\/>|>[\s\S]*?<\/animateTransform>)/g, "")
+    .replace(/<animateMotion\b[^>]*?(\/>|>[\s\S]*?<\/animateMotion>)/g, "")
+    .replace(/<animate\b[^>]*?(\/>|>[\s\S]*?<\/animate>)/g, "")
+    .replace(/<set\b[^>]*\/>/g, "")
+    .replace(/\s(?:filter|style)="[^"]*(?:filter|blur)[^"]*"/g, "")
+    .replace(/\sfilter="[^"]*"/g, "")
+    .replace(/\b(fill|stroke)="url\(#([^)]+)\)"/g, (m, a, id) => { const v = col[id]; return v ? `${a}="${v[0]}"${v[1] < 1 ? ` ${a}-opacity="${v[1]}"` : ""}` : `${a}="#888"`; });
+}
+
 export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const eq = { ...DEFAULT_EQUIPPED, ...equipped };
 
@@ -926,7 +947,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
 
   const bigHand = (x) => x ? x.replace(/<circle cx="(123|277)" cy="325" r="11"/g, '<circle cx="$1" cy="325" r="14"') : x;
   base = bigHand(base); pakaianOverlay = bigHand(pakaianOverlay);
-  return `
+  return flatten2D(`
     <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
       ${sayapSvg}
@@ -937,7 +958,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
       ${aksesoriSvg}
       ${handheldSvg}
     </svg>
-  `;
+  `);
 }
 
 /* ====== Build item card HTML (for shop & inventory) ====== */
@@ -952,12 +973,18 @@ export function itemCardSvg(kategori, itemId) {
 }
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
-import { extend } from "./character-more.js?v=20261116j";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116j";
-import { extendShirose } from "./shirose-set.js?v=20261116j";
-import { extend2 } from "./character-more2.js?v=20261116j";
+import { extend } from "./character-more.js?v=20261116k";
+import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116k";
+import { extendShirose } from "./shirose-set.js?v=20261116k";
+import { extend2 } from "./character-more2.js?v=20261116k";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;
+/* ====== Katalog diringkas (performa): senjata & sayap hanya yang sederhana ====== */
+const KEEP_SENJATA = new Set(["none","tas_sekolah","pedang_bambu","n5_buku_common","briefcase_common","hh_katana","hh_pedang_kayu","hh_pensil_raksasa","hh_payung","hh_bunga","hh_kipas","hh_kunai","hh_shuriken","hh_busur","hh_tongkat_sihir","hh_lentera","hh_yari","hh_kapak","hh_palu","hh_perisai","hh_gitar","hh_trisula","hh2_mic","hh2_pisau","hh2_tongkat_bisbol"]);
+const KEEP_SAYAP = new Set(["none","sy_kardus","sy_kertas","sy_daun","sy_capung","sy2_kupu","sy_malaikat"]);
+for (const k of Object.keys(HANDHELD)) if (!KEEP_SENJATA.has(k)) delete HANDHELD[k];
+for (const k of Object.keys(SAYAP)) if (!KEEP_SAYAP.has(k)) delete SAYAP[k];
+
