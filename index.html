@@ -1398,6 +1398,7 @@ html{overflow-x:hidden;}
     <span class="chip" title="Koin"><span class="coin" id="chip-coin">0</span></span>
     <span class="chip" title="Streak hari"><span class="streak" id="chip-streak">0</span></span>
     <button class="btn ghost" id="btn-auth" onclick="showAuthModal()">🔑 Masuk</button>
+    <button class="btn ghost hidden" id="btn-out" title="Keluar / ganti akun" aria-label="Keluar" onclick="logout()" style="padding:6px 10px;font-size:14px;">⎋</button>
   </div>
 </div>
 
@@ -5509,10 +5510,17 @@ window.logout = async () => {
   // Tampilan langsung pindah ke halaman login; signOut jalan di latar belakang (tidak menunggu jaringan).
   _lupakanPilihanLevel();
   state.user = null; state.siswa = null;
-  try { document.getElementById("btn-auth").innerHTML = "🔑 Masuk"; document.getElementById("guru-link").classList.add("hidden"); } catch (_) {}
+  try { document.getElementById("btn-auth").innerHTML = "🔑 Masuk"; document.getElementById("btn-auth").onclick = () => route("login"); document.getElementById("btn-out").classList.add("hidden"); document.getElementById("guru-link").classList.add("hidden"); } catch (_) {}
   toast("Dadah 👋");
   route("login");
-  try { await FB.keluar(); } catch (e) { console.warn("signOut", e); }
+  // signOut dibatasi 3 dtk; kalau macet (jaringan HP), hapus sesi lokal supaya tidak masuk lagi otomatis.
+  try { await Promise.race([FB.keluar(), new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 3000))]); }
+  catch (e) {
+    console.warn("signOut", e);
+    try { indexedDB.deleteDatabase("firebaseLocalStorageDb"); } catch (_) {}
+    try { Object.keys(localStorage).filter(k => k.startsWith("firebase:")).forEach(k => localStorage.removeItem(k)); } catch (_) {}
+    setTimeout(() => location.reload(), 300);
+  }
 };
 
 /* ========== ACHIEVEMENTS ========== */
@@ -5714,6 +5722,7 @@ FB.onAuth(async (user, siswa) => {
     try { localStorage.setItem("shirose-returning","1"); } catch(e){}
     btn.innerHTML = `👋 ${siswa?.nama || user.email.split("@")[0]}`;
     btn.onclick = () => route("profile");
+    try { document.getElementById("btn-out").classList.remove("hidden"); } catch (_) {}
     document.getElementById("guru-link").classList.toggle("hidden", !FB.userIsGuru());
     // Banner recovery: kalau login sukses tapi siswa doc gagal dibuat/dibaca,
     // tampilkan panel yang mencolok supaya user tahu dan bisa reset akun.
@@ -5721,6 +5730,7 @@ FB.onAuth(async (user, siswa) => {
   } else {
     btn.innerHTML = "🔑 Masuk";
     btn.onclick = () => route("login");
+    try { document.getElementById("btn-out").classList.add("hidden"); } catch (_) {}
     document.getElementById("guru-link").classList.add("hidden");
     hideOrphanBanner();
   }
