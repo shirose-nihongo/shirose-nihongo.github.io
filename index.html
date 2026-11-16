@@ -4041,6 +4041,7 @@ function _bindFlashSwipe(card){
 }
 
 let _hafBusy = false, _hafBg = Promise.resolve();
+const _hafAdd = (x, k) => { const sc = state.hafalan_score; sc.xp = (sc.xp || 0) + x; sc.koin = (sc.koin || 0) + k; };
 window.hafRate = async (rate) => {
   // Kunci: abaikan tekanan/geseran ganda sampai kartu berikutnya tampil.
   if (_hafBusy) return;
@@ -4070,7 +4071,11 @@ window.hafRate = async (rate) => {
   state.srs[key] = card;
   if (it.tipe === "ssw" && it.vnum) state.srs[_srsKey("ssw", { no: it.vnum }, it.vnum - 1)] = { ...card };   // kartu alat ikut progres kosakata utamanya
   const ingat = normalized === "ingat";
-  if (ingat) state.hafalan_score.benar++; else state.hafalan_score.salah++;
+  const sc = state.hafalan_score;
+  if (ingat) sc.benar++; else sc.salah++;
+  // XP & koin dikumpulkan dulu, diberikan sekali saat sesi selesai (renderHafalanDone).
+  sc.xp = (sc.xp || 0) + (ingat ? 3 : 1);
+  sc.koin = (sc.koin || 0) + (ingat ? (justMastered ? 2 : 1) : 0);
 
   // Kartu berikutnya LANGSUNG tampil; simpan progres & XP berjalan di belakang (berurutan).
   state.hafalan_pos++;
@@ -4081,14 +4086,13 @@ window.hafRate = async (rate) => {
   _hafBg = _hafBg.then(async () => {
     await _saveSrs();
     if (ingat){
-      await awardXP(3, justMastered ? 2 : 1);
       if (justMastered) toast(`🏆 ${it.tipe === "kanji" ? "Kanji" : "Kosakata"} ${it.front} — MASTERED! +1 🪙`);
       if (state.user) {
         FB.updateMisiProgres("hafalan_10", 1).catch(()=>{});
         const actType = it.tipe === "kanji" ? "kanji" : "kosakata";
         if (it.tipe !== "ssw") FB.recordActivity(actType).catch(()=>{});
       }
-    } else await awardXP(1, 0);
+    }
   }).catch(e => console.warn("hafRate simpan:", e?.message || e));
   } finally { setTimeout(() => { _hafBusy = false; }, 250); }
 };
@@ -4180,7 +4184,7 @@ async function matchAfterPair(correct, iInBatch){
   if (correct){
     _autoSpeakJP(it.fraw || it.front);
     playJurus();
-    await awardXP(3, justMastered ? 2 : 1);
+    _hafAdd(3, justMastered ? 2 : 1);
     if (justMastered) toast(`🏆 ${it.front} — MASTERED! +1 🪙`);
     if (state.user) {
       const actType = it.tipe === "kanji" ? "kanji" : "kosakata";
@@ -4259,13 +4263,13 @@ window.mcPick = async (encoded, btn) => {
     fb.style.border = "1px solid var(--green)";
     fb.innerHTML = `<b>✓ Benar!</b> ${state.mc_correct}`;
     state.hafalan_score.benar++;
-    await awardXP(3, 1);
+    _hafAdd(3, 1);
   } else {
     fb.style.background = "rgba(239,68,68,.15)";
     fb.style.border = "1px solid var(--red)";
     fb.innerHTML = `<b>✗ Belum tepat.</b> Jawaban: ${state.mc_correct}`;
     state.hafalan_score.salah++;
-    await awardXP(1, 0);
+    _hafAdd(1, 0);
   }
   // SRS update
   const it = state.hafalan_queue[state.hafalan_pos];
@@ -4280,7 +4284,7 @@ window.mcPick = async (encoded, btn) => {
   state.srs[key] = card;
   await _saveSrs();
   if (justMastered){
-    await awardXP(0, 1);
+    _hafAdd(0, 1);
     toast(`🏆 ${it.front} — MASTERED! +1 🪙`);
   }
   if (correct && state.user){
@@ -4300,6 +4304,11 @@ function renderHafalanDone(){
   const s = state.hafalan_score || { benar:0, salah:0 };
   const total = s.benar + s.salah;
   const acc = total ? Math.round((s.benar / total) * 100) : 0;
+  const xp = s.xp ?? s.benar * 3 + s.salah, koin = s.koin ?? s.benar;
+  if (!s.dibayar && (xp || koin)) {   // hadiah sesi diberikan SEKALI di akhir sesi
+    s.dibayar = true;
+    _hafBg = _hafBg.then(() => awardXP(xp, koin)).catch(e => console.warn("hadiah hafalan:", e?.message || e));
+  }
   return `
     <div class="panel">
       <h2>🎉 Hafalan selesai!</h2>
@@ -4307,7 +4316,7 @@ function renderHafalanDone(){
         <div class="emoji">${acc >= 80 ? "🏆" : acc >= 60 ? "😊" : "💪"}</div>
         <div style="font-size:42px; font-weight:800; color:var(--pink);">${acc}%</div>
         <div>${s.benar} benar · ${s.salah} salah</div>
-        <div style="color:var(--gray); margin-top:6px;">+${s.benar*3} XP · +${s.benar} 🪙</div>
+        <div style="color:var(--gray); margin-top:6px;">+${xp} XP · +${koin} 🪙</div>
       </div>
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
         <button class="btn" onclick="route('${_hafMenu()}')">Sesi lagi</button>
