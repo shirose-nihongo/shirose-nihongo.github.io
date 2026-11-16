@@ -5454,23 +5454,7 @@ window.claimMisi = async (id) => {
 
 /* ========== PROFILE ========== */
 async function renderProfile(){
-  const akses = state.siswa?.aksesLevel || {};
   const nama = state.siswa?.nama || "Tamu";
-
-  // Semua dimuat PARALEL dan dibatasi 3 dtk (dulu berurutan: 5 level x 2 baca + riwayat = lama di HP).
-  const allGami = {};
-  let riwayat = [];
-  if (state.user) {
-    const _tm = (p, fb) => new Promise(res => { const t = setTimeout(() => res(fb), 3000); Promise.resolve(p).then(v => { clearTimeout(t); res(v); }, () => { clearTimeout(t); res(fb); }); });
-    const lv = ["n5","n4","n3","n2","n1"];
-    const [gs, rw] = await Promise.all([
-      Promise.all(lv.map(l => _tm(FB.getGami(l), null))),
-      _tm(FB.listNilai(10), []),
-    ]);
-    lv.forEach((l, i) => { if (gs[i]) allGami[l] = gs[i]; });
-    riwayat = rw || [];
-  }
-
   return `
     <div class="panel">
       <h2>👤 Profil</h2>
@@ -5479,34 +5463,6 @@ async function renderProfile(){
       <p style="color:var(--gray); font-size:13px;">${state.user?.email || "Tamu"} ${state.siswa?.kelas ? `· Kelas ${state.siswa.kelas}` : ""}</p>
       ${FB.userIsGuru() ? `<div class="kc-guru-box"><div><b>🛠️ Akun ${FB.userIsDeveloper() ? "Moderator" : FB.userIsAdmin() ? "Admin" : "Guru"} terdaftar</b><br><small>Kamu punya akses ke Dashboard Guru: kelola siswa, bank soal, hasil ujian, dan laporan.</small></div><a class="btn" href="./teacher.html">Buka Dashboard Guru</a></div>` : ""}
 
-      <h3>Pengaturan</h3>
-      <label style="display:flex; align-items:center; gap:10px; cursor:pointer; padding:12px; background:rgba(42,50,112,.4); border:1px solid var(--border); border-radius:10px; margin-bottom:12px;">
-        <input type="checkbox" ${isAutoPlayAudio()?'checked':''} onchange="setAutoPlayAudio(this.checked)" style="width:20px; height:20px;"/>
-        <span style="flex:1;"><b>🔊 Auto-play audio Jepang</b><br><small style="color:var(--gray);">Pelafalan diputar otomatis setelah kamu rate flashcard</small></span>
-      </label>
-
-      <h3>Progres per Level</h3>
-      <div class="grid grid-5" style="grid-template-columns:repeat(5,1fr); gap:8px;">
-        ${["n5","n4","n3","n2","n1"].map(lvl => {
-          const g = allGami[lvl] || { xp:0, koin:0, level_karakter:1 };
-          const unlocked = akses[lvl] || FB.userIsGuru();
-          return `<div class="card" style="text-align:center; cursor:default;">
-            <div style="font-weight:800;">${lvl.toUpperCase()}</div>
-            <div style="color:${unlocked?'var(--pink)':'var(--gray-dim)'}; font-size:11px;">${unlocked?'Terbuka':'🔒'}</div>
-            <div style="font-size:11px; color:var(--gray); margin-top:6px;">Lv ${g.level_karakter} · ${g.xp} XP</div>
-          </div>`;
-        }).join("")}
-      </div>
-
-      <h3>Riwayat Ujian</h3>
-      ${riwayat.length ? riwayat.map(r => `
-        <div class="contoh-item">
-          <div>${r.kategoriId}</div>
-          <div class="id">${r.skor}/100 (${r.benar} benar)</div>
-        </div>
-      `).join("") : '<div class="empty">Belum ada riwayat ujian.</div>'}
-
-      ${state.user ? `<button class="btn ghost danger" style="margin-top:16px;" onclick="logout()">Keluar</button>` : ""}
     </div>
   `;
 }
