@@ -3508,10 +3508,12 @@ function _normalizeItem(tipe, it, idx){
       front: it.kanji || it.k || "", fraw: it.kanji || it.k || "",
       reading: it.kana || `${it.on || ""} ${it.kun || ""}`.trim() || "",
       back: it.arti || it.a || "",
+      on: it.on || "", kun: it.kun || "", cs: it.c || [], kal: it.kal || [],
     };
   }
   return {
     tipe, idx, no: itemNo(it, idx),
+    contoh: it.contoh || "", ac: it.arti_contoh || "",
     front: _cleanKata(_vfPick(it).kata), fraw: _vfPick(it).kata, fr: _vfPick(it).fr,
     reading: _vfPick(it).kana,
     back: it.arti || it.a || "",
@@ -4244,6 +4246,8 @@ function renderHafalanMultiple(){
   while (shuffled.length < 3) shuffled.push("—");
   const options = [it.back, ...shuffled].sort(() => Math.random() - 0.5);
   state.mc_correct = it.back;
+  state.mc_map = {}; q.forEach(x => { if (x.back && !state.mc_map[x.back]) state.mc_map[x.back] = x; });
+  state.mc_map[it.back] = it;
 
   return `
     <div class="panel">
@@ -4272,6 +4276,28 @@ function renderHafalanMultiple(){
     </div>
   `;
 }
+/* Pembahasan PG hafalan (JLPT & JFT): arti, bacaan, contoh kalimat, dan kata asli dari tiap pilihan */
+function _pembahasanPG(it, picked, correct){
+  const e = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const word = (x) => `<b>${_hafFront(x) || e(x.front)}</b>${x.reading && x.reading !== x.front ? ` <span style="opacity:.8">(${e(String(x.reading).replace(/<[^>]+>/g, ""))})</span>` : ""}`;
+  let h = `<div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border,#555);font-size:14px;line-height:1.65;text-align:left;">`;
+  h += `<div style="font-weight:800;margin-bottom:4px;">📖 Pembahasan</div>`;
+  h += `<div>${word(it)} = <b>${e(it.back)}</b>${it.fungsi ? `<br><span style="opacity:.85">${e(it.fungsi)}</span>` : ""}</div>`;
+  if (it.tipe === "kanji") {
+    if (it.on || it.kun) h += `<div style="margin-top:4px;">On: <b>${e(it.on || "—")}</b> · Kun: <b>${e(it.kun || "—")}</b></div>`;
+    (it.cs || []).slice(0, 3).forEach(c => { h += `<div style="opacity:.9">• ${e(c.k)} (${e(c.r)}) = ${e(c.a)}</div>`; });
+    const k0 = (it.kal || [])[0]; if (k0) h += `<div style="margin-top:4px;">例: ${_frHtml(k0.j)}<br><span style="opacity:.85">${e(k0.a)}</span></div>`;
+  } else if (it.contoh) {
+    h += `<div style="margin-top:4px;">例: ${_frHtml(it.contoh)}${it.ac ? `<br><span style="opacity:.85">${e(it.ac)}</span>` : ""}</div>`;
+  }
+  if (!correct && picked) {
+    const w = (state.mc_map || {})[picked];
+    h += `<div style="margin-top:6px;color:#fca5a5;">✗ Kamu memilih “${e(picked)}”${w ? ` — itu arti dari ${word(w)}` : " — bukan arti kata ini"}.</div>`;
+  }
+  const others = [...document.querySelectorAll("#mc-opts .opsi")].map(b => decodeURIComponent(b.dataset.ans)).filter(a => a !== it.back && a !== picked && (state.mc_map || {})[a]);
+  if (others.length) h += `<div style="margin-top:6px;opacity:.9;">Pilihan lain:<br>${others.map(a => `• “${e(a)}” = ${word(state.mc_map[a])}`).join("<br>")}</div>`;
+  return h + `</div>`;
+}
 window.mcPick = async (encoded, btn) => {
   const picked = decodeURIComponent(encoded);
   const correct = picked === state.mc_correct;
@@ -4297,6 +4323,7 @@ window.mcPick = async (encoded, btn) => {
     state.hafalan_score.salah++;
     _hafAdd(1, 0);
   }
+  { const _it = state.hafalan_queue[state.hafalan_pos]; try { fb.innerHTML += _pembahasanPG(_it, picked, correct); } catch (e) { console.warn("pembahasan:", e.message); } }
   // SRS update
   const it = state.hafalan_queue[state.hafalan_pos];
   const key = _srsKey(it.tipe, {no:it.no, skey:it.skey}, it.idx);
