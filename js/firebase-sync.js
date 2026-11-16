@@ -467,6 +467,11 @@ function _gSave(o) { try { localStorage.setItem("shirose-gacha:" + currentUser.u
 function _gSpent() { return Number(_gLocal().spent) || 0; }
 export function gachaSpend(price) { const o = _gLocal(); o.spent = (Number(o.spent) || 0) + price; _gSave(o); }
 export function gachaRefund(price) { const o = _gLocal(); o.spent = Math.max(0, (Number(o.spent) || 0) - price); _gSave(o); }
+/* Saldo dasar dompet (sebelum dikurangi belanja gacha lokal) disimpan di perangkat → saat server tak terjangkau (kuota/offline) saldo tetap benar. */
+function _baseGet() { try { const v = JSON.parse(localStorage.getItem("shirose-walletbase:" + (currentUser && currentUser.uid)) || "null"); return v && typeof v.koin === "number" ? v.koin : null; } catch (e) { return null; } }
+function _baseSet(k) { try { if (currentUser && typeof k === "number") localStorage.setItem("shirose-walletbase:" + currentUser.uid, JSON.stringify({ koin: k, t: Date.now() })); } catch (e) {} }
+/* Saldo yang ditampilkan bila dompet tidak terbaca: cache saldo server − koin gacha; tanpa cache: koin per-level − koin gacha. */
+function _koinFallback(levelKoin) { const b = _baseGet(); return Math.max(0, (b !== null ? b : (Number(levelKoin) || 0)) - _gSpent()); }
 const WALLET_LVLS = ["n5","n4","n3","n2","n1","ir0","ir1","ir2"];
 let _walletOff = false, _walletErr = "";
 export function walletError() { return _walletErr; }
@@ -485,7 +490,8 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
     tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp() }, { merge: true });
     return w.koin;
   });
-  const _eff = out - _gSpent();
+  _baseSet(out);
+  const _eff = Math.max(0, out - _gSpent());
   if (delta) { try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || ""), saldo: out }); } catch (e) {} }
   return _eff;
 }
@@ -515,6 +521,7 @@ async function _koinTulisSaja(delta, alasan) {
   const wref = doc(db, "siswa", currentUser.uid, "wallet", "main");
   await setDoc(wref, { koin: increment(delta), uid: currentUser.uid, updated: serverTimestamp() }, { merge: true });
   const baru = sekarang + delta; if (st && st.gami) st.gami.koin = baru;
+  { const b = _baseGet(); if (b !== null) _baseSet(b + delta); }
   try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || "") + " (mode tulis)", saldo: baru }); } catch (e) {}
   return baru;
 }
@@ -552,9 +559,9 @@ export async function getGami(level) {
       getWalletKoin().catch(() => null),
     ]);
     const g = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
-    if (k !== null) g.koin = k;
+    g.koin = k !== null ? k : _koinFallback(g.koin);
     return g;
-  } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:0, streak:0, level_karakter:1 }; }
+  } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:_koinFallback(0), streak:0, level_karakter:1 }; }
 }
 export async function tambahXP(level, dXP, dKoin = 0) {
   if (!currentUser) return;
@@ -574,7 +581,7 @@ export async function tambahXP(level, dXP, dKoin = 0) {
     if (dKoin) { try { saldo = await tambahKoin(dKoin, "hadiah belajar"); } catch (e) {} }
     if (dKoin && saldo === null) cur.koin = (cur.koin || 0) + dKoin;   // fallback lama
     await setDoc(ref, cur, { merge: true });
-    if (saldo !== null) cur.koin = saldo; else { const k = await getWalletKoin(); if (k !== null) cur.koin = k; }
+    if (saldo !== null) cur.koin = saldo; else { const k = await getWalletKoin(); cur.koin = k !== null ? k : _koinFallback(cur.koin); }
     return cur;
   } catch (e) { console.warn("tambahXP failed:", e.message); return null; }
 }
