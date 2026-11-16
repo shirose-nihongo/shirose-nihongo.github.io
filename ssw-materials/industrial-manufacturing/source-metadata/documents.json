@@ -1,7 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-16",
- "note": "Tidak ada PDF yang berhasil diunduh: shell workspace tidak bisa mengakses jaim-skill.or.jp/meti.go.jp/moj.go.jp (allowlist) dan WebFetch hanya membaca, tidak menyimpan. Status 'verification' menyatakan apa yang benar-benar dibaca.",
+ "updated": "2026-11-17",
  "documents": [
   {
    "id": "DOC-001",
@@ -88,16 +87,112 @@
    "downloaded": false
   },
   {
-   "id": "ORIGINAL-SHIROSE-MMP-001",
-   "title": "Materi orisinal Shirose Nihongo — 機械金属加工 (draft)",
-   "publisher": "Shirose Nihongo",
-   "url": "repo: ssw-materials/industrial-manufacturing/",
-   "language": "id + ja (istilah)",
-   "date": "2026-11-16",
-   "type": "Materi ORIGINAL (bukan modul resmi)",
-   "category": "機械金属加工",
-   "verification": "UNVERIFIED_AGAINST_OFFICIAL_TEXT",
-   "downloaded": null
+   "id": "DOC-008",
+   "title": "学習用参考テキスト 機械金属加工 (Bahasa Indonesia), 169 hal.",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/studyguide1_01_id.pdf",
+   "language": "id",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Modul belajar resmi (Buku Referensi Pembelajaran), 10 bab",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-009",
+   "title": "学習用参考テキスト 機械金属加工 (Jepang), 169 hal.",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/studyguide1_01.pdf",
+   "language": "ja",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Modul belajar resmi",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-010",
+   "title": "学習用参考テキスト 電気電子機器組立て (Indonesia)",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/studyguide1_02_id.pdf",
+   "language": "id",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Modul belajar resmi",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-011",
+   "title": "学習用参考テキスト 電気電子機器組立て (Jepang)",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/studyguide1_02.pdf",
+   "language": "ja",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Modul belajar resmi",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-012",
+   "title": "学習用参考テキスト 金属表面処理 (Indonesia)",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/studyguide1_03_id.pdf",
+   "language": "id",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Modul belajar resmi",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-013",
+   "title": "学習用参考テキスト 金属表面処理 (Jepang)",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/studyguide1_03.pdf",
+   "language": "ja",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Modul belajar resmi",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-014",
+   "title": "Errata modul 1号 (3 file: studyguide1_01/02/03_errata.pdf)",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/studyguide1_01_errata.pdf",
+   "language": "ja",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Errata",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-015",
+   "title": "Contoh soal 1号 (sample1_01/02/03.pdf)",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/sample1_01.pdf",
+   "language": "ja",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Contoh soal resmi",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
+  },
+  {
+   "id": "DOC-016",
+   "title": "Soal ujian 2号 実技 tahun 2025 (sample2_01/02/03.pdf)",
+   "publisher": "JAIM",
+   "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/sample2_01.pdf",
+   "language": "ja",
+   "date": "2025-2026 (lihat PDF)",
+   "type": "Contoh/soal ujian resmi 2号 (実技)",
+   "category": "機械金属加工 / 電気電子機器組立て / 金属表面処理",
+   "verification": "DOWNLOADED 17 Nov 2026 lewat browser pane; disimpan di komputer pengguna: Downloads/SHIROSE NIHONGO/jaim_*.pdf (TIDAK di-commit ke repo). Ukuran file cocok dengan server.",
+   "downloaded": true
   }
  ]
 }
