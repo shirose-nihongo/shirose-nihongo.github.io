@@ -18,7 +18,7 @@ Kolom: bab, subbab, subbab berisi teks lengkap (`full`), kosakata, kelompok soal
 
 | Bidang (slug) | Bab | Sub | Full | Kosakata | Kelompok | Soal | Bergambar | PDF | Hal. | Status |
 |---|--:|--:|--:|--:|--:|--:|--:|--:|--:|---|
-| 自動車整備 auto-maintenance | 4 | 27 | 27 | 468 | 59 | 346 | 117 | 2 | 134 | NEEDS REVIEW |
+| 自動車整備 auto-maintenance | 4 | 27 | 27 | 469 | 59 | 346 | 117 | 2 | 134 | NEEDS REVIEW |
 | 工業製品製造業 industrial-mfg | 5 | 17 | 17 | 115 | 22 | 105 | 0 | 0 | 0 | PARTIAL |
 | 機械金属加工 mfg-machine-metal | 2 | 4 | 4 | 20 | 6 | 28 | 0 | 0 | 0 | PARTIAL (tipis) |
 | 介護 kaigo | 4 | 14 | 14 | 280 | 26 | 252 | 0 | 0 | 271 | NEEDS REVIEW |
@@ -43,8 +43,8 @@ Shipbuilding & Marine (造船・舶用工業), Aviation (航空), Automobile Tra
 
 ## Kekurangan Jidousha Seibi (prioritas 1)
 
-1. ~~0 dari 406 kosakata terhubung ke gambar~~ **Diperbaiki 2026-11-16:** 97 kosakata kini punya field `fig` (gambar JICA + nomor bagian) dan 62 istilah ilustrasi baru ditambahkan (468 total) lewat `tools/ssw/automaint_figlink.py`. Flashcard bergambar per-bagian (crop satu komponen) tetap belum ada: gambar JICA berisi banyak bagian bernomor dalam satu file, sehingga kartu gambar-per-istilah butuh crop manual.
-2. Tidak ada field `definisi`/`fungsi komponen`, sumber halaman (`source_page`), atau `validation_status` per kosakata.
+1. ~~0 dari 406 kosakata terhubung ke gambar~~ **Diperbaiki 2026-11-16:** 98 kosakata kini punya field `fig` (gambar JICA + nomor bagian) dan 63 istilah ilustrasi baru ditambahkan (469 total) lewat `tools/ssw/automaint_figlink.py`. Flashcard bergambar per-bagian (crop satu komponen) tetap belum ada: gambar JICA berisi banyak bagian bernomor dalam satu file, sehingga kartu gambar-per-istilah butuh crop manual.
+2. ~~Tidak ada fungsi komponen, sumber halaman, validation_status~~ **Sebagian diperbaiki 2026-11-16:** 98 kosakata bergambar kini punya `fungsi` (ORIGINAL LEARNING CONTENT, perlu review ahli), `hal_sumber` (halaman buku JICA イラスト集, dari halaman kunci jawaban PDF) dan `status_validasi`. Kosakata buku lain (371) belum punya field ini.
 3. Cakupan topik masih mengikuti satu sumber (JICA「みてまなぶ！自動車整備の日本語」): sistem mesin, rem, kemudi, suspensi, kelistrikan, transmisi belum dibahas sebagai bab sistem; belum ada kompetensi resmi JASPA yang dipetakan.
 4. Belum ada mode "identifikasi komponen pada diagram" dan "image ↔ istilah" khusus.
 5. Uji klik UI di browser belum pernah dijalankan (login siswa diperlukan).
@@ -55,6 +55,10 @@ Shipbuilding & Marine (造船・舶用工業), Aviation (航空), Automobile Tra
 - `industrial-mfg`: hanya 115 kosakata, 8 dari 17 subbab punya kosakata, tanpa halaman buku, tanpa sumber resmi tersimpan.
 - `mfg-machine-metal`: 4 subbab, 20 kosakata, 28 soal; belum ada sumber resmi (modul METI/JAPAN-MET atau sejenis) yang diunduh.
 - Kategori resmi lain di bawah 工業製品製造業 belum diinventarisasi dari sumber pemerintah.
+
+## Verifikasi pemetaan gambar ↔ istilah (2026-11-16)
+
+Nomor bagian di 20 gambar JICA (versi tanpa label) dicocokkan dengan halaman kunci jawaban berlabel di `jica-illust-shu.pdf` (teks PDF, bukan tebakan visual). Hasil: seluruh istilah cocok untuk 19 gambar; gambar 2 hanya beda ruby/furigana. Satu istilah yang ada di kunci tetapi belum di tabel ditambahkan: ウォータ・ジャケット (gambar 11 no. 3). Pemeriksaan visual sampel (gambar 2, 10, 13, 14, 36) tidak menemukan kontradiksi dengan kunci.
 
 ## Hambatan lingkungan (jujur)
 

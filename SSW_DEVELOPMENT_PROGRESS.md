@@ -10,7 +10,7 @@ Status: `[ ]` belum · `[~]` berjalan · `[x]` selesai (terverifikasi) · `[!]` 
 | Audit repo & inventaris per bidang | semua | [x] | `SSW_PROJECT_AUDIT.md`, angka dihitung dari data aktual |
 | Daftar kekurangan Jidousha Seibi & Industrial | auto-maintenance, industrial-mfg, mfg-machine-metal | [x] | lihat audit |
 | Source registry (`SSW_SOURCE_REGISTRY.json/.md`) | semua | [x] | 12 dokumen dari pencarian web; hanya 2 PDF JICA yang tersimpan di repo, sisanya NOT DOWNLOADED |
-| Hubungkan kosakata ↔ gambar (Jidousha Seibi) | auto-maintenance | [R] | 97 kosakata punya `fig` (35 lama + 62 baru am-407..468), sumber pemetaan tabel FIG di `automaint_img2.py`. Tautan gambar muncul di detail kata (`js/ssw.js`). Gambar belum dilihat satu per satu; uji klik UI belum |
+| Hubungkan kosakata ↔ gambar (Jidousha Seibi) | auto-maintenance | [R] | 98 kosakata punya `fig` (35 lama + 63 baru am-407..469); nomor bagian diverifikasi terhadap halaman kunci jawaban PDF JICA; `fungsi` + `hal_sumber` ditambahkan, sumber pemetaan tabel FIG di `automaint_img2.py`. Tautan gambar muncul di detail kata (`js/ssw.js`). Gambar belum dilihat satu per satu; uji klik UI belum |
 | Flashcard bergambar per komponen (Jidousha Seibi) | auto-maintenance | [ ] | perlu crop tiap bagian bernomor; soal "bagian bernomor N adalah…" (117) sudah ada |
 | Bab sistem kendaraan (mesin, rem, kemudi, suspensi, kelistrikan) | auto-maintenance | [ ] | perlu sumber resmi (JASPA/MLIT) |
 | Perluas Industrial Manufacturing / Machine-Metal | industrial-mfg, mfg-machine-metal | [ ] | perlu modul resmi |
@@ -36,9 +36,9 @@ Semua perubahan ada di git; sebelum deploy, `git diff` dan `git revert` cukup un
 - **Sektor kurang:** Livestock, Fishery (ujian resmi), mfg-machine-metal, industrial-mfg. **Belum ada:** Shipbuilding, Aviation, Auto Transportation, Railway, Forestry, Wood Industry.
 - **PDF yang berhasil diunduh/ada di repo:** hanya `assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf` dan `jica-illust-shu.pdf` (dari sesi sebelumnya). Sesi ini tidak mengunduh PDF baru: shell tidak bisa menjangkau situs pemerintah.
 - **Link sumber:** `SSW_SOURCE_REGISTRY.md/.json` (12 dokumen: MLIT 1号/2号, METI, MOJ, JICA).
-- **Kosakata Jidousha Seibi:** 468 (406 buku JICA + 62 istilah ilustrasi am-407..468); 97 terhubung ke gambar (`fig`).
+- **Kosakata Jidousha Seibi:** 469 (406 buku JICA + 63 istilah ilustrasi am-407..469); 98 terhubung ke gambar (`fig`), semuanya punya `fungsi`, `hal_sumber`, `status_validasi`.
 - **Gambar terekstrak:** 20 gambar JICA di `assets/ssw/auto-maintenance/fig/` (sudah ada dari sesi sebelumnya; sesi ini tidak mengekstrak gambar baru). Setiap gambar berisi banyak bagian bernomor; pemetaan nomor → istilah dari tabel FIG di `tools/ssw/automaint_img2.py`.
 - **File dibuat:** `SSW_PROJECT_AUDIT.md`, `SSW_DEVELOPMENT_PROGRESS.md`, `SSW_SOURCE_REGISTRY.json/.md`, `tools/ssw/automaint_figlink.py`.
 - **File diubah:** `data/ssw/auto-maintenance/vocab.json`, `js/ssw.js`, `index.html` (pembahasan hafalan), `sw.js` (cache v272).
-- **Belum selesai:** definisi teknis/fungsi per kosakata, `source_page` & `validation_status` per kosakata, bab sistem kendaraan dari sumber resmi MLIT/JASPA, crop per-komponen untuk flashcard bergambar, pemeriksaan visual 20 gambar, uji klik UI (butuh login siswa), unduhan PDF resmi.
+- **Belum selesai:** fungsi/`hal_sumber`/`status_validasi` untuk 371 kosakata buku lain (hal. buku JICA bisa dipetakan dari PDF yang sama), bab sistem kendaraan dari sumber resmi MLIT/JASPA, crop per-komponen untuk flashcard bergambar, review ahli atas teks `fungsi` (buatan Shirose), uji klik UI (butuh login siswa), unduhan PDF resmi.
 - **Instruksi untuk Chat 2:** (1) jangan buat ulang modul COMPLETE; (2) jalankan urutan `automaint_jica_build.py` → `automaint_img2.py <illust.pdf>` → `automaint_figlink.py` bila data dibangun ulang; (3) minta pengguna mengunggah PDF dari sumber di registry, lalu ekstrak; (4) crop per bagian bernomor dengan pemeriksaan visual sebelum dipakai sebagai `img` di flashcard; (5) tambah field `def`, `fungsi`, `halaman` hanya dari sumber yang terverifikasi; (6) lanjut Industrial Manufacturing.

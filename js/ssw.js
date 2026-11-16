@@ -413,13 +413,15 @@ function vRow(v, P, slug) {
   const srcs = (v.src || []).map(id => `<a onclick="SSW.go('${slug}','${id}')">${esc(id.replace(/^b(\d+)s(\d+)$/, "BAB $1.$2"))}</a>`).join(" · ");
   return `<details class="sw-vrow s-${s}"><summary><span class="jp k">${esc(v.kata)}</span><span class="m"><b>${esc(v.arti)}</b><small>${esc(v.kana)}${v.romaji ? " · " + esc(v.romaji) : ""}</small></span><i class="b">${lbl}</i>
     <button class="sw-chip" onclick="event.preventDefault();event.stopPropagation();SSW.sayWord('${slug}','${v.id}')">🔊</button></summary>
-    <div class="x">${v.contoh ? `<p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p>` : ""}${v.fig ? `<p class="sw-muted" style="margin:6px 0 0">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}<p class="sw-muted">${v.cat ? `Kategori: ${esc(v.cat)} · ` : ""}Sumber: ${srcs}</p></div></details>`;
+    <div class="x">${v.contoh ? `<p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p>` : ""}${fungsiInfo(v)}${v.fig ? `<p class="sw-muted" style="margin:6px 0 0">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}<p class="sw-muted">${v.cat ? `Kategori: ${esc(v.cat)} · ` : ""}Sumber: ${srcs}</p></div></details>`;
 }
 
 /* ============================== FLASHCARD SM-2 ============================== */
 let FC = null;
 /* Tautan ke gambar ilustrasi (bagian bernomor) untuk kosakata yang punya v.fig — mis. Jidousha Seibi (JICA イラスト集). */
 const figLinks = (v) => (v.fig || []).map(f => `<button type="button" class="btn ghost sm" style="margin:2px 4px 2px 0" onclick="event.stopPropagation();SSW.zoomPage('${esc(f.src)}')">🖼 Gambar ${f.n} · no. ${f.p} — ${esc(f.t)}</button>`).join("");
+/* Fungsi komponen + sumber halaman (bila ada di data). Fungsi = materi buatan Shirose (ORIGINAL LEARNING CONTENT). */
+const fungsiInfo = (v) => (v.fungsi ? `<p class="sw-muted" style="margin:6px 0 0"><b>Fungsi:</b> ${esc(v.fungsi)}</p>` : "") + (v.hal_sumber ? `<p class="sw-muted" style="margin:2px 0 0;font-size:12px">Sumber gambar: JICA「かいて おぼえる イラスト集」hal. ${esc(v.hal_sumber.hal_cetak)}</p>` : "");
 const hafItems = (vocab) => vocab.map(v => ({ tipe: "ssw", idx: vnum(v) - 1, no: vnum(v), front: v.kata, reading: v.kana || "", back: v.arti || "", vid: v.id }));
 /** Flashcard/hafalan = mesin JLPT (index.html: sswHafalStart). Rute lama ssw-kartu hanya meluncurkan mesin itu. */
 async function renderKartu([slug, scope = "all", mode = "semua"]) {
@@ -767,7 +769,7 @@ const SSW = window.SSW = {
       <div class="sw-vs-m"><b>${esc(v.arti)}</b></div>
       <div class="sw-vs-r"><span>Bacaan: <b class="jp">${esc(v.kana || "")}</b></span>${v.romaji ? `<span>Romaji: <b>${esc(v.romaji)}</b></span>` : ""}<span>Status: <b>${stl}</b></span></div>
       ${v.contoh ? `<div class="sw-vs-ex"><p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p></div>` : ""}
-      ${v.fig ? `<p class="sw-muted">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}${v.cat ? `<p class="sw-muted">Kategori: ${esc(v.cat)}</p>` : ""}${srcs ? `<p class="sw-muted">Muncul di: ${srcs}</p>` : ""}
+      ${fungsiInfo(v)}${v.fig ? `<p class="sw-muted">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}${v.cat ? `<p class="sw-muted">Kategori: ${esc(v.cat)}</p>` : ""}${srcs ? `<p class="sw-muted">Muncul di: ${srcs}</p>` : ""}
       <div class="sw-vs-b"><button class="btn" onclick="SSW.sayWord('${slug}','${id}')">🔊 Dengar</button>
         <button class="btn ${picked ? "gold" : "ghost"}" id="sw-vpick" onclick="SSW.vpick('${slug}','${id}')">${picked ? "★ Ada di Hafalan Pilihan (ketuk = hapus)" : "⭐ Masukkan ke Hafalan Pilihan"}</button>
         <button class="btn ghost" onclick="SSW.vclose();route('ssw-kartu/${slug}/w:${id}/semua')">🃏 Flashcard kata ini</button>
