@@ -1447,6 +1447,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116k";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261114f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261116b";
+const GACHA_ON = false;   // ← ubah ke true untuk menghidupkan gacha lagi (kode gacha tidak dihapus)
 import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261116w";
 initJlpt(FB);
 initKana(FB);
@@ -2106,7 +2107,7 @@ const routes = {
   ...SSW_ROUTES,
   // MENSETSU: #mensetsu, #mensetsu-bidang/{key}, #mensetsu-bank/{key}, #mensetsu-sesi/{key}, #mensetsu-hasil/{id}, #mensetsu-riwayat
   ...MENSETSU_ROUTES,
-  ...GACHA_ROUTES,
+  ...(GACHA_ON ? GACHA_ROUTES : { gacha: () => { setTimeout(() => route("shop"), 0); return '<div class="loading">Memuat…</div>'; } }),
   // JFT-Basic / Irodori (js/jft.js)
   ...JFT_ROUTES,
 };
@@ -2329,7 +2330,7 @@ function renderCharaOrbital(){
     { icon:"📅", jp:"暦",    lbl:"KALENDER",  route:"kalender",    deg:270 },
     { icon:"🏆", jp:"順位",  lbl:"PERINGKAT", route:"leaderboard", deg:315 },
     { icon:"🎰", jp:"抽選",  lbl:"GACHA",     route:"gacha",       deg:0   },
-  ];
+  ].filter(n => GACHA_ON || n.route !== "gacha");
   // Choukai JLPT ditambahkan → 9 node, jarak dihitung ulang supaya orbit tetap simetris.
   if (String(state.level).startsWith("ir")){ NAV.find(n => n.route === "ujian").route = "jft-ujian"; }
   else NAV.splice(3, 0, { icon:"🎧", jp:"聴解", lbl:"CHOUKAI", route:"choukai" });
@@ -2389,10 +2390,10 @@ function renderCharaOrbital(){
           <div class="ico">📊</div>
           <div class="info"><div class="ttl">Riwayat JLPT</div><div class="sub">Nilai &amp; grafik perkembangan</div></div>
         </div>`}
-        <div class="hub-card" onclick="route('gacha')">
+        ${GACHA_ON ? `<div class="hub-card" onclick="route('gacha')">
           <div class="ico">🎰</div>
           <div class="info"><div class="ttl">Gacha</div><div class="sub">Barang shop &amp; tema langka</div></div>
-        </div>
+        </div>` : ""}
         <div class="hub-card" onclick="route('hafalan')">
           <div class="ico">🧠</div>
           <div class="info"><div class="ttl">Hafalan (SRS)</div><div class="sub">Pengulangan berjarak</div></div>
