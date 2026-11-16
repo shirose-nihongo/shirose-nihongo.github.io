@@ -4,7 +4,7 @@ Diperiksa 2026-11-16 lewat pencarian web. Hanya URL yang benar-benar muncul di h
 
 | ID | Bidang | Judul | Penerbit | Jenis | Unduhan | Verifikasi |
 |---|---|---|---|---|---|---|
-| SRC-001 | auto-maintenance | [自動車整備分野特定技能１号評価試験実施要領 (令和6年7月一部改正)](https://www.mlit.go.jp/jidosha/content/002015376.pdf) | 国土交通省 物流・自動車局 自動車整備課 | OFFICIAL EXAMINATION SPECIFICATION | NOT DOWNLOADED (shell tidak bisa akses; isi dibaca lewat pencarian web) | VERIFIED (muncul di domain mlit.go.jp, juga di moj.go.jp/isa/content/001421441.pdf) |
+| SRC-001 | auto-maintenance | [自動車整備分野特定技能１号評価試験実施要領 (令和6年7月一部改正)](https://www.mlit.go.jp/jidosha/content/002015376.pdf) | 国土交通省 物流・自動車局 自動車整備課 | OFFICIAL EXAMINATION SPECIFICATION | DOWNLOADED (ssw-materials/automobile-maintenance/original-pdf/) | VERIFIED (muncul di domain mlit.go.jp, juga di moj.go.jp/isa/content/001421441.pdf) |
 | SRC-002 | auto-maintenance | [自動車整備分野特定技能２号評価試験実施要領 (令和6年7月)](https://www.mlit.go.jp/jidosha/content/002015377.pdf) | 国土交通省 物流・自動車局 自動車整備課 | OFFICIAL EXAMINATION SPECIFICATION | NOT DOWNLOADED | VERIFIED (juga moj.go.jp/isa/content/001421442.pdf) |
 | SRC-003 | auto-maintenance | [「自動車整備分野特定技能2号評価試験」開始 (報道発表)](https://www.mlit.go.jp/report/press/jidosha09_hh_000322.html) | 国土交通省 | OFFICIAL SUPPLEMENTARY MATERIAL | NOT DOWNLOADED (halaman web) | VERIFIED |
 | SRC-004 | auto-maintenance | [令和7年度 自動車整備分野特定技能評価試験実施状況報告書](https://www.moj.go.jp/isa/content/001472219.pdf) | 国土交通省 | OFFICIAL SUPPLEMENTARY MATERIAL | NOT DOWNLOADED | VERIFIED |

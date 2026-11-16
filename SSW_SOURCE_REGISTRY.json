@@ -12,10 +12,14 @@
    "official_source_url": "https://www.mlit.go.jp/jidosha/content/002015376.pdf",
    "language": "ja",
    "document_type": "OFFICIAL EXAMINATION SPECIFICATION",
-   "download_status": "NOT DOWNLOADED (shell tidak bisa akses; isi dibaca lewat pencarian web)",
+   "download_status": "DOWNLOADED",
    "verification_status": "VERIFIED (muncul di domain mlit.go.jp, juga di moj.go.jp/isa/content/001421441.pdf)",
-   "notes": "Format ujian 1号: bahasa Jepang, kanji berfurigana; tingkat setara 3級 整備士技能検定.",
-   "last_checked": "2026-11-16"
+   "notes": "Terbaca dari PDF asli (2026-11-17): 学科 ○× 30 soal/60 menit (lulus ≥65%), 実技 3 課題/20 menit (≥60%); lingkup: sasis & mesin; setara 3級 整備士技能検定. Teks: ssw-materials/automobile-maintenance/extracted-text/SRC-001.txt",
+   "last_checked": "2026-11-17",
+   "local_path": "ssw-materials/automobile-maintenance/original-pdf/SRC-001_002015376.pdf",
+   "sha256": "0eca365bf29a767073d8125311d9f4930ee6f1689c40256e3729c93b628a8305",
+   "bytes": 141701,
+   "pages": 5
   },
   {
    "document_id": "SRC-002",
@@ -26,10 +30,14 @@
    "official_source_url": "https://www.mlit.go.jp/jidosha/content/002015377.pdf",
    "language": "ja",
    "document_type": "OFFICIAL EXAMINATION SPECIFICATION",
-   "download_status": "NOT DOWNLOADED",
+   "download_status": "DOWNLOADED",
    "verification_status": "VERIFIED (juga moj.go.jp/isa/content/001421442.pdf)",
-   "notes": "Ujian 2号 CBT/kertas; pelaksana 日整連; setara 2級 整備士技能検定 (siaran pers MLIT 2024-07-09).",
-   "last_checked": "2026-11-16"
+   "notes": "PDF asli tersimpan; ujian 2号 setara 2級; teks: ssw-materials/automobile-maintenance/extracted-text/SRC-002.txt",
+   "last_checked": "2026-11-17",
+   "local_path": "ssw-materials/automobile-maintenance/original-pdf/SRC-002_002015377.pdf",
+   "sha256": "350eda19eaf8c7881632428c9af46d9b97189692c804e920fb849bbca0a6e52f",
+   "bytes": 195532,
+   "pages": 16
   },
   {
    "document_id": "SRC-003",
