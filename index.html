@@ -981,6 +981,7 @@ html{overflow-x:hidden;}
 .flash-card .front{
   font-family:var(--font-jp); font-weight:800;
   font-size:min(22vw, 140px); line-height:1.05; color:var(--pink-light);
+  font-size:min(22vw, 140px, calc(80cqw / var(--n, 1)));   /* kata panjang otomatis lebih kecil (sebelum JS menyesuaikan) */
   margin:14px 0 10px; word-break:break-all; max-width:100%; overflow-wrap:anywhere;
 }
 .flash-card .reading{
@@ -3462,6 +3463,10 @@ function _vfBtn(fn){ const m = _vfMasu(); return `<span class="vf-sw"><button cl
 window.setVerbForm = (m) => { try { localStorage.setItem("shirose-verbform", m === "masu" ? "masu" : "jisho"); } catch(_) {} };
 window.setVerbFormMateri = (m) => { setVerbForm(m); renderMateriList("kosakata").then(h => { document.getElementById("app").innerHTML = h; }); };
 function _rubyJp(t){ return String(t || "").replace(/&/g,"&amp;").replace(/<(?!\/?(b|ruby|rt)\b)/g,"&lt;").replace(/([\u3400-\u9fff々〆]+)\[([^\]]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>"); }
+function _hafN(it){   // perkiraan lebar kata (jumlah huruf; kata panjang dibagi 2 baris)
+  const n = Math.max(1, String(it.front || "").replace(/<[^>]*>/g, "").replace(/\[[^\]]*\]/g, "").replace(/\s+/g, "").length);
+  return n <= 5 ? n : Math.ceil(n / 2) + 0.6;
+}
 function _hafFront(it){
   if (it.fr && /\[/.test(it.fr)) {
     const pl = String(it.fr).replace(/\[[^\]]*\]/g, "").replace(/\s+/g, "");
@@ -3912,7 +3917,7 @@ function renderHafalanFlashcard(){
         <span class="flash-badge right" id="badge-ingat">✓ INGAT</span>
         <div class="flash-card enter" id="flash-card" data-front="${safeFront}" data-say="${safeFront}" onclick="hafCardTap(event)">
           <div class="no-pill">${fmtNo(it.dno ?? it.no)} · ${_hafBadge(it)}</div>
-          ${it.img ? `<div class="front imgf"><img src="${it.img}" alt="Gambar peralatan" draggable="false"></div>` : `<div class="front">${_hafFront(it)}</div>`}
+          ${it.img ? `<div class="front imgf"><img src="${it.img}" alt="Gambar peralatan" draggable="false"></div>` : `<div class="front" style="--n:${_hafN(it)}">${_hafFront(it)}</div>`}
           <div class="back-face">
             ${it.img ? `<div class="jpname">${it.front}</div>` : ""}
             <div class="reading">${it.reading || "—"}</div>
@@ -3948,6 +3953,10 @@ function _hafPostRender(){
   _bindFlashSwipe(card);
   _mountCompanion();  // Part 24: companion presence
   _hafFit();
+  // font Jepang bisa baru selesai dimuat setelah render → ukur ulang (penyebab teks nabrak tepi di HP)
+  try { document.fonts && document.fonts.ready.then(() => _hafFit()); } catch (e) {}
+  [120, 400, 1000, 2200].forEach(ms => setTimeout(_hafFit, ms));
+  try { if (window.ResizeObserver) { if (window.__hafRO) window.__hafRO.disconnect(); window.__hafRO = new ResizeObserver(() => _hafFit()); window.__hafRO.observe(card); } } catch (e) {}
 }
 // Ukuran huruf otomatis: kata panjang / banyak furigana dikecilkan sampai muat di kartu (HP).
 window._hafFit = function(){
@@ -3955,13 +3964,13 @@ window._hafFit = function(){
   f.style.fontSize = "";                                   // mulai dari ukuran CSS
   const maxW = card.clientWidth - 40, maxH = Math.max(120, Math.min(window.innerHeight * 0.42, 300));
   let fs = parseFloat(getComputedStyle(f).fontSize) || 72, n = 0;
-  const lim = () => card.getBoundingClientRect().right - 20, lim0 = () => card.getBoundingClientRect().left + 20;
+  const lim = () => card.getBoundingClientRect().right - 26, lim0 = () => card.getBoundingClientRect().left + 26;
   const over = () => {   // ada baris/ruby yang keluar dari kartu?
     const r = document.createRange(); r.selectNodeContents(f);
     for (const q of r.getClientRects()) if (q.right > lim() || q.left < lim0()) return true;
     return f.scrollWidth > maxW || f.scrollHeight > maxH || card.scrollHeight > card.clientHeight + 1;
   };
-  while (n++ < 40 && fs > 18 && over()) { fs *= 0.9; f.style.fontSize = fs + "px"; }
+  while (n++ < 40 && fs > 18 && over()) { fs *= 0.88; f.style.fontSize = fs + "px"; }
 };
 window.addEventListener("resize", () => { try { window._hafFit && window._hafFit(); } catch (e) {} });
 

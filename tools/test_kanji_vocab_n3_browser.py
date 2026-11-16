@@ -84,16 +84,7 @@ with sync_playwright() as p:
     pg.screenshot(path=f"/tmp/kv-writer-{MODE}.png")
     ok(pg.locator("#kc-modal canvas, #kc-modal svg").count() > 0, "area menulis / goresan tampil")
     pg.evaluate("() => KC.close()"); pg.wait_for_timeout(300)
-    # --- latihan membaca
-    pg.locator("#kv-modal >> text=Latihan membaca").click(); pg.wait_for_timeout(300)
-    ok(pg.locator("#kv-quiz .kv-opt").count() == 4, "latihan membaca: 4 pilihan")
-    pg.locator("#kv-quiz .kv-opt").nth(0).click(); pg.wait_for_timeout(400)
-    ok(pg.locator("#kv-quiz .kv-opt.ok").count() == 1, "jawaban benar ditandai")
-    srs = pg.evaluate("() => JSON.parse(JSON.stringify(globalThis.__SRS || {}))")
-    ok(any("lat" in c for lv in srs.values() for c in lv.values()), "hasil latihan tersimpan di kartu (progres per kosakata)")
-    keys = [k for lv in srs.values() for k in lv.keys()]
-    ok(len(keys) == 1 and (keys[0].startswith("kv:") or keys[0].startswith("k:")), f"kunci progres = identitas kosakata ({keys})")
-    pg.wait_for_timeout(1500)
+    # (latihan membaca dihapus dari detail Kanji — ada di Hafalan; #89)
     pg.evaluate("() => kvClose()")
     # --- sesi flashcard dari satu Kanji
     pg.evaluate("() => kvStudy(0, 'flashcard')"); pg.wait_for_timeout(1200)
@@ -146,8 +137,6 @@ with sync_playwright() as p:
         chars = len([c for c in kata if '\u3400' <= c <= '\u9fff' or '\uf900' <= c <= '\ufaff'])
         ok(pg.locator("#stroke-grid .stroke-wrap").count() == chars and pg.locator("#stroke-grid .stroke-wrap svg path").count() > 0, f"{lv}: urutan goresan {chars} karakter termuat")
         pg.evaluate("() => closeStrokeOrder()")
-        pg.locator("#kv-modal >> text=Latihan arti").click(); pg.wait_for_timeout(300)
-        ok(pg.locator("#kv-quiz .kv-opt").count() == 4, f"{lv}: latihan arti 4 pilihan")
         pg.evaluate("() => kvClose()")
         pg.evaluate("() => { const s = window.__SHIROSE_STATE; s.hafalan = { tipe: 'kanji', mode: 'flashcard', range: 'all', filter: 'all', pos: 'all' }; return hafStart(); }"); pg.wait_for_timeout(1500)
         q = pg.evaluate("() => window.__SHIROSE_STATE.hafalan_queue.map(c => ({t: c.tipe, f: c.front, k: c.skey || (c.tipe[0] + ':' + c.no)}))")
