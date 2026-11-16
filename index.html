@@ -4040,10 +4040,15 @@ function _bindFlashSwipe(card){
   window.addEventListener("mouseup",   () => { if (dragging) onUp(); });
 }
 
+let _hafBusy = false, _hafBg = Promise.resolve();
 window.hafRate = async (rate) => {
+  // Kunci: abaikan tekanan/geseran ganda sampai kartu berikutnya tampil.
+  if (_hafBusy) return;
   const q = state.hafalan_queue;
   const it = q[state.hafalan_pos];
   if (!it) return;
+  _hafBusy = true;
+  try {
   // Normalize: accept the old 4 ratings AND the new lupa/ingat
   const normalized = (rate === "lupa" || rate === "salah") ? "lupa"
                    : (rate === "ingat" || rate === "benar" || rate === "mudah" || rate === "ragu") ? "ingat"
@@ -4064,26 +4069,28 @@ window.hafRate = async (rate) => {
   const justMastered = FB.detectNewMastery(card);
   state.srs[key] = card;
   if (it.tipe === "ssw" && it.vnum) state.srs[_srsKey("ssw", { no: it.vnum }, it.vnum - 1)] = { ...card };   // kartu alat ikut progres kosakata utamanya
-  await _saveSrs();
+  const ingat = normalized === "ingat";
+  if (ingat) state.hafalan_score.benar++; else state.hafalan_score.salah++;
 
-  if (normalized === "ingat"){
-    playJurus();   // Part 25: signature animation on correct recall
-    await awardXP(3, justMastered ? 2 : 1);
-    if (justMastered) toast(`🏆 ${it.tipe === "kanji" ? "Kanji" : "Kosakata"} ${it.front} — MASTERED! +1 🪙`);
-    state.hafalan_score.benar++;
-    if (state.user) {
-      FB.updateMisiProgres("hafalan_10", 1).catch(()=>{});
-      const actType = it.tipe === "kanji" ? "kanji" : "kosakata";
-      if (it.tipe !== "ssw") FB.recordActivity(actType).catch(()=>{});
-    }
-  } else {
-    await awardXP(1, 0);
-    state.hafalan_score.salah++;
-  }
-
+  // Kartu berikutnya LANGSUNG tampil; simpan progres & XP berjalan di belakang (berurutan).
   state.hafalan_pos++;
   if (_hafSSW()) _sswSaveSess();
   document.getElementById("app").innerHTML = await renderHafalanSession();
+  if (ingat) { try { playJurus(); } catch (_) {} }
+
+  _hafBg = _hafBg.then(async () => {
+    await _saveSrs();
+    if (ingat){
+      await awardXP(3, justMastered ? 2 : 1);
+      if (justMastered) toast(`🏆 ${it.tipe === "kanji" ? "Kanji" : "Kosakata"} ${it.front} — MASTERED! +1 🪙`);
+      if (state.user) {
+        FB.updateMisiProgres("hafalan_10", 1).catch(()=>{});
+        const actType = it.tipe === "kanji" ? "kanji" : "kosakata";
+        if (it.tipe !== "ssw") FB.recordActivity(actType).catch(()=>{});
+      }
+    } else await awardXP(1, 0);
+  }).catch(e => console.warn("hafRate simpan:", e?.message || e));
+  } finally { setTimeout(() => { _hafBusy = false; }, 250); }
 };
 
 /* ========== MODE 2: MATCHING LINES (tap-to-pair, mobile-friendly) ========== */
