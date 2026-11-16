@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261113zl";
+} from "./ssw-core.js?v=20261116y";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 let FB = null;
@@ -78,8 +78,7 @@ const noAccess = () => msgPage("🔒", "Akses SSW belum dibuka", "Guru belum mem
 /** Cek akses bidang. Konfigurasi dibaca dari Firestore (dilindungi rules), bukan sekadar menyembunyikan tombol. */
 async function gate(slug) {
   if (!sswAllowed()) return { err: noAccess() };
-  await loadKelasAkses();
-  const b = await bidangBySlug(slug);
+  const [, b] = await Promise.all([loadKelasAkses(), bidangBySlug(slug)]);
   if (!b) return { err: msgPage("🧭", "Bidang tidak ditemukan", "Bidang SSW ini belum terdaftar.") };
   if (!sswAllowed(slug)) return { err: msgPage("🔒", `Akses ${esc(b.nama)} belum dibuka`, "Guru belum membuka bidang ini untuk akun atau kelasmu. Hubungi gurumu. Progres belajarmu tetap tersimpan.") };
   if (!b.aktif && !isGuru()) return { err: msgPage("🔒", `${esc(b.nama)} belum tersedia`, "Materi bidang ini sedang ditutup guru atau belum dibuka. Progres belajarmu tidak hilang dan tetap tersimpan.") };
@@ -98,8 +97,7 @@ const visibleChapters = (b, pack) => pack.chapters.filter(c => siswaBolehBab(b, 
 async function renderHub() {
   applyRuby();
   if (!sswAllowed()) return noAccess();
-  const list = await loadBidang();
-  await loadKelasAkses();
+  const [list] = await Promise.all([loadBidang(), loadKelasAkses()]);
   const guru = isGuru();
   const isl = list.filter(b => !b.induk).map((b, i) => {
     const open = b.aktif || guru;

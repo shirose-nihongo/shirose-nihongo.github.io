@@ -50,6 +50,10 @@ const LS = {
 
 /* ============================ DATA ============================ */
 const cache = {};
+/** Tunggu promise maksimal ms; lewat itu pakai nilai cadangan (jaringan HP lambat tidak boleh membekukan halaman). */
+const withTimeout = (p, ms, fb) => new Promise(res => { let d = false; const t = setTimeout(() => { if (!d) { d = true; res(fb); } }, ms); Promise.resolve(p).then(v => { if (!d) { d = true; clearTimeout(t); res(v); } }, () => { if (!d) { d = true; clearTimeout(t); res(fb); } }); });
+const _lsj = (k) => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
+const _lss = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 async function getJSON(url) {
   if (!cache[url]) cache[url] = fetch(url).then(r => { if (!r.ok) throw new Error(`${url}: ${r.status}`); return r.json(); }).catch(e => { delete cache[url]; throw e; });
   return cache[url];
@@ -80,7 +84,15 @@ let _bidang = null;
 export async function loadBidang(force = false) {
   if (_bidang && !force) return _bidang;
   let remote = [];
-  try { if (FB && FB.loadSswBidang && !isGuest()) remote = await FB.loadSswBidang(); } catch (e) { console.warn("ssw: gagal memuat konfigurasi bidang:", e.message || e); }
+  const _ck = "ssw-bidang-cache";
+  try {
+    if (FB && FB.loadSswBidang && !isGuest()) {
+      const cached = _lsj(_ck);
+      const fetchP = FB.loadSswBidang().then(r => { _lss(_ck, r); return r; });
+      // Ada cache → pakai langsung, segarkan di latar belakang. Tanpa cache → tunggu maks 4 dtk.
+      remote = cached ? (fetchP.catch(() => {}), cached) : await withTimeout(fetchP, 4000, []);
+    }
+  } catch (e) { console.warn("ssw: gagal memuat konfigurasi bidang:", e.message || e); }
   const map = new Map(DEFAULT_BIDANG.map(b => [b.slug, { ...b }]));
   for (const r of remote) {
     const base = map.get(r.slug) || { slug: r.slug, tema: "generic", urut: 99 };
@@ -98,16 +110,18 @@ export async function loadPack(slug) {
   _pack[slug] = (async () => {
     const base = `./data/ssw/${slug}`;
     const idx = await getJSON(`${base}/index.json`);
-    const babs = await Promise.all(idx.bab.map(b => getJSON(`${base}/${b.file}`)));
-    let vocab = [], quiz = { bab: {}, full: [] };
-    try { vocab = await getJSON(`${base}/${idx.vocab || "vocab.json"}`); } catch (e) {}
-    try { quiz = await getJSON(`${base}/${idx.quiz || "quiz.json"}`); } catch (e) {}
-    let figs = [];   // gambar/diagram potongan dari buku (hanya bidang yang menyebut "figs" di index.json)
-    if (idx.figs) { try { figs = (await getJSON(`${base}/${idx.figs}`)).figs || []; } catch (e) {} }
+    const opt = (f, fb) => f ? getJSON(`${base}/${f}`).catch(() => fb) : Promise.resolve(fb);
+    const [babs, vocab, quiz, figsR, kanji, bunpouR] = await Promise.all([
+      Promise.all(idx.bab.map(b => getJSON(`${base}/${b.file}`))),
+      opt(idx.vocab || "vocab.json", []),
+      opt(idx.quiz || "quiz.json", { bab: {}, full: [] }),
+      opt(idx.figs, { figs: [] }),
+      opt(idx.kanji, null),
+      opt(idx.bunpou, null),
+    ]);
+    const figs = (figsR && figsR.figs) || [];
+    const bunpou = (bunpouR && bunpouR.items) || null;
     const chapters = babs.map((d, i) => ({ ...d.bab, source: d.source, order: i, subs: d.bab.subs }));
-    let kanji = null, bunpou = null;   // opsional: arti per kanji & pola tata bahasa (hanya bidang yang menyebut di index.json)
-    if (idx.kanji) { try { kanji = await getJSON(`${base}/${idx.kanji}`); } catch (e) {} }
-    if (idx.bunpou) { try { bunpou = (await getJSON(`${base}/${idx.bunpou}`)).items || null; } catch (e) {} }
     return { slug, idx, chapters, vocab: vocab.items || vocab, quiz, figs, kanji, bunpou };
   })();
   try { return await _pack[slug]; } catch (e) { delete _pack[slug]; throw e; }
@@ -133,7 +147,14 @@ export async function loadKelasAkses() {
   if (!d || !d.kelas || isGuru() || isGuest()) return {};
   if (_kelasAkses && _kelasAkses.uid === uidNow() && _kelasAkses.kelas === d.kelas) return _kelasAkses.map;
   let map = {};
-  try { const k = (await FB.listKelas()).find(x => x.nama === d.kelas); map = (k && k.aksesSswBidang) || {}; } catch (e) { console.warn("ssw: akses kelas gagal dimuat:", e.message || e); }
+  const _kk = "ssw-kelas-" + uidNow() + "-" + d.kelas;
+  const _kc = _lsj(_kk);
+  if (_kc) {   // pakai cache dulu, segarkan di latar belakang
+    FB.listKelas().then(l => { const k = l.find(x => x.nama === d.kelas); const m = (k && k.aksesSswBidang) || {}; _lss(_kk, m); if (_kelasAkses) _kelasAkses.map = m; }).catch(() => {});
+    _kelasAkses = { uid: uidNow(), kelas: d.kelas, map: _kc };
+    return _kc;
+  }
+  try { const k = (await withTimeout(FB.listKelas(), 4000, null) || []).find(x => x.nama === d.kelas); map = (k && k.aksesSswBidang) || {}; if (k) _lss(_kk, map); } catch (e) { console.warn("ssw: akses kelas gagal dimuat:", e.message || e); }
   _kelasAkses = { uid: uidNow(), kelas: d.kelas, map };
   return map;
 }
@@ -187,7 +208,7 @@ export async function getProgress(slug) {
   if (PS[slug] && PS[slug].id === id) return PS[slug].P;
   const local = LS.get(LKEY(slug), null);
   let remote = null;
-  if (FB && FB.loadSswProgres && !isGuest()) { try { remote = await FB.loadSswProgres(slug); } catch (e) { console.warn("ssw: gagal memuat progres:", e.message || e); } }
+  if (FB && FB.loadSswProgres && !isGuest()) { try { remote = await withTimeout(FB.loadSswProgres(slug), 4000, null); } catch (e) { console.warn("ssw: gagal memuat progres:", e.message || e); } }
   const pick = !local ? remote : !remote ? local : ((remote.u || 0) >= (local.u || 0) ? remote : local);
   const P = Object.assign(DEF(), pick || {});
   P.read = P.read || {}; P.cards = P.cards || {}; P.quiz = P.quiz || {}; P.log = P.log || [];
@@ -200,7 +221,7 @@ let _srsT = 0;
 export async function syncCards(P, vocab, force) {
   if (typeof window === "undefined" || !window.sswSrsLoad) return;
   if (!force && P._srsOk && Date.now() - _srsT < 2500) return;
-  let srs = {}; try { srs = await window.sswSrsLoad(); } catch (e) { return; }
+  let srs = {}; try { srs = await withTimeout(window.sswSrsLoad(), 4000, null); } catch (e) { return; } if (!srs) return;
   _srsT = Date.now(); P._srsOk = 1;
   const out = {};
   for (const v of vocab) {
