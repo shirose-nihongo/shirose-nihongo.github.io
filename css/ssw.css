@@ -323,3 +323,10 @@ body.sw-figopen{padding-bottom:62vh;}
 .sw-k{border-bottom:1px dotted rgba(80,140,230,.7); cursor:pointer; border-radius:3px;} .sw-k:hover,.sw-k:focus{background:rgba(80,140,230,.18); outline:none;}
 .sw-g{border-bottom:2px dashed rgba(60,170,110,.8); cursor:pointer; border-radius:3px;} .sw-g:hover,.sw-g:focus{background:rgba(60,170,110,.18); outline:none;}
 .sw-kr{margin:4px 0;} .sw-kc{font-size:26px; margin-right:8px;}
+
+/* ---- buku: mode scroll (semua halaman berurutan) ---- */
+.sw-book-scroll{display:flex; flex-direction:column; gap:10px; align-items:center;}
+.bk-pgw{scroll-margin-top:72px; position:relative; width:100%; max-width:900px; min-height:60vw; background:#0a0d20; border:1px solid var(--border); border-radius:10px; overflow:hidden; content-visibility:auto; contain-intrinsic-size:auto 130vw;}
+.bk-pgw img{display:block; width:100%; height:auto; cursor:zoom-in;}
+.bk-pgno{position:absolute; top:6px; left:8px; background:rgba(0,0,0,.55); color:#fff; font-size:11px; padding:2px 8px; border-radius:99px; pointer-events:none;}
+.sw-book-scroll + .sw-book-nav{position:sticky; bottom:0; background:linear-gradient(#0f1330cc,#0f1330); padding:8px 4px; z-index:5; border-radius:12px 12px 0 0;}

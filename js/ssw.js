@@ -344,6 +344,7 @@ async function renderBaca([slug, subId, mode, lang]) {
 
 /* ============================== BUKU INTERAKTIF ============================== */
 const BOOK = { zoom: 1 };
+const bookMode = () => { try { return localStorage.getItem("shirose-ssw-bookmode") === "scroll" ? "scroll" : "page"; } catch (e) { return "page"; } };
 async function renderBuku([slug, lang, page]) {
   const g = await gate(slug); if (g.err) return g.err;
   const { b, pack } = g;
@@ -351,21 +352,26 @@ async function renderBuku([slug, lang, page]) {
   const total = pack.idx.pages?.[lang] || pack.idx.pages?.[pack.idx.book] || 85;
   const pg = Math.max(0, Math.min(total - 1, parseInt(page, 10) || 1));
   setLang(lang); BOOK.zoom = 1;
+  const mode = bookMode();
   const other = lang === "jp" ? "id" : "jp";
-  const chips = flatSubs(b, pack).map(({ c, s }) => `<button class="sw-chip ${pg >= spages(s, lang)[0] && pg <= spages(s, lang)[1] ? "on" : ""}" onclick="route('ssw-buku/${slug}/${lang}/${spages(s, lang)[0]}')">${c.no}.${s.no}</button>`).join("");
+  const chips = flatSubs(b, pack).map(({ c, s }) => `<button class="sw-chip ${pg >= spages(s, lang)[0] && pg <= spages(s, lang)[1] ? "on" : ""}" onclick="SSW.bookTo(${spages(s, lang)[0]})">${c.no}.${s.no}</button>`).join("");
   setTimeout(() => window.SSW.bookInit(slug, lang, pg, total), 0);
   return `<div class="sw-book">
     <div class="sw-book-top">
       <button class="sw-back" onclick="goBack()">← Kembali</button>
-      <div class="sw-seg sm"><button class="${lang === "jp" ? "on" : ""}" onclick="route('ssw-buku/${slug}/jp/${pg}')">日本語</button><button class="${lang === "id" ? "on" : ""}" onclick="route('ssw-buku/${slug}/id/${pg}')">ID</button></div>
+      <div class="sw-seg sm"><button class="${lang === "jp" ? "on" : ""}" onclick="SSW.bookLang('jp')">日本語</button><button class="${lang === "id" ? "on" : ""}" onclick="SSW.bookLang('id')">ID</button></div>
+      <div class="sw-seg sm" title="Cara membaca buku"><button class="${mode === "page" ? "on" : ""}" onclick="SSW.bookMode('page')">📖 Geser</button><button class="${mode === "scroll" ? "on" : ""}" onclick="SSW.bookMode('scroll')">📜 Scroll</button></div>
       <span class="sw-pg">Hal. <b id="bk-n">${pg}</b> / ${total - 1}</span>
-      <button class="sw-chip" onclick="SSW.bookZoom()">🔍 Perbesar</button>
+      ${mode === "page" ? `<button class="sw-chip" onclick="SSW.bookZoom()">🔍 Perbesar</button>` : ""}
     </div>
     <div class="sw-book-chips">${chips}</div>
-    <div class="sw-book-stage" id="bk-stage"><span class="sw-zhint">🔍 Ketuk untuk memperbesar</span><img id="bk-img" alt="Halaman ${pg}" src="${pageFile(slug, lang, pg + 1)}" draggable="false"></div>
+    ${mode === "scroll" ? `<div class="sw-book-scroll" id="bk-scroll">${Array.from({ length: total }, (_, n) => `<div class="bk-pgw" data-p="${n}"><img loading="lazy" decoding="async" alt="Halaman ${n}" src="${pageFile(slug, lang, n + 1)}" draggable="false" onclick="SSW.zoomPage(this.src)"><span class="bk-pgno">${n}</span></div>`).join("")}</div>
+    <div class="sw-book-nav"><button class="btn ghost" onclick="SSW.bookGo(-1)">‹</button>
+      <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
+      <button class="btn" onclick="SSW.bookGo(1)">›</button></div>` : `<div class="sw-book-stage" id="bk-stage"><span class="sw-zhint">🔍 Ketuk untuk memperbesar</span><img id="bk-img" alt="Halaman ${pg}" src="${pageFile(slug, lang, pg + 1)}" draggable="false"></div>
     <div class="sw-book-nav"><button class="btn ghost" onclick="SSW.bookGo(-1)">‹ Sebelumnya</button>
       <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
-      <button class="btn" onclick="SSW.bookGo(1)">Berikutnya ›</button></div>
+      <button class="btn" onclick="SSW.bookGo(1)">Berikutnya ›</button></div>`}
     <div class="sw-attr">Sumber: ${esc(pack.chapters[0]?.source || "")}</div>
   </div>`;
 }
@@ -854,8 +860,22 @@ const SSW = window.SSW = {
   async sayWord(slug, id) { const pack = await loadPack(slug); const v = pack.vocab.find(x => x.id === id); if (v) say(v.kata || v.kana, slug, v.kana); },
   /* --- buku --- */
   bookInit(slug, lang, pg, total) {
-    const st = document.getElementById("bk-stage"); if (!st) return;
     BOOK.slug = slug; BOOK.lang = lang; BOOK.pg = pg; BOOK.total = total; BOOK.zoom = 1;
+    const sc = document.getElementById("bk-scroll");
+    if (sc) {   // mode SCROLL: semua halaman berurutan ke bawah
+      const wr = [...sc.querySelectorAll(".bk-pgw")];
+      const cur = () => { const y = window.innerHeight * 0.4; let k = 0; for (let i = 0; i < wr.length; i++) { const r = wr[i].getBoundingClientRect(); if (r.top <= y) k = i; else break; } return k; };
+      let raf = 0;
+      const upd = () => { raf = 0; if (!document.getElementById("bk-scroll")) { window.removeEventListener("scroll", onS, true); return; } const k = cur(); if (k !== BOOK.pg) { BOOK.pg = k; const el = document.getElementById("bk-n"); if (el) el.textContent = k; const r = document.getElementById("bk-range"); if (r) r.value = k; } };
+      const onS = () => { if (!raf) raf = requestAnimationFrame(upd); };
+      if (BOOK._onS) window.removeEventListener("scroll", BOOK._onS, true);
+      BOOK._onS = onS; window.addEventListener("scroll", onS, { passive: true, capture: true });   // body/halaman bisa jadi pemilik scroll → pakai capture
+      const go = () => { const t = wr[pg]; if (t) t.scrollIntoView({ block: "start" }); };
+      go(); setTimeout(go, 350);   // koreksi setelah gambar di atasnya terukur
+      window.onkeydown = (e) => { if (!document.getElementById("bk-scroll")) { window.onkeydown = null; return; } if (e.key === "ArrowRight") SSW.bookGo(1); if (e.key === "ArrowLeft") SSW.bookGo(-1); };
+      return;
+    }
+    const st = document.getElementById("bk-stage"); if (!st) return;
     let x0 = null, y0 = null, t0 = 0, lastTap = 0;
     st.onpointerdown = (e) => { x0 = e.clientX; y0 = e.clientY; t0 = Date.now(); };
     st.onpointerup = (e) => {
@@ -867,8 +887,16 @@ const SSW = window.SSW = {
   },
   bookApply() { const i = document.getElementById("bk-img"); if (i) { i.style.width = (BOOK.zoom * 100) + "%"; } },
   bookZoom() { const i = document.getElementById("bk-img"); if (i) SSW.zoomPage(i.src); },
-  bookGo(d) { const n = Math.max(0, Math.min(BOOK.total - 1, BOOK.pg + d)); if (n !== BOOK.pg) route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`); },
-  bookJump(v) { const n = parseInt(v, 10); const el = document.getElementById("bk-n"); if (el) el.textContent = n; clearTimeout(BOOK._t); BOOK._t = setTimeout(() => route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`), 350); },
+  bookGo(d) { const n = Math.max(0, Math.min(BOOK.total - 1, BOOK.pg + d)); if (n !== BOOK.pg) SSW.bookTo(n); },
+  bookTo(n) {
+    const t = document.querySelector(`#bk-scroll .bk-pgw[data-p="${n}"]`);
+    if (t) { BOOK.pg = n; const el = document.getElementById("bk-n"); if (el) el.textContent = n; const r = document.getElementById("bk-range"); if (r) r.value = n; t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    else route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`);
+  },
+  bookLang(l) { route(`ssw-buku/${BOOK.slug}/${l}/${BOOK.pg}`); },
+  bookMode(m) { try { localStorage.setItem("shirose-ssw-bookmode", m); } catch (e) {} route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${BOOK.pg}`); },
+  bookJump(v) { const n = parseInt(v, 10);
+    if (document.getElementById("bk-scroll")) { const el = document.getElementById("bk-n"); if (el) el.textContent = n; const t = document.querySelector(`#bk-scroll .bk-pgw[data-p="${n}"]`); if (t) { BOOK.pg = n; t.scrollIntoView({ block: "start" }); } return; } const el = document.getElementById("bk-n"); if (el) el.textContent = n; clearTimeout(BOOK._t); BOOK._t = setTimeout(() => route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`), 350); },
   /* --- kosakata --- */
   vChip(el) {
     const g = el.dataset.g, vf = (window.__swVF = window.__swVF || {}); vf[g] = el.dataset.v;
