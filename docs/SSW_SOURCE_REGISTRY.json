@@ -1,212 +1,232 @@
 {
- "schema": 1,
- "updated": "2026-11-16",
- "chat1_checkpoint": "TIDAK DITEMUKAN (SSW_PROJECT_AUDIT.md, SSW_SOURCE_REGISTRY.json, SSW_DEVELOPMENT_PROGRESS.md belum ada saat Chat 2 dimulai). Registry ini dibuat baru oleh Chat 2 dan hanya mencakup Industrial Manufacturing.",
- "sectors": {
-  "industrial-manufacturing": {
-   "jp": "工業製品製造業",
-   "documents": [
-    {
-     "id": "DOC-001",
-     "title": "工業製品製造業分野における特定技能外国人材の受入れについて",
-     "publisher": "経済産業省 (METI)",
-     "url": "https://www.meti.go.jp/policy/mono_info_service/gaikokujinzai/kogyoseihin-seizogyo_gaiyo.pdf",
-     "language": "ja",
-     "date": "2026-05 (judul hasil pencarian) / 2026-06 (hasil baca dokumen); tidak konsisten, perlu dicek",
-     "type": "Ringkasan kebijakan/klasifikasi (bukan modul, bukan soal)",
-     "category": "Semua kategori 工業製品製造業",
-     "verification": "READ_VIA_WEBFETCH: daftar 17 業務区分; 2号 hanya 3 区分",
-     "downloaded": false
-    },
-    {
-     "id": "DOC-002",
-     "title": "製造分野特定技能評価試験実施要領 (改正: 令和8年7月)",
-     "publisher": "経済産業省 製造産業局 / 出入国在留管理庁 (MOJ/ISA)",
-     "url": "https://www.moj.go.jp/isa/content/001470567.pdf (cermin: https://www.meti.go.jp/policy/mono_info_service/gaikokujinzai/2607_implementation_guidelines.pdf)",
-     "language": "ja",
-     "date": "2026-07 (改正)",
-     "type": "Spesifikasi pelaksanaan ujian",
-     "category": "Semua kategori",
-     "verification": "SEARCH_SNIPPET_ONLY: daftar 区分 1号・2号 dan 1号 saja",
-     "downloaded": false
-    },
-    {
-     "id": "DOC-003",
-     "title": "製造分野特定技能1号評価試験 サンプル問題 機械金属加工区分 (sample1_01.pdf)",
-     "publisher": "一般社団法人工業製品製造技能人材機構 (JAIM)",
-     "url": "https://www.jaim-skill.or.jp/assets/files/exam/materials/sample1_01.pdf",
-     "language": "ja (dengan furigana)",
-     "date": "tidak tercantum",
-     "type": "Contoh soal resmi (BUKAN modul)",
-     "category": "機械金属加工 (1号)",
-     "verification": "READ_VIA_WEBFETCH: 40 soal/80 menit; 学科 30 soal benar-salah (A/B) lulus 65%; 実技 10 soal 4 pilihan lulus 60%; CBT; ada gambar. Isi soal tidak disalin.",
-     "downloaded": false
-    },
-    {
-     "id": "DOC-004",
-     "title": "製造分野特定技能評価試験実施要領 (versi改正: 令和7年2月)",
-     "publisher": "経済産業省 / MOJ/ISA",
-     "url": "https://www.moj.go.jp/isa/content/001432633.pdf",
-     "language": "ja",
-     "date": "2025-02 (改正)",
-     "type": "Spesifikasi pelaksanaan ujian (versi lama, digantikan DOC-002)",
-     "category": "Semua kategori",
-     "verification": "SEARCH_SNIPPET_ONLY: 2号 hanya 実技; standar 2号 setara 技能検定1級",
-     "downloaded": false
-    },
-    {
-     "id": "DOC-005",
-     "title": "業務区分統合資料 (旧19区分 → 新3区分) 20220902_2.pdf",
-     "publisher": "経済産業省",
-     "url": "https://www.meti.go.jp/policy/mono_info_service/gaikokujinzai/pdf/20220902_2.pdf",
-     "language": "ja",
-     "date": "2022-09",
-     "type": "Dokumen historis pemetaan 区分",
-     "category": "機械金属加工 dll.",
-     "verification": "SEARCH_SNIPPET_ONLY (WebFetch mengembalikan konten kosong); isi lama (2022), mungkin berubah",
-     "downloaded": false
-    },
-    {
-     "id": "DOC-006",
-     "title": "製造分野 特定技能2号評価試験 概要紹介講座 (seminar.pdf)",
-     "publisher": "JAIM (委託: AOTS)",
-     "url": "https://www.jaim-skill.or.jp/assets/files/domestic-seminar/202512_02/seminar.pdf",
-     "language": "ja",
-     "date": "2025-12",
-     "type": "Brosur seminar (BUKAN modul)",
-     "category": "2号: 機械金属加工, 電気電子機器組立て, 金属表面処理",
-     "verification": "SEARCH_SNIPPET_ONLY: menyebut adanya 「学習用参考テキスト」; seminar interpretasi bahasa Indonesia dan Inggris. Teksnya sendiri tidak ditemukan.",
-     "downloaded": false
-    },
-    {
-     "id": "DOC-007",
-     "title": "JAIM 2025年度提供予定のサービス (service_2025.pdf)",
-     "publisher": "JAIM",
-     "url": "https://www.jaim-skill.or.jp/assets/files/top/service_2025.pdf",
-     "language": "ja",
-     "date": "2025-10",
-     "type": "Rencana layanan",
-     "category": "Umum",
-     "verification": "SEARCH_SNIPPET_ONLY: 学習用参考テキスト dijadwalkan 2025-11",
-     "downloaded": false
-    },
-    {
-     "id": "ORIGINAL-SHIROSE-MMP-001",
-     "title": "Materi orisinal Shirose Nihongo — 機械金属加工 (draft)",
-     "publisher": "Shirose Nihongo",
-     "url": "repo: ssw-materials/industrial-manufacturing/",
-     "language": "id + ja (istilah)",
-     "date": "2026-11-16",
-     "type": "Materi ORIGINAL (bukan modul resmi)",
-     "category": "機械金属加工",
-     "verification": "UNVERIFIED_AGAINST_OFFICIAL_TEXT",
-     "downloaded": null
-    }
-   ],
-   "categories": [
-    {
-     "no": 1,
-     "name": "機械金属加工",
-     "grades": "1号・2号",
-     "status": "DRAFT_ORIGINAL (6 bab, 18 subbab)"
-    },
-    {
-     "no": 2,
-     "name": "電気電子機器組立て",
-     "grades": "1号・2号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 3,
-     "name": "金属表面処理",
-     "grades": "1号・2号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 4,
-     "name": "紙器・段ボール箱製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 5,
-     "name": "コンクリート製品製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 6,
-     "name": "RPF製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 7,
-     "name": "陶磁器製品製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 8,
-     "name": "印刷・製本",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 9,
-     "name": "紡織製品製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 10,
-     "name": "縫製",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 11,
-     "name": "電線・ケーブル製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 12,
-     "name": "プレハブ住宅製品製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 13,
-     "name": "家具製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 14,
-     "name": "定形・不定形耐火物製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 15,
-     "name": "生コンクリート製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 16,
-     "name": "ゴム製品製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    },
-    {
-     "no": 17,
-     "name": "かばん製造",
-     "grades": "1号",
-     "status": "NOT_STARTED"
-    }
-   ]
+ "dibuat": "2026-11-17",
+ "catatan": "Angka dihitung dari data/ssw oleh tools/ssw/stats.py.",
+ "pdf_di_repo": [
+  "assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf",
+  "assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf"
+ ],
+ "sektor": [
+  {
+   "slug": "accommodation",
+   "sumber": "全旅連 2024 (Jepang, 52 hal.) + terjemahan Indonesia",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai",
+   "bab": 5,
+   "subbab": 18,
+   "kosakata": 1095,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 546,
+   "soal_bergambar": 5
+  },
+  {
+   "slug": "agriculture",
+   "sumber": "pertanian.pdf (Pertanaman Umum, 102 hal.)",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai",
+   "bab": 7,
+   "subbab": 33,
+   "kosakata": 213,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 443,
+   "soal_bergambar": 0
+  },
+  {
+   "slug": "auto-maintenance",
+   "sumber": "JICA「みてまなぶ！自動車整備の日本語」2023-12-30 + Koleksi Ilustrasi (JICA)",
+   "lisensi_catatan": "bebas diunduh/dipakai (situs JICA); PDF disimpan di assets/ssw/auto-maintenance/pdf/",
+   "status": "selesai + 12 diagram interaktif (orisinal Shirose)",
+   "bab": 4,
+   "subbab": 27,
+   "kosakata": 469,
+   "kartu_gambar": 96,
+   "diagram": 12,
+   "soal": 375,
+   "soal_bergambar": 117
+  },
+  {
+   "slug": "building-cleaning",
+   "sumber": "Modul resmi Building Cleaning (buku PDF Indonesia/Jepang, halaman dirender ke WebP)",
+   "lisensi_catatan": "buku modul; halaman dirender di assets/ssw/building-cleaning",
+   "status": "selesai",
+   "bab": 3,
+   "subbab": 40,
+   "kosakata": 1158,
+   "kartu_gambar": 40,
+   "diagram": 0,
+   "soal": 629,
+   "soal_bergambar": 80
+  },
+  {
+   "slug": "construction",
+   "sumber": "sipil_indo (151 hal.) + edisi Jepang",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai (Tutorial praktik 5–7 belum)",
+   "bab": 7,
+   "subbab": 22,
+   "kosakata": 4424,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 961,
+   "soal_bergambar": 38
+  },
+  {
+   "slug": "construction-bangunan",
+   "sumber": "building_indo (152 hal.) + edisi Jepang",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai (Tutorial praktik 5–7 belum)",
+   "bab": 7,
+   "subbab": 23,
+   "kosakata": 4392,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 1127,
+   "soal_bergambar": 47
+  },
+  {
+   "slug": "construction-lifeline",
+   "sumber": "THEORY_ID (117 hal.) + PRACTICE_ID",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai (Tutorial praktik 5–7 belum)",
+   "bab": 7,
+   "subbab": 28,
+   "kosakata": 4426,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 1038,
+   "soal_bergambar": 46
+  },
+  {
+   "slug": "fishery",
+   "sumber": "Modul Perikanan (12 bab)",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai; ujian akhir menunggu format resmi",
+   "bab": 12,
+   "subbab": 33,
+   "kosakata": 2370,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 380,
+   "soal_bergambar": 0
+  },
+  {
+   "slug": "food-manufacturing",
+   "sumber": "SSW_PM.pdf (第4版 2024, 82 hal.)",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai",
+   "bab": 3,
+   "subbab": 15,
+   "kosakata": 1463,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 478,
+   "soal_bergambar": 31
+  },
+  {
+   "slug": "food-service",
+   "sumber": "3 modul Jasa Boga (127 hal. Indonesia)",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai",
+   "bab": 3,
+   "subbab": 24,
+   "kosakata": 2463,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 895,
+   "soal_bergambar": 26
+  },
+  {
+   "slug": "food-service-jp",
+   "sumber": "Buku Jepang Jasa Boga (144 hal.)",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai",
+   "bab": 3,
+   "subbab": 20,
+   "kosakata": 634,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 261,
+   "soal_bergambar": 0
+  },
+  {
+   "slug": "industrial-mfg",
+   "sumber": "Tidak ada buku (nobook): materi tulisan Shirose dasar pabrik",
+   "lisensi_catatan": "orisinal Shirose; padanan kosakata tambahan Shirose",
+   "status": "selesai (dasar) + 4 diagram; belum ada sumber resmi MHLW/JASPA",
+   "bab": 5,
+   "subbab": 17,
+   "kosakata": 120,
+   "kartu_gambar": 25,
+   "diagram": 4,
+   "soal": 148,
+   "soal_bergambar": 0
+  },
+  {
+   "slug": "kaigo",
+   "sumber": "Materi_Kaigo.pdf hal. 10–201 (Indonesia)",
+   "lisensi_catatan": "modul pemberian pengelola; PDF tidak di-commit",
+   "status": "selesai",
+   "bab": 4,
+   "subbab": 14,
+   "kosakata": 280,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 252,
+   "soal_bergambar": 0
+  },
+  {
+   "slug": "kaigo-jp",
+   "sumber": "Materi_Kaigo.pdf hal. 204–267 (Bahasa Jepang)",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai (tanpa halaman buku bergambar)",
+   "bab": 3,
+   "subbab": 14,
+   "kosakata": 222,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 178,
+   "soal_bergambar": 24
+  },
+  {
+   "slug": "livestock",
+   "sumber": "Modul Peternakan",
+   "lisensi_catatan": "modul pemberian pengelola",
+   "status": "selesai; kosakata dan teks Jepang masih tipis",
+   "bab": 3,
+   "subbab": 18,
+   "kosakata": 54,
+   "kartu_gambar": 0,
+   "diagram": 0,
+   "soal": 221,
+   "soal_bergambar": 0
+  },
+  {
+   "slug": "mfg-machine-metal",
+   "sumber": "Tidak ada buku (nobook): materi tulisan Shirose mesin & logam",
+   "lisensi_catatan": "orisinal Shirose",
+   "status": "selesai (dasar) + 5 diagram; tipis",
+   "bab": 2,
+   "subbab": 4,
+   "kosakata": 29,
+   "kartu_gambar": 27,
+   "diagram": 5,
+   "soal": 36,
+   "soal_bergambar": 0
   }
- }
+ ],
+ "total": {
+  "bab": 78,
+  "sub": 350,
+  "vocab": 23812,
+  "kartu_gambar": 188,
+  "grup": 699,
+  "soal": 7968,
+  "soal_img": 414,
+  "diagram": 21,
+  "bagian": 148,
+  "gambar": 3916,
+  "halaman": 0
+ },
+ "flashcard_total": 24000
 }
