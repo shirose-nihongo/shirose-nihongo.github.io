@@ -165,24 +165,43 @@ export function getSiswaDoc() { return currentSiswaDoc; }
 export let lastAuthDenied = null;
 export function getLastAuthDenied(){ const r = lastAuthDenied; lastAuthDenied = null; return r; }
 
+
+const _CS = "shirose-siswa-cache-";
+function _bacaCacheSiswa(uid){ try { const j = localStorage.getItem(_CS + uid); return j ? JSON.parse(j) : null; } catch(_) { return null; } }
+function _simpanCacheSiswa(uid, d){ try { const c = { ...d }; delete c.created; delete c.aktif; localStorage.setItem(_CS + uid, JSON.stringify(c)); } catch(_) {} }
+function _siswaDitolak(){ return lastSiswaDocStatus === "not_registered" || lastSiswaDocStatus === "disabled"; }
+async function _tolakAkun(u){
+  lastAuthDenied = lastSiswaDocStatus;
+  try { localStorage.removeItem(_CS + u.uid); } catch(_) {}
+  currentUser = null; currentSiswaDoc = null;
+  try { await signOut(auth); } catch(_) {}
+}
 export function onAuth(cb) {
   if (!authListenerSet) {
     authListenerSet = true;
     onAuthStateChanged(auth, async (u) => {
       currentUser = u;
-      if (u) {
+      if (!u) { currentSiswaDoc = null; onReadyCallbacks.forEach(c => c(u, null)); return; }
+      // Cepat: kalau profil terakhir tersimpan di perangkat, tampilkan langsung (tanpa menunggu Firestore),
+      // lalu verifikasi ke server di latar belakang.
+      const cached = _bacaCacheSiswa(u.uid);
+      if (cached) {
+        currentSiswaDoc = cached;
+        lastSiswaDocStatus = "ok";
+        onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
+        const before = JSON.stringify([cached.aksesLevel, cached.role, cached.status]);
         await ensureSiswaDoc(u);
-        // Pendaftaran ditutup: akun yang tidak punya profil di Firestore
-        // (belum didaftarkan guru/moderator), akun tamu, dan akun yang
-        // dinonaktifkan langsung dikeluarkan. Firestore Rules juga menolak
-        // semua akses data untuk akun seperti ini (backend enforcement).
-        if (lastSiswaDocStatus === "not_registered" || lastSiswaDocStatus === "disabled") {
-          lastAuthDenied = lastSiswaDocStatus;
-          currentUser = null; currentSiswaDoc = null;
-          try { await signOut(auth); } catch(_) {}
-          return; // onAuthStateChanged akan terpanggil lagi dengan u = null
-        }
-      } else currentSiswaDoc = null;
+        if (_siswaDitolak()) return _tolakAkun(u);
+        if (currentSiswaDoc) _simpanCacheSiswa(u.uid, currentSiswaDoc);
+        const after = currentSiswaDoc ? JSON.stringify([currentSiswaDoc.aksesLevel, currentSiswaDoc.role, currentSiswaDoc.status]) : "";
+        if (after !== before) onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
+        return;
+      }
+      await ensureSiswaDoc(u);
+      // Pendaftaran ditutup: akun tanpa profil / dinonaktifkan langsung dikeluarkan
+      // (Firestore Rules juga menolak akses datanya).
+      if (_siswaDitolak()) return _tolakAkun(u);
+      if (currentSiswaDoc && lastSiswaDocStatus === "ok") _simpanCacheSiswa(u.uid, currentSiswaDoc);
       onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
     });
   }
