@@ -1,0 +1,4480 @@
+{
+ "schema": 1,
+ "label_policy": "Semua soal berlabel ORIGINAL PRACTICE QUESTION; tidak ada OFFICIAL QUESTION karena PDF resmi tidak berhasil diunduh.",
+ "sets": [
+  {
+   "id": "imm-mmp-set-c1s1",
+   "chapter": "c1",
+   "subchapter": "c1s1",
+   "title": "Kewajiban, 4S/5S, dan Pemeriksaan Sebelum Kerja",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Pekerja juga memiliki kewajiban mematuhi aturan keselamatan dan memakai APD.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s1-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "Kewajiban keselamatan dipikul pemberi kerja dan pekerja.",
+     "competency": "Kewajiban hukum keselamatan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Pemeriksaan sebelum kerja boleh dilewati jika mesin kemarin berfungsi normal.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c1s1-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "Kondisi mesin bisa berubah, jadi pemeriksaan sebelum kerja tetap dilakukan setiap kali.",
+     "competency": "Pemeriksaan sebelum kerja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "整頓 berarti menata barang agar mudah diambil.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s1-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "Seiton = menata pada tempatnya.",
+     "competency": "Istilah 4S",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "4S terdiri dari 整理, 整頓, 清掃, dan 清潔.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s1-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "Itu empat S dasar; 躾 adalah S kelima pada 5S.",
+     "competency": "Istilah 4S",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Apa arti 整理 dalam 4S?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Menata alat di rak"
+      },
+      {
+       "id": "B",
+       "text": "Membersihkan lantai"
+      },
+      {
+       "id": "C",
+       "text": "Membiasakan disiplin"
+      },
+      {
+       "id": "D",
+       "text": "Memilah barang perlu dan tidak perlu"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c1s1-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "整理 = memilah; menata adalah 整頓, membersihkan adalah 清掃.",
+     "competency": "Istilah 4S",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Mana yang termasuk hal yang dicek pada pemeriksaan sebelum kerja?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Tombol darurat dan penutup pengaman berfungsi"
+      },
+      {
+       "id": "B",
+       "text": "Warna cat dinding pabrik"
+      },
+      {
+       "id": "C",
+       "text": "Jumlah gaji bulan ini"
+      },
+      {
+       "id": "D",
+       "text": "Harga bahan baku"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s1-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "Pemeriksaan fokus pada keselamatan dan kondisi mesin.",
+     "competency": "Pemeriksaan sebelum kerja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Kamu menemukan suara aneh dari mesin sebelum bekerja. Tindakan yang tepat adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Tetap memakai karena produksi mendesak"
+      },
+      {
+       "id": "B",
+       "text": "Menyalakan lebih keras"
+      },
+      {
+       "id": "C",
+       "text": "Berhenti menggunakan dan melaporkan kepada atasan"
+      },
+      {
+       "id": "D",
+       "text": "Menutupinya dengan kain"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c1s1-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "Mesin yang tidak normal tidak boleh dipakai sebelum diperiksa.",
+     "competency": "Respons terhadap kelainan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "S kelima pada 5S, yaitu 躾, berarti…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Menyimpan dokumen"
+      },
+      {
+       "id": "B",
+       "text": "Menghitung stok"
+      },
+      {
+       "id": "C",
+       "text": "Menyapu lantai"
+      },
+      {
+       "id": "D",
+       "text": "Disiplin dan kebiasaan mematuhi aturan"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c1s1-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s1",
+     "explanation": "躾 (shitsuke) = disiplin.",
+     "competency": "Istilah 5S",
+     "difficulty": 2,
+     "reference": "Materi Shirose c1s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c1s2",
+   "chapter": "c1",
+   "subchapter": "c1s2",
+   "title": "APD, Pakaian Kerja, dan Mesin Berputar",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Sarung tangan kain boleh dipakai saat mengebor karena melindungi tangan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c1s2-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "Sarung tangan dapat tersangkut dan tertarik oleh mata bor yang berputar.",
+     "competency": "Keselamatan mesin berputar",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Rambut panjang sebaiknya diikat saat bekerja dekat mesin berputar.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s2-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "Rambut dapat terlilit bagian berputar.",
+     "competency": "Keselamatan mesin berputar",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Pakaian dari bahan sintetis yang mudah meleleh cocok untuk pekerjaan pengelasan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c1s2-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "Bahan sintetis meleleh dan menempel ke kulit; pakai bahan tahan api.",
+     "competency": "Pakaian kerja berpercikan api",
+     "difficulty": 2,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Sepatu pengaman (安全靴) berguna melindungi ujung kaki dari benda jatuh.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s2-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "Itu fungsi utama sepatu pengaman.",
+     "competency": "APD",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Apa alasan lengan baju longgar berbahaya di dekat mesin?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Mengganggu catatan kerja"
+      },
+      {
+       "id": "B",
+       "text": "Membuat mesin berhenti sendiri"
+      },
+      {
+       "id": "C",
+       "text": "Membuat tubuh terlalu panas"
+      },
+      {
+       "id": "D",
+       "text": "Dapat tersangkut dan tertarik oleh bagian berputar"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c1s2-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "Pakaian longgar dapat terlilit (巻き込まれ).",
+     "competency": "Keselamatan mesin berputar",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Pakaian yang paling tepat untuk pekerjaan penggerindaan yang menimbulkan percikan adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Kaus tanpa lengan"
+      },
+      {
+       "id": "B",
+       "text": "Baju longgar berumbai"
+      },
+      {
+       "id": "C",
+       "text": "Pakaian nilon tipis"
+      },
+      {
+       "id": "D",
+       "text": "Pakaian katun tebal dengan kacamata pelindung"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c1s2-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "Bahan tahan api dan pelindung mata mencegah luka bakar dan cedera mata.",
+     "competency": "Pakaian kerja berpercikan api",
+     "difficulty": 2,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Kapan sarung tangan boleh dipakai terkait mesin bubut?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Saat memegang benda panas atau tajam ketika mesin sudah berhenti"
+      },
+      {
+       "id": "B",
+       "text": "Saat mengoperasikan tuas dengan chuck berputar"
+      },
+      {
+       "id": "C",
+       "text": "Saat mengukur benda yang berputar"
+      },
+      {
+       "id": "D",
+       "text": "Saat spindel berputar"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s2-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "Dilarang saat bagian mesin berputar.",
+     "competency": "Keselamatan mesin berputar",
+     "difficulty": 2,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Alat yang melindungi mata dari serpihan logam disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "軍手 (sarung tangan kain)"
+      },
+      {
+       "id": "B",
+       "text": "作業服 (pakaian kerja)"
+      },
+      {
+       "id": "C",
+       "text": "安全靴 (sepatu pengaman)"
+      },
+      {
+       "id": "D",
+       "text": "保護メガネ (kacamata pelindung)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c1s2-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s2",
+     "explanation": "保護メガネ melindungi mata.",
+     "competency": "APD",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c1s3",
+   "chapter": "c1",
+   "subchapter": "c1s3",
+   "title": "Kebakaran, Listrik, Panas, Simbol JIS, dan Label PL",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Kebakaran minyak aman dipadamkan dengan menyiram air.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c1s3-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "Air membuat minyak menyebar dan api membesar.",
+     "competency": "Penanganan kebakaran",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Pembumian (接地) membantu mengalirkan arus bocor ke tanah.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s3-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "Itu tujuan pembumian peralatan listrik.",
+     "competency": "Keselamatan listrik",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Tanda larangan umumnya berbentuk lingkaran merah dengan garis miring.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s3-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "Tanda 禁止 memakai bentuk dan warna tersebut.",
+     "competency": "Simbol JIS",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Segitiga kuning menandakan bahwa tindakan tertentu wajib dilakukan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c1s3-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "Segitiga kuning = peringatan (警告); instruksi wajib berwarna biru.",
+     "competency": "Simbol JIS",
+     "difficulty": 2,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Minum air dan garam secara berkala membantu mencegah heat stroke saat bekerja di tempat panas.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c1s3-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "Pencegahan heat stroke mencakup cairan, garam, dan istirahat.",
+     "competency": "Kesehatan kerja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Tanda berbentuk lingkaran biru dengan gambar helm berarti…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Jalur evakuasi"
+      },
+      {
+       "id": "B",
+       "text": "Larangan memakai helm"
+      },
+      {
+       "id": "C",
+       "text": "Instruksi wajib memakai helm"
+      },
+      {
+       "id": "D",
+       "text": "Peringatan bahaya benda jatuh"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c1s3-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "Lingkaran biru = instruksi wajib (指示).",
+     "competency": "Simbol JIS",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Mana yang BUKAN tindakan benar saat mencegah sengatan listrik?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Melaporkan peralatan yang rusak"
+      },
+      {
+       "id": "B",
+       "text": "Memegang colokan dengan tangan basah"
+      },
+      {
+       "id": "C",
+       "text": "Memastikan peralatan dibumikan"
+      },
+      {
+       "id": "D",
+       "text": "Memeriksa kabel yang terkelupas"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c1s3-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "Tangan basah menambah risiko sengatan.",
+     "competency": "Keselamatan listrik",
+     "difficulty": 1,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Label PL pada produk dimaksudkan untuk…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Mencatat nama operator"
+      },
+      {
+       "id": "B",
+       "text": "Memperingatkan pengguna tentang bahaya agar tidak salah pakai"
+      },
+      {
+       "id": "C",
+       "text": "Menggantikan sertifikat mutu"
+      },
+      {
+       "id": "D",
+       "text": "Menunjukkan harga produk"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c1s3-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c1",
+     "subchapter": "c1s3",
+     "explanation": "PL terkait tanggung jawab produk, termasuk peringatan bahaya.",
+     "competency": "Label peringatan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c1s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c2s1",
+   "chapter": "c2",
+   "subchapter": "c2s1",
+   "title": "Dasar Mutu dan Standar Kerja",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Standar kerja bertujuan agar hasil pekerjaan konsisten siapa pun yang mengerjakan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s1-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "Itu fungsi 作業標準.",
+     "competency": "Standar kerja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Mutu produk cukup diperiksa pada akhir proses saja.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c2s1-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "Mutu dibangun pada setiap proses.",
+     "competency": "Prinsip mutu",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "報連相 adalah singkatan lapor, kabar, dan konsultasi.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s1-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "報告・連絡・相談.",
+     "competency": "Komunikasi kerja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Operator boleh mengubah kondisi pemesinan sesuka hati jika merasa lebih baik.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c2s1-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "Perubahan harus mengikuti standar atau persetujuan.",
+     "competency": "Standar kerja",
+     "difficulty": 2,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Huruf C pada PDCA berarti…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Count (menghitung)"
+      },
+      {
+       "id": "B",
+       "text": "Clean (membersihkan)"
+      },
+      {
+       "id": "C",
+       "text": "Cut (memotong)"
+      },
+      {
+       "id": "D",
+       "text": "Check (memeriksa/mengevaluasi hasil)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c2s1-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "PDCA = Plan-Do-Check-Act.",
+     "competency": "PDCA",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Kamu menemukan produk cacat pada jam kerja. Tindakan yang tepat adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Menunggu sampai akhir bulan"
+      },
+      {
+       "id": "B",
+       "text": "Segera melaporkannya kepada atasan"
+      },
+      {
+       "id": "C",
+       "text": "Mengirimkannya tanpa diberi tahu"
+      },
+      {
+       "id": "D",
+       "text": "Menyembunyikannya di kotak lain"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c2s1-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "Laporan cepat mencegah kerugian lebih besar.",
+     "competency": "Komunikasi kerja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Dokumen yang menetapkan urutan dan kondisi kerja yang benar disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "作業標準 (standar kerja)"
+      },
+      {
+       "id": "B",
+       "text": "手直し (perbaikan)"
+      },
+      {
+       "id": "C",
+       "text": "不良 (produk cacat)"
+      },
+      {
+       "id": "D",
+       "text": "工程 (proses)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s1-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "作業標準 = standar kerja.",
+     "competency": "Standar kerja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Apa arti 不良 pada pengendalian mutu?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Produk yang tidak memenuhi standar"
+      },
+      {
+       "id": "B",
+       "text": "Produk yang sedang dikirim"
+      },
+      {
+       "id": "C",
+       "text": "Produk yang terlalu mahal"
+      },
+      {
+       "id": "D",
+       "text": "Produk dengan warna indah"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s1-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s1",
+     "explanation": "不良 = cacat/tidak sesuai standar.",
+     "competency": "Istilah mutu",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c2s2",
+   "chapter": "c2",
+   "subchapter": "c2s2",
+   "title": "Data dan Grafik Pengendalian Mutu",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Jumlah produk cacat termasuk data hitung (計数値).",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s2-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "Jumlah diperoleh dengan menghitung.",
+     "competency": "Jenis data",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Panjang poros hasil pengukuran termasuk data hitung.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c2s2-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "Panjang hasil pengukuran adalah data ukur (計量値).",
+     "competency": "Jenis data",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Histogram dipakai untuk melihat bentuk sebaran data.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s2-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "Itu fungsi histogram.",
+     "competency": "Histogram",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Diagram pencar dipakai untuk melihat hubungan antara dua variabel.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s2-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "Itu fungsi 散布図.",
+     "competency": "Diagram pencar",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Grafik yang menyusun penyebab cacat dari yang terbanyak adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "散布図"
+      },
+      {
+       "id": "B",
+       "text": "ヒストグラム"
+      },
+      {
+       "id": "C",
+       "text": "管理図"
+      },
+      {
+       "id": "D",
+       "text": "パレート図 (diagram Pareto)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c2s2-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "Pareto mengurutkan penyebab berdasarkan jumlahnya.",
+     "competency": "Diagram Pareto",
+     "difficulty": 2,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Berat produk 12,5 g, 12,7 g, 12,4 g adalah contoh…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Data jumlah kecelakaan"
+      },
+      {
+       "id": "B",
+       "text": "Data kategori warna"
+      },
+      {
+       "id": "C",
+       "text": "Data hitung (計数値)"
+      },
+      {
+       "id": "D",
+       "text": "Data ukur (計量値)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c2s2-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "Berat diukur secara kontinu.",
+     "competency": "Jenis data",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Jika makin tinggi suhu, makin tinggi pula kekasaran permukaan, diagram pencar menunjukkan…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Distribusi normal pasti"
+      },
+      {
+       "id": "B",
+       "text": "Korelasi positif"
+      },
+      {
+       "id": "C",
+       "text": "Tidak ada data"
+      },
+      {
+       "id": "D",
+       "text": "Korelasi negatif"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c2s2-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "Kedua nilai naik bersama = korelasi positif.",
+     "competency": "Diagram pencar",
+     "difficulty": 2,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Grafik yang memantau apakah proses stabil dari waktu ke waktu adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "作業標準"
+      },
+      {
+       "id": "B",
+       "text": "パレート図"
+      },
+      {
+       "id": "C",
+       "text": "散布図"
+      },
+      {
+       "id": "D",
+       "text": "管理図 (peta kendali)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c2s2-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s2",
+     "explanation": "管理図 untuk memantau stabilitas proses.",
+     "competency": "Peta kendali",
+     "difficulty": 2,
+     "reference": "Materi Shirose c2s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c2s3",
+   "chapter": "c2",
+   "subchapter": "c2s3",
+   "title": "Pemeriksaan, Kalibrasi, dan Penanganan Kelainan",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Pemeriksaan sampel cocok untuk pengujian yang merusak produk.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s3-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "Pengujian merusak tidak bisa dilakukan pada semua produk.",
+     "competency": "Jenis pemeriksaan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Alat ukur yang sudah lewat jadwal kalibrasi boleh tetap dipakai tanpa masalah.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c2s3-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "Hasil ukur tidak dapat dipercaya tanpa kalibrasi.",
+     "competency": "Kalibrasi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Jika pemeriksaan rutin terlewat, sebaiknya dilaporkan kepada atasan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s3-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "Laporan dan tindak lanjut mencegah produk cacat lolos.",
+     "competency": "Penanganan kelainan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Pemeriksaan akhir bertujuan memastikan produk yang dikirim memenuhi standar.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c2s3-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "Itu fungsi 最終検査.",
+     "competency": "Pemeriksaan akhir",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Apa arti 校正?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Pemeriksaan bahan masuk"
+      },
+      {
+       "id": "B",
+       "text": "Perbaikan produk"
+      },
+      {
+       "id": "C",
+       "text": "Pembersihan mesin"
+      },
+      {
+       "id": "D",
+       "text": "Kalibrasi alat ukur"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c2s3-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "校正 = kalibrasi.",
+     "competency": "Kalibrasi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Pemeriksaan seluruh produk satu per satu disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "抜取検査"
+      },
+      {
+       "id": "B",
+       "text": "全数検査"
+      },
+      {
+       "id": "C",
+       "text": "破壊検査"
+      },
+      {
+       "id": "D",
+       "text": "受入検査"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c2s3-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "全数 = seluruh jumlah.",
+     "competency": "Jenis pemeriksaan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Kamu baru sadar pemeriksaan sampel pukul 10.00 terlewat. Langkah terbaik adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Mengabaikannya karena sudah lewat"
+      },
+      {
+       "id": "B",
+       "text": "Diam-diam mengisi catatan seolah sudah diperiksa"
+      },
+      {
+       "id": "C",
+       "text": "Melapor, memeriksa kondisi saat ini, dan menahan produk yang meragukan"
+      },
+      {
+       "id": "D",
+       "text": "Mengirim semua produk lebih cepat"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c2s3-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "Transparan dan isolasi produk meragukan.",
+     "competency": "Penanganan kelainan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Pemeriksaan bahan baku yang baru tiba di pabrik disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "最終検査"
+      },
+      {
+       "id": "B",
+       "text": "全数検査"
+      },
+      {
+       "id": "C",
+       "text": "工程内検査"
+      },
+      {
+       "id": "D",
+       "text": "受入検査 (pemeriksaan penerimaan)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c2s3-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c2",
+     "subchapter": "c2s3",
+     "explanation": "受入 = penerimaan.",
+     "competency": "Jenis pemeriksaan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c2s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c3s1",
+   "chapter": "c3",
+   "subchapter": "c3s1",
+   "title": "Jangka Sorong (Nogisu)",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Diameter dalam lubang diukur dengan rahang bagian atas (rahang dalam).",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s1-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "Rahang dalam khusus untuk ukuran dalam.",
+     "competency": "Penggunaan jangka sorong",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Jangka sorong boleh dimiringkan saat mengukur karena hasilnya tetap sama.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s1-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "Memiringkan menyebabkan kesalahan ukur.",
+     "competency": "Penggunaan jangka sorong",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Skala nonius (副尺) dipakai untuk membaca bagian desimal ukuran.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s1-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "Nonius memberi resolusi lebih halus.",
+     "competency": "Bagian jangka sorong",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Ketelitian jangka sorong umum adalah 1 mm.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s1-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "Umumnya 0,05 mm atau 0,02 mm.",
+     "competency": "Ketelitian",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Skala utama menunjuk 12 mm tepat di kiri nol nonius, garis nonius ke-7 berimpit. Hasilnya…",
+     "options": [
+      {
+       "id": "A",
+       "text": "19,00 mm"
+      },
+      {
+       "id": "B",
+       "text": "12,35 mm"
+      },
+      {
+       "id": "C",
+       "text": "12,07 mm"
+      },
+      {
+       "id": "D",
+       "text": "12,70 mm"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s1-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "12 + 7 × 0,05 = 12,35 mm.",
+     "competency": "Membaca jangka sorong",
+     "difficulty": 2,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Bagian jangka sorong untuk mengukur kedalaman lubang adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "デプスバー (batang kedalaman)"
+      },
+      {
+       "id": "B",
+       "text": "本尺"
+      },
+      {
+       "id": "C",
+       "text": "外側測定面"
+      },
+      {
+       "id": "D",
+       "text": "副尺"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s1-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "デプスバー keluar dari ujung batang.",
+     "competency": "Bagian jangka sorong",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Hal yang perlu dilakukan sebelum mengukur dengan jangka sorong adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Mengganti skala nonius"
+      },
+      {
+       "id": "B",
+       "text": "Memanaskan alat"
+      },
+      {
+       "id": "C",
+       "text": "Membersihkan rahang dan mengecek titik nol"
+      },
+      {
+       "id": "D",
+       "text": "Memukul rahang"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c3s1-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "Titik nol dan kebersihan menjaga ketepatan.",
+     "competency": "Penggunaan jangka sorong",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Hasil baca terlalu besar bisa terjadi karena…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Titik nol sudah dicek"
+      },
+      {
+       "id": "B",
+       "text": "Rahang bersih"
+      },
+      {
+       "id": "C",
+       "text": "Tekanan ukur wajar"
+      },
+      {
+       "id": "D",
+       "text": "Jangka sorong dimiringkan terhadap benda"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c3s1-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s1",
+     "explanation": "Kemiringan menambah panjang terukur.",
+     "competency": "Kesalahan ukur",
+     "difficulty": 2,
+     "reference": "Materi Shirose c3s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c3s2",
+   "chapter": "c3",
+   "subchapter": "c3s2",
+   "title": "Mikrometer, Depth Gauge, dan Dial Gauge",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Ratchet stop pada mikrometer membantu menjaga tekanan ukur tetap konstan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s2-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "Putar sampai terdengar klik.",
+     "competency": "Mikrometer",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Ketelitian mikrometer standar adalah 0,01 mm.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s2-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "Thimble 50 bagian × 0,5 mm per putaran.",
+     "competency": "Mikrometer",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Depth gauge dipakai untuk mengukur diameter luar poros.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s2-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "Depth gauge dipakai untuk mengukur kedalaman.",
+     "competency": "Depth gauge",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Dial gauge dipakai untuk membaca penyimpangan kecil seperti runout.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s2-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "Itu fungsi utama dial gauge.",
+     "competency": "Dial gauge",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Sleeve menunjukkan 5,5 mm dan thimble menunjuk 27. Hasil ukurnya…",
+     "options": [
+      {
+       "id": "A",
+       "text": "5,05 mm"
+      },
+      {
+       "id": "B",
+       "text": "8,20 mm"
+      },
+      {
+       "id": "C",
+       "text": "5,77 mm"
+      },
+      {
+       "id": "D",
+       "text": "5,27 mm"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c3s2-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "5,5 + 27 × 0,01 = 5,77 mm.",
+     "competency": "Membaca mikrometer",
+     "difficulty": 2,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Alat yang paling tepat untuk mengukur kedalaman lubang bertingkat adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Dial gauge saja"
+      },
+      {
+       "id": "B",
+       "text": "Depth gauge"
+      },
+      {
+       "id": "C",
+       "text": "Penggaris baja pendek"
+      },
+      {
+       "id": "D",
+       "text": "Mikrometer luar"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s2-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "Depth gauge dibuat untuk kedalaman.",
+     "competency": "Memilih alat ukur",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Mengapa dial gauge dipasang pada stand?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Agar jarum lebih besar"
+      },
+      {
+       "id": "B",
+       "text": "Agar alat lebih mahal"
+      },
+      {
+       "id": "C",
+       "text": "Agar kedudukan stabil dan pembacaan akurat"
+      },
+      {
+       "id": "D",
+       "text": "Agar tidak perlu dinolkan"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c3s2-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "Stand menjaga kestabilan pengukuran.",
+     "competency": "Dial gauge",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Ujung ukur dial gauge sebaiknya dikenakan pada permukaan secara…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Searah gerak putar secara menyamping"
+      },
+      {
+       "id": "B",
+       "text": "Menyentuh tepi tajam"
+      },
+      {
+       "id": "C",
+       "text": "Tegak lurus"
+      },
+      {
+       "id": "D",
+       "text": "Miring 45°"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c3s2-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s2",
+     "explanation": "Kemiringan menimbulkan kesalahan ukur.",
+     "competency": "Dial gauge",
+     "difficulty": 2,
+     "reference": "Materi Shirose c3s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c3s3",
+   "chapter": "c3",
+   "subchapter": "c3s3",
+   "title": "Kesalahan Ukur, Kalibrasi, dan Tanda JIS",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Mengukur benda yang masih panas dapat menimbulkan kesalahan karena pemuaian.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s3-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Benda memuai saat panas sehingga ukuran berubah.",
+     "competency": "Sumber kesalahan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Mengukur berulang dan merata-ratakan membantu mengurangi kesalahan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s3-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Itu cara umum mengurangi kesalahan acak.",
+     "competency": "Mengurangi kesalahan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Titik nol alat ukur tidak perlu dicek bila alatnya mahal.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s3-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Titik nol selalu perlu dicek.",
+     "competency": "Titik nol",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Alat ukur yang terbentur sebaiknya dikalibrasi ulang sebelum dipakai.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s3-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Benturan dapat menggeser ketelitian.",
+     "competency": "Kalibrasi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Suhu standar pengukuran dimensi umumnya…",
+     "options": [
+      {
+       "id": "A",
+       "text": "0 °C"
+      },
+      {
+       "id": "B",
+       "text": "100 °C"
+      },
+      {
+       "id": "C",
+       "text": "37 °C"
+      },
+      {
+       "id": "D",
+       "text": "20 °C"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c3s3-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Standar acuan pengukuran dimensi adalah 20 °C.",
+     "competency": "Sumber kesalahan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Kesalahan akibat membaca skala dari sudut miring disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Pemuaian"
+      },
+      {
+       "id": "B",
+       "text": "Paralaks (視差)"
+      },
+      {
+       "id": "C",
+       "text": "Titik nol"
+      },
+      {
+       "id": "D",
+       "text": "Kalibrasi"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s3-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Paralaks = kesalahan sudut pandang.",
+     "competency": "Sumber kesalahan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Tindakan yang tepat saat alat ukur jatuh adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Memeriksa atau mengkalibrasi ulang sebelum dipakai"
+      },
+      {
+       "id": "B",
+       "text": "Dilap lalu dipakai"
+      },
+      {
+       "id": "C",
+       "text": "Langsung dipakai kembali"
+      },
+      {
+       "id": "D",
+       "text": "Dilumasi lalu dipakai"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c3s3-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Benturan dapat mengubah ketelitian.",
+     "competency": "Kalibrasi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Cara termudah mengurangi kesalahan acak adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Menambah tekanan ukur"
+      },
+      {
+       "id": "B",
+       "text": "Mengukur beberapa kali lalu mengambil rata-rata"
+      },
+      {
+       "id": "C",
+       "text": "Mengukur sekali dengan cepat"
+      },
+      {
+       "id": "D",
+       "text": "Mengganti satuan"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c3s3-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c3",
+     "subchapter": "c3s3",
+     "explanation": "Rata-rata mengurangi pengaruh acak.",
+     "competency": "Mengurangi kesalahan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c3s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c4s1",
+   "chapter": "c4",
+   "subchapter": "c4s1",
+   "title": "Logam dan Kode Baja",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Angka 400 pada SS400 menunjukkan kekuatan tarik minimum 400 N/mm².",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s1-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "Itu arti penomoran pada baja struktur.",
+     "competency": "Kode baja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "SS400 adalah kode untuk baja tahan karat.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s1-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "SS400 baja struktur biasa; baja tahan karat misalnya SUS304.",
+     "competency": "Kode baja",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Makin banyak karbon pada baja, umumnya makin keras tetapi lebih getas.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s1-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "Karbon meningkatkan kekerasan.",
+     "competency": "Sifat baja",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Aluminium lebih berat daripada baja.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s1-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "Aluminium jauh lebih ringan daripada baja.",
+     "competency": "Sifat logam",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "S45C adalah baja karbon dengan kadar karbon sekitar…",
+     "options": [
+      {
+       "id": "A",
+       "text": "45%"
+      },
+      {
+       "id": "B",
+       "text": "4,5%"
+      },
+      {
+       "id": "C",
+       "text": "0,45%"
+      },
+      {
+       "id": "D",
+       "text": "0,045%"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c4s1-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "45 menunjukkan 0,45% karbon.",
+     "competency": "Kode baja",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Logam yang cocok untuk bodi mesin karena meredam getaran adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Aluminium foil"
+      },
+      {
+       "id": "B",
+       "text": "Besi cor (FC)"
+      },
+      {
+       "id": "C",
+       "text": "Tembaga"
+      },
+      {
+       "id": "D",
+       "text": "Kuningan"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s1-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "Besi cor meredam getaran dan mudah dicor.",
+     "competency": "Sifat logam",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Lapisan pelindung baja tahan karat dibentuk oleh…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Kromium"
+      },
+      {
+       "id": "B",
+       "text": "Timbal"
+      },
+      {
+       "id": "C",
+       "text": "Belerang"
+      },
+      {
+       "id": "D",
+       "text": "Karbon"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s1-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "Kromium membentuk lapisan oksida tipis pelindung.",
+     "competency": "Sifat logam",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Arti huruf S pertama pada SS400 adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Steel (baja)"
+      },
+      {
+       "id": "B",
+       "text": "Screw"
+      },
+      {
+       "id": "C",
+       "text": "Sheet"
+      },
+      {
+       "id": "D",
+       "text": "Silver"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s1-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s1",
+     "explanation": "SS = Steel Structure.",
+     "competency": "Kode baja",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c4s2",
+   "chapter": "c4",
+   "subchapter": "c4s2",
+   "title": "Sifat Mekanik dan Perlakuan Panas",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Deformasi elastis kembali ke bentuk semula setelah gaya dilepas.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s2-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "Itu definisi deformasi elastis.",
+     "competency": "Sifat mekanik",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Quenching (焼入れ) membuat baja menjadi lebih keras.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s2-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "Pendinginan cepat mengeraskan baja.",
+     "competency": "Perlakuan panas",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Modulus elastisitas yang besar berarti bahan mudah melentur.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s2-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "Modulus besar berarti kaku.",
+     "competency": "Sifat mekanik",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Annealing (焼なまし) dilakukan dengan pendinginan perlahan untuk melunakkan baja.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s2-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "Itu tujuan annealing.",
+     "competency": "Perlakuan panas",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Perlakuan panas untuk mengurangi kegetasan setelah quenching adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Casting"
+      },
+      {
+       "id": "B",
+       "text": "Welding"
+      },
+      {
+       "id": "C",
+       "text": "Quenching (焼入れ)"
+      },
+      {
+       "id": "D",
+       "text": "Tempering (焼戻し)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c4s2-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "Tempering menurunkan kegetasan dan menaikkan ketangguhan.",
+     "competency": "Perlakuan panas",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Pada beban sama, bahan yang melentur paling banyak biasanya…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Bahan dengan modulus paling besar"
+      },
+      {
+       "id": "B",
+       "text": "Bahan paling berat"
+      },
+      {
+       "id": "C",
+       "text": "Bahan dengan modulus elastisitas paling kecil"
+      },
+      {
+       "id": "D",
+       "text": "Bahan paling mahal"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c4s2-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "Modulus kecil = lebih mudah melentur.",
+     "competency": "Sifat mekanik",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Deformasi yang tetap tinggal setelah gaya dilepas disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Resonansi"
+      },
+      {
+       "id": "B",
+       "text": "Deformasi elastis"
+      },
+      {
+       "id": "C",
+       "text": "Deformasi plastis"
+      },
+      {
+       "id": "D",
+       "text": "Kalibrasi"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c4s2-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "塑性変形.",
+     "competency": "Sifat mekanik",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Pendinginan di udara untuk menyeragamkan struktur adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Normalizing (焼ならし)"
+      },
+      {
+       "id": "B",
+       "text": "Quenching"
+      },
+      {
+       "id": "C",
+       "text": "Annealing"
+      },
+      {
+       "id": "D",
+       "text": "Tempering"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s2-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s2",
+     "explanation": "焼ならし = normalizing.",
+     "competency": "Perlakuan panas",
+     "difficulty": 3,
+     "reference": "Materi Shirose c4s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c4s3",
+   "chapter": "c4",
+   "subchapter": "c4s3",
+   "title": "Dasar Kimia: pH, Air, dan Karat",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Larutan dengan pH 3 bersifat asam.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s3-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "pH di bawah 7 = asam.",
+     "competency": "pH",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Air tersusun atas karbon dan oksigen.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s3-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "Air tersusun atas hidrogen dan oksigen (H₂O).",
+     "competency": "Komposisi air",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Karat pada besi disebabkan reaksi dengan oksigen dan air.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s3-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "Itu mekanisme korosi besi.",
+     "competency": "Korosi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Bahan kimia boleh dicampur tanpa membaca SDS bila hanya sedikit.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s3-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "Selalu baca SDS sebelum menangani bahan kimia.",
+     "competency": "Keselamatan bahan kimia",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "pH 9 menunjukkan larutan yang…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Basa (alkali)"
+      },
+      {
+       "id": "B",
+       "text": "Netral"
+      },
+      {
+       "id": "C",
+       "text": "Asam"
+      },
+      {
+       "id": "D",
+       "text": "Air murni pasti"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c4s3-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "pH di atas 7 = basa.",
+     "competency": "pH",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Rumus kimia air adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "NaCl"
+      },
+      {
+       "id": "B",
+       "text": "H₂O"
+      },
+      {
+       "id": "C",
+       "text": "CO₂"
+      },
+      {
+       "id": "D",
+       "text": "O₂"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s3-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "Dua hidrogen dan satu oksigen.",
+     "competency": "Komposisi air",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Cara mencegah karat pada baja adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Menggosok dengan garam"
+      },
+      {
+       "id": "B",
+       "text": "Memberi cat atau minyak anti karat dan menjaga benda tetap kering"
+      },
+      {
+       "id": "C",
+       "text": "Menyimpannya basah"
+      },
+      {
+       "id": "D",
+       "text": "Meninggalkan di luar hujan"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s3-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "Menghalangi kontak air dan oksigen.",
+     "competency": "Korosi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Dokumen yang memuat bahaya dan cara menangani bahan kimia disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "PDCA"
+      },
+      {
+       "id": "B",
+       "text": "SDS (安全データシート)"
+      },
+      {
+       "id": "C",
+       "text": "JIS"
+      },
+      {
+       "id": "D",
+       "text": "PL"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c4s3-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c4",
+     "subchapter": "c4s3",
+     "explanation": "SDS memuat informasi keselamatan bahan kimia.",
+     "competency": "Keselamatan bahan kimia",
+     "difficulty": 2,
+     "reference": "Materi Shirose c4s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c5s1",
+   "chapter": "c5",
+   "subchapter": "c5s1",
+   "title": "Mesin Perkakas dan Kondisi Pemotongan",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Pada mesin bubut, benda kerja berputar sedangkan pahat bergerak memotong.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s1-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "Itu prinsip bubut.",
+     "competency": "Mesin perkakas",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Pada mesin frais, pemotong berputar dan benda kerja dijepit pada meja.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s1-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "Itu prinsip frais.",
+     "competency": "Mesin perkakas",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Pahat yang tumpul menghasilkan permukaan lebih halus.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s1-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "Pahat tumpul membuat permukaan kasar dan panas.",
+     "competency": "Kondisi pemotongan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Serpihan logam boleh dibersihkan dengan tangan selama mesin berputar.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s1-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "Hentikan mesin dan pakai kuas atau pengait.",
+     "competency": "Keselamatan pemesinan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Kecepatan potong dengan D = 100 mm dan n = 300 rpm adalah sekitar…",
+     "options": [
+      {
+       "id": "A",
+       "text": "300 m/menit"
+      },
+      {
+       "id": "B",
+       "text": "9,4 m/menit"
+      },
+      {
+       "id": "C",
+       "text": "30 m/menit"
+      },
+      {
+       "id": "D",
+       "text": "94,2 m/menit"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c5s1-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "v = π × 100 × 300 ÷ 1000 ≈ 94,2.",
+     "competency": "Perhitungan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Mesin yang paling tepat untuk membuat lubang adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Mesin press"
+      },
+      {
+       "id": "B",
+       "text": "Mesin bor (ボール盤)"
+      },
+      {
+       "id": "C",
+       "text": "Mesin gerinda permukaan saja"
+      },
+      {
+       "id": "D",
+       "text": "Mesin bubut tanpa pahat"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s1-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "ボール盤 untuk melubangi.",
+     "competency": "Mesin perkakas",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Cara memperhalus permukaan hasil bubut adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Memakai pahat tajam dan pemakanan lebih halus"
+      },
+      {
+       "id": "B",
+       "text": "Menambah kedalaman potong sebesar mungkin"
+      },
+      {
+       "id": "C",
+       "text": "Menghentikan cairan pemotong"
+      },
+      {
+       "id": "D",
+       "text": "Memakai pahat tumpul"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s1-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "Pahat tajam dan feed halus memperbaiki kekasaran.",
+     "competency": "Kondisi pemotongan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Fungsi cairan pemotong (切削油) adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Mengganti pahat"
+      },
+      {
+       "id": "B",
+       "text": "Menambah gaya potong"
+      },
+      {
+       "id": "C",
+       "text": "Mendinginkan dan melumasi"
+      },
+      {
+       "id": "D",
+       "text": "Mengeraskan benda kerja"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c5s1-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s1",
+     "explanation": "Cairan mengurangi panas dan gesekan.",
+     "competency": "Kondisi pemotongan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c5s2",
+   "chapter": "c5",
+   "subchapter": "c5s2",
+   "title": "Pengeboran dan Perkakas Bantu",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Bush pemandu bor membantu menjaga akurasi posisi lubang.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s2-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "Bush menuntun mata bor.",
+     "competency": "Akurasi pengeboran",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Benda kerja pada mesin bor cukup dipegang tangan jika ringan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s2-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "Jepit dengan ragum atau klem.",
+     "competency": "Keselamatan pengeboran",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Untuk lubang besar, sebaiknya dibuat lubang awal kecil terlebih dahulu.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s2-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "Lubang awal mengurangi beban bor besar.",
+     "competency": "Prosedur pengeboran",
+     "difficulty": 2,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Gerigi (バリ) setelah mengebor dibiarkan karena tidak berbahaya.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s2-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "Gerigi tajam dan harus dibuang.",
+     "competency": "Penyelesaian",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Fungsi センタポンチ adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Memotong gerigi"
+      },
+      {
+       "id": "B",
+       "text": "Mengukur diameter"
+      },
+      {
+       "id": "C",
+       "text": "Mendinginkan mata bor"
+      },
+      {
+       "id": "D",
+       "text": "Menandai titik pusat lubang agar mata bor tidak tergelincir"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c5s2-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "Penitik pusat membuat cekungan awal.",
+     "competency": "Prosedur pengeboran",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Alat yang menjepit benda kerja saat mengebor disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "切削油"
+      },
+      {
+       "id": "B",
+       "text": "ノギス"
+      },
+      {
+       "id": "C",
+       "text": "ドリル"
+      },
+      {
+       "id": "D",
+       "text": "万力 (ragum)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c5s2-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "万力 = ragum.",
+     "competency": "Perkakas bantu",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Agar akurasi posisi lubang pada produksi massal baik, digunakan…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Pengeboran bebas dengan tangan"
+      },
+      {
+       "id": "B",
+       "text": "Jig dengan bush pemandu"
+      },
+      {
+       "id": "C",
+       "text": "Putaran sangat tinggi"
+      },
+      {
+       "id": "D",
+       "text": "Mata bor tumpul"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s2-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "Jig dan bush menjaga posisi.",
+     "competency": "Akurasi pengeboran",
+     "difficulty": 2,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Setelah mengebor, sisi tajam dibuang dengan…",
+     "options": [
+      {
+       "id": "A",
+       "text": "バリ取り (pembuangan gerigi)"
+      },
+      {
+       "id": "B",
+       "text": "焼入れ"
+      },
+      {
+       "id": "C",
+       "text": "塗装"
+      },
+      {
+       "id": "D",
+       "text": "検査"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s2-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s2",
+     "explanation": "バリ取り menghilangkan gerigi.",
+     "competency": "Penyelesaian",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c5s3",
+   "chapter": "c5",
+   "subchapter": "c5s3",
+   "title": "Pengelasan dan Pengecatan",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Cahaya busur las dapat merusak mata sehingga topeng las wajib dipakai.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s3-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "UV dan IR berbahaya bagi mata.",
+     "competency": "Pengelasan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Bahan mudah terbakar boleh ditinggal dekat area las bila jumlahnya sedikit.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s3-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "Percikan dapat menyulut kebakaran.",
+     "competency": "Pengelasan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Urutan pengecatan yang benar: cat dasar, cat tengah, cat akhir.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s3-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "下塗り → 中塗り → 上塗り.",
+     "competency": "Pengecatan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Pengecatan boleh dilakukan langsung di atas karat tanpa persiapan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s3-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "Karat dan minyak harus dibersihkan lebih dulu.",
+     "competency": "Pengecatan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Apa fungsi 遮光面?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Menahan gas"
+      },
+      {
+       "id": "B",
+       "text": "Melindungi wajah dan mata dari cahaya dan percikan las"
+      },
+      {
+       "id": "C",
+       "text": "Menambah panas las"
+      },
+      {
+       "id": "D",
+       "text": "Mengukur arus"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s3-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "遮光面 = topeng las.",
+     "competency": "Pengelasan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Mana urutan pengecatan yang benar?",
+     "options": [
+      {
+       "id": "A",
+       "text": "上塗り → 中塗り → 下塗り"
+      },
+      {
+       "id": "B",
+       "text": "素地調整 → 下塗り → 中塗り → 上塗り"
+      },
+      {
+       "id": "C",
+       "text": "中塗り → 素地調整 → 上塗り"
+      },
+      {
+       "id": "D",
+       "text": "下塗り → 上塗り → 素地調整"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c5s3-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "Persiapan dulu, lalu dasar, tengah, akhir.",
+     "competency": "Pengecatan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Mengapa area las harus bebas dari benda mudah terbakar?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Karena percikan las dapat menyebabkan kebakaran"
+      },
+      {
+       "id": "B",
+       "text": "Karena las memerlukan ruang kosong"
+      },
+      {
+       "id": "C",
+       "text": "Karena kain mengganggu arus"
+      },
+      {
+       "id": "D",
+       "text": "Karena cat tidak boleh basah"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c5s3-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "スパッタ dapat menyulut api.",
+     "competency": "Pengelasan",
+     "difficulty": 1,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Asap las (ヒューム) berbahaya terutama bagi…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Rambut"
+      },
+      {
+       "id": "B",
+       "text": "Kuku"
+      },
+      {
+       "id": "C",
+       "text": "Saluran napas dan paru-paru"
+      },
+      {
+       "id": "D",
+       "text": "Pendengaran saja"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c5s3-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c5",
+     "subchapter": "c5s3",
+     "explanation": "Ventilasi atau masker diperlukan.",
+     "competency": "Pengelasan",
+     "difficulty": 2,
+     "reference": "Materi Shirose c5s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c6s1",
+   "chapter": "c6",
+   "subchapter": "c6s1",
+   "title": "Dasar Membaca Gambar Teknik",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Simbol C2 pada gambar berarti chamfer 45° dengan sisi 2 mm.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s1-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "C = chamfer 45°.",
+     "competency": "Simbol dimensi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Garis putus-putus menunjukkan bentuk yang tersembunyi.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s1-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "Itu 隠れ線.",
+     "competency": "Jenis garis",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Angka dimensi pada gambar skala 1:2 tetap menunjukkan ukuran asli benda.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s1-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "Dimensi adalah ukuran sebenarnya.",
+     "competency": "Skala",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Simbol φ menunjukkan jari-jari.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c6s1-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "φ = diameter; jari-jari adalah R.",
+     "competency": "Simbol dimensi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Garis tipis dengan rantai (garis-titik) biasanya digunakan sebagai…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Garis tepi"
+      },
+      {
+       "id": "B",
+       "text": "Garis pusat"
+      },
+      {
+       "id": "C",
+       "text": "Garis tersembunyi"
+      },
+      {
+       "id": "D",
+       "text": "Garis dimensi"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c6s1-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "中心線 = garis pusat.",
+     "competency": "Jenis garis",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Skala 2:1 berarti gambar…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Diperkecil dua kali"
+      },
+      {
+       "id": "B",
+       "text": "Sama dengan asli"
+      },
+      {
+       "id": "C",
+       "text": "Diperbesar dua kali"
+      },
+      {
+       "id": "D",
+       "text": "Tidak berskala"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c6s1-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "Gambar : benda = 2 : 1.",
+     "competency": "Skala",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Simbol R pada gambar berarti…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Tebal"
+      },
+      {
+       "id": "B",
+       "text": "Jari-jari (radius)"
+      },
+      {
+       "id": "C",
+       "text": "Ulir"
+      },
+      {
+       "id": "D",
+       "text": "Diameter"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c6s1-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "R = radius.",
+     "competency": "Simbol dimensi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Metode proyeksi yang umum pada gambar JIS adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Perspektif satu titik"
+      },
+      {
+       "id": "B",
+       "text": "Proyeksi sudut pertama saja"
+      },
+      {
+       "id": "C",
+       "text": "Isometri saja"
+      },
+      {
+       "id": "D",
+       "text": "Proyeksi sudut ketiga (第三角法)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c6s1-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s1",
+     "explanation": "JIS memakai 第三角法.",
+     "competency": "Proyeksi",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s1; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c6s2",
+   "chapter": "c6",
+   "subchapter": "c6s2",
+   "title": "Toleransi Dimensi, Toleransi Geometris, dan Kekasaran",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Ukuran 50 ±0,1 mm mengizinkan ukuran 49,9 sampai 50,1 mm.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s2-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "Batas bawah 49,9 dan atas 50,1.",
+     "competency": "Toleransi dimensi",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Kerataan (平面度) menunjukkan seberapa rata suatu permukaan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s2-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "Itu arti 平面度.",
+     "competency": "Toleransi geometris",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Ukuran 20,08 mm masih sesuai untuk spesifikasi φ20 ±0,05.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c6s2-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "Batas atas 20,05 mm.",
+     "competency": "Toleransi dimensi",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Ra menyatakan kekasaran permukaan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s2-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "Ra = arithmetic mean roughness.",
+     "competency": "Kekasaran",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Nama toleransi yang membatasi seberapa bulat suatu penampang adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "同軸度"
+      },
+      {
+       "id": "B",
+       "text": "直角度"
+      },
+      {
+       "id": "C",
+       "text": "平面度"
+      },
+      {
+       "id": "D",
+       "text": "真円度 (kebulatan)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c6s2-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "真円度 = roundness.",
+     "competency": "Toleransi geometris",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Poros φ30 ±0,02. Batas ukuran yang diizinkan adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "29,8 sampai 30,2 mm"
+      },
+      {
+       "id": "B",
+       "text": "30,02 sampai 30,04 mm"
+      },
+      {
+       "id": "C",
+       "text": "29,98 sampai 30,02 mm"
+      },
+      {
+       "id": "D",
+       "text": "29,98 saja"
+      }
+     ],
+     "answer": "C",
+     "id": "imm-mmp-q-c6s2-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "30 − 0,02 dan 30 + 0,02.",
+     "competency": "Toleransi dimensi",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Hubungan poros dan lubang yang sangat sesak disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "しまりばめ"
+      },
+      {
+       "id": "B",
+       "text": "寸法公差"
+      },
+      {
+       "id": "C",
+       "text": "真直度"
+      },
+      {
+       "id": "D",
+       "text": "すきまばめ"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s2-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "しまりばめ = suaian sesak.",
+     "competency": "Suaian",
+     "difficulty": 3,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Nama toleransi untuk dua permukaan yang harus sejajar adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "振れ"
+      },
+      {
+       "id": "B",
+       "text": "平行度 (kesejajaran)"
+      },
+      {
+       "id": "C",
+       "text": "真円度"
+      },
+      {
+       "id": "D",
+       "text": "直角度"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c6s2-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s2",
+     "explanation": "平行度 = parallelism.",
+     "competency": "Toleransi geometris",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s2; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  },
+  {
+   "id": "imm-mmp-set-c6s3",
+   "chapter": "c6",
+   "subchapter": "c6s3",
+   "title": "Simbol Las dan Istilah CAD/CAM",
+   "label": "ORIGINAL PRACTICE QUESTION",
+   "items": [
+    {
+     "type": "true_false_AB",
+     "question": "Simbol las yang digambar di bawah garis acuan berarti pengelasan pada sisi panah.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s3-01",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "Aturan JIS: sisi panah di bawah garis acuan.",
+     "competency": "Simbol las",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "CAD berarti perancangan dengan bantuan komputer.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s3-02",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "Computer-Aided Design.",
+     "competency": "CAD/CAM",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "CAM adalah program untuk menggambar saja dan tidak terkait pemesinan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c6s3-03",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "CAM berkaitan dengan pembuatan program pemesinan.",
+     "competency": "CAD/CAM",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "true_false_AB",
+     "question": "Las keliling (全周溶接) berarti las mengelilingi seluruh sambungan.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Benar (○)"
+      },
+      {
+       "id": "B",
+       "text": "Salah (×)"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s3-04",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "全周 = seluruh keliling.",
+     "competency": "Simbol las",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "NC pada mesin NC berarti…",
+     "options": [
+      {
+       "id": "A",
+       "text": "Normal Cutter"
+      },
+      {
+       "id": "B",
+       "text": "Numerical Control (kendali numerik)"
+      },
+      {
+       "id": "C",
+       "text": "New Cutting"
+      },
+      {
+       "id": "D",
+       "text": "No Coolant"
+      }
+     ],
+     "answer": "B",
+     "id": "imm-mmp-q-c6s3-05",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "数値制御 = Numerical Control.",
+     "competency": "CAD/CAM",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Urutan kerja yang benar dari perancangan ke pemesinan adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "CAD → CAM → program NC → mesin CNC"
+      },
+      {
+       "id": "B",
+       "text": "Mesin CNC → CAD → CAM"
+      },
+      {
+       "id": "C",
+       "text": "CAD → mesin CNC → CAM"
+      },
+      {
+       "id": "D",
+       "text": "CAM → mesin CNC → CAD"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s3-06",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "Data CAD diubah menjadi program NC melalui CAM.",
+     "competency": "CAD/CAM",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Garis tempat simbol las ditulis disebut…",
+     "options": [
+      {
+       "id": "A",
+       "text": "矢 (panah)"
+      },
+      {
+       "id": "B",
+       "text": "寸法線"
+      },
+      {
+       "id": "C",
+       "text": "中心線"
+      },
+      {
+       "id": "D",
+       "text": "基線 (garis acuan)"
+      }
+     ],
+     "answer": "D",
+     "id": "imm-mmp-q-c6s3-07",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "基線 = reference line.",
+     "competency": "Simbol las",
+     "difficulty": 1,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    },
+    {
+     "type": "mc4",
+     "question": "Las sudut dalam bahasa Jepang adalah…",
+     "options": [
+      {
+       "id": "A",
+       "text": "すみ肉溶接"
+      },
+      {
+       "id": "B",
+       "text": "開先"
+      },
+      {
+       "id": "C",
+       "text": "突合せ溶接"
+      },
+      {
+       "id": "D",
+       "text": "全周溶接"
+      }
+     ],
+     "answer": "A",
+     "id": "imm-mmp-q-c6s3-08",
+     "sector": "industrial-manufacturing",
+     "category": "mmp",
+     "chapter": "c6",
+     "subchapter": "c6s3",
+     "explanation": "すみ肉溶接 = fillet weld.",
+     "competency": "Simbol las",
+     "difficulty": 2,
+     "reference": "Materi Shirose c6s3; topik sejalan dengan contoh soal resmi JAIM sample1_01.pdf (bukan salinan)",
+     "label": "ORIGINAL PRACTICE QUESTION",
+     "image_ref": null
+    }
+   ]
+  }
+ ]
+}
