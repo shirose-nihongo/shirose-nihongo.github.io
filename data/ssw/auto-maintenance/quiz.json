@@ -1665,6 +1665,50 @@
       "exp": {
        "id": "定期点検整備記録簿 (ていきてんけんせいびきろくぼ) = buku catatan pemeriksaan berkala."
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Keterangan: Di Jepang mobil diperiksa secara berkala dan komponen yang akan memburuk diganti sebelum rusak.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Keterangan: Senam bersama sesudah kerja agar tidak cedera; semua orang Jepang mengenalnya.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Keterangan: Senam bersama sebelum kerja agar tidak cedera; semua orang Jepang mengenalnya.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -2216,6 +2260,50 @@
       "exp": {
        "id": "エア・インパクト・レンチ (えあいんぱくとれんち) = kunci impak angin."
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “⑰ **スタッビ・ドライバ** (すたっびどらいば · sutabbi doraiba) — obeng pendek.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Keterangan: Gagang panjang; dipakai di tempat sempit.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Keterangan: Gagang pendek; dipakai di tempat sempit.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -3370,6 +3458,28 @@
       "exp": {
        "id": "掃除する (そうじする) = membersihkan."
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Contoh: 重たい部品や大型車のタイヤをもちあげるとき、リフトをあげるとき、気を付けて。 → Hati-hati saat mengangkat komponen berat/ban kendaraan besar atau menaikkan lift.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -3519,6 +3629,106 @@
       "a": 0,
       "exp": {
        "id": "止める (とめる) = menghentikan, mematikan."
+      }
+     },
+     {
+      "q": {
+       "id": "Pra pemerahan (strip cup) dilakukan untuk…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Menambah volume susu sebelum diperah"
+       },
+       {
+        "id": "Menemukan zat padat dalam susu dan membuang susu awal yang berpotensi terkontaminasi"
+       },
+       {
+        "id": "Mencuci seluruh tubuh sapi"
+       },
+       {
+        "id": "Memberi pakan konsentrat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Teks hal. Prosedur Memerah Susu: pra pemerahan untuk mengecek zat padat dan membuang perah awal yang tinggi kemungkinan kontaminasi.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Sapi dengan sel somatik tinggi atau radang ambing (mastitis) diperah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Belakangan (paling akhir)"
+       },
+       {
+        "id": "Paling awal"
+       },
+       {
+        "id": "Tidak perlu diperah"
+       },
+       {
+        "id": "Diperah bersama sapi sehat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sapi mastitis/sel somatik tinggi diperah belakangan agar tidak menularkan ke sapi lain.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Tujuan pengelapan ambing adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Memberi pakan pada sapi"
+       },
+       {
+        "id": "Menurunkan suhu rektal"
+       },
+       {
+        "id": "Memberi rangsangan perah susu dan sterilisasi permukaan ambing"
+       },
+       {
+        "id": "Mengukur berat badan sapi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pengelapan ambing = rangsang perah + sterilisasi permukaan ambing.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Dipping berarti…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Memotong kuku"
+       },
+       {
+        "id": "Menyemprot air ke lantai"
+       },
+       {
+        "id": "Menimbang susu"
+       },
+       {
+        "id": "Mencelupkan ambing ke cairan kimia (disinfektan)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Dipping = mencelupkan ke cairan kimia untuk membunuh kuman pada ambing.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       }
      }
     ]
@@ -3670,6 +3880,106 @@
       "a": 0,
       "exp": {
        "id": "ゆるめる (ゆるめる) = mengendurkan."
+      }
+     },
+     {
+      "q": {
+       "id": "Tidak mendekat ke wadah pakan, banyak menyisakan makanan, atau memisahkan diri dari kelompok menandakan kemungkinan…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Hanya kelebihan nutrisi"
+       },
+       {
+        "id": "Penyakit kuku saja"
+       },
+       {
+        "id": "Sapi sedang estrus"
+       },
+       {
+        "id": "Penyakit organ pencernaan, penyakit demam, atau penyakit gigi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Inspeksi nafsu makan (hal. 125–127).",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pincang pada sapi dicurigai sebagai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Penyakit kuku"
+       },
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Radang otak"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Perilaku dan penyakit: pincang → penyakit kuku.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Menggosokkan badan ke dinding atau tiang dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kuku"
+       },
+       {
+        "id": "Penyakit metabolisme"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Anemia"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Menggosokkan badan ke dinding/tiang → penyakit kulit.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Bulu kasar, bengkak di keempat kaki, bola mata menonjol, dan daya pandang menurun dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Kekurangan vitamin B1"
+       },
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kencing batu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kekurangan vitamin A menimbulkan gejala tersebut.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       }
      }
     ]
@@ -3967,6 +4277,50 @@
       "a": 1,
       "exp": {
        "id": "解除する (かいじょする) = membuka kunci."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Contoh: この作業、急ぎだから、急いで。 → Pekerjaan ini mendesak, tolong cepat.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “⑪ **のる** (のる · noru) — turun (ke mobil); alias/keterangan: 乗る.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “⑪ **のる** (のる · noru) — naik (ke mobil); alias/keterangan: 乗る.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -4916,6 +5270,28 @@
       "exp": {
        "id": "リザーバータンク (りざーばーたんく) = tangki cadangan."
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Goresan kecil pada bemper, pintu, atau noda pada jok sangat dihindari.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -5399,6 +5775,28 @@
       "exp": {
        "id": "もういちど、せつめいおねがいします (もういちど、せつめいおねがいします) = tolong jelaskan sekali lagi."
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Jangan menjawab 分かりました jika belum paham — salah membuang bisa menyebabkan kecelakaan besar.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },

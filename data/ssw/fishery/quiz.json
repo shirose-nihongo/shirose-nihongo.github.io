@@ -315,6 +315,50 @@
       "ref": {
        "p": 2
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Jumlah gabungan produksi perikanan dan budidaya dunia terus meningkat.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Perikanan yang menggunakan kapal nelayan besar di sepanjang pantai.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Perikanan yang menggunakan kapal nelayan kecil di sepanjang pantai.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -557,6 +601,131 @@
        "p": 9
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Diagram di bawah menunjukkan penyimpangannya adalah ＿＿＿ ke barat.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "8 derajat"
+       },
+       {
+        "id": "10 derajat"
+       },
+       {
+        "id": "30 derajat"
+       },
+       {
+        "id": "5 derajat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Diagram di bawah menunjukkan penyimpangannya adalah 10 derajat ke barat.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Di sepanjang pantai, ada arus yang mengalir ke arah yang berlawanan dengan arus laut utama di lepas pantai, dan ini disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tali penguat"
+       },
+       {
+        "id": "arus berlawanan"
+       },
+       {
+        "id": "langkah keselamatan"
+       },
+       {
+        "id": "cakalang"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Di sepanjang pantai, ada arus yang mengalir ke arah yang berlawanan dengan arus laut utama di lepas pantai, dan ini disebut arus berlawanan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Arus hangat yang paling representatif di dekat Jepang adalah ＿＿＿, yang mengalir ke utara dari Laut Cina Selatan di sepanjang kepulauan Jepang.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Yorimodoshi"
+       },
+       {
+        "id": "\"pengumpulan ikan"
+       },
+       {
+        "id": "Arus Kuroshio"
+       },
+       {
+        "id": "\"Tsubonuki”"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Arus hangat yang paling representatif di dekat Jepang adalah Arus Kuroshio, yang mengalir ke utara dari Laut Cina Selatan di sepanjang kepulauan Jepang.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Perbedaan antara kedua sudut utara ini disebut ＿＿＿, dan bervariasi bergantung pada lokasi dan tahun.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "deviasi"
+       },
+       {
+        "id": "penting"
+       },
+       {
+        "id": "tora rope"
+       },
+       {
+        "id": "Yorimodoshi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Perbedaan antara kedua sudut utara ini disebut deviasi, dan bervariasi bergantung pada lokasi dan tahun.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Di sekitar pulau dan daratan dikekelilingi laut dangkal yang datar dan tempat seperti itu disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "kapal Wakitsuki"
+       },
+       {
+        "id": "Yorimodoshi"
+       },
+       {
+        "id": "landas kontinen"
+       },
+       {
+        "id": "\"pan\" sesuai ukuran"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Di sekitar pulau dan daratan dikekelilingi laut dangkal yang datar dan tempat seperti itu disebut landas kontinen.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    },
@@ -675,6 +844,125 @@
       },
       "ref": {
        "p": 14
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ini dinyatakan dengan jumlah berapa gram dalam ＿＿＿ air laut (‰, permil).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "3000 g"
+       },
+       {
+        "id": "1000 g"
+       },
+       {
+        "id": "2000 g"
+       },
+       {
+        "id": "750 g"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ini dinyatakan dengan jumlah berapa gram dalam 1000 g air laut (‰, permil).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Jumlah garam dalam air laut pada umumnya sekitar 33-37‰ (33-37g / ＿＿＿).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "750 g"
+       },
+       {
+        "id": "3000 g"
+       },
+       {
+        "id": "2000 g"
+       },
+       {
+        "id": "1000 g"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Jumlah garam dalam air laut pada umumnya sekitar 33-37‰ (33-37g / 1000g).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ketika jumlah plankton (khususnya fitoplankton) meningkat dalam air dan warna air berubah menjadi merah atau coklat, itu disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tali penguat"
+       },
+       {
+        "id": "jaring dalam"
+       },
+       {
+        "id": "Aka shio"
+       },
+       {
+        "id": "kesalahan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ketika jumlah plankton (khususnya fitoplankton) meningkat dalam air dan warna air berubah menjadi merah atau coklat, itu disebut Aka shio.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Fueiyoka berarti terlalu banyak Chisso (nitrogen [N]), Rin (fosfor [P]), Keiso (silikon [Si]) dan sejenisnya di dalam air.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Bertambahnya jumlah plankton menggunakan sedikit oksigen di dalam air.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Bertambahnya jumlah plankton menggunakan banyak oksigen di dalam air.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -797,6 +1085,128 @@
        "p": 20
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bagian ini menjelaskan tiga metode untuk mengikat tali tipis dengan diameter sekitar 30 mm atau kurang dan panjang hingga ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "75 m"
+       },
+       {
+        "id": "200 m"
+       },
+       {
+        "id": "100 m"
+       },
+       {
+        "id": "300 m"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Bagian ini menjelaskan tiga metode untuk mengikat tali tipis dengan diameter sekitar 30 mm atau kurang dan panjang hingga 100 m.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “⑧ Anyam setiap helaian ＿＿＿ dan lebih untuk menyelesaikan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "5 kali"
+       },
+       {
+        "id": "1 kali"
+       },
+       {
+        "id": "3 kali"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “⑧ Anyam setiap helaian 3 kali dan lebih untuk menyelesaikan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “⑥ Lakukan anyaman helaian tali dari masing-masing sisi sebanyak ＿＿＿ dan lebih untuk menyelesaikannya.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "3 kali"
+       },
+       {
+        "id": "1 kali"
+       },
+       {
+        "id": "5 kali"
+       },
+       {
+        "id": "4 kali"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “⑥ Lakukan anyaman helaian tali dari masing-masing sisi sebanyak 3 kali dan lebih untuk menyelesaikannya.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “⑥ Anyam setiap helaian ＿＿＿ dan lebih untuk menyelesaikan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "5 kali"
+       },
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "1 kali"
+       },
+       {
+        "id": "3 kali"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “⑥ Anyam setiap helaian 3 kali dan lebih untuk menyelesaikan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Dengan tali yang masih terlilit di pasak satu atau dua kali, panjang tali yang menahan perahu dapat disesuaikan dengan menggeser tali.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -917,6 +1327,100 @@
       },
       "ref": {
        "p": 33
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dalam hal ini, pada bagian yang dekat dengan mata kail pancing (10 hingga ＿＿＿) digunakan kawat, dan kemudian disambungkan dengan benang nilon untuk membentuk Harris secara keseluruhan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "15 cm"
+       },
+       {
+        "id": "90 cm"
+       },
+       {
+        "id": "30 cm"
+       },
+       {
+        "id": "22 cm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dalam hal ini, pada bagian yang dekat dengan mata kail pancing (10 hingga 30 cm) digunakan kawat, dan kemudian disambungkan dengan benang nilon untuk membentuk Harris secara keseluruhan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Yang besar biasanya disebut ＿＿＿, yang kecil disebut Sarukan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Arus Kuroshio"
+       },
+       {
+        "id": "\"tsubo\""
+       },
+       {
+        "id": "kesalahan"
+       },
+       {
+        "id": "Yorimodoshi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Yang besar biasanya disebut Yorimodoshi, yang kecil disebut Sarukan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Proses mekanisasi kapal penangkap ikan saat ini terus berkembang, peningkatan efisiensi diukur dengan melihat sedikitnya awak kapal dan penggunaan alat tangkap yang lebih besar.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Di Jepang sedikit mata kail pancing dibuat dan Ken (Pedang) Hara (Perut) digunakan sesuai dengan jenis dan ukuran ikan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Di Jepang banyak mata kail pancing dibuat dan Ken (Pedang) Hara (Perut) digunakan sesuai dengan jenis dan ukuran ikan.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -1210,6 +1714,100 @@
        "p": 48
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Meskipun tipe tiup ringan dan tipis, sehingga dapat dikenakan di bawah jas hujan, tetapi ini adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "juga Honmaguro"
+       },
+       {
+        "id": "tali penguat"
+       },
+       {
+        "id": "\"pengumpulan ikan"
+       },
+       {
+        "id": "kesalahan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Meskipun tipe tiup ringan dan tipis, sehingga dapat dikenakan di bawah jas hujan, tetapi ini adalah kesalahan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: ““Pemakaian alat pelindung\" adalah ＿＿＿. “Memakai alat pelindung adalah cara untuk menjaga keselamatan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "langkah keselamatan"
+       },
+       {
+        "id": "kepiting dan udang"
+       },
+       {
+        "id": "kapal Wakitsuki"
+       },
+       {
+        "id": "juga leader"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: ““Pemakaian alat pelindung\" adalah langkah keselamatan. “Memakai alat pelindung adalah cara untuk menjaga keselamatan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Hal ini karena alas kaki seperti itu mudah terpeleset dan tidak dapat melindungi kaki dari benda yang jatuh.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Memakai pakaian kerja lengan pendek yang pas dengan ukuran tubuh.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Memakai pakaian kerja lengan panjang yang pas dengan ukuran tubuh.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -1328,6 +1926,75 @@
       },
       "ref": {
        "p": 51
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dan juga, tali yang diwarnai dengan warna kuning dan hitam disebut ＿＿＿, dan direntangkan tempat-tempat berbahaya.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tali penguat"
+       },
+       {
+        "id": "tora rope"
+       },
+       {
+        "id": "arus berlawanan"
+       },
+       {
+        "id": "benang pemikat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dan juga, tali yang diwarnai dengan warna kuning dan hitam disebut tora rope, dan direntangkan tempat-tempat berbahaya.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Jika keluar ke geladak pada malam hari, beritahukan awak kapal lainnya.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Beberapa simbol bergambar untuk rambu bahaya rendah ditunjukkan di bawah ini (warna diatur, tetapi di sini warna hitam digunakan untuk mewakili bentuknya).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Beberapa simbol bergambar untuk rambu bahaya tinggi ditunjukkan di bawah ini (warna diatur, tetapi di sini warna hitam digunakan untuk mewakili bentuknya).”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -1450,6 +2117,116 @@
       "ref": {
        "p": 55
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Untuk ikan yang tidak Anda ketahui, tanyakan awak kapal di sekitar Anda sebelum menanganinya.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Dan juga, sedikit cedera oleh hasil penangkapan terjadi pada pemula.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Dan juga, banyak cedera oleh hasil penangkapan terjadi pada pemula.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Untuk itu perlu memastikan keselamatan seperti berikut sebelum memulai pekerjaan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pada dasarnya, tubuh manusia akan mengapung di air, namun dalam keadaan memakai pakaian dan jas hujan, tubuh akan lebih sulit mengapung.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Pada dasarnya, tubuh manusia akan mengapung di air, namun dalam keadaan memakai pakaian dan jas hujan, tubuh akan lebih mudah mengapung.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tidak terbatas saat beroperasi, kecelakaan terjatuh ke laut paling mudah terjadi di antara kecelakaan kapal penangkapan ikan, maka harus berhati-hati.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -1844,6 +2621,125 @@
       "ref": {
        "p": 64
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tali pendek yang digunakan untuk menghubungkan ring ke pemberat atau tali.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Perahu besar yang digunakan untuk mendukung operasi penangkapan ikan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Perahu kecil yang digunakan untuk mendukung operasi penangkapan ikan.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pra pemerahan (strip cup) dilakukan untuk…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Menambah volume susu sebelum diperah"
+       },
+       {
+        "id": "Menemukan zat padat dalam susu dan membuang susu awal yang berpotensi terkontaminasi"
+       },
+       {
+        "id": "Mencuci seluruh tubuh sapi"
+       },
+       {
+        "id": "Memberi pakan konsentrat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Teks hal. Prosedur Memerah Susu: pra pemerahan untuk mengecek zat padat dan membuang perah awal yang tinggi kemungkinan kontaminasi.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Sapi dengan sel somatik tinggi atau radang ambing (mastitis) diperah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Belakangan (paling akhir)"
+       },
+       {
+        "id": "Paling awal"
+       },
+       {
+        "id": "Tidak perlu diperah"
+       },
+       {
+        "id": "Diperah bersama sapi sehat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sapi mastitis/sel somatik tinggi diperah belakangan agar tidak menularkan ke sapi lain.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Tujuan pengelapan ambing adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Memberi pakan pada sapi"
+       },
+       {
+        "id": "Menurunkan suhu rektal"
+       },
+       {
+        "id": "Memberi rangsangan perah susu dan sterilisasi permukaan ambing"
+       },
+       {
+        "id": "Mengukur berat badan sapi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pengelapan ambing = rangsang perah + sterilisasi permukaan ambing.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
      }
     ]
    },
@@ -1964,6 +2860,128 @@
        "p": 69
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Ketika sedang menangani jaring yang basah dan berat, pastikan untuk memperhatikan langkah kaki untuk menghindari terjerat, dan juga berhati-hati untuk tidak terjerat dalam mesin penangkap ikan saat sedang beroperasi.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tidak mendekat ke wadah pakan, banyak menyisakan makanan, atau memisahkan diri dari kelompok menandakan kemungkinan…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Hanya kelebihan nutrisi"
+       },
+       {
+        "id": "Penyakit kuku saja"
+       },
+       {
+        "id": "Penyakit organ pencernaan, penyakit demam, atau penyakit gigi"
+       },
+       {
+        "id": "Sapi sedang estrus"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Inspeksi nafsu makan (hal. 125–127).",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pincang pada sapi dicurigai sebagai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Radang otak"
+       },
+       {
+        "id": "Penyakit kuku"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Perilaku dan penyakit: pincang → penyakit kuku.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Menggosokkan badan ke dinding atau tiang dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Penyakit kuku"
+       },
+       {
+        "id": "Penyakit metabolisme"
+       },
+       {
+        "id": "Anemia"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Menggosokkan badan ke dinding/tiang → penyakit kulit.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Bulu kasar, bengkak di keempat kaki, bola mata menonjol, dan daya pandang menurun dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Kekurangan vitamin B1"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kencing batu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kekurangan vitamin A menimbulkan gejala tersebut.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
      }
     ]
    }
@@ -2238,6 +3256,122 @@
        "p": 74
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Panjang hasil akhir 1 lembar jaring sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "150 m"
+       },
+       {
+        "id": "50 m"
+       },
+       {
+        "id": "100 m"
+       },
+       {
+        "id": "38 m"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Panjang hasil akhir 1 lembar jaring sekitar 50 m.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Salah satunya adalah berdasarkan lapisan kedalaman laut yang akan dipasang, yaitu ＿＿＿, lapisan pertengahan, dan lapisan dasar.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "landas kontinen"
+       },
+       {
+        "id": "\"Kepiting Salju Merah\""
+       },
+       {
+        "id": "lapisan permukaan"
+       },
+       {
+        "id": "benang pemikat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Salah satunya adalah berdasarkan lapisan kedalaman laut yang akan dipasang, yaitu lapisan permukaan, lapisan pertengahan, dan lapisan dasar.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Besar kecilnya jaring ditunjukkan dengan mesh depth dan panjang jaring.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Oleh karena itu, rasio penggantungan di sisi tali pelampung dan sisi tali pemberat pun terdapat banyak perbedaan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Oleh karena itu, rasio penggantungan di sisi tali pelampung dan sisi tali pemberat pun terdapat sedikit perbedaan.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Untuk benang multi-filamen berwarna ke abu abuan atau nilon berwarna biru muda yang sering digunakan untuk bahan jaring insang saat ini, selain untuk transparansi juga untuk memberikan kontras rendah dengan latar belakang.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -2358,6 +3492,131 @@
        "p": 77
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Benang pada bagian paling tepi tebalnya sekitar ＿＿＿ lipat tebal benang jaring.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "3 kali"
+       },
+       {
+        "id": "6 kali"
+       },
+       {
+        "id": "2 kali"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Benang pada bagian paling tepi tebalnya sekitar 2 kali lipat tebal benang jaring.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tetapi pada jaring insang, pemberat timah (timbal) adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jaring tetap struktur kotak dua tingkat"
+       },
+       {
+        "id": "yang paling umum digunakan"
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       },
+       {
+        "id": "kepiting dan udang"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tetapi pada jaring insang, pemberat timah (timbal) adalah yang paling umum digunakan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ada dua jenis pelampung, yang satu adalah jenis padat berisi dan yang lainnya adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "\"Kepiting Salju Merah\""
+       },
+       {
+        "id": "lapisan permukaan"
+       },
+       {
+        "id": "jenis berongga tengah"
+       },
+       {
+        "id": "jaring lepas pantai"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ada dua jenis pelampung, yang satu adalah jenis padat berisi dan yang lainnya adalah jenis berongga tengah.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Jika diameter satu tali dibuat sedikit lebih kecil, maka disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tali penguat"
+       },
+       {
+        "id": "cakalang"
+       },
+       {
+        "id": "radar"
+       },
+       {
+        "id": "juga leader"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Jika diameter satu tali dibuat sedikit lebih kecil, maka disebut tali penguat.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tali yang terutama digunakan pada jaring insang adalah ＿＿＿, namun ada pula yang tanpa tali pemberat dan terkadang menggunakan tali penguat (bolch line) pelampung.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jaring tetap struktur kotak dua tingkat"
+       },
+       {
+        "id": "``Kapal Onaka’ dan berukuran sangat besar"
+       },
+       {
+        "id": "tali pelampung dan tali pemberat"
+       },
+       {
+        "id": "\"Kepiting Salju Merah\""
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tali yang terutama digunakan pada jaring insang adalah tali pelampung dan tali pemberat, namun ada pula yang tanpa tali pemberat dan terkadang menggunakan tali penguat (bolch line) pelampung.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    }
@@ -2630,6 +3889,78 @@
        "p": 82
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Papan pembuka mulut jaring adalah ＿＿＿, kayu, FRP, dll.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "papan yang terbuat Berpapan dari besi"
+       },
+       {
+        "id": "jaring tetap struktur kotak dua tingkat"
+       },
+       {
+        "id": "jenis berongga tengah"
+       },
+       {
+        "id": "jaring lepas pantai"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Papan pembuka mulut jaring adalah papan yang terbuat Berpapan dari besi, kayu, FRP, dll.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Proses selanjutnya adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "kebalikan dari prosedur pelemparan jaring"
+       },
+       {
+        "id": "panel atau lampu lili lembah"
+       },
+       {
+        "id": "Kepiting Salju Merah dan Kepiting Salju"
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Proses selanjutnya adalah kebalikan dari prosedur pelemparan jaring.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Saat jaring diangkat, kurangi kecepatan pengangkatan saat Warp (tali penarink) menjadi lebih pendek, dan angkat sampai papan pembuka mulut jaring digantung di Gallose.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -2750,6 +4081,28 @@
       "ref": {
        "p": 83
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Kedua perahu tersebut memanfaatkan jaring yang terbuka lebar untuk menarik jaring, dan menggunakan tali majemuk yang panjang dan tebal untuk mengagetkan dan mengumpulkan ikan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -3022,6 +4375,128 @@
        "p": 87
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ukuran mata jaring pagar sangat besar yaitu 90 sampai ＿＿＿, dan kebanyakan ikan dapat melewatinya secara fisik.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "22 cm"
+       },
+       {
+        "id": "30 cm"
+       },
+       {
+        "id": "15 cm"
+       },
+       {
+        "id": "90 cm"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ukuran mata jaring pagar sangat besar yaitu 90 sampai 30 cm, dan kebanyakan ikan dapat melewatinya secara fisik.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Nobori Ami (Jaring menaik) : Sisi Kakoi Ami (Jaring Pengurung) disebut jaring luar dan bagian yang menonjol ke sisi Hako Ami (Jaring Kotak) disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "deviasi"
+       },
+       {
+        "id": "Yorimodoshi"
+       },
+       {
+        "id": "jaring dalam"
+       },
+       {
+        "id": "juga leader"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Nobori Ami (Jaring menaik) : Sisi Kakoi Ami (Jaring Pengurung) disebut jaring luar dan bagian yang menonjol ke sisi Hako Ami (Jaring Kotak) disebut jaring dalam.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Lereng dari dasar laut dan metode penyempitan ke jaring kotak adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "penting"
+       },
+       {
+        "id": "Aka shio"
+       },
+       {
+        "id": "arus berlawanan"
+       },
+       {
+        "id": "Yorimodoshi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Lereng dari dasar laut dan metode penyempitan ke jaring kotak adalah penting.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Apa yang dipasang dari jaring ke sisi lepas pantai disebut ＿＿＿, dan dalam hal ini Kaki Ami (Jaring Penaju) di sisi pantai disebut Isogaki Ami (Jaring Isogaki).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "panel atau lampu lili lembah"
+       },
+       {
+        "id": "jaring lepas pantai"
+       },
+       {
+        "id": "langkah keselamatan"
+       },
+       {
+        "id": "juga Honmaguro"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Apa yang dipasang dari jaring ke sisi lepas pantai disebut jaring lepas pantai, dan dalam hal ini Kaki Ami (Jaring Penaju) di sisi pantai disebut Isogaki Ami (Jaring Isogaki).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “O: Kinkoami (Jaring pengaman): Jaring yang digunakan untuk sementara waktu dan menjaga ikan tetap hidup bila terlalu banyak yang masuk.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -3140,6 +4615,128 @@
       },
       "ref": {
        "p": 89
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kapal komando pusat disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "``Kapal Onaka’ dan berukuran sangat besar"
+       },
+       {
+        "id": "Kepiting Salju Merah dan Kepiting Salju"
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       },
+       {
+        "id": "kebalikan dari prosedur pelemparan jaring"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kapal komando pusat disebut ``Kapal Onaka’ dan berukuran sangat besar.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kapal-kapal di sisi darat, lepas pantai, yang paling dekat dengan kapal Onaka disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "kapal Wakitsuki"
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       },
+       {
+        "id": "juga leader"
+       },
+       {
+        "id": "\"Tsubonuki”"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kapal-kapal di sisi darat, lepas pantai, yang paling dekat dengan kapal Onaka disebut kapal Wakitsuki.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ketika satu jaring menaik dan satu Kaki Ami (Jaring Penaju) dihubungkan secara seri, dan jika ada dua Kaki Ami (Jaring Penaju), itu disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "mengaitkan ikan tepat di depan"
+       },
+       {
+        "id": "jaring tetap struktur kotak dua tingkat"
+       },
+       {
+        "id": "yang paling melimpah dalam hal tangkapan"
+       },
+       {
+        "id": "\"Kepiting Salju Merah\""
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ketika satu jaring menaik dan satu Kaki Ami (Jaring Penaju) dihubungkan secara seri, dan jika ada dua Kaki Ami (Jaring Penaju), itu disebut jaring tetap struktur kotak dua tingkat.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Operasi ini disebut ＿＿＿.\" Ikan dapat dikumpulkan baik oleh perahu besar maupun perahu kecil.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "\"pengumpulan ikan"
+       },
+       {
+        "id": "kesalahan"
+       },
+       {
+        "id": "\"pan\" sesuai ukuran"
+       },
+       {
+        "id": "\"Tsubonuki”"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Operasi ini disebut \"pengumpulan ikan.\" Ikan dapat dikumpulkan baik oleh perahu besar maupun perahu kecil.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Saat menarik jaring, kapal pengangkut besar diapit oleh kapal-kapal pembantunya baik di sisi lepas pantai maupun sisi darat.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -3534,6 +5131,56 @@
        "p": 96
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sebagian besar hasil tangkapannya adalah ＿＿＿, tetapi juga Bai/Tsubu （ivory shell）, Anago (Conger eel), ikan buntal, belut, dan cumi-cumi yang semuanya merupakan hasil laut bermutu tinggi.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tali penguat"
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       },
+       {
+        "id": "kepiting dan udang"
+       },
+       {
+        "id": "juga Honmaguro"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sebagian besar hasil tangkapannya adalah kepiting dan udang, tetapi juga Bai/Tsubu （ivory shell）, Anago (Conger eel), ikan buntal, belut, dan cumi-cumi yang semuanya merupakan hasil laut bermutu tinggi.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Di antaranya yang utama adalah ＿＿＿, \"Udang merah muda\" dll.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "\"Tsubonuki”"
+       },
+       {
+        "id": "\"Kepiting Salju Merah\""
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       },
+       {
+        "id": "yang paling umum digunakan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Di antaranya yang utama adalah \"Kepiting Salju Merah\", \"Udang merah muda\" dll.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    },
@@ -3656,6 +5303,131 @@
       "ref": {
        "p": 98
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “(6) Penangkapan kepiting salju merah dengan alat tangkap dilarang di daerah yang kedalamannya lebih dari ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1600 m"
+       },
+       {
+        "id": "2400 m"
+       },
+       {
+        "id": "600 m"
+       },
+       {
+        "id": "800 m"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “(6) Penangkapan kepiting salju merah dengan alat tangkap dilarang di daerah yang kedalamannya lebih dari 800 m.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dalam kasus seperti itu, dibutuhkan waktu 4 hingga ＿＿＿ untuk mengangkat dan melempar keramba.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "7 jam"
+       },
+       {
+        "id": "3 jam"
+       },
+       {
+        "id": "5 jam"
+       },
+       {
+        "id": "6 jam"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dalam kasus seperti itu, dibutuhkan waktu 4 hingga 5 jam untuk mengangkat dan melempar keramba.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “4) Jika ada kepiting salju merah yang tertangkap, kepiting betina dan kepiting jantan di bawah ＿＿＿ dilepaskan ke laut karena ada larangan menangkap kepiting tersebut.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "27 cm"
+       },
+       {
+        "id": "18 cm"
+       },
+       {
+        "id": "9 cm"
+       },
+       {
+        "id": "7 cm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “4) Jika ada kepiting salju merah yang tertangkap, kepiting betina dan kepiting jantan di bawah 9 cm dilepaskan ke laut karena ada larangan menangkap kepiting tersebut.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “(4) Untuk melindungi sumber daya, penangkapan kepiting jantan dengan lebar ＿＿＿ atau kurang dilarang, dan untuk semua kepiting betina, dan mereka dilepaskan segera setelah penangkapan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "27 cm"
+       },
+       {
+        "id": "9 cm"
+       },
+       {
+        "id": "7 cm"
+       },
+       {
+        "id": "18 cm"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “(4) Untuk melindungi sumber daya, penangkapan kepiting jantan dengan lebar 9 cm atau kurang dilarang, dan untuk semua kepiting betina, dan mereka dilepaskan segera setelah penangkapan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Panjangnya sekitar 2 hingga ＿＿＿ kedalaman air) dengan bendera (penanda) yang terpasang.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "3 kali"
+       },
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "1 kali"
+       },
+       {
+        "id": "5 kali"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Panjangnya sekitar 2 hingga 3 kali kedalaman air) dengan bendera (penanda) yang terpasang.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    },
@@ -3775,6 +5547,131 @@
       },
       "ref": {
        "p": 102
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “4) Kemudian, perahu dipacu dengan kecepatan penuh, dan ujung tali (tali cabang, sekitar ＿＿＿ panjangnya) yang mengikat tali utama dan jaring keramba diturunkan ke laut.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 m"
+       },
+       {
+        "id": "5 m"
+       },
+       {
+        "id": "3 m"
+       },
+       {
+        "id": "4 m"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “4) Kemudian, perahu dipacu dengan kecepatan penuh, dan ujung tali (tali cabang, sekitar 3 m panjangnya) yang mengikat tali utama dan jaring keramba diturunkan ke laut.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “3) Ikat tali utama, tali lempar sepanjang 25 hingga ＿＿＿, dan pemberat batu di ujung tali air dangkal, dan lemparkan ke dalamnya.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "135 m"
+       },
+       {
+        "id": "34 m"
+       },
+       {
+        "id": "90 m"
+       },
+       {
+        "id": "45 m"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “3) Ikat tali utama, tali lempar sepanjang 25 hingga 45 m, dan pemberat batu di ujung tali air dangkal, dan lemparkan ke dalamnya.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “2) Setelah lokasi ditentukan, bendera (penanda), tali umpan, dan tali air dangkal (2 hingga ＿＿＿ kedalaman air) dipasang dari buritan perahu.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "1 kali"
+       },
+       {
+        "id": "5 kali"
+       },
+       {
+        "id": "3 kali"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “2) Setelah lokasi ditentukan, bendera (penanda), tali umpan, dan tali air dangkal (2 hingga 3 kali kedalaman air) dipasang dari buritan perahu.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Jarak antara setiap keramba adalah 5 hingga ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "8 m"
+       },
+       {
+        "id": "4 m"
+       },
+       {
+        "id": "24 m"
+       },
+       {
+        "id": "6 m"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Jarak antara setiap keramba adalah 5 hingga 8 m.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dalam perikanan keramba udang, udang utara (udang Nanban), udang Toyamaebi (udang Botan), dan udang Morotoge Akaebi (Shimaebi) semuanya ditangkap, tetapi udang utara (Hokkoku Akaebi) adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "yang paling melimpah dalam hal tangkapan"
+       },
+       {
+        "id": "terdapat dek kerja di depan anjungan"
+       },
+       {
+        "id": "yang paling umum digunakan"
+       },
+       {
+        "id": "kebalikan dari prosedur pelemparan jaring"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dalam perikanan keramba udang, udang utara (udang Nanban), udang Toyamaebi (udang Botan), dan udang Morotoge Akaebi (Shimaebi) semuanya ditangkap, tetapi udang utara (Hokkoku Akaebi) adalah yang paling melimpah dalam hal tangkapan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
       }
      }
     ]
@@ -4026,6 +5923,131 @@
        "p": 107
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Agar dapat mengarahkan ikan ke bagian tengah jaring, panjang tiang lampu umumnya 5 hingga ＿＿＿, kira-kira setengah dari jarak antara tiang bambu dengan perahu.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "15 meter"
+       },
+       {
+        "id": "8 meter"
+       },
+       {
+        "id": "11 meter"
+       },
+       {
+        "id": "45 meter"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Agar dapat mengarahkan ikan ke bagian tengah jaring, panjang tiang lampu umumnya 5 hingga 15 meter, kira-kira setengah dari jarak antara tiang bambu dengan perahu.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Oleh karena itu, tiang lampu dijulurkan dengan sudut sekitar 30 hingga ＿＿＿ dari permukaan laut, dengan sisi kapal sebagai titik tumpu.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "135 derajat"
+       },
+       {
+        "id": "90 derajat"
+       },
+       {
+        "id": "34 derajat"
+       },
+       {
+        "id": "45 derajat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Oleh karena itu, tiang lampu dijulurkan dengan sudut sekitar 30 hingga 45 derajat dari permukaan laut, dengan sisi kapal sebagai titik tumpu.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tali-tali jaring depan diikat dengan tali pengangkat (hoisting wire) dengan interval yang teratur (4 sampai ＿＿＿) untuk mengerek jaring.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "5 m"
+       },
+       {
+        "id": "7 m"
+       },
+       {
+        "id": "6 m"
+       },
+       {
+        "id": "3 m"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tali-tali jaring depan diikat dengan tali pengangkat (hoisting wire) dengan interval yang teratur (4 sampai 5 m) untuk mengerek jaring.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sejumlah besar sumber cahaya ini, seperti bola lampu atau elemen bercahaya, dijajarkan dalam dudukan pemancar cahaya (disebut ＿＿＿), yang kemudian ditutup sebagai satu set dengan kap lampu yang dangkal.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "lapisan permukaan"
+       },
+       {
+        "id": "\"Kepiting Salju Merah\""
+       },
+       {
+        "id": "panel atau lampu lili lembah"
+       },
+       {
+        "id": "``Kapal Onaka’ dan berukuran sangat besar"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sejumlah besar sumber cahaya ini, seperti bola lampu atau elemen bercahaya, dijajarkan dalam dudukan pemancar cahaya (disebut panel atau lampu lili lembah), yang kemudian ditutup sebagai satu set dengan kap lampu yang dangkal.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Struktur perahu ini adalah ＿＿＿, dan di bawahnya terdapat palka ikan untuk menyimpan ikan hasil tangkapan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "terdapat dek kerja di depan anjungan"
+       },
+       {
+        "id": "\"Kepiting Salju Merah\""
+       },
+       {
+        "id": "\"pan\" sesuai ukuran"
+       },
+       {
+        "id": "mengaitkan ikan tepat di depan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Struktur perahu ini adalah terdapat dek kerja di depan anjungan, dan di bawahnya terdapat palka ikan untuk menyimpan ikan hasil tangkapan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    },
@@ -4148,6 +6170,125 @@
       "ref": {
        "p": 111
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada siang hari, ikan dewasa berenang dalam kelompok besar di dekat permukaan laut pada kedalaman 10 hingga ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "45 meter"
+       },
+       {
+        "id": "15 meter"
+       },
+       {
+        "id": "8 meter"
+       },
+       {
+        "id": "11 meter"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pada siang hari, ikan dewasa berenang dalam kelompok besar di dekat permukaan laut pada kedalaman 10 hingga 15 meter.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ekologi: Rentang hidup mereka sekitar 1 hingga ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "3 tahun"
+       },
+       {
+        "id": "2 tahun"
+       },
+       {
+        "id": "6 tahun"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ekologi: Rentang hidup mereka sekitar 1 hingga 2 tahun.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Mereka tumbuh hingga panjang tubuh ＿＿＿ 6-7 bulan setelah menetas.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "60 cm"
+       },
+       {
+        "id": "15 cm"
+       },
+       {
+        "id": "20 cm"
+       },
+       {
+        "id": "40 cm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Mereka tumbuh hingga panjang tubuh 20 cm 6-7 bulan setelah menetas.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pemijahan terjadi hampir sepanjang tahun kecuali di musim panas, dan hanya individu yang telah mencapai ukuran tertentu dan menjadi dewasa yang bertelur.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Ketika mereka mencapai usia dewasa, mereka menumpang Arus Oyashio yang panas ke selatan menuju pantai Kyushu di musim gugur untuk bertelur.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Ketika mereka mencapai usia dewasa, mereka menumpang Arus Oyashio yang dingin ke selatan menuju pantai Kyushu di musim gugur untuk bertelur.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -4395,6 +6536,128 @@
       "ref": {
        "p": 119
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pasangkan tali sepanjang 20 hingga ＿＿＿ pada ujung tali utama.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "15 cm"
+       },
+       {
+        "id": "22 cm"
+       },
+       {
+        "id": "30 cm"
+       },
+       {
+        "id": "90 cm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pasangkan tali sepanjang 20 hingga 30 cm pada ujung tali utama.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Panjang senar pancing (fishingline), jika menggunakan kail umpan tiruan, lebih pendek ＿＿＿ dari tongkat pancing.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "120 cm"
+       },
+       {
+        "id": "40 cm"
+       },
+       {
+        "id": "30 cm"
+       },
+       {
+        "id": "80 cm"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Panjang senar pancing (fishingline), jika menggunakan kail umpan tiruan, lebih pendek 40 cm dari tongkat pancing.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tempat penangkapan ikan cakalang adalah ＿＿＿, laut lepas Samudra Pasifik, dan wilayah tropis negara kepulauan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "langkah keselamatan"
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       },
+       {
+        "id": "\"Kepiting Salju Merah\""
+       },
+       {
+        "id": "\"pengumpulan ikan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tempat penangkapan ikan cakalang adalah perairan pesisir Jepang, laut lepas Samudra Pasifik, dan wilayah tropis negara kepulauan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Jenis sasaran utama dalam penangkapan cakalang pancing loneline adalah ＿＿＿, tuna putih tuna sirip kuning, dan tuna mata besar.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "cakalang"
+       },
+       {
+        "id": "kapal Wakitsuki"
+       },
+       {
+        "id": "juga Daruma"
+       },
+       {
+        "id": "juga Kiwada"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Jenis sasaran utama dalam penangkapan cakalang pancing loneline adalah cakalang, tuna putih tuna sirip kuning, dan tuna mata besar.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Semakin dekat ke ujung perahu, semakin panjang tongkat pancing yang digunakan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -4515,6 +6778,56 @@
        "p": 120
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Suhu pendinginan bervariasi tergantung pada kapal penangkap ikan, tetapi umumnya sekitar 0 hingga ＿＿＿ Celsius.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 derajat"
+       },
+       {
+        "id": "3 derajat"
+       },
+       {
+        "id": "2 derajat"
+       },
+       {
+        "id": "6 derajat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Suhu pendinginan bervariasi tergantung pada kapal penangkap ikan, tetapi umumnya sekitar 0 hingga 2 derajat Celsius.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Hal terpenting saat memancing ikan cakalang adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "kapal Wakitsuki"
+       },
+       {
+        "id": "perairan pesisir Jepang"
+       },
+       {
+        "id": "mengaitkan ikan tepat di depan"
+       },
+       {
+        "id": "peta laut yang digunakan untuk navigasi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Hal terpenting saat memancing ikan cakalang adalah mengaitkan ikan tepat di depan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    }
@@ -4765,6 +7078,28 @@
        "p": 124
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Penangkapan malam hari menggunakan cahaya yang disebut dengan fish lamp untuk mengumpulkan cumi-cumi di sekitar kapal, penangkapan dilakukan dengan menggunakan umpan tiruan yang disebut dengan Ikatsuno.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -4883,6 +7218,122 @@
       },
       "ref": {
        "p": 127
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Setelah cumi-cumi disortir, cumi-cumi ditempatkan dalam wadah yang disebut ＿＿＿, dan dibekukan sekatika oleh mesin freezing dalam kapal.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "\"pan\" sesuai ukuran"
+       },
+       {
+        "id": "jenis berongga tengah"
+       },
+       {
+        "id": "benang pemikat"
+       },
+       {
+        "id": "Arus Kuroshio"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Setelah cumi-cumi disortir, cumi-cumi ditempatkan dalam wadah yang disebut \"pan\" sesuai ukuran, dan dibekukan sekatika oleh mesin freezing dalam kapal.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ada juga metode membekukan cumi-cumi hanya bagian batang tubuh setelah mencabut bagian dalam dan lengan yang disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "\"Tsubonuki”"
+       },
+       {
+        "id": "kesalahan"
+       },
+       {
+        "id": "Yorimodoshi"
+       },
+       {
+        "id": "benang pemikat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ada juga metode membekukan cumi-cumi hanya bagian batang tubuh setelah mencabut bagian dalam dan lengan yang disebut \"Tsubonuki”.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Untuk kapal penangkapan cumi-cumi perairan jauh dan perairan sekitar yang hari pelayarannya panjang, cumi-cumi yang ditangkap dibekukan dan disimpan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Selain itu, di antara kapal berukuran besar, ada yang dilengkapi tangki ikan untuk membawa pulang cumi-cumi dalam keadaan hidup.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Selain itu, di antara kapal berukuran kecil, ada yang dilengkapi tangki ikan untuk membawa pulang cumi-cumi dalam keadaan hidup.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Biasanya, saat pertama lampu dinyalakan, paling banyak fish lamp dinyalakan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -5157,6 +7608,125 @@
       "ref": {
        "p": 130
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Mebachi (Tuna mata besar): Ikan muda disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jaring dalam"
+       },
+       {
+        "id": "juga Daruma"
+       },
+       {
+        "id": "arus berlawanan"
+       },
+       {
+        "id": "lapisan permukaan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Mebachi (Tuna mata besar): Ikan muda disebut juga Daruma.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kuromaguro (Tuna sirip biru utara): disebut ＿＿＿, shibi.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "lapisan permukaan"
+       },
+       {
+        "id": "cakalang"
+       },
+       {
+        "id": "juga Honmaguro"
+       },
+       {
+        "id": "langkah keselamatan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kuromaguro (Tuna sirip biru utara): disebut juga Honmaguro, shibi.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kihada (Tuna sirup kuning): disebut ＿＿＿, Kiwadamaguro.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "\"pengumpulan ikan"
+       },
+       {
+        "id": "juga Kiwada"
+       },
+       {
+        "id": "deviasi"
+       },
+       {
+        "id": "radar"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kihada (Tuna sirup kuning): disebut juga Kiwada, Kiwadamaguro.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Ini adalah lampu yang dipasangkan bersama dengan bola pelampung, sehingga posisi tali dapat diketahui saat melakukan penarikan Rawai pada malam hari.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Mebachi (Tuna mata kecil): Ikan muda disebut juga Daruma.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Mebachi (Tuna mata besar): Ikan muda disebut juga Daruma.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -5279,6 +7849,50 @@
       "ref": {
        "p": 133
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Sebuah mesin yang melilitkan semua Tali Utama di gulungan besar tanpa menggunakan kotak tali.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Dengan alat ini umpan dapat dilemparkan ke tempat yang tetap dan Roller penggulun kemungkinan kehabisan umpan lebih banyak g Side roller dibanding melempar secara manual.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Dengan alat ini umpan dapat dilemparkan ke tempat yang tetap dan Roller penggulun kemungkinan kehabisan umpan lebih sedikit g Side roller dibanding melempar secara manual.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -5397,6 +8011,122 @@
       },
       "ref": {
        "p": 134
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tubuh ikan yang telah dibekukan dengan pembekuan cepat selama ＿＿＿ atau lebih dipindahkan ke tempat penyimpanan ikan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "36 jam"
+       },
+       {
+        "id": "9 jam"
+       },
+       {
+        "id": "6 jam"
+       },
+       {
+        "id": "12 jam"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tubuh ikan yang telah dibekukan dengan pembekuan cepat selama 12 jam atau lebih dipindahkan ke tempat penyimpanan ikan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Biasanya pengoperasian tersebut berlangsung selama ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "12 jam"
+       },
+       {
+        "id": "6 jam"
+       },
+       {
+        "id": "9 jam"
+       },
+       {
+        "id": "36 jam"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Biasanya pengoperasian tersebut berlangsung selama 12 jam.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Untuk ikan yang lebih besar dari tangki, seperti Kajiki, menggunakan gayung untuk menyiramkan air secara merata ke seluruh tubuh ikan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tubuh ikan yang sudah diukur beratnya dimasukkan di ruang persiapan pembekuan untuk menghilangkan dingin.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Tubuh ikan yang sudah diukur beratnya dimasukkan di ruang persiapan pembekuan untuk menghilangkan panas.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Agar udara dingin dapat bersirkulasi dengan cukup, badan ikan ditempatkan dengan kasih celah tampa sentuhan satu sama lainnya.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -5649,6 +8379,131 @@
        "p": 139
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “diikat bersama pada panjang tetap (100 hingga ＿＿＿) untuk membentuk mangkuk atau keranjang tunggal.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "200 m"
+       },
+       {
+        "id": "100 m"
+       },
+       {
+        "id": "150 m"
+       },
+       {
+        "id": "600 m"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “diikat bersama pada panjang tetap (100 hingga 200 m) untuk membentuk mangkuk atau keranjang tunggal.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tali yang diikatkan pada tali tempat kail disambungkan ke tali utama disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tali cabang"
+       },
+       {
+        "id": "langkah keselamatan"
+       },
+       {
+        "id": "tora rope"
+       },
+       {
+        "id": "juga Honmaguro"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tali yang diikatkan pada tali tempat kail disambungkan ke tali utama disebut tali cabang.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dalam penangkapan ikan dengan longline dasar, mata kail yang dipasang pada tali utama secara berkala dilengkapi dengan sambungan untuk mengikat tali cabang, ikatan (disebut ＿＿＿) atau pengencang mata kail untuk mengencangkan kaitan tali cabang.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "kesalahan"
+       },
+       {
+        "id": "cakalang"
+       },
+       {
+        "id": "\"tsubo\""
+       },
+       {
+        "id": "tora rope"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dalam penangkapan ikan dengan longline dasar, mata kail yang dipasang pada tali utama secara berkala dilengkapi dengan sambungan untuk mengikat tali cabang, ikatan (disebut \"tsubo\") atau pengencang mata kail untuk mengencangkan kaitan tali cabang.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Peralatan dasar penangkapan ikan dengan longline dasar terdiri atas tali utama, tali cabang (main line, disebut ＿＿＿), tali apung, tiang (tiang bendera), kail pancing, pemberat, dan jangkar.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "deviasi"
+       },
+       {
+        "id": "juga leader"
+       },
+       {
+        "id": "jaring dalam"
+       },
+       {
+        "id": "kapal Wakitsuki"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Peralatan dasar penangkapan ikan dengan longline dasar terdiri atas tali utama, tali cabang (main line, disebut juga leader), tali apung, tiang (tiang bendera), kail pancing, pemberat, dan jangkar.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tali pancing dengan beberapa kail yang diikatkan pada tali utama disebut ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tali cabang"
+       },
+       {
+        "id": "kapal Wakitsuki"
+       },
+       {
+        "id": "lapisan permukaan"
+       },
+       {
+        "id": "\"Tsubonuki”"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tali pancing dengan beberapa kail yang diikatkan pada tali utama disebut tali cabang.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    },
@@ -5769,6 +8624,31 @@
        "p": 143
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Periode waktu ini disebut ＿＿＿.\" Waktunya bervariasi dari sekitar satu jam hingga sekitar satu hari, tergantung pada ikan yang ditargetkan dan wilayah.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "landas kontinen"
+       },
+       {
+        "id": "\"menunggu tali"
+       },
+       {
+        "id": "penting"
+       },
+       {
+        "id": "juga Honmaguro"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Periode waktu ini disebut \"menunggu tali.\" Waktunya bervariasi dari sekitar satu jam hingga sekitar satu hari, tergantung pada ikan yang ditargetkan dan wilayah.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    }

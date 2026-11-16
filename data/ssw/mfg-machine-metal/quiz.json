@@ -243,6 +243,28 @@
        "id": "Benda bulat.",
        "jp": "{丸|まるい}い{物|もの}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pasang benda dan pahat dengan kencang sebelum menyalakan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -617,6 +639,28 @@
        "jp": "{必要|ひつよう}です。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Saat **mengganti atau menyetel cetakan**, hentikan mesin dan **ganjal slide** agar tidak turun.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -751,6 +795,50 @@
        "id": "アーク溶接.",
        "jp": "アーク{溶接|ようせつ}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Sekitar harus bebas **bahan mudah terbakar**; siapkan alat pemadam.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Risiko **sengatan listrik**: kabel utuh, tangan basah.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Risiko **sengatan listrik**: kabel utuh, tangan kering.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }

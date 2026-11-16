@@ -518,6 +518,28 @@
        "jp": "{止|と}めて{知|し}らせます。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**整頓**: tata yang perlu pada tempat tetap agar mudah diambil.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -772,6 +794,50 @@
        "id": "保護めがね.",
        "jp": "{保護|ほご}めがねです。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pakai pelindung diri **sebelum** mulai bekerja, dalam keadaan baik.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Ikat rambut pendek; lepas kalung, cincin, dan jam; kancingkan lengan baju.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Ikat rambut panjang; lepas kalung, cincin, dan jam; kancingkan lengan baju.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -1047,6 +1113,28 @@
        "jp": "{走|はし}ってはいけません。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Jangan menumpuk barang terlalu tinggi dan tidak stabil.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -1181,6 +1269,28 @@
        "jp": "まわりをかたづけます。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Terkena mata atau kulit: **bilas dengan banyak air** dan lapor.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -1313,6 +1423,72 @@
       "exp": {
        "id": "Mudah celaka.",
        "jp": "むりをしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Gejala: pusing, mual, keringat berlebihan atau berhenti, kram, kesadaran menurun.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tidur cukup, sarapan, hindari alkohol sesudah bekerja.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Tidur cukup, sarapan, hindari alkohol sebelum bekerja.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Jika kurang sehat, **jangan memaksakan diri**; kecelakaan mudah terjadi.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
       },
       "mb": true
      }
@@ -1569,6 +1745,28 @@
        "id": "N = Newton.",
        "jp": "Nです。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**限界ゲージ (go/no-go)**: lolos atau tidak, cepat untuk memeriksa.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -1710,6 +1908,131 @@
        "jp": "{表題欄|ひょうだいらん}からです。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Pra pemerahan (strip cup) dilakukan untuk…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Menemukan zat padat dalam susu dan membuang susu awal yang berpotensi terkontaminasi"
+       },
+       {
+        "id": "Menambah volume susu sebelum diperah"
+       },
+       {
+        "id": "Mencuci seluruh tubuh sapi"
+       },
+       {
+        "id": "Memberi pakan konsentrat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Teks hal. Prosedur Memerah Susu: pra pemerahan untuk mengecek zat padat dan membuang perah awal yang tinggi kemungkinan kontaminasi.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Sapi dengan sel somatik tinggi atau radang ambing (mastitis) diperah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Paling awal"
+       },
+       {
+        "id": "Belakangan (paling akhir)"
+       },
+       {
+        "id": "Tidak perlu diperah"
+       },
+       {
+        "id": "Diperah bersama sapi sehat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sapi mastitis/sel somatik tinggi diperah belakangan agar tidak menularkan ke sapi lain.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Tujuan pengelapan ambing adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Memberi pakan pada sapi"
+       },
+       {
+        "id": "Menurunkan suhu rektal"
+       },
+       {
+        "id": "Memberi rangsangan perah susu dan sterilisasi permukaan ambing"
+       },
+       {
+        "id": "Mengukur berat badan sapi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pengelapan ambing = rangsang perah + sterilisasi permukaan ambing.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Dipping berarti…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Mencelupkan ambing ke cairan kimia (disinfektan)"
+       },
+       {
+        "id": "Memotong kuku"
+       },
+       {
+        "id": "Menyemprot air ke lantai"
+       },
+       {
+        "id": "Menimbang susu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Dipping = mencelupkan ke cairan kimia untuk membunuh kuman pada ambing.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada masa panas, suhu rektal sapi sering mencapai lebih dari 39°C. Dampaknya adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Jumlah napas meningkat dan konsumsi pakan menurun"
+       },
+       {
+        "id": "Jumlah napas menurun dan konsumsi pakan naik"
+       },
+       {
+        "id": "Susu bertambah banyak"
+       },
+       {
+        "id": "Tidak ada dampak"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Ventilasi kandang: saat panas, napas meningkat dan konsumsi pakan menurun.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
      }
     ]
    },
@@ -1851,6 +2174,128 @@
        "jp": "{読|よ}みます。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pengukuran dilakukan pada suhu sama dan benda yang sudah dingin.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tidak mendekat ke wadah pakan, banyak menyisakan makanan, atau memisahkan diri dari kelompok menandakan kemungkinan…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Hanya kelebihan nutrisi"
+       },
+       {
+        "id": "Penyakit kuku saja"
+       },
+       {
+        "id": "Penyakit organ pencernaan, penyakit demam, atau penyakit gigi"
+       },
+       {
+        "id": "Sapi sedang estrus"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Inspeksi nafsu makan (hal. 125–127).",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pincang pada sapi dicurigai sebagai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Radang otak"
+       },
+       {
+        "id": "Penyakit kuku"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Perilaku dan penyakit: pincang → penyakit kuku.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Menggosokkan badan ke dinding atau tiang dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kuku"
+       },
+       {
+        "id": "Penyakit metabolisme"
+       },
+       {
+        "id": "Anemia"
+       },
+       {
+        "id": "Penyakit kulit"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Menggosokkan badan ke dinding/tiang → penyakit kulit.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Bulu kasar, bengkak di keempat kaki, bola mata menonjol, dan daya pandang menurun dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Kekurangan vitamin B1"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Kencing batu"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kekurangan vitamin A menimbulkan gejala tersebut.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
      }
     ]
    },
@@ -2246,6 +2691,94 @@
        "jp": "さびます。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**もろさ**: mudah patah tanpa berubah bentuk (getas).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Jangan menyimpan baja di tempat lembap dan kering; **oleskan oli antikarat**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Jangan menyimpan baja di tempat lembap dan basah; **oleskan oli antikarat**.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**耐食性**: ketahanan terhadap karat. **熱伝導率**: kemampuan menghantar panas.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Setelah dipotong atau digerinda, bersihkan serbuk dan kering-basahan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Setelah dipotong atau digerinda, bersihkan serbuk dan basah-basahan.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -2387,6 +2920,116 @@
        "id": "プレス.",
        "jp": "プレス{加工|かこう}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**熱処理 (perlakuan panas)**: mengubah sifat dengan pemanasan dan pendinginan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**溶接 (pengelasan)**: menyambung logam dengan dingin.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**溶接 (pengelasan)**: menyambung logam dengan panas.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**鍛造 (penempaan)**: memukul atau menekan logam panas.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**焼入れ**: pemanasan lalu pendinginan lambat; membuat keras.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**焼入れ**: pemanasan lalu pendinginan cepat; membuat keras.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**焼なまし**: pemanasan lalu pendinginan lambat; membuat lunak.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -2521,6 +3164,50 @@
        "id": "Kurangi gesekan.",
        "jp": "こすれる{力|ちから}を{小|ちい}さくします。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Serpihan panas dan tajam: **jangan dengan tangan kosong**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pahat **tumpul** membuat permukaan kasar dan gaya kecil; **cek dan ganti pada waktunya**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Pahat **tumpul** membuat permukaan kasar dan gaya besar; **cek dan ganti pada waktunya**.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -2768,6 +3455,28 @@
        "id": "報告.",
        "jp": "{報告|ほうこく}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Terlambat atau tidak bisa masuk kerja (hubungi **sebelum** jam kerja).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },

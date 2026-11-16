@@ -1658,6 +1658,28 @@
       "ref": {
        "p": 7
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Suhu rendah memicu bunga pada **lobak, kol, brokoli**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -1823,6 +1845,50 @@
       "ref": {
        "p": 11
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Keunggulan: bibit terlindung dari cuaca/hama, sehat dan seragam, **masa di lahan lebih pendek**, efisien di lahan sempit.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Fotoblastik positif**: sulit bertunas bila kena cahaya → tutup tanah **tipis**. **Fotoblastik negatif** → tutup tanah **tebal**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Fotoblastik positif**: mudah bertunas bila kena cahaya → tutup tanah **tipis**. **Fotoblastik negatif** → tutup tanah **tebal**.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -1936,6 +2002,28 @@
       "ref": {
        "p": 15
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Dari atas**: selang, gembor, sprinkler, tube. **Di pangkal tanaman**: tube tetes — **menghemat air**. **Di alur**: mengalirkan air, **butuh air banyak**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -2075,6 +2163,94 @@
       "ref": {
        "p": 17
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Andosol**: abu gunung berapi, banyak humus, hitam; separuh ladang Jepang.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Lahan tinggi coklat**: tanggul alam, untuk ladang.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Lahan rendah coklat**: tanggul alam, untuk ladang.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Lahan rendah abu-abu**: pembuangan air baik, untuk sawah.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Cara sederhana: kepal tanah — tidak mengeras (pasir/lempung berpasir), banyak mengeras tetapi merekah (geluh/geluh lempung), mengeras (lempung).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Cara sederhana: kepal tanah — tidak mengeras (pasir/lempung berpasir), sedikit mengeras tetapi merekah (geluh/geluh lempung), mengeras (lempung).”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -2239,6 +2415,31 @@
       },
       "ref": {
        "p": 21
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Alat ukur: pengukur keasaman tusuk (siram tanah sampai lembab, tusukkan elektroda sampai rapat, tunggu ± ＿＿＿), kolorimeter, digital.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 menit"
+       },
+       {
+        "id": "2 menit"
+       },
+       {
+        "id": "4 menit"
+       },
+       {
+        "id": "6 menit"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Alat ukur: pengukur keasaman tusuk (siram tanah sampai lembab, tusukkan elektroda sampai rapat, tunggu ± 1 menit), kolorimeter, digital.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
       }
      }
     ]
@@ -2405,6 +2606,31 @@
       "ref": {
        "p": 25
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Menurut kecepatan: **bekerja cepat** (efek hingga ＿＿＿), **lepas lambat** (30–120 hari), **bekerja lambat** (diurai mikroba, bisa setahun).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "90 hari"
+       },
+       {
+        "id": "22 hari"
+       },
+       {
+        "id": "30 hari"
+       },
+       {
+        "id": "15 hari"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Menurut kecepatan: **bekerja cepat** (efek hingga 30 hari), **lepas lambat** (30–120 hari), **bekerja lambat** (diurai mikroba, bisa setahun).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    },
@@ -2570,6 +2796,28 @@
       "ref": {
        "p": 30
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Istilah: lebar bedengan, tinggi bedengan, alur, lebar media.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -2735,6 +2983,50 @@
       "ref": {
        "p": 34
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Cegah benih gulma terbawa; **cabut sebelum menghasilkan benih**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Prinsip: ciptakan lingkungan mudah timbul hama; temukan dini dan kendalikan segera.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Prinsip: ciptakan lingkungan sulit timbul hama; temukan dini dan kendalikan segera.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -3643,6 +3935,50 @@
       "ref": {
        "p": 36
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Pemeriksaan harian** dilakukan sebelum, selama, dan setelah pengoperasian.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Orang lelah kurang teliti sehingga sulit celaka: **istirahat** di sela pekerjaan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Orang lelah kurang teliti sehingga mudah celaka: **istirahat** di sela pekerjaan.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -3782,6 +4118,28 @@
       "ref": {
        "p": 39
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Dilarang** sarung tangan kain (gunte) karena bisa basah.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -3895,6 +4253,78 @@
       "ref": {
        "p": 41
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bensin disimpan di wadah **logam**, **dilarang** di tangki polietilen minyak tanah (＿＿＿).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "15 liter"
+       },
+       {
+        "id": "40 liter"
+       },
+       {
+        "id": "20 liter"
+       },
+       {
+        "id": "60 liter"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Bensin disimpan di wadah **logam**, **dilarang** di tangki polietilen minyak tanah (20 liter).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Minyak ringan boleh di wadah plastik maksimum **＿＿＿**.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "15 liter"
+       },
+       {
+        "id": "22 liter"
+       },
+       {
+        "id": "30 liter"
+       },
+       {
+        "id": "90 liter"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Minyak ringan boleh di wadah plastik maksimum **30 liter**.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Menyentuh panel/kabel dengan tangan telanjang berbahaya; menyentuh steker dengan **tangan basah** bisa menyebabkan sengatan listrik.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -3982,6 +4412,28 @@
       "ref": {
        "p": 42
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Periksa sebelum dipakai dan rawat setelah dipakai.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -4786,6 +5238,31 @@
       "ref": {
        "p": 46
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Wadah bibit 60 × 30 × ＿＿＿ diisi tanah (media) berpupuk, disiram, benih ditanam, lalu ditutup tanah.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "3 cm"
+       },
+       {
+        "id": "4 cm"
+       },
+       {
+        "id": "5 cm"
+       },
+       {
+        "id": "1 cm"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Wadah bibit 60 × 30 × 3 cm diisi tanah (media) berpupuk, disiram, benih ditanam, lalu ditutup tanah.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
      }
     ]
    },
@@ -4899,6 +5376,53 @@
       "ref": {
        "p": 47
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Transplanter menanam **2–8 baris**, jarak antar baris **＿＿＿**, jarak antar rumpun diatur sekitar **10–30 cm**.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "30 cm"
+       },
+       {
+        "id": "90 cm"
+       },
+       {
+        "id": "15 cm"
+       },
+       {
+        "id": "22 cm"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Transplanter menanam **2–8 baris**, jarak antar baris **30 cm**, jarak antar rumpun diatur sekitar **10–30 cm**.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pupuk disebar sebelum pelumpuran; ada juga **pemupukan bersamaan tanam**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -5012,6 +5536,103 @@
       "ref": {
        "p": 50
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sekitar ＿＿＿ kemudian malai keluar; **30–60 hari** setelah keluar malai masuk masa panen.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "22 hari"
+       },
+       {
+        "id": "15 hari"
+       },
+       {
+        "id": "30 hari"
+       },
+       {
+        "id": "90 hari"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sekitar 30 hari kemudian malai keluar; **30–60 hari** setelah keluar malai masuk masa panen.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Digiling untuk membuang kulit → **beras coklat**; disortir buang beras cacat; dikirim dalam kantong beras atau flexible container ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "90 kg"
+       },
+       {
+        "id": "15 kg"
+       },
+       {
+        "id": "30 kg"
+       },
+       {
+        "id": "22 kg"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Digiling untuk membuang kulit → **beras coklat**; disortir buang beras cacat; dikirim dalam kantong beras atau flexible container 30 kg.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “**Penanaman jarak lebar**: jarak antar rumpun 15 → ＿＿＿, kotak bibit berkurang ≥ 40%.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "14 cm"
+       },
+       {
+        "id": "84 cm"
+       },
+       {
+        "id": "28 cm"
+       },
+       {
+        "id": "21 cm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “**Penanaman jarak lebar**: jarak antar rumpun 15 → 28 cm, kotak bibit berkurang ≥ 40%.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Ada pada sawah berair (benih berlapis kalsium peroksida/besi) dan sawah kering.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -5868,6 +6489,100 @@
       "ref": {
        "p": 55
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “**Tomat**: tanam pindah, **penyetekan** (pemangkasan tunas samping), pemangkasan tunas ujung dan buah. **Timun**: dipanen saat buah ±＿＿＿. **Terong**: perlu tiang penopang, pemangkasan, pengikatan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "15 cm"
+       },
+       {
+        "id": "60 cm"
+       },
+       {
+        "id": "40 cm"
+       },
+       {
+        "id": "20 cm"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “**Tomat**: tanam pindah, **penyetekan** (pemangkasan tunas samping), pemangkasan tunas ujung dan buah. **Timun**: dipanen saat buah ±20 cm. **Terong**: perlu tiang penopang, pemangkasan, pengikatan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “**Bayam**: dapat dipanen 1,5–2 bulan setelah semai (tinggi daun ±＿＿＿); umumnya semai langsung; suhu tinggi memicu diferensiasi pucuk bunga.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "25 cm"
+       },
+       {
+        "id": "75 cm"
+       },
+       {
+        "id": "50 cm"
+       },
+       {
+        "id": "19 cm"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “**Bayam**: dapat dipanen 1,5–2 bulan setelah semai (tinggi daun ±25 cm); umumnya semai langsung; suhu tinggi memicu diferensiasi pucuk bunga.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Lobak**: semai langsung; suhu rendah terus-menerus memicu diferensiasi pucuk bunga.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Kentang**: ditanam dari bibit umbi. **Ubi jalar**: tumbuh di tanah miskin pupuk; pupuk berlebih membuat daun dan batang kecil, akar tidak.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Kentang**: ditanam dari bibit umbi. **Ubi jalar**: tumbuh di tanah miskin pupuk; pupuk berlebih membuat daun dan batang besar, akar tidak.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -5955,6 +6670,28 @@
       "ref": {
        "p": 58
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Makin kuat cahaya, fotosintesis makin aktif, tetapi ada **titik saturasi cahaya** (di atasnya tidak naik lagi).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -7106,6 +7843,50 @@
       "ref": {
        "p": 62
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Krisan**: abadi, pembibitan **setek**; krisan musim gugur tanaman hari pendek → diterangi lampu malam untuk menunda mekar.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Stroberi** (Rosaceae): bangku rendah; reproduksi vegetatif lewat **geragih** (stolon); pembibitan mempercepat diferensiasi pucuk bunga → **budidaya dipercepat**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Stroberi** (Rosaceae): bangku tinggi; reproduksi vegetatif lewat **geragih** (stolon); pembibitan mempercepat diferensiasi pucuk bunga → **budidaya dipercepat**.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -7219,6 +8000,94 @@
       "ref": {
        "p": 65
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Dipakai sebagai gorden penahan panas; **Kain saringan (kanreisha)** menghalangi cahaya tetapi berventilasi.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tipe **tunggal** (kuat terhadap angin dan salju, ventilasi baik) dan tipe **rangkaian** (efisiensi pemanas lebih baik, ruang luas, tetapi sinar di bagian sambungan bertambah).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Tipe **tunggal** (kuat terhadap angin dan salju, ventilasi baik) dan tipe **rangkaian** (efisiensi pemanas lebih baik, ruang luas, tetapi sinar di bagian sambungan berkurang).”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Bentuk atap: dua sisi, bulat, dan tipe besar Belanda.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Membran plastik lunak** transparan (lebih tipis daripada penutup luar); polietilen kurang baik menahan dingin.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Membran plastik lunak** transparan (lebih tipis daripada penutup luar); polietilen kurang baik menahan panas.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -7332,6 +8201,72 @@
       "ref": {
        "p": 67
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Siang hari suhu naik, perlu **ventilasi**: **alami** (buka jendela/penutup; dipengaruhi cuaca) dan **paksa** (kipas; butuh listrik).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Suhu dan kelembapan rendah memudahkan hama: pakai **penyemprot berjalan sendiri**, atau **penerangan anti serangga** (lampu kuning) tanpa pestisida kimia.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Suhu dan kelembapan tinggi memudahkan hama: pakai **penyemprot berjalan sendiri**, atau **penerangan anti serangga** (lampu kuning) tanpa pestisida kimia.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Metode **udara hangat** (banyak dipakai) dan **air hangat**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -7445,6 +8380,28 @@
       "ref": {
        "p": 68
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Atur suhu sesuai jenis tanaman: siang **ventilasi** (kadang pendingin di musim panas); pagi dan malam **pemanas**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -7558,6 +8515,94 @@
       "ref": {
        "p": 73
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Tanah persemaian** (hangat dengan kawat listrik, atau dingin), **kotak pembibitan**, **polypot**, **paperpot** (terurai di tanah), **pembibitan pembentukan sel** (wadah sel).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Bibit tidak sehat: tumbuh terlalu pendek, ada bekas penyakit/hama, antar daun kuning, daun terlepas, menua.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Bibit tidak sehat: tumbuh terlalu panjang, ada bekas penyakit/hama, antar daun kuning, daun terlepas, menua.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Okulasi**: batang bawah kuat terhadap penyakit/hama + batang atas unggul; untuk terong, timun, tomat, semangka; bibit kuat dan hasil banyak.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Keunggulan: penyakit tanah jarang, tanpa pengolahan tanah/penyiraman/penyiangan, pupuk tidak terbuang, tanpa gagal tanam berulang, sulit otomatis.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Keunggulan: penyakit tanah jarang, tanpa pengolahan tanah/penyiraman/penyiangan, pupuk tidak terbuang, tanpa gagal tanam berulang, mudah otomatis.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -8856,6 +9901,72 @@
       "ref": {
        "p": 75
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Umumnya pucuk bunga terbentuk **tahun sebelum** berbunga.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Buah membesar: jumlah sel berkurang dulu, lalu ukuran sel; gula menumpuk, buah melunak saat matang.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Buah membesar: jumlah sel bertambah dulu, lalu ukuran sel; gula menumpuk, buah melunak saat matang.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Pohon buah peluruh** (daun gugur di musim dingin): apel, anggur, pir, persik, kesemek, kastanye.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -8969,6 +10080,50 @@
       "ref": {
        "p": 78
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tujuan: memperbanyak varietas sama; mempercepat mulai berbuah; memperbarui varietas cepat (**sambung atas**); mengurangi kerusakan penyakit dengan batang bawah tahan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Bibit baik: akar halus pendek, tidak terserang penyakit/hama.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Bibit baik: akar halus panjang, tidak terserang penyakit/hama.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -9082,6 +10237,50 @@
       "ref": {
        "p": 81
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tujuan: pohon berbunga baik, panen stabil, kerja mudah.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Pemangkasan di tengah ranting**: potong ranting pendek agar tumbuh ranting baru. **Pemangkasan penjarangan**: buang ranting tidak perlu agar udara dan sinar masuk.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Pemangkasan di tengah ranting**: potong ranting panjang agar tumbuh ranting baru. **Pemangkasan penjarangan**: buang ranting tidak perlu agar udara dan sinar masuk.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -9195,6 +10394,28 @@
       "ref": {
        "p": 88
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Jeruk unshiu: potong **dua kali** agar tangkai tidak panjang; jangan menarik buah.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -9308,6 +10529,50 @@
       "ref": {
        "p": 91
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Bencana: angin kencang, dingin, hujan deras, kekeringan, salju lebat, hujan batu.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Tanah Jepang sedikit **asam**; sesuaikan **pH** dengan **kapur (alkali)**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Tanah Jepang banyak **asam**; sesuaikan **pH** dengan **kapur (alkali)**.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -9447,6 +10712,53 @@
       "ref": {
        "p": 93
       }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “**Anggur**: Kyoho 35%, Delaware 19%, Pione 16%; metode rak; tanpa biji dengan **giberelin ＿＿＿** (sebelum dan sesudah mekar).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "2 kali"
+       },
+       {
+        "id": "6 kali"
+       },
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "3 kali"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “**Anggur**: Kyoho 35%, Delaware 19%, Pione 16%; metode rak; tanpa biji dengan **giberelin 2 kali** (sebelum dan sesudah mekar).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Perbedaan suhu dalam-luar besar sehingga perlu pengelolaan dan **kontrol air**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -9560,6 +10872,50 @@
       "ref": {
        "p": 94
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Mencegah kulit mengapung, membuat **buah tanpa biji**, mencegah **buah jatuh sebelum panen**, **mempercepat kematangan**, mendorong terbentuknya akar dan ranting (apel dll.).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Speed Sprayer (SS)** pengendalian hama; **monorel** dan **kereta pengangkut** untuk pengangkutan; mesin untuk pekerjaan di tempat rendah; alat pemangkas, tangga.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Speed Sprayer (SS)** pengendalian hama; **monorel** dan **kereta pengangkut** untuk pengangkutan; mesin untuk pekerjaan di tempat tinggi; alat pemangkas, tangga.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    }
@@ -10390,6 +11746,50 @@
       "ref": {
        "p": 97
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Pembentukan bedengan (畝立て)**: menumpuk tanah lebih tinggi untuk tempat tanam.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Rusak kekeringan** (hujan tidak naik), **rusak genangan** (hujan deras).”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “**Rusak kekeringan** (hujan tidak turun), **rusak genangan** (hujan deras).”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },
@@ -10529,6 +11929,28 @@
       "ref": {
        "p": 98
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “**Penanaman bergilir (輪作)**; **dampak negatif penanaman berurutan (連作障害)**; **kerusakan akibat dingin (冷害)**.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
      }
     ]
    },

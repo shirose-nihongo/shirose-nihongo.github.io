@@ -2,6 +2,975 @@
  "bab": {
   "bab1": [
    {
+    "id": "b1s1-q",
+    "sub": "b1s1",
+    "title": {
+     "id": "Subbab Peternakan Sapi Perah",
+     "jp": "{酪農|らくのう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Peternakan Sapi Perah”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun."
+       },
+       {
+        "id": "Pada dasarnya sama dengan “Pengelolaan Fasilitas” pada III."
+       },
+       {
+        "id": "Anak ayam baru menetas badannya kecil dan suhu badannya rendah, juga kekuatan untuk beradaptasi dengan suhu lingkungannya masih lemah, sehingga harus diberi suplai suhu."
+       },
+       {
+        "id": "Kuda yang dilahirkan dari inseminasi buatan tidak dapat digunakan pada pacuan kuda."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tabel di bawah menunjukkan kondisi sapi perah pada lingkungan dengan suhu 18, 26, dan ＿＿＿ Celsius.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "90 derajat"
+       },
+       {
+        "id": "22 derajat"
+       },
+       {
+        "id": "15 derajat"
+       },
+       {
+        "id": "30 derajat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Tabel di bawah menunjukkan kondisi sapi perah pada lingkungan dengan suhu 18, 26, dan 30 derajat Celsius.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Masa kehamilan sapi perah adalah ＿＿＿ (9,3 bulan).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "840 hari"
+       },
+       {
+        "id": "280 hari"
+       },
+       {
+        "id": "140 hari"
+       },
+       {
+        "id": "210 hari"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Masa kehamilan sapi perah adalah 280 hari (9,3 bulan).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Nilai rata-rata volume yang dihasilkan sapi perah yang pernah melahirkan selama ＿＿＿ di dalam negeri Jepang semakin meningkat.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 tahun"
+       },
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "2 tahun"
+       },
+       {
+        "id": "6 tahun"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Nilai rata-rata volume yang dihasilkan sapi perah yang pernah melahirkan selama 1 tahun di dalam negeri Jepang semakin meningkat.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Setelah melahirkan pedet, sapi betina dapat diperah susunya selama sekitar ＿＿＿, namun selama waktu tersebut, untuk melahirkan sejak kehamilan berikutnya dapat dilakukan inseminasi buatan selama masa pemerahan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "1 tahun"
+       },
+       {
+        "id": "2 tahun"
+       },
+       {
+        "id": "6 tahun"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Setelah melahirkan pedet, sapi betina dapat diperah susunya selama sekitar 1 tahun, namun selama waktu tersebut, untuk melahirkan sejak kehamilan berikutnya dapat dilakukan inseminasi buatan selama masa pemerahan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sereal unsur utama dalam pakan campuran adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tipe besar"
+       },
+       {
+        "id": "inseminasi buatan"
+       },
+       {
+        "id": "babi pejantan"
+       },
+       {
+        "id": "jagung impor"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sereal unsur utama dalam pakan campuran adalah jagung impor.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Periode ditambahkannya masa hamil pada jumlah hari kosong adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jarak waktu melahirkan"
+       },
+       {
+        "id": "inseminasi buatan"
+       },
+       {
+        "id": "Standar Pemeliharaan Jepang"
+       },
+       {
+        "id": "perlu agar fasilitas tidak rusak"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Periode ditambahkannya masa hamil pada jumlah hari kosong adalah jarak waktu melahirkan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk itu, penjagaan dan pengelolaan struktur kandang, fasilitas pendingin seperti kipas angin atau sprinkler, penanaman pohon di sekitar kandang, dan juga pengelolaan nutrisi ternak adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "babi pejantan"
+       },
+       {
+        "id": "bulan April hingga Juni"
+       },
+       {
+        "id": "hal yang penting"
+       },
+       {
+        "id": "blasteran"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Untuk itu, penjagaan dan pengelolaan struktur kandang, fasilitas pendingin seperti kipas angin atau sprinkler, penanaman pohon di sekitar kandang, dan juga pengelolaan nutrisi ternak adalah hal yang penting.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "sub": "b1s2",
+    "title": {
+     "id": "Subbab Produksi Daging Sapi (Sapi Pedaging)",
+     "jp": "{肉用牛|にくようぎゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Peternak menargetkan kelahiran 1 pedet setiap ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "6 tahun"
+       },
+       {
+        "id": "1 tahun"
+       },
+       {
+        "id": "2 tahun"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Peternak menargetkan kelahiran 1 pedet setiap 1 tahun.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Wagyu betina untuk diperkembangbiakkan dipelihara, kemudian akan dikirimkan ke pasar ternak sebagai sapi bakalan pada sekitar ＿＿＿ setelah melahirkan pedet.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "10 bulan"
+       },
+       {
+        "id": "5 bulan"
+       },
+       {
+        "id": "8 bulan"
+       },
+       {
+        "id": "30 bulan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Wagyu betina untuk diperkembangbiakkan dipelihara, kemudian akan dikirimkan ke pasar ternak sebagai sapi bakalan pada sekitar 10 bulan setelah melahirkan pedet.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pada proporsi volume pemberian pakan kasar dan pakan konsentrat, maka proporsi pakan campuran pada sapi bakalan akan lebih tinggi.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pedet sulit terkena radang paru-paru atau diare, sehingga penting untuk melakukan observasi, perawatan, dan juga pengobatan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Pedet mudah terkena radang paru-paru atau diare, sehingga penting untuk melakukan observasi, perawatan, dan juga pengobatan.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s3-q",
+    "sub": "b1s3",
+    "title": {
+     "id": "Subbab Peternakan Babi",
+     "jp": "{養豚|ようとん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Peternakan Babi”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "(1) Pada tahun 2010 di Jepang muncul penyakit mulut dan kuku, sehingga banyak babi dan sapi yang dimusnahkan."
+       },
+       {
+        "id": "Varietas (spesies ayam) representatif paling umum pada jenis petelur yang dipelihara di Jepang adalah varietas Single Comb White Leghorn (negara asal Italia)."
+       },
+       {
+        "id": "Kuda yang dilahirkan dari inseminasi buatan tidak dapat digunakan pada pacuan kuda."
+       },
+       {
+        "id": "Babi adalah binatang yang dikembangkan untuk meningkatkan kemampuan menghasilkan daging, setelah manusia terbiasa memelihara babi hutan."
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Inti subbab: Babi adalah binatang yang dikembangkan untuk meningkatkan kemampuan menghasilkan daging, setelah manusia terbiasa memelihara babi hutan.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Periode sejak bobot sekitar ＿＿＿ hingga pengiriman, disebut masa penggemukan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "90 kg"
+       },
+       {
+        "id": "15 kg"
+       },
+       {
+        "id": "30 kg"
+       },
+       {
+        "id": "22 kg"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Periode sejak bobot sekitar 30 kg hingga pengiriman, disebut masa penggemukan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Babi pejantan akan matang secara seksual pada sekitar umur ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 bulan"
+       },
+       {
+        "id": "21 bulan"
+       },
+       {
+        "id": "5 bulan"
+       },
+       {
+        "id": "7 bulan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Babi pejantan akan matang secara seksual pada sekitar umur 7 bulan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Jumlah pakan yang diperlukan untuk penambahan bobot ＿＿＿ disebut dengan “rasio kebutuhan pakan”.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "2 kg"
+       },
+       {
+        "id": "6 kg"
+       },
+       {
+        "id": "1 kg"
+       },
+       {
+        "id": "4 kg"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Jumlah pakan yang diperlukan untuk penambahan bobot 1 kg disebut dengan “rasio kebutuhan pakan”.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Induk babi adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "penting untuk memberitahu kepada pengelola"
+       },
+       {
+        "id": "perlu agar fasilitas tidak rusak"
+       },
+       {
+        "id": "standar pemeliharaan Jepang"
+       },
+       {
+        "id": "induk dari babi bakalan tersebut"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Induk babi adalah induk dari babi bakalan tersebut.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Varietas babi paling utama yang diberi pakan di Jepang adalah ＿＿＿, Large Yorkshire, dan Duroc.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Landracer"
+       },
+       {
+        "id": "yang penting"
+       },
+       {
+        "id": "bersifat genetis"
+       },
+       {
+        "id": "penggemukan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Varietas babi paling utama yang diberi pakan di Jepang adalah Landracer, Large Yorkshire, dan Duroc.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kompos merupakan benda yang sebagian besarnya adalah ＿＿＿, yang di dalam kotoran terutama mikroorganisme aerobik akan berkembang biak dengan menguraikan zat organik septik.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "yang penting"
+       },
+       {
+        "id": "ideal"
+       },
+       {
+        "id": "urolithiasis"
+       },
+       {
+        "id": "mikroba"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kompos merupakan benda yang sebagian besarnya adalah mikroba, yang di dalam kotoran terutama mikroorganisme aerobik akan berkembang biak dengan menguraikan zat organik septik.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Babi jantan yang mengawini induk babi adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "babi pejantan"
+       },
+       {
+        "id": "rumen acidosis"
+       },
+       {
+        "id": "yang berbentuk normal"
+       },
+       {
+        "id": "lambung pertama"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Babi jantan yang mengawini induk babi adalah babi pejantan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dengan kata lain, kebanyakan babi bakalan di Jepang adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "silase rumput"
+       },
+       {
+        "id": "lambung pertama"
+       },
+       {
+        "id": "sangat cepat"
+       },
+       {
+        "id": "blasteran"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dengan kata lain, kebanyakan babi bakalan di Jepang adalah blasteran.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s4-q",
+    "sub": "b1s4",
+    "title": {
+     "id": "Subbab Peternakan Ayam",
+     "jp": "{養鶏|ようけい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Peternakan Ayam”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Varietas (spesies ayam) representatif paling umum pada jenis petelur yang dipelihara di Jepang adalah varietas Single Comb White Leghorn (negara asal Italia)."
+       },
+       {
+        "id": "Babi adalah binatang yang dikembangkan untuk meningkatkan kemampuan menghasilkan daging, setelah manusia terbiasa memelihara babi hutan."
+       },
+       {
+        "id": "Siklus estrus betina adalah 21 hari, dan akan terjadi pengulangan fase awal estrus, fase estrus, fase akhir estrus, serta periode jeda estrus dimana gejala estrus tidak terlihat."
+       },
+       {
+        "id": "Ambing induk babi terdiri dari dua baris kiri-kanan, dengan lebih dari 12 ambing."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Varietas (spesies ayam) representatif paling umum pada jenis petelur yang dipelihara di Jepang adalah varietas Single Comb White Leghorn (negara asal Italia).",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bila dipelihara dengan baik, maka ayam akan hidup selama 5 hingga ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "8 tahun"
+       },
+       {
+        "id": "11 tahun"
+       },
+       {
+        "id": "45 tahun"
+       },
+       {
+        "id": "15 tahun"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Bila dipelihara dengan baik, maka ayam akan hidup selama 5 hingga 15 tahun.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Anak ayam betina akan menjadi ayam dewasa sekitar ＿＿＿, dan akan mulai bertelur.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "450 hari"
+       },
+       {
+        "id": "112 hari"
+       },
+       {
+        "id": "150 hari"
+       },
+       {
+        "id": "75 hari"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Anak ayam betina akan menjadi ayam dewasa sekitar 150 hari, dan akan mulai bertelur.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kemudian ＿＿＿ setelah menetas, maka ayam akan paling banyak bertelur (puncak bertelur).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "158 hari"
+       },
+       {
+        "id": "210 hari"
+       },
+       {
+        "id": "630 hari"
+       },
+       {
+        "id": "420 hari"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kemudian 210 hari setelah menetas, maka ayam akan paling banyak bertelur (puncak bertelur).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk jidori diperlukan masa pemeliharaan lebih dari ＿＿＿, dan untuk memberikan rasa gurih (umami) atau renyah, maka kebanyakan dikirimkan setelah diperlihara selama 4-5 bulan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "160 hari"
+       },
+       {
+        "id": "240 hari"
+       },
+       {
+        "id": "80 hari"
+       },
+       {
+        "id": "60 hari"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Untuk jidori diperlukan masa pemeliharaan lebih dari 80 hari, dan untuk memberikan rasa gurih (umami) atau renyah, maka kebanyakan dikirimkan setelah diperlihara selama 4-5 bulan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sebagai ayam petelur bertelur warna putih, yang dipelihara secara luas adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "periodesitas bertelur"
+       },
+       {
+        "id": "pemberian umpan otomatis dari hopper"
+       },
+       {
+        "id": "binatang yang memiliki sifat berkerumun"
+       },
+       {
+        "id": "White Leghorn ini atau jenis hibridanya"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sebagai ayam petelur bertelur warna putih, yang dipelihara secara luas adalah White Leghorn ini atau jenis hibridanya.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Hampir semua material dasar seperti jagung, mylo, dedak kedelai adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "tinggi daripada sapi atau babi"
+       },
+       {
+        "id": "lambung pertama"
+       },
+       {
+        "id": "produk jadi dari kotoran sapi perah"
+       },
+       {
+        "id": "diimpor dari luar negeri"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Hampir semua material dasar seperti jagung, mylo, dedak kedelai adalah diimpor dari luar negeri.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kemudian, bila menemukan bangkai burung liar atau lainnya di dekat kandang ayam, adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "penting untuk memberitahu kepada pengelola"
+       },
+       {
+        "id": "juga dengan makan bebas"
+       },
+       {
+        "id": "bulan April hingga Juni"
+       },
+       {
+        "id": "pakan ternak campuran"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kemudian, bila menemukan bangkai burung liar atau lainnya di dekat kandang ayam, adalah penting untuk memberitahu kepada pengelola.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kebanyakan manajemen perusahaan adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "perusahaan privat atau perusahaan keluarga"
+       },
+       {
+        "id": "lebih baik daripada kandang terbuka"
+       },
+       {
+        "id": "jarak waktu melahirkan"
+       },
+       {
+        "id": "urin yang telah dipisahkan dengan kotoran"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kebanyakan manajemen perusahaan adalah perusahaan privat atau perusahaan keluarga.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s5-q",
+    "sub": "b1s5",
+    "title": {
+     "id": "Subbab Kuda Tipe Ringan dan Peternakan Lebah",
+     "jp": "{軽種馬|けいしゅば}・{養蜂|ようほう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Kuda Tipe Ringan dan Peternakan Lebah”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Pada dasarnya sama dengan “Pengelolaan Fasilitas” pada III."
+       },
+       {
+        "id": "Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun."
+       },
+       {
+        "id": "Kuda yang dilahirkan dari inseminasi buatan tidak dapat digunakan pada pacuan kuda."
+       },
+       {
+        "id": "Sapi perah adalah binatang yang memiliki kewaspadaan yang tinggi, dan syarafnya juga tajam, sehingga penting bagi manusia untuk melakukan kontak dengan sikap yang halus."
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Inti subbab: Kuda yang dilahirkan dari inseminasi buatan tidak dapat digunakan pada pacuan kuda.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sejak sekitar musim gugur di umur ＿＿＿, akan dimulai latihan (latihan berkuda) untuk membiasakan ditunggangi orang dengan memasangkan peralatan sadel dan kendali kuda (bit, besi gigit).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 tahun"
+       },
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "6 tahun"
+       },
+       {
+        "id": "2 tahun"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sejak sekitar musim gugur di umur 1 tahun, akan dimulai latihan (latihan berkuda) untuk membiasakan ditunggangi orang dengan memasangkan peralatan sadel dan kendali kuda (bit, besi gigit).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Selama masih larva, pada paruh pertama diberikan royal jelly, namun pada paruh kedua diberikan serbuk sari dan madu, dan akan menjadi dewasa dalam sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "63 hari"
+       },
+       {
+        "id": "42 hari"
+       },
+       {
+        "id": "16 hari"
+       },
+       {
+        "id": "21 hari"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Selama masih larva, pada paruh pertama diberikan royal jelly, namun pada paruh kedua diberikan serbuk sari dan madu, dan akan menjadi dewasa dalam sekitar 21 hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kuda yang sudah cukup berlatih dan berumur ＿＿＿ akan dipindahkan ke pacuan kuda atau training center, didaftarkan sebagai kuda pacu, dan akan dilatih lebih lagi menjelang mulai berpacu.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "3 tahun"
+       },
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "2 tahun"
+       },
+       {
+        "id": "6 tahun"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kuda yang sudah cukup berlatih dan berumur 2 tahun akan dipindahkan ke pacuan kuda atau training center, didaftarkan sebagai kuda pacu, dan akan dilatih lebih lagi menjelang mulai berpacu.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Masa hidup (periode kehidupan) sekitar ＿＿＿, namun pada saat yang dingin di musim dingin, ada kalanya hidup sekitar setengah tahun.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 bulan"
+       },
+       {
+        "id": "6 bulan"
+       },
+       {
+        "id": "2 bulan"
+       },
+       {
+        "id": "1 bulan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Masa hidup (periode kehidupan) sekitar 1 bulan, namun pada saat yang dingin di musim dingin, ada kalanya hidup sekitar setengah tahun.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sejak lahir hingga musim panas, anak kuda akan dipelihara bersama dengan induk kuda, namun akan disapih pada musim gugur (sekitar ＿＿＿ setelah lahir), dan setelah itu dipelihara hanya sebagai anak kuda.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "7 bulan"
+       },
+       {
+        "id": "4 bulan"
+       },
+       {
+        "id": "8 bulan"
+       },
+       {
+        "id": "6 bulan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sejak lahir hingga musim panas, anak kuda akan dipelihara bersama dengan induk kuda, namun akan disapih pada musim gugur (sekitar 6 bulan setelah lahir), dan setelah itu dipelihara hanya sebagai anak kuda.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Lebah Pejantan Terlahirnya lebah pejantan adalah pada periode kawin lebah ratu (di Jepang waktu optimal adalah ＿＿＿), dimana saat datangnya masa itu, maka akan dibuat sarang lebah khusus lebah pejantan oleh lebah pekerja di dalam sarang.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jagung atau mylo"
+       },
+       {
+        "id": "perlu agar fasilitas tidak rusak"
+       },
+       {
+        "id": "babi yang dagingnya kita makan"
+       },
+       {
+        "id": "bulan April hingga Juni"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Lebah Pejantan Terlahirnya lebah pejantan adalah pada periode kawin lebah ratu (di Jepang waktu optimal adalah bulan April hingga Juni), dimana saat datangnya masa itu, maka akan dibuat sarang lebah khusus lebah pejantan oleh lebah pekerja di dalam sarang.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
     "id": "bab1-q-sapi",
     "title": {
      "id": "Soal resmi buku (○×) — Sapi · Bab 1",
@@ -462,6 +1431,1307 @@
    }
   ],
   "bab2": [
+   {
+    "id": "b2s1-q",
+    "sub": "b2s1",
+    "title": {
+     "id": "Subbab Sapi Perah",
+     "jp": "{乳用牛|にゅうようぎゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Sapi Perah”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "(1) Pada tahun 2010 di Jepang muncul penyakit mulut dan kuku, sehingga banyak babi dan sapi yang dimusnahkan."
+       },
+       {
+        "id": "Sapi perah adalah binatang yang memiliki kewaspadaan yang tinggi, dan syarafnya juga tajam, sehingga penting bagi manusia untuk melakukan kontak dengan sikap yang halus."
+       },
+       {
+        "id": "Perkembangan broiler amat lebih cepat dari pada ayam petelur, dan banyak dikirimkan pada umur sekitar 8 pekan."
+       },
+       {
+        "id": "Babi adalah binatang yang dikembangkan untuk meningkatkan kemampuan menghasilkan daging, setelah manusia terbiasa memelihara babi hutan."
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Inti subbab: Sapi perah adalah binatang yang memiliki kewaspadaan yang tinggi, dan syarafnya juga tajam, sehingga penting bagi manusia untuk melakukan kontak dengan sikap yang halus.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sapi perah setelah melahirkan akan mengulangi estrus rata-rata setiap ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "63 hari"
+       },
+       {
+        "id": "16 hari"
+       },
+       {
+        "id": "42 hari"
+       },
+       {
+        "id": "21 hari"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sapi perah setelah melahirkan akan mengulangi estrus rata-rata setiap 21 hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sekitar ＿＿＿ sebelum melahirkan, pemerahan susu dihentikan, dan masuk pada masa kering.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "60 hari"
+       },
+       {
+        "id": "45 hari"
+       },
+       {
+        "id": "180 hari"
+       },
+       {
+        "id": "120 hari"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sekitar 60 hari sebelum melahirkan, pemerahan susu dihentikan, dan masuk pada masa kering.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bobot pedet saat dilahirkan oleh sapi perah adalah sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "135 kg"
+       },
+       {
+        "id": "90 kg"
+       },
+       {
+        "id": "45 kg"
+       },
+       {
+        "id": "34 kg"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Bobot pedet saat dilahirkan oleh sapi perah adalah sekitar 45 kg.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sebaiknya berikan kolostrum pada pedet setidaknya selama ＿＿＿ setelah dilahirkan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 hari"
+       },
+       {
+        "id": "5 hari"
+       },
+       {
+        "id": "1 hari"
+       },
+       {
+        "id": "3 hari"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sebaiknya berikan kolostrum pada pedet setidaknya selama 3 hari setelah dilahirkan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “③ Paling lambat hingga sekitar ＿＿＿ setelah melahirkan dibuat agar pemulihan dimulai.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "200 hari"
+       },
+       {
+        "id": "300 hari"
+       },
+       {
+        "id": "100 hari"
+       },
+       {
+        "id": "75 hari"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “③ Paling lambat hingga sekitar 100 hari setelah melahirkan dibuat agar pemulihan dimulai.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Calving period sapi perah idealnya 1 kelahiran setiap ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 tahun"
+       },
+       {
+        "id": "6 tahun"
+       },
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "2 tahun"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Calving period sapi perah idealnya 1 kelahiran setiap 1 tahun.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Setelah melahirkan pedet, plasenta (afterbirth) akan disekresikan dalam kurun waktu ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 jam"
+       },
+       {
+        "id": "6 jam"
+       },
+       {
+        "id": "7 jam"
+       },
+       {
+        "id": "8 jam"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Setelah melahirkan pedet, plasenta (afterbirth) akan disekresikan dalam kurun waktu 6 jam.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Materi padat adalah ＿＿＿, yang merupakan campuran kotoran dengan alas kandang sapi, untuk kemudian akan dapat dijadikan kompos.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "pakan ternak padat pada fase menyusui"
+       },
+       {
+        "id": "binatang yang memiliki sifat berkerumun"
+       },
+       {
+        "id": "hanya madu bunga dan serbuk sari"
+       },
+       {
+        "id": "benda yang urin sudah dipisahkan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Materi padat adalah benda yang urin sudah dipisahkan, yang merupakan campuran kotoran dengan alas kandang sapi, untuk kemudian akan dapat dijadikan kompos.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s2-q",
+    "sub": "b2s2",
+    "title": {
+     "id": "Subbab Sapi Pedaging",
+     "jp": "{肉用牛|にくようぎゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Sapi Pedaging”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Wagyu merupakan sapi khas Jepang yang perkembangbiakannya diperbaiki oleh produsen di Jepang dalam waktu yang lama, dan dilindungi dengan baik."
+       },
+       {
+        "id": "Varietas (spesies ayam) representatif paling umum pada jenis petelur yang dipelihara di Jepang adalah varietas Single Comb White Leghorn (negara asal Italia)."
+       },
+       {
+        "id": "(1) Pada tahun 2010 di Jepang muncul penyakit mulut dan kuku, sehingga banyak babi dan sapi yang dimusnahkan."
+       },
+       {
+        "id": "Ambing induk babi terdiri dari dua baris kiri-kanan, dengan lebih dari 12 ambing."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Wagyu merupakan sapi khas Jepang yang perkembangbiakannya diperbaiki oleh produsen di Jepang dalam waktu yang lama, dan dilindungi dengan baik.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Saat melakukan pengelolaan sapi dalam kelompok, bila tanduk dibiarkan tumbuh, karena “berbahaya kepada pengelola”, dan juga “luka akibat saling menanduk sesama sapi” akan meningkat, maka dilakukan potong tanduk pada pedet varietas Holstein hingga ＿＿＿ setelah dilahirkan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "3 bulan"
+       },
+       {
+        "id": "5 bulan"
+       },
+       {
+        "id": "4 bulan"
+       },
+       {
+        "id": "1 bulan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Saat melakukan pengelolaan sapi dalam kelompok, bila tanduk dibiarkan tumbuh, karena “berbahaya kepada pengelola”, dan juga “luka akibat saling menanduk sesama sapi” akan meningkat, maka dilakukan potong tanduk pada pedet varietas Holstein hingga 3 bulan setelah dilahirkan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dilakukan penggemukan dengan terutama pakan konsentrat selama sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "40 bulan"
+       },
+       {
+        "id": "60 bulan"
+       },
+       {
+        "id": "15 bulan"
+       },
+       {
+        "id": "20 bulan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dilakukan penggemukan dengan terutama pakan konsentrat selama sekitar 20 bulan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Rata-rata bobot pedet Holstein saat dilahirkan adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "45 kg"
+       },
+       {
+        "id": "135 kg"
+       },
+       {
+        "id": "34 kg"
+       },
+       {
+        "id": "90 kg"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Rata-rata bobot pedet Holstein saat dilahirkan adalah 45 kg.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bobot varietas sapi hitam Jepang saat dilahirkan adalah sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "14 kg"
+       },
+       {
+        "id": "21 kg"
+       },
+       {
+        "id": "28 kg"
+       },
+       {
+        "id": "84 kg"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Bobot varietas sapi hitam Jepang saat dilahirkan adalah sekitar 28 kg.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sapi betina sapi pedaging setelah melahirkan akan mengulangi estrus rata-rata setiap ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "16 hari"
+       },
+       {
+        "id": "63 hari"
+       },
+       {
+        "id": "21 hari"
+       },
+       {
+        "id": "42 hari"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Sapi betina sapi pedaging setelah melahirkan akan mengulangi estrus rata-rata setiap 21 hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bobot pedet saat dilahirkan oleh induk sapi pedaging adalah sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "90 kg"
+       },
+       {
+        "id": "30 kg"
+       },
+       {
+        "id": "15 kg"
+       },
+       {
+        "id": "22 kg"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Bobot pedet saat dilahirkan oleh induk sapi pedaging adalah sekitar 30 kg.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Setelah melahirkan pedet, plasenta (afterbirth) akan disekresikan dalam kurun waktu ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "7 jam"
+       },
+       {
+        "id": "8 jam"
+       },
+       {
+        "id": "4 jam"
+       },
+       {
+        "id": "6 jam"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Setelah melahirkan pedet, plasenta (afterbirth) akan disekresikan dalam kurun waktu 6 jam.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Induk sapi akan menjilat mengeringkan permukaan pedet yang dilahirkan, namun memindahkan pedet ke atas alas kandang yang kering adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "ampas kedelai"
+       },
+       {
+        "id": "penting"
+       },
+       {
+        "id": "tipe besar"
+       },
+       {
+        "id": "jagung"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Induk sapi akan menjilat mengeringkan permukaan pedet yang dilahirkan, namun memindahkan pedet ke atas alas kandang yang kering adalah penting.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s3-q",
+    "sub": "b2s3",
+    "title": {
+     "id": "Subbab Babi",
+     "jp": "{豚|ぶた}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Babi”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Siklus estrus betina adalah 21 hari, dan akan terjadi pengulangan fase awal estrus, fase estrus, fase akhir estrus, serta periode jeda estrus dimana gejala estrus tidak terlihat."
+       },
+       {
+        "id": "Varietas (spesies ayam) representatif paling umum pada jenis petelur yang dipelihara di Jepang adalah varietas Single Comb White Leghorn (negara asal Italia)."
+       },
+       {
+        "id": "(1) Pada tahun 2010 di Jepang muncul penyakit mulut dan kuku, sehingga banyak babi dan sapi yang dimusnahkan."
+       },
+       {
+        "id": "Kuda yang dilahirkan dari inseminasi buatan tidak dapat digunakan pada pacuan kuda."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Siklus estrus betina adalah 21 hari, dan akan terjadi pengulangan fase awal estrus, fase estrus, fase akhir estrus, serta periode jeda estrus dimana gejala estrus tidak terlihat.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dibagi lagi menjadi susu afkir untuk pembagian umpan, susu afkir A, susu afkir B, dan sebagainya, dan dilakukan pemberian pakan secara berurutan hingga bobot ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "8 kg"
+       },
+       {
+        "id": "11 kg"
+       },
+       {
+        "id": "45 kg"
+       },
+       {
+        "id": "15 kg"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dibagi lagi menjadi susu afkir untuk pembagian umpan, susu afkir A, susu afkir B, dan sebagainya, dan dilakukan pemberian pakan secara berurutan hingga bobot 15 kg.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Ada kasus dilakukannya perkawinan alami, dan inseminasi buatan (AI), atau dilakukan keduanya. ＿＿＿ setelah kawin, diputuskan bahwa babi telah hamil bila tidak ada estrus kembali.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "21 hari"
+       },
+       {
+        "id": "16 hari"
+       },
+       {
+        "id": "63 hari"
+       },
+       {
+        "id": "42 hari"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Ada kasus dilakukannya perkawinan alami, dan inseminasi buatan (AI), atau dilakukan keduanya. 21 hari setelah kawin, diputuskan bahwa babi telah hamil bila tidak ada estrus kembali.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Biasanya laktasi dilakukan sekitar ＿＿＿ per hari.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "18 kali"
+       },
+       {
+        "id": "24 kali"
+       },
+       {
+        "id": "12 kali"
+       },
+       {
+        "id": "72 kali"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Biasanya laktasi dilakukan sekitar 24 kali per hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dilahirkan dengan badan yang belum matang, kemudian imun dan kemampuan mencerna dalam tubuhnya dipenuhi secara pesat, saat disapih adalah pertumbuhan yang pesat hingga mencapai sekitar lebih dari ＿＿＿ lipat saat dilahirkan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "7 kali"
+       },
+       {
+        "id": "8 kali"
+       },
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "6 kali"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dilahirkan dengan badan yang belum matang, kemudian imun dan kemampuan mencerna dalam tubuhnya dipenuhi secara pesat, saat disapih adalah pertumbuhan yang pesat hingga mencapai sekitar lebih dari 6 kali lipat saat dilahirkan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Siklus estrus betina adalah ＿＿＿, dan akan terjadi pengulangan fase awal estrus, fase estrus, fase akhir estrus, serta periode jeda estrus dimana gejala estrus tidak terlihat.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "16 hari"
+       },
+       {
+        "id": "21 hari"
+       },
+       {
+        "id": "42 hari"
+       },
+       {
+        "id": "63 hari"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Siklus estrus betina adalah 21 hari, dan akan terjadi pengulangan fase awal estrus, fase estrus, fase akhir estrus, serta periode jeda estrus dimana gejala estrus tidak terlihat.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Biasanya, babi bakalan dikelola pada pemeliharaan secara berkelompok lebih dari ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "30 ekor"
+       },
+       {
+        "id": "10 ekor"
+       },
+       {
+        "id": "8 ekor"
+       },
+       {
+        "id": "5 ekor"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Biasanya, babi bakalan dikelola pada pemeliharaan secara berkelompok lebih dari 10 ekor.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Babi adalah ＿＿＿, dan memiliki kebiasaan membentuk kelompok.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "standar pemeliharaan Jepang"
+       },
+       {
+        "id": "pakan ternak campuran"
+       },
+       {
+        "id": "pemberian umpan otomatis dari hopper"
+       },
+       {
+        "id": "binatang yang memiliki sifat berkerumun"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Babi adalah binatang yang memiliki sifat berkerumun, dan memiliki kebiasaan membentuk kelompok.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Susu afkir adalah ＿＿＿, yang banyak diformulasikan dengan susu bubuk skim.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "hanya madu bunga dan serbuk sari"
+       },
+       {
+        "id": "juga dengan makan bebas"
+       },
+       {
+        "id": "diimpor dari luar negeri"
+       },
+       {
+        "id": "pakan ternak bubuk untuk anak babi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Susu afkir adalah pakan ternak bubuk untuk anak babi, yang banyak diformulasikan dengan susu bubuk skim.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s4-q",
+    "sub": "b2s4",
+    "title": {
+     "id": "Subbab Ayam Petelur",
+     "jp": "{採卵鶏|さいらんけい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Organ Kembang Biak Ayam Setelah terus berteur selama beberapa hari, ayam akan menunjukkan periodisitas istirahat bertelur selama ＿＿＿ (atau selama 2-3 hari), kemudian melanjutkan kembali bertelur selama beberapa hari.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "6 hari"
+       },
+       {
+        "id": "1 hari"
+       },
+       {
+        "id": "2 hari"
+       },
+       {
+        "id": "4 hari"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Organ Kembang Biak Ayam Setelah terus berteur selama beberapa hari, ayam akan menunjukkan periodisitas istirahat bertelur selama 1 hari (atau selama 2-3 hari), kemudian melanjutkan kembali bertelur selama beberapa hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada alat pemeliharaan baterai, dipindahkan ke baterai untuk anak ayam sedang pada sekitar umur ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "5 minggu"
+       },
+       {
+        "id": "6 minggu"
+       },
+       {
+        "id": "2 minggu"
+       },
+       {
+        "id": "4 minggu"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pada alat pemeliharaan baterai, dipindahkan ke baterai untuk anak ayam sedang pada sekitar umur 4 minggu.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Terdapat kandang pemeliharaan tunggal yang memelihara dengan memasukkan satu kandang satu ekor, dan kandang pemeliharaan jamak yang memasukkan ＿＿＿ atau lebih.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "6 ekor"
+       },
+       {
+        "id": "4 ekor"
+       },
+       {
+        "id": "3 ekor"
+       },
+       {
+        "id": "2 ekor"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Terdapat kandang pemeliharaan tunggal yang memelihara dengan memasukkan satu kandang satu ekor, dan kandang pemeliharaan jamak yang memasukkan 2 ekor atau lebih.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada pemeliharaan umbaran, perkawinan terjadi secara alami, didapatkan telur dengan memelihara 1 grup 10-15 ekor betina dengan ＿＿＿ jantan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "6 ekor"
+       },
+       {
+        "id": "4 ekor"
+       },
+       {
+        "id": "1 ekor"
+       },
+       {
+        "id": "2 ekor"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pada pemeliharaan umbaran, perkawinan terjadi secara alami, didapatkan telur dengan memelihara 1 grup 10-15 ekor betina dengan 1 ekor jantan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada peternakan ayam yang terpasang alat pengumpul telur otomatis, maka dalam ＿＿＿ dilakukan beberapa kali pengumpulan telur kemudian dikirimkan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 hari"
+       },
+       {
+        "id": "4 hari"
+       },
+       {
+        "id": "2 hari"
+       },
+       {
+        "id": "6 hari"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pada peternakan ayam yang terpasang alat pengumpul telur otomatis, maka dalam 1 hari dilakukan beberapa kali pengumpulan telur kemudian dikirimkan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada pakan campuran, 2,5 jam setelah makan maka ekskresi akan dimulai, dan semuanya akan dieksresikan dalam ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "21 jam"
+       },
+       {
+        "id": "4 jam"
+       },
+       {
+        "id": "5 jam"
+       },
+       {
+        "id": "7 jam"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pada pakan campuran, 2,5 jam setelah makan maka ekskresi akan dimulai, dan semuanya akan dieksresikan dalam 7 jam.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Total volume produksi sekumpulan ayam selama ＿＿＿ dibagi dengan jumlah ayam yang dipelihara, akan menunjukkan volume bertelur ayam per ekor per hari, disebut dengan jumlah telur per hari.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 hari"
+       },
+       {
+        "id": "4 hari"
+       },
+       {
+        "id": "2 hari"
+       },
+       {
+        "id": "6 hari"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Total volume produksi sekumpulan ayam selama 1 hari dibagi dengan jumlah ayam yang dipelihara, akan menunjukkan volume bertelur ayam per ekor per hari, disebut dengan jumlah telur per hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Struktur organ pencernaan adalah ＿＿＿..”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "perlu agar fasilitas tidak rusak"
+       },
+       {
+        "id": "binatang dengan kewaspadaan yang kuat"
+       },
+       {
+        "id": "seperti pada gambar di bawah"
+       },
+       {
+        "id": "hal yang penting"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Struktur organ pencernaan adalah seperti pada gambar di bawah..”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s5-q",
+    "sub": "b2s5",
+    "title": {
+     "id": "Subbab Ayam Pedaging",
+     "jp": "{肉用鶏|にくようけい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Ayam Pedaging”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Perkembangan broiler amat lebih cepat dari pada ayam petelur, dan banyak dikirimkan pada umur sekitar 8 pekan."
+       },
+       {
+        "id": "Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun."
+       },
+       {
+        "id": "Wagyu merupakan sapi khas Jepang yang perkembangbiakannya diperbaiki oleh produsen di Jepang dalam waktu yang lama, dan dilindungi dengan baik."
+       },
+       {
+        "id": "Siklus estrus betina adalah 21 hari, dan akan terjadi pengulangan fase awal estrus, fase estrus, fase akhir estrus, serta periode jeda estrus dimana gejala estrus tidak terlihat."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Perkembangan broiler amat lebih cepat dari pada ayam petelur, dan banyak dikirimkan pada umur sekitar 8 pekan.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Suhu dan kelembaban dalam chick guard adalah penting, sehingga diatur suhu (＿＿＿ Celsius) dan kelembaban (sekitar 65%) agar anak ayam menyebar dengan nyaman.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "64 derajat"
+       },
+       {
+        "id": "32 derajat"
+       },
+       {
+        "id": "24 derajat"
+       },
+       {
+        "id": "96 derajat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Suhu dan kelembaban dalam chick guard adalah penting, sehingga diatur suhu (32 derajat Celsius) dan kelembaban (sekitar 65%) agar anak ayam menyebar dengan nyaman.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Lebih lagi, saat mendadak suhu tinggi lebih dari ＿＿＿ Celsius, perlu hati- hati karena akan muncul sakit serangan panas (heat stroke).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "90 derajat"
+       },
+       {
+        "id": "22 derajat"
+       },
+       {
+        "id": "15 derajat"
+       },
+       {
+        "id": "30 derajat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Lebih lagi, saat mendadak suhu tinggi lebih dari 30 derajat Celsius, perlu hati- hati karena akan muncul sakit serangan panas (heat stroke).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Alat pelihara bentuk payung diletakkan di dekat bagian tengah lantai, pasangkan chick guard di sekelilingnya dengan bentuk lingkaran dengan jarak dari lantai sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "100 cm"
+       },
+       {
+        "id": "50 cm"
+       },
+       {
+        "id": "150 cm"
+       },
+       {
+        "id": "38 cm"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Alat pelihara bentuk payung diletakkan di dekat bagian tengah lantai, pasangkan chick guard di sekelilingnya dengan bentuk lingkaran dengan jarak dari lantai sekitar 50 cm.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kepadatan pemeliharaan sebaiknya adalah ＿＿＿ per meter persegi luas lantai kandang pemeliharaan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "45 ekor"
+       },
+       {
+        "id": "11 ekor"
+       },
+       {
+        "id": "15 ekor"
+       },
+       {
+        "id": "8 ekor"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kepadatan pemeliharaan sebaiknya adalah 15 ekor per meter persegi luas lantai kandang pemeliharaan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk itu, pada lantai kandang ayam dimasukkan bahan alas lantaibahan alas lantai dengan penyerap kelembaban baik ketebalan lebih dari ＿＿＿, seperti planar chip, serbuk gergaji, potongan jerami, dan sebagainya.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "10 cm"
+       },
+       {
+        "id": "30 cm"
+       },
+       {
+        "id": "5 cm"
+       },
+       {
+        "id": "8 cm"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Untuk itu, pada lantai kandang ayam dimasukkan bahan alas lantaibahan alas lantai dengan penyerap kelembaban baik ketebalan lebih dari 10 cm, seperti planar chip, serbuk gergaji, potongan jerami, dan sebagainya.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Lingkaran chick guard semakin diperluas setiap hari sedikit demi sedikit menyesuaikan dengan pertumbuhan anak ayam sejak sekitar ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "6 hari"
+       },
+       {
+        "id": "5 hari"
+       },
+       {
+        "id": "4 hari"
+       },
+       {
+        "id": "2 hari"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Lingkaran chick guard semakin diperluas setiap hari sedikit demi sedikit menyesuaikan dengan pertumbuhan anak ayam sejak sekitar 4 hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Mengepung anak ayam bentuk lingkaran dengan pagar (lembar seng panjang) dengan tinggi sekitar ＿＿＿ yang digunakan untuk memelihara anak ayam baru menetas, dan di dalamnya dipasangkan bahan alas lantai, sumber panas, wadah pengumpan, dan wadah air.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "90 cm"
+       },
+       {
+        "id": "15 cm"
+       },
+       {
+        "id": "30 cm"
+       },
+       {
+        "id": "22 cm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Mengepung anak ayam bentuk lingkaran dengan pagar (lembar seng panjang) dengan tinggi sekitar 30 cm yang digunakan untuk memelihara anak ayam baru menetas, dan di dalamnya dipasangkan bahan alas lantai, sumber panas, wadah pengumpan, dan wadah air.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Terdapat pula keuntungan mudah pengelolaan mengeringkan kotoran, namun karena bila sudah cukup kering akan menjadi penyebab penyakit organ pernapasan, maka pengelolaan kelembaban adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "putih"
+       },
+       {
+        "id": "penting"
+       },
+       {
+        "id": "babi pejantan"
+       },
+       {
+        "id": "terbaik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Terdapat pula keuntungan mudah pengelolaan mengeringkan kotoran, namun karena bila sudah cukup kering akan menjadi penyebab penyakit organ pernapasan, maka pengelolaan kelembaban adalah penting.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s6-q",
+    "sub": "b2s6",
+    "title": {
+     "id": "Subbab Kuda Tipe Ringan dan Peternakan Lebah",
+     "jp": "{軽種馬|けいしゅば}・{養蜂|ようほう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Varietas Thoroughbred adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "urin yang telah dipisahkan dengan kotoran"
+       },
+       {
+        "id": "perlu agar fasilitas tidak rusak"
+       },
+       {
+        "id": "pakan ternak padat pada fase menyusui"
+       },
+       {
+        "id": "binatang dengan kewaspadaan yang kuat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Varietas Thoroughbred adalah binatang dengan kewaspadaan yang kuat.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kotak Peneluran Bingkai Sarang Wadah Pengumpan Makanan lebah adalah ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "inseminasi buatan"
+       },
+       {
+        "id": "jarak waktu melahirkan"
+       },
+       {
+        "id": "periodesitas bertelur"
+       },
+       {
+        "id": "hanya madu bunga dan serbuk sari"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kotak Peneluran Bingkai Sarang Wadah Pengumpan Makanan lebah adalah hanya madu bunga dan serbuk sari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kemudian, saat koloni bertumbuh besar, maka diletakkan kotak tidak berdasar yang disebut ＿＿＿, untuk menyesuaikan dengan meningkatnya jumlah lebah.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "diimpor dari luar negeri"
+       },
+       {
+        "id": "binatang yang memiliki sifat berkerumun"
+       },
+       {
+        "id": "kotak peneluran di atas kotak sarang"
+       },
+       {
+        "id": "benda yang urin sudah dipisahkan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Kemudian, saat koloni bertumbuh besar, maka diletakkan kotak tidak berdasar yang disebut kotak peneluran di atas kotak sarang, untuk menyesuaikan dengan meningkatnya jumlah lebah.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Kemudian, tungau ini akan menjadi perantara banyak virus.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Kemudian, saat koloni bertumbuh kecil, maka diletakkan kotak tidak berdasar yang disebut kotak peneluran di atas kotak sarang, untuk menyesuaikan dengan meningkatnya jumlah lebah.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Kemudian, saat koloni bertumbuh besar, maka diletakkan kotak tidak berdasar yang disebut kotak peneluran di atas kotak sarang, untuk menyesuaikan dengan meningkatnya jumlah lebah.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pada peternakan produksi digunakan jerami padi atau rumput buatan sendiri, namun pada peternakan pemeliharaan, untuk mencegah dimakannya bahan alas lantai maka banyak dipergunakan jerami gandum, wood shave, dan serbuk gergaji.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     }
+    ]
+   },
    {
     "id": "bab2-q-sapi",
     "title": {
@@ -995,6 +3265,1475 @@
    }
   ],
   "bab3": [
+   {
+    "id": "b3s1-q",
+    "sub": "b3s1",
+    "title": {
+     "id": "Subbab Pengelolaan Sanitasi dan Keselamatan Lahan Ternak",
+     "jp": "{衛生管理|えいせいかんり}と{安全管理|あんぜんかんり}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Pengelolaan Sanitasi dan Keselamatan Lahan Ternak”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun."
+       },
+       {
+        "id": "Panas normal adalah 37,5 ~ 38,4 derajat Celsius."
+       },
+       {
+        "id": "Pada dasarnya sama dengan “Pengelolaan Fasilitas” pada III."
+       },
+       {
+        "id": "(1) Pada tahun 2010 di Jepang muncul penyakit mulut dan kuku, sehingga banyak babi dan sapi yang dimusnahkan."
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Inti subbab: (1) Pada tahun 2010 di Jepang muncul penyakit mulut dan kuku, sehingga banyak babi dan sapi yang dimusnahkan.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Gunakan yang Tipe Pakaian Pelindung Kenakan pakaian pelindung yang berlengan dan bercelana panjang.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Kemudian, bila lumpur atau pasir masuk ke dalam cairan disinfektan, maka efek disinfeksi akan bertambah, sehingga diperlukan pembersihan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Kemudian, bila lumpur atau pasir masuk ke dalam cairan disinfektan, maka efek disinfeksi akan berkurang, sehingga diperlukan pembersihan.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Bila basah, maka colokan listrik memiliki resiko korsleting.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Semprotkan calcium hydroxide di pintu keluar-masuk, untuk kendaraan mobil lakukan disinfeksi pada ban, untuk orang pada alas dari sepatu pendek.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Semprotkan calcium hydroxide di pintu keluar-masuk, untuk kendaraan mobil lakukan disinfeksi pada ban, untuk orang pada alas dari sepatu panjang.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Karena efek disinfektan akan menurun seiring berjalannya waktu, maka perlu memperbaharui cairan kimia.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “(stock solution) di tempat yang basah dan teduh”, “tidak dicampur dengan cairan disinfektan atau pestisida lain”, “pakai sarung tangan sanitasi saat penanganan, pakai masker saat penyemprotan”.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “(stock solution) di tempat yang kering dan teduh”, “tidak dicampur dengan cairan disinfektan atau pestisida lain”, “pakai sarung tangan sanitasi saat penanganan, pakai masker saat penyemprotan”.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s2-q",
+    "sub": "b3s2",
+    "title": {
+     "id": "Subbab Pekerjaan Harian Sapi Perah",
+     "jp": "{酪農|らくのう}の{作業|さぎょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Standarnya perah susu dilakukan dalam waktu hingga ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "5 menit"
+       },
+       {
+        "id": "7 menit"
+       },
+       {
+        "id": "6 menit"
+       },
+       {
+        "id": "3 menit"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Standarnya perah susu dilakukan dalam waktu hingga 5 menit.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Handuk disiapkan lebih dari satu lembar untuk ＿＿＿ sapi, dan handuk yang telah selesai dipergunakan dimasukkan ke dalam ember lainnya.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 ekor"
+       },
+       {
+        "id": "4 ekor"
+       },
+       {
+        "id": "6 ekor"
+       },
+       {
+        "id": "2 ekor"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Handuk disiapkan lebih dari satu lembar untuk 1 ekor sapi, dan handuk yang telah selesai dipergunakan dimasukkan ke dalam ember lainnya.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Begitu mendekati estrus, maka sapi perah jadi tidak tenang, akan mendekat dan menggosokkan badannya ke sapi lain atau ke orang, dan pada malam hari saat sapi lainnya tenang, maka dia akan berjalan-jalan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Dilakukan observasi estrus (standing estrus dan sebagainya) pada subuh dan siang hari.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Dilakukan observasi estrus (standing estrus dan sebagainya) pada subuh dan malam hari.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Sebelum melahirkan pedet, adalah penting untuk mempersiapkan kandang perawatan yang bersih dan kering yang telah diberikan pakan tabur dengan cukup.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Pagi sesudah memberi pakan ternak, bersihkan wadah pakan agar bersih.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Pagi sebelum memberi pakan ternak, bersihkan wadah pakan agar bersih.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Lantai kandang sapi (stall) dalam kondisi bersih dan kering.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pra pemerahan (strip cup) dilakukan untuk…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Menambah volume susu sebelum diperah"
+       },
+       {
+        "id": "Menemukan zat padat dalam susu dan membuang susu awal yang berpotensi terkontaminasi"
+       },
+       {
+        "id": "Mencuci seluruh tubuh sapi"
+       },
+       {
+        "id": "Memberi pakan konsentrat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Teks hal. Prosedur Memerah Susu: pra pemerahan untuk mengecek zat padat dan membuang perah awal yang tinggi kemungkinan kontaminasi.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Sapi dengan sel somatik tinggi atau radang ambing (mastitis) diperah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Paling awal"
+       },
+       {
+        "id": "Tidak perlu diperah"
+       },
+       {
+        "id": "Diperah bersama sapi sehat"
+       },
+       {
+        "id": "Belakangan (paling akhir)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sapi mastitis/sel somatik tinggi diperah belakangan agar tidak menularkan ke sapi lain.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Tujuan pengelapan ambing adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Memberi pakan pada sapi"
+       },
+       {
+        "id": "Menurunkan suhu rektal"
+       },
+       {
+        "id": "Memberi rangsangan perah susu dan sterilisasi permukaan ambing"
+       },
+       {
+        "id": "Mengukur berat badan sapi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pengelapan ambing = rangsang perah + sterilisasi permukaan ambing.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Dipping berarti…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Mencelupkan ambing ke cairan kimia (disinfektan)"
+       },
+       {
+        "id": "Memotong kuku"
+       },
+       {
+        "id": "Menyemprot air ke lantai"
+       },
+       {
+        "id": "Menimbang susu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Dipping = mencelupkan ke cairan kimia untuk membunuh kuman pada ambing.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada masa panas, suhu rektal sapi sering mencapai lebih dari 39°C. Dampaknya adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Jumlah napas menurun dan konsumsi pakan naik"
+       },
+       {
+        "id": "Susu bertambah banyak"
+       },
+       {
+        "id": "Tidak ada dampak"
+       },
+       {
+        "id": "Jumlah napas meningkat dan konsumsi pakan menurun"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Ventilasi kandang: saat panas, napas meningkat dan konsumsi pakan menurun.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pagi hari sebelum memberi pakan, wadah pakan harus…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Dibersihkan agar bersih"
+       },
+       {
+        "id": "Dibiarkan kotor"
+       },
+       {
+        "id": "Diisi pakan lama"
+       },
+       {
+        "id": "Dikeringkan dengan asap"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pengelolaan wadah pakan: bersihkan pagi hari sebelum memberi pakan.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s3-q",
+    "sub": "b3s3",
+    "title": {
+     "id": "Subbab Pekerjaan Harian Sapi Pedaging",
+     "jp": "{肉用牛|にくようぎゅう}の{作業|さぎょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Pekerjaan Harian Sapi Pedaging”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Pada dasarnya sama dengan “Pengelolaan Fasilitas” pada III."
+       },
+       {
+        "id": "Panas normal adalah 37,5 ~ 38,4 derajat Celsius."
+       },
+       {
+        "id": "(1) Pada tahun 2010 di Jepang muncul penyakit mulut dan kuku, sehingga banyak babi dan sapi yang dimusnahkan."
+       },
+       {
+        "id": "Poin Pengamatan Pekerjaan Pengelolaan dan Peternakan (Untuk Ujian Praktek) Dalam pekerjaan di lahan ternak setiap hari, sembari bekerja dengan diajari oleh pengelola, penting untuk mengetahui metode kerja yang benar dan melakukan observasi ternak berikut ini."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Pada dasarnya sama dengan “Pengelolaan Fasilitas” pada III.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Tidak mendekat ke wadah pakan, banyak menyisakan makanan, atau memisahkan diri dari kelompok menandakan kemungkinan…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit organ pencernaan, penyakit demam, atau penyakit gigi"
+       },
+       {
+        "id": "Hanya kelebihan nutrisi"
+       },
+       {
+        "id": "Penyakit kuku saja"
+       },
+       {
+        "id": "Sapi sedang estrus"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inspeksi nafsu makan (hal. 125–127).",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pincang pada sapi dicurigai sebagai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Radang otak"
+       },
+       {
+        "id": "Penyakit kuku"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Perilaku dan penyakit: pincang → penyakit kuku.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Menggosokkan badan ke dinding atau tiang dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kuku"
+       },
+       {
+        "id": "Penyakit metabolisme"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Anemia"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Menggosokkan badan ke dinding/tiang → penyakit kulit.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Bulu kasar, bengkak di keempat kaki, bola mata menonjol, dan daya pandang menurun dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Kekurangan vitamin A"
+       },
+       {
+        "id": "Kekurangan vitamin B1"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kencing batu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kekurangan vitamin A menimbulkan gejala tersebut.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Kotoran kuning putih/coklat gelap menempel di pangkal ekor dan bulu ekor rontok dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit pernapasan"
+       },
+       {
+        "id": "Demam"
+       },
+       {
+        "id": "Diare"
+       },
+       {
+        "id": "Penyakit kuku"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pangkal ekor/kondisi ekor → diare.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Bernapas dengan mulut terbuka, napas cepat, atau pernapasan perut dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Penyakit kuku"
+       },
+       {
+        "id": "Penyakit organ pernapasan"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Diare"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kondisi pernapasan → penyakit organ pernapasan.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Bulu panjang, berantakan, dan kusut dicurigai…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Nutrisi buruk"
+       },
+       {
+        "id": "Terinfeksi parasit"
+       },
+       {
+        "id": "Penyakit kulit"
+       },
+       {
+        "id": "Kencing batu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kondisi bulu: kusut/berantakan → parasit; kasar tidak berkilau → nutrisi buruk.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s4-q",
+    "sub": "b3s4",
+    "title": {
+     "id": "Subbab Pekerjaan Harian Babi",
+     "jp": "{養豚|ようとん}の{作業|さぎょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Pekerjaan Harian Babi”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Ambing induk babi terdiri dari dua baris kiri-kanan, dengan lebih dari 12 ambing."
+       },
+       {
+        "id": "Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun."
+       },
+       {
+        "id": "Perkembangan broiler amat lebih cepat dari pada ayam petelur, dan banyak dikirimkan pada umur sekitar 8 pekan."
+       },
+       {
+        "id": "Sapi perah adalah binatang yang memiliki kewaspadaan yang tinggi, dan syarafnya juga tajam, sehingga penting bagi manusia untuk melakukan kontak dengan sikap yang halus."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Ambing induk babi terdiri dari dua baris kiri-kanan, dengan lebih dari 12 ambing.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Suhu optimal saat lahir adalah 36 derajatCelsius,kemudianperlahanakansemakinmenurunmenjadi30derajatCelsius satupekankemudian,dandalam2pekanmenjadi28derajatCelsius,3pekan＿＿＿ Celsius.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "78 derajat"
+       },
+       {
+        "id": "20 derajat"
+       },
+       {
+        "id": "13 derajat"
+       },
+       {
+        "id": "26 derajat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Suhu optimal saat lahir adalah 36 derajatCelsius,kemudianperlahanakansemakinmenurunmenjadi30derajatCelsius satupekankemudian,dandalam2pekanmenjadi28derajatCelsius,3pekan26derajat Celsius.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pengecekan kehamilan adalah dengan tidak adanya estrus datang kembali ＿＿＿ setelahnya, dan dicek dengan alat diagnosis kehamilan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "16 hari"
+       },
+       {
+        "id": "42 hari"
+       },
+       {
+        "id": "63 hari"
+       },
+       {
+        "id": "21 hari"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pengecekan kehamilan adalah dengan tidak adanya estrus datang kembali 21 hari setelahnya, dan dicek dengan alat diagnosis kehamilan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dari panjangnya periode fase estrus pada babi, maka untuk mendapatkan rasio tinggi pembuahan dan kelahiran yang maksimal dari 1 induk, walau dengan perkawinan alami dengan babi jantan maupun dengan inseminasi buatan, dicobakan ＿＿＿ inseminasi dalam 1 fase estrus.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "2 kali"
+       },
+       {
+        "id": "4 kali"
+       },
+       {
+        "id": "3 kali"
+       },
+       {
+        "id": "6 kali"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dari panjangnya periode fase estrus pada babi, maka untuk mendapatkan rasio tinggi pembuahan dan kelahiran yang maksimal dari 1 induk, walau dengan perkawinan alami dengan babi jantan maupun dengan inseminasi buatan, dicobakan 2 kali inseminasi dalam 1 fase estrus.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Siklus estrus adalah ＿＿＿, dan walau akan berbeda setiap individu babi, namun estrus akan berlanjut selama 2-3 hari.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "21 hari"
+       },
+       {
+        "id": "42 hari"
+       },
+       {
+        "id": "16 hari"
+       },
+       {
+        "id": "63 hari"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Siklus estrus adalah 21 hari, dan walau akan berbeda setiap individu babi, namun estrus akan berlanjut selama 2-3 hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Bila hamil, kebanyakan babi akan menjadi tenang dan bertambah nafsu makan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s5-q",
+    "sub": "b3s5",
+    "title": {
+     "id": "Subbab Pekerjaan Harian Peternakan Ayam",
+     "jp": "{養鶏|ようけい}の{作業|さぎょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Pekerjaan Harian Peternakan Ayam”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun."
+       },
+       {
+        "id": "Wagyu merupakan sapi khas Jepang yang perkembangbiakannya diperbaiki oleh produsen di Jepang dalam waktu yang lama, dan dilindungi dengan baik."
+       },
+       {
+        "id": "Panas normal adalah 37,5 ~ 38,4 derajat Celsius."
+       },
+       {
+        "id": "Anak ayam baru menetas badannya kecil dan suhu badannya rendah, juga kekuatan untuk beradaptasi dengan suhu lingkungannya masih lemah, sehingga harus diberi suplai suhu."
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Inti subbab: Anak ayam baru menetas badannya kecil dan suhu badannya rendah, juga kekuatan untuk beradaptasi dengan suhu lingkungannya masih lemah, sehingga harus diberi suplai suhu.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Air minum selalu diberikan, namun basin air bentuk bell yang menampung air di piring wadah air dapat bercampur dengan pakan ternak atau kotoran, sehingga dibersihkan dan diganti ＿＿＿ sehari.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "1 kali"
+       },
+       {
+        "id": "6 kali"
+       },
+       {
+        "id": "2 kali"
+       },
+       {
+        "id": "4 kali"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Air minum selalu diberikan, namun basin air bentuk bell yang menampung air di piring wadah air dapat bercampur dengan pakan ternak atau kotoran, sehingga dibersihkan dan diganti 1 kali sehari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dilakukan penghentian pemberian pakan sejak ＿＿＿ sebelum jadwal rencana pengolahan (tidak diberi makan).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "36 jam"
+       },
+       {
+        "id": "9 jam"
+       },
+       {
+        "id": "12 jam"
+       },
+       {
+        "id": "6 jam"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Dilakukan penghentian pemberian pakan sejak 12 jam sebelum jadwal rencana pengolahan (tidak diberi makan).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk broiler dilakukan pada umur ＿＿＿ atau dilakukan secepat mungkin, namun ada kalanya dilakukan di peternakan penetasan (penangkaran) ayam.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "2 hari"
+       },
+       {
+        "id": "6 hari"
+       },
+       {
+        "id": "4 hari"
+       },
+       {
+        "id": "1 hari"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab: “Untuk broiler dilakukan pada umur 1 hari atau dilakukan secepat mungkin, namun ada kalanya dilakukan di peternakan penetasan (penangkaran) ayam.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk pengumpulan telur manual, agar terjaga kesegarannya, maka sedapat mungkin perbanyak frekuensi pengumpulan telur dalam ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 hari"
+       },
+       {
+        "id": "1 hari"
+       },
+       {
+        "id": "6 hari"
+       },
+       {
+        "id": "2 hari"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Untuk pengumpulan telur manual, agar terjaga kesegarannya, maka sedapat mungkin perbanyak frekuensi pengumpulan telur dalam 1 hari.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Buku catatan pengelolaan pemberian pakan ternak perlu setidaknya disimpan selama ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "2 tahun"
+       },
+       {
+        "id": "6 tahun"
+       },
+       {
+        "id": "4 tahun"
+       },
+       {
+        "id": "3 tahun"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Buku catatan pengelolaan pemberian pakan ternak perlu setidaknya disimpan selama 2 tahun.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada saat itu, maka suhu sekitar badan ayam akan lebih tinggi hampir ＿＿＿ Celsius dari suhu ruangan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "3 derajat"
+       },
+       {
+        "id": "7 derajat"
+       },
+       {
+        "id": "5 derajat"
+       },
+       {
+        "id": "6 derajat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pada saat itu, maka suhu sekitar badan ayam akan lebih tinggi hampir 5 derajat Celsius dari suhu ruangan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Setelah mulai bertelur pun dilakukan penimbangan bobot setiap selang ＿＿＿, dan perlu juga memperbandingkan perubahan bobot untuk mengetahui apakah anak ayam makan dengan tepat atau nutrisinya kekurangan atau berlebih.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 minggu"
+       },
+       {
+        "id": "5 minggu"
+       },
+       {
+        "id": "6 minggu"
+       },
+       {
+        "id": "2 minggu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab: “Setelah mulai bertelur pun dilakukan penimbangan bobot setiap selang 4 minggu, dan perlu juga memperbandingkan perubahan bobot untuk mengetahui apakah anak ayam makan dengan tepat atau nutrisinya kekurangan atau berlebih.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pengelolaan harian adalah ＿＿＿, atau tetap normal, atau tetap higienis tanpa debu dan kotoran.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "penghilangan menyeluruh bakteri patogen"
+       },
+       {
+        "id": "perlu agar fasilitas tidak rusak"
+       },
+       {
+        "id": "pakan ternak bubuk untuk anak babi"
+       },
+       {
+        "id": "produk jadi dari kotoran sapi perah"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Pengelolaan harian adalah perlu agar fasilitas tidak rusak, atau tetap normal, atau tetap higienis tanpa debu dan kotoran.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s6-q",
+    "sub": "b3s6",
+    "title": {
+     "id": "Subbab Pekerjaan Harian Kuda dan Lebah",
+     "jp": "{馬|うま}・{養蜂|ようほう}の{作業|さぎょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Pekerjaan Harian Kuda dan Lebah”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Panas normal adalah 37,5 ~ 38,4 derajat Celsius."
+       },
+       {
+        "id": "Wagyu merupakan sapi khas Jepang yang perkembangbiakannya diperbaiki oleh produsen di Jepang dalam waktu yang lama, dan dilindungi dengan baik."
+       },
+       {
+        "id": "Siklus estrus betina adalah 21 hari, dan akan terjadi pengulangan fase awal estrus, fase estrus, fase akhir estrus, serta periode jeda estrus dimana gejala estrus tidak terlihat."
+       },
+       {
+        "id": "Sapi perah adalah binatang yang memiliki kewaspadaan yang tinggi, dan syarafnya juga tajam, sehingga penting bagi manusia untuk melakukan kontak dengan sikap yang halus."
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Inti subbab: Panas normal adalah 37,5 ~ 38,4 derajat Celsius.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk kuda yang telah cukup latihan ditunggangi, karena akan dipasangkan tapal kuda pada kukunya, maka tidak dibiarkan merumput berkelompok agar tidak terluka saling bermain, melainkan umumnya merumput di area merumput kecil untuk setiap ＿＿＿ kuda (paddock).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "4 ekor"
+       },
+       {
+        "id": "1 ekor"
+       },
+       {
+        "id": "2 ekor"
+       },
+       {
+        "id": "6 ekor"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab: “Untuk kuda yang telah cukup latihan ditunggangi, karena akan dipasangkan tapal kuda pada kukunya, maka tidak dibiarkan merumput berkelompok agar tidak terluka saling bermain, melainkan umumnya merumput di area merumput kecil untuk setiap 1 ekor kuda (paddock).”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Frekuensi penggantian tapal kuda biasanya antara 3 pekan hingga ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "2 bulan"
+       },
+       {
+        "id": "6 bulan"
+       },
+       {
+        "id": "1 bulan"
+       },
+       {
+        "id": "4 bulan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab: “Frekuensi penggantian tapal kuda biasanya antara 3 pekan hingga 1 bulan.”",
+       "jp": "{本文|ほんぶん}のとおりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Dilakukan pembabatan rumput secara rutin untuk memperpendek tinggi rumput pada area merumput.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Digunakan sembari dihangatkan dengan air dingin, dan terdapat juga yang elektrik.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Digunakan sembari dihangatkan dengan air panas, dan terdapat juga yang elektrik.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Dengan semakin berlatih, karena kuku kuda cepat susut, maka dipasangkan tapal kuda untuk menjaga kuku kuda.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Digunakan dengan membakar kain rami atau kertas, atau daun basah.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah. Menurut teks: “Digunakan dengan membakar kain rami atau kertas, atau daun kering.”",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah (sesuai teks): “Keempat kaki mudah bengkak akibat munculnya infeksi bakteri dari luka, dan kadang merupakan kendala dalam latihan.”",
+       "jp": "{本文|ほんぶん}の{内容|ないよう}に{合|あ}っていますか。"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar sesuai teks.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s7-q",
+    "sub": "b3s7",
+    "title": {
+     "id": "Subbab Poin Pengamatan Ujian Praktik",
+     "jp": "{実技試験|じつぎしけん}の{観察|かんさつ}ポイント"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Pernyataan mana yang merupakan inti dari subbab “Poin Pengamatan Ujian Praktik”?",
+       "jp": "この{項目|こうもく}の{要点|ようてん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Sapi perah adalah binatang yang memiliki kewaspadaan yang tinggi, dan syarafnya juga tajam, sehingga penting bagi manusia untuk melakukan kontak dengan sikap yang halus."
+       },
+       {
+        "id": "Babi adalah binatang yang dikembangkan untuk meningkatkan kemampuan menghasilkan daging, setelah manusia terbiasa memelihara babi hutan."
+       },
+       {
+        "id": "Poin Pengamatan Pekerjaan Pengelolaan dan Peternakan (Untuk Ujian Praktek) Dalam pekerjaan di lahan ternak setiap hari, sembari bekerja dengan diajari oleh pengelola, penting untuk mengetahui metode kerja yang benar dan melakukan observasi ternak berikut ini."
+       },
+       {
+        "id": "Peternakan Sapi Perah (Sapi Perah) Sebagian besar sapi perah di Jepang adalah varietas Holstein (berasal dari negara Belanda), dengan rata-rata volume susu lebih dari 8.000 kg per tahun."
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Inti subbab: Poin Pengamatan Pekerjaan Pengelolaan dan Peternakan (Untuk Ujian Praktek) Dalam pekerjaan di lahan ternak setiap hari, sembari bekerja dengan diajari oleh pengelola, penting untuk mengetahui metode kerja yang benar dan melakukan observasi ternak berikut ini.",
+       "jp": "{要点|ようてん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Dalam pengamatan ujian praktik sapi, mengecek bahwa sapi sehat atau tidak sehat termasuk…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Cara membuat silase"
+       },
+       {
+        "id": "Cara membedakan sapi sehat dan tidak sehat"
+       },
+       {
+        "id": "Menghitung harga susu"
+       },
+       {
+        "id": "Memilih merek pakan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Poin pengamatan sapi (hal. 145–147).",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Yang perlu dibedakan pada pemberian pakan sapi perah adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Pakan cair dan air minum"
+       },
+       {
+        "id": "Pakan kasar dan pakan konsentrat"
+       },
+       {
+        "id": "Pupuk dan pakan"
+       },
+       {
+        "id": "Obat dan vitamin saja"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Mengecek jenis dan nama pakan: perbedaan pakan kasar dan konsentrat.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "TMR adalah singkatan dari…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Total Meat Record"
+       },
+       {
+        "id": "Time Milking Rule"
+       },
+       {
+        "id": "Total Mixed Ration (pakan campuran)"
+       },
+       {
+        "id": "Two Milk Ration"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "TMR = Total Mixed Ration, berbeda dari separate feeding.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pengamatan pada ayam petelur yang termasuk ujian praktik adalah…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Menghitung karkas babi"
+       },
+       {
+        "id": "Memerah susu"
+       },
+       {
+        "id": "Memasang milker"
+       },
+       {
+        "id": "Mengecek varietas ayam petelur dan warna telur"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Poin pengamatan peternakan ayam petelur.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada pengelolaan higienitas, orang luar yang masuk lahan ternak diminta…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Masuk tanpa alas kaki"
+       },
+       {
+        "id": "Membawa pakan sendiri"
+       },
+       {
+        "id": "Memakai boots cover dari plastik"
+       },
+       {
+        "id": "Membawa hewan peliharaan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pengelolaan higienitas (hal. 145–147).",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pakaian pelindung saat menyemprot pestisida/disinfektan antara lain…",
+       "jp": "{正|ただ}しいものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Sandal dan kaus tanpa lengan"
+       },
+       {
+        "id": "Masker, kacamata pelindung, sarung tangan karet, sepatu panjang"
+       },
+       {
+        "id": "Tanpa masker agar cepat"
+       },
+       {
+        "id": "Hanya topi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Cara memakai pakaian pelindung yang benar.",
+       "jp": "{本文|ほんぶん}をたしかめましょう。"
+      }
+     }
+    ]
+   },
    {
     "id": "bab3-q-sapi",
     "title": {
