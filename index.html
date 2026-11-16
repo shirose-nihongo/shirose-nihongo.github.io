@@ -2930,7 +2930,8 @@ window.showMateri = async (tipe, idx, vno) => {
           <button class="btn" data-say="${SV.escAttr(k)}" data-role="kanji" onclick="SV.btn(this)">🔊 Dengar</button>
           <button class="btn ghost" onclick="showStrokeOrder('${(k||"").replace(/'/g,"")}')">書き順を見る</button>
           <button class="btn" onclick="KC.openKanji(${idx},'latihan')">書いてみよう ✍️</button>
-          <button class="btn gold" onclick='rangkumCepat({jp:"${(k||"").replace(/"/g,"\\&quot;")}",kana:"${(bagikana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kanji ${no}")'>➕ Rangkum</button>
+          <button class="btn gold" onclick='rangkumCepat({jp:"${(k||"").replace(/"/g,"\\&quot;")}",kana:"${(bagikana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kanji ${no}")'>➕ Masukkan ke rangkuman</button>
+          <button class="btn ghost" onclick="route('rangkuman')">📒 Buka rangkuman</button>
         </div>
         ${_commentsPlaceholder("kanji", state.level, itemNo(it, idx))}
       </div>
@@ -2963,7 +2964,8 @@ window.showMateri = async (tipe, idx, vno) => {
           <button class="btn" data-say="${SV.escAttr(kata)}" data-read="${SV.escAttr(kana||kata)}" data-role="kosakata" onclick="SV.btn(this)">🔊 Dengar</button>
           <button class="btn ghost" onclick="showStrokeOrder('${(kata||"").replace(/'/g,"")}')">✍️ Urutan Goresan</button>
           ${/[\u3400-\u9fff]/.test(kata) ? `<button class="btn" onclick="KC.openWord(${idx},'latihan')">書いてみよう ✍️</button>` : ""}
-          <button class="btn gold" onclick='rangkumCepat({jp:"${(kata||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kosakata ${no}")'>➕ Rangkum</button>
+          <button class="btn gold" onclick='rangkumCepat({jp:"${(kata||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${(arti||"").replace(/"/g,"\\&quot;")}"}, "Kosakata ${no}")'>➕ Masukkan ke rangkuman</button>
+          <button class="btn ghost" onclick="route('rangkuman')">📒 Buka rangkuman</button>
         </div>
         ${_commentsPlaceholder("kosakata", state.level, itemNo(it, idx))}
       </div>
@@ -2995,7 +2997,8 @@ window.showMateri = async (tipe, idx, vno) => {
         <div style="font-size:14px; margin:12px 0; line-height:1.6; text-align:left; background:rgba(255,255,255,.04); padding:14px; border-radius:10px; white-space:pre-wrap;">${penjelasan}</div>
         ${contohHtml}`}
         <div style="margin-top:14px; text-align:center;">
-          <button class="btn gold" onclick='rangkumCepat({jp:"${(pola||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Rangkum pola ini</button>
+          <button class="btn gold" onclick='rangkumCepat({jp:"${(pola||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Masukkan pola ke rangkuman</button>
+          <button class="btn ghost" onclick="route('rangkuman')">📒 Buka rangkuman</button>
         </div>
         ${_commentsPlaceholder("bunpou", state.level, itemNo(it, idx))}
       </div>
@@ -3375,12 +3378,13 @@ async function _kvPaint(){
     <div class="kv-read">${_kvEsc(v.kana)}</div>
     <div class="kv-arti"><b>${_kvEsc(v.arti)}</b></div>
     ${sent ? `<div class="contoh-item" style="flex-direction:column; text-align:left; align-items:flex-start;"><div class="jp">${_rubyJp(sent.j)} <button class="say-mini" data-say="${SV.escAttr(String(sent.j).replace(/\[[^\]]*\]/g, ""))}" data-role="kosakata-contoh" onclick="SV.btn(this)">🔊</button></div><div class="id" style="text-align:left;">${_kvEsc(sent.a)}</div></div>` : ""}
-    <div class="kv-status">${st ? `Status flashcard: <b style="color:${st.color}">${st.label}</b>` : "Belum ada di flashcard"}${state.srs[v.key]?.lat ? ` · latihan baca ${state.srs[v.key].lat.bb||0}✔/${state.srs[v.key].lat.bs||0}✘ · arti ${state.srs[v.key].lat.ab||0}✔/${state.srs[v.key].lat.as||0}✘` : ""}</div>
+    <div class="kv-status">${window._kvRk && window._kvRk[v.key] ? `Status: <b style="color:#3cc878">✓ Sudah di rangkuman</b> · <a href="#rangkuman" onclick="kvClose();route('rangkuman');return false;" style="color:var(--pink-light);text-decoration:underline">Buka rangkuman →</a>` : `Belum ada di rangkuman · <a href="#rangkuman" onclick="kvClose();route('rangkuman');return false;" style="color:var(--pink-light);text-decoration:underline">Buka rangkuman →</a>`}${st ? ` · flashcard: <b style="color:${st.color}">${st.label}</b>` : ""}${state.srs[v.key]?.lat ? ` · latihan baca ${state.srs[v.key].lat.bb||0}✔/${state.srs[v.key].lat.bs||0}✘ · arti ${state.srs[v.key].lat.ab||0}✔/${state.srs[v.key].lat.as||0}✘` : ""}</div>
     <div class="kv-btns">
       <button class="btn" data-say="${sayK}" data-read="${sayR}" data-role="kosakata" onclick="SV.btn(this)">🔊 Dengar</button>
       <button class="btn ghost" onclick="showStrokeOrder('${v.kata.replace(/'/g, "")}')">書き順 Urutan goresan</button>
       <button class="btn" onclick="KC.openVocab('${v.kata.replace(/'/g, "")}','${(v.kana || "").replace(/'/g, "")}','${(v.arti || "").replace(/'/g, "").replace(/"/g, "")}',${_kvLatNo(v)},'latihan')">書いてみよう ✍️</button>
-      <button class="btn ${st ? "ghost" : "gold"}" onclick="kvAddCard()">${st ? "✓ Sudah di flashcard" : "➕ Masukkan ke flashcard"}</button>
+      <button class="btn ${window._kvRk && window._kvRk[v.key] ? "ghost" : "gold"}" onclick="kvAddCard()">${window._kvRk && window._kvRk[v.key] ? "✓ Sudah di rangkuman" : "➕ Masukkan ke rangkuman"}</button>
+      <button class="btn ghost" onclick="kvClose();route('rangkuman')">📒 Buka rangkuman</button>
     </div>
     <div class="kv-btns">
       <button class="btn ghost" onclick="kvQuiz('baca')">🔤 Latihan membaca</button>
@@ -3392,9 +3396,12 @@ async function _kvPaint(){
 }
 window.kvClose = () => { const m = document.getElementById("kv-modal"); if (m) m.remove(); window._kvM = null; };
 window.kvStep = async (d) => { const M = window._kvM; if (!M) return; M.i = (M.i + d + M.list.length) % M.list.length; M.v = M.list[M.i]; await _kvPaint(); };
+window._kvRk = window._kvRk || {};
 window.kvAddCard = async () => {
   const M = window._kvM; if (!M) return;
-  if (await _kvEnsureCard(M.v)) toast("Ditambahkan ke flashcard ✓");
+  const v = M.v;
+  const ok = await rangkumCepat({ jp: v.kata, kana: v.kana, arti: v.arti }, `Kosakata ${_kvLv()}`);
+  if (ok) window._kvRk[v.key] = 1;
   await _kvPaint();
 };
 window.kvQuiz = (kind) => {
