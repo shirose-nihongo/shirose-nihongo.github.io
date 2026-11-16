@@ -160,6 +160,7 @@ export async function loadKelasAkses() {
 }
 export function sswAllowed(slug) {
   if (isGuru()) return true;
+  try { if (FB && FB.hasFullAccess && FB.hasFullAccess()) return true; } catch (e) {}   // grup demo: semua bidang SSW terbuka
   let d = null; try { d = FB && FB.getSiswaDoc && FB.getSiswaDoc(); } catch (e) {}
   if (d && d.aksesSsw === false) return false;
   if (!slug) return true;

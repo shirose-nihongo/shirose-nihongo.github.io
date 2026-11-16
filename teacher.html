@@ -219,7 +219,7 @@ tr.stat-row td{padding-top:0; border-top:none;}
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script type="module">
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261116u";
+import * as FB from "./js/firebase-sync.js?v=20261116z";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261112d";
 
 const state = {
@@ -1976,7 +1976,7 @@ window.studentActivity = async (uid, tab) => {
         <h3 style="margin-top:12px;">Ujian JLPT Center (per level &amp; jenis)</h3><div class="table-wrap"><table><thead><tr><th>Ujian</th><th>Dikerjakan</th><th>Terakhir</th><th>Terbaik</th><th>Tanggal terakhir</th></tr></thead><tbody>${jr}</tbody></table></div>
         <h3 style="margin-top:12px;">Riwayat nilai (15 terakhir)</h3><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ujian</th><th>Nilai</th><th>Benar</th></tr></thead><tbody>${nr}</tbody></table></div>`;
     } else if (tab === "ssw") {
-      const core = await import("./js/ssw-core.js?v=20261116y");
+      const core = await import("./js/ssw-core.js?v=20261116z");
       const kls = state.kelasList || [];
       const items = await Promise.all(_SSW_8.map(async ([slug, nama]) => {
         const blokTotal = siswa.aksesSsw === false;

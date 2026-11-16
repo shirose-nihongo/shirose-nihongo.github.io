@@ -149,7 +149,14 @@ export async function setUnlimitedCoins(uid, enable) {
 const FULL_ACCESS_EMAILS = ["arumiganteng@gmail.com"];
 export function hasFullAccess(user = currentUser) {
   const em = (user && user.email || "").trim().toLowerCase();
-  return !!em && FULL_ACCESS_EMAILS.includes(em);
+  if (!!em && FULL_ACCESS_EMAILS.includes(em)) return true;
+  // Grup DEMO: siswa yang kelasnya bernama "demo" (diatur guru) atau punya permissions.full_access → akses penuh semua.
+  const d = (user && user === currentUser) ? currentSiswaDoc : null;
+  if (d) {
+    if (d.permissions && d.permissions.full_access === true) return true;
+    if (String(d.kelas || "").trim().toLowerCase() === "demo") return true;
+  }
+  return false;
 }
 export function hasUnlimitedCoins() {
   if (isDeveloper(currentUser)) return true;
