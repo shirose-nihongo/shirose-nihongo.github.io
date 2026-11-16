@@ -2280,6 +2280,16 @@ window.route = (path) => {
 
   _updateFabNav(name);
 
+  // Tombol back bawaan HP/browser di lobby (pilih-level) → halaman Profil (tempat tombol Keluar),
+  // bukan nyasar ke halaman sebelumnya. Dilakukan sekali per sesi login.
+  try {
+    if (name === "pilih-level" && state.user && !sessionStorage.getItem("_lobbyGuard")) {
+      sessionStorage.setItem("_lobbyGuard", "1");
+      history.replaceState({ prof: 1 }, "", "#profile");
+      history.pushState({ lobby: 1 }, "", "#pilih-level");
+    }
+  } catch (_) {}
+
   // Alur wajib: LOGIN → PEMILIHAN JLPT → CHARACTER → fitur. Selama siswa
   // belum memilih level di sesi ini, semua halaman diarahkan ke #pilih-level.
   if (state.user && !BEBAS_PILIH_LEVEL.has(name) && !String(name).startsWith("ssw") && !String(name).startsWith("jft") && !(name === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess"))) && !levelSudahDipilih()){
@@ -5469,6 +5479,7 @@ async function renderProfile(){
 window.logout = async () => {
   // Tampilan langsung pindah ke halaman login; signOut jalan di latar belakang (tidak menunggu jaringan).
   _lupakanPilihanLevel();
+  try { sessionStorage.removeItem("_lobbyGuard"); } catch (_) {}
   state.user = null; state.siswa = null;
   try { document.getElementById("btn-auth").innerHTML = "🔑 Masuk"; document.getElementById("btn-auth").onclick = () => route("login"); document.getElementById("btn-out").classList.add("hidden"); document.getElementById("guru-link").classList.add("hidden"); } catch (_) {}
   toast("Dadah 👋");
@@ -5479,9 +5490,25 @@ window.logout = async () => {
     console.warn("signOut", e);
     try { indexedDB.deleteDatabase("firebaseLocalStorageDb"); } catch (_) {}
     try { Object.keys(localStorage).filter(k => k.startsWith("firebase:")).forEach(k => localStorage.removeItem(k)); } catch (_) {}
-    setTimeout(() => location.reload(), 300);
   }
+  _keLanding();
 };
+// Setelah keluar: ke halaman web pemasaran (landing). Kalau landing ada di dasar riwayat, mundur ke sana
+// supaya tombol back berikutnya langsung keluar dari web; kalau tidak, ganti halaman ini dengan landing.
+function _keLanding(){
+  try {
+    const nav = window.navigation;
+    if (nav && nav.entries && nav.traverseTo) {
+      const es = nav.entries(), first = es[0];
+      if (first && es.length > 1 && /(^|\/)landing(\.html)?$/.test(new URL(first.url).pathname)) {
+        nav.traverseTo(first.key);
+        setTimeout(() => location.replace("./landing.html"), 800);
+        return;
+      }
+    }
+  } catch (_) {}
+  location.replace("./landing.html");
+}
 
 /* ========== ACHIEVEMENTS ========== */
 async function renderAchievements(){
@@ -5755,7 +5782,12 @@ updateChips();
     app.innerHTML = renderLogin();
   } catch(e){ /* best-effort; onAuth will render properly */ }
 })();
-window.addEventListener("hashchange", () => route(location.hash.slice(1) || "home"));
+window.addEventListener("hashchange", () => {
+  const h = location.hash.slice(1) || "home";
+  // Sudah login lalu back sampai ke halaman login lama → teruskan mundur (keluar web), jangan balik ke login.
+  if (state.user && /^(login|masuk|daftar)$/.test(h.split("/")[0])) { history.back(); return; }
+  route(h);
+});
 
 // Register SW
 if ("serviceWorker" in navigator) {
