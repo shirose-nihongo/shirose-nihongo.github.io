@@ -833,6 +833,23 @@ html{overflow-x:hidden;}
 .match-item.match-bad{border-color:var(--red); background:rgba(239,68,68,.15); animation:shakeX .3s;}
 @keyframes shakeX{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 
+
+/* Pembahasan hafalan */
+.haf-review-filter{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px;}
+.haf-review-list{display:grid; gap:8px; max-height:60vh; overflow-y:auto; padding-right:2px;}
+.haf-rv{border:1px solid var(--border); border-left-width:4px; border-radius:10px; padding:10px 12px; background:rgba(42,50,112,.3);}
+.haf-rv.ok{border-left-color:var(--green);}
+.haf-rv.retry{border-left-color:var(--gold);}
+.haf-rv.bad{border-left-color:var(--red);}
+.haf-rv.skip{border-left-color:var(--gray);}
+.haf-rv-top{display:flex; align-items:center; gap:10px;}
+.haf-rv-no{font-size:11px; color:var(--gray); min-width:22px;}
+.haf-rv-jp{font-size:22px; font-weight:800; color:var(--pink-light); flex:1; min-width:0;}
+.haf-rv-chip{font-size:11px; font-weight:800; white-space:nowrap; margin-left:auto;}
+.haf-rv.ok .haf-rv-chip{color:var(--green);} .haf-rv.retry .haf-rv-chip{color:var(--gold);} .haf-rv.bad .haf-rv-chip{color:var(--red);}
+.haf-rv-ans{font-size:13px; margin-top:6px;}
+.haf-rv-wrong{font-size:12px; color:var(--gray); margin-top:3px;}
+
 /* Multiple choice feedback */
 .opsi.opsi-ok{border-color:var(--green); background:rgba(16,185,129,.18);}
 .opsi.opsi-bad{border-color:var(--red); background:rgba(239,68,68,.18);}
@@ -4183,11 +4200,13 @@ window.matchTap = (side, i) => {
       lb.classList.add("match-ok"); rb.classList.add("match-ok");
       lb.disabled = true; rb.disabled = true;
       state.hafalan_score.benar++;
+      _hafLog(state.hafalan_pos + L, true);
       matchAfterPair(true, L);
     } else {
       lb.classList.add("match-bad"); rb.classList.add("match-bad");
       setTimeout(() => { lb.classList.remove("match-bad","picked"); rb.classList.remove("match-bad","picked"); }, 500);
       state.hafalan_score.salah++;
+      _hafLog(state.hafalan_pos + L, false, ((state.hafalan_queue[state.hafalan_pos + R]) || {}).back);
     }
     state.match_pick = {};
     // If the current batch is cleared, advance
@@ -4228,6 +4247,7 @@ window.matchCheckDone = () => {
   }
 };
 window.matchSkip = () => {
+  document.querySelectorAll('.match-item[data-side="L"]:not(:disabled)').forEach(b => _hafLog(state.hafalan_pos + Number(b.dataset.i), null));   // belum dipasangkan = dilewati
   state.hafalan_pos = Math.min(state.hafalan_pos + 5, state.hafalan_queue.length);
   if (_hafSSW()) _sswSaveSess(); renderHafalanSession().then(h => { document.getElementById("app").innerHTML = h; });
 };
@@ -4326,6 +4346,7 @@ window.mcPick = async (encoded, btn) => {
   { const _it = state.hafalan_queue[state.hafalan_pos]; try { fb.innerHTML += _pembahasanPG(_it, picked, correct); } catch (e) { console.warn("pembahasan:", e.message); } }
   // SRS update
   const it = state.hafalan_queue[state.hafalan_pos];
+  _hafLog(state.hafalan_pos, correct, picked);   // untuk pembahasan di akhir sesi
   const key = _srsKey(it.tipe, {no:it.no, skey:it.skey}, it.idx);
   const now = Date.now();
   const card = state.srs[key] || { n:0, interval:1, due:now };
@@ -4352,6 +4373,62 @@ window.mcNext = () => {
   if (_hafSSW()) _sswSaveSess(); renderHafalanSession().then(h => { document.getElementById("app").innerHTML = h; });
 };
 
+/* ========== PEMBAHASAN sesi hafalan (pilihan ganda & matching) ==========
+ * Setiap jawaban dicatat di state.hafalan_score.log: { i: indeks kartu di antrean, ok: true|false|null(dilewati), p: jawaban yang dipilih }.
+ * Berlaku untuk semua level (N5–N1, JFT/Irodori, SSW) karena memakai mesin hafalan yang sama. Flashcard tidak dicatat. */
+function _hafLog(i, ok, picked){
+  const sc = state.hafalan_score; if (!sc) return;
+  (sc.log = sc.log || []).push({ i, ok, p: picked == null ? null : String(picked) });
+}
+function _hafReviewRows(){
+  const sc = state.hafalan_score || {}, q = state.hafalan_queue || [], by = new Map();
+  (sc.log || []).forEach(e => {
+    const it = q[e.i]; if (!it) return;
+    const r = by.get(e.i) || { i: e.i, it, wrong: [], solved: false, skipped: false };
+    if (e.ok === true) r.solved = true;
+    else if (e.ok === false) { if (e.p && !r.wrong.includes(e.p)) r.wrong.push(e.p); }
+    else r.skipped = true;
+    by.set(e.i, r);
+  });
+  return [...by.values()].sort((a, b) => a.i - b.i).map(r => {
+    r.st = r.solved ? (r.wrong.length ? "retry" : "ok") : (r.wrong.length ? "bad" : "skip");
+    return r;
+  });
+}
+function _hafReviewHtml(){
+  const rows = _hafReviewRows(); if (!rows.length) return "";
+  const f = state._hafRvFilter || "all";
+  const nBad = rows.filter(r => r.st === "bad" || r.st === "retry" || r.st === "skip").length;
+  const nOk = rows.filter(r => r.st === "ok").length;
+  const chip = (k, lbl) => `<button class="haf-chip ${f === k ? "on" : ""}" onclick="hafReviewFilter('${k}')">${lbl}</button>`;
+  const show = rows.filter(r => f === "all" || (f === "ok" ? r.st === "ok" : r.st !== "ok"));
+  const LBL = { ok: "✓ Benar", retry: "⚠ Benar setelah salah", bad: "✗ Salah", skip: "↷ Dilewati" };
+  return `
+    <div class="haf-review">
+      <h3 style="margin:18px 0 8px;">📖 Pembahasan</h3>
+      <div class="haf-review-filter">${chip("all", `Semua (${rows.length})`)}${chip("ok", `Benar (${nOk})`)}${chip("bad", `Perlu diulang (${nBad})`)}</div>
+      <div class="haf-review-list">
+        ${show.length ? show.map(r => {
+          const it = r.it, rd = String(it.reading || "").replace(/<[^>]+>/g, "");
+          return `<div class="haf-rv ${r.st}">
+            <div class="haf-rv-top">
+              <span class="haf-rv-no">${r.i + 1}</span>
+              ${it.img ? `<img src="${it.img}" alt="" style="height:44px;border-radius:6px;">` : `<span class="jp haf-rv-jp">${_hafFront(it)}</span>`}
+              <span class="haf-rv-chip">${LBL[r.st]}</span>
+            </div>
+            <div class="haf-rv-ans">Jawaban benar: <b>${it.back}</b>${rd && !it.img ? ` <span style="color:var(--gray-dim);">· ${rd}</span>` : ""}</div>
+            ${r.wrong.length ? `<div class="haf-rv-wrong">Pilihanmu yang salah: ${r.wrong.map(w => `<s>${w}</s>`).join(", ")}</div>` : ""}
+            ${r.st === "skip" ? `<div class="haf-rv-wrong">Belum dipasangkan (kelompok dilewati).</div>` : ""}
+          </div>`;
+        }).join("") : `<div style="color:var(--gray); text-align:center; padding:14px;">Tidak ada item di filter ini.</div>`}
+      </div>
+    </div>`;
+}
+window.hafReviewFilter = (k) => {
+  state._hafRvFilter = k;
+  renderHafalanSession().then(h => { document.getElementById("app").innerHTML = h; });
+};
+
 /* ========== Session done summary ========== */
 function renderHafalanDone(){
   const s = state.hafalan_score || { benar:0, salah:0 };
@@ -4371,6 +4448,7 @@ function renderHafalanDone(){
         <div>${s.benar} benar · ${s.salah} salah</div>
         <div style="color:var(--gray); margin-top:6px;">+${xp} XP · +${koin} 🪙</div>
       </div>
+      ${_hafReviewHtml()}
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
         <button class="btn" onclick="route('${_hafMenu()}')">Sesi lagi</button>
         <button class="btn ghost" onclick="route('${_hafHome()}')">${_hafHomeLbl()}</button>
