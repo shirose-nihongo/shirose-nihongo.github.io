@@ -137,7 +137,7 @@
     ["click","mousedown","touchstart","contextmenu"].forEach(function(ev){o.addEventListener(ev,function(e){e.preventDefault();e.stopPropagation()},true)});
     document.body.appendChild(o);document.documentElement.classList.add("th-previewing");
     var p=document.createElement("div");p.id="th-prev";
-    p.innerHTML='<span>👀 Pratinjau <b>'+x[2]+'</b> · 🔒 Lv '+x[4]+'</span><button class="pv-x" onclick="SHIROSE_THEME.closePreview()">✕ Batalkan pratinjau</button>';
+    p.innerHTML='<span>👀 Pratinjau <b>'+x[2]+'</b> · 🔒 Lv '+x[4]+' atau dari 🎰 Gacha</span><button class="pv-x" onclick="SHIROSE_THEME.closePreview()">✕ Batalkan pratinjau</button>';
     document.body.appendChild(p);
   }
   window.addEventListener("hashchange",function(){clearPrev();apply(get())});
