@@ -546,9 +546,13 @@ export async function listWalletLogOf(uid, n = 30) {
 export async function getGami(level) {
   if (!currentUser) return null;
   try {
-    const snap = await getDoc(doc(db, "siswa", currentUser.uid, "gami", level));
+    // Baca dokumen gami & dompet PARALEL (dulu berurutan → login/ganti akun terasa ngelag).
+    const [snap, k] = await Promise.all([
+      getDoc(doc(db, "siswa", currentUser.uid, "gami", level)),
+      getWalletKoin().catch(() => null),
+    ]);
     const g = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
-    const k = await getWalletKoin(); if (k !== null) g.koin = k;
+    if (k !== null) g.koin = k;
     return g;
   } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:0, streak:0, level_karakter:1 }; }
 }

@@ -1437,7 +1437,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261116m";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261116t";
+import * as FB from "./js/firebase-sync.js?v=20261116u";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261114f";
@@ -5702,9 +5702,15 @@ FB.onAuth(async (user, siswa) => {
 
   // Snap to an allowed level before loading gami / rendering routes
   if (user && siswa) enforceLevelAccess();
-  await loadGami();
+  // Jangan biarkan UI menunggu jaringan: tunggu data XP/koin paling lama 1,2 dtk, sisanya dimuat di latar belakang.
+  const _gp = loadGami();
+  await Promise.race([_gp.catch(() => {}), new Promise(r => setTimeout(r, 1200))]);
   renderLevelPills();
   updateChips();
+  _gp.then(() => {
+    try { updateChips(); renderLevelPills(); } catch (_) {}
+    if ((location.hash.slice(1) || "home") === "home" && state.user) { try { route("home"); } catch (_) {} }
+  }).catch(() => {});
 
   const currentHash = (location.hash.slice(1) || "").split("/")[0];
 
