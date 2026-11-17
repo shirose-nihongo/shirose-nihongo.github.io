@@ -8,10 +8,10 @@ SRC_BUS = "（外国人向け）バス運転者を目指す人の為の学習用
 BAB5 = {"id": "bab5", "title_id": "Khusus Sopir Bus (Teks Asosiasi Bus)", "title_jp": "バス運転者の学習（日本バス協会）",
         "intro_id": "Aturan lalu lintas, SIM, cara mengemudi, tempat berbahaya, kewajiban sopir bus, 点呼, bencana, dan pelayanan penumpang.",
         "intro_jp": "交通ルール、免許、運転の方法、危険な場所、バス運転者の心得、点呼、災害、接遇を学びます。",
-        "pages": [3, 68], "src": SRC_BUS}
+        "pages": [3, 68], "pagesJp": [235, 300], "src": SRC_BUS}
 
 SUBS5 = [
- {"id": "b5s1", "pages": [3, 10], "t_id": "Lampu Lalu Lintas, Rambu, dan Perintah Polisi", "t_jp": "信号・標識・警察官の指示",
+ {"id": "b5s1", "pages": [3, 10], "pagesJp": [235, 242], "t_id": "Lampu Lalu Lintas, Rambu, dan Perintah Polisi", "t_jp": "信号・標識・警察官の指示",
   "id_bl": [("ul", [
      "Dasar: patuhi aturan, **peduli** pada orang lain, dan siapkan diri untuk kecelakaan (asuransi, pertolongan pertama, perlengkapan darurat).",
      "**青**: boleh jalan. **黄**: **jangan melewati garis berhenti**; bila sudah terlalu dekat dan tak bisa berhenti aman, boleh terus. **赤**: tidak boleh melewati garis berhenti.",
@@ -44,7 +44,7 @@ SUBS5 = [
          MC("Rambu STOP (止まれ) berarti…", "「止まれ」の標識では、どうしますか。",
             ("Wajib berhenti sejenak", "必ず一時停止する"), [("Boleh lewat tanpa berhenti", "止まらなくてもよい"), ("Parkir lama", "長く駐車する"), ("Mempercepat", "速度を上げる")], "Berhenti sejenak.", "一時停止します。")]},
 
- {"id": "b5s2", "pages": [11, 20], "t_id": "SIM, Inspeksi, dan Persiapan Mengemudi", "t_jp": "免許・点検・運転前の心得",
+ {"id": "b5s2", "pages": [11, 20], "pagesJp": [243, 252], "t_id": "SIM, Inspeksi, dan Persiapan Mengemudi", "t_jp": "免許・点検・運転前の心得",
   "id_bl": [("ul", [
      "Sebelum mengemudi: bawa **SIM** yang sesuai, **自動車検査証** dan **自賠責保険** di mobil, patuhi syarat di SIM, pasang **初心者マーク** bila pemula, bawa **非常信号用具**.",
      "Rencanakan perjalanan; istirahat **tiap 2 jam**. Jangan mengemudi saat lelah, sakit, atau minum obat yang mengantuk. **Sisa alkohol semalam** bisa terbawa sampai pagi.",
@@ -76,7 +76,7 @@ SUBS5 = [
          MC("Interval inspeksi berkala kendaraan usaha (bus)…", "事業用の自動車の定期点検は、何か月ごとですか。",
             ("3 bulan", "3か月"), [("1 bulan", "1か月"), ("12 bulan", "12か月"), ("24 bulan", "24か月")], "3 bulan.", "3か月ごとです。")]},
 
- {"id": "b5s3", "pages": [21, 44], "t_id": "Cara Mengemudi: Jalur, Pejalan Kaki, Kecepatan, Parkir", "t_jp": "運転の方法",
+ {"id": "b5s3", "pages": [21, 44], "pagesJp": [253, 276], "t_id": "Cara Mengemudi: Jalur, Pejalan Kaki, Kecepatan, Parkir", "t_jp": "運転の方法",
   "id_bl": [("ul", [
      "**Posisi duduk** benar; **sabuk pengaman** wajib semua penumpang; jangan pakai ponsel/lihat navigasi saat mengemudi.",
      "Sebelum jalan: cek depan-belakang-bawah mobil, beri isyarat, cek kaca. **Jangan mundur** bila bisa dihindari.",
@@ -118,7 +118,7 @@ SUBS5 = [
          MC("Parkir dilarang dalam jarak berapa dari perlintasan kereta?", "踏切から何メートル以内は駐車禁止ですか。",
             ("10 m", "10メートル"), [("1 m", "1メートル"), ("0,5 m", "0.5メートル"), ("100 m", "100メートル")], "10 m.", "10メートル以内です。")]},
 
- {"id": "b5s4", "pages": [45, 55], "t_id": "Tempat Berbahaya: Perlintasan, Malam, Cuaca, Tol", "t_jp": "危険な場所での運転・高速道路",
+ {"id": "b5s4", "pages": [45, 55], "pagesJp": [277, 287], "t_id": "Tempat Berbahaya: Perlintasan, Malam, Cuaca, Tol", "t_jp": "危険な場所での運転・高速道路",
   "id_bl": [("ul", [
      "**踏切**: **berhenti sejenak** dan cek kiri-kanan (kereta dari arah berlawanan mungkin datang). **Jangan masuk** saat alarm berbunyi atau palang turun/mulai turun. Jangan masuk bila seberang macet.",
      "Di perlintasan: jalan terus dengan **gigi rendah**, jangan berhenti/ganti gigi. Bila mogok: **tekan tombol darurat** di tiang, atau pakai **発炎筒**; cepat keluarkan kendaraan.",
@@ -148,7 +148,7 @@ SUBS5 = [
          MC("Bila kendaraan mogok di perlintasan, yang dilakukan pertama adalah…", "踏切で車が動かなくなったら、まずどうしますか。",
             ("Tekan tombol darurat/pakai flare dan beri tahu kereta", "非常ボタンや発炎筒で列車に知らせる"), [("Tinggalkan mobil tanpa lapor", "何もしないで逃げる"), ("Tidur", "車の中で寝る"), ("Ganti gigi di tengah rel", "線路の上でギアを変える")], "Beri tahu kereta.", "列車に知らせます。")]},
 
- {"id": "b5s5", "pages": [56, 63], "t_id": "Kewajiban Sopir Bus dan 点呼", "t_jp": "バス運転者の心得と点呼",
+ {"id": "b5s5", "pages": [56, 63], "pagesJp": [288, 295], "t_id": "Kewajiban Sopir Bus dan 点呼", "t_jp": "バス運転者の心得と点呼",
   "id_bl": [("ul", [
      "Pikirkan selalu **keselamatan penumpang**: jangan rem/start mendadak; beri tahu penumpang di jalan bergelombang.",
      "Sopir bus harus: **lapor** ke perusahaan bila sakit/lelah; **hentikan operasi** bila menemukan kerusakan serius; **turunkan penumpang** saat meninggalkan bus di tanjakan atau melewati tempat berbahaya; bila terjebak di perlintasan: **evakuasi penumpang** & beri sinyal ke kereta.",
@@ -182,7 +182,7 @@ SUBS5 = [
          MC("Setelah kembali ke garasi, sopir…", "帰庫したあと、運転者がすることはどれですか。",
             ("Cek barang tertinggal di kursi paling belakang", "車の最後尾まで行って忘れ物を確認する"), [("Langsung pulang", "確認しないで帰る"), ("Tidak melakukan apa-apa", "何もしない"), ("Mencuci pakaian", "服を洗う")], "Cek ke belakang.", "最後尾まで行って確認します。")]},
 
- {"id": "b5s6", "pages": [58, 62], "t_id": "Kecelakaan, Kerusakan, dan Bencana", "t_jp": "事故・故障・災害のとき",
+ {"id": "b5s6", "pages": [58, 62], "pagesJp": [290, 294], "t_id": "Kecelakaan, Kerusakan, dan Bencana", "t_jp": "事故・故障・災害のとき",
   "id_bl": [("ul", [
      "**Kecelakaan**: ① hentikan di tempat aman & **matikan mesin**; ② tolong korban (hentikan pendarahan, jangan gerakkan yang cedera berat); ③ **laporkan ke perusahaan dan polisi** (sekecil apa pun); ④ bila ada luka, **periksa ke dokter**.",
      "Di lokasi: **jangan merokok** (bensin bisa bocor). Saksi **hit-and-run**: catat nomor/ciri kendaraan.",
@@ -213,7 +213,7 @@ SUBS5 = [
          MC("Pada saat derek mobil rusak, jarak antar mobil…", "故障車をけん引するとき、車間はどれくらいですか。",
             ("≤ 5 m dengan tali kuat", "5メートル以内で丈夫なロープ"), [("50 m", "50メートル"), ("100 m", "100メートル"), ("Tanpa tali", "ロープなし")], "Dalam 5 m.", "5メートル以内です。")]},
 
- {"id": "b5s7", "pages": [64, 68], "t_id": "Pelayanan Penumpang (接遇)", "t_jp": "接遇",
+ {"id": "b5s7", "pages": [64, 68], "pagesJp": [296, 300], "t_id": "Pelayanan Penumpang (接遇)", "t_jp": "接遇",
   "id_bl": [("ul", [
      "**接遇** = melayani penumpang dengan **keselamatan nomor satu**, ramah, sopan, dan penuh pengertian.",
      "Sikap: **bersih dan rapi**, bus tetap bersih, **perlakukan semua sama** tanpa membedakan ras, kebangsaan, jenis kelamin, usia, atau pakaian; dengarkan keluhan dengan rendah hati; **tolak naik** bagi penumpang yang membahayakan sekitarnya.",

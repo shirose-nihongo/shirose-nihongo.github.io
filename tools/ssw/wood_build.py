@@ -92,7 +92,7 @@ for b in BAB:
                    "exam": ["Istilah penting: " + ", ".join(kata_list) + "."]}
         summ_jp = {"core": ruby(flat_jp[0]), "points": [ruby(x) for x in flat_jp[1:4]], "avoid": [],
                    "exam": [ruby("大事な用語：" + "、".join(kata_list) + "。")]}
-        subs_out.append({"id": s["id"], "no": si, "title": {"id": s["t_id"], "jp": ruby(s["t_jp"])}, "pages": s["pages"],
+        subs_out.append({"id": s["id"], "no": si, "title": {"id": s["t_id"], "jp": ruby(s["t_jp"])}, "pages": s["pages"], **({"pagesJp": s["pagesJp"]} if "pagesJp" in s else {}),
                          "full": {"id": blocks(s["id_bl"]), "jp": blocks(s["jp_bl"], True)},
                          "summary": {"id": summ_id, "jp": summ_jp}})
         for t in terms:
@@ -125,7 +125,8 @@ saf = [it for sq in quiz["bab"]["bab1"] if sq.get("sub") == TEMA_SUB for it in s
 quiz["tema"] = [{"id": "tema-" + PREFIX, "tema": True, "title": {"id": TEMA_ID[0], "jp": ruby("テーマ：" + TEMA_ID[1])}, "items": saf}]
 json.dump(quiz, open(OUT / "quiz.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
 json.dump({"items": vocab}, open(OUT / "vocab.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
-json.dump({"slug": SLUG, "nama": NAMA, "jp": JPN, "nobook": True,
+_bp = getattr(_mod, "BOOK_PAGES", None)
+json.dump({"slug": SLUG, "nama": NAMA, "jp": JPN, **({"book": "jp", "pages": {"jp": _bp}} if _bp else {"nobook": True}),
            "bab": [{"id": b, "file": f"{b}.json"} for b in bab_files], "vocab": "vocab.json", "quiz": "quiz.json"},
           open(OUT / "index.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
 nq = sum(len(sq["items"]) for v in quiz["bab"].values() for sq in v)

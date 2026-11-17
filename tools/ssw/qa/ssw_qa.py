@@ -39,6 +39,16 @@ with sync_playwright() as p:
         go(f'ssw-bab/{slug}/{bid}'); rec(slug,vpn,'halaman bab',len(txt())>150,len(txt()))
         go(f'ssw-baca/{slug}/{sub}/lengkap/id',2200); rec(slug,vpn,'baca subbab (judul+isi)',len(txt())>200,len(txt()))
         ov=pg.evaluate("(()=>{const w=document.documentElement.scrollWidth;return [w,innerWidth]})()"); rec(slug,vpn,'tanpa overflow horizontal (baca)',ov[0]<=ov[1]+1,ov)
+        if not pack.get('nobook'):
+          lastb=json.load(open(f'{REPO}/data/ssw/{slug}/{pack["bab"][-1]["file"]}'))['bab']['subs'][-1]['id']
+          for sb in (sub,lastb):
+            go(f'ssw-baca/{slug}/{sb}/lengkap/id',2200)
+            ok=pg.evaluate("Array.from(document.querySelectorAll('.sw-thumbs img')).length>0 && (()=>{const i=document.querySelector('.sw-thumbs img');i.scrollIntoView();return true})()")
+            pg.wait_for_timeout(1200)
+            ok=ok and pg.evaluate("(()=>{const i=document.querySelector('.sw-thumbs img');return i.complete&&i.naturalWidth>0})()")
+            rec(slug,vpn,f'halaman buku tampil & gambar termuat ({sb})',ok,pg.evaluate("document.querySelectorAll('.sw-thumbs img').length"))
+          go(f'ssw-buku/{slug}/jp/1',2500)
+          rec(slug,vpn,'viewer buku memuat halaman',pg.evaluate("(()=>{const i=document.querySelector('.bk-pgw img,#bk-img');return !!i&&i.naturalWidth>0})()"),'')
         go(f'ssw-kosa/{slug}/all',2500); rec(slug,vpn,'daftar kosakata',len(txt())>300,len(txt()))
         # flashcard (hafalan hub -> kartu semua)
         go(f'ssw-hafal/{slug}',2500)

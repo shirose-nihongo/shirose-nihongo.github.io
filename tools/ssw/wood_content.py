@@ -725,3 +725,4 @@ SUBS["bab4"] = [
 ]
 
 import wood_extra  # noqa: soal tambahan
+BOOK_PAGES = 64

@@ -19,7 +19,7 @@ BAB = [
   "intro_jp": "荷物の種類、パレット、荷崩れ防止、偏荷重、過積載、フォークリフトを学びます。", "pages": [131, 172]},
  {"id": "bab4", "title_id": "Latihan Antisipasi Bahaya (KYT)", "title_jp": "危険予知トレーニング",
   "intro_id": "Cara memprediksi bahaya di jalan dan memilih cara mengemudi yang aman.",
-  "intro_jp": "道路の危険を予測して、安全な運転方法を考える練習をします。", "pages": [173, 242]},
+  "intro_jp": "道路の危険を予測して、安全な運転方法を考える練習をします。", "pages": [173, 232]},
 ]
 SUBS = {}
 
@@ -461,7 +461,7 @@ SUBS["bab4"] = [
          MC("KYT adalah singkatan dari…", "KYTとは何の練習ですか。",
             ("Latihan antisipasi bahaya", "危険予知トレーニング"), [("Latihan parkir", "駐車の練習"), ("Latihan memuat", "積み込みの練習"), ("Latihan berbahasa", "言葉の練習")], "危険予知トレーニング.", "危険予知トレーニングです。")]},
 
- {"id": "b4s2", "pages": [178, 242], "t_id": "Contoh Situasi KYT", "t_jp": "KYTの例",
+ {"id": "b4s2", "pages": [178, 232], "t_id": "Contoh Situasi KYT", "t_jp": "KYTの例",
   "id_bl": [("ul", [
      "**Belok kiri di persimpangan berlampu**: bahaya motor/sepeda terlindas di sisi kiri, sepeda dari kiri zebra cross, pejalan muncul dari balik mobil yang berhenti. Solusi: **cek kiri-belakang**, waspada sepeda di zebra cross kiri, **berhenti sebelum zebra cross**.",
      "**Mendekati lampu kuning**: bahaya menabrak mobil depan yang berhenti, berpapasan dengan belok kanan, menabrak anak-anak menyeberang. Solusi: **kuning = berhenti**, **perlambat lebih awal**; jangan ikut mobil di depan.",
@@ -485,3 +485,4 @@ SUBS["bab4"] = [
 
 from bus_bab import BAB5, SUBS5
 BAB.append(BAB5); SUBS["bab5"] = SUBS5
+BOOK_PAGES = 301   # file p01..p301: truk = PDF hal.10-242 (p01-p233), bus = PDF hal.1-68 (p234-p301)
