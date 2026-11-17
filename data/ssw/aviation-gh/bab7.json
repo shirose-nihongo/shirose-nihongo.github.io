@@ -1,0 +1,252 @@
+{
+ "schema": 1,
+ "bidang": "aviation-gh",
+ "source": "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab7",
+  "no": 7,
+  "title": {
+   "id": "Layanan Penumpang (Ground Staff) & Kode Bandara",
+   "jp": "{旅客|りょかく}サービス・コード"
+  },
+  "intro": {
+   "id": "Check-in, bagasi tercatat, gate, kedatangan, transit, special assistance, irregular, dan kode 2/3 huruf."
+  },
+  "pages": [
+   41,
+   51
+  ],
+  "pagesJp": [
+   41,
+   51
+  ],
+  "subs": [
+   {
+    "id": "b7s1",
+    "no": 1,
+    "title": {
+     "id": "Layanan Keberangkatan",
+     "jp": "{出発時|しゅっぱつじ}のサービス"
+    },
+    "pages": [
+     17,
+     18
+    ],
+    "pagesJp": [
+     41,
+     43
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Check-in counter"
+      },
+      {
+       "ul": [
+        "Internasional: cek **tiket, paspor, visa / otorisasi perjalanan elektronik**. Domestik: **tiket dan tanda pengenal**. Cocokkan data reservasi dengan dokumen; cek masa berlaku paspor dan syarat masuk negara tujuan.",
+        "**Penentuan kursi** sesuai permintaan (jendela/lorong, kursi roda, anak) dan **penerbitan boarding pass** (nama, jam, tujuan, nomor penerbangan, gate, nomor kursi)."
+       ]
+      },
+      {
+       "h": "Bagasi tercatat"
+      },
+      {
+       "ul": [
+        "Terima & periksa: cek **kerusakan luar**, tanyakan **barang berbahaya**. Cek **berat/ukuran**; bila melebihi aturan, tarik **biaya kelebihan**.",
+        "Pasang **tag tujuan** dan berikan **claim tag** ke penumpang. Pandu agar barang terlarang (pisau, gunting) / berbahaya (gas bertekanan tinggi) **dimasukkan ke bagasi tercatat** dan bukan kabin."
+       ]
+      },
+      {
+       "h": "Lobi & self-service"
+      },
+      {
+       "ul": [
+        "Informasi fasilitas dan keberangkatan: pemeriksaan keamanan, gate, informasi **delay/pembatalan**, pertanyaan umum (duty free, penukaran uang).",
+        "**Mesin check-in otomatis** (check-in, ubah kursi, mileage, cetak tag, kuitansi); **SBD (Self Bag Drop)** — penumpang menaruh sendiri bagasi di konveyor."
+       ]
+      },
+      {
+       "h": "Di GATE"
+      },
+      {
+       "ul": [
+        "Sebelum boarding: **briefing** dengan awak kabin (jumlah penumpang, penumpang butuh bantuan, transit, kesiapan pesawat); cek **PBB** dan konter; cek bagasi kabin yang melebihi ukuran.",
+        "**Boarding**: pengumuman **prioritas/kelas** dalam bahasa Jepang dan Inggris; **scan** boarding pass + paspor untuk memantau penumpang secara real-time.",
+        "Tanpa scanner: **もぎり** (potong kupon) lalu cocokkan dengan sistem; cocokkan **manifes kertas** satu per satu (**head count**); prioritaskan kursi roda, ibu hamil, anak.",
+        "**Delay/masalah**: umumkan segera; siapkan **pengganti** (penerbangan lain, hotel, makan); **cari penumpang yang belum naik** — bila tak ketemu, lakukan **offload** bagasinya dari pesawat; **tolak boarding** (penggunaan tidak sah, mabuk) demi keselamatan.",
+        "Penutup: setelah semua naik, lapor **jumlah akhir** ke awak kabin/petugas operasi lalu **door close**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{旅客|りょかく}サービス（グランドスタッフ）は、{空港|くうこう}に{着|つ}いてから{目的地|もくてきち}で{降|お}りるまでを{助|たす}ける{仕事|しごと}です。",
+        "チェックイン：{国際線|こくさいせん}は{航空券|こうくうけん}・パスポート・ビザを{確認|かくにん}し、{国内線|こくないせん}は{航空券|こうくうけん}と{身分証明書|みぶんしょうめいしょ}を{確認|かくにん}します。{座席|ざせき}を{決|き}めて{搭乗券|とうじょうけん}を{出|だ}します。",
+        "{預|あず}け{手荷物|てにもつ}：{外|そと}の{破損|はそん}と{危険物|きけんぶつ}を{確認|かくにん}し、{重量|じゅうりょう}・サイズを{見|み}ます。{行|い}き{先|さき}タグをつけて、クレーム・タグを{渡|わた}します。ナイフやハサミ、{高圧|こうあつ}ガスなどは{預|あず}け{荷物|にもつ}に{入|い}れてもらいます。",
+        "ゲート：{搭乗前|とうじょうまえ}にCAとブリーフィングをします。{日本語|にほんご}と{英語|えいご}で{案内|あんない}し、{搭乗券|とうじょうけん}とパスポートをスキャンします。スキャナーがないときは{半券|はんけん}を{切|き}って{人数|にんずう}を{確認|かくにん}します（ヘッドカウント）。",
+        "おくれやトラブルのときは、すぐに{案内|あんない}して{代|か}わりの{便|びん}・ホテル・{食事|しょくじ}を{用意|ようい}します。{乗|の}っていない{人|ひと}は{探|さが}し、{見|み}つからなければ{荷物|にもつ}を{降|お}ろします（オフロード）。",
+        "{全員|ぜんいん}の{搭乗|とうじょう}を{確認|かくにん}したら、{最後|さいご}の{人数|にんずう}をCAに{報告|ほうこく}して、ドアを{閉|し}めます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Internasional: cek tiket, paspor, visa / otorisasi perjalanan elektronik. Domestik: tiket dan tanda pengenal. Cocokkan data reservasi dengan dokumen; cek masa berlaku pas…",
+      "points": [
+       "Penentuan kursi sesuai permintaan (jendela/lorong, kursi roda, anak) dan penerbitan boarding pass (nama, jam, tujuan, nomor penerbangan, gate, nomor kursi).",
+       "Terima & periksa: cek kerusakan luar, tanyakan barang berbahaya. Cek berat/ukuran; bila melebihi aturan, tarik biaya kelebihan.",
+       "Pasang tag tujuan dan berikan claim tag ke penumpang. Pandu agar barang terlarang (pisau, gunting) / berbahaya (gas bertekanan tinggi) dimasukkan ke bagasi tercatat dan b…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{旅客|りょかく}サービス（グランドスタッフ）は、{空港|くうこう}に{着|つ}いてから{目的地|もくてきち}で{降|お}りるまでを{助|たす}ける{仕事|しごと}です。",
+      "points": [
+       "チェックイン：{国際線|こくさいせん}は{航空券|こうくうけん}・パスポート・ビザを{確認|かくにん}し、{国内線|こくないせん}は{航空券|こうくうけん}と{身分証明書|みぶんしょうめいしょ}を{確認|かくにん}します。{座席|ざせき}を{決|き}めて{搭乗券|とうじょうけん}を{出|だ}します。",
+       "{預|あず}け{手荷物|てにもつ}：{外|そと}の{破損|はそん}と{危険物|きけんぶつ}を{確認|かくにん}し、{重量|じゅうりょう}・サイズを{見|み}ます。{行|い}き{先|さき}タグをつけて、クレーム・タグを{渡|わた}します。ナイフやハサミ、{高圧|こうあつ}ガスなどは{預|あず}け{荷物|にもつ}に{入|い}れてもらいます。",
+       "ゲート：{搭乗前|とうじょうまえ}にCAとブリーフィングをします。{日本語|にほんご}と{英語|えいご}で{案内|あんない}し、{搭乗券|とうじょうけん}とパスポートをスキャンします。スキャナーがないときは{半券|はんけん}を{切|き}って{人数|にんずう}を{確認|かくにん}します（ヘッドカウント）。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b7s2",
+    "no": 2,
+    "title": {
+     "id": "Kedatangan, Transit, Special Assistance, Irregular",
+     "jp": "{到着|とうちゃく}・{乗り継|のりつ}ぎ・スペシャルアシスタンス"
+    },
+    "pages": [
+     19,
+     19
+    ],
+    "pagesJp": [
+     43,
+     44
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Kedatangan & Transit"
+      },
+      {
+       "ul": [
+        "**Baggage claim**: awasi dan rapikan pengembalian bagasi. **Masalah bagasi** (hilang/rusak): cari, perbaiki, urus pengiriman. **Info kedatangan**: imigrasi, pintu keluar, transportasi umum.",
+        "**Transit**: prioritaskan penumpang yang waktunya sempit (mis. karena delay). Pahami **MCT** — ditentukan oleh **jarak pindah, jenis prosedur (domestik/internasional), kombinasi maskapai**."
+       ]
+      },
+      {
+       "h": "Special assistance"
+      },
+      {
+       "ul": [
+        "Sasaran: pengguna **kursi roda**, tunanetra/tunarungu, lansia, cedera, **ibu hamil**, membawa anak, **anak bepergian sendiri**.",
+        "Bantuan: pemandu dengan kart/kursi roda; konter khusus & **prioritas boarding**; bantuan ke kursi, **kursi roda dalam kabin**; setelah mendarat: bantu turun, ambil bagasi, serahkan ke penjemput.",
+        "Medis: cek **surat keterangan dokter** (layak terbang), izin membawa **tabung oksigen** dan alat **cuci darah**, kursi untuk **tandu (stretcher)**.",
+        "Koordinasi reservasi: cek lebih dulu **ukuran kursi roda** dan **jenis baterai** (lithium-ion = termasuk barang berbahaya?); tempatkan staf bantuan sesuai data reservasi."
+       ]
+      },
+      {
+       "h": "Irregular terakhir"
+      },
+      {
+       "ul": [
+        "Karena cuaca/gangguan pesawat: selesaikan **pemindahan penerbangan** dan **hotel**, susun ulang rencana perjalanan penumpang."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{到着|とうちゃく}：バゲージ・クレームで{手荷物|てにもつ}の{返却|へんきゃく}を{見守|みまも}ります。ロストバゲージや{破損|はそん}は{探|さが}したり{修理|しゅうり}したりします。{入国審査|にゅうこくしんさ}・{出口|でぐち}・{交通|こうつう}の{案内|あんない}もします。",
+        "{乗|の}り{継|つ}ぎ：{時間|じかん}がない{旅客|りょかく}を{優先|ゆうせん}して{案内|あんない}します。MCT（{最低接続時間|さいていせつぞくじかん}）は「{移動距離|いどうきょり}」「{手続|てつづ}きの{種類|しゅるい}」「{航空会社|こうくうがいしゃ}の{組|く}み{合|あ}わせ」で{決|き}まります。",
+        "スペシャルアシスタンス：{車椅子|くるまいす}・{目|め}や{耳|みみ}が{不自由|ふじゆう}・{高齢者|こうれいしゃ}・{妊娠中|にんしんちゅう}・{子供連|こどもづ}れ・{子供|こども}の{一人旅|ひとりたび}の{人|ひと}を{助|たす}けます。",
+        "{医療|いりょう}：{診断書|しんだんしょ}で{飛行機|ひこうき}に{乗|の}れるか{確認|かくにん}し、{酸素|さんそ}ボンベ・{人工透析機|じんこうとうせきき}の{持|も}ち{込|こ}みを{許可|きょか}します。ストレッチャー{用|よう}の{座席|ざせき}も{用意|ようい}します。",
+        "{車椅子|くるまいす}のサイズやバッテリーの{種類|しゅるい}（リチウムイオンなど）を{先|さき}に{確認|かくにん}します。",
+        "{天気|てんき}や{機材|きざい}トラブルのときは、{振替|ふりかえ}やホテルを{手配|てはい}して、お{客様|きゃくさま}の{旅|たび}を{組|く}み{直|なお}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Baggage claim: awasi dan rapikan pengembalian bagasi. Masalah bagasi (hilang/rusak): cari, perbaiki, urus pengiriman. Info kedatangan: imigrasi, pintu keluar, transportas…",
+      "points": [
+       "Transit: prioritaskan penumpang yang waktunya sempit (mis. karena delay). Pahami MCT — ditentukan oleh jarak pindah, jenis prosedur (domestik/internasional), kombinasi ma…",
+       "Sasaran: pengguna kursi roda, tunanetra/tunarungu, lansia, cedera, ibu hamil, membawa anak, anak bepergian sendiri.",
+       "Bantuan: pemandu dengan kart/kursi roda; konter khusus & prioritas boarding; bantuan ke kursi, kursi roda dalam kabin; setelah mendarat: bantu turun, ambil bagasi, serahk…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{到着|とうちゃく}：バゲージ・クレームで{手荷物|てにもつ}の{返却|へんきゃく}を{見守|みまも}ります。ロストバゲージや{破損|はそん}は{探|さが}したり{修理|しゅうり}したりします。{入国審査|にゅうこくしんさ}・{出口|でぐち}・{交通|こうつう}の{案内|あんない}もします。",
+      "points": [
+       "{乗|の}り{継|つ}ぎ：{時間|じかん}がない{旅客|りょかく}を{優先|ゆうせん}して{案内|あんない}します。MCT（{最低接続時間|さいていせつぞくじかん}）は「{移動距離|いどうきょり}」「{手続|てつづ}きの{種類|しゅるい}」「{航空会社|こうくうがいしゃ}の{組|く}み{合|あ}わせ」で{決|き}まります。",
+       "スペシャルアシスタンス：{車椅子|くるまいす}・{目|め}や{耳|みみ}が{不自由|ふじゆう}・{高齢者|こうれいしゃ}・{妊娠中|にんしんちゅう}・{子供連|こどもづ}れ・{子供|こども}の{一人旅|ひとりたび}の{人|ひと}を{助|たす}けます。",
+       "{医療|いりょう}：{診断書|しんだんしょ}で{飛行機|ひこうき}に{乗|の}れるか{確認|かくにん}し、{酸素|さんそ}ボンベ・{人工透析機|じんこうとうせきき}の{持|も}ち{込|こ}みを{許可|きょか}します。ストレッチャー{用|よう}の{座席|ざせき}も{用意|ようい}します。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b7s3",
+    "no": 3,
+    "title": {
+     "id": "Kode Bandara 3 Huruf / Maskapai 2 Huruf",
+     "jp": "スリーレター・コード（Reference）"
+    },
+    "pages": [
+     20,
+     20
+    ],
+    "pagesJp": [
+     45,
+     51
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Lampiran buku: **kode 3 huruf bandara** (IATA) dan **kode 2 huruf maskapai**. Bandara luar negeri contoh: **JFK** = New York John F. Kennedy; **LAX** = Los Angeles; **SIN** = Singapura; **CGK** = Jakarta Soekarno-Hatta; **BKK** = Bangkok; **ICN** = Seoul Incheon; **HKG** = Hong Kong; **CDG** = Paris Charles de Gaulle; **LHR** = London Heathrow; **SYD** = Sydney; **MNL** = Manila; **SGN** = Ho Chi Minh; **HAN** = Hanoi; **DAC** = Dhaka; **KUL** = Kuala Lumpur.",
+        "Tabel buku: **A** kode bandara luar negeri, **B** kode bandara Jepang, **C** kode maskapai dunia (2 huruf, 3 huruf, **Prefix** nomor kargo), **D** kode maskapai Jepang. Contoh Prefix: **205 = ANA**.",
+        "Kode dipakai di **tag bagasi, tag tujuan kargo, dan monitor informasi**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{巻末|かんまつ}の{資料|しりょう}に、{空港|くうこう}のスリーレター・コードと{航空会社|こうくうがいしゃ}のツーレター・コードがのっています。",
+        "{例|れい}：JFK＝ニューヨーク、LAX＝ロサンゼルス、SIN＝シンガポール、CGK＝ジャカルタ、BKK＝バンコク、ICN＝ソウル・{仁川|インチョン}、HKG＝{香港|ホンコン}、CDG＝パリ、LHR＝ロンドン。",
+        "コードは、{手荷物|てにもつ}のタグ、{貨物|かもつ}の{行先|ゆきさき}タグ、{情報|じょうほう}モニターなどで{使|つか}います。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Lampiran buku: kode 3 huruf bandara (IATA) dan kode 2 huruf maskapai. Bandara luar negeri contoh: JFK = New York John F. Kennedy; LAX = Los Angeles; SIN = Singapura; CGK …",
+      "points": [
+       "Tabel buku: A kode bandara luar negeri, B kode bandara Jepang, C kode maskapai dunia (2 huruf, 3 huruf, Prefix nomor kargo), D kode maskapai Jepang. Contoh Prefix: 205 = …",
+       "Kode dipakai di tag bagasi, tag tujuan kargo, dan monitor informasi."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{巻末|かんまつ}の{資料|しりょう}に、{空港|くうこう}のスリーレター・コードと{航空会社|こうくうがいしゃ}のツーレター・コードがのっています。",
+      "points": [
+       "{例|れい}：JFK＝ニューヨーク、LAX＝ロサンゼルス、SIN＝シンガポール、CGK＝ジャカルタ、BKK＝バンコク、ICN＝ソウル・{仁川|インチョン}、HKG＝{香港|ホンコン}、CDG＝パリ、LHR＝ロンドン。",
+       "コードは、{手荷物|てにもつ}のタグ、{貨物|かもつ}の{行先|ゆきさき}タグ、{情報|じょうほう}モニターなどで{使|つか}います。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

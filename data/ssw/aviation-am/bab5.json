@@ -1,0 +1,333 @@
+{
+ "schema": 1,
+ "bidang": "aviation-am",
+ "source": "JAEA 特定技能評価試験テキスト 航空機整備 (3 buku, Rev. ORG 2019.9.13) (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab5",
+  "no": 5,
+  "title": {
+   "id": "Gambaran Umum Pesawat (航空機概要)",
+   "jp": "{航空機概要|こうくうきがいよう}"
+  },
+  "intro": {
+   "id": "Sistem listrik, kontrol penerbangan, hidrolik, udara bertekanan (pneumatic), dan pengetahuan umum sistem pesawat."
+  },
+  "pages": [
+   46,
+   66
+  ],
+  "pagesJp": [
+   46,
+   66
+  ],
+  "subs": [
+   {
+    "id": "b5s1",
+    "no": 1,
+    "title": {
+     "id": "Sistem Listrik (Electrical Power System)",
+     "jp": "{電気|でんき}システム"
+    },
+    "pages": [
+     17,
+     17
+    ],
+    "pagesJp": [
+     50,
+     54
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Dua jenis daya: **AC 115/200 V 3 fasa 400 Hz** dan **DC 28 V**.",
+        "**Sumber AC (4)**: **IDG (Integrated Drive Generator)** — generator dengan Constant Speed Drive, satu per mesin, daya utama; **APU Generator** — di darat dan terbang; **External Power** — daya dari darat, soket di hidung pesawat; **Main Battery** — normalnya DC, saat darurat diubah jadi AC oleh **Static Inverter**.",
+        "**Sumber DC (3)**: **TRU (Transformer Rectifier Unit)** — daya DC utama, ubah AC 115 V Main Bus → 28 VDC; **Main Battery** — cadangan Standby Power System, daya utama saat darurat/pendaratan otomatis, diisi **Main Battery Charger**; **APU Battery** — untuk start APU."
+       ]
+      },
+      {
+       "h": "Bus"
+      },
+      {
+       "ul": [
+        "**Bus** = titik kumpul daya dari generator/TRU yang membagikannya ke sistem dalam satu grup.",
+        "AC: **Left & Right 115 V AC Bus (Main AC Bus)** dari tiap IDG; **Transfer Bus** — normalnya dari Main AC Bus sisi sama; bila IDG sisi itu rusak, dari sisi lawan; **AC Standby Bus** — sistem penting, normal dari Left Transfer Bus, bila mati otomatis dari Main Battery via Static Inverter; **28 V AC Bus** — tegangan diturunkan dengan transformer, untuk lampu dan instrumen.",
+        "DC: **Left & Right 28 V DC Bus** dari TRU; **Battery Bus** — normal dari Left TRU; **DC Standby Bus** — sistem penting; **Hot Battery Bus** — **selalu** dialiri Main Battery."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{飛行機|ひこうき}の{電気|でんき}は、{交流|こうりゅう}（AC）115/200V・400Hzと、{直流|ちょくりゅう}（DC）28Vの2{種類|しゅるい}です。",
+        "{交流電源|こうりゅうでんげん}は4{種類|しゅるい}：IDG（{各|かく}エンジンに1{台|だい}、{主電源|しゅでんげん}）、APUジェネレーター、{外部電源|がいぶでんげん}（{機首|きしゅ}のレセプタクル）、メイン・バッテリー（{非常時|ひじょうじ}はスタティック・インバーターで{交流|こうりゅう}にする）。",
+        "{直流電源|ちょくりゅうでんげん}は3{種類|しゅるい}：TRU（AC115Vを28VDCに{変換|へんかん}、{主電源|しゅでんげん}）、メイン・バッテリー、APUバッテリー（APUの{始動用|しどうよう}）。",
+        "「バス」は、{電源|でんげん}の{電力|でんりょく}を1か{所|しょ}に{集|あつ}めて、グループのシステムに{配|くば}る{部分|ぶぶん}です。メインACバス、トランスファー・バス、ACスタンバイ・バス、28V ACバス、28V DCバス、バッテリー・バス、DCスタンバイ・バス、ホット・バッテリー・バスがあります。ホット・バッテリー・バスには{常|つね}にメイン・バッテリーの{電力|でんりょく}が{来|き}ています。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dua jenis daya: AC 115/200 V 3 fasa 400 Hz dan DC 28 V.",
+      "points": [
+       "Sumber AC (4): IDG (Integrated Drive Generator) — generator dengan Constant Speed Drive, satu per mesin, daya utama; APU Generator — di darat dan terbang; External Power …",
+       "Sumber DC (3): TRU (Transformer Rectifier Unit) — daya DC utama, ubah AC 115 V Main Bus → 28 VDC; Main Battery — cadangan Standby Power System, daya utama saat darurat/pe…",
+       "Bus = titik kumpul daya dari generator/TRU yang membagikannya ke sistem dalam satu grup."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{飛行機|ひこうき}の{電気|でんき}は、{交流|こうりゅう}（AC）115/200V・400Hzと、{直流|ちょくりゅう}（DC）28Vの2{種類|しゅるい}です。",
+      "points": [
+       "{交流電源|こうりゅうでんげん}は4{種類|しゅるい}：IDG（{各|かく}エンジンに1{台|だい}、{主電源|しゅでんげん}）、APUジェネレーター、{外部電源|がいぶでんげん}（{機首|きしゅ}のレセプタクル）、メイン・バッテリー（{非常時|ひじょうじ}はスタティック・インバーターで{交流|こうりゅう}にする）。",
+       "{直流電源|ちょくりゅうでんげん}は3{種類|しゅるい}：TRU（AC115Vを28VDCに{変換|へんかん}、{主電源|しゅでんげん}）、メイン・バッテリー、APUバッテリー（APUの{始動用|しどうよう}）。",
+       "「バス」は、{電源|でんげん}の{電力|でんりょく}を1か{所|しょ}に{集|あつ}めて、グループのシステムに{配|くば}る{部分|ぶぶん}です。メインACバス、トランスファー・バス、ACスタンバイ・バス、28V ACバス、28V DCバス、バッテリー・バス、DCスタンバイ・バス…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s2",
+    "no": 2,
+    "title": {
+     "id": "Sistem Kontrol Penerbangan (Flight Control)",
+     "jp": "{操縦|そうじゅう}システム"
+    },
+    "pages": [
+     18,
+     18
+    ],
+    "pagesJp": [
+     55,
+     59
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Primary Flight Control**: **Elevator** (sumbu **Pitch**, hidung naik-turun), **Aileron** (sumbu **Roll**, miring kiri-kanan), **Rudder** (sumbu **Yaw**, hidung kiri-kanan).",
+        "**Secondary Flight Control**: **Leading Edge (LE) Slat**, **Trailing Edge (TE) Flap**, **Spoiler (Speed Brake)**, **Stabilizer Trim System**.",
+        "Semua sistem kontrol memakai **tenaga hidrolik (Primary Power)**. **LE Slat dan TE Flap** juga memakai **listrik sebagai Secondary Power**. Pesawat baru umumnya **Fly-By-Wire** (sinyal listrik tanpa kabel kontrol).",
+        "**Komponen**: **Main wing** = penghasil gaya angkat. **Horizontal Stabilizer** (bergerak dengan hidrolik/listrik) dan **Vertical Stabilizer** (**tidak bergerak**) menstabilkan gerakan atas-bawah dan kiri-kanan. **Elevator** di belakang horizontal stabilizer (terbagi **Inboard / Outboard**). **Aileron** di belakang sayap (I/B & O/B); ada **Flaperon**. **Rudder** di belakang vertical stabilizer (**Upper/Lower**); **Yaw Damper** meredam goyangan kiri-kanan lewat rudder.",
+        "**Spoiler**: di permukaan atas sayap, **mengurangi gaya angkat**. **Flight Spoiler** (di udara; saat turun/berbelok) dan **Ground Spoiler** (setelah mendarat; **membantu pengereman**).",
+        "**LE Slat**: di bagian depan sayap (I/B & O/B), **PDU** (Power Drive Unit) satu untuk tiap I/B dan O/B; hidrolik + listrik. **TE Flap**: di bagian belakang sayap (I/B & O/B), **PDU hanya satu**; hidrolik + listrik."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{主|おも}な{操縦|そうじゅう}システム：エレベーター（ピッチ＝{機首|きしゅ}の{上下|うえした}）、エルロン（ロール＝{左右|さゆう}の{傾|かたむ}き）、ラダー（ヨー＝{機首|きしゅ}の{左右|さゆう}）。",
+        "{副操縦|ふくそうじゅう}システム：スラット、フラップ、スポイラー（スピード・ブレーキ）、スタビライザー・トリム。",
+        "すべての{操縦|そうじゅう}システムは、{油圧|ゆあつ}を{動力|どうりょく}にしています。スラットとフラップは、{電気|でんき}も{使|つか}います。{新|あたら}しい{機種|きしゅ}は、{電気信号|でんきしんごう}を{使|つか}うフライ・バイ・ワイヤ{方式|ほうしき}が{主流|しゅりゅう}です。",
+        "{水平安定板|すいへいあんていばん}は{動|うご}きますが、{垂直安定板|すいちょくあんていばん}は{動|うご}きません。エレベーターは{水平安定板|すいへいあんていばん}の{後|うし}ろ、ラダーは{垂直安定板|すいちょくあんていばん}の{後|うし}ろにあります。エルロンは{主翼|しゅよく}の{後|うし}ろにあり、フラペロンというフラップの{機能|きのう}もあるものがあります。",
+        "スポイラーは{主翼|しゅよく}の{上|うえ}にあり、{揚力|ようりょく}を{減|へ}らします。{飛行中|ひこうちゅう}に{使|つか}うものはフライト・スポイラー、{着陸後|ちゃくりくご}にブレーキを{助|たす}けるものはグラウンド・スポイラーです。",
+        "スラットは{主翼|しゅよく}の{前|まえ}、フラップは{主翼|しゅよく}の{後|うし}ろにあります。スラットのPDUは{内側|うちがわ}・{外側|そとがわ}に1{台|だい}ずつ、フラップのPDUは1{台|だい}だけです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Primary Flight Control: Elevator (sumbu Pitch, hidung naik-turun), Aileron (sumbu Roll, miring kiri-kanan), Rudder (sumbu Yaw, hidung kiri-kanan).",
+      "points": [
+       "Secondary Flight Control: Leading Edge (LE) Slat, Trailing Edge (TE) Flap, Spoiler (Speed Brake), Stabilizer Trim System.",
+       "Semua sistem kontrol memakai tenaga hidrolik (Primary Power). LE Slat dan TE Flap juga memakai listrik sebagai Secondary Power. Pesawat baru umumnya Fly-By-Wire (sinyal l…",
+       "Komponen: Main wing = penghasil gaya angkat. Horizontal Stabilizer (bergerak dengan hidrolik/listrik) dan Vertical Stabilizer (tidak bergerak) menstabilkan gerakan atas-b…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{主|おも}な{操縦|そうじゅう}システム：エレベーター（ピッチ＝{機首|きしゅ}の{上下|うえした}）、エルロン（ロール＝{左右|さゆう}の{傾|かたむ}き）、ラダー（ヨー＝{機首|きしゅ}の{左右|さゆう}）。",
+      "points": [
+       "{副操縦|ふくそうじゅう}システム：スラット、フラップ、スポイラー（スピード・ブレーキ）、スタビライザー・トリム。",
+       "すべての{操縦|そうじゅう}システムは、{油圧|ゆあつ}を{動力|どうりょく}にしています。スラットとフラップは、{電気|でんき}も{使|つか}います。{新|あたら}しい{機種|きしゅ}は、{電気信号|でんきしんごう}を{使|つか}うフライ・バイ・ワイヤ{方式|ほうしき}が{主流|しゅりゅう}です。",
+       "{水平安定板|すいへいあんていばん}は{動|うご}きますが、{垂直安定板|すいちょくあんていばん}は{動|うご}きません。エレベーターは{水平安定板|すいへいあんていばん}の{後|うし}ろ、ラダーは{垂直安定板|すいちょくあんていばん}の{後|うし}ろにあります。エルロンは{主翼|しゅよく}の{後|うし}ろにあり、フラペロンというフラップの{機能|きのう}もあるものがあります。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s3",
+    "no": 3,
+    "title": {
+     "id": "Sistem Hidrolik (Hydraulic)",
+     "jp": "{油圧|ゆあつ}システム"
+    },
+    "pages": [
+     19,
+     19
+    ],
+    "pagesJp": [
+     60,
+     61
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Pesawat **bermesin dua** memiliki **3 sistem hidrolik independen**: **Left, Center, Right**. Hidrolik menggerakkan sistem yang butuh gaya besar: **Landing Gear, Flight Control**, dll.",
+        "Komponen utama ada di mesin, **Engine Strut**, **Main Gear Wheel Well**, **Wing/Body Fairing**.",
+        "**Pompa**: **EDP (Engine Driven Pump)** — satu per mesin, **Primary Pump** sistem Left & Right; **ACMP (AC Motor Pump)** — **Primary Pump sistem Center**; juga satu di Left & Right sebagai **Secondary/Demand Pump** (saat butuh banyak, mis. landing gear naik-turun); **ADP (Air Driven Pump)** — digerakkan udara bertekanan, **Demand Pump sistem Center**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{双発機|そうはつき}の{油圧|ゆあつ}システムは、{独立|どくりつ}した3{系統|けいとう}（Left・Center・Right）です。{脚|あし}や{操縦|そうじゅう}システムなど、{大|おお}きな{力|ちから}が{必要|ひつよう}なものを{動|うご}かします。",
+        "ポンプ：EDP（エンジン{駆動|くどう}、LeftとRightの{主|おも}なポンプ）、ACMP（{交流|こうりゅう}モーター{駆動|くどう}、Centerの{主|おも}なポンプ、LeftとRightのデマンド・ポンプ）、ADP（{圧縮空気|あっしゅくくうき}で{動|うご}く、Centerのデマンド・ポンプ）。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pesawat bermesin dua memiliki 3 sistem hidrolik independen: Left, Center, Right. Hidrolik menggerakkan sistem yang butuh gaya besar: Landing Gear, Flight Control, dll.",
+      "points": [
+       "Komponen utama ada di mesin, Engine Strut, Main Gear Wheel Well, Wing/Body Fairing.",
+       "Pompa: EDP (Engine Driven Pump) — satu per mesin, Primary Pump sistem Left & Right; ACMP (AC Motor Pump) — Primary Pump sistem Center; juga satu di Left & Right sebagai S…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{双発機|そうはつき}の{油圧|ゆあつ}システムは、{独立|どくりつ}した3{系統|けいとう}（Left・Center・Right）です。{脚|あし}や{操縦|そうじゅう}システムなど、{大|おお}きな{力|ちから}が{必要|ひつよう}なものを{動|うご}かします。",
+      "points": [
+       "ポンプ：EDP（エンジン{駆動|くどう}、LeftとRightの{主|おも}なポンプ）、ACMP（{交流|こうりゅう}モーター{駆動|くどう}、Centerの{主|おも}なポンプ、LeftとRightのデマンド・ポンプ）、ADP（{圧縮空気|あっしゅくくうき}で{動|うご}く、Centerのデマンド・ポンプ）。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s4",
+    "no": 4,
+    "title": {
+     "id": "Sistem Udara Bertekanan (Pneumatic)",
+     "jp": "{圧縮空気|あっしゅくくうき}システム"
+    },
+    "pages": [
+     20,
+     20
+    ],
+    "pagesJp": [
+     62,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Menyediakan **udara bertekanan dengan suhu dan tekanan yang diatur** ke sistem pesawat.",
+        "**3 sumber udara**: **Engine Compressor Bleed Air** (saat mesin hidup, suhu/tekanan diatur), **APU Bleed Air** (di darat; cadangan di udara bila bleed air mesin rusak), **Ground Pneumatic Cart Air** (di darat sebagai pengganti mesin/APU).",
+        "**Pengguna**: **Wing Leading Edge Thermal Anti-Icing**, **Engine Nose Cowl Anti-Icing**, **Main Engine Starting**, **Hydraulic Reservoir Pressurization**, **Air Conditioning**, **Air Driven Hydraulic Pump**, **Potable Water Tank Pressurization**, **Thrust Reverser**.",
+        "**Start mesin**: normalnya udara dari **APU** memutar **starter**; ada mesin dengan starter listrik; saat APU rusak bisa pakai **Ground Pneumatic Cart**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{圧縮空気|あっしゅくくうき}システムは、{温度|おんど}と{圧力|あつりょく}を{調整|ちょうせい}した{空気|くうき}を{各|かく}システムに{送|おく}ります。",
+        "{空気|くうき}の{供給源|きょうきゅうげん}は、エンジン・ブリード・エア、APUブリード・エア、{地上|ちじょう}のニューマチック・カートの3つです。",
+        "{使|つか}うところ：{主翼前縁|しゅよくぜんえん}・エンジン・カウルの{防氷|ぼうひょう}、エンジンの{始動|しどう}、{油圧|ゆあつ}タンクの{加圧|かあつ}、{空調|くうちょう}、ADP、{飲料水|いんりょうすい}タンクの{加圧|かあつ}、スラスト・リバーサー。",
+        "エンジンの{始動|しどう}は、ふつうAPUの{空気|くうき}でスターターを{回|まわ}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Menyediakan udara bertekanan dengan suhu dan tekanan yang diatur ke sistem pesawat.",
+      "points": [
+       "3 sumber udara: Engine Compressor Bleed Air (saat mesin hidup, suhu/tekanan diatur), APU Bleed Air (di darat; cadangan di udara bila bleed air mesin rusak), Ground Pneuma…",
+       "Pengguna: Wing Leading Edge Thermal Anti-Icing, Engine Nose Cowl Anti-Icing, Main Engine Starting, Hydraulic Reservoir Pressurization, Air Conditioning, Air Driven Hydrau…",
+       "Start mesin: normalnya udara dari APU memutar starter; ada mesin dengan starter listrik; saat APU rusak bisa pakai Ground Pneumatic Cart."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{圧縮空気|あっしゅくくうき}システムは、{温度|おんど}と{圧力|あつりょく}を{調整|ちょうせい}した{空気|くうき}を{各|かく}システムに{送|おく}ります。",
+      "points": [
+       "{空気|くうき}の{供給源|きょうきゅうげん}は、エンジン・ブリード・エア、APUブリード・エア、{地上|ちじょう}のニューマチック・カートの3つです。",
+       "{使|つか}うところ：{主翼前縁|しゅよくぜんえん}・エンジン・カウルの{防氷|ぼうひょう}、エンジンの{始動|しどう}、{油圧|ゆあつ}タンクの{加圧|かあつ}、{空調|くうちょう}、ADP、{飲料水|いんりょうすい}タンクの{加圧|かあつ}、スラスト・リバーサー。",
+       "エンジンの{始動|しどう}は、ふつうAPUの{空気|くうき}でスターターを{回|まわ}します。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s5",
+    "no": 5,
+    "title": {
+     "id": "Pengetahuan Umum Sistem Pesawat",
+     "jp": "{航空機各|こうくうきかく}システム{一般知識|いっぱんちしき}"
+    },
+    "pages": [
+     21,
+     21
+    ],
+    "pagesJp": [
+     64,
+     66
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Air Conditioning**: pesawat terbang tinggi → kabin **diberi tekanan (Cabin Pressurization)**; memakai **Air Cycle Machine**; **Ozone Converter** membuang ozon.",
+        "**Communications**: selain radio, ada **SATCOM**; **Static Discharger** di ujung sayap dan stabilizer membuang listrik statis.",
+        "**Fuel**: tangki utama di dalam sayap; tangki diisi **nitrogen (N₂)** untuk mengurangi bahaya ledakan.",
+        "**Rain Protection**: **wiper** di windshield, bisa dipakai saat terbang.",
+        "**Landing Gear**: setelah lepas landas roda berhenti berputar dan **masuk Wheel Well** (kurangi hambatan); **rem hanya di roda utama (main gear)**, bukan semua roda; ada sistem deteksi **suhu rem dan tekanan ban**; rem bisa **otomatis** saat mendarat; **Anti-Skid System** mencegah ban rusak. Setelah mendarat: rem + **Thrust Reverser** + **Spoiler**.",
+        "**Oxygen**: untuk dekompresi mendadak, **generator oksigen tipe reaksi kimia (Chemical Oxygen Generator)** yang utama.",
+        "**Struktur**: badan dari **aluminium** dan **material komposit**; lantai kabin komposit **honeycomb**; jendela kabin **dua lapis** (anti-kabut); pintu masuk punya **alat evakuasi darurat**; **Radome** berisi radar cuaca dan antena ILS; pesawat bisa rusak karena **sambaran petir**.",
+        "**Engine**: bisa rusak karena **Bird Strike**; bisa mundur dengan Reverser tetapi **biasanya tidak** (menyedot benda asing); susunan **Fan → Compressor → Combustion Chamber → Turbine**; poros 2 atau 3 ditopang **Ball & Roller Bearing** berpendingin oli; kerusakan bearing ditemukan dengan **analisis oli pelumas**; mesin/komponen penting **diganti menurut Flight Cycle/Flight Hour** meski tanpa cacat; **Ignition System** juga menyala untuk mencegah **flameout**; **Variable Stator Vane** bergerak **membuka** saat putaran naik.",
+        "**Operation**: urutan fase terbang: **Takeoff → Climb → Cruise → Descent → Approach → (Go-Around) → Flare → Rollout**. **Gaya angkat (Lift) sebanding dengan kuadrat kecepatan.**"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{空調|くうちょう}：{高|たか}い{所|ところ}を{飛|と}ぶので、{機内|きない}に{圧力|あつりょく}をかけます（{与圧|よあつ}）。エア・サイクル・マシンを{使|つか}い、オゾン・コンバーターでオゾンを{取|と}ります。",
+        "{通信|つうしん}：{無線機|むせんき}のほかに{衛星電話|えいせいでんわ}（SATCOM）があります。スタティック・ディスチャージャーが{静電気|せいでんき}を{逃|に}がします。",
+        "{燃料|ねんりょう}：{主翼|しゅよく}の{内部|ないぶ}がおもな{燃料|ねんりょう}タンクで、{爆発|ばくはつ}の{危険|きけん}を{減|へ}らすために{窒素|ちっそ}を{入|い}れます。",
+        "{脚|あし}：{離陸後|りりくご}はタイヤの{回転|かいてん}を{止|と}めて{脚|あし}を{格納|かくのう}します。ブレーキは{主脚|しゅきゃく}のタイヤだけにあります。アンチ・スキッド{装置|そうち}があります。{着陸後|ちゃくりくご}は、ブレーキ・{逆噴射|ぎゃくふんしゃ}（スラスト・リバーサー）・スポイラーを{使|つか}います。",
+        "{酸素|さんそ}：{急減圧|きゅうげんあつ}のときは、{化学反応型|かがくはんのうがた}の{酸素発生器|さんそはっせいき}を{使|つか}います。",
+        "{構造|こうぞう}：{胴体|どうたい}はアルミや{複合材料|ふくごうざいりょう}、{客室|きゃくしつ}の{床|ゆか}は{軽|かる}いハニカム{構造|こうぞう}、{窓|まど}は2{重構造|じゅうこうぞう}です。{機首|きしゅ}のレドームには{気象|きしょう}レーダーとILSのアンテナがあります。{落雷|らくらい}で{傷|きず}つくことがあります。",
+        "エンジン：バード・ストライクで{傷|きず}つくことがあります。{内部|ないぶ}は{前|まえ}から、ファン→コンプレッサー→{燃焼室|ねんしょうしつ}→タービンです。ベアリングの{傷|いた}みは{潤滑油|じゅんかつゆ}の{分析|ぶんせき}で{見|み}つけます。{重要|じゅうよう}な{部品|ぶひん}は、{不具合|ふぐあい}がなくても、{使用回数|しようかいすう}（フライト・サイクル）や{使用時間|しようじかん}（フライト・アワー）で{交換|こうかん}します。",
+        "{飛行|ひこう}の{順番|じゅんばん}：テイクオフ→クライム→クルーズ→ディセント→アプローチ→（ゴー・アラウンド）→フレア→ロールアウト。{揚力|ようりょく}は{速度|そくど}の2{乗|じょう}に{比例|ひれい}して{増|ふ}えます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Air Conditioning: pesawat terbang tinggi → kabin diberi tekanan (Cabin Pressurization); memakai Air Cycle Machine; Ozone Converter membuang ozon.",
+      "points": [
+       "Communications: selain radio, ada SATCOM; Static Discharger di ujung sayap dan stabilizer membuang listrik statis.",
+       "Fuel: tangki utama di dalam sayap; tangki diisi nitrogen (N₂) untuk mengurangi bahaya ledakan.",
+       "Rain Protection: wiper di windshield, bisa dipakai saat terbang."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{空調|くうちょう}：{高|たか}い{所|ところ}を{飛|と}ぶので、{機内|きない}に{圧力|あつりょく}をかけます（{与圧|よあつ}）。エア・サイクル・マシンを{使|つか}い、オゾン・コンバーターでオゾンを{取|と}ります。",
+      "points": [
+       "{通信|つうしん}：{無線機|むせんき}のほかに{衛星電話|えいせいでんわ}（SATCOM）があります。スタティック・ディスチャージャーが{静電気|せいでんき}を{逃|に}がします。",
+       "{燃料|ねんりょう}：{主翼|しゅよく}の{内部|ないぶ}がおもな{燃料|ねんりょう}タンクで、{爆発|ばくはつ}の{危険|きけん}を{減|へ}らすために{窒素|ちっそ}を{入|い}れます。",
+       "{脚|あし}：{離陸後|りりくご}はタイヤの{回転|かいてん}を{止|と}めて{脚|あし}を{格納|かくのう}します。ブレーキは{主脚|しゅきゃく}のタイヤだけにあります。アンチ・スキッド{装置|そうち}があります。{着陸後|ちゃくりくご}は、ブレーキ・{逆噴射|ぎゃくふんしゃ}（スラスト・リバーサー）・スポイラーを{使|つか}います。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

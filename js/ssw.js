@@ -14,11 +14,23 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261117s";
+} from "./ssw-core.js?v=20261117t";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "aviation-gh": [
+    { t: "Teks belajar resmi GH — Text 2 (JP, 52 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text2-gh-rev2-1.pdf" },
+    { t: "Teks GH edisi 1 (arsip, 40 hal.)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text-1go.pdf" },
+    { t: "Soal contoh resmi GH", u: "assets/ssw/aviation-gh/pdf/jaea-gh-sample-questions.pdf" },
+    { t: "Halaman dukungan JAEA (GH) ↗", u: "https://exam.jaea.or.jp/?page_id=356", ext: true }
+  ],
+  "aviation-am": [
+    { t: "Teks 1: Teknik dasar (締結・電気計測)", u: "assets/ssw/aviation-am/pdf/jaea-am-text1-kihon-gijutsu.pdf" },
+    { t: "Teks 2: Keselamatan kerja & kualitas", u: "assets/ssw/aviation-am/pdf/jaea-am-text2-anzen-hinshitsu.pdf" },
+    { t: "Teks 3: Gambaran umum pesawat", u: "assets/ssw/aviation-am/pdf/jaea-am-text3-kokuki-gaiyo.pdf" },
+    { t: "Soal contoh resmi AM", u: "assets/ssw/aviation-am/pdf/jaea-am-sample-questions.pdf" }
+  ],
   "forestry": [
     { t: "Soal contoh 学科 + kunci jawaban (resmi)", u: "assets/ssw/forestry/pdf/ringyo_tokutei_gakka_sumple_250724.pdf" },
     { t: "実技試験問題 2026 (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_test.pdf" },

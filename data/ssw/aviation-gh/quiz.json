@@ -1,0 +1,3859 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "b1s99-q",
+    "sub": "b1s99",
+    "resmi": true,
+    "title": {
+     "id": "Soal Contoh Resmi JAEA (Ground Handling)",
+     "jp": "サンプル{問題|もんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Bagian depan mesin jet yang sedang berputar berbahaya.”",
+       "jp": "○か×か。「{動|うご}いているジェット・エンジンの{前方|ぜんぽう}は{危険|きけん}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-GH-SAMPLE-Q1"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Ramp pass (kartu ID standar) boleh dipinjamkan ke orang lain.”",
+       "jp": "○か×か。「ランプパス（{標準|ひょうじゅん}IDカード）は、{他人|たにん}に{貸|か}してもよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-GH-SAMPLE-Q2"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Karena ukuran dan bentuknya, pesawat tidak bisa bergerak lincah.”",
+       "jp": "○か×か。「{航空機|こうくうき}は{大|おお}きさや{形状|けいじょう}のため、{機敏|きびん}な{動|うご}きができない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-GH-SAMPLE-Q3"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “'SAFETY INSTRUCTION' memuat hal-hal yang berkaitan dengan layanan.”",
+       "jp": "○か×か。「“SAFETYINSTRUCTION ”には、サービスに{係|かか}わることが{書|か}いてある。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-GH-SAMPLE-Q4"
+     },
+     {
+      "q": {
+       "id": "Jawablah nama maskapai (bahasa Inggris) yang tertera pada tag bagasi di gambar.",
+       "jp": "{図|ず}１のタグが{付|つ}いた{手荷物|てにもつ}を{搭載|とうさい}する{航空会社名|こうくうがいしゃめい}を、{英語|えいご}で{答|こた}えなさい。"
+      },
+      "opts": [
+       {
+        "id": "JAPAN AIRLINES",
+        "jp": "JAPAN AIRLINES"
+       },
+       {
+        "id": "ALL NIPPON AIRWAYS",
+        "jp": "ALL NIPPON AIRWAYS"
+       },
+       {
+        "id": "PEACH",
+        "jp": "PEACH"
+       },
+       {
+        "id": "SKYMARK",
+        "jp": "SKYMARK"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Jawaban resmi: JAPAN AIRLINES (soal aslinya isian; pilihan ganda di sini disusun Shirose)."
+      },
+      "img": {
+       "src": "./assets/ssw/aviation-gh/sample/sample-gh-p2.webp"
+      },
+      "ref": "JAEA-GH-SAMPLE-Q5"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kargo bertag pada gambar 2 berisi barang mudah pecah sehingga ditangani dengan hati-hati.”",
+       "jp": "○か×か。「{図|ず}２のタグが{付|つ}いた{貨物|かもつ}は、{壊|こわ}れやすい{物|もの}が{入|はい}っているので、{注意|ちゅうい}して{取り扱|とりあつか}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-GH-SAMPLE-Q6",
+      "img": {
+       "src": "./assets/ssw/aviation-gh/sample/sample-gh-p2.webp"
+      }
+     }
+    ]
+   },
+   {
+    "id": "bab1-q1",
+    "title": {
+     "id": "Latihan Bab 1 (○×)",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Ground handling adalah sebutan umum untuk pekerjaan persiapan pesawat di darat.”",
+       "jp": "○か×か。「グランドハンドリングは、{航空機|こうくうき}が{飛|と}ぶための{地上|ちじょう}での{準備作業|じゅんびさぎょう}の{総称|そうしょう}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: pekerjaan di spot/ramp disebut ground handling."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika menemukan penyok pada badan pesawat saat bekerja, tidak perlu lapor karena bisa diperbaiki sendiri.”",
+       "jp": "○か×か。「{作業中|さぎょうちゅう}に{機体|きたい}の{凹|へこ}みを{見|み}つけたが、{自分|じぶん}で{直|なお}せばよいので{報告|ほうこく}しなくてよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: laporkan dengan akurat ke mekanik."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sebelum pesawat tiba, mekanik dan marshaller menunggu di tempat yang tidak menghalangi masuknya pesawat.”",
+       "jp": "○か×か。「{航空機到着前|こうくうきとうちゃくまえ}から、{整備士|せいびし}やマーシャラーなどは、{航空機|こうくうき}の{進入|しんにゅう}の{邪魔|じゃま}にならない{場所|ばしょ}で{待機|たいき}している。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Marshaller adalah petugas yang mengisi bahan bakar.”",
+       "jp": "○か×か。「マーシャラーとは、{燃料|ねんりょう}を{搭載|とうさい}する{係員|かかりいん}のことである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: marshaller memandu pesawat ke posisi berhenti."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Peralatan dan petugas boleh mendekati pesawat saat mesin masih berputar.”",
+       "jp": "○か×か。「{機材|きざい}と{係員|かかりいん}は、エンジンが{回|まわ}っているうちに{航空機|こうくうき}に{近|ちか}づいてよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: dekati setelah semua mesin mati dan ada tanda 'OK pemasangan peralatan'."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “'STA' di monitor adalah jadwal kedatangan, 'STD' jadwal keberangkatan.”",
+       "jp": "○か×か。「{情報|じょうほう}モニターに{表示|ひょうじ}される「STA」は{到着予定時刻|とうちゃくよていじこく}、「STD」は{出発予定時刻|しゅっぱつよていじこく}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “'POS' pada Instruction Sheet menunjukkan posisi muat.”",
+       "jp": "○か×か。「インストラクション・シートの「POS」は{搭載|とうさい}ポジションを{表|あらわ}す。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar; ULD-ID = nomor ULD, PCS = jumlah, WGT = berat, RMKS = keterangan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ULD adalah benda seperti kontainer atau palet yang cara pemasangannya di pesawat sudah distandarkan.”",
+       "jp": "○か×か。「ULDとは、コンテナやパレットのように、{機体|きたい}への{取り付|とりつ}けが{標準化|ひょうじゅんか}されたものである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Informasi pemindahan ke pesawat maskapai lain selalu tampil di monitor.”",
+       "jp": "○か×か。「{他社|たしゃ}の{航空機|こうくうき}への{機移|きうつ}しの{情報|じょうほう}は、{必|かなら}ず{情報|じょうほう}モニターに{表示|ひょうじ}される。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tidak tampil; tanyakan ke controller."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "title": {
+     "id": "Kosakata: Apa itu Ground Handling & Proses Kerja",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「地上支援機材」（ちじょうしえんきざい）?",
+       "jp": "「地上支援機材」（ちじょうしえんきざい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "peralatan pendukung darat (GSE)",
+        "jp": "peralatan pendukung darat (GSE)"
+       },
+       {
+        "id": "claim tag (tanda terima bagasi)",
+        "jp": "claim tag (tanda terima bagasi)"
+       },
+       {
+        "id": "surat keterangan dokter",
+        "jp": "surat keterangan dokter"
+       },
+       {
+        "id": "jangan dibalik",
+        "jp": "jangan dibalik"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "地上支援機材 (ちじょうしえんきざい) = peralatan pendukung darat (GSE). Sumber: daftar kosakata modul hal. 6.",
+       "jp": "地上支援機材（ちじょうしえんきざい）＝ peralatan pendukung darat (GSE)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「快適性」（かいてきせい）?",
+       "jp": "「快適性」（かいてきせい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kendaraan penarik (towing)",
+        "jp": "kendaraan penarik (towing)"
+       },
+       {
+        "id": "APU (Auxiliary Power Unit)",
+        "jp": "APU (Auxiliary Power Unit)"
+       },
+       {
+        "id": "care mark (tanda penanganan)",
+        "jp": "care mark (tanda penanganan)"
+       },
+       {
+        "id": "kenyamanan",
+        "jp": "kenyamanan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "快適性 (かいてきせい) = kenyamanan. Sumber: daftar kosakata modul hal. 6.",
+       "jp": "快適性（かいてきせい）＝ kenyamanan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「マーシャラー」（まーしゃらー）?",
+       "jp": "「マーシャラー」（まーしゃらー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "fuel order (jumlah BBM yang diminta)",
+        "jp": "fuel order (jumlah BBM yang diminta)"
+       },
+       {
+        "id": "penanggung jawab kerja",
+        "jp": "penanggung jawab kerja"
+       },
+       {
+        "id": "tempat parkir pesawat",
+        "jp": "tempat parkir pesawat"
+       },
+       {
+        "id": "marshaller (pemandu pesawat parkir)",
+        "jp": "marshaller (pemandu pesawat parkir)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "マーシャラー (まーしゃらー) = marshaller (pemandu pesawat parkir). Sumber: daftar kosakata modul hal. 6.",
+       "jp": "マーシャラー（まーしゃらー）＝ marshaller (pemandu pesawat parkir)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整備士」（せいびし）?",
+       "jp": "「整備士」（せいびし）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rencana muat",
+        "jp": "rencana muat"
+       },
+       {
+        "id": "mekanik pesawat",
+        "jp": "mekanik pesawat"
+       },
+       {
+        "id": "kartu petunjuk keselamatan",
+        "jp": "kartu petunjuk keselamatan"
+       },
+       {
+        "id": "air minum",
+        "jp": "air minum"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "整備士 (せいびし) = mekanik pesawat. Sumber: daftar kosakata modul hal. 6.",
+       "jp": "整備士（せいびし）＝ mekanik pesawat"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「牽引車」（けんいんしゃ）?",
+       "jp": "「牽引車」（けんいんしゃ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bagasi tercatat",
+        "jp": "bagasi tercatat"
+       },
+       {
+        "id": "kendaraan penarik (towing)",
+        "jp": "kendaraan penarik (towing)"
+       },
+       {
+        "id": "marshaller (pemandu pesawat parkir)",
+        "jp": "marshaller (pemandu pesawat parkir)"
+       },
+       {
+        "id": "dolly (kereta bawa kontainer/palet)",
+        "jp": "dolly (kereta bawa kontainer/palet)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "牽引車 (けんいんしゃ) = kendaraan penarik (towing). Sumber: daftar kosakata modul hal. 6.",
+       "jp": "牽引車（けんいんしゃ）＝ kendaraan penarik (towing)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全性」（あんぜんせい）?",
+       "jp": "「安全性」（あんぜんせい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perlengkapan kabin",
+        "jp": "perlengkapan kabin"
+       },
+       {
+        "id": "keselamatan (sebagai tujuan operasi)",
+        "jp": "keselamatan (sebagai tujuan operasi)"
+       },
+       {
+        "id": "outrigger (penopang kendaraan)",
+        "jp": "outrigger (penopang kendaraan)"
+       },
+       {
+        "id": "tag tujuan",
+        "jp": "tag tujuan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "安全性 (あんぜんせい) = keselamatan (sebagai tujuan operasi). Sumber: daftar kosakata modul hal. 6.",
+       "jp": "安全性（あんぜんせい）＝ keselamatan (sebagai tujuan operasi)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭乗橋」（とうじょうきょう）?",
+       "jp": "「搭乗橋」（とうじょうきょう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "fasilitas pasokan AC darat",
+        "jp": "fasilitas pasokan AC darat"
+       },
+       {
+        "id": "sisi pesawat",
+        "jp": "sisi pesawat"
+       },
+       {
+        "id": "jembatan boarding (PBB)",
+        "jp": "jembatan boarding (PBB)"
+       },
+       {
+        "id": "disinfektan dan penghilang bau",
+        "jp": "disinfektan dan penghilang bau"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "搭乗橋 (とうじょうきょう) = jembatan boarding (PBB). Sumber: daftar kosakata modul hal. 6.",
+       "jp": "搭乗橋（とうじょうきょう）＝ jembatan boarding (PBB)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「定時性」（ていじせい）?",
+       "jp": "「定時性」（ていじせい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ketepatan waktu",
+        "jp": "ketepatan waktu"
+       },
+       {
+        "id": "penumpang",
+        "jp": "penumpang"
+       },
+       {
+        "id": "ULD (Unit Load Device)",
+        "jp": "ULD (Unit Load Device)"
+       },
+       {
+        "id": "roda depan (nose gear)",
+        "jp": "roda depan (nose gear)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "定時性 (ていじせい) = ketepatan waktu. Sumber: daftar kosakata modul hal. 6.",
+       "jp": "定時性（ていじせい）＝ ketepatan waktu"
+      }
+     }
+    ],
+    "sub": "b1s1"
+   },
+   {
+    "id": "b1s2-q",
+    "title": {
+     "id": "Kosakata: Informasi Penerbangan & Muatan",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ULD」（ゆーえるでぃー）?",
+       "jp": "「ULD」（ゆーえるでぃー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "galley (dapur pesawat)",
+        "jp": "galley (dapur pesawat)"
+       },
+       {
+        "id": "ruang kargo",
+        "jp": "ruang kargo"
+       },
+       {
+        "id": "ULD (Unit Load Device)",
+        "jp": "ULD (Unit Load Device)"
+       },
+       {
+        "id": "tempat asal",
+        "jp": "tempat asal"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ULD (ゆーえるでぃー) = ULD (Unit Load Device). Sumber: daftar kosakata modul hal. 8.",
+       "jp": "ULD（ゆーえるでぃー）＝ ULD (Unit Load Device)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「コントローラー」（こんとろーらー）?",
+       "jp": "「コントローラー」（こんとろーらー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bahan bakar cadangan",
+        "jp": "bahan bakar cadangan"
+       },
+       {
+        "id": "controller (pengendali operasi)",
+        "jp": "controller (pengendali operasi)"
+       },
+       {
+        "id": "pengurasan air",
+        "jp": "pengurasan air"
+       },
+       {
+        "id": "menyambung, sambungan",
+        "jp": "menyambung, sambungan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "コントローラー (こんとろーらー) = controller (pengendali operasi). Sumber: daftar kosakata modul hal. 8.",
+       "jp": "コントローラー（こんとろーらー）＝ controller (pengendali operasi)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「接続搭載物」（せつぞくとうさいぶつ）?",
+       "jp": "「接続搭載物」（せつぞくとうさいぶつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemindahan langsung muatan antar pesawat",
+        "jp": "pemindahan langsung muatan antar pesawat"
+       },
+       {
+        "id": "manajemen proses kerja",
+        "jp": "manajemen proses kerja"
+       },
+       {
+        "id": "bandara",
+        "jp": "bandara"
+       },
+       {
+        "id": "muatan sambungan (transit)",
+        "jp": "muatan sambungan (transit)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "接続搭載物 (せつぞくとうさいぶつ) = muatan sambungan (transit). Sumber: daftar kosakata modul hal. 8.",
+       "jp": "接続搭載物（せつぞくとうさいぶつ）＝ muatan sambungan (transit)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「基本情報」（きほんじょうほう）?",
+       "jp": "「基本情報」（きほんじょうほう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "peralatan pendukung darat (GSE)",
+        "jp": "peralatan pendukung darat (GSE)"
+       },
+       {
+        "id": "label identifikasi kargo",
+        "jp": "label identifikasi kargo"
+       },
+       {
+        "id": "informasi dasar penerbangan",
+        "jp": "informasi dasar penerbangan"
+       },
+       {
+        "id": "pintu keberangkatan (gate)",
+        "jp": "pintu keberangkatan (gate)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "基本情報 (きほんじょうほう) = informasi dasar penerbangan. Sumber: daftar kosakata modul hal. 8.",
+       "jp": "基本情報（きほんじょうほう）＝ informasi dasar penerbangan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機移し」（きうつし）?",
+       "jp": "「機移し」（きうつし）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perlengkapan kabin",
+        "jp": "perlengkapan kabin"
+       },
+       {
+        "id": "pengirim barang",
+        "jp": "pengirim barang"
+       },
+       {
+        "id": "pemindahan langsung muatan antar pesawat",
+        "jp": "pemindahan langsung muatan antar pesawat"
+       },
+       {
+        "id": "penyortiran bagasi",
+        "jp": "penyortiran bagasi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "機移し (きうつし) = pemindahan langsung muatan antar pesawat. Sumber: daftar kosakata modul hal. 8.",
+       "jp": "機移し（きうつし）＝ pemindahan langsung muatan antar pesawat"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭載計画」（とうさいけいかく）?",
+       "jp": "「搭載計画」（とうさいけいかく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rencana muat",
+        "jp": "rencana muat"
+       },
+       {
+        "id": "bahan bakar cadangan",
+        "jp": "bahan bakar cadangan"
+       },
+       {
+        "id": "penumpang",
+        "jp": "penumpang"
+       },
+       {
+        "id": "roda depan (nose gear)",
+        "jp": "roda depan (nose gear)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "搭載計画 (とうさいけいかく) = rencana muat. Sumber: daftar kosakata modul hal. 8.",
+       "jp": "搭載計画（とうさいけいかく）＝ rencana muat"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「特殊搭載物」（とくしゅとうさいぶつ）?",
+       "jp": "「特殊搭載物」（とくしゅとうさいぶつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pembagian peran",
+        "jp": "pembagian peran"
+       },
+       {
+        "id": "muatan khusus (mis. barang berbahaya)",
+        "jp": "muatan khusus (mis. barang berbahaya)"
+       },
+       {
+        "id": "jembatan boarding (PBB)",
+        "jp": "jembatan boarding (PBB)"
+       },
+       {
+        "id": "muatan tertinggal",
+        "jp": "muatan tertinggal"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "特殊搭載物 (とくしゅとうさいぶつ) = muatan khusus (mis. barang berbahaya). Sumber: daftar kosakata modul hal. 8.",
+       "jp": "特殊搭載物（とくしゅとうさいぶつ）＝ muatan khusus (mis. barang berbahaya)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「発地」（はっち）?",
+       "jp": "「発地」（はっち）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tempat asal",
+        "jp": "tempat asal"
+       },
+       {
+        "id": "salah muat",
+        "jp": "salah muat"
+       },
+       {
+        "id": "lavatory (toilet pesawat)",
+        "jp": "lavatory (toilet pesawat)"
+       },
+       {
+        "id": "pekerjaan setelah penerbangan",
+        "jp": "pekerjaan setelah penerbangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "発地 (はっち) = tempat asal. Sumber: daftar kosakata modul hal. 8.",
+       "jp": "発地（はっち）＝ tempat asal"
+      }
+     }
+    ],
+    "sub": "b1s2"
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "title": {
+     "id": "Latihan Bab 2 (○×)",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “High-lift loader adalah kendaraan untuk memuat/menurunkan ULD ke ruang kargo.”",
+       "jp": "○か×か。「ハイリフト・ローダーは、ULDを{貨物室|かもつしつ}に{搭載|とうさい}・{取り卸|とりおろ}しするための{車両|しゃりょう}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh naik ke sabuk belt loader saat sabuk bergerak.”",
+       "jp": "○か×か。「ベルト・ローダーのベルトが{動|うご}いているときは、ベルトの{上|うえ}に{乗|の}ってもよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: dilarang; bisa terlilit."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kecepatan towing tractor di sisi pesawat maksimal 5 km/jam.”",
+       "jp": "○か×か。「{機側|きそく}でのトーイング・トラクターの{速度|そくど}は、5km/h{以下|いか}とする。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat melepas dolly dari towing tractor, rem dolly harus dipasang penuh.”",
+       "jp": "○か×か。「トーイング・トラクターが{牽引|けんいん}するドーリーを{切り離|きりはな}すときは、ブレーキを{完全|かんぜん}にかける。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Palet berat boleh dipindahkan oleh satu orang.”",
+       "jp": "○か×か。「{重量|じゅうりょう}のあるパレットは、{一人|ひとり}で{移送|いそう}してよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: oleh 2 orang atau lebih dengan saling memberi aba-aba."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada prinsipnya towing tractor tidak boleh lewat di bawah sayap.”",
+       "jp": "○か×か。「トーイング・トラクターは、{原則|げんそく}として{翼|つばさ}の{下|した}を{通過|つうか}して{走行|そうこう}してはならない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar; bila terpaksa harus sangat pelan dengan tunjuk-sebut."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sebelum traktor melepas, periksa kunci pintu ULD dan kunci stopper dolly.”",
+       "jp": "○か×か。「トーイング・トラクターが{離脱|りだつ}する{前|まえ}に、ULDドア・ロックとドーリー・ストッパーのロックを{確認|かくにん}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat menaruh muatan di sabuk, beri jarak ± 50 cm agar mudah diterima.”",
+       "jp": "○か×か。「ベルトに{搭載物|とうさいぶつ}を{載|の}せるときは、{受け取|うけと}る{人|ひと}が{取|と}りやすいよう50cmくらいの{間|あいだ}隔をあける。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Barang berat ditaruh di atas dan barang mudah pecah di bawah.”",
+       "jp": "○か×か。「{重|おも}いものは{上|うえ}に、{壊|こわ}れやすいものは{下|した}に{積|つ}む。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: berat di bawah, mudah pecah di atas."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Semua persiapan selesai 10–5 menit sebelum pesawat kedatangan tiba.”",
+       "jp": "○か×か。「{到着便|とうちゃくびん}が{着|つ}く10〜5{分前|ふんまえ}までに、すべての{準備|じゅんび}を{完了|かんりょう}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “MCT adalah waktu sambungan minimum yang diperlukan untuk transit.”",
+       "jp": "○か×か。「MCTとは、{乗り継|のりつ}ぎに{必要|ひつよう}な{最小接続時間|さいしょうせつぞくじかん}のことである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "title": {
+     "id": "Kosakata: GSE Pengangkutan",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「バルク・カート」（ばるく・かーと）?",
+       "jp": "「バルク・カート」（ばるく・かーと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "air kotor",
+        "jp": "air kotor"
+       },
+       {
+        "id": "pintu keberangkatan (gate)",
+        "jp": "pintu keberangkatan (gate)"
+       },
+       {
+        "id": "bulk cart (kereta muatan curah)",
+        "jp": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "label identifikasi kargo",
+        "jp": "label identifikasi kargo"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "バルク・カート (ばるく・かーと) = bulk cart (kereta muatan curah). Sumber: daftar kosakata modul hal. 11.",
+       "jp": "バルク・カート（ばるく・かーと）＝ bulk cart (kereta muatan curah)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「トーイング・トラクター」（とーいんぐ・とらくたー）?",
+       "jp": "「トーイング・トラクター」（とーいんぐ・とらくたー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bulk cart (kereta muatan curah)",
+        "jp": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "air minum",
+        "jp": "air minum"
+       },
+       {
+        "id": "towing tractor",
+        "jp": "towing tractor"
+       },
+       {
+        "id": "transit, sambung penerbangan",
+        "jp": "transit, sambung penerbangan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "トーイング・トラクター (とーいんぐ・とらくたー) = towing tractor. Sumber: daftar kosakata modul hal. 11.",
+       "jp": "トーイング・トラクター（とーいんぐ・とらくたー）＝ towing tractor"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「遠心力」（えんしんりょく）?",
+       "jp": "「遠心力」（えんしんりょく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "marshaller (pemandu pesawat parkir)",
+        "jp": "marshaller (pemandu pesawat parkir)"
+       },
+       {
+        "id": "gaya sentrifugal",
+        "jp": "gaya sentrifugal"
+       },
+       {
+        "id": "bandara",
+        "jp": "bandara"
+       },
+       {
+        "id": "muatan tertinggal",
+        "jp": "muatan tertinggal"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "遠心力 (えんしんりょく) = gaya sentrifugal. Sumber: daftar kosakata modul hal. 11.",
+       "jp": "遠心力（えんしんりょく）＝ gaya sentrifugal"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ドーリー」（どーりー）?",
+       "jp": "「ドーリー」（どーりー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyortiran bagasi",
+        "jp": "penyortiran bagasi"
+       },
+       {
+        "id": "dekarbonisasi",
+        "jp": "dekarbonisasi"
+       },
+       {
+        "id": "dolly (kereta bawa kontainer/palet)",
+        "jp": "dolly (kereta bawa kontainer/palet)"
+       },
+       {
+        "id": "area bahaya",
+        "jp": "area bahaya"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ドーリー (どーりー) = dolly (kereta bawa kontainer/palet). Sumber: daftar kosakata modul hal. 11.",
+       "jp": "ドーリー（どーりー）＝ dolly (kereta bawa kontainer/palet)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機側」（きそく）?",
+       "jp": "「機側」（きそく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyok (dent)",
+        "jp": "penyok (dent)"
+       },
+       {
+        "id": "high-lift loader",
+        "jp": "high-lift loader"
+       },
+       {
+        "id": "sisi pesawat",
+        "jp": "sisi pesawat"
+       },
+       {
+        "id": "penyortiran kargo",
+        "jp": "penyortiran kargo"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "機側 (きそく) = sisi pesawat. Sumber: daftar kosakata modul hal. 11.",
+       "jp": "機側（きそく）＝ sisi pesawat"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「牽引」（けんいん）?",
+       "jp": "「牽引」（けんいん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pendingin udara kabin",
+        "jp": "pendingin udara kabin"
+       },
+       {
+        "id": "menarik, penarikan (towing)",
+        "jp": "menarik, penarikan (towing)"
+       },
+       {
+        "id": "rencana muat",
+        "jp": "rencana muat"
+       },
+       {
+        "id": "pengisian air",
+        "jp": "pengisian air"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "牽引 (けんいん) = menarik, penarikan (towing). Sumber: daftar kosakata modul hal. 11.",
+       "jp": "牽引（けんいん）＝ menarik, penarikan (towing)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ベルト・ローダー」（べると・ろーだー）?",
+       "jp": "「ベルト・ローダー」（べると・ろーだー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "belt loader (konveyor muat bulk)",
+        "jp": "belt loader (konveyor muat bulk)"
+       },
+       {
+        "id": "label identifikasi kargo",
+        "jp": "label identifikasi kargo"
+       },
+       {
+        "id": "lavatory (toilet pesawat)",
+        "jp": "lavatory (toilet pesawat)"
+       },
+       {
+        "id": "pesawat terbang",
+        "jp": "pesawat terbang"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ベルト・ローダー (べると・ろーだー) = belt loader (konveyor muat bulk). Sumber: daftar kosakata modul hal. 11.",
+       "jp": "ベルト・ローダー（べると・ろーだー）＝ belt loader (konveyor muat bulk)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「バルク」（ばるく）?",
+       "jp": "「バルク」（ばるく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mobil air (water car)",
+        "jp": "mobil air (water car)"
+       },
+       {
+        "id": "bulk (muatan curah, dimuat manual)",
+        "jp": "bulk (muatan curah, dimuat manual)"
+       },
+       {
+        "id": "waktu transit minimum (MCT)",
+        "jp": "waktu transit minimum (MCT)"
+       },
+       {
+        "id": "mobil pengurasan air",
+        "jp": "mobil pengurasan air"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バルク (ばるく) = bulk (muatan curah, dimuat manual). Sumber: daftar kosakata modul hal. 11.",
+       "jp": "バルク（ばるく）＝ bulk (muatan curah, dimuat manual)"
+      }
+     }
+    ],
+    "sub": "b2s1"
+   },
+   {
+    "id": "b2s2-q",
+    "title": {
+     "id": "Kosakata: Persiapan & Memuat/Menurunkan ULD",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「作業責任者」（さぎょうせきにんしゃ）?",
+       "jp": "「作業責任者」（さぎょうせきにんしゃ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "informasi dasar penerbangan",
+        "jp": "informasi dasar penerbangan"
+       },
+       {
+        "id": "muatan sambungan (transit)",
+        "jp": "muatan sambungan (transit)"
+       },
+       {
+        "id": "penanggung jawab kerja",
+        "jp": "penanggung jawab kerja"
+       },
+       {
+        "id": "salah muat",
+        "jp": "salah muat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "作業責任者 (さぎょうせきにんしゃ) = penanggung jawab kerja. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "作業責任者（さぎょうせきにんしゃ）＝ penanggung jawab kerja"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「役割分担」（やくわりぶんたん）?",
+       "jp": "「役割分担」（やくわりぶんたん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "forklift",
+        "jp": "forklift"
+       },
+       {
+        "id": "pembagian peran",
+        "jp": "pembagian peran"
+       },
+       {
+        "id": "waktu transit minimum (MCT)",
+        "jp": "waktu transit minimum (MCT)"
+       },
+       {
+        "id": "belt loader (konveyor muat bulk)",
+        "jp": "belt loader (konveyor muat bulk)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "役割分担 (やくわりぶんたん) = pembagian peran. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "役割分担（やくわりぶんたん）＝ pembagian peran"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭降載」（とうこうさい）?",
+       "jp": "「搭降載」（とうこうさい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan",
+        "jp": "muatan"
+       },
+       {
+        "id": "pengirim barang",
+        "jp": "pengirim barang"
+       },
+       {
+        "id": "kendaraan penarik (towing)",
+        "jp": "kendaraan penarik (towing)"
+       },
+       {
+        "id": "memuat dan menurunkan muatan",
+        "jp": "memuat dan menurunkan muatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "搭降載 (とうこうさい) = memuat dan menurunkan muatan. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "搭降載（とうこうさい）＝ memuat dan menurunkan muatan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「指差呼称」（ゆびさしこしょう）?",
+       "jp": "「指差呼称」（ゆびさしこしょう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "high-lift loader",
+        "jp": "high-lift loader"
+       },
+       {
+        "id": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)",
+        "jp": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)"
+       },
+       {
+        "id": "penanggung jawab kerja",
+        "jp": "penanggung jawab kerja"
+       },
+       {
+        "id": "mobil toilet (lavatory car)",
+        "jp": "mobil toilet (lavatory car)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "指差呼称 (ゆびさしこしょう) = tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut). Sumber: daftar kosakata modul hal. 15.",
+       "jp": "指差呼称（ゆびさしこしょう）＝ tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「翼下」（よくか）?",
+       "jp": "「翼下」（よくか）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bawah sayap",
+        "jp": "bawah sayap"
+       },
+       {
+        "id": "towing tractor",
+        "jp": "towing tractor"
+       },
+       {
+        "id": "makanan segar",
+        "jp": "makanan segar"
+       },
+       {
+        "id": "rencana muat",
+        "jp": "rencana muat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "翼下 (よくか) = bawah sayap. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "翼下（よくか）＝ bawah sayap"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「連結」（れんけつ）?",
+       "jp": "「連結」（れんけつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "waktu transit minimum (MCT)",
+        "jp": "waktu transit minimum (MCT)"
+       },
+       {
+        "id": "penyelundupan",
+        "jp": "penyelundupan"
+       },
+       {
+        "id": "menyambung, sambungan",
+        "jp": "menyambung, sambungan"
+       },
+       {
+        "id": "rute domestik",
+        "jp": "rute domestik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "連結 (れんけつ) = menyambung, sambungan. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "連結（れんけつ）＝ menyambung, sambungan"
+      }
+     }
+    ],
+    "sub": "b2s2"
+   },
+   {
+    "id": "b2s3-q",
+    "title": {
+     "id": "Kosakata: Memuat Bulk & Menangani Muatan",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「積み残し」（つみのこし）?",
+       "jp": "「積み残し」（つみのこし）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemuatan bahan bakar",
+        "jp": "pemuatan bahan bakar"
+       },
+       {
+        "id": "tempat asal",
+        "jp": "tempat asal"
+       },
+       {
+        "id": "muatan tertinggal",
+        "jp": "muatan tertinggal"
+       },
+       {
+        "id": "perlengkapan kabin",
+        "jp": "perlengkapan kabin"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "積み残し (つみのこし) = muatan tertinggal. Sumber: daftar kosakata modul hal. 17.",
+       "jp": "積み残し（つみのこし）＝ muatan tertinggal"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「手荷物」（てにもつ）?",
+       "jp": "「手荷物」（てにもつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bulk (muatan curah, dimuat manual)",
+        "jp": "bulk (muatan curah, dimuat manual)"
+       },
+       {
+        "id": "pengirim barang",
+        "jp": "pengirim barang"
+       },
+       {
+        "id": "rute internasional",
+        "jp": "rute internasional"
+       },
+       {
+        "id": "bagasi tangan / bagasi penumpang",
+        "jp": "bagasi tangan / bagasi penumpang"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "手荷物 (てにもつ) = bagasi tangan / bagasi penumpang. Sumber: daftar kosakata modul hal. 17.",
+       "jp": "手荷物（てにもつ）＝ bagasi tangan / bagasi penumpang"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「貨物識別ラベル」（かもつしきべつらべる）?",
+       "jp": "「貨物識別ラベル」（かもつしきべつらべる）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mobil toilet (lavatory car)",
+        "jp": "mobil toilet (lavatory car)"
+       },
+       {
+        "id": "label identifikasi kargo",
+        "jp": "label identifikasi kargo"
+       },
+       {
+        "id": "muatan roboh",
+        "jp": "muatan roboh"
+       },
+       {
+        "id": "kantong kursi",
+        "jp": "kantong kursi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "貨物識別ラベル (かもつしきべつらべる) = label identifikasi kargo. Sumber: daftar kosakata modul hal. 17.",
+       "jp": "貨物識別ラベル（かもつしきべつらべる）＝ label identifikasi kargo"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「荷崩れ」（にくずれ）?",
+       "jp": "「荷崩れ」（にくずれ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tempat parkir pesawat",
+        "jp": "tempat parkir pesawat"
+       },
+       {
+        "id": "tempat asal",
+        "jp": "tempat asal"
+       },
+       {
+        "id": "muatan roboh",
+        "jp": "muatan roboh"
+       },
+       {
+        "id": "ground handling (layanan darat bandara)",
+        "jp": "ground handling (layanan darat bandara)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "荷崩れ (にくずれ) = muatan roboh. Sumber: daftar kosakata modul hal. 17.",
+       "jp": "荷崩れ（にくずれ）＝ muatan roboh"
+      }
+     }
+    ],
+    "sub": "b2s3"
+   }
+  ],
+  "bab3": [
+   {
+    "id": "bab3-q1",
+    "title": {
+     "id": "Latihan Bab 3 (○×)",
+     "jp": "{第|だい}3{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah mengisi air, tutup valve pengisian dan overflow dan pastikan tidak bocor.”",
+       "jp": "○か×か。「{給水後|きゅうすいご}は、{給水|きゅうすい}バルブとオーバーフロー・バルブを{閉|し}め、{水漏|みずも}れがないことを{確認|かくにん}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: bocoran bisa membeku di ketinggian."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Air minum di pesawat tidak boleh disimpan lebih dari 1 hari sehingga diganti pada malam hari.”",
+       "jp": "○か×か。「{機内|きない}の{飲料水|いんりょうすい}は、1{日以上溜|にちいじょうた}め{置|お}きできないので{夜間|やかん}に{入れ替|いれか}える。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada lavatory service, air kotor dikeluarkan, tangki dibilas, lalu diisi air takaran dan disinfektan.”",
+       "jp": "○か×か。「ラバトリー・サービスでは、タンクの{汚水|おすい}を{機外|きがい}に{排出|はいしゅつ}した{後|あと}、{水|みず}で{洗|あら}い、{所定量|しょていりょう}の{水|みず}と{殺菌消臭剤|さっきんしょうしゅうざい}を{入|い}れる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika air kotor tumpah saat selang dilepas, spot tetap dapat dipakai.”",
+       "jp": "○か×か。「ホースを{外|はず}すときに{汚水|おすい}がこぼれても、スポットは{使|つか}い{続|つづ}けられる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: spot bisa tidak dapat dipakai sampai dibersihkan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada layanan AC kabin, selang besar yang terpuntir tidak masalah.”",
+       "jp": "○か×か。「{機内空調|きないくうちょう}サービスで、{空調供給用|くうちょうきょうきゅうよう}の{太|ふと}いホースがねじれていても{問題|もんだい}ない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: udara kurang masuk dan kopling bisa rusak."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sebelum AC dijalankan, pastikan pintu pesawat terbuka.”",
+       "jp": "○か×か。「{空調装置|くうちょうそうち}を{働|はたら}かせる{前|まえ}に、{機体|きたい}の{扉|とびら}が{開|ひら}いていることを{確認|かくにん}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: sebagai jalan keluar udara."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “GPU adalah fasilitas/kendaraan untuk memasok listrik dari luar ke pesawat yang parkir.”",
+       "jp": "○か×か。「GPUは、{駐機中|ちゅうきちゅう}の{航空機|こうくうき}に{外部|がいぶ}から{電力|でんりょく}を{供給|きょうきゅう}するための{設備|せつび}や{車両|しゃりょう}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Langkah pertama menyambung GPU adalah menyalakan saklar pasokan.”",
+       "jp": "○か×か。「GPUを{接続|せつぞく}する{手順|てじゅん}の{最初|さいしょ}は、{電源供給|でんげんきょうきゅう}スイッチをONにすることである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: mulai dengan mengecek tegangan/frekuensi."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "title": {
+     "id": "Kosakata: Water Service (Air Minum)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「給水」（きゅうすい）?",
+       "jp": "「給水」（きゅうすい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengisian air",
+        "jp": "pengisian air"
+       },
+       {
+        "id": "manajemen proses kerja",
+        "jp": "manajemen proses kerja"
+       },
+       {
+        "id": "barang berat",
+        "jp": "barang berat"
+       },
+       {
+        "id": "pembersihan kabin",
+        "jp": "pembersihan kabin"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "給水 (きゅうすい) = pengisian air. Sumber: daftar kosakata modul hal. 20.",
+       "jp": "給水（きゅうすい）＝ pengisian air"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「排水」（はいすい）?",
+       "jp": "「排水」（はいすい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "forklift",
+        "jp": "forklift"
+       },
+       {
+        "id": "pengurasan air",
+        "jp": "pengurasan air"
+       },
+       {
+        "id": "perlengkapan kabin",
+        "jp": "perlengkapan kabin"
+       },
+       {
+        "id": "mobil pengurasan air",
+        "jp": "mobil pengurasan air"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "排水 (はいすい) = pengurasan air. Sumber: daftar kosakata modul hal. 20.",
+       "jp": "排水（はいすい）＝ pengurasan air"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「給水車」（きゅうすいしゃ）?",
+       "jp": "「給水車」（きゅうすいしゃ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "forklift",
+        "jp": "forklift"
+       },
+       {
+        "id": "mobil air (water car)",
+        "jp": "mobil air (water car)"
+       },
+       {
+        "id": "keselamatan (sebagai tujuan operasi)",
+        "jp": "keselamatan (sebagai tujuan operasi)"
+       },
+       {
+        "id": "penyortiran bagasi",
+        "jp": "penyortiran bagasi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "給水車 (きゅうすいしゃ) = mobil air (water car). Sumber: daftar kosakata modul hal. 20.",
+       "jp": "給水車（きゅうすいしゃ）＝ mobil air (water car)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「排水車」（はいすいしゃ）?",
+       "jp": "「排水車」（はいすいしゃ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mobil pengurasan air",
+        "jp": "mobil pengurasan air"
+       },
+       {
+        "id": "tempat tujuan",
+        "jp": "tempat tujuan"
+       },
+       {
+        "id": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)",
+        "jp": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)"
+       },
+       {
+        "id": "dilarang kena air",
+        "jp": "dilarang kena air"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "排水車 (はいすいしゃ) = mobil pengurasan air. Sumber: daftar kosakata modul hal. 20.",
+       "jp": "排水車（はいすいしゃ）＝ mobil pengurasan air"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「飲料水」（いんりょうすい）?",
+       "jp": "「飲料水」（いんりょうすい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "air minum",
+        "jp": "air minum"
+       },
+       {
+        "id": "bandara",
+        "jp": "bandara"
+       },
+       {
+        "id": "lembar instruksi muat",
+        "jp": "lembar instruksi muat"
+       },
+       {
+        "id": "penyok (dent)",
+        "jp": "penyok (dent)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "飲料水 (いんりょうすい) = air minum. Sumber: daftar kosakata modul hal. 20.",
+       "jp": "飲料水（いんりょうすい）＝ air minum"
+      }
+     }
+    ],
+    "sub": "b3s1"
+   }
+  ],
+  "bab4": [
+   {
+    "id": "bab4-q1",
+    "title": {
+     "id": "Latihan Bab 4 (○×)",
+     "jp": "{第|だい}4{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Claim tag bagasi memuat informasi seperti tujuan.”",
+       "jp": "○か×か。「{手荷物|てにもつ}のクレーム・タグには、{行き先|いきさき}などの{情報|じょうほう}が{示|しめ}されている。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Dengan HHT, bagasi dapat dimuat dengan benar tanpa melihat layar.”",
+       "jp": "○か×か。「HHTで{画面|がめん}を{見|み}なくても、{手荷物|てにもつ}は{正|ただ}しく{搭載|とうさい}できる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: wajib memeriksa tampilan layar secara visual untuk mencegah salah muat."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jumlah bagasi di kontainer diberitahukan ke petugas Weight & Balance.”",
+       "jp": "○か×か。「コンテナに{積み込|つみこ}んだ{手荷物|てにもつ}の{個数|こすう}は、ウエイト・アンド・バランス{担当者|たんとうしゃ}に{連絡|れんらく}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Dekat konveyor kedatangan, beri tahu orang sekitar saat GSE akan bergerak.”",
+       "jp": "○か×か。「{到着用|とうちゃくよう}の{手荷物|てにもつ}ベルトコンベヤー{付近|ふきん}では、GSEが{動|うご}き{出|だ}すことを{周囲|しゅうい}に{知|し}らせる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Care mark '天地無用' berarti jangan dibalik atau ditumpuk menyamping.”",
+       "jp": "○か×か。「「{天地無用|てんちむよう}」のケアマークは、{逆|さか}さや{横積|よこつ}みにしてはいけないという{意味|いみ}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kargo bertanda '水濡れ厳禁' tidak masalah jika terkena hujan.”",
+       "jp": "○か×か。「「{水濡|みずぬ}れ{厳禁|げんきん}」の{貨物|かもつ}は、{雨|あめ}に{濡|ぬ}れても{問題|もんだい}ない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: harus dilindungi dari air."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat forklift bekerja, jangan mendekati bagian belakang forklift.”",
+       "jp": "○か×か。「フォークリフトで{荷役作業中|にやくさぎょうちゅう}は、フォークリフトの{後方|こうほう}に{近|ちか}づいてはいけない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: saat bongkar muat umumnya mundur."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jangan mendekat dalam 1,5 m dari garpu yang bergerak.”",
+       "jp": "○か×か。「フォークが{動|うご}いているときは、1.5m{以内|いない}に{近|ちか}づいてはいけない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kargo internasional tidak memerlukan proses bea cukai seperti kargo domestik.”",
+       "jp": "○か×か。「{国際線|こくさいせん}の{貨物|かもつ}は、{国内貨物|こくないかもつ}と{同|おな}じで{通関|つうかん}の{手続|てつづ}きは{必要|ひつよう}ない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: butuh 通関 (bea cukai)."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b4s1-q",
+    "title": {
+     "id": "Kosakata: Penyortiran Bagasi (手荷物仕分け)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「手荷物仕分け」（てにもつしわけ）?",
+       "jp": "「手荷物仕分け」（てにもつしわけ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "barang pecah belah",
+        "jp": "barang pecah belah"
+       },
+       {
+        "id": "dolly (kereta bawa kontainer/palet)",
+        "jp": "dolly (kereta bawa kontainer/palet)"
+       },
+       {
+        "id": "penyortiran bagasi",
+        "jp": "penyortiran bagasi"
+       },
+       {
+        "id": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)",
+        "jp": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "手荷物仕分け (てにもつしわけ) = penyortiran bagasi. Sumber: daftar kosakata modul hal. 26.",
+       "jp": "手荷物仕分け（てにもつしわけ）＝ penyortiran bagasi"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「クレーム・タグ」（くれーむ・たぐ）?",
+       "jp": "「クレーム・タグ」（くれーむ・たぐ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tag tujuan",
+        "jp": "tag tujuan"
+       },
+       {
+        "id": "dekarbonisasi",
+        "jp": "dekarbonisasi"
+       },
+       {
+        "id": "claim tag (tanda terima bagasi)",
+        "jp": "claim tag (tanda terima bagasi)"
+       },
+       {
+        "id": "pintu keberangkatan (gate)",
+        "jp": "pintu keberangkatan (gate)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "クレーム・タグ (くれーむ・たぐ) = claim tag (tanda terima bagasi). Sumber: daftar kosakata modul hal. 26.",
+       "jp": "クレーム・タグ（くれーむ・たぐ）＝ claim tag (tanda terima bagasi)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ハンディターミナル」（はんでぃたーみなる）?",
+       "jp": "「ハンディターミナル」（はんでぃたーみなる）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "manajemen proses kerja",
+        "jp": "manajemen proses kerja"
+       },
+       {
+        "id": "handheld terminal (HHT)",
+        "jp": "handheld terminal (HHT)"
+       },
+       {
+        "id": "kapten pesawat",
+        "jp": "kapten pesawat"
+       },
+       {
+        "id": "high-lift loader",
+        "jp": "high-lift loader"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ハンディターミナル (はんでぃたーみなる) = handheld terminal (HHT). Sumber: daftar kosakata modul hal. 26.",
+       "jp": "ハンディターミナル（はんでぃたーみなる）＝ handheld terminal (HHT)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「誤搭載」（ごとうさい）?",
+       "jp": "「誤搭載」（ごとうさい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "salah muat",
+        "jp": "salah muat"
+       },
+       {
+        "id": "menarik, penarikan (towing)",
+        "jp": "menarik, penarikan (towing)"
+       },
+       {
+        "id": "lembar instruksi muat",
+        "jp": "lembar instruksi muat"
+       },
+       {
+        "id": "dilarang kena air",
+        "jp": "dilarang kena air"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "誤搭載 (ごとうさい) = salah muat. Sumber: daftar kosakata modul hal. 26.",
+       "jp": "誤搭載（ごとうさい）＝ salah muat"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「取扱注意」（とりあつかいちゅうい）?",
+       "jp": "「取扱注意」（とりあつかいちゅうい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tangani dengan hati-hati",
+        "jp": "tangani dengan hati-hati"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan",
+        "jp": "bea cukai, proses kepabeanan"
+       },
+       {
+        "id": "APU (Auxiliary Power Unit)",
+        "jp": "APU (Auxiliary Power Unit)"
+       },
+       {
+        "id": "nomor penerbangan",
+        "jp": "nomor penerbangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "取扱注意 (とりあつかいちゅうい) = tangani dengan hati-hati. Sumber: daftar kosakata modul hal. 26.",
+       "jp": "取扱注意（とりあつかいちゅうい）＝ tangani dengan hati-hati"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「重量物」（じゅうりょうぶつ）?",
+       "jp": "「重量物」（じゅうりょうぶつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan sambungan (transit)",
+        "jp": "muatan sambungan (transit)"
+       },
+       {
+        "id": "fuel order (jumlah BBM yang diminta)",
+        "jp": "fuel order (jumlah BBM yang diminta)"
+       },
+       {
+        "id": "muatan",
+        "jp": "muatan"
+       },
+       {
+        "id": "barang berat",
+        "jp": "barang berat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "重量物 (じゅうりょうぶつ) = barang berat. Sumber: daftar kosakata modul hal. 26.",
+       "jp": "重量物（じゅうりょうぶつ）＝ barang berat"
+      }
+     }
+    ],
+    "sub": "b4s1"
+   },
+   {
+    "id": "b4s2-q",
+    "title": {
+     "id": "Kosakata: Penyortiran Kargo (貨物仕分け)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ケアマーク」（けあまーく）?",
+       "jp": "「ケアマーク」（けあまーく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sisi pesawat",
+        "jp": "sisi pesawat"
+       },
+       {
+        "id": "care mark (tanda penanganan)",
+        "jp": "care mark (tanda penanganan)"
+       },
+       {
+        "id": "label identifikasi kargo",
+        "jp": "label identifikasi kargo"
+       },
+       {
+        "id": "peralatan pendukung darat (GSE)",
+        "jp": "peralatan pendukung darat (GSE)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ケアマーク (けあまーく) = care mark (tanda penanganan). Sumber: daftar kosakata modul hal. 29.",
+       "jp": "ケアマーク（けあまーく）＝ care mark (tanda penanganan)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「水濡れ厳禁」（みずぬれげんきん）?",
+       "jp": "「水濡れ厳禁」（みずぬれげんきん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "claim tag (tanda terima bagasi)",
+        "jp": "claim tag (tanda terima bagasi)"
+       },
+       {
+        "id": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)",
+        "jp": "tunjuk-sebut (konfirmasi dengan menunjuk dan menyebut)"
+       },
+       {
+        "id": "bagasi tangan / bagasi penumpang",
+        "jp": "bagasi tangan / bagasi penumpang"
+       },
+       {
+        "id": "dilarang kena air",
+        "jp": "dilarang kena air"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "水濡れ厳禁 (みずぬれげんきん) = dilarang kena air. Sumber: daftar kosakata modul hal. 29.",
+       "jp": "水濡れ厳禁（みずぬれげんきん）＝ dilarang kena air"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「貨物仕分け」（かもつしわけ）?",
+       "jp": "「貨物仕分け」（かもつしわけ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kapten pesawat",
+        "jp": "kapten pesawat"
+       },
+       {
+        "id": "penyortiran kargo",
+        "jp": "penyortiran kargo"
+       },
+       {
+        "id": "ruang kargo",
+        "jp": "ruang kargo"
+       },
+       {
+        "id": "handheld terminal (HHT)",
+        "jp": "handheld terminal (HHT)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "貨物仕分け (かもつしわけ) = penyortiran kargo. Sumber: daftar kosakata modul hal. 29.",
+       "jp": "貨物仕分け（かもつしわけ）＝ penyortiran kargo"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「行先タグ」（ゆきさきたぐ）?",
+       "jp": "「行先タグ」（ゆきさきたぐ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tag tujuan",
+        "jp": "tag tujuan"
+       },
+       {
+        "id": "kenyamanan",
+        "jp": "kenyamanan"
+       },
+       {
+        "id": "towing tractor",
+        "jp": "towing tractor"
+       },
+       {
+        "id": "forklift",
+        "jp": "forklift"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "行先タグ (ゆきさきたぐ) = tag tujuan. Sumber: daftar kosakata modul hal. 29.",
+       "jp": "行先タグ（ゆきさきたぐ）＝ tag tujuan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「貨物運送約款」（かもつうんそうやっかん）?",
+       "jp": "「貨物運送約款」（かもつうんそうやっかん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "barang tertinggal",
+        "jp": "barang tertinggal"
+       },
+       {
+        "id": "perjanjian angkutan kargo",
+        "jp": "perjanjian angkutan kargo"
+       },
+       {
+        "id": "dilarang kena air",
+        "jp": "dilarang kena air"
+       },
+       {
+        "id": "controller (pengendali operasi)",
+        "jp": "controller (pengendali operasi)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "貨物運送約款 (かもつうんそうやっかん) = perjanjian angkutan kargo. Sumber: daftar kosakata modul hal. 29.",
+       "jp": "貨物運送約款（かもつうんそうやっかん）＝ perjanjian angkutan kargo"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「生鮮食料品」（せいせんしょくりょうひん）?",
+       "jp": "「生鮮食料品」（せいせんしょくりょうひん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "makanan segar",
+        "jp": "makanan segar"
+       },
+       {
+        "id": "bulk (muatan curah, dimuat manual)",
+        "jp": "bulk (muatan curah, dimuat manual)"
+       },
+       {
+        "id": "mobil air (water car)",
+        "jp": "mobil air (water car)"
+       },
+       {
+        "id": "ganjal roda",
+        "jp": "ganjal roda"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "生鮮食料品 (せいせんしょくりょうひん) = makanan segar. Sumber: daftar kosakata modul hal. 29.",
+       "jp": "生鮮食料品（せいせんしょくりょうひん）＝ makanan segar"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「フォークリフト」（ふぉーくりふと）?",
+       "jp": "「フォークリフト」（ふぉーくりふと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan sambungan (transit)",
+        "jp": "muatan sambungan (transit)"
+       },
+       {
+        "id": "forklift",
+        "jp": "forklift"
+       },
+       {
+        "id": "berikat",
+        "jp": "berikat"
+       },
+       {
+        "id": "mobil pengurasan air",
+        "jp": "mobil pengurasan air"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "フォークリフト (ふぉーくりふと) = forklift. Sumber: daftar kosakata modul hal. 29.",
+       "jp": "フォークリフト（ふぉーくりふと）＝ forklift"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「天地無用」（てんちむよう）?",
+       "jp": "「天地無用」（てんちむよう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ground handling (layanan darat bandara)",
+        "jp": "ground handling (layanan darat bandara)"
+       },
+       {
+        "id": "jembatan boarding (PBB)",
+        "jp": "jembatan boarding (PBB)"
+       },
+       {
+        "id": "jangan dibalik",
+        "jp": "jangan dibalik"
+       },
+       {
+        "id": "mekanik pesawat",
+        "jp": "mekanik pesawat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "天地無用 (てんちむよう) = jangan dibalik. Sumber: daftar kosakata modul hal. 29.",
+       "jp": "天地無用（てんちむよう）＝ jangan dibalik"
+      }
+     }
+    ],
+    "sub": "b4s2"
+   }
+  ],
+  "bab5": [
+   {
+    "id": "bab5-q1",
+    "title": {
+     "id": "Latihan Bab 5 (○×)",
+     "jp": "{第|だい}5{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “'Pekerjaan antar penerbangan' dilakukan dalam waktu terbatas antara kedatangan dan keberangkatan berikutnya.”",
+       "jp": "○か×か。「{機内清掃|きないせいそう}の「{飛行間作業|ひこうかんさぎょう}」は、{到着|とうちゃく}してから{次|つぎ}の{出発|しゅっぱつ}までの{限|かぎ}られた{時間内|じかんない}に{行|おこな}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kartu keselamatan ditaruh di dalam agar judulnya tidak terlihat.”",
+       "jp": "○か×か。「{安全|あんぜん}のしおりは、{表題|ひょうだい}が{見|み}えにくいように{奥|おく}にセットする。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: harus di depan agar judul mudah terlihat."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika menemukan barang tertinggal di bawah kursi, laporkan lewat penanggung jawab pada jalur yang ditentukan.”",
+       "jp": "○か×か。「{座席|ざせき}の{下|した}で{旅客|りょかく}の{忘れ物|わすれもの}を{見|み}つけたら、{責任者|せきにんしゃ}を{通|とお}して{決|き}められたルートで{報告|ほうこく}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar; sebutkan lokasi temuan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika menemukan benda mencurigakan, boleh dibuang sendiri.”",
+       "jp": "○か×か。「{不審物|ふしんぶつ}を{見|み}つけたが、{自分|じぶん}で{処分|しょぶん}してよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: laporkan ke penanggung jawab."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di lavatory, benda selain tisu toilet boleh dibuang ke kloset.”",
+       "jp": "○か×か。「ラバトリーでは、トイレットペーパー{以外|いがい}のものも{便器|べんき}に{流|なが}してよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat memasang kendaraan ke pesawat, lantai bak dijaga sedikit lebih rendah dari lantai kabin.”",
+       "jp": "○か×か。「{客室用品|きゃくしつようひん}の{搬送車|はんそうしゃ}を{機体|きたい}に{接続|せつぞく}するときは、{荷台|にだい}の{床|ゆか}を{機体|きたい}の{床|ゆか}より{少|すこ}し{低|ひく}く{保|たも}つ。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: karena pesawat turun saat dimuati dan agar pintu tak rusak."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kabin penerbangan internasional diperlakukan seperti luar negeri menurut hukum bea cukai.”",
+       "jp": "○か×か。「{国際線|こくさいせん}の{機内|きない}は、{税関法上|ぜいかんほうじょう}、{外国|がいこく}と{同様|どうよう}に{扱|あつか}われる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh membawa keluar rokok atau majalah dari kabin internasional.”",
+       "jp": "○か×か。「{国際線|こくさいせん}の{機内|きない}から、タバコや{雑誌|ざっし}を{持ち出|もちだ}してもよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: itu penyelundupan dan dihukum."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b5s1-q",
+    "title": {
+     "id": "Kosakata: Pembersihan Kabin (機内清掃)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ギャレー」（ぎゃれー）?",
+       "jp": "「ギャレー」（ぎゃれー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "transit, sambung penerbangan",
+        "jp": "transit, sambung penerbangan"
+       },
+       {
+        "id": "kenyamanan",
+        "jp": "kenyamanan"
+       },
+       {
+        "id": "mobil toilet (lavatory car)",
+        "jp": "mobil toilet (lavatory car)"
+       },
+       {
+        "id": "galley (dapur pesawat)",
+        "jp": "galley (dapur pesawat)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ギャレー (ぎゃれー) = galley (dapur pesawat). Sumber: daftar kosakata modul hal. 32.",
+       "jp": "ギャレー（ぎゃれー）＝ galley (dapur pesawat)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「国内線」（こくないせん）?",
+       "jp": "「国内線」（こくないせん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tangani dengan hati-hati",
+        "jp": "tangani dengan hati-hati"
+       },
+       {
+        "id": "rute domestik",
+        "jp": "rute domestik"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan",
+        "jp": "bea cukai, proses kepabeanan"
+       },
+       {
+        "id": "mobil air (water car)",
+        "jp": "mobil air (water car)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "国内線 (こくないせん) = rute domestik. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "国内線（こくないせん）＝ rute domestik"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「忘れ物」（わすれもの）?",
+       "jp": "「忘れ物」（わすれもの）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan",
+        "jp": "muatan"
+       },
+       {
+        "id": "barang tertinggal",
+        "jp": "barang tertinggal"
+       },
+       {
+        "id": "bagasi tercatat",
+        "jp": "bagasi tercatat"
+       },
+       {
+        "id": "peralatan pendukung darat (GSE)",
+        "jp": "peralatan pendukung darat (GSE)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "忘れ物 (わすれもの) = barang tertinggal. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "忘れ物（わすれもの）＝ barang tertinggal"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機内清掃」（きないせいそう）?",
+       "jp": "「機内清掃」（きないせいそう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pembersihan kabin",
+        "jp": "pembersihan kabin"
+       },
+       {
+        "id": "marshaller (pemandu pesawat parkir)",
+        "jp": "marshaller (pemandu pesawat parkir)"
+       },
+       {
+        "id": "ruang kargo",
+        "jp": "ruang kargo"
+       },
+       {
+        "id": "muatan tertinggal",
+        "jp": "muatan tertinggal"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "機内清掃 (きないせいそう) = pembersihan kabin. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "機内清掃（きないせいそう）＝ pembersihan kabin"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全のしおり」（あんぜんのしおり）?",
+       "jp": "「安全のしおり」（あんぜんのしおり）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kartu petunjuk keselamatan",
+        "jp": "kartu petunjuk keselamatan"
+       },
+       {
+        "id": "pekerjaan setelah penerbangan",
+        "jp": "pekerjaan setelah penerbangan"
+       },
+       {
+        "id": "roda depan (nose gear)",
+        "jp": "roda depan (nose gear)"
+       },
+       {
+        "id": "penanggung jawab kerja",
+        "jp": "penanggung jawab kerja"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "安全のしおり (あんぜんのしおり) = kartu petunjuk keselamatan. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "安全のしおり（あんぜんのしおり）＝ kartu petunjuk keselamatan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「不審物」（ふしんぶつ）?",
+       "jp": "「不審物」（ふしんぶつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ruang kargo",
+        "jp": "ruang kargo"
+       },
+       {
+        "id": "bagasi tercatat",
+        "jp": "bagasi tercatat"
+       },
+       {
+        "id": "pengurasan air",
+        "jp": "pengurasan air"
+       },
+       {
+        "id": "benda mencurigakan",
+        "jp": "benda mencurigakan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "不審物 (ふしんぶつ) = benda mencurigakan. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "不審物（ふしんぶつ）＝ benda mencurigakan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「座席ポケット」（ざせきぽけっと）?",
+       "jp": "「座席ポケット」（ざせきぽけっと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "menyambung, sambungan",
+        "jp": "menyambung, sambungan"
+       },
+       {
+        "id": "kargo udara",
+        "jp": "kargo udara"
+       },
+       {
+        "id": "ruang kargo",
+        "jp": "ruang kargo"
+       },
+       {
+        "id": "kantong kursi",
+        "jp": "kantong kursi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "座席ポケット (ざせきぽけっと) = kantong kursi. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "座席ポケット（ざせきぽけっと）＝ kantong kursi"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「飛行後作業」（ひこうごさぎょう）?",
+       "jp": "「飛行後作業」（ひこうごさぎょう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pekerjaan setelah penerbangan",
+        "jp": "pekerjaan setelah penerbangan"
+       },
+       {
+        "id": "gaya sentrifugal",
+        "jp": "gaya sentrifugal"
+       },
+       {
+        "id": "air kotor",
+        "jp": "air kotor"
+       },
+       {
+        "id": "label identifikasi kargo",
+        "jp": "label identifikasi kargo"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "飛行後作業 (ひこうごさぎょう) = pekerjaan setelah penerbangan. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "飛行後作業（ひこうごさぎょう）＝ pekerjaan setelah penerbangan"
+      }
+     }
+    ],
+    "sub": "b5s1"
+   },
+   {
+    "id": "b5s2-q",
+    "title": {
+     "id": "Kosakata: Perlengkapan Kabin (客室用品の搭降載)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「客室用品」（きゃくしつようひん）?",
+       "jp": "「客室用品」（きゃくしつようひん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "fuel order (jumlah BBM yang diminta)",
+        "jp": "fuel order (jumlah BBM yang diminta)"
+       },
+       {
+        "id": "perlengkapan kabin",
+        "jp": "perlengkapan kabin"
+       },
+       {
+        "id": "outrigger (penopang kendaraan)",
+        "jp": "outrigger (penopang kendaraan)"
+       },
+       {
+        "id": "kenyamanan",
+        "jp": "kenyamanan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "客室用品 (きゃくしつようひん) = perlengkapan kabin. Sumber: daftar kosakata modul hal. 35.",
+       "jp": "客室用品（きゃくしつようひん）＝ perlengkapan kabin"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機内食」（きないしょく）?",
+       "jp": "「機内食」（きないしょく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "berikat",
+        "jp": "berikat"
+       },
+       {
+        "id": "makanan dalam pesawat",
+        "jp": "makanan dalam pesawat"
+       },
+       {
+        "id": "APU (Auxiliary Power Unit)",
+        "jp": "APU (Auxiliary Power Unit)"
+       },
+       {
+        "id": "nomor penerbangan",
+        "jp": "nomor penerbangan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "機内食 (きないしょく) = makanan dalam pesawat. Sumber: daftar kosakata modul hal. 35.",
+       "jp": "機内食（きないしょく）＝ makanan dalam pesawat"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搬送台車」（はんそうだいしゃ）?",
+       "jp": "「搬送台車」（はんそうだいしゃ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kereta pengangkut",
+        "jp": "kereta pengangkut"
+       },
+       {
+        "id": "bahan bakar penerbangan",
+        "jp": "bahan bakar penerbangan"
+       },
+       {
+        "id": "disinfektan dan penghilang bau",
+        "jp": "disinfektan dan penghilang bau"
+       },
+       {
+        "id": "pekerjaan antar penerbangan",
+        "jp": "pekerjaan antar penerbangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "搬送台車 (はんそうだいしゃ) = kereta pengangkut. Sumber: daftar kosakata modul hal. 35.",
+       "jp": "搬送台車（はんそうだいしゃ）＝ kereta pengangkut"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「アウトリガー」（あうとりがー）?",
+       "jp": "「アウトリガー」（あうとりがー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "benda mencurigakan",
+        "jp": "benda mencurigakan"
+       },
+       {
+        "id": "kapten pesawat",
+        "jp": "kapten pesawat"
+       },
+       {
+        "id": "outrigger (penopang kendaraan)",
+        "jp": "outrigger (penopang kendaraan)"
+       },
+       {
+        "id": "air minum",
+        "jp": "air minum"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "アウトリガー (あうとりがー) = outrigger (penopang kendaraan). Sumber: daftar kosakata modul hal. 35.",
+       "jp": "アウトリガー（あうとりがー）＝ outrigger (penopang kendaraan)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「密輸」（みつゆ）?",
+       "jp": "「密輸」（みつゆ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kursi roda",
+        "jp": "kursi roda"
+       },
+       {
+        "id": "fasilitas pasokan AC darat",
+        "jp": "fasilitas pasokan AC darat"
+       },
+       {
+        "id": "dolly (kereta bawa kontainer/palet)",
+        "jp": "dolly (kereta bawa kontainer/palet)"
+       },
+       {
+        "id": "penyelundupan",
+        "jp": "penyelundupan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "密輸 (みつゆ) = penyelundupan. Sumber: daftar kosakata modul hal. 35.",
+       "jp": "密輸（みつゆ）＝ penyelundupan"
+      }
+     }
+    ],
+    "sub": "b5s2"
+   }
+  ],
+  "bab6": [
+   {
+    "id": "bab6-q1",
+    "title": {
+     "id": "Latihan Bab 6 (○×)",
+     "jp": "{第|だい}6{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pemeriksaan akhir pengisian bahan bakar dilakukan mekanik berlisensi maskapai.”",
+       "jp": "○か×か。「{燃料給油作業|ねんりょうきゅうゆさぎょう}の{最終確認|さいしゅうかくにん}は、{航空会社|こうくうかいしゃ}の{有資格整備士|ゆうしかくせいびし}が{行|おこな}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pesawat biasanya selalu berangkat dengan bahan bakar penuh.”",
+       "jp": "○か×か。「{航空機|こうくうき}は、{通常|つうじょう}どんな{飛行|ひこう}でも{燃料|ねんりょう}を{満タン|まんたん}にして{出発|しゅっぱつ}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: bahan bakar berat menambah konsumsi, jadi tidak diisi penuh kecuali penerbangan sangat jauh/khusus."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Fuel order umumnya dihitung sebagai bandara tujuan + alternatif + cadangan.”",
+       "jp": "○か×か。「{燃料|ねんりょう}オーダーは、おおむね「{目的空港|もくてきくうこう}＋{代替空港|だいたいくうこう}＋{予備燃料|よびねんりょう}」で{算出|さんしゅつ}される。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sistem hydrant mengirim bahan bakar lewat pipa bawah tanah ke tiap spot.”",
+       "jp": "○か×か。「ハイドラント{方式|ほうしき}は、{地下配管|ちかはいかん}で{各|かく}スポットに{燃料|ねんりょう}を{送|おく}る{方式|ほうしき}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat pengisian, tanah–truk BBM–pesawat dihubungkan dengan arde untuk menghilangkan listrik statis.”",
+       "jp": "○か×か。「{燃料搭載作業|ねんりょうとうさいさぎょう}では、{静電気|せいでんき}を{除去|じょきょ}するために{地面|じめん}・{給油車|きゅうゆしゃ}・{航空機|こうくうき}をアースでつなぐ。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengisian BBM boleh dimulai seperti biasa meski penumpang masih turun.”",
+       "jp": "○か×か。「{旅客|りょかく}が{降機中|こうきちゅう}でも、{燃料搭載|ねんりょうとうさい}は{通常|つうじょう}どおり{開始|かいし}してよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: normalnya mulai setelah penumpang selesai turun."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b6s1-q",
+    "title": {
+     "id": "Kosakata: Pengisian Bahan Bakar",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「航空燃料」（こうくうねんりょう）?",
+       "jp": "「航空燃料」（こうくうねんりょう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "keselamatan (sebagai tujuan operasi)",
+        "jp": "keselamatan (sebagai tujuan operasi)"
+       },
+       {
+        "id": "fuel order (jumlah BBM yang diminta)",
+        "jp": "fuel order (jumlah BBM yang diminta)"
+       },
+       {
+        "id": "bahan bakar penerbangan",
+        "jp": "bahan bakar penerbangan"
+       },
+       {
+        "id": "barang pecah belah",
+        "jp": "barang pecah belah"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "航空燃料 (こうくうねんりょう) = bahan bakar penerbangan. Sumber: daftar kosakata modul hal. 38.",
+       "jp": "航空燃料（こうくうねんりょう）＝ bahan bakar penerbangan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「燃料オーダー」（ねんりょうおーだー）?",
+       "jp": "「燃料オーダー」（ねんりょうおーだー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "fuel order (jumlah BBM yang diminta)",
+        "jp": "fuel order (jumlah BBM yang diminta)"
+       },
+       {
+        "id": "rencana muat",
+        "jp": "rencana muat"
+       },
+       {
+        "id": "pengisian air",
+        "jp": "pengisian air"
+       },
+       {
+        "id": "claim tag (tanda terima bagasi)",
+        "jp": "claim tag (tanda terima bagasi)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "燃料オーダー (ねんりょうおーだー) = fuel order (jumlah BBM yang diminta). Sumber: daftar kosakata modul hal. 38.",
+       "jp": "燃料オーダー（ねんりょうおーだー）＝ fuel order (jumlah BBM yang diminta)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「静電気」（せいでんき）?",
+       "jp": "「静電気」（せいでんき）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rencana muat",
+        "jp": "rencana muat"
+       },
+       {
+        "id": "pintu keberangkatan (gate)",
+        "jp": "pintu keberangkatan (gate)"
+       },
+       {
+        "id": "rute internasional",
+        "jp": "rute internasional"
+       },
+       {
+        "id": "listrik statis",
+        "jp": "listrik statis"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "静電気 (せいでんき) = listrik statis. Sumber: daftar kosakata modul hal. 38.",
+       "jp": "静電気（せいでんき）＝ listrik statis"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「予備燃料」（よびねんりょう）?",
+       "jp": "「予備燃料」（よびねんりょう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "transit, sambung penerbangan",
+        "jp": "transit, sambung penerbangan"
+       },
+       {
+        "id": "bahan bakar cadangan",
+        "jp": "bahan bakar cadangan"
+       },
+       {
+        "id": "ruang kargo",
+        "jp": "ruang kargo"
+       },
+       {
+        "id": "makanan dalam pesawat",
+        "jp": "makanan dalam pesawat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "予備燃料 (よびねんりょう) = bahan bakar cadangan. Sumber: daftar kosakata modul hal. 38.",
+       "jp": "予備燃料（よびねんりょう）＝ bahan bakar cadangan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「燃料搭載」（ねんりょうとうさい）?",
+       "jp": "「燃料搭載」（ねんりょうとうさい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "waktu transit minimum (MCT)",
+        "jp": "waktu transit minimum (MCT)"
+       },
+       {
+        "id": "kapten pesawat",
+        "jp": "kapten pesawat"
+       },
+       {
+        "id": "pemuatan bahan bakar",
+        "jp": "pemuatan bahan bakar"
+       },
+       {
+        "id": "claim tag (tanda terima bagasi)",
+        "jp": "claim tag (tanda terima bagasi)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "燃料搭載 (ねんりょうとうさい) = pemuatan bahan bakar. Sumber: daftar kosakata modul hal. 38.",
+       "jp": "燃料搭載（ねんりょうとうさい）＝ pemuatan bahan bakar"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「危険区域」（きけんくいき）?",
+       "jp": "「危険区域」（きけんくいき）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "label identifikasi kargo",
+        "jp": "label identifikasi kargo"
+       },
+       {
+        "id": "bahan bakar penerbangan",
+        "jp": "bahan bakar penerbangan"
+       },
+       {
+        "id": "area bahaya",
+        "jp": "area bahaya"
+       },
+       {
+        "id": "muatan tertinggal",
+        "jp": "muatan tertinggal"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "危険区域 (きけんくいき) = area bahaya. Sumber: daftar kosakata modul hal. 38.",
+       "jp": "危険区域（きけんくいき）＝ area bahaya"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「代替空港」（だいたいくうこう）?",
+       "jp": "「代替空港」（だいたいくうこう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyortiran bagasi",
+        "jp": "penyortiran bagasi"
+       },
+       {
+        "id": "galley (dapur pesawat)",
+        "jp": "galley (dapur pesawat)"
+       },
+       {
+        "id": "rute domestik",
+        "jp": "rute domestik"
+       },
+       {
+        "id": "bandara alternatif",
+        "jp": "bandara alternatif"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "代替空港 (だいたいくうこう) = bandara alternatif. Sumber: daftar kosakata modul hal. 38.",
+       "jp": "代替空港（だいたいくうこう）＝ bandara alternatif"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「車輪止め」（しゃりんどめ）?",
+       "jp": "「車輪止め」（しゃりんどめ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ganjal roda",
+        "jp": "ganjal roda"
+       },
+       {
+        "id": "penyelundupan",
+        "jp": "penyelundupan"
+       },
+       {
+        "id": "penyok (dent)",
+        "jp": "penyok (dent)"
+       },
+       {
+        "id": "pekerjaan antar penerbangan",
+        "jp": "pekerjaan antar penerbangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "車輪止め (しゃりんどめ) = ganjal roda. Sumber: daftar kosakata modul hal. 38.",
+       "jp": "車輪止め（しゃりんどめ）＝ ganjal roda"
+      }
+     }
+    ],
+    "sub": "b6s1"
+   }
+  ],
+  "bab7": [
+   {
+    "id": "bab7-q1",
+    "title": {
+     "id": "Latihan Bab 7 (○×)",
+     "jp": "{第|だい}7{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada check-in internasional, tiket, paspor, dan visa/otorisasi elektronik diperiksa.”",
+       "jp": "○か×か。「{国際線|こくさいせん}のチェックインでは、{航空券|こうくうけん}、パスポート、ビザ（{電子渡航認証|でんしとこうにんしょう}）を{確認|かくにん}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Untuk bagasi tercatat, claim tag diberikan ke penumpang.”",
+       "jp": "○か×か。「{預け入|あずけい}れ{手荷物|てにもつ}には、{手荷物引換証|てにもつひきかえしょう}（クレーム・タグ）を{旅客|りょかく}に{渡|わた}す。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika penumpang yang belum naik tidak ditemukan, bagasinya diturunkan dari pesawat (offload).”",
+       "jp": "○か×か。「{搭乗|とうじょう}していない{旅客|りょかく}が{見|み}つからないときは、{預|あず}け{荷物|にもつ}を{機内|きない}から{降|お}ろす{手続|てつづ}きを{行|おこな}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika tanpa scanner, kupon dipotong dan jumlah penumpang dicek.”",
+       "jp": "○か×か。「スキャナーがない{場合|ばあい}は、{半券|はんけん}を{回収|かいしゅう}して{人数|にんずう}を{確認|かくにん}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Dalam pemandu transit tidak perlu memeriksa MCT.”",
+       "jp": "○か×か。「{乗り継|のりつ}ぎ{旅客|りょかく}の{案内|あんない}では、MCTの{確認|かくにん}は{必要|ひつよう}ない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: pahami MCT (waktu sambungan minimum)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sasaran special assistance meliputi penumpang kursi roda dan ibu hamil.”",
+       "jp": "○か×か。「スペシャルアシスタンスの{対象|たいしょう}には、{車椅子|くるまいす}の{旅客|りょかく}や{妊娠中|にんしんちゅう}の{旅客|りょかく}が{含|ふく}まれる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kode 3 huruf 'CGK' menunjukkan Jakarta.”",
+       "jp": "○か×か。「{空港|くうこう}の3レター・コードの「CGK」はジャカルタを{表|あらわ}す。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (Jakarta Soekarno-Hatta)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika terlambat karena gangguan peralatan, penumpang diminta menunggu tanpa pengumuman.”",
+       "jp": "○か×か。「{機材|きざい}トラブルで{遅|おく}れが{出|で}た{場合|ばあい}は、{案内|あんない}を{出|だ}さずに{待|ま}ってもらう。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: umumkan segera dan siapkan pengganti."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b7s1-q",
+    "title": {
+     "id": "Kosakata: Layanan Keberangkatan",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「旅客」（りょかく）?",
+       "jp": "「旅客」（りょかく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "area bahaya",
+        "jp": "area bahaya"
+       },
+       {
+        "id": "penyortiran kargo",
+        "jp": "penyortiran kargo"
+       },
+       {
+        "id": "ganjal roda",
+        "jp": "ganjal roda"
+       },
+       {
+        "id": "penumpang",
+        "jp": "penumpang"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "旅客 (りょかく) = penumpang. Sumber: daftar kosakata modul hal. 41.",
+       "jp": "旅客（りょかく）＝ penumpang"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭乗券」（とうじょうけん）?",
+       "jp": "「搭乗券」（とうじょうけん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bahan bakar cadangan",
+        "jp": "bahan bakar cadangan"
+       },
+       {
+        "id": "menyambung, sambungan",
+        "jp": "menyambung, sambungan"
+       },
+       {
+        "id": "makanan segar",
+        "jp": "makanan segar"
+       },
+       {
+        "id": "boarding pass",
+        "jp": "boarding pass"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "搭乗券 (とうじょうけん) = boarding pass. Sumber: daftar kosakata modul hal. 41.",
+       "jp": "搭乗券（とうじょうけん）＝ boarding pass"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「預け入れ手荷物」（あずけいれてにもつ）?",
+       "jp": "「預け入れ手荷物」（あずけいれてにもつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bagasi tercatat",
+        "jp": "bagasi tercatat"
+       },
+       {
+        "id": "pengirim barang",
+        "jp": "pengirim barang"
+       },
+       {
+        "id": "makanan dalam pesawat",
+        "jp": "makanan dalam pesawat"
+       },
+       {
+        "id": "bandara",
+        "jp": "bandara"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "預け入れ手荷物 (あずけいれてにもつ) = bagasi tercatat. Sumber: daftar kosakata modul hal. 41.",
+       "jp": "預け入れ手荷物（あずけいれてにもつ）＝ bagasi tercatat"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭乗口」（とうじょうぐち）?",
+       "jp": "「搭乗口」（とうじょうぐち）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tempat tujuan",
+        "jp": "tempat tujuan"
+       },
+       {
+        "id": "bulk cart (kereta muatan curah)",
+        "jp": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "pintu keberangkatan (gate)",
+        "jp": "pintu keberangkatan (gate)"
+       },
+       {
+        "id": "forklift",
+        "jp": "forklift"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "搭乗口 (とうじょうぐち) = pintu keberangkatan (gate). Sumber: daftar kosakata modul hal. 41.",
+       "jp": "搭乗口（とうじょうぐち）＝ pintu keberangkatan (gate)"
+      }
+     }
+    ],
+    "sub": "b7s1"
+   }
+  ]
+ },
+ "tema": []
+}

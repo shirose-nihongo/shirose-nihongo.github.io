@@ -14,14 +14,14 @@ CSS = """@page{size:A4;margin:16mm 15mm 18mm}body{font-family:'Noto Sans','Noto 
 h2{font-size:13pt;color:#2a1f4d;border-bottom:2px solid #e2c9a0;padding-bottom:2px;margin:16px 0 6px}ul{margin:4px 0 8px 18px;padding:0}li{margin:3px 0}
 .note{background:#fff5df;border-left:4px solid #e0a53a;padding:6px 10px;margin:8px 0}p{margin:6px 0}
 .ft{margin-top:18px;font-size:8.5pt;color:#777;border-top:1px solid #ddd;padding-top:5px}"""
-def sub_html(slug, nama, c, s):
+def sub_html(slug, nama, c, s, attrib=None):
     out = [f"<p class='k'>{html.escape(nama)} · BAB {c['no']} — {inline(c['title']['id'])} · Subbab {c['no']}.{s['no']}</p><h1>{inline(s['title']['id'])}</h1><p class='j'>{html.escape(strip(s['title'].get('jp','')))}</p>"]
     for b in (s.get("full", {}).get("id") or s.get("summary", {}).get("id") or []):
         if "h" in b: out.append(f"<h2>{inline(b['h'])}</h2>")
         elif "ul" in b: out.append("<ul>" + "".join(f"<li>{inline(x)}</li>" for x in b["ul"]) + "</ul>")
         elif "p" in b: out.append(f"<p>{inline(b['p'])}</p>")
         elif "note" in b: out.append(f"<div class='note'>{inline(b['note'])}</div>")
-    out.append("<div class='ft'>Ringkasan Indonesia oleh Shirose Nihongo berdasarkan teks belajar resmi (bukan terjemahan resmi). Untuk teks asli lihat halaman Jepang.</div>")
+    out.append("<div class='ft'>" + (html.escape(attrib) if attrib else "Ringkasan Indonesia oleh Shirose Nihongo berdasarkan teks belajar resmi (bukan terjemahan resmi). Untuk teks asli lihat halaman Jepang.") + "</div>")
     return f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{''.join(out)}</body></html>"
 def main(slugs):
     with sync_playwright() as p:
@@ -40,7 +40,7 @@ def main(slugs):
             for path, bd in babs:
                 c = bd["bab"]
                 for s in c["subs"]:
-                    pg.set_content(sub_html(slug, nama, c, s)); pdf = tmp / f"{s['id']}.pdf"
+                    pg.set_content(sub_html(slug, nama, c, s, idx.get('attrib'))); pdf = tmp / f"{s['id']}.pdf"
                     pg.pdf(path=str(pdf), format="A4", print_background=True)
                     k = int(re.search(r"Pages:\s+(\d+)", subprocess.run(["pdfinfo", str(pdf)], capture_output=True, text=True).stdout).group(1))
                     spans[s["id"]] = (n, n + k - 1); files.append(pdf); n += k

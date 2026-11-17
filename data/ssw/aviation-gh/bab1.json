@@ -1,0 +1,230 @@
+{
+ "schema": 1,
+ "bidang": "aviation-gh",
+ "source": "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab1",
+  "no": 1,
+  "title": {
+   "id": "Dasar Ground Handling, Proses, dan Informasi",
+   "jp": "グランドハンドリングの{基本|きほん}・{工程|こうてい}・{情報|じょうほう}"
+  },
+  "intro": {
+   "id": "Apa itu ground handling, urutan kerja saat pesawat tiba/berangkat, dan membaca informasi penerbangan."
+  },
+  "pages": [
+   6,
+   11
+  ],
+  "pagesJp": [
+   6,
+   11
+  ],
+  "subs": [
+   {
+    "id": "b1s1",
+    "no": 1,
+    "title": {
+     "id": "Apa itu Ground Handling & Proses Kerja",
+     "jp": "グランドハンドリングとは・{工程管理|こうていかんり}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "pagesJp": [
+     6,
+     7
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Ground handling"
+      },
+      {
+       "ul": [
+        "Pekerjaan di darat (**spot / ramp**) yang menyiapkan pesawat: memuat bahan bakar, bagasi, kargo, membersihkan kabin, dll. Disebut **グランドハンドリング**.",
+        "Tujuan: pesawat berangkat **aman (安全性)**, **tepat waktu (定時性)**, dan **nyaman (快適性)**.",
+        "Keselamatan: sampaikan ke kapten informasi barang berbahaya, berat muatan, dan posisi titik berat; jika menemukan kerusakan/penyok (**Dent**) pada badan pesawat, laporkan ke mekanik.",
+        "Ketepatan waktu: kerjakan persiapan sesuai waktu yang ditetapkan. Kenyamanan: bersihkan kabin.",
+        "**IATA** menyusun standar kontrak layanan handling (**Airport Handling Manual**) bila maskapai menitipkan handling di bandara luar negeri."
+       ]
+      },
+      {
+       "h": "Manajemen proses (工程管理)"
+      },
+      {
+       "ul": [
+        "Urutan kerja, waktu, dan jumlah orang ditentukan lebih dulu; semua pekerjaan mengikuti **standar proses kerja** menuju jam berangkat berikutnya.",
+        "Sebelum pesawat tiba, petugas dan **GSE (Ground Support Equipment)** menunggu di tempat aman yang tidak menghalangi pesawat: mekanik, petugas penumpang, **marshaller**, petugas penurunan kontainer, operator **PBB (Passenger Boarding Bridge)**, petugas kebersihan.",
+        "**Marshaller** memandu pesawat ke posisi berhenti. Penanggung jawab kedatangan memastikan **semua mesin mati**, lalu memberi tanda **OK pemasangan peralatan**; baru peralatan dan petugas mendekat.",
+        "Lalu: PBB dipasang dan pintu dibuka; kontainer diturunkan dari ruang kargo; truk dipasang di pintu belakang untuk pembersihan; **water service car** mengisi air minum dan **lavatory service car** menyedot air kotor.",
+        "Setelah kontainer kedatangan turun, kontainer keberangkatan dimuat. **Traktor tarik** dipasang di roda depan untuk mendorong pesawat."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "グランドハンドリング"
+      },
+      {
+       "ul": [
+        "{飛行機|ひこうき}が{飛|と}ぶための{準備|じゅんび}を{地上|ちじょう}（スポット・ランプ）で{行|おこな}う{仕事|しごと}を「グランドハンドリング」といいます。",
+        "{目的|もくてき}は、{安全|あんぜん}に・{時間|じかん}どおりに・{快適|かいてき}に{飛|と}ばすことです。",
+        "{安全|あんぜん}のため、{危険物|きけんぶつ}・{積|つ}む{重|おも}さ・{重心|じゅうしん}の{位置|いち}を{機長|きちょう}に{正|ただ}しく{伝|つた}えます。{機体|きたい}にキズやへこみ（Dent）を{見|み}つけたら{整備士|せいびし}に{伝|つた}えます。",
+        "{国際航空運送協会|こくさいこうくううんそうきょうかい}（IATA）は、グランドハンドリングを{他|ほか}の{会社|かいしゃ}にたのむときの{標準|ひょうじゅん}の{契約|けいやく}（Airport Handling Manual）を{作|つく}っています。"
+       ]
+      },
+      {
+       "h": "{工程管理|こうていかんり}"
+      },
+      {
+       "ul": [
+        "{作業|さぎょう}の{順番|じゅんばん}・{時間|じかん}・{人数|にんずう}を{先|さき}に{決|き}め、{全員|ぜんいん}が{標準|ひょうじゅん}の{工程|こうてい}に{従|したが}って{次|つぎ}の{出発時刻|しゅっぱつじこく}に{向|む}かいます。",
+        "{飛行機|ひこうき}が{着|つ}く{前|まえ}に、{整備士|せいびし}・マーシャラー・{搭乗橋|とうじょうきょう}（PBB）の{係員|かかりいん}・{清掃係|せいそうがかり}などが、{安全|あんぜん}な{場所|ばしょ}で{待|ま}ちます。",
+        "マーシャラーが{飛行機|ひこうき}を{止|と}める{位置|いち}まで{案内|あんない}します。{責任者|せきにんしゃ}が{全部|ぜんぶ}のエンジンの{停止|ていし}を{確認|かくにん}して「{機材装着|きざいそうちゃく}OK」の{合図|あいず}を{出|だ}してから、{機材|きざい}と{係員|かかりいん}が{近|ちか}づきます。",
+        "{到着便|とうちゃくびん}のコンテナを{降|お}ろした{後|あと}に、{出発便|しゅっぱつびん}の{荷物|にもつ}を{積|つ}みます。{最後|さいご}に{牽引車|けんいんしゃ}を{前脚|まえあし}に{付|つ}けます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pekerjaan di darat (spot / ramp) yang menyiapkan pesawat: memuat bahan bakar, bagasi, kargo, membersihkan kabin, dll. Disebut グランドハンドリング.",
+      "points": [
+       "Tujuan: pesawat berangkat aman (安全性), tepat waktu (定時性), dan nyaman (快適性).",
+       "Keselamatan: sampaikan ke kapten informasi barang berbahaya, berat muatan, dan posisi titik berat; jika menemukan kerusakan/penyok (Dent) pada badan pesawat, laporkan ke …",
+       "Ketepatan waktu: kerjakan persiapan sesuai waktu yang ditetapkan. Kenyamanan: bersihkan kabin."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{飛行機|ひこうき}が{飛|と}ぶための{準備|じゅんび}を{地上|ちじょう}（スポット・ランプ）で{行|おこな}う{仕事|しごと}を「グランドハンドリング」といいます。",
+      "points": [
+       "{目的|もくてき}は、{安全|あんぜん}に・{時間|じかん}どおりに・{快適|かいてき}に{飛|と}ばすことです。",
+       "{安全|あんぜん}のため、{危険物|きけんぶつ}・{積|つ}む{重|おも}さ・{重心|じゅうしん}の{位置|いち}を{機長|きちょう}に{正|ただ}しく{伝|つた}えます。{機体|きたい}にキズやへこみ（Dent）を{見|み}つけたら{整備士|せいびし}に{伝|つた}えます。",
+       "{国際航空運送協会|こくさいこうくううんそうきょうかい}（IATA）は、グランドハンドリングを{他|ほか}の{会社|かいしゃ}にたのむときの{標準|ひょうじゅん}の{契約|けいやく}（Airport Handling Manual）を{作|つく}っています。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s2",
+    "no": 2,
+    "title": {
+     "id": "Informasi Penerbangan & Muatan",
+     "jp": "{情報|じょうほう}の{入手|にゅうしゅ}"
+    },
+    "pages": [
+     2,
+     2
+    ],
+    "pagesJp": [
+     8,
+     11
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Informasi dasar (基本情報)"
+      },
+      {
+       "ul": [
+        "Dicek di monitor informasi: **FLT** (nomor penerbangan), **EQT** (nomor pesawat/ship number), **FRM/TO** (asal/tujuan), **STA/STD** (jadwal tiba/berangkat), **SPOT** (tempat parkir).",
+        "Bandara dan maskapai dinyatakan dengan **kode 3 huruf / 2 huruf** (Reference-1).",
+        "Untuk **機移し (pemindahan langsung antar pesawat)**, periksa juga informasi dasar pesawat tujuan. Jika antar maskapai berbeda, info tidak muncul di monitor — tanyakan ke **controller**."
+       ]
+      },
+      {
+       "h": "Informasi muatan"
+      },
+      {
+       "ul": [
+        "Rencana muat keberangkatan diberikan controller lewat **Instruction Sheet**: **POS** (posisi muat), **ULD-ID**, **PCS** (jumlah), **WGT** (berat), **RMKS** (muatan khusus/berbahaya, muatan sambungan).",
+        "Instruction Sheet sering sekaligus berfungsi sebagai **lembar cek muat**; pakai sesuai aturan.",
+        "Muatan kedatangan: periksa rencana muat dari bandara asal; urutan dan tujuan penurunan bisa berbeda menurut jenis muatan.",
+        "**ULD (Unit Load Device)** = kontainer/palet dengan bentuk standar untuk dipasang di pesawat. Contoh: **AKH (LD-46)**, **AKE (LD-3)**, **DQP (LD-4)**.",
+        "**Irregular**: perubahan seperti jumlah air, rencana muat (cuaca, jumlah penumpang, perawatan) bisa diinstruksikan controller; proses sesuai aturan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{基本情報|きほんじょうほう}"
+      },
+      {
+       "ul": [
+        "{情報|じょうほう}モニターで{確認|かくにん}します。FLT＝{便名|びんめい}、EQT＝シップ・ナンバー、FRM／TO＝{発地|はっち}／{着地|ちゃくち}、STA／STD＝{到着|とうちゃく}／{出発時刻|しゅっぱつじこく}、SPOT＝{駐機場所|ちゅうきばしょ}。",
+        "{空港|くうこう}と{航空会社|こうくうがいしゃ}は、アルファベット3{文字|もじ}・2{文字|もじ}のコードで{表|あらわ}します。",
+        "{機移|きうつ}し{搭載物|とうさいぶつ}は、{積|つ}みかえ{先|さき}の{飛行機|ひこうき}の{情報|じょうほう}も{確認|かくにん}します。{会社|かいしゃ}がちがうときはコントローラーに{確認|かくにん}します。"
+       ]
+      },
+      {
+       "h": "{搭載物|とうさいぶつ}の{情報|じょうほう}"
+      },
+      {
+       "ul": [
+        "{出発便|しゅっぱつびん}は、コントローラーが「インストラクション・シート」で{指示|しじ}します。POS＝{搭載|とうさい}ポジション、ULD-ID＝ULD{番号|ばんごう}、PCS＝{個数|こすう}、WGT＝{重量|じゅうりょう}、RMKS＝{特殊搭載物|とくしゅとうさいぶつ}など。",
+        "ULD（Unit Load Device）は、コンテナやパレットのように、{飛行機|ひこうき}に{付|つ}ける{形|かたち}が{決|き}まっているものです。",
+        "{天気|てんき}・{旅客数|りょかくすう}・{整備|せいび}などで{計画|けいかく}が{変|か}わることがあります。そのときはコントローラーの{指示|しじ}と{規則|きそく}に{従|したが}います。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dicek di monitor informasi: FLT (nomor penerbangan), EQT (nomor pesawat/ship number), FRM/TO (asal/tujuan), STA/STD (jadwal tiba/berangkat), SPOT (tempat parkir).",
+      "points": [
+       "Bandara dan maskapai dinyatakan dengan kode 3 huruf / 2 huruf (Reference-1).",
+       "Untuk 機移し (pemindahan langsung antar pesawat), periksa juga informasi dasar pesawat tujuan. Jika antar maskapai berbeda, info tidak muncul di monitor — tanyakan ke contro…",
+       "Rencana muat keberangkatan diberikan controller lewat Instruction Sheet: POS (posisi muat), ULD-ID, PCS (jumlah), WGT (berat), RMKS (muatan khusus/berbahaya, muatan sambu…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{情報|じょうほう}モニターで{確認|かくにん}します。FLT＝{便名|びんめい}、EQT＝シップ・ナンバー、FRM／TO＝{発地|はっち}／{着地|ちゃくち}、STA／STD＝{到着|とうちゃく}／{出発時刻|しゅっぱつじこく}、SPOT＝{駐機場所|ちゅうきばしょ}。",
+      "points": [
+       "{空港|くうこう}と{航空会社|こうくうがいしゃ}は、アルファベット3{文字|もじ}・2{文字|もじ}のコードで{表|あらわ}します。",
+       "{機移|きうつ}し{搭載物|とうさいぶつ}は、{積|つ}みかえ{先|さき}の{飛行機|ひこうき}の{情報|じょうほう}も{確認|かくにん}します。{会社|かいしゃ}がちがうときはコントローラーに{確認|かくにん}します。",
+       "{出発便|しゅっぱつびん}は、コントローラーが「インストラクション・シート」で{指示|しじ}します。POS＝{搭載|とうさい}ポジション、ULD-ID＝ULD{番号|ばんごう}、PCS＝{個数|こすう}、WGT＝{重量|じゅうりょう}、RMKS＝{特殊搭載物|とくしゅとうさいぶつ}など。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s99",
+    "no": 99,
+    "title": {
+     "id": "Soal Contoh Resmi JAEA",
+     "jp": "{特定技能評価試験|とくていぎのうひょうかしけん}サンプル{問題|もんだい}"
+    },
+    "pages": [
+     3,
+     3
+    ],
+    "pagesJp": [
+     0,
+     0
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Soal contoh resmi dari JAEA (satu halaman sampel per bidang). Latihannya ada di menu Kuis: 'Soal Contoh Resmi JAEA'."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Soal contoh resmi JAEA (○×).",
+      "points": [],
+      "avoid": [],
+      "exam": []
+     }
+    }
+   }
+  ]
+ }
+}

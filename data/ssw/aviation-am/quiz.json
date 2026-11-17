@@ -1,0 +1,3801 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "b1s99-q",
+    "sub": "b1s99",
+    "resmi": true,
+    "title": {
+     "id": "Soal Contoh Resmi JAEA (Aircraft Maintenance)",
+     "jp": "サンプル{問題|もんだい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat bekerja di ramp bandara, membawa korek api tidak masalah.”",
+       "jp": "○か×か。「{空港|くうこう}のランプ{内|ない}で{作業|さぎょう}する{時|とき}、ライターを{持|も}っていても{問題|もんだい}ない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-AM-SAMPLE-Q1"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika kualitas perawatan baik, kecelakaan dan insiden berkurang.”",
+       "jp": "○か×か。「{整備品質|せいびひんしつ}を{良|よ}くすれば、{事故|じこ}やインシデントは{減|へ}る。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-AM-SAMPLE-Q2"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sekrup dipakai di tempat yang tidak membutuhkan kekuatan.”",
+       "jp": "○か×か。「スクリューは{強度|きょうど}を{必要|ひつよう}としない{場所|ばしょ}に{使|つか}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-AM-SAMPLE-Q3"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tester dapat mengukur arus DC.”",
+       "jp": "○か×か。「{回路計|かいろけい}は{直流電流|ちょくりゅうでんりゅう}が{計|はか}れる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-AM-SAMPLE-Q4"
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Semua ban pesawat dilengkapi rem.”",
+       "jp": "○か×か。「{航空機|こうくうき}は、すべてのタイヤにブレーキが{装備|そうび}されている。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kunci resmi JAEA."
+      },
+      "mb": true,
+      "ref": "JAEA-AM-SAMPLE-Q5"
+     }
+    ]
+   },
+   {
+    "id": "bab1-q1",
+    "title": {
+     "id": "Latihan Bab 1 (○×)",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Shear bolt dipakai di tempat yang menerima beban geser.”",
+       "jp": "○か×か。「シア・ボルトは、{剪断荷重|せんだんかじゅう}のかかる{場所|ばしょ}に{使|つか}うボルトである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Baut umumnya dipasang dari depan ke belakang dan atas ke bawah agar tidak lepas bila mur lepas.”",
+       "jp": "○か×か。「ボルトは{一般|いっぱん}に、ナットが{外|はず}れてもボルトが{抜け出|ぬけだ}さないように、{前方|ぜんぽう}から{後方|こうほう}へ、{上方|じょうほう}から{下方|かほう}へ{取り付|とりつ}ける。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh menambah ring sebanyak apa pun untuk menyesuaikan panjang grip.”",
+       "jp": "○か×か。「グリップ{長|ちょう}の{調整|ちょうせい}にワッシャーを{何枚|なんまい}でも{入|い}れてよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: maks. 2 satu sisi / 3 kedua sisi."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika memakai baut baja pada paduan aluminium, pakai yang berlapis kadmium.”",
+       "jp": "○か×か。「アルミ{合金|ごうきん}に{鋼|こう}のボルトを{使|つか}う{場合|ばあい}は、{腐食防止|ふしょくぼうし}のためカドミウムメッキのものを{使|つか}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Baut toleransi presisi dipukul masuk dengan palu besi.”",
+       "jp": "○か×か。「{精密公差|せいみつこうさ}ボルトを{叩き込|たたきこ}むときは、{鉄|てつ}のハンマーを{使|つか}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: palu plastik."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sekrup dipakai di tempat yang tidak membutuhkan kekuatan sebesar baut.”",
+       "jp": "○か×か。「スクリューは、ボルトに{比|くら}べて{強度|きょうど}を{必要|ひつよう}としない{場所|ばしょ}に{使|つか}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (sesuai contoh soal resmi)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Self-locking nut boleh dipakai di bagian yang menerima gaya putar.”",
+       "jp": "○か×か。「セルフ・ロッキング・ナットは、{回転力|かいてんりょく}を{受|う}ける{所|ところ}にも{使|つか}える。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah self-locking nut dipasang, ujung ulir harus menonjol minimal 2 ulir dari muka mur.”",
+       "jp": "○か×か。「セルフ・ロッキング・ナットを{取り付|とりつ}けたとき、ボルトのねじ{端|はし}はナット{面|めん}から2{山以上出|やまいじょうで}ている{必要|ひつよう}がある。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Plain washer dapat dipakai maksimal 3 buah.”",
+       "jp": "○か×か。「{平|たいら}ワッシャーは{最大|さいだい}3{枚|まい}まで{使|つか}える。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Torque wrench boleh dipakai sebagai pengganti palu.”",
+       "jp": "○か×か。「トルク・レンチは、ハンマー{代|か}わりに{使|つか}ってもよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pilih torque wrench yang nilai maksimumnya sama dengan torsi yang dibutuhkan.”",
+       "jp": "○か×か。「トルク・レンチは、{締付|しめつけ}けトルク{値|ち}と{同|おな}じ{最大値|さいだいち}のものを{選|えら}ぶ。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: nilai torsi tidak boleh sama dengan maksimum."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Safety wire selalu baru dan tidak dipakai ulang.”",
+       "jp": "○か×か。「{安全線|あんぜんせん}は、{使|つか}うたびに{新|あたら}しいものを{使|つか}い、{再使用|さいしよう}しない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Double twist wire adalah metode standar pencegah putar dengan kawat.”",
+       "jp": "○か×か。「ダブル・ツイスト・ワイヤ{方法|ほうほう}は、{安全線|あんぜんせん}による{回り止|まわりど}めの{標準方法|ひょうじゅんほうほう}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh jika 50% atau lebih diameter cotter pin menonjol dari muka atas mur.”",
+       "jp": "○か×か。「コッター・ピンの{直径|ちょっけい}の50%{以上|いじょう}がナットの{上面|うわつら}から{出|で}てもよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "title": {
+     "id": "Kosakata: Baut (Bolt)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「呼び径」（よびけい）?",
+       "jp": "「呼び径」（よびけい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumber daya AC",
+        "jp": "sumber daya AC"
+       },
+       {
+        "id": "stabilizer horizontal",
+        "jp": "stabilizer horizontal"
+       },
+       {
+        "id": "diameter nominal",
+        "jp": "diameter nominal"
+       },
+       {
+        "id": "polaritas",
+        "jp": "polaritas"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "呼び径 (よびけい) = diameter nominal. Sumber: daftar kosakata modul hal. 4.",
+       "jp": "呼び径（よびけい）＝ diameter nominal"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「六角頭ボルト」（ろっかくあたまぼると）?",
+       "jp": "「六角頭ボルト」（ろっかくあたまぼると）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut kepala tenggelam (flush)",
+        "jp": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "baut kepala segi enam",
+        "jp": "baut kepala segi enam"
+       },
+       {
+        "id": "sekrup self-tapping",
+        "jp": "sekrup self-tapping"
+       },
+       {
+        "id": "perbaikan (tindakan korektif)",
+        "jp": "perbaikan (tindakan korektif)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "六角頭ボルト (ろっかくあたまぼると) = baut kepala segi enam. Sumber: daftar kosakata modul hal. 4.",
+       "jp": "六角頭ボルト（ろっかくあたまぼると）＝ baut kepala segi enam"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「剪断荷重」（せんだんかじゅう）?",
+       "jp": "「剪断荷重」（せんだんかじゅう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mur pengunci sendiri",
+        "jp": "mur pengunci sendiri"
+       },
+       {
+        "id": "aileron",
+        "jp": "aileron"
+       },
+       {
+        "id": "beban geser",
+        "jp": "beban geser"
+       },
+       {
+        "id": "baut kepala segi enam",
+        "jp": "baut kepala segi enam"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "剪断荷重 (せんだんかじゅう) = beban geser. Sumber: daftar kosakata modul hal. 4.",
+       "jp": "剪断荷重（せんだんかじゅう）＝ beban geser"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「面取り」（めんとり）?",
+       "jp": "「面取り」（めんとり）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "permukaan kontrol bergerak (control surface)",
+        "jp": "permukaan kontrol bergerak (control surface)"
+       },
+       {
+        "id": "alat pelindung diri (APD)",
+        "jp": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "roda pendarat (landing gear)",
+        "jp": "roda pendarat (landing gear)"
+       },
+       {
+        "id": "chamfer (pahat tepi)",
+        "jp": "chamfer (pahat tepi)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "面取り (めんとり) = chamfer (pahat tepi). Sumber: daftar kosakata modul hal. 4.",
+       "jp": "面取り（めんとり）＝ chamfer (pahat tepi)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「引張荷重」（ひっぱりかじゅう）?",
+       "jp": "「引張荷重」（ひっぱりかじゅう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tegangan DC",
+        "jp": "tegangan DC"
+       },
+       {
+        "id": "beban tarik",
+        "jp": "beban tarik"
+       },
+       {
+        "id": "torsi pengencangan",
+        "jp": "torsi pengencangan"
+       },
+       {
+        "id": "rudder",
+        "jp": "rudder"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "引張荷重 (ひっぱりかじゅう) = beban tarik. Sumber: daftar kosakata modul hal. 4.",
+       "jp": "引張荷重（ひっぱりかじゅう）＝ beban tarik"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「腐食」（ふしょく）?",
+       "jp": "「腐食」（ふしょく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tekanan hidrolik",
+        "jp": "tekanan hidrolik"
+       },
+       {
+        "id": "rudder",
+        "jp": "rudder"
+       },
+       {
+        "id": "korosi",
+        "jp": "korosi"
+       },
+       {
+        "id": "ulir halus",
+        "jp": "ulir halus"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "腐食 (ふしょく) = korosi. Sumber: daftar kosakata modul hal. 4.",
+       "jp": "腐食（ふしょく）＝ korosi"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「精密公差ボルト」（せいみつこうさぼると）?",
+       "jp": "「精密公差ボルト」（せいみつこうさぼると）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "spoiler",
+        "jp": "spoiler"
+       },
+       {
+        "id": "tester (circuit tester)",
+        "jp": "tester (circuit tester)"
+       },
+       {
+        "id": "baut toleransi presisi",
+        "jp": "baut toleransi presisi"
+       },
+       {
+        "id": "pelarut organik",
+        "jp": "pelarut organik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "精密公差ボルト (せいみつこうさぼると) = baut toleransi presisi. Sumber: daftar kosakata modul hal. 4.",
+       "jp": "精密公差ボルト（せいみつこうさぼると）＝ baut toleransi presisi"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「皿頭ボルト」（さらあたまぼると）?",
+       "jp": "「皿頭ボルト」（さらあたまぼると）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "masker pasokan udara",
+        "jp": "masker pasokan udara"
+       },
+       {
+        "id": "baut kepala tenggelam (flush)",
+        "jp": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "dilarang api",
+        "jp": "dilarang api"
+       },
+       {
+        "id": "plain washer (ring datar)",
+        "jp": "plain washer (ring datar)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "皿頭ボルト (さらあたまぼると) = baut kepala tenggelam (flush). Sumber: daftar kosakata modul hal. 4.",
+       "jp": "皿頭ボルト（さらあたまぼると）＝ baut kepala tenggelam (flush)"
+      }
+     }
+    ],
+    "sub": "b1s1"
+   },
+   {
+    "id": "b1s2-q",
+    "title": {
+     "id": "Kosakata: Mur (Nut)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ナット」（なっと）?",
+       "jp": "「ナット」（なっと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "human factor",
+        "jp": "human factor"
+       },
+       {
+        "id": "rudder",
+        "jp": "rudder"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)",
+        "jp": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "mur",
+        "jp": "mur"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ナット (なっと) = mur. Sumber: daftar kosakata modul hal. 8.",
+       "jp": "ナット（なっと）＝ mur"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「セルフ・ロッキング・ナット」（せるふ・ろっきんぐ・なっと）?",
+       "jp": "「セルフ・ロッキング・ナット」（せるふ・ろっきんぐ・なっと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengukuran",
+        "jp": "pengukuran"
+       },
+       {
+        "id": "mur pengunci sendiri",
+        "jp": "mur pengunci sendiri"
+       },
+       {
+        "id": "roda pendarat (landing gear)",
+        "jp": "roda pendarat (landing gear)"
+       },
+       {
+        "id": "chamfer (pahat tepi)",
+        "jp": "chamfer (pahat tepi)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "セルフ・ロッキング・ナット (せるふ・ろっきんぐ・なっと) = mur pengunci sendiri. Sumber: daftar kosakata modul hal. 8.",
+       "jp": "セルフ・ロッキング・ナット（せるふ・ろっきんぐ・なっと）＝ mur pengunci sendiri"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「溝付きナット」（みぞつきなっと）?",
+       "jp": "「溝付きナット」（みぞつきなっと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "castellated nut (mur beralur)",
+        "jp": "castellated nut (mur beralur)"
+       },
+       {
+        "id": "udara bertekanan (pneumatic)",
+        "jp": "udara bertekanan (pneumatic)"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)",
+        "jp": "alat penahan jatuh (full harness)"
+       },
+       {
+        "id": "mur",
+        "jp": "mur"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "溝付きナット (みぞつきなっと) = castellated nut (mur beralur). Sumber: daftar kosakata modul hal. 8.",
+       "jp": "溝付きナット（みぞつきなっと）＝ castellated nut (mur beralur)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ロッキング・トルク」（ろっきんぐ・とるく）?",
+       "jp": "「ロッキング・トルク」（ろっきんぐ・とるく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "insiden",
+        "jp": "insiden"
+       },
+       {
+        "id": "pelarut organik",
+        "jp": "pelarut organik"
+       },
+       {
+        "id": "seri",
+        "jp": "seri"
+       },
+       {
+        "id": "locking torque",
+        "jp": "locking torque"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ロッキング・トルク (ろっきんぐ・とるく) = locking torque. Sumber: daftar kosakata modul hal. 8.",
+       "jp": "ロッキング・トルク（ろっきんぐ・とるく）＝ locking torque"
+      }
+     }
+    ],
+    "sub": "b1s2"
+   },
+   {
+    "id": "b1s3-q",
+    "title": {
+     "id": "Kosakata: Sekrup (Screw)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「スクリュー」（すくりゅー）?",
+       "jp": "「スクリュー」（すくりゅー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sekrup",
+        "jp": "sekrup"
+       },
+       {
+        "id": "sumbat telinga",
+        "jp": "sumbat telinga"
+       },
+       {
+        "id": "kebisingan",
+        "jp": "kebisingan"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)",
+        "jp": "thrust reverser (dorongan balik)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "スクリュー (すくりゅー) = sekrup. Sumber: daftar kosakata modul hal. 10.",
+       "jp": "スクリュー（すくりゅー）＝ sekrup"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「並目ねじ」（なみめねじ）?",
+       "jp": "「並目ねじ」（なみめねじ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "benda berputar",
+        "jp": "benda berputar"
+       },
+       {
+        "id": "ulir kasar",
+        "jp": "ulir kasar"
+       },
+       {
+        "id": "human error (kesalahan manusia)",
+        "jp": "human error (kesalahan manusia)"
+       },
+       {
+        "id": "roda pendarat (landing gear)",
+        "jp": "roda pendarat (landing gear)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "並目ねじ (なみめねじ) = ulir kasar. Sumber: daftar kosakata modul hal. 10.",
+       "jp": "並目ねじ（なみめねじ）＝ ulir kasar"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「細目ねじ」（ほそめねじ）?",
+       "jp": "「細目ねじ」（ほそめねじ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "human error (kesalahan manusia)",
+        "jp": "human error (kesalahan manusia)"
+       },
+       {
+        "id": "metode double twist wire",
+        "jp": "metode double twist wire"
+       },
+       {
+        "id": "ulir halus",
+        "jp": "ulir halus"
+       },
+       {
+        "id": "pelarut organik",
+        "jp": "pelarut organik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "細目ねじ (ほそめねじ) = ulir halus. Sumber: daftar kosakata modul hal. 10.",
+       "jp": "細目ねじ（ほそめねじ）＝ ulir halus"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「セルフ・タッピング・スクリュー」（せるふ・たっぴんぐ・すくりゅー）?",
+       "jp": "「セルフ・タッピング・スクリュー」（せるふ・たっぴんぐ・すくりゅー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kegagalan akibat kelelahan material",
+        "jp": "kegagalan akibat kelelahan material"
+       },
+       {
+        "id": "pemberian tekanan kabin (pressurization)",
+        "jp": "pemberian tekanan kabin (pressurization)"
+       },
+       {
+        "id": "alat pelindung diri (APD)",
+        "jp": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "sekrup self-tapping",
+        "jp": "sekrup self-tapping"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "セルフ・タッピング・スクリュー (せるふ・たっぴんぐ・すくりゅー) = sekrup self-tapping. Sumber: daftar kosakata modul hal. 10.",
+       "jp": "セルフ・タッピング・スクリュー（せるふ・たっぴんぐ・すくりゅー）＝ sekrup self-tapping"
+      }
+     }
+    ],
+    "sub": "b1s3"
+   },
+   {
+    "id": "b1s5-q",
+    "title": {
+     "id": "Kosakata: Torsi Pengencangan & Torque Wrench",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「締付けトルク」（しめつけとるく）?",
+       "jp": "「締付けトルク」（しめつけとるく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "torsi pengencangan",
+        "jp": "torsi pengencangan"
+       },
+       {
+        "id": "metode single wire",
+        "jp": "metode single wire"
+       },
+       {
+        "id": "kualitas",
+        "jp": "kualitas"
+       },
+       {
+        "id": "chamfer (pahat tepi)",
+        "jp": "chamfer (pahat tepi)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "締付けトルク (しめつけとるく) = torsi pengencangan. Sumber: daftar kosakata modul hal. 14.",
+       "jp": "締付けトルク（しめつけとるく）＝ torsi pengencangan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「トルク・レンチ」（とるく・れんち）?",
+       "jp": "「トルク・レンチ」（とるく・れんち）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "torque wrench",
+        "jp": "torque wrench"
+       },
+       {
+        "id": "polaritas",
+        "jp": "polaritas"
+       },
+       {
+        "id": "ulir halus",
+        "jp": "ulir halus"
+       },
+       {
+        "id": "stabilizer vertikal",
+        "jp": "stabilizer vertikal"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "トルク・レンチ (とるく・れんち) = torque wrench. Sumber: daftar kosakata modul hal. 14.",
+       "jp": "トルク・レンチ（とるく・れんち）＝ torque wrench"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「校正」（こうせい）?",
+       "jp": "「校正」（こうせい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kalibrasi",
+        "jp": "kalibrasi"
+       },
+       {
+        "id": "beban geser",
+        "jp": "beban geser"
+       },
+       {
+        "id": "locking torque",
+        "jp": "locking torque"
+       },
+       {
+        "id": "safety wire (kawat pengaman)",
+        "jp": "safety wire (kawat pengaman)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "校正 (こうせい) = kalibrasi. Sumber: daftar kosakata modul hal. 14.",
+       "jp": "校正（こうせい）＝ kalibrasi"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「疲労破壊」（ひろうはかい）?",
+       "jp": "「疲労破壊」（ひろうはかい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kegagalan akibat kelelahan material",
+        "jp": "kegagalan akibat kelelahan material"
+       },
+       {
+        "id": "metode double twist wire",
+        "jp": "metode double twist wire"
+       },
+       {
+        "id": "alat pengaman",
+        "jp": "alat pengaman"
+       },
+       {
+        "id": "alat pemadam api (APAR)",
+        "jp": "alat pemadam api (APAR)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "疲労破壊 (ひろうはかい) = kegagalan akibat kelelahan material. Sumber: daftar kosakata modul hal. 14.",
+       "jp": "疲労破壊（ひろうはかい）＝ kegagalan akibat kelelahan material"
+      }
+     }
+    ],
+    "sub": "b1s5"
+   },
+   {
+    "id": "b1s6-q",
+    "title": {
+     "id": "Kosakata: Safety Wire",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「安全線」（あんぜんせん）?",
+       "jp": "「安全線」（あんぜんせん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kebersihan/kesehatan (hygiene)",
+        "jp": "kebersihan/kesehatan (hygiene)"
+       },
+       {
+        "id": "sumber daya AC",
+        "jp": "sumber daya AC"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)",
+        "jp": "alat penahan jatuh (full harness)"
+       },
+       {
+        "id": "safety wire (kawat pengaman)",
+        "jp": "safety wire (kawat pengaman)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "安全線 (あんぜんせん) = safety wire (kawat pengaman). Sumber: daftar kosakata modul hal. 15.",
+       "jp": "安全線（あんぜんせん）＝ safety wire (kawat pengaman)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回り止め」（まわりどめ）?",
+       "jp": "「回り止め」（まわりどめ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pelindung diri (APD)",
+        "jp": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "kualitas",
+        "jp": "kualitas"
+       },
+       {
+        "id": "UU Keselamatan dan Kesehatan Kerja",
+        "jp": "UU Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "pencegah putar / longgar",
+        "jp": "pencegah putar / longgar"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "回り止め (まわりどめ) = pencegah putar / longgar. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "回り止め（まわりどめ）＝ pencegah putar / longgar"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ダブル・ツイスト・ワイヤ方法」（だぶる・ついすと・わいやほうほう）?",
+       "jp": "「ダブル・ツイスト・ワイヤ方法」（だぶる・ついすと・わいやほうほう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dilarang api",
+        "jp": "dilarang api"
+       },
+       {
+        "id": "UU Keselamatan dan Kesehatan Kerja",
+        "jp": "UU Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "metode double twist wire",
+        "jp": "metode double twist wire"
+       },
+       {
+        "id": "spoiler",
+        "jp": "spoiler"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ダブル・ツイスト・ワイヤ方法 (だぶる・ついすと・わいやほうほう) = metode double twist wire. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "ダブル・ツイスト・ワイヤ方法（だぶる・ついすと・わいやほうほう）＝ metode double twist wire"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「シングル・ワイヤ方法」（しんぐる・わいやほうほう）?",
+       "jp": "「シングル・ワイヤ方法」（しんぐる・わいやほうほう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lock washer (ring pengunci)",
+        "jp": "lock washer (ring pengunci)"
+       },
+       {
+        "id": "metode single wire",
+        "jp": "metode single wire"
+       },
+       {
+        "id": "badan pesawat (fuselage)",
+        "jp": "badan pesawat (fuselage)"
+       },
+       {
+        "id": "insiden",
+        "jp": "insiden"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "シングル・ワイヤ方法 (しんぐる・わいやほうほう) = metode single wire. Sumber: daftar kosakata modul hal. 15.",
+       "jp": "シングル・ワイヤ方法（しんぐる・わいやほうほう）＝ metode single wire"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ピグテイル」（ぴぐてぃる）?",
+       "jp": "「ピグテイル」（ぴぐてぃる）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kebisingan",
+        "jp": "kebisingan"
+       },
+       {
+        "id": "seri",
+        "jp": "seri"
+       },
+       {
+        "id": "pigtail (ujung kawat)",
+        "jp": "pigtail (ujung kawat)"
+       },
+       {
+        "id": "elevator",
+        "jp": "elevator"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ピグテイル (ぴぐてぃる) = pigtail (ujung kawat). Sumber: daftar kosakata modul hal. 15.",
+       "jp": "ピグテイル（ぴぐてぃる）＝ pigtail (ujung kawat)"
+      }
+     }
+    ],
+    "sub": "b1s6"
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "title": {
+     "id": "Latihan Bab 2 (○×)",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Tester akurasinya rendah sehingga kurang cocok untuk pengukuran presisi.”",
+       "jp": "○か×か。「テスターは{精度|せいど}が{低|ひく}いので、{精密測定|せいみつそくてい}には{向|む}かない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Range tester diganti dengan test pin tetap terhubung ke objek.”",
+       "jp": "○か×か。「テスターのレンジ{切り替|きりか}えは、テスト・ピンを{被測定物|ひそくていぶつ}につないだまま{行|おこな}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: lepas dulu."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika nilai tidak terduga, turunkan range dari yang tertinggi.”",
+       "jp": "○か×か。「{測定値|そくていち}が{予測|よそく}できないときは、レンジの{倍率|ばいりつ}を{高|たか}い{値|あたい}から{順|じゅん}に{下|さ}げる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Mengukur tegangan DC/AC dengan test pin seri dengan rangkaian.”",
+       "jp": "○か×か。「{直流電圧|ちょくりゅうでんあつ}や{交流電圧|こうりゅうでんあつ}を{測|はか}るときは、テスト・ピンを{回路|かいろ}に{直列|ちょくれつ}に{接続|せつぞく}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: paralel."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Mengukur arus DC dengan test pin seri dengan rangkaian.”",
+       "jp": "○か×か。「{直流電流|ちょくりゅうでんりゅう}を{測|はか}るときは、テスト・ピンを{回路|かいろ}に{直列|ちょくれつ}に{接続|せつぞく}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sebelum mengukur resistansi, lakukan penyetelan nol ohm.”",
+       "jp": "○か×か。「{抵抗|ていこう}を{測|はか}る{前|まえ}には、ゼロΩ{調整|ちょうせい}を{行|おこな}う。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada range Ω, polaritas terminal + dan − terbalik.”",
+       "jp": "○か×か。「Ωレンジでは、{測定端子|そくていたんし}の＋と－の{極性|きょくせい}が{逆|ぎゃく}になる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tester dapat mengukur arus DC.”",
+       "jp": "○か×か。「{回路計|かいろけい}は{直流電流|ちょくりゅうでんりゅう}を{測|はか}ることができる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (contoh soal resmi)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Menyentuh test pin dengan jari tidak menimbulkan galat saat mengukur resistansi.”",
+       "jp": "○か×か。「{抵抗測定|ていこうそくてい}のとき、{指先|ゆびさき}でテスト・ピンにさわっても{誤差|ごさ}は{出|で}ない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: arus tubuh menimbulkan galat."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "title": {
+     "id": "Kosakata: Tester & Pengukuran Tegangan",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「回路計」（かいろけい）?",
+       "jp": "「回路計」（かいろけい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tindakan tidak aman",
+        "jp": "tindakan tidak aman"
+       },
+       {
+        "id": "tester (circuit tester)",
+        "jp": "tester (circuit tester)"
+       },
+       {
+        "id": "roda pendarat (landing gear)",
+        "jp": "roda pendarat (landing gear)"
+       },
+       {
+        "id": "pin belah (cotter pin)",
+        "jp": "pin belah (cotter pin)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "回路計 (かいろけい) = tester (circuit tester). Sumber: daftar kosakata modul hal. 21.",
+       "jp": "回路計（かいろけい）＝ tester (circuit tester)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「テスター」（てすたー）?",
+       "jp": "「テスター」（てすたー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tester",
+        "jp": "tester"
+       },
+       {
+        "id": "beban tarik",
+        "jp": "beban tarik"
+       },
+       {
+        "id": "kekurangan oksigen",
+        "jp": "kekurangan oksigen"
+       },
+       {
+        "id": "tester (circuit tester)",
+        "jp": "tester (circuit tester)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "テスター (てすたー) = tester. Sumber: daftar kosakata modul hal. 21.",
+       "jp": "テスター（てすたー）＝ tester"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「測定」（そくてい）?",
+       "jp": "「測定」（そくてい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "seiton: menata rapi",
+        "jp": "seiton: menata rapi"
+       },
+       {
+        "id": "pengukuran",
+        "jp": "pengukuran"
+       },
+       {
+        "id": "tegangan DC",
+        "jp": "tegangan DC"
+       },
+       {
+        "id": "sekrup",
+        "jp": "sekrup"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "測定 (そくてい) = pengukuran. Sumber: daftar kosakata modul hal. 21.",
+       "jp": "測定（そくてい）＝ pengukuran"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「直流電圧」（ちょくりゅうでんあつ）?",
+       "jp": "「直流電圧」（ちょくりゅうでんあつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "hukum Heinrich (1:29:300)",
+        "jp": "hukum Heinrich (1:29:300)"
+       },
+       {
+        "id": "kualitas perawatan",
+        "jp": "kualitas perawatan"
+       },
+       {
+        "id": "tegangan DC",
+        "jp": "tegangan DC"
+       },
+       {
+        "id": "chamfer (pahat tepi)",
+        "jp": "chamfer (pahat tepi)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "直流電圧 (ちょくりゅうでんあつ) = tegangan DC. Sumber: daftar kosakata modul hal. 21.",
+       "jp": "直流電圧（ちょくりゅうでんあつ）＝ tegangan DC"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「交流電圧」（こうりゅうでんあつ）?",
+       "jp": "「交流電圧」（こうりゅうでんあつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tegangan AC",
+        "jp": "tegangan AC"
+       },
+       {
+        "id": "rudder",
+        "jp": "rudder"
+       },
+       {
+        "id": "resistansi / resistor",
+        "jp": "resistansi / resistor"
+       },
+       {
+        "id": "lock washer (ring pengunci)",
+        "jp": "lock washer (ring pengunci)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "交流電圧 (こうりゅうでんあつ) = tegangan AC. Sumber: daftar kosakata modul hal. 21.",
+       "jp": "交流電圧（こうりゅうでんあつ）＝ tegangan AC"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「並列」（へいれつ）?",
+       "jp": "「並列」（へいれつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut kepala tenggelam (flush)",
+        "jp": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "cacat, kerusakan, ketidaksesuaian",
+        "jp": "cacat, kerusakan, ketidaksesuaian"
+       },
+       {
+        "id": "mur",
+        "jp": "mur"
+       },
+       {
+        "id": "paralel",
+        "jp": "paralel"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "並列 (へいれつ) = paralel. Sumber: daftar kosakata modul hal. 21.",
+       "jp": "並列（へいれつ）＝ paralel"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「目盛」（めもり）?",
+       "jp": "「目盛」（めもり）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pengaman",
+        "jp": "alat pengaman"
+       },
+       {
+        "id": "diameter nominal",
+        "jp": "diameter nominal"
+       },
+       {
+        "id": "skala",
+        "jp": "skala"
+       },
+       {
+        "id": "penerangan",
+        "jp": "penerangan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "目盛 (めもり) = skala. Sumber: daftar kosakata modul hal. 21.",
+       "jp": "目盛（めもり）＝ skala"
+      }
+     }
+    ],
+    "sub": "b2s1"
+   },
+   {
+    "id": "b2s2-q",
+    "title": {
+     "id": "Kosakata: Pengukuran Resistansi & Arus",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「直列」（ちょくれつ）?",
+       "jp": "「直列」（ちょくれつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "castellated nut (mur beralur)",
+        "jp": "castellated nut (mur beralur)"
+       },
+       {
+        "id": "torque wrench",
+        "jp": "torque wrench"
+       },
+       {
+        "id": "seri",
+        "jp": "seri"
+       },
+       {
+        "id": "kualitas perawatan",
+        "jp": "kualitas perawatan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "直列 (ちょくれつ) = seri. Sumber: daftar kosakata modul hal. 22.",
+       "jp": "直列（ちょくれつ）＝ seri"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「抵抗」（ていこう）?",
+       "jp": "「抵抗」（ていこう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumber daya DC",
+        "jp": "sumber daya DC"
+       },
+       {
+        "id": "resistansi / resistor",
+        "jp": "resistansi / resistor"
+       },
+       {
+        "id": "tindakan tidak aman",
+        "jp": "tindakan tidak aman"
+       },
+       {
+        "id": "pengukuran",
+        "jp": "pengukuran"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "抵抗 (ていこう) = resistansi / resistor. Sumber: daftar kosakata modul hal. 22.",
+       "jp": "抵抗（ていこう）＝ resistansi / resistor"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ゼロΩ調整」（ぜろおーむちょうせい）?",
+       "jp": "「ゼロΩ調整」（ぜろおーむちょうせい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "plain washer (ring datar)",
+        "jp": "plain washer (ring datar)"
+       },
+       {
+        "id": "sumber daya AC",
+        "jp": "sumber daya AC"
+       },
+       {
+        "id": "baut toleransi presisi",
+        "jp": "baut toleransi presisi"
+       },
+       {
+        "id": "penyetelan nol ohm",
+        "jp": "penyetelan nol ohm"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ゼロΩ調整 (ぜろおーむちょうせい) = penyetelan nol ohm. Sumber: daftar kosakata modul hal. 22.",
+       "jp": "ゼロΩ調整（ぜろおーむちょうせい）＝ penyetelan nol ohm"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「極性」（きょくせい）?",
+       "jp": "「極性」（きょくせい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tester",
+        "jp": "tester"
+       },
+       {
+        "id": "polaritas",
+        "jp": "polaritas"
+       },
+       {
+        "id": "paralel",
+        "jp": "paralel"
+       },
+       {
+        "id": "menyala sendiri (spontan)",
+        "jp": "menyala sendiri (spontan)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "極性 (きょくせい) = polaritas. Sumber: daftar kosakata modul hal. 22.",
+       "jp": "極性（きょくせい）＝ polaritas"
+      }
+     }
+    ],
+    "sub": "b2s2"
+   }
+  ],
+  "bab3": [
+   {
+    "id": "bab3-q1",
+    "title": {
+     "id": "Latihan Bab 3 (○×)",
+     "jp": "{第|だい}3{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat bekerja di ramp bandara, membawa korek api tidak masalah.”",
+       "jp": "○か×か。「{空港|くうこう}のランプ{内|ない}で{作業|さぎょう}するとき、ライターを{持|も}っていても{問題|もんだい}ない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: ramp dan hangar dilarang api (contoh soal resmi)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila tidak enak badan, sampaikan ke atasan/ketua kerja tanpa memaksakan diri.”",
+       "jp": "○か×か。「{体調|たいちょう}が{悪|わる}いときは、{無理|むり}をせず{上司|じょうし}や{作業|さぎょう}リーダーに{申し出|もうしで}る。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh melepas alat pengaman bila sulit bekerja.”",
+       "jp": "○か×か。「{作業|さぎょう}しにくいときは、{安全装置|あんぜんそうち}を{取り外|とりはず}してもよい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat memakai bor meja/gerinda, pakailah sarung tangan.”",
+       "jp": "○か×か。「ボール{盤|ばん}やグラインダーを{使|つか}うときは、{手袋|てぶくろ}を{着用|ちゃくよう}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: dilarang karena terlilit."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Penerangan pekerjaan presisi minimal 300 lux.”",
+       "jp": "○か×か。「{精密|せいみつ}な{作業|さぎょう}の{手元|てもと}の{明|あか}るさは、300ルクス{以上|いじょう}が{目安|めやす}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sebelum masuk tangki, pastikan oksigen ≥ 18% dan uap BBM ≤ 30 ppm.”",
+       "jp": "○か×か。「{燃料|ねんりょう}タンクに{入|はい}る{前|まえ}に、{酸素濃度|さんそのうど}18%{以上|いじょう}、{燃料蒸気|ねんりょうじょうき}30ppm{以下|いか}を{確認|かくにん}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kerja di ketinggian memakai helm dan alat penahan jatuh.”",
+       "jp": "○か×か。「{高所作業|こうしょさぎょう}では、ヘルメットと{墜落制止用器具|ついらくせいしようきぐ}を{着用|ちゃくよう}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Seiton adalah membuang yang tidak diperlukan.”",
+       "jp": "○か×か。「{整頓|せいとん}とは、{不要|ふよう}なものを{処分|しょぶん}することである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: itu seiri; seiton = menata agar mudah dipakai."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kecelakaan mudah terjadi bila kondisi benda tidak aman dan tindakan manusia tidak aman bertemu.”",
+       "jp": "○か×か。「{事故|じこ}は、{不安全|ふあんぜん}な{物|もの}の{状態|じょうたい}と{不安全|ふあんぜん}な{人|ひと}の{行動|こうどう}が{重|かさ}なると{起|お}きやすい。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "title": {
+     "id": "Kosakata: Tujuan, Penyebab Kecelakaan",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「労働安全衛生法」（ろうどうあんぜんえいせいほう）?",
+       "jp": "「労働安全衛生法」（ろうどうあんぜんえいせいほう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "UU Keselamatan dan Kesehatan Kerja",
+        "jp": "UU Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "korosi",
+        "jp": "korosi"
+       },
+       {
+        "id": "kualitas pekerjaan",
+        "jp": "kualitas pekerjaan"
+       },
+       {
+        "id": "sistem kontrol penerbangan",
+        "jp": "sistem kontrol penerbangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "労働安全衛生法 (ろうどうあんぜんえいせいほう) = UU Keselamatan dan Kesehatan Kerja. Sumber: daftar kosakata modul hal. 31.",
+       "jp": "労働安全衛生法（ろうどうあんぜんえいせいほう）＝ UU Keselamatan dan Kesehatan Kerja"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全」（あんぜん）?",
+       "jp": "「安全」（あんぜん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumber daya DC",
+        "jp": "sumber daya DC"
+       },
+       {
+        "id": "keselamatan",
+        "jp": "keselamatan"
+       },
+       {
+        "id": "tekanan hidrolik",
+        "jp": "tekanan hidrolik"
+       },
+       {
+        "id": "seiri: menyingkirkan yang tidak perlu",
+        "jp": "seiri: menyingkirkan yang tidak perlu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "安全 (あんぜん) = keselamatan. Sumber: daftar kosakata modul hal. 31.",
+       "jp": "安全（あんぜん）＝ keselamatan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「衛生」（えいせい）?",
+       "jp": "「衛生」（えいせい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumber daya DC",
+        "jp": "sumber daya DC"
+       },
+       {
+        "id": "kebersihan/kesehatan (hygiene)",
+        "jp": "kebersihan/kesehatan (hygiene)"
+       },
+       {
+        "id": "sekrup",
+        "jp": "sekrup"
+       },
+       {
+        "id": "sumbat telinga",
+        "jp": "sumbat telinga"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "衛生 (えいせい) = kebersihan/kesehatan (hygiene). Sumber: daftar kosakata modul hal. 31.",
+       "jp": "衛生（えいせい）＝ kebersihan/kesehatan (hygiene)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「健康」（けんこう）?",
+       "jp": "「健康」（けんこう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kesehatan",
+        "jp": "kesehatan"
+       },
+       {
+        "id": "ulir halus",
+        "jp": "ulir halus"
+       },
+       {
+        "id": "penyetelan nol ohm",
+        "jp": "penyetelan nol ohm"
+       },
+       {
+        "id": "hampir celaka (near miss)",
+        "jp": "hampir celaka (near miss)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "健康 (けんこう) = kesehatan. Sumber: daftar kosakata modul hal. 31.",
+       "jp": "健康（けんこう）＝ kesehatan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「不安全な行動」（ふあんぜんなこうどう）?",
+       "jp": "「不安全な行動」（ふあんぜんなこうどう）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tindakan tidak aman",
+        "jp": "tindakan tidak aman"
+       },
+       {
+        "id": "diameter nominal",
+        "jp": "diameter nominal"
+       },
+       {
+        "id": "safety wire (kawat pengaman)",
+        "jp": "safety wire (kawat pengaman)"
+       },
+       {
+        "id": "human error (kesalahan manusia)",
+        "jp": "human error (kesalahan manusia)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "不安全な行動 (ふあんぜんなこうどう) = tindakan tidak aman. Sumber: daftar kosakata modul hal. 31.",
+       "jp": "不安全な行動（ふあんぜんなこうどう）＝ tindakan tidak aman"
+      }
+     }
+    ],
+    "sub": "b3s1"
+   },
+   {
+    "id": "b3s2-q",
+    "title": {
+     "id": "Kosakata: Pemeriksaan Diri (1): Kesehatan, APD, Alat Pengaman, 5S",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「保護具」（ほごぐ）?",
+       "jp": "「保護具」（ほごぐ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pelindung diri (APD)",
+        "jp": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "chamfer (pahat tepi)",
+        "jp": "chamfer (pahat tepi)"
+       },
+       {
+        "id": "locking torque",
+        "jp": "locking torque"
+       },
+       {
+        "id": "pengencangan, sambungan (fastening)",
+        "jp": "pengencangan, sambungan (fastening)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "保護具 (ほごぐ) = alat pelindung diri (APD). Sumber: daftar kosakata modul hal. 32.",
+       "jp": "保護具（ほごぐ）＝ alat pelindung diri (APD)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「墜落制止用器具」（ついらくせいしようきぐ）?",
+       "jp": "「墜落制止用器具」（ついらくせいしようきぐ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumber daya DC",
+        "jp": "sumber daya DC"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)",
+        "jp": "alat penahan jatuh (full harness)"
+       },
+       {
+        "id": "kesehatan",
+        "jp": "kesehatan"
+       },
+       {
+        "id": "mur",
+        "jp": "mur"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "墜落制止用器具 (ついらくせいしようきぐ) = alat penahan jatuh (full harness). Sumber: daftar kosakata modul hal. 32.",
+       "jp": "墜落制止用器具（ついらくせいしようきぐ）＝ alat penahan jatuh (full harness)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「防毒マスク」（ぼうどくますく）?",
+       "jp": "「防毒マスク」（ぼうどくますく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tindakan tidak aman",
+        "jp": "tindakan tidak aman"
+       },
+       {
+        "id": "masker gas",
+        "jp": "masker gas"
+       },
+       {
+        "id": "locking torque",
+        "jp": "locking torque"
+       },
+       {
+        "id": "tester (circuit tester)",
+        "jp": "tester (circuit tester)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "防毒マスク (ぼうどくますく) = masker gas. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "防毒マスク（ぼうどくますく）＝ masker gas"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全装置」（あんぜんそうち）?",
+       "jp": "「安全装置」（あんぜんそうち）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "hukum Heinrich (1:29:300)",
+        "jp": "hukum Heinrich (1:29:300)"
+       },
+       {
+        "id": "pesawat bermesin dua",
+        "jp": "pesawat bermesin dua"
+       },
+       {
+        "id": "alat pengaman",
+        "jp": "alat pengaman"
+       },
+       {
+        "id": "stabilizer horizontal",
+        "jp": "stabilizer horizontal"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "安全装置 (あんぜんそうち) = alat pengaman. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "安全装置（あんぜんそうち）＝ alat pengaman"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整理」（せいり）?",
+       "jp": "「整理」（せいり）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "skala",
+        "jp": "skala"
+       },
+       {
+        "id": "seiri: menyingkirkan yang tidak perlu",
+        "jp": "seiri: menyingkirkan yang tidak perlu"
+       },
+       {
+        "id": "alat pelindung diri (APD)",
+        "jp": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "safety wire (kawat pengaman)",
+        "jp": "safety wire (kawat pengaman)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "整理 (せいり) = seiri: menyingkirkan yang tidak perlu. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "整理（せいり）＝ seiri: menyingkirkan yang tidak perlu"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整頓」（せいとん）?",
+       "jp": "「整頓」（せいとん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "seiton: menata rapi",
+        "jp": "seiton: menata rapi"
+       },
+       {
+        "id": "manajemen keandalan",
+        "jp": "manajemen keandalan"
+       },
+       {
+        "id": "sumber daya DC",
+        "jp": "sumber daya DC"
+       },
+       {
+        "id": "flap",
+        "jp": "flap"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "整頓 (せいとん) = seiton: menata rapi. Sumber: daftar kosakata modul hal. 32.",
+       "jp": "整頓（せいとん）＝ seiton: menata rapi"
+      }
+     }
+    ],
+    "sub": "b3s2"
+   },
+   {
+    "id": "b3s3-q",
+    "title": {
+     "id": "Kosakata: Pemeriksaan Diri (2): Api, Cahaya, Bahan Berbahaya, Benda Berputar, Tangki, Bising",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「火気厳禁」（かきげんきん）?",
+       "jp": "「火気厳禁」（かきげんきん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dilarang api",
+        "jp": "dilarang api"
+       },
+       {
+        "id": "pengukuran",
+        "jp": "pengukuran"
+       },
+       {
+        "id": "slat (sayap depan)",
+        "jp": "slat (sayap depan)"
+       },
+       {
+        "id": "cotter pin (pin belah)",
+        "jp": "cotter pin (pin belah)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "火気厳禁 (かきげんきん) = dilarang api. Sumber: daftar kosakata modul hal. 34.",
+       "jp": "火気厳禁（かきげんきん）＝ dilarang api"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「照明」（しょうめい）?",
+       "jp": "「照明」（しょうめい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penerangan",
+        "jp": "penerangan"
+       },
+       {
+        "id": "stabilizer vertikal",
+        "jp": "stabilizer vertikal"
+       },
+       {
+        "id": "kebisingan",
+        "jp": "kebisingan"
+       },
+       {
+        "id": "polaritas",
+        "jp": "polaritas"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "照明 (しょうめい) = penerangan. Sumber: daftar kosakata modul hal. 34.",
+       "jp": "照明（しょうめい）＝ penerangan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回転体」（かいてんたい）?",
+       "jp": "「回転体」（かいてんたい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "benda berputar",
+        "jp": "benda berputar"
+       },
+       {
+        "id": "tegangan DC",
+        "jp": "tegangan DC"
+       },
+       {
+        "id": "menyala sendiri (spontan)",
+        "jp": "menyala sendiri (spontan)"
+       },
+       {
+        "id": "alat pengaman",
+        "jp": "alat pengaman"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "回転体 (かいてんたい) = benda berputar. Sumber: daftar kosakata modul hal. 34.",
+       "jp": "回転体（かいてんたい）＝ benda berputar"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「送気マスク」（そうきますく）?",
+       "jp": "「送気マスク」（そうきますく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumbat telinga",
+        "jp": "sumbat telinga"
+       },
+       {
+        "id": "dilarang api",
+        "jp": "dilarang api"
+       },
+       {
+        "id": "paralel",
+        "jp": "paralel"
+       },
+       {
+        "id": "masker pasokan udara",
+        "jp": "masker pasokan udara"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "送気マスク (そうきますく) = masker pasokan udara. Sumber: daftar kosakata modul hal. 34.",
+       "jp": "送気マスク（そうきますく）＝ masker pasokan udara"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「自然発火」（しぜんはっか）?",
+       "jp": "「自然発火」（しぜんはっか）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "menyala sendiri (spontan)",
+        "jp": "menyala sendiri (spontan)"
+       },
+       {
+        "id": "badan pesawat (fuselage)",
+        "jp": "badan pesawat (fuselage)"
+       },
+       {
+        "id": "stabilizer vertikal",
+        "jp": "stabilizer vertikal"
+       },
+       {
+        "id": "seiton: menata rapi",
+        "jp": "seiton: menata rapi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "自然発火 (しぜんはっか) = menyala sendiri (spontan). Sumber: daftar kosakata modul hal. 34.",
+       "jp": "自然発火（しぜんはっか）＝ menyala sendiri (spontan)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「消火器」（しょうかき）?",
+       "jp": "「消火器」（しょうかき）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sistem kontrol penerbangan",
+        "jp": "sistem kontrol penerbangan"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)",
+        "jp": "kualitas peralatan (pesawat)"
+       },
+       {
+        "id": "alat pemadam api (APAR)",
+        "jp": "alat pemadam api (APAR)"
+       },
+       {
+        "id": "kekurangan oksigen",
+        "jp": "kekurangan oksigen"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "消火器 (しょうかき) = alat pemadam api (APAR). Sumber: daftar kosakata modul hal. 34.",
+       "jp": "消火器（しょうかき）＝ alat pemadam api (APAR)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「耳栓」（みみせん）?",
+       "jp": "「耳栓」（みみせん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumbat telinga",
+        "jp": "sumbat telinga"
+       },
+       {
+        "id": "paralel",
+        "jp": "paralel"
+       },
+       {
+        "id": "pemberian tekanan kabin (pressurization)",
+        "jp": "pemberian tekanan kabin (pressurization)"
+       },
+       {
+        "id": "indikator kualitas",
+        "jp": "indikator kualitas"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "耳栓 (みみせん) = sumbat telinga. Sumber: daftar kosakata modul hal. 34.",
+       "jp": "耳栓（みみせん）＝ sumbat telinga"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「有機溶剤」（ゆうきようざい）?",
+       "jp": "「有機溶剤」（ゆうきようざい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "keselamatan",
+        "jp": "keselamatan"
+       },
+       {
+        "id": "pelarut organik",
+        "jp": "pelarut organik"
+       },
+       {
+        "id": "diameter nominal",
+        "jp": "diameter nominal"
+       },
+       {
+        "id": "masker pasokan udara",
+        "jp": "masker pasokan udara"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "有機溶剤 (ゆうきようざい) = pelarut organik. Sumber: daftar kosakata modul hal. 34.",
+       "jp": "有機溶剤（ゆうきようざい）＝ pelarut organik"
+      }
+     }
+    ],
+    "sub": "b3s3"
+   }
+  ],
+  "bab4": [
+   {
+    "id": "bab4-q1",
+    "title": {
+     "id": "Latihan Bab 4 (○×)",
+     "jp": "{第|だい}4{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika kualitas perawatan baik, kecelakaan dan insiden berkurang.”",
+       "jp": "○か×か。「{整備品質|せいびひんしつ}を{良|よ}くすれば、{事故|じこ}やインシデントは{減|へ}る。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (contoh soal resmi)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kualitas perawatan terdiri dari kualitas peralatan dan kualitas pekerjaan.”",
+       "jp": "○か×か。「{整備品質|せいびひんしつ}は、{機材品質|きざいひんしつ}と{作業品質|さぎょうひんしつ}に{分|わ}けられる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Manajemen keandalan adalah hard time yang membongkar/mengganti berkala.”",
+       "jp": "○か×か。「{信頼性管理方式|しんらいせいかんりほうしき}は、{時間|じかん}を{決|き}めて{定期的|ていきてき}に{分解|ぶんかい}・{交換|こうかん}するハードタイム{方式|ほうしき}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: kumpul data → monitor → analisis → perbaikan (PDCA)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Trend Monitoring memantau jumlah/laju kerusakan jangka panjang untuk menemukan tren memburuk.”",
+       "jp": "○か×か。「TrendMonitoring Program は、{故障|こしょう}の{発生件数|はっせいけんすう}・{発生率|はっせいりつ}を{長期的|ちょうきてき}に{監視|かんし}し、{悪|わる}くなる{傾向|けいこう}を{早|はや}く{発見|はっけん}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Human error tidak akan terjadi jika orang berhati-hati.”",
+       "jp": "○か×か。「ヒューマンエラーは、{人|ひと}が{注意|ちゅうい}していれば{絶対|ぜったい}に{起|お}きない。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: setiap orang pasti berbuat error."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “S dalam m-SHELL adalah Software (aturan, manual, dll.).”",
+       "jp": "○か×か。「m-SHELLモデルのSはソフトウェア（ルール・マニュアルなど）を{表|あらわ}す。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hiyari-hatto adalah kejadian yang nyaris celaka tetapi tidak menjadi kecelakaan/insiden.”",
+       "jp": "○か×か。「ヒヤリハットとは、{事故|じこ}やインシデントにならなかったが、ヒヤリとしたできごとである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hukum Heinrich: dari 330 cacat, 1 kecelakaan, 29 insiden, 300 cacat ringan.”",
+       "jp": "○か×か。「ハインリッヒの{法則|ほうそく}では、330{件|けん}の{不具合|ふぐあい}のうち{事故|じこ}は1{件|けん}、インシデントは29{件|けん}、{軽微|けいび}な{不具合|ふぐあい}は300{件|けん}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b4s1-q",
+    "title": {
+     "id": "Kosakata: Kualitas Perawatan & Cacat",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「品質」（ひんしつ）?",
+       "jp": "「品質」（ひんしつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "human error (kesalahan manusia)",
+        "jp": "human error (kesalahan manusia)"
+       },
+       {
+        "id": "pin belah (cotter pin)",
+        "jp": "pin belah (cotter pin)"
+       },
+       {
+        "id": "kualitas",
+        "jp": "kualitas"
+       },
+       {
+        "id": "penyetelan nol ohm",
+        "jp": "penyetelan nol ohm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "品質 (ひんしつ) = kualitas. Sumber: daftar kosakata modul hal. 37.",
+       "jp": "品質（ひんしつ）＝ kualitas"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整備品質」（せいびひんしつ）?",
+       "jp": "「整備品質」（せいびひんしつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "polaritas",
+        "jp": "polaritas"
+       },
+       {
+        "id": "kualitas perawatan",
+        "jp": "kualitas perawatan"
+       },
+       {
+        "id": "masker pasokan udara",
+        "jp": "masker pasokan udara"
+       },
+       {
+        "id": "manajemen keandalan",
+        "jp": "manajemen keandalan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "整備品質 (せいびひんしつ) = kualitas perawatan. Sumber: daftar kosakata modul hal. 37.",
+       "jp": "整備品質（せいびひんしつ）＝ kualitas perawatan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機材品質」（きざいひんしつ）?",
+       "jp": "「機材品質」（きざいひんしつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "korosi",
+        "jp": "korosi"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)",
+        "jp": "kualitas peralatan (pesawat)"
+       },
+       {
+        "id": "beban geser",
+        "jp": "beban geser"
+       },
+       {
+        "id": "tester",
+        "jp": "tester"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "機材品質 (きざいひんしつ) = kualitas peralatan (pesawat). Sumber: daftar kosakata modul hal. 37.",
+       "jp": "機材品質（きざいひんしつ）＝ kualitas peralatan (pesawat)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「作業品質」（さぎょうひんしつ）?",
+       "jp": "「作業品質」（さぎょうひんしつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kualitas pekerjaan",
+        "jp": "kualitas pekerjaan"
+       },
+       {
+        "id": "tegangan DC",
+        "jp": "tegangan DC"
+       },
+       {
+        "id": "safety wire (kawat pengaman)",
+        "jp": "safety wire (kawat pengaman)"
+       },
+       {
+        "id": "hampir celaka (near miss)",
+        "jp": "hampir celaka (near miss)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "作業品質 (さぎょうひんしつ) = kualitas pekerjaan. Sumber: daftar kosakata modul hal. 37.",
+       "jp": "作業品質（さぎょうひんしつ）＝ kualitas pekerjaan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「不具合」（ふぐあい）?",
+       "jp": "「不具合」（ふぐあい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cacat, kerusakan, ketidaksesuaian",
+        "jp": "cacat, kerusakan, ketidaksesuaian"
+       },
+       {
+        "id": "daya eksternal (dari darat)",
+        "jp": "daya eksternal (dari darat)"
+       },
+       {
+        "id": "kekurangan oksigen",
+        "jp": "kekurangan oksigen"
+       },
+       {
+        "id": "locking torque",
+        "jp": "locking torque"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "不具合 (ふぐあい) = cacat, kerusakan, ketidaksesuaian. Sumber: daftar kosakata modul hal. 37.",
+       "jp": "不具合（ふぐあい）＝ cacat, kerusakan, ketidaksesuaian"
+      }
+     }
+    ],
+    "sub": "b4s1"
+   },
+   {
+    "id": "b4s3-q",
+    "title": {
+     "id": "Kosakata: Human Factor & Peningkatan Kualitas Kerja",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ヒューマンファクター」（ひゅーまんふぁくたー）?",
+       "jp": "「ヒューマンファクター」（ひゅーまんふぁくたー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pelindung diri (APD)",
+        "jp": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "human factor",
+        "jp": "human factor"
+       },
+       {
+        "id": "pengencangan, sambungan (fastening)",
+        "jp": "pengencangan, sambungan (fastening)"
+       },
+       {
+        "id": "pelarut organik",
+        "jp": "pelarut organik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ヒューマンファクター (ひゅーまんふぁくたー) = human factor. Sumber: daftar kosakata modul hal. 40.",
+       "jp": "ヒューマンファクター（ひゅーまんふぁくたー）＝ human factor"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ヒューマンエラー」（ひゅーまんえらー）?",
+       "jp": "「ヒューマンエラー」（ひゅーまんえらー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "thrust reverser (dorongan balik)",
+        "jp": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "human error (kesalahan manusia)",
+        "jp": "human error (kesalahan manusia)"
+       },
+       {
+        "id": "kualitas pekerjaan",
+        "jp": "kualitas pekerjaan"
+       },
+       {
+        "id": "indikator kualitas",
+        "jp": "indikator kualitas"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ヒューマンエラー (ひゅーまんえらー) = human error (kesalahan manusia). Sumber: daftar kosakata modul hal. 40.",
+       "jp": "ヒューマンエラー（ひゅーまんえらー）＝ human error (kesalahan manusia)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ヒヤリハット」（ひやりはっと）?",
+       "jp": "「ヒヤリハット」（ひやりはっと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "hampir celaka (near miss)",
+        "jp": "hampir celaka (near miss)"
+       },
+       {
+        "id": "benda berputar",
+        "jp": "benda berputar"
+       },
+       {
+        "id": "sumber daya AC",
+        "jp": "sumber daya AC"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)",
+        "jp": "alat penahan jatuh (full harness)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ヒヤリハット (ひやりはっと) = hampir celaka (near miss). Sumber: daftar kosakata modul hal. 40.",
+       "jp": "ヒヤリハット（ひやりはっと）＝ hampir celaka (near miss)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ハインリッヒの法則」（はいんりっひのほうそく）?",
+       "jp": "「ハインリッヒの法則」（はいんりっひのほうそく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "hukum Heinrich (1:29:300)",
+        "jp": "hukum Heinrich (1:29:300)"
+       },
+       {
+        "id": "cotter pin (pin belah)",
+        "jp": "cotter pin (pin belah)"
+       },
+       {
+        "id": "penerangan",
+        "jp": "penerangan"
+       },
+       {
+        "id": "hampir celaka (near miss)",
+        "jp": "hampir celaka (near miss)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ハインリッヒの法則 (はいんりっひのほうそく) = hukum Heinrich (1:29:300). Sumber: daftar kosakata modul hal. 40.",
+       "jp": "ハインリッヒの法則（はいんりっひのほうそく）＝ hukum Heinrich (1:29:300)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「インシデント」（いんしでんと）?",
+       "jp": "「インシデント」（いんしでんと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "insiden",
+        "jp": "insiden"
+       },
+       {
+        "id": "mur pengunci sendiri",
+        "jp": "mur pengunci sendiri"
+       },
+       {
+        "id": "pelarut organik",
+        "jp": "pelarut organik"
+       },
+       {
+        "id": "skala",
+        "jp": "skala"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "インシデント (いんしでんと) = insiden. Sumber: daftar kosakata modul hal. 40.",
+       "jp": "インシデント（いんしでんと）＝ insiden"
+      }
+     }
+    ],
+    "sub": "b4s3"
+   }
+  ],
+  "bab5": [
+   {
+    "id": "bab5-q1",
+    "title": {
+     "id": "Latihan Bab 5 (○×)",
+     "jp": "{第|だい}5{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Daya AC pesawat adalah 115/200 V, 400 Hz.”",
+       "jp": "○か×か。「{航空機|こうくうき}の{交流電源|こうりゅうでんげん}（AC）は115/200V、400Hzである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “TRU mengubah AC menjadi DC 28 V.”",
+       "jp": "○か×か。「TRUは、{交流|こうりゅう}を{直流|ちょくりゅう}（28VDC）に{変換|へんかん}する{装置|そうち}である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hot Battery Bus selalu mendapat daya dari Main Battery.”",
+       "jp": "○か×か。「HotBattery Bus には、{常|つね}にメイン・バッテリーから{電力|でんりょく}が{供給|きょうきゅう}されている。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Elevator mengatur Pitch, Aileron Roll, Rudder Yaw.”",
+       "jp": "○か×か。「Elevatorは{機首|きしゅ}の{上下|じょうげ}（Pitch）、Aileronは{左右|さゆう}の{傾|かたむ}き（Roll）、Rudderは{機首|きしゅ}の{左右|さゆう}（Yaw）を{調整|ちょうせい}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Vertical stabilizer bergerak.”",
+       "jp": "○か×か。「{垂直安定板|すいちょくあんていばん}（VerticalStabilizer ）は{動|うご}く。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: vertical stabilizer tidak bergerak; horizontal stabilizer bergerak."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Ground spoiler terbuka setelah mendarat untuk membantu pengereman.”",
+       "jp": "○か×か。「GroundSpoiler は、{着陸後|ちゃくりくご}に{開|ひら}いてブレーキの{補助|ほじょ}をする。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sistem hidrolik pesawat bermesin dua terdiri dari 3 sistem independen.”",
+       "jp": "○か×か。「{双発機|そうはつき}の{油圧|ゆあつ}システムは、{独立|どくりつ}した3{系統|けいとう}（Left、Center、Right）である。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “EDP adalah pompa utama sistem Left dan Right.”",
+       "jp": "○か×か。「EngineDriven Pump （EDP）は、LeftとRightSystem の{主|おも}なポンプである。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sumber udara bertekanan: bleed air mesin, bleed air APU, dan pneumatic cart darat.”",
+       "jp": "○か×か。「{圧縮空気|あっしゅくくうき}システムの{供給源|きょうきゅうげん}には、エンジン・ブリード・エア、APUブリード・エア、{地上|ちじょう}のニューマチック・カートがある。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Semua ban pesawat dilengkapi rem.”",
+       "jp": "○か×か。「{航空機|こうくうき}は、すべてのタイヤにブレーキが{装備|そうび}されている。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: hanya main gear (contoh soal resmi)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Gaya angkat sayap bertambah sebanding dengan kuadrat kecepatan.”",
+       "jp": "○か×か。「{翼|つばさ}の{揚力|ようりょく}は、{速度|そくど}の2{乗|じょう}に{比例|ひれい}して{増加|ぞうか}する。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tangki BBM diisi nitrogen untuk mengurangi risiko ledakan.”",
+       "jp": "○か×か。「{燃料|ねんりょう}タンク{内|ない}は、{爆発|ばくはつ}の{危険|きけん}を{減|へ}らすために{窒素|ちっそ}を{入|い}れる。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b5s1-q",
+    "title": {
+     "id": "Kosakata: Sistem Listrik (Electrical Power System)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「交流電源」（こうりゅうでんげん）?",
+       "jp": "「交流電源」（こうりゅうでんげん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "human error (kesalahan manusia)",
+        "jp": "human error (kesalahan manusia)"
+       },
+       {
+        "id": "sumber daya AC",
+        "jp": "sumber daya AC"
+       },
+       {
+        "id": "pengukuran",
+        "jp": "pengukuran"
+       },
+       {
+        "id": "tekanan hidrolik",
+        "jp": "tekanan hidrolik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "交流電源 (こうりゅうでんげん) = sumber daya AC. Sumber: daftar kosakata modul hal. 50.",
+       "jp": "交流電源（こうりゅうでんげん）＝ sumber daya AC"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「直流電源」（ちょくりゅうでんげん）?",
+       "jp": "「直流電源」（ちょくりゅうでんげん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut",
+        "jp": "baut"
+       },
+       {
+        "id": "skala",
+        "jp": "skala"
+       },
+       {
+        "id": "baut kepala tenggelam (flush)",
+        "jp": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "sumber daya DC",
+        "jp": "sumber daya DC"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "直流電源 (ちょくりゅうでんげん) = sumber daya DC. Sumber: daftar kosakata modul hal. 50.",
+       "jp": "直流電源（ちょくりゅうでんげん）＝ sumber daya DC"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「外部電源」（がいぶでんげん）?",
+       "jp": "「外部電源」（がいぶでんげん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "daya eksternal (dari darat)",
+        "jp": "daya eksternal (dari darat)"
+       },
+       {
+        "id": "udara bertekanan (pneumatic)",
+        "jp": "udara bertekanan (pneumatic)"
+       },
+       {
+        "id": "tester",
+        "jp": "tester"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)",
+        "jp": "kualitas peralatan (pesawat)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "外部電源 (がいぶでんげん) = daya eksternal (dari darat). Sumber: daftar kosakata modul hal. 50.",
+       "jp": "外部電源（がいぶでんげん）＝ daya eksternal (dari darat)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「バス」（ばす）?",
+       "jp": "「バス」（ばす）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mur pengunci sendiri",
+        "jp": "mur pengunci sendiri"
+       },
+       {
+        "id": "bus (titik distribusi daya listrik)",
+        "jp": "bus (titik distribusi daya listrik)"
+       },
+       {
+        "id": "sekrup",
+        "jp": "sekrup"
+       },
+       {
+        "id": "sumber daya AC",
+        "jp": "sumber daya AC"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バス (ばす) = bus (titik distribusi daya listrik). Sumber: daftar kosakata modul hal. 50.",
+       "jp": "バス（ばす）＝ bus (titik distribusi daya listrik)"
+      }
+     }
+    ],
+    "sub": "b5s1"
+   },
+   {
+    "id": "b5s2-q",
+    "title": {
+     "id": "Kosakata: Sistem Kontrol Penerbangan (Flight Control)",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「操縦システム」（そうじゅうしすてむ）?",
+       "jp": "「操縦システム」（そうじゅうしすてむ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cotter pin (pin belah)",
+        "jp": "cotter pin (pin belah)"
+       },
+       {
+        "id": "sistem kontrol penerbangan",
+        "jp": "sistem kontrol penerbangan"
+       },
+       {
+        "id": "aileron",
+        "jp": "aileron"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)",
+        "jp": "thrust reverser (dorongan balik)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "操縦システム (そうじゅうしすてむ) = sistem kontrol penerbangan. Sumber: daftar kosakata modul hal. 55.",
+       "jp": "操縦システム（そうじゅうしすてむ）＝ sistem kontrol penerbangan"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「方向舵」（ほうこうだ）?",
+       "jp": "「方向舵」（ほうこうだ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rudder",
+        "jp": "rudder"
+       },
+       {
+        "id": "penerangan",
+        "jp": "penerangan"
+       },
+       {
+        "id": "penyetelan nol ohm",
+        "jp": "penyetelan nol ohm"
+       },
+       {
+        "id": "beban geser",
+        "jp": "beban geser"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "方向舵 (ほうこうだ) = rudder. Sumber: daftar kosakata modul hal. 55.",
+       "jp": "方向舵（ほうこうだ）＝ rudder"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「昇降舵」（しょうこうだ）?",
+       "jp": "「昇降舵」（しょうこうだ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mur",
+        "jp": "mur"
+       },
+       {
+        "id": "permukaan kontrol bergerak (control surface)",
+        "jp": "permukaan kontrol bergerak (control surface)"
+       },
+       {
+        "id": "elevator",
+        "jp": "elevator"
+       },
+       {
+        "id": "penyetelan nol ohm",
+        "jp": "penyetelan nol ohm"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "昇降舵 (しょうこうだ) = elevator. Sumber: daftar kosakata modul hal. 55.",
+       "jp": "昇降舵（しょうこうだ）＝ elevator"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「スポイラー」（すぽいらー）?",
+       "jp": "「スポイラー」（すぽいらー）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyetelan nol ohm",
+        "jp": "penyetelan nol ohm"
+       },
+       {
+        "id": "spoiler",
+        "jp": "spoiler"
+       },
+       {
+        "id": "beban geser",
+        "jp": "beban geser"
+       },
+       {
+        "id": "sistem kontrol penerbangan",
+        "jp": "sistem kontrol penerbangan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "スポイラー (すぽいらー) = spoiler. Sumber: daftar kosakata modul hal. 55.",
+       "jp": "スポイラー（すぽいらー）＝ spoiler"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「垂直安定板」（すいちょくあんていばん）?",
+       "jp": "「垂直安定板」（すいちょくあんていばん）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lock washer (ring pengunci)",
+        "jp": "lock washer (ring pengunci)"
+       },
+       {
+        "id": "perbaikan (tindakan korektif)",
+        "jp": "perbaikan (tindakan korektif)"
+       },
+       {
+        "id": "stabilizer vertikal",
+        "jp": "stabilizer vertikal"
+       },
+       {
+        "id": "kebisingan",
+        "jp": "kebisingan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "垂直安定板 (すいちょくあんていばん) = stabilizer vertikal. Sumber: daftar kosakata modul hal. 55.",
+       "jp": "垂直安定板（すいちょくあんていばん）＝ stabilizer vertikal"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「スラット」（すらっと）?",
+       "jp": "「スラット」（すらっと）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tester",
+        "jp": "tester"
+       },
+       {
+        "id": "permukaan kontrol bergerak (control surface)",
+        "jp": "permukaan kontrol bergerak (control surface)"
+       },
+       {
+        "id": "slat (sayap depan)",
+        "jp": "slat (sayap depan)"
+       },
+       {
+        "id": "rudder",
+        "jp": "rudder"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "スラット (すらっと) = slat (sayap depan). Sumber: daftar kosakata modul hal. 55.",
+       "jp": "スラット（すらっと）＝ slat (sayap depan)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「揚力」（ようりょく）?",
+       "jp": "「揚力」（ようりょく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bus (titik distribusi daya listrik)",
+        "jp": "bus (titik distribusi daya listrik)"
+       },
+       {
+        "id": "pencegah putar / longgar",
+        "jp": "pencegah putar / longgar"
+       },
+       {
+        "id": "pemberian tekanan kabin (pressurization)",
+        "jp": "pemberian tekanan kabin (pressurization)"
+       },
+       {
+        "id": "gaya angkat (lift)",
+        "jp": "gaya angkat (lift)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "揚力 (ようりょく) = gaya angkat (lift). Sumber: daftar kosakata modul hal. 55.",
+       "jp": "揚力（ようりょく）＝ gaya angkat (lift)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「補助翼」（ほじょよく）?",
+       "jp": "「補助翼」（ほじょよく）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mur",
+        "jp": "mur"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)",
+        "jp": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "aileron",
+        "jp": "aileron"
+       },
+       {
+        "id": "safety wire (kawat pengaman)",
+        "jp": "safety wire (kawat pengaman)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "補助翼 (ほじょよく) = aileron. Sumber: daftar kosakata modul hal. 55.",
+       "jp": "補助翼（ほじょよく）＝ aileron"
+      }
+     }
+    ],
+    "sub": "b5s2"
+   },
+   {
+    "id": "b5s5-q",
+    "title": {
+     "id": "Kosakata: Pengetahuan Umum Sistem Pesawat",
+     "jp": "ことば"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「与圧」（よあつ）?",
+       "jp": "「与圧」（よあつ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kebersihan/kesehatan (hygiene)",
+        "jp": "kebersihan/kesehatan (hygiene)"
+       },
+       {
+        "id": "pemberian tekanan kabin (pressurization)",
+        "jp": "pemberian tekanan kabin (pressurization)"
+       },
+       {
+        "id": "baut toleransi presisi",
+        "jp": "baut toleransi presisi"
+       },
+       {
+        "id": "bus (titik distribusi daya listrik)",
+        "jp": "bus (titik distribusi daya listrik)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "与圧 (よあつ) = pemberian tekanan kabin (pressurization). Sumber: daftar kosakata modul hal. 64.",
+       "jp": "与圧（よあつ）＝ pemberian tekanan kabin (pressurization)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「脚」（あし）?",
+       "jp": "「脚」（あし）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "diameter nominal",
+        "jp": "diameter nominal"
+       },
+       {
+        "id": "alat pelindung diri (APD)",
+        "jp": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "roda pendarat (landing gear)",
+        "jp": "roda pendarat (landing gear)"
+       },
+       {
+        "id": "kegagalan akibat kelelahan material",
+        "jp": "kegagalan akibat kelelahan material"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "脚 (あし) = roda pendarat (landing gear). Sumber: daftar kosakata modul hal. 64.",
+       "jp": "脚（あし）＝ roda pendarat (landing gear)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「逆噴射」（ぎゃくふんしゃ）?",
+       "jp": "「逆噴射」（ぎゃくふんしゃ）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut toleransi presisi",
+        "jp": "baut toleransi presisi"
+       },
+       {
+        "id": "metode single wire",
+        "jp": "metode single wire"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)",
+        "jp": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "daya eksternal (dari darat)",
+        "jp": "daya eksternal (dari darat)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "逆噴射 (ぎゃくふんしゃ) = thrust reverser (dorongan balik). Sumber: daftar kosakata modul hal. 64.",
+       "jp": "逆噴射（ぎゃくふんしゃ）＝ thrust reverser (dorongan balik)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「胴体」（どうたい）?",
+       "jp": "「胴体」（どうたい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "slat (sayap depan)",
+        "jp": "slat (sayap depan)"
+       },
+       {
+        "id": "gaya angkat (lift)",
+        "jp": "gaya angkat (lift)"
+       },
+       {
+        "id": "sumbat telinga",
+        "jp": "sumbat telinga"
+       },
+       {
+        "id": "badan pesawat (fuselage)",
+        "jp": "badan pesawat (fuselage)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "胴体 (どうたい) = badan pesawat (fuselage). Sumber: daftar kosakata modul hal. 64.",
+       "jp": "胴体（どうたい）＝ badan pesawat (fuselage)"
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「落雷」（らくらい）?",
+       "jp": "「落雷」（らくらい）の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sambaran petir",
+        "jp": "sambaran petir"
+       },
+       {
+        "id": "bus (titik distribusi daya listrik)",
+        "jp": "bus (titik distribusi daya listrik)"
+       },
+       {
+        "id": "alat pengaman",
+        "jp": "alat pengaman"
+       },
+       {
+        "id": "skala",
+        "jp": "skala"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "落雷 (らくらい) = sambaran petir. Sumber: daftar kosakata modul hal. 64.",
+       "jp": "落雷（らくらい）＝ sambaran petir"
+      }
+     }
+    ],
+    "sub": "b5s5"
+   }
+  ]
+ },
+ "tema": []
+}

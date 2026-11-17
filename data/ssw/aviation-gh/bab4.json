@@ -1,0 +1,208 @@
+{
+ "schema": 1,
+ "bidang": "aviation-gh",
+ "source": "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab4",
+  "no": 4,
+  "title": {
+   "id": "Bagasi & Kargo",
+   "jp": "{手荷物|てにもつ}・{貨物|かもつ}の{仕分|しわ}け{作業|さぎょう}"
+  },
+  "intro": {
+   "id": "Menyortir bagasi (keberangkatan/kedatangan), menyortir kargo, tag/care mark, forklift, dan bea cukai."
+  },
+  "pages": [
+   26,
+   31
+  ],
+  "pagesJp": [
+   26,
+   31
+  ],
+  "subs": [
+   {
+    "id": "b4s1",
+    "no": 1,
+    "title": {
+     "id": "Penyortiran Bagasi (手荷物仕分け)",
+     "jp": "{手荷物仕分|てにもつしわ}け{作業|さぎょう}"
+    },
+    "pages": [
+     12,
+     12
+    ],
+    "pagesJp": [
+     26,
+     28
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Keberangkatan (出発作業)"
+      },
+      {
+       "ul": [
+        "Bagasi yang dititipkan saat check-in diberi **claim tag** dan dikirim dengan konveyor ke tempat sortir menurut **maskapai dan tujuan**; di sana disusun ke kontainer/bulk cart menurut **kota transit, kelas, dan tag bagasi khusus**.",
+        "**HHT (Handheld Terminal)**: pemindai nirkabel untuk membaca barcode tag bagasi/kontainer dan menghubungkannya ke **BRS** maskapai secara real-time; layar menampilkan **nomor penerbangan, tujuan, kelas**. Cek layar secara visual untuk mencegah **salah muat**.",
+        "Tag khusus: **取扱注意** (butuh penanganan hati-hati), **ペット** (taruh di tempat teduh berangin), **重量物** (jangan memaksakan, bahaya pinggang).",
+        "Jumlah bagasi di kontainer dilaporkan ke petugas **Weight & Balance**, yang menentukan posisi muat dan membuat Instruction Sheet; petugas sisi pesawat memuat sesuai itu. Menjelang berangkat, keputusan cepat dan tepat sangat penting demi ketepatan waktu."
+       ]
+      },
+      {
+       "h": "Kedatangan (到着作業)"
+      },
+      {
+       "ul": [
+        "Bagasi dari kontainer/bulk dikirim ke konveyor khusus kedatangan sambil memperhatikan **prioritas** (bagasi First Class dll.) dan tag khusus, lalu diserahkan ke penumpang.",
+        "Selesai: cek lagi di dalam kontainer, bulk cart, dan **di bawah GSE** agar tidak ada yang tertinggal.",
+        "Dekat konveyor kedatangan banyak orang bekerja; saat GSE mulai jalan, pengemudi/petugas sekitar **memberi tahu orang di sekitar**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{出発作業|しゅっぱつさぎょう}"
+      },
+      {
+       "ul": [
+        "{預|あず}かった{手荷物|てにもつ}にはクレーム・タグを{付|つ}け、コンベヤーで{航空会社|こうくうがいしゃ}・{行|い}き{先|さき}べつの{仕分|しわ}け{場|ば}に{送|おく}ります。{経由地|けいゆち}・クラス・{特殊|とくしゅ}タグべつに、コンテナやバルク・カートに{積|つ}みます。",
+        "HHT（ハンディターミナル）で、タグやコンテナのバーコードを{読|よ}み、{画面|がめん}の{便名|びんめい}・{行|い}き{先|さき}・クラスを{目|め}で{確認|かくにん}して、{誤搭載|ごとうさい}を{防|ふせ}ぎます。",
+        "{特殊|とくしゅ}タグ：{取扱注意|とりあつかいちゅうい}、ペット、{重量物|じゅうりょうぶつ}など。{重|おも}い{物|もの}は{腰|こし}をいためないようにムリをしません。",
+        "コンテナに{積|つ}んだ{個数|こすう}をウエイト・アンド・バランス{担当|たんとう}に{伝|つた}えます。{担当者|たんとうしゃ}が{搭載位置|とうさいいち}を{決|き}めてインストラクション・シートを{作|つく}ります。"
+       ]
+      },
+      {
+       "h": "{到着作業|とうちゃくさぎょう}"
+      },
+      {
+       "ul": [
+        "コンテナやバルクから{降|お}ろした{手荷物|てにもつ}を、{優先順位|ゆうせんじゅんい}（ファーストクラスなど）に{注意|ちゅうい}して、{到着専用|とうちゃくせんよう}のコンベヤーでお{客様|きゃくさま}に{渡|わた}します。{終|お}わったら{積|つ}み{残|のこ}しがないか{確認|かくにん}します。",
+        "コンベヤーの{近|ちか}くは{人|ひと}が{多|おお}いので、GSEが{動|うご}くときは{周|まわ}りの{人|ひと}に{知|し}らせます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bagasi yang dititipkan saat check-in diberi claim tag dan dikirim dengan konveyor ke tempat sortir menurut maskapai dan tujuan; di sana disusun ke kontainer/bulk cart men…",
+      "points": [
+       "HHT (Handheld Terminal): pemindai nirkabel untuk membaca barcode tag bagasi/kontainer dan menghubungkannya ke BRS maskapai secara real-time; layar menampilkan nomor pener…",
+       "Tag khusus: 取扱注意 (butuh penanganan hati-hati), ペット (taruh di tempat teduh berangin), 重量物 (jangan memaksakan, bahaya pinggang).",
+       "Jumlah bagasi di kontainer dilaporkan ke petugas Weight & Balance, yang menentukan posisi muat dan membuat Instruction Sheet; petugas sisi pesawat memuat sesuai itu. Menj…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{預|あず}かった{手荷物|てにもつ}にはクレーム・タグを{付|つ}け、コンベヤーで{航空会社|こうくうがいしゃ}・{行|い}き{先|さき}べつの{仕分|しわ}け{場|ば}に{送|おく}ります。{経由地|けいゆち}・クラス・{特殊|とくしゅ}タグべつに、コンテナやバルク・カートに{積|つ}みます。",
+      "points": [
+       "HHT（ハンディターミナル）で、タグやコンテナのバーコードを{読|よ}み、{画面|がめん}の{便名|びんめい}・{行|い}き{先|さき}・クラスを{目|め}で{確認|かくにん}して、{誤搭載|ごとうさい}を{防|ふせ}ぎます。",
+       "{特殊|とくしゅ}タグ：{取扱注意|とりあつかいちゅうい}、ペット、{重量物|じゅうりょうぶつ}など。{重|おも}い{物|もの}は{腰|こし}をいためないようにムリをしません。",
+       "コンテナに{積|つ}んだ{個数|こすう}をウエイト・アンド・バランス{担当|たんとう}に{伝|つた}えます。{担当者|たんとうしゃ}が{搭載位置|とうさいいち}を{決|き}めてインストラクション・シートを{作|つく}ります。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s2",
+    "no": 2,
+    "title": {
+     "id": "Penyortiran Kargo (貨物仕分け)",
+     "jp": "{貨物仕分|かもつしわ}け{作業|さぎょう}"
+    },
+    "pages": [
+     13,
+     13
+    ],
+    "pagesJp": [
+     29,
+     31
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Kargo udara"
+      },
+      {
+       "ul": [
+        "Kargo udara kini luas: barang umum, **makanan segar**, paket kurir, pindahan, mesin besar. Pesawat kargo bisa membawa **100 ton lebih**.",
+        "Alur: terima (partai kecil/agen) → terbitkan **tag tujuan** (Figure 6; mis. awalan **205 = ANA**, **Master Air Way Bill**) dan sortir menurut tujuan → barang khusus ditandai **tag kargo khusus / care mark** → dimuat ke kontainer/bulk cart.",
+        "**Perjanjian angkut kargo (貨物運送約款)** dipublikasikan maskapai; kontrak sah saat pengirim (荷送人) menyetujui dan mengajukan angkutan."
+       ]
+      },
+      {
+       "h": "Tag khusus & care mark"
+      },
+      {
+       "ul": [
+        "**なまもの**: makanan segar/bunga — waspadai kebocoran air. **小動物**: hewan hidup — tempat teduh berangin, cara muat tergantung jenis.",
+        "**取扱注意** (jangan diberi benturan; mesin presisi), **こわれもの** (mudah pecah; kaca/keramik), **水濡れ厳禁** (lindungi dari air; komponen elektronik), **天地無用** (jangan dibalik/ditumpuk menyamping), **上積み制限** (batas jumlah tumpukan; mis. maks. 6 tingkat)."
+       ]
+      },
+      {
+       "h": "Forklift & Bea Cukai"
+      },
+      {
+       "ul": [
+        "**Forklift** bandara: mesin atau motor listrik; lebih berat dan bertenaga dari mobil seukuran. Jangan masuk **di bawah garpu / muatan yang terangkat**, jangan mendekat dalam **1,5 m** dari garpu yang bergerak, jangan di **belakang** forklift (saat bongkar muat umumnya **mundur**).",
+        "**Kargo internasional (外国貨物)** butuh **通関 (bea cukai)**: ① hasil produksi dalam negeri yang sudah izin ekspor ② barang masuk dari luar negeri yang belum izin impor ③ pengangkutan antar kawasan berikat (**保税運送**) ④ barang yang sementara disimpan di kawasan berikat untuk dipindah ke pesawat internasional lain (**仮陸揚げ貨物**)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{航空貨物|こうくうかもつ}"
+      },
+      {
+       "ul": [
+        "{航空貨物|こうくうかもつ}は、{生鮮食料品|せいせんしょくりょうひん}・{宅配|たくはい}・{大型機械|おおがたきかい}など{広|ひろ}い{物|もの}を{運|はこ}びます。{貨物専用機|かもつせんようき}は1{機|き}で100トン{以上運|いじょうはこ}べます。",
+        "{受|う}け{付|つ}け→{行先|ゆきさき}タグを{発行|はっこう}して{仕分|しわ}け→{特殊貨物|とくしゅかもつ}はタグやケアマークで{区別|くべつ}→コンテナやバルク・カートに{積|つ}む、の{順|じゅん}です。",
+        "{運送|うんそう}のきまり「{貨物運送約款|かもつうんそうやっかん}」を{荷送人|におくりにん}が{承諾|しょうだく}すると、{契約|けいやく}が{成立|せいりつ}します。"
+       ]
+      },
+      {
+       "h": "タグ・ケアマーク"
+      },
+      {
+       "ul": [
+        "{生|なま}もの：{水|みず}もれに{注意|ちゅうい}。{小動物|しょうどうぶつ}：{日陰|ひかげ}で{風通|かぜとお}しのよい{場所|ばしょ}に{置|お}きます。",
+        "{取扱注意|とりあつかいちゅうい}：{衝撃|しょうげき}をあたえない。こわれもの：ガラスなど。{水濡|みずぬ}れ{厳禁|げんきん}：{水|みず}にぬらさない。{天地無用|てんちむよう}：さかさ・{横積|よこづ}みをしない。{上積|うわづ}み{制限|せいげん}：{重|かさ}ねられる{段数|だんすう}。"
+       ]
+      },
+      {
+       "h": "フォークリフト・{通関|つうかん}"
+      },
+      {
+       "ul": [
+        "フォークや、{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{入|はい}ってはいけません。{動|うご}いているフォークの1.5m{以内|いない}に{近|ちか}づいてはいけません。{荷役中|にやくちゅう}は{後進|こうしん}が{基本|きほん}なので、{後|うし}ろに{近|ちか}づいてはいけません。",
+        "{国際線|こくさいせん}の{貨物|かもつ}は、{税関|ぜいかん}の{審査|しんさ}を{受|う}ける{手続|てつづ}き（{通関|つうかん}）が{必要|ひつよう}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kargo udara kini luas: barang umum, makanan segar, paket kurir, pindahan, mesin besar. Pesawat kargo bisa membawa 100 ton lebih.",
+      "points": [
+       "Alur: terima (partai kecil/agen) → terbitkan tag tujuan (Figure 6; mis. awalan 205 = ANA, Master Air Way Bill) dan sortir menurut tujuan → barang khusus ditandai tag karg…",
+       "Perjanjian angkut kargo (貨物運送約款) dipublikasikan maskapai; kontrak sah saat pengirim (荷送人) menyetujui dan mengajukan angkutan.",
+       "なまもの: makanan segar/bunga — waspadai kebocoran air. 小動物: hewan hidup — tempat teduh berangin, cara muat tergantung jenis."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{航空貨物|こうくうかもつ}は、{生鮮食料品|せいせんしょくりょうひん}・{宅配|たくはい}・{大型機械|おおがたきかい}など{広|ひろ}い{物|もの}を{運|はこ}びます。{貨物専用機|かもつせんようき}は1{機|き}で100トン{以上運|いじょうはこ}べます。",
+      "points": [
+       "{受|う}け{付|つ}け→{行先|ゆきさき}タグを{発行|はっこう}して{仕分|しわ}け→{特殊貨物|とくしゅかもつ}はタグやケアマークで{区別|くべつ}→コンテナやバルク・カートに{積|つ}む、の{順|じゅん}です。",
+       "{運送|うんそう}のきまり「{貨物運送約款|かもつうんそうやっかん}」を{荷送人|におくりにん}が{承諾|しょうだく}すると、{契約|けいやく}が{成立|せいりつ}します。",
+       "{生|なま}もの：{水|みず}もれに{注意|ちゅうい}。{小動物|しょうどうぶつ}：{日陰|ひかげ}で{風通|かぜとお}しのよい{場所|ばしょ}に{置|お}きます。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}
