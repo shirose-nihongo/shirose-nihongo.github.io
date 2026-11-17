@@ -16,9 +16,8 @@ export function initSaveData(FB, state) {
   }
   function ov() {
     if ($("sv-ov")) return $("sv-ov"); const d = document.createElement("div"); d.id = "sv-ov";
-    d.innerHTML = `<div id="sv-box"><h2>💾 Simpan Data</h2><p>Simpan progres supaya aman: level, XP, item (termasuk hadiah gacha), pakaian, tema/background, dan font.</p><div class="sv-st" id="sv-st"></div>
-<button class="sv-a" id="sv-cloud">☁️ Simpan ke akun</button><button class="sv-b" id="sv-restore">♻️ Pulihkan dari akun</button>
-<button class="sv-b" id="sv-dl">⬇️ Unduh file save</button><button class="sv-b" id="sv-up">⬆️ Muat file save</button><input type="file" id="sv-file" accept="application/json,.json" style="display:none">
+    d.innerHTML = `<div id="sv-box"><h2>💾 Simpan Data</h2><p>Simpan progres ke file di perangkatmu: level, item (termasuk hadiah gacha), pakaian, tema/background, dan font. Simpan filenya di tempat aman (mis. kirim ke WhatsApp sendiri).</p><div class="sv-st" id="sv-st"></div>
+<button class="sv-a" id="sv-dl">⬇️ Unduh file save</button><button class="sv-b" id="sv-up">⬆️ Muat file save</button><input type="file" id="sv-file" accept="application/json,.json" style="display:none">
 <div id="sv-msg"></div><button class="sv-x" id="sv-close">Tutup</button></div>`;
     document.body.appendChild(d); d.addEventListener("click", (e) => { if (e.target === d) d.classList.remove("open"); }); $("sv-close").onclick = () => d.classList.remove("open"); return d;
   }
@@ -36,19 +35,13 @@ export function initSaveData(FB, state) {
   function open() {
     css(); const d = ov(); d.classList.add("open"); stats(); msg("");
     const logged = !!state.user;
-    $("sv-cloud").onclick = async () => { if (!logged) return msg("Masuk dulu untuk simpan ke akun (atau pakai Unduh file).", 1); msg("Menyimpan…");
-      try { const r = await FB.saveSaveData(ui()); msg(`✅ Tersimpan di akun · Lv ${r.levelAkun} · ${Object.keys(r.gami).length} level JLPT/JFT`); } catch (e) { msg("❌ " + e.message, 1); } };
-    $("sv-restore").onclick = async () => { if (!logged) return msg("Masuk dulu.", 1); msg("Memulihkan…");
-      try { const s = await FB.getSaveData(); if (!s) return msg("Belum ada save di akun ini.", 1); const r = await FB.restoreSaveData(s); applyUi(s.ui); await reload(); stats();
-        msg(`✅ Dipulihkan · XP naik di ${r.xpDinaikkan} level · ${r.item} item. Memuat ulang tema…`); setTimeout(() => location.reload(), 1200); } catch (e) { msg("❌ " + e.message, 1); } };
-    $("sv-dl").onclick = async () => { const o = await build(); try { if (logged) { const s = await FB.getSaveData().catch(() => null); if (s) o.akun = s; } } catch (e) {}
+    $("sv-dl").onclick = async () => { const o = await build();
       const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(o, null, 1)], { type: "application/json" })); a.download = `shirose-save-${new Date().toISOString().slice(0, 10)}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); msg("✅ File save diunduh."); };
     $("sv-up").onclick = () => $("sv-file").click();
     $("sv-file").onchange = async (e) => { const f = e.target.files[0]; e.target.value = ""; if (!f) return;
       try { const o = JSON.parse(await f.text()); if (o.app !== "shirose-nihongo") throw new Error("Bukan file save Shirose");
         applyUi(o.ui); let info = "";
         if (logged) { const lok = FB.restoreLokal ? FB.restoreLokal({ ...o, gachaInv: o.gachaInv || o.akun?.gachaInv }) : { gacha: 0 }; info = `${lok.gacha} hadiah gacha dipulihkan di perangkat`;
-          try { const snap = o.akun || { gami: {}, karakter: { inventory: o.inventory || [], equipped: o.equipped || {} }, levelAkun: o.levelAkun }; const r = await FB.restoreSaveData(snap); info += ` · akun: ${r.item} item`; } catch (er2) { info += " · akun (Firestore) tidak bisa ditulis, data tetap tersimpan di perangkat"; }
           await reload(); msg(`✅ File dimuat · ${info}. Memuat ulang…`); }
         else msg("✅ Tema & font dimuat (masuk dulu untuk memulihkan hadiah/level). Memuat ulang…");
         setTimeout(() => location.reload(), 1200); } catch (er) { msg("❌ " + er.message, 1); } };
