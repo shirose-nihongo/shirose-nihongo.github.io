@@ -47,3 +47,8 @@ Semua perubahan ada di git; sebelum deploy, `git diff` dan `git revert` cukup un
 - Berhasil diunduh dan disimpan ke `ssw-materials/automobile-maintenance/original-pdf/`: **SRC-001** (MLIT 1号 実施要領, 5 hal.) dan **SRC-002** (MLIT 2号 実施要領, 16 hal.), teks diekstrak ke `extracted-text/`. Isi 1号 cocok dengan spesifikasi ujian yang sudah ada di `js/ssw-core.js`.
 - **Belum turun (5):** SRC-004, SRC-011, SRC-020 (moj.go.jp) dan SRC-010, SRC-012 (meti.go.jp). Fetch dari browser berhasil (HTTP 200), tetapi Chrome tidak menyimpan filenya (diduga izin "unduh otomatis" per situs menunggu persetujuan di Chrome). Cara cepat: buka URL di registry lalu simpan manual ke Downloads, atau izinkan unduhan otomatis untuk moj.go.jp dan meti.go.jp, lalu jalankan ulang.
 - `tools/ssw/fetch_sources.py` disiapkan untuk mengunduh semua PDF di registry dari lingkungan yang boleh mengakses situsnya.
+
+## 2026-11-17 — Industrial Manufacturing sources
+- SRC-010 (METI ringkasan, 28 hlm) dan SRC-011 (MOJ 運用要領 別冊 工業製品製造業, 45 hlm) diunduh, teks diekstrak ke ssw-materials/industrial-manufacturing/.
+- Terverifikasi (SRC-011): 1号 = lulus ujian keterampilan + JFT-Basic A2.2 / JLPT N4+; 2号 = JLPT N3+ (B1), pengalaman ≥3 tahun, penilaian 2号 + Business Career 3級/技能検定1級. Info ujian di js/ssw-core.js diperbarui; klaim ambang lulus 65%/60% dihapus untuk sektor ini karena belum terverifikasi di sumber.
+- Belum diunduh: SRC-004, SRC-020 (moj.go.jp), SRC-012 (meti.go.jp) — Chrome tidak menyimpan file ke Downloads.

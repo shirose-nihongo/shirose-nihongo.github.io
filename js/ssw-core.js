@@ -340,9 +340,9 @@ export const EXAM_SPEC = {
   "kaigo-jp": { n: 45, img: 4, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
   "fishery": { n: 30, img: 0, mb: 12, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
   "auto-maintenance": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Info resmi (MLIT): ujian tulis 30 soal ○× / 60 menit, lulus ≥65%; ujian praktik 3 tugas / 20 menit, lulus ≥60%." },
-  "industrial-mfg": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Materi dasar bersama 工業製品製造業: keselamatan, mutu, pengukuran, bahan. Ujian resmi per kategori (MOJ): tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
+  "industrial-mfg": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Materi dasar bersama 工業製品製造業: keselamatan, mutu, pengukuran, bahan. Syarat resmi 1号 (MOJ 運用要領): lulus ujian keterampilan (製造分野特定技能1号評価試験 / 技能検定3級) + bahasa JFT-Basic A2.2 atau JLPT N4+. 2号: JLPT N3+ dan pengalaman kerja ≥3 tahun." },
   "wood-industry": { n: 35, img: 0, mb: 32, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Format resmi 木材産業特定技能1号測定試験: CBT, 60 menit, 35 soal (tulis 32 soal ○× + praktik 3 soal pertimbangan); huruf kanji berfurigana." },
-  "mfg-machine-metal": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Kategori 機械金属加工 (MOJ): ujian tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
+  "mfg-machine-metal": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Kategori 機械金属加工 (MOJ): 1号 dan 2号 tersedia. Syarat bahasa 1号: JFT-Basic A2.2 / JLPT N4+; 2号: JLPT N3+ dan pengalaman ≥3 tahun." },
 };
 /** 10 ujian penuh = sampel deterministik dari seluruh bank soal; komposisi mengikuti ujian resmi bidangnya. */
 export function fullQuizzes(pack, perQuizArg, count = 10) {
