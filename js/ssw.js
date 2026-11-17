@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261117m";
+} from "./ssw-core.js?v=20261117n";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
@@ -955,8 +955,8 @@ const SSW = window.SSW = {
     const kunci = b.aktif && !sswAllowed(b.slug); const can = (b.aktif || isGuru()) && !kunci;
     sheet.hidden = false;
     sheet.innerHTML = `<div class="sw-sheet-in"><div><div class="jp">${esc(b.jp || "")}</div><h2>${esc(b.nama)}</h2>
-      <p class="sw-muted">${kunci ? "Guru belum membuka bidang ini untuk akun atau kelasmu." : can ? (!b.hasContent ? "Materi sedang disiapkan." : (list.some(x => x.induk === slug) ? (b.label ? "Pilih kategori ujian." : "Pilih bahasa belajar: Bahasa Indonesia atau Bahasa Jepang.") : "Bidang ini sudah dibuka. Masuk dan jelajahi peta pembelajarannya.")) : "Materi bidang ini belum tersedia. Progres belajarmu tidak akan hilang."}</p></div>
-      <div class="sw-sheet-b">${can && list.some(x => x.induk === slug) ? `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">${esc(b.label || "🇮🇩 Bahasa Indonesia ›")}</button>${list.filter(x => x.induk === slug).map(x => `<button class="btn sw-big" onclick="route('ssw-peta/${esc(x.slug)}')">${esc(x.label || "🇯🇵 Bahasa Jepang ›")}</button>`).join("")}` : can ? `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">MASUK BELAJAR ›</button>` : `<button class="btn ghost" disabled>Belum tersedia</button>`}<button class="btn ghost" onclick="SSW.unpick()">Kembali</button></div></div>`;
+      <p class="sw-muted">${kunci ? "Guru belum membuka bidang ini untuk akun atau kelasmu." : can ? (!b.hasContent ? "Materi sedang disiapkan." : (list.some(x => x.induk === slug) ? (b.hub || b.label ? "Pilih buku / kategori ujian." : "Pilih bahasa belajar: Bahasa Indonesia atau Bahasa Jepang.") : "Bidang ini sudah dibuka. Masuk dan jelajahi peta pembelajarannya.")) : "Materi bidang ini belum tersedia. Progres belajarmu tidak akan hilang."}</p></div>
+      <div class="sw-sheet-b">${can && list.some(x => x.induk === slug) ? `${b.hub ? "" : `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">${esc(b.label || "🇮🇩 Bahasa Indonesia ›")}</button>`}${list.filter(x => x.induk === slug).map(x => `<button class="btn sw-big" onclick="route('ssw-peta/${esc(x.slug)}')">${esc(x.label || "🇯🇵 Bahasa Jepang ›")}</button>`).join("")}` : can ? `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">MASUK BELAJAR ›</button>` : `<button class="btn ghost" disabled>Belum tersedia</button>`}<button class="btn ghost" onclick="SSW.unpick()">Kembali</button></div></div>`;
   },
   unpick() {
     const w = document.getElementById("sw-world"), s = document.getElementById("sw-sheet"); if (!w) return;

@@ -75,15 +75,16 @@ export const DEFAULT_BIDANG = [
   { slug: "livestock", nama: "Livestock (Peternakan)", jp: "畜産業", aktif: true, urut: 8, tema: "farm", hasContent: true },
   { slug: "fishery", nama: "Fishery (Perikanan)", jp: "漁業", aktif: true, urut: 9, tema: "fishery", hasContent: true },
   { slug: "auto-maintenance", nama: "Auto Maintenance (Perawatan Mobil)", jp: "自動車整備", aktif: true, urut: 10, tema: "automobile", hasContent: true },
-  { slug: "jaim-machine-metal", nama: "機械金属加工 — Buku Resmi JAIM", jp: "機械金属加工", label: "📘 Mesin & Logam (Resmi) ›", aksesDari: "industrial-mfg", aktif: true, urut: 11, tema: "generic", hasContent: true },
-  { slug: "jaim-elec-electronic", nama: "電気電子機器組立て — Buku Resmi JAIM", jp: "電気電子機器組立て", label: "📘 Elektrik & Elektronik (Resmi) ›", aksesDari: "industrial-mfg", aktif: true, urut: 11.1, tema: "generic", hasContent: true },
-  { slug: "jaim-metal-surface", nama: "金属表面処理 — Buku Resmi JAIM", jp: "金属表面処理", label: "📘 Perlakuan Permukaan Logam (Resmi) ›", aksesDari: "industrial-mfg", aktif: true, urut: 11.2, tema: "generic", hasContent: true },
+  { slug: "industrial-mfg", nama: "Industrial Manufacturing (Manufaktur)", jp: "工業製品製造業", aktif: true, urut: 11, tema: "generic", hasContent: true, hub: true },
+  { slug: "jaim-machine-metal", nama: "機械金属加工 — Buku Resmi JAIM", jp: "機械金属加工", label: "📘 Mesin & Logam (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.1, tema: "generic", hasContent: true },
+  { slug: "jaim-elec-electronic", nama: "電気電子機器組立て — Buku Resmi JAIM", jp: "電気電子機器組立て", label: "📘 Elektrik & Elektronik (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.2, tema: "generic", hasContent: true },
+  { slug: "jaim-metal-surface", nama: "金属表面処理 — Buku Resmi JAIM", jp: "金属表面処理", label: "📘 Perlakuan Permukaan Logam (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.3, tema: "generic", hasContent: true },
   { slug: "wood-industry", nama: "Wood Industry (Industri Kayu)", jp: "木材産業", aktif: true, urut: 12, tema: "generic", hasContent: true },
   { slug: "auto-transport", nama: "Automobile Transportation (Truk & Bus)", jp: "自動車運送業（トラック・バス）", aktif: true, urut: 13, tema: "generic", hasContent: true },
 ];
 
 /** Bidang buatan sendiri yang sudah dihapus (abaikan dokumen lama di Firestore). */
-const SLUG_DIHAPUS = new Set(["industrial-mfg", "mfg-machine-metal"]);
+const SLUG_DIHAPUS = new Set(["mfg-machine-metal"]);
 let _bidang = null;
 /** Gabungan: bawaan + dokumen Firestore (Firestore menang). Dokumen yang ada di Firestore tapi tidak di bawaan ikut tampil. */
 export async function loadBidang(force = false) {

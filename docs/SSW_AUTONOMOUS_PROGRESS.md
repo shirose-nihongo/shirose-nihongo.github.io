@@ -73,3 +73,5 @@ Modul lama (7 bab/31 subbab buatan sendiri) DIHAPUS dan diganti dengan struktur 
 ## 2026-11-17 — modul manufaktur buatan sendiri dihapus (atas permintaan pemilik)
 - Dihapus: `industrial-mfg` (Dasar Pabrik) dan `mfg-machine-metal` (Mesin & Logam) — data, aset, entri bidang, dan spesifikasi ujiannya. Dokumen lama di Firestore untuk slug itu diabaikan.
 - Yang tetap: tiga buku resmi JAIM (`jaim-machine-metal`, `jaim-elec-electronic`, `jaim-metal-surface`), kini tampil sebagai bidang sendiri. Sakelar akses guru "Industrial Mfg" (kunci lama `industrial-mfg`) tetap berlaku untuk ketiganya selama bidang itu belum diatur sendiri-sendiri.
+
+- Koreksi (17 Nov, setelah keluhan pemilik): pulau **Industrial Manufacturing** dikembalikan sebagai induk (hub) tanpa konten sendiri; isinya 3 buku resmi JAIM (Mesin & Logam, Elektrik & Elektronik, Permukaan Logam). Hanya konten buatan sendiri (`industrial-mfg` lama dan `mfg-machine-metal`) yang dihapus.

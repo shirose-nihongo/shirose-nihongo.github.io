@@ -1983,7 +1983,7 @@ window.studentActivity = async (uid, tab) => {
         <h3 style="margin-top:12px;">Ujian JLPT Center (per level &amp; jenis)</h3><div class="table-wrap"><table><thead><tr><th>Ujian</th><th>Dikerjakan</th><th>Terakhir</th><th>Terbaik</th><th>Tanggal terakhir</th></tr></thead><tbody>${jr}</tbody></table></div>
         <h3 style="margin-top:12px;">Riwayat nilai (15 terakhir)</h3><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ujian</th><th>Nilai</th><th>Benar</th></tr></thead><tbody>${nr}</tbody></table></div>`;
     } else if (tab === "ssw") {
-      const core = await import("./js/ssw-core.js?v=20261117m");
+      const core = await import("./js/ssw-core.js?v=20261117n");
       const kls = state.kelasList || [];
       const items = await Promise.all(_SSW_8.map(async ([slug, nama]) => {
         const blokTotal = siswa.aksesSsw === false;
