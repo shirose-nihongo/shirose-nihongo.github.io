@@ -62,7 +62,7 @@ Statistik nyata dari repo (`python3 tools/ssw/stats.py --md`):
 
 ### Belum / batasan
 - Bidang belum ada: Shipbuilding, Aviation, Forestry, Automobile Transportation (taksi; truk & bus sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.
-- Construction Tutorial 5–7 belum.
+- Construction bab 5–7 (alat, pelaksanaan, keselamatan) sudah ada di app; ringkasan Indonesia Bab 6.1 dan Bab 7 (semua kategori) serta pipa lifeline 6.5 diperdalam dari "Tutorial for practical skills test" (tools/ssw/construction_deepen.py). Bab 5 dan 6.2–6.10 lainnya masih ringkasan tipis (teks Jepang penuh tetap ada).
 - PDF baru tidak diunduh sesi ini (jaringan sandbox dibatasi); hanya 2 PDF JICA di repo.
 - Industrial-mfg & mfg-machine-metal tanpa sumber PDF resmi (materi orisinal).
 - Belum diuji: Firestore nyata, perangkat fisik, Safari/iOS, klik dashboard guru.

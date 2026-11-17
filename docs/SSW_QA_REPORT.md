@@ -11,10 +11,12 @@ Skrip: `tools/ssw/qa/ssw_qa.py` (jalankan dengan server statis di port 8765).
 | auto-maintenance | 66 | 66 | 0 |
 | auto-transport | 50 | 50 | 0 |
 | building-cleaning | 50 | 50 | 0 |
+| construction-lifeline | 50 | 50 | 0 |
+| construction | 50 | 50 | 0 |
 | industrial-mfg | 66 | 66 | 0 |
 | mfg-machine-metal | 66 | 66 | 0 |
 | wood-industry | 50 | 50 | 0 |
-| **Total** | 348 | 348 | 0 |
+| **Total** | 448 | 448 | 0 |
 
 ## Daftar pengujian (hasil pada bidang pertama, mobile)
 
