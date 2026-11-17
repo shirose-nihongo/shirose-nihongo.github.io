@@ -401,6 +401,2373 @@
       }
      }
     ]
+   },
+   {
+    "id": "gen-kosakata-bab1-1",
+    "title": {
+     "id": "Kosakata mesin & logam 1.1",
+     "jp": "{単語|たんご} 1.1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「コラム」?",
+       "jp": "「コラム」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bubut biasa (manual)"
+       },
+       {
+        "id": "penyangga benda (gerinda)"
+       },
+       {
+        "id": "klem"
+       },
+       {
+        "id": "tiang mesin (column)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "コラム (コラム) = tiang mesin (column)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「始業前点検」?",
+       "jp": "「始業前点検」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kereta mesin bubut (carriage)"
+       },
+       {
+        "id": "tiang mesin (column)"
+       },
+       {
+        "id": "pemeriksaan sebelum kerja"
+       },
+       {
+        "id": "mesin bubut CNC"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "始業前点検 (しぎょうまえてんけん) = pemeriksaan sebelum kerja. Contoh: Memeriksa adanya kelainan saat pemeriksaan sebelum kerja."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “始業前点検 berarti pemeriksaan sebelum kerja.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 始業前点検 = pemeriksaan sebelum kerja."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「工業包装」?",
+       "jp": "「工業包装」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengemasan industri"
+       },
+       {
+        "id": "mata bor"
+       },
+       {
+        "id": "pemotongan (cutting)"
+       },
+       {
+        "id": "inspeksi mesin"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "工業包装 (こうぎょうほうそう) = pengemasan industri. Contoh: Melindungi produk dengan pengemasan industri."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “工業包装 berarti pengemasan industri.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 工業包装 = pengemasan industri."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「鍛造」?",
+       "jp": "「鍛造」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "nyaris celaka (near miss)"
+       },
+       {
+        "id": "penempaan"
+       },
+       {
+        "id": "dial gauge (jam ukur)"
+       },
+       {
+        "id": "chuck (penjepit)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "鍛造 (たんぞう) = penempaan. Contoh: Penempaan membentuk logam dengan memukulnya."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “鍛造 berarti penempaan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 鍛造 = penempaan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「公差」?",
+       "jp": "「公差」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "toleransi"
+       },
+       {
+        "id": "serpihan/tatal logam"
+       },
+       {
+        "id": "uji jalan"
+       },
+       {
+        "id": "dudukan pahat (tool post)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "公差 (こうさ) = toleransi. Contoh: Dimensinya masuk dalam toleransi."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “公差 berarti toleransi.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 公差 = toleransi."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「クランプ」?",
+       "jp": "「クランプ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pendidikan khusus"
+       },
+       {
+        "id": "klem"
+       },
+       {
+        "id": "kepala lepas (tailstock)"
+       },
+       {
+        "id": "meja kerja mesin"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クランプ (くらんぷ) = klem. Contoh: Menjepit dengan klem."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “クランプ berarti klem.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. クランプ = klem."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回転数」?",
+       "jp": "「回転数」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengelasan semi-otomatis"
+       },
+       {
+        "id": "serpihan/tatal logam"
+       },
+       {
+        "id": "putaran per menit"
+       },
+       {
+        "id": "kereta mesin bubut (carriage)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "回転数 (かいてんすう) = putaran per menit. Contoh: Menentukan putaran."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “回転数 berarti putaran per menit.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 回転数 = putaran per menit."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「主軸台」?",
+       "jp": "「主軸台」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mesin frais (milling)"
+       },
+       {
+        "id": "kereta mesin bubut (carriage)"
+       },
+       {
+        "id": "pres logam (stamping)"
+       },
+       {
+        "id": "kepala tetap mesin bubut"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "主軸台 (しゅじくだい) = kepala tetap mesin bubut."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab1-2",
+    "title": {
+     "id": "Kosakata mesin & logam 1.2",
+     "jp": "{単語|たんご} 1.2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「保護メガネ」?",
+       "jp": "「保護メガネ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kacamata pelindung"
+       },
+       {
+        "id": "pekerjaan konstruksi baja"
+       },
+       {
+        "id": "mesin bubut CNC"
+       },
+       {
+        "id": "las busur listrik"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "保護メガネ (ほごめがね) = kacamata pelindung. Contoh: Memakai kacamata pelindung saat bekerja."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “保護メガネ berarti kacamata pelindung.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 保護メガネ = kacamata pelindung."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「研削」?",
+       "jp": "「研削」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penggerindaan (grinding)"
+       },
+       {
+        "id": "die casting (cor cetak tekan)"
+       },
+       {
+        "id": "ragum"
+       },
+       {
+        "id": "chuck (penjepit)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "研削 (けんさく) = penggerindaan (grinding). Contoh: Menghaluskan permukaan dengan penggerindaan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “研削 berarti penggerindaan (grinding).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 研削 = penggerindaan (grinding)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「マシニングセンタ」?",
+       "jp": "「マシニングセンタ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "uji jalan"
+       },
+       {
+        "id": "cetakan (die)"
+       },
+       {
+        "id": "kepala tetap mesin bubut"
+       },
+       {
+        "id": "machining center (mesin CNC multifungsi)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "マシニングセンタ (ましにんぐせんた) = machining center (mesin CNC multifungsi). Contoh: Memproses komponen dengan machining center."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “マシニングセンタ berarti machining center (mesin CNC multifungsi).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. マシニングセンタ = machining center (mesin CNC multifungsi)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「数値制御旋盤」?",
+       "jp": "「数値制御旋盤」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bubut biasa (manual)"
+       },
+       {
+        "id": "uji jalan"
+       },
+       {
+        "id": "terlilit/terseret mesin"
+       },
+       {
+        "id": "mesin bubut CNC"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "数値制御旋盤 (すうちせいぎょせんばん) = mesin bubut CNC. Contoh: Memeriksa program mesin bubut CNC."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “数値制御旋盤 berarti mesin bubut CNC.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 数値制御旋盤 = mesin bubut CNC."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「刃物台」?",
+       "jp": "「刃物台」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "las busur listrik"
+       },
+       {
+        "id": "pengecatan"
+       },
+       {
+        "id": "perawatan mesin (maintenance)"
+       },
+       {
+        "id": "dudukan pahat (tool post)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "刃物台 (かたなだい) = dudukan pahat (tool post)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「送り」?",
+       "jp": "「送り」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "poros utama (spindle)"
+       },
+       {
+        "id": "laju pemakanan"
+       },
+       {
+        "id": "uji jalan"
+       },
+       {
+        "id": "perawatan mesin (maintenance)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "送り (おくり) = laju pemakanan. Contoh: Memperlambat pemakanan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “送り berarti laju pemakanan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 送り = laju pemakanan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「普通旋盤」?",
+       "jp": "「普通旋盤」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "slide (bagian bergerak mesin press)"
+       },
+       {
+        "id": "penutup pengaman"
+       },
+       {
+        "id": "pemeriksaan sebelum kerja"
+       },
+       {
+        "id": "bubut biasa (manual)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "普通旋盤 (ふつうせんばん) = bubut biasa (manual). Contoh: Membubut poros dengan bubut biasa."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “普通旋盤 berarti bubut biasa (manual).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 普通旋盤 = bubut biasa (manual)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「金属プレス」?",
+       "jp": "「金属プレス」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mata bor"
+       },
+       {
+        "id": "pelat logam mesin (sheet metal)"
+       },
+       {
+        "id": "pengelasan manual"
+       },
+       {
+        "id": "pres logam (stamping)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "金属プレス (きんぞくぷれす) = pres logam (stamping). Contoh: Pada pres logam, tangan tidak boleh dimasukkan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “金属プレス berarti pres logam (stamping).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 金属プレス = pres logam (stamping)."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab1-3",
+    "title": {
+     "id": "Kosakata mesin & logam 1.3",
+     "jp": "{単語|たんご} 1.3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「巻き込まれ」?",
+       "jp": "「巻き込まれ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perakitan dan finishing mesin"
+       },
+       {
+        "id": "terlilit/terseret mesin"
+       },
+       {
+        "id": "topeng las"
+       },
+       {
+        "id": "pekerjaan konstruksi baja"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "巻き込まれ (まきこまれ) = terlilit/terseret mesin. Contoh: Waspada terhadap kecelakaan terlilit mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “巻き込まれ berarti terlilit/terseret mesin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 巻き込まれ = terlilit/terseret mesin."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「塗装」?",
+       "jp": "「塗装」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dudukan pahat (tool post)"
+       },
+       {
+        "id": "mikrometer"
+       },
+       {
+        "id": "penyelesaian jig dan perkakas"
+       },
+       {
+        "id": "pengecatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "塗装 (とそう) = pengecatan. Contoh: Membersihkan permukaan sebelum pengecatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “塗装 berarti pengecatan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 塗装 = pengecatan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「主軸」?",
+       "jp": "「主軸」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alas mesin (bed)"
+       },
+       {
+        "id": "poros utama (spindle)"
+       },
+       {
+        "id": "dial gauge (jam ukur)"
+       },
+       {
+        "id": "putaran per menit"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "主軸 (しゅじく) = poros utama (spindle)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「フライス盤」?",
+       "jp": "「フライス盤」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "slide (bagian bergerak mesin press)"
+       },
+       {
+        "id": "mesin frais (milling)"
+       },
+       {
+        "id": "penempaan"
+       },
+       {
+        "id": "ragum"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "フライス盤 (ふらいすばん) = mesin frais (milling). Contoh: Membuat permukaan rata dengan mesin frais."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “フライス盤 berarti mesin frais (milling).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. フライス盤 = mesin frais (milling)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「切粉」?",
+       "jp": "「切粉」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mesin bubut CNC"
+       },
+       {
+        "id": "kepala tetap mesin bubut"
+       },
+       {
+        "id": "serpihan/tatal logam"
+       },
+       {
+        "id": "perakitan dan finishing mesin"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "切粉 (きりこ) = serpihan/tatal logam. Contoh: Tatal logam tidak boleh disentuh dengan tangan kosong."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “切粉 berarti serpihan/tatal logam.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 切粉 = serpihan/tatal logam."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「往復台」?",
+       "jp": "「往復台」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dial gauge (jam ukur)"
+       },
+       {
+        "id": "toleransi"
+       },
+       {
+        "id": "kereta mesin bubut (carriage)"
+       },
+       {
+        "id": "serpihan/tatal logam"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "往復台 (おうふくだい) = kereta mesin bubut (carriage)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機械系保全」?",
+       "jp": "「機械系保全」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cairan pemotong (coolant)"
+       },
+       {
+        "id": "end mill"
+       },
+       {
+        "id": "perawatan mesin (maintenance)"
+       },
+       {
+        "id": "tiang mesin (column)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "機械系保全 (きかいけいほぜん) = perawatan mesin (maintenance). Contoh: Melakukan pemeriksaan berkala dalam perawatan mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “機械系保全 berarti perawatan mesin (maintenance).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 機械系保全 = perawatan mesin (maintenance)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「図面」?",
+       "jp": "「図面」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengecatan"
+       },
+       {
+        "id": "tiang mesin (column)"
+       },
+       {
+        "id": "gambar teknik"
+       },
+       {
+        "id": "end mill"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "図面 (ずめん) = gambar teknik. Contoh: Memproses sesuai gambar teknik."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “図面 berarti gambar teknik.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 図面 = gambar teknik."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab1-4",
+    "title": {
+     "id": "Kosakata mesin & logam 1.4",
+     "jp": "{単語|たんご} 1.4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ドリル」?",
+       "jp": "「ドリル」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penempaan"
+       },
+       {
+        "id": "perakitan dan finishing mesin"
+       },
+       {
+        "id": "mata bor"
+       },
+       {
+        "id": "kepala tetap mesin bubut"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ドリル (どりる) = mata bor. Contoh: Membuat lubang dengan bor."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ドリル berarti mata bor.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. ドリル = mata bor."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ダイヤルゲージ」?",
+       "jp": "「ダイヤルゲージ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengecoran"
+       },
+       {
+        "id": "dudukan pahat (tool post)"
+       },
+       {
+        "id": "rapi dan tertata (5S)"
+       },
+       {
+        "id": "dial gauge (jam ukur)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ダイヤルゲージ (だいやるげーじ) = dial gauge (jam ukur). Contoh: Memeriksa ayunan dengan dial gauge."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ダイヤルゲージ berarti dial gauge (jam ukur).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. ダイヤルゲージ = dial gauge (jam ukur)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「治工具仕上げ」?",
+       "jp": "「治工具仕上げ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "putaran per menit"
+       },
+       {
+        "id": "gambar teknik"
+       },
+       {
+        "id": "kacamata pelindung"
+       },
+       {
+        "id": "penyelesaian jig dan perkakas"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "治工具仕上げ (じこうぐしあげ) = penyelesaian jig dan perkakas. Contoh: Mencapai ketelitian lewat penyelesaian jig dan perkakas."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “治工具仕上げ berarti penyelesaian jig dan perkakas.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 治工具仕上げ = penyelesaian jig dan perkakas."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「バイト」?",
+       "jp": "「バイト」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pahat bubut"
+       },
+       {
+        "id": "pendidikan khusus"
+       },
+       {
+        "id": "perlakuan panas"
+       },
+       {
+        "id": "pengecatan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "バイト (ばいと) = pahat bubut. Contoh: Memotong dengan pahat bubut."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “バイト berarti pahat bubut.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. バイト = pahat bubut."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整理整頓」?",
+       "jp": "「整理整頓」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pres logam (stamping)"
+       },
+       {
+        "id": "cetakan (die)"
+       },
+       {
+        "id": "operasi dua tangan"
+       },
+       {
+        "id": "rapi dan tertata (5S)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "整理整頓 (せいりせいとん) = rapi dan tertata (5S). Contoh: Rapi dan tertata adalah dasar keselamatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “整理整頓 berarti rapi dan tertata (5S).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 整理整頓 = rapi dan tertata (5S)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「心押台」?",
+       "jp": "「心押台」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemeriksaan sebelum kerja"
+       },
+       {
+        "id": "pres logam (stamping)"
+       },
+       {
+        "id": "kepala lepas (tailstock)"
+       },
+       {
+        "id": "kacamata pelindung"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "心押台 (しんおしだい) = kepala lepas (tailstock)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機械板金」?",
+       "jp": "「機械板金」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengelasan semi-otomatis"
+       },
+       {
+        "id": "pelat logam mesin (sheet metal)"
+       },
+       {
+        "id": "pekerjaan konstruksi baja"
+       },
+       {
+        "id": "serpihan/tatal logam"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "機械板金 (きかいばんきん) = pelat logam mesin (sheet metal). Contoh: Menekuk pelat tipis dengan pelat logam mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “機械板金 berarti pelat logam mesin (sheet metal).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 機械板金 = pelat logam mesin (sheet metal)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「工作機械」?",
+       "jp": "「工作機械」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mesin perkakas"
+       },
+       {
+        "id": "topeng las"
+       },
+       {
+        "id": "terlilit/terseret mesin"
+       },
+       {
+        "id": "meja kerja mesin"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "工作機械 (こうさくきかい) = mesin perkakas. Contoh: Memproses logam dengan mesin perkakas."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “工作機械 berarti mesin perkakas.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 工作機械 = mesin perkakas."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab1-5",
+    "title": {
+     "id": "Kosakata mesin & logam 1.5",
+     "jp": "{単語|たんご} 1.5"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「といし」?",
+       "jp": "「といし」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "batu gerinda"
+       },
+       {
+        "id": "poros utama (spindle)"
+       },
+       {
+        "id": "gambar teknik"
+       },
+       {
+        "id": "topeng las"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "といし (といし) = batu gerinda. Contoh: Memeriksa retak pada batu gerinda."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “といし berarti batu gerinda.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. といし = batu gerinda."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「切削」?",
+       "jp": "「切削」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemotongan (cutting)"
+       },
+       {
+        "id": "inspeksi mesin"
+       },
+       {
+        "id": "die casting (cor cetak tekan)"
+       },
+       {
+        "id": "pahat bubut"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "切削 (せっさく) = pemotongan (cutting). Contoh: Memeriksa pahat sebelum pemotongan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “切削 berarti pemotongan (cutting).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 切削 = pemotongan (cutting)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「構造物鉄工」?",
+       "jp": "「構造物鉄工」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "batu gerinda"
+       },
+       {
+        "id": "toleransi"
+       },
+       {
+        "id": "pahat bubut"
+       },
+       {
+        "id": "pekerjaan konstruksi baja"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "構造物鉄工 (こうぞうぶつてっこう) = pekerjaan konstruksi baja. Contoh: Pekerjaan konstruksi baja membuat rangka besi."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “構造物鉄工 berarti pekerjaan konstruksi baja.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 構造物鉄工 = pekerjaan konstruksi baja."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「チャック」?",
+       "jp": "「チャック」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemotongan (cutting)"
+       },
+       {
+        "id": "pekerjaan konstruksi baja"
+       },
+       {
+        "id": "chuck (penjepit)"
+       },
+       {
+        "id": "pres logam (stamping)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "チャック (ちゃっく) = chuck (penjepit). Contoh: Menjepit bahan dengan chuck."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “チャック berarti chuck (penjepit).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. チャック = chuck (penjepit)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ダイカスト」?",
+       "jp": "「ダイカスト」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cairan pemotong (coolant)"
+       },
+       {
+        "id": "cetakan (die)"
+       },
+       {
+        "id": "die casting (cor cetak tekan)"
+       },
+       {
+        "id": "tiang mesin (column)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ダイカスト (だいかすと) = die casting (cor cetak tekan). Contoh: Die casting menekan aluminium cair ke cetakan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ダイカスト berarti die casting (cor cetak tekan).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. ダイカスト = die casting (cor cetak tekan)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「バイス」?",
+       "jp": "「バイス」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "laju pemakanan"
+       },
+       {
+        "id": "ragum"
+       },
+       {
+        "id": "cetak injeksi"
+       },
+       {
+        "id": "cairan pemotong (coolant)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バイス (ばいす) = ragum. Contoh: Menjepit bahan dengan ragum."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “バイス berarti ragum.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. バイス = ragum."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「試運転」?",
+       "jp": "「試運転」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pelat logam mesin (sheet metal)"
+       },
+       {
+        "id": "pemeriksaan sebelum kerja"
+       },
+       {
+        "id": "mesin frais (milling)"
+       },
+       {
+        "id": "uji jalan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "試運転 (しうんてん) = uji jalan. Contoh: Melakukan uji putar batu gerinda."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “試運転 berarti uji jalan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 試運転 = uji jalan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「テーブル」?",
+       "jp": "「テーブル」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "machining center (mesin CNC multifungsi)"
+       },
+       {
+        "id": "pemeriksaan sebelum kerja"
+       },
+       {
+        "id": "mesin bubut CNC"
+       },
+       {
+        "id": "meja kerja mesin"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "テーブル (テーブル) = meja kerja mesin."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab1-6",
+    "title": {
+     "id": "Kosakata mesin & logam 1.6",
+     "jp": "{単語|たんご} 1.6"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「安全カバー」?",
+       "jp": "「安全カバー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penutup pengaman"
+       },
+       {
+        "id": "penyelesaian cetakan logam"
+       },
+       {
+        "id": "mesin perkakas"
+       },
+       {
+        "id": "klem"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "安全カバー (あんぜんかばー) = penutup pengaman. Contoh: Tidak memakai mesin dengan penutup pengaman terlepas."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “安全カバー berarti penutup pengaman.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 安全カバー = penutup pengaman."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「エンドミル」?",
+       "jp": "「エンドミル」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kepala tetap mesin bubut"
+       },
+       {
+        "id": "end mill"
+       },
+       {
+        "id": "mesin perkakas"
+       },
+       {
+        "id": "poros utama (spindle)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "エンドミル (えんどみる) = end mill. Contoh: Membuat alur dengan end mill."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “エンドミル berarti end mill.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. エンドミル = end mill."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「切削油」?",
+       "jp": "「切削油」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cairan pemotong (coolant)"
+       },
+       {
+        "id": "nyaris celaka (near miss)"
+       },
+       {
+        "id": "perlakuan panas"
+       },
+       {
+        "id": "mikrometer"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "切削油 (せっさくゆ) = cairan pemotong (coolant). Contoh: Mendinginkan pahat dengan cairan pemotong."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “切削油 berarti cairan pemotong (coolant).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 切削油 = cairan pemotong (coolant)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ノギス」?",
+       "jp": "「ノギス」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "asap las"
+       },
+       {
+        "id": "kacamata pelindung"
+       },
+       {
+        "id": "jangka sorong"
+       },
+       {
+        "id": "penyelesaian jig dan perkakas"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ノギス (のぎす) = jangka sorong. Contoh: Mengukur panjang dengan jangka sorong."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ノギス berarti jangka sorong.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. ノギス = jangka sorong."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「マイクロメーター」?",
+       "jp": "「マイクロメーター」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "meja kerja mesin"
+       },
+       {
+        "id": "mikrometer"
+       },
+       {
+        "id": "perawatan mesin (maintenance)"
+       },
+       {
+        "id": "terlilit/terseret mesin"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "マイクロメーター (まいくろめーたー) = mikrometer. Contoh: Mengukur ketebalan dengan mikrometer."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “マイクロメーター berarti mikrometer.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. マイクロメーター = mikrometer."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機械検査」?",
+       "jp": "「機械検査」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cetak injeksi"
+       },
+       {
+        "id": "jangka sorong"
+       },
+       {
+        "id": "inspeksi mesin"
+       },
+       {
+        "id": "perlakuan panas"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "機械検査 (きかいけんさ) = inspeksi mesin. Contoh: Memeriksa dimensi dalam inspeksi mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “機械検査 berarti inspeksi mesin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 機械検査 = inspeksi mesin."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「非常停止」?",
+       "jp": "「非常停止」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pahat bubut"
+       },
+       {
+        "id": "henti darurat"
+       },
+       {
+        "id": "pemotongan (cutting)"
+       },
+       {
+        "id": "pelat logam"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "非常停止 (ひじょうていし) = henti darurat. Contoh: Saat bahaya, tekan tombol henti darurat."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “非常停止 berarti henti darurat.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 非常停止 = henti darurat."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「受け台」?",
+       "jp": "「受け台」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mikrometer"
+       },
+       {
+        "id": "penyangga benda (gerinda)"
+       },
+       {
+        "id": "pahat bubut"
+       },
+       {
+        "id": "batu gerinda"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "受け台 (うけだい) = penyangga benda (gerinda). Contoh: Memeriksa celah penyangga."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “受け台 berarti penyangga benda (gerinda).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 受け台 = penyangga benda (gerinda)."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab1-7",
+    "title": {
+     "id": "Kosakata mesin & logam 1.7",
+     "jp": "{単語|たんご} 1.7"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ベッド」?",
+       "jp": "「ベッド」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "las busur listrik"
+       },
+       {
+        "id": "pelat logam mesin (sheet metal)"
+       },
+       {
+        "id": "uji jalan"
+       },
+       {
+        "id": "alas mesin (bed)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ベッド (ベッド) = alas mesin (bed)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「射出成形」?",
+       "jp": "「射出成形」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cetak injeksi"
+       },
+       {
+        "id": "uji jalan"
+       },
+       {
+        "id": "jangka sorong"
+       },
+       {
+        "id": "toleransi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "射出成形 (しゃしゅつせいけい) = cetak injeksi. Contoh: Membuat komponen plastik dengan cetak injeksi."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “射出成形 berarti cetak injeksi.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 射出成形 = cetak injeksi."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「鋳造」?",
+       "jp": "「鋳造」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengecoran"
+       },
+       {
+        "id": "pengelasan semi-otomatis"
+       },
+       {
+        "id": "meja kerja mesin"
+       },
+       {
+        "id": "dial gauge (jam ukur)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "鋳造 (ちゅうぞう) = pengecoran. Contoh: Pengecoran: menuang logam cair ke cetakan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “鋳造 berarti pengecoran.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 鋳造 = pengecoran."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ヒヤリハット」?",
+       "jp": "「ヒヤリハット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "machining center (mesin CNC multifungsi)"
+       },
+       {
+        "id": "die casting (cor cetak tekan)"
+       },
+       {
+        "id": "nyaris celaka (near miss)"
+       },
+       {
+        "id": "putaran per menit"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ヒヤリハット (ひやりはっと) = nyaris celaka (near miss). Contoh: Kejadian nyaris celaka dilaporkan ke atasan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ヒヤリハット berarti nyaris celaka (near miss).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. ヒヤリハット = nyaris celaka (near miss)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機械組立仕上げ」?",
+       "jp": "「機械組立仕上げ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perakitan dan finishing mesin"
+       },
+       {
+        "id": "perlakuan panas"
+       },
+       {
+        "id": "ragum"
+       },
+       {
+        "id": "serpihan/tatal logam"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "機械組立仕上げ (きかいくみたてしあげ) = perakitan dan finishing mesin. Contoh: Merakit komponen dalam perakitan dan finishing mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “機械組立仕上げ berarti perakitan dan finishing mesin.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 機械組立仕上げ = perakitan dan finishing mesin."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「手袋」?",
+       "jp": "「手袋」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "laju pemakanan"
+       },
+       {
+        "id": "sarung tangan"
+       },
+       {
+        "id": "poros utama (spindle)"
+       },
+       {
+        "id": "pendidikan khusus"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "手袋 (てぶくろ) = sarung tangan. Contoh: Tidak memakai sarung tangan di dekat mesin berputar."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “手袋 berarti sarung tangan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 手袋 = sarung tangan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「熱処理」?",
+       "jp": "「熱処理」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ragum"
+       },
+       {
+        "id": "perlakuan panas"
+       },
+       {
+        "id": "pengemasan industri"
+       },
+       {
+        "id": "meja kerja mesin"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "熱処理 (ねつしょり) = perlakuan panas. Contoh: Mengeraskan logam dengan perlakuan panas."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “熱処理 berarti perlakuan panas.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 熱処理 = perlakuan panas."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「金型仕上げ」?",
+       "jp": "「金型仕上げ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyelesaian jig dan perkakas"
+       },
+       {
+        "id": "penyelesaian cetakan logam"
+       },
+       {
+        "id": "henti darurat"
+       },
+       {
+        "id": "poros utama (spindle)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "金型仕上げ (かながたしあげ) = penyelesaian cetakan logam. Contoh: Penyelesaian cetakan adalah pekerjaan yang teliti."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “金型仕上げ berarti penyelesaian cetakan logam.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 金型仕上げ = penyelesaian cetakan logam."
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab2": [
@@ -837,6 +3204,488 @@
       "exp": {
        "id": "Salah. Menurut teks: “Risiko **sengatan listrik**: kabel utuh, tangan kering.”",
        "jp": "{本文|ほんぶん}をたしかめましょう。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab2-1",
+    "title": {
+     "id": "Kosakata mesin & logam 2.1",
+     "jp": "{単語|たんご} 2.1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「溶接面」?",
+       "jp": "「溶接面」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyelesaian cetakan logam"
+       },
+       {
+        "id": "mesin frais (milling)"
+       },
+       {
+        "id": "end mill"
+       },
+       {
+        "id": "topeng las"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "溶接面 (ようせつめん) = topeng las. Contoh: Memakai topeng las."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “溶接面 berarti topeng las.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 溶接面 = topeng las."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「手溶接」?",
+       "jp": "「手溶接」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengelasan manual"
+       },
+       {
+        "id": "die casting (cor cetak tekan)"
+       },
+       {
+        "id": "pekerjaan konstruksi baja"
+       },
+       {
+        "id": "tabung gas"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "手溶接 (てようせつ) = pengelasan manual. Contoh: Memakai topeng las sebelum pengelasan manual."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “手溶接 berarti pengelasan manual.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 手溶接 = pengelasan manual."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「半自動溶接」?",
+       "jp": "「半自動溶接」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pres logam (stamping)"
+       },
+       {
+        "id": "mikrometer"
+       },
+       {
+        "id": "pengelasan semi-otomatis"
+       },
+       {
+        "id": "rapi dan tertata (5S)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "半自動溶接 (はんじどうようせつ) = pengelasan semi-otomatis. Contoh: Mengalirkan kawat pada pengelasan semi-otomatis."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “半自動溶接 berarti pengelasan semi-otomatis.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 半自動溶接 = pengelasan semi-otomatis."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「板金」?",
+       "jp": "「板金」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "asap las"
+       },
+       {
+        "id": "kepala lepas (tailstock)"
+       },
+       {
+        "id": "perakitan dan finishing mesin"
+       },
+       {
+        "id": "pelat logam"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "板金 (ばんきん) = pelat logam. Contoh: Membuat kotak dari pelat."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “板金 berarti pelat logam.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 板金 = pelat logam."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ボンベ」?",
+       "jp": "「ボンベ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "terlilit/terseret mesin"
+       },
+       {
+        "id": "pemotongan (cutting)"
+       },
+       {
+        "id": "cetakan (die)"
+       },
+       {
+        "id": "tabung gas"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ボンベ (ぼんべ) = tabung gas. Contoh: Mengikat tabung gas."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ボンベ berarti tabung gas.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. ボンベ = tabung gas."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「スライド」?",
+       "jp": "「スライド」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengelasan manual"
+       },
+       {
+        "id": "pelat logam mesin (sheet metal)"
+       },
+       {
+        "id": "slide (bagian bergerak mesin press)"
+       },
+       {
+        "id": "toleransi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "スライド (スライド) = slide (bagian bergerak mesin press)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ヒューム」?",
+       "jp": "「ヒューム」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "asap las"
+       },
+       {
+        "id": "putaran per menit"
+       },
+       {
+        "id": "terlilit/terseret mesin"
+       },
+       {
+        "id": "mesin perkakas"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ヒューム (ひゅーむ) = asap las. Contoh: Menghindari menghirup asap las."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “ヒューム berarti asap las.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. ヒューム = asap las."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「特別教育」?",
+       "jp": "「特別教育」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyelesaian jig dan perkakas"
+       },
+       {
+        "id": "mesin frais (milling)"
+       },
+       {
+        "id": "pendidikan khusus"
+       },
+       {
+        "id": "bubut biasa (manual)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "特別教育 (とくべつきょういく) = pendidikan khusus. Contoh: Mengikuti pendidikan khusus."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “特別教育 berarti pendidikan khusus.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 特別教育 = pendidikan khusus."
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "gen-kosakata-bab2-2",
+    "title": {
+     "id": "Kosakata mesin & logam 2.2",
+     "jp": "{単語|たんご} 2.2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「両手操作」?",
+       "jp": "「両手操作」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "operasi dua tangan"
+       },
+       {
+        "id": "tabung gas"
+       },
+       {
+        "id": "machining center (mesin CNC multifungsi)"
+       },
+       {
+        "id": "nyaris celaka (near miss)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "両手操作 (りょうてそうさ) = operasi dua tangan. Contoh: Menjalankan press dengan dua tangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “両手操作 berarti operasi dua tangan.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 両手操作 = operasi dua tangan."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「金型」?",
+       "jp": "「金型」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "henti darurat"
+       },
+       {
+        "id": "cetakan (die)"
+       },
+       {
+        "id": "pahat bubut"
+       },
+       {
+        "id": "pres logam (stamping)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "金型 (かながた) = cetakan (die). Contoh: Mengganti cetakan."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “金型 berarti cetakan (die).”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. 金型 = cetakan (die)."
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa arti 「アーク溶接」?",
+       "jp": "「アーク溶接」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tabung gas"
+       },
+       {
+        "id": "las busur listrik"
+       },
+       {
+        "id": "meja kerja mesin"
+       },
+       {
+        "id": "pengelasan semi-otomatis"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "アーク溶接 (あーくようせつ) = las busur listrik. Contoh: Melakukan las busur listrik."
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “アーク溶接 berarti las busur listrik.”"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar. アーク溶接 = las busur listrik."
       },
       "mb": true
      }

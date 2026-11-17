@@ -9021,6 +9021,5187 @@
       }
      }
     ]
+   },
+   {
+    "id": "gen-fungsi-1",
+    "title": {
+     "id": "Fungsi komponen (1)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lengan atas suspensi yang menjaga posisi roda saat bergerak naik-turun.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "アッパー・アーム"
+       },
+       {
+        "id": "ファイナル・ギヤ及びディファレンシャル"
+       },
+       {
+        "id": "ユニバーサルジョイント"
+       },
+       {
+        "id": "ハブ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "アッパー・アーム (あっぱーあーむ) = lengan atas. Fungsi: Lengan atas suspensi yang menjaga posisi roda saat bergerak naik-turun."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Busi: memercikkan api listrik untuk membakar campuran udara dan bensin pada mesin bensin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダー"
+       },
+       {
+        "id": "シリンダーブロック"
+       },
+       {
+        "id": "プラグ"
+       },
+       {
+        "id": "エキゾースト・バルブ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "プラグ (ぷらぐ) = busi. Fungsi: Busi: memercikkan api listrik untuk membakar campuran udara dan bensin pada mesin bensin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tutup lubang pengisian oli mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・クリーナー・ボックス"
+       },
+       {
+        "id": "ブレーキ・マスタ・シリンダ"
+       },
+       {
+        "id": "フューエルタンク"
+       },
+       {
+        "id": "フィラー・キャップ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フィラー・キャップ (ふぃらーきゃっぷ) = tutup pengisian oli. Fungsi: Tutup lubang pengisian oli mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penyangga roda yang terhubung ke suspensi dan sistem kemudi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "タイロッド"
+       },
+       {
+        "id": "プロペラ・シャフト"
+       },
+       {
+        "id": "ナックル"
+       },
+       {
+        "id": "ドライブ・シャフト"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ナックル (なっくる) = knuckle (penyangga roda). Fungsi: Penyangga roda yang terhubung ke suspensi dan sistem kemudi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saklar untuk mengedipkan lampu depan sebagai isyarat ke kendaraan lain.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ホーン"
+       },
+       {
+        "id": "パッシング・ライト・スイッチ"
+       },
+       {
+        "id": "エアバッグ"
+       },
+       {
+        "id": "ブレーキパッド"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "パッシング・ライト・スイッチ (ぱっしんぐらいとすいっち) = saklar lampu passing. Fungsi: Saklar untuk mengedipkan lampu depan sebagai isyarat ke kendaraan lain."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Gardan: membagi tenaga ke roda kiri dan kanan serta membedakan putaran saat berbelok.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイルパン"
+       },
+       {
+        "id": "シリンダーヘッド"
+       },
+       {
+        "id": "ユニバーサルジョイント"
+       },
+       {
+        "id": "ディファレンシャル"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ディファレンシャル (でぃふぁれんしゃる) = diferensial (gardan). Fungsi: Gardan: membagi tenaga ke roda kiri dan kanan serta membedakan putaran saat berbelok."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Ruang di dalam silinder tempat campuran udara dan bahan bakar dibakar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "燃焼室"
+       },
+       {
+        "id": "シリンダー"
+       },
+       {
+        "id": "タイミング・チェーン"
+       },
+       {
+        "id": "ピストン"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "燃焼室 (ねんしょうしつ) = ruang bakar. Fungsi: Ruang di dalam silinder tempat campuran udara dan bahan bakar dibakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pedal yang diinjak untuk memutus tenaga mesin ke transmisi saat memindah gigi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "バッテリー・ウォーニング・ランプ"
+       },
+       {
+        "id": "クラッチ・ペダル"
+       },
+       {
+        "id": "アクセル・ペダル"
+       },
+       {
+        "id": "オイル・ストレーナ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クラッチ・ペダル (くらっちぺだる) = pedal kopling. Fungsi: Pedal yang diinjak untuk memutus tenaga mesin ke transmisi saat memindah gigi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Katup yang membuka untuk mengeluarkan gas hasil pembakaran dari silinder.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ピストンリング"
+       },
+       {
+        "id": "カムシャフト"
+       },
+       {
+        "id": "エキゾースト・バルブ"
+       },
+       {
+        "id": "チェーン・ガイド"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "エキゾースト・バルブ (えきぞーすとばるぶ) = katup buang. Fungsi: Katup yang membuka untuk mengeluarkan gas hasil pembakaran dari silinder."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Berkas kabel yang menyalurkan listrik dan sinyal ke semua komponen.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "バンパー"
+       },
+       {
+        "id": "サンバイザー"
+       },
+       {
+        "id": "モノコックボディ"
+       },
+       {
+        "id": "ワイヤーハーネス"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ワイヤーハーネス (わいやーはーねす) = rangkaian kabel (wire harness). Fungsi: Berkas kabel yang menyalurkan listrik dan sinyal ke semua komponen."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-2",
+    "title": {
+     "id": "Fungsi komponen (2)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sambungan yang memungkinkan poros meneruskan putaran meskipun sudutnya berubah.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フロント・アクスル"
+       },
+       {
+        "id": "クラッチディスク"
+       },
+       {
+        "id": "ユニバーサルジョイント"
+       },
+       {
+        "id": "ロアー・アーム"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ユニバーサルジョイント (ゆにばーさるじょいんと) = sambungan universal. Fungsi: Sambungan yang memungkinkan poros meneruskan putaran meskipun sudutnya berubah."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyaring kotoran dan serpihan logam dari oli mesin agar oli tetap bersih.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "O2センサー"
+       },
+       {
+        "id": "ブレーキ・ホース"
+       },
+       {
+        "id": "オイル・フィルター"
+       },
+       {
+        "id": "オイルパン"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "オイル・フィルター (おいるふぃるたー) = filter oli. Fungsi: Menyaring kotoran dan serpihan logam dari oli mesin agar oli tetap bersih."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sabuk penggerak kipas, pompa air, dan alternator dari mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フィラー・キャップ"
+       },
+       {
+        "id": "バッテリ液"
+       },
+       {
+        "id": "ファン・ベルト"
+       },
+       {
+        "id": "エンジンECU"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ファン・ベルト (ふぁんべると) = sabuk kipas. Fungsi: Sabuk penggerak kipas, pompa air, dan alternator dari mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengukur kadar oksigen gas buang agar campuran udara-bahan bakar bisa dikoreksi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "O2センサー"
+       },
+       {
+        "id": "ナックル"
+       },
+       {
+        "id": "トランスミッション"
+       },
+       {
+        "id": "オイル・フィルター"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "O2センサー (おーつーせんさー) = sensor oksigen (O2). Fungsi: Mengukur kadar oksigen gas buang agar campuran udara-bahan bakar bisa dikoreksi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cakram yang menghubungkan dan memutus tenaga mesin ke transmisi lewat gesekan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ドラム"
+       },
+       {
+        "id": "クラッチディスク"
+       },
+       {
+        "id": "クラッチペダル"
+       },
+       {
+        "id": "クラッチ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クラッチディスク (くらっちでぃすく) = cakram kopling. Fungsi: Cakram yang menghubungkan dan memutus tenaga mesin ke transmisi lewat gesekan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Kampas rem pada rem cakram yang bergesekan dengan cakram untuk mengerem.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "パッド"
+       },
+       {
+        "id": "キャリパ"
+       },
+       {
+        "id": "ステアリング操作機構"
+       },
+       {
+        "id": "ディスク式油圧ブレーキ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "パッド (ぱっど) = kampas rem. Fungsi: Kampas rem pada rem cakram yang bergesekan dengan cakram untuk mengerem."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Karter di bagian bawah mesin yang menampung oli mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "タイロッド"
+       },
+       {
+        "id": "オイルパン"
+       },
+       {
+        "id": "ショック・アブソーバー"
+       },
+       {
+        "id": "燃焼室"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "オイルパン (おいるぱん) = karter oli. Fungsi: Karter di bagian bawah mesin yang menampung oli mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pipa logam penyalur minyak rem dari master silinder ke rem roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・パイプ"
+       },
+       {
+        "id": "コイル・スプリング"
+       },
+       {
+        "id": "ショック・アブソーバー"
+       },
+       {
+        "id": "ナックル"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ブレーキ・パイプ (ぶれーきぱいぷ) = pipa rem. Fungsi: Pipa logam penyalur minyak rem dari master silinder ke rem roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengubah putaran setir menjadi gerak lurus (rack and pinion) dan memperbesar tenaga.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ステアリング・ギヤ機構"
+       },
+       {
+        "id": "バック・プレート"
+       },
+       {
+        "id": "プロペラ・シャフト"
+       },
+       {
+        "id": "ディスクブレーキ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ステアリング・ギヤ機構 (すてありんぐぎやきこう) = mekanisme gigi kemudi. Fungsi: Mengubah putaran setir menjadi gerak lurus (rack and pinion) dan memperbesar tenaga."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Batang penstabil yang mengurangi kemiringan bodi saat berbelok.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スタビライザ"
+       },
+       {
+        "id": "サスペンション"
+       },
+       {
+        "id": "ディファレンシャルギア"
+       },
+       {
+        "id": "ユニバーサルジョイント"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "スタビライザ (すたびらいざ) = stabilizer. Fungsi: Batang penstabil yang mengurangi kemiringan bodi saat berbelok."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-3",
+    "title": {
+     "id": "Fungsi komponen (3)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menjaga ketegangan sabuk atau rantai timing agar tidak kendur.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "テンショナ"
+       },
+       {
+        "id": "エキゾースト・パイプ"
+       },
+       {
+        "id": "タイミング・ベルト"
+       },
+       {
+        "id": "車幅灯"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "テンショナ (てんしょな) = penegang sabuk. Fungsi: Menjaga ketegangan sabuk atau rantai timing agar tidak kendur."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Roda gila yang menyimpan putaran agar putaran mesin halus dan menjadi dudukan kopling.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "燃焼室"
+       },
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "フライホイール"
+       },
+       {
+        "id": "ブレーキ・リザーバ・タンク"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "フライホイール (ふらいほいーる) = roda gila (flywheel). Fungsi: Roda gila yang menyimpan putaran agar putaran mesin halus dan menjadi dudukan kopling."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saklar untuk menyemprotkan cairan pencuci ke kaca depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エンジン・チェック・ランプ"
+       },
+       {
+        "id": "グローブ・ボックス"
+       },
+       {
+        "id": "ウォッシャー・スイッチ"
+       },
+       {
+        "id": "インテーク・バルブ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ウォッシャー・スイッチ (うぉっしゃーすいっち) = saklar penyemprot kaca. Fungsi: Saklar untuk menyemprotkan cairan pencuci ke kaca depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Klakson: bunyi peringatan agar pengguna jalan lain waspada.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "グローブ・ボックス"
+       },
+       {
+        "id": "ホーン"
+       },
+       {
+        "id": "オイル・ギャラリ"
+       },
+       {
+        "id": "ウィンカー・レバー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ホーン (ほーん) = klakson. Fungsi: Klakson: bunyi peringatan agar pengguna jalan lain waspada."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lampu depan untuk menerangi jalan di depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "前照灯"
+       },
+       {
+        "id": "動力伝達装置"
+       },
+       {
+        "id": "ピストン"
+       },
+       {
+        "id": "エキゾースト・バルブ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "前照灯 (ぜんしょうとう) = lampu depan. Fungsi: Lampu depan untuk menerangi jalan di depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pemandu yang menjaga lintasan rantai timing agar tidak bergetar atau melompat.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダ"
+       },
+       {
+        "id": "チェーン・ガイド"
+       },
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "コンロッド"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "チェーン・ガイド (ちぇーんがいど) = pemandu rantai. Fungsi: Pemandu yang menjaga lintasan rantai timing agar tidak bergetar atau melompat."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tuas yang meneruskan gerakan cam ke katup untuk membukanya.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "燃焼室"
+       },
+       {
+        "id": "ラジエーター"
+       },
+       {
+        "id": "ロッカ・アーム"
+       },
+       {
+        "id": "ホイール・シリンダ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ロッカ・アーム (ろっかあーむ) = lengan rocker. Fungsi: Tuas yang meneruskan gerakan cam ke katup untuk membukanya."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menampung minyak rem dan menjadi tempat mengecek volumenya.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "マスター・バック"
+       },
+       {
+        "id": "エンジン"
+       },
+       {
+        "id": "ブレーキ・マスタ・シリンダ"
+       },
+       {
+        "id": "ブレーキ・リザーバ・タンク"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ブレーキ・リザーバ・タンク (ぶれーきりざーばたんく) = tangki cadangan minyak rem. Fungsi: Menampung minyak rem dan menjadi tempat mengecek volumenya."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Badan utama mesin yang memuat silinder dan menjadi dudukan bagian lain.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ピストン"
+       },
+       {
+        "id": "フライホイール"
+       },
+       {
+        "id": "シリンダ"
+       },
+       {
+        "id": "シリンダーブロック"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "シリンダーブロック (しりんだーぶろっく) = blok silinder. Fungsi: Badan utama mesin yang memuat silinder dan menjadi dudukan bagian lain."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Didorong tekanan minyak rem untuk menekan kampas rem ke tromol.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキパッド"
+       },
+       {
+        "id": "ブレーキ・ホイール・シリンダー"
+       },
+       {
+        "id": "エアフローメーター"
+       },
+       {
+        "id": "ステアリング・ホイール"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ブレーキ・ホイール・シリンダー (ぶれーきほいーるしりんだー) = silinder roda rem. Fungsi: Didorong tekanan minyak rem untuk menekan kampas rem ke tromol."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-4",
+    "title": {
+     "id": "Fungsi komponen (4)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rumah katup throttle yang mengatur jumlah udara yang masuk ke mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スロットルボディ"
+       },
+       {
+        "id": "エアフローメーター"
+       },
+       {
+        "id": "ホイール"
+       },
+       {
+        "id": "スロットル・ボデー"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "スロットル・ボデー (すろっとるぼでー) = throttle body. Fungsi: Rumah katup throttle yang mengatur jumlah udara yang masuk ke mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyala bila ada pintu yang belum tertutup rapat.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "半ドア・ウォーニング・ランプ"
+       },
+       {
+        "id": "ブレーキ・ペダル"
+       },
+       {
+        "id": "ライティング・スイッチ"
+       },
+       {
+        "id": "エンジン・チェック・ランプ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "半ドア・ウォーニング・ランプ (はんどあうぉーにんぐらんぷ) = lampu peringatan pintu belum rapat. Fungsi: Menyala bila ada pintu yang belum tertutup rapat."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lampu posisi yang memperlihatkan lebar mobil kepada pengendara lain.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ディスクブレーキ"
+       },
+       {
+        "id": "車幅灯"
+       },
+       {
+        "id": "ラジエータ"
+       },
+       {
+        "id": "ボンネット"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "車幅灯 (しゃはばとう) = lampu posisi (lebar kendaraan). Fungsi: Lampu posisi yang memperlihatkan lebar mobil kepada pengendara lain."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saklar untuk menyalakan lampu kecil dan lampu depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ライティング・スイッチ"
+       },
+       {
+        "id": "シフト・レバー"
+       },
+       {
+        "id": "ブレーキ・ウォーニング・ランプ"
+       },
+       {
+        "id": "メーター"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ライティング・スイッチ (らいてぃんぐすいっち) = saklar lampu. Fungsi: Saklar untuk menyalakan lampu kecil dan lampu depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Melumasi bagian mesin yang bergerak, mengurangi gesekan, mendinginkan, dan membersihkan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラジエーター・キャップ"
+       },
+       {
+        "id": "エンジン・オイル"
+       },
+       {
+        "id": "シリンダーヘッドガスケット"
+       },
+       {
+        "id": "バッテリー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "エンジン・オイル (えんじんおいる) = oli mesin. Fungsi: Melumasi bagian mesin yang bergerak, mengurangi gesekan, mendinginkan, dan membersihkan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyemprotkan bahan bakar ke mesin dalam bentuk kabut halus.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フューエルタンク"
+       },
+       {
+        "id": "インジェクター"
+       },
+       {
+        "id": "ユニバーサルジョイント"
+       },
+       {
+        "id": "チャコール・キャニスタ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "インジェクター (いんじぇくたー) = injektor. Fungsi: Menyemprotkan bahan bakar ke mesin dalam bentuk kabut halus."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Seal karet pada piston kaliper yang mencegah kebocoran minyak rem dan menarik piston kembali.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ステアリング・ホイール"
+       },
+       {
+        "id": "ピストン・シール"
+       },
+       {
+        "id": "オルタネータ"
+       },
+       {
+        "id": "ブレーキパッド"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ピストン・シール (ぴすとんしーる) = seal piston. Fungsi: Seal karet pada piston kaliper yang mencegah kebocoran minyak rem dan menarik piston kembali."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Knalpot tambahan di depan knalpot utama yang ikut meredam suara dan tekanan gas buang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "サブ・マフラ"
+       },
+       {
+        "id": "イグニッション・コイル"
+       },
+       {
+        "id": "スロットル・ボデー"
+       },
+       {
+        "id": "ECU"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "サブ・マフラ (さぶまふら) = knalpot tambahan. Fungsi: Knalpot tambahan di depan knalpot utama yang ikut meredam suara dan tekanan gas buang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Gigi akhir memperbesar torsi; diferensial membagi putaran ke roda kiri-kanan yang berbeda kecepatan saat berbelok.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ファイナル・ギヤ及びディファレンシャル"
+       },
+       {
+        "id": "ハブ"
+       },
+       {
+        "id": "ユニバーサルジョイント"
+       },
+       {
+        "id": "サスペンション"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ファイナル・ギヤ及びディファレンシャル (ふぁいなるぎやおよびでぃふぁれんしゃる) = gigi akhir dan diferensial. Fungsi: Gigi akhir memperbesar torsi; diferensial membagi putaran ke roda kiri-kanan yang berbeda kecepatan saat berbelok."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Memompa oli mesin dan mengalirkannya ke bagian-bagian yang perlu pelumasan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイルポンプ"
+       },
+       {
+        "id": "テンショナ・アーム"
+       },
+       {
+        "id": "クラッチペダル"
+       },
+       {
+        "id": "ブレーキ・リザーバ・タンク"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "オイルポンプ (おいるぽんぷ) = pompa oli. Fungsi: Memompa oli mesin dan mengalirkannya ke bagian-bagian yang perlu pelumasan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-5",
+    "title": {
+     "id": "Fungsi komponen (5)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 5"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Meredam getaran pegas suspensi agar mobil tidak terus memantul.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ショック・アブソーバ"
+       },
+       {
+        "id": "トルクコンバータ"
+       },
+       {
+        "id": "マニュアルトランスミッション"
+       },
+       {
+        "id": "ボデー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ショック・アブソーバ (しょっくあぶそーば) = peredam kejut. Fungsi: Meredam getaran pegas suspensi agar mobil tidak terus memantul."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sabuk bergigi yang menyinkronkan putaran poros engkol dengan poros bubungan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダーブロック"
+       },
+       {
+        "id": "タイミング・ベルト"
+       },
+       {
+        "id": "ロッカ・アーム"
+       },
+       {
+        "id": "チェーン・ガイド"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "タイミング・ベルト (たいみんぐべると) = sabuk timing. Fungsi: Sabuk bergigi yang menyinkronkan putaran poros engkol dengan poros bubungan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pipa yang menyalurkan oli ke mekanisme di atas silinder, seperti poros bubungan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイル・デリバリ・パイプ"
+       },
+       {
+        "id": "オイル・ギャラリ"
+       },
+       {
+        "id": "ウォータ・ジャケット"
+       },
+       {
+        "id": "ディスクブレーキ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "オイル・デリバリ・パイプ (おいるでりばりぱいぷ) = pipa penyalur oli. Fungsi: Pipa yang menyalurkan oli ke mekanisme di atas silinder, seperti poros bubungan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rem yang menjepit cakram yang berputar bersama roda dengan kampas untuk memperlambat roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ディスクブレーキ"
+       },
+       {
+        "id": "ピストン・シール"
+       },
+       {
+        "id": "ステアリング・リンク機構"
+       },
+       {
+        "id": "ドラム式油圧ブレーキ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ディスクブレーキ (でぃすくぶれーき) = rem cakram. Fungsi: Rem yang menjepit cakram yang berputar bersama roda dengan kampas untuk memperlambat roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Batang penerus gerak setir ke roda depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ディファレンシャル"
+       },
+       {
+        "id": "ライティング・スイッチ"
+       },
+       {
+        "id": "触媒"
+       },
+       {
+        "id": "タイロッド"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "タイロッド (たいろっど) = tie rod (batang kemudi). Fungsi: Batang penerus gerak setir ke roda depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lengan penghubung roda ke bodi pada suspensi; bergerak naik-turun menyerap guncangan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "マニュアルトランスミッション"
+       },
+       {
+        "id": "フロント・アクスル"
+       },
+       {
+        "id": "ロアー・アーム"
+       },
+       {
+        "id": "サスペンション"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ロアー・アーム (ろあーあーむ) = lengan bawah. Fungsi: Lengan penghubung roda ke bodi pada suspensi; bergerak naik-turun menyerap guncangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengalirkan udara ke radiator agar air pendingin tetap dingin saat mobil pelan atau berhenti.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エンジン・マウント"
+       },
+       {
+        "id": "ファン・ベルト"
+       },
+       {
+        "id": "冷却ファン"
+       },
+       {
+        "id": "レベル・ゲージ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "冷却ファン (れいきゃくふぁん) = kipas pendingin. Fungsi: Mengalirkan udara ke radiator agar air pendingin tetap dingin saat mobil pelan atau berhenti."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Batang-batang penghubung yang meneruskan gerak gigi kemudi ke roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ステアリング・リンク機構"
+       },
+       {
+        "id": "ホイール・シリンダ"
+       },
+       {
+        "id": "マスター・シリンダ"
+       },
+       {
+        "id": "バック・プレート"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ステアリング・リンク機構 (すてありんぐりんくきこう) = mekanisme sambungan kemudi. Fungsi: Batang-batang penghubung yang meneruskan gerak gigi kemudi ke roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cermin tengah kabin untuk melihat keadaan di belakang mobil.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "サン・バイザー"
+       },
+       {
+        "id": "ウォーターポンプ"
+       },
+       {
+        "id": "ブレーキ・ウォーニング・ランプ"
+       },
+       {
+        "id": "バック・ミラー"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "バック・ミラー (ばっくみらー) = spion tengah (kabin). Fungsi: Cermin tengah kabin untuk melihat keadaan di belakang mobil."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengubah rasio putaran dan torsi mesin sesuai kecepatan dan beban kendaraan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・インテーク・ホース"
+       },
+       {
+        "id": "プロペラ・シャフト"
+       },
+       {
+        "id": "ブレーキ・パイプ"
+       },
+       {
+        "id": "トランスミッション"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "トランスミッション (とらんすみっしょん) = transmisi. Fungsi: Mengubah rasio putaran dan torsi mesin sesuai kecepatan dan beban kendaraan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-6",
+    "title": {
+     "id": "Fungsi komponen (6)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 6"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengubah injakan pedal rem menjadi tekanan minyak rem yang dikirim ke tiap rem roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "マスター・シリンダ"
+       },
+       {
+        "id": "ディスク式油圧ブレーキ"
+       },
+       {
+        "id": "ステアリング装置"
+       },
+       {
+        "id": "冷却ファン"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "マスター・シリンダ (ますたーしりんだ) = master silinder. Fungsi: Mengubah injakan pedal rem menjadi tekanan minyak rem yang dikirim ke tiap rem roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengubah gas buang berbahaya (HC, CO, NOx) menjadi gas yang lebih aman lewat reaksi katalis.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・クリーナ"
+       },
+       {
+        "id": "マスター・バック"
+       },
+       {
+        "id": "スパークプラグ"
+       },
+       {
+        "id": "触媒コンバータ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "触媒コンバータ (しょくばいこんばーた) = konverter katalis. Fungsi: Mengubah gas buang berbahaya (HC, CO, NOx) menjadi gas yang lebih aman lewat reaksi katalis."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Poros panjang yang menyalurkan tenaga dari transmisi ke diferensial belakang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "プロペラ・シャフト"
+       },
+       {
+        "id": "ブレーキ・パイプ"
+       },
+       {
+        "id": "オイルパン"
+       },
+       {
+        "id": "ナックル"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "プロペラ・シャフト (ぷろぺらしゃふと) = poros propeller. Fungsi: Poros panjang yang menyalurkan tenaga dari transmisi ke diferensial belakang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menaikkan tegangan aki menjadi tegangan sangat tinggi untuk percikan busi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "触媒コンバータ"
+       },
+       {
+        "id": "イグニッションコイル"
+       },
+       {
+        "id": "スパークプラグ"
+       },
+       {
+        "id": "エキゾースト・パイプ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "イグニッションコイル (いぐにっしょんこいる) = koil pengapian. Fungsi: Menaikkan tegangan aki menjadi tegangan sangat tinggi untuk percikan busi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sistem penopang yang menyerap guncangan jalan agar kendaraan nyaman dan roda tetap menapak.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フィラー・キャップ"
+       },
+       {
+        "id": "サスペンション"
+       },
+       {
+        "id": "ナックル"
+       },
+       {
+        "id": "ハブ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サスペンション (さすぺんしょん) = suspensi. Fungsi: Sistem penopang yang menyerap guncangan jalan agar kendaraan nyaman dan roda tetap menapak."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Gandar/as roda depan yang menopang roda depan dan beban kendaraan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "カムシャフト"
+       },
+       {
+        "id": "ディファレンシャルギア"
+       },
+       {
+        "id": "フロント・アクスル"
+       },
+       {
+        "id": "クラッチ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "フロント・アクスル (ふろんとあくする) = as roda depan. Fungsi: Gandar/as roda depan yang menopang roda depan dan beban kendaraan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saluran oli utama di blok mesin yang membagi oli ke bantalan-bantalan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイル・プレッシャ・スイッチ"
+       },
+       {
+        "id": "オイル・ギャラリ"
+       },
+       {
+        "id": "オイルフィルター"
+       },
+       {
+        "id": "オイル・ジェット"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "オイル・ギャラリ (おいるぎゃらり) = saluran oli (oil gallery). Fungsi: Saluran oli utama di blok mesin yang membagi oli ke bantalan-bantalan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lengan yang menekan rantai timing agar tegangannya tetap.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダーヘッドガスケット"
+       },
+       {
+        "id": "タイミング・チェーン"
+       },
+       {
+        "id": "ヘッド・レスト"
+       },
+       {
+        "id": "テンショナ・アーム"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "テンショナ・アーム (てんしょなあーむ) = lengan penegang. Fungsi: Lengan yang menekan rantai timing agar tegangannya tetap."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Selang yang mengalirkan udara bersih dari saringan udara ke throttle body.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・インテーク・ホース"
+       },
+       {
+        "id": "メイン・マフラ"
+       },
+       {
+        "id": "ECU"
+       },
+       {
+        "id": "エアフローメーター"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "エア・インテーク・ホース (えあいんてーくほーす) = selang hisap udara. Fungsi: Selang yang mengalirkan udara bersih dari saringan udara ke throttle body."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Transmisi yang diganti giginya manual oleh pengemudi untuk mengubah torsi dan kecepatan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フロント・アクスル"
+       },
+       {
+        "id": "マニュアルトランスミッション"
+       },
+       {
+        "id": "チャコール・キャニスタ"
+       },
+       {
+        "id": "エア・クリーナー・ボックス"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "マニュアルトランスミッション (まにゅあるとらんすみっしょん) = transmisi manual. Fungsi: Transmisi yang diganti giginya manual oleh pengemudi untuk mengubah torsi dan kecepatan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-7",
+    "title": {
+     "id": "Fungsi komponen (7)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 7"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lengan bawah yang menghubungkan roda dengan rangka dan mengatur gerak naik-turun roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "プロペラシャフト"
+       },
+       {
+        "id": "ロアー・サスペンション・アーム"
+       },
+       {
+        "id": "ウォッシャー・スイッチ"
+       },
+       {
+        "id": "ボデー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ロアー・サスペンション・アーム (ろあーさすぺんしょんあーむ) = lengan bawah suspensi. Fungsi: Lengan bawah yang menghubungkan roda dengan rangka dan mengatur gerak naik-turun roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Kunci kontak yang menyalakan sistem listrik dan menghidupkan starter.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ワイパーブレード"
+       },
+       {
+        "id": "オルタネーター"
+       },
+       {
+        "id": "サンバイザー"
+       },
+       {
+        "id": "イグニッション・スイッチ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "イグニッション・スイッチ (いぐにっしょんすいっち) = kunci kontak (saklar starter). Fungsi: Kunci kontak yang menyalakan sistem listrik dan menghidupkan starter."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Katup yang membuka untuk memasukkan campuran udara-bahan bakar ke ruang bakar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダ・ブロック"
+       },
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "エキゾースト・バルブ"
+       },
+       {
+        "id": "タイミング・ベルト"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "インテーク・バルブ (いんてーくばるぶ) = katup hisap. Fungsi: Katup yang membuka untuk memasukkan campuran udara-bahan bakar ke ruang bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Selang fleksibel penyalur minyak rem ke roda yang ikut bergerak bersama suspensi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "サブ・フレーム"
+       },
+       {
+        "id": "オイルパン"
+       },
+       {
+        "id": "プロペラ・シャフト"
+       },
+       {
+        "id": "ブレーキ・ホース"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ブレーキ・ホース (ぶれーきほーす) = selang rem. Fungsi: Selang fleksibel penyalur minyak rem ke roda yang ikut bergerak bersama suspensi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Satu-satunya bagian yang menyentuh jalan; menyalurkan tenaga, rem, dan arah, serta meredam guncangan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "タイヤ"
+       },
+       {
+        "id": "ブレーキ・パッド"
+       },
+       {
+        "id": "マニュアルトランスミッション"
+       },
+       {
+        "id": "ブレーキ・ドラム"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "タイヤ (たいや) = ban. Fungsi: Satu-satunya bagian yang menyentuh jalan; menyalurkan tenaga, rem, dan arah, serta meredam guncangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Gandar belakang yang menopang roda belakang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "灯火装置"
+       },
+       {
+        "id": "ボデー"
+       },
+       {
+        "id": "ハブ"
+       },
+       {
+        "id": "リヤ・アクスル"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "リヤ・アクスル (りやあくする) = as roda belakang. Fungsi: Gandar belakang yang menopang roda belakang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cairan untuk membersihkan kaca depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ウィンド・ウォッシャ液"
+       },
+       {
+        "id": "ECU"
+       },
+       {
+        "id": "イグニッション・コイル"
+       },
+       {
+        "id": "フィラー・キャップ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ウィンド・ウォッシャ液 (うぃんどうぉっしゃえき) = cairan penyemprot kaca. Fungsi: Cairan untuk membersihkan kaca depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saluran bercabang yang membagi udara hisap ke tiap silinder.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "インテーク・マニホールド"
+       },
+       {
+        "id": "エンジン・オイル"
+       },
+       {
+        "id": "イグニッション・コイル"
+       },
+       {
+        "id": "ヘッド・カバー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "インテーク・マニホールド (いんてーくまにほーるど) = manifold hisap. Fungsi: Saluran bercabang yang membagi udara hisap ke tiap silinder."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Poros engkol yang mengubah gerak naik-turun piston menjadi putaran dan menyalurkan tenaga mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フライホイール"
+       },
+       {
+        "id": "テンショナ・アーム"
+       },
+       {
+        "id": "クランクシャフト"
+       },
+       {
+        "id": "シリンダーブロック"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "クランクシャフト (くらんくしゃふと) = poros engkol. Fungsi: Poros engkol yang mengubah gerak naik-turun piston menjadi putaran dan menyalurkan tenaga mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Memompa bahan bakar dari tangki ke injektor dengan tekanan tertentu.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フューエルポンプ"
+       },
+       {
+        "id": "インジェクタ"
+       },
+       {
+        "id": "冷却ファン"
+       },
+       {
+        "id": "フューエルタンク"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "フューエルポンプ (ふゅーえるぽんぷ) = pompa bahan bakar. Fungsi: Memompa bahan bakar dari tangki ke injektor dengan tekanan tertentu."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-8",
+    "title": {
+     "id": "Fungsi komponen (8)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 8"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tuas untuk memilih gigi/posisi transmisi (P, R, N, D atau gigi manual).",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "アクセル・ペダル"
+       },
+       {
+        "id": "メーター"
+       },
+       {
+        "id": "エアバッグ"
+       },
+       {
+        "id": "シフト・レバー"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "シフト・レバー (しふとればー) = tuas persneling. Fungsi: Tuas untuk memilih gigi/posisi transmisi (P, R, N, D atau gigi manual)."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pipa yang mengalirkan gas buang dari mesin ke belakang kendaraan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フューエル・タンク"
+       },
+       {
+        "id": "アッパー・アーム"
+       },
+       {
+        "id": "エキゾースト・パイプ"
+       },
+       {
+        "id": "シートベルト"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "エキゾースト・パイプ (えきぞーすとぱいぷ) = pipa gas buang. Fungsi: Pipa yang mengalirkan gas buang dari mesin ke belakang kendaraan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Selang yang mengalirkan air panas dari mesin ke bagian atas radiator.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイルポンプ"
+       },
+       {
+        "id": "ラジエータ・アッパ・ホース"
+       },
+       {
+        "id": "オイル・プレッシャ・スイッチ"
+       },
+       {
+        "id": "オイル・ジェット"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ラジエータ・アッパ・ホース (らじえーたあっぱほーす) = selang atas radiator. Fungsi: Selang yang mengalirkan air panas dari mesin ke bagian atas radiator."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pembangkit listrik yang digerakkan mesin untuk mengisi aki dan menyuplai listrik kendaraan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エンジン"
+       },
+       {
+        "id": "フィラー・キャップ"
+       },
+       {
+        "id": "ナックル"
+       },
+       {
+        "id": "オルタネータ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "オルタネータ (おるたねーた) = alternator (dinamo pengisi). Fungsi: Pembangkit listrik yang digerakkan mesin untuk mengisi aki dan menyuplai listrik kendaraan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sensor yang mendeteksi posisi dan putaran poros engkol.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラダーフレーム"
+       },
+       {
+        "id": "インジェクタ"
+       },
+       {
+        "id": "ワイヤーハーネス"
+       },
+       {
+        "id": "クランク角センサ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "クランク角センサ (くらんくかくせんさ) = sensor sudut poros engkol. Fungsi: Sensor yang mendeteksi posisi dan putaran poros engkol."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rantai logam yang menyinkronkan poros engkol dengan poros bubungan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "カムシャフト"
+       },
+       {
+        "id": "タイミング・チェーン"
+       },
+       {
+        "id": "プラグ"
+       },
+       {
+        "id": "エキゾースト・バルブ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "タイミング・チェーン (たいみんぐちぇーん) = rantai timing. Fungsi: Rantai logam yang menyinkronkan poros engkol dengan poros bubungan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sakelar yang menyalakan lampu peringatan bila tekanan oli mesin terlalu rendah.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ウォーターポンプ"
+       },
+       {
+        "id": "オイル・プレッシャ・スイッチ"
+       },
+       {
+        "id": "ピストンリング"
+       },
+       {
+        "id": "オイル・フィルタ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "オイル・プレッシャ・スイッチ (おいるぷれっしゃすいっち) = sakelar tekanan oli. Fungsi: Sakelar yang menyalakan lampu peringatan bila tekanan oli mesin terlalu rendah."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Kap mesin yang menutup ruang mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "前照灯"
+       },
+       {
+        "id": "ボンネット"
+       },
+       {
+        "id": "ブレーキ・パッド"
+       },
+       {
+        "id": "オイル・フィルター"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ボンネット (ぼんねっと) = kap mesin. Fungsi: Kap mesin yang menutup ruang mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sistem yang meneruskan putaran setir untuk mengubah arah roda depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ステアリング装置"
+       },
+       {
+        "id": "ブレーキ装置"
+       },
+       {
+        "id": "ブレーキ・ホイール・シリンダー"
+       },
+       {
+        "id": "バック・プレート"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ステアリング装置 (すてありんぐそうち) = sistem kemudi. Fungsi: Sistem yang meneruskan putaran setir untuk mengubah arah roda depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rangkaian yang menyalurkan tenaga dari mesin ke roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "バッテリー"
+       },
+       {
+        "id": "ボデー"
+       },
+       {
+        "id": "動力伝達装置"
+       },
+       {
+        "id": "クラッチディスク"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "動力伝達装置 (どうりょくでんたつそうち) = penerus tenaga. Fungsi: Rangkaian yang menyalurkan tenaga dari mesin ke roda."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-9",
+    "title": {
+     "id": "Fungsi komponen (9)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 9"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengubah injakan pedal rem menjadi tekanan minyak rem untuk seluruh roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ホイール・シリンダー"
+       },
+       {
+        "id": "スプリング"
+       },
+       {
+        "id": "バック・プレート"
+       },
+       {
+        "id": "マスタ・シリンダ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "マスタ・シリンダ (ますたしりんだ) = master silinder. Fungsi: Mengubah injakan pedal rem menjadi tekanan minyak rem untuk seluruh roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengalirkan air pendingin berputar melalui mesin dan radiator.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ウォータ・ポンプ"
+       },
+       {
+        "id": "ラジエータ・ロアー・ホース"
+       },
+       {
+        "id": "ブレーキ・パッド"
+       },
+       {
+        "id": "オイルポンプ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ウォータ・ポンプ (うぉーたぽんぷ) = pompa air. Fungsi: Mengalirkan air pendingin berputar melalui mesin dan radiator."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyala bila rem parkir masih terpasang, minyak rem kurang, atau ada masalah pada sistem rem.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "グローブ・ボックス"
+       },
+       {
+        "id": "ホーン"
+       },
+       {
+        "id": "ウォッシャー・スイッチ"
+       },
+       {
+        "id": "ブレーキ・ウォーニング・ランプ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ブレーキ・ウォーニング・ランプ (ぶれーきうぉーにんぐらんぷ) = lampu peringatan rem. Fungsi: Menyala bila rem parkir masih terpasang, minyak rem kurang, atau ada masalah pada sistem rem."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menaikkan tegangan aki menjadi tegangan sangat tinggi untuk percikan busi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・マスタ・シリンダ"
+       },
+       {
+        "id": "イグニッション・コイル"
+       },
+       {
+        "id": "フィラー・キャップ"
+       },
+       {
+        "id": "チェーン・ガイド"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "イグニッション・コイル (いぐにっしょんこいる) = koil pengapian. Fungsi: Menaikkan tegangan aki menjadi tegangan sangat tinggi untuk percikan busi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cakram yang berputar bersama roda dan dijepit kampas untuk mengerem.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ドラム"
+       },
+       {
+        "id": "イグニッションコイル"
+       },
+       {
+        "id": "ブレーキ・ディスク"
+       },
+       {
+        "id": "ホイール・ナット"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ブレーキ・ディスク (ぶれーきでぃすく) = cakram rem. Fungsi: Cakram yang berputar bersama roda dan dijepit kampas untuk mengerem."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tuas untuk menyalakan lampu sein kanan/kiri saat berbelok atau pindah jalur.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "グローブ・ボックス"
+       },
+       {
+        "id": "ウィンカー・レバー"
+       },
+       {
+        "id": "シフト・レバー"
+       },
+       {
+        "id": "オイルプレッシャー・ウォーニング・ランプ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ウィンカー・レバー (うぃんかーればー) = tuas lampu sein. Fungsi: Tuas untuk menyalakan lampu sein kanan/kiri saat berbelok atau pindah jalur."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mendinginkan air pendingin mesin dengan melepaskan panas ke udara.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラジエーター"
+       },
+       {
+        "id": "オイル・プレッシャ・スイッチ"
+       },
+       {
+        "id": "パーキング・ブレーキ"
+       },
+       {
+        "id": "オイル・フィルタ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ラジエーター (らじえーたー) = radiator. Fungsi: Mendinginkan air pendingin mesin dengan melepaskan panas ke udara."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Singkatan 'air cleaner': menyaring debu dari udara sebelum masuk mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エアフローメーター"
+       },
+       {
+        "id": "エアクリ"
+       },
+       {
+        "id": "ショック・アブソーバ"
+       },
+       {
+        "id": "エア・クリーナ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "エアクリ (えあくり) = saringan udara (singkatan). Fungsi: Singkatan 'air cleaner': menyaring debu dari udara sebelum masuk mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Dudukan karet yang menahan mesin pada bodi dan meredam getaran.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "レベル・ゲージ"
+       },
+       {
+        "id": "スパーク・プラグ"
+       },
+       {
+        "id": "エンジン・マウント"
+       },
+       {
+        "id": "グローブ・ボックス"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "エンジン・マウント (えんじんまうんと) = dudukan mesin. Fungsi: Dudukan karet yang menahan mesin pada bodi dan meredam getaran."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Melepaskan panas air pendingin ke udara luar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラジエータ"
+       },
+       {
+        "id": "車幅灯"
+       },
+       {
+        "id": "パワー・ステアリング・ベルト"
+       },
+       {
+        "id": "オイルフィルター"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ラジエータ (らじえーた) = radiator. Fungsi: Melepaskan panas air pendingin ke udara luar."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-10",
+    "title": {
+     "id": "Fungsi komponen (10)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 10"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sensor yang mendeteksi posisi poros bubungan sebagai acuan waktu injeksi dan pengapian.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "イグニッション・スイッチ"
+       },
+       {
+        "id": "カム角センサ"
+       },
+       {
+        "id": "マスター・バック"
+       },
+       {
+        "id": "スターターモーター"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "カム角センサ (かむかくせんさ) = sensor sudut cam. Fungsi: Sensor yang mendeteksi posisi poros bubungan sebagai acuan waktu injeksi dan pengapian."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Knalpot utama yang meredam suara gas buang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・インテーク・ホース"
+       },
+       {
+        "id": "車幅灯"
+       },
+       {
+        "id": "メイン・マフラ"
+       },
+       {
+        "id": "エアクリ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "メイン・マフラ (めいんまふら) = knalpot utama. Fungsi: Knalpot utama yang meredam suara gas buang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Poros panjang yang menyalurkan tenaga dari transmisi ke diferensial belakang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "アッパー・アーム"
+       },
+       {
+        "id": "プロペラシャフト"
+       },
+       {
+        "id": "スタビライザ"
+       },
+       {
+        "id": "ロアー・サスペンション・アーム"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "プロペラシャフト (ぷろぺらしゃふと) = poros propeller. Fungsi: Poros panjang yang menyalurkan tenaga dari transmisi ke diferensial belakang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rongga di blok dan kepala silinder tempat air pendingin mengalir untuk menyerap panas mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ウォータ・ポンプ"
+       },
+       {
+        "id": "バイパス通路"
+       },
+       {
+        "id": "ラジエータ"
+       },
+       {
+        "id": "ウォータ・ジャケット"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ウォータ・ジャケット (うぉーたじゃけっと) = saluran air pendingin (water jacket). Fungsi: Rongga di blok dan kepala silinder tempat air pendingin mengalir untuk menyerap panas mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cairan elektrolit di dalam aki; levelnya harus di antara batas atas dan bawah.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ファン・ベルト"
+       },
+       {
+        "id": "バッテリ液"
+       },
+       {
+        "id": "インテーク・マニホールド"
+       },
+       {
+        "id": "冷却ファン"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バッテリ液 (ばってりえき) = cairan aki. Fungsi: Cairan elektrolit di dalam aki; levelnya harus di antara batas atas dan bawah."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengukur jumlah udara yang masuk mesin agar takaran bahan bakar dapat diatur.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "サブ・マフラ"
+       },
+       {
+        "id": "サージ・タンク"
+       },
+       {
+        "id": "エンジン・オイル"
+       },
+       {
+        "id": "エアフローメーター"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "エアフローメーター (えあふろーめーたー) = pengukur aliran udara. Fungsi: Mengukur jumlah udara yang masuk mesin agar takaran bahan bakar dapat diatur."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rem hidrolik yang menekan sepatu rem ke sisi dalam tromol.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ホイール・シリンダー"
+       },
+       {
+        "id": "エキゾースト・パイプ"
+       },
+       {
+        "id": "ブレーキ・ピストン"
+       },
+       {
+        "id": "ドラム式油圧ブレーキ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ドラム式油圧ブレーキ (どらむしきゆあつぶれーき) = rem hidrolik tromol. Fungsi: Rem hidrolik yang menekan sepatu rem ke sisi dalam tromol."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Laci penyimpanan di depan kursi penumpang depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "グローブ・ボックス"
+       },
+       {
+        "id": "ブレーキ・ペダル"
+       },
+       {
+        "id": "ダッシュボード"
+       },
+       {
+        "id": "シートベルト"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "グローブ・ボックス (ぐろーぶぼっくす) = laci dasbor. Fungsi: Laci penyimpanan di depan kursi penumpang depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rumah yang menampung piston dan kampas, menjepit cakram saat rem diinjak.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ドラム・ブレーキ"
+       },
+       {
+        "id": "ピストン・シール"
+       },
+       {
+        "id": "キャリパ"
+       },
+       {
+        "id": "ブレーキ・キャリパー"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ブレーキ・キャリパー (ぶれーききゃりぱー) = kaliper rem. Fungsi: Rumah yang menampung piston dan kampas, menjepit cakram saat rem diinjak."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Bagian tengah roda tempat roda dipasang dan berputar bersama bantalan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "クラッチディスク"
+       },
+       {
+        "id": "プロペラシャフト"
+       },
+       {
+        "id": "ハブ"
+       },
+       {
+        "id": "エアフローメーター"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ハブ (はぶ) = hub (naf roda). Fungsi: Bagian tengah roda tempat roda dipasang dan berputar bersama bantalan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-11",
+    "title": {
+     "id": "Fungsi komponen (11)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 11"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Batang yang menghubungkan piston dengan poros engkol dan mengubah gerak lurus menjadi putar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "タイミング・チェーン"
+       },
+       {
+        "id": "カムシャフト"
+       },
+       {
+        "id": "シリンダーヘッドガスケット"
+       },
+       {
+        "id": "コンロッド"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "コンロッド (こんろっど) = batang penghubung (connecting rod). Fungsi: Batang yang menghubungkan piston dengan poros engkol dan mengubah gerak lurus menjadi putar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Kampas yang menjepit cakram rem; menimbulkan gesekan untuk memperlambat mobil dan aus seiring pemakaian.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エアー・バルブ"
+       },
+       {
+        "id": "トルクコンバータ"
+       },
+       {
+        "id": "ホイール"
+       },
+       {
+        "id": "ブレーキ・パッド"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ブレーキ・パッド (ぶれーきぱっど) = kampas rem cakram. Fungsi: Kampas yang menjepit cakram rem; menimbulkan gesekan untuk memperlambat mobil dan aus seiring pemakaian."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pipa penyalur bahan bakar dari pompa ke injektor.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "チャコール・キャニスタ"
+       },
+       {
+        "id": "インジェクタ"
+       },
+       {
+        "id": "フューエルフィルター"
+       },
+       {
+        "id": "フューエル・パイプ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フューエル・パイプ (ふゅーえるぱいぷ) = pipa bahan bakar. Fungsi: Pipa penyalur bahan bakar dari pompa ke injektor."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyaring debu dari udara sebelum masuk ke mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・クリーナ"
+       },
+       {
+        "id": "サブ・マフラ"
+       },
+       {
+        "id": "ディスクブレーキ"
+       },
+       {
+        "id": "カムシャフト"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "エア・クリーナ (えあくりーな) = saringan udara. Fungsi: Menyaring debu dari udara sebelum masuk ke mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Panel depan kabin yang menampung meteran, saklar, dan AC.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "サン・バイザー"
+       },
+       {
+        "id": "シフト・レバー"
+       },
+       {
+        "id": "ダッシュボード"
+       },
+       {
+        "id": "アクセル・ペダル"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ダッシュボード (だっしゅぼーど) = dasbor. Fungsi: Panel depan kabin yang menampung meteran, saklar, dan AC."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pentil untuk mengisi dan menahan udara dalam ban.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エアー・バルブ"
+       },
+       {
+        "id": "バイパス通路"
+       },
+       {
+        "id": "ブレーキ・パッド"
+       },
+       {
+        "id": "タイヤ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "エアー・バルブ (えあーばるぶ) = pentil ban. Fungsi: Pentil untuk mengisi dan menahan udara dalam ban."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Busi yang memercikkan api listrik untuk membakar campuran udara-bahan bakar pada mesin bensin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スロットルボディ"
+       },
+       {
+        "id": "バイパス通路"
+       },
+       {
+        "id": "スパークプラグ"
+       },
+       {
+        "id": "エア・クリーナ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "スパークプラグ (すぱーくぷらぐ) = busi. Fungsi: Busi yang memercikkan api listrik untuk membakar campuran udara-bahan bakar pada mesin bensin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Wadah arang aktif yang menyerap uap bensin agar tidak lepas ke udara.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "チャコール・キャニスタ"
+       },
+       {
+        "id": "インジェクタ"
+       },
+       {
+        "id": "フューエルフィルター"
+       },
+       {
+        "id": "リザーバータンク"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "チャコール・キャニスタ (ちゃこーるきゃにすた) = kanister arang. Fungsi: Wadah arang aktif yang menyerap uap bensin agar tidak lepas ke udara."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sistem lampu kendaraan untuk penerangan, isyarat, dan keselamatan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "灯火装置"
+       },
+       {
+        "id": "オイルパン"
+       },
+       {
+        "id": "ロアー・サスペンション・アーム"
+       },
+       {
+        "id": "サスペンション"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "灯火装置 (とうかそうち) = sistem lampu. Fungsi: Sistem lampu kendaraan untuk penerangan, isyarat, dan keselamatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pelat dasar rem tromol tempat sepatu rem, silinder roda, dan pegas dipasang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・キャリパー"
+       },
+       {
+        "id": "バック・プレート"
+       },
+       {
+        "id": "ステアリング・ホイール"
+       },
+       {
+        "id": "バッテリー・ウォーニング・ランプ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バック・プレート (ばっくぷれーと) = pelat belakang. Fungsi: Pelat dasar rem tromol tempat sepatu rem, silinder roda, dan pegas dipasang."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-12",
+    "title": {
+     "id": "Fungsi komponen (12)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 12"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Kotak berisi filter udara yang menyaring udara masuk mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・クリーナー・ボックス"
+       },
+       {
+        "id": "ファン・ベルト"
+       },
+       {
+        "id": "ウィンド・ウォッシャ液"
+       },
+       {
+        "id": "カム角センサ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "エア・クリーナー・ボックス (えあくりーなーぼっくす) = kotak saringan udara. Fungsi: Kotak berisi filter udara yang menyaring udara masuk mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menjaga kerapatan ruang bakar dan mengikis oli di dinding silinder.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ステアリング・ギヤ機構"
+       },
+       {
+        "id": "エキゾースト・バルブ"
+       },
+       {
+        "id": "クランクシャフト"
+       },
+       {
+        "id": "ピストンリング"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ピストンリング (ぴすとんりんぐ) = ring piston. Fungsi: Menjaga kerapatan ruang bakar dan mengikis oli di dinding silinder."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Komputer pengendali mesin yang mengatur injeksi bahan bakar dan pengapian.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ドレーンボルト"
+       },
+       {
+        "id": "燃焼室"
+       },
+       {
+        "id": "ラジエーター・キャップ"
+       },
+       {
+        "id": "エンジンECU"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "エンジンECU (えんじんいーしーゆー) = unit kontrol mesin (ECU). Fungsi: Komputer pengendali mesin yang mengatur injeksi bahan bakar dan pengapian."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sabuk penggerak pompa power steering agar setir ringan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "パワー・ステアリング・ベルト"
+       },
+       {
+        "id": "ウィンド・ウォッシャ液"
+       },
+       {
+        "id": "エンジン・マウント"
+       },
+       {
+        "id": "インテーク・マニホールド"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "パワー・ステアリング・ベルト (ぱわーすてありんぐべると) = sabuk power steering. Fungsi: Sabuk penggerak pompa power steering agar setir ringan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Unit kontrol elektronik yang mengolah sinyal sensor dan mengatur injeksi bahan bakar serta pengapian.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "エアフローメーター"
+       },
+       {
+        "id": "エア・インテーク・ホース"
+       },
+       {
+        "id": "ECU"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ECU (いーしーゆー) = unit kontrol elektronik. Fungsi: Unit kontrol elektronik yang mengolah sinyal sensor dan mengatur injeksi bahan bakar serta pengapian."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Memutus dan menyambung tenaga mesin ke transmisi, terutama saat kendaraan mulai bergerak atau pindah gigi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スプリング"
+       },
+       {
+        "id": "スタビライザ"
+       },
+       {
+        "id": "ハブ"
+       },
+       {
+        "id": "クラッチ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "クラッチ (くらっち) = kopling. Fungsi: Memutus dan menyambung tenaga mesin ke transmisi, terutama saat kendaraan mulai bergerak atau pindah gigi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tangki penampung udara hisap yang meredam denyutan dan membagi udara ke tiap silinder.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイル・フィルター"
+       },
+       {
+        "id": "メイン・マフラ"
+       },
+       {
+        "id": "スパークプラグ"
+       },
+       {
+        "id": "サージ・タンク"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "サージ・タンク (さーじたんく) = tangki surja. Fungsi: Tangki penampung udara hisap yang meredam denyutan dan membagi udara ke tiap silinder."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Kampas yang menjepit cakram rem; menimbulkan gesekan untuk memperlambat mobil dan aus seiring pemakaian.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキパッド"
+       },
+       {
+        "id": "ラジエーター"
+       },
+       {
+        "id": "ホーン"
+       },
+       {
+        "id": "ステアリング・ギヤ機構"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ブレーキパッド (ぶれーきぱっど) = kampas rem cakram. Fungsi: Kampas yang menjepit cakram rem; menimbulkan gesekan untuk memperlambat mobil dan aus seiring pemakaian."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Baut penutup lubang pembuangan oli/cairan; dibuka saat ganti oli.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ドレーンボルト"
+       },
+       {
+        "id": "タイロッド"
+       },
+       {
+        "id": "ディファレンシャル"
+       },
+       {
+        "id": "シリンダーブロック"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ドレーンボルト (どれーんぼると) = baut pembuang oli. Fungsi: Baut penutup lubang pembuangan oli/cairan; dibuka saat ganti oli."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyaring kotoran dari bahan bakar sebelum masuk mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "インジェクター"
+       },
+       {
+        "id": "EGR装置"
+       },
+       {
+        "id": "フューエル・ブリーザ・パイプ"
+       },
+       {
+        "id": "フューエルフィルター"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フューエルフィルター (ふゅーえるふぃるたー) = filter bahan bakar. Fungsi: Menyaring kotoran dari bahan bakar sebelum masuk mesin."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-13",
+    "title": {
+     "id": "Fungsi komponen (13)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 13"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Bagian setir dan kolom yang menerima gerakan pengemudi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ディスク式油圧ブレーキ"
+       },
+       {
+        "id": "ステアリング操作機構"
+       },
+       {
+        "id": "ブレーキ・キャリパー"
+       },
+       {
+        "id": "ステアリング・リンク機構"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ステアリング操作機構 (すてありんぐそうさきこう) = mekanisme operasi kemudi. Fungsi: Bagian setir dan kolom yang menerima gerakan pengemudi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Poros bergerigi cam yang membuka dan menutup katup hisap dan buang pada waktu yang tepat.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダ"
+       },
+       {
+        "id": "カムシャフト"
+       },
+       {
+        "id": "タイミング・チェーン"
+       },
+       {
+        "id": "ピストン"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "カムシャフト (かむしゃふと) = poros bubungan (camshaft). Fungsi: Poros bergerigi cam yang membuka dan menutup katup hisap dan buang pada waktu yang tepat."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Panel yang menampilkan kecepatan, putaran mesin, bahan bakar, dan lampu peringatan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "バック・ミラー"
+       },
+       {
+        "id": "メーター"
+       },
+       {
+        "id": "ルームランプ"
+       },
+       {
+        "id": "ハザード・スイッチ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "メーター (めーたー) = panel instrumen (meteran). Fungsi: Panel yang menampilkan kecepatan, putaran mesin, bahan bakar, dan lampu peringatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengubah injakan pedal rem menjadi tekanan minyak rem.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ロアー・サスペンション・アーム"
+       },
+       {
+        "id": "バッテリ液"
+       },
+       {
+        "id": "ブレーキ・マスタ・シリンダ"
+       },
+       {
+        "id": "オルタネータ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ブレーキ・マスタ・シリンダ (ぶれーきますたしりんだ) = master silinder rem. Fungsi: Mengubah injakan pedal rem menjadi tekanan minyak rem."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rangka berbentuk tangga yang kuat; dipakai pada truk dan SUV.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "モノコックボディ"
+       },
+       {
+        "id": "ラダーフレーム"
+       },
+       {
+        "id": "バンパー"
+       },
+       {
+        "id": "ワイパーブレード"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ラダーフレーム (らだーふれーむ) = rangka tangga. Fungsi: Rangka berbentuk tangga yang kuat; dipakai pada truk dan SUV."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Campuran udara dan bahan bakar yang dibakar di ruang bakar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "燃焼室"
+       },
+       {
+        "id": "タイミング・ベルト"
+       },
+       {
+        "id": "混合気"
+       },
+       {
+        "id": "テンショナ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "混合気 (こんごうき) = campuran udara-bahan bakar. Fungsi: Campuran udara dan bahan bakar yang dibakar di ruang bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sandaran kepala untuk mengurangi cedera leher saat ditabrak dari belakang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エンジン・チェック・ランプ"
+       },
+       {
+        "id": "ウォッシャー・スイッチ"
+       },
+       {
+        "id": "ヘッド・レスト"
+       },
+       {
+        "id": "アクセル・ペダル"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ヘッド・レスト (へっどれすと) = sandaran kepala. Fungsi: Sandaran kepala untuk mengurangi cedera leher saat ditabrak dari belakang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Nosel yang menyemprotkan oli ke bagian bawah piston untuk mendinginkan dan melumasi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ウォータ・ジャケット"
+       },
+       {
+        "id": "ウォータ・ポンプ"
+       },
+       {
+        "id": "オイル・ジェット"
+       },
+       {
+        "id": "ラジエータ・ロアー・ホース"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "オイル・ジェット (おいるじぇっと) = nosel semprot oli. Fungsi: Nosel yang menyemprotkan oli ke bagian bawah piston untuk mendinginkan dan melumasi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Busi yang memercikkan api listrik untuk membakar campuran udara-bahan bakar pada mesin bensin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラジエーター・キャップ"
+       },
+       {
+        "id": "O2センサー"
+       },
+       {
+        "id": "スパーク・プラグ"
+       },
+       {
+        "id": "サージ・タンク"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "スパーク・プラグ (すぱーくぷらぐ) = busi. Fungsi: Busi yang memercikkan api listrik untuk membakar campuran udara-bahan bakar pada mesin bensin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pipa ventilasi tangki yang menyalurkan uap bahan bakar ke kanister arang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "インジェクター"
+       },
+       {
+        "id": "シリンダーヘッド"
+       },
+       {
+        "id": "ナックル"
+       },
+       {
+        "id": "フューエル・ブリーザ・パイプ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フューエル・ブリーザ・パイプ (ふゅーえるぶりーざぱいぷ) = pipa pernapasan tangki. Fungsi: Pipa ventilasi tangki yang menyalurkan uap bahan bakar ke kanister arang."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-14",
+    "title": {
+     "id": "Fungsi komponen (14)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 14"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Motor listrik yang memutar kipas untuk mengalirkan udara melalui radiator.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイルフィルター"
+       },
+       {
+        "id": "リザーバータンク"
+       },
+       {
+        "id": "サーモスタット"
+       },
+       {
+        "id": "ファン・モータ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ファン・モータ (ふぁんもーた) = motor kipas. Fungsi: Motor listrik yang memutar kipas untuk mengalirkan udara melalui radiator."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cakram yang berputar bersama roda dan dijepit kampas saat pengereman.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ディスクブレーキ"
+       },
+       {
+        "id": "ドラム式油圧ブレーキ"
+       },
+       {
+        "id": "ステアリング・ホイール"
+       },
+       {
+        "id": "ディスク"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ディスク (でぃすく) = cakram. Fungsi: Cakram yang berputar bersama roda dan dijepit kampas saat pengereman."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengubah gas buang berbahaya (CO, HC, NOx) menjadi gas yang lebih aman.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ショック・アブソーバー"
+       },
+       {
+        "id": "タイロッド"
+       },
+       {
+        "id": "触媒"
+       },
+       {
+        "id": "トランスミッション"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "触媒 (しょくばい) = katalis (converter gas buang). Fungsi: Mengubah gas buang berbahaya (CO, HC, NOx) menjadi gas yang lebih aman."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pedal yang diinjak untuk memutus tenaga mesin ke transmisi saat memindah gigi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "クラッチペダル"
+       },
+       {
+        "id": "スプリング"
+       },
+       {
+        "id": "マニュアルトランスミッション"
+       },
+       {
+        "id": "ボデー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "クラッチペダル (くらっちぺだる) = pedal kopling. Fungsi: Pedal yang diinjak untuk memutus tenaga mesin ke transmisi saat memindah gigi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Torak yang bergerak naik-turun di silinder; menerima tekanan pembakaran dan menggerakkan poros engkol.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エキゾースト・バルブ"
+       },
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "ピストン"
+       },
+       {
+        "id": "プラグ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ピストン (ぴすとん) = torak (piston). Fungsi: Torak yang bergerak naik-turun di silinder; menerima tekanan pembakaran dan menggerakkan poros engkol."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Setir yang diputar pengemudi untuk mengarahkan roda depan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エアバッグ"
+       },
+       {
+        "id": "フューエル・タンク"
+       },
+       {
+        "id": "ステアリング・ホイール"
+       },
+       {
+        "id": "EGR装置"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ステアリング・ホイール (すてありんぐほいーる) = roda kemudi (setir). Fungsi: Setir yang diputar pengemudi untuk mengarahkan roda depan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Didorong tekanan minyak rem untuk menekan kampas ke cakram.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スライド・ピン"
+       },
+       {
+        "id": "ブレーキ・ピストン"
+       },
+       {
+        "id": "ディスク"
+       },
+       {
+        "id": "ブレーキ・キャリパー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ブレーキ・ピストン (ぶれーきぴすとん) = piston rem. Fungsi: Didorong tekanan minyak rem untuk menekan kampas ke cakram."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyemprotkan bahan bakar dalam bentuk kabut ke saluran hisap atau silinder sesuai perintah ECU.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・パイプ"
+       },
+       {
+        "id": "チャコール・キャニスタ"
+       },
+       {
+        "id": "オイル・ジェット"
+       },
+       {
+        "id": "インジェクタ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "インジェクタ (いんじぇくた) = injektor. Fungsi: Menyemprotkan bahan bakar dalam bentuk kabut ke saluran hisap atau silinder sesuai perintah ECU."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lampu peringatan bahwa sistem pengendali mesin mendeteksi masalah.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "SRSエアバッグ・ウォーニング・ランプ"
+       },
+       {
+        "id": "エンジン・チェック・ランプ"
+       },
+       {
+        "id": "ABS・ウォーニング・ランプ"
+       },
+       {
+        "id": "アクセル・ペダル"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "エンジン・チェック・ランプ (えんじんちぇっくらんぷ) = lampu peringatan mesin. Fungsi: Lampu peringatan bahwa sistem pengendali mesin mendeteksi masalah."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sepatu berlapis kampas pada rem tromol yang menekan tromol dari dalam untuk menimbulkan gesekan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラジエーター"
+       },
+       {
+        "id": "ブレーキ・ディスク"
+       },
+       {
+        "id": "ブレーキ・パッド"
+       },
+       {
+        "id": "ブレーキ・シュー"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ブレーキ・シュー (ぶれーきしゅー) = sepatu rem (kampas rem tromol). Fungsi: Sepatu berlapis kampas pada rem tromol yang menekan tromol dari dalam untuk menimbulkan gesekan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-15",
+    "title": {
+     "id": "Fungsi komponen (15)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 15"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Motor listrik yang memutar poros engkol untuk menghidupkan mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スタータ"
+       },
+       {
+        "id": "ドアミラー"
+       },
+       {
+        "id": "ブレーキパッド"
+       },
+       {
+        "id": "フライホイール"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "スタータ (すたーた) = motor starter. Fungsi: Motor listrik yang memutar poros engkol untuk menghidupkan mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Poros yang menyalurkan tenaga dari diferensial/transmisi ke roda penggerak.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "トランスミッション"
+       },
+       {
+        "id": "O2センサー"
+       },
+       {
+        "id": "コンロッド"
+       },
+       {
+        "id": "ドライブ・シャフト"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ドライブ・シャフト (どらいぶしゃふと) = poros penggerak (drive shaft). Fungsi: Poros yang menyalurkan tenaga dari diferensial/transmisi ke roda penggerak."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pegas berbentuk spiral pada suspensi yang menyerap guncangan jalan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ホース"
+       },
+       {
+        "id": "ディファレンシャル"
+       },
+       {
+        "id": "触媒"
+       },
+       {
+        "id": "コイル・スプリング"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "コイル・スプリング (こいるすぷりんぐ) = pegas keong. Fungsi: Pegas berbentuk spiral pada suspensi yang menyerap guncangan jalan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penutup bagian atas silinder; tempat katup dan ruang bakar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダーヘッド"
+       },
+       {
+        "id": "タイミング・ベルト"
+       },
+       {
+        "id": "イグニッション・コイル"
+       },
+       {
+        "id": "混合気"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "シリンダーヘッド (しりんだーへっど) = kepala silinder. Fungsi: Penutup bagian atas silinder; tempat katup dan ruang bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penerus tenaga berbasis fluida pada transmisi otomatis, menggantikan kopling.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ディファレンシャルギア"
+       },
+       {
+        "id": "ショック・アブソーバ"
+       },
+       {
+        "id": "ブレーキ・ピストン"
+       },
+       {
+        "id": "トルクコンバータ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "トルクコンバータ (とるくこんばーた) = konverter torsi. Fungsi: Penerus tenaga berbasis fluida pada transmisi otomatis, menggantikan kopling."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Membedakan putaran roda kiri dan kanan saat mobil berbelok.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "クラッチペダル"
+       },
+       {
+        "id": "プロペラシャフト"
+       },
+       {
+        "id": "ディファレンシャルギア"
+       },
+       {
+        "id": "プロペラ・シャフト"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ディファレンシャルギア (でぃふぁれんしゃるぎあ) = gigi diferensial. Fungsi: Membedakan putaran roda kiri dan kanan saat mobil berbelok."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tangki penyimpan bahan bakar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "フューエル・タンク"
+       },
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "インテーク・マニホールド"
+       },
+       {
+        "id": "サーモスタット"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "フューエル・タンク (ふゅーえるたんく) = tangki bahan bakar. Fungsi: Tangki penyimpan bahan bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menampung kelebihan air pendingin dan menjadi tempat mengecek serta menambah cairan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エアバッグ"
+       },
+       {
+        "id": "エア・クリーナ"
+       },
+       {
+        "id": "オイル・ジェット"
+       },
+       {
+        "id": "リザーバータンク"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "リザーバータンク (りざーばーたんく) = tangki cadangan. Fungsi: Menampung kelebihan air pendingin dan menjadi tempat mengecek serta menambah cairan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Motor yang memutar mesin untuk menghidupkannya.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "バンパー"
+       },
+       {
+        "id": "バッテリー"
+       },
+       {
+        "id": "スターターモーター"
+       },
+       {
+        "id": "モノコックボディ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "スターターモーター (すたーたーもーたー) = motor starter. Fungsi: Motor yang memutar mesin untuk menghidupkannya."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sistem yang memperlambat atau menghentikan kendaraan dan menahannya saat parkir.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ディスク"
+       },
+       {
+        "id": "ピストン・シール"
+       },
+       {
+        "id": "ブレーキ装置"
+       },
+       {
+        "id": "マスター・シリンダ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ブレーキ装置 (ぶれーきそうち) = sistem rem. Fungsi: Sistem yang memperlambat atau menghentikan kendaraan dan menahannya saat parkir."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-16",
+    "title": {
+     "id": "Fungsi komponen (16)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 16"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tutup radiator yang menjaga tekanan sistem pendingin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ディスク"
+       },
+       {
+        "id": "オルタネータ"
+       },
+       {
+        "id": "ラジエーター・キャップ"
+       },
+       {
+        "id": "ステアリング・ホイール"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ラジエーター・キャップ (らじえーたーきゃっぷ) = tutup radiator. Fungsi: Tutup radiator yang menjaga tekanan sistem pendingin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengumpulkan gas buang dari tiap silinder ke satu pipa buang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スロットルボディ"
+       },
+       {
+        "id": "メーター"
+       },
+       {
+        "id": "エキゾースト・マニホールド"
+       },
+       {
+        "id": "エアクリ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "エキゾースト・マニホールド (えきぞーすとまにほーるど) = manifold buang. Fungsi: Mengumpulkan gas buang dari tiap silinder ke satu pipa buang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Bodi kendaraan: kabin dan rangka luar tempat penumpang dan komponen lain.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スタビライザ"
+       },
+       {
+        "id": "ディスク式油圧ブレーキ"
+       },
+       {
+        "id": "ロアー・アーム"
+       },
+       {
+        "id": "ボデー"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ボデー (ぼでー) = bodi. Fungsi: Bodi kendaraan: kabin dan rangka luar tempat penumpang dan komponen lain."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penghalang silau matahari yang bisa diturunkan dari atap.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラダーフレーム"
+       },
+       {
+        "id": "サン・バイザー"
+       },
+       {
+        "id": "ブレーキ・リザーバ・タンク"
+       },
+       {
+        "id": "ライティング・スイッチ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サン・バイザー (さんばいざー) = pelindung silau. Fungsi: Penghalang silau matahari yang bisa diturunkan dari atap."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Bodi dan rangka menyatu; ringan dan kuat; dipakai pada mobil penumpang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ドレーンボルト"
+       },
+       {
+        "id": "モノコックボディ"
+       },
+       {
+        "id": "オルタネーター"
+       },
+       {
+        "id": "スタータ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "モノコックボディ (ものこっくぼでぃ) = bodi monokok. Fungsi: Bodi dan rangka menyatu; ringan dan kuat; dipakai pada mobil penumpang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Silinder pada rem tromol yang mendorong sepatu rem ke tromol saat mendapat tekanan minyak.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・キャリパー"
+       },
+       {
+        "id": "パッド"
+       },
+       {
+        "id": "ホイール・シリンダ"
+       },
+       {
+        "id": "ステアリング操作機構"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ホイール・シリンダ (ほいーるしりんだ) = silinder roda. Fungsi: Silinder pada rem tromol yang mendorong sepatu rem ke tromol saat mendapat tekanan minyak."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tangki penyimpan bahan bakar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "インジェクタ"
+       },
+       {
+        "id": "フューエルタンク"
+       },
+       {
+        "id": "フューエル・パイプ"
+       },
+       {
+        "id": "触媒コンバータ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "フューエルタンク (ふゅーえるたんく) = tangki bahan bakar. Fungsi: Tangki penyimpan bahan bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Batang celup untuk memeriksa jumlah dan kondisi oli.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ファン・ベルト"
+       },
+       {
+        "id": "パワー・ステアリング・ベルト"
+       },
+       {
+        "id": "ピストン・シール"
+       },
+       {
+        "id": "レベル・ゲージ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "レベル・ゲージ (れべるげーじ) = batang celup oli (dipstick). Fungsi: Batang celup untuk memeriksa jumlah dan kondisi oli."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Selang yang mengalirkan air pendingin yang sudah dingin dari radiator kembali ke mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラジエータ・ロアー・ホース"
+       },
+       {
+        "id": "ラジエータ・アッパ・ホース"
+       },
+       {
+        "id": "オイルフィルター"
+       },
+       {
+        "id": "ウォーターポンプ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ラジエータ・ロアー・ホース (らじえーたろあーほーす) = selang bawah radiator. Fungsi: Selang yang mengalirkan air pendingin yang sudah dingin dari radiator kembali ke mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Badan utama mesin yang memuat silinder dan saluran air serta oli.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダ・ブロック"
+       },
+       {
+        "id": "シリンダーブロック"
+       },
+       {
+        "id": "シリンダ・ヘッド"
+       },
+       {
+        "id": "シリンダ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "シリンダ・ブロック (しりんだぶろっく) = blok silinder. Fungsi: Badan utama mesin yang memuat silinder dan saluran air serta oli."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-17",
+    "title": {
+     "id": "Fungsi komponen (17)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 17"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyala bila tekanan oli mesin rendah; mesin bisa rusak bila terus dijalankan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "前照灯"
+       },
+       {
+        "id": "オイルプレッシャー・ウォーニング・ランプ"
+       },
+       {
+        "id": "バッテリー・ウォーニング・ランプ"
+       },
+       {
+        "id": "ダッシュボード"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "オイルプレッシャー・ウォーニング・ランプ (おいるぷれっしゃーうぉーにんぐらんぷ) = lampu peringatan tekanan oli. Fungsi: Menyala bila tekanan oli mesin rendah; mesin bisa rusak bila terus dijalankan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penutup bagian atas kepala silinder yang menahan oli di dalam.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ヘッド・カバー"
+       },
+       {
+        "id": "ファン・ベルト"
+       },
+       {
+        "id": "ウォッシャー・スイッチ"
+       },
+       {
+        "id": "バッテリ液"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ヘッド・カバー (へっどかばー) = tutup kepala silinder. Fungsi: Penutup bagian atas kepala silinder yang menahan oli di dalam."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Karet pembersih kaca dari air hujan dan kotoran.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラダーフレーム"
+       },
+       {
+        "id": "サンバイザー"
+       },
+       {
+        "id": "ワイパーブレード"
+       },
+       {
+        "id": "オルタネーター"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ワイパーブレード (わいぱーぶれーど) = bilah wiper. Fungsi: Karet pembersih kaca dari air hujan dan kotoran."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Meredam getaran pegas suspensi agar mobil nyaman dan roda tetap menapak.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エアクリ"
+       },
+       {
+        "id": "ハブ"
+       },
+       {
+        "id": "ショック・アブソーバー"
+       },
+       {
+        "id": "ブレーキ・ウォーニング・ランプ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ショック・アブソーバー (しょっくあぶそーばー) = peredam kejut. Fungsi: Meredam getaran pegas suspensi agar mobil nyaman dan roda tetap menapak."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tabung tempat piston bergerak dan terjadi pembakaran.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シリンダー"
+       },
+       {
+        "id": "シリンダーヘッド"
+       },
+       {
+        "id": "シリンダ"
+       },
+       {
+        "id": "シリンダーヘッドガスケット"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "シリンダ (しりんだ) = silinder. Fungsi: Tabung tempat piston bergerak dan terjadi pembakaran."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lampu kabut agar terlihat dan melihat saat berkabut atau hujan lebat.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ボンネット"
+       },
+       {
+        "id": "イグニッション・スイッチ"
+       },
+       {
+        "id": "シリンダ"
+       },
+       {
+        "id": "フォグ・ランプ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "フォグ・ランプ (ふぉぐらんぷ) = lampu kabut. Fungsi: Lampu kabut agar terlihat dan melihat saat berkabut atau hujan lebat."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyimpan listrik untuk menghidupkan mesin dan menyuplai perangkat listrik.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ワイヤーハーネス"
+       },
+       {
+        "id": "クランク角センサ"
+       },
+       {
+        "id": "バッテリー"
+       },
+       {
+        "id": "モノコックボディ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "バッテリー (ばってりー) = aki. Fungsi: Menyimpan listrik untuk menghidupkan mesin dan menyuplai perangkat listrik."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cairan pendingin mesin; mencegah mendidih dan membeku serta melindungi dari karat.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイル・ギャラリ"
+       },
+       {
+        "id": "クーラント"
+       },
+       {
+        "id": "ファン・ベルト"
+       },
+       {
+        "id": "スパーク・プラグ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "クーラント (くーらんと) = cairan pendingin. Fungsi: Cairan pendingin mesin; mencegah mendidih dan membeku serta melindungi dari karat."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pegas yang menyerap benturan jalan pada suspensi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "カムシャフト"
+       },
+       {
+        "id": "ハブ"
+       },
+       {
+        "id": "リヤ・アクスル"
+       },
+       {
+        "id": "スプリング"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "スプリング (すぷりんぐ) = pegas. Fungsi: Pegas yang menyerap benturan jalan pada suspensi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rangka bantu yang menopang mesin atau suspensi pada bodi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "トランスミッション"
+       },
+       {
+        "id": "サブ・フレーム"
+       },
+       {
+        "id": "オイルパン"
+       },
+       {
+        "id": "O2センサー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サブ・フレーム (さぶふれーむ) = rangka bantu (subframe). Fungsi: Rangka bantu yang menopang mesin atau suspensi pada bodi."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-18",
+    "title": {
+     "id": "Fungsi komponen (18)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 18"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cairan penerus tekanan injakan pedal ke rem tiap roda; harus diganti berkala.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・フルード"
+       },
+       {
+        "id": "エンジン・マウント"
+       },
+       {
+        "id": "フィラー・キャップ"
+       },
+       {
+        "id": "スパーク・プラグ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ブレーキ・フルード (ぶれーきふるーど) = minyak rem. Fungsi: Cairan penerus tekanan injakan pedal ke rem tiap roda; harus diganti berkala."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Cermin samping untuk melihat samping dan belakang mobil.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スタータ"
+       },
+       {
+        "id": "バッテリー"
+       },
+       {
+        "id": "ドアミラー"
+       },
+       {
+        "id": "ワイヤーハーネス"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ドアミラー (どあみらー) = spion pintu. Fungsi: Cermin samping untuk melihat samping dan belakang mobil."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pedal gas: mengatur jumlah udara/bahan bakar sehingga menentukan tenaga dan kecepatan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "タイロッド"
+       },
+       {
+        "id": "バック・ミラー"
+       },
+       {
+        "id": "アクセル・ペダル"
+       },
+       {
+        "id": "半ドア・ウォーニング・ランプ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "アクセル・ペダル (あくせるぺだる) = pedal gas. Fungsi: Pedal gas: mengatur jumlah udara/bahan bakar sehingga menentukan tenaga dan kecepatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pelek tempat ban dipasang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "クラッチディスク"
+       },
+       {
+        "id": "ブレーキ・シュー"
+       },
+       {
+        "id": "シリンダ・ブロック"
+       },
+       {
+        "id": "ホイール"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ホイール (ほいーる) = pelek. Fungsi: Pelek tempat ban dipasang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pin yang memungkinkan kaliper bergeser agar kampas menjepit cakram dari kedua sisi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スライド・ピン"
+       },
+       {
+        "id": "ブレーキ・ホイール・シリンダー"
+       },
+       {
+        "id": "ステアリング装置"
+       },
+       {
+        "id": "ブレーキパッド"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "スライド・ピン (すらいどぴん) = pin geser. Fungsi: Pin yang memungkinkan kaliper bergeser agar kampas menjepit cakram dari kedua sisi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rumah piston dan kampas pada rem cakram yang menjepit cakram.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ステアリング・リンク機構"
+       },
+       {
+        "id": "パッド"
+       },
+       {
+        "id": "キャリパ"
+       },
+       {
+        "id": "シリンダ・ヘッド"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "キャリパ (きゃりぱ) = kaliper. Fungsi: Rumah piston dan kampas pada rem cakram yang menjepit cakram."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengalirkan sebagian gas buang kembali ke ruang hisap untuk menurunkan suhu pembakaran dan emisi NOx.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "サブ・マフラ"
+       },
+       {
+        "id": "スロットルボディ"
+       },
+       {
+        "id": "ECU"
+       },
+       {
+        "id": "EGR装置"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "EGR装置 (EGRそうち) = perangkat EGR. Fungsi: Mengalirkan sebagian gas buang kembali ke ruang hisap untuk menurunkan suhu pembakaran dan emisi NOx."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penutup bagian atas silinder; tempat katup, busi, dan ruang bakar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "プラグ"
+       },
+       {
+        "id": "シリンダ・ヘッド"
+       },
+       {
+        "id": "シリンダ・ブロック"
+       },
+       {
+        "id": "混合気"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "シリンダ・ヘッド (しりんだへっど) = kepala silinder. Fungsi: Penutup bagian atas silinder; tempat katup, busi, dan ruang bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Roda dan ban yang menopang kendaraan, menyalurkan tenaga, dan memberi cengkeraman ke jalan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シートベルト"
+       },
+       {
+        "id": "ホイール及びタイヤ"
+       },
+       {
+        "id": "動力伝達装置"
+       },
+       {
+        "id": "スロットルボディ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ホイール及びタイヤ (ほいーるおよびたいや) = roda dan ban. Fungsi: Roda dan ban yang menopang kendaraan, menyalurkan tenaga, dan memberi cengkeraman ke jalan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rem hidrolik yang menjepit cakram dengan kampas untuk mengerem.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "パッド"
+       },
+       {
+        "id": "スライド・ピン"
+       },
+       {
+        "id": "ディスク式油圧ブレーキ"
+       },
+       {
+        "id": "ステアリング・リンク機構"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ディスク式油圧ブレーキ (でぃすくしきゆあつぶれーき) = rem hidrolik cakram. Fungsi: Rem hidrolik yang menjepit cakram dengan kampas untuk mengerem."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-19",
+    "title": {
+     "id": "Fungsi komponen (19)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 19"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saringan kasar di ujung pipa hisap pompa oli yang menyaring kotoran besar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイルフィルター"
+       },
+       {
+        "id": "ウォータ・ポンプ"
+       },
+       {
+        "id": "ウォータ・ジャケット"
+       },
+       {
+        "id": "オイル・ストレーナ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "オイル・ストレーナ (おいるすとれーな) = saringan oli (strainer). Fungsi: Saringan kasar di ujung pipa hisap pompa oli yang menyaring kotoran besar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyaring kotoran dan serpihan logam dari oli mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイル・プレッシャ・スイッチ"
+       },
+       {
+        "id": "サージ・タンク"
+       },
+       {
+        "id": "オイル・フィルタ"
+       },
+       {
+        "id": "ラジエータ・ロアー・ホース"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "オイル・フィルタ (おいるふぃるた) = filter oli. Fungsi: Menyaring kotoran dan serpihan logam dari oli mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mur pengikat roda ke hub; harus dikencangkan sesuai torsi.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・リザーバ・タンク"
+       },
+       {
+        "id": "ホイール・ナット"
+       },
+       {
+        "id": "タイヤ"
+       },
+       {
+        "id": "ドラム・ブレーキ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ホイール・ナット (ほいーるなっと) = mur roda. Fungsi: Mur pengikat roda ke hub; harus dikencangkan sesuai torsi."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sumber tenaga mobil: mengubah energi pembakaran bahan bakar menjadi gerak putar.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エア・クリーナー・ボックス"
+       },
+       {
+        "id": "インテーク・マニホールド"
+       },
+       {
+        "id": "エンジン"
+       },
+       {
+        "id": "ブレーキ・マスタ・シリンダ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "エンジン (えんじん) = mesin. Fungsi: Sumber tenaga mobil: mengubah energi pembakaran bahan bakar menjadi gerak putar."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penghalang silau matahari yang bisa diturunkan dari atap.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "アッパー・アーム"
+       },
+       {
+        "id": "クラッチディスク"
+       },
+       {
+        "id": "サンバイザー"
+       },
+       {
+        "id": "スプリング"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "サンバイザー (さんばいざー) = pelindung silau. Fungsi: Penghalang silau matahari yang bisa diturunkan dari atap."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Lampu penerangan kabin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ウォーニング・ランプ"
+       },
+       {
+        "id": "ハザード・スイッチ"
+       },
+       {
+        "id": "半ドア・ウォーニング・ランプ"
+       },
+       {
+        "id": "ルームランプ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "ルームランプ (るーむらんぷ) = lampu kabin. Fungsi: Lampu penerangan kabin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengalirkan air pendingin antara mesin dan radiator.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ファン・モータ"
+       },
+       {
+        "id": "ウォーターポンプ"
+       },
+       {
+        "id": "ラジエータ"
+       },
+       {
+        "id": "ドレーンボルト"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ウォーターポンプ (うぉーたーぽんぷ) = pompa air. Fungsi: Mengalirkan air pendingin antara mesin dan radiator."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penyerap benturan ringan di depan/belakang mobil.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "カム角センサ"
+       },
+       {
+        "id": "バンパー"
+       },
+       {
+        "id": "ヘッド・カバー"
+       },
+       {
+        "id": "動力伝達装置"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バンパー (ばんぱー) = bemper. Fungsi: Penyerap benturan ringan di depan/belakang mobil."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyala bila sistem ABS (anti roda terkunci) mengalami gangguan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エンジン"
+       },
+       {
+        "id": "ABS・ウォーニング・ランプ"
+       },
+       {
+        "id": "パーキング・ブレーキ"
+       },
+       {
+        "id": "バック・ミラー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ABS・ウォーニング・ランプ (えーびーえすうぉーにんぐらんぷ) = lampu peringatan ABS. Fungsi: Menyala bila sistem ABS (anti roda terkunci) mengalami gangguan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tromol berbentuk mangkuk yang berputar bersama roda; sepatu rem menekan sisi dalamnya untuk mengerem.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ドラム"
+       },
+       {
+        "id": "冷却ファン"
+       },
+       {
+        "id": "ブレーキ・ディスク"
+       },
+       {
+        "id": "ブレーキ・シュー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ブレーキ・ドラム (ぶれーきどらむ) = tromol rem. Fungsi: Tromol berbentuk mangkuk yang berputar bersama roda; sepatu rem menekan sisi dalamnya untuk mengerem."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-20",
+    "title": {
+     "id": "Fungsi komponen (20)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 20"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Kantong udara yang mengembang saat tabrakan untuk melindungi penumpang.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ダッシュボード"
+       },
+       {
+        "id": "メーター"
+       },
+       {
+        "id": "ヘッド・レスト"
+       },
+       {
+        "id": "エアバッグ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "エアバッグ (えあばっぐ) = kantong udara (airbag). Fungsi: Kantong udara yang mengembang saat tabrakan untuk melindungi penumpang."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyaring kotoran dan serpihan logam dari oli mesin agar oli tetap bersih.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイルフィルター"
+       },
+       {
+        "id": "オイルポンプ"
+       },
+       {
+        "id": "フューエルポンプ"
+       },
+       {
+        "id": "灯火装置"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "オイルフィルター (おいるふぃるたー) = filter oli. Fungsi: Menyaring kotoran dan serpihan logam dari oli mesin agar oli tetap bersih."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Katup otomatis yang mengatur aliran air pendingin ke radiator sehingga suhu mesin stabil.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "オイル・ギャラリ"
+       },
+       {
+        "id": "サーモスタット"
+       },
+       {
+        "id": "ファン・モータ"
+       },
+       {
+        "id": "オイルフィルター"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "サーモスタット (さーもすたっと) = termostat. Fungsi: Katup otomatis yang mengatur aliran air pendingin ke radiator sehingga suhu mesin stabil."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyala bila sistem airbag/pretensioner mengalami gangguan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "シフト・レバー"
+       },
+       {
+        "id": "アクセル・ペダル"
+       },
+       {
+        "id": "カム角センサ"
+       },
+       {
+        "id": "SRSエアバッグ・ウォーニング・ランプ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "SRSエアバッグ・ウォーニング・ランプ (えすあーるえす えあばっぐうぉーにんぐらんぷ) = lampu peringatan airbag SRS. Fungsi: Menyala bila sistem airbag/pretensioner mengalami gangguan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saklar yang menyalakan semua lampu sein sekaligus sebagai tanda bahaya.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ハザード・スイッチ"
+       },
+       {
+        "id": "レベル・ゲージ"
+       },
+       {
+        "id": "グローブ・ボックス"
+       },
+       {
+        "id": "シートベルト"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ハザード・スイッチ (はざーどすいっち) = saklar lampu hazard. Fungsi: Saklar yang menyalakan semua lampu sein sekaligus sebagai tanda bahaya."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Penguat tenaga rem: memperkuat injakan pedal memakai kevakuman mesin.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エンジン・マウント"
+       },
+       {
+        "id": "イグニッション・コイル"
+       },
+       {
+        "id": "マスター・バック"
+       },
+       {
+        "id": "ブレーキ・リザーバ・タンク"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "マスター・バック (ますたーばっく) = servo rem (master back). Fungsi: Penguat tenaga rem: memperkuat injakan pedal memakai kevakuman mesin."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rem yang menekan kampas ke bagian dalam tromol yang ikut berputar bersama roda.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "キャリパ"
+       },
+       {
+        "id": "ステアリング・リンク機構"
+       },
+       {
+        "id": "ドラム・ブレーキ"
+       },
+       {
+        "id": "ステアリング・ギヤ機構"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ドラム・ブレーキ (どらむぶれーき) = rem tromol. Fungsi: Rem yang menekan kampas ke bagian dalam tromol yang ikut berputar bersama roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Rem tangan/parkir untuk menahan mobil saat berhenti atau parkir.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "メーター"
+       },
+       {
+        "id": "ウォッシャー・スイッチ"
+       },
+       {
+        "id": "ハザード・スイッチ"
+       },
+       {
+        "id": "パーキング・ブレーキ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "パーキング・ブレーキ (ぱーきんぐぶれーき) = rem parkir. Fungsi: Rem tangan/parkir untuk menahan mobil saat berhenti atau parkir."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Katup yang membuka/menutup saluran hisap dan buang pada silinder.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "スターターモーター"
+       },
+       {
+        "id": "バルブ"
+       },
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "タイミング・ベルト"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バルブ (ばるぶ) = katup. Fungsi: Katup yang membuka/menutup saluran hisap dan buang pada silinder."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Paking penyekat antara kepala silinder dan blok agar gas, oli, dan air pendingin tidak bocor.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ピストン"
+       },
+       {
+        "id": "インテーク・バルブ"
+       },
+       {
+        "id": "シリンダー"
+       },
+       {
+        "id": "シリンダーヘッドガスケット"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "シリンダーヘッドガスケット (しりんだーへっどがすけっと) = paking kepala silinder. Fungsi: Paking penyekat antara kepala silinder dan blok agar gas, oli, dan air pendingin tidak bocor."
+      }
+     }
+    ]
+   },
+   {
+    "id": "gen-fungsi-21",
+    "title": {
+     "id": "Fungsi komponen (21)",
+     "jp": "{部品|ぶひん}の{働|はたら}き 21"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyala bila pengisian aki bermasalah.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "エアバッグ"
+       },
+       {
+        "id": "バッテリー・ウォーニング・ランプ"
+       },
+       {
+        "id": "パーキング・ブレーキ"
+       },
+       {
+        "id": "アクセル・ペダル"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バッテリー・ウォーニング・ランプ (ばってりーうぉーにんぐらんぷ) = lampu peringatan aki. Fungsi: Menyala bila pengisian aki bermasalah."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pembangkit listrik yang digerakkan mesin untuk mengisi aki.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ラジエーター"
+       },
+       {
+        "id": "ワイヤーハーネス"
+       },
+       {
+        "id": "サンバイザー"
+       },
+       {
+        "id": "オルタネーター"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "オルタネーター (おるたねーたー) = alternator. Fungsi: Pembangkit listrik yang digerakkan mesin untuk mengisi aki."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Sabuk yang menahan tubuh penumpang agar tidak terlempar saat rem mendadak atau tabrakan.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "メーター"
+       },
+       {
+        "id": "クーラント"
+       },
+       {
+        "id": "シートベルト"
+       },
+       {
+        "id": "シフト・レバー"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "シートベルト (しーとべると) = sabuk pengaman. Fungsi: Sabuk yang menahan tubuh penumpang agar tidak terlempar saat rem mendadak atau tabrakan."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Pedal yang diinjak pengemudi untuk menggerakkan sistem rem dan memperlambat atau menghentikan mobil.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・ペダル"
+       },
+       {
+        "id": "クラッチ・ペダル"
+       },
+       {
+        "id": "シフト・レバー"
+       },
+       {
+        "id": "ルームランプ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "ブレーキ・ペダル (ぶれーきぺだる) = pedal rem. Fungsi: Pedal yang diinjak pengemudi untuk menggerakkan sistem rem dan memperlambat atau menghentikan mobil."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Saluran yang mengalirkan air pendingin langsung kembali ke mesin saat termostat masih tertutup.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "キャリパ"
+       },
+       {
+        "id": "バイパス通路"
+       },
+       {
+        "id": "ラジエーター"
+       },
+       {
+        "id": "ラジエータ・ロアー・ホース"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "バイパス通路 (ばいぱすつうろ) = saluran bypass. Fungsi: Saluran yang mengalirkan air pendingin langsung kembali ke mesin saat termostat masih tertutup."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Mengatur jumlah udara masuk ke mesin lewat katup throttle sesuai injakan pedal gas.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "イグニッションコイル"
+       },
+       {
+        "id": "EGR装置"
+       },
+       {
+        "id": "スロットルボディ"
+       },
+       {
+        "id": "ブレーキ装置"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "スロットルボディ (すろっとるぼでぃ) = throttle body. Fungsi: Mengatur jumlah udara masuk ke mesin lewat katup throttle sesuai injakan pedal gas."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Menyimpan listrik untuk menyalakan mesin dan menyuplai perangkat listrik saat mesin mati.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ブレーキ・シュー"
+       },
+       {
+        "id": "エンジン・オイル"
+       },
+       {
+        "id": "エア・クリーナー・ボックス"
+       },
+       {
+        "id": "バッテリ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "バッテリ (ばってり) = aki. Fungsi: Menyimpan listrik untuk menyalakan mesin dan menyuplai perangkat listrik saat mesin mati."
+      }
+     },
+     {
+      "q": {
+       "id": "Komponen mana yang fungsinya: Tabung tempat piston bergerak naik-turun.",
+       "jp": "{部品|ぶひん}の{働|はたら}きは？"
+      },
+      "opts": [
+       {
+        "id": "ピストン"
+       },
+       {
+        "id": "バック・プレート"
+       },
+       {
+        "id": "ウィンカー・レバー"
+       },
+       {
+        "id": "シリンダー"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "シリンダー (しりんだー) = silinder. Fungsi: Tabung tempat piston bergerak naik-turun."
+      }
+     }
+    ]
    }
   ]
  },
@@ -9351,6 +14532,372 @@
       "jp": "{環境|かんきょう}を{守|まも}ります。"
      },
      "mb": true
+    }
+   ]
+  },
+  {
+   "id": "gen-tema-ujian-resmi",
+   "tema": true,
+   "title": {
+    "id": "Tema: Aturan ujian resmi",
+    "jp": "テーマ：{試験|しけん}のルール"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Ujian 1号 Auto Maintenance memakai bahasa Jepang dengan furigana pada kanji.”",
+      "jp": "○か×か。「{自動車整備|じどうしゃせいび}の{試験|しけん}は{日本語|にほんご}で、{漢字|かんじ}にルビがつきます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. Bahasa ujian = Jepang, kanji diberi ruby (SRC-001 §1(1)). Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Ujian 1号 diselenggarakan oleh 日整連 (Japan Automobile Service Promotion Association).”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. Pelaksana = 一般社団法人日本自動車整備振興会連合会 (日整連). Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Ujian 1号 hanya dilaksanakan sekali setahun.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Minimal 2 kali setahun (年2回以上). Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Usia minimal peserta ujian adalah 17 tahun pada hari ujian.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. Syarat: berusia 17 tahun ke atas pada hari ujian. Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Ujian tulis 1号 berbentuk ○× dengan 30 soal dalam 60 menit.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar (30 soal, 60 menit, ○×). Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Ujian praktik 1号 terdiri dari 3 tugas dalam 20 menit.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. 3 課題 / 20 menit. Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Syarat lulus ujian tulis 1号 adalah jawaban benar minimal 65% dari soal.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. 学科 ≥65%, 実技 ≥60%. Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Syarat lulus ujian praktik 1号 adalah total nilai minimal 65%.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Praktik cukup ≥60%; yang 65% adalah ujian tulis 1号. Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Hasil ujian diumumkan di situs web 日整連 sekitar 30 hari setelah ujian.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar (30日以内を目途). Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Sertifikat lulus diberikan kepada peserta lulus walau belum ada kontrak kerja.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Sertifikat diterbitkan bila ada kontrak kerja dengan perusahaan penerima. Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Lulus ujian menjamin visa Tokutei Ginou otomatis diberikan.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Lulus ujian tidak menjamin pemberian status/visa. Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Biaya ujian dikembalikan jika peserta tidak hadir.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Biaya yang sudah dibayar tidak dikembalikan. Sumber: MLIT 実施要領 1号/2号 (SRC-001/002), laporan SRC-004."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Ujian tulis 2号 Auto Maintenance berbentuk…"
+     },
+     "opts": [
+      {
+       "id": "Pilihan ganda 4 opsi, 40 soal, 80 menit"
+      },
+      {
+       "id": "○×, 30 soal, 60 menit"
+      },
+      {
+       "id": "Esai, 10 soal, 120 menit"
+      },
+      {
+       "id": "Lisan saja"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "2号: 四択式, 40 soal, 80 menit (SRC-002). 1号: ○× 30 soal 60 menit."
+     }
+    },
+    {
+     "q": {
+      "id": "Syarat pengalaman untuk ujian 2号 Auto Maintenance:"
+     },
+     "opts": [
+      {
+       "id": "Minimal 3 tahun kerja merawat mobil di bengkel bersertifikat"
+      },
+      {
+       "id": "Tidak perlu pengalaman"
+      },
+      {
+       "id": "Minimal 1 bulan"
+      },
+      {
+       "id": "Minimal 10 tahun"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Syarat 2号: pengalaman kerja pemeliharaan ≥3 tahun di tempat usaha bersertifikat (SRC-002 §1(5))."
+     }
+    },
+    {
+     "q": {
+      "id": "Ambang lulus ujian tulis 2号 Auto Maintenance:"
+     },
+     "opts": [
+      {
+       "id": "≥60% jawaban benar"
+      },
+      {
+       "id": "≥65% jawaban benar"
+      },
+      {
+       "id": "≥80% jawaban benar"
+      },
+      {
+       "id": "100%"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "2号: 学科 ≥60%, 実技 ≥60% (SRC-002 §5)."
+     }
+    },
+    {
+     "q": {
+      "id": "Masa berlaku sertifikat lulus ujian 2号 adalah…"
+     },
+     "opts": [
+      {
+       "id": "10 tahun sejak tanggal ujian"
+      },
+      {
+       "id": "1 tahun"
+      },
+      {
+       "id": "3 tahun"
+      },
+      {
+       "id": "Seumur hidup"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Masa berlaku 10 tahun dari tanggal ujian (SRC-002)."
+     }
+    },
+    {
+     "q": {
+      "id": "Peserta lulus 外国人技能養成講習 dibebaskan dari…"
+     },
+     "opts": [
+      {
+       "id": "Ujian praktik 2号 (dalam 2 tahun)"
+      },
+      {
+       "id": "Ujian tulis 2号"
+      },
+      {
+       "id": "Seluruh ujian"
+      },
+      {
+       "id": "Tes bahasa"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Pembebasan praktik 2号 berlaku sampai 2 tahun setelah kursus selesai (SRC-002 §8)."
+     }
     }
    ]
   }

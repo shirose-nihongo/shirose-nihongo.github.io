@@ -3931,6 +3931,222 @@
      "mb": true
     }
    ]
+  },
+  {
+   "id": "gen-tema-resmi",
+   "tema": true,
+   "title": {
+    "id": "Tema: Aturan resmi manufaktur",
+    "jp": "テーマ：{制度|せいど}のルール"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Industrial Manufacturing (工業製品製造業) 1号 mencakup 17 kategori pekerjaan (業務区分).”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. Per 2026-06: 1号 = 17 区分, 2号 = 3 区分 (SRC-010 hlm. 6)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Kategori yang punya 2号: 機械金属加工, 電気電子機器組立て, 金属表面処理.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar (SRC-010)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Bahasa 1号 manufaktur: JFT-Basic A2.2 atau JLPT N4 ke atas.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar (SRC-011 hlm. 17)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Bahasa 2号 manufaktur: JLPT N3 ke atas.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar; juga perlu pengalaman kerja ≥3 tahun (SRC-011)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Ujian 1号 manufaktur: lulus bila tulis ≥65 dan praktik ≥60 dari 100.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar (SRC-012 §6)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Ujian 2号 manufaktur (製造分野特定技能2号評価試験) lulus bila ≥60 dari 100.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar (SRC-012 §6)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “縫製 (menjahit) termasuk kategori pekerjaan 1号 manufaktur.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar; kategori no. 10 (SRC-010)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Kategori 家具製造 punya 2号.”"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Hanya 機械金属加工, 電気電子機器組立て, 金属表面処理 yang punya 2号."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Berapa kategori pekerjaan 1号 di manufaktur (per 2026-06)?"
+     },
+     "opts": [
+      {
+       "id": "17"
+      },
+      {
+       "id": "3"
+      },
+      {
+       "id": "10"
+      },
+      {
+       "id": "30"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "17 業務区分 (SRC-010)."
+     }
+    },
+    {
+     "q": {
+      "id": "Berapa kategori 2号 di manufaktur?"
+     },
+     "opts": [
+      {
+       "id": "3"
+      },
+      {
+       "id": "17"
+      },
+      {
+       "id": "1"
+      },
+      {
+       "id": "10"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "3 区分 (SRC-010)."
+     }
+    }
+   ]
   }
  ]
 }
