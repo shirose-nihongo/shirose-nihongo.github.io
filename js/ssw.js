@@ -14,11 +14,17 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261117n";
+} from "./ssw-core.js?v=20261117r";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "railway-vehicle": [
+    { t: "Teks belajar resmi 車両製造 (JP, 224 hal.)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakushu-text-1go.pdf" },
+    { t: "Contoh soal 学科 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakka-sample.pdf" },
+    { t: "Contoh soal 実技 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-jitsugi-sample.pdf" },
+    { t: "Panduan ujian 試験案内 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-shiken-annai.pdf" }
+  ],
   "wood-industry": [
     { t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" },
     { t: "Buku versi Indonesia (ringkasan Shirose)", u: "assets/ssw/wood-industry/pdf/shirose-ringkasan-indonesia-wood-industry.pdf" }
