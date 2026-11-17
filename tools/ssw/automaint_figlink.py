@@ -61,5 +61,12 @@ for k, e in links.items():
           "hal_sumber": e["hal"], "status_validasi": "gambar: nomor bagian cocok dengan kunci jawaban PDF JICA; fungsi: ORIGINAL LEARNING CONTENT, perlu review"}
     if k in FUNGSI: nv["fungsi"] = FUNGSI[k]
     lst.append(nv); by[k] = nv; nxt += 1; added += 1
+filled = 0
+for it in lst:
+    if not it.get("fungsi") and norm(it["kata"]) in FUNGSI:
+        it["fungsi"] = FUNGSI[norm(it["kata"])]
+        it.setdefault("status_validasi", "fungsi: ORIGINAL LEARNING CONTENT, perlu review")
+        filled += 1
+print("fungsi tambahan utk kosakata buku:", filled)
 json.dump(d, open(V, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("terhubung ke kosakata lama:", linked, "| ditambah:", added, "| total:", len(lst))
