@@ -362,3 +362,9 @@ body.sw-figopen{padding-bottom:62vh;}
 /* tombol bahasa JP↔ID melayang di sisi kanan, ikut layar saat scroll */
 #sw-langfloat{display:flex !important; flex-direction:column; left:auto !important; right:8px; top:50%; bottom:auto !important; transform:translateY(-50%); z-index:880; gap:4px; padding:4px; border-radius:16px; background:rgba(14,16,40,.92); box-shadow:0 4px 16px #0008;}
 #sw-langfloat button{min-width:44px; min-height:44px; padding:6px 8px; font-size:13px; border-radius:12px;}
+/* HP: .sw-book jangan melebar melewati layar (grid item min-width:auto) */
+#app>*{min-width:0;} .sw-book{min-width:0; width:100%; box-sizing:border-box;} .sw-book-chips,.sw-book-top{min-width:0; max-width:100%;}
+/* tombol bahasa melayang: kecil, tidak mengganggu */
+#sw-langfloat{padding:2px !important; gap:2px !important; border-radius:10px !important; right:4px !important; opacity:.78; box-shadow:0 2px 8px #0006 !important;}
+#sw-langfloat:active,#sw-langfloat:hover{opacity:1;}
+#sw-langfloat button{min-width:0 !important; min-height:0 !important; width:34px; height:26px; padding:0 !important; font-size:10.5px !important; border-radius:8px !important; line-height:1;}
