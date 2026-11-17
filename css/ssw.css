@@ -349,3 +349,12 @@ body.sw-figopen{padding-bottom:62vh;}
 .flash-card.revealed .front.imgf img[src$=".svg"]{width:auto; max-height:110px;}
 .mc-img[src$=".svg"]{width:min(100%,340px); height:auto; background:#fff; border-radius:12px; padding:4px; box-sizing:border-box;}
 .sw-label{display:inline-block; font-size:12.5px; line-height:1.45; padding:6px 10px; border-radius:10px; margin:6px 0; background:#ffffff12; border:1px solid var(--border-light); color:var(--gray);} .sw-label.own{border-color:#f5b83d88;} .sw-label.off{border-color:#22c55e88; color:#86efac;}
+
+/* sticky di bawah topbar global (tidak tertutup separuh) — --tbh diisi JS dari tinggi .topbar */
+.sw-rtool,.sw-rtool .r1{top:var(--tbh,0px) !important;}
+.sw-book-top{top:var(--tbh,0px);}
+.bk-pgw{scroll-margin-top:calc(var(--tbh,0px) + 72px);}
+@media (min-width:1000px){.sw-lgrid .sw-figs{top:calc(var(--tbh,0px) + 12px);max-height:calc(100vh - var(--tbh,0px) - 24px);}}
+/* foto buku: bergulir penuh atas→bawah, tidak terpotong */
+.sw-book-stage{overflow:visible;}
+.sw-book,.sw-wrap{overflow-x:clip !important;}

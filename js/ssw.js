@@ -346,7 +346,7 @@ async function renderBaca([slug, subId, mode, lang]) {
 
 /* ============================== BUKU INTERAKTIF ============================== */
 const BOOK = { zoom: 1 };
-const bookMode = () => { try { return localStorage.getItem("shirose-ssw-bookmode") === "scroll" ? "scroll" : "page"; } catch (e) { return "page"; } };
+const bookMode = () => { try { return localStorage.getItem("shirose-ssw-bookmode") === "page" ? "page" : "scroll"; } catch (e) { return "scroll"; } };
 async function renderBuku([slug, lang, page]) {
   const g = await gate(slug); if (g.err) return g.err;
   const { b, pack } = g;
@@ -1156,3 +1156,11 @@ export const SSW_ROUTES = {
   "ssw-diagram": (p) => renderDiagram(p),
   "ssw-progres": () => renderProgres(),
 };
+
+// tinggi topbar → --tbh (agar toolbar sticky tidak separuh tertutup topbar)
+(() => {
+  const set = () => { const t = document.querySelector(".topbar"); const h = t && t.offsetParent !== null ? Math.round(t.getBoundingClientRect().height) : 0; document.documentElement.style.setProperty("--tbh", h + "px"); };
+  set(); addEventListener("resize", set); addEventListener("load", set);
+  try { const t = document.querySelector(".topbar"); if (t && window.ResizeObserver) new ResizeObserver(set).observe(t); } catch (e) {}
+  setInterval(set, 1500);
+})();
