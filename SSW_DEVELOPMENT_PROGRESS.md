@@ -95,3 +95,8 @@ tools/ssw/quiz_official_build.py (idempotent, set ber-id gen-*): Auto Maintenanc
 - Sumber resmi (林業技能向上センター https://ringyou-gino.org/specific/2_index_detail.php + 林野庁): 学科 sample + kunci jawaban, 実技試験問題 2026, prosedur 実技, Q&A APD → `ssw-materials/forestry/`, PDF live `assets/ssw/forestry/pdf/`.
 - Format terverifikasi: 学科 ○× 30 soal ≥65% (panduan 2026: 30 menit; sample Jul 2025: 60 menit), 実技 chainsaw 3 tugas (tiap tugas ≥40%, total ≥60%), usia ≥18, wajib 特別教育 chainsaw, biaya 20.000 yen.
 - Sektor `forestry`: 5 bab, 65 kosakata, 54 soal (27 dari 30 soal contoh resmi — 3 soal bergambar dilewati — + soal buatan dari aturan 実技). Generator `tools/ssw/forestry_{content,quiz,build}.py`. Tidak ada buku belajar resmi → materi bab 4–5 hanya poin yang tertulis di kunci jawaban resmi.
+
+## Linen Supply (リネンサプライ) + tampilan buku — 2026-11-17
+- Sumber resmi: JLSA 試験基準 (初級/専門級), soal contoh 学科 初級 & 専門級 (+kunci), statistik; MOJ/MHLW 運用方針 (1号: A2.2, direct hire, 4.300 orang/3 th). Ujian 1号 resmi belum dipublikasikan rinci. → `ssw-materials/linen-supply/`, PDF `assets/ssw/linen-supply/pdf/`.
+- Sektor `linen-supply`: 5 bab, 61 kosakata, 39 soal (20 soal contoh resmi + 19 dari 試験基准). `tools/ssw/linen_{content,quiz,build}.py`.
+- Railway/Forestry/Linen kini memakai **halaman buku per subbab** (gambar webp `assets/ssw/<slug>/jp/pNN.webp`, `book: "jp"`) seperti sektor lama — bukan tombol PDF ala JAIM. Render: `tools/ssw/render_pages.py`.

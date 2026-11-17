@@ -14,11 +14,17 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261117t";
+} from "./ssw-core.js?v=20261117u";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "linen-supply": [
+    { t: "試験基準 初級・専門級 (resmi JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-kizyun181009.pdf" },
+    { t: "Soal contoh 学科 初級 (resmi)", u: "assets/ssw/linen-supply/pdf/jlsa-test2019.pdf" },
+    { t: "Soal contoh 学科 専門級 (resmi)", u: "assets/ssw/linen-supply/pdf/jlsa-test-senmon.pdf" },
+    { t: "Statistik pelaksanaan ujian (JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-jokyo-r01-r07.pdf" }
+  ],
   "aviation-gh": [
     { t: "Teks belajar resmi GH — Text 2 (JP, 52 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text2-gh-rev2-1.pdf" },
     { t: "Teks GH edisi 1 (arsip, 40 hal.)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text-1go.pdf" },

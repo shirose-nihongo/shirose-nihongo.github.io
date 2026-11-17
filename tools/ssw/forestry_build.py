@@ -34,8 +34,8 @@ def romaji(k):
 def tf(q):
     return [{"id": "Benar (○)", "jp": "○ 正しい"}, {"id": "Salah (×)", "jp": "× 間違い"}]
 
-idx = {"slug": SLUG, "nama": "Forestry (Kehutanan)", "jp": "林業", "bab": [], "vocab": "vocab.json", "quiz": "quiz.json", "nobook": True,
-       "pages": {"jp": 8, "id": 0}, "source": SRC}
+PAGES = {'b1s1':[1,7],'b1s2':[1,7],'b2s1':[8,11],'b2s2':[8,9],'b3s1':[11,13],'b3s2':[13,20],'b4s1':[21,22],'b5s1':[22,24],'b5s2':[24,24]}
+idx = {"slug": SLUG, "nama": "Forestry (Kehutanan)", "jp": "林業", "bab": [], "vocab": "vocab.json", "quiz": "quiz.json",        "pages": {"jp": 24, "id": 0}, "book": "jp", "source": SRC}
 vocab = []; vn = 0
 catname = {b["no"]: b["id_"] for b in BABS}
 for b in BABS:
@@ -45,11 +45,11 @@ for b in BABS:
         blocks = []
         for h, ul in secs:
             blocks.append({"h": h}); blocks.append({"ul": ul})
-        subs.append({"id": f"b{b['no']}s{si}", "no": si, "title": {"id": tid, "jp": tjp}, "pages": pg,
+        subs.append({"id": f"b{b['no']}s{si}", "no": si, "title": {"id": tid, "jp": tjp}, "pages": PAGES.get(f"b{b['no']}s{si}", pg),
                      "full": {"id": blocks}, "summary": {"id": [{"ul": [ul[0] for _, ul in secs]}]}})
     doc = {"schema": 1, "bidang": SLUG, "source": SRC, "markup": "Teks JP polos (tanpa furigana); **tebal**.",
            "bab": {"id": bid, "no": b["no"], "title": {"id": b["id_"], "jp": b["jp"]}, "intro": {"id": b["intro"], "jp": ""},
-                   "pages": b["pages"], "subs": subs}}
+                   "pages": [min(x["pages"][0] for x in subs), max(x["pages"][1] for x in subs)], "subs": subs}}
     json.dump(doc, open(os.path.join(OUT, f"{bid}.json"), "w", encoding="utf-8"), ensure_ascii=False)
     idx["bab"].append({"id": bid, "file": f"{bid}.json"})
 for line in V:
