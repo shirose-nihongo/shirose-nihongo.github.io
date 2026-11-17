@@ -50,7 +50,23 @@ exam = [
  mc("Masa berlaku sertifikat lulus ujian 2号 adalah…", ["10 tahun sejak tanggal ujian", "1 tahun", "3 tahun", "Seumur hidup"], 0, "Masa berlaku 10 tahun dari tanggal ujian (SRC-002)."),
  mc("Peserta lulus 外国人技能養成講習 dibebaskan dari…", ["Ujian praktik 2号 (dalam 2 tahun)", "Ujian tulis 2号", "Seluruh ujian", "Tes bahasa"], 0, "Pembebasan praktik 2号 berlaku sampai 2 tahun setelah kursus selesai (SRC-002 §8)."),
 ]
-put_tema(q, [{"id": "gen-tema-ujian-resmi", "tema": True, "title": {"id": "Tema: Aturan ujian resmi", "jp": "テーマ：{試験|しけん}のルール"}, "items": exam}], "gen-")
+import sys; sys.path.insert(0, "tools/ssw")
+from quiz_auto_gakka1_data import SETS as G1, PRAKTIK as PR
+g1sets = []
+for n, (name, rows) in enumerate(G1.items(), 1):
+    its = []
+    for jp, idt, ok, exp in rows:
+        it = tf(idt, jp, ok, exp + " (Latihan gaya 学科 1号 — soal buatan Shirose)")
+        it["q"]["jp"] = f"○か×か。「{jp}」"
+        its.append(it)
+    g1sets.append({"id": f"gen-g1-{n}", "tema": True, "title": {"id": f"Tema 1号 学科: {name}", "jp": f"テーマ：{name}"}, "items": its})
+rng2 = random.Random(21); pr = []
+for jp, idt, good, bad, exp in PR:
+    pair = [(good, True), (bad, False)]; rng2.shuffle(pair)
+    pr.append({"q": {"id": idt, "jp": jp}, "opts": [{"id": re.sub(r"\{([^|}]*)\|[^}]*\}", r"\1", t), "jp": t} for t, _ in pair],
+               "a": [ok for _, ok in pair].index(True), "exp": {"id": exp + " (Latihan gaya 実技 1号 — 二択)"}})
+g1sets.append({"id": "gen-g1-praktik", "tema": True, "title": {"id": "Tema 1号 実技: pilih 1 dari 2", "jp": "テーマ：{実技|じつぎ}（{二択|にたく}）"}, "items": pr})
+put_tema(q, g1sets + [{"id": "gen-tema-ujian-resmi", "tema": True, "title": {"id": "Tema: Aturan ujian resmi", "jp": "テーマ：{試験|しけん}のルール"}, "items": exam}], "gen-")
 
 fv = [v for v in V if v.get("fungsi")]
 rng.shuffle(fv)

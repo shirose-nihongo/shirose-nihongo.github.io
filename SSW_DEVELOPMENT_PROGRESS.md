@@ -66,3 +66,9 @@ Hanya 区分 1–3 yang punya 2号. Di app saat ini hanya "dasar bersama" (indus
 
 ## 2026-11-17 — Soal dari sumber resmi
 tools/ssw/quiz_official_build.py (idempotent, set ber-id gen-*): Auto Maintenance +17 soal aturan ujian (SRC-001/002/004) +208 soal fungsi komponen (21 set, bab4); Machine-Metal soal kosakata (bab1/bab2); Industrial-Mfg +10 soal aturan resmi (SRC-010/011/012). Soal fungsi/kosakata = ORIGINAL LEARNING CONTENT, perlu review ahli.
+
+### Sumber contoh soal resmi JASPA (SRC-030..033, https://www.jaspa.or.jp/mechanic/specific-skill/)
+- Contoh soal 1号 学科 (○×, furigana + istilah Inggris), 1号 実技 (二択, bergambar), 2号 学科 (4 pilihan) + kunci 2号. Disimpan sebagai bahan rujukan format/cakupan di ssw-materials/automobile-maintenance/ (hak cipta JASPA: jangan disalin mentah ke app).
+- Cakupan 1号 学科: mesin, pelumasan/pendingin, kelistrikan, penerus tenaga, suspensi/kemudi/ban, rem, alat ukur, oli/gemuk, penanganan.
+- Soal baru (ORIGINAL, perlu review ahli): data/ssw/auto-maintenance/quiz.json set gen-g1-1..8 (96 soal ○×) + gen-g1-praktik (16 soal 二択). Sumber data: tools/ssw/quiz_auto_gakka1_data.py; builder: tools/ssw/quiz_official_build.py.
+- Portal manufaktur (sswm.go.jp/exam/materials) memblokir fetch otomatis (robots); contoh soal 機械金属加工/電気電子機器組立て 1号 & 2号 perlu diambil lewat Chrome kalau mau dipakai sebagai rujukan.
