@@ -102,57 +102,5 @@
   "label": "OFFICIAL QUESTION",
   "note": "Format terbuka/ilustrasi/tabel — belum bisa dijadikan pilihan ganda otomatis; perlu review manual",
   "validation_status": "NEEDS_MANUAL_STRUCTURING"
- },
- {
-  "set_code": "9-2",
-  "sector": "工業製品製造業",
-  "category": "電気電子機器組立て",
-  "chapter": "IMM-elec-electronic-C09",
-  "subchapter": "IMM-elec-electronic-C09-S02-U03",
-  "source_document": "JAIM-SG1-02",
-  "source_page": 125,
-  "raw_text": " Pada diagram rangkaian berikut, pilih nilai arus yang benar dari pilihan A-D. Titik Titik A     B                 Titik C A. 2[A], B. 5[A], C. 10[A], D. 20[A] Penjelasan Resistansi total antara titik B dan C pada bagian paralel adalah 10[Ω], dan karena bagian tersebut terhubung seri dengan resistansi 10[Ω] antara titik A dan B, maka resistansi total antara titik A dan C adalah 20[Ω]. Karena antara titik A dan C diberikan tegangan 100[V], maka nilai arusnya 100[V] ÷ 20[Ω], yaitu 5[A], sehingga jawaban yang benar adalah (B). Jawaban: B",
-  "label": "OFFICIAL QUESTION",
-  "note": "Format terbuka/ilustrasi/tabel — belum bisa dijadikan pilihan ganda otomatis; perlu review manual",
-  "validation_status": "NEEDS_MANUAL_STRUCTURING"
- },
- {
-  "set_code": "9-4",
-  "sector": "工業製品製造業",
-  "category": "電気電子機器組立て",
-  "chapter": "IMM-elec-electronic-C09",
-  "subchapter": "IMM-elec-electronic-C09-S03-U02",
-  "source_document": "JAIM-SG1-02",
-  "source_page": 133,
-  "raw_text": " Pilihlah kombinasi IC analog yang benar. A. 1. Op-amp                       2. IC logika            3. Konverter A/D B. 1. IC logika                    2. IC memori            3. Regulator tegangan C. 1. Op-amp                       2. Regulator tegangan   3. Konverter D/A D. 1. Konverter A/D                2. Op-amp               3. IC memori Penjelasan IC analog mencakup op-amp, regulator tegangan, konverter A/D dan konverter D/A, sehingga kombinasi yang benar adalah C. Jawaban: C",
-  "label": "OFFICIAL QUESTION",
-  "note": "Format terbuka/ilustrasi/tabel — belum bisa dijadikan pilihan ganda otomatis; perlu review manual",
-  "validation_status": "NEEDS_MANUAL_STRUCTURING"
- },
- {
-  "set_code": "10-1",
-  "sector": "工業製品製造業",
-  "category": "電気電子機器組立て",
-  "chapter": "IMM-elec-electronic-C10",
-  "subchapter": "IMM-elec-electronic-C10-S01-U01",
-  "source_document": "JAIM-SG1-02",
-  "source_page": 138,
-  "raw_text": " Pilih kombinasi yang benar mengenai besaran yang dapat diukur secara langsung dengan tester. A. 1. Tegangan DC                  2. Arus DC             3. Arus AC B. 1. Resistansi                   2. Konsumsi daya       3. Arus DC C. 1. Arus AC                      2. Resistansi          3. Konsumsi daya D. 1. Arus DC                      2. Tegangan AC         3. Tegangan DC Penjelasan Karena arus AC dan konsumsi daya tidak dapat diukur secara langsung dengan tester, kombinasi yang benar adalah D. Jawaban: D",
-  "label": "OFFICIAL QUESTION",
-  "note": "Format terbuka/ilustrasi/tabel — belum bisa dijadikan pilihan ganda otomatis; perlu review manual",
-  "validation_status": "NEEDS_MANUAL_STRUCTURING"
- },
- {
-  "set_code": "11-1",
-  "sector": "工業製品製造業",
-  "category": "電気電子機器組立て",
-  "chapter": "IMM-elec-electronic-C11",
-  "subchapter": "IMM-elec-electronic-C11-S01-U05",
-  "source_document": "JAIM-SG1-02",
-  "source_page": 161,
-  "raw_text": " Dari pilihan A-D berikut, pilih satu pernyataan yang benar mengenai operasi rangkaian berdasarkan diagram rangkaian sekuensial pada Tabel 11-6. A. Jika BS1 ditekan, hanya R-m1 yang menjadi ON, dan lampu L tidak akan menyala. B. Jika BS2 ditekan, R-m2 akan menjadi ON, dan lampu L akan menyala. C. Jika BS1 ditekan, lampu L akan menyala, dan meskipun BS1 dilepaskan, lampu L tidak akan padam. D. Jika BS1 ditekan, lampu L akan menyala, dan meskipun BS2 ditekan, lampu L tidak akan padam. Penjelasan A. Jika BS1 ditekan, maka relai R beroperasi, R-m1 dan R-m2 menjadi ON, dan lampu L menyala. Sehingga, pilihan A salah. B. Meskipun BS2 ditekan, relai R tidak akan beroperasi. Oleh karena itu, R-m1 atau R- m2 tidak akan beroperasi, dan lampu L tidak akan menyala. Sehingga, pilihan B salah. C. Jika BS1 ditekan, maka relai R beroperasi, R-m1 dan R-m2 menjadi ON, dan lampu L menyala. Dalam kondisi ini, meskipun Anda melepaskan BS1, BS2 dan R-m2 tetap menyala, sehingga relai R tetap aktif dan L tetap menyala. Sehingga, pilihan C benar. D. Jika BS1 ditekan, maka relai R beroperasi, R-m1 dan R-m2 menjadi ON, dan lampu L menyala. Dalam kondisi ini jika BS2 ditekan, relai R menjadi tidak beroperasi, R-m1 dan R-m2 menjadi OFF, dan lampu L padam. Sehingga, pilihan D salah. Jawaban: C",
-  "label": "OFFICIAL QUESTION",
-  "note": "Format terbuka/ilustrasi/tabel — belum bisa dijadikan pilihan ganda otomatis; perlu review manual",
-  "validation_status": "NEEDS_MANUAL_STRUCTURING"
  }
 ]

@@ -2863,5 +2863,57 @@
   "question_type": "true_false_ab",
   "label": "OFFICIAL QUESTION",
   "validation_status": "AUTO_EXTRACTED_NEEDS_REVIEW"
+ },
+ {
+  "question_id": "IMM-metal-surface-OQ-8-2-01",
+  "sector": "工業製品製造業",
+  "category": "金属表面処理",
+  "chapter": "IMM-metal-surface-C08",
+  "subchapter": "IMM-metal-surface-C08-S02-U02",
+  "instruction": "Pilih satu dari pilihan A-D.",
+  "question": " Manakah kombinasi 1)–3) yang benar dalam pernyataan ini? Pilih satu dari pilihan A-D. Fenomena dimana cairan melarutkan zat lain (gas, cairan atau padatan) sehingga menjadi campuran yang homogen disebut ( 1) ), dan cairan itu disebut ( 2) ). Jika cairan tersebut adalah air, maka disebut ( 3) ).",
+  "options": [
+   "A. 1) Larutan air          2) Pelarutan     3) Larutan",
+   "B. 1) Larutan              2) Pelarutan     3) Larutan air",
+   "C. 1) Pelarutan            2) Larutan       3) Larutan air",
+   "D. 1) Pelarutan            2) Larutan air   3) Larutan"
+  ],
+  "answer_key": "C",
+  "explanation": "Fenomena dimana cairan melarutkan zat lain (gas, cairan atau padatan) sehingga menjadi campuran yang homogen disebut pelarutan, dan cairan itu disebut larutan. Jika cairan tersebut adalah air, maka disebut larutan air.",
+  "competency": "学科 (pengetahuan)",
+  "difficulty": "dasar",
+  "reference": "JAIM-SG1-03 p.94",
+  "question_type": "multiple_choice_4",
+  "label": "OFFICIAL QUESTION",
+  "validation_status": "AUTO_EXTRACTED_NEEDS_REVIEW (mungkin bergantung pada diagram di halaman PDF)",
+  "set_code": "8-2",
+  "source_document": "JAIM-SG1-03",
+  "source_page": 94
+ },
+ {
+  "question_id": "IMM-metal-surface-OQ-8-7-01",
+  "sector": "工業製品製造業",
+  "category": "金属表面処理",
+  "chapter": "IMM-metal-surface-C08",
+  "subchapter": "IMM-metal-surface-C08-S07",
+  "instruction": "Pilih satu dari pilihan A-D.",
+  "question": " Manakah urutan yang benar untuk besi, seng dan aluminium, jika disusun menurut kecenderungan ionisasi dari yang terbesar? Pilih satu dari pilihan A-D.",
+  "options": [
+   "A. Aluminium > seng > besi",
+   "B. Besi > aluminium > seng",
+   "C. Seng > besi > aluminium",
+   "D. Besi > seng > aluminium"
+  ],
+  "answer_key": "A",
+  "explanation": "Urutannya seperti pada Gambar 8-4, yaitu A.",
+  "competency": "学科 (pengetahuan)",
+  "difficulty": "dasar",
+  "reference": "JAIM-SG1-03 p.105",
+  "question_type": "multiple_choice_4",
+  "label": "OFFICIAL QUESTION",
+  "validation_status": "AUTO_EXTRACTED_NEEDS_REVIEW (mungkin bergantung pada diagram di halaman PDF)",
+  "set_code": "8-7",
+  "source_document": "JAIM-SG1-03",
+  "source_page": 105
  }
 ]
