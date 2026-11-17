@@ -39,10 +39,16 @@ PDF modul bidang lain tidak di-commit (hanya hasil render halaman WebP di `asset
 ## Bidang SSW yang belum ada
 Shipbuilding, Aviation, Forestry, Automobile Transportation (taksi; truk & bus sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.
 
-Status sumber per 2026-11-17 (hasil pencarian; belum ada materi yang dimasukkan):
-- Taksi: situs 全タク連 tidak lagi menampilkan teks belajar bagi pencari; belum ditemukan PDF.
-- Railway, Forestry, Linen Supply: hanya dokumen kebijakan/pedoman ujian; tidak ditemukan teks belajar resmi.
-- Distribution/Warehousing (物流倉庫): hanya kerangka 試験基準 (MLIT, ujian dibuka 2026-10-26); tanpa teks belajar.
-- Resource Recycling (資源循環): teks belajar baru direncanakan/dipesan KLH Jepang; belum terbit.
-- Shipbuilding, Aviation: belum ditemukan teks belajar resmi.
+Status sumber per 2026-11-17 (audit ulang lewat pencarian; belum ada materi yang dimasukkan):
+- Forestry (林業): hanya pedoman penerimaan & 試験実施要領 (林野庁); belum ada 学習用テキスト resmi.
+- Shipbuilding (造船・舶用工業): hanya 試験実施要領 (MLIT / 日本海事協会); belum ada teks belajar.
+- Aviation (航空): 試験実施要領 (JAEA) + manual penerimaan MLIT yang memuat glosarium 空港グランドハンドリング; bukan teks belajar.
+- Railway (鉄道, 5 区分): hanya 試験実施要領 & dokumen kebijakan; belum ada teks belajar.
+- Linen Supply: bidang baru, mulai 2027-04; baru ada pedoman operasional.
+- Distribution/Warehousing (物流倉庫): ujian dibuka 2026-10-26 (日本海事協会), 試験実施要領 masih disusun per 2026-06; tanpa teks belajar.
+- Resource Recycling (資源循環): bidang baru, teks belajar belum terbit.
+- Taksi: tidak ditemukan PDF teks belajar.
+Catatan: satu sumber berita (Mynavi, 2026-07) melaporkan penerimaan baru 特定技能1号 Food Service (外食業) dihentikan sejak Maret 2026; belum diverifikasi ke sumber pemerintah.
 Bidang-bidang ini tidak dibuat dari ingatan umum agar isi tetap bisa ditelusuri ke sumber resmi.
+
+Bidang yang sudah ada tetapi masih tipis (per audit): Livestock (54 kosakata), Machine Metal (36 soal), Industrial Mfg (148 soal), Kaigo JP (178 soal).

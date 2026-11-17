@@ -485,4 +485,5 @@ SUBS["bab4"] = [
 
 from bus_bab import BAB5, SUBS5
 BAB.append(BAB5); SUBS["bab5"] = SUBS5
+import truck_extra  # noqa: soal tambahan
 BOOK_PAGES = 301   # file p01..p301: truk = PDF hal.10-242 (p01-p233), bus = PDF hal.1-68 (p234-p301)

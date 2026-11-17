@@ -620,6 +620,108 @@
        "id": "思いやり・譲りあい.",
        "jp": "{思|おも}いやりと{譲|ゆず}りあいです。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di jalan sempit saat berpapasan, majulah dengan anggapan lawan akan berhenti.”",
+       "jp": "○か×か。「{狭|せま}い{道|みち}で{対向車|たいこうしゃ}と{近|ちか}づいたときは、{相手|あいて}が{止|と}まると{考|かんが}えて{進|すす}みます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: kita yang berhenti dan mengalah.",
+       "jp": "{自分|じぶん}が{停止|ていし}して{譲|ゆず}ります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Membuang sampah dari jendela dilarang, baik saat jalan maupun parkir.”",
+       "jp": "○か×か。「{走行中|そうこうちゅう}や{駐|ちゅう}{停車|ていしゃ}{中|なか}でも、{窓|まど}からのポイ{捨|す}ては{禁止|きんし}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ポイ{捨|す}ては{禁止|きんし}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Dasar etika mengemudi adalah…",
+       "jp": "{運転|うんてん}マナーの{基本|きほん}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "klakson",
+        "jp": "クラクション"
+       },
+       {
+        "id": "kecepatan",
+        "jp": "スピード"
+       },
+       {
+        "id": "kekuatan truk",
+        "jp": "トラックの{大|おお}きさ"
+       },
+       {
+        "id": "kepedulian dan saling mengalah",
+        "jp": "{思|おも}いやりと{譲|ゆず}りあい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "思いやり dan 譲りあい.",
+       "jp": "{思|おも}いやりと{譲|ゆず}りあいです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Perbedaan konsumsi BBM jika memakai gigi satu tingkat lebih rendah…",
+       "jp": "1{段|だん}{低|ひく}いギアで{走|はし}ると、{燃費|ねんぴ}はどのくらい{悪|わる}くなりますか。"
+      },
+      "opts": [
+       {
+        "id": "tidak berubah",
+        "jp": "{変|か}わらない"
+       },
+       {
+        "id": "sekitar 20–40%",
+        "jp": "{約|やく}20〜40%"
+       },
+       {
+        "id": "membaik 20%",
+        "jp": "20%よくなる"
+       },
+       {
+        "id": "sekitar 1%",
+        "jp": "{約|やく}1%"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "20–40% lebih boros.",
+       "jp": "20〜40%{悪|わる}くなります。"
+      }
      }
     ]
    }
@@ -802,6 +904,108 @@
       "exp": {
        "id": "中間点呼.",
        "jp": "{中間|ちゅうかん}{点呼|てんこ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada tenko sebelum kerja, kadar alkohol diperiksa dengan alat pendeteksi alkohol.”",
+       "jp": "○か×か。「{業務前点呼|ぎょうむまえてんこ}では、{アルコール検知器|あるこーるけんちき}で{酒気帯|しゅきお}びの{有無|うむ}を{確認|かくにん}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{アルコール検知器|あるこーるけんちき}で{確認|かくにん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Formulir inspeksi harian diserahkan dulu ke manajer perawatan kendaraan untuk dicek.”",
+       "jp": "○か×か。「{日常点検|にちじょうてんけん}{表|おもて}は、{運行管理者|うんこうかんりしゃ}ではなく{整備管理者|せいびかんりしゃ}にまず{渡|わた}して{確認|かくにん}してもらいます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: ke整備管理者 dulu, lalu ke運行管理者.",
+       "jp": "{先|さき}に{整備管理者|せいびかんりしゃ}に{渡|わた}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tenko di tengah perjalanan wajib untuk operasi jarak jauh…",
+       "jp": "{途中|とちゅう}の{点呼|てんこ}（{中間|ちゅうかん}{点呼|てんこ}）が{必要|ひつよう}なのは、どんな{運行|うんこう}ですか。"
+      },
+      "opts": [
+       {
+        "id": "semua operasi harian",
+        "jp": "{毎日|まいにち}の{運行|うんこう}すべて"
+       },
+       {
+        "id": "hanya dalam kota",
+        "jp": "{市内|しない}だけの{運行|うんこう}"
+       },
+       {
+        "id": "hanya saat hujan",
+        "jp": "{雨|あめ}の{日|にち}だけ"
+       },
+       {
+        "id": "2 malam 3 hari atau lebih",
+        "jp": "2{泊|はく}3{日|にち}{以上|いじょう}の{長距離|ちょうきょり}{運行|うんこう}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Rute ≥2 malam 3 hari.",
+       "jp": "2{泊|はく}3{日|にち}{以上|いじょう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Setelah kembali ke kantor, hal pertama yang dibuat adalah…",
+       "jp": "{運行|うんこう}が{終|お}わって{営業所|えいぎょうしょ}に{帰|かえ}ったら、まず{何|なに}を{作|つく}りますか。"
+      },
+      "opts": [
+       {
+        "id": "tabel inspeksi baru",
+        "jp": "{新|あたら}しい{点検|てんけん}{表|おもて}"
+       },
+       {
+        "id": "laporan pajak",
+        "jp": "{税金|ぜいきん}の{書類|しょるい}"
+       },
+       {
+        "id": "surat izin",
+        "jp": "{免許証|めんきょしょう}"
+       },
+       {
+        "id": "catatan kerja (業務記録)",
+        "jp": "{業務記録|ぎょうむきろく}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Catatan kerja → diserahkan ke manajer operasi.",
+       "jp": "{業務記録|ぎょうむきろく}です。"
       }
      }
     ]
@@ -1408,6 +1612,101 @@
        "id": "Bukan pola dasar.",
        "jp": "{基本パターン|きほんぱたあん}ではありません。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di jalan umum, berhenti tiap 4 jam di tempat aman untuk memeriksa pengikatan muatan.”",
+       "jp": "○か×か。「{一般道路|いっぱんどうろ}では、4{時間|じかん}ごとに{安全|あんぜん}な{場所|ばしょ}に{停車|ていしゃ}して、{荷物|にもつ}の{固縛|こばく}を{点検|てんけん}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "4{時間|じかん}ごとです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di jalan tol pemeriksaan 4 jam sekali sudah cukup.”",
+       "jp": "○か×か。「{高速道路|こうそくどうろ}では、{点検|てんけん}は4{時間|じかん}ごとで{十分|じゅうぶん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tol tiap 2 jam di SA/PA.",
+       "jp": "{高速道路|こうそくどうろ}は2{時間|じかん}ごとです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika muatan ditutup terpal, mengikat dengan terpal saja sudah cukup.”",
+       "jp": "○か×か。「シートをかけたときは、シートだけで{固縛|こばく}すれば{十分|じゅうぶん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tetap harus pakai tali.",
+       "jp": "{必|かなら}ずロープなども{使|つか}います。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pekerjaan di tempat tinggi (≥ 2 m dari tanah) harus memakai…",
+       "jp": "{地面|じめん}から2m{以上|いじょう}の{高|たか}い{場所|ばしょ}で{作業|さぎょう}するときは、{何|なに}を{使|つか}いますか。"
+      },
+      "opts": [
+       {
+        "id": "forklift",
+        "jp": "フォークリフトに{乗|の}る"
+       },
+       {
+        "id": "tangga atau pijakan",
+        "jp": "はしごや{踏み台|ふみだい}"
+       },
+       {
+        "id": "tali saja",
+        "jp": "ロープだけ"
+       },
+       {
+        "id": "tanpa alat",
+        "jp": "{何|なに}も{使|つか}わない"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tangga/pijakan.",
+       "jp": "はしごや{踏み台|ふみだい}です。"
+      }
      }
     ]
    },
@@ -1663,6 +1962,108 @@
       "exp": {
        "id": "Jatuh dari bak.",
        "jp": "{墜落|ついらく}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Roll box pallet ditangani sendirian maksimal sekitar 300 kg.”",
+       "jp": "○か×か。「ロールボックスパレットを1{人|にん}で{扱|あつか}うときは、{約|やく}300kgまでです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{約|やく}300kgまでです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh masuk ke bawah tail gate lifter saat bekerja.”",
+       "jp": "○か×か。「テールゲートリフターの{下|した}に{入|いっ}って{作業|さぎょう}してもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan masuk di bawah lifter.",
+       "jp": "リフターの{下|した}に{入|い}りません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Saat mengoperasikan forklift, wajib memiliki…",
+       "jp": "フォークリフトを{運転|うんてん}する{人|にん}は、{何|なに}を{持|も}っていなければいけませんか。"
+      },
+      "opts": [
+       {
+        "id": "tidak perlu apa-apa",
+        "jp": "{何|なに}もいらない"
+       },
+       {
+        "id": "sertifikat kursus keterampilan (技能講習修了証)",
+        "jp": "{技能|ぎのう}{講習|こうしゅう}{修了証|しゅうりょうしょう}"
+       },
+       {
+        "id": "SIM bus",
+        "jp": "バスの{免許|めんきょ}"
+       },
+       {
+        "id": "sertifikat bahasa",
+        "jp": "{日本語|にほんご}の{証明書|しょうめいしょ}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Perlu 技能講習修了証.",
+       "jp": "{技能|ぎのう}{講習|こうしゅう}{修了証|しゅうりょうしょう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Saat naik-turun forklift sebaiknya berpegangan pada…",
+       "jp": "フォークリフトに{乗り降|のりお}りするときは、{何|なに}を{使|つか}いますか。"
+      },
+      "opts": [
+       {
+        "id": "setir",
+        "jp": "ハンドル"
+       },
+       {
+        "id": "pegangan tangan dan tangga",
+        "jp": "{手|て}すりや{階段|かいだん}"
+       },
+       {
+        "id": "tuas",
+        "jp": "レバー"
+       },
+       {
+        "id": "garpu",
+        "jp": "フォーク"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Bukan tuas/setir.",
+       "jp": "{手|て}すりや{階段|かいだん}です。"
       }
      }
     ]
