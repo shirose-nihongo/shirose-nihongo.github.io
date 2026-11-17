@@ -143,6 +143,115 @@ const THEMES = {
       iso(214, 170, 26, 22, 18, COL.blue) + person(116, 198, "#2f3a6a", "#2f3a6a") + tree(70, 160, 1) +
       `<g transform="translate(186 196)"><rect x="-8" y="-12" width="16" height="12" rx="2" fill="#a8704a"/><rect x="-1.5" y="-16" width="3" height="5" fill="#666"/></g>`;
   },
+  /* Mesin & logam: pabrik gerigi, mesin bubut, cerobong */
+  machine() {
+    const gear = (x, y, r, c) => `<g transform="translate(${x} ${y})"><circle r="${r}" fill="${c}"/><circle r="${r * .4}" fill="#e8edf7"/>${[0,45,90,135].map(a => `<rect x="${-r - 3}" y="-2.5" width="${2 * r + 6}" height="5" rx="1.5" fill="${c}" transform="rotate(${a})"/>`).join("")}</g>`;
+    return base("#8fb4c9", "#5d8aa6") +
+      iso(128, 172, 56, 38, 40, COL.gray) + winsRight(128, 172, 56, 40, 4, 1, "#ffd978") +
+      iso(184, 150, 18, 18, 46, COL.dark) + `<rect x="170" y="92" width="26" height="5" rx="2" fill="#f08f2e"/>` +
+      `<g fill="#fff" opacity=".8"><circle cx="184" cy="82" r="6"/><circle cx="194" cy="73" r="5"/></g>` +
+      gear(84, 150, 13, "#f08f2e") + gear(104, 138, 8, "#d65a55") +
+      iso(214, 186, 26, 20, 14, COL.yellow) + `<rect x="206" y="160" width="20" height="4" fill="#9aa5ba"/>` +
+      person(150, 198, "#f08f2e", "#ffd23d") + cone(250, 176);
+  },
+  /* Elektrik & elektronik: papan sirkuit, chip, petir */
+  electronic() {
+    return base("#6fb3a8", "#3f8f84") +
+      `<g transform="translate(150 128)"><polygon points="0,-44 74,-7 0,30 -74,-7" fill="#1f7a55"/><polygon points="0,-44 74,-7 0,30 -74,-7" fill="none" stroke="#a6e8c2" stroke-width="1.6"/>
+      <path d="M-50 -7 L-22 7 L10 -9 L40 6" stroke="#f0d060" stroke-width="2.2" fill="none"/><path d="M-30 -22 L-8 -11 L24 -27" stroke="#f0d060" stroke-width="2" fill="none"/></g>` +
+      iso(150, 150, 30, 26, 14, COL.dark) + `<g stroke="#cfd6e4" stroke-width="2">${[-12,-4,4,12].map(o => `<path d="M${142 + o} ${142} v-8M${160 + o} ${138} v-8" />`).join("")}</g>` +
+      iso(96, 150, 16, 14, 8, COL.blue) + iso(206, 144, 16, 14, 10, COL.red) +
+      `<path d="M150 62 L136 96 H148 L142 122 L166 84 H153 L162 62Z" fill="#ffd23d" stroke="#e8a317" stroke-width="1.4"/>` +
+      person(126, 198, "#4d6fd0", "#fff") + tree(240, 172, .8);
+  },
+  /* Perlakuan permukaan logam: bak plating, benda berkilau */
+  plating() {
+    return base("#9fb7d0", "#6a88a8") +
+      iso(120, 174, 48, 34, 20, COL.gray) + `<polygon points="104,148 150,126 196,148 150,170" fill="#4fb6c9" opacity=".9"/><polygon points="112,150 150,132 188,150 150,168" fill="#7bd3e3"/>` +
+      iso(206, 170, 24, 22, 28, COL.blue) + `<rect x="198" y="128" width="16" height="6" rx="2" fill="#ffd23d"/>` +
+      `<path d="M120 98 V132 M120 98 H150" stroke="#5a6078" stroke-width="3" fill="none"/><rect x="144" y="98" width="12" height="22" rx="2" fill="#d9e1ee"/><path d="M150 100 l3 3 -3 3 -3 -3z" fill="#fff"/>` +
+      `<g fill="#fff" opacity=".9"><circle cx="86" cy="140" r="2.4"/><circle cx="92" cy="132" r="1.8"/><circle cx="100" cy="142" r="1.6"/></g>` +
+      person(88, 196, "#3aa6c9", "#fff", .9) + cone(246, 190);
+  },
+  /* Industri kayu: gergaji, tumpukan kayu, pohon */
+  wood() {
+    const log = (x, y) => `<g transform="translate(${x} ${y})"><rect x="-16" y="-6" width="32" height="12" rx="6" fill="#a8704a"/><ellipse cx="16" cy="0" rx="4" ry="6" fill="#e0b184"/><circle cx="16" cy="0" r="1.6" fill="#a8704a"/></g>`;
+    return base("#86c284", "#58a35f") +
+      iso(130, 170, 50, 36, 34, COL.wood) + winsRight(130, 170, 50, 34, 3, 1, "#ffe6b5") +
+      P([[84, 138], [130, 112], [176, 138], [130, 150]], "#7a4a2c") +
+      log(200, 176) + log(204, 164) + log(196, 188) + log(84, 190) + log(88, 180) +
+      tree(244, 158, 1.3) + tree(54, 160, 1.1) +
+      `<g transform="translate(150 196)"><circle r="10" fill="#cfd6e4"/><circle r="3" fill="#8892a6"/><path d="M0 -10 L3 -14 M8 -6 L12 -8 M10 2 L14 3" stroke="#8892a6" stroke-width="2"/></g>` +
+      person(120, 200, "#c46c50", "#ffd23d", .9);
+  },
+  /* Truk & bus */
+  truck() {
+    const road = P([[40, 150], [160, 90], [270, 144], [150, 196]], "#4a526e") + `<path d="M62 152 L160 104 L250 148" stroke="#ffd23d" stroke-width="2" stroke-dasharray="7 6" fill="none"/>`;
+    const veh = (x, y, c, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><ellipse cx="0" cy="3" rx="26" ry="4" fill="rgba(0,0,0,.2)"/><rect x="-26" y="-18" width="34" height="18" rx="2" fill="${c}"/><rect x="8" y="-13" width="17" height="13" rx="3" fill="#f4f7fc"/><rect x="12" y="-11" width="9" height="6" rx="1" fill="#bfe3ff"/><circle cx="-14" cy="1" r="4.4" fill="#222"/><circle cx="16" cy="1" r="4.4" fill="#222"/></g>`;
+    return base("#8ac28e", "#5aa46a") + road + veh(120, 140, "#d65a55", 1.15) + veh(204, 156, "#4d86d4", .95) +
+      iso(70, 176, 24, 22, 22, COL.cream) + winsRight(70, 176, 24, 22, 2, 1, "#cfe8ff") + cone(236, 176) + person(168, 192, "#3f6fd8", "#ffd23d", .85) + tree(252, 150, .9);
+  },
+  /* Kehutanan: hutan, gunung, rumah jaga, gergaji mesin */
+  forestry() {
+    const pine = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><rect x="-1.6" y="-4" width="3.2" height="8" fill="#6b4a30"/><polygon points="0,-30 9,-12 -9,-12" fill="#2f8a50"/><polygon points="0,-22 11,-4 -11,-4" fill="#3aa361"/></g>`;
+    return base("#6eb878", "#3f9460") +
+      `<polygon points="70,128 112,82 154,128" fill="#8892a6"/><polygon points="112,82 124,96 112,92 104,98" fill="#fff"/><polygon points="140,128 190,70 240,128" fill="#a2acc0"/><polygon points="190,70 204,88 190,82 178,90" fill="#fff"/>` +
+      pine(80, 164, 1.1) + pine(104, 174, 1.3) + pine(228, 166, 1.2) + pine(250, 150, 1) + pine(56, 148, .9) +
+      iso(160, 182, 28, 24, 18, COL.wood) + P([[122, 164], [160, 146], [198, 164], [160, 176]], "#a8574a") +
+      person(124, 196, "#e8805a", "#ffd23d", .9) + `<rect x="200" y="186" width="22" height="7" rx="3" fill="#a8704a"/>`;
+  },
+  /* Linen supply: laundry, tumpukan linen, mesin cuci, jemuran */
+  linen() {
+    return base("#9bc8d8", "#6aa0b4") +
+      iso(130, 172, 48, 34, 34, COL.white) + winsRight(130, 172, 48, 34, 3, 1, "#bfe3ff") +
+      `<g transform="translate(160 150)"><circle r="10" fill="#4d86d4" stroke="#e8edf7" stroke-width="3"/><circle r="5" fill="#9fd0f5"/></g>` +
+      iso(206, 176, 22, 20, 12, COL.white) + iso(206, 164, 22, 20, 12, COL.blue) + iso(206, 152, 22, 20, 12, COL.white) +
+      `<path d="M62 132 V170 M104 122 V160 M62 134 H104" stroke="#7a5638" stroke-width="3" fill="none"/><path d="M68 136 h14 v16 h-14z" fill="#fff"/><path d="M86 136 h14 v13 h-14z" fill="#f4b6c6"/>` +
+      person(112, 198, "#4d86d4", null, .9) + `<g fill="#fff" opacity=".9"><circle cx="232" cy="110" r="3"/><circle cx="240" cy="100" r="2.2"/></g>`;
+  },
+  /* Manufaktur kereta */
+  railway() {
+    const rails = `<path d="M40 150 L150 96 L262 152" stroke="#8a6f5a" stroke-width="3" fill="none"/><path d="M40 160 L150 106 L262 162" stroke="#8a6f5a" stroke-width="3" fill="none"/>` + [0,1,2,3,4,5,6,7,8].map(i => `<path d="M${54 + i * 22} ${152 - (i < 4 ? i * 6 : 0)} l0 8" stroke="#6a523c" stroke-width="2"/>`).join("");
+    return base("#8ac0a0", "#5a9a78") + rails +
+      iso(80, 176, 40, 30, 30, COL.gray) + winsRight(80, 176, 40, 30, 3, 1, "#d9ecff") +
+      `<g transform="translate(160 150)"><ellipse cx="0" cy="12" rx="40" ry="6" fill="rgba(0,0,0,.18)"/><rect x="-40" y="-18" width="80" height="26" rx="8" fill="#e8edf7"/><rect x="-40" y="-2" width="80" height="6" fill="#2f6fd0"/>${[-30,-16,-2,12].map(x => `<rect x="${x}" y="-13" width="10" height="9" rx="2" fill="#7fb6e8"/>`).join("")}<rect x="26" y="-14" width="10" height="12" rx="3" fill="#7fb6e8"/><circle cx="-26" cy="10" r="4" fill="#333"/><circle cx="24" cy="10" r="4" fill="#333"/></g>` +
+      person(214, 196, "#e8805a", "#ffd23d", .9) + cone(54, 186);
+  },
+  /* Logistik / gudang */
+  logistics() {
+    const box = (x, y, c) => iso(x, y, 14, 12, 12, c);
+    return base("#a0c4d8", "#6a9ab4") +
+      iso(124, 172, 60, 40, 38, COL.cream) + winsRight(124, 172, 60, 38, 4, 1, "#fff6d9") +
+      `<polygon points="60,134 124,100 188,134 124,134" fill="#c4584d"/><rect x="132" y="146" width="22" height="22" rx="2" fill="#a8574a"/><path d="M132 157 h22" stroke="#e8c9b0"/>` +
+      box(208, 180, COL.wood) + box(224, 172, COL.wood) + box(216, 166, COL.yellow) + box(96, 196, COL.wood) +
+      `<g transform="translate(178 196)"><rect x="-12" y="-8" width="20" height="10" rx="2" fill="#f2b84b"/><rect x="-14" y="-24" width="3" height="26" fill="#555"/><rect x="-14" y="-6" width="-8" height="3" fill="#555"/><circle cx="-6" cy="3" r="3" fill="#222"/><circle cx="6" cy="3" r="3" fill="#222"/></g>` +
+      person(140, 198, "#3f6fd8", "#ffd23d", .85);
+  },
+  /* Daur ulang: panah daur ulang, tong, tumpukan sortir */
+  recycling() {
+    const bin = (x, y, c) => `<g transform="translate(${x} ${y})"><path d="M-9 -16 H9 L7 0 H-7Z" fill="${c}"/><rect x="-10" y="-19" width="20" height="4" rx="1.5" fill="${c}" opacity=".8"/></g>`;
+    return base("#8cc48a", "#5aa062") +
+      iso(120, 172, 46, 34, 30, COL.green) + winsRight(120, 172, 46, 30, 3, 1, "#d9f3e0") +
+      `<g transform="translate(120 104)" fill="none" stroke="#2f9a5a" stroke-width="5" stroke-linecap="round"><path d="M-14 8 A16 16 0 0 1 -2 -14"/><path d="M14 8 A16 16 0 0 1 -6 20" transform="rotate(120)"/><path d="M0 -16 A16 16 0 0 1 16 6" transform="rotate(-10)"/></g><polygon points="104,92 114,86 112,98" fill="#2f9a5a"/>` +
+      bin(190, 184, "#4d86d4") + bin(208, 178, "#f2b84b") + bin(226, 172, "#d65a55") + bin(78, 190, "#3a8d5c") +
+      person(158, 198, "#4fa874", "#fff", .9) + tree(250, 160, .9);
+  },
+  /* Penerbangan: pesawat, menara, landasan */
+  aviation() {
+    return base("#9fc0e0", "#6a94c0") +
+      P([[50, 150], [150, 100], [262, 154], [160, 200]], "#4a526e") + `<path d="M72 150 L152 112 L240 152" stroke="#fff" stroke-width="2" stroke-dasharray="8 6" fill="none"/>` +
+      iso(232, 162, 14, 14, 44, COL.white) + `<polygon points="214,96 232,88 248,96 232,104" fill="#4d86d4"/><rect x="224" y="104" width="12" height="7" fill="#bfe3ff"/>` +
+      `<g transform="translate(130 134) rotate(-18)"><ellipse cx="0" cy="0" rx="42" ry="9" fill="#f4f7fc"/><path d="M-4 0 L-26 -26 L-14 -26 L12 -2Z" fill="#d9e1ee"/><path d="M-4 2 L-26 28 L-14 28 L12 4Z" fill="#c3cbdb"/><path d="M-36 -2 L-44 -14 L-36 -14 L-26 -2Z" fill="#d65a55"/><ellipse cx="30" cy="-2" rx="9" ry="4" fill="#7fb6e8"/><rect x="-24" y="-3" width="46" height="3" fill="#4d86d4"/></g>` +
+      person(84, 190, "#f2b84b", "#ffd23d", .85) + cone(190, 188);
+  },
+  /* Galangan kapal */
+  ship() {
+    return base("#8fb8d8", "#5a8cb4") +
+      P([[40, 150], [150, 96], [262, 150], [150, 204]], "#4a90c4") +
+      `<g transform="translate(150 150)"><ellipse cx="0" cy="14" rx="48" ry="6" fill="rgba(0,0,0,.2)"/><path d="M-46 -2 H46 L36 14 H-36Z" fill="#c4584d"/><rect x="-46" y="-6" width="92" height="5" fill="#e8edf7"/><rect x="-14" y="-22" width="28" height="16" rx="2" fill="#f4f7fc"/><rect x="-10" y="-18" width="20" height="5" fill="#7fb6e8"/><rect x="-4" y="-32" width="8" height="10" fill="#d65a55"/></g>` +
+      `<g stroke="#f08f2e" stroke-width="4" fill="none"><path d="M70 176 V104 H112"/></g><path d="M112 104 V126" stroke="#555" stroke-width="2"/><rect x="108" y="126" width="8" height="6" fill="#555"/>` +
+      iso(228, 182, 24, 20, 20, COL.gray) + person(100, 196, "#f2b84b", "#ffd23d", .9);
+  },
   generic() {
     return base() + iso(150, 170, 44, 40, 44, COL.blue) + winsRight(150, 170, 44, 44, 3, 3) + person(122, 198) + tree(222, 164, 1);
   },
