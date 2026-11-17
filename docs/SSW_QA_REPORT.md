@@ -9,15 +9,15 @@ Skrip: `tools/ssw/qa/ssw_qa.py` (jalankan dengan server statis di port 8765).
 | Bidang | Uji | Lulus | Gagal |
 |---|---:|---:|---:|
 | auto-maintenance | 66 | 66 | 0 |
-| auto-transport | 56 | 56 | 0 |
+| auto-transport | 58 | 58 | 0 |
 | building-cleaning | 50 | 50 | 0 |
 | construction-bangunan | 50 | 50 | 0 |
 | construction-lifeline | 50 | 50 | 0 |
 | construction | 50 | 50 | 0 |
 | industrial-mfg | 66 | 66 | 0 |
 | mfg-machine-metal | 66 | 66 | 0 |
-| wood-industry | 56 | 56 | 0 |
-| **Total** | 510 | 510 | 0 |
+| wood-industry | 58 | 58 | 0 |
+| **Total** | 514 | 514 | 0 |
 
 ## Daftar pengujian (hasil pada bidang pertama, mobile)
 

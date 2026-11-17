@@ -19,9 +19,13 @@ import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
-  "wood-industry": [{ t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" }],
+  "wood-industry": [
+    { t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" },
+    { t: "Buku versi Indonesia (ringkasan Shirose)", u: "assets/ssw/wood-industry/pdf/shirose-ringkasan-indonesia-wood-industry.pdf" }
+  ],
   "auto-transport": [
     { t: "Teks resmi Truk (JP, 242 hal.)", u: "assets/ssw/auto-transport/pdf/jta-truck-gakushu-text-ja.pdf" },
+    { t: "Buku versi Indonesia (ringkasan Shirose)", u: "assets/ssw/auto-transport/pdf/shirose-ringkasan-indonesia-auto-transport.pdf" },
     { t: "Teks resmi Bus (JP, 68 hal.) — situs Asosiasi Bus", u: "https://www.bus.or.jp/news/16554/", ext: 1 }
   ],
   "auto-maintenance": [
