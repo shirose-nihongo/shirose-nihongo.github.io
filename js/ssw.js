@@ -83,7 +83,8 @@ function say(text, slug, read) {
 }
 
 const crumbs = (parts) => `<div class="sw-crumbs">${parts.map((p, i) => p.go ? `<a onclick="${p.go}">${p.t}</a>` : `<b>${p.t}</b>`).join(" <span>›</span> ")}</div>`;
-const wrap = (inner, cls = "") => `<div class="sw-wrap ${cls}">${inner}</div>`;
+const rkBar = `<div class="sw-rkbar"><button type="button" class="btn ghost sm" onclick="route('ssw-rangkuman')" title="Buka Rangkuman SSW">📒 Rangkuman SSW</button></div>`;
+const wrap = (inner, cls = "") => `<div class="sw-wrap ${cls}">${rkBar}${inner}</div>`;
 const msgPage = (emoji, title, text, back = "route('ssw')") => wrap(`
   <div class="sw-panel sw-center"><div class="sw-emoji">${emoji}</div><h2>${title}</h2><p class="sw-muted">${text}</p>
   <button class="btn" onclick="${back}">← Kembali</button></div>`);
@@ -272,10 +273,10 @@ function figsBar(pick) {
 }
 function summaryHTML(s, ttl = "") {
   if (!s) return "";
-  const rk = (lbl, x, n) => { const front = (ttl ? ttl + " · " : "") + lbl + (n ? " " + n : ""), back = plain(x); return `<button type="button" class="sw-rk" title="Masukkan ke Rangkuman" aria-label="Masukkan ke Rangkuman" data-f="${esc(front)}" data-b="${esc(back)}" onclick="SSW.rk(this)">📒＋</button>`; };
+  const rk = (lbl, x, n) => { const front = (ttl ? ttl + " · " : "") + lbl + (n ? " " + n : ""), back = plain(x); return `<button type="button" class="sw-rk" title="Masukkan ke Rangkuman SSW" aria-label="Masukkan ke Rangkuman SSW" data-f="${esc(front)}" data-b="${esc(back)}" onclick="SSW.rk(this)">📒＋</button>`; };
   const box = (t, cls, arr, lbl) => arr && arr.length ? `<div class="sw-sbox ${cls}"><h4>${t}</h4><ul>${arr.map((x, i) => `<li>${rich(x)} ${rk(lbl, x, i + 1)}</li>`).join("")}</ul></div>` : "";
   const all = [["Inti", [s.core]], ["Poin", s.points || []], ["Hindari", [].concat(s.avoid || [])], ["Ujian", [].concat(s.exam || [])]];
-  const allBtn = `<div class="sw-actions left" style="margin:6px 0"><button type="button" class="btn ghost sm" onclick="SSW.rkAll(this)" data-t="${esc(ttl)}" data-j="${esc(JSON.stringify(all.flatMap(([l, a]) => a.map((x, i) => [l, a.length > 1 ? i + 1 : 0, plain(x)]))))}">📒 Masukkan semua ringkasan ke Rangkuman</button></div>`;
+  const allBtn = `<div class="sw-actions left" style="margin:6px 0"><button type="button" class="btn ghost sm" onclick="SSW.rkAll(this)" data-t="${esc(ttl)}" data-j="${esc(JSON.stringify(all.flatMap(([l, a]) => a.map((x, i) => [l, a.length > 1 ? i + 1 : 0, plain(x)]))))}">📒 Masukkan semua ringkasan ke Rangkuman SSW</button></div>`;
   return `<div class="sw-core">${rich(s.core)} ${rk("Inti", s.core, 0)}</div>` + allBtn +
     box("Poin yang harus diingat", "pt", s.points, "Poin") + box("Kesalahan yang harus dihindari", "av", s.avoid, "Hindari") + box("Berpotensi keluar di ujian", "ex", s.exam, "Ujian");
 }
@@ -867,8 +868,8 @@ const SSW = window.SSW = {
     let m = mode; if (mode === "mixed") { const ms = ["flashcard", "multiple", "matching"]; m = ms[Math.floor(Math.random() * ms.length)]; toast("Mode acak: " + { flashcard: "Flashcard", multiple: "Pilihan ganda", matching: "Matching" }[m]); }
     await window.sswHafalStart({ items: hafItems(rows), mode: m, back: `ssw-hafal/${slug}` });
   },
-  async rk(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); const ok = await window.rangkumCepat({ jp: b.dataset.f, arti: b.dataset.b }, "SSW"); if (ok) { b.textContent = "✓"; b.classList.add("on"); } },
-  async rkAll(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); let rows = []; try { rows = JSON.parse(b.dataset.j || "[]"); } catch (_) {} const t = b.dataset.t || ""; let n = 0; for (const [l, i, x] of rows) { if (!x) continue; if (await window.rangkumCepat({ jp: (t ? t + " · " : "") + l + (i ? " " + i : ""), arti: x }, "SSW")) n++; } b.textContent = "✓ " + n + " kartu masuk Rangkuman"; },
+  async rk(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); const ok = await window.rangkumCepat({ jp: b.dataset.f, arti: b.dataset.b }, "SSW", "ssw"); if (ok) { b.textContent = "✓"; b.classList.add("on"); } },
+  async rkAll(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); let rows = []; try { rows = JSON.parse(b.dataset.j || "[]"); } catch (_) {} const t = b.dataset.t || ""; let n = 0; for (const [l, i, x] of rows) { if (!x) continue; if (await window.rangkumCepat({ jp: (t ? t + " · " : "") + l + (i ? " " + i : ""), arti: x }, "SSW", "ssw")) n++; } b.textContent = "✓ " + n + " kartu masuk Rangkuman SSW"; },
   async vadd(slug, id) { const pack = await loadPack(slug), v = pack.vocab.find(x => x.id === id); if (!v || !window.sswAddCard) return; await window.sswAddCard(vnum(v), vnum(v) - 1); const P = await getProgress(slug); await syncCards(P, pack.vocab, true); toast("Masuk daftar hafalan ✓"); },
   /* --- hub hafalan --- */
   hafalCount() {

@@ -868,15 +868,25 @@ function _safeRangId(jp){
   return jp.replace(/[\.#\$\[\]\/]/g, "_").slice(0, 120);
 }
 
-export async function tambahRangkuman({ jp, kana, arti, sumber = null, kategori = null }) {
+/* Rangkuman dipisah per bidang: "jlpt" | "ssw" | "jft". Data lama tanpa bidang ditebak dari 'sumber'. */
+export function bidangRangkuman(v){
+  if (v && (v.bidang === "ssw" || v.bidang === "jft" || v.bidang === "jlpt")) return v.bidang;
+  const s = String((v && v.sumber) || "");
+  if (/ssw/i.test(s)) return "ssw";
+  if (/jft|·\s*IR\d/i.test(s)) return "jft";
+  return "jlpt";
+}
+
+export async function tambahRangkuman({ jp, kana, arti, sumber = null, kategori = null, bidang = "jlpt" }) {
   if (!currentUser) throw new Error("Harus login dulu");
   if (!jp) throw new Error("Kata kosong");
+  if (bidang !== "ssw" && bidang !== "jft") bidang = "jlpt";
   const uid = currentUser.uid;
-  const id = _safeRangId(jp);
+  const id = (bidang === "jlpt" ? "" : bidang + "__") + _safeRangId(jp);
   const now = Date.now();
   const payload = {
     jp, kana: kana || "", arti: arti || "",
-    sumber: sumber || "", kategori: kategori || "",
+    sumber: sumber || "", kategori: kategori || "", bidang,
     updatedMs: now,
   };
 
@@ -901,7 +911,7 @@ export async function tambahRangkuman({ jp, kana, arti, sumber = null, kategori 
   }
 }
 
-export async function listRangkuman() {
+export async function listRangkuman(bidang) {
   if (!currentUser) return [];
   const uid = currentUser.uid;
   // Local first — always available.
@@ -921,7 +931,7 @@ export async function listRangkuman() {
       if (v._local){
         try {
           await setDoc(doc(db, "siswa", uid, "rangkuman", id),
-            { jp:v.jp, kana:v.kana||"", arti:v.arti||"", sumber:v.sumber||"", kategori:v.kategori||"", updated: serverTimestamp() },
+            { jp:v.jp, kana:v.kana||"", arti:v.arti||"", sumber:v.sumber||"", kategori:v.kategori||"", bidang:bidangRangkuman(v), updated: serverTimestamp() },
             { merge: true });
           delete local[id]._local;
         } catch {}
@@ -933,7 +943,9 @@ export async function listRangkuman() {
   }
 
   // Sort newest first by updatedMs if present, otherwise stable.
-  return Array.from(merged.values()).sort((a,b) => (b.updatedMs||0) - (a.updatedMs||0));
+  let out = Array.from(merged.values()).map(v => ({ ...v, bidang: bidangRangkuman(v) }));
+  if (bidang) out = out.filter(v => v.bidang === bidang);
+  return out.sort((a,b) => (b.updatedMs||0) - (a.updatedMs||0));
 }
 
 export async function hapusRangkuman(id) {
