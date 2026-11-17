@@ -14,11 +14,17 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261118c";
+} from "./ssw-core.js?v=20261118d";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "railway-track": [
+    { t: "受験案内 軌道整備 (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_efac198c2698498586d88991447b6152.pdf", ext: true },
+    { t: "試験実施要領 軌道整備 (resmi MLIT/MOJ)", u: "https://www.moj.go.jp/isa/content/001435333.pdf", ext: true },
+    { t: "学科 試験問題サンプル (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_fc3a811b535a466087a0367a267e0435.pdf", ext: true },
+    { t: "実技 試験問題サンプル (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_27b103ed718044d8a0937541ff752c9a.pdf", ext: true }
+  ],
   "shipbuilding": [
     { t: "溶接 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-guidance.pdf" },
     { t: "溶接 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-point.pdf" },
