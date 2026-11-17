@@ -266,20 +266,20 @@ function summaryHTML(s, ttl = "") {
 }
 function flatSubs(b, pack) { const out = []; for (const c of visibleChapters(b, pack)) for (const s of c.subs) out.push({ c, s }); return out; }
 // Tombol ganti bahasa melayang (muncul saat halaman di-scroll turun) di halaman baca materi.
-window.__swLangFloat = (slug, subId, mode, lang) => {
+window.__swLangFloat = (slug, subId, mode, lang, book) => {
   document.getElementById("sw-langfloat")?.remove();
   if (window.__swLfOff) { window.__swLfOff(); window.__swLfOff = null; }
   const el = document.createElement("div");
   el.id = "sw-langfloat"; el.className = "sw-seg sm"; el.setAttribute("aria-label", "Ganti bahasa materi");
-  const mk = (l, t) => `<button type="button" class="${lang === l ? "on" : ""}" onclick="route('ssw-baca/${slug}/${subId}/${mode}/${l}')">${t}</button>`;
+  const mk = (l, t) => `<button type="button" class="${lang === l ? "on" : ""}" onclick="${book ? `SSW.bookLang('${l}')` : `route('ssw-baca/${slug}/${subId}/${mode}/${l}')`}">${t}</button>`;
   el.innerHTML = mk("jp", "日本語") + mk("id", "ID");
   document.body.append(el);
   const upd = () => {
-    if (!document.querySelector(".sw-lesson")) { el.remove(); window.removeEventListener("scroll", upd); return; }
-    el.classList.toggle("show", window.scrollY > 200);
+    if (!document.querySelector(book ? ".sw-book" : ".sw-lesson")) { el.remove(); clearInterval(iv); return; }
+    el.classList.add("show");
   };
-  window.addEventListener("scroll", upd, { passive: true });
-  window.__swLfOff = () => window.removeEventListener("scroll", upd);
+  const iv = setInterval(upd, 800);
+  window.__swLfOff = () => clearInterval(iv);
   upd();
 };
 async function renderBaca([slug, subId, mode, lang]) {
@@ -375,7 +375,7 @@ async function renderBuku([slug, lang, page]) {
       <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
       <button class="btn" onclick="SSW.bookGo(1)">Berikutnya ›</button></div>`}
     <div class="sw-attr">Sumber: ${esc(pack.chapters[0]?.source || "")}</div>
-  </div>`;
+  </div>` + (setTimeout(() => window.__swLangFloat && window.__swLangFloat(slug, "", "", lang, true), 0), "");
 }
 
 /* ============================== KOSAKATA ============================== */
