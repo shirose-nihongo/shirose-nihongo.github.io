@@ -52,6 +52,9 @@ with sync_playwright() as p:
           rec(slug,vpn,'viewer buku ID memuat halaman',pg.evaluate("(()=>{const i=document.querySelector('.bk-pgw img,#bk-img');return !!i&&i.naturalWidth>0&&i.src.includes('/id/')})()"),'')
           go(f'ssw-buku/{slug}/jp/1',2500)
           rec(slug,vpn,'viewer buku memuat halaman',pg.evaluate("(()=>{const i=document.querySelector('.bk-pgw img,#bk-img');return !!i&&i.naturalWidth>0})()"),'')
+        if slug=='kaigo':
+          go(f'ssw-kuis/{slug}',2500); tt=txt()
+          rec(slug,vpn,'kaigo ID: tanpa kuis kosakata & tes membaca',('Arti kosakata' not in tt) and ('Tes Membaca' not in tt) and ('Ujian Penuh' in tt),tt[:60].replace('\n',' '))
         go(f'ssw-kosa/{slug}/all',2500); rec(slug,vpn,'daftar kosakata',len(txt())>300,len(txt()))
         # flashcard (hafalan hub -> kartu semua)
         go(f'ssw-hafal/{slug}',2500)

@@ -15,9 +15,10 @@ Skrip: `tools/ssw/qa/ssw_qa.py` (jalankan dengan server statis di port 8765).
 | construction-lifeline | 50 | 50 | 0 |
 | construction | 50 | 50 | 0 |
 | industrial-mfg | 66 | 66 | 0 |
+| kaigo | 60 | 60 | 0 |
 | mfg-machine-metal | 66 | 66 | 0 |
 | wood-industry | 58 | 58 | 0 |
-| **Total** | 514 | 514 | 0 |
+| **Total** | 574 | 574 | 0 |
 
 ## Daftar pengujian (hasil pada bidang pertama, mobile)
 
