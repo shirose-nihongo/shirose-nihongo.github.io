@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261117u";
+} from "./ssw-core.js?v=20261118a";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
@@ -260,7 +260,7 @@ async function renderPeta([slug]) {
     <div class="sw-actions">
       ${last ? `<button class="btn" onclick="route('${esc(last.route)}')">▶ Lanjutkan: ${esc(last.label)}</button>` : ""}
       <button class="btn ghost" onclick="route('ssw-hafal/${slug}')">🃏 Flashcard${st.due ? ` · ${st.due} jatuh tempo` : ""}</button>
-      <button class="btn ghost" onclick="route('ssw-kosa/${slug}/all')">📚 Kosakata (${st.total})</button>
+      <button class="btn ghost" onclick="route('ssw-kosa/${slug}/all')">📚 Kosakata (${st.total})</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/katakana')">カ Katakana</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/kanji')">字 Kanji</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/bunpou')">文 Bunpou</button>
       ${pack.idx.diagram ? `<button class="btn ghost" onclick="route('ssw-diagram/${slug}')">🔧 Diagram Interaktif</button>` : ""}
       ${pack.idx.nobook ? "" : `<button class="btn ghost" onclick="route('ssw-buku/${slug}/${getLang()}/1')">📖 Buku interaktif</button>`}
       <button class="btn ghost" onclick="route('ssw-kuis/${slug}')">📝 Kuis</button>
@@ -1237,7 +1237,50 @@ async function renderDiagram([slug, did]) {
       <div class="sw-actions left"><button class="btn" onclick="SSW.dgFlash()">🃏 Flashcard diagram ini</button><button class="btn ghost" onclick="route('ssw-hafal/${slug}')">📚 Semua hafalan</button></div></div>`);
 }
 
+
+/* ============================== PUSTAKA: Katakana / Kanji / Bunpou (daftar + flashcard) ============================== */
+const _pus = {};
+const pusLoad = (slug, f) => { const k = slug + "/" + f; return _pus[k] || (_pus[k] = fetch(`./data/ssw/${slug}/${f}.json`, { cache: "no-cache" }).then(r => r.ok ? r.json() : { items: [] }).then(d => d.items || []).catch(() => { delete _pus[k]; return []; })); };
+const PUS_T = { katakana: ["カタカナ", "Katakana"], kanji: ["漢字", "Kanji"], bunpou: ["文法", "Bunpou"] };
+function pusRow(j, it) {
+  if (j === "katakana") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>${esc(it.r || "")}${it.n ? " · muncul " + it.n + "×" : ""}</small></span></summary>${it.contoh ? `<div class="x"><p class="jp">${rich(it.contoh)}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p></div>` : ""}</details>`;
+  if (j === "kanji") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>音 ${esc(it.on || "-")} · 訓 ${esc(it.kun || "-")}</small></span></summary><div class="x">${(it.c || []).map(c => `<p><span class="jp">${esc(c.k)}</span> (${esc(c.r)}) — ${esc(c.a)}</p>`).join("") || '<p class="sw-muted">Belum ada contoh kata.</p>'}</div></details>`;
+  return `<details class="sw-vrow"><summary><span class="jp k" style="font-size:18px">${esc(it.pola)}</span><span class="m"><b>${esc(it.arti)}</b><small>${esc(it.cara || "")}</small></span></summary><div class="x"><p class="jp">${rich(it.contoh || "")}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p>${it.contoh_dari === "umum" ? '<p class="sw-muted" style="font-size:12px">Contoh umum (bukan dari materi).</p>' : ""}</div></details>`;
+}
+function pusCards(j, items) {
+  return items.map((it, i) => {
+    const no = 900000 + i;
+    if (j === "katakana") return { tipe: "ssw", idx: no - 1, no, skey: "kt:" + it.k, front: it.k, reading: it.r || "", back: it.a };
+    if (j === "kanji") return { tipe: "ssw", idx: no - 1, no, skey: "kj:" + it.k, front: it.k, reading: [it.on, it.kun].filter(Boolean).join(" / "), back: it.a };
+    return { tipe: "ssw", idx: no - 1, no, skey: "bp:" + it.id, front: it.pola, reading: it.cara || "", back: it.arti + (it.contoh ? "\n" + String(it.contoh).replace(/\{([^|}]+)\|[^}]*\}/g, "$1").replace(/\*\*/g, "") + " — " + (it.arti_contoh || "") : "") };
+  });
+}
+const PUS_FILE = { katakana: "katakana", kanji: "kanji-kartu", bunpou: "bunpou" };
+async function renderPustaka([slug, j = "katakana"]) {
+  applyRuby();
+  const g = await gate(slug); if (g.err) return g.err;
+  const { b } = g;
+  if (!PUS_T[j]) j = "katakana";
+  const items = await pusLoad(slug, PUS_FILE[j]);
+  window.__swPus = { slug, j, items, n: 60 };
+  setTimeout(() => SSW.pusFilter(), 0);
+  return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: PUS_T[j][1] }])}
+    <div class="sw-head compact"><div class="jp">${PUS_T[j][0]}</div><h1>${PUS_T[j][1]} ${esc(b.nama)}</h1><p>${items.length} item dari materi bidang ini. Cari, buka detail, atau hafalkan dengan flashcard.</p></div>
+    <div class="sw-tabs"><button onclick="route('ssw-kosa/${slug}/all')">Kosakata</button>${Object.keys(PUS_T).map(k => `<button class="${k === j ? "on" : ""}" onclick="route('ssw-pustaka/${slug}/${k}')">${PUS_T[k][1]}</button>`).join("")}</div>
+    <div class="sw-tools"><input id="sw-pq" type="search" placeholder="Cari…" oninput="SSW.pusFilter()"><button class="btn" onclick="SSW.pusHafal('flashcard')">🃏 Flashcard</button><button class="btn ghost" onclick="SSW.pusHafal('multiple')">✅ Pilihan ganda</button></div>
+    <p class="sw-muted" id="sw-pcount"></p><div class="sw-vlist" id="sw-plist"></div><div class="sw-actions"><button class="btn ghost" id="sw-pmore" onclick="SSW.pusMore()">Tampilkan lebih banyak</button></div>
+    <div class="sw-attr">Arti & contoh adalah materi buatan Shirose (perlu review ahli). Arti kanji dari kamus KANJIDIC/N-level.</div>`);
+}
+const pusMatch = (j, it, q) => !q || (j === "katakana" ? [it.k, it.r, it.a] : j === "kanji" ? [it.k, it.on, it.kun, it.a, ...(it.c || []).map(c => c.k + c.r + c.a)] : [it.pola, it.arti, it.cara, it.contoh]).some(x => String(x || "").toLowerCase().includes(q));
+Object.assign(window.SSW = window.SSW || {}, {
+  pusFilter() { const P = window.__swPus; if (!P) return; const q = ((document.getElementById("sw-pq") || {}).value || "").trim().toLowerCase(); P.rows = P.items.filter(it => pusMatch(P.j, it, q)); P.n = 60; SSW.pusDraw(); },
+  pusDraw() { const P = window.__swPus; const l = document.getElementById("sw-plist"); if (!l) return; l.innerHTML = P.rows.slice(0, P.n).map(it => pusRow(P.j, it)).join("") || '<p class="sw-muted">Tidak ada hasil.</p>'; const c = document.getElementById("sw-pcount"); if (c) c.textContent = `${P.rows.length} item`; const m = document.getElementById("sw-pmore"); if (m) m.style.display = P.rows.length > P.n ? "" : "none"; },
+  pusMore() { window.__swPus.n += 100; SSW.pusDraw(); },
+  async pusHafal(mode) { const P = window.__swPus; if (!window.sswHafalStart) return; const all = (P.rows && P.rows.length ? P.rows : P.items); const rows = all.length > 100 ? all.slice().sort(() => Math.random() - .5).slice(0, 100) : all; const ok = await window.sswHafalStart({ items: pusCards(P.j, rows), mode, back: `ssw-pustaka/${P.slug}/${P.j}` }); if (ok === false) toast && toast("Tidak ada item"); },
+});
+
 export const SSW_ROUTES = {
+  "ssw-pustaka": (p) => renderPustaka(p),
   ssw: () => renderHub(),
   "ssw-peta": (p) => renderPeta(p),
   "ssw-bab": (p) => renderBab(p),
