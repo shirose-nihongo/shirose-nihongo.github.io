@@ -139,3 +139,5 @@ AM = {
   ("燃料タンク内は、爆発の危険を減らすために窒素を入れる。", "Tangki BBM diisi nitrogen untuk mengurangi risiko ledakan.", True, "Benar."),
  ],
 }
+import aviation_gh_text1 as _T1
+GH['bab8'] = _T1.QUIZ

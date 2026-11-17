@@ -220,3 +220,5 @@ AM = """
 胴体|どうたい|badan pesawat (fuselage)|b5s5
 落雷|らくらい|sambaran petir|b5s5
 """.strip().split("\n")
+import aviation_gh_text1 as _T1
+GH += _T1.VOCAB

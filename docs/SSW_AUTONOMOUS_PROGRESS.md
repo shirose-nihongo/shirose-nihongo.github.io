@@ -81,5 +81,5 @@ Modul lama (7 bab/31 subbab buatan sendiri) DIHAPUS dan diganti dengan struktur 
 - Fitur setara modul PDF lain: halaman buku JP (52 + 70 hal. dari PDF resmi), buku ID (ringkasan Shirose, 21 + 22 hal.), teks baca ID & 日本語 berfurigana (MeCab/unidic + kamus istilah), kosakata, kuis per bab & per subbab, ujian penuh, hafalan, PDF resmi di tombol Dokumen.
 - Soal latihan = buatan Shirose dari teks resmi (bukan soal resmi); jumlah soal/durasi ujian resmi belum diverifikasi.
 - Generator: `tools/ssw/aviation_build.py` (+ `aviation_*_data.py`), lalu `render_pages.py` (JP) dan `build_idbook.py` (ID).
-- Kurang: GH Text 1 (Safety & Quality). Shipbuilding: belum ada teks belajar resmi, hanya pedoman ujian.
+- GH Text 1 (Safety & Quality REV2, 2026-06-23) sudah masuk 2026-11-18 sebagai bab 8 `aviation-gh` (hal. 53-78 buku JP gabungan). Belum ada: `sws_ii_GH_vol2` (teks 2号, bukan 1号). Shipbuilding: belum ada teks belajar resmi, hanya pedoman ujian — sengaja TIDAK dibuat (keputusan pemilik: tanpa PDF resmi, dibiarkan).
 - Temuan: akses bidang SSW untuk siswa default TERKUNCI (hanya building-cleaning); guru harus membuka tiap bidang. Bidang baru `aviation` ikut daftar di dashboard guru lewat DEFAULT_BIDANG.

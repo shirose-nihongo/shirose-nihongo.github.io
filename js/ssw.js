@@ -26,6 +26,7 @@ const PDF_SUMBER = {
     { t: "Statistik pelaksanaan ujian (JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-jokyo-r01-r07.pdf" }
   ],
   "aviation-gh": [
+    { t: "Teks belajar resmi GH — Text 1: Keselamatan & Kualitas (JP, 26 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text1-anzen-hinshitsu-rev2.pdf" },
     { t: "Teks belajar resmi GH — Text 2 (JP, 52 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text2-gh-rev2-1.pdf" },
     { t: "Teks GH edisi 1 (arsip, 40 hal.)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text-1go.pdf" },
     { t: "Soal contoh resmi GH", u: "assets/ssw/aviation-gh/pdf/jaea-gh-sample-questions.pdf" },
