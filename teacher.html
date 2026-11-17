@@ -218,8 +218,14 @@ tr.stat-row td{padding-top:0; border-top:none;}
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script type="module">
+window.aturKoinSiswa = async (uid, lama) => {
+  const v = prompt("Atur saldo koin siswa ini menjadi (angka):", String(lama || 5000)); if (v === null) return;
+  const n = Math.round(Number(v)); if (!(n >= 0)) { alert("Angka tidak valid"); return; }
+  if (!confirm("Ubah saldo koin dari " + (lama||0).toLocaleString("id-ID") + " menjadi " + n.toLocaleString("id-ID") + "?")) return;
+  try { await FB.setWalletKoinOf(uid, n, "pengembalian koin gacha oleh guru"); alert("✅ Saldo sekarang " + n.toLocaleString("id-ID") + ". Siswa melihatnya saat membuka aplikasi lagi."); location.reload(); } catch (e) { alert("❌ " + e.message); }
+};
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261117d";
+import * as FB from "./js/firebase-sync.js?v=20261117e";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
 
 const state = {
@@ -1911,7 +1917,8 @@ window.studentProfile = async (uid) => {
       <div class="panel" style="text-align:center; padding:12px;"><div style="font-size:22px; font-weight:800; color:var(--gold);">${avgSkor}</div><div style="font-size:11px; color:var(--gray);">Rata-rata nilai</div></div>
     </div>
 
-    <p style="margin-top:12px; font-size:13px;">🪙 Dompet koin (semua fitur): <b>${dompet ? (dompet.koin||0).toLocaleString("id-ID") : "belum dimigrasi (muncul setelah siswa membuka aplikasi)"}</b></p>
+    <p style="margin-top:12px; font-size:13px;">🪙 Dompet koin (semua fitur): <b>${dompet ? (dompet.koin||0).toLocaleString("id-ID") : "belum dimigrasi (muncul setelah siswa membuka aplikasi)"}</b>
+      <button class="btn ghost" style="margin-left:8px; padding:4px 10px; font-size:12px;" onclick="aturKoinSiswa('${uid}', ${dompet ? (dompet.koin||0) : 0})">✏️ Atur koin</button></p>
     <h3 style="margin-top:14px;">Progres per Level</h3>
     <div class="table-wrap">
       <table>

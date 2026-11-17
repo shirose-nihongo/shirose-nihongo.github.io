@@ -499,7 +499,7 @@ function _baseSet(k) { try { if (currentUser && typeof k === "number") localStor
 /* Saldo yang ditampilkan bila dompet tidak terbaca: cache saldo server − koin gacha; tanpa cache: koin per-level − koin gacha. */
 function _koinFallback(levelKoin) { const b = _baseGet(); return Math.max(0, (b !== null ? b : (Number(levelKoin) || 0)) - _gSpent()); }
 const WALLET_LVLS = ["n5","n4","n3","n2","n1","ir0","ir1","ir2"];
-let _walletOff = false, _walletErr = "";
+let _walletOff = false, _walletErr = "", _resetTok = 0;
 export function walletError() { return _walletErr; }
 async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   const uid = currentUser.uid, wref = doc(db, "siswa", uid, "wallet", "main");
@@ -507,6 +507,7 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   const out = await runTransaction(db, async (tx) => {
     const ws = await tx.get(wref);
     const w = ws.exists() ? ws.data() : { koin: 0, migrasi: {} }; w.migrasi = { ...(w.migrasi || {}) }; w.koin = w.koin || 0;
+    _resetTok = Number(w.spentReset) || 0;
     // Baca dokumen gami lama HANYA untuk level yang belum dimigrasi (hemat kuota Firestore: 1 baca, bukan 9, untuk akun yang sudah migrasi)
     const sisa = WALLET_LVLS.map((l, i) => [l, grefs[i]]).filter(([l]) => !w.migrasi[l]);
     const gs = await Promise.all(sisa.map(([, r]) => tx.get(r)));
@@ -517,6 +518,8 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
     return w.koin;
   });
   _baseSet(out);
+  // Guru mengatur ulang koin (spentReset di dompet) → hapus catatan belanja gacha lama di perangkat ini (sekali per penyetelan)
+  { const o = _gLocal(); if (_resetTok > (Number(o.spentSeen) || 0)) { o.spent = 0; o.spentSeen = _resetTok; _gSave(o); } }
   const _eff = Math.max(0, out - _gSpent());
   if (delta) { try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || ""), saldo: out }); } catch (e) {} }
   return _eff;
@@ -562,7 +565,30 @@ export async function saveGachaState(state, shopIds) {
   if (shopIds && shopIds.length && currentSiswaDoc) {
     currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
     currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), ...shopIds]));
+    try { await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.inventory": currentSiswaDoc.karakter.inventory }); } catch (e) { console.warn("simpan hadiah gacha ke akun gagal (tersimpan di perangkat):", e.message); }
   }
+}
+/* Hadiah gacha di perangkat (id barang toko + tema). Dipakai agar hadiah tak hilang dari "dimiliki". */
+export function gachaInvLocal() { return (currentUser && _gLocal().inv) || []; }
+/* Salin hadiah gacha yang baru ada di perangkat ke inventaris akun (Firestore). isShop(id) → true untuk barang toko. Aman dipanggil berulang. */
+export async function syncGachaInventory(isShop) {
+  if (!currentUser || !currentSiswaDoc) return 0;
+  const cur = (currentSiswaDoc.karakter && currentSiswaDoc.karakter.inventory) || [];
+  const baru = gachaInvLocal().filter(id => isShop(id) && !cur.includes(id));
+  if (!baru.length) return 0;
+  const inv = Array.from(new Set([...cur, ...baru]));
+  currentSiswaDoc.karakter = currentSiswaDoc.karakter || {}; currentSiswaDoc.karakter.inventory = inv;
+  try { await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.inventory": inv }); } catch (e) { console.warn("sync hadiah gacha gagal:", e.message); }
+  return baru.length;
+}
+/* Guru: atur saldo dompet siswa (mis. pengembalian koin gacha). Juga mereset catatan belanja gacha di perangkat siswa. */
+export async function setWalletKoinOf(uid, koin, alasan) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  koin = Math.max(0, Math.round(Number(koin) || 0));
+  const wref = doc(db, "siswa", uid, "wallet", "main"), cur = await getDoc(wref), lama = cur.exists() ? (cur.data().koin || 0) : 0;
+  await setDoc(wref, { koin, uid, spentReset: Date.now(), updated: serverTimestamp() }, { merge: true });
+  try { await addDoc(collection(db, "siswa", uid, "wallet_log"), { t: serverTimestamp(), delta: koin - lama, alasan: String(alasan || "atur koin oleh guru"), saldo: koin }); } catch (e) {}
+  return koin;
 }
 export function ownedShopIds() { return (currentSiswaDoc && currentSiswaDoc.karakter && currentSiswaDoc.karakter.inventory) || []; }
 export async function getWalletOf(uid) {

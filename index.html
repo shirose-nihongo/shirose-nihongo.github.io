@@ -1463,7 +1463,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261116m";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261117d";
+import * as FB from "./js/firebase-sync.js?v=20261117e";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261117a";
@@ -2041,6 +2041,7 @@ async function loadGami(){
     return;
   }
   state.gami = await FB.getGami(state.level);
+  try { if (FB.syncGachaInventory) FB.syncGachaInventory(id => Object.values(CATALOG).some(o => o && o[id])); } catch (e) {}   // hadiah gacha di perangkat → inventaris akun
   try { const g = FB.getGachaState ? await FB.getGachaState() : null; if (window.SHIROSE_THEME) window.SHIROSE_THEME.setOwned(g && g.inv || []); } catch (e) {}
 }
 async function awardXP(dXP, dKoin = 0){
@@ -4886,7 +4887,9 @@ window.reviewJump = (idx) => {
 
 /* Moderator/developer (koin tak terbatas): semua item dianggap MILIK sejak awal (hanya tampilan; DB tidak diubah) */
 function invEfektif(){
-  const real = state.siswa?.karakter?.inventory || [];
+  // Hadiah gacha yang tersimpan di perangkat ikut dihitung "dimiliki" (barang toko saja)
+  const lokal = (FB.gachaInvLocal ? FB.gachaInvLocal() : []).filter(id => Object.values(CATALOG).some(o => o && o[id]));
+  const real = [...new Set([...(state.siswa?.karakter?.inventory || []), ...lokal])];
   if (!(FB.hasUnlimitedCoins && FB.hasUnlimitedCoins())) return real;
   const all = new Set(real);
   for (const [k, o] of Object.entries(CATALOG)) for (const [id, it] of Object.entries(o)) if (id !== "none" && !it.equipped_default) all.add(id);
@@ -5076,7 +5079,7 @@ window.shopConfirmBeli = (cat, id, harga, unlock) => {
 window.__lvOk = (kat, id) => {
   if (kat !== "sayap" || !id || id === "none") return true;
   if (FB.hasUnlimitedCoins && FB.hasUnlimitedCoins()) return true;
-  if ((state.siswa?.karakter?.inventory || []).includes(id)) return true;   // sudah dimiliki (mis. hadiah gacha) = bebas dipakai di level berapa pun
+  if (invEfektif().includes(id)) return true;   // sudah dimiliki (mis. hadiah gacha) = bebas dipakai di level berapa pun
   const need = CATALOG.sayap?.[id]?.unlock_lv || 50;
   if ((state.gami?.level_karakter || 1) >= need) return true;
   toast(`🔒 Sayap baru terbuka di Level ${need}`); return false;
