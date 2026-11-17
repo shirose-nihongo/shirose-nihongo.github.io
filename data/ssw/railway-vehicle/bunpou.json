@@ -1,25 +1,25 @@
 {
  "items": [
   {
-   "id": "g-temo",
-   "pola": "〜ても",
-   "rx": "ても|でも(?!あり)",
-   "arti": "meskipun …",
-   "cara": "KK bentuk て + も",
-   "jml": 15,
-   "contoh": "消火器の近くに物を置いてもよい。",
-   "arti_contoh": "Barang boleh ditaruh di depan APAR asal rapi.",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-teiru",
    "pola": "〜ています",
    "rx": "ています|ている|ていた|ていない",
    "arti": "sedang …; dalam keadaan …",
    "cara": "KK bentuk て + います",
-   "jml": 13,
+   "jml": 16,
    "contoh": "合いマークがずれていると緩んでいます。",
    "arti_contoh": "Garis 合いマーク yang bergeser berarti baut longgar.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-temo",
+   "pola": "〜ても",
+   "rx": "ても|でも(?!あり)",
+   "arti": "meskipun …",
+   "cara": "KK bentuk て + も",
+   "jml": 16,
+   "contoh": "消火器の近くに物を置いてもよい。",
+   "arti_contoh": "Barang boleh ditaruh di depan APAR asal rapi.",
    "contoh_dari": "materi"
   },
   {
@@ -39,9 +39,20 @@
    "rx": "とは",
    "arti": "yang dimaksud … itu …",
    "cara": "Kata benda + とは (definisi)",
-   "jml": 9,
+   "jml": 12,
    "contoh": "「整頓」とは、不要品や不良品を捨てることです。",
    "arti_contoh": "「整頓」 berarti membuang barang tak perlu atau cacat.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tehaikenai",
+   "pola": "〜てはいけません",
+   "rx": "てはいけ|てはならな",
+   "arti": "tidak boleh …; dilarang",
+   "cara": "KK bentuk て + はいけません",
+   "jml": 9,
+   "contoh": "通路に物を置いてはいけません。",
+   "arti_contoh": "Dilarang menaruh barang di jalur jalan.",
    "contoh_dari": "materi"
   },
   {
@@ -50,9 +61,20 @@
    "rx": "させる|させて|させた|させま",
    "arti": "menyuruh/membuat … (kausatif)",
    "cara": "KK 〜させる",
-   "jml": 8,
+   "jml": 9,
    "contoh": "フライス盤は加工物を回転させます。",
    "arti_contoh": "Di mesin frais (フライス盤), benda kerja diputar dan pahat diam.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toki",
+   "pola": "〜とき",
+   "rx": "(る|た|い|だ|の)とき|ときは",
+   "arti": "ketika …; saat …",
+   "cara": "KK/Kata sifat bentuk biasa + とき",
+   "jml": 8,
+   "contoh": "引っ張ったときの伸びやすさを表す性質は？",
+   "arti_contoh": "Sifat bahan yang berarti 'mudah memanjang saat ditarik':",
    "contoh_dari": "materi"
   },
   {
@@ -67,25 +89,36 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-tehaikenai",
-   "pola": "〜てはいけません",
-   "rx": "てはいけ|てはならな",
-   "arti": "tidak boleh …; dilarang",
-   "cara": "KK bentuk て + はいけません",
+   "id": "g-tame",
+   "pola": "〜ために / 〜ための",
+   "rx": "ために|ための",
+   "arti": "untuk …; demi …; karena …",
+   "cara": "KK kamus / Kata benda + の + ために",
    "jml": 5,
-   "contoh": "使ってはいけない工具の使い方はどれ？",
-   "arti_contoh": "Spanner TIDAK boleh digunakan dengan cara…",
+   "contoh": "すき間からの水を防ぐために、シール材をぬります。",
+   "arti_contoh": "Oleskan bahan sealant untuk mencegah air dari celah.",
    "contoh_dari": "materi"
   },
   {
-   "id": "g-toki",
-   "pola": "〜とき",
-   "rx": "(る|た|い|だ|の)とき|ときは",
-   "arti": "ketika …; saat …",
-   "cara": "KK/Kata sifat bentuk biasa + とき",
-   "jml": 5,
-   "contoh": "引っ張ったときの伸びやすさを表す性質は？",
-   "arti_contoh": "Sifat bahan yang berarti 'mudah memanjang saat ditarik':",
+   "id": "g-yasui",
+   "pola": "〜やすい / 〜にくい",
+   "rx": "やすい|にくい|やすく|にくく",
+   "arti": "mudah … / sulit …",
+   "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
+   "jml": 4,
+   "contoh": "ステンレス鋼は、さびにくい材料です。",
+   "arti_contoh": "Baja tahan karat adalah material yang tidak mudah berkarat.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-rareru",
+   "pola": "〜られる / 〜れる",
+   "rx": "られる|られて|られた|られま",
+   "arti": "dapat …; di- (pasif/potensial)",
+   "cara": "KK grup 2: 〜られる; grup 1: 〜れる/〜われる",
+   "jml": 4,
+   "contoh": "手工具は使ったあと、決められた場所に戻します。",
+   "arti_contoh": "Alat tangan dikembalikan ke tempat yang ditentukan setelah dipakai.",
    "contoh_dari": "materi"
   },
   {
@@ -94,17 +127,6 @@
    "rx": "なければなり|なければいけ|なくてはならな|なくてはいけ",
    "arti": "harus …; wajib",
    "cara": "KK bentuk ない (buang い) + ければなりません",
-   "jml": 3,
-   "contoh": "労働者（作業者）は労働災害を防止するための取組みに協力するよう努めなければなりません。",
-   "arti_contoh": "Pekerja wajib bekerja sama mencegah kecelakaan kerja (労働災害).",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-tame",
-   "pola": "〜ために / 〜ための",
-   "rx": "ために|ための",
-   "arti": "untuk …; demi …; karena …",
-   "cara": "KK kamus / Kata benda + の + ために",
    "jml": 3,
    "contoh": "労働者（作業者）は労働災害を防止するための取組みに協力するよう努めなければなりません。",
    "arti_contoh": "Pekerja wajib bekerja sama mencegah kecelakaan kerja (労働災害).",
@@ -144,17 +166,6 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-yasui",
-   "pola": "〜やすい / 〜にくい",
-   "rx": "やすい|にくい|やすく|にくく",
-   "arti": "mudah … / sulit …",
-   "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
-   "jml": 3,
-   "contoh": "鋼を軟らかくして切削しやすくする熱処理は？",
-   "arti_contoh": "Perlakuan panas yang melunakkan baja agar mudah dimesin:",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-sugiru",
    "pola": "〜すぎる",
    "rx": "すぎる|すぎて|すぎない",
@@ -166,14 +177,80 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-rareru",
-   "pola": "〜られる / 〜れる",
-   "rx": "られる|られて|られた|られま",
-   "arti": "dapat …; di- (pasif/potensial)",
-   "cara": "KK grup 2: 〜られる; grup 1: 〜れる/〜われる",
-   "jml": 2,
-   "contoh": "ダブルスキン構造の溶接には摩擦撹拌接合が用いられます。",
-   "arti_contoh": "Las gesek aduk (FSW) dipakai untuk struktur aluminium ダブルスキン.",
+   "id": "g-kotogadekiru",
+   "pola": "〜ことができます",
+   "rx": "ことができ",
+   "arti": "dapat …; bisa …",
+   "cara": "KK bentuk kamus + ことができます",
+   "jml": 1,
+   "contoh": "延性のある金属は、細く引きのばすことができます。",
+   "arti_contoh": "Logam yang ulet dapat ditarik menjadi tipis/panjang.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-taato",
+   "pola": "〜たあとで",
+   "rx": "たあと|たあとで|たあとは",
+   "arti": "setelah … (selesai)",
+   "cara": "KK bentuk た + あとで",
+   "jml": 1,
+   "contoh": "手工具は使ったあと、決められた場所に戻します。",
+   "arti_contoh": "Alat tangan dikembalikan ke tempat yang ditentukan setelah dipakai.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tara",
+   "pola": "〜たら",
+   "rx": "たら|だら",
+   "arti": "kalau …; setelah …",
+   "cara": "KK/Kata sifat bentuk た + ら",
+   "jml": 1,
+   "contoh": "作業が終わったら、機械のまわりを清掃します。",
+   "arti_contoh": "Setelah kerja selesai, bersihkan area sekitar mesin.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-node",
+   "pola": "〜ので",
+   "rx": "ので",
+   "arti": "karena …",
+   "cara": "Bentuk biasa + ので",
+   "jml": 1,
+   "contoh": "アルミ合金は、軽いので車体に使われます。",
+   "arti_contoh": "Paduan aluminium dipakai pada bodi karena ringan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toori",
+   "pola": "〜とおり",
+   "rx": "とおりに|どおりに|のとおり|通りに",
+   "arti": "sesuai …; seperti …",
+   "cara": "Kata benda + の + とおり / KK + とおりに",
+   "jml": 1,
+   "contoh": "作業は、作業手順書のとおりに行います。",
+   "arti_contoh": "Pekerjaan dilakukan sesuai manual prosedur kerja.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kunaru",
+   "pola": "〜くなる / 〜になる",
+   "rx": "(く|に)なる|(く|に)なり|(く|に)なっ|(く|に)なら",
+   "arti": "menjadi …",
+   "cara": "Kata sifat い (い→く) / な (→に) + なる",
+   "jml": 1,
+   "contoh": "輪軸は、車軸と車輪が一つになった部品です。",
+   "arti_contoh": "Wheelset adalah komponen gabungan poros dan roda.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-yori",
+   "pola": "〜より",
+   "rx": "より",
+   "arti": "daripada …; dari …",
+   "cara": "A + より + B",
+   "jml": 1,
+   "contoh": "より細かい寸法は、マイクロメーターで測ります。",
+   "arti_contoh": "Dimensi yang lebih halus diukur dengan mikrometer.",
    "contoh_dari": "materi"
   }
  ]

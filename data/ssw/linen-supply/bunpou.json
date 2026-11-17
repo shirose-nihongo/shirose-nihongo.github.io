@@ -6,9 +6,20 @@
    "rx": "ています|ている|ていた|ていない",
    "arti": "sedang …; dalam keadaan …",
    "cara": "KK bentuk て + います",
-   "jml": 12,
-   "contoh": "初級でも非常停止の方法を知っている必要があります。",
-   "arti_contoh": "Operasi dasar 初級 mencakup cara berhenti darurat.",
+   "jml": 14,
+   "contoh": "検品で、汚れが残っているものを取り出します。",
+   "arti_contoh": "Dalam inspeksi, barang yang masih kotor dikeluarkan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tara",
+   "pola": "〜たら",
+   "rx": "たら|だら",
+   "arti": "kalau …; setelah …",
+   "cara": "KK/Kata sifat bentuk た + ら",
+   "jml": 7,
+   "contoh": "けがをしたら、まず応急措置をします。",
+   "arti_contoh": "Jika terluka, lakukan dulu pertolongan pertama.",
    "contoh_dari": "materi"
   },
   {
@@ -20,17 +31,6 @@
    "jml": 5,
    "contoh": "初級でも非常停止の方法を知っている必要があります。",
    "arti_contoh": "Operasi dasar 初級 mencakup cara berhenti darurat.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-tara",
-   "pola": "〜たら",
-   "rx": "たら|だら",
-   "arti": "kalau …; setelah …",
-   "cara": "KK/Kata sifat bentuk た + ら",
-   "jml": 4,
-   "contoh": "機械のブザーが鳴ったら、リーダーに伝える。",
-   "arti_contoh": "Bila buzzer mesin berbunyi, sampaikan kepada leader. (初級 No.8)",
    "contoh_dari": "materi"
   },
   {
@@ -53,6 +53,17 @@
    "jml": 4,
    "contoh": "ポリエステルは、静電気が発生しやすい素材である。",
    "arti_contoh": "Poliester mudah menghasilkan listrik statis. (専門級 No.4)",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toki",
+   "pola": "〜とき",
+   "rx": "(る|た|い|だ|の)とき|ときは",
+   "arti": "ketika …; saat …",
+   "cara": "KK/Kata sifat bentuk biasa + とき",
+   "jml": 3,
+   "contoh": "リネン品が詰まったときは、すぐに機械を止める。",
+   "arti_contoh": "Bila linen tersangkut, hentikan mesin segera. (初級 No.5)",
    "contoh_dari": "materi"
   },
   {
@@ -86,17 +97,6 @@
    "jml": 2,
    "contoh": "仕事を始める前には、非常停止ボタンを押して止まることをチェックする。",
    "arti_contoh": "Sebelum mulai kerja, periksa bahwa tombol berhenti darurat bisa menghentikan mesin. (初級 No.2)",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-toki",
-   "pola": "〜とき",
-   "rx": "(る|た|い|だ|の)とき|ときは",
-   "arti": "ketika …; saat …",
-   "cara": "KK/Kata sifat bentuk biasa + とき",
-   "jml": 2,
-   "contoh": "リネン品が詰まったときは、すぐに機械を止める。",
-   "arti_contoh": "Bila linen tersangkut, hentikan mesin segera. (初級 No.5)",
    "contoh_dari": "materi"
   },
   {
@@ -141,6 +141,61 @@
    "jml": 2,
    "contoh": "ロールスピードを設定する時は、ロール機よりもフォルダー（畳み機）のスピードを速くする。",
    "arti_contoh": "Saat mengatur kecepatan roll, kecepatan folder dibuat lebih cepat dari roll. (専門級 No.3)",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-youni",
+   "pola": "〜ように / 〜ような",
+   "rx": "ように|ような",
+   "arti": "agar …; supaya …; seperti …",
+   "cara": "KK kamus/ない + ように; Kata benda + の + ように",
+   "jml": 1,
+   "contoh": "機械投入のときは、手を巻き込まれないように注意します。",
+   "arti_contoh": "Saat memasukkan ke mesin, waspada agar tangan tidak terjepit.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-naiyouni",
+   "pola": "〜ないように",
+   "rx": "ないように",
+   "arti": "agar tidak …",
+   "cara": "KK bentuk ない + ように",
+   "jml": 1,
+   "contoh": "機械投入のときは、手を巻き込まれないように注意します。",
+   "arti_contoh": "Saat memasukkan ke mesin, waspada agar tangan tidak terjepit.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-noni",
+   "pola": "〜のに",
+   "rx": "のに",
+   "arti": "padahal …; untuk …",
+   "cara": "Bentuk biasa + のに",
+   "jml": 1,
+   "contoh": "洗うものに合わせて、メニュー設定を選びます。",
+   "arti_contoh": "Pilih pengaturan menu program sesuai barang yang dicuci.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kunaru",
+   "pola": "〜くなる / 〜になる",
+   "rx": "(く|に)なる|(く|に)なり|(く|に)なっ|(く|に)なら",
+   "arti": "menjadi …",
+   "cara": "Kata sifat い (い→く) / な (→に) + なる",
+   "jml": 1,
+   "contoh": "きれいになったリネンをホテルに出荷します。",
+   "arti_contoh": "Linen yang sudah bersih dikirim ke hotel.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kiwotsukete",
+   "pola": "〜に気をつける",
+   "rx": "に気をつけ|に注意",
+   "arti": "berhati-hati terhadap …",
+   "cara": "Kata benda + に気をつける",
+   "jml": 1,
+   "contoh": "機械投入のときは、手を巻き込まれないように注意します。",
+   "arti_contoh": "Saat memasukkan ke mesin, waspada agar tangan tidak terjepit.",
    "contoh_dari": "materi"
   }
  ]

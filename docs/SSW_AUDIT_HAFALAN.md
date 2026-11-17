@@ -2,7 +2,7 @@
 
 Dibuat otomatis oleh `tools/ssw/hafal_build.py`. Semua arti/contoh = materi buatan Shirose, **perlu review ahli**; bukan soal/terjemahan resmi.
 
-Contoh kalimat kosakata diisi otomatis dari materi (pasangan JP-ID bila ada, kalau tidak kalimat JP saja tanpa terjemahan). Sisa kosakata tanpa contoh ±190.
+Contoh kalimat kosakata: dari materi (pasangan JP-ID bila ada, kalau tidak kalimat JP saja) + ±115 contoh manual Shirose (`tools/ssw/contoh_manual.py`, perlu review). Sisa ±180 "kosakata" JAIM adalah judul subbab, sengaja tanpa contoh.
 
 | Bidang | Kosakata | Vocab tanpa contoh | Katakana | Kanji | Bunpou (contoh dari materi) |
 |---|---|---|---|---|---|

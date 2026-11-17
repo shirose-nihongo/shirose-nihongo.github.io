@@ -158,9 +158,12 @@ def build(slug):
     for t in T:
         for x in re.split(r"(?<=[。！？])", t):
             if 4 <= len(plain(x)) <= 70: SENT.append(x)
+    from contoh_manual import C as _CM
+    man = _CM.get(slug, {})
     nfill = [0, 0]
     for v in vocab:
         if v.get("contoh"): continue
+        if v["kata"] in man: v["contoh"], v["arti_contoh"], v["contoh_dari"] = man[v["kata"]][0], man[v["kata"]][1], "shirose"; nfill[0] += 1; continue
         keys = [k for k in {v["kata"], v.get("kana", "")} if k and len(k) >= 2]
         def has(t): pt = plain(t); return any(k in pt for k in keys)
         c = sorted([(len(plain(jp)), jp, idt) for jp, idt in PAIRS if idt and len(plain(jp)) <= 70 and len(idt) <= 160 and has(jp)])
