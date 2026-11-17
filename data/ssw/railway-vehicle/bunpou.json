@@ -1,25 +1,25 @@
 {
  "items": [
   {
-   "id": "g-teiru",
-   "pola": "〜ています",
-   "rx": "ています|ている|ていた|ていない",
-   "arti": "sedang …; dalam keadaan …",
-   "cara": "KK bentuk て + います",
-   "jml": 12,
-   "contoh": "合いマークがずれていると緩んでいます。",
-   "arti_contoh": "Garis 合いマーク yang bergeser berarti baut longgar.",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-temo",
    "pola": "〜ても",
    "rx": "ても|でも(?!あり)",
    "arti": "meskipun …",
    "cara": "KK bentuk て + も",
-   "jml": 10,
+   "jml": 15,
    "contoh": "消火器の近くに物を置いてもよい。",
    "arti_contoh": "Barang boleh ditaruh di depan APAR asal rapi.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-teiru",
+   "pola": "〜ています",
+   "rx": "ています|ている|ていた|ていない",
+   "arti": "sedang …; dalam keadaan …",
+   "cara": "KK bentuk て + います",
+   "jml": 13,
+   "contoh": "合いマークがずれていると緩んでいます。",
+   "arti_contoh": "Garis 合いマーク yang bergeser berarti baut longgar.",
    "contoh_dari": "materi"
   },
   {
@@ -28,7 +28,7 @@
    "rx": "てもいい|てもよい|てもかまいま",
    "arti": "boleh …",
    "cara": "KK bentuk て + もいいです",
-   "jml": 8,
+   "jml": 12,
    "contoh": "消火器の近くに物を置いてもよい。",
    "arti_contoh": "Barang boleh ditaruh di depan APAR asal rapi.",
    "contoh_dari": "materi"
@@ -39,20 +39,9 @@
    "rx": "とは",
    "arti": "yang dimaksud … itu …",
    "cara": "Kata benda + とは (definisi)",
-   "jml": 8,
+   "jml": 9,
    "contoh": "「整頓」とは、不要品や不良品を捨てることです。",
    "arti_contoh": "「整頓」 berarti membuang barang tak perlu atau cacat.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-ba",
-   "pola": "〜ば",
-   "rx": "れば|ければ|えば|けば|げば|てば|べば|めば|せば|ねば",
-   "arti": "jika …; kalau …",
-   "cara": "KK/Kata sifat bentuk ば",
-   "jml": 6,
-   "contoh": "導通チェックでブザーが鳴れば導通しています。",
-   "arti_contoh": "Buzzer berbunyi saat uji kontinuitas berarti kabel tersambung.",
    "contoh_dari": "materi"
   },
   {
@@ -61,9 +50,20 @@
    "rx": "させる|させて|させた|させま",
    "arti": "menyuruh/membuat … (kausatif)",
    "cara": "KK 〜させる",
-   "jml": 6,
+   "jml": 8,
    "contoh": "フライス盤は加工物を回転させます。",
    "arti_contoh": "Di mesin frais (フライス盤), benda kerja diputar dan pahat diam.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-ba",
+   "pola": "〜ば",
+   "rx": "れば|ければ|えば|けば|げば|てば|べば|めば|せば|ねば",
+   "arti": "jika …; kalau …",
+   "cara": "KK/Kata sifat bentuk ば",
+   "jml": 7,
+   "contoh": "導通チェックでブザーが鳴れば導通しています。",
+   "arti_contoh": "Buzzer berbunyi saat uji kontinuitas berarti kabel tersambung.",
    "contoh_dari": "materi"
   },
   {
@@ -72,7 +72,7 @@
    "rx": "てはいけ|てはならな",
    "arti": "tidak boleh …; dilarang",
    "cara": "KK bentuk て + はいけません",
-   "jml": 4,
+   "jml": 5,
    "contoh": "使ってはいけない工具の使い方はどれ？",
    "arti_contoh": "Spanner TIDAK boleh digunakan dengan cara…",
    "contoh_dari": "materi"
@@ -83,7 +83,7 @@
    "rx": "(る|た|い|だ|の)とき|ときは",
    "arti": "ketika …; saat …",
    "cara": "KK/Kata sifat bentuk biasa + とき",
-   "jml": 4,
+   "jml": 5,
    "contoh": "引っ張ったときの伸びやすさを表す性質は？",
    "arti_contoh": "Sifat bahan yang berarti 'mudah memanjang saat ditarik':",
    "contoh_dari": "materi"
@@ -94,7 +94,7 @@
    "rx": "なければなり|なければいけ|なくてはならな|なくてはいけ",
    "arti": "harus …; wajib",
    "cara": "KK bentuk ない (buang い) + ければなりません",
-   "jml": 2,
+   "jml": 3,
    "contoh": "労働者（作業者）は労働災害を防止するための取組みに協力するよう努めなければなりません。",
    "arti_contoh": "Pekerja wajib bekerja sama mencegah kecelakaan kerja (労働災害).",
    "contoh_dari": "materi"
@@ -105,7 +105,7 @@
    "rx": "ために|ための",
    "arti": "untuk …; demi …; karena …",
    "cara": "KK kamus / Kata benda + の + ために",
-   "jml": 2,
+   "jml": 3,
    "contoh": "労働者（作業者）は労働災害を防止するための取組みに協力するよう努めなければなりません。",
    "arti_contoh": "Pekerja wajib bekerja sama mencegah kecelakaan kerja (労働災害).",
    "contoh_dari": "materi"
@@ -116,7 +116,7 @@
    "rx": "ように|ような",
    "arti": "agar …; supaya …; seperti …",
    "cara": "KK kamus/ない + ように; Kata benda + の + ように",
-   "jml": 2,
+   "jml": 3,
    "contoh": "鋳鉄のように突然切れる性質を脆性といいます。",
    "arti_contoh": "Besi tuang bersifat getas (脆性).",
    "contoh_dari": "materi"
@@ -127,7 +127,7 @@
    "rx": "ながら",
    "arti": "sambil …",
    "cara": "KK bentuk ます (tanpa ます) + ながら",
-   "jml": 2,
+   "jml": 3,
    "contoh": "まずインパクトレンチで緩めに締め、トルクレンチで確認しながら締めます。",
    "arti_contoh": "Saat mengencangkan: インパクトレンチ dulu lalu cek dengan トルクレンチ.",
    "contoh_dari": "materi"
@@ -138,7 +138,7 @@
    "rx": "てから|でから",
    "arti": "setelah …",
    "cara": "KK bentuk て + から",
-   "jml": 2,
+   "jml": 3,
    "contoh": "チェックシートは事務所に戻ってからまとめて記入してもよい。",
    "arti_contoh": "Ceklis boleh diisi sekaligus setelah kembali ke kantor.",
    "contoh_dari": "materi"
@@ -149,7 +149,7 @@
    "rx": "やすい|にくい|やすく|にくく",
    "arti": "mudah … / sulit …",
    "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
-   "jml": 2,
+   "jml": 3,
    "contoh": "鋼を軟らかくして切削しやすくする熱処理は？",
    "arti_contoh": "Perlakuan panas yang melunakkan baja agar mudah dimesin:",
    "contoh_dari": "materi"
@@ -160,7 +160,7 @@
    "rx": "すぎる|すぎて|すぎない",
    "arti": "terlalu …",
    "cara": "KK/Kata sifat (tanpa い) + すぎる",
-   "jml": 2,
+   "jml": 3,
    "contoh": "アンダーカットは溶接速度が速すぎる・電流が多すぎるときに生じます。",
    "arti_contoh": "アンダーカット terjadi karena kecepatan las terlalu cepat atau arus terlalu besar.",
    "contoh_dari": "materi"

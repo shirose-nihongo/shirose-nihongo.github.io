@@ -6,7 +6,7 @@
    "rx": "れば|ければ|えば|けば|げば|てば|べば|めば|せば|ねば",
    "arti": "jika …; kalau …",
    "cara": "KK/Kata sifat bentuk ば",
-   "jml": 12,
+   "jml": 15,
    "contoh": "保護帽に亀裂があっても小さければ使える。",
    "arti_contoh": "Helm yang retak boleh dipakai bila retaknya kecil.",
    "contoh_dari": "materi"
@@ -17,7 +17,7 @@
    "rx": "ても|でも(?!あり)",
    "arti": "meskipun …",
    "cara": "KK bentuk て + も",
-   "jml": 10,
+   "jml": 15,
    "contoh": "丸太輪切りでは回し切りを行ってもよい。",
    "arti_contoh": "Pada tugas 3, memutar bar (回し切り) diperbolehkan.",
    "contoh_dari": "materi"
@@ -28,7 +28,7 @@
    "rx": "(る|た|い|だ|の)とき|ときは",
    "arti": "ketika …; saat …",
    "cara": "KK/Kata sifat bentuk biasa + とき",
-   "jml": 8,
+   "jml": 11,
    "contoh": "エンジンを始動するときは股掛けをしてもよい。",
    "arti_contoh": "Chainsaw boleh dinyalakan dengan 股掛け (di paha).",
    "contoh_dari": "materi"
@@ -39,9 +39,20 @@
    "rx": "てもいい|てもよい|てもかまいま",
    "arti": "boleh …",
    "cara": "KK bentuk て + もいいです",
-   "jml": 6,
+   "jml": 10,
    "contoh": "丸太輪切りでは回し切りを行ってもよい。",
    "arti_contoh": "Pada tugas 3, memutar bar (回し切り) diperbolehkan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toiu",
+   "pola": "〜という",
+   "rx": "という",
+   "arti": "yang disebut …",
+   "cara": "Kutipan + という + kata benda",
+   "jml": 6,
+   "contoh": "職場で、整理・整頓・清掃・清潔を徹底する活動を4S活動という。",
+   "arti_contoh": "Kegiatan menegakkan seiri, seiton, seisou, seiketsu di tempat kerja disebut 4S.",
    "contoh_dari": "materi"
   },
   {
@@ -50,7 +61,7 @@
    "rx": "やすい|にくい|やすく|にくく",
    "arti": "mudah … / sulit …",
    "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
-   "jml": 4,
+   "jml": 6,
    "contoh": "とびを使うときは、とびの柄に手を絡ませて引くと力が入りやすい。",
    "arti_contoh": "Saat memakai とび, melilitkan tangan di gagangnya membuat tenaga mudah masuk.",
    "contoh_dari": "materi"
@@ -61,7 +72,7 @@
    "rx": "のに",
    "arti": "padahal …; untuk …",
    "cara": "Bentuk biasa + のに",
-   "jml": 4,
+   "jml": 5,
    "contoh": "輪切りの厚さを定めるのに物差しを使ってよい。",
    "arti_contoh": "Penggaris boleh dipakai menentukan tebal potongan.",
    "contoh_dari": "materi"
@@ -94,9 +105,64 @@
    "rx": "てはいけ|てはならな",
    "arti": "tidak boleh …; dilarang",
    "cara": "KK bentuk て + はいけません",
-   "jml": 2,
+   "jml": 3,
    "contoh": "人力で、材を引きずって木寄せするときは、とびを使用してはならない。",
    "arti_contoh": "Saat menarik kayu (木寄せ) dengan tenaga manusia, とび tidak boleh dipakai.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kotogadekiru",
+   "pola": "〜ことができます",
+   "rx": "ことができ",
+   "arti": "dapat …; bisa …",
+   "cara": "KK bentuk kamus + ことができます",
+   "jml": 3,
+   "contoh": "枝打ちの時、のこぎりを使用すると、切断位置を正確にすることができる。",
+   "arti_contoh": "Memakai gergaji tangan saat 枝打ち membuat posisi potong lebih akurat.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-nagara",
+   "pola": "〜ながら",
+   "rx": "ながら",
+   "arti": "sambil …",
+   "cara": "KK bentuk ます (tanpa ます) + ながら",
+   "jml": 3,
+   "contoh": "筋刈り地拵えは、全刈りに比べて人工数の削減につながらない。",
+   "arti_contoh": "Pembersihan lahan strip (筋刈り地拵え) tidak mengurangi jumlah tenaga dibanding pembabatan total.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toshite",
+   "pola": "〜として",
+   "rx": "として",
+   "arti": "sebagai …",
+   "cara": "Kata benda + として",
+   "jml": 3,
+   "contoh": "熱中症の救急対策として、1人作業はできるだけ避ける。",
+   "arti_contoh": "Sebagai langkah pertolongan/pencegahan kelelahan panas, hindari kerja sendirian.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-teoku",
+   "pola": "〜ておきます",
+   "rx": "ておきま|ておく",
+   "arti": "… dulu (persiapan)",
+   "cara": "KK bentuk て + おきます",
+   "jml": 3,
+   "contoh": "伐倒前には、あらかじめ退避場所を決定し、退避ルート上に障害物があればあらかじめ取り除いておく。",
+   "arti_contoh": "Tempat berlindung ditentukan dahulu dan rintangan di jalurnya disingkirkan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kiwotsukete",
+   "pola": "〜に気をつける",
+   "rx": "に気をつけ|に注意",
+   "arti": "berhati-hati terhadap …",
+   "cara": "Kata benda + に気をつける",
+   "jml": 3,
+   "contoh": "玉切り作業は、造材木の転動に注意し、必ず造材木の斜面上部で行う。",
+   "arti_contoh": "玉切り harus dilakukan di sisi atas lereng dari batang, sambil waspada batang menggelinding.",
    "contoh_dari": "materi"
   },
   {
@@ -111,28 +177,6 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-kotogadekiru",
-   "pola": "〜ことができます",
-   "rx": "ことができ",
-   "arti": "dapat …; bisa …",
-   "cara": "KK bentuk kamus + ことができます",
-   "jml": 2,
-   "contoh": "枝打ちの時、のこぎりを使用すると、切断位置を正確にすることができる。",
-   "arti_contoh": "Memakai gergaji tangan saat 枝打ち membuat posisi potong lebih akurat.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-nagara",
-   "pola": "〜ながら",
-   "rx": "ながら",
-   "arti": "sambil …",
-   "cara": "KK bentuk ます (tanpa ます) + ながら",
-   "jml": 2,
-   "contoh": "筋刈り地拵えは、全刈りに比べて人工数の削減につながらない。",
-   "arti_contoh": "Pembersihan lahan strip (筋刈り地拵え) tidak mengurangi jumlah tenaga dibanding pembabatan total.",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-nioite",
    "pola": "〜において",
    "rx": "において|における",
@@ -144,28 +188,6 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-toshite",
-   "pola": "〜として",
-   "rx": "として",
-   "arti": "sebagai …",
-   "cara": "Kata benda + として",
-   "jml": 2,
-   "contoh": "熱中症の救急対策として、1人作業はできるだけ避ける。",
-   "arti_contoh": "Sebagai langkah pertolongan/pencegahan kelelahan panas, hindari kerja sendirian.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-toiu",
-   "pola": "〜という",
-   "rx": "という",
-   "arti": "yang disebut …",
-   "cara": "Kutipan + という + kata benda",
-   "jml": 2,
-   "contoh": "職場で、整理・整頓・清掃・清潔を徹底する活動を4S活動という。",
-   "arti_contoh": "Kegiatan menegakkan seiri, seiton, seisou, seiketsu di tempat kerja disebut 4S.",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-teiru",
    "pola": "〜ています",
    "rx": "ています|ている|ていた|ていない",
@@ -174,17 +196,6 @@
    "jml": 2,
    "contoh": "チェーンソーの規格は、労働安全衛生法関係法令に規定されている。",
    "arti_contoh": "Standar chainsaw diatur dalam peraturan terkait UU Keselamatan & Kesehatan Kerja.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-teoku",
-   "pola": "〜ておきます",
-   "rx": "ておきま|ておく",
-   "arti": "… dulu (persiapan)",
-   "cara": "KK bentuk て + おきます",
-   "jml": 2,
-   "contoh": "伐倒前には、あらかじめ退避場所を決定し、退避ルート上に障害物があればあらかじめ取り除いておく。",
-   "arti_contoh": "Tempat berlindung ditentukan dahulu dan rintangan di jalurnya disingkirkan.",
    "contoh_dari": "materi"
   },
   {
@@ -207,17 +218,6 @@
    "jml": 2,
    "contoh": "実技試験は課題ごとに40％以上、全体で60％以上が必要です。",
    "arti_contoh": "Ujian praktik lulus bila tiap tugas ≥ 40% dan total ≥ 60%.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-kiwotsukete",
-   "pola": "〜に気をつける",
-   "rx": "に気をつけ|に注意",
-   "arti": "berhati-hati terhadap …",
-   "cara": "Kata benda + に気をつける",
-   "jml": 2,
-   "contoh": "玉切り作業は、造材木の転動に注意し、必ず造材木の斜面上部で行う。",
-   "arti_contoh": "玉切り harus dilakukan di sisi atas lereng dari batang, sambil waspada batang menggelinding.",
    "contoh_dari": "materi"
   }
  ]

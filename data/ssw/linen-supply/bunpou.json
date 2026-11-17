@@ -6,7 +6,18 @@
    "rx": "ています|ている|ていた|ていない",
    "arti": "sedang …; dalam keadaan …",
    "cara": "KK bentuk て + います",
-   "jml": 10,
+   "jml": 12,
+   "contoh": "初級でも非常停止の方法を知っている必要があります。",
+   "arti_contoh": "Operasi dasar 初級 mencakup cara berhenti darurat.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-temo",
+   "pola": "〜ても",
+   "rx": "ても|でも(?!あり)",
+   "arti": "meskipun …",
+   "cara": "KK bentuk て + も",
+   "jml": 5,
    "contoh": "初級でも非常停止の方法を知っている必要があります。",
    "arti_contoh": "Operasi dasar 初級 mencakup cara berhenti darurat.",
    "contoh_dari": "materi"
@@ -23,14 +34,47 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-temo",
-   "pola": "〜ても",
-   "rx": "ても|でも(?!あり)",
-   "arti": "meskipun …",
-   "cara": "KK bentuk て + も",
+   "id": "g-ba",
+   "pola": "〜ば",
+   "rx": "れば|ければ|えば|けば|げば|てば|べば|めば|せば|ねば",
+   "arti": "jika …; kalau …",
+   "cara": "KK/Kata sifat bentuk ば",
    "jml": 4,
-   "contoh": "初級でも非常停止の方法を知っている必要があります。",
-   "arti_contoh": "Operasi dasar 初級 mencakup cara berhenti darurat.",
+   "contoh": "浴衣投入機と浴衣畳み機は、ロールアイロナーとの速度差が大きければきれいに仕上がる。",
+   "arti_contoh": "Perbedaan kecepatan besar antara mesin yukata dan roll ironer membuat hasil rapi. (専門級 No.10)",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-yasui",
+   "pola": "〜やすい / 〜にくい",
+   "rx": "やすい|にくい|やすく|にくく",
+   "arti": "mudah … / sulit …",
+   "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
+   "jml": 4,
+   "contoh": "ポリエステルは、静電気が発生しやすい素材である。",
+   "arti_contoh": "Poliester mudah menghasilkan listrik statis. (専門級 No.4)",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-towa",
+   "pola": "〜とは",
+   "rx": "とは",
+   "arti": "yang dimaksud … itu …",
+   "cara": "Kata benda + とは (definisi)",
+   "jml": 3,
+   "contoh": "チョコ停とは？",
+   "arti_contoh": "チョコ停 adalah…",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-node",
+   "pola": "〜ので",
+   "rx": "ので",
+   "arti": "karena …",
+   "cara": "Bentuk biasa + ので",
+   "jml": 3,
+   "contoh": "ピローケースとガウンは違うものです。",
+   "arti_contoh": "Sarung bantal dan gaun adalah barang yang berbeda. (初級 No.4)",
    "contoh_dari": "materi"
   },
   {
@@ -56,28 +100,6 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-ba",
-   "pola": "〜ば",
-   "rx": "れば|ければ|えば|けば|げば|てば|べば|めば|せば|ねば",
-   "arti": "jika …; kalau …",
-   "cara": "KK/Kata sifat bentuk ば",
-   "jml": 2,
-   "contoh": "浴衣投入機と浴衣畳み機は、ロールアイロナーとの速度差が大きければきれいに仕上がる。",
-   "arti_contoh": "Perbedaan kecepatan besar antara mesin yukata dan roll ironer membuat hasil rapi. (専門級 No.10)",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-towa",
-   "pola": "〜とは",
-   "rx": "とは",
-   "arti": "yang dimaksud … itu …",
-   "cara": "Kata benda + とは (definisi)",
-   "jml": 2,
-   "contoh": "チョコ停とは？",
-   "arti_contoh": "チョコ停 adalah…",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-teoku",
    "pola": "〜ておきます",
    "rx": "ておきま|ておく",
@@ -86,28 +108,6 @@
    "jml": 2,
    "contoh": "清掃用具は、いつも綺麗にして、ほうきなどは決められた場所に置いておく。",
    "arti_contoh": "Alat bersih-bersih dijaga bersih dan sapu dsb. diletakkan di tempat yang ditentukan. (専門級 No.7)",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-yasui",
-   "pola": "〜やすい / 〜にくい",
-   "rx": "やすい|にくい|やすく|にくく",
-   "arti": "mudah … / sulit …",
-   "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
-   "jml": 2,
-   "contoh": "ポリエステルは、静電気が発生しやすい素材である。",
-   "arti_contoh": "Poliester mudah menghasilkan listrik statis. (専門級 No.4)",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-node",
-   "pola": "〜ので",
-   "rx": "ので",
-   "arti": "karena …",
-   "cara": "Bentuk biasa + ので",
-   "jml": 2,
-   "contoh": "ピローケースとガウンは違うものです。",
-   "arti_contoh": "Sarung bantal dan gaun adalah barang yang berbeda. (初級 No.4)",
    "contoh_dari": "materi"
   },
   {

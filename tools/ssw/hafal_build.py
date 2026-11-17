@@ -153,6 +153,22 @@ def build(slug):
             for v in o.values(): walk(v)
         elif isinstance(o, list): [walk(x) for x in o]
     walk(quiz)
+    # ---------- contoh kosakata dari materi (pasangan JP-ID dulu, lalu kalimat JP saja)
+    SENT = []
+    for t in T:
+        for x in re.split(r"(?<=[。！？])", t):
+            if 4 <= len(plain(x)) <= 70: SENT.append(x)
+    nfill = [0, 0]
+    for v in vocab:
+        if v.get("contoh"): continue
+        keys = [k for k in {v["kata"], v.get("kana", "")} if k and len(k) >= 2]
+        def has(t): pt = plain(t); return any(k in pt for k in keys)
+        c = sorted([(len(plain(jp)), jp, idt) for jp, idt in PAIRS if idt and len(plain(jp)) <= 70 and len(idt) <= 160 and has(jp)])
+        if c: v["contoh"], v["arti_contoh"], v["contoh_dari"] = c[0][1], c[0][2], "materi"; nfill[0] += 1; continue
+        c = sorted([(len(plain(x)), x) for x in SENT if has(x)])
+        if c: v["contoh"], v["arti_contoh"], v["contoh_dari"] = c[0][1], "", "materi-jp"; nfill[1] += 1
+    json.dump(vraw, open(base / idx.get("vocab", "vocab.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    print(f"  contoh kosakata terisi: {nfill[0]} (JP+ID), {nfill[1]} (JP saja); masih kosong: {sum(1 for v in vocab if not v.get('contoh'))}")
     for v in vocab:
         if v.get("contoh"): T.append(v["contoh"]); PAIRS.append((v["contoh"], v.get("arti_contoh", "")))
     # ---------- kanji

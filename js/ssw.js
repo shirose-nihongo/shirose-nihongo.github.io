@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261118a";
+} from "./ssw-core.js?v=20261118b";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
@@ -1245,7 +1245,7 @@ const PUS_T = { katakana: ["カタカナ", "Katakana"], kanji: ["漢字", "Kanji
 function pusRow(j, it) {
   if (j === "katakana") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>${esc(it.r || "")}${it.n ? " · muncul " + it.n + "×" : ""}</small></span></summary>${it.contoh ? `<div class="x"><p class="jp">${rich(it.contoh)}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p></div>` : ""}</details>`;
   if (j === "kanji") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>音 ${esc(it.on || "-")} · 訓 ${esc(it.kun || "-")}</small></span></summary><div class="x">${(it.c || []).map(c => `<p><span class="jp">${esc(c.k)}</span> (${esc(c.r)}) — ${esc(c.a)}</p>`).join("") || '<p class="sw-muted">Belum ada contoh kata.</p>'}</div></details>`;
-  return `<details class="sw-vrow"><summary><span class="jp k" style="font-size:18px">${esc(it.pola)}</span><span class="m"><b>${esc(it.arti)}</b><small>${esc(it.cara || "")}</small></span></summary><div class="x"><p class="jp">${rich(it.contoh || "")}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p>${it.contoh_dari === "umum" ? '<p class="sw-muted" style="font-size:12px">Contoh umum (bukan dari materi).</p>' : ""}</div></details>`;
+  return `<details class="sw-vrow"><summary><span class="jp k" style="font-size:18px">${esc(it.pola)}</span><span class="m"><b>${esc(it.arti)}</b><small>${esc(it.cara || "")}</small></span></summary><div class="x"><p class="jp">${rich(it.contoh || "")}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p>${it.contoh_dari === "umum" ? '<p class="sw-muted" style="font-size:12px">Contoh umum (bukan dari materi).</p>' : ""}${it.contoh_materi ? `<p class="sw-muted" style="font-size:12px;margin-top:8px">Di materi:</p><p class="jp">${rich(it.contoh_materi)}</p>` : ""}</div></details>`;
 }
 function pusCards(j, items) {
   return items.map((it, i) => {

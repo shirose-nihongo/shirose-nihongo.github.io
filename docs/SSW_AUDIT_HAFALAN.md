@@ -2,6 +2,8 @@
 
 Dibuat otomatis oleh `tools/ssw/hafal_build.py`. Semua arti/contoh = materi buatan Shirose, **perlu review ahli**; bukan soal/terjemahan resmi.
 
+Contoh kalimat kosakata diisi otomatis dari materi (pasangan JP-ID bila ada, kalau tidak kalimat JP saja tanpa terjemahan). Sisa kosakata tanpa contoh ±190.
+
 | Bidang | Kosakata | Vocab tanpa contoh | Katakana | Kanji | Bunpou (contoh dari materi) |
 |---|---|---|---|---|---|
 | jaim-machine-metal | 110 | 110 | 288 | 967 | 51 (1) |
