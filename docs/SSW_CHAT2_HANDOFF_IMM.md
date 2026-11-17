@@ -14,5 +14,5 @@ Gap (jangan diisi karangan):
 - Set format terbuka/pilihan ganda A–D/tabel/ilustrasi (24 set total) hanya tersimpan sebagai teks mentah (NEEDS_MANUAL_STRUCTURING).
 - Vocab baru judul sub-bab (belum istilah dari isi teks); ruby resmi hanya kanji (tanpa okurigana/partikel). Sebagian sudah ada di vocab app → exists_in_app_vocab (14/16/11).
 - Modul tidak punya tujuan belajar, kesalahan umum, ringkasan → dikosongkan.
-- Sample exam 1号 & 2号 (sample1_01..03, sample2_01..03) belum diparse; 14 kategori lain hanya sample.
+- Sample exam 1号 2025 (sample1_01..03) SUDAH diparse: practice-tests/official-sample-exam-2025.json di tiap kategori (120 soal JP, label OFFICIAL QUESTION, kunci resmi; tanpa penjelasan & tanpa terjemahan ID; soal berbasis gambar merujuk halaman PNG di extracted-images/sample1/, soal dengan pilihan berupa gambar ditandai options_in_image). Sample 2号 (sample2_01..03) belum diparse; 14 kategori lain hanya sample.
 - Belum terhubung ke UI app; semua record NEEDS_REVIEW; ID chapter-level text belum dicek manual.
