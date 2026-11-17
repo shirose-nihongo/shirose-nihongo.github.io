@@ -65,8 +65,43 @@ ONLY_LIFELINE = {
  ],
 }
 
+
+GENERAL_TOOLS = [
+  ("Alat umum (5.2): kelompok menurut fungsi", [
+   "**Alat listrik**: **obeng bor** / **obeng ketok**, **gerinda cakram**, **sander**, **gergaji bundar**, **gergaji bolak-balik**, **pistol paku** (tekanan udara dari kompresor), **drum listrik** (kabel penyambung).",
+   "**Menggali/memadatkan**: **sekop pedang/sudut/ganda**, **belencong** (tanah keras, aspal), **tamper**, **rammer**, **vibro compactor**.",
+   "**Penandaan**: **pot tinta**, **garis kapur**, **alat penanda laser**, **punch**. **Pengukuran**: **level**, **level laser**, **transit**, **total station**, **waterpas**, **bandul lot** (cek tegak lurus), **siku ukur**, **meteran**.",
+   "**Memotong/memukul**: **gergaji**, **gunting**, **pahat**, **tang**; **palu** (karet/kayu), **palu besar**, **linggis**. **Mengikis**: **kikir**, **kertas ampelas**, **sikat kawat**, **batu gerinda**.",
+   "**Mengencangkan**: **kunci inggris**, **kunci soket**, **kunci heksagonal**, **obeng**; **sekrup**, **baut** dan **mur**, **paku**.",
+   "**Mencampur**: **mixer**, **pencampur mortar/beton**, **kotak toro**, **ayakan**. **Perawatan/perlindungan**: **lembar biru**, **jaring anti-hamburan**, lembar polietilen.",
+   "**Mengangkut**: **gerobak dorong**, **troli**, **roller**, **forklift**. **Menggantung/menarik**: **winch**, **tali kawat**, **belenggu**, **turnbuckle**, **balok rantai**, **lever hoist**, **dongkrak**.",
+   "**Tempat tinggi**: **tangga**, **tangga pijak**, **alas kerja portabel**, **rolling tower**, **anjungan kerja tempat tinggi**. **Membersihkan**: sapu, pengki, **blower**."]),
+]
+LIFELINE_B5 = {
+ ("bab5", "b5s1"): [
+  ("Mesin konstruksi", [
+   "**Ekskavator hidrolik (backhoe)** menggali dan memuat; attachment dapat diganti (breaker, ripper, crusher). **Wheel loader** memuat dan mengangkut dengan ember besar; **dump truck** mengangkut tanah/pasir.",
+   "**Alat pemadat**: **mesin penggilas (roller baja)**, **pneumatic roller (roda karet)**, **vibro roller** (getaran). **Crane**: **tower crane**, **truck crane**, **crawler crane**."]),
+  ("Alat pekerjaan peralatan listrik", [
+   "**Detektor tegangan (検電器)** memeriksa apakah ada tegangan; **detektor fase** memeriksa urutan fase; **tester/multimeter**; **clamp meter** mengukur arus hanya dengan menjepit kabel.",
+   "**Conduit**: **pipa PF** dan **pipa CD** (resin fleksibel), **pipa E/C/G** (baja tanpa/ber-ulir tipis/tebal), **conduit fleksibel logam**; **bender** untuk menekuk pipa logam.",
+   "**Kabel**: **IV** (kawat tunggal), **VVF** (pipih), **VVR** (bulat), **kabel CV**, **CT/VCT** (kabel fleksibel). **Crimping**: **tang crimping**, **terminal crimping**, **sleeve ring**.",
+   "**Pentanahan**: **batang pentanahan**; **papan**/panel distribusi; **pemutus arus berlebih (breaker)**; **relai termal**; **stopkontak** 100 V fase tunggal. **Rak kabel** dan **raceway** disangga **baut gantung** (pakai **mur ganda** agar tak kendur)."]),
+ ],
+ ("bab5", "b5s2"): [
+  ("Alat pekerjaan telekomunikasi", [
+   "**Pengabelan overhead**: **kawat suspensi**, **katrol gantung**, **penegang kawat**, **penjepit kawat**, **penutup (closure)** untuk sambungan di tiang; **kabel self support**.",
+   "**Kabel**: **serat optik** (kuarsa), **kabel logam** (tembaga), **kabel koaksial**, **UTP twisted pair**. **Menyambung serat optik**: **alat penyambung fusi**, **jacket remover**, **pemotong serat**, **selongsong pelindung**.",
+   "**Alat ukur**: **pengukur daya optik**, **alat uji pulsa optik (OTDR)**, **penguji LAN**, **pemeriksa kabel koaksial**. **Jaringan**: **hub**, **switching hub**, **router**."]),
+ ],
+}
+
+GEN_KEY = {"construction": ("bab5","b5s2"), "construction-bangunan": ("bab5","b5s3"), "construction-lifeline": ("bab5","b5s4")}
+
 for slug in SLUGS:
     items = dict(ADD)
+    items[GEN_KEY[slug]] = GENERAL_TOOLS
+    if slug == "construction-lifeline": items.update(LIFELINE_B5)
     if slug == "construction-lifeline": items.update(ONLY_LIFELINE)
     for (bab, sub), groups in items.items():
         p = pathlib.Path(f"data/ssw/{slug}/{bab}.json")
