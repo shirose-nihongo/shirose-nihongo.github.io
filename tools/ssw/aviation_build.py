@@ -157,5 +157,5 @@ def am_sample():
         tf("航空機は、すべてのタイヤにブレーキが装備されている。", "Semua ban pesawat dilengkapi rem.", False, "JAEA-AM-SAMPLE-Q5")]}
 
 if __name__ == "__main__":
-    build("aviation-gh", "Ground Handling — Teks Resmi JAEA", "空港グランドハンドリング", GH, V.GH, Q.GH, "avgh", GH.SRC, 52, sample_sub("b1s99", ""), gh_sample() , "Soal contoh resmi JAEA disertakan.")
+    build("aviation-gh", "Ground Handling — Teks Resmi JAEA", "空港グランドハンドリング", GH, V.GH, Q.GH, "avgh", GH.SRC, 78, sample_sub("b1s99", ""), gh_sample() , "Soal contoh resmi JAEA disertakan.")
     build("aviation-am", "Aircraft Maintenance — Teks Resmi JAEA", "航空機整備", AM, V.AM, Q.AM, "avam", AM.SRC, 70, sample_sub("b1s99", ""), am_sample(), "Soal contoh resmi JAEA disertakan.")

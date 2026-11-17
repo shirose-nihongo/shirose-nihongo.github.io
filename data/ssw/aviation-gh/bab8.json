@@ -1,0 +1,922 @@
+{
+ "schema": 1,
+ "bidang": "aviation-gh",
+ "source": "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision + 安全・品質 2nd Revision (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab8",
+  "no": 8,
+  "title": {
+   "id": "Keselamatan & Kualitas (Teks 1 Resmi)",
+   "jp": "{安全|あんぜん}・{品質|ひんしつ}"
+  },
+  "intro": {
+   "id": "Teks resmi JAEA 1 (安全・品質): keselamatan pesawat, zona bahaya mesin, barang berbahaya, keselamatan kerja & kendaraan, kualitas, dan pencegahan."
+  },
+  "pages": [
+   57,
+   75
+  ],
+  "pagesJp": [
+   57,
+   75
+  ],
+  "subs": [
+   {
+    "id": "b8s1",
+    "no": 1,
+    "title": {
+     "id": "Keselamatan Maskapai & Tujuan Keselamatan Operasi",
+     "jp": "{航空会社|こうくうかいしゃ}の{安全|あんぜん}・{安全運航|あんぜんうんこう}の{目的|もくてき}"
+    },
+    "pages": [
+     21,
+     21
+    ],
+    "pagesJp": [
+     57,
+     57
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Maskapai harus membawa penumpang dan kargo **tiba dengan selamat**. Tidak terjadi kecelakaan adalah arti **keselamatan maskapai** dan hal terpenting.",
+        "Maskapai mendapat tarif dari penumpang dan memikul tanggung jawab sangat besar: **menjaga nyawa penumpang**. Semua orang di industri ini harus selalu memikirkan keselamatan dalam setiap pekerjaan."
+       ]
+      },
+      {
+       "h": "Akibat jika terjadi kecelakaan pesawat"
+      },
+      {
+       "ul": [
+        "① Merenggut nyawa yang tak tergantikan; luka fisik dan batin penumpang dalam. Alasan tidak boleh celaka harus diingat setiap orang.",
+        "② Menimbulkan kecemasan besar di masyarakat.",
+        "③ Biaya sangat besar (ganti rugi penumpang, penanganan lokasi, pengiriman karyawan) hingga bisa membahayakan perusahaan.",
+        "④ Kehilangan pesawat berdampak besar: jadwal tidak bisa dijalankan dan permintaan tidak terlayani."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{航空会社|こうくうがいしゃ}の{安全|あんぜん}とは、{旅客|りょかく}と{貨物|かもつ}を{無事|ぶじ}に{目的地|もくてきち}へ{届|とど}け、{事故|じこ}を{起|お}こさないことです。",
+        "{乗客|じょうきゃく}の{命|いのち}をあずかる{大|おお}きな{責任|せきにん}があるので、{航空|こうくう}の{仕事|しごと}をする{人|ひと}は{常|つね}に{安全|あんぜん}を{考|かんが}えます。"
+       ]
+      },
+      {
+       "h": "{事故|じこ}が{起|お}きると"
+      },
+      {
+       "ul": [
+        "{命|いのち}がうばわれ、{乗客|じょうきゃく}の{心|こころ}と{体|からだ}も{深|ふか}く{傷|きず}つきます。",
+        "{社会|しゃかい}に{大|おお}きな{不安|ふあん}をあたえます。",
+        "{賠償|ばいしょう}や{事故|じこ}の{処理|しょり}にたくさんの{費用|ひよう}がかかり、{会社|かいしゃ}の{経営|けいえい}があぶなくなります。",
+        "{飛行機|ひこうき}を{失|うしな}うと、{予定|よてい}どおりに{飛|と}ばせなくなります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Maskapai harus membawa penumpang dan kargo tiba dengan selamat. Tidak terjadi kecelakaan adalah arti keselamatan maskapai dan hal terpenting.",
+      "points": [
+       "Maskapai mendapat tarif dari penumpang dan memikul tanggung jawab sangat besar: menjaga nyawa penumpang. Semua orang di industri ini harus selalu memikirkan keselamatan d…",
+       "① Merenggut nyawa yang tak tergantikan; luka fisik dan batin penumpang dalam. Alasan tidak boleh celaka harus diingat setiap orang.",
+       "② Menimbulkan kecemasan besar di masyarakat."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{航空会社|こうくうがいしゃ}の{安全|あんぜん}とは、{旅客|りょかく}と{貨物|かもつ}を{無事|ぶじ}に{目的地|もくてきち}へ{届|とど}け、{事故|じこ}を{起|お}こさないことです。",
+      "points": [
+       "{乗客|じょうきゃく}の{命|いのち}をあずかる{大|おお}きな{責任|せきにん}があるので、{航空|こうくう}の{仕事|しごと}をする{人|ひと}は{常|つね}に{安全|あんぜん}を{考|かんが}えます。",
+       "{命|いのち}がうばわれ、{乗客|じょうきゃく}の{心|こころ}と{体|からだ}も{深|ふか}く{傷|きず}つきます。",
+       "{社会|しゃかい}に{大|おお}きな{不安|ふあん}をあたえます。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s2",
+    "no": 2,
+    "title": {
+     "id": "Prioritas Pesawat: Visibilitas, Isyarat Watchman, Tanda Keberangkatan",
+     "jp": "{航空機優先|こうくうきゆうせん}・{視界|しかい}・{合図|あいず}・{出発発見|しゅっぱつはっけん}の{着眼点|ちゃくがんてん}"
+    },
+    "pages": [
+     22,
+     22
+    ],
+    "pagesJp": [
+     58,
+     60
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Di **area terlarang (制限区域)** pesawat **selalu diprioritaskan**; kendaraan apa pun tidak boleh menghalangi operasinya.",
+        "Alasan: ① geraknya tidak lincah, ② jarak pandang sangat buruk, ③ membawa banyak bahan mudah terbakar (BBM), ④ sangat mahal."
+       ]
+      },
+      {
+       "h": "(1) Jarak pandang dari kokpit"
+      },
+      {
+       "ul": [
+        "Banyak area tidak terlihat dari kokpit; dekat badan pesawat sulit dilihat. Contoh B777-200: ujung sayap kiri/kanan tidak terlihat; rintangan di tanah baru terlihat jika lebih dari **±15 m** di depan (sisi kanan kapten: **10 m**).",
+        "Menurut percobaan, taksiran celah ujung sayap dari kokpit bisa meleset **sekitar 3 m**, sehingga di tempat sempit kru saja tidak bisa memastikan pesawat lewat aman.",
+        "Saat pesawat taxi, **dalam 40 m di depannya** tidak boleh ada kendaraan/rintangan bila tidak ada pemandu **marshaller**."
+       ]
+      },
+      {
+       "h": "(2) Isyarat yang tepat (watchman)"
+      },
+      {
+       "ul": [
+        "**Watchman** mengawasi dan memandu pesawat ke tempat tujuan bersama petugas lain (kru, mekanik, marshaller, pengemudi traktor tarik, dll.) lewat gerakan dan isyarat dasar (mis. **all clear**, **berhenti darurat**). Gerakan harus seragam sesuai standar bandara."
+       ]
+      },
+      {
+       "h": "(3) Tanda pesawat akan berangkat"
+      },
+      {
+       "ul": [
+        "① **Anti-collision light** menyala. ② Mesin dihidupkan. ③ **PBB** sudah dilepas dari pesawat. ④ Ada kendaraan (passenger step, GPU, air starter). ⑤ Lampu putar kuning **traktor tarik** menyala. ⑥ **Chock (ganjal roda)** dilepas. ⑦ Watchman memberi isyarat **all clear**.",
+        "Lampu ujung sayap: **kanan hijau, kiri merah**; anti-collision light merah di atas dan bawah badan pesawat."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{制限区域|せいげんくいき}では、{航空機|こうくうき}の{運航|うんこう}がいつも{一番|いちばん}です。ほかの{車|くるま}は{邪魔|じゃま}をしてはいけません。",
+        "{理由|りゆう}は、{動|うご}きがにぶい、よく{見|み}えない、{燃料|ねんりょう}など{燃|も}えやすい{物|もの}を{多|おお}く{積|つ}んでいる、{高価|こうか}だからです。"
+       ]
+      },
+      {
+       "h": "コクピットからの{視界|しかい}"
+      },
+      {
+       "ul": [
+        "コクピットからは{見|み}えない{範囲|はんい}が{多|おお}く、{機体|きたい}のすぐ{近|ちか}くは{見|み}えにくいです。{翼端|よくたん}の{間隔|かんかく}を{目|め}で{測|はか}ると、3m{前後|ぜんご}のまちがいが{出|で}ることがあります。",
+        "{地上走行中|ちじょうそうこうちゅう}の{航空機|こうくうき}の{前方|ぜんぽう}40m{以内|いない}に、マーシャラーの{誘導|ゆうどう}がないまま{車|くるま}や{障害物|しょうがいぶつ}があってはいけません。"
+       ]
+      },
+      {
+       "h": "ウォッチマンの{合図|あいず}"
+      },
+      {
+       "ul": [
+        "ウォッチマンは、{基本|きほん}の{動作|どうさ}・{合図|あいず}で、{意図|いと}を{正確|せいかく}に{伝|つた}えます。{空港|くうこう}ごとに{統一|とういつ}された{動作|どうさ}が{必要|ひつよう}です。"
+       ]
+      },
+      {
+       "h": "{出発|しゅっぱつ}を{見|み}つける{目印|めじるし}"
+      },
+      {
+       "ul": [
+        "{衝突防止灯|しょうとつぼうしとう}（アンチコリジョン・ライト）の{点灯|てんとう}、エンジン{始動|しどう}、PBBが{離|はな}れている、{車両|しゃりょう}の{有無|うむ}、{牽引車|けんいんしゃ}の{黄色回転灯|きいろかいてんとう}、{車輪止|しゃりんど}めがはずれている、ウォッチマンのオールクリアの{合図|あいず}。",
+        "{翼端灯|よくたんとう}は{右|みぎ}が{緑|みどり}、{左|ひだり}が{赤|あか}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Di area terlarang (制限区域) pesawat selalu diprioritaskan; kendaraan apa pun tidak boleh menghalangi operasinya.",
+      "points": [
+       "Alasan: ① geraknya tidak lincah, ② jarak pandang sangat buruk, ③ membawa banyak bahan mudah terbakar (BBM), ④ sangat mahal.",
+       "Banyak area tidak terlihat dari kokpit; dekat badan pesawat sulit dilihat. Contoh B777-200: ujung sayap kiri/kanan tidak terlihat; rintangan di tanah baru terlihat jika l…",
+       "Menurut percobaan, taksiran celah ujung sayap dari kokpit bisa meleset sekitar 3 m, sehingga di tempat sempit kru saja tidak bisa memastikan pesawat lewat aman."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{制限区域|せいげんくいき}では、{航空機|こうくうき}の{運航|うんこう}がいつも{一番|いちばん}です。ほかの{車|くるま}は{邪魔|じゃま}をしてはいけません。",
+      "points": [
+       "{理由|りゆう}は、{動|うご}きがにぶい、よく{見|み}えない、{燃料|ねんりょう}など{燃|も}えやすい{物|もの}を{多|おお}く{積|つ}んでいる、{高価|こうか}だからです。",
+       "コクピットからは{見|み}えない{範囲|はんい}が{多|おお}く、{機体|きたい}のすぐ{近|ちか}くは{見|み}えにくいです。{翼端|よくたん}の{間隔|かんかく}を{目|め}で{測|はか}ると、3m{前後|ぜんご}のまちがいが{出|で}ることがあります。",
+       "{地上走行中|ちじょうそうこうちゅう}の{航空機|こうくうき}の{前方|ぜんぽう}40m{以内|いない}に、マーシャラーの{誘導|ゆうどう}がないまま{車|くるま}や{障害物|しょうがいぶつ}があってはいけません。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s3",
+    "no": 3,
+    "title": {
+     "id": "Zona Bahaya Mesin: Blast (Exhaust) dan Intake (Inlet)",
+     "jp": "エンジンへの{注意|ちゅうい}（ブラスト・インテーク）"
+    },
+    "pages": [
+     23,
+     23
+    ],
+    "pagesJp": [
+     60,
+     61
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Saat mesin pesawat hidup di darat ada **zona bahaya** dari **blast (semburan buang / EXHAUST)** dan **intake (hisapan / INLET)**."
+       ]
+      },
+      {
+       "h": "(1) Blast (EXHAUST)"
+      },
+      {
+       "ul": [
+        "Masalah blast jet adalah **suhu dan kecepatan angin**, keduanya berbahaya bagi tubuh. Blast **tidak terlihat**; angin **25 m/s** setara topan dan bisa menerbangkan orang."
+       ]
+      },
+      {
+       "h": "(2) Intake (INLET)"
+      },
+      {
+       "ul": [
+        "Bagian depan mesin jet (sisi hisap udara) juga sangat berbahaya.",
+        "**Perhatian!** Jika topi terbang saat bekerja, **jangan sekali-kali** mengambilnya dengan mendekati depan mesin: bisa terhisap. Pastikan dulu tidak ada benda di tubuh/sekitar yang bisa terhisap, dan pahami zona bahaya.",
+        "Contoh B777-200 (idle minimum): zona exhaust jauh ke belakang (±**175 ft / 53,4 m**); zona inlet berjari-jari sekitar **15 ft (4,6 m)** di depan mesin."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "エンジンの{危険区域|きけんくいき}"
+      },
+      {
+       "ul": [
+        "{地上|ちじょう}でエンジンが{動|うご}いている{間|あいだ}は、ブラスト（{排気|はいき}）とインテーク（{吸気|きゅうき}）の{危険区域|きけんくいき}があります。",
+        "ブラストは{目|め}に{見|み}えません。{風速|ふうそく}25m/sは{台風|たいふう}なみで、{飛|と}ばされるおそれがあります。",
+        "エンジンの{前|まえ}（{空気|くうき}を{吸|す}う{側|がわ}）も{大変危険|たいへんきけん}です。{帽子|ぼうし}が{飛|と}ばされても、{取|と}りにエンジンの{前|まえ}に{近|ちか}づいてはいけません。{吸|す}いこまれるおそれがあります。",
+        "{作業|さぎょう}の{前|まえ}に、{吸|す}いこまれそうな{物|もの}がないか{確認|かくにん}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Saat mesin pesawat hidup di darat ada zona bahaya dari blast (semburan buang / EXHAUST) dan intake (hisapan / INLET).",
+      "points": [
+       "Masalah blast jet adalah suhu dan kecepatan angin, keduanya berbahaya bagi tubuh. Blast tidak terlihat; angin 25 m/s setara topan dan bisa menerbangkan orang.",
+       "Bagian depan mesin jet (sisi hisap udara) juga sangat berbahaya.",
+       "Perhatian! Jika topi terbang saat bekerja, jangan sekali-kali mengambilnya dengan mendekati depan mesin: bisa terhisap. Pastikan dulu tidak ada benda di tubuh/sekitar yan…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{地上|ちじょう}でエンジンが{動|うご}いている{間|あいだ}は、ブラスト（{排気|はいき}）とインテーク（{吸気|きゅうき}）の{危険区域|きけんくいき}があります。",
+      "points": [
+       "ブラストは{目|め}に{見|み}えません。{風速|ふうそく}25m/sは{台風|たいふう}なみで、{飛|と}ばされるおそれがあります。",
+       "エンジンの{前|まえ}（{空気|くうき}を{吸|す}う{側|がわ}）も{大変危険|たいへんきけん}です。{帽子|ぼうし}が{飛|と}ばされても、{取|と}りにエンジンの{前|まえ}に{近|ちか}づいてはいけません。{吸|す}いこまれるおそれがあります。",
+       "{作業|さぎょう}の{前|まえ}に、{吸|す}いこまれそうな{物|もの}がないか{確認|かくにん}します。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s4",
+    "no": 4,
+    "title": {
+     "id": "Barang Berbahaya, Weight & Balance, Keamanan Penerbangan",
+     "jp": "{危険物輸送|きけんぶつゆそう}・ウエイト・アンド・バランス・{航空保安|こうくうほあん}"
+    },
+    "pages": [
+     24,
+     24
+    ],
+    "pagesJp": [
+     61,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "C. Pengangkutan barang berbahaya"
+      },
+      {
+       "ul": [
+        "Membawa **bahan peledak, mudah terbakar, senjata api/tajam** ke pesawat dilarang hukum (kecuali pengecualian), karena bisa meledakkan/merusak pesawat.",
+        "Karena itu ada aturan seperti **pemeriksaan keamanan (X-Ray)** dan kewajiban pengangkut **memastikan isi kargo dengan pengirim**."
+       ]
+      },
+      {
+       "h": "D. Weight & Balance (berat dan keseimbangan)"
+      },
+      {
+       "ul": [
+        "**Kelebihan berat** memperburuk kinerja di semua tahap: kecepatan/jarak lepas landas dan mendarat naik, jarak tempuh turun, konsumsi BBM naik.",
+        "Memastikan berat akurat dan tidak melebihi batas **diwajibkan oleh peraturan pelaksana UU Penerbangan**. Saat cuaca buruk/angin lawan kuat perlu BBM ekstra, kadang **penumpang harus dikurangi**.",
+        "Karena itu jumlah penumpang, jumlah bagasi, berat kargo, dan jumlah air terisi **harus dilaporkan pasti** ke bagian operasi. Berat total = berat kosong + muatan (peralatan, kru, BBM, air, **muatan berbayar**: penumpang, bagasi, kargo)."
+       ]
+      },
+      {
+       "h": "E. Keamanan penerbangan (航空保安)"
+      },
+      {
+       "ul": [
+        "Pemeriksaan keamanan penumpang, bagasi kabin, dan bagasi tercatat mencegah **pembajakan dan peledakan**. Jika jumlah penumpang yang check-in dan yang naik **tidak cocok**, harus ditangani sesuai aturan.",
+        "Bahan peledak bisa dibawa dalam bentuk **komponen/zat kimia**; bila ditemukan (mis. saat bersih-bersih kabin), **segera lapor penanggung jawab** dan turunkan. **Perkakas** juga dilarang dibawa masuk. Petugas yang masuk area terlarang wajib **diperiksa bahan peledak**. Orang mencurigakan di sisi pesawat segera dilaporkan.",
+        "**Kartu ID standar**: dikelola ketat; dilarang dipakai di luar area/tujuan yang diizinkan, dilarang dipinjamkan atau dialihkan; di area terlarang harus **terlihat jelas** dan ditunjukkan bila diminta petugas."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{危険物|きけんぶつ}の{輸送|ゆそう}"
+      },
+      {
+       "ul": [
+        "{爆発物|ばくはつぶつ}、{燃|も}えやすい{物|もの}、{銃砲刀剣類|じゅうほうとうけんるい}などの{危険物|きけんぶつ}を{航空機|こうくうき}にのせることは、{特例|とくれい}を{除|のぞ}いて{法律|ほうりつ}で{禁止|きんし}されています。",
+        "そのため、{保安検査|ほあんけんさ}（X-Ray）を{行|おこな}い、{貨物|かもつ}では{運送事業者|うんそうじぎょうしゃ}が{荷送人|におくりにん}に{確認|かくにん}することが{義務|ぎむ}です。"
+       ]
+      },
+      {
+       "h": "ウエイト・アンド・バランス"
+      },
+      {
+       "ul": [
+        "{重量超過|じゅうりょうちょうか}は、{離着陸|りちゃくりく}の{速度|そくど}・{距離|きょり}、{航続距離|こうぞくきょり}、{燃料|ねんりょう}の{使用量|しようりょう}など、{飛行|ひこう}のすべての{段階|だんかい}に{悪|わる}い{影響|えいきょう}をあたえます。",
+        "{重量|じゅうりょう}を{正確|せいかく}に{把握|はあく}し、{規定値|きていち}をこえていないか{確認|かくにん}することは{法律|ほうりつ}で{義務|ぎむ}です。{搭乗人数|とうじょうにんずう}・{手荷物|てにもつ}の{個数|こすう}・{貨物|かもつ}の{重量|じゅうりょう}・{搭載水量|とうさいすいりょう}を{確実|かくじつ}に{報告|ほうこく}します。"
+       ]
+      },
+      {
+       "h": "{航空保安|こうくうほあん}"
+      },
+      {
+       "ul": [
+        "{保安検査|ほあんけんさ}は、ハイジャックや{航空機|こうくうき}の{爆破|ばくは}などを{防|ふせ}ぎます。{搭乗手続|とうじょうてつづ}きをした{旅客|りょかく}と{搭乗|とうじょう}した{人数|にんずう}が{合|あ}わないときは、{規定|きてい}どおりに{処置|しょち}します。",
+        "{機内清掃|きないせいそう}などで{危険物|きけんぶつ}を{見|み}つけたら、すぐに{責任者|せきにんしゃ}に{報告|ほうこく}します。{工具|こうぐ}の{持|も}ちこみも{禁止|きんし}です。",
+        "{標準|ひょうじゅん}IDカードは{厳重|げんじゅう}に{管理|かんり}し、{他人|たにん}に{貸|か}したり{渡|わた}したりしてはいけません。{制限区域|せいげんくいき}では{見|み}えるように{表示|ひょうじ}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Membawa bahan peledak, mudah terbakar, senjata api/tajam ke pesawat dilarang hukum (kecuali pengecualian), karena bisa meledakkan/merusak pesawat.",
+      "points": [
+       "Karena itu ada aturan seperti pemeriksaan keamanan (X-Ray) dan kewajiban pengangkut memastikan isi kargo dengan pengirim.",
+       "Kelebihan berat memperburuk kinerja di semua tahap: kecepatan/jarak lepas landas dan mendarat naik, jarak tempuh turun, konsumsi BBM naik.",
+       "Memastikan berat akurat dan tidak melebihi batas diwajibkan oleh peraturan pelaksana UU Penerbangan. Saat cuaca buruk/angin lawan kuat perlu BBM ekstra, kadang penumpang …"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{爆発物|ばくはつぶつ}、{燃|も}えやすい{物|もの}、{銃砲刀剣類|じゅうほうとうけんるい}などの{危険物|きけんぶつ}を{航空機|こうくうき}にのせることは、{特例|とくれい}を{除|のぞ}いて{法律|ほうりつ}で{禁止|きんし}されています。",
+      "points": [
+       "そのため、{保安検査|ほあんけんさ}（X-Ray）を{行|おこな}い、{貨物|かもつ}では{運送事業者|うんそうじぎょうしゃ}が{荷送人|におくりにん}に{確認|かくにん}することが{義務|ぎむ}です。",
+       "{重量超過|じゅうりょうちょうか}は、{離着陸|りちゃくりく}の{速度|そくど}・{距離|きょり}、{航続距離|こうぞくきょり}、{燃料|ねんりょう}の{使用量|しようりょう}など、{飛行|ひこう}のすべての{段階|だんかい}に{悪|わる}い{影響|えいきょう}をあたえます。",
+       "{重量|じゅうりょう}を{正確|せいかく}に{把握|はあく}し、{規定値|きていち}をこえていないか{確認|かくにん}することは{法律|ほうりつ}で{義務|ぎむ}です。{搭乗人数|とうじょうにんずう}・{手荷物|てにもつ}の{個数|こすう}・{貨物|かもつ}の{重量|じゅうりょう}・{搭載水量|とうさいすいりょう}を{確実|かくじつ}に{報告|ほうこく}します。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s5",
+    "no": 5,
+    "title": {
+     "id": "Keselamatan Kerja: Aturan, Cuaca, Seragam & APD",
+     "jp": "{規定|きてい}の{遵守|じゅんしゅ}・{天候|てんこう}・{作業員|さぎょういん}の{服装|ふくそう}"
+    },
+    "pages": [
+     25,
+     25
+    ],
+    "pagesJp": [
+     64,
+     65
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Aturan operasional pesawat dan aturan keselamatan kerja di ramp **wajib ditaati demi \"keselamatan nomor satu\"**.",
+        "**Cuaca:** ramp tidak punya bangunan tinggi sehingga cuaca buruk (angin kencang, petir, topan, salju) memengaruhi kerja. Bila ada perintah **menghentikan pekerjaan**, mengungsi ke tempat aman. Musim panas di Jepang panas-lembap, waspadai **heatstroke**: minum dan garam sedikit-sedikit, istirahat cukup."
+       ]
+      },
+      {
+       "h": "Pakaian kerja & APD"
+      },
+      {
+       "ul": [
+        "**Helm** wajib saat memuat/menurunkan muatan; **tali dagu dipasang** dengan benar.",
+        "Berbagai APD (sarung tangan, sabuk pengaman, helm, topi, **sumbat telinga**) dipakai sesuai aturan, termasuk saat penanganan tidak biasa seperti kerusakan barang berbahaya atau penyakit menular. Yang diwajibkan aturan **harus dipakai**.",
+        "**Seragam:** kancing dan ritsleting tertutup, tali sepatu terikat benar agar tidak **tergulung ban berjalan** atau tersangkut tonjolan/tuas kendaraan.",
+        "**Sumbat telinga / earmuff** wajib dipakai benar oleh pekerja ramp yang terpapar bising keras, untuk mencegah **tuli akibat bising**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{航空機|こうくうき}の{運航|うんこう}とランプ{内|ない}の{安全|あんぜん}の{規定|きてい}は、「{安全第一|あんぜんだいいち}」のために{必|かなら}ず{守|まも}ります。",
+        "ランプは{高|たか}い{建物|たてもの}がないので、{強風|きょうふう}・{雷|かみなり}・{台風|たいふう}・{降雪|こうせつ}で{作業|さぎょう}が{中断|ちゅうだん}することがあります。そのときは{安全|あんぜん}な{場所|ばしょ}に{避難|ひなん}します。",
+        "{日本|にほん}の{夏|なつ}は{高温多湿|こうおんたしつ}なので{熱中症|ねっちゅうしょう}に{注意|ちゅうい}します。こまめに{水分|すいぶん}・{塩分|えんぶん}をとり、{休憩|きゅうけい}します。"
+       ]
+      },
+      {
+       "h": "{服装|ふくそう}と{保護具|ほごぐ}"
+      },
+      {
+       "ul": [
+        "{搭載|とうさい}・{取|と}り{降|お}ろしの{作業|さぎょう}では{保護帽|ほごぼう}（ヘルメット）をかぶり、あごひもを{必|かなら}ずかけます。",
+        "{規定|きてい}で{使|つか}うことになっている{手袋|てぶくろ}・{安全|あんぜん}ベルト・ヘルメット・{耳栓|みみせん}などは、{必|かなら}ず{着|つ}けます。",
+        "{作業服|さぎょうふく}のボタンとファスナーをしめ、{靴|くつ}のひもをむすびます。ベルトコンベヤへの{巻|ま}きこみや、{車両|しゃりょう}の{突起|とっき}・レバーにからむのを{防|ふせ}ぎます。",
+        "{強|つよ}い{騒音|そうおん}の{中|なか}では、{耳栓|みみせん}やイヤーマフを{正|ただ}しく{着|つ}けて、{騒音性難聴|そうおんせいなんちょう}を{防|ふせ}ぎます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Aturan operasional pesawat dan aturan keselamatan kerja di ramp wajib ditaati demi \"keselamatan nomor satu\".",
+      "points": [
+       "Cuaca: ramp tidak punya bangunan tinggi sehingga cuaca buruk (angin kencang, petir, topan, salju) memengaruhi kerja. Bila ada perintah menghentikan pekerjaan, mengungsi k…",
+       "Helm wajib saat memuat/menurunkan muatan; tali dagu dipasang dengan benar.",
+       "Berbagai APD (sarung tangan, sabuk pengaman, helm, topi, sumbat telinga) dipakai sesuai aturan, termasuk saat penanganan tidak biasa seperti kerusakan barang berbahaya at…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{航空機|こうくうき}の{運航|うんこう}とランプ{内|ない}の{安全|あんぜん}の{規定|きてい}は、「{安全第一|あんぜんだいいち}」のために{必|かなら}ず{守|まも}ります。",
+      "points": [
+       "ランプは{高|たか}い{建物|たてもの}がないので、{強風|きょうふう}・{雷|かみなり}・{台風|たいふう}・{降雪|こうせつ}で{作業|さぎょう}が{中断|ちゅうだん}することがあります。そのときは{安全|あんぜん}な{場所|ばしょ}に{避難|ひなん}します。",
+       "{日本|にほん}の{夏|なつ}は{高温多湿|こうおんたしつ}なので{熱中症|ねっちゅうしょう}に{注意|ちゅうい}します。こまめに{水分|すいぶん}・{塩分|えんぶん}をとり、{休憩|きゅうけい}します。",
+       "{搭載|とうさい}・{取|と}り{降|お}ろしの{作業|さぎょう}では{保護帽|ほごぼう}（ヘルメット）をかぶり、あごひもを{必|かなら}ずかけます。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s6",
+    "no": 6,
+    "title": {
+     "id": "Mengemudi Kendaraan & Memandu Kendaraan",
+     "jp": "{車両|しゃりょう}の{運転|うんてん}・{車両|しゃりょう}の{誘導|ゆうどう}"
+    },
+    "pages": [
+     26,
+     26
+    ],
+    "pagesJp": [
+     65,
+     67
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Kecelakaan kendaraan yang merusak pesawat mengganggu operasi dan merugikan penumpang dan perusahaan."
+       ]
+      },
+      {
+       "h": "(1) Kendaraan dan peralatan"
+      },
+      {
+       "ul": [
+        "Pengemudi di area terlarang harus memahami **buku panduan mengemudi aman**, ikut **pelatihan dan lulus ujian** Biro Penerbangan Sipil, lalu **izin mengemudi tertera di kartu ID standar**, dan lulus pelatihan internal perusahaan.",
+        "Mengemudi dengan hati-hati. Kendaraan/peralatan **pada dasarnya tidak boleh lewat atau ditinggal di bawah pesawat**; jika diizinkan, hindari kontak dengan pesawat.",
+        "Saat memasang ke pesawat, waspadai **pesawat naik/turun** (badan bergerak). **Dilarang** mengoperasikan naik-turun platform kerja saat kendaraan berjalan.",
+        "**Dilarang** membawa pekerja di garpu/palet forklift atau kereta kargo, bak kendaraan (kecuali ada pengamanan), atau selain kursi kendaraan."
+       ]
+      },
+      {
+       "h": "(2) Pemandu kendaraan"
+      },
+      {
+       "ul": [
+        "Bila pengamatan pengemudi saja tidak cukup, tempatkan **pemandu** di luar kendaraan.",
+        "**Posisi pemandu:** terlihat oleh pengemudi dan dapat melihat isyarat tangan; jangan memandu tepat di belakang saat mundur; di tempat aman dan bisa menyelamatkan diri.",
+        "**Cek keamanan:** mengemudi sesuai standar, pengemudi mengikuti isyarat, posisi pemandu benar, tidak ada rintangan/pekerja di jalur dan sekeliling (atas-bawah-depan-belakang-kiri-kanan).",
+        "**Cara:** setelah memastikan aman, pandu dengan **kedua tangan dan suara/peluit**. Bila merasa bahaya, **hentikan segera**. Untuk pintu kargo bawah depan pesawat narrow-body, jaga jarak **minimal 1 m** antara kendaraan dan baling-baling/mesin jet.",
+        "Isyarat dasar (Figure 6): lurus, geser kiri/kanan (dari sisi pengemudi), berhenti, berhenti darurat; ada isyarat peluit sesuai arti."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{車両|しゃりょう}で{航空機|こうくうき}をこわす{事故|じこ}は、{運航|うんこう}にもお{客様|きゃくさま}にも{迷惑|めいわく}をかけ、{会社|かいしゃ}の{大|おお}きな{損失|そんしつ}になります。"
+       ]
+      },
+      {
+       "h": "{車両|しゃりょう}・{機材|きざい}の{使|つか}い{方|かた}"
+      },
+      {
+       "ul": [
+        "{制限区域|せいげんくいき}で{車|くるま}を{運転|うんてん}する{人|ひと}は、{教本|きょうほん}を{理解|りかい}し、{航空局|こうくうきょく}の{講習|こうしゅう}と{試験|しけん}に{合格|ごうかく}し、{標準|ひょうじゅん}IDカードに{運転許可|うんてんきょか}が{表示|ひょうじ}され、{社内|しゃない}の{訓練|くんれん}も{終|お}えなければなりません。",
+        "{車両|しゃりょう}・{機材|きざい}は、{原則|げんそく}として{航空機|こうくうき}の{下|した}を{通|とお}ったり{放置|ほうち}したりしてはいけません。",
+        "{航空機|こうくうき}に{装着|そうちゃく}するときは、{機体|きたい}が{上|あ}がったり{下|さ}がったりすることに{注意|ちゅうい}します。{走行中|そうこうちゅう}に{作業台|さぎょうだい}を{上下|じょうげ}させてはいけません。",
+        "カート{車|しゃ}・フォークリフトのフォークやパレット、{車|くるま}の{荷台|にだい}（{安全対策|あんぜんたいさく}がある{場合|ばあい}をのぞく）、{座席以外|ざせきいがい}に{人|ひと}をのせて{走|はし}ってはいけません。"
+       ]
+      },
+      {
+       "h": "{車両|しゃりょう}の{誘導|ゆうどう}"
+      },
+      {
+       "ul": [
+        "{運転者|うんてんしゃ}1{名|めい}では{不十分|ふじゅうぶん}なときは、{誘導者|ゆうどうしゃ}を{置|お}きます。{誘導者|ゆうどうしゃ}は、{運転者|うんてんしゃ}から{見|み}えて、{自分|じぶん}も{安全|あんぜん}な{場所|ばしょ}に{立|た}ちます。{後退|こうたい}のときでも{真後|まうし}ろで{誘導|ゆうどう}してはいけません。",
+        "{進路|しんろ}に{障害物|しょうがいぶつ}や{作業者|さぎょうしゃ}がいないかを{確認|かくにん}し、{両手|りょうて}と{声|こえ}で{合図|あいず}します。{危険|きけん}を{感|かん}じたらすぐ{止|と}めます。",
+        "ナローボディ{機|き}の{前方下部貨物室|ぜんぽうかぶかもつしつ}ドアに{車|くるま}を{誘導|ゆうどう}するときは、プロペラやジェット・エンジンとの{間隔|かんかく}を1m{以上|いじょう}あけます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kecelakaan kendaraan yang merusak pesawat mengganggu operasi dan merugikan penumpang dan perusahaan.",
+      "points": [
+       "Pengemudi di area terlarang harus memahami buku panduan mengemudi aman, ikut pelatihan dan lulus ujian Biro Penerbangan Sipil, lalu izin mengemudi tertera di kartu ID sta…",
+       "Mengemudi dengan hati-hati. Kendaraan/peralatan pada dasarnya tidak boleh lewat atau ditinggal di bawah pesawat; jika diizinkan, hindari kontak dengan pesawat.",
+       "Saat memasang ke pesawat, waspadai pesawat naik/turun (badan bergerak). Dilarang mengoperasikan naik-turun platform kerja saat kendaraan berjalan."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{車両|しゃりょう}で{航空機|こうくうき}をこわす{事故|じこ}は、{運航|うんこう}にもお{客様|きゃくさま}にも{迷惑|めいわく}をかけ、{会社|かいしゃ}の{大|おお}きな{損失|そんしつ}になります。",
+      "points": [
+       "{制限区域|せいげんくいき}で{車|くるま}を{運転|うんてん}する{人|ひと}は、{教本|きょうほん}を{理解|りかい}し、{航空局|こうくうきょく}の{講習|こうしゅう}と{試験|しけん}に{合格|ごうかく}し、{標準|ひょうじゅん}IDカードに{運転許可|うんてんきょか}が{表示|ひょうじ}され、{社内|しゃない}の{訓練|くんれん}も{終|お}えなければなりません。",
+       "{車両|しゃりょう}・{機材|きざい}は、{原則|げんそく}として{航空機|こうくうき}の{下|した}を{通|とお}ったり{放置|ほうち}したりしてはいけません。",
+       "{航空機|こうくうき}に{装着|そうちゃく}するときは、{機体|きたい}が{上|あ}がったり{下|さ}がったりすることに{注意|ちゅうい}します。{走行中|そうこうちゅう}に{作業台|さぎょうだい}を{上下|じょうげ}させてはいけません。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s7",
+    "no": 7,
+    "title": {
+     "id": "Kualitas Transportasi Udara & Dasar Cara Kerja",
+     "jp": "{航空輸送|こうくうゆそう}の{品質|ひんしつ}・{作業|さぎょう}の{基本的|きほんてき}な{考|かんが}え{方|かた}"
+    },
+    "pages": [
+     27,
+     27
+    ],
+    "pagesJp": [
+     68,
+     69
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Industri penerbangan kini dalam persaingan ketat; maskapai terus meningkatkan layanan. **Kualitas** adalah tingkat kesesuaian layanan dengan standar.",
+        "Tiga tolok ukur kualitas: **keselamatan (安全性)**, **ketepatan waktu (定時性)**, **kenyamanan (快適性)**."
+       ]
+      },
+      {
+       "h": "A. Keselamatan kerja dan kualitas"
+      },
+      {
+       "ul": [
+        "Ground handling banyak kerja di luar ruangan, mengemudi, dan peralatan, dalam waktu terbatas sesuai jam datang/berangkat. Sedikit lengah bisa menimbulkan **cedera, kerusakan pesawat/kendaraan, kerusakan atau salah kirim bagasi/kargo/pos**.",
+        "Kerusakan butuh perbaikan, cedera menunda kerja, sehingga **keberangkatan terlambat**; salah tangani bagasi merepotkan penumpang. Jadi **meningkatkan kualitas = bekerja pasti, tidak merusak pesawat/kendaraan, pekerja sehat**."
+       ]
+      },
+      {
+       "h": "B. Cara pandang dasar bekerja"
+      },
+      {
+       "ul": [
+        "Bekerja **cepat, pasti, teliti** dengan kualitas tinggi agar dipercaya penumpang yang melihat sikap kerja dari ruang tunggu atau kabin.",
+        "① Perhatikan keselamatan dan kesehatan diri dan orang lain. ② Patuhi aturan dan etika pakaian/sikap. ③ Postur dan gerakan benar. ④ Pemanduan, isyarat, dan komunikasi **jelas**. ⑤ Di depan penumpang/tamu, jaga ucapan, jangan bicara keras, jangan kasar pada kendaraan/bagasi atau bercanda. ⑥ **Jangan menyentuh** pesawat, muatan, peralatan tanpa perlu. ⑦ Selalu awasi lalu lintas pesawat dan kendaraan di ramp. ⑧ Setelah selesai, **periksa sendiri hasil kerja secara objektif**. Semua pekerjaan adalah rangkaian pemeriksaan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{品質|ひんしつ}とは、サービスが{基準|きじゅん}にどれだけ{合|あ}っているかの{程度|ていど}です。{航空輸送|こうくうゆそう}では「{安全性|あんぜんせい}」「{定時性|ていじせい}」「{快適性|かいてきせい}」で{品質|ひんしつ}を{判断|はんだん}します。",
+        "{安全性|あんぜんせい}は{安全|あんぜん}に{飛|と}ばすこと、{定時性|ていじせい}は{決|き}めた{時間|じかん}どおりに{飛|と}ばすこと、{快適性|かいてきせい}はきれいな{客室|きゃくしつ}と{静|しず}かな{機内|きない}です。"
+       ]
+      },
+      {
+       "h": "{作業|さぎょう}の{安全|あんぜん}と{品質|ひんしつ}"
+      },
+      {
+       "ul": [
+        "グランドハンドリングは、{屋外|おくがい}や{車|くるま}・{機材|きざい}の{作業|さぎょう}が{多|おお}く、{限|かぎ}られた{時間|じかん}で{行|おこな}います。{油断|ゆだん}すると、けが、{航空機|こうくうき}や{車両|しゃりょう}のそんしょう、{手荷物|てにもつ}・{貨物|かもつ}のそんしょうや{誤送|ごそう}が{起|お}こります。",
+        "{不具合|ふぐあい}が{起|お}きると{品質|ひんしつ}が{下|さ}がります。{品質|ひんしつ}をよくするとは、{作業|さぎょう}を{確実|かくじつ}にし、{航空機|こうくうき}や{車両|しゃりょう}をこわさず、{作業員|さぎょういん}が{健康|けんこう}でいることです。"
+       ]
+      },
+      {
+       "h": "{作業|さぎょう}の{基本|きほん}"
+      },
+      {
+       "ul": [
+        "{作業|さぎょう}は{迅速|じんそく}・{確実|かくじつ}・{丁寧|ていねい}に{行|おこな}い、{乗客|じょうきゃく}に{信頼|しんらい}される{高|たか}い{品質|ひんしつ}にします。",
+        "{服装|ふくそう}・{態度|たいど}のルールとマナーを{守|まも}り、{正|ただ}しい{姿勢|しせい}で{的確|てきかく}に{動|うご}き、{誘導|ゆうどう}・{合図|あいず}・{連絡|れんらく}は{明確|めいかく}にします。",
+        "{乗客|じょうきゃく}の{前|まえ}では{言葉|ことば}づかいや{大声|おおごえ}に{注意|ちゅうい}し、{乱暴|らんぼう}な{取|と}り{扱|あつか}いや{悪|わる}ふざけをしません。{必要|ひつよう}なとき{以外|いがい}は{航空機|こうくうき}や{搭載物|とうさいぶつ}にふれません。",
+        "{作業|さぎょう}の{後|あと}は、{自分|じぶん}の{作業|さぎょう}を{客観的|きゃっかんてき}に{確認|かくにん}します。すべての{作業|さぎょう}は{確認|かくにん}の{積|つ}み{重|かさ}ねです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Industri penerbangan kini dalam persaingan ketat; maskapai terus meningkatkan layanan. Kualitas adalah tingkat kesesuaian layanan dengan standar.",
+      "points": [
+       "Tiga tolok ukur kualitas: keselamatan (安全性), ketepatan waktu (定時性), kenyamanan (快適性).",
+       "Ground handling banyak kerja di luar ruangan, mengemudi, dan peralatan, dalam waktu terbatas sesuai jam datang/berangkat. Sedikit lengah bisa menimbulkan cedera, kerusaka…",
+       "Kerusakan butuh perbaikan, cedera menunda kerja, sehingga keberangkatan terlambat; salah tangani bagasi merepotkan penumpang. Jadi meningkatkan kualitas = bekerja pasti, …"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{品質|ひんしつ}とは、サービスが{基準|きじゅん}にどれだけ{合|あ}っているかの{程度|ていど}です。{航空輸送|こうくうゆそう}では「{安全性|あんぜんせい}」「{定時性|ていじせい}」「{快適性|かいてきせい}」で{品質|ひんしつ}を{判断|はんだん}します。",
+      "points": [
+       "{安全性|あんぜんせい}は{安全|あんぜん}に{飛|と}ばすこと、{定時性|ていじせい}は{決|き}めた{時間|じかん}どおりに{飛|と}ばすこと、{快適性|かいてきせい}はきれいな{客室|きゃくしつ}と{静|しず}かな{機内|きない}です。",
+       "グランドハンドリングは、{屋外|おくがい}や{車|くるま}・{機材|きざい}の{作業|さぎょう}が{多|おお}く、{限|かぎ}られた{時間|じかん}で{行|おこな}います。{油断|ゆだん}すると、けが、{航空機|こうくうき}や{車両|しゃりょう}のそんしょう、{手荷物|てにもつ}・{貨物|かもつ}のそんしょうや{誤送|ごそう}が{起|お}こります。",
+       "{不具合|ふぐあい}が{起|お}きると{品質|ひんしつ}が{下|さ}がります。{品質|ひんしつ}をよくするとは、{作業|さぎょう}を{確実|かくじつ}にし、{航空機|こうくうき}や{車両|しゃりょう}をこわさず、{作業員|さぎょういん}が{健康|けんこう}でいることです。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s8",
+    "no": 8,
+    "title": {
+     "id": "Pencegahan: Hiyari-Hatto Report & Tunjuk-Panggil",
+     "jp": "{予防|よぼう}（ヒヤリ・ハット・レポート、{指差呼称|ゆびさしこしょう}）"
+    },
+    "pages": [
+     28,
+     28
+    ],
+    "pagesJp": [
+     70,
+     70
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "A. Hiyari-Hatto Report"
+      },
+      {
+       "ul": [
+        "Informasi **kesalahan yang nyaris menjadi kecelakaan** membantu mencegah kecelakaan/insiden. Karena itu **laporan hiyari-hatto** (pelaporan dan pengumpulan informasi kesalahan) penting.",
+        "Kenyataannya kesalahan sering tidak dilaporkan karena **malu** atau **takut dihukum**. Agar mudah dilaporkan: ① **umpan balik** memadai (informasi dibagikan dan ditindaklanjuti), ② suasana kerja **terbuka**, tidak perlu menyembunyikan kesalahan."
+       ]
+      },
+      {
+       "h": "B. Tunjuk-panggil (指差呼称) dan prediksi bahaya"
+      },
+      {
+       "ul": [
+        "Menunjuk ke depan dan belakang di ramp sambil berseru **「ヨーシ！」** (Yoshi!). Bukan sekadar menunjuk: **bersuara sekaligus** memusatkan kesadaran, dan sambil melihat memeriksa apakah ada **kondisi tidak aman**.",
+        "Agar bekerja aman tanpa salah, **tunjuk bagian yang harus dicek sambil berseru「ヨーシ」**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ヒヤリ・ハット・レポート"
+      },
+      {
+       "ul": [
+        "{事故|じこ}になる{前|まえ}の{ミス|みす}の{情報|じょうほう}があれば、{事故|じこ}を{防|ふせ}げます。そのため「ヒヤリ・ハット・レポート」が{大切|たいせつ}です。",
+        "{実際|じっさい}は、{恥|は}ずかしい{気持|きも}ちや{罰|ばつ}されるおそれで{報告|ほうこく}されにくいです。{報告|ほうこく}しやすくするには、フィードバックと、ミスをかくさなくてよい{明|あか}るい{職場|しょくば}が{大切|たいせつ}です。"
+       ]
+      },
+      {
+       "h": "{指差呼称|ゆびさしこしょう}"
+      },
+      {
+       "ul": [
+        "{前|まえ}や{後|うし}ろに{指|ゆび}をさして「ヨーシ」と{声|こえ}を{出|だ}し、{安全|あんぜん}を{確認|かくにん}します。{声|こえ}を{出|だ}すことで{意識|いしき}を{集中|しゅうちゅう}し、{目|め}で{見|み}ながら{危|あぶ}ない{状態|じょうたい}がないか{確認|かくにん}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Informasi kesalahan yang nyaris menjadi kecelakaan membantu mencegah kecelakaan/insiden. Karena itu laporan hiyari-hatto (pelaporan dan pengumpulan informasi kesalahan) p…",
+      "points": [
+       "Kenyataannya kesalahan sering tidak dilaporkan karena malu atau takut dihukum. Agar mudah dilaporkan: ① umpan balik memadai (informasi dibagikan dan ditindaklanjuti), ② s…",
+       "Menunjuk ke depan dan belakang di ramp sambil berseru 「ヨーシ！」 (Yoshi!). Bukan sekadar menunjuk: bersuara sekaligus memusatkan kesadaran, dan sambil melihat memeriksa apaka…",
+       "Agar bekerja aman tanpa salah, tunjuk bagian yang harus dicek sambil berseru「ヨーシ」."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{事故|じこ}になる{前|まえ}の{ミス|みす}の{情報|じょうほう}があれば、{事故|じこ}を{防|ふせ}げます。そのため「ヒヤリ・ハット・レポート」が{大切|たいせつ}です。",
+      "points": [
+       "{実際|じっさい}は、{恥|は}ずかしい{気持|きも}ちや{罰|ばつ}されるおそれで{報告|ほうこく}されにくいです。{報告|ほうこく}しやすくするには、フィードバックと、ミスをかくさなくてよい{明|あか}るい{職場|しょくば}が{大切|たいせつ}です。",
+       "{前|まえ}や{後|うし}ろに{指|ゆび}をさして「ヨーシ」と{声|こえ}を{出|だ}し、{安全|あんぜん}を{確認|かくにん}します。{声|こえ}を{出|だ}すことで{意識|いしき}を{集中|しゅうちゅう}し、{目|め}で{見|み}ながら{危|あぶ}ない{状態|じょうたい}がないか{確認|かくにん}します。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s9",
+    "no": 9,
+    "title": {
+     "id": "Referensi: Marka Jalur Kendaraan & Definisi Area Apron",
+     "jp": "Reference-1{車両|しゃりょう} {通路|つうろ}の{指示標示|しじひょうじ}・エプロン{内安全|ないあんぜん}"
+    },
+    "pages": [
+     29,
+     29
+    ],
+    "pagesJp": [
+     71,
+     72
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Marka jalur kendaraan (kutipan buku panduan mengemudi aman, Bandara Internasional Tokyo)"
+      },
+      {
+       "ul": [
+        "**Marka garis berhenti:** posisi tempat kendaraan berhenti.",
+        "**Marka arah jalan:** arah yang boleh dilalui kendaraan.",
+        "**Marka penyeberangan pejalan:** ada penyeberangan di depan.",
+        "**Marka prioritas depan:** di depan yang memotong jalur ini ada taxiway/apron taxiway untuk pesawat.",
+        "**Marka service lane:** jalur kendaraan yang memotong taxiway (apron taxiway).",
+        "**Marka area tunggu penyeberangan taxiway:** posisi tunggu kendaraan yang akan menyeberang taxiway."
+       ]
+      },
+      {
+       "h": "Definisi keselamatan di dalam apron"
+      },
+      {
+       "ul": [
+        "**ERA (Equipment Restraint Area / 機材制限区域):** saat pesawat masuk/keluar spot, **semua kendaraan dan peralatan dilarang masuk**; diatur di sisi dalam ESA.",
+        "**ESA (Equipment Staging Area / 機材待機区域):** tempat menunggu kendaraan dan peralatan yang bekerja di spot tersebut; di luar ERA. Boleh dipakai mulai **30 menit sebelum pesawat spot-in** (kecuali kendaraan yang disetujui sebagai tempat penyimpanan), dan harus **segera pergi** setelah pekerjaan selesai. Ada ESA dengan **batas tinggi** (kendaraan/peralatan tinggi **maksimal 25 m**).",
+        "**Marka area kerja PBB:** area parkir kendaraan/peralatan **dilarang total**; mencakup jangkauan gerak PBB dan dalam spot. **Posisi siaga PBB** (PBB Stand-by Position) menunjukkan tempat PBB menunggu."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{車両通路|しゃりょうつうろ}の{標示|ひょうじ}"
+      },
+      {
+       "ul": [
+        "{停止線|ていしせん}・{進行方向|しんこうほうこう}・{横断歩道|おうだんほどう}・{前方優先|ぜんぽうゆうせん}・サービスレーン・{誘導路横断待機区域|ゆうどうろおうだんたいきくいき}などの{標示|ひょうじ}があります。{車|くるま}の{止|と}まる{位置|いち}や{通|とお}れる{方向|ほうこう}を{示|しめ}します。"
+       ]
+      },
+      {
+       "h": "エプロンの{区域|くいき}"
+      },
+      {
+       "ul": [
+        "{機材制限区域|きざいせいげんくいき}（ERA）：{航空機|こうくうき}の{出入|でい}りのとき、どんな{車両|しゃりょう}・{機材|きざい}も{入|はい}ってはいけません。",
+        "{機材待機区域|きざいたいきくいき}（ESA）：そのスポットの{作業|さぎょう}の{車|くるま}や{機材|きざい}が{待|ま}つ{場所|ばしょ}です。スポット・インの30{分前|ふんまえ}から{使|つか}え、{作業|さぎょう}が{終|お}わったらすぐ{出|で}ます。{高|たか}さ25m{以下|いか}の{制限|せいげん}があるESAもあります。",
+        "PBB{稼働区域|かどうくいき}は、{駐車|ちゅうしゃ}を{全面的|ぜんめんてき}に{禁止|きんし}する{区域|くいき}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Marka garis berhenti: posisi tempat kendaraan berhenti.",
+      "points": [
+       "Marka arah jalan: arah yang boleh dilalui kendaraan.",
+       "Marka penyeberangan pejalan: ada penyeberangan di depan.",
+       "Marka prioritas depan: di depan yang memotong jalur ini ada taxiway/apron taxiway untuk pesawat."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{停止線|ていしせん}・{進行方向|しんこうほうこう}・{横断歩道|おうだんほどう}・{前方優先|ぜんぽうゆうせん}・サービスレーン・{誘導路横断待機区域|ゆうどうろおうだんたいきくいき}などの{標示|ひょうじ}があります。{車|くるま}の{止|と}まる{位置|いち}や{通|とお}れる{方向|ほうこう}を{示|しめ}します。",
+      "points": [
+       "{機材制限区域|きざいせいげんくいき}（ERA）：{航空機|こうくうき}の{出入|でい}りのとき、どんな{車両|しゃりょう}・{機材|きざい}も{入|はい}ってはいけません。",
+       "{機材待機区域|きざいたいきくいき}（ESA）：そのスポットの{作業|さぎょう}の{車|くるま}や{機材|きざい}が{待|ま}つ{場所|ばしょ}です。スポット・インの30{分前|ふんまえ}から{使|つか}え、{作業|さぎょう}が{終|お}わったらすぐ{出|で}ます。{高|たか}さ25m{以下|いか}の{制限|せいげん}があるESAもあります。",
+       "PBB{稼働区域|かどうくいき}は、{駐車|ちゅうしゃ}を{全面的|ぜんめんてき}に{禁止|きんし}する{区域|くいき}です。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s10",
+    "no": 10,
+    "title": {
+     "id": "Referensi: Mengangkut Barang Berbahaya dengan Pesawat",
+     "jp": "Reference-2{危険|きけん} {物|ぶつ}を{航空輸送|こうくうゆそう}するために"
+    },
+    "pages": [
+     30,
+     31
+    ],
+    "pagesJp": [
+     73,
+     75
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "1. Aturan wajib dipatuhi"
+      },
+      {
+       "ul": [
+        "UU Penerbangan menetapkan benda yang **berisiko meledak, mudah terbakar, atau merusak benda lain** sebagai **barang berbahaya**; pengangkutan harus sesuai aturan. Melanggar dikenai **denda hingga 500.000 yen**.",
+        "Contoh pelanggaran: ① **power bank**, ② **kaleng semprot** (rambut, anti nyamuk, antikarat, pereda nyeri), ③ **hoverboard** (berbaterai lithium-ion), ④ **kosmetik** (lotion, tabir surya, cat kuku)."
+       ]
+      },
+      {
+       "h": "2. Tiga poin aturan pengangkutan"
+      },
+      {
+       "ul": [
+        "① **Membuat dokumen deklarasi** barang berbahaya, ② **menempel label** sesuai jenis, ③ **mengemas** sesuai ketentuan per jenis barang.",
+        "**Pengirim:** menentukan apakah barang berbahaya, membuat deklarasi, label, dan kemasan yang tepat. **Pengangkut:** memastikan nama barang pada surat muatan, label dan kemasan sudah benar; bila ada kekurangan, **tanyakan ke pengirim**."
+       ]
+      },
+      {
+       "h": "3. Jenis barang berbahaya (9 kelas)"
+      },
+      {
+       "ul": [
+        "① Bahan peledak (kembang api, amunisi). ② Gas bertekanan (pemantik gas, hairspray, tabung oksigen). ③ Cairan mudah menyala (**titik nyala ≤ 60 ℃**; cat, kosmetik, parfum, lem). ④ Zat mudah terbakar (korek, serbuk logam, karbon aktif). ⑤ Zat pengoksidasi (generator oksigen kimia, hidrogen peroksida). ⑥ Racun/zat menular (pestisida, limbah medis). ⑦ Zat radioaktif. ⑧ Zat korosif (asam sulfat, aki timbal). ⑨ Barang berbahaya lain (**baterai lithium, es kering, magnet**)."
+       ]
+      },
+      {
+       "h": "4. Label dan wadah"
+      },
+      {
+       "ul": [
+        "Label ada dua jenis: **label bahaya** (nomor 1-9 sesuai kelas) dan **label cara pengangkutan** (mis. khusus pesawat kargo, cairan sangat dingin, jauhkan dari panas, racun lingkungan, bahan magnetis, baterai lithium).",
+        "Pemberitahuan (告示) menetapkan bentuk/bahan wadah sesuai sifat barang; perlu wadah yang tepat seperti **wadah PBB**. Contoh bensin: bentuk jerigen, bahan baja, tutup atas tetap.",
+        "Ada aturan lain, misalnya bensin di pesawat penumpang **maksimal 5 liter**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{危険物|きけんぶつ}を{航空機|こうくうき}で{運|はこ}ぶとき"
+      },
+      {
+       "ul": [
+        "{航空法|こうくうほう}は、{爆発|ばくはつ}するおそれがある{物|もの}、{燃|も}えやすい{物|もの}、ほかの{物|もの}を{傷|いた}める{物|もの}を「{危険物|きけんぶつ}」とし、ルールを{守|まも}って{運|はこ}ぶよう{決|き}めています。{守|まも}らないと50{万円以下|まんえんいか}の{罰金|ばっきん}です。",
+        "{例|れい}：モバイルバッテリー、スプレー{缶|かん}、ホバーボード、{化粧品類|けしょうひんるい}（{化粧水|けしょうすい}・{日焼|ひや}け{止|ど}め・マニキュア）。"
+       ]
+      },
+      {
+       "h": "ルールの3つのポイント"
+      },
+      {
+       "ul": [
+        "①{危険物申告書|きけんぶつしんこくしょ}をつくる。②{決|き}められたラベルをはる。③{決|き}められた{方法|ほうほう}で{梱包|こんぽう}する。",
+        "{荷送人|におくりにん}は{危険物|きけんぶつ}か{判別|はんべつ}して{書類|しょるい}・ラベル・{梱包|こんぽう}を{行|おこな}い、{運送事業者|うんそうじぎょうしゃ}は{運送状|うんそうじょう}で{品名|ひんめい}・ラベル・{梱包|こんぽう}を{確認|かくにん}し、{不備|ふび}があれば{荷送人|におくりにん}に{確認|かくにん}します。"
+       ]
+      },
+      {
+       "h": "{危険物|きけんぶつ}の{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "{火薬類|かやくるい}、{高圧|こうあつ}ガス{類|るい}、{引火性液体|いんかせいえきたい}（{引火点|いんかてん}60℃{以下|いか}）、{可燃性物質類|かねんせいぶっしつるい}、{酸化性物質類|さんかせいぶっしつるい}、{毒物類|どくぶつるい}、{放射性物質|ほうしゃせいぶっしつ}、{腐食性物質|ふしょくせいぶっしつ}、そのほかの{有害物件|ゆうがいぶっけん}（リチウム{電池|でんち}・ドライアイス・{磁石|じしゃく}など）。"
+       ]
+      },
+      {
+       "h": "ラベルと{容器|ようき}"
+      },
+      {
+       "ul": [
+        "ラベルには「{危険性|きけんせい}を{示|しめ}すもの」と「{輸送方法|ゆそうほうほう}を{示|しめ}すもの」があります。{容器|ようき}は、{国連容器|こくれんようき}などの{適切|てきせつ}な{物|もの}を{選|えら}びます。",
+        "{例|れい}：ガソリンは、{旅客機|りょかくき}で{運|はこ}べる{量|りょう}が5リットルまでです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "UU Penerbangan menetapkan benda yang berisiko meledak, mudah terbakar, atau merusak benda lain sebagai barang berbahaya; pengangkutan harus sesuai aturan. Melanggar diken…",
+      "points": [
+       "Contoh pelanggaran: ① power bank, ② kaleng semprot (rambut, anti nyamuk, antikarat, pereda nyeri), ③ hoverboard (berbaterai lithium-ion), ④ kosmetik (lotion, tabir surya,…",
+       "① Membuat dokumen deklarasi barang berbahaya, ② menempel label sesuai jenis, ③ mengemas sesuai ketentuan per jenis barang.",
+       "Pengirim: menentukan apakah barang berbahaya, membuat deklarasi, label, dan kemasan yang tepat. Pengangkut: memastikan nama barang pada surat muatan, label dan kemasan su…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{航空法|こうくうほう}は、{爆発|ばくはつ}するおそれがある{物|もの}、{燃|も}えやすい{物|もの}、ほかの{物|もの}を{傷|いた}める{物|もの}を「{危険物|きけんぶつ}」とし、ルールを{守|まも}って{運|はこ}ぶよう{決|き}めています。{守|まも}らないと50{万円以下|まんえんいか}の{罰金|ばっきん}です。",
+      "points": [
+       "{例|れい}：モバイルバッテリー、スプレー{缶|かん}、ホバーボード、{化粧品類|けしょうひんるい}（{化粧水|けしょうすい}・{日焼|ひや}け{止|ど}め・マニキュア）。",
+       "①{危険物申告書|きけんぶつしんこくしょ}をつくる。②{決|き}められたラベルをはる。③{決|き}められた{方法|ほうほう}で{梱包|こんぽう}する。",
+       "{荷送人|におくりにん}は{危険物|きけんぶつ}か{判別|はんべつ}して{書類|しょるい}・ラベル・{梱包|こんぽう}を{行|おこな}い、{運送事業者|うんそうじぎょうしゃ}は{運送状|うんそうじょう}で{品名|ひんめい}・ラベル・{梱包|こんぽう}を{確認|かくにん}し、{不備|ふび}があれば{荷送人|におくりにん}に{確認|かくにん}します。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

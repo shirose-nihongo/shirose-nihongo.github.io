@@ -4,7 +4,7 @@ Sumber: 日本航空技術協会(JAEA) 特定技能評価試験テキスト「�
 Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Halaman asli = PDF JAEA.
 Format sub: (id, judul_id, judul_jp, [hal_awal, hal_akhir], blok_ID, blok_JP). Blok: ("h", teks) | ("ul", [..]) | ("note", teks).
 Nomor halaman = nomor halaman PDF JAEA (p01 = sampul)."""
-SRC = "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision (diringkas Shirose)"
+SRC = "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision + 安全・品質 2nd Revision (diringkas Shirose)"
 BABS = [
  ("bab1", 1, "Dasar Ground Handling, Proses, dan Informasi", "グランドハンドリングの基本・工程・情報", "Apa itu ground handling, urutan kerja saat pesawat tiba/berangkat, dan membaca informasi penerbangan.", [7, 12], [
   ("b1s1", "Apa itu Ground Handling & Proses Kerja", "グランドハンドリングとは・工程管理", [7, 8], [
@@ -354,3 +354,5 @@ BABS = [
       "コードは、{手荷物|てにもつ}のタグ、{貨物|かもつ}の{行先|ゆきさき}タグ、{情報|じょうほう}モニターなどで{使|つか}います。"])]),
  ]),
 ]
+import aviation_gh_text1 as _T1
+BABS.append(_T1.BAB8)
