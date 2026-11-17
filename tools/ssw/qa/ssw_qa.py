@@ -43,10 +43,10 @@ with sync_playwright() as p:
           lastb=json.load(open(f'{REPO}/data/ssw/{slug}/{pack["bab"][-1]["file"]}'))['bab']['subs'][-1]['id']
           for sb in (sub,lastb):
             go(f'ssw-baca/{slug}/{sb}/lengkap/id',2200)
-            ok=pg.evaluate("Array.from(document.querySelectorAll('.sw-bi-scroll img')).length>0 && (()=>{const i=document.querySelector('.sw-bi-scroll img');i.scrollIntoView();return true})()")
+            ok=pg.evaluate("Array.from(document.querySelectorAll('.sw-thumbs img')).length>0 && (()=>{const i=document.querySelector('.sw-thumbs img');i.scrollIntoView();return true})()")
             pg.wait_for_timeout(1200)
-            ok=ok and pg.evaluate("(()=>{const i=document.querySelector('.sw-bi-scroll img');return i.complete&&i.naturalWidth>0})()")
-            rec(slug,vpn,f'halaman buku tampil & gambar termuat ({sb})',ok,pg.evaluate("document.querySelectorAll('.sw-bi-scroll img').length"))
+            ok=ok and pg.evaluate("(()=>{const i=document.querySelector('.sw-thumbs img');return i.complete&&i.naturalWidth>0})()")
+            rec(slug,vpn,f'halaman buku tampil & gambar termuat ({sb})',ok,pg.evaluate("document.querySelectorAll('.sw-thumbs img').length"))
           go(f'ssw-buku/{slug}/jp/1',2500)
           if (pack.get('pages') or {}).get('id'):
            go(f'ssw-buku/{slug}/id/1',2500)
