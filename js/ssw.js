@@ -477,8 +477,8 @@ async function renderHafal([slug, pre]) {
   setTimeout(() => { SSW.hafalCount(); SSW.pickRender(slug); if (adaAlat) SSW.alatInit(slug); }, 0);
   return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Hafalan kosakata" }])}
     <div class="sw-head compact"><div class="jp">単語暗記</div><h1>Hafalan Kosakata</h1><p>Pilih subbab (boleh banyak). Kata yang sama dari beberapa subbab hanya muncul sekali.</p></div>
-    <div class="sw-panel pk-p"><h2>⭐ Hafalan Pilihan <small class="sw-muted">(rangkuman kata pilihanmu · <b id="pk-n">0</b> kata)</small></h2>
-      <p class="sw-muted">Hanya kata yang kamu tandai lewat pop-up kosakata. Terpisah dari Hafalan Penuh di bawah.</p><div id="pk-box"></div>
+    <div class="sw-panel pk-p"><h2>📒 Rangkuman SSW <small class="sw-muted">(kata pilihanmu · <b id="pk-n">0</b> kata)</small></h2>
+      <p class="sw-muted">Kata yang kamu masukkan lewat pop-up kosakata. Terpisah dari Hafalan Penuh di bawah.</p><p><a class="btn ghost sm" onclick="route('ssw-rangkuman')">Buka halaman Rangkuman SSW</a></p><div id="pk-box"></div>
       <div class="sw-actions left"><button class="btn" onclick="SSW.pickGo('flashcard')">🃏 Flashcard</button><button class="btn ghost" onclick="SSW.pickGo('multiple')">✅ Pilihan ganda</button><button class="btn ghost" onclick="SSW.pickGo('matching')">🔗 Matching</button><button class="btn ghost" onclick="SSW.pickGo('mixed')">🎲 Campur</button></div></div>
     <div class="sw-head compact" style="margin-top:6px"><h2>📚 Hafalan Penuh <small class="sw-muted">(semua kosakata per subbab)</small></h2></div>
     ${!adaAlat ? "" : `<div class="sw-panel alat-p" id="alat-p"><h2><span id="alat-ttl">🧰 Flashcard Peralatan</span> <span class="jp" id="alat-jp">ビルクリーニング用具</span></h2><p class="sw-muted" id="alat-desc">Gambar peralatan dari buku (hal. 81–82). Gambar tampil di depan — tebak namanya.</p><div id="alat-body"><p class="sw-muted">Memuat…</p></div></div>`}
@@ -839,7 +839,8 @@ const SSW = window.SSW = {
       ${v.contoh ? `<div class="sw-vs-ex"><p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p></div>` : ""}
       ${fungsiInfo(v)}${v.fig ? `<p class="sw-muted">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}${v.cat ? `<p class="sw-muted">Kategori: ${esc(v.cat)}</p>` : ""}${srcs ? `<p class="sw-muted">Muncul di: ${srcs}</p>` : ""}
       <div class="sw-vs-b"><button class="btn" onclick="SSW.sayWord('${slug}','${id}')">🔊 Dengar</button>
-        <button class="btn ${picked ? "gold" : "ghost"}" id="sw-vpick" onclick="SSW.vpick('${slug}','${id}')">${picked ? "★ Ada di Hafalan Pilihan (ketuk = hapus)" : "⭐ Masukkan ke Hafalan Pilihan"}</button>
+        <button class="btn ${picked ? "gold" : "ghost"}" id="sw-vpick" onclick="SSW.vpick('${slug}','${id}')">${picked ? "✓ Ada di Rangkuman SSW (ketuk = hapus)" : "📒 Masukkan ke Rangkuman SSW"}</button>
+        <button class="btn ghost" onclick="SSW.vclose();route('ssw-rangkuman')">📒 Buka Rangkuman SSW</button>
         <button class="btn ghost" onclick="SSW.vclose();route('ssw-kartu/${slug}/w:${id}/semua')">🃏 Flashcard kata ini</button>
         <button class="btn ghost" onclick="SSW.vclose()">↩ Kembali ke materi</button></div></div>`;
     sh.hidden = false; document.body.classList.add("sw-lbopen");
@@ -847,8 +848,9 @@ const SSW = window.SSW = {
   vclose() { const sh = document.getElementById("sw-vs"); if (sh) sh.hidden = true; document.body.classList.remove("sw-lbopen"); },
   async vpick(slug, id) {
     const P = await getProgress(slug); P.pick = P.pick || {};
-    if (P.pick[id]) { delete P.pick[id]; toast("Dihapus dari Hafalan Pilihan"); }
-    else { P.pick[id] = Date.now(); toast("Masuk Hafalan Pilihan ⭐"); const pack = await loadPack(slug), v = pack.vocab.find(x => x.id === id); if (v && window.sswAddCard) { try { await window.sswAddCard(vnum(v), vnum(v) - 1); } catch (e) { /* kartu SRS opsional */ } } }
+    const pack0 = await loadPack(slug), v0 = pack0.vocab.find(x => x.id === id);
+    if (P.pick[id]) { delete P.pick[id]; if (v0 && window.rangkumHapusJp) await window.rangkumHapusJp(v0.kata, "ssw"); toast("Dihapus dari Rangkuman SSW"); }
+    else { P.pick[id] = Date.now(); if (v0 && window.rangkumCepat) await window.rangkumCepat({ jp: v0.kata, kana: v0.kana || "", arti: v0.arti || "" }, "SSW", "ssw"); else toast("Masuk Rangkuman SSW 📒"); const pack = pack0, v = v0; if (v && window.sswAddCard) { try { await window.sswAddCard(vnum(v), vnum(v) - 1); } catch (e) { /* kartu SRS opsional */ } } }
     touch(slug); SSW.vsheet(slug, id);
     const n = document.getElementById("pk-n"); if (n) SSW.pickRender(slug);
   },
@@ -858,13 +860,13 @@ const SSW = window.SSW = {
     const rows = ids.map(i => pack.vocab.find(v => v.id === i)).filter(Boolean);
     document.getElementById("pk-n").textContent = rows.length;
     box.innerHTML = rows.length ? `<div class="sw-vchips">${rows.map(v => `<span class="sw-vc"><button type="button" class="pk-k" onclick="SSW.vsheet('${slug}','${v.id}')"><span class="jp">${esc(v.kata)}</span><small>${esc(v.arti)}</small></button><button type="button" class="pk-x" onclick="SSW.vpick('${slug}','${v.id}')" aria-label="Hapus">✕</button></span>`).join("")}</div>`
-      : `<p class="sw-muted">Belum ada kata. Ketuk kata di materi atau bank kosakata, lalu tekan “⭐ Masukkan ke Hafalan Pilihan”.</p>`;
+      : `<p class="sw-muted">Belum ada kata. Ketuk kata di materi atau bank kosakata, lalu tekan “📒 Masukkan ke Rangkuman SSW”.</p>`;
   },
   async pickGo(mode) {
     const slug = HF && HF.slug; if (!slug) return;
     const P = await getProgress(slug), pack = await loadPack(slug);
     const rows = Object.keys(P.pick || {}).map(i => pack.vocab.find(v => v.id === i)).filter(Boolean);
-    if (!rows.length) return toast("Belum ada kata di Hafalan Pilihan");
+    if (!rows.length) return toast("Belum ada kata di Rangkuman SSW");
     let m = mode; if (mode === "mixed") { const ms = ["flashcard", "multiple", "matching"]; m = ms[Math.floor(Math.random() * ms.length)]; toast("Mode acak: " + { flashcard: "Flashcard", multiple: "Pilihan ganda", matching: "Matching" }[m]); }
     await window.sswHafalStart({ items: hafItems(rows), mode: m, back: `ssw-hafal/${slug}` });
   },
