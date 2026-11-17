@@ -1,0 +1,830 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "bab1-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 1",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kategori pekerjaan bidang ini adalah pengolahan antara limbah.”",
+       "jp": "○か×か。「この{分野|ぶんや}の{業務|ぎょうむ}{区分|くぶん}は、{廃棄物|はいきぶつ}{処分|しょぶん}{業|ぎょう}（{中間処理|ちゅうかんしょり}）です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{中間処理|ちゅうかんしょり}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Urutan kerja yang benar…",
+       "jp": "{仕事|しごと}の{流|なが}れで{正|ただ}しいものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "受入→選別→処分→搬出",
+        "jp": "{受入|うけいれ}→{選別|せんべつ}→{処分|しょぶん}→{搬出|はんしゅつ}"
+       },
+       {
+        "id": "処分→搬出→受入→選別",
+        "jp": "{処分|しょぶん}→{搬出|はんしゅつ}→{受入|うけいれ}→{選別|せんべつ}"
+       },
+       {
+        "id": "搬出→受入→処分→選別",
+        "jp": "{搬出|はんしゅつ}→{受入|うけいれ}→{処分|しょぶん}→{選別|せんべつ}"
+       },
+       {
+        "id": "選別→搬出→処分→受入",
+        "jp": "{選別|せんべつ}→{搬出|はんしゅつ}→{処分|しょぶん}→{受入|うけいれ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Terima, pilah, olah, keluarkan.",
+       "jp": "{受入|うけいれ}→{選別|せんべつ}→{処分|しょぶん}→{搬出|はんしゅつ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "sub": "b1s1",
+    "title": {
+     "id": "Subbab 1.1 · Apa Itu Pengolahan Antara (中間処理)",
+     "jp": "1.1 {中間処理|ちゅうかんしょり}とは"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kategori pekerjaan bidang ini adalah pengolahan antara limbah.”",
+       "jp": "○か×か。「この{分野|ぶんや}の{業務|ぎょうむ}{区分|くぶん}は、{廃棄物|はいきぶつ}{処分|しょぶん}{業|ぎょう}（{中間処理|ちゅうかんしょり}）です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{中間処理|ちゅうかんしょり}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tujuan pengolahan antara tidak mencakup pengurangan berat dan volume.”",
+       "jp": "○か×か。「{中間処理|ちゅうかんしょり}の{目的|もくてき}に、{減量化|げんりょうか}と{減容化|げんようか}は{入|い}りません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: termasuk.",
+       "jp": "{入|い}ります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Limbah dari rumah tangga terutama disebut…",
+       "jp": "おもに{家庭|かてい}から{出|で}る{廃棄物|はいきぶつ}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "一般廃棄物",
+        "jp": "{一般廃棄物|いっぱんはいきぶつ}"
+       },
+       {
+        "id": "海の廃棄物",
+        "jp": "{海|うみ}の{廃棄物|はいきぶつ}"
+       },
+       {
+        "id": "産業廃棄物",
+        "jp": "{産業廃棄物|さんぎょうはいきぶつ}"
+       },
+       {
+        "id": "危険廃棄物",
+        "jp": "{危険|きけん}{廃棄物|はいきぶつ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Limbah umum.",
+       "jp": "{一般廃棄物|いっぱんはいきぶつ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mengurangi volume limbah disebut…",
+       "jp": "{廃棄物|はいきぶつ}の{体積|たいせき}を{小|ちー}さくすることは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "安全化",
+        "jp": "{安全化|あんぜんか}"
+       },
+       {
+        "id": "減容化",
+        "jp": "{減容化|げんようか}"
+       },
+       {
+        "id": "減量化",
+        "jp": "{減量化|げんりょうか}"
+       },
+       {
+        "id": "安定化",
+        "jp": "{安定化|あんていか}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "減容化.",
+       "jp": "{減容化|げんようか}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "sub": "b1s2",
+    "title": {
+     "id": "Subbab 1.2 · Alur Kerja dan Cara Pengolahan",
+     "jp": "1.2 {仕事|しごと}の{流|なが}れと{処理方法|しょりほうほう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Urutan kerja yang benar…",
+       "jp": "{仕事|しごと}の{流|なが}れで{正|ただ}しいものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "受入→選別→処分→搬出",
+        "jp": "{受入|うけいれ}→{選別|せんべつ}→{処分|しょぶん}→{搬出|はんしゅつ}"
+       },
+       {
+        "id": "処分→搬出→受入→選別",
+        "jp": "{処分|しょぶん}→{搬出|はんしゅつ}→{受入|うけいれ}→{選別|せんべつ}"
+       },
+       {
+        "id": "搬出→受入→処分→選別",
+        "jp": "{搬出|はんしゅつ}→{受入|うけいれ}→{処分|しょぶん}→{選別|せんべつ}"
+       },
+       {
+        "id": "選別→搬出→処分→受入",
+        "jp": "{選別|せんべつ}→{搬出|はんしゅつ}→{処分|しょぶん}→{受入|うけいれ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Terima, pilah, olah, keluarkan.",
+       "jp": "{受入|うけいれ}→{選別|せんべつ}→{処分|しょぶん}→{搬出|はんしゅつ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Memilah limbah menurut jenis disebut…",
+       "jp": "{廃棄物|はいきぶつ}を{種類|しゅるい}ごとに{分|わ}ける{作業|さぎょう}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "焼却",
+        "jp": "{焼却|しょうきゃく}"
+       },
+       {
+        "id": "搬出",
+        "jp": "{搬出|はんしゅつ}"
+       },
+       {
+        "id": "選別",
+        "jp": "{選別|せんべつ}"
+       },
+       {
+        "id": "圧縮",
+        "jp": "{圧縮|あっしゅく}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Pemilahan.",
+       "jp": "{選別|せんべつ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Penghancuran adalah pengolahan memecah limbah menjadi kecil.”",
+       "jp": "○か×か。「{破砕|はさい}は、{廃棄物|はいきぶつ}を{細|こま}かくくだく{処理|しょり}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{細|こま}かくくだきます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Memadatkan limbah agar volumenya kecil…",
+       "jp": "ごみをかためて{体積|たいせき}を{小|ちー}さくする{処理|しょり}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "選別",
+        "jp": "{選別|せんべつ}"
+       },
+       {
+        "id": "受入",
+        "jp": "{受入|うけいれ}"
+       },
+       {
+        "id": "脱水",
+        "jp": "{脱水|だっすい}"
+       },
+       {
+        "id": "圧縮",
+        "jp": "{圧縮|あっしゅく}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Pemadatan.",
+       "jp": "{圧縮|あっしゅく}です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 2",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Tokutei ginou 1 dimulai pada tahun ke…",
+       "jp": "{特定技能|とくていぎのう}1{号|ごう}は{何年目|なんねんめ}から{始|はじ}まりますか。"
+      },
+      "opts": [
+       {
+        "id": "ke-4",
+        "jp": "4{年目|ねんめ}"
+       },
+       {
+        "id": "ke-9",
+        "jp": "9{年目|ねんめ}"
+       },
+       {
+        "id": "ke-1",
+        "jp": "1{年目|ねんめ}"
+       },
+       {
+        "id": "ke-2",
+        "jp": "2{年目|ねんめ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Tahun ke-4 sampai 8.",
+       "jp": "4{年目|ねんめ}から8{年目|ねんめ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "sub": "b2s1",
+    "title": {
+     "id": "Subbab 2.1 · Jalur Karier dan Bahasa Jepang",
+     "jp": "2.1 キャリアステップと{日本語|にほんご}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Tokutei ginou 1 dimulai pada tahun ke…",
+       "jp": "{特定技能|とくていぎのう}1{号|ごう}は{何年目|なんねんめ}から{始|はじ}まりますか。"
+      },
+      "opts": [
+       {
+        "id": "ke-4",
+        "jp": "4{年目|ねんめ}"
+       },
+       {
+        "id": "ke-9",
+        "jp": "9{年目|ねんめ}"
+       },
+       {
+        "id": "ke-1",
+        "jp": "1{年目|ねんめ}"
+       },
+       {
+        "id": "ke-2",
+        "jp": "2{年目|ねんめ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Tahun ke-4 sampai 8.",
+       "jp": "4{年目|ねんめ}から8{年目|ねんめ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Tingkat bahasa untuk mulai tokutei ginou 1…",
+       "jp": "{特定技能|とくていぎのう}1{号|ごう}の{開始|かいし}に{必要|ひつよう}な{日本語|にほんご}の{水準|すいじゅん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "A2.2 (N4)",
+        "jp": "A2.2（N4）"
+       },
+       {
+        "id": "tidak perlu",
+        "jp": "{必要|ひつよう}ない"
+       },
+       {
+        "id": "A1 (N5)",
+        "jp": "A1（N5）"
+       },
+       {
+        "id": "C1",
+        "jp": "C1"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "A2.2 / N4.",
+       "jp": "A2.2（N4）です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Ikusei shuro berlangsung tahun ke-1 sampai ke-3.”",
+       "jp": "○か×か。「{育成就労|いくせいしゅうろう}は1{年目|ねんめ}から3{年目|ねんめ}までです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "1{年目|ねんめ}から3{年目|ねんめ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tingkat bahasa saat mulai ikusei shuro…",
+       "jp": "{育成就労|いくせいしゅうろう}の{開始時|かいしじ}に{必要|ひつよう}な{日本語|にほんご}の{水準|すいじゅん}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "A1 (N5)",
+        "jp": "A1（N5）"
+       },
+       {
+        "id": "B1 (N3)",
+        "jp": "B1（N3）"
+       },
+       {
+        "id": "C2",
+        "jp": "C2"
+       },
+       {
+        "id": "A2.2 (N4)",
+        "jp": "A2.2（N4）"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "A1 / N5.",
+       "jp": "A1（N5）です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab3": [
+   {
+    "id": "bab3-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 3",
+     "jp": "{第|だい}3{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.”",
+       "jp": "○か×か。「{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: sangat berbahaya.",
+       "jp": "{入|い}れてはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pelatihan forklift bisa diikuti sejak tahun pertama.”",
+       "jp": "○か×か。「フォークリフトの{講習|こうしゅう}は、1{年目|ねんめ}から{受|う}けられます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (menurut program).",
+       "jp": "1{年目|ねんめ}からです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "sub": "b3s1",
+    "title": {
+     "id": "Subbab 3.1 · Keselamatan Kerja di Pengolahan Limbah",
+     "jp": "3.1 {廃棄物|はいきぶつ}{処理|しょり}の{安全|あんぜん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.”",
+       "jp": "○か×か。「{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: sangat berbahaya.",
+       "jp": "{入|い}れてはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat membersihkan mesin, matikan listrik terlebih dulu.”",
+       "jp": "○か×か。「{機械|きかい}を{掃除|そうじ}するときは、{先|さき}に{電源|でんげん}を{切|き}ります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{先|さき}に{止|と}めます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa yang dipakai untuk mencegah menghirup debu?",
+       "jp": "{粉|ふん}じんを{吸|す}わないために、{何|なに}をつけますか。"
+      },
+      "opts": [
+       {
+        "id": "サングラス",
+        "jp": "サングラス"
+       },
+       {
+        "id": "帽子だけ",
+        "jp": "{帽子|ぼうし}だけ"
+       },
+       {
+        "id": "何もつけない",
+        "jp": "{何|なに}もつけない"
+       },
+       {
+        "id": "マスク",
+        "jp": "マスク"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Masker.",
+       "jp": "マスクです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Jika menemukan kelainan pada mesin, lakukan…",
+       "jp": "{機械|きかい}の{異常|いじょう}を{見|み}つけたら、どうしますか。"
+      },
+      "opts": [
+       {
+        "id": "laporkan ke atasan",
+        "jp": "{上|うえ}の{人|にん}に{報告|ほうこく}する"
+       },
+       {
+        "id": "perbaiki sembunyi-sembunyi",
+        "jp": "こっそり{直|なお}す"
+       },
+       {
+        "id": "tetap dijalankan",
+        "jp": "そのまま{動|うご}かす"
+       },
+       {
+        "id": "abaikan",
+        "jp": "{気|き}にしない"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Lapor.",
+       "jp": "{報告|ほうこく}します。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s2-q",
+    "sub": "b3s2",
+    "title": {
+     "id": "Subbab 3.2 · Pelatihan dan Kualifikasi yang Berguna",
+     "jp": "3.2 {講習|こうしゅう}と{資格|しかく}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pelatihan forklift bisa diikuti sejak tahun pertama.”",
+       "jp": "○か×か。「フォークリフトの{講習|こうしゅう}は、1{年目|ねんめ}から{受|う}けられます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (menurut program).",
+       "jp": "1{年目|ねんめ}からです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pelatihan kepala regu dan K3 dimulai tahun ke…",
+       "jp": "{職長|しょくちょう}・{安全衛生|あんぜんえいせい}{責任者|せきにんしゃ}{教育|きょういく}は{何年目|なんねんめ}からですか。"
+      },
+      "opts": [
+       {
+        "id": "ke-7",
+        "jp": "7{年目|ねんめ}"
+       },
+       {
+        "id": "ke-1",
+        "jp": "1{年目|ねんめ}"
+       },
+       {
+        "id": "ke-4",
+        "jp": "4{年目|ねんめ}"
+       },
+       {
+        "id": "ke-2",
+        "jp": "2{年目|ねんめ}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Tahun ke-4.",
+       "jp": "4{年目|ねんめ}からです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Kualifikasi yang berkaitan dengan crane…",
+       "jp": "クレーンの{仕事|しごと}に{関係|かんけい}する{資格|しかく}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "泳ぎ",
+        "jp": "{水泳|すいえい}"
+       },
+       {
+        "id": "料理",
+        "jp": "{調理|ちょうり}"
+       },
+       {
+        "id": "英検",
+        "jp": "{英検|えいけん}"
+       },
+       {
+        "id": "玉掛け",
+        "jp": "{玉掛|たまが}け"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Tamakake.",
+       "jp": "{玉掛|たまが}けです。"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "tema": [
+  {
+   "id": "tema-rc",
+   "tema": true,
+   "title": {
+    "id": "Tema: Keselamatan Kerja Pengolahan Limbah",
+    "jp": "テーマ：{廃棄物|はいきぶつ}{処理|しょり}の{安全|あんぜん}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.”",
+      "jp": "○か×か。「{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: sangat berbahaya.",
+      "jp": "{入|い}れてはいけません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Saat membersihkan mesin, matikan listrik terlebih dulu.”",
+      "jp": "○か×か。「{機械|きかい}を{掃除|そうじ}するときは、{先|さき}に{電源|でんげん}を{切|き}ります。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{先|さき}に{止|と}めます。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Apa yang dipakai untuk mencegah menghirup debu?",
+      "jp": "{粉|ふん}じんを{吸|す}わないために、{何|なに}をつけますか。"
+     },
+     "opts": [
+      {
+       "id": "サングラス",
+       "jp": "サングラス"
+      },
+      {
+       "id": "帽子だけ",
+       "jp": "{帽子|ぼうし}だけ"
+      },
+      {
+       "id": "何もつけない",
+       "jp": "{何|なに}もつけない"
+      },
+      {
+       "id": "マスク",
+       "jp": "マスク"
+      }
+     ],
+     "a": 3,
+     "exp": {
+      "id": "Masker.",
+      "jp": "マスクです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Jika menemukan kelainan pada mesin, lakukan…",
+      "jp": "{機械|きかい}の{異常|いじょう}を{見|み}つけたら、どうしますか。"
+     },
+     "opts": [
+      {
+       "id": "laporkan ke atasan",
+       "jp": "{上|うえ}の{人|にん}に{報告|ほうこく}する"
+      },
+      {
+       "id": "perbaiki sembunyi-sembunyi",
+       "jp": "こっそり{直|なお}す"
+      },
+      {
+       "id": "tetap dijalankan",
+       "jp": "そのまま{動|うご}かす"
+      },
+      {
+       "id": "abaikan",
+       "jp": "{気|き}にしない"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Lapor.",
+      "jp": "{報告|ほうこく}します。"
+     }
+    }
+   ]
+  }
+ ]
+}

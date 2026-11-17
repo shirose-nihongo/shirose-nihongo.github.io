@@ -1,0 +1,260 @@
+{
+ "schema": 1,
+ "bidang": "logistics",
+ "source": "物流倉庫分野 試験基準 国土交通省 2026-10-26 — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab3",
+  "no": 3,
+  "title": {
+   "id": "Keselamatan dan Kesehatan Kerja",
+   "jp": "{安全|あんぜん}・{衛生|えいせい}"
+  },
+  "intro": {
+   "id": "Kesehatan diri, APD, tindakan berbahaya, tanda darurat, dan prosedur kerja.",
+   "jp": "{健康|けんこう}{管理|かんり}、{保護具|ほごぐ}、{危険|きけん}な{行動|こうどう}、{防災|ぼうさい}サイン、{作業手順|さぎょうてじゅん}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b3s1",
+    "no": 1,
+    "title": {
+     "id": "Kesehatan Diri dan Alat Pelindung Diri",
+     "jp": "{健康|けんこう}{管理|かんり}・{保護具|ほごぐ}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Kesehatan"
+      },
+      {
+       "ul": [
+        "Lapor jika tidak sehat; jangan memaksa bekerja.",
+        "Saat angkat barang berat, **turunkan pinggang** dan jaga punggung agar tidak sakit pinggang (腰痛).",
+        "Cuaca panas: minum air teratur untuk mencegah **熱中症**. Gudang pendingin: pakai **防寒着** agar tidak kedinginan."
+       ]
+      },
+      {
+       "h": "Alat pelindung diri (保護具)"
+      },
+      {
+       "ul": [
+        "**ヘルメット** (helm), **安全靴** (sepatu pengaman), **手袋** (sarung tangan), **保護メガネ**, **マスク**.",
+        "Pakai APD sesuai pekerjaan; rusak atau tidak cocok → laporkan dan ganti."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{健康|けんこう}{管理|かんり}"
+      },
+      {
+       "ul": [
+        "{体|からだ}の{調子|ちょうし}が{悪|わる}いときは、がまんしないで{報告|ほうこく}します。",
+        "{重|おも}い{物|もの}を{持|も}つときは、{腰|こし}を{落|お}とします。{腰痛|ようつう}を{防|ふせ}ぎます。",
+        "{暑|あつ}いときは{水|みず}を{飲|の}んで、{熱中症|ねっちゅうしょう}を{防|ふせ}ぎます。{冷蔵倉庫|れいぞうそうこ}では{防寒着|ぼうかんぎ}を{着|ちゃく}ます。"
+       ]
+      },
+      {
+       "h": "{保護具|ほごぐ}"
+      },
+      {
+       "ul": [
+        "ヘルメット、{安全靴|あんぜんぐつ}、{手袋|てぶくろ}、{保護|ほご}メガネ、マスクなどを{使|つか}います。",
+        "{保護具|ほごぐ}がこわれたら、{報告|ほうこく}して{交換|こうかん}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Lapor jika tidak sehat; jangan memaksa bekerja.",
+      "points": [
+       "Saat angkat barang berat, turunkan pinggang dan jaga punggung agar tidak sakit pinggang (腰痛).",
+       "Cuaca panas: minum air teratur untuk mencegah 熱中症. Gudang pendingin: pakai 防寒着 agar tidak kedinginan.",
+       "ヘルメット (helm), 安全靴 (sepatu pengaman), 手袋 (sarung tangan), 保護メガネ, マスク."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 健康, 保護具, 安全靴, ヘルメット."
+      ]
+     },
+     "jp": {
+      "core": "{体|からだ}の{調子|ちょうし}が{悪|わる}いときは、がまんしないで{報告|ほうこく}します。",
+      "points": [
+       "{重|おも}い{物|もの}を{持|も}つときは、{腰|こし}を{落|お}とします。{腰痛|ようつう}を{防|ふせ}ぎます。",
+       "{暑|あつ}いときは{水|みず}を{飲|の}んで、{熱中症|ねっちゅうしょう}を{防|ふせ}ぎます。{冷蔵倉庫|れいぞうそうこ}では{防寒着|ぼうかんぎ}を{着|ちゃく}ます。",
+       "ヘルメット、{安全靴|あんぜんぐつ}、{手袋|てぶくろ}、{保護|ほご}メガネ、マスクなどを{使|つか}います。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{健康|けんこう}、{保護具|ほごぐ}、{安全靴|あんぜんぐつ}、ヘルメット。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s2",
+    "no": 2,
+    "title": {
+     "id": "Tindakan Berbahaya dan Pencegahan Kecelakaan",
+     "jp": "{危険|きけん}な{行動|こうどう}・{労災|ろうさい}{防止|ぼうし}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Keselamatan forklift dan area kerja"
+      },
+      {
+       "ul": [
+        "**Jangan naik di atas garpu forklift** dan jangan berdiri di bawah barang yang terangkat.",
+        "Saat membawa barang, **turunkan garpu rendah**, perhatikan sekitar, patuhi batas kecepatan, utamakan pejalan kaki.",
+        "Mengemudi forklift butuh pelatihan: beban maks **1 ton ke atas = 技能講習**, **di bawah 1 ton = 特別教育**.",
+        "**Jangan berlari** di gudang; hati-hati pada lantai basah atau yang tidak rata (risiko **転倒 / terpeleset**).",
+        "Hati-hati **挟まれ (terjepit)** dan **荷くずれ (tumpukan roboh)**; jangan menumpuk melebihi batas.",
+        "**ヒヤリハット**: kejadian nyaris celaka; laporkan agar tidak terulang."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "フォークリフトと{作業場|さぎょうば}の{安全|あんぜん}"
+      },
+      {
+       "ul": [
+        "フォークリフトのツメに{乗|の}ってはいけません。{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{入|いっ}ってもいけません。",
+        "{運|はこ}ぶときはツメを{低|ひく}くして、まわりを{見|み}て、スピードを{守|まも}ります。{歩|ある}く{人|にん}が{先|さき}です。",
+        "フォークリフトの{運転|うんてん}には{資格|しかく}が{必要|ひつよう}です。{最大|さいだい}{荷重|かじゅう}1トン{以上|いじょう}は{技能講習|ぎのうこうしゅう}、1トン{未満|みまん}は{特別教育|とくべつきょういく}です。",
+        "{倉庫|そうこ}の{中|なか}を{走|はし}ってはいけません。ぬれた{床|とこ}や{段差|だんさ}で{転|ころ}ばないように{気|き}をつけます。",
+        "はさまれや{荷|に}くずれに{気|き}をつけます。",
+        "ヒヤリハットは、{事故|じこ}になりそうだった{出来事|できごと}です。{報告|ほうこく}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Jangan naik di atas garpu forklift dan jangan berdiri di bawah barang yang terangkat.",
+      "points": [
+       "Saat membawa barang, turunkan garpu rendah, perhatikan sekitar, patuhi batas kecepatan, utamakan pejalan kaki.",
+       "Mengemudi forklift butuh pelatihan: beban maks 1 ton ke atas = 技能講習, di bawah 1 ton = 特別教育.",
+       "Jangan berlari di gudang; hati-hati pada lantai basah atau yang tidak rata (risiko 転倒 / terpeleset)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 危険, 労災, 転倒, 挟まれ."
+      ]
+     },
+     "jp": {
+      "core": "フォークリフトのツメに{乗|の}ってはいけません。{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{入|いっ}ってもいけません。",
+      "points": [
+       "{運|はこ}ぶときはツメを{低|ひく}くして、まわりを{見|み}て、スピードを{守|まも}ります。{歩|ある}く{人|にん}が{先|さき}です。",
+       "フォークリフトの{運転|うんてん}には{資格|しかく}が{必要|ひつよう}です。{最大|さいだい}{荷重|かじゅう}1トン{以上|いじょう}は{技能講習|ぎのうこうしゅう}、1トン{未満|みまん}は{特別教育|とくべつきょういく}です。",
+       "{倉庫|そうこ}の{中|なか}を{走|はし}ってはいけません。ぬれた{床|とこ}や{段差|だんさ}で{転|ころ}ばないように{気|き}をつけます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{危険|きけん}、{労災|ろうさい}、{転倒|てんとう}、{挟|はさ}まれ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s3",
+    "no": 3,
+    "title": {
+     "id": "Tanda Darurat dan Prosedur Kerja",
+     "jp": "{防災|ぼうさい}サイン・{作業手順|さぎょうてじゅん}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Tanda darurat"
+      },
+      {
+       "ul": [
+        "**Warna aman**: **hijau** = aman/evakuasi (pintu darurat), **merah** = larangan/pemadam api/stop, **kuning** = hati-hati, **biru** = perintah/wajib.",
+        "Kenali lokasi **非常口 (pintu darurat)** dan **消火器 (alat pemadam)** sejak awal.",
+        "Saat kebakaran: **beri tahu orang sekitar → hubungi → evakuasi** dengan tenang; jangan memakai lift."
+       ]
+      },
+      {
+       "h": "Prosedur kerja"
+      },
+      {
+       "ul": [
+        "Ikuti **作業手順書 (prosedur kerja tertulis)**; jangan mengubah cara kerja sendiri.",
+        "**報告・連絡・相談 (ほう・れん・そう)**: lapor, kabari, konsultasi.",
+        "**5S**: 整理, 整頓, 清掃, 清潔, しつけ — menjaga tempat kerja rapi dan aman."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{防災|ぼうさい}サイン"
+      },
+      {
+       "ul": [
+        "{安全色|あんぜんしょく}：{緑|みどり}は{安全|あんぜん}・{避難|ひなん}、{赤|あか}は{禁止|きんし}・{防火|ぼうか}・{停止|ていし}、{黄色|きいろ}は{注意|ちゅうい}、{青|あお}は{指示|しじ}です。",
+        "{非常口|ひじょうぐち}と{消火器|しょうかき}の{場所|ばしょ}を、はじめに{確認|かくにん}します。",
+        "{火事|かじ}のときは、まわりに{知|し}らせて、{連絡|れんらく}して、{落ち着|おちつ}いて{避難|ひなん}します。エレベーターは{使|つか}いません。"
+       ]
+      },
+      {
+       "h": "{作業手順|さぎょうてじゅん}"
+      },
+      {
+       "ul": [
+        "{作業手順書|さぎょうてじゅんしょ}のとおりに{作業|さぎょう}します。{自分|じぶん}の{考|かんが}えで{手順|てじゅん}を{変|か}えてはいけません。",
+        "{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}を{大切|たいせつ}にします。",
+        "5Sは、{整理|せいり}、{整頓|せいとん}、{清掃|せいそう}、{清潔|せいけつ}、しつけです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Warna aman: hijau = aman/evakuasi (pintu darurat), merah = larangan/pemadam api/stop, kuning = hati-hati, biru = perintah/wajib.",
+      "points": [
+       "Kenali lokasi 非常口 (pintu darurat) dan 消火器 (alat pemadam) sejak awal.",
+       "Saat kebakaran: beri tahu orang sekitar → hubungi → evakuasi dengan tenang; jangan memakai lift.",
+       "Ikuti 作業手順書 (prosedur kerja tertulis); jangan mengubah cara kerja sendiri."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 非常口, 消火器, 避難, 作業手順書."
+      ]
+     },
+     "jp": {
+      "core": "{安全色|あんぜんしょく}：{緑|みどり}は{安全|あんぜん}・{避難|ひなん}、{赤|あか}は{禁止|きんし}・{防火|ぼうか}・{停止|ていし}、{黄色|きいろ}は{注意|ちゅうい}、{青|あお}は{指示|しじ}です。",
+      "points": [
+       "{非常口|ひじょうぐち}と{消火器|しょうかき}の{場所|ばしょ}を、はじめに{確認|かくにん}します。",
+       "{火事|かじ}のときは、まわりに{知|し}らせて、{連絡|れんらく}して、{落ち着|おちつ}いて{避難|ひなん}します。エレベーターは{使|つか}いません。",
+       "{作業手順書|さぎょうてじゅんしょ}のとおりに{作業|さぎょう}します。{自分|じぶん}の{考|かんが}えで{手順|てじゅん}を{変|か}えてはいけません。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{非常口|ひじょうぐち}、{消火器|しょうかき}、{避難|ひなん}、{作業手順書|さぎょうてじゅんしょ}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

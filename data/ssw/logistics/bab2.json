@@ -1,0 +1,246 @@
+{
+ "schema": 1,
+ "bidang": "logistics",
+ "source": "物流倉庫分野 試験基準 国土交通省 2026-10-26 — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab2",
+  "no": 2,
+  "title": {
+   "id": "Pengolahan Distribusi dan Manajemen Kerja",
+   "jp": "{流通加工|りゅうつうかこう}"
+  },
+  "intro": {
+   "id": "Manajemen lokasi, cek barang, pengemasan, nama alat, dan menghitung waktu/jumlah orang.",
+   "jp": "ロケーション{管理|かんり}、{検品|けんぴん}・{梱包|こんぽう}、{機器|きき}の{名前|なまえ}、{作業時間|さぎょうじかん}や{人数|にんずう}の{計算|けいさん}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b2s1",
+    "no": 1,
+    "title": {
+     "id": "Manajemen Lokasi dan Sistem Gudang",
+     "jp": "ロケーション{管理|かんり}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Lokasi barang"
+      },
+      {
+       "ul": [
+        "**ロケーション (lokasi)**: alamat tempat barang disimpan di rak, mis. kode lajur–bagian–tingkat.",
+        "Dengan lokasi, barang yang dicari bisa ditemukan cepat dan salah ambil berkurang.",
+        "**固定ロケーション**: satu jenis barang selalu di tempat yang sama. **フリーロケーション**: barang boleh ditaruh di tempat kosong, lokasi dicatat di sistem.",
+        "**WMS (倉庫管理システム)**: sistem komputer yang mencatat stok dan lokasi barang.",
+        "**ハンディターミナル** dan **バーコード**: membaca kode barang agar data akurat.",
+        "**棚卸**: menghitung stok nyata dan mencocokkannya dengan data."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ロケーション{管理|かんり}"
+      },
+      {
+       "ul": [
+        "ロケーションは、{荷物|にもつ}を{置|お}く{場所|ばしょ}の{番号|ばんごう}です。",
+        "ロケーションがあると、{荷物|にもつ}をすぐ{見|み}つけられて、まちがいが{減|へ}ります。",
+        "{固定ロケーション|こていろけーしょん}は、{同|おな}じ{荷物|にもつ}をいつも{同|おな}じ{場所|ばしょ}に{置|お}きます。フリーロケーションは、{空|あ}いている{場所|ばしょ}に{置|お}いて、システムに{記録|きろく}します。",
+        "{倉庫管理システム|そうこかんりしすてむ}（WMS）は、{在庫|ざいこ}と{場所|ばしょ}を{管理|かんり}するシステムです。",
+        "ハンディターミナルでバーコードを{読|よ}むと、データが{正確|せいかく}になります。",
+        "{棚卸|たなおろし}は、{実際|じっさい}の{在庫|ざいこ}を{数|かぞ}えて、データと{合|あ}わせる{作業|さぎょう}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "ロケーション (lokasi): alamat tempat barang disimpan di rak, mis. kode lajur–bagian–tingkat.",
+      "points": [
+       "Dengan lokasi, barang yang dicari bisa ditemukan cepat dan salah ambil berkurang.",
+       "固定ロケーション: satu jenis barang selalu di tempat yang sama. フリーロケーション: barang boleh ditaruh di tempat kosong, lokasi dicatat di sistem.",
+       "WMS (倉庫管理システム): sistem komputer yang mencatat stok dan lokasi barang."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: ロケーション, 固定ロケーション, フリーロケーション, 倉庫管理システム."
+      ]
+     },
+     "jp": {
+      "core": "ロケーションは、{荷物|にもつ}を{置|お}く{場所|ばしょ}の{番号|ばんごう}です。",
+      "points": [
+       "ロケーションがあると、{荷物|にもつ}をすぐ{見|み}つけられて、まちがいが{減|へ}ります。",
+       "{固定ロケーション|こていろけーしょん}は、{同|おな}じ{荷物|にもつ}をいつも{同|おな}じ{場所|ばしょ}に{置|お}きます。フリーロケーションは、{空|あ}いている{場所|ばしょ}に{置|お}いて、システムに{記録|きろく}します。",
+       "{倉庫管理システム|そうこかんりしすてむ}（WMS）は、{在庫|ざいこ}と{場所|ばしょ}を{管理|かんり}するシステムです。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：ロケーション、{固定ロケーション|こていろけーしょん}、フリーロケーション、{倉庫管理システム|そうこかんりしすてむ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s2",
+    "no": 2,
+    "title": {
+     "id": "Cek Barang dan Pengemasan",
+     "jp": "{検品|けんぴん}・{梱包|こんぽう}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Cek barang (検品)"
+      },
+      {
+       "ul": [
+        "Cara cek: **目視** (lihat langsung), **バーコード** (pindai), **重量** (timbang).",
+        "Yang dicek: jumlah, nomor barang, kerusakan/kotor, tanggal kedaluwarsa, dan label.",
+        "Jika ada kelainan, **jangan memutuskan sendiri**: laporkan ke atasan."
+       ]
+      },
+      {
+       "h": "Pengemasan (梱包)"
+      },
+      {
+       "ul": [
+        "Bahan: **段ボール** (kardus), **緩衝材** (pelindung, mis. bubble wrap), **テープ**, **ストレッチフィルム** (pembungkus plastik), **結束バンド**.",
+        "Isi celah dengan pelindung agar barang tidak bergeser; barang berat di bawah.",
+        "Tempel **ラベル** (label alamat/isi) pada tempat yang mudah dilihat.",
+        "**流通加工**: pekerjaan tambahan seperti pasang label harga, kemas campur, atau pasang kemasan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{検品|けんぴん}"
+      },
+      {
+       "ul": [
+        "{検品|けんぴん}の{方法|ほうほう}には、{目|め}で{見|み}る、バーコードを{読|よ}む、{重|おも}さをはかる{方法|ほうほう}があります。",
+        "{数|かず}、{品番|ひんばん}、きず、よごれ、{賞味期限|しょうみきげん}、ラベルを{確認|かくにん}します。",
+        "おかしいと{思|おも}ったら、{自分|じぶん}で{決|き}めないで、{上|うえ}の{人|にん}に{報告|ほうこく}します。"
+       ]
+      },
+      {
+       "h": "{梱包|こんぽう}"
+      },
+      {
+       "ul": [
+        "{段ボール|だんぼーる}、{緩衝材|かんしょうざい}、テープ、ストレッチフィルム、{結束|けっそく}バンドを{使|つか}います。",
+        "すき{間|かん}を{緩衝材|かんしょうざい}でうめて、{荷物|にもつ}が{動|うご}かないようにします。{重|おも}い{物|もの}は{下|した}にします。",
+        "ラベルは{見|み}やすい{所|ところ}にはります。",
+        "{流通加工|りゅうつうかこう}は、{値札|ねふだ}{付|つ}け、{詰|つ}め{合|あ}わせなどの{追加|ついか}の{作業|さぎょう}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Cara cek: 目視 (lihat langsung), バーコード (pindai), 重量 (timbang).",
+      "points": [
+       "Yang dicek: jumlah, nomor barang, kerusakan/kotor, tanggal kedaluwarsa, dan label.",
+       "Jika ada kelainan, jangan memutuskan sendiri: laporkan ke atasan.",
+       "Bahan: 段ボール (kardus), 緩衝材 (pelindung, mis. bubble wrap), テープ, ストレッチフィルム (pembungkus plastik), 結束バンド."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 梱包, 緩衝材, 段ボール, ストレッチフィルム."
+      ]
+     },
+     "jp": {
+      "core": "{検品|けんぴん}の{方法|ほうほう}には、{目|め}で{見|み}る、バーコードを{読|よ}む、{重|おも}さをはかる{方法|ほうほう}があります。",
+      "points": [
+       "{数|かず}、{品番|ひんばん}、きず、よごれ、{賞味期限|しょうみきげん}、ラベルを{確認|かくにん}します。",
+       "おかしいと{思|おも}ったら、{自分|じぶん}で{決|き}めないで、{上|うえ}の{人|にん}に{報告|ほうこく}します。",
+       "{段ボール|だんぼーる}、{緩衝材|かんしょうざい}、テープ、ストレッチフィルム、{結束|けっそく}バンドを{使|つか}います。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{梱包|こんぽう}、{緩衝材|かんしょうざい}、{段ボール|だんぼーる}、ストレッチフィルム。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s3",
+    "no": 3,
+    "title": {
+     "id": "Menghitung Waktu dan Jumlah Orang",
+     "jp": "{作業時間|さぎょうじかん}・{人数|にんずう}の{計算|けいさん}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Rumus dasar"
+      },
+      {
+       "ul": [
+        "**Waktu kerja = jumlah pekerjaan ÷ (kemampuan per jam × jumlah orang)**.",
+        "**Jumlah orang = jumlah pekerjaan ÷ (kemampuan per jam × jam kerja)**.",
+        "Contoh: 240 dus, 1 orang 60 dus/jam, selesai dalam 2 jam → 240 ÷ (60×2) = **2 orang**.",
+        "Contoh: 300 dus, 3 orang, 50 dus/jam per orang → 300 ÷ (50×3) = **2 jam**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{計算|けいさん}の{基本|きほん}"
+      },
+      {
+       "ul": [
+        "{作業時間|さぎょうじかん}{作業量|さぎょうりょう}÷（1{人|にん}1{時間|じかん}の{作業量|さぎょうりょう}×{人数|にんずう}）です。",
+        "{人数|にんずう}{作業量|さぎょうりょう}÷（1{人|にん}1{時間|じかん}の{作業量|さぎょうりょう}×{時間|じかん}）です。",
+        "{例|れい}：240ケースを1{人|にん}が1{時間|じかん}に60ケースで、2{時間|じかん}で{終|お}わらせるなら、240÷（60×2）で2{人|にん}です。",
+        "{例|れい}：300ケースを3{人|にん}で、1{人|にん}1{時間|じかん}50ケースなら、300÷（50×3）で2{時間|じかん}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Waktu kerja = jumlah pekerjaan ÷ (kemampuan per jam × jumlah orang).",
+      "points": [
+       "Jumlah orang = jumlah pekerjaan ÷ (kemampuan per jam × jam kerja).",
+       "Contoh: 240 dus, 1 orang 60 dus/jam, selesai dalam 2 jam → 240 ÷ (60×2) = 2 orang.",
+       "Contoh: 300 dus, 3 orang, 50 dus/jam per orang → 300 ÷ (50×3) = 2 jam."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 作業量, 作業時間, 人数, 所要時間."
+      ]
+     },
+     "jp": {
+      "core": "{作業時間|さぎょうじかん}{作業量|さぎょうりょう}÷（1{人|にん}1{時間|じかん}の{作業量|さぎょうりょう}×{人数|にんずう}）です。",
+      "points": [
+       "{人数|にんずう}{作業量|さぎょうりょう}÷（1{人|にん}1{時間|じかん}の{作業量|さぎょうりょう}×{時間|じかん}）です。",
+       "{例|れい}：240ケースを1{人|にん}が1{時間|じかん}に60ケースで、2{時間|じかん}で{終|お}わらせるなら、240÷（60×2）で2{人|にん}です。",
+       "{例|れい}：300ケースを3{人|にん}で、1{人|にん}1{時間|じかん}50ケースなら、300÷（50×3）で2{時間|じかん}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{作業量|さぎょうりょう}、{作業時間|さぎょうじかん}、{人数|にんずう}、{所要時間|しょようじかん}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

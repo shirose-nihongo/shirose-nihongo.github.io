@@ -1,0 +1,314 @@
+{
+ "schema": 1,
+ "bidang": "logistics",
+ "source": "物流倉庫分野 試験基準 国土交通省 2026-10-26 — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab1",
+  "no": 1,
+  "title": {
+   "id": "Penyimpanan dan Bongkar-Muat",
+   "jp": "{保管|ほかん}・{荷役|にやく}"
+  },
+  "intro": {
+   "id": "Jenis gudang, peralatan, alur kerja masuk-keluar barang, satuan, dan simbol penanganan.",
+   "jp": "{倉庫|そうこ}の{種類|しゅるい}、{設備|せつび}・{機器|きき}、{入庫|にゅうこ}・{出庫|しゅっこ}の{作業|さぎょう}、{単位|たんい}、ケアマークを{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   1
+  ],
+  "subs": [
+   {
+    "id": "b1s1",
+    "no": 1,
+    "title": {
+     "id": "Jenis Gudang",
+     "jp": "{倉庫|そうこ}の{種類|しゅるい}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Jenis gudang menurut Undang-Undang Usaha Pergudangan"
+      },
+      {
+       "ul": [
+        "**普通倉庫**: gudang untuk barang umum (kemasan, kardus, pallet) pada suhu ruang.",
+        "**冷蔵倉庫**: gudang berpendingin untuk barang yang disimpan pada suhu **10℃ atau lebih rendah** (makanan segar, beku).",
+        "**危険品倉庫**: gudang khusus bahan berbahaya (mis. bahan mudah terbakar); dikelola ketat sesuai hukum yang berlaku.",
+        "Orang yang menjalankan **usaha pergudangan (倉庫業)** harus terdaftar di **Menteri Pertanahan, Infrastruktur, Transportasi dan Pariwisata (国土交通大臣)**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{倉庫|そうこ}の{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "{普通倉庫|ふつうそうこ}は、ふつうの{荷物|にもつ}を{常温|じょうおん}で{保管|ほかん}する{倉庫|そうこ}です。",
+        "{冷蔵倉庫|れいぞうそうこ}は、10℃{以下|いか}で{荷物|にもつ}を{保管|ほかん}する{倉庫|そうこ}です。{食品|しょくひん}などを{入|い}れます。",
+        "{危険品倉庫|きけんひんそうこ}は、{危険|きけん}な{物|もの}を{保管|ほかん}する{倉庫|そうこ}です。",
+        "{倉庫業|そうこぎょう}をするには、{国土|こくど}{交通|こうつう}{大臣|だいじん}の{登録|とうろく}が{必要|ひつよう}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "普通倉庫: gudang untuk barang umum (kemasan, kardus, pallet) pada suhu ruang.",
+      "points": [
+       "冷蔵倉庫: gudang berpendingin untuk barang yang disimpan pada suhu 10℃ atau lebih rendah (makanan segar, beku).",
+       "危険品倉庫: gudang khusus bahan berbahaya (mis. bahan mudah terbakar); dikelola ketat sesuai hukum yang berlaku.",
+       "Orang yang menjalankan usaha pergudangan (倉庫業) harus terdaftar di Menteri Pertanahan, Infrastruktur, Transportasi dan Pariwisata (国土交通大臣)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 倉庫, 普通倉庫, 冷蔵倉庫, 危険品倉庫."
+      ]
+     },
+     "jp": {
+      "core": "{普通倉庫|ふつうそうこ}は、ふつうの{荷物|にもつ}を{常温|じょうおん}で{保管|ほかん}する{倉庫|そうこ}です。",
+      "points": [
+       "{冷蔵倉庫|れいぞうそうこ}は、10℃{以下|いか}で{荷物|にもつ}を{保管|ほかん}する{倉庫|そうこ}です。{食品|しょくひん}などを{入|い}れます。",
+       "{危険品倉庫|きけんひんそうこ}は、{危険|きけん}な{物|もの}を{保管|ほかん}する{倉庫|そうこ}です。",
+       "{倉庫業|そうこぎょう}をするには、{国土|こくど}{交通|こうつう}{大臣|だいじん}の{登録|とうろく}が{必要|ひつよう}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{倉庫|そうこ}、{普通倉庫|ふつうそうこ}、{冷蔵倉庫|れいぞうそうこ}、{危険品倉庫|きけんひんそうこ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s2",
+    "no": 2,
+    "title": {
+     "id": "Peralatan dan Mesin Gudang",
+     "jp": "{設備|せつび}・{機器|きき}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Peralatan utama"
+      },
+      {
+       "ul": [
+        "**パレット**: alas kayu/plastik tempat menumpuk barang agar bisa diangkat forklift.",
+        "**フォークリフト**: kendaraan bergarpu untuk mengangkat dan memindahkan pallet.",
+        "**ハンドリフト**: pengangkat pallet manual (didorong/ditarik tangan).",
+        "**カゴ台車**: troli kerangka kawat (roll box pallet) untuk memindahkan banyak kardus.",
+        "**エレベーター・垂直自動搬送機**: mengangkut barang antar lantai gudang.",
+        "**コンベヤ**: ban berjalan yang memindahkan barang otomatis."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{主|おも}な{設備|せつび}・{機器|きき}"
+      },
+      {
+       "ul": [
+        "パレットは、{荷物|にもつ}をのせる{台|だい}です。フォークリフトで{運|はこ}べます。",
+        "フォークリフトは、{荷物|にもつ}を{持|も}ち{上|あ}げて{運|はこ}ぶ{車|くるま}です。",
+        "ハンドリフトは、{手|て}でパレットを{動|うご}かす{道具|どうぐ}です。",
+        "{カゴ台車|かごだいしゃ}は、たくさんの{荷物|にもつ}を{運|はこ}ぶ{台車|だいしゃ}です。",
+        "エレベーターや{垂直|すいちょく}{搬送|はんそう}{機|き}は、{荷物|にもつ}を{上|うえ}の{階|かい}や{下|した}の{階|かい}に{運|はこ}びます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "パレット: alas kayu/plastik tempat menumpuk barang agar bisa diangkat forklift.",
+      "points": [
+       "フォークリフト: kendaraan bergarpu untuk mengangkat dan memindahkan pallet.",
+       "ハンドリフト: pengangkat pallet manual (didorong/ditarik tangan).",
+       "カゴ台車: troli kerangka kawat (roll box pallet) untuk memindahkan banyak kardus."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: パレット, フォークリフト, ハンドリフト, カゴ台車."
+      ]
+     },
+     "jp": {
+      "core": "パレットは、{荷物|にもつ}をのせる{台|だい}です。フォークリフトで{運|はこ}べます。",
+      "points": [
+       "フォークリフトは、{荷物|にもつ}を{持|も}ち{上|あ}げて{運|はこ}ぶ{車|くるま}です。",
+       "ハンドリフトは、{手|て}でパレットを{動|うご}かす{道具|どうぐ}です。",
+       "{カゴ台車|かごだいしゃ}は、たくさんの{荷物|にもつ}を{運|はこ}ぶ{台車|だいしゃ}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：パレット、フォークリフト、ハンドリフト、{カゴ台車|かごだいしゃ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s3",
+    "no": 3,
+    "title": {
+     "id": "Alur Kerja: Masuk, Keluar, Picking, Tumpuk",
+     "jp": "{入庫|にゅうこ}・{出庫|しゅっこ}・ピッキング・{積付|つみつけ}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Alur kerja gudang"
+      },
+      {
+       "ul": [
+        "**入庫**: terima barang (荷受け) → cek (検品) → simpan di rak/lokasi (格納).",
+        "**出庫**: ambil barang sesuai pesanan (**ピッキング**) → cek → kemas → kirim.",
+        "**積付 (menumpuk di pallet)**: barang **berat di bawah**, ringan di atas; sejajarkan sudut; jangan melebihi tinggi/ beban yang ditentukan agar tidak roboh.",
+        "**先入れ先出し (FIFO)**: barang yang masuk lebih dulu dikeluarkan lebih dulu; penting untuk makanan dengan tanggal kedaluwarsa.",
+        "Periksa **jumlah, nomor barang, kondisi (rusak/basah), dan tanggal kedaluwarsa** saat menerima."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{倉庫|そうこ}の{作業|さぎょう}の{流|なが}れ"
+      },
+      {
+       "ul": [
+        "{入庫|にゅうこ}は、{荷物|にもつ}を{受け取|うけと}り、{検品|けんぴん}をして、{棚|たな}に{入|い}れる{作業|さぎょう}です。",
+        "{出庫|しゅっこ}は、{注文|ちゅうもん}の{荷物|にもつ}を{集|あつ}め（ピッキング）、{検品|けんぴん}して、{梱包|こんぽう}して{出|だ}す{作業|さぎょう}です。",
+        "{積付|つみつけ}は、{重|おも}い{物|もの}を{下|した}に、{軽|かる}い{物|もの}を{上|うえ}に{積|つ}みます。{荷|に}くずれしないように{角|かく}をそろえます。",
+        "{先入れ先出|さきいれさきだ}しは、{先|さき}に{入|いっ}った{物|もの}から{先|さき}に{出|だ}すルールです。",
+        "{検品|けんぴん}では、{数|かず}、{品番|ひんばん}、きず、{賞味期限|しょうみきげん}を{見|み}ます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "入庫: terima barang (荷受け) → cek (検品) → simpan di rak/lokasi (格納).",
+      "points": [
+       "出庫: ambil barang sesuai pesanan (ピッキング) → cek → kemas → kirim.",
+       "積付 (menumpuk di pallet): barang berat di bawah, ringan di atas; sejajarkan sudut; jangan melebihi tinggi/ beban yang ditentukan agar tidak roboh.",
+       "先入れ先出し (FIFO): barang yang masuk lebih dulu dikeluarkan lebih dulu; penting untuk makanan dengan tanggal kedaluwarsa."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 入庫, 出庫, 検品, ピッキング."
+      ]
+     },
+     "jp": {
+      "core": "{入庫|にゅうこ}は、{荷物|にもつ}を{受け取|うけと}り、{検品|けんぴん}をして、{棚|たな}に{入|い}れる{作業|さぎょう}です。",
+      "points": [
+       "{出庫|しゅっこ}は、{注文|ちゅうもん}の{荷物|にもつ}を{集|あつ}め（ピッキング）、{検品|けんぴん}して、{梱包|こんぽう}して{出|だ}す{作業|さぎょう}です。",
+       "{積付|つみつけ}は、{重|おも}い{物|もの}を{下|した}に、{軽|かる}い{物|もの}を{上|うえ}に{積|つ}みます。{荷|に}くずれしないように{角|かく}をそろえます。",
+       "{先入れ先出|さきいれさきだ}しは、{先|さき}に{入|いっ}った{物|もの}から{先|さき}に{出|だ}すルールです。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{入庫|にゅうこ}、{出庫|しゅっこ}、{検品|けんぴん}、ピッキング。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s4",
+    "no": 4,
+    "title": {
+     "id": "Satuan dan Simbol Penanganan (Care Mark)",
+     "jp": "{単位|たんい}とケアマーク"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Satuan"
+      },
+      {
+       "ul": [
+        "**1 t (ton) = 1.000 kg**; **1 kg = 1.000 g**; **1 m = 100 cm**; **1 m³ = 1.000 L**.",
+        "Hitungan barang: **バラ** (satuan/pieces), **ケース** (dus/karton isi banyak). Contoh: 1 ケース = 12 個 → 5 ケース = 60 個.",
+        "Barang **berat** (kg) dan **volume** (m³) dipakai untuk menghitung muatan."
+       ]
+      },
+      {
+       "h": "Care mark (simbol penanganan)"
+      },
+      {
+       "ul": [
+        "**天地無用**: jangan dibalik; ujung panah menunjuk ke atas.",
+        "**ワレモノ注意 (割れ物)**: mudah pecah, tangani hati-hati.",
+        "**水ぬれ防止**: jaga agar tidak basah.",
+        "**手かぎ無用**: jangan memakai pengait tangan.",
+        "**積み重ね段数制限**: tumpukan tidak boleh melebihi jumlah tingkat yang ditunjukkan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{単位|たんい}"
+      },
+      {
+       "ul": [
+        "1トン（t）は1,000キログラム（kg）です。1メートルは100センチです。",
+        "ケースとバラがあります。1ケース12{個|こ}なら、5ケースは60{個|こ}です。"
+       ]
+      },
+      {
+       "h": "ケアマーク"
+      },
+      {
+       "ul": [
+        "{天地無用|てんちむよう}：{上下|じょうげ}をさかさまにしてはいけません。",
+        "ワレモノ{注意|ちゅうい}：われやすいので、{気|き}をつけます。",
+        "{水ぬれ防止|みずぬれぼうし}：{水|みず}にぬらしてはいけません。",
+        "{手かぎ無用|てかぎむよう}：{手|て}かぎを{使|つか}ってはいけません。",
+        "{積み重|つみかさ}ね{段数|だんすう}{制限|せいげん}：{決|き}められた{段|だん}までしか{積|つ}めません。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "1 t (ton) = 1.000 kg; 1 kg = 1.000 g; 1 m = 100 cm; 1 m³ = 1.000 L.",
+      "points": [
+       "Hitungan barang: バラ (satuan/pieces), ケース (dus/karton isi banyak). Contoh: 1 ケース = 12 個 → 5 ケース = 60 個.",
+       "Barang berat (kg) dan volume (m³) dipakai untuk menghitung muatan.",
+       "天地無用: jangan dibalik; ujung panah menunjuk ke atas."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 単位, 換算, ケース, バラ."
+      ]
+     },
+     "jp": {
+      "core": "1トン（t）は1,000キログラム（kg）です。1メートルは100センチです。",
+      "points": [
+       "ケースとバラがあります。1ケース12{個|こ}なら、5ケースは60{個|こ}です。",
+       "{天地無用|てんちむよう}：{上下|じょうげ}をさかさまにしてはいけません。",
+       "ワレモノ{注意|ちゅうい}：われやすいので、{気|き}をつけます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{単位|たんい}、{換算|かんさん}、ケース、バラ。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

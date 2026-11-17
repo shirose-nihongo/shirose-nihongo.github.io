@@ -1,0 +1,548 @@
+{
+ "items": [
+  {
+   "id": "rc-001",
+   "kata": "廃棄物",
+   "kana": "はいきぶつ",
+   "romaji": "haikibutsu",
+   "arti": "limbah/sampah",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{廃棄物|はいきぶつ}を{処理|しょり}します。",
+   "arti_contoh": "Mengolah limbah.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-002",
+   "kata": "中間処理",
+   "kana": "ちゅうかんしょり",
+   "romaji": "chuukanshori",
+   "arti": "pengolahan antara",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{中間処理|ちゅうかんしょり}の{工場|こうじょう}で{働|はたら}きます。",
+   "arti_contoh": "Bekerja di pabrik pengolahan antara.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-003",
+   "kata": "一般廃棄物",
+   "kana": "いっぱんはいきぶつ",
+   "romaji": "ippanhaikibutsu",
+   "arti": "limbah umum (terutama rumah tangga)",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{家庭|かてい}のごみは{一般廃棄物|いっぱんはいきぶつ}です。",
+   "arti_contoh": "Sampah rumah tangga adalah limbah umum.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-004",
+   "kata": "産業廃棄物",
+   "kana": "さんぎょうはいきぶつ",
+   "romaji": "sangyouhaikibutsu",
+   "arti": "limbah industri",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{産業廃棄物|さんぎょうはいきぶつ}を{分|わ}けます。",
+   "arti_contoh": "Memilah limbah industri.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-005",
+   "kata": "減量化",
+   "kana": "げんりょうか",
+   "romaji": "genryouka",
+   "arti": "pengurangan berat",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{焼却|しょうきゃく}で{減量化|げんりょうか}します。",
+   "arti_contoh": "Mengurangi berat dengan pembakaran.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-006",
+   "kata": "減容化",
+   "kana": "げんようか",
+   "romaji": "genyouka",
+   "arti": "pengurangan volume",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{破砕|はさい}で{減容化|げんようか}します。",
+   "arti_contoh": "Mengurangi volume dengan penghancuran.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-007",
+   "kata": "安定化",
+   "kana": "あんていか",
+   "romaji": "anteika",
+   "arti": "penstabilan",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{安定化|あんていか}して{埋|う}め{立|た}てます。",
+   "arti_contoh": "Menstabilkan lalu mengubur.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-008",
+   "kata": "安全化",
+   "kana": "あんぜんか",
+   "romaji": "anzenka",
+   "arti": "pengamanan (membuat tidak berbahaya)",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "contoh": "{安全化|あんぜんか}の{処理|しょり}をします。",
+   "arti_contoh": "Melakukan pengolahan pengamanan.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-009",
+   "kata": "受入",
+   "kana": "うけいれ",
+   "romaji": "ukeire",
+   "arti": "penerimaan",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{受入|うけいれ}の{作業|さぎょう}をします。",
+   "arti_contoh": "Mengerjakan penerimaan.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-010",
+   "kata": "選別",
+   "kana": "せんべつ",
+   "romaji": "senbetsu",
+   "arti": "pemilahan",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "プラスチックを{選別|せんべつ}します。",
+   "arti_contoh": "Memilah plastik.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-011",
+   "kata": "処分",
+   "kana": "しょぶん",
+   "romaji": "shobun",
+   "arti": "pengolahan akhir/pembuangan",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{廃棄物|はいきぶつ}を{処分|しょぶん}します。",
+   "arti_contoh": "Mengolah/membuang limbah.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-012",
+   "kata": "搬出",
+   "kana": "はんしゅつ",
+   "romaji": "hanshutsu",
+   "arti": "pengeluaran/pengangkutan keluar",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{処理|しょり}した{物|もの}を{搬出|はんしゅつ}します。",
+   "arti_contoh": "Mengeluarkan hasil olahan.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-013",
+   "kata": "破砕",
+   "kana": "はさい",
+   "romaji": "hasai",
+   "arti": "penghancuran",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{破砕|はさい}{機|き}で{破砕|はさい}します。",
+   "arti_contoh": "Menghancurkan dengan mesin penghancur.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-014",
+   "kata": "圧縮",
+   "kana": "あっしゅく",
+   "romaji": "asshuku",
+   "arti": "pemadatan",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "ごみを{圧縮|あっしゅく}します。",
+   "arti_contoh": "Memadatkan sampah.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-015",
+   "kata": "焼却",
+   "kana": "しょうきゃく",
+   "romaji": "shoukyaku",
+   "arti": "pembakaran",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{焼却|しょうきゃく}{炉|ろ}で{焼却|しょうきゃく}します。",
+   "arti_contoh": "Membakar di insinerator.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-016",
+   "kata": "脱水",
+   "kana": "だっすい",
+   "romaji": "dassui",
+   "arti": "pengurangan air (dehidrasi)",
+   "cat": "Bidang dan Pekerjaan Pengolahan Antara",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "contoh": "{汚泥|おでい}を{脱水|だっすい}します。",
+   "arti_contoh": "Mendehidrasi lumpur.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-017",
+   "kata": "育成就労",
+   "kana": "いくせいしゅうろう",
+   "romaji": "ikuseishuurou",
+   "arti": "ikusei shuro (kerja pelatihan)",
+   "cat": "Karier, Bahasa Jepang, dan Ujian",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{育成就労|いくせいしゅうろう}で{働|はたら}きます。",
+   "arti_contoh": "Bekerja dengan visa ikusei shuro.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-018",
+   "kata": "特定技能",
+   "kana": "とくていぎのう",
+   "romaji": "tokuteiginou",
+   "arti": "tokutei ginou (keterampilan khusus)",
+   "cat": "Karier, Bahasa Jepang, dan Ujian",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{特定技能|とくていぎのう}に{移|うつ}ります。",
+   "arti_contoh": "Beralih ke tokutei ginou.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-019",
+   "kata": "評価試験",
+   "kana": "ひょうかしけん",
+   "romaji": "hyoukashiken",
+   "arti": "ujian penilaian",
+   "cat": "Karier, Bahasa Jepang, dan Ujian",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{評価試験|ひょうかしけん}を{受|う}けます。",
+   "arti_contoh": "Mengikuti ujian penilaian.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-020",
+   "kata": "日本語能力",
+   "kana": "にほんごのうりょく",
+   "romaji": "nihongonouryoku",
+   "arti": "kemampuan bahasa Jepang",
+   "cat": "Karier, Bahasa Jepang, dan Ujian",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{日本語能力|にほんごのうりょく}が{必要|ひつよう}です。",
+   "arti_contoh": "Perlu kemampuan bahasa Jepang.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-021",
+   "kata": "現場リーダー",
+   "kana": "げんばりーだー",
+   "romaji": "genbariidaa",
+   "arti": "pemimpin lapangan",
+   "cat": "Karier, Bahasa Jepang, dan Ujian",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "{現場リーダー|げんばりーだー}になります。",
+   "arti_contoh": "Menjadi pemimpin lapangan.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-022",
+   "kata": "キャリア",
+   "kana": "きゃりあ",
+   "romaji": "kyaria",
+   "arti": "karier",
+   "cat": "Karier, Bahasa Jepang, dan Ujian",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "contoh": "キャリアを{考|かんが}えます。",
+   "arti_contoh": "Memikirkan karier.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-023",
+   "kata": "保護具",
+   "kana": "ほごぐ",
+   "romaji": "hogogu",
+   "arti": "alat pelindung diri",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{保護具|ほごぐ}をつけます。",
+   "arti_contoh": "Memakai APD.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-024",
+   "kata": "安全衛生教育",
+   "kana": "あんぜんえいせいきょういく",
+   "romaji": "anzen'eiseikyouiku",
+   "arti": "pendidikan keselamatan dan kesehatan",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{安全衛生教育|あんぜんえいせいきょういく}を{受|う}けます。",
+   "arti_contoh": "Mengikuti pendidikan K3.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-025",
+   "kata": "電源",
+   "kana": "でんげん",
+   "romaji": "dengen",
+   "arti": "sumber listrik",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{電源|でんげん}を{切|き}ります。",
+   "arti_contoh": "Mematikan listrik.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-026",
+   "kata": "異常",
+   "kana": "いじょう",
+   "romaji": "ijou",
+   "arti": "kelainan",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{異常|いじょう}を{報告|ほうこく}します。",
+   "arti_contoh": "Melapor kelainan.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-027",
+   "kata": "火災",
+   "kana": "かさい",
+   "romaji": "kasai",
+   "arti": "kebakaran",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{火災|かさい}に{注意|ちゅうい}します。",
+   "arti_contoh": "Waspada kebakaran.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-028",
+   "kata": "粉じん",
+   "kana": "ふんじん",
+   "romaji": "funjin",
+   "arti": "debu halus",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "contoh": "{粉|ふん}じんを{吸|す}わないようにマスクをします。",
+   "arti_contoh": "Memakai masker agar tidak menghirup debu.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-029",
+   "kata": "研修会",
+   "kana": "けんしゅうかい",
+   "romaji": "kenshuukai",
+   "arti": "pelatihan/seminar",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "{研修会|けんしゅうかい}に{参加|さんか}します。",
+   "arti_contoh": "Mengikuti pelatihan.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-030",
+   "kata": "講習",
+   "kana": "こうしゅう",
+   "romaji": "koushuu",
+   "arti": "kursus/pelatihan",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "{講習|こうしゅう}を{受|う}けます。",
+   "arti_contoh": "Mengikuti kursus.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-031",
+   "kata": "玉掛け",
+   "kana": "たまがけ",
+   "romaji": "tamagake",
+   "arti": "pemasangan sling pada beban crane",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "{玉掛|たまが}けの{講習|こうしゅう}を{受|う}けます。",
+   "arti_contoh": "Mengikuti kursus penyling.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-032",
+   "kata": "資格",
+   "kana": "しかく",
+   "romaji": "shikaku",
+   "arti": "kualifikasi",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "{資格|しかく}を{取|と}ります。",
+   "arti_contoh": "Memperoleh kualifikasi.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-033",
+   "kata": "職長",
+   "kana": "しょくちょう",
+   "romaji": "shokuchou",
+   "arti": "kepala regu kerja",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "{職長|しょくちょう}になります。",
+   "arti_contoh": "Menjadi kepala regu.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "rc-034",
+   "kata": "フォークリフト",
+   "kana": "ふぉーくりふと",
+   "romaji": "fookurifuto",
+   "arti": "forklift",
+   "cat": "Keselamatan dan Kualifikasi Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "contoh": "フォークリフトを{運転|うんてん}します。",
+   "arti_contoh": "Mengoperasikan forklift.",
+   "sumber": "資源循環分野 分野別運用方針 環境省 2026 (diringkas Shirose)",
+   "halaman": 1
+  }
+ ]
+}

@@ -1,0 +1,1697 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "bab1-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 1",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Gudang pendingin menyimpan barang pada suhu 10℃ atau lebih rendah.”",
+       "jp": "○か×か。「{冷蔵倉庫|れいぞうそうこ}は、10℃{以下|いか}で{荷物|にもつ}を{保管|ほかん}する{倉庫|そうこ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: 10℃ atau lebih rendah.",
+       "jp": "10℃{以下|いか}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pallet adalah alas tempat menaruh barang.”",
+       "jp": "○か×か。「パレットは、{荷物|にもつ}をのせる{台|だい}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{荷物|にもつ}をのせる{台|だい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat menumpuk di pallet, barang berat ditaruh di atas.”",
+       "jp": "○か×か。「パレットに{積|つ}むときは、{重|おも}い{物|もの}を{上|うえ}に{置|お}きます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: berat di bawah.",
+       "jp": "{重|おも}い{物|もの}は{下|した}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “1 ton sama dengan 1.000 kilogram.”",
+       "jp": "○か×か。「1トンは1,000キログラムです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "1,000kgです。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "sub": "b1s1",
+    "title": {
+     "id": "Subbab 1.1 · Jenis Gudang",
+     "jp": "1.1 {倉庫|そうこ}の{種類|しゅるい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Gudang pendingin menyimpan barang pada suhu 10℃ atau lebih rendah.”",
+       "jp": "○か×か。「{冷蔵倉庫|れいぞうそうこ}は、10℃{以下|いか}で{荷物|にもつ}を{保管|ほかん}する{倉庫|そうこ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: 10℃ atau lebih rendah.",
+       "jp": "10℃{以下|いか}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Gudang umum menyimpan barang dengan cara dibekukan.”",
+       "jp": "○か×か。「{普通倉庫|ふつうそうこ}は、{荷物|にもつ}を{冷凍|れいとう}して{保管|ほかん}する{倉庫|そうこ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: gudang umum memakai suhu ruang.",
+       "jp": "{常温|じょうおん}で{保管|ほかん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Gudang untuk menyimpan barang umum pada suhu ruang disebut…",
+       "jp": "ふつうの{荷物|にもつ}を{常温|じょうおん}で{保管|ほかん}する{倉庫|そうこ}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "普通倉庫",
+        "jp": "{普通倉庫|ふつうそうこ}"
+       },
+       {
+        "id": "野菜倉庫",
+        "jp": "{野菜|やさい}{倉庫|そうこ}"
+       },
+       {
+        "id": "冷蔵倉庫",
+        "jp": "{冷蔵倉庫|れいぞうそうこ}"
+       },
+       {
+        "id": "危険品倉庫",
+        "jp": "{危険品倉庫|きけんひんそうこ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "普通倉庫.",
+       "jp": "{普通倉庫|ふつうそうこ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Untuk menjalankan usaha pergudangan, orang harus…",
+       "jp": "{倉庫業|そうこぎょう}をするには、{何|なに}が{必要|ひつよう}ですか。"
+      },
+      "opts": [
+       {
+        "id": "surat dari pasar",
+        "jp": "{市場|しじょう}の{許可|きょか}"
+       },
+       {
+        "id": "登録 (国土交通大臣)",
+        "jp": "{国土|こくど}{交通|こうつう}{大臣|だいじん}の{登録|とうろく}"
+       },
+       {
+        "id": "tidak perlu apa-apa",
+        "jp": "{何|なに}もいらない"
+       },
+       {
+        "id": "izin sekolah",
+        "jp": "{学校|がっこう}の{許可|きょか}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Perlu pendaftaran.",
+       "jp": "{登録|とうろく}が{必要|ひつよう}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "sub": "b1s2",
+    "title": {
+     "id": "Subbab 1.2 · Peralatan dan Mesin Gudang",
+     "jp": "1.2 {設備|せつび}・{機器|きき}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pallet adalah alas tempat menaruh barang.”",
+       "jp": "○か×か。「パレットは、{荷物|にもつ}をのせる{台|だい}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{荷物|にもつ}をのせる{台|だい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hand lift adalah nama forklift bermesin.”",
+       "jp": "○か×か。「ハンドリフトは、エンジンで{動|うご}くフォークリフトの{名前|なまえ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: hand lift digerakkan tangan.",
+       "jp": "{手|て}で{動|うご}かします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Troli kerangka kawat untuk memindahkan banyak kardus disebut…",
+       "jp": "たくさんの{荷物|にもつ}を{運|はこ}ぶ、かごのような{台車|だいしゃ}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "コンベヤ",
+        "jp": "コンベヤ"
+       },
+       {
+        "id": "パレット",
+        "jp": "パレット"
+       },
+       {
+        "id": "エレベーター",
+        "jp": "エレベーター"
+       },
+       {
+        "id": "カゴ台車",
+        "jp": "{カゴ台車|かごだいしゃ}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "カゴ台車.",
+       "jp": "{カゴ台車|かごだいしゃ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Alat untuk mengangkut barang antar lantai gudang…",
+       "jp": "{荷物|にもつ}を{上|うえ}の{階|かい}や{下|した}の{階|かい}へ{運|はこ}ぶ{機械|きかい}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "ハンドリフト",
+        "jp": "ハンドリフト"
+       },
+       {
+        "id": "パレット",
+        "jp": "パレット"
+       },
+       {
+        "id": "カゴ台車",
+        "jp": "{カゴ台車|かごだいしゃ}"
+       },
+       {
+        "id": "垂直自動搬送機",
+        "jp": "{垂直自動搬送機|すいちょくじどうはんそうき}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "垂直自動搬送機 atau lift.",
+       "jp": "{垂直自動搬送機|すいちょくじどうはんそうき}などです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s3-q",
+    "sub": "b1s3",
+    "title": {
+     "id": "Subbab 1.3 · Alur Kerja: Masuk, Keluar, Picking, Tumpuk",
+     "jp": "1.3 {入庫|にゅうこ}・{出庫|しゅっこ}・ピッキング・{積付|つみつけ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat menumpuk di pallet, barang berat ditaruh di atas.”",
+       "jp": "○か×か。「パレットに{積|つ}むときは、{重|おも}い{物|もの}を{上|うえ}に{置|お}きます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: berat di bawah.",
+       "jp": "{重|おも}い{物|もの}は{下|した}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “FIFO artinya barang yang masuk lebih dulu keluar lebih dulu.”",
+       "jp": "○か×か。「{先入れ先出|さきいれさきだ}しは、{先|さき}に{入|いっ}った{荷物|にもつ}から{先|さき}に{出|だ}すルールです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{先|さき}に{入|いっ}った{物|もの}から{出|だ}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pekerjaan mengambil barang sesuai pesanan disebut…",
+       "jp": "{注文|ちゅうもん}の{荷物|にもつ}を{集|あつ}める{作業|さぎょう}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "棚卸",
+        "jp": "{棚卸|たなおろし}"
+       },
+       {
+        "id": "入庫",
+        "jp": "{入庫|にゅうこ}"
+       },
+       {
+        "id": "ピッキング",
+        "jp": "ピッキング"
+       },
+       {
+        "id": "積付",
+        "jp": "{積付|つみつけ}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ピッキング.",
+       "jp": "ピッキングです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Urutan kerja barang masuk yang benar…",
+       "jp": "{入庫|にゅうこ}の{流|なが}れで{正|ただ}しいものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "kirim → cek → terima",
+        "jp": "{出荷|しゅっか}→{検品|けんぴん}→{荷受|にう}け"
+       },
+       {
+        "id": "cek → kirim → simpan",
+        "jp": "{検品|けんぴん}→{出荷|しゅっか}→{格納|かくのう}"
+       },
+       {
+        "id": "terima → cek → simpan",
+        "jp": "{荷受|にう}け→{検品|けんぴん}→{格納|かくのう}"
+       },
+       {
+        "id": "simpan → terima → cek",
+        "jp": "{格納|かくのう}→{荷受|にう}け→{検品|けんぴん}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Terima, cek, simpan.",
+       "jp": "{荷受|にう}け→{検品|けんぴん}→{格納|かくのう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Hal yang diperiksa saat cek barang makanan…",
+       "jp": "{食品|しょくひん}の{検品|けんぴん}で{必|かなら}ず{見|み}るものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "cuaca",
+        "jp": "{天気|てんき}"
+       },
+       {
+        "id": "数・品番・きず・賞味期限",
+        "jp": "{数|かず}、{品番|ひんばん}、きず、{賞味期限|しょうみきげん}"
+       },
+       {
+        "id": "warna truk saja",
+        "jp": "トラックの{色|いろ}だけ"
+       },
+       {
+        "id": "nama sopir saja",
+        "jp": "{運転|うんてん}{手|て}の{名前|なまえ}だけ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Jumlah, nomor, kondisi, kedaluwarsa.",
+       "jp": "{数|かず}、{品番|ひんばん}、きず、{賞味期限|しょうみきげん}を{見|み}ます。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s4-q",
+    "sub": "b1s4",
+    "title": {
+     "id": "Subbab 1.4 · Satuan dan Simbol Penanganan (Care Mark)",
+     "jp": "1.4 {単位|たんい}とケアマーク"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “1 ton sama dengan 1.000 kilogram.”",
+       "jp": "○か×か。「1トンは1,000キログラムです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "1,000kgです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanda 天地無用 berarti boleh membalik barang.”",
+       "jp": "○か×か。「「{天地無用|てんちむよう}」のマークは、{荷物|にもつ}をさかさまにしてよいという{意味|いみ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan dibalik.",
+       "jp": "さかさまにしてはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "1 dus isi 12 buah. 5 dus = … buah.",
+       "jp": "1ケース12{個|こ}です。5ケースは{何個|なんこ}ですか。"
+      },
+      "opts": [
+       {
+        "id": "17個",
+        "jp": "17{個|こ}"
+       },
+       {
+        "id": "72個",
+        "jp": "72{個|こ}"
+       },
+       {
+        "id": "48個",
+        "jp": "48{個|こ}"
+       },
+       {
+        "id": "60個",
+        "jp": "60{個|こ}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "12×5=60.",
+       "jp": "12×5で60{個|こ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Tanda yang berarti 'jaga agar tidak basah'…",
+       "jp": "「{水|みず}にぬらしてはいけない」を{表|あらわ}すマークはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "手かぎ無用",
+        "jp": "{手かぎ無用|てかぎむよう}"
+       },
+       {
+        "id": "水ぬれ防止",
+        "jp": "{水ぬれ防止|みずぬれぼうし}"
+       },
+       {
+        "id": "ワレモノ注意",
+        "jp": "ワレモノ{注意|ちゅうい}"
+       },
+       {
+        "id": "天地無用",
+        "jp": "{天地無用|てんちむよう}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "水ぬれ防止.",
+       "jp": "{水ぬれ防止|みずぬれぼうし}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "3 ton = … kg",
+       "jp": "3トンは{何|なに}キログラムですか。"
+      },
+      "opts": [
+       {
+        "id": "300 kg",
+        "jp": "300kg"
+       },
+       {
+        "id": "3.000 kg",
+        "jp": "3,000kg"
+       },
+       {
+        "id": "30.000 kg",
+        "jp": "30,000kg"
+       },
+       {
+        "id": "30 kg",
+        "jp": "30kg"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "1 t = 1.000 kg.",
+       "jp": "1トンは1,000kgです。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 2",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Lokasi adalah nomor tempat menaruh barang.”",
+       "jp": "○か×か。「ロケーションは、{荷物|にもつ}を{置|お}く{場所|ばしょ}の{番号|ばんごう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{置|お}く{場所|ばしょ}の{番号|ばんごう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika menemukan kelainan saat cek, putuskan sendiri dan lanjutkan kerja.”",
+       "jp": "○か×か。「{検品|けんぴん}でおかしいところを{見|み}つけたら、{自分|じぶん}で{決|き}めて{作業|さぎょう}を{続|つづ}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: laporkan ke atasan.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "480 dus, 1 orang 60 dus/jam, selesai dalam 4 jam. Berapa orang?",
+       "jp": "480ケースを、1{人|にん}1{時間|じかん}60ケースで4{時間|じかん}で{終|お}えるには、{何人|なんにん}{必要|ひつよう}ですか。"
+      },
+      "opts": [
+       {
+        "id": "1 orang",
+        "jp": "1{人|にん}"
+       },
+       {
+        "id": "2 orang",
+        "jp": "2{人|にん}"
+       },
+       {
+        "id": "4 orang",
+        "jp": "4{人|にん}"
+       },
+       {
+        "id": "8 orang",
+        "jp": "8{人|にん}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "480÷(60×4)=2.",
+       "jp": "480÷（60×4））2{人|にん}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "sub": "b2s1",
+    "title": {
+     "id": "Subbab 2.1 · Manajemen Lokasi dan Sistem Gudang",
+     "jp": "2.1 ロケーション{管理|かんり}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Lokasi adalah nomor tempat menaruh barang.”",
+       "jp": "○か×か。「ロケーションは、{荷物|にもつ}を{置|お}く{場所|ばしょ}の{番号|ばんごう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{置|お}く{場所|ばしょ}の{番号|ばんごう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanadoroshi adalah pekerjaan mengirim barang.”",
+       "jp": "○か×か。「{棚卸|たなおろし}は、{荷物|にもつ}を{出荷|しゅっか}する{作業|さぎょう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: stok opname = menghitung stok.",
+       "jp": "{在庫|ざいこ}を{数|かぞ}える{作業|さぎょう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Sistem yang mencatat stok dan lokasi barang…",
+       "jp": "{在庫|ざいこ}と{場所|ばしょ}を{管理|かんり}するシステムは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "倉庫管理システム (WMS)",
+        "jp": "{倉庫管理システム|そうこかんりしすてむ}"
+       },
+       {
+        "id": "コンベヤ",
+        "jp": "コンベヤ"
+       },
+       {
+        "id": "ハンドリフト",
+        "jp": "ハンドリフト"
+       },
+       {
+        "id": "ケアマーク",
+        "jp": "ケアマーク"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "WMS.",
+       "jp": "{倉庫管理システム|そうこかんりしすてむ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Alat untuk membaca barcode barang…",
+       "jp": "バーコードを{読|よ}む{道具|どうぐ}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "ハンディターミナル",
+        "jp": "ハンディターミナル"
+       },
+       {
+        "id": "カゴ台車",
+        "jp": "{カゴ台車|かごだいしゃ}"
+       },
+       {
+        "id": "フォークリフト",
+        "jp": "フォークリフト"
+       },
+       {
+        "id": "パレット",
+        "jp": "パレット"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Terminal genggam.",
+       "jp": "ハンディターミナルです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s2-q",
+    "sub": "b2s2",
+    "title": {
+     "id": "Subbab 2.2 · Cek Barang dan Pengemasan",
+     "jp": "2.2 {検品|けんぴん}・{梱包|こんぽう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika menemukan kelainan saat cek, putuskan sendiri dan lanjutkan kerja.”",
+       "jp": "○か×か。「{検品|けんぴん}でおかしいところを{見|み}つけたら、{自分|じぶん}で{決|き}めて{作業|さぎょう}を{続|つづ}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: laporkan ke atasan.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat mengemas, celah diisi pelindung agar barang tidak bergeser.”",
+       "jp": "○か×か。「{梱包|こんぽう}では、すき{間|ま}に{緩衝材|かんしょうざい}を{入|い}れて{荷物|にもつ}が{動|うご}かないようにします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{動|うご}かないようにします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Plastik pembungkus yang dililit di tumpukan pallet…",
+       "jp": "パレットの{荷物|にもつ}にぐるぐる{巻|ま}くフィルムは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "ラベル",
+        "jp": "ラベル"
+       },
+       {
+        "id": "結束バンド",
+        "jp": "{結束|けっそく}バンド"
+       },
+       {
+        "id": "段ボール",
+        "jp": "{段ボール|だんぼーる}"
+       },
+       {
+        "id": "ストレッチフィルム",
+        "jp": "ストレッチフィルム"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Stretch film.",
+       "jp": "ストレッチフィルムです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Contoh pekerjaan 流通加工…",
+       "jp": "{流通加工|りゅうつうかこう}の{例|れい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "mengemudi truk",
+        "jp": "トラックの{運転|うんてん}"
+       },
+       {
+        "id": "memasang label harga",
+        "jp": "{値札|ねふだ}{付|つ}け"
+       },
+       {
+        "id": "membangun gudang",
+        "jp": "{倉庫|そうこ}の{建設|けんせつ}"
+       },
+       {
+        "id": "membeli barang",
+        "jp": "{仕入|しい}れ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Pasang label harga.",
+       "jp": "{値札|ねふだ}{付|つ}けなどです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s3-q",
+    "sub": "b2s3",
+    "title": {
+     "id": "Subbab 2.3 · Menghitung Waktu dan Jumlah Orang",
+     "jp": "2.3 {作業時間|さぎょうじかん}・{人数|にんずう}の{計算|けいさん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "480 dus, 1 orang 60 dus/jam, selesai dalam 4 jam. Berapa orang?",
+       "jp": "480ケースを、1{人|にん}1{時間|じかん}60ケースで4{時間|じかん}で{終|お}えるには、{何人|なんにん}{必要|ひつよう}ですか。"
+      },
+      "opts": [
+       {
+        "id": "1 orang",
+        "jp": "1{人|にん}"
+       },
+       {
+        "id": "2 orang",
+        "jp": "2{人|にん}"
+       },
+       {
+        "id": "4 orang",
+        "jp": "4{人|にん}"
+       },
+       {
+        "id": "8 orang",
+        "jp": "8{人|にん}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "480÷(60×4)=2.",
+       "jp": "480÷（60×4））2{人|にん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "600 dus, 3 orang, 100 dus/jam per orang. Berapa jam?",
+       "jp": "600ケースを3{人|にん}で、1{人|にん}1{時間|じかん}100ケースなら、{何時間|なんじかん}かかりますか。"
+      },
+      "opts": [
+       {
+        "id": "6 jam",
+        "jp": "6{時間|じかん}"
+       },
+       {
+        "id": "2 jam",
+        "jp": "2{時間|じかん}"
+       },
+       {
+        "id": "3 jam",
+        "jp": "3{時間|じかん}"
+       },
+       {
+        "id": "1 jam",
+        "jp": "1{時間|じかん}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "600÷(100×3)=2.",
+       "jp": "600÷（100×3））2{時間|じかん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Waktu kerja dihitung dengan membagi jumlah pekerjaan dengan kemampuan kerja per jam.”",
+       "jp": "○か×か。「{作業時間|さぎょうじかん}は、{作業量|さぎょうりょう}を1{時間|じかん}の{作業量|さぎょうりょう}で{割|さ}って{考|かんが}えます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (dengan memperhitungkan jumlah orang).",
+       "jp": "{人数|にんずう}も{考|かんが}えます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "120 dus, 2 orang, 30 dus/jam per orang. Berapa jam?",
+       "jp": "120ケースを2{人|にん}で、1{人|にん}1{時間|じかん}30ケースなら、{何時間|なんじかん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "2 jam",
+        "jp": "2{時間|じかん}"
+       },
+       {
+        "id": "1 jam",
+        "jp": "1{時間|じかん}"
+       },
+       {
+        "id": "6 jam",
+        "jp": "6{時間|じかん}"
+       },
+       {
+        "id": "4 jam",
+        "jp": "4{時間|じかん}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "120÷(30×2)=2.",
+       "jp": "120÷（30×2））2{時間|じかん}です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab3": [
+   {
+    "id": "bab3-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 3",
+     "jp": "{第|だい}3{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat tidak enak badan, tahan saja dan lanjutkan kerja.”",
+       "jp": "○か×か。「{体|からだ}の{調子|ちょうし}が{悪|わる}いときは、がまんして{仕事|しごと}を{続|つづ}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: laporkan.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Orang boleh naik di garpu forklift.”",
+       "jp": "○か×か。「フォークリフトのツメに{人|にん}が{乗|の}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: dilarang.",
+       "jp": "{乗|の}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanda pintu darurat berwarna hijau.”",
+       "jp": "○か×か。「{非常口|ひじょうぐち}のサインは、{緑色|りょくしょく}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: hijau = evakuasi.",
+       "jp": "{緑|みどり}は{避難|ひなん}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "sub": "b3s1",
+    "title": {
+     "id": "Subbab 3.1 · Kesehatan Diri dan Alat Pelindung Diri",
+     "jp": "3.1 {健康|けんこう}{管理|かんり}・{保護具|ほごぐ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat tidak enak badan, tahan saja dan lanjutkan kerja.”",
+       "jp": "○か×か。「{体|からだ}の{調子|ちょうし}が{悪|わる}いときは、がまんして{仕事|しごと}を{続|つづ}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: laporkan.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat mengangkat barang berat, turunkan pinggang.”",
+       "jp": "○か×か。「{重|おも}い{物|もの}を{持|も}つときは、{腰|こし}を{落|お}として{持|も}ちます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{腰|こし}を{落|お}とします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Apa yang dipakai di kaki untuk melindungi dari barang jatuh?",
+       "jp": "{荷物|にもつ}が{足|あし}に{落|お}ちても{守|まも}ってくれるものは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "サンダル",
+        "jp": "サンダル"
+       },
+       {
+        "id": "スリッパ",
+        "jp": "スリッパ"
+       },
+       {
+        "id": "くつ下だけ",
+        "jp": "くつ{下|した}だけ"
+       },
+       {
+        "id": "安全靴",
+        "jp": "{安全靴|あんぜんぐつ}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sepatu pengaman.",
+       "jp": "{安全靴|あんぜんぐつ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Di gudang pendingin, sebaiknya memakai…",
+       "jp": "{冷蔵倉庫|れいぞうそうこ}で{着|き}るものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "防寒着",
+        "jp": "{防寒着|ぼうかんぎ}"
+       },
+       {
+        "id": "Tシャツだけ",
+        "jp": "Tシャツだけ"
+       },
+       {
+        "id": "浴衣",
+        "jp": "{浴衣|ゆかた}"
+       },
+       {
+        "id": "水着",
+        "jp": "{水着|みずぎ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pakaian anti dingin.",
+       "jp": "{防寒着|ぼうかんぎ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s2-q",
+    "sub": "b3s2",
+    "title": {
+     "id": "Subbab 3.2 · Tindakan Berbahaya dan Pencegahan Kecelakaan",
+     "jp": "3.2 {危険|きけん}な{行動|こうどう}・{労災|ろうさい}{防止|ぼうし}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Orang boleh naik di garpu forklift.”",
+       "jp": "○か×か。「フォークリフトのツメに{人|にん}が{乗|の}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: dilarang.",
+       "jp": "{乗|の}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Dilarang masuk ke bawah barang yang terangkat.”",
+       "jp": "○か×か。「{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{入|いっ}ってはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{入|いっ}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di dalam gudang boleh berlari terburu-buru.”",
+       "jp": "○か×か。「{倉庫|そうこ}の{中|なか}は、{急|いそ}いで{走|はし}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan berlari.",
+       "jp": "{走|はし}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Kejadian nyaris celaka yang dilaporkan disebut…",
+       "jp": "{事故|じこ}になりそうだった{出来事|できごと}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "ヒヤリハット",
+        "jp": "ヒヤリハット"
+       },
+       {
+        "id": "棚卸",
+        "jp": "{棚卸|たなおろし}"
+       },
+       {
+        "id": "入庫",
+        "jp": "{入庫|にゅうこ}"
+       },
+       {
+        "id": "先入れ先出し",
+        "jp": "{先入れ先出|さきいれさきだ}し"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Hiyari-hatto.",
+       "jp": "ヒヤリハットです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Saat membawa barang dengan forklift, garpu sebaiknya…",
+       "jp": "フォークリフトで{運|はこ}ぶとき、ツメはどうしますか。"
+      },
+      "opts": [
+       {
+        "id": "terserah",
+        "jp": "どれでもよい"
+       },
+       {
+        "id": "setinggi-tingginya",
+        "jp": "いちばん{高|たか}くする"
+       },
+       {
+        "id": "rendah",
+        "jp": "{低|ひく}くする"
+       },
+       {
+        "id": "diturunkan lalu ditinggal",
+        "jp": "{下|くだ}ろして{放置|ほうち}する"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Rendah agar stabil.",
+       "jp": "{低|ひく}くします。"
+      }
+     },
+     {
+      "q": {
+       "id": "Forklift berbeban maks 1 ton ke atas butuh…",
+       "jp": "{最大|さいだい}{荷重|かじゅう}1トン{以上|いじょう}のフォークリフトに{必要|ひつよう}なものは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "SIM mobil saja",
+        "jp": "{車|くるま}の{免許|めんきょ}だけ"
+       },
+       {
+        "id": "技能講習",
+        "jp": "{技能講習|ぎのうこうしゅう}"
+       },
+       {
+        "id": "surat dokter",
+        "jp": "{医者|いしゃ}の{手紙|てがみ}"
+       },
+       {
+        "id": "tidak perlu",
+        "jp": "{何|なに}もいらない"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Pelatihan keterampilan.",
+       "jp": "{技能講習|ぎのうこうしゅう}が{必要|ひつよう}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s3-q",
+    "sub": "b3s3",
+    "title": {
+     "id": "Subbab 3.3 · Tanda Darurat dan Prosedur Kerja",
+     "jp": "3.3 {防災|ぼうさい}サイン・{作業手順|さぎょうてじゅん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanda pintu darurat berwarna hijau.”",
+       "jp": "○か×か。「{非常口|ひじょうぐち}のサインは、{緑色|りょくしょく}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: hijau = evakuasi.",
+       "jp": "{緑|みどり}は{避難|ひなん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat kebakaran, evakuasi memakai lift.”",
+       "jp": "○か×か。「{火事|かじ}のときは、エレベーターを{使|つか}って{避難|ひなん}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan pakai lift.",
+       "jp": "エレベーターは{使|つか}いません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Warna keselamatan 'kuning' berarti…",
+       "jp": "{安全色|あんぜんしょく}の{黄色|きいろ}は{何|なに}を{表|あらわ}しますか。"
+      },
+      "opts": [
+       {
+        "id": "evakuasi",
+        "jp": "{避難|ひなん}"
+       },
+       {
+        "id": "perintah",
+        "jp": "{指示|しじ}"
+       },
+       {
+        "id": "hati-hati",
+        "jp": "{注意|ちゅうい}"
+       },
+       {
+        "id": "larangan",
+        "jp": "{禁止|きんし}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kuning = hati-hati.",
+       "jp": "{黄色|きいろ}は{注意|ちゅうい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Hal yang harus diikuti saat bekerja…",
+       "jp": "{作業|さぎょう}するときに、したがうものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "kabar angin",
+        "jp": "うわさ"
+       },
+       {
+        "id": "作業手順書",
+        "jp": "{作業手順書|さぎょうてじゅんしょ}"
+       },
+       {
+        "id": "tebakan",
+        "jp": "{勘|かん}"
+       },
+       {
+        "id": "kemauan sendiri",
+        "jp": "{自分|じぶん}の{好|この}み"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Prosedur kerja tertulis.",
+       "jp": "{作業手順書|さぎょうてじゅんしょ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Arti 報連相 …",
+       "jp": "「{報|ほう}{連|れん}{相|そう}」は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "belanja",
+        "jp": "{買い物|かいもの}"
+       },
+       {
+        "id": "istirahat",
+        "jp": "{休|やす}み"
+       },
+       {
+        "id": "makan",
+        "jp": "{食事|しょくじ}"
+       },
+       {
+        "id": "lapor, kabari, konsultasi",
+        "jp": "{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Hou-ren-sou.",
+       "jp": "{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}です。"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "tema": [
+  {
+   "id": "tema-lg",
+   "tema": true,
+   "title": {
+    "id": "Tema: Keselamatan Kerja Gudang",
+    "jp": "テーマ：{倉庫|そうこ}の{安全|あんぜん}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Orang boleh naik di garpu forklift.”",
+      "jp": "○か×か。「フォークリフトのツメに{人|にん}が{乗|の}ってもよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: dilarang.",
+      "jp": "{乗|の}ってはいけません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Dilarang masuk ke bawah barang yang terangkat.”",
+      "jp": "○か×か。「{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{入|いっ}ってはいけません。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{入|いっ}ってはいけません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Di dalam gudang boleh berlari terburu-buru.”",
+      "jp": "○か×か。「{倉庫|そうこ}の{中|なか}は、{急|いそ}いで{走|はし}ってもよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: jangan berlari.",
+      "jp": "{走|はし}ってはいけません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Kejadian nyaris celaka yang dilaporkan disebut…",
+      "jp": "{事故|じこ}になりそうだった{出来事|できごと}は{何|なん}ですか。"
+     },
+     "opts": [
+      {
+       "id": "ヒヤリハット",
+       "jp": "ヒヤリハット"
+      },
+      {
+       "id": "棚卸",
+       "jp": "{棚卸|たなおろし}"
+      },
+      {
+       "id": "入庫",
+       "jp": "{入庫|にゅうこ}"
+      },
+      {
+       "id": "先入れ先出し",
+       "jp": "{先入れ先出|さきいれさきだ}し"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Hiyari-hatto.",
+      "jp": "ヒヤリハットです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Saat membawa barang dengan forklift, garpu sebaiknya…",
+      "jp": "フォークリフトで{運|はこ}ぶとき、ツメはどうしますか。"
+     },
+     "opts": [
+      {
+       "id": "terserah",
+       "jp": "どれでもよい"
+      },
+      {
+       "id": "setinggi-tingginya",
+       "jp": "いちばん{高|たか}くする"
+      },
+      {
+       "id": "rendah",
+       "jp": "{低|ひく}くする"
+      },
+      {
+       "id": "diturunkan lalu ditinggal",
+       "jp": "{下|くだ}ろして{放置|ほうち}する"
+      }
+     ],
+     "a": 2,
+     "exp": {
+      "id": "Rendah agar stabil.",
+      "jp": "{低|ひく}くします。"
+     }
+    },
+    {
+     "q": {
+      "id": "Forklift berbeban maks 1 ton ke atas butuh…",
+      "jp": "{最大|さいだい}{荷重|かじゅう}1トン{以上|いじょう}のフォークリフトに{必要|ひつよう}なものは{何|なん}ですか。"
+     },
+     "opts": [
+      {
+       "id": "SIM mobil saja",
+       "jp": "{車|くるま}の{免許|めんきょ}だけ"
+      },
+      {
+       "id": "技能講習",
+       "jp": "{技能講習|ぎのうこうしゅう}"
+      },
+      {
+       "id": "surat dokter",
+       "jp": "{医者|いしゃ}の{手紙|てがみ}"
+      },
+      {
+       "id": "tidak perlu",
+       "jp": "{何|なに}もいらない"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Pelatihan keterampilan.",
+      "jp": "{技能講習|ぎのうこうしゅう}が{必要|ひつよう}です。"
+     }
+    }
+   ]
+  }
+ ]
+}

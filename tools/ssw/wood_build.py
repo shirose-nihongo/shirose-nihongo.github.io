@@ -121,7 +121,7 @@ for b in BAB:
               open(OUT / f"{b['id']}.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
 
 # tema: soal keselamatan (dari bab1 b1s3)
-saf = [it for sq in quiz["bab"]["bab1"] if sq.get("sub") == TEMA_SUB for it in sq["items"]]
+saf = [it for _v in quiz["bab"].values() for sq in _v if sq.get("sub") == TEMA_SUB for it in sq["items"]]
 quiz["tema"] = [{"id": "tema-" + PREFIX, "tema": True, "title": {"id": TEMA_ID[0], "jp": ruby("テーマ：" + TEMA_ID[1])}, "items": saf}]
 json.dump(quiz, open(OUT / "quiz.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
 json.dump({"items": vocab}, open(OUT / "vocab.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)

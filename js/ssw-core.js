@@ -82,6 +82,8 @@ export const DEFAULT_BIDANG = [
   { slug: "wood-industry", nama: "Wood Industry (Industri Kayu)", jp: "木材産業", aktif: true, urut: 12, tema: "generic", hasContent: true },
   { slug: "auto-transport", nama: "Automobile Transportation (Truk & Bus)", jp: "自動車運送業（トラック・バス）", aktif: true, urut: 13, tema: "generic", hasContent: true },
   { slug: "railway-vehicle", nama: "Railway — Manufaktur Kereta (車両製造)", jp: "鉄道（車両製造）", aktif: true, urut: 14, tema: "generic", hasContent: true },
+  { slug: "logistics", nama: "Logistik / Pergudangan", jp: "物流倉庫", aktif: true, urut: 14, tema: "generic", hasContent: true },
+  { slug: "recycling", nama: "Daur Ulang Sumber Daya", jp: "資源循環", aktif: true, urut: 15, tema: "generic", hasContent: true },
 ];
 
 /** Bidang buatan sendiri yang sudah dihapus (abaikan dokumen lama di Firestore). */
@@ -351,6 +353,8 @@ export const EXAM_SPEC = {
   "jaim-elec-electronic": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
   "jaim-metal-surface": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
   "railway-vehicle": { n: 50, img: 0, mb: 30, info: "Resmi (JARi/MLIT 鉄道分野 車両製造 1号): ujian kertas 学科 30 soal ○× + 実技 20 soal pilihan ganda 4 opsi, total 80 menit, lulus ≥65/100 di tiap bagian. Soal latihan = buatan Shirose dari teks resmi JARi (perlu review ahli)." },
+  "logistics": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Info resmi (MLIT): ujian 物流倉庫 1号, kertas 80 menit via perusahaan; CBT mulai Des 2026; jumlah soal resmi belum diverifikasi." },
+  "recycling": { n: 20, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Pedoman ujian resmi 資源循環 1号 belum diterbitkan pemerintah; bank soal ini masih kecil." },
   "wood-industry": { n: 35, img: 0, mb: 32, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Format resmi 木材産業特定技能1号測定試験: CBT, 60 menit, 35 soal (tulis 32 soal ○× + praktik 3 soal pertimbangan); huruf kanji berfurigana." },
   "auto-transport": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi; jumlah soal resmi tidak diverifikasi). Soal ditulis Shirose dari teks belajar resmi JTA (truk) dan Asosiasi Bus Jepang (bus)." },
 };

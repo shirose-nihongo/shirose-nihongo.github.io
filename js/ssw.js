@@ -24,6 +24,15 @@ const PDF_SUMBER = {
     { t: "Contoh soal 学科 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakka-sample.pdf" },
     { t: "Contoh soal 実技 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-jitsugi-sample.pdf" },
     { t: "Panduan ujian 試験案内 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-shiken-annai.pdf" }
+  "logistics": [
+    { t: "Pedoman ujian 1号 (試験実施要領, MLIT)", u: "assets/ssw/docs-resmi/logistics/jitsushi-yoryo-1go.pdf" },
+    { t: "Lingkup & rincian ujian (試験基準, 1 hal.)", u: "assets/ssw/docs-resmi/logistics/shiken-kijun-1go.pdf" },
+    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/logistics/bunya-unyo-hoshin.pdf" }
+  ],
+  "recycling": [
+    { t: "Program pelatihan & karier (環境省)", u: "assets/ssw/docs-resmi/recycling/ikusei-career-program.pdf" },
+    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/recycling/bunya-unyo-hoshin.pdf" },
+    { t: "Semua dokumen resmi (halaman)", u: "dokumen-resmi.html", ext: 1 }
   ],
   "wood-industry": [
     { t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" },
