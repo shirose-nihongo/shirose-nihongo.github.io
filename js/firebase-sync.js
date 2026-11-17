@@ -1689,3 +1689,14 @@ export async function restoreSaveData(d) {
   _lvSet(d.levelAkun || 1);
   return { xpDinaikkan: naik, item: inv.length };
 }
+
+/* Pulihkan dari file save TANPA Firestore: hadiah gacha → penyimpanan perangkat, level akun → cache perangkat. Hanya menambah. */
+export function restoreLokal(o) {
+  if (!currentUser || !o) return { gacha: 0 };
+  const g = _gLocal(), lama = g.inv || [], tambahan = Array.isArray(o.gachaInv) ? o.gachaInv.filter(x => typeof x === "string") : [];
+  const gab = Array.from(new Set([...lama, ...tambahan])); g.inv = gab;
+  if (typeof o.sinceEpic === "number" && !g.sinceEpic) g.sinceEpic = o.sinceEpic;
+  if (typeof o.sinceLegend === "number" && !g.sinceLegend) g.sinceLegend = o.sinceLegend;
+  _gSave(g); if (o.levelAkun) _lvSet(o.levelAkun);
+  return { gacha: gab.length - lama.length };
+}

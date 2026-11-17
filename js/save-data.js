@@ -25,7 +25,7 @@ export function initSaveData(FB, state) {
   const msg = (t, err) => { const m = $("sv-msg"); m.textContent = t; m.className = err ? "err" : ""; };
   async function build() {
     const g = state.gami || {}, inv = state.siswa?.karakter?.inventory || [], u = ui();
-    return { app: "shirose-nihongo", v: 1, savedAt: Date.now(), levelAkun: g.level_karakter || 1, xp: g.xp || 0, koin: g.koin || 0, inventory: inv, equipped: state.siswa?.karakter?.equipped || {}, ui: u };
+    return { app: "shirose-nihongo", v: 1, savedAt: Date.now(), levelAkun: g.level_karakter || 1, xp: g.xp || 0, koin: g.koin || 0, gachaInv: (FB.gachaInvLocal ? FB.gachaInvLocal() : []), inventory: inv, equipped: state.siswa?.karakter?.equipped || {}, ui: u };
   }
   function stats() {
     const g = state.gami || {}, inv = state.siswa?.karakter?.inventory || [], u = ui();
@@ -46,7 +46,11 @@ export function initSaveData(FB, state) {
     $("sv-up").onclick = () => $("sv-file").click();
     $("sv-file").onchange = async (e) => { const f = e.target.files[0]; e.target.value = ""; if (!f) return;
       try { const o = JSON.parse(await f.text()); if (o.app !== "shirose-nihongo") throw new Error("Bukan file save Shirose");
-        applyUi(o.ui); if (logged) { const snap = o.akun || { gami: {}, karakter: { inventory: o.inventory || [], equipped: o.equipped || {} }, levelAkun: o.levelAkun }; const r = await FB.restoreSaveData(snap); await reload(); msg(`✅ File dimuat · ${r.item} item. Memuat ulang…`); } else msg("✅ Tema & font dimuat (masuk dulu untuk memulihkan XP/item). Memuat ulang…");
+        applyUi(o.ui); let info = "";
+        if (logged) { const lok = FB.restoreLokal ? FB.restoreLokal({ ...o, gachaInv: o.gachaInv || o.akun?.gachaInv }) : { gacha: 0 }; info = `${lok.gacha} hadiah gacha dipulihkan di perangkat`;
+          try { const snap = o.akun || { gami: {}, karakter: { inventory: o.inventory || [], equipped: o.equipped || {} }, levelAkun: o.levelAkun }; const r = await FB.restoreSaveData(snap); info += ` · akun: ${r.item} item`; } catch (er2) { info += " · akun (Firestore) tidak bisa ditulis, data tetap tersimpan di perangkat"; }
+          await reload(); msg(`✅ File dimuat · ${info}. Memuat ulang…`); }
+        else msg("✅ Tema & font dimuat (masuk dulu untuk memulihkan hadiah/level). Memuat ulang…");
         setTimeout(() => location.reload(), 1200); } catch (er) { msg("❌ " + er.message, 1); } };
   }
   function mount() {
