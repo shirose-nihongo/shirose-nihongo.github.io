@@ -100,7 +100,7 @@ for b in BAB:
             kata, kana, arti_id, ex_jp, ex_id = t[0], t[1], t[2], t[3], t[4]
             vocab.append({"id": f"{PREFIX}-{vn:03d}", "kata": kata, "kana": kana, "romaji": romaji(kana), "arti": arti_id,
                           "cat": b["title_id"], "bab": b["id"], "src": [s["id"]], "contoh": ruby(ex_jp), "arti_contoh": ex_id,
-                          "sumber": SRC.split(" (")[0] + " (diringkas Shirose)", "halaman": s["pages"][0]})
+                          "sumber": b.get("src", SRC).split(" (")[0] + " (diringkas Shirose)", "halaman": s["pages"][0]})
         items = [make_item(q, f"{s['id']}-{i}") for i, q in enumerate(s["qs"])]
         # pernyataan ○×: terjemahan ID memakai kunci kalimat JP
         for it in items:
@@ -114,7 +114,7 @@ for b in BAB:
     for sq in quiz_sub: rev_items += sq["items"][:1]
     quiz["bab"][b["id"]] = [{"id": f"{b['id']}-q1", "rev": True, "title": {"id": f"Latihan Bab {b['id'][3:]}", "jp": ruby("第" + b['id'][3:] + "章の練習")}, "items": rev_items}] + quiz_sub
     bab_files.append(b["id"])
-    json.dump({"schema": 1, "bidang": SLUG, "source": SRC + " — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+    json.dump({"schema": 1, "bidang": SLUG, "source": b.get("src", SRC) + " — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
                "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
                "bab": {"id": b["id"], "no": int(b["id"][3:]), "title": {"id": b["title_id"], "jp": ruby(b["title_jp"])},
                        "intro": {"id": b["intro_id"], "jp": ruby(b["intro_jp"])}, "pages": b["pages"], "subs": subs_out}},

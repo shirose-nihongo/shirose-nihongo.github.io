@@ -61,7 +61,7 @@ Statistik nyata dari repo (`python3 tools/ssw/stats.py --md`):
 - QA otomatis: 248/248 cek lulus (4 bidang × mobile+desktop), lihat `SSW_QA_REPORT.md`.
 
 ### Belum / batasan
-- Bidang belum ada: Shipbuilding, Aviation, Forestry, Automobile Transportation (bus & taksi; truk sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.
+- Bidang belum ada: Shipbuilding, Aviation, Forestry, Automobile Transportation (taksi; truk & bus sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.
 - Construction Tutorial 5–7 belum.
 - PDF baru tidak diunduh sesi ini (jaringan sandbox dibatasi); hanya 2 PDF JICA di repo.
 - Industrial-mfg & mfg-machine-metal tanpa sumber PDF resmi (materi orisinal).
@@ -78,5 +78,5 @@ Statistik nyata dari repo (`python3 tools/ssw/stats.py --md`):
 Total terbaru setelah Wood Industry: 17 bidang, 82 bab, 374 subbab, 23.980 kosakata, 728 kelompok soal / 8.078 butir, 188 kartu gambar, 21 diagram.
 
 ## Update: Auto Transport (Truk)
-- Bidang `auto-transport` ditambahkan dari teks belajar resmi JTA (242 hal.): 4 bab, 17 subbab, 109 vocab, 67 soal latihan. QA otomatis 50/50 lulus (fake backend; belum diuji Firestore/perangkat nyata).
+- Bidang `auto-transport` ditambahkan dari teks belajar resmi JTA (242 hal.): 5 bab, 24 subbab, 167 vocab, 103 soal latihan (bab 1-4 truk dari JTA; bab 5 bus dari Asosiasi Bus Jepang, dibaca via OCR). QA otomatis 50/50 lulus (fake backend; belum diuji Firestore/perangkat nyata).
 - Soal latihan ditulis Shirose, bukan soal resmi; furigana otomatis; belum ada kartu gambar/diagram; akses default tertutup sampai guru membuka.

@@ -3,7 +3,7 @@
 (公益社団法人 全日本トラック協会, 2024-11/12, 全242p.). Ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo."""
 from wood_content import TF, MC
 
-SLUG = "auto-transport"; NAMA = "Automobile Transportation (Sopir Truk)"; JP = "自動車運送業（トラック）"; PREFIX = "tr"
+SLUG = "auto-transport"; NAMA = "Automobile Transportation (Truk & Bus)"; JP = "自動車運送業（トラック・バス）"; PREFIX = "tr"
 SRC = "（外国人向け）トラック運転者をめざす人のための学習用テキスト (全日本トラック協会, 2024-11, 全242p.)"
 TEMA_SUB = "b1s4"; TEMA_ID = ("Tema: Dasar Mengemudi Aman", "安全運転の基本")
 
@@ -481,3 +481,7 @@ SUBS["bab4"] = [
          MC("Sebelum belok kiri harus memeriksa…", "左折の前に必ず確認することはどれですか。",
             ("Kiri dan belakang (motor/sepeda)", "左側と後ろの二輪車や自転車"), [("Hanya radio", "ラジオだけ"), ("Hanya speedometer", "速度計だけ"), ("Tidak ada", "何もない")], "Kiri dan belakang.", "左側と後ろを確認します。")]},
 ]
+
+
+from bus_bab import BAB5, SUBS5
+BAB.append(BAB5); SUBS["bab5"] = SUBS5

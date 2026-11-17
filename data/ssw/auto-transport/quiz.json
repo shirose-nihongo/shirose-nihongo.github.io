@@ -454,7 +454,7 @@
      {
       "q": {
        "id": "Benar atau salah: “Lampu kuning pada dasarnya berarti berhenti sebelum persimpangan.”",
-       "jp": "○か×か。「{黄信|こうしん}{号|ごう}は、{原則|げんそく}として{交差点|こうさてん}の{手前|てまえ}で{止|ど}まります。」"
+       "jp": "○か×か。「{黄|き}{信号|しんごう}は、{原則|げんそく}として{交差点|こうさてん}の{手前|てまえ}で{止|ど}まります。」"
       },
       "opts": [
        {
@@ -1702,7 +1702,7 @@
      {
       "q": {
        "id": "Benar atau salah: “Saat lampu berubah kuning, ikuti mobil di depan melewati persimpangan.”",
-       "jp": "○か×か。「{黄信|こうしん}{号|ごう}に{変|か}わったときは、{前|まえ}の{車|くるま}に{続|つづ}いて{交差点|こうさてん}を{通過|つうか}します。」"
+       "jp": "○か×か。「{黄|き}{信号|しんごう}に{変|か}わったときは、{前|まえ}の{車|くるま}に{続|つづ}いて{交差点|こうさてん}を{通過|つうか}します。」"
       },
       "opts": [
        {
@@ -1795,7 +1795,7 @@
      {
       "q": {
        "id": "Benar atau salah: “Saat lampu berubah kuning, ikuti mobil di depan melewati persimpangan.”",
-       "jp": "○か×か。「{黄信|こうしん}{号|ごう}に{変|か}わったときは、{前|まえ}の{車|くるま}に{続|つづ}いて{交差点|こうさてん}を{通過|つうか}します。」"
+       "jp": "○か×か。「{黄|き}{信号|しんごう}に{変|か}わったときは、{前|まえ}の{車|くるま}に{続|つづ}いて{交差点|こうさてん}を{通過|つうか}します。」"
       },
       "opts": [
        {
@@ -1841,6 +1841,964 @@
       "exp": {
        "id": "Kiri dan belakang.",
        "jp": "{左側|ひだりがわ}と{後|うし}ろを{確認|かくにん}します。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab5": [
+   {
+    "id": "bab5-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 5",
+     "jp": "{第|だい}5{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika isyarat tangan polisi berbeda dengan warna lampu, ikuti warna lampu.”",
+       "jp": "○か×か。「{警察官|けいさつかん}の{手|て}{信号|しんごう}と{信号|しんごう}{機|き}の{色|いろ}が{違|ちが}うときは、{信号|しんごう}{機|き}の{色|いろ}に{従|したが}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: perintah polisi didahulukan.",
+       "jp": "{警察官|けいさつかん}の{指示|しじ}が{優先|ゆうせん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kendaraan usaha seperti bus diinspeksi harian sekali sebelum mengemudi.”",
+       "jp": "○か×か。「バスのような{事業|じぎょう}{用|よう}の{自動車|じどうしゃ}は、{毎日|まいにち}1{回|かい}、{運転|うんてん}する{前|まえ}に{日常点検|にちじょうてんけん}をします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{毎日|まいにち}1{回|かい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Dalam 30 m sebelum zebra cross dilarang menyalip.”",
+       "jp": "○か×か。「{横断歩道|おうだんほどう}とその{手前|てまえ}30メートル{以内|いない}では、{他|ほか}の{車|くるま}を{追い越|おいこ}してはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{禁止|きんし}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di perlintasan, tetap di gigi rendah dan lewati tanpa berhenti agar mesin tidak mati.”",
+       "jp": "○か×か。「{踏切|ふみきり}の{中|なか}では、エンジンが{止|と}まらないように、{低|ひく}いギアのまま{止|と}まらないで{通過|つうか}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{止|と}まらず{通過|つうか}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pintu naik-turun dibuka setelah memastikan bus berhenti.”",
+       "jp": "○か×か。「バスの{乗降口|じょうこうぐち}のドアは、バスが{停車|ていしゃ}したことを{確認|かくにん}してから{開|ひら}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{停車|ていしゃ}してからです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah kecelakaan, sekecil apa pun harus dilaporkan ke perusahaan dan polisi.”",
+       "jp": "○か×か。「{交通事故|こうつうじこ}が{起|お}きたら、どんなに{小|ちー}さい{事故|じこ}でも、{会社|かいしゃ}と{警察|けいさつ}に{報告|ほうこく}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{小|ちー}さくても{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila bus penuh, sopir boleh menolak naik pengguna kursi roda.”",
+       "jp": "○か×か。「{車内|しゃない}が{混|こ}んでいるときは、{車|くるま}いすの{利用客|りようきゃく}の{乗車|じょうしゃ}を{断|た}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tidak boleh menolak.",
+       "jp": "{断|た}ってはいけません。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b5s1-q",
+    "sub": "b5s1",
+    "title": {
+     "id": "Subbab 5.1 · Lampu Lalu Lintas, Rambu, dan Perintah Polisi",
+     "jp": "5.1 {信号|しんごう}・{標識|ひょうしき}・{警察官|けいさつかん}の{指示|しじ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika isyarat tangan polisi berbeda dengan warna lampu, ikuti warna lampu.”",
+       "jp": "○か×か。「{警察官|けいさつかん}の{手|て}{信号|しんごう}と{信号|しんごう}{機|き}の{色|いろ}が{違|ちが}うときは、{信号|しんごう}{機|き}の{色|いろ}に{従|したが}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: perintah polisi didahulukan.",
+       "jp": "{警察官|けいさつかん}の{指示|しじ}が{優先|ゆうせん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada lampu merah berkedip, berhenti sejenak di garis berhenti.”",
+       "jp": "○か×か。「{赤色|せきしょく}の{点滅|てんめつ}の{信号|しんごう}では、{停止位置|ていしいち}で{一時停止|いちじていし}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{一時停止|いちじていし}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Arti lampu kedip kuning…",
+       "jp": "{黄色|きいろ}の{点滅|てんめつ}{信号|しんごう}の{意味|いみ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Wajib mundur",
+        "jp": "{後|うし}ろへさがる"
+       },
+       {
+        "id": "Jalan sambil hati-hati terhadap lalu lintas lain",
+        "jp": "ほかの{交通|こうつう}に{注意|ちゅうい}して{進|すす}む"
+       },
+       {
+        "id": "Berhenti total",
+        "jp": "{止|と}まって{動|うご}かない"
+       },
+       {
+        "id": "Dilarang jalan",
+        "jp": "{進|すす}んではいけない"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kuning berkedip = hati-hati.",
+       "jp": "{注意|ちゅうい}して{進|すす}みます。"
+      }
+     },
+     {
+      "q": {
+       "id": "Rambu STOP (止まれ) berarti…",
+       "jp": "「{止|と}まれ」の{標識|ひょうしき}では、どうしますか。"
+      },
+      "opts": [
+       {
+        "id": "Wajib berhenti sejenak",
+        "jp": "{必|かなら}ず{一時停止|いちじていし}する"
+       },
+       {
+        "id": "Parkir lama",
+        "jp": "{長|なが}く{駐車|ちゅうしゃ}する"
+       },
+       {
+        "id": "Boleh lewat tanpa berhenti",
+        "jp": "{止|と}まらなくてもよい"
+       },
+       {
+        "id": "Mempercepat",
+        "jp": "{速度|そくど}を{上|あ}げる"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Berhenti sejenak.",
+       "jp": "{一時停止|いちじていし}します。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b5s2-q",
+    "sub": "b5s2",
+    "title": {
+     "id": "Subbab 5.2 · SIM, Inspeksi, dan Persiapan Mengemudi",
+     "jp": "5.2 {免許|めんきょ}・{点検|てんけん}・{運転|うんてん}{前|まえ}の{心得|こころえ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Kendaraan usaha seperti bus diinspeksi harian sekali sebelum mengemudi.”",
+       "jp": "○か×か。「バスのような{事業|じぎょう}{用|よう}の{自動車|じどうしゃ}は、{毎日|まいにち}1{回|かい}、{運転|うんてん}する{前|まえ}に{日常点検|にちじょうてんけん}をします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{毎日|まいにち}1{回|かい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila kecepatan dua kali, jarak pengereman juga dua kali.”",
+       "jp": "○か×か。「{速度|そくど}が2{倍|ばい}になると、{止|と}まるまでの{距離|きょり}も2{倍|ばい}になります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: sekitar 4 kali.",
+       "jp": "{約|やく}4{倍|ばい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "SIM untuk membawa penumpang berbayar (bus, taksi) adalah…",
+       "jp": "お{金|きん}をもらって{人|にん}を{運|はこ}ぶときの{免許|めんきょ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "第二種免許",
+        "jp": "{第二種|だいにしゅ}{運転免許|うんてんめんきょ}"
+       },
+       {
+        "id": "仮免許のみ",
+        "jp": "{仮免許|かりめんきょ}だけ"
+       },
+       {
+        "id": "免許はいらない",
+        "jp": "{免許|めんきょ}はいらない"
+       },
+       {
+        "id": "原付免許",
+        "jp": "{原付免許|げんつきめんきょ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Kelas dua.",
+       "jp": "{第二種|だいにしゅ}{運転免許|うんてんめんきょ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Interval inspeksi berkala kendaraan usaha (bus)…",
+       "jp": "{事業|じぎょう}{用|よう}の{自動車|じどうしゃ}の{定期点検|ていきてんけん}は、{何か月|なんかげつ}ごとですか。"
+      },
+      "opts": [
+       {
+        "id": "12 bulan",
+        "jp": "12か{月|がつ}"
+       },
+       {
+        "id": "3 bulan",
+        "jp": "3か{月|がつ}"
+       },
+       {
+        "id": "24 bulan",
+        "jp": "24か{月|がつ}"
+       },
+       {
+        "id": "1 bulan",
+        "jp": "1か{月|がつ}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "3 bulan.",
+       "jp": "3か{月|がつ}ごとです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b5s3-q",
+    "sub": "b5s3",
+    "title": {
+     "id": "Subbab 5.3 · Cara Mengemudi: Jalur, Pejalan Kaki, Kecepatan, Parkir",
+     "jp": "5.3 {運転|うんてん}の{方法|ほうほう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Dalam 30 m sebelum zebra cross dilarang menyalip.”",
+       "jp": "○か×か。「{横断歩道|おうだんほどう}とその{手前|てまえ}30メートル{以内|いない}では、{他|ほか}の{車|くるま}を{追い越|おいこ}してはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{禁止|きんし}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila bus rute memberi isyarat berangkat, kendaraan di belakang boleh menghalanginya.”",
+       "jp": "○か×か。「{路線バス|ろせんばす}が{発進|はっしん}の{合図|あいず}をしたら、{後|うし}ろの{車|くるま}は{発進|はっしん}を{妨|さまた}げてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tidak boleh dihalangi.",
+       "jp": "{妨|さまた}げてはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanpa rambu/marka, batas kecepatan mobil adalah 60 km/jam.”",
+       "jp": "○か×か。「{標識|ひょうしき}や{標示|ひょうじ}がないとき、{自動車|じどうしゃ}の{最高速度|さいこうそくど}は{時速|じそく}60キロメートルです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "60kmです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Isyarat belok diberikan sebelum belok sejauh…",
+       "jp": "{曲|ま}がるときの{合図|あいず}は、{何|なに}メートル{手前|てまえ}でしますか。"
+      },
+      "opts": [
+       {
+        "id": "30 m",
+        "jp": "30メートル"
+       },
+       {
+        "id": "300 m",
+        "jp": "300メートル"
+       },
+       {
+        "id": "0 m (saat belok)",
+        "jp": "{曲|ま}がる{直前|ちょくぜん}だけ"
+       },
+       {
+        "id": "3 m",
+        "jp": "3メートル"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "30 m.",
+       "jp": "30メートル{手前|てまえ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Berhenti singkat untuk bongkar muat/naik-turun penumpang maksimal…",
+       "jp": "{停車|ていしゃ}は、{何分|なんぷん}{以内|いない}の{停止|ていし}ですか。"
+      },
+      "opts": [
+       {
+        "id": "30 menit",
+        "jp": "30{分|ふん}"
+       },
+       {
+        "id": "1 jam",
+        "jp": "1{時間|じかん}"
+       },
+       {
+        "id": "Tanpa batas",
+        "jp": "{時間|じかん}の{制限|せいげん}はない"
+       },
+       {
+        "id": "5 menit",
+        "jp": "5{分|ふん}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "5 menit.",
+       "jp": "5{分|ふん}{以内|いない}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Parkir dilarang dalam jarak berapa dari perlintasan kereta?",
+       "jp": "{踏切|ふみきり}から{何|なに}メートル{以内|いない}は{駐車|ちゅうしゃ}{禁止|きんし}ですか。"
+      },
+      "opts": [
+       {
+        "id": "10 m",
+        "jp": "10メートル"
+       },
+       {
+        "id": "1 m",
+        "jp": "1メートル"
+       },
+       {
+        "id": "0,5 m",
+        "jp": "0.5メートル"
+       },
+       {
+        "id": "100 m",
+        "jp": "100メートル"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "10 m.",
+       "jp": "10メートル{以内|いない}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b5s4-q",
+    "sub": "b5s4",
+    "title": {
+     "id": "Subbab 5.4 · Tempat Berbahaya: Perlintasan, Malam, Cuaca, Tol",
+     "jp": "5.4 {危険|きけん}な{場所|ばしょ}での{運転|うんてん}・{高速道路|こうそくどうろ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Di perlintasan, tetap di gigi rendah dan lewati tanpa berhenti agar mesin tidak mati.”",
+       "jp": "○か×か。「{踏切|ふみきり}の{中|なか}では、エンジンが{止|と}まらないように、{低|ひく}いギアのまま{止|と}まらないで{通過|つうか}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{止|と}まらず{通過|つうか}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila alarm perlintasan berbunyi, masuk saja asal cepat.”",
+       "jp": "○か×か。「{踏切|ふみきり}の{警報機|けいほうき}が{鳴|な}りはじめても、{急|いそ}げば{入|いっ}ってよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: dilarang masuk.",
+       "jp": "{入|いっ}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila mogok di tol, paling aman tetap berada di dalam kendaraan.”",
+       "jp": "○か×か。「{高速道路|こうそくどうろ}で{故障|こしょう}したときは、{車|くるま}に{残|のこ}っているのが{安全|あんぜん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: menjauh ke luar pagar.",
+       "jp": "ガードレールの{外|そと}へ{避難|ひなん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bila kendaraan mogok di perlintasan, yang dilakukan pertama adalah…",
+       "jp": "{踏切|ふみきり}で{車|くるま}が{動|うご}かなくなったら、まずどうしますか。"
+      },
+      "opts": [
+       {
+        "id": "Ganti gigi di tengah rel",
+        "jp": "{線路|せんろ}の{上|うえ}でギアを{変|か}える"
+       },
+       {
+        "id": "Tinggalkan mobil tanpa lapor",
+        "jp": "{何|なに}もしないで{逃|に}げる"
+       },
+       {
+        "id": "Tidur",
+        "jp": "{車|くるま}の{中|なか}で{寝|ね}る"
+       },
+       {
+        "id": "Tekan tombol darurat/pakai flare dan beri tahu kereta",
+        "jp": "{非常|ひじょう}ボタンや{発炎筒|はつえんとう}で{列車|れっしゃ}に{知|し}らせる"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Beri tahu kereta.",
+       "jp": "{列車|れっしゃ}に{知|し}らせます。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b5s5-q",
+    "sub": "b5s5",
+    "title": {
+     "id": "Subbab 5.5 · Kewajiban Sopir Bus dan 点呼",
+     "jp": "5.5 バス{運転者|うんてんしゃ}の{心得|こころえ}と{点呼|てんこ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pintu naik-turun dibuka setelah memastikan bus berhenti.”",
+       "jp": "○か×か。「バスの{乗降口|じょうこうぐち}のドアは、バスが{停車|ていしゃ}したことを{確認|かくにん}してから{開|ひら}けます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{停車|ていしゃ}してからです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Apel hanya ada dua macam: sebelum dan sesudah kerja.”",
+       "jp": "○か×か。「{点呼|てんこ}は、{業務|ぎょうむ}{前|まえ}と{業務|ぎょうむ}{後|のち}の2{種類|しゅるい}だけです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: ada tiga (termasuk業務途中).",
+       "jp": "3{種類|しゅるい}あります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sopir boleh bebas mengobrol lama dengan penumpang saat bus berjalan.”",
+       "jp": "○か×か。「{運転者|うんてんしゃ}は、バスが{走|はし}っているときも、{利用客|りようきゃく}と{自由|じゆう}に{長|なが}く{話|はな}してよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan bicara tak perlu.",
+       "jp": "{必要|ひつよう}のない{話|はなし}はしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Setelah kembali ke garasi, sopir…",
+       "jp": "{帰庫|きこ}したあと、{運転者|うんてんしゃ}がすることはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Cek barang tertinggal di kursi paling belakang",
+        "jp": "{車|くるま}の{最後尾|さいこうび}まで{行|い}って{忘れ物|わすれもの}を{確認|かくにん}する"
+       },
+       {
+        "id": "Tidak melakukan apa-apa",
+        "jp": "{何|なに}もしない"
+       },
+       {
+        "id": "Langsung pulang",
+        "jp": "{確認|かくにん}しないで{帰|かえ}る"
+       },
+       {
+        "id": "Mencuci pakaian",
+        "jp": "{服|ふく}を{洗|あら}う"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Cek ke belakang.",
+       "jp": "{最後尾|さいこうび}まで{行|い}って{確認|かくにん}します。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b5s6-q",
+    "sub": "b5s6",
+    "title": {
+     "id": "Subbab 5.6 · Kecelakaan, Kerusakan, dan Bencana",
+     "jp": "5.6 {事故|じこ}・{故障|こしょう}・{災害|さいがい}のとき"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah kecelakaan, sekecil apa pun harus dilaporkan ke perusahaan dan polisi.”",
+       "jp": "○か×か。「{交通事故|こうつうじこ}が{起|お}きたら、どんなに{小|ちー}さい{事故|じこ}でも、{会社|かいしゃ}と{警察|けいさつ}に{報告|ほうこく}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{小|ちー}さくても{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat meninggalkan mobil karena gempa, kunci pintu dan bawa kunci.”",
+       "jp": "○か×か。「{地震|じしん}で{車|くるま}を{置|お}いて{避難|ひなん}するときは、ドアをロックして、キーを{持|も}っていきます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: kunci tetap, pintu tidak dikunci.",
+       "jp": "キーは{付|つ}けたまま、ロックしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Saat peringatan dini gempa (緊急地震速報) muncul sambil mengemudi…",
+       "jp": "{緊急地震速報|きんきゅうじしんそくほう}が{出|で}たとき、{運転者|うんてんしゃ}はどうしますか。"
+      },
+      "opts": [
+       {
+        "id": "Nyalakan hazard dan pelankan perlahan",
+        "jp": "{非常点滅表示灯|ひじょうてんめつひょうじとう}をつけて、ゆっくり{速度|そくど}を{落|お}とす"
+       },
+       {
+        "id": "Menambah kecepatan",
+        "jp": "{速度|そくど}を{上|あ}げる"
+       },
+       {
+        "id": "Rem mendadak",
+        "jp": "{急|きゅう}ブレーキをかける"
+       },
+       {
+        "id": "Mematikan lampu",
+        "jp": "ライトを{消|け}す"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Hindari rem mendadak.",
+       "jp": "ゆっくり{落|お}とします。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada saat derek mobil rusak, jarak antar mobil…",
+       "jp": "{故障車|こしょうしゃ}をけん{引|いん}するとき、{車間|しゃかん}はどれくらいですか。"
+      },
+      "opts": [
+       {
+        "id": "100 m",
+        "jp": "100メートル"
+       },
+       {
+        "id": "50 m",
+        "jp": "50メートル"
+       },
+       {
+        "id": "Tanpa tali",
+        "jp": "ロープなし"
+       },
+       {
+        "id": "≤ 5 m dengan tali kuat",
+        "jp": "5メートル{以内|いない}で{丈夫|じょうぶ}なロープ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Dalam 5 m.",
+       "jp": "5メートル{以内|いない}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b5s7-q",
+    "sub": "b5s7",
+    "title": {
+     "id": "Subbab 5.7 · Pelayanan Penumpang (接遇)",
+     "jp": "5.7 {接遇|せつぐう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila bus penuh, sopir boleh menolak naik pengguna kursi roda.”",
+       "jp": "○か×か。「{車内|しゃない}が{混|こ}んでいるときは、{車|くるま}いすの{利用客|りようきゃく}の{乗車|じょうしゃ}を{断|た}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tidak boleh menolak.",
+       "jp": "{断|た}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Penumpang harus diperlakukan sama tanpa membedakan kebangsaan atau pakaian.”",
+       "jp": "○か×か。「{利用客|りようきゃく}には、{国籍|こくせき}や{服装|ふくそう}で{差別|さべつ}しないで、{平等|びょうどう}に{接|せっ}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{平等|びょうどう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Cara memandu penumpang tuna rungu…",
+       "jp": "{耳|みみ}の{不自由|ふじゆう}な{利用客|りようきゃく}への{案内|あんない}として、{正|ただ}しいものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Berteriak saja",
+        "jp": "{大声|おおごえ}で{叫|さけ}ぶだけ"
+       },
+       {
+        "id": "Dengan tulisan, isyarat, atau gerak bibir",
+        "jp": "{筆談|ひつだん}、{手話|しゅわ}、{口話|こうわ}など"
+       },
+       {
+        "id": "Menutup pintu",
+        "jp": "ドアを{閉|し}める"
+       },
+       {
+        "id": "Mengabaikan",
+        "jp": "{何|なに}もしない"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "筆談・手話.",
+       "jp": "{筆談|ひつだん}や{手話|しゅわ}などです。"
       }
      }
     ]
@@ -1925,7 +2883,7 @@
     {
      "q": {
       "id": "Benar atau salah: “Lampu kuning pada dasarnya berarti berhenti sebelum persimpangan.”",
-      "jp": "○か×か。「{黄信|こうしん}{号|ごう}は、{原則|げんそく}として{交差点|こうさてん}の{手前|てまえ}で{止|ど}まります。」"
+      "jp": "○か×か。「{黄|き}{信号|しんごう}は、{原則|げんそく}として{交差点|こうさてん}の{手前|てまえ}で{止|ど}まります。」"
      },
      "opts": [
       {

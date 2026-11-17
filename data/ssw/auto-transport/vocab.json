@@ -1743,6 +1743,934 @@
    "arti_contoh": "Berhenti sebelum zebra cross.",
    "sumber": "（外国人向け）トラック運転者をめざす人のための学習用テキスト (diringkas Shirose)",
    "halaman": 178
+  },
+  {
+   "id": "tr-110",
+   "kata": "信号",
+   "kana": "しんごう",
+   "romaji": "shingou",
+   "arti": "lampu lalu lintas",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "{信号|しんごう}を{守|まも}ります。",
+   "arti_contoh": "Mematuhi lampu lalu lintas.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-111",
+   "kata": "標識",
+   "kana": "ひょうしき",
+   "romaji": "hyoushiki",
+   "arti": "rambu",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "{標識|ひょうしき}を{見|み}ます。",
+   "arti_contoh": "Melihat rambu.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-112",
+   "kata": "標示",
+   "kana": "ひょうじ",
+   "romaji": "hyouji",
+   "arti": "marka jalan",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "{標示|ひょうじ}に{従|したが}います。",
+   "arti_contoh": "Mengikuti marka jalan.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-113",
+   "kata": "一時停止",
+   "kana": "いちじていし",
+   "romaji": "ichijiteishi",
+   "arti": "berhenti sejenak",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "「{止|と}まれ」で{一時停止|いちじていし}します。",
+   "arti_contoh": "Berhenti sejenak di rambu STOP.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-114",
+   "kata": "停止位置",
+   "kana": "ていしいち",
+   "romaji": "teishiichi",
+   "arti": "garis/posisi berhenti",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "{停止位置|ていしいち}で{止|ど}まります。",
+   "arti_contoh": "Berhenti di garis berhenti.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-115",
+   "kata": "点滅",
+   "kana": "てんめつ",
+   "romaji": "tenmetsu",
+   "arti": "berkedip",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "{黄色|きいろ}が{点滅|てんめつ}しています。",
+   "arti_contoh": "Lampu kuning berkedip.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-116",
+   "kata": "矢印",
+   "kana": "やじるし",
+   "romaji": "yajirushi",
+   "arti": "tanda panah",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "{矢印|やじるし}の{方向|ほうこう}へ{進|すす}みます。",
+   "arti_contoh": "Jalan ke arah panah.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-117",
+   "kata": "警察官",
+   "kana": "けいさつかん",
+   "romaji": "keisatsukan",
+   "arti": "polisi",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "contoh": "{警察官|けいさつかん}の{指示|しじ}に{従|したが}います。",
+   "arti_contoh": "Mengikuti perintah polisi.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 3
+  },
+  {
+   "id": "tr-118",
+   "kata": "第二種免許",
+   "kana": "だいにしゅめんきょ",
+   "romaji": "dainishumenkyo",
+   "arti": "SIM kelas dua (angkutan penumpang)",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "バスには{第二種免許|だいにしゅめんきょ}が{必要|ひつよう}です。",
+   "arti_contoh": "Bus perlu SIM kelas dua.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-119",
+   "kata": "自動車検査証",
+   "kana": "じどうしゃけんさしょう",
+   "romaji": "jidoushakensashou",
+   "arti": "STNK/surat uji kendaraan",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{自動車検査証|じどうしゃけんさしょう}を{車|くるま}に{備|そな}えます。",
+   "arti_contoh": "Menyimpan surat uji di mobil.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-120",
+   "kata": "自賠責保険",
+   "kana": "じばいせきほけん",
+   "romaji": "jibaisekihoken",
+   "arti": "asuransi wajib kendaraan",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{自賠責保険|じばいせきほけん}に{入|い}ります。",
+   "arti_contoh": "Ikut asuransi wajib.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-121",
+   "kata": "初心者マーク",
+   "kana": "しょしんしゃまーく",
+   "romaji": "shoshinshamaaku",
+   "arti": "tanda pengemudi pemula",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{初心者マーク|しょしんしゃまーく}をつけます。",
+   "arti_contoh": "Memasang tanda pemula.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-122",
+   "kata": "日常点検",
+   "kana": "にちじょうてんけん",
+   "romaji": "nichijoutenken",
+   "arti": "inspeksi harian",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{運転|うんてん}{前|まえ}に{日常点検|にちじょうてんけん}をします。",
+   "arti_contoh": "Inspeksi harian sebelum mengemudi.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-123",
+   "kata": "定期点検",
+   "kana": "ていきてんけん",
+   "romaji": "teikitenken",
+   "arti": "inspeksi berkala",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "3か{月|がつ}ごとに{定期点検|ていきてんけん}をします。",
+   "arti_contoh": "Inspeksi berkala tiap 3 bulan.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-124",
+   "kata": "制動距離",
+   "kana": "せいどうきょり",
+   "romaji": "seidoukyori",
+   "arti": "jarak pengereman",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "{速度|そくど}が{上|あ}がると{制動距離|せいどうきょり}が{長|なが}くなります。",
+   "arti_contoh": "Makin cepat, jarak pengereman makin panjang.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-125",
+   "kata": "遠心力",
+   "kana": "えんしんりょく",
+   "romaji": "enshinryoku",
+   "arti": "gaya sentrifugal",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s2"
+   ],
+   "contoh": "カーブで{遠心力|えんしんりょく}が{働|はたら}きます。",
+   "arti_contoh": "Gaya sentrifugal bekerja di tikungan.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 11
+  },
+  {
+   "id": "tr-126",
+   "kata": "徐行",
+   "kana": "じょこう",
+   "romaji": "jokou",
+   "arti": "jalan pelan (bisa berhenti seketika)",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{歩行者|ほこうしゃ}のそばを{徐行|じょこう}します。",
+   "arti_contoh": "Jalan pelan di dekat pejalan kaki.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-127",
+   "kata": "車間距離",
+   "kana": "しゃかんきょり",
+   "romaji": "shakankyori",
+   "arti": "jarak antarkendaraan",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{車間距離|しゃかんきょり}をあけます。",
+   "arti_contoh": "Menjaga jarak.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-128",
+   "kata": "追越し",
+   "kana": "おいこし",
+   "romaji": "oikoshi",
+   "arti": "menyalip",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{横断歩道|おうだんほどう}の{手前|てまえ}で{追越|おいこ}しをしません。",
+   "arti_contoh": "Tidak menyalip sebelum zebra cross.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-129",
+   "kata": "路線バス",
+   "kana": "ろせんばす",
+   "romaji": "rosenbasu",
+   "arti": "bus rute",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{路線バス|ろせんばす}に{道|みち}を{譲|ゆず}ります。",
+   "arti_contoh": "Memberi jalan pada bus rute.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-130",
+   "kata": "横断歩道",
+   "kana": "おうだんほどう",
+   "romaji": "oudanhodou",
+   "arti": "zebra cross",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{横断歩道|おうだんほどう}で{止|ど}まります。",
+   "arti_contoh": "Berhenti di zebra cross.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-131",
+   "kata": "方向指示器",
+   "kana": "ほうこうしじき",
+   "romaji": "houkoushijiki",
+   "arti": "lampu sein",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{方向指示器|ほうこうしじき}で{合図|あいず}します。",
+   "arti_contoh": "Memberi isyarat dengan sein.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-132",
+   "kata": "進路変更",
+   "kana": "しんろへんこう",
+   "romaji": "shinrohenkou",
+   "arti": "pindah lajur",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{進路変更|しんろへんこう}の3{秒|びょう}{前|まえ}に{合図|あいず}します。",
+   "arti_contoh": "Beri isyarat 3 detik sebelum pindah lajur.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-133",
+   "kata": "駐車",
+   "kana": "ちゅうしゃ",
+   "romaji": "chuusha",
+   "arti": "parkir",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "ここは{駐車|ちゅうしゃ}{禁止|きんし}です。",
+   "arti_contoh": "Dilarang parkir di sini.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-134",
+   "kata": "停車",
+   "kana": "ていしゃ",
+   "romaji": "teisha",
+   "arti": "berhenti singkat",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "5{分|ふん}{以内|いない}の{停止|ていし}は{停車|ていしゃ}です。",
+   "arti_contoh": "Berhenti ≤5 menit disebut teisha.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-135",
+   "kata": "緊急自動車",
+   "kana": "きんきゅうじどうしゃ",
+   "romaji": "kinkyuujidousha",
+   "arti": "kendaraan darurat",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s3"
+   ],
+   "contoh": "{緊急自動車|きんきゅうじどうしゃ}に{道|みち}を{譲|ゆず}ります。",
+   "arti_contoh": "Memberi jalan pada kendaraan darurat.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 21
+  },
+  {
+   "id": "tr-136",
+   "kata": "踏切",
+   "kana": "ふみきり",
+   "romaji": "fumikiri",
+   "arti": "perlintasan kereta",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{踏切|ふみきり}の{前|まえ}で{一時停止|いちじていし}します。",
+   "arti_contoh": "Berhenti sejenak di depan perlintasan.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-137",
+   "kata": "警報機",
+   "kana": "けいほうき",
+   "romaji": "keihouki",
+   "arti": "alarm perlintasan",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{警報機|けいほうき}が{鳴|な}っています。",
+   "arti_contoh": "Alarm berbunyi.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-138",
+   "kata": "遮断機",
+   "kana": "しゃだんき",
+   "romaji": "shadanki",
+   "arti": "palang perlintasan",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{遮断機|しゃだんき}が{降|お}りています。",
+   "arti_contoh": "Palang sudah turun.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-139",
+   "kata": "発炎筒",
+   "kana": "はつえんとう",
+   "romaji": "hatsuentou",
+   "arti": "suar darurat",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{発炎筒|はつえんとう}で{列車|れっしゃ}に{知|し}らせます。",
+   "arti_contoh": "Memberi tanda ke kereta dengan flare.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-140",
+   "kata": "停止表示器材",
+   "kana": "ていしひょうじきざい",
+   "romaji": "teishihyoujikizai",
+   "arti": "alat tanda berhenti",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{停止表示器材|ていしひょうじきざい}を{置|お}きます。",
+   "arti_contoh": "Memasang alat tanda berhenti.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-141",
+   "kata": "高速道路",
+   "kana": "こうそくどうろ",
+   "romaji": "kousokudouro",
+   "arti": "jalan tol/expressway",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{高速道路|こうそくどうろ}に{入|い}ります。",
+   "arti_contoh": "Masuk jalan tol.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-142",
+   "kata": "加速車線",
+   "kana": "かそくしゃせん",
+   "romaji": "kasokushasen",
+   "arti": "lajur akselerasi",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{加速車線|かそくしゃせん}で{加速|かそく}します。",
+   "arti_contoh": "Berakselerasi di lajur akselerasi.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-143",
+   "kata": "非常点滅表示灯",
+   "kana": "ひじょうてんめつひょうじとう",
+   "romaji": "hijoutenmetsuhyoujitou",
+   "arti": "lampu hazard",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s4"
+   ],
+   "contoh": "{非常点滅表示灯|ひじょうてんめつひょうじとう}をつけます。",
+   "arti_contoh": "Menyalakan lampu hazard.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 45
+  },
+  {
+   "id": "tr-144",
+   "kata": "利用客",
+   "kana": "りようきゃく",
+   "romaji": "riyoukyaku",
+   "arti": "penumpang/pengguna",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{利用客|りようきゃく}の{安全|あんぜん}を{守|まも}ります。",
+   "arti_contoh": "Menjaga keselamatan penumpang.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-145",
+   "kata": "申し継ぎ",
+   "kana": "もうしつぎ",
+   "romaji": "moushitsugi",
+   "arti": "serah terima informasi tugas",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{交代|こうたい}のときに{申し継|もうしつ}ぎをします。",
+   "arti_contoh": "Melakukan serah terima saat pergantian.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-146",
+   "kata": "点呼",
+   "kana": "てんこ",
+   "romaji": "tenko",
+   "arti": "apel (konfirmasi sebelum/sesudah kerja)",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{業務|ぎょうむ}{前|まえ}に{点呼|てんこ}を{受|う}けます。",
+   "arti_contoh": "Mengikuti apel sebelum kerja.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-147",
+   "kata": "運行管理者",
+   "kana": "うんこうかんりしゃ",
+   "romaji": "unkoukanrisha",
+   "arti": "manajer operasi",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{運行管理者|うんこうかんりしゃ}が{点呼|てんこ}をします。",
+   "arti_contoh": "Manajer operasi menjalankan apel.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-148",
+   "kata": "酒気帯び",
+   "kana": "しゅきおび",
+   "romaji": "shukiobi",
+   "arti": "terpengaruh alkohol",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{酒気帯|しゅきお}びを{確認|かくにん}します。",
+   "arti_contoh": "Memeriksa pengaruh alkohol.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-149",
+   "kata": "帰庫",
+   "kana": "きこ",
+   "romaji": "kiko",
+   "arti": "kembali ke garasi",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{仕事|しごと}が{終|お}わったら{帰庫|きこ}します。",
+   "arti_contoh": "Setelah kerja kembali ke garasi.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-150",
+   "kata": "忘れ物",
+   "kana": "わすれもの",
+   "romaji": "wasuremono",
+   "arti": "barang tertinggal",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{忘れ物|わすれもの}を{確認|かくにん}します。",
+   "arti_contoh": "Memeriksa barang tertinggal.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-151",
+   "kata": "乗降口",
+   "kana": "じょうこうぐち",
+   "romaji": "joukouguchi",
+   "arti": "pintu naik-turun",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s5"
+   ],
+   "contoh": "{乗降口|じょうこうぐち}のドアを{閉|し}めます。",
+   "arti_contoh": "Menutup pintu naik-turun.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 56
+  },
+  {
+   "id": "tr-152",
+   "kata": "救護",
+   "kana": "きゅうご",
+   "romaji": "kyuugo",
+   "arti": "pertolongan korban",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "けが{人|にん}を{救護|きゅうご}します。",
+   "arti_contoh": "Menolong korban.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-153",
+   "kata": "応急処置",
+   "kana": "おうきゅうしょち",
+   "romaji": "oukyuushochi",
+   "arti": "pertolongan pertama",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "{応急処置|おうきゅうしょち}をします。",
+   "arti_contoh": "Memberi pertolongan pertama.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-154",
+   "kata": "ひき逃げ",
+   "kana": "ひきにげ",
+   "romaji": "hikinige",
+   "arti": "tabrak lari",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "ひき{逃|に}げを{見|み}たら{通報|つうほう}します。",
+   "arti_contoh": "Melihat tabrak lari harus melapor.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-155",
+   "kata": "警戒宣言",
+   "kana": "けいかいせんげん",
+   "romaji": "keikaisengen",
+   "arti": "peringatan siaga gempa",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "{警戒宣言|けいかいせんげん}が{出|で}ました。",
+   "arti_contoh": "Peringatan siaga gempa dikeluarkan.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-156",
+   "kata": "緊急地震速報",
+   "kana": "きんきゅうじしんそくほう",
+   "romaji": "kinkyuujishinsokuhou",
+   "arti": "peringatan dini gempa",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "{緊急地震速報|きんきゅうじしんそくほう}が{出|で}ました。",
+   "arti_contoh": "Peringatan dini gempa keluar.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-157",
+   "kata": "津波",
+   "kana": "つなみ",
+   "romaji": "tsunami",
+   "arti": "tsunami",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "{津波|つなみ}から{避難|ひなん}します。",
+   "arti_contoh": "Mengungsi dari tsunami.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-158",
+   "kata": "避難",
+   "kana": "ひなん",
+   "romaji": "hinan",
+   "arti": "mengungsi",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "{安全|あんぜん}な{場所|ばしょ}に{避難|ひなん}します。",
+   "arti_contoh": "Mengungsi ke tempat aman.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-159",
+   "kata": "けん引",
+   "kana": "けんいん",
+   "romaji": "ken'in",
+   "arti": "menderek",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s6"
+   ],
+   "contoh": "{故障車|こしょうしゃ}をけん{引|いん}します。",
+   "arti_contoh": "Menderek mobil rusak.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 58
+  },
+  {
+   "id": "tr-160",
+   "kata": "接遇",
+   "kana": "せつぐう",
+   "romaji": "setsuguu",
+   "arti": "pelayanan/menyambut tamu",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{接遇|せつぐう}を{心|こころ}がけます。",
+   "arti_contoh": "Mengutamakan pelayanan.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
+  },
+  {
+   "id": "tr-161",
+   "kata": "車いす",
+   "kana": "くるまいす",
+   "romaji": "kurumaisu",
+   "arti": "kursi roda",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{車|くるま}いすの{人|にん}を{手伝|てつだ}います。",
+   "arti_contoh": "Membantu pengguna kursi roda.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
+  },
+  {
+   "id": "tr-162",
+   "kata": "高齢者",
+   "kana": "こうれいしゃ",
+   "romaji": "koureisha",
+   "arti": "lansia",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{高齢者|こうれいしゃ}に{親切|しんせつ}にします。",
+   "arti_contoh": "Bersikap ramah pada lansia.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
+  },
+  {
+   "id": "tr-163",
+   "kata": "障害者",
+   "kana": "しょうがいしゃ",
+   "romaji": "shougaisha",
+   "arti": "penyandang disabilitas",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{障害者|しょうがいしゃ}を{手伝|てつだ}います。",
+   "arti_contoh": "Membantu penyandang disabilitas.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
+  },
+  {
+   "id": "tr-164",
+   "kata": "筆談",
+   "kana": "ひつだん",
+   "romaji": "hitsudan",
+   "arti": "berkomunikasi dengan tulisan",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{筆談|ひつだん}で{案内|あんない}します。",
+   "arti_contoh": "Memandu dengan tulisan.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
+  },
+  {
+   "id": "tr-165",
+   "kata": "手話",
+   "kana": "しゅわ",
+   "romaji": "shuwa",
+   "arti": "bahasa isyarat",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{手話|しゅわ}で{話|はな}します。",
+   "arti_contoh": "Berbicara dengan bahasa isyarat.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
+  },
+  {
+   "id": "tr-166",
+   "kata": "急病人",
+   "kana": "きゅうびょうにん",
+   "romaji": "kyuubyounin",
+   "arti": "penumpang sakit mendadak",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{急病人|きゅうびょうにん}に{対応|たいおう}します。",
+   "arti_contoh": "Menangani penumpang sakit mendadak.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
+  },
+  {
+   "id": "tr-167",
+   "kata": "運賃",
+   "kana": "うんちん",
+   "romaji": "unchin",
+   "arti": "ongkos/tarif",
+   "cat": "Khusus Sopir Bus (Teks Asosiasi Bus)",
+   "bab": "bab5",
+   "src": [
+    "b5s7"
+   ],
+   "contoh": "{運賃|うんちん}を{受け取|うけと}ります。",
+   "arti_contoh": "Menerima ongkos.",
+   "sumber": "（外国人向け）バス運転者を目指す人の為の学習用テキスト (diringkas Shirose)",
+   "halaman": 64
   }
  ]
 }
