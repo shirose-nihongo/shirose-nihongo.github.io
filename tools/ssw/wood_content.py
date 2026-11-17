@@ -723,3 +723,5 @@ SUBS["bab4"] = [
          MC("Metode yang menyambung tiang dan balok dengan logam khusus disebut…", "柱やはりの接合部を特殊な金物で接合する工法は何ですか。",
             ("金物工法", "金物工法"), [("天然乾燥", "天然乾燥"), ("冷圧", "冷圧"), ("幅はぎ", "幅はぎ")], "金物工法.", "金物工法です。")]},
 ]
+
+import wood_extra  # noqa: soal tambahan

@@ -1100,6 +1100,108 @@
        "id": "Fleksibel dan kuat.",
        "jp": "やぶれにくいです。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Veneer hias biasanya dipakai langsung apa adanya sebagai produk.”",
+       "jp": "○か×か。「{ツキ板|つきいた}は、ふつうそのまま{製品|せいひん}として{使|つか}われます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: hampir selalu ditempel pada bahan lain.",
+       "jp": "ほとんどそのままでは{使|つか}わず、ほかの{材料|ざいりょう}に{貼|は}ります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tsukiita juga disebut “veneer hias”.”",
+       "jp": "○か×か。「{ツキ板|つきいた}は「{化粧単板|けしょうたんぱん}」とも{呼|よ}ばれます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{化粧単板|けしょうたんぱん}ともいいます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Veneer hias ditempel pada kaca terutama menonjolkan…",
+       "jp": "{ツキ板|つきいた}を{板|いた}ガラスで{覆|おお}うように{接着|せっちゃく}したものの{特徴|とくちょう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "tidak bisa terbakar sama sekali",
+        "jp": "{必|かなら}ず{燃|も}えない"
+       },
+       {
+        "id": "hanya dipakai di luar ruangan",
+        "jp": "{屋外|おくがい}だけで{使|つか}う"
+       },
+       {
+        "id": "urat kayu jelas, tembus cahaya, awet",
+        "jp": "{木目|もくめ}が{鮮明|せんめい}で、{透光|とうこう}{性|せい}・{耐久性|たいきゅうせい}がよい"
+       },
+       {
+        "id": "sangat lentur untuk bidang lengkung",
+        "jp": "{曲面|きょくめん}{加工|かこう}にいちばん{向|む}いている"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kaca: urat jelas, tembus cahaya, awet.",
+       "jp": "{木目|もくめ}が{鮮明|せんめい}で、{透光|とうこう}{性|せい}・{耐久性|たいきゅうせい}がよいです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Veneer pada kertas non-tenun/washi menjadi…",
+       "jp": "{ツキ板|つきいた}を{不織布|ふしょくふ}や{和紙|わし}に{貼|は}ると、どうなりますか。"
+      },
+      "opts": [
+       {
+        "id": "lebih berat",
+        "jp": "{重|おも}くなる"
+       },
+       {
+        "id": "mudah terbakar saja",
+        "jp": "{燃|も}えやすいだけ"
+       },
+       {
+        "id": "lebih kuat, tidak mudah sobek/robek",
+        "jp": "{強|つよ}くなり、{破|やぶ}れ・{裂|さ}けにくい"
+       },
+       {
+        "id": "tidak bisa dibengkokkan",
+        "jp": "{曲|ま}げられない"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kekuatan naik, fleksibel.",
+       "jp": "{強|つよ}くなり、{破|やぶ}れにくいです。"
+      }
      }
     ]
    },
@@ -1160,6 +1262,108 @@
       "exp": {
        "id": "Kayu lapis + MDF + veneer.",
        "jp": "{合板|ごうはん}が{基材|きざい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lantai tunggal berbasis papan gergajian dengan satu lapisan pada arah ketebalan.”",
+       "jp": "○か×か。「{単層フローリング|たんそうふろーりんぐ}は、ひき{板|いた}を{基材|きざい}とし、{厚|あつ}さ{方向|ほうこう}の{構成|こうせい}{層|そう}が1のものです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{厚|あつ}さ{方向|ほうこう}の{層|そう}が1です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lantai komposit umumnya lebih mahal daripada lantai tunggal.”",
+       "jp": "○か×か。「{複合フローリング|ふくごうふろーりんぐ}は、{単層フローリング|たんそうふろーりんぐ}よりふつう{価格|かかく}が{高|たか}いです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: umumnya lebih murah.",
+       "jp": "ふつう{安|やす}いです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Lantai komposit yang paling banyak diproduksi di Jepang berbasis…",
+       "jp": "{日本|にっぽん}で{多|おお}く{生産|せいさん}される{複合フローリング|ふくごうふろーりんぐ}の{基材|きざい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "beton",
+        "jp": "コンクリート"
+       },
+       {
+        "id": "kaca",
+        "jp": "ガラス"
+       },
+       {
+        "id": "besi",
+        "jp": "{鉄|てつ}"
+       },
+       {
+        "id": "kayu lapis",
+        "jp": "{合板|ごうはん}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Basis kayu lapis + MDF + veneer/olefin.",
+       "jp": "{合板|ごうはん}が{基材|きざい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Keunggulan lantai tunggal jika permukaan sudah aus…",
+       "jp": "{単層フローリング|たんそうふろーりんぐ}の{長所|ちょうしょ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "bisa diamplas dan dicat ulang",
+        "jp": "{研磨|けんま}して{再塗装|さいとそう}できる"
+       },
+       {
+        "id": "harus diganti seluruhnya",
+        "jp": "{全部|ぜんぶ}{取|と}りかえる"
+       },
+       {
+        "id": "tidak boleh diperbaiki",
+        "jp": "{直|なお}せない"
+       },
+       {
+        "id": "tidak bisa dipakai di sekolah",
+        "jp": "{学校|がっこう}では{使|つか}えない"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Perawatan: amplas + cat ulang.",
+       "jp": "{研磨|けんま}して{再塗装|さいとそう}できます。"
       }
      }
     ]
@@ -1222,6 +1426,86 @@
        "id": "製紙用.",
        "jp": "{製紙|せいし}{用|よう}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Chip dari kayu bongkaran bangunan dipakai sebagai bahan bakar boiler atau bahan papan kayu.”",
+       "jp": "○か×か。「{建築物|けんちくぶつ}の{解体|かいたい}{材|ざい}から{作|つく}るチップは、ボイラー{燃料|ねんりょう}や{木質|もくしつ}ボードの{原料|げんりょう}に{使|つか}われます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{解体|かいたい}{材|ざい}のチップはボイラー{燃料|ねんりょう}やボード{原料|げんりょう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Chip untuk pembangkit biomassa kayu dipakai sebagai…",
+       "jp": "{木質|もくしつ}{バイオマス発電|ばいおますはつでん}{所|ところ}で、チップは{何|なん}として{使|つか}われますか。"
+      },
+      "opts": [
+       {
+        "id": "bahan bakar",
+        "jp": "{燃料|ねんりょう}"
+       },
+       {
+        "id": "bahan kaca",
+        "jp": "ガラス"
+       },
+       {
+        "id": "bahan cat",
+        "jp": "{塗料|とりょう}"
+       },
+       {
+        "id": "bahan pupuk saja",
+        "jp": "{肥料|ひりょう}だけ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Bahan bakar; permintaan naik.",
+       "jp": "{燃料|ねんりょう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Chip dari sisa pabrik gergaji dan sisa hutan terutama dipakai untuk…",
+       "jp": "{工場残材|こうじょうざんざい}や{林地残材|りんちざんざい}のチップは、{主|おも}に{何|なに}に{使|つか}われますか。"
+      },
+      "opts": [
+       {
+        "id": "hanya lantai",
+        "jp": "{床|とこ}だけ"
+       },
+       {
+        "id": "hanya perekat",
+        "jp": "{接着剤|せっちゃくざい}だけ"
+       },
+       {
+        "id": "kertas dan bahan bakar",
+        "jp": "{製紙|せいし}{用|よう}や{燃料|ねんりょう}{用|よう}"
+       },
+       {
+        "id": "hanya furnitur",
+        "jp": "{家具|かぐ}だけ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Kertas & bahan bakar.",
+       "jp": "{製紙|せいし}{用|よう}と{燃料|ねんりょう}{用|よう}です。"
+      }
      }
     ]
    },
@@ -1282,6 +1566,79 @@
       "exp": {
        "id": "Rangka kayu.",
        "jp": "{木造軸組工法|もくぞうじくぐみこうほう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada precut, informasi desain bangunan diubah menjadi data pengerjaan kayu lalu diproses mesin kontrol komputer.”",
+       "jp": "○か×か。「プレカットでは、{建物|たてもの}の{設計|せっけい}{情報|じょうほう}を{木材|もくざい}の{加工|かこう}{情報|じょうほう}に{変換|へんかん}して、コンピュータ{制御|せいぎょ}の{機械|きかい}で{加工|かこう}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{設計|せっけい}{情報|じょうほう}を{加工|かこう}{情報|じょうほう}に{変換|へんかん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Precut menambah sampah (serbuk kayu) di lokasi bangunan.”",
+       "jp": "○か×か。「プレカットは、{建築現場|けんちくげんば}でのゴミ（{木|き}くず）を{増|ふ}やします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: mengurangi sampah di lokasi.",
+       "jp": "ゴミを{減|へ}らせます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Salah satu keuntungan precut…",
+       "jp": "プレカットのメリットはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "presisi turun",
+        "jp": "{精度|せいど}が{下|さ}がる"
+       },
+       {
+        "id": "pekerjaan manual bertambah",
+        "jp": "{手作業|てさぎょう}が{増|ふ}える"
+       },
+       {
+        "id": "kualitas tidak stabil",
+        "jp": "{品質|ひんしつ}が{不安定|ふあんてい}"
+       },
+       {
+        "id": "masa kerja di lokasi lebih singkat",
+        "jp": "{現場|げんば}の{工期|こうき}を{短|みじか}くできる"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Waktu kerja pendek, presisi tinggi.",
+       "jp": "{工期|こうき}が{短|みじか}くなります。"
       }
      }
     ]
@@ -1582,6 +1939,144 @@
       "exp": {
        "id": "エジャ (edger).",
        "jp": "エジャです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pengupasan kulit dilakukan agar mata gergaji tidak rusak oleh kulit dan tanah.”",
+       "jp": "○か×か。「はく{皮|ひ}は、のこ{歯|は}が{樹皮|じゅひ}や{土砂|どしゃ}で{傷|いた}むのを{防|ふせ}ぐために{行|おこな}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "のこ{歯|は}を{守|まも}るためです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mesin untuk mengupas kulit kayu bulat disebut…",
+       "jp": "はく{皮|ひ}に{使|つか}う{機械|きかい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "エジャ",
+        "jp": "エジャ"
+       },
+       {
+        "id": "トリマ",
+        "jp": "トリマ"
+       },
+       {
+        "id": "乾燥機",
+        "jp": "{乾燥機|かんそうき}"
+       },
+       {
+        "id": "バーカ",
+        "jp": "バーカ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Barker.",
+       "jp": "バーカです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Menentukan bagian bulatan yang digergaji dan produknya disebut…",
+       "jp": "{丸太|まるた}のどこからどんな{製材品|せいざいひん}を{挽|ひ}くか{決|き}めることを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "結束",
+        "jp": "{結束|けっそく}"
+       },
+       {
+        "id": "横切り",
+        "jp": "{横切|よこぎ}り"
+       },
+       {
+        "id": "耳すり",
+        "jp": "{耳|みみ}すり"
+       },
+       {
+        "id": "木取り",
+        "jp": "{木取|きど}り"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "木取り sangat penting bagi rendemen.",
+       "jp": "{木取|きど}りです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Memotong panjang produk disebut…",
+       "jp": "{製品|せいひん}の{長|なが}さを{決|き}める{作業|さぎょう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "横切り",
+        "jp": "{横切|よこぎ}り"
+       },
+       {
+        "id": "桟積み",
+        "jp": "{桟積|さんづ}み"
+       },
+       {
+        "id": "はく皮",
+        "jp": "はく{皮|ひ}"
+       },
+       {
+        "id": "耳すり",
+        "jp": "{耳|みみ}すり"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "横切り; mesin: trimmer/crosscut.",
+       "jp": "{横切|よこぎ}りです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin pengering buatan yang paling umum adalah tipe…",
+       "jp": "{人工乾燥|じんこうかんそう}{機|き}でいちばん{一般的|いっぱんてき}なのはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "tipe es",
+        "jp": "{氷|こおり}{式|しき}"
+       },
+       {
+        "id": "tipe uap (蒸気式)",
+        "jp": "{蒸気式|じょうきしき}"
+       },
+       {
+        "id": "tipe angin",
+        "jp": "{風|かぜ}{式|しき}"
+       },
+       {
+        "id": "tipe matahari",
+        "jp": "{太陽|たいよう}{式|しき}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Tipe uap paling umum.",
+       "jp": "{蒸気式|じょうきしき}です。"
       }
      }
     ]

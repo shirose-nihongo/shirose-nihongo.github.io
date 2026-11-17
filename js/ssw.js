@@ -17,6 +17,20 @@ import {
 } from "./ssw-core.js?v=20261117d";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
+/* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
+const PDF_SUMBER = {
+  "wood-industry": [{ t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" }],
+  "auto-transport": [
+    { t: "Teks resmi Truk (JP, 242 hal.)", u: "assets/ssw/auto-transport/pdf/jta-truck-gakushu-text-ja.pdf" },
+    { t: "Teks resmi Bus (JP, 68 hal.) — situs Asosiasi Bus", u: "https://www.bus.or.jp/news/16554/", ext: 1 }
+  ],
+  "auto-maintenance": [
+    { t: "JICA: みてまなぶ！自動車整備の日本語", u: "assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf" },
+    { t: "JICA: Koleksi ilustrasi かいて おぼえる", u: "assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf" }
+  ]
+};
+const pdfButtons = (slug) => (PDF_SUMBER[slug] || []).map(x => `<a class="btn ghost" href="${esc(x.u)}" target="_blank" rel="noopener">📄 ${esc(x.t)}${x.ext ? " ↗" : ""}</a>`).join("");
+
 let FB = null;
 export function initSsw(fb) { FB = fb; initSswCore(fb); }
 
@@ -180,6 +194,7 @@ async function renderPeta([slug]) {
       <button class="btn ghost" onclick="route('ssw-kuis/${slug}')">📝 Kuis</button>
       <button class="btn" onclick="route('ssw-hafal/${slug}')">🃏 Hafalan</button>
       <button class="btn gold" onclick="route('ssw-rank/${slug}')">🏆 Leaderboard</button>
+      ${pdfButtons(slug)}
     </div>
     <div class="sw-attr">Materi: ${esc(pack.chapters[0]?.source || "")}</div>
   </div>`;
