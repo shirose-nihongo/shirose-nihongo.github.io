@@ -61,3 +61,4 @@ Hanya 区分 1–3 yang punya 2号. Di app saat ini hanya "dasar bersama" (indus
 - SRC-004 (MLIT laporan pelaksanaan ujian 2025, 10 hlm; 学科 ≥65%, 実技 ≥60% terkonfirmasi), SRC-012 (METI 2607 guideline) dan SRC-020 (MOJ 分野別運用方針案, 95 hlm) berhasil diunduh lewat klik asli di Chrome (script-download tidak disimpan Chrome). Semua 12 PDF registry kini DOWNLOADED.
 - SRC-012 §6 mengonfirmasi: 製造分野特定技能1号評価試験 lulus tulis ≥65/100 & praktik ≥60/100; 2号 ≥60/100. Teks info di ssw-core.js dikembalikan dengan angka ini (bersumber). SRC-021 (halaman web) tetap tidak ada PDF.
 - mfg-machine-metal: kosakata 29 → 67 (+38: nama proses/mesin dari daftar 業務 resmi SRC-010 hlm. 5 + istilah ukur & keselamatan umum). Arti = ORIGINAL LEARNING CONTENT, perlu review ahli; belum ada contoh kalimat.
+- mfg-machine-metal: +25 contoh kalimat (ORIGINAL LEARNING CONTENT) untuk kosakata baru.
