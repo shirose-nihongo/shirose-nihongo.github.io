@@ -1,0 +1,2037 @@
+{
+ "bab": {
+  "bab1": [
+   {
+    "id": "bab1-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 1",
+     "jp": "{第|だい}1{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Di Jepang, truk mengangkut lebih dari 90% barang dalam negeri.”",
+       "jp": "○か×か。「{日本|にっぽん}では、トラックが{国内|こくない}{貨物|かもつ}の9{割|わり}{以上|いじょう}を{運|はこ}んでいます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "9{割|わり}{以上|いじょう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Sekitar separuh kecelakaan truk usaha adalah kecelakaan tabrak belakang.”",
+       "jp": "○か×か。「{事業用トラック|じぎょうようとらっく}の{事故|じこ}の{約半分|やくはんぶん}は{追突事故|ついとつじこ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{約半分|やくはんぶん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Salam sebaiknya menunggu disapa lebih dulu.”",
+       "jp": "○か×か。「あいさつは、{相手|あいて}から{先|さき}にされるまで{待|ま}ちます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: mulai lebih dulu.",
+       "jp": "{自分|じぶん}からします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Esok hari setelah minum, boleh mengemudi meski sisa alkohol masih ada.”",
+       "jp": "○か×か。「{飲酒|いんしゅ}した{翌日|よくじつ}は、{酒|さけ}の{影響|えいきょう}が{残|のこ}っていても{運転|うんてん}してよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tetap dihukum.",
+       "jp": "{罰|ばつ}せられます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Truk bernama perusahaan adalah “iklan berjalan”.”",
+       "jp": "○か×か。「{会社|かいしゃ}の{名前|なまえ}が{書|か}かれたトラックは、「{走る広告塔|はしるこうこくとう}」です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{広告|こうこく}{塔|とう}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b1s1-q",
+    "sub": "b1s1",
+    "title": {
+     "id": "Subbab 1.1 · Peran Truk dan Jenis Izin",
+     "jp": "1.1 トラックの{役割|やくわり}と{免許|めんきょ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Di Jepang, truk mengangkut lebih dari 90% barang dalam negeri.”",
+       "jp": "○か×か。「{日本|にっぽん}では、トラックが{国内|こくない}{貨物|かもつ}の9{割|わり}{以上|いじょう}を{運|はこ}んでいます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "9{割|わり}{以上|いじょう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Truk pribadi (白ナンバー) boleh mengangkut barang pelanggan dengan bayaran.”",
+       "jp": "○か×か。「{自家用トラック|じかようとらっく}は、お{金|きん}をもらってお{客様|きゃくさま}の{荷物|にもつ}を{運|はこ}べます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: hanya truk usaha.",
+       "jp": "{事業|じぎょう}{用|よう}だけです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pelat nomor truk usaha berwarna…",
+       "jp": "{事業用トラック|じぎょうようとらっく}のナンバープレートはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Hijau, tulisan putih",
+        "jp": "{緑地|りょくち}に{白|しろ}い{文字|もじ}"
+       },
+       {
+        "id": "Merah, tulisan putih",
+        "jp": "{赤地|あかじ}に{白|しろ}い{文字|もじ}"
+       },
+       {
+        "id": "Putih, tulisan hijau",
+        "jp": "{白地|しろぢ}に{緑|みどり}の{文字|もじ}"
+       },
+       {
+        "id": "Kuning, tulisan hitam",
+        "jp": "{黄地|きじ}に{黒|くろ}い{文字|もじ}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Hijau-putih = 緑ナンバー.",
+       "jp": "{緑地|りょくち}に{白|しろ}い{文字|もじ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s2-q",
+    "sub": "b1s2",
+    "title": {
+     "id": "Subbab 1.2 · Dampak Kecelakaan Truk",
+     "jp": "1.2 トラック{事故|じこ}の{社会的影響|しゃかいてきえいきょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Sekitar separuh kecelakaan truk usaha adalah kecelakaan tabrak belakang.”",
+       "jp": "○か×か。「{事業用トラック|じぎょうようとらっく}の{事故|じこ}の{約半分|やくはんぶん}は{追突事故|ついとつじこ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{約半分|やくはんぶん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Alat yang merekam video sebelum dan sesudah benturan disebut…",
+       "jp": "{衝撃|しょうげき}を{受|う}けた{前後|ぜんご}の{映像|えいぞう}を{記録|きろく}する{装置|そうち}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "デジタコ",
+        "jp": "デジタコ"
+       },
+       {
+        "id": "タイヤ",
+        "jp": "タイヤ"
+       },
+       {
+        "id": "ドラレコ",
+        "jp": "ドライブレコーダ"
+       },
+       {
+        "id": "アルコール検知器",
+        "jp": "{アルコール検知器|あるこーるけんちき}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "ドラレコ.",
+       "jp": "ドライブレコーダです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pada belok kiri di persimpangan, kecelakaan paling sering dengan…",
+       "jp": "{交差点|こうさてん}の{左折|させつ}のとき、{事故|じこ}が{多|おお}い{相手|あいて}はだれですか。"
+      },
+      "opts": [
+       {
+        "id": "Pesawat",
+        "jp": "{飛行機|ひこうき}"
+       },
+       {
+        "id": "Kereta",
+        "jp": "{電車|でんしゃ}"
+       },
+       {
+        "id": "Kapal",
+        "jp": "{船|ふね}"
+       },
+       {
+        "id": "Sepeda",
+        "jp": "{自転車|じてんしゃ}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sepeda.",
+       "jp": "{自転車|じてんしゃ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s3-q",
+    "sub": "b1s3",
+    "title": {
+     "id": "Subbab 1.3 · Sikap Kerja dan 4S Kendaraan",
+     "jp": "1.3 {仕事|しごと}の{心構|こころがま}えと{車|くるま}の4S"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Salam sebaiknya menunggu disapa lebih dulu.”",
+       "jp": "○か×か。「あいさつは、{相手|あいて}から{先|さき}にされるまで{待|ま}ちます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: mulai lebih dulu.",
+       "jp": "{自分|じぶん}からします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “4S adalah 整理, 整頓, 清掃, 清潔.”",
+       "jp": "○か×か。「4Sは、{整理|せいり}・{整頓|せいとん}・{清掃|せいそう}・{清潔|せいけつ}のことです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "4Sです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Meletakkan dokumen di dasbor berbahaya karena…",
+       "jp": "{書類|しょるい}をダッシュボードに{置|お}くと、なぜ{危|あぶ}ないですか。"
+      },
+      "opts": [
+       {
+        "id": "Radio mati",
+        "jp": "ラジオが{消|き}える"
+       },
+       {
+        "id": "Dokumen jadi panas",
+        "jp": "{書類|しょるい}が{熱|あつ}くなる"
+       },
+       {
+        "id": "Memantul di kaca depan dan mengganggu pandangan",
+        "jp": "フロントガラスに{映|うつ}って{視界|しかい}が{悪|わる}くなる"
+       },
+       {
+        "id": "Tidak ada masalah",
+        "jp": "{問題|もんだい}はない"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Menghalangi pandangan.",
+       "jp": "{視界|しかい}が{悪|わる}くなります。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s4-q",
+    "sub": "b1s4",
+    "title": {
+     "id": "Subbab 1.4 · Dasar Mengemudi Aman",
+     "jp": "1.4 {安全運転|あんぜんうんてん}の{基本|きほん}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Esok hari setelah minum, boleh mengemudi meski sisa alkohol masih ada.”",
+       "jp": "○か×か。「{飲酒|いんしゅ}した{翌日|よくじつ}は、{酒|さけ}の{影響|えいきょう}が{残|のこ}っていても{運転|うんてん}してよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tetap dihukum.",
+       "jp": "{罰|ばつ}せられます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di jalan biasa tanpa rambu, batas kecepatan truk adalah 60 km/jam.”",
+       "jp": "○か×か。「{一般道路|いっぱんどうろ}でのトラックの{最高速度|さいこうそくど}は、{標識|ひょうしき}がなければ{時速|じそく}60kmです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{時速|じそく}60kmです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Di dalam perlintasan kereta, gigi boleh diganti sambil melintas.”",
+       "jp": "○か×か。「{踏切|ふみきり}の{中|なか}で、ギアを{変|か}えながら{通過|つうか}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan ganti gigi.",
+       "jp": "ギアを{変|か}えません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lampu kuning pada dasarnya berarti berhenti sebelum persimpangan.”",
+       "jp": "○か×か。「{黄信|こうしん}{号|ごう}は、{原則|げんそく}として{交差点|こうさてん}の{手前|てまえ}で{止|ど}まります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{原則|げんそく}{停止|ていし}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Jarak aman di jalan biasa pada 50 km/jam kira-kira…",
+       "jp": "{一般道路|いっぱんどうろ}で{速度計|そくどけい}が50のとき、{車間距離|しゃかんきょり}の{目安|めやす}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "15 m",
+        "jp": "15メートル"
+       },
+       {
+        "id": "35 m (50 − 15)",
+        "jp": "35メートル"
+       },
+       {
+        "id": "5 m",
+        "jp": "5メートル"
+       },
+       {
+        "id": "10 m",
+        "jp": "10メートル"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "50 − 15 = 35 m.",
+       "jp": "50から15をひいて35mです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Rem yang hilang karena terus diinjak di turunan panjang disebut…",
+       "jp": "{長|なが}い{下り坂|くだりざか}でブレーキを{使|つか}いすぎてきかなくなることを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "ギア抜け",
+        "jp": "ギア{抜|ぬ}け"
+       },
+       {
+        "id": "スリップ",
+        "jp": "スリップ"
+       },
+       {
+        "id": "エンスト",
+        "jp": "エンスト"
+       },
+       {
+        "id": "フェード現象",
+        "jp": "{フェード現象|ふぇーどげんしょう}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Fading.",
+       "jp": "{フェード現象|ふぇーどげんしょう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Saat belok kiri/kanan di persimpangan harus…",
+       "jp": "{交差点|こうさてん}で{右折|うせつ}や{左折|させつ}をするときは、どうしますか。"
+      },
+      "opts": [
+       {
+        "id": "徐行",
+        "jp": "{徐行|じょこう}"
+       },
+       {
+        "id": "Melaju biasa",
+        "jp": "ふつうに{走|はし}る"
+       },
+       {
+        "id": "Menambah kecepatan",
+        "jp": "{速度|そくど}を{上|あ}げる"
+       },
+       {
+        "id": "Membunyikan klakson saja",
+        "jp": "クラクションだけ{鳴|な}らす"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "徐行.",
+       "jp": "{徐行|じょこう}します。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b1s5-q",
+    "sub": "b1s5",
+    "title": {
+     "id": "Subbab 1.5 · Etika, Eco-drive, dan Rute",
+     "jp": "1.5 {運転|うんてん}マナー・エコドライブ・{経路|けいろ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Truk bernama perusahaan adalah “iklan berjalan”.”",
+       "jp": "○か×か。「{会社|かいしゃ}の{名前|なまえ}が{書|か}かれたトラックは、「{走る広告塔|はしるこうこくとう}」です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{広告|こうこく}{塔|とう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Dasar etika mengemudi menurut teks adalah…",
+       "jp": "{運転|うんてん}マナーの{基本|きほん}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Klakson keras",
+        "jp": "{大|おお}きなクラクション"
+       },
+       {
+        "id": "思いやりと譲りあい",
+        "jp": "{思|おも}いやりと{譲|ゆず}りあい"
+       },
+       {
+        "id": "Kecepatan dan kekuatan",
+        "jp": "{速|はや}さと{強|つよ}さ"
+       },
+       {
+        "id": "Mendahului semua",
+        "jp": "すべて{追い越|おいこ}す"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "思いやり・譲りあい.",
+       "jp": "{思|おも}いやりと{譲|ゆず}りあいです。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab2": [
+   {
+    "id": "bab2-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 2",
+     "jp": "{第|だい}2{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Sopir melakukan inspeksi harian lalu menyerahkan tabelnya ke manajer perawatan.”",
+       "jp": "○か×か。「{運転者|うんてんしゃ}は、{日常点検|にちじょうてんけん}をして、{点検|てんけん}{表|あら}を{整備管理者|せいびかんりしゃ}に{渡|わた}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{整備管理者|せいびかんりしゃ}に{渡|わた}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Inspeksi harian sebaiknya dilakukan segera saat mesin masih panas.”",
+       "jp": "○か×か。「{日常点検|にちじょうてんけん}は、エンジンが{熱|あつ}いうちにすぐおこなうのがよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: saat mesin dingin.",
+       "jp": "{冷|ひ}えた{状態|じょうたい}でおこないます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah kecelakaan, pertama-tama tolong korban.”",
+       "jp": "○か×か。「{事故|じこ}を{起|お}こしたら、まず{負傷者|ふしょうしゃ}を{救護|きゅうご}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{救護|きゅうご}が{先|さき}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Masa berlaku flare adalah 4 tahun.”",
+       "jp": "○か×か。「{発炎筒|はつえんとう}の{有効期限|ゆうこうきげん}は、4{年|ねん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "4{年|ねん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Karena kursi tinggi, jarak antarkendaraan tampak lebih pendek dari sebenarnya.”",
+       "jp": "○か×か。「トラックは{運転席|うんてんせき}が{高|たか}いので、{車間距離|しゃかんきょり}が{実際|じっさい}より{短|みじか}く{見|み}えます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tampak lebih panjang.",
+       "jp": "{長|なが}く{見|み}えます。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b2s1-q",
+    "sub": "b2s1",
+    "title": {
+     "id": "Subbab 2.1 · Alur Kerja dan Kewajiban Sopir",
+     "jp": "2.1 {仕事|しごと}の{流|なが}れと{運転者|うんてんしゃ}の{義務|ぎむ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Sopir melakukan inspeksi harian lalu menyerahkan tabelnya ke manajer perawatan.”",
+       "jp": "○か×か。「{運転者|うんてんしゃ}は、{日常点検|にちじょうてんけん}をして、{点検|てんけん}{表|あら}を{整備管理者|せいびかんりしゃ}に{渡|わた}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{整備管理者|せいびかんりしゃ}に{渡|わた}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Untuk perjalanan 2 malam 3 hari atau lebih, diperlukan…",
+       "jp": "2{泊|はく}3{日|にち}{以上|いじょう}の{運行|うんこう}で、{途中|とちゅう}に{受|う}ける{点呼|てんこ}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "中間点呼",
+        "jp": "{中間|ちゅうかん}{点呼|てんこ}"
+       },
+       {
+        "id": "健康診断",
+        "jp": "{健康診断|けんこうしんだん}"
+       },
+       {
+        "id": "業務後点呼",
+        "jp": "{業務|ぎょうむ}{後|のち}{点呼|てんこ}"
+       },
+       {
+        "id": "朝礼",
+        "jp": "{朝礼|ちょうれい}"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "中間点呼.",
+       "jp": "{中間|ちゅうかん}{点呼|てんこ}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s2-q",
+    "sub": "b2s2",
+    "title": {
+     "id": "Subbab 2.2 · Inspeksi Harian dan 点呼",
+     "jp": "2.2 {日常点検|にちじょうてんけん}と{点呼|てんこ}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Inspeksi harian sebaiknya dilakukan segera saat mesin masih panas.”",
+       "jp": "○か×か。「{日常点検|にちじょうてんけん}は、エンジンが{熱|あつ}いうちにすぐおこなうのがよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: saat mesin dingin.",
+       "jp": "{冷|ひ}えた{状態|じょうたい}でおこないます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada apel sebelum kerja dilaporkan status alkohol, kelelahan, dan kurang tidur.”",
+       "jp": "○か×か。「{業務前点呼|ぎょうむまえてんこ}では、{酒気帯|しゅきお}びの{有無|うむ}や{疲|つか}れ・{睡眠不足|すいみんぶそく}を{報告|ほうこく}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Alat yang mengganjal ban saat inspeksi disebut…",
+       "jp": "{日常点検|にちじょうてんけん}のときタイヤに{置|お}くものは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "発炎筒",
+        "jp": "{発炎筒|はつえんとう}"
+       },
+       {
+        "id": "消火器",
+        "jp": "{消火器|しょうかき}"
+       },
+       {
+        "id": "ハンドル",
+        "jp": "ハンドル"
+       },
+       {
+        "id": "輪止め",
+        "jp": "{輪止|わど}め"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "輪止め.",
+       "jp": "{輪止|わど}めです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s3-q",
+    "sub": "b2s3",
+    "title": {
+     "id": "Subbab 2.3 · Saat Operasi: Kecelakaan, Kerusakan, Keterlambatan",
+     "jp": "2.3 {運行|うんこう}{中|なか}の{対応|たいおう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Setelah kecelakaan, pertama-tama tolong korban.”",
+       "jp": "○か×か。「{事故|じこ}を{起|お}こしたら、まず{負傷者|ふしょうしゃ}を{救護|きゅうご}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{救護|きゅうご}が{先|さき}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pada kecelakaan ringan, sopir boleh menentukan damai di tempat.”",
+       "jp": "○か×か。「{軽|かる}い{事故|じこ}なら、{現場|げんば}で{運転者|うんてんしゃ}が{示談|じだん}を{決|き}めてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: urusan perusahaan.",
+       "jp": "{会社|かいしゃ}がします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat kendaraan rusak dan mau berhenti, segera matikan mesin.”",
+       "jp": "○か×か。「{車|くるま}が{故障|こしょう}して{止|ど}まりそうなとき、すぐにエンジンを{切|き}ります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tunggu sampai berhenti total.",
+       "jp": "{止|と}まるまで{切|き}りません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Bila terlambat tiba, yang benar adalah…",
+       "jp": "{到着|とうちゃく}が{遅|おく}れそうなとき、{正|ただ}しい{対応|たいおう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Lapor perusahaan dan minta instruksi",
+        "jp": "{会社|かいしゃ}に{報告|ほうこく}して{指示|しじ}を{受|う}ける"
+       },
+       {
+        "id": "Ngebut",
+        "jp": "{速度|そくど}を{上|あ}げる"
+       },
+       {
+        "id": "Diam saja",
+        "jp": "{何|なに}もしない"
+       },
+       {
+        "id": "Menghubungi pelanggan sendiri",
+        "jp": "{自分|じぶん}でお{客様|きゃくさま}に{連絡|れんらく}する"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Lapor dan ikuti instruksi.",
+       "jp": "{会社|かいしゃ}に{報告|ほうこく}します。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s4-q",
+    "sub": "b2s4",
+    "title": {
+     "id": "Subbab 2.4 · Perlengkapan Darurat dan Cuaca Ekstrem",
+     "jp": "2.4 {非常用|ひじょうよう}{具|ぐ}と{異常気象|いじょうきしょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Masa berlaku flare adalah 4 tahun.”",
+       "jp": "○か×か。「{発炎筒|はつえんとう}の{有効期限|ゆうこうきげん}は、4{年|ねん}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "4{年|ねん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Masa berlaku pemadam api adalah…",
+       "jp": "{消火器|しょうかき}の{有効期限|ゆうこうきげん}は{何年|なんねん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "20 tahun",
+        "jp": "20{年|ねん}"
+       },
+       {
+        "id": "4 tahun",
+        "jp": "4{年|ねん}"
+       },
+       {
+        "id": "10 tahun",
+        "jp": "10{年|ねん}"
+       },
+       {
+        "id": "1 tahun",
+        "jp": "1{年|ねん}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "10 tahun.",
+       "jp": "10{年|ねん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Langkah pertama memakai pemadam api…",
+       "jp": "{消火器|しょうかき}を{使|つか}うとき、{最初|さいしょ}にすることはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Letakkan",
+        "jp": "{置|お}く"
+       },
+       {
+        "id": "Cabut pin pengaman",
+        "jp": "{安全|あんぜん}ピンを{抜|ぬ}く"
+       },
+       {
+        "id": "Lempar",
+        "jp": "{投|な}げる"
+       },
+       {
+        "id": "Remas tuas",
+        "jp": "レバーを{握|にぎ}る"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Cabut pin.",
+       "jp": "{安全|あんぜん}ピンを{抜|ぬ}きます。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b2s5-q",
+    "sub": "b2s5",
+    "title": {
+     "id": "Subbab 2.5 · Karakter Truk: Ukuran, Titik Buta, Kecepatan",
+     "jp": "2.5 トラックの{特性|とくせい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Karena kursi tinggi, jarak antarkendaraan tampak lebih pendek dari sebenarnya.”",
+       "jp": "○か×か。「トラックは{運転席|うんてんせき}が{高|たか}いので、{車間距離|しゃかんきょり}が{実際|じっさい}より{短|みじか}く{見|み}えます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tampak lebih panjang.",
+       "jp": "{長|なが}く{見|み}えます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Selisih lintasan roda dalam saat belok disebut…",
+       "jp": "{曲|ま}がるとき、{内側|うちがわ}の{後輪|こうりん}が{通|とう}る{道|みち}のずれを{何|なん}といいますか。"
+      },
+      "opts": [
+       {
+        "id": "車間距離",
+        "jp": "{車間距離|しゃかんきょり}"
+       },
+       {
+        "id": "徐行",
+        "jp": "{徐行|じょこう}"
+       },
+       {
+        "id": "死角",
+        "jp": "{死角|しかく}"
+       },
+       {
+        "id": "内輪差",
+        "jp": "{内輪差|うちわさ}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "内輪差.",
+       "jp": "{内輪差|うちわさ}です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab3": [
+   {
+    "id": "bab3-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 3",
+     "jp": "{第|だい}3{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanda petunjuk penanganan barang ditetapkan JIS sebanyak 19 jenis.”",
+       "jp": "○か×か。「{荷扱い指示マーク|にあつかいしじまーく}は、JISで19{種類|しゅるい}が{決|き}められています。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "19{種類|しゅるい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Palet bisa menjadi aset milik pelanggan.”",
+       "jp": "○か×か。「パレットは、お{客様|きゃくさま}の{財産|ざいさん}になっていることがあります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{財産|ざいさん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tiga unsur pencegah muatan runtuh: penataan, pengikatan, cara mengemudi.”",
+       "jp": "○か×か。「{荷崩|にくず}れを{防|ふせ}ぐ3{要素|ようそ}は、{積み付|つみつ}け、{固縛|こばく}、{運転方法|うんてんほうほう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "3つです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika titik berat muatan bergeser ke kiri-kanan, truk bisa terguling.”",
+       "jp": "○か×か。「{荷物|にもつ}の{重心|じゅうしん}が{左右|さゆう}にずれると、トラックが{転倒|てんとう}することがあります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{転倒|てんとう}のおそれがあります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bekerja di tempat setinggi 2 m atau lebih harus dengan cara yang aman.”",
+       "jp": "○か×か。「{高|たか}さ2m{以上|いじょう}の{場所|ばしょ}で{作業|さぎょう}するときは、{安全|あんぜん}な{方法|ほうほう}でおこないます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{安全|あんぜん}な{方法|ほうほう}です。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b3s1-q",
+    "sub": "b3s1",
+    "title": {
+     "id": "Subbab 3.1 · Jenis dan Bentuk Muatan",
+     "jp": "3.1 {荷物|にもつ}の{種類|しゅるい}と{形|かたち}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanda petunjuk penanganan barang ditetapkan JIS sebanyak 19 jenis.”",
+       "jp": "○か×か。「{荷扱い指示マーク|にあつかいしじまーく}は、JISで19{種類|しゅるい}が{決|き}められています。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "19{種類|しゅるい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kardus yang tergores tidak pernah dianggap sebagai kecelakaan barang.”",
+       "jp": "○か×か。「ダンボールに{傷|きず}があっても、{荷物|にもつ}{事故|じこ}と{判断|はんだん}されることは{絶対|ぜったい}にありません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: bisa dianggap kecelakaan barang.",
+       "jp": "{判断|はんだん}されることがあります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Barang yang mudah runtuh bila ditumpuk 2 tingkat atau lebih…",
+       "jp": "2{段|だん}{以上|いじょう}{積|つ}むと{荷崩|にくず}れしやすい{荷物|にもつ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Kapas",
+        "jp": "{綿|めん}"
+       },
+       {
+        "id": "Kertas tipis",
+        "jp": "うすい{紙|かみ}"
+       },
+       {
+        "id": "Bulu",
+        "jp": "{羽|はね}"
+       },
+       {
+        "id": "缶類",
+        "jp": "{缶類|かんるい}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Kaleng/drum.",
+       "jp": "{缶類|かんるい}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s2-q",
+    "sub": "b3s2",
+    "title": {
+     "id": "Subbab 3.2 · Palet dan Penumpukan di Palet",
+     "jp": "3.2 パレットと{積み付|つみつ}け"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Palet bisa menjadi aset milik pelanggan.”",
+       "jp": "○か×か。「パレットは、お{客様|きゃくさま}の{財産|ざいさん}になっていることがあります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{財産|ざいさん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pola tumpuk dasar di palet yang BUKAN termasuk…",
+       "jp": "パレットへの{積み付|つみつ}けの{基本パターン|きほんぱたあん}でないものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ピンホイール積み",
+        "jp": "ピンホイール{積|つ}み"
+       },
+       {
+        "id": "棒積み",
+        "jp": "{棒積|ぼうづ}み"
+       },
+       {
+        "id": "Pola acak sembarang",
+        "jp": "でたらめ{積|つ}み"
+       },
+       {
+        "id": "煉瓦積み",
+        "jp": "{煉瓦|れんが}{積|つ}み"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Bukan pola dasar.",
+       "jp": "{基本パターン|きほんぱたあん}ではありません。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s3-q",
+    "sub": "b3s3",
+    "title": {
+     "id": "Subbab 3.3 · Mencegah Muatan Runtuh dan Pengikatan",
+     "jp": "3.3 {荷崩|にくず}れ{防止|ぼうし}と{固縛|こばく}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Tiga unsur pencegah muatan runtuh: penataan, pengikatan, cara mengemudi.”",
+       "jp": "○か×か。「{荷崩|にくず}れを{防|ふせ}ぐ3{要素|ようそ}は、{積み付|つみつ}け、{固縛|こばく}、{運転方法|うんてんほうほう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "3つです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila sudah diberi terpal, tidak perlu diikat tali.”",
+       "jp": "○か×か。「シートをかければ、ロープなどで{固縛|こばく}しなくてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tetap harus diikat.",
+       "jp": "ロープなども{使|つか}います。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pemeriksaan ikatan muatan di jalan tol dilakukan tiap…",
+       "jp": "{高速道路|こうそくどうろ}での{固縛|こばく}の{点検|てんけん}は、{何時間|なんじかん}ごとですか。"
+      },
+      "opts": [
+       {
+        "id": "4 jam",
+        "jp": "4{時間|じかん}"
+       },
+       {
+        "id": "8 jam",
+        "jp": "8{時間|じかん}"
+       },
+       {
+        "id": "2 jam",
+        "jp": "2{時間|じかん}"
+       },
+       {
+        "id": "24 jam",
+        "jp": "24{時間|じかん}"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Tol 2 jam; jalan biasa 4 jam.",
+       "jp": "{高速道路|こうそくどうろ}は2{時間|じかん}ごとです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Saat gerak start, muatan menerima gaya ke arah…",
+       "jp": "トラックが{発進|はっしん}するとき、{荷物|にもつ}はどの{向|む}きの{力|ちから}を{受|う}けますか。"
+      },
+      "opts": [
+       {
+        "id": "Atas",
+        "jp": "{上向|うわむ}き"
+       },
+       {
+        "id": "Belakang",
+        "jp": "{後ろ向|うしろむ}き"
+       },
+       {
+        "id": "Tidak ada",
+        "jp": "{力|ちから}は{受|う}けない"
+       },
+       {
+        "id": "Depan",
+        "jp": "{前向|まえむ}き"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Ke belakang.",
+       "jp": "{後ろ向|うしろむ}きです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s4-q",
+    "sub": "b3s4",
+    "title": {
+     "id": "Subbab 3.4 · Beban Tidak Seimbang dan Kelebihan Muatan",
+     "jp": "3.4 {偏荷重|へんかじゅう}と{過積載|かせきさい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika titik berat muatan bergeser ke kiri-kanan, truk bisa terguling.”",
+       "jp": "○か×か。「{荷物|にもつ}の{重心|じゅうしん}が{左右|さゆう}にずれると、トラックが{転倒|てんとう}することがあります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{転倒|てんとう}のおそれがあります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Bila bentuk muatan rumit, sopir menilai dan memuat sendiri saja.”",
+       "jp": "○か×か。「{荷物|にもつ}の{形|かたち}が{複雑|ふくざつ}なときは、{自分|じぶん}だけで{判断|はんだん}して{積|つ}みます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: minta petunjuk.",
+       "jp": "{運行管理者|うんこうかんりしゃ}に{相談|そうだん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Batas beban gandar yang disebut dalam teks adalah…",
+       "jp": "{軸重|じくじゅう}{制限|せいげん}は{何|なに}トンですか。"
+      },
+      "opts": [
+       {
+        "id": "1 ton",
+        "jp": "1トン"
+       },
+       {
+        "id": "100 ton",
+        "jp": "100トン"
+       },
+       {
+        "id": "50 ton",
+        "jp": "50トン"
+       },
+       {
+        "id": "10 ton",
+        "jp": "10トン"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "10 ton.",
+       "jp": "10トンです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s5-q",
+    "sub": "b3s5",
+    "title": {
+     "id": "Subbab 3.5 · Pencegahan Kecelakaan Kerja dan Forklift",
+     "jp": "3.5 {労働災害|ろうどうさいがい}の{防止|ぼうし}とフォークリフト"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Bekerja di tempat setinggi 2 m atau lebih harus dengan cara yang aman.”",
+       "jp": "○か×か。「{高|たか}さ2m{以上|いじょう}の{場所|ばしょ}で{作業|さぎょう}するときは、{安全|あんぜん}な{方法|ほうほう}でおこないます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{安全|あんぜん}な{方法|ほうほう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Saat memasang terpal/tali, bahaya utama adalah…",
+       "jp": "{ロープ掛|ろーぷが}けや{シート掛|しーとが}けで、{特|とく}に{注意|ちゅうい}することはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Salah arah",
+        "jp": "{道|みち}に{迷|まよ}う"
+       },
+       {
+        "id": "Salah salam",
+        "jp": "あいさつの{間違|まちが}い"
+       },
+       {
+        "id": "Jatuh dari bak",
+        "jp": "{荷台|にだい}からの{墜落|ついらく}"
+       },
+       {
+        "id": "Kehabisan BBM",
+        "jp": "ガソリン{切|き}れ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Jatuh dari bak.",
+       "jp": "{墜落|ついらく}です。"
+      }
+     }
+    ]
+   }
+  ],
+  "bab4": [
+   {
+    "id": "bab4-q1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Bab 4",
+     "jp": "{第|だい}4{章|しょう}の{練習|れんしゅう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “KYT adalah latihan memprediksi bahaya dalam situasi mengemudi dan memikirkan cara aman.”",
+       "jp": "○か×か。「KYTは、{運転|うんてん}{場面|ばめん}の{危険|きけん}を{予測|よそく}して、{安全|あんぜん}な{運転方法|うんてんほうほう}を{考|かんが}える{練習|れんしゅう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{予測|よそく}する{練習|れんしゅう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat lampu berubah kuning, ikuti mobil di depan melewati persimpangan.”",
+       "jp": "○か×か。「{黄信|こうしん}{号|ごう}に{変|か}わったときは、{前|まえ}の{車|くるま}に{続|つづ}いて{交差点|こうさてん}を{通過|つうか}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: berhenti lebih awal.",
+       "jp": "{手前|てまえ}で{止|ど}まります。"
+      },
+      "mb": true
+     }
+    ]
+   },
+   {
+    "id": "b4s1-q",
+    "sub": "b4s1",
+    "title": {
+     "id": "Subbab 4.1 · Apa itu KYT",
+     "jp": "4.1 {危険予知|きけんよち}トレーニング（KYT）"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “KYT adalah latihan memprediksi bahaya dalam situasi mengemudi dan memikirkan cara aman.”",
+       "jp": "○か×か。「KYTは、{運転|うんてん}{場面|ばめん}の{危険|きけん}を{予測|よそく}して、{安全|あんぜん}な{運転方法|うんてんほうほう}を{考|かんが}える{練習|れんしゅう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{予測|よそく}する{練習|れんしゅう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "KYT adalah singkatan dari…",
+       "jp": "KYTとは{何|なん}の{練習|れんしゅう}ですか。"
+      },
+      "opts": [
+       {
+        "id": "Latihan berbahasa",
+        "jp": "{言葉|ことば}の{練習|れんしゅう}"
+       },
+       {
+        "id": "Latihan parkir",
+        "jp": "{駐車|ちゅうしゃ}の{練習|れんしゅう}"
+       },
+       {
+        "id": "Latihan memuat",
+        "jp": "{積|つ}み{込|こ}みの{練習|れんしゅう}"
+       },
+       {
+        "id": "Latihan antisipasi bahaya",
+        "jp": "{危険予知|きけんよち}トレーニング"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "危険予知トレーニング.",
+       "jp": "{危険予知|きけんよち}トレーニングです。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b4s2-q",
+    "sub": "b4s2",
+    "title": {
+     "id": "Subbab 4.2 · Contoh Situasi KYT",
+     "jp": "4.2 KYTの{例|れい}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat lampu berubah kuning, ikuti mobil di depan melewati persimpangan.”",
+       "jp": "○か×か。「{黄信|こうしん}{号|ごう}に{変|か}わったときは、{前|まえ}の{車|くるま}に{続|つづ}いて{交差点|こうさてん}を{通過|つうか}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: berhenti lebih awal.",
+       "jp": "{手前|てまえ}で{止|ど}まります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Sebelum belok kiri harus memeriksa…",
+       "jp": "{左折|させつ}の{前|まえ}に{必|かなら}ず{確認|かくにん}することはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "Hanya radio",
+        "jp": "ラジオだけ"
+       },
+       {
+        "id": "Tidak ada",
+        "jp": "{何|なに}もない"
+       },
+       {
+        "id": "Hanya speedometer",
+        "jp": "{速度計|そくどけい}だけ"
+       },
+       {
+        "id": "Kiri dan belakang (motor/sepeda)",
+        "jp": "{左側|ひだりがわ}と{後|うし}ろの{二輪車|にりんしゃ}や{自転車|じてんしゃ}"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Kiri dan belakang.",
+       "jp": "{左側|ひだりがわ}と{後|うし}ろを{確認|かくにん}します。"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "tema": [
+  {
+   "id": "tema-tr",
+   "tema": true,
+   "title": {
+    "id": "Tema: Dasar Mengemudi Aman",
+    "jp": "テーマ：{安全運転|あんぜんうんてん}の{基本|きほん}"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Esok hari setelah minum, boleh mengemudi meski sisa alkohol masih ada.”",
+      "jp": "○か×か。「{飲酒|いんしゅ}した{翌日|よくじつ}は、{酒|さけ}の{影響|えいきょう}が{残|のこ}っていても{運転|うんてん}してよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: tetap dihukum.",
+      "jp": "{罰|ばつ}せられます。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Di jalan biasa tanpa rambu, batas kecepatan truk adalah 60 km/jam.”",
+      "jp": "○か×か。「{一般道路|いっぱんどうろ}でのトラックの{最高速度|さいこうそくど}は、{標識|ひょうしき}がなければ{時速|じそく}60kmです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{時速|じそく}60kmです。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Di dalam perlintasan kereta, gigi boleh diganti sambil melintas.”",
+      "jp": "○か×か。「{踏切|ふみきり}の{中|なか}で、ギアを{変|か}えながら{通過|つうか}します。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: jangan ganti gigi.",
+      "jp": "ギアを{変|か}えません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Lampu kuning pada dasarnya berarti berhenti sebelum persimpangan.”",
+      "jp": "○か×か。「{黄信|こうしん}{号|ごう}は、{原則|げんそく}として{交差点|こうさてん}の{手前|てまえ}で{止|ど}まります。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{原則|げんそく}{停止|ていし}です。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Jarak aman di jalan biasa pada 50 km/jam kira-kira…",
+      "jp": "{一般道路|いっぱんどうろ}で{速度計|そくどけい}が50のとき、{車間距離|しゃかんきょり}の{目安|めやす}はどれですか。"
+     },
+     "opts": [
+      {
+       "id": "15 m",
+       "jp": "15メートル"
+      },
+      {
+       "id": "35 m (50 − 15)",
+       "jp": "35メートル"
+      },
+      {
+       "id": "5 m",
+       "jp": "5メートル"
+      },
+      {
+       "id": "10 m",
+       "jp": "10メートル"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "50 − 15 = 35 m.",
+      "jp": "50から15をひいて35mです。"
+     }
+    },
+    {
+     "q": {
+      "id": "Rem yang hilang karena terus diinjak di turunan panjang disebut…",
+      "jp": "{長|なが}い{下り坂|くだりざか}でブレーキを{使|つか}いすぎてきかなくなることを{何|なん}といいますか。"
+     },
+     "opts": [
+      {
+       "id": "ギア抜け",
+       "jp": "ギア{抜|ぬ}け"
+      },
+      {
+       "id": "スリップ",
+       "jp": "スリップ"
+      },
+      {
+       "id": "エンスト",
+       "jp": "エンスト"
+      },
+      {
+       "id": "フェード現象",
+       "jp": "{フェード現象|ふぇーどげんしょう}"
+      }
+     ],
+     "a": 3,
+     "exp": {
+      "id": "Fading.",
+      "jp": "{フェード現象|ふぇーどげんしょう}です。"
+     }
+    },
+    {
+     "q": {
+      "id": "Saat belok kiri/kanan di persimpangan harus…",
+      "jp": "{交差点|こうさてん}で{右折|うせつ}や{左折|させつ}をするときは、どうしますか。"
+     },
+     "opts": [
+      {
+       "id": "徐行",
+       "jp": "{徐行|じょこう}"
+      },
+      {
+       "id": "Melaju biasa",
+       "jp": "ふつうに{走|はし}る"
+      },
+      {
+       "id": "Menambah kecepatan",
+       "jp": "{速度|そくど}を{上|あ}げる"
+      },
+      {
+       "id": "Membunyikan klakson saja",
+       "jp": "クラクションだけ{鳴|な}らす"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "徐行.",
+      "jp": "{徐行|じょこう}します。"
+     }
+    }
+   ]
+  }
+ ]
+}

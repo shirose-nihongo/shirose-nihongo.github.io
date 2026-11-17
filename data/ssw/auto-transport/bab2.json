@@ -1,0 +1,352 @@
+{
+ "schema": 1,
+ "bidang": "auto-transport",
+ "source": "（外国人向け）トラック運転者をめざす人のための学習用テキスト (全日本トラック協会, 2024-11, 全242p.) — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab2",
+  "no": 2,
+  "title": {
+   "id": "Pekerjaan Pengoperasian",
+   "jp": "{運行|うんこう}{業務|ぎょうむ}"
+  },
+  "intro": {
+   "id": "Alur kerja harian, inspeksi, 点呼, saat operasi, keadaan darurat, karakter truk.",
+   "jp": "{毎日|まいにち}の{仕事|しごと}の{流|なが}れ、{点検|てんけん}、{点呼|てんこ}、{運行|うんこう}{中|なか}の{対応|たいおう}、トラックの{特性|とくせい}を{学|まな}びます。"
+  },
+  "pages": [
+   63,
+   130
+  ],
+  "subs": [
+   {
+    "id": "b2s1",
+    "no": 1,
+    "title": {
+     "id": "Alur Kerja dan Kewajiban Sopir",
+     "jp": "{仕事|しごと}の{流|なが}れと{運転者|うんてんしゃ}の{義務|ぎむ}"
+    },
+    "pages": [
+     63,
+     68
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Alur: datang lebih awal → ganti pakaian dan cek penampilan → terima kunci dan **日常点検表** dari **運行管理者** → **日常点検** → serahkan tabel ke **整備管理者** → **業務前点呼** (dengan cek alkohol) → berangkat.",
+        "Untuk perjalanan **2 malam 3 hari atau lebih**: **中間点呼** lewat telepon. Setelah tiba: buat **業務記録**, **業務後点呼**, lapor kerusakan, bersihkan truk, kembalikan kunci.",
+        "Sopir wajib (13 butir), antara lain: tidak **酒気帯び**, tidak **過積載**, muat dengan benar, tindak cepat bila terjebak di perlintasan, laporkan bila tidak sehat/lelah/kurang tidur, **日常点検**, ikut **点呼**, hentikan dan laporkan bila ada kerusakan, buat catatan kerja, bawa **運行指示書**, **jangan mengganti gigi di perlintasan**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{出勤|しゅっきん}したら、{日常点検|にちじょうてんけん}をして、{整備管理者|せいびかんりしゃ}に{点検|てんけん}{表|あら}を{渡|わた}します。",
+        "{業務前点呼|ぎょうむまえてんこ}を{受|う}けて、{問題|もんだい}がなければ{出発|しゅっぱつ}します。",
+        "2{泊|はく}3{日|にち}{以上|いじょう}の{運行|うんこう}では、{途中|とちゅう}で{中間|ちゅうかん}{点呼|てんこ}を{受|う}けます。",
+        "{運行|うんこう}が{終|お}わったら、{業務記録|ぎょうむきろく}を{作|つく}り、{業務|ぎょうむ}{後|のち}{点呼|てんこ}を{受|う}けます。",
+        "{運転者|うんてんしゃ}は、{酒気帯|しゅきお}び{運転|うんてん}や{過積載|かせきさい}をしてはいけません。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Alur: datang lebih awal → ganti pakaian dan cek penampilan → terima kunci dan 日常点検表 dari 運行管理者 → 日常点検 → serahkan tabel ke 整備管理者 → 業務前点呼 (dengan cek alkohol) → berangkat.",
+      "points": [
+       "Untuk perjalanan 2 malam 3 hari atau lebih: 中間点呼 lewat telepon. Setelah tiba: buat 業務記録, 業務後点呼, lapor kerusakan, bersihkan truk, kembalikan kunci.",
+       "Sopir wajib (13 butir), antara lain: tidak 酒気帯び, tidak 過積載, muat dengan benar, tindak cepat bila terjebak di perlintasan, laporkan bila tidak sehat/lelah/kurang tidur, 日常点検, ikut 点呼, hentikan dan laporkan bila ada kerusakan, buat catatan kerja, bawa 運行指示書, jangan mengganti gigi di perlintasan."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 運行管理者, 整備管理者, 日常点検, 運行指示書."
+      ]
+     },
+     "jp": {
+      "core": "{出勤|しゅっきん}したら、{日常点検|にちじょうてんけん}をして、{整備管理者|せいびかんりしゃ}に{点検|てんけん}{表|あら}を{渡|わた}します。",
+      "points": [
+       "{業務前点呼|ぎょうむまえてんこ}を{受|う}けて、{問題|もんだい}がなければ{出発|しゅっぱつ}します。",
+       "2{泊|はく}3{日|にち}{以上|いじょう}の{運行|うんこう}では、{途中|とちゅう}で{中間|ちゅうかん}{点呼|てんこ}を{受|う}けます。",
+       "{運行|うんこう}が{終|お}わったら、{業務記録|ぎょうむきろく}を{作|つく}り、{業務|ぎょうむ}{後|のち}{点呼|てんこ}を{受|う}けます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{運行管理者|うんこうかんりしゃ}、{整備管理者|せいびかんりしゃ}、{日常点検|にちじょうてんけん}、{運行指示書|うんこうしじしょ}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s2",
+    "no": 2,
+    "title": {
+     "id": "Inspeksi Harian dan 点呼",
+     "jp": "{日常点検|にちじょうてんけん}と{点呼|てんこ}"
+    },
+    "pages": [
+     69,
+     75
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**日常点検**: pada tempat **datar**, ganjal ban (**輪止め**), rem parkir, gigi netral, **mesin mati dan kunci dicabut**; lakukan saat mesin **dingin**; periksa kebocoran oli/cairan/air di akhir.",
+        "**点呼** wajib di tempat yang ditentukan: **業務前, 中間, 業務後**. Jangan formalitas; **復唱** (ulangi) instruksi.",
+        "Dilaporkan saat 業務前点呼: nama, **status alkohol, penyakit, lelah, kurang tidur**, nomor kendaraan, kondisi 日常点検, dan lain-lain. Cek dengan **アルコール検知器**.",
+        "**運行管理** bertujuan mencegah **過労運転** dan **過積載**; perusahaan, manajer operasi, sopir masing-masing punya kewajiban."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{日常点検|にちじょうてんけん}は、{平|たい}らな{場所|ばしょ}で、タイヤに{輪止|わど}めをして、エンジンを{止|と}めてからします。",
+        "{点呼|てんこ}は、{業務|ぎょうむ}{前|まえ}、{中間|ちゅうかん}、{業務|ぎょうむ}{後|のち}の3つがあります。",
+        "{業務前点呼|ぎょうむまえてんこ}では、{酒気帯|しゅきお}びの{有無|うむ}や、{病気|びょうき}、{疲|つか}れ、{睡眠不足|すいみんぶそく}を{報告|ほうこく}します。",
+        "{指示|しじ}は{復唱|ふくしょう}して、しっかり{理解|りかい}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "日常点検: pada tempat datar, ganjal ban (輪止め), rem parkir, gigi netral, mesin mati dan kunci dicabut; lakukan saat mesin dingin; periksa kebocoran oli/cairan/air di akhir.",
+      "points": [
+       "点呼 wajib di tempat yang ditentukan: 業務前, 中間, 業務後. Jangan formalitas; 復唱 (ulangi) instruksi.",
+       "Dilaporkan saat 業務前点呼: nama, status alkohol, penyakit, lelah, kurang tidur, nomor kendaraan, kondisi 日常点検, dan lain-lain. Cek dengan アルコール検知器.",
+       "運行管理 bertujuan mencegah 過労運転 dan 過積載; perusahaan, manajer operasi, sopir masing-masing punya kewajiban."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 輪止め, 点呼, 業務前点呼, 復唱."
+      ]
+     },
+     "jp": {
+      "core": "{日常点検|にちじょうてんけん}は、{平|たい}らな{場所|ばしょ}で、タイヤに{輪止|わど}めをして、エンジンを{止|と}めてからします。",
+      "points": [
+       "{点呼|てんこ}は、{業務|ぎょうむ}{前|まえ}、{中間|ちゅうかん}、{業務|ぎょうむ}{後|のち}の3つがあります。",
+       "{業務前点呼|ぎょうむまえてんこ}では、{酒気帯|しゅきお}びの{有無|うむ}や、{病気|びょうき}、{疲|つか}れ、{睡眠不足|すいみんぶそく}を{報告|ほうこく}します。",
+       "{指示|しじ}は{復唱|ふくしょう}して、しっかり{理解|りかい}します。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{輪止|わど}め、{点呼|てんこ}、{業務前点呼|ぎょうむまえてんこ}、{復唱|ふくしょう}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s3",
+    "no": 3,
+    "title": {
+     "id": "Saat Operasi: Kecelakaan, Kerusakan, Keterlambatan",
+     "jp": "{運行|うんこう}{中|なか}の{対応|たいおう}"
+    },
+    "pages": [
+     76,
+     90
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Bila terjadi kecelakaan (urutan)"
+      },
+      {
+       "ul": [
+        "**① Tolong korban** (hentikan kendaraan, cek korban dan muatan; panggil ambulans **119**).",
+        "**② Cegah kecelakaan susulan**: pindahkan kendaraan bila aman, nyalakan **ハザードランプ**, pakai **発炎筒** / **停止表示器材** di belakang.",
+        "**③ Mengungsi ke tempat aman** (terutama di tol).",
+        "**④ Lapor polisi** (waktu-tempat, jumlah korban, kerusakan, muatan, tindakan). **⑤ Lapor perusahaan** dan ikuti instruksi.",
+        "Jangan menyalakan api; **jangan 示談 (damai) di tempat** — ganti rugi adalah urusan perusahaan; catat saksi dan foto lokasi."
+       ]
+      },
+      {
+       "h": "Kerusakan dan keterlambatan"
+      },
+      {
+       "ul": [
+        "Kendaraan rusak: nyalakan hazard, pelankan; **jangan matikan mesin sampai berhenti total** (tenaga rem hilang). Di tol: berhenti di SA/PA; periksa kendaraan **di tempat aman**.",
+        "**Terlambat**: laporkan ke perusahaan (nama, nomor kendaraan, alasan, kondisi jalan, perkiraan tiba, ada tidaknya kecelakaan/kerusakan); **jangan menghubungi pelanggan sendiri** dan **jangan ngebut** untuk mengejar."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{事故|じこ}のとき"
+      },
+      {
+       "ul": [
+        "まず、{負傷者|ふしょうしゃ}を{救護|きゅうご}して、119{番|ばん}に{電話|でんわ}します。",
+        "{続発事故|ぞくはつじこ}を{防|ふせ}ぐために、ハザードランプをつけて、{発炎筒|はつえんとう}などで{後続車|こうぞくしゃ}に{知|し}らせます。",
+        "{安全|あんぜん}な{場所|ばしょ}に{逃|に}げて、{警察|けいさつ}と{会社|かいしゃ}に{知|し}らせます。",
+        "{事故現場|じこげんば}で、{勝手|かって}に{示談|じだん}をしてはいけません。"
+       ]
+      },
+      {
+       "h": "{故障|こしょう}と{遅|おく}れ"
+      },
+      {
+       "ul": [
+        "{車|くるま}が{故障|こしょう}したら、ハザードランプをつけて、{安全|あんぜん}な{場所|ばしょ}に{止|と}めます。{車|くるま}が{止|と}まるまでエンジンは{止|と}めません。",
+        "{遅|おく}れるときは、{会社|かいしゃ}に{報告|ほうこく}して{指示|しじ}を{受|う}けます。{速度|そくど}を{上|あ}げてはいけません。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "① Tolong korban (hentikan kendaraan, cek korban dan muatan; panggil ambulans 119).",
+      "points": [
+       "② Cegah kecelakaan susulan: pindahkan kendaraan bila aman, nyalakan ハザードランプ, pakai 発炎筒 / 停止表示器材 di belakang.",
+       "③ Mengungsi ke tempat aman (terutama di tol).",
+       "④ Lapor polisi (waktu-tempat, jumlah korban, kerusakan, muatan, tindakan). ⑤ Lapor perusahaan dan ikuti instruksi."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 救護, 続発事故, ハザードランプ, 停止表示器材."
+      ]
+     },
+     "jp": {
+      "core": "まず、{負傷者|ふしょうしゃ}を{救護|きゅうご}して、119{番|ばん}に{電話|でんわ}します。",
+      "points": [
+       "{続発事故|ぞくはつじこ}を{防|ふせ}ぐために、ハザードランプをつけて、{発炎筒|はつえんとう}などで{後続車|こうぞくしゃ}に{知|し}らせます。",
+       "{安全|あんぜん}な{場所|ばしょ}に{逃|に}げて、{警察|けいさつ}と{会社|かいしゃ}に{知|し}らせます。",
+       "{事故現場|じこげんば}で、{勝手|かって}に{示談|じだん}をしてはいけません。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{救護|きゅうご}、{続発事故|ぞくはつじこ}、ハザードランプ、{停止表示器材|ていしひょうじきざい}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s4",
+    "no": 4,
+    "title": {
+     "id": "Perlengkapan Darurat dan Cuaca Ekstrem",
+     "jp": "{非常用|ひじょうよう}{具|ぐ}と{異常気象|いじょうきしょう}"
+    },
+    "pages": [
+     91,
+     98
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**非常信号用具**: **赤色懐中電灯** atau **発炎筒**; masa berlaku **発炎筒 4 tahun**. Cara pakai: lepas tutup luar sambil memutar → gosok tutup ke badan (seperti korek) → **arahkan ke depan** → nyalakan.",
+        "**消火器**: masa berlaku **10 tahun**. Cara: **cabut pin pengaman → arahkan selang ke sumber api → remas tuas**.",
+        "**異常気象**: hujan lebat, salju, angin kencang, kabut. Ikuti pedoman, hentikan operasi bila perlu; di tengah jalan **berhenti di tempat aman dan hubungi perusahaan**.",
+        "Hujan deras: hindari **アンダーパス** dan terowongan yang mudah banjir; bila kendaraan terendam, **segera keluar**; siapkan palu/pemotong sabuk.",
+        "**Gempa**: dengar peringatan (警戒宣言 / 緊急地震速報); pelankan perlahan, **hindari rem/setir mendadak**, hidupkan hazard; menepi **ke kiri**; bila meninggalkan kendaraan: **kunci dibiarkan terpasang, jendela tutup, pintu tidak dikunci** (agar bisa dipindahkan); **jangan lari dengan mobil** kecuali menghindari tsunami."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{非常信号用具|ひじょうしんごうようぐ}は、{赤色|せきしょく}{懐中電灯|かいちゅうでんとう}か{発炎筒|はつえんとう}です。{発炎筒|はつえんとう}の{有効期限|ゆうこうきげん}は4{年|ねん}です。",
+        "{消火器|しょうかき}の{有効期限|ゆうこうきげん}は10{年|ねん}です。{安全|あんぜん}ピンを{抜|ぬ}いて、ホースを{火元|ひもと}に{向|む}けて、レバーを{握|にぎ}ります。",
+        "{大雨|おおあめ}や{大雪|おおゆき}などの{異常気象|いじょうきしょう}のときは、{安全|あんぜん}な{場所|ばしょ}に{止|と}めて、{会社|かいしゃ}に{連絡|れんらく}します。",
+        "アンダーパスなど、{水|みず}につかるおそれがある{道路|どうろ}は{通|とう}りません。",
+        "{地震|じしん}のときは、{急|きゅう}ブレーキを{避|さ}けて、{道路|どうろ}の{左側|ひだりがわ}に{止|と}めます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "非常信号用具: 赤色懐中電灯 atau 発炎筒; masa berlaku 発炎筒 4 tahun. Cara pakai: lepas tutup luar sambil memutar → gosok tutup ke badan (seperti korek) → arahkan ke depan → nyalakan.",
+      "points": [
+       "消火器: masa berlaku 10 tahun. Cara: cabut pin pengaman → arahkan selang ke sumber api → remas tuas.",
+       "異常気象: hujan lebat, salju, angin kencang, kabut. Ikuti pedoman, hentikan operasi bila perlu; di tengah jalan berhenti di tempat aman dan hubungi perusahaan.",
+       "Hujan deras: hindari アンダーパス dan terowongan yang mudah banjir; bila kendaraan terendam, segera keluar; siapkan palu/pemotong sabuk."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 非常信号用具, 消火器, 有効期限, 異常気象."
+      ]
+     },
+     "jp": {
+      "core": "{非常信号用具|ひじょうしんごうようぐ}は、{赤色|せきしょく}{懐中電灯|かいちゅうでんとう}か{発炎筒|はつえんとう}です。{発炎筒|はつえんとう}の{有効期限|ゆうこうきげん}は4{年|ねん}です。",
+      "points": [
+       "{消火器|しょうかき}の{有効期限|ゆうこうきげん}は10{年|ねん}です。{安全|あんぜん}ピンを{抜|ぬ}いて、ホースを{火元|ひもと}に{向|む}けて、レバーを{握|にぎ}ります。",
+       "{大雨|おおあめ}や{大雪|おおゆき}などの{異常気象|いじょうきしょう}のときは、{安全|あんぜん}な{場所|ばしょ}に{止|と}めて、{会社|かいしゃ}に{連絡|れんらく}します。",
+       "アンダーパスなど、{水|みず}につかるおそれがある{道路|どうろ}は{通|とう}りません。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{非常信号用具|ひじょうしんごうようぐ}、{消火器|しょうかき}、{有効期限|ゆうこうきげん}、{異常気象|いじょうきしょう}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s5",
+    "no": 5,
+    "title": {
+     "id": "Karakter Truk: Ukuran, Titik Buta, Kecepatan",
+     "jp": "トラックの{特性|とくせい}"
+    },
+    "pages": [
+     99,
+     118
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Tinggi**: kursi tinggi → jarak antar kendaraan **tampak lebih panjang**; kendaraan tepat di depan mudah **terlewat** bila perhatian ke truk di depannya.",
+        "**Panjang dan lebar**: belokan dalam bagian belakang ikut, **内輪差** (selisih lintasan roda dalam) besar; waspada saat belok kiri.",
+        "**死角** (titik buta) banyak di sekitar truk besar; pakai cermin, periksa langsung.",
+        "**Kecepatan**: makin cepat, jarak berhenti dan gaya benturan makin besar; kendalikan kecepatan.",
+        "**中間点呼 / 運行後業務**: bersih-bersih/cuci, **業務後点呼**, catat pekerjaan, lapor kerusakan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "トラックは{運転席|うんてんせき}が{高|たか}いので、{車間距離|しゃかんきょり}が{実際|じっさい}より{長|なが}く{見|み}えます。",
+        "トラックは{長|なが}くて{幅|はば}が{広|ひろ}いので、{内輪差|うちわさ}が{大|おお}きいです。",
+        "トラックのまわりには{死角|しかく}がたくさんあります。",
+        "{速度|そくど}が{上|あ}がると、{止|と}まるまでの{距離|きょり}が{長|なが}くなります。",
+        "{運行|うんこう}が{終|お}わったら、{清掃|せいそう}、{業務|ぎょうむ}{後|のち}{点呼|てんこ}、{業務|ぎょうむ}の{記録|きろく}をします。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tinggi: kursi tinggi → jarak antar kendaraan tampak lebih panjang; kendaraan tepat di depan mudah terlewat bila perhatian ke truk di depannya.",
+      "points": [
+       "Panjang dan lebar: belokan dalam bagian belakang ikut, 内輪差 (selisih lintasan roda dalam) besar; waspada saat belok kiri.",
+       "死角 (titik buta) banyak di sekitar truk besar; pakai cermin, periksa langsung.",
+       "Kecepatan: makin cepat, jarak berhenti dan gaya benturan makin besar; kendalikan kecepatan."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 内輪差, 死角, 車高, 制動距離."
+      ]
+     },
+     "jp": {
+      "core": "トラックは{運転席|うんてんせき}が{高|たか}いので、{車間距離|しゃかんきょり}が{実際|じっさい}より{長|なが}く{見|み}えます。",
+      "points": [
+       "トラックは{長|なが}くて{幅|はば}が{広|ひろ}いので、{内輪差|うちわさ}が{大|おお}きいです。",
+       "トラックのまわりには{死角|しかく}がたくさんあります。",
+       "{速度|そくど}が{上|あ}がると、{止|と}まるまでの{距離|きょり}が{長|なが}くなります。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{内輪差|うちわさ}、{死角|しかく}、{車高|しゃこう}、{制動距離|せいどうきょり}。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

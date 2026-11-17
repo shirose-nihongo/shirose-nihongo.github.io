@@ -25,6 +25,7 @@ SRC = {
  "auto-maintenance": ("JICA「みてまなぶ！自動車整備の日本語」2023-12-30 + Koleksi Ilustrasi (JICA)", "bebas diunduh/dipakai (situs JICA); PDF disimpan di assets/ssw/auto-maintenance/pdf/", "selesai + 12 diagram interaktif (orisinal Shirose)"),
  "industrial-mfg": ("Tidak ada buku (nobook): materi tulisan Shirose dasar pabrik", "orisinal Shirose; padanan kosakata tambahan Shirose", "selesai (dasar) + 4 diagram; belum ada sumber resmi MHLW/JASPA"),
  "wood-industry": ("木材産業特定技能1号測定試験 学習用テキスト 第1版 (全国木材組合連合会 / 林野庁, 2025-05, 67 hal.) — https://www.rinya.maff.go.jp/j/mokusan/seisankakou/foreigner.html", "PDF resmi tersedia gratis dari situs林野庁; PDF disimpan di assets/ssw/wood-industry/pdf/; isi di app = ringkasan & soal latihan ditulis ulang Shirose (bukan salinan)", "selesai (4 bab, 24 subbab); belum ada kartu gambar/diagram; soal resmi tidak tersedia"),
+ "auto-transport": ("（外国人向け）トラック運転者をめざす人のための学習用テキスト (全日本トラック協会 JTA, 2024-11, 242 hal.) — https://jta.or.jp/member/driver/ssw_text.html", "PDF resmi gratis dari JTA; PDF disimpan di assets/ssw/auto-transport/pdf/; isi di app = ringkasan & soal latihan ditulis ulang Shirose (bukan salinan)", "selesai (4 bab, 17 subbab, baru bagian truk; bus/taxi belum); belum ada kartu gambar/diagram; soal resmi tidak tersedia"),
  "mfg-machine-metal": ("Tidak ada buku (nobook): materi tulisan Shirose mesin & logam", "orisinal Shirose", "selesai (dasar) + 5 diagram; tipis"),
 }
 reg = []
@@ -38,7 +39,7 @@ reg_md = "# SSW Source Registry\n\nDiperbarui: %s. Angka dari `tools/ssw/stats.p
 for x in reg: reg_md += f"| {x['slug']} | {x['sumber']} | {x['lisensi_catatan']} | {x['status']} |\n"
 reg_md += "\n## PDF yang ada di repositori\n" + "".join(f"- `{p}`\n" for p in S["pdf"])
 reg_md += "\nPDF modul bidang lain tidak di-commit (hanya hasil render halaman WebP di `assets/ssw/<slug>/`). Tidak ada PDF yang diunduh sesi ini: sandbox hanya mengizinkan registri paket dan GitHub, jadi situs sumber (JICA, MHLW, JASPA, dll.) tidak bisa dijangkau dari sini.\n"
-reg_md += "\n## Bidang SSW yang belum ada\nShipbuilding, Aviation, Forestry, Automobile Transportation, Railway, Linen Supply, Distribution/Warehousing, Resource Recycling — perlu sumber resmi dulu.\n"
+reg_md += "\n## Bidang SSW yang belum ada\nShipbuilding, Aviation, Forestry, Automobile Transportation (bus & taksi; truk sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling — perlu sumber resmi dulu.\n"
 open(os.path.join(ROOT, "docs/SSW_SOURCE_REGISTRY.md"), "w", encoding="utf-8").write(reg_md)
 
 # ---- QA

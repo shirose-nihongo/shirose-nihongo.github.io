@@ -1,0 +1,336 @@
+{
+ "schema": 1,
+ "bidang": "auto-transport",
+ "source": "（外国人向け）トラック運転者をめざす人のための学習用テキスト (全日本トラック協会, 2024-11, 全242p.) — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab3",
+  "no": 3,
+  "title": {
+   "id": "Pekerjaan Bongkar Muat",
+   "jp": "{荷役|にやく}{業務|ぎょうむ}"
+  },
+  "intro": {
+   "id": "Jenis muatan, palet, mencegah muatan runtuh, beban tidak seimbang, kelebihan muatan, forklift.",
+   "jp": "{荷物|にもつ}の{種類|しゅるい}、パレット、{荷崩|にくず}れ{防止|ぼうし}、{偏荷重|へんかじゅう}、{過積載|かせきさい}、フォークリフトを{学|まな}びます。"
+  },
+  "pages": [
+   131,
+   172
+  ],
+  "subs": [
+   {
+    "id": "b3s1",
+    "no": 1,
+    "title": {
+     "id": "Jenis dan Bentuk Muatan",
+     "jp": "{荷物|にもつ}の{種類|しゅるい}と{形|かたち}"
+    },
+    "pages": [
+     131,
+     140
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**荷役業務** = memuat dan membongkar barang. Hal terpenting: barang **tidak jatuh** → kecelakaan besar.",
+        "**袋物 (karung)**: biasanya 20–30 kg; besar **フレコンバッグ** 500–1000 kg; waspada **sobek**, bocor di jahitan, bau.",
+        "**ダンボール**: bahan kemasan paling umum, efisien dimuat; **bekas goresan/cetakan pudar** bisa dianggap **kecelakaan barang**.",
+        "**缶類** (ドラム缶, ペール缶, 1斗缶): bila ditumpuk 2 tingkat atau lebih, mudah **荷崩れ**; kunci dengan **ワイヤー/ラッシングベルト**.",
+        "**バラ積み荷物** (pasir, kayu, baja): rawan **過積載** dan jatuh → pakai **シート** dan ikat.",
+        "**荷扱い指示マーク** (JIS **19 jenis**, juga disebut ケアマーク): ikuti. Jangan merusak **バーコード**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{荷役|にやく}{業務|ぎょうむ}は、{荷物|にもつ}を{積|つ}んだり、おろしたりする{仕事|しごと}です。",
+        "{袋物|ふくろもの}は、{袋|ふくろ}が{破|やぶ}れないように{注意|ちゅうい}します。",
+        "ダンボールに{傷|きず}がついていると、{荷物|にもつ}{事故|じこ}と{判断|はんだん}されることがあります。",
+        "{缶類|かんるい}は、2{段|だん}{以上|いじょう}{積|つ}むと{荷崩|にくず}れしやすいので、しっかり{固定|こてい}します。",
+        "{バラ積|ばらづ}み{荷物|にもつ}は、{過積載|かせきさい}と{落下|らっか}に{注意|ちゅうい}します。",
+        "{荷扱い指示マーク|にあつかいしじまーく}に{従|したが}って{作業|さぎょう}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "荷役業務 = memuat dan membongkar barang. Hal terpenting: barang tidak jatuh → kecelakaan besar.",
+      "points": [
+       "袋物 (karung): biasanya 20–30 kg; besar フレコンバッグ 500–1000 kg; waspada sobek, bocor di jahitan, bau.",
+       "ダンボール: bahan kemasan paling umum, efisien dimuat; bekas goresan/cetakan pudar bisa dianggap kecelakaan barang.",
+       "缶類 (ドラム缶, ペール缶, 1斗缶): bila ditumpuk 2 tingkat atau lebih, mudah 荷崩れ; kunci dengan ワイヤー/ラッシングベルト."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 荷役, 袋物, ダンボール, 缶類."
+      ]
+     },
+     "jp": {
+      "core": "{荷役|にやく}{業務|ぎょうむ}は、{荷物|にもつ}を{積|つ}んだり、おろしたりする{仕事|しごと}です。",
+      "points": [
+       "{袋物|ふくろもの}は、{袋|ふくろ}が{破|やぶ}れないように{注意|ちゅうい}します。",
+       "ダンボールに{傷|きず}がついていると、{荷物|にもつ}{事故|じこ}と{判断|はんだん}されることがあります。",
+       "{缶類|かんるい}は、2{段|だん}{以上|いじょう}{積|つ}むと{荷崩|にくず}れしやすいので、しっかり{固定|こてい}します。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{荷役|にやく}、{袋物|ふくろもの}、ダンボール、{缶類|かんるい}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s2",
+    "no": 2,
+    "title": {
+     "id": "Palet dan Penumpukan di Palet",
+     "jp": "パレットと{積み付|つみつ}け"
+    },
+    "pages": [
+     141,
+     148
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**パレット** = alas untuk memuat/menyimpan banyak barang sekaligus; paling umum **平パレット**, dimuat/bongkar dengan **フォークリフト**. Palet kayu bisa **30 kg lebih**.",
+        "Sisipan fork: **二方差し** (dua arah) / **四方差し** (empat arah). Pakai satu sisi (**片面使用形**) / dua sisi (**両面使用形**).",
+        "Palet sering milik pelanggan (**aset**) → tangani dengan hati-hati.",
+        "Pola tumpuk dasar: **棒積み (ブロック積み)**, **交互列積み**, **煉瓦積み (インターロック)**, **ピンホイール積み**.",
+        "Hindari mengemudi “**急**” (急発進, 急ブレーキ, 急加速) — muatan di palet bisa runtuh."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "パレットは、{荷物|にもつ}をまとめて{運|はこ}ぶための{資材|しざい}です。いちばん{多|おお}いのは{平|たいら}パレットです。",
+        "パレットは、お{客様|きゃくさま}の{財産|ざいさん}ですから、{大切|たいせつ}に{扱|あつか}います。",
+        "{積み付|つみつ}けの{基本パターン|きほんぱたあん}は、{棒積|ぼうづ}み、{交互|こうご}{列|れつ}{積|つ}み、{煉瓦|れんが}{積|つ}み、ピンホイール{積|つ}みです。",
+        "{急発進|きゅうはっしん}や{急|きゅう}ブレーキなど、「{急|きゅう}」のつく{運転|うんてん}は{荷崩|にくず}れの{原因|げんいん}になります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "パレット = alas untuk memuat/menyimpan banyak barang sekaligus; paling umum 平パレット, dimuat/bongkar dengan フォークリフト. Palet kayu bisa 30 kg lebih.",
+      "points": [
+       "Sisipan fork: 二方差し (dua arah) / 四方差し (empat arah). Pakai satu sisi (片面使用形) / dua sisi (両面使用形).",
+       "Palet sering milik pelanggan (aset) → tangani dengan hati-hati.",
+       "Pola tumpuk dasar: 棒積み (ブロック積み), 交互列積み, 煉瓦積み (インターロック), ピンホイール積み."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: パレット, フォークリフト, 四方差し, 積み付け."
+      ]
+     },
+     "jp": {
+      "core": "パレットは、{荷物|にもつ}をまとめて{運|はこ}ぶための{資材|しざい}です。いちばん{多|おお}いのは{平|たいら}パレットです。",
+      "points": [
+       "パレットは、お{客様|きゃくさま}の{財産|ざいさん}ですから、{大切|たいせつ}に{扱|あつか}います。",
+       "{積み付|つみつ}けの{基本パターン|きほんぱたあん}は、{棒積|ぼうづ}み、{交互|こうご}{列|れつ}{積|つ}み、{煉瓦|れんが}{積|つ}み、ピンホイール{積|つ}みです。",
+       "{急発進|きゅうはっしん}や{急|きゅう}ブレーキなど、「{急|きゅう}」のつく{運転|うんてん}は{荷崩|にくず}れの{原因|げんいん}になります。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：パレット、フォークリフト、{四方差|しほうざ}し、{積み付|つみつ}け。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s3",
+    "no": 3,
+    "title": {
+     "id": "Mencegah Muatan Runtuh dan Pengikatan",
+     "jp": "{荷崩|にくず}れ{防止|ぼうし}と{固縛|こばく}"
+    },
+    "pages": [
+     149,
+     158
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Muatan terus menerima gaya: start (ke **belakang**), rem (ke **depan**), tikungan (ke **samping**), jalan bergelombang (naik-turun). Rencanakan terhadap **gaya terbesar**.",
+        "**3 unsur pencegah muatan runtuh**: **① 積み付け**, **② 固縛**, **③ 運転方法**. Salah satu saja tidak cukup.",
+        "Kardus: kurangi celah, rapatkan dari depan; sisipkan lembar anti-slip. Kekuatan tumpukan kardus menurun: **ブロック積み 80%**, **交互列積み 50%**, **ピンホイール積み 40%**.",
+        "Muatan campuran: **berat di bawah**, **besar di bawah**; lindungi sudut tajam. Barang bulat: ganjal (**歯止め**) ≥ **1/10 diameter**.",
+        "Bahan: pengisi celah (airbag, kardus), pengikat (**ラッシングベルト**, tali, **ワイヤーロープ**), pelindung (**角あて**), **ストレッチフィルム**. Cek **kerusakan/aus** saat inspeksi harian.",
+        "Periksa ikatan saat operasi: **jalan biasa tiap 4 jam**, **tol tiap 2 jam** (berhenti di tempat aman). Kerja di ketinggian **2 m atau lebih**: pakai perlengkapan aman. Terpal saja **tidak cukup**; ikat juga dengan tali."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{荷物|にもつ}は、{走行中|そうこうちゅう}に、いつも{振動|しんどう}や{衝撃|しょうげき}を{受|う}けています。",
+        "{荷崩|にくず}れ{防止|ぼうし}の3{要素|ようそ}は、{積み付|つみつ}け、{固縛|こばく}、{運転方法|うんてんほうほう}です。",
+        "{重|おも}い{荷物|にもつ}は{下|した}に、{大|おお}きい{荷物|にもつ}は{下|した}に{積|つ}みます。",
+        "{円形|えんけい}の{荷物|にもつ}には、{直径|ちょっけい}の10{分|ふん}の1{以上|いじょう}の{歯止|はど}めをします。",
+        "{運行|うんこう}{中|なか}は、{一般道路|いっぱんどうろ}で4{時間|じかん}ごと、{高速道路|こうそくどうろ}で2{時間|じかん}ごとに、{荷物|にもつ}の{固縛|こばく}を{点検|てんけん}します。",
+        "シートだけでは{固縛|こばく}の{効果|こうか}が{小|ちー}さいので、{必|かなら}ずロープなども{使|つか}います。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Muatan terus menerima gaya: start (ke belakang), rem (ke depan), tikungan (ke samping), jalan bergelombang (naik-turun). Rencanakan terhadap gaya terbesar.",
+      "points": [
+       "3 unsur pencegah muatan runtuh: ① 積み付け, ② 固縛, ③ 運転方法. Salah satu saja tidak cukup.",
+       "Kardus: kurangi celah, rapatkan dari depan; sisipkan lembar anti-slip. Kekuatan tumpukan kardus menurun: ブロック積み 80%, 交互列積み 50%, ピンホイール積み 40%.",
+       "Muatan campuran: berat di bawah, besar di bawah; lindungi sudut tajam. Barang bulat: ganjal (歯止め) ≥ 1/10 diameter."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 固縛, 歯止め, ラッシングベルト, ワイヤーロープ."
+      ]
+     },
+     "jp": {
+      "core": "{荷物|にもつ}は、{走行中|そうこうちゅう}に、いつも{振動|しんどう}や{衝撃|しょうげき}を{受|う}けています。",
+      "points": [
+       "{荷崩|にくず}れ{防止|ぼうし}の3{要素|ようそ}は、{積み付|つみつ}け、{固縛|こばく}、{運転方法|うんてんほうほう}です。",
+       "{重|おも}い{荷物|にもつ}は{下|した}に、{大|おお}きい{荷物|にもつ}は{下|した}に{積|つ}みます。",
+       "{円形|えんけい}の{荷物|にもつ}には、{直径|ちょっけい}の10{分|ふん}の1{以上|いじょう}の{歯止|はど}めをします。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{固縛|こばく}、{歯止|はど}め、ラッシングベルト、ワイヤーロープ。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s4",
+    "no": 4,
+    "title": {
+     "id": "Beban Tidak Seimbang dan Kelebihan Muatan",
+     "jp": "{偏荷重|へんかじゅう}と{過積載|かせきさい}"
+    },
+    "pages": [
+     159,
+     166
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**偏荷重 (偏積)** = pusat gravitasi muatan **bergeser** dari tengah bak. Kiri-kanan bergeser → truk bisa **terguling**; depan-belakang → **jarak pengereman** berubah.",
+        "Muatan depan/belakang yang terlalu berat bisa melewati **軸重制限 (10 ton)**.",
+        "Barang berbentuk rumit sulit ditentukan titik beratnya → **minta petunjuk manajer operasi**; jangan menilai sendiri.",
+        "**過積載** = melebihi muatan maksimum; penyebab kecelakaan dan merusak jalan. Tanpa timbangan, sopir wajib memperkirakan.",
+        "Gunakan **運行記録計/ドライブレコーダ** untuk memantau."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{偏荷重|へんかじゅう}は、{荷物|にもつ}の{重心|じゅうしん}がトラックの{中心|ちゅうしん}からずれている{状態|じょうたい}です。",
+        "{重心|じゅうしん}が{左右|さゆう}にずれると、トラックが{転倒|てんとう}することがあります。",
+        "{重心|じゅうしん}が{前後|ぜんご}にずれると、{止|と}まるまでの{距離|きょり}が{変|か}わります。",
+        "{軸重|じくじゅう}{制限|せいげん}は10トンです。",
+        "{荷物|にもつ}の{形|かたち}が{複雑|ふくざつ}なときは、{運行管理者|うんこうかんりしゃ}に{相談|そうだん}します。",
+        "{過積載|かせきさい}は、{事故|じこ}の{原因|げんいん}になり、{道路|どうろ}もいためます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "偏荷重 (偏積) = pusat gravitasi muatan bergeser dari tengah bak. Kiri-kanan bergeser → truk bisa terguling; depan-belakang → jarak pengereman berubah.",
+      "points": [
+       "Muatan depan/belakang yang terlalu berat bisa melewati 軸重制限 (10 ton).",
+       "Barang berbentuk rumit sulit ditentukan titik beratnya → minta petunjuk manajer operasi; jangan menilai sendiri.",
+       "過積載 = melebihi muatan maksimum; penyebab kecelakaan dan merusak jalan. Tanpa timbangan, sopir wajib memperkirakan."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 偏荷重, 重心, 転倒, 軸重."
+      ]
+     },
+     "jp": {
+      "core": "{偏荷重|へんかじゅう}は、{荷物|にもつ}の{重心|じゅうしん}がトラックの{中心|ちゅうしん}からずれている{状態|じょうたい}です。",
+      "points": [
+       "{重心|じゅうしん}が{左右|さゆう}にずれると、トラックが{転倒|てんとう}することがあります。",
+       "{重心|じゅうしん}が{前後|ぜんご}にずれると、{止|と}まるまでの{距離|きょり}が{変|か}わります。",
+       "{軸重|じくじゅう}{制限|せいげん}は10トンです。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{偏荷重|へんかじゅう}、{重心|じゅうしん}、{転倒|てんとう}、{軸重|じくじゅう}。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s5",
+    "no": 5,
+    "title": {
+     "id": "Pencegahan Kecelakaan Kerja dan Forklift",
+     "jp": "{労働災害|ろうどうさいがい}の{防止|ぼうし}とフォークリフト"
+    },
+    "pages": [
+     167,
+     172
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Saat bongkar muat: ikuti instruksi pemimpin kerja; jangan memanjat/berdiri di tempat berbahaya; kerja di tempat **tinggi (≥ 2 m)** dengan perlengkapan aman.",
+        "**ロープ掛け・解き**, **シート掛け・外し**: waspada jatuh dari bak dan tali yang terlepas.",
+        "**バンボデー車** (van box) dan **ロールボックスパレット**: tangani dengan hati-hati, hindari terjepit.",
+        "**フォークリフト**: hanya orang berkualifikasi; **jangan masuk area kerja forklift**, perhatikan sekeliling dan beban."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{積|つ}みおろし{作業|さぎょう}は、{指揮|しき}する{人|にん}の{指示|しじ}に{従|したが}います。",
+        "2メートル{以上|いじょう}の{高|たか}い{場所|ばしょ}で{作業|さぎょう}するときは、{安全|あんぜん}な{方法|ほうほう}でします。",
+        "{ロープ掛|ろーぷが}けや{シート掛|しーとが}けでは、{荷台|にだい}からの{墜落|ついらく}に{注意|ちゅうい}します。",
+        "フォークリフトの{近|ちか}くでは、まわりの{安全|あんぜん}を{確認|かくにん}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Saat bongkar muat: ikuti instruksi pemimpin kerja; jangan memanjat/berdiri di tempat berbahaya; kerja di tempat tinggi (≥ 2 m) dengan perlengkapan aman.",
+      "points": [
+       "ロープ掛け・解き, シート掛け・外し: waspada jatuh dari bak dan tali yang terlepas.",
+       "バンボデー車 (van box) dan ロールボックスパレット: tangani dengan hati-hati, hindari terjepit.",
+       "フォークリフト: hanya orang berkualifikasi; jangan masuk area kerja forklift, perhatikan sekeliling dan beban."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 労働災害, 墜落, ロープ掛け, シート掛け."
+      ]
+     },
+     "jp": {
+      "core": "{積|つ}みおろし{作業|さぎょう}は、{指揮|しき}する{人|にん}の{指示|しじ}に{従|したが}います。",
+      "points": [
+       "2メートル{以上|いじょう}の{高|たか}い{場所|ばしょ}で{作業|さぎょう}するときは、{安全|あんぜん}な{方法|ほうほう}でします。",
+       "{ロープ掛|ろーぷが}けや{シート掛|しーとが}けでは、{荷台|にだい}からの{墜落|ついらく}に{注意|ちゅうい}します。",
+       "フォークリフトの{近|ちか}くでは、まわりの{安全|あんぜん}を{確認|かくにん}します。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{労働災害|ろうどうさいがい}、{墜落|ついらく}、{ロープ掛|ろーぷが}け、{シート掛|しーとが}け。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

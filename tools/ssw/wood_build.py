@@ -4,9 +4,14 @@
 import json, re, sys, hashlib, random, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import pykakasi
-from wood_content import BAB, SUBS
+import importlib
+_mod = importlib.import_module(sys.argv[1] if len(sys.argv) > 1 else "wood_content")
+BAB, SUBS = _mod.BAB, _mod.SUBS
+SLUG = getattr(_mod, "SLUG", "wood-industry"); NAMA = getattr(_mod, "NAMA", "Wood Industry (Industri Kayu)"); JPN = getattr(_mod, "JP", "木材産業")
+PREFIX = getattr(_mod, "PREFIX", "wd"); SRC = getattr(_mod, "SRC", "木材産業特定技能1号測定試験 学習用テキスト(第1版, 全国木材組合連合会, 2025-05)")
+TEMA_SUB = getattr(_mod, "TEMA_SUB", "b1s3"); TEMA_ID = getattr(_mod, "TEMA_ID", ("Tema: Keselamatan Kerja Kayu", "木材加工の安全"))
 
-OUT = pathlib.Path("data/ssw/wood-industry"); OUT.mkdir(parents=True, exist_ok=True)
+OUT = pathlib.Path("data/ssw/" + SLUG); OUT.mkdir(parents=True, exist_ok=True)
 KKS = pykakasi.kakasi()
 KANJI = re.compile(r"[一-鿿々]")
 HIRA = re.compile(r"[ぁ-ゟ]")
@@ -59,7 +64,7 @@ TF_OPTS = [{"id": "Benar (○)", "jp": "○ {正|ただ}しい"}, {"id": "Salah 
 def make_item(q, key):
     if q[0] == "tf":
         _, id_, jp, ok, ex_id, ex_jp = q
-        stmt_id = id_ or None
+        if id_: TFID[jp] = id_
         return {"q": {"id": "__TF__" + jp, "jp": "○か×か。「" + ruby(jp.rstrip("。")) + "。」"}, "opts": TF_OPTS,
                 "a": 0 if ok else 1, "exp": {"id": ex_id, "jp": ruby(ex_jp)}, "mb": True}
     _, q_id, q_jp, right, wrong, ex_id, ex_jp = q
@@ -75,7 +80,6 @@ try:
 except Exception: pass
 
 vocab, vn = [], 0
-SRC = "木材産業特定技能1号測定試験 学習用テキスト(第1版, 全国木材組合連合会, 2025-05)"
 bab_files, quiz = [], {"bab": {}, "tema": []}
 for b in BAB:
     subs_out, quiz_sub = [], []
@@ -94,9 +98,9 @@ for b in BAB:
         for t in terms:
             vn += 1
             kata, kana, arti_id, ex_jp, ex_id = t[0], t[1], t[2], t[3], t[4]
-            vocab.append({"id": f"wd-{vn:03d}", "kata": kata, "kana": kana, "romaji": romaji(kana), "arti": arti_id,
+            vocab.append({"id": f"{PREFIX}-{vn:03d}", "kata": kata, "kana": kana, "romaji": romaji(kana), "arti": arti_id,
                           "cat": b["title_id"], "bab": b["id"], "src": [s["id"]], "contoh": ruby(ex_jp), "arti_contoh": ex_id,
-                          "sumber": "全木連 学習用テキスト 第1版 (diringkas Shirose)", "halaman": s["pages"][0]})
+                          "sumber": SRC.split(" (")[0] + " (diringkas Shirose)", "halaman": s["pages"][0]})
         items = [make_item(q, f"{s['id']}-{i}") for i, q in enumerate(s["qs"])]
         # pernyataan ○×: terjemahan ID memakai kunci kalimat JP
         for it in items:
@@ -110,18 +114,18 @@ for b in BAB:
     for sq in quiz_sub: rev_items += sq["items"][:1]
     quiz["bab"][b["id"]] = [{"id": f"{b['id']}-q1", "rev": True, "title": {"id": f"Latihan Bab {b['id'][3:]}", "jp": ruby("第" + b['id'][3:] + "章の練習")}, "items": rev_items}] + quiz_sub
     bab_files.append(b["id"])
-    json.dump({"schema": 1, "bidang": "wood-industry", "source": SRC + " — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+    json.dump({"schema": 1, "bidang": SLUG, "source": SRC + " — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
                "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
                "bab": {"id": b["id"], "no": int(b["id"][3:]), "title": {"id": b["title_id"], "jp": ruby(b["title_jp"])},
                        "intro": {"id": b["intro_id"], "jp": ruby(b["intro_jp"])}, "pages": b["pages"], "subs": subs_out}},
               open(OUT / f"{b['id']}.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
 
 # tema: soal keselamatan (dari bab1 b1s3)
-saf = [it for sq in quiz["bab"]["bab1"] if sq.get("sub") == "b1s3" for it in sq["items"]]
-quiz["tema"] = [{"id": "tema-wd", "tema": True, "title": {"id": "Tema: Keselamatan Kerja Kayu", "jp": ruby("テーマ：木材加工の安全")}, "items": saf}]
+saf = [it for sq in quiz["bab"]["bab1"] if sq.get("sub") == TEMA_SUB for it in sq["items"]]
+quiz["tema"] = [{"id": "tema-" + PREFIX, "tema": True, "title": {"id": TEMA_ID[0], "jp": ruby("テーマ：" + TEMA_ID[1])}, "items": saf}]
 json.dump(quiz, open(OUT / "quiz.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
 json.dump({"items": vocab}, open(OUT / "vocab.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
-json.dump({"slug": "wood-industry", "nama": "Wood Industry (Industri Kayu)", "jp": "木材産業", "nobook": True,
+json.dump({"slug": SLUG, "nama": NAMA, "jp": JPN, "nobook": True,
            "bab": [{"id": b, "file": f"{b}.json"} for b in bab_files], "vocab": "vocab.json", "quiz": "quiz.json"},
           open(OUT / "index.json", "w", encoding="utf8"), ensure_ascii=False, indent=1)
 nq = sum(len(sq["items"]) for v in quiz["bab"].values() for sq in v)
