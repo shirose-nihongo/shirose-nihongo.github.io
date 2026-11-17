@@ -437,7 +437,7 @@ html{overflow-x:hidden;}
 .shop-action{margin:12px 0 10px;}
 .shop-wallet{text-align:center; font-size:14px; color:var(--gray);}
 
-.shop-rchips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}.shop-rchip{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700;cursor:pointer}.shop-rchip small{opacity:.8;font-weight:600}.shop-rchip.on{outline:2px solid #ffd700;box-shadow:0 0 12px #ffd70066}
+.shop-rchips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}.shop-rchip{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700;cursor:pointer}.shop-rchip small{opacity:.8;font-weight:600}.shop-rchip.own{border-color:#ffd700}.shop-rchip.on{outline:2px solid #ffd700;box-shadow:0 0 12px #ffd70066}
 .shop-sec{margin:18px 0 6px;font-size:14px;color:var(--gold,#ffd700);letter-spacing:.03em}.shop-sec small{color:var(--gray);font-weight:400}
 .shop-items-grid{
   display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
@@ -5025,11 +5025,19 @@ async function renderShop(){
               const RL = { mythic:"Mythic", legendary:"Legendary", epic:"Epic", rare:"Rare", uncommon:"Uncommon", common:"Common" };
               const own = items.filter(it => inv.includes(it.id)), rest = items.filter(it => !inv.includes(it.id));
               const sec = (judul, arr) => arr.length ? `<h4 class="shop-sec">${judul} <small>(${arr.length})</small></h4><div class="shop-items-grid">${arr.map(tile).join("")}</div>` : "";
-              const pick = state._shopRar || "all";
-              const chip = (k, label, n) => n || k === "all" ? `<button class="shop-rchip ${pick === k ? "on" : ""} ${k !== "all" && k !== "own" ? "rarity-" + k : ""}" onclick="shopSetRar('${k}')">${label}${k === "all" ? "" : ` <small>${n}</small>`}</button>` : "";
-              const chips = `<div class="shop-rchips">${chip("all", "Semua", items.length)}${chip("own", "⭐ Punya kamu", own.length)}${RAR_ORD.map(r => chip(r, RL[r], rest.filter(it => it.rarity === r).length)).join("")}</div>`;
-              const showOwn = pick === "all" || pick === "own";
-              return chips + (showOwn ? sec("⭐ Punya kamu — langsung bisa dipakai", own) : "") + RAR_ORD.map(r => (pick === "all" || pick === r) ? sec(RL[r], rest.filter(it => it.rarity === r)) : "").join("");
+              const pick = state._shopRar || "all", ownOnly = !!state._shopOwn;
+              const base = ownOnly ? own : items;
+              const cnt = (r) => base.filter(it => it.rarity === r).length;
+              const chip = (k, label, n) => n || k === "all" ? `<button class="shop-rchip ${pick === k ? "on" : ""} ${k !== "all" ? "rarity-" + k : ""}" onclick="shopSetRar('${k}')">${label}${k === "all" ? "" : ` <small>${n}</small>`}</button>` : "";
+              const chips = `<div class="shop-rchips"><button class="shop-rchip own ${ownOnly ? "on" : ""}" onclick="shopToggleOwn()">${ownOnly ? "✅" : "⭐"} Dimiliki <small>${own.length}</small></button></div>
+                <div class="shop-rchips">${chip("all", "Semua rarity", base.length)}${RAR_ORD.map(r => chip(r, RL[r], cnt(r))).join("")}</div>`;
+              let body;
+              if (pick === "all" && !ownOnly) body = sec("⭐ Punya kamu — langsung bisa dipakai", own) + RAR_ORD.map(r => sec(RL[r], rest.filter(it => it.rarity === r))).join("");
+              else {
+                body = RAR_ORD.map(r => (pick === "all" || pick === r) ? sec(RL[r] + (ownOnly ? " · dimiliki" : ""), base.filter(it => it.rarity === r)) : "").join("");
+                if (!body) body = `<div class="empty" style="padding:18px 0;color:var(--gray)">Tidak ada item${ownOnly ? " yang kamu miliki" : ""} di pilihan ini.</div>`;
+              }
+              return chips + body;
             })()}
           ` : `<div class="empty"><div class="emoji">📭</div>Kategori ini masih kosong.</div>`}
         </div>
@@ -5038,6 +5046,10 @@ async function renderShop(){
   `;
 }
 
+window.shopToggleOwn = () => {
+  state._shopOwn = !state._shopOwn;
+  renderShop().then(h => document.getElementById("app").innerHTML = h);
+};
 window.shopSetRar = (r) => {
   state._shopRar = r;
   renderShop().then(h => document.getElementById("app").innerHTML = h);
