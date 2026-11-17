@@ -34,8 +34,7 @@ def romaji(k):
 def tf(q):
     return [{"id": "Benar (○)", "jp": "○ 正しい"}, {"id": "Salah (×)", "jp": "× 間違い"}]
 
-PAGES = {'b1s1':[1,2],'b1s2':[3,8],'b2s1':[1,1],'b2s2':[1,1],'b3s1':[1,1],'b4s1':[1,2],'b4s2':[1,2],'b5s1':[1,2]}
-idx = {"slug": SLUG, "nama": "Linen Supply", "jp": "リネンサプライ", "bab": [], "vocab": "vocab.json", "quiz": "quiz.json",        "pages": {"jp": 8, "id": 0}, "book": "jp", "source": SRC}
+idx = {"slug": SLUG, "nama": "Linen Supply", "jp": "リネンサプライ", "bab": [], "vocab": "vocab.json", "quiz": "quiz.json",        "pages": {"jp": 3, "id": 0}, "nobook": True, "source": SRC}
 vocab = []; vn = 0
 catname = {b["no"]: b["id_"] for b in BABS}
 for b in BABS:
@@ -45,11 +44,11 @@ for b in BABS:
         blocks = []
         for h, ul in secs:
             blocks.append({"h": h}); blocks.append({"ul": ul})
-        subs.append({"id": f"b{b['no']}s{si}", "no": si, "title": {"id": tid, "jp": tjp}, "pages": PAGES.get(f"b{b['no']}s{si}", pg),
+        subs.append({"id": f"b{b['no']}s{si}", "no": si, "title": {"id": tid, "jp": tjp}, "pages": pg,
                      "full": {"id": blocks}, "summary": {"id": [{"ul": [ul[0] for _, ul in secs]}]}})
     doc = {"schema": 1, "bidang": SLUG, "source": SRC, "markup": "Teks JP polos (tanpa furigana); **tebal**.",
            "bab": {"id": bid, "no": b["no"], "title": {"id": b["id_"], "jp": b["jp"]}, "intro": {"id": b["intro"], "jp": ""},
-                   "pages": [min(x["pages"][0] for x in subs), max(x["pages"][1] for x in subs)], "subs": subs}}
+                   "pages": b["pages"], "subs": subs}}
     json.dump(doc, open(os.path.join(OUT, f"{bid}.json"), "w", encoding="utf-8"), ensure_ascii=False)
     idx["bab"].append({"id": bid, "file": f"{bid}.json"})
 for line in V:

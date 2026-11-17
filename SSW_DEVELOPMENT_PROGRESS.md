@@ -99,4 +99,4 @@ tools/ssw/quiz_official_build.py (idempotent, set ber-id gen-*): Auto Maintenanc
 ## Linen Supply (リネンサプライ) + tampilan buku — 2026-11-17
 - Sumber resmi: JLSA 試験基準 (初級/専門級), soal contoh 学科 初級 & 専門級 (+kunci), statistik; MOJ/MHLW 運用方針 (1号: A2.2, direct hire, 4.300 orang/3 th). Ujian 1号 resmi belum dipublikasikan rinci. → `ssw-materials/linen-supply/`, PDF `assets/ssw/linen-supply/pdf/`.
 - Sektor `linen-supply`: 5 bab, 61 kosakata, 39 soal (20 soal contoh resmi + 19 dari 試験基准). `tools/ssw/linen_{content,quiz,build}.py`.
-- Railway/Forestry/Linen kini memakai **halaman buku per subbab** (gambar webp `assets/ssw/<slug>/jp/pNN.webp`, `book: "jp"`) seperti sektor lama — bukan tombol PDF ala JAIM. Render: `tools/ssw/render_pages.py`.
+- (DIBATALKAN 2026-11-18 atas permintaan user: kembali ke tampilan sebelumnya — tombol PDF + nobook; gambar halaman dihapus.) Railway/Forestry/Linen sempat memakai **halaman buku per subbab** (gambar webp `assets/ssw/<slug>/jp/pNN.webp`, `book: "jp"`) seperti sektor lama — bukan tombol PDF ala JAIM. Render: `tools/ssw/render_pages.py`.
