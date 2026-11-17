@@ -96,6 +96,28 @@
        "jp": "1,000kgです。"
       },
       "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh menaruh barang di depan pintu darurat.”",
+       "jp": "○か×か。「{非常口|ひじょうぐち}の{前|まえ}に、{荷物|にもつ}を{置|お}いてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan menghalangi.",
+       "jp": "{置|お}いてはいけません。"
+      },
+      "mb": true
      }
     ]
    },
@@ -604,6 +626,118 @@
       }
      }
     ]
+   },
+   {
+    "id": "b1s5-q",
+    "sub": "b1s5",
+    "title": {
+     "id": "Subbab 1.5 · Cara Menyimpan dan Penataan Rak",
+     "jp": "1.5 {保管|ほかん}{方法|ほうほう}・{棚|たな}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh menaruh barang di depan pintu darurat.”",
+       "jp": "○か×か。「{非常口|ひじょうぐち}の{前|まえ}に、{荷物|にもつ}を{置|お}いてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan menghalangi.",
+       "jp": "{置|お}いてはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Barang berat ditaruh di tingkat rak bawah.”",
+       "jp": "○か×か。「{重|おも}い{荷物|にもつ}は、{棚|たな}の{下|した}の{段|だん}に{置|お}きます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{重|おも}い{物|もの}は{下|した}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Rak untuk pallet yang dimuat forklift…",
+       "jp": "パレットごと{入|い}れる{棚|たな}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "パレットラック",
+        "jp": "パレットラック"
+       },
+       {
+        "id": "ハンドリフト",
+        "jp": "ハンドリフト"
+       },
+       {
+        "id": "カゴ台車",
+        "jp": "{カゴ台車|かごだいしゃ}"
+       },
+       {
+        "id": "コンベヤ",
+        "jp": "コンベヤ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Pallet rack.",
+       "jp": "パレットラックです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Menyimpan di tempat yang sesuai (ke rak) disebut…",
+       "jp": "{荷物|にもつ}を{決|き}まった{場所|ばしょ}にしまうことは{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "検品",
+        "jp": "{検品|けんぴん}"
+       },
+       {
+        "id": "格納",
+        "jp": "{格納|かくのう}"
+       },
+       {
+        "id": "搬出",
+        "jp": "{搬出|はんしゅつ}"
+       },
+       {
+        "id": "出庫",
+        "jp": "{出庫|しゅっこ}"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kakunou.",
+       "jp": "{格納|かくのう}です。"
+      }
+     }
+    ]
    }
   ],
   "bab2": [
@@ -686,6 +820,35 @@
       "exp": {
        "id": "480÷(60×4)=2.",
        "jp": "480÷（60×4））2{人|にん}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Alat untuk menimbang barang…",
+       "jp": "{荷物|にもつ}の{重|おも}さをはかる{道具|どうぐ}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "ラベルプリンター",
+        "jp": "ラベルプリンター"
+       },
+       {
+        "id": "結束機",
+        "jp": "{結束機|けっそくき}"
+       },
+       {
+        "id": "台はかり",
+        "jp": "{台|だい}はかり"
+       },
+       {
+        "id": "パレット",
+        "jp": "パレット"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Timbangan.",
+       "jp": "{台|だい}はかりです。"
       }
      }
     ]
@@ -1032,6 +1195,96 @@
       }
      }
     ]
+   },
+   {
+    "id": "b2s4-q",
+    "sub": "b2s4",
+    "title": {
+     "id": "Subbab 2.4 · Alat Kerja Pengolahan Distribusi",
+     "jp": "2.4 {流通加工|りゅうつうかこう}の{機器|きき}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Alat untuk menimbang barang…",
+       "jp": "{荷物|にもつ}の{重|おも}さをはかる{道具|どうぐ}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "ラベルプリンター",
+        "jp": "ラベルプリンター"
+       },
+       {
+        "id": "結束機",
+        "jp": "{結束機|けっそくき}"
+       },
+       {
+        "id": "台はかり",
+        "jp": "{台|だい}はかり"
+       },
+       {
+        "id": "パレット",
+        "jp": "パレット"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Timbangan.",
+       "jp": "{台|だい}はかりです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Mesin untuk mencetak label…",
+       "jp": "ラベルを{印刷|いんさつ}する{機械|きかい}は{何|なん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "カゴ台車",
+        "jp": "{カゴ台車|かごだいしゃ}"
+       },
+       {
+        "id": "コンベヤ",
+        "jp": "コンベヤ"
+       },
+       {
+        "id": "ラベルプリンター",
+        "jp": "ラベルプリンター"
+       },
+       {
+        "id": "台はかり",
+        "jp": "{台|だい}はかり"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Printer label.",
+       "jp": "ラベルプリンターです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Picking cart adalah troli untuk membawa barang yang sudah dikumpulkan.”",
+       "jp": "○か×か。「ピッキングカートは、{集|あつ}めた{荷物|にもつ}を{運|はこ}ぶカートです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{集|あつ}めた{荷物|にもつ}を{運|はこ}びます。"
+      },
+      "mb": true
+     }
+    ]
    }
   ],
   "bab3": [
@@ -1106,6 +1359,28 @@
       "exp": {
        "id": "Benar: hijau = evakuasi.",
        "jp": "{緑|みどり}は{避難|ひなん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Pintu gudang pendingin boleh dibiarkan terbuka.”",
+       "jp": "○か×か。「{冷蔵倉庫|れいぞうそうこ}のドアは、{開|あ}けっぱなしにしてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tutup agar suhu terjaga.",
+       "jp": "{開|あ}けっぱなしにしません。"
       },
       "mb": true
      }
@@ -1523,6 +1798,118 @@
       "exp": {
        "id": "Hou-ren-sou.",
        "jp": "{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}です。"
+      }
+     }
+    ]
+   },
+   {
+    "id": "b3s4-q",
+    "sub": "b3s4",
+    "title": {
+     "id": "Subbab 3.4 · Kerja di Gudang Pendingin dan Barang Berat",
+     "jp": "3.4 {冷蔵倉庫|れいぞうそうこ}・{重|おも}い{荷物|にもつ}の{作業|さぎょう}"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Benar atau salah: “Pintu gudang pendingin boleh dibiarkan terbuka.”",
+       "jp": "○か×か。「{冷蔵倉庫|れいぞうそうこ}のドアは、{開|あ}けっぱなしにしてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tutup agar suhu terjaga.",
+       "jp": "{開|あ}けっぱなしにしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Barang yang terlalu berat jangan dipaksakan sendiri; minta bantuan.”",
+       "jp": "○か×か。「{重|おも}すぎる{荷物|にもつ}は、{無理|むり}に{一人|ひとり}で{持|も}たないで、{手伝|てつだ}いをたのみます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{手伝|てつだ}いをたのみます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Saat mengangkat barang berat, hindari…",
+       "jp": "{重|おも}い{荷物|にもつ}を{持|も}つとき、してはいけないことはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "menurunkan pinggang",
+        "jp": "{腰|こし}を{落|お}とすこと"
+       },
+       {
+        "id": "minta bantuan",
+        "jp": "{手伝|てつだ}いをたのむこと"
+       },
+       {
+        "id": "memegang dekat badan",
+        "jp": "{体|からだ}に{近|ちか}づけること"
+       },
+       {
+        "id": "memutar badan",
+        "jp": "{体|からだ}をひねること"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Jangan memutar badan.",
+       "jp": "{体|からだ}をひねってはいけません。"
+      }
+     },
+     {
+      "q": {
+       "id": "Lantai gudang pendingin mudah…",
+       "jp": "{冷蔵倉庫|れいぞうそうこ}の{床|とこ}は、どうなりやすいですか。"
+      },
+      "opts": [
+       {
+        "id": "licin",
+        "jp": "すべりやすい"
+       },
+       {
+        "id": "panas",
+        "jp": "あつくなる"
+       },
+       {
+        "id": "berpasir",
+        "jp": "すなだらけ"
+       },
+       {
+        "id": "lengket",
+        "jp": "ベタベタする"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Licin karena es/embun.",
+       "jp": "すべりやすいです。"
       }
      }
     ]

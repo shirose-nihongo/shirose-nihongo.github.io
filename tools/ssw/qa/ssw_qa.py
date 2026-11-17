@@ -48,8 +48,9 @@ with sync_playwright() as p:
             ok=ok and pg.evaluate("(()=>{const i=document.querySelector('.sw-thumbs img');return i.complete&&i.naturalWidth>0})()")
             rec(slug,vpn,f'halaman buku tampil & gambar termuat ({sb})',ok,pg.evaluate("document.querySelectorAll('.sw-thumbs img').length"))
           go(f'ssw-buku/{slug}/jp/1',2500)
-          go(f'ssw-buku/{slug}/id/1',2500)
-          rec(slug,vpn,'viewer buku ID memuat halaman',pg.evaluate("(()=>{const i=document.querySelector('.bk-pgw img,#bk-img');return !!i&&i.naturalWidth>0&&i.src.includes('/id/')})()"),'')
+          if (pack.get('pages') or {}).get('id'):
+           go(f'ssw-buku/{slug}/id/1',2500)
+           rec(slug,vpn,'viewer buku ID memuat halaman',pg.evaluate("(()=>{const i=document.querySelector('.bk-pgw img,#bk-img');return !!i&&i.naturalWidth>0&&i.src.includes('/id/')})()"),'')
           go(f'ssw-buku/{slug}/jp/1',2500)
           rec(slug,vpn,'viewer buku memuat halaman',pg.evaluate("(()=>{const i=document.querySelector('.bk-pgw img,#bk-img');return !!i&&i.naturalWidth>0})()"),'')
         if slug=='kaigo':

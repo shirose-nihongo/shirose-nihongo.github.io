@@ -289,3 +289,86 @@ SUBS["bab3"] = [
          MC("Hal yang harus diikuti saat bekerja…", "作業するときに、したがうものはどれですか。", ("作業手順書", "作業手順書"), [("kemauan sendiri", "自分の好み"), ("kabar angin", "うわさ"), ("tebakan", "勘")], "Prosedur kerja tertulis.", "作業手順書です。"),
          MC("Arti 報連相 …", "「報連相」は何ですか。", ("lapor, kabari, konsultasi", "報告・連絡・相談"), [("belanja", "買い物"), ("istirahat", "休み"), ("makan", "食事")], "Hou-ren-sou.", "報告・連絡・相談です。")]},
 ]
+
+# ---- tambahan (v2)
+SUBS["bab1"].append(
+ {"id": "b1s5", "pages": [1, 1], "t_id": "Cara Menyimpan dan Penataan Rak", "t_jp": "保管方法・棚",
+  "id_bl": [("h", "Cara menyimpan"), ("ul", [
+     "**平積み**: menumpuk barang langsung di lantai/pallet. **棚保管**: menyimpan di rak bertingkat.",
+     "**パレットラック**: rak khusus untuk pallet yang dimuat forklift.",
+     "Barang **berat di rak bawah**, ringan di atas; barang yang sering diambil ditaruh di tempat **mudah dijangkau**.",
+     "Jangan menghalangi **jalur kerja**, **pintu darurat**, dan **alat pemadam**.",
+     "Makanan dijaga **suhu**-nya sesuai jenis (suhu ruang / dingin / beku).",
+     "Jangan mencampur barang berbahaya dengan barang lain."])],
+  "jp_bl": [("h", "保管の方法"), ("ul", [
+     "平積みは、床やパレットに直接積む保管方法です。棚保管は、棚に入れて保管する方法です。",
+     "パレットラックは、パレットごと入れる棚です。",
+     "重い物は下の棚に、軽い物は上の棚に置きます。よく使う物は取りやすい場所に置きます。",
+     "通路、非常口、消火器の前に荷物を置いてはいけません。",
+     "食品は、種類に合わせて温度を守ります。",
+     "危険な物は、ほかの物と一緒に置きません。"])],
+  "terms": [("平積み", "ひらづみ", "ditumpuk langsung (lantai/pallet)", "荷物を平積みします。", "Menumpuk barang langsung."),
+            ("棚", "たな", "rak", "棚に入れます。", "Memasukkan ke rak."),
+            ("通路", "つうろ", "lorong/jalur", "通路をあけておきます。", "Mengosongkan lorong."),
+            ("温度管理", "おんどかんり", "pengelolaan suhu", "温度管理をします。", "Mengelola suhu."),
+            ("格納", "かくのう", "menyimpan ke tempatnya", "棚に格納します。", "Menyimpan ke rak."),
+            ("常温", "じょうおん", "suhu ruang", "常温で保管します。", "Menyimpan pada suhu ruang."),
+            ("冷凍", "れいとう", "beku", "冷凍の荷物を運びます。", "Membawa barang beku.")],
+  "qs": [TF("非常口の前に、荷物を置いてもよいです。", False, "Salah: jangan menghalangi.", "置いてはいけません。", "Boleh menaruh barang di depan pintu darurat."),
+         TF("重い荷物は、棚の下の段に置きます。", True, "Benar.", "重い物は下です。", "Barang berat ditaruh di tingkat rak bawah."),
+         MC("Rak untuk pallet yang dimuat forklift…", "パレットごと入れる棚は何ですか。", ("パレットラック", "パレットラック"), [("カゴ台車", "カゴ台車"), ("コンベヤ", "コンベヤ"), ("ハンドリフト", "ハンドリフト")], "Pallet rack.", "パレットラックです。"),
+         MC("Menyimpan di tempat yang sesuai (ke rak) disebut…", "荷物を決まった場所にしまうことは何ですか。", ("格納", "格納"), [("出庫", "出庫"), ("検品", "検品"), ("搬出", "搬出")], "Kakunou.", "格納です。")]})
+SUBS["bab2"].append(
+ {"id": "b2s4", "pages": [1, 1], "t_id": "Alat Kerja Pengolahan Distribusi", "t_jp": "流通加工の機器",
+  "id_bl": [("h", "Nama dan fungsi alat"), ("ul", [
+     "**ラベルプリンター**: mencetak label (alamat, kode barang).",
+     "**台はかり**: timbangan lantai/meja untuk menimbang barang.",
+     "**梱包機・結束機**: mesin pengikat/pengemas.",
+     "**ピッキングカート**: troli untuk membawa barang yang diambil.",
+     "**ハンディターミナル**: pemindai genggam (sudah dipelajari).",
+     "**フォークリフト・ハンドリフト**: untuk memindahkan pallet (sudah dipelajari)."])],
+  "jp_bl": [("h", "機器の名前とはたらき"), ("ul", [
+     "ラベルプリンターは、ラベルを印刷する機械です。",
+     "台はかりは、荷物の重さをはかる道具です。",
+     "梱包機や結束機は、荷物をしばったり包んだりする機械です。",
+     "ピッキングカートは、集めた荷物を運ぶカートです。"])],
+  "terms": [("ラベルプリンター", "らべるぷりんたー", "printer label", "ラベルプリンターで印刷します。", "Mencetak dengan printer label."),
+            ("台はかり", "だいはかり", "timbangan lantai/meja", "台はかりで重さをはかります。", "Menimbang dengan timbangan."),
+            ("結束機", "けっそくき", "mesin pengikat", "結束機でしばります。", "Mengikat dengan mesin pengikat."),
+            ("ピッキングカート", "ぴっきんぐかーと", "troli picking", "ピッキングカートに荷物をのせます。", "Menaruh barang di troli picking."),
+            ("印刷", "いんさつ", "mencetak", "ラベルを印刷します。", "Mencetak label."),
+            ("はかる", "はかる", "menimbang/mengukur", "重さをはかります。", "Menimbang berat.")],
+  "qs": [MC("Alat untuk menimbang barang…", "荷物の重さをはかる道具は何ですか。", ("台はかり", "台はかり"), [("ラベルプリンター", "ラベルプリンター"), ("結束機", "結束機"), ("パレット", "パレット")], "Timbangan.", "台はかりです。"),
+         MC("Mesin untuk mencetak label…", "ラベルを印刷する機械は何ですか。", ("ラベルプリンター", "ラベルプリンター"), [("台はかり", "台はかり"), ("コンベヤ", "コンベヤ"), ("カゴ台車", "カゴ台車")], "Printer label.", "ラベルプリンターです。"),
+         TF("ピッキングカートは、集めた荷物を運ぶカートです。", True, "Benar.", "集めた荷物を運びます。", "Picking cart adalah troli untuk membawa barang yang sudah dikumpulkan.")]})
+SUBS["bab3"].append(
+ {"id": "b3s4", "pages": [1, 1], "t_id": "Kerja di Gudang Pendingin dan Barang Berat", "t_jp": "冷蔵倉庫・重い荷物の作業",
+  "id_bl": [("h", "Gudang pendingin"), ("ul", [
+     "Pakai **防寒着** dan sarung tangan hangat; jangan terlalu lama di dalam, **istirahat teratur**.",
+     "Lantai bisa **licin** karena es/embun; jalan pelan.",
+     "Pintu gudang pendingin **jangan dibiarkan terbuka** agar suhu terjaga.",
+     "Jangan terkunci di dalam: tahu cara membuka pintu dari dalam."]),
+    ("h", "Barang berat"), ("ul", [
+     "Jika terlalu berat, **minta bantuan** atau pakai alat; jangan memaksa.",
+     "Angkat dengan **pinggang turun**, barang dekat badan; jangan memutar badan sambil mengangkat.",
+     "Jangan menumpuk melebihi tinggi yang ditentukan."])],
+  "jp_bl": [("h", "冷蔵倉庫"), ("ul", [
+     "防寒着と暖かい手袋を使います。長くいないで、定期的に休みます。",
+     "氷や水で床がすべりやすいので、ゆっくり歩きます。",
+     "冷蔵倉庫のドアは開けっぱなしにしません。",
+     "中に閉じこめられないように、中からドアを開ける方法を知っておきます。"]),
+    ("h", "重い荷物"), ("ul", [
+     "重すぎるときは、人にたのむか、道具を使います。",
+     "腰を落として、荷物を体に近づけて持ちます。体をひねらないようにします。"])],
+  "terms": [("すべる", "すべる", "licin/tergelincir", "床がすべります。", "Lantai licin."),
+            ("開けっぱなし", "あけっぱなし", "dibiarkan terbuka", "ドアを開けっぱなしにしません。", "Tidak membiarkan pintu terbuka."),
+            ("ひねる", "ひねる", "memutar (badan)", "体をひねらないでください。", "Jangan memutar badan."),
+            ("休憩", "きゅうけい", "istirahat", "休憩を取ります。", "Beristirahat."),
+            ("手伝い", "てつだい", "bantuan", "手伝いをたのみます。", "Meminta bantuan."),
+            ("閉じこめられる", "とじこめられる", "terkunci di dalam", "閉じこめられないように気をつけます。", "Berhati-hati agar tidak terkunci di dalam.")],
+  "qs": [TF("冷蔵倉庫のドアは、開けっぱなしにしてよいです。", False, "Salah: tutup agar suhu terjaga.", "開けっぱなしにしません。", "Pintu gudang pendingin boleh dibiarkan terbuka."),
+         TF("重すぎる荷物は、無理に一人で持たないで、手伝いをたのみます。", True, "Benar.", "手伝いをたのみます。", "Barang yang terlalu berat jangan dipaksakan sendiri; minta bantuan."),
+         MC("Saat mengangkat barang berat, hindari…", "重い荷物を持つとき、してはいけないことはどれですか。", ("memutar badan", "体をひねること"), [("menurunkan pinggang", "腰を落とすこと"), ("memegang dekat badan", "体に近づけること"), ("minta bantuan", "手伝いをたのむこと")], "Jangan memutar badan.", "体をひねってはいけません。"),
+         MC("Lantai gudang pendingin mudah…", "冷蔵倉庫の床は、どうなりやすいですか。", ("licin", "すべりやすい"), [("lengket", "ベタベタする"), ("panas", "あつくなる"), ("berpasir", "すなだらけ")], "Licin karena es/embun.", "すべりやすいです。")]})
+
+BOOK_PAGES = 16

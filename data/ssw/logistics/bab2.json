@@ -240,6 +240,74 @@
       ]
      }
     }
+   },
+   {
+    "id": "b2s4",
+    "no": 4,
+    "title": {
+     "id": "Alat Kerja Pengolahan Distribusi",
+     "jp": "{流通加工|りゅうつうかこう}の{機器|きき}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Nama dan fungsi alat"
+      },
+      {
+       "ul": [
+        "**ラベルプリンター**: mencetak label (alamat, kode barang).",
+        "**台はかり**: timbangan lantai/meja untuk menimbang barang.",
+        "**梱包機・結束機**: mesin pengikat/pengemas.",
+        "**ピッキングカート**: troli untuk membawa barang yang diambil.",
+        "**ハンディターミナル**: pemindai genggam (sudah dipelajari).",
+        "**フォークリフト・ハンドリフト**: untuk memindahkan pallet (sudah dipelajari)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{機器|きき}の{名前|なまえ}とはたらき"
+      },
+      {
+       "ul": [
+        "ラベルプリンターは、ラベルを{印刷|いんさつ}する{機械|きかい}です。",
+        "{台|だい}はかりは、{荷物|にもつ}の{重|おも}さをはかる{道具|どうぐ}です。",
+        "{梱包|こんぽう}{機|き}や{結束機|けっそくき}は、{荷物|にもつ}をしばったり{包|つつ}んだりする{機械|きかい}です。",
+        "ピッキングカートは、{集|あつ}めた{荷物|にもつ}を{運|はこ}ぶカートです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "ラベルプリンター: mencetak label (alamat, kode barang).",
+      "points": [
+       "台はかり: timbangan lantai/meja untuk menimbang barang.",
+       "梱包機・結束機: mesin pengikat/pengemas.",
+       "ピッキングカート: troli untuk membawa barang yang diambil."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: ラベルプリンター, 台はかり, 結束機, ピッキングカート."
+      ]
+     },
+     "jp": {
+      "core": "ラベルプリンターは、ラベルを{印刷|いんさつ}する{機械|きかい}です。",
+      "points": [
+       "{台|だい}はかりは、{荷物|にもつ}の{重|おも}さをはかる{道具|どうぐ}です。",
+       "{梱包|こんぽう}{機|き}や{結束機|けっそくき}は、{荷物|にもつ}をしばったり{包|つつ}んだりする{機械|きかい}です。",
+       "ピッキングカートは、{集|あつ}めた{荷物|にもつ}を{運|はこ}ぶカートです。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：ラベルプリンター、{台|だい}はかり、{結束機|けっそくき}、ピッキングカート。"
+      ]
+     }
+    }
    }
   ]
  }

@@ -450,6 +450,118 @@
   },
   {
    "id": "lg-029",
+   "kata": "平積み",
+   "kana": "ひらづみ",
+   "romaji": "hirazumi",
+   "arti": "ditumpuk langsung (lantai/pallet)",
+   "cat": "Penyimpanan dan Bongkar-Muat",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "contoh": "{荷物|にもつ}を{平積|ひらづ}みします。",
+   "arti_contoh": "Menumpuk barang langsung.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-030",
+   "kata": "棚",
+   "kana": "たな",
+   "romaji": "tana",
+   "arti": "rak",
+   "cat": "Penyimpanan dan Bongkar-Muat",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "contoh": "{棚|たな}に{入|い}れます。",
+   "arti_contoh": "Memasukkan ke rak.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-031",
+   "kata": "通路",
+   "kana": "つうろ",
+   "romaji": "tsuuro",
+   "arti": "lorong/jalur",
+   "cat": "Penyimpanan dan Bongkar-Muat",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "contoh": "{通路|つうろ}をあけておきます。",
+   "arti_contoh": "Mengosongkan lorong.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-032",
+   "kata": "温度管理",
+   "kana": "おんどかんり",
+   "romaji": "ondokanri",
+   "arti": "pengelolaan suhu",
+   "cat": "Penyimpanan dan Bongkar-Muat",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "contoh": "{温度管理|おんどかんり}をします。",
+   "arti_contoh": "Mengelola suhu.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-033",
+   "kata": "格納",
+   "kana": "かくのう",
+   "romaji": "kakunou",
+   "arti": "menyimpan ke tempatnya",
+   "cat": "Penyimpanan dan Bongkar-Muat",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "contoh": "{棚|たな}に{格納|かくのう}します。",
+   "arti_contoh": "Menyimpan ke rak.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-034",
+   "kata": "常温",
+   "kana": "じょうおん",
+   "romaji": "jouon",
+   "arti": "suhu ruang",
+   "cat": "Penyimpanan dan Bongkar-Muat",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "contoh": "{常温|じょうおん}で{保管|ほかん}します。",
+   "arti_contoh": "Menyimpan pada suhu ruang.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-035",
+   "kata": "冷凍",
+   "kana": "れいとう",
+   "romaji": "reitou",
+   "arti": "beku",
+   "cat": "Penyimpanan dan Bongkar-Muat",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "contoh": "{冷凍|れいとう}の{荷物|にもつ}を{運|はこ}びます。",
+   "arti_contoh": "Membawa barang beku.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-036",
    "kata": "ロケーション",
    "kana": "ろけーしょん",
    "romaji": "rokeeshon",
@@ -465,7 +577,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-030",
+   "id": "lg-037",
    "kata": "固定ロケーション",
    "kana": "こていろけーしょん",
    "romaji": "koteirokeeshon",
@@ -481,7 +593,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-031",
+   "id": "lg-038",
    "kata": "フリーロケーション",
    "kana": "ふりーろけーしょん",
    "romaji": "furiirokeeshon",
@@ -497,7 +609,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-032",
+   "id": "lg-039",
    "kata": "倉庫管理システム",
    "kana": "そうこかんりしすてむ",
    "romaji": "soukokanrishisutemu",
@@ -513,7 +625,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-033",
+   "id": "lg-040",
    "kata": "ハンディターミナル",
    "kana": "はんでぃたーみなる",
    "romaji": "handitaaminaru",
@@ -529,7 +641,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-034",
+   "id": "lg-041",
    "kata": "バーコード",
    "kana": "ばーこーど",
    "romaji": "baakoodo",
@@ -545,7 +657,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-035",
+   "id": "lg-042",
    "kata": "棚卸",
    "kana": "たなおろし",
    "romaji": "tanaoroshi",
@@ -561,7 +673,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-036",
+   "id": "lg-043",
    "kata": "梱包",
    "kana": "こんぽう",
    "romaji": "konpou",
@@ -577,7 +689,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-037",
+   "id": "lg-044",
    "kata": "緩衝材",
    "kana": "かんしょうざい",
    "romaji": "kanshouzai",
@@ -593,7 +705,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-038",
+   "id": "lg-045",
    "kata": "段ボール",
    "kana": "だんぼーる",
    "romaji": "danbooru",
@@ -609,7 +721,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-039",
+   "id": "lg-046",
    "kata": "ストレッチフィルム",
    "kana": "すとれっちふぃるむ",
    "romaji": "sutoretchifirumu",
@@ -625,7 +737,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-040",
+   "id": "lg-047",
    "kata": "ラベル",
    "kana": "らべる",
    "romaji": "raberu",
@@ -641,7 +753,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-041",
+   "id": "lg-048",
    "kata": "流通加工",
    "kana": "りゅうつうかこう",
    "romaji": "ryuutsuukakou",
@@ -657,7 +769,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-042",
+   "id": "lg-049",
    "kata": "報告",
    "kana": "ほうこく",
    "romaji": "houkoku",
@@ -673,7 +785,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-043",
+   "id": "lg-050",
    "kata": "重量",
    "kana": "じゅうりょう",
    "romaji": "juuryou",
@@ -689,7 +801,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-044",
+   "id": "lg-051",
    "kata": "作業量",
    "kana": "さぎょうりょう",
    "romaji": "sagyouryou",
@@ -705,7 +817,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-045",
+   "id": "lg-052",
    "kata": "作業時間",
    "kana": "さぎょうじかん",
    "romaji": "sagyoujikan",
@@ -721,7 +833,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-046",
+   "id": "lg-053",
    "kata": "人数",
    "kana": "にんずう",
    "romaji": "ninzuu",
@@ -737,7 +849,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-047",
+   "id": "lg-054",
    "kata": "所要時間",
    "kana": "しょようじかん",
    "romaji": "shoyoujikan",
@@ -753,7 +865,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-048",
+   "id": "lg-055",
    "kata": "割る",
    "kana": "わる",
    "romaji": "waru",
@@ -769,7 +881,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-049",
+   "id": "lg-056",
    "kata": "終わる",
    "kana": "おわる",
    "romaji": "owaru",
@@ -785,7 +897,103 @@
    "halaman": 1
   },
   {
-   "id": "lg-050",
+   "id": "lg-057",
+   "kata": "ラベルプリンター",
+   "kana": "らべるぷりんたー",
+   "romaji": "raberupurintaa",
+   "arti": "printer label",
+   "cat": "Pengolahan Distribusi dan Manajemen Kerja",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "ラベルプリンターで{印刷|いんさつ}します。",
+   "arti_contoh": "Mencetak dengan printer label.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-058",
+   "kata": "台はかり",
+   "kana": "だいはかり",
+   "romaji": "daihakari",
+   "arti": "timbangan lantai/meja",
+   "cat": "Pengolahan Distribusi dan Manajemen Kerja",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "{台|だい}はかりで{重|おも}さをはかります。",
+   "arti_contoh": "Menimbang dengan timbangan.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-059",
+   "kata": "結束機",
+   "kana": "けっそくき",
+   "romaji": "kessokuki",
+   "arti": "mesin pengikat",
+   "cat": "Pengolahan Distribusi dan Manajemen Kerja",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "{結束機|けっそくき}でしばります。",
+   "arti_contoh": "Mengikat dengan mesin pengikat.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-060",
+   "kata": "ピッキングカート",
+   "kana": "ぴっきんぐかーと",
+   "romaji": "pikkingukaato",
+   "arti": "troli picking",
+   "cat": "Pengolahan Distribusi dan Manajemen Kerja",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "ピッキングカートに{荷物|にもつ}をのせます。",
+   "arti_contoh": "Menaruh barang di troli picking.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-061",
+   "kata": "印刷",
+   "kana": "いんさつ",
+   "romaji": "insatsu",
+   "arti": "mencetak",
+   "cat": "Pengolahan Distribusi dan Manajemen Kerja",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "ラベルを{印刷|いんさつ}します。",
+   "arti_contoh": "Mencetak label.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-062",
+   "kata": "はかる",
+   "kana": "はかる",
+   "romaji": "hakaru",
+   "arti": "menimbang/mengukur",
+   "cat": "Pengolahan Distribusi dan Manajemen Kerja",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "contoh": "{重|おも}さをはかります。",
+   "arti_contoh": "Menimbang berat.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-063",
    "kata": "健康",
    "kana": "けんこう",
    "romaji": "kenkou",
@@ -801,7 +1009,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-051",
+   "id": "lg-064",
    "kata": "保護具",
    "kana": "ほごぐ",
    "romaji": "hogogu",
@@ -817,7 +1025,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-052",
+   "id": "lg-065",
    "kata": "安全靴",
    "kana": "あんぜんぐつ",
    "romaji": "anzengutsu",
@@ -833,7 +1041,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-053",
+   "id": "lg-066",
    "kata": "ヘルメット",
    "kana": "へるめっと",
    "romaji": "herumetto",
@@ -849,7 +1057,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-054",
+   "id": "lg-067",
    "kata": "熱中症",
    "kana": "ねっちゅうしょう",
    "romaji": "netchuushou",
@@ -865,7 +1073,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-055",
+   "id": "lg-068",
    "kata": "腰痛",
    "kana": "ようつう",
    "romaji": "youtsuu",
@@ -881,7 +1089,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-056",
+   "id": "lg-069",
    "kata": "防寒着",
    "kana": "ぼうかんぎ",
    "romaji": "boukangi",
@@ -897,7 +1105,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-057",
+   "id": "lg-070",
    "kata": "危険",
    "kana": "きけん",
    "romaji": "kiken",
@@ -913,7 +1121,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-058",
+   "id": "lg-071",
    "kata": "労災",
    "kana": "ろうさい",
    "romaji": "rousai",
@@ -929,7 +1137,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-059",
+   "id": "lg-072",
    "kata": "転倒",
    "kana": "てんとう",
    "romaji": "tentou",
@@ -945,7 +1153,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-060",
+   "id": "lg-073",
    "kata": "挟まれ",
    "kana": "はさまれ",
    "romaji": "hasamare",
@@ -961,7 +1169,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-061",
+   "id": "lg-074",
    "kata": "ヒヤリハット",
    "kana": "ひやりはっと",
    "romaji": "hiyarihatto",
@@ -977,7 +1185,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-062",
+   "id": "lg-075",
    "kata": "技能講習",
    "kana": "ぎのうこうしゅう",
    "romaji": "ginoukoushuu",
@@ -993,7 +1201,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-063",
+   "id": "lg-076",
    "kata": "特別教育",
    "kana": "とくべつきょういく",
    "romaji": "tokubetsukyouiku",
@@ -1009,7 +1217,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-064",
+   "id": "lg-077",
    "kata": "運転",
    "kana": "うんてん",
    "romaji": "unten",
@@ -1025,7 +1233,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-065",
+   "id": "lg-078",
    "kata": "非常口",
    "kana": "ひじょうぐち",
    "romaji": "hijouguchi",
@@ -1041,7 +1249,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-066",
+   "id": "lg-079",
    "kata": "消火器",
    "kana": "しょうかき",
    "romaji": "shoukaki",
@@ -1057,7 +1265,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-067",
+   "id": "lg-080",
    "kata": "避難",
    "kana": "ひなん",
    "romaji": "hinan",
@@ -1073,7 +1281,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-068",
+   "id": "lg-081",
    "kata": "作業手順書",
    "kana": "さぎょうてじゅんしょ",
    "romaji": "sagyoutejunsho",
@@ -1089,7 +1297,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-069",
+   "id": "lg-082",
    "kata": "安全色",
    "kana": "あんぜんしょく",
    "romaji": "anzenshoku",
@@ -1105,7 +1313,7 @@
    "halaman": 1
   },
   {
-   "id": "lg-070",
+   "id": "lg-083",
    "kata": "整理整頓",
    "kana": "せいりせいとん",
    "romaji": "seiriseiton",
@@ -1117,6 +1325,102 @@
    ],
    "contoh": "{整理整頓|せいりせいとん}をします。",
    "arti_contoh": "Merapikan dan menata.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-084",
+   "kata": "すべる",
+   "kana": "すべる",
+   "romaji": "suberu",
+   "arti": "licin/tergelincir",
+   "cat": "Keselamatan dan Kesehatan Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "{床|とこ}がすべります。",
+   "arti_contoh": "Lantai licin.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-085",
+   "kata": "開けっぱなし",
+   "kana": "あけっぱなし",
+   "romaji": "akeppanashi",
+   "arti": "dibiarkan terbuka",
+   "cat": "Keselamatan dan Kesehatan Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "ドアを{開|あ}けっぱなしにしません。",
+   "arti_contoh": "Tidak membiarkan pintu terbuka.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-086",
+   "kata": "ひねる",
+   "kana": "ひねる",
+   "romaji": "hineru",
+   "arti": "memutar (badan)",
+   "cat": "Keselamatan dan Kesehatan Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "{体|からだ}をひねらないでください。",
+   "arti_contoh": "Jangan memutar badan.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-087",
+   "kata": "休憩",
+   "kana": "きゅうけい",
+   "romaji": "kyuukei",
+   "arti": "istirahat",
+   "cat": "Keselamatan dan Kesehatan Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "{休憩|きゅうけい}を{取|と}ります。",
+   "arti_contoh": "Beristirahat.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-088",
+   "kata": "手伝い",
+   "kana": "てつだい",
+   "romaji": "tetsudai",
+   "arti": "bantuan",
+   "cat": "Keselamatan dan Kesehatan Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "{手伝|てつだ}いをたのみます。",
+   "arti_contoh": "Meminta bantuan.",
+   "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
+   "halaman": 1
+  },
+  {
+   "id": "lg-089",
+   "kata": "閉じこめられる",
+   "kana": "とじこめられる",
+   "romaji": "tojikomerareru",
+   "arti": "terkunci di dalam",
+   "cat": "Keselamatan dan Kesehatan Kerja",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "contoh": "{閉|と}じこめられないように{気|き}をつけます。",
+   "arti_contoh": "Berhati-hati agar tidak terkunci di dalam.",
    "sumber": "物流倉庫分野 試験基準 国土交通省 2026-10-26 (diringkas Shirose)",
    "halaman": 1
   }

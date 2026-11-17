@@ -19,7 +19,7 @@ BAB = [
 ]
 SUBS = {}
 SUBS["bab1"] = [
- {"id": "b1s1", "pages": [1, 1], "t_id": "Apa Itu Pengolahan Antara (中間処理)", "t_jp": "中間処理とは",
+ {"id": "b1s1", "pages": [7, 8], "t_id": "Apa Itu Pengolahan Antara (中間処理)", "t_jp": "中間処理とは",
   "id_bl": [("h", "Definisi"), ("ul", [
      "Satu-satunya kategori pekerjaan: **廃棄物処分業（中間処理）**.",
      "Pekerjaannya: mengolah limbah dari **rumah tangga dan kegiatan usaha** melalui **中間処理** untuk **減量化 (mengurangi berat), 減容化 (mengurangi volume), 安定化 (menstabilkan), 安全化 (membuat aman)**.",
@@ -40,7 +40,7 @@ SUBS["bab1"] = [
          TF("中間処理の目的に、減量化と減容化は入りません。", False, "Salah: termasuk.", "入ります。", "Tujuan pengolahan antara tidak mencakup pengurangan berat dan volume."),
          MC("Limbah dari rumah tangga terutama disebut…", "おもに家庭から出る廃棄物は何ですか。", ("一般廃棄物", "一般廃棄物"), [("産業廃棄物", "産業廃棄物"), ("危険廃棄物", "危険廃棄物"), ("海の廃棄物", "海の廃棄物")], "Limbah umum.", "一般廃棄物です。"),
          MC("Mengurangi volume limbah disebut…", "廃棄物の体積を小さくすることは何ですか。", ("減容化", "減容化"), [("減量化", "減量化"), ("安定化", "安定化"), ("安全化", "安全化")], "減容化.", "減容化です。")]},
- {"id": "b1s2", "pages": [1, 1], "t_id": "Alur Kerja dan Cara Pengolahan", "t_jp": "仕事の流れと処理方法",
+ {"id": "b1s2", "pages": [7, 9], "t_id": "Alur Kerja dan Cara Pengolahan", "t_jp": "仕事の流れと処理方法",
   "id_bl": [("h", "Alur kerja"), ("ul", [
      "Menurut kebijakan resmi, pengolahan antara mencakup beberapa tahap: **受入 (penerimaan) → 選別 (pemilahan) → 処分 (pengolahan) → 搬出 (pengeluaran)**.",
      "Pekerja perlu memahami seluruh rangkaian dan bekerja aman secara mandiri."]),
@@ -73,7 +73,7 @@ SUBS["bab1"] = [
          MC("Memadatkan limbah agar volumenya kecil…", "ごみをかためて体積を小さくする処理は何ですか。", ("圧縮", "圧縮"), [("選別", "選別"), ("受入", "受入"), ("脱水", "脱水")], "Pemadatan.", "圧縮です。")]},
 ]
 SUBS["bab2"] = [
- {"id": "b2s1", "pages": [1, 1], "t_id": "Jalur Karier dan Bahasa Jepang", "t_jp": "キャリアステップと日本語",
+ {"id": "b2s1", "pages": [1, 2], "t_id": "Jalur Karier dan Bahasa Jepang", "t_jp": "キャリアステップと日本語",
   "id_bl": [("h", "Jalur karier (ringkasan program resmi)"), ("ul", [
      "**育成就労 (ikusei shuro)** tahun ke-1 sampai 3, lalu pindah ke **特定技能1号** pada tahun ke-4 sampai 8.",
      "Ujian: **育成就労評価試験（初級）** lalu **特定技能1号評価試験**.",
@@ -96,7 +96,7 @@ SUBS["bab2"] = [
          MC("Tingkat bahasa saat mulai ikusei shuro…", "育成就労の開始時に必要な日本語の水準はどれですか。", ("A1 (N5)", "A1（N5）"), [("A2.2 (N4)", "A2.2（N4）"), ("B1 (N3)", "B1（N3）"), ("C2", "C2")], "A1 / N5.", "A1（N5）です。")]},
 ]
 SUBS["bab3"] = [
- {"id": "b3s1", "pages": [1, 1], "t_id": "Keselamatan Kerja di Pengolahan Limbah", "t_jp": "廃棄物処理の安全",
+ {"id": "b3s1", "pages": [1, 2], "t_id": "Keselamatan Kerja di Pengolahan Limbah", "t_jp": "廃棄物処理の安全",
   "id_bl": [("h", "Dasar keselamatan"), ("ul", [
      "Ikuti **安全・衛生教育**; pakai **保護具** (helm, sarung tangan, masker, sepatu pengaman, kacamata).",
      "Waspada **benda tajam** dalam limbah, **terjepit mesin**, **debu**, dan **kebakaran**. Jangan menaruh tangan ke mesin penghancur yang berjalan.",
@@ -117,7 +117,7 @@ SUBS["bab3"] = [
          TF("機械を掃除するときは、先に電源を切ります。", True, "Benar.", "先に止めます。", "Saat membersihkan mesin, matikan listrik terlebih dulu."),
          MC("Apa yang dipakai untuk mencegah menghirup debu?", "粉じんを吸わないために、何をつけますか。", ("マスク", "マスク"), [("サングラス", "サングラス"), ("帽子だけ", "帽子だけ"), ("何もつけない", "何もつけない")], "Masker.", "マスクです。"),
          MC("Jika menemukan kelainan pada mesin, lakukan…", "機械の異常を見つけたら、どうしますか。", ("laporkan ke atasan", "上の人に報告する"), [("abaikan", "気にしない"), ("perbaiki sembunyi-sembunyi", "こっそり直す"), ("tetap dijalankan", "そのまま動かす")], "Lapor.", "報告します。")]},
- {"id": "b3s2", "pages": [1, 1], "t_id": "Pelatihan dan Kualifikasi yang Berguna", "t_jp": "講習と資格",
+ {"id": "b3s2", "pages": [1, 2], "t_id": "Pelatihan dan Kualifikasi yang Berguna", "t_jp": "講習と資格",
   "id_bl": [("h", "Menurut program karier resmi"), ("ul", [
      "Sejak tahun 1: **産廃処理実務者研修会 基礎コース**, **一般廃棄物（ごみ）実務管理者講習**, serta **フォークリフト**, **玉掛け**, **床上操作式クレーン**.",
      "Tahun ke-2: **産廃処理 現場業務コース（中間処理）**.",
@@ -138,3 +138,5 @@ SUBS["bab3"] = [
          MC("Pelatihan kepala regu dan K3 dimulai tahun ke…", "職長・安全衛生責任者教育は何年目からですか。", ("ke-4", "4年目"), [("ke-1", "1年目"), ("ke-2", "2年目"), ("ke-7", "7年目")], "Tahun ke-4.", "4年目からです。"),
          MC("Kualifikasi yang berkaitan dengan crane…", "クレーンの仕事に関係する資格はどれですか。", ("玉掛け", "玉掛け"), [("料理", "調理"), ("英検", "英検"), ("泳ぎ", "水泳")], "Tamakake.", "玉掛けです。")]},
 ]
+
+BOOK_PAGES = 12
