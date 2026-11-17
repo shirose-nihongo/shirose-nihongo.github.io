@@ -69,3 +69,7 @@ Modul lama (7 bab/31 subbab buatan sendiri) DIHAPUS dan diganti dengan struktur 
 - Belum: koleksi ilustrasi lengkap (36 gambar) sebagai soal bergambar; furigana pada kalimat contoh; Indonesian penerjemahan video JAPIA.
 - +117 soal bergambar (20 gambar dari JICA イラスト集 versi tanpa label; grup bab4-qimg-NN, rev=true agar tidak masuk ujian lengkap). Skrip: tools/ssw/automaint_img2.py (jalankan setelah automaint_jica_build.py).
 - Halaman Indonesia (assets/.../id) kini meniru tata letak buku asli: halaman PDF asli dengan teks Jepang pada sel bernomor diganti Indonesia (30 hal.), tabel kata kerja bab 3 (hal. 39–42) bergaya tabel asli, sisanya tata letak daftar. Skrip: tools/ssw/automaint_overlay.py.
+
+## 2026-11-17 — modul manufaktur buatan sendiri dihapus (atas permintaan pemilik)
+- Dihapus: `industrial-mfg` (Dasar Pabrik) dan `mfg-machine-metal` (Mesin & Logam) — data, aset, entri bidang, dan spesifikasi ujiannya. Dokumen lama di Firestore untuk slug itu diabaikan.
+- Yang tetap: tiga buku resmi JAIM (`jaim-machine-metal`, `jaim-elec-electronic`, `jaim-metal-surface`), kini tampil sebagai bidang sendiri. Sakelar akses guru "Industrial Mfg" (kunci lama `industrial-mfg`) tetap berlaku untuk ketiganya selama bidang itu belum diatur sendiri-sendiri.

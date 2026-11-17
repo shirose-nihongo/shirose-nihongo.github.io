@@ -75,15 +75,15 @@ export const DEFAULT_BIDANG = [
   { slug: "livestock", nama: "Livestock (Peternakan)", jp: "畜産業", aktif: true, urut: 8, tema: "farm", hasContent: true },
   { slug: "fishery", nama: "Fishery (Perikanan)", jp: "漁業", aktif: true, urut: 9, tema: "fishery", hasContent: true },
   { slug: "auto-maintenance", nama: "Auto Maintenance (Perawatan Mobil)", jp: "自動車整備", aktif: true, urut: 10, tema: "automobile", hasContent: true },
-  { slug: "industrial-mfg", nama: "Industrial Manufacturing (Dasar Pabrik)", jp: "工業製品製造業", aktif: true, urut: 11, tema: "generic", hasContent: true },
-  { slug: "mfg-machine-metal", nama: "Machine Metal (Mesin & Logam)", jp: "機械金属加工", label: "⚙️ Mesin & Logam ›", induk: "industrial-mfg", aktif: true, urut: 11.1, tema: "generic", hasContent: true },
-  { slug: "jaim-machine-metal", nama: "機械金属加工 — Buku Resmi JAIM", jp: "機械金属加工", label: "📘 Mesin & Logam (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.2, tema: "generic", hasContent: true },
-  { slug: "jaim-elec-electronic", nama: "電気電子機器組立て — Buku Resmi JAIM", jp: "電気電子機器組立て", label: "📘 Elektrik & Elektronik (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.3, tema: "generic", hasContent: true },
-  { slug: "jaim-metal-surface", nama: "金属表面処理 — Buku Resmi JAIM", jp: "金属表面処理", label: "📘 Perlakuan Permukaan Logam (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.4, tema: "generic", hasContent: true },
+  { slug: "jaim-machine-metal", nama: "機械金属加工 — Buku Resmi JAIM", jp: "機械金属加工", label: "📘 Mesin & Logam (Resmi) ›", aksesDari: "industrial-mfg", aktif: true, urut: 11, tema: "generic", hasContent: true },
+  { slug: "jaim-elec-electronic", nama: "電気電子機器組立て — Buku Resmi JAIM", jp: "電気電子機器組立て", label: "📘 Elektrik & Elektronik (Resmi) ›", aksesDari: "industrial-mfg", aktif: true, urut: 11.1, tema: "generic", hasContent: true },
+  { slug: "jaim-metal-surface", nama: "金属表面処理 — Buku Resmi JAIM", jp: "金属表面処理", label: "📘 Perlakuan Permukaan Logam (Resmi) ›", aksesDari: "industrial-mfg", aktif: true, urut: 11.2, tema: "generic", hasContent: true },
   { slug: "wood-industry", nama: "Wood Industry (Industri Kayu)", jp: "木材産業", aktif: true, urut: 12, tema: "generic", hasContent: true },
   { slug: "auto-transport", nama: "Automobile Transportation (Truk & Bus)", jp: "自動車運送業（トラック・バス）", aktif: true, urut: 13, tema: "generic", hasContent: true },
 ];
 
+/** Bidang buatan sendiri yang sudah dihapus (abaikan dokumen lama di Firestore). */
+const SLUG_DIHAPUS = new Set(["industrial-mfg", "mfg-machine-metal"]);
 let _bidang = null;
 /** Gabungan: bawaan + dokumen Firestore (Firestore menang). Dokumen yang ada di Firestore tapi tidak di bawaan ikut tampil. */
 export async function loadBidang(force = false) {
@@ -100,6 +100,7 @@ export async function loadBidang(force = false) {
   } catch (e) { console.warn("ssw: gagal memuat konfigurasi bidang:", e.message || e); }
   const map = new Map(DEFAULT_BIDANG.map(b => [b.slug, { ...b }]));
   for (const r of (remote || [])) {
+    if (SLUG_DIHAPUS.has(r.slug)) continue;
     const base = map.get(r.slug) || { slug: r.slug, tema: "generic", urut: 99 };
     map.set(r.slug, { ...base, ...r });
   }
@@ -177,7 +178,7 @@ export function sswAllowed(slug) {
     return typeof k === "boolean" ? k : undefined;
   };
   let r = cek(slug);
-  if (r === undefined) { const ind = (DEFAULT_BIDANG.find(b => b.slug === slug) || {}).induk; if (ind) r = cek(ind); }
+  if (r === undefined) { const _b = DEFAULT_BIDANG.find(b => b.slug === slug) || {}, ind = _b.induk || _b.aksesDari; if (ind) r = cek(ind); }
   return typeof r === "boolean" ? r : (slug === BIDANG_BAWAAN_BUKA);
 }
 /** Poin: subbab dibaca ×10, kartu sudah dikuasai ×2 (+3 bila "kuasa"), skor terbaik tiap kuis ×0.5. */
@@ -344,13 +345,11 @@ export const EXAM_SPEC = {
   "kaigo-jp": { n: 45, img: 4, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
   "fishery": { n: 30, img: 0, mb: 12, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
   "auto-maintenance": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Info resmi (MLIT): ujian tulis 30 soal ○× / 60 menit, lulus ≥65%; ujian praktik 3 tugas / 20 menit, lulus ≥60%." },
-  "industrial-mfg": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Materi dasar bersama 工業製品製造業: keselamatan, mutu, pengukuran, bahan. Syarat resmi 1号 (METI/MOJ): ujian 製造分野特定技能1号評価試験 lulus bila tulis ≥65 dan praktik ≥60 dari 100 (2号: ≥60); atau 技能検定3級. Lainnya: lulus ujian keterampilan (製造分野特定技能1号評価試験 / 技能検定3級) + bahasa JFT-Basic A2.2 atau JLPT N4+. 2号: JLPT N3+ dan pengalaman kerja ≥3 tahun." },
   "jaim-machine-metal": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
   "jaim-elec-electronic": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
   "jaim-metal-surface": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
   "wood-industry": { n: 35, img: 0, mb: 32, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Format resmi 木材産業特定技能1号測定試験: CBT, 60 menit, 35 soal (tulis 32 soal ○× + praktik 3 soal pertimbangan); huruf kanji berfurigana." },
   "auto-transport": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi; jumlah soal resmi tidak diverifikasi). Soal ditulis Shirose dari teks belajar resmi JTA (truk) dan Asosiasi Bus Jepang (bus)." },
-  "mfg-machine-metal": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Kategori 機械金属加工 (MOJ): 1号 dan 2号 tersedia; ujian 1号 lulus tulis ≥65 dan praktik ≥60 (2号 ≥60). Syarat bahasa 1号: JFT-Basic A2.2 / JLPT N4+; 2号: JLPT N3+ dan pengalaman ≥3 tahun." },
 };
 /** 10 ujian penuh = sampel deterministik dari seluruh bank soal; komposisi mengikuti ujian resmi bidangnya. */
 export function fullQuizzes(pack, perQuizArg, count = 10) {
