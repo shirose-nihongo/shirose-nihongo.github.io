@@ -1614,3 +1614,45 @@ export async function claimMisi(misiId, level = "n5") {
 }
 
 export { db, auth };
+
+/* ========== SAVE DATA (tombol 💾 Simpan) ==========
+ * Snapshot di siswa/{uid}/save/main (sub-koleksi milik siswa): XP & level tiap level JLPT/JFT, item, pakaian, tema/background, font.
+ * Pulihkan hanya MENAIKKAN (XP = yang terbesar, item = gabungan) — tidak pernah menurunkan data yang ada. */
+export async function saveSaveData(ui = {}) {
+  if (!currentUser) throw new Error("Masuk dulu");
+  const uid = currentUser.uid, gami = {};
+  const snaps = await Promise.all(WALLET_LVLS.map(l => getDoc(doc(db, "siswa", uid, "gami", l)).catch(() => null)));
+  let mx = 1;
+  snaps.forEach((s, i) => { if (s && s.exists()) { const d = s.data(); const lv = d.level_karakter || 1; mx = Math.max(mx, lv); gami[WALLET_LVLS[i]] = { xp: d.xp || 0, level_karakter: lv, streak: d.streak || 0 }; } });
+  const sd = currentSiswaDoc || {}, k = sd.karakter || {};
+  const data = { savedAt: Date.now(), ts: serverTimestamp(), levelAkun: mx, gami,
+    karakter: { equipped: k.equipped || {}, inventory: k.inventory || [], skinTone: k.skinTone || null, hairColor: k.hairColor || null }, ui };
+  await setDoc(doc(db, "siswa", uid, "save", "main"), data);
+  _lvSet(mx);
+  return { ...data, ts: null };
+}
+export async function getSaveData() {
+  if (!currentUser) return null;
+  const s = await getDoc(doc(db, "siswa", currentUser.uid, "save", "main"));
+  if (!s.exists()) return null;
+  const d = s.data(); d.ts = null; return d;
+}
+export async function restoreSaveData(d) {
+  if (!currentUser) throw new Error("Masuk dulu");
+  if (!d || typeof d !== "object") throw new Error("Data save tidak valid");
+  const uid = currentUser.uid; let naik = 0;
+  for (const [lvl, g] of Object.entries(d.gami || {})) {
+    if (!WALLET_LVLS.includes(lvl) || !g || typeof g.xp !== "number") continue;
+    const ref = doc(db, "siswa", uid, "gami", lvl), cur = await getDoc(ref);
+    const curXp = cur.exists() ? (cur.data().xp || 0) : 0;
+    if (g.xp > curXp) { await setDoc(ref, { xp: g.xp, level_karakter: Math.floor(Math.sqrt(g.xp / 50)) + 1 }, { merge: true }); naik++; }
+  }
+  const k = d.karakter || {}, sd = currentSiswaDoc || {}, cur = sd.karakter || {};
+  const inv = [...new Set([...(cur.inventory || []), ...(Array.isArray(k.inventory) ? k.inventory : [])])];
+  const upd = { "karakter.inventory": inv };
+  if (k.equipped && Object.keys(cur.equipped || {}).length === 0) upd["karakter.equipped"] = k.equipped;
+  await updateDoc(doc(db, "siswa", uid), upd);
+  if (currentSiswaDoc) { currentSiswaDoc.karakter = { ...(currentSiswaDoc.karakter || {}), inventory: inv, ...(upd["karakter.equipped"] ? { equipped: k.equipped } : {}) }; }
+  _lvSet(d.levelAkun || 1);
+  return { xpDinaikkan: naik, item: inv.length };
+}
