@@ -948,6 +948,8 @@ export async function listRangkuman(bidang) {
   return out.sort((a,b) => (b.updatedMs||0) - (a.updatedMs||0));
 }
 
+export function idRangkuman(jp, bidang = "jlpt"){ return (bidang === "jlpt" ? "" : bidang + "__") + _safeRangId(jp); }
+
 export async function hapusRangkuman(id) {
   if (!currentUser) return;
   const uid = currentUser.uid;
