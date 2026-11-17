@@ -491,8 +491,8 @@ export async function equipItem(kategori, itemId) {
 function _gLocal() { try { return JSON.parse(localStorage.getItem("shirose-gacha:" + (currentUser && currentUser.uid)) || "null") || {}; } catch (e) { return {}; } }
 function _gSave(o) { try { localStorage.setItem("shirose-gacha:" + currentUser.uid, JSON.stringify(o)); } catch (e) {} }
 function _gSpent() { return Number(_gLocal().spent) || 0; }
-export function gachaSpend(price) { const o = _gLocal(); o.spent = (Number(o.spent) || 0) + price; _gSave(o); }
-export function gachaRefund(price) { const o = _gLocal(); o.spent = Math.max(0, (Number(o.spent) || 0) - price); _gSave(o); }
+export function gachaSpend(price) { const o = _gLocal(); o.spent = (Number(o.spent) || 0) + price; o.t = Date.now(); _gSave(o); }
+export function gachaRefund(price) { const o = _gLocal(); o.spent = Math.max(0, (Number(o.spent) || 0) - price); o.t = Date.now(); _gSave(o); }
 /* Saldo dasar dompet (sebelum dikurangi belanja gacha lokal) disimpan di perangkat → saat server tak terjangkau (kuota/offline) saldo tetap benar. */
 function _baseGet() { try { const v = JSON.parse(localStorage.getItem("shirose-walletbase:" + (currentUser && currentUser.uid)) || "null"); return v && typeof v.koin === "number" ? v.koin : null; } catch (e) { return null; } }
 function _baseSet(k) { try { if (currentUser && typeof k === "number") localStorage.setItem("shirose-walletbase:" + currentUser.uid, JSON.stringify({ koin: k, t: Date.now() })); } catch (e) {} }
@@ -561,13 +561,34 @@ export async function getGachaState() {
 /* Simpan status & inventaris gacha di perangkat (localStorage). Barang toko ikut dimasukkan ke inventaris karakter di memori. */
 export async function saveGachaState(state, shopIds) {
   if (!currentUser) throw new Error("Belum login");
-  const o = _gLocal(); o.sinceEpic = state.sinceEpic || 0; o.sinceLegend = state.sinceLegend || 0; o.inv = state.inv || []; _gSave(o);
+  const o = _gLocal(); o.sinceEpic = state.sinceEpic || 0; o.sinceLegend = state.sinceLegend || 0; o.inv = state.inv || []; o.t = Date.now(); _gSave(o);
   if (!(shopIds && shopIds.length)) await _gachaInvKeAkun(o.inv);   // hadiah tema saja: tetap disimpan ke akun
   if (shopIds && shopIds.length && currentSiswaDoc) {
     currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
     currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), ...shopIds]));
     try { await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.inventory": currentSiswaDoc.karakter.inventory, "karakter.gachaInv": o.inv }); } catch (e) { console.warn("simpan hadiah gacha ke akun gagal (tersimpan di perangkat):", e.message); }
   }
+}
+
+/* ===== SAVE GACHA (file) — simpan di perangkat + Download Save / Muat Save. Yang dipakai selalu save TERBARU (cap waktu `t`). ===== */
+export function gachaSaveInfo() { const o = _gLocal(); let dl = 0; try { dl = Number(localStorage.getItem("shirose-gacha-dl:" + (currentUser && currentUser.uid))) || 0; } catch (e) {} return { t: Number(o.t) || 0, dl, n: (o.inv || []).length }; }
+export function gachaExportSave() {
+  if (!currentUser) throw new Error("Belum login");
+  const o = _gLocal(), t = Number(o.t) || 0;
+  try { localStorage.setItem("shirose-gacha-dl:" + currentUser.uid, String(Date.now())); } catch (e) {}
+  return { app: "shirose-gacha-save", v: 1, uid: currentUser.uid, email: currentUser.email || "", nama: (currentSiswaDoc && currentSiswaDoc.nama) || "", t, exportedAt: Date.now(),
+    sinceEpic: o.sinceEpic || 0, sinceLegend: o.sinceLegend || 0, inv: o.inv || [], spent: Number(o.spent) || 0 };
+}
+/* Hasil: {status:"dipakai"|"lebih-lama"|"sama", ...}. Save file dipakai hanya kalau lebih baru dari save di perangkat. */
+export function gachaImportSave(d) {
+  if (!currentUser) throw new Error("Belum login");
+  if (!d || d.app !== "shirose-gacha-save" || !Array.isArray(d.inv)) throw new Error("Ini bukan file Save Gacha SHIROSE");
+  if (d.uid !== currentUser.uid) throw new Error("Save ini milik akun lain" + (d.nama ? " (" + d.nama + ")" : "") + ", tidak bisa dipakai di akun ini");
+  const o = _gLocal(), tl = Number(o.t) || 0, tf = Number(d.t) || 0;
+  if (tf < tl) return { status: "lebih-lama", tFile: tf, tLokal: tl };
+  if (tf === tl && (o.inv || []).length >= d.inv.length) return { status: "sama", tFile: tf, tLokal: tl };
+  o.inv = d.inv.filter(x => typeof x === "string"); o.sinceEpic = Number(d.sinceEpic) || 0; o.sinceLegend = Number(d.sinceLegend) || 0; o.spent = Math.max(0, Number(d.spent) || 0); o.t = tf; _gSave(o);
+  return { status: "dipakai", n: o.inv.length, tFile: tf, tLokal: tl };
 }
 /* Hadiah gacha di perangkat (id barang toko + tema). Dipakai agar hadiah tak hilang dari "dimiliki". */
 async function _gachaInvKeAkun(inv) { try { if (currentSiswaDoc) { currentSiswaDoc.karakter = currentSiswaDoc.karakter || {}; currentSiswaDoc.karakter.gachaInv = inv; } await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.gachaInv": inv }); } catch (e) {} }

@@ -41,6 +41,7 @@ async function render() {
       return `<div class="ga-card" style="padding:10px;border-radius:12px;border:1px solid ${RAR[r][1]};opacity:${own ? 1 : .92};${own ? "" : "filter:saturate(.8);"}">${gambarItem(i, r, 84, true)}<div style="font-weight:700;font-size:13px;margin:4px 0;">${esc(x.nama || i)}</div><div style="font-size:11px;color:var(--gray);">${th ? "Tema tampilan" : esc(x.kat || "Barang shop")}${x.harga ? " · 🪙 " + x.harga.toLocaleString("id-ID") : ""}</div><div style="font-size:11px;margin-top:3px;">≈ ${fmt(pctOf[r] / a.length)} per tarikan</div>${own ? '<div style="font-size:11px;color:#3cc878;margin-top:3px;">✓ Dimiliki</div>' : ""}${th ? `<button class="btn ghost" style="margin-top:6px;padding:4px 8px;font-size:12px;" onclick="SHIROSE_THEME.preview('${i.slice(6)}')">👀 Pratinjau</button>` : ""}</div>`; }).join("") + "</div></details>"; }).join("");
   const hasil = last ? `<div class="panel" style="margin-top:12px;"><h3>Hasil tarikan</h3>${last.results.map(x => `<div style="padding:6px 0;border-bottom:1px solid var(--border,#333);color:${RAR[x.rarity][1]};"><b>${RAR[x.rarity][0]}</b> · ${esc(NAMA[x.item] || x.item)}${x.dup ? ' <small style="color:var(--gray);">(duplikat, tidak ada pengembalian)</small>' : " ✨ baru!"}</div>`).join("")}</div>` : "";
   const aktif = true;
+  const _si = FB.gachaSaveInfo ? FB.gachaSaveInfo() : { t: 0, dl: 0, n: 0 }, _fmtT = (t) => new Date(t).toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" });
   return `<div class="panel"><h1>🎰 Gacha</h1>
     <p>Saldo: <b>${(st.gami?.koin || 0).toLocaleString("id-ID")} 🪙</b> (dompet satu untuk semua fitur)</p>
     <p style="font-size:12px;color:var(--gray);">Pity: epic+ dijamin ≤ ${CONFIG.PITY_EPIC} tarikan (sekarang ${g.sinceEpic || 0}) · legendary+ dijamin ≤ ${CONFIG.PITY_LEGENDARY} (sekarang ${g.sinceLegend || 0}). Hasil diundi di perangkat ini.</p>
@@ -52,6 +53,10 @@ async function render() {
       <span>sebanyak</span><select id="ga-count">${[3, 5, 10, 20, 50, 100, 200].map(v => `<option value="${v}">${v} kali</option>`).join("")}</select>
       <button class="btn ghost" ${busy ? "disabled" : ""} onclick="GACHA.auto()">▶ Mulai</button>
       <small style="color:var(--gray);flex-basis:100%;">Setiap putaran tetap menampilkan slot, bisa dipercepat 1×/2×/4×/8× atau Stop kapan saja. Berhenti sendiri kalau koin tidak cukup; ringkasan di akhir.</small></div>
+    <div style="margin:10px 0;padding:12px;border:1px solid var(--border,#444);border-radius:12px;"><b>💾 Save Gacha</b>
+      <p style="font-size:12px;color:var(--gray);margin:6px 0;">Itemmu tersimpan di perangkat ini. <b>Download Save</b> untuk cadangan; kalau ganti HP/browser atau data hilang, <b>Muat Save</b> — yang dipakai selalu save yang paling baru.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="btn" onclick="GACHA.unduhSave()">⬇ Download Save</button><button class="btn ghost" onclick="GACHA.muatSave()">📂 Muat Save</button><input type="file" id="ga-file" accept=".json,application/json" style="display:none" onchange="GACHA.bacaSave(this)"></div>
+      <small style="display:block;margin-top:6px;color:${_si.t > _si.dl ? "#ffb703" : "var(--gray)"};">Save di perangkat: ${_si.t ? _fmtT(_si.t) : "belum ada"} · ${_si.n} item · Terakhir didownload: ${_si.dl ? _fmtT(_si.dl) : "belum pernah"}${_si.t > _si.dl ? " — ⚠ ada perubahan yang belum di-download" : ""}</small></div>
     ${FB.hasUnlimitedCoins && FB.hasUnlimitedCoins() ? '<p style="font-size:12px;color:#ffb703;">🛡️ Akun moderator: tarik GRATIS, tapi peluang lebih rendah (Epic 1.3% · Legendary 0.19% · Mythic 0.01%) dan tanpa pity.</p>' : ""}<p style="font-size:11px;color:var(--gray);">Peluang: ${CONFIG.RARITY.map(r => RAR[r.id][0] + " " + r.pct + "%").join(" · ")}</p>
     ${GACHA_URL ? "" : '<p style="font-size:11px;color:var(--gray);">Undian, pity, dan inventaris gacha disimpan di perangkat ini (tanpa server).</p>'}</div>${hasil}
     <div class="panel" style="margin-top:12px;"><h3>📊 Peluang per kelangkaan</h3><div class="table-wrap"><table><thead><tr><th>Rarity</th><th></th><th>Peluang</th><th>Isi</th><th>Per item</th></tr></thead><tbody>${tabelRate}</tbody></table></div><p style="font-size:11px;color:var(--gray);margin-top:6px;">Peluang dasar per tarikan (angka bisa sedikit lebih tinggi untuk epic ke atas karena pity). Item duplikat tidak mendapat pengembalian koin. Tema hanya ada di Epic &amp; Legendary.</p></div>
@@ -170,6 +175,25 @@ function ringkasan(all, dipakai, berhenti) {
   });
 }
 window.GACHA = {
+  unduhSave() {
+    try {
+      const d = FB.gachaExportSave(), nama = String(d.nama || "siswa").replace(/[^\w\-]+/g, "_").slice(0, 24), tgl = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
+      const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 1)], { type: "application/json" })); a.download = `save-gacha-${nama}-${tgl}.json`;
+      document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+      if (window.toast) window.toast("✓ Save di-download"); route("gacha");
+    } catch (e) { if (window.toast) window.toast("❌ " + (e.message || e)); }
+  },
+  muatSave() { const i = document.getElementById("ga-file"); if (i) i.click(); },
+  async bacaSave(inp) {
+    const f = inp.files && inp.files[0]; if (!f) return;
+    try {
+      const r = FB.gachaImportSave(JSON.parse(await f.text())), T = window.toast || (() => {});
+      if (r.status === "dipakai") { try { if (FB.syncGachaInventory) await FB.syncGachaInventory(id => Object.values(CATALOG).some(o => o && o[id])); } catch (e) {} T("✓ Save dimuat — " + r.n + " item (save file lebih baru)"); route("gacha"); }
+      else if (r.status === "sama") T("Save di perangkat sudah sama dengan file ini");
+      else T("Save di perangkat lebih baru daripada file — tidak diganti");
+    } catch (e) { if (window.toast) window.toast("❌ " + (e.message || e)); }
+    inp.value = "";
+  },
   async tarik(n) {
     if (busy) return; busy = true; let fresh = null;
     try { fresh = await satuTarik(n); } catch (e) { if (window.toast) window.toast("❌ " + (e.message || e)); }
