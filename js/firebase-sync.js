@@ -176,7 +176,7 @@ export function getLastAuthDenied(){ const r = lastAuthDenied; lastAuthDenied = 
 const _CS = "shirose-siswa-cache-";
 function _bacaCacheSiswa(uid){ try { const j = localStorage.getItem(_CS + uid); return j ? JSON.parse(j) : null; } catch(_) { return null; } }
 function _simpanCacheSiswa(uid, d){ try { const c = { ...d }; delete c.created; delete c.aktif; localStorage.setItem(_CS + uid, JSON.stringify(c)); } catch(_) {} }
-function _siswaDitolak(){ return lastSiswaDocStatus === "not_registered" || lastSiswaDocStatus === "disabled"; }
+function _siswaDitolak(){ return lastSiswaDocStatus === "not_registered" || lastSiswaDocStatus === "disabled" || lastSiswaDocStatus === "demo_expired"; }
 async function _tolakAkun(u){
   lastAuthDenied = lastSiswaDocStatus;
   try { localStorage.removeItem(_CS + u.uid); } catch(_) {}
@@ -306,6 +306,13 @@ async function ensureSiswaDoc(u, extra = {}) {
       if (!isOwner && currentSiswaDoc.status === "nonaktif"){
         currentSiswaDoc = null;
         lastSiswaDocStatus = "disabled";
+        return;
+      }
+      if (isDemoKelas(currentSiswaDoc.kelas) && (currentSiswaDoc.role || "student") === "student" && Number(currentSiswaDoc.demoSejak) && demoSisaMs(currentSiswaDoc) <= 0 && !isOwner) {
+        // Masa demo 7 hari habis → hapus profil + akun login sendiri (data lain disapu guru).
+        currentSiswaDoc = null; lastSiswaDocStatus = "demo_expired";
+        try { await deleteDoc(ref); } catch(_){}
+        try { await currentUser.delete(); } catch(_){}
         return;
       }
       lastSiswaDocStatus = "ok";
@@ -1284,6 +1291,7 @@ function _profilBaru(uid, email, nama, kelas, aksesLevel, role){
   return {
     nama: (nama || "").trim() || email.split("@")[0],
     email, isTamu: false, kelas: kelas || "",
+    ...(isDemoKelas(kelas) ? { demoSejak: Date.now() } : {}),
     aksesLevel: _normAkses(aksesLevel || { n5:true }),
     role: role || "student",
     status: "aktif",
@@ -1380,16 +1388,38 @@ export async function updateAksesSiswa(uid, aksesLevel) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   await updateDoc(doc(db, "siswa", uid), { aksesLevel: _normAkses(aksesLevel) });
 }
+/* ===== Kelas DEMO: akun otomatis terhapus 7 hari setelah masuk kelas "demo" ===== */
+export const DEMO_HARI = 7;
+export const isDemoKelas = (k) => String(k || "").trim().toLowerCase() === "demo";
+/** Sisa waktu (ms) sebelum akun demo dihapus; null jika belum dimulai / bukan demo. */
+export const demoSisaMs = (s) => { if (!s || !isDemoKelas(s.kelas)) return null; const t = Number(s.demoSejak); return t ? t + DEMO_HARI * 86400000 - Date.now() : null; };
+const _kelasPayload = (kelas) => isDemoKelas(kelas) ? { kelas, demoSejak: Date.now() } : { kelas: kelas || "", demoSejak: deleteField() };
 export async function updateKelasSiswa(uid, kelas) {
   if (!userIsGuru()) throw new Error("Hanya guru");
-  await updateDoc(doc(db, "siswa", uid), { kelas });
+  await updateDoc(doc(db, "siswa", uid), _kelasPayload(kelas));
+}
+/** Guru: mulai/ulang hitung mundur demo untuk satu akun (7 hari dari sekarang). */
+export async function mulaiDemo(uid) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const t = Date.now(); await updateDoc(doc(db, "siswa", uid), { demoSejak: t }); return t;
+}
+/** Dipanggil dashboard guru: beri tanggal mulai pada akun demo yang belum punya, hapus yang sudah lewat 7 hari. */
+export async function sapuDemoKadaluarsa(list) {
+  if (!userIsGuru()) return { dihapus: [], dimulai: 0 };
+  const dihapus = []; let dimulai = 0;
+  for (const s of list || []) {
+    if (!isDemoKelas(s.kelas) || (s.role || "student") !== "student") continue;
+    if (!Number(s.demoSejak)) { try { s.demoSejak = await mulaiDemo(s.uid); dimulai++; } catch (_) {} continue; }
+    if (demoSisaMs(s) <= 0) { try { await hapusSiswa(s.uid); dihapus.push(s.uid); } catch (e) { console.warn("sapuDemo gagal", s.uid, e && e.message); } }
+  }
+  return { dihapus, dimulai };
 }
 // Bulk-assign: put each uid into the given kelas (or "" to unassign).
 export async function assignSiswaKeKelas(uids, namaKelas) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   if (!Array.isArray(uids) || uids.length === 0) return 0;
   const b = writeBatch(db);
-  uids.forEach(uid => b.update(doc(db, "siswa", uid), { kelas: namaKelas || "" }));
+  uids.forEach(uid => b.update(doc(db, "siswa", uid), _kelasPayload(namaKelas || "")));
   await b.commit();
   return uids.length;
 }

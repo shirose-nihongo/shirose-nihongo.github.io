@@ -2,8 +2,8 @@
 (function(){
   var KEY="shirose-theme";
   /* [id, ikon, nama, warna-bar, level-minimal]. Level = level karakter (XP). Guru/admin bebas. */
-  var TH=[["putih","🤍","Putih (bawaan)","#f4f0ff",1],["mono","⚫","Monokrom","#111111",1],["ungu","🟣","Ungu","#161b36",1],["cerah","☀️","Cerah","#12345f",15],["hujan","🌧️","Hujan","#1c2733",20],["salju","❄️","Salju / Dingin","#243a52",40],["panas","🌊","Musim Panas","#0b3b5c",50],["badai","⛈️","Badai","#1a1a24",50],["gugur","🍁","Gugur","#2d1a14",75],["semi","🌸","Semi","#2e1f4a",75]];
-  var DEF="putih", OWNED={};  /* OWNED: tema dari gacha (id tanpa awalan theme_) → terbuka tanpa syarat level */
+  var TH=[["putih","🤍","Putih","#f4f0ff",1],["mono","⚫","Monokrom","#111111",1],["ungu","🟣","Ungu (bawaan)","#161b36",1],["cerah","☀️","Cerah","#12345f",15],["hujan","🌧️","Hujan","#1c2733",20],["salju","❄️","Salju / Dingin","#243a52",40],["panas","🌊","Musim Panas","#0b3b5c",50],["badai","⛈️","Badai","#1a1a24",50],["gugur","🍁","Gugur","#2d1a14",75],["semi","🌸","Semi","#2e1f4a",75]];
+  var DEF="ungu", OWNED={};  /* OWNED: tema dari gacha (id tanpa awalan theme_) → terbuka tanpa syarat level */
   function myLevel(){var s=window.__SHIROSE_STATE||{};if(window.SHIROSE_THEME_FREE)return 999;return (s.gami&&s.gami.level_karakter)||1}
   function locked(t){if(OWNED[t])return false;for(var i=0;i<TH.length;i++)if(TH[i][0]===t)return myLevel()<TH[i][4];return false}
   function raw(){try{var v=localStorage.getItem(KEY);return TH.some(function(t){return t[0]===v})?v:DEF}catch(e){return DEF}}

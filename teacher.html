@@ -225,7 +225,7 @@ window.aturKoinSiswa = async (uid, lama) => {
   try { await FB.setWalletKoinOf(uid, n, "pengembalian koin gacha oleh guru"); alert("✅ Saldo sekarang " + n.toLocaleString("id-ID") + ". Siswa melihatnya saat membuka aplikasi lagi."); location.reload(); } catch (e) { alert("❌ " + e.message); }
 };
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261117h";
+import * as FB from "./js/firebase-sync.js?v=20261118a";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
 
 const state = {
@@ -473,6 +473,10 @@ async function renderSiswaTab(){
       const [sl, kl] = await Promise.all([FB.listSiswa(), FB.listKelas().catch(() => state.kelasList || [])]);
       state.siswaList = sl; state.kelasList = kl;
       state.siswaLoaded = true; state.siswaStale = false;
+      try {
+        const sw = await FB.sapuDemoKadaluarsa(state.siswaList);
+        if (sw.dihapus.length) { state.siswaList = state.siswaList.filter(x => !sw.dihapus.includes(x.uid)); toast(`🗑️ ${sw.dihapus.length} akun demo kedaluwarsa (7 hari) otomatis dihapus`); }
+      } catch (_) {}
     }
   } catch(e){
     return `
@@ -493,6 +497,7 @@ async function renderSiswaTab(){
   return `
     <div class="panel">
       <h2>👥 Siswa <span style="color:var(--gray); font-size:14px; font-weight:400;">(${state.siswaList.length} terdaftar)</span></h2>
+      ${renderDemoPanel()}
       <p style="color:var(--gray); font-size:13px; margin-bottom:10px;">Akun siswa hanya dibuat di sini (pendaftaran mandiri ditutup). Klik N5–N1 untuk buka/tutup akses — dicek juga oleh Firestore Rules di server.</p>
       <details style="margin-bottom:14px; padding:12px; border:1px solid var(--pink); border-radius:10px;" ${state.siswaList.length <= 1 ? "open" : ""}>
         <summary style="cursor:pointer; font-weight:700; color:var(--pink);">➕ Buat akun baru</summary>
@@ -560,7 +565,7 @@ function renderSiswaDaftarTabel(){
               const bisaUbahStatus = role === "student" || FB.userIsAdmin();
               return `
               <tr style="${nonaktif?'opacity:.55;':''}">
-                <td class="nama" data-label="Nama"><b>${escHtml(s.nama || "(nama belum diisi)")}</b></td>
+                <td class="nama" data-label="Nama"><b>${escHtml(s.nama || "(nama belum diisi)")}</b>${_demoBadge(s)}</td>
                 <td data-label="Email">${escHtml(s.email || "")}</td>
                 <td data-label="Role">${({student:"Siswa",guru:"Guru",admin:"Admin",developer:"Moderator"})[role] || role}</td>
                 <td data-label="Status">${bisaUbahStatus && role !== "developer"
@@ -603,7 +608,7 @@ const _chipStatus = (s) => { const n = s.status === "nonaktif"; return `<span cl
 function _barisSiswaKelas(s){
   const nonaktif = s.status === "nonaktif";
   return `<div class="sg-row" style="${nonaktif ? "opacity:.55;" : ""}">
-    <div class="who"><b>${escHtml(s.nama || "(tanpa nama)")}</b><span class="em">${escHtml(s.email || "")}</span></div>
+    <div class="who"><b>${escHtml(s.nama || "(tanpa nama)")}</b><span class="em">${escHtml(s.email || "")}</span>${_demoBadge(s)}</div>
     <div>${_chipAkses(s)}</div>
     ${_chipSsw(s)}
     ${_chipJft(s)}
@@ -679,6 +684,41 @@ window.pindahKelas = async (uid, kls) => {
     renderTab();
   } catch(e){ toast("Gagal: " + (e.message || e)); }
 };
+/* ===== Kelas DEMO: hitung mundur 7 hari lalu akun otomatis terhapus ===== */
+const _DEMO_MS = (FB.DEMO_HARI || 7) * 86400000;
+function _fmtSisa(ms){
+  if (ms <= 0) return "habis — dihapus otomatis";
+  const d = Math.floor(ms / 86400000), j = Math.floor(ms % 86400000 / 3600000), m = Math.floor(ms % 3600000 / 60000), dt = Math.floor(ms % 60000 / 1000);
+  return d > 0 ? `${d} hari ${j} jam` : j > 0 ? `${j} jam ${m} mnt` : `${m} mnt ${dt} dtk`;
+}
+function _demoBadge(s){
+  if (!FB.isDemoKelas || !FB.isDemoKelas(s.kelas) || (s.role || "student") !== "student") return "";
+  const t = Number(s.demoSejak);
+  const sisa = t ? t + _DEMO_MS - Date.now() : null;
+  const warna = sisa == null ? "#94a3b8" : sisa < 86400000 ? "#ef4444" : sisa < 3 * 86400000 ? "#f59e0b" : "#22c55e";
+  return ` <span class="demo-cd" data-since="${t || ""}" style="display:inline-block; margin-left:6px; padding:2px 8px; border-radius:99px; font-size:12px; font-weight:700; color:#fff; background:${warna};">⏳ ${sisa == null ? "mulai dihitung…" : _fmtSisa(sisa)}</span>`;
+}
+function renderDemoPanel(){
+  const demo = (state.siswaList || []).filter(s => FB.isDemoKelas(s.kelas) && (s.role || "student") === "student")
+    .sort((a, b) => (Number(a.demoSejak) || 9e15) - (Number(b.demoSejak) || 9e15));
+  const aktif = demo.filter(s => Number(s.demoSejak));
+  const terdekat = aktif.length ? aktif[0].demoSejak + _DEMO_MS - Date.now() : null;
+  return `<div style="margin-bottom:14px; padding:12px 14px; border:1px solid #f59e0b; border-radius:12px; background:rgba(245,158,11,.08);">
+    <b>⏳ Kelas Demo — akun otomatis terhapus ${FB.DEMO_HARI || 7} hari</b> setelah masuk kelas "Demo".
+    <div style="font-size:13px; color:var(--gray); margin-top:4px;">${demo.length ? `${demo.length} akun demo${terdekat != null ? ` · yang paling dekat habis: <b class="demo-cd" data-since="${aktif[0].demoSejak}">${_fmtSisa(terdekat)}</b>` : ""}` : "Belum ada akun di kelas Demo."} Penghapusan dijalankan saat dashboard ini dibuka dan saat akun demo mencoba login setelah masa habis.</div>
+    ${demo.length ? `<div style="margin-top:8px; display:grid; gap:6px;">${demo.map(s => `<div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;"><span style="flex:1 1 180px;"><b>${escHtml(s.nama || s.email || "")}</b> <small style="color:var(--gray);">${escHtml(s.email || "")}</small>${_demoBadge(s)}</span><button class="btn sm ghost" onclick="ulangDemo('${s.uid}')">🔄 Ulang 7 hari</button><button class="btn sm danger" onclick="hapusSiswa('${s.uid}')">🗑️ Hapus sekarang</button></div>`).join("")}</div>` : ""}
+  </div>`;
+}
+window.ulangDemo = async (uid) => {
+  try { const t = await FB.mulaiDemo(uid); const s = state.siswaList.find(x => x.uid === uid); if (s) s.demoSejak = t; toast("✓ Hitung mundur diulang 7 hari"); renderTab(); } catch(e){ toast("Gagal: " + (e.message || e)); }
+};
+setInterval(() => {
+  document.querySelectorAll(".demo-cd[data-since]").forEach(el => {
+    const t = Number(el.dataset.since); if (!t) return;
+    const sisa = t + _DEMO_MS - Date.now();
+    el.textContent = (el.tagName === "SPAN" ? "⏳ " : "") + _fmtSisa(sisa);
+  });
+}, 1000);
 window.hapusSiswa = async (uid) => {
   const s = state.siswaList.find(x => x.uid === uid);
   if (!s) return;

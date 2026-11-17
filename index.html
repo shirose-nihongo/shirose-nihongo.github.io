@@ -1447,7 +1447,7 @@ html{overflow-x:hidden;}
 
 <!-- ============ TOASTS ============ -->
 <div class="toast-wrap" id="toasts"></div>
-<script src="./js/themes.js?v=20261116w"></script>
+<script src="./js/themes.js?v=20261118a"></script>
 
 <!-- ============ LEVEL UP OVERLAY ============ -->
 <div class="levelup-overlay" id="levelup">
@@ -1463,7 +1463,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261116m";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261117h";
+import * as FB from "./js/firebase-sync.js?v=20261118a";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261117c";
@@ -1796,7 +1796,7 @@ function renderLogin(){
   const denied = FB.getLastAuthDenied ? FB.getLastAuthDenied() : null;
   const deniedMsg = denied === "not_registered"
     ? "Akun ini belum terdaftar sebagai siswa. Minta guru/moderator mendaftarkan akunmu."
-    : denied === "disabled" ? "Akun ini sedang dinonaktifkan. Hubungi guru/moderator." : "";
+    : denied === "disabled" ? "Akun ini sedang dinonaktifkan. Hubungi guru/moderator." : denied === "demo_expired" ? "Masa akun demo (7 hari) sudah habis dan akun telah dihapus. Hubungi guru untuk akun baru." : "";
   return `
     <div class="auth-page">
       <div class="auth-card">
