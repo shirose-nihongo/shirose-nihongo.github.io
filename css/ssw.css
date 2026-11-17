@@ -370,3 +370,10 @@ body.sw-figopen{padding-bottom:62vh;}
 #sw-langfloat button{min-width:0 !important; min-height:0 !important; width:34px; height:26px; padding:0 !important; font-size:10.5px !important; border-radius:8px !important; line-height:1;}
 
 .sw-rkbar{display:flex;justify-content:flex-end;margin:0 0 6px}
+
+/* viewer halaman buku inline per subbab (di bawah materi, atau di samping di layar lebar) */
+.sw-bookinline .sw-bi-head{display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:space-between;} .sw-bookinline .sw-bi-head h2{margin:0;}
+.sw-bi-scroll{max-height:75vh; overflow-y:auto; -webkit-overflow-scrolling:touch; display:flex; flex-direction:column; gap:10px; margin:10px 0; padding-right:2px;}
+.sw-bi-scroll .bk-pgw{position:relative; border:1px solid var(--border-light); border-radius:10px; overflow:hidden; background:#fff;} .sw-bi-scroll img{width:100%; display:block; cursor:zoom-in;} .sw-bi-scroll .bk-pgno{position:absolute; right:6px; bottom:6px; background:#000a; color:#fff; border-radius:99px; padding:1px 8px; font-size:12px;}
+@media (min-width:900px){ .sw-split.side{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:14px; align-items:start;} .sw-split.side .sw-bookinline{position:sticky; top:8px;} .sw-split.side .sw-bi-scroll{max-height:calc(100vh - 150px);} }
+.sw-split.side .sw-lh h1,.sw-split.side .sw-lh .sw-tsub{flex:1 1 100%; min-width:0;}
