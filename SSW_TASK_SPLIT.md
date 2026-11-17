@@ -65,3 +65,4 @@ Memiliki: `index.html`, `js/ssw.js`, `js/ssw-core.js`, `js/ssw-art.js`, `sw.js`,
 
 ## 4. Permintaan antar-lane
 (isi di sini; format: `[dari → ke] permintaan — tanggal`)
+[Lane A → Lane C] Halaman `dokumen-resmi.html` (PDF resmi logistik, daur ulang, kehutanan di `assets/ssw/docs-resmi/`) sudah live; mohon tambahkan link 'Dokumen resmi' di hub SSW untuk bidang yang belum punya konten, dan tambahkan ke precache sw.js bila perlu — 2026-11-17

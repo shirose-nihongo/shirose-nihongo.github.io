@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dokumen Resmi SSW — Shirose Nihongo</title>
+<style>
+:root{--bg:#0f1220;--card:#1a1f36;--tx:#eef0fa;--mu:#9aa3c7;--ac:#f5c542;--bd:#2c3356}
+@media(prefers-color-scheme:light){:root{--bg:#f4f5fb;--card:#fff;--tx:#1b1f36;--mu:#5b6384;--bd:#dfe2f0;--ac:#a86f00}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 system-ui,"Noto Sans JP",sans-serif;background:var(--bg);color:var(--tx)}
+main{max-width:860px;margin:0 auto;padding:16px 14px 60px}a{color:var(--ac)}
+h1{font-size:22px;margin:8px 0 4px}.sub{color:var(--mu);margin:0 0 14px}
+.warn{background:var(--card);border:1px solid var(--bd);border-left:4px solid var(--ac);border-radius:10px;padding:10px 12px;margin:12px 0;font-size:14px}
+.sec{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;margin:14px 0}
+.sec h2{margin:0 0 2px;font-size:18px}.jp{color:var(--mu);font-size:13px;margin-bottom:8px}
+.st{display:inline-block;font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid var(--bd);color:var(--mu);margin-left:6px}
+.doc{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--bd)}
+.doc:first-of-type{border-top:0}.doc b{display:block}.doc small{color:var(--mu)}
+.btn{margin-left:auto;white-space:nowrap;text-decoration:none;border:1px solid var(--ac);border-radius:8px;padding:6px 10px;font-size:13px}
+ul{margin:6px 0 6px 18px;padding:0}li{margin:2px 0}.pend{color:var(--mu);font-size:14px}
+</style></head><body><main>
+<p><a href="index.html">← Kembali ke Shirose Nihongo</a></p>
+<h1>📄 Dokumen Resmi SSW</h1>
+<p class="sub">Dokumen pemerintah Jepang untuk bidang yang <b>belum punya buku belajar resmi</b>. Diunduh dari situs kementerian terkait.</p>
+<div class="warn">⚠️ Ini <b>pedoman ujian & aturan</b> (bahasa Jepang), <b>bukan buku belajar</b>. Pemerintah belum menerbitkan modul belajar untuk bidang-bidang ini. Ringkasan Indonesia di bawah adalah terjemahan Shirose dari dokumen resmi (perlu dicek dengan teks aslinya).</div>
+<div id="root"></div>
+<script>
+const S=[
+{n:"Logistik / Pergudangan",jp:"物流倉庫",st:"Ujian dibuka 26 Okt 2026 (Kemenhub/MLIT, pelaksana NK)",d:"logistics",
+ sum:["<b>Ujian tertulis 1号</b>: pengetahuan penyimpanan & bongkar-muat (jenis gudang, peralatan seperti forklift/palet/kereta dorong, poin kerja masuk-keluar-cek-picking-tumpuk, satuan & simbol penanganan), pengetahuan pengolahan distribusi (manajemen lokasi, cek & pengemasan, nama/fungsi alat), keselamatan & kesehatan (kesehatan diri, APD, tindakan berbahaya, tanda bencana, prosedur kerja).",
+ "<b>Ujian praktik</b>: pengoperasian alat bongkar-muat, satuan & konversi/hitungan, keputusan tepat untuk tiap situasi (masuk/keluar/stok), penumpukan di palet, estimasi waktu & jumlah orang, mencegah kecelakaan, penggunaan APD.",
+ "Ujian kertas keliling 80 menit (via perusahaan/kelompok); CBT direncanakan Desember 2026."],
+ f:[["jitsushi-yoryo-1go","試験実施要領（1号）","Pedoman pelaksanaan ujian 1号, 26 Okt 2026"],["shiken-kijun-1go","試験基準（1号）","Lingkup & rincian materi ujian (1 halaman — paling berguna untuk belajar)"],["bunya-unyo-hoshin","分野別運用方針","Kebijakan operasional bidang logistik/gudang"],["dokumen-002018512","受入れ可能な事業者の類型","Jenis perusahaan yang boleh menerima"],["dokumen-002027344","上乗せ基準（概要）","Standar tambahan bidang"],["kijun-shorei-tokutei","基準省令（特定技能）","Peraturan standar"]]},
+{n:"Daur Ulang Sumber Daya",jp:"資源循環（廃棄物処分業・中間処理）",st:"Ujian 1号 belum terbit; penerimaan mulai ±April 2027 (Kemen. Lingkungan)",d:"recycling",
+ sum:["Hanya satu kategori: <b>廃棄物処分業（中間処理）</b> — pengolahan antara limbah.","Dokumen ujian (試験実施要領 / 試験基準) <b>belum diterbitkan</b>; yang tersedia kebijakan operasional, pedoman 育成就労 dan program pelatihan karier.","Begitu pemerintah menerbitkan pedoman ujian, dokumennya akan ditambahkan di sini."],
+ f:[["ikusei-career-program","育成・キャリア形成プログラム","Program pelatihan & jenjang karier (paling dekat dengan isi pelatihan)"],["bunya-unyo-hoshin","分野別運用方針","Kebijakan operasional bidang"],["ikusei-unyo-bessatsu-honbun","育成就労 運用要領別冊（本文）","Pedoman 育成就労 bidang daur ulang"],["ikusei-unyo-bessatsu-beppyo","別表","Tingkat keterampilan & kategori pekerjaan"],["ikusei-unyo-bessatsu-besshi","別紙 育成就労計画審査基準","Kriteria penilaian rencana"]]},
+{n:"Kehutanan",jp:"林業",st:"Ujian: 林業技能測定試験 (Kementerian Pertanian/MAFF)",d:"forestry",
+ sum:["Dokumen tersedia: penjelasan pekerjaan kehutanan, panduan penerimaan, pedoman ujian, dan ringkasan/panduan ujian tahun 2026 dari penyelenggara ujian.","Tidak ada buku belajar resmi."],
+ f:[["rinya-ringyou-tte-donna-mono","林業ってどんなもの？","Penjelasan singkat kehutanan"],["rinya-ringyou-ukeire-tebiki","受入れの手引き","Panduan penerimaan (41 hal.)"],["rinya-ringyou-shiken-jisshi-yoryo","試験実施要領","Pedoman ujian"],["rinya-ringyou-unyo-yoryo-bessatsu","運用要領別冊","Pedoman operasional"],["rinya-ringyou-seika-hokokusho","成果報告書","Laporan hasil"],["ringyou-gino-2026-shiken-gaiyou","2026 試験概要","Ringkasan ujian 2026 (ber-furigana)"],["ringyou-gino-2026-juken-annai","2026 受験案内","Panduan peserta ujian 2026"]]}
+];
+const r=document.getElementById('root');
+S.forEach(x=>{const e=document.createElement('section');e.className='sec';
+e.innerHTML=`<h2>${x.n}</h2><div class="jp">${x.jp}<span class="st">${x.st}</span></div><ul>${x.sum.map(s=>'<li>'+s+'</li>').join('')}</ul>`+
+x.f.map(f=>`<div class="doc"><div><b>${f[1]}</b><small>${f[2]}</small></div><a class="btn" target="_blank" rel="noopener" href="assets/ssw/docs-resmi/${x.d}/${f[0]}.pdf">📄 Buka PDF</a></div>`).join('');
+r.appendChild(e)});
+const p=document.createElement('section');p.className='sec';
+p.innerHTML='<h2>Menyusul</h2><p class="pend">Perkapalan (造船・舶用工業), Penerbangan (航空), Kereta (鉄道), Linen supply, dan Taksi: dokumen pedoman ujiannya sedang dikumpulkan.</p>';r.appendChild(p);
+</script></main></body></html>
