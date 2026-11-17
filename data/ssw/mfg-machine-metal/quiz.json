@@ -3798,6 +3798,1281 @@
      "mb": true
     }
    ]
+  },
+  {
+   "id": "gen-mm-1",
+   "tema": true,
+   "title": {
+    "id": "Tema 学科: Ukur & Gambar Teknik",
+    "jp": "テーマ：Ukur & Gambar Teknik"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Pada mikrometer, ratchet membuat gaya ukur tetap.”",
+      "jp": "○か×か。「マイクロメータは、ラチェットを{使|つか}うと{測定|そくてい}する{力|ちから}を{一定|いってい}にできる。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Pembacaan terkecil mikrometer pada umumnya 0,01 mm.”",
+      "jp": "○か×か。「マイクロメータの{最小|さいしょう}{読取値|よみとりち}は、{一般|いっぱん}に0.01mmである。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Gauge block dipakai sebagai acuan panjang.”",
+      "jp": "○か×か。「ブロックゲージは、{長|なが}さの{基準|きじゅん}として{使|つか}う。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Meja rata (定盤) menjadi dasar permukaan datar acuan.”",
+      "jp": "○か×か。「{定盤|じょうばん}は、{平面|へいめん}の{基準|きじゅん}となる{台|だい}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Dial gauge dipakai mengukur ayunan atau selisih tinggi.”",
+      "jp": "○か×か。「ダイヤルゲージは、{振|ぶ}れや{高低差|こうていさ}を{測|はか}るのに{使|つか}う。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Dalam gambar teknik, garis tepi digambar dengan garis tebal penuh.”",
+      "jp": "○か×か。「{製図|せいず}で、{外形線|がいけいせん}は{太|ふと}い{実線|じっせん}で{描|か}く。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Garis pusat digambar dengan garis tipis titik-garis.”",
+      "jp": "○か×か。「{製図|せいず}で、{中心線|ちゅうしんせん}は{細|ほそ}い{一点鎖線|いってんさせん}で{描|か}く。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Simbol ukuran φ = diameter, R = jari-jari.”",
+      "jp": "○か×か。「{寸法|すんぽう}{記号|きごう}のφは{直径|ちょっけい}、Rは{半径|はんけい}を{表|あらわ}す。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Toleransi dimensi adalah selisih ukuran maksimum dan minimum yang diizinkan.”",
+      "jp": "○か×か。「{寸法|すんぽう}{公差|こうさ}とは、{許容|きょよう}される{最大|さいだい}{寸法|すんぽう}と{最小|さいしょう}{寸法|すんぽう}の{差|さ}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Makin kecil nilai kekasaran permukaan, makin halus permukaannya.”",
+      "jp": "○か×か。「{表面|ひょうめん}{粗|あら}さの{値|あたい}が{小|ちい}さいほど、{面|めん}はなめらかである。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Dalam proyeksi sudut ketiga, tampak samping kanan diletakkan di sebelah kanan tampak depan.”",
+      "jp": "○か×か。「{第三角法|だいさんかくほう}では、{正面図|しょうめんず}の{右|みぎ}に{右側面図|みぎそくめんず}を{置|お}く。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Pada pengukuran jangka sorong, bersihkan permukaan ukur sebelum menempelkan.”",
+      "jp": "○か×か。「ノギスの{測定|そくてい}では、{測定面|そくていめん}の{汚|よご}れを{落|お}としてから{当|あ}てる。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Saat mengukur, tidak masalah bila suhu benda dan alat ukur sangat berbeda.”",
+      "jp": "○か×か。「{測定|そくてい}するときは、{測定物|そくていぶつ}と{測定器|そくていき}の{温度|おんど}が{大|おお}きく{違|ちが}ってもかまわない。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Perbedaan suhu menyebabkan muai dan kesalahan ukur. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    }
+   ]
+  },
+  {
+   "id": "gen-mm-2",
+   "tema": true,
+   "title": {
+    "id": "Tema 学科: Permesinan",
+    "jp": "テーマ：Permesinan"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Mesin bubut memutar bahan dan memotongnya dengan pahat.”",
+      "jp": "○か×か。「{旋盤|せんばん}は、{材料|ざいりょう}を{回転|かいてん}させて、バイトで{削|けず}る{機械|きかい}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Mesin frais memutar pemotong (cutter) untuk memotong bahan.”",
+      "jp": "○か×か。「フライス{盤|ばん}は、カッタを{回転|かいてん}させて{削|けず}る{機械|きかい}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Cairan pemotong berfungsi mendinginkan, melumasi, dan membuang tatal.”",
+      "jp": "○か×か。「{切削油|せっさくゆ}には、{冷却|れいきゃく}、{潤滑|じゅんかつ}、{切粉|きりこ}の{排出|はいしゅつ}などの{働|はたら}きがある。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Tatal tidak diambil dengan tangan kosong, gunakan sikat atau alat.”",
+      "jp": "○か×か。「{切粉|きりこ}は、{素手|すで}で{取|と}らず、ブラシなどで{取|と}り{除|のぞ}く。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Jangan menghentikan spindel yang berputar dengan tangan.”",
+      "jp": "○か×か。「{回転|かいてん}している{主軸|しゅじく}を、{手|て}で{止|と}めてはいけない。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Menaikkan laju makan cenderung membuat permukaan hasil kasar.”",
+      "jp": "○か×か。「{送|おく}りを{大|おお}きくすると、{仕上|しあ}げ{面|めん}は{粗|あら}くなる{傾向|けいこう}がある。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Kecepatan potong terlalu tinggi dapat mempercepat keausan pahat.”",
+      "jp": "○か×か。「{切削速度|せっさくそくど}が{速|はや}すぎると、{工具|こうぐ}の{摩耗|まもう}が{早|はや}くなることがある。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Saat mengebor, bahan dijepit dengan ragum dsb.”",
+      "jp": "○か×か。「ドリルで{穴|あな}をあけるときは、{材料|ざいりょう}をバイスなどで{固定|こてい}する。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Batu gerinda dicoba putar dulu sebelum dipakai untuk memastikan tidak ada kelainan.”",
+      "jp": "○か×か。「{研削盤|けんさくばん}の「と{石|いし}」は、{使用前|しようまえ}に{試運転|しうんてん}をして{異常|いじょう}がないか{確認|かくにん}する。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Batu gerinda lurus sebaiknya dipakai pada sisi sampingnya.”",
+      "jp": "○か×か。「{平形|ひらがた}のと{石|いし}は、{側面|そくめん}を{使|つか}って{研削|けんさく}するのがよい。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Sisi samping tidak dirancang untuk menahan beban; pakai bagian tepi (periferi). (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Boleh memasukkan tangan ke antara cetakan dan mengambil bahan tanpa mematikan mesin pres.”",
+      "jp": "○か×か。「プレス{機械|きかい}を{止|と}めずに、{金型|かながた}の{間|あいだ}に{手|て}を{入|い}れて{材料|ざいりょう}を{出|だ}してもよい。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Sangat berbahaya; hentikan mesin atau pakai alat bantu. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Pada mesin NC, periksa dulu tidak ada benturan pahat dan bahan sebelum menjalankan program.”",
+      "jp": "○か×か。「NC{工作機械|こうさくきかい}は、プログラムを{実行|じっこう}する{前|まえ}に{工具|こうぐ}と{材料|ざいりょう}の{干渉|かんしょう}がないか{確認|かくにん}する。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    }
+   ]
+  },
+  {
+   "id": "gen-mm-3",
+   "tema": true,
+   "title": {
+    "id": "Tema 学科: Bahan & Kimia",
+    "jp": "テーマ：Bahan & Kimia"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Baja cenderung makin keras bila kadar karbonnya makin tinggi.”",
+      "jp": "○か×か。「{鉄鋼|てっこう}は、{炭素|たんそ}の{量|りょう}が{多|おお}いほど{硬|かた}くなる{傾向|けいこう}がある。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Quenching (焼入れ) adalah perlakuan panas untuk mengeraskan baja.”",
+      "jp": "○か×か。「{焼入|やきい}れは、{鋼|はがね}を{硬|かた}くする{熱処理|ねつしょり}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Tempering (焼戻し) mengurangi kerapuhan setelah quenching.”",
+      "jp": "○か×か。「{焼戻|やきもど}しは、{焼入|やきい}れ{後|ご}のもろさをやわらげる{熱処理|ねつしょり}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Aluminium lebih ringan daripada besi.”",
+      "jp": "○か×か。「アルミニウムは、{鉄|てつ}より{軽|かる}い。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Tembaga menghantarkan listrik dengan baik.”",
+      "jp": "○か×か。「{銅|どう}は、{電気|でんき}をよく{通|とお}す。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Baja tahan karat tidak mudah berkarat.”",
+      "jp": "○か×か。「ステンレス{鋼|こう}は、{錆|さ}びにくい。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Angka 45 pada S45C menunjukkan kadar karbon sekitar 0,45%.”",
+      "jp": "○か×か。「S45Cの45は、{炭素|たんそ}の{量|りょう}が0.45%{程度|ていど}であることを{表|あらわ}す。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Larutan dengan pH di bawah 7 bersifat asam.”",
+      "jp": "○か×か。「pHが7より{小|ちい}さい{水溶液|すいようえき}は、{酸性|さんせい}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Mencampur deterjen asam dan basa dapat menghasilkan gas beracun.”",
+      "jp": "○か×か。「{酸性|さんせい}の{洗剤|せんざい}とアルカリ{性|せい}の{洗剤|せんざい}を{混|ま}ぜると、{有毒|ゆうどく}なガスが{出|で}ることがある。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. Jangan mencampur bahan kimia. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Logam memuai bila suhunya naik.”",
+      "jp": "○か×か。「{金属|きんぞく}は、{温度|おんど}が{上|あ}がると{膨張|ぼうちょう}する。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Pelapisan (めっき) menambah lapisan logam di permukaan, antara lain untuk mencegah karat.”",
+      "jp": "○か×か。「めっきは、{表面|ひょうめん}に{金属|きんぞく}の{膜|まく}をつけて{錆|さ}びを{防|ふせ}ぐなどの{目的|もくてき}で{行|おこな}う。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Air adalah senyawa hidrogen dan oksigen.”",
+      "jp": "○か×か。「{水|みず}は、{水素|すいそ}と{酸素|さんそ}の{化合物|かごうぶつ}である。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    }
+   ]
+  },
+  {
+   "id": "gen-mm-4",
+   "tema": true,
+   "title": {
+    "id": "Tema 学科: Las, Cat & Gas",
+    "jp": "テーマ：Las, Cat & Gas"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Pada las busur, pakai topeng las untuk melindungi mata.”",
+      "jp": "○か×か。「アーク{溶接|ようせつ}では、{溶接面|ようせつめん}（{遮光面|しゃこうめん}）をつけて{目|め}を{守|まも}る。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Gunakan ventilasi dan pelindung agar tidak menghirup asap (fume) las.”",
+      "jp": "○か×か。「{溶接|ようせつ}のヒュームを{吸|す}わないように、{換気|かんき}や{保護具|ほごぐ}を{使|つか}う。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Tabung gas difiksasi agar tidak roboh.”",
+      "jp": "○か×か。「ガスボンベは、{倒|たお}れないように{固定|こてい}する。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Jangan menaruh benda mudah terbakar dekat percikan las.”",
+      "jp": "○か×か。「{溶接|ようせつ}の{火花|ひばな}が{飛|と}ぶ{場所|ばしょ}の{近|ちか}くに、{燃|も}えやすい{物|もの}を{置|お}かない。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Di tempat pengecatan semprot, dilarang memakai api.”",
+      "jp": "○か×か。「スプレー{塗装|とそう}の{場所|ばしょ}では、{火気|かき}を{使|つか}ってはいけない。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Boleh mengoleskan minyak pada sambungan tabung oksigen.”",
+      "jp": "○か×か。「{酸素|さんそ}ボンベの{継手|つぎて}に、{油|あぶら}を{塗|ぬ}ってもよい。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah. Minyak bersentuhan dengan oksigen bertekanan dapat terbakar/meledak. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Pekerjaan las busur dilakukan oleh orang yang telah mengikuti pendidikan khusus.”",
+      "jp": "○か×か。「アーク{溶接|ようせつ}の{作業|さぎょう}は、{特別教育|とくべつきょういく}を{受|う}けた{人|ひと}が{行|おこな}う。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Saat mengecat berlapis, tunggu lapisan dasar kering sebelum lapisan berikutnya.”",
+      "jp": "○か×か。「{塗装|とそう}を{重|かさ}ねるときは、{下塗|したぬ}りが{十分|じゅうぶん}に{乾|かわ}いてから{次|つぎ}を{塗|ぬ}る。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar. (Latihan gaya 学科 製造分野 — soal buatan Shirose)"
+     },
+     "mb": true
+    }
+   ]
+  },
+  {
+   "id": "gen-mm-pilihan",
+   "tema": true,
+   "title": {
+    "id": "Tema 実技: 4 pilihan",
+    "jp": "テーマ：{実技|じつぎ}（4{択|たく}）"
+   },
+   "items": [
+    {
+     "q": {
+      "id": "Cara memadamkan kebakaran minyak yang sesuai?",
+      "jp": "{油火災|あぶらかさい}に{適|てき}した{消火|しょうか}の{方法|ほうほう}は？"
+     },
+     "opts": [
+      {
+       "id": "ぬれた手袋でたたく",
+       "jp": "ぬれた{手袋|てぶくろ}でたたく"
+      },
+      {
+       "id": "ABC粉末消火器を使う",
+       "jp": "ABC{粉末|ふんまつ}{消火器|しょうかき}を{使|つか}う"
+      },
+      {
+       "id": "ホースで水をかける",
+       "jp": "ホースで{水|みず}をかける"
+      },
+      {
+       "id": "バケツの水をかける",
+       "jp": "バケツの{水|みず}をかける"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Air dapat menyebarkan api minyak; gunakan pemadam serbuk. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Bagian jangka sorong yang dipakai mengukur diameter dalam?",
+      "jp": "ノギスで{内径|ないけい}を{測|はか}るときに{使|つか}う{部分|ぶぶん}は？"
+     },
+     "opts": [
+      {
+       "id": "止めネジ",
+       "jp": "{止|と}めネジ"
+      },
+      {
+       "id": "内側用ジョウ",
+       "jp": "{内側用|うちがわよう}ジョウ"
+      },
+      {
+       "id": "外側用ジョウ",
+       "jp": "{外側用|そとがわよう}ジョウ"
+      },
+      {
+       "id": "デプス・バー",
+       "jp": "デプス・バー"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Rahang bagian atas (kecil) untuk ukuran dalam. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Diagram yang menyatakan distribusi frekuensi dengan tinggi batang?",
+      "jp": "{度数分布|どすうぶんぷ}を{柱|はしら}の{高|たか}さで{表|あらわ}した{図|ず}は？"
+     },
+     "opts": [
+      {
+       "id": "ヒストグラム",
+       "jp": "ヒストグラム"
+      },
+      {
+       "id": "散布図",
+       "jp": "{散布図|さんぷず}"
+      },
+      {
+       "id": "特性要因図",
+       "jp": "{特性要因図|とくせいよういんず}"
+      },
+      {
+       "id": "管理図",
+       "jp": "{管理図|かんりず}"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Histogram. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Tujuan quenching (焼入れ)?",
+      "jp": "{焼入|やきい}れの{目的|もくてき}は？"
+     },
+     "opts": [
+      {
+       "id": "色をつける",
+       "jp": "{色|いろ}をつける"
+      },
+      {
+       "id": "鋼を硬くする",
+       "jp": "{鋼|はがね}を{硬|かた}くする"
+      },
+      {
+       "id": "鋼を柔らかくする",
+       "jp": "{鋼|はがね}を{柔|やわ}らかくする"
+      },
+      {
+       "id": "錆止めをする",
+       "jp": "{錆止|さびど}めをする"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Mengeraskan baja. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Fungsi cairan pemotong yang SALAH?",
+      "jp": "{切削油|せっさくゆ}の{働|はたら}きとして、{誤|あやま}っているものは？"
+     },
+     "opts": [
+      {
+       "id": "工具の硬さを上げる",
+       "jp": "{工具|こうぐ}の{硬|かた}さを{上|あ}げる"
+      },
+      {
+       "id": "切粉の排出",
+       "jp": "{切粉|きりこ}の{排出|はいしゅつ}"
+      },
+      {
+       "id": "冷却",
+       "jp": "{冷却|れいきゃく}"
+      },
+      {
+       "id": "潤滑",
+       "jp": "{潤滑|じゅんかつ}"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Cairan pemotong tidak menambah kekerasan pahat. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Arti 「整頓」 dalam 5S?",
+      "jp": "5Sの「{整頓|せいとん}」の{意味|いみ}は？"
+     },
+     "opts": [
+      {
+       "id": "床を掃除する",
+       "jp": "{床|ゆか}を{掃除|そうじ}する"
+      },
+      {
+       "id": "不要な物を捨てる",
+       "jp": "{不要|ふよう}な{物|もの}を{捨|す}てる"
+      },
+      {
+       "id": "必要な物を決まった場所に置き、すぐ取り出せるようにする",
+       "jp": "{必要|ひつよう}な{物|もの}を{決|き}まった{場所|ばしょ}に{置|お}き、すぐ{取|と}り{出|だ}せるようにする"
+      },
+      {
+       "id": "ルールを守る習慣をつける",
+       "jp": "ルールを{守|まも}る{習慣|しゅうかん}をつける"
+      }
+     ],
+     "a": 2,
+     "exp": {
+      "id": "Seiton = menata agar mudah diambil. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Penyimpanan tabung gas yang benar?",
+      "jp": "ガスボンベの{保管|ほかん}で{正|ただ}しいのは？"
+     },
+     "opts": [
+      {
+       "id": "高温の場所に置く",
+       "jp": "{高温|こうおん}の{場所|ばしょ}に{置|お}く"
+      },
+      {
+       "id": "立てて、倒れないよう固定する",
+       "jp": "{立|た}てて、{倒|たお}れないよう{固定|こてい}する"
+      },
+      {
+       "id": "横に寝かせて通路に置く",
+       "jp": "{横|よこ}に{寝|ね}かせて{通路|つうろ}に{置|お}く"
+      },
+      {
+       "id": "壁に立てかけるだけにする",
+       "jp": "{壁|かべ}に{立|た}てかけるだけにする"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Berdiri dan difiksasi. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Tindakan yang tepat terhadap asap las?",
+      "jp": "{溶接|ようせつ}のヒューム{対策|たいさく}として{適切|てきせつ}なのは？"
+     },
+     "opts": [
+      {
+       "id": "何もしない",
+       "jp": "{何|なに}もしない"
+      },
+      {
+       "id": "窓を全部閉める",
+       "jp": "{窓|まど}を{全部|ぜんぶ}{閉|し}める"
+      },
+      {
+       "id": "扇風機で顔に風を当てる",
+       "jp": "{扇風機|せんぷうき}で{顔|かお}に{風|かぜ}を{当|あ}てる"
+      },
+      {
+       "id": "局所排気や呼吸用保護具を使う",
+       "jp": "{局所排気|きょくしょはいき}や{呼吸用保護具|こきゅうようほごぐ}を{使|つか}う"
+      }
+     ],
+     "a": 3,
+     "exp": {
+      "id": "Ventilasi lokal dan pelindung pernapasan. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Simbol ukuran φ menunjukkan?",
+      "jp": "{寸法|すんぽう}{記号|きごう}「φ」が{表|あらわ}すものは？"
+     },
+     "opts": [
+      {
+       "id": "半径",
+       "jp": "{半径|はんけい}"
+      },
+      {
+       "id": "面取り",
+       "jp": "{面取|めんと}り"
+      },
+      {
+       "id": "直径",
+       "jp": "{直径|ちょっけい}"
+      },
+      {
+       "id": "角度",
+       "jp": "{角度|かくど}"
+      }
+     ],
+     "a": 2,
+     "exp": {
+      "id": "Diameter. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    },
+    {
+     "q": {
+      "id": "Urutan benar saat membersihkan mesin?",
+      "jp": "{機械|きかい}の{清掃|せいそう}をするときの{正|ただ}しい{手順|てじゅん}は？"
+     },
+     "opts": [
+      {
+       "id": "急いでいるので止めずに行う",
+       "jp": "{急|いそ}いでいるので{止|と}めずに{行|おこな}う"
+      },
+      {
+       "id": "回転したまま、ブラシで行う",
+       "jp": "{回転|かいてん}したまま、ブラシで{行|おこな}う"
+      },
+      {
+       "id": "機械を止めて、電源を切ってから行う",
+       "jp": "{機械|きかい}を{止|と}めて、{電源|でんげん}を{切|き}ってから{行|おこな}う"
+      },
+      {
+       "id": "手袋をして、動かしながら行う",
+       "jp": "{手袋|てぶくろ}をして、{動|うご}かしながら{行|おこな}う"
+      }
+     ],
+     "a": 2,
+     "exp": {
+      "id": "Matikan dan putus sumber tenaga lebih dulu. (Latihan gaya 実技 製造分野 — 4 pilihan)"
+     }
+    }
+   ]
   }
  ]
 }

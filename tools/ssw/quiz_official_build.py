@@ -110,4 +110,26 @@ off = [
  mc("Berapa kategori 2号 di manufaktur?", ["3", "17", "1", "10"], 0, "3 区分 (SRC-010)."),
 ]
 q2 = load("industrial-mfg"); put_tema(q2, [{"id": "gen-tema-resmi", "tema": True, "title": {"id": "Tema: Aturan resmi manufaktur", "jp": "テーマ：{制度|せいど}のルール"}, "items": off}], "gen-"); save("industrial-mfg", q2)
+from quiz_mfg_data import SETS as MS, PILIHAN as MP
+def mfg_sets(prefix, names, tag):
+    out = []
+    for name in names:
+        rows = MS[name]; its = []
+        for jp, idt, ok, exp in rows:
+            it = tf(idt, jp, ok, exp + " (Latihan gaya 学科 製造分野 — soal buatan Shirose)")
+            it["q"]["jp"] = f"○か×か。「{jp}」"; its.append(it)
+        out.append({"id": f"{prefix}-{len(out)+1}", "tema": True, "title": {"id": f"Tema 学科: {name}", "jp": f"テーマ：{name}"}, "items": its})
+    return out
+def mfg_pilihan(pid):
+    r = random.Random(33); its = []
+    for jp, idt, opts, a, exp in MP:
+        idx = list(range(len(opts))); r.shuffle(idx)
+        its.append({"q": {"id": idt, "jp": jp}, "opts": [{"id": re.sub(r"\{([^|}]*)\|[^}]*\}", r"\1", opts[i]), "jp": opts[i]} for i in idx],
+                    "a": idx.index(a), "exp": {"id": exp + " (Latihan gaya 実技 製造分野 — 4 pilihan)"}})
+    return {"id": pid, "tema": True, "title": {"id": "Tema 実技: 4 pilihan", "jp": "テーマ：{実技|じつぎ}（4{択|たく}）"}, "items": its}
+allmfg = list(MS.keys())
+put_tema(q, mfg_sets("gen-mm", ["Ukur & Gambar Teknik", "Permesinan", "Bahan & Kimia", "Las, Cat & Gas"], "mm") + [mfg_pilihan("gen-mm-pilihan")] + [t for t in q["tema"] if t["id"].startswith("gen-tema-")] , "gen-mm")
+q3 = load("industrial-mfg")
+put_tema(q3, mfg_sets("gen-im", ["K3 & Keselamatan", "Pengendalian Mutu", "Ukur & Gambar Teknik"], "im") + [mfg_pilihan("gen-im-pilihan")], "gen-im")
+save("industrial-mfg", q3)
 save("mfg-machine-metal", q); print("mm ok; ind-mfg official", len(off))

@@ -72,3 +72,9 @@ tools/ssw/quiz_official_build.py (idempotent, set ber-id gen-*): Auto Maintenanc
 - Cakupan 1号 学科: mesin, pelumasan/pendingin, kelistrikan, penerus tenaga, suspensi/kemudi/ban, rem, alat ukur, oli/gemuk, penanganan.
 - Soal baru (ORIGINAL, perlu review ahli): data/ssw/auto-maintenance/quiz.json set gen-g1-1..8 (96 soal ○×) + gen-g1-praktik (16 soal 二択). Sumber data: tools/ssw/quiz_auto_gakka1_data.py; builder: tools/ssw/quiz_official_build.py.
 - Portal manufaktur (sswm.go.jp/exam/materials) memblokir fetch otomatis (robots); contoh soal 機械金属加工/電気電子機器組立て 1号 & 2号 perlu diambil lewat Chrome kalau mau dipakai sebagai rujukan.
+
+### Sumber contoh soal resmi JAIM (SRC-040..043, https://www.jaim-skill.or.jp/exam/materials/)
+- Format resmi 製造分野特定技能1号 機械金属加工 (SRC-040): 80 menit, 40 soal = 学科 30 (○×, jawab A/B; lulus 20/30 = 65%) + 実技 10 (pilihan A–D; lulus 6/10 = 60%). Cakupan: K3 & rambu JIS, 4S, QC (histogram, scatter, pareto), pH/kimia, ukur (noken/mikrometer/kalibrasi), gambar teknik, permesinan, bahan (SS400), las, cat.
+- sswm.go.jp tidak bisa diakses (DNS) dari komputer user & fetch otomatis diblokir robots; JAIM adalah operator ujian dan menyediakan PDF yang sama.
+- Soal baru ORIGINAL: Machine-Metal tema gen-mm-1..4 + gen-mm-pilihan (4 pilihan); Industrial-Mfg gen-im-1..3 + gen-im-pilihan. Data: tools/ssw/quiz_mfg_data.py; builder tools/ssw/quiz_official_build.py. Perlu review ahli.
+- Belum: contoh soal 電気電子機器組立て/金属表面処理 (SRC-041/042) sudah diunduh tapi belum dipelajari untuk soal.
