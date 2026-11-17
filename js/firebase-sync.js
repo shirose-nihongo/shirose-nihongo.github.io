@@ -580,14 +580,33 @@ export async function getGami(level) {
   if (!currentUser) return null;
   try {
     // Baca dokumen gami & dompet PARALEL (dulu berurutan → login/ganti akun terasa ngelag).
-    const [snap, k] = await Promise.all([
+    const [snap, k, lvMax] = await Promise.all([
       getDoc(doc(db, "siswa", currentUser.uid, "gami", level)),
       getWalletKoin().catch(() => null),
+      _levelAkun(level).catch(() => 0),
     ]);
     const g = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
     g.koin = k !== null ? k : _koinFallback(g.koin);
+    // Level karakter = level TERTINGGI di semua level JLPT/JFT (dulu hanya dokumen level aktif -> tampak "turun" saat pindah level)
+    g.level_level_ini = g.level_karakter || 1;
+    g.level_karakter = Math.max(g.level_karakter || 1, lvMax || 1);
+    _lvSet(g.level_karakter);
     return g;
-  } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:_koinFallback(0), streak:0, level_karakter:1 }; }
+  } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:_koinFallback(0), streak:0, level_karakter:Math.max(1, _lvGet()) }; }
+}
+// Level akun: cache 6 jam di perangkat; baca dokumen level lain hanya bila cache kedaluwarsa (hemat kuota Firestore).
+const _lvKey = () => "shirose-lvakun-" + (currentUser?.uid || "x");
+function _lvGet() { try { return (JSON.parse(localStorage.getItem(_lvKey()) || "{}").v) || 0; } catch (e) { return 0; } }
+function _lvSet(v) { try { const o = JSON.parse(localStorage.getItem(_lvKey()) || "{}"); localStorage.setItem(_lvKey(), JSON.stringify({ v: Math.max(v || 0, o.v || 0), t: o.t || 0 })); } catch (e) {} }
+async function _levelAkun(aktif) {
+  let o = {}; try { o = JSON.parse(localStorage.getItem(_lvKey()) || "{}"); } catch (e) {}
+  if (o.t && Date.now() - o.t < 6 * 3600e3) return o.v || 0;
+  const uid = currentUser.uid, lvls = WALLET_LVLS.filter(l => l !== aktif);
+  const snaps = await Promise.all(lvls.map(l => getDoc(doc(db, "siswa", uid, "gami", l)).catch(() => null)));
+  let mx = 0; snaps.forEach(sn => { if (sn && sn.exists()) mx = Math.max(mx, sn.data().level_karakter || 1); });
+  mx = Math.max(mx, o.v || 0);
+  try { localStorage.setItem(_lvKey(), JSON.stringify({ v: mx, t: Date.now() })); } catch (e) {}
+  return mx;
 }
 export async function tambahXP(level, dXP, dKoin = 0) {
   if (!currentUser) return;
@@ -608,6 +627,7 @@ export async function tambahXP(level, dXP, dKoin = 0) {
     if (dKoin && saldo === null) cur.koin = (cur.koin || 0) + dKoin;   // fallback lama
     await setDoc(ref, cur, { merge: true });
     if (saldo !== null) cur.koin = saldo; else { const k = await getWalletKoin(); cur.koin = k !== null ? k : _koinFallback(cur.koin); }
+    cur.level_level_ini = cur.level_karakter; cur.level_karakter = Math.max(cur.level_karakter, _lvGet()); _lvSet(cur.level_karakter);
     return cur;
   } catch (e) { console.warn("tambahXP failed:", e.message); return null; }
 }

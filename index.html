@@ -437,6 +437,7 @@ html{overflow-x:hidden;}
 .shop-action{margin:12px 0 10px;}
 .shop-wallet{text-align:center; font-size:14px; color:var(--gray);}
 
+.shop-sec{margin:18px 0 6px;font-size:14px;color:var(--gold,#ffd700);letter-spacing:.03em}.shop-sec small{color:var(--gray);font-weight:400}
 .shop-items-grid{
   display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
   gap:10px; margin-top:8px;
@@ -1461,7 +1462,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261116m";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261117b";
+import * as FB from "./js/firebase-sync.js?v=20261117c";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261114f";
@@ -4906,10 +4907,17 @@ async function renderShop(){
   const activeCat = state._shopCat && CAT_TABS.some(t => t.key === state._shopCat) ? state._shopCat : "rambut";
   state._shopCat = activeCat;
 
-  const allItems = allShopItems();   // sayap epic+ dijual; common–rare hanya dari gacha
-  const items = allItems.filter(it => it.kategori === activeCat);
-
   const inv = invEfektif();
+  // Item dijual + hadiah gacha yang SUDAH dimiliki (gachaOnly yang belum dimiliki tetap tersembunyi)
+  const allItems = allShopItems(true).filter(it => !it.gachaOnly || inv.includes(it.id));
+  const RAR_ORD = ["mythic","legendary","epic","rare","uncommon","common"];
+  const items = allItems.filter(it => it.kategori === activeCat).sort((a, b) => {
+    const oa = inv.includes(a.id) ? 0 : 1, ob = inv.includes(b.id) ? 0 : 1;
+    if (oa !== ob) return oa - ob;                                   // yang dimiliki di paling atas
+    const ra = RAR_ORD.indexOf(a.rarity), rb = RAR_ORD.indexOf(b.rarity);
+    return ra !== rb ? ra - rb : (a.unlock_lv - b.unlock_lv) || (a.harga - b.harga);
+  });
+
   const eq = state.siswa?.karakter?.equipped || {};
   const skin = state.siswa?.karakter?.skinTone || "light";
   const hairColor = state.siswa?.karakter?.hairColor;
@@ -4928,7 +4936,7 @@ async function renderShop(){
   const previewItem = items.find(it => it.id === preview);
   const isOwned = preview && inv.includes(preview);
   const isEquipped = eq[activeCat] === preview;
-  const locked = previewItem && state.gami.level_karakter < previewItem.unlock_lv;
+  const locked = previewItem && !isOwned && state.gami.level_karakter < previewItem.unlock_lv;
   const unlimitedCoins = FB.hasUnlimitedCoins && FB.hasUnlimitedCoins();
   const canAfford = unlimitedCoins || (state.gami.koin || 0) >= (previewItem?.harga || 0);
   const kurang = Math.max(0, (previewItem?.harga || 0) - (state.gami.koin || 0));
@@ -4994,11 +5002,11 @@ async function renderShop(){
         <div class="shop-items">
           <h3 style="margin-top:0;">${CAT_TABS.find(t=>t.key===activeCat).label} (${items.length})</h3>
           ${items.length ? `
-            <div class="shop-items-grid">
-              ${items.map(it => {
+            ${(() => {
+              const tile = (it) => {
                 const owned = inv.includes(it.id);
                 const equipped = eq[activeCat] === it.id;
-                const locked = state.gami.level_karakter < it.unlock_lv;
+                const locked = !owned && state.gami.level_karakter < it.unlock_lv;   // item yang sudah dimiliki tidak terkunci level
                 const selected = it.id === preview;
                 return `
                   <div class="shop-tile ${selected?'sel':''} ${equipped?'equipped':''} ${owned?'owned':''} ${locked?'locked':''}"
@@ -5006,12 +5014,16 @@ async function renderShop(){
                     <div class="shop-tile-thumb">${thumbFor(it)}</div>
                     <div class="shop-tile-name">${it.nama}</div>
                     <div class="shop-tile-price">
-                      ${equipped ? "✓ Dipakai" : owned ? "Dimiliki" : locked ? `🔒 Lv ${it.unlock_lv}` : `🪙 ${it.harga.toLocaleString("id-ID")}`}
+                      ${equipped ? "✓ Dipakai" : owned ? "Dimiliki · bisa dipakai" : locked ? `🔒 Lv ${it.unlock_lv}` : `🪙 ${it.harga.toLocaleString("id-ID")}`}
                     </div>
                     ${it.rarity && it.rarity !== "common" ? `<span class="shop-tile-rarity rarity-${it.rarity}"></span>` : ""}
                   </div>`;
-              }).join("")}
-            </div>
+              };
+              const RL = { mythic:"Mythic", legendary:"Legendary", epic:"Epic", rare:"Rare", uncommon:"Uncommon", common:"Common" };
+              const own = items.filter(it => inv.includes(it.id)), rest = items.filter(it => !inv.includes(it.id));
+              const sec = (judul, arr) => arr.length ? `<h4 class="shop-sec">${judul} <small>(${arr.length})</small></h4><div class="shop-items-grid">${arr.map(tile).join("")}</div>` : "";
+              return sec("⭐ Punya kamu — langsung bisa dipakai", own) + RAR_ORD.map(r => sec(RL[r], rest.filter(it => it.rarity === r))).join("");
+            })()}
           ` : `<div class="empty"><div class="emoji">📭</div>Kategori ini masih kosong.</div>`}
         </div>
       </div>
@@ -5041,6 +5053,7 @@ window.shopConfirmBeli = (cat, id, harga, unlock) => {
 window.__lvOk = (kat, id) => {
   if (kat !== "sayap" || !id || id === "none") return true;
   if (FB.hasUnlimitedCoins && FB.hasUnlimitedCoins()) return true;
+  if ((state.siswa?.karakter?.inventory || []).includes(id)) return true;   // sudah dimiliki (mis. hadiah gacha) = bebas dipakai di level berapa pun
   const need = CATALOG.sayap?.[id]?.unlock_lv || 50;
   if ((state.gami?.level_karakter || 1) >= need) return true;
   toast(`🔒 Sayap baru terbuka di Level ${need}`); return false;
