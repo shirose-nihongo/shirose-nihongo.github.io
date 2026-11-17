@@ -84,7 +84,7 @@ export const DEFAULT_BIDANG = [
   { slug: "forestry", nama: "Forestry (Kehutanan)", jp: "林業", aktif: true, urut: 15, tema: "forestry", hasContent: true },
   { slug: "linen-supply", nama: "Linen Supply", jp: "リネンサプライ", aktif: true, urut: 16, tema: "linen", hasContent: true },
   { slug: "railway-track", nama: "Railway — Jalur Rel (軌道整備)", jp: "鉄道（軌道整備）", aktif: true, urut: 18, tema: "railway", hasContent: true },
-  { slug: "railway-electrical", nama: "Railway — Kelistrikan (電気設備整備)", jp: "鉄道（電気設備整備）", aktif: true, urut: 19, tema: "generic", hasContent: true },
+  { slug: "railway-electrical", nama: "Railway — Kelistrikan (電気設備整備)", jp: "鉄道（電気設備整備）", aktif: true, urut: 19, tema: "railway", hasContent: true },
   { slug: "shipbuilding", nama: "Shipbuilding", jp: "造船・舶用工業", aktif: true, urut: 17, tema: "ship", hasContent: true },
   { slug: "railway-vehicle", nama: "Railway — Manufaktur Kereta (車両製造)", jp: "鉄道（車両製造）", aktif: true, urut: 14, tema: "railway", hasContent: true },
   { slug: "logistics", nama: "Logistik / Pergudangan", jp: "物流倉庫", aktif: true, urut: 14, tema: "logistics", hasContent: true },
