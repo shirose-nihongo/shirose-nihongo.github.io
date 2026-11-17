@@ -1,0 +1,769 @@
+{
+ "schema": 1,
+ "bidang": "jaim-machine-metal",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 機械金属加工 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab10",
+  "no": 10,
+  "title": {
+   "id": "Peralatan Listrik, Pembentukan Plastik, Pengecatan, Pengemasan, Pengerolan Aluminium, dan Pembuatan Produk Ekstrusi",
+   "jp": "電気機器、成形、塗装、包装、アルミ圧延、押出製品製造"
+  },
+  "intro": {
+   "id": "Bab 10 buku resmi JAIM."
+  },
+  "pages": [
+   142,
+   168
+  ],
+  "subs": [
+   {
+    "id": "b10s1",
+    "no": 1,
+    "title": {
+     "id": "Pengetahuan Dasar Listrik dan Rangkaian Listrik",
+     "jp": "電気の基本知識と回路"
+    },
+    "pages": [
+     142,
+     143
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Hukum Ohm"
+      },
+      {
+       "p": "Untuk memahami prinsip kerja listrik, penting untuk memahami dan mengingat istilah-istilah dasar."
+      },
+      {
+       "ul": [
+        "Tegangan (V): Mengacu pada gaya atau dorongan yang menyebabkan arus listrik mengalir. Seperti halnya “tekanan air” pada aliran air. Satuannya adalah [V] (volt). Semakin tinggi tegangan, semakin kuat gaya yang mendorong aliran listrik. Di Jepang, tegangan untuk rumah tangga biasanya 100 V, tetapi untuk pabrik terkadang digunakan tegangan yang lebih tinggi (misalnya 200 V). Tegangan diukur dengan voltmeter. Hubungkan voltmeter secara paralel ke bagian yang ingin diukur tegangannya.",
+        "Arus (I): Mengacu pada jumlah listrik yang benar-benar mengalir. Dapat diibaratkan “laju aliran” pada aliran air. Satuannya adalah [A] (ampere). Jika arus listrik terlalu besar, akan menghasilkan panas dan dapat menjadi penyebab kebakaran. Arus listrik diukur dengan amperemeter. Hubungkan amperemeter secara seri ke bagian yang ingin diukur arusnya.",
+        "Resistansi (R): Mengacu pada seberapa besar hambatan terhadap aliran listrik. Pada aliran air, seperti selang sempit yang menghambat aliran. Satuan resistansi adalah [Ω] (ohm). Semakin tinggi resistansi, semakin sedikit arus yang mengalir pada tegangan yang sama."
+       ]
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Gambar 10-1: Menyambungkan Amperemeter dan Voltmeter"
+      },
+      {
+       "p": "Hubungan antara 3 elemen dasar tersebut, yaitu tegangan (V), arus (I) dan resistansi (R), dinyatakan oleh “Hukum Ohm”. Dinyatakan dengan rumus: V = I × R."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Hukum Ohm",
+      "points": [
+       "Tegangan (V): Mengacu pada gaya atau dorongan yang menyebabkan arus listrik mengalir. S…",
+       "Arus (I): Mengacu pada jumlah listrik yang benar-benar mengalir. Dapat diibaratkan “laj…",
+       "Resistansi (R): Mengacu pada seberapa besar hambatan terhadap aliran listrik. Pada alir…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s2",
+    "no": 2,
+    "title": {
+     "id": "Mengoperasikan Peralatan Listrik secara Aman dan Mencegah Sengatan Listrik",
+     "jp": "電気機器の安全操作と感電防止"
+    },
+    "pages": [
+     144,
+     145
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Sengatan Listrik"
+      },
+      {
+       "p": "Listrik tidak terlihat mata, sehingga bahayanya tidak boleh dianggap remeh. Terutama, mengoperasikan peralatan listrik secara aman dan mencegah sengatan listrik merupakan aturan penting saat bekerja di pabrik."
+      },
+      {
+       "p": "Untuk mencegah sengatan listrik, pastikan selalu mematuhi aturan dasar berikut:"
+      },
+      {
+       "ul": [
+        "Jangan menyentuh listrik dengan tangan basah: karena air mudah menghantarkan listrik, menyentuh stop kontak atau sakelar dengan tangan basah sangatlah berbahaya.",
+        "Pastikan memasang arde (pembumian): Arde adalah mekanisme mengalirkan listrik ke tanah dengan aman jika sewaktu-waktu terjadi kebocoran listrik pada peralatan listrik. Jika peralatan dilengkapi dengan kabel arde, pastikan kabel tersebut disambungkan. Arde (pembumian) adalah “tali penyelamat” penting yang melindungi dari musibah sengatan listrik.",
+        "Lakukan inspeksi dan perbaikan mesin setelah sumber listrik OFF: Menyentuh mesin saat listrik masih ON ada risiko tersengat listrik. Saat melakukan perbaikan atau pembersihan, pastikan mencabut steker dari stop kontak sebelum memulai pekerjaan.",
+        "Jangan menyentuh kabel listrik tanpa ijin: Kabel listrik di pabrik sering dialiri tegangan tinggi sehingga sangat berbahaya. Jika orang yang tak berkualifikasi menyentuh sembarangan, dapat menyebabkan sengatan listrik serius."
+       ]
+      },
+      {
+       "p": "Jika melihat rekan kerja terkena sengatan listrik, jangan coba menolong dengan menyentuh langsung. Anda juga bisa tersengat listrik. Pertama, matikan sumber listrik dari lokasi yang aman, lalu gunakan benda yang tidak menghantarkan listrik (misalnya tongkat kayu) untuk melepaskan tubuh korban. Segera laporkan kejadian ke atasan dan hubungi ambulan."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sengatan Listrik",
+      "points": [
+       "Jangan menyentuh listrik dengan tangan basah: karena air mudah menghantarkan listrik, m…",
+       "Pastikan memasang arde (pembumian): Arde adalah mekanisme mengalirkan listrik ke tanah …",
+       "Lakukan inspeksi dan perbaikan mesin setelah sumber listrik OFF: Menyentuh mesin saat l…",
+       "Jangan menyentuh kabel listrik tanpa ijin: Kabel listrik di pabrik sering dialiri tegan…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s3",
+    "no": 3,
+    "title": {
+     "id": "Fungsi dan Standar Peralatan Listrik Utama",
+     "jp": "主要電気機器の役割と規格"
+    },
+    "pages": [
+     146,
+     147
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Masing-masing peralatan listrik utama yang digunakan di pabrik memiliki fungsi penting."
+      },
+      {
+       "ol": [
+        "Motor listrik: Perangkat yang mengubah energi listrik menjadi tenaga. Tanpa motor listrik, banyak peralatan dan mesin seperti konveyor, pompa atau pisau mesin tidak akan berfungsi. Motor listrik itu seperti \"jantung\" yang menggerakkan industri.",
+        "Trafo: perangkat yang mengubah tegangan listrik. Di pabrik, trafo digunakan untuk menurunkan tegangan tinggi menjadi tegangan rendah yang dapat digunakan oleh mesin, atau sebaliknya, menaikkan tegangan rendah menjadi tegangan tinggi.",
+        "Pemutus sirkuit: Alat pengaman yang secara otomatis memutus listrik saat arus berlebih mengalir dalam sirkuit. Alat ini memiliki peran penting untuk mencegah musibah seperti kebakaran."
+       ]
+      },
+      {
+       "p": "Perangkat-perangkat listrik tersebut diatur oleh berbagai standar agar dapat digunakan dengan aman. Selain aturan perundang-undang Jepang (seperti UU K3), ada juga JIS (Standar Industri Jepang) dan ISO (Organisasi Standar Internasional)."
+      },
+      {
+       "p": "Standar-standar ini bertujuan menjaga keselamatan dan mutu produk tetap konsisten, misalnya, menetapkan secara rinci perangkat keselamatan apa yang harus dimiliki oleh mesin tertentu dan jenis bahan apa yang harus digunakan. Dengan menggunakan peralatan yang sesuai standar-standar tersebut secara benar, keselamatan lingkungan kerja dapat terjamin."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Masing-masing peralatan listrik utama yang digunakan di pabrik memiliki fungsi penting.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s4",
+    "no": 4,
+    "title": {
+     "id": "Konduktor, Semikonduktor dan Isolator",
+     "jp": "導体・半導体・絶縁体"
+    },
+    "pages": [
+     148,
+     148
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Material listrik dibagi menjadi 3 jenis utama berdasarkan kemampuan menghantarkan listrik. Memahami perbedaan ini sangat penting dalam memilih komponen yang tepat."
+      },
+      {
+       "p": "(1) Konduktor"
+      },
+      {
+       "p": "Mengacu pada bahan yang menghantarkan listrik dengan baik. Contoh utamanya adalah logam. Logam menghantarkan listrik dengan lancar karena memiliki banyak elektron bebas, yaitu partikel kecil pembawa listrik. Sebagai contoh, tembaga dan aluminium merupakan penghantar listrik yang baik dan banyak digunakan untuk kabel listrik serta untuk jalur kabel komponen elektronik. Perak juga memiliki konduktivitas tinggi, tetapi karena harganya mahal, jarang digunakan kecuali dalam kasus khusus."
+      },
+      {
+       "p": "(2) Isolator"
+      },
+      {
+       "p": "Mengacu pada bahan yang hampir tidak menghantarkan listrik. Karet, plastik, kaca, dan keramik merupakan contoh bahan isolator. Bahan-bahan ini hampir tak memiliki elektron bebas, sehingga dapat menghentikan aliran listrik. Isolator berfungsi menutupi kabel listrik dan peralatan listrik guna mencegah sengatan listrik serta agar arus listrik tidak mengalir ke tempat yang salah. Di tempat- tempat dimana arus listrik tidak diinginkan, isolator selalu digunakan."
+      },
+      {
+       "p": "(3) Semikonduktor"
+      },
+      {
+       "p": "Bahan yang memiliki sifat diantara konduktor dan isolator. Semikonduktor memiliki sifat dapat atau tidak dapat menghantarkan listrik tergantung kondisi tertentu (seperti panas atau cahaya). Sifat khusus ini dimanfaatkan untuk membuat komponen elektronik seperti dioda dan transistor. Semikonduktor merupakan bahan sangat penting untuk perangkat elektronik modern, seperti CPU pada ponsel pintar dan komputer."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Material listrik dibagi menjadi 3 jenis utama berdasarkan kemampuan menghantarkan listrik. Memahami perbedaan ini sangat penting dalam memilih komponen yang tepat.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s5",
+    "no": 5,
+    "title": {
+     "id": "Dasar-Dasar Komponen Elektronik",
+     "jp": "電子部品の基礎"
+    },
+    "pages": [
+     149,
+     150
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Komponen elektronik digunakan untuk mengontrol sifat listrik, sehingga memungkinkan pembuatan berbagai perangkat yang memudahkan kehidupan. Komponen-komponen tersebut dapat disusun pada PCB, membentuk rangkaian elektronik yang kompleks."
+      },
+      {
+       "p": "(1) Resistor"
+      },
+      {
+       "p": "Resistor adalah komponen yang menghambat aliran listrik. Komponen ini digunakan untuk mengatur jumlah arus listrik yang mengalir dalam rangkaian. Dengan menghambat aliran listrik, resistor mengubah energi listrik menjadi panas. Fenomena ini dimanfaatkan pada perangkat listrik yang menghasilkan panas, seperti pemanas listrik dan lampu pijar."
+      },
+      {
+       "p": "(2) Kapasitor"
+      },
+      {
+       "p": "Kapasitor adalah komponen yang dapat menyimpan listrik untuk sementara. Seperti pada baterai, kapasitor menyimpan listrik dan melepaskannya saat dibutuhkan, sehingga antara lain dapat digunakan untuk menstabilkan tegangan dan menghilangkan gangguan (noise). Kapasitor digunakan pada perangkat seperti lampu kilat kamera."
+      },
+      {
+       "p": "(3) Dioda"
+      },
+      {
+       "p": "Komponen yang hanya mengalirkan listrik dalam satu arah. Beberapa dioda, seperti LED, memancarkan cahaya saat dialiri listrik."
+      },
+      {
+       "p": "(4) Transistor"
+      },
+      {
+       "p": "Komponen yang antara lain dapat memperkuat sinyal listrik dan mengkontrol aliran listrik secara ON/OFF seperti sakelar. Penemuan transistor memungkinkan pembuatan komputer dan perangkat elektronik, yang berukuran kecil dan memiliki kinerja tinggi."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Komponen elektronik digunakan untuk mengontrol sifat listrik, sehingga memungkinkan pembuatan berbagai perangkat yang memudahkan kehidupan. Komponen-komponen tersebut dapat disusun pada PCB, membentuk rangkaian elektronik yang kompleks.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s6",
+    "no": 6,
+    "title": {
+     "id": "Pembentukan Plastik",
+     "jp": "プラスチック{成形|せいけい}"
+    },
+    "pages": [
+     151,
+     154
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Pembentukan Plastik"
+      },
+      {
+       "p": "Merupakan teknik pengolahan dengan memasukkan bahan plastik kedalam cetakan menggunakan panas, tekanan, atau keduanya, dan memadatkannya menjadi bentuk yang diinginkan. Cocok untuk membuat produk dengan bentuk yang sama dalam jumlah besar dan secara efisien. Karena bahan dapat digunakan tanpa terbuang, serta bentuk kompleks dapat dibuat dalam satu proses, memungkinkan penghematan biaya."
+      },
+      {
+       "p": "(2) Jenis-jenis Pembentukan Plastik"
+      },
+      {
+       "ol": [
+        "Pembentukan Injeksi Merupakan salah satu metode pembuatan plastik yang umum. Pertama, butiran (pelet) plastik dipanaskan didalam mesin hingga meleleh menjadi cairan kental. Selanjutnya, plastik cair \"disuntikkan\" dengan tekanan sangat tinggi kedalam logam cetakan. Setelah plastik mendingin dan mengeras di dalam cetakan, kemudian cetakan dibuka dan produk dikeluarkan."
+       ]
+      },
+      {
+       "p": "Karakteristik"
+      },
+      {
+       "p": "Dapat membuat komponen dengan bentuk kompleks dalam satu proses, sehingga menghasilkan produktivitas yang sangat tinggi. Banyak produk di sekitar kita, seperti komponen plastik pada ponsel pintar dan mobil, serta mainan, dibuat menggunakan metode ini."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "ol": [
+        "Pembentukan Tiup Merupakan metode pengolahan dimana udara ditiup sehingga produk mengembang dan membentuk suatu bentuk. Pertama, plastik yang meleleh dibentuk menjadi tabung. Selanjutnya, tabung tersebut dimasukkan ke dalam cetakan dan ditutup. Di dalam cetakan, udara ditiupkan ke dalam tabung, sehingga mengembang seperti balon, lalu ditekan mengikuti bentuk cetakan. Setelah plastik mendingin dan mengeras, produk dikeluarkan."
+       ]
+      },
+      {
+       "p": "Karakteristik"
+      },
+      {
+       "p": "Cocok untuk produksi massal produk berongga seperti botol plastik, wadah atau tangki."
+      },
+      {
+       "ol": [
+        "Pembentukan Kompresi Merupakan metode pengolahan dimana bahan dimasukkan ke dalam cetakan dan ditekan dengan dorongan kuat dari atas untuk membuat suatu bentuk. Proses pembentukan ini terutama digunakan untuk pembentukan plastik termoset dan karet."
+       ]
+      },
+      {
+       "p": "Karakteristik"
+      },
+      {
+       "p": "Cocok untuk produk dengan bentuk relatif sederhana dan dapat menghasilkan komponen yang kuat."
+      },
+      {
+       "ol": [
+        "Pembentukan Ekstrusi Merupakan metode pengolahan dimana plastik cair diekstrusi (didorong keluar) melalui lubang dengan bentuk tertentu (die) untuk menghasilkan bentuk memanjang (batang, pipa, lembaran, dsb)."
+       ]
+      },
+      {
+       "p": "Karakteristik"
+      },
+      {
+       "p": "Digunakan untuk membuat produk memanjang dengan penampang konstan sepanjang benda, seperti pipa, selang atau kusen jendela."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "ol": [
+        "Pembentukan FRP Merupakan metode pengolahan dengan meresapkan plastik cair (resin) ke bahan penguat seperti serat kaca, lalu dikeraskan melalui reaksi kimia."
+       ]
+      },
+      {
+       "p": "Karakteristik"
+      },
+      {
+       "p": "Bahan penguat diletakkan di dalam cetakan, lalu resin diratakan sambil udara dikeluarkan dengan rol, dan dibiarkan mengeras sambil mengeluarkan panas.. Digunakan untuk pembuatan perahu, bak mandi, perlengkapan rumah, dan sebagainya."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Pembentukan Plastik",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s7",
+    "no": 7,
+    "title": {
+     "id": "Teknik Pengecatan",
+     "jp": "{塗装技術|とそうぎじゅつ}"
+    },
+    "pages": [
+     155,
+     156
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pengecatan adalah teknik melapisi permukaan produk dengan cat. Pengecatan tidak hanya untuk memberi warna, tetapi juga berperan sangat penting untuk menjaga mutu produk dan membuat lebih tahan lama."
+      },
+      {
+       "p": "(1) Tujuan Pengecatan"
+      },
+      {
+       "ul": [
+        "Pencegahan karat dan perlindungan: Logam seperti besi akan berkarat jika dibiarkan begitu saja. Pelapisan permukaan dengan cat melindungi logam dari udara dan air, sehingga mencegah karat.",
+        "Estetika: Memberikan warna dan kilau agar produk terlihat indah. Ini sangat penting untuk produk dimana penampilan visual menjadi hal utama, seperti mobil dan peralatan listrik.",
+        "Aspek fungsionalitas: Ada juga jenis cat dengan fungsi khusus, seperti cat isolasi listrik yang mencegah aliran listrik dan cat penahan panas yang memantulkan panas."
+       ]
+      },
+      {
+       "p": "(2) Metode Pengecatan"
+      },
+      {
+       "ul": [
+        "Pengecatan kuas: Metode pengacatan secara manual menggunakan kuas atau rol. Terutama digunakan untuk pengecatan dinding bangunan atau pada permukaan yang luas.",
+        "Pengecatan semprot: Metode menyemprotkan cat dalam bentuk kabut ke permukaan produk. Metode ini mudah memberikan hasil akhir yang merata dan indah, dan banyak digunakan untuk pengecatan mobil.",
+        "Pengecatan elektrostatik: Metode dengan menghubungkan produk ke arde, memberikan muatan negatif pada partikel cat, dan menarik cat ke produk melalui gaya elektrostatik. Cat menempel pada produk tanpa terbuang, sehingga efisien dan memungkinkan pengecatan dengan ketebalan yang merata.",
+        "Pengecatan elektrodeposisi: Metode dengan mencelupkan produk ke dalam tangki yang berisi cat, kemudian mengalirkan listrik agar cat menempel pada produk. Metode ini sering digunakan untuk lapisan dasar pada bodi mobil, karena memungkinkan pengecatan merata hingga ke celah-celah produk."
+       ]
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pengecatan adalah teknik melapisi permukaan produk dengan cat. Pengecatan tidak hanya untuk memberi warna, tetapi juga berperan sangat penting untuk menjaga mutu produk dan membuat lebih tahan lama.",
+      "points": [
+       "Pencegahan karat dan perlindungan: Logam seperti besi akan berkarat jika dibiarkan begi…",
+       "Estetika: Memberikan warna dan kilau agar produk terlihat indah. Ini sangat penting unt…",
+       "Aspek fungsionalitas: Ada juga jenis cat dengan fungsi khusus, seperti cat isolasi list…",
+       "Pengecatan kuas: Metode pengacatan secara manual menggunakan kuas atau rol. Terutama di…",
+       "Pengecatan semprot: Metode menyemprotkan cat dalam bentuk kabut ke permukaan produk. Me…",
+       "Pengecatan elektrostatik: Metode dengan menghubungkan produk ke arde, memberikan muatan…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s8",
+    "no": 8,
+    "title": {
+     "id": "Teknik Pengemasan",
+     "jp": "{包装技術|ほうそうぎじゅつ}"
+    },
+    "pages": [
+     157,
+     159
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Kemasan Industri"
+      },
+      {
+       "p": "Pengemasan adalah teknik untuk melindungi produk, memungkinkan pengiriman dengan aman, dan memudahkan pengelolaan."
+      },
+      {
+       "p": "(2) Tujuan Pengemasan"
+      },
+      {
+       "ul": [
+        "Perlindungan produk: Kemasan berfungsi melindungi produk dari goresan, kotoran, kelembaban, dan sebagainya. Pengemasan juga untuk mencegah produk rusak atau kotor selama pengiriman.",
+        "Mempertahankan mutu: Dengan kemasan, kualitas makanan, obat-obatan, dsb dapat dipertahankan, sehingga kesegaran dan kebersihannya tetap terjaga.",
+        "Penyajian informasi: Kemasan memuat informasi penting seperti nama produk, tanggal produksi, tanggal kedaluwarsa, dan petunjuk penggunaan.",
+        "Efisiensi transportasi dan penyimpanan: Dengan menggabungkan beberapa produk menjadi satu, menjadi lebih mudah untuk diangkut dan disimpan."
+       ]
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "(3) Jenis dan Bahan Kemasan"
+      },
+      {
+       "ul": [
+        "Pengemasan individual: Metode dimana setiap produk dikemas secara individual. Digunakan untuk produk seperti makanan ringan atau komponen, dimana kebersihan dan pengelolaan secara individual penting.",
+        "Kotak kardus: Merupakan bahan kemasan umum untuk memasukkan dan mengemas banyak produk secara bersamaan. Memiliki sifat ringan, kuat, dan mudah didaur ulang.",
+        "Film susut: Adalah film transparan yang menyusut saat dipanaskan dan menempel rapat pada produk. Melindungi produk dan membuatnya terlihat rapi."
+       ]
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Kemasan Industri",
+      "points": [
+       "Perlindungan produk: Kemasan berfungsi melindungi produk dari goresan, kotoran, kelemba…",
+       "Mempertahankan mutu: Dengan kemasan, kualitas makanan, obat-obatan, dsb dapat dipertaha…",
+       "Penyajian informasi: Kemasan memuat informasi penting seperti nama produk, tanggal prod…",
+       "Efisiensi transportasi dan penyimpanan: Dengan menggabungkan beberapa produk menjadi sa…",
+       "Pengemasan individual: Metode dimana setiap produk dikemas secara individual. Digunakan…",
+       "Kotak kardus: Merupakan bahan kemasan umum untuk memasukkan dan mengemas banyak produk …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s9",
+    "no": 9,
+    "title": {
+     "id": "Dua Jenis Proses Pengerolan",
+     "jp": "圧延加工の2 つの種類"
+    },
+    "pages": [
+     160,
+     160
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pengerolan secara umum dibagi menjadi 2 berdasarkan suhu saat proses pengerjaan."
+      },
+      {
+       "p": "(1) Pengerolan Panas"
+      },
+      {
+       "p": "Memanaskan material pada suhu tinggi hingga menjadi lunak, kemudian memprosesnya."
+      },
+      {
+       "ul": [
+        "Keunggulan",
+        "Karena menjadi lunak, lebih mudah diproses dengan gaya yang lebih kecil.",
+        "Struktur material menjadi lebih kuat, ulet, dan kokoh.",
+        "Poin Perhatian",
+        "Karena menyusut saat mendingin dari kondisi panas, sulit mendapatkan ukuran yang presisi.",
+        "Karena permukaan terkena udara dan terbentuk kotoran (lapisan oksida), hasil akhir tidak terlalu bersih.",
+        "Dibutuhkan energi dan biaya untuk memanaskan material."
+       ]
+      },
+      {
+       "p": "(2) Pengerolan Dingin"
+      },
+      {
+       "p": "Memproses material tanpa memanaskan."
+      },
+      {
+       "ul": [
+        "Keunggulan",
+        "Ukuran yang dihasilkan lebih presisi dibanding pengerolan panas.",
+        "Permukaan mengilap dan hasil akhir lebih halus.",
+        "Tidak perlu mesin untuk memanaskan material."
+       ]
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "ul": [
+        "Poin Perhatian",
+        "Karena material dalam kondisi keras, perlu gaya sangat besar untuk memproses.",
+        "Karena material dapat menjadi terlalu keras, terkadang diperlukan perlakuan panas (penganilan) untuk melunakkan kembali."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pengerolan secara umum dibagi menjadi 2 berdasarkan suhu saat proses pengerjaan.",
+      "points": [
+       "Keunggulan",
+       "Karena menjadi lunak, lebih mudah diproses dengan gaya yang lebih kecil.",
+       "Struktur material menjadi lebih kuat, ulet, dan kokoh.",
+       "Poin Perhatian",
+       "Karena menyusut saat mendingin dari kondisi panas, sulit mendapatkan ukuran yang presisi.",
+       "Karena permukaan terkena udara dan terbentuk kotoran (lapisan oksida), hasil akhir tida…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s10",
+    "no": 10,
+    "title": {
+     "id": "Peran Penting Minyak Pengerol di Lapangan",
+     "jp": "現場で大切な圧延油の役割"
+    },
+    "pages": [
+     161,
+     161
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Memberikan minyak (minyak pengerolan) diantara rol dan material sangat penting dalam proses pengerolan. Minyak ini berfungsi mengurangi gesekan agar rol berputar dengan mudah sehingga material dapat mengalir lancar. Juga berfungsi sebagai pendingin untuk melindungi material dan rol dari panas gesekan selama pengerolan serta mencegah keausan akibat panas."
+      },
+      {
+       "p": "Selain itu, minyak ini juga perlu untuk melindungi permukaan produk agar tidak tergores dan mempertahankan hasil akhir baik dan rapi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Memberikan minyak (minyak pengerolan) diantara rol dan material sangat penting dalam proses pengerolan. Minyak ini berfungsi mengurangi gesekan agar rol berputar dengan mudah sehingga material dapat mengalir lancar. Juga berfungsi sebagai pendingin untuk melindungi material dan rol dari panas gesekan selama pengerolan ",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s11",
+    "no": 11,
+    "title": {
+     "id": "Proses setelah Menjadi Produk",
+     "jp": "製品になった後の処理"
+    },
+    "pages": [
+     161,
+     163
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Proses ini bukan hanya untuk menipiskan material. Sesuai penggunaannya, material dapat diberi perlakuan panas (penganilan) guna mengatur kekerasan atau diberi perlakuan permukaan agar lebih tahan karat."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Proses ini bukan hanya untuk menipiskan material. Sesuai penggunaannya, material dapat diberi perlakuan panas (penganilan) guna mengatur kekerasan atau diberi perlakuan permukaan agar lebih tahan karat.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s12",
+    "no": 12,
+    "title": {
+     "id": "Proses Produksi Ekstrusi",
+     "jp": "押出加工の製造プロセス"
+    },
+    "pages": [
+     164,
+     164
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Proses ekstrusi terutama dilakukan melalui tahapan berikut:"
+      },
+      {
+       "ol": [
+        "Pemanasan bilet: Balok aluminium berbentuk silinder (bilet) dipanaskan hingga 400°C–500°C. Dengan itu, menjadi cukup lunak dan siap dilewatkan melalui cetakan.",
+        "Ekstrusi: Material yang dipanaskan ditempatkan pada mesin ekstrusi, dan didorong menuju die dengan gaya besar misalnya dengan tekanan hidrolik.",
+        "Fungsi die (cetakan): Kunci utama proses ekstrusi adalah die. Dengan mendorong material kedalam cetakan baja yang memiliki lubang berbentuk kompleks, produk dengan penampang kompleks seperti kusen aluminium dapat langsung dihasilkan.",
+        "Pendinginan, pelurusan dan pemotongan: Karena produk hasil ekstrusi kondisinya masih panas, didinginkan melalui pendinginan udara atau air. Kemudian dilakukan pelurusan bagian yang bengkok, lalu dipotong menjadi panjang yang dibutuhkan hingga menjadi produk jadi."
+       ]
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Proses ekstrusi terutama dilakukan melalui tahapan berikut:",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s13",
+    "no": 13,
+    "title": {
+     "id": "Produk Utama Hasil Ekstrusi dan Karakteristiknya",
+     "jp": "押出加工の主な製品と特徴"
+    },
+    "pages": [
+     165,
+     165
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Produk yang dibuat melalui proses ekstrusi antara lain sebagai berikut:"
+      },
+      {
+       "ul": [
+        "Bingkai jendela: Kusen aluminium di rumah kita adalah salah satu contoh utama produk hasil ekstrusi. Bahkan bentuk kompleks dengan struktur berbeda antara bagian luar dan dalam dapat dibuat melalui proses ekstrusi.",
+        "Bingkai pintu dan bahan struktur: Digunakan pada bagian yang membutuhkan kekuatan tinggi, seperti rangka gerbong kereta api serta kolom dan balok bangunan.",
+        "Komponen penghantar listrik dan pelepas panas: Dengan membuat bentuk yang dilengkapi sirip yang kompleks, luas permukaan dapat diperbesar sehingga dapat digunakan untuk komponen pelepas panas yang efisien (heat sink)."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Produk yang dibuat melalui proses ekstrusi antara lain sebagai berikut:",
+      "points": [
+       "Bingkai jendela: Kusen aluminium di rumah kita adalah salah satu contoh utama produk ha…",
+       "Bingkai pintu dan bahan struktur: Digunakan pada bagian yang membutuhkan kekuatan tingg…",
+       "Komponen penghantar listrik dan pelepas panas: Dengan membuat bentuk yang dilengkapi si…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s14",
+    "no": 14,
+    "title": {
+     "id": "Pemanasan Awal Bilet dan Kontrol Suhu",
+     "jp": "ビレット（塊）の予熱と温度管理"
+    },
+    "pages": [
+     165,
+     165
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Saat proses ekstrusi, suhu bilet sangat penting."
+      },
+      {
+       "p": "Jika suhu terlalu rendah, menjadi terlalu keras sehingga membebani die dan dapat menyebabkan mesin berhenti. Sebaliknya, jika suhu terlalu tinggi, menjadi terlalu lunak sehingga dapat menyebabkan retak pada permukaan produk."
+      },
+      {
+       "p": "Perlu menjaga keseimbangan suhu dan kecepatan secara ketat, yaitu hingga suhu berapa bilet dipanaskan dan dengan kecepatan berapa diekstrusi sesuai jenis dan ketebalan produk, agar dapat dihasilkan kualitas yang stabil."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Saat proses ekstrusi, suhu bilet sangat penting.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s15",
+    "no": 15,
+    "title": {
+     "id": "Teknologi dan Pemeliharaan Cetakan (Die)",
+     "jp": "ダイス（金型）の技術とメンテナンス"
+    },
+    "pages": [
+     166,
+     168
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Dalam proses ekstrusi, die merupakan bagian terpenting yang menentukan bentuk produk. Jika ada goresan kecil atau kotoran pada lubang die, pada permukaan logam yang melewati dapat muncul garis memanjang (goresan garis) di sepanjang produk."
+      },
+      {
+       "p": "Selain itu, karena die terkena tekanan dan gesekan yang tinggi, perlu dilakukan inspeksi sebelum dan setelah proses ekstrusi, serta menghilangkan logam yang menempel dan memperbaiki bagian die yang terkikis/terkelupas. Kotoran atau debu yang ada pada meja penampung (run-out) tempat produk bergerak dapat menggesek permukaan produk dan menyebabkan goresan. Untuk itu, selalu bersihkan permukaan meja tersebut dan pastikan kondisinya tetap baik agar produk dapat bergerak lancar."
+      },
+      {
+       "p": "Bab 10: Peralatan Listrik, Pembentukan Plastik,"
+      },
+      {
+       "p": "Ujian Evaluasi Pekerja Berketerampilan Spesifik Bidang Manufaktur Tingkat 1 (Kategori Pemesinan dan Pengolahan Logam) Buku Referensi Pembelajaran Desember 2025 - Edisi Pertama Juli 2026 - Edisi Kedua"
+      },
+      {
+       "p": "Disunting: The Association for Overseas Technical Cooperation and Sustainable Partnerships (AOTS) Ditulis: Akihiro Kitagawa Masako Sakamoto Yoshihito Shimanaka Katsuhiko Majima (berdasarkan urutan abjad Jepang) Diterbitkan: Japan Association for Human Resources in Industrial Product Manufacturing (JAIM) 5-11-2 Toranomon, Minato-ku, Tokyo 105-8501 URL https://www.jaim-skill.or.jp/"
+      },
+      {
+       "p": "©2025 Japan Association for Human Resources in Industrial Product Manufacturing"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dalam proses ekstrusi, die merupakan bagian terpenting yang menentukan bentuk produk. Jika ada goresan kecil atau kotoran pada lubang die, pada permukaan logam yang melewati dapat muncul garis memanjang (goresan garis) di sepanjang produk.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

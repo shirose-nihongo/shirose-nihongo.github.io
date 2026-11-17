@@ -1,0 +1,514 @@
+{
+ "schema": 1,
+ "bidang": "jaim-machine-metal",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 機械金属加工 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab3",
+  "no": 3,
+  "title": {
+   "id": "Pengendalian Mutu",
+   "jp": "品質管理"
+  },
+  "intro": {
+   "id": "Bab 3 buku resmi JAIM."
+  },
+  "pages": [
+   32,
+   45
+  ],
+  "subs": [
+   {
+    "id": "b3s1",
+    "no": 1,
+    "title": {
+     "id": "Pengertian Mutu",
+     "jp": "{品質|ひんしつ}とは"
+    },
+    "pages": [
+     32,
+     32
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Mutu adalah sesuatu yang menunjukkan seberapa besar produk atau layanan memenuhi harapan atau persyaratan dari pelanggan atau pengguna. Mutu bukan untuk memenuhi persyaratan dari pihak yang memproduksi. Konsepnya luas dan bukan sekadar masalah “baik atau buruk”, melainkan mencakup keandalan, keamanan, dan nilai keseluruhan yang dirasakan oleh pelanggan."
+      },
+      {
+       "ul": [
+        "Mutu Rancangan (Mutu Target) Mutu yang memenuhi maksud pelanggan seperti yang ditentukan pada tahap perencanaan dan perancangan produk. Mutu ditentukan dengan menganalisis kebutuhan pelanggan dan tren pasar.",
+        "Mutu Produksi (Mutu Hasil) Mutu yang diwujudkan sebagai produk melalui produksi. Merujuk pada kemampuan untuk mewujudkan secara stabil kinerja dan karakteristik sesuai rancangan.",
+        "Kualitas Logistik Tingkatan pemenuhan persyaratan atau harapan pelanggan dalam proses logistik hingga produk sampai ke pelanggan. Merujuk pada penyerahan produk dengan kuantitas, tenggat dan mutu sesuai pesanan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Mutu adalah sesuatu yang menunjukkan seberapa besar produk atau layanan memenuhi harapan atau persyaratan dari pelanggan atau pengguna. Mutu bukan untuk memenuhi persyaratan dari pihak yang memproduksi. Konsepnya luas dan bukan sekadar masalah “baik atau buruk”, melainkan mencakup keandalan, keamanan, dan nilai keselur",
+      "points": [
+       "Mutu Rancangan (Mutu Target) Mutu yang memenuhi maksud pelanggan seperti yang ditentuka…",
+       "Mutu Produksi (Mutu Hasil) Mutu yang diwujudkan sebagai produk melalui produksi. Meruju…",
+       "Kualitas Logistik Tingkatan pemenuhan persyaratan atau harapan pelanggan dalam proses l…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s2",
+    "no": 2,
+    "title": {
+     "id": "Pola Pikir Pengendalian Mutu",
+     "jp": "品質管理の考え方"
+    },
+    "pages": [
+     33,
+     37
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tiga unsur pengendalian mutu: QCD"
+      },
+      {
+       "p": "Mutu, biaya, dan tenggat disebut QCD dengan mengambil huruf pertama masing-masing dalam bahasa Inggris. Ada yang menyebut QCDS dengan menambahkan keselamatan, sebagai dasar dari manufaktur."
+      },
+      {
+       "p": "Mutu (Quality)"
+      },
+      {
+       "p": "Apakah memenuhi harapan dan persyaratan pelanggan? Seperti kinerja, keandalan, atau daya tahan produk. Ada mutu rancangan (target) dan mutu produksi (hasil)."
+      },
+      {
+       "p": "Biaya (Cost) Tenggat (Delivery)"
+      },
+      {
+       "p": "Waktu yang dijanjikan ke Biaya yang diperlukan untuk pelanggan untuk produknya memproduksi produk. Termasuk sampai. Penting untuk dipatuhi biaya bahan baku, biaya tenaga dalam rangka membangun kerja, dan biaya produksi. kepercayaan."
+      },
+      {
+       "p": "Keselamatan (Safety)"
+      },
+      {
+       "p": "Merujuk pada keamanan produk dan keselamatan kerja karyawan. Jika tidak dapat menjamin keamanannya, produk yang bermutu tinggi dan murah sekali pun tidak akan mendapatkan kepercayaan dari pelanggan maupun karyawan."
+      },
+      {
+       "p": "Gambar 3-1: Struktur QCDS"
+      },
+      {
+       "p": "(2) 4M dalam Produksi"
+      },
+      {
+       "p": "Istilah ini merujuk pada unsur dasar kegiatan produksi dalam industri manufaktur. Keempat unsur ini sangat penting untuk mengendalikan dan memperbaiki mutu, biaya, dan tenggat dari produk. Disebut sebagai 4M karena semuanya diawali dengan huruf M."
+      },
+      {
+       "p": "Tabel 3-1: 4M dalam Produksi"
+      },
+      {
+       "p": "Pekerja yang membuat produk. Unsur-unsur berupa Man keterampilan, pengetahuan, pengalaman, dan Pekerja pendidikan serta pelatihan pekerja akan berpengaruh terhadap mutu."
+      },
+      {
+       "p": "Mesin dan peralatan yang digunakan untuk Machine memproduksi produk. Kinerja dan kondisi mesin akan Mesin/peralatan berpengaruh terhadap efisiensi produksi dan mutu produk."
+      },
+      {
+       "p": "Bahan baku atau komponen untuk memproduksi Material produk. Kestabilan mutu dan pasokan material akan Material/komponen berpengaruh langsung pada mutu produk akhir."
+      },
+      {
+       "p": "Metode atau prosedur kerja untuk memproduksi Method produk. Walaupun menggunakan material dan mesin Metode yang sama, akan muncul perbedaan pada mutu atau efisiensi produksinya jika prosedur kerjanya berbeda."
+      },
+      {
+       "p": "(3) Prinsip San-gen"
+      },
+      {
+       "p": "Fakta yang benar harus diketahui untuk dapat mengontrol atau menyelesaikan masalah. Sikap untuk berupaya memahami fakta dengan benar disebut prinsip san-gen."
+      },
+      {
+       "p": "Tabel 3-2: Prinsip San-gen"
+      },
+      {
+       "p": "Genba Mendatangi tempat terjadinya masalah. (tempat Tidak hanya dengan laporan atau diskusi, tetapi mengamati dan sebenarnya) memeriksa dengan pergi ke lapangan."
+      },
+      {
+       "p": "Genbutsu Mengamati barang atau produk yang menyebabkan masalah. (barang Melihat langsung barang cacat untuk mencari tahu kondisi dan sebenarnya) penyebabnya."
+      },
+      {
+       "p": "Mengambil keputusan berdasarkan fakta yang diperoleh dari Genjitsu lapangan dan barang sebenarnya. (fakta Menemukan penyebab sesungguhnya berdasarkan fakta yang diperiksa sebenarnya) sendiri."
+      },
+      {
+       "p": "(4) Siklus kontrol: PDCA"
+      },
+      {
+       "p": "Kadang-kadang pengendalian dan penyelesaian masalah tidak dapat diselesaikan dalam satu kali upaya. Hal yang penting adalah memahami hasilnya dan melakukan perbaikan berulang kali. Pengulangan ini disebut “siklus kontrol” atau disebut juga PDCA dengan mengambil huruf depan setiap langkahnya."
+      },
+      {
+       "ul": [
+        "Plan (Rencana)"
+       ]
+      },
+      {
+       "p": "Tahap menentukan tujuan dan membuat rencana spesifik untuk mencapainya."
+      },
+      {
+       "ul": [
+        "Do (Eksekusi)"
+       ]
+      },
+      {
+       "p": "Tahap mengeksekusi tindakan atau PLAN Rencana"
+      },
+      {
+       "p": "pekerjaan yang spesifik berdasarkan rencana. ACT DO Perbaikan Eksekusi"
+      },
+      {
+       "ul": [
+        "Check (Evaluasi)"
+       ]
+      },
+      {
+       "p": "Tahap mengevaluasi dengan CHECK membandingkan hasil tindakan yang Evaluasi"
+      },
+      {
+       "p": "dieksekusi dan target. Gambar 3-2: Siklus PDCA"
+      },
+      {
+       "ul": [
+        "Act (Perbaikan)"
+       ]
+      },
+      {
+       "p": "Tahap mempertimbangkan langkah perbaikan untuk direfleksikan dalam rencana atau tindakan pada siklus berikutnya berdasarkan hasil evaluasi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tiga unsur pengendalian mutu: QCD",
+      "points": [
+       "Plan (Rencana)",
+       "Do (Eksekusi)",
+       "Check (Evaluasi)",
+       "Act (Perbaikan)"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s3",
+    "no": 3,
+    "title": {
+     "id": "Standar Kerja",
+     "jp": "{作業標準|さぎょうひょうじゅん}"
+    },
+    "pages": [
+     38,
+     38
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Standar kerja mengatur isi pekerjaan, prosedur, metode, peralatan yang digunakan, dan alat ketika memproduksi produk. Ini adalah buku aturan agar siapa pun dan kapan pun mengerjakannya, mutu yang sama dapat dijaga dengan aman."
+      },
+      {
+       "p": "Tabel 3-4: Contoh Dokumen Standar Kerja Tempat Kerja: Seksi Manufaktur 3, Dokumen Standar Dibuat: 21 Desember 2024 Dept Manufaktur Kerja Nomor: RS-200-BP03 Proses: Mesin Press Bodi No. 03"
+      },
+      {
+       "p": "Prosedur Perbaikan Silinder Pengangkat Mesin Press Bodi No. 03 - Bagian 3 No. Prosedur kerja Poin penting Jika tidak mematuhi 10 Lepaskan bagian bawah silinder Harus mengenakan helm karena Dapat mengakibatkan cedera *Gunakan sarung tangan pekerjaan di ketinggian. serius jika jatuh. *Pekerjaan dua orang Saat menurunkan bagian bawah Dapat terjatuh karena kehilangan *Pekerjaan di ketinggian silinder dari mesin, lakukan keseimbangan. Jatuh dari mesin. pekerjaan dua orang. 11 Membersihkan mesin pres Hilangkan gerigi/beram dengan Dapat menggores komponen lain dengan batu gerinda jika pada saat dipasang. terdapat gerigi."
+      },
+      {
+       "p": "12 Bersihkan bagian bawah silinder Hilangkan gerigi/beram dengan Dapat menggores komponen lain dan ganti packing logamnya dengan batu gerinda jika pada saat dipasang. terdapat gerigi."
+      },
+      {
+       "p": "13 Pasang bagian bawah silinder Harus mengenakan helm karena Dapat mengakibatkan cedera *Gunakan sarung tangan pekerjaan di ketinggian. serius jika jatuh. *Pekerjaan dua orang Saat menurunkan bagian bawah Dapat terjatuh karena kehilangan *Pekerjaan di ketinggian silinder dari mesin, lakukan keseimbangan. Jatuh dari mesin. pekerjaan dengan dua orang. 14 Bersihkan rod dan ganti packing- Hilangkan gerigi/beram pada ulir Flensa tidak dapat berputar pada nya. sekrup dengan batu gerinda jika saat memasang flensa. terdapat beram."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Standar kerja mengatur isi pekerjaan, prosedur, metode, peralatan yang digunakan, dan alat ketika memproduksi produk. Ini adalah buku aturan agar siapa pun dan kapan pun mengerjakannya, mutu yang sama dapat dijaga dengan aman.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b3s4",
+    "no": 4,
+    "title": {
+     "id": "Bagan Proses QC",
+     "jp": "QC{工程図|こうていず}"
+    },
+    "pages": [
+     39,
+     39
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Bagan yang mencantumkan dengan jelas mengenai “apa”, “kapan”, dan “bagaimana” mengontrol proses produksi pada setiap proses. Ada yang menyebutnya tabel proses QC."
+      },
+      {
+       "ul": [
+        "Nama proses: Setiap tahap proses produksi (Contoh: pemotongan, pengelasan, pengecatan, dsb).",
+        "Item kontrol: Hal-hal yang harus dikontrol pada setiap proses. Merujuk pada karakteristik yang berpengaruh terhadap mutu, seperti dimensi, berat, kekerasan, dan suhu produk.",
+        "Metode kontrol: Cara pengukuran atau pemeriksaan item kontrol (Contoh: pengukuran jangka sorong, pengecekan visual, dsb).",
+        "Frekuensi kontrol: Seberapa sering pengukuran atau pemeriksaan dilakukan (Contoh: sekali per lot, sekali per jam, dsb).",
+        "Tindakan terhadap penyimpangan: Tindakan yang harus dilakukan jika item kontrol tak memenuhi standar (Contoh: penghentian lini produksi, laporan ke atasan, isolasi produk cacat, dsb)."
+       ]
+      },
+      {
+       "p": "Tabel 3-5: Contoh Bagan Proses QC Bagan Proses QC (Nama Produk: Baut Kepala Silinder) Poin Kontrol Metode Kontrol Nomor Nama Proses / Proses Bagan Proses Karakteristik Petugas Pengujian/ Inspeksi dan Item Kontrol Waktu Tempat Kontak Darurat Mutu Kontrol Pengukuran Frekuensi 1 Inspeksi Tampak Petugas Saat tiba ┐Material Visual Inspeksi 100% 1. Petugas Penerimaan luar inspeksi ┘Gudang Mikrometer Inspeksi subkontraktor Material Diameter sampel → Produsen kawat (kawat tarik kawat - Ruang - Mesin uji (AQL3%) tarik SX60) Kekuatan pengujian tarik ┐1 lot datang 2. Petugas tarik ┘Per nomor pemrosesan Perpanjang lebur n = 1 internal an 3. Petugas kontrol pabrik 2 Jumlah stok Antikarat Petugas Saat masuk Gudang Label Per lot masuk 1. Supervisor Gudang per lot gudang gudang material identifikasi gudang 2. Petugas kontrol material Saat masih Visual pabrik stok 3 Kondisi Tergantung pemasangan pemeriksaan Tampak Proses jig dan alat karakteristik luar Heading Kecepatan Saat memulai Visual/sampel mutu di bawah 1. Petugas Diameter pemrosesan pekerjaan batas ini pemrosesan poros Periode Saat Mikrometer internal Panjang Tempat penggantian Pekerja mengganti jig Jangka Per mesin 2. Petugas kontrol poros kerja jig dan alat dan alat sorong Barang mesin Tinggi Selama idem pertama n=2 3. Petugas kontrol poros pekerjaan idem Setiap 30 pabrik Diameter menit n=1 kepala Lembar periksa 4"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bagan yang mencantumkan dengan jelas mengenai “apa”, “kapan”, dan “bagaimana” mengontrol proses produksi pada setiap proses. Ada yang menyebutnya tabel proses QC.",
+      "points": [
+       "Nama proses: Setiap tahap proses produksi (Contoh: pemotongan, pengelasan, pengecatan, …",
+       "Item kontrol: Hal-hal yang harus dikontrol pada setiap proses. Merujuk pada karakterist…",
+       "Metode kontrol: Cara pengukuran atau pemeriksaan item kontrol (Contoh: pengukuran jangk…",
+       "Frekuensi kontrol: Seberapa sering pengukuran atau pemeriksaan dilakukan (Contoh: sekal…",
+       "Tindakan terhadap penyimpangan: Tindakan yang harus dilakukan jika item kontrol tak mem…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s5",
+    "no": 5,
+    "title": {
+     "id": "Tujuh Alat QC",
+     "jp": "QC7 つ{道具|どうぐ}"
+    },
+    "pages": [
+     40,
+     42
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Tujuh Alat QC adalah tujuh metode dasar yang digunakan dalam pengendalian mutu untuk mengendalikan atau memperbaiki proses produksi. Umumnya digunakan untuk menganalisis data numerik secara visual dan dapat digunakan walaupun tidak memiliki pengetahuan khusus."
+      },
+      {
+       "p": "Tabel 3-6: Tujuh Alat QC"
+      },
+      {
+       "p": "Lembar Periksa"
+      },
+      {
+       "p": "Lembar Periksa Item Cacat 4/5 4/6 4/7 4/8 Retak Tabel untuk mengumpulkan data yang sudah Lubang jarum mencantumkan terlebih dahulu perihalnya. Data Kerut dapat diringkas secara efisien dengan merekam Goresan jenis cacat atau tempat kejadian. Kotoran Lainnya"
+      },
+      {
+       "p": "Diagram Pareto (ribu yen) Periode pengumpulan data: 01/08–30/08 Total = 69.000 yen Tanggal: 10 Okt 2020 Dibuat oleh: Tanaka Bagan ini menggabungkan grafik batang yang menunjukkan penyebab masalah dan jenis cacat"
+      },
+      {
+       "p": "Persentase Kumulatif Nilai Kerugian"
+      },
+      {
+       "p": "dalam urutan dari yang terbanyak dengan grafik garis yang menunjukkan rasio kumulatif. Item dengan tingkat penting yang tinggi dapat diidentifikasi untuk melakukan upaya perbaikan Lainnya berdasarkan urutan prioritas. Diagram Pareto \"Nilai Kerugian Cacat\""
+      },
+      {
+       "p": "Grafik (kasus)"
+      },
+      {
+       "p": "Merupakan alat dasar untuk menyajikan Periode: 11 Jan 2020 Tanggal: 15 Jan 2020 Periode: 10 Jan 2020 Dibuat oleh: Tanaka Tanggal: 15 Nov 2020 Jumlah ketidaksesuaian"
+      },
+      {
+       "p": "Dibuat oleh: Tanaka"
+      },
+      {
+       "p": "perubahan dan hubungan antar data secara Lainnya"
+      },
+      {
+       "p": "goresan diameter dalam (6,2%)"
+      },
+      {
+       "p": "goresan sisi B Total cacat goresan visual. Berbagai jenis grafik, seperti grafik (20,6%) gores tampak sisi A (41,5%)"
+      },
+      {
+       "p": "batang, grafik garis dan grafik lingkaran, luar (150 buah) Lupa Mengisi"
+      },
+      {
+       "p": "goresan Salah Mengisi"
+      },
+      {
+       "p": "Tak Terbaca"
+      },
+      {
+       "p": "Salah Hitung"
+      },
+      {
+       "p": "Lainnya Salah Format"
+      },
+      {
+       "p": "diameter luar (22,7%) digunakan sesuai dengan tujuan untuk Grafik Batang \"Laporan Harian Produksi: Ketidaksesuaian\" Diagram Lingkaran \"Kondisi Cacat Gores Tampak Luar\" memahami tren dan perubahan."
+      },
+      {
+       "p": "Bagan Sebab-Akibat Material Nilai pencemaran pasca pengolahan mikroorganisme"
+      },
+      {
+       "p": "Mesin Bak air terlalu besar Pencemaran terlalu banyak Suhu air terlalu tinggi Bagan yang menyusun faktor-faktor yang Pencemaran Tidak bercampur tidak terurai memengaruhi suatu masalah dalam bentuk tetap tinggi dan bervariasi."
+      },
+      {
+       "p": "Mikroorganisme mati Mikroorganisme terlalu banyak Jumlah udara sedikit Berebut nutrisi Pengaruh dari kandungan minyak seperti “tulang ikan”. Penuaan mikroorganisme Kontaminan Berguna untuk mengidentifikasi penyebab Salah baca menggumpal"
+      },
+      {
+       "p": "Kesalahan dalam Tidak beraktivasi"
+      },
+      {
+       "p": "Penguraian tidak sesungguhnya dengan menggali penyebab dari mengukur berlangsung baik Keseimbangan nutrisi Kesalahan jumlah injeksi tidak baik Volume air limbah banyak perspektif 4M, seperti orang, mesin, material, Kecepatan alir cepat"
+      },
+      {
+       "p": "dan metode. Pekerja Metode"
+      },
+      {
+       "p": "Histogram Distribusi viskositas ｎ = 110; nilai rerata = 9,38; standar deviasi 0,466"
+      },
+      {
+       "p": "Batas bawah Nilai rata-rata Batas atas spesifikasi spesifikasi"
+      },
+      {
+       "p": "Grafik batang yang menunjukkan variasi dan distribusi data dengan jumlah data. Jumlah data"
+      },
+      {
+       "p": "Histogram digunakan untuk mengetahui distribusi data, seperti dimensi dan berat produk, serta untuk menganalisis kemampuan proses. Viskositas"
+      },
+      {
+       "p": "Bagan Kontrol Bagan Kontrol (% Yield) Grafik garis dalam deret waktu untuk mengontrol Batas Kontrol Atas (BKA) apakah proses produksi berada dalam kondisi stabil. Nilai rata-rata Abnormal dapat ditemukan secara dini dengan Batas Kontrol Bawah menentukan garis kontrol batas atas dan garis (BKB)"
+      },
+      {
+       "p": "kontrol batas bawah untuk memantau apakah datanya berada dalam lingkup tersebut."
+      },
+      {
+       "p": "Diagram Pencar"
+      },
+      {
+       "p": "Diagram yang menggambarkan hubungan antara dua variabel (item) yang berbeda dalam Suhu oli"
+      },
+      {
+       "p": "sumbu vertikal dan horizontal. Periode: Sep–Okt 2020 Tanggal: 02 Nov 2020 Contohnya digunakan untuk menganalisis Dibuat oleh: Ichiro Tanaka apakah terdapat korelasi seperti pada hubungan antara “waktu kerja” dan “jumlah barang cacat”. Bukaan Katup Gas (mm)"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tujuh Alat QC adalah tujuh metode dasar yang digunakan dalam pengendalian mutu untuk mengendalikan atau memperbaiki proses produksi. Umumnya digunakan untuk menganalisis data numerik secara visual dan dapat digunakan walaupun tidak memiliki pengetahuan khusus.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b3s6",
+    "no": 6,
+    "title": {
+     "id": "ISO (Organisasi Standardisasi Internasional)",
+     "jp": "ISO（{国際標準化機構|こくさいひょうじゅんかきこう}）"
+    },
+    "pages": [
+     43,
+     43
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Ini adalah organisasi internasional yang mengatur standar global yang sama. Standar yang diatur adalah sebagai berikut."
+      },
+      {
+       "p": "(1) Standar barang/jasa"
+      },
+      {
+       "p": "Standar untuk produk atau layanan tertentu, termasuk produk itu sendiri serta penandaan, dsb."
+      },
+      {
+       "p": "(2) Standar sistem manajemen"
+      },
+      {
+       "p": "Standar mekanisme bagi organisasi untuk mengontrol aktivitasnya (sistem manajemen)."
+      },
+      {
+       "p": "Contoh:"
+      },
+      {
+       "p": "ISO 9001 (Sistem Manajemen Mutu)"
+      },
+      {
+       "p": "Mekanisme untuk terus menyediakan mutu produk dan layanan serta kepuasan pelanggan."
+      },
+      {
+       "p": "ISO 14001 (Sistem Manajemen Lingkungan)"
+      },
+      {
+       "p": "Mekanisme untuk mengurangi beban lingkungan dari aktivitas perusahaan dan berupaya dalam melestarikan lingkungan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ini adalah organisasi internasional yang mengatur standar global yang sama. Standar yang diatur adalah sebagai berikut.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b3s7",
+    "no": 7,
+    "title": {
+     "id": "Standar Industri Jepang (Japanese Industrial Standards / JIS)",
+     "jp": "{日本産業規格|にほんさんぎょうきかく}（Japanese Industrial Standards, JIS）"
+    },
+    "pages": [
+     44,
+     44
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Ini adalah standar yang diatur di Jepang."
+      },
+      {
+       "p": "Standar Industri Jepang memiliki “Sistem Tanda JIS”. Produk yang memiliki tanda ini telah dipastikan telah memenuhi persyaratan JIS dan diakui sebagai produk yang keandalannya tinggi."
+      },
+      {
+       "p": "Tanda JIS untuk Alat Ukur"
+      },
+      {
+       "p": "Pengukuran yang presisi sangat penting dalam manufaktur. Jika alat ukur memiliki tanda JIS, hal itu berarti alat tersebut memberikan hasil pengukuran yang akurat dan stabil. Melakukan inspeksi dengan alat ukur yang bertanda JIS Gambar 3-3: Tanda JIS menjadi bukti bahwa produk tersebut dapat diandalkan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ini adalah standar yang diatur di Jepang.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b3s8",
+    "no": 8,
+    "title": {
+     "id": "Sistem Satuan Internasional (SI)",
+     "jp": "{国際単位系|こくさいたんいけい}SI"
+    },
+    "pages": [
+     45,
+     45
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Merupakan sistem satuan yang berlaku internasional. Ada 7 \"satuan dasar SI\" yang saling independen. Satuan-satuan tersebut digunakan di berbagai bidang, termasuk sains, teknologi, dan bisnis."
+      },
+      {
+       "p": "Panjang: meter (m) Massa: kilogram (kg) Arus listrik: ampere (A) Waktu: detik (s) Jumlah zat: mol (mol) Intensitas cahaya: kandela (cd) Suhu termodinamik: kelvin (K)"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Merupakan sistem satuan yang berlaku internasional. Ada 7 \"satuan dasar SI\" yang saling independen. Satuan-satuan tersebut digunakan di berbagai bidang, termasuk sains, teknologi, dan bisnis.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

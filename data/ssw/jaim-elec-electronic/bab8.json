@@ -1,0 +1,351 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab8",
+  "no": 8,
+  "title": {
+   "id": "Pemesinan dan Penyelesaian Permukaan",
+   "jp": "機械加工・仕上げ"
+  },
+  "intro": {
+   "id": "Bab 8 buku resmi JAIM."
+  },
+  "pages": [
+   106,
+   117
+  ],
+  "subs": [
+   {
+    "id": "b8s1",
+    "no": 1,
+    "title": {
+     "id": "Pengukuran dan Penandaan Dimensi",
+     "jp": "寸法の測り方とけがき方"
+    },
+    "pages": [
+     106,
+     106
+    ],
+    "full": {
+     "id": [
+      {
+       "ol": [
+        "Jika posisi pemasangan komponen telah ditentukan, ukur garis tengah alat pemasangan dari permukaan acuan dan tandai garis tengah tersebut.",
+        "Selanjutnya, tandai lubang pemasangan alat. Jangan gunakan jarum penanda dari awal, tetapi gunakan pensil yang dapat dihapus agar memungkinkan koreksi.",
+        "Setelah ditandai, tempatkan alat pada posisi yang sebenarnya dan periksa apakah tidak ada kesalahan posisi atau lubang."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pengukuran dan Penandaan Dimensi",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s2",
+    "no": 2,
+    "title": {
+     "id": "Pengeboran",
+     "jp": "穴あけ加工"
+    },
+    "pages": [
+     106,
+     106
+    ],
+    "full": {
+     "id": [
+      {
+       "ol": [
+        "Buat tanda titik dengan pukulan penitik tepat pada titik tengah lubang yang telah ditandai. Jangan dipukul 2 kali. Atau, gunakan penitik otomatis.",
+        "Lubang dibor menggunakan bor listrik. Untuk membuat lubang besar untuk alat ukur atau tombol tekan, gunakan gergaji lubang. Gambar 8-1: Cara Memukul Penitik",
+        "Menghilangkan gerigi potong (beram). Gunakan alat khusus penghilang beram, atau bor yang lebih besar dari diameter lubang, untuk membuat tepi miring/chamfer (C) sekitar 0,5 mm. Perlu C0,5 berhati-hati agar tidak cedera akibat gerigi potong (beram). Gambar 8-2:",
+        "Untuk membuat lubang besar dengan diameter 10 Menghilangkan Gerigi mm atau lebih, jangan langsung dibor karena Potong lubang bisa berubah bentuk, dan untuk itu buat lubang pilot terlebih dahulu, baru kemudian lakukan pengeboran."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pengeboran",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s3",
+    "no": 3,
+    "title": {
+     "id": "Metode Pengeboran Lubang untuk Pemasangan Instrumen dan Alat",
+     "jp": "計器や器具の取付用穴の加工法"
+    },
+    "pages": [
+     107,
+     107
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "dan Alat"
+      },
+      {
+       "ol": [
+        "Untuk lubang besar yang tak dapat dibuat dengan gergaji lubang, serta lubang persegi dsb, tandai terlebih dahulu ukuran lubang. Kemudian, dengan bor listrik, buat beberapa lubang kecil didalamnya, tetapi jangan sampai saling menyambung.",
+        "Potong bagian yang menghubungkan lubang-lubang yang telah dibor, menggunakan pahat atau tang potong yang kuat.",
+        "Haluskan lubang menggunakan kikir setengah bulat agar sesuai ukuran lubang yang telah ditandai."
+       ]
+      },
+      {
+       "p": "Dihaluskan dengan Dipotong dengan pahat kikir atau tang potong"
+      },
+      {
+       "p": "Gambar 8-3: Cara Membuat Lubang Besar"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "dan Alat",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s4",
+    "no": 4,
+    "title": {
+     "id": "Pengetapan (Tapping)",
+     "jp": "タップ{加工|かこう}（タッピング） Tapping"
+    },
+    "pages": [
+     107,
+     109
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Istilah"
+      },
+      {
+       "p": "Tapping: Proses pemesinan untuk membuat lubang berulir (ulir dalam) pada pelat logam atau benda kerja. Karena menggunakan alat yang disebut tap, proses ini disebut “tapping”, juga dikenal sebagai “membuat ulir dalam” atau “penguliran”. Sekrup yang memiliki fungsi tap pada ulirnya sendiri disebut sekrup swa-ulir. (lihat Tabel 7-2)"
+      },
+      {
+       "p": "Saat memasang alat, jika lubang pemasangan terlebih dahulu dibuatkan ulir dalam, pekerjaan dapat dilakukan hanya dari sisi depan."
+      },
+      {
+       "p": "(1) Melakukan Pengetapan"
+      },
+      {
+       "ul": [
+        "Membuat ulir dengan tap.",
+        "Menggunakan sekrup swa-ulir",
+        "Tanpa membuat ulir dengan tap, pasang terlebih dahulu rel standar DIN."
+       ]
+      },
+      {
+       "p": "(2) Prosedur Pengetapan dan Pembuatan Ulir (secara manual)"
+      },
+      {
+       "ol": [
+        "Tandai posisi tempat ulir akan dibuat. (Gunakan jarum penanda pada Tabel 7-4 atau perangkat ukur ketinggian pada Gambar 7-8)",
+        "Memukul pahat penitik. (lihat Gambar 8-1)",
+        "Buat titik tengah lubang ulir menggunakan mata bor pusat.",
+        "Buat lubang pilot. (Dengan mesin bor duduk, buat lubang 80–85% dari ukuran diameter ulir, sesuai Tabel 8-1)",
+        "Berikan minyak potong.",
+        "Tegakkan tap No. 1 (tap awal) secara vertikal, kemudian sambil menekan, putar tap untuk membentuk ulir. Boleh juga memanfaatkan cekam (penjepit) pada bor duduk. (lihat Gambar 8-4)",
+        "Putar gagang tap 1 putaran, kemudian putar balik 1/2 putaran. Ulangi gerakan untuk membuat ulir.",
+        "Untuk pelat tipis, proses pengetapan dapat diselesaikan hanya dengan tap awal. Namun untuk lubang lebih dalam, lanjutkan pembuatan ulir secara berurutan dengan No. 2 (tap tengah) dan No. 3 (tap akhir) hingga terbentuk ulir penuh. (lihat Gambar 8-4)"
+       ]
+      },
+      {
+       "ul": [
+        "Sekrup swa-ulir memiliki 2 fungsi sekaligus: membuat ulir dan mengencangkan sambungan. Diameter lubang pilot sangat penting.",
+        "Lubang pilot berbeda-beda tergantung Gambar 8-4: Pembuatan Ulir ketebalan, jenis material dan bentuk pelat, jadi lubang perlu dibuat sesuai diameter lubang pilot yang telah ditentukan. Diameter lubang pilot secara rinci ditentukan dalam JIS B1004."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Istilah",
+      "points": [
+       "Membuat ulir dengan tap.",
+       "Menggunakan sekrup swa-ulir",
+       "Tanpa membuat ulir dengan tap, pasang terlebih dahulu rel standar DIN.",
+       "Sekrup swa-ulir memiliki 2 fungsi sekaligus: membuat ulir dan mengencangkan sambungan. …",
+       "Lubang pilot berbeda-beda tergantung Gambar 8-4: Pembuatan Ulir ketebalan, jenis materi…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s5",
+    "no": 5,
+    "title": {
+     "id": "Penyelesaian Permukaan dengan Kikir Logam",
+     "jp": "鉄工やすりによる仕上げ"
+    },
+    "pages": [
+     110,
+     110
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Kikir besi digunakan terutama untuk penyelesaian permukaan secara manual pada material logam seperti besi, baja tahan karat dan aluminium."
+      },
+      {
+       "ul": [
+        "Bentuknya pada umumnya terdiri dari 5 jenis, yaitu pipih, setengah bulat, bulat, persegi dan segitiga."
+       ]
+      },
+      {
+       "p": "pipih setengah bulat bulat persegi segitiga"
+      },
+      {
+       "p": "Gambar 8-5: Bentuk-bentuk Kikir Besi"
+      },
+      {
+       "ul": [
+        "Bentuk pipih adalah yang paling umum dan serbaguna, sehingga digunakan untuk berbagai jenis pengerjaan seperti perataan permukaan.",
+        "Bentuk bulat cocok untuk menghaluskan permukaan lengkung; bentuk 1/2 bulat untuk pengerjaan permukaan lengkung atau menghaluskan material berbentuk silinder; bentuk persegi untuk menghaluskan alur atau meratakan bidang; dan bentuk segitiga cocok untuk pengerjaan atau penghalusan bagian yang lebih lancip daripada yang dapat dikerjakan dengan kikir segiempat.",
+        "Pola gerigi kikir ada beberapa jenis, antara lain pola tunggal, pola ganda, pola bergelombang, pola kasar.",
+        "Pada kikir dengan pola tunggal, gerigi bagian atas dipotong hanya dalam satu arah dengan kemiringan sekitar 65–85° terhadap sisi kikir. Hasil potongannya lebih rapi, sehingga umum digunakan untuk penyelesaian permukaan logam.",
+        "Cara menggunakan kikir Gerigi kikir hanya mengikis jika didorong ke depan, sehingga saat ditarik ke belakang, kikir tidak akan mengikis. Berikan tekanan hanya saat menggerakkan ke arah mendorong."
+       ]
+      },
+      {
+       "p": "arah pengikisan"
+      },
+      {
+       "p": "Ditarik ke belakang, tidak mengikis"
+      },
+      {
+       "p": "Gambar 8-6: Pengikisan Kikir"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kikir besi digunakan terutama untuk penyelesaian permukaan secara manual pada material logam seperti besi, baja tahan karat dan aluminium.",
+      "points": [
+       "Bentuknya pada umumnya terdiri dari 5 jenis, yaitu pipih, setengah bulat, bulat, perseg…",
+       "Bentuk pipih adalah yang paling umum dan serbaguna, sehingga digunakan untuk berbagai j…",
+       "Bentuk bulat cocok untuk menghaluskan permukaan lengkung; bentuk 1/2 bulat untuk penger…",
+       "Pola gerigi kikir ada beberapa jenis, antara lain pola tunggal, pola ganda, pola bergel…",
+       "Pada kikir dengan pola tunggal, gerigi bagian atas dipotong hanya dalam satu arah denga…",
+       "Cara menggunakan kikir Gerigi kikir hanya mengikis jika didorong ke depan, sehingga saa…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s6",
+    "no": 6,
+    "title": {
+     "id": "Penyelesaian dengan Kikir Set",
+     "jp": "組やすりによる仕上げ"
+    },
+    "pages": [
+     111,
+     113
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Set kikir adalah kikir yang digunakan untuk menyelesaikan bagian-bagian halus secara manual setelah proses pemesinan."
+      },
+      {
+       "ul": [
+        "Lebih kecil dari kikir logam, dan tersedia dalam banyak jenis, dengan 12 bentuk penampang berbeda.",
+        "Set kikir tersedia dalam 4 jenis: set 5 batang, set 8 batang, set 10 batang dan set 12 batang."
+       ]
+      },
+      {
+       "p": "Gambar 8-7: Set Kikir"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Set kikir adalah kikir yang digunakan untuk menyelesaikan bagian-bagian halus secara manual setelah proses pemesinan.",
+      "points": [
+       "Lebih kecil dari kikir logam, dan tersedia dalam banyak jenis, dengan 12 bentuk penampa…",
+       "Set kikir tersedia dalam 4 jenis: set 5 batang, set 8 batang, set 10 batang dan set 12 …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s7",
+    "no": 7,
+    "title": {
+     "id": "Mesin Bubut",
+     "jp": "{旋盤|せんばん}"
+    },
+    "pages": [
+     114,
+     114
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "kepala dudukan kepala spindel cekam pahat lepas"
+      },
+      {
+       "p": "alat maju- alat mundur pengumpa n Gambar 8-10: Struktur Mesin Bubut"
+      },
+      {
+       "p": "Mesin bubut adalah alat yang memutar benda kerja yang dijepit pada cekam (penjepit) untuk dikerjakan. Pahat potong dipasang pada dudukan pahat, dan digunakan untuk memotong dengan alat pengumpan yang dapat bergerak dengan ketelitian 0,01 mm."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "kepala dudukan kepala spindel cekam pahat lepas",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s8",
+    "no": 8,
+    "title": {
+     "id": "Mesin Frais",
+     "jp": "フライス{盤|ばん}"
+    },
+    "pages": [
+     115,
+     117
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pada mesin frais, end-mill dipasang pada spindel yang berputar, kemudian benda kerja yang dipasang di meja digerakkan maju-mundur dan kiri-kanan untuk dilakukan proses pemotongan."
+      },
+      {
+       "p": "Contoh pengerjaan frais (bagian garis merah adalah bagian yang dipotong) meja kerja spindel pemesinan pemesinan pemesinan utama sisi bertingkat alur"
+      },
+      {
+       "p": "Gambar 8-11: Mesin Frais dan Contoh Pemesinan"
+      },
+      {
+       "p": "Bab"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pada mesin frais, end-mill dipasang pada spindel yang berputar, kemudian benda kerja yang dipasang di meja digerakkan maju-mundur dan kiri-kanan untuk dilakukan proses pemotongan.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

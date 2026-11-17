@@ -1,0 +1,416 @@
+{
+ "schema": 1,
+ "bidang": "jaim-metal-surface",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 金属表面処理 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab12",
+  "no": 12,
+  "title": {
+   "id": "Anodisasi Aluminium",
+   "jp": "アルミニウム陽極酸化処理"
+  },
+  "intro": {
+   "id": "Bab 12 buku resmi JAIM."
+  },
+  "pages": [
+   175,
+   184
+  ],
+  "subs": [
+   {
+    "id": "b12s1",
+    "no": 1,
+    "title": {
+     "id": "Prinsip Anodisasi",
+     "jp": "陽極酸化処理の原理"
+    },
+    "pages": [
+     175,
+     175
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Perlakuan dilakukan dengan urutan berikut:"
+       ]
+      },
+      {
+       "ol": [
+        "Memasukkan produk aluminium ke dalam elektrolit.",
+        "Produk tersebut dijadikan anoda, dan dialirkan arus DC, arus AC atau arus DC dan AC.",
+        "Lapisan oksida terbentuk pada permukaan."
+       ]
+      },
+      {
+       "ul": [
+        "Reaksi pada masing-masing elektroda adalah sebagai berikut:"
+       ]
+      },
+      {
+       "p": "Anoda AI → Al3+ + 3e−、H₂O → O2− + 2H+、2Al3＋ + 3O2− → Al2O3"
+      },
+      {
+       "p": "Katoda 2H+ + 2 e− → H2"
+      },
+      {
+       "ul": [
+        "Ada berbagai kombinasi kondisi, seperti jenis elektrolit (asam sulfat, asam oksalat, asam kromat, dsb), konsentrasi, suhu, densitas arus, serta jenis paduan aluminium. Dengan kombinasi tersebut, dapat dihasilkan efek sebagai berikut:"
+       ]
+      },
+      {
+       "ol": [
+        "Menghasilkan warna seperti perak, emas, hitam, dsb (pemberian warna)",
+        "Membentuk lapisan yang lebih keras dan memiliki ketahanan aus.",
+        "Memberikan warna lebih cerah dengan memasukkan zat pewarna ke dalam kristal lapisan oksida."
+       ]
+      },
+      {
+       "ul": [
+        "Gambar 12-2 menunjukkan diagram skematis perlakuan anodisasi."
+       ]
+      },
+      {
+       "p": "sel lapisan"
+      },
+      {
+       "p": "tebal lapisan diameter sel"
+      },
+      {
+       "p": "tebal lapisan penghalang"
+      },
+      {
+       "p": "pori material aluminium 10–30 mm"
+      },
+      {
+       "p": "Gambar 12-2: Diagram Skematis Lapisan Anodisasi"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Anoda AI → Al3+ + 3e−、H₂O → O2− + 2H+、2Al3＋ + 3O2− → Al2O3",
+      "points": [
+       "Perlakuan dilakukan dengan urutan berikut:",
+       "Reaksi pada masing-masing elektroda adalah sebagai berikut:",
+       "Ada berbagai kombinasi kondisi, seperti jenis elektrolit (asam sulfat, asam oksalat, as…",
+       "Gambar 12-2 menunjukkan diagram skematis perlakuan anodisasi."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s2",
+    "no": 2,
+    "title": {
+     "id": "Prosedur Kerja Anodisasi",
+     "jp": "陽極酸化処理の作業手順"
+    },
+    "pages": [
+     176,
+     176
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Tahap anodisasi secara garis besar dibagi menjadi perlakuan awal, pra-perlakuan, anodisasi, dan pasca-perlakuan."
+      },
+      {
+       "p": "(1) Perlakuan Awal"
+      },
+      {
+       "p": "Merupakan proses diluar lini anodisasi. Merupakan pengerjaan fisik sebelum anodisasi, seperti pemolesan buff, pembentukan garis halus (hairline) dan tekstur, serta pemberian pola. Proses ini terutama untuk memperbaiki tampilan permukaan."
+      },
+      {
+       "p": "(2) Pra-perlakuan"
+      },
+      {
+       "p": "Merupakan proses pembersihan dan pelarutan permukaan material, seperti penghilangan lemak, etsa, dan desmut. Pada tahap ini, kotoran di permukaan dihilangkan, dan berbagai kontaminan dibersihkan agar reaksi berlangsung seragam."
+      },
+      {
+       "p": "(3) Anodisasi"
+      },
+      {
+       "p": "Merupakan proses pembentukan lapisan anodisasi. Untuk memenuhi mutu lapisan yang disyaratkan, ditetapkan kondisi proses seperti bak elektrolisis, bentuk gelombang catudaya, suhu bak, pengadukan, dan durasi elektrolisis."
+      },
+      {
+       "p": "(4) Pasca-perlakuan"
+      },
+      {
+       "p": "Setelah proses elektrolisis (anodisasi), dilakukan proses penutupan pori. Sesuai tujuannya, sebelum proses dapat dilakukan pewarnaan dengan zat pewarna atau pewarnaan elektrolitik sekunder, dan selanjutnya dapat dilakukan pengecatan elektroforesis, dsb."
+      },
+      {
+       "p": "Alur kerja anodisasi ditunjukkan pada Gambar 12-3."
+      },
+      {
+       "p": "penghilangan lemak ▶ etsa alkali ▶ desmut ▶ anodisasi ▶ pewarnaan ▶ penutupan pori ▶ pengeringan"
+      },
+      {
+       "p": "Gambar 12-3: Alur Kerja Anodisasi"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tahap anodisasi secara garis besar dibagi menjadi perlakuan awal, pra-perlakuan, anodisasi, dan pasca-perlakuan.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s3",
+    "no": 3,
+    "title": {
+     "id": "Peralatan dan Jig Anodisasi",
+     "jp": "陽極酸化処理の設備と治具"
+    },
+    "pages": [
+     177,
+     178
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Peralatan Anodisasi"
+      },
+      {
+       "ul": [
+        "Pada proses berikut digunakan bak proses PVC yang memiliki ketahanan korosi sangat baik."
+       ]
+      },
+      {
+       "ol": [
+        "Etsa alkali (natrium hidroksida)",
+        "Desmut (asam sulfat atau asam nitrat)",
+        "Anodisasi (asam kuat seperti asam sulfat)"
+       ]
+      },
+      {
+       "ul": [
+        "Pada proses berikut digunakan bak proses baja tahan karat."
+       ]
+      },
+      {
+       "ol": [
+        "Penutupan pori (karena menggunakan larutan perlakuan dalam kondisi mendidih)"
+       ]
+      },
+      {
+       "p": "Untuk catudaya, umumnya digunakan arus DC, tetapi ada kalanya digunakan catudaya dengan penambahan arus AC."
+      },
+      {
+       "p": "(2) Rincian Proses dan Cairan Kimia"
+      },
+      {
+       "p": "Proses Rincian Proses dan Cairan Kimia yang Digunakan"
+      },
+      {
+       "p": "Penghilangan Pelarut organik terkadang digunakan, dan surfaktan juga sering Lemak digunakan."
+      },
+      {
+       "p": "Menggunakan larutan perlakuan yang bersifat alkali dengan natrium hidroksida sebagai komponen utama, lapisan oksida tipis yang terbentuk alami dilarutkan dan dihilangkan. Selain itu, goresan halus pada permukaan serta kontaminan dan lemak yang Etsa Alkali menempel juga dihilangkan. Karena banyak dihasilkan gas hidrogen, alat penghisap udara lokal wajib digunakan. Gas hidrogen mudah tersebar di udara bersama kabut alkali dan berbahaya bagi tubuh."
+      },
+      {
+       "p": "Merupakan proses untuk melarutkan dan menghilangkan unsur pengotor seperti tembaga dan silikon yang terdapat dalam material aluminium, yang muncul sebagai hasil dari proses etsa alkali. Desmut Cairan proses yang komponen utamanya asam nitrat terutama digunakan. Jika kandungan silikon tinggi, seperti pada bahan cor (casting), terkadang digunakan larutan perlakuan yang ditambahkan asam fluorida."
+      },
+      {
+       "p": "Sering digunakan larutan perlakuan yang komponen utamanya Anodisasi asam sulfat. Asam oksalat atau asam kromat, yang menghasilkan lapisan keemasan, juga terkadang digunakan."
+      },
+      {
+       "p": "Tak hanya pewarna organik, tetapi terkadang dilakukan pemberian warna gelap berdasarkan kandungan unsur dalam bahan dasar, Pewarnaan ataupun digunakan pewarna anorganik. Untuk tahap berikutnya, proses penutupan pori wajib dilakukan."
+      },
+      {
+       "p": "Merupakan proses menutup mulut pori pada kristal lapisan anodisasi. Untuk meningkatkan efek sealing, sering kali digunakan Penutupan air murni bersuhu tinggi atau ditambahkan natrium asetat, dsb. Pori (Sealing) Penutupan pori meningkatkan ketahanan korosi sekaligus mencegah zat pewarna keluar ke bagian luar."
+      },
+      {
+       "p": "Setelah penutupan pori, dilakukan pencucian dengan air murni, serta pengeringan dengan udara panas 50–60°C. Jika terlalu Pengeringan banyak panas diberikan, dapat terjadi retak pada permukaan, untuk itu suhu tak boleh melebihi 100°C."
+      },
+      {
+       "p": "(3) Jig Anodisasi"
+      },
+      {
+       "p": "Jig menggunakan bahan aluminium atau titanium, sama seperti bahan dasar."
+      },
+      {
+       "p": "Jig dari aluminium mengalami keausan akibat proses perlakuan, sehingga masa pakainya pendek. Oleh karena itu, jika sering digunakan untuk produksi massal, jig titanium lebih sering digunakan. Selain itu, lokasi selain bagian kontak sering dilapisi resin untuk mencegah keausan. Gambar 12-4 menunjukkan contoh jig yang umum digunakan."
+      },
+      {
+       "p": "lapisan pelindung"
+      },
+      {
+       "p": "produk"
+      },
+      {
+       "p": "Gambar 12-4: Contoh Jig Titanium"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Peralatan Anodisasi",
+      "points": [
+       "Pada proses berikut digunakan bak proses PVC yang memiliki ketahanan korosi sangat baik.",
+       "Pada proses berikut digunakan bak proses baja tahan karat."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s4",
+    "no": 4,
+    "title": {
+     "id": "Struktur Lapisan Anodisasi",
+     "jp": "陽極酸化皮膜の膜構成"
+    },
+    "pages": [
+     179,
+     180
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Diagram skematis lapisan anodisasi ditunjukkan pada Gambar 12-5. Strukturnya menyerupai sel-sel lapisan segienam, dan lapisan oksida tumbuh dari aluminium yang menjadi bahan dasar. Pada bagian tengah sel, tumbuh rongga yang disebut pori. Dimulai dari bahan aluminium sampai dengan pori disebut lapisan penghalang. Ketebalan lapisan adalah ketebalan dari lapisan penghalang hingga mencakup pori."
+      },
+      {
+       "p": "sel lapisan"
+      },
+      {
+       "p": "tebal lapisan diameter sel"
+      },
+      {
+       "p": "tebal lapisan penghalang"
+      },
+      {
+       "p": "pori material aluminium 10–30 mm"
+      },
+      {
+       "p": "Gambar 12-5: Diagram Skematis Lapisan Anodisasi"
+      },
+      {
+       "p": "(1) Lapisan Oksida pada Anodisasi Pada sel lapisan anodisasi terdapat pori. Jika tak dilakukan pasca-perlakuan, ketahanan korosi hanya diperoleh dari ketebalan lapisan penghalang. Lapisan penghalang tidak terlalu besar jika dibanding tebal lapisan keseluruhan. Tebal lapisan secara keseluruhan akan tumbuh hingga 2 kali ketebalan aluminium yang hilang akibat anodisasi."
+      },
+      {
+       "p": "(2) Pewarnaan pada Anodisasi"
+      },
+      {
+       "p": "Warna diberikan dengan memasukkan zat pewarna ke pori yang ada di dalam lapisan anodisasi."
+      },
+      {
+       "p": "Tergantung bahan dasar aluminium, senyawa oksida seperti oksida tembaga dan silikon yang terkandung dalam bahan dasar dapat masuk ke pori memberi warna abu-abu. Jika asam oksalat digunakan sebagai pengganti asam sulfat untuk larutan perlakuan, lapisan dapat berwarna keemasan."
+      },
+      {
+       "p": "Karena zat pewarna larut dalam air, dapat dilakukan pewarnaan dengan berbagai macam warna."
+      },
+      {
+       "p": "(3) Penutupan Pori (Sealing)"
+      },
+      {
+       "p": "Penutupan pori dilakukan setelah pewarnaan lapisan anodisasi. Dengan demikian, ketahanan lapisan anodisasi meningkat, dan zat pewarna tidak larut keluar sehingga tampilan lebih baik."
+      },
+      {
+       "p": "Mengenai metode, ada metode perlakuan dengan air murni yang mendidih, ada pula metode menggunakan larutan nikel asetat untuk menumbuhkan aluminium hidroksida pada permukaan lapisan oksida."
+      },
+      {
+       "p": "(4) Anodisasi Keras"
+      },
+      {
+       "p": "Anodisasi keras merupakan proses pada suhu sangat rendah (dibawah 0°C) untuk meningkatkan tebal lapisan yang terbentuk. Karena menghasilkan kekerasan yang tinggi (HV450–500), banyak digunakan dalam bidang seperti otomotif dan mesin. Ketebalan lapisan dapat mencapai 30–100 µm."
+      },
+      {
+       "p": "Selain kekerasan yang tinggi, lapisan yang lebih tebal juga meningkatkan daya tahan. Namun, lapisan yang tebal juga memiliki kekurangan, seperti ketahanan panas menurun dan resistansi isolasi memburuk. Selain itu, karena penutupan pori menurunkan ketahanan aus, pada anodisasi keras biasanya tidak dilakukan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Diagram skematis lapisan anodisasi ditunjukkan pada Gambar 12-5. Strukturnya menyerupai sel-sel lapisan segienam, dan lapisan oksida tumbuh dari aluminium yang menjadi bahan dasar. Pada bagian tengah sel, tumbuh rongga yang disebut pori. Dimulai dari bahan aluminium sampai dengan pori disebut lapisan penghalang. Keteba",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s5",
+    "no": 5,
+    "title": {
+     "id": "Sifat Lapisan Anodisasi dan Evaluasinya",
+     "jp": "陽極酸化皮膜の性質と評価"
+    },
+    "pages": [
+     181,
+     184
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Untuk mempertahankan karakteristik lapisan oksida yang telah dibentuk, dilakukan berbagai pengujian evaluasi. Metode pengujian dan karakteristiknya diatur dalam Japanese Industrial Standards (JIS)."
+      },
+      {
+       "p": "JIS H 8601: \"Lapisan Anodisasi Aluminium dan Paduan Aluminium\" JIS H 8603: \"Lapisan Anodisasi Keras Aluminium dan Paduan Aluminium\""
+      },
+      {
+       "p": "(1) Ketebalan"
+      },
+      {
+       "p": "Tebal lapisan dapat diukur menggunakan alat ukur ketebalan lapisan metode arus eddy. Lapisan anodisasi umumnya diproses dengan ketebalan 3 μm hingga 25 μm. Lapisan anodisasi keras memiliki ketebalan dari 25 μm hingga melebihi 50 μm. Contoh alat ukur ketebalan lapisan ditunjukkan pada Gambar 12-6."
+      },
+      {
+       "p": "Gambar 12-6: Alat Ukur Ketebalan Lapisan Metode Arus Eddy"
+      },
+      {
+       "p": "(2) Ketahanan Korosi"
+      },
+      {
+       "p": "Lapisan anodisasi memiliki ketahanan korosi yang sangat baik. Biasanya dilakukan uji semprot garam, yaitu sampel ditempatkan dalam kabut air garam 5% untuk dievaluasi ketahanan korosinya. Evaluasi dilakukan dalam waktu yang panjang, yaitu 336 jam atau lebih."
+      },
+      {
+       "p": "Oleh karena itu, untuk evaluasi dalam waktu yang lebih singkat, JIS H 8681 mengatur uji tetes alkali, dan uji CASS dengan penambahan tembaga klorida ke air garam."
+      },
+      {
+       "p": "(3) Ketahanan Cahaya"
+      },
+      {
+       "p": "Lapisan anodisasi berwarna menunjukkan warna yang cerah, tetapi zat pewarna dapat memudar akibat sinar matahari dan sebagainya. JIS H 8685 menetapkan penyinaran lapisan dengan lampu busur xenon atau karbon untuk evaluasi ketahanan terhadap ultraviolet."
+      },
+      {
+       "p": "(4) Ketahanan Panas"
+      },
+      {
+       "p": "Karena permukaan lapisan anodisasi merupakan oksida aluminium, jika suhu melebihi 100°C, dapat terjadi retak sehingga sifat isolasi dan ketahanan korosi terganggu. Untuk itu, dilakukan penggunaan pigmen khusus atau dengan pasca- perlakuan guna meningkatkan ketahanan panas."
+      },
+      {
+       "p": "(5) Ketahanan Aus"
+      },
+      {
+       "p": "Lapisan hasil anodisasi memiliki ketahanan aus sangat baik karena menghasilkan oksida aluminium yang keras pada permukaan. Khususnya pada anodisasi keras, sifat ketahanan aus justru dimanfaatkan untuk melakukan perlakuan tanpa penutupan pori. Dalam JIS, ditetapkan uji keausan rotasi dengan memutar batu gerinda 10.000 putaran diatas lapisan anodisasi dan dievaluasi keausannya."
+      },
+      {
+       "p": "HV"
+      },
+      {
+       "p": "HV adalah kekerasan Vickers."
+      },
+      {
+       "p": "Metode dengan menekan ujung piramida segiempat yang terbuat dari berlian pada benda uji dan menentukan kekerasan dari “luas permukaan” lekukan yang dihasilkan. Dalam praktik, karena lapisan itu sendiri tipis (sekitar 50 μm), kebutuhan mengukur kekerasan relatif sedikit."
+      },
+      {
+       "p": "Gambar 12-7: Ilustrasi Lekukan Micro Vickers"
+      },
+      {
+       "p": "(6) Ketahanan Tegangan Listrik"
+      },
+      {
+       "p": "Anodisasi juga menghasilkan ketahanan tegangan listrik yang sangat baik. Dengan tebal 50 μm, lapisan memiliki ketahanan tegangan sekitar 2 kV. Metode evaluasinya juga diatur dalam JIS. Anodisasi sering diterapkan sebagai perlakuan permukaan pada sirip pelepas panas peralatan elektronik."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Untuk mempertahankan karakteristik lapisan oksida yang telah dibentuk, dilakukan berbagai pengujian evaluasi. Metode pengujian dan karakteristiknya diatur dalam Japanese Industrial Standards (JIS).",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

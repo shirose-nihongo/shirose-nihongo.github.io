@@ -1,0 +1,521 @@
+{
+ "schema": 1,
+ "bidang": "jaim-machine-metal",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 機械金属加工 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab5",
+  "no": 5,
+  "title": {
+   "id": "Inspeksi",
+   "jp": "検査"
+  },
+  "intro": {
+   "id": "Bab 5 buku resmi JAIM."
+  },
+  "pages": [
+   50,
+   67
+  ],
+  "subs": [
+   {
+    "id": "b5s1",
+    "no": 1,
+    "title": {
+     "id": "Dasar dan Pekerjaan inspeksi Mutu",
+     "jp": "品質検査の基本と作業"
+    },
+    "pages": [
+     50,
+     51
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan inspeksi mutu"
+      },
+      {
+       "p": "Tujuan inspeksi mutu adalah memastikan produksi dilakukan dengan benar tanpa adanya abnormal dan produk yang diproduksi memenuhi mutu yang ditentukan. Jika menemukan masalah dalam inspeksi mutu, produk tersebut tidak dapat dikirim."
+      },
+      {
+       "p": "(2) Pengertian Ketidaksesuaian"
+      },
+      {
+       "p": "Sesuai adalah sebutan untuk lulus inspeksi, sedangkan barang yang lulus inspeksi disebut barang yang sesuai. Sebaliknya, ketidaksesuaian adalah sebutan untuk tidak lulus inspeksi, sedangkan barang yang tidak lulus inspeksi disebut barang tidak sesuai atau barang cacat."
+      },
+      {
+       "p": "(3) Pekerjaan inspeksi mutu"
+      },
+      {
+       "p": "Inspeksi mutu dilakukan dengan mematuhi standar inspeksi dan dokumen prosedur inspeksi. Standar inspeksi tidak boleh diubah dengan keputusan sendiri. Selain itu, hasil inspeksi harus direkam dengan benar."
+      },
+      {
+       "p": "Walaupun tahu hasilnya akan sama setiap hari, dilarang untuk mengisi data tanpa melakukan inspeksi. Sebaiknya hasil inspeksi segera direkam untuk mencegah mengisi data yang salah."
+      },
+      {
+       "p": "Jika dalam pekerjaan terjadi kondisi berikut, jangan ambil keputusan sendiri, tetapi hubungi atasan atau bagian penanggungjawab mutu."
+      },
+      {
+       "ul": [
+        "Jika tak tercantum dalam standar atau prosedur inspeksi dan sulit untuk menentukan keputusan",
+        "Jika ditemukan kesalahan dalam catatan sebelumnya (meskipun itu bukan dalam pekerjaan yang dilakukan sendiri)",
+        "Jika pekerjaan sulit dilakukan dan berpotensi menimbulkan kesalahan (untuk mencegah kesalahan di kemudian hari)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan inspeksi mutu",
+      "points": [
+       "Jika tak tercantum dalam standar atau prosedur inspeksi dan sulit untuk menentukan kepu…",
+       "Jika ditemukan kesalahan dalam catatan sebelumnya (meskipun itu bukan dalam pekerjaan y…",
+       "Jika pekerjaan sulit dilakukan dan berpotensi menimbulkan kesalahan (untuk mencegah kes…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s2",
+    "no": 2,
+    "title": {
+     "id": "Jenis Inspeksi",
+     "jp": "検査の種類"
+    },
+    "pages": [
+     52,
+     54
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Waktu untuk melakukan inspeksi mutu"
+      },
+      {
+       "p": "Inspeksi mutu dilakukan pada berbagai waktu. Pemeriksaan yang dilakukan saat barang yang dibeli telah diterima. Inspeksi Menginspeksi apakah barang yang dibeli sesuai spesifikasi yang Penerimaan diminta."
+      },
+      {
+       "p": "Inspeksi yang dilakukan di tengah proses produksi (pemeriksaan antar proses, pemeriksaan dalam proses). Inspeksi proses akan menginspeksi karakteristik yang dibuat dalam Inspeksi proses produksi tersebut. Contohnya jika dalam proses pembubutan, Proses dimensi diameter dalam dan diameter luar yang diproses akan diukur. Tujuannya untuk tidak mengirim barang tidak sesuai ke proses selanjutnya (menemukan barang tidak sesuai dengan cepat) dan memeriksa apakah ada penyimpangan dalam pengerjaan."
+      },
+      {
+       "p": "Inspeksi yang dilakukan setelah produk selesai dibuat (inspeksi akhir). Inspeksi Inspeksi pengiriman akan melakukan pemeriksaan akhir untuk Pengiriman melihat apakah sesuai spesifikasi yang diminta pelanggan atau spesifikasi dan standar perusahaan."
+      },
+      {
+       "p": "(2) Inspeksi 100% dan inspeksi sampel"
+      },
+      {
+       "p": "Inspeksi mutu yang dilakukan terhadap semua produk atau komponen. Inspeksi Inspeksi 100% dilakukan saat ketidaksesuaian tidak boleh terjadi 100% sama sekali seperti terhadap karakteristik produk yang penting atau bagian yang berhubungan dengan nyawa manusia."
+      },
+      {
+       "p": "Inspeksi mutu yang dilakukan terhadap sebagian produk atau Inspeksi komponen. Sampel Inspeksi sampel dilakukan jika kemungkinan tercampurnya sedikit barang tidak sesuai didalam barang sesuai dapat ditoleransi."
+      },
+      {
+       "p": "(3) Metode Inspeksi Sampel"
+      },
+      {
+       "p": "Sekumpulan barang yang diproduksi dalam kondisi yang sama disebut lot."
+      },
+      {
+       "p": "Dari dalam lot dipilih secara acak produk atau komponen (sampel) yang akan diinspeksi. Jumlah sampel (ukuran sampel) ditentukan dalam standar inspeksi atau dokumen prosedur inspeksi. Semakin besar jumlah produk atau komponen dalam satu lot (ukuran lot), akan semakin besar juga ukuran sampelnya."
+      },
+      {
+       "p": "Lot akan lulus inspeksi jika dari inspeksi sampel, jumlah barang tidak sesuai kurang dari yang ditentukan, sedangkan jika jumlahnya diatas yang ditentukan, lot tersebut tidak lulus inspeksi."
+      },
+      {
+       "p": "Penanganan terhadap lot yang tidak lulus akan diputuskan oleh orang yang memiliki wewenang. Ada pilihan untuk dimusnahkan 100% (dikembalikan, jika barang dibeli), disortir (mengirim hanya barang yang sesuai setelah dilakukan inspeksi 100%), atau melakukan perbaikan."
+      },
+      {
+       "p": "(4) Inspeksi Destruktif dan Non-Destruktif"
+      },
+      {
+       "p": "Inspeksi destruktif adalah inspeksi yang memotong sebagian produk Inspeksi atau melakukan pengujian sampai produk itu sendiri hancur. Inspeksi Destruktif dilakukan dengan inspeksi sampel karena produknya menjadi tidak dapat digunakan jika melakukan inspeksi destruktif."
+      },
+      {
+       "p": "Inspeksi non-destruktif adalah inspeksi yang tidak berdampak pada Inspeksi mutu produk. Non- Inspeksi non-destruktif dapat dilakukan sebagai inspeksi sampel atau Destruktif sebagai inspeksi 100%."
+      },
+      {
+       "p": "(5) Nilai Pengukuran dan Nilai Penghitungan"
+      },
+      {
+       "p": "Data yang ditangani dalam inspeksi mutu terbagi menjadi nilai pengukuran dan nilai penghitungan. Nilai pengukuran adalah data yang dapat diukur sebagai nilai Nilai kontinu. Pengukuran Contoh: panjang, berat"
+      },
+      {
+       "p": "Nilai penghitungan adalah data yang diinspeksi dengan dihitung Nilai jumlahnya. Penghitungan Contoh: goresan, jumlah barang tidak sesuai"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Waktu untuk melakukan inspeksi mutu",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s3",
+    "no": 3,
+    "title": {
+     "id": "Perhitungan persentase barang tidak sesuai",
+     "jp": "不適合品率の計算"
+    },
+    "pages": [
+     55,
+     56
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Tingkat barang tidak sesuai (juga disebut tingkat ketidaksesuaian atau tingkat cacat) adalah perbandingan jumlah barang tidak sesuai terhadap jumlah barang yang diproduksi. Merupakan salah satu indikator yang penting. Dapat dinyatakan dengan rumus dibawah ini."
+      },
+      {
+       "p": "jumlah barang tidak sesuai tingkat barang tidak sesuai (%) = × 100 jumlah barang diproduksi"
+      },
+      {
+       "p": "Contoh:"
+      },
+      {
+       "p": "Barang diproduksi: 1.000 unit Barang tidak sesuai: 5 unit ⇒ Tingkat barang tidak sesuai: 0,5%"
+      },
+      {
+       "p": "Selain itu, jika melakukan inspeksi sampel, tingkat barang tidak sesuai dapat diperkirakan dari jumlah barang tidak sesuai yang ditemukan terhadap sampel yang diambil."
+      },
+      {
+       "p": "jumlah barang tidak sesuai tingkat barang tidak sesuai (%) = × 100 jumlah pengambilan sampel"
+      },
+      {
+       "p": "Contoh:"
+      },
+      {
+       "p": "Jumlah pengambilan sampel: 100 unit Barang tidak sesuai: 1 unit ⇒ Tingkat cacat: 1%"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tingkat barang tidak sesuai (juga disebut tingkat ketidaksesuaian atau tingkat cacat) adalah perbandingan jumlah barang tidak sesuai terhadap jumlah barang yang diproduksi. Merupakan salah satu indikator yang penting. Dapat dinyatakan dengan rumus dibawah ini.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s4",
+    "no": 4,
+    "title": {
+     "id": "Uji Tarik",
+     "jp": "{引張試験|ひっぱりしけん}"
+    },
+    "pages": [
+     57,
+     58
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Uji Tarik"
+      },
+      {
+       "p": "Metode uji material yang paling umum adalah uji tarik. Dalam uji tarik dapat menemukan karakteristik seperti kekuatan tarik, kekuatan luluh, modulus Young, dan elongasi putus."
+      },
+      {
+       "p": "Saat ingin mencari tahu karakteristik material, benda uji dengan bentuk yang ditentukan akan dibuat untuk diuji. Ketika ingin mencari tahu kekuatan produk atau komponen, produk atau komponen itu sendiri dijadikan sebagai sampel untuk diuji."
+      },
+      {
+       "p": "Secara umum, ini adalah uji destruktif yang akan menguji sampai sampelnya hancur."
+      },
+      {
+       "p": "(2) Metode uji tarik"
+      },
+      {
+       "p": "Bagian atas dan bawah sampel dipegang untuk ditarik secara perlahan. Besaran gaya tarik diukur pada saat tersebut. Selain itu, perpanjangan sampelnya juga diukur. Dua titik ukur ditandai pada sampel untuk mengukur jarak antara titik ukur dan titik ukur sebelum diberi gaya. Ketika diberi gaya, jarak yang bertambahnya disebut perpanjangan."
+      },
+      {
+       "p": "Tegangan dapat diketahui dengan membagi gaya yang diukur dengan luas penampang sampel. Regangan dapat diketahui dengan membagi perpanjangan ketika diberi gaya dengan jarak sebelum diberi gaya."
+      },
+      {
+       "p": "(3) Nilai karakteristik material"
+      },
+      {
+       "p": "Kekuatan Adalah tegangan maksimal yang dapat ditahan material saat ditarik Tarik sampai putus. Satuan yang digunakan adalah MPa (N/mm2)."
+      },
+      {
+       "p": "Adalah tegangan maksimal yang dapat ditahan material sebelum Kekuatan mengalami luluh. Satuan yang digunakan adalah MPa. Disebut juga Luluh titik luluh atau tegangan luluh."
+      },
+      {
+       "p": "Adalah regangan permanen setelah putus. Satuan yang digunakan Elongasi adalah persen (%). Juga disebut regangan putus atau cukup disebut Putus elongasi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Uji Tarik",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s5",
+    "no": 5,
+    "title": {
+     "id": "Uji Kekerasan",
+     "jp": "硬さ試験"
+    },
+    "pages": [
+     59,
+     61
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Uji Kekerasan"
+      },
+      {
+       "p": "Uji kekerasan adalah pengujian untuk mengevaluasi kekerasan material. Selain itu, uji kekerasan lebih mudah dilakukan daripada uji tarik. Oleh karena itu, pengujian ini sering dilakukan sebagai pengganti uji tarik."
+      },
+      {
+       "p": "Uji kekerasan memiliki berbagai kondisi pengujian sehingga perlu memasukkan kondisi pengujian dengan benar ke dalam mesin uji. Banyak uji kekerasan diukur secara otomatis hanya dengan memasang sampel. Selain itu, sampel tak perlu dimusnahkan dan dapat dikirim ke pelanggan setelah uji kekerasan karena pengujian hanya menyebabkan goresan kecil."
+      },
+      {
+       "p": "(2) Uji Kekerasan Rockwell"
+      },
+      {
+       "p": "Uji kekerasan Rockwell adalah pengujian untuk menentukan kekerasan berdasarkan kedalaman lekukan yang dihasilkan dengan menekan indentor pada sampel."
+      },
+      {
+       "p": "Kekerasan Rockwell harus dipilih skalanya tergantung kekuatan materialnya. Skalanya dari A hingga K (I dan J tidak digunakan). Berdasarkan skalanya, bentuk indentor dan gaya uji total akan berubah."
+      },
+      {
+       "p": "Simbol kekerasan ditulis dengan HR diikuti oleh skala. Contohnya HRA jika menggunakan skala A atau HRC jika menggunakan skala C."
+      },
+      {
+       "p": "(3) Uji Kekerasan Brinell"
+      },
+      {
+       "p": "Uji kekerasan Brinell adalah pengujian untuk mengetahui kekerasan dari diameter lekukan yang tersisa pada permukaan dengan menekan indentor berbentuk bola ke sampel."
+      },
+      {
+       "p": "Selama ini simbol kekerasannya sering menggunakan HB. Saat ini, untuk memperjelas bahwa bola yang digunakan terbuat dari karbida semen, digunakan notasi HBW."
+      },
+      {
+       "p": "(4) Uji kekerasan Vickers"
+      },
+      {
+       "p": "Uji kekerasan Vickers adalah pengujian untuk menentukan kekerasan dari panjang diagonal lekukan yang tersisa pada permukaan dengan menekan indentor intan berbentuk limas persegi ke sampel."
+      },
+      {
+       "p": "Sampel dipotong, dan pengukuran kekerasan dilakukan berulang kali dalam interval tertentu ke arah kedalaman dari permukaan. Dengan cara tersebut, perubahan kekerasan dari permukaan ke arah kedalaman dapat diketahui."
+      },
+      {
+       "p": "Simbol kekerasan: HV."
+      },
+      {
+       "p": "(5) Uji Kekerasan Knoop"
+      },
+      {
+       "p": "Uji kekerasan Knoop adalah pengujian untuk menentukan kekerasan dari panjang diagonal lekukan berbentuk wajik yang tersisa pada permukaan dengan menekan indentor intan berbentuk wajik ke sampel."
+      },
+      {
+       "p": "Simbol kekerasan: HK."
+      },
+      {
+       "p": "(6) Uji Kekerasan Shore"
+      },
+      {
+       "p": "Uji kekerasan Shore adalah pengujian untuk menentukan kekerasan dengan menjatuhkan palu intan ke material dan mengukur tinggi pantulannya."
+      },
+      {
+       "p": "Simbol kekerasan: HS."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Uji Kekerasan",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s6",
+    "no": 6,
+    "title": {
+     "id": "Uji Impak",
+     "jp": "{衝撃試験|しょうげきしけん}"
+    },
+    "pages": [
+     62,
+     62
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Uji Impak adalah pengujian dengan mengayunkan palu berat dari ketinggian tertentu untuk mematahkan benda uji guna mengukur ketinggian pantulan palu akibat momentum. Dengan mengukur perbedaan ketinggian awal dan akhir, dapat diketahui energi yang diserap (absorpsi) saat mematahkan. Energi ini disebut energi impak atau energi absorpsi. Semakin besar energi impak, semakin tinggi pula ketangguhannya. Ketangguhan mengacu pada kekuatan dari material."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Uji Impak adalah pengujian dengan mengayunkan palu berat dari ketinggian tertentu untuk mematahkan benda uji guna mengukur ketinggian pantulan palu akibat momentum. Dengan mengukur perbedaan ketinggian awal dan akhir, dapat diketahui energi yang diserap (absorpsi) saat mematahkan. Energi ini disebut energi impak atau e",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s7",
+    "no": 7,
+    "title": {
+     "id": "Uji Tekuk",
+     "jp": "曲げ試験"
+    },
+    "pages": [
+     62,
+     62
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Uji tekuk adalah pengujian untuk mengevaluasi kekuatan material dengan cara membengkokkan benda uji. Setelah ditekuk hingga sudut tertentu, bagian luar tekukan diamati, dan dinyatakan lulus jika tak ada cacat seperti retakan atau goresan."
+      },
+      {
+       "p": "Contohnya untuk kasus SS400, sudut tekukan ditentukan 180 derajat sehingga harus tidak ada retakan atau goresan di bagian luar walaupun ditekuk 180 derajat."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Uji tekuk adalah pengujian untuk mengevaluasi kekuatan material dengan cara membengkokkan benda uji. Setelah ditekuk hingga sudut tertentu, bagian luar tekukan diamati, dan dinyatakan lulus jika tak ada cacat seperti retakan atau goresan.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s8",
+    "no": 8,
+    "title": {
+     "id": "Pengujian Lelah",
+     "jp": "{疲労試験|ひろうしけん}"
+    },
+    "pages": [
+     62,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Uji tarik akan terus menarik tanpa mengendurkan gaya. Namun, saat produk digunakan secara aktual, besarnya gaya sering kali berubah. Sekalipun masih dalam rentang deformasi elastisitas, dapat terjadi kerusakan yang mendadak jika berkali-kali mengulang untuk memberi dan mengendurkan gaya. Hal Ini disebut fraktur lelah."
+      },
+      {
+       "p": "Uji lelah adalah pengujian untuk mengevaluasi berapa banyak pengulangan yang diperlukan sampai terjadi fraktur lelah dengan berulang-ulang memberi dan mengendurkan gaya."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Uji tarik akan terus menarik tanpa mengendurkan gaya. Namun, saat produk digunakan secara aktual, besarnya gaya sering kali berubah. Sekalipun masih dalam rentang deformasi elastisitas, dapat terjadi kerusakan yang mendadak jika berkali-kali mengulang untuk memberi dan mengendurkan gaya. Hal Ini disebut fraktur lelah.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s9",
+    "no": 9,
+    "title": {
+     "id": "Inspeksi Non-Destruktif",
+     "jp": "{非破壊検査|ひはかいけんさ}"
+    },
+    "pages": [
+     64,
+     65
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Inspeksi non-destruktif adalah inspeksi untuk menemukan cacat tanpa merusak material. Tergantung metode inspeksi, dapat digunakan untuk menemukan tak hanya goresan di permukaan, tetapi juga di bagian dalam (rongga). Di sini akan dijelaskan beberapa yang umum."
+      },
+      {
+       "p": "(1) Uji Radiografi"
+      },
+      {
+       "p": "Uji radiografi (RT: radiographic test) adalah pengujian dengan menyinari sampel menggunakan radiasi seperti sinar-X atau sinar gamma, dan merekam hasilnya pada film atau media lainnya. Penyerapan radiasi akan berubah jika terdapat goresan seperti rongga di bagian dalam sehingga dapat menemukan goresan yang berada di bagian dalam. Pengujian ini sering digunakan dalam inspeksi goresan/cacat bagian dalam benda cor dan bagian yang dilas."
+      },
+      {
+       "p": "(2) Uji Ultrasonik"
+      },
+      {
+       "p": "Uji ultrasonik (UT: ultrasonografi test) adalah pengujian dengan mengarahkan gelombang ultrasonik ke sampel, dan mengukur gelombang pantulnya. Gelombang ultrasonik akan kembali dengan memantul jika mencapai sisi berlawanan sampel sehingga jika terdapat goresan di bagian dalam, goresannya pun akan memantul. Pantulan ini yang akan diukur. Pengujian ini sering digunakan dalam inspeksi goresan/cacat bagian dalam material canai, material hasil tempa, dan bagian yang dilas."
+      },
+      {
+       "p": "(3) Uji Magnetik"
+      },
+      {
+       "p": "Uji magnetik (MT: magnetic test) adalah pengujian dengan memagnetisasi sampel, lalu menyemprotkan serbuk magnetik dan mengamati pola serbuk magnetik yang terbentuk. Jika ada goresan di permukaan atau dekat permukaan, sebuk magnetik akan berkumpul karena terjadi medan magnet di sana. Dengan mengamati, dapat ditemukan. Untuk mempermudah menemukan serbuk magnetik, pengamatan sering dilakukan dengan menggunakan serbuk magnetik yang dilapisi agen fluoresen dan disinari dengan sinar UV (black light). Disebut juga uji serbuk magnetik karena menggunakan serbuk magnetik."
+      },
+      {
+       "p": "(4) Uji Penetran"
+      },
+      {
+       "p": "Uji penetran (PT: penetrant test) adalah pengujian dengan menyemprotkan cairan berwarna yang disebut cairan penetran pada sampel, dan setelah permukaan dibersihkan, disemprotkan cairan yang disebut cairan pengembang pada sampel. Jika terdapat goresan, cairan yang tersisa di dalam goresan akan naik dan ini yang diamati untuk ditemukan. Pengujian ini sering digunakan untuk inspeksi goresan pada permukaan."
+      },
+      {
+       "p": "(5) Uji Arus Eddy"
+      },
+      {
+       "p": "Uji arus eddy (ET: eddy current test) adalah pengujian dengan mendekatkan koil yang dialiri arus AC ke sampel, dan mengukur perubahan impedansi pada koil. Jika ada goresan di permukaan, arus eddy yang mengalir pada sampel akan berubah sehingga arus yang mengalir pada koil juga akan berubah. Pengujian ini disebut uji non-destruktif arus eddy, uji non-destruktif eddy, atau uji induksi elektromagnetik."
+      },
+      {
+       "p": "(6) Uji Visual"
+      },
+      {
+       "p": "Uji visual (VT: visual test) adalah inspeksi untuk mencari goresan di permukaan dengan mata telanjang. Ada yang tanpa menggunakan peralatan, ada pula yang menggunakan kamera. Disebut juga inspeksi visual atau inspeksi visual tampak luar."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Inspeksi non-destruktif adalah inspeksi untuk menemukan cacat tanpa merusak material. Tergantung metode inspeksi, dapat digunakan untuk menemukan tak hanya goresan di permukaan, tetapi juga di bagian dalam (rongga). Di sini akan dijelaskan beberapa yang umum.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b5s10",
+    "no": 10,
+    "title": {
+     "id": "Uji Sensorik",
+     "jp": "{官能検査|かんのうけんさ}"
+    },
+    "pages": [
+     66,
+     67
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Sensasi manusia seperti indera manusia, yaitu indera pengecap (dengan lidah), penciuman (dengan hidung), peraba (dengan kulit tangan), penglihatan (dengan mata), dan pendengaran (dengan telinga) disebut sensasi sensorik. Inspeksi yang menggunakan kemampuan inderawi disebut inspeksi sensorik. Inspeksi sensorik dilakukan dalam kondisi-kondisi berikut:"
+      },
+      {
+       "ul": [
+        "Jika sulit diperiksa dengan mesin dan lebih baik dicek oleh manusia",
+        "Jika yang ingin dicek bukan sifat fisik, tetapi bagaimana dirasakan oleh manusia"
+       ]
+      },
+      {
+       "p": "Penglihatan: Inspeksi goresan, warna, kilap, dsb Pendengaran: Kualitas suara, rongga dan kelonggaran sekrup melalui suara ketukan, dsb Perabaan: Inspeksi kekasaran permukaan dsb"
+      },
+      {
+       "p": "Sekalipun bukan penilai yang ahli, dalam pekerjaan sehari-hari kita harus memeriksa apakah ada yang berbeda dengan biasanya menggunakan indera-indera tersebut. Dengan itu dapat menyadari abnormal pada mesin."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sensasi manusia seperti indera manusia, yaitu indera pengecap (dengan lidah), penciuman (dengan hidung), peraba (dengan kulit tangan), penglihatan (dengan mata), dan pendengaran (dengan telinga) disebut sensasi sensorik. Inspeksi yang menggunakan kemampuan inderawi disebut inspeksi sensorik. Inspeksi sensorik dilakukan",
+      "points": [
+       "Jika sulit diperiksa dengan mesin dan lebih baik dicek oleh manusia",
+       "Jika yang ingin dicek bukan sifat fisik, tetapi bagaimana dirasakan oleh manusia"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

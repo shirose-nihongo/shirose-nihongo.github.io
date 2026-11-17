@@ -1,0 +1,832 @@
+{
+ "schema": 1,
+ "bidang": "jaim-metal-surface",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 金属表面処理 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab6",
+  "no": 6,
+  "title": {
+   "id": "Pengukuran dan Inspeksi",
+   "jp": "測定・検査"
+  },
+  "intro": {
+   "id": "Bab 6 buku resmi JAIM."
+  },
+  "pages": [
+   62,
+   80
+  ],
+  "subs": [
+   {
+    "id": "b6s1",
+    "no": 1,
+    "title": {
+     "id": "Pengukuran Suhu",
+     "jp": "温度の測定"
+    },
+    "pages": [
+     62,
+     62
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Suhu larutan pelapisan maupun larutan anodisasi mempengaruhi tebal lapisan serta tampilan (warna, kecerahan) lapisan logam dan lapisan anodisasi. Pengukuran untuk memastikan apakah kondisi telah diatur sesuai nilai yang ditentukan. Hal ini penting untuk mencegah cacat kualitas."
+      },
+      {
+       "p": "(2) Alat dan Perangkat Ukur"
+      },
+      {
+       "p": "Alat dan perangkat ukur meliputi jenis berikut:"
+      },
+      {
+       "ul": [
+        "Termometer digital tipe sensor (termokopel, resistor platinum, dll.)",
+        "Termometer kolom cairan (alkohol, merkuri) Melihat secara horizontal seperti pada Gambar 6-1."
+       ]
+      },
+      {
+       "p": "Melihat secara horizontal"
+      },
+      {
+       "p": "Gambar 6-1: Pembacaan Termometer"
+      },
+      {
+       "p": "Perangkat untuk memanaskan atau mendinginkan larutan proses antara lain sebagai berikut:"
+      },
+      {
+       "ul": [
+        "Pipa pendingin: mendinginkan larutan dengan mengalirkan air atau cairan lain melalui pipa.",
+        "Alat penukar panas di luar tangki: dipasang di luar bak pelapisan untuk mengatur suhu.",
+        "Pemanas listrik celup (heater): dimasukkan langsung ke dalam larutan untuk memanaskan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Termometer digital tipe sensor (termokopel, resistor platinum, dll.)",
+       "Termometer kolom cairan (alkohol, merkuri) Melihat secara horizontal seperti pada Gamba…",
+       "Pipa pendingin: mendinginkan larutan dengan mengalirkan air atau cairan lain melalui pi…",
+       "Alat penukar panas di luar tangki: dipasang di luar bak pelapisan untuk mengatur suhu.",
+       "Pemanas listrik celup (heater): dimasukkan langsung ke dalam larutan untuk memanaskan."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s2",
+    "no": 2,
+    "title": {
+     "id": "Pengukuran Berat Jenis",
+     "jp": "比重の測定"
+    },
+    "pages": [
+     63,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan Konsentrasi komponen logam yang terkandung dalam larutan pelapisan maupun larutan anodisasi mempengaruhi tebal lapisan serta tampilan (warna, kecerahan) dari lapisan tersebut. Semakin tinggi konsentrasi, semakin besar berat jenis, sehingga dilakukan pengukuran berat jenis untuk memastikan apakah konsentrasi telah diatur sesuai nilai yang ditentukan. Hal ini penting untuk mencegah cacat kualitas."
+      },
+      {
+       "p": "(2) Metode Pengukuran"
+      },
+      {
+       "ul": [
+        "Pengukuran berat jenis dilakukan dengan mengapungkan hidrometer untuk cairan ke dalam wadah berisi larutan yang akan diukur, lalu membaca skala pada permukaan cairan. Pada saat membaca, skala dibaca pada bagian atas meniskus (pembacaan tepi atas). Dalam contoh pada Gambar 6-2, nilainya adalah 1,131.",
+        "Dari grafik hubungan berat jenis dan konsentrasi, dapat diketahui konsentrasinya. Dalam contoh pada Gambar 6-3, ketika berat jenis adalah 1,152, konsentrasinya menjadi 336 g/L. (Garis putus-putus merah)"
+       ]
+      },
+      {
+       "p": "Hidrometer"
+      },
+      {
+       "p": "Baca disini Konsentrasi (g/L)"
+      },
+      {
+       "p": "Meniskus"
+      },
+      {
+       "p": "Cairan yang akan diukur"
+      },
+      {
+       "p": "Berat jenis (d420℃)"
+      },
+      {
+       "p": "Gambar 6-2: Pembacaan Hidrometer Gambar 6-3: Hubungan Konsentrasi dan Berat Jenis"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan Konsentrasi komponen logam yang terkandung dalam larutan pelapisan maupun larutan anodisasi mempengaruhi tebal lapisan serta tampilan (warna, kecerahan) dari lapisan tersebut. Semakin tinggi konsentrasi, semakin besar berat jenis, sehingga dilakukan pengukuran berat jenis untuk memastikan apakah konsentrasi ",
+      "points": [
+       "Pengukuran berat jenis dilakukan dengan mengapungkan hidrometer untuk cairan ke dalam w…",
+       "Dari grafik hubungan berat jenis dan konsentrasi, dapat diketahui konsentrasinya. Dalam…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s3",
+    "no": 3,
+    "title": {
+     "id": "Pengukuran pH",
+     "jp": "pH の{測定|そくてい}"
+    },
+    "pages": [
+     64,
+     64
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "pH larutan pelapisan maupun anodisasi memengaruhi tebal lapisan serta tampilan (warna, kecerahan) dari lapisan yang dilapisi dan lapisan anodisasi. Pengukuran untuk memastikan apakah kondisi telah diatur sesuai nilai yang ditentukan. Hal ini penting untuk mencegah cacat kualitas."
+      },
+      {
+       "p": "(2) Metode dan alat pengukuran"
+      },
+      {
+       "ul": [
+        "Kertas lakmus: dengan mencelupkan larutan dapat diketahui apakah bersifat asam atau basa. Jika berubah merah berarti asam, jika berubah biru berarti basa.",
+        "Kertas uji pH: dapat memeriksa pH dalam rentang luas dari asam hingga basa. Jika berubah merah berarti asam, jika berubah biru berarti basa, jika tidak berubah berarti netral.",
+        "pH meter: pH elektroda (sensor) dicelupkan ke dalam larutan bisa mengukur pH secara langsung. Karena dipengaruhi oleh suhu, perlu memperhatikan suhu pengukuran. Tersedia tipe industri, meja, maupun portabel."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Kertas lakmus: dengan mencelupkan larutan dapat diketahui apakah bersifat asam atau bas…",
+       "Kertas uji pH: dapat memeriksa pH dalam rentang luas dari asam hingga basa. Jika beruba…",
+       "pH meter: pH elektroda (sensor) dicelupkan ke dalam larutan bisa mengukur pH secara lan…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s4",
+    "no": 4,
+    "title": {
+     "id": "Titrasi Netralisasi",
+     "jp": "{中和滴定|ちゅうわてきてい}"
+    },
+    "pages": [
+     65,
+     66
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Titrasi netralisasi adalah metode pemeriksaan yang memanfaatkan reaksi antara asam dan basa yang saling menetralkan untuk menentukan konsentrasi asam atau basa secara akurat. Misalnya digunakan ketika menganalisis konsentrasi asam sulfat dalam larutan pelapisan tembaga sulfat. Hal ini penting untuk mencegah cacat kualitas."
+      },
+      {
+       "p": "(2) Metode dan Alat Ukur"
+      },
+      {
+       "ul": [
+        "Larutan standar dengan konsentrasi yang sudah diketahui (misalnya natrium hidroksida) ditambahkan sedikit demi sedikit ke dalam larutan yang konsentrasinya ingin diketahui (misalnya larutan asam sulfat). \"Titik netralisasi\", yaitu saat asam dan basa bereaksi tepat habis, ditentukan dengan menggunakan indikator melalui perubahan warna.",
+        "Dari jumlah larutan standar pada titik netralisasi, konsentrasi larutan yang ingin diketahui dihitung.",
+        "Alat ukur, perangkat, dan bahan kimia yang digunakan antara lain:",
+        "Buret: diisi dengan larutan standar, lalu diteteskan sedikit demi sedikit.",
+        "Pipet Volumetrik: untuk mengukur larutan yang konsentrasinya ingin diketahui.",
+        "Labu, gelas Erlenmeyer: untuk menampung larutan yang konsentrasinya ingin diketahui bersama indikator.",
+        "Larutan standar: larutan dengan konsentrasi yang sudah diketahui. Ditambahkan sedikit demi sedikit."
+       ]
+      },
+      {
+       "ul": [
+        "Indikator: pada titik netralisasi terjadi perubahan warna. Berikut beberapa contohnya:"
+       ]
+      },
+      {
+       "p": "Fenolftalein tidak berwarna (asam), merah (basa)"
+      },
+      {
+       "p": "Metil oranye merah (asam), kuning (basa)"
+      },
+      {
+       "p": "BTB kuning (asam), hijau (netral), biru (basa)."
+      },
+      {
+       "p": "Buret (larutan standar) Larutan diisi hingga bagian bawah permukaan Membaca Larutan cairan sejajar bagian ditambahkan dengan garis paling sedikit demi tanda bawah sedikit permukaan larutan Labu (11 ml) (larutan yang konsentrasinya ingin diketahui)"
+      },
+      {
+       "p": "Gambar 6-4: Titrasi Netralisasi, Buret Gambar 6-5: Pipet Volumetrik"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Larutan standar dengan konsentrasi yang sudah diketahui (misalnya natrium hidroksida) d…",
+       "Dari jumlah larutan standar pada titik netralisasi, konsentrasi larutan yang ingin dike…",
+       "Alat ukur, perangkat, dan bahan kimia yang digunakan antara lain:",
+       "Buret: diisi dengan larutan standar, lalu diteteskan sedikit demi sedikit.",
+       "Pipet Volumetrik: untuk mengukur larutan yang konsentrasinya ingin diketahui.",
+       "Labu, gelas Erlenmeyer: untuk menampung larutan yang konsentrasinya ingin diketahui ber…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s5",
+    "no": 5,
+    "title": {
+     "id": "Pengukuran Arus Listrik",
+     "jp": "電流の測定"
+    },
+    "pages": [
+     67,
+     67
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Arus listrik pada pelapisan listrik maupun anodisasi mempengaruhi tebal lapisan serta tampilan (warna, kecerahan) lapisan logam dan lapisan anodisasi. Pengukuran untuk memastikan apakah kondisi telah diatur sesuai nilai yang ditentukan. Hal ini penting untuk mencegah cacat kualitas."
+      },
+      {
+       "p": "(2) Alat dan Perangkat Ukur serta Metode Penyambungan"
+      },
+      {
+       "p": "Gambar 6-6: Membaca Amperemeter"
+      },
+      {
+       "ul": [
+        "Amperemeter analog: Menunjukkan nilai arus dengan jarum. Pada Gambar 6-6 nilainya adalah 15 A.",
+        "Amperemeter digital: Menampilkan nilai arus dalam bentuk angka sehingga kesalahan pembacaan lebih sedikit.",
+        "Clamp meter: Mengukur arus dengan menjepit kabel. Dapat digunakan tanpa memutuskan rangkaian.",
+        "Amperemeter dihubungkan secara seri."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Amperemeter analog: Menunjukkan nilai arus dengan jarum. Pada Gambar 6-6 nilainya adala…",
+       "Amperemeter digital: Menampilkan nilai arus dalam bentuk angka sehingga kesalahan pemba…",
+       "Clamp meter: Mengukur arus dengan menjepit kabel. Dapat digunakan tanpa memutuskan rang…",
+       "Amperemeter dihubungkan secara seri."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s6",
+    "no": 6,
+    "title": {
+     "id": "Pengukuran Tegangan Listrik",
+     "jp": "電圧の測定"
+    },
+    "pages": [
+     68,
+     69
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "ul": [
+        "Dalam proses pelapisan listrik, tegangan berfluktuasi karena degradasi larutan elektrolit atau masuknya kotoran. Untuk mendeteksi lebih awal adanya anomali proses, dilakukan pengukuran tegangan.",
+        "Pada anodisasi, tegangan mempengaruhi ketebalan dan struktur lapisan oksida. Pengukuran untuk memastikan apakah kondisi telah diatur sesuai nilai yang ditentukan."
+       ]
+      },
+      {
+       "p": "(2) Alat dan Perangkat Ukur serta Metode Penyambungan"
+      },
+      {
+       "ul": [
+        "Voltmeter analog: Menunjukkan nilai tegangan dengan jarum.",
+        "Voltmeter digital: Menampilkan nilai tegangan dalam bentuk angka sehingga kesalahan pembacaan lebih sedikit.",
+        "Voltmeter dihubungkan secara paralel."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Dalam proses pelapisan listrik, tegangan berfluktuasi karena degradasi larutan elektrol…",
+       "Pada anodisasi, tegangan mempengaruhi ketebalan dan struktur lapisan oksida. Pengukuran…",
+       "Voltmeter analog: Menunjukkan nilai tegangan dengan jarum.",
+       "Voltmeter digital: Menampilkan nilai tegangan dalam bentuk angka sehingga kesalahan pem…",
+       "Voltmeter dihubungkan secara paralel."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s7",
+    "no": 7,
+    "title": {
+     "id": "Pengukuran Ketebalan Pelapisan Logam",
+     "jp": "めっきの{膜厚測定|まくあつそくてい}"
+    },
+    "pages": [
+     70,
+     71
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Ketebalan pelapisan logam mempengaruhi sifat-sifat seperti tampilan (warna, kecerahan), ketahanan korosi, dan kemudahan penyolderan. Pengukuran dilakukan untuk memastikan apakah ketebalan pelapisan sesuai nilai yang ditentukan. Hal ini penting untuk memastikan cacat mutu."
+      },
+      {
+       "p": "(2) Metode dan Alat Ukur"
+      },
+      {
+       "ul": [
+        "Pengukur ketebalan sinar-X fluoresen: Mengukur ketebalan dengan menggunakan sinar-X.",
+        "Pengukur ketebalan lapisan arus eddy: Ketebalan lapisan diukur dengan menempelkan probe berarus frekuensi tinggi. Pada logam magnetik (seperti baja), dapat diukur lapisan konduktif non -magnetik (seperti pelapisan seng, tembaga, aluminium).",
+        "Pengukur ketebalan magnetik: Mengukur ketebalan dengan menempelkan probe yang memancarkan garis gaya magnet. Pada logam magnetik (seperti baja), dapat diukur lapisan logam non -magnetik (seperti pelapisan seng, tembaga, maupun lapisan cat).",
+        "Metode uji penampang mikroskopis: Membuat sampel penampang pelapisan dan mengukur ketebalan dengan memperbesar menggunakan mikroskop.",
+        "Metode massa lapisan: Melarutkan lapisan dan menghitung massa lapisan serta ketebalan dari selisih berat sebelum dan sesudah pelarutan."
+       ]
+      },
+      {
+       "p": "(3) Evaluasi Hasil Pengukuran"
+      },
+      {
+       "ul": [
+        "Untuk memeriksa ketidakmerataan keseluruhan, ketebalan biasanya diukur pada beberapa titik.",
+        "Memastikan apakah nilai maksimal dan minimal berada dalam rentang target. Dalam contoh pada tabel 6-1, B dan C meleset dari target dan karenanya barang cacat."
+       ]
+      },
+      {
+       "p": "Tabel 6-1: Penilaian Barang Cacat"
+      },
+      {
+       "p": "Rentang Sampel Nilai maksimal Nilai minimal Penilaian target"
+      },
+      {
+       "p": "A 4,8 μm 2,3 μm 2,0 - 5,0 μm Barang bagus"
+      },
+      {
+       "p": "B 5,2 μm 3,5 μm 2,0 - 5,0 μm Barang cacat"
+      },
+      {
+       "p": "C 4,5 μm 1,7 μm 2,0 - 5,0 μm Barang cacat"
+      },
+      {
+       "ul": [
+        "Menghitung nilai rerata dan membandingkan selisih antar sampel. Nilai rerata dihitung dengan rumus berikut. Pada contoh di tabel 6-2, jumlah poin 1 - 5 (jumlah total pengukuran) dibagi dengan 5 (jumlah pengukuran)."
+       ]
+      },
+      {
+       "p": "Nilai rerata = Total poin pengukuran ÷ Jumlah pengukuran"
+      },
+      {
+       "p": "Tabel 6-2: Perhitungan Nilai Rerata (satuan:μm)"
+      },
+      {
+       "p": "Sampel ① ② ③ ④ ⑤ Rerata"
+      },
+      {
+       "p": "D 5,3 4,7 4,5 5,0 5,5 5,0"
+      },
+      {
+       "p": "E 4,5 4,2 4,8 4,3 4,7 4,5"
+      },
+      {
+       "p": "② ③ ① ④"
+      },
+      {
+       "p": "⑤"
+      },
+      {
+       "p": "Gambar 6-7: Titik Pengukuran Ketebalan Lapisan"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Pengukur ketebalan sinar-X fluoresen: Mengukur ketebalan dengan menggunakan sinar-X.",
+       "Pengukur ketebalan lapisan arus eddy: Ketebalan lapisan diukur dengan menempelkan probe…",
+       "Pengukur ketebalan magnetik: Mengukur ketebalan dengan menempelkan probe yang memancark…",
+       "Metode uji penampang mikroskopis: Membuat sampel penampang pelapisan dan mengukur keteb…",
+       "Metode massa lapisan: Melarutkan lapisan dan menghitung massa lapisan serta ketebalan d…",
+       "Untuk memeriksa ketidakmerataan keseluruhan, ketebalan biasanya diukur pada beberapa ti…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s8",
+    "no": 8,
+    "title": {
+     "id": "Pengukuran Tebal Lapisan Anodisasi",
+     "jp": "陽極酸化皮膜の膜厚測定"
+    },
+    "pages": [
+     72,
+     72
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Tebal lapisan anodisasi mempengaruhi sifat-sifat seperti tampilan (warna, kecerahan), ketahanan korosi. Pengukuran dilakukan untuk memastikan apakah tebal lapisan sesuai dengan nilai yang telah ditentukan. Hal ini penting untuk memastikan cacat mutu."
+      },
+      {
+       "p": "(2) Metode dan Alat Ukur"
+      },
+      {
+       "ul": [
+        "Pengukur ketebalan lapisan arus eddy: Mengukur ketebalan dengan menempelkan probe berarus frekuensi tinggi.",
+        "Sebelum diukur, alat pengukur ketebalan lapisan arus eddy dikalibrasi dahulu dengan pelat standar ketebalan lapisan."
+       ]
+      },
+      {
+       "p": "pengukur ketebalan lapisan arus eddy pelat standar"
+      },
+      {
+       "p": "Gambar 6-8: Pengukur Ketebalan Lapisan Arus Eddy dan Pelat Standar"
+      },
+      {
+       "ul": [
+        "Metode uji penampang mikroskopis: Membuat sampel penampang pelapisan dan mengukur ketebalan dengan memperbesar menggunakan mikroskop.",
+        "Metode massa lapisan: Melarutkan lapisan dan menghitung massa lapisan serta ketebalan dari selisih berat sebelum dan sesudah pelarutan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Pengukur ketebalan lapisan arus eddy: Mengukur ketebalan dengan menempelkan probe berar…",
+       "Sebelum diukur, alat pengukur ketebalan lapisan arus eddy dikalibrasi dahulu dengan pel…",
+       "Metode uji penampang mikroskopis: Membuat sampel penampang pelapisan dan mengukur keteb…",
+       "Metode massa lapisan: Melarutkan lapisan dan menghitung massa lapisan serta ketebalan d…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s9",
+    "no": 9,
+    "title": {
+     "id": "Pengetahuan lainnya",
+     "jp": "その他の知識"
+    },
+    "pages": [
+     73,
+     74
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Alat ukur bertanda JIS mutunya dijamin sesuai Standar Industri Jepang. Gunakan hanya alat ukur yang bersertifikasi.",
+        "Pengujian non-destruktif adalah metode pengukuran ketebalan lapisan tanpa merusak material (dipotong, dilelehkan, dll) seperti dengan alat pengukur ketebalan lapisan arus eddy.",
+        "Metode pemeriksaan yang merusak material, seperti metode uji penampang mikroskopis dan metode massa lapisan, disebut sebagai pengujian destruktif."
+       ]
+      },
+      {
+       "p": "Kata Kunci"
+      },
+      {
+       "p": "Arus eddy: Kumparan yang menghasilkan medan magnet bolak balik akibat frekuensi tinggi, didekatkan ke permukaan logam konduktif non-magnetik maka arus eddy akan dihasilkan di permukaan logam tersebut oleh arus bolak balik frekuensi tinggi. Fluoresensi sinar-X: Ketika sinar-X dari tabung sinar-X diarahkan ke sampel, setiap elemen akan memancarkan sinar-X fluoresen dengan panjang gelombang khas."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kata Kunci",
+      "points": [
+       "Alat ukur bertanda JIS mutunya dijamin sesuai Standar Industri Jepang. Gunakan hanya al…",
+       "Pengujian non-destruktif adalah metode pengukuran ketebalan lapisan tanpa merusak mater…",
+       "Metode pemeriksaan yang merusak material, seperti metode uji penampang mikroskopis dan …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s10",
+    "no": 10,
+    "title": {
+     "id": "Uji Semprot Air Garam",
+     "jp": "{塩水噴霧試験|えんすいふんむしけん}"
+    },
+    "pages": [
+     75,
+     75
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan dan jenis"
+      },
+      {
+       "ul": [
+        "Menyelidiki bagaimana karat terbentuk di \"lingkungan kandungan garam tinggi\" seperti pantai dan keringat.",
+        "Uji semprot air garam netral: menyemprotkan larutan garam netral.",
+        "Uji semprot air garam asam asetat: menyemprotkan larutan garam yang ditambahkan asam asetat.",
+        "Uji semprotan CASS: menyemprotkan larutan garam yang ditambahkan asam asetat dan tembaga klorida."
+       ]
+      },
+      {
+       "p": "(2) Kondisi uji semprot air garam netral"
+      },
+      {
+       "ul": [
+        "Larutan garam dibuat menjadi kabut dan terus disemprotkan ke benda uji.",
+        "Jenis garam yang digunakan adalah natrium klorida (NaCl).",
+        "Konsentrasi larutan garam adalah 50 g/L ±5 g/L (sekitar 5%).",
+        "Suhu larutan garam adalah 35°C ±2°C.",
+        "pH larutan garam adalah 6,5–7,2 (netral)."
+       ]
+      },
+      {
+       "p": "(3) Kondisi uji semprotan air garam asam asetat"
+      },
+      {
+       "ul": [
+        "Larutan garam untuk uji semprot air garam netral ditambahkan asam asetat 1 mL/L.",
+        "pH larutan garam adalah 3,0–3,1 (25°C, asam)."
+       ]
+      },
+      {
+       "p": "(4) Kondisi uji semprotan CASS"
+      },
+      {
+       "ul": [
+        "Larutan garam untuk uji semprotan air garam asam asetat ditambahkan tembaga(II) klorida sebesar 0,205 g/L ±0,015 g/L.",
+        "pH larutan garam adalah 3,0–3,1 (25°C, asam)."
+       ]
+      },
+      {
+       "p": "(5) Metode evaluasi"
+      },
+      {
+       "ul": [
+        "Diamati berapa lama waktu yang dibutuhkan karat muncul, bagaimana perubahan permukaan Kadang-kadang diuji dengan membuat goresan.",
+        "Uji semprotan CASS merupakan kondisi yang paling ketat, sedangkan uji semprotan air garam netral merupakan kondisi yang paling ringan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan dan jenis",
+      "points": [
+       "Menyelidiki bagaimana karat terbentuk di \"lingkungan kandungan garam tinggi\" seperti pa…",
+       "Uji semprot air garam netral: menyemprotkan larutan garam netral.",
+       "Uji semprot air garam asam asetat: menyemprotkan larutan garam yang ditambahkan asam as…",
+       "Uji semprotan CASS: menyemprotkan larutan garam yang ditambahkan asam asetat dan tembag…",
+       "Larutan garam dibuat menjadi kabut dan terus disemprotkan ke benda uji.",
+       "Jenis garam yang digunakan adalah natrium klorida (NaCl)."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s11",
+    "no": 11,
+    "title": {
+     "id": "Uji Tetes Alkali",
+     "jp": "アルカリ{滴下試験|てきかしけん}"
+    },
+    "pages": [
+     76,
+     77
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan dan jenis"
+      },
+      {
+       "ul": [
+        "Ini adalah metode pengujian untuk mengevaluasi ketahanan material terhadap alkali.",
+        "Digunakan, misalnya, pada uji ketahanan alkali (uji ketahanan korosi dalam alkali) dari lapisan anodisasi aluminium dan paduan aluminium."
+       ]
+      },
+      {
+       "p": "(2) Kondisi uji"
+      },
+      {
+       "ul": [
+        "Jenis alkalinya adalah Natrium Hidroksida (NaOH).",
+        "Konsentrasi alkalinya 100 g/L.",
+        "Suhu larutan adalah 35°C ±1°C."
+       ]
+      },
+      {
+       "p": "(3) Metode evaluasi"
+      },
+      {
+       "ul": [
+        "Tambahkan larutan Natrium Hidroksida setetes demi setetes dengan interval 5 detik.",
+        "Kontinuitas diperiksa menggunakan multimeter.",
+        "Ketahanan terhadap alkali dievaluasi berdasarkan waktu hingga lapisan larut dan terjadi kontinuitas listrik."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan dan jenis",
+      "points": [
+       "Ini adalah metode pengujian untuk mengevaluasi ketahanan material terhadap alkali.",
+       "Digunakan, misalnya, pada uji ketahanan alkali (uji ketahanan korosi dalam alkali) dari…",
+       "Jenis alkalinya adalah Natrium Hidroksida (NaOH).",
+       "Konsentrasi alkalinya 100 g/L.",
+       "Suhu larutan adalah 35°C ±1°C.",
+       "Tambahkan larutan Natrium Hidroksida setetes demi setetes dengan interval 5 detik."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s12",
+    "no": 12,
+    "title": {
+     "id": "Uji Visual",
+     "jp": "{外観試験|がいかんしけん}"
+    },
+    "pages": [
+     78,
+     78
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Dilakukan untuk memeriksa adanya cacat seperti goresan, ketidakrataan, perubahan warna, dan lubang kecil di permukaan lapisan yang dilapisi dan lapisan anodisasi. Dilakukan sebelum pengiriman guna mencegah lolosnya produk cacat ke tangan pelanggan."
+      },
+      {
+       "p": "(2) Metode"
+      },
+      {
+       "ul": [
+        "Inspeksi visual: Inspeksi yang dilakukan dengan mata manusia. Digunakan sampel (sampel terbatas) yang menunjukkan contoh penampilan yang bisa diterima untuk mengurangi perbedaan individu.",
+        "Inspeksi peralatan: Inspeksi dilakukan dengan menggunakan kamera dan peralatan pengolah gambar, dsb."
+       ]
+      },
+      {
+       "p": "(3) Lingkungan pemeriksaan inspeksi visual"
+      },
+      {
+       "ul": [
+        "Untuk pencahayaan, hindari sinar matahari langsung dan gunakan cahaya alami yang masuk dari jendela yang menghadap utara atau lampu putih xenon standar. Tingkat pencahayaan dalam inspeksi yang digunakan, untuk tugas normal 500 lux atau lebih, sedang untuk tugas yang sangat presisi 1500 lux atau lebih.",
+        "Gunakan latar belakang hitam atau warna serupa.",
+        "Sudut pandang ditentukan dengan melihat dari arah vertikal, atau dengan menyinari cahaya dari arah vertikal dan mengamati dari sudut 45 derajat."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Inspeksi visual: Inspeksi yang dilakukan dengan mata manusia. Digunakan sampel (sampel …",
+       "Inspeksi peralatan: Inspeksi dilakukan dengan menggunakan kamera dan peralatan pengolah…",
+       "Untuk pencahayaan, hindari sinar matahari langsung dan gunakan cahaya alami yang masuk …",
+       "Gunakan latar belakang hitam atau warna serupa.",
+       "Sudut pandang ditentukan dengan melihat dari arah vertikal, atau dengan menyinari cahay…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s13",
+    "no": 13,
+    "title": {
+     "id": "Pencocokan Warna",
+     "jp": "{色合|いろあ}わせ"
+    },
+    "pages": [
+     79,
+     79
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Dilakukan untuk memastikan apakah lapisan berwarna hasil anodisasi mencapai warna yang ditargetkan. Memeriksa ada tidaknya ketidakmerataan warna."
+      },
+      {
+       "p": "(2) Metode"
+      },
+      {
+       "ul": [
+        "Pemeriksaan visual: dilakukan dengan mata manusia. Untuk mengurangi perbedaan individu, digunakan contoh tingkat intensitas warna (contoh warna).",
+        "Pemeriksaan dengan alat: dilakukan menggunakan spektrofotometer atau colorimeter."
+       ]
+      },
+      {
+       "p": "(3) Poin-poin penting dalam pencocokan warna"
+      },
+      {
+       "ul": [
+        "Cara melihat warna berbeda pada setiap orang (usia, penglihatan warna, kelelahan, dll).",
+        "Pengaruh sumber cahaya sangat besar; warna akan berubah seperti pada cahaya siang, lampu fluoresen, maupun LED.",
+        "Penting juga untuk mengkombinasikan pemeriksaan visual dengan pemeriksaan menggunakan alat."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": [
+       "Pemeriksaan visual: dilakukan dengan mata manusia. Untuk mengurangi perbedaan individu,…",
+       "Pemeriksaan dengan alat: dilakukan menggunakan spektrofotometer atau colorimeter.",
+       "Cara melihat warna berbeda pada setiap orang (usia, penglihatan warna, kelelahan, dll).",
+       "Pengaruh sumber cahaya sangat besar; warna akan berubah seperti pada cahaya siang, lamp…",
+       "Penting juga untuk mengkombinasikan pemeriksaan visual dengan pemeriksaan menggunakan a…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s14",
+    "no": 14,
+    "title": {
+     "id": "Pengukuran dan Inspeksi Lainnya",
+     "jp": "その他の測定・検査"
+    },
+    "pages": [
+     79,
+     80
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Uji adhesi"
+      },
+      {
+       "p": "Mengevaluasi seberapa kuat lapisan logam melekat pada bahan dasar. Digunakan pengujian antara lain: uji pelepasan dengan pita perekat, uji tekuk, uji amplas, dan uji kejut termal."
+      },
+      {
+       "p": "(2) Pengukuran kekerasan"
+      },
+      {
+       "ul": [
+        "Dilakukan pengukuran kekerasan pada lapisan logam yang membutuhkan ketahanan aus (tahan terhadap gesekan dan goresan).",
+        "Digunakan pengujian antara lain: uji kekerasan mikro Vickers, uji kekerasan Rockwell, dan uji kekerasan Brinell."
+       ]
+      },
+      {
+       "p": "(3) Uji keterbasahan solder"
+      },
+      {
+       "ul": [
+        "Memverifikasi pada pelapisan timah, emas, dan lain-lain yang membutuhkan proses penyolderan.",
+        "Ada metode memverifikasi penyebaran basah dengan mencelupkan sampel ke dalam bak solder."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Uji adhesi",
+      "points": [
+       "Dilakukan pengukuran kekerasan pada lapisan logam yang membutuhkan ketahanan aus (tahan…",
+       "Digunakan pengujian antara lain: uji kekerasan mikro Vickers, uji kekerasan Rockwell, d…",
+       "Memverifikasi pada pelapisan timah, emas, dan lain-lain yang membutuhkan proses penyold…",
+       "Ada metode memverifikasi penyebaran basah dengan mencelupkan sampel ke dalam bak solder."
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

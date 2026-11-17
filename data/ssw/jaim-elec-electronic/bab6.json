@@ -1,0 +1,847 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab6",
+  "no": 6,
+  "title": {
+   "id": "Pembuatan Gambar Teknik",
+   "jp": "製図"
+  },
+  "intro": {
+   "id": "Bab 6 buku resmi JAIM."
+  },
+  "pages": [
+   60,
+   80
+  ],
+  "subs": [
+   {
+    "id": "b6s1",
+    "no": 1,
+    "title": {
+     "id": "Jenis Gambar Teknik",
+     "jp": "図面の種類"
+    },
+    "pages": [
+     60,
+     60
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Tabel 6-1: Jenis Gambar Teknik"
+      },
+      {
+       "p": "Klasifikasi Jenis Gambar Teknik"
+      },
+      {
+       "p": "Gambar produksi, gambar perencanaan, gambar"
+      },
+      {
+       "ol": [
+        "Penggunaan persetujuan, gambar penjelasan, gambar estimasi, dan lain-lain"
+       ]
+      },
+      {
+       "p": "Gambar kerangka, gambar terurai, diagram sistem,"
+      },
+      {
+       "ol": [
+        "Bentuk Penyajian diagram sambungan, diagram sirkuit, dan lain-lain"
+       ]
+      },
+      {
+       "p": "Gambar komponen, gambar proses, gambar perakitan,"
+      },
+      {
+       "ol": [
+        "Rincian gambar tata letak, gambar detail, dan lain-lain"
+       ]
+      },
+      {
+       "p": "Keterangan Tambahan"
+      },
+      {
+       "p": "Daftar komponen adalah daftar bagian-bagian yang membentuk satu rakitan (komponen)"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tabel 6-1: Jenis Gambar Teknik",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s2",
+    "no": 2,
+    "title": {
+     "id": "Ukuran dan Format Gambar Teknik",
+     "jp": "図面の大きさと様式"
+    },
+    "pages": [
+     61,
+     62
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Ukuran gambar: ukuran seri A"
+      },
+      {
+       "p": "Tabel 6-2: Ukuran Gambar (satuan: mm)"
+      },
+      {
+       "p": "Nama Ukuran Dimensi: a × b* A0 841 × 1189 A1 594 × 841 A2 420 × 594 A3 297 × 420 A4 210 × 297"
+      },
+      {
+       "p": "*Lihat Gambar 6-1 (format gambar)"
+      },
+      {
+       "p": "Keterangan Tambahan"
+      },
+      {
+       "p": "Jika gambar rangkaian sekuens untuk kontrol terdiri dari beberapa lembar, disusun dalam ukuran A3."
+      },
+      {
+       "p": "(2) Format"
+      },
+      {
+       "p": "garis tepi garis tepi A0–A3 (orientasi lanskap) A4 (orientasi potret)"
+      },
+      {
+       "p": "Gambar 6-1: Format Gambar (JIS B 0001)"
+      },
+      {
+       "p": "Ukuran Garis Tepi"
+      },
+      {
+       "p": "A4～A2 :c = d = 10 mm A1～ :c = d = 20 mm Sisi panjang digunakan untuk arah horizontal, tetapi untuk A4, sisi pendek juga boleh digunakan untuk arah horizontal."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Ukuran gambar: ukuran seri A",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s3",
+    "no": 3,
+    "title": {
+     "id": "Garis yang Digunakan dalam Gambar Teknik",
+     "jp": "図面に用いる線"
+    },
+    "pages": [
+     63,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Jenis dan Ketebalan Garis Tabel 6-3: Dalam gambar teknik, ada 3 jenis garis: garis tipis, Ketebalan Garis garis tebal dan garis sangat tebal. (satuan: mm)"
+      },
+      {
+       "ul": [
+        "Ketebalan garis dipilih dari: 0,18 mm, 0,25 mm, Garis Garis 0,35 mm, 0,5 mm, 0,7 mm, atau 1,0 mm. Tipis Tebal 0,18 0,35",
+        "Perbandingan ketebalan garis tipis dan garis tebal 0,25 0,5 adalah 1 : 2. 0,35 0,7",
+        "Dalam satu gambar teknik, ketebalan garis untuk 0,5 1,0 setiap jenis garis harus seragam."
+       ]
+      },
+      {
+       "p": "(2) Jenis dan Penggunaan garis, serta Ukuran Huruf"
+      },
+      {
+       "p": "Garis pada gambar teknik dibedakan penggunaannya sesuai Tabel 6-4."
+      },
+      {
+       "p": "Tabel 6-4: Jenis dan Penggunaan Garis"
+      },
+      {
+       "p": "Nama Sesuai Jenis Garis Garis Penggunaan Garis Penggunaan Garis kontur garis tebal solid Bagian objek yang terlihat Garis dimensi garis tipis solid Entri dimensi Garis ekstensi garis tipis solid Entri dimensi dimensi Garis garis tipis solid Entri simbol dan lainnya penunjuk garis putus-titik Menunjukkan pusat bentuk, Garis pusat tunggal tipis tampilan lintasan garis tipis solid Untuk penyederhanaan garis pusat garis putus-putus Garis tipis ataupun Bagian objek yang tidak terlihat tersembunyi tebal garis putus-titik Garis acuan Referensi dimensi posisi tunggal tipis garis putus-titik Garis interval Acuan untuk interval pengulangan tunggal tipis garis putus-titik Bagian yang berdekatan, bagian Garis imajiner ganda tipis yang bergerak, dan sejenisnya garis tipis solid Batas bagian objek yang Garis putus bergelombang, dihilangkan garis zigzag"
+      },
+      {
+       "p": "Nama Sesuai Jenis Garis Garis Penggunaan Garis Penggunaan"
+      },
+      {
+       "p": "garis putus-putus Menunjukkan posisi potongan pada Garis potong tipis, sudut lebih gambar penampang tebal"
+      },
+      {
+       "p": "Menunjukkan bagian tertentu, garis-garis solid seperti bentuk permukaan potongan Garis arsiran tipis miring penampang. berjarak sama Penampang yang diarsir penuh disebut smudging"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Jenis dan Ketebalan Garis Tabel 6-3: Dalam gambar teknik, ada 3 jenis garis: garis tipis, Ketebalan Garis garis tebal dan garis sangat tebal. (satuan: mm)",
+      "points": [
+       "Ketebalan garis dipilih dari: 0,18 mm, 0,25 mm, Garis Garis 0,35 mm, 0,5 mm, 0,7 mm, at…",
+       "Perbandingan ketebalan garis tipis dan garis tebal 0,25 0,5 adalah 1 : 2. 0,35 0,7",
+       "Dalam satu gambar teknik, ketebalan garis untuk 0,5 1,0 setiap jenis garis harus seragam."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s4",
+    "no": 4,
+    "title": {
+     "id": "Skala yang Digunakan dalam Gambar Teknik",
+     "jp": "製図に用いる尺度"
+    },
+    "pages": [
+     64,
+     64
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Jika gambar dibuat dengan ukuran yang sama dengan benda aslinya, disebut skala penuh (skala asli). Jika gambar diperbesar, disebut skala diperbesar, dan jika diperkecil, disebut skala diperkecil. Skala dipilih dari skala yang direkomendasikan dibawah ini."
+      },
+      {
+       "p": "Tabel 6-5: Skala"
+      },
+      {
+       "p": "Jenis Skala Rekomendasi"
+      },
+      {
+       "p": "Skala penuh 1:1"
+      },
+      {
+       "p": "Skala 2 : 1 5 : 1 10 : 1 20 : 1 50 : 1 Diperbesar"
+      },
+      {
+       "p": "Skala 1 : 2 1 : 5 1 : 10 1 : 20 1 : 50 Diperkecil 1 : 100 1 : 200 1 : 500 … 1 : 10000"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Jika gambar dibuat dengan ukuran yang sama dengan benda aslinya, disebut skala penuh (skala asli). Jika gambar diperbesar, disebut skala diperbesar, dan jika diperkecil, disebut skala diperkecil. Skala dipilih dari skala yang direkomendasikan dibawah ini.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s5",
+    "no": 5,
+    "title": {
+     "id": "Cara Penyajian Bentuk",
+     "jp": "図形の表し方"
+    },
+    "pages": [
+     65,
+     68
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Metode Proyeksi"
+      },
+      {
+       "p": "Proyeksi ortogonal yang digunakan di Jepang adalah proyeksi sudut ketiga. (proyeksi sudut pertama diabaikan)"
+      },
+      {
+       "p": "A: Tampak Depan B B: Tampak Atas B F C: Tampak D Samping Kiri C C A D F D: Tampak Samping Kanan A E: Tampak Bawah E F: Tampak E Belakang"
+      },
+      {
+       "p": "Gambar 6-2: Standar Tata Letak Proyeksi Ortogonal (Proyeksi Sudut Ketiga) (JIS B0001)"
+      },
+      {
+       "p": "Gambar 6-3: Simbol Proyeksi Sudut Ketiga"
+      },
+      {
+       "p": "Penjelasan"
+      },
+      {
+       "ol": [
+        "Proyeksi sudut ketiga mengacu pada kondisi dimana bidang proyeksi berada diantara objek dan pengamat."
+       ]
+      },
+      {
+       "ol": [
+        "Pada Gambar 6-2, A, D dan B merupakan bentuk yang terlihat secara langsung pada gambar proyeksi."
+       ]
+      },
+      {
+       "ol": [
+        "Gambar proyeksi utama (tampak depan) dipilih sebagai gambar yang paling merepresentasikan bentuk dan fungsi objek."
+       ]
+      },
+      {
+       "p": "(2) Menggambar Garis"
+      },
+      {
+       "ul": [
+        "Garis kontur yang merepresentasikan bentuk objek digambar dengan garis tebal solid.",
+        "Garis tersembunyi, dimana objek tidak terlihat, digambar dengan garis putus tipis atau tebal.",
+        "Garis pusat digambar dengan garis putus-titik tunggal tipis.",
+        "Garis dimensi dan garis ekstensi dimensi digambar dengan garis tipis solid."
+       ]
+      },
+      {
+       "p": "(3) Ukuran Huruf"
+      },
+      {
+       "p": "Ukuran huruf dipilih dari: 2,5 mm, 3,5 mm, 5 mm, 7 mm dan 10 mm."
+      },
+      {
+       "p": "(4) Menyatakan Dimensi"
+      },
+      {
+       "p": "Dimensi dinyatakan dengan garis dimensi, garis ekstensi dimensi, dan sejenisnya."
+      },
+      {
+       "ol": [
+        "Garis dimensi tidak boleh saling bersilangan.",
+        "Hindari penulisan dimensi secara ganda. ｔ 1.6",
+        "Dimensi dinyatakan dalam dimensi akhir setelah proses penyelesaian. 160"
+       ]
+      },
+      {
+       "ol": [
+        "Gunakan dimensi yang tidak memerlukan 85"
+       ]
+      },
+      {
+       "p": "perhitungan. 50"
+      },
+      {
+       "ol": [
+        "Radius lingkaran dinotasikan R, sedangkan 60 diameter dinotasikan φ. Namun, jika bentuk 140 objeknya lingkaran, notasi tersebut tak perlu 280 dicantumkan."
+       ]
+      },
+      {
+       "p": "Gambar 6-4: Contoh Pencantuman Garis Dimensi"
+      },
+      {
+       "p": "(5) Cara Merepresentasikan Busur, Panjang Tali Busur dan Sudut Pusat"
+      },
+      {
+       "p": "Pencantuman dimensi busur, panjang tali busur dan sudut pusat dilakukan sesuai Gambar 6-5. Untuk busur, simbolnya wajib dicantumkan sebelum nilai dimensinya."
+      },
+      {
+       "p": "Gambar 6-5: Contoh Cara Merepresentasikan Busur, Panjang Tali Busur dan Sudut Pusat"
+      },
+      {
+       "p": "(6) Simbol Penyelesaian Permukaan dan Toleransi Kecocokan"
+      },
+      {
+       "p": "Simbol penyelesaian permukaan dinyatakan menggunakan notasi sebagaimana Gambar 6-6."
+      },
+      {
+       "p": "Simbol kekasaran permukaan Ra semakin kecil angkanya, semakin halus permukaan hasil akhir, sebaliknya semakin besar angkanya, semakin kasar permukaannya."
+      },
+      {
+       "p": "Metode Pemesinan (Contoh) M: Pemesinan frais Metode L: Pemesinan bubut pemesinan Simbol kekasaran permukaan Simbol M grafis Ra: Kekasaran rerata aritmetika Ra 6,3 (μm) Simbol grafis Simbol ▽: Menunjukkan perlu proses kekasaran permukaan penghilangan"
+      },
+      {
+       "p": "Gambar 6-6: Menyatakan Metode Penyelesaian Permukaan"
+      },
+      {
+       "p": "Kecocokan dibagi menjadi 3 jenis menurut ukuran celah antara poros dan lubang, yaitu “kecocokan ketat”, “kecocokan longgar”, dan “kecocokan transisi”. Toleransi kecocokan antara poros dan lubang terhadap dimensi dasarnya ditentukan dalam JIS."
+      },
+      {
+       "p": "Keterangan Tambahan 6-1"
+      },
+      {
+       "p": "Kecocokan ketat terjadi jika diameter poros lebih besar daripada diameter lubang, sehingga biasanya tidak dapat dimasukkan. Dilakukan dengan penekanan masuk, atau poros dimasukkan setelah lubang dipanaskan sehingga diameternya mengembang secara termal."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Metode Proyeksi",
+      "points": [
+       "Garis kontur yang merepresentasikan bentuk objek digambar dengan garis tebal solid.",
+       "Garis tersembunyi, dimana objek tidak terlihat, digambar dengan garis putus tipis atau …",
+       "Garis pusat digambar dengan garis putus-titik tunggal tipis.",
+       "Garis dimensi dan garis ekstensi dimensi digambar dengan garis tipis solid."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s6",
+    "no": 6,
+    "title": {
+     "id": "Jenis Gambar Listrik",
+     "jp": "電気図面の種類"
+    },
+    "pages": [
+     69,
+     69
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Berikut jenis-jenis gambar yang umum, tetapi tak ada ketentuannya dalam JIS."
+      },
+      {
+       "p": "Tabel 6-6: Jenis-jenis Gambar Listrik"
+      },
+      {
+       "p": "Jenis Gambar Teknik Keterangan"
+      },
+      {
+       "ol": [
+        "Diagram Sistem Gambar yang menunjukkan sistem kelistrikan seperti saluran System diagram transmisi atau saluran distribusi."
+       ]
+      },
+      {
+       "p": "Diagram yang menunjukkan koneksi dan sirkuit peralatan dan"
+      },
+      {
+       "ol": [
+        "Diagram Koneksi perangkat listrik. Diagram koneksi internal menunjukkan Writing diagram hubungan sambungan internal kabel listrik serta jenis Connection diagram kabelnya. Diagram interkoneksi adalah gambar yang Interconnection menunjukkan hubungan koneksi listrik antar peralatan diagram internal, serta antara panel distribusi/kontrol dengan perangkat eksternal."
+       ]
+      },
+      {
+       "ol": [
+        "Diagram Juga disebut diagram koneksi terbentang, yaitu gambar Pengkabelan rangkaian relai yang menunjukkan susunan rangkaian agar Schematic diagram urutan operasi sekuens dapat dipahami."
+       ]
+      },
+      {
+       "ol": [
+        "Diagram Satu-Garis Gambar yang secara sederhana menunjukkan hubungan Skeleton diagram sambungan listrik antara peralatan dalam sistem tenaga Single-line diagram listrik."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Berikut jenis-jenis gambar yang umum, tetapi tak ada ketentuannya dalam JIS.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s7",
+    "no": 7,
+    "title": {
+     "id": "Simbol-simbol Listrik",
+     "jp": "{電気用図記号|でんきようずきごう}"
+    },
+    "pages": [
+     70,
+     70
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Simbol-simbol gambar kelistrikan JIS telah direvisi signifikan untuk menyesuaikan standar IEC. Namun, perlu kehati-hatian karena simbol gambar berdasarkan standar industri ataupun standar yang lama juga bercampur."
+      },
+      {
+       "p": "(1) Simbol Dasar Kontak"
+      },
+      {
+       "ol": [
+        "Kontak dan sakelar kontrol"
+       ]
+      },
+      {
+       "p": "Kontak a: normal terbuka (sirkuit tertutup saat diaktifkan) (a) kontak normal Kontak b: normal tertutup (sirkuit terbuka saat terbuka diaktifkan)"
+      },
+      {
+       "ol": [
+        "Simbol dasar (b) kontak normal Kontak a: Kontak bergerak digambarkan tertutup dengan garis miring 30° kearah kiri atas terhadap sumbu poros, atau Gambar 6-7 Arah Simbol Dasar 30° ke bawah terhadap sumbu Kontak horizontal. Kontak b: Digambarkan berlawanan arah dengan kontak a, yaitu 30° kearah kanan atas, atau 30° ke atas."
+       ]
+      },
+      {
+       "p": "(2) Simbol-simbol Listrik"
+      },
+      {
+       "p": "Simbol-simbol listrik utama ditunjukkan pada Tabel 6-7."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Simbol-simbol gambar kelistrikan JIS telah direvisi signifikan untuk menyesuaikan standar IEC. Namun, perlu kehati-hatian karena simbol gambar berdasarkan standar industri ataupun standar yang lama juga bercampur.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s8",
+    "no": 8,
+    "title": {
+     "id": "Diagram Skematis untuk Kontrol Sekuensial",
+     "jp": "シーケンス{制御用展開接続図|せいぎょようてんかいせつぞくず}"
+    },
+    "pages": [
+     71,
+     72
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Ukuran: Secara prinsip berukuran A3",
+        "Arah garis koneksi (a) Diagram terbentang horizontal digambarkan dari kiri ke kanan. (b) Diagram terbentang vertikal digambarkan dari atas ke bawah.",
+        "Penandaan posisi simbol: Pada diagram koneksi terbentang, kumparan dan kontak sering posisinya terpisah, sehingga perlu penandaan agar dapat diidentifikasi pada gambar.",
+        "Jenis komponen kontrol serta simbol peralatan ditulis dengan merujuk standar JIS.",
+        "Pada Gambar 6-8 ditunjukkan satu contoh diagram koneksi terbentang."
+       ]
+      },
+      {
+       "p": "Gambar 6-8: Contoh Diagram Koneksi Terbentang (sirkuit penggerak motor)"
+      },
+      {
+       "p": "Tabel 6-7: Simbol-simbol Listrik Utama (JIS C0617-2)"
+      },
+      {
+       "p": "Simbol Nama Simbol Nama"
+      },
+      {
+       "p": "1 Resistor 2 Resistor variabel"
+      },
+      {
+       "p": "3 Kapasitor 4 Induktor, reaktor"
+      },
+      {
+       "p": "Dioda pemancar A Dioda A cahaya (LED) 5 A: anoda 6 A: anoda K K: katoda K K: katoda"
+      },
+      {
+       "p": "Transistor pnp C A Fotodioda C: kolektor 7 B 8 A: anoda E E: emitor K K: katoda B: basis"
+      },
+      {
+       "p": "Kontak normal Kontak normal 9 terbuka 10 tertutup (kontak b) (kontak a)"
+      },
+      {
+       "p": "Sakelar tombol tekan Sakelar alarm (reset 11 12 (reset otomatis) otomatis)"
+      },
+      {
+       "p": "Sakelar berhenti 13 darurat (non-reset 14 Sakelar proksimitas otomatis)"
+      },
+      {
+       "p": "Sakelar batas (normal tertutup Sakelar batas (kontak 15 16 dengan pembukaan normal tertutup) paksa)"
+      },
+      {
+       "p": "Pemutus sirkuit Sakelar batas (MCB) 17 (kontak normal 18 Dapat memutus arus terbuka) beban dan arus hubung singkat"
+      },
+      {
+       "p": "Kontaktor magnetik (MC) 19 20 Lampu indikator Dapat memutus arus beban"
+      },
+      {
+       "p": "21 Amperemeter 22 Sekering"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Gambar 6-8: Contoh Diagram Koneksi Terbentang (sirkuit penggerak motor)",
+      "points": [
+       "Ukuran: Secara prinsip berukuran A3",
+       "Arah garis koneksi (a) Diagram terbentang horizontal digambarkan dari kiri ke kanan. (b…",
+       "Penandaan posisi simbol: Pada diagram koneksi terbentang, kumparan dan kontak sering po…",
+       "Jenis komponen kontrol serta simbol peralatan ditulis dengan merujuk standar JIS.",
+       "Pada Gambar 6-8 ditunjukkan satu contoh diagram koneksi terbentang."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s9",
+    "no": 9,
+    "title": {
+     "id": "Diagram Urutan Tangga dan Simbol-simbolnya",
+     "jp": "ラダーシーケンス図とその記号"
+    },
+    "pages": [
+     73,
+     74
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Diagram urutan tangga (diagram tangga) adalah program yang digunakan pada rangkaian PLC sebagai pengganti urutan relai. Program urutan berjalan dari atas ke bawah dan kiri ke kanan.",
+        "Seperti pada Gambar 6-9, program dibuat dengan menghubungkan perangkat yang dikontrol dengan garis yang menyerupai anak tangga horizontal.",
+        "Dengan kontak seperti pada Tabel 6-8, kumparan dan perangkat keluaran dikontrol secara ON/OFF.",
+        "Simbol-simbol utama ditunjukkan pada Tabel 6-8, dan contoh rangkaian nyala lampu ditunjukkan pada Gambar 6-9."
+       ]
+      },
+      {
+       "p": "Tabel 6-8: Simbol pada Rangkaian Tangga"
+      },
+      {
+       "p": "Simbol Nama Fungsi"
+      },
+      {
+       "p": "Kontak a beroperasi sinkron dengan kontak a (NO) ON/OFF sakelar atau sensor yang terkoneksi ke PLC"
+      },
+      {
+       "p": "Kontak b beroperasi sinkron dengan kontak b (NC) ON/OFF sakelar atau sensor yang terkoneksi ke PLC"
+      },
+      {
+       "p": "Menunjukkan keluaran seperti relai dan kumparan (koil) instruksi."
+      },
+      {
+       "p": "Contoh Operasi"
+      },
+      {
+       "p": "S1 S2 relai M1 M1"
+      },
+      {
+       "p": "M1 lampu Y1"
+      },
+      {
+       "p": "Gambar 6-9: Contoh Diagram Urutan Tangga (Rangkaian Nyala Lampu)"
+      },
+      {
+       "ol": [
+        "Saat sakelar S1 ditekan, koil M1 teraktivasi, dan kontak M1 menutup.",
+        "Saat kontak M1 tertutup, sakelar S1 akan mengunci diri melalui M1.",
+        "Karena kontak M1 dalam kondisi tertutup, keluaran lampu Y1 menjadi ON sehingga lampu menyala.",
+        "Saat sakelar S2 ditekan, eksitasi M1 terputus dan fungsi mengunci diri (self-holding) terlepas, sehingga output Y1 menjadi OFF dan lampu padam."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tabel 6-8: Simbol pada Rangkaian Tangga",
+      "points": [
+       "Diagram urutan tangga (diagram tangga) adalah program yang digunakan pada rangkaian PLC…",
+       "Seperti pada Gambar 6-9, program dibuat dengan menghubungkan perangkat yang dikontrol d…",
+       "Dengan kontak seperti pada Tabel 6-8, kumparan dan perangkat keluaran dikontrol secara …",
+       "Simbol-simbol utama ditunjukkan pada Tabel 6-8, dan contoh rangkaian nyala lampu ditunj…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s10",
+    "no": 10,
+    "title": {
+     "id": "Bahan Konduktif",
+     "jp": "{導電材料|どうでんざいりょう}"
+    },
+    "pages": [
+     75,
+     75
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Bahan Penghantar Listrik"
+      },
+      {
+       "p": "Bahan yang menghantarkan listrik dengan efisien disebut bahan konduktif. Bahan yang memiliki hambatan listrik kecil dan dapat dialiri arus dalam jumlah besar disebut bahan penghantar listrik (bahan kawat listrik)."
+      },
+      {
+       "p": "Tabel 6-9: Jenis-jenis Utama Kawat Listrik"
+      },
+      {
+       "p": "Tembaga listrik dengan kemurnian tinggi yang ditarik pada suhu Kawat Tembaga kamar. Keras dan memiliki resistivitas tinggi. Digunakan pada mesin Keras berputar, sakelar, dan saluran transmisi listrik."
+      },
+      {
+       "p": "Tembaga keras yang dianil, memiliki resistivitas lebih rendah Kawat Tembaga dibanding tembaga keras, dan digunakan untuk lilitan peralatan Lunak listrik serta kabel dan konduktor biasa."
+      },
+      {
+       "p": "Konduktivitasnya sekitar 60% dari tembaga lunak (tembaga lebih Kawat Aluminium mudah menghantarkan listrik). Keras Karena densitas hanya 1/3-nya, dapat digunakan untuk saluran transmisi listrik."
+      },
+      {
+       "p": "Kabel listrik yang inti kawatnya dilapisi bahan isolator. Pada aplikasi Kabel Berisolasi peralatan listrik, juga disebut kawat magnet, termasuk kawat enamel dan kawat PVF."
+      },
+      {
+       "p": "Istilah"
+      },
+      {
+       "p": "Anil: Proses memanaskan kawat tembaga, yang telah mengeras akibat proses penarikan kawat, hingga suhu tertentu sehingga kawat menjadi lunak dan memiliki kualitas stabil."
+      },
+      {
+       "p": "Keterangan Tambahan 6-2"
+      },
+      {
+       "p": "Resistivitas konduktor logam ⇒ Resistivitas konduktor logam pada 20°C: kawat tembaga lunak: 1/58, kawat tembaga keras: 1/55, kawat aluminium: 1/35 [Ωmm2/m]"
+      },
+      {
+       "p": "(2) Bahan Resistif"
+      },
+      {
+       "p": "Diantara bahan konduktif, bahan yang digunakan untuk mengatur arus listrik disebut bahan resistif."
+      },
+      {
+       "p": "Tabel 6-10: Bahan-bahan Resistif Utama"
+      },
+      {
+       "p": "Bahan Pemanas Contoh tipikalnya adalah kawat nikel-krom, yang digunakan pada Listrik kompor listrik"
+      },
+      {
+       "p": "Bahan Resistansi Misalnya bahan yang nilai resistansinya hanya berubah sedikit Khusus meskipun terjadi pemanasan akibat arus listrik"
+      },
+      {
+       "p": "Kode warna resistor berkaki ditunjukkan pada Tabel 6-14 di halaman 71."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Bahan Penghantar Listrik",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s11",
+    "no": 11,
+    "title": {
+     "id": "Bahan Magnetik",
+     "jp": "{磁性材料|じせいざいりょう}"
+    },
+    "pages": [
+     76,
+     76
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Bahan yang menghasilkan densitas fluks magnetik yang besar jika diberi medan magnet eksternal yang kecil disebut bahan magnetik. Bahan yang, setelah diberi medan magnet kuat, tetap menyimpan kemagnetan meskipun medan magnet dihilangkan disebut bahan magnet permanen."
+      },
+      {
+       "p": "Tabel 6-11: Bahan-bahan Magnetik Utama"
+      },
+      {
+       "p": "Besi murni memiliki permeabilitas magnetik yang tinggi dan densitas fluks magnetik jenuhnya juga besar, sehingga baja lunak Besi yang mengandung sedikit karbon dapat digunakan untuk inti magnet dan sejenisnya."
+      },
+      {
+       "p": "Pelat baja yang ditipiskan dan ditambahkan beberapa % silikon Pelat Baja untuk mengurangi disipasi daya akibat perubahan fluks magnetik. Elektromagnetik Digunakan dengan cara dilaminasi pada inti besi trafo atau pada mesin rotari."
+      },
+      {
+       "p": "Magnet ferit memiliki magnetisasi remanen kecil, tetapi gaya koersifnya besar, sedangkan magnet Alnico memiliki gaya koersif Bahan Magnet kecil, tetapi magnetisasi remanennya besar. Banyak digunakan Permanen untuk meningkatkan karakteristik listrik, memperkecil ukuran peralatan listrik, serta pada kendaraan listrik."
+      },
+      {
+       "p": "Aluminium bukan bahan magnetik, sehingga tidak dapat memanfaatkan gaya magnet."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bahan yang menghasilkan densitas fluks magnetik yang besar jika diberi medan magnet eksternal yang kecil disebut bahan magnetik. Bahan yang, setelah diberi medan magnet kuat, tetap menyimpan kemagnetan meskipun medan magnet dihilangkan disebut bahan magnet permanen.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s12",
+    "no": 12,
+    "title": {
+     "id": "Bahan Isolasi",
+     "jp": "{絶縁材料|ぜつえんざいりょう}"
+    },
+    "pages": [
+     77,
+     80
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Bahan yang tidak mudah menghantarkan listrik disebut bahan isolasi."
+      },
+      {
+       "p": "(1) Suhu Operasi Maksimum Bahan Isolasi"
+      },
+      {
+       "p": "Saat suhu meningkat akibat panas yang dihasilkan oleh arus listrik (panas Joule), bahan isolasi mengalami degradasi sehingga kinerja isolasinya menurun."
+      },
+      {
+       "p": "Batas kenaikan suhu pada bagian yang berisolasi dinyatakan dengan rumus berikut, dimana 40°C merupakan nilai acuan suhu lingkungan."
+      },
+      {
+       "p": "batas kenaikan suhu ≦ suhu operasi maksimum – 40°C"
+      },
+      {
+       "p": "(2) Kelas Ketahanan Panas"
+      },
+      {
+       "p": "Bahan isolasi listrik diklasifikasikan kedalam kelas ketahanan panas menurut suhu operasi maksimumnya, seperti pada Tabel 6-12."
+      },
+      {
+       "p": "Tabel 6-12: Kelas Ketahanan Panas Bahan Isolasi dan Penggunaan Utamanya"
+      },
+      {
+       "p": "Kelas Huruf Ketahanan Bahan Isolasi Utama Penggunaan Utama Panas Pengenal"
+      },
+      {
+       "p": "90°C Y kapas, kertas Peralatan listrik kecil"
+      },
+      {
+       "p": "kertas impregnasi 105°C A Trafo, peralatan listrik minyak, minyak mineral"
+      },
+      {
+       "p": "120°C E mylar (PET) Lilitan pada mesin rotari besar"
+      },
+      {
+       "p": "130°C B mika Generator tegangan tinggi"
+      },
+      {
+       "p": "155°C F epoksi-polimida Memperkecil ukuran generator"
+      },
+      {
+       "p": "180°C H resin silikon Trafo tegangan tinggi tipe kering"
+      },
+      {
+       "p": "220°C R jenis poliamida Isolasi tahan panas"
+      },
+      {
+       "p": "(3) Jenis-jenis Bahan Isolasi Listrik"
+      },
+      {
+       "p": "Tabel 6-13: Jenis-jenis Bahan Isolasi Padat"
+      },
+      {
+       "p": "Jenis Sebutan Utama Fitur, Penggunaan, dsb"
+      },
+      {
+       "p": "Bahan isolasi Bahan isolasi tahan panas, bahan mika, keramik anorganik dielektrik kapasitor"
+      },
+      {
+       "p": "Bahan dengan kelas ketahanan panas E Bahan polietilena tereftalat (PET) Isolasi slot pada mesin rotari termoplastik Juga disebut Mylar"
+      },
+      {
+       "p": "Bahan isolasi murah Bahan termoset resin fenol, resin epoksi Bahan dengan kelas ketahanan panas F Kekuatan mekanis besar"
+      },
+      {
+       "p": "Bahan anorganik Kertas isolasi yang umum digunakan kertas kraft, papan pres berserat Trafo minyak"
+      },
+      {
+       "p": "Keterangan Tambahan 6-3"
+      },
+      {
+       "p": "Angka pertama Kesalahan"
+      },
+      {
+       "p": "Angka ketiga (pengali) Angka kedua"
+      },
+      {
+       "p": "Tabel 6-14: Kode Warna Resistor Berkaki"
+      },
+      {
+       "p": "Angka 0 1 2 3 4 5 6 7 8 9"
+      },
+      {
+       "p": "Kode abu- hitam cokelat merah oranye kuning hijau biru ungu putih Warna abu"
+      },
+      {
+       "p": "Toleransi: emas ±5%, perak ±10% Contoh: jika kode warnanya merah, hitam, merah dan emas, maka merah dan hitam pertama menunjukkan angka 20, merah berikutnya menunjukkan 10², dan emas menunjukkan ±5%. Jadi nilainya 20 × 10² ± 5% (= 2 kΩ)."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bahan yang tidak mudah menghantarkan listrik disebut bahan isolasi.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

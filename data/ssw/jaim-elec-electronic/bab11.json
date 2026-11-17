@@ -1,0 +1,656 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab11",
+  "no": 11,
+  "title": {
+   "id": "Aplikasi Listrik dan Elektronik",
+   "jp": "電気、電子応用"
+  },
+  "intro": {
+   "id": "Bab 11 buku resmi JAIM."
+  },
+  "pages": [
+   159,
+   177
+  ],
+  "subs": [
+   {
+    "id": "b11s1",
+    "no": 1,
+    "title": {
+     "id": "Operasi Logika",
+     "jp": "{論理演算|ろんりえんざん}"
+    },
+    "pages": [
+     159,
+     160
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Rangkaian yang hanya merespon sinyal yang memiliki nilai tidak kontinu disebut rangkaian digital atau rangkaian logika. Logika yang menyatakan sinyal masukan hanya menggunakan 2 nilai, \"0 (OFF)\" dan \"1 (ON)\", disebut \"logika biner\"."
+      },
+      {
+       "p": "Operasi logika antara lain mencakup “perkalian logika atau AND (・)”, “penjumlahan logika atau OR (+)”, dan “negasi atau NOT (‾)”. Tabel 11-1 menunjukkan aturan umum untuk operasi logika. Dengan menggunakan aturan-aturan tersebut, ekspresi logika yang panjang dapat dinyatakan dalam ekspresi yang lebih sederhana."
+      },
+      {
+       "p": "Tabel 11-1: Aturan-aturan Operasi Logika"
+      },
+      {
+       "p": "Aturan Rincian"
+      },
+      {
+       "p": "Hasil operasi logika dari dua nilai logika tidak berubah meskipun urutannya ditukar. Hukum Komutatif 𝑥+𝑦 =𝑦+𝑥 𝑥∙𝑦 =𝑦∙𝑥"
+      },
+      {
+       "p": "Posisi tanda kurung pada variabel logika yang dihubungkan dengan operator logika yang sama dapat diubah dengan bebas. Hukum Asosiatif 𝑥 + (𝑦 + 𝑧) = (𝑥 + 𝑦) + 𝑧 𝑥 ∙ (𝑦 ∙ 𝑧) = (𝑥 ∙ 𝑦) ∙ 𝑧"
+      },
+      {
+       "p": "𝑥 ∙ (𝑦 + 𝑧) = 𝑥 ∙ 𝑦 + 𝑥 ∙ 𝑧 Hukum Distributif 𝑥 + (𝑦 ∙ 𝑧) = (𝑥 + 𝑦) ∙ (𝑥 + 𝑧)"
+      },
+      {
+       "p": "𝑥+1=1 𝑥∙1=𝑥 Hukum Identitas 𝑥+0=𝑥 𝑥∙0=0"
+      },
+      {
+       "p": "𝑥+𝑥 = 𝑥 Hukum Idempoten 𝑥∙𝑥 =𝑥"
+      },
+      {
+       "p": "Hukum 𝑥 + 𝑥̅ = 1 Komplemen 𝑥 ∙ 𝑥̅ = 0"
+      },
+      {
+       "p": "𝑥+𝑥∙𝑦 =𝑥 Hukum Absorpsi 𝑥 ∙ (𝑥 + 𝑦) = 𝑥"
+      },
+      {
+       "p": "Aturan yang digunakan untuk mengubah perkalian logika menjadi penjumlahan logika, atau penjumlahan logika menjadi perkalian Hukum De Morgan logika. ̅̅̅̅̅̅̅ 𝑥 + 𝑦 = 𝑥̅ ∙ 𝑦̅ 𝑥 ∙ 𝑦 = 𝑥̅ + 𝑦̅ ̅̅̅̅̅̅"
+      },
+      {
+       "p": "Hukum Involusi Penegasian 2 kali akan mengembalikan ke semula. (negasi ganda) 𝑥̿ = 𝑥"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Rangkaian yang hanya merespon sinyal yang memiliki nilai tidak kontinu disebut rangkaian digital atau rangkaian logika. Logika yang menyatakan sinyal masukan hanya menggunakan 2 nilai, \"0 (OFF)\" dan \"1 (ON)\", disebut \"logika biner\".",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s2",
+    "no": 2,
+    "title": {
+     "id": "Simbol Diagram Sekuensial",
+     "jp": "シーケンス{図記号|ずきごう}"
+    },
+    "pages": [
+     161,
+     161
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Simbol diagram urutan ditetapkan secara internasional (IEC 60617), dan di Jepang diatur dalam standar yang identik, yaitu JIS C 0617: Simbol-simbol Listrik. Simbol- simbolnya yang umum ditunjukkan pada Tabel 11-2."
+      },
+      {
+       "p": "Tabel 11-2: Simbol Diagram Sekuensial"
+      },
+      {
+       "p": "Simbol Nama Penjelasan (JIS C0617)"
+      },
+      {
+       "p": "relai Kontak a: (normal terbuka: m) (simbol: R) Kontak yang biasanya terbuka, dan saat sakelar dioperasikan, rangkaian menjadi tertutup dan arus mengalir. (*) Simbol untuk kontak relai Kontak b (normal tertutup: b) dinyatakan dengan menambahkan (m) Kontak yang biasanya tertutup, dan saat atau (b) ke simbol sakelar dioperasikan, rangkaian menjadi relai, seperti \"R-m\". terbuka sehingga arus terputus."
+      },
+      {
+       "p": "Kontak a Beroperasi saat arus mengalir melalui Kontaktor magnetik kumparan (kontaktor) (simbol: MC) Kontak b Beroperasi saat arus mengalir melalui kumparan"
+      },
+      {
+       "p": "Mendeteksi kenaikan suhu akibat arus Relai termal berlebih dan mengaktifkan kontaktor (simbol: THR) magnetik untuk memutus rangkaian"
+      },
+      {
+       "p": "Koil kontaktor Koil elektromagnetik untuk kontrol Koil relai"
+      },
+      {
+       "p": "Kontak a Beroperasi dalam waktu terbatas, pulih Pengatur waktu secara instan tunda-ON Kontak b Beroperasi dalam waktu terbatas, pulih secara instan"
+      },
+      {
+       "p": "Simbol Nama Penjelasan (JIS C0617)"
+      },
+      {
+       "p": "Kontak a Beroperasi dengan mendeteksi posisi Sakelar batas Kontak b Beroperasi dengan mendeteksi posisi"
+      },
+      {
+       "p": "Kontak a Reset otomatis setelah kontak dioperasikan Saklar tombol tekan dengan menekan tangan"
+      },
+      {
+       "p": "(simbol: BS) Kontak b Reset otomatis setelah kontak dioperasikan dengan menekan tangan"
+      },
+      {
+       "p": "lampu lampu (simbol: L) Lampu indikator"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Simbol diagram urutan ditetapkan secara internasional (IEC 60617), dan di Jepang diatur dalam standar yang identik, yaitu JIS C 0617: Simbol-simbol Listrik. Simbol- simbolnya yang umum ditunjukkan pada Tabel 11-2.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s3",
+    "no": 3,
+    "title": {
+     "id": "Komponen",
+     "jp": "{部品|ぶひん}"
+    },
+    "pages": [
+     162,
+     165
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Saklar tombol tekan"
+      },
+      {
+       "p": "Ada 2 tipe sakelar tombol tekan: tipe reset otomatis secara instan, dan tipe non- reset yang mempertahankan status. Secara umum, jenis reset otomatis instan yang sering digunakan."
+      },
+      {
+       "p": "Gambar 11-1: Contoh Sakelar Tombol Tekan"
+      },
+      {
+       "p": "(2) Sakelar batas"
+      },
+      {
+       "p": "Saklar batas adalah sensor untuk mendeteksi posisi suatu objek dan mengirimkan sinyal ON/OFF untuk menunjukkan apakah objek tersebut \"ada\" atau \"tidak ada\", atau apakah itu \"batas atas\" atau \"batas bawah\". Contoh sakelar batas antara lain adalah sakelar fotolistrik, sakelar kedekatan, sakelar mikro, sakelar pelampung dan sakelar tekanan."
+      },
+      {
+       "p": "Gambar 11-2: Contoh Sakelar Batas"
+      },
+      {
+       "p": "(3) Relai"
+      },
+      {
+       "p": "Relai adalah komponen untuk menerima sinyal listrik dari luar dan melakukan ON/OFF terhadap sirkuit listrik. Juga dikenal sebagai relai elektromagnetik, komponen ini mengalirkan arus ke kumparan untuk membentuk elektromagnet yang akan menarik pelat besi bergerak, dan mengoperasikan kontak yang terhubung untuk membuka/menutup sirkuit."
+      },
+      {
+       "p": "(4) Kontaktor Magnetik (Kontaktor)"
+      },
+      {
+       "p": "Prinsip kerjanya sama seperti relai, tetapi kapasitas kontaknya lebih besar, dan umumnya digunakan pada peralatan listrik industri seperti motor listrik dan sarana penerangan. Karena dilengkapi fungsi pemadaman busur listrik yang terjadi saat sirkuit diputus, komponen ini sangat cocok untuk pengoperasian beban tegangan tinggi dan arus besar."
+      },
+      {
+       "p": "(5) Sakelar Elektromagnetik"
+      },
+      {
+       "p": "Perangkat yang menggabungkan kontaktor dengan relai termal disebut sakelar elektromagnetik atau sakelar magnet. Jika arus yang melebihi nilai setelan relai termal mengalir selama waktu tertentu, suhu akan naik, dan bimetal akan bekerja untuk menandai kondisi beban berlebih."
+      },
+      {
+       "p": "Komponen ini digunakan pada motor listrik untuk mencegah motor terbakar akibat beban berlebih. Reset sinyal dilakukan secara manual setelah memastikan kondisi aman."
+      },
+      {
+       "p": "Gambar 11-3: Contoh Sakelar Elektromagnetik"
+      },
+      {
+       "p": "Kata Kunci"
+      },
+      {
+       "p": "Relai termal: Juga disebut relai arus lebih termal. Saat arus berlebih yang abnormal mengalir melalui motor listrik, perangkat ini akan mendeteksi panas yang ditimbulkan oleh arus tersebut dan memutus sirkuit untuk mencegah peralatan listrik terbakar atau rusak. Relai termal tidak memiliki fungsi menghentikan arus, sehingga biasanya digunakan bersamaan dengan kontaktor magnetik. Bimetal: Bahan berbentuk lempengan yang dibuat dengan menempelkan 2 jenis logam dengan koefisien ekspansi termal (koefisien pemuaian akibat kenaikan suhu) yang berbeda. Saat suhu sekitar berubah, bahan tersebut akan mengalami deformasi dan melengkung karena kedua jenis logam memiliki koefisien pemuaian termal yang berbeda. Sifat tersebut digunakan untuk fungsi pensakelaran."
+      },
+      {
+       "p": "(6) Pengatur Waktu"
+      },
+      {
+       "p": "Perangkat kontrol yang mengeluarkan sinyal keluaran dalam interval waktu yang telah disetel setelah menerima sinyal masukan."
+      },
+      {
+       "p": "Sinyal keluaran akan menjadi ON dengan penundaan selama interval waktu yang telah disetel setelah sinyal masukan menjadi ON, dan akan menjadi OFF bersamaan dengan saat sinyal masukan menjadi OFF."
+      },
+      {
+       "p": "Operasi tunda-ON Masukan"
+      },
+      {
+       "p": "Keluaran t: waktu penyetelan"
+      },
+      {
+       "p": "Gambar 11-4: Bagan Waktu Operasi Tunda-ON"
+      },
+      {
+       "p": "Sinyal keluaran akan menjadi ON bersamaan dengan saat sinyal masukan menjadi ON, dan akan menjadi OFF dengan penundaan selama interval waktu yang telah disetel setelah sinyal masukan menjadi OFF."
+      },
+      {
+       "p": "Operasi tunda-OFF Masukan"
+      },
+      {
+       "p": "Keluaran t: waktu penyetelan"
+      },
+      {
+       "p": "Gambar 11-5: Bagan Waktu Operasi Tunda-OFF"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Saklar tombol tekan",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s4",
+    "no": 4,
+    "title": {
+     "id": "Rangkaian Dasar",
+     "jp": "{基本回路|きほんかいろ}"
+    },
+    "pages": [
+     166,
+     167
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Kontrol sekuensial yang kompleks juga dapat diwujudkan dengan mengkombinasikan rangkaian-rangkaian dasar. Di sini akan dijelaskan rangkaian AND (logika AND), rangkaian OR (logika OR), dan rangkaian NOT (logika NOT) yang paling dasar."
+      },
+      {
+       "p": "(1) Rangkaian AND"
+      },
+      {
+       "p": "Rangkaian dimana keluaran hanya akan menjadi ON jika semua masukan adalah ON (Tabel 11-3)."
+      },
+      {
+       "p": "Tabel 11-3: Rangkaian AND Diagram Rangkaian Sekuensial Bagan Waktu"
+      },
+      {
+       "p": "Tabel Operasi Ekspresi Logika"
+      },
+      {
+       "p": "BS1・BS2=L Rangkaian seri adalah perkalian logika"
+      },
+      {
+       "p": "(2) Rangkaian OR"
+      },
+      {
+       "p": "Rangkaian dimana keluaran akan menjadi ON jika satu atau lebih masukan adalah ON (Tabel 11-4)."
+      },
+      {
+       "p": "Tabel 11-4: Rangkaian OR Diagram Rangkaian Sekuensial Bagan Waktu"
+      },
+      {
+       "p": "Tabel Operasi Ekspresi Logika"
+      },
+      {
+       "p": "BS1＋BS2＝L Rangkaian paralel adalah penjumlahan logika"
+      },
+      {
+       "p": "(3) Rangkaian NOT"
+      },
+      {
+       "p": "Rangkaian dimana keluaran akan menjadi OFF saat masukan ON, dan menjadi ON saat masukan OFF."
+      },
+      {
+       "p": "Tabel 11-5: Rangkaian NOT Diagram Rangkaian Sekuensial Bagan Waktu"
+      },
+      {
+       "p": "Tabel Operasi Ekspresi Logika"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kontrol sekuensial yang kompleks juga dapat diwujudkan dengan mengkombinasikan rangkaian-rangkaian dasar. Di sini akan dijelaskan rangkaian AND (logika AND), rangkaian OR (logika OR), dan rangkaian NOT (logika NOT) yang paling dasar.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s5",
+    "no": 5,
+    "title": {
+     "id": "Rangkaian Aplikasi",
+     "jp": "{応用回路|おうようかいろ}"
+    },
+    "pages": [
+     168,
+     169
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Rangkaian aplikasi disusun dari kombinasi rangkaian dasar. Sebagai salah satu rangkaian penting yang representatif dan sering digunakan, akan dijelaskan mengenai rangkaian pengunci (self-hold)."
+      },
+      {
+       "p": "(1) Rangkaian pengunci diri"
+      },
+      {
+       "p": "Contohnya ditunjukkan pada diagram rangkaian sekuensial di Tabel 11-6. Bagan waktu juga ditampilkan. Saat sakelar BS1 di-ON-kan, relai menjadi ON, sehingga kontak relai R-m1 dan R-m2 menjadi ON, dan lampu L menyala. Rangkaian dimana kontak relai dipasang paralel dengan sakelar BS1, sehingga meskipun sakelar BS1 di-OFF-kan, relai R tetap aktif melalui kontaknya sendiri R-m1, dan operasi rangkaian berlanjut."
+      },
+      {
+       "p": "Sinyal start (perintah memulai operasi) yang dipertahankan akan dikembalikan ke kondisi awal saat listrik padam dan pulih kembali, sehingga keselamatan lebih terjamin karena mencegah peralatan bergerak secara tiba-tiba saat kembali hidup."
+      },
+      {
+       "p": "Tabel 11-6: Rangkaian pengunci diri Diagram Rangkaian Sekuensial Bagan Waktu"
+      },
+      {
+       "p": "relai"
+      },
+      {
+       "p": "kontak relai"
+      },
+      {
+       "p": "kontak relai"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Rangkaian aplikasi disusun dari kombinasi rangkaian dasar. Sebagai salah satu rangkaian penting yang representatif dan sering digunakan, akan dijelaskan mengenai rangkaian pengunci (self-hold).",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s6",
+    "no": 6,
+    "title": {
+     "id": "Motor Listrik",
+     "jp": "{電動機|でんどうき}（モータ）"
+    },
+    "pages": [
+     170,
+     171
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Fungsi utamanya adalah mengubah energi listrik menjadi energi mekanik rotasi."
+      },
+      {
+       "p": "Ada motor listrik DC dan motor listrik AC, dan motor listrik AC antara lain mencakup motor induksi dan motor sinkron."
+      },
+      {
+       "p": "(1) Jenis Motor Induksi 3-Fasa"
+      },
+      {
+       "p": "Berdasarkan jenis rotornya, ada tipe sangkar dan tipe belitan."
+      },
+      {
+       "p": "(2) Kecepatan Putar dan Daya Keluaran"
+      },
+      {
+       "p": "Kecepatan putar N [min-1] pada motor induksi 3-fasa, yang memiliki makna sama dengan kecepatan rotor, berbanding lurus dengan frekuensi catu daya f [Hz] dan berbanding terbalik dengan jumlah pasang kutub p pada motor induksi. Daya keluaran P [W] berbanding lurus dengan torsi T [N･m] dikalikan kecepatan putaran N. Dalam bentuk persamaan, kecepatan putar dan daya keluaran dapat dinyatakan sebagai berikut:"
+      },
+      {
+       "p": "120𝑓 𝑁= [min−1 ] 𝑝 𝑁 𝑃 = 2π ∙ 𝑇 [W] 60"
+      },
+      {
+       "p": "(3) Metode Start"
+      },
+      {
+       "p": "Metode start motor induksi tipe sangkar 3-fasa meliputi: start tegangan penuh, start bintang-delta, start kompensator dan start reaktor Pada start bintang-delta, arus start dapat dikurangi menjadi 1/3."
+      },
+      {
+       "p": "(4) Motor Servo"
+      },
+      {
+       "p": "Motor yang dapat dikontrol untuk beroperasi pada posisi dan kecepatan yang tepat sesuai dengan instruksi. Beberapa fiturnya ditunjukkan pada Tabel 11-7."
+      },
+      {
+       "p": "Tabel 11-7: Fitur Motor Servo"
+      },
+      {
+       "p": "Jenis Kontrol Fungsi"
+      },
+      {
+       "p": "Sinyal umpan balik dari enkoder memungkinkan motor berhenti secara Kontrol akurat pada sudut atau posisi yang ditentukan. Digunakan pada penentuan persendian lengan robot industri dan untuk menggerakkan meja mesin posisi perkakas."
+      },
+      {
+       "p": "Motor dapat dikontrol untuk berputar pada kecepatan tertentu. Karena Kontrol akselerasi dan deselerasi dapat dilakukan secara halus, dapat kecepatan digunakan untuk mengatur kecepatan alat pengangkut dan konveyor, atau kecepatan umpan mesin perkakas."
+      },
+      {
+       "p": "Motor dapat digerakkan dengan torsi (gaya putar) tertentu sesuai dengan fluktuasi beban. Digunakan misalnya pada alat penggulung dan Kontrol torsi mesin pres untuk menekan komponen dengan gaya konstan atau aplikasi serupa lainnya."
+      },
+      {
+       "p": "Motor servo dilengkapi enkoder, dan berdasarkan sinyal enkoder ini, Kontrol umpan posisi dan kecepatan saat ini terus dipantau, sambil dilakukan kontrol balik dengan mengkoreksi selisih terhadap nilai perintah. Hal ini memungkinkan kontrol yang sangat presisi."
+      },
+      {
+       "p": "Kata Kunci"
+      },
+      {
+       "p": "Enkoder: Sensor yang mengkodekan sudut putar atau perpindahan linier. Enkoder digunakan pada robot industri yang ada di pabrik, seperti robot perakitan, robot pengelasan, kendaraan pengangkut tanpa awak, dan pusat pemesinan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Fungsi utamanya adalah mengubah energi listrik menjadi energi mekanik rotasi.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s7",
+    "no": 7,
+    "title": {
+     "id": "Trafo",
+     "jp": "{変圧器|へんあつき}"
+    },
+    "pages": [
+     172,
+     172
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Trafo digunakan untuk mengubah tegangan masukan menjadi tegangan operasional. Trafo terdiri dari inti besi dan dua atau lebih kumparan (Gambar 11-6), dan tegangan ditentukan oleh rasio jumlah lilitan kedua kumparan tersebut. sisi inti besi fluks sisi tegangan magnetik tegangan tinggi rendah kumparan (koil)"
+      },
+      {
+       "p": "tegangan"
+      },
+      {
+       "p": "tegangan sekunder primer"
+      },
+      {
+       "p": "Gambar 11-6: Struktur Trafo"
+      },
+      {
+       "p": "(1) Kerugian Daya Trafo"
+      },
+      {
+       "p": "Secara garis besar meliputi kerugian besi, kerugian tembaga dan kerugian beban tak terkendali."
+      },
+      {
+       "ul": [
+        "Kerugian besi, juga disebut kerugian daya tanpa beban, terjadi saat sisi sekunder trafo dibuka dan tegangan diberikan ke sisi primer.",
+        "Kerugian tembaga adalah kerugian Joule (kerugian akibat panas Joule) akibat resistansi kumparan, dan berbanding lurus dengan kuadrat arus, atau dengan kata lain, kuadrat beban. Disebut juga kerugian beban.",
+        "Kerugian beban tak terkendali adalah kerugian daya yang sulit dihitung dan besarnya sekitar 5-30% dari kerugian tembaga."
+       ]
+      },
+      {
+       "p": "(2) Jenis Trafo"
+      },
+      {
+       "p": "Berdasarkan bahan isolasi yang digunakan, ada trafo minyak, trafo cetakan dan trafo berisolasi gas."
+      },
+      {
+       "p": "Trafo berisolasi gas menggunakan gas SF6 (sulfur heksafluorida) sebagai bahan isolasi. Gas SF6 adalah gas isolasi tak berwarna dan berbau yang memiliki sifat isolasi sangat baik, antara lain kemampuan pendinginan, stabilitas termal, tak mudah terbakar, dan tidak meledak. Namun, pelepasannya ke atmosfer berdampak pada lingkungan karena nilai potensial pemanasan global yang sangat tinggi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Trafo digunakan untuk mengubah tegangan masukan menjadi tegangan operasional. Trafo terdiri dari inti besi dan dua atau lebih kumparan (Gambar 11-6), dan tegangan ditentukan oleh rasio jumlah lilitan kedua kumparan tersebut. sisi inti besi fluks sisi tegangan magnetik tegangan tinggi rendah kumparan (koil)",
+      "points": [
+       "Kerugian besi, juga disebut kerugian daya tanpa beban, terjadi saat sisi sekunder trafo…",
+       "Kerugian tembaga adalah kerugian Joule (kerugian akibat panas Joule) akibat resistansi …",
+       "Kerugian beban tak terkendali adalah kerugian daya yang sulit dihitung dan besarnya sek…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s8",
+    "no": 8,
+    "title": {
+     "id": "Pemutus Sirkuit",
+     "jp": "{遮断器|しゃだんき}"
+    },
+    "pages": [
+     173,
+     174
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Fungsi Pemutus Sirkuit"
+      },
+      {
+       "p": "Pemutus sirkuit adalah perangkat yang digunakan di lokasi dengan peralatan yang menyalurkan atau menerima energi listrik. Secara konkretnya, di lokasi seperti gardu induk, pabrik, kantor dan panel distribusi listrik rumah. Penggunaannya luas, untuk berbagai macam aplikasi. Fungsi utamanya adalah untuk memutus arus beban yang mengalir pada kondisi normal serta arus hubung singkat yang sangat besar saat terjadi insiden hubung singkat."
+      },
+      {
+       "p": "(2) Fungsi \"Pemadaman Busur Listrik\""
+      },
+      {
+       "p": "Saat mencoba memutus arus besar seperti arus hubung singkat, akan muncul percikan (busur listrik) diantara elektroda. Pemutus sirkuit memiliki fungsi penting \"memadamkan busur listrik\", yaitu untuk menghilangkan busur listrik yang berbahaya ini."
+      },
+      {
+       "p": "(3) Jenis Pemutus Sirkuit"
+      },
+      {
+       "p": "Ada beberapa jenis pemutus sirkuit, seperti pemutus sirkuit vakum dan pemutus sirkuit gas, yang dibedakan berdasarkan zat (media) yang digunakan untuk memadamkan busur listrik. Pemutus sirkuit digunakan secara luas pada instalasi tegangan tinggi."
+      },
+      {
+       "p": "\"Pemutus sirkuit minyak\", yang menggunakan minyak isolasi, kini tidak lagi digunakan karena risiko kebakaran."
+      },
+      {
+       "p": "(4) Pemutus Sirkuit Rumah Tangga (Breaker)"
+      },
+      {
+       "p": "\"Pemutus sirkuit instalasi\" (MCB) pada panel distribusi rumah juga merupakan salah satu jenis pemutus sirkuit. Perangkat ini melindungi instalasi listrik rumah tangga dari arus berlebih akibat penggunaan listrik yang berlebihan (beban lebih) atau arus hubung singkat, dan kinerjanya diatur dalam standar JIS."
+      },
+      {
+       "p": "(5) Perbedaan dengan Perangkat Serupa"
+      },
+      {
+       "p": "Ada perangkat mirip pemutus sirkuit, yaitu “sakelar” dan “pemutus arus”, namun sebagaimana ditunjukkan pada Tabel 11-8, perangkat tersebut berbeda dalam jenis arus yang dapat diputus."
+      },
+      {
+       "p": "Tabel 11-8: Perbedaan Pemutus Sirkuit, Sakelar, dan Pemutus Arus"
+      },
+      {
+       "p": "Pemutus Sirkuit Dapat memutus baik arus beban maupun arus hubung singkat."
+      },
+      {
+       "p": "Dapat memutus arus beban tetapi tidak dapat memutus arus hubung Sakelar singkat."
+      },
+      {
+       "p": "Baik arus beban maupun arus hubung singkat tidak dapat diputus. Pemutus arus Digunakan untuk memutus rangkaian listrik dalam kondisi tidak ada aliran listrik, misalnya untuk pemeriksaan keselamatan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Fungsi Pemutus Sirkuit",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s9",
+    "no": 9,
+    "title": {
+     "id": "Sel Surya",
+     "jp": "{太陽電池|たいようでんち}"
+    },
+    "pages": [
+     175,
+     176
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Sel surya digunakan sebagai metode pembangkit listrik untuk mengubah energi cahaya matahari menjadi listrik."
+      },
+      {
+       "p": "Sel surya adalah elemen semikonduktor dimana, jika terkena cahaya, elektron akan bergerak dan menghasilkan arus listrik. Arus yang dihasilkan adalah arus DC, sehingga untuk digunakan di rumah dan gedung, harus diubah menjadi arus AC menggunakan pengkondisi daya."
+      },
+      {
+       "p": "Ramah lingkungan, dapat mengurangi biaya listrik, dan bermanfaat saat Manfaat terjadi bencana."
+      },
+      {
+       "p": "Antara lain ada biaya awal dan biaya perawatan, tergantung pada kondisi Kelemahan cuaca, serta tidak dapat menghasilkan listrik pada malam hari."
+      },
+      {
+       "p": "Jika dipasang bersama baterai penyimpanan, kelebihan listrik yang dihasilkan pada siang hari dapat disimpan didalam baterai dan digunakan pada malam hari. Dapat juga digunakan saat terjadi pemadaman listrik."
+      },
+      {
+       "p": "Pengkondisi daya: Perangkat ini mengubah daya DC yang diperoleh dari pembangkit listrik tenaga surya menjadi daya AC agar dapat digunakan di rumah tangga dan kantor. Memiliki fungsi untuk menyesuaikan arus dan tegangan agar selalu dapat mengambil daya maksimum dari fluktuasi sinar matahari, serta fungsi menghentikan sistem secara otomatis jika terdeteksi gangguan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sel surya digunakan sebagai metode pembangkit listrik untuk mengubah energi cahaya matahari menjadi listrik.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b11s10",
+    "no": 10,
+    "title": {
+     "id": "Sirkuit Hidrolik",
+     "jp": "{油圧回路|ゆあつかいろ}"
+    },
+    "pages": [
+     177,
+     177
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Teknologi hidrolik adalah teknologi yang menggunakan tekanan pada oli untuk menggerakkan mesin.",
+        "Sirkuit hidrolik adalah representasi rancangan dan konfigurasi yang digunakan untuk mewujudkan operasi dengan teknologi hidrolik.",
+        "Strukturnya secara garis besar dibagi menjadi 3 kategori: \"pompa hidrolik\", \"aktuator (silinder dan motor)\", dan \"katup kontrol\".",
+        "Pompa hidrolik memberikan tekanan pada oli. Aktuator mengubah tekanan menjadi gerakan.",
+        "Katup kontrol mengatur tekanan, aliran dan arah oli. Contoh paling umum adalah \"katup pengatur tekanan\", \"katup pengatur aliran\" dan \"katup pengatur arah\". (Tabel 11-9)"
+       ]
+      },
+      {
+       "p": "Tabel 11-9: Jenis dan Fungsi Katup Kontrol"
+      },
+      {
+       "p": "Jenis Katup Kontrol Fungsi"
+      },
+      {
+       "p": "Katup pengatur tekanan Mengatur tekanan oli untuk mengendalikan tenaga aktuator"
+      },
+      {
+       "p": "Mengatur laju aliran oli untuk mengendalikan kecepatan gerak Katup pengatur aliran aktuator"
+      },
+      {
+       "p": "Katup pengatur arah Mengatur aliran oli untuk mengendalikan arah gerak aktuator"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tabel 11-9: Jenis dan Fungsi Katup Kontrol",
+      "points": [
+       "Teknologi hidrolik adalah teknologi yang menggunakan tekanan pada oli untuk menggerakka…",
+       "Sirkuit hidrolik adalah representasi rancangan dan konfigurasi yang digunakan untuk mew…",
+       "Strukturnya secara garis besar dibagi menjadi 3 kategori: \"pompa hidrolik\", \"aktuator (…",
+       "Pompa hidrolik memberikan tekanan pada oli. Aktuator mengubah tekanan menjadi gerakan.",
+       "Katup kontrol mengatur tekanan, aliran dan arah oli. Contoh paling umum adalah \"katup p…"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

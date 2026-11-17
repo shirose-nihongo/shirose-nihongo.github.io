@@ -1,0 +1,836 @@
+{
+ "schema": 1,
+ "bidang": "jaim-machine-metal",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 機械金属加工 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab7",
+  "no": 7,
+  "title": {
+   "id": "Pembuatan Gambar Teknik",
+   "jp": "製図"
+  },
+  "intro": {
+   "id": "Bab 7 buku resmi JAIM."
+  },
+  "pages": [
+   86,
+   106
+  ],
+  "subs": [
+   {
+    "id": "b7s1",
+    "no": 1,
+    "title": {
+     "id": "Kertas Gambar Teknik",
+     "jp": "{製図用紙|せいずようし}"
+    },
+    "pages": [
+     86,
+     86
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Ukuran Kertas"
+      },
+      {
+       "p": "Ukuran gambar teknik diprioritaskan menggunakan ukuran seri A (A0, A1, A2, A3 dan A4). Ukuran seri B (seperti B4 atau B5) dan ukuran kertas surat tidak digunakan dalam gambar teknik."
+      },
+      {
+       "p": "Selain itu, sedapat mungkin gunakan kertas terkecil yang dapat menggambarkan objek dengan jelas tanpa menggunakan kertas ukuran besar yang tak diperlukan."
+      },
+      {
+       "p": "(2) Orientasi Kertas"
+      },
+      {
+       "p": "Gambar teknik menggunakan sisi panjang untuk arah horizontal. Hanya kertas A4 yang sisi pendeknya dapat digunakan untuk arah horizontal."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Ukuran Kertas",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s2",
+    "no": 2,
+    "title": {
+     "id": "Skala",
+     "jp": "{尺度|しゃくど}"
+    },
+    "pages": [
+     86,
+     86
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Skala"
+      },
+      {
+       "p": "Rasio antara ukuran asli suatu objek dan ukurannya pada gambar disebut skala."
+      },
+      {
+       "p": "Jika ukuran asli dan ukuran dalam gambar adalah sama, disebut skala aktual. Jika ukuran diperbesar, disebut skala perbesaran. Sedangkan jika ukuran diperkecil, disebut skala pengecilan. Untuk skala aktual, dinyatakan sebagai 1 : 1. Pada skala perbesaran, rasio perbesaran dinyatakan dengan x : 1. Pada skala pengecilan, rasio pengecilan dinyatakan dengan 1 : x."
+      },
+      {
+       "p": "(2) Skala Rekomendasi"
+      },
+      {
+       "p": "Untuk skala perbesaran, disarankan salah satu dari 50 : 1, 20 : 1, 10 : 1, 5 : 1, 2 : 1. Untuk skala pengecilan, disarankan salah satu dari 1 : 2, 1 : 5, 1 : 10, 1 : 20, 1 : 50, 1 : 100, 1 : 200, 1 : 500, 1 : 1.000, 1 : 2.000, 1 : 5.000, 1 : 10.000."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Skala",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s3",
+    "no": 3,
+    "title": {
+     "id": "Garis",
+     "jp": "{線|せん}"
+    },
+    "pages": [
+     87,
+     88
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Ketebalan Garis"
+      },
+      {
+       "p": "Ketebalan garis yang digunakan dalam gambar teknik ada 3 jenis. Yaitu: garis tipis, garis tebal dan garis sangat tebal. Ketebalannya masing-masing memiliki perbandingan 1 : 2 : 4."
+      },
+      {
+       "p": "Saat membuat gambar teknik dengan pensil mekanik, umumnya digunakan ketebalan 0,3 mm, 0,5 mm, atau 0,7 mm."
+      },
+      {
+       "p": "(2) Jenis Garis"
+      },
+      {
+       "p": "Jenis-jenis garis utama dalam gambar teknik ditunjukkan pada tabel."
+      },
+      {
+       "p": "Tabel 7-1: Jenis Garis pada Gambar Teknik Garis tebal Untuk menunjukkan bagian objek Garis Kontur solid yang terlihat Garis Untuk penulisan dimensi Dimensi Garis tipis Garis solid Ditarik dari gambar untuk Ekstensi mencantumkan dimensi Dimensi Garis putus- Garis Untuk menunjukkan bagian objek putus tipis Tersembunyi yang tak terlihat ataupun tebal Garis putus- Garis Pusat titik tunggal Untuk menunjukkan pusat bentuk tipis Untuk menunjukkan bagian, seperti komponen, yang berdekatan sebagai referensi Untuk menunjukkan posisi alat dan jig sebagai referensi Garis Garis putus- Untuk menunjukkan posisi gerakan Imajiner titik ganda tipis bagian yang bergerak Untuk menunjukkan bentuk sebelum dan sesudah pemrosesan Untuk menunjukkan pengulangan Untuk menunjukkan bagian di depan penampang yang digambarkan. Garis solid tipis Garis bergelombang Batas bagian yang dipotong, atau Patahan tak beraturan, diambil dari objek atau garis zigzag Garis putus- titik tunggal, dengan garis Garis tebal pada Untuk menunjukkan posisi potongan Potong bagian ujung pada gambar penampang dan bagian perubahan arah Garis-garis Garis solid tipis yang Menunjukkan permukaan potongan Arsiran tersusun pada gambar penampang teratur"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Ketebalan Garis",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s4",
+    "no": 4,
+    "title": {
+     "id": "Huruf",
+     "jp": "{文字|もじ}"
+    },
+    "pages": [
+     89,
+     89
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Ukuran huruf dinyatakan dengan \"tinggi huruf\". Ada 4 jenis tinggi huruf untuk huruf kanji: 3,5 mm, 5 mm, 7 mm dan 10 mm. Untuk huruf kana dan alfabet, serta angka, ada 5 jenis tinggi huruf: 2,5 mm, 3,5 mm, 5 mm, 7 mm dan 10 mm."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ukuran huruf dinyatakan dengan \"tinggi huruf\". Ada 4 jenis tinggi huruf untuk huruf kanji: 3,5 mm, 5 mm, 7 mm dan 10 mm. Untuk huruf kana dan alfabet, serta angka, ada 5 jenis tinggi huruf: 2,5 mm, 3,5 mm, 5 mm, 7 mm dan 10 mm.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s5",
+    "no": 5,
+    "title": {
+     "id": "Jenis Gambar Teknik",
+     "jp": "図面の種類"
+    },
+    "pages": [
+     89,
+     89
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Gambar untuk melakukan pemrosesan komponen disebut gambar komponen. Gambar untuk melakukan perakitan komponen disebut gambar perakitan. Sedangkan gambar untuk melakukan pemasangan mesin dan sejenisnya disebut gambar tata letak."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Gambar untuk melakukan pemrosesan komponen disebut gambar komponen. Gambar untuk melakukan perakitan komponen disebut gambar perakitan. Sedangkan gambar untuk melakukan pemasangan mesin dan sejenisnya disebut gambar tata letak.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s6",
+    "no": 6,
+    "title": {
+     "id": "Proyeksi Sudut Ketiga",
+     "jp": "{第三角法|だいさんかくほう}"
+    },
+    "pages": [
+     90,
+     90
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Definisi Proyeksi Sudut Ketiga"
+      },
+      {
+       "p": "Gambar proyeksi ortogonal adalah gambar yang dihasilkan dengan mengarahkan sinar sejajar ke objek dan memproyeksikannya ke arah tegak lurus terhadap sinar tersebut. Proyeksi sudut ketiga adalah metode proyeksi ortogonal dengan menempatkan objek di kuadran ketiga terhadap bidang datar dan bidang samping dalam ruang tiga dimensi."
+      },
+      {
+       "p": "(2) Susunan Proyeksi Sudut Ketiga"
+      },
+      {
+       "p": "Gambar proyeksi menurut proyeksi sudut ketiga akan tersusun seperti pada gambar. Gambar tampak samping (d) yang dilihat dari kanan terhadap gambar tampak depan (a) ditempatkan di sebelah kanan gambar tampak depan. Gambar tampak atas (b) yang dilihat dari atas terhadap gambar tampak depan ditempatkan diatas gambar tampak depan."
+      },
+      {
+       "p": "Gambar 7-1: Proyeksi Sudut Ketiga"
+      },
+      {
+       "p": "(3) Penunjukan Metode Proyeksi Sudut Ketiga"
+      },
+      {
+       "p": "Gambar dibawah ini adalah simbol metode proyeksi sudut ketiga. Untuk memperjelas bahwa gambar dibuat dengan proyeksi sudut ketiga, simbol proyeksi sudut ketiga dicantumkan di kolom judul atau di dekatnya."
+      },
+      {
+       "p": "Gambar 7-2: Simbol Metode Proyeksi Sudut Ketiga"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Definisi Proyeksi Sudut Ketiga",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s7",
+    "no": 7,
+    "title": {
+     "id": "Gambar Tampak Depan",
+     "jp": "{正面図|しょうめんず}"
+    },
+    "pages": [
+     91,
+     91
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Gambar proyeksi yang paling jelas menunjukkan bentuk dan fungsi objek disebut gambar tampak depan (gambar proyeksi utama). Gambar tampak depan perakitan harus dibuat searah dengan arah penggunaan objek. Kemudian, gambar tampak depan komponen harus dibuat searah dengan arah penempatan objek pada proses pengerjaan utama."
+      },
+      {
+       "p": "Usahakan sedapat mungkin menghindari penggunaan garis tersembunyi. Oleh karena itu, gambar tampak depan harus dipilih sedemikian rupa garis tersembunyi dapat diminimalkan."
+      },
+      {
+       "p": "Jumlah gambar proyeksi yang digunakan untuk melengkapi gambar depan dibuat seminimal mungkin."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Gambar proyeksi yang paling jelas menunjukkan bentuk dan fungsi objek disebut gambar tampak depan (gambar proyeksi utama). Gambar tampak depan perakitan harus dibuat searah dengan arah penggunaan objek. Kemudian, gambar tampak depan komponen harus dibuat searah dengan arah penempatan objek pada proses pengerjaan utama.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s8",
+    "no": 8,
+    "title": {
+     "id": "Gambar Penampang",
+     "jp": "{断面図|だんめんず}"
+    },
+    "pages": [
+     91,
+     92
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Gambar yang dibuat dengan seolah memotong objek dan menghilangkan bagian diantara pengamat dan permukaan potongan disebut gambar penampang. Gambar penampang bermanfaat untuk menunjukkan dengan jelas bagian tersembunyi, seperti bagian diameter internal pada silinder."
+      },
+      {
+       "p": "Permukaan potongan biasanya diarsir."
+      },
+      {
+       "p": "Usahakan sedapat mungkin menghindari penggunaan garis tersembunyi. Oleh karena itu, jika ingin menunjukkan bagian tersembunyi, sedapat mungkin gunakan gambar penampang."
+      },
+      {
+       "p": "Contoh gambar penampang ditunjukkan pada gambar."
+      },
+      {
+       "p": "Gambar 7-3: Gambar Penampang"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Gambar yang dibuat dengan seolah memotong objek dan menghilangkan bagian diantara pengamat dan permukaan potongan disebut gambar penampang. Gambar penampang bermanfaat untuk menunjukkan dengan jelas bagian tersembunyi, seperti bagian diameter internal pada silinder.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s9",
+    "no": 9,
+    "title": {
+     "id": "Dasar-dasar Penunjukan Dimensi",
+     "jp": "寸法指示の基本"
+    },
+    "pages": [
+     93,
+     93
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pada gambar teknik harus ditunjukkan dimensi yang diperlukan dan mencukupi untuk fungsi dan pembuatan. Sedapat mungkin, dimensi ditunjukkan pada gambar tampak depan. Secara prinsip, dimensi yang digambar adalah dimensi akhir. Dimensi tidak boleh dinyatakan secara ganda."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pada gambar teknik harus ditunjukkan dimensi yang diperlukan dan mencukupi untuk fungsi dan pembuatan. Sedapat mungkin, dimensi ditunjukkan pada gambar tampak depan. Secara prinsip, dimensi yang digambar adalah dimensi akhir. Dimensi tidak boleh dinyatakan secara ganda.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s10",
+    "no": 10,
+    "title": {
+     "id": "Pencantuman Garis Dimensi",
+     "jp": "寸法線の記入法"
+    },
+    "pages": [
+     93,
+     93
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Garis untuk menyatakan dimensi disebut garis dimensi. Garis dimensi ditarik sejajar dengan arah pengukuran panjang atau sudut yang ditunjukkan pada gambar. Di kedua ujungnya diberi tanda ujung, misalnya anak panah."
+      },
+      {
+       "p": "Sedapat mungkin, garis dimensi digambar menggunakan garis ekstensi dimensi. Garis ekstensi dimensi ditarik tegak lurus terhadap garis dimensi, dari ujung dimensi yang ditunjukkan."
+      },
+      {
+       "p": "Panjang sisi, panjang tali busur, panjang busur, dan sudut masing-masing ditunjukkan pada gambar."
+      },
+      {
+       "p": "a) Dimensi b) Dimensi c) Dimensi d) Dimensi panjang sisi panjang tali busur panjang busur sudut"
+      },
+      {
+       "p": "Gambar 7-4: Menggambar Garis Dimensi"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Garis untuk menyatakan dimensi disebut garis dimensi. Garis dimensi ditarik sejajar dengan arah pengukuran panjang atau sudut yang ditunjukkan pada gambar. Di kedua ujungnya diberi tanda ujung, misalnya anak panah.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s11",
+    "no": 11,
+    "title": {
+     "id": "Pencantuman Nilai Dimensi",
+     "jp": "寸法数値の記入法"
+    },
+    "pages": [
+     93,
+     93
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Satuan panjang biasanya dinyatakan dalam milimeter. Simbol satuan “mm” tidak perlu dicantumkan. Untuk sudut, dinyatakan dalam satuan derajat (°). Untuk menyatakan angka desimal, dapat digunakan menit busur atau detik busur."
+      },
+      {
+       "p": "Nilai dimensi ditulis sedemikian rupa dapat dibaca dari arah tepi bawah atau tepi kanan gambar. Secara prinsip, ditulis kira-kira di tengah atas garis dimensi. Garis dimensi tidak boleh ditumpangkan pada garis lainnya."
+      },
+      {
+       "p": "Contoh ditunjukkan pada gambar."
+      },
+      {
+       "p": "Gambar 7-5: Pencantuman Nilai Dimensi"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Satuan panjang biasanya dinyatakan dalam milimeter. Simbol satuan “mm” tidak perlu dicantumkan. Untuk sudut, dinyatakan dalam satuan derajat (°). Untuk menyatakan angka desimal, dapat digunakan menit busur atau detik busur.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s12",
+    "no": 12,
+    "title": {
+     "id": "Penulisan Toleransi",
+     "jp": "公差の表記"
+    },
+    "pages": [
+     94,
+     95
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Jika dimensinya salah, mesin tidak akan berfungsi sebagaimana mestinya. Oleh karena itu, perlu ditunjukkan batas rentang dimensi yang diperbolehkan agar mesin berfungsi dengan benar. Rentang yang diperbolehkan disebut toleransi."
+      },
+      {
+       "p": "(1) Metode Numerik"
+      },
+      {
+       "p": "Salah satu metode umum untuk menunjukkan rentang yang diperbolehkan adalah metode seperti pada gambar. Pada gambar, rentang yang diperbolehkan adalah dari 31,76 mm hingga 32,12 mm."
+      },
+      {
+       "p": "Gambar 7-6: Penulisan Toleransi"
+      },
+      {
+       "p": "(2) Metode Simbol"
+      },
+      {
+       "p": "Rentang yang diperbolehkan juga dapat dinyatakan menggunakan kelas toleransi seperti pada gambar. Pada gambar, \"simbol toleransi dasar\" adalah f, dan \"nomor tingkat toleransi ukuran\" adalah 7."
+      },
+      {
+       "p": "Metode ini disebut “metode kode ISO” (umumnya disebut “toleransi pasang”). Metode ini sering digunakan untuk kecocokan pasang, seperti saat lubang dan poros dipasangkan."
+      },
+      {
+       "p": "Gambar 7-7: Mencantumkan Toleransi dengan Kode ISO"
+      },
+      {
+       "p": "\"Simbol toleransi dasar\" menggunakan huruf besar untuk lubang dan huruf kecil untuk poros. Semakin dekat huruf dengan A, semakin longgar, menunjukkan kecocokan pasang yang renggang. Sebaliknya, semakin dekat ke Z, semakin ketat, menunjukkan kecocokan pasang yang tidak mudah bergeser."
+      },
+      {
+       "p": "Kemudian, semakin kecil \"nomor tingkat toleransi ukuran\", semakin kecil toleransinya."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Jika dimensinya salah, mesin tidak akan berfungsi sebagaimana mestinya. Oleh karena itu, perlu ditunjukkan batas rentang dimensi yang diperbolehkan agar mesin berfungsi dengan benar. Rentang yang diperbolehkan disebut toleransi.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s13",
+    "no": 13,
+    "title": {
+     "id": "Simbol Bantu Dimensi",
+     "jp": "{寸法補助記号|すんぽうほじょきごう}"
+    },
+    "pages": [
+     96,
+     96
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pada tabel ditunjukkan simbol-simbol yang dapat ditambahkan sebelum nilai dimensi."
+      },
+      {
+       "p": "Tabel 7-2: Simbol Tambahan Dimensi"
+      },
+      {
+       "p": "φ Diameter lingkaran, diameter busur yang melebihi 180o"
+      },
+      {
+       "p": "Sφ Diameter bola, diameter busur bola yang melebihi 180o"
+      },
+      {
+       "p": " Panjang sisi bujur sangkar"
+      },
+      {
+       "p": "R Radius"
+      },
+      {
+       "p": "CR Radius kontrol"
+      },
+      {
+       "p": "SR Radius bola"
+      },
+      {
+       "p": "Panjang busur"
+      },
+      {
+       "p": "C Chamfer 45o"
+      },
+      {
+       "p": "Chamfer kerucut"
+      },
+      {
+       "p": "t Ketebalan"
+      },
+      {
+       "p": "Lubang dudukan (counterbore), lubang dudukan dalam (deep counterbore)"
+      },
+      {
+       "p": "Lubang tirus (countersink)"
+      },
+      {
+       "p": "Kedalaman lubang"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pada tabel ditunjukkan simbol-simbol yang dapat ditambahkan sebelum nilai dimensi.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s14",
+    "no": 14,
+    "title": {
+     "id": "Pencantuman Dimensi Bagian Detail",
+     "jp": "細部への寸法記入法"
+    },
+    "pages": [
+     97,
+     97
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Menyatakan Radius"
+      },
+      {
+       "p": "Untuk radius, seperti ditunjukkan pada gambar, dituliskan simbol radius dan nilai dimensinya. Jika garis dimensi ditarik hingga ke tengah busur, simbol radius boleh dihilangkan."
+      },
+      {
+       "p": "Gambar 7-8: Menyatakan Radius"
+      },
+      {
+       "p": "Jika radius dapat dihitung dari dimensi lain, seperti alur pasak pada gambar, maka dianggap sebagai dimensi referensi."
+      },
+      {
+       "p": "Gambar 7-9: Menyatakan Radius Alur Pasak dan Sejenisnya"
+      },
+      {
+       "p": "(2) Menyatakan Diameter"
+      },
+      {
+       "p": "Untuk menyatakan diameter, cantumkan simbol diameter beserta nilai dimensinya. Jika dari gambar sudah dapat diketahui bahwa yang ditunjukkan adalah diameter, misalnya ada tanda ujung di kedua ujung garis dimensi, maka simbol diameter dapat dihilangkan."
+      },
+      {
+       "p": "Gambar 7-10: Menyatakan Diameter"
+      },
+      {
+       "p": "(3) Menyatakan Tebal Pelat"
+      },
+      {
+       "p": "Untuk menyatakan tebal pelat, cantumkan simbol yang menunjukkan ketebalan beserta nilai dimensinya di dekat atau didalam gambar."
+      },
+      {
+       "p": "Gambar 7-11: Menyatakan Tebal Pelat"
+      },
+      {
+       "p": "(4) Menyatakan Lubang"
+      },
+      {
+       "p": "Jika perlu membedakan pengerjaan lubang, seperti lubang bor atau lubang hasil pengetukan, maka dimensi nominal alat dan metode pengerjaannya harus ditunjukkan. Untuk lubang tembus, kedalaman tak perlu dicantumkan."
+      },
+      {
+       "p": "Bor 6 Reamer 25"
+      },
+      {
+       "p": "Gambar 7-12: Menyatakan Lubang"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Menyatakan Radius",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s15",
+    "no": 15,
+    "title": {
+     "id": "Dimensi Referensi",
+     "jp": "{参考寸法|さんこうすんぽう}"
+    },
+    "pages": [
+     98,
+     99
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Dimensi untuk tujuan referensi disebut dimensi referensi. Beri tanda kurung pada nilai dimensi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dimensi untuk tujuan referensi disebut dimensi referensi. Beri tanda kurung pada nilai dimensi.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s16",
+    "no": 16,
+    "title": {
+     "id": "Toleransi Geometris",
+     "jp": "{幾何公差|きかこうさ}"
+    },
+    "pages": [
+     100,
+     102
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Toleransi Geometris"
+      },
+      {
+       "p": "Pada bentuk geometri, ada penunjukan yang tidak dapat dinyatakan dengan dimensi maupun sudut. Misalnya, ketepatan bentuk garis lurus dan lingkaran, kesikuan dan kesejajaran, tingkat keselarasan sumbu, dan ketepatan posisi."
+      },
+      {
+       "p": "Untuk menunjukkan ketepatan bentuk seperti itu, digunakan toleransi geometris."
+      },
+      {
+       "p": "(2) Jenis-jenis Toleransi Geometris"
+      },
+      {
+       "p": "Jenis-jenis toleransi geometris ditunjukkan pada tabel."
+      },
+      {
+       "p": "Tabel 7-3: Simbol Toleransi Geometris Kelurusan Kerataan"
+      },
+      {
+       "p": "Kebulatan"
+      },
+      {
+       "p": "Kesilindrisan"
+      },
+      {
+       "p": "Profil garis Profil permukaan Kesejajaran"
+      },
+      {
+       "p": "Ketegaklurusan Kemiringan"
+      },
+      {
+       "p": "Ketepatan posisi"
+      },
+      {
+       "p": "Kekonsentrisan"
+      },
+      {
+       "p": "Kekoaksialan"
+      },
+      {
+       "p": "Kesimetrisan"
+      },
+      {
+       "p": "Simpangan keliling"
+      },
+      {
+       "p": "Simpangan total"
+      },
+      {
+       "p": "(3) Penunjukan Toleransi Geometris"
+      },
+      {
+       "p": "Penunjukan toleransi geometris dicantumkan didalam bingkai persegi panjang. Urutannya adalah simbol karakteristik geometris, nilai toleransi, kemudian datum (elemen yang menjadi acuan). Sebagai contoh, untuk menyatakan kesejajaran sebesar 0,1 mm terhadap datum A, gunakan simbol pada gambar."
+      },
+      {
+       "p": "Gambar 7-13: Penunjukan Toleransi Geometris"
+      },
+      {
+       "p": "Saat menunjukkan toleransi geometris pada suatu permukaan, gunakan panah yang diarahkan ke garis kontur bentuk geometri atau ke perpanjangan garis kontur tersebut."
+      },
+      {
+       "p": "Gambar 7-14: Penunjukan Toleransi Geometris pada Permukaan"
+      },
+      {
+       "p": "Saat menunjukkan toleransi geometris pada garis sumbu, gunakan panah yang diarahkan ke perpanjangan garis dimensi."
+      },
+      {
+       "p": "Gambar 7-15: Penunjukan Toleransi Geometris pada Garis Sumbu"
+      },
+      {
+       "p": "(4) Datum"
+      },
+      {
+       "p": "Datum adalah elemen acuan yang digunakan saat menyatakan toleransi. Penunjukan dilakukan dengan menggunakan simbol seperti pada gambar."
+      },
+      {
+       "p": "Gambar 7-16: Simbol Datum"
+      },
+      {
+       "p": "Sama seperti toleransi geometris, jika permukaan dijadikan datum, penunjukannya dilakukan pada garis kontur atau pada perpanjangan garis kontur. Jika yang dijadikan datum adalah garis sumbu, penunjukan dilakukan pada perpanjangan garis dimensi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Toleransi Geometris",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s17",
+    "no": 17,
+    "title": {
+     "id": "Tekstur Permukaan",
+     "jp": "{表面性状|ひょうめんせいじょう}"
+    },
+    "pages": [
+     103,
+     103
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Tekstur Permukaan"
+      },
+      {
+       "p": "Kehalusan permukaan juga berpengaruh terhadap kinerja mesin. Kehalusan permukaan disebut tekstur permukaan. Tekstur permukaan meliputi \"gelombang\", yaitu ketidakrataan dengan periode besar, dan \"kekasaran\", yaitu ketidakrataan dengan periode kecil."
+      },
+      {
+       "p": "Kekasaran dan tekstur permukaan secara umum disebut kekasaran permukaan."
+      },
+      {
+       "p": "(2) Penunjukan Tekstur Permukaan"
+      },
+      {
+       "p": "Untuk tekstur permukaan, garis lurus ditambahkan ke simbol tekstur permukaan untuk mencantumkan \"parameter tekstur permukaan\" dan \"nilai parameter\", dsb. Sebagai contoh, pada gambar digunakan simbol proses pemesinan untuk penghilangan material, dengan “parameter tekstur permukaan” Ra dan “nilai parameter” yang menunjukkan syarat tekstur permukaan Ra ≤ 3,1 μm."
+      },
+      {
+       "p": "Gambar 7-17: Menyatakan Tekstur Permukaan"
+      },
+      {
+       "p": "Parameter tekstur permukaan merupakan metode untuk mengubah ketidakrataan permukaan menjadi satu nilai. Parameter tekstur permukaan yang sering digunakan antara lain kekasaran rerata aritmetika Ra dan kekasaran ketinggian maksimum Rz."
+      },
+      {
+       "p": "Simbol dapat diberikan langsung pada garis kontur atau menggunakan garis pemandu, seperti pada gambar."
+      },
+      {
+       "p": "Gambar 7-18: Penunjukan Tekstur Permukaan"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Tekstur Permukaan",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b7s18",
+    "no": 18,
+    "title": {
+     "id": "Pengelasan",
+     "jp": "{溶接|ようせつ}"
+    },
+    "pages": [
+     104,
+     106
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Penunjukan Pengelasan"
+      },
+      {
+       "p": "Penunjukan pengelasan dilakukan dengan simbol pengelasan seperti pada gambar. Simbol pengelasan terdiri dari garis referensi dan simbol dasar. Dapat juga ditambahkan simbol tambahan, dimensi, atau petunjuk tambahan."
+      },
+      {
+       "p": "Gambar 7-19: Simbol Pengelasan"
+      },
+      {
+       "p": "(2) Simbol Dasar"
+      },
+      {
+       "p": "Ada berbagai simbol dasar yang sesuai jenis pengelasan. Contoh utamanya ditunjukkan pada tabel."
+      },
+      {
+       "p": "Gambar 7-4: Simbol Dasar"
+      },
+      {
+       "p": "Las bevel I"
+      },
+      {
+       "p": "Las bevel V"
+      },
+      {
+       "p": "Las bevel tunggal"
+      },
+      {
+       "p": "Las filet"
+      },
+      {
+       "p": "(3) Posisi Pengelasan"
+      },
+      {
+       "p": "Seperti pada gambar, posisi pengelasan secara prinsip harus sesuai arah panah. Jika pengelasan dilakukan pada sisi yang berlawanan dengan arah panah, simbol dasar diletakkan diatas garis referensi."
+      },
+      {
+       "p": "Gambar 7-20: Penunjukan Pengelasan ke Arah Berlawanan"
+      },
+      {
+       "p": "(4) Posisi Bevel"
+      },
+      {
+       "p": "Dalam pengelasan, tepi benda kerja terkadang dibentuk dengan berbagai bentuk, kemudian logam las dialirkan ke celah yang terbentuk. Bentuk tepi bagian disebut bevel."
+      },
+      {
+       "p": "Untuk menunjukkan sisi yang diberi bevel, gunakan panah terlipat seperti pada gambar. Jika bagian yang diberi bevel sudah jelas, atau boleh di sisi manapun, maka panah boleh tidak dilipat."
+      },
+      {
+       "p": "Gambar 7-21: Penunjukan Arah Bevel"
+      },
+      {
+       "p": "Bab"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Penunjukan Pengelasan",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

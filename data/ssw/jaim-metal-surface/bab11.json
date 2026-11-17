@@ -1,0 +1,975 @@
+{
+ "schema": 1,
+ "bidang": "jaim-metal-surface",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 金属表面処理 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab11",
+  "no": 11,
+  "title": {
+   "id": "Pelapisan Logam",
+   "jp": "めっき"
+  },
+  "intro": {
+   "id": "Bab 11 buku resmi JAIM."
+  },
+  "pages": [
+   152,
+   173
+  ],
+  "subs": [
+   {
+    "id": "b11s1",
+    "no": 1,
+    "title": {
+     "id": "Metode dan Karakteristik",
+     "jp": "方法、特徴"
+    },
+    "pages": [
+     152,
+     152
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Pelapisan dilakukan dengan sumber listrik DC.",
+        "Saat anoda (+) dan katoda (−) dipasang di dalam larutan pelapisan dan arus dialirkan, lapisan logam (lapisan pelapisan) mengendap pada permukaan katoda.",
+        "Jarak anoda dan katoda disebut jarak antar-elektroda, yang mempengaruhi antara lain variasi ketebalan lapisan.",
+        "Pada permukaan katoda, ion logam menerima elektron dan berubah menjadi logam (reaksi reduksi).",
+        "Larutan pelapisan mengandung ion logam, zat penyangga pH, bahan pengkilap, dan lainnya.",
+        "Tebal lapisan yang dihasilkan umumnya 0,1–100 μm.",
+        "Tak hanya logam tunggal, paduan juga dapat dilapiskan.",
+        "Karena pelapisan dilakukan dibawah 100°C, maka tidak terbentuk lapisan paduan antara pelapis dan bahan dasar seperti pada pelapisan celup panas."
+       ]
+      },
+      {
+       "p": "arus Listrik"
+      },
+      {
+       "p": "Pada katoda, ion logam (Mn+) menerima elektron (e-) dan menjadi logam (M)."
+      },
+      {
+       "p": "ion logam (Mn+)"
+      },
+      {
+       "p": "katoda anoda"
+      },
+      {
+       "p": "logam pelapisan (M) Contoh:"
+      },
+      {
+       "p": "aliran elektron (e)"
+      },
+      {
+       "p": "larutan pelapisan"
+      },
+      {
+       "p": "Gambar 11-1: Prinsip Pelapisan Listrik"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "arus Listrik",
+      "points": [
+       "Pelapisan dilakukan dengan sumber listrik DC.",
+       "Saat anoda (+) dan katoda (−) dipasang di dalam larutan pelapisan dan arus dialirkan, l…",
+       "Jarak anoda dan katoda disebut jarak antar-elektroda, yang mempengaruhi antara lain var…",
+       "Pada permukaan katoda, ion logam menerima elektron dan berubah menjadi logam (reaksi re…",
+       "Larutan pelapisan mengandung ion logam, zat penyangga pH, bahan pengkilap, dan lainnya.",
+       "Tebal lapisan yang dihasilkan umumnya 0,1–100 μm."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s2",
+    "no": 2,
+    "title": {
+     "id": "Jenis dan Fungsi",
+     "jp": "種類、機能"
+    },
+    "pages": [
+     153,
+     154
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pelapisan untuk Meningkatkan Ketahanan Korosi (Mencegah Karat)"
+      },
+      {
+       "ul": [
+        "Pelapisan seng, paduan seng-nikel dan paduan seng-besi membuat lapisan hasil pelapisan mengalami korosi lebih dahulu daripada bahan dasar (besi, dsb), sehingga mencegah korosi bahan dasar (Efek Perlindungan Korosi secara Pengorbanan).",
+        "Pelapisan kromium dan pelapisan nikel mencegah korosi bahan dasar dengan menghalangi oksigen dan kelembaban masuk ke bahan dasar (Efek Penghalang)."
+       ]
+      },
+      {
+       "p": "(2) Pelapisan untuk Meningkatkan Estetika (Dekoratif)"
+      },
+      {
+       "ul": [
+        "Pelapisan kromium dekoratif digunakan pada jam tangan, kacamata, peralatan rumah tangga, komponen eksterior kendaraan, dan sebagainya.",
+        "Pelapisan emas, perak, platina, dan lainnya digunakan misalnya pada aksesori."
+       ]
+      },
+      {
+       "p": "(3) Peningkatan Ketahanan Aus (mengeraskan permukaan, membuat sulit ter gores)"
+      },
+      {
+       "ul": [
+        "Pelapisan kromium keras menghasilkan tingkat kekerasan yang tinggi dan digunakan pada ring piston, komponen katup kendaraan, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(4) Pelapisan Tujuan Lainnya"
+      },
+      {
+       "ul": [
+        "Pelapisan nikel/emas dan pelapisan timah digunakan untuk meningkatkan kemudahan penyambungan (penyolderan, bonding) pada komponen elektronik dan sebagainya.",
+        "Pelapisan tembaga menghasilkan konduktivitas listrik yang tinggi dan digunakan untuk pembentukan jalur konduktor pada PCB, memberikan konduktivitas pada lubang tembus, dsb.",
+        "Pelapisan paduan besi-nikel atau sejenisnya menghasilkan sifat magnetik yang baik dan digunakan antara lain untuk kepala magnetik."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pelapisan untuk Meningkatkan Ketahanan Korosi (Mencegah Karat)",
+      "points": [
+       "Pelapisan seng, paduan seng-nikel dan paduan seng-besi membuat lapisan hasil pelapisan …",
+       "Pelapisan kromium dan pelapisan nikel mencegah korosi bahan dasar dengan menghalangi ok…",
+       "Pelapisan kromium dekoratif digunakan pada jam tangan, kacamata, peralatan rumah tangga…",
+       "Pelapisan emas, perak, platina, dan lainnya digunakan misalnya pada aksesori.",
+       "Pelapisan kromium keras menghasilkan tingkat kekerasan yang tinggi dan digunakan pada r…",
+       "Pelapisan nikel/emas dan pelapisan timah digunakan untuk meningkatkan kemudahan penyamb…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s3",
+    "no": 3,
+    "title": {
+     "id": "Tahap Proses dan Kontrol",
+     "jp": "処理工程、管理"
+    },
+    "pages": [
+     155,
+     156
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Persiapan Awal"
+      },
+      {
+       "ul": [
+        "Peralatan dan jig dipilih sesuai jumlah dan bentuk bahan dasar yang akan dilapisi, serta kualitas pelapisan yang diperlukan."
+       ]
+      },
+      {
+       "p": "(2) Pencucian dan Penghilangan Lemak"
+      },
+      {
+       "ul": [
+        "Minyak, kotoran, dan sebagainya dihilangkan dari permukaan bahan dasar karena menghambat larutan pelapisan.",
+        "Itu penting untuk meningkatkan daya lekat pelapisan.",
+        "Penghilang lemak alkali, pelarut organik, dsb digunakan untuk keperluan itu. Metode seperti pembersihan ultrasonik juga dapat digunakan.",
+        "Penting untuk mengkontrol konsentrasi larutan pencucian beserta suhu, durasi dan lainnya."
+       ]
+      },
+      {
+       "p": "(3) Perlakuan Aktivasi (Pengasaman)"
+      },
+      {
+       "ul": [
+        "Dengan perlakuan asam, lapisan oksida dihilangkan untuk mengaktifkan permukaan bahan dasar.",
+        "Itu penting untuk meningkatkan daya lekat pelapisan.",
+        "Asam klorida encer, asam sulfat encer, dsb digunakan untuk keperluan itu.",
+        "Penting untuk mengkontrol konsentrasi larutan pengasaman tersebut beserta suhu, durasi dan lainnya.",
+        "Karena bahan dasar mudah teroksidasi, pelapisan harus segera dimulai setelah perlakuan tersebut."
+       ]
+      },
+      {
+       "p": "(4) Pelapisan Dasar (Sesuai Kebutuhan)"
+      },
+      {
+       "ul": [
+        "Terkadang terlebih dahulu dilakukan pelapisan secara tipis untuk membentuk lapisan dasar guna meningkatkan daya lekat atau mencegah korosi. Digunakan antara lain pelapisan tembaga, nikel, emas, dan sebagainya.",
+        "Penting untuk mengkontrol konsentrasi larutan perlakuan dasar tersebut beserta suhu, pH, kondisi pengadukan, arus (densitas arus), durasi, dan lainnya."
+       ]
+      },
+      {
+       "p": "(5) Pelapisan Utama (Pelapisan Logam Tujuan)"
+      },
+      {
+       "ul": [
+        "Arus dialirkan ke larutan untuk membentuk lapisan logam pada katoda.",
+        "Arus dibagi luas permukaan katoda disebut densitas arus (= arus ÷ luas permukaan katoda). Densitas arus merupakan pararameter penting sebagai indikator kecepatan pelapisan.",
+        "Konsentrasi larutan pelapisan beserta suhu, pH, kondisi pengadukan, arus (densitas arus), durasi, dsb mempengaruhi kualitas lapisan logam, sehingga penting untuk dikontrol."
+       ]
+      },
+      {
+       "p": "(6) Perlakuan Akhir (Sesuai Kebutuhan)"
+      },
+      {
+       "ul": [
+        "Untuk meningkatkan ketahanan korosi, terkadang dilakukan perlakuan kromat, perlakuan fosfat, perlakuan pencegahan perubahan warna, dan sebagainya.",
+        "Penting untuk mengkontrol konsentrasi larutan perlakuan tersebut beserta suhu, pH, durasi dan lainnya."
+       ]
+      },
+      {
+       "p": "(7) Pengeringan"
+      },
+      {
+       "ul": [
+        "Menghilangkan kelembaban pada permukaan bahan dasar, dan dikeringkan.",
+        "Penting untuk mengkontrol suhu pengeringan, durasi, kecepatan aliran udara, dan lainnya."
+       ]
+      },
+      {
+       "p": "(8) Pencucian Air"
+      },
+      {
+       "ul": [
+        "Setelah setiap tahap proses selesai, dilakukan pencucian dengan air untuk membilas larutan perlakuan.",
+        "Sebaiknya digunakan air murni untuk pencucian. Terkadang konduktivitas diukur untuk memeriksa tingkat kebersihan air pencucian. cuci cuci dengan dengan air air Penghilangan Persiapan Pelapisan Lemak, Aktivasi Awal Dasar Pencucian"
+       ]
+      },
+      {
+       "p": "cuci cuci cuci dengan dengan dengan air air air Pelapisan Perlakuan Pengeringan Utama Akhir"
+      },
+      {
+       "p": "Gambar 11-2: Tahap Proses Pelapisan Listrik"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Persiapan Awal",
+      "points": [
+       "Peralatan dan jig dipilih sesuai jumlah dan bentuk bahan dasar yang akan dilapisi, sert…",
+       "Minyak, kotoran, dan sebagainya dihilangkan dari permukaan bahan dasar karena menghamba…",
+       "Itu penting untuk meningkatkan daya lekat pelapisan.",
+       "Penghilang lemak alkali, pelarut organik, dsb digunakan untuk keperluan itu. Metode sep…",
+       "Penting untuk mengkontrol konsentrasi larutan pencucian beserta suhu, durasi dan lainnya.",
+       "Dengan perlakuan asam, lapisan oksida dihilangkan untuk mengaktifkan permukaan bahan da…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s4",
+    "no": 4,
+    "title": {
+     "id": "Penggunaan Peralatan dan Jig",
+     "jp": "使用する設備、治具"
+    },
+    "pages": [
+     157,
+     161
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Bak Pelapisan"
+      },
+      {
+       "ul": [
+        "Menampung larutan, anoda dan katoda (substrat pelapisan) untuk melakukan pelapisan.",
+        "Material bak dipilih sesuai pH larutan dan kondisi lainnya.",
+        "Bahan yang digunakan antara lain PVC (polivinil klorida), PP (polipropilena), FRP (plastik diperkuat serat), besi berlapis PVC, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(2) Perangkat Catudaya (Penyearah Arus)"
+      },
+      {
+       "ul": [
+        "Perangkat untuk mengalirkan arus DC secara stabil.",
+        "Ada juga perangkat yang mengalirkan arus dengan bentuk gelombang khusus, misalnya arus impuls.",
+        "Perangkat dipilih sesuai besar arus yang akan dialirkan."
+       ]
+      },
+      {
+       "p": "(3) anoda"
+      },
+      {
+       "ul": [
+        "Anoda yang terbuat dari logam yang sama dengan logam bahan pelapis, dan selama proses pelapisan larut ke dalam larutan disebut anoda larut.",
+        "Anoda yang menggunakan bahan tidak larut (seperti iridium oksida dan platina) disebut anoda tidak larut. Pada anoda tidak larut, oksigen dihasilkan.",
+        "Bentuknya antara lain berupa pelat, atau butiran (yang digunakan dengan dimasukkan ke keranjang)."
+       ]
+      },
+      {
+       "p": "(4) katoda"
+      },
+      {
+       "ul": [
+        "Katoda adalah bahan dasar yang akan dilapisi.",
+        "Arus yang dialirkan tergantung luas permukaan katoda. Perhitungan luas permukaan bahan dasar sangatlah penting.",
+        "Pada contoh Gambar 11-3, jika luas penampang (luas permukaan tepi) tidak diperhitungkan, luas permukaannya 2 m². Satuan: mm Luas satu sisi 2 ← luas kedua sisi"
+       ]
+      },
+      {
+       "p": "Luas"
+      },
+      {
+       "p": "Gambar 11-3: Perhitungan Luas Permukaan Bahan Dasar (tanpa memperhitungkan permukaan tepi)"
+      },
+      {
+       "ul": [
+        "Pada contoh Gambar 11-4, jika luas penampang (luas permukaan tepi) juga diperhitungkan, maka luas permukaannya 23.200 mm²."
+       ]
+      },
+      {
+       "p": "Satuan: mm"
+      },
+      {
+       "p": "permukaan sisi2 + permukaan tepi4"
+      },
+      {
+       "p": "Luas"
+      },
+      {
+       "p": "permukaan tepi permukaan sisi"
+      },
+      {
+       "p": "Gambar 11-4: Perhitungan Luas Permukaan Bahan Dasar (memperhitungkan permukaan tepi)"
+      },
+      {
+       "ul": [
+        "Barang dengan bentuk kompleks, seperti komponen, terkadang dilapisi dengan cara digantungkan pada jig penggantung. Metode ini disebut pelapisan rak.",
+        "Untuk komponen yang tak dapat digantung ataupun komponen elektronik dengan ukuran sangat kecil, terkadang digunakan metode pelapisan berputar, yang disebut pelapisan barel.",
+        "Pelat atau kawat yang digulung pada rol terkadang dilapisi secara kontinu dengan metode yang disebut pelapisan hoop (reel‑to‑reel plating)."
+       ]
+      },
+      {
+       "p": "katoda jig penggantung (katoda) jig penggantung putaran bahan dasar"
+      },
+      {
+       "p": "bahan dasar"
+      },
+      {
+       "p": "bahan dasar (misalnya komponen)"
+      },
+      {
+       "p": "Gambar 11-5: Pelapisan Rak Gambar 11-6: Pelapisan Barel"
+      },
+      {
+       "p": "(5) Alat Pengaduk"
+      },
+      {
+       "ul": [
+        "Digunakan untuk mengaduk larutan pelapisan agar konsentrasi dan suhunya seragam.",
+        "Ada jenis pneumatik dan jenis mekanis (seperti baling-baling, pompa, dsb)."
+       ]
+      },
+      {
+       "p": "(6) Alat Kontrol Suhu"
+      },
+      {
+       "ul": [
+        "Digunakan untuk menjaga suhu larutan pelapisan pada nilai yang telah ditentukan.",
+        "Contohnya alat pemanas listrik celup (heater), pipa koil pendingin, alat penukar panas diluar tangki, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(7) Alat Sirkulasi Filter"
+      },
+      {
+       "ul": [
+        "Digunakan untuk menghilangkan (menyaring) kotoran, partikel halus, dsb dalam larutan pelapisan.",
+        "Larutan disirkulasikan perlahan dengan pompa, dsb, dan kotoran / partikel halus dihilangkan dengan filter."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Bak Pelapisan",
+      "points": [
+       "Menampung larutan, anoda dan katoda (substrat pelapisan) untuk melakukan pelapisan.",
+       "Material bak dipilih sesuai pH larutan dan kondisi lainnya.",
+       "Bahan yang digunakan antara lain PVC (polivinil klorida), PP (polipropilena), FRP (plas…",
+       "Perangkat untuk mengalirkan arus DC secara stabil.",
+       "Ada juga perangkat yang mengalirkan arus dengan bentuk gelombang khusus, misalnya arus …",
+       "Perangkat dipilih sesuai besar arus yang akan dialirkan."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s5",
+    "no": 5,
+    "title": {
+     "id": "Bahan Dasar Pelapisan (Substrat)",
+     "jp": "めっきする材料（基材）"
+    },
+    "pages": [
+     162,
+     162
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Bahan Besi/Baja"
+      },
+      {
+       "ul": [
+        "Merupakan yang paling umum dan digunakan sebagai bahan dasar pelapisan seng, nikel, krom, dan sebagainya.",
+        "Digunakan antara lain untuk komponen mobil, bahan atap dan dinding, perkakas, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(2) Baja tahan karat"
+      },
+      {
+       "ul": [
+        "Digunakan sebagai bahan dasar pelapisan nikel, krom, dan sebagainya.",
+        "Untuk memastikan daya lekat lapisan, diperlukan lapisan dasar yang tipis sebagai pelapis awal (strike plating).",
+        "Digunakan antara lain untuk peralatan medis, peralatan dapur, barang dekoratif, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(3) Tembaga dan Paduan Tembaga"
+      },
+      {
+       "ul": [
+        "Digunakan sebagai bahan dasar pelapisan nikel, emas, dan sebagainya.",
+        "Digunakan antara lain untuk komponen elektronik, terminal listrik, barang dekoratif, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(4) Aluminium dan Paduan Aluminium"
+      },
+      {
+       "ul": [
+        "Digunakan sebagai bahan dasar pelapisan nikel, krom, dan sebagainya.",
+        "Untuk memastikan daya lekat pelapisan, diperlukan pra-perlakuan khusus (perlakuan zinkat).",
+        "Digunakan antara lain untuk komponen pesawat terbang, peralatan presisi, barang dekoratif, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(5) Paduan Magnesium"
+      },
+      {
+       "ul": [
+        "Digunakan sebagai bahan dasar pelapisan nikel, krom, dan sebagainya.",
+        "Untuk memastikan daya lekat pelapisan, diperlukan pra-perlakuan khusus (perlakuan zinkat).",
+        "Digunakan antara lain untuk perangkat seluler, komponen kamera, dan sebagainya."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Bahan Besi/Baja",
+      "points": [
+       "Merupakan yang paling umum dan digunakan sebagai bahan dasar pelapisan seng, nikel, kro…",
+       "Digunakan antara lain untuk komponen mobil, bahan atap dan dinding, perkakas, dan sebag…",
+       "Digunakan sebagai bahan dasar pelapisan nikel, krom, dan sebagainya.",
+       "Untuk memastikan daya lekat lapisan, diperlukan lapisan dasar yang tipis sebagai pelapi…",
+       "Digunakan antara lain untuk peralatan medis, peralatan dapur, barang dekoratif, dan seb…",
+       "Digunakan sebagai bahan dasar pelapisan nikel, emas, dan sebagainya."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s6",
+    "no": 6,
+    "title": {
+     "id": "Cacat Pelapisan Listrik",
+     "jp": "電気めっきの不良"
+    },
+    "pages": [
+     163,
+     165
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Gelembung"
+      },
+      {
+       "ul": [
+        "Kondisi dimana lapisan di bagian yang daya lekatnya buruk terkelupas dan membentuk gelembung.",
+        "Sering kali penyebabnya adalah cacat pada pra-perlakuan (pencucian, penghilangan lemak dan aktivasi)."
+       ]
+      },
+      {
+       "p": "lapisan logam gelembung"
+      },
+      {
+       "p": "bahan dasar"
+      },
+      {
+       "p": "Gambar 11-7: Gelembung Pelapisan"
+      },
+      {
+       "p": "(2) Perubahan Warna"
+      },
+      {
+       "ul": [
+        "Kondisi dimana sebagian lapisan logam mengalami oksidasi atau berubah warna akibat menempelnya benda asing, dsb.",
+        "Dapat karena cacat pada bahan dasar, pencucian air yang tak sempurna, efek metode penyimpanan, dan sebagainya."
+       ]
+      },
+      {
+       "p": "lapisan logam perubahan Warna"
+      },
+      {
+       "p": "bahan dasar"
+      },
+      {
+       "p": "Gambar 11-8: Perubahan Warna Pelapisan"
+      },
+      {
+       "p": "(3) Pinhole dan Pit"
+      },
+      {
+       "ul": [
+        "Kondisi adanya lubang pada lapisan logam, dimana lubang yang mencapai bahan dasar disebut pinhole, sedangkan yang tak mencapai bahan dasar disebut pit.",
+        "Baik pinhole maupun pit dapat menjadi penyebab korosi, tetapi pinhole memiliki risiko lebih tinggi.",
+        "Penyebabnya antara lain cacat pada bahan dasar (misalnya lubang), menempelnya kotoran saat pelapisan, menempelnya gas hidrogen, dsb."
+       ]
+      },
+      {
+       "p": "lapisan logam pinhole lapisan logam pit"
+      },
+      {
+       "p": "bahan dasar bahan dasar"
+      },
+      {
+       "p": "Gambar 11-9: Pinhole dan Pit pada Pelapisan"
+      },
+      {
+       "p": "(4) Gagal Pelapisan"
+      },
+      {
+       "ul": [
+        "Kondisi dimana sebagian bahan dasar tidak terlapisi.",
+        "Sering kali penyebabnya adalah cacat pada pra-perlakuan (pencucian, penghilangan lemak dan aktivasi)."
+       ]
+      },
+      {
+       "p": "lapisan logam gagal pelapisan"
+      },
+      {
+       "p": "bahan dasar"
+      },
+      {
+       "p": "Gambar 11-10: Gagal Pelapisan"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Gelembung",
+      "points": [
+       "Kondisi dimana lapisan di bagian yang daya lekatnya buruk terkelupas dan membentuk gele…",
+       "Sering kali penyebabnya adalah cacat pada pra-perlakuan (pencucian, penghilangan lemak …",
+       "Kondisi dimana sebagian lapisan logam mengalami oksidasi atau berubah warna akibat mene…",
+       "Dapat karena cacat pada bahan dasar, pencucian air yang tak sempurna, efek metode penyi…",
+       "Kondisi adanya lubang pada lapisan logam, dimana lubang yang mencapai bahan dasar diseb…",
+       "Baik pinhole maupun pit dapat menjadi penyebab korosi, tetapi pinhole memiliki risiko l…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s7",
+    "no": 7,
+    "title": {
+     "id": "Metode dan Karakteristik",
+     "jp": "方法、特徴"
+    },
+    "pages": [
+     166,
+     166
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Bahan dasar dicelupkan ke bak berisi logam cair, dan setelah diangkat didinginkan sehingga terbentuk lapisan logam pada permukaan bahan dasar.",
+        "Logam pelapis (seperti seng) memiliki efek perlindungan katodik secara pengorbanan, sehingga meningkatkan ketahanan korosi bahan dasar.",
+        "Dibanding pelapisan listrik seng dan sejenisnya, lapisannya lebih tebal, dengan ketebalan 10 μm–150 μm. Karena itu, menunjukkan ketahanan korosi yang tinggi bahkan di lingkungan yang berat seperti diluar ruangan dan daerah pesisir.",
+        "Ketahanan korosi meningkat sebanding dengan makin tebalnya lapisan logam.",
+        "Bahan dasar antara lain baja, besi cor dan baja tahan karat, dan lapisan paduan terbentuk pada batas antara bahan dasar dan lapisan logam."
+       ]
+      },
+      {
+       "p": "pengangkatan, pendinginan Bahan dasar dicelupkan ke logam cair (M), lalu diangkat dan didinginkan, sehingga terbentuk lapisan logam (M) pada permukaan bahan dasar. bahan dasar"
+      },
+      {
+       "p": "bahan dasar"
+      },
+      {
+       "p": "logam pelapisan (M)"
+      },
+      {
+       "p": "logam cair (M)"
+      },
+      {
+       "p": "Gambar 11-11: Prinsip Pelapisan Celup Panas"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "pengangkatan, pendinginan Bahan dasar dicelupkan ke logam cair (M), lalu diangkat dan didinginkan, sehingga terbentuk lapisan logam (M) pada permukaan bahan dasar. bahan dasar",
+      "points": [
+       "Bahan dasar dicelupkan ke bak berisi logam cair, dan setelah diangkat didinginkan sehin…",
+       "Logam pelapis (seperti seng) memiliki efek perlindungan katodik secara pengorbanan, seh…",
+       "Dibanding pelapisan listrik seng dan sejenisnya, lapisannya lebih tebal, dengan ketebal…",
+       "Ketahanan korosi meningkat sebanding dengan makin tebalnya lapisan logam.",
+       "Bahan dasar antara lain baja, besi cor dan baja tahan karat, dan lapisan paduan terbent…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s8",
+    "no": 8,
+    "title": {
+     "id": "Jenis",
+     "jp": "{種類|しゅるい}"
+    },
+    "pages": [
+     167,
+     167
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pelapisan Berbasis Seng"
+      },
+      {
+       "ul": [
+        "Ada pelapisan seng dan pelapisan seng celup panas paduan, yaitu seng dipadukan dengan bahan dasar (baja).",
+        "Pelat baja dengan pelapisan seng celup panas paduan banyak digunakan untuk panel eksterior mobil."
+       ]
+      },
+      {
+       "p": "(2) Pelapisan Berbasis Seng-Aluminium"
+      },
+      {
+       "ul": [
+        "Ada jenis berbasis seng-5% aluminium dan seng-55% aluminium.",
+        "Ketahanan korosi lebih tinggi dibanding pelapisan berbasis seng, dan banyak digunakan untuk pelapisan pelat baja dan bahan kawat."
+       ]
+      },
+      {
+       "p": "(3) Pelapisan Berbasis Aluminium"
+      },
+      {
+       "ul": [
+        "Ada pelapisan dengan penambahan 10% silikon ke bak pelapisan, dan pelapisan dengan aluminium murni.",
+        "Pelapisan dengan penambahan 10% silikon unggul dalam kemudahan pengerjaan dan ketahanan panas, sedangkan pelapisan aluminium murni unggul dalam ketahanan korosi."
+       ]
+      },
+      {
+       "p": "(4) Pelapisan Timah"
+      },
+      {
+       "ul": [
+        "Karena tak beracun terhadap makanan, digunakan untuk kaleng makanan dan sejenisnya."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pelapisan Berbasis Seng",
+      "points": [
+       "Ada pelapisan seng dan pelapisan seng celup panas paduan, yaitu seng dipadukan dengan b…",
+       "Pelat baja dengan pelapisan seng celup panas paduan banyak digunakan untuk panel ekster…",
+       "Ada jenis berbasis seng-5% aluminium dan seng-55% aluminium.",
+       "Ketahanan korosi lebih tinggi dibanding pelapisan berbasis seng, dan banyak digunakan u…",
+       "Ada pelapisan dengan penambahan 10% silikon ke bak pelapisan, dan pelapisan dengan alum…",
+       "Pelapisan dengan penambahan 10% silikon unggul dalam kemudahan pengerjaan dan ketahanan…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s9",
+    "no": 9,
+    "title": {
+     "id": "Tahap Proses dan Kontrol",
+     "jp": "処理工程、管理"
+    },
+    "pages": [
+     167,
+     168
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pencucian dan Penghilangan Lemak"
+      },
+      {
+       "ul": [
+        "Minyak, kotoran, dsb pada permukaan bahan dasar dihilangkan karena dapat menyebabkan logam cair tidak melekat.",
+        "Bahan dasar direndam dalam larutan alkali dan sebagainya. Hal ini penting untuk meningkatkan daya lekat pelapisan.",
+        "Penting untuk mengkontrol konsentrasi larutan pencucian beserta suhu, durasi dan lainnya."
+       ]
+      },
+      {
+       "p": "(2) Perlakuan Aktivasi (Pengasaman)"
+      },
+      {
+       "ul": [
+        "Dengan perlakuan asam, lapisan oksida dihilangkan untuk mengaktifkan permukaan bahan dasar.",
+        "Asam klorida encer, asam sulfat encer, dsb digunakan untuk keperluan itu. Hal ini penting untuk meningkatkan daya lekat pelapisan.",
+        "Penting untuk mengkontrol konsentrasi larutan pengasaman tersebut beserta suhu, durasi dan lainnya."
+       ]
+      },
+      {
+       "p": "(3) Perlakuan Fluks"
+      },
+      {
+       "ul": [
+        "Bahan dasar direndam dalam fluks (larutan seng amonium klorida) yang dipanaskan, sehingga terbentuk lapisan fluks pada permukaan bahan dasar.",
+        "Hal ini berefek menekan timbulnya karat setelah proses pengasaman dan mendorong reaksi paduan antara bahan dasar dan logam cair."
+       ]
+      },
+      {
+       "p": "(4) Pengeringan"
+      },
+      {
+       "ul": [
+        "Bahan dasar dikeringkan untuk mencegah logam cair (seperti seng) terpercik akibat adanya kelembaban."
+       ]
+      },
+      {
+       "p": "(5) Pelapisan (Pelapisan Logam Tujuan)"
+      },
+      {
+       "ul": [
+        "Bahan dasar dicelupkan ke bak logam cair untuk membentuk lapisan logam.",
+        "Suhu, durasi pencelupan, dan lainnya disesuaikan berdasarkan bahan, bentuk, ukuran, dsb bahan dasar."
+       ]
+      },
+      {
+       "p": "(6) Pendinginan"
+      },
+      {
+       "ul": [
+        "Bahan dasar yang telah dilapisi didinginkan dengan air hangat dan sebagainya. Dengan pendinginan ini, pertumbuhan lapisan paduan antara bahan dasar (seperti baja) dan pelapis (seperti seng) ditekan.",
+        "Penting untuk mengkontrol suhu pendinginan, durasi, dan lainnya."
+       ]
+      },
+      {
+       "p": "(7) Penyelesaian"
+      },
+      {
+       "ul": [
+        "Seng berlebih, oksida, dan sebagainya dihilangkan. Digunakan kikir, mesin amplas, dan sebagainya. cuci cuci dengan dengan air air Penghilangan Perlakuan Lemak, Aktivasi Pengeringan Fluks Pencucian"
+       ]
+      },
+      {
+       "p": "Pelapisan Pendinginan Penyelesaian Logam"
+      },
+      {
+       "p": "Gambar 11-12: Tahap Proses Pelapisan Celup Panas"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pencucian dan Penghilangan Lemak",
+      "points": [
+       "Minyak, kotoran, dsb pada permukaan bahan dasar dihilangkan karena dapat menyebabkan lo…",
+       "Bahan dasar direndam dalam larutan alkali dan sebagainya. Hal ini penting untuk meningk…",
+       "Penting untuk mengkontrol konsentrasi larutan pencucian beserta suhu, durasi dan lainnya.",
+       "Dengan perlakuan asam, lapisan oksida dihilangkan untuk mengaktifkan permukaan bahan da…",
+       "Asam klorida encer, asam sulfat encer, dsb digunakan untuk keperluan itu. Hal ini penti…",
+       "Penting untuk mengkontrol konsentrasi larutan pengasaman tersebut beserta suhu, durasi …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s10",
+    "no": 10,
+    "title": {
+     "id": "Cacat Pelapisan Celup Panas",
+     "jp": "溶融めっきの不良"
+    },
+    "pages": [
+     169,
+     170
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Gagal Pelapisan"
+      },
+      {
+       "ul": [
+        "Kondisi dimana sebagian bahan dasar tidak terlapisi. Sering kali penyebabnya adalah cacat pada pra-perlakuan (pencucian, penghilangan lemak dan aktivasi)."
+       ]
+      },
+      {
+       "p": "lapisan logam gagal pelapisan"
+      },
+      {
+       "p": "bahan dasar"
+      },
+      {
+       "p": "Gambar 11-13: Gagal Pelapisan pada Pelapisan Celup Panas"
+      },
+      {
+       "p": "(2) Lelehan Logam"
+      },
+      {
+       "ul": [
+        "Kondisi dimana seng tampak bekas meleleh dan menetes, dan banyak menempel di permukaan, tepi, dsb bahan dasar. Itu karena pada suhu rendah, logam cair lebih sulit mengalir dan cenderung membeku.",
+        "Dampak pada ketahanan korosi kecil, sehingga jika tak menimbulkan masalah dalam penggunaan (seperti ukuran menjadi over), dibiarkan begitu saja. lelehan logam lapisan logam"
+       ]
+      },
+      {
+       "p": "bahan dasar"
+      },
+      {
+       "p": "Gambar 11-14: Lelehan Logam pada Pelapisan Celup Panas"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Gagal Pelapisan",
+      "points": [
+       "Kondisi dimana sebagian bahan dasar tidak terlapisi. Sering kali penyebabnya adalah cac…",
+       "Kondisi dimana seng tampak bekas meleleh dan menetes, dan banyak menempel di permukaan,…",
+       "Dampak pada ketahanan korosi kecil, sehingga jika tak menimbulkan masalah dalam penggun…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s11",
+    "no": 11,
+    "title": {
+     "id": "Pelapisan Tanpa Elektrolisis",
+     "jp": "{無電解|むでんかい}めっき"
+    },
+    "pages": [
+     171,
+     171
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Prinsip dan Karakteristik"
+      },
+      {
+       "p": "Lapisan logam dibentuk pada permukaan bahan dasar melalui reaksi kimia tanpa menggunakan sumber listrik."
+      },
+      {
+       "ul": [
+        "Ada pelapisan reduksi yang menggunakan zat pereduksi dan pelapisan substitusi yang memanfaatkan perbedaan kecenderungan ionisasi bahan dasar dan pelapis (contoh: jika besi dicelup ke larutan tembaga sulfat, terbentuk lapisan tembaga pada permukaan besi).",
+        "Tebal lapisan logam umumnya 0,1–50 μm.",
+        "Tebal pelapisan dapat dibuat seragam meskipun bahan dasar memiliki bentuk kompleks.",
+        "Pada pelapisan reduksi, bahan dasar yang tak memiliki konduktivitas listrik, seperti plastik, keramik, kaca, dan lainnya juga dapat dilapisi.",
+        "Pada pelapisan reduksi, diperlukan perlakuan untuk memberikan katalis seperti paladium agar reaksi dapat dimulai.",
+        "Pada pelapisan reduksi, setelah reaksi dimulai, lapisan logam itu sendiri yang menjadi katalis sehingga reaksi terus berlangsung. (Efek Otokatalitik)",
+        "Konsentrasi, suhu, pH, kondisi pengadukan, dsb larutan pelapis perlu dipertahankan pada nilai yang ditentukan, untuk itu diperlukan teknologi dan peralatan dengan tingkat pengelolaan yang tinggi.",
+        "Dibanding pelapisan listrik, biaya material dan waktu pemrosesan cenderung meningkat, sehingga biayanya cenderung lebih tinggi."
+       ]
+      },
+      {
+       "p": "(2) Jenis dan Penggunaan"
+      },
+      {
+       "ul": [
+        "Pelapisan nikel-fosfor menghasilkan ketahanan korosi dan aus yang tinggi, sehingga digunakan untuk komponen logam cetak, peralatan dan komponen elektronik, dan sebagainya.",
+        "Pelapisan emas menghasilkan konduktivitas dan ketahanan korosi yang tinggi, sehingga digunakan untuk kontak listrik pada komponen elektronik, PCB, dan sebagainya."
+       ]
+      },
+      {
+       "ul": [
+        "Pelapisan tembaga menghasilkan konduktivitas yang tinggi, sehingga digunakan sebagai bahan penghantar pada komponen elektronik, PCB, dan sebagainya."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Prinsip dan Karakteristik",
+      "points": [
+       "Ada pelapisan reduksi yang menggunakan zat pereduksi dan pelapisan substitusi yang mema…",
+       "Tebal lapisan logam umumnya 0,1–50 μm.",
+       "Tebal pelapisan dapat dibuat seragam meskipun bahan dasar memiliki bentuk kompleks.",
+       "Pada pelapisan reduksi, bahan dasar yang tak memiliki konduktivitas listrik, seperti pl…",
+       "Pada pelapisan reduksi, diperlukan perlakuan untuk memberikan katalis seperti paladium …",
+       "Pada pelapisan reduksi, setelah reaksi dimulai, lapisan logam itu sendiri yang menjadi …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b11s12",
+    "no": 12,
+    "title": {
+     "id": "Pelapisan Kering",
+     "jp": "{乾式|かんしき}めっき"
+    },
+    "pages": [
+     172,
+     173
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Secara umum terdapat dua metode utama, yaitu PVD dan CVD."
+      },
+      {
+       "p": "(1) PVD (metode deposisi uap secara fisik)"
+      },
+      {
+       "ul": [
+        "Ada metode yang menguapkan material dan mengendapkan partikel ke bahan dasar (evaporasi), serta ada metode yang menembaki (sputtering) material target dengan plasma dan mengendapkan partikel yang terlepas ke bahan dasar.",
+        "Dapat dilakukan pada suhu relatif rendah (100–500°C).",
+        "Tebal lapisan umumnya sekitar 0,2–5 μm.",
+        "Digunakan antara lain untuk meningkatkan ketahanan aus alat potong (titanium nitrida), pembentukan jalur konduktor pada PCB (tembaga), kemasan makanan (aluminium), dan sebagainya.",
+        "Karena tak menggunakan bahan kimia, hampir tidak menghasilkan gas buang maupun limbah cair."
+       ]
+      },
+      {
+       "p": "(2) CVD (metode deposisi uap secara kimia)"
+      },
+      {
+       "ul": [
+        "Merupakan metode pembentukan lapisan dengan bahan baku gas dan menimbulkan reaksi kimia pada permukaan bahan dasar.",
+        "Ada metode CVD termal, yang menguraikan gas pada suhu tinggi; dan CVD plasma, yang menggunakan plasma untuk melakukan reaksi kimia.",
+        "Suhu pemrosesan tinggi (sekitar 400–1.000°C).",
+        "Lapisan dapat dibentuk secara seragam meskipun struktur sangat kecil dan berbentuk kompleks.",
+        "Tebal lapisan umumnya sekitar 5–20 μm.",
+        "Digunakan antara lain untuk lapisan isolasi pada semikonduktor (seperti silikon nitrida) dan lapisan tipis pada sel surya."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Secara umum terdapat dua metode utama, yaitu PVD dan CVD.",
+      "points": [
+       "Ada metode yang menguapkan material dan mengendapkan partikel ke bahan dasar (evaporasi…",
+       "Dapat dilakukan pada suhu relatif rendah (100–500°C).",
+       "Tebal lapisan umumnya sekitar 0,2–5 μm.",
+       "Digunakan antara lain untuk meningkatkan ketahanan aus alat potong (titanium nitrida), …",
+       "Karena tak menggunakan bahan kimia, hampir tidak menghasilkan gas buang maupun limbah c…",
+       "Merupakan metode pembentukan lapisan dengan bahan baku gas dan menimbulkan reaksi kimia…"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

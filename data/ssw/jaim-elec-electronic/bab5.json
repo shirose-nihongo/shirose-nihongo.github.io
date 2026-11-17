@@ -1,0 +1,455 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab5",
+  "no": 5,
+  "title": {
+   "id": "Aturan Perundang-undangan dan Standar Kelistrikan",
+   "jp": "電気に関する法令と規格"
+  },
+  "intro": {
+   "id": "Bab 5 buku resmi JAIM."
+  },
+  "pages": [
+   50,
+   59
+  ],
+  "subs": [
+   {
+    "id": "b5s1",
+    "no": 1,
+    "title": {
+     "id": "Undang-Undang Keselamatan Peralatan dan Material Listrik",
+     "jp": "{電気用品安全法|でんきようひんあんぜんほう}"
+    },
+    "pages": [
+     50,
+     51
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "UU ini bertujuan mencegah bahaya/cedera akibat peralatan dan material listrik.",
+        "Dalam merakit peralatan listrik atau elektronik, diwajibkan menggunakan peralatan dan material listrik yang telah ditentukan.",
+        "Definisi peralatan dan material listrik mencakup 3 hal berikut:"
+       ]
+      },
+      {
+       "ol": [
+        "Peralatan rumah tangga, perlengkapan, dan material yang terhubung langsung ke jaringan distribusi tegangan rendah, seperti listrik rumah tangga",
+        "Generator portabel",
+        "Baterai Ion Litium"
+       ]
+      },
+      {
+       "ul": [
+        "116 item yang memerlukan regulasi keselamatan khusus telah ditetapkan sebagai \"Peralatan dan Material Listrik Tertentu\".",
+        "Tanda PSE:Singkatan dari \"Product Safety Electrical Appliance & Material\""
+       ]
+      },
+      {
+       "p": "Peralatan dan Material Listrik Tertentu diberi tanda seperti Gambar 5-1, sedangkan yang selain Peralatan dan Material Listrik Tertentu diberi tanda seperti Gambar 5-2."
+      },
+      {
+       "p": "Gambar 5-1: Peralatan dan Material Gambar 5-2: Peralatan dan Material Listrik Tertentu Listrik selain Peralatan dan Material Listrik Tertentu"
+      },
+      {
+       "p": "Keterangan Tambahan 5-1"
+      },
+      {
+       "ol": [
+        "Secara prinsip, semua peralatan listrik rumah tangga ditetapkan sebagai Peralatan dan Material Listrik.",
+        "Unit komputer atau printer yang tidak terhubung langsung ke sumber listrik rumah tangga (AC100V) merupakan pengecualian",
+        "Adaptor AC dan kabel ekstensi termasuk Peralatan dan Material Listrik Tertentu",
+        "Televisi, kulkas, pendingin ruangan (AC), lampu LED, dsb termasuk kategori selain Peralatan dan Material Listrik Tertentu",
+        "Baterai portabel litium-ion tanpa tanda PSE dilarang diperjualbelikan",
+        "Untuk peralatan DC, saat ini belum diatur"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Peralatan dan Material Listrik Tertentu diberi tanda seperti Gambar 5-1, sedangkan yang selain Peralatan dan Material Listrik Tertentu diberi tanda seperti Gambar 5-2.",
+      "points": [
+       "UU ini bertujuan mencegah bahaya/cedera akibat peralatan dan material listrik.",
+       "Dalam merakit peralatan listrik atau elektronik, diwajibkan menggunakan peralatan dan m…",
+       "Definisi peralatan dan material listrik mencakup 3 hal berikut:",
+       "116 item yang memerlukan regulasi keselamatan khusus telah ditetapkan sebagai \"Peralata…",
+       "Tanda PSE:Singkatan dari \"Product Safety Electrical Appliance & Material\""
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s2",
+    "no": 2,
+    "title": {
+     "id": "Peraturan Kementerian tentang Standar Teknik Sarana Kelistrikan",
+     "jp": "電気設備に関する技術基準を定める省令（電技）"
+    },
+    "pages": [
+     52,
+     52
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Kelistrikan"
+      },
+      {
+       "p": "Peraturan Kementerian ini mengatur persyaratan teknis yang harus dipenuhi sarana kelistrikan. Peraturan Kementerian ini menjadi dasar untuk permohonan perizinan ke dan penilaian oleh instansi pemerintah. Rincian spesifiknya diuraikan dalam “Interpretasi Standar Teknik Sarana Kelistrikan”."
+      },
+      {
+       "p": "Contoh:"
+      },
+      {
+       "ul": [
+        "Sarana kelistrikan harus dibumikan untuk mencegah kebakaran dan bahaya lainnya bagi manusia (Peraturan Kementerian Pasal 10)",
+        "Pembumian harus dilakukan sedemikian rupa arus listrik dapat mengalir ke bumi dengan aman dan andal (Peraturan Menteri Pasal 11)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kelistrikan",
+      "points": [
+       "Sarana kelistrikan harus dibumikan untuk mencegah kebakaran dan bahaya lainnya bagi man…",
+       "Pembumian harus dilakukan sedemikian rupa arus listrik dapat mengalir ke bumi dengan am…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s3",
+    "no": 3,
+    "title": {
+     "id": "Interpretasi Standar Teknik Sarana Kelistrikan",
+     "jp": "電気設備の技術基準の解釈（電技解釈）"
+    },
+    "pages": [
+     52,
+     55
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Hal ini secara konkret menunjukkan rincian teknis yang memenuhi persyaratan teknis sesuai Peraturan Kementerian pada Bagian 1.2. Meskipun bukan merupakan Peraturan Kementerian, namun digunakan sebagai acuan, antara lain untuk mengutip kriteria atau standar penilaian."
+      },
+      {
+       "p": "Contoh:"
+      },
+      {
+       "ul": [
+        "Pembumian diperlukan antara lain untuk kasing logam bagian luar peralatan listrik. Namun, hal itu boleh diabaikan jika ELCB (≤15 mA, ≤0,1 detik) sesuai ketentuan UU Keselamatan Peralatan dan Material Listrik dipasang di lokasi selain tempat yang lembab (Pasal 29)",
+        "Untuk memastikan perlindungan terhadap peralatan elektronik yang mendapat suplai listrik pada tegangan 150V atau kurang, pembumian dapat dilakukan jika tak ada risiko bahaya seperti sengatan listrik (Pasal 19)"
+       ]
+      },
+      {
+       "p": "Penjelasan"
+      },
+      {
+       "ol": [
+        "Secara prinsip, peralatan listrik perlu dibumikan. Akan tetapi, untuk peralatan listrik (seperti televisi atau AC) yang digunakan di lokasi selain tempat lembab, pembumian boleh diabaikan jika ELCB sesuai ketentuan UU Keselamatan Peralatan Listrik dipasang. Namun, hal tersebut tidak berlaku untuk pendingin ruangan (AC) dengan tegangan 200V."
+       ]
+      },
+      {
+       "ol": [
+        "Pemutus arus bocor (ELCB) yang memenuhi ketentuan UU Keselamatan Peralatan dan Material Listrik adalah ELCB yang memiliki tingkat sensitivitas tertinggi (≤15 mA, ≤0,1 detik)."
+       ]
+      },
+      {
+       "ol": [
+        "Jika diperlukan, sirkuit yang tersusun atas perangkat elektronik juga dapat dibumikan, asalkan tegangannya ≤150V. Misalnya, mesin perkakas CNC dan sirkuit kontrol pada peralatan otomatisasi."
+       ]
+      },
+      {
+       "p": "Keterangan Tambahan 5-2"
+      },
+      {
+       "ol": [
+        "Perakitan peralatan listrik tidak memerlukan kualifikasi resmi. Namun, jika peralatan tersebut akan dihubungkan ke sumber listrik, dapat diperlukan kualifikasi tertentu. (Misalnya, kualifikasi \"Teknisi Instalasi Listrik\" sesuai UU Teknisi Instalasi Listrik Jepang)",
+        "Namun, untuk pekerjaan memasang kabel pada steker, soket, sakelar, dsb pada tegangan rendah, seperti 100 V, tidak diperlukan kualifikasi. (Gambar bawah a, b, c)",
+        "Namun, untuk pemasangan roset lampu dan sejenisnya, diperlukan kualifikasi. (Gambar bawah d)"
+       ]
+      },
+      {
+       "p": "(a) Steker (b) Soket (c) Sakelar (d) Roset Lampu"
+      },
+      {
+       "p": "Kata Kunci"
+      },
+      {
+       "p": "Aturan perundang-undangan: Aturan perundang-undangan adalah istilah umum yang mencakup Undang-Undang yang ditetapkan oleh parlemen serta Peraturan Pemerintah dan Peraturan Menteri yang ditetapkan oleh lembaga eksekutif. Peraturan Pemerintah (Aturan Pelaksana UU) ditetapkan oleh Kabinet, sedangkan Peraturan Menteri (Aturan Pelaksana Rincian) ditetapkan oleh masing-masing menteri. Pelanggaran terhadap aturan perundang-undangan dapat dikenai sanksi."
+      },
+      {
+       "p": "Undang-Undang Keselamatan Peralatan dan Material Listrik: UU yang mengatur pembuatan dan penjualan peralatan dan material listrik. Untuk mencegah timbulnya bahaya dan gangguan yang disebabkan oleh peralatan dan material listrik, sekitar 450 jenis produk ditetapkan sebagai \"Peralatan dan Material Listrik\". Diantaranya, 116 jenis produk yang memerlukan regulasi keselamatan khusus ditetapkan sebagai \"Peralatan dan Material Listrik Tertentu\". Dalam merakit peralatan listrik atau elektronik, diwajibkan menggunakan peralatan dan material listrik yang telah ditentukan."
+      },
+      {
+       "p": "Standar Teknik Sarana Kelistrikan, dan Interpretasi Standar Teknik Sarana Kelistrikan: Standar Teknik Sarana Kelistrikan adalah standar teknis (peraturan menteri) yang berlaku mulai dari pembangkit listrik hingga lokasi penggunaan listrik, seperti pabrik dan rumah tangga. Standar ini menetapkan persyaratan kinerja dan sasaran yang harus dipenuhi oleh sarana listrik, dan bukan ketentuan teknis yang bersifat rinci. Interpretasi Standar Teknik Sarana Kelistrikan memberikan penjelasan lebih konkret mengenai cara memenuhi persyaratan teknis yang ditetapkan dalam peraturan menteri tersebut."
+      },
+      {
+       "p": "Keterangan Tambahan 5-3"
+      },
+      {
+       "p": "Peraturan K3 pasal 333 (tentang pencegahan sengatan listrik akibat arus bocor) [Ringkasan] Mesin atau peralatan dengan tegangan terhadap tanah melebihi 150V harus dilengkapi ELCB untuk mencegah sengatan listrik akibat arus bocor."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Hal ini secara konkret menunjukkan rincian teknis yang memenuhi persyaratan teknis sesuai Peraturan Kementerian pada Bagian 1.2. Meskipun bukan merupakan Peraturan Kementerian, namun digunakan sebagai acuan, antara lain untuk mengutip kriteria atau standar penilaian.",
+      "points": [
+       "Pembumian diperlukan antara lain untuk kasing logam bagian luar peralatan listrik. Namu…",
+       "Untuk memastikan perlindungan terhadap peralatan elektronik yang mendapat suplai listri…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s4",
+    "no": 4,
+    "title": {
+     "id": "Standar Terkait Kelistrikan di Jepang",
+     "jp": "日本の電気関係規格"
+    },
+    "pages": [
+     56,
+     56
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Standar JIS"
+      },
+      {
+       "ul": [
+        "JIS singkatan dari \"Japanese Industrial Standards\". Merupakan standar nasional Jepang yang dalam bahasa Jepang disebut \"Nihon Sangyo Kikaku\".",
+        "Isinya sejalan dengan standar internasional seperti ISO dan IEC."
+       ]
+      },
+      {
+       "p": "(2) Rincian"
+      },
+      {
+       "ul": [
+        "Ada banyak standar untuk komponen, jig dan peralatan, metode dan pengujian yang terkait dengan bidang produk listrik, kabel listrik, telekomunikasi, dan lainnya. Hal tersebut sangat penting dari perspektif menjamin kualitas, keselamatan dan kompatibilitas.",
+        "Tanda JIS dapat dicantumkan pada produk jika kualitas produk tersebut telah disertifikasi sesuai standar JIS."
+       ]
+      },
+      {
+       "p": "Keterangan Tambahan 5-4"
+      },
+      {
+       "p": "Saat ini ada lebih dari 10.000 standar JIS."
+      },
+      {
+       "ul": [
+        "Klasifikasi berdasarkan sifatnya Standar Dasar: Menetapkan hal-hal umum seperti terminologi, simbol dan satuan Standar Metode: Menetapkan metode dan standar kerja untuk pengujian, analisa, inspeksi dan pengukuran Standar Produk: Menetapkan bentuk, dimensi, bahan, kinerja dan fungsi suatu produk",
+        "JIS dibagi menjadi 19 bidang, dan bidang C mencakup elektronik serta mesin listrik. Materi utamanya dibagi menjadi 7 kategori berikut:"
+       ]
+      },
+      {
+       "ol": [
+        "Peralatan serta instrumen pengukuran dan pengujian"
+       ]
+      },
+      {
+       "ol": [
+        "Material"
+       ]
+      },
+      {
+       "ol": [
+        "Kabel listrik, kabel, dan perlengkapan sirkuit listrik"
+       ]
+      },
+      {
+       "ol": [
+        "Peralatan listrik"
+       ]
+      },
+      {
+       "ol": [
+        "Peralatan komunikasi dan elektronik, serta komponen"
+       ]
+      },
+      {
+       "ol": [
+        "Tabung vakum, lampu pijar, perlengkapan penerangan, perlengkapan pengkabelan, baterai"
+       ]
+      },
+      {
+       "ol": [
+        "Peralatan listrik terapan"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Standar JIS",
+      "points": [
+       "JIS singkatan dari \"Japanese Industrial Standards\". Merupakan standar nasional Jepang y…",
+       "Isinya sejalan dengan standar internasional seperti ISO dan IEC.",
+       "Ada banyak standar untuk komponen, jig dan peralatan, metode dan pengujian yang terkait…",
+       "Tanda JIS dapat dicantumkan pada produk jika kualitas produk tersebut telah disertifika…",
+       "Klasifikasi berdasarkan sifatnya Standar Dasar: Menetapkan hal-hal umum seperti termino…",
+       "JIS dibagi menjadi 19 bidang, dan bidang C mencakup elektronik serta mesin listrik. Mat…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s5",
+    "no": 5,
+    "title": {
+     "id": "Standar Jepang Lainnya Terkait Kelistrikan",
+     "jp": "その他の日本の電気関係の規格"
+    },
+    "pages": [
+     57,
+     57
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Standar JEM (Standar Asosiasi Industri Peralatan Listrik Jepang)"
+      },
+      {
+       "ul": [
+        "Standar JEM adalah standar swasta yang dibuat oleh Asosiasi Industri Peralatan Listrik Jepang.",
+        "Selain menetapkan standar produk listrik, standar JEM juga menetapkan standar perancangan, pembuatan, pengujian, dsb untuk peralatan listrik."
+       ]
+      },
+      {
+       "p": "(2) Standar JEITA (Asosiasi Industri Elektronik dan Teknologi Informasi Jepang)"
+      },
+      {
+       "ul": [
+        "Standar JEITA adalah standar swasta yang dibuat oleh Asosiasi Industri Elektronik dan Teknologi Informasi Jepang.",
+        "Standar JEITA menetapkan standar untuk peralatan komunikasi dan elektronik."
+       ]
+      },
+      {
+       "p": "(3) Standar JSIA (Asosiasi Industri Panel Listrik dan Sistem Kontrol Jepang)"
+      },
+      {
+       "ul": [
+        "Standar JSIA adalah standar swasta yang dibuat oleh Asosiasi Industri Panel Listrik dan Sistem Kontrol Jepang.",
+        "Standar JSIA menetapkan standar terkait fungsi, struktur dan pengujian untuk panel kontrol dan panel distribusi."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Standar JEM (Standar Asosiasi Industri Peralatan Listrik Jepang)",
+      "points": [
+       "Standar JEM adalah standar swasta yang dibuat oleh Asosiasi Industri Peralatan Listrik …",
+       "Selain menetapkan standar produk listrik, standar JEM juga menetapkan standar perancang…",
+       "Standar JEITA adalah standar swasta yang dibuat oleh Asosiasi Industri Elektronik dan T…",
+       "Standar JEITA menetapkan standar untuk peralatan komunikasi dan elektronik.",
+       "Standar JSIA adalah standar swasta yang dibuat oleh Asosiasi Industri Panel Listrik dan…",
+       "Standar JSIA menetapkan standar terkait fungsi, struktur dan pengujian untuk panel kont…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s6",
+    "no": 6,
+    "title": {
+     "id": "Standar Terkait Kelistrikan di Luar Negeri",
+     "jp": "海外の電気関係の規格"
+    },
+    "pages": [
+     58,
+     58
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Standar IEC (Komisi Elektroteknik Internasional)"
+      },
+      {
+       "ul": [
+        "IEC (Komisi Elektroteknik Internasional) adalah organisasi internasional yang menetapkan standar kelistrikan internasional.",
+        "Standar IEC yang diterbitkan oleh IEC ini merupakan standar internasional yang berkaitan dengan peralatan dan sistem kelistrikan."
+       ]
+      },
+      {
+       "p": "(2) Standar NEC (National Electrical Code)"
+      },
+      {
+       "ul": [
+        "Standar NEC adalah standar kelistrikan AS yang mencakup persyaratan keselamatan sarana kelistrikan, ketentuan pengkabelan, penggunaan peralatan listrik, dsb."
+       ]
+      },
+      {
+       "p": "(3) Standar VDE (Verband der Elektrotechnik Elektronik Informationstechnik)"
+      },
+      {
+       "ul": [
+        "Merupakan standar kelistrikan Jerman yang menetapkan standar keselamatan listrik dan kinerja peralatan elektronik."
+       ]
+      },
+      {
+       "p": "(4) Standar IEEE (Institute of Electrical and Electronics Engineers)"
+      },
+      {
+       "ul": [
+        "Merupakan standar teknik listrik dan elektronik yang diterbitkan oleh IEEE."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Standar IEC (Komisi Elektroteknik Internasional)",
+      "points": [
+       "IEC (Komisi Elektroteknik Internasional) adalah organisasi internasional yang menetapka…",
+       "Standar IEC yang diterbitkan oleh IEC ini merupakan standar internasional yang berkaita…",
+       "Standar NEC adalah standar kelistrikan AS yang mencakup persyaratan keselamatan sarana …",
+       "Merupakan standar kelistrikan Jerman yang menetapkan standar keselamatan listrik dan ki…",
+       "Merupakan standar teknik listrik dan elektronik yang diterbitkan oleh IEEE."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b5s7",
+    "no": 7,
+    "title": {
+     "id": "Hubungan antara Standar Domestik dan Standar Internasional",
+     "jp": "国内規格と海外規格の関係"
+    },
+    "pages": [
+     59,
+     59
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Produk ekspor perlu untuk diproduksi dan dirakit dengan memenuhi standar luar negeri yang relevan."
+      },
+      {
+       "p": "Standar JIS merupakan standar nasional Jepang yang telah diselaraskan dengan standar internasional. Standar JIS juga disusun dengan menerjemahkan standar internasional seperti ISO dan IEC. Simbol gambar kelistrikan juga telah diubah agar sesuai standar IEC, tetapi masih ada beberapa simbol yang digunakan secara berdampingan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Produk ekspor perlu untuk diproduksi dan dirakit dengan memenuhi standar luar negeri yang relevan.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,706 @@
+{
+ "schema": 1,
+ "bidang": "jaim-metal-surface",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 金属表面処理 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab10",
+  "no": 10,
+  "title": {
+   "id": "Perlakuan Permukaan Logam",
+   "jp": "金属の表面処理"
+  },
+  "intro": {
+   "id": "Bab 10 buku resmi JAIM."
+  },
+  "pages": [
+   137,
+   151
+  ],
+  "subs": [
+   {
+    "id": "b10s1",
+    "no": 1,
+    "title": {
+     "id": "Tujuan Perlakuan Permukaan",
+     "jp": "表面処理の目的"
+    },
+    "pages": [
+     137,
+     137
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Peningkatan Ketahanan Korosi (mencegah karat)"
+      },
+      {
+       "ul": [
+        "Digunakan untuk meningkatkan ketahanan korosi logam dasar (mencegah karat logam dasar).",
+        "Melindungi komponen otomotif, bahan atap dan dinding, serta produk elektronik rumah tangga dari oksidasi dan karat."
+       ]
+      },
+      {
+       "p": "(2) Peningkatan Estetika (memperindah tampilan)"
+      },
+      {
+       "ul": [
+        "Digunakan untuk meningkatkan estetika logam dasar (memperindah tampilan).",
+        "Melalui proses pelapisan, memberikan kilau, nuansa logam dan kesan mewah pada aksesori.",
+        "Pada proses anodisasi, lapisan dapat diwarnai sehingga dapat menghasilkan tampilan warna-warni."
+       ]
+      },
+      {
+       "p": "(3) Peningkatan Ketahanan Aus (mengeraskan permukaan, membuat sulit ter gores)"
+      },
+      {
+       "ul": [
+        "Digunakan untuk meningkatkan ketahanan aus pada permukaan logam dasar. Permukaan dibuat lebih keras dan sulit tergores.",
+        "Digunakan untuk mengeraskan permukaan logam dasar pada peralatan, komponen otomotif, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(4) Tujuan Lainnya"
+      },
+      {
+       "ul": [
+        "Digunakan untuk mengubah konduktivitas listrik logam dasar.",
+        "Digunakan untuk meningkatkan kemudahan penyambungan (penyolderan, bonding).",
+        "Digunakan untuk membuat jalur konduktor PCB, komponen elektronik, dan sebagainya.",
+        "Digunakan untuk meningkatkan kinerja, seperti sifat magnetik."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Peningkatan Ketahanan Korosi (mencegah karat)",
+      "points": [
+       "Digunakan untuk meningkatkan ketahanan korosi logam dasar (mencegah karat logam dasar).",
+       "Melindungi komponen otomotif, bahan atap dan dinding, serta produk elektronik rumah tan…",
+       "Digunakan untuk meningkatkan estetika logam dasar (memperindah tampilan).",
+       "Melalui proses pelapisan, memberikan kilau, nuansa logam dan kesan mewah pada aksesori.",
+       "Pada proses anodisasi, lapisan dapat diwarnai sehingga dapat menghasilkan tampilan warn…",
+       "Digunakan untuk meningkatkan ketahanan aus pada permukaan logam dasar. Permukaan dibuat…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s2",
+    "no": 2,
+    "title": {
+     "id": "klasifikasi Perlakuan Permukaan",
+     "jp": "表面処理の分類"
+    },
+    "pages": [
+     138,
+     139
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Perlakuan permukaan mencakup metode seperti ditunjukkan Gambar 10-1.",
+        "Pelapisan logam adalah metode membentuk lapisan logam pada permukaan logam, resin, dsb.",
+        "Anodisasi adalah metode mengoksidasi permukaan logam dan membentuk lapisan oksida.",
+        "Perlakuan konversi kimia adalah metode membentuk lapisan senyawa (seperti fosfat) pada permukaan logam melalui reaksi kimia.",
+        "Pengecatan adalah metode membentuk lapisan resin pada permukaan logam.",
+        "Metode lainnya mencakup penyemprotan termal, etsa, pemolesan, pengerasan (quenching), nitridasi, dan sebagainya. perlakuan pelapisan celup permukaan pelapisan logam panas"
+       ]
+      },
+      {
+       "p": "pelapisan basah pelapisan listrik"
+      },
+      {
+       "p": "pelapisan tanpa elektrolisis"
+      },
+      {
+       "p": "pelapisan kering"
+      },
+      {
+       "p": "anodisasi"
+      },
+      {
+       "p": "perlakuan konversi kimia"
+      },
+      {
+       "p": "pengecatan"
+      },
+      {
+       "p": "lain-lain"
+      },
+      {
+       "p": "Gambar 10-1: klasifikasi Perlakuan Permukaan"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "pelapisan basah pelapisan listrik",
+      "points": [
+       "Perlakuan permukaan mencakup metode seperti ditunjukkan Gambar 10-1.",
+       "Pelapisan logam adalah metode membentuk lapisan logam pada permukaan logam, resin, dsb.",
+       "Anodisasi adalah metode mengoksidasi permukaan logam dan membentuk lapisan oksida.",
+       "Perlakuan konversi kimia adalah metode membentuk lapisan senyawa (seperti fosfat) pada …",
+       "Pengecatan adalah metode membentuk lapisan resin pada permukaan logam.",
+       "Metode lainnya mencakup penyemprotan termal, etsa, pemolesan, pengerasan (quenching), n…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s3",
+    "no": 3,
+    "title": {
+     "id": "Karakteristik Berbagai Perlakuan Permukaan",
+     "jp": "各種表面処理の特徴"
+    },
+    "pages": [
+     140,
+     140
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Karakteristik pelapisan, anodisasi, konversi kimia, pengecatan, dan lainnya dirangkum pada Tabel 10-1."
+      },
+      {
+       "p": "Tabel 10-1: klasifikasi Perlakuan Permukaan Lapisan Metode Bahan Dasar Fungsionalitas Jenis Ketebalan Logam (seperti baja, Logam (seng, ketahanan korosi, ketahanan Pelapisan tembaga, paduan kromium, nikel, sekitar 0,1–150 μm aus, konduktivitas listrik, logam aluminium), resin, emas, timah, dsb) dekoratif dsb ketahanan korosi, ketahanan Aluminium, titanium, Lapisan oksida aus, isolasi listrik, Anodisasi magnesium (alumina, dsb) sekitar 1–150 μm kemudahan pewarnaan, sifat katalitik"
+      },
+      {
+       "p": "Logam (baja, Perlakuan lembaran baja Lapisan senyawa ketahanan korosi, Konversi berlapis seng, baja (fosfat, oksida sekitar 0,01–20 μm kemudahan pelumasan, Kimia tahan karat, kromat, dsb) lapisan dasar pengecatan aluminium, dsb)"
+      },
+      {
+       "p": "Logam (baja, baja tahan karat, ketahanan korosi, sifat Pengecatan aluminium, dsb), Lapisan resin sekitar 15–150 μm kedap air, ketahanan cuaca, resin, kayu dan estetika, isolasi panas lainnya"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Karakteristik pelapisan, anodisasi, konversi kimia, pengecatan, dan lainnya dirangkum pada Tabel 10-1.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s4",
+    "no": 4,
+    "title": {
+     "id": "Contoh Penerapan",
+     "jp": "{適用例|てきようれい}"
+    },
+    "pages": [
+     140,
+     142
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Perlakuan permukaan logam diterapkan dalam berbagai bidang. Disini akan dijelaskan contoh aplikasinya."
+      },
+      {
+       "p": "(1) Otomotif"
+      },
+      {
+       "ul": [
+        "Pada panel eksterior (seperti pintu dan spakbor), digunakan pelapisan seng, perlakuan fosfat, pengecatan, dsb untuk meningkatkan ketahanan korosi.",
+        "Pada baut dan mur juga digunakan pelapisan seng, perlakuan kromat, dsb untuk meningkatkan ketahanan korosi.",
+        "Pada gagang pintu dan grille (kisi depan mobil), digunakan pelapisan nikel- kromium, pengecatan, dsb untuk meningkatkan estetika."
+       ]
+      },
+      {
+       "p": "(2) Peralatan Listrik Rumah Tangga dan Perangkat Elektronik"
+      },
+      {
+       "ul": [
+        "Pada panel eksterior kulkas, mesin cuci, dsb digunakan pengecatan untuk meningkatkan estetika dan ketahanan korosi.",
+        "Pada unit HP, tablet, dan sejenisnya, digunakan anodisasi, PVD, dsb untuk meningkatkan estetika dan ketahanan sidik jari (mencegah penempelan sidik jari).",
+        "Pada terminal catudaya, unit kontak, dsb digunakan pelapisan nikel, emas, timah, dan sejenisnya untuk meningkatkan konduktivitas listrik dan kemudahan penyambungan."
+       ]
+      },
+      {
+       "p": "(3) Semikonduktor dan Komponen Elektronik"
+      },
+      {
+       "ul": [
+        "Pada jalur pengkabelan internal, digunakan pelapisan tembaga, PVD, CVD, dan sebagainya.",
+        "Pada terminal catudaya, unit kontak, dsb digunakan pelapisan nikel, emas, timah, dan sejenisnya untuk meningkatkan konduktivitas listrik dan kemudahan penyambungan."
+       ]
+      },
+      {
+       "p": "(4) Bahan Bangunan"
+      },
+      {
+       "ul": [
+        "Pada bahan dinding eksterior dan atap, digunakan pelapisan celup panas menggunakan seng, paduan seng, paduan seng-aluminium, dsb, serta perlakuan kromat, pengecatan, dan lainnya untuk ketahanan korosi dan estetika.",
+        "Pada kusen dan rangka jendela, dsb digunakan anodisasi, pengecatan, dan sejenisnya untuk ketahanan korosi dan estetika."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Perlakuan permukaan logam diterapkan dalam berbagai bidang. Disini akan dijelaskan contoh aplikasinya.",
+      "points": [
+       "Pada panel eksterior (seperti pintu dan spakbor), digunakan pelapisan seng, perlakuan f…",
+       "Pada baut dan mur juga digunakan pelapisan seng, perlakuan kromat, dsb untuk meningkatk…",
+       "Pada gagang pintu dan grille (kisi depan mobil), digunakan pelapisan nikel- kromium, pe…",
+       "Pada panel eksterior kulkas, mesin cuci, dsb digunakan pengecatan untuk meningkatkan es…",
+       "Pada unit HP, tablet, dan sejenisnya, digunakan anodisasi, PVD, dsb untuk meningkatkan …",
+       "Pada terminal catudaya, unit kontak, dsb digunakan pelapisan nikel, emas, timah, dan se…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s5",
+    "no": 5,
+    "title": {
+     "id": "Pengertian Pelapisan Logam",
+     "jp": "めっきとは"
+    },
+    "pages": [
+     143,
+     143
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Pelapisan logam adalah metode membentuk lapisan logam pada permukaan logam, resin, dan sebagainya.",
+        "Secara garis besar, pelapisan logam dapat diklasifikasikan menjadi pelapisan celup panas, pelapisan kering, dan pelapisan basah.",
+        "Digunakan untuk meningkatkan kinerja seperti ketahanan korosi, ketahanan aus, estetika, konduktivitas listrik, dan lainnya."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pelapisan logam adalah metode membentuk lapisan logam pada permukaan logam, resin, dan …",
+      "points": [
+       "Pelapisan logam adalah metode membentuk lapisan logam pada permukaan logam, resin, dan …",
+       "Secara garis besar, pelapisan logam dapat diklasifikasikan menjadi pelapisan celup pana…",
+       "Digunakan untuk meningkatkan kinerja seperti ketahanan korosi, ketahanan aus, estetika,…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s6",
+    "no": 6,
+    "title": {
+     "id": "Jenis-jenis Pelapisan Logam",
+     "jp": "めっきの{種類|しゅるい}"
+    },
+    "pages": [
+     143,
+     143
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pelapisan Celup Panas"
+      },
+      {
+       "ul": [
+        "Merupakan metode pembentukan lapisan dengan mencelupkan bahan dasar ke bak berisi logam yang dilelehkan pada suhu tinggi.",
+        "Ada pelapisan seng celup panas, pelapisan paduan seng-besi celup panas, pelapisan aluminium celup panas, pelapisan paduan seng- aluminium celup panas, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(2) Pelapisan Basah"
+      },
+      {
+       "ul": [
+        "Merupakan metode pembentukan lapisan logam pada permukaan bahan dasar dengan mereduksi ion logam di dalam larutan. Ada pelapisan listrik dan pelapisan tanpa elektrolisis.",
+        "Pelapisan listrik merupakan metode pembentukan lapisan logam dengan mereduksi ion logam di dalam larutan dengan cara mengalirkan arus listrik pada bahan dasar.",
+        "Pelapisan tanpa elektrolisis merupakan metode pembentukan lapisan logam dengan mereduksi ion logam menggunakan zat pereduksi dan sebagainya. Arus listrik tidak dialirkan."
+       ]
+      },
+      {
+       "p": "(3) Pelapisan Kering"
+      },
+      {
+       "ul": [
+        "Pelapisan kering dilakukan di ruang vakum dan terdiri atas PVD (Physical Vapor Deposition, metode deposisi uap secara fisik) dan CVD (Chemical Vapor Deposition, metode deposisi uap secara kimia).",
+        "PVD adalah metode melalui evaporasi atau sputtering terhadap logam, untuk kemudian dibuat menempel pada bahan dasar.",
+        "CVD adalah metode dengan bahan baku berbentuk gas yang mengalami reaksi kimia pada permukaan bahan dasar."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pelapisan Celup Panas",
+      "points": [
+       "Merupakan metode pembentukan lapisan dengan mencelupkan bahan dasar ke bak berisi logam…",
+       "Ada pelapisan seng celup panas, pelapisan paduan seng-besi celup panas, pelapisan alumi…",
+       "Merupakan metode pembentukan lapisan logam pada permukaan bahan dasar dengan mereduksi …",
+       "Pelapisan listrik merupakan metode pembentukan lapisan logam dengan mereduksi ion logam…",
+       "Pelapisan tanpa elektrolisis merupakan metode pembentukan lapisan logam dengan mereduks…",
+       "Pelapisan kering dilakukan di ruang vakum dan terdiri atas PVD (Physical Vapor Depositi…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s7",
+    "no": 7,
+    "title": {
+     "id": "Pengertian Anodisasi",
+     "jp": "{陽極酸化|ようきょくさんか}とは"
+    },
+    "pages": [
+     144,
+     144
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Anodisasi adalah metode untuk membentuk lapisan oksida pada permukaan logam seperti aluminium.",
+        "Dengan menjadikan bahan dasar (logam) sebagai anoda dan mengalirkan arus, lapisan oksida terbentuk pada permukaan bahan dasar.",
+        "Digunakan untuk peningkatan kinerja seperti ketahanan korosi, estetika, ketahanan aus, dsb."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Anodisasi adalah metode untuk membentuk lapisan oksida pada permukaan logam seperti alu…",
+      "points": [
+       "Anodisasi adalah metode untuk membentuk lapisan oksida pada permukaan logam seperti alu…",
+       "Dengan menjadikan bahan dasar (logam) sebagai anoda dan mengalirkan arus, lapisan oksid…",
+       "Digunakan untuk peningkatan kinerja seperti ketahanan korosi, estetika, ketahanan aus, …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s8",
+    "no": 8,
+    "title": {
+     "id": "Karakteristik Lapisan Anodisasi",
+     "jp": "陽極酸化皮膜の特徴"
+    },
+    "pages": [
+     144,
+     145
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Bahan dasar terbatas pada aluminium, titanium, magnesium, dan lainnya.",
+        "Lapisan anodisasi aluminium (alumite) terdiri dari lapisan penghalang yang rapat dan lapisan berpori yang memiliki pori-pori halus.",
+        "Arus yang digunakan antara lain arus DC, arus AC dan arus AC superimposisi.",
+        "Berbagai warna dapat dihasilkan melalui kombinasi jenis bahan dasar dan kondisi elektrolisis.",
+        "Dengan menambahkan zat pewarna atau pigmen pada lapisan berpori, dapat diperoleh warna yang indah."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bahan dasar terbatas pada aluminium, titanium, magnesium, dan lainnya.",
+      "points": [
+       "Bahan dasar terbatas pada aluminium, titanium, magnesium, dan lainnya.",
+       "Lapisan anodisasi aluminium (alumite) terdiri dari lapisan penghalang yang rapat dan la…",
+       "Arus yang digunakan antara lain arus DC, arus AC dan arus AC superimposisi.",
+       "Berbagai warna dapat dihasilkan melalui kombinasi jenis bahan dasar dan kondisi elektro…",
+       "Dengan menambahkan zat pewarna atau pigmen pada lapisan berpori, dapat diperoleh warna …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s9",
+    "no": 9,
+    "title": {
+     "id": "Ringkasan dan Tujuan",
+     "jp": "概要、目的"
+    },
+    "pages": [
+     146,
+     146
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Konversi Kimia"
+      },
+      {
+       "ul": [
+        "Perlakuan konversi kimia dilakukan dengan mencelupkan logam ke larutan yang mengandung fosfat, kromium, atau lainnya, sehingga terjadi reaksi kimia pada permukaan logam.",
+        "Merupakan metode untuk membentuk lapisan yang memiliki sifat yang berbeda dengan sifat bahan dasar."
+       ]
+      },
+      {
+       "p": "(2) Tujuan"
+      },
+      {
+       "ul": [
+        "Meningkatkan ketahanan korosi logam bahan dasar.",
+        "Sebagai perlakuan dasar sebelum pengecatan, untuk meningkatkan daya lekat lapisan cat."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Konversi Kimia",
+      "points": [
+       "Perlakuan konversi kimia dilakukan dengan mencelupkan logam ke larutan yang mengandung …",
+       "Merupakan metode untuk membentuk lapisan yang memiliki sifat yang berbeda dengan sifat …",
+       "Meningkatkan ketahanan korosi logam bahan dasar.",
+       "Sebagai perlakuan dasar sebelum pengecatan, untuk meningkatkan daya lekat lapisan cat."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s10",
+    "no": 10,
+    "title": {
+     "id": "Jenis Perlakuan Konversi Kimia",
+     "jp": "化成処理の種類"
+    },
+    "pages": [
+     146,
+     148
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Perlakuan Fosfat"
+      },
+      {
+       "ul": [
+        "Bahan dasar dicelupkan ke larutan berbasis fosfat untuk membentuk lapisan fosfat pada permukaan.",
+        "Larutan untuk perlakuan, antara lain digunakan seng fosfat, besi fosfat, mangan fosfat, kalsium fosfat, dan sebagainya.",
+        "Memiliki efek melindungi permukaan serta meningkatkan ketahanan korosi, daya lekat cat, kemudahan pelumasan, dan sebagainya.",
+        "Terutama digunakan untuk perlakuan pada produk baja."
+       ]
+      },
+      {
+       "p": "(2) Perlakuan Kromat"
+      },
+      {
+       "ul": [
+        "Bahan dasar dicelupkan ke larutan yang mengandung kromium heksavalen dan kromium trivalen untuk membentuk lapisan oksida pada permukaan.",
+        "Lapisan oksida memiliki kemampuan self-healing, sehingga dapat meningkatkan ketahanan korosi dan mencegah perubahan warna.",
+        "Ada pula kromat berwarna untuk sebagai pengganti pengecatan, dan kromat dasar pengecatan sebagai perlakuan dasar sebelum pengecatan.",
+        "Terutama digunakan untuk perlakuan terhadap bahan dasar (produk baja) yang diberi pelapisan seng."
+       ]
+      },
+      {
+       "p": "(3) Perlakuan Zinkat"
+      },
+      {
+       "ul": [
+        "Bahan dasar dicelupkan ke larutan yang mengandung zinkat (garam sengat) untuk membentuk lapisan seng.",
+        "Digunakan sebagai perlakuan awal sebelum pelapisan pada paduan aluminium dan paduan magnesium.",
+        "Lapisan oksida pada bahan dasar hilang terlarut, dan dibentuk lapisan seng guna meningkatkan daya lekat pelapisan berikutnya.",
+        "Untuk meningkatkan daya lekat tersebut, ada juga perlakuan zinkat ganda, yaitu perlakuan zinkat yang dilakukan 2 kali."
+       ]
+      },
+      {
+       "p": "(4) Perlakuan Penghitaman"
+      },
+      {
+       "ul": [
+        "Bahan dasar dicelupkan ke larutan alkali untuk membentuk lapisan oksida berwarna hitam.",
+        "Digunakan sebagai perlakuan konversi kimia pada produk baja.",
+        "Permukaan berubah hitam karena terbentuk lapisan oksida tipis (besi(II,III) oksida, Fe₃O₄).",
+        "Ketahanan korosi dan panas meningkat, serta tampilan menjadi lebih baik.",
+        "Efek ketahanan korosi memang lebih rendah dibanding konversi kimia lainnya, dan biaya juga lebih rendah."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Perlakuan Fosfat",
+      "points": [
+       "Bahan dasar dicelupkan ke larutan berbasis fosfat untuk membentuk lapisan fosfat pada p…",
+       "Larutan untuk perlakuan, antara lain digunakan seng fosfat, besi fosfat, mangan fosfat,…",
+       "Memiliki efek melindungi permukaan serta meningkatkan ketahanan korosi, daya lekat cat,…",
+       "Terutama digunakan untuk perlakuan pada produk baja.",
+       "Bahan dasar dicelupkan ke larutan yang mengandung kromium heksavalen dan kromium trival…",
+       "Lapisan oksida memiliki kemampuan self-healing, sehingga dapat meningkatkan ketahanan k…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s11",
+    "no": 11,
+    "title": {
+     "id": "Ringkasan dan Tujuan",
+     "jp": "概要、目的"
+    },
+    "pages": [
+     149,
+     149
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Pengecatan"
+      },
+      {
+       "ul": [
+        "Pengecatan merupakan metode untuk membentuk lapisan cat (resin) pada permukaan bahan dasar.",
+        "Bahan dasar dapat berupa logam, plastik, beton, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(2) Tujuan"
+      },
+      {
+       "ul": [
+        "Melindungi permukaan bahan dasar dari oksigen dan kelembaban serta meningkatkan ketahanan korosi.",
+        "Melindungi permukaan bahan dasar dari goresan dan sebagainya.",
+        "Meningkatkan estetika bahan dasar melalui berbagai warna dan pola.",
+        "Dapat menambahkan fungsi seperti anti‑selip, sifat menolak air, dan lainnya."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Pengecatan",
+      "points": [
+       "Pengecatan merupakan metode untuk membentuk lapisan cat (resin) pada permukaan bahan da…",
+       "Bahan dasar dapat berupa logam, plastik, beton, dan sebagainya.",
+       "Melindungi permukaan bahan dasar dari oksigen dan kelembaban serta meningkatkan ketahan…",
+       "Melindungi permukaan bahan dasar dari goresan dan sebagainya.",
+       "Meningkatkan estetika bahan dasar melalui berbagai warna dan pola.",
+       "Dapat menambahkan fungsi seperti anti‑selip, sifat menolak air, dan lainnya."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s12",
+    "no": 12,
+    "title": {
+     "id": "Metode Pengecatan",
+     "jp": "塗装の方法"
+    },
+    "pages": [
+     149,
+     149
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengecatan Semprot"
+      },
+      {
+       "ul": [
+        "Cat diatomisasi dengan udara bertekanan untuk pelapisan.",
+        "Dapat mengecat merata bahkan pada bentuk kompleks."
+       ]
+      },
+      {
+       "p": "(2) Pengecatan Elektrostatik"
+      },
+      {
+       "ul": [
+        "Cat yang diatomisasi diberi muatan negatif, sedangkan bahan dasar diberi muatan positif, dan cat ditempelkan dengan gaya elektrostatik.",
+        "Pemborosan cat sedikit, tetapi perlu peralatan yang besar dan kompleks."
+       ]
+      },
+      {
+       "p": "(3) Pengecatan Elektroforesis"
+      },
+      {
+       "ul": [
+        "Produk dicelupkan ke larutan resin, dan pengecatan dilakukan dengan mengalirkan arus DC.",
+        "Ada pengecatan elektroforesis anionik dan elektroforesis kationik.",
+        "Dapat membentuk lapisan cat yang seragam dengan ketahanan korosi sangat baik, sehingga digunakan pada panel eksterior otomotif dan sebagainya. Pada bidang otomotif digunakan pengecatan elektroforesis kationik.",
+        "Biaya peralatannya tinggi."
+       ]
+      },
+      {
+       "p": "(4) Pengecatan Serbuk"
+      },
+      {
+       "ul": [
+        "Serbuk cat ditempelkan ke bahan dasar secara elektrostatik atau penyemprotan termal, lalu dipanaskan agar meleleh dan membentuk lapisan.",
+        "Tak memerlukan pelarut sehingga ramah lingkungan, dan memungkinkan pengecatan lapisan tebal.",
+        "Biaya peralatannya tinggi."
+       ]
+      },
+      {
+       "p": "(5) Pengecatan Panggang"
+      },
+      {
+       "ul": [
+        "Bahan dasar yang telah dicat dipanaskan pada suhu tinggi untuk mengeraskan lapisan cat.",
+        "Dapat menghasilkan lapisan cat dengan daya tahan yang tinggi dan sangat tahan panas, serta mampu mempertahankan keindahan dalam waktu lama."
+       ]
+      },
+      {
+       "p": "(6) Pengecatan Celup"
+      },
+      {
+       "ul": [
+        "Pengecatan dilakukan dengan mencelupkan bahan dasar ke dalam cat.",
+        "Karena mudah timbul pola garis atau sejenisnya, tampilan permukaan menjadi kurang baik."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengecatan Semprot",
+      "points": [
+       "Cat diatomisasi dengan udara bertekanan untuk pelapisan.",
+       "Dapat mengecat merata bahkan pada bentuk kompleks.",
+       "Cat yang diatomisasi diberi muatan negatif, sedangkan bahan dasar diberi muatan positif…",
+       "Pemborosan cat sedikit, tetapi perlu peralatan yang besar dan kompleks.",
+       "Produk dicelupkan ke larutan resin, dan pengecatan dilakukan dengan mengalirkan arus DC.",
+       "Ada pengecatan elektroforesis anionik dan elektroforesis kationik."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s13",
+    "no": 13,
+    "title": {
+     "id": "Jenis Cat",
+     "jp": "塗料の種類"
+    },
+    "pages": [
+     150,
+     151
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Ada cat berbasis air dan cat berbasis minyak. Cat berbasis minyak memiliki daya tahan lebih tinggi dan kemampuan menghasilkan warna lebih baik.",
+        "Resin yang terkandung dalam cat antara lain resin berbasis akrilik, berbasis uretan, berbasis silikon, berbasis fluor, dan lainnya. Cat berbasis fluor memiliki daya tahan paling tinggi.",
+        "Ada cat 1-komponen, yang hanya terdiri dari 1 jenis cat; dan cat 2-komponen, yang terdiri dari 2 jenis cat yang dicampurkan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ada cat berbasis air dan cat berbasis minyak. Cat berbasis minyak memiliki daya tahan l…",
+      "points": [
+       "Ada cat berbasis air dan cat berbasis minyak. Cat berbasis minyak memiliki daya tahan l…",
+       "Resin yang terkandung dalam cat antara lain resin berbasis akrilik, berbasis uretan, be…",
+       "Ada cat 1-komponen, yang hanya terdiri dari 1 jenis cat; dan cat 2-komponen, yang terdi…"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

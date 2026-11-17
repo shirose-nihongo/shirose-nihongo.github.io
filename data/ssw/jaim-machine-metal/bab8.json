@@ -1,0 +1,428 @@
+{
+ "schema": 1,
+ "bidang": "jaim-machine-metal",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 機械金属加工 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab8",
+  "no": 8,
+  "title": {
+   "id": "Pengoperasian dan Pengelolaan Mesin",
+   "jp": "機械の操作・管理"
+  },
+  "intro": {
+   "id": "Bab 8 buku resmi JAIM."
+  },
+  "pages": [
+   107,
+   121
+  ],
+  "subs": [
+   {
+    "id": "b8s1",
+    "no": 1,
+    "title": {
+     "id": "Prinsip-prinsip Manajemen Keselamatan dan Kepatuhan hukum",
+     "jp": "安全管理原則と法的遵守"
+    },
+    "pages": [
+     107,
+     108
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Mencegah Kecelakaan dan Bekerja dengan Aman"
+      },
+      {
+       "p": "Untuk mencegah kecelakaan di tempat kerja serta bekerja dengan sehat dan aman, sangat penting untuk mematuhi seluruh peraturan perusahaan. Peraturan- peraturan tersebut dibuat berdasarkan pelajaran yang dipetik dari kecelakaan di masa lalu serta bertujuan untuk melindungi nyawa dan kesehatan pekerja."
+      },
+      {
+       "p": "(2) Regulasi Perlindungan Pekerja"
+      },
+      {
+       "p": "Dalam aturan perundang-undangan di Jepang telah ditetapkan berbagai regulasi untuk melindungi keselamatan dan kesehatan pekerja. Misalnya, untuk mengoperasikan mesin khusus seperti forklift atau robot industri, personel wajib memiliki kualifikasi atau mengikuti pelatihan yang ditetapkan oleh pemerintah. Itu karena penggunaan mesin-mesin tersebut secara tidak benar dapat menyebabkan kecelakaan serius."
+      },
+      {
+       "p": "Selain itu, saat bekerja di tempat tinggi (2 m atau lebih), berdasarkan ketentuan UU, wajib menggunakan alat penahan jatuh (tali pengaman atau sabuk pengaman) untuk melindungi nyawa jika terjatuh. Untuk menghilangkan risiko jatuh, penting untuk selalu mengenakan alat penahan jatuh saat melakukan pekerjaan di ketinggian. Ada yang disebut pengikatan beban (tamagake), yaitu memasang dan melepaskan muatan pada kait crane. Untuk pengikatan beban ini pun, pekerja tidak boleh melakukan tanpa mengikuti pelatihan dan memperoleh kualifikasi."
+      },
+      {
+       "p": "Selain itu, perusahaan juga memiliki kewajiban untuk melindungi para pekerjanya. Saat bekerja di tempat panas, pekerja wajib dipastikan mendapat cukup cairan dan asupan garam agar tak mengalami serangan panas (heatstroke). Karena melalui revisi Peraturan K3 Jepang tahun 2020, aturan pencegahan serangan panas telah dibuat lebih jelas. Pihak pengusaha juga memiliki tanggungjawab, tak hanya menjaga lingkungan kerja yang aman, tetapi juga mengarahkan karyawan agar mengambil waktu istirahat dan mengkonsumsi cukup cairan dengan cukup."
+      },
+      {
+       "p": "(3) Hukum Heinrich"
+      },
+      {
+       "p": "Ada suatu konsep yang dikenal dengan Hukum Heinrich. Ini berarti bahwa di balik satu kecelakaan serius, terdapat 29 kecelakaan ringan dan 300 kejadian nyaris celaka (peristiwa yang menimbulkan rasa kaget dan nyaris terjadi kecelakaan)."
+      },
+      {
+       "p": "Hukum ini menunjukkan bahwa mengabaikan bahaya kecil pada akhirnya dapat menyebabkan kecelakaan besar. Oleh karena itu, jika ada hal yang, sekecil apapun, sekiranya berbahaya, penting untuk segera melaporkan kepada atasan agar masalah bisa diatasi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Mencegah Kecelakaan dan Bekerja dengan Aman",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s2",
+    "no": 2,
+    "title": {
+     "id": "Pengoperasian Mesin dan Pencegahan Bahaya",
+     "jp": "機械操作と危険防止"
+    },
+    "pages": [
+     109,
+     111
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Menggunakan Mesin dengan Aman"
+      },
+      {
+       "p": "Untuk menggunakan mesin dengan aman, perlu memahami dengan baik cara penggunaan yang benar serta berbagai potensi bahaya yang ada pada mesin tersebut. Mesin atau peralatan yang tidak dikenal sama sekali tidak diperbolehkan disentuh atau dioperasikan tanpa ijin. Hal itu karena mesin dapat beroperasi secara tiba-tiba dan menyebabkan cedera yang tak terduga."
+      },
+      {
+       "p": "Sebelum mulai bekerja, selalu pastikan mesin berfungsi dengan baik. Jika ada kerusakan, perbaiki terlebih dahulu sebelum menggunakannya."
+      },
+      {
+       "p": "Selain itu, mesin yang menggunakan listrik secara langsung sebagai sumber tenaga wajib dihubungkan ke arde (pembumian) untuk mencegah sengatan listrik. Juga, jangan pernah menyentuh stopkontak atau sakelar listrik dengan tangan basah karena dapat menyebabkan sengatan listrik."
+      },
+      {
+       "p": "(2) Poin-poin Perhatian Setiap Mesin"
+      },
+      {
+       "p": "Berikut hal-hal yang perlu diperhatikan secara khusus untuk setiap jenis mesin."
+      },
+      {
+       "ol": [
+        "Mesin dan Peralatan Berputar"
+       ]
+      },
+      {
+       "ul": [
+        "Mesin bor duduk: Mata bor berputar dengan kecepatan tinggi. Karena sarung tangan bisa tersangkut oleh mata bor dan menyebabkan cedera parah pada jari atau tangan, sarung tangan tidak boleh dipakai saat bekerja.",
+        "Gerinda: Jika pada \"batu gerinda\" ada retak atau cacat, batu gerinda dapat pecah dan terlempar dengan kecepatan tinggi saat digunakan. Sebelum digunakan, periksa secara visual, putar ringan tanpa kontak benda kerja, dan pastikan pemasangan batu gerinda sudah benar. Selain itu, bagian sisi batu gerinda relatif mudah rusak, dan jika digunakan menggerinda dari samping, ada risiko pecah."
+       ]
+      },
+      {
+       "ol": [
+        "Mesin dengan Serpihan Potong"
+       ]
+      },
+      {
+       "ul": [
+        "Mesin bubut: Serpihan tajam keluar dari mesin bubut, dan jika disentuh dengan tangan kosong dapat menyebabkan luka bakar atau cedera. Pastikan mematikan mesin terlebih dahulu sebelum membersihkannya dengan sikat atau sapu. Jangan menyentuh dengan tangan kosong."
+       ]
+      },
+      {
+       "ol": [
+        "Mesin Pengangkat Beban"
+       ]
+      },
+      {
+       "ul": [
+        "Crane: Saat mengangkat muatan berat, ada risiko kawat putus atau muatan terjatuh. Jangan pernah berada di bawah benda yang sedang diangkat. Semakin besar sudut kawat, semakin besar gaya yang bekerja pada kawat, sehingga semakin berbahaya."
+       ]
+      },
+      {
+       "ol": [
+        "Alat Pengencang Baut"
+       ]
+      },
+      {
+       "ul": [
+        "Kunci impak: Jika baut sulit masuk saat sedang dikencangkan, jangan memaksakan dengan memukul kepala baut dengan palu. Memukul dengan palu dapat menyebabkan ulir baut mengalami deformasi atau penyok. Jika itu terjadi, mur tidak dapat diputar, dan baut tidak dapat dikencangkan dengan baik, sehingga berisiko lepas saat digunakan dan menimbulkan cedera."
+       ]
+      },
+      {
+       "p": "Pahami aturan-aturan tersebut beserta alasannya, dan gunakan mesin dengan aman."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Menggunakan Mesin dengan Aman",
+      "points": [
+       "Mesin bor duduk: Mata bor berputar dengan kecepatan tinggi. Karena sarung tangan bisa t…",
+       "Gerinda: Jika pada \"batu gerinda\" ada retak atau cacat, batu gerinda dapat pecah dan te…",
+       "Mesin bubut: Serpihan tajam keluar dari mesin bubut, dan jika disentuh dengan tangan ko…",
+       "Crane: Saat mengangkat muatan berat, ada risiko kawat putus atau muatan terjatuh. Janga…",
+       "Kunci impak: Jika baut sulit masuk saat sedang dikencangkan, jangan memaksakan dengan m…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s3",
+    "no": 3,
+    "title": {
+     "id": "Penggunaan APD dan Respon Kondisi Abnormal",
+     "jp": "保護具の使用と緊急時対応"
+    },
+    "pages": [
+     112,
+     113
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian APD (Alat Pelindung Diri)"
+      },
+      {
+       "p": "Untuk mencegah cedera saat bekerja, diwajibkan menggunakan secara benar alat pelindung yang sesuai dengan jenis pekerjaan."
+      },
+      {
+       "p": "Mencegah serpihan potong, minyak, debu amplas dan sejenisnya Kacamata masuk ke mata. pelindung Untuk pekerjaan pemotongan dengan gas, diperlukan kacamata lensa gelap."
+      },
+      {
+       "p": "Sepatu Melindungi kaki dari benda jatuh dan rintangan pada kaki. keselamatan"
+      },
+      {
+       "p": "Digunakan untuk melindungi tangan, kecuali pada pekerjaan yang Sarung berbahaya. Akan tetapi, mutlak dilarang digunakan untuk tangan pekerjaan dengan mesin berputar, seperti bor duduk."
+      },
+      {
+       "p": "Pakaian kerja Mengurangi bagian tubuh yang terbuka serta melindungi tubuh dari lengan luka bakar dan luka sayat. panjang"
+      },
+      {
+       "p": "Menyaring partikel halus seperti debu, tetapi tidak melindungi Masker debu terhadap gas berbahaya. Untuk gas berbahaya, diperlukan masker gas khusus."
+      },
+      {
+       "p": "Kacamata lensa gelap"
+      },
+      {
+       "p": "Masker debu"
+      },
+      {
+       "p": "sarung tangan kulit Pakaian kerja lengan panjang Gambar 8-1: Contoh Pakaian dan APD untuk Pekerjaan Pemotongan dengan Gas"
+      },
+      {
+       "p": "(2) Respon Kondisi Abnormal"
+      },
+      {
+       "p": "Jika saat bekerja disadari adanya sesuatu yang tidak biasa (suara aneh, bau, getaran atau gejala lainnya), segera hentikan mesin, lapor ke atasan, dan ikuti petunjuk yang diberikan."
+      },
+      {
+       "p": "Jika terjadi kebakaran, gunakan metode pemadaman api yang sesuai dengan jenisnya. Kebakaran umumnya diklasifikasikan menjadi 3 jenis berdasarkan jenis bahan yang terbakar. kebakaran umum Kebakaran yang melibatkan kayu, kertas, kain, dsb dapat (kebakaran dipadamkan dengan menyiram air untuk mendinginkannya. tipe A)"
+      },
+      {
+       "p": "kebakaran Kebakaran yang melibatkan bensin atau minyak goreng dapat minyak menyebar jika disiram air. Gunakan alat pemadam api jenis busa (kebakaran atau serbuk untuk memutus pasokan oksigen. tipe B)"
+      },
+      {
+       "p": "kebakaran Kebakaran akibat stopkontak atau kabel listrik dan berisiko tersengat listrik listrik, sehingga tidak boleh disiram air. Pastikan mematikan sumber (kebakaran listrik dan gunakan alat pemadam api jenis serbuk atau karbon tipe C) dioksida."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian APD (Alat Pelindung Diri)",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s4",
+    "no": 4,
+    "title": {
+     "id": "Penerapan 5S Secara Menyeluruh",
+     "jp": "S活動の徹底"
+    },
+    "pages": [
+     114,
+     115
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian 5S"
+      },
+      {
+       "p": "Di banyak pabrik Jepang, kegiatan 5S dilakukan untuk meningkatkan keselamatan kerja dan efisiensi di tempat kerja. \"Seiri\", \"seiton\", \"seiso\", \"seiketsu\" dan \"shitsuke\" disebut 5S dengan mengambil huruf pertama masing- masing dalam bahasa Jepang, dan merupakan aturan bersama yang harus dipatuhi semua orang."
+      },
+      {
+       "p": "Menyingkirkan barang yang tak diperlukan dari tempat kerja. Jika ada Seiri barang yang tak diperlukan, dapat mengganggu pekerjaan atau menyebabkan seseorang tersandung dan terjatuh."
+      },
+      {
+       "p": "Menempatkan barang yang diperlukan dengan rapi di tempat yang ditentukan. Dengan mengetahui dimana barang berada, mencarinya Seiton tidak sulit sehingga pekerjaan menjadi lebih cepat. Selain itu, kecelakaan akibat barang-barang berserakan juga dapat dicegah."
+      },
+      {
+       "p": "Membersihkan tempat kerja dan mesin. Dengan dibersihkan, dapat Seiso lebih cepat menyadari adanya masalah-masalah kecil, seperti kebocoran oli atau kelainan pada mesin."
+      },
+      {
+       "p": "Seiketsu berarti menjaga hasil dari seiri, seiton, dan seiso agar selalu Seiketsu dalam kondisi baik."
+      },
+      {
+       "p": "Shitsuke Menjadikan “5S” sebagai kebiasaan bagi semua orang."
+      },
+      {
+       "p": "\"seiri\", \"seiton\", \"seiso\" dan \"seiketsu\" tanpa \"shitsuke\" disebut 4S."
+      },
+      {
+       "p": "Kegiatan 5S bukan selesai hanya dengan sekali dilakukan, tetapi harus terus dilakukan setiap hari agar tempat kerja menjadi aman dan nyaman, serta berkontribusi pada terciptanya produk yang berkualitas."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian 5S",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s5",
+    "no": 5,
+    "title": {
+     "id": "Penetapan dan Pelaksanaan Prosedur Kerja",
+     "jp": "作業手順の確立と運用"
+    },
+    "pages": [
+     116,
+     117
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Prosedur Pekerjaan"
+      },
+      {
+       "p": "Untuk menjaga kualitas produk tetap konsisten dan memastikan keselamatan kerja, penting untuk menetapkan metode pekerjaan secara jelas serta memastikan semua orang melaksanakan sesuai metode tersebut."
+      },
+      {
+       "p": "(2) Pengertian Dokumen Prosedur Kerja"
+      },
+      {
+       "p": "Setelah ditetapkan, prosedur kemudian didokumentasikan sebagai dokumen prosedur kerja."
+      },
+      {
+       "p": "Dokumen prosedur kerja menguraikan secara rinci siapa melakukan apa, kapan dan bagaimana. Agar pekerjaan dilakukan sesuai dokumen prosedur kerja, dokumen tersebut harus mudah diakses dan dibaca semua orang."
+      },
+      {
+       "p": "Dokumen prosedur kerja juga digunakan saat mengajarkan pekerjaan ke orang baru, serta berfungsi menjaga agar tingkat keterampilan semua orang sama."
+      },
+      {
+       "p": "Meski sudah berpengalaman dan terbiasa dengan suatu pekerjaan, tetap harus bekerja sesuai dokumen prosedur kerja. Itu karena jika setiap orang melakukan dengan cara berbeda, mutu produk bisa menjadi tidak konsisten dan dapat berakibat kecelakaan yang tak terduga."
+      },
+      {
+       "p": "(3) Perubahan Dokumen Prosedur Kerja"
+      },
+      {
+       "p": "Sekalipun ditemukan cara yang lebih baik, jangan sembarang mengubah prosedur kerja tanpa ijin. Itu karena perubahan dapat berdampak buruk pada mutu secara keseluruhan, serta terhadap keselamatan kerja. Perubahan isi dokumen prosedur kerja harus dilakukan secara resmi sesuai prosedur yang ditetapkan perusahaan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Prosedur Pekerjaan",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s6",
+    "no": 6,
+    "title": {
+     "id": "Inspeksi Berkala dan Inspeksi Harian",
+     "jp": "定期点検、日常点検"
+    },
+    "pages": [
+     118,
+     119
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pemeliharaan Preventif"
+      },
+      {
+       "p": "Jika peralatan atau mesin mengalami kerusakan, dapat menyebabkan masalah serius, seperti terhentinya produksi. Untuk mencegah hal itu, digunakan pendekatan “pemeliharaan preventif”, yaitu melakukan inspeksi berkala sebelum mesin mengalami kerusakan."
+      },
+      {
+       "p": "(2) Pengertian Inspeksi Berkala"
+      },
+      {
+       "p": "Inspeksi berkala adalah inspeksi secara detail terhadap seluruh mesin berdasarkan rencana yang dibuat sebelumnya. Dilakukan untuk menemukan masalah yang tak dapat ditemukan melalui inspeksi harian serta untuk mencegah terjadinya kerusakan sebelum terjadi."
+      },
+      {
+       "p": "Hal yang sama berlaku untuk alat ukur. Meski alat ukur sudah benar saat dibeli, nilainya bisa sedikit bergeser seiring pemakaian, sehingga perlu dikalibrasi berkala (disesuaikan ke nilai yang benar)."
+      },
+      {
+       "p": "(3) Pengertian Inspeksi Harian"
+      },
+      {
+       "p": "Inspeksi yang dilakukan setiap hari sebelum mulai bekerja, dimana pekerja sendiri memeriksa kondisi mesin secara visual. Dengan demikian, kelainan kecil dapat diketahui lebih awal dan dicegah agar tidak berkembang menjadi masalah besar. Jika inspeksi diabaikan hanya karena sibuk, maka perlu diwaspadai karena dapat berujung pada masalah besar atau kecelakaan di kemudian hari."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pemeliharaan Preventif",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s7",
+    "no": 7,
+    "title": {
+     "id": "Konsep Pengendalian Mutu dan Pendekatan Organisasi",
+     "jp": "品質管理の概念と組織的アプローチ"
+    },
+    "pages": [
+     120,
+     121
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Pengendalian Mutu"
+      },
+      {
+       "p": "Pengendalian mutu bukan sekadar membuat produk yang baik. Merupakan upaya menyeluruh perusahaan untuk menghasilkan produk yang benar-benar diinginkan pelanggan. Mutu yang menurut kita sebagai pembuat produk sudah “cukup baik” saja tidaklah memadai. Yang penting adalah berupaya mewujudkan mutu produk yang membuat pelanggan sebagai pengguna merasa puas dan berkata, “Ini benar-benar produk bagus. Saya puas telah membelinya”."
+      },
+      {
+       "p": "Pengendalian mutu dilakukan pada setiap tahap pembuatan produk dengan mematuhi standar dan aturan yang telah ditetapkan, sehingga mutu produk dan kepercayaan pelanggan selalu terjaga."
+      },
+      {
+       "p": "(2) Menjalankan Pengendalian Mutu"
+      },
+      {
+       "p": "Agar pengendalian mutu berhasil, bukan hanya satu dept yang harus berusaha, tetapi semua orang yang terlibat dalam pembuatan produk perlu bekerja sama dan turut berperan. Pada seluruh proses, mulai dari desain, pengadaan bahan, produksi, inspeksi hingga pengiriman, jika semua orang menjalankan pekerjaan dengan konsep yang sama, mutu produk akan stabil dan kemungkinan masalah terjadi juga lebih kecil."
+      },
+      {
+       "p": "Untuk terus menghasilkan produk yang baik dan semakin meningkatkan mutu produk, penting untuk terus berulang-ulang menjalankan siklus PDCA."
+      },
+      {
+       "p": "Menentukan target seperti produk apa yang akan dibuat, dan P (Plan: Rencana) membuat rencana konkret tentang bagaimana untuk mencapai target."
+      },
+      {
+       "p": "Mengimplementasi rencana dalam pekerjaan aktual dan D (Do: Eksekusi) membuat produk."
+      },
+      {
+       "p": "Menilai apakah produk yang dibuat sesuai dengan rencana C (Check: dan apakah ada masalah. Pada tahap ini, penting untuk Verifikasi) mengambil data dan melakukan evaluasi secara objektif."
+      },
+      {
+       "p": "Memperbaiki masalah yang ditemukan dalam evaluasi dan A (Act: Perbaikan) memanfaatkannya untuk rencana berikutnya."
+      },
+      {
+       "p": "Selain itu, kegiatan Lingkaran QC, yaitu kegiatan untuk memperbaiki cara kerja melalui diskusi bersama, juga sangat membantu dalam meningkatkan mutu. Dalam kegiatan ini, pekerja di lapangan berkumpul dan membentuk tim kecil untuk mendiskusikan bagaimana mutu dan efisiensi pekerjaan dapat ditingkatkan, dan melaksanakan upaya tersebut."
+      },
+      {
+       "p": "Bab"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Pengendalian Mutu",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

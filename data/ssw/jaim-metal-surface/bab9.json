@@ -1,0 +1,548 @@
+{
+ "schema": 1,
+ "bidang": "jaim-metal-surface",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 金属表面処理 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab9",
+  "no": 9,
+  "title": {
+   "id": "Listrik",
+   "jp": "電気"
+  },
+  "intro": {
+   "id": "Bab 9 buku resmi JAIM."
+  },
+  "pages": [
+   122,
+   136
+  ],
+  "subs": [
+   {
+    "id": "b9s1",
+    "no": 1,
+    "title": {
+     "id": "Arus Listrik, Tegangan dan Resistansi",
+     "jp": "電流、電圧、抵抗"
+    },
+    "pages": [
+     122,
+     122
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Akan dijelaskan mengenai arus listrik, tegangan dan resistansi, yang merupakan unsur-unsur dasar listrik."
+      },
+      {
+       "p": "(1) Arus Listrik"
+      },
+      {
+       "ul": [
+        "Arus listrik adalah \"aliran listrik\". Jika diibaratkan pipa air, arus listrik adalah aliran air. Seperti air mengalir melalui pipa, listrik mengalir didalam rangkaian.",
+        "Simbolnya dinyatakan dengan \"I\". Satuannya ampere (A).",
+        "Jika arus listrik semakin besar, \"listrik yang mengalir\" semakin banyak."
+       ]
+      },
+      {
+       "p": "(2) Tegangan"
+      },
+      {
+       "ul": [
+        "Tegangan adalah \"gaya yang mengalirkan listrik\". Jika diibaratkan pipa air, tegangan adalah gaya yang mendorong air keluar. Air akan mengalir lebih kuat jika dialirkan dari tempat yang lebih tinggi. Ketinggian ini sepadan dengan tegangan.",
+        "Simbolnya dinyatakan dengan \"E\". Satuannya volt (V).",
+        "Semakin tinggi tegangan, semakin kuat arus listrik mengalir (listrik yang mengalir semakin banyak)."
+       ]
+      },
+      {
+       "p": "(3) Resistansi"
+      },
+      {
+       "ul": [
+        "Resistansi adalah \"sesuatu yang menghambat aliran listrik\". Jika diibaratkan pipa air, \"ukuran pipa\" merupakan resistansi. Misalnya, jika pipa sempit, air lebih sulit mengalir (jumlah yang mengalir berkurang). Ini yang disebut resistansi.",
+        "Simbolnya dinyatakan dengan \"R\". Satuannya ohm (Ω).",
+        "Semakin besar resistansi, arus listrik semakin sulit mengalir."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Akan dijelaskan mengenai arus listrik, tegangan dan resistansi, yang merupakan unsur-unsur dasar listrik.",
+      "points": [
+       "Arus listrik adalah \"aliran listrik\". Jika diibaratkan pipa air, arus listrik adalah al…",
+       "Simbolnya dinyatakan dengan \"I\". Satuannya ampere (A).",
+       "Jika arus listrik semakin besar, \"listrik yang mengalir\" semakin banyak.",
+       "Tegangan adalah \"gaya yang mengalirkan listrik\". Jika diibaratkan pipa air, tegangan ad…",
+       "Simbolnya dinyatakan dengan \"E\". Satuannya volt (V).",
+       "Semakin tinggi tegangan, semakin kuat arus listrik mengalir (listrik yang mengalir sema…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s2",
+    "no": 2,
+    "title": {
+     "id": "DC dan AC",
+     "jp": "直流と交流"
+    },
+    "pages": [
+     123,
+     123
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Arus listrik terdiri dari arus searah (DC) dan arus bolak-balik (AC). Berikut dijelaskan karakteristik masing-masing."
+      },
+      {
+       "p": "(1) Arus Searah (DC)"
+      },
+      {
+       "ul": [
+        "Ada kutub positif (+) dan negatif (−), dan arus listrik mengalir hanya dalam satu arah, dari positif ke negatif. Besarnya tidak berubah.",
+        "Tegangan juga tak berubah terhadap waktu (konstan).",
+        "Dinyatakan dengan DC. Semua arus listrik dari baterai (seperti baterai kering) adalah arus searah."
+       ]
+      },
+      {
+       "p": "(2) Arus Bolak-balik (AC)"
+      },
+      {
+       "ul": [
+        "Arah arus listrik berubah secara periodik. Misalnya, di Jepang arah arus berganti 50 atau 60 kali setiap detik. Besarnya juga berubah.",
+        "Tegangannya juga berubah seperti gelombang.",
+        "Dinyatakan dengan AC. Sumber listrik komersial di Jepang adalah AC dengan tegangan 100 V dan 200 V. Stopkontak rumah tangga terutama menggunakan 100 V."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Arus listrik terdiri dari arus searah (DC) dan arus bolak-balik (AC). Berikut dijelaskan karakteristik masing-masing.",
+      "points": [
+       "Ada kutub positif (+) dan negatif (−), dan arus listrik mengalir hanya dalam satu arah,…",
+       "Tegangan juga tak berubah terhadap waktu (konstan).",
+       "Dinyatakan dengan DC. Semua arus listrik dari baterai (seperti baterai kering) adalah a…",
+       "Arah arus listrik berubah secara periodik. Misalnya, di Jepang arah arus berganti 50 at…",
+       "Tegangannya juga berubah seperti gelombang.",
+       "Dinyatakan dengan AC. Sumber listrik komersial di Jepang adalah AC dengan tegangan 100 …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s3",
+    "no": 3,
+    "title": {
+     "id": "Simbol",
+     "jp": "{記号|きごう}"
+    },
+    "pages": [
+     124,
+     124
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Simbol grafis kelistrikan yang digunakan dalam diagram rangkaian antara lain sebagai berikut."
+      },
+      {
+       "p": "+ −"
+      },
+      {
+       "p": "resistor kapasitor arde baterai catudaya AC (pembumian)"
+      },
+      {
+       "p": "Gambar 9-1: Simbol Grafis Kelistrikan"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Simbol grafis kelistrikan yang digunakan dalam diagram rangkaian antara lain sebagai berikut.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s4",
+    "no": 4,
+    "title": {
+     "id": "Arus Listrik dan Medan Magnet",
+     "jp": "電流と磁場"
+    },
+    "pages": [
+     125,
+     127
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Arus listrik dan medan magnet memiliki hubungan yang erat. Disini akan dijelaskan mengenai keterkaitan keduanya."
+      },
+      {
+       "p": "(1) Medan Listrik dan Medan Magnet"
+      },
+      {
+       "ul": [
+        "Medan listrik adalah medan gaya yang dibentuk oleh listrik. Saat ada muatan listrik (listrik positif atau negatif yang dimiliki suatu benda), maka disekitarnya terbentuk medan gaya.",
+        "Medan magnet adalah medan gaya yang dibentuk oleh magnet maupun arus listrik.",
+        "Perubahan medan listrik dapat menghasilkan medan magnet, dan perubahan medan magnet dapat menghasilkan medan listrik.",
+        "Contoh aplikasinya adalah motor listrik yang menghasilkan gaya putar dengan memanfaatkan medan magnet yang dibentuk oleh arus listrik."
+       ]
+      },
+      {
+       "p": "(2) Arus Listrik dan Medan Magnet"
+      },
+      {
+       "p": "Jika arus listrik mengalir pada kawat listrik, medan magnet berbentuk seperti donat akan terbentuk disekitar kawat."
+      },
+      {
+       "p": "Medan magnet ini memiliki sifat yang sama dengan gaya magnet, dan dapat menggerakkan jarum magnet."
+      },
+      {
+       "p": "arah medan magnet arah putar sekrup (medan magnet)"
+      },
+      {
+       "p": "arus listrik arah gerak sekrup (arus listrik)"
+      },
+      {
+       "p": "Gambar 9-2: Arus Listrik dan Medan Magnet Gambar 9-3: Hukum Sekrup Kanan"
+      },
+      {
+       "p": "(3) Hukum Sekrup Kanan"
+      },
+      {
+       "p": "Jika arus listrik mengalir ke arah bawah, maka arah medan magnet searah jarum jam. Karena hubungan arus listrik dan medan magnet sama dengan hubungan arah putar dan arah gerak sekrup, hubungan ini disebut hukum sekrup kanan."
+      },
+      {
+       "p": "(4) Hukum Tangan Kanan"
+      },
+      {
+       "ul": [
+        "Pada arus listrik yang lurus, hubungan arus listrik dan medan magnet dapat ditunjukkan dengan menyamakan ibu jari tangan kanan dengan arah arus dan keempat jari dengan arah medan magnet."
+       ]
+      },
+      {
+       "p": "arah keempat jari arah medan (medan magnet) magnet"
+      },
+      {
+       "p": "arus listrik arah ibu jari (arus listrik)"
+      },
+      {
+       "p": "Gambar 9-4: Hukum Tangan Kanan (Arus DC)"
+      },
+      {
+       "ul": [
+        "Pada koil, hubungan arus listrik dan medan magnet dapat ditunjukkan dengan menyamakan ibu jari tangan kanan dengan arah medan magnet dan keempat jari dengan arah arus listrik."
+       ]
+      },
+      {
+       "p": "arus Listrik arah keempat jari (arus listrik)"
+      },
+      {
+       "p": "arah ibu jari (medan magnet) arus Listrik"
+      },
+      {
+       "p": "medan magnet"
+      },
+      {
+       "p": "Gambar 9-5: Hukum Tangan Kanan (Koil)"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Arus listrik dan medan magnet memiliki hubungan yang erat. Disini akan dijelaskan mengenai keterkaitan keduanya.",
+      "points": [
+       "Medan listrik adalah medan gaya yang dibentuk oleh listrik. Saat ada muatan listrik (li…",
+       "Medan magnet adalah medan gaya yang dibentuk oleh magnet maupun arus listrik.",
+       "Perubahan medan listrik dapat menghasilkan medan magnet, dan perubahan medan magnet dap…",
+       "Contoh aplikasinya adalah motor listrik yang menghasilkan gaya putar dengan memanfaatka…",
+       "Pada arus listrik yang lurus, hubungan arus listrik dan medan magnet dapat ditunjukkan …",
+       "Pada koil, hubungan arus listrik dan medan magnet dapat ditunjukkan dengan menyamakan i…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s5",
+    "no": 5,
+    "title": {
+     "id": "Hubungan Arus Listrik, Tegangan dan Resistansi",
+     "jp": "電流、電圧、抵抗の関係"
+    },
+    "pages": [
+     128,
+     130
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pada rangkaian Gambar 9-6, ada hubungan berikut antara arus listrik (I), tegangan (E) dan resistansi (R). Tegangan (E) = Resistansi (R) × Arus (I) ・・・ (1) Arus (I) = Tegangan (E) ÷ Resistansi (R) ・・・ (2) Resistansi (R) = Tegangan (E) ÷ Arus (I) ・・・ (3)"
+      },
+      {
+       "p": "*(1), (2) dan (3) pada dasarnya hal yang sama, hanya penyajian berbeda."
+      },
+      {
+       "p": "E R (Ω) (V)"
+      },
+      {
+       "p": "I (A)"
+      },
+      {
+       "p": "Gambar 9-6: Rangkaian Arus Listrik, Tegangan dan Resistansi"
+      },
+      {
+       "ul": [
+        "Jika Persamaan (1) dinyatakan dalam grafik, hasilnya seperti Gambar 9-7.",
+        "Tegangan dan arus berbanding lurus. Semakin besar arus, semakin besar pula tegangan. (Semakin besar tegangan, semakin besar pula arus)",
+        "Jika arus sama, semakin besar resistansi, semakin besar pula tegangan.",
+        "Jika tegangan sama, semakin besar resistansi, semakin kecil arus."
+       ]
+      },
+      {
+       "p": "resistansi besar"
+      },
+      {
+       "p": "Tegangan (E) resistansi kecil"
+      },
+      {
+       "p": "Resistansi (R) adalah kemiringan garis"
+      },
+      {
+       "p": "Arus (I)"
+      },
+      {
+       "p": "Gambar 9-7: Hubungan Arus Listrik, Tegangan dan Resistansi"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pada rangkaian Gambar 9-6, ada hubungan berikut antara arus listrik (I), tegangan (E) dan resistansi (R). Tegangan (E) = Resistansi (R) × Arus (I) ・・・ (1) Arus (I) = Tegangan (E) ÷ Resistansi (R) ・・・ (2) Resistansi (R) = Tegangan (E) ÷ Arus (I) ・・・ (3)",
+      "points": [
+       "Jika Persamaan (1) dinyatakan dalam grafik, hasilnya seperti Gambar 9-7.",
+       "Tegangan dan arus berbanding lurus. Semakin besar arus, semakin besar pula tegangan. (S…",
+       "Jika arus sama, semakin besar resistansi, semakin besar pula tegangan.",
+       "Jika tegangan sama, semakin besar resistansi, semakin kecil arus."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s6",
+    "no": 6,
+    "title": {
+     "id": "Rangkaian Seri",
+     "jp": "{直列|ちょくれつ}つなぎ"
+    },
+    "pages": [
+     131,
+     131
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Penyambungan dan Perhitungan Resistansi Gabungan"
+      },
+      {
+       "ul": [
+        "Seperti pada Gambar 9-8, penyambungan beberapa resistor dalam satu garis disebut rangkaian resistor seri.",
+        "Jika resistansi gabungan dari R1 dan R2 pada Gambar 9-8 adalah R, maka R dapat dinyatakan sebagai jumlah R1 dan R2."
+       ]
+      },
+      {
+       "p": "Gambar 9-8: Rangkaian Resistor Seri"
+      },
+      {
+       "p": "(2) Karakteristik"
+      },
+      {
+       "ul": [
+        "Pada rangkaian seri, besar arus yang mengalir melalui semua resistor adalah sama.",
+        "Pada rangkaian seri, tegangan pada masing-masing resistor berbeda-beda bergantung besarnya resistansi.",
+        "Pada rangkaian seri, nilai resistansi total lebih besar dari masing-masing."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Penyambungan dan Perhitungan Resistansi Gabungan",
+      "points": [
+       "Seperti pada Gambar 9-8, penyambungan beberapa resistor dalam satu garis disebut rangka…",
+       "Jika resistansi gabungan dari R1 dan R2 pada Gambar 9-8 adalah R, maka R dapat dinyatak…",
+       "Pada rangkaian seri, besar arus yang mengalir melalui semua resistor adalah sama.",
+       "Pada rangkaian seri, tegangan pada masing-masing resistor berbeda-beda bergantung besar…",
+       "Pada rangkaian seri, nilai resistansi total lebih besar dari masing-masing."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s7",
+    "no": 7,
+    "title": {
+     "id": "Rangkaian Paralel",
+     "jp": "{並列|へいれつ}つなぎ"
+    },
+    "pages": [
+     132,
+     133
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Penyambungan dan Perhitungan Resistansi Gabungan"
+      },
+      {
+       "ul": [
+        "Seperti pada Gambar 9-9, penyambungan beberapa resistor secara berdampingan disebut rangkaian resistor paralel.",
+        "Jika resistansi gabungan dari R1 dan R2 pada Gambar 9-9 adalah R, maka kebalikan R (1/R) dapat dinyatakan sebagai jumlah kebalikan R1 dan R2 (1/R1 dan 1/R2)."
+       ]
+      },
+      {
+       "p": "Gambar 9-9: Rangkaian Resistor Paralel"
+      },
+      {
+       "p": "(2) Karakteristik"
+      },
+      {
+       "ul": [
+        "Pada rangkaian paralel, arus yang mengalir melalui masing-masing resistor berbeda-beda bergantung besarnya resistansi.",
+        "Pada rangkaian paralel, besarnya tegangan pada semua resistor adalah sama.",
+        "Pada rangkaian paralel, nilai resistansi total menjadi lebih kecil."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Penyambungan dan Perhitungan Resistansi Gabungan",
+      "points": [
+       "Seperti pada Gambar 9-9, penyambungan beberapa resistor secara berdampingan disebut ran…",
+       "Jika resistansi gabungan dari R1 dan R2 pada Gambar 9-9 adalah R, maka kebalikan R (1/R…",
+       "Pada rangkaian paralel, arus yang mengalir melalui masing-masing resistor berbeda-beda …",
+       "Pada rangkaian paralel, besarnya tegangan pada semua resistor adalah sama.",
+       "Pada rangkaian paralel, nilai resistansi total menjadi lebih kecil."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s8",
+    "no": 8,
+    "title": {
+     "id": "Hukum Fleming",
+     "jp": "フレミングの{法則|ほうそく}"
+    },
+    "pages": [
+     134,
+     134
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Hukum Tangan Kiri Fleming"
+      },
+      {
+       "ul": [
+        "Jika kawat listrik yang dialiri arus ditempatkan di medan magnet, kawat akan mengalami gaya. \"Penentuan arah gaya menggunakan tangan\" ini disebut hukum tangan kiri Fleming.",
+        "Dengan jari tengah, telunjuk dan ibu jari saling tegak lurus, arah masing- masing jari tersebut menunjukkan arah: \"arus listrik\", \"medan magnet\" dan \"gaya\".",
+        "Hukum ini untuk menentukan arah gaya saat arah arus listrik dan medan magnet diketahui. (saat menggerakkan benda dengan arus listrik)"
+       ]
+      },
+      {
+       "p": "jari telunjuk ibu jari (arah gaya) ibu jari (arah gaya) (arah medan magnet: N→S) jari telunjuk (arah medan magnet: N→S)"
+      },
+      {
+       "p": "jari tengah jari tengah (arah arus: + → -) (arah arus: + → -)"
+      },
+      {
+       "p": "Gambar 9-10: Hukum Tangan Kiri Gambar 9-11: Hukum Tangan Kanan Fleming Fleming"
+      },
+      {
+       "p": "(2) Hukum Tangan Kanan Fleming"
+      },
+      {
+       "ul": [
+        "Saat jari tengah, telunjuk dan ibu jari saling tegak lurus, arah masing-masing jari tersebut menunjukkan arah: \"arus listrik\", \"medan magnet\", dan \"gaya\". Ini sama dengan hukum tangan kiri Fleming.",
+        "Digunakan untuk menentukan arah arus listrik jika arah medan magnet dan gaya diketahui. (saat menciptakan arus listrik dengan gerakan)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Hukum Tangan Kiri Fleming",
+      "points": [
+       "Jika kawat listrik yang dialiri arus ditempatkan di medan magnet, kawat akan mengalami …",
+       "Dengan jari tengah, telunjuk dan ibu jari saling tegak lurus, arah masing- masing jari …",
+       "Hukum ini untuk menentukan arah gaya saat arah arus listrik dan medan magnet diketahui.…",
+       "Saat jari tengah, telunjuk dan ibu jari saling tegak lurus, arah masing-masing jari ter…",
+       "Digunakan untuk menentukan arah arus listrik jika arah medan magnet dan gaya diketahui.…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s9",
+    "no": 9,
+    "title": {
+     "id": "Hukum Kirchhoff",
+     "jp": "キルヒホッフの{法則|ほうそく}"
+    },
+    "pages": [
+     135,
+     136
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Hukum Pertama Kirchhoff (Hukum Arus Kirchhoff)"
+      },
+      {
+       "p": "Pada setiap titik dalam rangkaian, jumlah arus listrik yang mengalir masuk sama dengan jumlah arus listrik yang mengalir keluar."
+      },
+      {
+       "p": "Pada titik A,"
+      },
+      {
+       "p": "I = I1 + I 2"
+      },
+      {
+       "p": "Gambar 9-12: Hukum Pertama Kirchhoff"
+      },
+      {
+       "p": "(2) Hukum Kedua Kirchhoff (Hukum Tegangan Kirchhoff)"
+      },
+      {
+       "p": "Pada rangkaian tertutup, \"jumlah gaya gerak listrik\" dan \"jumlah penurunan tegangan\" adalah sama."
+      },
+      {
+       "p": "Pada rangkaian tertutup di kiri,"
+      },
+      {
+       "p": "E = E1 + E2"
+      },
+      {
+       "p": "Gambar 9-13: Hukum Kedua Kirchhoff"
+      },
+      {
+       "p": "Bab"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Hukum Pertama Kirchhoff (Hukum Arus Kirchhoff)",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,943 @@
+{
+ "schema": 1,
+ "bidang": "jaim-metal-surface",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 金属表面処理 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab8",
+  "no": 8,
+  "title": {
+   "id": "Kimia Umum",
+   "jp": "化学一般"
+  },
+  "intro": {
+   "id": "Bab 8 buku resmi JAIM."
+  },
+  "pages": [
+   98,
+   121
+  ],
+  "subs": [
+   {
+    "id": "b8s1",
+    "no": 1,
+    "title": {
+     "id": "Asam dan Basa",
+     "jp": "酸と塩基"
+    },
+    "pages": [
+     98,
+     98
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Asam adalah zat yang menghasilkan ion hidrogen (H⁺) dalam larutan air.",
+        "Basa adalah zat yang menghasilkan ion hidroksida (OH⁻) dalam larutan air.",
+        "Kekuatan asam dan basa ditentukan oleh seberapa banyak terionisasi (menjadi ion) dalam larutan air."
+       ]
+      },
+      {
+       "p": "Ion"
+      },
+      {
+       "p": "Molekul yang bermuatan listrik karena kehilangan atau memperoleh elektron."
+      },
+      {
+       "p": "Zat yang kehilangan elektron sehingga bermuatan positif disebut kation, sedangkan yang mendapatkan elektron sehingga bermuatan negatif disebut anion."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ion",
+      "points": [
+       "Asam adalah zat yang menghasilkan ion hidrogen (H⁺) dalam larutan air.",
+       "Basa adalah zat yang menghasilkan ion hidroksida (OH⁻) dalam larutan air.",
+       "Kekuatan asam dan basa ditentukan oleh seberapa banyak terionisasi (menjadi ion) dalam …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s2",
+    "no": 2,
+    "title": {
+     "id": "Ionisasi dan Derajatnya",
+     "jp": "電離と電離の程度"
+    },
+    "pages": [
+     98,
+     98
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Ionisasi: fenomena dimana suatu zat terurai menjadi kation dan anion dalam larutan air. (Contoh: hidrogen klorida HCl → ion hidrogen H⁺ dan ion klorida Cl⁻)",
+        "Yang mengalami ionisasi disebut elektrolit, sedangkan yang tak mengalami ionisasi disebut nonelektrolit.",
+        "Derajat ionisasi adalah persentase elektrolit yang benar-benar terurai menjadi ion dibandingkan dengan total elektrolit yang terlarut.",
+        "Semakin besar derajat ionisasi, semakin banyak ion di dalam larutan air, sehingga kekuatannya sebagai asam atau basa semakin besar. Asam dan basa yang derajat ionisasinya mendekati 1 disebut asam kuat dan basa kuat. (Contoh asam kuat: asam klorida HCl; basa kuat: natrium hidroksida NaOH)"
+       ]
+      },
+      {
+       "ul": [
+        "Asam atau basa dengan derajat ionisasi yang kecil disebut asam lemah atau basa lemah. (Contoh asam lemah: asam asetat CH₃COOH; basa lemah: amonia NH₃)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ionisasi: fenomena dimana suatu zat terurai menjadi kation dan anion dalam larutan air.…",
+      "points": [
+       "Ionisasi: fenomena dimana suatu zat terurai menjadi kation dan anion dalam larutan air.…",
+       "Yang mengalami ionisasi disebut elektrolit, sedangkan yang tak mengalami ionisasi diseb…",
+       "Derajat ionisasi adalah persentase elektrolit yang benar-benar terurai menjadi ion diba…",
+       "Semakin besar derajat ionisasi, semakin banyak ion di dalam larutan air, sehingga kekua…",
+       "Asam atau basa dengan derajat ionisasi yang kecil disebut asam lemah atau basa lemah. (…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s3",
+    "no": 3,
+    "title": {
+     "id": "Netralisasi",
+     "jp": "{中和|ちゅうわ}"
+    },
+    "pages": [
+     99,
+     99
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Reaksi Netralisasi"
+      },
+      {
+       "p": "Merupakan reaksi kimia dimana asam dan basa saling meniadakan sifat masing- masing serta menghasilkan air dan garam. Ion hidrogen H⁺ dari asam dan ion hidroksida OH⁻ dari basa bergabung membentuk air H₂O (H⁺ + OH⁻ → H₂O). Ion-ion lainnya bergabung membentuk garam."
+      },
+      {
+       "p": "Contoh: Pada reaksi netralisasi asam klorida HCl dan natrium hidroksida NaOH, dihasilkan natrium klorida NaCl dan air H₂O."
+      },
+      {
+       "p": "HCl + NaOH → NaCl + H2O"
+      },
+      {
+       "p": "Dalam reaksi netralisasi terdapat suatu titik dimana asam dan basa tepat saling menetralkan (titik netralisasi). Mulai dari titik ini, sifat larutan berubah. Pada titik netralisasi, larutan sering kali menjadi netral (pH = 7), tetapi tergantung kekuatan asam atau basa, larutan tidak selalu menjadi netral."
+      },
+      {
+       "p": "(2) Titrasi Netralisasi"
+      },
+      {
+       "p": "Titrasi netralisasi adalah metode yang memanfaatkan reaksi netralisasi antara asam dan basa untuk mengukur konsentrasi larutan. Untuk mengetahui titik netralisasi, digunakan indikator seperti fenolftalein. Lihat Gambar 8-2."
+      },
+      {
+       "p": "1. Tambahkan beberapa tetes larutan fenolftalein ke spesimen larutan asam. 2. Lakukan titrasi menggunakan larutan basa natrium hidroksida dengan konsentrasi telah diketahui. 3. Hentikan titrasi saat larutan menjadi warna merah muda. Jumlah ini merupakan titik netralisasi. 4. Hitung berdasarkan jumlah natrium hidroksida yang ditambahkan untuk menentukan konsentrasi asam."
+      },
+      {
+       "p": "Indikator"
+      },
+      {
+       "p": "Merupakan pereaksi yang menunjukkan pH atau keberadaan zat tertentu melalui perubahan warna. Perubahan warna mengindikasikan titik berakhirnya titrasi. Dalam titrasi netralisasi, digunakan indikator seperti metil jingga dan fenolftalein."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Reaksi Netralisasi",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s4",
+    "no": 4,
+    "title": {
+     "id": "Garam",
+     "jp": "{塩|えん}"
+    },
+    "pages": [
+     100,
+     101
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Garam adalah senyawa yang dihasilkan melalui reaksi netralisasi antara asam dan basa.",
+        "Garam merujuk pada zat yang terbentuk melalui ikatan ion, antara anion dari ionisasi asam dan kation dari ionisasi basa.",
+        "Garam terbagi menjadi 3 jenis: garam normal, yang dalam rumus kimianya tidak mengandung ion hidrogen dan hidroksida; garam asam, yang mengandung ion hidrogen; garam basa, yang mengandung ion hidroksida."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Garam adalah senyawa yang dihasilkan melalui reaksi netralisasi antara asam dan basa.",
+      "points": [
+       "Garam adalah senyawa yang dihasilkan melalui reaksi netralisasi antara asam dan basa.",
+       "Garam merujuk pada zat yang terbentuk melalui ikatan ion, antara anion dari ionisasi as…",
+       "Garam terbagi menjadi 3 jenis: garam normal, yang dalam rumus kimianya tidak mengandung…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s5",
+    "no": 5,
+    "title": {
+     "id": "Pelarut, Zat Terlarut dan Larutan",
+     "jp": "溶媒、溶質、溶液"
+    },
+    "pages": [
+     102,
+     102
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Zat terlarut: zat yang larut (yang telah larut) Pelarut: cairan yang melarutkan Larutan: cairan homogen yang terbentuk saat zat terlarut larut dalam pelarut"
+      },
+      {
+       "p": "Contoh: \"Air garam\""
+      },
+      {
+       "p": "Zat terlarut: garam dapur"
+      },
+      {
+       "ul": [
+        "Pelarut: air",
+        "Larutan: air garam"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Zat terlarut: zat yang larut (yang telah larut) Pelarut: cairan yang melarutkan Larutan: cairan homogen yang terbentuk saat zat terlarut larut dalam pelarut",
+      "points": [
+       "Pelarut: air",
+       "Larutan: air garam"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s6",
+    "no": 6,
+    "title": {
+     "id": "Pengendapan",
+     "jp": "{沈殿|ちんでん}"
+    },
+    "pages": [
+     102,
+     104
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pengendapan adalah fenomena munculnya padatan tak larut didalam larutan akibat perubahan kimia."
+      },
+      {
+       "p": "Pengendapan terjadi jika produk reaksi yang terbentuk akibat perubahan kimia sulit larut dalam pelarut. Sifat ini juga dimanfaatkan pada metode analisis kuantitatif untuk menentukan jumlah senyawa yang terkandung dalam larutan pelapisan."
+      },
+      {
+       "p": "Contoh"
+      },
+      {
+       "ul": [
+        "Ion klorida Cl⁻ + ion perak Ag⁺ → AgCl, endapan putih",
+        "Ion sulfat SO₄²⁻ + ion barium Ba²⁺ → BaSO₄, endapan putih"
+       ]
+      },
+      {
+       "p": "Analisis kuantitatif adalah metode untuk mengetahui jumlah komponen Analisa yang terkandung dalam spesimen. Dalam analisis larutan pelapisan, Kuantitatif dilakukan analisis volumetrik. Dengan metode seperti 1) titrasi netralisasi,"
+      },
+      {
+       "ol": [
+        "analisis oksidasi-reduksi dan 3) analisis kelat."
+       ]
+      },
+      {
+       "p": "Analisis asam sulfat dapat dilakukan dengan 2 cara, yaitu analisis Analisis keasaman melalui titrasi netralisasi, atau memisahkan sulfat (SO₄²⁻) Asam Sulfat sebagai endapan menggunakan ion barium, dsb dilanjut dengan analisis gravimetri. Penggunaannya disesuaikan dengan tujuannya."
+      },
+      {
+       "p": "Presipitasi adalah fenomena dimana suatu zat terpisah dan muncul dalam bentuk padat dari dalam larutan atau padatan. Terjadi karena Presipitasi kelarutan menurun, misalnya akibat pendinginan larutan, perubahan jumlah pelarut, elektrolisis, atau pendinginan padatan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pengendapan adalah fenomena munculnya padatan tak larut didalam larutan akibat perubahan kimia.",
+      "points": [
+       "Ion klorida Cl⁻ + ion perak Ag⁺ → AgCl, endapan putih",
+       "Ion sulfat SO₄²⁻ + ion barium Ba²⁺ → BaSO₄, endapan putih"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s7",
+    "no": 7,
+    "title": {
+     "id": "Klasifikasi dan Sifat Oksida",
+     "jp": "酸化物の分類と性質"
+    },
+    "pages": [
+     105,
+     105
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Oksida diklasifikasikan menjadi oksida asam, oksida basa, oksida amfoter dan oksida netral."
+      },
+      {
+       "ul": [
+        "Oksida asam: Oksida yang bereaksi dengan basa menghasilkan garam Karbon dioksida (CO₂), sulfur dioksida (SO₂), fosfor pentoksida (P₂O₃)",
+        "Oksida basa: Oksida yang bereaksi dengan asam menghasilkan garam Natrium oksida (Na₂O), kalsium oksida (CaO), besi oksida (FeO, Fe₂O₃)",
+        "Oksida amfoter: Oksida yang bereaksi baik dengan asam maupun basa menghasilkan garam Aluminium oksida (Al₂O₃), seng oksida (ZnO)",
+        "Oksida netral: Oksida yang tak bereaksi baik dengan asam maupun basa Karbon monoksida (CO)"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Oksida diklasifikasikan menjadi oksida asam, oksida basa, oksida amfoter dan oksida netral.",
+      "points": [
+       "Oksida asam: Oksida yang bereaksi dengan basa menghasilkan garam Karbon dioksida (CO₂),…",
+       "Oksida basa: Oksida yang bereaksi dengan asam menghasilkan garam Natrium oksida (Na₂O),…",
+       "Oksida amfoter: Oksida yang bereaksi baik dengan asam maupun basa menghasilkan garam Al…",
+       "Oksida netral: Oksida yang tak bereaksi baik dengan asam maupun basa Karbon monoksida (…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s8",
+    "no": 8,
+    "title": {
+     "id": "Oksidasi dan Reduksi",
+     "jp": "酸化と還元"
+    },
+    "pages": [
+     105,
+     106
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Oksidasi adalah reaksi dimana suatu zat bersenyawa dengan oksigen. Dalam arti luas, oksidasi juga mencakup reaksi kehilangan elektron."
+      },
+      {
+       "p": "Reduksi adalah reaksi dimana suatu zat kehilangan oksigen. Dalam arti luas, reduksi juga mencakup reaksi memperoleh elektron."
+      },
+      {
+       "p": "Oksidasi dan reduksi selalu terjadi bersamaan. Jika salah satu zat mengalami oksidasi, zat lainnya pasti mengalami reduksi. Itu disebut reaksi oksidasi-reduksi (reaksi redoks)."
+      },
+      {
+       "p": "Meskipun tak terjadi perpindahan oksigen, suatu reaksi tetap merupakan reaksi redoks jika terjadi perpindahan elektron. Sebagai contoh, ada reaksi dimana logam mengendap secara spontan akibat beda potensial redoks (kecenderungan ionisasi)."
+      },
+      {
+       "p": "Contoh: Cu2+ + Zn → Cu + Zn2+ Logam seng (Zn) kehilangan elektron dan menjadi ion seng (Zn²⁺), sedangkan ion tembaga (Cu²⁺) menerima elektron dan menjadi logam tembaga (Cu)."
+      },
+      {
+       "p": "Dalam proses pelapisan dan anodisasi, reaksi redoks seperti itu berlangsung secara elektrokimia."
+      },
+      {
+       "p": "Dalam reaksi redoks, diantara unsur-unsur bereaksi pasti ada unsur yang Redoks dan mengalami perubahan bilangan oksidasi. Dalam reaksi netralisasi, ion Reaksi hidrogen dan ion hidroksida bereaksi, tetapi bilangan oksidasi tidak Netralisasi berubah."
+      },
+      {
+       "p": "Merupakan bidang yang mempelajari berbagai fenomena perpindahan Elektrokimia elektron dari suatu zat ke zat lain, atau redoks."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Oksidasi adalah reaksi dimana suatu zat bersenyawa dengan oksigen. Dalam arti luas, oksidasi juga mencakup reaksi kehilangan elektron.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s9",
+    "no": 9,
+    "title": {
+     "id": "Konsentrasi Molar",
+     "jp": "モル{濃度|のうど}"
+    },
+    "pages": [
+     107,
+     107
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Konsentrasi molar adalah satuan yang menyatakan jumlah (jumlah mol) zat terlarut dalam 1 liter larutan. Satuannya adalah mol/ℓ, yakni berapa mol zat terlarut terkandung dalam 1 liter larutan."
+      },
+      {
+       "p": "Contoh:“Larutan natrium hidroksida dengan konsentrasi molar 2 mol/ℓ” Dalam 1 liter larutan natrium hidroksida, terkandung 2 mol natrium hidroksida."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Konsentrasi molar adalah satuan yang menyatakan jumlah (jumlah mol) zat terlarut dalam 1 liter larutan. Satuannya adalah mol/ℓ, yakni berapa mol zat terlarut terkandung dalam 1 liter larutan.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s10",
+    "no": 10,
+    "title": {
+     "id": "Normalitas",
+     "jp": "{規定度|きていど}"
+    },
+    "pages": [
+     107,
+     107
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Normalitas adalah jumlah gram-ekuivalen zat terlarut yang terkandung dalam 1 liter larutan."
+      },
+      {
+       "p": "Diperoleh dengan membagi konsentrasi molar dengan valensi asam atau basa, dan digunakan untuk menyatakan jumlah ekuivalen dalam suatu reaksi. Normalitas digunakan untuk mempermudah perhitungan ekuivalen dalam reaksi asam basa."
+      },
+      {
+       "p": "Contoh: Asam sulfat H₂SO₄ dengan konsentrasi 1 mol/ℓ merupakan asam bervalensi 2, sehingga menjadi 2 normal (2N)."
+      },
+      {
+       "ol": [
+        "Asam sulfat H₂SO₄ adalah asam bervalensi 2, dan massa 1 molnya adalah, sesuai massa molekulnya, 98 g.",
+        "Satu gram-ekuivalen adalah 98 g / 2 valensi = 49 g.",
+        "Natrium hidroksida merupakan basa bervalensi 1, sehingga 1 gram- ekuivalen adalah 40 g."
+       ]
+      },
+      {
+       "p": "Satuan yang menyatakan jumlah suatu zat. 1 mol molekul hidrogen adalah Jumlah Mol sekitar 6,02 × 10²³ molekul hidrogen. Sesuai massa atomnya, memiliki massa 2 g."
+      },
+      {
+       "p": "Merupakan salah satu satuan konsentrasi larutan, yang dinyatakan sebagai jumlah gram-ekuivalen zat terlarut dalam 1 liter larutan. Normalitas Normalitas dinyatakan dengan “N” dan digunakan antara lain dalam analisis volumetrik."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Normalitas adalah jumlah gram-ekuivalen zat terlarut yang terkandung dalam 1 liter larutan.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s11",
+    "no": 11,
+    "title": {
+     "id": "Konsentrasi Ion Hidrogen",
+     "jp": "水素イオン濃度"
+    },
+    "pages": [
+     108,
+     108
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Konsentrasi ion hidrogen adalah konsentrasi ion hidrogen H⁺ dalam larutan air.",
+        "Semakin banyak ion hidrogen, semakin kuat sifat asamnya. Sebaliknya, semakin sedikit ion hidrogen, semakin banyak ion hidroksida OH⁻.",
+        "Jika ion hidroksida lebih banyak dari ion hidrogen, larutan menjadi bersifat basa. Semakin banyak ion hidroksida, semakin kuat sifat basa. Jika konsentrasi ion hidrogen sama dengan konsentrasi ion hidroksida, larutan menjadi netral."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Konsentrasi ion hidrogen adalah konsentrasi ion hidrogen H⁺ dalam larutan air.",
+      "points": [
+       "Konsentrasi ion hidrogen adalah konsentrasi ion hidrogen H⁺ dalam larutan air.",
+       "Semakin banyak ion hidrogen, semakin kuat sifat asamnya. Sebaliknya, semakin sedikit io…",
+       "Jika ion hidroksida lebih banyak dari ion hidrogen, larutan menjadi bersifat basa. Sema…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s12",
+    "no": 12,
+    "title": {
+     "id": "Konsentrasi Ion Hidrogen dan pH",
+     "jp": "水素イオン濃度とpH"
+    },
+    "pages": [
+     109,
+     109
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "pH adalah skala tingkat keasaman atau kebasaan suatu larutan air, berdasarkan konsentrasi ion hidrogen."
+       ]
+      },
+      {
+       "p": "pH rendah = konsentrasi ion hidrogen tinggi = keasaman kuat pH tinggi = konsentrasi ion hidrogen rendah = kebasaan kuat"
+      },
+      {
+       "ul": [
+        "Jika pH turun 1 angka, konsentrasi ion hidrogen menjadi 10 kali lipat. Sebaliknya, jika naik 1 angka, konsentrasi ion hidrogen menjadi 1/10-nya.",
+        "Indikator adalah bahan kimia yang ditambahkan dalam titrasi untuk mengetahui titik akhir reaksi. Contohnya antara lain fenolftalein, bromtimol biru (BTB) dan metil merah. Pada larutan fenolftalein, seperti ditunjukkan Gambar 8-1, dari tak berwarna berubah merah muda dalam kondisi basa. Dengan menggunakan indikator yang sesuai pH titik akhir titrasi netralisasi, analisis dapat dilakukan dengan akurat."
+       ]
+      },
+      {
+       "p": "asam ←→ basa Gambar 8-1: Perubahan Warna Fenolftalein"
+      },
+      {
+       "p": "Selain itu, berbagai pereaksi pemberi warna, seperti bromtimol biru (BTB), juga digunakan dalam titrasi netralisasi."
+      },
+      {
+       "ul": [
+        "Kertas indikator pH dibuat dengan mengkombinasikan berbagai pereaksi. Karena indikator yang berbeda-beda menunjukkan warna pada pH tertentu, pH dapat diketahui. Gambar 8-2 menunjukkan hubungan antara warna kertas indikator pH dan nilai pH."
+       ]
+      },
+      {
+       "p": "asam netral basa"
+      },
+      {
+       "p": "Gambar 8-2: Warna Kertas Indikator pH, dan pH"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "pH rendah = konsentrasi ion hidrogen tinggi = keasaman kuat pH tinggi = konsentrasi ion hidrogen rendah = kebasaan kuat",
+      "points": [
+       "pH adalah skala tingkat keasaman atau kebasaan suatu larutan air, berdasarkan konsentra…",
+       "Jika pH turun 1 angka, konsentrasi ion hidrogen menjadi 10 kali lipat. Sebaliknya, jika…",
+       "Indikator adalah bahan kimia yang ditambahkan dalam titrasi untuk mengetahui titik akhi…",
+       "Kertas indikator pH dibuat dengan mengkombinasikan berbagai pereaksi. Karena indikator …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s13",
+    "no": 13,
+    "title": {
+     "id": "pH Meter",
+     "jp": "pH メーター"
+    },
+    "pages": [
+     110,
+     111
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "pH meter adalah alat untuk mengukur pH.",
+        "pH meter menggunakan elektroda kaca dan elektroda pembanding. Elektroda kaca adalah elektroda yang dilapisi membran kaca, dan bagian dalamnya diisi kalium klorida (KCl) yang pH-nya disesuaikan 7,0.",
+        "Perbedaan pH antara larutan didalam dan diluar elektroda kaca menghasilkan gaya gerak listrik (60 mV untuk setiap perbedaan 1 pH). Elektroda pembanding dicelupkan ke larutan diluar elektroda kaca (larutan yang pH-nya ingin diketahui), dan pH larutan diukur dari perbedaan gaya gerak listrik.",
+        "Sesuai penggunaannya, pH meter tersedia dalam berbagai jenis, seperti tipe tetap, tipe genggam, dan tipe meja. Gambar 8-3 menunjukkan contoh pH meter tipe meja."
+       ]
+      },
+      {
+       "p": "Gambar 8-3: Contoh pH Meter Tipe Meja"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Gambar 8-3: Contoh pH Meter Tipe Meja",
+      "points": [
+       "pH meter adalah alat untuk mengukur pH.",
+       "pH meter menggunakan elektroda kaca dan elektroda pembanding. Elektroda kaca adalah ele…",
+       "Perbedaan pH antara larutan didalam dan diluar elektroda kaca menghasilkan gaya gerak l…",
+       "Sesuai penggunaannya, pH meter tersedia dalam berbagai jenis, seperti tipe tetap, tipe …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s14",
+    "no": 14,
+    "title": {
+     "id": "Elektrolit",
+     "jp": "{電解質|でんかいしつ}"
+    },
+    "pages": [
+     112,
+     112
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Elektrolit adalah zat yang terdisosiasi menjadi ion dalam larutan air dan memiliki daya hantar listrik.",
+        "Larutan elektrolit dapat dielektrolisis jika diberi tegangan listrik cukup tinggi (beberapa volt). Nama “elektrolit” diambil dari sifat tersebut."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Elektrolit adalah zat yang terdisosiasi menjadi ion dalam larutan air dan memiliki daya…",
+      "points": [
+       "Elektrolit adalah zat yang terdisosiasi menjadi ion dalam larutan air dan memiliki daya…",
+       "Larutan elektrolit dapat dielektrolisis jika diberi tegangan listrik cukup tinggi (bebe…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s15",
+    "no": 15,
+    "title": {
+     "id": "Elektrolit Kuat dan Elektrolit Lemah",
+     "jp": "強電解と弱電解"
+    },
+    "pages": [
+     112,
+     112
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Elektrolit dengan derajat ionisasi (lihat Bab 8, 1.2) tinggi disebut elektrolit kuat, sedangkan jika derajat ionisasi rendah disebut elektrolit lemah. Derajat pemisahan elektrolit menjadi ion dalam larutan berbeda-beda.",
+        "Elektrolit kuat hampir sepenuhnya mengalami ionisasi dalam larutan air. Elektrolit lemah hanya mengalami ionisasi sebagian.",
+        "Derajat ionisasi adalah indikator yang menunjukkan proporsi elektrolit yang terdisosiasi menjadi ion saat larut dalam air. Elektrolit kuat memiliki derajat ionisasi mendekati 1 (100%), sedangkan elektrolit lemah derajat ionisasinya kurang dari 1."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Elektrolit dengan derajat ionisasi (lihat Bab 8, 1.2) tinggi disebut elektrolit kuat, s…",
+      "points": [
+       "Elektrolit dengan derajat ionisasi (lihat Bab 8, 1.2) tinggi disebut elektrolit kuat, s…",
+       "Elektrolit kuat hampir sepenuhnya mengalami ionisasi dalam larutan air. Elektrolit lema…",
+       "Derajat ionisasi adalah indikator yang menunjukkan proporsi elektrolit yang terdisosias…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s16",
+    "no": 16,
+    "title": {
+     "id": "Kecenderungan Ionisasi",
+     "jp": "イオン{化傾向|かけいこう}"
+    },
+    "pages": [
+     112,
+     115
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Kecenderungan ionisasi adalah indikator yang menunjukkan kemudahan suatu logam mengalami oksidasi. Logam memiliki sifat untuk melepaskan elektron dan berubah menjadi ion. Kekuatan sifat itu disebut kecenderungan ionisasi. Kecenderungan ionisasi adalah salah satu faktor yang menentukan kemudahan terjadinya reaksi redoks.",
+        "Kekuatan kecenderungan ionisasi berbeda-beda pada setiap logam. Hal inilah yang menyebabkan perbedaan kemudahan logam mengalami karat."
+       ]
+      },
+      {
+       "p": "Contoh: Seng dan magnesium memiliki kecenderungan ionisasi lebih tinggi daripada besi. ⇒ Seng dan magnesium lebih mudah teroksidasi dibanding besi."
+      },
+      {
+       "p": "Gambar 8-4 menunjukkan kecenderungan ionisasi logam-logam umum. Jika logam yang memiliki kecenderungan ionisasi lebih tinggi dari hidrogen, dicelupkan ke larutan asam (misal: asam klorida), akan larut dan menghasilkan hidrogen."
+      },
+      {
+       "p": "Litium besar"
+      },
+      {
+       "p": "Natrium Magnesium Aluminium Seng Besi Nikel Timah Timbal Hidrogen Tembaga Merkuri Perak Platina"
+      },
+      {
+       "p": "Emas kecil"
+      },
+      {
+       "p": "Gambar 8-4: Kecenderungan Ionisasi Logam Umum"
+      },
+      {
+       "p": "Kecenderungan Ionisasi dan Ketahanan Korosi"
+      },
+      {
+       "p": "Kecenderungan ionisasi efektif digunakan sebagai indikator seberapa mudah suatu logam larut (atau mengalami korosi). Namun demikian, pada aluminium dan lainnya, selain kecenderungan ionisasi ada juga lapisan oksida yang melindungi permukaan, sehingga ketahanan terhadap korosi tampak tinggi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Contoh: Seng dan magnesium memiliki kecenderungan ionisasi lebih tinggi daripada besi. ⇒ Seng dan magnesium lebih mudah teroksidasi dibanding besi.",
+      "points": [
+       "Kecenderungan ionisasi adalah indikator yang menunjukkan kemudahan suatu logam mengalam…",
+       "Kekuatan kecenderungan ionisasi berbeda-beda pada setiap logam. Hal inilah yang menyeba…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s17",
+    "no": 17,
+    "title": {
+     "id": "Elektrolisis dan Reaksi Elektroda",
+     "jp": "電気分解と電極反応"
+    },
+    "pages": [
+     116,
+     116
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Fenomena dimana, dengan memberikan tegangan dan mengalirkan arus listrik, senyawa diuraikan secara kimia menjadi komponen-komponennya pada elektroda.",
+        "Jika arus searah dialirkan melalui larutan elektrolit atau garam cair, akan terjadi reaksi kimia diantara elektroda. Zat dapat terurai atau terbentuk zat baru (Gambar 8-5).",
+        "Kutub positif disebut anoda, sedangkan kutub negatif disebut katoda."
+       ]
+      },
+      {
+       "p": "ion logam"
+      },
+      {
+       "p": "katoda anoda"
+      },
+      {
+       "p": "Gambar 8-5: Ilustrasi Elektrolisis"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "ion logam",
+      "points": [
+       "Fenomena dimana, dengan memberikan tegangan dan mengalirkan arus listrik, senyawa diura…",
+       "Jika arus searah dialirkan melalui larutan elektrolit atau garam cair, akan terjadi rea…",
+       "Kutub positif disebut anoda, sedangkan kutub negatif disebut katoda."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s18",
+    "no": 18,
+    "title": {
+     "id": "Reaksi Elektroda dan Reaksi Kimia",
+     "jp": "電極反応と化学反応"
+    },
+    "pages": [
+     117,
+     117
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pada permukaan anoda, logam teroksidasi dan larut melalui reaksi berikut."
+      },
+      {
+       "p": "Reaksi pada Permukaan Anoda M → Mn+ + ne−"
+      },
+      {
+       "p": "Ion logam yang terlarut bergerak di dalam larutan dari sisi anoda menuju katoda. Pada permukaan katoda, melalui reaksi kebalikan dari reaksi anoda, logam mengendap."
+      },
+      {
+       "p": "Reaksi pada Permukaan Katoda Mn+ + ne− → M"
+      },
+      {
+       "ul": [
+        "Proses pengendapan logam melalui reaksi reduksi seperti ini disebut proses pelapisan.",
+        "Sementara itu, pada anodisasi (ANODIZE), saat aluminium di sisi anoda melepaskan elektron, aluminium bereaksi dengan ion oksigen (O²⁻), sehingga lapisan Al₂O₃ tumbuh."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pada permukaan anoda, logam teroksidasi dan larut melalui reaksi berikut.",
+      "points": [
+       "Proses pengendapan logam melalui reaksi reduksi seperti ini disebut proses pelapisan.",
+       "Sementara itu, pada anodisasi (ANODIZE), saat aluminium di sisi anoda melepaskan elektr…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s19",
+    "no": 19,
+    "title": {
+     "id": "Pelapisan Logam dan Arus Listrik",
+     "jp": "めっきと{電流|でんりゅう}"
+    },
+    "pages": [
+     117,
+     117
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Dalam reaksi elektrokimia pada proses pelapisan, jumlah zat yang mengendap atau larut berbanding lurus dengan jumlah listrik yang dialirkan (Hukum Faraday). Jika jumlah listriknya sama, jumlah zat yang mengendap atau larut berbanding lurus dengan ekuivalen kimia zat tersebut.",
+        "Dengan memanfaatkan sifat ini, jumlah endapan pelapisan dapat diperkirakan. Namun, dalam reaksi pelapisan yang aktual, terjadi reaksi samping seperti pembentukan hidrogen, sehingga jumlah endapan lebih rendah dari nilai teoritis. Faktor yang digunakan untuk koreksi disebut efisiensi arus."
+       ]
+      },
+      {
+       "p": "Jumlah endapan aktual = ekuivalen elektrokimia logam × arus listrik × waktu × efisiensi arus"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Jumlah endapan aktual = ekuivalen elektrokimia logam × arus listrik × waktu × efisiensi arus",
+      "points": [
+       "Dalam reaksi elektrokimia pada proses pelapisan, jumlah zat yang mengendap atau larut b…",
+       "Dengan memanfaatkan sifat ini, jumlah endapan pelapisan dapat diperkirakan. Namun, dala…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b8s20",
+    "no": 20,
+    "title": {
+     "id": "Pelapisan Logam dan Tegangan Listrik",
+     "jp": "めっきと{電圧|でんあつ}"
+    },
+    "pages": [
+     118,
+     118
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pada proses pelapisan logam, dengan memberikan tegangan listrik, ion logam menerima elektron dan mengendap sebagai logam."
+      },
+      {
+       "p": "Jika tegangan dinaikkan, arus listrik juga menjadi lebih besar. Jika densitas arus melebihi batas tertentu, pengendapan dapat menjadi tidak stabil."
+      },
+      {
+       "p": "Dalam hal logam, potensial redoks menunjukkan kemudahan logam dalam larutan air untuk melepaskan elektron atau berubah menjadi ion. Dengan kata lain, berkaitan dengan kecenderungan ionisasi."
+      },
+      {
+       "p": "Kecenderungan Urutan logam yang disusun berdasarkan kemudahan larut dan menjadi Ionisasi ion dalam larutan asam (pH = 0)."
+      },
+      {
+       "p": "Nilai numerik kecenderungan ionisasi, dengan potensial pembentukan Potensial hidrogen sebagai acuan. Demikian pula untuk zat dalam larutan, nilai Redoks ini menjadi indikator mudah tidaknya suatu senyawa melepaskan elektron."
+      },
+      {
+       "p": "Dalam proses pelapisan yang aktual, jig, kabel dan lainnya juga bertindak sebagai resistansi, sehingga tegangan perlu diatur agar arus listrik sesuai. Tabel 8-1 menunjukkan potensial redoks berbagai jenis logam."
+      },
+      {
+       "p": "Tabel 8-1: Potensial Redoks Berbagai Jenis Logam (V) F"
+      },
+      {
+       "p": "10. Fenomena dalam Bak Pelapisan"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pada proses pelapisan logam, dengan memberikan tegangan listrik, ion logam menerima elektron dan mengendap sebagai logam.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s21",
+    "no": 21,
+    "title": {
+     "id": "Anoda dan Katoda",
+     "jp": "アノードとカソード"
+    },
+    "pages": [
+     119,
+     119
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Dalam pelapisan listrik, anoda dan katoda memiliki peran yang berbeda."
+      },
+      {
+       "p": "anoda Logam bahan pelapis ditempatkan di anoda. Berperan melalui elektrolisis [elektroda +] sebagai tempat logam terionisasi dan larut ke dalam larutan pelapisan."
+      },
+      {
+       "p": "katoda Benda yang dilapisi ditempatkan di katoda. Merupakan tempat ion logam [elektroda -] menerima elektron dan mengendap sebagai logam."
+      },
+      {
+       "p": "Catatan: Elektroda yang tidak larut, seperti elektroda platina atau iridium oksida, juga dapat digunakan."
+      },
+      {
+       "p": "Gambar 8-6 merupakan diagram skematis proses pelapisan listrik. Pada anoda, logam larut dalam bentuk ion. Pada katoda, ion tereduksi dan berubah menjadi logam."
+      },
+      {
+       "p": "ion logam"
+      },
+      {
+       "p": "katoda anoda"
+      },
+      {
+       "p": "Gambar 8-6: Diagram Skematis Proses Pelapisan Listrik"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dalam pelapisan listrik, anoda dan katoda memiliki peran yang berbeda.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b8s22",
+    "no": 22,
+    "title": {
+     "id": "Distribusi Densitas Arus Listrik",
+     "jp": "{電流密度分布|でんりゅうみつどぶんぷ}"
+    },
+    "pages": [
+     120,
+     121
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Distribusi densitas arus pada proses pelapisan menunjukkan bagaimana arus listrik terdistribusi pada permukaan benda yang dilapisi didalam larutan elektrolit."
+      },
+      {
+       "p": "Pada bagian dengan densitas arus tinggi, pelapisan mengendap lebih cepat sehingga lapisan lebih tebal. Pada bagian dengan densitas arus rendah, pelapisan mengendap lebih lambat sehingga lapisan lebih tipis."
+      },
+      {
+       "p": "Jika distribusi densitas arus tak merata, tebal lapisan juga menjadi tak merata. Itu karena beda potensial yang timbul bervariasi bergantung pada bagian benda yang dilapisi."
+      },
+      {
+       "p": "Pada bagian tepi yang tajam, intensitas medan listriknya tinggi sehingga lapisan pada bagian tersebut lebih tebal. Sebaliknya, pada bagian datar, intensitas medan listrik rendah sehingga lapisan lebih tipis (Gambar 8-7). Oleh karena itu, lapisan pada bagian cembung lebih tebal dari bagian cekung."
+      },
+      {
+       "p": "Gambar 8-7: Contoh Distribusi Pelapisan"
+      },
+      {
+       "p": "Intensitas Medan Listrik"
+      },
+      {
+       "p": "Menunjukkan kuat medan listrik. Jika intensitas medan listrik tinggi, ion akan tertarik lebih kuat. Oleh karena itu, pada bagian dengan intensitas medan listrik tinggi, lapisan menjadi lebih tebal."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Distribusi densitas arus pada proses pelapisan menunjukkan bagaimana arus listrik terdistribusi pada permukaan benda yang dilapisi didalam larutan elektrolit.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

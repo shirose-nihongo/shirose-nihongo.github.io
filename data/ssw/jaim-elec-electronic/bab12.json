@@ -1,0 +1,902 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab12",
+  "no": 12,
+  "title": {
+   "id": "Inspeksi, Pemeliharaan, Pengemasan, dan Pembentukan",
+   "jp": "検査・保全・包装・成形"
+  },
+  "intro": {
+   "id": "Bab 12 buku resmi JAIM."
+  },
+  "pages": [
+   178,
+   197
+  ],
+  "subs": [
+   {
+    "id": "b12s1",
+    "no": 1,
+    "title": {
+     "id": "Inspeksi Perakitan",
+     "jp": "{組立検査|くみたてけんさ}"
+    },
+    "pages": [
+     178,
+     180
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tujuan"
+      },
+      {
+       "p": "Inspeksi perakitan peralatan listrik dan elektronik merupakan proses pengendalian mutu yang penting untuk memastikan setiap komponen produk atau peralatan telah dirakit dengan benar sesuai gambar desain dan spesifikasi, serta produk tersebut memenuhi fungsi dan kinerja yang telah ditentukan."
+      },
+      {
+       "p": "Proses inspeksi peralatan listrik dan elektronik secara umum dibagi menjadi 3 kategori dibawah ini."
+      },
+      {
+       "p": "(2) Inspeksi Komponen Listrik dan Elektronik"
+      },
+      {
+       "p": "Dilakukan inspeksi pada komponen-komponen penyusun peralatan listrik dan elektronik. Komponen yang digunakan, seperti resistor, kapasitor, IC, dan perangkat kontrol, diperiksa untuk memastikan item-item yang diperlukan seperti tampilan luar, dimensi dan karakteristik listrik. Namun, inspeksi komponen sering dilakukan oleh pabrikan komponen, dan jarang dilakukan oleh pabrikan peralatan listrik yang merakitnya."
+      },
+      {
+       "p": "(3) Inspeksi PCB Pasca Pemasangan Komponen"
+      },
+      {
+       "p": "Memeriksa PCB yang telah dipasang komponen elektronik dan lainnya. Pada PCB dipasang banyak komponen elektronik, dan bisa dikatakan merupakan bagian terpenting dari peralatan listrik dan elektronik."
+      },
+      {
+       "ol": [
+        "Inspeksi penyolderan: Memeriksa ada tidaknya cacat penyolderan (jembatan solder, solder kurang, retakan solder dan cacat lainnya) secara visual maupun dengan menggunakan peralatan inspeksi.",
+        "Inspeksi pemasangan komponen: Memeriksa secara visual maupun dengan menggunakan peralatan inspeksi apakah ada kesalahan pemasangan, seperti komponen kurang, polaritas salah, dan kesalahan lainnya.",
+        "Inspeksi karakteristik listrik: Memeriksa dengan penguji sirkuit atau alat serupa, apakah karakteristik listrik PCB secara keseluruhan sesuai dengan desainnya."
+       ]
+      },
+      {
+       "p": "(4) Inspeksi Produk Jadi"
+      },
+      {
+       "p": "Melakukan inspeksi terhadap produk jadi setelah pemasangan PCB dan komponen listrik. Memastikan apakah semua fungsi produk dapat bekerja secara normal, apakah memenuhi kinerja yang dipersyaratkan, serta apakah produk dapat digunakan dengan aman."
+      },
+      {
+       "ol": [
+        "Inspeksi dimensi Mengukur apakah dimensi produk jadi sesuai dengan yang ditentukan.",
+        "Inspeksi fungsi Memeriksa apakah produk memenuhi fungsi sesuai dengan rancangan, dengan menggunakan peralatan pengujian khusus.",
+        "Uji lingkungan Memeriksa apakah produk dapat berfungsi secara normal dalam berbagai kondisi lingkungan, seperti suhu, kelembaban, getaran dan guncangan.",
+        "Pemeriksaan keselamatan Melakukan uji ketahanan isolasi, uji kebocoran listrik, dsb untuk memastikan produk memenuhi standar keselamatan, seperti UU Keselamatan Peralatan dan Material Listrik.",
+        "Inspeksi visual Memeriksa secara visual atau dengan alat inspeksi, sensor, dsb, apakah produk jadi terdapat goresan, kotoran, deformasi, dan lainnya."
+       ]
+      },
+      {
+       "p": "(5) Inspeksi Perakitan dan Inspeksi Kinerja"
+      },
+      {
+       "p": "Rincian inspeksi berbeda-beda tergantung produk yang dirakit, namun secara garis besar seperti ditunjukkan Tabel 12-1."
+      },
+      {
+       "p": "Tabel 12-1: Uji Perakitan dan Uji Kinerja Utama"
+      },
+      {
+       "p": "Item Metode Inspeksi Rincian Inspeksi"
+      },
+      {
+       "p": "Secara visual, Memeriksa apakah ada goresan, kotoran, Inspeksi dengan alat inspeksi deformasi, kerusakan atau cacat lainnya pada visual dan sebagainya produk."
+      },
+      {
+       "p": "Inspeksi Alat Ukur Jangka sorong, mikrometer, mistar, dan lain-lain dimensi"
+      },
+      {
+       "p": "Inspeksi Alat ukur dan Memeriksa ukuran, berat, kekuatan dan parameter struktur lainnya lainnya dengan alat ukur"
+      },
+      {
+       "p": "Inspeksi Memeriksa resistansi isolasi, ketahanan dielektrik, Tester, osiloskop, karakteristik uji EMS, dan pengujian lainnya menggunakan dan lain-lain listrik tester dan alat ukur lainnya"
+      },
+      {
+       "p": "Inspeksi Memeriksa apakah benar-benar berfungsi dan Peralatan uji fungsi beroperasi secara normal"
+      },
+      {
+       "p": "Pengujian berdasarkan standar keselamatan, Pemeriksaan Keselamatan produk termasuk UU Keselamatan Peralatan dan Material keselamatan Listrik, dan lainnya"
+      },
+      {
+       "p": "Inspeksi Uji umur pakai Untuk memastikan apakah mutu dapat keandalan dipercepat dipertahankan dalam kondisi dipercepat"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tujuan",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s2",
+    "no": 2,
+    "title": {
+     "id": "Pengertian Pemeliharaan",
+     "jp": "{保全|ほぜん}とは"
+    },
+    "pages": [
+     181,
+     181
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pemeliharaan adalah \"melindungi dan membuat aman\", dengan arti yang mirip dengan kata perawatan. Secara umum, pemeliharaan berarti \"melakukan perlindungan dan inspeksi agar tidak terjadi kerusakan\", dan merujuk pada tindakan yang dilakukan secara rutin untuk mencegah terjadinya masalah sejak dini."
+      },
+      {
+       "p": "* Baik perawatan maupun pemeliharaan pada akhirnya merupakan tindakan penting untuk keselamatan. Secara umum, perawatan berarti \"mengembalikan barang yang rusak ke kondisi normal\", yaitu tindakan reaktif saat terjadi gangguan."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pemeliharaan adalah \"melindungi dan membuat aman\", dengan arti yang mirip dengan kata perawatan. Secara umum, pemeliharaan berarti \"melakukan perlindungan dan inspeksi agar tidak terjadi kerusakan\", dan merujuk pada tindakan yang dilakukan secara rutin untuk mencegah terjadinya masalah sejak dini.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s3",
+    "no": 3,
+    "title": {
+     "id": "Jenis Pemeliharaan",
+     "jp": "保全の種類"
+    },
+    "pages": [
+     181,
+     181
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Ada berbagai jenis pemeliharaan, diantaranya termasuk pemeliharaan mesin, inspeksi harian, inspeksi berkala dan pemeliharaan peralatan. Di Jepang, konsep “pemeliharaan preventif”, yaitu mencegah kerusakan atau gangguan sebelum terjadi masalah serius, telah banyak diterapkan."
+      },
+      {
+       "p": "(1) Pemeliharaan Preventif"
+      },
+      {
+       "ul": [
+        "\"Pemeliharaan preventif\" dilakukan untuk mengurangi kemungkinan terjadinya gangguan secara tiba-tiba, karena kerusakan mesin yang terjadi mendadak dapat berakibat terhentinya seluruh proses produksi maupun timbulnya produk cacat.",
+        "Jika satu mesin berhenti bekerja di pabrik semikonduktor, misalnya, seluruh lini produksi terpaksa harus dihentikan, yang berdampak besar pada produksi.",
+        "Oleh karena itu, konsep \"pemeliharaan terencana\" diterapkan untuk meningkatkan tingkat utilisasi keseluruhan lini produksi dengan melakukan penggantian suku cadang dan pemeliharaan secara terencana sebelum masa pakai mesin berakhir.",
+        "Namun, ada pula kelemahan berupa timbulnya biaya yang tidak perlu akibat penggantian komponen yang sebenarnya masih layak digunakan, sehingga penetapan interval pemeliharaan yang tepat menjadi hal yang penting."
+       ]
+      },
+      {
+       "p": "(2) Pemeliharaan Prediktif"
+      },
+      {
+       "ul": [
+        "\"Pemeliharaan prediktif\" dilakukan dengan memantau peralatan produksi secara berkelanjutan dan melakukan pemeliharaan jika terdeteksi ada tanda- tanda degradasi atau kerusakan.",
+        "Dengan metode ini, pemborosan akibat penggantian komponen yang masih dapat digunakan dapat dihindari sekaligus mencegah terjadinya kerusakan mendadak, meskipun diperlukan biaya awal untuk penetapan objek pemantauan dan nilai kontrol yang harus dimonitor berkelanjutan, serta untuk pengembangan sistem."
+       ]
+      },
+      {
+       "p": "(3) Pemeliharaan Korektif"
+      },
+      {
+       "ul": [
+        "\"Pemeliharaan korektif\" adalah pemeliharaan peralatan yang didasarkan pada pendekatan penanganan setelah terjadinya gangguan. Untuk gangguan yang dampaknya kecil, biaya yang terkait dengan pemeliharaan preventif dapat ditekan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ada berbagai jenis pemeliharaan, diantaranya termasuk pemeliharaan mesin, inspeksi harian, inspeksi berkala dan pemeliharaan peralatan. Di Jepang, konsep “pemeliharaan preventif”, yaitu mencegah kerusakan atau gangguan sebelum terjadi masalah serius, telah banyak diterapkan.",
+      "points": [
+       "\"Pemeliharaan preventif\" dilakukan untuk mengurangi kemungkinan terjadinya gangguan sec…",
+       "Jika satu mesin berhenti bekerja di pabrik semikonduktor, misalnya, seluruh lini produk…",
+       "Oleh karena itu, konsep \"pemeliharaan terencana\" diterapkan untuk meningkatkan tingkat …",
+       "Namun, ada pula kelemahan berupa timbulnya biaya yang tidak perlu akibat penggantian ko…",
+       "\"Pemeliharaan prediktif\" dilakukan dengan memantau peralatan produksi secara berkelanju…",
+       "Dengan metode ini, pemborosan akibat penggantian komponen yang masih dapat digunakan da…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s4",
+    "no": 4,
+    "title": {
+     "id": "Lingkup Pekerjaan Pemeliharaan Peralatan",
+     "jp": "設備保全の仕事内容"
+    },
+    "pages": [
+     182,
+     182
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Secara garis besar, lingkup pekerjaan yang harus dilakukan dalam pemeliharaan peralatan dapat dibagi menjadi 3 kategori:"
+      },
+      {
+       "ul": [
+        "Melakukan perawatan peralatan secara berkala Perawatan dilakukan dengan melakukan penggantian suku cadang pada interval tertentu."
+       ]
+      },
+      {
+       "ul": [
+        "Melakukan inspeksi dan pemantauan peralatan Memantau dan mengukur kondisi peralatan untuk menilai kebutuhan perawatan."
+       ]
+      },
+      {
+       "ul": [
+        "Memperbaiki kerusakan peralatan Melalukan perbaikan jika terjadi gangguan pada peralatan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Secara garis besar, lingkup pekerjaan yang harus dilakukan dalam pemeliharaan peralatan dapat dibagi menjadi 3 kategori:",
+      "points": [
+       "Melakukan perawatan peralatan secara berkala Perawatan dilakukan dengan melakukan pengg…",
+       "Melakukan inspeksi dan pemantauan peralatan Memantau dan mengukur kondisi peralatan unt…",
+       "Memperbaiki kerusakan peralatan Melalukan perbaikan jika terjadi gangguan pada peralatan."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s5",
+    "no": 5,
+    "title": {
+     "id": "Dampak Pemeliharaan Peralatan",
+     "jp": "設備保全の効果"
+    },
+    "pages": [
+     183,
+     183
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Berikut ini adalah 4 manfaat utama yang dapat diharapkan dari pemeliharaan peralatan."
+      },
+      {
+       "ul": [
+        "Menjamin keselamatan melalui pencegahan kerusakan mesin",
+        "Mengurangi tingkat cacat produk akibat kerusakan mesin",
+        "Memperpanjang umur pakai mesin",
+        "Mengurangi biaya dan meningkatkan keuntungan perusahaan"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Berikut ini adalah 4 manfaat utama yang dapat diharapkan dari pemeliharaan peralatan.",
+      "points": [
+       "Menjamin keselamatan melalui pencegahan kerusakan mesin",
+       "Mengurangi tingkat cacat produk akibat kerusakan mesin",
+       "Memperpanjang umur pakai mesin",
+       "Mengurangi biaya dan meningkatkan keuntungan perusahaan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s6",
+    "no": 6,
+    "title": {
+     "id": "Pengertian Kemasan Industri",
+     "jp": "{工業包装|こうぎょうほうそう}とは"
+    },
+    "pages": [
+     184,
+     184
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Kemasan industri adalah kemasan untuk produk industri. Dalam standar JIS didefinisikan sebagai \"kemasan yang digunakan terutama untuk pengiriman barang ke pihak perantara beserta penyimpanannya\". Dengan kata lain, kemasan yang bertujuan hanya untuk melindungi produk dari kerusakan yang terjadi selama pengiriman dari pabrik hingga dipajang di toko.",
+        "Produk industri seperti produk mesin, produk listrik dan produk elektronik memiliki ukuran, bentuk serta berat yang beragam, sehingga diperlukan pengemasan yang sesuai karakteristik produk."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kemasan industri adalah kemasan untuk produk industri. Dalam standar JIS didefinisikan …",
+      "points": [
+       "Kemasan industri adalah kemasan untuk produk industri. Dalam standar JIS didefinisikan …",
+       "Produk industri seperti produk mesin, produk listrik dan produk elektronik memiliki uku…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s7",
+    "no": 7,
+    "title": {
+     "id": "Peran dan Fungsi Kemasan",
+     "jp": "包装の役割と機能"
+    },
+    "pages": [
+     184,
+     184
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Peran kemasan industri adalah untuk menjaga mutu produk industri, serta menyimpan dan mengirimkannya secara aman.",
+        "Karena cara pengiriman dan kondisi penyimpanan produk industri bervariasi, perlu melindungi mutu produk dari suhu dan kelembaban tinggi selama penyimpanan serta dari kerusakan selama pengiriman.",
+        "Untuk itu, penting untuk menggunakan bahan kemasan yang sesuai bentuk dan sifat produk, sehingga terlindung dari kerusakan dan penurunan mutu, serta tahan untuk penyimpanan jangka panjang maupun pengiriman.",
+        "Selain itu, karena kemasan industri tidak sampai ke konsumen secara langsung, kemasan yang mewah tidak diperlukan untuk konsumen, sekaligus perlu memiliki fungsi untuk menghemat biaya."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Peran kemasan industri adalah untuk menjaga mutu produk industri, serta menyimpan dan m…",
+      "points": [
+       "Peran kemasan industri adalah untuk menjaga mutu produk industri, serta menyimpan dan m…",
+       "Karena cara pengiriman dan kondisi penyimpanan produk industri bervariasi, perlu melind…",
+       "Untuk itu, penting untuk menggunakan bahan kemasan yang sesuai bentuk dan sifat produk,…",
+       "Selain itu, karena kemasan industri tidak sampai ke konsumen secara langsung, kemasan y…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s8",
+    "no": 8,
+    "title": {
+     "id": "Bahan Kemasan",
+     "jp": "{梱包材料|こんぽうざいりょう}"
+    },
+    "pages": [
+     184,
+     184
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Metode pengemasan antara lain meliputi pengemasan kotak kertas, kotak kardus, peti kayu, wadah logam, wadah kaca dan wadah plastik hasil injeksi.",
+        "Bahan kemasan yang digunakan untuk melindungi produk meliputi bahan bantalan seperti kertas, kain atau busa polistiren, serta bahan penahan seperti kayu, kertas tebal dan selotip, dan pengemasan perlu dilakukan dengan kombinasi secara minimal dari bahan-bahan tersebut."
+       ]
+      },
+      {
+       "ul": [
+        "Kayu yang digunakan sebagai bahan kemasan perlu memiliki penampang berbentuk persegi atau mendekati persegi."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Metode pengemasan antara lain meliputi pengemasan kotak kertas, kotak kardus, peti kayu…",
+      "points": [
+       "Metode pengemasan antara lain meliputi pengemasan kotak kertas, kotak kardus, peti kayu…",
+       "Bahan kemasan yang digunakan untuk melindungi produk meliputi bahan bantalan seperti ke…",
+       "Kayu yang digunakan sebagai bahan kemasan perlu memiliki penampang berbentuk persegi at…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s9",
+    "no": 9,
+    "title": {
+     "id": "Kualitas Logistik",
+     "jp": "{物流品質|ぶつりゅうひんしつ}"
+    },
+    "pages": [
+     185,
+     185
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Kualitas logistik berarti pengiriman produk kepada pelanggan dalam kondisi yang dikelola dengan baik."
+      },
+      {
+       "p": "(1) Elemen Dasar Kualitas Logistik"
+      },
+      {
+       "p": "Penting untuk memenuhi harapan pelanggan seperti berikut, sekaligus meningkatkan kepuasan pelanggan."
+      },
+      {
+       "ol": [
+        "Kualitas tenggat waktu (memenuhi tenggat waktu yang dijanjikan)",
+        "Kualitas produk (menjaga kualitas produk dengan mencegah kerusakan dan penurunan mutu selama pengiriman)",
+        "Kualitas pengiriman (akurasi dan kecepatan dalam memastikan barang, jumlah, dan tujuan pengiriman yang tidak salah)"
+       ]
+      },
+      {
+       "p": "(2) Evaluasi Kualitas Logistik"
+      },
+      {
+       "p": "Menyatakan probabilitas terjadinya masalah pengiriman atau klaim pelanggan dalam bentuk angka. Sering digunakan besaran “PPM (parts per million)”, yaitu probabilitas terjadinya masalah per 1 juta pesanan pengiriman."
+      },
+      {
+       "p": "Meskipun berbeda-beda tergantung industri, objek dan sistemnya, untuk indikator umum logistik biasanya digunakan Level 3, 100 PPM atau kurang, sedangkan untuk gudang digital: Level 4, 50 PPM atau kurang, gudang atau pusat distribusi yang sepenuhnya otomatis: Level 5, 10 PPM, sebagai batas maksimum."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kualitas logistik berarti pengiriman produk kepada pelanggan dalam kondisi yang dikelola dengan baik.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s10",
+    "no": 10,
+    "title": {
+     "id": "Label Kehati-hatian Penanganan (JIS Z0150)",
+     "jp": "{取扱注意|とりあつかいちゅうい}ラベル（JIS Z0150）"
+    },
+    "pages": [
+     186,
+     186
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Berikut adalah tanda petunjuk penanganan utama yang telah distandarisasi oleh JIS."
+      },
+      {
+       "p": "Tabel 12-2: Tanda Petunjuk Utama"
+      },
+      {
+       "p": "Kehati-hatian Menunjukkan bahwa kargo harus ditangani dengan Penanganan hati-hati untuk menghindari benturan."
+      },
+      {
+       "p": "Kehati-hatian Menangani Menunjukkan bahwa isi kargo mudah pecah dan Kehati-hatian harus ditangani dengan hati-hati. Penanganan"
+      },
+      {
+       "p": "Jangan Menunjukkan bahwa kargo harus dijaga agar tidak Terkena Air terkena air hujan."
+      },
+      {
+       "p": "Saat menumpuk kargo yang sama, tanda ini menunjukkan jumlah maksimum lapisan/tumpukan Batas Jumlah yang boleh ditumpuk. Tumpukan * Catatan notasi: Angka “n” tidak termasuk kargo paling bawah. Selain itu, koreksi dengan tulisan tangan diperbolehkan."
+      },
+      {
+       "p": "Jangan Menunjukkan bahwa kargo tidak boleh ditumpuk satu Ditumpuk sama lain."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Berikut adalah tanda petunjuk penanganan utama yang telah distandarisasi oleh JIS.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s11",
+    "no": 11,
+    "title": {
+     "id": "Pengertian Pembentukan Plastik",
+     "jp": "プラスチック{成形|せいけい}とは"
+    },
+    "pages": [
+     187,
+     187
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Pembentukan (injeksi) plastik adalah proses pembuatan plastik, terutama polimer seperti resin sintetis yang disintesis dari minyak bumi, dengan memanaskan hingga meleleh, dan menuangkan kedalam cetakan atau alat sejenis, serta mendinginkan hingga mengeras."
+      },
+      {
+       "p": "Dibanding logam, lebih ringan dan mudah diolah, sehingga digunakan secara luas."
+      },
+      {
+       "ol": [
+        "Hampir semua bahan pembentukan plastik dapat dibagi menjadi 2 jenis: \"resin termoplastik\" dan \"resin termoset\".",
+        "Resin termoplastik adalah bahan seperti polietilena, yang menjadi lunak saat dipanaskan, dan mengeras saat didinginkan. Sisa bahan setelah pembentukan juga dapat digunakan kembali. Namun, meskipun mudah diolah, bahan ini lemah terhadap suhu tinggi dan kekuatan mekaniknya juga tidak tinggi.",
+        "Resin termoset menjadi keras saat dipanaskan karena terbentuk struktur jembatan antar molekul, sehingga memiliki ketahanan panas dan kekuatan yang lebih baik dibanding resin termoplastik. Namun, sekali mengeras, tidak akan menjadi lunak lagi meskipun dipanaskan ulang.",
+        "Selain itu, ada juga “plastik biodegradable” yang dapat terurai oleh bakteri jika dikubur didalam tanah.",
+        "Agar proses pembentukan plastik dapat dilakukan secara stabil, penting untuk mengelola kondisi pembentukan (seperti suhu, tekanan, jumlah bahan resin, kecepatan injeksi, dsb) serta mengendalikan benda asing pada setiap tahap proses."
+       ]
+      },
+      {
+       "p": "Istilah"
+      },
+      {
+       "p": "Pencetakan dan pembentukan: Dalam pengolahan resin, karena produk dibentuk menggunakan cetakan, istilah yang tepat seharusnya “pencetakan”, tetapi “pembentukan” lebih banyak digunakan, sehingga disini akan digunakan istilah “pembentukan”"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pembentukan (injeksi) plastik adalah proses pembuatan plastik, terutama polimer seperti resin sintetis yang disintesis dari minyak bumi, dengan memanaskan hingga meleleh, dan menuangkan kedalam cetakan atau alat sejenis, serta mendinginkan hingga mengeras.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s12",
+    "no": 12,
+    "title": {
+     "id": "Pembentukan Injeksi",
+     "jp": "{射出成形|しゃしゅつせいけい}"
+    },
+    "pages": [
+     188,
+     190
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Metode pembentukan mencakup berbagai cara, seperti pembentukan injeksi dan pembentukan tiup dimana udara ditiupkan untuk mengembungkan bahan, namun disini akan dijelaskan pembentukan injeksi, yang paling umum."
+      },
+      {
+       "ul": [
+        "Pembentukan injeksi adalah proses dimana resin (plastik) dipanaskan dan dilelehkan, serta disuntikkan dan diisi kedalam cetakan, lalu dibentuk dengan pemberian tekanan.",
+        "Metode ini terutama digunakan untuk pembentukan resin termoplastik, memungkinkan pembentukan secara cepat berbagai produk resin dengan ketebalan yang tipis atau bentuk yang kompleks, dan cocok untuk produksi massal."
+       ]
+      },
+      {
+       "p": "(1) Struktur dan Mekanisme Pembentukan Injeksi"
+      },
+      {
+       "p": "“Mesin pembentukan injeksi” utamanya terdiri dari 3 bagian: 1) perangkat injeksi,"
+      },
+      {
+       "ol": [
+        "perangkat penjepit, dan 3) cetakan logam."
+       ]
+      },
+      {
+       "p": "nosel pin pendorong corong pengumpan pemanas"
+      },
+      {
+       "p": "silinder sekrup cetakan logam"
+      },
+      {
+       "p": "Perangkat Penjepit Perangkat Injeksi"
+      },
+      {
+       "p": "Gambar 12-1: Konfigurasi Umum Mesin Pembentukan Injeksi"
+      },
+      {
+       "ol": [
+        "Perangkat injeksi: Bahan resin termoplastik dimasukkan kedalam corong pengumpan, kemudian dilelehkan didalam silinder yang dipanaskan dan dipindahkan ke bagian ujung oleh perangkat sekrup, lalu jumlah yang dibutuhkan ditekan dan disuntikkan kedalam cetakan. Volume injeksi diatur melalui kecepatan putaran perangkat sekrup.",
+        "Perangkat penjepit: Setelah resin disuntikkan kedalam cetakan yang dijepit, cetakan didinginkan melalui mekanisme pendingin, sehingga resin mengeras. Karena resin mengalami penyusutan, diperlukan penyetelan parameter mesin secara presisi."
+       ]
+      },
+      {
+       "ol": [
+        "Cetakan: Merupakan komponen kunci dalam pembentukan injeksi. Karena resin plastik dikenai tekanan tinggi saat diisi, cetakan harus memiliki struktur yang tahan tekanan tinggi serta tingkat presisi yang tinggi. Selain itu, semakin besar sudut keluar produk pembentukan dari cetakan, akan semakin mudah dilepas. Di sisi lain, struktur saluran (sprue) dimana produk otomatis lepas akibat gaya beratnya sendiri juga penting. Selain itu, pin pendorong juga dipasang untuk mengambil produk pembentukan dari cetakan."
+       ]
+      },
+      {
+       "p": "Tantangan terbesar dalam menyimpan cetakan adalah “mencegah terjadinya karat”. Penyimpanan dilakukan di gudang khusus dengan kelembaban yang dikontrol tetap rendah."
+      },
+      {
+       "p": "Keterangan Tambahan 12-1"
+      },
+      {
+       "p": "Jalur Injeksi Internal Cetakan gate"
+      },
+      {
+       "ul": [
+        "Resin tidak langsung disuntikkan kedalam cetakan, tetapi untuk memastikan pembentukan yang merata, dibuatlah saluran berupa \"sprue\", \"runner\" dan \"gate\". Sprue adalah saluran yang pertama kali diisi resin, dan sudut keluar produk pembentukan dirancang agar produk bisa dilepas sprue runner dengan mudah setelah mengeras. Jalur berikutnya, yaitu runner, adalah saluran Gambar 12-2: Jalur tempat bahan leleh mengalir secara merata, Injeksi Internal Cetakan sedangkan gerbang adalah titik masuk ke produk pembentukan yang merupakan bagian penting karena sangat mempengaruhi kualitas akhir produk.",
+        "Kualitas produk pembentukan bisa terganggu jika kecepatan aliran resin ke runner atau gate tidak tepat, sehingga perancangan dan pembuatan cetakan yang presisi untuk setiap produk sangat penting.",
+        "Cetakan digunakan tidak hanya untuk pembentukan plastik, tetapi juga untuk melakukan die casting (cetak tekan) logam dengan titik leleh rendah, seperti aluminium."
+       ]
+      },
+      {
+       "p": "(2) Karakteristik Pembentukan Injeksi"
+      },
+      {
+       "ul": [
+        "Merupakan metode pembentukan plastik yang paling banyak digunakan",
+        "Kualitas tinggi dan produktivitas tinggi, dimana jika bentuk produknya sama, memungkinkan produksi dalam jumlah besar dalam waktu singkat.",
+        "Biaya pembuatan cetakan logam sangat tinggi, sehingga kurang cocok untuk produksi dalam jumlah kecil.",
+        "Untuk produksi yang stabil, diperlukan penyesuaian secara presisi terhadap peralatan dan kondisi."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Metode pembentukan mencakup berbagai cara, seperti pembentukan injeksi dan pembentukan tiup dimana udara ditiupkan untuk mengembungkan bahan, namun disini akan dijelaskan pembentukan injeksi, yang paling umum.",
+      "points": [
+       "Pembentukan injeksi adalah proses dimana resin (plastik) dipanaskan dan dilelehkan, ser…",
+       "Metode ini terutama digunakan untuk pembentukan resin termoplastik, memungkinkan pemben…",
+       "Resin tidak langsung disuntikkan kedalam cetakan, tetapi untuk memastikan pembentukan y…",
+       "Kualitas produk pembentukan bisa terganggu jika kecepatan aliran resin ke runner atau g…",
+       "Cetakan digunakan tidak hanya untuk pembentukan plastik, tetapi juga untuk melakukan di…",
+       "Merupakan metode pembentukan plastik yang paling banyak digunakan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s13",
+    "no": 13,
+    "title": {
+     "id": "Pembentukan Plastik FRP",
+     "jp": "強化プラスチック成形"
+    },
+    "pages": [
+     191,
+     191
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Bahan plastik diperkuat umumnya disebut FRP (Fiber Reinforced Plastics), yaitu plastik yang ditambahkan serat kaca atau karbon untuk meningkatkan kekuatannya.",
+        "Penggunaan utamanya meliputi bodi mobil dan kapal mewah, kolam renang dan bak mandi, tangki industri, baling-baling turbin angin, serta pada PCB epoksi kaca."
+       ]
+      },
+      {
+       "p": "bodi kapal bak mandi baling-baling kincir Gambar 12-2: Penggunaan FRP"
+      },
+      {
+       "p": "(1) Metode Pembentukan"
+      },
+      {
+       "p": "Ada berbagai metode, tetapi pada dasarnya, serat kaca diberi impregnasi dengan resin cair berbasis epoksi, kemudian diproses dan dibentuk dengan pengepresan pada suhu dan tekanan tinggi."
+      },
+      {
+       "p": "(2) Karakteristik"
+      },
+      {
+       "p": "Fitur utamanya adalah dapat dirancang secara bebas sesuai penggunaan. Berikut adalah keunggulan dan kelemahannya."
+      },
+      {
+       "p": "Tabel 12-3: Keunggulan dan Kelemahan FRP"
+      },
+      {
+       "p": "Keunggulan Kelemahan"
+      },
+      {
+       "ul": [
+        "Lebih kuat dari besi dan lebih ringan dari aluminium",
+        "Tahan korosi dan bahan kimia.",
+        "Karena terbuat dari plastik, mudah",
+        "Jika bahan penguat menggunakan serat terbakar kaca: unggul dalam isolasi listrik; jika",
+        "Permukaannya mudah tergores. menggunakan serat karbon: unggul dalam",
+        "Sulit didaur ulang dan dibuang. konduktivitas listrik.",
+        "Dibanding logam, lebih mudah membuat bentuk yang rumit."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "bodi kapal bak mandi baling-baling kincir Gambar 12-2: Penggunaan FRP",
+      "points": [
+       "Bahan plastik diperkuat umumnya disebut FRP (Fiber Reinforced Plastics), yaitu plastik …",
+       "Penggunaan utamanya meliputi bodi mobil dan kapal mewah, kolam renang dan bak mandi, ta…",
+       "Lebih kuat dari besi dan lebih ringan dari aluminium",
+       "Tahan korosi dan bahan kimia.",
+       "Karena terbuat dari plastik, mudah",
+       "Jika bahan penguat menggunakan serat terbakar kaca: unggul dalam isolasi listrik; jika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s14",
+    "no": 14,
+    "title": {
+     "id": "Pengertian Papan Sirkuit Cetak (PCB)",
+     "jp": "プリント{配線基板|はいせんきばん}とは"
+    },
+    "pages": [
+     192,
+     192
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "PCB adalah papan berbahan dasar isolator, seperti epoksi, di atasnya dibentuk pola jalur konduktor (pola jalur cetak) untuk jalur listrik, yang menjadi komponen dasar untuk membuat rangkaian elektronik. Digunakan hampir di semua peralatan elektronik."
+      },
+      {
+       "ul": [
+        "Berdasarkan strukturnya, ada PCB 1-sisi, PCB 2-sisi, dan PCB multi-lapis.",
+        "Bahan yang digunakan antara lain kertas fenol (laminasi), epoksi kaca, dan keramik.",
+        "Ada 3 jenis, sebagai berikut:",
+        "PCB kaku, yang menggunakan papan isolasi keras",
+        "PCB fleksibel, yang dibuat pada bahan isolasi tipis",
+        "Papan fleksibel-kaku, yang menggabungkan fitur kedua PCB",
+        "PCB yang digunakan pada ponsel pintar adalah PCB multi-lapis.",
+        "Papan induk (motherboard) adalah PCB yang disiapkan untuk memasang dan menghubungkan beberapa PCB terangkai utama, seperti CPU dan memori pada komputer.",
+        "PCB terangkai tidak sama dengan PCB karena PCB terangkai adalah PCB yang telah dipasangi komponen elektronik sehingga dapat berfungsi sebagai rangkaian elektronik.",
+        "Komponen utama konduktor adalah tembaga, sedangkan emas terkadang digunakan sebagai pelapis untuk perlindungan.",
+        "Film untuk produksi juga disebut film masker, yaitu film yang memiliki pola dalam ukuran sebenarnya. Film tersebut digunakan untuk membentuk pola konduktor."
+       ]
+      },
+      {
+       "p": "Gambar 12-3: PCB (kiri) dan PCB Terangkai (kanan)"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "PCB adalah papan berbahan dasar isolator, seperti epoksi, di atasnya dibentuk pola jalur konduktor (pola jalur cetak) untuk jalur listrik, yang menjadi komponen dasar untuk membuat rangkaian elektronik. Digunakan hampir di semua peralatan elektronik.",
+      "points": [
+       "Berdasarkan strukturnya, ada PCB 1-sisi, PCB 2-sisi, dan PCB multi-lapis.",
+       "Bahan yang digunakan antara lain kertas fenol (laminasi), epoksi kaca, dan keramik.",
+       "Ada 3 jenis, sebagai berikut:",
+       "PCB kaku, yang menggunakan papan isolasi keras",
+       "PCB fleksibel, yang dibuat pada bahan isolasi tipis",
+       "Papan fleksibel-kaku, yang menggabungkan fitur kedua PCB"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b12s15",
+    "no": 15,
+    "title": {
+     "id": "Metode Produksi PCB",
+     "jp": "プリント配線基板の製造方法"
+    },
+    "pages": [
+     193,
+     193
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Ada 2 metode produksi utama, sebagai berikut:"
+      },
+      {
+       "ol": [
+        "Metode produksi PCB dimana bagian pola sirkuit pada lapisan tembaga PCB di tutupi dengan film masker, kemudian setelah penyinaran, bagian yang tidak dip erlukan dihilangkan dengan etsa (lihat Gambar 12-4). Dari segi biaya produksi, metode ini paling umum digunakan."
+       ]
+      },
+      {
+       "p": "Perlakuan permukaan Lapisan solder resist Pengeboran lubang,"
+      },
+      {
+       "p": "Pemrosesan bentuk Pemotongan bahan"
+      },
+      {
+       "p": "luar, pemotongan V Pencetakan sablon pelapisan tembaga"
+      },
+      {
+       "p": "Pemasangan film"
+      },
+      {
+       "p": "Penyinaran dan pengembangan"
+      },
+      {
+       "p": "Inspeksi Etsa"
+      },
+      {
+       "p": "Gambar 12-4: Alur Produksi PCB"
+      },
+      {
+       "ol": [
+        "Metode membentuk pola sirkuit dengan membuat lapisan resist (lapisan pelindu ng) pada bagian selain pola sirkuit diatas papan isolator, kemudian membentuk pola sirkuit melalui proses pelapisan logam."
+       ]
+      },
+      {
+       "p": "Istilah"
+      },
+      {
+       "p": "Film untuk produksi: digunakan untuk membuat PCB dengan skala 1: 1, berupa film atau pelat kering yang memiliki pola."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ada 2 metode produksi utama, sebagai berikut:",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b12s16",
+    "no": 16,
+    "title": {
+     "id": "Proses Etsa",
+     "jp": "エッチング（{食刻|しょっこく}）"
+    },
+    "pages": [
+     194,
+     197
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Etsa"
+      },
+      {
+       "p": "Proses yang penting untuk membentuk pola jalur konduktor pada PCB."
+      },
+      {
+       "ul": [
+        "Setelah proses penyinaran dan pengembangan, bagian tembaga di luar pola sirkuit dihilangkan secara kimia dengan larutan etsa.",
+        "Karena proses etsa adalah reaksi kimia, kontrol konsentrasi dan suhu larutan sangat penting.",
+        "Ada 2 metode utama proses etsa. Pada PCB digunakan metode etsa basah."
+       ]
+      },
+      {
+       "p": "(2) Etsa Basah"
+      },
+      {
+       "p": "Metode untuk menghilangkan bagian di luar pola rangkaian. Proses penyinaran, pengembangan dan etsa ditunjukkan pada Gambar 12-5."
+      },
+      {
+       "ol": [
+        "Pelapisan Resist (bahan fotosensitif) dilapiskan pada lapisan tembaga PCB.",
+        "Penyinaran Fotomasker (pola jalur konduktor) diletakkan diatasnya, lalu dilakukan penyinaran dengan sinar UV dari atas. Saat sinar UV mengenai bagian yang ingin dipertahankan polanya, resist akan mengeras.",
+        "Pengembangan Direndam dalam larutan alkali untuk pengembangan. Resist pada bagian yang tidak mengeras setelah penyinaran (bagian yang tertutup fotomasker) dihilangkan melalui proses etsa, sehingga hanya bagian pola jalur yang tersisa.",
+        "Etsa Lapisan tembaga yang terekspos dietsa dengan cairan asam, bersama dengan resist pola jalur yang telah mengeras. Proses etsa mencapai hingga bahan dasar (substrat), sehingga yang tersisa hanyalah pola jalur dan sebagian resist yang telah mengeras.",
+        "Pencucian Sisa resist yang mengeras dihilangkan, larutan etsa dibersihkan, kemudian PCB dilanjutkan ke proses berikutnya."
+       ]
+      },
+      {
+       "ol": [
+        "Pelapisan 2) Penyinaran 3) Pengembangan"
+       ]
+      },
+      {
+       "p": "pola jalur konduktor cahaya kuat resist resist"
+      },
+      {
+       "p": "lapisan substrat lapisan bagian lapisan tembaga tembaga terpapar tembaga"
+      },
+      {
+       "ol": [
+        "Etsa 5) Pencucian"
+       ]
+      },
+      {
+       "p": "resist"
+      },
+      {
+       "p": "proses berikutnya"
+      },
+      {
+       "p": "lapisan substrat lapisan substrat tembaga tembaga"
+      },
+      {
+       "p": "Gambar 12-5: Proses Penyinaran, Pengembangan dan Etsa"
+      },
+      {
+       "p": "Keterangan Tambahan 12-2"
+      },
+      {
+       "p": "Pola jalur konduktor yang digunakan pada IC dan LSI semikonduktor juga dietsa dengan cara yang sama. Perbedaan yang paling mencolok adalah pada lebar jalur sirkuit. Pada PCB, ukurannya berada pada orde sub-milimeter, sedangkan pada semikonduktor, berada pada orde nanometer (nm)."
+      },
+      {
+       "p": "Ujian Evaluasi Pekerja Berketerampilan Spesifik Bidang Manufaktur No. 1 (Kategori Perakitan Peralatan Listrik dan Elektronik) Buku Referensi Pembelajaran Desember 2025 - Edisi Pertama Juli 2026 - Edisi Kedua"
+      },
+      {
+       "p": "Disunting: The Association for Overseas Technical Cooperation and Sustainable Partnerships (AOTS) Ditulis: Akihiro Kitagawa Noriyuki Sugiyama Eiji Setoyama Katsuhiko Majima (berdasarkan urutan abjad Jepang) Diterbitkan: Japan Association for Human Resources in Industrial Product Manufacturing (JAIM) 5-11-2 Toranomon, Distrik Minato, Tokyo 105-8501 URL https://www.jaim-skill.or.jp/"
+      },
+      {
+       "p": "©2025 Japan Association for Human Resources in Industrial Product Manufacturing"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Etsa",
+      "points": [
+       "Setelah proses penyinaran dan pengembangan, bagian tembaga di luar pola sirkuit dihilan…",
+       "Karena proses etsa adalah reaksi kimia, kontrol konsentrasi dan suhu larutan sangat pen…",
+       "Ada 2 metode utama proses etsa. Pada PCB digunakan metode etsa basah."
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

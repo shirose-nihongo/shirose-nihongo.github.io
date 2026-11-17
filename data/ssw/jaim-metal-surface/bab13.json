@@ -1,0 +1,953 @@
+{
+ "schema": 1,
+ "bidang": "jaim-metal-surface",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 金属表面処理 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab13",
+  "no": 13,
+  "title": {
+   "id": "Pemolesan Buff",
+   "jp": "バフ研磨"
+  },
+  "intro": {
+   "id": "Bab 13 buku resmi JAIM."
+  },
+  "pages": [
+   185,
+   206
+  ],
+  "subs": [
+   {
+    "id": "b13s1",
+    "no": 1,
+    "title": {
+     "id": "Tujuan Pemolesan Buff",
+     "jp": "バフ研磨の目的"
+    },
+    "pages": [
+     185,
+     185
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Menghasilkan Kilap (membuat permukaan berkilau)"
+      },
+      {
+       "ul": [
+        "Permukaan produk dihaluskan agar menjadi halus dan berkilau.",
+        "Pada produk logam seperti baja tahan karat dan aluminium, permukaan juga dapat dibuat “finishing permukaan cermin” yang berkilau seperti cermin."
+       ]
+      },
+      {
+       "p": "(2) Menghilangkan bagian tajam dan goresan"
+      },
+      {
+       "ul": [
+        "Bagian tajam dan goresan yang timbul akibat proses pemotongan (pengikiran) atau pengeboran dapat dihilangkan secara tuntas.",
+        "Pada komponen presisi, bagian tajam atau goresan dapat menurunkan kinerja dan mutu, sehingga pemolesan buff menjadi proses sangat penting."
+       ]
+      },
+      {
+       "p": "(3) Menghilangkan Kotoran"
+      },
+      {
+       "ul": [
+        "Serpihan potong, tonjolan sisa las, kerak hitam, dan kotoran lainnya dapat dihilangkan.",
+        "Jika dilakukan sebelum pelapisan, anodisasi, atau pengecatan, daya rekat menjadi lebih baik dan hasil akhir lebih bagus."
+       ]
+      },
+      {
+       "p": "(4) Penghalusan Permukaan (membuat permukaan halus)"
+      },
+      {
+       "ul": [
+        "Dengan mengurangi ketidakrataan permukaan, ketelitian dimensi meningkat dan kualitas menjadi lebih stabil.",
+        "Permukaan yang halus juga dapat mengurangi hambatan dan gesekan."
+       ]
+      },
+      {
+       "p": "(5) Mengurangi Pantulan Cahaya Acak"
+      },
+      {
+       "ul": [
+        "Dengan menghaluskan permukaan, pantulan cahaya acak dapat dikurangi, sehingga meningkatkan keselamatan dan estetika."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Menghasilkan Kilap (membuat permukaan berkilau)",
+      "points": [
+       "Permukaan produk dihaluskan agar menjadi halus dan berkilau.",
+       "Pada produk logam seperti baja tahan karat dan aluminium, permukaan juga dapat dibuat “…",
+       "Bagian tajam dan goresan yang timbul akibat proses pemotongan (pengikiran) atau pengebo…",
+       "Pada komponen presisi, bagian tajam atau goresan dapat menurunkan kinerja dan mutu, seh…",
+       "Serpihan potong, tonjolan sisa las, kerak hitam, dan kotoran lainnya dapat dihilangkan.",
+       "Jika dilakukan sebelum pelapisan, anodisasi, atau pengecatan, daya rekat menjadi lebih …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s2",
+    "no": 2,
+    "title": {
+     "id": "Penggunaan Pemolesan Buff",
+     "jp": "バフ研磨の用途"
+    },
+    "pages": [
+     186,
+     186
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Mobil dan Sepeda Motor"
+      },
+      {
+       "ul": [
+        "Digunakan pada komponen dan roda mobil serta sepeda motor, bagian lampu, dan sebagainya.",
+        "Produk yang membutuhkan pantulan cahaya, seperti reflektor lampu depan, menggunakan pemolesan buff."
+       ]
+      },
+      {
+       "p": "(2) Peralatan Medis"
+      },
+      {
+       "ul": [
+        "Karena aspek higienitas dan keselamatan sangat penting pada peralatan medis, permukaan dibuat halus tanpa ada bagian tajam atau goresan.",
+        "Pemolesan buff juga digunakan pada peralatan bedah."
+       ]
+      },
+      {
+       "p": "(3) Aksesori dan Logam Mulia"
+      },
+      {
+       "ul": [
+        "Karena keindahan tampilan sangat penting pada aksesori. dsb, pemolesan buff digunakan untuk menghasilkan kilap dan kehalusan yang tinggi.",
+        "Logam mulia seperti emas, perak dan platina juga dipoles dengan buff agar permukaannya berkilau."
+       ]
+      },
+      {
+       "p": "(4) Mesin Pengolahan Makanan"
+      },
+      {
+       "ul": [
+        "Bagian yang bersentuhan langsung dengan makanan perlu dibuat halus agar mudah dicuci dan tetap bersih. Untuk itu, pemolesan buff digunakan."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Mobil dan Sepeda Motor",
+      "points": [
+       "Digunakan pada komponen dan roda mobil serta sepeda motor, bagian lampu, dan sebagainya.",
+       "Produk yang membutuhkan pantulan cahaya, seperti reflektor lampu depan, menggunakan pem…",
+       "Karena aspek higienitas dan keselamatan sangat penting pada peralatan medis, permukaan …",
+       "Pemolesan buff juga digunakan pada peralatan bedah.",
+       "Karena keindahan tampilan sangat penting pada aksesori. dsb, pemolesan buff digunakan u…",
+       "Logam mulia seperti emas, perak dan platina juga dipoles dengan buff agar permukaannya …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s3",
+    "no": 3,
+    "title": {
+     "id": "Material yang Dipoles dengan Buff",
+     "jp": "バフ研磨する材料"
+    },
+    "pages": [
+     187,
+     188
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Besi (Baja)"
+      },
+      {
+       "ul": [
+        "Pemolesan buff sering digunakan untuk membersihkan permukaan sebagai persiapan sebelum dilakukan pelapisan."
+       ]
+      },
+      {
+       "p": "(2) Baja tahan karat"
+      },
+      {
+       "ul": [
+        "Banyak digunakan terutama karena meningkatkan ketahanan karat dan membuat tampilan lebih bagus.",
+        "Berbagai jenis pemolesan (satin, hairline, dsb) dapat dilakukan, termasuk finishing permukaan cermin."
+       ]
+      },
+      {
+       "p": "(3) Aluminium"
+      },
+      {
+       "ul": [
+        "Ringan dan mudah ditangani, sehingga pemolesan buff dapat digunakan untuk memperbaiki tampilan.",
+        "Sering kali dilakukan pemolesan buff sebagai pra-perlakuan sebelum proses anodisasi."
+       ]
+      },
+      {
+       "p": "(4) Tembaga dan Kuningan"
+      },
+      {
+       "ul": [
+        "Dapat digunakan untuk menonjolkan warna dan kilau khasnya, sehingga tampilan menjadi lebih baik."
+       ]
+      },
+      {
+       "p": "(5) Titanium"
+      },
+      {
+       "ul": [
+        "Tahan terhadap karat, memiliki kekuatan yang tinggi, dan dapat dipoles dengan presisi."
+       ]
+      },
+      {
+       "p": "(6) Lain-lain"
+      },
+      {
+       "ul": [
+        "Pada pelapisan krom keras, pemolesan buff terkadang digunakan untuk meningkatkan ketahanan korosi dan menghasilkan kilap.",
+        "Setelah pelapisan nikel atau tembaga, terkadang dilakukan pemolesan dengan finishing kilap lembut (satin) atau finishing garis halus (hairline).",
+        "Pemolesan buff juga digunakan pada plastik seperti akrilik, polikarbonat dan resin ABS, serta pada kaca."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Besi (Baja)",
+      "points": [
+       "Pemolesan buff sering digunakan untuk membersihkan permukaan sebagai persiapan sebelum …",
+       "Banyak digunakan terutama karena meningkatkan ketahanan karat dan membuat tampilan lebi…",
+       "Berbagai jenis pemolesan (satin, hairline, dsb) dapat dilakukan, termasuk finishing per…",
+       "Ringan dan mudah ditangani, sehingga pemolesan buff dapat digunakan untuk memperbaiki t…",
+       "Sering kali dilakukan pemolesan buff sebagai pra-perlakuan sebelum proses anodisasi.",
+       "Dapat digunakan untuk menonjolkan warna dan kilau khasnya, sehingga tampilan menjadi le…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s4",
+    "no": 4,
+    "title": {
+     "id": "Proses Pemolesan Buff",
+     "jp": "バフ研磨の工程"
+    },
+    "pages": [
+     189,
+     189
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) pra-perlakuan"
+      },
+      {
+       "ul": [
+        "Minyak dan kotoran yang menempel di permukaan produk dibersihkan secara menyeluruh.",
+        "Dengan demikian, pemolesan dapat berlangsung lancar dan hasil akhirnya juga lebih baik."
+       ]
+      },
+      {
+       "p": "(2) Pemolesan Kasar"
+      },
+      {
+       "ul": [
+        "Dengan buff berbutir kasar dan bahan abrasif (seperti batang merah), goresan besar serta beram/burr pada permukaan produk dihilangkan. Pada tahap ini, penting untuk memoles seluruh permukaan secara merata."
+       ]
+      },
+      {
+       "p": "(3) Pemolesan Antara"
+      },
+      {
+       "ul": [
+        "Dengan buff berbutir sedang dan bahan abrasif (seperti batang putih), goresan yang lebih halus pada permukaan dihilangkan. Sambil melihat kondisi, permukaan dirapikan agar semakin halus."
+       ]
+      },
+      {
+       "p": "(4) Pemolesan Akhir"
+      },
+      {
+       "ul": [
+        "Dengan buff berbutir halus dan bahan abrasif (seperti batang biru), dilakukan pemolesan akhir pada permukaan produk. Pada tahap ini, permukaan mulai tampak berkilau.",
+        "Terkadang dilakukan finishing dengan kilap berkurang, seperti satin finish (garis-garis pendek halus) atau hairline finish (garis-garis lurus sejajar)."
+       ]
+      },
+      {
+       "p": "(5) Finishing Permukaan Cermin (jika diperlukan)"
+      },
+      {
+       "ul": [
+        "Jika diperlukan kilap yang tinggi, dipoles lebih lanjut dengan buff berbutir sangat halus (No. 800 atau lebih) hingga menghasilkan permukaan cermin."
+       ]
+      },
+      {
+       "p": "(6) Pencucian"
+      },
+      {
+       "ul": [
+        "Setelah pemolesan, bahan abrasif dan sisa pemolesan yang tertinggal di permukaan dicuci hingga bersih.",
+        "Ini sangat penting terutama pada proses sebelum pelapisan."
+       ]
+      },
+      {
+       "p": "pra- pemolesan pemolesan pemolesan perlakuan kasar antara akhir"
+      },
+      {
+       "p": "finishing cermin pencucian (jika perlu)"
+      },
+      {
+       "p": "Gambar 13-2: Proses Pemolesan Buff"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) pra-perlakuan",
+      "points": [
+       "Minyak dan kotoran yang menempel di permukaan produk dibersihkan secara menyeluruh.",
+       "Dengan demikian, pemolesan dapat berlangsung lancar dan hasil akhirnya juga lebih baik.",
+       "Dengan buff berbutir kasar dan bahan abrasif (seperti batang merah), goresan besar sert…",
+       "Dengan buff berbutir sedang dan bahan abrasif (seperti batang putih), goresan yang lebi…",
+       "Dengan buff berbutir halus dan bahan abrasif (seperti batang biru), dilakukan pemolesan…",
+       "Terkadang dilakukan finishing dengan kilap berkurang, seperti satin finish (garis-garis…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s5",
+    "no": 5,
+    "title": {
+     "id": "Perubahan Permukaan Material dalam Pemolesan Buff",
+     "jp": "バフ研磨時の材料表面の変化"
+    },
+    "pages": [
+     190,
+     190
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Seiring proses, permukaan bahan semakin halus, dan tujuan proses berubah dari “mengikis” menjadi “membuat berkilau”.",
+        "Semakin lanjut tahap prosesnya, buff yang digunakan semakin lunak dan bahan abrasif semakin halus.",
+        "Semakin proses berlangsung, kekasaran permukaan semakin kecil.",
+        "",
+        "Bahan abrasif menjadi semakin halus dalam urutan batang merah → batang putih → batang biru.",
+        "Semakin besar angka nomor bahan abrasif, semakin halus butirannya."
+       ]
+      },
+      {
+       "p": "pemolesan kasar pemolesan akhir kasar halus (kilap)"
+      },
+      {
+       "p": "bahan (produk) bahan (produk) bahan (produk)"
+      },
+      {
+       "p": "Gambar 13-3: Perubahan Permukaan Bahan selama Pemolesan Buff"
+      },
+      {
+       "p": "kasar halus"
+      },
+      {
+       "p": "No. 80 No. 200 No. 400 No. 600 No. 800 No. 1000"
+      },
+      {
+       "p": "Gambar 13-4: Nomor Bahan Abrasif untuk Pemolesan Buff"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "pemolesan kasar pemolesan akhir kasar halus (kilap)",
+      "points": [
+       "Seiring proses, permukaan bahan semakin halus, dan tujuan proses berubah dari “mengikis…",
+       "Semakin lanjut tahap prosesnya, buff yang digunakan semakin lunak dan bahan abrasif sem…",
+       "Semakin proses berlangsung, kekasaran permukaan semakin kecil.",
+       "",
+       "Bahan abrasif menjadi semakin halus dalam urutan batang merah → batang putih → batang b…",
+       "Semakin besar angka nomor bahan abrasif, semakin halus butirannya."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s6",
+    "no": 6,
+    "title": {
+     "id": "Jenis-jenis Buff",
+     "jp": "バフの{種類|しゅるい}"
+    },
+    "pages": [
+     191,
+     192
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Buff Sisal (Buff Rami)"
+      },
+      {
+       "ul": [
+        "Dibuat dengan menyusun beberapa lembar serat alami yang keras dan kuat yang disebut serat sisal.",
+        "Karena seratnya keras, memiliki daya pemolesan yang kuat dan cocok untuk menghilangkan beram serta goresan yang dalam. Namun, perlu berhati-hati karena jika ditekan terlalu kuat, mudah timbul panas.",
+        "Digunakan pada pemolesan kasar (tahap awal) untuk mengikis ketidakrataan besar pada permukaan.",
+        "Digunakan pada berbagai jenis logam seperti baja tahan karat, besi dan kuningan. Untuk aluminium, penggunaan harus hati-hati agar tidak terkikis terlalu banyak."
+       ]
+      },
+      {
+       "p": "(2) Buff Kain (Buff Katun, Buff Flanel)"
+      },
+      {
+       "ul": [
+        "Buff yang relatif lunak, dibuat dengan menyusun kain katun atau flanel.",
+        "Lebih lunak dari buff sisal, mudah menyerap bahan abrasif, dan dapat memoles permukaan secara merata.",
+        "Digunakan pada tahap pemolesan antara s/d akhir untuk menghilangkan goresan halus sekaligus menghasilkan kilap.",
+        "Digunakan pada berbagai bahan seperti baja tahan karat, aluminium, kuningan, resin, dan sebagainya."
+       ]
+      },
+      {
+       "p": "(3) Buff Felt"
+      },
+      {
+       "ul": [
+        "Dibuat dari felt, yakni dari wol yang dikompresi hingga padat. Salah satu karakteristiknya adalah bentuk tidak mudah berubah.",
+        "Memiliki kekakuan yang cukup dan cocok untuk memoles bagian-bagian kecil atau detail. Karena menyerap bahan abrasif dengan baik, mudah menghasilkan kilap yang halus dan merata."
+       ]
+      },
+      {
+       "ul": [
+        "Digunakan pada pemolesan akhir s/d finishing permukaan cermin, terutama untuk pemolesan akhir benda-benda kecil, cetakan dan komponen presisi."
+       ]
+      },
+      {
+       "p": "(4) Buff Wol (Buff Bulu Domba)"
+      },
+      {
+       "ul": [
+        "Buff yang sangat lunak, dengan serat wol yang dipasang pada permukaannya.",
+        "Memoles permukaan dengan lembut dan dapat menghasilkan kilap dengan ketidakmerataan minimal. Tidak mudah menghasilkan panas dan sering digunakan untuk pemolesan akhir hingga finishing permukaan cermin.",
+        "Cocok untuk produk yang tak boleh tergores, seperti baja tahan karat, aluminium, resin dan barang hasil pelapisan."
+       ]
+      },
+      {
+       "p": "(5) Buff Spon"
+      },
+      {
+       "ul": [
+        "Dengan bahan lunak dari spon uretan, permukaannya memiliki ketidakrataan halus sehingga dapat cukup baik menyesuaikan dengan permukaan melengkung.",
+        "Sangat lunak, dengan karakteristik tak mudah menggores bahan. Cocok untuk menghasilkan kilap dan tahap pemolesan akhir, serta menghasilkan permukaan yang lebih seragam.",
+        "Digunakan pada produk yang tidak boleh tergores, seperti komponen resin, produk hasil pelapisan dan bagian eksterior mobil."
+       ]
+      },
+      {
+       "p": "(6) Buff Rayon"
+      },
+      {
+       "ul": [
+        "Dibuat dengan menyusun beberapa lapis kain rayon (serat buatan). Lebih seragam dari serat alami, serta memiliki keseimbangan antara kelembutan dan kekakuan.",
+        "Karena seratnya seragam, hasil pemolesan tidak mudah menimbulkan ketidakmerataan pada permukaan.",
+        "Menyerap bahan abrasif dengan baik, sehingga cocok untuk menghasilkan kilap pada logam.",
+        "Lebih lunak dari buff kain tetapi lebih kokoh dari buff wol, dengan kata lain sifat diantara keduanya.",
+        "Digunakan pada tahap pemolesan antara hingga akhir, terutama untuk menghasilkan kilap yang seragam.",
+        "Digunakan untuk berbagai bahan seperti baja tahan karat, aluminium, kuningan dan resin, serta cocok untuk pemolesan akhir produk yang mengutamakan keindahan tampilan."
+       ]
+      },
+      {
+       "p": "(7) Buff Kain Nonwoven (Buff Nilon)"
+      },
+      {
+       "ul": [
+        "Dibuat dengan mencampur partikel abrasif ke kain nonwoven berbahan nilon.",
+        "Tak mudah tersumbat dan dapat memoles permukaan secara merata. Memiliki ciri tidak banyak menghasilkan debu (serbuk halus) dan mudah digunakan untuk perlakuan dasar permukaan.",
+        "Digunakan pada tahap pemolesan kasar hingga pemolesan antara, dan cocok untuk menghilangkan goresan ringan pada permukaan.",
+        "Digunakan pada logam seperti baja tahan karat, aluminium, besi, dsb.",
+        "Juga digunakan untuk persiapan permukaan sebelum pengecatan.",
+        "Selain itu, juga digunakan untuk satin finish (kilap lembut) dan hairlines finish (garis halus)."
+       ]
+      },
+      {
+       "p": "buff sisal buff katun Gambar 13-5: Bentuk Buff"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Buff Sisal (Buff Rami)",
+      "points": [
+       "Dibuat dengan menyusun beberapa lembar serat alami yang keras dan kuat yang disebut ser…",
+       "Karena seratnya keras, memiliki daya pemolesan yang kuat dan cocok untuk menghilangkan …",
+       "Digunakan pada pemolesan kasar (tahap awal) untuk mengikis ketidakrataan besar pada per…",
+       "Digunakan pada berbagai jenis logam seperti baja tahan karat, besi dan kuningan. Untuk …",
+       "Buff yang relatif lunak, dibuat dengan menyusun kain katun atau flanel.",
+       "Lebih lunak dari buff sisal, mudah menyerap bahan abrasif, dan dapat memoles permukaan …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s7",
+    "no": 7,
+    "title": {
+     "id": "Jenis Bahan Abrasif untuk Pemolesan Buff",
+     "jp": "バフ研磨剤の種類"
+    },
+    "pages": [
+     193,
+     196
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Bahan Abrasif Padat"
+      },
+      {
+       "ul": [
+        "Terbuat dari bahan seperti lilin keras yang dicampur partikel abrasif, dan digunakan dengan ditekan agar menempel pada buff.",
+        "Memiliki daya pemolesan yang kuat dan sering digunakan pada tahap pemolesan kasar hingga pemolesan antara.",
+        "Bahan abrasifnya tahan lama, biayanya rendah, sehingga pemolesan dapat dilakukan secara konsisten.",
+        "Digunakan secara luas pada logam seperti besi, baja tahan karat, aluminium, dan sebagainya."
+       ]
+      },
+      {
+       "p": "Bahan abrasif padat antara lain sebagai berikut:"
+      },
+      {
+       "ol": [
+        "Sizer"
+       ]
+      },
+      {
+       "ul": [
+        "Menggunakan partikel abrasif alumina (aluminium oksida).",
+        "Untuk menghilangkan goresan dan pemolesan kasar pada logam keras seperti besi, baja tahan karat, dsb."
+       ]
+      },
+      {
+       "ol": [
+        "Lime"
+       ]
+      },
+      {
+       "ul": [
+        "Menggunakan artikel abrasif alumina (aluminium oksida).",
+        "Digunakan untuk pemolesan antara s/d akhir pada besi, baja tahan karat, dan sebagainya."
+       ]
+      },
+      {
+       "ol": [
+        "Batang Merah"
+       ]
+      },
+      {
+       "ul": [
+        "Dahulu, sering digunakan oksida besi yang disebut bengala.",
+        "Saat ini, terutama digunakan partikel abrasif silika (silikon dioksida) yang agak kasar. Juga disebut dengan nama tripoli.",
+        "Daya polesnya kuat dan dapat menghilangkan goresan dalam, serta beram tajam dengan baik. Berfungsi untuk pemolesan intensif pada tahap awal, terutama pada tahap pemolesan kasar.",
+        "Cocok untuk logam seperti besi, baja tahan karat, aluminium, dan sebagainya."
+       ]
+      },
+      {
+       "ol": [
+        "Batang Putih"
+       ]
+      },
+      {
+       "ul": [
+        "Menggunakan partikel abrasif alumina (aluminium oksida) yang lebih halus dari batang merah.",
+        "Dapat memoles secara merata dan digunakan secara luas dari pemolesan antara hingga akhir.",
+        "Paling sering digunakan karena dapat menghilangkan goresan halus sekaligus menghasilkan kilap sampai tingkat tertentu.",
+        "Dapat digunakan pada berbagai bahan seperti baja tahan karat, aluminium, resin, dan sebagainya."
+       ]
+      },
+      {
+       "ol": [
+        "Batang Biru"
+       ]
+      },
+      {
+       "ul": [
+        "Terbuat dari partikel abrasif kromium oksida yang sangat halus.",
+        "Digunakan pada tahap pemolesan akhir hingga finishing permukaan cermin, dapat menghasilkan kilap yang tinggi.",
+        "Daya polesnya lemah.",
+        "Cocok untuk bahan (produk) seperti baja tahan karat, aluminium, produk hasil pelapisan, resin, dsb yang ingin diberi hasil akhir yang indah."
+       ]
+      },
+      {
+       "ol": [
+        "Danji"
+       ]
+      },
+      {
+       "ul": [
+        "Menggunakan partikel abrasif silika (silikon dioksida) yang lebih halus dari batang merah.",
+        "Untuk pemolesan akhir pada resin, dan permukaan yang telah dicat."
+       ]
+      },
+      {
+       "p": "batang merah batang putih batang biru"
+      },
+      {
+       "p": "Gambar 13-6: Bahan Abrasif"
+      },
+      {
+       "p": "(2) Bahan Abrasif Cair"
+      },
+      {
+       "ul": [
+        "Terbuat dari partikel abrasif halus yang dicampurkan ke cairan, dan dioleskan langsung ke buff atau produk.",
+        "Cocok untuk tahap menghilangkan goresan halus, seperti pada pemolesan akhir maupun finishing permukaan cermin.",
+        "Salah satu karakteristiknya adalah lebih mudah menghasilkan permukaan yang seragam.",
+        "Mudah digunakan juga pada bahan yang sensitif panas, seperti aluminium, resin, dan sebagainya.",
+        "Karena mudah terciprat, diperlukan pembersihan dan pengelolaan lingkungan kerja.",
+        "Mengandung air, sehingga daya poles cenderung sedikit lebih lemah dibanding bahan abrasif padat.",
+        "Umumnya digunakan melalui penyemprotan dengan semprotan udara atau pistol semprot.",
+        "Ada juga metode pengolesan dengan kuas atau pelapisan dengan rol."
+       ]
+      },
+      {
+       "p": "Tabel 13-1: Proses Pemolesan Buff dan Karakteristiknya"
+      },
+      {
+       "p": "Kekasaran Bahan Nomor Proses Buff Permukaan Karakteristik Abrasif (acuan) (acuan)"
+      },
+      {
+       "p": "Proses menghilangkan gerigi tajam dan goresan buff sisal, batang Ra: Pemolesan No. 80 dalam. Buff, bahan buff kain merah, 1,0 μm – kasar 〜 No. 200 abrasif dengan daya nonwoven sizer 3,0 μm poles kuat untuk memoles ketidakrataan yang besar."
+      },
+      {
+       "p": "Memperhalus lebih lanjut permukaan yang buff kain, sebelumnya telah dipoles batang Ra: Pemolesan buff rayon, No. 200 secara kasar. putih, 0,2 μm – antara buff kain 〜 No. 400 Menghilangkan goresan lime 1,0 μm nonwoven halus, membuat permukaan lebih seragam untuk pemolesan akhir."
+      },
+      {
+       "p": "batang Permukaan mulai buff kain, putih, Ra: Pemolesan No. 600 mengkilap dan buff felt, batang 0,05 μm – akhir 〜 No. 800 tampilannya semakin buff rayon biru, lime, 0,2 μm mendekati produk jadi. danji"
+      },
+      {
+       "p": "Tahap pemolesan paling buff wol, Ra: Finishing batang No. 1000 akhir. Kilap seperti buff spon, 0,01 μm – cermin biru atau lebih cermin, kualitas tampilan buff felt 0,05 μm meningkat maksimal."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Bahan Abrasif Padat",
+      "points": [
+       "Terbuat dari bahan seperti lilin keras yang dicampur partikel abrasif, dan digunakan de…",
+       "Memiliki daya pemolesan yang kuat dan sering digunakan pada tahap pemolesan kasar hingg…",
+       "Bahan abrasifnya tahan lama, biayanya rendah, sehingga pemolesan dapat dilakukan secara…",
+       "Digunakan secara luas pada logam seperti besi, baja tahan karat, aluminium, dan sebagai…",
+       "Menggunakan partikel abrasif alumina (aluminium oksida).",
+       "Untuk menghilangkan goresan dan pemolesan kasar pada logam keras seperti besi, baja tah…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s8",
+    "no": 8,
+    "title": {
+     "id": "Peralatan Pemolesan",
+     "jp": "{研磨装置|けんまそうち}"
+    },
+    "pages": [
+     197,
+     200
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Mesin Pemoles Buff Meja (Buff Tipe Berdiri)"
+      },
+      {
+       "ul": [
+        "Merupakan mesin pemoles berukuran kecil yang digunakan diatas meja kerja.",
+        "Buff dipasang pada kedua sisi poros putar.",
+        "Cocok untuk memoles komponen kecil dan mudah digunakan."
+       ]
+      },
+      {
+       "p": "(2) Mesin Pemoles Buff Vertikal (Buff Besar)"
+      },
+      {
+       "ul": [
+        "Mesin berukuran besar, dipasang di lantai dan memiliki daya yang kuat.",
+        "Untuk memoles komponen besar atau logam keras secara intensif.",
+        "Dengan mengubah kecepatan putar dan ukuran buff, dapat untuk berbagai jenis pemolesan.",
+        "Karena menghasilkan tenaga besar, perlu perhatian keselamatan."
+       ]
+      },
+      {
+       "p": "mesin buff pemoles"
+      },
+      {
+       "p": "bahan (produk)"
+      },
+      {
+       "p": "Gambar 13-7: Mesin Pemoles Buff Vertikal"
+      },
+      {
+       "p": "(3) Gerinda Tangan (Buff Tangan Elektrik)"
+      },
+      {
+       "ul": [
+        "Mesin pemoles berukuran kecil yang dipegang dengan tangan.",
+        "Praktis untuk memoles bagian-bagian kecil atau komponen yang sulit difiksasi.",
+        "Karena mudah digunakan di berbagai posisi, sering digunakan untuk pekerjaan perbaikan.",
+        "Hasil pemolesan mudah berubah tergantung cara penggunaannya, sehingga diperlukan pengalaman."
+       ]
+      },
+      {
+       "p": "buff"
+      },
+      {
+       "p": "bahan (produk)"
+      },
+      {
+       "p": "gerinda tangan"
+      },
+      {
+       "p": "Gambar 13-8: Gerinda Tangan"
+      },
+      {
+       "p": "(4) Gerinda Pneumatik (Buff Tangan Pneumatik)"
+      },
+      {
+       "ul": [
+        "Gerinda tangan yang digerakkan dengan udara bertekanan.",
+        "Lebih ringan dan mudah digunakan dibanding tipe elektrik.",
+        "Cocok memoles komponen kecil dan komponen presisi.",
+        "Karena putaran cepat, perlu berhati-hati agar tidak menekan terlalu kuat."
+       ]
+      },
+      {
+       "p": "(5) Robot Pemoles Buff"
+      },
+      {
+       "ul": [
+        "Memoles secara otomatis dengan memasang buff pada lengan robot.",
+        "Cocok untuk finishing produk massal karena dapat melakukan pemolesan dalam jumlah besar dengan kualitas yang konsisten.",
+        "Tekanan dan sudut dapat diatur otomatis, sehingga hasil pemolesan lebih konsisten.",
+        "Pekerja tak perlu bekerja dalam posisi berbahaya, sehingga tingkat keselamatan juga tinggi."
+       ]
+      },
+      {
+       "p": "(6) Gerinda Sabuk (Mesin Pemoles Sabuk)"
+      },
+      {
+       "ul": [
+        "Memoles dengan memutar sabuk abrasif dengan kecepatan tinggi.",
+        "Sering digunakan untuk merapikan permukaan sebelum pemolesan buff.",
+        "Dapat memoles permukaan datar dan bagian yang memiliki tepi/sudut secara efisien."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Mesin Pemoles Buff Meja (Buff Tipe Berdiri)",
+      "points": [
+       "Merupakan mesin pemoles berukuran kecil yang digunakan diatas meja kerja.",
+       "Buff dipasang pada kedua sisi poros putar.",
+       "Cocok untuk memoles komponen kecil dan mudah digunakan.",
+       "Mesin berukuran besar, dipasang di lantai dan memiliki daya yang kuat.",
+       "Untuk memoles komponen besar atau logam keras secara intensif.",
+       "Dengan mengubah kecepatan putar dan ukuran buff, dapat untuk berbagai jenis pemolesan."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s9",
+    "no": 9,
+    "title": {
+     "id": "Poin Perhatian Pemolesan Buff",
+     "jp": "バフ研磨の注意点"
+    },
+    "pages": [
+     201,
+     201
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Jangan menekan terlalu kuat"
+      },
+      {
+       "ul": [
+        "Tekanan terlalu kuat menimbulkan panas akibat gesekan, sehingga permukaan mudah “terbakar”.",
+        "Itu mudah membuat bagian sudut saja yang terkikis, atau disebut cacat “botak”."
+       ]
+      },
+      {
+       "p": "(2) Merapikan buff dan bahan abrasif secara berkala"
+      },
+      {
+       "ul": [
+        "Jika buff terkikis satu sisi atau bahan abrasif terlalu sedikit, dapat menyebabkan ketidakmerataan dan goresan.",
+        "Sebelum mulai bekerja, periksa kondisi buff dan, jika perlu, lakukan dressing (merapikan bentuk dan permukaan buff) atau tambahkan bahan abrasif."
+       ]
+      },
+      {
+       "p": "(3) Patuhi kecepatan putar"
+      },
+      {
+       "ul": [
+        "Jika terlalu cepat, panas mudah timbul, dan jika terlalu lambat, tidak dapat terkikis.",
+        "Dengan menjaga kecepatan putar yang sesuai bahan, hasil pemolesan akan konsisten."
+       ]
+      },
+      {
+       "p": "(4) Gerakkan dengan arah dan kecepatan yang sama"
+      },
+      {
+       "ul": [
+        "Jika gerakan tak teratur, hasil pemolesan menjadi tak seragam.",
+        "Poles dengan menggerakkan buff dalam arah yang sama dan kecepatan yang konstan agar hasilnya rapi."
+       ]
+      },
+      {
+       "p": "(5) Pastikan goresan dari proses sebelumnya tidak tersisa"
+      },
+      {
+       "ul": [
+        "Jika proses berikutnya dilakukan dengan goresan kasar masih tersisa, goresan tersebut tidak akan hilang hingga tahap akhir.",
+        "Penting disadari bahwa “mutu proses berikutnya ditentukan oleh mutu proses sebelumnya”."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Jangan menekan terlalu kuat",
+      "points": [
+       "Tekanan terlalu kuat menimbulkan panas akibat gesekan, sehingga permukaan mudah “terbak…",
+       "Itu mudah membuat bagian sudut saja yang terkikis, atau disebut cacat “botak”.",
+       "Jika buff terkikis satu sisi atau bahan abrasif terlalu sedikit, dapat menyebabkan keti…",
+       "Sebelum mulai bekerja, periksa kondisi buff dan, jika perlu, lakukan dressing (merapika…",
+       "Jika terlalu cepat, panas mudah timbul, dan jika terlalu lambat, tidak dapat terkikis.",
+       "Dengan menjaga kecepatan putar yang sesuai bahan, hasil pemolesan akan konsisten."
+      ]
+     }
+    }
+   },
+   {
+    "id": "b13s10",
+    "no": 10,
+    "title": {
+     "id": "Cacat Pemolesan Buff",
+     "jp": "バフ研磨の不良"
+    },
+    "pages": [
+     202,
+     206
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Terbakar (permukaan menjadi hitam / berubah warna)"
+      },
+      {
+       "ul": [
+        "Terjadi jika panas gesekan berlebihan.",
+        "Gesekan perlu dikurangi dengan cukup mengoleskan bahan abrasif, mengurangi tekanan, dan menyesuaikan kecepatan putar dengan bahan yang dipoles."
+       ]
+      },
+      {
+       "p": "Gambar 13-9: Kasus \"Terbakar\" pada Pemolesan Buff"
+      },
+      {
+       "p": "(2) Ketidakmerataan (hasil pemolesan tidak seragam)"
+      },
+      {
+       "ul": [
+        "Terjadi jika cara menempelkan buff atau tekanan yang diberikan tidak konsisten.",
+        "Penting untuk menjaga kecepatan gerak dan tekanan tetap konstan, memilih lebar buff sesuai bentuk produk, serta melakukan dressing pada buff (merapikan bentuk dan permukaan) agar permukaan rata."
+       ]
+      },
+      {
+       "p": "Tabel 13-10: Ketidakmerataan Pemolesan Buff"
+      },
+      {
+       "p": "(3) Kilap tidak mencukupi"
+      },
+      {
+       "ul": [
+        "Terjadi jika buff atau bahan abrasif pemolesan akhir tidak sesuai.",
+        "Penting untuk mengganti dengan buff lunak pemolesan akhir dan menggunakan bahan abrasif yang lebih halus."
+       ]
+      },
+      {
+       "p": "(4) Goresan"
+      },
+      {
+       "ul": [
+        "Garis dalam muncul akibat benda asing pada buff atau goresan dari proses sebelumnya.",
+        "Penting untuk menghilangkan benda asing dan melakukan dressing pada buff (merapikan bentuk dan permukaan buff)."
+       ]
+      },
+      {
+       "p": "Tabel 13-11: Goresan pada Pemolesan Buff"
+      },
+      {
+       "p": "(5) Buff berhenti"
+      },
+      {
+       "ul": [
+        "Cacat yang terjadi saat pemolesan dilakukan pada posisi yang selalu sama.",
+        "Dapat menyebabkan cacat tampilan seperti permukaan terbakar, ketidakmerataan kilap, dan cekungan.",
+        "Penting untuk mengatur tekanan buff, kecepatan putar dan kecepatan gerak dengan tepat.",
+        "Selain itu, penting untuk memeriksa kondisi aus buff secara berkala / mengganti buff."
+       ]
+      },
+      {
+       "p": "Tabel 13-12: Buff Berhenti saat Pemolesan"
+      },
+      {
+       "p": "(6) Cacat botak pada bagian ujung"
+      },
+      {
+       "ul": [
+        "Cacat dimana bagian ujung/sudut produk terkikis terlalu banyak, atau lapisan pelapis produk terkelupas.",
+        "Penting untuk mengatur cara penggunaan buff (sudut, dll.), serta memastikan tekanan tidak terfokus pada ujung atau sudut.",
+        "Selain itu, penting untuk memastikan ketebalan pelapisan."
+       ]
+      },
+      {
+       "p": "Tabel 13-13: Cacat Botak pada Bagian Ujung Hasil Pemolesan Buff"
+      },
+      {
+       "p": "Ujian Evaluasi Pekerja Berketerampilan Spesifik Bidang Manufaktur Tingkat 1 (Kategori Perlakuan Permukaan Logam) Buku Referensi Pembelajaran Desember 2025 - Edisi Pertama Juli 2026 - Edisi Kedua"
+      },
+      {
+       "p": "Disunting: The Association for Overseas Technical Cooperation and Sustainable Partnerships (AOTS) Ditulis: Akihiro Kitagawa Atsushi Takimoto Katsuro Hirayama Katsuhiko Majima (berdasarkan urutan abjad Jepang) Diterbitkan: Japan Association for Human Resources in Industrial Product Manufacturing (JAIM) 5-11-2 Toranomon, Minato-ku, Tokyo 105-8501 URL https://www.jaim-skill.or.jp/"
+      },
+      {
+       "p": "©2025 Japan Association for Human Resources in Industrial Product Manufacturing"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Terbakar (permukaan menjadi hitam / berubah warna)",
+      "points": [
+       "Terjadi jika panas gesekan berlebihan.",
+       "Gesekan perlu dikurangi dengan cukup mengoleskan bahan abrasif, mengurangi tekanan, dan…",
+       "Terjadi jika cara menempelkan buff atau tekanan yang diberikan tidak konsisten.",
+       "Penting untuk menjaga kecepatan gerak dan tekanan tetap konstan, memilih lebar buff ses…",
+       "Terjadi jika buff atau bahan abrasif pemolesan akhir tidak sesuai.",
+       "Penting untuk mengganti dengan buff lunak pemolesan akhir dan menggunakan bahan abrasif…"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

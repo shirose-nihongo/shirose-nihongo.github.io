@@ -16,3 +16,10 @@ Gap (jangan diisi karangan):
 - Modul tidak punya tujuan belajar, kesalahan umum, ringkasan → dikosongkan.
 - Sample exam 1号 2025 (sample1_01..03) SUDAH diparse: practice-tests/official-sample-exam-2025.json di tiap kategori (120 soal JP, label OFFICIAL QUESTION, kunci resmi; tanpa penjelasan & tanpa terjemahan ID; soal berbasis gambar merujuk halaman PNG di extracted-images/sample1/, soal dengan pilihan berupa gambar ditandai options_in_image). Sample 2号 实技 2025 (sample2_01..03) juga SUDAH diparse: official-sample-exam-2go-2025.json (30 soal/kategori, 90 total, pilihan ganda 4, kunci resmi; 13 soal pilihannya gambar/tabel → options_in_image). 14 kategori lain hanya sample (belum diunduh/diparse).
 - Belum terhubung ke UI app; semua record NEEDS_REVIEW; ID chapter-level text belum dicek manual.
+
+## Integrasi ke app (sudah live)
+3 bidang baru "Resmi JAIM" (induk: industrial-mfg): `jaim-machine-metal`, `jaim-elec-electronic`, `jaim-metal-surface`.
+- data/ssw/{slug}/ : index.json, bab1..N.json (teks resmi ID per sub-bab, ringkasan = ekstraksi kalimat pertama/poin bullet, BUKAN karangan), quiz.json (soal resmi per sub-bab, label ✅ Soal resmi; + set "Soal Ujian Contoh Resmi JAIM 2025" di sub b1s99), vocab.json (glosarium + judul sub-bab).
+- assets/ssw/{slug}/{id,jp}/pNN.webp: halaman buku PDF resmi (96 dpi) untuk Buku interaktif (mode scroll default); assets/ssw/{slug}/sample/: halaman contoh untuk soal bergambar.
+- Terdaftar di js/ssw-core.js (DEFAULT_BIDANG + config ujian 40 soal/30 ○×). Pack lama mfg-machine-metal & industrial-mfg (tulisan orisinal Shirose) TIDAK disentuh — putuskan apakah disembunyikan.
+- Generator: tools/imm/build_pack.py, render.py. Akses guru/siswa per-bidang (aksesSswBidang) perlu dibuka untuk slug baru.

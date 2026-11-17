@@ -1,0 +1,488 @@
+{
+ "schema": 1,
+ "bidang": "jaim-machine-metal",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 機械金属加工 (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab6",
+  "no": 6,
+  "title": {
+   "id": "Pengukuran",
+   "jp": "測定"
+  },
+  "intro": {
+   "id": "Bab 6 buku resmi JAIM."
+  },
+  "pages": [
+   68,
+   85
+  ],
+  "subs": [
+   {
+    "id": "b6s1",
+    "no": 1,
+    "title": {
+     "id": "Pekerjaan Pengukuran",
+     "jp": "測定の作業"
+    },
+    "pages": [
+     68,
+     70
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Kalibrasi"
+      },
+      {
+       "p": "Pekerjaan yang disebut kalibrasi diperlukan untuk memastikan nilai dari alat ukur selalu dapat diandalkan. Kalibrasi terdiri dari pengecekan untuk memeriksa apakah nilai alat ukurnya benar dan koreksi yang menyesuaikan menjadi nilai yang benar."
+      },
+      {
+       "p": "Umumnya kalibrasi dilakukan oleh produsen alat ukur sebelum pengiriman. Dalam hal ini akan ada sertifikat kalibrasinya. Setelah membeli alat ukur, pengguna akan melakukan kalibrasi secara berkala dalam jangka waktu menurut ketentuan atau dokumen prosedur."
+      },
+      {
+       "p": "(2) Penyebab Kesalahan"
+      },
+      {
+       "p": "Selisih antara nilai yang diukur dengan nilai sebenarnya disebut kesalahan pengukuran. Penyebab kesalahan adalah pengukur, peralatan yang digunakan, kalibrasi peralatan, suhu, atau kelembaban."
+      },
+      {
+       "p": "Pengukur yang berpengalaman akan memiliki kesalahan yang kecil, tetapi pengukur yang tidak terbiasa akan memiliki kesalahan yang lebih besar."
+      },
+      {
+       "p": "Misalnya, skala pada alat ukur harus dilihat tegak lurus pada skala tersebut. Jika dilihat dari arah miring, hasil pembacaan dapat menjadi berbeda. Hal ini disebut paralaks."
+      },
+      {
+       "p": "Besarnya kesalahan juga berbeda-beda tergantung peralatannya. Ada alat ukur yang spesifikasinya ditetapkan oleh JIS, dan produk yang memenuhi kualitas JIS diberi tanda JIS."
+      },
+      {
+       "p": "(3) Alat Bantu Inspeksi"
+      },
+      {
+       "p": "Alat untuk mempermudah inspeksi, misalnya untuk memfiksasi alat ukur atau sampel pada posisinya, disebut alat bantu atau jig."
+      },
+      {
+       "p": "Alat bantu yang memiliki permukaan dengan kelurusan yang tinggi. Penggaris Alat ini digunakan untuk menarik garis penanda lurus pada saat lurus pemrosesan, tetapi untuk pengukuran, alat ini digunakan saat ingin menggerakkan alat ukur dalam garis lurus."
+      },
+      {
+       "p": "Alat bantu yang memiliki permukaan dengan kelurusan dan Penggaris ketegaklurusan tinggi. Digunakan saat memerlukan sudut siku untuk siku membantu pengukuran."
+      },
+      {
+       "p": "Alat bantu untuk menyalin dimensi bagian yang sulit diukur langsung dengan alat ukur. Ada 2 jenis, yaitu: jangka dalam, untuk menyalin Jangka ukur ukuran diameter dalam; dan jangka luar, untuk menyalin ukuran diameter luar."
+      },
+      {
+       "p": "Alat bantu yang terdiri atas ujung berbentuk seperti jarum dan Jarum bagian untuk memasang ujung tersebut. Digunakan untuk penanda menggambar garis sejajar saat pemrosesan. Pada saat pengukuran, digunakan untuk memeriksa ketinggian."
+      },
+      {
+       "p": "Alat bantu dengan alur berbentuk V 90 derajat. Umumnya digunakan Blok V untuk menahan benda berbentuk silinder."
+      },
+      {
+       "p": "Alat bantu yang memiliki alur dan sekrup pengunci. Dapat menjepit Blok siku sampel dengan sekrup."
+      },
+      {
+       "p": "Merupakan alat bantu yang terdiri atas magnet untuk dipasang pada Dudukan meja rata dan bagian penjepit untuk memasang alat ukur dan magnet lainnya. Digunakan untuk memfiksasi alat ukur."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Kalibrasi",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s2",
+    "no": 2,
+    "title": {
+     "id": "Jangka sorong",
+     "jp": "ノギス"
+    },
+    "pages": [
+     71,
+     73
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Jangka Sorong"
+      },
+      {
+       "p": "Jangka sorong adalah alat ukur dengan penggeser yang bergerak sepanjang batang skala utama. Batang skala utama memiliki rahang tetap dan penggeser memiliki rahang pengukur. Bagian yang ingin diukur dijepit di permukaan pengukuran rahang. Jangka sorong umumnya memiliki rahang dalam dan rahang luar. Oleh karena itu, dapat mengukur dimensi bagian dalam maupun bagian luar. Jangka sorong yang dilengkapi batang pengukur kedalaman dapat pula mengukur kedalaman."
+      },
+      {
+       "p": "Nilai baca terkecil skala vernier ada yang 0,1 mm, 0,05 mm, dan 0,02 mm. Yang sering digunakan adalah 0,05 mm."
+      },
+      {
+       "p": "Nilai tampilan terkecil pada layar digital adalah 0,01 mm."
+      },
+      {
+       "p": "Gambar 6-1: Jangka Sorong"
+      },
+      {
+       "p": "(2) Persiapan Menggunakan Jangka Sorong"
+      },
+      {
+       "p": "Permukaan pengukuran dan permukaan geser dibersihkan sebelum mengukur. Periksa apakah penggeser dapat bergerak dengan lancar dan tidak goyang."
+      },
+      {
+       "p": "Periksa apakah tidak terdapat celah pada rahang dengan menutup penggeser dan mengarahkan ke cahaya. Kemudian, periksa apakah skala menunjukkan angka 0. Untuk tampilan digital, dapat diatur menjadi 0 dengan menekan tombol reset titik nol."
+      },
+      {
+       "p": "(3) Menggunakan Jangka Sorong"
+      },
+      {
+       "p": "Pertama, bersihkan benda yang ingin diukur. Jika ada beram, maka harus dihilangkan."
+      },
+      {
+       "p": "Untuk mengukur diameter luar atau dimensi panjang keseluruhan, gunakan permukaan ukur bagian luar. Untuk mengukur diameter dalam atau lebar alur, gunakan permukaan ukur bagian dalam. Untuk mengukur kedalaman lubang atau alur, gunakan permukaan ukur kedalaman."
+      },
+      {
+       "p": "(4) Membaca Skala Jangka Sorong"
+      },
+      {
+       "p": "Saat mengukur dimensi menggunakan skala vernier, pertama-tama baca skala utama dengan menggunakan posisi angka 0 pada skala vernier. Selanjutnya, cari garis skala pada skala vernier yang berimpit dengan garis skala pada skala utama. Nilai pengukuran adalah hasil penjumlahan nilai skala utama dan nilai skala vernier."
+      },
+      {
+       "p": "Misalnya sedang mengukur dimensi 30,35 mm. Pertama, baca dimana letak angka 0 skala vernier pada skala utama. Jika berada diantara 30 dan 31, berarti nilai pengukuran berada diantara 30 mm dan 31 mm. Selanjutnya, baca skala vernier yang berimpit dengan skala utama. Jika garis skala 0,35 berimpit, berarti nilainya adalah 0,35 mm. Oleh karena itu, nilai pengukuran adalah 30,35 mm yang merupakan jumlah dari nilai skala utama 30 mm dan nilai skala vernier 0,35 mm."
+      },
+      {
+       "p": "Gambar 6-2: Skala Jangka Sorong"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Jangka Sorong",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s3",
+    "no": 3,
+    "title": {
+     "id": "Mikrometer",
+     "jp": "マイクロメータ"
+    },
+    "pages": [
+     74,
+     76
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Mikrometer"
+      },
+      {
+       "p": "Mikrometer adalah alat ukur yang dapat mengukur dimensi dengan presisi menggunakan prinsip ulir."
+      },
+      {
+       "p": "Mikrometer luar adalah mikrometer untuk mengukur dimensi luar. Pada salah satu sisi bingkai, terpasang landasan (anvil) secara tetap. Di sisi lainnya terpasang spindel yang digerakkan dengan mekanisme sekrup. Landasan (anvil) dan spindel dilengkapi dengan permukaan ukur. Pengukuran dimensi dapat dilakukan dengan akurat karena landasan (anvil), mekanisme ulir dan spindel berada dalam satu garis lurus."
+      },
+      {
+       "p": "Pada tipe analog, jarak antar ulirnya ada yang 0,5 mm, ada pula yang 1 mm. Keduanya memiliki nilai skala terkecil 0,01 mm."
+      },
+      {
+       "p": "Gambar 6-3: Mikrometer"
+      },
+      {
+       "p": "(2) Persiapan Menggunakan Mikrometer"
+      },
+      {
+       "ol": [
+        "Perbedaan akibat pemuaian termal juga berpengaruh sehingga mikrometer dan objek ukur harus berada dalam suhu ruangan (20°C).",
+        "Bersihkan kotoran dari permukaan ukur. Biasanya dibersihkan dengan menyisipkan selembar kertas putih, kemudian menariknya keluar.",
+        "Memeriksa Titik Nol Perlahan-lahan dekatkan landasan (anvil) dan spindel hingga bersentuhan. Kemudian, putar bidal hingga berputar bebas sambil berbunyi “klik-klik”. Baca skalanya dan pastikan menunjukkan 0. Untuk mikrometer dengan rentang pengukuran dimulai dari nilai lebih besar dari 0, gunakan batang acuan untuk memeriksa titik acuan."
+       ]
+      },
+      {
+       "p": "(3) Menggunakan Mikrometer"
+      },
+      {
+       "p": "Pertama, bersihkan benda yang ingin diukur. Jika ada beram, maka harus dihilangkan."
+      },
+      {
+       "p": "Sama seperti saat memeriksa titik nol, perlahan-lahan buat objek ukur bersentuhan dengan spindel. Kemudian, putar bidal hingga berputar bebas sambil berbunyi “klik-klik”. Untuk mencegah kesalahan akibat paralaks, baca skala dari arah depan."
+      },
+      {
+       "p": "(4) Membaca Skala Mikrometer"
+      },
+      {
+       "p": "Pertama, baca skala pada selongsong. Selanjutnya, baca skala pada bidal. Nilai pengukuran adalah hasil penjumlahan nilai selongsong dan nilai bidal."
+      },
+      {
+       "p": "Contoh:"
+      },
+      {
+       "p": "Mengukur objek berukuran 20,45 mm."
+      },
+      {
+       "p": "Pertama, baca skala pada selongsong. Terlihat hingga skala 20,0 mm."
+      },
+      {
+       "p": "Selanjutnya, baca skala pada bidal. Menunjukkan skala 0,45 mm."
+      },
+      {
+       "p": "Mikrometer dapat membaca sampai 0,001 mm menggunakan nonius jika memiliki skala nonius. Meskipun tak ada skala nonius, nilai hingga 0,001 mm tetap dapat dibaca berdasarkan perkiraan mata."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Mikrometer",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s4",
+    "no": 4,
+    "title": {
+     "id": "Alat Ukur Lainnya",
+     "jp": "その他の測定器"
+    },
+    "pages": [
+     77,
+     77
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Penggaris"
+      },
+      {
+       "p": "Penggaris adalah alat ukur untuk mengukur panjang. Cara penggunaannya sama seperti penggaris yang biasa digunakan sebagai alat tulis."
+      },
+      {
+       "p": "(2) Protraktor"
+      },
+      {
+       "p": "Protraktor adalah alat ukur untuk mengukur sudut. Struktur umumnya kombinasi dari busur derajat dan penggaris alat tulis. Masing-masing disebut pelat busur dan batang. Tempelkan permukaan bawah pelat busur dan batang pada 2 bidang yang ingin diukur, dan baca skala pada pelat busur untuk mengetahui sudutnya."
+      },
+      {
+       "p": "(3) Piranti Ukur Ketinggian"
+      },
+      {
+       "p": "Piranti ukur ketinggian adalah alat ukur untuk mengukur dimensi tinggi. Alat ukur ini digunakan diatas meja rata. Probe pengukur bergerak tegak lurus terhadap meja rata sehingga dimensi ketinggian dari meja rata dapat mengukur secara akurat."
+      },
+      {
+       "p": "Ada 2 jenis tampilan, sama seperti pada jangka sorong, yaitu tampilan analog dan digital. Pada tampilan analog, ada yang menggunakan skala vernier, ada pula yang menggunakan skala dial. Untuk skala vernier, nilai pembacaan terkecilnya 0,05 mm atau 0,02 mm."
+      },
+      {
+       "p": "(4) Piranti Ukur Kedalaman"
+      },
+      {
+       "p": "Piranti ukur kedalaman adalah alat ukur untuk mengukur kedalaman. Permukaan ukur bergerak tegak lurus terhadap permukaan acuan sehingga dapat mengukur kedalaman dari permukaan acuan."
+      },
+      {
+       "p": "Ada 2 jenis tampilan, sama seperti pada jangka sorong, yaitu tampilan analog dan digital. Pada tampilan analog, ada yang menggunakan skala vernier, ada pula yang menggunakan skala dial. Untuk skala vernier, nilai pembacaan terkecilnya 0,05 mm atau 0,02 mm."
+      },
+      {
+       "p": "(5) Mesin Ukur 3D"
+      },
+      {
+       "p": "Mesin Ukur 3D (CMM: Coordinate Measuring Machine) adalah alat ukur yang tidak hanya dapat mengukur panjang dan sudut, tetapi juga berbagai toleransi geometrik. Secara umum, pengukuran dilakukan dengan menyentuhkan probe pada objek ukur, memasukkan koordinat titik yang disentuh ke komputer, dan melakukan berbagai perhitungan."
+      },
+      {
+       "p": "(6) Mesin Ukur Kekasaran Permukaan"
+      },
+      {
+       "p": "Mesin ukur kekasaran permukaan adalah mesin ukur untuk mengukur kekasaran permukaan. Secara umum, pengukuran dilakukan dengan menelusuri permukaan menggunakan jarum sentuh (stylus), memperbesar ketidakrataan permukaan, dan memasukkan data ke komputer untuk dihitung."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Penggaris",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s5",
+    "no": 5,
+    "title": {
+     "id": "Piranti Ukur Dial",
+     "jp": "ダイヤルゲージ"
+    },
+    "pages": [
+     78,
+     80
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Pengertian Piranti Ukur Dial"
+      },
+      {
+       "p": "Piranti ukur dial adalah alat ukur yang menampilkan jumlah pergerakan dalam skala berbentuk lingkaran dengan memperbesar gerakan probe pengukur secara mekanis."
+      },
+      {
+       "p": "Pada pelat skala terdapat jarum panjang. Probe pengukur ditahan oleh plunyer (spindel). Jika batang pengukur (plunyer) ditekan, jarum panjang akan berputar searah jarum jam."
+      },
+      {
+       "p": "Piranti ukur dial digunakan dengan dipasang pada penyangga (stand). Pemasangan ke penyangga dilakukan menggunakan kuping pemasangan pada tutup belakang atau batang pemasangan (stem)."
+      },
+      {
+       "p": "Gambar 6-4: Piranti Ukur Dial"
+      },
+      {
+       "p": "(2) Menggunakan Piranti Ukur Dial"
+      },
+      {
+       "ol": [
+        "Sebelum menggunakan piranti ukur dial, periksa apakah jarum panjang dan plunyer dapat bergerak dengan lancar. Periksa apakah tidak ada yang longgar pada setiap bagiannya.",
+        "Tempelkan probe pada blok pengukur yang digunakan sebagai acuan, dan sesuaikan titik nol.",
+        "Ganti blok pengukur dengan objek ukur, dan baca nilai yang ditunjukkan jarum. Nilai pada jarum menunjukkan selisih dengan nilai blok pengukur."
+       ]
+      },
+      {
+       "p": "(3) Membaca Skala Piranti Ukur Dial"
+      },
+      {
+       "p": "Untuk tipe yang memiliki jarum pendek, baca terlebih dahulu jarum pendek. Selanjutnya baca jarum panjang. Jumlah nilai jarum pendek dan jarum panjang menunjukkan selisih dengan nilai blok pengukur."
+      },
+      {
+       "p": "Jika lebih besar dari nilai blok pengukur, jarum akan berada pada posisi berputar searah jarum jam dari titik nol. Jika lebih kecil dari nilai blok pengukur, jarum akan berada pada posisi berputar berlawanan arah jarum jam dari titik nol."
+      },
+      {
+       "p": "Contoh:"
+      },
+      {
+       "p": "Mengukur 11,25 mm"
+      },
+      {
+       "p": "Jika menggunakan blok pengukur 10 mm, titik nol berada pada posisi jarum pendek 5 mm dan jarum panjang 0 mm, maka saat dilakukan pengukuran, jarum pendek menunjukkan 6 mm dan jarum panjang 0,25 mm."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Pengertian Piranti Ukur Dial",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s6",
+    "no": 6,
+    "title": {
+     "id": "Alat Ukur Komparatif Lainnya",
+     "jp": "その他の比較測定器"
+    },
+    "pages": [
+     81,
+     82
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Piranti Ukur Dial Tipe Tuas"
+      },
+      {
+       "p": "Ada piranti ukur dial tipe tuas dengan probe bergerak seperti tuas. Alur cara penggunaan sama seperti piranti ukur dial. Jika arah yang ingin diukur miring terhadap arah gerakan probe, kesalahan akan menjadi besar. Sedapat mungkin arah gerakan probe disesuaikan dengan arah yang ingin diukur."
+      },
+      {
+       "p": "Gambar 6-5: Piranti Ukur Dial Tipe Tuas"
+      },
+      {
+       "p": "(2) Piranti Ukur Silinder"
+      },
+      {
+       "p": "Piranti ukur dial yang berbentuk khusus untuk mengukur diameter dalam disebut piranti ukur silinder. Alur cara penggunaan hampir sama seperti piranti ukur dial. Piranti ukur cincin digunakan sebagai acuan pengukuran."
+      },
+      {
+       "p": "Gambar 6-6: Piranti Ukur Silinder"
+      },
+      {
+       "p": "(3) Piranti Ukur Jangka Dial"
+      },
+      {
+       "p": "Piranti ukur dial yang probe-nya berbentuk seperti jangka dalam atau jangka luar disebut piranti ukur jangka dial. Alat ini dapat mengukur bagian yang sulit diukur dengan alat ukur lain, seperti pengukuran diameter alur, dengan akurasi tinggi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Piranti Ukur Dial Tipe Tuas",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s7",
+    "no": 7,
+    "title": {
+     "id": "Pengukur Referensi dan Pengukur Batas",
+     "jp": "基準ゲージ・限界ゲージ"
+    },
+    "pages": [
+     83,
+     85
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Piranti Ukur Blok"
+      },
+      {
+       "p": "Blok pengukur adalah alat ukur untuk sebagai acuan dalam pengukuran komparatif terhadap panjang. Bentuknya berupa balok dengan 2 bidang cermin sebagai permukaan ukur. Permukaan ukur ini memiliki kerataan dan akurasi dimensi yang sangat tinggi."
+      },
+      {
+       "p": "Selain itu, jika antar permukaan ukur 2 blok pengukur digesekkan, akan terjadi fenomena yang disebut fenomena pelekatan (wringing). Jika 2 atau lebih blok pengukur digunakan dengan disusun menjadi satu, pastikan permukaan ukurnya saling melekat."
+      },
+      {
+       "p": "Setelah digunakan, kotoran seperti sidik jari dibersihkan dan dioleskan minyak anti karat. Jika pada permukaan ukur terdapat beram, harus dihilangkan dengan batu gerinda khusus penghilangan beram."
+      },
+      {
+       "p": "(2) Piranti Ukur Cincin"
+      },
+      {
+       "p": "Piranti ukur cincin adalah alat ukur yang digunakan sebagai acuan untuk pengukuran komparatif diameter dalam. Berbentuk silinder dengan bidang diameter dalamnya merupakan permukaan ukur."
+      },
+      {
+       "p": "(3) Piranti Ukur Batas"
+      },
+      {
+       "p": "Piranti ukur batas adalah piranti untuk memeriksa apakah dimensi lubang dan poros suatu produk berada dalam batas toleransi. Umumnya digunakan dalam 1 set “sisi GO” dan “sisi NO-GO”. Produk yang ingin diinspeksi dipastikan dapat melewati piranti ukur GO dengan lancar serta tidak dapat melewati piranti ukur NO-GO. Contohnya, saat lubang diperiksa dengan piranti ukur batas dan sisi GO tak dapat dilewati, artinya lubang tersebut lebih kecil dari batas toleransi minimal."
+      },
+      {
+       "p": "Untuk piranti ukur batas terhadap lubang, ada piranti ukur sumbat penuh (piranti ukur sumbat) dan piranti ukur sumbat parsial. Untuk piranti ukur batas terhadap poros, ada piranti ukur cincin dan piranti ukur jepit."
+      },
+      {
+       "p": "Piranti ukur cincin untuk sebagai acuan dalam pengukuran komparatif dapat disebut “piranti ukur cincin acuan (master ring gauge)”, sedangkan yang untuk sebagai piranti ukur batas disebut “piranti ukur cincin batas (limit ring gauge)”."
+      },
+      {
+       "p": "Piranti ukur sumbat penuh Piranti ukur sumbat parsial"
+      },
+      {
+       "p": "Piranti Ukur Cincin Piranti ukur jepit"
+      },
+      {
+       "p": "Batas 6-7: Piranti Ukur Batas"
+      },
+      {
+       "p": "(4) Piranti Ukur Ulir"
+      },
+      {
+       "p": "Piranti ukur ulir adalah piranti ukur batas untuk memeriksa diameter efektif ulir. Ada “piranti ukur ulir sumbat” untuk memeriksa ulir dalam, dan “piranti ukur ulir cincin” untuk memeriksa ulir luar. Selain itu, masing-masing juga memiliki piranti ukur ulir sisi GO dan piranti ukur ulir sisi NO-GO."
+      },
+      {
+       "p": "Sisi NO-GO Sisi GO"
+      },
+      {
+       "p": "Gambar 6-8: Piranti Ukur Ulir"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Piranti Ukur Blok",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

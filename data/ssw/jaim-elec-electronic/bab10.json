@@ -1,0 +1,505 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab10",
+  "no": 10,
+  "title": {
+   "id": "Pekerjaan Listrik dan Elektronik",
+   "jp": "電気、電子作業"
+  },
+  "intro": {
+   "id": "Bab 10 buku resmi JAIM."
+  },
+  "pages": [
+   145,
+   158
+  ],
+  "subs": [
+   {
+    "id": "b10s1",
+    "no": 1,
+    "title": {
+     "id": "Alat Ukur",
+     "jp": "{計測器|けいそくき}"
+    },
+    "pages": [
+     145,
+     149
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Tester"
+      },
+      {
+       "p": "Alat ukur untuk mengukur besaran listrik seperti tegangan, arus dan resistansi, serta mengubahnya menjadi bentuk yang terlihat (jarum atau angka), pada saat kita perlu mengetahuinya dari suatu rangkaian listrik atau elektronik."
+      },
+      {
+       "p": "Ada tester analog yang memiliki beberapa skala dan memberikan angka yang ditunjukkan melalui jarum, dan tester digital (juga disebut multimeter digital, atau DMM) yang menampilkan nilai secara numerik."
+      },
+      {
+       "p": "Besaran yang dapat diukur secara langsung dengan tester antara lain resistansi, tegangan DC, arus DC, tegangan AC dan pengecekan hubungan listrik. Sedangkan besaran yang tak dapat diukur secara langsung antara lain arus AC dan konsumsi daya. Untuk mengukur arus AC, diperlukan alat ukur yang disebut tang ampere."
+      },
+      {
+       "p": "Gambar 10-1: Contoh Tester"
+      },
+      {
+       "p": "(2) Amperemeter"
+      },
+      {
+       "p": "Alat ukur untuk mengukur besar arus yang mengalir melalui suatu rangkaian listrik. Alat ukur dihubungkan secara seri ke rangkaian listrik. Cara penyambungan saat mengukur arus yang mengalir melalui beban L ditunjukkan pada Gambar 10-2."
+      },
+      {
+       "p": "Beban L"
+      },
+      {
+       "p": "Amperemeter"
+      },
+      {
+       "p": "Gambar 10-2 Penyambungan untuk Mengukur Arus pada Beban L"
+      },
+      {
+       "p": "Gambar 10-3: Contoh Amperemeter"
+      },
+      {
+       "p": "(3) Voltmeter"
+      },
+      {
+       "p": "Alat ukur untuk mengukur tegangan (beda potensial) pada rangkaian listrik. Alat ukur dihubungkan secara paralel ke rangkaian listrik. Cara penyambungan saat mengukur tegangan yang bekerja pada beban L ditunjukkan pada Gambar 10-4."
+      },
+      {
+       "p": "Beban L"
+      },
+      {
+       "p": "Voltmeter"
+      },
+      {
+       "p": "Gambar 10-4: Penyambungan untuk Mengukur Tegangan pada Beban L"
+      },
+      {
+       "p": "Gambar 10-5: Contoh Voltmeter"
+      },
+      {
+       "p": "(4) Kapasitansi meter"
+      },
+      {
+       "p": "Alat untuk mengukur kapasitansi elektrostatik suatu benda. Kapasitansi adalah besaran yang menunjukkan kemampuan untuk menyimpan muatan listrik diantara konduktor yang terisolasi. Dahulu, ada kapasitansi meter yang hanya bisa mengukur kapasitansi secara tunggal, tetapi saat ini fungsi pengukuran kapasitansi telah ditambahkan pada LCR-meter yang akan dijelaskan pada Bagian (5) berikut, sehingga LCR-meter menjadi lebih umum digunakan."
+      },
+      {
+       "p": "Ada alat ukur yang dapat mengukur perubahan kapasitansi akibat perubahan fisik pada benda yang diukur, sehingga pengukuran seperti ketebalan, pergeseran atau level objek menjadi mungkin."
+      },
+      {
+       "p": "(5) Pengukur Impedansi (LCR-meter)"
+      },
+      {
+       "p": "Alat ukur untuk mengukur nilai komponen (elemen) listrik: resistor, kumparan dan kapasitor. Diberi nama LCR-meter karena simbol L melambangkan kumparan, C melambangkan kapasitor dan R melambangkan resistor."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Tester",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s2",
+    "no": 2,
+    "title": {
+     "id": "Pengukuran Resistansi",
+     "jp": "{抵抗測定|ていこうそくてい}"
+    },
+    "pages": [
+     150,
+     150
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Secara umum, pengukuran resistansi dapat dibagi menjadi metode jembatan dan metode penurunan tegangan. Metode jembatan umum digunakan pada dekade 1980- an, tetapi akhir-akhir ini metode penurunan tegangan lebih umum digunakan."
+      },
+      {
+       "p": "Prinsipnya arus diukur dengan amperemeter dan tegangan diukur dengan voltmeter, kemudian berdasarkan hukum Ohm, nilai resistansi dihitung dari nilai tegangan dibagi nilai arus."
+      },
+      {
+       "p": "Saat mengukur resistansi, penting untuk diingat bahwa catu daya, alat ukur, kabel dan bagian sambungan yang digunakan dalam pengukuran semuanya memiliki resistansi. Nilai yang diukur bukanlah murni nilai resistansi objek yang diukur, tetapi didalamnya termasuk nilai resistansi perangkat pengukuran. Akibat pengaruh resistansi perangkat pengukuran tersebut, nilai yang diukur akan sedikit menyimpang dari nilai resistansi yang sebenarnya dari objek yang diukur."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Secara umum, pengukuran resistansi dapat dibagi menjadi metode jembatan dan metode penurunan tegangan. Metode jembatan umum digunakan pada dekade 1980- an, tetapi akhir-akhir ini metode penurunan tegangan lebih umum digunakan.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s3",
+    "no": 3,
+    "title": {
+     "id": "Pengukuran Tegangan",
+     "jp": "{電圧測定|でんあつそくてい}"
+    },
+    "pages": [
+     150,
+     150
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Tergantung apakah besaran yang akan diukur adalah DC atau AC, alat ukur yang digunakan perlu disesuaikan. Ada voltmeter khusus untuk DC, voltmeter khusus untuk AC, dan ada pula alat ukur, seperti tester, yang dapat digunakan baik untuk AC maupun DC, dan oleh karena itu pastikan untuk memilih alat ukur yang sesuai."
+      },
+      {
+       "p": "Saat mengukur tegangan menggunakan voltmeter, voltmeter harus dihubungkan secara paralel dengan bagian yang diukur."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tergantung apakah besaran yang akan diukur adalah DC atau AC, alat ukur yang digunakan perlu disesuaikan. Ada voltmeter khusus untuk DC, voltmeter khusus untuk AC, dan ada pula alat ukur, seperti tester, yang dapat digunakan baik untuk AC maupun DC, dan oleh karena itu pastikan untuk memilih alat ukur yang sesuai.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s4",
+    "no": 4,
+    "title": {
+     "id": "Pengukuran Arus",
+     "jp": "{電流測定|でんりゅうそくてい}"
+    },
+    "pages": [
+     151,
+     151
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Sama seperti voltmeter, ada juga amperemeter yang dirancang khusus untuk DC, atau khusus untuk AC. Tester dapat mengukur arus DC secara langsung, tetapi tidak dirancang untuk mengukur arus AC secara langsung. Untuk mengukur arus AC, digunakan alat ukur yang disebut tang ampere. Pilihlah alat ukur secara tepat."
+      },
+      {
+       "p": "Saat mengukur arus menggunakan amperemeter, amperemeter harus dihubungkan seri dengan bagian rangkaian yang diukur."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sama seperti voltmeter, ada juga amperemeter yang dirancang khusus untuk DC, atau khusus untuk AC. Tester dapat mengukur arus DC secara langsung, tetapi tidak dirancang untuk mengukur arus AC secara langsung. Untuk mengukur arus AC, digunakan alat ukur yang disebut tang ampere. Pilihlah alat ukur secara tepat.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s5",
+    "no": 5,
+    "title": {
+     "id": "Kebocoran Listrik dan Pembumian",
+     "jp": "{漏電|ろうでん}とアース"
+    },
+    "pages": [
+     151,
+     151
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Kebocoran Listrik"
+      },
+      {
+       "p": "Kabel dan peralatan listrik diberikan lapisan pelindung berupa bahan isolasi, seperti PVC, pada jalur aliran arus dan pada bagian yang bermuatan listrik, agar listrik tidak bocor ke luar."
+      },
+      {
+       "p": "Namun, jika bahan isolasi tersebut usang atau rusak, sehingga kinerja isolasinya menurun, listrik dapat menyimpang dari jalur yang seharusnya, seperti bocor ke kasing logam peralatan listrik. Kondisi ini disebut kebocoran listrik."
+      },
+      {
+       "p": "(2) Pembumian Pembumian adalah menghubungkan elektroda arde yang terkubur di bawah tanah dengan peralatan listrik menggunakan kabel arde."
+      },
+      {
+       "p": "Jika pada peralatan listrik yang mengalami kebocoran listrik terpasang kabel arde, sebagian besar listrik yang bocor akan mengalir melalui kabel arde ke dalam tanah. Hal tersebut akan mencegah terjadinya musibah besar saat orang menyentuhnya. Meskipun demikian, kondisi kebocoran listrik akan terus berlanjut, sehingga situasinya tetap berbahaya."
+      },
+      {
+       "p": "Jika tidak ada kabel arde yang terpasang dan hanya menggunakan perangkat ELCB, listrik tidak akan mengalir kedalam tanah. Akibatnya, perangkat ELCB juga dimungkinkan tidak berfungsi. Dalam kondisi tersebut, jika seseorang menyentuh perangkat yang mengalami kebocoran listrik, tubuhnya akan bertindak sebagai kabel arde, menyebabkan listrik mengalir melalui tubuh dan berakibat sengatan listrik. Pada saat tersebut, ELCB beroperasi dan rangkaian listrik diputus."
+      },
+      {
+       "p": "Demi keselamatan, perlu dipasang baik kabel arde maupun ELCB."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Kebocoran Listrik",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s6",
+    "no": 6,
+    "title": {
+     "id": "Persiapan Sebelum Pekerjaan",
+     "jp": "{作業前準備|さぎょうまえじゅんび}"
+    },
+    "pages": [
+     152,
+     154
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Saat merakit perangkat elektronik dan sejenisnya, persiapan yang matang sebelum bekerja dapat meningkatkan efisiensi kerja dan mengurangi terjadinya produk cacat. Memastikan lingkungan kerja yang aman juga dapat mengurangi risiko terjadinya kecelakaan atau cedera."
+      },
+      {
+       "p": "Secara konkretnya, hal-hal berikut ini perlu dilaksanakan:"
+      },
+      {
+       "p": "(1) Pakaian Kerja"
+      },
+      {
+       "ul": [
+        "Kenakan pakaian kerja yang dilengkapi perlindungan antistatik, serta tutup rapat manset lengan dan ujung celana.",
+        "Kenakan alat pelindung diri seperti kacamata pelindung, sarung tangan, dan jika perlu, helm dan sepatu keselamatan.",
+        "Saat menggunakan alat yang suhunya menjadi panas, seperti alat solder, untuk mencegah luka bakar, kenakan pakaian kerja berlengan panjang dan celana panjang sehingga kulit tak terpapar secara langsung.",
+        "Hindari mengenakan dasi atau syal, serta membiarkan rambut panjang, yang dapat tersangkut pada bagian peralatan yang berputar.",
+        "Selain itu, jika melakukan pekerjaan yang berhubungan dengan tegangan tinggi, sedapat mungkin lepaskan benda-benda logam, seperti cincin."
+       ]
+      },
+      {
+       "p": "(2) Perkakas"
+      },
+      {
+       "ul": [
+        "Siapkan perkakas yang dibutuhkan dalam pekerjaan seperti alat solder, pengupas kabel, obeng, tang potong, tang kombinasi dan pinset, kemudian susun secara teratur dan rapi diatas meja kerja agar mudah dijangkau saat bekerja.",
+        "Periksa perkakas untuk mendeteksi adanya kerusakan atau keausan, dan ganti bila perlu.",
+        "Akan lebih praktis jika alat solder disiapkan dengan 2 jenis atau lebih \"ujung solder\" yang berbeda ukuran ketebalannya."
+       ]
+      },
+      {
+       "p": "(3) Komponen dan Bahan"
+      },
+      {
+       "ul": [
+        "Kumpulkan komponen (resistor, kapasitor, IC, konektor, dan sebagainya) dan bahan (solder, kawat, kabel, dan sebagainya) yang diperlukan.",
+        "Periksa komponen untuk mendeteksi adanya kerusakan atau keausan, dan ganti bila perlu.",
+        "Atur komponen berdasarkan jenisnya dan letakkan agar mudah dijangkau saat bekerja."
+       ]
+      },
+      {
+       "p": "(4) Area Kerja"
+      },
+      {
+       "ul": [
+        "Jaga agar area kerja tetap bersih dan bebas dari debu dan kotoran.",
+        "Sediakan ruang dengan luasan yang memadai untuk pekerjaan, dan tata area tersebut agar pekerjaan dapat dilakukan dengan mudah.",
+        "Pastikan pencahayaan cukup terang dan area kerja tangan terlihat jelas."
+       ]
+      },
+      {
+       "p": "(5) Prosedur kerja"
+      },
+      {
+       "ul": [
+        "Baca prosedur kerja dengan seksama dan pahami konten dan prosedur dalam pekerjaan.",
+        "Jika ada pertanyaan atau ketidakpastian mengenai prosedur kerja, pastikan terlebih dahulu sebelum melakukan pekerjaan.",
+        "Utamakan keselamatan selama bekerja dan hindari melakukan pekerjaan diluar kewajaran."
+       ]
+      },
+      {
+       "p": "(6) Pencegahan Kerusakan Akibat Elektrostatik"
+      },
+      {
+       "ul": [
+        "IC dan komponen elektronik dapat mengalami gangguan karakteristik akibat listrik statis, dan untuk itu gunakan meja kerja yang dilengkapi perlindungan antistatik atau alas konduktif.",
+        "Pekerja harus bekerja di lantai berbahan konduktif, serta mengenakan sepatu dan sarung tangan konduktif dan pakaian antistatik untuk menghindari muatan listrik statis. Selain itu, saat mengangkut produk, gunakan kantong tahan kelembaban atau kantong antistatik."
+       ]
+      },
+      {
+       "p": "(7) Lainnya"
+      },
+      {
+       "ul": [
+        "Pastikan area kerja berventilasi baik, dan jika pekerjaan menghasilkan gas atau debu berbahaya, gunakan perangkat ventilasi yang sesuai.",
+        "Panel kontrol atau motor listrik menghasilkan panas dan meningkatkan suhu di sekitarnya, sehingga penting untuk menyediakan sarana pendingin yang memadai.",
+        "Saat bekerja dalam jangka waktu lama, lakukan istirahat secara teratur untuk menjaga konsentrasi."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Saat merakit perangkat elektronik dan sejenisnya, persiapan yang matang sebelum bekerja dapat meningkatkan efisiensi kerja dan mengurangi terjadinya produk cacat. Memastikan lingkungan kerja yang aman juga dapat mengurangi risiko terjadinya kecelakaan atau cedera.",
+      "points": [
+       "Kenakan pakaian kerja yang dilengkapi perlindungan antistatik, serta tutup rapat manset…",
+       "Kenakan alat pelindung diri seperti kacamata pelindung, sarung tangan, dan jika perlu, …",
+       "Saat menggunakan alat yang suhunya menjadi panas, seperti alat solder, untuk mencegah l…",
+       "Hindari mengenakan dasi atau syal, serta membiarkan rambut panjang, yang dapat tersangk…",
+       "Selain itu, jika melakukan pekerjaan yang berhubungan dengan tegangan tinggi, sedapat m…",
+       "Siapkan perkakas yang dibutuhkan dalam pekerjaan seperti alat solder, pengupas kabel, o…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b10s7",
+    "no": 7,
+    "title": {
+     "id": "Penataan Setelah Pekerjaan",
+     "jp": "作業後の片づけ"
+    },
+    "pages": [
+     155,
+     156
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Setelah melakukan perakitan peralatan elektronik, sangat penting untuk mengembalikan alat, komponen dan instruksi kerja ke tempat semula, serta menjaga kebersihan area kerja. Singkirkan semua komponen dan dokumen dari area kerja. Selanjutnya, bersihkan area kerja, serta buang debu dan sampah."
+      },
+      {
+       "p": "Tabel 10-1: Alasan Pentingnya Penataan Setelah Pekerjaan"
+      },
+      {
+       "p": "Efek Penataan Penjelasan"
+      },
+      {
+       "p": "Mengurangi produk Lingkungan kerja yang bersih mencegah masuknya benda asing cacat kedalam produk, sehingga mengurangi terjadinya produk cacat."
+      },
+      {
+       "p": "Lingkungan yang rapi dan terorganisir mengurangi kemungkinan Mencegah kesalahan mengambil perkakas atau suku cadang yang salah, dan kerja membantu mencegah kesalahan kerja."
+      },
+      {
+       "p": "Meningkatkan Menjaga lingkungan kerja yang bersih akan meningkatkan kesadaran akan kesadaran pekerja terhadap kualitas dan mendorong untuk kualitas bekerja lebih hati-hati."
+      },
+      {
+       "p": "Alat dan bahan yang berserakan dapat menyebabkan tergelincir Menjaga kondisi atau cedera, sehingga menata area kerja dengan rapi penting aman untuk menjaga kondisi aman."
+      },
+      {
+       "p": "Tabel 10-2: Ikhtisar Prosedur Penataan Setelah Pekerjaan"
+      },
+      {
+       "p": "Item dan Prosedur Rincian"
+      },
+      {
+       "p": "Singkirkan semua komponen yang digunakan dalam pekerjaan,"
+      },
+      {
+       "ol": [
+        "Penyortiran dan instruksi kerja, dan lain-lain dari area kerja dan kembalikan ke penyingkiran tempat yang telah ditentukan."
+       ]
+      },
+      {
+       "p": "Bersihkan debu, sampah dan sisa timah solder yang berserakan"
+      },
+      {
+       "ol": [
+        "Pembersihan diatas meja kerja atau lantai."
+       ]
+      },
+      {
+       "ol": [
+        "Mengembalikan Simpan alat yang telah digunakan di tempat yang telah alat ke tempatnya ditentukan."
+       ]
+      },
+      {
+       "p": "Periksa apakah meja kerja sudah bersih dan siap untuk"
+      },
+      {
+       "ol": [
+        "Inspeksi area kerja pekerjaan berikutnya agar dapat dilakukan dengan nyaman."
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Setelah melakukan perakitan peralatan elektronik, sangat penting untuk mengembalikan alat, komponen dan instruksi kerja ke tempat semula, serta menjaga kebersihan area kerja. Singkirkan semua komponen dan dokumen dari area kerja. Selanjutnya, bersihkan area kerja, serta buang debu dan sampah.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s8",
+    "no": 8,
+    "title": {
+     "id": "Papan Sirkuit Cetak (PCB)",
+     "jp": "プリント{配線板|はいせんばん}"
+    },
+    "pages": [
+     157,
+     157
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "PCB digunakan untuk memasang komponen listrik dan elektronik seperti resistor, kapasitor dan IC pada papan isolasi yang tidak menghantarkan listrik, serta menghubungkan komponen dengan jalur penghantar dengan menggunakan penyolderan atau metode lainnya."
+      },
+      {
+       "p": "Tabel 10-3: Jenis-jenis PCB"
+      },
+      {
+       "p": "Papan Sirkuit Cetak Rincian (PCB)"
+      },
+      {
+       "p": "Papan Sirkuit Kaku (PWB) PCB dimana pola konduktor dibentuk pada papan isolasi (Printed Wiring Board) yang keras dan berbentuk lempengan."
+      },
+      {
+       "p": "Papan Sirkuit Fleksibel PCB yang fleksibel, terbuat dari bahan isolasi tipis, sehingga (FPC) dapat ditekuk. PCB berbentuk film yang dapat digunakan (Flexible Printed Circuits) sebagai pengganti kawat."
+      },
+      {
+       "p": "PCB yang menggabungkan PCB kaku dan PCB fleksibel dalam satu kesatuan, sehingga memiliki keunggulan dari Papan Sirkuit Fleksibel kedua jenis PCB tersebut. Strukturnya terdiri dari bagian Kaku kaku untuk memasang komponen dan bagian fleksibel yang dapat ditekuk, dan jenis PCB ini juga disebut fleksibel-kaku."
+      },
+      {
+       "p": "PCB yang dirancang untuk meningkatkan pembuangan panas. Konstruksi standarnya adalah pelat logam (aluminium Papan Sirkuit Berbasis atau tembaga) yang diatasnya diberi lapisan isolasi, lalu Logam diatasnya lagi diberi lembaran tembaga yang berfungsi sebagai konduktor."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "PCB digunakan untuk memasang komponen listrik dan elektronik seperti resistor, kapasitor dan IC pada papan isolasi yang tidak menghantarkan listrik, serta menghubungkan komponen dengan jalur penghantar dengan menggunakan penyolderan atau metode lainnya.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b10s9",
+    "no": 9,
+    "title": {
+     "id": "Gemuk",
+     "jp": "グリス"
+    },
+    "pages": [
+     158,
+     158
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Gemuk adalah bahan semi-padat yang digunakan sebagai pelumas pada bagian poros mesin dan bantalan dari komponen mesin yang berputar dengan kecepatan rendah, serta pada permukaan tempat komponen mesin saling bersentuhan dan bergerak secara lambat."
+      },
+      {
+       "p": "Angka yang menunjukkan kekerasan (atau kelembutan) fisik dari gemuk yang semi- padat ini disebut \"kelas NLGI\". Semakin besar angka kelasnya, semakin lunak bahannya. Sebaliknya, semakin rendah angka kelasnya, semakin keras bahannya."
+      },
+      {
+       "p": "Kata Kunci"
+      },
+      {
+       "p": "Pelumasan: Pemberian oli, gemuk, dan sejenisnya untuk mengurangi gesekan dan keausan yang terjadi akibat bagian-bagian logam mesin saling bersentuhan. Semi-padat: Bersifat sebagai zat padat maupun zat cair, memiliki kekentalan atau kekenyalan tertentu."
+      },
+      {
+       "p": "Bab"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Gemuk adalah bahan semi-padat yang digunakan sebagai pelumas pada bagian poros mesin dan bantalan dari komponen mesin yang berputar dengan kecepatan rendah, serta pada permukaan tempat komponen mesin saling bersentuhan dan bergerak secara lambat.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}

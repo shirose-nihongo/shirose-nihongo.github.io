@@ -1,0 +1,1049 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab9",
+  "no": 9,
+  "title": {
+   "id": "Teori Dasar Listrik dan Elektronik",
+   "jp": "電気、電子基礎理論"
+  },
+  "intro": {
+   "id": "Bab 9 buku resmi JAIM."
+  },
+  "pages": [
+   118,
+   144
+  ],
+  "subs": [
+   {
+    "id": "b9s1",
+    "no": 1,
+    "title": {
+     "id": "Dasar-dasar",
+     "jp": "{基礎|きそ}"
+    },
+    "pages": [
+     118,
+     118
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Listrik"
+      },
+      {
+       "p": "Listrik adalah energi yang dihasilkan oleh pergerakan elektron."
+      },
+      {
+       "p": "(2) Arus listrik"
+      },
+      {
+       "p": "Aliran listrik beserta besarannya disebut arus listrik. Satuannya adalah [A] (ampere)."
+      },
+      {
+       "p": "(3) Tegangan"
+      },
+      {
+       "p": "Gaya yang digunakan oleh sumber listrik untuk mengalirkan arus listrik disebut tegangan. Satuannya adalah [V] (volt)."
+      },
+      {
+       "p": "(4) Daya Listrik"
+      },
+      {
+       "p": "Besaran yang menunjukkan seberapa banyak energi listrik yang digunakan per satuan waktu. Satuannya adalah [W] (watt). Energi listrik dihitung dengan mengalikan arus dan tegangan."
+      },
+      {
+       "p": "(5) Energi Listrik"
+      },
+      {
+       "p": "Menunjukkan jumlah total energi listrik yang dikonsumsi atau dihasilkan selama periode waktu tertentu. Hasil perkalian antara daya, yaitu energi listrik per satuan waktu, dan waktu. Satuannya adalah [Wh] (watt-jam)."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Listrik",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s2",
+    "no": 2,
+    "title": {
+     "id": "Ilmu Elektromagnetik",
+     "jp": "{電磁気学|でんじきがく}"
+    },
+    "pages": [
+     119,
+     123
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Hukum Coulomb"
+      },
+      {
+       "p": "Sumber terjadinya listrik adalah muatan listrik. Muatan listrik adalah benda yang membawa listrik, dan ada 2 jenis: muatan positif dan muatan negatif. Antar muatan dengan tanda yang sama, seperti antara dua muatan positif maupun dua muatan negatif, terdapat gaya tolak-menolak, sedangkan antar muatan dengan tanda yang berbeda terdapat gaya tarik-menarik."
+      },
+      {
+       "p": "Gaya tersebut disebut “gaya Coulomb”, dan dinyatakan dengan rumus berikut: Ini disebut hukum Coulomb. 𝑞1 𝑞2 𝐹= [N] 4𝜋𝜀0 𝑟 2 𝑞1 , 𝑞2 : jumlah muatan listrik masing-masing muatan [C], r: jarak antara masing-masing muatan [m] 𝜀0 : permitivitas vakum"
+      },
+      {
+       "p": "Ilustrasinya seperti pada Gambar 9-1."
+      },
+      {
+       "p": "gaya tolak gaya tarik Gambar 9-1: Gaya Coulomb"
+      },
+      {
+       "p": "(2) Medan listrik"
+      },
+      {
+       "p": "Ruang yang terbentuk di sekitar muatan listrik, dan menunjukkan area dimana gaya bekerja pada muatan lain. Juga disebut medan listrik."
+      },
+      {
+       "p": "(3) Konduktor"
+      },
+      {
+       "p": "Bahan yang menghantarkan listrik dengan baik, umumnya merupakan logam. Diantara logam, tembaga dan perak memiliki resistansi rendah dan lebih baik dalam menghantarkan listrik."
+      },
+      {
+       "p": "(4) Isolator"
+      },
+      {
+       "p": "Bahan-bahan yang hampir tidak menghantarkan listrik, umumnya seperti karet atau plastik."
+      },
+      {
+       "p": "(5) Medan Magnet"
+      },
+      {
+       "p": "Ruang dimana gaya magnet, yang dihasilkan oleh magnet atau arus listrik, bekerja. Pada ruang tersebut, gaya bekerja pada magnet atau bahan magnetik yang lain. Juga disebut medan magnet."
+      },
+      {
+       "p": "(6) Gaya yang Bekerja pada Arus Listrik"
+      },
+      {
+       "p": "Jika 2 kawat logam yang sangat panjang diletakan berdampingan dan arus mengalir melalui keduanya, maka akan timbul gaya diantara kedua kawat tersebut. Fakta ini telah diketahui secara eksperimen, yaitu jika 2 arus listrik memiliki arah yang sama, akan timbul gaya tarik. Namun, jika arah arus berlawanan, akan timbul gaya tolak. Gaya ini disebut \"gaya Ampere\"."
+      },
+      {
+       "p": "Ilustrasinya seperti pada Gambar 9-2."
+      },
+      {
+       "p": "I1 I2 I1 I2"
+      },
+      {
+       "p": "F F F F"
+      },
+      {
+       "p": "Gambar 9-2: Gaya Ampere (dinotasikan F)"
+      },
+      {
+       "p": "(7) Hukum Tangan Kiri Fleming"
+      },
+      {
+       "p": "Aturan yang menunjukkan arah gaya yang diterima arus listrik didalam medan magnet."
+      },
+      {
+       "p": "Gunakan jari tangan kiri untuk menunjukkan arah gaya yang diterima konduktor yang dialiri arus listrik didalam medan magnet."
+      },
+      {
+       "p": "Aturan ini menyatakan, jika ibu jari, jari telunjuk dan jari tengah tangan kiri diposisikan tegak lurus satu sama lain, ibu jari akan menunjukkan arah gaya F, jari telunjuk menunjukkan arah densitas fluks magnetik B, dan jari tengah menunjukkan arah arus I (Gambar 9-3)."
+      },
+      {
+       "p": "gaya elektromagnetik densitas fluks magnetik"
+      },
+      {
+       "p": "arus listrik"
+      },
+      {
+       "p": "konduktor"
+      },
+      {
+       "p": "Gambar 9-3: Hukum Tangan Kiri Fleming"
+      },
+      {
+       "p": "Jika arah medan magnet (densitas fluks magnetik) B dan arah arus I ditentukan, maka arah gaya yang diterima konduktor akan dapat ditentukan dari jari tangan kiri. Gaya yang dialami oleh konduktor itu disebut gaya Lorentz."
+      },
+      {
+       "p": "(8) Hukum Tangan Kanan Fleming"
+      },
+      {
+       "p": "Aturan ini menyatakan arah gaya gerak listrik induksi atau arus induksi saat suatu konduktor bergerak didalam medan magnet."
+      },
+      {
+       "p": "Saat konduktor bergerak didalam medan magnet, arus akan terinduksi dalam konduktor tersebut, dan fenomena ini dikenal sebagai induksi elektromagnetik. Arah medan magnet, arah gerak konduktor, dan arah arus induksi dapat diwakili oleh jari tangan kanan. Hukum tangan kanan Fleming menyatakan, jika ibu jari, jari telunjuk dan jari tengah tangan kanan diposisikan tegak lurus satu sama lain, ibu jari akan menunjukkan arah gerak konduktor, jari telunjuk menunjukkan arah medan magnet, dan jari tengah menunjukkan arah arus induksi. (Gambar 9-4) pergerakan konduktor densitas fluks magnetik"
+      },
+      {
+       "p": "Magnet Magnet gaya gerak listrik"
+      },
+      {
+       "p": "konduktor"
+      },
+      {
+       "p": "Gambar 9-4: Hukum Tangan Kanan Fleming"
+      },
+      {
+       "p": "Jika arah gerak konduktor dan arah medan magnet ditentukan, maka arah arus induksi akan dapat ditentukan."
+      },
+      {
+       "p": "Aturan tangan kiri dan hukum tangan kanan Fleming menerangkan fenomena yang berbeda, sehingga penting untuk memahami perbedaannya agar tidak bingung."
+      },
+      {
+       "p": "Kata Kunci"
+      },
+      {
+       "p": "Gaya gerak listrik: gaya yang dimiliki sumber listrik untuk mempertahankan arus agar tetap mengalir, dan termasuk salah satu jenis tegangan. Satuannya adalah [V] (volt)."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Hukum Coulomb",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s3",
+    "no": 3,
+    "title": {
+     "id": "Dasar-dasar",
+     "jp": "{基礎|きそ}"
+    },
+    "pages": [
+     124,
+     125
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Rangkaian DC"
+      },
+      {
+       "p": "Arus searah (DC: DIrect Current) berarti arah arus listrik selalu sama. Arah dan besarnya tegangan atau arus tidak berubah seiring waktu. Selalu konstan, tak dipengaruhi waktu. Contoh tipikalnya adalah baterai."
+      },
+      {
+       "p": "Rangkaian baterai dan resistor beserta bentuk gelombang arusnya ditunjukkan dibawah ini."
+      },
+      {
+       "p": "Tegangan V Arus Tegangan dan"
+      },
+      {
+       "p": "Arus I"
+      },
+      {
+       "p": "Waktu t DC Catudaya"
+      },
+      {
+       "p": "Gambar 9-5: Bentuk Gelombang Tegangan dan Arus pada Rangkaian DC"
+      },
+      {
+       "p": "Dalam rangkaian DC, kumparan (coil) dianggap sebagai hubung singkat dan kapasitor sebagai isolator, sehingga komponen tersebut umumnya tidak digunakan dalam rangkaian DC."
+      },
+      {
+       "p": "Untuk resistor, kumparan dan kapasitor, penjelasannya akan diberikan pada Bagian 2.2 berikutnya."
+      },
+      {
+       "p": "(2) Rangkaian AC"
+      },
+      {
+       "p": "Arus bolak-balik (AC: Alternating Current) berarti arah dan besarnya tegangan atau arus berubah seiring waktu."
+      },
+      {
+       "p": "Tegangan dan arus berubah secara periodik, dan jumlah perubahan arah dalam 1 detik disebut frekuensi (Hz). Misalnya, frekuensi 60Hz berarti arah tegangan dan arus berubah 60 kali setiap detik. Jepang menggunakan frekuensi 60Hz di wilayah bagian barat dan 50Hz di wilayah bagian timur."
+      },
+      {
+       "p": "Rangkaian AC dengan resistor R, kumparan L, dan kapasitor C, beserta bentuk gelombang tegangannya dan arusnya, ditunjukkan berikut ini."
+      },
+      {
+       "p": "Tegangan V"
+      },
+      {
+       "p": "Tegangan dan Arus Arus I Waktu t"
+      },
+      {
+       "ol": [
+        "Rangkaian resistor Catudaya Posisi waktu antara AC Posisi waktu antara gelombang tegangan dan tegangan dan arus sama. gelombang arus sama"
+       ]
+      },
+      {
+       "p": "Gambar 9-6: Gelombang Tegangan dan Arus dalam Rangkaian AC (Rangkaian R)"
+      },
+      {
+       "p": "Tegangan V Arus I Tegangan dan Arus"
+      },
+      {
+       "ol": [
+        "Rangkaian kumparan Waktu t"
+       ]
+      },
+      {
+       "p": "Posisi waktu arus Catudaya AC Gelombang arus datang tertinggal dari posisi lebih lambat daripada gelombang tegangan waktu tegangan. Gambar 9-7: Gelombang Tegangan dan Arus dalam Rangkaian AC (Rangkaian L)"
+      },
+      {
+       "p": "Tegangan V Tegangan dan Arus"
+      },
+      {
+       "p": "Arus I"
+      },
+      {
+       "ol": [
+        "Rangkaian kapasitor Waktu t"
+       ]
+      },
+      {
+       "p": "Posisi waktu arus Catudaya AC Gelombang arus datang mendahului posisi waktu lebih cepat daripada gelombang tegangan tegangan. Gambar 9-8: Gelombang Tegangan dan Arus dalam Rangkaian AC (Rangkaian C)"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Rangkaian DC",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s4",
+    "no": 4,
+    "title": {
+     "id": "Komponen Listrik",
+     "jp": "{電気部品|でんきぶひん}"
+    },
+    "pages": [
+     126,
+     127
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Resistor"
+      },
+      {
+       "p": "Resistansi adalah indikator seberapa sulit arus listrik mengalir, dengan satuan [Ω] (ohm)."
+      },
+      {
+       "p": "Besarnya resistansi ditentukan oleh dimensi bahan dan konstanta khas bahan tersebut, yang disebut resistivitas ρ [Ω･m]."
+      },
+      {
+       "p": "Misalnya, untuk kawat logam dengan penampang berbentuk lingkaran, yang menjadi dimensi bahan adalah luas penampang S [m2] dan panjang ℓ [m]. Jika resistansi dinotasikan R, maka R dapat dinyatakan dalam rumus sebagai berikut:"
+      },
+      {
+       "p": "ℓ 𝑅=𝜌 [Ω] 𝑆"
+      },
+      {
+       "p": "Diantara logam, ada ukuran seberapa rendah resistivitas (resistansi), atau dengan kata lain tingkat kemudahan menghantarkan listrik, yang disebut konduktivitas. Logam dengan konduktivitas tinggi (resistansi rendah), diurut dari yang paling tinggi, adalah perak, tembaga, emas dan aluminium."
+      },
+      {
+       "p": "Resistor berkaki memiliki kode warna yang menunjukkan nilai resistansinya."
+      },
+      {
+       "p": "Gambar 9-9: Simbol Resistor Gambar 9-10: Foto Contoh Resistor"
+      },
+      {
+       "p": "(2) kumparan (koil)"
+      },
+      {
+       "p": "Memiliki struktur berupa kawat listrik yang dililitkan pada bahan inti bermagnet."
+      },
+      {
+       "p": "Gambar 9-11: Simbol Kumparan"
+      },
+      {
+       "p": "(3) Kapasitor"
+      },
+      {
+       "p": "Komponen listrik yang menyimpan energi listrik, dengan struktur berupa 2 pelat logam atau foil logam yang dipisahkan oleh sebuah bahan isolator."
+      },
+      {
+       "ul": [
+        "Ada berbagai jenis kapasitor, antara lain kapasitor elektrolit aluminium, kapasitor keramik dan kapasitor film.",
+        "Kapasitor elektrolit aluminium adalah kapasitor yang menggunakan foil aluminium sebagai anoda, elektrolit sebagai katoda, dan aluminium oksida sebagai dielektrik. Faktor utama yang menjadi penyebab kerusakan kapasitor adalah suhu, arus listrik dan kondisi penyimpanan.",
+        "Pada rangkaian DC, saat sumber listrik dihubungkan, arus akan mengalir sesaat, tetapi kemudian berhenti mengalir seketika."
+       ]
+      },
+      {
+       "p": "Gambar 9-12: Simbol Kapasitor Gambar 9-13: Contoh Kapasitor (Foto)"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Resistor",
+      "points": [
+       "Ada berbagai jenis kapasitor, antara lain kapasitor elektrolit aluminium, kapasitor ker…",
+       "Kapasitor elektrolit aluminium adalah kapasitor yang menggunakan foil aluminium sebagai…",
+       "Pada rangkaian DC, saat sumber listrik dihubungkan, arus akan mengalir sesaat, tetapi k…"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s5",
+    "no": 5,
+    "title": {
+     "id": "Perhitungan Rangkaian",
+     "jp": "{回路計算|かいろけいさん}"
+    },
+    "pages": [
+     128,
+     134
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Hukum Ohm"
+      },
+      {
+       "p": "Jika tegangan listrik diberikan pada logam, dan sejenisnya, arus listrik akan mengalir."
+      },
+      {
+       "p": "Jika kita periksa hubungan antara tegangan yang diberikan dan arus yang mengalir, secara umum akan seperti pada Gambar 9-14."
+      },
+      {
+       "p": "Arus I[A] Ra (kecil)"
+      },
+      {
+       "p": "1)"
+      },
+      {
+       "p": "Rb (besar) 2)"
+      },
+      {
+       "p": "Tegangan V[V]"
+      },
+      {
+       "p": "Gambar 9-14: Karakteristik Tegangan-Arus pada Resistor"
+      },
+      {
+       "p": "Kurva garis diatas dapat dinyatakan dalam persamaan berikut, dengan R a dan Rb sebagai konstanta:"
+      },
+      {
+       "p": "𝐼 = 𝑉 ⁄𝑅𝑎 atau 𝐼 = 𝑉 ⁄𝑅𝑏"
+      },
+      {
+       "p": "Ini disebut hukum Ohm, dan merupakan salah satu hukum mendasar di bidang teknik listrik dan elektronik."
+      },
+      {
+       "p": "Konstanta Ra dan Rb adalah resistansi, yang nilainya merupakan kebalikan dari kemiringan garis lurus pada Gambar 9-14."
+      },
+      {
+       "p": "Seperti terlihat dari rumus, terhadap nilai tegangan yang sama, maka semakin besar resistansi, seperti Rb, arus akan semakin kecil, seperti ditunjukkan oleh garis 2) pada gambar. Sebaliknya, jika resistansi kecil, seperti R a, arus yang besar akan mengalir, seperti ditunjukkan oleh garis 1)."
+      },
+      {
+       "p": "(2) Hukum Pertama Kirchhoff (Hukum Arus Kirchhoff)"
+      },
+      {
+       "p": "Hukum yang berlaku untuk arus yang mengalir ke suatu titik (simpul) yang dipilih secara bebas dalam rangkaian listrik atau elektronik."
+      },
+      {
+       "p": "\"Jumlah arus yang mengalir masuk ke suatu titik sama dengan jumlah arus yang mengalir keluar\""
+      },
+      {
+       "p": "Simpul"
+      },
+      {
+       "p": "Gambar 9-15: Hukum Pertama Kirchhoff"
+      },
+      {
+       "p": "Pada Gambar 9-15, jika kita terapkan hukum arus Kirchhoff, dengan arus yang mengalir masuk ke simpul ditandai positif dan yang mengalir keluar ditandai negatif, akan didapatkan hasil sebagai berikut:"
+      },
+      {
+       "p": "𝐼1 + 𝐼2 − 𝐼3 + 𝐼4 − 𝐼5 = 0"
+      },
+      {
+       "p": "Secara umum dapat dinyatakan: 𝑛"
+      },
+      {
+       "p": "∑ 𝐼𝑘 = 0 𝑘=1"
+      },
+      {
+       "p": "Dan dapat dirapikan sebagai berikut:"
+      },
+      {
+       "p": "𝐼1 + 𝐼2 + 𝐼4 = 𝐼3 + 𝐼5"
+      },
+      {
+       "p": "Ruas kiri adalah total arus yang mengalir masuk, dan ruas kanan adalah total arus yang mengalir keluar."
+      },
+      {
+       "p": "(3) Hukum Kedua Kirchhoff (Hukum Tegangan Kirchhoff)"
+      },
+      {
+       "p": "Hukum dalam rangkaian listrik atau rangkaian elektronik yang menyatakan, pada untai tertutup yang dipilih secara bebas, tegangan akan berada dalam keadaan setimbang."
+      },
+      {
+       "p": "\"Jumlah beda potensial pada setiap cabang (dari simpul ke simpul) yang membentuk untai tertutup adalah nol\""
+      },
+      {
+       "p": "Dalam penerapan hukum ini, misalnya pada Gambar 9-16, beda potensial di setiap cabang dianggap memiliki arah positif jika searah dengan panah pada untai tertutup. Arah yang berlawanan dengan panah untai tertutup dianggap negatif."
+      },
+      {
+       "p": "Untai tertutup"
+      },
+      {
+       "p": "Gambar 9-16: Hukum Kedua Kirchhoff"
+      },
+      {
+       "p": "Secara konkretnya, pada rangkaian di Gambar 9-16, jika beda potensial pada setiap cabang diambil searah jarum jam (a→b→c→d→e→f→a), akan diperoleh berikut ini:"
+      },
+      {
+       "p": "𝑉𝑎𝑏 = −𝑉1 + 𝐸1 𝑉𝑏𝑐 = 𝑉2 + (−𝐸2 ) 𝑉𝑐𝑑 = −𝑉3 + 𝐸3 𝑉𝑑𝑒 = −𝑉4 + 𝐸4 𝑉𝑒𝑓 = 𝑉5 + (−𝐸5 ) 𝑉𝑓𝑎 = 𝑉6 + (−𝐸6 )"
+      },
+      {
+       "p": "Dengan menjumlahkan masing-masing ruas kiri dan ruas kanan, maka berdasarkan definisi, akan diperoleh hasil berikut:"
+      },
+      {
+       "p": "𝑉𝑎𝑏 + 𝑉𝑏𝑐 + 𝑉𝑐𝑑 + 𝑉𝑑𝑒 + 𝑉𝑒𝑓 + 𝑉𝑓𝑎 = 0 (−𝑉1 + 𝑉2 − 𝑉3 − 𝑉4 + 𝑉5 + 𝑉6 ) + (𝐸1 − 𝐸2 + 𝐸3 + 𝐸4 − 𝐸5 − 𝐸6 ) = 0"
+      },
+      {
+       "p": "Hubungan tersebut secara umum dapat dinyatakan sebagai berikut: 𝑛 𝑛"
+      },
+      {
+       "p": "∑ 𝐸𝑘 + ∑ 𝑉𝑘 = 0 𝑘=1 𝑘=1"
+      },
+      {
+       "p": "(4) Rangkaian Seri Resistor dan Hukum Pembagian Tegangan V0 V1 V2 R1 R2"
+      },
+      {
+       "p": "I0"
+      },
+      {
+       "p": "Gambar 9-17: Rangkaian Pembagi Tegangan"
+      },
+      {
+       "p": "Dari Gambar 9-17, persamaan 𝑉1 = 𝑅1 ∙ 𝐼0 berikut dapat diperoleh dari hukum 𝑉2 = 𝑅2 ∙ 𝐼0 Ohm."
+      },
+      {
+       "p": "𝑉0 = 𝑉1 + 𝑉2 Berdasarkan hukum kedua Kirchhoff, = 𝑅1 ∙ 𝐼0 + 𝑅2 ∙ 𝐼0 berlaku hubungan berikut. = (𝑅1 + 𝑅2 ) ∙ 𝐼0"
+      },
+      {
+       "p": "Dari hubungan tersebut, maka berdasarkan hukum Ohm, resistansi 𝑉0 gabungan R0 dari rangkaian seri R1 𝑅0 = = 𝑅1 + 𝑅2 𝐼0 dan R2 dinyatakan dengan persamaan berikut:"
+      },
+      {
+       "p": "Dari situ, arus dapat dinyatakan 𝑉0 𝐼0 = dengan rumus berikut: 𝑅1 + 𝑅2"
+      },
+      {
+       "p": "Sehingga tegangan terminal R1 dan 𝑉0 𝑅1 𝑉1 = 𝑅1 𝐼0 = 𝑅1 = 𝑉 R2 diberikan oleh persamaan berikut, 𝑅1 + 𝑅2 𝑅1 + 𝑅2 0 yang disebut hukum pembagian 𝑉0 𝑅2 𝑉2 = 𝑅2 𝐼0 = 𝑅2 = 𝑉 tegangan. 𝑅1 + 𝑅2 𝑅1 + 𝑅2 0"
+      },
+      {
+       "p": "Berdasarkan hasil sejauh ini, nilai resistansi total dari resistor yang dihubungkan seri akan seperti pada Gambar 9-18."
+      },
+      {
+       "p": "Resistansi total：R0 = R1 + R2 [Ω]"
+      },
+      {
+       "p": "Gambar 9-18: Resistansi Total Resistor pada Rangkaian Seri"
+      },
+      {
+       "p": "(5) Rangkaian Paralel Resistor dan Hukum Pembagian Arus V0"
+      },
+      {
+       "p": "I1 R1"
+      },
+      {
+       "p": "I0 I2 R2"
+      },
+      {
+       "p": "Gambar 9-19: Rangkaian Pembagi Arus"
+      },
+      {
+       "p": "Dari Gambar 9-19, persamaan 𝑉0 𝑉0 berikut dapat diperoleh dari hukum 𝐼1 = , 𝐼2 = 𝑅1 𝑅2 Ohm."
+      },
+      {
+       "p": "Berdasarkan hukum pertama 𝑉0 𝑉0 1 1 𝐼0 = 𝐼1 + 𝐼2 = + = ( + ) ∙ 𝑉0 𝑅1 𝑅2 𝑅1 𝑅2 Kirchhoff, berlaku hubungan berikut. 𝑅1 + 𝑅2 = ∙𝑉 𝑅1 ∙ 𝑅2 0"
+      },
+      {
+       "p": "Dari hubungan tersebut, maka berdasarkan hukum Ohm, hambatan 𝑉0 𝑅1 ∙ 𝑅2 gabungan R0 dari rangkaian paralel 𝑅0 = = 𝐼0 𝑅1 + 𝑅2 R1 dan R2 dinyatakan dengan persamaan berikut."
+      },
+      {
+       "p": "Dari situ, tegangan dapat dinyatakan 𝑅1 ∙ 𝑅2 𝑉0 = ∙𝐼 dengan rumus berikut. 𝑅1 + 𝑅2 0"
+      },
+      {
+       "p": "Sehingga arus yang mengalir pada 𝑉0 𝑅2 𝐼1 = = ∙𝐼 R1 dan R2 diberikan oleh persamaan 𝑅1 𝑅1 + 𝑅2 0 berikut, yang disebut hukum 𝑉0 𝑅1 𝐼2 = = ∙𝐼 𝑅2 𝑅1 + 𝑅2 0 pembagian arus."
+      },
+      {
+       "p": "Berdasarkan hasil sejauh ini, nilai total resistansi dari resistor yang dihubungkan secara paralel ditunjukkan pada Gambar 9-20."
+      },
+      {
+       "p": "Resistansi total"
+      },
+      {
+       "p": "Gambar 9-20: Resistansi Total Resistor pada Rangkaian Paralel"
+      },
+      {
+       "p": "(6) Panas Joule"
+      },
+      {
+       "p": "Saat arus mengalir melalui resistor, akan timbul panas. Panas ini disebut panas Joule, dan panas Joule P yang dihasilkan per satuan waktu dapat dihitung menggunakan rumus berikut ini:"
+      },
+      {
+       "p": "𝑃 = 𝐼 2 × 𝑅 [W] (𝐼: nilai arus, 𝑅: nilai resistansi) 𝐸2 𝑃= [W] (𝐸: nilai tegangan, 𝑅: nilai resistansi) 𝑅"
+      },
+      {
+       "p": "Panas Joule ini sama dengan daya yang dikonsumsi."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Hukum Ohm",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s6",
+    "no": 6,
+    "title": {
+     "id": "Teori Elektron",
+     "jp": "{電子理論|でんしりろん}"
+    },
+    "pages": [
+     135,
+     137
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Semikonduktor"
+      },
+      {
+       "p": "Bahan yang memiliki sifat-sifat diantara \"konduktor\" yang menghantarkan listrik dan \"isolator\" yang tidak menghantarkan listrik. Tergantung kondisi, dapat dilakukan kontrol untuk menghantarkan atau tidak menghantarkan listrik."
+      },
+      {
+       "p": "Semikonduktor diklasifikasikan menjadi semikonduktor intrinsik, tipe-n dan tipe- p."
+      },
+      {
+       "p": "Semikonduktor intrinsik adalah semikonduktor murni yang hampir tidak mengandung pengotor, dan contoh tipikalnya adalah semikonduktor dari unsur tunggal seperti silikon (simbol unsur Si) atau germanium (simbol unsur Ge)."
+      },
+      {
+       "p": "(2) Semikonduktor Intrinsik"
+      },
+      {
+       "p": "Semikonduktor intrinsik memiliki kemampuan menghantarkan listrik yang rendah, sehingga penggunaannya sebagai komponen elektronik menjadi terbatas."
+      },
+      {
+       "p": "Dengan menambahkan pengotor ke bahan semikonduktor intrinsik, dapat dibuat semikonduktor tipe-n dan tipe-p, sehingga fungsi penghantaran listrik dapat dikontrol."
+      },
+      {
+       "p": "Pada semikonduktor intrinsik silikon, elektron valensi yang merupakan sumber sifat listrik terikat erat antar atom silikon, sehingga hampir tidak bergerak. Akibatnya, kemampuan menghantarkan listrik menjadi rendah (Gambar 9-21)."
+      },
+      {
+       "p": " elektron valensi"
+      },
+      {
+       "p": "Gambar 9-21: Semikonduktor Intrinsik"
+      },
+      {
+       "p": "(3) Semikonduktor Tipe-n"
+      },
+      {
+       "p": "Bahan pengotor yang memiliki 5 elektron valensi, seperti fosfor (simbol unsur P) dapat ditambahkan ke semikonduktor intrinsik, silikon (4 elektron valensi) (Gambar 9-22). Maka diperoleh apa yang disebut semikonduktor tipe-n."
+      },
+      {
+       "p": "Satu elektron valensi tambahan dapat bergerak bebas, sehingga daya hantar listrik meningkat. Elektron valensi tambahan ini disebut elektron bebas. Bahan pengotor seperti itu, misalnya fosfor, disebut \"donor\".  elektron valensi  elektron bebas"
+      },
+      {
+       "p": "Gambar 9-22: Semikonduktor Tipe-n"
+      },
+      {
+       "p": "(4) Semikonduktor Tipe-p"
+      },
+      {
+       "p": "Suatu pengotor dengan 3 elektron valensi, seperti boron (simbol unsur B), dapat ditambahkan ke semikonduktor intrinsik silikon. Maka diperoleh apa yang disebut semikonduktor tipe-p."
+      },
+      {
+       "p": "Dalam kondisi tersebut, muncul yang disebut hole, yaitu kekosongan elektron akibat kurangnya 1 elektron. Karena elektron tetangga bergerak ke tempat hole berada, hole terlihat seolah berpindah ke tempat elektron tetangga sebelumnya berada (Gambar 9-23). Bahan pengotor seperti itu, misalnya boron, disebut \"akseptor\".  elektron valensi ○ hole Jika elektron valensi bergerak terlihat seolah-olah hole telah seperti pada warna hijau, bergerak"
+      },
+      {
+       "p": "Gambar 9-23: Semikonduktor Tipe-p"
+      },
+      {
+       "p": "(5) Pembawa Muatan"
+      },
+      {
+       "p": "Elektron dan hole yang dapat bebas bergerak seperti dijelaskan sebelumnya disebut pembawa muatan, dan dalam semikonduktor, pergerakan pembawa muatan menyebabkan arus listrik mengalir."
+      },
+      {
+       "p": "(6) Sambungan pn"
+      },
+      {
+       "p": "Permukaan kontak tempat semikonduktor tipe-n dan semikonduktor tipe-p disambungkan disebut sambungan pn."
+      },
+      {
+       "p": "Tabel 9-1: Perubahan Keadaan Setelah Penyambungan pn semikonduktor semikonduktor elektron hole Tipe-p Tipe-n bebas"
+      },
+      {
+       "ol": [
+        "Kondisi sebelum disambungkan"
+       ]
+      },
+      {
+       "p": "akseptor Kondisi sebelum donor disambungkan"
+      },
+      {
+       "ol": [
+        "Setelah semikonduktor semikonduktor disambungkan Tipe-p Tipe-n"
+       ]
+      },
+      {
+       "p": "Masing-masing pembawa muatan mayoritas (hole pada tipe-p dan elektron bebas pada tipe-n) Kondisi setelah berkumpul di sekitar disambungkan"
+      },
+      {
+       "p": "permukaan kontak. semikonduktor semikonduktor"
+      },
+      {
+       "ol": [
+        "Setelah beberapa Tipe-p Tipe-n"
+       ]
+      },
+      {
+       "p": "waktu berjalan Pembawa muatan saling tarik-menarik, kemudian menghilang. Hal ini Beberapa waktu setelah disebut rekombinasi. disambungkan"
+      },
+      {
+       "p": "semikonduktor lapisan deplesi semikonduktor Tipe-p Tipe-n Medan listrik"
+      },
+      {
+       "ol": [
+        "Terbentuk \"lapisan deplesi\", tempat pembawa muatan tidak ada. Setelah penyambungan, elektron dan hole ternetralisir (lapisan deplesi terbentuk)"
+       ]
+      },
+      {
+       "p": "Pada lapisan deplesi, akseptor bermuatan negatif dan donor bermuatan positif saling berhadapan tanpa ada elektron atau hole di sekitarnya. Akibatnya, terbentuk medan listrik."
+      },
+      {
+       "p": "Medan listrik tersebut bekerja dalam arah yang menghambat pergerakan elektron atau hole. Jika tidak diberikan medan listrik eksternal, tidak akan ada pergerakan muatan pada bagian sambungan."
+      },
+      {
+       "p": "Kata Kunci"
+      },
+      {
+       "p": "Elektron valensi: Elektron yang berada pada bagian terluar (kulit terluar) atom, yang terlibat dalam ikatan kimia dengan atom lain maupun ionisasi (fenomena kehilangan atau memperoleh elektron), serta merupakan elektron penting yang menentukan sifat kimia suatu materi. Secara prinsip merujuk pada jumlah elektron pada kulit terluar atom."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Semikonduktor",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s7",
+    "no": 7,
+    "title": {
+     "id": "Komponen Elektronik",
+     "jp": "{電子部品|でんしぶひん}"
+    },
+    "pages": [
+     138,
+     140
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Dioda"
+      },
+      {
+       "p": "Komponen yang berbasis bahan semikonduktor, dan berfungsi mengalirkan arus listrik hanya dalam satu arah."
+      },
+      {
+       "p": "Memiliki 2 terminal, yaitu anoda dan katoda. Arah dari anoda ke katoda disebut arah maju, yang merupakan arah arus mengalir, sedangkan pada arah berlawanan, dari katoda ke anoda, arus tidak mengalir."
+      },
+      {
+       "p": "Anoda A Katoda K (Anode) (Cathode)"
+      },
+      {
+       "p": "Gambar 9-24: Simbol Dioda"
+      },
+      {
+       "p": "Ada 4 fungsi utama berikut:"
+      },
+      {
+       "ul": [
+        "Fungsi penyearah (mengambil hanya arus arah maju dari arus AC)",
+        "Fungsi deteksi (mengambil sinyal suara dari gelombang radio)",
+        "Kontrol tegangan (memanfaatkan fenomena tembus, seperti pada dioda Zener)",
+        "Konversi arus (memanfaatkan sifat mengubah cahaya menjadi arus, seperti pada sel surya)"
+       ]
+      },
+      {
+       "p": "(2) Transistor"
+      },
+      {
+       "p": "Komponen elektronik untuk memperkuat sinyal dan melakukan pensakelaran, dan memiliki struktur dari gabungan semikonduktor tipe-p dan tipe-n."
+      },
+      {
+       "ul": [
+        "Tergantung pada bagaimana elemen semikonduktor digabungkan, ada transistor tipe pnp dan transistor tipe npn. Gabungan dari keduanya disebut “transistor bipolar (transistor dua kutub)”."
+       ]
+      },
+      {
+       "p": "Emitor E Kolektor C (Emitter) (Collector)"
+      },
+      {
+       "p": "Basis B Basis B (Base) (Base)"
+      },
+      {
+       "p": "Kolektor C (Collector) Emitor E (Emitter) Tipe pnp Tipe npn"
+      },
+      {
+       "p": "Gambar 9-25: Simbol Transistor"
+      },
+      {
+       "ul": [
+        "Transistor memiliki 3 elektroda: \"kolektor\" untuk mengumpulkan muatan, \"basis\" sebagai dasar untuk kontrol dan \"emitor\" untuk memancarkan muatan, serta memiliki fungsi mengontrol arus kolektor menggunakan arus basis.",
+        "Fungsi utamanya adalah fungsi amplifikasi yakni mengubah sinyal listrik yang lemah menjadi sinyal yang lebih kuat, dan fungsi pensakelaran yakni melakukan ON/OFF arus listrik pada rangkaian.",
+        "Karakteristik penting dari transistor adalah nilai batas maksimum dan konstanta karakteristik.",
+        "Nilai batas maksimum mencakup diantaranya: tegangan kolektor-basis, tegangan kolektor-emitor, tegangan emitor-basis, arus kolektor maksimum yang diizinkan, arus basis maksimum yang diizinkan dan disipasi kolektor maksimum yang diizinkan.",
+        "Konstanta karakteristik mencakup faktor penguatan arus (hFE), waktu pensakelaran, tegangan saturasi, dan sebagainya. hFE adalah rasio arus kolektor terhadap arus basis, yang menunjukkan daya penguatan transistor."
+       ]
+      },
+      {
+       "ul": [
+        "Jenis transistor lainnya termasuk \"FET (Field Effect Transistor)\" yang juga dikenal sebagai \"transistor unipolar\", dan \"IGBT (Insulated Gate Bipolar Transistor)\" yang juga dikenal sebagai \"transistor gerbang terisolasi\"."
+       ]
+      },
+      {
+       "p": "(3) IC (Sirkuit Terpadu)"
+      },
+      {
+       "p": "Perangkat yang dibuat dengan memasang komponen listrik dan elektronik pada satu keping substrat semikonduktor, dan dihubungkan melalui jalur-jalur pengkabelan."
+      },
+      {
+       "p": "Jika diklasifikasikan menurut kategori sinyal, ada IC analog yang memproses sinyal analog (nilai kontinu) yang merepresentasikan besar kecilnya besaran, dan IC digital yang memproses sinyal digital (nilai diskret) yang hanya 0 dan 1. Masing-masing kategori IC tersedia dalam tipe-tipe seperti pada Tabel 9-2."
+      },
+      {
+       "p": "Tabel 9-2: Jenis dan Fungsi IC"
+      },
+      {
+       "p": "Metode IC Jenis Fungsi"
+      },
+      {
+       "p": "Op-amp Memungkinkan untuk dibuat berbagai rangkaian (penguat operasional) seperti penguatan sinyal dan konversi sinyal."
+      },
+      {
+       "p": "IC analog Konverter A/D Mengubah sinyal analog menjadi sinyal digital."
+      },
+      {
+       "p": "Konverter D/A Mengubah sinyal digital menjadi sinyal analog."
+      },
+      {
+       "p": "Regulator tegangan Menyediakan catu daya yang stabil."
+      },
+      {
+       "p": "Melakukan operasi logika dan fungsi kontrol, dan IC logika digunakan untuk mengontrol perangkat digital."
+      },
+      {
+       "p": "IC digital IC memori Berfungsi untuk menyimpan data."
+      },
+      {
+       "p": "Mikroprosesor Banyak digunakan untuk melakukan perhitungan (MPU) komputer, pengolahan data dan kontrol."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Dioda",
+      "points": [
+       "Fungsi penyearah (mengambil hanya arus arah maju dari arus AC)",
+       "Fungsi deteksi (mengambil sinyal suara dari gelombang radio)",
+       "Kontrol tegangan (memanfaatkan fenomena tembus, seperti pada dioda Zener)",
+       "Konversi arus (memanfaatkan sifat mengubah cahaya menjadi arus, seperti pada sel surya)",
+       "Tergantung pada bagaimana elemen semikonduktor digabungkan, ada transistor tipe pnp dan…",
+       "Transistor memiliki 3 elektroda: \"kolektor\" untuk mengumpulkan muatan, \"basis\" sebagai …"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b9s8",
+    "no": 8,
+    "title": {
+     "id": "Rangkaian",
+     "jp": "{回路|かいろ}"
+    },
+    "pages": [
+     141,
+     142
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Rangkaian penguat"
+      },
+      {
+       "p": "Rangkaian elektronik yang mengubah sinyal masukan beramplitudo kecil menjadi sinyal keluaran beramplitudo besar disebut rangkaian penguat. Tidak hanya tegangan, dalam beberapa kasus tertentu arus juga turut diperkuat. Untuk membuat rangkaian penguat, digunakan transistor."
+      },
+      {
+       "p": "(2) Rangkaian osilator"
+      },
+      {
+       "p": "Osilasi adalah pembangkitan sinyal periodik secara terus-menerus. Rangkaian elektronik ini dapat menghasilkan sinyal keluaran dengan frekuensi tertentu tanpa perlu sinyal masukan eksternal."
+      },
+      {
+       "p": "(3) Rangkaian Modulasi/Demodulasi"
+      },
+      {
+       "p": "Saat mengirim sinyal seperti sinyal audio atau citra secara nirkabel, sinyal tersebut ditumpangkan pada sinyal frekuensi tinggi dan ditransmisikan sebagai gelombang radio."
+      },
+      {
+       "p": "Sinyal yang ingin dikirim disebut \"gelombang sinyal\", sinyal frekuensi tinggi disebut \"gelombang pembawa\", dan gelombang radio yang ditransmisikan disebut \"gelombang termodulasi\"."
+      },
+      {
+       "p": "Pada sisi penerima, gelombang sinyal perlu diekstraksi dari gelombang termodulasi yang diterima. Dengan demikian, menumpangkan gelombang sinyal pada gelombang pembawa disebut \"modulasi\", dan mengekstraksi gelombang sinyal dari gelombang termodulasi yang diterima disebut \"demodulasi\" atau \"deteksi\"."
+      },
+      {
+       "p": "Rangkaian modulasi/demodulasi merupakan rangkaian elektronik yang memiliki fungsi tersebut."
+      },
+      {
+       "p": "Metode modulasi yang paling umum antara lain adalah modulasi amplitudo (AM), modulasi frekuensi (FM) dan modulasi fasa (PM), seperti pada Tabel 9-3."
+      },
+      {
+       "p": "Tabel 9-3: Metode Modulasi"
+      },
+      {
+       "p": "Metode Modulasi Rincian"
+      },
+      {
+       "p": "Modulasi amplitudo Metode mengubah amplitudo gelombang pembawa sesuai (AM) amplitudo gelombang sinyal."
+      },
+      {
+       "p": "Modulasi frekuensi Metode mengubah frekuensi gelombang pembawa sesuai (FM) amplitudo gelombang sinyal."
+      },
+      {
+       "p": "Modulasi fasa Metode mengubah fasa gelombang pembawa sesuai amplitudo (PM) gelombang sinyal."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Rangkaian penguat",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s9",
+    "no": 9,
+    "title": {
+     "id": "Komposisi Struktur",
+     "jp": "{構成|こうせい}"
+    },
+    "pages": [
+     143,
+     143
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Ada 5 komponen penyusun yang membentuk komputer. Peran masing-masing komponen ditunjukkan pada Tabel 9-4."
+      },
+      {
+       "p": "Tabel 9-4: Fungsi Komponen-komponen Komputer"
+      },
+      {
+       "p": "Komponen Fungsi dan sebagainya"
+      },
+      {
+       "p": "Perangkat untuk mengontrol komputer secara menyeluruh. Yaitu, mengambil dan menerjemahkan perintah program yang tersimpan pada Unit kontrol \"memori utama\" dan mengirimkan instruksi yang diperlukan untuk memproses perintah tersebut ke perangkat."
+      },
+      {
+       "p": "Perangkat untuk melakukan operasi aritmetika dasar maupun operasi Unit logika, dan tersusun dari penjumlah dan register. Bersama dengan \"unit aritmetika kontrol\", perangkat ini disebut \"Unit Pemrosesan Sentral (CPU)\"."
+      },
+      {
+       "p": "Perangkat untuk menyimpan data, program, dan sejenisnya. Terbagi Unit memori menjadi \"memori utama\" dan \"memori tambahan\"."
+      },
+      {
+       "p": "Perangkat untuk memasukkan program atau data kedalam komputer. Perangkat Keyboard, mouse, scanner, dan perangkat sejenisnya termasuk perangkat input input."
+      },
+      {
+       "p": "Perangkat untuk mengeluarkan hasil pemrosesan komputer ke luar Perangkat sistem. Layar, printer dan perangkat sejenisnya termasuk perangkat output output."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ada 5 komponen penyusun yang membentuk komputer. Peran masing-masing komponen ditunjukkan pada Tabel 9-4.",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b9s10",
+    "no": 10,
+    "title": {
+     "id": "Bilangan Biner",
+     "jp": "{二進数|にしんすう}"
+    },
+    "pages": [
+     144,
+     144
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "IC yang membentuk komputer disebut \"IC digital\". Pada bagian input/output IC digital, ditunjukkan status apakah sinyal listrik hadir (ON = 1) atau tidak (OFF = 0). Oleh karena itu, sistem biner yang hanya menggunakan 1 dan 0 menjadi dasar operasi di dalam komputer."
+      },
+      {
+       "p": "Sedangkan pada manusia, umumnya saat menuliskan angka digunakan sistem desimal, yang terdiri dari angka 0 hingga 9. Korespondensi antara sistem bilangan biner dan desimal ditunjukkan pada Tabel 9-5."
+      },
+      {
+       "p": "Tabel 9-5: Korespondensi Sistem Biner dan Desimal"
+      },
+      {
+       "p": "Sistem Biner Sistem Desimal"
+      },
+      {
+       "p": "0 0"
+      },
+      {
+       "p": "1 1"
+      },
+      {
+       "p": "10 2"
+      },
+      {
+       "p": "11 3"
+      },
+      {
+       "p": "100 4"
+      },
+      {
+       "p": "101 5"
+      },
+      {
+       "p": "110 6"
+      },
+      {
+       "p": "111 7"
+      },
+      {
+       "p": "1000 8"
+      },
+      {
+       "p": "1001 9"
+      },
+      {
+       "p": "1010 10"
+      },
+      {
+       "p": "Bab"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "IC yang membentuk komputer disebut \"IC digital\". Pada bagian input/output IC digital, ditunjukkan status apakah sinyal listrik hadir (ON = 1) atau tidak (OFF = 0). Oleh karena itu, sistem biner yang hanya menggunakan 1 dan 0 menjadi dasar operasi di dalam komputer.",
+      "points": []
+     }
+    }
+   }
+  ]
+ }
+}
