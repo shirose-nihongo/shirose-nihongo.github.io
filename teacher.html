@@ -1818,7 +1818,7 @@ window.keluarkanDariKelas = async (uid) => {
 // Expanded student profile (Part 16)
 // ---- Akses SSW per bidang (checkbox per siswa). Pakai data yang sudah ada: siswa/{uid}.aksesSswBidang.{slug}.
 // Mensetsu otomatis mengikuti (js/mensetsu.js membaca aturan yang sama). Mencabut akses TIDAK menghapus progres/riwayat/transkrip.
-const _SSW_8 = [["building-cleaning","🧹 Building Cleaning"],["kaigo","🤝 Kaigo"],["food-manufacturing","🏭 Food Manufacturing"],["food-service","🍜 Food Service"],["agriculture","🌾 Agriculture"],["construction","🏗️ Construction"],["accommodation","🏨 Accommodation"],["livestock","🐄 Livestock"],["fishery","🐟 Fishery"],["auto-maintenance","🚗 Auto Maintenance"],["industrial-mfg","🏭 Industrial Mfg"]];
+const _SSW_8 = [["building-cleaning","🧹 Building Cleaning"],["kaigo","🤝 Kaigo"],["food-manufacturing","🏭 Food Manufacturing"],["food-service","🍜 Food Service"],["agriculture","🌾 Agriculture"],["construction","🏗️ Construction"],["accommodation","🏨 Accommodation"],["livestock","🐄 Livestock"],["fishery","🐟 Fishery"],["auto-maintenance","🚗 Auto Maintenance"],["industrial-mfg","🏭 Industrial Mfg (Buku JAIM)"]];
 const _sswKelasMap = (siswa, kelasList) => ((kelasList || []).find(k => k.nama === siswa.kelas) || {}).aksesSswBidang || {};
 const _sswEfektif = (siswa, kelasList, slug) => {
   const a = (siswa.aksesSswBidang || {})[slug]; if (typeof a === "boolean") return a;
@@ -1983,7 +1983,7 @@ window.studentActivity = async (uid, tab) => {
         <h3 style="margin-top:12px;">Ujian JLPT Center (per level &amp; jenis)</h3><div class="table-wrap"><table><thead><tr><th>Ujian</th><th>Dikerjakan</th><th>Terakhir</th><th>Terbaik</th><th>Tanggal terakhir</th></tr></thead><tbody>${jr}</tbody></table></div>
         <h3 style="margin-top:12px;">Riwayat nilai (15 terakhir)</h3><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ujian</th><th>Nilai</th><th>Benar</th></tr></thead><tbody>${nr}</tbody></table></div>`;
     } else if (tab === "ssw") {
-      const core = await import("./js/ssw-core.js?v=20261117k");
+      const core = await import("./js/ssw-core.js?v=20261117m");
       const kls = state.kelasList || [];
       const items = await Promise.all(_SSW_8.map(async ([slug, nama]) => {
         const blokTotal = siswa.aksesSsw === false;
