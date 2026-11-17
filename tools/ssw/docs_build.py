@@ -39,7 +39,7 @@ reg_md = "# SSW Source Registry\n\nDiperbarui: %s. Angka dari `tools/ssw/stats.p
 for x in reg: reg_md += f"| {x['slug']} | {x['sumber']} | {x['lisensi_catatan']} | {x['status']} |\n"
 reg_md += "\n## PDF yang ada di repositori\n" + "".join(f"- `{p}`\n" for p in S["pdf"])
 reg_md += "\nPDF modul bidang lain tidak di-commit (hanya hasil render halaman WebP di `assets/ssw/<slug>/`). Tidak ada PDF yang diunduh sesi ini: sandbox hanya mengizinkan registri paket dan GitHub, jadi situs sumber (JICA, MHLW, JASPA, dll.) tidak bisa dijangkau dari sini.\n"
-reg_md += "\n## Bidang SSW yang belum ada\nShipbuilding, Aviation, Forestry, Automobile Transportation (taksi; truk & bus sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling — perlu sumber resmi dulu.\n"
+reg_md += "\n## Bidang SSW yang belum ada\nShipbuilding, Aviation, Forestry, Automobile Transportation (taksi; truk & bus sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.\n\nStatus sumber per 2026-11-17 (hasil pencarian; belum ada materi yang dimasukkan):\n- Taksi: situs 全タク連 tidak lagi menampilkan teks belajar bagi pencari; belum ditemukan PDF.\n- Railway, Forestry, Linen Supply: hanya dokumen kebijakan/pedoman ujian; tidak ditemukan teks belajar resmi.\n- Distribution/Warehousing (物流倉庫): hanya kerangka 試験基準 (MLIT, ujian dibuka 2026-10-26); tanpa teks belajar.\n- Resource Recycling (資源循環): teks belajar baru direncanakan/dipesan KLH Jepang; belum terbit.\n- Shipbuilding, Aviation: belum ditemukan teks belajar resmi.\nBidang-bidang ini tidak dibuat dari ingatan umum agar isi tetap bisa ditelusuri ke sumber resmi.\n"
 open(os.path.join(ROOT, "docs/SSW_SOURCE_REGISTRY.md"), "w", encoding="utf-8").write(reg_md)
 
 # ---- QA

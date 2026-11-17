@@ -32,4 +32,12 @@ Diperbarui: 2026-11-17. Angka dari `tools/ssw/stats.py` (data aktual repo).
 PDF modul bidang lain tidak di-commit (hanya hasil render halaman WebP di `assets/ssw/<slug>/`). Tidak ada PDF yang diunduh sesi ini: sandbox hanya mengizinkan registri paket dan GitHub, jadi situs sumber (JICA, MHLW, JASPA, dll.) tidak bisa dijangkau dari sini.
 
 ## Bidang SSW yang belum ada
-Shipbuilding, Aviation, Forestry, Automobile Transportation (taksi; truk & bus sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling — perlu sumber resmi dulu.
+Shipbuilding, Aviation, Forestry, Automobile Transportation (taksi; truk & bus sudah ada), Railway, Linen Supply, Distribution/Warehousing, Resource Recycling.
+
+Status sumber per 2026-11-17 (hasil pencarian; belum ada materi yang dimasukkan):
+- Taksi: situs 全タク連 tidak lagi menampilkan teks belajar bagi pencari; belum ditemukan PDF.
+- Railway, Forestry, Linen Supply: hanya dokumen kebijakan/pedoman ujian; tidak ditemukan teks belajar resmi.
+- Distribution/Warehousing (物流倉庫): hanya kerangka 試験基準 (MLIT, ujian dibuka 2026-10-26); tanpa teks belajar.
+- Resource Recycling (資源循環): teks belajar baru direncanakan/dipesan KLH Jepang; belum terbit.
+- Shipbuilding, Aviation: belum ditemukan teks belajar resmi.
+Bidang-bidang ini tidak dibuat dari ingatan umum agar isi tetap bisa ditelusuri ke sumber resmi.
