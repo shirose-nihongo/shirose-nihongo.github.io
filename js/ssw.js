@@ -14,11 +14,31 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261118b";
+} from "./ssw-core.js?v=20261118c";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "shipbuilding": [
+    { t: "溶接 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-guidance.pdf" },
+    { t: "溶接 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-point.pdf" },
+    { t: "溶接 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-sample.pdf" },
+    { t: "塗装 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-guidance.pdf" },
+    { t: "塗装 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-point.pdf" },
+    { t: "塗装 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-sample.pdf" },
+    { t: "鉄工 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-guidance.pdf" },
+    { t: "鉄工 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-point.pdf" },
+    { t: "鉄工 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-sample.pdf" },
+    { t: "仕上げ — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-guidance.pdf" },
+    { t: "仕上げ — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-point.pdf" },
+    { t: "仕上げ — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-sample.pdf" },
+    { t: "機械加工 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-guidance.pdf" },
+    { t: "機械加工 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-point.pdf" },
+    { t: "機械加工 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-sample.pdf" },
+    { t: "電気機器組立て — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-guidance.pdf" },
+    { t: "電気機器組立て — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-point.pdf" },
+    { t: "電気機器組立て — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-sample.pdf" }
+  ],
   "linen-supply": [
     { t: "試験基準 初級・専門級 (resmi JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-kizyun181009.pdf" },
     { t: "Soal contoh 学科 初級 (resmi)", u: "assets/ssw/linen-supply/pdf/jlsa-test2019.pdf" },
