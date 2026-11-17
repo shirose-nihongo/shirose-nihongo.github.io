@@ -14,11 +14,18 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261118f";
+} from "./ssw-core.js?v=20261118g";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118d";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "railway-electrical": [
+    { t: "受験案内 電気設備整備 (resmi 鉄道電業安全協会)", u: "https://www.railecr.com/news/20241101/zyuken_annai.pdf", ext: true },
+    { t: "試験実施要領 電気設備整備 (resmi)", u: "https://www.railecr.com/news/20241101/shikenn_youryou.pdf", ext: true },
+    { t: "学科 試験サンプル (resmi)", u: "https://www.railecr.com/news/20241101/denki_gakka_tokuteiginou.pdf", ext: true },
+    { t: "実技 試験サンプル (resmi)", u: "https://www.railecr.com/news/20241101/denki_jitsugi_tokuteiginou.pdf", ext: true },
+    { t: "試験結果 2025年度 (resmi)", u: "https://www.railecr.com/news/20241101/shikenn_kekka.pdf", ext: true }
+  ],
   "railway-track": [
     { t: "受験案内 軌道整備 (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_efac198c2698498586d88991447b6152.pdf", ext: true },
     { t: "試験実施要領 軌道整備 (resmi MLIT/MOJ)", u: "https://www.moj.go.jp/isa/content/001435333.pdf", ext: true },
