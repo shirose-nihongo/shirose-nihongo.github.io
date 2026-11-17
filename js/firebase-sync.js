@@ -562,17 +562,24 @@ export async function getGachaState() {
 export async function saveGachaState(state, shopIds) {
   if (!currentUser) throw new Error("Belum login");
   const o = _gLocal(); o.sinceEpic = state.sinceEpic || 0; o.sinceLegend = state.sinceLegend || 0; o.inv = state.inv || []; _gSave(o);
+  if (!(shopIds && shopIds.length)) await _gachaInvKeAkun(o.inv);   // hadiah tema saja: tetap disimpan ke akun
   if (shopIds && shopIds.length && currentSiswaDoc) {
     currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
     currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), ...shopIds]));
-    try { await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.inventory": currentSiswaDoc.karakter.inventory }); } catch (e) { console.warn("simpan hadiah gacha ke akun gagal (tersimpan di perangkat):", e.message); }
+    try { await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.inventory": currentSiswaDoc.karakter.inventory, "karakter.gachaInv": o.inv }); } catch (e) { console.warn("simpan hadiah gacha ke akun gagal (tersimpan di perangkat):", e.message); }
   }
 }
 /* Hadiah gacha di perangkat (id barang toko + tema). Dipakai agar hadiah tak hilang dari "dimiliki". */
+async function _gachaInvKeAkun(inv) { try { if (currentSiswaDoc) { currentSiswaDoc.karakter = currentSiswaDoc.karakter || {}; currentSiswaDoc.karakter.gachaInv = inv; } await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.gachaInv": inv }); } catch (e) {} }
 export function gachaInvLocal() { return (currentUser && _gLocal().inv) || []; }
 /* Salin hadiah gacha yang baru ada di perangkat ke inventaris akun (Firestore). isShop(id) → true untuk barang toko. Aman dipanggil berulang. */
 export async function syncGachaInventory(isShop) {
   if (!currentUser || !currentSiswaDoc) return 0;
+  // Gabungkan daftar hadiah gacha di akun dengan yang di perangkat (dua arah) → hadiah tidak hilang saat ganti HP/browser
+  { const remote = (currentSiswaDoc.karakter && currentSiswaDoc.karakter.gachaInv) || [], o = _gLocal(), loc = o.inv || [];
+    const gab = Array.from(new Set([...loc, ...remote]));
+    if (gab.length !== loc.length) { o.inv = gab; _gSave(o); }
+    if (gab.length !== remote.length) await _gachaInvKeAkun(gab); }
   const cur = (currentSiswaDoc.karakter && currentSiswaDoc.karakter.inventory) || [];
   const baru = gachaInvLocal().filter(id => isShop(id) && !cur.includes(id));
   if (!baru.length) return 0;
