@@ -1396,7 +1396,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/shirose-extra.css?v=20261116m"/>
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/ssw.css?v=20261117j"/>
+<link rel="stylesheet" href="./css/ssw.css?v=20261117k"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261116c"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261114f"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261117a"/>
@@ -1461,15 +1461,15 @@ import { allShopItems } from "./js/shop-seed.js?v=20261116m";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261116z";
+import * as FB from "./js/firebase-sync.js?v=20261117a";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
 import SV from "./js/voice.js?v=20261109c";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261114f";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116m";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261117k";
-import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261115b";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261117l";
+import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261117a";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261117b";
 const GACHA_ON = true;    // ← ubah ke true untuk menghidupkan gacha lagi (kode gacha tidak dihapus)
 import { GACHA_ROUTES, initGacha } from "./js/gacha.js?v=20261116w";
@@ -1577,6 +1577,16 @@ window.hapusKomentar = async (tipe, lvl, no, id, ownerUid) => {
 /* ========== RANGKUMAN SENDIRI (personal word collection) ========== */
 // Open a popup to add any word to the student's own Rangkuman. Pre-fills
 // kana/arti via a dataset lookup when the user asks or when caller provides.
+/* Bidang rangkuman: "ssw" | "jft" | "jlpt" — ditebak dari sumber / halaman / level aktif */
+const RK_NAMA = { jlpt: "JLPT", ssw: "SSW", jft: "JFT" };
+const RK_ROUTE = { jlpt: "rangkuman", ssw: "ssw-rangkuman", jft: "jft-rangkuman" };
+window._rkBidangDari = (sumber) => {
+  if (/ssw/i.test(String(sumber || ""))) return "ssw";
+  const h = location.hash.slice(1);
+  if (state.hafalan_ctx === "ssw" || h.startsWith("ssw")) return "ssw";
+  if (String(state.level).startsWith("ir") || h.startsWith("jft")) return "jft";
+  return "jlpt";
+};
 window.rangkumPopup = (prefilled = {}, sumber = "") => {
   const safe = (s) => (s||"").toString().replace(/"/g,"&quot;");
   const existing = document.getElementById("rangkum-modal");
@@ -1584,7 +1594,7 @@ window.rangkumPopup = (prefilled = {}, sumber = "") => {
   const html = `
     <div class="modal-backdrop open" id="rangkum-modal" onclick="if(event.target===this) closeRangkumPopup()">
       <div class="modal">
-        <h2>➕ Tambah ke Rangkuman</h2>
+        <h2>➕ Tambah ke Rangkuman ${RK_NAMA[_rkBidangDari(sumber)]}</h2>
         <p style="color:var(--gray); font-size:13px;">Catat kata yang mau kamu ulang-ulang nanti di menu Rangkuman.</p>
         ${sumber ? `<p style="font-size:12px; color:var(--gray-dim); background:rgba(255,255,255,.04); padding:8px 10px; border-radius:8px; margin-top:8px;">📍 Sumber: ${sumber}</p>` : ""}
         <div class="form-row" style="margin-top:14px;">
@@ -1646,7 +1656,7 @@ window.rangkumSimpan = async (sumber) => {
   const arti = document.getElementById("rk-arti").value.trim();
   if (!jp) return toast("Kata tidak boleh kosong");
   try {
-    const res = await FB.tambahRangkuman({ jp, kana, arti, sumber });
+    const res = await FB.tambahRangkuman({ jp, kana, arti, sumber, bidang: _rkBidangDari(sumber) });
     if (res && res.synced === false){
       toast(`✓ "${jp}" tersimpan (offline — sync nanti)`);
     } else {
@@ -1661,22 +1671,25 @@ window.rangkumSimpan = async (sumber) => {
 // locked to "rangkuman" so the student sees preview + modes + start btn
 // for their own collection. Comes with a "🗑 Kelola kata" shortcut to
 // delete entries from the collection.
-async function renderRangkuman(){
+async function renderRangkuman(bidang){
+  bidang = (bidang === "ssw" || bidang === "jft" || bidang === "jlpt") ? bidang : (String(state.level).startsWith("ir") ? "jft" : "jlpt");
+  state._rkBidang = bidang; state._rkRoute = RK_ROUTE[bidang];
+  const NM = RK_NAMA[bidang];
   if (!state.user){
-    return `<div class="panel"><h2>📒 Rangkuman</h2>
+    return `<div class="panel"><h2>📒 Rangkuman ${NM}</h2>
       <div class="empty"><div class="emoji">🔒</div>Login dulu untuk menyimpan rangkuman.<br>
       <button class="btn" onclick="showAuthModal()">Masuk</button></div></div>`;
   }
-  const list = await FB.listRangkuman();
+  const list = await FB.listRangkuman(bidang);
   if (!list.length){
-    return `<div class="panel"><h2>📒 Rangkuman</h2>
+    return `<div class="panel"><h2>📒 Rangkuman ${NM}</h2>
       <div class="empty"><div class="emoji">📒</div>
-        Belum ada kata di rangkuman.<br><br>
+        Belum ada kata di Rangkuman ${NM}.<br><br>
         Cara menambah:<br>
         <small style="color:var(--gray); line-height:1.8;">
-        • Buka detail Kosakata / Kanji → tombol <b>➕ Rangkum</b><br>
+        ${bidang === "ssw" ? `• Di materi SSW, ketuk tombol <b>📒＋</b> di samping poin / ringkasan<br>• Di pop-up kosakata SSW → tombol <b>➕ Rangkum</b>` : `• Buka detail Kosakata / Kanji → tombol <b>➕ Rangkum</b><br>
         • Setelah selesai ujian → tombol <b>➕ Rangkum</b> di tiap soal<br>
-        • Dari contoh kalimat → tombol <b>➕ Rangkum</b>
+        • Dari contoh kalimat → tombol <b>➕ Rangkum</b>`}
         </small>
       </div></div>`;
   }
@@ -1693,7 +1706,7 @@ async function renderRangkuman(){
 
 // Open the delete-manage modal for Rangkuman (injected modal, self-contained).
 window.openRangkumanManage = async () => {
-  const list = await FB.listRangkuman();
+  const list = await FB.listRangkuman(state._rkBidang || "jlpt");
   if (!list.length) return toast("Rangkuman kosong");
   const existing = document.getElementById("rk-manage-modal");
   if (existing) existing.remove();
@@ -1710,7 +1723,7 @@ window.openRangkumanManage = async () => {
   const html = `
     <div class="modal-backdrop open" id="rk-manage-modal" onclick="if(event.target===this) closeRangkumanManage()">
       <div class="modal">
-        <h2>🗑 Kelola Rangkuman (${list.length})</h2>
+        <h2>🗑 Kelola Rangkuman ${RK_NAMA[state._rkBidang || "jlpt"]} (${list.length})</h2>
         <p style="color:var(--gray); font-size:13px;">Hapus kata yang sudah tidak dibutuhkan.</p>
         <div style="max-height:60vh; overflow-y:auto; margin-top:10px;" id="rk-manage-body">${rows}</div>
         <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:12px;">
@@ -1726,7 +1739,7 @@ window.closeRangkumanManage = () => {
   const m = document.getElementById("rk-manage-modal");
   if (m) m.remove();
   // Refresh rangkuman view if we're on it
-  if (location.hash.slice(1).startsWith("rangkuman")) route("rangkuman");
+  if (/rangkuman/.test(location.hash.slice(1))) route(state._rkRoute || "rangkuman");
 };
 window.rangkumHapusCepat = async (id) => {
   try { await FB.hapusRangkuman(id); toast("✓ Dihapus"); openRangkumanManage(); }
@@ -2111,7 +2124,9 @@ const routes = {
   kanji: () => renderMateriList("kanji"),
   bunpou: () => renderMateriList("bunpou"),
   hafalan: renderHafalan,
-  rangkuman: renderRangkuman,
+  rangkuman: () => renderRangkuman(),
+  "ssw-rangkuman": () => renderRangkuman("ssw"),
+  "jft-rangkuman": () => renderRangkuman("jft"),
   // `quest` lama diarahkan ke `ujian` supaya bookmark / hash lama tetap jalan.
   quest: renderUjianList,
   ujian: (params) => renderUjian(params),
@@ -2174,20 +2189,23 @@ window.addEventListener("popstate", () => {
 
 // Mapel dipisah: JLPT, Kana, dan SSW tidak saling terhubung. Pindah mapel hanya lewat layar "pilih-level".
 const _subjectOf = (path) => { const n = String(path || "").split("/")[0]; if (n.startsWith("ssw")) return "ssw"; if (n.startsWith("kana")) return "kana"; if (n === "jft" || n.startsWith("jft-")) return "jft";
-  if (n === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess"))) return "ssw"; return "jlpt"; };
+  if (n === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess"))) return "ssw";
+  if (n === "hafalan" && state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkBidang && state._rkBidang !== "jlpt") return state._rkBidang;
+  return "jlpt"; };
 // Halaman JLPT (Center/Choukai/Riwayat) tidak dipakai di mode JFT-Basic (level ir*) → arahkan ke Ujian JFT.
 const _bukanJft = (fn) => { if (String(state.level).startsWith("ir")) { setTimeout(() => route("jft-ujian"), 0); return '<div class="loading">Memuat…</div>'; } return fn(); };
 const _parentOf = (path) => {
   const [n, slug = "building-cleaning", a2] = String(path || "").split("/");
   if (n === "ssw") return "pilih-level";
+  if (n === "hafalan" && state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkRoute && _subjectOf(path) !== "jlpt") return state._rkRoute;
   if (n === "hafalan" && _subjectOf(path) === "ssw") return state.hafalan_back || "ssw";
   if (n === "ssw-peta") return "ssw";
   if (n === "ssw-bab") return `ssw-peta/${slug}`;
   if (n === "ssw-baca") { const m = /^b(\d+)s/.exec(a2 || ""); return m ? `ssw-bab/${slug}/bab${m[1]}` : `ssw-peta/${slug}`; }
-  if (n === "ssw-progres") return "ssw";
+  if (n === "ssw-progres" || n === "ssw-rangkuman") return "ssw";
   if (n.startsWith("ssw-")) return `ssw-peta/${slug}`;
   if (n === "jft") return "pilih-level";
-  if (n === "jft-ujian" || n === "jft-tryout") return "jft";
+  if (n === "jft-ujian" || n === "jft-tryout" || n === "jft-rangkuman") return "jft";
   if (n === "jft-paket" && /^try/.test(slug)) return "jft-tryout";
   if (n.startsWith("jft-")) return "jft-ujian";
   if (n === "kana") return "pilih-level";
@@ -2303,7 +2321,7 @@ window.route = (path) => {
 
   // Alur wajib: LOGIN → PEMILIHAN JLPT → CHARACTER → fitur. Selama siswa
   // belum memilih level di sesi ini, semua halaman diarahkan ke #pilih-level.
-  if (state.user && !BEBAS_PILIH_LEVEL.has(name) && !String(name).startsWith("ssw") && !String(name).startsWith("jft") && !(name === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess"))) && !levelSudahDipilih()){
+  if (state.user && !BEBAS_PILIH_LEVEL.has(name) && !String(name).startsWith("ssw") && !String(name).startsWith("jft") && !(name === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess") || (state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkBidang && state._rkBidang !== "jlpt"))) && !levelSudahDipilih()){
     return route("pilih-level");
   }
   renderLevelPills();
@@ -3612,7 +3630,7 @@ async function _renderHafalanSelectImpl(){
   ]);
   let rangList = [];
   if (state._rangkumanContext && state.user) {
-    rangList = await FB.listRangkuman().catch(() => []);
+    rangList = await FB.listRangkuman(state._rkBidang || "jlpt").catch(() => []);
   }
   try { await _loadSrs(); } catch (e) { state.srs = state.srs || {}; }
 
@@ -3625,7 +3643,7 @@ async function _renderHafalanSelectImpl(){
     const pool = [];
     const push = (tipe, arr) => arr.forEach((it, idx) => pool.push(_normalizeItem(tipe, it, idx)));
     if (cfg.tipe === "rangkuman"){
-      rangList.forEach((r, i) => pool.push({ tipe:"rangkuman", idx:i, no:i+1, front:r.jp, reading:r.kana||"", back:r.arti||"" }));
+      rangList.forEach((r, i) => pool.push({ tipe:"rangkuman", idx:i, no:i+1, front:r.jp, reading:r.kana||"", back:r.arti||"", ...((state._rkBidang||"jlpt") !== "jlpt" ? { skey: "r:" + state._rkBidang + ":" + r.id } : {}) }));
     } else {
       if (cfg.tipe === "kosakata" || cfg.tipe === "semua") push("kosakata", kos);
       if (cfg.tipe === "kanji"    || cfg.tipe === "semua") { const kv = _kanjiDeckCards(knj, kos, cfg.tipe); if (kv) kv.forEach(c => pool.push(c)); else push("kanji", knj); }
@@ -3690,7 +3708,7 @@ async function _renderHafalanSelectImpl(){
 
       <h3 style="margin-bottom:8px;">1. Pilih materi</h3>
       <div class="haf-type-row">
-        ${state._rangkumanContext ? typeBtn("rangkuman", "📒 Rangkuman", rangList.length + " kata") : `
+        ${state._rangkumanContext ? typeBtn("rangkuman", "📒 Rangkuman " + RK_NAMA[state._rkBidang || "jlpt"], rangList.length + " kata") : `
           ${typeBtn("kosakata", "📖 Kosakata", kos.length + " kata")}
           ${_kvOn()
             ? typeBtn("kanji", "🈷️ Kosakata Kanji", (_kanjiDeckCards(knj, kos, "kanji") || []).length + " kata")
@@ -3788,7 +3806,7 @@ window.hafStart = async () => {
     loadMateri("kanji", state.level),
   ];
   if (cfg.tipe === "rangkuman" && state.user){
-    promises.push(FB.listRangkuman().catch(() => []));
+    promises.push(FB.listRangkuman(state._rkBidang || "jlpt").catch(() => []));
   } else {
     promises.push(Promise.resolve([]));
   }
@@ -3798,7 +3816,7 @@ window.hafStart = async () => {
   let pool = [];
   const push = (tipe, arr) => arr.forEach((it, idx) => pool.push(_normalizeItem(tipe, it, idx)));
   if (cfg.tipe === "rangkuman"){
-    rangList.forEach((r, i) => pool.push({ tipe:"rangkuman", idx:i, no:i+1, front:r.jp, reading:r.kana||"", back:r.arti||"" }));
+    rangList.forEach((r, i) => pool.push({ tipe:"rangkuman", idx:i, no:i+1, front:r.jp, reading:r.kana||"", back:r.arti||"", ...((state._rkBidang||"jlpt") !== "jlpt" ? { skey: "r:" + state._rkBidang + ":" + r.id } : {}) }));
   } else {
     if (cfg.tipe === "kosakata" || cfg.tipe === "semua") push("kosakata", kos);
     if (cfg.tipe === "kanji"    || cfg.tipe === "semua") { const kv = _kanjiDeckCards(knj, kos, cfg.tipe); if (kv) kv.forEach(c => pool.push(c)); else push("kanji", knj); }
@@ -3842,7 +3860,7 @@ window.hafStart = async () => {
 /* ===== Jembatan SSW → mesin hafalan JLPT (3 mode yang sama; progres di dokumen SRS terpisah "ssw-bc") ===== */
 const _SSW_SESS = "shirose-ssw-hafsess";
 const _hafSSW = () => state.hafalan_ctx === "ssw";
-const _hafMenu = () => (_hafSSW() && state.hafalan_back) || "hafalan";
+const _hafMenu = () => (_hafSSW() && state.hafalan_back) || ((state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkRoute) ? state._rkRoute : "hafalan");
 const _hafHome = () => (_hafSSW() && state.hafalan_back) || "home";
 const _hafHomeLbl = () => _hafSSW() ? "↩ Kembali" : "🏠 Home";
 // Dokumen SRS per bidang SSW: Building Cleaning tetap "ssw-bc" (data lama), bidang lain "ssw-<slug>".
@@ -3898,12 +3916,13 @@ _hafApplyFuri();
 
 /* ===== RANGKUM CEPAT: simpan langsung (tanpa popup) dari flashcard / detail materi — JLPT N5–N1 & JFT A1–A2.2 ===== */
 const _plain = (h) => String(h == null ? "" : h).replace(/<rt>.*?<\/rt>/g, "").replace(/<[^>]+>/g, "").replace(/&quot;/g, '"').trim();
-window.rangkumCepat = async (d, sumber) => {
+window.rangkumCepat = async (d, sumber, bidang) => {
   if (!state.user) return toast("Login dulu untuk menyimpan rangkuman");
   const jp = _plain(d && d.jp); if (!jp) return toast("Kata kosong");
   try {
-    const r = await FB.tambahRangkuman({ jp, kana: _plain(d.kana), arti: _plain(d.arti), sumber: sumber || "" });
-    toast(r && r.synced === false ? `✓ "${jp}" masuk rangkuman (offline, disinkron nanti)` : `✓ "${jp}" masuk rangkuman`);
+    const r = await FB.tambahRangkuman({ jp, kana: _plain(d.kana), arti: _plain(d.arti), sumber: sumber || "", bidang: bidang || _rkBidangDari(sumber) });
+    const NM = RK_NAMA[bidang || _rkBidangDari(sumber)];
+    toast(r && r.synced === false ? `✓ "${jp}" masuk Rangkuman ${NM} (offline, disinkron nanti)` : `✓ "${jp}" masuk Rangkuman ${NM}`);
     return true;
   } catch (e) { toast("❌ " + e.message); return false; }
 };
@@ -3912,7 +3931,7 @@ window.hafRangkum = async () => {
   const ok = await rangkumCepat({ jp: it.fraw || it.front, kana: it.reading, arti: it.back }, `Flashcard ${_hafBadge(it)}`);
   const b = document.getElementById("haf-rk-btn"); if (ok && b) { b.textContent = "📒 ✓ Masuk"; b.disabled = true; }
 };
-window.hafBukaRangkuman = () => route("rangkuman");
+window.hafBukaRangkuman = () => route(RK_ROUTE[_rkBidangDari("")]);
 const _hafRkBtn = () => { const it = (state.hafalan_queue || [])[state.hafalan_pos || 0];
   if (!it || it.tipe === "ssw" || it.tipe === "rangkuman" || _hafSSW()) return "";
   return `<button class="btn ghost sm" id="haf-rk-btn" onclick="hafRangkum()" title="Simpan kartu ini ke Rangkuman">📒 + Rangkum</button><button class="btn ghost sm" onclick="hafBukaRangkuman()" title="Buka Rangkuman">📒 Buka</button>`; };
