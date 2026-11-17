@@ -52,3 +52,7 @@ Semua perubahan ada di git; sebelum deploy, `git diff` dan `git revert` cukup un
 - SRC-010 (METI ringkasan, 28 hlm) dan SRC-011 (MOJ 運用要領 別冊 工業製品製造業, 45 hlm) diunduh, teks diekstrak ke ssw-materials/industrial-manufacturing/.
 - Terverifikasi (SRC-011): 1号 = lulus ujian keterampilan + JFT-Basic A2.2 / JLPT N4+; 2号 = JLPT N3+ (B1), pengalaman ≥3 tahun, penilaian 2号 + Business Career 3級/技能検定1級. Info ujian di js/ssw-core.js diperbarui; klaim ambang lulus 65%/60% dihapus untuk sektor ini karena belum terverifikasi di sumber.
 - Belum diunduh: SRC-004, SRC-020 (moj.go.jp), SRC-012 (meti.go.jp) — Chrome tidak menyimpan file ke Downloads.
+
+### 工業製品製造業 — 17 業務区分 1号 (SRC-010 hlm 5–7, per 2026-06)
+1 機械金属加工 (1号+2号) · 2 電気電子機器組立て (1号+2号) · 3 金属表面処理 (1号+2号) · 4 紙器・段ボール箱製造 · 5 コンクリート製品製造 · 6 RPF製造 · 7 陶磁器製品製造 · 8 印刷・製本 · 9 紡織製品製造 · 10 縫製 · 11 電線・ケーブル製造 · 12 プレハブ住宅製品製造 · 13 家具製造 · 14 定形・不定形耐火物製造 · 15 生コンクリート製造 · 16 ゴム製品製造 · 17 かばん製造.
+Hanya 区分 1–3 yang punya 2号. Di app saat ini hanya "dasar bersama" (industrial-mfg) dan 機械金属加工 (mfg-machine-metal); 電気電子機器組立て & 金属表面処理 sudah dikerjakan sesi lain (Chat2). Sisanya (4–17) = backlog; sektor baru ditandai berdasarkan sumber, soal harus dibuat dari modul resmi, bukan dikarang.
