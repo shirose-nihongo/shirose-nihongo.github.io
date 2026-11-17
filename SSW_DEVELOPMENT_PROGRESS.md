@@ -78,3 +78,9 @@ tools/ssw/quiz_official_build.py (idempotent, set ber-id gen-*): Auto Maintenanc
 - sswm.go.jp tidak bisa diakses (DNS) dari komputer user & fetch otomatis diblokir robots; JAIM adalah operator ujian dan menyediakan PDF yang sama.
 - Soal baru ORIGINAL: Machine-Metal tema gen-mm-1..4 + gen-mm-pilihan (4 pilihan); Industrial-Mfg gen-im-1..3 + gen-im-pilihan. Data: tools/ssw/quiz_mfg_data.py; builder tools/ssw/quiz_official_build.py. Perlu review ahli.
 - Belum: contoh soal 電気電子機器組立て/金属表面処理 (SRC-041/042) sudah diunduh tapi belum dipelajari untuk soal.
+
+### 2026-11-17 — PDF resmi JAIM/JASPA dimasukkan ke web
+- JAIM (jaim-skill.or.jp/exam/materials): contoh soal 1号 untuk 17 区分 + 2号 untuk 3 区分 → assets/ssw/industrial-mfg/pdf/; panduan belajar resmi (JP, Indonesia, errata) → assets/ssw/jaim-*/pdf/.
+- JASPA: 4 PDF contoh soal Auto Maintenance → assets/ssw/auto-maintenance/pdf/.
+- Tombol PDF muncul di halaman tiap bidang lewat PDF_SUMBER (js/ssw.js). Versi Vietnam panduan (_vn) tidak diunduh.
+- Catatan hak cipta: file milik JAIM/JASPA, disediakan gratis oleh mereka untuk belajar; sumber dicantumkan di tombol.

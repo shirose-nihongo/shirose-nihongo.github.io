@@ -30,7 +30,52 @@ const PDF_SUMBER = {
   ],
   "auto-maintenance": [
     { t: "JICA: みてまなぶ！自動車整備の日本語", u: "assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf" },
-    { t: "JICA: Koleksi ilustrasi かいて おぼえる", u: "assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf" }
+    { t: "JICA: Koleksi ilustrasi かいて おぼえる", u: "assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf" },
+    { t: "Contoh soal resmi 1号 学科 ○× (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-1go-gakka.pdf" },
+    { t: "Contoh soal resmi 1号 実技 二択 (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-1go-jitsugi.pdf" },
+    { t: "Contoh soal resmi 2号 学科 4 pilihan (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-2go-gakka.pdf" },
+    { t: "Kunci jawaban contoh 2号 学科 (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-kunci-2go-gakka.pdf" }
+  ],
+  "industrial-mfg": [
+    { t: "Contoh soal resmi 1号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kikai-kinzoku-kako.pdf" },
+    { t: "Contoh soal resmi 1号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-denki-denshi-kiki-kumitate.pdf" },
+    { t: "Contoh soal resmi 1号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kinzoku-hyomen-shori.pdf" },
+    { t: "Contoh soal resmi 1号 — 紙器・段ボール箱製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
+    { t: "Contoh soal resmi 1号 — コンクリート製品製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
+    { t: "Contoh soal resmi 1号 — RPF製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
+    { t: "Contoh soal resmi 1号 — 陶磁器製品製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" },
+    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
+    { t: "Contoh soal resmi 1号 — 紡織製品製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
+    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
+    { t: "Contoh soal resmi 1号 — 電線・ケーブル製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
+    { t: "Contoh soal resmi 1号 — プレハブ住宅製品製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
+    { t: "Contoh soal resmi 1号 — 家具製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
+    { t: "Contoh soal resmi 1号 — 定形・不定形耐火物製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
+    { t: "Contoh soal resmi 1号 — 生コンクリート製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
+    { t: "Contoh soal resmi 1号 — ゴム製品製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
+    { t: "Contoh soal resmi 1号 — かばん製造 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
+    { t: "Contoh soal resmi 2号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kikai-kinzoku-kako.pdf" },
+    { t: "Contoh soal resmi 2号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-denki-denshi-kiki-kumitate.pdf" },
+    { t: "Contoh soal resmi 2号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kinzoku-hyomen-shori.pdf" }
+  ],
+  "mfg-machine-metal": [
+    { t: "Contoh soal resmi 1号 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kikai-kinzoku-kako.pdf" },
+    { t: "Contoh soal resmi 2号 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kikai-kinzoku-kako.pdf" }
+  ],
+  "jaim-machine-metal": [
+    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-machine-metal/pdf/panduan-belajar-id.pdf" },
+    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-machine-metal/pdf/panduan-belajar-jp.pdf" },
+    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-machine-metal/pdf/errata-jp.pdf" }
+  ],
+  "jaim-elec-electronic": [
+    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-id.pdf" },
+    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-jp.pdf" },
+    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/errata-jp.pdf" }
+  ],
+  "jaim-metal-surface": [
+    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-id.pdf" },
+    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-jp.pdf" },
+    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-metal-surface/pdf/errata-jp.pdf" }
   ]
 };
 const pdfButtons = (slug) => (PDF_SUMBER[slug] || []).map(x => `<a class="btn ghost" href="${esc(x.u)}" target="_blank" rel="noopener">📄 ${esc(x.t)}${x.ext ? " ↗" : ""}</a>`).join("");
