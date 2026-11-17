@@ -14,11 +14,18 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261117r";
+} from "./ssw-core.js?v=20261117s";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "forestry": [
+    { t: "Soal contoh 学科 + kunci jawaban (resmi)", u: "assets/ssw/forestry/pdf/ringyo_tokutei_gakka_sumple_250724.pdf" },
+    { t: "実技試験問題 2026 (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_test.pdf" },
+    { t: "Prosedur ujian praktik (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_process.pdf" },
+    { t: "Q&A APD & alat kerja (resmi)", u: "assets/ssw/forestry/pdf/specfic_faq_260708.pdf" },
+    { t: "Panduan peserta 2026 (受験案内)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-juken-annai.pdf" }
+  ],
   "railway-vehicle": [
     { t: "Teks belajar resmi 車両製造 (JP, 224 hal.)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakushu-text-1go.pdf" },
     { t: "Contoh soal 学科 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakka-sample.pdf" },

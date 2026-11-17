@@ -90,3 +90,8 @@ tools/ssw/quiz_official_build.py (idempotent, set ber-id gen-*): Auto Maintenanc
 - Format ujian terverifikasi (試験案内): 学科 ○× 30 soal + 実技 四択 20 soal, total 80 menit, lulus ≥65/100 tiap bagian, bahasa Jepang, kertas.
 - Sektor baru `railway-vehicle`: 7 bab (安全, 鉄道一般, 材料一般, 機械および器工具, 品質管理, 読図, 作業における必要事項), 125 kosakata, 94 soal latihan (77 ○× + 17 pilihan ganda) — dibuat dari teks resmi, **perlu review ahli**. Generator: `tools/ssw/railway_{content,quiz,build}.py` (idempotent).
 - Belum: soal contoh 学科/実技 resmi masih berupa gambar (PDF tanpa teks) — belum dimasukkan; kategori lain 鉄道 (軌道整備, 電気設備整備, 車両整備, 運輸係員) menyusul.
+
+## Forestry (林業) — 2026-11-17
+- Sumber resmi (林業技能向上センター https://ringyou-gino.org/specific/2_index_detail.php + 林野庁): 学科 sample + kunci jawaban, 実技試験問題 2026, prosedur 実技, Q&A APD → `ssw-materials/forestry/`, PDF live `assets/ssw/forestry/pdf/`.
+- Format terverifikasi: 学科 ○× 30 soal ≥65% (panduan 2026: 30 menit; sample Jul 2025: 60 menit), 実技 chainsaw 3 tugas (tiap tugas ≥40%, total ≥60%), usia ≥18, wajib 特別教育 chainsaw, biaya 20.000 yen.
+- Sektor `forestry`: 5 bab, 65 kosakata, 54 soal (27 dari 30 soal contoh resmi — 3 soal bergambar dilewati — + soal buatan dari aturan 実技). Generator `tools/ssw/forestry_{content,quiz,build}.py`. Tidak ada buku belajar resmi → materi bab 4–5 hanya poin yang tertulis di kunci jawaban resmi.
