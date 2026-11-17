@@ -1,0 +1,337 @@
+{
+ "schema": 1,
+ "bidang": "aviation-gh",
+ "source": "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab2",
+  "no": 2,
+  "title": {
+   "id": "Pekerjaan Pengangkutan (搬送作業)",
+   "jp": "{搬送作業|はんそうさぎょう}"
+  },
+  "intro": {
+   "id": "Alat GSE untuk pengangkutan, persiapan, memuat ULD/bulk, menangani muatan, dan pemindahan bagasi sambungan."
+  },
+  "pages": [
+   11,
+   19
+  ],
+  "pagesJp": [
+   11,
+   19
+  ],
+  "subs": [
+   {
+    "id": "b2s1",
+    "no": 1,
+    "title": {
+     "id": "GSE Pengangkutan",
+     "jp": "{搬送作業|はんそうさぎょう}のGSE"
+    },
+    "pages": [
+     4,
+     4
+    ],
+    "pagesJp": [
+     11,
+     14
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Dua jenis ruang kargo"
+      },
+      {
+       "ul": [
+        "**Ruang kontainer**: bisa memuat **ULD** langsung; dimuat dengan **high-lift loader**. Terbagi dua (depan dan belakang sayap).",
+        "**Ruang bulk (バルク)**: barang dimuat satu per satu dengan tangan; memakai **belt loader**.",
+        "High-lift loader dan belt loader hanya dipakai di sisi pesawat (**機側**)."
+       ]
+      },
+      {
+       "h": "GSE utama"
+      },
+      {
+       "ul": [
+        "**Towing tractor (TT車)**: kendaraan penarik kereta non-self-propelled (dolly, cart). Hati-hati: saat belok dolly/cart bisa mendekat karena gaya sentrifugal; rem dolly/cart harus penuh saat dilepas; jangan taruh tangan di ujung tow bar saat menyambung.",
+        "**Truk**: mengangkut bagasi/kargo curah (truk biasa, ber-tailgate, ber-konveyor).",
+        "**Container dolly**: kereta untuk kontainer (LD-3 dst.), ada roller dan turntable. **Pallet dolly**: untuk palet (maks 96in×125in). **Bulk cart**: kereta bagasi/kargo bulk, juga hewan hidup; disebut juga baggage/cargo cart.",
+        "**High-lift loader**: memuat/menurunkan ULD ke **lower deck / main deck**; lebar 60.4in, 96in, 125in.",
+        "**Belt loader**: konveyor sabuk bertenaga pompa hidrolik untuk bulk. Sebelum menyalakan pastikan tidak ada orang di atas/terlilit sabuk; jangan naik ke sabuk yang berjalan; waspada sarung tangan/sepatu terlilit."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "2{種類|しゅるい}の{貨物室|かもつしつ}"
+      },
+      {
+       "ul": [
+        "コンテナ{室|しつ}：ULDをそのまま{積|つ}める{貨物室|かもつしつ}。ハイリフト・ローダーを{使|つか}います。",
+        "バルク{貨物室|かもつしつ}：{荷物|にもつ}を{一|ひと}つずつ{手|て}で{積|つ}みおろす{貨物室|かもつしつ}。ベルト・ローダーを{使|つか}います。",
+        "ハイリフト・ローダーもベルト・ローダーも、{機側作業専用|きそくさぎょうせんよう}です。"
+       ]
+      },
+      {
+       "h": "おもなGSE"
+      },
+      {
+       "ul": [
+        "トーイング・トラクター（TT{車|しゃ}）：ドーリーやカートをひく{車|くるま}です。カーブでは{遠心力|えんしんりょく}でドーリーが{近|ちか}づくので{注意|ちゅうい}します。ドーリーを{切|き}りはなすときはブレーキをかけます。トーバーの{先|さき}に{手|て}を{置|お}いたまま{接続|せつぞく}してはいけません。",
+        "コンテナ・ドーリーはコンテナ、パレット・ドーリーはパレット、バルク・カートはバルクの{荷物|にもつ}や{生|い}き{物|もの}を{運|はこ}びます。",
+        "ハイリフト・ローダーは、ULDを{貨物室|かもつしつ}に{積|つ}みおろす{車|くるま}です。ベルト・ローダーは、ベルトコンベヤーで{荷物|にもつ}を{積|つ}みおろす{車|くるま}です。ベルトの{上|うえ}に{乗|の}ってはいけません。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ruang kontainer: bisa memuat ULD langsung; dimuat dengan high-lift loader. Terbagi dua (depan dan belakang sayap).",
+      "points": [
+       "Ruang bulk (バルク): barang dimuat satu per satu dengan tangan; memakai belt loader.",
+       "High-lift loader dan belt loader hanya dipakai di sisi pesawat (機側).",
+       "Towing tractor (TT車): kendaraan penarik kereta non-self-propelled (dolly, cart). Hati-hati: saat belok dolly/cart bisa mendekat karena gaya sentrifugal; rem dolly/cart ha…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "コンテナ{室|しつ}：ULDをそのまま{積|つ}める{貨物室|かもつしつ}。ハイリフト・ローダーを{使|つか}います。",
+      "points": [
+       "バルク{貨物室|かもつしつ}：{荷物|にもつ}を{一|ひと}つずつ{手|て}で{積|つ}みおろす{貨物室|かもつしつ}。ベルト・ローダーを{使|つか}います。",
+       "ハイリフト・ローダーもベルト・ローダーも、{機側作業専用|きそくさぎょうせんよう}です。",
+       "トーイング・トラクター（TT{車|しゃ}）：ドーリーやカートをひく{車|くるま}です。カーブでは{遠心力|えんしんりょく}でドーリーが{近|ちか}づくので{注意|ちゅうい}します。ドーリーを{切|き}りはなすときはブレーキをかけます。トーバーの{先|さき}に{手|て}を{置|お}いたまま{接続|せつぞく}してはいけません。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s2",
+    "no": 2,
+    "title": {
+     "id": "Persiapan & Memuat/Menurunkan ULD",
+     "jp": "{事前準備|じぜんじゅんび}とULDの{搭降載|とうこうさい}"
+    },
+    "pages": [
+     5,
+     5
+    ],
+    "pagesJp": [
+     15,
+     16
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Persiapan (事前準備)"
+      },
+      {
+       "ul": [
+        "Penanggung jawab/controller dan petugas memeriksa informasi dasar dan muatan, lalu **rapat** singkat: jumlah ULD yang diturunkan, muatan khusus, isi bulk, muatan sambungan/機移し, pengamanan alat, **pembagian tugas**, dan **keselamatan**.",
+        "Alat yang disiapkan menunggu di tempat yang tidak menghalangi pesawat masuk spot.",
+        "Siap **10–5 menit sebelum** pesawat tiba. Untuk keberangkatan, bawa muatan agar tepat waktu mulai kerja."
+       ]
+      },
+      {
+       "h": "Memuat/menurunkan ULD (ULD の搭降載)"
+      },
+      {
+       "ul": [
+        "Kecepatan towing tractor di sisi pesawat **maks. 5 km/jam**.",
+        "Cocokkan **nomor ULD dan posisi muat** dengan Instruction Sheet. Putar ULD di dolly dengan memastikan keselamatan sekitar, dan kerja sama dengan aba-aba/suara.",
+        "Di atas dolly ULD dipindah dengan tenaga manusia; **palet berat oleh 2 orang atau lebih**.",
+        "Sebelum traktor melepas, cek: **kunci pintu ULD dan tag ULD**, **kunci stopper dolly**, **sambungan traktor–dolly**.",
+        "Saat traktor lepas, ia mendekati mesin pesawat — lakukan **sangat pelan**.",
+        "**Jangan lewat di bawah sayap.** Bila terpaksa (ruang kargo belakang): lihat ke belakang, cek kiri-kanan dan sayap, jalan sangat pelan, dan lakukan dengan **指差呼称 (tunjuk-sebut)**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{事前準備|じぜんじゅんび}"
+      },
+      {
+       "ul": [
+        "{責任者|せきにんしゃ}とコントローラー、{作業員|さぎょういん}は、{基本情報|きほんじょうほう}と{搭載物|とうさいぶつ}の{情報|じょうほう}を{確認|かくにん}し、ミーティングで{役割分担|やくわりぶんたん}・{安全注意|あんぜんちゅうい}を{伝|つた}えます。",
+        "{到着便|とうちゃくびん}が{着|つ}く10～5{分前|ふんまえ}までに{準備|じゅんび}を{終|お}えて、スポットで{待|ま}ちます。"
+       ]
+      },
+      {
+       "h": "ULDの{搭降載|とうこうさい}"
+      },
+      {
+       "ul": [
+        "{機側|きそく}では、トーイング・トラクターは{時速|じそく}5km{以下|いか}で{走|はし}ります。",
+        "インストラクション・シートで、ULD{番号|ばんごう}と{搭載|とうさい}ポジションを{確認|かくにん}します。",
+        "{重|おも}いパレットは2{人以上|ふたりいじょう}で{運|はこ}びます。{声|こえ}をかけあって{作業|さぎょう}します。",
+        "トラクターが{離|はな}れる{前|まえ}に、ULDのドア・ロックとタグ、ドーリー・ストッパーのロック、トラクターとドーリーの{連結|れんけつ}を{確認|かくにん}します。",
+        "{翼|つばさ}の{下|した}を{通|とお}って{走|はし}ってはいけません。やむをえないときは、{後|うし}ろ・{左右|さゆう}・{翼|つばさ}を{指差呼称|ゆびさしこしょう}で{確認|かくにん}し、とてもゆっくり{走|はし}ります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Penanggung jawab/controller dan petugas memeriksa informasi dasar dan muatan, lalu rapat singkat: jumlah ULD yang diturunkan, muatan khusus, isi bulk, muatan sambungan/機移…",
+      "points": [
+       "Alat yang disiapkan menunggu di tempat yang tidak menghalangi pesawat masuk spot.",
+       "Siap 10–5 menit sebelum pesawat tiba. Untuk keberangkatan, bawa muatan agar tepat waktu mulai kerja.",
+       "Kecepatan towing tractor di sisi pesawat maks. 5 km/jam."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{責任者|せきにんしゃ}とコントローラー、{作業員|さぎょういん}は、{基本情報|きほんじょうほう}と{搭載物|とうさいぶつ}の{情報|じょうほう}を{確認|かくにん}し、ミーティングで{役割分担|やくわりぶんたん}・{安全注意|あんぜんちゅうい}を{伝|つた}えます。",
+      "points": [
+       "{到着便|とうちゃくびん}が{着|つ}く10～5{分前|ふんまえ}までに{準備|じゅんび}を{終|お}えて、スポットで{待|ま}ちます。",
+       "{機側|きそく}では、トーイング・トラクターは{時速|じそく}5km{以下|いか}で{走|はし}ります。",
+       "インストラクション・シートで、ULD{番号|ばんごう}と{搭載|とうさい}ポジションを{確認|かくにん}します。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s3",
+    "no": 3,
+    "title": {
+     "id": "Memuat Bulk & Menangani Muatan",
+     "jp": "バルクの{搭降載|とうこうさい}・{搭載物|とうさいぶつ}の{取扱|とりあつか}い"
+    },
+    "pages": [
+     6,
+     6
+    ],
+    "pagesJp": [
+     17,
+     19
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Bulk (バルクの搭降載)"
+      },
+      {
+       "ul": [
+        "Kecepatan traktor maks. **5 km/jam**. Setelah belt loader terpasang, pasang cart; cocokkan nomor ULD/bulk cart dengan Instruction Sheet.",
+        "Petugas pemuat menaruh barang di **tengah sabuk** dengan jarak **± 50 cm** agar mudah diterima. Susun menurut jenis/bentuk dan urutan penurunan; cegah jatuh/terguling, tempatkan pengawas bila perlu.",
+        "Barang berat: kerja sama beberapa orang, beri tahu penerima; penerima **menghentikan sabuk sementara** untuk barang berat/besar/sulit dipegang.",
+        "Saat angin kencang barang ringan seperti dokumen diserahkan **dengan tangan**. Saat hujan beri **perlindungan anti-air**.",
+        "Cek **label ID kargo** / **tag bagasi** (tujuan). Ikuti label cara penanganan dan beri tahu penerima. Hewan kecil (**AVI**): periksa kondisinya dulu.",
+        "Barang rusak/berubah bentuk/kotor → lapor ke bagian terkait. Cek **kondisi dan jumlah** saat serah-terima.",
+        "Setelah bagasi dimuat, kedua petugas **menghitung jumlah**; jika tidak cocok hitung ulang. Kehilangan, kotor, rusak, salah muat **tidak boleh terjadi**.",
+        "Selesai: periksa ruang kargo, sekitar belt loader, isi ULD/cart; pastikan **tidak ada yang tertinggal** dengan tunjuk-sebut. Pintu ULD/cart jangan langsung ditutup sampai beberapa orang memeriksa."
+       ]
+      },
+      {
+       "h": "Menangani muatan (搭載物の取扱い)"
+      },
+      {
+       "ul": [
+        "Tangani dengan hati-hati. Muat di posisi yang ditentukan, **jangan di tempat lain**.",
+        "Susun stabil agar tidak roboh: tumpuk menyilang; **yang berat di bawah**, **yang mudah pecah di atas**; barang tidak stabil/mesin presisi di-**tie-down** di posisi stabil; jangan menyisakan ruang kosong.",
+        "Muatan khusus ikuti tag/label/stiker. Beban melebihi kekuatan lantai → lindungi dengan **pelat penguat**. Hasil laut/beku → **anti-air** dulu."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "バルクの{搭降載|とうこうさい}"
+      },
+      {
+       "ul": [
+        "{積|つ}む{人|ひと}は、ベルトの{中央|ちゅうおう}に、50cm{位|くらい}あけて{荷物|にもつ}を{載|の}せます。{落|お}ちたり{倒|たお}れたりしないようにします。",
+        "{重|おも}い{荷物|にもつ}は、{受|う}ける{人|ひと}に{合図|あいず}をして、ベルトを{一時停止|いちじていし}してから{受|う}け{取|と}ります。",
+        "{強|つよ}い{風|かぜ}のときは{書類|しょるい}などを{手渡|てわた}しします。{雨|あめ}のときは{必|かなら}ず{防水|ぼうすい}します。",
+        "{貨物|かもつ}はラベル、{手荷物|てにもつ}はタグで{行|い}き{先|さき}を{確認|かくにん}します。{動物|どうぶつ}（AVI）は{状態|じょうたい}を{見|み}てから{載|の}せます。",
+        "{荷物|にもつ}のキズやよごれは{関係部署|かんけいぶしょ}に{報告|ほうこく}します。{手荷物|てにもつ}は{積|つ}んだ{後|あと}に{個数|こすう}を{確認|かくにん}します。",
+        "{終|お}わったら、{貨物室|かもつしつ}・ULD・カートの{中|なか}に{積|つ}み{残|のこ}しがないか、{指差呼称|ゆびさしこしょう}で{確認|かくにん}します。"
+       ]
+      },
+      {
+       "h": "{搭載物|とうさいぶつ}の{取扱|とりあつか}い"
+      },
+      {
+       "ul": [
+        "{荷物|にもつ}は{丁寧|ていねい}に{扱|あつか}い、{決|き}まった{場所|ばしょ}に{積|つ}みます。{重|おも}い{物|もの}は{下|した}、こわれやすい{物|もの}は{上|うえ}に{積|つ}みます。",
+        "{不安定|ふあんてい}な{荷物|にもつ}や{精密機械|せいみつきかい}は、{安定|あんてい}した{場所|ばしょ}にタイダウンします。{空|あ}きスペースを{作|つく}らないようにします。",
+        "タグ・ラベルの{指示|しじ}に{従|したが}います。{水産物|すいさんぶつ}や{冷凍品|れいとうひん}は{防水|ぼうすい}してから{積|つ}みます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kecepatan traktor maks. 5 km/jam. Setelah belt loader terpasang, pasang cart; cocokkan nomor ULD/bulk cart dengan Instruction Sheet.",
+      "points": [
+       "Petugas pemuat menaruh barang di tengah sabuk dengan jarak ± 50 cm agar mudah diterima. Susun menurut jenis/bentuk dan urutan penurunan; cegah jatuh/terguling, tempatkan …",
+       "Barang berat: kerja sama beberapa orang, beri tahu penerima; penerima menghentikan sabuk sementara untuk barang berat/besar/sulit dipegang.",
+       "Saat angin kencang barang ringan seperti dokumen diserahkan dengan tangan. Saat hujan beri perlindungan anti-air."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{積|つ}む{人|ひと}は、ベルトの{中央|ちゅうおう}に、50cm{位|くらい}あけて{荷物|にもつ}を{載|の}せます。{落|お}ちたり{倒|たお}れたりしないようにします。",
+      "points": [
+       "{重|おも}い{荷物|にもつ}は、{受|う}ける{人|ひと}に{合図|あいず}をして、ベルトを{一時停止|いちじていし}してから{受|う}け{取|と}ります。",
+       "{強|つよ}い{風|かぜ}のときは{書類|しょるい}などを{手渡|てわた}しします。{雨|あめ}のときは{必|かなら}ず{防水|ぼうすい}します。",
+       "{貨物|かもつ}はラベル、{手荷物|てにもつ}はタグで{行|い}き{先|さき}を{確認|かくにん}します。{動物|どうぶつ}（AVI）は{状態|じょうたい}を{見|み}てから{載|の}せます。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s4",
+    "no": 4,
+    "title": {
+     "id": "Pemindahan Bagasi Sambungan (手荷物機移し)",
+     "jp": "{手荷物機移|てにもつきうつ}し{作業|さぎょう}"
+    },
+    "pages": [
+     7,
+     7
+    ],
+    "pagesJp": [
+     19,
+     19
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**MCT (Minimum Connecting Time)** = waktu minimal untuk transit yang ditentukan tiap bandara/maskapai. Berbeda menurut kombinasi: sesama maskapai, antar maskapai, domestik–domestik, internasional–internasional, domestik–internasional.",
+        "Setelah pemindahan bagasi selesai, cocokkan informasi yang dibagikan sebelumnya (**nomor penerbangan, jumlah, ship no., tempat parkir**) dengan hasil kerja, dan **segera laporkan**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "MCT（{最小接続時間|さいしょうせつぞくじかん}）は、{乗|の}り{継|つ}ぎに{必要|ひつよう}な{最|もっと}も{短|みじか}い{時間|じかん}で、{空港|くうこう}や{航空会社|こうくうがいしゃ}ごとに{決|き}まっています。",
+        "{機移|きうつ}しが{終|お}わったら、{便名|びんめい}・{個数|こすう}・シップNo.・{駐機場|ちゅうきじょう}などを{実際|じっさい}の{作業|さぎょう}と{照合|しょうごう}して、すぐに{報告|ほうこく}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "MCT (Minimum Connecting Time) = waktu minimal untuk transit yang ditentukan tiap bandara/maskapai. Berbeda menurut kombinasi: sesama maskapai, antar maskapai, domestik–do…",
+      "points": [
+       "Setelah pemindahan bagasi selesai, cocokkan informasi yang dibagikan sebelumnya (nomor penerbangan, jumlah, ship no., tempat parkir) dengan hasil kerja, dan segera lapork…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "MCT（{最小接続時間|さいしょうせつぞくじかん}）は、{乗|の}り{継|つ}ぎに{必要|ひつよう}な{最|もっと}も{短|みじか}い{時間|じかん}で、{空港|くうこう}や{航空会社|こうくうがいしゃ}ごとに{決|き}まっています。",
+      "points": [
+       "{機移|きうつ}しが{終|お}わったら、{便名|びんめい}・{個数|こすう}・シップNo.・{駐機場|ちゅうきじょう}などを{実際|じっさい}の{作業|さぎょう}と{照合|しょうごう}して、すぐに{報告|ほうこく}します。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

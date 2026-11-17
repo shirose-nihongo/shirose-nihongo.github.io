@@ -85,6 +85,9 @@ export const DEFAULT_BIDANG = [
   { slug: "railway-vehicle", nama: "Railway — Manufaktur Kereta (車両製造)", jp: "鉄道（車両製造）", aktif: true, urut: 14, tema: "generic", hasContent: true },
   { slug: "logistics", nama: "Logistik / Pergudangan", jp: "物流倉庫", aktif: true, urut: 14, tema: "generic", hasContent: true },
   { slug: "recycling", nama: "Daur Ulang Sumber Daya", jp: "資源循環", aktif: true, urut: 15, tema: "generic", hasContent: true },
+  { slug: "aviation", nama: "Aviation (Penerbangan)", jp: "航空", aktif: true, urut: 16, tema: "generic", hasContent: true, hub: true },
+  { slug: "aviation-gh", nama: "空港グランドハンドリング — Teks Resmi JAEA", jp: "空港グランドハンドリング", label: "🛫 Ground Handling (Resmi) ›", induk: "aviation", aktif: true, urut: 16.1, tema: "generic", hasContent: true },
+  { slug: "aviation-am", nama: "航空機整備 — Teks Resmi JAEA", jp: "航空機整備", label: "🔧 Aircraft Maintenance (Resmi) ›", induk: "aviation", aktif: true, urut: 16.2, tema: "generic", hasContent: true },
 ];
 
 /** Bidang buatan sendiri yang sudah dihapus (abaikan dokumen lama di Firestore). */
@@ -355,6 +358,8 @@ export const EXAM_SPEC = {
   "jaim-metal-surface": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
   "forestry": { n: 30, img: 0, mb: 30, info: "Resmi (林業技能向上センター/林野庁): tulis 30 soal ○× (≥65% benar; panduan 2026 menulis 30 menit, contoh soal 2025 menulis 60 menit) + praktik chainsaw 3 tugas (tiap tugas ≥40%, total ≥60%). Soal latihan: soal contoh resmi (27 dari 30, tanpa soal bergambar) + soal buatan Shirose dari aturan praktik 2026 (perlu review ahli)." },
   "railway-vehicle": { n: 50, img: 0, mb: 30, info: "Resmi (JARi/MLIT 鉄道分野 車両製造 1号): ujian kertas 学科 30 soal ○× + 実技 20 soal pilihan ganda 4 opsi, total 80 menit, lulus ≥65/100 di tiap bagian. Soal latihan = buatan Shirose dari teks resmi JARi (perlu review ahli)." },
+  "aviation-gh": { n: 30, img: 0, mb: 30, info: "Resmi (JAEA): 特定技能評価試験 空港グランドハンドリング. Latihan = soal buatan Shirose dari teks resmi JAEA (bukan soal resmi) + 6 soal contoh resmi JAEA. Teks 1 (Safety & Quality) belum dimasukkan; jumlah soal & durasi ujian resmi belum diverifikasi." },
+  "aviation-am": { n: 30, img: 0, mb: 30, info: "Resmi (JAEA): 特定技能評価試験 航空機整備 — 3 科目: 基本技術(締結・電気計測), 作業安全・品質, 航空機概要. Latihan = soal buatan Shirose dari teks resmi JAEA (bukan soal resmi) + 5 soal contoh resmi JAEA; jumlah soal & durasi ujian resmi belum diverifikasi." },
   "logistics": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Info resmi (MLIT): ujian 物流倉庫 1号, kertas 80 menit via perusahaan; CBT mulai Des 2026; jumlah soal resmi belum diverifikasi." },
   "recycling": { n: 20, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Pedoman ujian resmi 資源循環 1号 belum diterbitkan pemerintah; bank soal ini masih kecil." },
   "wood-industry": { n: 35, img: 0, mb: 32, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Format resmi 木材産業特定技能1号測定試験: CBT, 60 menit, 35 soal (tulis 32 soal ○× + praktik 3 soal pertimbangan); huruf kanji berfurigana." },

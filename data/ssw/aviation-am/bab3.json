@@ -1,0 +1,201 @@
+{
+ "schema": 1,
+ "bidang": "aviation-am",
+ "source": "JAEA 特定技能評価試験テキスト 航空機整備 (3 buku, Rev. ORG 2019.9.13) (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab3",
+  "no": 3,
+  "title": {
+   "id": "Keselamatan Kerja (作業安全)",
+   "jp": "{作業安全|さぎょうあんぜん}"
+  },
+  "intro": {
+   "id": "Keselamatan/kesehatan, penyebab kecelakaan, dan pemeriksaan diri: kesehatan, APD, alat pengaman, 5S, api, penerangan, bahan berbahaya, benda berputar, kerja di tangki, kebisingan."
+  },
+  "pages": [
+   31,
+   36
+  ],
+  "pagesJp": [
+   31,
+   36
+  ],
+  "subs": [
+   {
+    "id": "b3s1",
+    "no": 1,
+    "title": {
+     "id": "Tujuan, Penyebab Kecelakaan",
+     "jp": "{作業安全|さぎょうあんぜん}の{目的|もくてき}・{事故|じこ}はなぜ{起|お}こるか"
+    },
+    "pages": [
+     11,
+     11
+    ],
+    "pagesJp": [
+     31,
+     32
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Tempat kerja perawatan pesawat berbeda dari lini pabrik: **lingkungan sering berubah**. Dibutuhkan tekad **'melindungi diri sendiri' dan 'melindungi rekan'**. Dasar hukum: **Undang-undang Keselamatan dan Kesehatan Kerja (労働安全衛生法)**.",
+        "**Keselamatan (安全)** = tidak terluka. **Kesehatan/hygiene (衛生)** = tidak sakit. **Sehat (健康)** = badan tidak bermasalah dan kuat; fungsi mental/cara berpikir normal; sehat secara sosial.",
+        "Kecelakaan terjadi bila ada **kondisi benda tidak aman** (lingkungan kerja tidak aman) **dan** **tindakan manusia tidak aman** (ceroboh). Karena itu: **rapikan lingkungan kerja** dan **jangan bertindak ceroboh**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{整備|せいび}の{現場|げんば}は、{工場|こうじょう}のラインとちがって、{環境|かんきょう}がよく{変|か}わります。「{自分|じぶん}を{守|まも}る」と「{仲間|なかま}を{守|まも}る」という{強|つよ}い{気持|きも}ちが{必要|ひつよう}です。{労働安全衛生法|ろうどうあんぜんえいせいほう}が{基本|きほん}です。",
+        "{安全|あんぜん}とはケガをしないこと、{衛生|えいせい}とは{病気|びょうき}にならないこと、{健康|けんこう}とは{体|からだ}・{心|こころ}・{社会|しゃかい}の{面|めん}で{健全|けんぜん}なことです。",
+        "{不安全|ふあんぜん}な{物|もの}の{状態|じょうたい}と、{不安全|ふあんぜん}な{人|ひと}の{行動|こうどう}がそろうと、{事故|じこ}が{起|お}きやすくなります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tempat kerja perawatan pesawat berbeda dari lini pabrik: lingkungan sering berubah. Dibutuhkan tekad 'melindungi diri sendiri' dan 'melindungi rekan'. Dasar hukum: Undang…",
+      "points": [
+       "Keselamatan (安全) = tidak terluka. Kesehatan/hygiene (衛生) = tidak sakit. Sehat (健康) = badan tidak bermasalah dan kuat; fungsi mental/cara berpikir normal; sehat secara sos…",
+       "Kecelakaan terjadi bila ada kondisi benda tidak aman (lingkungan kerja tidak aman) dan tindakan manusia tidak aman (ceroboh). Karena itu: rapikan lingkungan kerja dan jan…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{整備|せいび}の{現場|げんば}は、{工場|こうじょう}のラインとちがって、{環境|かんきょう}がよく{変|か}わります。「{自分|じぶん}を{守|まも}る」と「{仲間|なかま}を{守|まも}る」という{強|つよ}い{気持|きも}ちが{必要|ひつよう}です。{労働安全衛生法|ろうどうあんぜんえいせいほう}が{基本|きほん}です。",
+      "points": [
+       "{安全|あんぜん}とはケガをしないこと、{衛生|えいせい}とは{病気|びょうき}にならないこと、{健康|けんこう}とは{体|からだ}・{心|こころ}・{社会|しゃかい}の{面|めん}で{健全|けんぜん}なことです。",
+       "{不安全|ふあんぜん}な{物|もの}の{状態|じょうたい}と、{不安全|ふあんぜん}な{人|ひと}の{行動|こうどう}がそろうと、{事故|じこ}が{起|お}きやすくなります。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s2",
+    "no": 2,
+    "title": {
+     "id": "Pemeriksaan Diri (1): Kesehatan, APD, Alat Pengaman, 5S",
+     "jp": "{自己点検|じこてんけん}：{健康管理|けんこうかんり}・{保護具|ほごぐ}・{安全装置|あんぜんそうち}・{整理整頓|せいりせいとん}"
+    },
+    "pages": [
+     12,
+     12
+    ],
+    "pagesJp": [
+     32,
+     34
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Kesehatan**: bila tidak enak badan setelah masuk kerja, **sampaikan ke atasan/ketua kerja** dan minta petunjuk. Memaksakan diri berbahaya (mis. goyah dan jatuh saat kerja di ketinggian).",
+        "**APD (保護具)**: bila perusahaan mewajibkan, **wajib dipakai**. Bahan kimia → **masker gas**. Kerja di ketinggian → **helm dan alat penahan jatuh (prinsipnya tipe full harness)**; bila dilepas sementara, **segera pasang kembali**.",
+        "**Alat pengaman** (mis. pada mesin press) **tidak boleh dilepas** seenaknya karena 'sulit bekerja'.",
+        "**Seiri (整理)** = menyingkirkan yang tidak perlu. **Seiton (整頓)** = menata agar mudah dipakai. Dasar: bersihkan dari sekitar diri sendiri, **jangan membuat berantakan**, simpan di **tempat yang ditentukan**. Di akhir kerja rapikan area dan **serah-terimakan** ke pekerja berikutnya."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{体調|たいちょう}が{悪|わる}いときは、{上司|じょうし}やリーダーに{伝|つた}えて{指示|しじ}を{受|う}けます。{無理|むり}をすると、{高所作業|こうしょさぎょう}で{落|お}ちるなど{危険|きけん}です。",
+        "{会社|かいしゃ}が{着用|ちゃくよう}を{決|き}めた{保護具|ほごぐ}は、{必|かなら}ず{着|つ}けます。{化学物質|かがくぶっしつ}には{防毒|ぼうどく}マスクを{使|つか}います。{高所作業|こうしょさぎょう}では、ヘルメットと{墜落制止用器具|ついらくせいしようきぐ}（フルハーネス{型|がた}）を{着|つ}けます。",
+        "{安全装置|あんぜんそうち}を{勝手|かって}に{外|はず}してはいけません。",
+        "{整理|せいり}とは{不要|ふよう}なものをすてること、{整頓|せいとん}とは{使|つか}いやすくかたづけることです。{物|もの}は{決|き}まった{場所|ばしょ}に{置|お}きます。{作業|さぎょう}が{終|お}わったら{整理整頓|せいりせいとん}して、{次|つぎ}の{人|ひと}に{引|ひ}きつぎます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kesehatan: bila tidak enak badan setelah masuk kerja, sampaikan ke atasan/ketua kerja dan minta petunjuk. Memaksakan diri berbahaya (mis. goyah dan jatuh saat kerja di ke…",
+      "points": [
+       "APD (保護具): bila perusahaan mewajibkan, wajib dipakai. Bahan kimia → masker gas. Kerja di ketinggian → helm dan alat penahan jatuh (prinsipnya tipe full harness); bila dil…",
+       "Alat pengaman (mis. pada mesin press) tidak boleh dilepas seenaknya karena 'sulit bekerja'.",
+       "Seiri (整理) = menyingkirkan yang tidak perlu. Seiton (整頓) = menata agar mudah dipakai. Dasar: bersihkan dari sekitar diri sendiri, jangan membuat berantakan, simpan di tem…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{体調|たいちょう}が{悪|わる}いときは、{上司|じょうし}やリーダーに{伝|つた}えて{指示|しじ}を{受|う}けます。{無理|むり}をすると、{高所作業|こうしょさぎょう}で{落|お}ちるなど{危険|きけん}です。",
+      "points": [
+       "{会社|かいしゃ}が{着用|ちゃくよう}を{決|き}めた{保護具|ほごぐ}は、{必|かなら}ず{着|つ}けます。{化学物質|かがくぶっしつ}には{防毒|ぼうどく}マスクを{使|つか}います。{高所作業|こうしょさぎょう}では、ヘルメットと{墜落制止用器具|ついらくせいしようきぐ}（フルハーネス{型|がた}）を{着|つ}けます。",
+       "{安全装置|あんぜんそうち}を{勝手|かって}に{外|はず}してはいけません。",
+       "{整理|せいり}とは{不要|ふよう}なものをすてること、{整頓|せいとん}とは{使|つか}いやすくかたづけることです。{物|もの}は{決|き}まった{場所|ばしょ}に{置|お}きます。{作業|さぎょう}が{終|お}わったら{整理整頓|せいりせいとん}して、{次|つぎ}の{人|ひと}に{引|ひ}きつぎます。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s3",
+    "no": 3,
+    "title": {
+     "id": "Pemeriksaan Diri (2): Api, Cahaya, Bahan Berbahaya, Benda Berputar, Tangki, Bising",
+     "jp": "{自己点検|じこてんけん}：{火気|かき}・{照明|しょうめい}・{有害物|ゆうがいぶつ}・{回転体|かいてんたい}・タンク{内|ない}・{騒音|そうおん}"
+    },
+    "pages": [
+     13,
+     13
+    ],
+    "pagesJp": [
+     34,
+     36
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Dilarang api (火気厳禁)**: di hangar dan seluruh **ramp bandara**. Jangan bekerja dengan **korek api di saku**. Sebagian bahan kimia perawatan bisa **menyala sendiri (自然発火)** → buang limbah dengan **dipilah**. Ketahui **letak dan cara memakai APAR**.",
+        "**Penerangan** (standar hukum, di tangan kerja): pekerjaan **presisi ≥ 300 lux**, **biasa ≥ 150 lux**, **kasar ≥ 70 lux**. Gelap menurunkan ketelitian dan produktivitas; pakai lampu kerja yang sesuai.",
+        "**Bahan berbahaya**: pelarut organik/bahan kimia — pelarut organik bisa menyebabkan **keracunan akut**, bahan kimia penggunaan lama bisa menimbulkan penyakit → pakai **masker gas** dsb.",
+        "**Benda berputar** (bor meja, gerinda): **jangan memakai sarung tangan** — bila terlilit, jari langsung ikut tertarik.",
+        "**Kerja dalam tangki bahan bakar**: bahaya **kekurangan oksigen**. Sebelum masuk pastikan **oksigen ≥ 18%** dan **uap bahan bakar ≤ 30 ppm**. Bila tidak sempat ventilasi → pakai **masker pasokan udara (送気マスク)**.",
+        "**Kebisingan**: pakai **sumbat telinga / ear muff**. Tempat yang ditetapkan sebagai **area bising (管理区分 III)** → pakai dengan aktif; saling mengingatkan rekan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{格納庫|かくのうこ}も{空港|くうこう}のランプも{火気厳禁|かきげんきん}です。ライターをポケットに{入|い}れたまま{作業|さぎょう}してはいけません。{自然発火|しぜんはっか}する{化学物質|かがくぶっしつ}もあるので、{ゴミ|ごみ}は{分|わ}けて{捨|す}てます。{消火器|しょうかき}の{場所|ばしょ}と{使|つか}い{方|かた}を{覚|おぼ}えます。",
+        "{手元|てもと}の{明|あか}るさの{基準|きじゅん}：{精密|せいみつ}な{作業|さぎょう}は300ルクス{以上|いじょう}、ふつうは150ルクス{以上|いじょう}、あらい{作業|さぎょう}は70ルクス{以上|いじょう}です。",
+        "{有機溶剤|ゆうきようざい}は{急性中毒|きゅうせいちゅうどく}を{起|お}こすことがあります。{防毒|ぼうどく}マスクなどの{保護具|ほごぐ}を{着|つ}けます。",
+        "ボール{盤|ばん}やグラインダーなどの{回転体|かいてんたい}を{使|つか}うときは、{手袋|てぶくろ}を{着|つ}けてはいけません。{巻|ま}き{込|こ}まれます。",
+        "{燃料|ねんりょう}タンクに{入|はい}る{前|まえ}に、{酸素濃度|さんそのうど}18%{以上|いじょう}、{燃料|ねんりょう}の{蒸気|じょうき}30ppm{以下|いか}であることを{確認|かくにん}します。{時間|じかん}がないときは{送気|そうき}マスクを{着|つ}けます。",
+        "{騒音|そうおん}のある{場所|ばしょ}では、{耳栓|みみせん}やイヤマフで{耳|みみ}を{守|まも}ります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dilarang api (火気厳禁): di hangar dan seluruh ramp bandara. Jangan bekerja dengan korek api di saku. Sebagian bahan kimia perawatan bisa menyala sendiri (自然発火) → buang limba…",
+      "points": [
+       "Penerangan (standar hukum, di tangan kerja): pekerjaan presisi ≥ 300 lux, biasa ≥ 150 lux, kasar ≥ 70 lux. Gelap menurunkan ketelitian dan produktivitas; pakai lampu kerj…",
+       "Bahan berbahaya: pelarut organik/bahan kimia — pelarut organik bisa menyebabkan keracunan akut, bahan kimia penggunaan lama bisa menimbulkan penyakit → pakai masker gas d…",
+       "Benda berputar (bor meja, gerinda): jangan memakai sarung tangan — bila terlilit, jari langsung ikut tertarik."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{格納庫|かくのうこ}も{空港|くうこう}のランプも{火気厳禁|かきげんきん}です。ライターをポケットに{入|い}れたまま{作業|さぎょう}してはいけません。{自然発火|しぜんはっか}する{化学物質|かがくぶっしつ}もあるので、{ゴミ|ごみ}は{分|わ}けて{捨|す}てます。{消火器|しょうかき}の{場所|ばしょ}と{使|つか}い{方|かた}を{覚|おぼ}えます。",
+      "points": [
+       "{手元|てもと}の{明|あか}るさの{基準|きじゅん}：{精密|せいみつ}な{作業|さぎょう}は300ルクス{以上|いじょう}、ふつうは150ルクス{以上|いじょう}、あらい{作業|さぎょう}は70ルクス{以上|いじょう}です。",
+       "{有機溶剤|ゆうきようざい}は{急性中毒|きゅうせいちゅうどく}を{起|お}こすことがあります。{防毒|ぼうどく}マスクなどの{保護具|ほごぐ}を{着|つ}けます。",
+       "ボール{盤|ばん}やグラインダーなどの{回転体|かいてんたい}を{使|つか}うときは、{手袋|てぶくろ}を{着|つ}けてはいけません。{巻|ま}き{込|こ}まれます。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,250 @@
+{
+ "schema": 1,
+ "bidang": "aviation-gh",
+ "source": "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab3",
+  "no": 3,
+  "title": {
+   "id": "Pekerjaan Badan Pesawat (機体作業)",
+   "jp": "{機体作業|きたいさぎょう}"
+  },
+  "intro": {
+   "id": "Water service, lavatory service, pendingin kabin (air conditioning), dan listrik darat (GPU)."
+  },
+  "pages": [
+   20,
+   25
+  ],
+  "pagesJp": [
+   20,
+   25
+  ],
+  "subs": [
+   {
+    "id": "b3s1",
+    "no": 1,
+    "title": {
+     "id": "Water Service (Air Minum)",
+     "jp": "ウォーター・サービス"
+    },
+    "pages": [
+     8,
+     8
+    ],
+    "pagesJp": [
+     20,
+     21
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Mengisi **tangki air** di badan pesawat sebelum terbang untuk air minum dan cuci tangan. Jumlah air berbeda menurut **tujuan, tipe pesawat, tanggal berangkat** → cek informasi dasar; bila jumlah ditentukan, cek dengan **water level gauge**.",
+        "Setelah mengisi: **tutup valve pengisian dan overflow valve**, lepas selang, pastikan **tidak ada kebocoran** dari lubang pengisian, lalu tutup access panel. Bocoran bisa **membeku di ketinggian** menjadi es dan merusak komponen atau jatuh ke tanah.",
+        "**Water car (給水車)**: tangki ± 4.000 L, selang, alat pengisi (tekanan maks. 3,0 kg/㎡); umumnya self-propelled. **Drain water car (排水車)**: menguras air minum di pesawat karena air tidak boleh disimpan **lebih dari 1 hari** → diganti tiap malam.",
+        "Satuan jumlah air bisa **galon** atau **liter** menurut tipe pesawat; saat melapor **samakan dengan satuan yang ditentukan**. Isi pertama (始発便) dilakukan setelah pengurasan malam; isi antar-penerbangan bila sisa di bawah nilai tabel."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{飛行前|ひこうまえ}に、{機体|きたい}の{水|みず}タンクに{飲料水|いんりょうすい}を{入|い}れる{作業|さぎょう}です。{行|い}き{先|さき}・{機種|きしゅ}・{出発日|しゅっぱつび}で{水|みず}の{量|りょう}が{変|か}わるので{基本情報|きほんじょうほう}を{確認|かくにん}します。",
+        "{給水後|きゅうすいご}は、バルブを{閉|し}めてホースを{外|はず}し、{水|みず}もれがないか{確認|かくにん}します。もれた{水|みず}は{空|そら}で{凍|こお}って{部品|ぶひん}をこわしたり、{落|お}ちたりします。",
+        "{給水車|きゅうすいしゃ}はタンク{約|やく}4,000ℓ。{排水車|はいすいしゃ}は{飲料水|いんりょうすい}を{抜|ぬ}く{車|くるま}です。{機体|きたい}の{水|みず}は1{日以上|にちいじょう}ためておけないので、{夜|よる}に{入|い}れかえます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Mengisi tangki air di badan pesawat sebelum terbang untuk air minum dan cuci tangan. Jumlah air berbeda menurut tujuan, tipe pesawat, tanggal berangkat → cek informasi da…",
+      "points": [
+       "Setelah mengisi: tutup valve pengisian dan overflow valve, lepas selang, pastikan tidak ada kebocoran dari lubang pengisian, lalu tutup access panel. Bocoran bisa membeku…",
+       "Water car (給水車): tangki ± 4.000 L, selang, alat pengisi (tekanan maks. 3,0 kg/㎡); umumnya self-propelled. Drain water car (排水車): menguras air minum di pesawat karena air …",
+       "Satuan jumlah air bisa galon atau liter menurut tipe pesawat; saat melapor samakan dengan satuan yang ditentukan. Isi pertama (始発便) dilakukan setelah pengurasan malam; is…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{飛行前|ひこうまえ}に、{機体|きたい}の{水|みず}タンクに{飲料水|いんりょうすい}を{入|い}れる{作業|さぎょう}です。{行|い}き{先|さき}・{機種|きしゅ}・{出発日|しゅっぱつび}で{水|みず}の{量|りょう}が{変|か}わるので{基本情報|きほんじょうほう}を{確認|かくにん}します。",
+      "points": [
+       "{給水後|きゅうすいご}は、バルブを{閉|し}めてホースを{外|はず}し、{水|みず}もれがないか{確認|かくにん}します。もれた{水|みず}は{空|そら}で{凍|こお}って{部品|ぶひん}をこわしたり、{落|お}ちたりします。",
+       "{給水車|きゅうすいしゃ}はタンク{約|やく}4,000ℓ。{排水車|はいすいしゃ}は{飲料水|いんりょうすい}を{抜|ぬ}く{車|くるま}です。{機体|きたい}の{水|みず}は1{日以上|にちいじょう}ためておけないので、{夜|よる}に{入|い}れかえます。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s2",
+    "no": 2,
+    "title": {
+     "id": "Lavatory Service (Toilet)",
+     "jp": "ラバトリー・サービス"
+    },
+    "pages": [
+     9,
+     9
+    ],
+    "pagesJp": [
+     21,
+     22
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Air kotor/limbah toilet disimpan di tangki khusus saat terbang dan **dikeluarkan setelah mendarat**. Urutan: **keluarkan isi tangki → bilas tangki dengan air → isi air sesuai takaran + disinfektan/penghilang bau**.",
+        "Jumlah toilet dan ukuran tangki berbeda menurut tipe pesawat, rute domestik/internasional, dan jumlah penumpang maksimum.",
+        "**Perhatian:** saat melepas selang jangan menumpahkan air kotor ke spot — spot bisa tidak dapat dipakai sampai dibersihkan.",
+        "**Lavatory car (汚水車)**: tangki air kotor ± 2.000 L + tangki air bersih ± 2.000 L, selang, alat pengisi (tekanan maks. 3,0 kg/㎡)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{飛行中|ひこうちゅう}にトイレの{汚水|おすい}は{専用|せんよう}タンクにたまり、{着陸後|ちゃくりくご}に{機外|きがい}へ{出|だ}します。{汚水|おすい}を{出|だ}す→タンクを{水|みず}で{洗|あら}う→{決|き}まった{量|りょう}の{水|みず}と{殺菌消臭剤|さっきんしょうしゅうざい}を{入|い}れる、の{順|じゅん}です。",
+        "ホースを{外|はず}すとき、{汚水|おすい}をこぼしてスポットをよごしてはいけません。そうじが{終|お}わるまでスポットが{使|つか}えなくなることがあります。",
+        "{汚水車|おすいしゃ}（ラバトリー・カー）は、{汚水用|おすいよう}タンク{約|やく}2,000ℓと{清水用|せいすいよう}タンク{約|やく}2,000ℓをもつ{車|くるま}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Air kotor/limbah toilet disimpan di tangki khusus saat terbang dan dikeluarkan setelah mendarat. Urutan: keluarkan isi tangki → bilas tangki dengan air → isi air sesuai t…",
+      "points": [
+       "Jumlah toilet dan ukuran tangki berbeda menurut tipe pesawat, rute domestik/internasional, dan jumlah penumpang maksimum.",
+       "Perhatian: saat melepas selang jangan menumpahkan air kotor ke spot — spot bisa tidak dapat dipakai sampai dibersihkan.",
+       "Lavatory car (汚水車): tangki air kotor ± 2.000 L + tangki air bersih ± 2.000 L, selang, alat pengisi (tekanan maks. 3,0 kg/㎡)."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{飛行中|ひこうちゅう}にトイレの{汚水|おすい}は{専用|せんよう}タンクにたまり、{着陸後|ちゃくりくご}に{機外|きがい}へ{出|だ}します。{汚水|おすい}を{出|だ}す→タンクを{水|みず}で{洗|あら}う→{決|き}まった{量|りょう}の{水|みず}と{殺菌消臭剤|さっきんしょうしゅうざい}を{入|い}れる、の{順|じゅん}です。",
+      "points": [
+       "ホースを{外|はず}すとき、{汚水|おすい}をこぼしてスポットをよごしてはいけません。そうじが{終|お}わるまでスポットが{使|つか}えなくなることがあります。",
+       "{汚水車|おすいしゃ}（ラバトリー・カー）は、{汚水用|おすいよう}タンク{約|やく}2,000ℓと{清水用|せいすいよう}タンク{約|やく}2,000ℓをもつ{車|くるま}です。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s3",
+    "no": 3,
+    "title": {
+     "id": "Pendingin Kabin (Low-pressure Air)",
+     "jp": "{機内空調|きないくうちょう}サービス"
+    },
+    "pages": [
+     10,
+     10
+    ],
+    "pagesJp": [
+     23,
+     23
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Memakai **air conditioning pit** di spot (sumber udara dari fasilitas bawah apron). Tarik **selang besar** sepenuhnya, **luruskan yang terpuntir**, bawa ke dekat access panel kopling pesawat. Selang terpuntir → udara kurang masuk dan **kopling pesawat bisa rusak**.",
+        "Buka access panel, sambungkan selang ke kopling, lalu nyalakan **saklar di control panel** fasilitas. Jumlah/letak kopling berbeda menurut tipe (biasanya 1–2), ukuran fitting hampir sama.",
+        "Sebelum mengoperasikan, pastikan **pintu pesawat terbuka** (sebagai jalan keluar udara).",
+        "Air dingin (musim panas) / uap (musim dingin) dari plant pendingin–pemanas kawasan dikirim ke tiap spot; **heat exchanger** dan blower di bawah apron mendinginkan/menghangatkan udara."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{駐機場|ちゅうきじょう}の{地面|じめん}にあるエアコン・ピットを{使|つか}います。{太|ふと}いホースを{全部出|ぜんぶだ}して、ねじれを{直|なお}してから、{機体|きたい}のカップリングにつなぎます。ねじれたままだと{空気|くうき}が{入|はい}らず、カップリングがこわれることがあります。",
+        "ホースをつないだら、コントロール・パネルのスイッチを{入|い}れて{空気|くうき}を{送|おく}ります。{始|はじ}める{前|まえ}に、{空気|くうき}の{出口|でぐち}になる{機体|きたい}のドアが{開|あ}いていることを{確認|かくにん}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Memakai air conditioning pit di spot (sumber udara dari fasilitas bawah apron). Tarik selang besar sepenuhnya, luruskan yang terpuntir, bawa ke dekat access panel kopling…",
+      "points": [
+       "Buka access panel, sambungkan selang ke kopling, lalu nyalakan saklar di control panel fasilitas. Jumlah/letak kopling berbeda menurut tipe (biasanya 1–2), ukuran fitting…",
+       "Sebelum mengoperasikan, pastikan pintu pesawat terbuka (sebagai jalan keluar udara).",
+       "Air dingin (musim panas) / uap (musim dingin) dari plant pendingin–pemanas kawasan dikirim ke tiap spot; heat exchanger dan blower di bawah apron mendinginkan/menghangatk…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{駐機場|ちゅうきじょう}の{地面|じめん}にあるエアコン・ピットを{使|つか}います。{太|ふと}いホースを{全部出|ぜんぶだ}して、ねじれを{直|なお}してから、{機体|きたい}のカップリングにつなぎます。ねじれたままだと{空気|くうき}が{入|はい}らず、カップリングがこわれることがあります。",
+      "points": [
+       "ホースをつないだら、コントロール・パネルのスイッチを{入|い}れて{空気|くうき}を{送|おく}ります。{始|はじ}める{前|まえ}に、{空気|くうき}の{出口|でぐち}になる{機体|きたい}のドアが{開|あ}いていることを{確認|かくにん}します。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b3s4",
+    "no": 4,
+    "title": {
+     "id": "Listrik Darat (GPU)",
+     "jp": "{地上電源供給作業|ちじょうでんげんきょうきゅうさぎょう}"
+    },
+    "pages": [
+     11,
+     11
+    ],
+    "pagesJp": [
+     24,
+     25
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**GPU (Ground Power Unit)** memasok listrik dari luar ke pesawat yang parkir untuk lampu kabin dan berbagai perangkat; juga menjaga lingkungan kabin dan **mengurangi beban lingkungan (dekarbonisasi)** dengan menghentikan **APU**.",
+        "**GPU tetap (埋設型)**: banyak di spot tetap bandara besar (Haneda, Narita; tempat ber-PBB). Buka tutup **pit** di apron, tarik kabel, colokkan ke soket dekat hidung pesawat.",
+        "**GPU bergerak (地上電源車)**: truk ber-generator diesel besar (mis. **AC 115 V / 400 Hz**). Kini dikembangkan **eGPU** bertenaga baterai lithium-ion tanpa emisi.",
+        "Saat menyambung/melepas, **pastikan keselamatan sekitar dan kondisi soket pesawat**; ikuti prosedur.",
+        "Langkah: ① cek **tegangan/frekuensi** ② buka **panel listrik eksternal** pesawat ③ sambung kabel dan pasang **fitting belt** ④ ON-kan saklar pasokan ⑤ pastikan lampu **CONNECTED** dan **NOT IN USE** menyala."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{地上電源|ちじょうでんげん}（GPU）は、{止|と}まっている{飛行機|ひこうき}に{外|そと}から{電気|でんき}を{送|おく}る{設備|せつび}・{車|くるま}です。APUを{止|と}められるので{環境|かんきょう}にもよいです。",
+        "{固定式|こていしき}GPU（{埋設型|まいせつがた}）は、{地面|じめん}のピットからケーブルを{出|だ}して{機首近|きしゅちか}くの{接続口|せつぞくこう}に{差|さ}します。{移動式|いどうしき}GPU（{地上電源車|ちじょうでんげんしゃ}）は、{発電機|はつでんき}をのせた{車|くるま}です。{最近|さいきん}は{排出|はいしゅつ}ガスゼロのeGPUが{増|ふ}えています。",
+        "{手順|てじゅん}：①{電圧|でんあつ}・{周波数|しゅうはすう}を{確認|かくにん} ②{外部電源|がいぶでんげん}パネルを{開|あ}ける ③ケーブルをつなぎ、ベルトをつける ④スイッチをONにする ⑤CONNECTEDライトとNOT IN USEライトの{点灯|てんとう}を{確認|かくにん}する。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "GPU (Ground Power Unit) memasok listrik dari luar ke pesawat yang parkir untuk lampu kabin dan berbagai perangkat; juga menjaga lingkungan kabin dan mengurangi beban ling…",
+      "points": [
+       "GPU tetap (埋設型): banyak di spot tetap bandara besar (Haneda, Narita; tempat ber-PBB). Buka tutup pit di apron, tarik kabel, colokkan ke soket dekat hidung pesawat.",
+       "GPU bergerak (地上電源車): truk ber-generator diesel besar (mis. AC 115 V / 400 Hz). Kini dikembangkan eGPU bertenaga baterai lithium-ion tanpa emisi.",
+       "Saat menyambung/melepas, pastikan keselamatan sekitar dan kondisi soket pesawat; ikuti prosedur."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{地上電源|ちじょうでんげん}（GPU）は、{止|と}まっている{飛行機|ひこうき}に{外|そと}から{電気|でんき}を{送|おく}る{設備|せつび}・{車|くるま}です。APUを{止|と}められるので{環境|かんきょう}にもよいです。",
+      "points": [
+       "{固定式|こていしき}GPU（{埋設型|まいせつがた}）は、{地面|じめん}のピットからケーブルを{出|だ}して{機首近|きしゅちか}くの{接続口|せつぞくこう}に{差|さ}します。{移動式|いどうしき}GPU（{地上電源車|ちじょうでんげんしゃ}）は、{発電機|はつでんき}をのせた{車|くるま}です。{最近|さいきん}は{排出|はいしゅつ}ガスゼロのeGPUが{増|ふ}えています。",
+       "{手順|てじゅん}：①{電圧|でんあつ}・{周波数|しゅうはすう}を{確認|かくにん} ②{外部電源|がいぶでんげん}パネルを{開|あ}ける ③ケーブルをつなぎ、ベルトをつける ④スイッチをONにする ⑤CONNECTEDライトとNOT IN USEライトの{点灯|てんとう}を{確認|かくにん}する。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

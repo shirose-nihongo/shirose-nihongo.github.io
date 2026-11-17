@@ -75,3 +75,11 @@ Modul lama (7 bab/31 subbab buatan sendiri) DIHAPUS dan diganti dengan struktur 
 - Yang tetap: tiga buku resmi JAIM (`jaim-machine-metal`, `jaim-elec-electronic`, `jaim-metal-surface`), kini tampil sebagai bidang sendiri. Sakelar akses guru "Industrial Mfg" (kunci lama `industrial-mfg`) tetap berlaku untuk ketiganya selama bidang itu belum diatur sendiri-sendiri.
 
 - Koreksi (17 Nov, setelah keluhan pemilik): pulau **Industrial Manufacturing** dikembalikan sebagai induk (hub) tanpa konten sendiri; isinya 3 buku resmi JAIM (Mesin & Logam, Elektrik & Elektronik, Permukaan Logam). Hanya konten buatan sendiri (`industrial-mfg` lama dan `mfg-machine-metal`) yang dihapus.
+
+## Aviation (17 Nov 2026) — hub `aviation` + `aviation-gh` + `aviation-am`
+- Sumber: JAEA (exam.jaea.or.jp). GH: 7 bab, 19 subbab, 114 kosakata, 143 soal (termasuk 6 soal contoh resmi). AM: 5 bab, 21 subbab, 101 kosakata, 139 soal (termasuk 5 soal contoh resmi).
+- Fitur setara modul PDF lain: halaman buku JP (52 + 70 hal. dari PDF resmi), buku ID (ringkasan Shirose, 21 + 22 hal.), teks baca ID & 日本語 berfurigana (MeCab/unidic + kamus istilah), kosakata, kuis per bab & per subbab, ujian penuh, hafalan, PDF resmi di tombol Dokumen.
+- Soal latihan = buatan Shirose dari teks resmi (bukan soal resmi); jumlah soal/durasi ujian resmi belum diverifikasi.
+- Generator: `tools/ssw/aviation_build.py` (+ `aviation_*_data.py`), lalu `render_pages.py` (JP) dan `build_idbook.py` (ID).
+- Kurang: GH Text 1 (Safety & Quality). Shipbuilding: belum ada teks belajar resmi, hanya pedoman ujian.
+- Temuan: akses bidang SSW untuk siswa default TERKUNCI (hanya building-cleaning); guru harus membuka tiap bidang. Bidang baru `aviation` ikut daftar di dashboard guru lewat DEFAULT_BIDANG.

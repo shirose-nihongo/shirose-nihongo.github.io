@@ -1,0 +1,111 @@
+{
+ "schema": 1,
+ "bidang": "aviation-gh",
+ "source": "JAEA 特定技能評価試験テキスト グランドハンドリング 2nd Revision (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab6",
+  "no": 6,
+  "title": {
+   "id": "Pengisian Bahan Bakar (給油作業)",
+   "jp": "{給油作業|きゅうゆさぎょう}"
+  },
+  "intro": {
+   "id": "Fueler dan servicer, avtur, jumlah bahan bakar (fuel order), sistem fueler vs hydrant, dan prosedur pengisian."
+  },
+  "pages": [
+   38,
+   40
+  ],
+  "pagesJp": [
+   38,
+   40
+  ],
+  "subs": [
+   {
+    "id": "b6s1",
+    "no": 1,
+    "title": {
+     "id": "Pengisian Bahan Bakar",
+     "jp": "{給油作業|きゅうゆさぎょう}"
+    },
+    "pages": [
+     16,
+     16
+    ],
+    "pagesJp": [
+     38,
+     40
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Dasar"
+      },
+      {
+       "ul": [
+        "Pengisian bahan bakar sebenarnya **bagian dari pekerjaan perawatan maskapai**: prosedur **mengikuti manual maskapai**, kualifikasi petugas disertifikasi maskapai (atau perusahaan minyak yang ditunjuk), dan **pemeriksaan akhir dilakukan mekanik berlisensi maskapai**.",
+        "**Fueler (フューエラー)**: truk bahan bakar dengan tangki avtur, **pompa**, flow meter, filter. **Servicer (サービサー)**: truk dengan flow meter, filter, selang — dipakai pada sistem hydrant.",
+        "Pesawat **tidak diisi penuh** kecuali penerbangan sangat jauh/khusus, karena bahan bakar yang dibawa menambah berat sehingga konsumsi mesin juga naik. Jumlah dari maskapai dibagi ke tiap tangki.",
+        "Avtur: hasil olahan minyak bumi, dibagi **bensin penerbangan** dan **jet fuel**.",
+        "**Fuel order** = **bandara tujuan + bandara alternatif (bila tujuan tak bisa didarati) + cadangan**; dihitung menurut tipe, tujuan, cuaca, jumlah penumpang, muatan, sesuai **aturan operasi** maskapai (berdasarkan Undang-undang Penerbangan)."
+       ]
+      },
+      {
+       "h": "Dua sistem"
+      },
+      {
+       "ul": [
+        "**Fueler**: tanpa hydrant, memakai pompa fueler; dipakai di sebagian besar **bandara daerah**; bisa juga **menyedot** bahan bakar dari pesawat.",
+        "**Hydrant**: tangki di fasilitas → **pipa bawah tanah** ke tiap spot → **hydrant valve** → servicer → pompa tetap fasilitas menekan ke pesawat."
+       ]
+      },
+      {
+       "h": "Prosedur (fueler)"
+      },
+      {
+       "ul": [
+        "① Fueler masuk & parkir di posisi ② kunci (ganjal roda) ③ pasang **tanda area bahaya** (safety cone/bendera) ④ pasang **arde anti-statis** (tanah ⇔ fueler ⇔ pesawat) ⑤ buka access door ⑥ pasang **delivery unit** ⑦ buka **fueling station panel** pesawat ⑧ cek jumlah bersama mekanik maskapai ⑨ cek **kualitas** BBM; mulai setelah penumpang selesai turun ⑩ isi sampai jumlah ⑪ cek jumlah (indikator kokpit ⇔ totalizer) ⑫ lepas dengan urutan terbalik ⑬ fueler pergi.",
+        "Hydrant: sama, ditambah memasang **intake unit** (hydrant pit ⇔ servicer).",
+        "Tiga hal terpenting: **cek kualitas**, **keselamatan** (barang berbahaya dalam jumlah besar), dan **mengisi sesuai fuel order dengan tepat dan cepat**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{給油作業|きゅうゆさぎょう}は、{本来航空会社|ほんらいこうくうがいしゃ}の{整備作業|せいびさぎょう}の{一部|いちぶ}です。{手順|てじゅん}は{航空会社|こうくうがいしゃ}のマニュアルに{従|したが}い、{最後|さいご}の{確認|かくにん}は{資格|しかく}のある{整備士|せいびし}が{行|おこな}います。",
+        "フューエラーは{航空燃料|こうくうねんりょう}タンクとポンプをもつ{給油車|きゅうゆしゃ}、サービサーはハイドラント{方式|ほうしき}で{使|つか}う{給油車|きゅうゆしゃ}です。",
+        "{飛行機|ひこうき}は、{燃料|ねんりょう}を{満|まん}タンクにしません。{燃料|ねんりょう}が{重|おも}いと、{使|つか}う{燃料|ねんりょう}も{増|ふ}えるからです。",
+        "{燃料|ねんりょう}オーダー＝{目的空港|もくてきくうこう}＋{代替空港|だいたいくうこう}＋{予備燃料|よびねんりょう}です。",
+        "フューエラー{方式|ほうしき}は{地方空港|ちほうくうこう}に{多|おお}く、{燃料|ねんりょう}を{抜|ぬ}くこともできます。ハイドラント{方式|ほうしき}は、{地下|ちか}の{配管|はいかん}で{各|かく}スポットに{燃料|ねんりょう}を{送|おく}ります。",
+        "{手順|てじゅん}：{車|くるま}を{止|と}める→{車輪止|しゃりんど}め→{危険区域|きけんくいき}の{表示|ひょうじ}→{静電気除去|せいでんきじょきょ}のアース→ホース{取|と}り{付|つ}け→{整備士|せいびし}と{量|りょう}を{確認|かくにん}→{燃料|ねんりょう}の{品質|ひんしつ}を{確認|かくにん}して{給油|きゅうゆ}→{量|りょう}を{確認|かくにん}→{逆|ぎゃく}の{順|じゅん}で{取|と}り{外|はず}す。",
+        "{大切|たいせつ}なことは、{品質|ひんしつ}の{確認|かくにん}、{危険物|きけんぶつ}を{扱|あつか}う{安全|あんぜん}、{指示|しじ}された{量|りょう}を{確実|かくじつ}に{早|はや}く{入|い}れることです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pengisian bahan bakar sebenarnya bagian dari pekerjaan perawatan maskapai: prosedur mengikuti manual maskapai, kualifikasi petugas disertifikasi maskapai (atau perusahaan…",
+      "points": [
+       "Fueler (フューエラー): truk bahan bakar dengan tangki avtur, pompa, flow meter, filter. Servicer (サービサー): truk dengan flow meter, filter, selang — dipakai pada sistem hydrant.",
+       "Pesawat tidak diisi penuh kecuali penerbangan sangat jauh/khusus, karena bahan bakar yang dibawa menambah berat sehingga konsumsi mesin juga naik. Jumlah dari maskapai di…",
+       "Avtur: hasil olahan minyak bumi, dibagi bensin penerbangan dan jet fuel."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{給油作業|きゅうゆさぎょう}は、{本来航空会社|ほんらいこうくうがいしゃ}の{整備作業|せいびさぎょう}の{一部|いちぶ}です。{手順|てじゅん}は{航空会社|こうくうがいしゃ}のマニュアルに{従|したが}い、{最後|さいご}の{確認|かくにん}は{資格|しかく}のある{整備士|せいびし}が{行|おこな}います。",
+      "points": [
+       "フューエラーは{航空燃料|こうくうねんりょう}タンクとポンプをもつ{給油車|きゅうゆしゃ}、サービサーはハイドラント{方式|ほうしき}で{使|つか}う{給油車|きゅうゆしゃ}です。",
+       "{飛行機|ひこうき}は、{燃料|ねんりょう}を{満|まん}タンクにしません。{燃料|ねんりょう}が{重|おも}いと、{使|つか}う{燃料|ねんりょう}も{増|ふ}えるからです。",
+       "{燃料|ねんりょう}オーダー＝{目的空港|もくてきくうこう}＋{代替空港|だいたいくうこう}＋{予備燃料|よびねんりょう}です。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}
