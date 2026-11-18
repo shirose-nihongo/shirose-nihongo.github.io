@@ -6231,6 +6231,106 @@
  },
  "tema": [
   {
+   "id": "resmi-nca-livestock",
+   "title": {
+    "id": "Soal contoh resmi 畜産農業 (全国農業会議所) — 4 soal teks dari 12 soal sampel (4 soal bergambar tidak dimasukkan)",
+    "jp": "農業技能測定試験 サンプル問題"
+   },
+   "resmi": true,
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Untuk membuat kompos yang baik diperlukan banyak udara.”",
+      "jp": "○か×か。「良い堆肥を作るには、たくさんの空気が必要です。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ 正しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× 誤り"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Kunci resmi: Benar (正しい). Fermentasi kompos butuh oksigen (aerob)."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Tangki pembuangan kandang dapat dipenuhi gas dan oksigennya menipis, sehingga harus waspada kekurangan oksigen.”",
+      "jp": "○か×か。「畜舎の排水槽は、ガスが溜まり、酸素が薄くなっていることがあるので、酸素欠乏に注意します。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ 正しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× 誤り"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Kunci resmi: Benar (正しい). Gas bisa menumpuk di tangki kotoran; bahaya kekurangan oksigen."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Anak ayam berumur sekitar 20 minggu sejak mulai diberi pakan disebut apa? Pilih yang paling tepat.",
+      "jp": "餌付けから20週齢ごろのひなを何というか、最も適切なものを選びなさい。"
+     },
+     "opts": [
+      {
+       "id": "Anak ayam muda (幼すう)",
+       "jp": "幼すう"
+      },
+      {
+       "id": "Anak ayam sedang (中すう)",
+       "jp": "中すう"
+      },
+      {
+       "id": "Anak ayam besar (大すう)",
+       "jp": "大すう"
+      }
+     ],
+     "a": 2,
+     "exp": {
+      "id": "Kunci resmi: C. Sekitar 20 minggu = 大すう."
+     }
+    },
+    {
+     "q": {
+      "id": "Induk babi pertama kali dikawinkan pada umur berapa bulan? Pilih yang paling tepat.",
+      "jp": "母豚の最初の種付けは生後何か月か、最も適切なものを選びなさい。"
+     },
+     "opts": [
+      {
+       "id": "5 bulan",
+       "jp": "５か月"
+      },
+      {
+       "id": "8 bulan",
+       "jp": "８か月"
+      },
+      {
+       "id": "11 bulan",
+       "jp": "１１か月"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Kunci resmi: B. Perkawinan pertama induk babi umur sekitar 8 bulan."
+     }
+    }
+   ]
+  },
+  {
    "id": "tema-istilah1",
    "title": {
     "id": "Istilah peternakan (A)",

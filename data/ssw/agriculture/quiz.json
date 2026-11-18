@@ -22547,5 +22547,106 @@
    }
   ]
  },
- "tema": []
+ "tema": [
+  {
+   "id": "resmi-nca-agriculture",
+   "title": {
+    "id": "Soal contoh resmi 耕種農業 (全国農業会議所) — 4 soal teks dari 12 soal sampel (4 soal bergambar tidak dimasukkan)",
+    "jp": "農業技能測定試験 サンプル問題"
+   },
+   "resmi": true,
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Untuk mencegah gangguan tanam berulang (連作障害), tanaman sejenis terus ditanam di tempat yang sama.”",
+      "jp": "○か×か。「連作障害を防ぐには、同じ種類の作物を同じ場所で栽培し続けます。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ 正しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× 誤り"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Kunci resmi: Salah (誤り). Menanam jenis yang sama terus-menerus justru menyebabkan 連作障害; cegah dengan rotasi tanaman."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Untuk mencegah kecelakaan, pemeriksaan mesin pasti dilakukan.”",
+      "jp": "○か×か。「事故の発生を防ぐため、必ず、機械の点検を実施します。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ 正しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× 誤り"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Kunci resmi: Benar (正しい). Inspeksi mesin wajib dilakukan demi keselamatan kerja."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Pilih pestisida yang paling tepat untuk mencegah penyakit tanaman.",
+      "jp": "病気を防ぐのに使う農薬として、最も適切なものを選びなさい。"
+     },
+     "opts": [
+      {
+       "id": "Herbisida (pembasmi gulma)",
+       "jp": "除草剤"
+      },
+      {
+       "id": "Zat pengatur tumbuh tanaman",
+       "jp": "植物成長調整剤"
+      },
+      {
+       "id": "Fungisida (pembasmi jamur/bakteri)",
+       "jp": "殺菌剤"
+      }
+     ],
+     "a": 2,
+     "exp": {
+      "id": "Kunci resmi: C. Fungisida (殺菌剤) dipakai untuk mencegah/mengendalikan penyakit."
+     }
+    },
+    {
+     "q": {
+      "id": "Pilih bahan yang paling tepat untuk pelapis dalam (内張り) pada budidaya di fasilitas (rumah kaca/tunnel).",
+      "jp": "施設栽培で使う内張り用の資材として、最も適切なものを選びなさい。"
+     },
+     "opts": [
+      {
+       "id": "Kain nirtenun (不織布)",
+       "jp": "不織布"
+      },
+      {
+       "id": "Jaring penahan angin",
+       "jp": "防風ネット"
+      },
+      {
+       "id": "Film keras (硬質フイルム)",
+       "jp": "硬質フイルム"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Kunci resmi: A. 不織布 dipakai sebagai pelapis dalam/penghangat di fasilitas budidaya."
+     }
+    }
+   ]
+  }
+ ]
 }

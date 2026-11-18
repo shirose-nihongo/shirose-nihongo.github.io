@@ -21,11 +21,19 @@ import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118k";
 const PDF_SUMBER = {
   "agriculture": [
     { t: "試験実施要領 1号 農業技能測定試験 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
-    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true }
+    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true },
+    { t: "Soal contoh resmi 農業技能測定試験 (12 soal, termasuk bergambar)", u: "https://asat-nca.jp/jp/ews/uploads/2021/07/sample.pdf", ext: true },
+    { t: "Teks belajar resmi 耕種農業 (JP, 全国農業会議所)", u: "https://asat-nca.jp/jp/images/ASAT_CF_jpn2.pdf", ext: true },
+    { t: "Teks belajar resmi — versi Bahasa Indonesia & bahasa lain", u: "http://asat-nca.jp/id/textbook/", ext: true },
+    { t: "Teks belajar 2号 耕種農業 (JP)", u: "https://asat-nca.jp/jp/images/ASAT_CF2_jpn1.pdf", ext: true }
   ],
   "livestock": [
     { t: "試験実施要領 1号 農業技能測定試験 — 畜産農業 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
-    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true }
+    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true },
+    { t: "Soal contoh resmi 農業技能測定試験 (12 soal, termasuk bergambar)", u: "https://asat-nca.jp/jp/ews/uploads/2021/07/sample.pdf", ext: true },
+    { t: "Teks belajar resmi 畜産農業 (JP, 全国農業会議所)", u: "https://asat-nca.jp/jp/images/ASAT_LF_jpn3.pdf", ext: true },
+    { t: "Teks belajar resmi — versi Bahasa Indonesia & bahasa lain", u: "http://asat-nca.jp/id/textbook/", ext: true },
+    { t: "Teks belajar 2号 畜産農業 (JP)", u: "https://asat-nca.jp/jp/images/ASAT_LF2_jpn1.pdf", ext: true }
   ],
   "fishery": [
     { t: "学習用テキスト 漁業一般 (大日本水産会, rev. 2025)", u: "https://suisankai.or.jp/wp-content/uploads/2025/09/%E6%BC%81%E6%A5%AD%E4%B8%80%E8%88%AC2025%E6%9B%B4%E6%96%B0.pdf", ext: true },
