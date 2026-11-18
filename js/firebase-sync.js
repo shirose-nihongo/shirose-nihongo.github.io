@@ -1484,4 +1484,31 @@ export async function claimMisi(misiId, level = "n5") {
   return m;
 }
 
+/* ========== BANK SOAL JLPT (KHUSUS GURU) ==========
+   guru_bank_jlpt/_index : { list:[{id,level,ujian,n,bagian{vocab,gram,listen}}], updated }
+   guru_bank_jlpt/{id}   : { level, ujian, n, soal[] }   (id = "N3_07_2021")
+   Aturan Firestore: read/write hanya isGuru(). Siswa tidak punya jalur baca. */
+export async function bankJlptIndex() {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const d = await getDoc(doc(db, "guru_bank_jlpt", "_index"));
+  return d.exists() ? (d.data().list || []) : [];
+}
+export async function bankJlptGet(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const d = await getDoc(doc(db, "guru_bank_jlpt", id));
+  return d.exists() ? d.data() : null;
+}
+export async function bankJlptPut(item) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "guru_bank_jlpt", item.id), { level: item.level, ujian: item.ujian, n: item.soal.length, soal: item.soal, updated: serverTimestamp() });
+}
+export async function bankJlptSetIndex(list) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "guru_bank_jlpt", "_index"), { list, updated: serverTimestamp() });
+}
+export async function bankJlptDelete(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await deleteDoc(doc(db, "guru_bank_jlpt", id));
+}
+
 export { db, auth };

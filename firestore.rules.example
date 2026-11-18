@@ -109,6 +109,11 @@ service cloud.firestore {
     }
 
     // ---------- Lain-lain ----------
+    // Bank soal JLPT asli: KHUSUS guru (bahan ajar, tidak dibagikan ke siswa).
+    match /guru_bank_jlpt/{id} {
+      allow read, write: if isGuru();
+    }
+
     match /kelas/{kid} {
       allow read: if terdaftar();
       allow write: if isGuru();
