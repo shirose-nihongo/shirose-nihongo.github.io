@@ -6,7 +6,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 100
+  "harga": 200
  },
  {
   "id": "medium",
@@ -14,7 +14,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 150
+  "harga": 250
  },
  {
   "id": "long",
@@ -22,7 +22,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 200
+  "harga": 300
  },
  {
   "id": "spiky",
@@ -30,7 +30,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 300
+  "harga": 400
  },
  {
   "id": "messy",
@@ -38,7 +38,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 250
+  "harga": 350
  },
  {
   "id": "anime_boy",
@@ -46,7 +46,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "formal",
@@ -54,7 +54,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 500
+  "harga": 550
  },
  {
   "id": "hr_spiky",
@@ -62,7 +62,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "hr_bob",
@@ -70,7 +70,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 750
+  "harga": 700
  },
  {
   "id": "hr_ponytail",
@@ -78,7 +78,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 1150
+  "harga": 900
  },
  {
   "id": "hr_undercut",
@@ -86,7 +86,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "hr_bun",
@@ -94,7 +94,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "hr_long",
@@ -102,7 +102,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 3150
+  "harga": 1600
  },
  {
   "id": "hr_twin",
@@ -110,7 +110,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 3750
+  "harga": 1800
  },
  {
   "id": "hr_curly",
@@ -118,7 +118,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 4400
+  "harga": 2000
  },
  {
   "id": "hr_emo",
@@ -126,7 +126,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "hr_afro",
@@ -134,7 +134,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "hr_mohawk",
@@ -142,7 +142,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 10750
+  "harga": 3500
  },
  {
   "id": "hr_topknot",
@@ -150,7 +150,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "hr_pink",
@@ -158,7 +158,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 14250
+  "harga": 4000
  },
  {
   "id": "hr_biru",
@@ -166,7 +166,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "hr_perak",
@@ -174,7 +174,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "hr_ungu",
@@ -182,7 +182,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 28650
+  "harga": 6000
  },
  {
   "id": "hr_twinbuns_hijau",
@@ -190,7 +190,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 32350
+  "harga": 6500
  },
  {
   "id": "hr_serigala_perak",
@@ -198,7 +198,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "hr_api",
@@ -206,7 +206,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "hr_es",
@@ -214,7 +214,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "hr_emas",
@@ -222,7 +222,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "hr_pelangi",
@@ -230,7 +230,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "hr_galaxy",
@@ -238,7 +238,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "shirose_poni",
@@ -246,7 +246,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Rambut",
-  "harga": 12000
+  "harga": 3500
  },
  {
   "id": "kemeja_navy",
@@ -254,7 +254,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 500
+  "harga": 550
  },
  {
   "id": "jaket_hitam",
@@ -262,7 +262,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "hoodie_pink",
@@ -270,7 +270,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 10000
+  "harga": 3250
  },
  {
   "id": "n1_suit_legendary",
@@ -278,7 +278,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "kimono",
@@ -286,7 +286,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "o_tee_merah",
@@ -294,7 +294,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "o_tee_biru",
@@ -310,7 +310,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 850
+  "harga": 750
  },
  {
   "id": "o_tank_hitam",
@@ -318,7 +318,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 1050
+  "harga": 850
  },
  {
   "id": "o_kemeja_kotak",
@@ -326,7 +326,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 1300
+  "harga": 950
  },
  {
   "id": "o_sweater_krem",
@@ -334,7 +334,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "o_hoodie_abu",
@@ -342,7 +342,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "o_hoodie_biru",
@@ -350,7 +350,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 3000
+  "harga": 1600
  },
  {
   "id": "o_jaket_denim",
@@ -358,7 +358,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 3500
+  "harga": 1750
  },
  {
   "id": "o_jaket_bomber",
@@ -366,7 +366,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 4000
+  "harga": 1850
  },
  {
   "id": "o_yukata_biru",
@@ -374,7 +374,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 4500
+  "harga": 2000
  },
  {
   "id": "o_tee_stripe",
@@ -382,7 +382,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "o_jas_navy",
@@ -390,7 +390,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "o_yukata_sakura",
@@ -398,7 +398,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 11350
+  "harga": 3500
  },
  {
   "id": "o_hakama_miko",
@@ -406,7 +406,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 13650
+  "harga": 4000
  },
  {
   "id": "o_jaket_kulit",
@@ -414,7 +414,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "o_armor_besi",
@@ -422,7 +422,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "o_kimono_biru",
@@ -430,7 +430,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 28650
+  "harga": 6000
  },
  {
   "id": "o_jubah_penyihir",
@@ -438,7 +438,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 32350
+  "harga": 6500
  },
  {
   "id": "o_haori_ninja",
@@ -446,7 +446,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "o_armor_samurai",
@@ -454,7 +454,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "o_jubah_emas",
@@ -462,7 +462,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "o_armor_naga",
@@ -470,7 +470,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "o_jubah_galaxy",
@@ -478,7 +478,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "o_armor_surya",
@@ -486,7 +486,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "o2_kaos_kuning",
@@ -494,7 +494,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "o2_kaos_ungu",
@@ -502,7 +502,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 700
+  "harga": 650
  },
  {
   "id": "o2_kaos_oranye",
@@ -510,7 +510,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 950
+  "harga": 800
  },
  {
   "id": "o2_tank_putih",
@@ -518,7 +518,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 1250
+  "harga": 950
  },
  {
   "id": "o2_kemeja_putih",
@@ -526,7 +526,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "o2_hoodie_hijau",
@@ -534,7 +534,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "o2_jaket_olahraga",
@@ -542,7 +542,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 3350
+  "harga": 1700
  },
  {
   "id": "o2_sweater_biru",
@@ -550,7 +550,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 4150
+  "harga": 1900
  },
  {
   "id": "o2_yukata_hijau",
@@ -558,7 +558,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "o2_pelaut",
@@ -566,7 +566,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "o2_jas_putih",
@@ -574,7 +574,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 11350
+  "harga": 3500
  },
  {
   "id": "o2_jaket_neon",
@@ -582,7 +582,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 13650
+  "harga": 4000
  },
  {
   "id": "o2_hoodie_naga",
@@ -590,7 +590,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "o2_armor_es",
@@ -598,7 +598,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "o2_jubah_api",
@@ -606,7 +606,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 30500
+  "harga": 6250
  },
  {
   "id": "o2_kimono_sakura",
@@ -614,7 +614,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "o2_armor_petir",
@@ -622,7 +622,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "o2_kimono_emas",
@@ -630,7 +630,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "o2_jubah_phoenix",
@@ -638,7 +638,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "shirose_gakuran",
@@ -646,7 +646,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Pakaian",
-  "harga": 60000
+  "harga": 9500
  },
  {
   "id": "sneakers_putih",
@@ -654,7 +654,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 150
+  "harga": 250
  },
  {
   "id": "sneakers_merah",
@@ -662,7 +662,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 800
+  "harga": 700
  },
  {
   "id": "boots",
@@ -670,7 +670,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 4000
+  "harga": 1850
  },
  {
   "id": "geta",
@@ -678,7 +678,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 13000
+  "harga": 3750
  },
  {
   "id": "sh_biru",
@@ -686,7 +686,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "sh_kuning",
@@ -694,7 +694,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 750
+  "harga": 700
  },
  {
   "id": "sh_hitam",
@@ -702,7 +702,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 1150
+  "harga": 900
  },
  {
   "id": "sh_sandal_hijau",
@@ -710,7 +710,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "sh_high_merah",
@@ -718,7 +718,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "sh_high_hitam",
@@ -726,7 +726,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 3350
+  "harga": 1700
  },
  {
   "id": "sh_boot_cokelat",
@@ -734,7 +734,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 4150
+  "harga": 1900
  },
  {
   "id": "sh_zori",
@@ -742,7 +742,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "sh_neon",
@@ -750,7 +750,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "sh_boot_ninja",
@@ -758,7 +758,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "sh_high_pink",
@@ -766,7 +766,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "sh_boot_baja",
@@ -774,7 +774,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "sh_duri",
@@ -782,7 +782,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 30500
+  "harga": 6250
  },
  {
   "id": "sh_neon_ungu",
@@ -790,7 +790,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "sh_bersayap",
@@ -798,7 +798,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "sh_emas",
@@ -806,7 +806,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "sh_boot_api",
@@ -814,7 +814,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "sh_cahaya",
@@ -822,7 +822,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "sh_galaxy",
@@ -830,7 +830,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "sh2_hijau",
@@ -838,7 +838,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "sh2_sandal_biru",
@@ -846,7 +846,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "sh2_high_putih",
@@ -854,7 +854,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "sh2_boot_hijau",
@@ -862,7 +862,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "sh2_boot_putih",
@@ -870,7 +870,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "sh2_es",
@@ -878,7 +878,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "sh2_petir",
@@ -886,7 +886,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "sh2_phoenix",
@@ -894,7 +894,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "shirose_sepatu",
@@ -902,7 +902,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Sepatu",
-  "harga": 9500
+  "harga": 3250
  },
  {
   "id": "kacamata",
@@ -910,7 +910,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 500
+  "harga": 550
  },
  {
   "id": "kacamata_pink",
@@ -926,7 +926,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 2800
+  "harga": 1500
  },
  {
   "id": "headband_pink",
@@ -942,7 +942,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "ac_topi_biru",
@@ -950,7 +950,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "ac_pita_merah",
@@ -958,7 +958,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 700
+  "harga": 650
  },
  {
   "id": "ac_masker",
@@ -966,7 +966,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 950
+  "harga": 800
  },
  {
   "id": "ac_syal_merah",
@@ -974,7 +974,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 1250
+  "harga": 950
  },
  {
   "id": "ac_kalung_hati",
@@ -982,7 +982,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "ac_telinga_kucing",
@@ -990,7 +990,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "ac_telinga_kelinci",
@@ -998,7 +998,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 3150
+  "harga": 1600
  },
  {
   "id": "ac_headphone",
@@ -1006,7 +1006,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 3750
+  "harga": 1800
  },
  {
   "id": "ac_bandana_ninja",
@@ -1014,7 +1014,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 4400
+  "harga": 2000
  },
  {
   "id": "ac_tanduk_kecil",
@@ -1022,7 +1022,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "ac_topi_penyihir",
@@ -1030,7 +1030,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "ac_kacamata_hitam",
@@ -1038,7 +1038,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "ac_topeng_kitsune",
@@ -1046,7 +1046,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "ac_tanduk_iblis",
@@ -1054,7 +1054,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "ac_hachimaki",
@@ -1062,7 +1062,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 30500
+  "harga": 6250
  },
  {
   "id": "ac_mahkota_permata",
@@ -1070,7 +1070,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "ac_halo",
@@ -1078,7 +1078,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "ac_mahkota_api",
@@ -1086,7 +1086,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "ac_tiara_es",
@@ -1094,7 +1094,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "ac_mahkota_dewa",
@@ -1102,7 +1102,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "ac_mata_naga",
@@ -1110,7 +1110,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "ac2_topi_hijau",
@@ -1118,7 +1118,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "ac2_topi_pink",
@@ -1126,7 +1126,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 750
+  "harga": 700
  },
  {
   "id": "ac2_kacamata_biru",
@@ -1134,7 +1134,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 1150
+  "harga": 900
  },
  {
   "id": "ac2_bandana_merah",
@@ -1142,7 +1142,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "ac2_topi_koki",
@@ -1150,7 +1150,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "ac2_topi_jerami",
@@ -1158,7 +1158,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "ac2_kacamata_gamer",
@@ -1166,7 +1166,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "ac2_tanduk_rusa",
@@ -1174,7 +1174,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "ac2_topi_bajak",
@@ -1182,7 +1182,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "ac2_mahkota_bunga",
@@ -1190,7 +1190,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "ac2_helm_ksatria",
@@ -1198,7 +1198,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "ac2_mahkota_petir",
@@ -1206,7 +1206,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "ac2_halo_ganda",
@@ -1214,7 +1214,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Aksesori",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "tas_sekolah",
@@ -1222,7 +1222,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 100
+  "harga": 200
  },
  {
   "id": "buku_emas",
@@ -1230,7 +1230,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1200
+  "harga": 900
  },
  {
   "id": "pedang_bambu",
@@ -1238,7 +1238,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 700
+  "harga": 650
  },
  {
   "id": "n5_buku_common",
@@ -1246,7 +1246,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 500
+  "harga": 550
  },
  {
   "id": "n5_buku_rare",
@@ -1254,7 +1254,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 12000
+  "harga": 3500
  },
  {
   "id": "n4_dualbooks_epic",
@@ -1262,7 +1262,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 30000
+  "harga": 6250
  },
  {
   "id": "n3_grimoire_epic",
@@ -1270,7 +1270,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 28000
+  "harga": 6000
  },
  {
   "id": "n2_hammer_rare",
@@ -1278,7 +1278,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 14000
+  "harga": 4000
  },
  {
   "id": "flying_book_green",
@@ -1286,7 +1286,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 30000
+  "harga": 6250
  },
  {
   "id": "flying_book_purple",
@@ -1294,7 +1294,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 60000
+  "harga": 9500
  },
  {
   "id": "flying_book_mythic",
@@ -1302,7 +1302,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 120000
+  "harga": 14500
  },
  {
   "id": "hammer_green",
@@ -1310,7 +1310,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 4500
+  "harga": 2000
  },
  {
   "id": "hammer_purple",
@@ -1318,7 +1318,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 28000
+  "harga": 6000
  },
  {
   "id": "hammer_fire_gold",
@@ -1326,7 +1326,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 75000
+  "harga": 11000
  },
  {
   "id": "briefcase_common",
@@ -1334,7 +1334,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "briefcase_leather",
@@ -1342,7 +1342,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 12000
+  "harga": 3500
  },
  {
   "id": "briefcase_executive_gold",
@@ -1350,7 +1350,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "tas_green",
@@ -1358,7 +1358,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 3000
+  "harga": 1600
  },
  {
   "id": "tas_purple",
@@ -1366,7 +1366,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 14000
+  "harga": 4000
  },
  {
   "id": "tas_fire_gold",
@@ -1374,7 +1374,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 35000
+  "harga": 7000
  },
  {
   "id": "legendary_golden_tome",
@@ -1382,7 +1382,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "legendary_golden_hammer",
@@ -1390,7 +1390,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "hh_katana",
@@ -1398,7 +1398,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "hh_pedang_kayu",
@@ -1414,7 +1414,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 850
+  "harga": 750
  },
  {
   "id": "hh_payung",
@@ -1422,7 +1422,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1050
+  "harga": 850
  },
  {
   "id": "hh_bunga",
@@ -1430,7 +1430,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1300
+  "harga": 950
  },
  {
   "id": "hh_kipas",
@@ -1438,7 +1438,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "hh_kunai",
@@ -1446,7 +1446,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "hh_shuriken",
@@ -1454,7 +1454,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 3150
+  "harga": 1600
  },
  {
   "id": "hh_busur",
@@ -1462,7 +1462,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 3750
+  "harga": 1800
  },
  {
   "id": "hh_tongkat_sihir",
@@ -1470,7 +1470,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 4400
+  "harga": 2000
  },
  {
   "id": "hh_lentera",
@@ -1478,7 +1478,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "hh_yari",
@@ -1486,7 +1486,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "hh_kapak",
@@ -1494,7 +1494,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 10750
+  "harga": 3500
  },
  {
   "id": "hh_palu",
@@ -1502,7 +1502,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "hh_perisai",
@@ -1510,7 +1510,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 14250
+  "harga": 4000
  },
  {
   "id": "hh_gitar",
@@ -1518,7 +1518,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "hh_pedang_api",
@@ -1526,7 +1526,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "hh_pedang_es",
@@ -1534,7 +1534,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 27750
+  "harga": 6000
  },
  {
   "id": "hh_pedang_petir",
@@ -1542,7 +1542,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 30500
+  "harga": 6250
  },
  {
   "id": "hh_sabit",
@@ -1550,7 +1550,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 33250
+  "harga": 6750
  },
  {
   "id": "hh_tongkat_es",
@@ -1558,7 +1558,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "hh_trisula",
@@ -1566,7 +1566,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "hh_pedang_naga",
@@ -1574,7 +1574,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "hh_sabit_api",
@@ -1582,7 +1582,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "hh_excalibur",
@@ -1590,7 +1590,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "hh_tongkat_galaxy",
@@ -1598,7 +1598,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "hh2_pisau",
@@ -1606,7 +1606,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "hh2_tongkat_bisbol",
@@ -1614,7 +1614,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 950
+  "harga": 800
  },
  {
   "id": "hh2_mic",
@@ -1622,7 +1622,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "hh2_buku_sihir",
@@ -1630,7 +1630,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "hh2_gulungan",
@@ -1638,7 +1638,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "hh2_bola_api",
@@ -1646,7 +1646,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "hh2_bola_es",
@@ -1654,7 +1654,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "hh2_pedang_kristal",
@@ -1662,7 +1662,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "hh2_bola_petir",
@@ -1670,7 +1670,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "hh2_tombak_petir",
@@ -1678,7 +1678,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "hh2_busur_emas",
@@ -1686,7 +1686,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "hh2_gada_naga",
@@ -1694,7 +1694,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "hh2_sabit_galaxy",
@@ -1702,7 +1702,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "hh2_pedang_dewa",
@@ -1710,7 +1710,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "wa_daggers_common",
@@ -1718,7 +1718,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "wa_daggers_uncommon",
@@ -1726,7 +1726,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "wa_daggers_rare",
@@ -1734,7 +1734,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "wa_daggers_epic",
@@ -1742,7 +1742,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "wa_daggers_legendary",
@@ -1750,7 +1750,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "wa_daggers_mythic",
@@ -1758,7 +1758,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "wa_greatsword_common",
@@ -1774,7 +1774,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 2900
+  "harga": 1550
  },
  {
   "id": "wa_greatsword_rare",
@@ -1782,7 +1782,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 10150
+  "harga": 3250
  },
  {
   "id": "wa_greatsword_epic",
@@ -1790,7 +1790,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 26850
+  "harga": 6000
  },
  {
   "id": "wa_greatsword_legendary",
@@ -1798,7 +1798,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 55000
+  "harga": 9000
  },
  {
   "id": "wa_greatsword_mythic",
@@ -1806,7 +1806,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 105000
+  "harga": 13500
  },
  {
   "id": "wa_staff_common",
@@ -1814,7 +1814,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 750
+  "harga": 700
  },
  {
   "id": "wa_staff_uncommon",
@@ -1822,7 +1822,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 3350
+  "harga": 1700
  },
  {
   "id": "wa_staff_rare",
@@ -1830,7 +1830,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 11350
+  "harga": 3500
  },
  {
   "id": "wa_staff_epic",
@@ -1838,7 +1838,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 28650
+  "harga": 6000
  },
  {
   "id": "wa_staff_legendary",
@@ -1846,7 +1846,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 60000
+  "harga": 9500
  },
  {
   "id": "wa_staff_mythic",
@@ -1854,7 +1854,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 110000
+  "harga": 13500
  },
  {
   "id": "wa_spear_common",
@@ -1862,7 +1862,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 950
+  "harga": 800
  },
  {
   "id": "wa_spear_uncommon",
@@ -1870,7 +1870,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 3750
+  "harga": 1800
  },
  {
   "id": "wa_spear_rare",
@@ -1878,7 +1878,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "wa_spear_epic",
@@ -1886,7 +1886,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 30500
+  "harga": 6250
  },
  {
   "id": "wa_spear_legendary",
@@ -1894,7 +1894,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "wa_spear_mythic",
@@ -1902,7 +1902,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 115000
+  "harga": 14000
  },
  {
   "id": "wa_scythe_common",
@@ -1910,7 +1910,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1150
+  "harga": 900
  },
  {
   "id": "wa_scythe_uncommon",
@@ -1918,7 +1918,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 4150
+  "harga": 1900
  },
  {
   "id": "wa_scythe_rare",
@@ -1926,7 +1926,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 13650
+  "harga": 4000
  },
  {
   "id": "wa_scythe_epic",
@@ -1934,7 +1934,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 32350
+  "harga": 6500
  },
  {
   "id": "wa_scythe_legendary",
@@ -1942,7 +1942,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 70000
+  "harga": 10500
  },
  {
   "id": "wa_scythe_mythic",
@@ -1950,7 +1950,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 120000
+  "harga": 14500
  },
  {
   "id": "wa_bow_common",
@@ -1958,7 +1958,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1300
+  "harga": 950
  },
  {
   "id": "wa_bow_uncommon",
@@ -1966,7 +1966,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 4600
+  "harga": 2000
  },
  {
   "id": "wa_bow_rare",
@@ -1974,7 +1974,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 14850
+  "harga": 4000
  },
  {
   "id": "wa_bow_epic",
@@ -1982,7 +1982,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 34150
+  "harga": 6750
  },
  {
   "id": "wa_bow_legendary",
@@ -1990,7 +1990,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 75000
+  "harga": 11000
  },
  {
   "id": "wa_bow_mythic",
@@ -1998,7 +1998,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 125000
+  "harga": 15000
  },
  {
   "id": "wa_shield_common",
@@ -2006,7 +2006,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "wa_shield_uncommon",
@@ -2014,7 +2014,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "wa_shield_rare",
@@ -2022,7 +2022,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "wa_shield_epic",
@@ -2030,7 +2030,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "wa_shield_legendary",
@@ -2038,7 +2038,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "wa_shield_mythic",
@@ -2046,7 +2046,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "wa_grimoire_held_common",
@@ -2054,7 +2054,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "wa_grimoire_held_uncommon",
@@ -2062,7 +2062,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "wa_grimoire_held_rare",
@@ -2070,7 +2070,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "wa_grimoire_held_epic",
@@ -2078,7 +2078,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "wa_grimoire_held_legendary",
@@ -2086,7 +2086,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "wa_grimoire_held_mythic",
@@ -2094,7 +2094,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "wa_grimoire_float_common",
@@ -2102,7 +2102,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 700
+  "harga": 650
  },
  {
   "id": "wa_grimoire_float_uncommon",
@@ -2110,7 +2110,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 3150
+  "harga": 1600
  },
  {
   "id": "wa_grimoire_float_rare",
@@ -2118,7 +2118,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 10750
+  "harga": 3500
  },
  {
   "id": "wa_grimoire_float_epic",
@@ -2126,7 +2126,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 27750
+  "harga": 6000
  },
  {
   "id": "wa_grimoire_float_legendary",
@@ -2134,7 +2134,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 57500
+  "harga": 9250
  },
  {
   "id": "wa_grimoire_float_mythic",
@@ -2142,7 +2142,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 107500
+  "harga": 13500
  },
  {
   "id": "wa_hammer_common",
@@ -2150,7 +2150,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 950
+  "harga": 800
  },
  {
   "id": "wa_hammer_uncommon",
@@ -2158,7 +2158,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 3750
+  "harga": 1800
  },
  {
   "id": "wa_hammer_rare",
@@ -2166,7 +2166,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "wa_hammer_epic",
@@ -2174,7 +2174,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 30500
+  "harga": 6250
  },
  {
   "id": "wa_hammer_legendary",
@@ -2182,7 +2182,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "wa_hammer_mythic",
@@ -2190,7 +2190,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 115000
+  "harga": 14000
  },
  {
   "id": "wa_sword_common",
@@ -2198,7 +2198,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1250
+  "harga": 950
  },
  {
   "id": "wa_sword_uncommon",
@@ -2206,7 +2206,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 4400
+  "harga": 2000
  },
  {
   "id": "wa_sword_rare",
@@ -2214,7 +2214,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 14250
+  "harga": 4000
  },
  {
   "id": "wa_sword_epic",
@@ -2222,7 +2222,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 33250
+  "harga": 6750
  },
  {
   "id": "wa_sword_legendary",
@@ -2230,7 +2230,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 72500
+  "harga": 10500
  },
  {
   "id": "wa_sword_mythic",
@@ -2238,7 +2238,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 122500
+  "harga": 14500
  },
  {
   "id": "wa_katana_common",
@@ -2246,7 +2246,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "wa_katana_uncommon",
@@ -2254,7 +2254,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "wa_katana_rare",
@@ -2262,7 +2262,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "wa_katana_epic",
@@ -2270,7 +2270,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "wa_katana_legendary",
@@ -2278,7 +2278,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "wa_katana_mythic",
@@ -2286,7 +2286,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Item Tangan",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "aura_hijau",
@@ -2294,7 +2294,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "aura_ungu",
@@ -2302,7 +2302,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 15000
+  "harga": 4250
  },
  {
   "id": "aura_emas_api",
@@ -2310,7 +2310,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "aura_pink",
@@ -2318,7 +2318,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 1000
+  "harga": 800
  },
  {
   "id": "aura_emas",
@@ -2326,7 +2326,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "au_merah",
@@ -2334,7 +2334,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "au_biru",
@@ -2342,7 +2342,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 3750
+  "harga": 1800
  },
  {
   "id": "au_kuning",
@@ -2350,7 +2350,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "au_putih",
@@ -2358,7 +2358,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "au_sakura",
@@ -2366,7 +2366,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 12500
+  "harga": 3750
  },
  {
   "id": "au_daun",
@@ -2374,7 +2374,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "au_es",
@@ -2382,7 +2382,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "au_petir",
@@ -2390,7 +2390,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 30500
+  "harga": 6250
  },
  {
   "id": "au_gelap",
@@ -2398,7 +2398,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "au_kanji",
@@ -2406,7 +2406,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "au_naga_api",
@@ -2414,7 +2414,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "au_pelangi",
@@ -2422,7 +2422,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "au_galaxy",
@@ -2430,7 +2430,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "au_dewa",
@@ -2438,7 +2438,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "au2_oranye",
@@ -2446,7 +2446,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "au2_tosca",
@@ -2454,7 +2454,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "au2_emas_bintang",
@@ -2462,7 +2462,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "au2_hati",
@@ -2470,7 +2470,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "au2_badai",
@@ -2478,7 +2478,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "au2_lava",
@@ -2486,7 +2486,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "au2_bintang_jatuh",
@@ -2494,7 +2494,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "shirose_api",
@@ -2502,7 +2502,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Aura",
-  "harga": 30000
+  "harga": 6250
  },
  {
   "id": "cl_jeans_biru",
@@ -2510,7 +2510,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "cl_jeans_hitam",
@@ -2526,7 +2526,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 750
+  "harga": 700
  },
  {
   "id": "cl_pendek_biru",
@@ -2534,7 +2534,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 950
+  "harga": 800
  },
  {
   "id": "cl_pendek_putih",
@@ -2542,7 +2542,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 1150
+  "harga": 900
  },
  {
   "id": "cl_training_hitam",
@@ -2550,7 +2550,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 1300
+  "harga": 950
  },
  {
   "id": "cl_sekolah_navy",
@@ -2558,7 +2558,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "cl_jogger_abu",
@@ -2566,7 +2566,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "cl_cargo_hijau",
@@ -2574,7 +2574,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 3350
+  "harga": 1700
  },
  {
   "id": "cl_pendek_cargo",
@@ -2582,7 +2582,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 4150
+  "harga": 1900
  },
  {
   "id": "cl_kotak_merah",
@@ -2590,7 +2590,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "cl_kain_hakama",
@@ -2598,7 +2598,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "cl_camo",
@@ -2606,7 +2606,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 11350
+  "harga": 3500
  },
  {
   "id": "cl_kulit_hitam",
@@ -2614,7 +2614,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 13650
+  "harga": 4000
  },
  {
   "id": "cl_pink_sakura",
@@ -2622,7 +2622,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 16000
+  "harga": 4250
  },
  {
   "id": "cl_ninja_hitam",
@@ -2630,7 +2630,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "cl_hakama_merah",
@@ -2638,7 +2638,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 28650
+  "harga": 6000
  },
  {
   "id": "cl_samurai_biru",
@@ -2646,7 +2646,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 32350
+  "harga": 6500
  },
  {
   "id": "cl_es_kristal",
@@ -2654,7 +2654,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 36000
+  "harga": 7000
  },
  {
   "id": "cl_api_membara",
@@ -2662,7 +2662,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "cl_emas_kaisar",
@@ -2670,7 +2670,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 65000
+  "harga": 10000
  },
  {
   "id": "cl_naga_hijau",
@@ -2678,7 +2678,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "cl_galaxy",
@@ -2686,7 +2686,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 100000
+  "harga": 13000
  },
  {
   "id": "cl_cahaya_dewa",
@@ -2694,7 +2694,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 130000
+  "harga": 15000
  },
  {
   "id": "cl2_pendek_hijau",
@@ -2702,7 +2702,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 400
+  "harga": 450
  },
  {
   "id": "cl2_pendek_kuning",
@@ -2710,7 +2710,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 750
+  "harga": 700
  },
  {
   "id": "cl2_training_merah",
@@ -2718,7 +2718,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 1150
+  "harga": 900
  },
  {
   "id": "cl2_cargo_abu",
@@ -2726,7 +2726,7 @@ export const ITEMS = [
   "rarity": "common",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 1500
+  "harga": 1050
  },
  {
   "id": "cl2_jogger_hitam",
@@ -2734,7 +2734,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 2500
+  "harga": 1400
  },
  {
   "id": "cl2_kotak_biru",
@@ -2742,7 +2742,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 3750
+  "harga": 1800
  },
  {
   "id": "cl2_jeans_pudar",
@@ -2750,7 +2750,7 @@ export const ITEMS = [
   "rarity": "uncommon",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 5000
+  "harga": 2250
  },
  {
   "id": "cl2_neon",
@@ -2758,7 +2758,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 9000
+  "harga": 3000
  },
  {
   "id": "cl2_petir",
@@ -2766,7 +2766,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "cl2_hutan_naga",
@@ -2774,7 +2774,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 50000
+  "harga": 8500
  },
  {
   "id": "shirose_hitam",
@@ -2782,7 +2782,7 @@ export const ITEMS = [
   "rarity": "rare",
   "kind": "shop",
   "kat": "Celana",
-  "harga": 11000
+  "harga": 3500
  },
  {
   "id": "sy_kardus",
@@ -2790,7 +2790,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 15000
+  "harga": 4250
  },
  {
   "id": "sy_kertas",
@@ -2798,7 +2798,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 15000
+  "harga": 4250
  },
  {
   "id": "sy_plastik",
@@ -2806,7 +2806,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 15000
+  "harga": 4250
  },
  {
   "id": "sy_kain_lusuh",
@@ -2814,7 +2814,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 15000
+  "harga": 4250
  },
  {
   "id": "sy_ayam",
@@ -2822,7 +2822,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 15000
+  "harga": 4250
  },
  {
   "id": "sy_bebek_karet",
@@ -2830,7 +2830,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 15000
+  "harga": 4250
  },
  {
   "id": "sy_daun",
@@ -2838,7 +2838,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "sy_capung",
@@ -2846,7 +2846,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "sy_angin",
@@ -2854,7 +2854,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 45000
+  "harga": 8000
  },
  {
   "id": "sy_es",
@@ -2862,7 +2862,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 45000
+  "harga": 8000
  },
  {
   "id": "sy_daun_besar",
@@ -2870,7 +2870,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 45000
+  "harga": 8000
  },
  {
   "id": "sy_badai",
@@ -2878,7 +2878,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "sy_api",
@@ -2886,7 +2886,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "sy_gargoyle",
@@ -2894,7 +2894,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "sy_gargoyle_batu",
@@ -2902,7 +2902,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 150000
+  "harga": 16500
  },
  {
   "id": "sy_malaikat",
@@ -2910,7 +2910,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 150000
+  "harga": 16500
  },
  {
   "id": "sy_phoenix",
@@ -2918,7 +2918,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 150000
+  "harga": 16500
  },
  {
   "id": "sy_naga_es",
@@ -2926,7 +2926,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 150000
+  "harga": 16500
  },
  {
   "id": "sy_galaxy",
@@ -2934,7 +2934,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 300000
+  "harga": 25000
  },
  {
   "id": "sy_dewa_angin",
@@ -2942,7 +2942,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 300000
+  "harga": 25000
  },
  {
   "id": "sy2_kupu",
@@ -2950,7 +2950,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 25000
+  "harga": 5750
  },
  {
   "id": "sy2_malam",
@@ -2958,7 +2958,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 45000
+  "harga": 8000
  },
  {
   "id": "sy2_kristal_ungu",
@@ -2966,7 +2966,7 @@ export const ITEMS = [
   "rarity": "epic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 80000
+  "harga": 11500
  },
  {
   "id": "sy2_pelangi",
@@ -2974,7 +2974,7 @@ export const ITEMS = [
   "rarity": "legendary",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 150000
+  "harga": 16500
  },
  {
   "id": "sy2_emas_agung",
@@ -2982,7 +2982,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 300000
+  "harga": 25000
  },
  {
   "id": "shirose_emas",
@@ -2990,7 +2990,7 @@ export const ITEMS = [
   "rarity": "mythic",
   "kind": "shop",
   "kat": "Sayap",
-  "harga": 300000
+  "harga": 25000
  },
  {
   "id": "theme_ungu",

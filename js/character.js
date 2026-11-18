@@ -978,3 +978,12 @@ extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;
+
+/* ====== Penyesuaian harga (Nov 2026): item termahal = 25.000 🪙, sisanya turun mengikuti.
+   Kurva pangkat 0,6 — urutan harga lama tetap terjaga. Mythic juga maksimal 25.000. Berjalan sekali per item (_rp). ====== */
+const HARGA_MAX_LAMA = 300000, HARGA_MAX_BARU = 25000;
+const _bulat = (v) => v < 2000 ? Math.round(v / 50) * 50 : v < 10000 ? Math.round(v / 250) * 250 : Math.round(v / 500) * 500;
+export const hargaBaru = (lama) => Math.min(HARGA_MAX_BARU, Math.max(50, _bulat(HARGA_MAX_BARU * Math.pow(lama / HARGA_MAX_LAMA, 0.6))));
+for (const kat of Object.values(CATALOG)) for (const it of Object.values(kat)) {
+  if (it && it.harga > 0 && !it._rp) { it.harga = hargaBaru(it.harga); it._rp = 1; }
+}
