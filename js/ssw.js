@@ -39,7 +39,9 @@ const PDF_SUMBER = {
     { t: "学習用テキスト 漁業一般 (大日本水産会, rev. 2025)", u: "https://suisankai.or.jp/wp-content/uploads/2025/09/%E6%BC%81%E6%A5%AD%E4%B8%80%E8%88%AC2025%E6%9B%B4%E6%96%B0.pdf", ext: true },
     { t: "学習用テキスト 釣り漁業 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2020/01/%E2%91%A220191218%E9%87%A3%E6%BC%81%E6%A5%AD.pdf", ext: true },
     { t: "学習用テキスト 漁業安全 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2023/12/%E6%BC%81%E6%A5%AD%E5%AE%89%E5%85%A8.pdf", ext: true },
-    { t: "試験実施状況報告書 R4 漁業分野 (水産庁)", u: "https://www.moj.go.jp/isa/content/001401785.pdf", ext: true }
+    { t: "試験実施状況報告書 R4 漁業分野 (水産庁)", u: "https://www.moj.go.jp/isa/content/001401785.pdf", ext: true },
+    { t: "Soal contoh resmi 1号 学科 + 実技 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2022/01/%E5%87%BA%E9%A1%8C%E4%BE%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%95%8F%E9%A1%8C.pdf", ext: true },
+    { t: "Halaman resmi ujian & teks belajar (JP/Indonesia) — 大日本水産会", u: "https://suisankai.or.jp/skill/", ext: true }
   ],
   "accommodation": [
     { t: "宿泊分野特定技能1号評価試験 実施要領 (観光庁)", u: "https://www.mlit.go.jp/kankocho/content/001719490.pdf", ext: true },

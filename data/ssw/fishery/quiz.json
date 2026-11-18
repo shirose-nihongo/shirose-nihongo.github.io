@@ -28112,6 +28112,79 @@
  },
  "tema": [
   {
+   "id": "resmi-jfa-fishery",
+   "title": {
+    "id": "Soal contoh resmi 学科 大日本水産会 (3 soal ○×; 2 soal foto 実技 tidak dimasukkan)",
+    "jp": "漁業 学科サンプル問題"
+   },
+   "resmi": true,
+   "items": [
+    {
+     "q": {
+      "id": "Benar atau salah: “Perikanan pantai (沿岸漁業) adalah perikanan yang dilakukan di dekat pantai dengan kapal ikan kecil.”",
+      "jp": "○か×か。「えんがんぎょぎょうとは、えんがんで ちいさな ぎょせんを つかい おこなう ぎょぎょうの ことである。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ 正しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× 間違い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Contoh soal resmi 大日本水産会 (1号, 学科 No.1). Kunci tidak dicantumkan di PDF; ○ sesuai definisi di teks belajar."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Budidaya darat (陸上養殖) adalah cara membudidayakan ikan di kolam buatan manusia di daratan.”",
+      "jp": "○か×か。「りくじょうようしょくとは ひとが つくった りくじょうの いけで さかなを ようしょくする ほうほうである。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ 正しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× 間違い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Contoh soal resmi 大日本水産会 (1号, 学科 No.2). Kunci tidak dicantumkan di PDF; ○ sesuai definisi di teks belajar."
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Saat memakai helm, tali dagu harus dikencangkan dengan kuat.”",
+      "jp": "○か×か。「へるめっとを かぶる ときは、あごひもを しっかりと しめる。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ 正しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× 間違い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Contoh soal resmi 大日本水産会 (1号, 学科 No.3). Kunci tidak dicantumkan di PDF; ○ (aturan keselamatan dasar)."
+     },
+     "mb": true
+    }
+   ]
+  },
+  {
    "id": "tema-kapal",
    "tema": true,
    "title": {
