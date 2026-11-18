@@ -1398,7 +1398,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/shirose-extra.css?v=20261116m"/>
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/ssw.css?v=20261118o"/>
+<link rel="stylesheet" href="./css/ssw.css?v=20261118p"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261116c"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261114f"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261117a"/>
@@ -1471,7 +1471,7 @@ import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTer
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116m";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261118n";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261118p";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261117a";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261117b";
 const GACHA_ON = true;    // ← ubah ke true untuk menghidupkan gacha lagi (kode gacha tidak dihapus)
@@ -2233,6 +2233,7 @@ window.closeTopOverlay = () => {
   add("#kc-modal", el => el.click());
   add(".modal-backdrop.open", el => { el.click(); if (document.body.contains(el) && el.classList.contains("open")) el.classList.remove("open"); });
   add("#sw-prefs:not([hidden])", el => { el.hidden = true; });
+  add("#sw-chara-ov", el => el.remove());
   if (!cand.length) return false;
   cand.sort((a, b) => b.z - a.z);
   try { cand[0].close(cand[0].el); } catch (e) { try { cand[0].el.remove(); } catch (_) {} }
@@ -2246,6 +2247,7 @@ window.goBack = () => {
   const cur = here.split("/")[0];
   const sub = _subjectOf(here);
   const st = window._routeStack;
+  if (window.__sswBack && /^(shop|gacha|profile)$/.test(cur)){ const b = window.__sswBack; window.__sswBack = null; route(b); return; }
   if (sub !== "jlpt"){
     // Mundur tepat 1 halaman di mapel yang sama; kalau riwayat habis/beda mapel → halaman induk (bukan pemilihan JLPT).
     let i = st.length - 1;
@@ -2367,18 +2369,32 @@ window.route = (path) => {
   _renderRoute(name, rest);
 };
 
-/* Panel karakter untuk halaman SSW: karakter + 2 orbit (Shop & Gacha) + tombol di bawahnya */
+/* Panel karakter untuk halaman SSW: karakter + nama + 2 orbit (Shop & Gacha); diketuk → tampilan besar */
+window.sswGo = function(r){ const ov = document.getElementById("sw-chara-ov"); if (ov) ov.remove(); window.__sswBack = location.hash.slice(1) || "ssw"; route(r); };
+function _sscStage(big){
+  const eq = state.siswa?.karakter?.equipped || DEFAULT_EQUIPPED;
+  const skin = state.siswa?.karakter?.skinTone || "light";
+  const chara = renderCharacter(eq, skin, { hairColor: state.siswa?.karakter?.hairColor });
+  const nodes = [{icon:"🛒", jp:"商店", lbl:"SHOP", route:"shop", a:0}].concat(GACHA_ON ? [{icon:"🎰", jp:"抽選", lbl:"GACHA", route:"gacha", a:180}] : []);
+  const n = nodes.length === 1 ? [{...nodes[0], a:90}] : nodes;
+  const orb = n.map(o => `<div class="sc-arm" style="--a:${o.a}deg"><div class="sc-node" onclick="event.stopPropagation();sswGo('${o.route}')"><div class="ico">${o.icon}</div><div class="jp">${o.jp}</div><div class="lbl">${o.lbl}</div></div></div>`).join("");
+  return `<div class="sc-stage${big ? " big" : ""}"${big ? "" : ` onclick="sswCharaOpen()" role="button" title="Perbesar karakter"`}><div class="sc-ring"></div><div class="sc-orbit">${orb}</div><div class="sc-chara">${chara}</div></div>`;
+}
 window.sswCharaPanel = function(){
   try{
-    const eq = state.siswa?.karakter?.equipped || DEFAULT_EQUIPPED;
-    const skin = state.siswa?.karakter?.skinTone || "light";
-    const chara = renderCharacter(eq, skin, { hairColor: state.siswa?.karakter?.hairColor });
-    const nodes = [{icon:"🛒", jp:"商店", lbl:"SHOP", route:"shop", a:0}].concat(GACHA_ON ? [{icon:"🎰", jp:"抽選", lbl:"GACHA", route:"gacha", a:180}] : []);
-    const n = nodes.length === 1 ? [{...nodes[0], a:90}] : nodes;
-    const orb = n.map(o => `<div class="sc-arm" style="--a:${o.a}deg"><div class="sc-node" onclick="route('${o.route}')"><div class="ico">${o.icon}</div><div class="jp">${o.jp}</div><div class="lbl">${o.lbl}</div></div></div>`).join("");
-    return `<div class="sw-chara"><div class="sc-stage"><div class="sc-ring"></div><div class="sc-orbit">${orb}</div><div class="sc-chara">${chara}</div></div>
-      <div class="sc-row"><button class="btn" onclick="route('shop')">🛒 Shop</button>${GACHA_ON ? `<button class="btn gold" onclick="route('gacha')">🎰 Gacha</button>` : ""}<button class="btn ghost" onclick="route('profile')">🧑 Karakter</button></div></div>`;
+    const nama = state.siswa?.nama || "Tamu";
+    return `<div class="sw-chara">${_sscStage(false)}<div class="sc-name" onclick="sswCharaOpen()">${nama} · Lv ${state.gami.level_karakter}</div>
+      <div class="sc-row"><button class="btn" onclick="sswGo('shop')">🛒 Shop</button>${GACHA_ON ? `<button class="btn gold" onclick="sswGo('gacha')">🎰 Gacha</button>` : ""}<button class="btn ghost" onclick="sswGo('profile')">🧑 Karakter</button></div></div>`;
   }catch(e){ return ""; }
+};
+window.sswCharaOpen = function(){
+  if (document.getElementById("sw-chara-ov")) return;
+  const nama = state.siswa?.nama || "Tamu";
+  const d = document.createElement("div"); d.id = "sw-chara-ov";
+  d.innerHTML = `<div class="sco-box"><button class="sco-x" onclick="closeTopOverlay()" aria-label="Tutup">✕</button>${_sscStage(true)}<div class="sc-name big">${nama} · Lv ${state.gami.level_karakter} · ${state.gami.koin} 🪙</div>
+    <div class="sc-row"><button class="btn" onclick="sswGo('shop')">🛒 Shop</button>${GACHA_ON ? `<button class="btn gold" onclick="sswGo('gacha')">🎰 Gacha</button>` : ""}<button class="btn ghost" onclick="closeTopOverlay()">Tutup</button></div></div>`;
+  d.addEventListener("click", e => { if (e.target === d) d.remove(); });
+  document.body.appendChild(d);
 };
 window.__gachaOn = GACHA_ON;
 
