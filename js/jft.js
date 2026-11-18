@@ -461,9 +461,7 @@ async function renderTryout() {
   if (!st.user) { setTimeout(() => route("login"), 0); return '<div class="loading">Memuat…</div>'; }
   const T = await tryoutD(); const sesi = pulihSesi();
   const his = LS.get(HIS_KEY(), []).filter(h => h.lv === "tryout").slice(0, 8);
-  const btn = (p, i) => `<button class="jft-pk" onclick="route('jft-paket/try${i}')"><b>${esc(p.no || "Paket " + (i + 1))}</b><small>${esc(p.judul.replace(/^(Paket|Full Test) \d+ · /, ""))}</small>${lencana("tryout", `try${i}`, true)}</button>`;
-  const lat = T.paket.map((p, i) => [p, i]).filter(([p]) => !String(p.id).startsWith("ft")), ft = T.paket.map((p, i) => [p, i]).filter(([p]) => String(p.id).startsWith("ft"));
-  const paket = lat.map(([p, i]) => btn(p, i)).join("") + (ft.length ? `</div><h3 style="margin:14px 0 6px">🧪 Full Test 01–${String(ft.length).padStart(2, "0")} <small style="font-weight:400;color:var(--gray-dim)">· soal berbeda tiap paket</small></h3><div class="jft-paket">${ft.map(([p, i]) => btn(p, i)).join("")}` : "");
+  const paket = T.paket.map((p, i) => `<button class="jft-pk" onclick="route('jft-paket/try${i}')"><b>Paket ${i + 1}</b><small>${esc(p.judul.replace(/^(Paket|Full Test) \d+ · /, ""))}</small>${lencana("tryout", `try${i}`, true)}</button>`).join("");
   return `
   <div class="jft-wrap">
     <div class="jft-crumb">JFT-Basic › Tryout</div>
@@ -561,7 +559,7 @@ function renderHasil() {
   </div>`;
 }
 
-import { JFTS_ROUTES } from "./jft-slide.js?v=20261119c";
+import { JFTS_ROUTES } from "./jft-slide.js?v=20261119d";
 export const JFT_ROUTES = {
   ...JFTS_ROUTES,
   jft: () => renderHub(),
