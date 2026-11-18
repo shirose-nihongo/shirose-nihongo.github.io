@@ -10,7 +10,10 @@ const { build, SK } = H;
 /* ---------- profil lebar (skala X terhadap sumbu x=200) per tinggi y ---------- */
 const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [204, .74], [222, .86], [240, .93], [262, .74], [284, .62], [310, .82], [334, 1.0], [352, 1.05], [390, .99], [999, .93]];
 const fy = (y) => { for (let i = 1; i < PROF.length; i++) if (y <= PROF[i][0]) { const [y0, f0] = PROF[i - 1], [y1, f1] = PROF[i]; return f0 + (f1 - f0) * (y - y0) / (y1 - y0); } return 1; };
-const wx = (x, y) => 200 + (x - 200) * fy(y);
+const wx = (x, y) => {   // lengan (jauh dari sumbu) ikut lebih sedikit supaya tidak menyusut ke badan
+  const f = fy(y), dx = Math.abs(x - 200), t = Math.min(1, Math.max(0, (dx - 58) / 30));
+  return 200 + (x - 200) * (f * (1 - t) + (f * .75 + .25) * t);
+};
 const r2 = (n) => Math.round(n * 10) / 10;
 const attr = (t, k) => { const m = t.match(new RegExp("\\s" + k + '="([^"]*)"')); return m ? parseFloat(m[1]) : NaN; };
 const dropAttr = (t, ks) => ks.reduce((s, k) => s.replace(new RegExp("\\s" + k + '="[^"]*"'), ""), t);
@@ -20,13 +23,18 @@ export function femWarp(svg) {
   return svg.replace(/<(path|ellipse|circle|rect)\b[^>]*>/g, (tag, name) => {
     if (name === "path") {
       const m = tag.match(/\sd="([^"]*)"/); if (!m) return tag;
-      const d = m[1]; if (/[^MLQCSTZ\d\s.,eE+-]/.test(d)) return tag;          // hanya perintah absolut
-      const toks = d.match(/[MLQCSTZ]|-?\d*\.?\d+(?:[eE][+-]?\d+)?/g) || []; let k = 0, px = null, out = "";
-      for (const t of toks) {
-        if (/[A-Z]/.test(t)) { out += t; px = null; continue; }
-        const v = parseFloat(t);
-        if (px === null) { px = v; continue; }
-        out += r2(wx(px, v)) + " " + r2(v) + " "; px = null;
+      const d = m[1]; if (/[^MLQCZ\d\s.,eE+-]/.test(d)) return tag;          // hanya M L Q C Z absolut
+      const toks = d.match(/[MLQCZ]|-?\d*\.?\d+(?:[eE][+-]?\d+)?/g) || []; let i = 0, out = "", cx = 0, cy = 0, sx = 0, sy = 0;
+      const P = (x, y) => r2(wx(x, y)) + " " + r2(y) + " ";
+      const line = (x1, y1) => { const n = Math.max(1, Math.ceil(Math.hypot(x1 - cx, y1 - cy) / 6)); for (let k = 1; k <= n; k++) out += "L" + P(cx + (x1 - cx) * k / n, cy + (y1 - cy) * k / n); cx = x1; cy = y1; };
+      const num = () => parseFloat(toks[i++]);
+      while (i < toks.length) {
+        const c = toks[i++];
+        if (c === "M") { cx = sx = num(); cy = sy = num(); out += "M" + P(cx, cy); while (i < toks.length && !/[A-Z]/.test(toks[i])) line(num(), num()); }
+        else if (c === "L") { while (i < toks.length && !/[A-Z]/.test(toks[i])) line(num(), num()); }
+        else if (c === "Q") { while (i < toks.length && !/[A-Z]/.test(toks[i])) { const x1 = num(), y1 = num(), x2 = num(), y2 = num(), x0 = cx, y0 = cy; for (let k = 1; k <= 10; k++) { const t = k / 10, u = 1 - t; out += "L" + P(u * u * x0 + 2 * u * t * x1 + t * t * x2, u * u * y0 + 2 * u * t * y1 + t * t * y2); } cx = x2; cy = y2; } }
+        else if (c === "C") { while (i < toks.length && !/[A-Z]/.test(toks[i])) { const x1 = num(), y1 = num(), x2 = num(), y2 = num(), x3 = num(), y3 = num(), x0 = cx, y0 = cy; for (let k = 1; k <= 12; k++) { const t = k / 12, u = 1 - t; out += "L" + P(u * u * u * x0 + 3 * u * u * t * x1 + 3 * u * t * t * x2 + t * t * t * x3, u * u * u * y0 + 3 * u * u * t * y1 + 3 * u * t * t * y2 + t * t * t * y3); } cx = x3; cy = y3; } }
+        else if (c === "Z") { line(sx, sy); out += "Z"; }
       }
       return tag.replace(m[0], ` d="${out.trim()}"`);
     }
