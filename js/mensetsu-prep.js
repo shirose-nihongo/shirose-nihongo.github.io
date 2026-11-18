@@ -273,12 +273,21 @@ function editor(q, a) {
 /** Simpan & pulihkan posisi scroll (body/window/elemen berscroll) supaya centang tidak melempar halaman ke atas. */
 function scrollState() {
   const st = { w: window.scrollY, b: document.body.scrollTop, d: document.documentElement.scrollTop, els: [] };
-  document.querySelectorAll("#hz-chk, #hz-list, .pp-list, .pp-ckl, #app, main").forEach(e => { if (e.scrollTop) st.els.push([e, e.scrollTop]); });
+  document.querySelectorAll("body *").forEach(e => {
+    if (e.scrollTop > 0 && e.scrollHeight > e.clientHeight) {
+      const sel = e.id ? "#" + CSS.escape(e.id) : (e.classList[0] ? e.tagName.toLowerCase() + "." + CSS.escape(e.classList[0]) : "");
+      if (!sel) return;
+      st.els.push([sel, [...document.querySelectorAll(sel)].indexOf(e), e.scrollTop]);
+    }
+  });
   return st;
 }
 function scrollRestore(st) {
-  const go = () => { try { if (st.w) window.scrollTo(0, st.w); if (st.b) document.body.scrollTop = st.b; if (st.d) document.documentElement.scrollTop = st.d; st.els.forEach(([e, t]) => { if (e.isConnected) e.scrollTop = t; }); } catch (e) {} };
-  go(); requestAnimationFrame(go); setTimeout(go, 60); setTimeout(go, 200);
+  const go = () => { try {
+    if (st.w) window.scrollTo(0, st.w); if (st.b) document.body.scrollTop = st.b; if (st.d) document.documentElement.scrollTop = st.d;
+    st.els.forEach(([sel, i, t]) => { const e = document.querySelectorAll(sel)[i]; if (e) e.scrollTop = t; });
+  } catch (e) {} };
+  go(); requestAnimationFrame(go); setTimeout(go, 60); setTimeout(go, 200); setTimeout(go, 500);
 }
 function rerender() { const st = scrollState(); const r = X.refresh(); Promise.resolve(r).then(() => scrollRestore(st)); return r; }
 let _dk = null;
