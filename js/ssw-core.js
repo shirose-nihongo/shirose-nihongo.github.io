@@ -356,8 +356,8 @@ export const EXAM_SPEC = {
   "agriculture": { n: 70, img: 0, mb: 0, info: "Resmi (MAFF/全国農業会議所 試験実施要領 1号): 学科 + 実技 (termasuk bahasa Jepang kerja), 60 menit, ±70 soal (sebagian tidak dinilai), CBT; level ±70% lulus bagi yang berpengalaman kerja 3 tahun; lulus bila di atas nilai batas yang ditetapkan NCA. Soal latihan = buatan Shirose dari buku modul resmi." },
   "livestock": { n: 70, img: 0, mb: 0, info: "Resmi (MAFF/全国農業会議所 試験実施要領 1号 — 畜産農業): 学科 + 実技, 60 menit, ±70 soal (sebagian tidak dinilai), CBT; level setara 農業技能実習評価試験 専門級. Soal latihan = buatan Shirose dari buku modul resmi." },
   "accommodation": { n: 36, img: 4, mb: 10, info: "Resmi (宿泊業技能試験センター): tulis 30 + praktik 6 = 36 soal, 60 menit." },
-  "kaigo": { n: 45, img: 0, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
-  "kaigo-jp": { n: 45, img: 4, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
+  "kaigo": { n: 20, img: 0, mb: 0, paket: 10, mix: { kb: 4, kk: 3, kom: 2, sj: 8, gb: 1 }, fill: ["gb", "sj", "kb", "kk", "kom"], info: "Format resmi (MHLW 介護特定技能評価試験(技能), CBT): 45 soal / 60 menit = tulis 40 (介護の基本 10, こころとからだ 6, コミュニケーション 4, 生活支援技術 20) + 実技 5 soal 判断等 bergambar; batas lulus tidak dipublikasikan. Di sini: 10 paket latihan @20 soal berbahasa Indonesia, isi tiap paket berbeda (tanpa soal yang sama), proporsi mengikuti ujian resmi." },
+  "kaigo-jp": { n: 20, img: 0, mb: 0, paket: 10, mix: { kt: 6, kw: 7, bn: 7 }, fill: ["bn", "kw", "kt"], info: "Format resmi (MHLW 介護日本語評価試験, CBT): 15 soal / 30 menit = 介護のことば 5 + 介護の会話・声かけ 5 (percakapan 2 orang) + 介護の文書 5 (記録, 申し送り, お知らせ, dsb.); batas lulus tidak dipublikasikan. Di sini: 10 paket latihan @20 soal, isi tiap paket berbeda (tanpa soal yang sama)." },
   "fishery": { n: 30, img: 0, mb: 12, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
   "auto-maintenance": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Info resmi (MLIT): ujian tulis 30 soal ○× / 60 menit, lulus ≥65%; ujian praktik 3 tugas / 20 menit, lulus ≥60%." },
   "jaim-machine-metal": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
@@ -376,6 +376,23 @@ export const EXAM_SPEC = {
   "wood-industry": { n: 35, img: 0, mb: 32, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Format resmi 木材産業特定技能1号測定試験: CBT, 60 menit, 35 soal (tulis 32 soal ○× + praktik 3 soal pertimbangan); huruf kanji berfurigana." },
   "auto-transport": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi; jumlah soal resmi tidak diverifikasi). Soal ditulis Shirose dari teks belajar resmi JTA (truk) dan Asosiasi Bus Jepang (bus)." },
 };
+/** Paket ujian tanpa soal yang sama antar paket: pool dideduplikasi lalu dibagi per kategori (it.cat) sesuai spec.mix. */
+function paketKuis(pool, spec, slug, count) {
+  const seen = new Set(), uniq = [];
+  for (const it of pool) { const k = `${it.q.id}|${it.q.jp || ""}|${it.img ? JSON.stringify(it.img) : ""}`; if (!seen.has(k)) { seen.add(k); uniq.push(it); } }
+  const rnd = seeded(`${slug}-paket`), by = {};
+  for (const it of uniq) (by[it.cat || "x"] = by[it.cat || "x"] || []).push(it);
+  for (const k of Object.keys(by)) by[k] = shuffle(by[k], rnd);
+  const out = [];
+  for (let n = 1; n <= count; n++) {
+    const pick = [];
+    for (const [cat, k] of Object.entries(spec.mix)) pick.push(...(by[cat] || []).splice(0, k));
+    const order = [...(spec.fill || []), ...Object.keys(by)];
+    for (let i = 0; pick.length < spec.n && i < 4 * order.length; i++) { const a = by[order[i % order.length]]; if (a && a.length) pick.push(a.shift()); }
+    out.push({ id: `full-q${n}`, title: { id: `Paket Soal ${n}`, jp: `パッケージ ${n}` }, items: shuffle(pick, rnd) });
+  }
+  return out;
+}
 /** 10 ujian penuh = sampel deterministik dari seluruh bank soal; komposisi mengikuti ujian resmi bidangnya. */
 export function fullQuizzes(pack, perQuizArg, count = 10) {
   const spec = EXAM_SPEC[pack.slug] || {};
@@ -383,6 +400,7 @@ export function fullQuizzes(pack, perQuizArg, count = 10) {
   const pool = [];
   for (const ch of pack.chapters) for (const q of (pack.quiz.bab?.[ch.id] || [])) { if (q.rev) continue; for (const it of q.items) pool.push({ ...it, bab: ch.id }); }   // q.rev = kuis ulangan (soalnya sudah ada di kuis subbab)
   if (!pool.length) return [];
+  if (spec.paket && spec.mix) return paketKuis(pool, spec, pack.slug, Math.min(count, spec.paket));
   const out = [];
   const isImg = (x) => !!x.img, isMB = (x) => !!x.mb && !x.img, isMC = (x) => !x.mb && !x.img;
   const stripTags = (t) => String(t || "").replace(/\{([^|}]*)\|[^}]*\}/g, "$1");
