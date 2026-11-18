@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261118p";
+} from "./ssw-core.js?v=20261118s";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118k";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
@@ -687,6 +687,7 @@ async function renderHafal([slug, pre]) {
     <div class="sw-panel"><div class="hf-stats"><span>Baru <b>${st.baru}</b></span><span>Belum <b>${st.belum}</b></span><span>Perlu ulang <b>${st.due}</b></span><span>Hafal <b>${st.hafal}</b></span><span>Kuasa <b>${st.kuasa}</b></span></div></div>
     <div class="hf-f sw-seg sm" style="flex-wrap:wrap;border-radius:18px">${[["semua", "Semua"], ["baru", "Baru"], ["belum", "Belum hafal"], ["ulang", "Perlu diulang"], ["hafal", "Sudah hafal"]].map(([k, t]) => `<button data-f="${k}" class="${k === "semua" ? "on" : ""}" onclick="SSW.hafalFilter('${k}')">${t}</button>`).join("")}</div>
     <div class="hf-quick"><button class="sw-chip" onclick="SSW.hafalAll(true)">☑ Semua ${esc(b.nama)}</button><button class="sw-chip" onclick="SSW.hafalAll(false)">☐ Kosongkan</button>${chs.map(c => `<button class="sw-chip" onclick="SSW.hafalOnly('${c.id}')">Hanya BAB ${c.no}</button>`).join("")}</div>
+    <div class="sw-seg sm" style="border-radius:18px;margin-bottom:10px" title="Arah kartu hafalan">${[["jp2id", "🇯🇵 Jepang → 🇮🇩 Indonesia"], ["id2jp", "🇮🇩 Indonesia → 🇯🇵 Jepang"]].map(([k, t]) => `<button data-hafdir="${k}" class="${(LSget("shirose-haf-dir", "jp2id") === "id2jp" ? "id2jp" : "jp2id") === k ? "on" : ""}" onclick="hafSetDir('${k}')">${t}</button>`).join("")}</div>
     <div class="hf-m sw-seg sm" style="border-radius:18px;margin-bottom:10px">${[["flashcard", "🃏 Flashcard"], ["matching", "🔗 Matching"], ["multiple", "✅ Jepang → Arti"], ["multiple-jp", "🈶 Arti → Jepang"]].map(([k, t]) => `<button data-m="${k}" class="${k === "flashcard" ? "on" : ""}" onclick="SSW.hafalMode('${k}')">${t}</button>`).join("")}</div>
     <div id="hf-list">${groups}</div>
     <div class="hf-bar"><span>Total kosakata unik: <b id="hf-n">0</b> kata</span><button class="btn sw-big" onclick="SSW.hafalGo()">MULAI HAFALAN ›</button></div>

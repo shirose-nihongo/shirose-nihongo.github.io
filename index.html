@@ -1398,7 +1398,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/shirose-extra.css?v=20261116m"/>
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/ssw.css?v=20261118r"/>
+<link rel="stylesheet" href="./css/ssw.css?v=20261118s"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261116c"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261114f"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261117a"/>
@@ -1471,7 +1471,7 @@ import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTer
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116m";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261118p";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261118s";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261117a";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261118u";
 const GACHA_ON = true;    // ← ubah ke true untuk menghidupkan gacha lagi (kode gacha tidak dihapus)
@@ -3815,7 +3815,13 @@ async function _renderHafalanSelectImpl(){
         </button>
       </div>
 
-      <h3 style="margin:16px 0 8px;">5. Audio</h3>
+      <h3 style="margin:16px 0 8px;">5. Arah kartu</h3>
+      <div class="haf-chip-row">
+        <button class="haf-chip ${_hafDir()==='jp2id'?'on':''}" data-hafdir="jp2id" onclick="hafSetDir('jp2id')">🇯🇵 Jepang → 🇮🇩 Indonesia</button>
+        <button class="haf-chip ${_hafDir()==='id2jp'?'on':''}" data-hafdir="id2jp" onclick="hafSetDir('id2jp')">🇮🇩 Indonesia → 🇯🇵 Jepang</button>
+      </div>
+
+      <h3 style="margin:16px 0 8px;">6. Audio</h3>
       <label style="display:inline-flex; align-items:center; gap:10px; cursor:pointer; padding:10px 14px; background:rgba(42,50,112,.4); border:1px solid var(--border); border-radius:10px;">
         <input type="checkbox" id="haf-autoaudio" ${isAutoPlayAudio()?'checked':''} onchange="setAutoPlayAudio(this.checked)" style="width:20px; height:20px;"/>
         <span>🔊 Auto-play pelafalan Jepang setelah tiap kartu</span>
@@ -3901,6 +3907,11 @@ window.hafStart = async () => {
 /* ===== Jembatan SSW → mesin hafalan JLPT (3 mode yang sama; progres di dokumen SRS terpisah "ssw-bc") ===== */
 const _SSW_SESS = "shirose-ssw-hafsess";
 const _hafSSW = () => state.hafalan_ctx === "ssw";
+/* Arah hafalan (JLPT, JFT, SSW): jp2id = Jepang → Indonesia (default), id2jp = Indonesia → Jepang. Disimpan di perangkat. */
+const _hafDir = () => { try { return localStorage.getItem("shirose-haf-dir") === "id2jp" ? "id2jp" : "jp2id"; } catch (_) { return "jp2id"; } };
+window.hafSetDir = (d) => { try { localStorage.setItem("shirose-haf-dir", d === "id2jp" ? "id2jp" : "jp2id"); } catch (_) {} state.hafalan = state.hafalan || {}; state.hafalan.dir = _hafDir(); document.querySelectorAll("[data-hafdir]").forEach(b => b.classList.toggle("on", b.dataset.hafdir === _hafDir())); };
+window.hafToggleDir = () => { hafSetDir(_hafDir() === "id2jp" ? "jp2id" : "id2jp"); if (/^#\/?hafalan\/go/.test(location.hash)) renderHafalanSession().then(h => { document.getElementById("app").innerHTML = h; }); };
+const _hafDirBtn = () => `<button class="btn ghost sm" onclick="hafToggleDir()" title="Ganti arah kartu">${_hafDir() === "id2jp" ? "🇮🇩→🇯🇵" : "🇯🇵→🇮🇩"}</button>`;
 const _hafMenu = () => (_hafSSW() && state.hafalan_back) || ((state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkRoute) ? state._rkRoute : "hafalan");
 const _hafHome = () => (_hafSSW() && state.hafalan_back) || "home";
 const _hafHomeLbl = () => _hafSSW() ? "↩ Kembali" : "🏠 Home";
@@ -3912,7 +3923,8 @@ window.sswHafalStart = async ({ items, mode, back, dir }) => {
   if (!items || !items.length) { toast("Tidak ada kosakata untuk sesi ini"); return false; }
   state._srsLevel = _sswLvl(); state.hafalan_ctx = "ssw"; state.hafalan_back = back || "ssw";
   await _loadSrs();
-  state.hafalan = { tipe: "ssw", mode: mode || "flashcard", dir: dir || "jp2id", range: "all", filter: "all" };
+  if (dir === "id2jp") { try { localStorage.setItem("shirose-haf-dir", "id2jp"); } catch (_) {} }
+  state.hafalan = { tipe: "ssw", mode: mode || "flashcard", dir: _hafDir(), range: "all", filter: "all" };
   state.hafalan_queue = items.slice().sort(() => Math.random() - 0.5);
   state.hafalan_pos = 0; state.hafalan_score = { benar: 0, salah: 0 };
   _sswSaveSess();
@@ -3983,6 +3995,7 @@ function renderHafalanFlashcard(){
   if (pos >= q.length) return renderHafalanDone();
   const it = q[pos];
   const safeFront = (it.fraw || it.front || "").replace(/"/g, "&quot;");
+  const rev = _hafDir() === "id2jp" && !it.img;   // Indonesia → Jepang: depan = arti, belakang = kata Jepang
   // Fresh reveal state each new card
   state._flashRevealed = false;
 
@@ -3998,7 +4011,7 @@ function renderHafalanFlashcard(){
       <div class="haf-topbar">
         <button class="btn ghost sm" onclick="route('${_hafMenu()}')">← Kembali</button>
         <span style="color:var(--gray); font-size:14px; font-weight:700;">${pos+1} / ${q.length}</span>
-        ${_hafFuriBtn()}${_hafRkBtn()}
+        ${_hafDirBtn()}${_hafFuriBtn()}${_hafRkBtn()}
         <button class="btn ghost sm" onclick="route('${_hafHome()}')">${_hafHomeLbl()}</button>
       </div>
 
@@ -4007,11 +4020,12 @@ function renderHafalanFlashcard(){
         <span class="flash-badge right" id="badge-ingat">✓ INGAT</span>
         <div class="flash-card enter" id="flash-card" data-front="${safeFront}" data-say="${safeFront}" onclick="hafCardTap(event)">
           <div class="no-pill">${fmtNo(it.dno ?? it.no)} · ${_hafBadge(it)}</div>
-          ${it.img ? `<div class="front imgf"><img src="${it.img}" alt="Gambar peralatan" draggable="false"></div>` : `<div class="front" style="--n:${_hafN(it)}">${_hafFront(it)}</div>`}
+          ${it.img ? `<div class="front imgf"><img src="${it.img}" alt="Gambar peralatan" draggable="false"></div>` : `${rev ? `<div class="front" style="--n:${String(_plain(it.back)).length > 14 ? 14 : 3};font-size:clamp(26px,7vw,44px);line-height:1.3">${it.back || "—"}</div>` : `<div class="front" style="--n:${_hafN(it)}">${_hafFront(it)}</div>`}`}
           <div class="back-face">
             ${it.img ? `<div class="jpname">${it.front}</div>` : ""}
+            ${rev ? `<div class="jpname haf-r" style="font-size:clamp(34px,10vw,64px);line-height:1.25">${_hafFront(it)}</div>` : ""}
             <div class="reading">${it.reading || "—"}</div>
-            <div class="arti">${it.back || "—"}</div>
+            ${rev ? "" : `<div class="arti">${it.back || "—"}</div>`}
             ${it.kimg ? `<img class="kimg" src="${it.kimg}" alt="" loading="lazy" draggable="false">` : ""}
             ${it.fungsi ? `<div class="fungsi">${it.fungsi}</div>` : ""}
           </div>
@@ -4213,29 +4227,30 @@ function renderHafalanMatching(){
 
   const batch = q.slice(pos, Math.min(pos + 5, q.length));
   // Shuffle arti side only, keep left side in natural order
-  const rights = batch.map((it, i) => ({ i, back: it.back })).sort(() => Math.random() - 0.5);
+  const dirM = _hafDir();
+  const rights = batch.map((it, i) => ({ i, back: it.back, it })).sort(() => Math.random() - 0.5);
 
   return `
     <div class="panel">
       <div class="haf-topbar">
         <button class="btn ghost sm" onclick="route('${_hafMenu()}')">← Kembali</button>
         <span style="color:var(--gray); font-size:13px;">Kelompok ${Math.floor(pos/5)+1} · ${batch.length} pasang</span>
-        ${_hafFuriBtn()}
+        ${_hafDirBtn()}${_hafFuriBtn()}
         <button class="btn ghost sm" onclick="route('${_hafHome()}')">${_hafHomeLbl()}</button>
       </div>
-      <p style="color:var(--gray); font-size:13px; margin:8px 0;">Tap kata di kiri, lalu arti yang cocok di kanan.</p>
+      <p style="color:var(--gray); font-size:13px; margin:8px 0;">${dirM === "id2jp" ? "Tap arti di kiri, lalu kata Jepang yang cocok di kanan." : "Tap kata di kiri, lalu arti yang cocok di kanan."}</p>
       <div class="match-grid">
         <div class="match-col" id="match-left">
           ${batch.map((it, i) => `
             <button class="match-item" data-side="L" data-i="${i}" onclick="matchTap('L', ${i})">
               <span class="no-badge">${fmtNo(it.dno ?? it.no)}</span>
-              ${it.img ? `<img class="match-img" src="${it.img}" alt="Alat">` : `<div class="jp haf-r">${_hafFront(it)}</div>`}
+              ${it.img ? `<img class="match-img" src="${it.img}" alt="Alat">` : dirM === "id2jp" ? `<div class="id">${it.back}</div>` : `<div class="jp haf-r">${_hafFront(it)}</div>`}
             </button>`).join("")}
         </div>
         <div class="match-col" id="match-right">
           ${rights.map(r => `
             <button class="match-item" data-side="R" data-i="${r.i}" onclick="matchTap('R', ${r.i})">
-              <div class="id">${r.back}</div>
+              ${dirM === "id2jp" ? `<div class="jp haf-r">${_hafFront(r.it)}</div>` : `<div class="id">${r.back}</div>`}
             </button>`).join("")}
         </div>
       </div>
@@ -4322,7 +4337,7 @@ function renderHafalanMultiple(){
   const it = q[pos];
 
   // Arah pertanyaan: jp2id (default: Jepang → pilih arti) atau id2jp (SSW: arti/gambar → pilih nama Jepang).
-  const dir = (_hafSSW() && (state.hafalan || {}).dir === "id2jp") ? "id2jp" : "jp2id";
+  const dir = _hafDir();
   const val = (x) => dir === "id2jp" ? _plain(x.fraw || x.front) : x.back;
   const correctVal = val(it);
   // Build 4 options: 1 correct, 3 distractors drawn from the rest of the queue (or pool).
@@ -4339,7 +4354,7 @@ function renderHafalanMultiple(){
       <div class="haf-topbar">
         <button class="btn ghost sm" onclick="route('${_hafMenu()}')">← Kembali</button>
         <span style="color:var(--gray); font-size:13px;">${pos+1} / ${q.length}</span>
-        ${_hafFuriBtn()}
+        ${_hafDirBtn()}${_hafFuriBtn()}
         <button class="btn ghost sm" onclick="route('${_hafHome()}')">${_hafHomeLbl()}</button>
       </div>
       <div class="kanji-detail" style="padding:12px 0;">
