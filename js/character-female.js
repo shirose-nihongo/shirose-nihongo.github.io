@@ -8,7 +8,7 @@ import { H } from "./character-more.js";
 const { build, SK } = H;
 
 /* ---------- profil lebar (skala X terhadap sumbu x=200) per tinggi y ---------- */
-const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [204, .68], [236, .8], [268, .58], [292, .58], [312, .72], [336, .9], [380, .85], [999, .85]];
+const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [204, .62], [236, .72], [268, .52], [292, .52], [312, .64], [336, .76], [380, .84], [999, .85]];
 const fy = (y) => { for (let i = 1; i < PROF.length; i++) if (y <= PROF[i][0]) { const [y0, f0] = PROF[i - 1], [y1, f1] = PROF[i]; return f0 + (f1 - f0) * (y - y0) / (y1 - y0); } return 1; };
 const wx = (x, y) => 200 + (x - 200) * fy(y);
 const r2 = (n) => Math.round(n * 10) / 10;
