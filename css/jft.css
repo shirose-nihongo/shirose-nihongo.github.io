@@ -109,3 +109,9 @@
 .jft-cek.ng{background:rgba(255,80,80,.12);border-color:#ff5050}
 .jft-cek .h{font-weight:800;margin-bottom:6px}
 .jft-tryoutcard{border-color:#ffd166}
+
+/* tabel ringkasan hasil */
+.jft-ringkas{width:100%;border-collapse:collapse;margin:10px 0;font-size:.92rem}
+.jft-ringkas td{padding:6px 10px;border-bottom:1px solid rgba(255,255,255,.08)}
+.jft-ringkas td:first-child{color:var(--gray-dim,#9aa3b8)}
+.jft-ringkas td:last-child{text-align:right;font-weight:700}
