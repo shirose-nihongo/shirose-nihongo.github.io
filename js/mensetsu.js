@@ -88,12 +88,27 @@ function avatarSvg() {
 /* ====================================================================
  *  HUB — 8 pulau
  * ==================================================================== */
+/** Simpan/pulihkan semua posisi scroll (window, body, dan kotak berscroll di dalam halaman). */
+function scrollSnap() {
+  const st = { w: window.scrollY, b: document.body.scrollTop, d: document.documentElement.scrollTop, els: [] };
+  document.querySelectorAll("body *").forEach(e => {
+    if (e.scrollTop > 0 && e.scrollHeight > e.clientHeight) {
+      const sel = e.id ? "#" + CSS.escape(e.id) : (e.classList[0] ? e.tagName.toLowerCase() + "." + CSS.escape(e.classList[0]) : "");
+      if (sel) st.els.push([sel, [...document.querySelectorAll(sel)].indexOf(e), e.scrollTop]);
+    }
+  });
+  return st;
+}
+function scrollBack(st) {
+  const go = () => { try { if (st.w) window.scrollTo(0, st.w); if (st.b) document.body.scrollTop = st.b; if (st.d) document.documentElement.scrollTop = st.d; st.els.forEach(([sel, i, t]) => { const e = document.querySelectorAll(sel)[i]; if (e) e.scrollTop = t; }); } catch (e) {} };
+  go(); requestAnimationFrame(go); setTimeout(go, 80); setTimeout(go, 300);
+}
 let CUR = null;                       // {fn, arg} untuk refresh tanpa lompat ke atas
 function setPage(fn, arg) { CUR = { fn, arg }; }
 async function refresh() {
   if (!CUR || !/^mensetsu/.test(location.hash.slice(1))) return;
-  const y = window.scrollY; const html = await CUR.fn(CUR.arg);
-  const app = document.getElementById("app"); if (app && typeof html === "string") { app.innerHTML = html; window.scrollTo(0, y); }
+  const st = scrollSnap(); const html = await CUR.fn(CUR.arg);
+  const app = document.getElementById("app"); if (app && typeof html === "string") { app.innerHTML = html; scrollBack(st); }
 }
 
 /* ---------------- akses: Mensetsu mengikuti akses SSW per bidang ----------------
