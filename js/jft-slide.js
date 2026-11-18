@@ -163,7 +163,7 @@ async function renderSlides(lv, bab) {
       <span class="jfs-tools">
         <button class="btn ghost sm" id="jfs-ruby" onclick="JFTS.ruby()">ふりがな ${rubyOn() ? "ON" : "OFF"}</button>
         <button class="btn ghost sm" id="jfs-auto" onclick="JFTS.auto()">🔊 Auto ${autoOn() ? "ON" : "OFF"}</button>
-        <button class="btn ghost sm" onclick="JFTS.full()">⛶</button>
+        <button class="btn ghost sm${ISI ? " gold" : ""}" id="jfs-isi" onclick="JFTS.isi()">✍️ Isi jawaban</button><button class="btn ghost sm" onclick="JFTS.full()">⛶</button>
       </span>
     </div>
     <div class="jfs-progress"><i id="jfs-bar"></i></div>
@@ -182,6 +182,10 @@ function bind() {
   st.addEventListener("touchstart", (e) => { tx = e.changedTouches[0].clientX; }, { passive: true });
   st.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 60) JFTS.go(dx < 0 ? 1 : -1); }, { passive: true });
 }
+const AK = (id) => `jfs_ans_${id}`;
+const ansGet = (id) => { try { return JSON.parse(LS.get(AK(id), "{}")) || {}; } catch (e) { return {}; } };
+const ansSet = (id, o) => LS.set(AK(id), JSON.stringify(o));
+let ISI = false;
 let DG = null;
 function dgStop() { if (DG) { try { DG.a.pause(); } catch (e) {} DG.b?.classList.remove("on"); DG = null; } }
 async function renderDengar(lv) {
@@ -195,6 +199,17 @@ async function renderDengar(lv) {
     <div style="margin-top:12px"><button class="btn ghost" onclick="route('jft')">← Kembali</button></div></div>`;
 }
 const JFTS = window.JFTS = {
+  isi() { ISI = !ISI; document.getElementById("jfs-isi")?.classList.toggle("gold", ISI); ppPaint(); },
+  isiTulis(k, v, x, y, w, h) { const all = ansGet(PP.id), A = all[PP.i] = all[PP.i] || {}; const e = A[k] = A[k] || {}; e.v = v; if (k[0] === "c") e.p = { x, y, w, h }; ansSet(PP.id, all); },
+  isiHapus(k) { const all = ansGet(PP.id); if (all[PP.i]) delete all[PP.i][k]; ansSet(PP.id, all); ppPaint(); },
+  isiBaru(ev) {
+    if (!ISI || ev.target.closest(".jfs-hot,.jfs-fld")) return;
+    const r = ev.currentTarget.getBoundingClientRect(), x = Math.min(((ev.clientX - r.left) / r.width) * 100 - 4, 88), y = Math.max(((ev.clientY - r.top) / r.height) * 100 - 2.5, 0);
+    const all = ansGet(PP.id), A = all[PP.i] = all[PP.i] || {}; const k = "c" + Date.now().toString(36);
+    A[k] = { v: "", p: { x: +x.toFixed(2), y: +y.toFixed(2), w: 9, h: 5.5 } }; ansSet(PP.id, all); ppPaint();
+    document.querySelector(`#jfs-ppt .jfs-fld:last-child input`)?.focus();
+  },
+  isiReset() { if (!confirm("Hapus semua jawaban di bab ini?")) return; ansSet(PP.id, {}); ppPaint(); },
   async dgBuka(id, el) {
     const box = el.querySelector(".jfs-dgbox"); if (box.dataset.ok) return;
     const m = await fetch(`./data/jft/ppt/${id}/m.json`).then(r => r.json()).catch(() => null);
@@ -268,18 +283,25 @@ function ppPlay(src, el, then) {
   ppStop(); const a = ppAudio = new Audio(`./data/jft/ppt/${PP.id}/${src}`); el?.classList.add("on");
   a.onended = () => { el?.classList.remove("on"); then?.(); }; a.onerror = () => el?.classList.remove("on"); a.play().catch(() => el?.classList.remove("on"));
 }
+function isiHtml(sl) {
+  const A = ansGet(PP.id)[PP.i] || {};
+  const auto = sl.au.map((a, k) => ({ k: "a" + k, x: Math.min(a.x + a.w + 3.4, 92), y: a.y, w: 6.5, h: Math.max(a.h, 5) }));
+  const own = Object.entries(A).filter(([k]) => k[0] === "c").map(([k, v]) => ({ k, ...v.p }));
+  return [...auto, ...own].map(f => `<span class="jfs-fld" style="left:${f.x}%;top:${f.y}%;width:${f.w}%;height:${f.h}%"><input value="${esc((A[f.k] || {}).v || "")}" maxlength="40" autocomplete="off" oninput="JFTS.isiTulis('${f.k}',this.value,${f.x},${f.y},${f.w},${f.h})" onclick="event.stopPropagation()">${f.k[0] === "c" ? `<i onclick="event.stopPropagation();JFTS.isiHapus('${f.k}')">×</i>` : ""}</span>`).join("");
+}
 function ppPaint() {
   const box = document.getElementById("jfs-ppt"); if (!box || !PP) return;
   const sl = PP.m.slides[PP.i];
-  box.innerHTML = `<div class="jfs-pptwrap" style="aspect-ratio:${PP.m.w}/${PP.m.h}"><img src="./data/jft/ppt/${PP.id}/${sl.img}" alt="Slide ${PP.i + 1}" draggable="false">${sl.au.map((a, k) => `<button class="jfs-hot" data-k="${k}" title="Putar audio" style="left:${a.x}%;top:${a.y}%;width:${a.w}%;height:${a.h}%" onclick="JFTS.ppPlay(${k},this)"></button>`).join("")}</div>`;
+  box.innerHTML = `<div class="jfs-pptwrap" style="aspect-ratio:${PP.m.w}/${PP.m.h}"><img src="./data/jft/ppt/${PP.id}/${sl.img}" alt="Slide ${PP.i + 1}" draggable="false">${sl.au.map((a, k) => `<button class="jfs-hot" data-k="${k}" title="Putar audio" style="left:${a.x}%;top:${a.y}%;width:${a.w}%;height:${a.h}%" onclick="JFTS.ppPlay(${k},this)"></button>`).join("")}${ISI ? isiHtml(sl) : ""}</div>`;
   document.getElementById("jfs-pos").textContent = `${PP.i + 1} / ${PP.m.slides.length}`;
   document.getElementById("jfs-bar").style.width = `${((PP.i + 1) / PP.m.slides.length) * 100}%`;
 }
 function ppBind() {
   if (!window.__jfsPpKey) { window.__jfsPpKey = true; document.addEventListener("keydown", (e) => { if (!document.getElementById("jfs-ppt")) return; if (e.key === "ArrowRight") JFTS.ppGo(1); else if (e.key === "ArrowLeft") JFTS.ppGo(-1); }); }
   const b = document.getElementById("jfs-ppt"); if (!b) return; let x0 = 0;
+  b.addEventListener("click", (e) => { if (e.target.closest(".jfs-pptwrap")) JFTS.isiBaru({ target: e.target, currentTarget: e.target.closest(".jfs-pptwrap"), clientX: e.clientX, clientY: e.clientY }); });
   b.addEventListener("touchstart", (e) => { x0 = e.changedTouches[0].clientX; }, { passive: true });
-  b.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 70) JFTS.ppGo(dx < 0 ? 1 : -1); }, { passive: true });
+  b.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (!ISI && Math.abs(dx) > 70) JFTS.ppGo(dx < 0 ? 1 : -1); }, { passive: true });
 }
 window.addEventListener("hashchange", () => { ppStop(); dgStop(); });
 export const JFTS_ROUTES = {

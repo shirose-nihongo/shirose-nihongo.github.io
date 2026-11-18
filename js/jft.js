@@ -559,7 +559,7 @@ function renderHasil() {
   </div>`;
 }
 
-import { JFTS_ROUTES } from "./jft-slide.js?v=20261119d";
+import { JFTS_ROUTES } from "./jft-slide.js?v=20261119f";
 export const JFT_ROUTES = {
   ...JFTS_ROUTES,
   jft: () => renderHub(),
