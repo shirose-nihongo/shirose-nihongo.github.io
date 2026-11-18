@@ -24,8 +24,10 @@ const bank = R("data/jft/bank.json");
 const G = R("data/jft/gambar.json");
 const pendek = (a) => { let t = String(a).replace(/^\d+\.\s*/, "").split(/[;；(（]/)[0].trim(); if (t.length > 40) t = t.slice(0, 40) + "…"; return t; };
 const hasKanji = (s) => /[一-鿿]/.test(s);
-const bersih = (w) => w.kata && w.kana && w.arti && w.kata.length <= 8 && !/[～〜（）()／]/.test(w.kata) && !w.kana.includes("／") && !/(です|ます|ました|ません|ですか|ください)$/.test(w.kata) && !/[。、]/.test(w.kata) && !/[?？]/.test(w.arti) && !/[A-Za-z]{4,}/.test(w.kata);
+const bersih = (w) => w.kata && w.kana && w.arti && w.kata.length <= 8 && !/[～〜（）()／]/.test(w.kata) && !w.kana.includes("／") && !/(です|ます|ました|ません|ですか|ください)$/.test(w.kata) && !/[。、]/.test(w.kata) && !/[?？]/.test(w.arti) && !/[A-Za-z]{4,}/.test(w.kata) && !/[0-9０-９]/.test(w.kata) && !/^(Benar|Ya|Tidak)\b/i.test(w.arti);
 const K = kos.filter(bersih), KJ = K.filter((w) => hasKanji(w.kata));
+const posKey = (w) => (Array.isArray(w.pos) && w.pos[0]) || "";
+const serupa = (w, arr) => { const same = arr.filter((x) => posKey(x) === posKey(w) && x !== w); return same.length >= 12 ? same : arr.filter((x) => x !== w); };
 const emoOf = (w) => G.w[w.kata] || G.w[w.kata.replace(/^お/, "")];
 const KG = K.filter(emoOf);
 
@@ -35,7 +37,7 @@ const fresh = (arr) => { for (let t = 0; t < 400; t++) { const w = arr[Math.floo
 function vocabQ(tipe) {
   if (tipe === "gambar") { const w = fresh(KG), e = emoOf(w); const lain = pick(KG.filter((x) => emoOf(x) !== e), 3); return mk("vocab", "Gambar ini disebut apa dalam bahasa Jepang?", w.kata, lain.map((x) => x.kata), `${e} = ${w.kata}（${w.kana}）`, "Irodori (Kotoba)", { emo: e }); }
   if (tipe === "gambar2") { const w = fresh(KG), e = emoOf(w); const lain = pick(KG.filter((x) => emoOf(x) !== e), 3); return mk("vocab", `「${w.kata}」 yang mana?`, `pic:${e}`, lain.map((x) => `pic:${emoOf(x)}`), `${w.kata} = ${e}`, "Irodori (Kotoba)"); }
-  if (tipe === "arti") { const w = fresh(K); const salah = pick(K.filter((x) => pendek(x.arti) !== pendek(w.arti)), 3); return mk("vocab", `「${w.kata}」 artinya…`, pendek(w.arti), salah.map((x) => pendek(x.arti)), `${w.kata}（${w.kana}）= ${pendek(w.arti)}`, "Irodori (Kotoba)"); }
+  if (tipe === "arti") { const w = fresh(K); const salah = pick(serupa(w, K).filter((x) => pendek(x.arti) !== pendek(w.arti)), 3); return mk("vocab", `「${w.kata}」 artinya…`, pendek(w.arti), salah.map((x) => pendek(x.arti)), `${w.kata}（${w.kana}）= ${pendek(w.arti)}`, "Irodori (Kotoba)"); }
   if (tipe === "baca") { const w = fresh(KJ); const salah = pick(KJ.filter((x) => x.kana !== w.kana), 3); return mk("vocab", `「${w.kata}」 cara bacanya…`, w.kana, salah.map((x) => x.kana), `${w.kata} dibaca ${w.kana}`, "Irodori (Kanji)"); }
   const w = fresh(KJ); const salah = pick(KJ.filter((x) => x.kata !== w.kata), 3); return mk("vocab", `「${w.kana}」 ditulis dengan kanji…`, w.kata, salah.map((x) => x.kata), `${w.kana} = ${w.kata}`, "Irodori (Kanji)");
 }
@@ -46,8 +48,8 @@ const bunOk = bun.filter((b) => b.contoh && b.arti_contoh && b.pola);
 const poolConvC = [];
 bunOk.forEach((b) => {
   const lain = bunOk.filter((x) => x.arti_contoh && x.arti_contoh !== b.arti_contoh);
-  poolConvC.push({ k: "b1:" + norm(b.contoh), mk: () => mk("conv", b.contoh, b.arti_contoh, pick(lain, 3).map((x) => x.arti_contoh), `${strip(b.contoh)} = ${b.arti_contoh} (pola ${strip(b.pola)})`, `Irodori Bunpou ${b.lv}`, { pre: "Arti kalimat ini…", emo: "💬" }) });
-  poolConvC.push({ k: "b2:" + norm(b.contoh), mk: () => mk("conv", b.contoh, b.pola, pick(bunOk.filter((x) => x.pola !== b.pola), 3).map((x) => x.pola), `${strip(b.pola)}: ${b.penjelasan || b.arti}`, `Irodori Bunpou ${b.lv}`, { pre: "Pola yang dipakai kalimat ini…", emo: "💬" }) });
+  poolConvC.push({ k: "b:" + norm(b.contoh), mk: () => mk("conv", b.contoh, b.arti_contoh, pick(lain, 3).map((x) => x.arti_contoh), `${strip(b.contoh)} = ${b.arti_contoh} (pola ${strip(b.pola)})`, `Irodori Bunpou ${b.lv}`, { pre: "Arti kalimat ini…", emo: "💬" }) });
+  poolConvC.push({ k: "b:" + norm(b.contoh), mk: () => mk("conv", b.contoh, b.pola, pick(bunOk.filter((x) => x.pola !== b.pola), 3).map((x) => x.pola), `${strip(b.pola)}: ${b.penjelasan || b.arti}`, `Irodori Bunpou ${b.lv}`, { pre: "Pola yang dipakai kalimat ini…", emo: "💬" }) });
 });
 /* ---- 3) 聴解 ---- */
 const rapi = (t) => String(t).replace(/^（アナウンス）(男|女)：/, "（アナウンス）");

@@ -28,7 +28,7 @@ _Dibuat otomatis oleh `node tools/jft-audit.mjs --md` — 2026-11-18._
 
 Contoh (maks 5 per jenis):
 
-- **duplikat-antar-paket**: ft19[40] = ft06; ft19[41] = ft06; ft19[42] = ft07; ft19[43] = ft07; ft20[38] = ft16
+- **duplikat-antar-paket**: ft19[40] = ft16; ft19[41] = ft16; ft19[42] = ft07; ft19[43] = ft07; ft20[38] = ft06
 
 ## Temuan manual & rekomendasi
 
