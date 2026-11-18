@@ -270,7 +270,17 @@ function editor(q, a) {
 }
 
 /* ---------------- aksi PERSIAPAN ---------------- */
-function rerender() { return X.refresh(); }
+/** Simpan & pulihkan posisi scroll (body/window/elemen berscroll) supaya centang tidak melempar halaman ke atas. */
+function scrollState() {
+  const st = { w: window.scrollY, b: document.body.scrollTop, d: document.documentElement.scrollTop, els: [] };
+  document.querySelectorAll("#hz-chk, #hz-list, .pp-list, .pp-ckl, #app, main").forEach(e => { if (e.scrollTop) st.els.push([e, e.scrollTop]); });
+  return st;
+}
+function scrollRestore(st) {
+  const go = () => { try { if (st.w) window.scrollTo(0, st.w); if (st.b) document.body.scrollTop = st.b; if (st.d) document.documentElement.scrollTop = st.d; st.els.forEach(([e, t]) => { if (e.isConnected) e.scrollTop = t; }); } catch (e) {} };
+  go(); requestAnimationFrame(go); setTimeout(go, 60); setTimeout(go, 200);
+}
+function rerender() { const st = scrollState(); const r = X.refresh(); Promise.resolve(r).then(() => scrollRestore(st)); return r; }
 let _dk = null;
 const PP = {
   dikte(id) {
@@ -421,7 +431,7 @@ export async function renderHafalan(p) {
     <div class="ms-actions"><button class="btn ghost" onclick="route('mensetsu-persiapan/${key}')">✍️ Edit jawaban</button><button class="btn big" onclick="route('mensetsu-prompt/${key}')">🤖 Wawancara di Claude / ChatGPT</button></div></div>`;
 }
 const $ = (id) => document.getElementById(id);
-const hRefresh = () => { const l = $("hz-list"); if (l) l.innerHTML = hList(); const n = $("hz-n"); if (n) n.textContent = `(${hSelected().length} dipilih)`; };
+const hRefresh = () => { const st = scrollState(); const l = $("hz-list"); if (l) l.innerHTML = hList(); const n = $("hz-n"); if (n) n.textContent = `(${hSelected().length} dipilih)`; scrollRestore(st); };
 const hCounts = () => { const all = hAll(), d = P.data, c = (s) => all.filter(i => (d.answers[i]?.status || "baru") === s).length; const e = $("hz-cnt"); if (e) e.textContent = `✅ ${c("hafal")} hafal · ⚠️ ${c("sulit")} sulit · ${c("baru")} belum`; };
 const hTarget = (id) => stripFuri(aktif(P.data.answers[id] || {})).trim();
 function hStopRec() { try { H.rec && H.rec.stop && H.rec.stop(); } catch (e) {} }
