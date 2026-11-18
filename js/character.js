@@ -960,6 +960,10 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     if (wp) { base = wp.base; pakaianOverlay = wp.pakaianOverlay; handheldSvg = `<g data-slot="item_tangan">${wp.handheld}</g>`; }
     else handheldSvg = `<g data-slot="item_tangan">${hItem.svg()}</g>`;
   }
+  else if (!(eq.pakaian && OUTFITS[eq.pakaian]?.g === "f")) {   // tanpa senjata: lengan ramping (gaun cewek punya lengan sendiri) (gaya sama seperti saat memegang senjata)
+    base = stripArms(base); pakaianOverlay = stripArms(pakaianOverlay);
+    handheldSvg = `<g data-slot="item_tangan">${restArms({ pakaianOverlay, skin: (SKIN_TONES[skinKey] || SKIN_TONES.light).skin })}</g>`;
+  }
 
   // Jepit & anting (slot baru)
   let jepitSvg = "", antingSvg = "";
@@ -1018,10 +1022,10 @@ export function itemCardSvg(kategori, itemId) {
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
 import { extend } from "./character-more.js?v=20261116m";
-import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
+import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z5";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z3";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z5";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);

@@ -387,6 +387,14 @@ function sleeveOf(overlaySvg) {
 }
 export function animTypeOf(item) { return item && item.animType && SPEC[item.animType] ? item.animType : null; }
 
+/* lengan RAMPING saat tidak memegang senjata (gaya yang sama dengan lengan berpose senjata) */
+export function restArms({ pakaianOverlay, skin }) {
+  const sl = sleeveOf(pakaianOverlay), sk = skin || "#f5d4b3";
+  const one = (sh, hx, out) => { const d = armPath(sh[0], sh[1], hx, 322, out); return `<path d="${d}" stroke="${sl.d}" stroke-width="22" fill="none" stroke-linecap="round"/><path d="${d}" stroke="${sl.c}" stroke-width="18" fill="none" stroke-linecap="round"/><circle cx="${hx}" cy="326" r="11" fill="${sk}" stroke="${darken(sk, .25)}" stroke-width="1.2"/>`; };
+  return one(SHL, 140, -1) + one(SHR, 260, 1);
+}
+export { stripArms };
+
 /* dipanggil renderCharacter bila senjata ber-animType. Mengembalikan base/overlay tanpa lengan statis + layer senjata. */
 export function applyWeaponPose({ item, base, pakaianOverlay, skin, state }) {
   const type = animTypeOf(item); if (!type) return null;
