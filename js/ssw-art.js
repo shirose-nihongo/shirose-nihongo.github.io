@@ -224,7 +224,7 @@ const THEMES = {
       iso(124, 172, 60, 40, 38, COL.cream) + winsRight(124, 172, 60, 38, 4, 1, "#fff6d9") +
       `<polygon points="60,134 124,100 188,134 124,134" fill="#c4584d"/><rect x="132" y="146" width="22" height="22" rx="2" fill="#a8574a"/><path d="M132 157 h22" stroke="#e8c9b0"/>` +
       box(208, 180, COL.wood) + box(224, 172, COL.wood) + box(216, 166, COL.yellow) + box(96, 196, COL.wood) +
-      `<g transform="translate(178 196)"><rect x="-12" y="-8" width="20" height="10" rx="2" fill="#f2b84b"/><rect x="-14" y="-24" width="3" height="26" fill="#555"/><rect x="-14" y="-6" width="-8" height="3" fill="#555"/><circle cx="-6" cy="3" r="3" fill="#222"/><circle cx="6" cy="3" r="3" fill="#222"/></g>` +
+      `<g transform="translate(178 196)"><rect x="-12" y="-8" width="20" height="10" rx="2" fill="#f2b84b"/><rect x="-14" y="-24" width="3" height="26" fill="#555"/><rect x="-22" y="-6" width="8" height="3" fill="#555"/><circle cx="-6" cy="3" r="3" fill="#222"/><circle cx="6" cy="3" r="3" fill="#222"/></g>` +
       person(140, 198, "#3f6fd8", "#ffd23d", .85);
   },
   /* Daur ulang: panah daur ulang, tong, tumpukan sortir */

@@ -838,6 +838,1320 @@
      }
     ],
     "sub": "b1s2"
+   },
+   {
+    "id": "vk-bab1-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 1 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「定時性」?",
+       "jp": "「定時性」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kapten pesawat"
+       },
+       {
+        "id": "pesawat terbang"
+       },
+       {
+        "id": "ketepatan waktu"
+       },
+       {
+        "id": "mekanik pesawat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「定時性」（ていじせい）= ketepatan waktu."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「前脚」?",
+       "jp": "「前脚」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "へこみ",
+        "jp": "へこみ"
+       },
+       {
+        "id": "ちゃくち",
+        "jp": "ちゃくち"
+       },
+       {
+        "id": "まえあし",
+        "jp": "まえあし"
+       },
+       {
+        "id": "きちょう",
+        "jp": "きちょう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「前脚」dibaca まえあし (roda depan (nose gear))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「前脚」?",
+       "jp": "「前脚」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ULD (Unit Load Device)"
+       },
+       {
+        "id": "roda depan (nose gear)"
+       },
+       {
+        "id": "manajemen proses kerja"
+       },
+       {
+        "id": "jembatan boarding (PBB)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「前脚」（まえあし）= roda depan (nose gear)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整備士」?",
+       "jp": "「整備士」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kapten pesawat"
+       },
+       {
+        "id": "pesawat terbang"
+       },
+       {
+        "id": "ketepatan waktu"
+       },
+       {
+        "id": "mekanik pesawat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「整備士」（せいびし）= mekanik pesawat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「便名」?",
+       "jp": "「便名」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pesawat terbang"
+       },
+       {
+        "id": "mekanik pesawat"
+       },
+       {
+        "id": "kapten pesawat"
+       },
+       {
+        "id": "nomor penerbangan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「便名」（びんめい）= nomor penerbangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「発地」?",
+       "jp": "「発地」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tempat tujuan"
+       },
+       {
+        "id": "tempat asal"
+       },
+       {
+        "id": "rencana muat"
+       },
+       {
+        "id": "penyok (dent)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「発地」（はっち）= tempat asal."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「駐機場」?",
+       "jp": "「駐機場」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ULD (Unit Load Device)"
+       },
+       {
+        "id": "lembar instruksi muat"
+       },
+       {
+        "id": "tempat parkir pesawat"
+       },
+       {
+        "id": "jembatan boarding (PBB)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「駐機場」（ちゅうきじょう）= tempat parkir pesawat."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「搭乗橋」?",
+       "jp": "「搭乗橋」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こんとろーらー",
+        "jp": "こんとろーらー"
+       },
+       {
+        "id": "きほんじょうほう",
+        "jp": "きほんじょうほう"
+       },
+       {
+        "id": "とうさいけいかく",
+        "jp": "とうさいけいかく"
+       },
+       {
+        "id": "とうじょうきょう",
+        "jp": "とうじょうきょう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「搭乗橋」dibaca とうじょうきょう (jembatan boarding (PBB))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「地上支援機材」?",
+       "jp": "「地上支援機材」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "informasi dasar penerbangan"
+       },
+       {
+        "id": "marshaller (pemandu pesawat parkir)"
+       },
+       {
+        "id": "controller (pengendali operasi)"
+       },
+       {
+        "id": "peralatan pendukung darat (GSE)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「地上支援機材」（ちじょうしえんきざい）= peralatan pendukung darat (GSE)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「駐機場」?",
+       "jp": "「駐機場」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あんぜんせい",
+        "jp": "あんぜんせい"
+       },
+       {
+        "id": "とうさいぶつ",
+        "jp": "とうさいぶつ"
+       },
+       {
+        "id": "こんとろーらー",
+        "jp": "こんとろーらー"
+       },
+       {
+        "id": "ちゅうきじょう",
+        "jp": "ちゅうきじょう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「駐機場」dibaca ちゅうきじょう (tempat parkir pesawat)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 2 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機移し」?",
+       "jp": "「機移し」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "びんめい",
+        "jp": "びんめい"
+       },
+       {
+        "id": "へこみ",
+        "jp": "へこみ"
+       },
+       {
+        "id": "ちゃくち",
+        "jp": "ちゃくち"
+       },
+       {
+        "id": "きうつし",
+        "jp": "きうつし"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「機移し」dibaca きうつし (pemindahan langsung muatan antar pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「基本情報」?",
+       "jp": "「基本情報」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きほんじょうほう",
+        "jp": "きほんじょうほう"
+       },
+       {
+        "id": "こんとろーらー",
+        "jp": "こんとろーらー"
+       },
+       {
+        "id": "ちじょうしえんきざい",
+        "jp": "ちじょうしえんきざい"
+       },
+       {
+        "id": "とうじょうきょう",
+        "jp": "とうじょうきょう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「基本情報」dibaca きほんじょうほう (informasi dasar penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭載物」?",
+       "jp": "「搭載物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rencana muat"
+       },
+       {
+        "id": "tempat asal"
+       },
+       {
+        "id": "kenyamanan"
+       },
+       {
+        "id": "muatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「搭載物」（とうさいぶつ）= muatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「牽引車」?",
+       "jp": "「牽引車」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "けんいんしゃ",
+        "jp": "けんいんしゃ"
+       },
+       {
+        "id": "あんぜんせい",
+        "jp": "あんぜんせい"
+       },
+       {
+        "id": "まーしゃらー",
+        "jp": "まーしゃらー"
+       },
+       {
+        "id": "かいてきせい",
+        "jp": "かいてきせい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「牽引車」dibaca けんいんしゃ (kendaraan penarik (towing))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「工程管理」?",
+       "jp": "「工程管理」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "jembatan boarding (PBB)"
+       },
+       {
+        "id": "ULD (Unit Load Device)"
+       },
+       {
+        "id": "manajemen proses kerja"
+       },
+       {
+        "id": "tempat parkir pesawat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「工程管理」（こうていかんり）= manajemen proses kerja."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「快適性」?",
+       "jp": "「快適性」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kenyamanan"
+       },
+       {
+        "id": "tempat asal"
+       },
+       {
+        "id": "muatan"
+       },
+       {
+        "id": "penyok (dent)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「快適性」（かいてきせい）= kenyamanan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全性」?",
+       "jp": "「安全性」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "keselamatan (sebagai tujuan operasi)"
+       },
+       {
+        "id": "marshaller (pemandu pesawat parkir)"
+       },
+       {
+        "id": "ground handling (layanan darat bandara)"
+       },
+       {
+        "id": "muatan khusus (mis. barang berbahaya)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「安全性」（あんぜんせい）= keselamatan (sebagai tujuan operasi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「マーシャラー」?",
+       "jp": "「マーシャラー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "controller (pengendali operasi)"
+       },
+       {
+        "id": "keselamatan (sebagai tujuan operasi)"
+       },
+       {
+        "id": "muatan khusus (mis. barang berbahaya)"
+       },
+       {
+        "id": "marshaller (pemandu pesawat parkir)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「マーシャラー」（まーしゃらー）= marshaller (pemandu pesawat parkir)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「凹み」?",
+       "jp": "「凹み」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyok (dent)"
+       },
+       {
+        "id": "tempat asal"
+       },
+       {
+        "id": "tempat tujuan"
+       },
+       {
+        "id": "kapten pesawat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「凹み」（へこみ）= penyok (dent)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「着地」?",
+       "jp": "「着地」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ちゃくち",
+        "jp": "ちゃくち"
+       },
+       {
+        "id": "きちょう",
+        "jp": "きちょう"
+       },
+       {
+        "id": "はっち",
+        "jp": "はっち"
+       },
+       {
+        "id": "びんめい",
+        "jp": "びんめい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「着地」dibaca ちゃくち (tempat tujuan)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 3 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「搭載計画」?",
+       "jp": "「搭載計画」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいてきせい",
+        "jp": "かいてきせい"
+       },
+       {
+        "id": "とうじょうきょう",
+        "jp": "とうじょうきょう"
+       },
+       {
+        "id": "こうていかんり",
+        "jp": "こうていかんり"
+       },
+       {
+        "id": "とうさいけいかく",
+        "jp": "とうさいけいかく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「搭載計画」dibaca とうさいけいかく (rencana muat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「特殊搭載物」?",
+       "jp": "「特殊搭載物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せつぞくとうさいぶつ",
+        "jp": "せつぞくとうさいぶつ"
+       },
+       {
+        "id": "ちじょうしえんきざい",
+        "jp": "ちじょうしえんきざい"
+       },
+       {
+        "id": "とくしゅとうさいぶつ",
+        "jp": "とくしゅとうさいぶつ"
+       },
+       {
+        "id": "ぐらんどはんどりんぐ",
+        "jp": "ぐらんどはんどりんぐ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「特殊搭載物」dibaca とくしゅとうさいぶつ (muatan khusus (mis. barang berbahaya))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「凹み」?",
+       "jp": "「凹み」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "へこみ",
+        "jp": "へこみ"
+       },
+       {
+        "id": "はっち",
+        "jp": "はっち"
+       },
+       {
+        "id": "ちゃくち",
+        "jp": "ちゃくち"
+       },
+       {
+        "id": "まえあし",
+        "jp": "まえあし"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「凹み」dibaca へこみ (penyok (dent))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「発地」?",
+       "jp": "「発地」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "まえあし",
+        "jp": "まえあし"
+       },
+       {
+        "id": "へこみ",
+        "jp": "へこみ"
+       },
+       {
+        "id": "はっち",
+        "jp": "はっち"
+       },
+       {
+        "id": "きちょう",
+        "jp": "きちょう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「発地」dibaca はっち (tempat asal)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「牽引車」?",
+       "jp": "「牽引車」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "informasi dasar penerbangan"
+       },
+       {
+        "id": "muatan sambungan (transit)"
+       },
+       {
+        "id": "kendaraan penarik (towing)"
+       },
+       {
+        "id": "manajemen proses kerja"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「牽引車」（けんいんしゃ）= kendaraan penarik (towing)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「便名」?",
+       "jp": "「便名」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "はっち",
+        "jp": "はっち"
+       },
+       {
+        "id": "まえあし",
+        "jp": "まえあし"
+       },
+       {
+        "id": "きうつし",
+        "jp": "きうつし"
+       },
+       {
+        "id": "びんめい",
+        "jp": "びんめい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「便名」dibaca びんめい (nomor penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「接続搭載物」?",
+       "jp": "「接続搭載物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kendaraan penarik (towing)"
+       },
+       {
+        "id": "manajemen proses kerja"
+       },
+       {
+        "id": "muatan sambungan (transit)"
+       },
+       {
+        "id": "informasi dasar penerbangan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「接続搭載物」（せつぞくとうさいぶつ）= muatan sambungan (transit)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「搭載物」?",
+       "jp": "「搭載物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とうさいぶつ",
+        "jp": "とうさいぶつ"
+       },
+       {
+        "id": "こうくうき",
+        "jp": "こうくうき"
+       },
+       {
+        "id": "まーしゃらー",
+        "jp": "まーしゃらー"
+       },
+       {
+        "id": "けんいんしゃ",
+        "jp": "けんいんしゃ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「搭載物」dibaca とうさいぶつ (muatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭載計画」?",
+       "jp": "「搭載計画」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tempat tujuan"
+       },
+       {
+        "id": "rencana muat"
+       },
+       {
+        "id": "kenyamanan"
+       },
+       {
+        "id": "tempat asal"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「搭載計画」（とうさいけいかく）= rencana muat."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「航空機」?",
+       "jp": "「航空機」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "まえあし",
+        "jp": "まえあし"
+       },
+       {
+        "id": "ていじせい",
+        "jp": "ていじせい"
+       },
+       {
+        "id": "びんめい",
+        "jp": "びんめい"
+       },
+       {
+        "id": "こうくうき",
+        "jp": "こうくうき"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「航空機」dibaca こうくうき (pesawat terbang)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-4",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 4 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「グランドハンドリング」?",
+       "jp": "「グランドハンドリング」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "keselamatan (sebagai tujuan operasi)"
+       },
+       {
+        "id": "ground handling (layanan darat bandara)"
+       },
+       {
+        "id": "muatan khusus (mis. barang berbahaya)"
+       },
+       {
+        "id": "pemindahan langsung muatan antar pesawat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「グランドハンドリング」（ぐらんどはんどりんぐ）= ground handling (layanan darat bandara)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「整備士」?",
+       "jp": "「整備士」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きうつし",
+        "jp": "きうつし"
+       },
+       {
+        "id": "はっち",
+        "jp": "はっち"
+       },
+       {
+        "id": "まえあし",
+        "jp": "まえあし"
+       },
+       {
+        "id": "せいびし",
+        "jp": "せいびし"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「整備士」dibaca せいびし (mekanik pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機長」?",
+       "jp": "「機長」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rencana muat"
+       },
+       {
+        "id": "tempat tujuan"
+       },
+       {
+        "id": "penyok (dent)"
+       },
+       {
+        "id": "kapten pesawat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「機長」（きちょう）= kapten pesawat."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機長」?",
+       "jp": "「機長」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいびし",
+        "jp": "せいびし"
+       },
+       {
+        "id": "ちゃくち",
+        "jp": "ちゃくち"
+       },
+       {
+        "id": "きうつし",
+        "jp": "きうつし"
+       },
+       {
+        "id": "きちょう",
+        "jp": "きちょう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「機長」dibaca きちょう (kapten pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機移し」?",
+       "jp": "「機移し」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ground handling (layanan darat bandara)"
+       },
+       {
+        "id": "keselamatan (sebagai tujuan operasi)"
+       },
+       {
+        "id": "pemindahan langsung muatan antar pesawat"
+       },
+       {
+        "id": "muatan khusus (mis. barang berbahaya)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「機移し」（きうつし）= pemindahan langsung muatan antar pesawat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ULD」?",
+       "jp": "「ULD」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lembar instruksi muat"
+       },
+       {
+        "id": "tempat parkir pesawat"
+       },
+       {
+        "id": "roda depan (nose gear)"
+       },
+       {
+        "id": "ULD (Unit Load Device)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ULD」（ゆーえるでぃー）= ULD (Unit Load Device)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「地上支援機材」?",
+       "jp": "「地上支援機材」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とうさいけいかく",
+        "jp": "とうさいけいかく"
+       },
+       {
+        "id": "ちじょうしえんきざい",
+        "jp": "ちじょうしえんきざい"
+       },
+       {
+        "id": "ぐらんどはんどりんぐ",
+        "jp": "ぐらんどはんどりんぐ"
+       },
+       {
+        "id": "とくしゅとうさいぶつ",
+        "jp": "とくしゅとうさいぶつ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「地上支援機材」dibaca ちじょうしえんきざい (peralatan pendukung darat (GSE))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「定時性」?",
+       "jp": "「定時性」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "びんめい",
+        "jp": "びんめい"
+       },
+       {
+        "id": "ていじせい",
+        "jp": "ていじせい"
+       },
+       {
+        "id": "けんいんしゃ",
+        "jp": "けんいんしゃ"
+       },
+       {
+        "id": "かいてきせい",
+        "jp": "かいてきせい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「定時性」dibaca ていじせい (ketepatan waktu)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「安全性」?",
+       "jp": "「安全性」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とうさいぶつ",
+        "jp": "とうさいぶつ"
+       },
+       {
+        "id": "ゆーえるでぃー",
+        "jp": "ゆーえるでぃー"
+       },
+       {
+        "id": "こんとろーらー",
+        "jp": "こんとろーらー"
+       },
+       {
+        "id": "あんぜんせい",
+        "jp": "あんぜんせい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「安全性」dibaca あんぜんせい (keselamatan (sebagai tujuan operasi))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「接続搭載物」?",
+       "jp": "「接続搭載物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とくしゅとうさいぶつ",
+        "jp": "とくしゅとうさいぶつ"
+       },
+       {
+        "id": "せつぞくとうさいぶつ",
+        "jp": "せつぞくとうさいぶつ"
+       },
+       {
+        "id": "いんすとらくしょん・しーと",
+        "jp": "いんすとらくしょん・しーと"
+       },
+       {
+        "id": "ちじょうしえんきざい",
+        "jp": "ちじょうしえんきざい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「接続搭載物」dibaca せつぞくとうさいぶつ (muatan sambungan (transit))."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-5",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 5 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 5"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「快適性」?",
+       "jp": "「快適性」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいてきせい",
+        "jp": "かいてきせい"
+       },
+       {
+        "id": "とうさいぶつ",
+        "jp": "とうさいぶつ"
+       },
+       {
+        "id": "あんぜんせい",
+        "jp": "あんぜんせい"
+       },
+       {
+        "id": "ゆーえるでぃー",
+        "jp": "ゆーえるでぃー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「快適性」dibaca かいてきせい (kenyamanan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「着地」?",
+       "jp": "「着地」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kapten pesawat"
+       },
+       {
+        "id": "mekanik pesawat"
+       },
+       {
+        "id": "penyok (dent)"
+       },
+       {
+        "id": "tempat tujuan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「着地」（ちゃくち）= tempat tujuan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「航空機」?",
+       "jp": "「航空機」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rencana muat"
+       },
+       {
+        "id": "mekanik pesawat"
+       },
+       {
+        "id": "pesawat terbang"
+       },
+       {
+        "id": "nomor penerbangan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「航空機」（こうくうき）= pesawat terbang."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「工程管理」?",
+       "jp": "「工程管理」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ゆーえるでぃー",
+        "jp": "ゆーえるでぃー"
+       },
+       {
+        "id": "こうていかんり",
+        "jp": "こうていかんり"
+       },
+       {
+        "id": "ちゅうきじょう",
+        "jp": "ちゅうきじょう"
+       },
+       {
+        "id": "かいてきせい",
+        "jp": "かいてきせい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「工程管理」dibaca こうていかんり (manajemen proses kerja)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「基本情報」?",
+       "jp": "「基本情報」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kendaraan penarik (towing)"
+       },
+       {
+        "id": "informasi dasar penerbangan"
+       },
+       {
+        "id": "jembatan boarding (PBB)"
+       },
+       {
+        "id": "muatan sambungan (transit)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「基本情報」（きほんじょうほう）= informasi dasar penerbangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭乗橋」?",
+       "jp": "「搭乗橋」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "jembatan boarding (PBB)"
+       },
+       {
+        "id": "muatan sambungan (transit)"
+       },
+       {
+        "id": "ULD (Unit Load Device)"
+       },
+       {
+        "id": "roda depan (nose gear)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「搭乗橋」（とうじょうきょう）= jembatan boarding (PBB)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「特殊搭載物」?",
+       "jp": "「特殊搭載物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan khusus (mis. barang berbahaya)"
+       },
+       {
+        "id": "pemindahan langsung muatan antar pesawat"
+       },
+       {
+        "id": "ground handling (layanan darat bandara)"
+       },
+       {
+        "id": "keselamatan (sebagai tujuan operasi)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「特殊搭載物」（とくしゅとうさいぶつ）= muatan khusus (mis. barang berbahaya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「インストラクション・シート」?",
+       "jp": "「インストラクション・シート」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "roda depan (nose gear)"
+       },
+       {
+        "id": "jembatan boarding (PBB)"
+       },
+       {
+        "id": "tempat parkir pesawat"
+       },
+       {
+        "id": "lembar instruksi muat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「インストラクション・シート」（いんすとらくしょん・しーと）= lembar instruksi muat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「コントローラー」?",
+       "jp": "「コントローラー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "peralatan pendukung darat (GSE)"
+       },
+       {
+        "id": "kendaraan penarik (towing)"
+       },
+       {
+        "id": "controller (pengendali operasi)"
+       },
+       {
+        "id": "muatan sambungan (transit)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「コントローラー」（こんとろーらー）= controller (pengendali operasi)."
+      }
+     }
+    ]
    }
   ],
   "bab2": [
@@ -1632,6 +2946,1022 @@
      }
     ],
     "sub": "b2s3"
+   },
+   {
+    "id": "vk-bab2-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 1 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「指差呼称」?",
+       "jp": "「指差呼称」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "やくわりぶんたん",
+        "jp": "やくわりぶんたん"
+       },
+       {
+        "id": "かんりょうほうこく",
+        "jp": "かんりょうほうこく"
+       },
+       {
+        "id": "ゆびさしこしょう",
+        "jp": "ゆびさしこしょう"
+       },
+       {
+        "id": "えんしんりょく",
+        "jp": "えんしんりょく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「指差呼称」dibaca ゆびさしこしょう (tunjuk-sebut)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「最小接続時間」?",
+       "jp": "「最小接続時間」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "memuat dan menurunkan muatan"
+       },
+       {
+        "id": "penanggung jawab kerja"
+       },
+       {
+        "id": "waktu transit minimum (MCT)"
+       },
+       {
+        "id": "menarik, penarikan (towing)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「最小接続時間」（さいしょうせつぞくじかん）= waktu transit minimum (MCT)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「完了報告」?",
+       "jp": "「完了報告」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "laporan selesai"
+       },
+       {
+        "id": "sisi pesawat"
+       },
+       {
+        "id": "high-lift loader"
+       },
+       {
+        "id": "pembagian peran"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「完了報告」（かんりょうほうこく）= laporan selesai."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「積み残し」?",
+       "jp": "「積み残し」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かもつしつ",
+        "jp": "かもつしつ"
+       },
+       {
+        "id": "ばるく・かーと",
+        "jp": "ばるく・かーと"
+       },
+       {
+        "id": "つみのこし",
+        "jp": "つみのこし"
+       },
+       {
+        "id": "てにもつ",
+        "jp": "てにもつ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「積み残し」dibaca つみのこし (muatan tertinggal)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「バルク」?",
+       "jp": "「バルク」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bulk (muatan curah, dimuat manual)"
+       },
+       {
+        "id": "bagasi tangan / bagasi penumpang"
+       },
+       {
+        "id": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "belt loader (konveyor muat bulk)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「バルク」（ばるく）= bulk (muatan curah, dimuat manual)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「荷崩れ」?",
+       "jp": "「荷崩れ」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "にくずれ",
+        "jp": "にくずれ"
+       },
+       {
+        "id": "かもつしつ",
+        "jp": "かもつしつ"
+       },
+       {
+        "id": "きそく",
+        "jp": "きそく"
+       },
+       {
+        "id": "けんいん",
+        "jp": "けんいん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「荷崩れ」dibaca にくずれ (muatan roboh)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「翼下」?",
+       "jp": "「翼下」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "どーりー",
+        "jp": "どーりー"
+       },
+       {
+        "id": "けんいん",
+        "jp": "けんいん"
+       },
+       {
+        "id": "よくか",
+        "jp": "よくか"
+       },
+       {
+        "id": "れんけつ",
+        "jp": "れんけつ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「翼下」dibaca よくか (bawah sayap)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「貨物室」?",
+       "jp": "「貨物室」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "てにもつ",
+        "jp": "てにもつ"
+       },
+       {
+        "id": "かもつしつ",
+        "jp": "かもつしつ"
+       },
+       {
+        "id": "ばるく・かーと",
+        "jp": "ばるく・かーと"
+       },
+       {
+        "id": "つみのこし",
+        "jp": "つみのこし"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「貨物室」dibaca かもつしつ (ruang kargo)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「完了報告」?",
+       "jp": "「完了報告」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かんりょうほうこく",
+        "jp": "かんりょうほうこく"
+       },
+       {
+        "id": "さぎょうせきにんしゃ",
+        "jp": "さぎょうせきにんしゃ"
+       },
+       {
+        "id": "ゆびさしこしょう",
+        "jp": "ゆびさしこしょう"
+       },
+       {
+        "id": "やくわりぶんたん",
+        "jp": "やくわりぶんたん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「完了報告」dibaca かんりょうほうこく (laporan selesai)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「指差呼称」?",
+       "jp": "「指差呼称」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tunjuk-sebut"
+       },
+       {
+        "id": "ruang kargo"
+       },
+       {
+        "id": "muatan roboh"
+       },
+       {
+        "id": "sisi pesawat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「指差呼称」（ゆびさしこしょう）= tunjuk-sebut."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab2-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 2 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機側」?",
+       "jp": "「機側」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "てにもつ",
+        "jp": "てにもつ"
+       },
+       {
+        "id": "にくずれ",
+        "jp": "にくずれ"
+       },
+       {
+        "id": "どーりー",
+        "jp": "どーりー"
+       },
+       {
+        "id": "きそく",
+        "jp": "きそく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「機側」dibaca きそく (sisi pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「連結」?",
+       "jp": "「連結」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "menyambung, sambungan"
+       },
+       {
+        "id": "label identifikasi kargo"
+       },
+       {
+        "id": "penanggung jawab kerja"
+       },
+       {
+        "id": "gaya sentrifugal"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「連結」（れんけつ）= menyambung, sambungan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「積み残し」?",
+       "jp": "「積み残し」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pembagian peran"
+       },
+       {
+        "id": "muatan tertinggal"
+       },
+       {
+        "id": "high-lift loader"
+       },
+       {
+        "id": "gaya sentrifugal"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「積み残し」（つみのこし）= muatan tertinggal."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「翼下」?",
+       "jp": "「翼下」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan roboh"
+       },
+       {
+        "id": "ruang kargo"
+       },
+       {
+        "id": "sisi pesawat"
+       },
+       {
+        "id": "bawah sayap"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「翼下」（よくか）= bawah sayap."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「貨物室」?",
+       "jp": "「貨物室」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ruang kargo"
+       },
+       {
+        "id": "tunjuk-sebut"
+       },
+       {
+        "id": "muatan roboh"
+       },
+       {
+        "id": "bawah sayap"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「貨物室」（かもつしつ）= ruang kargo."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「荷崩れ」?",
+       "jp": "「荷崩れ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tunjuk-sebut"
+       },
+       {
+        "id": "muatan roboh"
+       },
+       {
+        "id": "ruang kargo"
+       },
+       {
+        "id": "sisi pesawat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「荷崩れ」（にくずれ）= muatan roboh."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「作業責任者」?",
+       "jp": "「作業責任者」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penanggung jawab kerja"
+       },
+       {
+        "id": "menyambung, sambungan"
+       },
+       {
+        "id": "muatan tertinggal"
+       },
+       {
+        "id": "label identifikasi kargo"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「作業責任者」（さぎょうせきにんしゃ）= penanggung jawab kerja."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「連結」?",
+       "jp": "「連結」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "てにもつ",
+        "jp": "てにもつ"
+       },
+       {
+        "id": "ばるく",
+        "jp": "ばるく"
+       },
+       {
+        "id": "れんけつ",
+        "jp": "れんけつ"
+       },
+       {
+        "id": "にくずれ",
+        "jp": "にくずれ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「連結」dibaca れんけつ (menyambung, sambungan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「役割分担」?",
+       "jp": "「役割分担」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "high-lift loader"
+       },
+       {
+        "id": "pembagian peran"
+       },
+       {
+        "id": "laporan selesai"
+       },
+       {
+        "id": "towing tractor"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「役割分担」（やくわりぶんたん）= pembagian peran."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「最小接続時間」?",
+       "jp": "「最小接続時間」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さぎょうせきにんしゃ",
+        "jp": "さぎょうせきにんしゃ"
+       },
+       {
+        "id": "さいしょうせつぞくじかん",
+        "jp": "さいしょうせつぞくじかん"
+       },
+       {
+        "id": "かもつしきべつらべる",
+        "jp": "かもつしきべつらべる"
+       },
+       {
+        "id": "はいりふと・ろーだー",
+        "jp": "はいりふと・ろーだー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「最小接続時間」dibaca さいしょうせつぞくじかん (waktu transit minimum (MCT))."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab2-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 3 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「搭降載」?",
+       "jp": "「搭降載」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "memuat dan menurunkan muatan"
+       },
+       {
+        "id": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "menarik, penarikan (towing)"
+       },
+       {
+        "id": "waktu transit minimum (MCT)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「搭降載」（とうこうさい）= memuat dan menurunkan muatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「貨物識別ラベル」?",
+       "jp": "「貨物識別ラベル」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "menarik, penarikan (towing)"
+       },
+       {
+        "id": "waktu transit minimum (MCT)"
+       },
+       {
+        "id": "label identifikasi kargo"
+       },
+       {
+        "id": "penanggung jawab kerja"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「貨物識別ラベル」（かもつしきべつらべる）= label identifikasi kargo."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「バルク・カート」?",
+       "jp": "「バルク・カート」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "memuat dan menurunkan muatan"
+       },
+       {
+        "id": "bagasi tangan / bagasi penumpang"
+       },
+       {
+        "id": "belt loader (konveyor muat bulk)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「バルク・カート」（ばるく・かーと）= bulk cart (kereta muatan curah)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ハイリフト・ローダー」?",
+       "jp": "「ハイリフト・ローダー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "laporan selesai"
+       },
+       {
+        "id": "gaya sentrifugal"
+       },
+       {
+        "id": "towing tractor"
+       },
+       {
+        "id": "high-lift loader"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ハイリフト・ローダー」（はいりふと・ろーだー）= high-lift loader."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「トーイング・トラクター」?",
+       "jp": "「トーイング・トラクター」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "high-lift loader"
+       },
+       {
+        "id": "pembagian peran"
+       },
+       {
+        "id": "laporan selesai"
+       },
+       {
+        "id": "towing tractor"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「トーイング・トラクター」（とーいんぐ・とらくたー）= towing tractor."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「搭降載」?",
+       "jp": "「搭降載」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とうこうさい",
+        "jp": "とうこうさい"
+       },
+       {
+        "id": "けんいん",
+        "jp": "けんいん"
+       },
+       {
+        "id": "つみのこし",
+        "jp": "つみのこし"
+       },
+       {
+        "id": "べると・ろーだー",
+        "jp": "べると・ろーだー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「搭降載」dibaca とうこうさい (memuat dan menurunkan muatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「手荷物」?",
+       "jp": "「手荷物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かもつしつ",
+        "jp": "かもつしつ"
+       },
+       {
+        "id": "きそく",
+        "jp": "きそく"
+       },
+       {
+        "id": "てにもつ",
+        "jp": "てにもつ"
+       },
+       {
+        "id": "ばるく",
+        "jp": "ばるく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「手荷物」dibaca てにもつ (bagasi tangan / bagasi penumpang)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「貨物識別ラベル」?",
+       "jp": "「貨物識別ラベル」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さぎょうせきにんしゃ",
+        "jp": "さぎょうせきにんしゃ"
+       },
+       {
+        "id": "かもつしきべつらべる",
+        "jp": "かもつしきべつらべる"
+       },
+       {
+        "id": "かんりょうほうこく",
+        "jp": "かんりょうほうこく"
+       },
+       {
+        "id": "とーいんぐ・とらくたー",
+        "jp": "とーいんぐ・とらくたー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「貨物識別ラベル」dibaca かもつしきべつらべる (label identifikasi kargo)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ベルト・ローダー」?",
+       "jp": "「ベルト・ローダー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bagasi tangan / bagasi penumpang"
+       },
+       {
+        "id": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "belt loader (konveyor muat bulk)"
+       },
+       {
+        "id": "bulk (muatan curah, dimuat manual)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「ベルト・ローダー」（べると・ろーだー）= belt loader (konveyor muat bulk)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「手荷物」?",
+       "jp": "「手荷物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bagasi tangan / bagasi penumpang"
+       },
+       {
+        "id": "bulk (muatan curah, dimuat manual)"
+       },
+       {
+        "id": "belt loader (konveyor muat bulk)"
+       },
+       {
+        "id": "bulk cart (kereta muatan curah)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「手荷物」（てにもつ）= bagasi tangan / bagasi penumpang."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab2-4",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 4 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「機側」?",
+       "jp": "「機側」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan roboh"
+       },
+       {
+        "id": "sisi pesawat"
+       },
+       {
+        "id": "ruang kargo"
+       },
+       {
+        "id": "tunjuk-sebut"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「機側」（きそく）= sisi pesawat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「牽引」?",
+       "jp": "「牽引」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "label identifikasi kargo"
+       },
+       {
+        "id": "menarik, penarikan (towing)"
+       },
+       {
+        "id": "memuat dan menurunkan muatan"
+       },
+       {
+        "id": "waktu transit minimum (MCT)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「牽引」（けんいん）= menarik, penarikan (towing)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「牽引」?",
+       "jp": "「牽引」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きそく",
+        "jp": "きそく"
+       },
+       {
+        "id": "けんいん",
+        "jp": "けんいん"
+       },
+       {
+        "id": "にくずれ",
+        "jp": "にくずれ"
+       },
+       {
+        "id": "つみのこし",
+        "jp": "つみのこし"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「牽引」dibaca けんいん (menarik, penarikan (towing))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「作業責任者」?",
+       "jp": "「作業責任者」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さいしょうせつぞくじかん",
+        "jp": "さいしょうせつぞくじかん"
+       },
+       {
+        "id": "とーいんぐ・とらくたー",
+        "jp": "とーいんぐ・とらくたー"
+       },
+       {
+        "id": "さぎょうせきにんしゃ",
+        "jp": "さぎょうせきにんしゃ"
+       },
+       {
+        "id": "かもつしきべつらべる",
+        "jp": "かもつしきべつらべる"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「作業責任者」dibaca さぎょうせきにんしゃ (penanggung jawab kerja)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「遠心力」?",
+       "jp": "「遠心力」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "えんしんりょく",
+        "jp": "えんしんりょく"
+       },
+       {
+        "id": "やくわりぶんたん",
+        "jp": "やくわりぶんたん"
+       },
+       {
+        "id": "ゆびさしこしょう",
+        "jp": "ゆびさしこしょう"
+       },
+       {
+        "id": "かもつしつ",
+        "jp": "かもつしつ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「遠心力」dibaca えんしんりょく (gaya sentrifugal)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「役割分担」?",
+       "jp": "「役割分担」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とうこうさい",
+        "jp": "とうこうさい"
+       },
+       {
+        "id": "ゆびさしこしょう",
+        "jp": "ゆびさしこしょう"
+       },
+       {
+        "id": "べると・ろーだー",
+        "jp": "べると・ろーだー"
+       },
+       {
+        "id": "やくわりぶんたん",
+        "jp": "やくわりぶんたん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「役割分担」dibaca やくわりぶんたん (pembagian peran)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ドーリー」?",
+       "jp": "「ドーリー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dolly (kereta bawa kontainer/palet)"
+       },
+       {
+        "id": "bulk cart (kereta muatan curah)"
+       },
+       {
+        "id": "belt loader (konveyor muat bulk)"
+       },
+       {
+        "id": "bulk (muatan curah, dimuat manual)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ドーリー」（どーりー）= dolly (kereta bawa kontainer/palet)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「遠心力」?",
+       "jp": "「遠心力」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "laporan selesai"
+       },
+       {
+        "id": "gaya sentrifugal"
+       },
+       {
+        "id": "muatan tertinggal"
+       },
+       {
+        "id": "high-lift loader"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「遠心力」（えんしんりょく）= gaya sentrifugal."
+      }
+     }
+    ]
    }
   ],
   "bab3": [
@@ -1966,6 +4296,712 @@
      }
     ],
     "sub": "b3s1"
+   },
+   {
+    "id": "vk-bab3-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 1 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「機内空調」?",
+       "jp": "「機内空調」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mobil air (water car)"
+       },
+       {
+        "id": "pendingin udara kabin"
+       },
+       {
+        "id": "mobil pengurasan air"
+       },
+       {
+        "id": "listrik darat (GPU)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「機内空調」（きないくうちょう）= pendingin udara kabin."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「飲料水」?",
+       "jp": "「飲料水」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengisian air"
+       },
+       {
+        "id": "air kotor"
+       },
+       {
+        "id": "air minum"
+       },
+       {
+        "id": "pengurasan air"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「飲料水」（いんりょうすい）= air minum."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「排水」?",
+       "jp": "「排水」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "おすいしゃ",
+        "jp": "おすいしゃ"
+       },
+       {
+        "id": "はいすい",
+        "jp": "はいすい"
+       },
+       {
+        "id": "おすい",
+        "jp": "おすい"
+       },
+       {
+        "id": "だつたんそ",
+        "jp": "だつたんそ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「排水」dibaca はいすい (pengurasan air)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「殺菌消臭剤」?",
+       "jp": "「殺菌消臭剤」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほじょどうりょくそうち",
+        "jp": "ほじょどうりょくそうち"
+       },
+       {
+        "id": "ちじょうくうちょうきょうきゅうせつび",
+        "jp": "ちじょうくうちょうきょうきゅうせつび"
+       },
+       {
+        "id": "さっきんしょうしゅうざい",
+        "jp": "さっきんしょうしゅうざい"
+       },
+       {
+        "id": "ちじょうでんげん",
+        "jp": "ちじょうでんげん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「殺菌消臭剤」dibaca さっきんしょうしゅうざい (disinfektan dan penghilang bau)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「地上空調供給設備」?",
+       "jp": "「地上空調供給設備」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "APU (Auxiliary Power Unit)"
+       },
+       {
+        "id": "fasilitas pasokan AC darat"
+       },
+       {
+        "id": "disinfektan dan penghilang bau"
+       },
+       {
+        "id": "mobil toilet (lavatory car)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「地上空調供給設備」（ちじょうくうちょうきょうきゅうせつび）= fasilitas pasokan AC darat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「地上電源」?",
+       "jp": "「地上電源」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mobil pengurasan air"
+       },
+       {
+        "id": "pendingin udara kabin"
+       },
+       {
+        "id": "mobil air (water car)"
+       },
+       {
+        "id": "listrik darat (GPU)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「地上電源」（ちじょうでんげん）= listrik darat (GPU)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「補助動力装置」?",
+       "jp": "「補助動力装置」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きゅうすいしゃ",
+        "jp": "きゅうすいしゃ"
+       },
+       {
+        "id": "ほじょどうりょくそうち",
+        "jp": "ほじょどうりょくそうち"
+       },
+       {
+        "id": "さっきんしょうしゅうざい",
+        "jp": "さっきんしょうしゅうざい"
+       },
+       {
+        "id": "ちじょうでんげん",
+        "jp": "ちじょうでんげん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「補助動力装置」dibaca ほじょどうりょくそうち (APU (Auxiliary Power Unit))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「地上空調供給設備」?",
+       "jp": "「地上空調供給設備」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さっきんしょうしゅうざい",
+        "jp": "さっきんしょうしゅうざい"
+       },
+       {
+        "id": "ちじょうでんげん",
+        "jp": "ちじょうでんげん"
+       },
+       {
+        "id": "ちじょうくうちょうきょうきゅうせつび",
+        "jp": "ちじょうくうちょうきょうきゅうせつび"
+       },
+       {
+        "id": "ほじょどうりょくそうち",
+        "jp": "ほじょどうりょくそうち"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「地上空調供給設備」dibaca ちじょうくうちょうきょうきゅうせつび (fasilitas pasokan AC darat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「飲料水」?",
+       "jp": "「飲料水」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ちじょうでんげん",
+        "jp": "ちじょうでんげん"
+       },
+       {
+        "id": "きないくうちょう",
+        "jp": "きないくうちょう"
+       },
+       {
+        "id": "いんりょうすい",
+        "jp": "いんりょうすい"
+       },
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「飲料水」dibaca いんりょうすい (air minum)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「給水車」?",
+       "jp": "「給水車」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "listrik darat (GPU)"
+       },
+       {
+        "id": "mobil air (water car)"
+       },
+       {
+        "id": "mobil pengurasan air"
+       },
+       {
+        "id": "pendingin udara kabin"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「給水車」（きゅうすいしゃ）= mobil air (water car)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab3-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 2 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機内空調」?",
+       "jp": "「機内空調」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きないくうちょう",
+        "jp": "きないくうちょう"
+       },
+       {
+        "id": "いんりょうすい",
+        "jp": "いんりょうすい"
+       },
+       {
+        "id": "きゅうすいしゃ",
+        "jp": "きゅうすいしゃ"
+       },
+       {
+        "id": "ちじょうでんげん",
+        "jp": "ちじょうでんげん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「機内空調」dibaca きないくうちょう (pendingin udara kabin)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「汚水車」?",
+       "jp": "「汚水車」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "だつたんそ",
+        "jp": "だつたんそ"
+       },
+       {
+        "id": "きゅうすい",
+        "jp": "きゅうすい"
+       },
+       {
+        "id": "おすいしゃ",
+        "jp": "おすいしゃ"
+       },
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「汚水車」dibaca おすいしゃ (mobil toilet (lavatory car))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「脱炭素」?",
+       "jp": "「脱炭素」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       },
+       {
+        "id": "はいすい",
+        "jp": "はいすい"
+       },
+       {
+        "id": "だつたんそ",
+        "jp": "だつたんそ"
+       },
+       {
+        "id": "おすい",
+        "jp": "おすい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「脱炭素」dibaca だつたんそ (dekarbonisasi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「汚水」?",
+       "jp": "「汚水」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きゅうすい",
+        "jp": "きゅうすい"
+       },
+       {
+        "id": "はいすい",
+        "jp": "はいすい"
+       },
+       {
+        "id": "おすい",
+        "jp": "おすい"
+       },
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「汚水」dibaca おすい (air kotor)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「給水車」?",
+       "jp": "「給水車」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ちじょうでんげん",
+        "jp": "ちじょうでんげん"
+       },
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       },
+       {
+        "id": "おすいしゃ",
+        "jp": "おすいしゃ"
+       },
+       {
+        "id": "きゅうすいしゃ",
+        "jp": "きゅうすいしゃ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「給水車」dibaca きゅうすいしゃ (mobil air (water car))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「汚水車」?",
+       "jp": "「汚水車」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "disinfektan dan penghilang bau"
+       },
+       {
+        "id": "mobil toilet (lavatory car)"
+       },
+       {
+        "id": "fasilitas pasokan AC darat"
+       },
+       {
+        "id": "APU (Auxiliary Power Unit)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「汚水車」（おすいしゃ）= mobil toilet (lavatory car)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「排水車」?",
+       "jp": "「排水車」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "おすいしゃ",
+        "jp": "おすいしゃ"
+       },
+       {
+        "id": "だつたんそ",
+        "jp": "だつたんそ"
+       },
+       {
+        "id": "きゅうすい",
+        "jp": "きゅうすい"
+       },
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「排水車」dibaca はいすいしゃ (mobil pengurasan air)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「給水」?",
+       "jp": "「給水」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       },
+       {
+        "id": "だつたんそ",
+        "jp": "だつたんそ"
+       },
+       {
+        "id": "きゅうすい",
+        "jp": "きゅうすい"
+       },
+       {
+        "id": "おすいしゃ",
+        "jp": "おすいしゃ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「給水」dibaca きゅうすい (pengisian air)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「脱炭素」?",
+       "jp": "「脱炭素」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengurasan air"
+       },
+       {
+        "id": "dekarbonisasi"
+       },
+       {
+        "id": "air minum"
+       },
+       {
+        "id": "pengisian air"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「脱炭素」（だつたんそ）= dekarbonisasi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「給水」?",
+       "jp": "「給水」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengisian air"
+       },
+       {
+        "id": "pengurasan air"
+       },
+       {
+        "id": "air minum"
+       },
+       {
+        "id": "dekarbonisasi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「給水」（きゅうすい）= pengisian air."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab3-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 3 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「殺菌消臭剤」?",
+       "jp": "「殺菌消臭剤」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "APU (Auxiliary Power Unit)"
+       },
+       {
+        "id": "fasilitas pasokan AC darat"
+       },
+       {
+        "id": "disinfektan dan penghilang bau"
+       },
+       {
+        "id": "mobil toilet (lavatory car)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「殺菌消臭剤」（さっきんしょうしゅうざい）= disinfektan dan penghilang bau."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「排水」?",
+       "jp": "「排水」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengurasan air"
+       },
+       {
+        "id": "pengisian air"
+       },
+       {
+        "id": "dekarbonisasi"
+       },
+       {
+        "id": "listrik darat (GPU)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「排水」（はいすい）= pengurasan air."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「排水車」?",
+       "jp": "「排水車」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pendingin udara kabin"
+       },
+       {
+        "id": "listrik darat (GPU)"
+       },
+       {
+        "id": "mobil pengurasan air"
+       },
+       {
+        "id": "mobil air (water car)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「排水車」（はいすいしゃ）= mobil pengurasan air."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「補助動力装置」?",
+       "jp": "「補助動力装置」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "APU (Auxiliary Power Unit)"
+       },
+       {
+        "id": "pendingin udara kabin"
+       },
+       {
+        "id": "fasilitas pasokan AC darat"
+       },
+       {
+        "id": "mobil toilet (lavatory car)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「補助動力装置」（ほじょどうりょくそうち）= APU (Auxiliary Power Unit)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「地上電源」?",
+       "jp": "「地上電源」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ちじょうでんげん",
+        "jp": "ちじょうでんげん"
+       },
+       {
+        "id": "きないくうちょう",
+        "jp": "きないくうちょう"
+       },
+       {
+        "id": "いんりょうすい",
+        "jp": "いんりょうすい"
+       },
+       {
+        "id": "きゅうすいしゃ",
+        "jp": "きゅうすいしゃ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「地上電源」dibaca ちじょうでんげん (listrik darat (GPU))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「汚水」?",
+       "jp": "「汚水」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "air kotor"
+       },
+       {
+        "id": "pengurasan air"
+       },
+       {
+        "id": "air minum"
+       },
+       {
+        "id": "dekarbonisasi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「汚水」（おすい）= air kotor."
+      }
+     }
+    ]
    }
   ],
   "bab4": [
@@ -2592,6 +5628,808 @@
      }
     ],
     "sub": "b4s2"
+   },
+   {
+    "id": "vk-bab4-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 4 · 1 (dari daftar kosakata)",
+     "jp": "第4章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「航空貨物」?",
+       "jp": "「航空貨物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふぉーくりふと",
+        "jp": "ふぉーくりふと"
+       },
+       {
+        "id": "こうくうかもつ",
+        "jp": "こうくうかもつ"
+       },
+       {
+        "id": "くれーむ・たぐ",
+        "jp": "くれーむ・たぐ"
+       },
+       {
+        "id": "てにもつしわけ",
+        "jp": "てにもつしわけ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「航空貨物」dibaca こうくうかもつ (kargo udara)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「水濡れ厳禁」?",
+       "jp": "「水濡れ厳禁」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "じゅうりょうぶつ",
+        "jp": "じゅうりょうぶつ"
+       },
+       {
+        "id": "みずぬれげんきん",
+        "jp": "みずぬれげんきん"
+       },
+       {
+        "id": "ゆきさきたぐ",
+        "jp": "ゆきさきたぐ"
+       },
+       {
+        "id": "とりあつかいちゅうい",
+        "jp": "とりあつかいちゅうい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「水濡れ厳禁」dibaca みずぬれげんきん (dilarang kena air)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「取扱注意」?",
+       "jp": "「取扱注意」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とりあつかいちゅうい",
+        "jp": "とりあつかいちゅうい"
+       },
+       {
+        "id": "はんでぃたーみなる",
+        "jp": "はんでぃたーみなる"
+       },
+       {
+        "id": "みずぬれげんきん",
+        "jp": "みずぬれげんきん"
+       },
+       {
+        "id": "かもつうんそうやっかん",
+        "jp": "かもつうんそうやっかん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「取扱注意」dibaca とりあつかいちゅうい (tangani dengan hati-hati)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「フォークリフト」?",
+       "jp": "「フォークリフト」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "berikat"
+       },
+       {
+        "id": "forklift"
+       },
+       {
+        "id": "salah muat"
+       },
+       {
+        "id": "tag tujuan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「フォークリフト」（ふぉーくりふと）= forklift."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「生鮮食料品」?",
+       "jp": "「生鮮食料品」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "jangan dibalik"
+       },
+       {
+        "id": "makanan segar"
+       },
+       {
+        "id": "salah muat"
+       },
+       {
+        "id": "pengirim barang"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「生鮮食料品」（せいせんしょくりょうひん）= makanan segar."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「重量物」?",
+       "jp": "「重量物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "じゅうりょうぶつ",
+        "jp": "じゅうりょうぶつ"
+       },
+       {
+        "id": "みずぬれげんきん",
+        "jp": "みずぬれげんきん"
+       },
+       {
+        "id": "くれーむ・たぐ",
+        "jp": "くれーむ・たぐ"
+       },
+       {
+        "id": "ふぉーくりふと",
+        "jp": "ふぉーくりふと"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「重量物」dibaca じゅうりょうぶつ (barang berat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「取扱注意」?",
+       "jp": "「取扱注意」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "handheld terminal (HHT)"
+       },
+       {
+        "id": "care mark (tanda penanganan)"
+       },
+       {
+        "id": "tangani dengan hati-hati"
+       },
+       {
+        "id": "perjanjian angkutan kargo"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「取扱注意」（とりあつかいちゅうい）= tangani dengan hati-hati."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「誤搭載」?",
+       "jp": "「誤搭載」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "つうかん",
+        "jp": "つうかん"
+       },
+       {
+        "id": "けあまーく",
+        "jp": "けあまーく"
+       },
+       {
+        "id": "ごとうさい",
+        "jp": "ごとうさい"
+       },
+       {
+        "id": "てんちむよう",
+        "jp": "てんちむよう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「誤搭載」dibaca ごとうさい (salah muat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ハンディターミナル」?",
+       "jp": "「ハンディターミナル」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tangani dengan hati-hati"
+       },
+       {
+        "id": "perjanjian angkutan kargo"
+       },
+       {
+        "id": "handheld terminal (HHT)"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「ハンディターミナル」（はんでぃたーみなる）= handheld terminal (HHT)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「通関」?",
+       "jp": "「通関」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "つうかん",
+        "jp": "つうかん"
+       },
+       {
+        "id": "ほぜい",
+        "jp": "ほぜい"
+       },
+       {
+        "id": "けあまーく",
+        "jp": "けあまーく"
+       },
+       {
+        "id": "かもつしわけ",
+        "jp": "かもつしわけ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「通関」dibaca つうかん (bea cukai, proses kepabeanan)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab4-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 4 · 2 (dari daftar kosakata)",
+     "jp": "第4章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「貨物仕分け」?",
+       "jp": "「貨物仕分け」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyortiran bagasi"
+       },
+       {
+        "id": "penyortiran kargo"
+       },
+       {
+        "id": "dilarang kena air"
+       },
+       {
+        "id": "jangan dibalik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「貨物仕分け」（かもつしわけ）= penyortiran kargo."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「天地無用」?",
+       "jp": "「天地無用」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "makanan segar"
+       },
+       {
+        "id": "barang berat"
+       },
+       {
+        "id": "kargo udara"
+       },
+       {
+        "id": "jangan dibalik"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「天地無用」（てんちむよう）= jangan dibalik."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「水濡れ厳禁」?",
+       "jp": "「水濡れ厳禁」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyortiran bagasi"
+       },
+       {
+        "id": "pengirim barang"
+       },
+       {
+        "id": "penyortiran kargo"
+       },
+       {
+        "id": "dilarang kena air"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「水濡れ厳禁」（みずぬれげんきん）= dilarang kena air."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「手荷物仕分け」?",
+       "jp": "「手荷物仕分け」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "てにもつしわけ",
+        "jp": "てにもつしわけ"
+       },
+       {
+        "id": "こうくうかもつ",
+        "jp": "こうくうかもつ"
+       },
+       {
+        "id": "くれーむ・たぐ",
+        "jp": "くれーむ・たぐ"
+       },
+       {
+        "id": "てんちむよう",
+        "jp": "てんちむよう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「手荷物仕分け」dibaca てにもつしわけ (penyortiran bagasi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「保税」?",
+       "jp": "「保税」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tag tujuan"
+       },
+       {
+        "id": "forklift"
+       },
+       {
+        "id": "salah muat"
+       },
+       {
+        "id": "berikat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「保税」（ほぜい）= berikat."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「行先タグ」?",
+       "jp": "「行先タグ」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "におくりにん",
+        "jp": "におくりにん"
+       },
+       {
+        "id": "かもつしわけ",
+        "jp": "かもつしわけ"
+       },
+       {
+        "id": "けあまーく",
+        "jp": "けあまーく"
+       },
+       {
+        "id": "ゆきさきたぐ",
+        "jp": "ゆきさきたぐ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「行先タグ」dibaca ゆきさきたぐ (tag tujuan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「荷送人」?",
+       "jp": "「荷送人」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "におくりにん",
+        "jp": "におくりにん"
+       },
+       {
+        "id": "ふぉーくりふと",
+        "jp": "ふぉーくりふと"
+       },
+       {
+        "id": "ゆきさきたぐ",
+        "jp": "ゆきさきたぐ"
+       },
+       {
+        "id": "ごとうさい",
+        "jp": "ごとうさい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「荷送人」dibaca におくりにん (pengirim barang)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「手荷物仕分け」?",
+       "jp": "「手荷物仕分け」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyortiran bagasi"
+       },
+       {
+        "id": "barang berat"
+       },
+       {
+        "id": "dilarang kena air"
+       },
+       {
+        "id": "penyortiran kargo"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「手荷物仕分け」（てにもつしわけ）= penyortiran bagasi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「貨物運送約款」?",
+       "jp": "「貨物運送約款」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perjanjian angkutan kargo"
+       },
+       {
+        "id": "tangani dengan hati-hati"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan"
+       },
+       {
+        "id": "handheld terminal (HHT)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「貨物運送約款」（かもつうんそうやっかん）= perjanjian angkutan kargo."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「誤搭載」?",
+       "jp": "「誤搭載」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tag tujuan"
+       },
+       {
+        "id": "forklift"
+       },
+       {
+        "id": "kargo udara"
+       },
+       {
+        "id": "salah muat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「誤搭載」（ごとうさい）= salah muat."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab4-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 4 · 3 (dari daftar kosakata)",
+     "jp": "第4章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「航空貨物」?",
+       "jp": "「航空貨物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "makanan segar"
+       },
+       {
+        "id": "tag tujuan"
+       },
+       {
+        "id": "salah muat"
+       },
+       {
+        "id": "kargo udara"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「航空貨物」（こうくうかもつ）= kargo udara."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「保税」?",
+       "jp": "「保税」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ゆきさきたぐ",
+        "jp": "ゆきさきたぐ"
+       },
+       {
+        "id": "つうかん",
+        "jp": "つうかん"
+       },
+       {
+        "id": "ほぜい",
+        "jp": "ほぜい"
+       },
+       {
+        "id": "ごとうさい",
+        "jp": "ごとうさい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「保税」dibaca ほぜい (berikat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「貨物運送約款」?",
+       "jp": "「貨物運送約款」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "はんでぃたーみなる",
+        "jp": "はんでぃたーみなる"
+       },
+       {
+        "id": "とりあつかいちゅうい",
+        "jp": "とりあつかいちゅうい"
+       },
+       {
+        "id": "せいせんしょくりょうひん",
+        "jp": "せいせんしょくりょうひん"
+       },
+       {
+        "id": "かもつうんそうやっかん",
+        "jp": "かもつうんそうやっかん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「貨物運送約款」dibaca かもつうんそうやっかん (perjanjian angkutan kargo)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「貨物仕分け」?",
+       "jp": "「貨物仕分け」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かもつしわけ",
+        "jp": "かもつしわけ"
+       },
+       {
+        "id": "ふぉーくりふと",
+        "jp": "ふぉーくりふと"
+       },
+       {
+        "id": "てんちむよう",
+        "jp": "てんちむよう"
+       },
+       {
+        "id": "におくりにん",
+        "jp": "におくりにん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「貨物仕分け」dibaca かもつしわけ (penyortiran kargo)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「クレーム・タグ」?",
+       "jp": "「クレーム・タグ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "claim tag (tanda terima bagasi)"
+       },
+       {
+        "id": "care mark (tanda penanganan)"
+       },
+       {
+        "id": "tangani dengan hati-hati"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「クレーム・タグ」（くれーむ・たぐ）= claim tag (tanda terima bagasi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「重量物」?",
+       "jp": "「重量物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kargo udara"
+       },
+       {
+        "id": "makanan segar"
+       },
+       {
+        "id": "barang berat"
+       },
+       {
+        "id": "jangan dibalik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「重量物」（じゅうりょうぶつ）= barang berat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「行先タグ」?",
+       "jp": "「行先タグ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "salah muat"
+       },
+       {
+        "id": "berikat"
+       },
+       {
+        "id": "barang berat"
+       },
+       {
+        "id": "tag tujuan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「行先タグ」（ゆきさきたぐ）= tag tujuan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ケアマーク」?",
+       "jp": "「ケアマーク」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perjanjian angkutan kargo"
+       },
+       {
+        "id": "care mark (tanda penanganan)"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan"
+       },
+       {
+        "id": "claim tag (tanda terima bagasi)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ケアマーク」（けあまーく）= care mark (tanda penanganan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「通関」?",
+       "jp": "「通関」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "care mark (tanda penanganan)"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan"
+       },
+       {
+        "id": "perjanjian angkutan kargo"
+       },
+       {
+        "id": "claim tag (tanda terima bagasi)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「通関」（つうかん）= bea cukai, proses kepabeanan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「生鮮食料品」?",
+       "jp": "「生鮮食料品」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かもつうんそうやっかん",
+        "jp": "かもつうんそうやっかん"
+       },
+       {
+        "id": "せいせんしょくりょうひん",
+        "jp": "せいせんしょくりょうひん"
+       },
+       {
+        "id": "とりあつかいちゅうい",
+        "jp": "とりあつかいちゅうい"
+       },
+       {
+        "id": "はんでぃたーみなる",
+        "jp": "はんでぃたーみなる"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「生鮮食料品」dibaca せいせんしょくりょうひん (makanan segar)."
+      }
+     }
+    ]
    }
   ],
   "bab5": [
@@ -3168,6 +7006,784 @@
      }
     ],
     "sub": "b5s2"
+   },
+   {
+    "id": "vk-bab5-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 1 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「飛行後作業」?",
+       "jp": "「飛行後作業」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あんぜんのしおり",
+        "jp": "あんぜんのしおり"
+       },
+       {
+        "id": "ひこうごさぎょう",
+        "jp": "ひこうごさぎょう"
+       },
+       {
+        "id": "はんそうだいしゃ",
+        "jp": "はんそうだいしゃ"
+       },
+       {
+        "id": "こくないせん",
+        "jp": "こくないせん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「飛行後作業」dibaca ひこうごさぎょう (pekerjaan setelah penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「客室用品」?",
+       "jp": "「客室用品」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひこうかんさぎょう",
+        "jp": "ひこうかんさぎょう"
+       },
+       {
+        "id": "きないせいそう",
+        "jp": "きないせいそう"
+       },
+       {
+        "id": "きゃくしつようひん",
+        "jp": "きゃくしつようひん"
+       },
+       {
+        "id": "はんそうだいしゃ",
+        "jp": "はんそうだいしゃ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「客室用品」dibaca きゃくしつようひん (perlengkapan kabin)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ギャレー」?",
+       "jp": "「ギャレー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lavatory (toilet pesawat)"
+       },
+       {
+        "id": "perlengkapan kabin"
+       },
+       {
+        "id": "galley (dapur pesawat)"
+       },
+       {
+        "id": "makanan dalam pesawat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「ギャレー」（ぎゃれー）= galley (dapur pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「密輸」?",
+       "jp": "「密輸」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kantong kursi"
+       },
+       {
+        "id": "rute domestik"
+       },
+       {
+        "id": "barang tertinggal"
+       },
+       {
+        "id": "penyelundupan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「密輸」（みつゆ）= penyelundupan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機内清掃」?",
+       "jp": "「機内清掃」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pembersihan kabin"
+       },
+       {
+        "id": "barang tertinggal"
+       },
+       {
+        "id": "rute internasional"
+       },
+       {
+        "id": "perlengkapan kabin"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「機内清掃」（きないせいそう）= pembersihan kabin."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機内食」?",
+       "jp": "「機内食」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perlengkapan kabin"
+       },
+       {
+        "id": "makanan dalam pesawat"
+       },
+       {
+        "id": "galley (dapur pesawat)"
+       },
+       {
+        "id": "rute internasional"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「機内食」（きないしょく）= makanan dalam pesawat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「飛行後作業」?",
+       "jp": "「飛行後作業」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "outrigger (penopang kendaraan)"
+       },
+       {
+        "id": "pekerjaan antar penerbangan"
+       },
+       {
+        "id": "pekerjaan setelah penerbangan"
+       },
+       {
+        "id": "lavatory (toilet pesawat)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「飛行後作業」（ひこうごさぎょう）= pekerjaan setelah penerbangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「飛行間作業」?",
+       "jp": "「飛行間作業」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ざせきぽけっと",
+        "jp": "ざせきぽけっと"
+       },
+       {
+        "id": "きないせいそう",
+        "jp": "きないせいそう"
+       },
+       {
+        "id": "ひこうかんさぎょう",
+        "jp": "ひこうかんさぎょう"
+       },
+       {
+        "id": "ひこうごさぎょう",
+        "jp": "ひこうごさぎょう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「飛行間作業」dibaca ひこうかんさぎょう (pekerjaan antar penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「国内線」?",
+       "jp": "「国内線」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひこうごさぎょう",
+        "jp": "ひこうごさぎょう"
+       },
+       {
+        "id": "こくさいせん",
+        "jp": "こくさいせん"
+       },
+       {
+        "id": "こくないせん",
+        "jp": "こくないせん"
+       },
+       {
+        "id": "ざせきぽけっと",
+        "jp": "ざせきぽけっと"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「国内線」dibaca こくないせん (rute domestik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「忘れ物」?",
+       "jp": "「忘れ物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kereta pengangkut"
+       },
+       {
+        "id": "barang tertinggal"
+       },
+       {
+        "id": "benda mencurigakan"
+       },
+       {
+        "id": "perlengkapan kabin"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「忘れ物」（わすれもの）= barang tertinggal."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab5-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 2 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機内清掃」?",
+       "jp": "「機内清掃」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ざせきぽけっと",
+        "jp": "ざせきぽけっと"
+       },
+       {
+        "id": "あうとりがー",
+        "jp": "あうとりがー"
+       },
+       {
+        "id": "きないせいそう",
+        "jp": "きないせいそう"
+       },
+       {
+        "id": "こくさいせん",
+        "jp": "こくさいせん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「機内清掃」dibaca きないせいそう (pembersihan kabin)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「国際線」?",
+       "jp": "「国際線」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あうとりがー",
+        "jp": "あうとりがー"
+       },
+       {
+        "id": "こくないせん",
+        "jp": "こくないせん"
+       },
+       {
+        "id": "きないしょく",
+        "jp": "きないしょく"
+       },
+       {
+        "id": "こくさいせん",
+        "jp": "こくさいせん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「国際線」dibaca こくさいせん (rute internasional)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「搬送台車」?",
+       "jp": "「搬送台車」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あんぜんのしおり",
+        "jp": "あんぜんのしおり"
+       },
+       {
+        "id": "はんそうだいしゃ",
+        "jp": "はんそうだいしゃ"
+       },
+       {
+        "id": "ひこうかんさぎょう",
+        "jp": "ひこうかんさぎょう"
+       },
+       {
+        "id": "ひこうごさぎょう",
+        "jp": "ひこうごさぎょう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「搬送台車」dibaca はんそうだいしゃ (kereta pengangkut)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機内食」?",
+       "jp": "「機内食」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こくさいせん",
+        "jp": "こくさいせん"
+       },
+       {
+        "id": "きないしょく",
+        "jp": "きないしょく"
+       },
+       {
+        "id": "こくないせん",
+        "jp": "こくないせん"
+       },
+       {
+        "id": "あうとりがー",
+        "jp": "あうとりがー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「機内食」dibaca きないしょく (makanan dalam pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搬送台車」?",
+       "jp": "「搬送台車」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "barang tertinggal"
+       },
+       {
+        "id": "kereta pengangkut"
+       },
+       {
+        "id": "pembersihan kabin"
+       },
+       {
+        "id": "rute internasional"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「搬送台車」（はんそうだいしゃ）= kereta pengangkut."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ラバトリー」?",
+       "jp": "「ラバトリー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pekerjaan setelah penerbangan"
+       },
+       {
+        "id": "lavatory (toilet pesawat)"
+       },
+       {
+        "id": "galley (dapur pesawat)"
+       },
+       {
+        "id": "kartu petunjuk keselamatan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ラバトリー」（らばとりー）= lavatory (toilet pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「飛行間作業」?",
+       "jp": "「飛行間作業」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pekerjaan antar penerbangan"
+       },
+       {
+        "id": "pekerjaan setelah penerbangan"
+       },
+       {
+        "id": "kartu petunjuk keselamatan"
+       },
+       {
+        "id": "outrigger (penopang kendaraan)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「飛行間作業」（ひこうかんさぎょう）= pekerjaan antar penerbangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「座席ポケット」?",
+       "jp": "「座席ポケット」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "わすれもの",
+        "jp": "わすれもの"
+       },
+       {
+        "id": "ざせきぽけっと",
+        "jp": "ざせきぽけっと"
+       },
+       {
+        "id": "こくさいせん",
+        "jp": "こくさいせん"
+       },
+       {
+        "id": "ひこうごさぎょう",
+        "jp": "ひこうごさぎょう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「座席ポケット」dibaca ざせきぽけっと (kantong kursi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「客室用品」?",
+       "jp": "「客室用品」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "benda mencurigakan"
+       },
+       {
+        "id": "rute internasional"
+       },
+       {
+        "id": "kereta pengangkut"
+       },
+       {
+        "id": "perlengkapan kabin"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「客室用品」（きゃくしつようひん）= perlengkapan kabin."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「アウトリガー」?",
+       "jp": "「アウトリガー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lavatory (toilet pesawat)"
+       },
+       {
+        "id": "outrigger (penopang kendaraan)"
+       },
+       {
+        "id": "pekerjaan setelah penerbangan"
+       },
+       {
+        "id": "pekerjaan antar penerbangan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「アウトリガー」（あうとりがー）= outrigger (penopang kendaraan)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab5-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 3 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「国内線」?",
+       "jp": "「国内線」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rute domestik"
+       },
+       {
+        "id": "penyelundupan"
+       },
+       {
+        "id": "kereta pengangkut"
+       },
+       {
+        "id": "kantong kursi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「国内線」（こくないせん）= rute domestik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「不審物」?",
+       "jp": "「不審物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふしんぶつ",
+        "jp": "ふしんぶつ"
+       },
+       {
+        "id": "ぎゃれー",
+        "jp": "ぎゃれー"
+       },
+       {
+        "id": "らばとりー",
+        "jp": "らばとりー"
+       },
+       {
+        "id": "きないしょく",
+        "jp": "きないしょく"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「不審物」dibaca ふしんぶつ (benda mencurigakan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「座席ポケット」?",
+       "jp": "「座席ポケット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rute domestik"
+       },
+       {
+        "id": "penyelundupan"
+       },
+       {
+        "id": "benda mencurigakan"
+       },
+       {
+        "id": "kantong kursi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「座席ポケット」（ざせきぽけっと）= kantong kursi."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「忘れ物」?",
+       "jp": "「忘れ物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こくないせん",
+        "jp": "こくないせん"
+       },
+       {
+        "id": "わすれもの",
+        "jp": "わすれもの"
+       },
+       {
+        "id": "ぎゃれー",
+        "jp": "ぎゃれー"
+       },
+       {
+        "id": "きないしょく",
+        "jp": "きないしょく"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「忘れ物」dibaca わすれもの (barang tertinggal)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「安全のしおり」?",
+       "jp": "「安全のしおり」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きゃくしつようひん",
+        "jp": "きゃくしつようひん"
+       },
+       {
+        "id": "あんぜんのしおり",
+        "jp": "あんぜんのしおり"
+       },
+       {
+        "id": "きないせいそう",
+        "jp": "きないせいそう"
+       },
+       {
+        "id": "ひこうごさぎょう",
+        "jp": "ひこうごさぎょう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「安全のしおり」dibaca あんぜんのしおり (kartu petunjuk keselamatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「国際線」?",
+       "jp": "「国際線」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "perlengkapan kabin"
+       },
+       {
+        "id": "kereta pengangkut"
+       },
+       {
+        "id": "pembersihan kabin"
+       },
+       {
+        "id": "rute internasional"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「国際線」（こくさいせん）= rute internasional."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全のしおり」?",
+       "jp": "「安全のしおり」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pekerjaan antar penerbangan"
+       },
+       {
+        "id": "pekerjaan setelah penerbangan"
+       },
+       {
+        "id": "lavatory (toilet pesawat)"
+       },
+       {
+        "id": "kartu petunjuk keselamatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「安全のしおり」（あんぜんのしおり）= kartu petunjuk keselamatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「不審物」?",
+       "jp": "「不審物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pembersihan kabin"
+       },
+       {
+        "id": "benda mencurigakan"
+       },
+       {
+        "id": "perlengkapan kabin"
+       },
+       {
+        "id": "rute internasional"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「不審物」（ふしんぶつ）= benda mencurigakan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「密輸」?",
+       "jp": "「密輸」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふしんぶつ",
+        "jp": "ふしんぶつ"
+       },
+       {
+        "id": "ぎゃれー",
+        "jp": "ぎゃれー"
+       },
+       {
+        "id": "みつゆ",
+        "jp": "みつゆ"
+       },
+       {
+        "id": "わすれもの",
+        "jp": "わすれもの"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「密輸」dibaca みつゆ (penyelundupan)."
+      }
+     }
+    ]
    }
   ],
   "bab6": [
@@ -3547,6 +8163,494 @@
      }
     ],
     "sub": "b6s1"
+   },
+   {
+    "id": "vk-bab6-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 6 · 1 (dari daftar kosakata)",
+     "jp": "第6章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「燃料オーダー」?",
+       "jp": "「燃料オーダー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dokumen deklarasi barang berbahaya"
+       },
+       {
+        "id": "fuel order (jumlah BBM yang diminta)"
+       },
+       {
+        "id": "kejadian nyaris celaka (near-miss)"
+       },
+       {
+        "id": "muatan khusus (mis. barang berbahaya)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「燃料オーダー」（ねんりょうおーだー）= fuel order (jumlah BBM yang diminta)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「航空燃料」?",
+       "jp": "「航空燃料」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tangani dengan hati-hati"
+       },
+       {
+        "id": "surat keterangan dokter"
+       },
+       {
+        "id": "handheld terminal (HHT)"
+       },
+       {
+        "id": "bahan bakar penerbangan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「航空燃料」（こうくうねんりょう）= bahan bakar penerbangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「航空燃料」?",
+       "jp": "「航空燃料」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ねんりょうとうさい",
+        "jp": "ねんりょうとうさい"
+       },
+       {
+        "id": "いんかせいえきたい",
+        "jp": "いんかせいえきたい"
+       },
+       {
+        "id": "かんりょうほうこく",
+        "jp": "かんりょうほうこく"
+       },
+       {
+        "id": "こうくうねんりょう",
+        "jp": "こうくうねんりょう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「航空燃料」dibaca こうくうねんりょう (bahan bakar penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「車輪止め」?",
+       "jp": "「車輪止め」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tempat asal"
+       },
+       {
+        "id": "ruang kargo"
+       },
+       {
+        "id": "area bahaya"
+       },
+       {
+        "id": "ganjal roda"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「車輪止め」（しゃりんどめ）= ganjal roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「静電気」?",
+       "jp": "「静電気」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penyelundupan"
+       },
+       {
+        "id": "sumbat telinga"
+       },
+       {
+        "id": "jangan dibalik"
+       },
+       {
+        "id": "listrik statis"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「静電気」（せいでんき）= listrik statis."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「危険区域」?",
+       "jp": "「危険区域」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "てんちむよう",
+        "jp": "てんちむよう"
+       },
+       {
+        "id": "つみのこし",
+        "jp": "つみのこし"
+       },
+       {
+        "id": "きけんくいき",
+        "jp": "きけんくいき"
+       },
+       {
+        "id": "きないしょく",
+        "jp": "きないしょく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「危険区域」dibaca きけんくいき (area bahaya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「代替空港」?",
+       "jp": "「代替空港」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きほんじょうほう",
+        "jp": "きほんじょうほう"
+       },
+       {
+        "id": "だいたいくうこう",
+        "jp": "だいたいくうこう"
+       },
+       {
+        "id": "とうさいけいかく",
+        "jp": "とうさいけいかく"
+       },
+       {
+        "id": "ひこうごさぎょう",
+        "jp": "ひこうごさぎょう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「代替空港」dibaca だいたいくうこう (bandara alternatif)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「燃料搭載」?",
+       "jp": "「燃料搭載」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lembar instruksi muat"
+       },
+       {
+        "id": "mobil air (water car)"
+       },
+       {
+        "id": "pendingin udara kabin"
+       },
+       {
+        "id": "pemuatan bahan bakar"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「燃料搭載」（ねんりょうとうさい）= pemuatan bahan bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「燃料搭載」?",
+       "jp": "「燃料搭載」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "いんかせいえきたい",
+        "jp": "いんかせいえきたい"
+       },
+       {
+        "id": "あずけいれてにもつ",
+        "jp": "あずけいれてにもつ"
+       },
+       {
+        "id": "ねんりょうとうさい",
+        "jp": "ねんりょうとうさい"
+       },
+       {
+        "id": "きゃくしつようひん",
+        "jp": "きゃくしつようひん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「燃料搭載」dibaca ねんりょうとうさい (pemuatan bahan bakar)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「予備燃料」?",
+       "jp": "「予備燃料」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengisian bahan bakar"
+       },
+       {
+        "id": "bahan bakar cadangan"
+       },
+       {
+        "id": "anti-collision light"
+       },
+       {
+        "id": "mobil air (water car)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「予備燃料」（よびねんりょう）= bahan bakar cadangan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab6-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 6 · 2 (dari daftar kosakata)",
+     "jp": "第6章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「静電気」?",
+       "jp": "「静電気」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "けあまーく",
+        "jp": "けあまーく"
+       },
+       {
+        "id": "いんてーく",
+        "jp": "いんてーく"
+       },
+       {
+        "id": "せいでんき",
+        "jp": "せいでんき"
+       },
+       {
+        "id": "ごとうさい",
+        "jp": "ごとうさい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「静電気」dibaca せいでんき (listrik statis)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「代替空港」?",
+       "jp": "「代替空港」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rute internasional"
+       },
+       {
+        "id": "pembersihan kabin"
+       },
+       {
+        "id": "listrik darat (GPU)"
+       },
+       {
+        "id": "bandara alternatif"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「代替空港」（だいたいくうこう）= bandara alternatif."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「危険区域」?",
+       "jp": "「危険区域」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kursi roda"
+       },
+       {
+        "id": "ruang kargo"
+       },
+       {
+        "id": "area bahaya"
+       },
+       {
+        "id": "kargo udara"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「危険区域」（きけんくいき）= area bahaya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「燃料オーダー」?",
+       "jp": "「燃料オーダー」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ねんりょうおーだー",
+        "jp": "ねんりょうおーだー"
+       },
+       {
+        "id": "あずけいれてにもつ",
+        "jp": "あずけいれてにもつ"
+       },
+       {
+        "id": "ひこうかんさぎょう",
+        "jp": "ひこうかんさぎょう"
+       },
+       {
+        "id": "はんでぃたーみなる",
+        "jp": "はんでぃたーみなる"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「燃料オーダー」dibaca ねんりょうおーだー (fuel order (jumlah BBM yang diminta))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「予備燃料」?",
+       "jp": "「予備燃料」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいげんくいき",
+        "jp": "せいげんくいき"
+       },
+       {
+        "id": "よびねんりょう",
+        "jp": "よびねんりょう"
+       },
+       {
+        "id": "こうていかんり",
+        "jp": "こうていかんり"
+       },
+       {
+        "id": "ゆーえるでぃー",
+        "jp": "ゆーえるでぃー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「予備燃料」dibaca よびねんりょう (bahan bakar cadangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「車輪止め」?",
+       "jp": "「車輪止め」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "はいすいしゃ",
+        "jp": "はいすいしゃ"
+       },
+       {
+        "id": "しゃりんどめ",
+        "jp": "しゃりんどめ"
+       },
+       {
+        "id": "とうこうさい",
+        "jp": "とうこうさい"
+       },
+       {
+        "id": "ひやりはっと",
+        "jp": "ひやりはっと"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「車輪止め」dibaca しゃりんどめ (ganjal roda)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「給油」?",
+       "jp": "「給油」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengisian bahan bakar"
+       },
+       {
+        "id": "mobil air (water car)"
+       },
+       {
+        "id": "pendingin udara kabin"
+       },
+       {
+        "id": "tempat parkir pesawat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「給油」（きゅうゆ）= pengisian bahan bakar."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「給油」?",
+       "jp": "「給油」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいびし",
+        "jp": "せいびし"
+       },
+       {
+        "id": "きゅうゆ",
+        "jp": "きゅうゆ"
+       },
+       {
+        "id": "きうつし",
+        "jp": "きうつし"
+       },
+       {
+        "id": "どーりー",
+        "jp": "どーりー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「給油」dibaca きゅうゆ (pengisian bahan bakar)."
+      }
+     }
+    ]
    }
   ],
   "bab7": [
@@ -3852,6 +8956,442 @@
      }
     ],
     "sub": "b7s1"
+   },
+   {
+    "id": "vk-bab7-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 7 · 1 (dari daftar kosakata)",
+     "jp": "第7章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「車椅子」?",
+       "jp": "「車椅子」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "てにもつ",
+        "jp": "てにもつ"
+       },
+       {
+        "id": "ふしんぶつ",
+        "jp": "ふしんぶつ"
+       },
+       {
+        "id": "くるまいす",
+        "jp": "くるまいす"
+       },
+       {
+        "id": "だつたんそ",
+        "jp": "だつたんそ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「車椅子」dibaca くるまいす (kursi roda)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「預け入れ手荷物」?",
+       "jp": "「預け入れ手荷物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pengurasan air"
+       },
+       {
+        "id": "ketepatan waktu"
+       },
+       {
+        "id": "towing tractor"
+       },
+       {
+        "id": "bagasi tercatat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「預け入れ手荷物」（あずけいれてにもつ）= bagasi tercatat."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「乗り継ぎ」?",
+       "jp": "「乗り継ぎ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "informasi dasar penerbangan"
+       },
+       {
+        "id": "bea cukai, proses kepabeanan"
+       },
+       {
+        "id": "transit, sambung penerbangan"
+       },
+       {
+        "id": "memuat dan menurunkan muatan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「乗り継ぎ」（のりつぎ）= transit, sambung penerbangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「乗り継ぎ」?",
+       "jp": "「乗り継ぎ」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "よくか",
+        "jp": "よくか"
+       },
+       {
+        "id": "まえあし",
+        "jp": "まえあし"
+       },
+       {
+        "id": "のりつぎ",
+        "jp": "のりつぎ"
+       },
+       {
+        "id": "れんけつ",
+        "jp": "れんけつ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「乗り継ぎ」dibaca のりつぎ (transit, sambung penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「搭乗券」?",
+       "jp": "「搭乗券」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こうていかんり",
+        "jp": "こうていかんり"
+       },
+       {
+        "id": "とうじょうけん",
+        "jp": "とうじょうけん"
+       },
+       {
+        "id": "こくないせん",
+        "jp": "こくないせん"
+       },
+       {
+        "id": "あんぜんうんこう",
+        "jp": "あんぜんうんこう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「搭乗券」dibaca とうじょうけん (boarding pass)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「預け入れ手荷物」?",
+       "jp": "「預け入れ手荷物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あずけいれてにもつ",
+        "jp": "あずけいれてにもつ"
+       },
+       {
+        "id": "はんでぃたーみなる",
+        "jp": "はんでぃたーみなる"
+       },
+       {
+        "id": "こうくうねんりょう",
+        "jp": "こうくうねんりょう"
+       },
+       {
+        "id": "ねんりょうおーだー",
+        "jp": "ねんりょうおーだー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「預け入れ手荷物」dibaca あずけいれてにもつ (bagasi tercatat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「旅客」?",
+       "jp": "「旅客」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penumpang"
+       },
+       {
+        "id": "forklift"
+       },
+       {
+        "id": "salah muat"
+       },
+       {
+        "id": "air minum"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「旅客」（りょかく）= penumpang."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「旅客」?",
+       "jp": "「旅客」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "れんけつ",
+        "jp": "れんけつ"
+       },
+       {
+        "id": "きゅうゆ",
+        "jp": "きゅうゆ"
+       },
+       {
+        "id": "つうかん",
+        "jp": "つうかん"
+       },
+       {
+        "id": "りょかく",
+        "jp": "りょかく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「旅客」dibaca りょかく (penumpang)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭乗口」?",
+       "jp": "「搭乗口」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "muatan sambungan (transit)"
+       },
+       {
+        "id": "pintu keberangkatan (gate)"
+       },
+       {
+        "id": "fasilitas pasokan AC darat"
+       },
+       {
+        "id": "menarik, penarikan (towing)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「搭乗口」（とうじょうぐち）= pintu keberangkatan (gate)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「診断書」?",
+       "jp": "「診断書」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "handheld terminal (HHT)"
+       },
+       {
+        "id": "label identifikasi kargo"
+       },
+       {
+        "id": "surat keterangan dokter"
+       },
+       {
+        "id": "tangani dengan hati-hati"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「診断書」（しんだんしょ）= surat keterangan dokter."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab7-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 7 · 2 (dari daftar kosakata)",
+     "jp": "第7章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「搭乗口」?",
+       "jp": "「搭乗口」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とうじょうぐち",
+        "jp": "とうじょうぐち"
+       },
+       {
+        "id": "せいげんくいき",
+        "jp": "せいげんくいき"
+       },
+       {
+        "id": "こうくうかもつ",
+        "jp": "こうくうかもつ"
+       },
+       {
+        "id": "こうていかんり",
+        "jp": "こうていかんり"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「搭乗口」dibaca とうじょうぐち (pintu keberangkatan (gate))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「空港」?",
+       "jp": "「空港」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "みみせん",
+        "jp": "みみせん"
+       },
+       {
+        "id": "せいびし",
+        "jp": "せいびし"
+       },
+       {
+        "id": "くうこう",
+        "jp": "くうこう"
+       },
+       {
+        "id": "のりつぎ",
+        "jp": "のりつぎ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「空港」dibaca くうこう (bandara)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「空港」?",
+       "jp": "「空港」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "bandara"
+       },
+       {
+        "id": "muatan"
+       },
+       {
+        "id": "forklift"
+       },
+       {
+        "id": "heatstroke"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「空港」（くうこう）= bandara."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「車椅子」?",
+       "jp": "「車椅子」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kursi roda"
+       },
+       {
+        "id": "kargo udara"
+       },
+       {
+        "id": "tempat asal"
+       },
+       {
+        "id": "salah muat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「車椅子」（くるまいす）= kursi roda."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「診断書」?",
+       "jp": "「診断書」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しゃりんどめ",
+        "jp": "しゃりんどめ"
+       },
+       {
+        "id": "しんだんしょ",
+        "jp": "しんだんしょ"
+       },
+       {
+        "id": "ゆうどうしゃ",
+        "jp": "ゆうどうしゃ"
+       },
+       {
+        "id": "ゆきさきたぐ",
+        "jp": "ゆきさきたぐ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「診断書」dibaca しんだんしょ (surat keterangan dokter)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「搭乗券」?",
+       "jp": "「搭乗券」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "rute domestik"
+       },
+       {
+        "id": "sisi pesawat"
+       },
+       {
+        "id": "boarding pass"
+       },
+       {
+        "id": "sumbat telinga"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「搭乗券」（とうじょうけん）= boarding pass."
+      }
+     }
+    ]
    }
   ],
   "bab8": [
@@ -4467,6 +10007,1026 @@
      }
     ],
     "sub": "b8s4"
+   },
+   {
+    "id": "vk-bab8-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 8 · 1 (dari daftar kosakata)",
+     "jp": "第8章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「翼端灯」?",
+       "jp": "「翼端灯」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "barang berbahaya"
+       },
+       {
+        "id": "lampu ujung sayap"
+       },
+       {
+        "id": "kelebihan berat"
+       },
+       {
+        "id": "pemandu kendaraan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「翼端灯」（よくたんとう）= lampu ujung sayap."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全運航」?",
+       "jp": "「安全運航」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "blast (semburan gas buang mesin)"
+       },
+       {
+        "id": "kejadian nyaris celaka (near-miss)"
+       },
+       {
+        "id": "pemeriksaan keamanan penerbangan"
+       },
+       {
+        "id": "operasi penerbangan yang aman"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「安全運航」（あんぜんうんこう）= operasi penerbangan yang aman."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「衝突防止灯」?",
+       "jp": "「衝突防止灯」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lampu ujung sayap"
+       },
+       {
+        "id": "Biro Penerbangan Sipil"
+       },
+       {
+        "id": "anti-collision light"
+       },
+       {
+        "id": "pemandu kendaraan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「衝突防止灯」（しょうとつぼうしとう）= anti-collision light."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機材制限区域」?",
+       "jp": "「機材制限区域」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きざいせいげんくいき",
+        "jp": "きざいせいげんくいき"
+       },
+       {
+        "id": "きざいたいきくいき",
+        "jp": "きざいたいきくいき"
+       },
+       {
+        "id": "じゅうりょうちょうか",
+        "jp": "じゅうりょうちょうか"
+       },
+       {
+        "id": "しょうとつぼうしとう",
+        "jp": "しょうとつぼうしとう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「機材制限区域」dibaca きざいせいげんくいき (ERA: area terlarang bagi peralatan di spot)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「危険物」?",
+       "jp": "「危険物」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "よくたんとう",
+        "jp": "よくたんとう"
+       },
+       {
+        "id": "うぉっちまん",
+        "jp": "うぉっちまん"
+       },
+       {
+        "id": "きけんぶつ",
+        "jp": "きけんぶつ"
+       },
+       {
+        "id": "ほあんけんさ",
+        "jp": "ほあんけんさ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「危険物」dibaca きけんぶつ (barang berbahaya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「引火性液体」?",
+       "jp": "「引火性液体」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "area terlarang (restricted area bandara)"
+       },
+       {
+        "id": "ERA: area terlarang bagi peralatan di spot"
+       },
+       {
+        "id": "watchman (pengawas pergerakan pesawat)"
+       },
+       {
+        "id": "cairan mudah menyala (titik nyala ≤ 60 ℃)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「引火性液体」（いんかせいえきたい）= cairan mudah menyala (titik nyala ≤ 60 ℃)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「耳栓」?",
+       "jp": "「耳栓」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemandu kendaraan"
+       },
+       {
+        "id": "helm pengaman"
+       },
+       {
+        "id": "sumbat telinga"
+       },
+       {
+        "id": "barang berbahaya"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「耳栓」（みみせん）= sumbat telinga."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機材制限区域」?",
+       "jp": "「機材制限区域」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cairan mudah menyala (titik nyala ≤ 60 ℃)"
+       },
+       {
+        "id": "watchman (pengawas pergerakan pesawat)"
+       },
+       {
+        "id": "ERA: area terlarang bagi peralatan di spot"
+       },
+       {
+        "id": "area terlarang (restricted area bandara)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「機材制限区域」（きざいせいげんくいき）= ERA: area terlarang bagi peralatan di spot."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「保護帽」?",
+       "jp": "「保護帽」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kelebihan berat"
+       },
+       {
+        "id": "helm pengaman"
+       },
+       {
+        "id": "heatstroke"
+       },
+       {
+        "id": "sumbat telinga"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「保護帽」（ほごぼう）= helm pengaman."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「耳栓」?",
+       "jp": "「耳栓」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "いんてーく",
+        "jp": "いんてーく"
+       },
+       {
+        "id": "ぶらすと",
+        "jp": "ぶらすと"
+       },
+       {
+        "id": "きけんぶつ",
+        "jp": "きけんぶつ"
+       },
+       {
+        "id": "みみせん",
+        "jp": "みみせん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「耳栓」dibaca みみせん (sumbat telinga)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab8-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 8 · 2 (dari daftar kosakata)",
+     "jp": "第8章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「機材待機区域」?",
+       "jp": "「機材待機区域」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ESA: area tunggu peralatan di spot"
+       },
+       {
+        "id": "kejadian nyaris celaka (near-miss)"
+       },
+       {
+        "id": "blast (semburan gas buang mesin)"
+       },
+       {
+        "id": "dokumen deklarasi barang berbahaya"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「機材待機区域」（きざいたいきくいき）= ESA: area tunggu peralatan di spot."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「危険物」?",
+       "jp": "「危険物」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "lampu ujung sayap"
+       },
+       {
+        "id": "sumbat telinga"
+       },
+       {
+        "id": "barang berbahaya"
+       },
+       {
+        "id": "kelebihan berat"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「危険物」（きけんぶつ）= barang berbahaya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「保護帽」?",
+       "jp": "「保護帽」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "いんてーく",
+        "jp": "いんてーく"
+       },
+       {
+        "id": "みみせん",
+        "jp": "みみせん"
+       },
+       {
+        "id": "ほごぼう",
+        "jp": "ほごぼう"
+       },
+       {
+        "id": "きけんぶつ",
+        "jp": "きけんぶつ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「保護帽」dibaca ほごぼう (helm pengaman)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「保安検査」?",
+       "jp": "「保安検査」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "よくたんとう",
+        "jp": "よくたんとう"
+       },
+       {
+        "id": "うぉっちまん",
+        "jp": "うぉっちまん"
+       },
+       {
+        "id": "きけんぶつ",
+        "jp": "きけんぶつ"
+       },
+       {
+        "id": "ほあんけんさ",
+        "jp": "ほあんけんさ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「保安検査」dibaca ほあんけんさ (pemeriksaan keamanan penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「重量超過」?",
+       "jp": "「重量超過」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "barang berbahaya"
+       },
+       {
+        "id": "sumbat telinga"
+       },
+       {
+        "id": "pemandu kendaraan"
+       },
+       {
+        "id": "kelebihan berat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「重量超過」（じゅうりょうちょうか）= kelebihan berat."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「航空局」?",
+       "jp": "「航空局」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ねっちゅうしょう",
+        "jp": "ねっちゅうしょう"
+       },
+       {
+        "id": "ゆうどうしゃ",
+        "jp": "ゆうどうしゃ"
+       },
+       {
+        "id": "うぉっちまん",
+        "jp": "うぉっちまん"
+       },
+       {
+        "id": "こうくうきょく",
+        "jp": "こうくうきょく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「航空局」dibaca こうくうきょく (Biro Penerbangan Sipil)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「標準IDカード」?",
+       "jp": "「標準IDカード」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kartu ID standar (untuk masuk area terlarang)"
+       },
+       {
+        "id": "area terlarang (restricted area bandara)"
+       },
+       {
+        "id": "ERA: area terlarang bagi peralatan di spot"
+       },
+       {
+        "id": "cairan mudah menyala (titik nyala ≤ 60 ℃)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「標準IDカード」（ひょうじゅんあいでぃーかーど）= kartu ID standar (untuk masuk area terlarang)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「危険物申告書」?",
+       "jp": "「危険物申告書」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "じゅうりょうちょうか",
+        "jp": "じゅうりょうちょうか"
+       },
+       {
+        "id": "きけんぶつしんこくしょ",
+        "jp": "きけんぶつしんこくしょ"
+       },
+       {
+        "id": "きざいたいきくいき",
+        "jp": "きざいたいきくいき"
+       },
+       {
+        "id": "きざいせいげんくいき",
+        "jp": "きざいせいげんくいき"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「危険物申告書」dibaca きけんぶつしんこくしょ (dokumen deklarasi barang berbahaya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ブラスト」?",
+       "jp": "「ブラスト」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "blast (semburan gas buang mesin)"
+       },
+       {
+        "id": "pemeriksaan keamanan penerbangan"
+       },
+       {
+        "id": "ESA: area tunggu peralatan di spot"
+       },
+       {
+        "id": "intake (sisi hisap udara mesin)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ブラスト」（ぶらすと）= blast (semburan gas buang mesin)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「熱中症」?",
+       "jp": "「熱中症」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "helm pengaman"
+       },
+       {
+        "id": "kelebihan berat"
+       },
+       {
+        "id": "heatstroke"
+       },
+       {
+        "id": "sumbat telinga"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「熱中症」（ねっちゅうしょう）= heatstroke."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab8-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 8 · 3 (dari daftar kosakata)",
+     "jp": "第8章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「危険物申告書」?",
+       "jp": "「危険物申告書」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "intake (sisi hisap udara mesin)"
+       },
+       {
+        "id": "ESA: area tunggu peralatan di spot"
+       },
+       {
+        "id": "dokumen deklarasi barang berbahaya"
+       },
+       {
+        "id": "kejadian nyaris celaka (near-miss)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「危険物申告書」（きけんぶつしんこくしょ）= dokumen deklarasi barang berbahaya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「誘導者」?",
+       "jp": "「誘導者」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "いんてーく",
+        "jp": "いんてーく"
+       },
+       {
+        "id": "ゆうどうしゃ",
+        "jp": "ゆうどうしゃ"
+       },
+       {
+        "id": "よくたんとう",
+        "jp": "よくたんとう"
+       },
+       {
+        "id": "ひやりはっと",
+        "jp": "ひやりはっと"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「誘導者」dibaca ゆうどうしゃ (pemandu kendaraan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「制限区域」?",
+       "jp": "「制限区域」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ERA: area terlarang bagi peralatan di spot"
+       },
+       {
+        "id": "area terlarang (restricted area bandara)"
+       },
+       {
+        "id": "cairan mudah menyala (titik nyala ≤ 60 ℃)"
+       },
+       {
+        "id": "watchman (pengawas pergerakan pesawat)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「制限区域」（せいげんくいき）= area terlarang (restricted area bandara)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「誘導者」?",
+       "jp": "「誘導者」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kelebihan berat"
+       },
+       {
+        "id": "anti-collision light"
+       },
+       {
+        "id": "pemandu kendaraan"
+       },
+       {
+        "id": "lampu ujung sayap"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「誘導者」（ゆうどうしゃ）= pemandu kendaraan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「機材待機区域」?",
+       "jp": "「機材待機区域」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きざいたいきくいき",
+        "jp": "きざいたいきくいき"
+       },
+       {
+        "id": "しょうとつぼうしとう",
+        "jp": "しょうとつぼうしとう"
+       },
+       {
+        "id": "きざいせいげんくいき",
+        "jp": "きざいせいげんくいき"
+       },
+       {
+        "id": "ねっちゅうしょう",
+        "jp": "ねっちゅうしょう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「機材待機区域」dibaca きざいたいきくいき (ESA: area tunggu peralatan di spot)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「翼端灯」?",
+       "jp": "「翼端灯」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "いんてーく",
+        "jp": "いんてーく"
+       },
+       {
+        "id": "よくたんとう",
+        "jp": "よくたんとう"
+       },
+       {
+        "id": "うぉっちまん",
+        "jp": "うぉっちまん"
+       },
+       {
+        "id": "ほあんけんさ",
+        "jp": "ほあんけんさ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「翼端灯」dibaca よくたんとう (lampu ujung sayap)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「安全運航」?",
+       "jp": "「安全運航」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あんぜんうんこう",
+        "jp": "あんぜんうんこう"
+       },
+       {
+        "id": "きざいたいきくいき",
+        "jp": "きざいたいきくいき"
+       },
+       {
+        "id": "せいげんくいき",
+        "jp": "せいげんくいき"
+       },
+       {
+        "id": "ねっちゅうしょう",
+        "jp": "ねっちゅうしょう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「安全運航」dibaca あんぜんうんこう (operasi penerbangan yang aman)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「熱中症」?",
+       "jp": "「熱中症」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "じゅうりょうちょうか",
+        "jp": "じゅうりょうちょうか"
+       },
+       {
+        "id": "こうくうきょく",
+        "jp": "こうくうきょく"
+       },
+       {
+        "id": "あんぜんうんこう",
+        "jp": "あんぜんうんこう"
+       },
+       {
+        "id": "ねっちゅうしょう",
+        "jp": "ねっちゅうしょう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「熱中症」dibaca ねっちゅうしょう (heatstroke)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「標準IDカード」?",
+       "jp": "「標準IDカード」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きざいたいきくいき",
+        "jp": "きざいたいきくいき"
+       },
+       {
+        "id": "ひょうじゅんあいでぃーかーど",
+        "jp": "ひょうじゅんあいでぃーかーど"
+       },
+       {
+        "id": "きけんぶつしんこくしょ",
+        "jp": "きけんぶつしんこくしょ"
+       },
+       {
+        "id": "いんかせいえきたい",
+        "jp": "いんかせいえきたい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「標準IDカード」dibaca ひょうじゅんあいでぃーかーど (kartu ID standar (untuk masuk area terlarang))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「衝突防止灯」?",
+       "jp": "「衝突防止灯」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "じゅうりょうちょうか",
+        "jp": "じゅうりょうちょうか"
+       },
+       {
+        "id": "きざいせいげんくいき",
+        "jp": "きざいせいげんくいき"
+       },
+       {
+        "id": "しょうとつぼうしとう",
+        "jp": "しょうとつぼうしとう"
+       },
+       {
+        "id": "あんぜんうんこう",
+        "jp": "あんぜんうんこう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「衝突防止灯」dibaca しょうとつぼうしとう (anti-collision light)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab8-4",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 8 · 4 (dari daftar kosakata)",
+     "jp": "第8章 {語彙|ごい}練習 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ヒヤリ・ハット」?",
+       "jp": "「ヒヤリ・ハット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dokumen deklarasi barang berbahaya"
+       },
+       {
+        "id": "kejadian nyaris celaka (near-miss)"
+       },
+       {
+        "id": "blast (semburan gas buang mesin)"
+       },
+       {
+        "id": "ESA: area tunggu peralatan di spot"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ヒヤリ・ハット」（ひやりはっと）= kejadian nyaris celaka (near-miss)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「インテーク」?",
+       "jp": "「インテーク」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kejadian nyaris celaka (near-miss)"
+       },
+       {
+        "id": "operasi penerbangan yang aman"
+       },
+       {
+        "id": "intake (sisi hisap udara mesin)"
+       },
+       {
+        "id": "pemeriksaan keamanan penerbangan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「インテーク」（いんてーく）= intake (sisi hisap udara mesin)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「航空局」?",
+       "jp": "「航空局」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemandu kendaraan"
+       },
+       {
+        "id": "lampu ujung sayap"
+       },
+       {
+        "id": "Biro Penerbangan Sipil"
+       },
+       {
+        "id": "anti-collision light"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「航空局」（こうくうきょく）= Biro Penerbangan Sipil."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「引火性液体」?",
+       "jp": "「引火性液体」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きざいたいきくいき",
+        "jp": "きざいたいきくいき"
+       },
+       {
+        "id": "きざいせいげんくいき",
+        "jp": "きざいせいげんくいき"
+       },
+       {
+        "id": "いんかせいえきたい",
+        "jp": "いんかせいえきたい"
+       },
+       {
+        "id": "あんぜんうんこう",
+        "jp": "あんぜんうんこう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「引火性液体」dibaca いんかせいえきたい (cairan mudah menyala (titik nyala ≤ 60 ℃))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「重量超過」?",
+       "jp": "「重量超過」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きざいたいきくいき",
+        "jp": "きざいたいきくいき"
+       },
+       {
+        "id": "きけんぶつしんこくしょ",
+        "jp": "きけんぶつしんこくしょ"
+       },
+       {
+        "id": "しょうとつぼうしとう",
+        "jp": "しょうとつぼうしとう"
+       },
+       {
+        "id": "じゅうりょうちょうか",
+        "jp": "じゅうりょうちょうか"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「重量超過」dibaca じゅうりょうちょうか (kelebihan berat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「制限区域」?",
+       "jp": "「制限区域」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいげんくいき",
+        "jp": "せいげんくいき"
+       },
+       {
+        "id": "ねっちゅうしょう",
+        "jp": "ねっちゅうしょう"
+       },
+       {
+        "id": "こうくうきょく",
+        "jp": "こうくうきょく"
+       },
+       {
+        "id": "うぉっちまん",
+        "jp": "うぉっちまん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「制限区域」dibaca せいげんくいき (area terlarang (restricted area bandara))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ウォッチマン」?",
+       "jp": "「ウォッチマン」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dokumen deklarasi barang berbahaya"
+       },
+       {
+        "id": "area terlarang (restricted area bandara)"
+       },
+       {
+        "id": "cairan mudah menyala (titik nyala ≤ 60 ℃)"
+       },
+       {
+        "id": "watchman (pengawas pergerakan pesawat)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ウォッチマン」（うぉっちまん）= watchman (pengawas pergerakan pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「保安検査」?",
+       "jp": "「保安検査」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemeriksaan keamanan penerbangan"
+       },
+       {
+        "id": "blast (semburan gas buang mesin)"
+       },
+       {
+        "id": "operasi penerbangan yang aman"
+       },
+       {
+        "id": "intake (sisi hisap udara mesin)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「保安検査」（ほあんけんさ）= pemeriksaan keamanan penerbangan."
+      }
+     }
+    ]
    }
   ]
  },

@@ -100,23 +100,36 @@ const PDF_SUMBER = {
     { t: "実技試験問題 2026 (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_test.pdf" },
     { t: "Prosedur ujian praktik (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_process.pdf" },
     { t: "Q&A APD & alat kerja (resmi)", u: "assets/ssw/forestry/pdf/specfic_faq_260708.pdf" },
-    { t: "Panduan peserta 2026 (受験案内)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-juken-annai.pdf" }
+    { t: "Panduan peserta 2026 (受験案内)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-juken-annai.pdf" },
+    { t: "Ringkasan ujian 2026 (試験概要)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-shiken-gaiyou.pdf" },
+    { t: "Pedoman pelaksanaan ujian (試験実施要領, Rinya-cho)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-shiken-jisshi-yoryo.pdf" },
+    { t: "Pedoman penerimaan 受入れ手引 (Rinya-cho)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-ukeire-tebiki.pdf" },
+    { t: "Apa itu pekerjaan kehutanan (林業ってどんなもの)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-tte-donna-mono.pdf" },
+    { t: "Lampiran pedoman operasional bidang", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-unyo-yoryo-bessatsu.pdf" },
+    { t: "Laporan hasil pelatihan kehutanan", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-seika-hokokusho.pdf" }
   ],
   "railway-vehicle": [
     { t: "Teks belajar resmi 車両製造 (JP, 224 hal.)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakushu-text-1go.pdf" },
     { t: "Contoh soal 学科 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakka-sample.pdf" },
     { t: "Contoh soal 実技 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-jitsugi-sample.pdf" },
-    { t: "Panduan ujian 試験案内 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-shiken-annai.pdf" }
+    { t: "Panduan ujian 試験案内 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-shiken-annai.pdf" },
+    { t: "Hasil ujian 2026 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-kekka-2026.pdf" }
   ],
   "logistics": [
     { t: "Pedoman ujian 1号 (試験実施要領, MLIT)", u: "assets/ssw/docs-resmi/logistics/jitsushi-yoryo-1go.pdf" },
     { t: "Lingkup & rincian ujian (試験基準, 1 hal.)", u: "assets/ssw/docs-resmi/logistics/shiken-kijun-1go.pdf" },
-    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/logistics/bunya-unyo-hoshin.pdf" }
+    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/logistics/bunya-unyo-hoshin.pdf" },
+    { t: "Standar & contoh ujian (基準・奨励 特定技能)", u: "assets/ssw/docs-resmi/logistics/kijun-shorei-tokutei.pdf" },
+    { t: "Dokumen resmi MLIT (1)", u: "assets/ssw/docs-resmi/logistics/dokumen-002018512.pdf" },
+    { t: "Dokumen resmi MLIT (2)", u: "assets/ssw/docs-resmi/logistics/dokumen-002027344.pdf" }
   ],
   "recycling": [
     { t: "Program pelatihan & karier (環境省)", u: "assets/ssw/docs-resmi/recycling/ikusei-career-program.pdf" },
     { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/recycling/bunya-unyo-hoshin.pdf" },
-    { t: "Semua dokumen resmi (halaman)", u: "dokumen-resmi.html", ext: 1 }
+    { t: "Semua dokumen resmi (halaman)", u: "dokumen-resmi.html", ext: 1 },
+    { t: "Pedoman pelatihan — naskah utama", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-honbun.pdf" },
+    { t: "Pedoman pelatihan — lampiran tabel (別表)", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-beppyo.pdf" },
+    { t: "Pedoman pelatihan — lampiran (別紙)", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-besshi.pdf" }
   ],
   "wood-industry": [
     { t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" },
@@ -140,21 +153,63 @@ const PDF_SUMBER = {
     { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-machine-metal/pdf/panduan-belajar-jp.pdf" },
     { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-machine-metal/pdf/errata-jp.pdf" },
     { t: "Contoh soal resmi 1号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kikai-kinzoku-kako.pdf" },
-    { t: "Contoh soal resmi 2号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kikai-kinzoku-kako.pdf" }
+    { t: "Contoh soal resmi 2号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kikai-kinzoku-kako.pdf" },
+    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
+    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
+    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
+    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
+    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
+    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
+    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
+    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
+    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
+    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
+    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
+    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
+    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
+    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
   ],
   "jaim-elec-electronic": [
     { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-id.pdf" },
     { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-jp.pdf" },
     { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/errata-jp.pdf" },
     { t: "Contoh soal resmi 1号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-denki-denshi-kiki-kumitate.pdf" },
-    { t: "Contoh soal resmi 2号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-denki-denshi-kiki-kumitate.pdf" }
+    { t: "Contoh soal resmi 2号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-denki-denshi-kiki-kumitate.pdf" },
+    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
+    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
+    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
+    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
+    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
+    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
+    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
+    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
+    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
+    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
+    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
+    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
+    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
+    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
   ],
   "jaim-metal-surface": [
     { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-id.pdf" },
     { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-jp.pdf" },
     { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-metal-surface/pdf/errata-jp.pdf" },
     { t: "Contoh soal resmi 1号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kinzoku-hyomen-shori.pdf" },
-    { t: "Contoh soal resmi 2号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kinzoku-hyomen-shori.pdf" }
+    { t: "Contoh soal resmi 2号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kinzoku-hyomen-shori.pdf" },
+    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
+    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
+    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
+    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
+    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
+    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
+    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
+    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
+    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
+    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
+    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
+    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
+    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
+    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
   ]
 };
 const pdfButtons = (slug) => (PDF_SUMBER[slug] || []).map(x => `<a class="btn ghost" href="${esc(x.u)}" target="_blank" rel="noopener">📄 ${esc(x.t)}${x.ext ? " ↗" : ""}</a>`).join("");

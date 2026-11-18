@@ -1199,6 +1199,1336 @@
      }
     ],
     "sub": "b1s6"
+   },
+   {
+    "id": "vk-bab1-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 1 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「面取り」?",
+       "jp": "「面取り」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "なっと",
+        "jp": "なっと"
+       },
+       {
+        "id": "めんとり",
+        "jp": "めんとり"
+       },
+       {
+        "id": "こうせい",
+        "jp": "こうせい"
+       },
+       {
+        "id": "ふしょく",
+        "jp": "ふしょく"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「面取り」dibaca めんとり (chamfer (pahat tepi))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ロック・ワッシャー」?",
+       "jp": "「ロック・ワッシャー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "lock washer (ring pengunci)"
+       },
+       {
+        "id": "safety wire (kawat pengaman)"
+       },
+       {
+        "id": "castellated nut (mur beralur)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ロック・ワッシャー」（ろっく・わっしゃー）= lock washer (ring pengunci)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「剪断荷重」?",
+       "jp": "「剪断荷重」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ring (washer)"
+       },
+       {
+        "id": "beban geser"
+       },
+       {
+        "id": "ulir kasar"
+       },
+       {
+        "id": "ulir halus"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「剪断荷重」（せんだんかじゅう）= beban geser."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回り止め」?",
+       "jp": "「回り止め」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pencegah putar / longgar"
+       },
+       {
+        "id": "pin belah (cotter pin)"
+       },
+       {
+        "id": "baut toleransi presisi"
+       },
+       {
+        "id": "metode double twist wire"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「回り止め」（まわりどめ）= pencegah putar / longgar."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「平ワッシャー」?",
+       "jp": "「平ワッシャー」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こったー・ぴん",
+        "jp": "こったー・ぴん"
+       },
+       {
+        "id": "とるく・れんち",
+        "jp": "とるく・れんち"
+       },
+       {
+        "id": "ひらわっしゃー",
+        "jp": "ひらわっしゃー"
+       },
+       {
+        "id": "みぞつきなっと",
+        "jp": "みぞつきなっと"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「平ワッシャー」dibaca ひらわっしゃー (plain washer (ring datar))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「疲労破壊」?",
+       "jp": "「疲労破壊」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "わりぴん",
+        "jp": "わりぴん"
+       },
+       {
+        "id": "ひろうはかい",
+        "jp": "ひろうはかい"
+       },
+       {
+        "id": "ひらわっしゃー",
+        "jp": "ひらわっしゃー"
+       },
+       {
+        "id": "しめつけとるく",
+        "jp": "しめつけとるく"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「疲労破壊」dibaca ひろうはかい (kegagalan akibat kelelahan material)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「並目ねじ」?",
+       "jp": "「並目ねじ」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぴぐてぃる",
+        "jp": "ぴぐてぃる"
+       },
+       {
+        "id": "ほそめねじ",
+        "jp": "ほそめねじ"
+       },
+       {
+        "id": "すくりゅー",
+        "jp": "すくりゅー"
+       },
+       {
+        "id": "なみめねじ",
+        "jp": "なみめねじ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「並目ねじ」dibaca なみめねじ (ulir kasar)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「コッター・ピン」?",
+       "jp": "「コッター・ピン」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut toleransi presisi"
+       },
+       {
+        "id": "pigtail (ujung kawat)"
+       },
+       {
+        "id": "pin belah (cotter pin)"
+       },
+       {
+        "id": "cotter pin (pin belah)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「コッター・ピン」（こったー・ぴん）= cotter pin (pin belah)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「回り止め」?",
+       "jp": "「回り止め」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふしょく",
+        "jp": "ふしょく"
+       },
+       {
+        "id": "まわりどめ",
+        "jp": "まわりどめ"
+       },
+       {
+        "id": "めんとり",
+        "jp": "めんとり"
+       },
+       {
+        "id": "なみめねじ",
+        "jp": "なみめねじ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「回り止め」dibaca まわりどめ (pencegah putar / longgar)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ワッシャー」?",
+       "jp": "「ワッシャー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ring (washer)"
+       },
+       {
+        "id": "locking torque"
+       },
+       {
+        "id": "torque wrench"
+       },
+       {
+        "id": "beban geser"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ワッシャー」（わっしゃー）= ring (washer)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 2 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「溝付きナット」?",
+       "jp": "「溝付きナット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "plain washer (ring datar)"
+       },
+       {
+        "id": "safety wire (kawat pengaman)"
+       },
+       {
+        "id": "castellated nut (mur beralur)"
+       },
+       {
+        "id": "baut kepala tenggelam (flush)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「溝付きナット」（みぞつきなっと）= castellated nut (mur beralur)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「締結」?",
+       "jp": "「締結」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふしょく",
+        "jp": "ふしょく"
+       },
+       {
+        "id": "ていけつ",
+        "jp": "ていけつ"
+       },
+       {
+        "id": "わりぴん",
+        "jp": "わりぴん"
+       },
+       {
+        "id": "めんとり",
+        "jp": "めんとり"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「締結」dibaca ていけつ (pengencangan, sambungan (fastening))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「セルフ・タッピング・スクリュー」?",
+       "jp": "「セルフ・タッピング・スクリュー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sekrup self-tapping"
+       },
+       {
+        "id": "pigtail (ujung kawat)"
+       },
+       {
+        "id": "metode single wire"
+       },
+       {
+        "id": "torsi pengencangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「セルフ・タッピング・スクリュー」（せるふ・たっぴんぐ・すくりゅー）= sekrup self-tapping."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「溝付きナット」?",
+       "jp": "「溝付きナット」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とるく・れんち",
+        "jp": "とるく・れんち"
+       },
+       {
+        "id": "みぞつきなっと",
+        "jp": "みぞつきなっと"
+       },
+       {
+        "id": "ひらわっしゃー",
+        "jp": "ひらわっしゃー"
+       },
+       {
+        "id": "しめつけとるく",
+        "jp": "しめつけとるく"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「溝付きナット」dibaca みぞつきなっと (castellated nut (mur beralur))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「スクリュー」?",
+       "jp": "「スクリュー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "korosi"
+       },
+       {
+        "id": "sekrup"
+       },
+       {
+        "id": "mur"
+       },
+       {
+        "id": "baut"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「スクリュー」（すくりゅー）= sekrup."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「皿頭ボルト」?",
+       "jp": "「皿頭ボルト」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "plain washer (ring datar)"
+       },
+       {
+        "id": "safety wire (kawat pengaman)"
+       },
+       {
+        "id": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "castellated nut (mur beralur)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「皿頭ボルト」（さらあたまぼると）= baut kepala tenggelam (flush)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ピグテイル」?",
+       "jp": "「ピグテイル」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pigtail (ujung kawat)"
+       },
+       {
+        "id": "cotter pin (pin belah)"
+       },
+       {
+        "id": "pin belah (cotter pin)"
+       },
+       {
+        "id": "baut kepala segi enam"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ピグテイル」（ぴぐてぃる）= pigtail (ujung kawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「疲労破壊」?",
+       "jp": "「疲労破壊」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "kegagalan akibat kelelahan material"
+       },
+       {
+        "id": "pengencangan, sambungan (fastening)"
+       },
+       {
+        "id": "castellated nut (mur beralur)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「疲労破壊」（ひろうはかい）= kegagalan akibat kelelahan material."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「校正」?",
+       "jp": "「校正」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "めんとり",
+        "jp": "めんとり"
+       },
+       {
+        "id": "こうせい",
+        "jp": "こうせい"
+       },
+       {
+        "id": "なっと",
+        "jp": "なっと"
+       },
+       {
+        "id": "わりぴん",
+        "jp": "わりぴん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「校正」dibaca こうせい (kalibrasi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「トルク・レンチ」?",
+       "jp": "「トルク・レンチ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "locking torque"
+       },
+       {
+        "id": "ring (washer)"
+       },
+       {
+        "id": "beban geser"
+       },
+       {
+        "id": "torque wrench"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「トルク・レンチ」（とるく・れんち）= torque wrench."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 3 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ボルト」?",
+       "jp": "「ボルト」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sekrup"
+       },
+       {
+        "id": "baut"
+       },
+       {
+        "id": "mur"
+       },
+       {
+        "id": "korosi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ボルト」（ぼると）= baut."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「割ピン」?",
+       "jp": "「割ピン」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "めんとり",
+        "jp": "めんとり"
+       },
+       {
+        "id": "ふしょく",
+        "jp": "ふしょく"
+       },
+       {
+        "id": "ぼると",
+        "jp": "ぼると"
+       },
+       {
+        "id": "わりぴん",
+        "jp": "わりぴん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「割ピン」dibaca わりぴん (pin belah (cotter pin))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「校正」?",
+       "jp": "「校正」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ulir halus"
+       },
+       {
+        "id": "beban tarik"
+       },
+       {
+        "id": "ulir kasar"
+       },
+       {
+        "id": "kalibrasi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「校正」（こうせい）= kalibrasi."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「引張荷重」?",
+       "jp": "「引張荷重」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろっく・わっしゃー",
+        "jp": "ろっく・わっしゃー"
+       },
+       {
+        "id": "みぞつきなっと",
+        "jp": "みぞつきなっと"
+       },
+       {
+        "id": "ひっぱりかじゅう",
+        "jp": "ひっぱりかじゅう"
+       },
+       {
+        "id": "さらあたまぼると",
+        "jp": "さらあたまぼると"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「引張荷重」dibaca ひっぱりかじゅう (beban tarik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全線」?",
+       "jp": "「安全線」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "plain washer (ring datar)"
+       },
+       {
+        "id": "castellated nut (mur beralur)"
+       },
+       {
+        "id": "safety wire (kawat pengaman)"
+       },
+       {
+        "id": "lock washer (ring pengunci)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「安全線」（あんぜんせん）= safety wire (kawat pengaman)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ナット」?",
+       "jp": "「ナット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sekrup"
+       },
+       {
+        "id": "korosi"
+       },
+       {
+        "id": "mur"
+       },
+       {
+        "id": "baut"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「ナット」（なっと）= mur."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「皿頭ボルト」?",
+       "jp": "「皿頭ボルト」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さらあたまぼると",
+        "jp": "さらあたまぼると"
+       },
+       {
+        "id": "とるく・れんち",
+        "jp": "とるく・れんち"
+       },
+       {
+        "id": "ひろうはかい",
+        "jp": "ひろうはかい"
+       },
+       {
+        "id": "ろっく・わっしゃー",
+        "jp": "ろっく・わっしゃー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「皿頭ボルト」dibaca さらあたまぼると (baut kepala tenggelam (flush))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ロッキング・トルク」?",
+       "jp": "「ロッキング・トルク」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "locking torque"
+       },
+       {
+        "id": "ring (washer)"
+       },
+       {
+        "id": "beban geser"
+       },
+       {
+        "id": "torque wrench"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ロッキング・トルク」（ろっきんぐ・とるく）= locking torque."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「呼び径」?",
+       "jp": "「呼び径」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "なっと",
+        "jp": "なっと"
+       },
+       {
+        "id": "めんとり",
+        "jp": "めんとり"
+       },
+       {
+        "id": "ふしょく",
+        "jp": "ふしょく"
+       },
+       {
+        "id": "よびけい",
+        "jp": "よびけい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「呼び径」dibaca よびけい (diameter nominal)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「安全線」?",
+       "jp": "「安全線」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "わっしゃー",
+        "jp": "わっしゃー"
+       },
+       {
+        "id": "あんぜんせん",
+        "jp": "あんぜんせん"
+       },
+       {
+        "id": "ひろうはかい",
+        "jp": "ひろうはかい"
+       },
+       {
+        "id": "とるく・れんち",
+        "jp": "とるく・れんち"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「安全線」dibaca あんぜんせん (safety wire (kawat pengaman))."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-4",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 4 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「引張荷重」?",
+       "jp": "「引張荷重」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "beban tarik"
+       },
+       {
+        "id": "kalibrasi"
+       },
+       {
+        "id": "beban geser"
+       },
+       {
+        "id": "torque wrench"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「引張荷重」（ひっぱりかじゅう）= beban tarik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「締付けトルク」?",
+       "jp": "「締付けトルク」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しめつけとるく",
+        "jp": "しめつけとるく"
+       },
+       {
+        "id": "こったー・ぴん",
+        "jp": "こったー・ぴん"
+       },
+       {
+        "id": "とるく・れんち",
+        "jp": "とるく・れんち"
+       },
+       {
+        "id": "ひらわっしゃー",
+        "jp": "ひらわっしゃー"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「締付けトルク」dibaca しめつけとるく (torsi pengencangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「腐食」?",
+       "jp": "「腐食」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "korosi"
+       },
+       {
+        "id": "sekrup"
+       },
+       {
+        "id": "baut"
+       },
+       {
+        "id": "ulir kasar"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「腐食」（ふしょく）= korosi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「細目ねじ」?",
+       "jp": "「細目ねじ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ulir halus"
+       },
+       {
+        "id": "kalibrasi"
+       },
+       {
+        "id": "beban tarik"
+       },
+       {
+        "id": "torque wrench"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「細目ねじ」（ほそめねじ）= ulir halus."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「割ピン」?",
+       "jp": "「割ピン」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "chamfer (pahat tepi)"
+       },
+       {
+        "id": "pin belah (cotter pin)"
+       },
+       {
+        "id": "cotter pin (pin belah)"
+       },
+       {
+        "id": "baut toleransi presisi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「割ピン」（わりぴん）= pin belah (cotter pin)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「並目ねじ」?",
+       "jp": "「並目ねじ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "beban tarik"
+       },
+       {
+        "id": "kalibrasi"
+       },
+       {
+        "id": "ulir kasar"
+       },
+       {
+        "id": "beban geser"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「並目ねじ」（なみめねじ）= ulir kasar."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「シングル・ワイヤ方法」?",
+       "jp": "「シングル・ワイヤ方法」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "torsi pengencangan"
+       },
+       {
+        "id": "chamfer (pahat tepi)"
+       },
+       {
+        "id": "metode single wire"
+       },
+       {
+        "id": "sekrup self-tapping"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「シングル・ワイヤ方法」（しんぐる・わいやほうほう）= metode single wire."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「締付けトルク」?",
+       "jp": "「締付けトルク」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "torsi pengencangan"
+       },
+       {
+        "id": "metode single wire"
+       },
+       {
+        "id": "diameter nominal"
+       },
+       {
+        "id": "chamfer (pahat tepi)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「締付けトルク」（しめつけとるく）= torsi pengencangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「六角頭ボルト」?",
+       "jp": "「六角頭ボルト」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pigtail (ujung kawat)"
+       },
+       {
+        "id": "pin belah (cotter pin)"
+       },
+       {
+        "id": "mur pengunci sendiri"
+       },
+       {
+        "id": "baut kepala segi enam"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「六角頭ボルト」（ろっかくあたまぼると）= baut kepala segi enam."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「六角頭ボルト」?",
+       "jp": "「六角頭ボルト」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さらあたまぼると",
+        "jp": "さらあたまぼると"
+       },
+       {
+        "id": "せんだんかじゅう",
+        "jp": "せんだんかじゅう"
+       },
+       {
+        "id": "ひっぱりかじゅう",
+        "jp": "ひっぱりかじゅう"
+       },
+       {
+        "id": "ろっかくあたまぼると",
+        "jp": "ろっかくあたまぼると"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「六角頭ボルト」dibaca ろっかくあたまぼると (baut kepala segi enam)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab1-5",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 5 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 5"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「シングル・ワイヤ方法」?",
+       "jp": "「シングル・ワイヤ方法」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろっきんぐ・とるく",
+        "jp": "ろっきんぐ・とるく"
+       },
+       {
+        "id": "しんぐる・わいやほうほう",
+        "jp": "しんぐる・わいやほうほう"
+       },
+       {
+        "id": "ろっかくあたまぼると",
+        "jp": "ろっかくあたまぼると"
+       },
+       {
+        "id": "せるふ・ろっきんぐ・なっと",
+        "jp": "せるふ・ろっきんぐ・なっと"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「シングル・ワイヤ方法」dibaca しんぐる・わいやほうほう (metode single wire)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「剪断荷重」?",
+       "jp": "「剪断荷重」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひっぱりかじゅう",
+        "jp": "ひっぱりかじゅう"
+       },
+       {
+        "id": "ろっく・わっしゃー",
+        "jp": "ろっく・わっしゃー"
+       },
+       {
+        "id": "せんだんかじゅう",
+        "jp": "せんだんかじゅう"
+       },
+       {
+        "id": "さらあたまぼると",
+        "jp": "さらあたまぼると"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「剪断荷重」dibaca せんだんかじゅう (beban geser)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「精密公差ボルト」?",
+       "jp": "「精密公差ボルト」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろっきんぐ・とるく",
+        "jp": "ろっきんぐ・とるく"
+       },
+       {
+        "id": "せいみつこうさぼると",
+        "jp": "せいみつこうさぼると"
+       },
+       {
+        "id": "ろっく・わっしゃー",
+        "jp": "ろっく・わっしゃー"
+       },
+       {
+        "id": "ろっかくあたまぼると",
+        "jp": "ろっかくあたまぼると"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「精密公差ボルト」dibaca せいみつこうさぼると (baut toleransi presisi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「面取り」?",
+       "jp": "「面取り」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "chamfer (pahat tepi)"
+       },
+       {
+        "id": "pin belah (cotter pin)"
+       },
+       {
+        "id": "pigtail (ujung kawat)"
+       },
+       {
+        "id": "mur pengunci sendiri"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「面取り」（めんとり）= chamfer (pahat tepi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「腐食」?",
+       "jp": "「腐食」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふしょく",
+        "jp": "ふしょく"
+       },
+       {
+        "id": "ほそめねじ",
+        "jp": "ほそめねじ"
+       },
+       {
+        "id": "まわりどめ",
+        "jp": "まわりどめ"
+       },
+       {
+        "id": "めんとり",
+        "jp": "めんとり"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「腐食」dibaca ふしょく (korosi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「セルフ・ロッキング・ナット」?",
+       "jp": "「セルフ・ロッキング・ナット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "mur pengunci sendiri"
+       },
+       {
+        "id": "baut kepala segi enam"
+       },
+       {
+        "id": "sekrup self-tapping"
+       },
+       {
+        "id": "chamfer (pahat tepi)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「セルフ・ロッキング・ナット」（せるふ・ろっきんぐ・なっと）= mur pengunci sendiri."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ダブル・ツイスト・ワイヤ方法」?",
+       "jp": "「ダブル・ツイスト・ワイヤ方法」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut kepala segi enam"
+       },
+       {
+        "id": "metode double twist wire"
+       },
+       {
+        "id": "pencegah putar / longgar"
+       },
+       {
+        "id": "pigtail (ujung kawat)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ダブル・ツイスト・ワイヤ方法」（だぶる・ついすと・わいやほうほう）= metode double twist wire."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ダブル・ツイスト・ワイヤ方法」?",
+       "jp": "「ダブル・ツイスト・ワイヤ方法」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せるふ・たっぴんぐ・すくりゅー",
+        "jp": "せるふ・たっぴんぐ・すくりゅー"
+       },
+       {
+        "id": "だぶる・ついすと・わいやほうほう",
+        "jp": "だぶる・ついすと・わいやほうほう"
+       },
+       {
+        "id": "せるふ・ろっきんぐ・なっと",
+        "jp": "せるふ・ろっきんぐ・なっと"
+       },
+       {
+        "id": "せいみつこうさぼると",
+        "jp": "せいみつこうさぼると"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ダブル・ツイスト・ワイヤ方法」dibaca だぶる・ついすと・わいやほうほう (metode double twist wire)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「締結」?",
+       "jp": "「締結」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "baut kepala tenggelam (flush)"
+       },
+       {
+        "id": "castellated nut (mur beralur)"
+       },
+       {
+        "id": "kegagalan akibat kelelahan material"
+       },
+       {
+        "id": "pengencangan, sambungan (fastening)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「締結」（ていけつ）= pengencangan, sambungan (fastening)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「平ワッシャー」?",
+       "jp": "「平ワッシャー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cotter pin (pin belah)"
+       },
+       {
+        "id": "metode double twist wire"
+       },
+       {
+        "id": "pencegah putar / longgar"
+       },
+       {
+        "id": "plain washer (ring datar)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「平ワッシャー」（ひらわっしゃー）= plain washer (ring datar)."
+      }
+     }
+    ]
    }
   ],
   "bab2": [
@@ -1738,6 +3068,546 @@
      }
     ],
     "sub": "b2s2"
+   },
+   {
+    "id": "vk-bab2-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 1 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「抵抗」?",
+       "jp": "「抵抗」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "stabilizer horizontal"
+       },
+       {
+        "id": "resistansi / resistor"
+       },
+       {
+        "id": "anti-es (anti-icing)"
+       },
+       {
+        "id": "masker pasokan udara"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「抵抗」（ていこう）= resistansi / resistor."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ゼロΩ調整」?",
+       "jp": "「ゼロΩ調整」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "gaya angkat (lift)"
+       },
+       {
+        "id": "metode single wire"
+       },
+       {
+        "id": "penyetelan nol ohm"
+       },
+       {
+        "id": "sekrup self-tapping"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「ゼロΩ調整」（ぜろおーむちょうせい）= penyetelan nol ohm."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「交流電圧」?",
+       "jp": "「交流電圧」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こうりゅうでんあつ",
+        "jp": "こうりゅうでんあつ"
+       },
+       {
+        "id": "ちょくりゅうでんあつ",
+        "jp": "ちょくりゅうでんあつ"
+       },
+       {
+        "id": "そうじゅうしすてむ",
+        "jp": "そうじゅうしすてむ"
+       },
+       {
+        "id": "ちょくりゅうでんげん",
+        "jp": "ちょくりゅうでんげん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「交流電圧」dibaca こうりゅうでんあつ (tegangan AC)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「直列」?",
+       "jp": "「直列」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぼうひょう",
+        "jp": "ぼうひょう"
+       },
+       {
+        "id": "きょくせい",
+        "jp": "きょくせい"
+       },
+       {
+        "id": "ちょくれつ",
+        "jp": "ちょくれつ"
+       },
+       {
+        "id": "すくりゅー",
+        "jp": "すくりゅー"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「直列」dibaca ちょくれつ (seri)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「並列」?",
+       "jp": "「並列」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あんぜん",
+        "jp": "あんぜん"
+       },
+       {
+        "id": "よびけい",
+        "jp": "よびけい"
+       },
+       {
+        "id": "ていこう",
+        "jp": "ていこう"
+       },
+       {
+        "id": "へいれつ",
+        "jp": "へいれつ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「並列」dibaca へいれつ (paralel)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「抵抗」?",
+       "jp": "「抵抗」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいとん",
+        "jp": "せいとん"
+       },
+       {
+        "id": "ていこう",
+        "jp": "ていこう"
+       },
+       {
+        "id": "ふらっぷ",
+        "jp": "ふらっぷ"
+       },
+       {
+        "id": "てすたー",
+        "jp": "てすたー"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「抵抗」dibaca ていこう (resistansi / resistor)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「テスター」?",
+       "jp": "「テスター」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tester"
+       },
+       {
+        "id": "sekrup"
+       },
+       {
+        "id": "korosi"
+       },
+       {
+        "id": "skala"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「テスター」（てすたー）= tester."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「目盛」?",
+       "jp": "「目盛」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいり",
+        "jp": "せいり"
+       },
+       {
+        "id": "ゆあつ",
+        "jp": "ゆあつ"
+       },
+       {
+        "id": "ていこう",
+        "jp": "ていこう"
+       },
+       {
+        "id": "めもり",
+        "jp": "めもり"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「目盛」dibaca めもり (skala)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「直列」?",
+       "jp": "「直列」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "paralel"
+       },
+       {
+        "id": "flap"
+       },
+       {
+        "id": "baut"
+       },
+       {
+        "id": "seri"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「直列」（ちょくれつ）= seri."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「回路計」?",
+       "jp": "「回路計」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぼうひょう",
+        "jp": "ぼうひょう"
+       },
+       {
+        "id": "かいろけい",
+        "jp": "かいろけい"
+       },
+       {
+        "id": "ちょくれつ",
+        "jp": "ちょくれつ"
+       },
+       {
+        "id": "まわりどめ",
+        "jp": "まわりどめ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「回路計」dibaca かいろけい (tester (circuit tester))."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab2-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 2 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ゼロΩ調整」?",
+       "jp": "「ゼロΩ調整」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふあんぜんなこうどう",
+        "jp": "ふあんぜんなこうどう"
+       },
+       {
+        "id": "ぜろおーむちょうせい",
+        "jp": "ぜろおーむちょうせい"
+       },
+       {
+        "id": "はいんりっひのほうそく",
+        "jp": "はいんりっひのほうそく"
+       },
+       {
+        "id": "ちょくりゅうでんげん",
+        "jp": "ちょくりゅうでんげん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ゼロΩ調整」dibaca ぜろおーむちょうせい (penyetelan nol ohm)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「極性」?",
+       "jp": "「極性」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きょくせい",
+        "jp": "きょくせい"
+       },
+       {
+        "id": "ぴぐてぃる",
+        "jp": "ぴぐてぃる"
+       },
+       {
+        "id": "すくりゅー",
+        "jp": "すくりゅー"
+       },
+       {
+        "id": "そうはつき",
+        "jp": "そうはつき"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「極性」dibaca きょくせい (polaritas)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「直流電圧」?",
+       "jp": "「直流電圧」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ちょくりゅうでんあつ",
+        "jp": "ちょくりゅうでんあつ"
+       },
+       {
+        "id": "そうじゅうしすてむ",
+        "jp": "そうじゅうしすてむ"
+       },
+       {
+        "id": "ふあんぜんなこうどう",
+        "jp": "ふあんぜんなこうどう"
+       },
+       {
+        "id": "ぜろおーむちょうせい",
+        "jp": "ぜろおーむちょうせい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「直流電圧」dibaca ちょくりゅうでんあつ (tegangan DC)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「直流電圧」?",
+       "jp": "「直流電圧」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "human factor"
+       },
+       {
+        "id": "beban geser"
+       },
+       {
+        "id": "ulir kasar"
+       },
+       {
+        "id": "tegangan DC"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「直流電圧」（ちょくりゅうでんあつ）= tegangan DC."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回路計」?",
+       "jp": "「回路計」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pencegah putar / longgar"
+       },
+       {
+        "id": "tester (circuit tester)"
+       },
+       {
+        "id": "badan pesawat (fuselage)"
+       },
+       {
+        "id": "alat pemadam api (APAR)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「回路計」（かいろけい）= tester (circuit tester)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「目盛」?",
+       "jp": "「目盛」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "flap"
+       },
+       {
+        "id": "sekrup"
+       },
+       {
+        "id": "korosi"
+       },
+       {
+        "id": "skala"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「目盛」（めもり）= skala."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「測定」?",
+       "jp": "「測定」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ていけつ",
+        "jp": "ていけつ"
+       },
+       {
+        "id": "わっしゃー",
+        "jp": "わっしゃー"
+       },
+       {
+        "id": "そくてい",
+        "jp": "そくてい"
+       },
+       {
+        "id": "どうよく",
+        "jp": "どうよく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「測定」dibaca そくてい (pengukuran)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「交流電圧」?",
+       "jp": "「交流電圧」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "ulir halus"
+       },
+       {
+        "id": "keselamatan"
+       },
+       {
+        "id": "tegangan AC"
+       },
+       {
+        "id": "beban geser"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「交流電圧」（こうりゅうでんあつ）= tegangan AC."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「測定」?",
+       "jp": "「測定」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tegangan AC"
+       },
+       {
+        "id": "pengukuran"
+       },
+       {
+        "id": "kebisingan"
+       },
+       {
+        "id": "masker gas"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「測定」（そくてい）= pengukuran."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「極性」?",
+       "jp": "「極性」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "aileron"
+       },
+       {
+        "id": "kesehatan"
+       },
+       {
+        "id": "pengukuran"
+       },
+       {
+        "id": "polaritas"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「極性」（きょくせい）= polaritas."
+      }
+     }
+    ]
    }
   ],
   "bab3": [
@@ -2519,6 +4389,1086 @@
      }
     ],
     "sub": "b3s3"
+   },
+   {
+    "id": "vk-bab3-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 1 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「酸素欠乏」?",
+       "jp": "「酸素欠乏」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいてんたい",
+        "jp": "かいてんたい"
+       },
+       {
+        "id": "そうきますく",
+        "jp": "そうきますく"
+       },
+       {
+        "id": "さんそけつぼう",
+        "jp": "さんそけつぼう"
+       },
+       {
+        "id": "ぼうどくますく",
+        "jp": "ぼうどくますく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「酸素欠乏」dibaca さんそけつぼう (kekurangan oksigen)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「安全」?",
+       "jp": "「安全」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいとん",
+        "jp": "せいとん"
+       },
+       {
+        "id": "しょうめい",
+        "jp": "しょうめい"
+       },
+       {
+        "id": "あんぜん",
+        "jp": "あんぜん"
+       },
+       {
+        "id": "けんこう",
+        "jp": "けんこう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「安全」dibaca あんぜん (keselamatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「安全装置」?",
+       "jp": "「安全装置」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぼうどくますく",
+        "jp": "ぼうどくますく"
+       },
+       {
+        "id": "ゆうきようざい",
+        "jp": "ゆうきようざい"
+       },
+       {
+        "id": "しぜんはっか",
+        "jp": "しぜんはっか"
+       },
+       {
+        "id": "あんぜんそうち",
+        "jp": "あんぜんそうち"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「安全装置」dibaca あんぜんそうち (alat pengaman)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「火気厳禁」?",
+       "jp": "「火気厳禁」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいてんたい",
+        "jp": "かいてんたい"
+       },
+       {
+        "id": "あんぜんそうち",
+        "jp": "あんぜんそうち"
+       },
+       {
+        "id": "しょうめい",
+        "jp": "しょうめい"
+       },
+       {
+        "id": "かきげんきん",
+        "jp": "かきげんきん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「火気厳禁」dibaca かきげんきん (dilarang api)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「酸素欠乏」?",
+       "jp": "「酸素欠乏」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "seiton: menata rapi"
+       },
+       {
+        "id": "masker pasokan udara"
+       },
+       {
+        "id": "tindakan tidak aman"
+       },
+       {
+        "id": "kekurangan oksigen"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「酸素欠乏」（さんそけつぼう）= kekurangan oksigen."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「墜落制止用器具」?",
+       "jp": "「墜落制止用器具」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kebersihan/kesehatan (hygiene)"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)"
+       },
+       {
+        "id": "UU Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "seiri: menyingkirkan yang tidak perlu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「墜落制止用器具」（ついらくせいしようきぐ）= alat penahan jatuh (full harness)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「火気厳禁」?",
+       "jp": "「火気厳禁」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumbat telinga"
+       },
+       {
+        "id": "dilarang api"
+       },
+       {
+        "id": "penerangan"
+       },
+       {
+        "id": "masker gas"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「火気厳禁」（かきげんきん）= dilarang api."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「健康」?",
+       "jp": "「健康」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kesehatan"
+       },
+       {
+        "id": "dilarang api"
+       },
+       {
+        "id": "kebisingan"
+       },
+       {
+        "id": "penerangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「健康」（けんこう）= kesehatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「照明」?",
+       "jp": "「照明」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "penerangan"
+       },
+       {
+        "id": "keselamatan"
+       },
+       {
+        "id": "kebisingan"
+       },
+       {
+        "id": "dilarang api"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「照明」（しょうめい）= penerangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「耳栓」?",
+       "jp": "「耳栓」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pengaman"
+       },
+       {
+        "id": "sumbat telinga"
+       },
+       {
+        "id": "benda berputar"
+       },
+       {
+        "id": "dilarang api"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「耳栓」（みみせん）= sumbat telinga."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab3-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 2 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「有機溶剤」?",
+       "jp": "「有機溶剤」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kekurangan oksigen"
+       },
+       {
+        "id": "sumbat telinga"
+       },
+       {
+        "id": "benda berputar"
+       },
+       {
+        "id": "pelarut organik"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「有機溶剤」（ゆうきようざい）= pelarut organik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「騒音」?",
+       "jp": "「騒音」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいとん",
+        "jp": "せいとん"
+       },
+       {
+        "id": "えいせい",
+        "jp": "えいせい"
+       },
+       {
+        "id": "そうおん",
+        "jp": "そうおん"
+       },
+       {
+        "id": "けんこう",
+        "jp": "けんこう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「騒音」dibaca そうおん (kebisingan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「有機溶剤」?",
+       "jp": "「有機溶剤」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぼうどくますく",
+        "jp": "ぼうどくますく"
+       },
+       {
+        "id": "さんそけつぼう",
+        "jp": "さんそけつぼう"
+       },
+       {
+        "id": "そうきますく",
+        "jp": "そうきますく"
+       },
+       {
+        "id": "ゆうきようざい",
+        "jp": "ゆうきようざい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「有機溶剤」dibaca ゆうきようざい (pelarut organik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「送気マスク」?",
+       "jp": "「送気マスク」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tindakan tidak aman"
+       },
+       {
+        "id": "kekurangan oksigen"
+       },
+       {
+        "id": "masker pasokan udara"
+       },
+       {
+        "id": "seiton: menata rapi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「送気マスク」（そうきますく）= masker pasokan udara."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「保護具」?",
+       "jp": "「保護具」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "けんこう",
+        "jp": "けんこう"
+       },
+       {
+        "id": "せいり",
+        "jp": "せいり"
+       },
+       {
+        "id": "あんぜん",
+        "jp": "あんぜん"
+       },
+       {
+        "id": "ほごぐ",
+        "jp": "ほごぐ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「保護具」dibaca ほごぐ (alat pelindung diri (APD))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回転体」?",
+       "jp": "「回転体」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "benda berputar"
+       },
+       {
+        "id": "dilarang api"
+       },
+       {
+        "id": "alat pengaman"
+       },
+       {
+        "id": "sumbat telinga"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「回転体」（かいてんたい）= benda berputar."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「消火器」?",
+       "jp": "「消火器」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほごぐ",
+        "jp": "ほごぐ"
+       },
+       {
+        "id": "しょうかき",
+        "jp": "しょうかき"
+       },
+       {
+        "id": "せいとん",
+        "jp": "せいとん"
+       },
+       {
+        "id": "けんこう",
+        "jp": "けんこう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「消火器」dibaca しょうかき (alat pemadam api (APAR))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「回転体」?",
+       "jp": "「回転体」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいてんたい",
+        "jp": "かいてんたい"
+       },
+       {
+        "id": "さんそけつぼう",
+        "jp": "さんそけつぼう"
+       },
+       {
+        "id": "かきげんきん",
+        "jp": "かきげんきん"
+       },
+       {
+        "id": "ぼうどくますく",
+        "jp": "ぼうどくますく"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「回転体」dibaca かいてんたい (benda berputar)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「不安全な行動」?",
+       "jp": "「不安全な行動」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "masker pasokan udara"
+       },
+       {
+        "id": "tindakan tidak aman"
+       },
+       {
+        "id": "seiton: menata rapi"
+       },
+       {
+        "id": "kekurangan oksigen"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「不安全な行動」（ふあんぜんなこうどう）= tindakan tidak aman."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「照明」?",
+       "jp": "「照明」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あんぜん",
+        "jp": "あんぜん"
+       },
+       {
+        "id": "しょうかき",
+        "jp": "しょうかき"
+       },
+       {
+        "id": "えいせい",
+        "jp": "えいせい"
+       },
+       {
+        "id": "しょうめい",
+        "jp": "しょうめい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「照明」dibaca しょうめい (penerangan)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab3-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 3 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「防毒マスク」?",
+       "jp": "「防毒マスク」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kesehatan"
+       },
+       {
+        "id": "masker gas"
+       },
+       {
+        "id": "kebisingan"
+       },
+       {
+        "id": "keselamatan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「防毒マスク」（ぼうどくますく）= masker gas."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「送気マスク」?",
+       "jp": "「送気マスク」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そうきますく",
+        "jp": "そうきますく"
+       },
+       {
+        "id": "かいてんたい",
+        "jp": "かいてんたい"
+       },
+       {
+        "id": "ぼうどくますく",
+        "jp": "ぼうどくますく"
+       },
+       {
+        "id": "かきげんきん",
+        "jp": "かきげんきん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「送気マスク」dibaca そうきますく (masker pasokan udara)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「消火器」?",
+       "jp": "「消火器」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "alat pemadam api (APAR)"
+       },
+       {
+        "id": "masker pasokan udara"
+       },
+       {
+        "id": "menyala sendiri (spontan)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「消火器」（しょうかき）= alat pemadam api (APAR)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「保護具」?",
+       "jp": "「保護具」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pemadam api (APAR)"
+       },
+       {
+        "id": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "menyala sendiri (spontan)"
+       },
+       {
+        "id": "kebersihan/kesehatan (hygiene)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「保護具」（ほごぐ）= alat pelindung diri (APD)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整理」?",
+       "jp": "「整理」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kebersihan/kesehatan (hygiene)"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)"
+       },
+       {
+        "id": "seiri: menyingkirkan yang tidak perlu"
+       },
+       {
+        "id": "UU Keselamatan dan Kesehatan Kerja"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「整理」（せいり）= seiri: menyingkirkan yang tidak perlu."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「自然発火」?",
+       "jp": "「自然発火」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pemadam api (APAR)"
+       },
+       {
+        "id": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "kekurangan oksigen"
+       },
+       {
+        "id": "menyala sendiri (spontan)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「自然発火」（しぜんはっか）= menyala sendiri (spontan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「防毒マスク」?",
+       "jp": "「防毒マスク」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいてんたい",
+        "jp": "かいてんたい"
+       },
+       {
+        "id": "さんそけつぼう",
+        "jp": "さんそけつぼう"
+       },
+       {
+        "id": "ぼうどくますく",
+        "jp": "ぼうどくますく"
+       },
+       {
+        "id": "しょうめい",
+        "jp": "しょうめい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「防毒マスク」dibaca ぼうどくますく (masker gas)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「不安全な行動」?",
+       "jp": "「不安全な行動」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さんそけつぼう",
+        "jp": "さんそけつぼう"
+       },
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       },
+       {
+        "id": "あんぜんそうち",
+        "jp": "あんぜんそうち"
+       },
+       {
+        "id": "ふあんぜんなこうどう",
+        "jp": "ふあんぜんなこうどう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「不安全な行動」dibaca ふあんぜんなこうどう (tindakan tidak aman)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整頓」?",
+       "jp": "「整頓」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "masker pasokan udara"
+       },
+       {
+        "id": "seiton: menata rapi"
+       },
+       {
+        "id": "kekurangan oksigen"
+       },
+       {
+        "id": "tindakan tidak aman"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「整頓」（せいとん）= seiton: menata rapi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全」?",
+       "jp": "「安全」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "dilarang api"
+       },
+       {
+        "id": "penerangan"
+       },
+       {
+        "id": "keselamatan"
+       },
+       {
+        "id": "kesehatan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「安全」（あんぜん）= keselamatan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab3-4",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 4 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「衛生」?",
+       "jp": "「衛生」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kebersihan/kesehatan (hygiene)"
+       },
+       {
+        "id": "UU Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "alat pelindung diri (APD)"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「衛生」（えいせい）= kebersihan/kesehatan (hygiene)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「労働安全衛生法」?",
+       "jp": "「労働安全衛生法」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       },
+       {
+        "id": "ゆうきようざい",
+        "jp": "ゆうきようざい"
+       },
+       {
+        "id": "ふあんぜんなこうどう",
+        "jp": "ふあんぜんなこうどう"
+       },
+       {
+        "id": "ついらくせいしようきぐ",
+        "jp": "ついらくせいしようきぐ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「労働安全衛生法」dibaca ろうどうあんぜんえいせいほう (UU Keselamatan dan Kesehatan Kerja)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「労働安全衛生法」?",
+       "jp": "「労働安全衛生法」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kebersihan/kesehatan (hygiene)"
+       },
+       {
+        "id": "seiri: menyingkirkan yang tidak perlu"
+       },
+       {
+        "id": "alat penahan jatuh (full harness)"
+       },
+       {
+        "id": "UU Keselamatan dan Kesehatan Kerja"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「労働安全衛生法」（ろうどうあんぜんえいせいほう）= UU Keselamatan dan Kesehatan Kerja."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「墜落制止用器具」?",
+       "jp": "「墜落制止用器具」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さんそけつぼう",
+        "jp": "さんそけつぼう"
+       },
+       {
+        "id": "ついらくせいしようきぐ",
+        "jp": "ついらくせいしようきぐ"
+       },
+       {
+        "id": "ふあんぜんなこうどう",
+        "jp": "ふあんぜんなこうどう"
+       },
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「墜落制止用器具」dibaca ついらくせいしようきぐ (alat penahan jatuh (full harness))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「整理」?",
+       "jp": "「整理」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "えいせい",
+        "jp": "えいせい"
+       },
+       {
+        "id": "しょうめい",
+        "jp": "しょうめい"
+       },
+       {
+        "id": "せいり",
+        "jp": "せいり"
+       },
+       {
+        "id": "そうおん",
+        "jp": "そうおん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「整理」dibaca せいり (seiri: menyingkirkan yang tidak perlu)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「自然発火」?",
+       "jp": "「自然発火」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しょうめい",
+        "jp": "しょうめい"
+       },
+       {
+        "id": "しぜんはっか",
+        "jp": "しぜんはっか"
+       },
+       {
+        "id": "かきげんきん",
+        "jp": "かきげんきん"
+       },
+       {
+        "id": "かいてんたい",
+        "jp": "かいてんたい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「自然発火」dibaca しぜんはっか (menyala sendiri (spontan))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「健康」?",
+       "jp": "「健康」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そうきますく",
+        "jp": "そうきますく"
+       },
+       {
+        "id": "ほごぐ",
+        "jp": "ほごぐ"
+       },
+       {
+        "id": "けんこう",
+        "jp": "けんこう"
+       },
+       {
+        "id": "せいり",
+        "jp": "せいり"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「健康」dibaca けんこう (kesehatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「耳栓」?",
+       "jp": "「耳栓」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいとん",
+        "jp": "せいとん"
+       },
+       {
+        "id": "しょうめい",
+        "jp": "しょうめい"
+       },
+       {
+        "id": "えいせい",
+        "jp": "えいせい"
+       },
+       {
+        "id": "みみせん",
+        "jp": "みみせん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「耳栓」dibaca みみせん (sumbat telinga)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全装置」?",
+       "jp": "「安全装置」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "alat pengaman"
+       },
+       {
+        "id": "dilarang api"
+       },
+       {
+        "id": "benda berputar"
+       },
+       {
+        "id": "keselamatan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「安全装置」（あんぜんそうち）= alat pengaman."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「整頓」?",
+       "jp": "「整頓」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あんぜん",
+        "jp": "あんぜん"
+       },
+       {
+        "id": "せいり",
+        "jp": "せいり"
+       },
+       {
+        "id": "そうおん",
+        "jp": "そうおん"
+       },
+       {
+        "id": "せいとん",
+        "jp": "せいとん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「整頓」dibaca せいとん (seiton: menata rapi)."
+      }
+     }
+    ]
    }
   ],
   "bab4": [
@@ -3008,6 +5958,534 @@
      }
     ],
     "sub": "b4s3"
+   },
+   {
+    "id": "vk-bab4-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 4 · 1 (dari daftar kosakata)",
+     "jp": "第4章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「作業品質」?",
+       "jp": "「作業品質」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "manajemen keandalan"
+       },
+       {
+        "id": "kualitas pekerjaan"
+       },
+       {
+        "id": "kualitas perawatan"
+       },
+       {
+        "id": "indikator kualitas"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「作業品質」（さぎょうひんしつ）= kualitas pekerjaan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整備品質」?",
+       "jp": "「整備品質」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "manajemen keandalan"
+       },
+       {
+        "id": "indikator kualitas"
+       },
+       {
+        "id": "kualitas perawatan"
+       },
+       {
+        "id": "kualitas pekerjaan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「整備品質」（せいびひんしつ）= kualitas perawatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「品質指標」?",
+       "jp": "「品質指標」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "manajemen keandalan"
+       },
+       {
+        "id": "kualitas perawatan"
+       },
+       {
+        "id": "kualitas pekerjaan"
+       },
+       {
+        "id": "indikator kualitas"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「品質指標」（ひんしつしひょう）= indikator kualitas."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「是正」?",
+       "jp": "「是正」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cacat, kerusakan, ketidaksesuaian"
+       },
+       {
+        "id": "perbaikan (tindakan korektif)"
+       },
+       {
+        "id": "hukum Heinrich (1:29:300)"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「是正」（ぜせい）= perbaikan (tindakan korektif)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「整備品質」?",
+       "jp": "「整備品質」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいびひんしつ",
+        "jp": "せいびひんしつ"
+       },
+       {
+        "id": "さぎょうひんしつ",
+        "jp": "さぎょうひんしつ"
+       },
+       {
+        "id": "いんしでんと",
+        "jp": "いんしでんと"
+       },
+       {
+        "id": "ひやりはっと",
+        "jp": "ひやりはっと"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「整備品質」dibaca せいびひんしつ (kualitas perawatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「機材品質」?",
+       "jp": "「機材品質」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "human error (kesalahan manusia)"
+       },
+       {
+        "id": "hukum Heinrich (1:29:300)"
+       },
+       {
+        "id": "hampir celaka (near miss)"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「機材品質」（きざいひんしつ）= kualitas peralatan (pesawat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「不具合」?",
+       "jp": "「不具合」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cacat, kerusakan, ketidaksesuaian"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)"
+       },
+       {
+        "id": "human error (kesalahan manusia)"
+       },
+       {
+        "id": "perbaikan (tindakan korektif)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「不具合」（ふぐあい）= cacat, kerusakan, ketidaksesuaian."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「品質」?",
+       "jp": "「品質」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       },
+       {
+        "id": "ふぐあい",
+        "jp": "ふぐあい"
+       },
+       {
+        "id": "いんしでんと",
+        "jp": "いんしでんと"
+       },
+       {
+        "id": "ぜせい",
+        "jp": "ぜせい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「品質」dibaca ひんしつ (kualitas)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「インシデント」?",
+       "jp": "「インシデント」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "human factor"
+       },
+       {
+        "id": "kualitas"
+       },
+       {
+        "id": "insiden"
+       },
+       {
+        "id": "indikator kualitas"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「インシデント」（いんしでんと）= insiden."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ヒューマンエラー」?",
+       "jp": "「ヒューマンエラー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "cacat, kerusakan, ketidaksesuaian"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)"
+       },
+       {
+        "id": "perbaikan (tindakan korektif)"
+       },
+       {
+        "id": "human error (kesalahan manusia)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ヒューマンエラー」（ひゅーまんえらー）= human error (kesalahan manusia)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab4-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 4 · 2 (dari daftar kosakata)",
+     "jp": "第4章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ヒューマンファクター」?",
+       "jp": "「ヒューマンファクター」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "insiden"
+       },
+       {
+        "id": "kualitas perawatan"
+       },
+       {
+        "id": "kualitas"
+       },
+       {
+        "id": "human factor"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ヒューマンファクター」（ひゅーまんふぁくたー）= human factor."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「是正」?",
+       "jp": "「是正」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       },
+       {
+        "id": "ふぐあい",
+        "jp": "ふぐあい"
+       },
+       {
+        "id": "きざいひんしつ",
+        "jp": "きざいひんしつ"
+       },
+       {
+        "id": "ぜせい",
+        "jp": "ぜせい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「是正」dibaca ぜせい (perbaikan (tindakan korektif))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ハインリッヒの法則」?",
+       "jp": "「ハインリッヒの法則」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "hukum Heinrich (1:29:300)"
+       },
+       {
+        "id": "kualitas peralatan (pesawat)"
+       },
+       {
+        "id": "perbaikan (tindakan korektif)"
+       },
+       {
+        "id": "hampir celaka (near miss)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ハインリッヒの法則」（はいんりっひのほうそく）= hukum Heinrich (1:29:300)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「不具合」?",
+       "jp": "「不具合」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふぐあい",
+        "jp": "ふぐあい"
+       },
+       {
+        "id": "きざいひんしつ",
+        "jp": "きざいひんしつ"
+       },
+       {
+        "id": "ぜせい",
+        "jp": "ぜせい"
+       },
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「不具合」dibaca ふぐあい (cacat, kerusakan, ketidaksesuaian)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「信頼性管理」?",
+       "jp": "「信頼性管理」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひんしつしひょう",
+        "jp": "ひんしつしひょう"
+       },
+       {
+        "id": "ひゅーまんふぁくたー",
+        "jp": "ひゅーまんふぁくたー"
+       },
+       {
+        "id": "さぎょうひんしつ",
+        "jp": "さぎょうひんしつ"
+       },
+       {
+        "id": "しんらいせいかんり",
+        "jp": "しんらいせいかんり"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「信頼性管理」dibaca しんらいせいかんり (manajemen keandalan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ヒヤリハット」?",
+       "jp": "「ヒヤリハット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "hampir celaka (near miss)"
+       },
+       {
+        "id": "perbaikan (tindakan korektif)"
+       },
+       {
+        "id": "hukum Heinrich (1:29:300)"
+       },
+       {
+        "id": "human error (kesalahan manusia)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ヒヤリハット」（ひやりはっと）= hampir celaka (near miss)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「信頼性管理」?",
+       "jp": "「信頼性管理」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "manajemen keandalan"
+       },
+       {
+        "id": "indikator kualitas"
+       },
+       {
+        "id": "kualitas perawatan"
+       },
+       {
+        "id": "kualitas pekerjaan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「信頼性管理」（しんらいせいかんり）= manajemen keandalan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「作業品質」?",
+       "jp": "「作業品質」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいびひんしつ",
+        "jp": "せいびひんしつ"
+       },
+       {
+        "id": "ひんしつしひょう",
+        "jp": "ひんしつしひょう"
+       },
+       {
+        "id": "さぎょうひんしつ",
+        "jp": "さぎょうひんしつ"
+       },
+       {
+        "id": "ひゅーまんえらー",
+        "jp": "ひゅーまんえらー"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「作業品質」dibaca さぎょうひんしつ (kualitas pekerjaan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ハインリッヒの法則」?",
+       "jp": "「ハインリッヒの法則」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひゅーまんふぁくたー",
+        "jp": "ひゅーまんふぁくたー"
+       },
+       {
+        "id": "ひゅーまんえらー",
+        "jp": "ひゅーまんえらー"
+       },
+       {
+        "id": "ひんしつしひょう",
+        "jp": "ひんしつしひょう"
+       },
+       {
+        "id": "はいんりっひのほうそく",
+        "jp": "はいんりっひのほうそく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ハインリッヒの法則」dibaca はいんりっひのほうそく (hukum Heinrich (1:29:300))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「品質」?",
+       "jp": "「品質」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kualitas"
+       },
+       {
+        "id": "manajemen keandalan"
+       },
+       {
+        "id": "insiden"
+       },
+       {
+        "id": "human factor"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「品質」（ひんしつ）= kualitas."
+      }
+     }
+    ]
    }
   ],
   "bab5": [
@@ -3794,6 +7272,1078 @@
      }
     ],
     "sub": "b5s5"
+   },
+   {
+    "id": "vk-bab5-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 1 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「交流電源」?",
+       "jp": "「交流電源」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumber daya DC"
+       },
+       {
+        "id": "sambaran petir"
+       },
+       {
+        "id": "tekanan hidrolik"
+       },
+       {
+        "id": "sumber daya AC"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「交流電源」（こうりゅうでんげん）= sumber daya AC."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「操縦システム」?",
+       "jp": "「操縦システム」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そうじゅうしすてむ",
+        "jp": "そうじゅうしすてむ"
+       },
+       {
+        "id": "すいへいあんていばん",
+        "jp": "すいへいあんていばん"
+       },
+       {
+        "id": "あっしゅくくうき",
+        "jp": "あっしゅくくうき"
+       },
+       {
+        "id": "こうりゅうでんげん",
+        "jp": "こうりゅうでんげん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「操縦システム」dibaca そうじゅうしすてむ (sistem kontrol penerbangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「方向舵」?",
+       "jp": "「方向舵」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "elevator"
+       },
+       {
+        "id": "aileron"
+       },
+       {
+        "id": "spoiler"
+       },
+       {
+        "id": "rudder"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「方向舵」（ほうこうだ）= rudder."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「落雷」?",
+       "jp": "「落雷」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほうこうだ",
+        "jp": "ほうこうだ"
+       },
+       {
+        "id": "らくらい",
+        "jp": "らくらい"
+       },
+       {
+        "id": "すらっと",
+        "jp": "すらっと"
+       },
+       {
+        "id": "ふらっぷ",
+        "jp": "ふらっぷ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「落雷」dibaca らくらい (sambaran petir)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「垂直安定板」?",
+       "jp": "「垂直安定板」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "stabilizer horizontal"
+       },
+       {
+        "id": "slat (sayap depan)"
+       },
+       {
+        "id": "anti-es (anti-icing)"
+       },
+       {
+        "id": "stabilizer vertikal"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「垂直安定板」（すいちょくあんていばん）= stabilizer vertikal."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「揚力」?",
+       "jp": "「揚力」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "どうよく",
+        "jp": "どうよく"
+       },
+       {
+        "id": "ほじょよく",
+        "jp": "ほじょよく"
+       },
+       {
+        "id": "ようりょく",
+        "jp": "ようりょく"
+       },
+       {
+        "id": "ふらっぷ",
+        "jp": "ふらっぷ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「揚力」dibaca ようりょく (gaya angkat (lift))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「油圧」?",
+       "jp": "「油圧」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tekanan hidrolik"
+       },
+       {
+        "id": "sambaran petir"
+       },
+       {
+        "id": "sumber daya AC"
+       },
+       {
+        "id": "slat (sayap depan)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「油圧」（ゆあつ）= tekanan hidrolik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「昇降舵」?",
+       "jp": "「昇降舵」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほじょよく",
+        "jp": "ほじょよく"
+       },
+       {
+        "id": "すぽいらー",
+        "jp": "すぽいらー"
+       },
+       {
+        "id": "ぎゃくふんしゃ",
+        "jp": "ぎゃくふんしゃ"
+       },
+       {
+        "id": "しょうこうだ",
+        "jp": "しょうこうだ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「昇降舵」dibaca しょうこうだ (elevator)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「水平安定板」?",
+       "jp": "「水平安定板」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ちょくりゅうでんげん",
+        "jp": "ちょくりゅうでんげん"
+       },
+       {
+        "id": "すいへいあんていばん",
+        "jp": "すいへいあんていばん"
+       },
+       {
+        "id": "こうりゅうでんげん",
+        "jp": "こうりゅうでんげん"
+       },
+       {
+        "id": "すいちょくあんていばん",
+        "jp": "すいちょくあんていばん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「水平安定板」dibaca すいへいあんていばん (stabilizer horizontal)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「油圧」?",
+       "jp": "「油圧」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ゆあつ",
+        "jp": "ゆあつ"
+       },
+       {
+        "id": "ふらっぷ",
+        "jp": "ふらっぷ"
+       },
+       {
+        "id": "どうたい",
+        "jp": "どうたい"
+       },
+       {
+        "id": "よあつ",
+        "jp": "よあつ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「油圧」dibaca ゆあつ (tekanan hidrolik)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab5-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 2 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「落雷」?",
+       "jp": "「落雷」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sumber daya DC"
+       },
+       {
+        "id": "tekanan hidrolik"
+       },
+       {
+        "id": "sambaran petir"
+       },
+       {
+        "id": "sumber daya AC"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「落雷」（らくらい）= sambaran petir."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「直流電源」?",
+       "jp": "「直流電源」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "tekanan hidrolik"
+       },
+       {
+        "id": "sumber daya DC"
+       },
+       {
+        "id": "sumber daya AC"
+       },
+       {
+        "id": "sambaran petir"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「直流電源」（ちょくりゅうでんげん）= sumber daya DC."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「揚力」?",
+       "jp": "「揚力」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "gaya angkat (lift)"
+       },
+       {
+        "id": "stabilizer vertikal"
+       },
+       {
+        "id": "pesawat bermesin dua"
+       },
+       {
+        "id": "slat (sayap depan)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「揚力」（ようりょく）= gaya angkat (lift)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「補助翼」?",
+       "jp": "「補助翼」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "elevator"
+       },
+       {
+        "id": "rudder"
+       },
+       {
+        "id": "spoiler"
+       },
+       {
+        "id": "aileron"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「補助翼」（ほじょよく）= aileron."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「交流電源」?",
+       "jp": "「交流電源」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こうりゅうでんげん",
+        "jp": "こうりゅうでんげん"
+       },
+       {
+        "id": "がいぶでんげん",
+        "jp": "がいぶでんげん"
+       },
+       {
+        "id": "すいへいあんていばん",
+        "jp": "すいへいあんていばん"
+       },
+       {
+        "id": "そうじゅうしすてむ",
+        "jp": "そうじゅうしすてむ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「交流電源」dibaca こうりゅうでんげん (sumber daya AC)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「スラット」?",
+       "jp": "「スラット」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "gaya angkat (lift)"
+       },
+       {
+        "id": "slat (sayap depan)"
+       },
+       {
+        "id": "anti-es (anti-icing)"
+       },
+       {
+        "id": "tekanan hidrolik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「スラット」（すらっと）= slat (sayap depan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「動翼」?",
+       "jp": "「動翼」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そうはつき",
+        "jp": "そうはつき"
+       },
+       {
+        "id": "どうよく",
+        "jp": "どうよく"
+       },
+       {
+        "id": "らくらい",
+        "jp": "らくらい"
+       },
+       {
+        "id": "どうたい",
+        "jp": "どうたい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「動翼」dibaca どうよく (permukaan kontrol bergerak (control surface))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「動翼」?",
+       "jp": "「動翼」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemberian tekanan kabin (pressurization)"
+       },
+       {
+        "id": "bus (titik distribusi daya listrik)"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "permukaan kontrol bergerak (control surface)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「動翼」（どうよく）= permukaan kontrol bergerak (control surface)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「外部電源」?",
+       "jp": "「外部電源」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "がいぶでんげん",
+        "jp": "がいぶでんげん"
+       },
+       {
+        "id": "すぽいらー",
+        "jp": "すぽいらー"
+       },
+       {
+        "id": "ぎゃくふんしゃ",
+        "jp": "ぎゃくふんしゃ"
+       },
+       {
+        "id": "あっしゅくくうき",
+        "jp": "あっしゅくくうき"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「外部電源」dibaca がいぶでんげん (daya eksternal (dari darat))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「防氷」?",
+       "jp": "「防氷」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "stabilizer vertikal"
+       },
+       {
+        "id": "stabilizer horizontal"
+       },
+       {
+        "id": "pesawat bermesin dua"
+       },
+       {
+        "id": "anti-es (anti-icing)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「防氷」（ぼうひょう）= anti-es (anti-icing)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab5-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 3 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「防氷」?",
+       "jp": "「防氷」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ようりょく",
+        "jp": "ようりょく"
+       },
+       {
+        "id": "ほうこうだ",
+        "jp": "ほうこうだ"
+       },
+       {
+        "id": "すぽいらー",
+        "jp": "すぽいらー"
+       },
+       {
+        "id": "ぼうひょう",
+        "jp": "ぼうひょう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「防氷」dibaca ぼうひょう (anti-es (anti-icing))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「双発機」?",
+       "jp": "「双発機」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ようりょく",
+        "jp": "ようりょく"
+       },
+       {
+        "id": "すぽいらー",
+        "jp": "すぽいらー"
+       },
+       {
+        "id": "そうはつき",
+        "jp": "そうはつき"
+       },
+       {
+        "id": "すらっと",
+        "jp": "すらっと"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「双発機」dibaca そうはつき (pesawat bermesin dua)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「補助翼」?",
+       "jp": "「補助翼」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そうはつき",
+        "jp": "そうはつき"
+       },
+       {
+        "id": "ほじょよく",
+        "jp": "ほじょよく"
+       },
+       {
+        "id": "ぼうひょう",
+        "jp": "ぼうひょう"
+       },
+       {
+        "id": "ほうこうだ",
+        "jp": "ほうこうだ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「補助翼」dibaca ほじょよく (aileron)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「操縦システム」?",
+       "jp": "「操縦システム」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "daya eksternal (dari darat)"
+       },
+       {
+        "id": "badan pesawat (fuselage)"
+       },
+       {
+        "id": "sistem kontrol penerbangan"
+       },
+       {
+        "id": "udara bertekanan (pneumatic)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「操縦システム」（そうじゅうしすてむ）= sistem kontrol penerbangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「方向舵」?",
+       "jp": "「方向舵」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "すぽいらー",
+        "jp": "すぽいらー"
+       },
+       {
+        "id": "ようりょく",
+        "jp": "ようりょく"
+       },
+       {
+        "id": "そうはつき",
+        "jp": "そうはつき"
+       },
+       {
+        "id": "ほうこうだ",
+        "jp": "ほうこうだ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「方向舵」dibaca ほうこうだ (rudder)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「胴体」?",
+       "jp": "「胴体」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pesawat bermesin dua"
+       },
+       {
+        "id": "sistem kontrol penerbangan"
+       },
+       {
+        "id": "daya eksternal (dari darat)"
+       },
+       {
+        "id": "badan pesawat (fuselage)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「胴体」（どうたい）= badan pesawat (fuselage)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「与圧」?",
+       "jp": "「与圧」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "どうよく",
+        "jp": "どうよく"
+       },
+       {
+        "id": "らくらい",
+        "jp": "らくらい"
+       },
+       {
+        "id": "よあつ",
+        "jp": "よあつ"
+       },
+       {
+        "id": "すらっと",
+        "jp": "すらっと"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「与圧」dibaca よあつ (pemberian tekanan kabin (pressurization))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「フラップ」?",
+       "jp": "「フラップ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "flap"
+       },
+       {
+        "id": "aileron"
+       },
+       {
+        "id": "spoiler"
+       },
+       {
+        "id": "rudder"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「フラップ」（ふらっぷ）= flap."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「外部電源」?",
+       "jp": "「外部電源」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "daya eksternal (dari darat)"
+       },
+       {
+        "id": "udara bertekanan (pneumatic)"
+       },
+       {
+        "id": "sistem kontrol penerbangan"
+       },
+       {
+        "id": "badan pesawat (fuselage)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「外部電源」（がいぶでんげん）= daya eksternal (dari darat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「圧縮空気」?",
+       "jp": "「圧縮空気」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "sistem kontrol penerbangan"
+       },
+       {
+        "id": "udara bertekanan (pneumatic)"
+       },
+       {
+        "id": "daya eksternal (dari darat)"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「圧縮空気」（あっしゅくくうき）= udara bertekanan (pneumatic)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab5-4",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 4 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「胴体」?",
+       "jp": "「胴体」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "よあつ",
+        "jp": "よあつ"
+       },
+       {
+        "id": "ふらっぷ",
+        "jp": "ふらっぷ"
+       },
+       {
+        "id": "どうたい",
+        "jp": "どうたい"
+       },
+       {
+        "id": "どうよく",
+        "jp": "どうよく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「胴体」dibaca どうたい (badan pesawat (fuselage))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「スポイラー」?",
+       "jp": "「スポイラー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "aileron"
+       },
+       {
+        "id": "spoiler"
+       },
+       {
+        "id": "elevator"
+       },
+       {
+        "id": "rudder"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「スポイラー」（すぽいらー）= spoiler."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「バス」?",
+       "jp": "「バス」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "pemberian tekanan kabin (pressurization)"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "udara bertekanan (pneumatic)"
+       },
+       {
+        "id": "bus (titik distribusi daya listrik)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「バス」（ばす）= bus (titik distribusi daya listrik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「直流電源」?",
+       "jp": "「直流電源」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "すいへいあんていばん",
+        "jp": "すいへいあんていばん"
+       },
+       {
+        "id": "ちょくりゅうでんげん",
+        "jp": "ちょくりゅうでんげん"
+       },
+       {
+        "id": "すいちょくあんていばん",
+        "jp": "すいちょくあんていばん"
+       },
+       {
+        "id": "あっしゅくくうき",
+        "jp": "あっしゅくくうき"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「直流電源」dibaca ちょくりゅうでんげん (sumber daya DC)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「与圧」?",
+       "jp": "「与圧」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "bus (titik distribusi daya listrik)"
+       },
+       {
+        "id": "permukaan kontrol bergerak (control surface)"
+       },
+       {
+        "id": "pemberian tekanan kabin (pressurization)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「与圧」（よあつ）= pemberian tekanan kabin (pressurization)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「逆噴射」?",
+       "jp": "「逆噴射」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "daya eksternal (dari darat)"
+       },
+       {
+        "id": "thrust reverser (dorongan balik)"
+       },
+       {
+        "id": "bus (titik distribusi daya listrik)"
+       },
+       {
+        "id": "udara bertekanan (pneumatic)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「逆噴射」（ぎゃくふんしゃ）= thrust reverser (dorongan balik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「垂直安定板」?",
+       "jp": "「垂直安定板」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "すいへいあんていばん",
+        "jp": "すいへいあんていばん"
+       },
+       {
+        "id": "あっしゅくくうき",
+        "jp": "あっしゅくくうき"
+       },
+       {
+        "id": "ちょくりゅうでんげん",
+        "jp": "ちょくりゅうでんげん"
+       },
+       {
+        "id": "すいちょくあんていばん",
+        "jp": "すいちょくあんていばん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「垂直安定板」dibaca すいちょくあんていばん (stabilizer vertikal)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「昇降舵」?",
+       "jp": "「昇降舵」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "elevator"
+       },
+       {
+        "id": "rudder"
+       },
+       {
+        "id": "spoiler"
+       },
+       {
+        "id": "aileron"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「昇降舵」（しょうこうだ）= elevator."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「双発機」?",
+       "jp": "「双発機」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "anti-es (anti-icing)"
+       },
+       {
+        "id": "stabilizer horizontal"
+       },
+       {
+        "id": "pesawat bermesin dua"
+       },
+       {
+        "id": "slat (sayap depan)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「双発機」（そうはつき）= pesawat bermesin dua."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「逆噴射」?",
+       "jp": "「逆噴射」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "すぽいらー",
+        "jp": "すぽいらー"
+       },
+       {
+        "id": "ぎゃくふんしゃ",
+        "jp": "ぎゃくふんしゃ"
+       },
+       {
+        "id": "そうじゅうしすてむ",
+        "jp": "そうじゅうしすてむ"
+       },
+       {
+        "id": "あっしゅくくうき",
+        "jp": "あっしゅくくうき"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「逆噴射」dibaca ぎゃくふんしゃ (thrust reverser (dorongan balik))."
+      }
+     }
+    ]
    }
   ]
  },

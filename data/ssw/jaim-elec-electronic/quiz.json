@@ -1649,6 +1649,120 @@
       "ref": "IMM-elec-electronic-SAMPLE2-Q30"
      }
     ]
+   },
+   {
+    "id": "vk-bab1-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 1 · 1 (dari daftar kosakata)",
+     "jp": "第1章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「受験時の注意事項」?",
+       "jp": "「受験時の注意事項」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Hubungan antara Standar Domestik dan Standar Internasional"
+       },
+       {
+        "id": "Hal-Hal yang Perlu Diperhatikan Saat Mengikuti Ujian"
+       },
+       {
+        "id": "Undang-Undang Keselamatan Peralatan dan Material Listrik"
+       },
+       {
+        "id": "Prinsip-prinsip Keselamatan dan Kesehatan Kerja"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「受験時の注意事項」（じゅけんときのちゅういじこう）= Hal-Hal yang Perlu Diperhatikan Saat Mengikuti Ujian."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「試験の内容」?",
+       "jp": "「試験の内容」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Mesin Frais"
+       },
+       {
+        "id": "Motor Listrik"
+       },
+       {
+        "id": "Materi Ujian"
+       },
+       {
+        "id": "Bahan Kemasan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「試験の内容」（しけんのないよう）= Materi Ujian."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「受験時の注意事項」?",
+       "jp": "「受験時の注意事項」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ずめんのおおきさとようしき",
+        "jp": "ずめんのおおきさとようしき"
+       },
+       {
+        "id": "すんぽうのはかりほうとけがきほう",
+        "jp": "すんぽうのはかりほうとけがきほう"
+       },
+       {
+        "id": "じゅけんときのちゅういじこう",
+        "jp": "じゅけんときのちゅういじこう"
+       },
+       {
+        "id": "ねじ、ぼると、ざがねのしゅるい",
+        "jp": "ねじ、ぼると、ざがねのしゅるい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「受験時の注意事項」dibaca じゅけんときのちゅういじこう (Hal-Hal yang Perlu Diperhatikan Saat Mengikuti Ujian)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「試験の内容」?",
+       "jp": "「試験の内容」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しけんのないよう",
+        "jp": "しけんのないよう"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "そのほかのひょうじ",
+        "jp": "そのほかのひょうじ"
+       },
+       {
+        "id": "ていこうそくてい",
+        "jp": "ていこうそくてい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「試験の内容」dibaca しけんのないよう (Materi Ujian)."
+      }
+     }
+    ]
    }
   ],
   "bab2": [
@@ -1806,10 +1920,1416 @@
       "ref": "IMM-elec-electronic-OQ-2-2-05"
      }
     ]
+   },
+   {
+    "id": "vk-bab2-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 1 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「オン・ザ・ジョブ・トレーニング（OJT）」?",
+       "jp": "「オン・ザ・ジョブ・トレーニング（OJT）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pendidikan khusus"
+       },
+       {
+        "id": "On the Job Training (OJT)"
+       },
+       {
+        "id": "Pelatihan Identifikasi Bahaya"
+       },
+       {
+        "id": "Mengucapkan Salam"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「オン・ザ・ジョブ・トレーニング（OJT）」（オン・ザ・ジョブ・トレーニング）= On the Job Training (OJT)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「整理・整頓・清掃・清潔・躾（5S）」?",
+       "jp": "「整理・整頓・清掃・清潔・躾（5S）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke"
+       },
+       {
+        "id": "Undang-Undang Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Sistem Manajemen Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Tanda Zat Kimia Berbahaya / Berdampak Bahaya"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「整理・整頓・清掃・清潔・躾（5S）」（せいり・せいとん・せいそう・せいけつ・しつけ）= Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「その他の表示」?",
+       "jp": "「その他の表示」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そのほかのひょうじ",
+        "jp": "そのほかのひょうじ"
+       },
+       {
+        "id": "リスク・アセスメント",
+        "jp": "リスク・アセスメント"
+       },
+       {
+        "id": "とくべつきょういく",
+        "jp": "とくべつきょういく"
+       },
+       {
+        "id": "ちゅういひょうじ",
+        "jp": "ちゅういひょうじ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「その他の表示」dibaca そのほかのひょうじ (Tanda Lainnya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「特別教育」?",
+       "jp": "「特別教育」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ちゅういひょうじ",
+        "jp": "ちゅういひょうじ"
+       },
+       {
+        "id": "リスク・アセスメント",
+        "jp": "リスク・アセスメント"
+       },
+       {
+        "id": "はいんりっひのほうそく",
+        "jp": "はいんりっひのほうそく"
+       },
+       {
+        "id": "とくべつきょういく",
+        "jp": "とくべつきょういく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「特別教育」dibaca とくべつきょういく (Pendidikan khusus)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「労働安全衛生マネジメントシステム（OSHMS）」?",
+       "jp": "「労働安全衛生マネジメントシステム（OSHMS）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうどうあんぜんえいせいまねじめんとしすてむ",
+        "jp": "ろうどうあんぜんえいせいまねじめんとしすてむ"
+       },
+       {
+        "id": "かがくぶっしつのきけんゆうがいせいのひょうじ",
+        "jp": "かがくぶっしつのきけんゆうがいせいのひょうじ"
+       },
+       {
+        "id": "やといいれとき、さぎょうないようへんこうじのきょういく",
+        "jp": "やといいれとき、さぎょうないようへんこうじのきょういく"
+       },
+       {
+        "id": "せいり・せいとん・せいそう・せいけつ・しつけ",
+        "jp": "せいり・せいとん・せいそう・せいけつ・しつけ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「労働安全衛生マネジメントシステム（OSHMS）」dibaca ろうどうあんぜんえいせいまねじめんとしすてむ (Sistem Manajemen Keselamatan dan Kesehatan Kerja)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「雇い入れ時、作業内容変更時の教育」?",
+       "jp": "「雇い入れ時、作業内容変更時の教育」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうどうあんぜんえいせいまねじめんとしすてむ",
+        "jp": "ろうどうあんぜんえいせいまねじめんとしすてむ"
+       },
+       {
+        "id": "かがくぶっしつのきけんゆうがいせいのひょうじ",
+        "jp": "かがくぶっしつのきけんゆうがいせいのひょうじ"
+       },
+       {
+        "id": "せいり・せいとん・せいそう・せいけつ・しつけ",
+        "jp": "せいり・せいとん・せいそう・せいけつ・しつけ"
+       },
+       {
+        "id": "やといいれとき、さぎょうないようへんこうじのきょういく",
+        "jp": "やといいれとき、さぎょうないようへんこうじのきょういく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「雇い入れ時、作業内容変更時の教育」dibaca やといいれとき、さぎょうないようへんこうじのきょういく (Pendidikan saat baru bekerja dan saat isi pekerjaan berubah)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「禁止表示」?",
+       "jp": "「禁止表示」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Tanda Larangan"
+       },
+       {
+        "id": "Tanda Lainnya"
+       },
+       {
+        "id": "Hukum Heinrich"
+       },
+       {
+        "id": "Tanda perhatian"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「禁止表示」（きんしひょうじ）= Tanda Larangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「リスク・アセスメント」?",
+       "jp": "「リスク・アセスメント」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pendidikan khusus"
+       },
+       {
+        "id": "Tanda perhatian"
+       },
+       {
+        "id": "Penilaian risiko"
+       },
+       {
+        "id": "Keselamatan Mutlak"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「リスク・アセスメント」（リスク・アセスメント）= Penilaian risiko."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「禁止表示」?",
+       "jp": "「禁止表示」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぜったいあんぜん",
+        "jp": "ぜったいあんぜん"
+       },
+       {
+        "id": "きんしひょうじ",
+        "jp": "きんしひょうじ"
+       },
+       {
+        "id": "あいさつ",
+        "jp": "あいさつ"
+       },
+       {
+        "id": "そのほかのひょうじ",
+        "jp": "そのほかのひょうじ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「禁止表示」dibaca きんしひょうじ (Tanda Larangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「危険予知トレーニング（Kiken Yochi Training KYT）」?",
+       "jp": "「危険予知トレーニング（Kiken Yochi Training KYT）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きけんよちとれーにんぐ",
+        "jp": "きけんよちとれーにんぐ"
+       },
+       {
+        "id": "リスク・アセスメント",
+        "jp": "リスク・アセスメント"
+       },
+       {
+        "id": "はいんりっひのほうそく",
+        "jp": "はいんりっひのほうそく"
+       },
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「危険予知トレーニング（Kiken Yochi Training KYT）」dibaca きけんよちとれーにんぐ (Pelatihan Identifikasi Bahaya)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab2-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 2 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「雇い入れ時、作業内容変更時の教育」?",
+       "jp": "「雇い入れ時、作業内容変更時の教育」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Tanda Zat Kimia Berbahaya / Berdampak Bahaya"
+       },
+       {
+        "id": "Prinsip-prinsip Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Pendidikan saat baru bekerja dan saat isi pekerjaan berubah"
+       },
+       {
+        "id": "Sistem Manajemen Keselamatan dan Kesehatan Kerja"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「雇い入れ時、作業内容変更時の教育」（やといいれとき、さぎょうないようへんこうじのきょういく）= Pendidikan saat baru bekerja dan saat isi pekerjaan berubah."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「化学物質の危険有害性の表示」?",
+       "jp": "「化学物質の危険有害性の表示」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうどうあんぜんえいせいまねじめんとしすてむ",
+        "jp": "ろうどうあんぜんえいせいまねじめんとしすてむ"
+       },
+       {
+        "id": "やといいれとき、さぎょうないようへんこうじのきょういく",
+        "jp": "やといいれとき、さぎょうないようへんこうじのきょういく"
+       },
+       {
+        "id": "かがくぶっしつのきけんゆうがいせいのひょうじ",
+        "jp": "かがくぶっしつのきけんゆうがいせいのひょうじ"
+       },
+       {
+        "id": "せいり・せいとん・せいそう・せいけつ・しつけ",
+        "jp": "せいり・せいとん・せいそう・せいけつ・しつけ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「化学物質の危険有害性の表示」dibaca かがくぶっしつのきけんゆうがいせいのひょうじ (Tanda Zat Kimia Berbahaya / Berdampak Bahaya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「挨拶」?",
+       "jp": "「挨拶」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Mengucapkan Salam"
+       },
+       {
+        "id": "Pendidikan khusus"
+       },
+       {
+        "id": "Penilaian risiko"
+       },
+       {
+        "id": "Tanda perhatian"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「挨拶」（あいさつ）= Mengucapkan Salam."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「労働安全衛生マネジメントシステム（OSHMS）」?",
+       "jp": "「労働安全衛生マネジメントシステム（OSHMS）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Undang-Undang Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Prinsip-prinsip Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Sistem Manajemen Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「労働安全衛生マネジメントシステム（OSHMS）」（ろうどうあんぜんえいせいまねじめんとしすてむ）= Sistem Manajemen Keselamatan dan Kesehatan Kerja."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「危険予知トレーニング（Kiken Yochi Training KYT）」?",
+       "jp": "「危険予知トレーニング（Kiken Yochi Training KYT）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Keselamatan Mutlak"
+       },
+       {
+        "id": "Pelatihan Identifikasi Bahaya"
+       },
+       {
+        "id": "Pendidikan khusus"
+       },
+       {
+        "id": "On the Job Training (OJT)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「危険予知トレーニング（Kiken Yochi Training KYT）」（きけんよちとれーにんぐ）= Pelatihan Identifikasi Bahaya."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「絶対安全」?",
+       "jp": "「絶対安全」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Mengucapkan Salam"
+       },
+       {
+        "id": "Keselamatan Mutlak"
+       },
+       {
+        "id": "Tanda perhatian"
+       },
+       {
+        "id": "Pendidikan khusus"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「絶対安全」（ぜったいあんぜん）= Keselamatan Mutlak."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「特別教育」?",
+       "jp": "「特別教育」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pendidikan khusus"
+       },
+       {
+        "id": "Tanda perhatian"
+       },
+       {
+        "id": "Keselamatan Mutlak"
+       },
+       {
+        "id": "Mengucapkan Salam"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「特別教育」（とくべつきょういく）= Pendidikan khusus."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「安全衛生の心得」?",
+       "jp": "「安全衛生の心得」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       },
+       {
+        "id": "あんぜんえいせいのこころえ",
+        "jp": "あんぜんえいせいのこころえ"
+       },
+       {
+        "id": "はいんりっひのほうそく",
+        "jp": "はいんりっひのほうそく"
+       },
+       {
+        "id": "きけんよちとれーにんぐ",
+        "jp": "きけんよちとれーにんぐ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「安全衛生の心得」dibaca あんぜんえいせいのこころえ (Prinsip-prinsip Keselamatan dan Kesehatan Kerja)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ハインリッヒの法則」?",
+       "jp": "「ハインリッヒの法則」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きけんよちとれーにんぐ",
+        "jp": "きけんよちとれーにんぐ"
+       },
+       {
+        "id": "リスク・アセスメント",
+        "jp": "リスク・アセスメント"
+       },
+       {
+        "id": "はいんりっひのほうそく",
+        "jp": "はいんりっひのほうそく"
+       },
+       {
+        "id": "あんぜんえいせいのこころえ",
+        "jp": "あんぜんえいせいのこころえ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「ハインリッヒの法則」dibaca はいんりっひのほうそく (Hukum Heinrich)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「労働安全衛生法」?",
+       "jp": "「労働安全衛生法」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke"
+       },
+       {
+        "id": "Tanda Zat Kimia Berbahaya / Berdampak Bahaya"
+       },
+       {
+        "id": "Undang-Undang Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Prinsip-prinsip Keselamatan dan Kesehatan Kerja"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「労働安全衛生法」（ろうどうあんぜんえいせいほう）= Undang-Undang Keselamatan dan Kesehatan Kerja."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab2-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 2 · 3 (dari daftar kosakata)",
+     "jp": "第2章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「整理・整頓・清掃・清潔・躾（5S）」?",
+       "jp": "「整理・整頓・清掃・清潔・躾（5S）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうどうあんぜんえいせいまねじめんとしすてむ",
+        "jp": "ろうどうあんぜんえいせいまねじめんとしすてむ"
+       },
+       {
+        "id": "せいり・せいとん・せいそう・せいけつ・しつけ",
+        "jp": "せいり・せいとん・せいそう・せいけつ・しつけ"
+       },
+       {
+        "id": "やといいれとき、さぎょうないようへんこうじのきょういく",
+        "jp": "やといいれとき、さぎょうないようへんこうじのきょういく"
+       },
+       {
+        "id": "かがくぶっしつのきけんゆうがいせいのひょうじ",
+        "jp": "かがくぶっしつのきけんゆうがいせいのひょうじ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「整理・整頓・清掃・清潔・躾（5S）」dibaca せいり・せいとん・せいそう・せいけつ・しつけ (Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「労働安全衛生法」?",
+       "jp": "「労働安全衛生法」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       },
+       {
+        "id": "あんぜんえいせいのこころえ",
+        "jp": "あんぜんえいせいのこころえ"
+       },
+       {
+        "id": "オン・ザ・ジョブ・トレーニング",
+        "jp": "オン・ザ・ジョブ・トレーニング"
+       },
+       {
+        "id": "リスク・アセスメント",
+        "jp": "リスク・アセスメント"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「労働安全衛生法」dibaca ろうどうあんぜんえいせいほう (Undang-Undang Keselamatan dan Kesehatan Kerja)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「化学物質の危険有害性の表示」?",
+       "jp": "「化学物質の危険有害性の表示」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke"
+       },
+       {
+        "id": "Prinsip-prinsip Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Undang-Undang Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Tanda Zat Kimia Berbahaya / Berdampak Bahaya"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「化学物質の危険有害性の表示」（かがくぶっしつのきけんゆうがいせいのひょうじ）= Tanda Zat Kimia Berbahaya / Berdampak Bahaya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「絶対安全」?",
+       "jp": "「絶対安全」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "リスク・アセスメント",
+        "jp": "リスク・アセスメント"
+       },
+       {
+        "id": "とくべつきょういく",
+        "jp": "とくべつきょういく"
+       },
+       {
+        "id": "そのほかのひょうじ",
+        "jp": "そのほかのひょうじ"
+       },
+       {
+        "id": "ぜったいあんぜん",
+        "jp": "ぜったいあんぜん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「絶対安全」dibaca ぜったいあんぜん (Keselamatan Mutlak)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「その他の表示」?",
+       "jp": "「その他の表示」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Tanda Lainnya"
+       },
+       {
+        "id": "Hukum Heinrich"
+       },
+       {
+        "id": "Tanda perhatian"
+       },
+       {
+        "id": "Tanda Larangan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「その他の表示」（そのほかのひょうじ）= Tanda Lainnya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「三定」?",
+       "jp": "「三定」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さんてい",
+        "jp": "さんてい"
+       },
+       {
+        "id": "ちゅういひょうじ",
+        "jp": "ちゅういひょうじ"
+       },
+       {
+        "id": "あいさつ",
+        "jp": "あいさつ"
+       },
+       {
+        "id": "きんしひょうじ",
+        "jp": "きんしひょうじ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「三定」dibaca さんてい (San-Tei)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「挨拶」?",
+       "jp": "「挨拶」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さんてい",
+        "jp": "さんてい"
+       },
+       {
+        "id": "あいさつ",
+        "jp": "あいさつ"
+       },
+       {
+        "id": "ちゅういひょうじ",
+        "jp": "ちゅういひょうじ"
+       },
+       {
+        "id": "きんしひょうじ",
+        "jp": "きんしひょうじ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「挨拶」dibaca あいさつ (Mengucapkan Salam)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「注意表示」?",
+       "jp": "「注意表示」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pendidikan khusus"
+       },
+       {
+        "id": "Tanda Lainnya"
+       },
+       {
+        "id": "Hukum Heinrich"
+       },
+       {
+        "id": "Tanda perhatian"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「注意表示」（ちゅういひょうじ）= Tanda perhatian."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「安全衛生の心得」?",
+       "jp": "「安全衛生の心得」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Sistem Manajemen Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke"
+       },
+       {
+        "id": "Prinsip-prinsip Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Undang-Undang Keselamatan dan Kesehatan Kerja"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「安全衛生の心得」（あんぜんえいせいのこころえ）= Prinsip-prinsip Keselamatan dan Kesehatan Kerja."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「三定」?",
+       "jp": "「三定」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "San-Tei"
+       },
+       {
+        "id": "Tanda Larangan"
+       },
+       {
+        "id": "Hukum Heinrich"
+       },
+       {
+        "id": "Tanda Lainnya"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「三定」（さんてい）= San-Tei."
+      }
+     }
+    ]
    }
   ],
-  "bab3": [],
-  "bab4": [],
+  "bab3": [
+   {
+    "id": "vk-bab3-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 1 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「国際単位系SI」?",
+       "jp": "「国際単位系SI」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こくさいたんいけいSI",
+        "jp": "こくさいたんいけいSI"
+       },
+       {
+        "id": "にほんさんぎょうきかく",
+        "jp": "にほんさんぎょうきかく"
+       },
+       {
+        "id": "くみやすりによるしあげ",
+        "jp": "くみやすりによるしあげ"
+       },
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「国際単位系SI」dibaca こくさいたんいけいSI (Sistem Satuan Internasional (SI))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「日本産業規格（Japanese Industrial Standards, JIS）」?",
+       "jp": "「日本産業規格（Japanese Industrial Standards, JIS）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "にほんさんぎょうきかく",
+        "jp": "にほんさんぎょうきかく"
+       },
+       {
+        "id": "きけんよちとれーにんぐ",
+        "jp": "きけんよちとれーにんぐ"
+       },
+       {
+        "id": "こくさいたんいけいSI",
+        "jp": "こくさいたんいけいSI"
+       },
+       {
+        "id": "でんきずめんのしゅるい",
+        "jp": "でんきずめんのしゅるい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「日本産業規格（Japanese Industrial Standards, JIS）」dibaca にほんさんぎょうきかく (Standar Industri Jepang)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「QC工程図」?",
+       "jp": "「QC工程図」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Konduktif"
+       },
+       {
+        "id": "Teori Elektron"
+       },
+       {
+        "id": "Pemutus Sirkuit"
+       },
+       {
+        "id": "Bagan Proses QC"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「QC工程図」（QCこうていず）= Bagan Proses QC."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「品質管理の考え方」?",
+       "jp": "「品質管理の考え方」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Dampak Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Pola Pikir Pengendalian Mutu"
+       },
+       {
+        "id": "Penataan Setelah Pekerjaan"
+       },
+       {
+        "id": "Penyelesaian dengan Kikir Set"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「品質管理の考え方」（ひんしつかんりのかんがえかた）= Pola Pikir Pengendalian Mutu."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「作業標準」?",
+       "jp": "「作業標準」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "ノギス Vernier",
+        "jp": "ノギス Vernier"
+       },
+       {
+        "id": "ぷらすちっくせいけい",
+        "jp": "ぷらすちっくせいけい"
+       },
+       {
+        "id": "さぎょうひょうじゅん",
+        "jp": "さぎょうひょうじゅん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「作業標準」dibaca さぎょうひょうじゅん (Standar Kerja)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「品質」?",
+       "jp": "「品質」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "kualitas (materi)"
+       },
+       {
+        "id": "Alat Ukur Lainnya"
+       },
+       {
+        "id": "Komponen Listrik"
+       },
+       {
+        "id": "Mengucapkan Salam"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「品質」（ひんしつ）= kualitas (materi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ISO（国際標準化機構）」?",
+       "jp": "「ISO（国際標準化機構）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せんばん",
+        "jp": "せんばん"
+       },
+       {
+        "id": "ISO",
+        "jp": "ISO"
+       },
+       {
+        "id": "こうせい",
+        "jp": "こうせい"
+       },
+       {
+        "id": "かいろ",
+        "jp": "かいろ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ISO（国際標準化機構）」dibaca ISO (ISO (Organisasi Standardisasi Internasional))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「品質管理の考え方」?",
+       "jp": "「品質管理の考え方」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "とりあつかいちゅういらべる",
+        "jp": "とりあつかいちゅういらべる"
+       },
+       {
+        "id": "ひんしつかんりのかんがえかた",
+        "jp": "ひんしつかんりのかんがえかた"
+       },
+       {
+        "id": "あんぜんえいせいのこころえ",
+        "jp": "あんぜんえいせいのこころえ"
+       },
+       {
+        "id": "きょうかぷらすちっくせいけい",
+        "jp": "きょうかぷらすちっくせいけい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「品質管理の考え方」dibaca ひんしつかんりのかんがえかた (Pola Pikir Pengendalian Mutu)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ISO（国際標準化機構）」?",
+       "jp": "「ISO（国際標準化機構）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Seiri, Seiton, Seiso, Seiketsu, dan Shitsuke"
+       },
+       {
+        "id": "Tanda Zat Kimia Berbahaya / Berdampak Bahaya"
+       },
+       {
+        "id": "Undang-Undang Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "ISO (Organisasi Standardisasi Internasional)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ISO（国際標準化機構）」（ISO）= ISO (Organisasi Standardisasi Internasional)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「国際単位系SI」?",
+       "jp": "「国際単位系SI」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengupas Kabel dan Tang Krimping"
+       },
+       {
+        "id": "Sistem Satuan Internasional (SI)"
+       },
+       {
+        "id": "Kebocoran Listrik dan Pembumian"
+       },
+       {
+        "id": "Pengukuran dan Penandaan Dimensi"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「国際単位系SI」（こくさいたんいけいSI）= Sistem Satuan Internasional (SI)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab3-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 3 · 2 (dari daftar kosakata)",
+     "jp": "第3章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「品質」?",
+       "jp": "「品質」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しゃだんき",
+        "jp": "しゃだんき"
+       },
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       },
+       {
+        "id": "ひじゅう",
+        "jp": "ひじゅう"
+       },
+       {
+        "id": "せんばん",
+        "jp": "せんばん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「品質」dibaca ひんしつ (kualitas (materi))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「QC工程図」?",
+       "jp": "「QC工程図」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんしぶひん",
+        "jp": "でんしぶひん"
+       },
+       {
+        "id": "ろんりえんざん",
+        "jp": "ろんりえんざん"
+       },
+       {
+        "id": "きんしひょうじ",
+        "jp": "きんしひょうじ"
+       },
+       {
+        "id": "QCこうていず",
+        "jp": "QCこうていず"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「QC工程図」dibaca QCこうていず (Bagan Proses QC)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「日本産業規格（Japanese Industrial Standards, JIS）」?",
+       "jp": "「日本産業規格（Japanese Industrial Standards, JIS）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       },
+       {
+        "id": "Pembentukan Plastik FRP"
+       },
+       {
+        "id": "Alat Pengencangan Sekrup"
+       },
+       {
+        "id": "Standar Industri Jepang"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「日本産業規格（Japanese Industrial Standards, JIS）」（にほんさんぎょうきかく）= Standar Industri Jepang."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「作業標準」?",
+       "jp": "「作業標準」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Jangka Sorong"
+       },
+       {
+        "id": "Tanda Lainnya"
+       },
+       {
+        "id": "Standar Kerja"
+       },
+       {
+        "id": "Bahan Isolasi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「作業標準」（さぎょうひょうじゅん）= Standar Kerja."
+      }
+     }
+    ]
+   }
+  ],
+  "bab4": [
+   {
+    "id": "vk-bab4-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 4 · 1 (dari daftar kosakata)",
+     "jp": "第4章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「リデュース、リユース、リサイクル」?",
+       "jp": "「リデュース、リユース、リサイクル」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengukuran Resistansi"
+       },
+       {
+        "id": "Simbol-simbol Listrik"
+       },
+       {
+        "id": "Reduce, Reuse, Recycle"
+       },
+       {
+        "id": "Standar Industri Jepang"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「リデュース、リユース、リサイクル」（リデュース、リユース、リサイクル）= Reduce, Reuse, Recycle."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「酸化と還元」?",
+       "jp": "「酸化と還元」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほぜんのしゅるい",
+        "jp": "ほぜんのしゅるい"
+       },
+       {
+        "id": "でんあつそくてい",
+        "jp": "でんあつそくてい"
+       },
+       {
+        "id": "さんかとかんげん",
+        "jp": "さんかとかんげん"
+       },
+       {
+        "id": "でんきようずきごう",
+        "jp": "でんきようずきごう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「酸化と還元」dibaca さんかとかんげん (Oksidasi dan Reduksi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「還元」?",
+       "jp": "「還元」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ひじゅう",
+        "jp": "ひじゅう"
+       },
+       {
+        "id": "かんげん",
+        "jp": "かんげん"
+       },
+       {
+        "id": "せんばん",
+        "jp": "せんばん"
+       },
+       {
+        "id": "さんてい",
+        "jp": "さんてい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「還元」dibaca かんげん (Reduksi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「サーキュラーエコノミー」?",
+       "jp": "「サーキュラーエコノミー」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Sirkuit Hidrolik"
+       },
+       {
+        "id": "Ekonomi Sirkular"
+       },
+       {
+        "id": "Mengucapkan Salam"
+       },
+       {
+        "id": "Komponen Listrik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「サーキュラーエコノミー」（サーキュラーエコノミー）= Ekonomi Sirkular."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「還元」?",
+       "jp": "「還元」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kikir set"
+       },
+       {
+        "id": "Komponen"
+       },
+       {
+        "id": "Reduksi"
+       },
+       {
+        "id": "Osilasi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「還元」（かんげん）= Reduksi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「比重」?",
+       "jp": "「比重」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Proses Etsa"
+       },
+       {
+        "id": "Elemen Hall"
+       },
+       {
+        "id": "Dasar-dasar"
+       },
+       {
+        "id": "berat jenis"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「比重」（ひじゅう）= berat jenis."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「酸化と還元」?",
+       "jp": "「酸化と還元」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Cara Penyajian Bentuk"
+       },
+       {
+        "id": "Pengetapan (Tapping)"
+       },
+       {
+        "id": "Jenis Gambar Listrik"
+       },
+       {
+        "id": "Oksidasi dan Reduksi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「酸化と還元」（さんかとかんげん）= Oksidasi dan Reduksi."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「比重」?",
+       "jp": "「比重」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あいさつ",
+        "jp": "あいさつ"
+       },
+       {
+        "id": "かんげん",
+        "jp": "かんげん"
+       },
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       },
+       {
+        "id": "ひじゅう",
+        "jp": "ひじゅう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「比重」dibaca ひじゅう (berat jenis)."
+      }
+     }
+    ]
+   }
+  ],
   "bab5": [
    {
     "id": "b5s3-q",
@@ -1946,6 +3466,442 @@
       "ref": "IMM-elec-electronic-OQ-5-2-03"
      }
     ]
+   },
+   {
+    "id": "vk-bab5-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 1 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「法令」?",
+       "jp": "「法令」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "undang-undang dan peraturan"
+       },
+       {
+        "id": "Pengertian Kemasan Industri"
+       },
+       {
+        "id": "Penataan Setelah Pekerjaan"
+       },
+       {
+        "id": "Persiapan Sebelum Pekerjaan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「法令」（ほうれい）= undang-undang dan peraturan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電気設備に関する技術基準を定める省令（電技）」?",
+       "jp": "「電気設備に関する技術基準を定める省令（電技）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきせつびにかんするぎじゅつきじゅんをさだめるしょうれい",
+        "jp": "でんきせつびにかんするぎじゅつきじゅんをさだめるしょうれい"
+       },
+       {
+        "id": "テスター Circuit Tester, Multimeter",
+        "jp": "テスター Circuit Tester, Multimeter"
+       },
+       {
+        "id": "オシロスコープ Digital Storage Oscilloscope",
+        "jp": "オシロスコープ Digital Storage Oscilloscope"
+       },
+       {
+        "id": "やといいれとき、さぎょうないようへんこうじのきょういく",
+        "jp": "やといいれとき、さぎょうないようへんこうじのきょういく"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電気設備に関する技術基準を定める省令（電技）」dibaca でんきせつびにかんするぎじゅつきじゅんをさだめるしょうれい (Peraturan Kementerian tentang Standar Teknik Sarana Kelistrikan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「日本の電気関係規格」?",
+       "jp": "「日本の電気関係規格」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Skala yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "Pengertian Papan Sirkuit Cetak (PCB)"
+       },
+       {
+        "id": "Standar Jepang Lainnya Terkait Kelistrikan"
+       },
+       {
+        "id": "Standar Terkait Kelistrikan di Jepang"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「日本の電気関係規格」（にっぽんのでんきかんけいきかく）= Standar Terkait Kelistrikan di Jepang."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電気設備の技術基準の解釈（電技解釈）」?",
+       "jp": "「電気設備の技術基準の解釈（電技解釈）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そのほかのにっぽんのでんきかんけいのきかく",
+        "jp": "そのほかのにっぽんのでんきかんけいのきかく"
+       },
+       {
+        "id": "ぷりんとはいせんきばんのせいぞうほうほう",
+        "jp": "ぷりんとはいせんきばんのせいぞうほうほう"
+       },
+       {
+        "id": "でんきせつびのぎじゅつきじゅんのかいしゃく",
+        "jp": "でんきせつびのぎじゅつきじゅんのかいしゃく"
+       },
+       {
+        "id": "マイクロメータ Micrometers",
+        "jp": "マイクロメータ Micrometers"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「電気設備の技術基準の解釈（電技解釈）」dibaca でんきせつびのぎじゅつきじゅんのかいしゃく (Interpretasi Standar Teknik Sarana Kelistrikan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「海外の電気関係の規格」?",
+       "jp": "「海外の電気関係の規格」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Diagram Urutan Tangga dan Simbol-simbolnya"
+       },
+       {
+        "id": "Standar Terkait Kelistrikan di Luar Negeri"
+       },
+       {
+        "id": "Diagram Skematis untuk Kontrol Sekuensial"
+       },
+       {
+        "id": "Standar Jepang Lainnya Terkait Kelistrikan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「海外の電気関係の規格」（かいがいのでんきかんけいのきかく）= Standar Terkait Kelistrikan di Luar Negeri."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「海外の電気関係の規格」?",
+       "jp": "「海外の電気関係の規格」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "オン・ザ・ジョブ・トレーニング",
+        "jp": "オン・ザ・ジョブ・トレーニング"
+       },
+       {
+        "id": "ねじのしめつけにもちいるこうぐ",
+        "jp": "ねじのしめつけにもちいるこうぐ"
+       },
+       {
+        "id": "かいがいのでんきかんけいのきかく",
+        "jp": "かいがいのでんきかんけいのきかく"
+       },
+       {
+        "id": "ねじ、ぼると、ざがねのしゅるい",
+        "jp": "ねじ、ぼると、ざがねのしゅるい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「海外の電気関係の規格」dibaca かいがいのでんきかんけいのきかく (Standar Terkait Kelistrikan di Luar Negeri)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電気設備の技術基準の解釈（電技解釈）」?",
+       "jp": "「電気設備の技術基準の解釈（電技解釈）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Prinsip-prinsip Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Tanda Zat Kimia Berbahaya / Berdampak Bahaya"
+       },
+       {
+        "id": "Undang-Undang Keselamatan dan Kesehatan Kerja"
+       },
+       {
+        "id": "Interpretasi Standar Teknik Sarana Kelistrikan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「電気設備の技術基準の解釈（電技解釈）」（でんきせつびのぎじゅつきじゅんのかいしゃく）= Interpretasi Standar Teknik Sarana Kelistrikan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電気設備に関する技術基準を定める省令（電技）」?",
+       "jp": "「電気設備に関する技術基準を定める省令（電技）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pendidikan saat baru bekerja dan saat isi pekerjaan berubah"
+       },
+       {
+        "id": "Peraturan Kementerian tentang Standar Teknik Sarana Kelistrikan"
+       },
+       {
+        "id": "Hubungan antara Standar Domestik dan Standar Internasional"
+       },
+       {
+        "id": "Metode Pengeboran Lubang untuk Pemasangan Instrumen dan Alat"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「電気設備に関する技術基準を定める省令（電技）」（でんきせつびにかんするぎじゅつきじゅんをさだめるしょうれい）= Peraturan Kementerian tentang Standar Teknik Sarana Kelistrikan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電気用品安全法」?",
+       "jp": "「電気用品安全法」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきようひんあんぜんほう",
+        "jp": "でんきようひんあんぜんほう"
+       },
+       {
+        "id": "あんぜんえいせいのこころえ",
+        "jp": "あんぜんえいせいのこころえ"
+       },
+       {
+        "id": "てっこうやすりによるしあげ",
+        "jp": "てっこうやすりによるしあげ"
+       },
+       {
+        "id": "ずめんのおおきさとようしき",
+        "jp": "ずめんのおおきさとようしき"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電気用品安全法」dibaca でんきようひんあんぜんほう (Undang-Undang Keselamatan Peralatan dan Material Listrik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「その他の日本の電気関係の規格」?",
+       "jp": "「その他の日本の電気関係の規格」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいり・せいとん・せいそう・せいけつ・しつけ",
+        "jp": "せいり・せいとん・せいそう・せいけつ・しつけ"
+       },
+       {
+        "id": "ろうどうあんぜんえいせいまねじめんとしすてむ",
+        "jp": "ろうどうあんぜんえいせいまねじめんとしすてむ"
+       },
+       {
+        "id": "こくないきかくとかいがいきかくのかんけい",
+        "jp": "こくないきかくとかいがいきかくのかんけい"
+       },
+       {
+        "id": "そのほかのにっぽんのでんきかんけいのきかく",
+        "jp": "そのほかのにっぽんのでんきかんけいのきかく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「その他の日本の電気関係の規格」dibaca そのほかのにっぽんのでんきかんけいのきかく (Standar Jepang Lainnya Terkait Kelistrikan)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab5-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 5 · 2 (dari daftar kosakata)",
+     "jp": "第5章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「電気用品安全法」?",
+       "jp": "「電気用品安全法」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Undang-Undang Keselamatan Peralatan dan Material Listrik"
+       },
+       {
+        "id": "Hubungan antara Standar Domestik dan Standar Internasional"
+       },
+       {
+        "id": "Metode Pengeboran Lubang untuk Pemasangan Instrumen dan Alat"
+       },
+       {
+        "id": "Pendidikan saat baru bekerja dan saat isi pekerjaan berubah"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電気用品安全法」（でんきようひんあんぜんほう）= Undang-Undang Keselamatan Peralatan dan Material Listrik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「法令」?",
+       "jp": "「法令」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほうれい",
+        "jp": "ほうれい"
+       },
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       },
+       {
+        "id": "かんげん",
+        "jp": "かんげん"
+       },
+       {
+        "id": "はっしん",
+        "jp": "はっしん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「法令」dibaca ほうれい (undang-undang dan peraturan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「国内規格と海外規格の関係」?",
+       "jp": "「国内規格と海外規格の関係」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷりんとはいせんきばんのせいぞうほうほう",
+        "jp": "ぷりんとはいせんきばんのせいぞうほうほう"
+       },
+       {
+        "id": "しーけんすせいぎょようてんかいせつぞくず",
+        "jp": "しーけんすせいぎょようてんかいせつぞくず"
+       },
+       {
+        "id": "こくないきかくとかいがいきかくのかんけい",
+        "jp": "こくないきかくとかいがいきかくのかんけい"
+       },
+       {
+        "id": "かがくぶっしつのきけんゆうがいせいのひょうじ",
+        "jp": "かがくぶっしつのきけんゆうがいせいのひょうじ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「国内規格と海外規格の関係」dibaca こくないきかくとかいがいきかくのかんけい (Hubungan antara Standar Domestik dan Standar Internasional)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「日本の電気関係規格」?",
+       "jp": "「日本の電気関係規格」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ねじ、ぼると、ざがねのしゅるい",
+        "jp": "ねじ、ぼると、ざがねのしゅるい"
+       },
+       {
+        "id": "ねじのしめつけにもちいるこうぐ",
+        "jp": "ねじのしめつけにもちいるこうぐ"
+       },
+       {
+        "id": "らだーしーけんすはかとそのきごう",
+        "jp": "らだーしーけんすはかとそのきごう"
+       },
+       {
+        "id": "にっぽんのでんきかんけいきかく",
+        "jp": "にっぽんのでんきかんけいきかく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「日本の電気関係規格」dibaca にっぽんのでんきかんけいきかく (Standar Terkait Kelistrikan di Jepang)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「国内規格と海外規格の関係」?",
+       "jp": "「国内規格と海外規格の関係」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Hubungan antara Standar Domestik dan Standar Internasional"
+       },
+       {
+        "id": "Undang-Undang Keselamatan Peralatan dan Material Listrik"
+       },
+       {
+        "id": "Pendidikan saat baru bekerja dan saat isi pekerjaan berubah"
+       },
+       {
+        "id": "Metode Pengeboran Lubang untuk Pemasangan Instrumen dan Alat"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「国内規格と海外規格の関係」（こくないきかくとかいがいきかくのかんけい）= Hubungan antara Standar Domestik dan Standar Internasional."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「その他の日本の電気関係の規格」?",
+       "jp": "「その他の日本の電気関係の規格」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Diagram Urutan Tangga dan Simbol-simbolnya"
+       },
+       {
+        "id": "Standar Jepang Lainnya Terkait Kelistrikan"
+       },
+       {
+        "id": "Skala yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "ISO (Organisasi Standardisasi Internasional)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「その他の日本の電気関係の規格」（そのほかのにっぽんのでんきかんけいのきかく）= Standar Jepang Lainnya Terkait Kelistrikan."
+      }
+     }
+    ]
    }
   ],
   "bab6": [
@@ -2044,6 +4000,660 @@
       },
       "mb": true,
       "ref": "IMM-elec-electronic-OQ-6-3-02"
+     }
+    ]
+   },
+   {
+    "id": "vk-bab6-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 6 · 1 (dari daftar kosakata)",
+     "jp": "第6章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「ラダーシーケンス図とその記号」?",
+       "jp": "「ラダーシーケンス図とその記号」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Garis yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "Diagram Skematis untuk Kontrol Sekuensial"
+       },
+       {
+        "id": "Diagram Urutan Tangga dan Simbol-simbolnya"
+       },
+       {
+        "id": "Skala yang Digunakan dalam Gambar Teknik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「ラダーシーケンス図とその記号」（らだーしーけんすはかとそのきごう）= Diagram Urutan Tangga dan Simbol-simbolnya."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「図面に用いる線」?",
+       "jp": "「図面に用いる線」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Diagram Skematis untuk Kontrol Sekuensial"
+       },
+       {
+        "id": "Garis yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "Diagram Urutan Tangga dan Simbol-simbolnya"
+       },
+       {
+        "id": "Skala yang Digunakan dalam Gambar Teknik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「図面に用いる線」（ずめんにもちいるせん）= Garis yang Digunakan dalam Gambar Teknik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電気用図記号」?",
+       "jp": "「電気用図記号」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "どうでんざいりょう",
+        "jp": "どうでんざいりょう"
+       },
+       {
+        "id": "でんきようずきごう",
+        "jp": "でんきようずきごう"
+       },
+       {
+        "id": "ずめんのしゅるい",
+        "jp": "ずめんのしゅるい"
+       },
+       {
+        "id": "じせいざいりょう",
+        "jp": "じせいざいりょう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「電気用図記号」dibaca でんきようずきごう (Simbol-simbol Listrik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「図面の種類」?",
+       "jp": "「図面の種類」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "どうでんざいりょう",
+        "jp": "どうでんざいりょう"
+       },
+       {
+        "id": "じせいざいりょう",
+        "jp": "じせいざいりょう"
+       },
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "ずめんのしゅるい",
+        "jp": "ずめんのしゅるい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「図面の種類」dibaca ずめんのしゅるい (Jenis Gambar Teknik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「図面の大きさと様式」?",
+       "jp": "「図面の大きさと様式」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきずめんのしゅるい",
+        "jp": "でんきずめんのしゅるい"
+       },
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       },
+       {
+        "id": "ずめんのおおきさとようしき",
+        "jp": "ずめんのおおきさとようしき"
+       },
+       {
+        "id": "らだーしーけんすはかとそのきごう",
+        "jp": "らだーしーけんすはかとそのきごう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「図面の大きさと様式」dibaca ずめんのおおきさとようしき (Ukuran dan Format Gambar Teknik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「図形の表し方」?",
+       "jp": "「図形の表し方」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Jenis Gambar Teknik"
+       },
+       {
+        "id": "Cara Penyajian Bentuk"
+       },
+       {
+        "id": "Simbol-simbol Listrik"
+       },
+       {
+        "id": "Jenis Gambar Listrik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「図形の表し方」（ずけいのあらわしほう）= Cara Penyajian Bentuk."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「絶縁材料」?",
+       "jp": "「絶縁材料」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Konduktif"
+       },
+       {
+        "id": "Bahan Magnetik"
+       },
+       {
+        "id": "Jenis Gambar Listrik"
+       },
+       {
+        "id": "Bahan Isolasi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「絶縁材料」（ぜつえんざいりょう）= Bahan Isolasi."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「シーケンス制御用展開接続図」?",
+       "jp": "「シーケンス制御用展開接続図」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "ずめんのおおきさとようしき",
+        "jp": "ずめんのおおきさとようしき"
+       },
+       {
+        "id": "らだーしーけんすはかとそのきごう",
+        "jp": "らだーしーけんすはかとそのきごう"
+       },
+       {
+        "id": "しーけんすせいぎょようてんかいせつぞくず",
+        "jp": "しーけんすせいぎょようてんかいせつぞくず"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「シーケンス制御用展開接続図」dibaca しーけんすせいぎょようてんかいせつぞくず (Diagram Skematis untuk Kontrol Sekuensial)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「絶縁材料」?",
+       "jp": "「絶縁材料」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぜつえんざいりょう",
+        "jp": "ぜつえんざいりょう"
+       },
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "ずめんにもちいるせん",
+        "jp": "ずめんにもちいるせん"
+       },
+       {
+        "id": "じせいざいりょう",
+        "jp": "じせいざいりょう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「絶縁材料」dibaca ぜつえんざいりょう (Bahan Isolasi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「図面に用いる線」?",
+       "jp": "「図面に用いる線」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぜつえんざいりょう",
+        "jp": "ぜつえんざいりょう"
+       },
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "でんきずめんのしゅるい",
+        "jp": "でんきずめんのしゅるい"
+       },
+       {
+        "id": "ずめんにもちいるせん",
+        "jp": "ずめんにもちいるせん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「図面に用いる線」dibaca ずめんにもちいるせん (Garis yang Digunakan dalam Gambar Teknik)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab6-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 6 · 2 (dari daftar kosakata)",
+     "jp": "第6章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「製図に用いる尺度」?",
+       "jp": "「製図に用いる尺度」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Diagram Urutan Tangga dan Simbol-simbolnya"
+       },
+       {
+        "id": "Diagram Skematis untuk Kontrol Sekuensial"
+       },
+       {
+        "id": "Skala yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "Garis yang Digunakan dalam Gambar Teknik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「製図に用いる尺度」（せいずにもちいるしゃくど）= Skala yang Digunakan dalam Gambar Teknik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「製図に用いる尺度」?",
+       "jp": "「製図に用いる尺度」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       },
+       {
+        "id": "ずめんのおおきさとようしき",
+        "jp": "ずめんのおおきさとようしき"
+       },
+       {
+        "id": "ずめんにもちいるせん",
+        "jp": "ずめんにもちいるせん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「製図に用いる尺度」dibaca せいずにもちいるしゃくど (Skala yang Digunakan dalam Gambar Teknik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「磁性材料」?",
+       "jp": "「磁性材料」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Isolasi"
+       },
+       {
+        "id": "Bahan Magnetik"
+       },
+       {
+        "id": "Bahan Konduktif"
+       },
+       {
+        "id": "Jenis Gambar Teknik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「磁性材料」（じせいざいりょう）= Bahan Magnetik."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「シーケンス制御用展開接続図」?",
+       "jp": "「シーケンス制御用展開接続図」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Diagram Urutan Tangga dan Simbol-simbolnya"
+       },
+       {
+        "id": "Skala yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "Garis yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "Diagram Skematis untuk Kontrol Sekuensial"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「シーケンス制御用展開接続図」（しーけんすせいぎょようてんかいせつぞくず）= Diagram Skematis untuk Kontrol Sekuensial."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「図形の表し方」?",
+       "jp": "「図形の表し方」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぜつえんざいりょう",
+        "jp": "ぜつえんざいりょう"
+       },
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "どうでんざいりょう",
+        "jp": "どうでんざいりょう"
+       },
+       {
+        "id": "でんきずめんのしゅるい",
+        "jp": "でんきずめんのしゅるい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「図形の表し方」dibaca ずけいのあらわしほう (Cara Penyajian Bentuk)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電気図面の種類」?",
+       "jp": "「電気図面の種類」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Simbol-simbol Listrik"
+       },
+       {
+        "id": "Cara Penyajian Bentuk"
+       },
+       {
+        "id": "Jenis Gambar Listrik"
+       },
+       {
+        "id": "Jenis Gambar Teknik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「電気図面の種類」（でんきずめんのしゅるい）= Jenis Gambar Listrik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「導電材料」?",
+       "jp": "「導電材料」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぜつえんざいりょう",
+        "jp": "ぜつえんざいりょう"
+       },
+       {
+        "id": "じせいざいりょう",
+        "jp": "じせいざいりょう"
+       },
+       {
+        "id": "でんきようずきごう",
+        "jp": "でんきようずきごう"
+       },
+       {
+        "id": "どうでんざいりょう",
+        "jp": "どうでんざいりょう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「導電材料」dibaca どうでんざいりょう (Bahan Konduktif)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「図面の大きさと様式」?",
+       "jp": "「図面の大きさと様式」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Diagram Skematis untuk Kontrol Sekuensial"
+       },
+       {
+        "id": "Ukuran dan Format Gambar Teknik"
+       },
+       {
+        "id": "Cara Penyajian Bentuk"
+       },
+       {
+        "id": "Diagram Urutan Tangga dan Simbol-simbolnya"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「図面の大きさと様式」（ずめんのおおきさとようしき）= Ukuran dan Format Gambar Teknik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電気図面の種類」?",
+       "jp": "「電気図面の種類」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       },
+       {
+        "id": "でんきようずきごう",
+        "jp": "でんきようずきごう"
+       },
+       {
+        "id": "でんきずめんのしゅるい",
+        "jp": "でんきずめんのしゅるい"
+       },
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「電気図面の種類」dibaca でんきずめんのしゅるい (Jenis Gambar Listrik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ラダーシーケンス図とその記号」?",
+       "jp": "「ラダーシーケンス図とその記号」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しーけんすせいぎょようてんかいせつぞくず",
+        "jp": "しーけんすせいぎょようてんかいせつぞくず"
+       },
+       {
+        "id": "らだーしーけんすはかとそのきごう",
+        "jp": "らだーしーけんすはかとそのきごう"
+       },
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       },
+       {
+        "id": "ずめんのおおきさとようしき",
+        "jp": "ずめんのおおきさとようしき"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ラダーシーケンス図とその記号」dibaca らだーしーけんすはかとそのきごう (Diagram Urutan Tangga dan Simbol-simbolnya)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab6-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 6 · 3 (dari daftar kosakata)",
+     "jp": "第6章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「図面の種類」?",
+       "jp": "「図面の種類」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Simbol-simbol Listrik"
+       },
+       {
+        "id": "Cara Penyajian Bentuk"
+       },
+       {
+        "id": "Jenis Gambar Listrik"
+       },
+       {
+        "id": "Jenis Gambar Teknik"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「図面の種類」（ずめんのしゅるい）= Jenis Gambar Teknik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「磁性材料」?",
+       "jp": "「磁性材料」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ずめんのしゅるい",
+        "jp": "ずめんのしゅるい"
+       },
+       {
+        "id": "じせいざいりょう",
+        "jp": "じせいざいりょう"
+       },
+       {
+        "id": "ずけいのあらわしほう",
+        "jp": "ずけいのあらわしほう"
+       },
+       {
+        "id": "でんきようずきごう",
+        "jp": "でんきようずきごう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「磁性材料」dibaca じせいざいりょう (Bahan Magnetik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「導電材料」?",
+       "jp": "「導電材料」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Isolasi"
+       },
+       {
+        "id": "Bahan Magnetik"
+       },
+       {
+        "id": "Jenis Gambar Teknik"
+       },
+       {
+        "id": "Bahan Konduktif"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「導電材料」（どうでんざいりょう）= Bahan Konduktif."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電気用図記号」?",
+       "jp": "「電気用図記号」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Simbol-simbol Listrik"
+       },
+       {
+        "id": "Cara Penyajian Bentuk"
+       },
+       {
+        "id": "Jenis Gambar Teknik"
+       },
+       {
+        "id": "Jenis Gambar Listrik"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電気用図記号」（でんきようずきごう）= Simbol-simbol Listrik."
+      }
      }
     ]
    }
@@ -2163,6 +4773,486 @@
       },
       "mb": true,
       "ref": "IMM-elec-electronic-OQ-7-5-03"
+     }
+    ]
+   },
+   {
+    "id": "vk-bab7-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 7 · 1 (dari daftar kosakata)",
+     "jp": "第7章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ねじの締付に用いる工具」?",
+       "jp": "「ねじの締付に用いる工具」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ねじのしめつけにもちいるこうぐ",
+        "jp": "ねじのしめつけにもちいるこうぐ"
+       },
+       {
+        "id": "オン・ザ・ジョブ・トレーニング",
+        "jp": "オン・ザ・ジョブ・トレーニング"
+       },
+       {
+        "id": "リデュース、リユース、リサイクル",
+        "jp": "リデュース、リユース、リサイクル"
+       },
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ねじの締付に用いる工具」dibaca ねじのしめつけにもちいるこうぐ (Alat Pengencangan Sekrup)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ワイヤストリッパ、圧着工具」?",
+       "jp": "「ワイヤストリッパ、圧着工具」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengukuran dan Penandaan Dimensi"
+       },
+       {
+        "id": "Pengupas Kabel dan Tang Krimping"
+       },
+       {
+        "id": "Kebocoran Listrik dan Pembumian"
+       },
+       {
+        "id": "Sistem Satuan Internasional (SI)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「ワイヤストリッパ、圧着工具」（わいやすとりっぱ、あっちゃくこうぐ）= Pengupas Kabel dan Tang Krimping."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「その他測定器」?",
+       "jp": "「その他測定器」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Komponen Listrik"
+       },
+       {
+        "id": "Penilaian risiko"
+       },
+       {
+        "id": "Alat Ukur Lainnya"
+       },
+       {
+        "id": "Mengucapkan Salam"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「その他測定器」（そのほかそくていき）= Alat Ukur Lainnya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「その他の電気計器」?",
+       "jp": "「その他の電気計器」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきずめんのしゅるい",
+        "jp": "でんきずめんのしゅるい"
+       },
+       {
+        "id": "そのほかのでんきけいき",
+        "jp": "そのほかのでんきけいき"
+       },
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       },
+       {
+        "id": "きけんよちとれーにんぐ",
+        "jp": "きけんよちとれーにんぐ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「その他の電気計器」dibaca そのほかのでんきけいき (Alat Ukur Listrik Lainnya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ねじ、ボルト、座金の種類」?",
+       "jp": "「ねじ、ボルト、座金の種類」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Jenis-jenis Sekrup, Baut dan Ring"
+       },
+       {
+        "id": "Pengupas Kabel dan Tang Krimping"
+       },
+       {
+        "id": "Pengukuran dan Penandaan Dimensi"
+       },
+       {
+        "id": "Kebocoran Listrik dan Pembumian"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ねじ、ボルト、座金の種類」（ねじ、ぼると、ざがねのしゅるい）= Jenis-jenis Sekrup, Baut dan Ring."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ホール素子」?",
+       "jp": "「ホール素子」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Elemen Hall"
+       },
+       {
+        "id": "Jenis Kabel"
+       },
+       {
+        "id": "Mesin Frais"
+       },
+       {
+        "id": "Dasar-dasar"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「ホール素子」（ほーるもとこ）= Elemen Hall."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「テスター Circuit Tester, Multimeter」?",
+       "jp": "「テスター Circuit Tester, Multimeter」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengukuran dan Penandaan Dimensi"
+       },
+       {
+        "id": "Jenis-jenis Sekrup, Baut dan Ring"
+       },
+       {
+        "id": "Pengertian Papan Sirkuit Cetak (PCB)"
+       },
+       {
+        "id": "Tester / Circuit Tester, Multimeter"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「テスター Circuit Tester, Multimeter」（テスター Circuit Tester, Multimeter）= Tester / Circuit Tester, Multimeter."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「オシロスコープ Digital Storage Oscilloscope」?",
+       "jp": "「オシロスコープ Digital Storage Oscilloscope」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Garis yang Digunakan dalam Gambar Teknik"
+       },
+       {
+        "id": "Osiloskop / Digital Storage Oscilloscope"
+       },
+       {
+        "id": "Lingkup Pekerjaan Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Skala yang Digunakan dalam Gambar Teknik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「オシロスコープ Digital Storage Oscilloscope」（オシロスコープ Digital Storage Oscilloscope）= Osiloskop / Digital Storage Oscilloscope."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ねじの締付に用いる工具」?",
+       "jp": "「ねじの締付に用いる工具」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       },
+       {
+        "id": "Standar Industri Jepang"
+       },
+       {
+        "id": "Simbol Diagram Sekuensial"
+       },
+       {
+        "id": "Alat Pengencangan Sekrup"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ねじの締付に用いる工具」（ねじのしめつけにもちいるこうぐ）= Alat Pengencangan Sekrup."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ホール素子」?",
+       "jp": "「ホール素子」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ゆあつかいろ",
+        "jp": "ゆあつかいろ"
+       },
+       {
+        "id": "でんしぶひん",
+        "jp": "でんしぶひん"
+       },
+       {
+        "id": "へんあつき",
+        "jp": "へんあつき"
+       },
+       {
+        "id": "ほーるもとこ",
+        "jp": "ほーるもとこ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ホール素子」dibaca ほーるもとこ (Elemen Hall)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab7-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 7 · 2 (dari daftar kosakata)",
+     "jp": "第7章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「マイクロメータ Micrometers」?",
+       "jp": "「マイクロメータ Micrometers」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Elemen Hall"
+       },
+       {
+        "id": "Mikrometer"
+       },
+       {
+        "id": "Mesin Bubut"
+       },
+       {
+        "id": "Rangkaian"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「マイクロメータ Micrometers」（マイクロメータ Micrometers）= Mikrometer."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ワイヤストリッパ、圧着工具」?",
+       "jp": "「ワイヤストリッパ、圧着工具」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "マイクロメータ Micrometers",
+        "jp": "マイクロメータ Micrometers"
+       },
+       {
+        "id": "JISきかくこうぎょうほうそう",
+        "jp": "JISきかくこうぎょうほうそう"
+       },
+       {
+        "id": "らだーしーけんすはかとそのきごう",
+        "jp": "らだーしーけんすはかとそのきごう"
+       },
+       {
+        "id": "わいやすとりっぱ、あっちゃくこうぐ",
+        "jp": "わいやすとりっぱ、あっちゃくこうぐ"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ワイヤストリッパ、圧着工具」dibaca わいやすとりっぱ、あっちゃくこうぐ (Pengupas Kabel dan Tang Krimping)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「ねじ、ボルト、座金の種類」?",
+       "jp": "「ねじ、ボルト、座金の種類」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "オン・ザ・ジョブ・トレーニング",
+        "jp": "オン・ザ・ジョブ・トレーニング"
+       },
+       {
+        "id": "たっぷかこう Tapping",
+        "jp": "たっぷかこう Tapping"
+       },
+       {
+        "id": "ねじのしめつけにもちいるこうぐ",
+        "jp": "ねじのしめつけにもちいるこうぐ"
+       },
+       {
+        "id": "ねじ、ぼると、ざがねのしゅるい",
+        "jp": "ねじ、ぼると、ざがねのしゅるい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ねじ、ボルト、座金の種類」dibaca ねじ、ぼると、ざがねのしゅるい (Jenis-jenis Sekrup, Baut dan Ring)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電線の種類」?",
+       "jp": "「電線の種類」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しーけんすずきごう",
+        "jp": "しーけんすずきごう"
+       },
+       {
+        "id": "でんせんのしゅるい",
+        "jp": "でんせんのしゅるい"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "ぜつえんざいりょう",
+        "jp": "ぜつえんざいりょう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「電線の種類」dibaca でんせんのしゅるい (Jenis Kabel)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「ノギス Vernier」?",
+       "jp": "「ノギス Vernier」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Materi Ujian"
+       },
+       {
+        "id": "Bahan Isolasi"
+       },
+       {
+        "id": "Bahan Kemasan"
+       },
+       {
+        "id": "Jangka Sorong"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「ノギス Vernier」（ノギス Vernier）= Jangka Sorong."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「その他の電気計器」?",
+       "jp": "「その他の電気計器」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "On the Job Training (OJT)"
+       },
+       {
+        "id": "Papan Sirkuit Cetak (PCB)"
+       },
+       {
+        "id": "PCB (papan sirkuit cetak)"
+       },
+       {
+        "id": "Alat Ukur Listrik Lainnya"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「その他の電気計器」（そのほかのでんきけいき）= Alat Ukur Listrik Lainnya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「その他測定器」?",
+       "jp": "「その他測定器」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷりんとかいろいた",
+        "jp": "ぷりんとかいろいた"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "でんせんのしゅるい",
+        "jp": "でんせんのしゅるい"
+       },
+       {
+        "id": "そのほかそくていき",
+        "jp": "そのほかそくていき"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「その他測定器」dibaca そのほかそくていき (Alat Ukur Lainnya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電線の種類」?",
+       "jp": "「電線の種類」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Mesin Frais"
+       },
+       {
+        "id": "Materi Ujian"
+       },
+       {
+        "id": "Dasar-dasar"
+       },
+       {
+        "id": "Jenis Kabel"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「電線の種類」（でんせんのしゅるい）= Jenis Kabel."
+      }
      }
     ]
    }
@@ -2409,6 +5499,494 @@
       "ref": "IMM-elec-electronic-OQ-8-4-03"
      }
     ]
+   },
+   {
+    "id": "vk-bab8-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 8 · 1 (dari daftar kosakata)",
+     "jp": "第8章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「計器や器具の取付用穴の加工法」?",
+       "jp": "「計器や器具の取付用穴の加工法」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "そのほかのにっぽんのでんきかんけいのきかく",
+        "jp": "そのほかのにっぽんのでんきかんけいのきかく"
+       },
+       {
+        "id": "こくないきかくとかいがいきかくのかんけい",
+        "jp": "こくないきかくとかいがいきかくのかんけい"
+       },
+       {
+        "id": "でんきせつびのぎじゅつきじゅんのかいしゃく",
+        "jp": "でんきせつびのぎじゅつきじゅんのかいしゃく"
+       },
+       {
+        "id": "けいきやきぐのとりつけようあなのかこうほう",
+        "jp": "けいきやきぐのとりつけようあなのかこうほう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「計器や器具の取付用穴の加工法」dibaca けいきやきぐのとりつけようあなのかこうほう (Metode Pengeboran Lubang untuk Pemasangan Instrumen dan Alat)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「組やすり」?",
+       "jp": "「組やすり」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Komponen"
+       },
+       {
+        "id": "San-Tei"
+       },
+       {
+        "id": "berat jenis"
+       },
+       {
+        "id": "Kikir set"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「組やすり」（くみやすり）= Kikir set."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「旋盤」?",
+       "jp": "「旋盤」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "berat jenis"
+       },
+       {
+        "id": "Elemen Hall"
+       },
+       {
+        "id": "Mesin Bubut"
+       },
+       {
+        "id": "Proses Etsa"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「旋盤」（せんばん）= Mesin Bubut."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「鉄工やすりによる仕上げ」?",
+       "jp": "「鉄工やすりによる仕上げ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Standar Terkait Kelistrikan di Luar Negeri"
+       },
+       {
+        "id": "Standar Jepang Lainnya Terkait Kelistrikan"
+       },
+       {
+        "id": "Penyelesaian Permukaan dengan Kikir Logam"
+       },
+       {
+        "id": "Diagram Skematis untuk Kontrol Sekuensial"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「鉄工やすりによる仕上げ」（てっこうやすりによるしあげ）= Penyelesaian Permukaan dengan Kikir Logam."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「寸法の測り方とけがき方」?",
+       "jp": "「寸法の測り方とけがき方」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "JISきかくこうぎょうほうそう",
+        "jp": "JISきかくこうぎょうほうそう"
+       },
+       {
+        "id": "わいやすとりっぱ、あっちゃくこうぐ",
+        "jp": "わいやすとりっぱ、あっちゃくこうぐ"
+       },
+       {
+        "id": "リデュース、リユース、リサイクル",
+        "jp": "リデュース、リユース、リサイクル"
+       },
+       {
+        "id": "すんぽうのはかりほうとけがきほう",
+        "jp": "すんぽうのはかりほうとけがきほう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「寸法の測り方とけがき方」dibaca すんぽうのはかりほうとけがきほう (Pengukuran dan Penandaan Dimensi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「穴あけ加工」?",
+       "jp": "「穴あけ加工」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kikir set"
+       },
+       {
+        "id": "Pengeboran"
+       },
+       {
+        "id": "Komponen"
+       },
+       {
+        "id": "Mikrometer"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「穴あけ加工」（あなあけかこう）= Pengeboran."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「計器や器具の取付用穴の加工法」?",
+       "jp": "「計器や器具の取付用穴の加工法」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Hubungan antara Standar Domestik dan Standar Internasional"
+       },
+       {
+        "id": "Pendidikan saat baru bekerja dan saat isi pekerjaan berubah"
+       },
+       {
+        "id": "Undang-Undang Keselamatan Peralatan dan Material Listrik"
+       },
+       {
+        "id": "Metode Pengeboran Lubang untuk Pemasangan Instrumen dan Alat"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「計器や器具の取付用穴の加工法」（けいきやきぐのとりつけようあなのかこうほう）= Metode Pengeboran Lubang untuk Pemasangan Instrumen dan Alat."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「鉄工やすりによる仕上げ」?",
+       "jp": "「鉄工やすりによる仕上げ」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       },
+       {
+        "id": "とりあつかいちゅういらべる",
+        "jp": "とりあつかいちゅういらべる"
+       },
+       {
+        "id": "てっこうやすりによるしあげ",
+        "jp": "てっこうやすりによるしあげ"
+       },
+       {
+        "id": "ひんしつかんりのかんがえかた",
+        "jp": "ひんしつかんりのかんがえかた"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「鉄工やすりによる仕上げ」dibaca てっこうやすりによるしあげ (Penyelesaian Permukaan dengan Kikir Logam)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「組やすり」?",
+       "jp": "「組やすり」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきぶひん",
+        "jp": "でんきぶひん"
+       },
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       },
+       {
+        "id": "くみやすり",
+        "jp": "くみやすり"
+       },
+       {
+        "id": "でんどうき",
+        "jp": "でんどうき"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「組やすり」dibaca くみやすり (Kikir set)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「フライス盤」?",
+       "jp": "「フライス盤」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふらいすばん",
+        "jp": "ふらいすばん"
+       },
+       {
+        "id": "QCこうていず",
+        "jp": "QCこうていず"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "でんきぶひん",
+        "jp": "でんきぶひん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「フライス盤」dibaca ふらいすばん (Mesin Frais)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab8-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 8 · 2 (dari daftar kosakata)",
+     "jp": "第8章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「タップ加工（タッピング） Tapping」?",
+       "jp": "「タップ加工（タッピング） Tapping」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "じゅけんときのちゅういじこう",
+        "jp": "じゅけんときのちゅういじこう"
+       },
+       {
+        "id": "ひんしつかんりのかんがえかた",
+        "jp": "ひんしつかんりのかんがえかた"
+       },
+       {
+        "id": "たっぷかこう Tapping",
+        "jp": "たっぷかこう Tapping"
+       },
+       {
+        "id": "ろうどうあんぜんえいせいほう",
+        "jp": "ろうどうあんぜんえいせいほう"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「タップ加工（タッピング） Tapping」dibaca たっぷかこう Tapping (Pengetapan (Tapping))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「旋盤」?",
+       "jp": "「旋盤」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かんげん",
+        "jp": "かんげん"
+       },
+       {
+        "id": "さんてい",
+        "jp": "さんてい"
+       },
+       {
+        "id": "ほうれい",
+        "jp": "ほうれい"
+       },
+       {
+        "id": "せんばん",
+        "jp": "せんばん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「旋盤」dibaca せんばん (Mesin Bubut)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「寸法の測り方とけがき方」?",
+       "jp": "「寸法の測り方とけがき方」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Sistem Satuan Internasional (SI)"
+       },
+       {
+        "id": "Pengukuran dan Penandaan Dimensi"
+       },
+       {
+        "id": "Jenis-jenis Sekrup, Baut dan Ring"
+       },
+       {
+        "id": "Kebocoran Listrik dan Pembumian"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「寸法の測り方とけがき方」（すんぽうのはかりほうとけがきほう）= Pengukuran dan Penandaan Dimensi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「組やすりによる仕上げ」?",
+       "jp": "「組やすりによる仕上げ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kebocoran Listrik dan Pembumian"
+       },
+       {
+        "id": "Dampak Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Penyelesaian dengan Kikir Set"
+       },
+       {
+        "id": "Pelatihan Identifikasi Bahaya"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「組やすりによる仕上げ」（くみやすりによるしあげ）= Penyelesaian dengan Kikir Set."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「タップ加工（タッピング） Tapping」?",
+       "jp": "「タップ加工（タッピング） Tapping」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Ilmu Elektromagnetik"
+       },
+       {
+        "id": "Pengetapan (Tapping)"
+       },
+       {
+        "id": "Pengukuran Resistansi"
+       },
+       {
+        "id": "Pengukuran Tegangan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「タップ加工（タッピング） Tapping」（たっぷかこう Tapping）= Pengetapan (Tapping)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「フライス盤」?",
+       "jp": "「フライス盤」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Dasar-dasar"
+       },
+       {
+        "id": "berat jenis"
+       },
+       {
+        "id": "Mesin Bubut"
+       },
+       {
+        "id": "Mesin Frais"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「フライス盤」（ふらいすばん）= Mesin Frais."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「穴あけ加工」?",
+       "jp": "「穴あけ加工」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あなあけかこう",
+        "jp": "あなあけかこう"
+       },
+       {
+        "id": "でんあつそくてい",
+        "jp": "でんあつそくてい"
+       },
+       {
+        "id": "じせいざいりょう",
+        "jp": "じせいざいりょう"
+       },
+       {
+        "id": "おうようかいろ",
+        "jp": "おうようかいろ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「穴あけ加工」dibaca あなあけかこう (Pengeboran)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「組やすりによる仕上げ」?",
+       "jp": "「組やすりによる仕上げ」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さぎょうのちのかたづけ",
+        "jp": "さぎょうのちのかたづけ"
+       },
+       {
+        "id": "そのほかのでんきけいき",
+        "jp": "そのほかのでんきけいき"
+       },
+       {
+        "id": "くみやすりによるしあげ",
+        "jp": "くみやすりによるしあげ"
+       },
+       {
+        "id": "ぷりんとはいせんきばん",
+        "jp": "ぷりんとはいせんきばん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「組やすりによる仕上げ」dibaca くみやすりによるしあげ (Penyelesaian dengan Kikir Set)."
+      }
+     }
+    ]
    }
   ],
   "bab9": [
@@ -2566,6 +6144,546 @@
        "id": "IC analog mencakup op-amp, regulator tegangan, konverter A/D dan konverter D/A, sehingga kombinasi yang benar adalah C."
       },
       "ref": "IMM-elec-electronic-OQ-9-4-01"
+     }
+    ]
+   },
+   {
+    "id": "vk-bab9-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 9 · 1 (dari daftar kosakata)",
+     "jp": "第9章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「構成」?",
+       "jp": "「構成」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Komposisi Struktur"
+       },
+       {
+        "id": "Metode Produksi PCB"
+       },
+       {
+        "id": "Alat Ukur Lainnya"
+       },
+       {
+        "id": "Jenis Pemeliharaan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「構成」（こうせい）= Komposisi Struktur."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「二進数」?",
+       "jp": "「二進数」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       },
+       {
+        "id": "にしんすう",
+        "jp": "にしんすう"
+       },
+       {
+        "id": "しゃだんき",
+        "jp": "しゃだんき"
+       },
+       {
+        "id": "へんあつき",
+        "jp": "へんあつき"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「二進数」dibaca にしんすう (Bilangan Biner)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電磁気学」?",
+       "jp": "「電磁気学」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ふらいすばん",
+        "jp": "ふらいすばん"
+       },
+       {
+        "id": "きほんかいろ",
+        "jp": "きほんかいろ"
+       },
+       {
+        "id": "きんしひょうじ",
+        "jp": "きんしひょうじ"
+       },
+       {
+        "id": "でんじきがく",
+        "jp": "でんじきがく"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「電磁気学」dibaca でんじきがく (Ilmu Elektromagnetik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「回路計算」?",
+       "jp": "「回路計算」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいろけいさん",
+        "jp": "かいろけいさん"
+       },
+       {
+        "id": "ろんりえんざん",
+        "jp": "ろんりえんざん"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "きんしひょうじ",
+        "jp": "きんしひょうじ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「回路計算」dibaca かいろけいさん (Perhitungan Rangkaian)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「二進数」?",
+       "jp": "「二進数」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Magnetik"
+       },
+       {
+        "id": "Tanda Lainnya"
+       },
+       {
+        "id": "Bahan Konduktif"
+       },
+       {
+        "id": "Bilangan Biner"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「二進数」（にしんすう）= Bilangan Biner."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電子理論」?",
+       "jp": "「電子理論」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Magnetik"
+       },
+       {
+        "id": "Teori Elektron"
+       },
+       {
+        "id": "Tanda Larangan"
+       },
+       {
+        "id": "Hukum Heinrich"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「電子理論」（でんしりろん）= Teori Elektron."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電子理論」?",
+       "jp": "「電子理論」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきぶひん",
+        "jp": "でんきぶひん"
+       },
+       {
+        "id": "けいそくき",
+        "jp": "けいそくき"
+       },
+       {
+        "id": "でんじきがく",
+        "jp": "でんじきがく"
+       },
+       {
+        "id": "でんしりろん",
+        "jp": "でんしりろん"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「電子理論」dibaca でんしりろん (Teori Elektron)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「回路」?",
+       "jp": "「回路」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かいろ",
+        "jp": "かいろ"
+       },
+       {
+        "id": "ぶひん",
+        "jp": "ぶひん"
+       },
+       {
+        "id": "ひじゅう",
+        "jp": "ひじゅう"
+       },
+       {
+        "id": "ほぜん",
+        "jp": "ほぜん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「回路」dibaca かいろ (Rangkaian)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電子部品」?",
+       "jp": "「電子部品」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Komponen Elektronik"
+       },
+       {
+        "id": "Metode Produksi PCB"
+       },
+       {
+        "id": "Pengukuran Tegangan"
+       },
+       {
+        "id": "Pembentukan Injeksi"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電子部品」（でんしぶひん）= Komponen Elektronik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「基礎」?",
+       "jp": "「基礎」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "かんげん",
+        "jp": "かんげん"
+       },
+       {
+        "id": "きそ",
+        "jp": "きそ"
+       },
+       {
+        "id": "くみやすり",
+        "jp": "くみやすり"
+       },
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「基礎」dibaca きそ (Dasar-dasar)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab9-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 9 · 2 (dari daftar kosakata)",
+     "jp": "第9章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電気部品」?",
+       "jp": "「電気部品」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきぶひん",
+        "jp": "でんきぶひん"
+       },
+       {
+        "id": "でんしぶひん",
+        "jp": "でんしぶひん"
+       },
+       {
+        "id": "ふらいすばん",
+        "jp": "ふらいすばん"
+       },
+       {
+        "id": "ほーるもとこ",
+        "jp": "ほーるもとこ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電気部品」dibaca でんきぶひん (Komponen Listrik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電磁気学」?",
+       "jp": "「電磁気学」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengetapan (Tapping)"
+       },
+       {
+        "id": "Oksidasi dan Reduksi"
+       },
+       {
+        "id": "Pengukuran Resistansi"
+       },
+       {
+        "id": "Ilmu Elektromagnetik"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「電磁気学」（でんじきがく）= Ilmu Elektromagnetik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電子部品」?",
+       "jp": "「電子部品」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "でんきぶひん",
+        "jp": "でんきぶひん"
+       },
+       {
+        "id": "にしんすう",
+        "jp": "にしんすう"
+       },
+       {
+        "id": "でんしぶひん",
+        "jp": "でんしぶひん"
+       },
+       {
+        "id": "でんじきがく",
+        "jp": "でんじきがく"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「電子部品」dibaca でんしぶひん (Komponen Elektronik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電気部品」?",
+       "jp": "「電気部品」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Sirkuit Hidrolik"
+       },
+       {
+        "id": "Penilaian risiko"
+       },
+       {
+        "id": "Komponen Listrik"
+       },
+       {
+        "id": "Mengucapkan Salam"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「電気部品」（でんきぶひん）= Komponen Listrik."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回路」?",
+       "jp": "「回路」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Rangkaian"
+       },
+       {
+        "id": "Komponen"
+       },
+       {
+        "id": "Alat Ukur"
+       },
+       {
+        "id": "Sel Surya"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「回路」（かいろ）= Rangkaian."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「回路計算」?",
+       "jp": "「回路計算」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Cara Penyajian Bentuk"
+       },
+       {
+        "id": "Perhitungan Rangkaian"
+       },
+       {
+        "id": "Pengetapan (Tapping)"
+       },
+       {
+        "id": "Ilmu Elektromagnetik"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「回路計算」（かいろけいさん）= Perhitungan Rangkaian."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「発振」?",
+       "jp": "「発振」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Reduksi"
+       },
+       {
+        "id": "San-Tei"
+       },
+       {
+        "id": "Osilasi"
+       },
+       {
+        "id": "Rangkaian"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「発振」（はっしん）= Osilasi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「基礎」?",
+       "jp": "「基礎」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Elemen Hall"
+       },
+       {
+        "id": "Standar Kerja"
+       },
+       {
+        "id": "Dasar-dasar"
+       },
+       {
+        "id": "Mikrometer"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「基礎」（きそ）= Dasar-dasar."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「構成」?",
+       "jp": "「構成」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほうれい",
+        "jp": "ほうれい"
+       },
+       {
+        "id": "せんばん",
+        "jp": "せんばん"
+       },
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       },
+       {
+        "id": "こうせい",
+        "jp": "こうせい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「構成」dibaca こうせい (Komposisi Struktur)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「発振」?",
+       "jp": "「発振」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "はっしん",
+        "jp": "はっしん"
+       },
+       {
+        "id": "かんげん",
+        "jp": "かんげん"
+       },
+       {
+        "id": "あいさつ",
+        "jp": "あいさつ"
+       },
+       {
+        "id": "ひんしつ",
+        "jp": "ひんしつ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「発振」dibaca はっしん (Osilasi)."
+      }
      }
     ]
    }
@@ -2741,6 +6859,442 @@
       "ref": "IMM-elec-electronic-OQ-10-4-02"
      }
     ]
+   },
+   {
+    "id": "vk-bab10-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 10 · 1 (dari daftar kosakata)",
+     "jp": "第10章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「作業前準備」?",
+       "jp": "「作業前準備」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さぎょうまえじゅんび",
+        "jp": "さぎょうまえじゅんび"
+       },
+       {
+        "id": "どうでんざいりょう",
+        "jp": "どうでんざいりょう"
+       },
+       {
+        "id": "こうぎょうほうそう",
+        "jp": "こうぎょうほうそう"
+       },
+       {
+        "id": "でんきずめんのしゅるい",
+        "jp": "でんきずめんのしゅるい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「作業前準備」dibaca さぎょうまえじゅんび (Persiapan Sebelum Pekerjaan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「作業後の片づけ」?",
+       "jp": "「作業後の片づけ」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Alat Ukur Listrik Lainnya"
+       },
+       {
+        "id": "Pengertian Kemasan Industri"
+       },
+       {
+        "id": "Penataan Setelah Pekerjaan"
+       },
+       {
+        "id": "undang-undang dan peraturan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「作業後の片づけ」（さぎょうのちのかたづけ）= Penataan Setelah Pekerjaan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電圧測定」?",
+       "jp": "「電圧測定」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぜったいあんぜん",
+        "jp": "ぜったいあんぜん"
+       },
+       {
+        "id": "でんりゅうそくてい",
+        "jp": "でんりゅうそくてい"
+       },
+       {
+        "id": "でんあつそくてい",
+        "jp": "でんあつそくてい"
+       },
+       {
+        "id": "ろんりえんざん",
+        "jp": "ろんりえんざん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「電圧測定」dibaca でんあつそくてい (Pengukuran Tegangan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「漏電とアース」?",
+       "jp": "「漏電とアース」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Ukuran dan Format Gambar Teknik"
+       },
+       {
+        "id": "Jenis-jenis Sekrup, Baut dan Ring"
+       },
+       {
+        "id": "Kebocoran Listrik dan Pembumian"
+       },
+       {
+        "id": "Pembentukan (injeksi) plastik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「漏電とアース」（ろうでんとあーす）= Kebocoran Listrik dan Pembumian."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「プリント配線板」?",
+       "jp": "「プリント配線板」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       },
+       {
+        "id": "Papan Sirkuit Cetak (PCB)"
+       },
+       {
+        "id": "On the Job Training (OJT)"
+       },
+       {
+        "id": "PCB (papan sirkuit cetak)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「プリント配線板」（ぷりんとはいせんいた）= Papan Sirkuit Cetak (PCB)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「抵抗測定」?",
+       "jp": "「抵抗測定」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぜつえんざいりょう",
+        "jp": "ぜつえんざいりょう"
+       },
+       {
+        "id": "とくべつきょういく",
+        "jp": "とくべつきょういく"
+       },
+       {
+        "id": "さんかとかんげん",
+        "jp": "さんかとかんげん"
+       },
+       {
+        "id": "ていこうそくてい",
+        "jp": "ていこうそくてい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「抵抗測定」dibaca ていこうそくてい (Pengukuran Resistansi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「作業後の片づけ」?",
+       "jp": "「作業後の片づけ」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "さぎょうのちのかたづけ",
+        "jp": "さぎょうのちのかたづけ"
+       },
+       {
+        "id": "せいずにもちいるしゃくど",
+        "jp": "せいずにもちいるしゃくど"
+       },
+       {
+        "id": "きけんよちとれーにんぐ",
+        "jp": "きけんよちとれーにんぐ"
+       },
+       {
+        "id": "ぷりんとはいせんいた",
+        "jp": "ぷりんとはいせんいた"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「作業後の片づけ」dibaca さぎょうのちのかたづけ (Penataan Setelah Pekerjaan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「抵抗測定」?",
+       "jp": "「抵抗測定」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Jenis Gambar Listrik"
+       },
+       {
+        "id": "Reduce, Reuse, Recycle"
+       },
+       {
+        "id": "Pengukuran Resistansi"
+       },
+       {
+        "id": "Perhitungan Rangkaian"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「抵抗測定」（ていこうそくてい）= Pengukuran Resistansi."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「計測器」?",
+       "jp": "「計測器」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "けいそくき",
+        "jp": "けいそくき"
+       },
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       },
+       {
+        "id": "でんどうき",
+        "jp": "でんどうき"
+       },
+       {
+        "id": "へんあつき",
+        "jp": "へんあつき"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「計測器」dibaca けいそくき (Alat Ukur)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「プリント配線板」?",
+       "jp": "「プリント配線板」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せつびほぜんのこうか",
+        "jp": "せつびほぜんのこうか"
+       },
+       {
+        "id": "さぎょうひょうじゅん",
+        "jp": "さぎょうひょうじゅん"
+       },
+       {
+        "id": "ぷりんとはいせんいた",
+        "jp": "ぷりんとはいせんいた"
+       },
+       {
+        "id": "ぷらすちっくせいけい",
+        "jp": "ぷらすちっくせいけい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「プリント配線板」dibaca ぷりんとはいせんいた (Papan Sirkuit Cetak (PCB))."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab10-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 10 · 2 (dari daftar kosakata)",
+     "jp": "第10章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「計測器」?",
+       "jp": "「計測器」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kikir set"
+       },
+       {
+        "id": "Mikrometer"
+       },
+       {
+        "id": "Alat Ukur"
+       },
+       {
+        "id": "San-Tei"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「計測器」（けいそくき）= Alat Ukur."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電流測定」?",
+       "jp": "「電流測定」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengukuran Arus"
+       },
+       {
+        "id": "Bahan Konduktif"
+       },
+       {
+        "id": "Bahan Magnetik"
+       },
+       {
+        "id": "Hukum Heinrich"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電流測定」（でんりゅうそくてい）= Pengukuran Arus."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「作業前準備」?",
+       "jp": "「作業前準備」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "undang-undang dan peraturan"
+       },
+       {
+        "id": "Persiapan Sebelum Pekerjaan"
+       },
+       {
+        "id": "Pengertian Kemasan Industri"
+       },
+       {
+        "id": "Pola Pikir Pengendalian Mutu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「作業前準備」（さぎょうまえじゅんび）= Persiapan Sebelum Pekerjaan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電圧測定」?",
+       "jp": "「電圧測定」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengukuran Tegangan"
+       },
+       {
+        "id": "Rangkaian Aplikasi"
+       },
+       {
+        "id": "Jenis Gambar Teknik"
+       },
+       {
+        "id": "Komponen Elektronik"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「電圧測定」（でんあつそくてい）= Pengukuran Tegangan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電流測定」?",
+       "jp": "「電流測定」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷりんとかいろいた",
+        "jp": "ぷりんとかいろいた"
+       },
+       {
+        "id": "ほぜんのしゅるい",
+        "jp": "ほぜんのしゅるい"
+       },
+       {
+        "id": "でんきようずきごう",
+        "jp": "でんきようずきごう"
+       },
+       {
+        "id": "でんりゅうそくてい",
+        "jp": "でんりゅうそくてい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「電流測定」dibaca でんりゅうそくてい (Pengukuran Arus)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「漏電とアース」?",
+       "jp": "「漏電とアース」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "しけんのないよう",
+        "jp": "しけんのないよう"
+       },
+       {
+        "id": "しーけんすずきごう",
+        "jp": "しーけんすずきごう"
+       },
+       {
+        "id": "ろうでんとあーす",
+        "jp": "ろうでんとあーす"
+       },
+       {
+        "id": "でんあつそくてい",
+        "jp": "でんあつそくてい"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「漏電とアース」dibaca ろうでんとあーす (Kebocoran Listrik dan Pembumian)."
+      }
+     }
+    ]
    }
   ],
   "bab11": [
@@ -2874,6 +7428,546 @@
       },
       "mb": true,
       "ref": "IMM-elec-electronic-OQ-11-3-02"
+     }
+    ]
+   },
+   {
+    "id": "vk-bab11-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 11 · 1 (dari daftar kosakata)",
+     "jp": "第11章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「油圧回路」?",
+       "jp": "「油圧回路」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "くみやすり",
+        "jp": "くみやすり"
+       },
+       {
+        "id": "ゆあつかいろ",
+        "jp": "ゆあつかいろ"
+       },
+       {
+        "id": "でんじきがく",
+        "jp": "でんじきがく"
+       },
+       {
+        "id": "でんしぶひん",
+        "jp": "でんしぶひん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「油圧回路」dibaca ゆあつかいろ (Sirkuit Hidrolik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「遮断器」?",
+       "jp": "「遮断器」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Tanda perhatian"
+       },
+       {
+        "id": "Ekonomi Sirkular"
+       },
+       {
+        "id": "Bahan Magnetik"
+       },
+       {
+        "id": "Pemutus Sirkuit"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「遮断器」（しゃだんき）= Pemutus Sirkuit."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「応用回路」?",
+       "jp": "「応用回路」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Metode Produksi PCB"
+       },
+       {
+        "id": "Kualitas Logistik"
+       },
+       {
+        "id": "Jenis Pemeliharaan"
+       },
+       {
+        "id": "Rangkaian Aplikasi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「応用回路」（おうようかいろ）= Rangkaian Aplikasi."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「太陽電池」?",
+       "jp": "「太陽電池」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Alat Ukur"
+       },
+       {
+        "id": "Sel Surya"
+       },
+       {
+        "id": "Elemen Hall"
+       },
+       {
+        "id": "Kikir set"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「太陽電池」（たいようでんち）= Sel Surya."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「論理演算」?",
+       "jp": "「論理演算」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろんりえんざん",
+        "jp": "ろんりえんざん"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "でんじきがく",
+        "jp": "でんじきがく"
+       },
+       {
+        "id": "ぜったいあんぜん",
+        "jp": "ぜったいあんぜん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「論理演算」dibaca ろんりえんざん (Operasi Logika)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「シーケンス図記号」?",
+       "jp": "「シーケンス図記号」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "On the Job Training (OJT)"
+       },
+       {
+        "id": "PCB (papan sirkuit cetak)"
+       },
+       {
+        "id": "Simbol Diagram Sekuensial"
+       },
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「シーケンス図記号」（しーけんすずきごう）= Simbol Diagram Sekuensial."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「油圧回路」?",
+       "jp": "「油圧回路」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Sirkuit Hidrolik"
+       },
+       {
+        "id": "Komponen Listrik"
+       },
+       {
+        "id": "Alat Ukur Lainnya"
+       },
+       {
+        "id": "Bahan Konduktif"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「油圧回路」（ゆあつかいろ）= Sirkuit Hidrolik."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「電動機（モータ）」?",
+       "jp": "「電動機（モータ）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Tanda Lainnya"
+       },
+       {
+        "id": "Motor Listrik"
+       },
+       {
+        "id": "Bahan Isolasi"
+       },
+       {
+        "id": "Standar Kerja"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「電動機（モータ）」（でんどうき）= Motor Listrik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「部品」?",
+       "jp": "「部品」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ISO",
+        "jp": "ISO"
+       },
+       {
+        "id": "ぶひん",
+        "jp": "ぶひん"
+       },
+       {
+        "id": "さんてい",
+        "jp": "さんてい"
+       },
+       {
+        "id": "こうせい",
+        "jp": "こうせい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「部品」dibaca ぶひん (Komponen)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「電動機（モータ）」?",
+       "jp": "「電動機（モータ）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       },
+       {
+        "id": "ゆあつかいろ",
+        "jp": "ゆあつかいろ"
+       },
+       {
+        "id": "しゃだんき",
+        "jp": "しゃだんき"
+       },
+       {
+        "id": "でんどうき",
+        "jp": "でんどうき"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「電動機（モータ）」dibaca でんどうき (Motor Listrik)."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab11-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 11 · 2 (dari daftar kosakata)",
+     "jp": "第11章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「基本回路」?",
+       "jp": "「基本回路」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "あなあけかこう",
+        "jp": "あなあけかこう"
+       },
+       {
+        "id": "でんどうき",
+        "jp": "でんどうき"
+       },
+       {
+        "id": "きほんかいろ",
+        "jp": "きほんかいろ"
+       },
+       {
+        "id": "でんしぶひん",
+        "jp": "でんしぶひん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「基本回路」dibaca きほんかいろ (Rangkaian Dasar)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「基本回路」?",
+       "jp": "「基本回路」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Konduktif"
+       },
+       {
+        "id": "Tanda perhatian"
+       },
+       {
+        "id": "Pengukuran Arus"
+       },
+       {
+        "id": "Rangkaian Dasar"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「基本回路」（きほんかいろ）= Rangkaian Dasar."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「遮断器」?",
+       "jp": "「遮断器」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       },
+       {
+        "id": "せんばん",
+        "jp": "せんばん"
+       },
+       {
+        "id": "しゃだんき",
+        "jp": "しゃだんき"
+       },
+       {
+        "id": "はっしん",
+        "jp": "はっしん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「遮断器」dibaca しゃだんき (Pemutus Sirkuit)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「応用回路」?",
+       "jp": "「応用回路」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "おうようかいろ",
+        "jp": "おうようかいろ"
+       },
+       {
+        "id": "ぜったいあんぜん",
+        "jp": "ぜったいあんぜん"
+       },
+       {
+        "id": "ずめんのしゅるい",
+        "jp": "ずめんのしゅるい"
+       },
+       {
+        "id": "かいろけいさん",
+        "jp": "かいろけいさん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「応用回路」dibaca おうようかいろ (Rangkaian Aplikasi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「論理演算」?",
+       "jp": "「論理演算」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Kemasan"
+       },
+       {
+        "id": "Operasi Logika"
+       },
+       {
+        "id": "Tanda Larangan"
+       },
+       {
+        "id": "Tanda Lainnya"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「論理演算」（ろんりえんざん）= Operasi Logika."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「太陽電池」?",
+       "jp": "「太陽電池」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ろうでんとあーす",
+        "jp": "ろうでんとあーす"
+       },
+       {
+        "id": "たいようでんち",
+        "jp": "たいようでんち"
+       },
+       {
+        "id": "QCこうていず",
+        "jp": "QCこうていず"
+       },
+       {
+        "id": "あなあけかこう",
+        "jp": "あなあけかこう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「太陽電池」dibaca たいようでんち (Sel Surya)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「シーケンス図記号」?",
+       "jp": "「シーケンス図記号」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "どうでんざいりょう",
+        "jp": "どうでんざいりょう"
+       },
+       {
+        "id": "ぶつりゅうひんしつ",
+        "jp": "ぶつりゅうひんしつ"
+       },
+       {
+        "id": "ぜつえんざいりょう",
+        "jp": "ぜつえんざいりょう"
+       },
+       {
+        "id": "しーけんすずきごう",
+        "jp": "しーけんすずきごう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「シーケンス図記号」dibaca しーけんすずきごう (Simbol Diagram Sekuensial)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「部品」?",
+       "jp": "「部品」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kikir set"
+       },
+       {
+        "id": "San-Tei"
+       },
+       {
+        "id": "Reduksi"
+       },
+       {
+        "id": "Komponen"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「部品」（ぶひん）= Komponen."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「変圧器」?",
+       "jp": "「変圧器」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "San-Tei"
+       },
+       {
+        "id": "Reduksi"
+       },
+       {
+        "id": "Trafo"
+       },
+       {
+        "id": "Osilasi"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「変圧器」（へんあつき）= Trafo."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「変圧器」?",
+       "jp": "「変圧器」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "へんあつき",
+        "jp": "へんあつき"
+       },
+       {
+        "id": "くみやすり",
+        "jp": "くみやすり"
+       },
+       {
+        "id": "さんてい",
+        "jp": "さんてい"
+       },
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「変圧器」dibaca へんあつき (Trafo)."
+      }
      }
     ]
    }
@@ -3061,6 +8155,982 @@
       },
       "mb": true,
       "ref": "IMM-elec-electronic-OQ-12-3-03"
+     }
+    ]
+   },
+   {
+    "id": "vk-bab12-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 12 · 1 (dari daftar kosakata)",
+     "jp": "第12章 {語彙|ごい}練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「物流品質」?",
+       "jp": "「物流品質」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぶつりゅうひんしつ",
+        "jp": "ぶつりゅうひんしつ"
+       },
+       {
+        "id": "せつびほぜんのこうか",
+        "jp": "せつびほぜんのこうか"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "しゃしゅつせいけい",
+        "jp": "しゃしゅつせいけい"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「物流品質」dibaca ぶつりゅうひんしつ (Kualitas Logistik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「組立検査」?",
+       "jp": "「組立検査」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "しゃしゅつせいけい",
+        "jp": "しゃしゅつせいけい"
+       },
+       {
+        "id": "ほぜんのしゅるい",
+        "jp": "ほぜんのしゅるい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「組立検査」dibaca くみたてけんさ (Inspeksi Perakitan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「保全」?",
+       "jp": "「保全」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       },
+       {
+        "id": "Pengertian Pemeliharaan"
+       },
+       {
+        "id": "Pembentukan Plastik FRP"
+       },
+       {
+        "id": "PCB (papan sirkuit cetak)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「保全」（ほぜん）= Pengertian Pemeliharaan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「強化プラスチック成形」?",
+       "jp": "「強化プラスチック成形」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "JISきかくこうぎょうほうそう",
+        "jp": "JISきかくこうぎょうほうそう"
+       },
+       {
+        "id": "きょうかぷらすちっくせいけい",
+        "jp": "きょうかぷらすちっくせいけい"
+       },
+       {
+        "id": "とりあつかいちゅういらべる",
+        "jp": "とりあつかいちゅういらべる"
+       },
+       {
+        "id": "せつびほぜんのしごとないよう",
+        "jp": "せつびほぜんのしごとないよう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「強化プラスチック成形」dibaca きょうかぷらすちっくせいけい (Pembentukan Plastik FRP)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「取扱注意ラベル（JIS Z0150）」?",
+       "jp": "「取扱注意ラベル（JIS Z0150）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷりんとはいせんきばん",
+        "jp": "ぷりんとはいせんきばん"
+       },
+       {
+        "id": "ほうそうのやくわりときのう",
+        "jp": "ほうそうのやくわりときのう"
+       },
+       {
+        "id": "きょうかぷらすちっくせいけい",
+        "jp": "きょうかぷらすちっくせいけい"
+       },
+       {
+        "id": "とりあつかいちゅういらべる",
+        "jp": "とりあつかいちゅういらべる"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「取扱注意ラベル（JIS Z0150）」dibaca とりあつかいちゅういらべる (Label Kehati-hatian Penanganan (JIS Z0150))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「梱包材料」?",
+       "jp": "「梱包材料」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Proses Etsa"
+       },
+       {
+        "id": "Inspeksi Perakitan"
+       },
+       {
+        "id": "Bahan Kemasan"
+       },
+       {
+        "id": "Kualitas Logistik"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「梱包材料」（こんぽうざいりょう）= Bahan Kemasan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「包装の役割と機能」?",
+       "jp": "「包装の役割と機能」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "PCB (papan sirkuit cetak)"
+       },
+       {
+        "id": "Pengertian Pemeliharaan"
+       },
+       {
+        "id": "Pembentukan Plastik FRP"
+       },
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「包装の役割と機能」（ほうそうのやくわりときのう）= Peran dan Fungsi Kemasan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「プラスチック成形」?",
+       "jp": "「プラスチック成形」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷらすちっくせいけい",
+        "jp": "ぷらすちっくせいけい"
+       },
+       {
+        "id": "ぷりんとかいろいた",
+        "jp": "ぷりんとかいろいた"
+       },
+       {
+        "id": "せつびほぜんのこうか",
+        "jp": "せつびほぜんのこうか"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「プラスチック成形」dibaca ぷらすちっくせいけい (Pembentukan (injeksi) plastik)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「取扱注意ラベル（JIS Z0150）」?",
+       "jp": "「取扱注意ラベル（JIS Z0150）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengertian Papan Sirkuit Cetak (PCB)"
+       },
+       {
+        "id": "Kemasan industri (standar JIS)"
+       },
+       {
+        "id": "Label Kehati-hatian Penanganan (JIS Z0150)"
+       },
+       {
+        "id": "Lingkup Pekerjaan Pemeliharaan Peralatan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「取扱注意ラベル（JIS Z0150）」（とりあつかいちゅういらべる）= Label Kehati-hatian Penanganan (JIS Z0150)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「設備保全の効果」?",
+       "jp": "「設備保全の効果」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengertian Kemasan Industri"
+       },
+       {
+        "id": "Dampak Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Pembentukan (injeksi) plastik"
+       },
+       {
+        "id": "Kemasan industri (standar JIS)"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「設備保全の効果」（せつびほぜんのこうか）= Dampak Pemeliharaan Peralatan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab12-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 12 · 2 (dari daftar kosakata)",
+     "jp": "第12章 {語彙|ごい}練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「射出成形」?",
+       "jp": "「射出成形」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こうぎょうほうそう",
+        "jp": "こうぎょうほうそう"
+       },
+       {
+        "id": "しゃしゅつせいけい",
+        "jp": "しゃしゅつせいけい"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "ぶつりゅうひんしつ",
+        "jp": "ぶつりゅうひんしつ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「射出成形」dibaca しゃしゅつせいけい (Pembentukan Injeksi)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「プラスチック成形」?",
+       "jp": "「プラスチック成形」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kemasan industri (standar JIS)"
+       },
+       {
+        "id": "Dampak Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Pengertian Kemasan Industri"
+       },
+       {
+        "id": "Pembentukan (injeksi) plastik"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「プラスチック成形」（ぷらすちっくせいけい）= Pembentukan (injeksi) plastik."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「設備保全の仕事内容」?",
+       "jp": "「設備保全の仕事内容」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengertian Papan Sirkuit Cetak (PCB)"
+       },
+       {
+        "id": "Kemasan industri (standar JIS)"
+       },
+       {
+        "id": "Lingkup Pekerjaan Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Label Kehati-hatian Penanganan (JIS Z0150)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「設備保全の仕事内容」（せつびほぜんのしごとないよう）= Lingkup Pekerjaan Pemeliharaan Peralatan."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「梱包材料」?",
+       "jp": "「梱包材料」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こうぎょうほうそう",
+        "jp": "こうぎょうほうそう"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "しゃしゅつせいけい",
+        "jp": "しゃしゅつせいけい"
+       },
+       {
+        "id": "せつびほぜんのこうか",
+        "jp": "せつびほぜんのこうか"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「梱包材料」dibaca こんぽうざいりょう (Bahan Kemasan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「工業包装」?",
+       "jp": "「工業包装」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengertian Kemasan Industri"
+       },
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       },
+       {
+        "id": "Dampak Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Pembentukan (injeksi) plastik"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「工業包装」（こうぎょうほうそう）= Pengertian Kemasan Industri."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「物流品質」?",
+       "jp": "「物流品質」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kualitas Logistik"
+       },
+       {
+        "id": "Pembentukan Injeksi"
+       },
+       {
+        "id": "Metode Produksi PCB"
+       },
+       {
+        "id": "Inspeksi Perakitan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「物流品質」（ぶつりゅうひんしつ）= Kualitas Logistik."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「保全」?",
+       "jp": "「保全」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷりんとかいろいた",
+        "jp": "ぷりんとかいろいた"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "ほぜん",
+        "jp": "ほぜん"
+       },
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「保全」dibaca ほぜん (Pengertian Pemeliharaan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「包装の役割と機能」?",
+       "jp": "「包装の役割と機能」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きょうかぷらすちっくせいけい",
+        "jp": "きょうかぷらすちっくせいけい"
+       },
+       {
+        "id": "JISきかくこうぎょうほうそう",
+        "jp": "JISきかくこうぎょうほうそう"
+       },
+       {
+        "id": "とりあつかいちゅういらべる",
+        "jp": "とりあつかいちゅういらべる"
+       },
+       {
+        "id": "ほうそうのやくわりときのう",
+        "jp": "ほうそうのやくわりときのう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「包装の役割と機能」dibaca ほうそうのやくわりときのう (Peran dan Fungsi Kemasan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「設備保全の仕事内容」?",
+       "jp": "「設備保全の仕事内容」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ほうそうのやくわりときのう",
+        "jp": "ほうそうのやくわりときのう"
+       },
+       {
+        "id": "とりあつかいちゅういらべる",
+        "jp": "とりあつかいちゅういらべる"
+       },
+       {
+        "id": "JISきかくこうぎょうほうそう",
+        "jp": "JISきかくこうぎょうほうそう"
+       },
+       {
+        "id": "せつびほぜんのしごとないよう",
+        "jp": "せつびほぜんのしごとないよう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「設備保全の仕事内容」dibaca せつびほぜんのしごとないよう (Lingkup Pekerjaan Pemeliharaan Peralatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「保全の種類」?",
+       "jp": "「保全の種類」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Jenis Pemeliharaan"
+       },
+       {
+        "id": "Pembentukan Injeksi"
+       },
+       {
+        "id": "Inspeksi Perakitan"
+       },
+       {
+        "id": "Metode Produksi PCB"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「保全の種類」（ほぜんのしゅるい）= Jenis Pemeliharaan."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab12-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 12 · 3 (dari daftar kosakata)",
+     "jp": "第12章 {語彙|ごい}練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「強化プラスチック成形」?",
+       "jp": "「強化プラスチック成形」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengertian Pemeliharaan"
+       },
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       },
+       {
+        "id": "Pembentukan Plastik FRP"
+       },
+       {
+        "id": "PCB (papan sirkuit cetak)"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「強化プラスチック成形」（きょうかぷらすちっくせいけい）= Pembentukan Plastik FRP."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「プリント回路板」?",
+       "jp": "「プリント回路板」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "PCB (papan sirkuit cetak)"
+       },
+       {
+        "id": "Pengertian Pemeliharaan"
+       },
+       {
+        "id": "Peran dan Fungsi Kemasan"
+       },
+       {
+        "id": "Pembentukan Plastik FRP"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「プリント回路板」（ぷりんとかいろいた）= PCB (papan sirkuit cetak)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「プリント配線基板の製造方法」?",
+       "jp": "「プリント配線基板の製造方法」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "きょうかぷらすちっくせいけい",
+        "jp": "きょうかぷらすちっくせいけい"
+       },
+       {
+        "id": "とりあつかいちゅういらべる",
+        "jp": "とりあつかいちゅういらべる"
+       },
+       {
+        "id": "JISきかくこうぎょうほうそう",
+        "jp": "JISきかくこうぎょうほうそう"
+       },
+       {
+        "id": "ぷりんとはいせんきばんのせいぞうほうほう",
+        "jp": "ぷりんとはいせんきばんのせいぞうほうほう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「プリント配線基板の製造方法」dibaca ぷりんとはいせんきばんのせいぞうほうほう (Metode Produksi PCB)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「組立検査」?",
+       "jp": "「組立検査」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Kualitas Logistik"
+       },
+       {
+        "id": "Pembentukan Injeksi"
+       },
+       {
+        "id": "Inspeksi Perakitan"
+       },
+       {
+        "id": "Jenis Pemeliharaan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「組立検査」（くみたてけんさ）= Inspeksi Perakitan."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「射出成形」?",
+       "jp": "「射出成形」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Metode Produksi PCB"
+       },
+       {
+        "id": "Kualitas Logistik"
+       },
+       {
+        "id": "Inspeksi Perakitan"
+       },
+       {
+        "id": "Pembentukan Injeksi"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「射出成形」（しゃしゅつせいけい）= Pembentukan Injeksi."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「保全の種類」?",
+       "jp": "「保全の種類」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷりんとかいろいた",
+        "jp": "ぷりんとかいろいた"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "ほぜんのしゅるい",
+        "jp": "ほぜんのしゅるい"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「保全の種類」dibaca ほぜんのしゅるい (Jenis Pemeliharaan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「プリント配線基板」?",
+       "jp": "「プリント配線基板」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こうぎょうほうそう",
+        "jp": "こうぎょうほうそう"
+       },
+       {
+        "id": "せつびほぜんのこうか",
+        "jp": "せつびほぜんのこうか"
+       },
+       {
+        "id": "ぷりんとはいせんきばん",
+        "jp": "ぷりんとはいせんきばん"
+       },
+       {
+        "id": "ぶつりゅうひんしつ",
+        "jp": "ぶつりゅうひんしつ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「プリント配線基板」dibaca ぷりんとはいせんきばん (Pengertian Papan Sirkuit Cetak (PCB))."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「JIS規格工業包装」?",
+       "jp": "「JIS規格工業包装」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pembentukan (injeksi) plastik"
+       },
+       {
+        "id": "Dampak Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Pengertian Kemasan Industri"
+       },
+       {
+        "id": "Kemasan industri (standar JIS)"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「JIS規格工業包装」（JISきかくこうぎょうほうそう）= Kemasan industri (standar JIS)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「工業包装」?",
+       "jp": "「工業包装」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "ぷりんとかいろいた",
+        "jp": "ぷりんとかいろいた"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       },
+       {
+        "id": "しゃしゅつせいけい",
+        "jp": "しゃしゅつせいけい"
+       },
+       {
+        "id": "こうぎょうほうそう",
+        "jp": "こうぎょうほうそう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「工業包装」dibaca こうぎょうほうそう (Pengertian Kemasan Industri)."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「エッチング（食刻）」?",
+       "jp": "「エッチング（食刻）」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Bahan Kemasan"
+       },
+       {
+        "id": "Inspeksi Perakitan"
+       },
+       {
+        "id": "Proses Etsa"
+       },
+       {
+        "id": "Jenis Pemeliharaan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "「エッチング（食刻）」（エッチング）= Proses Etsa."
+      }
+     }
+    ]
+   },
+   {
+    "id": "vk-bab12-4",
+    "rev": true,
+    "title": {
+     "id": "Latihan Kosakata Bab 12 · 4 (dari daftar kosakata)",
+     "jp": "第12章 {語彙|ごい}練習 4"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Apa arti 「プリント配線基板の製造方法」?",
+       "jp": "「プリント配線基板の製造方法」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Metode Produksi PCB"
+       },
+       {
+        "id": "Inspeksi Perakitan"
+       },
+       {
+        "id": "Pembentukan Injeksi"
+       },
+       {
+        "id": "Kualitas Logistik"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「プリント配線基板の製造方法」（ぷりんとはいせんきばんのせいぞうほうほう）= Metode Produksi PCB."
+      }
+     },
+     {
+      "q": {
+       "id": "Apa arti 「プリント配線基板」?",
+       "jp": "「プリント配線基板」の{意味|いみ}は？"
+      },
+      "opts": [
+       {
+        "id": "Pengertian Papan Sirkuit Cetak (PCB)"
+       },
+       {
+        "id": "Lingkup Pekerjaan Pemeliharaan Peralatan"
+       },
+       {
+        "id": "Pembentukan (injeksi) plastik"
+       },
+       {
+        "id": "Label Kehati-hatian Penanganan (JIS Z0150)"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「プリント配線基板」（ぷりんとはいせんきばん）= Pengertian Papan Sirkuit Cetak (PCB)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「エッチング（食刻）」?",
+       "jp": "「エッチング（食刻）」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "エッチング",
+        "jp": "エッチング"
+       },
+       {
+        "id": "ほぜん",
+        "jp": "ほぜん"
+       },
+       {
+        "id": "くみたてけんさ",
+        "jp": "くみたてけんさ"
+       },
+       {
+        "id": "ぶつりゅうひんしつ",
+        "jp": "ぶつりゅうひんしつ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「エッチング（食刻）」dibaca エッチング (Proses Etsa)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「設備保全の効果」?",
+       "jp": "「設備保全の効果」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せつびほぜんのこうか",
+        "jp": "せつびほぜんのこうか"
+       },
+       {
+        "id": "ぷりんとはいせんきばん",
+        "jp": "ぷりんとはいせんきばん"
+       },
+       {
+        "id": "ぷらすちっくせいけい",
+        "jp": "ぷらすちっくせいけい"
+       },
+       {
+        "id": "ぶつりゅうひんしつ",
+        "jp": "ぶつりゅうひんしつ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "「設備保全の効果」dibaca せつびほぜんのこうか (Dampak Pemeliharaan Peralatan)."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「プリント回路板」?",
+       "jp": "「プリント回路板」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "こうぎょうほうそう",
+        "jp": "こうぎょうほうそう"
+       },
+       {
+        "id": "ぷりんとかいろいた",
+        "jp": "ぷりんとかいろいた"
+       },
+       {
+        "id": "せつびほぜんのこうか",
+        "jp": "せつびほぜんのこうか"
+       },
+       {
+        "id": "こんぽうざいりょう",
+        "jp": "こんぽうざいりょう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "「プリント回路板」dibaca ぷりんとかいろいた (PCB (papan sirkuit cetak))."
+      }
+     },
+     {
+      "q": {
+       "id": "Bagaimana cara membaca 「JIS規格工業包装」?",
+       "jp": "「JIS規格工業包装」の{読|よ}み{方|かた}は？"
+      },
+      "opts": [
+       {
+        "id": "せつびほぜんのしごとないよう",
+        "jp": "せつびほぜんのしごとないよう"
+       },
+       {
+        "id": "きょうかぷらすちっくせいけい",
+        "jp": "きょうかぷらすちっくせいけい"
+       },
+       {
+        "id": "ほうそうのやくわりときのう",
+        "jp": "ほうそうのやくわりときのう"
+       },
+       {
+        "id": "JISきかくこうぎょうほうそう",
+        "jp": "JISきかくこうぎょうほうそう"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "「JIS規格工業包装」dibaca JISきかくこうぎょうほうそう (Kemasan industri (standar JIS))."
+      }
      }
     ]
    }
