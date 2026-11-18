@@ -2275,6 +2275,7 @@ window.goHomeFab = () => {
   const here = location.hash.slice(1) || "home";
   const cur = here.split("/")[0];
   const sub = _subjectOf(here);
+  if (window.__sswBack && /^(shop|gacha|profile)$/.test(cur)){ const b = window.__sswBack; window.__sswBack = null; route(b); return; }
   const awal = sub === "ssw" ? "ssw" : sub === "kana" ? "kana" : sub === "jft" ? "jft" : "home";
   route(cur === awal ? "pilih-level" : awal);
 };
@@ -2315,6 +2316,9 @@ function _renderRoute(name, rest){
 window.route = (path) => {
   window._materiDetail = null;
   if (location.hash.slice(1) !== path) window._navByRoute = true;   // hashchange ini dari route(), bukan tombol back
+  { const _n = path.split("/")[0], _h = location.hash.slice(1) || "";
+    if (/^(shop|gacha|profile)$/.test(_n)){ if (/^ssw/.test(_h)) window.__sswBack = _h; }
+    else if (_n !== "hafalan") window.__sswBack = null; }
   location.hash = path;
   const [name, ...rest] = path.split("/");
 
@@ -2328,7 +2332,7 @@ window.route = (path) => {
 
   // Alur wajib: LOGIN → PEMILIHAN JLPT → CHARACTER → fitur. Selama siswa
   // belum memilih level di sesi ini, semua halaman diarahkan ke #pilih-level.
-  if (state.user && !BEBAS_PILIH_LEVEL.has(name) && !String(name).startsWith("ssw") && !String(name).startsWith("jft") && !(name === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess") || (state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkBidang && state._rkBidang !== "jlpt"))) && !levelSudahDipilih()){
+  if (state.user && !BEBAS_PILIH_LEVEL.has(name) && !String(name).startsWith("ssw") && !String(name).startsWith("jft") && !(window.__sswBack && /^(shop|gacha|profile)$/.test(name)) && !(name === "hafalan" && (state.hafalan_ctx === "ssw" || sessionStorage.getItem("shirose-ssw-hafsess") || (state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkBidang && state._rkBidang !== "jlpt"))) && !levelSudahDipilih()){
     return route("pilih-level");
   }
   renderLevelPills();
