@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261118m";
+} from "./ssw-core.js?v=20261118n";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118k";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
@@ -274,7 +274,8 @@ function say(text, slug, read) {
 }
 
 const crumbs = (parts) => `<div class="sw-crumbs">${parts.map((p, i) => p.go ? `<a onclick="${p.go}">${p.t}</a>` : `<b>${p.t}</b>`).join(" <span>›</span> ")}</div>`;
-const rkBar = `<div class="sw-rkbar"><button type="button" class="btn ghost sm" onclick="route('ssw-rangkuman')" title="Buka Rangkuman SSW">📒 Rangkuman SSW</button></div>`;
+const rkBar = `<div class="sw-rkbar"><button type="button" class="btn ghost sm" onclick="route('shop')">🛒 Shop</button>${window.__gachaOn === false ? "" : `<button type="button" class="btn ghost sm" onclick="route('gacha')">🎰 Gacha</button>`}<button type="button" class="btn ghost sm" onclick="route('ssw-rangkuman')" title="Buka Rangkuman SSW">📒 Rangkuman SSW</button></div>`;
+const charaPanel = () => (window.sswCharaPanel ? window.sswCharaPanel() : "");
 const wrap = (inner, cls = "") => `<div class="sw-wrap ${cls}">${rkBar}${inner}</div>`;
 const msgPage = (emoji, title, text, back = "route('ssw')") => wrap(`
   <div class="sw-panel sw-center"><div class="sw-emoji">${emoji}</div><h2>${title}</h2><p class="sw-muted">${text}</p>
@@ -323,6 +324,7 @@ async function renderHub() {
       <button class="sw-back" onclick="route('pilih-level')">← Pilih mode belajar</button>
       ${guru ? `<button class="sw-back" onclick="location.href='./teacher.html#ssw'">師 Kelola SSW</button>` : ""}
     </div>
+    ${charaPanel()}
     <div class="sw-head"><div class="jp">特定技能 · 世界の学習島</div><h1>SSW — Pilih Bidang</h1>
       <p>Ketuk sebuah pulau untuk melihat bidangnya. Tiap pulau adalah satu bidang pekerjaan SSW.</p></div>
     ${myList.length ? `<div class="sw-panel sw-mine"><h2>🎓 Bidangmu</h2><div class="sw-actions left">${myList.map(b => `<button class="btn" onclick="route('ssw-peta/${esc(b.slug)}')">${esc(b.nama)} <span class="jp">${esc(b.jp || "")}</span></button>`).join("")}</div></div>` : ""}
@@ -378,6 +380,7 @@ async function renderPeta([slug]) {
   return `<div class="sw-wrap sw-mapwrap">
     <div class="sw-sky" aria-hidden="true"><i class="sw-cloud c1"></i><i class="sw-cloud c2"></i><i class="sw-cloud c3"></i></div>
     ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama) }])}
+    ${charaPanel()}
     <div class="sw-head compact"><div class="jp">${esc(b.jp || "")}</div><h1>${esc(b.nama)}</h1><p>Ketuk sebuah bangunan untuk masuk ke babnya.</p></div>
     ${draftNote}
     <div class="sw-map sw-map-p">${mapSVG(nodes, true)}</div>
@@ -391,6 +394,7 @@ async function renderPeta([slug]) {
       <button class="btn ghost" onclick="route('ssw-kuis/${slug}')">📝 Kuis</button>
       <button class="btn" onclick="route('ssw-hafal/${slug}')">🃏 Hafalan</button>
       <button class="btn gold" onclick="route('ssw-rank/${slug}')">🏆 Leaderboard</button>
+      <button class="btn ghost" onclick="route('shop')">🛒 Shop</button>${window.__gachaOn === false ? "" : `<button class="btn ghost" onclick="route('gacha')">🎰 Gacha</button>`}
       ${pdfButtons(slug)}
     </div>
     <div class="sw-attr">Materi: ${esc(pack.chapters[0]?.source || "")}</div>
