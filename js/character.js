@@ -919,7 +919,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana">${CELANA[eq.celana].svg()}</g>` : "";
   let celanaOverlay = "";
   const femC = (opts.body || _body) === "female";
-  if (celanaSvg && femC) celanaOverlay = `<g data-slot="celana-overlay" transform="translate(200 0) scale(1.15 1) translate(-200 0)">${celanaSvg}</g>`;   // cewek: bawahan digambar DI ATAS baju (tidak tertutup)
+  if (celanaSvg && femC) celanaOverlay = `<g data-slot="celana-overlay" transform="translate(200 0) scale(1.32 1) translate(-200 0)">${celanaSvg}</g>`;   // cewek: bawahan digambar DI ATAS baju (tidak tertutup)
   else if (celanaSvg) base = base.replace("<!--@C-->", celanaSvg);
   // Sayap (baru) — di belakang badan, setelah aura
   const sayapSvg = (eq.sayap && eq.sayap !== "none" && SAYAP[eq.sayap]?.svg) ? `<g data-slot="sayap">${SAYAP[eq.sayap].svg()}</g>` : "";
@@ -1022,10 +1022,10 @@ export function itemCardSvg(kategori, itemId) {
 
 /* ====== Koleksi tambahan (js/character-more.js) ====== */
 import { extend } from "./character-more.js?v=20261116m";
-import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z5";
+import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z6";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z5";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
