@@ -353,6 +353,8 @@ export const EXAM_SPEC = {
   "construction-bangunan": { n: 50, img: 8, mb: 20, info: "Resmi (JAC): tulis 30 (60 menit) + praktik 20 (40 menit) = 50 soal, ○× + pilihan ganda, lulus ≥65%." },
   "construction-lifeline": { n: 50, img: 8, mb: 20, info: "Resmi (JAC): tulis 30 (60 menit) + praktik 20 (40 menit) = 50 soal, ○× + pilihan ganda, lulus ≥65%." },
   "building-cleaning": { n: 50, img: 0, mb: 20, info: "Resmi (MHLW): tulis 20 + praktik 30 = 50 soal / 50 menit, lulus ≥60% di tiap bagian (tulis ≥24 dari 40, praktik ≥36 dari 60)." },
+  "agriculture": { n: 70, img: 0, mb: 0, info: "Resmi (MAFF/全国農業会議所 試験実施要領 1号): 学科 + 実技 (termasuk bahasa Jepang kerja), 60 menit, ±70 soal (sebagian tidak dinilai), CBT; level ±70% lulus bagi yang berpengalaman kerja 3 tahun; lulus bila di atas nilai batas yang ditetapkan NCA. Soal latihan = buatan Shirose dari buku modul resmi." },
+  "livestock": { n: 70, img: 0, mb: 0, info: "Resmi (MAFF/全国農業会議所 試験実施要領 1号 — 畜産農業): 学科 + 実技, 60 menit, ±70 soal (sebagian tidak dinilai), CBT; level setara 農業技能実習評価試験 専門級. Soal latihan = buatan Shirose dari buku modul resmi." },
   "accommodation": { n: 36, img: 4, mb: 10, info: "Resmi (宿泊業技能試験センター): tulis 30 + praktik 6 = 36 soal, 60 menit." },
   "kaigo": { n: 45, img: 0, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
   "kaigo-jp": { n: 45, img: 4, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },

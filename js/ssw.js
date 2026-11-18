@@ -19,6 +19,30 @@ import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118d";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
 const PDF_SUMBER = {
+  "agriculture": [
+    { t: "試験実施要領 1号 農業技能測定試験 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
+    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true }
+  ],
+  "livestock": [
+    { t: "試験実施要領 1号 農業技能測定試験 — 畜産農業 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
+    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true }
+  ],
+  "fishery": [
+    { t: "学習用テキスト 漁業一般 (大日本水産会, rev. 2025)", u: "https://suisankai.or.jp/wp-content/uploads/2025/09/%E6%BC%81%E6%A5%AD%E4%B8%80%E8%88%AC2025%E6%9B%B4%E6%96%B0.pdf", ext: true },
+    { t: "学習用テキスト 釣り漁業 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2020/01/%E2%91%A220191218%E9%87%A3%E6%BC%81%E6%A5%AD.pdf", ext: true },
+    { t: "学習用テキスト 漁業安全 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2023/12/%E6%BC%81%E6%A5%AD%E5%AE%89%E5%85%A8.pdf", ext: true },
+    { t: "試験実施状況報告書 R4 漁業分野 (水産庁)", u: "https://www.moj.go.jp/isa/content/001401785.pdf", ext: true }
+  ],
+  "accommodation": [
+    { t: "宿泊分野特定技能1号評価試験 実施要領 (観光庁)", u: "https://www.mlit.go.jp/kankocho/content/001719490.pdf", ext: true },
+    { t: "令和7年 宿泊分野 試験実施状況 (観光庁)", u: "https://www.mlit.go.jp/kankocho/content/002027832.pdf", ext: true }
+  ],
+  "kaigo": [
+    { t: "介護特定技能評価試験(技能) 試験実施要領 (MHLW)", u: "https://www.mhlw.go.jp/content/001706488.pdf", ext: true }
+  ],
+  "kaigo-jp": [
+    { t: "介護特定技能評価試験(技能) 試験実施要領 (MHLW)", u: "https://www.mhlw.go.jp/content/001706488.pdf", ext: true }
+  ],
   "railway-electrical": [
     { t: "受験案内 電気設備整備 (resmi 鉄道電業安全協会)", u: "https://www.railecr.com/news/20241101/zyuken_annai.pdf", ext: true },
     { t: "試験実施要領 電気設備整備 (resmi)", u: "https://www.railecr.com/news/20241101/shikenn_youryou.pdf", ext: true },
