@@ -2388,7 +2388,7 @@ window.sswCharaPanel = function(){
   try{
     const nama = state.siswa?.nama || "Tamu";
     return `<div class="sw-chara">${_sscStage(false)}<div class="sc-name" onclick="sswCharaOpen()">${nama} · Lv ${state.gami.level_karakter}</div>
-      <div class="sc-row"><button class="btn" onclick="sswGo('shop')">🛒 Shop</button>${GACHA_ON ? `<button class="btn gold" onclick="sswGo('gacha')">🎰 Gacha</button>` : ""}<button class="btn ghost" onclick="sswGo('profile')">🧑 Karakter</button></div></div>`;
+      <div class="sc-row"><button class="btn" onclick="sswGo('shop')">🛒 Shop</button>${GACHA_ON ? `<button class="btn gold" onclick="sswGo('gacha')">🎰 Gacha</button>` : ""}<button class="btn ghost" onclick="sswCharaOpen()">🧑 Karakter</button></div></div>`;
   }catch(e){ return ""; }
 };
 window.sswCharaOpen = function(){
