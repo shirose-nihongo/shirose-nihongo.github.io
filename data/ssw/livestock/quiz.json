@@ -1428,6 +1428,136 @@
       "mb": true
      }
     ]
+   },
+   {
+    "id": "cz-bab1-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Melengkapi Teks Bab 1 · 1 (dari isi buku)",
+     "jp": "第1章 {穴埋|あなう}め練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Jarak waktu ＿＿＿ sapi perah yang diharapkan adalah 365 hari, atau 1 tahun setiap 1 kelahiran, tapi jarak waktu melahirkan sapi perah di Jepang menjadi lebih lama.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "megafarm"
+       },
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "estrus"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Peternakan Sapi Perah»: “Jarak waktu melahirkan sapi perah yang diharapkan adalah 365 hari, atau 1 tahun setiap 1 kelahiran, tapi jarak waktu melahirkan sapi perah di Jepang menjadi lebih lama.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “(3) Peternakan sapi perah yang jumlah sapinya sangat banyak disebut dengan ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "Megafarm"
+       },
+       {
+        "id": "jidori"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Peternakan Sapi Perah»: “(3) Peternakan sapi perah yang jumlah sapinya sangat banyak disebut dengan Megafarm.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pedet mudah terkena radang paru-paru atau diare, sehingga penting untuk melakukan observasi, ＿＿＿, dan juga pengobatan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "megafarm"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "perawatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Produksi Daging Sapi (Sapi Pedaging)»: “Pedet mudah terkena radang paru-paru atau diare, sehingga penting untuk melakukan observasi, perawatan, dan juga pengobatan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Wagyu betina untuk diperkembangbiakkan dipelihara, kemudian akan dikirimkan ke pasar ternak sebagai sapi bakalan pada sekitar 10 bulan setelah ＿＿＿ pedet.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "megafarm"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Produksi Daging Sapi (Sapi Pedaging)»: “Wagyu betina untuk diperkembangbiakkan dipelihara, kemudian akan dikirimkan ke pasar ternak sebagai sapi bakalan pada sekitar 10 bulan setelah melahirkan pedet.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Siklus ini akan berulang pada induk babi, biasanya 6~10 kali ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "megafarm"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "perawatan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Peternakan Babi»: “Siklus ini akan berulang pada induk babi, biasanya 6~10 kali melahirkan.”"
+      }
+     }
+    ]
    }
   ],
   "bab2": [
@@ -3260,6 +3390,684 @@
        "p": 109
       },
       "mb": true
+     }
+    ]
+   },
+   {
+    "id": "cz-bab2-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Melengkapi Teks Bab 2 · 1 (dari isi buku)",
+     "jp": "第2章 {穴埋|あなう}め練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sekitar 60 hari sebelum ＿＿＿, pemerahan susu dihentikan, dan masuk pada masa kering.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "kolostrum"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "estrus"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Perah»: “Sekitar 60 hari sebelum melahirkan, pemerahan susu dihentikan, dan masuk pada masa kering.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Penting untuk meminumkan ＿＿＿ yang banyak mengandung imunoglobulin, untuk memberikan imun (daya tahan) bagi pedet yang dilahirkan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "pengumpanan"
+       },
+       {
+        "id": "kolostrum"
+       },
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "melahirkan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Perah»: “Penting untuk meminumkan kolostrum yang banyak mengandung imunoglobulin, untuk memberikan imun (daya tahan) bagi pedet yang dilahirkan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bila ＿＿＿, vulva sapi perah akan membengkak, dan akan mengeluarkan lendir.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "umpan"
+       },
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "kolostrum"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Perah»: “Bila estrus, vulva sapi perah akan membengkak, dan akan mengeluarkan lendir.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Akhir-akhir ini tidak hanya ＿＿＿, namun transplantasi sel telur yang telah difertilisasi pada sapi hitam Jepang pun menjadi populer.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "memamah biak"
+       },
+       {
+        "id": "ayam praktek"
+       },
+       {
+        "id": "berhenti makan"
+       },
+       {
+        "id": "inseminasi buatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Perah»: “Akhir-akhir ini tidak hanya inseminasi buatan, namun transplantasi sel telur yang telah difertilisasi pada sapi hitam Jepang pun menjadi populer.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Induk sapi akan menjilat mengeringkan permukaan pedet yang dilahirkan, namun memindahkan pedet ke atas ＿＿＿ sapi yang kering adalah penting.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "body condition"
+       },
+       {
+        "id": "susu afkir"
+       },
+       {
+        "id": "ganti bulu"
+       },
+       {
+        "id": "alas kandang"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Perah»: “Induk sapi akan menjilat mengeringkan permukaan pedet yang dilahirkan, namun memindahkan pedet ke atas alas kandang sapi yang kering adalah penting.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sapi perah dapat lebih suka memakan pakan konsentrat daripada pakan kasar, hal ini disebut dengan “＿＿＿”.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "makan pilih"
+       },
+       {
+        "id": "suplai suhu"
+       },
+       {
+        "id": "alas kandang"
+       },
+       {
+        "id": "radang kuku"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Perah»: “Sapi perah dapat lebih suka memakan pakan konsentrat daripada pakan kasar, hal ini disebut dengan “makan pilih”.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Karena pada ＿＿＿ terkandung immunoglobulin yang memiliki retensi terhadap penularan sakit pada pedet, maka pastikan untuk meminumkannya.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "kolostrum"
+       },
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "pengumpanan"
+       },
+       {
+        "id": "jidori"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Pedaging»: “Karena pada kolostrum terkandung immunoglobulin yang memiliki retensi terhadap penularan sakit pada pedet, maka pastikan untuk meminumkannya.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada puncak fase ＿＿＿, kondisi sapi perah akan diam saja walau punggungnya dinaiki oleh sapi lain (standing estrus), dan observasi mengenai hal itu adalah penting.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "kanibalisme"
+       },
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "estrus"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Pedaging»: “Pada puncak fase estrus, kondisi sapi perah akan diam saja walau punggungnya dinaiki oleh sapi lain (standing estrus), dan observasi mengenai hal itu adalah penting.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “(Lihat “10 Pengelolaan Kesehatan Pedet” di halaman 23) Setiap hari diberikan ＿＿＿ atau rumput kering yang segar.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "radang kuku"
+       },
+       {
+        "id": "suplai suhu"
+       },
+       {
+        "id": "babi spf"
+       },
+       {
+        "id": "susu afkir"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Pedaging»: “(Lihat “10 Pengelolaan Kesehatan Pedet” di halaman 23) Setiap hari diberikan susu afkir atau rumput kering yang segar.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Kebanyakan sebagai penyebab ＿＿＿ adalah rumen acidosis.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "memamah biak"
+       },
+       {
+        "id": "inseminasi buatan"
+       },
+       {
+        "id": "berhenti makan"
+       },
+       {
+        "id": "susu afkir"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Pedaging»: “Kebanyakan sebagai penyebab berhenti makan adalah rumen acidosis.”"
+      }
+     }
+    ]
+   },
+   {
+    "id": "cz-bab2-2",
+    "rev": true,
+    "title": {
+     "id": "Latihan Melengkapi Teks Bab 2 · 2 (dari isi buku)",
+     "jp": "第2章 {穴埋|あなう}め練習 2"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Setelah ＿＿＿ pedet, plasenta (afterbirth) akan disekresikan dalam kurun waktu 6 jam.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "pelihara"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Pedaging»: “Setelah melahirkan pedet, plasenta (afterbirth) akan disekresikan dalam kurun waktu 6 jam.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sperma dari varietas sapi hitam Jepang dilakukan ＿＿＿ pada sapi betina Holstein sapi perah, pedet yang dilahirkannya disebut dengan varietas blasteran (F1).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "memamah biak"
+       },
+       {
+        "id": "pemberian umpan"
+       },
+       {
+        "id": "suplai suhu"
+       },
+       {
+        "id": "inseminasi buatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Sapi Pedaging»: “Sperma dari varietas sapi hitam Jepang dilakukan inseminasi buatan pada sapi betina Holstein sapi perah, pedet yang dilahirkannya disebut dengan varietas blasteran (F1).”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Wadah ＿＿＿ mempergunakan wadah umpan tanpa henti (self feeder), dijaga kondisi pakan ternak selalu bisa dimakan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "kolostrum"
+       },
+       {
+        "id": "umpan"
+       },
+       {
+        "id": "kanibalisme"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Babi»: “Wadah umpan mempergunakan wadah umpan tanpa henti (self feeder), dijaga kondisi pakan ternak selalu bisa dimakan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “21 hari setelah kawin, diputuskan bahwa babi telah hamil bila tidak ada ＿＿＿ kembali.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "umpan"
+       },
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "kanibalisme"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Babi»: “21 hari setelah kawin, diputuskan bahwa babi telah hamil bila tidak ada estrus kembali.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Karena pada ＿＿＿ terkandung antibody terhadap berbagai penyakit (immunoglobulin), maka dengan meminumnya barulah didapatkan resistensi terhadap penyakit dari luar.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "kolostrum"
+       },
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "perawatan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Babi»: “Karena pada kolostrum terkandung antibody terhadap berbagai penyakit (immunoglobulin), maka dengan meminumnya barulah didapatkan resistensi terhadap penyakit dari luar.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Apabila telah berakhir ＿＿＿ karena anak babi disapih, maka dilakukan penyesuaian pakan ternak dengan memperhatikan kondisi badan induk babi.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "pelihara"
+       },
+       {
+        "id": "kanibalisme"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Babi»: “Apabila telah berakhir perawatan karena anak babi disapih, maka dilakukan penyesuaian pakan ternak dengan memperhatikan kondisi badan induk babi.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pakan ternak babi terbagi menjadi ＿＿＿ untuk anak babi, pakan ternak untuk pemeliharaan, dan pakan ternak untuk penggemukan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "ganti bulu"
+       },
+       {
+        "id": "alas kandang"
+       },
+       {
+        "id": "susu afkir"
+       },
+       {
+        "id": "suplai suhu"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Babi»: “Pakan ternak babi terbagi menjadi susu afkir untuk anak babi, pakan ternak untuk pemeliharaan, dan pakan ternak untuk penggemukan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “＿＿＿ dari Peternakan SPF adalah hewan yang tidak memiliki pneumonia mycoplasma, disentri babi, AR (Atrophic Rhinitis), penyakit Aujeszky, maupun taksoplasmosi.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Memamah biak"
+       },
+       {
+        "id": "Babi SPF"
+       },
+       {
+        "id": "Radang kuku"
+       },
+       {
+        "id": "Suplai suhu"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Babi»: “Babi SPF dari Peternakan SPF adalah hewan yang tidak memiliki pneumonia mycoplasma, disentri babi, AR (Atrophic Rhinitis), penyakit Aujeszky, maupun taksoplasmosi.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “＿＿＿ (pemeliharaan) adalah memelihara anak ayam dengan maksud mempergunakannya sebagai ayam petelur di masa datang.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "Kolostrum"
+       },
+       {
+        "id": "Pelihara"
+       },
+       {
+        "id": "Jidori"
+       },
+       {
+        "id": "Estrus"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Petelur»: “Pelihara (pemeliharaan) adalah memelihara anak ayam dengan maksud mempergunakannya sebagai ayam petelur di masa datang.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bila dilakukan ＿＿＿ secara artifisial dengan mendahului ganti bulu alami, maka mutu cangkang telur akan membaik, dan masa panen telur dapat diperpanjang.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "alas kandang"
+       },
+       {
+        "id": "memamah biak"
+       },
+       {
+        "id": "berhenti makan"
+       },
+       {
+        "id": "ganti bulu"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Petelur»: “Bila dilakukan ganti bulu secara artifisial dengan mendahului ganti bulu alami, maka mutu cangkang telur akan membaik, dan masa panen telur dapat diperpanjang.”"
+      }
+     }
+    ]
+   },
+   {
+    "id": "cz-bab2-3",
+    "rev": true,
+    "title": {
+     "id": "Latihan Melengkapi Teks Bab 2 · 3 (dari isi buku)",
+     "jp": "第2章 {穴埋|あなう}め練習 3"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Pada pemeliharaan kandang, dilakukan ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "makan umpan"
+       },
+       {
+        "id": "makan pilih"
+       },
+       {
+        "id": "body condition"
+       },
+       {
+        "id": "inseminasi buatan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Petelur»: “Pada pemeliharaan kandang, dilakukan inseminasi buatan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Lakukan penimbangan bobot setiap pekan, dan tentukan volume ＿＿＿ pekan berikutnya.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "pelihara"
+       },
+       {
+        "id": "pengumpanan"
+       },
+       {
+        "id": "kanibalisme"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Petelur»: “Lakukan penimbangan bobot setiap pekan, dan tentukan volume pengumpanan pekan berikutnya.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Tidak makan biaya, namun saat musim dingin ＿＿＿ ada kalanya sulit merata.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "suplai suhu"
+       },
+       {
+        "id": "body condition"
+       },
+       {
+        "id": "makan umpan"
+       },
+       {
+        "id": "inseminasi buatan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Petelur»: “Tidak makan biaya, namun saat musim dingin suplai suhu ada kalanya sulit merata.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sekitar seminggu pertama baik juga untuk memberikan penerangan agar anak ayam mengerti tempat ＿＿＿ dan air minum.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "kolostrum"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "umpan"
+       }
+      ],
+      "a": 3,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Petelur»: “Sekitar seminggu pertama baik juga untuk memberikan penerangan agar anak ayam mengerti tempat umpan dan air minum.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Terdapat perbedaan pada ＿＿＿ tergantung varietas dan mereknya, namun karena periode pemeliharaannya panjang, maka bobot jantan dan betina akan sangat berbeda.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "pelihara"
+       },
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "kanibalisme"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Pedaging»: “Terdapat perbedaan pada jidori tergantung varietas dan mereknya, namun karena periode pemeliharaannya panjang, maka bobot jantan dan betina akan sangat berbeda.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Fungsi penyesuaian suhu tubuh telah terbentuk, ＿＿＿ pun akan selesai.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "makan pilih"
+       },
+       {
+        "id": "berhenti makan"
+       },
+       {
+        "id": "ganti bulu"
+       },
+       {
+        "id": "susu afkir"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Pedaging»: “Fungsi penyesuaian suhu tubuh telah terbentuk, ganti bulu pun akan selesai.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Agar alat peng＿＿＿ juga stabil di atas bahan alas lantai, maka gunakan kotak umpan dangkal bertepi rata (chick plate) atau piring umpan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "umpan"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "jidori"
+       },
+       {
+        "id": "perawatan"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Ayam Pedaging»: “Agar alat pengumpan juga stabil di atas bahan alas lantai, maka gunakan kotak umpan dangkal bertepi rata (chick plate) atau piring umpan.”"
+      }
      }
     ]
    }
@@ -5166,6 +5974,256 @@
        "p": 148
       },
       "mb": true
+     }
+    ]
+   },
+   {
+    "id": "cz-bab3-1",
+    "rev": true,
+    "title": {
+     "id": "Latihan Melengkapi Teks Bab 3 · 1 (dari isi buku)",
+     "jp": "第3章 {穴埋|あなう}め練習 1"
+    },
+    "items": [
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Dilakukan observasi ＿＿＿ (standing estrus dan sebagainya) pada subuh dan malam hari.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "pelihara"
+       },
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "melahirkan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Sapi Perah»: “Dilakukan observasi estrus (standing estrus dan sebagainya) pada subuh dan malam hari.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk itu, kotoran perlu dibersihkan dan dihilangkan,＿＿＿ perlu diganti, dan pakan ternak yang telah membusuk perlu dihilangkan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "alas kandang"
+       },
+       {
+        "id": "pemberian umpan"
+       },
+       {
+        "id": "susu afkir"
+       },
+       {
+        "id": "suplai suhu"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Sapi Perah»: “Untuk itu, kotoran perlu dibersihkan dan dihilangkan,alas kandang perlu diganti, dan pakan ternak yang telah membusuk perlu dihilangkan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Hubungan Gejala pada Vulva Seiring ＿＿＿ dengan Fase Optimal Kawin (Pembuahan)”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "Estrus"
+       },
+       {
+        "id": "umpan"
+       },
+       {
+        "id": "melahirkan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Babi»: “Hubungan Gejala pada Vulva Seiring Estrus dengan Fase Optimal Kawin (Pembuahan)”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “(Kawin Alami dan ＿＿＿ dengan Sperma Cair)”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "potong paruh"
+       },
+       {
+        "id": "alas kandang"
+       },
+       {
+        "id": "Inseminasi Buatan"
+       },
+       {
+        "id": "pemberian umpan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Babi»: “(Kawin Alami dan Inseminasi Buatan dengan Sperma Cair)”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Sebelum memasukkan babi ke dalam kandang untuk ＿＿＿, maka sebelumnya dilakukan pembersihan kandang, disinfektan, dan pengeringan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "estrus"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "umpan"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Babi»: “Sebelum memasukkan babi ke dalam kandang untuk melahirkan, maka sebelumnya dilakukan pembersihan kandang, disinfektan, dan pengeringan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Terutama karena ＿＿＿ sering gagal, maka segera habiskan.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "makan pilih"
+       },
+       {
+        "id": "susu afkir"
+       },
+       {
+        "id": "potong paruh"
+       },
+       {
+        "id": "pemberian umpan"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Babi»: “Terutama karena susu afkir sering gagal, maka segera habiskan.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Anak ayam baru menetas badannya kecil dan suhu badannya rendah, juga kekuatan untuk beradaptasi dengan suhu lingkungannya masih lemah, sehingga harus diberi ＿＿＿.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "susu afkir"
+       },
+       {
+        "id": "potong paruh"
+       },
+       {
+        "id": "suplai suhu"
+       },
+       {
+        "id": "makan pilih"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Peternakan Ayam»: “Anak ayam baru menetas badannya kecil dan suhu badannya rendah, juga kekuatan untuk beradaptasi dengan suhu lingkungannya masih lemah, sehingga harus diberi suplai suhu.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Penempatan Wadah ＿＿＿ dan Wadah Air di Dalam Chick Guard”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "perawatan"
+       },
+       {
+        "id": "pelihara"
+       },
+       {
+        "id": "Umpan"
+       },
+       {
+        "id": "estrus"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Peternakan Ayam»: “Penempatan Wadah Umpan dan Wadah Air di Dalam Chick Guard”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Bila suhu di kandang ＿＿＿ anak ayam tinggi, maka akan ada perbedaan dengan suhu ruangan, sehingga dilakukan ventilasi alami.”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "pelihara"
+       },
+       {
+        "id": "kolostrum"
+       },
+       {
+        "id": "melahirkan"
+       },
+       {
+        "id": "estrus"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Peternakan Ayam»: “Bila suhu di kandang pelihara anak ayam tinggi, maka akan ada perbedaan dengan suhu ruangan, sehingga dilakukan ventilasi alami.”"
+      }
+     },
+     {
+      "q": {
+       "id": "Lengkapi sesuai teks: “Untuk mencegah kerugian yang demikian ini, biasanya dilakukan ＿＿＿ (debeak).”",
+       "jp": "{本文|ほんぶん}に{合|あ}うものを{選|えら}んでください。"
+      },
+      "opts": [
+       {
+        "id": "inseminasi buatan"
+       },
+       {
+        "id": "susu afkir"
+       },
+       {
+        "id": "potong paruh"
+       },
+       {
+        "id": "suplai suhu"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Sesuai teks subbab «Pekerjaan Harian Peternakan Ayam»: “Untuk mencegah kerugian yang demikian ini, biasanya dilakukan potong paruh (debeak).”"
+      }
      }
     ]
    }
