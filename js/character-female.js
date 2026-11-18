@@ -184,7 +184,7 @@ const DRESS = [
 
 /* ---------- CELANA / ROK (slot celana, di dalam grup kaki) ---------- */
 function rok(o) {
-  const { c, d = "#00000055", end = 392, fl = 4, st = "", c2 = "#fff" } = o; const sw = `fill="${c}" stroke="${d}" stroke-width="1.8"`;
+  const { c, d = "#00000055", end = 392, st = "", c2 = "#fff" } = o; const fl = Math.min(o.fl ?? 4, 10); const sw = `fill="${c}" stroke="${d}" stroke-width="1.8"`;
   let s = "";
   if (end < 440) s += `<rect x="170" y="${end - 4}" width="26" height="${456 - end}" rx="10" fill="${SK}"/><rect x="204" y="${end - 4}" width="26" height="${456 - end}" rx="10" fill="${SK}"/>`;
   s += `<path d="M163 336 H237 Q${243 + fl} ${(336 + end) / 2} ${240 + fl} ${end} Q200 ${end + 8} ${160 - fl} ${end} Q${157 - fl} ${(336 + end) / 2} 163 336Z" ${sw}/>`;
@@ -247,8 +247,8 @@ export function femOutfit(svg, id, skirtOn = true) {
   const stock = h % 2 === 0, leg = stock ? "#2f2222" : SK;
   let o = `<rect x="165.5" y="372" width="30" height="92" rx="11" fill="${leg}"/><rect x="204.6" y="372" width="30" height="92" rx="11" fill="${leg}"/>`;
   if (stock) o += `<path d="M166 384 H196 M205 384 H235" stroke="#5a3d3d" stroke-width="3"/>`;
-  o += `<path d="M136 294 L264 294 Q272 336 282 382 Q200 396 118 382 Q128 336 136 294Z" fill="${skirt}" stroke="${edge}" stroke-width="1.8"/>`;
-  for (let i = 0; i < 7; i++) { const t = (i - 3) / 3; o += `<path d="M${200 + t * 50} 300 L${200 + t * 76} 388" stroke="${edge}" stroke-opacity=".6" stroke-width="1.5"/>`; }
+  o += `<path d="M136 294 L264 294 L267 346 Q269 366 271 384 Q200 396 129 384 Q131 366 133 346Z" fill="${skirt}" stroke="${edge}" stroke-width="1.8"/>`;
+  for (let i = 0; i < 7; i++) { const t = (i - 3) / 3; o += `<path d="M${200 + t * 50} 300 L${200 + t * 68} 388" stroke="${edge}" stroke-opacity=".6" stroke-width="1.5"/>`; }
   if (!svg) return o;
   return o + svg;   // rok di BAWAH baju → baju tidak dimasukkan
 }
