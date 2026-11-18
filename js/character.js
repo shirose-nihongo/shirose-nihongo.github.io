@@ -974,6 +974,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   if (fem) {
     const hem = (x) => x ? x.split("L270 345 L130 345").join("L267 346 L133 346") : x;   // baju cewek berhenti di pinggang, tidak longgar sampai pinggul
     base = hem(base); pakaianOverlay = hem(pakaianOverlay);
+    if (pakaianOverlay) base = base.replace(/<path [^>]*fill="#ffffff"[^>]*stroke="#c7cde0"[^>]*\/>/g, "").replace(/<path d="M182 196 Q200 214 218 196"[^>]*\/>/, "");   // buang sisa kaos putih bawaan yang mengintip
     base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, "");
     sepatuOverlay = femWarp(sepatuOverlay); celanaOverlay = femWarp(celanaOverlay);
     base = femWarp(base); pakaianOverlay = femWarp(pakaianOverlay); hairSvg = femWarp(hairSvg); aksesoriSvg = femWarp(aksesoriSvg);
@@ -1020,7 +1021,7 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118n";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118p";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);

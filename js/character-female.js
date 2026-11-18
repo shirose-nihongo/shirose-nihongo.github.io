@@ -12,7 +12,7 @@ const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], 
 const fy = (y) => { for (let i = 1; i < PROF.length; i++) if (y <= PROF[i][0]) { const [y0, f0] = PROF[i - 1], [y1, f1] = PROF[i]; return f0 + (f1 - f0) * (y - y0) / (y1 - y0); } return 1; };
 const wx = (x, y) => {   // lengan (jauh dari sumbu) ikut lebih sedikit supaya tidak menyusut ke badan
   const f = fy(y), dx = Math.abs(x - 200), t = Math.min(1, Math.max(0, (dx - 58) / 30));
-  return 200 + (x - 200) * (f * (1 - t) + (f * .75 + .25) * t);
+  return 200 + (x - 200) * (f * (1 - t) + (f * .3 + .7) * t);
 };
 const r2 = (n) => Math.round(n * 10) / 10;
 const attr = (t, k) => { const m = t.match(new RegExp("\\s" + k + '="([^"]*)"')); return m ? parseFloat(m[1]) : NaN; };
@@ -20,23 +20,34 @@ const dropAttr = (t, ks) => ks.reduce((s, k) => s.replace(new RegExp("\\s" + k +
 
 export function femWarp(svg) {
   if (!svg) return svg;
-  return svg.replace(/<(path|ellipse|circle|rect)\b[^>]*>/g, (tag, name) => {
+  return svg.replace(/<(path|ellipse|circle|rect|line)\b[^>]*>/g, (tag, name) => {
     if (name === "path") {
       const m = tag.match(/\sd="([^"]*)"/); if (!m) return tag;
-      const d = m[1]; if (/[^MLQCZ\d\s.,eE+-]/.test(d)) return tag;          // hanya M L Q C Z absolut
-      const toks = d.match(/[MLQCZ]|-?\d*\.?\d+(?:[eE][+-]?\d+)?/g) || []; let i = 0, out = "", cx = 0, cy = 0, sx = 0, sy = 0;
+      const d = m[1];
+      const toks = d.match(/[A-Za-z]|-?\d*\.?\d+(?:[eE][+-]?\d+)?/g) || []; let i = 0, out = "", cx = 0, cy = 0, sx = 0, sy = 0, lq = null, lc = null;
       const P = (x, y) => r2(wx(x, y)) + " " + r2(y) + " ";
       const line = (x1, y1) => { const n = Math.max(1, Math.ceil(Math.hypot(x1 - cx, y1 - cy) / 6)); for (let k = 1; k <= n; k++) out += "L" + P(cx + (x1 - cx) * k / n, cy + (y1 - cy) * k / n); cx = x1; cy = y1; };
-      const num = () => parseFloat(toks[i++]);
+      const num = () => parseFloat(toks[i++]), more = () => i < toks.length && !/[A-Za-z]/.test(toks[i]);
+      const quad = (x1, y1, x2, y2) => { const x0 = cx, y0 = cy; for (let k = 1; k <= 10; k++) { const t = k / 10, u = 1 - t; out += "L" + P(u * u * x0 + 2 * u * t * x1 + t * t * x2, u * u * y0 + 2 * u * t * y1 + t * t * y2); } cx = x2; cy = y2; lq = [x1, y1]; lc = null; };
+      const cub = (x1, y1, x2, y2, x3, y3) => { const x0 = cx, y0 = cy; for (let k = 1; k <= 12; k++) { const t = k / 12, u = 1 - t; out += "L" + P(u * u * u * x0 + 3 * u * u * t * x1 + 3 * u * t * t * x2 + t * t * t * x3, u * u * u * y0 + 3 * u * u * t * y1 + 3 * u * t * t * y2 + t * t * t * y3); } cx = x3; cy = y3; lc = [x2, y2]; lq = null; };
       while (i < toks.length) {
-        const c = toks[i++];
-        if (c === "M") { cx = sx = num(); cy = sy = num(); out += "M" + P(cx, cy); while (i < toks.length && !/[A-Z]/.test(toks[i])) line(num(), num()); }
-        else if (c === "L") { while (i < toks.length && !/[A-Z]/.test(toks[i])) line(num(), num()); }
-        else if (c === "Q") { while (i < toks.length && !/[A-Z]/.test(toks[i])) { const x1 = num(), y1 = num(), x2 = num(), y2 = num(), x0 = cx, y0 = cy; for (let k = 1; k <= 10; k++) { const t = k / 10, u = 1 - t; out += "L" + P(u * u * x0 + 2 * u * t * x1 + t * t * x2, u * u * y0 + 2 * u * t * y1 + t * t * y2); } cx = x2; cy = y2; } }
-        else if (c === "C") { while (i < toks.length && !/[A-Z]/.test(toks[i])) { const x1 = num(), y1 = num(), x2 = num(), y2 = num(), x3 = num(), y3 = num(), x0 = cx, y0 = cy; for (let k = 1; k <= 12; k++) { const t = k / 12, u = 1 - t; out += "L" + P(u * u * u * x0 + 3 * u * u * t * x1 + 3 * u * t * t * x2 + t * t * t * x3, u * u * u * y0 + 3 * u * u * t * y1 + 3 * u * t * t * y2 + t * t * t * y3); } cx = x3; cy = y3; } }
-        else if (c === "Z") { line(sx, sy); out += "Z"; }
+        const c0 = toks[i++], c = c0.toUpperCase(), rel = c0 !== c, ox = rel ? cx : 0, oy = rel ? cy : 0;
+        if (c === "M") { let first = true; while (more()) { const x = num() + ox, y = num() + oy; if (first) { cx = sx = x; cy = sy = y; out += "M" + P(x, y); first = false; } else line(x, y); } lq = lc = null; }
+        else if (c === "L") { while (more()) { const x = num() + (rel ? cx : 0), y = num() + (rel ? cy : 0); line(x, y); } lq = lc = null; }
+        else if (c === "H") { while (more()) { const x = num() + (rel ? cx : 0); line(x, cy); } lq = lc = null; }
+        else if (c === "V") { while (more()) { const y = num() + (rel ? cy : 0); line(cx, y); } lq = lc = null; }
+        else if (c === "Q") { while (more()) { const bx = cx, by = cy; quad(num() + (rel ? bx : 0), num() + (rel ? by : 0), num() + (rel ? bx : 0), num() + (rel ? by : 0)); } }
+        else if (c === "T") { while (more()) { const bx = cx, by = cy, x1 = lq ? 2 * cx - lq[0] : cx, y1 = lq ? 2 * cy - lq[1] : cy; quad(x1, y1, num() + (rel ? bx : 0), num() + (rel ? by : 0)); } }
+        else if (c === "C") { while (more()) { const bx = cx, by = cy; cub(num() + (rel ? bx : 0), num() + (rel ? by : 0), num() + (rel ? bx : 0), num() + (rel ? by : 0), num() + (rel ? bx : 0), num() + (rel ? by : 0)); } }
+        else if (c === "S") { while (more()) { const bx = cx, by = cy, x1 = lc ? 2 * cx - lc[0] : cx, y1 = lc ? 2 * cy - lc[1] : cy; cub(x1, y1, num() + (rel ? bx : 0), num() + (rel ? by : 0), num() + (rel ? bx : 0), num() + (rel ? by : 0)); } }
+        else if (c === "A") { while (more()) { i += 5; line(num() + (rel ? cx : 0), num() + (rel ? cy : 0)); } lq = lc = null; }   // busur → garis lurus (jarang dipakai)
+        else if (c === "Z") { line(sx, sy); out += "Z"; lq = lc = null; }
       }
       return tag.replace(m[0], ` d="${out.trim()}"`);
+    }
+    if (name === "line") {
+      const x1 = attr(tag, "x1"), y1 = attr(tag, "y1"), x2 = attr(tag, "x2"), y2 = attr(tag, "y2"); if ([x1, y1, x2, y2].some(isNaN)) return tag;
+      return tag.replace(/\sx1="[^"]*"/, ` x1="${r2(wx(x1, y1))}"`).replace(/\sx2="[^"]*"/, ` x2="${r2(wx(x2, y2))}"`);
     }
     if (name === "rect") {
       const x = attr(tag, "x"), y = attr(tag, "y"), w = attr(tag, "width"), h = attr(tag, "height");
@@ -153,7 +164,6 @@ function dress(o) {
   const hw = 70 + fl, k = fl * .45;
   s += `<path d="M133 294 L267 294 Q${267 + k} ${(294 + hem) / 2} ${200 + hw} ${hem} Q200 ${hem + 9} ${200 - hw} ${hem} Q${133 - k} ${(294 + hem) / 2} 133 294Z" ${sw(sk)}/>`;
   if (fold) for (let i = 0; i < 5; i++) { const t = (i - 2) / 2; s += `<path d="M${200 + t * 56} 300 L${200 + t * (hw - 6)} ${hem - 2}" stroke="${d}" stroke-opacity=".35" stroke-width="1.6" fill="none"/>`; }
-  s += `<rect x="134" y="290" width="132" height="10" ${sw(c2)}/>`;
   return s + deco;
 }
 const PITA_D = `<path d="M200 258 l-14 -9 v18z M200 258 l14 -9 v18z" fill="#ef4444"/>`;
