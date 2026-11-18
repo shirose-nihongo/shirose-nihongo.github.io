@@ -192,9 +192,9 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       <div class="cta-row">
         <a class="btn primary" href="./index.html#login">Mulai Belajar →</a>
         <a class="btn ghost" href="./index.html#login">Login</a>
-        <a class="btn ghost" id="apk-dl" href="https://github.com/shirose-nihongo/shirose-nihongo.github.io/releases/latest/download/shirose-nihongo.apk" rel="noopener" download>📱 Download APK</a>
+        <button type="button" class="btn ghost" id="pwa-install">📲 Install Aplikasi</button>
       </div>
-      <p class="apk-note" style="margin:10px 0 0;font-size:12px;opacity:.7">Android: unduh APK, lalu izinkan “instal dari sumber ini” saat diminta. iPhone/PC: buka lewat browser lalu “Tambahkan ke Layar Utama”.</p>
+      <p class="apk-note" id="pwa-help" hidden style="margin:10px 0 0;font-size:13px;opacity:.85"></p>
       <div class="chips"><span class="chip">JLPT N5–N1</span><span class="chip">JFT-Basic</span><span class="chip">ひらがな・カタカナ</span><span class="chip">SSW 特定技能</span><span class="chip">面接</span></div>
     </div>
     <div class="art" aria-hidden="true">
@@ -464,6 +464,22 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     }, {threshold:.12});
     els.forEach(function(e){ io.observe(e); });
   } else els.forEach(function(e){ e.classList.add("in"); });
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById("pwa-install"),help=document.getElementById("pwa-help"),dp=null;
+  if(!btn)return;
+  if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js").catch(function(){});}catch(e){}}
+  if(window.matchMedia&&matchMedia("(display-mode: standalone)").matches||navigator.standalone){btn.hidden=true;return;}
+  window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();dp=e;});
+  window.addEventListener("appinstalled",function(){btn.hidden=true;help.hidden=true;});
+  btn.addEventListener("click",function(){
+    if(dp){dp.prompt();dp.userChoice.finally(function(){dp=null;});return;}
+    var ua=navigator.userAgent,ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+    help.textContent=ios?"iPhone/iPad: buka di Safari, ketuk tombol Bagikan (kotak dengan panah ke atas), lalu pilih “Tambahkan ke Layar Utama”.":"Buka menu browser (⋮), lalu pilih “Instal aplikasi” atau “Tambahkan ke layar utama”. Kalau tombolnya belum muncul, buka halaman ini di Chrome/Edge.";
+    help.hidden=false;
+  });
 })();
 </script>
 </body>
