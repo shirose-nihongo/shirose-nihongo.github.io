@@ -17,7 +17,7 @@ plain = lambda s: BOLD.sub("", RUB.sub(r"\1", s or ""))
 KD = {}
 for f in sorted(glob.glob("data/kanji-n*.json")) + sorted(glob.glob("data/kanji-ir*.json")):
     for it in json.load(open(f)): KD.setdefault(it["k"], it)
-MANUAL = {  # k: (on, kun, arti)
+MANUAL = {"宛":("","あ.てる","alamat tujuan; ditujukan kepada"),  # k: (on, kun, arti)
  "頓": ("トン", "", "mendadak; teratur (頓着: peduli)"), "躾": ("", "しつけ", "disiplin; tata krama"), "挨": ("アイ", "", "mendekat (挨拶: salam)"),
  "拶": ("サツ", "", "mendesak (挨拶: salam)"), "梱": ("コン", "", "membungkus; mengemas (梱包)"), "杢": ("", "もく", "serat kayu (kokuji; 杢目)"),
  "脇": ("キョウ", "わき", "samping; ketiak"), "靭": ("ジン", "", "ulet; lentur (強靭)"), "脆": ("ゼイ", "もろい", "rapuh; getas"),

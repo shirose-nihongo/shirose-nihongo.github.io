@@ -140,3 +140,47 @@ SUBS["bab3"] = [
 ]
 
 BOOK_PAGES = 12
+
+# ---- soal tambahan (audit 2026-11-18) — buatan Shirose dari dokumen resmi 環境省; perlu review ahli
+def _add(bab, sid, qs):
+    for s in SUBS[bab]:
+        if s["id"] == sid: s["qs"] += qs; return
+    raise KeyError(sid)
+_add("bab1", "b1s1", [
+ TF("一般廃棄物は、おもに家庭から出るごみです。", True, "Benar: limbah umum terutama berasal dari rumah tangga.", "おもに家庭のごみです。", "Limbah umum (一般廃棄物) terutama sampah dari rumah tangga."),
+ TF("産業廃棄物は、法律で決められた種類の事業活動のごみです。", True, "Benar: limbah industri = jenis yang ditetapkan hukum dari kegiatan usaha.", "法律で種類が決まっています。", "Limbah industri adalah limbah kegiatan usaha dengan jenis yang ditetapkan hukum."),
+ TF("安定化とは、廃棄物を危険でなくして、落ち着いた状態にすることです。", True, "Benar: 安定化 = menstabilkan agar tidak berubah/berbahaya.", "安定した状態にします。", "Penstabilan berarti membuat limbah dalam keadaan stabil (tidak berubah/berbahaya)."),
+ TF("減容化は、廃棄物の重さを減らすことです。", False, "Salah: 減容化 mengurangi VOLUME; mengurangi berat adalah 減量化.", "減容化は体積を減らすことです。", "Penurunan volume (減容化) berarti mengurangi berat limbah."),
+ MC("Pengurangan volume limbah disebut…", "廃棄物の体積を小さくすることを何といいますか。", ("減容化", "げんようか"), [("減量化", "げんりょうか"), ("安定化", "あんていか")], "減容化 = pengurangan volume (misalnya dengan penghancuran/pemadatan).", "体積を小さくするのは減容化です。"),
+ MC("Menstabilkan dan membuat limbah aman termasuk tujuan…", "廃棄物を安定させ、安全にする処理は、何の目的に入りますか。", ("中間処理", "ちゅうかんしょり"), [("収集運搬", "しゅうしゅううんぱん"), ("販売", "はんばい")], "Pengamanan dan penstabilan adalah tujuan pengolahan antara.", "中間処理の目的です。"),
+])
+_add("bab1", "b1s2", [
+ TF("中間処理の流れは、受入、選別、処分、搬出の順です。", True, "Benar: 受入 → 選別 → 処分 → 搬出.", "その順です。", "Alur pengolahan antara: penerimaan, pemilahan, pengolahan, pengeluaran."),
+ TF("廃棄物を受け入れた後は、選別をしないでそのまま搬出します。", False, "Salah: setelah penerimaan dilakukan pemilahan, lalu pengolahan.", "選別をします。", "Setelah menerima limbah, langsung dikeluarkan tanpa dipilah."),
+ TF("破砕は、廃棄物を細かくくだく作業です。", True, "Benar.", "細かくくだきます。", "Penghancuran (破砕) adalah menghancurkan limbah menjadi kecil."),
+ TF("圧縮は、廃棄物を押して体積を小さくする作業です。", True, "Benar: pemadatan mengurangi volume.", "体積を小さくします。", "Pemadatan (圧縮) memadatkan limbah agar volumenya kecil."),
+ MC("Memilah limbah menurut jenis (besi, plastik, kertas) disebut…", "鉄・プラスチック・紙など、種類ごとに分ける作業はどれですか。", ("選別", "せんべつ"), [("焼却", "しょうきゃく"), ("脱水", "だっすい")], "選別 = pemilahan menurut jenis.", "種類ごとに分けるのは選別です。"),
+ MC("Membakar limbah untuk mengurangi berat dan volume disebut…", "燃やして重さと体積を減らす処理はどれですか。", ("焼却", "しょうきゃく"), [("圧縮", "あっしゅく"), ("破砕", "はさい")], "焼却 = insinerasi (pembakaran).", "燃やすのは焼却です。"),
+ MC("Mengurangi kadar air limbah dilakukan dengan…", "廃棄物の水分を減らす処理はどれですか。", ("脱水・乾燥", "だっすい・かんそう"), [("破砕", "はさい"), ("選別", "せんべつ")], "脱水・乾燥 = dehidrasi/pengeringan.", "水分を減らすのは脱水・乾燥です。"),
+])
+_add("bab2", "b2s1", [
+ TF("育成就労は、特定技能1号に移る前の段階です。", True, "Benar: tahun 1–3 ikusei shuro, lalu pindah ke tokutei ginou 1.", "先に育成就労、後で特定技能1号です。", "Ikusei shuro adalah tahap sebelum pindah ke tokutei ginou 1."),
+ TF("特定技能1号の日本語は、はじめA2.2（N4）が目安です。", True, "Benar: tokutei ginou 1 mulai A2.2 (N4).", "A2.2（N4）です。", "Tingkat bahasa awal tokutei ginou 1 sekitar A2.2 (N4)."),
+ TF("育成就労のはじめの日本語の目安は、N3です。", False, "Salah: awal ikusei shuro A1 (N5).", "A1（N5）です。", "Acuan bahasa awal ikusei shuro adalah N3."),
+ MC("Setelah bekerja di tokutei ginou 1, bahasa Jepang yang dituju…", "特定技能1号で働くあいだに目指す日本語の水準はどれですか。", ("B1（N3）", "B1（N3）"), [("A1（N5）", "A1（N5）"), ("C1（N1）", "C1（N1）")], "Selama bekerja dituju sampai B1 (N3).", "B1（N3）を目指します。"),
+ MC("Ujian yang diambil lebih dulu di jalur ini adalah…", "育成就労のあと、特定技能1号になるために受ける試験はどれですか。", ("特定技能1号評価試験", "とくていぎのういちごうひょうかしけん"), [("大学入試", "だいがくにゅうし"), ("運転免許試験", "うんてんめんきょしけん")], "Untuk beralih ke tokutei ginou 1 diambil ujian evaluasi tokutei ginou 1.", "特定技能1号評価試験を受けます。"),
+])
+_add("bab3", "b3s1", [
+ TF("安全・衛生教育を受けてから、現場で仕事をします。", True, "Benar: ikuti pendidikan K3 dulu.", "教育を受けます。", "Ikuti pendidikan keselamatan dan kesehatan sebelum bekerja di lapangan."),
+ TF("破砕機が動いているときは、手を入れて詰まりを取ってもよいです。", False, "Salah: sangat berbahaya; matikan dan kunci mesin dulu.", "機械を止めてロックします。", "Saat mesin penghancur berjalan, boleh memasukkan tangan untuk mengeluarkan sumbatan."),
+ TF("機械を修理する前に、スイッチを切ってロックします。", True, "Benar: stop & lock agar tidak menyala tiba-tiba.", "ロックします。", "Sebelum memperbaiki mesin, matikan dan kunci."),
+ TF("ヒヤリハットは、上司に報告します。", True, "Benar: laporkan kejadian nyaris celaka.", "報告します。", "Kejadian nyaris celaka (hiyari-hatto) dilaporkan kepada atasan."),
+ MC("Bahaya yang perlu diwaspadai di dalam limbah adalah…", "廃棄物の中に入っていて、けがの原因になることがあるものはどれですか。", ("刃物などとがったもの", "はものなどとがったもの"), [("きれいな水", "きれいなみず"), ("新しい服", "あたらしいふく")], "Benda tajam dalam limbah dapat melukai.", "とがったものに気をつけます。"),
+ MC("Alat pelindung yang dipakai di pengolahan limbah…", "廃棄物処理の仕事で身につける保護具はどれですか。", ("ヘルメット・手袋・マスク・安全靴", "ヘルメット・てぶくろ・マスク・あんぜんぐつ"), [("サンダル", "サンダル"), ("帽子だけ", "ぼうしだけ")], "APD: helm, sarung tangan, masker, sepatu pengaman (+ kacamata).", "保護具をつけます。"),
+])
+_add("bab3", "b3s2", [
+ TF("フォークリフトや玉掛けの講習は、仕事に役立つ資格です。", True, "Benar: termasuk pelatihan yang berguna sejak tahun 1.", "役立ちます。", "Pelatihan forklift dan pemasangan sling berguna bagi pekerjaan."),
+ TF("職長・安全衛生責任者教育は、4年目に受ける講習のひとつです。", True, "Benar (tahun ke-4).", "4年目です。", "Pelatihan mandor dan penanggung jawab K3 adalah salah satu pelatihan tahun ke-4."),
+ TF("廃棄物処理施設技術管理者講習は、1年目に受けます。", False, "Salah: tahun ke-7.", "7年目です。", "Pelatihan manajer teknis fasilitas pengolahan limbah diambil pada tahun ke-1."),
+ MC("Pelatihan dasar pengolahan limbah industri sejak tahun 1…", "1年目から受ける産廃処理の基礎の講習はどれですか。", ("産廃処理実務者研修会 基礎コース", "さんぱいしょりじつむしゃけんしゅうかい きそコース"), [("安全衛生推進者", "あんぜんえいせいすいしんしゃ"), ("廃棄物処理施設技術管理者講習", "はいきぶつしょりしせつぎじゅつかんりしゃこうしゅう")], "Kursus dasar praktisi pengolahan limbah industri (tahun 1).", "基礎コースは1年目からです。"),
+])

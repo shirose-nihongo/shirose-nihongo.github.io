@@ -77,7 +77,7 @@
      },
      {
       "q": {
-       "id": "Benar atau salah: “1 ton sama dengan 1.000 kilogram.”",
+       "id": "Benar atau salah: “1 ton = 1.000 kg.”",
        "jp": "○か×か。「1トンは1,000キログラムです。」"
       },
       "opts": [
@@ -230,6 +230,122 @@
        "id": "Perlu pendaftaran.",
        "jp": "{登録|とうろく}が{必要|ひつよう}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Gudang berpendingin untuk barang yang disimpan pada suhu 10℃ atau lebih rendah.”",
+       "jp": "○か×か。「{冷蔵倉庫|れいぞうそうこ}は、10℃{以下|いか}で{保管|ほかん}する{荷物|にもつ}のための{倉庫|そうこ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: gudang berpendingin untuk barang pada suhu 10℃ atau lebih rendah.",
+       "jp": "10℃{以下|いか}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Gudang umum hanya untuk bahan kimia berbahaya.”",
+       "jp": "○か×か。「{普通倉庫|ふつうそうこ}には、{危険|きけん}な{薬品|やくひん}だけを{入|い}れます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: gudang umum untuk barang umum; bahan berbahaya di gudang khusus.",
+       "jp": "{危険品倉庫|きけんひんそうこ}が{別|べつ}にあります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Usaha pergudangan harus terdaftar pada Menteri Pertanahan, Infrastruktur, Transportasi dan Pariwisata.”",
+       "jp": "○か×か。「{倉庫業|そうこぎょう}を{始|はじ}めるには、{国土|こくど}{交通|こうつう}{大臣|だいじん}の{登録|とうろく}が{必要|ひつよう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: usaha pergudangan harus terdaftar.",
+       "jp": "{登録|とうろく}が{必要|ひつよう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Gudang khusus untuk bahan mudah terbakar disebut…",
+       "jp": "{燃|も}えやすい{薬品|やくひん}などを{保管|ほかん}する{倉庫|そうこ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "冷蔵倉庫",
+        "jp": "れいぞうそうこ"
+       },
+       {
+        "id": "危険品倉庫",
+        "jp": "きけんひんそうこ"
+       },
+       {
+        "id": "普通倉庫",
+        "jp": "ふつうそうこ"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "危険品倉庫 = gudang bahan berbahaya.",
+       "jp": "{危険品倉庫|きけんひんそうこ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Gudang untuk makanan segar dan beku adalah…",
+       "jp": "{生鮮|せいせん}{食品|しょくひん}や{冷凍|れいとう}{食品|しょくひん}を{入|い}れる{倉庫|そうこ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "冷蔵倉庫",
+        "jp": "れいぞうそうこ"
+       },
+       {
+        "id": "普通倉庫",
+        "jp": "ふつうそうこ"
+       },
+       {
+        "id": "危険品倉庫",
+        "jp": "きけんひんそうこ"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "冷蔵倉庫 = gudang berpendingin.",
+       "jp": "{冷蔵倉庫|れいぞうそうこ}です。"
+      }
      }
     ]
    },
@@ -341,6 +457,122 @@
       "exp": {
        "id": "垂直自動搬送機 atau lift.",
        "jp": "{垂直自動搬送機|すいちょくじどうはんそうき}などです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hand lift adalah alat pemindah pallet dengan tenaga tangan.”",
+       "jp": "○か×か。「ハンドリフトは、{人|にん}の{力|ちから}でパレットを{動|うご}かす{道具|どうぐ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: pengangkat pallet manual.",
+       "jp": "{手|て}で{動|うご}かします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Konveyor adalah ban berjalan yang memindahkan barang otomatis.”",
+       "jp": "○か×か。「コンベヤは、{荷物|にもつ}を{自動|じどう}で{運|はこ}ぶベルトなどの{設備|せつび}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{自動|じどう}で{運|はこ}びます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Kago-daisha adalah lift pengangkat barang.”",
+       "jp": "○か×か。「{カゴ台車|かごだいしゃ}は、{荷物|にもつ}を{持|も}ち{上|あ}げるために{使|つか}うエレベーターです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: troli kerangka kawat untuk memindahkan banyak kardus.",
+       "jp": "{台車|だいしゃ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Alas tempat menumpuk barang agar bisa diangkat forklift…",
+       "jp": "フォークリフトで{運|はこ}ぶために{荷物|にもつ}をのせる{台|だい}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "コンベヤ",
+        "jp": "コンベヤ"
+       },
+       {
+        "id": "カゴ台車",
+        "jp": "カゴだいしゃ"
+       },
+       {
+        "id": "パレット",
+        "jp": "パレット"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "パレット = pallet.",
+       "jp": "パレットです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Alat untuk mengangkut barang antar lantai gudang…",
+       "jp": "{階|かい}をこえて{荷物|にもつ}を{運|はこ}ぶ{設備|せつび}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "台はかり",
+        "jp": "だいはかり"
+       },
+       {
+        "id": "ハンドリフト",
+        "jp": "ハンドリフト"
+       },
+       {
+        "id": "エレベーター・垂直自動搬送機",
+        "jp": "エレベーター・すいちょくじどうはんそうき"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Lift/pengangkut vertikal otomatis.",
+       "jp": "エレベーターなどです。"
       }
      }
     ]
@@ -483,6 +715,144 @@
        "id": "Jumlah, nomor, kondisi, kedaluwarsa.",
        "jp": "{数|かず}、{品番|ひんばん}、きず、{賞味期限|しょうみきげん}を{見|み}ます。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Alur masuk gudang: terima, cek, simpan.”",
+       "jp": "○か×か。「{入庫|にゅうこ}は、{荷受|にう}け、{検品|けんぴん}、{格納|かくのう}の{順|じゅん}に{進|すす}みます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "その{順|じゅん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “FIFO adalah mengeluarkan barang yang masuk belakangan lebih dulu.”",
+       "jp": "○か×か。「{先入れ先出|さきいれさきだ}しは、あとに{入|いっ}った{荷物|にもつ}を{先|さき}に{出|だ}す{方法|ほうほう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: FIFO = yang masuk lebih dulu keluar lebih dulu.",
+       "jp": "{先|さき}に{入|いっ}ったものを{先|さき}に{出|だ}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat menumpuk di pallet, barang berat ditaruh di bawah.”",
+       "jp": "○か×か。「パレットに{積|つ}むときは、{重|おも}い{荷物|にもつ}を{下|した}に{置|お}きます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: berat di bawah, ringan di atas.",
+       "jp": "{重|おも}い{物|もの}が{下|した}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat menerima barang, tanggal kedaluwarsa tidak perlu dicek.”",
+       "jp": "○か×か。「{荷受|にう}けのとき、{賞味期限|しょうみきげん}は{確認|かくにん}しなくてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: periksa jumlah, nomor barang, kondisi, dan tanggal kedaluwarsa.",
+       "jp": "{期限|きげん}も{確認|かくにん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Mengambil barang sesuai pesanan disebut…",
+       "jp": "{注文|ちゅうもん}に{合|あ}わせて{荷物|にもつ}をとり{出|だ}す{作業|さぎょう}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "荷受け",
+        "jp": "にうけ"
+       },
+       {
+        "id": "ピッキング",
+        "jp": "ピッキング"
+       },
+       {
+        "id": "格納",
+        "jp": "かくのう"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ピッキング = picking.",
+       "jp": "ピッキングです。"
+      }
+     },
+     {
+      "q": {
+       "id": "FIFO sangat penting untuk barang…",
+       "jp": "{先入れ先出|さきいれさきだ}しがとくに{大切|たいせつ}な{荷物|にもつ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "古い机",
+        "jp": "ふるいつくえ"
+       },
+       {
+        "id": "賞味期限のある食品",
+        "jp": "しょうみきげんのあるしょくひん"
+       },
+       {
+        "id": "空のパレット",
+        "jp": "からのパレット"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Makanan dengan tanggal kedaluwarsa.",
+       "jp": "{期限|きげん}のある{食品|しょくひん}です。"
+      }
      }
     ]
    },
@@ -496,7 +866,7 @@
     "items": [
      {
       "q": {
-       "id": "Benar atau salah: “1 ton sama dengan 1.000 kilogram.”",
+       "id": "Benar atau salah: “1 ton = 1.000 kg.”",
        "jp": "○か×か。「1トンは1,000キログラムです。」"
       },
       "opts": [
@@ -624,6 +994,144 @@
        "id": "1 t = 1.000 kg.",
        "jp": "1トンは1,000kgです。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “1 ton = 1.000 kg.”",
+       "jp": "○か×か。「1トンは1,000キログラムです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "1t=1,000kgです。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika 1 dus = 12 buah, 5 dus = 50 buah.”",
+       "jp": "○か×か。「1ケースが12{個|こ}なら、5ケースは50{個|こ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: 12 × 5 = 60.",
+       "jp": "60{個|こ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Simbol 天地無用 berarti barang tidak boleh dibalik.”",
+       "jp": "○か×か。「「{天地無用|てんちむよう}」は、{荷物|にもつ}をさかさまにしてはいけないという{意味|いみ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: jangan dibalik.",
+       "jp": "さかさまにしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Barang dengan tanda 水ぬれ防止 dijaga agar tidak basah.”",
+       "jp": "○か×か。「「{水ぬれ防止|みずぬれぼうし}」のマークがある{荷物|にもつ}は、ぬらさないようにします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ぬらしません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tanda yang berarti mudah pecah…",
+       "jp": "われやすい{荷物|にもつ}に{付|つ}けるマークの{言葉|ことば}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "手かぎ無用",
+        "jp": "てかぎむよう"
+       },
+       {
+        "id": "ワレモノ注意",
+        "jp": "ワレモノちゅうい"
+       },
+       {
+        "id": "水ぬれ防止",
+        "jp": "みずぬれぼうし"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ワレモノ注意 = mudah pecah.",
+       "jp": "ワレモノ{注意|ちゅうい}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "1 m³ sama dengan berapa liter?",
+       "jp": "1{立方|りっぽう}メートルは{何|なに}リットルですか。"
+      },
+      "opts": [
+       {
+        "id": "100リットル",
+        "jp": "100リットル"
+       },
+       {
+        "id": "10リットル",
+        "jp": "10リットル"
+       },
+       {
+        "id": "1,000リットル",
+        "jp": "1,000リットル"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "1 m³ = 1.000 L.",
+       "jp": "1,000Lです。"
+      }
      }
     ]
    },
@@ -736,1613 +1244,96 @@
        "id": "Kakunou.",
        "jp": "{格納|かくのう}です。"
       }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab1-1",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 1 · 1 (dari daftar kosakata)",
-     "jp": "第1章 {語彙|ごい}練習 1"
-    },
-    "items": [
+     },
      {
       "q": {
-       "id": "Bagaimana cara membaca 「普通倉庫」?",
-       "jp": "「普通倉庫」の{読|よ}み{方|かた}は？"
+       "id": "Benar atau salah: “Barang berat ditaruh di rak bagian bawah.”",
+       "jp": "○か×か。「{重|おも}い{荷物|にもつ}は{棚|たな}の{下|した}の{段|だん}に{置|お}きます。」"
       },
       "opts": [
        {
-        "id": "おんどかんり",
-        "jp": "おんどかんり"
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "ふつうそうこ",
-        "jp": "ふつうそうこ"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{重|おも}い{物|もの}は{下|した}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh menaruh barang di depan pintu darurat dan alat pemadam.”",
+       "jp": "○か×か。「{非常口|ひじょうぐち}や{消火器|しょうかき}の{前|まえ}に{荷物|にもつ}を{置|お}いてもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "そうこぎょう",
-        "jp": "そうこぎょう"
-       },
-       {
-        "id": "じょうおん",
-        "jp": "じょうおん"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
        }
       ],
       "a": 1,
       "exp": {
-       "id": "「普通倉庫」dibaca ふつうそうこ (gudang umum (suhu ruang))."
-      }
+       "id": "Salah: jangan menghalangi jalur kerja, pintu darurat, dan pemadam.",
+       "jp": "{置|お}いてはいけません。"
+      },
+      "mb": true
      },
      {
       "q": {
-       "id": "Bagaimana cara membaca 「平積み」?",
-       "jp": "「平積み」の{読|よ}み{方|かた}は？"
+       "id": "Benar atau salah: “Barang berbahaya tidak boleh dicampur dengan barang lain.”",
+       "jp": "○か×か。「{危険|きけん}{物|もの}は、ほかの{荷物|にもつ}といっしょにしてはいけません。」"
       },
       "opts": [
        {
-        "id": "かくのう",
-        "jp": "かくのう"
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "にゅうこ",
-        "jp": "にゅうこ"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: jangan dicampur.",
+       "jp": "{分|わ}けて{保管|ほかん}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Rak khusus yang dimuat forklift…",
+       "jp": "フォークリフトで{荷物|にもつ}を{出し入|だしい}れする、パレット{用|よう}の{棚|たな}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "カゴ台車",
+        "jp": "カゴだいしゃ"
        },
        {
-        "id": "しゅっこ",
-        "jp": "しゅっこ"
+        "id": "パレットラック",
+        "jp": "パレットラック"
        },
        {
-        "id": "ひらづみ",
+        "id": "平積み",
         "jp": "ひらづみ"
        }
       ],
-      "a": 3,
-      "exp": {
-       "id": "「平積み」dibaca ひらづみ (ditumpuk langsung (lantai/pallet))."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「水ぬれ防止」?",
-       "jp": "「水ぬれ防止」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "menyimpan ke tempatnya"
-       },
-       {
-        "id": "barang keluar gudang"
-       },
-       {
-        "id": "jaga agar tidak basah"
-       },
-       {
-        "id": "gudang bahan berbahaya"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「水ぬれ防止」（みずぬれぼうし）= jaga agar tidak basah."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「出庫」?",
-       "jp": "「出庫」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "しゅっこ",
-        "jp": "しゅっこ"
-       },
-       {
-        "id": "ひらづみ",
-        "jp": "ひらづみ"
-       },
-       {
-        "id": "けんぴん",
-        "jp": "けんぴん"
-       },
-       {
-        "id": "ぱれっと",
-        "jp": "ぱれっと"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「出庫」dibaca しゅっこ (barang keluar gudang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「先入れ先出し」?",
-       "jp": "「先入れ先出し」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "れいぞうそうこ",
-        "jp": "れいぞうそうこ"
-       },
-       {
-        "id": "おんどかんり",
-        "jp": "おんどかんり"
-       },
-       {
-        "id": "さきいれさきだし",
-        "jp": "さきいれさきだし"
-       },
-       {
-        "id": "そうこぎょう",
-        "jp": "そうこぎょう"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「先入れ先出し」dibaca さきいれさきだし (FIFO (masuk dulu keluar dulu))."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「手かぎ無用」?",
-       "jp": "「手かぎ無用」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "gudang umum (suhu ruang)"
-       },
-       {
-        "id": "jangan pakai pengait tangan"
-       },
-       {
-        "id": "pengangkut vertikal otomatis"
-       },
-       {
-        "id": "pengangkat pallet manual"
-       }
-      ],
       "a": 1,
       "exp": {
-       "id": "「手かぎ無用」（てかぎむよう）= jangan pakai pengait tangan."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「割れ物」?",
-       "jp": "「割れ物」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "usaha pergudangan"
-       },
-       {
-        "id": "barang pecah belah"
-       },
-       {
-        "id": "barang masuk gudang"
-       },
-       {
-        "id": "gudang pendingin"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「割れ物」（われもの）= barang pecah belah."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「格納」?",
-       "jp": "「格納」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "れいとう",
-        "jp": "れいとう"
-       },
-       {
-        "id": "かくのう",
-        "jp": "かくのう"
-       },
-       {
-        "id": "しゅっこ",
-        "jp": "しゅっこ"
-       },
-       {
-        "id": "ぱれっと",
-        "jp": "ぱれっと"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「格納」dibaca かくのう (menyimpan ke tempatnya)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「単位」?",
-       "jp": "「単位」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "gudang"
-       },
-       {
-        "id": "pallet"
-       },
-       {
-        "id": "beku"
-       },
-       {
-        "id": "satuan"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「単位」（たんい）= satuan."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「保管」?",
-       "jp": "「保管」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "suhu ruang"
-       },
-       {
-        "id": "cek barang"
-       },
-       {
-        "id": "satuan lepas"
-       },
-       {
-        "id": "penyimpanan"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「保管」（ほかん）= penyimpanan."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab1-2",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 1 · 2 (dari daftar kosakata)",
-     "jp": "第1章 {語彙|ごい}練習 2"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Apa arti 「温度管理」?",
-       "jp": "「温度管理」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "tumpukan roboh"
-       },
-       {
-        "id": "pengelolaan suhu"
-       },
-       {
-        "id": "barang masuk gudang"
-       },
-       {
-        "id": "usaha pergudangan"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「温度管理」（おんどかんり）= pengelolaan suhu."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「在庫」?",
-       "jp": "「在庫」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "stok"
-       },
-       {
-        "id": "gudang"
-       },
-       {
-        "id": "beku"
-       },
-       {
-        "id": "pallet"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「在庫」（ざいこ）= stok."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「平積み」?",
-       "jp": "「平積み」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "mengambil barang sesuai pesanan"
-       },
-       {
-        "id": "FIFO (masuk dulu keluar dulu)"
-       },
-       {
-        "id": "pengangkut vertikal otomatis"
-       },
-       {
-        "id": "ditumpuk langsung (lantai/pallet)"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「平積み」（ひらづみ）= ditumpuk langsung (lantai/pallet)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「水ぬれ防止」?",
-       "jp": "「水ぬれ防止」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ふぉーくりふと",
-        "jp": "ふぉーくりふと"
-       },
-       {
-        "id": "れいぞうそうこ",
-        "jp": "れいぞうそうこ"
-       },
-       {
-        "id": "みずぬれぼうし",
-        "jp": "みずぬれぼうし"
-       },
-       {
-        "id": "はんどりふと",
-        "jp": "はんどりふと"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「水ぬれ防止」dibaca みずぬれぼうし (jaga agar tidak basah)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「フォークリフト」?",
-       "jp": "「フォークリフト」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "konversi"
-       },
-       {
-        "id": "cek barang"
-       },
-       {
-        "id": "forklift"
-       },
-       {
-        "id": "gudang"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「フォークリフト」（ふぉーくりふと）= forklift."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「コンベヤ」?",
-       "jp": "「コンベヤ」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "gudang umum (suhu ruang)"
-       },
-       {
-        "id": "dus/karton (isi banyak)"
-       },
-       {
-        "id": "gudang bahan berbahaya"
-       },
-       {
-        "id": "ban berjalan (konveyor)"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「コンベヤ」（こんべや）= ban berjalan (konveyor)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「通路」?",
-       "jp": "「通路」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "penyimpanan"
-       },
-       {
-        "id": "lorong/jalur"
-       },
-       {
-        "id": "tumpukan roboh"
-       },
-       {
-        "id": "satuan lepas"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「通路」（つうろ）= lorong/jalur."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「検品」?",
-       "jp": "「検品」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "cek barang"
-       },
-       {
-        "id": "suhu ruang"
-       },
-       {
-        "id": "satuan lepas"
-       },
-       {
-        "id": "penyimpanan"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「検品」（けんぴん）= cek barang."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「積付」?",
-       "jp": "「積付」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "penumpukan di pallet"
-       },
-       {
-        "id": "menyimpan ke tempatnya"
-       },
-       {
-        "id": "jaga agar tidak basah"
-       },
-       {
-        "id": "barang masuk gudang"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「積付」（つみつけ）= penumpukan di pallet."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「カゴ台車」?",
-       "jp": "「カゴ台車」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "てかぎむよう",
-        "jp": "てかぎむよう"
-       },
-       {
-        "id": "かごだいしゃ",
-        "jp": "かごだいしゃ"
-       },
-       {
-        "id": "はんどりふと",
-        "jp": "はんどりふと"
-       },
-       {
-        "id": "けんぴん",
-        "jp": "けんぴん"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「カゴ台車」dibaca かごだいしゃ (troli kerangka kawat)."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab1-3",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 1 · 3 (dari daftar kosakata)",
-     "jp": "第1章 {語彙|ごい}練習 3"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「換算」?",
-       "jp": "「換算」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ひらづみ",
-        "jp": "ひらづみ"
-       },
-       {
-        "id": "かんさん",
-        "jp": "かんさん"
-       },
-       {
-        "id": "ぱれっと",
-        "jp": "ぱれっと"
-       },
-       {
-        "id": "じょうおん",
-        "jp": "じょうおん"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「換算」dibaca かんさん (konversi)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「常温」?",
-       "jp": "「常温」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "こんべや",
-        "jp": "こんべや"
-       },
-       {
-        "id": "つみつけ",
-        "jp": "つみつけ"
-       },
-       {
-        "id": "ぴっきんぐ",
-        "jp": "ぴっきんぐ"
-       },
-       {
-        "id": "じょうおん",
-        "jp": "じょうおん"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「常温」dibaca じょうおん (suhu ruang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「通路」?",
-       "jp": "「通路」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "にゅうこ",
-        "jp": "にゅうこ"
-       },
-       {
-        "id": "ばら",
-        "jp": "ばら"
-       },
-       {
-        "id": "つうろ",
-        "jp": "つうろ"
-       },
-       {
-        "id": "われもの",
-        "jp": "われもの"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「通路」dibaca つうろ (lorong/jalur)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「垂直自動搬送機」?",
-       "jp": "「垂直自動搬送機」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "jangan pakai pengait tangan"
-       },
-       {
-        "id": "FIFO (masuk dulu keluar dulu)"
-       },
-       {
-        "id": "mengambil barang sesuai pesanan"
-       },
-       {
-        "id": "pengangkut vertikal otomatis"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「垂直自動搬送機」（すいちょくじどうはんそうき）= pengangkut vertikal otomatis."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「出庫」?",
-       "jp": "「出庫」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "troli kerangka kawat"
-       },
-       {
-        "id": "penumpukan di pallet"
-       },
-       {
-        "id": "menyimpan ke tempatnya"
-       },
-       {
-        "id": "barang keluar gudang"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「出庫」（しゅっこ）= barang keluar gudang."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ケース」?",
-       "jp": "「ケース」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "gudang bahan berbahaya"
-       },
-       {
-        "id": "gudang umum (suhu ruang)"
-       },
-       {
-        "id": "ban berjalan (konveyor)"
-       },
-       {
-        "id": "dus/karton (isi banyak)"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「ケース」（けーす）= dus/karton (isi banyak)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「危険品倉庫」?",
-       "jp": "「危険品倉庫」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "gudang bahan berbahaya"
-       },
-       {
-        "id": "barang keluar gudang"
-       },
-       {
-        "id": "menyimpan ke tempatnya"
-       },
-       {
-        "id": "dus/karton (isi banyak)"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「危険品倉庫」（きけんひんそうこ）= gudang bahan berbahaya."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「冷凍」?",
-       "jp": "「冷凍」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "けんぴん",
-        "jp": "けんぴん"
-       },
-       {
-        "id": "かくのう",
-        "jp": "かくのう"
-       },
-       {
-        "id": "れいとう",
-        "jp": "れいとう"
-       },
-       {
-        "id": "にゅうこ",
-        "jp": "にゅうこ"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「冷凍」dibaca れいとう (beku)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「倉庫業」?",
-       "jp": "「倉庫業」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "usaha pergudangan"
-       },
-       {
-        "id": "pengelolaan suhu"
-       },
-       {
-        "id": "barang pecah belah"
-       },
-       {
-        "id": "gudang pendingin"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「倉庫業」（そうこぎょう）= usaha pergudangan."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「荷くずれ」?",
-       "jp": "「荷くずれ」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "lorong/jalur"
-       },
-       {
-        "id": "tumpukan roboh"
-       },
-       {
-        "id": "pengelolaan suhu"
-       },
-       {
-        "id": "cek barang"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「荷くずれ」（にくずれ）= tumpukan roboh."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab1-4",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 1 · 4 (dari daftar kosakata)",
-     "jp": "第1章 {語彙|ごい}練習 4"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「荷くずれ」?",
-       "jp": "「荷くずれ」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ひらづみ",
-        "jp": "ひらづみ"
-       },
-       {
-        "id": "けんぴん",
-        "jp": "けんぴん"
-       },
-       {
-        "id": "にくずれ",
-        "jp": "にくずれ"
-       },
-       {
-        "id": "にゅうこ",
-        "jp": "にゅうこ"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「荷くずれ」dibaca にくずれ (tumpukan roboh)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ハンドリフト」?",
-       "jp": "「ハンドリフト」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "dus/karton (isi banyak)"
-       },
-       {
-        "id": "jangan pakai pengait tangan"
-       },
-       {
-        "id": "gudang umum (suhu ruang)"
-       },
-       {
-        "id": "pengangkat pallet manual"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「ハンドリフト」（はんどりふと）= pengangkat pallet manual."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「積付」?",
-       "jp": "「積付」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "かくのう",
-        "jp": "かくのう"
-       },
-       {
-        "id": "こんべや",
-        "jp": "こんべや"
-       },
-       {
-        "id": "かんさん",
-        "jp": "かんさん"
-       },
-       {
-        "id": "つみつけ",
-        "jp": "つみつけ"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「積付」dibaca つみつけ (penumpukan di pallet)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「天地無用」?",
-       "jp": "「天地無用」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "おんどかんり",
-        "jp": "おんどかんり"
-       },
-       {
-        "id": "かごだいしゃ",
-        "jp": "かごだいしゃ"
-       },
-       {
-        "id": "てんちむよう",
-        "jp": "てんちむよう"
-       },
-       {
-        "id": "てかぎむよう",
-        "jp": "てかぎむよう"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「天地無用」dibaca てんちむよう (jangan dibalik (this side up))."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「倉庫」?",
-       "jp": "「倉庫」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "そうこ",
-        "jp": "そうこ"
-       },
-       {
-        "id": "にくずれ",
-        "jp": "にくずれ"
-       },
-       {
-        "id": "かんさん",
-        "jp": "かんさん"
-       },
-       {
-        "id": "つみつけ",
-        "jp": "つみつけ"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「倉庫」dibaca そうこ (gudang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「バラ」?",
-       "jp": "「バラ」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "penyimpanan"
-       },
-       {
-        "id": "lorong/jalur"
-       },
-       {
-        "id": "tumpukan roboh"
-       },
-       {
-        "id": "satuan lepas"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「バラ」（ばら）= satuan lepas."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「パレット」?",
-       "jp": "「パレット」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pallet"
-       },
-       {
-        "id": "forklift"
-       },
-       {
-        "id": "gudang"
-       },
-       {
-        "id": "satuan"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「パレット」（ぱれっと）= pallet."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「在庫」?",
-       "jp": "「在庫」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ほかん",
-        "jp": "ほかん"
-       },
-       {
-        "id": "つうろ",
-        "jp": "つうろ"
-       },
-       {
-        "id": "ざいこ",
-        "jp": "ざいこ"
-       },
-       {
-        "id": "たんい",
-        "jp": "たんい"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「在庫」dibaca ざいこ (stok)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「入庫」?",
-       "jp": "「入庫」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "けんぴん",
-        "jp": "けんぴん"
-       },
-       {
-        "id": "にゅうこ",
-        "jp": "にゅうこ"
-       },
-       {
-        "id": "つみつけ",
-        "jp": "つみつけ"
-       },
-       {
-        "id": "ぱれっと",
-        "jp": "ぱれっと"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「入庫」dibaca にゅうこ (barang masuk gudang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「換算」?",
-       "jp": "「換算」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "forklift"
-       },
-       {
-        "id": "gudang"
-       },
-       {
-        "id": "cek barang"
-       },
-       {
-        "id": "konversi"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「換算」（かんさん）= konversi."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab1-5",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 1 · 5 (dari daftar kosakata)",
-     "jp": "第1章 {語彙|ごい}練習 5"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「検品」?",
-       "jp": "「検品」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ひらづみ",
-        "jp": "ひらづみ"
-       },
-       {
-        "id": "つみつけ",
-        "jp": "つみつけ"
-       },
-       {
-        "id": "けんぴん",
-        "jp": "けんぴん"
-       },
-       {
-        "id": "れいとう",
-        "jp": "れいとう"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「検品」dibaca けんぴん (cek barang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「保管」?",
-       "jp": "「保管」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "たんい",
-        "jp": "たんい"
-       },
-       {
-        "id": "ざいこ",
-        "jp": "ざいこ"
-       },
-       {
-        "id": "ひらづみ",
-        "jp": "ひらづみ"
-       },
-       {
-        "id": "ほかん",
-        "jp": "ほかん"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「保管」dibaca ほかん (penyimpanan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「冷蔵倉庫」?",
-       "jp": "「冷蔵倉庫」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "tumpukan roboh"
-       },
-       {
-        "id": "usaha pergudangan"
-       },
-       {
-        "id": "gudang pendingin"
-       },
-       {
-        "id": "pengelolaan suhu"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「冷蔵倉庫」（れいぞうそうこ）= gudang pendingin."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「倉庫業」?",
-       "jp": "「倉庫業」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ぴっきんぐ",
-        "jp": "ぴっきんぐ"
-       },
-       {
-        "id": "かごだいしゃ",
-        "jp": "かごだいしゃ"
-       },
-       {
-        "id": "ふつうそうこ",
-        "jp": "ふつうそうこ"
-       },
-       {
-        "id": "そうこぎょう",
-        "jp": "そうこぎょう"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「倉庫業」dibaca そうこぎょう (usaha pergudangan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「格納」?",
-       "jp": "「格納」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "penumpukan di pallet"
-       },
-       {
-        "id": "pengangkat pallet manual"
-       },
-       {
-        "id": "gudang bahan berbahaya"
-       },
-       {
-        "id": "menyimpan ke tempatnya"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「格納」（かくのう）= menyimpan ke tempatnya."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「先入れ先出し」?",
-       "jp": "「先入れ先出し」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pengangkut vertikal otomatis"
-       },
-       {
-        "id": "mengambil barang sesuai pesanan"
-       },
-       {
-        "id": "FIFO (masuk dulu keluar dulu)"
-       },
-       {
-        "id": "jangan dibalik (this side up)"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「先入れ先出し」（さきいれさきだし）= FIFO (masuk dulu keluar dulu)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「冷凍」?",
-       "jp": "「冷凍」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "stok"
-       },
-       {
-        "id": "beku"
-       },
-       {
-        "id": "gudang"
-       },
-       {
-        "id": "forklift"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「冷凍」（れいとう）= beku."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「冷蔵倉庫」?",
-       "jp": "「冷蔵倉庫」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ふぉーくりふと",
-        "jp": "ふぉーくりふと"
-       },
-       {
-        "id": "れいぞうそうこ",
-        "jp": "れいぞうそうこ"
-       },
-       {
-        "id": "みずぬれぼうし",
-        "jp": "みずぬれぼうし"
-       },
-       {
-        "id": "かごだいしゃ",
-        "jp": "かごだいしゃ"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「冷蔵倉庫」dibaca れいぞうそうこ (gudang pendingin)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「割れ物」?",
-       "jp": "「割れ物」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "そうこ",
-        "jp": "そうこ"
-       },
-       {
-        "id": "われもの",
-        "jp": "われもの"
-       },
-       {
-        "id": "こんべや",
-        "jp": "こんべや"
-       },
-       {
-        "id": "ぴっきんぐ",
-        "jp": "ぴっきんぐ"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「割れ物」dibaca われもの (barang pecah belah)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「温度管理」?",
-       "jp": "「温度管理」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ふつうそうこ",
-        "jp": "ふつうそうこ"
-       },
-       {
-        "id": "ふぉーくりふと",
-        "jp": "ふぉーくりふと"
-       },
-       {
-        "id": "そうこぎょう",
-        "jp": "そうこぎょう"
-       },
-       {
-        "id": "おんどかんり",
-        "jp": "おんどかんり"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「温度管理」dibaca おんどかんり (pengelolaan suhu)."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab1-6",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 1 · 6 (dari daftar kosakata)",
-     "jp": "第1章 {語彙|ごい}練習 6"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Apa arti 「倉庫」?",
-       "jp": "「倉庫」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pallet"
-       },
-       {
-        "id": "gudang"
-       },
-       {
-        "id": "konversi"
-       },
-       {
-        "id": "satuan"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「倉庫」（そうこ）= gudang."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「単位」?",
-       "jp": "「単位」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "にくずれ",
-        "jp": "にくずれ"
-       },
-       {
-        "id": "けーす",
-        "jp": "けーす"
-       },
-       {
-        "id": "たんい",
-        "jp": "たんい"
-       },
-       {
-        "id": "ぱれっと",
-        "jp": "ぱれっと"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「単位」dibaca たんい (satuan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「垂直自動搬送機」?",
-       "jp": "「垂直自動搬送機」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "そうこぎょう",
-        "jp": "そうこぎょう"
-       },
-       {
-        "id": "ふぉーくりふと",
-        "jp": "ふぉーくりふと"
-       },
-       {
-        "id": "みずぬれぼうし",
-        "jp": "みずぬれぼうし"
-       },
-       {
-        "id": "すいちょくじどうはんそうき",
-        "jp": "すいちょくじどうはんそうき"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「垂直自動搬送機」dibaca すいちょくじどうはんそうき (pengangkut vertikal otomatis)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「危険品倉庫」?",
-       "jp": "「危険品倉庫」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ふぉーくりふと",
-        "jp": "ふぉーくりふと"
-       },
-       {
-        "id": "さきいれさきだし",
-        "jp": "さきいれさきだし"
-       },
-       {
-        "id": "きけんひんそうこ",
-        "jp": "きけんひんそうこ"
-       },
-       {
-        "id": "れいぞうそうこ",
-        "jp": "れいぞうそうこ"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「危険品倉庫」dibaca きけんひんそうこ (gudang bahan berbahaya)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「カゴ台車」?",
-       "jp": "「カゴ台車」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "troli kerangka kawat"
-       },
-       {
-        "id": "barang keluar gudang"
-       },
-       {
-        "id": "gudang bahan berbahaya"
-       },
-       {
-        "id": "penumpukan di pallet"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「カゴ台車」（かごだいしゃ）= troli kerangka kawat."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「普通倉庫」?",
-       "jp": "「普通倉庫」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pengangkat pallet manual"
-       },
-       {
-        "id": "menyimpan ke tempatnya"
-       },
-       {
-        "id": "dus/karton (isi banyak)"
-       },
-       {
-        "id": "gudang umum (suhu ruang)"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「普通倉庫」（ふつうそうこ）= gudang umum (suhu ruang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「手かぎ無用」?",
-       "jp": "「手かぎ無用」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "みずぬれぼうし",
-        "jp": "みずぬれぼうし"
-       },
-       {
-        "id": "てかぎむよう",
-        "jp": "てかぎむよう"
-       },
-       {
-        "id": "かごだいしゃ",
-        "jp": "かごだいしゃ"
-       },
-       {
-        "id": "てんちむよう",
-        "jp": "てんちむよう"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「手かぎ無用」dibaca てかぎむよう (jangan pakai pengait tangan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「天地無用」?",
-       "jp": "「天地無用」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "ditumpuk langsung (lantai/pallet)"
-       },
-       {
-        "id": "jangan dibalik (this side up)"
-       },
-       {
-        "id": "FIFO (masuk dulu keluar dulu)"
-       },
-       {
-        "id": "jangan pakai pengait tangan"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「天地無用」（てんちむよう）= jangan dibalik (this side up)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「入庫」?",
-       "jp": "「入庫」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "barang pecah belah"
-       },
-       {
-        "id": "jaga agar tidak basah"
-       },
-       {
-        "id": "barang keluar gudang"
-       },
-       {
-        "id": "barang masuk gudang"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「入庫」（にゅうこ）= barang masuk gudang."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ピッキング」?",
-       "jp": "「ピッキング」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pengangkut vertikal otomatis"
-       },
-       {
-        "id": "jangan dibalik (this side up)"
-       },
-       {
-        "id": "mengambil barang sesuai pesanan"
-       },
-       {
-        "id": "FIFO (masuk dulu keluar dulu)"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「ピッキング」（ぴっきんぐ）= mengambil barang sesuai pesanan."
+       "id": "パレットラック = rak pallet.",
+       "jp": "パレットラックです。"
       }
      }
     ]
@@ -2570,6 +1561,97 @@
        "id": "Terminal genggam.",
        "jp": "ハンディターミナルです。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Lokasi (ロケーション) seperti alamat tempat penyimpanan barang.”",
+       "jp": "○か×か。「ロケーションは、{荷物|にもつ}をしまう{場所|ばしょ}の{住所|じゅうしょ}のようなものです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: alamat tempat barang di rak.",
+       "jp": "{場所|ばしょ}の{番地|ばんち}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Free location berarti barang selalu di tempat yang sama.”",
+       "jp": "○か×か。「フリーロケーションは、{荷物|にもつ}をいつも{同|おな}じ{場所|ばしょ}に{置|お}く{方法|ほうほう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: itu lokasi tetap; free location = boleh di tempat kosong, dicatat di sistem.",
+       "jp": "{固定ロケーション|こていろけーしょん}の{説明|せつめい}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanaoroshi adalah menghitung stok nyata dan mencocokkan dengan data.”",
+       "jp": "○か×か。「{棚卸|たなおろし}は、{実際|じっさい}の{在庫|ざいこ}を{数|かぞ}えて、データと{合|あ}わせる{作業|さぎょう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: stock opname.",
+       "jp": "{数|かぞ}えて{合|あ}わせます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Sistem komputer yang mencatat stok dan lokasi barang…",
+       "jp": "{在庫|ざいこ}や{場所|ばしょ}を{記録|きろく}するコンピューターのシステムはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "バーコード",
+        "jp": "バーコード"
+       },
+       {
+        "id": "WMS（倉庫管理システム）",
+        "jp": "ダブリューエムエス（そうこかんりシステム）"
+       },
+       {
+        "id": "パレット",
+        "jp": "パレット"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "WMS = sistem manajemen gudang.",
+       "jp": "WMSです。"
+      }
      }
     ]
    },
@@ -2681,6 +1763,122 @@
       "exp": {
        "id": "Pasang label harga.",
        "jp": "{値札|ねふだ}{付|つ}けなどです。"
+      }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Jika menemukan kelainan saat inspeksi, jangan memutuskan sendiri; lapor ke atasan.”",
+       "jp": "○か×か。「{検品|けんぴん}で{異常|いじょう}を{見|み}つけたら、{自分|じぶん}で{判断|はんだん}しないで{上司|じょうし}に{報告|ほうこく}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Isi celah dengan bahan pelindung agar barang tidak bergeser.”",
+       "jp": "○か×か。「{梱包|こんぽう}のときは、すき{間|ま}に{緩衝材|かんしょうざい}を{入|い}れて{荷物|にもつ}が{動|うご}かないようにします。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{緩衝材|かんしょうざい}で{固定|こてい}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Label ditempel di tempat yang sulit dilihat.”",
+       "jp": "○か×か。「ラベルは、{見|み}えにくい{場所|ばしょ}にはります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: tempel di tempat yang mudah dilihat.",
+       "jp": "{見|み}やすい{場所|ばしょ}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pekerjaan tambahan seperti memasang label harga disebut…",
+       "jp": "{値札|ねふだ}をつけるなど、{荷物|にもつ}に{加|くわ}える{作業|さぎょう}をなんといいますか。"
+      },
+      "opts": [
+       {
+        "id": "流通加工",
+        "jp": "りゅうつうかこう"
+       },
+       {
+        "id": "入庫",
+        "jp": "にゅうこ"
+       },
+       {
+        "id": "棚卸",
+        "jp": "たなおろし"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "流通加工 = pengolahan distribusi.",
+       "jp": "{流通加工|りゅうつうかこう}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "Pembungkus plastik untuk menahan tumpukan…",
+       "jp": "{荷物|にもつ}をまとめて{巻|ま}くプラスチックのフィルムはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "ラベル",
+        "jp": "ラベル"
+       },
+       {
+        "id": "ストレッチフィルム",
+        "jp": "ストレッチフィルム"
+       },
+       {
+        "id": "緩衝材",
+        "jp": "かんしょうざい"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "ストレッチフィルム = stretch film.",
+       "jp": "ストレッチフィルムです。"
       }
      }
     ]
@@ -2801,6 +1999,103 @@
        "id": "120÷(30×2)=2.",
        "jp": "120÷（30×2））2{時間|じかん}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Waktu kerja = jumlah kerja ÷ (kemampuan per jam × jumlah orang).”",
+       "jp": "○か×か。「{作業時間|さぎょうじかん}は、{作業量|さぎょうりょう}を（1{時間|じかん}の{力|ちから}×{人数|にんずう}）で{割|さ}って{求|もと}めます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{割り算|わりざん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "240 dus, 1 orang 60 dus/jam, selesai 2 jam. Berapa orang?",
+       "jp": "240{箱|はこ}を、1{人|にん}1{時間|じかん}60{箱|はこ}で2{時間|じかん}で{終|お}えるには、{何人|なんにん}{必要|ひつよう}ですか。"
+      },
+      "opts": [
+       {
+        "id": "4人",
+        "jp": "4にん"
+       },
+       {
+        "id": "2人",
+        "jp": "2にん"
+       },
+       {
+        "id": "1人",
+        "jp": "1にん"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "240 ÷ (60×2) = 2 orang.",
+       "jp": "240÷(60×2)=2です。"
+      }
+     },
+     {
+      "q": {
+       "id": "300 dus, 3 orang, 50 dus/jam per orang. Berapa jam?",
+       "jp": "300{箱|はこ}を、3{人|にん}で1{人|にん}1{時間|じかん}50{箱|はこ}で{運|はこ}ぶと{何時間|なんじかん}かかりますか。"
+      },
+      "opts": [
+       {
+        "id": "2時間",
+        "jp": "2じかん"
+       },
+       {
+        "id": "1時間",
+        "jp": "1じかん"
+       },
+       {
+        "id": "3時間",
+        "jp": "3じかん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "300 ÷ (50×3) = 2 jam.",
+       "jp": "300÷150=2です。"
+      }
+     },
+     {
+      "q": {
+       "id": "120 dus, 4 orang, 30 dus/jam per orang. Berapa jam?",
+       "jp": "120{箱|はこ}を、4{人|にん}で1{人|にん}1{時間|じかん}30{箱|はこ}で{作業|さぎょう}すると{何時間|なんじかん}ですか。"
+      },
+      "opts": [
+       {
+        "id": "1時間",
+        "jp": "1じかん"
+       },
+       {
+        "id": "4時間",
+        "jp": "4じかん"
+       },
+       {
+        "id": "2時間",
+        "jp": "2じかん"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "120 ÷ (30×4) = 1 jam.",
+       "jp": "120÷120=1です。"
+      }
      }
     ]
    },
@@ -2891,1183 +2186,74 @@
        "jp": "{集|あつ}めた{荷物|にもつ}を{運|はこ}びます。"
       },
       "mb": true
-     }
-    ]
-   },
-   {
-    "id": "vk-bab2-1",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 2 · 1 (dari daftar kosakata)",
-     "jp": "第2章 {語彙|ごい}練習 1"
-    },
-    "items": [
+     },
      {
       "q": {
-       "id": "Bagaimana cara membaca 「所要時間」?",
-       "jp": "「所要時間」の{読|よ}み{方|かた}は？"
+       "id": "Benar atau salah: “Label printer mencetak label alamat dan sebagainya.”",
+       "jp": "○か×か。「ラベルプリンターは、{宛先|あてさき}などのラベルを{印刷|いんさつ}する{機械|きかい}です。」"
       },
       "opts": [
        {
-        "id": "ろけーしょん",
-        "jp": "ろけーしょん"
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "しょようじかん",
-        "jp": "しょようじかん"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "ラベルを{印刷|いんさつ}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Timbangan lantai/meja untuk menimbang barang.”",
+       "jp": "○か×か。「{台|だい}はかりは、{荷物|にもつ}の{重|おも}さをはかる{道具|どうぐ}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "さぎょうりょう",
-        "jp": "さぎょうりょう"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{重|おも}さをはかります。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Troli untuk membawa barang hasil picking…",
+       "jp": "ピッキングした{荷物|にもつ}を{運|はこ}ぶ{台車|だいしゃ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "梱包機",
+        "jp": "こんぽうき"
        },
        {
-        "id": "かんしょうざい",
-        "jp": "かんしょうざい"
+        "id": "ピッキングカート",
+        "jp": "ピッキングカート"
+       },
+       {
+        "id": "ラベルプリンター",
+        "jp": "ラベルプリンター"
        }
       ],
       "a": 1,
       "exp": {
-       "id": "「所要時間」dibaca しょようじかん (waktu yang dibutuhkan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「作業時間」?",
-       "jp": "「作業時間」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "waktu kerja"
-       },
-       {
-        "id": "lokasi tetap"
-       },
-       {
-        "id": "lokasi bebas"
-       },
-       {
-        "id": "pengemasan"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「作業時間」（さぎょうじかん）= waktu kerja."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「報告」?",
-       "jp": "「報告」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "melapor"
-       },
-       {
-        "id": "kardus"
-       },
-       {
-        "id": "selesai"
-       },
-       {
-        "id": "membagi"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「報告」（ほうこく）= melapor."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「梱包」?",
-       "jp": "「梱包」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "たなおろし",
-        "jp": "たなおろし"
-       },
-       {
-        "id": "だいはかり",
-        "jp": "だいはかり"
-       },
-       {
-        "id": "こんぽう",
-        "jp": "こんぽう"
-       },
-       {
-        "id": "にんずう",
-        "jp": "にんずう"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「梱包」dibaca こんぽう (pengemasan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「段ボール」?",
-       "jp": "「段ボール」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "だんぼーる",
-        "jp": "だんぼーる"
-       },
-       {
-        "id": "ろけーしょん",
-        "jp": "ろけーしょん"
-       },
-       {
-        "id": "けっそくき",
-        "jp": "けっそくき"
-       },
-       {
-        "id": "たなおろし",
-        "jp": "たなおろし"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「段ボール」dibaca だんぼーる (kardus)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「作業時間」?",
-       "jp": "「作業時間」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "かんしょうざい",
-        "jp": "かんしょうざい"
-       },
-       {
-        "id": "しょようじかん",
-        "jp": "しょようじかん"
-       },
-       {
-        "id": "さぎょうりょう",
-        "jp": "さぎょうりょう"
-       },
-       {
-        "id": "さぎょうじかん",
-        "jp": "さぎょうじかん"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「作業時間」dibaca さぎょうじかん (waktu kerja)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「流通加工」?",
-       "jp": "「流通加工」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "jumlah pekerjaan"
-       },
-       {
-        "id": "timbangan lantai/meja"
-       },
-       {
-        "id": "pengolahan distribusi"
-       },
-       {
-        "id": "waktu yang dibutuhkan"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「流通加工」（りゅうつうかこう）= pengolahan distribusi."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「印刷」?",
-       "jp": "「印刷」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ほうこく",
-        "jp": "ほうこく"
-       },
-       {
-        "id": "こんぽう",
-        "jp": "こんぽう"
-       },
-       {
-        "id": "いんさつ",
-        "jp": "いんさつ"
-       },
-       {
-        "id": "けっそくき",
-        "jp": "けっそくき"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「印刷」dibaca いんさつ (mencetak)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「作業量」?",
-       "jp": "「作業量」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "mesin pengikat"
-       },
-       {
-        "id": "printer label"
-       },
-       {
-        "id": "troli picking"
-       },
-       {
-        "id": "jumlah pekerjaan"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「作業量」（さぎょうりょう）= jumlah pekerjaan."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「棚卸」?",
-       "jp": "「棚卸」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "stok opname"
-       },
-       {
-        "id": "waktu kerja"
-       },
-       {
-        "id": "lokasi bebas"
-       },
-       {
-        "id": "jumlah orang"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「棚卸」（たなおろし）= stok opname."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab2-2",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 2 · 2 (dari daftar kosakata)",
-     "jp": "第2章 {語彙|ごい}練習 2"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「緩衝材」?",
-       "jp": "「緩衝材」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "かんしょうざい",
-        "jp": "かんしょうざい"
-       },
-       {
-        "id": "ぴっきんぐかーと",
-        "jp": "ぴっきんぐかーと"
-       },
-       {
-        "id": "じゅうりょう",
-        "jp": "じゅうりょう"
-       },
-       {
-        "id": "さぎょうじかん",
-        "jp": "さぎょうじかん"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「緩衝材」dibaca かんしょうざい (bahan pelindung (bubble wrap dsb.))."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ラベル」?",
-       "jp": "「ラベル」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "barcode"
-       },
-       {
-        "id": "label"
-       },
-       {
-        "id": "berat"
-       },
-       {
-        "id": "kardus"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「ラベル」（らべる）= label."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「フリーロケーション」?",
-       "jp": "「フリーロケーション」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "stok opname"
-       },
-       {
-        "id": "lokasi bebas"
-       },
-       {
-        "id": "pengemasan"
-       },
-       {
-        "id": "jumlah orang"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「フリーロケーション」（ふりーろけーしょん）= lokasi bebas."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「台はかり」?",
-       "jp": "「台はかり」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ばーこーど",
-        "jp": "ばーこーど"
-       },
-       {
-        "id": "こんぽう",
-        "jp": "こんぽう"
-       },
-       {
-        "id": "ほうこく",
-        "jp": "ほうこく"
-       },
-       {
-        "id": "だいはかり",
-        "jp": "だいはかり"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「台はかり」dibaca だいはかり (timbangan lantai/meja)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「倉庫管理システム」?",
-       "jp": "「倉庫管理システム」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "sistem manajemen gudang (WMS)"
-       },
-       {
-        "id": "film plastik pembungkus pallet"
-       },
-       {
-        "id": "terminal genggam (pemindai)"
-       },
-       {
-        "id": "lokasi penyimpanan (alamat rak)"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「倉庫管理システム」（そうこかんりしすてむ）= sistem manajemen gudang (WMS)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ピッキングカート」?",
-       "jp": "「ピッキングカート」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "mesin pengikat"
-       },
-       {
-        "id": "lokasi bebas"
-       },
-       {
-        "id": "jumlah orang"
-       },
-       {
-        "id": "troli picking"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「ピッキングカート」（ぴっきんぐかーと）= troli picking."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「台はかり」?",
-       "jp": "「台はかり」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "mesin pengikat"
-       },
-       {
-        "id": "pengolahan distribusi"
-       },
-       {
-        "id": "timbangan lantai/meja"
-       },
-       {
-        "id": "waktu yang dibutuhkan"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「台はかり」（だいはかり）= timbangan lantai/meja."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「流通加工」?",
-       "jp": "「流通加工」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "さぎょうじかん",
-        "jp": "さぎょうじかん"
-       },
-       {
-        "id": "りゅうつうかこう",
-        "jp": "りゅうつうかこう"
-       },
-       {
-        "id": "こていろけーしょん",
-        "jp": "こていろけーしょん"
-       },
-       {
-        "id": "はんでぃたーみなる",
-        "jp": "はんでぃたーみなる"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「流通加工」dibaca りゅうつうかこう (pengolahan distribusi)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「人数」?",
-       "jp": "「人数」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "printer label"
-       },
-       {
-        "id": "lokasi tetap"
-       },
-       {
-        "id": "lokasi bebas"
-       },
-       {
-        "id": "jumlah orang"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「人数」（にんずう）= jumlah orang."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「緩衝材」?",
-       "jp": "「緩衝材」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "film plastik pembungkus pallet"
-       },
-       {
-        "id": "sistem manajemen gudang (WMS)"
-       },
-       {
-        "id": "bahan pelindung (bubble wrap dsb.)"
-       },
-       {
-        "id": "lokasi penyimpanan (alamat rak)"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「緩衝材」（かんしょうざい）= bahan pelindung (bubble wrap dsb.)."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab2-3",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 2 · 3 (dari daftar kosakata)",
-     "jp": "第2章 {語彙|ごい}練習 3"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Apa arti 「バーコード」?",
-       "jp": "「バーコード」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "barcode"
-       },
-       {
-        "id": "melapor"
-       },
-       {
-        "id": "selesai"
-       },
-       {
-        "id": "kardus"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「バーコード」（ばーこーど）= barcode."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「作業量」?",
-       "jp": "「作業量」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "しょようじかん",
-        "jp": "しょようじかん"
-       },
-       {
-        "id": "さぎょうりょう",
-        "jp": "さぎょうりょう"
-       },
-       {
-        "id": "かんしょうざい",
-        "jp": "かんしょうざい"
-       },
-       {
-        "id": "ぴっきんぐかーと",
-        "jp": "ぴっきんぐかーと"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「作業量」dibaca さぎょうりょう (jumlah pekerjaan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「終わる」?",
-       "jp": "「終わる」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "mencetak"
-       },
-       {
-        "id": "melapor"
-       },
-       {
-        "id": "selesai"
-       },
-       {
-        "id": "barcode"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「終わる」（おわる）= selesai."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「梱包」?",
-       "jp": "「梱包」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "jumlah orang"
-       },
-       {
-        "id": "stok opname"
-       },
-       {
-        "id": "pengemasan"
-       },
-       {
-        "id": "lokasi tetap"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「梱包」（こんぽう）= pengemasan."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「終わる」?",
-       "jp": "「終わる」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ほうこく",
-        "jp": "ほうこく"
-       },
-       {
-        "id": "いんさつ",
-        "jp": "いんさつ"
-       },
-       {
-        "id": "だんぼーる",
-        "jp": "だんぼーる"
-       },
-       {
-        "id": "おわる",
-        "jp": "おわる"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「終わる」dibaca おわる (selesai)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「割る」?",
-       "jp": "「割る」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "barcode"
-       },
-       {
-        "id": "selesai"
-       },
-       {
-        "id": "membagi"
-       },
-       {
-        "id": "melapor"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「割る」（わる）= membagi."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「割る」?",
-       "jp": "「割る」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "けっそくき",
-        "jp": "けっそくき"
-       },
-       {
-        "id": "いんさつ",
-        "jp": "いんさつ"
-       },
-       {
-        "id": "わる",
-        "jp": "わる"
-       },
-       {
-        "id": "らべる",
-        "jp": "らべる"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「割る」dibaca わる (membagi)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「重量」?",
-       "jp": "「重量」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "berat"
-       },
-       {
-        "id": "label"
-       },
-       {
-        "id": "kardus"
-       },
-       {
-        "id": "barcode"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「重量」（じゅうりょう）= berat."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ロケーション」?",
-       "jp": "「ロケーション」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "lokasi penyimpanan (alamat rak)"
-       },
-       {
-        "id": "film plastik pembungkus pallet"
-       },
-       {
-        "id": "sistem manajemen gudang (WMS)"
-       },
-       {
-        "id": "bahan pelindung (bubble wrap dsb.)"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「ロケーション」（ろけーしょん）= lokasi penyimpanan (alamat rak)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「報告」?",
-       "jp": "「報告」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "だんぼーる",
-        "jp": "だんぼーる"
-       },
-       {
-        "id": "にんずう",
-        "jp": "にんずう"
-       },
-       {
-        "id": "ほうこく",
-        "jp": "ほうこく"
-       },
-       {
-        "id": "いんさつ",
-        "jp": "いんさつ"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「報告」dibaca ほうこく (melapor)."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab2-4",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 2 · 4 (dari daftar kosakata)",
-     "jp": "第2章 {語彙|ごい}練習 4"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「結束機」?",
-       "jp": "「結束機」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "にんずう",
-        "jp": "にんずう"
-       },
-       {
-        "id": "ろけーしょん",
-        "jp": "ろけーしょん"
-       },
-       {
-        "id": "だいはかり",
-        "jp": "だいはかり"
-       },
-       {
-        "id": "けっそくき",
-        "jp": "けっそくき"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「結束機」dibaca けっそくき (mesin pengikat)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「人数」?",
-       "jp": "「人数」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ほうこく",
-        "jp": "ほうこく"
-       },
-       {
-        "id": "いんさつ",
-        "jp": "いんさつ"
-       },
-       {
-        "id": "にんずう",
-        "jp": "にんずう"
-       },
-       {
-        "id": "だんぼーる",
-        "jp": "だんぼーる"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「人数」dibaca にんずう (jumlah orang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「棚卸」?",
-       "jp": "「棚卸」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "じゅうりょう",
-        "jp": "じゅうりょう"
-       },
-       {
-        "id": "ばーこーど",
-        "jp": "ばーこーど"
-       },
-       {
-        "id": "たなおろし",
-        "jp": "たなおろし"
-       },
-       {
-        "id": "だいはかり",
-        "jp": "だいはかり"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「棚卸」dibaca たなおろし (stok opname)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「結束機」?",
-       "jp": "「結束機」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "mesin pengikat"
-       },
-       {
-        "id": "lokasi tetap"
-       },
-       {
-        "id": "troli picking"
-       },
-       {
-        "id": "lokasi bebas"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「結束機」（けっそくき）= mesin pengikat."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「固定ロケーション」?",
-       "jp": "「固定ロケーション」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "こていろけーしょん",
-        "jp": "こていろけーしょん"
-       },
-       {
-        "id": "さぎょうじかん",
-        "jp": "さぎょうじかん"
-       },
-       {
-        "id": "らべるぷりんたー",
-        "jp": "らべるぷりんたー"
-       },
-       {
-        "id": "すとれっちふぃるむ",
-        "jp": "すとれっちふぃるむ"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「固定ロケーション」dibaca こていろけーしょん (lokasi tetap)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「段ボール」?",
-       "jp": "「段ボール」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "barcode"
-       },
-       {
-        "id": "berat"
-       },
-       {
-        "id": "kardus"
-       },
-       {
-        "id": "melapor"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「段ボール」（だんぼーる）= kardus."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ハンディターミナル」?",
-       "jp": "「ハンディターミナル」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "terminal genggam (pemindai)"
-       },
-       {
-        "id": "sistem manajemen gudang (WMS)"
-       },
-       {
-        "id": "lokasi penyimpanan (alamat rak)"
-       },
-       {
-        "id": "film plastik pembungkus pallet"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「ハンディターミナル」（はんでぃたーみなる）= terminal genggam (pemindai)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「印刷」?",
-       "jp": "「印刷」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "melapor"
-       },
-       {
-        "id": "selesai"
-       },
-       {
-        "id": "barcode"
-       },
-       {
-        "id": "mencetak"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「印刷」（いんさつ）= mencetak."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「重量」?",
-       "jp": "「重量」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "じゅうりょう",
-        "jp": "じゅうりょう"
-       },
-       {
-        "id": "たなおろし",
-        "jp": "たなおろし"
-       },
-       {
-        "id": "さぎょうじかん",
-        "jp": "さぎょうじかん"
-       },
-       {
-        "id": "ろけーしょん",
-        "jp": "ろけーしょん"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「重量」dibaca じゅうりょう (berat)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「固定ロケーション」?",
-       "jp": "「固定ロケーション」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "lokasi tetap"
-       },
-       {
-        "id": "printer label"
-       },
-       {
-        "id": "jumlah orang"
-       },
-       {
-        "id": "stok opname"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「固定ロケーション」（こていろけーしょん）= lokasi tetap."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab2-5",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 2 · 5 (dari daftar kosakata)",
-     "jp": "第2章 {語彙|ごい}練習 5"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Apa arti 「ストレッチフィルム」?",
-       "jp": "「ストレッチフィルム」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "sistem manajemen gudang (WMS)"
-       },
-       {
-        "id": "terminal genggam (pemindai)"
-       },
-       {
-        "id": "lokasi penyimpanan (alamat rak)"
-       },
-       {
-        "id": "film plastik pembungkus pallet"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「ストレッチフィルム」（すとれっちふぃるむ）= film plastik pembungkus pallet."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「倉庫管理システム」?",
-       "jp": "「倉庫管理システム」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "こていろけーしょん",
-        "jp": "こていろけーしょん"
-       },
-       {
-        "id": "ふりーろけーしょん",
-        "jp": "ふりーろけーしょん"
-       },
-       {
-        "id": "はんでぃたーみなる",
-        "jp": "はんでぃたーみなる"
-       },
-       {
-        "id": "そうこかんりしすてむ",
-        "jp": "そうこかんりしすてむ"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「倉庫管理システム」dibaca そうこかんりしすてむ (sistem manajemen gudang (WMS))."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ラベルプリンター」?",
-       "jp": "「ラベルプリンター」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "jumlah orang"
-       },
-       {
-        "id": "troli picking"
-       },
-       {
-        "id": "printer label"
-       },
-       {
-        "id": "lokasi tetap"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「ラベルプリンター」（らべるぷりんたー）= printer label."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「所要時間」?",
-       "jp": "「所要時間」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "waktu yang dibutuhkan"
-       },
-       {
-        "id": "jumlah pekerjaan"
-       },
-       {
-        "id": "pengolahan distribusi"
-       },
-       {
-        "id": "timbangan lantai/meja"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「所要時間」（しょようじかん）= waktu yang dibutuhkan."
+       "id": "ピッキングカート.",
+       "jp": "ピッキングカートです。"
       }
      }
     ]
@@ -4281,6 +2467,97 @@
        "id": "Pakaian anti dingin.",
        "jp": "{防寒着|ぼうかんぎ}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat tidak sehat, bekerja saja sambil menahan.”",
+       "jp": "○か×か。「{体調|たいちょう}が{悪|わる}いときは、がまんして{働|はたら}きます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: lapor jika tidak sehat; jangan memaksa bekerja.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat mengangkat berat, turunkan pinggang dan jaga punggung.”",
+       "jp": "○か×か。「{重|おも}い{物|もの}を{持|も}つときは、{腰|こし}を{落|お}として{背中|せなか}を{守|まも}ります。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: turunkan pinggang untuk mencegah 腰痛.",
+       "jp": "{腰|こし}を{落|お}とします。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hari panas: minum teratur untuk mencegah sengatan panas.”",
+       "jp": "○か×か。「{暑|あつ}い{日|にち}は、こまめに{水|みず}を{飲|の}んで{熱中症|ねっちゅうしょう}を{防|ふせ}ぎます。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{水|みず}を{飲|の}みます。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Pakaian untuk kerja di gudang pendingin…",
+       "jp": "{冷蔵倉庫|れいぞうそうこ}で{寒|さむ}さを{防|ふせ}ぐために{着|き}るものはどれですか。"
+      },
+      "opts": [
+       {
+        "id": "水着",
+        "jp": "みずぎ"
+       },
+       {
+        "id": "半そで",
+        "jp": "はんそで"
+       },
+       {
+        "id": "防寒着",
+        "jp": "ぼうかんぎ"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "防寒着 = pakaian penahan dingin.",
+       "jp": "{防寒着|ぼうかんぎ}です。"
+      }
      }
     ]
    },
@@ -4444,6 +2721,119 @@
        "id": "Pelatihan keterampilan.",
        "jp": "{技能講習|ぎのうこうしゅう}が{必要|ひつよう}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Dilarang naik di atas garpu forklift.”",
+       "jp": "○か×か。「フォークリフトのつめ（フォーク）の{上|うえ}に{乗|の}ってはいけません。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar.",
+       "jp": "{乗|の}ってはいけません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Boleh berdiri di bawah barang yang terangkat.”",
+       "jp": "○か×か。「{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{立|た}ってもよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: sangat berbahaya.",
+       "jp": "{下|した}に{入|い}りません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Forklift beban maks ≥1 ton perlu pelatihan keterampilan (技能講習).”",
+       "jp": "○か×か。「{最大|さいだい}{荷重|かじゅう}1トン{以上|いじょう}のフォークリフトには、{技能講習|ぎのうこうしゅう}が{必要|ひつよう}です。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar (≥1 t: 技能講習; <1 t: 特別教育).",
+       "jp": "1t{以上|いじょう}は{技能講習|ぎのうこうしゅう}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Hiyari-hatto tidak perlu dilaporkan.”",
+       "jp": "○か×か。「ヒヤリハットは、{報告|ほうこく}しなくてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: laporkan agar tidak terulang.",
+       "jp": "{報告|ほうこく}します。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Tumpukan barang roboh disebut…",
+       "jp": "{積|つ}んだ{荷物|にもつ}がくずれることをなんといいますか。"
+      },
+      "opts": [
+       {
+        "id": "荷くずれ",
+        "jp": "にくずれ"
+       },
+       {
+        "id": "挟まれ",
+        "jp": "はさまれ"
+       },
+       {
+        "id": "転倒",
+        "jp": "てんとう"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "荷くずれ = tumpukan roboh.",
+       "jp": "{荷|に}くずれです。"
+      }
      }
     ]
    },
@@ -4585,6 +2975,122 @@
        "id": "Hou-ren-sou.",
        "jp": "{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}です。"
       }
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Tanda hijau menunjukkan keselamatan/pintu evakuasi.”",
+       "jp": "○か×か。「{緑色|りょくしょく}の{標識|ひょうしき}は、{安全|あんぜん}や{避難|ひなん}{口|くち}を{示|しめ}します。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 0,
+      "exp": {
+       "id": "Benar: hijau = aman/evakuasi.",
+       "jp": "{緑|みどり}は{安全|あんぜん}です。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Saat kebakaran, evakuasi memakai lift.”",
+       "jp": "○か×か。「{火災|かさい}のとき、{避難|ひなん}にエレベーターを{使|つか}います。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: jangan memakai lift.",
+       "jp": "{階段|かいだん}を{使|つか}います。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Benar atau salah: “Langkah prosedur kerja boleh diubah sesuai pendapat sendiri.”",
+       "jp": "○か×か。「{作業手順書|さぎょうてじゅんしょ}の{手順|てじゅん}は、{自分|じぶん}の{考|かんが}えで{変|か}えてよいです。」"
+      },
+      "opts": [
+       {
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
+       },
+       {
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Salah: ikuti prosedur tertulis; jangan ubah sendiri.",
+       "jp": "{変|か}えません。"
+      },
+      "mb": true
+     },
+     {
+      "q": {
+       "id": "Warna tanda 'hati-hati'…",
+       "jp": "「{注意|ちゅうい}」を{表|あらわ}す{標識|ひょうしき}の{色|いろ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "青",
+        "jp": "あお"
+       },
+       {
+        "id": "黄色",
+        "jp": "きいろ"
+       },
+       {
+        "id": "緑",
+        "jp": "みどり"
+       }
+      ],
+      "a": 1,
+      "exp": {
+       "id": "Kuning = hati-hati.",
+       "jp": "{黄色|きいろ}です。"
+      }
+     },
+     {
+      "q": {
+       "id": "ほう・れん・そう artinya…",
+       "jp": "「ほう・れん・そう」の{意味|いみ}はどれですか。"
+      },
+      "opts": [
+       {
+        "id": "整理・整頓・清掃",
+        "jp": "せいり・せいとん・せいそう"
+       },
+       {
+        "id": "出庫・入庫・棚卸",
+        "jp": "しゅっこ・にゅうこ・たなおろし"
+       },
+       {
+        "id": "報告・連絡・相談",
+        "jp": "ほうこく・れんらく・そうだん"
+       }
+      ],
+      "a": 2,
+      "exp": {
+       "id": "Lapor, kabari, konsultasi.",
+       "jp": "{報告|ほうこく}・{連絡|れんらく}・{相談|そうだん}です。"
+      }
      }
     ]
    },
@@ -4697,1299 +3203,96 @@
        "id": "Licin karena es/embun.",
        "jp": "すべりやすいです。"
       }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab3-1",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 3 · 1 (dari daftar kosakata)",
-     "jp": "第3章 {語彙|ごい}練習 1"
-    },
-    "items": [
+     },
      {
       "q": {
-       "id": "Bagaimana cara membaca 「転倒」?",
-       "jp": "「転倒」の{読|よ}み{方|かた}は？"
+       "id": "Benar atau salah: “Pintu gudang pendingin dibiarkan terbuka.”",
+       "jp": "○か×か。「{冷蔵倉庫|れいぞうそうこ}の{扉|とびら}は、{開|ひら}けたままにしておきます。」"
       },
       "opts": [
        {
-        "id": "けんこう",
-        "jp": "けんこう"
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "てんとう",
-        "jp": "てんとう"
-       },
-       {
-        "id": "はさまれ",
-        "jp": "はさまれ"
-       },
-       {
-        "id": "ぼうかんぎ",
-        "jp": "ぼうかんぎ"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
        }
       ],
       "a": 1,
       "exp": {
-       "id": "「転倒」dibaca てんとう (terpeleset/jatuh)."
-      }
+       "id": "Salah: tutup agar suhu terjaga.",
+       "jp": "{閉|し}めます。"
+      },
+      "mb": true
      },
      {
       "q": {
-       "id": "Bagaimana cara membaca 「危険」?",
-       "jp": "「危険」の{読|よ}み{方|かた}は？"
+       "id": "Benar atau salah: “Lantai gudang pendingin bisa licin karena es.”",
+       "jp": "○か×か。「{冷蔵倉庫|れいぞうそうこ}の{中|なか}の{床|とこ}は、{氷|こおり}でぬれてすべりやすいことがあります。」"
       },
       "opts": [
        {
-        "id": "きけん",
-        "jp": "きけん"
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "ひなん",
-        "jp": "ひなん"
-       },
-       {
-        "id": "てんとう",
-        "jp": "てんとう"
-       },
-       {
-        "id": "うんてん",
-        "jp": "うんてん"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
        }
       ],
       "a": 0,
       "exp": {
-       "id": "「危険」dibaca きけん (bahaya)."
-      }
+       "id": "Benar: jalan pelan.",
+       "jp": "ゆっくり{歩|ある}きます。"
+      },
+      "mb": true
      },
      {
       "q": {
-       "id": "Apa arti 「ヒヤリハット」?",
-       "jp": "「ヒヤリハット」の{意味|いみ}は？"
+       "id": "Benar atau salah: “Mengangkat barang berat sambil memutar badan.”",
+       "jp": "○か×か。「{重|おも}い{物|もの}を{持|も}つときは、{体|からだ}をひねりながら{持|も}ち{上|あ}げます。」"
       },
       "opts": [
        {
-        "id": "pakaian anti dingin"
+        "id": "Benar (○)",
+        "jp": "○ {正|ただ}しい"
        },
        {
-        "id": "nyaris celaka (near miss)"
-       },
-       {
-        "id": "mengemudi/mengoperasikan"
-       },
-       {
-        "id": "prosedur kerja tertulis"
+        "id": "Salah (×)",
+        "jp": "× {間違|まちが}い"
        }
       ],
       "a": 1,
       "exp": {
-       "id": "「ヒヤリハット」（ひやりはっと）= nyaris celaka (near miss)."
-      }
+       "id": "Salah: jangan memutar badan sambil mengangkat.",
+       "jp": "ひねりません。"
+      },
+      "mb": true
      },
      {
       "q": {
-       "id": "Apa arti 「消火器」?",
-       "jp": "「消火器」の{意味|いみ}は？"
+       "id": "Jika barang terlalu berat…",
+       "jp": "{荷物|にもつ}が{重|おも}すぎるとき、どうしますか。"
       },
       "opts": [
        {
-        "id": "kecelakaan kerja"
+        "id": "一人でむりに持つ",
+        "jp": "ひとりでむりにもつ"
        },
        {
-        "id": "pelatihan khusus"
+        "id": "助けをたのむか、道具を使う",
+        "jp": "たすけをたのむか、どうぐをつかう"
        },
        {
-        "id": "terpeleset/jatuh"
-       },
-       {
-        "id": "alat pemadam api"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「消火器」（しょうかき）= alat pemadam api."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「転倒」?",
-       "jp": "「転倒」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "warna keselamatan"
-       },
-       {
-        "id": "terpeleset/jatuh"
-       },
-       {
-        "id": "sepatu pengaman"
-       },
-       {
-        "id": "pelatihan khusus"
+        "id": "投げて運ぶ",
+        "jp": "なげてはこぶ"
        }
       ],
       "a": 1,
       "exp": {
-       "id": "「転倒」（てんとう）= terpeleset/jatuh."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「運転」?",
-       "jp": "「運転」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "nyaris celaka (near miss)"
-       },
-       {
-        "id": "prosedur kerja tertulis"
-       },
-       {
-        "id": "pakaian anti dingin"
-       },
-       {
-        "id": "mengemudi/mengoperasikan"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「運転」（うんてん）= mengemudi/mengoperasikan."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「避難」?",
-       "jp": "「避難」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "bahaya"
-       },
-       {
-        "id": "evakuasi"
-       },
-       {
-        "id": "terjepit"
-       },
-       {
-        "id": "istirahat"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「避難」（ひなん）= evakuasi."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「健康」?",
-       "jp": "「健康」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "istirahat"
-       },
-       {
-        "id": "terjepit"
-       },
-       {
-        "id": "evakuasi"
-       },
-       {
-        "id": "kesehatan"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「健康」（けんこう）= kesehatan."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「開けっぱなし」?",
-       "jp": "「開けっぱなし」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "dibiarkan terbuka"
-       },
-       {
-        "id": "kecelakaan kerja"
-       },
-       {
-        "id": "terpeleset/jatuh"
-       },
-       {
-        "id": "pakaian anti dingin"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「開けっぱなし」（あけっぱなし）= dibiarkan terbuka."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「特別教育」?",
-       "jp": "「特別教育」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "sepatu pengaman"
-       },
-       {
-        "id": "terpeleset/jatuh"
-       },
-       {
-        "id": "pelatihan khusus"
-       },
-       {
-        "id": "kecelakaan kerja"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「特別教育」（とくべつきょういく）= pelatihan khusus."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab3-2",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 3 · 2 (dari daftar kosakata)",
-     "jp": "第3章 {語彙|ごい}練習 2"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「閉じこめられる」?",
-       "jp": "「閉じこめられる」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "あけっぱなし",
-        "jp": "あけっぱなし"
-       },
-       {
-        "id": "せいりせいとん",
-        "jp": "せいりせいとん"
-       },
-       {
-        "id": "あんぜんしょく",
-        "jp": "あんぜんしょく"
-       },
-       {
-        "id": "とじこめられる",
-        "jp": "とじこめられる"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「閉じこめられる」dibaca とじこめられる (terkunci di dalam)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「作業手順書」?",
-       "jp": "「作業手順書」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "prosedur kerja tertulis"
-       },
-       {
-        "id": "alat pelindung diri"
-       },
-       {
-        "id": "merapikan dan menata"
-       },
-       {
-        "id": "mengemudi/mengoperasikan"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「作業手順書」（さぎょうてじゅんしょ）= prosedur kerja tertulis."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「労災」?",
-       "jp": "「労災」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "けんこう",
-        "jp": "けんこう"
-       },
-       {
-        "id": "ろうさい",
-        "jp": "ろうさい"
-       },
-       {
-        "id": "ひなん",
-        "jp": "ひなん"
-       },
-       {
-        "id": "てんとう",
-        "jp": "てんとう"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「労災」dibaca ろうさい (kecelakaan kerja)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「腰痛」?",
-       "jp": "「腰痛」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ろうさい",
-        "jp": "ろうさい"
-       },
-       {
-        "id": "きゅうけい",
-        "jp": "きゅうけい"
-       },
-       {
-        "id": "てつだい",
-        "jp": "てつだい"
-       },
-       {
-        "id": "ようつう",
-        "jp": "ようつう"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「腰痛」dibaca ようつう (sakit pinggang)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「防寒着」?",
-       "jp": "「防寒着」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pakaian anti dingin"
-       },
-       {
-        "id": "dibiarkan terbuka"
-       },
-       {
-        "id": "terkunci di dalam"
-       },
-       {
-        "id": "alat pelindung diri"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「防寒着」（ぼうかんぎ）= pakaian anti dingin."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「技能講習」?",
-       "jp": "「技能講習」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "nyaris celaka (near miss)"
-       },
-       {
-        "id": "pelatihan keterampilan (berlisensi)"
-       },
-       {
-        "id": "prosedur kerja tertulis"
-       },
-       {
-        "id": "mengemudi/mengoperasikan"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「技能講習」（ぎのうこうしゅう）= pelatihan keterampilan (berlisensi)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「開けっぱなし」?",
-       "jp": "「開けっぱなし」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "あけっぱなし",
-        "jp": "あけっぱなし"
-       },
-       {
-        "id": "ひやりはっと",
-        "jp": "ひやりはっと"
-       },
-       {
-        "id": "ひじょうぐち",
-        "jp": "ひじょうぐち"
-       },
-       {
-        "id": "はさまれ",
-        "jp": "はさまれ"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「開けっぱなし」dibaca あけっぱなし (dibiarkan terbuka)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「整理整頓」?",
-       "jp": "「整理整頓」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "とくべつきょういく",
-        "jp": "とくべつきょういく"
-       },
-       {
-        "id": "あんぜんしょく",
-        "jp": "あんぜんしょく"
-       },
-       {
-        "id": "とじこめられる",
-        "jp": "とじこめられる"
-       },
-       {
-        "id": "せいりせいとん",
-        "jp": "せいりせいとん"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「整理整頓」dibaca せいりせいとん (merapikan dan menata)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「技能講習」?",
-       "jp": "「技能講習」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ぎのうこうしゅう",
-        "jp": "ぎのうこうしゅう"
-       },
-       {
-        "id": "ねっちゅうしょう",
-        "jp": "ねっちゅうしょう"
-       },
-       {
-        "id": "あんぜんしょく",
-        "jp": "あんぜんしょく"
-       },
-       {
-        "id": "とじこめられる",
-        "jp": "とじこめられる"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「技能講習」dibaca ぎのうこうしゅう (pelatihan keterampilan (berlisensi))."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「避難」?",
-       "jp": "「避難」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ようつう",
-        "jp": "ようつう"
-       },
-       {
-        "id": "ほごぐ",
-        "jp": "ほごぐ"
-       },
-       {
-        "id": "ひなん",
-        "jp": "ひなん"
-       },
-       {
-        "id": "ろうさい",
-        "jp": "ろうさい"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「避難」dibaca ひなん (evakuasi)."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab3-3",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 3 · 3 (dari daftar kosakata)",
-     "jp": "第3章 {語彙|ごい}練習 3"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「特別教育」?",
-       "jp": "「特別教育」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "とじこめられる",
-        "jp": "とじこめられる"
-       },
-       {
-        "id": "ぎのうこうしゅう",
-        "jp": "ぎのうこうしゅう"
-       },
-       {
-        "id": "せいりせいとん",
-        "jp": "せいりせいとん"
-       },
-       {
-        "id": "とくべつきょういく",
-        "jp": "とくべつきょういく"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「特別教育」dibaca とくべつきょういく (pelatihan khusus)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「整理整頓」?",
-       "jp": "「整理整頓」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pakaian anti dingin"
-       },
-       {
-        "id": "merapikan dan menata"
-       },
-       {
-        "id": "alat pelindung diri"
-       },
-       {
-        "id": "terkunci di dalam"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「整理整頓」（せいりせいとん）= merapikan dan menata."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「保護具」?",
-       "jp": "「保護具」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pakaian anti dingin"
-       },
-       {
-        "id": "alat pelindung diri"
-       },
-       {
-        "id": "dibiarkan terbuka"
-       },
-       {
-        "id": "warna keselamatan"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「保護具」（ほごぐ）= alat pelindung diri."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「防寒着」?",
-       "jp": "「防寒着」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ぼうかんぎ",
-        "jp": "ぼうかんぎ"
-       },
-       {
-        "id": "ろうさい",
-        "jp": "ろうさい"
-       },
-       {
-        "id": "てんとう",
-        "jp": "てんとう"
-       },
-       {
-        "id": "きゅうけい",
-        "jp": "きゅうけい"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「防寒着」dibaca ぼうかんぎ (pakaian anti dingin)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「熱中症」?",
-       "jp": "「熱中症」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "sengatan panas"
-       },
-       {
-        "id": "pintu darurat"
-       },
-       {
-        "id": "sepatu pengaman"
-       },
-       {
-        "id": "kecelakaan kerja"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「熱中症」（ねっちゅうしょう）= sengatan panas."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「挟まれ」?",
-       "jp": "「挟まれ」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "terjepit"
-       },
-       {
-        "id": "evakuasi"
-       },
-       {
-        "id": "istirahat"
-       },
-       {
-        "id": "kesehatan"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「挟まれ」（はさまれ）= terjepit."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「危険」?",
-       "jp": "「危険」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "evakuasi"
-       },
-       {
-        "id": "bahaya"
-       },
-       {
-        "id": "kesehatan"
-       },
-       {
-        "id": "bantuan"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「危険」（きけん）= bahaya."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「休憩」?",
-       "jp": "「休憩」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "evakuasi"
-       },
-       {
-        "id": "terjepit"
-       },
-       {
-        "id": "istirahat"
-       },
-       {
-        "id": "kesehatan"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「休憩」（きゅうけい）= istirahat."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「消火器」?",
-       "jp": "「消火器」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "あけっぱなし",
-        "jp": "あけっぱなし"
-       },
-       {
-        "id": "ひじょうぐち",
-        "jp": "ひじょうぐち"
-       },
-       {
-        "id": "きゅうけい",
-        "jp": "きゅうけい"
-       },
-       {
-        "id": "しょうかき",
-        "jp": "しょうかき"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「消火器」dibaca しょうかき (alat pemadam api)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「保護具」?",
-       "jp": "「保護具」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "きけん",
-        "jp": "きけん"
-       },
-       {
-        "id": "ほごぐ",
-        "jp": "ほごぐ"
-       },
-       {
-        "id": "ひなん",
-        "jp": "ひなん"
-       },
-       {
-        "id": "はさまれ",
-        "jp": "はさまれ"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「保護具」dibaca ほごぐ (alat pelindung diri)."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab3-4",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 3 · 4 (dari daftar kosakata)",
-     "jp": "第3章 {語彙|ごい}練習 4"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「安全靴」?",
-       "jp": "「安全靴」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "あんぜんぐつ",
-        "jp": "あんぜんぐつ"
-       },
-       {
-        "id": "ひやりはっと",
-        "jp": "ひやりはっと"
-       },
-       {
-        "id": "ひじょうぐち",
-        "jp": "ひじょうぐち"
-       },
-       {
-        "id": "しょうかき",
-        "jp": "しょうかき"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「安全靴」dibaca あんぜんぐつ (sepatu pengaman)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「安全色」?",
-       "jp": "「安全色」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "terpeleset/jatuh"
-       },
-       {
-        "id": "dibiarkan terbuka"
-       },
-       {
-        "id": "warna keselamatan"
-       },
-       {
-        "id": "alat pelindung diri"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「安全色」（あんぜんしょく）= warna keselamatan."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「熱中症」?",
-       "jp": "「熱中症」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "あんぜんしょく",
-        "jp": "あんぜんしょく"
-       },
-       {
-        "id": "ねっちゅうしょう",
-        "jp": "ねっちゅうしょう"
-       },
-       {
-        "id": "ぎのうこうしゅう",
-        "jp": "ぎのうこうしゅう"
-       },
-       {
-        "id": "せいりせいとん",
-        "jp": "せいりせいとん"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「熱中症」dibaca ねっちゅうしょう (sengatan panas)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「手伝い」?",
-       "jp": "「手伝い」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "terjepit"
-       },
-       {
-        "id": "kesehatan"
-       },
-       {
-        "id": "istirahat"
-       },
-       {
-        "id": "bantuan"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「手伝い」（てつだい）= bantuan."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「非常口」?",
-       "jp": "「非常口」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "pelatihan khusus"
-       },
-       {
-        "id": "pintu darurat"
-       },
-       {
-        "id": "sakit pinggang"
-       },
-       {
-        "id": "sepatu pengaman"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「非常口」（ひじょうぐち）= pintu darurat."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「安全色」?",
-       "jp": "「安全色」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ひやりはっと",
-        "jp": "ひやりはっと"
-       },
-       {
-        "id": "あけっぱなし",
-        "jp": "あけっぱなし"
-       },
-       {
-        "id": "ぎのうこうしゅう",
-        "jp": "ぎのうこうしゅう"
-       },
-       {
-        "id": "あんぜんしょく",
-        "jp": "あんぜんしょく"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「安全色」dibaca あんぜんしょく (warna keselamatan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「安全靴」?",
-       "jp": "「安全靴」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "kecelakaan kerja"
-       },
-       {
-        "id": "sengatan panas"
-       },
-       {
-        "id": "sepatu pengaman"
-       },
-       {
-        "id": "dibiarkan terbuka"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「安全靴」（あんぜんぐつ）= sepatu pengaman."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「非常口」?",
-       "jp": "「非常口」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ひじょうぐち",
-        "jp": "ひじょうぐち"
-       },
-       {
-        "id": "あけっぱなし",
-        "jp": "あけっぱなし"
-       },
-       {
-        "id": "けんこう",
-        "jp": "けんこう"
-       },
-       {
-        "id": "ひやりはっと",
-        "jp": "ひやりはっと"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「非常口」dibaca ひじょうぐち (pintu darurat)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「腰痛」?",
-       "jp": "「腰痛」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "sakit pinggang"
-       },
-       {
-        "id": "terpeleset/jatuh"
-       },
-       {
-        "id": "sengatan panas"
-       },
-       {
-        "id": "alat pemadam api"
-       }
-      ],
-      "a": 0,
-      "exp": {
-       "id": "「腰痛」（ようつう）= sakit pinggang."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「手伝い」?",
-       "jp": "「手伝い」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ろうさい",
-        "jp": "ろうさい"
-       },
-       {
-        "id": "てつだい",
-        "jp": "てつだい"
-       },
-       {
-        "id": "うんてん",
-        "jp": "うんてん"
-       },
-       {
-        "id": "きゅうけい",
-        "jp": "きゅうけい"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「手伝い」dibaca てつだい (bantuan)."
-      }
-     }
-    ]
-   },
-   {
-    "id": "vk-bab3-5",
-    "rev": true,
-    "title": {
-     "id": "Latihan Kosakata Bab 3 · 5 (dari daftar kosakata)",
-     "jp": "第3章 {語彙|ごい}練習 5"
-    },
-    "items": [
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「挟まれ」?",
-       "jp": "「挟まれ」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "うんてん",
-        "jp": "うんてん"
-       },
-       {
-        "id": "はさまれ",
-        "jp": "はさまれ"
-       },
-       {
-        "id": "ようつう",
-        "jp": "ようつう"
-       },
-       {
-        "id": "きけん",
-        "jp": "きけん"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「挟まれ」dibaca はさまれ (terjepit)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「閉じこめられる」?",
-       "jp": "「閉じこめられる」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "kecelakaan kerja"
-       },
-       {
-        "id": "terkunci di dalam"
-       },
-       {
-        "id": "alat pemadam api"
-       },
-       {
-        "id": "sepatu pengaman"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「閉じこめられる」（とじこめられる）= terkunci di dalam."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「ヘルメット」?",
-       "jp": "「ヘルメット」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "bahaya"
-       },
-       {
-        "id": "evakuasi"
-       },
-       {
-        "id": "bantuan"
-       },
-       {
-        "id": "helm"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「ヘルメット」（へるめっと）= helm."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「作業手順書」?",
-       "jp": "「作業手順書」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ねっちゅうしょう",
-        "jp": "ねっちゅうしょう"
-       },
-       {
-        "id": "さぎょうてじゅんしょ",
-        "jp": "さぎょうてじゅんしょ"
-       },
-       {
-        "id": "ひじょうぐち",
-        "jp": "ひじょうぐち"
-       },
-       {
-        "id": "とじこめられる",
-        "jp": "とじこめられる"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「作業手順書」dibaca さぎょうてじゅんしょ (prosedur kerja tertulis)."
-      }
-     },
-     {
-      "q": {
-       "id": "Apa arti 「労災」?",
-       "jp": "「労災」の{意味|いみ}は？"
-      },
-      "opts": [
-       {
-        "id": "warna keselamatan"
-       },
-       {
-        "id": "kecelakaan kerja"
-       },
-       {
-        "id": "terpeleset/jatuh"
-       },
-       {
-        "id": "alat pemadam api"
-       }
-      ],
-      "a": 1,
-      "exp": {
-       "id": "「労災」（ろうさい）= kecelakaan kerja."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「健康」?",
-       "jp": "「健康」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "ろうさい",
-        "jp": "ろうさい"
-       },
-       {
-        "id": "てんとう",
-        "jp": "てんとう"
-       },
-       {
-        "id": "うんてん",
-        "jp": "うんてん"
-       },
-       {
-        "id": "けんこう",
-        "jp": "けんこう"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「健康」dibaca けんこう (kesehatan)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「休憩」?",
-       "jp": "「休憩」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "へるめっと",
-        "jp": "へるめっと"
-       },
-       {
-        "id": "けんこう",
-        "jp": "けんこう"
-       },
-       {
-        "id": "きゅうけい",
-        "jp": "きゅうけい"
-       },
-       {
-        "id": "てつだい",
-        "jp": "てつだい"
-       }
-      ],
-      "a": 2,
-      "exp": {
-       "id": "「休憩」dibaca きゅうけい (istirahat)."
-      }
-     },
-     {
-      "q": {
-       "id": "Bagaimana cara membaca 「運転」?",
-       "jp": "「運転」の{読|よ}み{方|かた}は？"
-      },
-      "opts": [
-       {
-        "id": "てんとう",
-        "jp": "てんとう"
-       },
-       {
-        "id": "きけん",
-        "jp": "きけん"
-       },
-       {
-        "id": "ようつう",
-        "jp": "ようつう"
-       },
-       {
-        "id": "うんてん",
-        "jp": "うんてん"
-       }
-      ],
-      "a": 3,
-      "exp": {
-       "id": "「運転」dibaca うんてん (mengemudi/mengoperasikan)."
+       "id": "Minta bantuan atau pakai alat.",
+       "jp": "むりをしません。"
       }
      }
     ]
@@ -6156,6 +3459,119 @@
      "exp": {
       "id": "Pelatihan keterampilan.",
       "jp": "{技能講習|ぎのうこうしゅう}が{必要|ひつよう}です。"
+     }
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Dilarang naik di atas garpu forklift.”",
+      "jp": "○か×か。「フォークリフトのつめ（フォーク）の{上|うえ}に{乗|の}ってはいけません。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar.",
+      "jp": "{乗|の}ってはいけません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Boleh berdiri di bawah barang yang terangkat.”",
+      "jp": "○か×か。「{持|も}ち{上|あ}げた{荷物|にもつ}の{下|した}に{立|た}ってもよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: sangat berbahaya.",
+      "jp": "{下|した}に{入|い}りません。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Forklift beban maks ≥1 ton perlu pelatihan keterampilan (技能講習).”",
+      "jp": "○か×か。「{最大|さいだい}{荷重|かじゅう}1トン{以上|いじょう}のフォークリフトには、{技能講習|ぎのうこうしゅう}が{必要|ひつよう}です。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "Benar (≥1 t: 技能講習; <1 t: 特別教育).",
+      "jp": "1t{以上|いじょう}は{技能講習|ぎのうこうしゅう}です。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Benar atau salah: “Hiyari-hatto tidak perlu dilaporkan.”",
+      "jp": "○か×か。「ヒヤリハットは、{報告|ほうこく}しなくてよいです。」"
+     },
+     "opts": [
+      {
+       "id": "Benar (○)",
+       "jp": "○ {正|ただ}しい"
+      },
+      {
+       "id": "Salah (×)",
+       "jp": "× {間違|まちが}い"
+      }
+     ],
+     "a": 1,
+     "exp": {
+      "id": "Salah: laporkan agar tidak terulang.",
+      "jp": "{報告|ほうこく}します。"
+     },
+     "mb": true
+    },
+    {
+     "q": {
+      "id": "Tumpukan barang roboh disebut…",
+      "jp": "{積|つ}んだ{荷物|にもつ}がくずれることをなんといいますか。"
+     },
+     "opts": [
+      {
+       "id": "荷くずれ",
+       "jp": "にくずれ"
+      },
+      {
+       "id": "挟まれ",
+       "jp": "はさまれ"
+      },
+      {
+       "id": "転倒",
+       "jp": "てんとう"
+      }
+     ],
+     "a": 0,
+     "exp": {
+      "id": "荷くずれ = tumpukan roboh.",
+      "jp": "{荷|に}くずれです。"
      }
     }
    ]

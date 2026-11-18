@@ -372,3 +372,96 @@ SUBS["bab3"].append(
          MC("Lantai gudang pendingin mudah…", "冷蔵倉庫の床は、どうなりやすいですか。", ("licin", "すべりやすい"), [("lengket", "ベタベタする"), ("panas", "あつくなる"), ("berpasir", "すなだらけ")], "Licin karena es/embun.", "すべりやすいです。")]})
 
 BOOK_PAGES = 16
+
+# ---- soal tambahan (audit 2026-11-18) — buatan Shirose dari 試験基準/運用方針 MLIT; perlu review ahli
+def _add(bab, sid, qs):
+    for s in SUBS[bab]:
+        if s["id"] == sid: s["qs"] += qs; return
+    raise KeyError(sid)
+def _opt(a, b=None): return (a, b or a)
+_add("bab1", "b1s1", [
+ TF("冷蔵倉庫は、10℃以下で保管する荷物のための倉庫です。", True, "Benar: gudang berpendingin untuk barang pada suhu 10℃ atau lebih rendah.", "10℃以下です。", "Gudang berpendingin untuk barang yang disimpan pada suhu 10℃ atau lebih rendah."),
+ TF("普通倉庫には、危険な薬品だけを入れます。", False, "Salah: gudang umum untuk barang umum; bahan berbahaya di gudang khusus.", "危険品倉庫が別にあります。", "Gudang umum hanya untuk bahan kimia berbahaya."),
+ TF("倉庫業を始めるには、国土交通大臣の登録が必要です。", True, "Benar: usaha pergudangan harus terdaftar.", "登録が必要です。", "Usaha pergudangan harus terdaftar pada Menteri Pertanahan, Infrastruktur, Transportasi dan Pariwisata."),
+ MC("Gudang khusus untuk bahan mudah terbakar disebut…", "燃えやすい薬品などを保管する倉庫はどれですか。", _opt("危険品倉庫", "きけんひんそうこ"), [_opt("普通倉庫", "ふつうそうこ"), _opt("冷蔵倉庫", "れいぞうそうこ")], "危険品倉庫 = gudang bahan berbahaya.", "危険品倉庫です。"),
+ MC("Gudang untuk makanan segar dan beku adalah…", "生鮮食品や冷凍食品を入れる倉庫はどれですか。", _opt("冷蔵倉庫", "れいぞうそうこ"), [_opt("普通倉庫", "ふつうそうこ"), _opt("危険品倉庫", "きけんひんそうこ")], "冷蔵倉庫 = gudang berpendingin.", "冷蔵倉庫です。"),
+])
+_add("bab1", "b1s2", [
+ TF("ハンドリフトは、人の力でパレットを動かす道具です。", True, "Benar: pengangkat pallet manual.", "手で動かします。", "Hand lift adalah alat pemindah pallet dengan tenaga tangan."),
+ TF("コンベヤは、荷物を自動で運ぶベルトなどの設備です。", True, "Benar.", "自動で運びます。", "Konveyor adalah ban berjalan yang memindahkan barang otomatis."),
+ TF("カゴ台車は、荷物を持ち上げるために使うエレベーターです。", False, "Salah: troli kerangka kawat untuk memindahkan banyak kardus.", "台車です。", "Kago-daisha adalah lift pengangkat barang."),
+ MC("Alas tempat menumpuk barang agar bisa diangkat forklift…", "フォークリフトで運ぶために荷物をのせる台はどれですか。", _opt("パレット", "パレット"), [_opt("カゴ台車", "カゴだいしゃ"), _opt("コンベヤ", "コンベヤ")], "パレット = pallet.", "パレットです。"),
+ MC("Alat untuk mengangkut barang antar lantai gudang…", "階をこえて荷物を運ぶ設備はどれですか。", _opt("エレベーター・垂直自動搬送機", "エレベーター・すいちょくじどうはんそうき"), [_opt("ハンドリフト", "ハンドリフト"), _opt("台はかり", "だいはかり")], "Lift/pengangkut vertikal otomatis.", "エレベーターなどです。"),
+])
+_add("bab1", "b1s3", [
+ TF("入庫は、荷受け、検品、格納の順に進みます。", True, "Benar.", "その順です。", "Alur masuk gudang: terima, cek, simpan."),
+ TF("先入れ先出しは、あとに入った荷物を先に出す方法です。", False, "Salah: FIFO = yang masuk lebih dulu keluar lebih dulu.", "先に入ったものを先に出します。", "FIFO adalah mengeluarkan barang yang masuk belakangan lebih dulu."),
+ TF("パレットに積むときは、重い荷物を下に置きます。", True, "Benar: berat di bawah, ringan di atas.", "重い物が下です。", "Saat menumpuk di pallet, barang berat ditaruh di bawah."),
+ TF("荷受けのとき、賞味期限は確認しなくてよいです。", False, "Salah: periksa jumlah, nomor barang, kondisi, dan tanggal kedaluwarsa.", "期限も確認します。", "Saat menerima barang, tanggal kedaluwarsa tidak perlu dicek."),
+ MC("Mengambil barang sesuai pesanan disebut…", "注文に合わせて荷物をとり出す作業はどれですか。", _opt("ピッキング", "ピッキング"), [_opt("格納", "かくのう"), _opt("荷受け", "にうけ")], "ピッキング = picking.", "ピッキングです。"),
+ MC("FIFO sangat penting untuk barang…", "先入れ先出しがとくに大切な荷物はどれですか。", _opt("賞味期限のある食品", "しょうみきげんのあるしょくひん"), [_opt("空のパレット", "からのパレット"), _opt("古い机", "ふるいつくえ")], "Makanan dengan tanggal kedaluwarsa.", "期限のある食品です。"),
+])
+_add("bab1", "b1s4", [
+ TF("1トンは1,000キログラムです。", True, "Benar.", "1t=1,000kgです。", "1 ton = 1.000 kg."),
+ TF("1ケースが12個なら、5ケースは50個です。", False, "Salah: 12 × 5 = 60.", "60個です。", "Jika 1 dus = 12 buah, 5 dus = 50 buah."),
+ TF("「天地無用」は、荷物をさかさまにしてはいけないという意味です。", True, "Benar: jangan dibalik.", "さかさまにしません。", "Simbol 天地無用 berarti barang tidak boleh dibalik."),
+ TF("「水ぬれ防止」のマークがある荷物は、ぬらさないようにします。", True, "Benar.", "ぬらしません。", "Barang dengan tanda 水ぬれ防止 dijaga agar tidak basah."),
+ MC("Tanda yang berarti mudah pecah…", "われやすい荷物に付けるマークの言葉はどれですか。", _opt("ワレモノ注意", "ワレモノちゅうい"), [_opt("手かぎ無用", "てかぎむよう"), _opt("水ぬれ防止", "みずぬれぼうし")], "ワレモノ注意 = mudah pecah.", "ワレモノ注意です。"),
+ MC("1 m³ sama dengan berapa liter?", "1立方メートルは何リットルですか。", _opt("1,000リットル", "1,000リットル"), [_opt("100リットル", "100リットル"), _opt("10リットル", "10リットル")], "1 m³ = 1.000 L.", "1,000Lです。"),
+])
+_add("bab1", "b1s5", [
+ TF("重い荷物は棚の下の段に置きます。", True, "Benar.", "重い物は下です。", "Barang berat ditaruh di rak bagian bawah."),
+ TF("非常口や消火器の前に荷物を置いてもよいです。", False, "Salah: jangan menghalangi jalur kerja, pintu darurat, dan pemadam.", "置いてはいけません。", "Boleh menaruh barang di depan pintu darurat dan alat pemadam."),
+ TF("危険物は、ほかの荷物といっしょにしてはいけません。", True, "Benar: jangan dicampur.", "分けて保管します。", "Barang berbahaya tidak boleh dicampur dengan barang lain."),
+ MC("Rak khusus yang dimuat forklift…", "フォークリフトで荷物を出し入れする、パレット用の棚はどれですか。", _opt("パレットラック", "パレットラック"), [_opt("平積み", "ひらづみ"), _opt("カゴ台車", "カゴだいしゃ")], "パレットラック = rak pallet.", "パレットラックです。"),
+])
+_add("bab2", "b2s1", [
+ TF("ロケーションは、荷物をしまう場所の住所のようなものです。", True, "Benar: alamat tempat barang di rak.", "場所の番地です。", "Lokasi (ロケーション) seperti alamat tempat penyimpanan barang."),
+ TF("フリーロケーションは、荷物をいつも同じ場所に置く方法です。", False, "Salah: itu lokasi tetap; free location = boleh di tempat kosong, dicatat di sistem.", "固定ロケーションの説明です。", "Free location berarti barang selalu di tempat yang sama."),
+ TF("棚卸は、実際の在庫を数えて、データと合わせる作業です。", True, "Benar: stock opname.", "数えて合わせます。", "Tanaoroshi adalah menghitung stok nyata dan mencocokkan dengan data."),
+ MC("Sistem komputer yang mencatat stok dan lokasi barang…", "在庫や場所を記録するコンピューターのシステムはどれですか。", _opt("WMS（倉庫管理システム）", "ダブリューエムエス（そうこかんりシステム）"), [_opt("バーコード", "バーコード"), _opt("パレット", "パレット")], "WMS = sistem manajemen gudang.", "WMSです。"),
+])
+_add("bab2", "b2s2", [
+ TF("検品で異常を見つけたら、自分で判断しないで上司に報告します。", True, "Benar.", "報告します。", "Jika menemukan kelainan saat inspeksi, jangan memutuskan sendiri; lapor ke atasan."),
+ TF("梱包のときは、すき間に緩衝材を入れて荷物が動かないようにします。", True, "Benar.", "緩衝材で固定します。", "Isi celah dengan bahan pelindung agar barang tidak bergeser."),
+ TF("ラベルは、見えにくい場所にはります。", False, "Salah: tempel di tempat yang mudah dilihat.", "見やすい場所です。", "Label ditempel di tempat yang sulit dilihat."),
+ MC("Pekerjaan tambahan seperti memasang label harga disebut…", "値札をつけるなど、荷物に加える作業をなんといいますか。", _opt("流通加工", "りゅうつうかこう"), [_opt("入庫", "にゅうこ"), _opt("棚卸", "たなおろし")], "流通加工 = pengolahan distribusi.", "流通加工です。"),
+ MC("Pembungkus plastik untuk menahan tumpukan…", "荷物をまとめて巻くプラスチックのフィルムはどれですか。", _opt("ストレッチフィルム", "ストレッチフィルム"), [_opt("緩衝材", "かんしょうざい"), _opt("ラベル", "ラベル")], "ストレッチフィルム = stretch film.", "ストレッチフィルムです。"),
+])
+_add("bab2", "b2s3", [
+ TF("作業時間は、作業量を（1時間の力×人数）で割って求めます。", True, "Benar.", "割り算です。", "Waktu kerja = jumlah kerja ÷ (kemampuan per jam × jumlah orang)."),
+ MC("240 dus, 1 orang 60 dus/jam, selesai 2 jam. Berapa orang?", "240箱を、1人1時間60箱で2時間で終えるには、何人必要ですか。", _opt("2人", "2にん"), [_opt("1人", "1にん"), _opt("4人", "4にん")], "240 ÷ (60×2) = 2 orang.", "240÷(60×2)=2です。"),
+ MC("300 dus, 3 orang, 50 dus/jam per orang. Berapa jam?", "300箱を、3人で1人1時間50箱で運ぶと何時間かかりますか。", _opt("2時間", "2じかん"), [_opt("3時間", "3じかん"), _opt("1時間", "1じかん")], "300 ÷ (50×3) = 2 jam.", "300÷150=2です。"),
+ MC("120 dus, 4 orang, 30 dus/jam per orang. Berapa jam?", "120箱を、4人で1人1時間30箱で作業すると何時間ですか。", _opt("1時間", "1じかん"), [_opt("2時間", "2じかん"), _opt("4時間", "4じかん")], "120 ÷ (30×4) = 1 jam.", "120÷120=1です。"),
+])
+_add("bab2", "b2s4", [
+ TF("ラベルプリンターは、宛先などのラベルを印刷する機械です。", True, "Benar.", "ラベルを印刷します。", "Label printer mencetak label alamat dan sebagainya."),
+ TF("台はかりは、荷物の重さをはかる道具です。", True, "Benar.", "重さをはかります。", "Timbangan lantai/meja untuk menimbang barang."),
+ MC("Troli untuk membawa barang hasil picking…", "ピッキングした荷物を運ぶ台車はどれですか。", _opt("ピッキングカート", "ピッキングカート"), [_opt("梱包機", "こんぽうき"), _opt("ラベルプリンター", "ラベルプリンター")], "ピッキングカート.", "ピッキングカートです。"),
+])
+_add("bab3", "b3s1", [
+ TF("体調が悪いときは、がまんして働きます。", False, "Salah: lapor jika tidak sehat; jangan memaksa bekerja.", "報告します。", "Saat tidak sehat, bekerja saja sambil menahan."),
+ TF("重い物を持つときは、腰を落として背中を守ります。", True, "Benar: turunkan pinggang untuk mencegah 腰痛.", "腰を落とします。", "Saat mengangkat berat, turunkan pinggang dan jaga punggung."),
+ TF("暑い日は、こまめに水を飲んで熱中症を防ぎます。", True, "Benar.", "水を飲みます。", "Hari panas: minum teratur untuk mencegah sengatan panas."),
+ MC("Pakaian untuk kerja di gudang pendingin…", "冷蔵倉庫で寒さを防ぐために着るものはどれですか。", _opt("防寒着", "ぼうかんぎ"), [_opt("半そで", "はんそで"), _opt("水着", "みずぎ")], "防寒着 = pakaian penahan dingin.", "防寒着です。"),
+])
+_add("bab3", "b3s2", [
+ TF("フォークリフトのつめ（フォーク）の上に乗ってはいけません。", True, "Benar.", "乗ってはいけません。", "Dilarang naik di atas garpu forklift."),
+ TF("持ち上げた荷物の下に立ってもよいです。", False, "Salah: sangat berbahaya.", "下に入りません。", "Boleh berdiri di bawah barang yang terangkat."),
+ TF("最大荷重1トン以上のフォークリフトには、技能講習が必要です。", True, "Benar (≥1 t: 技能講習; <1 t: 特別教育).", "1t以上は技能講習です。", "Forklift beban maks ≥1 ton perlu pelatihan keterampilan (技能講習)."),
+ TF("ヒヤリハットは、報告しなくてよいです。", False, "Salah: laporkan agar tidak terulang.", "報告します。", "Hiyari-hatto tidak perlu dilaporkan."),
+ MC("Tumpukan barang roboh disebut…", "積んだ荷物がくずれることをなんといいますか。", _opt("荷くずれ", "にくずれ"), [_opt("挟まれ", "はさまれ"), _opt("転倒", "てんとう")], "荷くずれ = tumpukan roboh.", "荷くずれです。"),
+])
+_add("bab3", "b3s3", [
+ TF("緑色の標識は、安全や避難口を示します。", True, "Benar: hijau = aman/evakuasi.", "緑は安全です。", "Tanda hijau menunjukkan keselamatan/pintu evakuasi."),
+ TF("火災のとき、避難にエレベーターを使います。", False, "Salah: jangan memakai lift.", "階段を使います。", "Saat kebakaran, evakuasi memakai lift."),
+ TF("作業手順書の手順は、自分の考えで変えてよいです。", False, "Salah: ikuti prosedur tertulis; jangan ubah sendiri.", "変えません。", "Langkah prosedur kerja boleh diubah sesuai pendapat sendiri."),
+ MC("Warna tanda 'hati-hati'…", "「注意」を表す標識の色はどれですか。", _opt("黄色", "きいろ"), [_opt("緑", "みどり"), _opt("青", "あお")], "Kuning = hati-hati.", "黄色です。"),
+ MC("ほう・れん・そう artinya…", "「ほう・れん・そう」の意味はどれですか。", _opt("報告・連絡・相談", "ほうこく・れんらく・そうだん"), [_opt("整理・整頓・清掃", "せいり・せいとん・せいそう"), _opt("出庫・入庫・棚卸", "しゅっこ・にゅうこ・たなおろし")], "Lapor, kabari, konsultasi.", "報告・連絡・相談です。"),
+])
+_add("bab3", "b3s4", [
+ TF("冷蔵倉庫の扉は、開けたままにしておきます。", False, "Salah: tutup agar suhu terjaga.", "閉めます。", "Pintu gudang pendingin dibiarkan terbuka."),
+ TF("冷蔵倉庫の中の床は、氷でぬれてすべりやすいことがあります。", True, "Benar: jalan pelan.", "ゆっくり歩きます。", "Lantai gudang pendingin bisa licin karena es."),
+ TF("重い物を持つときは、体をひねりながら持ち上げます。", False, "Salah: jangan memutar badan sambil mengangkat.", "ひねりません。", "Mengangkat barang berat sambil memutar badan."),
+ MC("Jika barang terlalu berat…", "荷物が重すぎるとき、どうしますか。", _opt("助けをたのむか、道具を使う", "たすけをたのむか、どうぐをつかう"), [_opt("一人でむりに持つ", "ひとりでむりにもつ"), _opt("投げて運ぶ", "なげてはこぶ")], "Minta bantuan atau pakai alat.", "むりをしません。"),
+])

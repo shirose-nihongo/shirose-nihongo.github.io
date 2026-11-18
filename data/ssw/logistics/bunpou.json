@@ -6,9 +6,9 @@
    "rx": "(る|た|い|だ|の)とき|ときは",
    "arti": "ketika …; saat …",
    "cara": "KK/Kata sifat bentuk biasa + とき",
-   "jml": 13,
-   "contoh": "{作業|さぎょう}するときに、したがうものはどれですか。",
-   "arti_contoh": "Hal yang harus diikuti saat bekerja…",
+   "jml": 21,
+   "contoh": "{荷物|にもつ}が{重|おも}すぎるとき、どうしますか。",
+   "arti_contoh": "Jika barang terlalu berat…",
    "contoh_dari": "materi"
   },
   {
@@ -17,7 +17,7 @@
    "rx": "てはいけ|てはならな",
    "arti": "tidak boleh …; dilarang",
    "cara": "KK bentuk て + はいけません",
-   "jml": 11,
+   "jml": 15,
    "contoh": "{水ぬれ防止|みずぬれぼうし}：{水|みず}にぬらしてはいけません。",
    "arti_contoh": "**水ぬれ防止**: jaga agar tidak basah.",
    "contoh_dari": "materi"
@@ -28,7 +28,7 @@
    "rx": "ても|でも(?!あり)",
    "arti": "meskipun …",
    "cara": "KK bentuk て + も",
-   "jml": 9,
+   "jml": 12,
    "contoh": "{倉庫|そうこ}の{中|なか}は、{急|いそ}いで{走|はし}ってもよいです。",
    "arti_contoh": "Di dalam gudang boleh berlari terburu-buru.",
    "contoh_dari": "materi"
@@ -39,9 +39,42 @@
    "rx": "ように|ような",
    "arti": "agar …; supaya …; seperti …",
    "cara": "KK kamus/ない + ように; Kata benda + の + ように",
-   "jml": 8,
+   "jml": 11,
    "contoh": "{閉|と}じこめられないように{気|き}をつけます。",
    "arti_contoh": "Berhati-hati agar tidak terkunci di dalam.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-temoii",
+   "pola": "〜てもいいです",
+   "rx": "てもいい|てもよい|てもかまいま",
+   "arti": "boleh …",
+   "cara": "KK bentuk て + もいいです",
+   "jml": 10,
+   "contoh": "{倉庫|そうこ}の{中|なか}は、{急|いそ}いで{走|はし}ってもよいです。",
+   "arti_contoh": "Di dalam gudang boleh berlari terburu-buru.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-naiyouni",
+   "pola": "〜ないように",
+   "rx": "ないように",
+   "arti": "agar tidak …",
+   "cara": "KK bentuk ない + ように",
+   "jml": 9,
+   "contoh": "{閉|と}じこめられないように{気|き}をつけます。",
+   "arti_contoh": "Berhati-hati agar tidak terkunci di dalam.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-yasui",
+   "pola": "〜やすい / 〜にくい",
+   "rx": "やすい|にくい|やすく|にくく",
+   "arti": "mudah … / sulit …",
+   "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
+   "jml": 9,
+   "contoh": "ラベルは{見|み}やすい{所|ところ}にはります。",
+   "arti_contoh": "Tempel **ラベル** (label alamat/isi) pada tempat yang mudah dilihat.",
    "contoh_dari": "materi"
   },
   {
@@ -56,47 +89,14 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-temoii",
-   "pola": "〜てもいいです",
-   "rx": "てもいい|てもよい|てもかまいま",
-   "arti": "boleh …",
-   "cara": "KK bentuk て + もいいです",
-   "jml": 7,
-   "contoh": "{倉庫|そうこ}の{中|なか}は、{急|いそ}いで{走|はし}ってもよいです。",
-   "arti_contoh": "Di dalam gudang boleh berlari terburu-buru.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-naiyouni",
-   "pola": "〜ないように",
-   "rx": "ないように",
-   "arti": "agar tidak …",
-   "cara": "KK bentuk ない + ように",
-   "jml": 7,
-   "contoh": "{閉|と}じこめられないように{気|き}をつけます。",
-   "arti_contoh": "Berhati-hati agar tidak terkunci di dalam.",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-tara",
    "pola": "〜たら",
    "rx": "たら|だら",
    "arti": "kalau …; setelah …",
    "cara": "KK/Kata sifat bentuk た + ら",
-   "jml": 5,
+   "jml": 6,
    "contoh": "{保護具|ほごぐ}がこわれたら、{報告|ほうこく}して{交換|こうかん}します。",
    "arti_contoh": "Pakai APD sesuai pekerjaan; rusak atau tidak cocok → laporkan dan ganti.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-yasui",
-   "pola": "〜やすい / 〜にくい",
-   "rx": "やすい|にくい|やすく|にくく",
-   "arti": "mudah … / sulit …",
-   "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
-   "jml": 5,
-   "contoh": "ラベルは{見|み}やすい{所|ところ}にはります。",
-   "arti_contoh": "Tempel **ラベル** (label alamat/isi) pada tempat yang mudah dilihat.",
    "contoh_dari": "materi"
   },
   {
@@ -105,9 +105,31 @@
    "rx": "ずに|ないで(?!ください)",
    "arti": "tanpa …",
    "cara": "KK bentuk ない + で / ずに",
-   "jml": 4,
+   "jml": 5,
    "contoh": "{体|からだ}の{調子|ちょうし}が{悪|わる}いときは、がまんしないで{報告|ほうこく}します。",
    "arti_contoh": "Lapor jika tidak sehat; jangan memaksa bekerja.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tame",
+   "pola": "〜ために / 〜ための",
+   "rx": "ために|ための",
+   "arti": "untuk …; demi …; karena …",
+   "cara": "KK kamus / Kata benda + の + ために",
+   "jml": 4,
+   "contoh": "{冷蔵倉庫|れいぞうそうこ}で{寒|さむ}さを{防|ふせ}ぐために{着|き}るものはどれですか。",
+   "arti_contoh": "Pakaian untuk kerja di gudang pendingin…",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-node",
+   "pola": "〜ので",
+   "rx": "ので",
+   "arti": "karena …",
+   "cara": "Bentuk biasa + ので",
+   "jml": 4,
+   "contoh": "{危険|きけん}なので{入|い}らないでください。",
+   "arti_contoh": "Berbahaya, jangan masuk.",
    "contoh_dari": "materi"
   },
   {
@@ -122,6 +144,17 @@
    "contoh_dari": "materi"
   },
   {
+   "id": "g-toshite",
+   "pola": "〜として",
+   "rx": "として",
+   "arti": "sebagai …",
+   "cara": "Kata benda + として",
+   "jml": 3,
+   "contoh": "{重|おも}い{物|もの}を{持|も}つときは、{腰|こし}を{落|お}として{持|も}ちます。",
+   "arti_contoh": "Saat mengangkat barang berat, turunkan pinggang.",
+   "contoh_dari": "materi"
+  },
+  {
    "id": "g-towa",
    "pola": "〜とは",
    "rx": "とは",
@@ -133,14 +166,25 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-node",
-   "pola": "〜ので",
-   "rx": "ので",
-   "arti": "karena …",
-   "cara": "Bentuk biasa + ので",
+   "id": "g-teoku",
+   "pola": "〜ておきます",
+   "rx": "ておきま|ておく",
+   "arti": "… dulu (persiapan)",
+   "cara": "KK bentuk て + おきます",
    "jml": 3,
-   "contoh": "{危険|きけん}なので{入|い}らないでください。",
-   "arti_contoh": "Berbahaya, jangan masuk.",
+   "contoh": "{通路|つうろ}をあけておきます。",
+   "arti_contoh": "Mengosongkan lorong.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-sugiru",
+   "pola": "〜すぎる",
+   "rx": "すぎる|すぎて|すぎない",
+   "arti": "terlalu …",
+   "cara": "KK/Kata sifat (tanpa い) + すぎる",
+   "jml": 3,
+   "contoh": "{荷物|にもつ}が{重|おも}すぎるとき、どうしますか。",
+   "arti_contoh": "Jika barang terlalu berat…",
    "contoh_dari": "materi"
   },
   {
@@ -155,36 +199,14 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-toshite",
-   "pola": "〜として",
-   "rx": "として",
-   "arti": "sebagai …",
-   "cara": "Kata benda + として",
+   "id": "g-toiu",
+   "pola": "〜という",
+   "rx": "という",
+   "arti": "yang disebut …",
+   "cara": "Kutipan + という + kata benda",
    "jml": 2,
-   "contoh": "{重|おも}い{物|もの}を{持|も}つときは、{腰|こし}を{落|お}として{持|も}ちます。",
-   "arti_contoh": "Saat mengangkat barang berat, turunkan pinggang.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-teoku",
-   "pola": "〜ておきます",
-   "rx": "ておきま|ておく",
-   "arti": "… dulu (persiapan)",
-   "cara": "KK bentuk て + おきます",
-   "jml": 2,
-   "contoh": "{通路|つうろ}をあけておきます。",
-   "arti_contoh": "Mengosongkan lorong.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-sugiru",
-   "pola": "〜すぎる",
-   "rx": "すぎる|すぎて|すぎない",
-   "arti": "terlalu …",
-   "cara": "KK/Kata sifat (tanpa い) + すぎる",
-   "jml": 2,
-   "contoh": "{重|おも}すぎる{荷物|にもつ}は、{無理|むり}に{一人|ひとり}で{持|も}たないで、{手伝|てつだ}いをたのみます。",
-   "arti_contoh": "Barang yang terlalu berat jangan dipaksakan sendiri; minta bantuan.",
+   "contoh": "「{天地無用|てんちむよう}」は、{荷物|にもつ}をさかさまにしてはいけないという{意味|いみ}です。",
+   "arti_contoh": "Simbol 天地無用 berarti barang tidak boleh dibalik.",
    "contoh_dari": "materi"
   },
   {
@@ -199,6 +221,28 @@
    "contoh_dari": "materi"
   },
   {
+   "id": "g-kotogaaru",
+   "pola": "〜ことがあります",
+   "rx": "ことがあ",
+   "arti": "kadang …; pernah …",
+   "cara": "KK kamus/た + ことがあります",
+   "jml": 1,
+   "contoh": "{冷蔵倉庫|れいぞうそうこ}の{中|なか}の{床|とこ}は、{氷|こおり}でぬれてすべりやすいことがあります。",
+   "arti_contoh": "Lantai gudang pendingin bisa licin karena es.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-nagara",
+   "pola": "〜ながら",
+   "rx": "ながら",
+   "arti": "sambil …",
+   "cara": "KK bentuk ます (tanpa ます) + ながら",
+   "jml": 1,
+   "contoh": "{重|おも}い{物|もの}を{持|も}つときは、{体|からだ}をひねりながら{持|も}ち{上|あ}げます。",
+   "arti_contoh": "Mengangkat barang berat sambil memutar badan.",
+   "contoh_dari": "materi"
+  },
+  {
    "id": "g-maeni",
    "pola": "〜る前に",
    "rx": "る前に|まえに|る前は",
@@ -207,17 +251,6 @@
    "jml": 1,
    "contoh": "{危険品倉庫|きけんひんそうこ}に{入|い}る{前|まえ}に{確認|かくにん}します。",
    "arti_contoh": "Memeriksa sebelum masuk gudang bahan berbahaya.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-toiu",
-   "pola": "〜という",
-   "rx": "という",
-   "arti": "yang disebut …",
-   "cara": "Kutipan + という + kata benda",
-   "jml": 1,
-   "contoh": "「{天地無用|てんちむよう}」のマークは、{荷物|にもつ}をさかさまにしてよいという{意味|いみ}です。",
-   "arti_contoh": "Tanda 天地無用 berarti boleh membalik barang.",
    "contoh_dari": "materi"
   },
   {
@@ -240,6 +273,28 @@
    "jml": 1,
    "contoh": "{作業手順書|さぎょうてじゅんしょ}のとおりに{作業|さぎょう}します。{自分|じぶん}の{考|かんが}えで{手順|てじゅん}を{変|か}えてはいけません。",
    "arti_contoh": "Ikuti **作業手順書 (prosedur kerja tertulis)**; jangan mengubah cara kerja sendiri.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-yaado",
+   "pola": "〜や〜など",
+   "rx": "や[^。、]{1,12}など",
+   "arti": "… dan … dan sebagainya",
+   "cara": "A + や + B + など",
+   "jml": 1,
+   "contoh": "{燃|も}えやすい{薬品|やくひん}などを{保管|ほかん}する{倉庫|そうこ}はどれですか。",
+   "arti_contoh": "Gudang khusus untuk bahan mudah terbakar disebut…",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tamama",
+   "pola": "〜たまま / 〜のまま",
+   "rx": "たまま|のまま",
+   "arti": "dalam keadaan tetap …",
+   "cara": "KK bentuk た + まま",
+   "jml": 1,
+   "contoh": "{冷蔵倉庫|れいぞうそうこ}の{扉|とびら}は、{開|ひら}けたままにしておきます。",
+   "arti_contoh": "Pintu gudang pendingin dibiarkan terbuka.",
    "contoh_dari": "materi"
   }
  ]

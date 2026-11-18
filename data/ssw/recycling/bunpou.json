@@ -6,40 +6,7 @@
    "rx": "ています|ている|ていた|ていない",
    "arti": "sedang …; dalam keadaan …",
    "cara": "KK bentuk て + います",
-   "jml": 4,
-   "contoh": "{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。",
-   "arti_contoh": "Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-temoii",
-   "pola": "〜てもいいです",
-   "rx": "てもいい|てもよい|てもかまいま",
-   "arti": "boleh …",
-   "cara": "KK bentuk て + もいいです",
-   "jml": 3,
-   "contoh": "{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。",
-   "arti_contoh": "Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-toki",
-   "pola": "〜とき",
-   "rx": "(る|た|い|だ|の)とき|ときは",
-   "arti": "ketika …; saat …",
-   "cara": "KK/Kata sifat bentuk biasa + とき",
-   "jml": 3,
-   "contoh": "{機械|きかい}を{掃除|そうじ}するときは、{先|さき}に{電源|でんげん}を{切|き}ります。",
-   "arti_contoh": "Saat membersihkan mesin, matikan listrik terlebih dulu.",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-temo",
-   "pola": "〜ても",
-   "rx": "ても|でも(?!あり)",
-   "arti": "meskipun …",
-   "cara": "KK bentuk て + も",
-   "jml": 3,
+   "jml": 6,
    "contoh": "{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。",
    "arti_contoh": "Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.",
    "contoh_dari": "materi"
@@ -50,9 +17,42 @@
    "rx": "(く|に)なる|(く|に)なり|(く|に)なっ|(く|に)なら",
    "arti": "menjadi …",
    "cara": "Kata sifat い (い→く) / な (→に) + なる",
-   "jml": 3,
+   "jml": 6,
    "contoh": "{職長|しょくちょう}になります。",
    "arti_contoh": "Menjadi kepala regu.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-temoii",
+   "pola": "〜てもいいです",
+   "rx": "てもいい|てもよい|てもかまいま",
+   "arti": "boleh …",
+   "cara": "KK bentuk て + もいいです",
+   "jml": 5,
+   "contoh": "{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。",
+   "arti_contoh": "Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toki",
+   "pola": "〜とき",
+   "rx": "(る|た|い|だ|の)とき|ときは",
+   "arti": "ketika …; saat …",
+   "cara": "KK/Kata sifat bentuk biasa + とき",
+   "jml": 5,
+   "contoh": "{機械|きかい}を{掃除|そうじ}するときは、{先|さき}に{電源|でんげん}を{切|き}ります。",
+   "arti_contoh": "Saat membersihkan mesin, matikan listrik terlebih dulu.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-temo",
+   "pola": "〜ても",
+   "rx": "ても|でも(?!あり)",
+   "arti": "meskipun …",
+   "cara": "KK bentuk て + も",
+   "jml": 5,
+   "contoh": "{動|うご}いている{破砕|はさい}{機|き}に、{手|て}を{入|い}れてもよいです。",
+   "arti_contoh": "Boleh memasukkan tangan ke mesin penghancur yang sedang berjalan.",
    "contoh_dari": "materi"
   },
   {
@@ -61,9 +61,53 @@
    "rx": "ために|ための",
    "arti": "untuk …; demi …; karena …",
    "cara": "KK kamus / Kata benda + の + ために",
-   "jml": 2,
+   "jml": 3,
    "contoh": "{粉|ふん}じんを{吸|す}わないために、{何|なに}をつけますか。",
    "arti_contoh": "Apa yang dipakai untuk mencegah menghirup debu?",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tekara",
+   "pola": "〜てから",
+   "rx": "てから|でから",
+   "arti": "setelah …",
+   "cara": "KK bentuk て + から",
+   "jml": 3,
+   "contoh": "{安全|あんぜん}・{衛生|えいせい}{教育|きょういく}を{受|う}けてから、{現場|げんば}で{仕事|しごと}をします。",
+   "arti_contoh": "Ikuti pendidikan keselamatan dan kesehatan sebelum bekerja di lapangan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-towa",
+   "pola": "〜とは",
+   "rx": "とは",
+   "arti": "yang dimaksud … itu …",
+   "cara": "Kata benda + とは (definisi)",
+   "jml": 3,
+   "contoh": "{廃棄物|はいきぶつ}の{体積|たいせき}を{小|ちー}さくすることは{何|なん}ですか。",
+   "arti_contoh": "Mengurangi volume limbah disebut…",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-rareru",
+   "pola": "〜られる / 〜れる",
+   "rx": "られる|られて|られた|られま",
+   "arti": "dapat …; di- (pasif/potensial)",
+   "cara": "KK grup 2: 〜られる; grup 1: 〜れる/〜われる",
+   "jml": 3,
+   "contoh": "フォークリフトの{講習|こうしゅう}は、1{年目|ねんめ}から{受|う}けられます。",
+   "arti_contoh": "Pelatihan forklift bisa diikuti sejak tahun pertama.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kotogaaru",
+   "pola": "〜ことがあります",
+   "rx": "ことがあ",
+   "arti": "kadang …; pernah …",
+   "cara": "KK kamus/た + ことがあります",
+   "jml": 2,
+   "contoh": "{廃棄物|はいきぶつ}の{中|なか}に{入|いっ}っていて、けがの{原因|げんいん}になることがあるものはどれですか。",
+   "arti_contoh": "Bahaya yang perlu diwaspadai di dalam limbah adalah…",
    "contoh_dari": "materi"
   },
   {
@@ -78,6 +122,17 @@
    "contoh_dari": "materi"
   },
   {
+   "id": "g-maeni",
+   "pola": "〜る前に",
+   "rx": "る前に|まえに|る前は",
+   "arti": "sebelum …",
+   "cara": "KK kamus + 前に",
+   "jml": 2,
+   "contoh": "{機械|きかい}を{修理|しゅうり}する{前|まえ}に、スイッチを{切|き}ってロックします。",
+   "arti_contoh": "Sebelum memperbaiki mesin, matikan dan kunci.",
+   "contoh_dari": "materi"
+  },
+  {
    "id": "g-tara",
    "pola": "〜たら",
    "rx": "たら|だら",
@@ -89,25 +144,14 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-towa",
-   "pola": "〜とは",
-   "rx": "とは",
-   "arti": "yang dimaksud … itu …",
-   "cara": "Kata benda + とは (definisi)",
+   "id": "g-gotoni",
+   "pola": "〜ごとに",
+   "rx": "ごとに",
+   "arti": "setiap …",
+   "cara": "Kata benda + ごとに",
    "jml": 2,
-   "contoh": "{廃棄物|はいきぶつ}の{体積|たいせき}を{小|ちー}さくすることは{何|なん}ですか。",
-   "arti_contoh": "Mengurangi volume limbah disebut…",
-   "contoh_dari": "materi"
-  },
-  {
-   "id": "g-rareru",
-   "pola": "〜られる / 〜れる",
-   "rx": "られる|られて|られた|られま",
-   "arti": "dapat …; di- (pasif/potensial)",
-   "cara": "KK grup 2: 〜られる; grup 1: 〜れる/〜われる",
-   "jml": 2,
-   "contoh": "フォークリフトの{講習|こうしゅう}は、1{年目|ねんめ}から{受|う}けられます。",
-   "arti_contoh": "Pelatihan forklift bisa diikuti sejak tahun pertama.",
+   "contoh": "{廃棄物|はいきぶつ}を{種類|しゅるい}ごとに{分|わ}ける{作業|さぎょう}は{何|なん}ですか。",
+   "arti_contoh": "Memilah limbah menurut jenis disebut…",
    "contoh_dari": "materi"
   },
   {
@@ -144,17 +188,6 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-tekara",
-   "pola": "〜てから",
-   "rx": "てから|でから",
-   "arti": "setelah …",
-   "cara": "KK bentuk て + から",
-   "jml": 1,
-   "contoh": "{機械|きかい}を{掃除|そうじ}や{修理|しゅうり}するときは、{必|かなら}ず{止|と}めて、{電源|でんげん}を{切|き}ってから{始|はじ}めます。",
-   "arti_contoh": "Sebelum membersihkan atau memperbaiki mesin: **matikan dan kunci** (stop & lock) agar tidak menyala tiba-tiba.",
-   "contoh_dari": "materi"
-  },
-  {
    "id": "g-toshite",
    "pola": "〜として",
    "rx": "として",
@@ -177,14 +210,25 @@
    "contoh_dari": "materi"
   },
   {
-   "id": "g-gotoni",
-   "pola": "〜ごとに",
-   "rx": "ごとに",
-   "arti": "setiap …",
-   "cara": "Kata benda + ごとに",
+   "id": "g-zuni",
+   "pola": "〜ずに / 〜ないで",
+   "rx": "ずに|ないで(?!ください)",
+   "arti": "tanpa …",
+   "cara": "KK bentuk ない + で / ずに",
    "jml": 1,
-   "contoh": "{廃棄物|はいきぶつ}を{種類|しゅるい}ごとに{分|わ}ける{作業|さぎょう}は{何|なん}ですか。",
-   "arti_contoh": "Memilah limbah menurut jenis disebut…",
+   "contoh": "{廃棄物|はいきぶつ}を{受け入|うけい}れた{後|のち}は、{選別|せんべつ}をしないでそのまま{搬出|はんしゅつ}します。",
+   "arti_contoh": "Setelah menerima limbah, langsung dikeluarkan tanpa dipilah.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tamama",
+   "pola": "〜たまま / 〜のまま",
+   "rx": "たまま|のまま",
+   "arti": "dalam keadaan tetap …",
+   "cara": "KK bentuk た + まま",
+   "jml": 1,
+   "contoh": "{廃棄物|はいきぶつ}を{受け入|うけい}れた{後|のち}は、{選別|せんべつ}をしないでそのまま{搬出|はんしゅつ}します。",
+   "arti_contoh": "Setelah menerima limbah, langsung dikeluarkan tanpa dipilah.",
    "contoh_dari": "materi"
   },
   {
