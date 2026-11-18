@@ -1,12 +1,13 @@
 /* Shop items that match character.js CATALOG. Seeded at runtime. */
-import { CATALOG, CATALOG_LABELS } from "./character.js";
+import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261118z6";
 
-export function allShopItems() {
+export function allShopItems(termasukGacha = false) {
   const out = [];
   for (const [kategori, items] of Object.entries(CATALOG)) {
     for (const [id, item] of Object.entries(items)) {
       if (item.equipped_default) continue;  // skip defaults (sudah owned)
       if (item.harga === 0) continue;
+      if (item.gachaOnly && !termasukGacha) continue;   // sayap: hanya dari gacha
       out.push({
         kategori,
         kategori_label: CATALOG_LABELS[kategori],
@@ -15,6 +16,8 @@ export function allShopItems() {
         harga: item.harga,
         rarity: item.rarity || "common",
         unlock_lv: item.unlock_lv || 1,
+        gachaOnly: !!item.gachaOnly,
+        g: item.g || null,
       });
     }
   }

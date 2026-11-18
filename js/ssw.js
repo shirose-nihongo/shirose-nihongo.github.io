@@ -14,8 +14,215 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261113zl";
-import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261113zl";
+} from "./ssw-core.js?v=20261118s";
+import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118k";
+
+/* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
+const PDF_SUMBER = {
+  "agriculture": [
+    { t: "試験実施要領 1号 農業技能測定試験 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
+    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true },
+    { t: "Soal contoh resmi 農業技能測定試験 (12 soal, termasuk bergambar)", u: "https://asat-nca.jp/jp/ews/uploads/2021/07/sample.pdf", ext: true },
+    { t: "Teks belajar resmi 耕種農業 (JP, 全国農業会議所)", u: "https://asat-nca.jp/jp/images/ASAT_CF_jpn2.pdf", ext: true },
+    { t: "Teks belajar resmi — versi Bahasa Indonesia & bahasa lain", u: "http://asat-nca.jp/id/textbook/", ext: true },
+    { t: "Teks belajar 2号 耕種農業 (JP)", u: "https://asat-nca.jp/jp/images/ASAT_CF2_jpn1.pdf", ext: true }
+  ],
+  "livestock": [
+    { t: "試験実施要領 1号 農業技能測定試験 — 畜産農業 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
+    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true },
+    { t: "Soal contoh resmi 農業技能測定試験 (12 soal, termasuk bergambar)", u: "https://asat-nca.jp/jp/ews/uploads/2021/07/sample.pdf", ext: true },
+    { t: "Teks belajar resmi 畜産農業 (JP, 全国農業会議所)", u: "https://asat-nca.jp/jp/images/ASAT_LF_jpn3.pdf", ext: true },
+    { t: "Teks belajar resmi — versi Bahasa Indonesia & bahasa lain", u: "http://asat-nca.jp/id/textbook/", ext: true },
+    { t: "Teks belajar 2号 畜産農業 (JP)", u: "https://asat-nca.jp/jp/images/ASAT_LF2_jpn1.pdf", ext: true }
+  ],
+  "fishery": [
+    { t: "学習用テキスト 漁業一般 (大日本水産会, rev. 2025)", u: "https://suisankai.or.jp/wp-content/uploads/2025/09/%E6%BC%81%E6%A5%AD%E4%B8%80%E8%88%AC2025%E6%9B%B4%E6%96%B0.pdf", ext: true },
+    { t: "学習用テキスト 釣り漁業 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2020/01/%E2%91%A220191218%E9%87%A3%E6%BC%81%E6%A5%AD.pdf", ext: true },
+    { t: "学習用テキスト 漁業安全 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2023/12/%E6%BC%81%E6%A5%AD%E5%AE%89%E5%85%A8.pdf", ext: true },
+    { t: "試験実施状況報告書 R4 漁業分野 (水産庁)", u: "https://www.moj.go.jp/isa/content/001401785.pdf", ext: true },
+    { t: "Soal contoh resmi 1号 学科 + 実技 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2022/01/%E5%87%BA%E9%A1%8C%E4%BE%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%95%8F%E9%A1%8C.pdf", ext: true },
+    { t: "Halaman resmi ujian & teks belajar (JP/Indonesia) — 大日本水産会", u: "https://suisankai.or.jp/skill/", ext: true }
+  ],
+  "accommodation": [
+    { t: "宿泊分野特定技能1号評価試験 実施要領 (観光庁)", u: "https://www.mlit.go.jp/kankocho/content/001719490.pdf", ext: true },
+    { t: "令和7年 宿泊分野 試験実施状況 (観光庁)", u: "https://www.mlit.go.jp/kankocho/content/002027832.pdf", ext: true }
+  ],
+  "kaigo": [
+    { t: "介護特定技能評価試験(技能) 試験実施要領 (MHLW)", u: "https://www.mhlw.go.jp/content/001706488.pdf", ext: true }
+  ],
+  "kaigo-jp": [
+    { t: "介護特定技能評価試験(技能) 試験実施要領 (MHLW)", u: "https://www.mhlw.go.jp/content/001706488.pdf", ext: true }
+  ],
+  "railway-electrical": [
+    { t: "受験案内 電気設備整備 (resmi 鉄道電業安全協会)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-juken-annai.pdf" },
+    { t: "試験実施要領 電気設備整備 (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-shiken-jisshi-youryou.pdf" },
+    { t: "学科 試験サンプル (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-gakka-sample.pdf" },
+    { t: "実技 試験サンプル (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-jitsugi-sample.pdf" },
+    { t: "試験結果 2025年度 (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-shiken-kekka.pdf" }
+  ],
+  "railway-track": [
+    { t: "受験案内 軌道整備 (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_efac198c2698498586d88991447b6152.pdf", ext: true },
+    { t: "試験実施要領 軌道整備 (resmi MLIT/MOJ)", u: "https://www.moj.go.jp/isa/content/001435333.pdf", ext: true },
+    { t: "学科 試験問題サンプル (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_fc3a811b535a466087a0367a267e0435.pdf", ext: true },
+    { t: "実技 試験問題サンプル (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_27b103ed718044d8a0937541ff752c9a.pdf", ext: true }
+  ],
+  "shipbuilding": [
+    { t: "溶接 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-guidance.pdf" },
+    { t: "溶接 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-point.pdf" },
+    { t: "溶接 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-sample.pdf" },
+    { t: "塗装 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-guidance.pdf" },
+    { t: "塗装 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-point.pdf" },
+    { t: "塗装 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-sample.pdf" },
+    { t: "鉄工 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-guidance.pdf" },
+    { t: "鉄工 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-point.pdf" },
+    { t: "鉄工 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-sample.pdf" },
+    { t: "仕上げ — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-guidance.pdf" },
+    { t: "仕上げ — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-point.pdf" },
+    { t: "仕上げ — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-sample.pdf" },
+    { t: "機械加工 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-guidance.pdf" },
+    { t: "機械加工 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-point.pdf" },
+    { t: "機械加工 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-sample.pdf" },
+    { t: "電気機器組立て — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-guidance.pdf" },
+    { t: "電気機器組立て — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-point.pdf" },
+    { t: "電気機器組立て — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-sample.pdf" }
+  ],
+  "linen-supply": [
+    { t: "試験基準 初級・専門級 (resmi JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-kizyun181009.pdf" },
+    { t: "Soal contoh 学科 初級 (resmi)", u: "assets/ssw/linen-supply/pdf/jlsa-test2019.pdf" },
+    { t: "Soal contoh 学科 専門級 (resmi)", u: "assets/ssw/linen-supply/pdf/jlsa-test-senmon.pdf" },
+    { t: "Statistik pelaksanaan ujian (JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-jokyo-r01-r07.pdf" }
+  ],
+  "aviation-gh": [
+    { t: "Teks belajar resmi GH — Text 1: Keselamatan & Kualitas (JP, 26 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text1-anzen-hinshitsu-rev2.pdf" },
+    { t: "Teks belajar resmi GH — Text 2 (JP, 52 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text2-gh-rev2-1.pdf" },
+    { t: "Teks GH edisi 1 (arsip, 40 hal.)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text-1go.pdf" },
+    { t: "Soal contoh resmi GH", u: "assets/ssw/aviation-gh/pdf/jaea-gh-sample-questions.pdf" },
+    { t: "Halaman dukungan JAEA (GH) ↗", u: "https://exam.jaea.or.jp/?page_id=356", ext: true }
+  ],
+  "aviation-am": [
+    { t: "Teks 1: Teknik dasar (締結・電気計測)", u: "assets/ssw/aviation-am/pdf/jaea-am-text1-kihon-gijutsu.pdf" },
+    { t: "Teks 2: Keselamatan kerja & kualitas", u: "assets/ssw/aviation-am/pdf/jaea-am-text2-anzen-hinshitsu.pdf" },
+    { t: "Teks 3: Gambaran umum pesawat", u: "assets/ssw/aviation-am/pdf/jaea-am-text3-kokuki-gaiyo.pdf" },
+    { t: "Soal contoh resmi AM", u: "assets/ssw/aviation-am/pdf/jaea-am-sample-questions.pdf" }
+  ],
+  "forestry": [
+    { t: "Soal contoh 学科 + kunci jawaban (resmi)", u: "assets/ssw/forestry/pdf/ringyo_tokutei_gakka_sumple_250724.pdf" },
+    { t: "実技試験問題 2026 (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_test.pdf" },
+    { t: "Prosedur ujian praktik (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_process.pdf" },
+    { t: "Q&A APD & alat kerja (resmi)", u: "assets/ssw/forestry/pdf/specfic_faq_260708.pdf" },
+    { t: "Panduan peserta 2026 (受験案内)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-juken-annai.pdf" },
+    { t: "Ringkasan ujian 2026 (試験概要)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-shiken-gaiyou.pdf" },
+    { t: "Pedoman pelaksanaan ujian (試験実施要領, Rinya-cho)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-shiken-jisshi-yoryo.pdf" },
+    { t: "Pedoman penerimaan 受入れ手引 (Rinya-cho)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-ukeire-tebiki.pdf" },
+    { t: "Apa itu pekerjaan kehutanan (林業ってどんなもの)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-tte-donna-mono.pdf" },
+    { t: "Lampiran pedoman operasional bidang", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-unyo-yoryo-bessatsu.pdf" },
+    { t: "Laporan hasil pelatihan kehutanan", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-seika-hokokusho.pdf" }
+  ],
+  "railway-vehicle": [
+    { t: "Teks belajar resmi 車両製造 (JP, 224 hal.)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakushu-text-1go.pdf" },
+    { t: "Contoh soal 学科 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakka-sample.pdf" },
+    { t: "Contoh soal 実技 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-jitsugi-sample.pdf" },
+    { t: "Panduan ujian 試験案内 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-shiken-annai.pdf" },
+    { t: "Hasil ujian 2026 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-kekka-2026.pdf" }
+  ],
+  "logistics": [
+    { t: "Pedoman ujian 1号 (試験実施要領, MLIT)", u: "assets/ssw/docs-resmi/logistics/jitsushi-yoryo-1go.pdf" },
+    { t: "Lingkup & rincian ujian (試験基準, 1 hal.)", u: "assets/ssw/docs-resmi/logistics/shiken-kijun-1go.pdf" },
+    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/logistics/bunya-unyo-hoshin.pdf" },
+    { t: "Standar & contoh ujian (基準・奨励 特定技能)", u: "assets/ssw/docs-resmi/logistics/kijun-shorei-tokutei.pdf" },
+    { t: "Dokumen resmi MLIT (1)", u: "assets/ssw/docs-resmi/logistics/dokumen-002018512.pdf" },
+    { t: "Dokumen resmi MLIT (2)", u: "assets/ssw/docs-resmi/logistics/dokumen-002027344.pdf" }
+  ],
+  "recycling": [
+    { t: "Program pelatihan & karier (環境省)", u: "assets/ssw/docs-resmi/recycling/ikusei-career-program.pdf" },
+    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/recycling/bunya-unyo-hoshin.pdf" },
+    { t: "Semua dokumen resmi (halaman)", u: "dokumen-resmi.html", ext: 1 },
+    { t: "Pedoman pelatihan — naskah utama", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-honbun.pdf" },
+    { t: "Pedoman pelatihan — lampiran tabel (別表)", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-beppyo.pdf" },
+    { t: "Pedoman pelatihan — lampiran (別紙)", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-besshi.pdf" }
+  ],
+  "wood-industry": [
+    { t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" },
+    { t: "Buku versi Indonesia (ringkasan Shirose)", u: "assets/ssw/wood-industry/pdf/shirose-ringkasan-indonesia-wood-industry.pdf" }
+  ],
+  "auto-transport": [
+    { t: "Teks resmi Truk (JP, 242 hal.)", u: "assets/ssw/auto-transport/pdf/jta-truck-gakushu-text-ja.pdf" },
+    { t: "Buku versi Indonesia (ringkasan Shirose)", u: "assets/ssw/auto-transport/pdf/shirose-ringkasan-indonesia-auto-transport.pdf" },
+    { t: "Teks resmi Bus (JP, 68 hal.) — situs Asosiasi Bus", u: "https://www.bus.or.jp/news/16554/", ext: 1 }
+  ],
+  "auto-maintenance": [
+    { t: "JICA: みてまなぶ！自動車整備の日本語", u: "assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf" },
+    { t: "JICA: Koleksi ilustrasi かいて おぼえる", u: "assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf" },
+    { t: "Contoh soal resmi 1号 学科 ○× (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-1go-gakka.pdf" },
+    { t: "Contoh soal resmi 1号 実技 二択 (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-1go-jitsugi.pdf" },
+    { t: "Contoh soal resmi 2号 学科 4 pilihan (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-2go-gakka.pdf" },
+    { t: "Kunci jawaban contoh 2号 学科 (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-kunci-2go-gakka.pdf" }
+  ],
+  "jaim-machine-metal": [
+    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-machine-metal/pdf/panduan-belajar-id.pdf" },
+    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-machine-metal/pdf/panduan-belajar-jp.pdf" },
+    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-machine-metal/pdf/errata-jp.pdf" },
+    { t: "Contoh soal resmi 1号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kikai-kinzoku-kako.pdf" },
+    { t: "Contoh soal resmi 2号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kikai-kinzoku-kako.pdf" },
+    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
+    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
+    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
+    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
+    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
+    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
+    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
+    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
+    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
+    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
+    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
+    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
+    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
+    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
+  ],
+  "jaim-elec-electronic": [
+    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-id.pdf" },
+    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-jp.pdf" },
+    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/errata-jp.pdf" },
+    { t: "Contoh soal resmi 1号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-denki-denshi-kiki-kumitate.pdf" },
+    { t: "Contoh soal resmi 2号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-denki-denshi-kiki-kumitate.pdf" },
+    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
+    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
+    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
+    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
+    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
+    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
+    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
+    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
+    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
+    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
+    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
+    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
+    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
+    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
+  ],
+  "jaim-metal-surface": [
+    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-id.pdf" },
+    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-jp.pdf" },
+    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-metal-surface/pdf/errata-jp.pdf" },
+    { t: "Contoh soal resmi 1号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kinzoku-hyomen-shori.pdf" },
+    { t: "Contoh soal resmi 2号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kinzoku-hyomen-shori.pdf" },
+    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
+    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
+    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
+    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
+    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
+    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
+    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
+    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
+    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
+    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
+    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
+    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
+    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
+    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
+  ]
+};
+const pdfButtons = (slug) => (PDF_SUMBER[slug] || []).map(x => `<a class="btn ghost" href="${esc(x.u)}" target="_blank" rel="noopener">📄 ${esc(x.t)}${x.ext ? " ↗" : ""}</a>`).join("");
 
 let FB = null;
 export function initSsw(fb) { FB = fb; initSswCore(fb); }
@@ -69,7 +276,9 @@ function say(text, slug, read) {
 }
 
 const crumbs = (parts) => `<div class="sw-crumbs">${parts.map((p, i) => p.go ? `<a onclick="${p.go}">${p.t}</a>` : `<b>${p.t}</b>`).join(" <span>›</span> ")}</div>`;
-const wrap = (inner, cls = "") => `<div class="sw-wrap ${cls}">${inner}</div>`;
+const rkBar = `<div class="sw-rkbar"><button type="button" class="btn ghost sm" onclick="sswGo('shop')">🛒 Shop</button>${window.__gachaOn === false ? "" : `<button type="button" class="btn ghost sm" onclick="sswGo('gacha')">🎰 Gacha</button>`}<button type="button" class="btn ghost sm" onclick="route('ssw-rangkuman')" title="Buka Rangkuman SSW">📒 Rangkuman SSW</button></div>`;
+const charaPanel = () => (window.sswCharaPanel ? window.sswCharaPanel() : "");
+const wrap = (inner, cls = "") => `<div class="sw-wrap ${cls}">${rkBar}${inner}</div>`;
 const msgPage = (emoji, title, text, back = "route('ssw')") => wrap(`
   <div class="sw-panel sw-center"><div class="sw-emoji">${emoji}</div><h2>${title}</h2><p class="sw-muted">${text}</p>
   <button class="btn" onclick="${back}">← Kembali</button></div>`);
@@ -78,8 +287,7 @@ const noAccess = () => msgPage("🔒", "Akses SSW belum dibuka", "Guru belum mem
 /** Cek akses bidang. Konfigurasi dibaca dari Firestore (dilindungi rules), bukan sekadar menyembunyikan tombol. */
 async function gate(slug) {
   if (!sswAllowed()) return { err: noAccess() };
-  await loadKelasAkses();
-  const b = await bidangBySlug(slug);
+  const [, b] = await Promise.all([loadKelasAkses(), bidangBySlug(slug)]);
   if (!b) return { err: msgPage("🧭", "Bidang tidak ditemukan", "Bidang SSW ini belum terdaftar.") };
   if (!sswAllowed(slug)) return { err: msgPage("🔒", `Akses ${esc(b.nama)} belum dibuka`, "Guru belum membuka bidang ini untuk akun atau kelasmu. Hubungi gurumu. Progres belajarmu tetap tersimpan.") };
   if (!b.aktif && !isGuru()) return { err: msgPage("🔒", `${esc(b.nama)} belum tersedia`, "Materi bidang ini sedang ditutup guru atau belum dibuka. Progres belajarmu tidak hilang dan tetap tersimpan.") };
@@ -98,10 +306,13 @@ const visibleChapters = (b, pack) => pack.chapters.filter(c => siswaBolehBab(b, 
 async function renderHub() {
   applyRuby();
   if (!sswAllowed()) return noAccess();
-  const list = await loadBidang();
-  await loadKelasAkses();
+  const [list] = await Promise.all([loadBidang(), loadKelasAkses()]);
   const guru = isGuru();
-  const isl = list.filter(b => !b.induk).map((b, i) => {
+  const mine = (b) => b.aktif && b.hasContent && sswAllowed(b.slug);
+  const base = list.filter(b => !b.induk);
+  const ordered = guru ? base : [...base.filter(mine), ...base.filter(b => !mine(b))];   // siswa: bidang yang dipelajari tampil paling depan
+  const myList = guru ? [] : base.filter(mine);
+  const isl = ordered.map((b, i) => {
     const open = b.aktif || guru;
     const tag = b.aktif ? (!b.hasContent ? "Segera" : sswAllowed(b.slug) ? "Tersedia" : "Terkunci") : (guru ? "Nonaktif · guru" : "Belum tersedia");
     const art = b.gambar ? `<img class="sw-isl-img" src="${esc(b.gambar)}" alt="" loading="lazy">` : islandSVG(b.tema || "generic", { dim: !open });
@@ -115,8 +326,10 @@ async function renderHub() {
       <button class="sw-back" onclick="route('pilih-level')">← Pilih mode belajar</button>
       ${guru ? `<button class="sw-back" onclick="location.href='./teacher.html#ssw'">師 Kelola SSW</button>` : ""}
     </div>
+    ${charaPanel()}
     <div class="sw-head"><div class="jp">特定技能 · 世界の学習島</div><h1>SSW — Pilih Bidang</h1>
       <p>Ketuk sebuah pulau untuk melihat bidangnya. Tiap pulau adalah satu bidang pekerjaan SSW.</p></div>
+    ${myList.length ? `<div class="sw-panel sw-mine"><h2>🎓 Bidangmu</h2><div class="sw-actions left">${myList.map(b => `<button class="btn" onclick="route('ssw-peta/${esc(b.slug)}')">${esc(b.nama)} <span class="jp">${esc(b.jp || "")}</span></button>`).join("")}</div></div>` : ""}
     <div class="sw-world" id="sw-world">${isl || '<div class="sw-muted">Belum ada bidang.</div>'}</div>
     <div class="sw-sheet" id="sw-sheet" hidden></div>
   </div>`;
@@ -169,6 +382,7 @@ async function renderPeta([slug]) {
   return `<div class="sw-wrap sw-mapwrap">
     <div class="sw-sky" aria-hidden="true"><i class="sw-cloud c1"></i><i class="sw-cloud c2"></i><i class="sw-cloud c3"></i></div>
     ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama) }])}
+    ${charaPanel()}
     <div class="sw-head compact"><div class="jp">${esc(b.jp || "")}</div><h1>${esc(b.nama)}</h1><p>Ketuk sebuah bangunan untuk masuk ke babnya.</p></div>
     ${draftNote}
     <div class="sw-map sw-map-p">${mapSVG(nodes, true)}</div>
@@ -176,11 +390,14 @@ async function renderPeta([slug]) {
     <div class="sw-actions">
       ${last ? `<button class="btn" onclick="route('${esc(last.route)}')">▶ Lanjutkan: ${esc(last.label)}</button>` : ""}
       <button class="btn ghost" onclick="route('ssw-hafal/${slug}')">🃏 Flashcard${st.due ? ` · ${st.due} jatuh tempo` : ""}</button>
-      <button class="btn ghost" onclick="route('ssw-kosa/${slug}/all')">📚 Kosakata (${st.total})</button>
+      <button class="btn ghost" onclick="route('ssw-kosa/${slug}/all')">📚 Kosakata (${st.total})</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/katakana')">カ Katakana</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/kanji')">字 Kanji</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/bunpou')">文 Bunpou</button>
+      ${pack.idx.diagram ? `<button class="btn ghost" onclick="route('ssw-diagram/${slug}')">🔧 Diagram Interaktif</button>` : ""}
       ${pack.idx.nobook ? "" : `<button class="btn ghost" onclick="route('ssw-buku/${slug}/${getLang()}/1')">📖 Buku interaktif</button>`}
       <button class="btn ghost" onclick="route('ssw-kuis/${slug}')">📝 Kuis</button>
       <button class="btn" onclick="route('ssw-hafal/${slug}')">🃏 Hafalan</button>
       <button class="btn gold" onclick="route('ssw-rank/${slug}')">🏆 Leaderboard</button>
+      <button class="btn ghost" onclick="sswGo('shop')">🛒 Shop</button>${window.__gachaOn === false ? "" : `<button class="btn ghost" onclick="sswGo('gacha')">🎰 Gacha</button>`}
+      ${pdfButtons(slug)}
     </div>
     <div class="sw-attr">Materi: ${esc(pack.chapters[0]?.source || "")}</div>
   </div>`;
@@ -256,28 +473,31 @@ function figAnchors(pack, s, lang, blocks) {
 function figsBar(pick) {
   return pick.length ? `<div class="sw-figbar"><button type="button" class="btn ghost" onclick="SSW.figOpen(CUR_SLUG_PLACEHOLDER,null,0)">🖼 ${pick.length} gambar subbab ini</button><small class="sw-muted">Ketuk tombol 🖼 di samping paragraf untuk membuka gambar di pop-up.</small></div>` : "";
 }
-function summaryHTML(s) {
+function summaryHTML(s, ttl = "") {
   if (!s) return "";
-  const box = (t, cls, arr) => arr && arr.length ? `<div class="sw-sbox ${cls}"><h4>${t}</h4><ul>${arr.map(x => `<li>${rich(x)}</li>`).join("")}</ul></div>` : "";
-  return `<div class="sw-core">${rich(s.core)}</div>` +
-    box("Poin yang harus diingat", "pt", s.points) + box("Kesalahan yang harus dihindari", "av", s.avoid) + box("Berpotensi keluar di ujian", "ex", s.exam);
+  const rk = (lbl, x, n) => { const front = (ttl ? ttl + " · " : "") + lbl + (n ? " " + n : ""), back = plain(x); return `<button type="button" class="sw-rk" title="Masukkan ke Rangkuman SSW" aria-label="Masukkan ke Rangkuman SSW" data-f="${esc(front)}" data-b="${esc(back)}" onclick="SSW.rk(this)">📒＋</button>`; };
+  const box = (t, cls, arr, lbl) => arr && arr.length ? `<div class="sw-sbox ${cls}"><h4>${t}</h4><ul>${arr.map((x, i) => `<li>${rich(x)} ${rk(lbl, x, i + 1)}</li>`).join("")}</ul></div>` : "";
+  const all = [["Inti", [s.core]], ["Poin", s.points || []], ["Hindari", [].concat(s.avoid || [])], ["Ujian", [].concat(s.exam || [])]];
+  const allBtn = `<div class="sw-actions left" style="margin:6px 0"><button type="button" class="btn ghost sm" onclick="SSW.rkAll(this)" data-t="${esc(ttl)}" data-j="${esc(JSON.stringify(all.flatMap(([l, a]) => a.map((x, i) => [l, a.length > 1 ? i + 1 : 0, plain(x)]))))}">📒 Masukkan semua ringkasan ke Rangkuman SSW</button></div>`;
+  return `<div class="sw-core">${rich(s.core)} ${rk("Inti", s.core, 0)}</div>` + allBtn +
+    box("Poin yang harus diingat", "pt", s.points, "Poin") + box("Kesalahan yang harus dihindari", "av", s.avoid, "Hindari") + box("Berpotensi keluar di ujian", "ex", s.exam, "Ujian");
 }
 function flatSubs(b, pack) { const out = []; for (const c of visibleChapters(b, pack)) for (const s of c.subs) out.push({ c, s }); return out; }
 // Tombol ganti bahasa melayang (muncul saat halaman di-scroll turun) di halaman baca materi.
-window.__swLangFloat = (slug, subId, mode, lang) => {
+window.__swLangFloat = (slug, subId, mode, lang, book) => {
   document.getElementById("sw-langfloat")?.remove();
   if (window.__swLfOff) { window.__swLfOff(); window.__swLfOff = null; }
   const el = document.createElement("div");
   el.id = "sw-langfloat"; el.className = "sw-seg sm"; el.setAttribute("aria-label", "Ganti bahasa materi");
-  const mk = (l, t) => `<button type="button" class="${lang === l ? "on" : ""}" onclick="route('ssw-baca/${slug}/${subId}/${mode}/${l}')">${t}</button>`;
+  const mk = (l, t) => `<button type="button" class="${lang === l ? "on" : ""}" onclick="${book ? `SSW.bookLang('${l}')` : `route('ssw-baca/${slug}/${subId}/${mode}/${l}')`}">${t}</button>`;
   el.innerHTML = mk("jp", "日本語") + mk("id", "ID");
   document.body.append(el);
   const upd = () => {
-    if (!document.querySelector(".sw-lesson")) { el.remove(); window.removeEventListener("scroll", upd); return; }
-    el.classList.toggle("show", window.scrollY > 200);
+    if (!document.querySelector(book ? ".sw-book" : ".sw-lesson")) { el.remove(); clearInterval(iv); return; }
+    el.classList.add("show");
   };
-  window.addEventListener("scroll", upd, { passive: true });
-  window.__swLfOff = () => window.removeEventListener("scroll", upd);
+  const iv = setInterval(upd, 800);
+  window.__swLfOff = () => clearInterval(iv);
   upd();
 };
 async function renderBaca([slug, subId, mode, lang]) {
@@ -298,7 +518,7 @@ async function renderBaca([slug, subId, mode, lang]) {
   const fgBlocks = s.full?.[lang] || s.full?.id;
   const fg = mode === "lengkap" ? figAnchors(pack, s, lang, fgBlocks) : { pick: [], map: new Map() };
   window.__swFig = { slug, subId: s.id, lang, pick: fg.pick, n: 0, title: plain(L(s.title, lang)) };
-  const body = mode === "lengkap" ? blocksHTML(fgBlocks, fg.map) : summaryHTML(s.summary?.[lang] || s.summary?.id);
+  const body = mode === "lengkap" ? blocksHTML(fgBlocks, fg.map) : summaryHTML(s.summary?.[lang] || s.summary?.id, plain(L(s.title, lang)));
   setTimeout(() => window.SSW.linkVocab(slug), 0);
   setTimeout(() => window.__swLangFloat && window.__swLangFloat(slug, subId, mode, lang), 0);
   return wrap(`
@@ -344,6 +564,7 @@ async function renderBaca([slug, subId, mode, lang]) {
 
 /* ============================== BUKU INTERAKTIF ============================== */
 const BOOK = { zoom: 1 };
+const bookMode = () => { try { return localStorage.getItem("shirose-ssw-bookmode") === "page" ? "page" : "scroll"; } catch (e) { return "scroll"; } };
 async function renderBuku([slug, lang, page]) {
   const g = await gate(slug); if (g.err) return g.err;
   const { b, pack } = g;
@@ -351,23 +572,28 @@ async function renderBuku([slug, lang, page]) {
   const total = pack.idx.pages?.[lang] || pack.idx.pages?.[pack.idx.book] || 85;
   const pg = Math.max(0, Math.min(total - 1, parseInt(page, 10) || 1));
   setLang(lang); BOOK.zoom = 1;
+  const mode = bookMode();
   const other = lang === "jp" ? "id" : "jp";
-  const chips = flatSubs(b, pack).map(({ c, s }) => `<button class="sw-chip ${pg >= spages(s, lang)[0] && pg <= spages(s, lang)[1] ? "on" : ""}" onclick="route('ssw-buku/${slug}/${lang}/${spages(s, lang)[0]}')">${c.no}.${s.no}</button>`).join("");
+  const chips = flatSubs(b, pack).map(({ c, s }) => `<button class="sw-chip ${pg >= spages(s, lang)[0] && pg <= spages(s, lang)[1] ? "on" : ""}" onclick="SSW.bookTo(${spages(s, lang)[0]})">${c.no}.${s.no}</button>`).join("");
   setTimeout(() => window.SSW.bookInit(slug, lang, pg, total), 0);
   return `<div class="sw-book">
     <div class="sw-book-top">
       <button class="sw-back" onclick="goBack()">← Kembali</button>
-      <div class="sw-seg sm"><button class="${lang === "jp" ? "on" : ""}" onclick="route('ssw-buku/${slug}/jp/${pg}')">日本語</button><button class="${lang === "id" ? "on" : ""}" onclick="route('ssw-buku/${slug}/id/${pg}')">ID</button></div>
+      <div class="sw-seg sm"><button class="${lang === "jp" ? "on" : ""}" onclick="SSW.bookLang('jp')">日本語</button><button class="${lang === "id" ? "on" : ""}" onclick="SSW.bookLang('id')">ID</button></div>
+      <div class="sw-seg sm" title="Cara membaca buku"><button class="${mode === "page" ? "on" : ""}" onclick="SSW.bookMode('page')">📖 Geser</button><button class="${mode === "scroll" ? "on" : ""}" onclick="SSW.bookMode('scroll')">📜 Scroll</button></div>
       <span class="sw-pg">Hal. <b id="bk-n">${pg}</b> / ${total - 1}</span>
-      <button class="sw-chip" onclick="SSW.bookZoom()">🔍 Perbesar</button>
+      ${mode === "page" ? `<button class="sw-chip" onclick="SSW.bookZoom()">🔍 Perbesar</button>` : ""}
     </div>
     <div class="sw-book-chips">${chips}</div>
-    <div class="sw-book-stage" id="bk-stage"><span class="sw-zhint">🔍 Ketuk untuk memperbesar</span><img id="bk-img" alt="Halaman ${pg}" src="${pageFile(slug, lang, pg + 1)}" draggable="false"></div>
+    ${mode === "scroll" ? `<div class="sw-book-scroll" id="bk-scroll">${Array.from({ length: total }, (_, n) => `<div class="bk-pgw" data-p="${n}"><img loading="lazy" decoding="async" alt="Halaman ${n}" src="${pageFile(slug, lang, n + 1)}" draggable="false" onclick="SSW.zoomPage(this.src)"><span class="bk-pgno">${n}</span></div>`).join("")}</div>
+    <div class="sw-book-nav"><button class="btn ghost" onclick="SSW.bookGo(-1)">‹</button>
+      <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
+      <button class="btn" onclick="SSW.bookGo(1)">›</button></div>` : `<div class="sw-book-stage" id="bk-stage"><span class="sw-zhint">🔍 Ketuk untuk memperbesar</span><img id="bk-img" alt="Halaman ${pg}" src="${pageFile(slug, lang, pg + 1)}" draggable="false"></div>
     <div class="sw-book-nav"><button class="btn ghost" onclick="SSW.bookGo(-1)">‹ Sebelumnya</button>
       <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
-      <button class="btn" onclick="SSW.bookGo(1)">Berikutnya ›</button></div>
+      <button class="btn" onclick="SSW.bookGo(1)">Berikutnya ›</button></div>`}
     <div class="sw-attr">Sumber: ${esc(pack.chapters[0]?.source || "")}</div>
-  </div>`;
+  </div>` + (setTimeout(() => window.__swLangFloat && window.__swLangFloat(slug, "", "", lang, true), 0), "");
 }
 
 /* ============================== KOSAKATA ============================== */
@@ -406,11 +632,15 @@ function vRow(v, P, slug) {
   const srcs = (v.src || []).map(id => `<a onclick="SSW.go('${slug}','${id}')">${esc(id.replace(/^b(\d+)s(\d+)$/, "BAB $1.$2"))}</a>`).join(" · ");
   return `<details class="sw-vrow s-${s}"><summary><span class="jp k">${esc(v.kata)}</span><span class="m"><b>${esc(v.arti)}</b><small>${esc(v.kana)}${v.romaji ? " · " + esc(v.romaji) : ""}</small></span><i class="b">${lbl}</i>
     <button class="sw-chip" onclick="event.preventDefault();event.stopPropagation();SSW.sayWord('${slug}','${v.id}')">🔊</button></summary>
-    <div class="x">${v.contoh ? `<p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p>` : ""}<p class="sw-muted">${v.cat ? `Kategori: ${esc(v.cat)} · ` : ""}Sumber: ${srcs}</p></div></details>`;
+    <div class="x">${v.contoh ? `<p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p>` : ""}${fungsiInfo(v)}${v.fig ? `<p class="sw-muted" style="margin:6px 0 0">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}<p class="sw-muted">${v.cat ? `Kategori: ${esc(v.cat)} · ` : ""}Sumber: ${srcs}</p></div></details>`;
 }
 
 /* ============================== FLASHCARD SM-2 ============================== */
 let FC = null;
+/* Tautan ke gambar ilustrasi (bagian bernomor) untuk kosakata yang punya v.fig — mis. Jidousha Seibi (JICA イラスト集). */
+const figLinks = (v) => (v.fig || []).map(f => `<button type="button" class="btn ghost sm" style="margin:2px 4px 2px 0" onclick="event.stopPropagation();SSW.zoomPage('${esc(f.src)}')">🖼 Gambar ${f.n} · no. ${f.p} — ${esc(f.t)}</button>`).join("");
+/* Fungsi komponen + sumber halaman (bila ada di data). Fungsi = materi buatan Shirose (ORIGINAL LEARNING CONTENT). */
+const fungsiInfo = (v) => (v.fungsi ? `<p class="sw-muted" style="margin:6px 0 0"><b>Fungsi:</b> ${esc(v.fungsi)}</p>` : "") + (v.hal_sumber ? `<p class="sw-muted" style="margin:2px 0 0;font-size:12px">Sumber gambar: JICA「かいて おぼえる イラスト集」hal. ${esc(v.hal_sumber.hal_cetak)}</p>` : "");
 const hafItems = (vocab) => vocab.map(v => ({ tipe: "ssw", idx: vnum(v) - 1, no: vnum(v), front: v.kata, reading: v.kana || "", back: v.arti || "", vid: v.id }));
 /** Flashcard/hafalan = mesin JLPT (index.html: sswHafalStart). Rute lama ssw-kartu hanya meluncurkan mesin itu. */
 async function renderKartu([slug, scope = "all", mode = "semua"]) {
@@ -449,15 +679,16 @@ async function renderHafal([slug, pre]) {
   setTimeout(() => { SSW.hafalCount(); SSW.pickRender(slug); if (adaAlat) SSW.alatInit(slug); }, 0);
   return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Hafalan kosakata" }])}
     <div class="sw-head compact"><div class="jp">単語暗記</div><h1>Hafalan Kosakata</h1><p>Pilih subbab (boleh banyak). Kata yang sama dari beberapa subbab hanya muncul sekali.</p></div>
-    <div class="sw-panel pk-p"><h2>⭐ Hafalan Pilihan <small class="sw-muted">(rangkuman kata pilihanmu · <b id="pk-n">0</b> kata)</small></h2>
-      <p class="sw-muted">Hanya kata yang kamu tandai lewat pop-up kosakata. Terpisah dari Hafalan Penuh di bawah.</p><div id="pk-box"></div>
+    <div class="sw-panel pk-p"><h2>📒 Rangkuman SSW <small class="sw-muted">(kata pilihanmu · <b id="pk-n">0</b> kata)</small></h2>
+      <p class="sw-muted">Kata yang kamu masukkan lewat pop-up kosakata. Terpisah dari Hafalan Penuh di bawah.</p><p><a class="btn ghost sm" onclick="route('ssw-rangkuman')">Buka halaman Rangkuman SSW</a></p><div id="pk-box"></div>
       <div class="sw-actions left"><button class="btn" onclick="SSW.pickGo('flashcard')">🃏 Flashcard</button><button class="btn ghost" onclick="SSW.pickGo('multiple')">✅ Pilihan ganda</button><button class="btn ghost" onclick="SSW.pickGo('matching')">🔗 Matching</button><button class="btn ghost" onclick="SSW.pickGo('mixed')">🎲 Campur</button></div></div>
     <div class="sw-head compact" style="margin-top:6px"><h2>📚 Hafalan Penuh <small class="sw-muted">(semua kosakata per subbab)</small></h2></div>
-    ${!adaAlat ? "" : `<div class="sw-panel alat-p" id="alat-p"><h2>🧰 Flashcard Peralatan <span class="jp">ビルクリーニング用具</span></h2><p class="sw-muted">Gambar peralatan dari buku (hal. 81–82). Gambar tampil di depan — tebak namanya.</p><div id="alat-body"><p class="sw-muted">Memuat…</p></div></div>`}
+    ${!adaAlat ? "" : `<div class="sw-panel alat-p" id="alat-p"><h2><span id="alat-ttl">🧰 Flashcard Peralatan</span> <span class="jp" id="alat-jp">ビルクリーニング用具</span></h2><p class="sw-muted" id="alat-desc">Gambar peralatan dari buku (hal. 81–82). Gambar tampil di depan — tebak namanya.</p><div id="alat-body"><p class="sw-muted">Memuat…</p></div></div>`}
     <div class="sw-panel"><div class="hf-stats"><span>Baru <b>${st.baru}</b></span><span>Belum <b>${st.belum}</b></span><span>Perlu ulang <b>${st.due}</b></span><span>Hafal <b>${st.hafal}</b></span><span>Kuasa <b>${st.kuasa}</b></span></div></div>
     <div class="hf-f sw-seg sm" style="flex-wrap:wrap;border-radius:18px">${[["semua", "Semua"], ["baru", "Baru"], ["belum", "Belum hafal"], ["ulang", "Perlu diulang"], ["hafal", "Sudah hafal"]].map(([k, t]) => `<button data-f="${k}" class="${k === "semua" ? "on" : ""}" onclick="SSW.hafalFilter('${k}')">${t}</button>`).join("")}</div>
     <div class="hf-quick"><button class="sw-chip" onclick="SSW.hafalAll(true)">☑ Semua ${esc(b.nama)}</button><button class="sw-chip" onclick="SSW.hafalAll(false)">☐ Kosongkan</button>${chs.map(c => `<button class="sw-chip" onclick="SSW.hafalOnly('${c.id}')">Hanya BAB ${c.no}</button>`).join("")}</div>
-    <div class="hf-m sw-seg sm" style="border-radius:18px;margin-bottom:10px">${[["flashcard", "🃏 Flashcard"], ["matching", "🔗 Matching"], ["multiple", "✅ Pilihan Ganda"]].map(([k, t]) => `<button data-m="${k}" class="${k === "flashcard" ? "on" : ""}" onclick="SSW.hafalMode('${k}')">${t}</button>`).join("")}</div>
+    <div class="sw-seg sm" style="border-radius:18px;margin-bottom:10px" title="Arah kartu hafalan">${[["jp2id", "🇯🇵 Jepang → 🇮🇩 Indonesia"], ["id2jp", "🇮🇩 Indonesia → 🇯🇵 Jepang"]].map(([k, t]) => `<button data-hafdir="${k}" class="${(LSget("shirose-haf-dir", "jp2id") === "id2jp" ? "id2jp" : "jp2id") === k ? "on" : ""}" onclick="hafSetDir('${k}')">${t}</button>`).join("")}</div>
+    <div class="hf-m sw-seg sm" style="border-radius:18px;margin-bottom:10px">${[["flashcard", "🃏 Flashcard"], ["matching", "🔗 Matching"], ["multiple", "✅ Jepang → Arti"], ["multiple-jp", "🈶 Arti → Jepang"]].map(([k, t]) => `<button data-m="${k}" class="${k === "flashcard" ? "on" : ""}" onclick="SSW.hafalMode('${k}')">${t}</button>`).join("")}</div>
     <div id="hf-list">${groups}</div>
     <div class="hf-bar"><span>Total kosakata unik: <b id="hf-n">0</b> kata</span><button class="btn sw-big" onclick="SSW.hafalGo()">MULAI HAFALAN ›</button></div>
     <div class="sw-attr">Hafalan memakai mesin yang sama dengan JLPT (Flashcard, Matching, Pilihan Ganda); progres SSW tersimpan terpisah di akunmu.</div>`);
@@ -507,11 +738,11 @@ async function renderKuis([slug, quizId]) {
   if (!quizId) {
     return wrap(`
       ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Kuis & Evaluasi" }])}
-      <div class="sw-head compact"><div class="jp">試験センター</div><h1>Evaluasi — Examination Center</h1><p>Kuis tiap subbab, 3 kuis tiap bab, dan 10 ujian penuh (pilihan ganda, ○× dan soal bergambar). Skor terbaik tersimpan di akunmu.</p></div>
+      <div class="sw-head compact"><div class="jp">試験センター</div><h1>Evaluasi — Examination Center</h1><p class="sw-label own">🏷️ Soal di sini adalah <b>latihan buatan Shirose</b> (bukan soal resmi ujian SSW), kecuali kuis yang diberi label <b>Soal resmi</b>.</p><p>Kuis tiap subbab, 3 kuis tiap bab, dan 10 ujian penuh (pilihan ganda, ○× dan soal bergambar). Skor terbaik tersimpan di akunmu.</p></div>
       ${chs.map(c => `<div class="sw-panel"><h2>BAB ${c.no} — ${esc(L(c.title, "id"))}</h2><div class="sw-qlist">${(pack.quiz.bab?.[c.id] || []).map((q, i) => row(q, `Kuis ${i + 1} · ${esc(L(q.title, "id"))}${q.title && q.title.jp ? ` <span class="jp sw-tsub">${rich(q.title.jp, { ruby: false })}</span>` : ""}`)).join("") || '<p class="sw-muted">Belum ada kuis.</p>'}</div></div>`).join("")}
       ${(pack.quiz.tema || []).length ? `<div class="sw-panel"><h2>Kuis Tema</h2><p class="sw-muted">${slug === "building-cleaning" ? "Satu kuis untuk satu topik: rute pembersihan, jenis lantai, karpet, dan pH." : "Latihan kosakata per kategori: arti ↔ kata Jepang (10 soal tiap kuis)."}</p><div class="sw-qlist">${pack.quiz.tema.map(q => row(q, esc(L(q.title, "id")))).join("")}</div></div>` : ""}
-      <div class="sw-panel"><h2>Tes Membaca Kosakata</h2><p class="sw-muted">Kanji dari kosakata buku → pilih bacaannya (hiragana/katakana). 15 soal acak.</p><div class="sw-qlist">${row({ id: "baca-kosakata", items: { length: 15 } }, "読み方テスト · Tes Membaca")}</div></div>
-      <div class="sw-panel"><h2>Ujian Penuh (semua bab)</h2>${EXAM_SPEC[slug] ? `<p class="sw-muted">${EXAM_SPEC[slug].info} Ujian di sini mengikuti format itu.</p>` : ""}<div class="sw-qlist">${full.map((q, i) => row(q, `Ujian Penuh ${i + 1}`)).join("") || '<p class="sw-muted">Belum ada soal.</p>'}</div></div>`);
+      ${slug === "kaigo" ? "" : `<div class="sw-panel"><h2>Tes Membaca Kosakata</h2><p class="sw-muted">Kanji dari kosakata buku → pilih bacaannya (hiragana/katakana). 15 soal acak.</p><div class="sw-qlist">${row({ id: "baca-kosakata", items: { length: 15 } }, "読み方テスト · Tes Membaca")}</div></div>`}
+      <div class="sw-panel"><h2>${EXAM_SPEC[slug] && EXAM_SPEC[slug].paket ? `Paket Soal (${EXAM_SPEC[slug].n} soal per paket, ${EXAM_SPEC[slug].paket} paket)` : "Ujian Penuh (semua bab)"}</h2>${EXAM_SPEC[slug] ? `<p class="sw-muted">${EXAM_SPEC[slug].info} Ujian di sini mengikuti format itu.</p>` : ""}<div class="sw-qlist">${full.map((q, i) => row(q, EXAM_SPEC[slug] && EXAM_SPEC[slug].paket ? `Paket Soal ${i + 1} · tanpa soal yang sama dengan paket lain` : `Ujian Penuh ${i + 1}`)).join("") || '<p class="sw-muted">Belum ada soal.</p>'}</div></div>`);
   }
   const q = quizId === "baca-kosakata" ? readingQuiz(pack) : [...chs.flatMap(c => pack.quiz.bab?.[c.id] || []), ...full, ...(pack.quiz.tema || [])].find(x => x.id === quizId);
   if (!q) return msgPage("🧭", "Kuis tidak ditemukan", "Kuis ini tidak ada atau belum dipublikasikan.", `route('ssw-kuis/${slug}')`);
@@ -524,7 +755,7 @@ async function renderKuis([slug, quizId]) {
   P.last = { route: `ssw-kuis/${slug}/${quizId}`, label: `Kuis ${L(q.title, "id")}`, t: Date.now() };
   QZ = { slug, q, items: shuffle(items, rnd), i: 0, sel: null, score: 0, wrong: [], lang, P };
   setTimeout(() => window.SSW.qzDraw(), 0);
-  return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: "Kuis", go: `route('ssw-kuis/${slug}')` }, { t: esc(L(q.title, "id")) }])}<div id="qz-root"></div>`);
+  return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: "Kuis", go: `route('ssw-kuis/${slug}')` }, { t: esc(L(q.title, "id")) }])}<div class="sw-label ${q.resmi ? "off" : "own"}">${q.resmi ? "✅ Soal resmi" : "🏷️ Latihan buatan Shirose — bukan soal resmi ujian"}</div><div id="qz-root"></div>`);
 }
 
 /* ============================== DASHBOARD SISWA ============================== */
@@ -571,6 +802,57 @@ async function dashCard() {
 
 /* ============================== HANDLER GLOBAL ============================== */
 const SSW = window.SSW = {
+  /* --- diagram interaktif --- */
+  async dgInit() {
+    const box = document.getElementById("dg-box"); if (!box || !DG.d) return;
+    try {
+      const t = await (await fetch(`./${DG.d.svg}?v=20261117a`)).text();
+      box.innerHTML = t;
+      box.querySelectorAll(".pt").forEach(g => g.addEventListener("click", () => SSW.dgPick(g.dataset.p)));
+    } catch (e) { box.innerHTML = `<p class="sw-muted">Gambar belum bisa dimuat.</p>`; }
+  },
+  dgMark(pid) {
+    document.querySelectorAll("#dg-box .pt").forEach(g => g.classList.toggle("on", g.dataset.p === pid));
+    document.querySelectorAll(".dg-chip").forEach(c => c.classList.toggle("on", c.dataset.p === pid));
+  },
+  dgPick(pid) {
+    if (DG.quiz) return;
+    const p = DG.d.parts.find(x => x.pid === pid); if (!p) return;
+    SSW.dgMark(pid);
+    const info = document.getElementById("dg-info");
+    info.innerHTML = `<div class="dg-card"><div class="jp dg-jp">${esc(p.jp)}</div><div class="dg-kana">${esc(p.kana || "")}${p.romaji ? ` · <i>${esc(p.romaji)}</i>` : ""}</div>
+      <div class="dg-arti">${esc(p.arti)}</div><p class="dg-fg">${esc(p.fungsi || "")}</p>
+      <div class="sw-actions left"><button class="btn ghost" onclick="SSW.sayWord('${DG.slug}','${p.vid}')">🔊 Dengar</button><button class="btn ghost" onclick="SSW.vadd('${DG.slug}','${p.vid}')">➕ Masukkan ke hafalan</button></div></div>`;
+    try { info.scrollIntoView({ block: "nearest", behavior: "smooth" }); } catch (e) {}
+  },
+  dgMode(m) {
+    document.getElementById("dg-m-explore")?.classList.toggle("on", m === "explore");
+    document.getElementById("dg-m-quiz")?.classList.toggle("on", m === "quiz");
+    if (m === "explore") { DG.quiz = null; SSW.dgMark(null); document.getElementById("dg-info").innerHTML = `<p class="sw-muted">Ketuk bagian pada gambar untuk melihat nama Jepang, furigana, arti, dan fungsinya.</p>`; return; }
+    DG.quiz = { order: shuffle(DG.d.parts.map(p => p.pid), Math.random), i: 0, score: 0, done: false };
+    SSW.dgQ();
+  },
+  dgQ() {
+    const q = DG.quiz, info = document.getElementById("dg-info"); if (!q) return;
+    if (q.i >= q.order.length) { SSW.dgMark(null); info.innerHTML = `<div class="dg-card"><h3>Selesai! 🎉</h3><p>Skor: <b>${q.score}</b> / ${q.order.length}</p><div class="sw-actions left"><button class="btn" onclick="SSW.dgMode('quiz')">🔁 Ulangi</button><button class="btn ghost" onclick="SSW.dgMode('explore')">👆 Jelajah</button></div></div>`; return; }
+    const p = DG.d.parts.find(x => x.pid === q.order[q.i]);
+    const others = shuffle(DG.d.parts.filter(x => x.pid !== p.pid && x.jp !== p.jp), Math.random).slice(0, 3);
+    const opts = shuffle([p, ...others], Math.random);
+    SSW.dgMark(p.pid);
+    info.innerHTML = `<div class="dg-card"><p class="sw-muted">Soal ${q.i + 1}/${q.order.length} · Bagian yang menyala bernama apa?</p>
+      <div class="dg-opts">${opts.map(o => `<button class="dg-opt" data-p="${o.pid}" onclick="SSW.dgAns('${o.pid}')"><span class="jp">${esc(o.jp)}</span></button>`).join("")}</div><div id="dg-fb"></div></div>`;
+  },
+  dgAns(pid) {
+    const q = DG.quiz; if (!q || q.done) return; const cur = q.order[q.i]; q.done = true;
+    const p = DG.d.parts.find(x => x.pid === cur), ok = pid === cur; if (ok) q.score++;
+    document.querySelectorAll(".dg-opt").forEach(b => { b.disabled = true; if (b.dataset.p === cur) b.classList.add("ok"); else if (b.dataset.p === pid) b.classList.add("ng"); });
+    document.getElementById("dg-fb").innerHTML = `<div class="dg-fb ${ok ? "ok" : "ng"}"><b>${ok ? "✓ Benar!" : "✗ Belum tepat."}</b> <span class="jp">${esc(p.jp)}</span> (${esc(p.kana || "")}) = ${esc(p.arti)}<br><small>${esc(p.fungsi || "")}</small></div><button class="btn" onclick="SSW.dgNext()">Lanjut →</button>`;
+  },
+  dgNext() { const q = DG.quiz; if (!q) return; q.i++; q.done = false; SSW.dgQ(); },
+  async dgFlash() {
+    const rows = (DG.d.parts || []).map(p => { const m = /(\d+)$/.exec(p.vid || ""); const no = m ? +m[1] : 0; return { tipe: "ssw", idx: no - 1, no, front: p.jp, reading: `${p.kana} · ${p.romaji}`, back: alatShort(p.arti), img: `assets/ssw/${DG.slug}/diagram/${DG.d.id}-${p.pid}.svg`, fungsi: p.fungsi, vid: p.vid, vnum: no }; });
+    await window.sswHafalStart({ items: rows, mode: "flashcard", back: `ssw-diagram/${DG.slug}/${DG.d.id}` });
+  },
   toolbarToggle() { const t = document.querySelector(".sw-rtool"); if (!t) return; const m = t.classList.toggle("min"); LSset("shirose-ssw-tb", m ? "0" : "1"); },
   /* --- tampilan & zoom --- */
   prefs() {
@@ -701,12 +983,12 @@ const SSW = window.SSW = {
         } catch (e) { /* lewati */ }
       }
     }
-    /* tambahan: kanji yang belum ada di kosakata -> ketuk untuk arti kanji; pola tata bahasa -> ketuk untuk penjelasan */
-    if (pack.kanji) root.querySelectorAll("ruby").forEach((ru) => {
+    /* tambahan: ruby yang belum ada di kosakata -> ketuk untuk arti KATA (kamus), bukan per-huruf kanji; pola tata bahasa -> penjelasan */
+    root.querySelectorAll("ruby").forEach((ru) => {
       if (ru.closest(".sw-w,.sw-k")) return;
       const base = [...ru.childNodes].filter(n => n.nodeType === 3).map(n => n.nodeValue).join("");
-      if (![...base].some(c => pack.kanji[c])) return;
       const sp = document.createElement("span"); sp.className = "sw-k"; sp.dataset.k = base; sp.dataset.r = ru.querySelector("rt")?.textContent || ""; sp.tabIndex = 0; sp.setAttribute("role", "button");
+      const nx = ru.nextSibling; sp.dataset.o = nx && nx.nodeType === 3 ? ((nx.nodeValue.match(/^[\u3041-\u3096]{0,6}/) || [""])[0]) : "";
       ru.replaceWith(sp); sp.appendChild(ru);
     });
     if (pack.bunpou && pack.bunpou.length) {
@@ -721,17 +1003,26 @@ const SSW = window.SSW = {
           sp.appendChild(r.extractContents()); r.insertNode(sp); } catch (e) { /* lewati */ }
       }
     }
-    const open = (e) => { const k = e.target.closest?.(".sw-k"); if (k) { e.preventDefault(); SSW.ksheet(slug, k.dataset.k, k.dataset.r); return; } const g = e.target.closest?.(".sw-g"); if (g) { e.preventDefault(); SSW.gsheet(slug, g.dataset.g); return; } const w = e.target.closest?.(".sw-w"); if (!w) return; e.preventDefault(); SSW.vsheet(slug, w.dataset.v); };
+    const open = (e) => { const k = e.target.closest?.(".sw-k"); if (k) { e.preventDefault(); SSW.ksheet(slug, k.dataset.k, k.dataset.r, k.dataset.o || ""); return; } const g = e.target.closest?.(".sw-g"); if (g) { e.preventDefault(); SSW.gsheet(slug, g.dataset.g); return; } const w = e.target.closest?.(".sw-w"); if (!w) return; e.preventDefault(); SSW.vsheet(slug, w.dataset.v); };
     root.addEventListener("click", open); root.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") open(e); });
   },
-  async ksheet(slug, kata, rd) {
-    const pack = await loadPack(slug); if (!pack.kanji) return;
-    const rows = [...kata].filter(c => pack.kanji[c]).map(c => `<p class="sw-kr"><span class="jp sw-kc">${esc(c)}</span> <b>${esc(pack.kanji[c])}</b></p>`).join("");
-    const rel = (pack.vocab || []).filter(v => [...kata].some(c => v.kata.includes(c)) && v.kata !== kata).slice(0, 6).map(v => `<button class="sw-vc" onclick="SSW.vsheet('${slug}','${v.id}')"><span class="jp">${esc(v.kata)}</span><small>${esc(v.arti)}</small></button>`).join("");
+  async ksheet(slug, kata, rd, ok = "") {
+    const pack = await loadPack(slug);
+    const KD = await kamusLoad();
+    const hit = kamusLookup(KD, kata, rd, ok);
+    const parts = !hit && kata.length > 1 ? kamusSeg(KD, kata) : null;
+    let body = "";
+    if (hit) body = `<div class="sw-vs-m"><b>${esc(hit.a)}</b></div><div class="sw-vs-r"><span>Kata: <b class="jp">${esc(hit.k)}</b></span>${hit.r ? `<span>Bacaan: <b class="jp">${esc(hit.r)}</b></span>` : ""}</div>${hit.en ? '<p class="sw-muted" style="font-size:12px">Arti dari kamus umum (bahasa Inggris); arti Indonesia belum ada.</p>' : ""}`;
+    else if (parts) body = `<p class="sw-muted">Kata gabungan — arti per kata:</p>` + parts.map(x => `<p class="sw-kr"><span class="jp sw-kc" style="font-size:18px">${esc(x.k)}</span> <small class="jp">${esc(x.r)}</small> <b>${esc(x.a)}</b></p>`).join("");
+    else {
+      const rows = pack.kanji ? [...kata].filter(c => pack.kanji[c]).map(c => `<p class="sw-kr"><span class="jp sw-kc">${esc(c)}</span> <b>${esc(pack.kanji[c])}</b></p>`).join("") : "";
+      body = `<p class="sw-muted">Arti kata ini belum ada di kamus.${rows ? " Arti tiap huruf kanji:" : ""}</p>${rows}`;
+    }
+    const rel = (pack.vocab || []).filter(v => [...kata].some(c => v.kata.includes(c)) && v.kata !== kata && v.kata.length > 1).slice(0, 6).map(v => `<button class="sw-vc" onclick="SSW.vsheet('${slug}','${v.id}')"><span class="jp">${esc(v.kata)}</span><small>${esc(v.arti)}</small></button>`).join("");
     let sh = document.getElementById("sw-vs"); if (!sh) { sh = document.createElement("div"); sh.id = "sw-vs"; document.body.append(sh); }
-    sh.innerHTML = `<div class="sw-vs-bg" onclick="SSW.vclose()"></div><div class="sw-vs-in" role="dialog" aria-label="Arti kanji">
-      <div class="sw-vs-h"><div class="jp k"><ruby>${esc(kata)}<rt>${esc(rd)}</rt></ruby></div><button type="button" class="sw-vs-x" onclick="SSW.vclose()" aria-label="Tutup">✕</button></div>
-      <div class="sw-vs-m">${rows}</div>${rel ? `<p class="sw-muted">Kata lain dengan kanji ini:</p><div class="sw-vchips">${rel}</div>` : ""}
+    sh.innerHTML = `<div class="sw-vs-bg" onclick="SSW.vclose()"></div><div class="sw-vs-in" role="dialog" aria-label="Arti kata">
+      <div class="sw-vs-h"><div class="jp k"><ruby>${esc(kata)}<rt>${esc(rd)}</rt></ruby>${hit && hit.k.length > kata.length && hit.k.startsWith(kata) ? esc(hit.k.slice(kata.length)) : ""}</div><button type="button" class="sw-vs-x" onclick="SSW.vclose()" aria-label="Tutup">✕</button></div>
+      ${body}${rel ? `<p class="sw-muted">Kata terkait di bidang ini:</p><div class="sw-vchips">${rel}</div>` : ""}
       <div class="sw-vs-b"><button class="btn ghost" onclick="SSW.vclose()">↩ Kembali ke materi</button></div></div>`;
     sh.hidden = false; document.body.classList.add("sw-lbopen");
   },
@@ -758,9 +1049,10 @@ const SSW = window.SSW = {
       <div class="sw-vs-m"><b>${esc(v.arti)}</b></div>
       <div class="sw-vs-r"><span>Bacaan: <b class="jp">${esc(v.kana || "")}</b></span>${v.romaji ? `<span>Romaji: <b>${esc(v.romaji)}</b></span>` : ""}<span>Status: <b>${stl}</b></span></div>
       ${v.contoh ? `<div class="sw-vs-ex"><p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p></div>` : ""}
-      ${v.cat ? `<p class="sw-muted">Kategori: ${esc(v.cat)}</p>` : ""}${srcs ? `<p class="sw-muted">Muncul di: ${srcs}</p>` : ""}
+      ${fungsiInfo(v)}${v.fig ? `<p class="sw-muted">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}${v.cat ? `<p class="sw-muted">Kategori: ${esc(v.cat)}</p>` : ""}${srcs ? `<p class="sw-muted">Muncul di: ${srcs}</p>` : ""}
       <div class="sw-vs-b"><button class="btn" onclick="SSW.sayWord('${slug}','${id}')">🔊 Dengar</button>
-        <button class="btn ${picked ? "gold" : "ghost"}" id="sw-vpick" onclick="SSW.vpick('${slug}','${id}')">${picked ? "★ Ada di Hafalan Pilihan (ketuk = hapus)" : "⭐ Masukkan ke Hafalan Pilihan"}</button>
+        <button class="btn ${picked ? "gold" : "ghost"}" id="sw-vpick" onclick="SSW.vpick('${slug}','${id}')">${picked ? "✓ Ada di Rangkuman SSW (ketuk = hapus)" : "📒 Masukkan ke Rangkuman SSW"}</button>
+        <button class="btn ghost" onclick="SSW.vclose();route('ssw-rangkuman')">📒 Buka Rangkuman SSW</button>
         <button class="btn ghost" onclick="SSW.vclose();route('ssw-kartu/${slug}/w:${id}/semua')">🃏 Flashcard kata ini</button>
         <button class="btn ghost" onclick="SSW.vclose()">↩ Kembali ke materi</button></div></div>`;
     sh.hidden = false; document.body.classList.add("sw-lbopen");
@@ -768,8 +1060,9 @@ const SSW = window.SSW = {
   vclose() { const sh = document.getElementById("sw-vs"); if (sh) sh.hidden = true; document.body.classList.remove("sw-lbopen"); },
   async vpick(slug, id) {
     const P = await getProgress(slug); P.pick = P.pick || {};
-    if (P.pick[id]) { delete P.pick[id]; toast("Dihapus dari Hafalan Pilihan"); }
-    else { P.pick[id] = Date.now(); toast("Masuk Hafalan Pilihan ⭐"); const pack = await loadPack(slug), v = pack.vocab.find(x => x.id === id); if (v && window.sswAddCard) { try { await window.sswAddCard(vnum(v), vnum(v) - 1); } catch (e) { /* kartu SRS opsional */ } } }
+    const pack0 = await loadPack(slug), v0 = pack0.vocab.find(x => x.id === id);
+    if (P.pick[id]) { delete P.pick[id]; if (v0 && window.rangkumHapusJp) await window.rangkumHapusJp(v0.kata, "ssw"); toast("Dihapus dari Rangkuman SSW"); }
+    else { P.pick[id] = Date.now(); if (v0 && window.rangkumCepat) await window.rangkumCepat({ jp: v0.kata, kana: v0.kana || "", arti: v0.arti || "" }, "SSW", "ssw"); else toast("Masuk Rangkuman SSW 📒"); const pack = pack0, v = v0; if (v && window.sswAddCard) { try { await window.sswAddCard(vnum(v), vnum(v) - 1); } catch (e) { /* kartu SRS opsional */ } } }
     touch(slug); SSW.vsheet(slug, id);
     const n = document.getElementById("pk-n"); if (n) SSW.pickRender(slug);
   },
@@ -779,16 +1072,18 @@ const SSW = window.SSW = {
     const rows = ids.map(i => pack.vocab.find(v => v.id === i)).filter(Boolean);
     document.getElementById("pk-n").textContent = rows.length;
     box.innerHTML = rows.length ? `<div class="sw-vchips">${rows.map(v => `<span class="sw-vc"><button type="button" class="pk-k" onclick="SSW.vsheet('${slug}','${v.id}')"><span class="jp">${esc(v.kata)}</span><small>${esc(v.arti)}</small></button><button type="button" class="pk-x" onclick="SSW.vpick('${slug}','${v.id}')" aria-label="Hapus">✕</button></span>`).join("")}</div>`
-      : `<p class="sw-muted">Belum ada kata. Ketuk kata di materi atau bank kosakata, lalu tekan “⭐ Masukkan ke Hafalan Pilihan”.</p>`;
+      : `<p class="sw-muted">Belum ada kata. Ketuk kata di materi atau bank kosakata, lalu tekan “📒 Masukkan ke Rangkuman SSW”.</p>`;
   },
   async pickGo(mode) {
     const slug = HF && HF.slug; if (!slug) return;
     const P = await getProgress(slug), pack = await loadPack(slug);
     const rows = Object.keys(P.pick || {}).map(i => pack.vocab.find(v => v.id === i)).filter(Boolean);
-    if (!rows.length) return toast("Belum ada kata di Hafalan Pilihan");
+    if (!rows.length) return toast("Belum ada kata di Rangkuman SSW");
     let m = mode; if (mode === "mixed") { const ms = ["flashcard", "multiple", "matching"]; m = ms[Math.floor(Math.random() * ms.length)]; toast("Mode acak: " + { flashcard: "Flashcard", multiple: "Pilihan ganda", matching: "Matching" }[m]); }
     await window.sswHafalStart({ items: hafItems(rows), mode: m, back: `ssw-hafal/${slug}` });
   },
+  async rk(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); const ok = await window.rangkumCepat({ jp: b.dataset.f, arti: b.dataset.b }, "SSW", "ssw"); if (ok) { b.textContent = "✓"; b.classList.add("on"); } },
+  async rkAll(b) { if (!window.rangkumCepat) return toast("Rangkuman belum siap"); let rows = []; try { rows = JSON.parse(b.dataset.j || "[]"); } catch (_) {} const t = b.dataset.t || ""; let n = 0; for (const [l, i, x] of rows) { if (!x) continue; if (await window.rangkumCepat({ jp: (t ? t + " · " : "") + l + (i ? " " + i : ""), arti: x }, "SSW", "ssw")) n++; } b.textContent = "✓ " + n + " kartu masuk Rangkuman SSW"; },
   async vadd(slug, id) { const pack = await loadPack(slug), v = pack.vocab.find(x => x.id === id); if (!v || !window.sswAddCard) return; await window.sswAddCard(vnum(v), vnum(v) - 1); const P = await getProgress(slug); await syncCards(P, pack.vocab, true); toast("Masuk daftar hafalan ✓"); },
   /* --- hub hafalan --- */
   hafalCount() {
@@ -797,15 +1092,26 @@ const SSW = window.SSW = {
     const el = document.getElementById("hf-n"); if (el) el.textContent = set.size; HF.sel = q; HF.n = set.size;
   },
   async alatInit(slug) {
-    try { if (!ALAT.items) ALAT.items = (await (await fetch(`./data/ssw/${slug}/alat.json?v=20261111h`)).json()).items; if (window.sswSrsLoad) ALAT.srs = await window.sswSrsLoad(); alatDraw(); }
-    catch (e) { const b = document.getElementById("alat-body"); if (b) b.innerHTML = `<p class="sw-muted">Data peralatan belum bisa dimuat.</p>`; }
+    try {
+      if (ALAT.slug !== slug || !ALAT.items) {
+        const j = await (await fetch(`./data/ssw/${slug}/alat.json?v=20261117a`)).json();
+        ALAT = { items: j.items, f: "semua", mode: "flashcard", srs: {}, slug, groups: j.groups || null, info: j.info || null };
+      }
+      if (window.sswSrsLoad) ALAT.srs = await window.sswSrsLoad();
+      const inf = ALAT.info;
+      if (inf) { const t = document.getElementById("alat-ttl"), jp = document.getElementById("alat-jp"), ds = document.getElementById("alat-desc"); if (t) t.textContent = "🖼️ " + inf.title; if (jp) jp.textContent = inf.jp || ""; if (ds) ds.textContent = inf.desc || ""; }
+      alatDraw();
+    }
+    catch (e) { const b = document.getElementById("alat-body"); if (b) b.innerHTML = `<p class="sw-muted">Data gambar belum bisa dimuat.</p>`; }
   },
   alatSet(k, v) { ALAT[k] = v; alatDraw(); },
-  async alatGo() {
+  async alatGo(review) {
     const vn = (id) => { const m = /(\d+)$/.exec(id || ""); return m ? +m[1] : 0; };
-    const items = alatList().map(a => ({ tipe: "ssw", idx: a.no - 1, no: a.no, front: a.jp, reading: `${a.kana} · ${a.romaji}`, back: alatShort(a.arti), img: a.img, fungsi: a.fungsi, vid: a.vid || "", vnum: vn(a.vid) }));
-    if (!items.length) return toast("Tidak ada alat dengan filter ini");
-    await window.sswHafalStart({ items, mode: ALAT.mode, back: `ssw-hafal/${CUR}` });
+    let rows = alatList(); if (review) rows = rows.filter(a => alatSt(a) !== "kuasa" && alatSt(a) !== "hafal");
+    const items = rows.map(a => ({ tipe: "ssw", idx: a.no - 1, no: a.no, front: a.jp, reading: `${a.kana} · ${a.romaji}`, back: alatShort(a.arti), img: a.img, fungsi: a.fungsi, vid: a.vid || "", vnum: vn(a.vid) }));
+    if (!items.length) return toast("Tidak ada kartu dengan filter ini");
+    const jp = ALAT.mode === "multiple-jp";
+    await window.sswHafalStart({ items, mode: jp ? "multiple" : ALAT.mode, dir: jp ? "id2jp" : "jp2id", back: `ssw-hafal/${CUR}` });
   },
   hafalAll(on) { document.querySelectorAll('#hf-list input[type=checkbox]:not(:disabled)').forEach(i => i.checked = on); SSW.hafalCount(); },
   hafalOnly(babId) { document.querySelectorAll('#hf-list input[type=checkbox]:not(:disabled)').forEach(i => { i.checked = (i.dataset.bab === babId) || (i.closest('.hf-g')?.querySelector('input[data-sub][data-bab="' + babId + '"]') && !i.dataset.sub); }); SSW.hafalCount(); },
@@ -816,7 +1122,7 @@ const SSW = window.SSW = {
     if (!HF.sel.length) return toast("Pilih minimal 1 subbab");
     const sel = HF.sel; const vocab = filterByState(HF.P, HF.vocab.filter(w => (w.src || []).some(x => sel.includes(x))), HF.f);
     if (!vocab.length) return toast("Tidak ada kosakata dengan filter ini");
-    await window.sswHafalStart({ items: hafItems(vocab), mode: HF.mode || "flashcard", back: `ssw-hafal/${HF.slug}` });
+    { const m0 = HF.mode || "flashcard"; await window.sswHafalStart({ items: hafItems(vocab), mode: m0 === "multiple-jp" ? "multiple" : m0, dir: m0 === "multiple-jp" ? "id2jp" : "jp2id", back: `ssw-hafal/${HF.slug}` }); }
   },
   rankScope(slug, sc) { RANK_SCOPE = sc; route(`ssw-rank/${slug}`); },
   /* --- hub --- */
@@ -832,8 +1138,8 @@ const SSW = window.SSW = {
     const kunci = b.aktif && !sswAllowed(b.slug); const can = (b.aktif || isGuru()) && !kunci;
     sheet.hidden = false;
     sheet.innerHTML = `<div class="sw-sheet-in"><div><div class="jp">${esc(b.jp || "")}</div><h2>${esc(b.nama)}</h2>
-      <p class="sw-muted">${kunci ? "Guru belum membuka bidang ini untuk akun atau kelasmu." : can ? (!b.hasContent ? "Materi sedang disiapkan." : (list.some(x => x.induk === slug) ? (b.label ? "Pilih kategori ujian." : "Pilih bahasa belajar: Bahasa Indonesia atau Bahasa Jepang.") : "Bidang ini sudah dibuka. Masuk dan jelajahi peta pembelajarannya.")) : "Materi bidang ini belum tersedia. Progres belajarmu tidak akan hilang."}</p></div>
-      <div class="sw-sheet-b">${can && list.some(x => x.induk === slug) ? `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">${esc(b.label || "🇮🇩 Bahasa Indonesia ›")}</button>${list.filter(x => x.induk === slug).map(x => `<button class="btn sw-big" onclick="route('ssw-peta/${esc(x.slug)}')">${esc(x.label || "🇯🇵 Bahasa Jepang ›")}</button>`).join("")}` : can ? `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">MASUK BELAJAR ›</button>` : `<button class="btn ghost" disabled>Belum tersedia</button>`}<button class="btn ghost" onclick="SSW.unpick()">Kembali</button></div></div>`;
+      <p class="sw-muted">${kunci ? "Guru belum membuka bidang ini untuk akun atau kelasmu." : can ? (!b.hasContent ? "Materi sedang disiapkan." : (list.some(x => x.induk === slug) ? (b.hub || b.label ? "Pilih buku / kategori ujian." : "Pilih bahasa belajar: Bahasa Indonesia atau Bahasa Jepang.") : "Bidang ini sudah dibuka. Masuk dan jelajahi peta pembelajarannya.")) : "Materi bidang ini belum tersedia. Progres belajarmu tidak akan hilang."}</p></div>
+      <div class="sw-sheet-b">${can && list.some(x => x.induk === slug) ? `${b.hub ? "" : `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">${esc(b.label || "🇮🇩 Bahasa Indonesia ›")}</button>`}${list.filter(x => x.induk === slug).map(x => `<button class="btn sw-big" onclick="route('ssw-peta/${esc(x.slug)}')">${esc(x.label || "🇯🇵 Bahasa Jepang ›")}</button>`).join("")}` : can ? `<button class="btn sw-big" onclick="route('ssw-peta/${esc(slug)}')">MASUK BELAJAR ›</button>` : `<button class="btn ghost" disabled>Belum tersedia</button>`}<button class="btn ghost" onclick="SSW.unpick()">Kembali</button></div></div>`;
   },
   unpick() {
     const w = document.getElementById("sw-world"), s = document.getElementById("sw-sheet"); if (!w) return;
@@ -854,8 +1160,22 @@ const SSW = window.SSW = {
   async sayWord(slug, id) { const pack = await loadPack(slug); const v = pack.vocab.find(x => x.id === id); if (v) say(v.kata || v.kana, slug, v.kana); },
   /* --- buku --- */
   bookInit(slug, lang, pg, total) {
-    const st = document.getElementById("bk-stage"); if (!st) return;
     BOOK.slug = slug; BOOK.lang = lang; BOOK.pg = pg; BOOK.total = total; BOOK.zoom = 1;
+    const sc = document.getElementById("bk-scroll");
+    if (sc) {   // mode SCROLL: semua halaman berurutan ke bawah
+      const wr = [...sc.querySelectorAll(".bk-pgw")];
+      const cur = () => { const y = window.innerHeight * 0.4; let k = 0; for (let i = 0; i < wr.length; i++) { const r = wr[i].getBoundingClientRect(); if (r.top <= y) k = i; else break; } return k; };
+      let raf = 0;
+      const upd = () => { raf = 0; if (!document.getElementById("bk-scroll")) { window.removeEventListener("scroll", onS, true); return; } const k = cur(); if (k !== BOOK.pg) { BOOK.pg = k; const el = document.getElementById("bk-n"); if (el) el.textContent = k; const r = document.getElementById("bk-range"); if (r) r.value = k; } };
+      const onS = () => { if (!raf) raf = requestAnimationFrame(upd); };
+      if (BOOK._onS) window.removeEventListener("scroll", BOOK._onS, true);
+      BOOK._onS = onS; window.addEventListener("scroll", onS, { passive: true, capture: true });   // body/halaman bisa jadi pemilik scroll → pakai capture
+      const go = () => { const t = wr[pg]; if (t) t.scrollIntoView({ block: "start" }); };
+      go(); setTimeout(go, 350);   // koreksi setelah gambar di atasnya terukur
+      window.onkeydown = (e) => { if (!document.getElementById("bk-scroll")) { window.onkeydown = null; return; } if (e.key === "ArrowRight") SSW.bookGo(1); if (e.key === "ArrowLeft") SSW.bookGo(-1); };
+      return;
+    }
+    const st = document.getElementById("bk-stage"); if (!st) return;
     let x0 = null, y0 = null, t0 = 0, lastTap = 0;
     st.onpointerdown = (e) => { x0 = e.clientX; y0 = e.clientY; t0 = Date.now(); };
     st.onpointerup = (e) => {
@@ -867,8 +1187,16 @@ const SSW = window.SSW = {
   },
   bookApply() { const i = document.getElementById("bk-img"); if (i) { i.style.width = (BOOK.zoom * 100) + "%"; } },
   bookZoom() { const i = document.getElementById("bk-img"); if (i) SSW.zoomPage(i.src); },
-  bookGo(d) { const n = Math.max(0, Math.min(BOOK.total - 1, BOOK.pg + d)); if (n !== BOOK.pg) route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`); },
-  bookJump(v) { const n = parseInt(v, 10); const el = document.getElementById("bk-n"); if (el) el.textContent = n; clearTimeout(BOOK._t); BOOK._t = setTimeout(() => route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`), 350); },
+  bookGo(d) { const n = Math.max(0, Math.min(BOOK.total - 1, BOOK.pg + d)); if (n !== BOOK.pg) SSW.bookTo(n); },
+  bookTo(n) {
+    const t = document.querySelector(`#bk-scroll .bk-pgw[data-p="${n}"]`);
+    if (t) { BOOK.pg = n; const el = document.getElementById("bk-n"); if (el) el.textContent = n; const r = document.getElementById("bk-range"); if (r) r.value = n; t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    else route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`);
+  },
+  bookLang(l) { route(`ssw-buku/${BOOK.slug}/${l}/${BOOK.pg}`); },
+  bookMode(m) { try { localStorage.setItem("shirose-ssw-bookmode", m); } catch (e) {} route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${BOOK.pg}`); },
+  bookJump(v) { const n = parseInt(v, 10);
+    if (document.getElementById("bk-scroll")) { const el = document.getElementById("bk-n"); if (el) el.textContent = n; const t = document.querySelector(`#bk-scroll .bk-pgw[data-p="${n}"]`); if (t) { BOOK.pg = n; t.scrollIntoView({ block: "start" }); } return; } const el = document.getElementById("bk-n"); if (el) el.textContent = n; clearTimeout(BOOK._t); BOOK._t = setTimeout(() => route(`ssw-buku/${BOOK.slug}/${BOOK.lang}/${n}`), 350); },
   /* --- kosakata --- */
   vChip(el) {
     const g = el.dataset.g, vf = (window.__swVF = window.__swVF || {}); vf[g] = el.dataset.v;
@@ -959,12 +1287,14 @@ const SSW = window.SSW = {
     const root = document.getElementById("qz-root"); if (!root || !QZ) return;
     const Q = QZ, total = Q.items.length;
     if (Q.i >= total) {
-      const pct = recordQuiz(Q.P, Q.q.id, Q.score, total, Q.wrong.map(w => w.id));
-      if (window.awardXP && !Q.paid) { Q.paid = 1; window.awardXP(pct >= 80 ? 5 : 2, pct >= 80 ? 3 : 1); }
-      logAct(Q.slug, `Kuis ${plain(L(Q.q.title, "id"))}: ${pct}%`); touch(Q.slug); flush(Q.slug);
+      const pct = Q.retry ? Math.round(100 * Q.score / Math.max(1, total)) : recordQuiz(Q.P, Q.q.id, Q.score, total, Q.wrong.map(w => w.id));
+      if (!Q.retry) {
+        if (window.awardXP && !Q.paid) { Q.paid = 1; window.awardXP(pct >= 80 ? 5 : 2, pct >= 80 ? 3 : 1); }
+        logAct(Q.slug, `Kuis ${plain(L(Q.q.title, "id"))}: ${pct}%`); touch(Q.slug); flush(Q.slug);
+      }
       root.innerHTML = `<div class="sw-panel sw-center"><div class="sw-emoji">${pct >= 80 ? "🏆" : pct >= 60 ? "👍" : "📖"}</div><h2>Skor: ${pct}%</h2><p>${Q.score} benar dari ${total} soal.</p>
         ${Q.wrong.length ? `<div class="sw-review"><h3>Yang perlu diulang</h3>${Q.wrong.map(w => `<div class="sw-rv"><p>${rich(L(w.q, Q.lang))}</p><p class="ok">✓ ${rich(L(w.opts[w.a], Q.lang))}</p><p class="sw-muted">${rich(L(w.exp, Q.lang))}</p></div>`).join("")}</div>` : '<p class="ok">Sempurna!</p>'}
-        <div class="sw-actions"><button class="btn" onclick="route('ssw-kuis/${Q.slug}/${Q.q.id}')">Ulangi kuis</button><button class="btn ghost" onclick="route('ssw-kuis/${Q.slug}')">Daftar kuis</button></div></div>`; return;
+        <div class="sw-actions">${Q.wrong.length ? `<button class="btn gold" onclick="SSW.qzRetryWrong()">🔁 Ulangi soal yang salah (${Q.wrong.length})</button>` : ""}<button class="btn" onclick="route('ssw-kuis/${Q.slug}/${Q.q.id}')">Ulangi kuis</button><button class="btn ghost" onclick="route('ssw-kuis/${Q.slug}')">Daftar kuis</button></div></div>`; return;
     }
     const it = Q.items[Q.i], lang = Q.lang, answered = Q.sel != null;
     root.innerHTML = `
@@ -984,6 +1314,12 @@ const SSW = window.SSW = {
   qzRuby() { LSset("shirose-ssw-ruby", ruby() ? "0" : "1"); applyRuby(); if (QZ) SSW.qzDraw(); },
   qzLang(l) { if (!QZ) return; QZ.lang = l; setLang(l); SSW.qzDraw(); },
   qzPick(k) { if (!QZ || QZ.sel != null) return; const it = QZ.items[QZ.i]; QZ.sel = k; if (k === it.a) { QZ.score++; window.awardXP && window.awardXP(2, 1); } else QZ.wrong.push(it); SSW.qzDraw(); },
+  qzRetryWrong() {
+    if (!QZ || !QZ.wrong.length) return;
+    const items = shuffle(QZ.wrong.map(w => ({ ...w, order: w.mb ? w.opts.map((_, k) => k) : shuffle(w.opts.map((_, k) => k)) })));
+    QZ = { ...QZ, items, i: 0, sel: null, score: 0, wrong: [], retry: true, paid: 1 };
+    SSW.qzDraw(); window.scrollTo(0, 0);
+  },
   qzNext() { if (!QZ) return; QZ.i++; QZ.sel = null; SSW.qzDraw(); window.scrollTo(0, 0); },
   dashCard,
 };
@@ -994,23 +1330,110 @@ window.__swHubInit = () => {
   w.addEventListener("click", (e) => { if (e.target === w) SSW.unpick(); });
 };
 
-let ALAT = { items: null, f: "semua", mode: "flashcard", srs: {} };
+let ALAT = { items: null, f: "semua", mode: "flashcard", srs: {}, slug: "", groups: null, info: null };
 const alatShort = (t) => String(t || "").replace(/\s*[（(].*?[）)]/g, "").trim();
 const alatSt = (a) => { const c = ALAT.srs["s:" + a.no]; if (!c || !c.n) return "baru"; if (c.mastered) return "kuasa"; return c.last === "ingat" ? "hafal" : "belum"; };
-const alatList = () => ALAT.items.filter(a => { const f = ALAT.f, st = alatSt(a); return f === "semua" || (f === "p81" && a.p === 81) || (f === "p82" && a.p === 82) || (f === "baru" && st === "baru") || (f === "belum" && (st === "belum" || st === "baru")) || (f === "hafal" && (st === "hafal" || st === "kuasa")); });
+const alatGroups = () => ALAT.groups || [...new Set(ALAT.items.map(a => a.p))].map(p => ({ id: p, title: `Hal. ${p}` }));
+const alatList = () => ALAT.items.filter(a => { const f = ALAT.f, st = alatSt(a); return f === "semua" || (f.startsWith("g:") && String(a.p) === f.slice(2)) || (f === "baru" && st === "baru") || (f === "belum" && (st === "belum" || st === "baru")) || (f === "hafal" && (st === "hafal" || st === "kuasa")); });
 function alatDraw() {
   const box = document.getElementById("alat-body"); if (!box || !ALAT.items) return;
   const L2 = alatList(), cnt = (f) => { const o = ALAT.f; ALAT.f = f; const n = alatList().length; ALAT.f = o; return n; };
-  const fl = [["semua", "Semua"], ["p81", "Hal. 81"], ["p82", "Hal. 82"], ["baru", "Baru"], ["belum", "Belum hafal"], ["hafal", "Sudah hafal"]];
+  const fl = [["semua", "Semua"], ...alatGroups().map(g => ["g:" + g.id, g.title]), ["baru", "Baru"], ["belum", "Belum hafal"], ["hafal", "Sudah hafal"]];
   const badge = { baru: "", belum: "🔸", hafal: "✅", kuasa: "🏆" };
-  box.innerHTML = `<div class="hf-f sw-seg sm" style="flex-wrap:wrap;border-radius:18px">${fl.map(([k, t]) => `<button class="${ALAT.f === k ? "on" : ""}" onclick="SSW.alatSet('f','${k}')">${t} (${cnt(k)})</button>`).join("")}</div>
-    <div class="hf-m sw-seg sm" style="border-radius:18px;margin:8px 0">${[["flashcard", "🃏 Flashcard"], ["matching", "🔗 Matching"], ["multiple", "✅ Pilihan Ganda"]].map(([k, t]) => `<button class="${ALAT.mode === k ? "on" : ""}" onclick="SSW.alatSet('mode','${k}')">${t}</button>`).join("")}</div>
-    <button class="btn sw-big" onclick="SSW.alatGo()" ${L2.length ? "" : "disabled"}>MULAI (${L2.length} alat) ›</button>
-    <div class="alat-grid">${ALAT.items.map(a => `<button class="alat-c ${L2.includes(a) ? "" : "dim"}" onclick="SSW.zoomPage('${a.img}')"><img loading="lazy" src="${a.img}" alt=""><span>${badge[alatSt(a)] || ""} ${esc(alatShort(a.arti))}</span></button>`).join("")}</div>`;
+  const ms = [["flashcard", "🃏 Flashcard"], ["matching", "🔗 Matching"], ["multiple", "✅ Gambar → Arti"], ["multiple-jp", "🈶 Gambar → Jepang"]];
+  box.innerHTML = `<div class="hf-f sw-seg sm" style="flex-wrap:wrap;border-radius:18px">${fl.map(([k, t]) => `<button class="${ALAT.f === k ? "on" : ""}" onclick="SSW.alatSet('f','${esc(k)}')">${esc(t)} (${cnt(k)})</button>`).join("")}</div>
+    <div class="hf-m sw-seg sm" style="flex-wrap:wrap;border-radius:18px;margin:8px 0">${ms.map(([k, t]) => `<button class="${ALAT.mode === k ? "on" : ""}" onclick="SSW.alatSet('mode','${k}')">${t}</button>`).join("")}</div>
+    <div class="sw-actions left"><button class="btn sw-big" onclick="SSW.alatGo()" ${L2.length ? "" : "disabled"}>MULAI (${L2.length} kartu) ›</button>
+    <button class="btn ghost" onclick="SSW.alatGo(true)" ${L2.some(a => alatSt(a) !== "kuasa" && alatSt(a) !== "hafal") ? "" : "disabled"}>🔁 Review yang belum hafal</button></div>
+    <div class="alat-grid">${ALAT.items.map(a => `<button class="alat-c ${L2.includes(a) ? "" : "dim"}" onclick="SSW.zoomPage('${a.img}')"><img loading="lazy" decoding="async" src="${a.img}" alt=""><span>${badge[alatSt(a)] || ""} ${esc(alatShort(a.arti))}</span></button>`).join("")}</div>`;
 }
 let _opT = 0;
 window.sswOnProgress = () => { clearTimeout(_opT); _opT = setTimeout(async () => { try { const g = await gate(CUR); if (g.err) return; await syncCards(g.P, g.pack.vocab || [], true); syncRank(CUR); } catch (e) { console.warn("ssw progres:", e && e.message); } }, 400); };
+
+/* ============================== DIAGRAM INTERAKTIF ============================== */
+let DG = { slug: "", list: [], d: null, quiz: null };
+const _dgCache = {};
+async function loadDiagram(slug) { if (!_dgCache[slug]) _dgCache[slug] = fetch(`./data/ssw/${slug}/diagram.json?v=20261117a`).then(r => { if (!r.ok) throw new Error("diagram"); return r.json(); }).catch(e => { delete _dgCache[slug]; throw e; }); return _dgCache[slug]; }
+async function renderDiagram([slug, did]) {
+  applyRuby();
+  const g = await gate(slug); if (g.err) return g.err;
+  const { b, pack } = g;
+  let dj; try { dj = await loadDiagram(slug); } catch (e) { return msgPage("🔧", "Diagram belum tersedia", "Bidang ini belum punya diagram interaktif.", `ssw-peta/${slug}`); }
+  const d = dj.diagrams.find(x => x.id === did) || dj.diagrams[0];
+  DG = { slug, list: dj.diagrams, d, quiz: null };
+  setTimeout(() => SSW.dgInit(), 0);
+  return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Diagram" }])}
+    <div class="sw-head compact dg-head"><h1>${esc(d.title.id)} <small class="jp">${esc(d.title.jp || "")}</small></h1></div>
+    <div class="dg-tabs">${dj.diagrams.map(x => `<button class="sw-chip ${x.id === d.id ? "on" : ""}" onclick="route('ssw-diagram/${slug}/${x.id}')">${esc(x.title.id)}</button>`).join("")}</div>
+    <div class="sw-panel dg-panel"><div class="sw-seg sm dg-mode"><button class="on" id="dg-m-explore" onclick="SSW.dgMode('explore')">👆 Jelajah</button><button id="dg-m-quiz" onclick="SSW.dgMode('quiz')">🎯 Tebak bagian</button></div>
+      <div class="dg-box" id="dg-box"><p class="sw-muted">Memuat gambar…</p></div>
+      <div id="dg-info" class="dg-info"><p class="sw-muted">${esc(d.intro || "")} Ketuk bagian pada gambar untuk melihat nama Jepang, furigana, arti, dan fungsinya.</p></div></div>
+    <div class="sw-panel"><h2>Daftar bagian (${d.parts.length})</h2><div class="dg-parts">${d.parts.map(p => `<button class="dg-chip" data-p="${p.pid}" onclick="SSW.dgPick('${p.pid}')"><b class="jp">${esc(p.jp)}</b><small>${esc(alatShort(p.arti))}</small></button>`).join("")}</div>
+      <div class="sw-actions left"><button class="btn" onclick="SSW.dgFlash()">🃏 Flashcard diagram ini</button><button class="btn ghost" onclick="route('ssw-hafal/${slug}')">📚 Semua hafalan</button></div></div>`);
+}
+
+
+
+/* ---- kamus kata (arti kata utuh untuk pop-up ketuk di materi) ---- */
+let _kamus = null;
+const kamusLoad = () => _kamus || (_kamus = Promise.all([fetch("./data/ssw/kamus.json").then(r => r.json()), fetch("./data/ssw/kamus-en.json").then(r => r.json())]).then(([a, e]) => ({ a, e })).catch(() => ({ a: {}, e: {} })));
+const _GEND = "うくぐすつぬぶむる";
+function kamusGet(KD, k) { const x = KD.a[k]; if (x) return { k, r: x[0], a: x[1] }; const y = KD.e[k]; return y ? { k, r: y[0], a: y[1], en: 1 } : null; }
+function kamusLookup(KD, base, rd, ok) {
+  for (let n = ok.length; n >= 0; n--) { const h = kamusGet(KD, base + ok.slice(0, n)); if (h) return h; }
+  for (const e of _GEND) { const h = kamusGet(KD, base + e); if (h && h.r && (rd + ok).startsWith(h.r.slice(0, -1))) return h; }
+  if (ok) { const h = kamusGet(KD, base + ok[0] + "る"); if (h && h.r && (rd + ok).startsWith(h.r.slice(0, -1))) return h; }
+  return null;
+}
+function kamusSeg(KD, base) {
+  const out = []; let i = 0;
+  while (i < base.length) { let f = null; for (let j = base.length; j > i; j--) { const h = kamusGet(KD, base.slice(i, j)); if (h) { f = h; i = j; break; } } if (!f) return null; out.push(f); }
+  return out;
+}
+
+/* ============================== PUSTAKA: Katakana / Kanji / Bunpou (daftar + flashcard) ============================== */
+const _pus = {};
+const pusLoad = (slug, f) => { const k = slug + "/" + f; return _pus[k] || (_pus[k] = fetch(`./data/ssw/${slug}/${f}.json`, { cache: "no-cache" }).then(r => r.ok ? r.json() : { items: [] }).then(d => d.items || []).catch(() => { delete _pus[k]; return []; })); };
+const PUS_T = { katakana: ["カタカナ", "Katakana"], kanji: ["漢字", "Kanji"], bunpou: ["文法", "Bunpou"] };
+function pusRow(j, it) {
+  if (j === "katakana") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>${esc(it.r || "")}${it.n ? " · muncul " + it.n + "×" : ""}</small></span></summary>${it.contoh ? `<div class="x"><p class="jp">${rich(it.contoh)}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p></div>` : ""}</details>`;
+  if (j === "kanji") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>音 ${esc(it.on || "-")} · 訓 ${esc(it.kun || "-")}</small></span></summary><div class="x">${(it.c || []).map(c => `<p><span class="jp">${esc(c.k)}</span> (${esc(c.r)}) — ${esc(c.a)}</p>`).join("") || '<p class="sw-muted">Belum ada contoh kata.</p>'}</div></details>`;
+  return `<details class="sw-vrow"><summary><span class="jp k" style="font-size:18px">${esc(it.pola)}</span><span class="m"><b>${esc(it.arti)}</b><small>${esc(it.cara || "")}</small></span></summary><div class="x"><p class="jp">${rich(it.contoh || "")}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p>${it.contoh_dari === "umum" ? '<p class="sw-muted" style="font-size:12px">Contoh umum (bukan dari materi).</p>' : ""}${it.contoh_materi ? `<p class="sw-muted" style="font-size:12px;margin-top:8px">Di materi:</p><p class="jp">${rich(it.contoh_materi)}</p>` : ""}</div></details>`;
+}
+function pusCards(j, items) {
+  return items.map((it, i) => {
+    const no = 900000 + i;
+    if (j === "katakana") return { tipe: "ssw", idx: no - 1, no, skey: "kt:" + it.k, front: it.k, reading: it.r || "", back: it.a };
+    if (j === "kanji") return { tipe: "ssw", idx: no - 1, no, skey: "kj:" + it.k, front: it.k, reading: [it.on, it.kun].filter(Boolean).join(" / "), back: it.a };
+    return { tipe: "ssw", idx: no - 1, no, skey: "bp:" + it.id, front: it.pola, reading: it.cara || "", back: it.arti + (it.contoh ? "\n" + String(it.contoh).replace(/\{([^|}]+)\|[^}]*\}/g, "$1").replace(/\*\*/g, "") + " — " + (it.arti_contoh || "") : "") };
+  });
+}
+const PUS_FILE = { katakana: "katakana", kanji: "kanji-kartu", bunpou: "bunpou" };
+async function renderPustaka([slug, j = "katakana"]) {
+  applyRuby();
+  const g = await gate(slug); if (g.err) return g.err;
+  const { b } = g;
+  if (!PUS_T[j]) j = "katakana";
+  const items = await pusLoad(slug, PUS_FILE[j]);
+  window.__swPus = { slug, j, items, n: 60 };
+  setTimeout(() => SSW.pusFilter(), 0);
+  return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: PUS_T[j][1] }])}
+    <div class="sw-head compact"><div class="jp">${PUS_T[j][0]}</div><h1>${PUS_T[j][1]} ${esc(b.nama)}</h1><p>${items.length} item dari materi bidang ini. Cari, buka detail, atau hafalkan dengan flashcard.</p></div>
+    <div class="sw-tabs"><button onclick="route('ssw-kosa/${slug}/all')">Kosakata</button>${Object.keys(PUS_T).map(k => `<button class="${k === j ? "on" : ""}" onclick="route('ssw-pustaka/${slug}/${k}')">${PUS_T[k][1]}</button>`).join("")}</div>
+    <div class="sw-tools"><input id="sw-pq" type="search" placeholder="Cari…" oninput="SSW.pusFilter()"><button class="btn" onclick="SSW.pusHafal('flashcard')">🃏 Flashcard</button><button class="btn ghost" onclick="SSW.pusHafal('multiple')">✅ Pilihan ganda</button></div>
+    <p class="sw-muted" id="sw-pcount"></p><div class="sw-vlist" id="sw-plist"></div><div class="sw-actions"><button class="btn ghost" id="sw-pmore" onclick="SSW.pusMore()">Tampilkan lebih banyak</button></div>
+    <div class="sw-attr">Arti & contoh adalah materi buatan Shirose (perlu review ahli). Arti kanji dari kamus KANJIDIC/N-level.</div>`);
+}
+const pusMatch = (j, it, q) => !q || (j === "katakana" ? [it.k, it.r, it.a] : j === "kanji" ? [it.k, it.on, it.kun, it.a, ...(it.c || []).map(c => c.k + c.r + c.a)] : [it.pola, it.arti, it.cara, it.contoh]).some(x => String(x || "").toLowerCase().includes(q));
+Object.assign(window.SSW = window.SSW || {}, {
+  pusFilter() { const P = window.__swPus; if (!P) return; const q = ((document.getElementById("sw-pq") || {}).value || "").trim().toLowerCase(); P.rows = P.items.filter(it => pusMatch(P.j, it, q)); P.n = 60; SSW.pusDraw(); },
+  pusDraw() { const P = window.__swPus; const l = document.getElementById("sw-plist"); if (!l) return; l.innerHTML = P.rows.slice(0, P.n).map(it => pusRow(P.j, it)).join("") || '<p class="sw-muted">Tidak ada hasil.</p>'; const c = document.getElementById("sw-pcount"); if (c) c.textContent = `${P.rows.length} item`; const m = document.getElementById("sw-pmore"); if (m) m.style.display = P.rows.length > P.n ? "" : "none"; },
+  pusMore() { window.__swPus.n += 100; SSW.pusDraw(); },
+  async pusHafal(mode) { const P = window.__swPus; if (!window.sswHafalStart) return; const all = (P.rows && P.rows.length ? P.rows : P.items); const rows = all.length > 100 ? all.slice().sort(() => Math.random() - .5).slice(0, 100) : all; const ok = await window.sswHafalStart({ items: pusCards(P.j, rows), mode, back: `ssw-pustaka/${P.slug}/${P.j}` }); if (ok === false) toast && toast("Tidak ada item"); },
+});
+
 export const SSW_ROUTES = {
+  "ssw-pustaka": (p) => renderPustaka(p),
   ssw: () => renderHub(),
   "ssw-peta": (p) => renderPeta(p),
   "ssw-bab": (p) => renderBab(p),
@@ -1021,5 +1444,14 @@ export const SSW_ROUTES = {
   "ssw-kuis": (p) => renderKuis(p),
   "ssw-rank": (p) => renderRank(p),
   "ssw-hafal": (p) => renderHafal(p),
+  "ssw-diagram": (p) => renderDiagram(p),
   "ssw-progres": () => renderProgres(),
 };
+
+// tinggi topbar → --tbh (agar toolbar sticky tidak separuh tertutup topbar)
+(() => {
+  const set = () => { const t = document.querySelector(".topbar"); const h = t && t.offsetParent !== null ? Math.round(t.getBoundingClientRect().height) : 0; document.documentElement.style.setProperty("--tbh", h + "px"); };
+  set(); addEventListener("resize", set); addEventListener("load", set);
+  try { const t = document.querySelector(".topbar"); if (t && window.ResizeObserver) new ResizeObserver(set).observe(t); } catch (e) {}
+  setInterval(set, 1500);
+})();

@@ -9,9 +9,9 @@
  * Global: window.MS (dipakai onclick di HTML)
  * ===================================================================== */
 import * as EN from "./mensetsu-engine.js";
-import { initPrep, PREP_ROUTES } from "./mensetsu-prep.js";
+import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ } from "./mensetsu-prep.js?v=20261118t";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
-import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261113zl";
+import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261118s";
 
 let FB = null;
 export function initMensetsu(fb) {
@@ -88,12 +88,27 @@ function avatarSvg() {
 /* ====================================================================
  *  HUB — 8 pulau
  * ==================================================================== */
+/** Simpan/pulihkan semua posisi scroll (window, body, dan kotak berscroll di dalam halaman). */
+function scrollSnap() {
+  const st = { w: window.scrollY, b: document.body.scrollTop, d: document.documentElement.scrollTop, els: [] };
+  document.querySelectorAll("body *").forEach(e => {
+    if (e.scrollTop > 0 && e.scrollHeight > e.clientHeight) {
+      const sel = e.id ? "#" + CSS.escape(e.id) : (e.classList[0] ? e.tagName.toLowerCase() + "." + CSS.escape(e.classList[0]) : "");
+      if (sel) st.els.push([sel, [...document.querySelectorAll(sel)].indexOf(e), e.scrollTop]);
+    }
+  });
+  return st;
+}
+function scrollBack(st) {
+  const go = () => { try { if (st.w) window.scrollTo(0, st.w); if (st.b) document.body.scrollTop = st.b; if (st.d) document.documentElement.scrollTop = st.d; st.els.forEach(([sel, i, t]) => { const e = document.querySelectorAll(sel)[i]; if (e) e.scrollTop = t; }); } catch (e) {} };
+  go(); requestAnimationFrame(go); setTimeout(go, 80); setTimeout(go, 300);
+}
 let CUR = null;                       // {fn, arg} untuk refresh tanpa lompat ke atas
 function setPage(fn, arg) { CUR = { fn, arg }; }
 async function refresh() {
   if (!CUR || !/^mensetsu/.test(location.hash.slice(1))) return;
-  const y = window.scrollY; const html = await CUR.fn(CUR.arg);
-  const app = document.getElementById("app"); if (app && typeof html === "string") { app.innerHTML = html; window.scrollTo(0, y); }
+  const st = scrollSnap(); const html = await CUR.fn(CUR.arg);
+  const app = document.getElementById("app"); if (app && typeof html === "string") { app.innerHTML = html; scrollBack(st); }
 }
 
 /* ---------------- akses: Mensetsu mengikuti akses SSW per bidang ----------------
@@ -177,23 +192,23 @@ async function renderBank(p) {
   const lvl = ["", "Mudah", "Sedang", "Sulit"];
   const list = bank.soal.filter(q => q.k === BANKCAT).map(q => `
     <details class="ms-q">
-      <summary><span class="ms-q-ja">${esc(q.ja)}</span><span class="ms-q-lv l${q.l}">${lvl[q.l]}</span>
+      <summary><span class="ms-q-ja">${qj(q)}</span><span class="ms-q-lv l${q.l}">${lvl[q.l]}</span>
         <button class="ms-say" onclick="event.stopPropagation(); MS.say(this)" data-t="${esc(q.ja)}" title="Dengarkan">🔊</button></summary>
       <div class="ms-q-body">
         <p class="ms-q-id">${esc(q.id)}</p>
         <h4>Kosakata penting</h4><ul class="ms-voc">${q.v.map(([j, i]) => `<li><b>${esc(j)}</b> — ${esc(i)}</li>`).join("")}</ul>
         <h4>Maksud pertanyaan</h4><p>${esc(q.m)}</p>
         <h4>Contoh jawaban <small>(referensi, jangan dihafal mentah-mentah)</small></h4>
-        <p class="ms-ans">${esc(q.aj)} <button class="ms-say" onclick="MS.say(this)" data-t="${esc(q.aj)}" title="Dengarkan">🔊</button></p>
+        <p class="ms-ans">${ajh(q)} <button class="ms-say" onclick="MS.say(this)" data-t="${esc(q.aj)}" title="Dengarkan">🔊</button></p>
         <p class="ms-ans-id">${esc(q.ai)}</p>
         <h4>Yang ingin diketahui pewawancara</h4><p>${esc(q.c)}</p>
-        ${q.f && q.f.length ? `<h4>Pertanyaan lanjutan yang mungkin muncul</h4><ul class="ms-voc">${q.f.map(x => `<li><b>${esc(x.ja)}</b> — ${esc(x.id)}</li>`).join("")}</ul>` : ""}
+        ${q.f && q.f.length ? `<h4>Pertanyaan lanjutan yang mungkin muncul</h4><ul class="ms-voc">${q.f.map(x => `<li><b>${furiQ() && x.jf ? furiHtml(x.jf) : esc(x.ja)}</b> — ${esc(x.id)}</li>`).join("")}</ul>` : ""}
       </div>
     </details>`).join("");
   return `<div class="ms-wrap">
     <div class="ms-crumbs"><a onclick="route('mensetsu')">MENSETSU</a> › <a onclick="route('mensetsu-bidang/${key}')">${b.id}</a> › <b>Bank soal</b></div>
     <div class="ms-head compact"><div class="jp">${b.jp}</div><h1>Bank soal · ${b.id}</h1></div>
-    <div class="ms-chips">${tabs}</div>
+    <div class="ms-chips">${tabs}${furiToggleHtml()}</div>
     <div class="ms-qlist">${list}</div>
     <div class="ms-actions"><button class="btn big" onclick="route('mensetsu-persiapan/${key}')">✍️ Siapkan jawabanku</button></div>
   </div>`;

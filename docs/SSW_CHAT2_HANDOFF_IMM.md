@@ -1,0 +1,25 @@
+# CHAT 2 HANDOFF — 工業製品製造業 (official-derived only)
+
+Status: **PARTIAL** (bukan COMPLETE). Semua konten diturunkan dari PDF resmi JAIM (modul ID + JP); tidak ada materi buatan sendiri. PDF asli ada di komputer user (Downloads\SHIROSE NIHONGO), tidak di-commit.
+
+| Kategori | Folder | Bab/Section/Sub-bab | Vocab | Soal resmi A/B | Set format terbuka |
+|---|---|---|---|---|---|
+| 機械金属加工 | ssw-materials/industrial-manufacturing/ | 10/36/99 | 99 | 97 | 5 |
+| 電気電子機器組立て | .../electrical-electronic-assembly/ | 12/45/115 | 115 | 55 | 12 |
+| 金属表面処理 | .../metal-surface-treatment/ | 13/52/139 | 139 | 120 | 7 |
+
+Tiap folder: processed-materials/curriculum.json (teks resmi ID + judul JP + ruby resmi), vocabulary/vocabulary.json, flashcards/flashcards.json (turunan vocab), practice-tests/official-questions.json (label OFFICIAL QUESTION, kunci + penjelasan resmi) dan official-open-format-exercises.json, extracted-images/. Metadata dokumen: source-metadata/study-guide-documents.json. ID stabil: IMM-{kode}-V0001 / IMM-{kode}-OQ-{set}-{no}. Parser: tools/imm/ (SG, PDF, SUB, CAT, DOC, CATJP via env; butuh pdftotext hasil -layout sg0N_id.txt).
+
+Gap (jangan diisi karangan):
+- 6 set pilihan ganda A–D (elec 9-2, 9-4, 10-1, 11-1; metal 8-2, 8-7) sudah dipindah ke official-questions.json (perlu cek: beberapa bergantung diagram halaman PDF). 18 set lain (KYT bergambar, pengelompokan istilah, jawaban isian/hitungan, baca jangka sorong/mikrometer, simbol diagram) tetap teks mentah di official-open-format-exercises.json (NEEDS_MANUAL_STRUCTURING).
+- Vocab: judul sub-bab (vocabulary.json) + istilah berdefinisi resmi 〜とは dari isi modul JP (vocabulary/glossary-terms.json: 19/10/13 istilah; id IMM-{kode}-G0001; definisi JP resmi + ruby; arti Indonesia dari vocab app ATAU dari teks modul ID resmi yang dicocokkan manual (field definition_id, status perlu review); semua glosarium kini punya arti dari sumber resmi; semua perlu review manual). Istilah non-definisi (daftar istilah di tabel/gambar) belum diekstrak; ruby resmi hanya kanji (tanpa okurigana/partikel). Sebagian sudah ada di vocab app → exists_in_app_vocab (14/16/11).
+- Modul tidak punya tujuan belajar, kesalahan umum, ringkasan → dikosongkan.
+- Sample exam 1号 2025 (sample1_01..03) SUDAH diparse: practice-tests/official-sample-exam-2025.json di tiap kategori (120 soal JP, label OFFICIAL QUESTION, kunci resmi; tanpa penjelasan & tanpa terjemahan ID; soal berbasis gambar merujuk halaman PNG di extracted-images/sample1/, soal dengan pilihan berupa gambar ditandai options_in_image). Sample 2号 实技 2025 (sample2_01..03) juga SUDAH diparse: official-sample-exam-2go-2025.json (30 soal/kategori, 90 total, pilihan ganda 4, kunci resmi; 13 soal pilihannya gambar/tabel → options_in_image). 14 kategori lain hanya sample (belum diunduh/diparse).
+- Belum terhubung ke UI app; semua record NEEDS_REVIEW; ID chapter-level text belum dicek manual.
+
+## Integrasi ke app (sudah live)
+3 bidang baru "Resmi JAIM" (induk: industrial-mfg): `jaim-machine-metal`, `jaim-elec-electronic`, `jaim-metal-surface`.
+- data/ssw/{slug}/ : index.json, bab1..N.json (teks resmi ID per sub-bab, ringkasan = ekstraksi kalimat pertama/poin bullet, BUKAN karangan), quiz.json (soal resmi per sub-bab, label ✅ Soal resmi; + set "Soal Ujian Contoh Resmi JAIM 2025" di sub b1s99), vocab.json (glosarium + judul sub-bab).
+- assets/ssw/{slug}/{id,jp}/pNN.webp: halaman buku PDF resmi (96 dpi) untuk Buku interaktif (mode scroll default); assets/ssw/{slug}/sample/: halaman contoh untuk soal bergambar.
+- Terdaftar di js/ssw-core.js (DEFAULT_BIDANG + config ujian 40 soal/30 ○×). Pack lama mfg-machine-metal & industrial-mfg (tulisan orisinal Shirose) TIDAK disentuh — putuskan apakah disembunyikan.
+- Generator: tools/imm/build_pack.py, render.py. Akses guru/siswa per-bidang (aksesSswBidang) perlu dibuka untuk slug baru.

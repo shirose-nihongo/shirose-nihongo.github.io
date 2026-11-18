@@ -1,0 +1,45 @@
+# soal tambahan Railway 電気設備整備 — buatan Shirose dari 受験案内/実施要領 (鉄道電業安全協会/MLIT) dan materi; perlu review ahli
+X = {
+1: [
+ ("tf","Ujian 電気設備整備 diselenggarakan oleh 鉄道電業安全協会.","試験は鉄道電業安全協会が行います。",True,"Benar."),
+ ("tf","Ujian terdiri dari 学科 30 soal dan 実技 20 soal berupa situasi bergambar.","学科30問と、実技20問があります。",True,"Benar; total 80 menit."),
+ ("tf","Syarat lulus: ≥65% di tiap bagian (学科 dan 実技).","合格は、各部65%以上です。",True,"Benar."),
+ ("tf","Peserta ujian harus berusia 17 tahun ke atas.","受験者は17歳以上です。",True,"Benar."),
+ ("mc","Biaya ujian untuk peserta non-anggota perusahaan anggota…","会員でない人の受験料はいくらですか。",["¥13.200 (termasuk pajak)","¥8.800","¥1.000"],"Anggota ¥8.800; non-anggota ¥13.200."),
+ ("mc","Pekerjaan 電気設備整備 mencakup peralatan…","電気設備整備の仕事に入るものはどれですか。",["Kawat kontak, sinyal, perlintasan sebidang","Hanya mesin cuci","Hanya mesin bubut"],"Peralatan listrik, sinyal, komunikasi, perlintasan."),
+],
+2: [
+ ("tf","Hukum Ohm: V = I × R.","オームの法則は、電圧=電流×抵抗です。",True,"Benar."),
+ ("tf","Daya listrik P = V × I.","電力は、電圧と電流をかけたものです。",True,"Benar."),
+ ("tf","Makin panjang kabel logam, hambatan makin kecil.","電線が長いほど、抵抗は小さくなります。",False,"Salah: makin panjang, R makin besar."),
+ ("tf","Makin besar luas penampang kabel, hambatan makin kecil.","断面積が大きいほど、抵抗は小さくなります。",True,"Benar."),
+ ("tf","Pentanahan (接地) melindungi manusia dan alat jika terjadi kebocoran listrik.","接地は、漏電のときに人と機械を守ります。",True,"Benar."),
+ ("mc","Arus 2 A mengalir pada hambatan 10 Ω. Tegangannya…","10Ωの抵抗に2Aが流れると、電圧は何Vですか。",["20 V","5 V","12 V"],"V = I×R = 2×10 = 20 V."),
+ ("mc","Tegangan 100 V, arus 3 A. Dayanya…","100Vで3Aのとき、電力は何Wですか。",["300 W","33 W","103 W"],"P = V×I = 300 W."),
+ ("mc","Satuan hambatan adalah…","抵抗の単位はどれですか。",["Ω (ohm)","A (ampere)","V (volt)"],"Ohm (Ω)."),
+ ("mc","Isolasi (絶縁) berfungsi untuk…","絶縁のはたらきはどれですか。",["Mencegah arus bocor","Menambah arus","Mendinginkan kabel"],"Mencegah arus bocor."),
+],
+3: [
+ ("tf","変圧器 (transformator) termasuk peralatan gardu (変電所).","変圧器は変電所の設備です。",True,"Benar."),
+ ("tf","転てつ装置 menggerakkan wesel.","転てつ装置は、ポイントを動かします。",True,"Benar."),
+ ("tf","踏切遮断機 dan 踏切警報機 termasuk peralatan perlintasan sebidang.","遮断機や警報機は踏切保安設備です。",True,"Benar."),
+ ("mc","Alat yang menghubungkan sinyal dan wesel agar tidak terbentuk rute berbahaya…","信号とポイントをつないで危険な進路を防ぐ装置はどれですか。",["連動装置 (interlocking)","配電盤","避雷器"],"Interlocking."),
+ ("mc","Alat yang menghentikan kereta otomatis saat melewati sinyal berhenti…","停止信号を越えた列車を自動で止める装置はどれですか。",["自動列車停止装置 (ATS)","電気融雪器","照明設備"],"ATS."),
+ ("mc","Alat pelindung gardu dari sambaran petir…","雷から設備を守る装置はどれですか。",["避雷器","整流器","変圧器"],"避雷器 (arrester)."),
+],
+4: [
+ ("tf","Sebelum kerja listrik, pastikan tegangan padam (無電圧確認).","作業の前に、無電圧を確認します。",True,"Benar."),
+ ("tf","Bagian bertegangan boleh disentuh jika memakai sarung tangan kain biasa.","ふつうの軍手なら、充電部にさわってもよいです。",False,"Salah: pakai sarung tangan isolasi dan jangan menyentuh."),
+ ("tf","Kerja di ketinggian memakai 墜落制止用器具 yang dikaitkan pada titik yang kuat.","高所では、丈夫な所に墜落制止用器具をかけます。",True,"Benar."),
+ ("tf","Alat uji tidak perlu diperiksa sebelum dipakai.","テスターなどは点検せずに使います。",False,"Salah: diperiksa dulu."),
+ ("mc","Di lintas atau stasiun yang harus diikuti adalah…","線路や駅で従うものはどれですか。",["見張員 dan jadwal kereta","Perintah teman sebaya saja","Tidak ada"],"Penjaga (見張員) dan jadwal kereta."),
+ ("mc","Jika menemukan kelainan, lakukan…","異常を見つけたら、どうしますか。",["Segera dilaporkan","Disimpan sendiri","Dibiarkan"],"Laporkan segera."),
+],
+5: [
+ ("tf","信号装置 memberi tahu masinis batas kecepatan atau perintah berhenti.","信号は、運転士に速度や停止を知らせます。",True,"Benar."),
+ ("tf","列車検知装置 (rangkaian rel) mendeteksi ada tidaknya kereta di blok.","列車検知は、区間に列車がいるか調べます。",True,"Benar."),
+ ("tf","Pada perlintasan, palang turun setelah kereta lewat.","遮断機は、列車が通ったあとに下ります。",False,"Salah: turun saat kereta mendekat."),
+ ("mc","Alat yang mendeteksi kendaraan terjebak di perlintasan…","踏切で立ち往生した車を見つける装置はどれですか。",["障害物検知装置","転てつ装置","配電盤"],"Pendeteksi rintangan."),
+ ("mc","Peralatan yang menggerakkan wesel adalah…","ポイントを切りかえるのはどれですか。",["転てつ装置","遮断機","避雷器"],"転てつ装置."),
+],
+}

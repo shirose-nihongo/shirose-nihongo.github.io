@@ -1,0 +1,434 @@
+{
+ "schema": 1,
+ "bidang": "auto-transport",
+ "source": "（外国人向け）トラック運転者をめざす人のための学習用テキスト (全日本トラック協会, 2024-11, 全242p.) — ringkasan & soal latihan ditulis ulang oleh Shirose Nihongo (bukan salinan teks). Soal = Latihan Shirose Nihongo, bukan soal resmi.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "bab": {
+  "id": "bab1",
+  "no": 1,
+  "title": {
+   "id": "Dasar Sopir Truk",
+   "jp": "トラック{運転者|うんてんしゃ}の{基本|きほん}"
+  },
+  "intro": {
+   "id": "Peran truk, dampak kecelakaan, sikap kerja, aturan mengemudi aman, etika, eco-drive.",
+   "jp": "トラックの{役割|やくわり}、{事故|じこ}の{影響|えいきょう}、{仕事|しごと}の{心構|こころがま}え、{安全運転|あんぜんうんてん}の{基本|きほん}を{学|まな}びます。"
+  },
+  "pages": [
+   1,
+   62
+  ],
+  "subs": [
+   {
+    "id": "b1s1",
+    "no": 1,
+    "title": {
+     "id": "Peran Truk dan Jenis Izin",
+     "jp": "トラックの{役割|やくわり}と{免許|めんきょ}"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Truk mengangkut **lebih dari 90%** barang dalam negeri Jepang; kereta, kapal, pesawat pun berakhir di **truk** (dari stasiun/pelabuhan/bandara ke tujuan). Sopir truk adalah **エッセンシャルワーカー** (pekerja esensial).",
+        "Bila angkutan truk berhenti, barang, suku cadang, dan obat tidak sampai; contoh: setelah gempa 2011 kekurangan bahan bakar menghentikan banyak truk.",
+        "Izin mengemudi menurut ukuran: **大型** > **中型** > **準中型** > **普通**; izin yang lebih besar boleh mengemudikan kendaraan di bawahnya.",
+        "**事業用トラック** (milik perusahaan angkutan berizin Menteri; **hanya ini** yang boleh mengangkut barang pelanggan dengan **bayaran**): pelat **hijau tulisan putih** = **緑ナンバー**.",
+        "**自家用トラック** (untuk mengangkut barang sendiri; tidak boleh berbayar): pelat **putih tulisan hijau** = **白ナンバー**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{日本|にっぽん}では、トラックが{国内|こくない}{貨物|かもつ}の9{割|わり}{以上|いじょう}を{運|はこ}んでいます。トラック{運転者|うんてんしゃ}はエッセンシャルワーカーです。",
+        "トラック{輸送|ゆそう}が{止|と}まると、{商品|しょうひん}や{薬|くすり}が{運|はこ}べなくなります。",
+        "トラックを{運転|うんてん}するには、{大|おお}きさに{合|あ}った{運転免許|うんてんめんきょ}が{必要|ひつよう}です。",
+        "{事業用トラック|じぎょうようとらっく}は、お{金|きん}をもらって{荷物|にもつ}を{運|はこ}べます。ナンバープレートは{緑ナンバー|みどりなんばー}です。",
+        "{自家用トラック|じかようとらっく}は、{自分|じぶん}の{荷物|にもつ}だけを{運|はこ}びます。ナンバープレートは{白|しろ}ナンバーです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Truk mengangkut lebih dari 90% barang dalam negeri Jepang; kereta, kapal, pesawat pun berakhir di truk (dari stasiun/pelabuhan/bandara ke tujuan). Sopir truk adalah エッセンシャルワーカー (pekerja esensial).",
+      "points": [
+       "Bila angkutan truk berhenti, barang, suku cadang, dan obat tidak sampai; contoh: setelah gempa 2011 kekurangan bahan bakar menghentikan banyak truk.",
+       "Izin mengemudi menurut ukuran: 大型 > 中型 > 準中型 > 普通; izin yang lebih besar boleh mengemudikan kendaraan di bawahnya.",
+       "事業用トラック (milik perusahaan angkutan berizin Menteri; hanya ini yang boleh mengangkut barang pelanggan dengan bayaran): pelat hijau tulisan putih = 緑ナンバー."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 事業用トラック, 自家用トラック, 緑ナンバー, 運転免許."
+      ]
+     },
+     "jp": {
+      "core": "{日本|にっぽん}では、トラックが{国内|こくない}{貨物|かもつ}の9{割|わり}{以上|いじょう}を{運|はこ}んでいます。トラック{運転者|うんてんしゃ}はエッセンシャルワーカーです。",
+      "points": [
+       "トラック{輸送|ゆそう}が{止|と}まると、{商品|しょうひん}や{薬|くすり}が{運|はこ}べなくなります。",
+       "トラックを{運転|うんてん}するには、{大|おお}きさに{合|あ}った{運転免許|うんてんめんきょ}が{必要|ひつよう}です。",
+       "{事業用トラック|じぎょうようとらっく}は、お{金|きん}をもらって{荷物|にもつ}を{運|はこ}べます。ナンバープレートは{緑ナンバー|みどりなんばー}です。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{事業用トラック|じぎょうようとらっく}、{自家用トラック|じかようとらっく}、{緑ナンバー|みどりなんばー}、{運転免許|うんてんめんきょ}。"
+      ]
+     }
+    },
+    "pagesJp": [
+     1,
+     8
+    ]
+   },
+   {
+    "id": "b1s2",
+    "no": 2,
+    "title": {
+     "id": "Dampak Kecelakaan Truk",
+     "jp": "トラック{事故|じこ}の{社会的影響|しゃかいてきえいきょう}"
+    },
+    "pages": [
+     2,
+     2
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Truk besar dan berat → kecelakaan berakibat **fatal**; berdampak pada korban, keluarga, perusahaan, dan seluruh industri. Sopir adalah **プロ運転者**.",
+        "Sekitar **separuh** kecelakaan truk usaha adalah **追突 (tabrak belakang)**, sebagian besar karena **漫然運転** (menyetir tanpa perhatian cukup) dan **脇見運転** (melihat ke samping), juga ngantuk dan kelelahan.",
+        "Kecelakaan fatal di **交差点** dengan pejalan kaki/sepeda mencapai **hampir 3 dari 10**: saat belok kiri dengan **sepeda**, saat belok kanan dengan **pejalan kaki**.",
+        "**健康起因事故**: kecelakaan karena penyakit sopir. Ikuti pemeriksaan kesehatan berkala, tidur cukup, olahraga, jangan minum berlebihan.",
+        "**デジタコ** (tachograph digital) merekam kecepatan/waktu dan rem mendadak; **ドラレコ** (dashcam) merekam video sebelum-sesudah benturan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "トラックは{大|おお}きくて{重|おも}いので、{事故|じこ}になると{重大|じゅうだい}{事故|じこ}になります。",
+        "{事業用トラック|じぎょうようとらっく}の{事故|じこ}の{約半分|やくはんぶん}は{追突事故|ついとつじこ}です。",
+        "{交差点|こうさてん}では、{左折|させつ}のときは{自転車|じてんしゃ}、{右折|うせつ}のときは{歩行者|ほこうしゃ}との{事故|じこ}が{多|おお}いです。",
+        "{病気|びょうき}による{健康起因事故|けんこうきいんじこ}を{防|ふせ}ぐために、{定期|ていき}{健康診断|けんこうしんだん}を{必|かなら}ず{受|う}けます。",
+        "デジタコは{速度|そくど}や{時間|じかん}を{記録|きろく}します。ドラレコは{走行中|そうこうちゅう}の{映像|えいぞう}を{記録|きろく}します。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Truk besar dan berat → kecelakaan berakibat fatal; berdampak pada korban, keluarga, perusahaan, dan seluruh industri. Sopir adalah プロ運転者.",
+      "points": [
+       "Sekitar separuh kecelakaan truk usaha adalah 追突 (tabrak belakang), sebagian besar karena 漫然運転 (menyetir tanpa perhatian cukup) dan 脇見運転 (melihat ke samping), juga ngantuk dan kelelahan.",
+       "Kecelakaan fatal di 交差点 dengan pejalan kaki/sepeda mencapai hampir 3 dari 10: saat belok kiri dengan sepeda, saat belok kanan dengan pejalan kaki.",
+       "健康起因事故: kecelakaan karena penyakit sopir. Ikuti pemeriksaan kesehatan berkala, tidur cukup, olahraga, jangan minum berlebihan."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 追突事故, 漫然運転, 脇見運転, 健康起因事故."
+      ]
+     },
+     "jp": {
+      "core": "トラックは{大|おお}きくて{重|おも}いので、{事故|じこ}になると{重大|じゅうだい}{事故|じこ}になります。",
+      "points": [
+       "{事業用トラック|じぎょうようとらっく}の{事故|じこ}の{約半分|やくはんぶん}は{追突事故|ついとつじこ}です。",
+       "{交差点|こうさてん}では、{左折|させつ}のときは{自転車|じてんしゃ}、{右折|うせつ}のときは{歩行者|ほこうしゃ}との{事故|じこ}が{多|おお}いです。",
+       "{病気|びょうき}による{健康起因事故|けんこうきいんじこ}を{防|ふせ}ぐために、{定期|ていき}{健康診断|けんこうしんだん}を{必|かなら}ず{受|う}けます。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{追突事故|ついとつじこ}、{漫然運転|まんぜんうんてん}、{脇見運転|わきみうんてん}、{健康起因事故|けんこうきいんじこ}。"
+      ]
+     }
+    },
+    "pagesJp": [
+     9,
+     12
+    ]
+   },
+   {
+    "id": "b1s3",
+    "no": 3,
+    "title": {
+     "id": "Sikap Kerja dan 4S Kendaraan",
+     "jp": "{仕事|しごと}の{心構|こころがま}えと{車|くるま}の4S"
+    },
+    "pages": [
+     3,
+     3
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Salam**: tersenyum, suara cerah, menatap mata, **mulai lebih dulu**. Sopir adalah **wajah perusahaan**.",
+        "**身だしなみ**: bersih dan rapi; periksa rambut, topi, pakaian, **名札** (tanda nama), kuku, sepatu (jangan menginjak tumit).",
+        "Bekerja sama (**協調性**) dan berkomunikasi dengan atasan/sopir lain (terutama saat 点呼).",
+        "Bahasa: bicara **jelas, cerah, menatap lawan**, hindari ungkapan ambigu.",
+        "**4S**: 整理 (pilah), 整頓 (rapikan), 清掃 (bersihkan), 清潔 (pertahankan). Contoh: dokumen di dasbor memantul di kaca depan; kaleng di lantai bisa terjepit pedal rem.",
+        "**Bahaya kebiasaan**: setelah terbiasa, ketegangan hilang dan dasar keselamatan ditinggalkan → kecelakaan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "あいさつは、{自分|じぶん}から、{笑顔|えがお}で、{相手|あいて}の{目|め}を{見|み}てします。",
+        "{運転者|うんてんしゃ}は{会社|かいしゃ}の{顔|かお}ですから、{身|み}だしなみをきちんとします。",
+        "ほかの{人|にん}と{協調|きょうちょう}して、コミュニケーションをとります。",
+        "{言葉|ことば}づかいは、{明|あか}るく、はっきり{話|はな}します。あいまいな{表現|ひょうげん}は{使|つか}いません。",
+        "4Sは{整理|せいり}、{整頓|せいとん}、{清掃|せいそう}、{清潔|せいけつ}です。{車内|しゃない}の4Sは{事故防止|じこぼうし}にもなります。",
+        "{運転|うんてん}に{慣|な}れたころに、{油断|ゆだん}して{事故|じこ}が{起|お}きやすくなります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Salam: tersenyum, suara cerah, menatap mata, mulai lebih dulu. Sopir adalah wajah perusahaan.",
+      "points": [
+       "身だしなみ: bersih dan rapi; periksa rambut, topi, pakaian, 名札 (tanda nama), kuku, sepatu (jangan menginjak tumit).",
+       "Bekerja sama (協調性) dan berkomunikasi dengan atasan/sopir lain (terutama saat 点呼).",
+       "Bahasa: bicara jelas, cerah, menatap lawan, hindari ungkapan ambigu."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 身だしなみ, 名札, 協調性, 整理."
+      ]
+     },
+     "jp": {
+      "core": "あいさつは、{自分|じぶん}から、{笑顔|えがお}で、{相手|あいて}の{目|め}を{見|み}てします。",
+      "points": [
+       "{運転者|うんてんしゃ}は{会社|かいしゃ}の{顔|かお}ですから、{身|み}だしなみをきちんとします。",
+       "ほかの{人|にん}と{協調|きょうちょう}して、コミュニケーションをとります。",
+       "{言葉|ことば}づかいは、{明|あか}るく、はっきり{話|はな}します。あいまいな{表現|ひょうげん}は{使|つか}いません。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{身|み}だしなみ、{名札|なふだ}、{協調性|きょうちょうせい}、{整理|せいり}。"
+      ]
+     }
+    },
+    "pagesJp": [
+     13,
+     18
+    ]
+   },
+   {
+    "id": "b1s4",
+    "no": 4,
+    "title": {
+     "id": "Dasar Mengemudi Aman",
+     "jp": "{安全運転|あんぜんうんてん}の{基本|きほん}"
+    },
+    "pages": [
+     4,
+     5
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Kondisi sopir dan kecepatan"
+      },
+      {
+       "ul": [
+        "**Jaga kesehatan**: tidur cukup, makan seimbang, olahraga ringan, punya tempat santai.",
+        "**飲酒運転 adalah kejahatan**: sisa alkohol **esok harinya** pun tetap dihukum; jangan mengemudi bila masih terpengaruh.",
+        "Kecepatan maksimum **jalan biasa**: **60 km/jam** untuk truk. Di **高速自動車国道**: **100 / 90 / 80 km/jam** menurut golongan truk (berat total/muatan maksimum). **自動車専用道路** sama dengan jalan biasa (**60 km/jam** bila tak ada rambu).",
+        "**規制速度** (rambu: 40/30 km/jam dll.) lebih diutamakan; di jalan tol pun dibatasi saat hujan/salju/angin."
+       ]
+      },
+      {
+       "h": "Persimpangan dan jarak"
+      },
+      {
+       "ul": [
+        "Beri **isyarat 30 m sebelum** titik belok. Saat belok kanan/kiri di persimpangan: **徐行 (kecepatan yang memungkinkan berhenti seketika)**.",
+        "**Lurus dan belok kiri didahulukan** dibanding belok kanan.",
+        "Persimpangan tanpa lampu: jalan prioritas/lebih lebar didahulukan; jalan sama lebar → kendaraan **dari kiri** didahulukan.",
+        "**車間距離**: jalan biasa ≥ (angka speedometer − **15**) meter; jalan tol ≥ angka speedometer dalam **meter** (100 km/jam → 100 m). Sopir truk duduk tinggi sehingga jarak terasa lebih panjang dari aslinya."
+       ]
+      },
+      {
+       "h": "Pejalan kaki dan situasi khusus"
+      },
+      {
+       "ul": [
+        "Jangan pakai ponsel saat mengemudi. Beri jarak samping **≥ 1 m** untuk pejalan kaki/sepeda, atau **徐行**.",
+        "Di **横断歩道** tanpa lampu: bila ada/mungkin ada penyeberang, berhenti sebelum garis; jangan menyalip kendaraan yang berhenti di depan zebra cross.",
+        "Memotong trotoar/jalur samping untuk keluar masuk halaman: **berhenti dulu** meski tak ada orang.",
+        "**緊急自動車** (ambulans dll.): menepi ke kiri dan beri jalan (di persimpangan: menghindari persimpangan dan berhenti).",
+        "**Bus rute** yang memberi isyarat berangkat: beri jalan."
+       ]
+      },
+      {
+       "h": "踏切, tol, tanjakan, lampu"
+      },
+      {
+       "ul": [
+        "**踏切**: berhenti sejenak sebelum garis, buka jendela, cek kiri-kanan; **jangan masuk** saat alarm berbunyi/palang turun; cek ada ruang di seberang; **jangan ganti gigi** di dalam; bila terjebak: **tombol darurat** atau **発炎筒**.",
+        "**Tol**: cek BBM, air pendingin, oli, tekanan ban, kedalaman alur ban; cek ikatan muatan; lajur paling kanan untuk menyalip.",
+        "**Turunan panjang**: jangan terus menginjak rem → **フェード現象** (rem hilang akibat panas); pakai **engine brake/rem knalpot**. Tikungan: **kurangi kecepatan sebelum masuk**.",
+        "**Terowongan**: nyalakan lampu, kurangi kecepatan dari depan, jaga jarak.",
+        "**黄信号 = berhenti** (kecuali bila tak bisa berhenti aman). **赤の点滅 = berhenti sejenak lalu jalan setelah aman**; **黄の点滅 = jalan hati-hati**.",
+        "**駐車** = berhenti lama/sopir meninggalkan kendaraan; **停車** = berhenti singkat (naik-turun penumpang, **bongkar muat ≤ 5 menit**). Larangan parkir: perlu sisa jalan **≥ 3,5 m**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "{運転者|うんてんしゃ}の{状態|じょうたい}と{速度|そくど}"
+      },
+      {
+       "ul": [
+        "{健康管理|けんこうかんり}をして、{十分|じゅうぶん}な{睡眠|すいみん}をとります。",
+        "{飲酒運転|いんしゅうんてん}は{犯罪|はんざい}です。{翌日|よくじつ}でも{酒|さけ}が{残|のこ}っていれば{運転|うんてん}してはいけません。",
+        "{一般道路|いっぱんどうろ}でのトラックの{最高速度|さいこうそくど}は{時速|じそく}60kmです。{高速|こうそく}{自動車|じどうしゃ}{国道|こくどう}では、100km、90km、80kmの3つに{分|わ}かれます。",
+        "{標識|ひょうしき}で{指定|してい}された{規制速度|きせいそくど}を{守|まも}ります。"
+       ]
+      },
+      {
+       "h": "{交差点|こうさてん}と{車間距離|しゃかんきょり}"
+      },
+      {
+       "ul": [
+        "{合図|あいず}は、{曲|ま}がる30m{手前|てまえ}でします。{右折|うせつ}と{左折|させつ}のときは{徐行|じょこう}します。",
+        "{直進車|ちょくしんしゃ}と{左折|させつ}{車|くるま}は、{右折|うせつ}{車|くるま}より{優先|ゆうせん}です。",
+        "{信号|しんごう}のない{交差点|こうさてん}では、{優先道路|ゆうせんどうろ}が{先|さき}です。{同|おな}じ{広|ひろ}さなら{左|ひだり}から{来|く}る{車|くるま}が{先|さき}です。",
+        "{車間距離|しゃかんきょり}は、{一般道路|いっぱんどうろ}で{速度|そくど}から15をひいたメートル{以上|いじょう}、{高速道路|こうそくどうろ}で{速度|そくど}と{同|おな}じメートル{以上|いじょう}です。"
+       ]
+      },
+      {
+       "h": "{歩行者|ほこうしゃ}など"
+      },
+      {
+       "ul": [
+        "{運転中|うんてんちゅう}はスマートフォンを{使|つか}いません。{歩行者|ほこうしゃ}や{自転車|じてんしゃ}とは1m{以上|いじょう}あけます。",
+        "{横断歩道|おうだんほどう}に{近|ちか}づくときは、{歩行者|ほこうしゃ}がいるかどうかわからなければ、{止|と}まれる{速度|そくど}に{落|お}とします。",
+        "{歩道|ほどう}を{横切|よこぎ}るときは、{手前|てまえ}で{一時停止|いちじていし}します。",
+        "{救急車|きゅうきゅうしゃ}などの{緊急自動車|きんきゅうじどうしゃ}には、{道|みち}をゆずります。"
+       ]
+      },
+      {
+       "h": "{踏切|ふみきり}、{高速道路|こうそくどうろ}、{坂道|さかみち}、{信号|しんごう}"
+      },
+      {
+       "ul": [
+        "{踏切|ふみきり}では、{一時停止|いちじていし}して{左右|さゆう}を{確認|かくにん}します。{踏切|ふみきり}の{中|なか}でギアを{変|か}えてはいけません。",
+        "{高速道路|こうそくどうろ}に{入|い}る{前|まえ}に、{燃料|ねんりょう}、{冷却水|れいきゃくすい}、エンジンオイル、タイヤを{点検|てんけん}します。",
+        "{長|なが}い{下り坂|くだりざか}でブレーキを{使|つか}いすぎると、{フェード現象|ふぇーどげんしょう}でブレーキがきかなくなります。",
+        "{黄|き}{信号|しんごう}は、{原則|げんそく}として{止|ど}まります。{赤|あか}の{点滅|てんめつ}は{一時停止|いちじていし}です。",
+        "{停車|ていしゃ}は{短|みじか}い{時間|じかん}の{停止|ていし}です。5{分|ふん}{以内|いない}の{荷物|にもつ}の{積|つ}みおろしは{停車|ていしゃ}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Jaga kesehatan: tidur cukup, makan seimbang, olahraga ringan, punya tempat santai.",
+      "points": [
+       "飲酒運転 adalah kejahatan: sisa alkohol esok harinya pun tetap dihukum; jangan mengemudi bila masih terpengaruh.",
+       "Kecepatan maksimum jalan biasa: 60 km/jam untuk truk. Di 高速自動車国道: 100 / 90 / 80 km/jam menurut golongan truk (berat total/muatan maksimum). 自動車専用道路 sama dengan jalan biasa (60 km/jam bila tak ada rambu).",
+       "規制速度 (rambu: 40/30 km/jam dll.) lebih diutamakan; di jalan tol pun dibatasi saat hujan/salju/angin."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 飲酒運転, 法定速度, 規制速度, 徐行."
+      ]
+     },
+     "jp": {
+      "core": "{健康管理|けんこうかんり}をして、{十分|じゅうぶん}な{睡眠|すいみん}をとります。",
+      "points": [
+       "{飲酒運転|いんしゅうんてん}は{犯罪|はんざい}です。{翌日|よくじつ}でも{酒|さけ}が{残|のこ}っていれば{運転|うんてん}してはいけません。",
+       "{一般道路|いっぱんどうろ}でのトラックの{最高速度|さいこうそくど}は{時速|じそく}60kmです。{高速|こうそく}{自動車|じどうしゃ}{国道|こくどう}では、100km、90km、80kmの3つに{分|わ}かれます。",
+       "{標識|ひょうしき}で{指定|してい}された{規制速度|きせいそくど}を{守|まも}ります。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{飲酒運転|いんしゅうんてん}、{法定速度|ほうていそくど}、{規制速度|きせいそくど}、{徐行|じょこう}。"
+      ]
+     }
+    },
+    "pagesJp": [
+     19,
+     52
+    ]
+   },
+   {
+    "id": "b1s5",
+    "no": 5,
+    "title": {
+     "id": "Etika, Eco-drive, dan Rute",
+     "jp": "{運転|うんてん}マナー・エコドライブ・{経路|けいろ}"
+    },
+    "pages": [
+     6,
+     6
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Sopir truk adalah **teladan** pengemudi lain dan truk adalah **走る広告塔** (iklan berjalan perusahaan).",
+        "Dasar etika mengemudi: **思いやり (kepedulian)** dan **譲りあい (saling mengalah)**; di jalan sempit, **beri jalan** pada lawan.",
+        "**Jangan membuang sampah** keluar kendaraan.",
+        "**エコドライブ**: mengemudi hemat BBM dan ramah lingkungan (hindari start/rem mendadak).",
+        "**Rute**: pilih yang **aman**, dan **pelajari informasi rute** sebelumnya (jalan sempit, batas tinggi, dll.)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "トラックは{走る広告塔|はしるこうこくとう}です。マナーの{良|よ}い{運転|うんてん}をします。",
+        "{運転|うんてん}マナーの{基本|きほん}は、{思|おも}いやりと{譲|ゆず}りあいです。",
+        "{狭|せま}い{道路|どうろ}ですれ{違|ちが}うときは、{相手|あいて}に{道|みち}を{譲|ゆず}ります。",
+        "{車|くるま}の{外|そと}へ{物|もの}を{投|な}げ{捨|す}ててはいけません。",
+        "エコドライブを{実践|じっせん}します。{安全|あんぜん}な{経路|けいろ}を{選|えら}び、{道路|どうろ}の{情報|じょうほう}を{前|まえ}もって{調|しら}べます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sopir truk adalah teladan pengemudi lain dan truk adalah 走る広告塔 (iklan berjalan perusahaan).",
+      "points": [
+       "Dasar etika mengemudi: 思いやり (kepedulian) dan 譲りあい (saling mengalah); di jalan sempit, beri jalan pada lawan.",
+       "Jangan membuang sampah keluar kendaraan.",
+       "エコドライブ: mengemudi hemat BBM dan ramah lingkungan (hindari start/rem mendadak)."
+      ],
+      "avoid": [],
+      "exam": [
+       "Istilah penting: 走る広告塔, 思いやり, 譲りあい, エコドライブ."
+      ]
+     },
+     "jp": {
+      "core": "トラックは{走る広告塔|はしるこうこくとう}です。マナーの{良|よ}い{運転|うんてん}をします。",
+      "points": [
+       "{運転|うんてん}マナーの{基本|きほん}は、{思|おも}いやりと{譲|ゆず}りあいです。",
+       "{狭|せま}い{道路|どうろ}ですれ{違|ちが}うときは、{相手|あいて}に{道|みち}を{譲|ゆず}ります。",
+       "{車|くるま}の{外|そと}へ{物|もの}を{投|な}げ{捨|す}ててはいけません。"
+      ],
+      "avoid": [],
+      "exam": [
+       "{大事|だいじ}な{用語|ようご}：{走る広告塔|はしるこうこくとう}、{思|おも}いやり、{譲|ゆず}りあい、エコドライブ。"
+      ]
+     }
+    },
+    "pagesJp": [
+     53,
+     62
+    ]
+   }
+  ],
+  "pagesJp": [
+   1,
+   62
+  ]
+ }
+}

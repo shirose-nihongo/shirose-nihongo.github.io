@@ -205,17 +205,17 @@
 {
 "k": "私鉄",
 "r": "してつ",
-"a": "private railway"
+"a": "kereta api swasta"
 },
 {
 "k": "私有",
 "r": "しゆう",
-"a": "private ownership"
+"a": "kepemilikan pribadi"
 },
 {
 "k": "私立",
 "r": "しりつ",
-"a": "private (establishment)"
+"a": "swasta; pribadi (lembaga)"
 }
 ]
 },
@@ -265,17 +265,17 @@
 {
 "k": "叔父",
 "r": "おじ",
-"a": "uncle"
+"a": "paman"
 },
 {
 "k": "父親",
 "r": "ちちおや",
-"a": "father"
+"a": "ayah"
 },
 {
 "k": "父母",
 "r": "ふぼ",
-"a": "father and mother; parents"
+"a": "ayah dan ibu; orang tua"
 }
 ]
 },
@@ -290,12 +290,12 @@
 {
 "k": "叔母",
 "r": "おば",
-"a": "aunt"
+"a": "bibi (tante)"
 },
 {
 "k": "母親",
 "r": "ははおや",
-"a": "mother"
+"a": "ibu"
 },
 {
 "k": "母校",
@@ -310,22 +310,22 @@
 "k": "兄",
 "on": "ケイ、キョウ",
 "kun": "あに",
-"a": "anh trai",
+"a": "kakak laki-laki",
 "c": [
 {
 "k": "従兄弟",
 "r": "いとこ",
-"a": "cousin (male)"
+"a": "sepupu (laki-laki)"
 },
 {
 "k": "兄弟",
 "r": "きょうだい",
-"a": "siblings; brothers and sisters"
+"a": "saudara; kakak beradik"
 },
 {
 "k": "お兄さん",
 "r": "おにいさん",
-"a": "(1) older brother; elder brother (2) (vocative) young man; buddy; fella; laddie"
+"a": "(1) kakak laki-laki (2) (sapaan) anak muda; mas"
 }
 ]
 },
@@ -340,17 +340,17 @@
 {
 "k": "従姉妹",
 "r": "いとこ",
-"a": "cousin (female)"
+"a": "sepupu (perempuan)"
 },
 {
 "k": "姉妹",
 "r": "しまい",
-"a": "sisters"
+"a": "saudara perempuan; kakak beradik perempuan"
 },
 {
 "k": "お姉さん",
 "r": "おねえさん",
-"a": "(1) elder sister (2) (vocative) young lady (3) miss (referring to a waitress, etc.) (4) ma'am (used by geisha to refer to their superiors)"
+"a": "(1) kakak perempuan (2) (sapaan) nona muda (3) mbak (misalnya pelayan) (4) ibu (sapaan sopan)"
 }
 ]
 },
@@ -360,22 +360,22 @@
 "k": "弟",
 "on": "テイ、ダイ、デ",
 "kun": "おとうと",
-"a": "em trai",
+"a": "adik laki-laki",
 "c": [
 {
 "k": "従兄弟",
 "r": "いとこ",
-"a": "cousin (male)"
+"a": "sepupu (laki-laki)"
 },
 {
 "k": "兄弟",
 "r": "きょうだい",
-"a": "siblings; brothers and sisters"
+"a": "saudara; kakak beradik"
 },
 {
 "k": "弟子",
 "r": "でし",
-"a": "pupil; disciple; adherent; follower; apprentice; young orang; teacher's student-helper"
+"a": "murid; pengikut; magang; asisten guru"
 }
 ]
 },
@@ -385,17 +385,17 @@
 "k": "妹",
 "on": "マイ",
 "kun": "いもうと",
-"a": "em gái",
+"a": "adik perempuan",
 "c": [
 {
 "k": "従姉妹",
 "r": "いとこ",
-"a": "cousin (female)"
+"a": "sepupu (perempuan)"
 },
 {
 "k": "姉妹",
 "r": "しまい",
-"a": "sisters"
+"a": "saudara perempuan; kakak beradik perempuan"
 }
 ]
 },
@@ -545,17 +545,17 @@
 "k": "魚",
 "on": "ギョ",
 "kun": "うお、さかな、-ざかな",
-"a": "con cá",
+"a": "ikan",
 "c": [
 {
 "k": "金魚",
 "r": "きんぎょ",
-"a": "goldfish"
+"a": "ikan mas koki"
 },
 {
 "k": "海鷂魚",
 "r": "えい",
-"a": "ray (fish); stingray"
+"a": "ikan pari"
 }
 ]
 },
@@ -570,17 +570,17 @@
 {
 "k": "牛肉",
 "r": "ぎゅうにく",
-"a": "beef"
+"a": "daging sapi"
 },
 {
 "k": "豚肉",
 "r": "ぶたにく",
-"a": "pork"
+"a": "daging babi"
 },
 {
 "k": "鶏肉",
 "r": "けいにく",
-"a": "chicken meat"
+"a": "daging ayam"
 }
 ]
 },
@@ -590,7 +590,7 @@
 "k": "野",
 "on": "ヤ、ショ",
 "kun": "の、の-",
-"a": "sayap keping; hoang dã; rakyat biasa",
+"a": "dataran; ladang; pedesaan; kehidupan sipil",
 "c": [
 {
 "k": "野菜",
@@ -610,7 +610,7 @@
 "k": "菜",
 "on": "サイ",
 "kun": "な",
-"a": "rau; món makan kèm",
+"a": "sayuran; lauk pendamping",
 "c": [
 {
 "k": "野菜",
@@ -625,7 +625,7 @@
 "k": "好",
 "on": "コウ",
 "kun": "この.む、す.く、よ.い、い.い",
-"a": "thích, menyukai; baik indah",
+"a": "menyukai; senang; menyenangkan",
 "c": [
 {
 "k": "好きです",
@@ -645,7 +645,7 @@
 "k": "刺",
 "on": "シ",
 "kun": "さ.す、さ.さる、さ.し、さし、とげ",
-"a": "menusuk, chích; gai; nama kartu",
+"a": "duri; menusuk; menikam; menyengat; kartu nama",
 "c": [
 {
 "k": "刺身",
@@ -665,7 +665,7 @@
 {
 "k": "天ぷら",
 "r": "てんぷら",
-"a": "Tempura"
+"a": "tempura"
 }
 ]
 },
@@ -735,7 +735,7 @@
 "k": "干",
 "on": "カン",
 "kun": "ほ.す、ほ.し-、-ぼ.し、ひ.る",
-"a": "kering, puap kering; can persiapan",
+"a": "kering; mengeringkan; menjemur",
 "c": [
 {
 "k": "梅干し",
@@ -825,12 +825,12 @@
 "k": "茶",
 "on": "チャ、サ",
 "kun": "",
-"a": "trà",
+"a": "teh",
 "c": [
 {
 "k": "ウーロン茶",
 "r": "ウーロンちゃ",
-"a": "Teh oolong"
+"a": "teh oolong"
 },
 {
 "k": "お茶をいれる／いれます",
@@ -890,7 +890,7 @@
 "k": "階",
 "on": "カイ",
 "kun": "きざはし",
-"a": "lapisan gedung; tingkat thang; giai tingkat",
+"a": "lantai (tingkat); tangga; tingkatan",
 "c": [
 {
 "k": "階段",
@@ -915,7 +915,7 @@
 "k": "台",
 "on": "ダイ、タイ",
 "kun": "うてな、われ、つかさ",
-"a": "buah tahta, kelopak; hitung máy móc",
+"a": "alas; dudukan; penghitung mesin dan kendaraan",
 "c": [
 {
 "k": "台所",
@@ -1035,7 +1035,7 @@
 {
 "k": "給湯室",
 "r": "きゅうとうしつ",
-"a": "Pantri (pantry)"
+"a": "pantri"
 },
 {
 "k": "会議室",
@@ -1050,7 +1050,7 @@
 "k": "堂",
 "on": "ドウ",
 "kun": "",
-"a": "curang rumah besar, sảnh jalan",
+"a": "aula umum; balai",
 "c": [
 {
 "k": "食堂",
@@ -1095,7 +1095,7 @@
 "k": "脱",
 "on": "ダツ",
 "kun": "ぬ.ぐ、ぬ.げる",
-"a": "melepas keluar, thoát lepas dari; membuang sót",
+"a": "menanggalkan pakaian; melepas; melarikan diri dari; menyingkirkan; terlewat; mencopot",
 "c": [
 {
 "k": "脱ぐ／脱ぎます",
@@ -1155,12 +1155,12 @@
 "k": "湯",
 "on": "トウ",
 "kun": "ゆ",
-"a": "air nóng; sungai kecil air nóng",
+"a": "air panas; mandi; pemandian air panas",
 "c": [
 {
 "k": "給湯室",
 "r": "きゅうとうしつ",
-"a": "Pantri (pantry)"
+"a": "pantri"
 }
 ]
 },
@@ -1215,7 +1215,7 @@
 "k": "倉",
 "on": "ソウ",
 "kun": "くら",
-"a": "nhà kho",
+"a": "gudang; tempat penyimpanan; ruang bawah tanah; perbendaharaan",
 "c": [
 {
 "k": "倉庫",
@@ -1260,7 +1260,7 @@
 "k": "替",
 "on": "タイ",
 "kun": "か.える、か.え-、か.わる",
-"a": "thay dunia, menukar",
+"a": "mengganti; menukar",
 "c": [
 {
 "k": "着替える／着替えます",
@@ -1315,17 +1315,17 @@
 {
 "k": "今年",
 "r": "ことし",
-"a": "this year"
+"a": "tahun ini"
 },
 {
 "k": "今週",
 "r": "こんしゅう",
-"a": "this week"
+"a": "minggu ini"
 },
 {
 "k": "今月",
 "r": "こんげつ",
-"a": "this bulan"
+"a": "bulan ini"
 }
 ]
 },
@@ -1370,12 +1370,12 @@
 {
 "k": "今朝",
 "r": "けさ",
-"a": "this morning"
+"a": "pagi ini"
 },
 {
 "k": "毎朝",
 "r": "まいあさ",
-"a": "every morning"
+"a": "setiap pagi"
 },
 {
 "k": "朝ご飯",
@@ -1395,17 +1395,17 @@
 {
 "k": "昼飯",
 "r": "ひるめし",
-"a": "lunch; midday meal"
+"a": "makan siang"
 },
 {
 "k": "昼食",
 "r": "ちゅうしょく",
-"a": "(1) lunch; midday meal (2) food served at a tea party (tea ceremony)"
+"a": "(1) makan siang (2) hidangan pada pesta teh (upacara minum teh)"
 },
 {
 "k": "昼間",
 "r": "ひるま",
-"a": "daytime; during the hari; time from sunrise until sunset; diurnal period"
+"a": "siang hari; waktu dari matahari terbit hingga terbenam"
 }
 ]
 },
@@ -1420,17 +1420,17 @@
 {
 "k": "夜中",
 "r": "よなか",
-"a": "midnight; dead of night"
+"a": "tengah malam; larut malam"
 },
 {
 "k": "夜間",
 "r": "やかん",
-"a": "at night; nighttime"
+"a": "pada malam hari"
 },
 {
 "k": "今夜",
 "r": "こんや",
-"a": "this evening; tonight"
+"a": "malam ini"
 }
 ]
 },
@@ -1450,7 +1450,7 @@
 {
 "k": "午後",
 "r": "ごご",
-"a": "P.m. (Post Meridiem: 12:00-23:59)"
+"a": "sore hingga malam (pukul 12:00–23:59)"
 }
 ]
 },
@@ -1465,7 +1465,7 @@
 {
 "k": "午後",
 "r": "ごご",
-"a": "P.m. (Post Meridiem: 12:00-23:59)"
+"a": "sore hingga malam (pukul 12:00–23:59)"
 },
 {
 "k": "後ろ",
@@ -1500,7 +1500,7 @@
 "k": "並",
 "on": "ヘイ、ホウ",
 "kun": "な.み、なみ、なら.べる、なら.ぶ、なら.びに",
-"a": "menyusun barang, sánh ngang; bersama, và",
+"a": "baris; dan; selain itu; sebaris; menyamai",
 "c": [
 {
 "k": "並べて（ください）",
@@ -1634,7 +1634,7 @@
 "k": "趣",
 "on": "シュ",
 "kun": "おもむき、おもむ.く",
-"a": "menerima hewan, ý orang (sapaan hormat); arah sampai",
+"a": "pokok maksud; cita rasa; minat; menuju; cenderung",
 "c": [
 {
 "k": "趣味",
@@ -1649,7 +1649,7 @@
 "k": "味",
 "on": "ミ",
 "kun": "あじ、あじ.わう",
-"a": "rasa, bau rasa; ý rasa",
+"a": "rasa; cita rasa",
 "c": [
 {
 "k": "趣味",
@@ -1679,7 +1679,7 @@
 "k": "楽",
 "on": "ガク、ラク、ゴウ",
 "kun": "たの.しい、たの.しむ、この.む",
-"a": "senang nikmat, thoải atap; suara musik",
+"a": "musik; kenyamanan; kemudahan",
 "c": [
 {
 "k": "音楽",
@@ -1869,7 +1869,7 @@
 "k": "祭",
 "on": "サイ",
 "kun": "まつ.る、まつ.り、まつり",
-"a": "cúng halus; upacara perkumpulan",
+"a": "ritual; mempersembahkan doa; merayakan; mendewakan; menyembah",
 "c": [
 {
 "k": "夏祭り",
@@ -1954,7 +1954,7 @@
 "k": "縁",
 "on": "エン、-ネン",
 "kun": "ふち、ふちど.る、ゆかり、よすが、へり、えにし",
-"a": "jodoh nasib, hubungan berhubungan sistem; mép, tepi",
+"a": "pertalian; hubungan; keterkaitan; tepi; batas; pinggir",
 "c": [
 {
 "k": "縁日",
@@ -2194,7 +2194,7 @@
 "k": "乗",
 "on": "ジョウ、ショウ",
 "kun": "の.る、-の.り、の.せる",
-"a": "menunggang, naik kendaraan; orang (phép orang)",
+"a": "menunggang; menaiki; kekuatan (pangkat); perkalian; catatan; penghitung kendaraan",
 "c": [
 {
 "k": "〜に乗ります",
@@ -2294,7 +2294,7 @@
 "k": "駅",
 "on": "エキ",
 "kun": "",
-"a": "nhà ga",
+"a": "stasiun",
 "c": [
 {
 "k": "各駅停車／各停",
@@ -2464,7 +2464,7 @@
 {
 "k": "奥さん",
 "r": "おくさん",
-"a": "wife; your wife; his wife; married lady; madam"
+"a": "istri; istri Anda; istri dia; nyonya"
 }
 ]
 },
@@ -2554,7 +2554,7 @@
 "k": "懐",
 "on": "カイ、エ",
 "kun": "ふところ、なつ.かしい、なつ.かしむ、なつ.く、なつ.ける、なず.ける、いだ.く、おも.う",
-"a": "hati, dada; kangen nhung; tas baju",
+"a": "kantong dada; rindu; jinak",
 "c": [
 {
 "k": "懐中電灯",
@@ -2569,7 +2569,7 @@
 "k": "灯",
 "on": "トウ",
 "kun": "ひ、ほ-、ともしび、とも.す、あかり",
-"a": "lampu, ngọn lampu",
+"a": "lampu; cahaya; penghitung lampu",
 "c": [
 {
 "k": "懐中電灯",
@@ -2659,17 +2659,17 @@
 {
 "k": "衣服",
 "r": "いふく",
-"a": "clothes"
+"a": "pakaian"
 },
 {
 "k": "服装",
 "r": "ふくそう",
-"a": "garments; attire"
+"a": "busana; pakaian"
 },
 {
 "k": "軍服",
 "r": "ぐんぷく",
-"a": "military or naval uniform"
+"a": "seragam militer atau angkatan laut"
 }
 ]
 },
@@ -2694,7 +2694,7 @@
 "k": "掃",
 "on": "ソウ、シュ",
 "kun": "は.く",
-"a": "quét dọn",
+"a": "menyapu; menyikat",
 "c": [
 {
 "k": "掃除する／掃除します",
@@ -2814,7 +2814,7 @@
 "k": "袋",
 "on": "タイ、ダイ",
 "kun": "ふくろ",
-"a": "cái túi, cái bao",
+"a": "karung; tas; kantong",
 "c": [
 {
 "k": "池袋",
@@ -2894,7 +2894,7 @@
 {
 "k": "神社",
 "r": "じんじゃ",
-"a": "Kuil Shinto"
+"a": "kuil Shinto"
 }
 ]
 }

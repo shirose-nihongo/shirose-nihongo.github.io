@@ -154,3 +154,21 @@ body[data-cm="4"] .materi-item .no-badge, body[data-cm="3"] .materi-item .no-bad
 .ck-opts.pics .ck-opt .t{display:flex; flex-direction:column; align-items:center; gap:4px}
 .ck-oimg{width:100%; max-width:240px; max-height:130px; object-fit:contain; border-radius:10px; background:#f4f7fa}
 .ck-opts.pics small{font-size:12px}
+
+/* ===== Kosakata Kanji N3 (Kanji utama = kategori, kosakata = materi hafalan) ===== */
+.kv-note{font-size:13px; color:var(--gray); background:rgba(42,50,112,.35); border:1px dashed var(--border); border-radius:10px; padding:8px 12px; margin:10px 0; text-align:left;}
+.contoh-item.kv-item{cursor:pointer; border-left:4px solid var(--pink); transition:background .15s, transform .1s;}
+.contoh-item.kv-item:hover,.contoh-item.kv-item:focus-visible{background:rgba(239,106,154,.14); outline:none;}
+.contoh-item.kv-item:active{transform:scale(.99);}
+.kv-go{color:var(--pink); font-weight:900; margin-left:6px;}
+.kv-card{max-width:520px; width:100%; max-height:90vh; overflow:auto; position:relative; text-align:center;}
+.kv-tag{font-size:11px; letter-spacing:.08em; color:var(--pink); font-weight:800; margin-bottom:6px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;}
+.kv-main{color:var(--gray); font-weight:600; letter-spacing:0;}
+.kv-kata{font-size:clamp(40px,12vw,64px); line-height:1.5; margin:6px 0 0;}
+.kv-kata rt{font-size:.28em; color:var(--gray);}
+.kv-read{font-size:20px; color:var(--gray);}
+.kv-arti{font-size:18px; margin:10px 0 12px;}
+.kv-status{font-size:12px; color:var(--gray); margin:10px 0;}
+.kv-btns{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:8px 0;}
+.kv-nav{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:12px; font-size:12px; color:var(--gray);}
+.kv-ok{color:#10b981; font-weight:800;} .kv-bad{color:#ef5350;}

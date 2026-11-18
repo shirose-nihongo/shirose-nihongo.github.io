@@ -4,7 +4,8 @@
  * Koin dipotong dari dompet tunggal siswa/{uid}/wallet/main.koin. Status gacha: siswa/{uid}/wallet/gacha.
  * Setiap tarikan ditulis ke koleksi siswa/{uid}/wallet_log (jejak transaksi). ⚠ BELUM diuji ke Firebase asli — lihat docs/EKONOMI-GACHA.md.
  * Firestore Rules: klien TIDAK boleh menulis wallet/gacha & wallet_log (hanya baca). */
-import { rollMany, CONFIG } from "./gacha-core.js";
+import { rollMany, CONFIG, CONFIG_FREE } from "./gacha-core.js";
+import { ITEMS } from "./gacha-items.js";
 let env = {};
 const J = (code, o, h = {}) => new Response(JSON.stringify(o), { status: code, headers: { "Content-Type": "application/json", "Cache-Control": "no-store", ...h } });
 const b64u = (b) => btoa(String.fromCharCode(...new Uint8Array(b))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
@@ -50,14 +51,20 @@ export default {
       if (!g.updateTime) return J(409, { error: "Dompet belum siap — buka aplikasi sekali dulu" }, cors);
       const koin = num(g.fields?.koin); if (!unlimited && koin < price) return J(402, { error: "Koin tidak cukup", koin, price }, cors);
       const pity = { sinceEpic: num(w.fields?.sinceEpic), sinceLegend: num(w.fields?.sinceLegend) };
-      const inv = (w.fields?.inv?.arrayValue?.values || []).map(x => x.stringValue);
-      const r = rollMany(n, pity, inv);
+      const strs = (f) => (f?.arrayValue?.values || []).map(x => x.stringValue);
+      const invW = strs(w.fields?.inv), karInv = strs(s.fields?.karakter?.mapValue?.fields?.inventory);
+      const r = rollMany(n, pity, [...new Set([...invW, ...karInv])], undefined, unlimited ? CONFIG_FREE : CONFIG);   // barang shop yang sudah dibeli dihitung duplikat
+      const kind = Object.fromEntries(ITEMS.map(x => [x.id, x.kind]));
+      const baru = r.results.filter(x => !x.dup).map(x => x.item);
+      const karBaru = [...new Set([...karInv, ...baru.filter(i => kind[i] === "shop")])];
+      const invBaru = [...new Set([...invW, ...baru])];
       const koinBaru = (unlimited ? koin : koin - price) + r.refund;
       const logId = Date.now() + "-" + crypto.randomUUID().slice(0, 8);
       const pre = (d) => d.updateTime ? { updateTime: d.updateTime } : { exists: false };
       const writes = [
         { update: { name: `${DB()}/${gp}`, fields: { koin: fv(koinBaru) } }, updateMask: { fieldPaths: ["koin"] }, currentDocument: pre(g) },
-        { update: { name: `${DB()}/${wp}`, fields: { sinceEpic: fv(r.pity.sinceEpic), sinceLegend: fv(r.pity.sinceLegend), inv: fv(r.inv) } }, currentDocument: pre(w) },
+        { update: { name: `${DB()}/${wp}`, fields: { sinceEpic: fv(r.pity.sinceEpic), sinceLegend: fv(r.pity.sinceLegend), inv: fv(invBaru) } }, currentDocument: pre(w) },
+        ...(karBaru.length !== karInv.length ? [{ update: { name: `${DB()}/siswa/${user.uid}`, fields: { karakter: { mapValue: { fields: { inventory: fv(karBaru) } } } } }, updateMask: { fieldPaths: ["karakter.inventory"] }, currentDocument: pre(s) }] : []),
         { update: { name: `${DB()}/siswa/${user.uid}/wallet_log/${logId}`, fields: { t: { timestampValue: new Date().toISOString() }, tipe: fv("gacha"), n: fv(n), harga: fv(unlimited ? 0 : price), refund: fv(r.refund), koinSetelah: fv(koinBaru), hasil: fv(r.results) } } },
       ];
       const c = await fetch(`https://firestore.googleapis.com/v1/${DB()}:commit`, { method: "POST", headers: { Authorization: "Bearer " + tok, "Content-Type": "application/json" }, body: JSON.stringify({ writes }) });

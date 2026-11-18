@@ -204,10 +204,11 @@ export function skalaJft(pct) {
   return 250;
 }
 export function bandJft(s) {
-  if (s >= 200) return { k: "A2.2", t: "Lulus standar A2 (≥ 200)", c: "#22c55e" };
-  if (s >= 175) return { k: "A2.1", t: "Level A2.1 — hampir lulus, naikkan sedikit lagi", c: "#eab308" };
-  if (s >= 145) return { k: "A1", t: "Level A1", c: "#f97316" };
-  return { k: "*", t: "Di bawah A1 (di ujian asli tampil “*”)", c: "#ef4444" };
+  // Rentang resmi Japan Foundation (berlaku sejak Agustus 2026): 145–174 A1 · 175–199 A2.1 · 200–250 A2.2 (A2) · <145 tidak ditampilkan (*)
+  if (s >= 200) return { k: "A2.2", t: "Estimasi level latihan: A2.2 (A2) — skor latihan 200–250", c: "#22c55e" };
+  if (s >= 175) return { k: "A2.1", t: "Estimasi level latihan: A2.1 — skor latihan 175–199", c: "#eab308" };
+  if (s >= 145) return { k: "A1", t: "Estimasi level latihan: A1 — skor latihan 145–174", c: "#f97316" };
+  return { k: "*", t: "Di bawah 145 — di ujian resmi level tidak ditampilkan (*)", c: "#ef4444" };
 }
 const gradeBab = (pct) => pct >= 0.8 ? { t: "Bagus sekali — siap lanjut", c: "#22c55e" } : pct >= 0.7 ? { t: "Lulus (≥ 70%)", c: "#84cc16" } : pct >= 0.5 ? { t: "Belum lulus — ulangi materi lalu coba lagi", c: "#f97316" } : { t: "Perlu belajar lagi sebelum mencoba ulang", c: "#ef4444" };
 
@@ -421,7 +422,7 @@ async function renderHub() {
         <span class="desc">Simulasi ujian penuh JFT-Basic: 50 soal · 60 menit · 4 bagian, tanpa kembali ke bagian sebelumnya.<br><small>${(await tryoutD()).paket.length} paket orisinal</small></span>
         <span class="st">Mulai tryout →</span>
       </div></div>
-    <div style="text-align:center;margin:14px 0"><button class="btn gold" onclick="route('jft-slide')">🎞️ Slide Bunpou Irodori (A1 · A2) — dengan audio</button></div>
+    <div style="text-align:center;margin:14px 0"><button class="btn gold" onclick="route('jft-slide')">🎞️ Slide Bunpou Irodori (A1 · A2) — dengan audio</button> <button class="btn ghost" onclick="route('jft-rangkuman')">📒 Rangkuman JFT</button></div>
     <div class="foot"><small style="color:var(--gray-dim)">Kosakata bersumber dari buku Irodori — The Japan Foundation (pemakaian edukasi non-komersial). Skor di sini hanya perkiraan latihan, bukan skor resmi JFT-Basic.</small></div>
   </div>`;
 }
@@ -460,7 +461,9 @@ async function renderTryout() {
   if (!st.user) { setTimeout(() => route("login"), 0); return '<div class="loading">Memuat…</div>'; }
   const T = await tryoutD(); const sesi = pulihSesi();
   const his = LS.get(HIS_KEY(), []).filter(h => h.lv === "tryout").slice(0, 8);
-  const paket = T.paket.map((p, i) => `<button class="jft-pk" onclick="route('jft-paket/try${i}')"><b>Paket ${i + 1}</b><small>${esc(p.judul.replace(/^Paket \d+ · /, ""))}</small>${lencana("tryout", `try${i}`, true)}</button>`).join("");
+  const btn = (p, i) => `<button class="jft-pk" onclick="route('jft-paket/try${i}')"><b>${esc(p.no || "Paket " + (i + 1))}</b><small>${esc(p.judul.replace(/^(Paket|Full Test) \d+ · /, ""))}</small>${lencana("tryout", `try${i}`, true)}</button>`;
+  const lat = T.paket.map((p, i) => [p, i]).filter(([p]) => !String(p.id).startsWith("ft")), ft = T.paket.map((p, i) => [p, i]).filter(([p]) => String(p.id).startsWith("ft"));
+  const paket = lat.map(([p, i]) => btn(p, i)).join("") + (ft.length ? `</div><h3 style="margin:14px 0 6px">🧪 Full Test 01–${String(ft.length).padStart(2, "0")} <small style="font-weight:400;color:var(--gray-dim)">· soal berbeda tiap paket</small></h3><div class="jft-paket">${ft.map(([p, i]) => btn(p, i)).join("")}` : "");
   return `
   <div class="jft-wrap">
     <div class="jft-crumb">JFT-Basic › Tryout</div>
@@ -541,13 +544,16 @@ function renderHasil() {
   <div class="jft-wrap">
     <div class="panel jft-hasil">
       <div class="jp">${esc(r.judul)}</div>
-      ${sim ? `<div class="skor" style="color:${b.c}">${r.skor}<small> / 250</small></div>
+      ${sim ? `<div class="jft-sub" style="margin-bottom:2px">Estimasi skor latihan (simulasi) — bukan skor resmi</div><div class="skor" style="color:${b.c}">${r.skor < 145 ? `${r.skor}<small> / 250 *</small>` : `${r.skor}<small> / 250</small>`}</div>
         <div class="band" style="background:${b.c}22;border-color:${b.c};color:${b.c}">${b.k} — ${b.t}</div>
         <div class="jft-skala"><i style="left:${Math.min(100, (r.skor - 10) / 2.4)}%"></i><span style="left:${(145 - 10) / 2.4}%">145</span><span style="left:${(175 - 10) / 2.4}%">175</span><span style="left:${(200 - 10) / 2.4}%">200</span></div>`
       : `<div class="skor" style="color:${b.c}">${Math.round(r.pct * 100)}<small>%</small></div><div class="band" style="background:${b.c}22;border-color:${b.c};color:${b.c}">${b.t}</div>`}
       <div class="jft-sub">Benar ${r.benar} dari ${r.total} soal · ${Math.floor(r.detik / 60)} menit ${r.detik % 60} detik</div>
+      <table class="jft-ringkas"><tbody>
+        <tr><td>Total soal</td><td>${r.total}</td></tr><tr><td>Benar</td><td>${r.benar}</td></tr><tr><td>Salah / kosong</td><td>${r.total - r.benar}</td></tr><tr><td>Akurasi</td><td>${Math.round(r.pct * 100)}%</td></tr>
+        ${sim ? `<tr><td>Estimasi skor latihan</td><td>${r.skor} <small>(simulasi)</small></td></tr><tr><td>Estimasi level latihan</td><td>${b.k === "*" ? "* (di bawah 145)" : b.k}</td></tr>` : ""}</tbody></table>
       <div class="jft-bars">${bars}</div>
-      ${sim ? `<div class="jft-note">⚠ Ini <b>estimasi latihan</b>. Skor JFT-Basic resmi dihitung dengan equating (IRT) sehingga bobot tiap soal berbeda. Skor di bawah 145 tampil “*” di ujian asli.</div>` : ""}
+      ${sim ? `<div class="jft-note">⚠ Ini <b>estimasi latihan internal</b> Shirose Nihongo: persentase benar dipetakan secara linear ke skala 10–250 (0%→10, 50%→145, 70%→200, 100%→250). Skor JFT-Basic resmi dihitung Japan Foundation/Prometric dengan metode equating (bobot tiap soal berbeda), jadi angka ini <b>bukan</b> skor atau sertifikasi resmi. Rentang resmi: 145–174 A1 · 175–199 A2.1 · 200–250 A2.2 (A2) · di bawah 145 tidak ditampilkan (*).</div>` : ""}
       ${sim ? rekomendasi(r) : ""}
       <div class="jft-aksi"><button class="btn" onclick="JFT.tampilReview();this.remove()">📋 Lihat kunci &amp; pembahasan</button> <button class="btn ghost" onclick="route('${r.lv === "tryout" ? "jft-tryout" : "jft-ujian"}')">↩ ${r.lv === "tryout" ? "Daftar tryout" : "Daftar ujian"}</button></div>
     </div>
@@ -555,7 +561,7 @@ function renderHasil() {
   </div>`;
 }
 
-import { JFTS_ROUTES } from "./jft-slide.js?v=20261113e";
+import { JFTS_ROUTES } from "./jft-slide.js?v=20261119b";
 export const JFT_ROUTES = {
   ...JFTS_ROUTES,
   jft: () => renderHub(),

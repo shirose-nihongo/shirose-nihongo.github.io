@@ -50,8 +50,7 @@ def build():
             qs_sub.append({"id": sid + "-q", "title": {"id": "Latihan: " + S["title"][0], "jp": "{練習問題|れんしゅうもんだい}"}, "items": items})
         words = [w for w in vocab if w["bab"] == bid]
         rev = lambda k, items: {"id": "%s-q%d" % (bid, k), "rev": True, "title": {"id": "Ulangan Bagian %d (%s)" % (bi, "AB"[k - 1]), "jp": "まとめテスト"}, "items": items}
-        qs = [rev(1, semua[0::2]), rev(2, semua[1::2]),
-              vocab_quiz("%s-q3" % bid, {"id": "Arti kosakata Bagian %d" % bi, "jp": "ことばの{意味|いみ}"}, words, "kg-" + bid, n=12, pool=words)]
+        qs = [rev(1, semua[0::2]), rev(2, semua[1::2])]   # kuis "Arti kosakata" dihapus: Kaigo versi Indonesia tidak memerlukannya
         quiz["bab"][bid] = qs + qs_sub
         babs.append({"schema": 1, "bidang": "kaigo", "source": SOURCE, "markup": "Teks memakai {kanji|furigana} untuk ruby dan **tebal**.",
                      "bab": {"id": bid, "no": bi, "title": {"id": B["title"][0], "jp": B["title"][1]}, "intro": {"id": B["intro"], "jp": B["title"][1]},

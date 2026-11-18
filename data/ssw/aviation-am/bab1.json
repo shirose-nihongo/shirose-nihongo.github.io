@@ -1,0 +1,572 @@
+{
+ "schema": 1,
+ "bidang": "aviation-am",
+ "source": "JAEA 特定技能評価試験テキスト 航空機整備 (3 buku, Rev. ORG 2019.9.13) (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab1",
+  "no": 1,
+  "title": {
+   "id": "Teknik Dasar: Pengencangan (Fastening)",
+   "jp": "{航空機|こうくうき}の{基本技術|きほんぎじゅつ}：{締結一般|ていけついっぱん}"
+  },
+  "intro": {
+   "id": "Baut, mur, sekrup, ring (washer), torsi pengencangan, safety wire, dan cotter pin."
+  },
+  "pages": [
+   4,
+   20
+  ],
+  "pagesJp": [
+   4,
+   20
+  ],
+  "subs": [
+   {
+    "id": "b1s1",
+    "no": 1,
+    "title": {
+     "id": "Baut (Bolt)",
+     "jp": "ボルト"
+    },
+    "pages": [
+     1,
+     1
+    ],
+    "pagesJp": [
+     4,
+     7
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Pesawat dirakit dari banyak komponen yang disatukan dengan **baut, sekrup, mur**. Tanpa pengetahuan ulir, perawatan pesawat tidak mungkin. Ulir harus tahan **suhu, korosi, getaran hebat**, dan sekali dikencangkan **tidak boleh longgar**.",
+        "Baut pesawat dipakai di sambungan yang menerima **beban sangat besar**. Standar: **AN, NAS, BAC**.",
+        "Bentuk: **hexagon head**, **clevis**, **eye**, **drilled head**, **internal wrenching**, **external wrenching**, **flush head (kepala tenggelam)**, **modify hexagon head**.",
+        "Fungsi: **Shear bolt** — untuk **beban geser**, kepala tipis, ulir pendek. **Tension bolt** — untuk **beban tarik**; yang sangat tinggi → **high-tension bolt**.",
+        "Diameter nominal: No.10 – 5/8 in naik per **1/16 in**; 3/4 – 1½ in naik per **1/8 in**. Panjang kelipatan 1/16 in (baut AN banyak kelipatan 1/8 in).",
+        "Bagian baut: kepala, **neck**, **grip**, **thread**, lubang cotter pin, lubang safety wire."
+       ]
+      },
+      {
+       "h": "Penanganan baut"
+      },
+      {
+       "ul": [
+        "Gunakan **nomor suku cadang yang ditentukan** (kekuatan, tahan korosi, tahan panas).",
+        "Kombinasi baut/ring dengan bagian yang dikencangkan: umumnya **paduan aluminium ↔ aluminium**, **baja ↔ baja**; untuk torsi tinggi pakai baja. Baut baja di paduan aluminium → pakai yang **dilapisi kadmium** (kontak logam berbeda = korosi).",
+        "**Panjang**: grip sama atau sedikit lebih panjang dari ketebalan bagian. Penyesuaian dengan ring: **maks. 2 di satu sisi, 3 di kedua sisi**; lebih dari itu ganti baut. Pada **shear bolt**, **tidak boleh satu ulir pun** mengenai bagian yang menerima geser.",
+        "Arah pemasangan: **depan → belakang, atas → bawah, dalam → luar** (agar baut tak lepas bila mur lepas).",
+        "**Baut titanium**: jangan pakai self-locking nut berlapis perak di atas **600°F**; jangan pakai mur berlapis kadmium di atas **200°F**.",
+        "**Baut toleransi presisi**: dipukul masuk dengan **palu plastik**; bila bukan flush, lubang sisi kepala di-**chamfer**.",
+        "**Internal/external wrenching bolt**: chamfer lubang sesuai **'R'** di bawah kepala atau pakai **ring countersunk kekuatan tinggi**; perhatikan arah ring; pakai **mur kekuatan tinggi**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{飛行機|ひこうき}の{部品|ぶひん}は、ボルト・スクリュー・ナットなどの「ねじ」でとめられています。ねじは、{温度|おんど}・サビ・{強|つよ}い{振動|しんどう}にたえ、{一度|いちど}しめたらゆるまない{工夫|くふう}があります。",
+        "ボルトは{大|おお}きな{力|ちから}がかかる{所|ところ}に{使|つか}います。{規格|きかく}はAN、NAS、BACなどです。",
+        "{形|かたち}：{六角頭|ろっかくあたま}、クレビス、アイ、{頭部穴付|とうぶあなつ}き、インターナル・レンチング、エクスターナル・レンチング、{皿頭|さらあたま}など。",
+        "シア・ボルトは{剪断力|せんだんりょく}がかかる{所|ところ}に{使|つか}い、{頭|あたま}がうすく、ねじ{部|ぶ}が{短|みじか}いです。テンション・ボルトは{引|ひ}っぱる{力|ちから}がかかる{所|ところ}に{使|つか}います。"
+       ]
+      },
+      {
+       "h": "ボルトの{取|と}り{扱|あつか}い"
+      },
+      {
+       "ul": [
+        "{使|つか}う{場所|ばしょ}に{合|あ}った{指定|してい}の{部品番号|ぶひんばんごう}のものを{使|つか}います。",
+        "アルミ{合金|ごうきん}にはアルミのボルトとワッシャー、{鋼|はがね}には{鋼|はがね}を{使|つか}います。アルミに{鋼|はがね}のボルトを{使|つか}うときは、カドミウムメッキのものを{使|つか}います（サビ{防止|ぼうし}）。",
+        "グリップの{長|なが}さは、{部材|ぶざい}の{厚|あつ}さと{同|おな}じか、わずかに{長|なが}いものです。ワッシャーで{調整|ちょうせい}できるのは、{片側|かたがわ}2{枚|まい}・{両側|りょうがわ}3{枚|まい}までです。シア・ボルトは、ねじ{山|やま}が{一山|ひとやま}も{部材|ぶざい}にかかってはいけません。",
+        "{取|と}り{付|つ}ける{向|む}きは、{前|まえ}から{後|うし}ろ、{上|うえ}から{下|した}、{内側|うちがわ}から{外側|そとがわ}です。",
+        "チタンボルトは、600°F{以上|いじょう}で{銀|ぎん}メッキのセルフ・ロッキング・ナット、200°F{以上|いじょう}でカドミウムメッキのナットを{使|つか}ってはいけません。{精密公差|せいみつこうさ}ボルトは、プラスチック・ハンマーで{打|う}ち{込|こ}みます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pesawat dirakit dari banyak komponen yang disatukan dengan baut, sekrup, mur. Tanpa pengetahuan ulir, perawatan pesawat tidak mungkin. Ulir harus tahan suhu, korosi, geta…",
+      "points": [
+       "Baut pesawat dipakai di sambungan yang menerima beban sangat besar. Standar: AN, NAS, BAC.",
+       "Bentuk: hexagon head, clevis, eye, drilled head, internal wrenching, external wrenching, flush head (kepala tenggelam), modify hexagon head.",
+       "Fungsi: Shear bolt — untuk beban geser, kepala tipis, ulir pendek. Tension bolt — untuk beban tarik; yang sangat tinggi → high-tension bolt."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{飛行機|ひこうき}の{部品|ぶひん}は、ボルト・スクリュー・ナットなどの「ねじ」でとめられています。ねじは、{温度|おんど}・サビ・{強|つよ}い{振動|しんどう}にたえ、{一度|いちど}しめたらゆるまない{工夫|くふう}があります。",
+      "points": [
+       "ボルトは{大|おお}きな{力|ちから}がかかる{所|ところ}に{使|つか}います。{規格|きかく}はAN、NAS、BACなどです。",
+       "{形|かたち}：{六角頭|ろっかくあたま}、クレビス、アイ、{頭部穴付|とうぶあなつ}き、インターナル・レンチング、エクスターナル・レンチング、{皿頭|さらあたま}など。",
+       "シア・ボルトは{剪断力|せんだんりょく}がかかる{所|ところ}に{使|つか}い、{頭|あたま}がうすく、ねじ{部|ぶ}が{短|みじか}いです。テンション・ボルトは{引|ひ}っぱる{力|ちから}がかかる{所|ところ}に{使|つか}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s2",
+    "no": 2,
+    "title": {
+     "id": "Mur (Nut)",
+     "jp": "ナット"
+    },
+    "pages": [
+     2,
+     2
+    ],
+    "pagesJp": [
+     8,
+     9
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Mur pesawat bentuk/ukurannya beragam; berbeda dengan baut, **jarang ada kode identifikasi** → dikenali dari **kilau logam, ada/tidaknya sisipan nilon, struktur, ulir**.",
+        "Menurut penguncian: **Non self-locking nut** (tanpa mekanisme kunci) dan **Self-locking nut**. Dipilih menurut **suhu** tempat pemakaian.",
+        "Gunakan mur sesuai nomor suku cadang yang ditentukan."
+       ]
+      },
+      {
+       "h": "Self-locking nut: TIDAK boleh dipakai di"
+      },
+      {
+       "ul": [
+        "① tempat yang bila mur longgar dan baut hilang **mengganggu keselamatan terbang**",
+        "② bagian yang menerima **gaya putar** (puli, engkol, tuas, linkage, hinge pin, cam, dll.)",
+        "③ tempat yang bila mur/baut/sekrup longgar bisa **jatuh ke air intake mesin**",
+        "④ **panel/pintu** yang dipasang-lepas rutin untuk servis/akses sebelum/sesudah terbang."
+       ]
+      },
+      {
+       "h": "Aturan"
+      },
+      {
+       "ul": [
+        "Setelah self-locking nut dipasang, ujung ulir baut harus **menonjol dari muka mur minimal 2 ulir** (termasuk bagian chamfer).",
+        "**Jangan memodifikasi/memproses** self-locking nut. **Locking torque** = torsi yang dibutuhkan memutar mur setelah ujung baut menonjol ≥ 2 ulir."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "ナットはボルトのような{識別記号|しきべつきごう}が{少|すく}ないので、{金属|きんぞく}の{光|ひか}り{方|かた}、ナイロンの{有無|うむ}、{構造|こうぞう}、ねじで{見分|みわ}けます。",
+        "ナットには、ロック{機構|きこう}のないもの（Non Self-locking Nut）と、あるもの（Self-locking Nut）があります。{使|つか}う{場所|ばしょ}の{温度|おんど}で{使|つか}い{分|わ}けます。"
+       ]
+      },
+      {
+       "h": "セルフ・ロッキング・ナットを{使|つか}えない{所|ところ}"
+      },
+      {
+       "ul": [
+        "ナットがゆるむと{飛行|ひこう}の{安全|あんぜん}にえいきょうする{所|ところ}。",
+        "{回転力|かいてんりょく}を{受|う}ける{所|ところ}（プーリー、クランク、レバー、ヒンジ・ピン、カムなど）。",
+        "ゆるんでエンジンの{空気取|くうきと}り{入|い}れ{口|ぐち}に{落|お}ちるおそれがある{所|ところ}。",
+        "{飛行前後|ひこうぜんご}に{定期的|ていきてき}に{取|と}り{付|つ}け・{取|と}り{外|はず}しをするパネルやドア。"
+       ]
+      },
+      {
+       "ul": [
+        "セルフ・ロッキング・ナットを{付|つ}けたら、ボルトの{先|さき}がナットの{面|めん}から2{山以上出|やまいじょうで}ていること。セルフ・ロッキング・ナットを{加工|かこう}してはいけません。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Mur pesawat bentuk/ukurannya beragam; berbeda dengan baut, jarang ada kode identifikasi → dikenali dari kilau logam, ada/tidaknya sisipan nilon, struktur, ulir.",
+      "points": [
+       "Menurut penguncian: Non self-locking nut (tanpa mekanisme kunci) dan Self-locking nut. Dipilih menurut suhu tempat pemakaian.",
+       "Gunakan mur sesuai nomor suku cadang yang ditentukan.",
+       "① tempat yang bila mur longgar dan baut hilang mengganggu keselamatan terbang"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "ナットはボルトのような{識別記号|しきべつきごう}が{少|すく}ないので、{金属|きんぞく}の{光|ひか}り{方|かた}、ナイロンの{有無|うむ}、{構造|こうぞう}、ねじで{見分|みわ}けます。",
+      "points": [
+       "ナットには、ロック{機構|きこう}のないもの（Non Self-locking Nut）と、あるもの（Self-locking Nut）があります。{使|つか}う{場所|ばしょ}の{温度|おんど}で{使|つか}い{分|わ}けます。",
+       "ナットがゆるむと{飛行|ひこう}の{安全|あんぜん}にえいきょうする{所|ところ}。",
+       "{回転力|かいてんりょく}を{受|う}ける{所|ところ}（プーリー、クランク、レバー、ヒンジ・ピン、カムなど）。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s3",
+    "no": 3,
+    "title": {
+     "id": "Sekrup (Screw)",
+     "jp": "スクリュー"
+    },
+    "pages": [
+     3,
+     3
+    ],
+    "pagesJp": [
+     10,
+     11
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Sekrup dipakai luas pada struktur dan pemasangan komponen sederhana. Perbedaan umum dengan baut: **kepala bercelah untuk obeng**, **kelas ulir 2**, **kekuatan lebih rendah**, **ulir lebih panjang & grip tidak jelas**.",
+        "**Structural screw**: di struktur utama; hanya **bentuk kepalanya** beda dari baut struktural; kekuatan = baut seukuran. **Machine screw**: paling banyak dipakai (ulir kasar & halus).",
+        "**Self-tapping screw** (3 jenis): **sheet metal screw** (menahan sementara pelat sebelum rivet / sambungan non-struktural; pakai ring fenol/aluminium), **machine self-tapping screw** (pasang plat nama dsb. di coran), **drive screw** (sebenarnya paku, untuk plat nama; **tidak bisa dipakai ulang**).",
+        "**Set screw**: memasang/mengunci komponen seperti roda gigi pada poros.",
+        "Gunakan sekrup dengan **nomor suku cadang yang sesuai**; obeng/kunci **sesuai bentuk dan ukuran celah kepala**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "スクリューは、{頭|あたま}にドライバーをかける{溝|みぞ}があり、ボルトより{強度|きょうど}が{低|ひく}く、ねじ{部|ぶ}が{長|なが}いです。ねじの{等級|とうきゅう}はクラス2です。",
+        "{種類|しゅるい}：{構造用|こうぞうよう}、マシン・スクリュー、セルフ・タッピング・スクリュー（シート・メタル、マシン・セルフ・タッピング、ドライブ）、セット・スクリュー。",
+        "ドライブ・スクリューは{釘|くぎ}のようなもので、{取|と}り{外|はず}したあとにもう{一度使|いちどつか}うことはできません。",
+        "{使|つか}う{場所|ばしょ}に{合|あ}った{指定|してい}の{部品|ぶひん}を{使|つか}い、ドライバーは{溝|みぞ}の{形|かたち}と{大|おお}きさに{合|あ}ったものを{使|つか}います。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Sekrup dipakai luas pada struktur dan pemasangan komponen sederhana. Perbedaan umum dengan baut: kepala bercelah untuk obeng, kelas ulir 2, kekuatan lebih rendah, ulir le…",
+      "points": [
+       "Structural screw: di struktur utama; hanya bentuk kepalanya beda dari baut struktural; kekuatan = baut seukuran. Machine screw: paling banyak dipakai (ulir kasar & halus)…",
+       "Self-tapping screw (3 jenis): sheet metal screw (menahan sementara pelat sebelum rivet / sambungan non-struktural; pakai ring fenol/aluminium), machine self-tapping screw…",
+       "Set screw: memasang/mengunci komponen seperti roda gigi pada poros."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "スクリューは、{頭|あたま}にドライバーをかける{溝|みぞ}があり、ボルトより{強度|きょうど}が{低|ひく}く、ねじ{部|ぶ}が{長|なが}いです。ねじの{等級|とうきゅう}はクラス2です。",
+      "points": [
+       "{種類|しゅるい}：{構造用|こうぞうよう}、マシン・スクリュー、セルフ・タッピング・スクリュー（シート・メタル、マシン・セルフ・タッピング、ドライブ）、セット・スクリュー。",
+       "ドライブ・スクリューは{釘|くぎ}のようなもので、{取|と}り{外|はず}したあとにもう{一度使|いちどつか}うことはできません。",
+       "{使|つか}う{場所|ばしょ}に{合|あ}った{指定|してい}の{部品|ぶひん}を{使|つか}い、ドライバーは{溝|みぞ}の{形|かたち}と{大|おお}きさに{合|あ}ったものを{使|つか}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s4",
+    "no": 4,
+    "title": {
+     "id": "Ring (Washer)",
+     "jp": "ワッシャー"
+    },
+    "pages": [
+     4,
+     4
+    ],
+    "pagesJp": [
+     12,
+     13
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Dipasang di sisi **kepala baut dan mur** untuk melindungi permukaan, mencegah longgar, dll.",
+        "**Plain washer (平ワッシャー)**: menyebarkan gaya pengencang; **spacer penyetel** posisi lubang cotter pin; melindungi bagian; **mencegah korosi** akibat kontak logam berbeda.",
+        "**Lock washer**: pengunci di tempat yang tidak bisa memakai self-locking nut/cotter pin/safety wire — spring lock, internal teeth, external teeth, tab washer.",
+        "**Washer khusus**: **countersunk/flat kekuatan tinggi** (dengan internal wrenching bolt), **taper pin washer**, **preload indicating washer** (untuk pengencangan lebih akurat dari torque wrench).",
+        "Aturan: pakai nomor suku cadang yang ditentukan; **plain washer maks. 3 buah** (1 pelindung permukaan + 1 di sisi kepala + 1 di sisi mur) — lock/khusus tidak dihitung; **bahan umumnya sama dengan baut**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "ワッシャーは、ボルトの{頭|あたま}とナットの{側|がわ}に{使|つか}い、{面|めん}を{守|まも}ったり、ゆるみを{防|ふせ}いだりします。",
+        "{平|ひら}ワッシャー：しめつける{力|ちから}を{広|ひろ}げる、コッター・ピンの{穴|あな}を{合|あ}わせる、{部品|ぶひん}を{守|まも}る、サビ（{異種金属|いしゅきんぞく}）を{防|ふせ}ぐ。",
+        "ロック・ワッシャー：ゆるみ{止|ど}め。{特殊|とくしゅ}ワッシャー：{高強度皿取|こうきょうどさらど}り、テーパー・ピン、プリロード{指示|しじ}ワッシャー。",
+        "{平|ひら}ワッシャーは{最大|さいだい}3{枚|まい}まで。ワッシャーは{原則|げんそく}としてボルトと{同|おな}じ{材料|ざいりょう}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dipasang di sisi kepala baut dan mur untuk melindungi permukaan, mencegah longgar, dll.",
+      "points": [
+       "Plain washer (平ワッシャー): menyebarkan gaya pengencang; spacer penyetel posisi lubang cotter pin; melindungi bagian; mencegah korosi akibat kontak logam berbeda.",
+       "Lock washer: pengunci di tempat yang tidak bisa memakai self-locking nut/cotter pin/safety wire — spring lock, internal teeth, external teeth, tab washer.",
+       "Washer khusus: countersunk/flat kekuatan tinggi (dengan internal wrenching bolt), taper pin washer, preload indicating washer (untuk pengencangan lebih akurat dari torque…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "ワッシャーは、ボルトの{頭|あたま}とナットの{側|がわ}に{使|つか}い、{面|めん}を{守|まも}ったり、ゆるみを{防|ふせ}いだりします。",
+      "points": [
+       "{平|ひら}ワッシャー：しめつける{力|ちから}を{広|ひろ}げる、コッター・ピンの{穴|あな}を{合|あ}わせる、{部品|ぶひん}を{守|まも}る、サビ（{異種金属|いしゅきんぞく}）を{防|ふせ}ぐ。",
+       "ロック・ワッシャー：ゆるみ{止|ど}め。{特殊|とくしゅ}ワッシャー：{高強度皿取|こうきょうどさらど}り、テーパー・ピン、プリロード{指示|しじ}ワッシャー。",
+       "{平|ひら}ワッシャーは{最大|さいだい}3{枚|まい}まで。ワッシャーは{原則|げんそく}としてボルトと{同|おな}じ{材料|ざいりょう}です。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s5",
+    "no": 5,
+    "title": {
+     "id": "Torsi Pengencangan & Torque Wrench",
+     "jp": "{締付|しめつけ}けトルクとトルク・レンチ"
+    },
+    "pages": [
+     5,
+     5
+    ],
+    "pagesJp": [
+     14,
+     14
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Pesawat mengalami **getaran hebat** dan **perubahan suhu mendadak** (beda pemuaian logam) → torsi pengencangan sangat penting. **Terlalu besar** = ulir/baut rusak, baut putus. **Terlalu kecil** = kelelahan material lebih cepat, aus. Maka torsi tiap baut/mur **ditentukan**.",
+        "Jenis torque wrench: **tipe beam**, **tipe dial**, **tipe limit**."
+       ]
+      },
+      {
+       "h": "Penggunaan"
+      },
+      {
+       "ul": [
+        "Torque wrench adalah alat ukur yang **dikalibrasi berkala** → pastikan **masih berlaku**.",
+        "Pilih rentang yang cocok: **nilai torsi tidak boleh sama dengan nilai maksimum** wrench.",
+        "**Jangan dipakai selain torque wrench** (palu, ratchet handle). Bila jatuh/terbentur → **periksa**.",
+        "Tipe limit: setelah di-set **kunci**; setelah dipakai kembalikan ke **skala minimum** dan kunci. Ada **ulir kanan dan kiri** — jangan tertukar.",
+        "Setelah mulai memakai satu wrench, **jangan ganti dengan wrench lain**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{飛行機|ひこうき}は{強|つよ}い{振動|しんどう}や{急|きゅう}な{温度変化|おんどへんか}を{受|う}けるので、ボルト・ナットの{締付|しめつ}けトルクはとても{大切|たいせつ}です。{大|おお}きすぎるとねじをいためてボルトが{折|お}れ、{足|た}りないと{疲労破壊|ひろうはかい}がはやまります。",
+        "トルク・レンチには、ビーム{式|しき}・ダイヤル{式|しき}・リミット{式|しき}があります。",
+        "トルク・レンチは{校正|こうせい}されている{測定器|そくていき}です。{有効|ゆうこう}なものか{確|たし}かめます。トルク{値|ち}に{合|あ}った{範囲|はんい}のものを{選|えら}びます（{最大値|さいだいち}と{同|おな}じではだめ）。トルク・レンチ{以外|いがい}（ハンマーなど）に{使|つか}ってはいけません。{落|お}としたら{点検|てんけん}します。",
+        "リミット{式|しき}は、セットしたら{必|かなら}ずロックし、{使|つか}ったあとは{最小|さいしょう}の{目盛|めもり}にもどしてロックします。{右|みぎ}ねじ{用|よう}と{左|ひだり}ねじ{用|よう}があるので、{混同|こんどう}しません。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Pesawat mengalami getaran hebat dan perubahan suhu mendadak (beda pemuaian logam) → torsi pengencangan sangat penting. Terlalu besar = ulir/baut rusak, baut putus. Terlal…",
+      "points": [
+       "Jenis torque wrench: tipe beam, tipe dial, tipe limit.",
+       "Torque wrench adalah alat ukur yang dikalibrasi berkala → pastikan masih berlaku.",
+       "Pilih rentang yang cocok: nilai torsi tidak boleh sama dengan nilai maksimum wrench."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{飛行機|ひこうき}は{強|つよ}い{振動|しんどう}や{急|きゅう}な{温度変化|おんどへんか}を{受|う}けるので、ボルト・ナットの{締付|しめつ}けトルクはとても{大切|たいせつ}です。{大|おお}きすぎるとねじをいためてボルトが{折|お}れ、{足|た}りないと{疲労破壊|ひろうはかい}がはやまります。",
+      "points": [
+       "トルク・レンチには、ビーム{式|しき}・ダイヤル{式|しき}・リミット{式|しき}があります。",
+       "トルク・レンチは{校正|こうせい}されている{測定器|そくていき}です。{有効|ゆうこう}なものか{確|たし}かめます。トルク{値|ち}に{合|あ}った{範囲|はんい}のものを{選|えら}びます（{最大値|さいだいち}と{同|おな}じではだめ）。トルク・レンチ{以外|いがい}（ハンマーなど）に{使|つか}ってはいけません。{落|お}としたら{点検|てんけん}します。",
+       "リミット{式|しき}は、セットしたら{必|かなら}ずロックし、{使|つか}ったあとは{最小|さいしょう}の{目盛|めもり}にもどしてロックします。{右|みぎ}ねじ{用|よう}と{左|ひだり}ねじ{用|よう}があるので、{混同|こんどう}しません。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s6",
+    "no": 6,
+    "title": {
+     "id": "Safety Wire",
+     "jp": "{安全線|あんぜんせん}のかけ{方|かた}"
+    },
+    "pages": [
+     6,
+     6
+    ],
+    "pagesJp": [
+     15,
+     17
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Ulir pesawat bisa longgar karena getaran dan beban → semua diberi **pencegah putar**. Salah satunya **lock wire** yang menarik komponen ke arah **mengencang**. Ada juga **shear wire** untuk handle/switch/cover **pintu darurat, pemadam, rem darurat** agar tidak terbuka tak sengaja namun mudah dioperasikan saat dibutuhkan.",
+        "Diameter kawat umum **min. 0,032 in**; **0,020 in** untuk lubang kecil/jarak rapat (≤ ¼ in screw/bolt rapat). Kawat peralatan darurat: **tembaga 0,020 in**."
+       ]
+      },
+      {
+       "h": "Posisi lubang & cara memasang"
+      },
+      {
+       "ul": [
+        "Kawat harus **selalu bekerja ke arah mengencang**. Posisi lubang ideal untuk 2 unit: lubang miring sekitar **45° ke kiri** dari garis tengah. **Jangan mengencangkan berlebih/melonggarkan** demi posisi ideal; jika di luar rentang torsi, **ganti ring (ketebalan lain)**. Hindari posisi lubang antara **jam 12–3 dan 6–9** pada unit pertama & kedua.",
+        "**Double twist wire** = **metode standar** (diutamakan). Jarak 4–6 in: maks. **3 unit** dalam satu rangkaian; jarak rapat: sebanyak yang bisa dengan kawat 24 in; **jangan** memasang kawat antar-fitting yang berjarak **> 6 in**.",
+        "**Single wire**: untuk 3 unit atau lebih pada **bentuk geometri tertutup** (segitiga, persegi, lingkaran) pada **komponen sistem listrik**, berjarak pusat **≤ 2 in**; juga untuk **peralatan darurat**. Namun pada seal hidrolik/pneumatik atau bagian penting yang menerima tekanan hidrolik → tetap **double twist**."
+       ]
+      },
+      {
+       "h": "Larangan & batasan"
+      },
+      {
+       "ul": [
+        "Gunakan kawat **baru setiap kali**; jangan dipakai ulang.",
+        "Kencang (**tight**) antar unit tetapi **tidak diberi tegangan berlebih**; hindari **kink, nick, scrape**; jangan ditarik di sudut tajam, dipuntir berlebih, atau dicengkeram alat terlalu keras.",
+        "Putaran: kawat 0,032/0,040 in → **6–8 putaran per inci**. Potong **tegak lurus**.",
+        "**Pigtail**: panjang **½–¾ in**, **5–8 putaran** (NASM33540: ¼–½ in, 3–5 putaran); ujungnya jangan melukai/menyangkut dan jangan menyentuh bagian/mur.",
+        "Sisa kawat potongan **tidak boleh jatuh** ke dalam mesin, badan pesawat, atau komponen."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "ねじは{飛行中|ひこうちゅう}の{振動|しんどう}でゆるむおそれがあるので、{回|まわ}り{止|ど}めをします。その{一|ひと}つが、ねじを{締|し}める{方向|ほうこう}に{引|ひ}っぱって{固定|こてい}するロック・ワイヤです。{非常口|ひじょうぐち}などのカバーには、{必要|ひつよう}なときに{簡単|かんたん}に{切|き}れるシア・ワイヤを{使|つか}います。",
+        "ふつうのワイヤは{直径|ちょっけい}0.032in{以上|いじょう}です。{非常用|ひじょうよう}の{装置|そうち}には{直径|ちょっけい}0.020inの{銅|どう}ワイヤを{使|つか}います。",
+        "ワイヤは、いつも{締|し}まる{方向|ほうこう}に{働|はたら}いていることが{大切|たいせつ}です。",
+        "ダブル・ツイスト・ワイヤ{方法|ほうほう}が{標準|ひょうじゅん}です。{間隔|かんかく}が4～6inのときは、{最大|さいだい}3{個|こ}までつなげます。6in{以上|いじょう}はなれた{部品|ぶひん}の{間|あいだ}にかけてはいけません。",
+        "シングル・ワイヤ{方法|ほうほう}は、{電気系統|でんきけいとう}の{部品|ぶひん}が{狭|せま}い{間隔|かんかく}（2in{以下|いか}）で{閉|と}じた{形|かたち}にならんでいるときや、{非常用|ひじょうよう}の{装置|そうち}に{使|つか}います。"
+       ]
+      },
+      {
+       "ul": [
+        "{安全線|あんぜんせん}は{使|つか}うたびに{新|あたら}しいものを{使|つか}い、{再使用|さいしよう}してはいけません。ワイヤにキズやよじれを{付|つ}けない、{直角|ちょっかく}に{切|き}る、{余|あま}ったワイヤをエンジンなどに{落|お}とさない。",
+        "より{数|かず}は、0.032in・0.040inで1in{当|あ}たり6～8{回|かい}です。ピグテイルは{長|なが}さ1/2～3/4in、より{数|かず}5～8{回|かい}で、{人|ひと}を{傷|きず}つけないようにします。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Ulir pesawat bisa longgar karena getaran dan beban → semua diberi pencegah putar. Salah satunya lock wire yang menarik komponen ke arah mengencang. Ada juga shear wire un…",
+      "points": [
+       "Diameter kawat umum min. 0,032 in; 0,020 in untuk lubang kecil/jarak rapat (≤ ¼ in screw/bolt rapat). Kawat peralatan darurat: tembaga 0,020 in.",
+       "Kawat harus selalu bekerja ke arah mengencang. Posisi lubang ideal untuk 2 unit: lubang miring sekitar 45° ke kiri dari garis tengah. Jangan mengencangkan berlebih/melong…",
+       "Double twist wire = metode standar (diutamakan). Jarak 4–6 in: maks. 3 unit dalam satu rangkaian; jarak rapat: sebanyak yang bisa dengan kawat 24 in; jangan memasang kawa…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "ねじは{飛行中|ひこうちゅう}の{振動|しんどう}でゆるむおそれがあるので、{回|まわ}り{止|ど}めをします。その{一|ひと}つが、ねじを{締|し}める{方向|ほうこう}に{引|ひ}っぱって{固定|こてい}するロック・ワイヤです。{非常口|ひじょうぐち}などのカバーには、{必要|ひつよう}なときに{簡単|かんたん}に{切|き}れるシア・ワイヤを{使|つか}います。",
+      "points": [
+       "ふつうのワイヤは{直径|ちょっけい}0.032in{以上|いじょう}です。{非常用|ひじょうよう}の{装置|そうち}には{直径|ちょっけい}0.020inの{銅|どう}ワイヤを{使|つか}います。",
+       "ワイヤは、いつも{締|し}まる{方向|ほうこう}に{働|はたら}いていることが{大切|たいせつ}です。",
+       "ダブル・ツイスト・ワイヤ{方法|ほうほう}が{標準|ひょうじゅん}です。{間隔|かんかく}が4～6inのときは、{最大|さいだい}3{個|こ}までつなげます。6in{以上|いじょう}はなれた{部品|ぶひん}の{間|あいだ}にかけてはいけません。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s7",
+    "no": 7,
+    "title": {
+     "id": "Cotter Pin (割ピン)",
+     "jp": "コッター・ピンによる{回り止|まわりど}め"
+    },
+    "pages": [
+     7,
+     7
+    ],
+    "pagesJp": [
+     18,
+     20
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Dipakai untuk **castellated nut (溝付きナット)** dan komponen lain yang perlu pencegah putar/lepas. Ukuran: mis. **MS 24655-283** (baja karbon berlapis kadmium, panjang ¾ in, diameter 3/32 in). Bagian: **eye**, **prong (kaki)**.",
+        "Pilih cotter pin dengan **diameter terbesar yang masuk** ke lubangnya.",
+        "Cara pasang: **preferred method** (standar, bila tidak ada instruksi lain) dan **alternate method** (hanya bila ujung yang ditekuk menyentuh/menyangkut bagian lain).",
+        "**Drill-shank bolt + castellated nut**: kencangkan mur pada **torsi minimum**, cek lubang baut dan celah mur; bila tidak sejajar, sesuaikan **dalam rentang torsi**, atau **ganti mur/ring/baut** atau tambah-kurangi ring. Posisi terbaik: **dasar celah mur sama tinggi dengan bagian bawah lubang baut**. Cotter pin **tidak boleh menonjol dari permukaan atas mur ≥ 50% diameter**."
+       ]
+      },
+      {
+       "h": "Langkah pemasangan"
+      },
+      {
+       "ul": [
+        "① Masukkan dengan **kaki panjang di atas**, dorong semaksimal mungkin dengan tangan ② bila perlu ketuk ringan dengan **palu plastik** sampai kepala **sebidang dengan dinding mur** ③ jepit kaki atas dengan tang, tarik, potong **tidak melebihi diameter baut** ④ ketuk kaki yang terpotong ke ujung baut ⑤ tekuk kaki sisanya sedikit ke bawah dan potong agar tidak menyentuh ring ⑥ tekan kaki ke dinding mur ⑦ periksa **tidak ada kelonggaran (play)**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "コッター・ピン（{割|わ}りピン）は、{溝付|みぞつ}きナットなどの{回|まわ}り{止|ど}め・{抜|ぬ}け{止|ど}めに{使|つか}います。コッター・ピンの{太|ふと}さは、{穴|あな}に{入|はい}る{最大|さいだい}のものにします。",
+        "{取|と}り{付|つ}け{方|かた}には、{優先方法|ゆうせんほうほう}（Preferred）と{代替方法|だいたいほうほう}（Alternate）があります。{特|とく}に{指示|しじ}がなければ{優先方法|ゆうせんほうほう}で{行|おこな}います。",
+        "ナットを{決|き}められた{最低|さいてい}トルクでしめ、ボルトの{穴|あな}とナットの{溝|みぞ}が{合|あ}うか{確認|かくにん}します。{合|あ}わないときはワッシャーなどで{調整|ちょうせい}します。コッター・ピンの{直径|ちょっけい}の50%{以上|いじょう}がナットの{上面|じょうめん}から{出|で}てはいけません。",
+        "{手順|てじゅん}：{先|さき}の{長|なが}い{方|ほう}を{上|うえ}にして{押|お}し{込|こ}む→プラスチック・ハンマーで{頭|あたま}を{壁|かべ}と{同|おな}じ{面|めん}にする→{上|うえ}の{先|さき}を{切|き}ってボルトに{押|お}しつける→のこりの{先|さき}も{曲|ま}げて{切|き}り、ナットの{壁|かべ}に{押|お}しつける→あそび（ガタ）がないか{検査|けんさ}する。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Dipakai untuk castellated nut (溝付きナット) dan komponen lain yang perlu pencegah putar/lepas. Ukuran: mis. MS 24655-283 (baja karbon berlapis kadmium, panjang ¾ in, diameter …",
+      "points": [
+       "Pilih cotter pin dengan diameter terbesar yang masuk ke lubangnya.",
+       "Cara pasang: preferred method (standar, bila tidak ada instruksi lain) dan alternate method (hanya bila ujung yang ditekuk menyentuh/menyangkut bagian lain).",
+       "Drill-shank bolt + castellated nut: kencangkan mur pada torsi minimum, cek lubang baut dan celah mur; bila tidak sejajar, sesuaikan dalam rentang torsi, atau ganti mur/ri…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "コッター・ピン（{割|わ}りピン）は、{溝付|みぞつ}きナットなどの{回|まわ}り{止|ど}め・{抜|ぬ}け{止|ど}めに{使|つか}います。コッター・ピンの{太|ふと}さは、{穴|あな}に{入|はい}る{最大|さいだい}のものにします。",
+      "points": [
+       "{取|と}り{付|つ}け{方|かた}には、{優先方法|ゆうせんほうほう}（Preferred）と{代替方法|だいたいほうほう}（Alternate）があります。{特|とく}に{指示|しじ}がなければ{優先方法|ゆうせんほうほう}で{行|おこな}います。",
+       "ナットを{決|き}められた{最低|さいてい}トルクでしめ、ボルトの{穴|あな}とナットの{溝|みぞ}が{合|あ}うか{確認|かくにん}します。{合|あ}わないときはワッシャーなどで{調整|ちょうせい}します。コッター・ピンの{直径|ちょっけい}の50%{以上|いじょう}がナットの{上面|じょうめん}から{出|で}てはいけません。",
+       "{手順|てじゅん}：{先|さき}の{長|なが}い{方|ほう}を{上|うえ}にして{押|お}し{込|こ}む→プラスチック・ハンマーで{頭|あたま}を{壁|かべ}と{同|おな}じ{面|めん}にする→{上|うえ}の{先|さき}を{切|き}ってボルトに{押|お}しつける→のこりの{先|さき}も{曲|ま}げて{切|き}り、ナットの{壁|かべ}に{押|お}しつける→あそび（ガタ）がないか{検査|けんさ}する。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b1s99",
+    "no": 99,
+    "title": {
+     "id": "Soal Contoh Resmi JAEA",
+     "jp": "{特定技能評価試験|とくていぎのうひょうかしけん}サンプル{問題|もんだい}"
+    },
+    "pages": [
+     8,
+     8
+    ],
+    "pagesJp": [
+     0,
+     0
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Soal contoh resmi dari JAEA (satu halaman sampel per bidang). Latihannya ada di menu Kuis: 'Soal Contoh Resmi JAEA'."
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Soal contoh resmi JAEA (○×).",
+      "points": [],
+      "avoid": [],
+      "exam": []
+     }
+    }
+   }
+  ]
+ }
+}

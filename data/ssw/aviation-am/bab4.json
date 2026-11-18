@@ -1,0 +1,208 @@
+{
+ "schema": 1,
+ "bidang": "aviation-am",
+ "source": "JAEA 特定技能評価試験テキスト 航空機整備 (3 buku, Rev. ORG 2019.9.13) (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab4",
+  "no": 4,
+  "title": {
+   "id": "Kualitas (品質) & Human Factor",
+   "jp": "{品質|ひんしつ}"
+  },
+  "intro": {
+   "id": "Kualitas perawatan (peralatan & pekerjaan), manajemen keandalan, human factor, model m-SHELL, dan hukum Heinrich."
+  },
+  "pages": [
+   37,
+   42
+  ],
+  "pagesJp": [
+   37,
+   42
+  ],
+  "subs": [
+   {
+    "id": "b4s1",
+    "no": 1,
+    "title": {
+     "id": "Kualitas Perawatan & Cacat",
+     "jp": "{整備品質|せいびひんしつ}と{不具合|ふぐあい}の{関係|かんけい}"
+    },
+    "pages": [
+     14,
+     14
+    ],
+    "pagesJp": [
+     37,
+     37
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Kualitas (品質)** = tingkat kesesuaian sifat suatu 'benda' terhadap standar.",
+        "**Kualitas perawatan (整備品質)** = tingkat kesempurnaan perawatan dan sistem berfungsi normal. Terdiri dari **kualitas peralatan (機材品質)** — pesawat/sistemnya berfungsi tanpa rusak — dan **kualitas pekerjaan (作業品質)** — pekerjaan perawatan oleh mekanik dilakukan dengan benar.",
+        "Untuk meningkatkan kualitas perawatan, **kedua-duanya harus baik**. Kualitas perawatan tinggi → **kecelakaan dan insiden lebih jarang**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{品質|ひんしつ}とは、「もの」の{性質|せいしつ}が{基準|きじゅん}にどれだけ{合|あ}っているかの{程度|ていど}です。",
+        "{整備品質|せいびひんしつ}は、{機材品質|きざいひんしつ}（{飛行機|ひこうき}やシステムが{故障|こしょう}せず{働|はたら}くか）と、{作業品質|さぎょうひんしつ}（{整備士|せいびし}の{作業|さぎょう}が{確実|かくじつ}か）に{分|わ}かれます。",
+        "{整備品質|せいびひんしつ}を{高|たか}くすれば、{事故|じこ}やインシデントは{起|お}きにくくなります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Kualitas (品質) = tingkat kesesuaian sifat suatu 'benda' terhadap standar.",
+      "points": [
+       "Kualitas perawatan (整備品質) = tingkat kesempurnaan perawatan dan sistem berfungsi normal. Terdiri dari kualitas peralatan (機材品質) — pesawat/sistemnya berfungsi tanpa rusak —…",
+       "Untuk meningkatkan kualitas perawatan, kedua-duanya harus baik. Kualitas perawatan tinggi → kecelakaan dan insiden lebih jarang."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{品質|ひんしつ}とは、「もの」の{性質|せいしつ}が{基準|きじゅん}にどれだけ{合|あ}っているかの{程度|ていど}です。",
+      "points": [
+       "{整備品質|せいびひんしつ}は、{機材品質|きざいひんしつ}（{飛行機|ひこうき}やシステムが{故障|こしょう}せず{働|はたら}くか）と、{作業品質|さぎょうひんしつ}（{整備士|せいびし}の{作業|さぎょう}が{確実|かくじつ}か）に{分|わ}かれます。",
+       "{整備品質|せいびひんしつ}を{高|たか}くすれば、{事故|じこ}やインシデントは{起|お}きにくくなります。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s2",
+    "no": 2,
+    "title": {
+     "id": "Kualitas Peralatan & Manajemen Keandalan",
+     "jp": "{機材品質|きざいひんしつ}と{信頼性管理|しんらいせいかんり}"
+    },
+    "pages": [
+     15,
+     15
+    ],
+    "pagesJp": [
+     38,
+     39
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Indikator kualitas (品質指標)**: seperti hasil tes kesehatan dibandingkan nilai acuan, data pesawat dibandingkan indikator. Kriteria utama: **keselamatan (安全性)**, **ketepatan waktu (定時性)**, **kenyamanan (快適性)**.",
+        "Dulu perawatan memakai **hard time** (bongkar/ganti komponen berkala). Sejak **Boeing 747 dan Airbus** bergeser ke **manajemen keandalan (信頼性管理方式)**: kumpulkan data kerusakan → **monitor** → temukan masalah, **evaluasi/analisis**, cari penyebab → **perbaikan (tindakan korektif)** — siklus **PDCA (Plan-Do-Check-Action)**.",
+        "**4 program monitoring**: ① **Aircraft Total Performance Monitoring** (memantau kualitas pesawat secara menyeluruh) ② **Event Monitoring** (kejadian kerusakan penting harian) ③ **Trend Monitoring** (jumlah/laju kerusakan jangka panjang → temukan tren memburuk) ④ **Specific Monitoring** (kerusakan tertentu dipantau khusus dan rinci)."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{品質指標|ひんしつしひょう}とは、{良|よ}い・{悪|わる}いを{判断|はんだん}する「{目印|めじるし}」の{値|ち}です。{基準|きじゅん}は、{安全性|あんぜんせい}・{定時性|ていじせい}・{快適性|かいてきせい}などです。",
+        "{昔|むかし}は{時間|じかん}を{決|き}めて{分解|ぶんかい}・{交換|こうかん}するハードタイム{方式|ほうしき}でしたが、ボーイング747やエアバスの{登場|とうじょう}から、{信頼性管理方式|しんらいせいかんりほうしき}が{中心|ちゅうしん}になりました。{故障|こしょう}データを{集|あつ}めて{監視|かんし}し、{問題|もんだい}を{評価|ひょうか}・{分析|ぶんせき}して、{原因|げんいん}を{調|しら}べ、{是正|ぜせい}する、というPDCAサイクルです。",
+        "モニタリングには4つのプログラムがあります。{飛行機|ひこうき}の{品質|ひんしつ}を{総合監視|そうごうかんし}、{重要|じゅうよう}な{故障|こしょう}（イベント）の{監視|かんし}、{故障|こしょう}の{傾向|けいこう}（トレンド）の{監視|かんし}、{特定|とくてい}の{故障|こしょう}の{重点監視|じゅうてんかんし}です。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Indikator kualitas (品質指標): seperti hasil tes kesehatan dibandingkan nilai acuan, data pesawat dibandingkan indikator. Kriteria utama: keselamatan (安全性), ketepatan waktu (…",
+      "points": [
+       "Dulu perawatan memakai hard time (bongkar/ganti komponen berkala). Sejak Boeing 747 dan Airbus bergeser ke manajemen keandalan (信頼性管理方式): kumpulkan data kerusakan → monit…",
+       "4 program monitoring: ① Aircraft Total Performance Monitoring (memantau kualitas pesawat secara menyeluruh) ② Event Monitoring (kejadian kerusakan penting harian) ③ Trend…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{品質指標|ひんしつしひょう}とは、{良|よ}い・{悪|わる}いを{判断|はんだん}する「{目印|めじるし}」の{値|ち}です。{基準|きじゅん}は、{安全性|あんぜんせい}・{定時性|ていじせい}・{快適性|かいてきせい}などです。",
+      "points": [
+       "{昔|むかし}は{時間|じかん}を{決|き}めて{分解|ぶんかい}・{交換|こうかん}するハードタイム{方式|ほうしき}でしたが、ボーイング747やエアバスの{登場|とうじょう}から、{信頼性管理方式|しんらいせいかんりほうしき}が{中心|ちゅうしん}になりました。{故障|こしょう}データを{集|あつ}めて{監視|かんし}し、{問題|もんだい}を{評価|ひょうか}・{分析|ぶんせき}して…",
+       "モニタリングには4つのプログラムがあります。{飛行機|ひこうき}の{品質|ひんしつ}を{総合監視|そうごうかんし}、{重要|じゅうよう}な{故障|こしょう}（イベント）の{監視|かんし}、{故障|こしょう}の{傾向|けいこう}（トレンド）の{監視|かんし}、{特定|とくてい}の{故障|こしょう}の{重点監視|じゅうてんかんし}です。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s3",
+    "no": 3,
+    "title": {
+     "id": "Human Factor & Peningkatan Kualitas Kerja",
+     "jp": "{作業品質|さぎょうひんしつ}とヒューマンファクター"
+    },
+    "pages": [
+     16,
+     16
+    ],
+    "pagesJp": [
+     40,
+     42
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Human Factor (ヒューマンファクター)** = sifat manusia sebagai faktor yang memengaruhi fungsi sistem. **Human Error** = tindakan yang tidak menghasilkan hasil sesuai niat akibat sifat manusia.",
+        "**Model m-SHELL**: **L** (Liveware = diri: pengetahuan, sikap, kelelahan), **L** (orang lain: komunikasi, kerja tim), **S** (Software: aturan, manual, prosedur), **H** (Hardware: alat, fasilitas), **E** (Environment: cahaya, suhu, bising, getaran), **m** (Management: kebijakan, suasana, pendidikan, jumlah pekerja). Error terjadi di **antara L dan sekelilingnya**.",
+        "Contoh: L⇔L salah instruksi/salah dengar, tak berani menegur senior; L⇔S aturan sulit/prosedur rumit sehingga satu langkah terlewat; L⇔H banyak saklar membingungkan, wadah mirip; L⇔E ruang gelap salah baca, terburu-buru; L⇔m pekerja sedikit/tidak dilatih; L sendiri: kurang belajar, kurang tidur.",
+        "**Setiap orang pasti membuat error**, dan **error adalah akibat, bukan penyebab** (selalu ada faktor). Karena itu buat aturan dengan asumsi manusia bisa salah dan buat **mekanisme menemukan error lebih awal**."
+       ]
+      },
+      {
+       "h": "Indikator & peningkatan kualitas pekerjaan"
+      },
+      {
+       "ul": [
+        "**ヒヤリハット (near miss)** = kejadian yang nyaris menjadi kecelakaan/insiden.",
+        "**Hukum Heinrich**: dari **330** kejadian dengan sebab sama → **1 kecelakaan**, **29 insiden**, **300 cacat ringan/hiyari-hatto**. Di bawahnya ada ribuan **kondisi tidak aman** (kerusakan fasilitas) dan **tindakan tidak aman** (pelanggaran aturan).",
+        "Heinrich menyatakan dengan mengurangi kondisi/tindakan tidak aman **98% kecelakaan bisa dicegah**. Ini hukum probabilitas; yang penting terus berusaha menghilangkan kondisi/tindakan tidak aman. Menurunkan jumlah total kejadian → menurunkan kecelakaan/insiden."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "ヒューマンファクターは、システムの{働|はたら}きに{影響|えいきょう}する{人|ひと}の{特性|とくせい}です。ヒューマンエラーは、{人|ひと}の{特性|とくせい}のせいで{思|おも}ったとおりの{結果|けっか}にならなかった{行動|こうどう}です。",
+        "m-SHELLモデル：L（{本人|ほんにん}）、L（{周|まわ}りの{人|ひと}）、S（ソフトウェア：ルール・マニュアル）、H（ハードウェア：{器具|きぐ}・{設備|せつび}）、E（{環境|かんきょう}：{明|あか}るさ・{気温|きおん}・{騒音|そうおん}）、m（マネジメント：{会社|かいしゃ}の{方針|ほうしん}・{教育|きょういく}）。L（{本人|ほんにん}）と{周|まわ}りの{間|あいだ}でエラーが{起|お}きます。",
+        "{人|ひと}は{誰|だれ}でも{必|かなら}ずエラーを{起|お}こします。エラーは{原因|げんいん}ではなく{結果|けっか}です。だから、エラーを{起|お}こすことを{前提|ぜんてい}にルールを{決|き}め、{早|はや}く{見|み}つける{仕組|しく}みを{考|かんが}えることが{大切|たいせつ}です。"
+       ]
+      },
+      {
+       "ul": [
+        "ヒヤリハットは、{事故|じこ}にならなかったが、ヒヤリとしたりハッとしたできごとです。",
+        "ハインリッヒの{法則|ほうそく}：{同|おな}じ{原因|げんいん}の{不具合|ふぐあい}が330{件起|けんお}きると、{事故|じこ}1{件|けん}、インシデント29{件|けん}、{軽微|けいび}な{不具合|ふぐあい}・ヒヤリハット300{件|けん}の{割合|わりあい}になります。{不安全|ふあんぜん}な{状態|じょうたい}・{行動|こうどう}を{減|へ}らすと、{事故|じこ}の98%は{防|ふせ}げるといわれます。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Human Factor (ヒューマンファクター) = sifat manusia sebagai faktor yang memengaruhi fungsi sistem. Human Error = tindakan yang tidak menghasilkan hasil sesuai niat akibat sifat man…",
+      "points": [
+       "Model m-SHELL: L (Liveware = diri: pengetahuan, sikap, kelelahan), L (orang lain: komunikasi, kerja tim), S (Software: aturan, manual, prosedur), H (Hardware: alat, fasil…",
+       "Contoh: L⇔L salah instruksi/salah dengar, tak berani menegur senior; L⇔S aturan sulit/prosedur rumit sehingga satu langkah terlewat; L⇔H banyak saklar membingungkan, wada…",
+       "Setiap orang pasti membuat error, dan error adalah akibat, bukan penyebab (selalu ada faktor). Karena itu buat aturan dengan asumsi manusia bisa salah dan buat mekanisme …"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "ヒューマンファクターは、システムの{働|はたら}きに{影響|えいきょう}する{人|ひと}の{特性|とくせい}です。ヒューマンエラーは、{人|ひと}の{特性|とくせい}のせいで{思|おも}ったとおりの{結果|けっか}にならなかった{行動|こうどう}です。",
+      "points": [
+       "m-SHELLモデル：L（{本人|ほんにん}）、L（{周|まわ}りの{人|ひと}）、S（ソフトウェア：ルール・マニュアル）、H（ハードウェア：{器具|きぐ}・{設備|せつび}）、E（{環境|かんきょう}：{明|あか}るさ・{気温|きおん}・{騒音|そうおん}）…",
+       "{人|ひと}は{誰|だれ}でも{必|かなら}ずエラーを{起|お}こします。エラーは{原因|げんいん}ではなく{結果|けっか}です。だから、エラーを{起|お}こすことを{前提|ぜんてい}にルールを{決|き}め、{早|はや}く{見|み}つける{仕組|しく}みを{考|かんが}えることが{大切|たいせつ}です。",
+       "ヒヤリハットは、{事故|じこ}にならなかったが、ヒヤリとしたりハッとしたできごとです。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -19,7 +19,7 @@ export function baseBody(skinKey = "light") {
     <ellipse cx="200" cy="470" rx="90" ry="12" fill="#000" opacity=".15"/>
 
     <!-- Legs — default: celana putih polos -->
-    <g data-slot="legs">
+    <g data-slot="lower" transform="translate(200 0) scale(1.15 1) translate(-200 0)"><g data-slot="legs">
       <rect x="170" y="340" width="26" height="110" rx="10" fill="#f7f8fc" stroke="#c7cde0" stroke-width="2"/>
       <rect x="204" y="340" width="26" height="110" rx="10" fill="#f7f8fc" stroke="#c7cde0" stroke-width="2"/>
     </g>
@@ -28,7 +28,7 @@ export function baseBody(skinKey = "light") {
     <g data-slot="shoes">
       <ellipse cx="183" cy="460" rx="20" ry="9" fill="#1a1f33"/>
       <ellipse cx="217" cy="460" rx="20" ry="9" fill="#1a1f33"/>
-    </g>
+    </g><!--@C--></g>
 
     <!-- Torso + arms — default: kaos putih polos lengan pendek -->
     <g data-slot="pakaian">
@@ -862,6 +862,10 @@ export const CATALOG_LABELS = {
   aksesori: "Aksesori",
   item_tangan: "Item Tangan",
   aura: "Aura",
+  celana: "Celana",
+  sayap: "Sayap",
+  jepit: "Jepit Rambut",
+  anting: "Anting",
 };
 
 /* ====== Default equipped state (botak, kaos putih + celana putih polos, sepatu standar) ====== */
@@ -872,33 +876,75 @@ export const DEFAULT_EQUIPPED = {
   aksesori: "none",
   item_tangan: "none",
   aura: "none",
+  celana: "none",
+  sayap: "none",
+  jepit: "none",
+  anting: "none",
 };
 
+/* ====== Tipe badan: "male" (default) | "female" — disimpan di perangkat + akun ====== */
+let _body = "male";
+try { _body = localStorage.getItem("shirose_body") === "female" ? "female" : "male"; } catch (e) {}
+export const getBody = () => _body;
+export function setBody(b) { _body = b === "female" ? "female" : "male"; try { localStorage.setItem("shirose_body", _body); } catch (e) {} return _body; }
+
 /* ====== Render the full character given equipped state ====== */
+
+/* ====== Mode 2D datar: tanpa gradasi & filter (tidak 3D); animasi pose senjata tetap ====== */
+function flatten2D(svg) {
+  const col = {};
+  svg.replace(/<(linear|radial)Gradient\b[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/\1Gradient>/g, (m, t, id, inner) => {
+    const st = inner.match(/<stop\b[^>]*>/g) || []; const pick = st[Math.floor(st.length / 2)] || st[0] || "";
+    const cc = (pick.match(/stop-color="([^"]+)"/) || [])[1] || "#888"; const op = parseFloat((pick.match(/stop-opacity="([^"]+)"/) || [])[1] || 1);
+    col[id] = [cc, t === "radial" ? Math.min(op, 0.45) : op]; return m;
+  });
+  return svg
+    .replace(/<(linear|radial)Gradient\b[\s\S]*?<\/\1Gradient>/g, "")
+    .replace(/<filter\b[\s\S]*?<\/filter>/g, "")
+    .replace(/\s(?:filter|style)="[^"]*(?:filter|blur)[^"]*"/g, "")
+    .replace(/\sfilter="[^"]*"/g, "")
+    .replace(/\b(fill|stroke)="url\(#([^)]+)\)"/g, (m, a, id) => { const v = col[id]; return v ? `${a}="${v[0]}"${v[1] < 1 ? ` ${a}-opacity="${v[1]}"` : ""}` : `${a}="#888"`; });
+}
+
 export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const eq = { ...DEFAULT_EQUIPPED, ...equipped };
+  const fem = (opts.body || _body) === "female";
+  // item khusus cewek tidak dipakai di badan cowok
+  if (!fem) for (const k of Object.keys(eq)) { const it = CATALOG[k]?.[eq[k]]; if (it && it.g === "f") eq[k] = k === "rambut" ? null : DEFAULT_EQUIPPED[k]; }
 
   const auraSvg = (eq.aura && eq.aura !== "none" && AURAS[eq.aura]?.svg) ? AURAS[eq.aura].svg() : "";
 
-  const base = baseBody(skinKey);
+  let base = baseBody(skinKey);
+  // Celana (kategori baru) digambar di bawah baju: disisipkan sebelum grup pakaian bawaan
+  const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana">${CELANA[eq.celana].svg()}</g>` : "";
+  let celanaOverlay = "";
+  const femC = (opts.body || _body) === "female";
+  if (celanaSvg && femC) celanaOverlay = `<g data-slot="celana-overlay" transform="translate(200 0) scale(1.32 1) translate(-200 0)">${celanaSvg}</g>`;   // cewek: bawahan digambar DI ATAS baju (tidak tertutup)
+  else if (celanaSvg) base = base.replace("<!--@C-->", celanaSvg);
+  // Sayap (baru) — di belakang badan, setelah aura
+  const sayapSvg = (eq.sayap && eq.sayap !== "none" && SAYAP[eq.sayap]?.svg) ? `<g data-slot="sayap">${SAYAP[eq.sayap].svg()}</g>` : "";
 
   // Overlay pakaian (replace default)
   let pakaianOverlay = "";
   if (eq.pakaian && eq.pakaian !== "seragam_default" && OUTFITS[eq.pakaian]?.svg) {
-    pakaianOverlay = `<g data-slot="pakaian-overlay">${OUTFITS[eq.pakaian].svg()}</g>`;
+    const oi = OUTFITS[eq.pakaian];
+    pakaianOverlay = `<g data-slot="pakaian-overlay">${fem && oi.g !== "f" ? femOutfit(oi.svg(), eq.pakaian, !(eq.celana && eq.celana !== "none")) : oi.svg()}</g>`;
   }
+
+  let femUnder = "";
+  if (fem && !pakaianOverlay && !(eq.celana && eq.celana !== "none")) { femUnder = femOutfit("", "kaos"); base = base.replace(/<g data-slot="legs">[\s\S]*?<\/g>/, ""); }   // kaos bawaan cewek menjuntai di atas rok
 
   // Overlay sepatu
   let sepatuOverlay = "";
   if (eq.sepatu && eq.sepatu !== "shoes_default" && SHOES[eq.sepatu]?.svg) {
-    sepatuOverlay = `<g data-slot="sepatu-overlay">${SHOES[eq.sepatu].svg()}</g>`;
+    sepatuOverlay = `<g data-slot="sepatu-overlay" transform="translate(200 0) scale(1.15 1) translate(-200 0)">${SHOES[eq.sepatu].svg()}</g>`;
   }
 
   // Hair (OPTIONAL — default botak)
   let hairSvg = "";
-  if (eq.rambut && HAIR_STYLES[eq.rambut]?.svg) {
+  if (eq.rambut && eq.rambut !== "none" && HAIR_STYLES[eq.rambut]?.svg && (!fem || HAIR_STYLES[eq.rambut].g === "f")) {
     hairSvg = `<g data-slot="rambut">${HAIR_STYLES[eq.rambut].svg(opts.hairColor)}</g>`;
-  }
+  } else if (fem && eq.rambut !== "none") hairSvg = `<g data-slot="rambut">${FEM_DEFAULT_HAIR(opts.hairColor)}</g>`;   // cewek: rambut bawaan (pilih "Tidak memakai" untuk botak)
 
   // Accessories
   let aksesoriSvg = "";
@@ -906,23 +952,61 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     aksesoriSvg = `<g data-slot="aksesori">${ACCESSORIES[eq.aksesori].svg()}</g>`;
   }
 
-  // Handheld
+  // Handheld — senjata ber-animType otomatis memakai pose + animasi bawaannya (weapon-anim.js)
   let handheldSvg = "";
   if (eq.item_tangan && eq.item_tangan !== "none" && HANDHELD[eq.item_tangan]?.svg) {
-    handheldSvg = `<g data-slot="item_tangan">${HANDHELD[eq.item_tangan].svg()}</g>`;
+    const hItem = HANDHELD[eq.item_tangan];
+    const wp = hItem.animType ? applyWeaponPose({ item: hItem, base, pakaianOverlay, skin: (SKIN_TONES[skinKey] || SKIN_TONES.light).skin, state: opts.wstate || "idle" }) : null;
+    if (wp) { base = wp.base; pakaianOverlay = wp.pakaianOverlay; handheldSvg = `<g data-slot="item_tangan">${wp.handheld}</g>`; }
+    else handheldSvg = `<g data-slot="item_tangan">${hItem.svg()}</g>`;
+  }
+  else if (!(eq.pakaian && OUTFITS[eq.pakaian]?.g === "f")) {   // tanpa senjata: lengan ramping (gaun cewek punya lengan sendiri) (gaya sama seperti saat memegang senjata)
+    base = stripArms(base); pakaianOverlay = stripArms(pakaianOverlay);
+    handheldSvg = `<g data-slot="item_tangan">${restArms({ pakaianOverlay, skin: (SKIN_TONES[skinKey] || SKIN_TONES.light).skin })}</g>`;
   }
 
-  return `
-    <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
+  // Jepit & anting (slot baru)
+  let jepitSvg = "", antingSvg = "";
+  if (eq.jepit && eq.jepit !== "none" && CATALOG.jepit?.[eq.jepit]?.svg) jepitSvg = `<g data-slot="jepit">${CATALOG.jepit[eq.jepit].svg()}</g>`;
+  if (eq.anting && eq.anting !== "none" && CATALOG.anting?.[eq.anting]?.svg) antingSvg = `<g data-slot="anting">${CATALOG.anting[eq.anting].svg()}</g>`;
+  const skinC = (SKIN_TONES[skinKey] || SKIN_TONES.light).skin;
+  if (skinC !== SKIN_TONES.light.skin) { const fix = (x) => x ? x.split("#f5d4b3").join(skinC) : x; base = fix(base); pakaianOverlay = fix(pakaianOverlay); sepatuOverlay = fix(sepatuOverlay); celanaOverlay = fix(celanaOverlay); }
+
+  const bigHand = (x) => x ? x.replace(/<circle cx="(123|277)" cy="325" r="11"/g, '<circle cx="$1" cy="325" r="14"') : x;
+  base = bigHand(base); pakaianOverlay = bigHand(pakaianOverlay);
+  let femFaceSvg = "", femBustSvg = "";
+  if (fem) {
+    const hem = (x) => x ? x.split("L270 345 L130 345").join("L267 346 L133 346") : x;   // baju cewek berhenti di pinggang, tidak longgar sampai pinggul
+    base = hem(base); pakaianOverlay = hem(pakaianOverlay);
+    if (pakaianOverlay) base = base.replace(/<path [^>]*fill="#ffffff"[^>]*stroke="#c7cde0"[^>]*\/>/g, "").replace(/<path d="M182 196 Q200 214 218 196"[^>]*\/>/, "");   // buang sisa kaos putih bawaan yang mengintip
+    base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, "");
+    sepatuOverlay = femWarp(sepatuOverlay); celanaOverlay = femWarp(celanaOverlay);
+    base = femWarp(base); pakaianOverlay = femWarp(pakaianOverlay); hairSvg = femWarp(hairSvg); aksesoriSvg = femWarp(aksesoriSvg);
+    jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
+    femFaceSvg = femFace(); femBustSvg = femBust; femUnder = femWarp(femUnder);
+  }
+  // bawahan di bawah baju (baju menjuntai, tidak dimasukkan); khusus gaun, bawahan di atas
+  const gaun = eq.pakaian && OUTFITS[eq.pakaian]?.g === "f";
+  const celanaUnder = fem && !gaun ? celanaOverlay : "", celanaOver = fem && gaun ? celanaOverlay : "";
+  return flatten2D(`
+    <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
+      ${sayapSvg}
+      ${femUnder}
       ${base}
+      ${femFaceSvg}
+      ${celanaUnder}
       ${pakaianOverlay}
+      ${celanaOver}
+      ${femBustSvg}
       ${sepatuOverlay}
       ${hairSvg}
+      ${jepitSvg}
+      ${antingSvg}
       ${aksesoriSvg}
       ${handheldSvg}
     </svg>
-  `;
+  `);
 }
 
 /* ====== Build item card HTML (for shop & inventory) ====== */
@@ -934,4 +1018,33 @@ export function itemCardSvg(kategori, itemId) {
   const eq = { ...DEFAULT_EQUIPPED };
   eq[kategori] = itemId;
   return renderCharacter(eq);
+}
+
+/* ====== Koleksi tambahan (js/character-more.js) ====== */
+import { extend } from "./character-more.js?v=20261116m";
+import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z6";
+import { extendShirose } from "./shirose-set.js?v=20261116m";
+import { extend2 } from "./character-more2.js?v=20261116m";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
+const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
+extend(__X); extend2(__X); extendWeaponAnim(__X);
+extendShirose(__X);
+extendFemale(__X);
+export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
+CATALOG.celana = CELANA; CATALOG.sayap = SAYAP; CATALOG.jepit = __X.JEPIT; CATALOG.anting = __X.ANTING;
+
+/* ====== Penyesuaian harga (Nov 2026): item termahal = 25.000 🪙, sisanya turun mengikuti.
+   Kurva pangkat 0,6 — urutan harga lama tetap terjaga. Mythic juga maksimal 25.000. Berjalan sekali per item (_rp). ====== */
+const HARGA_MAX_LAMA = 300000, HARGA_MAX_BARU = 25000;
+const _bulat = (v) => v < 2000 ? Math.round(v / 50) * 50 : v < 10000 ? Math.round(v / 250) * 250 : Math.round(v / 500) * 500;
+export const hargaBaru = (lama) => Math.min(HARGA_MAX_BARU, Math.max(50, _bulat(HARGA_MAX_BARU * Math.pow(lama / HARGA_MAX_LAMA, 0.6))));
+for (const kat of Object.values(CATALOG)) for (const it of Object.values(kat)) {
+  if (it && it.harga > 0 && !it._rp) { it.harga = hargaBaru(it.harga); it._rp = 1; }
+}
+
+/* Filter item per tipe badan: item cewek disembunyikan untuk cowok; rambut dipisah. */
+export function itemOk(kat, id, body = _body) {
+  const it = CATALOG[kat]?.[id]; if (!it) return false;
+  if (kat === "rambut") return body === "female" ? it.g === "f" : it.g !== "f";
+  return body === "female" || it.g !== "f";
 }

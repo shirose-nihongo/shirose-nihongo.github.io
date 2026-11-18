@@ -1,0 +1,1437 @@
+{
+ "schema": 1,
+ "bidang": "jaim-elec-electronic",
+ "source": "JAIM (一般社団法人 工業製品製造業技能評価機構) — 製造分野特定技能1号評価試験 学習用テキスト / Buku Referensi Pembelajaran, kategori 電気電子機器組立て (versi Indonesia & Jepang resmi). Teks = hasil ekstraksi otomatis dari buku resmi, belum direview manual.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab6",
+  "no": 6,
+  "title": {
+   "id": "Pembuatan Gambar Teknik",
+   "jp": "製図"
+  },
+  "intro": {
+   "id": "Bab 6 buku resmi JAIM."
+  },
+  "pages": [
+   60,
+   80
+  ],
+  "subs": [
+   {
+    "id": "b6s1",
+    "no": 1,
+    "title": {
+     "id": "Jenis Gambar Teknik",
+     "jp": "図面の種類"
+    },
+    "pages": [
+     60,
+     60
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Tabel 6-1: Jenis Gambar Teknik"
+      },
+      {
+       "p": "Klasifikasi Jenis Gambar Teknik"
+      },
+      {
+       "p": "Gambar produksi, gambar perencanaan, gambar"
+      },
+      {
+       "ol": [
+        "Penggunaan persetujuan, gambar penjelasan, gambar estimasi, dan lain-lain"
+       ]
+      },
+      {
+       "p": "Gambar kerangka, gambar terurai, diagram sistem,"
+      },
+      {
+       "ol": [
+        "Bentuk Penyajian diagram sambungan, diagram sirkuit, dan lain-lain"
+       ]
+      },
+      {
+       "p": "Gambar komponen, gambar proses, gambar perakitan,"
+      },
+      {
+       "ol": [
+        "Rincian gambar tata letak, gambar detail, dan lain-lain"
+       ]
+      },
+      {
+       "p": "Keterangan Tambahan"
+      },
+      {
+       "p": "Daftar komponen adalah daftar bagian-bagian yang membentuk satu rakitan (komponen)"
+      }
+     ],
+     "jp": [
+      {
+       "p": "{表|ひょう}6-1{図面|ずめん}の{種類分類図面|しゅるいぶんるいずめん}の{種類|しゅるい}"
+      },
+      {
+       "ul": [
+        "①{用途製作図|ようとせいさくず}、{計画図|けいかくず}、{承認図|しょうにんず}、{説明図|せつめいず}、{見積図他|みつもりずた}",
+        "②{表現形式外形図|ひょうげんけいしきがいけいず}、{分解図|ぶんかいず}、{系統図|けいとうず}、{接続図|せつぞくず}、{回路図他|かいろずた}",
+        "③{内容部品図|ないようぶひんず}、{加工図|かこうず}、{組立図|くみたてず}、{配置図|はいちず}、{詳細図他|しょうさいずた}"
+       ]
+      },
+      {
+       "p": "{補足部品表|ほそくぶひんひょう}は1つの{組立品|くみたてひん}（{部品|ぶひん}）を{構成|こうせい}する{部品|ぶひん}のリスト"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tabel 6-1: Jenis Gambar Teknik",
+      "points": []
+     },
+     "jp": {
+      "core": "{表|ひょう}6-1{図面|ずめん}の{種類分類図面|しゅるいぶんるいずめん}の{種類|しゅるい}",
+      "points": [
+       "①{用途製作図|ようとせいさくず}、{計画図|けいかくず}、{承認図|しょうにんず}、{説明図|せつめいず}、{見積図他|みつもりずた}",
+       "②{表現形式外形図|ひょうげんけいしきがいけいず}、{分解図|ぶんかいず}、{系統図|けいとうず}、{接続図|せつぞくず}、{回路図他|かいろずた}",
+       "③{内容部品図|ないようぶひんず}、{加工図|かこうず}、{組立図|くみたてず}、{配置図|はいちず}、{詳細図他|しょうさいずた}"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s2",
+    "no": 2,
+    "title": {
+     "id": "Ukuran dan Format Gambar Teknik",
+     "jp": "図面の大きさと様式"
+    },
+    "pages": [
+     61,
+     62
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Ukuran gambar: ukuran seri A"
+      },
+      {
+       "p": "Tabel 6-2: Ukuran Gambar (satuan: mm)"
+      },
+      {
+       "p": "Nama Ukuran Dimensi: a × b* A0 841 × 1189 A1 594 × 841 A2 420 × 594 A3 297 × 420 A4 210 × 297"
+      },
+      {
+       "p": "*Lihat Gambar 6-1 (format gambar)"
+      },
+      {
+       "p": "Keterangan Tambahan"
+      },
+      {
+       "p": "Jika gambar rangkaian sekuens untuk kontrol terdiri dari beberapa lembar, disusun dalam ukuran A3."
+      },
+      {
+       "p": "(2) Format"
+      },
+      {
+       "p": "garis tepi garis tepi A0–A3 (orientasi lanskap) A4 (orientasi potret)"
+      },
+      {
+       "p": "Gambar 6-1: Format Gambar (JIS B 0001)"
+      },
+      {
+       "p": "Ukuran Garis Tepi"
+      },
+      {
+       "p": "A4～A2 :c = d = 10 mm A1～ :c = d = 20 mm Sisi panjang digunakan untuk arah horizontal, tetapi untuk A4, sisi pendek juga boleh digunakan untuk arah horizontal."
+      }
+     ],
+     "jp": [
+      {
+       "h": "(1){図面|ずめん}の{大|おお}きさA{列|れつ}サイズ"
+      },
+      {
+       "p": "{表|ひょう}6-2{図面|ずめん}のサイズ（{単位|たんい}1mm）{呼|よ}び{方寸法|かたすんぽう}a1×1b*A08411 ×11189A15941 ×1841A24201 ×1594A32971 ×1420A42101 ×1297"
+      },
+      {
+       "note": "{図|ず}6-11{図面|ずめん}の{様式|ようしき}を{参照|さんしょう}"
+      },
+      {
+       "p": "{補足制御用|ほそくせいぎょよう}シーケンス{図面|ずめん}は、{複数枚|ふくすうまい}になる{場合|ばあい}はA3にまとめます。"
+      },
+      {
+       "h": "(2){様式|ようしき}"
+      },
+      {
+       "p": "{図|ず}6-1{図面|ずめん}の{様式|ようしき}（JIS1B0001）{輪郭|りんかく}のサイズA4～A2：c1=1d1=1101mmA1～：c1=1d1=1201mm{長辺|ちょうへん}を{横方向|よこほうこう}に{用|もち}いるが、A4については、{短辺|たんぺん}を{横方向|よこほうこう}として{用|もち}いてもよい。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Ukuran gambar: ukuran seri A",
+      "points": []
+     },
+     "jp": {
+      "core": "{表|ひょう}6-2{図面|ずめん}のサイズ（{単位|たんい}1mm）{呼|よ}び{方寸法|かたすんぽう}a1×1b*A08411 ×11189A15941 ×1841A24201 ×1594A32971 ×1420A42101 ×1297",
+      "points": [
+       "{図面|ずめん}の{大|おお}きさA{列|れつ}サイズ",
+       "{様式|ようしき}"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s3",
+    "no": 3,
+    "title": {
+     "id": "Garis yang Digunakan dalam Gambar Teknik",
+     "jp": "図面に用いる線"
+    },
+    "pages": [
+     63,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Jenis dan Ketebalan Garis Tabel 6-3: Dalam gambar teknik, ada 3 jenis garis: garis tipis, Ketebalan Garis garis tebal dan garis sangat tebal. (satuan: mm)"
+      },
+      {
+       "ul": [
+        "Ketebalan garis dipilih dari: 0,18 mm, 0,25 mm, Garis Garis 0,35 mm, 0,5 mm, 0,7 mm, atau 1,0 mm. Tipis Tebal 0,18 0,35",
+        "Perbandingan ketebalan garis tipis dan garis tebal 0,25 0,5 adalah 1 : 2. 0,35 0,7",
+        "Dalam satu gambar teknik, ketebalan garis untuk 0,5 1,0 setiap jenis garis harus seragam."
+       ]
+      },
+      {
+       "p": "(2) Jenis dan Penggunaan garis, serta Ukuran Huruf"
+      },
+      {
+       "p": "Garis pada gambar teknik dibedakan penggunaannya sesuai Tabel 6-4."
+      },
+      {
+       "p": "Tabel 6-4: Jenis dan Penggunaan Garis"
+      },
+      {
+       "p": "Nama Sesuai Jenis Garis Garis Penggunaan Garis Penggunaan Garis kontur garis tebal solid Bagian objek yang terlihat Garis dimensi garis tipis solid Entri dimensi Garis ekstensi garis tipis solid Entri dimensi dimensi Garis garis tipis solid Entri simbol dan lainnya penunjuk garis putus-titik Menunjukkan pusat bentuk, Garis pusat tunggal tipis tampilan lintasan garis tipis solid Untuk penyederhanaan garis pusat garis putus-putus Garis tipis ataupun Bagian objek yang tidak terlihat tersembunyi tebal garis putus-titik Garis acuan Referensi dimensi posisi tunggal tipis garis putus-titik Garis interval Acuan untuk interval pengulangan tunggal tipis garis putus-titik Bagian yang berdekatan, bagian Garis imajiner ganda tipis yang bergerak, dan sejenisnya garis tipis solid Batas bagian objek yang Garis putus bergelombang, dihilangkan garis zigzag"
+      },
+      {
+       "p": "Nama Sesuai Jenis Garis Garis Penggunaan Garis Penggunaan"
+      },
+      {
+       "p": "garis putus-putus Menunjukkan posisi potongan pada Garis potong tipis, sudut lebih gambar penampang tebal"
+      },
+      {
+       "p": "Menunjukkan bagian tertentu, garis-garis solid seperti bentuk permukaan potongan Garis arsiran tipis miring penampang. berjarak sama Penampang yang diarsir penuh disebut smudging"
+      }
+     ],
+     "jp": [
+      {
+       "h": "(1){線|せん}の{種類|しゅるい}と{太|ふと}さ{表|ひょう}6-3{線|せん}の{太|ふと}さ"
+      },
+      {
+       "p": "{製図|せいず}に{用|もち}いる{線|せん}は、{細線|ほそせん}、{太線|ふとせん}、{極太線|ごくぶとせん}の3{種類|しゅるい}（{単位|たんい}1mm）•{線|せん}の{太|ふと}さは、0.18mm 、0.25mm 、0.35mm 、{細線太線|ほそせんふとせん}"
+      },
+      {
+       "h": "0.5mm 、0.7mm 、1.0mm の{中|なか}から{選|えら}びます。0.180 .35"
+      },
+      {
+       "h": "0.25 0.5"
+      },
+      {
+       "p": "•{細線|ほそせん}、{太線|ふとせん}の{太|ふと}さの{比|ひ}は11:12とします。"
+      },
+      {
+       "h": "0.35 0.7"
+      },
+      {
+       "p": "•{線|せん}の{太|ふと}さは{同一図面|どういつずめん}では{線|せん}の{種類|しゅるい}ごとにそろえます。"
+      },
+      {
+       "h": "0.5 1.0"
+      },
+      {
+       "h": "(2){線|せん}の{種類|しゅるい}と{用途|ようと}、{文字|もじ}の{大|おお}きさ"
+      },
+      {
+       "p": "{製図|せいず}に{用|もち}いる{線|せん}は{表|ひょう}6-4のように{使い分|つかいわ}けます。"
+      },
+      {
+       "p": "{表|ひょう}6-4{線|せん}の{種類|しゅるい}と{用途用途|ようとようと}による{線|せん}の{種類線線|しゅるいせんせん}の{用途名称外形線太|ようとめいしょうがいけいせんふと}い{実線対象物|じっせんたいしょうぶつ}が{見|み}える{部分寸法線細|ぶぶんすんぽうせんほそ}い{実線寸法記入寸法補助線細|じっせんすんぽうきにゅうすんぽうほじょせんほそ}い{実線寸法記入引き出|じっせんすんぽうきにゅうひきだ}し{線細|せんほそ}い{実線記号等記入細|じっせんきごうとうきにゅうほそ}い{一点鎖線図形|いちてんさせんずけい}の{中心|ちゅうしん}、{軌跡表示中心線細|きせきひょうじちゅうしんせんほそ}い{実線中心線簡略用細|じっせんちゅうしんせんかんりゃくようほそ}い{破線|はせん}またはかくれ{線対象物|せんたいしょうぶつ}が{見|み}えない{部分太|ぶぶんふと}い{破線基準線細|はせんきじゅんせんほそ}い{一点鎖線位置寸法|いちてんさせんいちすんぽう}の{基準|きじゅん}ピッチ{線細|せんほそ}い{一点鎖線繰り返|いちてんさせんくりかえ}しピッチの{基準想像線細|きじゅんそうぞうせんほそ}い{二点鎖線隣接部分|にてんさせんりんせつぶぶん}、{可動部分|かどうぶぶん}など{波型|なみがた}の{細|ほそ}い{破断線対象物|はだんせんたいしょうぶつ}の{一部|いちぶ}を{取り去|とりさ}った{境界実線|きょうかいじっせん}、ジグザグ{線用途|せんようと}による{線|せん}の{種類線線|しゅるいせんせん}の{用途名称細|ようとめいしょうほそ}い{一点鎖線切断線断面図|いちてんさせんせつだんせんだんめんず}の{断面位置|だんめんいち}の{対応部分角部|たいおうぶぶんかくぶ}は{太|ふと}く{断面|だんめん}の{切り口|きりくち}の{形状|けいじょう}など{等間|とうあいだ}隔の{細|ほそ}い{特定部分|とくていぶぶん}を{示|しめ}す。"
+      },
+      {
+       "p": "ハッチング{実線|じっせん}による{斜線断面|しゃせんだんめん}を{塗|ぬ}りつぶしたものはスマッジング"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Jenis dan Ketebalan Garis Tabel 6-3: Dalam gambar teknik, ada 3 jenis garis: garis tipis, Ketebalan Garis garis tebal dan garis sangat tebal. (satuan: mm)",
+      "points": [
+       "Ketebalan garis dipilih dari: 0,18 mm, 0,25 mm, Garis Garis 0,35 mm, 0,5 mm, 0,7 mm, at…",
+       "Perbandingan ketebalan garis tipis dan garis tebal 0,25 0,5 adalah 1 : 2. 0,35 0,7",
+       "Dalam satu gambar teknik, ketebalan garis untuk 0,5 1,0 setiap jenis garis harus seragam."
+      ]
+     },
+     "jp": {
+      "core": "{製図|せいず}に{用|もち}いる{線|せん}は、{細線|ほそせん}、{太線|ふとせん}、{極太線|ごくぶとせん}の3{種類|しゅるい}（{単位|たんい}1mm）•{線|せん}の{太|ふと}さは、0.18mm 、0.25mm 、0.35mm 、{細線太線|ほそせんふとせん}",
+      "points": [
+       "{線|せん}の{種類|しゅるい}と{太|ふと}さ{表|ひょう}6-3{線|せん}の{太|ふと}さ",
+       "mm、0.7mm 、1.0mm の{中|なか}から{選|えら}びます。0.180 .35",
+       "0.5",
+       "0.7",
+       "1.0",
+       "{線|せん}の{種類|しゅるい}と{用途|ようと}、{文字|もじ}の{大|おお}きさ"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s4",
+    "no": 4,
+    "title": {
+     "id": "Skala yang Digunakan dalam Gambar Teknik",
+     "jp": "製図に用いる尺度"
+    },
+    "pages": [
+     64,
+     64
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Jika gambar dibuat dengan ukuran yang sama dengan benda aslinya, disebut skala penuh (skala asli). Jika gambar diperbesar, disebut skala diperbesar, dan jika diperkecil, disebut skala diperkecil. Skala dipilih dari skala yang direkomendasikan dibawah ini."
+      },
+      {
+       "p": "Tabel 6-5: Skala"
+      },
+      {
+       "p": "Jenis Skala Rekomendasi"
+      },
+      {
+       "p": "Skala penuh 1:1"
+      },
+      {
+       "p": "Skala 2 : 1 5 : 1 10 : 1 20 : 1 50 : 1 Diperbesar"
+      },
+      {
+       "p": "Skala 1 : 2 1 : 5 1 : 10 1 : 20 1 : 50 Diperkecil 1 : 100 1 : 200 1 : 500 … 1 : 10000"
+      }
+     ],
+     "jp": [
+      {
+       "p": "{実物|じつぶつ}と{同|おな}じ{大|おお}きさで{図形|ずけい}を{描|えが}く{場合|ばあい}は{現尺|げんしゃく}、{拡大|かくだい}する{場合|ばあい}を{倍尺|ばいしゃく}、{縮小|しゅくしょう}する{場合|ばあい}を{縮尺|しゅくしゃく}といいます。{尺度|しゃくど}は{下記推奨|かきすいしょう}する{尺度|しゃくど}から{選|えら}びます。"
+      },
+      {
+       "p": "{表|ひょう}6-5{尺度種別推奨|しゃくどしゅべつすいしょう}する{尺度|しゃくど}11:11{現尺|げんしゃく}21:1151 :11101 :11201 :11501 :11{倍尺|ばいしゃく}11:1211 :1511 :11011 :12011 :150{縮尺|しゅくしゃく}11:110011 :120011 :1500…11:110000"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Jika gambar dibuat dengan ukuran yang sama dengan benda aslinya, disebut skala penuh (skala asli). Jika gambar diperbesar, disebut skala diperbesar, dan jika diperkecil, disebut skala diperkecil. Skala dipilih dari skala yang direkomendasikan dibawah ini.",
+      "points": []
+     },
+     "jp": {
+      "core": "{実物|じつぶつ}と{同|おな}じ{大|おお}きさで{図形|ずけい}を{描|えが}く{場合|ばあい}は{現尺|げんしゃく}、{拡大|かくだい}する{場合|ばあい}を{倍尺|ばいしゃく}、{縮小|しゅくしょう}する{場合|ばあい}を{縮尺|しゅくしゃく}といいます。{尺度|しゃくど}は{下記推奨|かきすいしょう}する{尺度|しゃくど}から{選|えら}びます。",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s5",
+    "no": 5,
+    "title": {
+     "id": "Cara Penyajian Bentuk",
+     "jp": "図形の表し方"
+    },
+    "pages": [
+     65,
+     68
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Metode Proyeksi"
+      },
+      {
+       "p": "Proyeksi ortogonal yang digunakan di Jepang adalah proyeksi sudut ketiga. (proyeksi sudut pertama diabaikan)"
+      },
+      {
+       "p": "A: Tampak Depan B B: Tampak Atas B F C: Tampak D Samping Kiri C C A D F D: Tampak Samping Kanan A E: Tampak Bawah E F: Tampak E Belakang"
+      },
+      {
+       "p": "Gambar 6-2: Standar Tata Letak Proyeksi Ortogonal (Proyeksi Sudut Ketiga) (JIS B0001)"
+      },
+      {
+       "p": "Gambar 6-3: Simbol Proyeksi Sudut Ketiga"
+      },
+      {
+       "p": "Penjelasan"
+      },
+      {
+       "ol": [
+        "Proyeksi sudut ketiga mengacu pada kondisi dimana bidang proyeksi berada diantara objek dan pengamat."
+       ]
+      },
+      {
+       "ol": [
+        "Pada Gambar 6-2, A, D dan B merupakan bentuk yang terlihat secara langsung pada gambar proyeksi."
+       ]
+      },
+      {
+       "ol": [
+        "Gambar proyeksi utama (tampak depan) dipilih sebagai gambar yang paling merepresentasikan bentuk dan fungsi objek."
+       ]
+      },
+      {
+       "p": "(2) Menggambar Garis"
+      },
+      {
+       "ul": [
+        "Garis kontur yang merepresentasikan bentuk objek digambar dengan garis tebal solid.",
+        "Garis tersembunyi, dimana objek tidak terlihat, digambar dengan garis putus tipis atau tebal.",
+        "Garis pusat digambar dengan garis putus-titik tunggal tipis.",
+        "Garis dimensi dan garis ekstensi dimensi digambar dengan garis tipis solid."
+       ]
+      },
+      {
+       "p": "(3) Ukuran Huruf"
+      },
+      {
+       "p": "Ukuran huruf dipilih dari: 2,5 mm, 3,5 mm, 5 mm, 7 mm dan 10 mm."
+      },
+      {
+       "p": "(4) Menyatakan Dimensi"
+      },
+      {
+       "p": "Dimensi dinyatakan dengan garis dimensi, garis ekstensi dimensi, dan sejenisnya."
+      },
+      {
+       "ol": [
+        "Garis dimensi tidak boleh saling bersilangan.",
+        "Hindari penulisan dimensi secara ganda. ｔ 1.6",
+        "Dimensi dinyatakan dalam dimensi akhir setelah proses penyelesaian. 160"
+       ]
+      },
+      {
+       "ol": [
+        "Gunakan dimensi yang tidak memerlukan 85"
+       ]
+      },
+      {
+       "p": "perhitungan. 50"
+      },
+      {
+       "ol": [
+        "Radius lingkaran dinotasikan R, sedangkan 60 diameter dinotasikan φ. Namun, jika bentuk 140 objeknya lingkaran, notasi tersebut tak perlu 280 dicantumkan."
+       ]
+      },
+      {
+       "p": "Gambar 6-4: Contoh Pencantuman Garis Dimensi"
+      },
+      {
+       "p": "(5) Cara Merepresentasikan Busur, Panjang Tali Busur dan Sudut Pusat"
+      },
+      {
+       "p": "Pencantuman dimensi busur, panjang tali busur dan sudut pusat dilakukan sesuai Gambar 6-5. Untuk busur, simbolnya wajib dicantumkan sebelum nilai dimensinya."
+      },
+      {
+       "p": "Gambar 6-5: Contoh Cara Merepresentasikan Busur, Panjang Tali Busur dan Sudut Pusat"
+      },
+      {
+       "p": "(6) Simbol Penyelesaian Permukaan dan Toleransi Kecocokan"
+      },
+      {
+       "p": "Simbol penyelesaian permukaan dinyatakan menggunakan notasi sebagaimana Gambar 6-6."
+      },
+      {
+       "p": "Simbol kekasaran permukaan Ra semakin kecil angkanya, semakin halus permukaan hasil akhir, sebaliknya semakin besar angkanya, semakin kasar permukaannya."
+      },
+      {
+       "p": "Metode Pemesinan (Contoh) M: Pemesinan frais Metode L: Pemesinan bubut pemesinan Simbol kekasaran permukaan Simbol M grafis Ra: Kekasaran rerata aritmetika Ra 6,3 (μm) Simbol grafis Simbol ▽: Menunjukkan perlu proses kekasaran permukaan penghilangan"
+      },
+      {
+       "p": "Gambar 6-6: Menyatakan Metode Penyelesaian Permukaan"
+      },
+      {
+       "p": "Kecocokan dibagi menjadi 3 jenis menurut ukuran celah antara poros dan lubang, yaitu “kecocokan ketat”, “kecocokan longgar”, dan “kecocokan transisi”. Toleransi kecocokan antara poros dan lubang terhadap dimensi dasarnya ditentukan dalam JIS."
+      },
+      {
+       "p": "Keterangan Tambahan 6-1"
+      },
+      {
+       "p": "Kecocokan ketat terjadi jika diameter poros lebih besar daripada diameter lubang, sehingga biasanya tidak dapat dimasukkan. Dilakukan dengan penekanan masuk, atau poros dimasukkan setelah lubang dipanaskan sehingga diameternya mengembang secara termal."
+      }
+     ],
+     "jp": [
+      {
+       "h": "(1){投影法|とうえいほう}"
+      },
+      {
+       "p": "{日本|にちほん}で{用|もち}いられる{正投影法|せいとうえいほう}は、{第三角法|だいさんかくほう}によります。（{第一角法|だいいっかくほう}は{省略|しょうりゃく}）A：{正面図|しょうめんず}BBFB ：{平面図|へいめんず}DC ：{左側面図|ひだりがわめんず}CC A D FD ：{右側面図|みぎがわめんず}AE：{下面図|かめんず}EEF ：{背面図図|はいめんずず}6-2{正投影図|せいとうえいず}の{配置基準|はいちきじゅん}（{第三角法|だいさんかくほう}）（JIS1B0001）{図|ず}6-3{第三角法|だいさんかくほう}の{記号解説|きごうかいせつ}"
+      },
+      {
+       "ul": [
+        "①{第三角法|だいさんかくほう}は、{投影面|とうえいめん}が{対象物|たいしょうぶつ}と{観察者|かんさつしゃ}の{間|あいだ}にある{状態|じょうたい}を{示|しめ}します。",
+        "②{図|ず}6-2だと、A、D、Bは{見|み}たままの{形状|けいじょう}が{投影図|とうえいず}になります。",
+        "③{主投影図|しゅとうえいず}（{正面図|しょうめんず}）は{対象物|たいしょうぶつ}の{形状|けいじょう}・{機能|きのう}をもっとも{表|あらわ}す{図面|ずめん}を{選|えら}びます。"
+       ]
+      },
+      {
+       "p": "{練習問題|れんしゅうもんだい}6-1"
+      },
+      {
+       "ul": [
+        "{正|ただ}しい{場合|ばあい}はA、{間違|あいだちが}っている{場合|ばあい}はBを{選|えら}びなさい。"
+       ]
+      },
+      {
+       "p": "{図|ず}A{図|ず}B"
+      },
+      {
+       "ul": [
+        "①（）{図|ず}Aの{投影図|とうえいず}は{第三角法|だいさんかくほう}である",
+        "②（）{図|ず}Bの{投影図|とうえいず}は{第三角法|だいさんかくほう}である"
+       ]
+      },
+      {
+       "p": "{解説|かいせつ}"
+      },
+      {
+       "ul": [
+        "①{左右|さゆう}いずれを{正面図|しょうめんず}としてもよいが、{左|ひだり}の{図|ず}の{中央|ちゅうおう}の{線|せん}は{右側|みぎがわ}からしか{見|み}えない"
+       ]
+      },
+      {
+       "p": "ので{破線|はせん}とすべきです。"
+      },
+      {
+       "p": "{答|こたえ}：B"
+      },
+      {
+       "ul": [
+        "②{図|ず}6-3の{図|ず}と{位置|いち}が{逆|ぎゃく}で、{円筒|えんとう}の{小円|しょうえん}は{右側|みぎがわ}から{見|み}えないので{破線|はせん}とすべきです。"
+       ]
+      },
+      {
+       "p": "{答|こたえ}：B"
+      },
+      {
+       "h": "(2){線|せん}の{描|えが}き{方|かた}"
+      },
+      {
+       "p": "•{対象物|たいしょうぶつ}の{形状|けいじょう}を{表|あらわ}す{外形線|がいけいせん}は{太|ふと}い{実線|じっせん}で{描|えが}く。"
+      },
+      {
+       "p": "•{対象物|たいしょうぶつ}が{見|み}えないかくれ{線|せん}は{細|ほそ}い{破線|はせん}または{太|ふと}い{破線|はせん}で{描|えが}く。"
+      },
+      {
+       "p": "•{中心線|ちゅうしんせん}は{細|ほそ}い{一点鎖線|いちてんさせん}を{使用|しよう}する。"
+      },
+      {
+       "p": "•{寸法線|すんぽうせん}、{寸法補助線|すんぽうほじょせん}は{細|ほそ}い{実線|じっせん}で{描|えが}く。"
+      },
+      {
+       "h": "(3){文字|もじ}の{大|おお}きさ"
+      },
+      {
+       "p": "{文字|もじ}の{大|おお}きさは、2.5mm 、3.5mm 、5mm 、7mm 、10mm の{中|なか}から{選|えら}びます。"
+      },
+      {
+       "h": "(4){寸法|すんぽう}の{示|しめ}し{方|かた}"
+      },
+      {
+       "p": "{寸法|すんぽう}は{寸法線|すんぽうせん}、{寸法補助線|すんぽうほじょせん}などを{用|もち}いて{表|あらわ}します。"
+      },
+      {
+       "ul": [
+        "①{寸法線|すんほうせん}は{交差|こうさ}させない。"
+       ]
+      },
+      {
+       "p": "ｔ1.6"
+      },
+      {
+       "ul": [
+        "②{寸法|すんほう}の{重複記入|ちょうふくきにゅう}は{避|さ}ける。",
+        "③{寸法|すんほう}は{仕上|しあが}り{寸法|すんぽう}を{示|しめ}す。"
+       ]
+      },
+      {
+       "p": "16085"
+      },
+      {
+       "ul": [
+        "④{計算不要|けいさんふよう}の{寸法|すんぽう}にする。"
+       ]
+      },
+      {
+       "p": "5060⑤{円|えん}の{半径|はんけい}にはR、{直径|ちょっけい}にはφをつける。"
+      },
+      {
+       "p": "140ただし{図形|ずけい}が{円|えん}の{場合|ばあい}はつけない。"
+      },
+      {
+       "p": "280{図|ず}6-4{寸法線|すんほうせん}の{記入例|きにゅうれい}"
+      },
+      {
+       "h": "(5){円弧|えんこ}、{弦|げん}の{長|なが}さおよび{中心角|ちゅうしんかく}の{表|あらわ}し{方|かた}"
+      },
+      {
+       "p": "{円弧|えんこ}、{弦|げん}の{長|なが}さおよび{中心角|ちゅうしんかく}の{寸法記入|すんぽうきにゅう}は、{図|ず}6-5のとおりに{行|おこな}います。"
+      },
+      {
+       "p": "{円弧|えんこ}は{寸法数字|すんぽうすうじ}の{前|まえ}に{図示記号|ずしきごう}を{付|つ}けます。"
+      },
+      {
+       "p": "{図|ず}6-5{円弧|えんこ}、{弦|げん}の{長|なが}さ、{中心角|ちゅうしんかく}の{表|あらわ}し{方|かた}の{例|れい}"
+      },
+      {
+       "h": "(6){仕上|しあ}げ{記号|きごう}とはめあい{公差|こうさ}"
+      },
+      {
+       "p": "{仕上|しあ}げ{記号|きごう}は、{図|ず}6-6のような{図示指定|ずししてい}をします。"
+      },
+      {
+       "p": "{粗|あら}さ{記号|きごう}のRaは、{数字|すうじ}が{小|ちい}さい{方|ほう}が{仕上|しあ}げ{表面|ひょうめん}は{滑|なめ}らかで、{大|おお}きい{方|ほう}が{粗|あら}くなります。"
+      },
+      {
+       "p": "{加工方法|かこうほうほう}（{例|れい}）M：フライス{加工加工方法|かこうかこうほうほう}Ｌ：{旋盤加工図示記号|せんばんかこうずしきごう}M{粗|あら}さ{記号|きごう}Ra6 .3Ra：{算術平均粗|さんじゅつへいきんあら}さ（μｍ）{図示記号粗|ずしきごうあら}さ{記号|きごう}▽：{除去加工要|じょきょかこうよう}を{示|しめ}す{図|ず}6-6{仕上|しあ}げ{方法|ほうほう}の{図示法|ずしほう}はめあいは、{軸|じく}と{穴|あな}とのすき{間|あいだ}の{寸法|すんぽう}より、「しまりばめ」、「すきまばめ」、「{中間|ちゅうあいだ}ばめ」の3{種|しゅ}があります。はめあいは{軸|じく}と{穴|あな}の{基準寸法|きじゅんすんぽう}に{対|たい}する{公差|こうさ}がJISに{定|さだ}められています。"
+      },
+      {
+       "p": "{補足|ほそく}6-1しまりばめは{穴径|あなけい}より{軸径|じくけい}が{大|おお}きい{場合|ばあい}で、{通常|つうじょう}は{挿入|そうにゅう}できません。{圧入|あつにゅう}するか、{穴側|あながわ}を{加熱|かねつ}して{径|けい}を{熱膨張|ねつぼうちょう}させて{挿入|そうにゅう}します。"
+      },
+      {
+       "p": "2.{電気図面|でんきずめん}"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Metode Proyeksi",
+      "points": [
+       "Garis kontur yang merepresentasikan bentuk objek digambar dengan garis tebal solid.",
+       "Garis tersembunyi, dimana objek tidak terlihat, digambar dengan garis putus tipis atau …",
+       "Garis pusat digambar dengan garis putus-titik tunggal tipis.",
+       "Garis dimensi dan garis ekstensi dimensi digambar dengan garis tipis solid."
+      ]
+     },
+     "jp": {
+      "core": "{日本|にちほん}で{用|もち}いられる{正投影法|せいとうえいほう}は、{第三角法|だいさんかくほう}によります。",
+      "points": [
+       "{投影法|とうえいほう}",
+       "{線|せん}の{描|えが}き{方|かた}",
+       "{文字|もじ}の{大|おお}きさ",
+       "{寸法|すんぽう}の{示|しめ}し{方|かた}",
+       "{円弧|えんこ}、{弦|げん}の{長|なが}さおよび{中心角|ちゅうしんかく}の{表|あらわ}し{方|かた}",
+       "{仕上|しあ}げ{記号|きごう}とはめあい{公差|こうさ}"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s6",
+    "no": 6,
+    "title": {
+     "id": "Jenis Gambar Listrik",
+     "jp": "電気図面の種類"
+    },
+    "pages": [
+     69,
+     69
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Berikut jenis-jenis gambar yang umum, tetapi tak ada ketentuannya dalam JIS."
+      },
+      {
+       "p": "Tabel 6-6: Jenis-jenis Gambar Listrik"
+      },
+      {
+       "p": "Jenis Gambar Teknik Keterangan"
+      },
+      {
+       "ol": [
+        "Diagram Sistem Gambar yang menunjukkan sistem kelistrikan seperti saluran System diagram transmisi atau saluran distribusi."
+       ]
+      },
+      {
+       "p": "Diagram yang menunjukkan koneksi dan sirkuit peralatan dan"
+      },
+      {
+       "ol": [
+        "Diagram Koneksi perangkat listrik. Diagram koneksi internal menunjukkan Writing diagram hubungan sambungan internal kabel listrik serta jenis Connection diagram kabelnya. Diagram interkoneksi adalah gambar yang Interconnection menunjukkan hubungan koneksi listrik antar peralatan diagram internal, serta antara panel distribusi/kontrol dengan perangkat eksternal."
+       ]
+      },
+      {
+       "ol": [
+        "Diagram Juga disebut diagram koneksi terbentang, yaitu gambar Pengkabelan rangkaian relai yang menunjukkan susunan rangkaian agar Schematic diagram urutan operasi sekuens dapat dipahami."
+       ]
+      },
+      {
+       "ol": [
+        "Diagram Satu-Garis Gambar yang secara sederhana menunjukkan hubungan Skeleton diagram sambungan listrik antara peralatan dalam sistem tenaga Single-line diagram listrik."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "p": "{図面|ずめん}の{種類|しゅるい}として{下記|かき}が{一般的|いっぱんてき}ですが、JISに{定|さだ}められていません。"
+      },
+      {
+       "p": "{表|ひょう}6-6{電気図面|でんきずめん}の{種類図面|しゅるいずめん}の{種類図面|しゅるいずめん}の{内容|ないよう}"
+      },
+      {
+       "ul": [
+        "①{系統図|けいとうず}"
+       ]
+      },
+      {
+       "p": "{送電線|そうでんせん}・{配電線|はいでんせん}などの{電気系統|でんきけいとう}を{示|しめ}す{図面|ずめん}。"
+      },
+      {
+       "p": "Systemdiagram {機器|きき}や{器具|きぐ}の{電気的接続状態|でんきてきせつぞくじょうたい}や{回路|かいろ}を{示|しめ}した{図面|ずめん}。{内部|ないぶ}"
+      },
+      {
+       "ul": [
+        "②{接続図|せつぞくず}"
+       ]
+      },
+      {
+       "p": "Writingdiagram {接続図|せつぞくず}は{内部|ないぶ}に{配線|はいせん}される{電線|でんせん}の{接続|せつぞく}と{線種|せんしゅ}を{示|しめ}す。{相互|そうご}Connectiondiagram {接続図|せつぞくず}は{内部接続機器相互間|ないぶせつぞくききそうごあいだ}、{配電盤|はいでんばん}・{制御盤|せいぎょばん}と{外部|がいぶ}のInterconnectiondiagram{電気的接続関係|でんきてきせつぞくかんけい}を{表|あらわ}す。"
+      },
+      {
+       "p": "{展開接続図|てんかいせつぞくず}ともいい、シーケンス{動作|どうさ}の{順序|じゅんじょ}が{分|わ}かるよう"
+      },
+      {
+       "ul": [
+        "③{配線図|はいせんず}"
+       ]
+      },
+      {
+       "p": "Schematicdiagram に{回路構成|かいろこうせい}を{示|しめ}したリレー{回路図|かいろず}。"
+      },
+      {
+       "ul": [
+        "④{単線図|たんせんず}"
+       ]
+      },
+      {
+       "p": "Skeletondiagram {電力系統|でんりょくけいとう}の{機器|きき}の{電気的接続関係|でんきてきせつぞくかんけい}を{簡潔|かんけつ}に{示|しめ}した{図面|ずめん}。"
+      },
+      {
+       "p": "Single-line diagram"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Berikut jenis-jenis gambar yang umum, tetapi tak ada ketentuannya dalam JIS.",
+      "points": []
+     },
+     "jp": {
+      "core": "{図面|ずめん}の{種類|しゅるい}として{下記|かき}が{一般的|いっぱんてき}ですが、JISに{定|さだ}められていません。",
+      "points": [
+       "①{系統図|けいとうず}",
+       "②{接続図|せつぞくず}",
+       "③{配線図|はいせんず}",
+       "④{単線図|たんせんず}"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s7",
+    "no": 7,
+    "title": {
+     "id": "Simbol-simbol Listrik",
+     "jp": "{電気用図記号|でんきようずきごう}"
+    },
+    "pages": [
+     70,
+     70
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Simbol-simbol gambar kelistrikan JIS telah direvisi signifikan untuk menyesuaikan standar IEC. Namun, perlu kehati-hatian karena simbol gambar berdasarkan standar industri ataupun standar yang lama juga bercampur."
+      },
+      {
+       "p": "(1) Simbol Dasar Kontak"
+      },
+      {
+       "ol": [
+        "Kontak dan sakelar kontrol"
+       ]
+      },
+      {
+       "p": "Kontak a: normal terbuka (sirkuit tertutup saat diaktifkan) (a) kontak normal Kontak b: normal tertutup (sirkuit terbuka saat terbuka diaktifkan)"
+      },
+      {
+       "ol": [
+        "Simbol dasar (b) kontak normal Kontak a: Kontak bergerak digambarkan tertutup dengan garis miring 30° kearah kiri atas terhadap sumbu poros, atau Gambar 6-7 Arah Simbol Dasar 30° ke bawah terhadap sumbu Kontak horizontal. Kontak b: Digambarkan berlawanan arah dengan kontak a, yaitu 30° kearah kanan atas, atau 30° ke atas."
+       ]
+      },
+      {
+       "p": "(2) Simbol-simbol Listrik"
+      },
+      {
+       "p": "Simbol-simbol listrik utama ditunjukkan pada Tabel 6-7."
+      }
+     ],
+     "jp": [
+      {
+       "p": "JIS{電気図用記号|でんきずようきごう}はIEC{規格|きかく}との{整合性|せいごうせい}を{図|はか}るため{大幅|おおはば}に{改定|かいてい}されてきています。しかし{業界|ぎょうかい}の{規格|きかく}や{旧規格|きゅうきかく}の{図面|ずめん}も{混在|こんざい}するので{注意|ちゅうい}が{必要|ひつよう}です。"
+      },
+      {
+       "h": "(1){接点基本図記号|せってんきほんずきごう}"
+      },
+      {
+       "ul": [
+        "①{接点|せってん}と{制御用|せいぎょよう}スイッチ"
+       ]
+      },
+      {
+       "p": "a{接点|せってん}：メーク{接点|せってん}（{動作|どうさ}したとき{閉路|へいろ}）b{接点|せってん}：ブレーク{接点|せってん}（{動作|どうさ}したとき{開路|ひらけじ}）(a)1メーク{接点|せってん}"
+      },
+      {
+       "ul": [
+        "②{基本図記号|きほんずきごう}"
+       ]
+      },
+      {
+       "p": "a{接点|せってん}：{可動接点|かどうせってん}を{軸線|じくせん}に{対|たい}し、{左上向|ひだりうわむ}き(b)1ブレーク{接点|せってん}30°の{斜線|しゃせん}、または{水平軸|すいへいじく}に{対|たい}し{下向|したむ}き30°に{描|えが}きます。"
+      },
+      {
+       "p": "{図|ず}6-7b{接点|せってん}：a{接点|せってん}とは{反対方向|はんたいほうこう}に、{右上向|みぎうえむ}き{接点基本図記号|せってんきほんずきごう}の{向|む}き30°、または{上向|うわむ}き30°に{描|えが}きます。"
+      },
+      {
+       "h": "(2){電気用図記号|でんきようずきごう}"
+      },
+      {
+       "p": "{主|おも}な{電気用図記号|でんきようずきごう}を{表|ひょう}6-7に{示|しめ}します。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Simbol-simbol gambar kelistrikan JIS telah direvisi signifikan untuk menyesuaikan standar IEC. Namun, perlu kehati-hatian karena simbol gambar berdasarkan standar industri ataupun standar yang lama juga bercampur.",
+      "points": []
+     },
+     "jp": {
+      "core": "JIS{電気図用記号|でんきずようきごう}はIEC{規格|きかく}との{整合性|せいごうせい}を{図|はか}るため{大幅|おおはば}に{改定|かいてい}されてきています。しかし{業界|ぎょうかい}の{規格|きかく}や{旧規格|きゅうきかく}の{図面|ずめん}も{混在|こんざい}するので{注意|ちゅうい}が{必要|ひつよう}です。",
+      "points": [
+       "{接点基本図記号|せってんきほんずきごう}",
+       "{電気用図記号|でんきようずきごう}"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s8",
+    "no": 8,
+    "title": {
+     "id": "Diagram Skematis untuk Kontrol Sekuensial",
+     "jp": "シーケンス{制御用展開接続図|せいぎょようてんかいせつぞくず}"
+    },
+    "pages": [
+     71,
+     72
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Ukuran: Secara prinsip berukuran A3",
+        "Arah garis koneksi (a) Diagram terbentang horizontal digambarkan dari kiri ke kanan. (b) Diagram terbentang vertikal digambarkan dari atas ke bawah.",
+        "Penandaan posisi simbol: Pada diagram koneksi terbentang, kumparan dan kontak sering posisinya terpisah, sehingga perlu penandaan agar dapat diidentifikasi pada gambar.",
+        "Jenis komponen kontrol serta simbol peralatan ditulis dengan merujuk standar JIS.",
+        "Pada Gambar 6-8 ditunjukkan satu contoh diagram koneksi terbentang."
+       ]
+      },
+      {
+       "p": "Gambar 6-8: Contoh Diagram Koneksi Terbentang (sirkuit penggerak motor)"
+      },
+      {
+       "p": "Tabel 6-7: Simbol-simbol Listrik Utama (JIS C0617-2)"
+      },
+      {
+       "p": "Simbol Nama Simbol Nama"
+      },
+      {
+       "p": "1 Resistor 2 Resistor variabel"
+      },
+      {
+       "p": "3 Kapasitor 4 Induktor, reaktor"
+      },
+      {
+       "p": "Dioda pemancar A Dioda A cahaya (LED) 5 A: anoda 6 A: anoda K K: katoda K K: katoda"
+      },
+      {
+       "p": "Transistor pnp C A Fotodioda C: kolektor 7 B 8 A: anoda E E: emitor K K: katoda B: basis"
+      },
+      {
+       "p": "Kontak normal Kontak normal 9 terbuka 10 tertutup (kontak b) (kontak a)"
+      },
+      {
+       "p": "Sakelar tombol tekan Sakelar alarm (reset 11 12 (reset otomatis) otomatis)"
+      },
+      {
+       "p": "Sakelar berhenti 13 darurat (non-reset 14 Sakelar proksimitas otomatis)"
+      },
+      {
+       "p": "Sakelar batas (normal tertutup Sakelar batas (kontak 15 16 dengan pembukaan normal tertutup) paksa)"
+      },
+      {
+       "p": "Pemutus sirkuit Sakelar batas (MCB) 17 (kontak normal 18 Dapat memutus arus terbuka) beban dan arus hubung singkat"
+      },
+      {
+       "p": "Kontaktor magnetik (MC) 19 20 Lampu indikator Dapat memutus arus beban"
+      },
+      {
+       "p": "21 Amperemeter 22 Sekering"
+      }
+     ],
+     "jp": [
+      {
+       "p": "•{大|おお}きさ：A3サイズが{原則|げんそく}•{接続線|せつぞくせん}の{方向|ほうこう}(a){横書|よこが}き{展開図|てんかいず}は{左|ひだり}から{右|みぎ}に{描|えが}きます。"
+      },
+      {
+       "p": "(b){縦書|たてが}き{展開図|てんかいず}は{上|うえ}から{下|した}に{描|えが}きます。"
+      },
+      {
+       "p": "•{図記号|ずきごう}の{位置表示|いちひょうじ}：{展開接続図|てんかいせつぞくず}ではコイルと{接点|せってん}が{離|はな}れている{場合|ばあい}が{多|おお}いので、{図面上|ずめんじょう}の{位置|いち}を{識別|しきべつ}できるようにします。"
+      },
+      {
+       "p": "•{制御|せいぎょ}に{使用|しよう}する{部品|ぶひん}の{種類|しゅるい}、{機器記号|きききごう}はJIS{規格|きかく}を{参照|さんしょう}して{表記|ひょうき}します。"
+      },
+      {
+       "p": "•{図|ず}6-8に{展開接続図|てんかいせつぞくず}の{一例|いちれい}を{示|しめ}します。"
+      },
+      {
+       "p": "{図|ず}6-8{展開接続図|てんかいせつぞくず}の{例|れい}（モータ{駆動回路|くどうかいろ}）{表|ひょう}6-7{主|おも}な{電気用図記号|でんきようずきごう}（JIS1C0617-2）{記号名称記号名称|きごうめいしょうきごうめいしょう}1{抵抗器|ていこううつわ}2{可変抵抗器|かへんていこううつわ}インダクタンス、コンデンサ34 リアクトル{発光|はっこう}ダイオード、AダイオードA（LED）A：アノード56 A：アノードKK ：カソードKK：カソードpnpトランジスタCA フォトダイオードC：コレクタBA ：アノード78 E：エミッタEKK ：カソードB：ベースメーク{接点|せってん}ブレーク{接点|せってん}910 （a{接点|せってん}）（b{接点|せってん}）{押|お}しボタンスイッチ{警報|けいほう}スイッチ1112 （{自動復帰|じどうふっき}）（{自動復帰|じどうふっき}）{非常停止|ひじょうていし}スイッチ1314 {近接|きんせつ}スイッチ（{自動復帰|じどうふっき}しない）リミットスイッチリミットスイッチ15（{確実|かくじつ}な{開放|かいほう}ブレー16（ブレーク{接点|せってん}）ク{接点|せってん}）{配線用遮断器|はいせんようしゃだんき}リミットスイッチ1718 {負荷電流|ふかでんりゅう}、{短絡|たんらく}（メーク{接点|せってん}）{電流|でんりゅう}の{遮断|しゃだん}が{可能電磁接触器|かのうでんじせっしょくき}（MC）19{負荷電流|ふかでんりゅう}の{遮断|しゃだん}が20{表示灯|ひょうじとう}（ランプ）{可能|かのう}21{電流計|でんりゅうけい}22ヒューズ{練習問題|れんしゅうもんだい}6-2"
+      },
+      {
+       "ul": [
+        "{制御|せいぎょ}システムの{回路図|かいろず}で{使|つか}われる{図記号|ずきごう}のうち、リミットスイッチとして{間違|あいだちが}っている"
+       ]
+      },
+      {
+       "p": "ものを{選択肢|せんたくし}A～Dの{中|なか}から1つ{選|えら}びなさい。"
+      },
+      {
+       "p": "AB C D {選択肢図記号解説表|せんたくしずきごうかいせつひょう}6-7に{示|しめ}すようにA、Cはリミットスイッチ、Bは{確実動作|かくじつどうさ}のリミットスイッチ、Dは{非常停止|ひじょうていし}スイッチです。"
+      },
+      {
+       "p": "{答|こたえ}：D"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Gambar 6-8: Contoh Diagram Koneksi Terbentang (sirkuit penggerak motor)",
+      "points": [
+       "Ukuran: Secara prinsip berukuran A3",
+       "Arah garis koneksi (a) Diagram terbentang horizontal digambarkan dari kiri ke kanan. (b…",
+       "Penandaan posisi simbol: Pada diagram koneksi terbentang, kumparan dan kontak sering po…",
+       "Jenis komponen kontrol serta simbol peralatan ditulis dengan merujuk standar JIS.",
+       "Pada Gambar 6-8 ditunjukkan satu contoh diagram koneksi terbentang."
+      ]
+     },
+     "jp": {
+      "core": "•{大|おお}きさ：A3サイズが{原則|げんそく}•{接続線|せつぞくせん}の{方向|ほうこう}(a){横書|よこが}き{展開図|てんかいず}は{左|ひだり}から{右|みぎ}に{描|えが}きます。",
+      "points": [
+       "{制御|せいぎょ}システムの{回路図|かいろず}で{使|つか}われる{図記号|ずきごう}のうち、リミットスイッチとして{間違|あいだちが}っている"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s9",
+    "no": 9,
+    "title": {
+     "id": "Diagram Urutan Tangga dan Simbol-simbolnya",
+     "jp": "ラダーシーケンス図とその記号"
+    },
+    "pages": [
+     73,
+     74
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "Diagram urutan tangga (diagram tangga) adalah program yang digunakan pada rangkaian PLC sebagai pengganti urutan relai. Program urutan berjalan dari atas ke bawah dan kiri ke kanan.",
+        "Seperti pada Gambar 6-9, program dibuat dengan menghubungkan perangkat yang dikontrol dengan garis yang menyerupai anak tangga horizontal.",
+        "Dengan kontak seperti pada Tabel 6-8, kumparan dan perangkat keluaran dikontrol secara ON/OFF.",
+        "Simbol-simbol utama ditunjukkan pada Tabel 6-8, dan contoh rangkaian nyala lampu ditunjukkan pada Gambar 6-9."
+       ]
+      },
+      {
+       "p": "Tabel 6-8: Simbol pada Rangkaian Tangga"
+      },
+      {
+       "p": "Simbol Nama Fungsi"
+      },
+      {
+       "p": "Kontak a beroperasi sinkron dengan kontak a (NO) ON/OFF sakelar atau sensor yang terkoneksi ke PLC"
+      },
+      {
+       "p": "Kontak b beroperasi sinkron dengan kontak b (NC) ON/OFF sakelar atau sensor yang terkoneksi ke PLC"
+      },
+      {
+       "p": "Menunjukkan keluaran seperti relai dan kumparan (koil) instruksi."
+      },
+      {
+       "p": "Contoh Operasi"
+      },
+      {
+       "p": "S1 S2 relai M1 M1"
+      },
+      {
+       "p": "M1 lampu Y1"
+      },
+      {
+       "p": "Gambar 6-9: Contoh Diagram Urutan Tangga (Rangkaian Nyala Lampu)"
+      },
+      {
+       "ol": [
+        "Saat sakelar S1 ditekan, koil M1 teraktivasi, dan kontak M1 menutup.",
+        "Saat kontak M1 tertutup, sakelar S1 akan mengunci diri melalui M1.",
+        "Karena kontak M1 dalam kondisi tertutup, keluaran lampu Y1 menjadi ON sehingga lampu menyala.",
+        "Saat sakelar S2 ditekan, eksitasi M1 terputus dan fungsi mengunci diri (self-holding) terlepas, sehingga output Y1 menjadi OFF dan lampu padam."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "p": "•ラダーシーケンス{図|ず}（ラダー{図|ず}）はリレーシーケンスの{代|か}わりのPLC（プログラマブルコントローラー）{回路|かいろ}で{使|つか}うプログラム。シーケンスプログラムは、{上|うえ}から{下|した}、{左|ひだり}から{右|みぎ}にプログラムが{進行|しんこう}します。"
+      },
+      {
+       "p": "•{図|ず}6-9のように{制御対象|せいぎょたいしょう}の{機器|きき}を、{梯子|はしご}の{横棒|よこぼう}に{見立|みた}てた{線|せん}でつなぐことでプログラムを{構築|こうちく}します。"
+      },
+      {
+       "p": "•{表|ひょう}6-8のような{接点|せってん}で、コイルや{出力対象|しゅつりょくたいしょう}をON/OFF{制御|せいぎょ}します。"
+      },
+      {
+       "p": "•{主|おも}な{図記号|ずきごう}を{表|ひょう}6-8に、ランプ{点灯回路|てんとうかいろ}の{例|れい}を{図|ず}6-9に{示|しめ}します。"
+      },
+      {
+       "p": "{表|ひょう}6-8ラダー{回路|かいろ}に{用|もち}いる{図記号図記号名称機能|ずきごうずきごうめいしょうきのう}PLCに{接続|せつぞく}したスイッチやセンサのa{接点|せってん}（NO）ON/OFFと{連動|れんどう}したa{接点|せってん}PLCに{接続|せつぞく}したスイッチやセンサのb{接点|せってん}（NC）ON/OFFと{連動|れんどう}したb{接点|せってん}コイルリレーや{命令|めいれい}などの{出力|しゅつりょく}を{示|しめ}す{動作|どうさ}の{事例|じれい}S1S 2リレーM1M1M1ランプY1{図|ず}6-9ラダーシーケンス{図|ず}の{例|れい}（ランプ{点灯回路|てんとうかいろ}）"
+      },
+      {
+       "ul": [
+        "①スイッチS1を{押|お}すと、コイルM1が{励磁|れいじ}されて、{接点|せってん}M1が{閉|と}じる。",
+        "②{接点|せってん}M1が{閉|と}じると、スイッチS1はM1で{自己保持|じこほじ}される。",
+        "③{接点|せってん}M1が{閉|と}じているので、ランプ{出力|しゅつりょく}Y1がONになりランプが{点灯|てんとう}す"
+       ]
+      },
+      {
+       "p": "る。"
+      },
+      {
+       "ul": [
+        "④スイッチS2を{押|お}すと、M1の{励磁|れいじ}が{消|き}え{自己保持|じこほじ}が{解消|かいしょう}されY1がOFF"
+       ]
+      },
+      {
+       "p": "になりランプは{消灯|しょうとう}する。"
+      },
+      {
+       "p": "3.{電気材料|でんきざいりょう}の{種類|しゅるい}"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tabel 6-8: Simbol pada Rangkaian Tangga",
+      "points": [
+       "Diagram urutan tangga (diagram tangga) adalah program yang digunakan pada rangkaian PLC…",
+       "Seperti pada Gambar 6-9, program dibuat dengan menghubungkan perangkat yang dikontrol d…",
+       "Dengan kontak seperti pada Tabel 6-8, kumparan dan perangkat keluaran dikontrol secara …",
+       "Simbol-simbol utama ditunjukkan pada Tabel 6-8, dan contoh rangkaian nyala lampu ditunj…"
+      ]
+     },
+     "jp": {
+      "core": "•ラダーシーケンス{図|ず}（ラダー{図|ず}）はリレーシーケンスの{代|か}わりのPLC（プログラマブルコントローラー）{回路|かいろ}で{使|つか}うプログラム。シーケンスプログラムは、{上|うえ}から{下|した}、{左|ひだり}から{右|みぎ}にプログラムが{進行|しんこう}します。",
+      "points": [
+       "①スイッチS1を{押|お}すと、コイルM1が{励磁|れいじ}されて、{接点|せってん}M1が{閉|と}じる。",
+       "②{接点|せってん}M1が{閉|と}じると、スイッチS1はM1で{自己保持|じこほじ}される。",
+       "③{接点|せってん}M1が{閉|と}じているので、ランプ{出力|しゅつりょく}Y1がONになりランプが{点灯|てんとう}す",
+       "④スイッチS2を{押|お}すと、M1の{励磁|れいじ}が{消|き}え{自己保持|じこほじ}が{解消|かいしょう}されY1がOFF"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s10",
+    "no": 10,
+    "title": {
+     "id": "Bahan Konduktif",
+     "jp": "{導電材料|どうでんざいりょう}"
+    },
+    "pages": [
+     75,
+     75
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "(1) Bahan Penghantar Listrik"
+      },
+      {
+       "p": "Bahan yang menghantarkan listrik dengan efisien disebut bahan konduktif. Bahan yang memiliki hambatan listrik kecil dan dapat dialiri arus dalam jumlah besar disebut bahan penghantar listrik (bahan kawat listrik)."
+      },
+      {
+       "p": "Tabel 6-9: Jenis-jenis Utama Kawat Listrik"
+      },
+      {
+       "p": "Tembaga listrik dengan kemurnian tinggi yang ditarik pada suhu Kawat Tembaga kamar. Keras dan memiliki resistivitas tinggi. Digunakan pada mesin Keras berputar, sakelar, dan saluran transmisi listrik."
+      },
+      {
+       "p": "Tembaga keras yang dianil, memiliki resistivitas lebih rendah Kawat Tembaga dibanding tembaga keras, dan digunakan untuk lilitan peralatan Lunak listrik serta kabel dan konduktor biasa."
+      },
+      {
+       "p": "Konduktivitasnya sekitar 60% dari tembaga lunak (tembaga lebih Kawat Aluminium mudah menghantarkan listrik). Keras Karena densitas hanya 1/3-nya, dapat digunakan untuk saluran transmisi listrik."
+      },
+      {
+       "p": "Kabel listrik yang inti kawatnya dilapisi bahan isolator. Pada aplikasi Kabel Berisolasi peralatan listrik, juga disebut kawat magnet, termasuk kawat enamel dan kawat PVF."
+      },
+      {
+       "p": "Istilah"
+      },
+      {
+       "p": "Anil: Proses memanaskan kawat tembaga, yang telah mengeras akibat proses penarikan kawat, hingga suhu tertentu sehingga kawat menjadi lunak dan memiliki kualitas stabil."
+      },
+      {
+       "p": "Keterangan Tambahan 6-2"
+      },
+      {
+       "p": "Resistivitas konduktor logam ⇒ Resistivitas konduktor logam pada 20°C: kawat tembaga lunak: 1/58, kawat tembaga keras: 1/55, kawat aluminium: 1/35 [Ωmm2/m]"
+      },
+      {
+       "p": "(2) Bahan Resistif"
+      },
+      {
+       "p": "Diantara bahan konduktif, bahan yang digunakan untuk mengatur arus listrik disebut bahan resistif."
+      },
+      {
+       "p": "Tabel 6-10: Bahan-bahan Resistif Utama"
+      },
+      {
+       "p": "Bahan Pemanas Contoh tipikalnya adalah kawat nikel-krom, yang digunakan pada Listrik kompor listrik"
+      },
+      {
+       "p": "Bahan Resistansi Misalnya bahan yang nilai resistansinya hanya berubah sedikit Khusus meskipun terjadi pemanasan akibat arus listrik"
+      },
+      {
+       "p": "Kode warna resistor berkaki ditunjukkan pada Tabel 6-14 di halaman 71."
+      }
+     ],
+     "jp": [
+      {
+       "h": "(1){電線材料|でんせんざいりょう}"
+      },
+      {
+       "p": "{電気|でんき}を{効率良|こうりつよ}く{通|とお}す{材料|ざいりょう}を{導電材|どうでんざい}といい、{電気抵抗|でんきていこう}が{小|ちい}さく{大量|おおりょう}の{電流|でんりゅう}を{流|なが}せるものを{電線材料|でんせんざいりょう}といいます。"
+      },
+      {
+       "p": "{表|ひょう}6-9{主|おも}な{電線|でんせん}の{種類純度|しゅるいじゅんど}の{高|たか}い{電気銅|でんきどう}を{常温|じょうおん}で{引き延|ひきの}ばしたもの。{硬|かた}く{抵抗率|ていこうりつ}が{硬銅線大|こうどうせんおお}きい。{回転機|かいてんき}や{開閉器|かいへいき}、{送電線路|そうでんせんろ}に{使|つか}われる。"
+      },
+      {
+       "p": "{硬銅|こうどう}を{焼|や}きなましたもので、{抵抗率|ていこうりつ}は{硬銅|こうどう}よりは{小|ちい}さく、{軟銅線電気機器|なんどうせんでんききき}の{巻線|まきせん}や{普通|ふつう}の{電線|でんせん}・コードなどに{使|つか}われる。"
+      },
+      {
+       "p": "{軟銅|なんどう}に{比|くら}べ{導電率|どうでんりつ}は{約|やく}60%（{銅|どう}の{方|ほう}が{電気|でんき}を{通|とお}しやすい）。"
+      },
+      {
+       "p": "{硬|こう}アルミニウム{線|せん}しかし{密度|みつど}は1/3と{小|ちい}さいので{送電線路|そうでんせんろ}に{使|つか}われる。"
+      },
+      {
+       "p": "{心線|しんせん}に{絶縁性|ぜつえんせい}の{被覆|ひふく}を{施|ほどこ}した{電線|でんせん}。{電気機器用|でんきききよう}はマグネットワイ{絶縁電線|ぜつえんでんせん}ヤとも{呼|よ}ばれ、エナメル{線|せん}やホルマル{線|せん}などがある。"
+      },
+      {
+       "p": "{用語焼|ようごや}きなまし：{伸線|しんせん}で{加工硬化|かこうこうか}して{硬|かた}くなった{銅線|どうせん}を{適度|てきど}な{温度|おんど}に{加熱|かねつ}し、{軟|やわ}らかく{安定|あんてい}した{品質|ひんしつ}にする{加工|かこう}のことです。"
+      },
+      {
+       "p": "{補足|ほそく}6-2{金属導体|きんぞくどうたい}の{抵抗率|ていこうりつ}⇒{金属導体|きんぞくどうたい}の20°Cにおける{抵抗率|ていこうりつ}："
+      },
+      {
+       "p": "2{軟銅線|なんどうせん}11/58{硬銅線|こうどうせん}11/55アルミ{線|せん}11/351[Ωmm/ m]"
+      },
+      {
+       "h": "(2){抵抗材料|ていこうざいりょう}"
+      },
+      {
+       "p": "{導電材|どうでんざい}の{中|なか}で{電流|でんりゅう}の{調節|ちょうせつ}を{目的|もくてき}とするものを{抵抗材料|ていこうざいりょう}といいます。"
+      },
+      {
+       "p": "{表|ひょう}6-10{主|おも}な{抵抗材料電熱材料電気|ていこうざいりょうでんねつざいりょうでんき}コンロなどに{使|つか}われるニクロム{線|せん}が{代表的特殊抵抗材料電流|だいひょうてきとくしゅていこうざいりょうでんりゅう}による{発熱|はつねつ}でも{抵抗値変化|ていこうあたいへんか}の{少|すく}ないものなどリード{付|つ}き{抵抗器|ていこううつわ}のカラーコードを、71ページの{表|ひょう}6-14に{示|しめ}します。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "(1) Bahan Penghantar Listrik",
+      "points": []
+     },
+     "jp": {
+      "core": "{電気|でんき}を{効率良|こうりつよ}く{通|とお}す{材料|ざいりょう}を{導電材|どうでんざい}といい、{電気抵抗|でんきていこう}が{小|ちい}さく{大量|おおりょう}の{電流|でんりゅう}を{流|なが}せるものを{電線材料|でんせんざいりょう}といいます。",
+      "points": [
+       "{電線材料|でんせんざいりょう}",
+       "{抵抗材料|ていこうざいりょう}"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b6s11",
+    "no": 11,
+    "title": {
+     "id": "Bahan Magnetik",
+     "jp": "{磁性材料|じせいざいりょう}"
+    },
+    "pages": [
+     76,
+     76
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Bahan yang menghasilkan densitas fluks magnetik yang besar jika diberi medan magnet eksternal yang kecil disebut bahan magnetik. Bahan yang, setelah diberi medan magnet kuat, tetap menyimpan kemagnetan meskipun medan magnet dihilangkan disebut bahan magnet permanen."
+      },
+      {
+       "p": "Tabel 6-11: Bahan-bahan Magnetik Utama"
+      },
+      {
+       "p": "Besi murni memiliki permeabilitas magnetik yang tinggi dan densitas fluks magnetik jenuhnya juga besar, sehingga baja lunak Besi yang mengandung sedikit karbon dapat digunakan untuk inti magnet dan sejenisnya."
+      },
+      {
+       "p": "Pelat baja yang ditipiskan dan ditambahkan beberapa % silikon Pelat Baja untuk mengurangi disipasi daya akibat perubahan fluks magnetik. Elektromagnetik Digunakan dengan cara dilaminasi pada inti besi trafo atau pada mesin rotari."
+      },
+      {
+       "p": "Magnet ferit memiliki magnetisasi remanen kecil, tetapi gaya koersifnya besar, sedangkan magnet Alnico memiliki gaya koersif Bahan Magnet kecil, tetapi magnetisasi remanennya besar. Banyak digunakan Permanen untuk meningkatkan karakteristik listrik, memperkecil ukuran peralatan listrik, serta pada kendaraan listrik."
+      },
+      {
+       "p": "Aluminium bukan bahan magnetik, sehingga tidak dapat memanfaatkan gaya magnet."
+      }
+     ],
+     "jp": [
+      {
+       "p": "{外部|がいぶ}から{加|くわ}えたわずかな{磁界|じかい}で{大|おお}きな{磁束密度|じそくみつど}が{得|え}られる{材料|ざいりょう}を{磁性材料|じせいざいりょう}といいます。{強|つよ}い{磁界|じかい}を{加|くわ}えて、{磁界|じかい}を{取り除|とりのぞ}いた{後|あと}も{磁気|じき}が{残|のこ}るものを{永久磁石材料|えいきゅうじしゃくざいりょう}といいます。"
+      },
+      {
+       "p": "{表|ひょう}6-11{主|おも}な{磁性材料純鉄|じせいざいりょうじゅんてつ}は{透磁率|とうじりつ}が{大|おお}きく、{飽和磁束密度|ほうわじそくみつど}も{大|おお}きいので、{微量|かすかりょう}の{炭素鉄|たんそてつ}を{含有|がんゆう}させた{軟鋼|なんこう}が{磁極|じきょく}の{鉄心|てっしん}や{継鉄|つぎてつ}などに{使|つか}われる。"
+      },
+      {
+       "p": "{鋼板|こういた}を{薄|うす}くし{ケイ素|けいそ}を{数|すう}％{入|い}れ{磁束|じそく}の{変化|へんか}による{損失|そんしつ}を{少|すく}なくした{電磁鋼板|でんじこういた}もの。{変圧器|へんあつき}の{鉄心|てっしん}や{回転機|かいてんき}に{積層|せきそう}して{使|つか}われる。"
+      },
+      {
+       "p": "フェライト{磁石|じしゃく}は{残留磁気|ざんりゅうじき}が{小|ちい}さいが{保持力|ほじりょく}が{大|おお}きく、アルニコ{永久磁石材料磁石|えいきゅうじしゃくざいりょうじしゃく}は{保持力|ほじりょく}が{小|ちい}さく{残留磁気|ざんりゅうじき}が{大|おお}きい。{用途|ようと}に{応|おう}じ{電気特性|でんきとくせい}の{改善|かいぜん}や{電気機器|でんききき}の{小型化|こがたか}、{電気自動車|でんきじどうしゃ}などに{多|おお}く{使|つか}われる。"
+      },
+      {
+       "p": "アルミニウムは{磁性体|じせいたい}ではないので、{磁石|じしゃく}の{力|ちから}を{利用|りよう}できません。"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bahan yang menghasilkan densitas fluks magnetik yang besar jika diberi medan magnet eksternal yang kecil disebut bahan magnetik. Bahan yang, setelah diberi medan magnet kuat, tetap menyimpan kemagnetan meskipun medan magnet dihilangkan disebut bahan magnet permanen.",
+      "points": []
+     },
+     "jp": {
+      "core": "{外部|がいぶ}から{加|くわ}えたわずかな{磁界|じかい}で{大|おお}きな{磁束密度|じそくみつど}が{得|え}られる{材料|ざいりょう}を{磁性材料|じせいざいりょう}といいます。{強|つよ}い{磁界|じかい}を{加|くわ}えて、{磁界|じかい}を{取り除|とりのぞ}いた{後|あと}も{磁気|じき}が{残|のこ}るものを{永久磁石材料|えいきゅうじしゃくざいりょう}といいます。",
+      "points": []
+     }
+    }
+   },
+   {
+    "id": "b6s12",
+    "no": 12,
+    "title": {
+     "id": "Bahan Isolasi",
+     "jp": "{絶縁材料|ぜつえんざいりょう}"
+    },
+    "pages": [
+     77,
+     80
+    ],
+    "full": {
+     "id": [
+      {
+       "p": "Bahan yang tidak mudah menghantarkan listrik disebut bahan isolasi."
+      },
+      {
+       "p": "(1) Suhu Operasi Maksimum Bahan Isolasi"
+      },
+      {
+       "p": "Saat suhu meningkat akibat panas yang dihasilkan oleh arus listrik (panas Joule), bahan isolasi mengalami degradasi sehingga kinerja isolasinya menurun."
+      },
+      {
+       "p": "Batas kenaikan suhu pada bagian yang berisolasi dinyatakan dengan rumus berikut, dimana 40°C merupakan nilai acuan suhu lingkungan."
+      },
+      {
+       "p": "batas kenaikan suhu ≦ suhu operasi maksimum – 40°C"
+      },
+      {
+       "p": "(2) Kelas Ketahanan Panas"
+      },
+      {
+       "p": "Bahan isolasi listrik diklasifikasikan kedalam kelas ketahanan panas menurut suhu operasi maksimumnya, seperti pada Tabel 6-12."
+      },
+      {
+       "p": "Tabel 6-12: Kelas Ketahanan Panas Bahan Isolasi dan Penggunaan Utamanya"
+      },
+      {
+       "p": "Kelas Huruf Ketahanan Bahan Isolasi Utama Penggunaan Utama Panas Pengenal"
+      },
+      {
+       "p": "90°C Y kapas, kertas Peralatan listrik kecil"
+      },
+      {
+       "p": "kertas impregnasi 105°C A Trafo, peralatan listrik minyak, minyak mineral"
+      },
+      {
+       "p": "120°C E mylar (PET) Lilitan pada mesin rotari besar"
+      },
+      {
+       "p": "130°C B mika Generator tegangan tinggi"
+      },
+      {
+       "p": "155°C F epoksi-polimida Memperkecil ukuran generator"
+      },
+      {
+       "p": "180°C H resin silikon Trafo tegangan tinggi tipe kering"
+      },
+      {
+       "p": "220°C R jenis poliamida Isolasi tahan panas"
+      },
+      {
+       "p": "(3) Jenis-jenis Bahan Isolasi Listrik"
+      },
+      {
+       "p": "Tabel 6-13: Jenis-jenis Bahan Isolasi Padat"
+      },
+      {
+       "p": "Jenis Sebutan Utama Fitur, Penggunaan, dsb"
+      },
+      {
+       "p": "Bahan isolasi Bahan isolasi tahan panas, bahan mika, keramik anorganik dielektrik kapasitor"
+      },
+      {
+       "p": "Bahan dengan kelas ketahanan panas E Bahan polietilena tereftalat (PET) Isolasi slot pada mesin rotari termoplastik Juga disebut Mylar"
+      },
+      {
+       "p": "Bahan isolasi murah Bahan termoset resin fenol, resin epoksi Bahan dengan kelas ketahanan panas F Kekuatan mekanis besar"
+      },
+      {
+       "p": "Bahan anorganik Kertas isolasi yang umum digunakan kertas kraft, papan pres berserat Trafo minyak"
+      },
+      {
+       "p": "Keterangan Tambahan 6-3"
+      },
+      {
+       "p": "Angka pertama Kesalahan"
+      },
+      {
+       "p": "Angka ketiga (pengali) Angka kedua"
+      },
+      {
+       "p": "Tabel 6-14: Kode Warna Resistor Berkaki"
+      },
+      {
+       "p": "Angka 0 1 2 3 4 5 6 7 8 9"
+      },
+      {
+       "p": "Kode abu- hitam cokelat merah oranye kuning hijau biru ungu putih Warna abu"
+      },
+      {
+       "p": "Toleransi: emas ±5%, perak ±10% Contoh: jika kode warnanya merah, hitam, merah dan emas, maka merah dan hitam pertama menunjukkan angka 20, merah berikutnya menunjukkan 10², dan emas menunjukkan ±5%. Jadi nilainya 20 × 10² ± 5% (= 2 kΩ)."
+      }
+     ],
+     "jp": [
+      {
+       "p": "{電気|でんき}を{通|とお}しにくい{材料|ざいりょう}のことを{絶縁材料|ぜつえんざいりょう}といいます。"
+      },
+      {
+       "h": "(1){絶縁材料|ぜつえんざいりょう}の{最高使用温度|さいこうしようおんど}"
+      },
+      {
+       "p": "{電気機器|でんききき}に{流|なが}れる{電流|でんりゅう}による{発熱|はつねつ}（ジュール{熱|ねつ}）により{温度|おんど}が{上昇|じょうしょう}すると{絶縁材料|ぜつえんざいりょう}が{劣化|れっか}し{絶縁性能|ぜつえんせいのう}が{低下|ていか}します。"
+      },
+      {
+       "p": "{絶縁部分|ぜつえんぶぶん}の{温度上昇限度|おんどじょうしょうげんど}はつぎの{式|しき}のように{表|あらわ}され、40°Cは{周囲温度|しゅういおんど}の{基準値|きじゅんち}として{定|さだ}められています。"
+      },
+      {
+       "p": "1{温度上昇限度|おんどじょうしょうげんど}111≦111{最高使用温度|さいこうしようおんど}111–11140°C1"
+      },
+      {
+       "h": "(2){耐熱|たいねつ}クラス"
+      },
+      {
+       "p": "{絶縁材料|ぜつえんざいりょう}は{最高使用温度|さいこうしようおんど}により{耐熱|たいねつ}クラスが{表|ひょう}6-12のように{分類|ぶんるい}されます。"
+      },
+      {
+       "p": "{表|ひょう}6-12{耐熱|たいねつ}クラスによる{絶縁材料|ぜつえんざいりょう}と{主|おも}な{用途耐熱|ようとたいねつ}クラス{指定文字主|していもじおも}な{絶縁材料主|ぜつえんざいりょうおも}な{用途|ようと}90°CY {木綿|もめん}、{紙小型電気機器|かみこがたでんききき}105°CA {油|あぶら}浸紙、{鉱油変圧器電気機器|こうゆへんあつきでんききき}120°CE マイラ（PET）{大型回転機|おおがたかいてんき}の{巻線|まきせん}130°CB マイカ（{雲母|うんも}）{高電圧発電機|だかでんあつはつでんき}155°CF エポキシポリイミド{発電機|はつでんき}の{小型化|こがたか}180°CH シリコン{樹脂系乾式高圧用変圧器|じゅしけいかんしきこうあつようへんあつき}220°CR ポリアミド{系耐熱絶縁用|けいたいねつぜつえんよう}"
+      },
+      {
+       "h": "(3){絶縁材料|ぜつえんざいりょう}の{種類|しゅるい}"
+      },
+      {
+       "p": "{表|ひょう}6-13{固体絶縁材料|こたいぜつえんざいりょう}の{種類種類主|しゅるいしゅるいおも}な{名称特徴|めいしょうとくちょう}・{用途|ようと}などマイカ、セラミック{無機絶縁材料耐熱絶縁材料|むきぜつえんざいりょうたいねつぜつえんざいりょう}、コンデンサ{誘電体耐熱|ゆうでんたいたいねつ}クラスEの{材料|ざいりょう}ポリエチレンテレフタ{熱可塑性材料回転機|ねつかそせいざいりょうかいてんき}のスロット{絶縁|ぜつえん}レート（PET）マイラともいう{安価|あんか}な{絶縁材料|ぜつえんざいりょう}フェノール{樹脂|じゅし}、{熱硬化性材料耐熱|ねつこうかせいざいりょうたいねつ}クラスFの{材料|ざいりょう}エポキシ{樹脂機械的強度大代表的|じゅしきかいてききょうどだいだいひょうてき}な{絶縁紙|ぜつえんし}クラフト{紙|し}、{繊維質無機材料|せんいしつむきざいりょう}プレスボード{油入変圧器補足|ゆにゅうへんあつきほそく}6-3{誤差第|ごさだい}1{数字第|すうじだい}3{数字|すうじ}（{乗数|じょうすう}）{第|だい}2{数字表|すうじひょう}6-14リード{付|つ}き{抵抗|ていこう}のカラー{表示|ひょうじ}01 2 3 4 5 6 7 8 9 {数字|すうじ}カラー{黒茶赤橙黄緑青紫灰白|くろちゃあかとうこうろくしょうむらさきかいはく}コード{誤差|ごさ}は、{金|きん}±5%、{銀|ぎん}±10％{表示例|ひょうじれい}カラーコードが{赤|あか}、{黒|くろ}、{赤|あか}、{金|かね}の{場合|ばあい}、{最初|さいしょ}の{赤|あか}、{黒|くろ}で20、つぎの{赤|あか}で10の2{乗|じょう}、{最後|さいご}の{金|かね}で±5%となり、201×110²1±15%（=121kΩ）を{表|あらわ}します。"
+      },
+      {
+       "p": "{練習問題|れんしゅうもんだい}6-3"
+      },
+      {
+       "ul": [
+        "{正|ただ}しい{場合|ばあい}はA、{間違|あいだちが}っている{場合|ばあい}はBを{選|えら}びなさい。",
+        "①（）{軟銅線|なんどうせん}とアルミ{線|せん}では{銅|どう}の{方|ほう}が{抵抗率|ていこうりつ}は{小|ちい}さい",
+        "②（）{天然|てんねん}ゴムは{電気|でんき}を{通|とお}しやすい"
+       ]
+      },
+      {
+       "p": "{解説|かいせつ}"
+      },
+      {
+       "ul": [
+        "①{抵抗率|ていこうりつ}は{補足|ほそく}6-2より{軟銅線|なんどうせん}1/58［Ωmm/ m］、アルミ{線|せん}1/35［Ωmm/ m］なので{銅|どう}"
+       ]
+      },
+      {
+       "p": "の{方|ほう}が{小|ちい}さいので{正|ただ}しいです。"
+      },
+      {
+       "p": "{答|こたえ}：A"
+      },
+      {
+       "ul": [
+        "②{天然|てんねん}ゴムは{絶縁体|ぜつえんたい}なので{電気|でんき}を{通|とお}しにくいので{誤|あやま}りです。"
+       ]
+      },
+      {
+       "p": "{答|こたえ}：B{第|だい}7{章器具|しょうきぐ}・{工具|こうぐ}1.{組立|くみたて}に{使用|しよう}する{工具|こうぐ}と{部品|ぶひん}"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Bahan yang tidak mudah menghantarkan listrik disebut bahan isolasi.",
+      "points": []
+     },
+     "jp": {
+      "core": "{電気|でんき}を{通|とお}しにくい{材料|ざいりょう}のことを{絶縁材料|ぜつえんざいりょう}といいます。",
+      "points": [
+       "{絶縁材料|ぜつえんざいりょう}の{最高使用温度|さいこうしようおんど}",
+       "{耐熱|たいねつ}クラス",
+       "{絶縁材料|ぜつえんざいりょう}の{種類|しゅるい}"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

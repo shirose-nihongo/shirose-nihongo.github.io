@@ -32,7 +32,8 @@ async function renderList(lvIn) {
   const babs = [...new Set(bun.map(x => x.bab))].sort((a, b) => a - b);
   const kartu = babs.map(b => {
     const n = bun.filter(x => x.bab === b).length;
-    return `<button class="jfs-bab" onclick="route('jft-slide/${lv}/${b}')"><b>Bab ${b}</b><small>${n} pola</small></button>`;
+    const pr = getProg(lv, b), npt = Object.keys(pr.pts || {}).length;
+    return `<button class="jfs-bab" onclick="route('jft-slide/${lv}/${b}')"><b>Bab ${b}</b><small>${n} pola${pr.quiz ? ` · kuis ${pr.quiz.best}/${pr.quiz.total}` : npt ? ` · ${npt} 🎯` : ""}</small></button>`;
   }).join("");
   const L = LV[lv];
   const idx = await dat("./data/jft/ppt/index.json");
@@ -63,26 +64,78 @@ async function renderList(lvIn) {
   </div>`;
 }
 
+/* ---------- latihan interaktif: tiap poin slide bisa diklik → soal pilihan ganda + pembahasan ---------- */
+const PR_KEY = (lv, bab) => `shirose-jfs-prog:${lv}:${bab}`;
+const getProg = (lv, bab) => { try { return JSON.parse(LS.get(PR_KEY(lv, bab), "{}")) || {}; } catch (e) { return {}; } };
+const setProg = (lv, bab, o) => LS.set(PR_KEY(lv, bab), JSON.stringify(o));
+const shuf = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pickN = (a, n) => shuf(a).slice(0, n);
+const pdk = (t, n = 70) => { t = String(t || "").replace(/^\d+\.\s*/, "").split(/[;；]/)[0].trim(); return t.length > n ? t.slice(0, n) + "…" : t; };
+const hasK = (t) => /[一-鿿]/.test(t || "");
+const withOpt = (o) => { const all = [o.ok, ...o.no]; const idx = shuf(all.map((_, i) => i)); return { ...o, opts: idx.map(i => all[i]), a: idx.indexOf(0) }; };
+function lainnya(list, f, benar, n) { const seen = new Set([benar]); const out = []; for (const x of shuf(list)) { const v = f(x); if (v && !seen.has(v)) { seen.add(v); out.push(v); if (out.length === n) break; } } return out; }
+/* varian soal untuk satu pola (v 0..2) / satu kata (v 0..2). Mengembalikan null bila datanya tidak cukup. */
+function soalPola(p, v, C) {
+  const ref = `Kaitan materi: Bab ${p.bab} · ${plain(p.pola)}`, pol = C.polsAll;
+  if (v % 3 === 0 && p.contoh && p.arti_contoh) { const no = lainnya(pol, x => x.arti_contoh, p.arti_contoh, 3); if (no.length < 3) return null; return withOpt({ pre: "Arti kalimat ini…", q: p.contoh, ok: p.arti_contoh, no, exp: `${plain(p.contoh)} = ${p.arti_contoh}`, ref }); }
+  if (v % 3 === 1 && p.contoh) { const no = lainnya(pol, x => x.pola, p.pola, 3); if (no.length < 3) return null; return withOpt({ pre: "Pola yang dipakai kalimat ini…", q: p.contoh, ok: p.pola, no, exp: `${plain(p.pola)}: ${pdk(p.penjelasan || p.arti, 160)}`, ref, optRuby: true }); }
+  const ok = pdk(p.penjelasan || p.arti, 90); const no = lainnya(pol, x => pdk(x.penjelasan || x.arti, 90), ok, 3); if (!ok || no.length < 3) return null;
+  return withOpt({ pre: "Pola ini dipakai untuk…", q: p.pola, ok, no, exp: `${plain(p.pola)}: ${pdk(p.penjelasan || p.arti, 160)}`, ref });
+}
+function soalKata(w, v, C) {
+  const ref = `Kaitan materi: Bab ${w.bab} · Kosakata ${plain(w.kata)}`, ws = C.wordsAll;
+  if (v % 3 === 0) { const ok = pdk(w.arti, 40); const no = lainnya(ws, x => pdk(x.arti, 40), ok, 3); if (no.length < 3) return null; return withOpt({ pre: "Arti kata ini…", q: w.kata, ok, no, exp: `${plain(w.kata)}（${w.kana}）= ${pdk(w.arti, 80)}`, ref, say: plain(w.kata) }); }
+  if (v % 3 === 1 && hasK(w.kata)) { const no = lainnya(ws.filter(x => hasK(x.kata)), x => x.kana, w.kana, 3); if (no.length < 3) return null; return withOpt({ pre: "Cara baca kata ini…", q: w.kata, ok: w.kana, no, exp: `${plain(w.kata)} dibaca ${w.kana} = ${pdk(w.arti, 80)}`, ref, say: plain(w.kata) }); }
+  const ok = w.kata; const no = lainnya(ws, x => x.kata, ok, 3); if (no.length < 3) return null; return withOpt({ pre: `「${pdk(w.arti, 40)}」 dalam bahasa Jepang…`, q: "", ok, no, exp: `${pdk(w.arti, 60)} = ${plain(w.kata)}（${w.kana}）`, ref, optRuby: true });
+}
+const soalDari = (it, v, C) => { for (let k = 0; k < 3; k++) { const r = it.pola ? soalPola(it, v + k, C) : soalKata(it, v + k, C); if (r) return r; } return null; };
+
 /* ---------- slideshow ---------- */
 let SL = null;   // { lv, bab, slides, i }
+let CTX = null, QZ = null, KZ = null;   // konteks data bab · soal terbuka · kuis bab
 async function buildSlides(lv, bab) {
   const [bun, kos] = await Promise.all([dat(`./data/bunpou-${lv}.json`), dat(`./data/kosakata-${lv}.json`)]);
   const pols = bun.filter(x => x.bab === bab);
   const words = kos.filter(x => x.bab === bab && x.kata && x.kana && x.arti);
-  const slides = [{ t: "title", judul: `Bab ${bab}`, sub: `${LV[lv].nama} · ${pols.length} pola` }];
+  const slides = [{ t: "title", judul: `Bab ${bab}`, sub: `${LV[lv].nama} · ${pols.length} pola${words.length ? ` · ${words.length} kata` : ""}` }];
+  const per = 6, pages = Math.ceil(words.length / per);
+  for (let h = 0; h < pages; h++) slides.push({ t: "vocab", items: words.slice(h * per, h * per + per), hal: [h + 1, pages] });
   pols.forEach((p, k) => {
     slides.push({ t: "pola", p, k: k + 1, n: pols.length });
     if (p.contoh) slides.push({ t: "contoh", p, k: k + 1, n: pols.length });
   });
+  slides.push({ t: "quiz", bab });
   slides.push({ t: "end", bab });
+  CTX = { pols, words, polsAll: bun.filter(x => x.pola), wordsAll: kos.filter(x => x.kata && x.kana && x.arti) };
   return slides;
+}
+
+/* ---------- tampilan soal (dipakai latihan per poin & kuis bab) ---------- */
+const optHtml = (r, pick, fn) => r.opts.map((o, k) => `<button class="jfs-opt${pick != null ? (k === r.a ? " ok" : k === pick ? " ng" : "") : ""}" ${pick != null ? "disabled" : ""} onclick="${fn}(${k})"><b>${"ABCD"[k]}</b> ${r.optRuby ? rb(o) : esc(o)}</button>`).join("");
+const fbHtml = (r, pick) => pick == null ? "" : `<div class="jfs-fb ${pick === r.a ? "ok" : "ng"}"><b>${pick === r.a ? "✅ Benar!" : "❌ Belum tepat"}</b>${pick === r.a ? "" : `<div>Jawaban benar: <b>${r.optRuby ? rb(r.opts[r.a]) : esc(r.opts[r.a])}</b></div>`}<div class="n">💡 ${r.exp.includes("[") ? rb(r.exp) : esc(r.exp)}</div><div class="n">📚 ${esc(r.ref)}</div></div>`;
+const soalBox = (r, pick, fn, extra = "") => `<div class="jfs-q">${r.pre ? `<div class="jfs-qpre">${esc(r.pre)}</div>` : ""}${r.q ? `<div class="jfs-qq">${rb(r.q)} ${r.say ? sayBtn(r.say, "kosakata") : sayBtn(plain(r.q), "bunpou-contoh")}</div>` : ""}<div class="jfs-opts">${optHtml(r, pick, fn)}</div>${fbHtml(r, pick)}${extra}</div>`;
+function paintQ() {
+  const box = document.getElementById("jfs-qbox"); if (!box) return;
+  if (!QZ) { box.innerHTML = ""; return; }
+  const extra = QZ.pick == null ? `<div class="jfs-qa"><button class="btn ghost sm" onclick="JFTS.qTutup()">Tutup</button></div>` : `<div class="jfs-qa"><button class="btn sm" onclick="JFTS.qLagi()">🔁 Soal lain dari poin ini</button> <button class="btn ghost sm" onclick="JFTS.qTutup()">Tutup</button></div>`;
+  box.innerHTML = `<div class="panel jfs-qpanel">${soalBox(QZ.r, QZ.pick, "JFTS.qPilih", extra)}</div>`;
+  box.scrollIntoView?.({ behavior: "smooth", block: "nearest" });
+}
+function kuisHtml(s) {
+  const pr = getProg(SL.lv, s.bab);
+  if (!KZ || KZ.lv !== SL.lv || KZ.bab !== s.bab) KZ = null;
+  if (!KZ) return `<div class="jfs-s title"><div class="jfs-h">📝 Kuis Bab ${s.bab}</div><div class="jfs-sub">8 soal pilihan ganda dari pola &amp; kosakata bab ini — tanpa mengetik, ada pembahasan</div>${pr.quiz ? `<div class="jfs-note">Skor terbaik: ${pr.quiz.best}/${pr.quiz.total}</div>` : ""}<div style="margin-top:14px"><button class="btn gold" onclick="JFTS.kuis()">▶ Mulai kuis</button></div></div>`;
+  if (KZ.i >= KZ.qs.length) { const ok = KZ.ok, n = KZ.qs.length; return `<div class="jfs-s title"><div class="jfs-h">📝 Hasil Kuis Bab ${s.bab}</div><div class="jfs-big">${ok} / ${n}</div><div class="jfs-sub">${ok === n ? "Sempurna! 🎉" : ok >= n * 0.7 ? "Bagus — materi bab ini sudah cukup dikuasai" : "Ulangi slide pola yang masih bingung, lalu coba lagi"}</div><div style="margin-top:14px"><button class="btn gold" onclick="JFTS.kuisUlang()">🔁 Ulangi kuis</button></div></div>`; }
+  const r = KZ.qs[KZ.i], last = KZ.i === KZ.qs.length - 1;
+  return `<div class="jfs-s"><div class="jfs-h">📝 Kuis Bab ${s.bab} <small>${KZ.i + 1}/${KZ.qs.length} · benar ${KZ.ok}</small></div>${soalBox(r, KZ.pick, "JFTS.kPilih", KZ.pick != null ? `<div class="jfs-qa"><button class="btn gold sm" onclick="JFTS.kNext()">${last ? "Lihat hasil ›" : "Soal berikutnya ›"}</button></div>` : "")}</div>`;
 }
 const slideHtml = (s, lv) => {
   if (s.t === "title") return `<div class="jfs-s title"><div class="jfs-big">${esc(s.judul)}</div><div class="jfs-sub">${esc(s.sub)}</div></div>`;
   if (s.t === "vocab") return `<div class="jfs-s"><div class="jfs-h">語彙 Kosakata <small>${s.hal[0]}/${s.hal[1]}</small></div><div class="jfs-vgrid">${s.items.map(w => `
-      <div class="jfs-v"><div class="jfs-vk">${rb(w.kata)}</div><div class="jfs-vr">${esc(w.kana)}</div><div class="jfs-va">${esc(w.arti)}</div>${sayBtn(plain(w.kata), "kosakata")}</div>`).join("")}</div></div>`;
-  if (s.t === "pola") return `<div class="jfs-s"><div class="jfs-h">文型 Pola ${s.k}/${s.n}</div><div class="jfs-pola">${rb(s.p.pola)}</div><div class="jfs-pen">${esc(s.p.penjelasan || s.p.arti)}</div>${s.p.note ? `<div class="jfs-note">💡 ${esc(s.p.note)}</div>` : ""}</div>`;
-  if (s.t === "contoh") return `<div class="jfs-s"><div class="jfs-h">例文 Contoh ${s.k}/${s.n}</div><div class="jfs-polasm">${rb(s.p.pola)}</div><div class="jfs-ex">${rb(s.p.contoh)} ${sayBtn(plain(s.p.contoh), "bunpou-contoh")}</div><div class="jfs-id">${esc(s.p.arti_contoh)}</div></div>`;
+      <div class="jfs-v jfs-pt" role="button" tabindex="0" onclick="JFTS.q('w',${w.no ?? 0},this)"><div class="jfs-vk">${rb(w.kata)}</div><div class="jfs-vr">${esc(w.kana)}</div><div class="jfs-va">${esc(w.arti)}</div>${sayBtn(plain(w.kata), "kosakata")}<span class="jfs-tag">🎯</span></div>`).join("")}</div><div class="jfs-hint">Ketuk kartu kata untuk latihan 🎯</div></div>`;
+  if (s.t === "pola") return `<div class="jfs-s"><div class="jfs-h">文型 Pola ${s.k}/${s.n}</div><div class="jfs-pola jfs-pt" role="button" tabindex="0" onclick="JFTS.q('p',${s.p.no},this)">${rb(s.p.pola)} <span class="jfs-tag">🎯 Latihan</span></div><div class="jfs-pen">${esc(s.p.penjelasan || s.p.arti)}</div>${s.p.note ? `<div class="jfs-note">💡 ${esc(s.p.note)}</div>` : ""}</div>`;
+  if (s.t === "contoh") return `<div class="jfs-s"><div class="jfs-h">例文 Contoh ${s.k}/${s.n}</div><div class="jfs-polasm">${rb(s.p.pola)}</div><div class="jfs-ex">${rb(s.p.contoh)} ${sayBtn(plain(s.p.contoh), "bunpou-contoh")}</div><div class="jfs-id">${esc(s.p.arti_contoh)}</div><button class="btn gold sm jfs-pt" onclick="JFTS.q('p',${s.p.no},this)">🎯 Latihan dari contoh ini</button></div>`;
+  if (s.t === "quiz") return kuisHtml(s);
   return `<div class="jfs-s title"><div class="jfs-big">お疲れさま！</div><div class="jfs-sub">Bab ${s.bab} selesai</div><div style="margin-top:14px"><button class="btn" onclick="route('jft-slide/${lv}')">← Pilih bab lain</button> ${s.bab < 18 ? `<button class="btn gold" onclick="route('jft-slide/${lv}/${s.bab + 1}')">Bab ${s.bab + 1} →</button>` : ""}</div></div>`;
 };
 function paint() {
@@ -92,6 +145,7 @@ function paint() {
   el.className = "jfs-stage" + (rubyOn() ? "" : " noruby");
   document.getElementById("jfs-pos").textContent = `${SL.i + 1} / ${SL.slides.length}`;
   document.getElementById("jfs-bar").style.width = `${((SL.i + 1) / SL.slides.length) * 100}%`;
+  if (s.t !== "quiz") { QZ = null; paintQ(); }
   if (autoOn() && (s.t === "contoh")) setTimeout(() => el.querySelector(".jfs-say")?.click(), 250);
 }
 async function renderSlides(lv, bab) {
@@ -114,6 +168,7 @@ async function renderSlides(lv, bab) {
     </div>
     <div class="jfs-progress"><i id="jfs-bar"></i></div>
     <div class="jfs-stage" id="jfs-stage"></div>
+    <div id="jfs-qbox"></div>
     <div class="jfs-nav"><button class="btn" onclick="JFTS.go(-1)">‹ Sebelumnya</button><button class="btn gold" onclick="JFTS.go(1)">Berikutnya ›</button></div>
   </div>`;
 }
@@ -132,6 +187,30 @@ const JFTS = window.JFTS = {
   ppGo(d) { if (!PP) return; ppStop(); PP.i = Math.max(0, Math.min(PP.m.slides.length - 1, PP.i + d)); ppPaint(); },
   ppPlay(k, el) { if (!PP) return; if (el?.classList.contains("on")) { ppStop(); return; } ppPlay(PP.m.slides[PP.i].au[k].src, el); },
   ppAll() { if (!PP) return; const au = PP.m.slides[PP.i].au; const hs = [...document.querySelectorAll(".jfs-hot")]; const run = (k) => { if (k >= au.length) return; ppPlay(au[k].src, hs[k], () => run(k + 1)); }; run(0); },
+  q(tipe, no, el) {
+    if (!CTX) return; const it = tipe === "p" ? CTX.polsAll.find(x => x.no === no) : CTX.wordsAll.find(x => x.no === no); if (!it) return;
+    const v = QZ && QZ.tipe === tipe && QZ.no === no ? QZ.v + 1 : 0; const r = soalDari(it, v, CTX);
+    if (!r) { QZ = null; paintQ(); return; }
+    QZ = { tipe, no, v, it, r, pick: null }; paintQ();
+  },
+  qPilih(k) { if (!QZ || QZ.pick != null) return; QZ.pick = k; if (k === QZ.r.a && SL) { const p = getProg(SL.lv, SL.bab); p.pts = p.pts || {}; p.pts[QZ.tipe + QZ.no] = 1; setProg(SL.lv, SL.bab, p); } paintQ(); },
+  qLagi() { if (QZ) JFTS.q(QZ.tipe, QZ.no); },
+  qTutup() { QZ = null; paintQ(); },
+  kuis() {
+    if (!CTX || !SL) return;
+    const bank = [...CTX.pols.map(x => [x, Math.floor(Math.random() * 3)]), ...CTX.words.map(x => [x, Math.floor(Math.random() * 3)])];
+    const qs = []; const seen = new Set();
+    for (const [it, v] of shuf(bank)) { if (qs.length >= 8) break; const r = soalDari(it, v, CTX); if (r && !seen.has(r.q + r.ok)) { seen.add(r.q + r.ok); qs.push(r); } }
+    if (qs.length < 3) { KZ = null; return; }
+    KZ = { lv: SL.lv, bab: SL.bab, qs, i: 0, ok: 0, pick: null }; paint();
+  },
+  kuisUlang() { KZ = null; JFTS.kuis(); },
+  kPilih(k) { if (!KZ || KZ.pick != null) return; KZ.pick = k; if (k === KZ.qs[KZ.i].a) KZ.ok++; paint(); },
+  kNext() {
+    if (!KZ) return; KZ.i++; KZ.pick = null;
+    if (KZ.i >= KZ.qs.length) { const p = getProg(KZ.lv, KZ.bab); const best = Math.max(KZ.ok, p.quiz ? p.quiz.best : 0); p.quiz = { best, total: KZ.qs.length, last: KZ.ok }; setProg(KZ.lv, KZ.bab, p); }
+    paint();
+  },
   go(d) { if (!SL) return; SL.i = Math.max(0, Math.min(SL.slides.length - 1, SL.i + d)); paint(); },
   ruby() { LS.set("shirose-jfs-ruby", rubyOn() ? "0" : "1"); document.getElementById("jfs-ruby").textContent = `ふりがな ${rubyOn() ? "ON" : "OFF"}`; paint(); },
   auto() { LS.set("shirose-jfs-auto", autoOn() ? "0" : "1"); document.getElementById("jfs-auto").textContent = `🔊 Auto ${autoOn() ? "ON" : "OFF"}`; },

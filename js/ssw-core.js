@@ -50,6 +50,10 @@ const LS = {
 
 /* ============================ DATA ============================ */
 const cache = {};
+/** Tunggu promise maksimal ms; lewat itu pakai nilai cadangan (jaringan HP lambat tidak boleh membekukan halaman). */
+const withTimeout = (p, ms, fb) => new Promise(res => { let d = false; const t = setTimeout(() => { if (!d) { d = true; res(fb); } }, ms); Promise.resolve(p).then(v => { if (!d) { d = true; clearTimeout(t); res(v); } }, () => { if (!d) { d = true; clearTimeout(t); res(fb); } }); });
+const _lsj = (k) => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
+const _lss = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 async function getJSON(url) {
   if (!cache[url]) cache[url] = fetch(url).then(r => { if (!r.ok) throw new Error(`${url}: ${r.status}`); return r.json(); }).catch(e => { delete cache[url]; throw e; });
   return cache[url];
@@ -71,18 +75,45 @@ export const DEFAULT_BIDANG = [
   { slug: "livestock", nama: "Livestock (Peternakan)", jp: "畜産業", aktif: true, urut: 8, tema: "farm", hasContent: true },
   { slug: "fishery", nama: "Fishery (Perikanan)", jp: "漁業", aktif: true, urut: 9, tema: "fishery", hasContent: true },
   { slug: "auto-maintenance", nama: "Auto Maintenance (Perawatan Mobil)", jp: "自動車整備", aktif: true, urut: 10, tema: "automobile", hasContent: true },
-  { slug: "industrial-mfg", nama: "Industrial Manufacturing (Dasar Pabrik)", jp: "工業製品製造業", aktif: true, urut: 11, tema: "generic", hasContent: true },
-  { slug: "mfg-machine-metal", nama: "Machine Metal (Mesin & Logam)", jp: "機械金属加工", label: "⚙️ Mesin & Logam ›", induk: "industrial-mfg", aktif: true, urut: 11.1, tema: "generic", hasContent: true },
+  { slug: "industrial-mfg", nama: "Industrial Manufacturing (Manufaktur)", jp: "工業製品製造業", aktif: true, urut: 11, tema: "machine", hasContent: true, hub: true },
+  { slug: "jaim-machine-metal", nama: "機械金属加工 — Buku Resmi JAIM", jp: "機械金属加工", label: "📘 Mesin & Logam (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.1, tema: "machine", hasContent: true },
+  { slug: "jaim-elec-electronic", nama: "電気電子機器組立て — Buku Resmi JAIM", jp: "電気電子機器組立て", label: "📘 Elektrik & Elektronik (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.2, tema: "electronic", hasContent: true },
+  { slug: "jaim-metal-surface", nama: "金属表面処理 — Buku Resmi JAIM", jp: "金属表面処理", label: "📘 Perlakuan Permukaan Logam (Resmi) ›", induk: "industrial-mfg", aktif: true, urut: 11.3, tema: "plating", hasContent: true },
+  { slug: "wood-industry", nama: "Wood Industry (Industri Kayu)", jp: "木材産業", aktif: true, urut: 12, tema: "wood", hasContent: true },
+  { slug: "auto-transport", nama: "Automobile Transportation (Truk & Bus)", jp: "自動車運送業（トラック・バス）", aktif: true, urut: 13, tema: "truck", hasContent: true },
+  { slug: "forestry", nama: "Forestry (Kehutanan)", jp: "林業", aktif: true, urut: 15, tema: "forestry", hasContent: true },
+  { slug: "linen-supply", nama: "Linen Supply", jp: "リネンサプライ", aktif: true, urut: 16, tema: "linen", hasContent: true },
+  { slug: "railway", nama: "Railway (Perkeretaapian)", jp: "鉄道", aktif: true, urut: 14, tema: "railway", hasContent: true, hub: true },
+  { slug: "railway-track", nama: "Railway — Jalur Rel (軌道整備)", jp: "鉄道（軌道整備）", label: "🛤️ Jalur Rel (軌道整備) ›", induk: "railway", aktif: true, urut: 14.2, tema: "railway", hasContent: true },
+  { slug: "railway-electrical", nama: "Railway — Kelistrikan (電気設備整備)", jp: "鉄道（電気設備整備）", label: "⚡ Kelistrikan (電気設備整備) ›", induk: "railway", aktif: true, urut: 14.3, tema: "railway", hasContent: true },
+  { slug: "shipbuilding", nama: "Shipbuilding", jp: "造船・舶用工業", aktif: true, urut: 17, tema: "ship", hasContent: true },
+  { slug: "railway-vehicle", nama: "Railway — Manufaktur Kereta (車両製造)", jp: "鉄道（車両製造）", label: "🚆 Manufaktur Kereta (車両製造) ›", induk: "railway", aktif: true, urut: 14.1, tema: "railway", hasContent: true },
+  { slug: "logistics", nama: "Logistik / Pergudangan", jp: "物流倉庫", aktif: true, urut: 14, tema: "logistics", hasContent: true },
+  { slug: "recycling", nama: "Daur Ulang Sumber Daya", jp: "資源循環", aktif: true, urut: 15, tema: "recycling", hasContent: true },
+  { slug: "aviation", nama: "Aviation (Penerbangan)", jp: "航空", aktif: true, urut: 16, tema: "aviation", hasContent: true, hub: true },
+  { slug: "aviation-gh", nama: "空港グランドハンドリング — Teks Resmi JAEA", jp: "空港グランドハンドリング", label: "🛫 Ground Handling (Resmi) ›", induk: "aviation", aktif: true, urut: 16.1, tema: "aviation", hasContent: true },
+  { slug: "aviation-am", nama: "航空機整備 — Teks Resmi JAEA", jp: "航空機整備", label: "🔧 Aircraft Maintenance (Resmi) ›", induk: "aviation", aktif: true, urut: 16.2, tema: "aviation", hasContent: true },
 ];
 
+/** Bidang buatan sendiri yang sudah dihapus (abaikan dokumen lama di Firestore). */
+const SLUG_DIHAPUS = new Set(["mfg-machine-metal"]);
 let _bidang = null;
 /** Gabungan: bawaan + dokumen Firestore (Firestore menang). Dokumen yang ada di Firestore tapi tidak di bawaan ikut tampil. */
 export async function loadBidang(force = false) {
   if (_bidang && !force) return _bidang;
   let remote = [];
-  try { if (FB && FB.loadSswBidang && !isGuest()) remote = await FB.loadSswBidang(); } catch (e) { console.warn("ssw: gagal memuat konfigurasi bidang:", e.message || e); }
+  const _ck = "ssw-bidang-cache";
+  try {
+    if (FB && FB.loadSswBidang && !isGuest()) {
+      const cached = _lsj(_ck);
+      const fetchP = FB.loadSswBidang().then(r => { _lss(_ck, r); return r; });
+      // Ada cache → pakai langsung, segarkan di latar belakang. Tanpa cache → tunggu maks 4 dtk.
+      remote = cached ? (fetchP.catch(() => {}), cached) : await withTimeout(fetchP, 4000, []);
+    }
+  } catch (e) { console.warn("ssw: gagal memuat konfigurasi bidang:", e.message || e); }
   const map = new Map(DEFAULT_BIDANG.map(b => [b.slug, { ...b }]));
-  for (const r of remote) {
+  for (const r of (remote || [])) {
+    if (SLUG_DIHAPUS.has(r.slug)) continue;
     const base = map.get(r.slug) || { slug: r.slug, tema: "generic", urut: 99 };
     map.set(r.slug, { ...base, ...r });
   }
@@ -98,16 +129,18 @@ export async function loadPack(slug) {
   _pack[slug] = (async () => {
     const base = `./data/ssw/${slug}`;
     const idx = await getJSON(`${base}/index.json`);
-    const babs = await Promise.all(idx.bab.map(b => getJSON(`${base}/${b.file}`)));
-    let vocab = [], quiz = { bab: {}, full: [] };
-    try { vocab = await getJSON(`${base}/${idx.vocab || "vocab.json"}`); } catch (e) {}
-    try { quiz = await getJSON(`${base}/${idx.quiz || "quiz.json"}`); } catch (e) {}
-    let figs = [];   // gambar/diagram potongan dari buku (hanya bidang yang menyebut "figs" di index.json)
-    if (idx.figs) { try { figs = (await getJSON(`${base}/${idx.figs}`)).figs || []; } catch (e) {} }
+    const opt = (f, fb) => f ? getJSON(`${base}/${f}`).catch(() => fb) : Promise.resolve(fb);
+    const [babs, vocab, quiz, figsR, kanji, bunpouR] = await Promise.all([
+      Promise.all(idx.bab.map(b => getJSON(`${base}/${b.file}`))),
+      opt(idx.vocab || "vocab.json", []),
+      opt(idx.quiz || "quiz.json", { bab: {}, full: [] }),
+      opt(idx.figs, { figs: [] }),
+      opt(idx.kanji, null),
+      opt(idx.bunpou, null),
+    ]);
+    const figs = (figsR && figsR.figs) || [];
+    const bunpou = (bunpouR && bunpouR.items) || null;
     const chapters = babs.map((d, i) => ({ ...d.bab, source: d.source, order: i, subs: d.bab.subs }));
-    let kanji = null, bunpou = null;   // opsional: arti per kanji & pola tata bahasa (hanya bidang yang menyebut di index.json)
-    if (idx.kanji) { try { kanji = await getJSON(`${base}/${idx.kanji}`); } catch (e) {} }
-    if (idx.bunpou) { try { bunpou = (await getJSON(`${base}/${idx.bunpou}`)).items || null; } catch (e) {} }
     return { slug, idx, chapters, vocab: vocab.items || vocab, quiz, figs, kanji, bunpou };
   })();
   try { return await _pack[slug]; } catch (e) { delete _pack[slug]; throw e; }
@@ -133,12 +166,20 @@ export async function loadKelasAkses() {
   if (!d || !d.kelas || isGuru() || isGuest()) return {};
   if (_kelasAkses && _kelasAkses.uid === uidNow() && _kelasAkses.kelas === d.kelas) return _kelasAkses.map;
   let map = {};
-  try { const k = (await FB.listKelas()).find(x => x.nama === d.kelas); map = (k && k.aksesSswBidang) || {}; } catch (e) { console.warn("ssw: akses kelas gagal dimuat:", e.message || e); }
+  const _kk = "ssw-kelas-" + uidNow() + "-" + d.kelas;
+  const _kc = _lsj(_kk);
+  if (_kc) {   // pakai cache dulu, segarkan di latar belakang
+    FB.listKelas().then(l => { const k = l.find(x => x.nama === d.kelas); const m = (k && k.aksesSswBidang) || {}; _lss(_kk, m); if (_kelasAkses) _kelasAkses.map = m; }).catch(() => {});
+    _kelasAkses = { uid: uidNow(), kelas: d.kelas, map: _kc };
+    return _kc;
+  }
+  try { const k = (await withTimeout(FB.listKelas(), 4000, null) || []).find(x => x.nama === d.kelas); map = (k && k.aksesSswBidang) || {}; if (k) _lss(_kk, map); } catch (e) { console.warn("ssw: akses kelas gagal dimuat:", e.message || e); }
   _kelasAkses = { uid: uidNow(), kelas: d.kelas, map };
   return map;
 }
 export function sswAllowed(slug) {
   if (isGuru()) return true;
+  try { if (FB && FB.hasFullAccess && FB.hasFullAccess()) return true; } catch (e) {}   // grup demo: semua bidang SSW terbuka
   let d = null; try { d = FB && FB.getSiswaDoc && FB.getSiswaDoc(); } catch (e) {}
   if (d && d.aksesSsw === false) return false;
   if (!slug) return true;
@@ -150,7 +191,7 @@ export function sswAllowed(slug) {
     return typeof k === "boolean" ? k : undefined;
   };
   let r = cek(slug);
-  if (r === undefined) { const ind = (DEFAULT_BIDANG.find(b => b.slug === slug) || {}).induk; if (ind) r = cek(ind); }
+  if (r === undefined) { const _b = DEFAULT_BIDANG.find(b => b.slug === slug) || {}, ind = _b.induk || _b.aksesDari; if (ind) r = cek(ind); }
   return typeof r === "boolean" ? r : (slug === BIDANG_BAWAAN_BUKA);
 }
 /** Poin: subbab dibaca ×10, kartu sudah dikuasai ×2 (+3 bila "kuasa"), skor terbaik tiap kuis ×0.5. */
@@ -187,7 +228,7 @@ export async function getProgress(slug) {
   if (PS[slug] && PS[slug].id === id) return PS[slug].P;
   const local = LS.get(LKEY(slug), null);
   let remote = null;
-  if (FB && FB.loadSswProgres && !isGuest()) { try { remote = await FB.loadSswProgres(slug); } catch (e) { console.warn("ssw: gagal memuat progres:", e.message || e); } }
+  if (FB && FB.loadSswProgres && !isGuest()) { try { remote = await withTimeout(FB.loadSswProgres(slug), 4000, null); } catch (e) { console.warn("ssw: gagal memuat progres:", e.message || e); } }
   const pick = !local ? remote : !remote ? local : ((remote.u || 0) >= (local.u || 0) ? remote : local);
   const P = Object.assign(DEF(), pick || {});
   P.read = P.read || {}; P.cards = P.cards || {}; P.quiz = P.quiz || {}; P.log = P.log || [];
@@ -200,7 +241,7 @@ let _srsT = 0;
 export async function syncCards(P, vocab, force) {
   if (typeof window === "undefined" || !window.sswSrsLoad) return;
   if (!force && P._srsOk && Date.now() - _srsT < 2500) return;
-  let srs = {}; try { srs = await window.sswSrsLoad(); } catch (e) { return; }
+  let srs = {}; try { srs = await withTimeout(window.sswSrsLoad(), 4000, null); } catch (e) { return; } if (!srs) return;
   _srsT = Date.now(); P._srsOk = 1;
   const out = {};
   for (const v of vocab) {
@@ -312,14 +353,49 @@ export const EXAM_SPEC = {
   "construction-bangunan": { n: 50, img: 8, mb: 20, info: "Resmi (JAC): tulis 30 (60 menit) + praktik 20 (40 menit) = 50 soal, ○× + pilihan ganda, lulus ≥65%." },
   "construction-lifeline": { n: 50, img: 8, mb: 20, info: "Resmi (JAC): tulis 30 (60 menit) + praktik 20 (40 menit) = 50 soal, ○× + pilihan ganda, lulus ≥65%." },
   "building-cleaning": { n: 50, img: 0, mb: 20, info: "Resmi (MHLW): tulis 20 + praktik 30 = 50 soal / 50 menit, lulus ≥60% di tiap bagian (tulis ≥24 dari 40, praktik ≥36 dari 60)." },
+  "agriculture": { n: 70, img: 0, mb: 0, info: "Resmi (MAFF/全国農業会議所 試験実施要領 1号): 学科 + 実技 (termasuk bahasa Jepang kerja), 60 menit, ±70 soal (sebagian tidak dinilai), CBT; level ±70% lulus bagi yang berpengalaman kerja 3 tahun; lulus bila di atas nilai batas yang ditetapkan NCA. Soal latihan = buatan Shirose dari buku modul resmi." },
+  "livestock": { n: 70, img: 0, mb: 0, info: "Resmi (MAFF/全国農業会議所 試験実施要領 1号 — 畜産農業): 学科 + 実技, 60 menit, ±70 soal (sebagian tidak dinilai), CBT; level setara 農業技能実習評価試験 専門級. Soal latihan = buatan Shirose dari buku modul resmi." },
   "accommodation": { n: 36, img: 4, mb: 10, info: "Resmi (宿泊業技能試験センター): tulis 30 + praktik 6 = 36 soal, 60 menit." },
-  "kaigo": { n: 45, img: 0, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
-  "kaigo-jp": { n: 45, img: 4, mb: 0, info: "Resmi (MHLW): 45 soal / 60 menit (tulis 40 + praktik 5), lulus ≥60%." },
+  "kaigo": { n: 45, img: 0, mb: 0, paket: 20, mix: { kb: 10, kk: 6, kom: 4, sj: 20, gb: 5 }, fill: ["gb", "sj", "kk", "kb", "kom"], info: "Format resmi (MHLW 介護特定技能評価試験(技能), CBT): 45 soal / 60 menit = tulis 40 (介護の基本 10, こころとからだ 6, コミュニケーション 4, 生活支援技術 20) + 実技 5 soal 判断等 bergambar; batas lulus tidak dipublikasikan. Di sini: 20 paket latihan @45 soal berbahasa Indonesia, isi tiap paket berbeda (tanpa soal yang sama). Tiap paket berisi 5 soal bergambar (判断等) + 40 soal tulis." },
+  "kaigo-jp": { n: 15, img: 0, mb: 0, paket: 20, mix: { kt: 5, kw: 5, bn: 5 }, fill: ["bn", "kw", "kt"], info: "Format resmi (MHLW 介護日本語評価試験, CBT): 15 soal / 30 menit = 介護のことば 5 + 介護の会話・声かけ 5 (percakapan 2 orang) + 介護の文書 5 (記録, 申し送り, お知らせ, dsb.); batas lulus tidak dipublikasikan. Di sini: 20 paket latihan @15 soal, isi tiap paket berbeda (tanpa soal yang sama)." },
   "fishery": { n: 30, img: 0, mb: 12, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): jumlah soal dan durasi ujian resmi tidak dipublikasikan. Info resmi: ambang lulus ujian 漁業 tercatat 65% (laporan pelaksanaan ujian MAFF)." },
   "auto-maintenance": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Info resmi (MLIT): ujian tulis 30 soal ○× / 60 menit, lulus ≥65%; ujian praktik 3 tugas / 20 menit, lulus ≥60%." },
-  "industrial-mfg": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Materi dasar bersama 工業製品製造業: keselamatan, mutu, pengukuran, bahan. Ujian resmi per kategori (MOJ): tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
-  "mfg-machine-metal": { n: 30, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi). Kategori 機械金属加工 (MOJ): ujian tulis + praktik; lulus tulis ≥65%, praktik ≥60%." },
+  "jaim-machine-metal": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
+  "jaim-elec-electronic": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
+  "jaim-metal-surface": { n: 40, img: 0, mb: 30, info: "Resmi (JAIM/METI): 製造分野特定技能1号評価試験 CBT 80 menit, 40 soal (tulis 30 soal benar/salah + praktik 10 pilihan ganda), lulus tulis ≥65% dan praktik ≥60%. Soal latihan = soal resmi dari buku JAIM (hasil ekstraksi otomatis)." },
+  "forestry": { n: 30, img: 0, mb: 30, info: "Resmi (林業技能向上センター/林野庁): tulis 30 soal ○× (≥65% benar; panduan 2026 menulis 30 menit, contoh soal 2025 menulis 60 menit) + praktik chainsaw 3 tugas (tiap tugas ≥40%, total ≥60%). Soal latihan: soal contoh resmi (27 dari 30, tanpa soal bergambar) + soal buatan Shirose dari aturan praktik 2026 (perlu review ahli)." },
+  "railway-track": { n: 50, img: 0, mb: 30, info: "Resmi (JRCEA 受験案内 / MLIT 実施要領 軌道整備): paper test, 学科 30 soal (○× / pilihan 3) + 実技 20 soal (判断等試験 bergambar), total 80 menit, lulus ≥65% di tiap bagian; biaya 8.000 yen. Soal latihan = buatan Shirose (sample resmi berlabel 禁転載 tidak disalin; perlu review ahli)." },
+  "railway-electrical": { n: 50, img: 0, mb: 30, info: "Resmi (鉄道電業安全協会 受験案内 / MLIT 実施要領 電気設備整備): paper test, 学科 30 soal + 実技 20 soal (situasi bergambar), total 80 menit, lulus ≥65% di tiap bagian; biaya ¥8.800 (anggota) / ¥13.200. Soal latihan = buatan Shirose (sample resmi berlabel 禁転載 tidak disalin; perlu review ahli)." },
+  "shipbuilding": { n: 30, img: 0, mb: 30, info: "Format resmi ClassNK (受験案内): 学科 60 menit, 30 soal ○× (K3 umum 10 + bidang 20: teks 10 + gambar 10), lulus ≥ 60%. 6 区分: 溶接, 塗装, 鉄工, 仕上げ, 機械加工, 電気機器組立て. Soal di sini = latihan Shirose (bukan soal asli); praktik dinilai terpisah." },
+  "linen-supply": { n: 20, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan format resmi): ujian 特定技能1号 Linen Supply baru dan pedoman rincinya belum dipublikasikan. Acuan: ujian lama 技能実習評価試験 (JLSA) — tulis ○× (lembar jawab contoh 初級 20 soal, 専門級 30 soal) + praktik 仕上げ作業; syarat bahasa 1号 setara A2.2." },
+  "railway-vehicle": { n: 50, img: 0, mb: 30, info: "Resmi (JARi/MLIT 鉄道分野 車両製造 1号): ujian kertas 学科 30 soal ○× + 実技 20 soal pilihan ganda 4 opsi, total 80 menit, lulus ≥65/100 di tiap bagian. Soal latihan = buatan Shirose dari teks resmi JARi (perlu review ahli)." },
+  "aviation-gh": { n: 30, img: 0, mb: 30, info: "Resmi (JAEA): 特定技能評価試験 空港グランドハンドリング. Latihan = soal buatan Shirose dari teks resmi JAEA (bukan soal resmi) + 6 soal contoh resmi JAEA. Teks 1 (Safety & Quality) belum dimasukkan; jumlah soal & durasi ujian resmi belum diverifikasi." },
+  "aviation-am": { n: 30, img: 0, mb: 30, info: "Resmi (JAEA): 特定技能評価試験 航空機整備 — 3 科目: 基本技術(締結・電気計測), 作業安全・品質, 航空機概要. Latihan = soal buatan Shirose dari teks resmi JAEA (bukan soal resmi) + 5 soal contoh resmi JAEA; jumlah soal & durasi ujian resmi belum diverifikasi." },
+  "logistics": { n: 50, img: 0, mb: 30, info: "Ujian resmi (MLIT 実施要領, 2026-10-26): 学科 30 soal/40 menit + 実技 20 soal/40 menit, pilihan ganda (CBT atau kertas). Lulus: 学科 ≥18/30, 実技 ≥12/20. Penyelenggara: ClassNK. Soal di sini = latihan Shirose (bukan soal resmi)." },
+  "recycling": { n: 20, img: 0, mb: 20, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Pedoman ujian resmi 資源循環 1号 belum diterbitkan pemerintah; bank soal ini masih kecil." },
+  "wood-industry": { n: 35, img: 0, mb: 32, info: "Ujian Latihan Shirose Nihongo (bukan soal resmi). Format resmi 木材産業特定技能1号測定試験: CBT, 60 menit, 35 soal (tulis 32 soal ○× + praktik 3 soal pertimbangan); huruf kanji berfurigana." },
+  "auto-transport": { n: 30, img: 0, mb: 30, info: "Ujian Latihan Shirose Nihongo (bukan format resmi; jumlah soal resmi tidak diverifikasi). Soal ditulis Shirose dari teks belajar resmi JTA (truk) dan Asosiasi Bus Jepang (bus)." },
 };
+/** Paket ujian tanpa soal yang sama antar paket: pool dideduplikasi lalu dibagi per kategori (it.cat) sesuai spec.mix. */
+function paketKuis(pool, spec, slug, count) {
+  const seen = new Set(), uniq = [];
+  for (const it of pool) { const k = `${it.q.id}|${it.q.jp || ""}|${it.opts[it.a] ? it.opts[it.a].id : ""}|${it.img ? JSON.stringify(it.img) : ""}`; if (!seen.has(k)) { seen.add(k); uniq.push(it); } }
+  const rnd = seeded(`${slug}-paket`), by = {};
+  for (const it of uniq) (by[it.cat || "x"] = by[it.cat || "x"] || []).push(it);
+  for (const k of Object.keys(by)) by[k] = shuffle(by[k], rnd);
+  const out = [];
+  for (let n = 1; n <= count; n++) {
+    const pick = [];
+    for (const [cat, k] of Object.entries(spec.mix)) pick.push(...(by[cat] || []).splice(0, k));
+    // slot sisa: ambil dari kategori yang stoknya paling banyak relatif terhadap sisa paket (pemerataan)
+    while (pick.length < spec.n) {
+      let best = null, bs = 0; for (const [c, a] of Object.entries(by)) { const sc = a.length * (c === "gb" ? 3 : 1); if (a.length && sc > bs) { bs = sc; best = c; } }
+      if (!best) break; pick.push(by[best].shift());
+    }
+    out.push({ id: `full-q${n}`, title: { id: `Paket Soal ${n}`, jp: `パッケージ ${n}` }, items: shuffle(pick, rnd) });
+  }
+  return out;
+}
 /** 10 ujian penuh = sampel deterministik dari seluruh bank soal; komposisi mengikuti ujian resmi bidangnya. */
 export function fullQuizzes(pack, perQuizArg, count = 10) {
   const spec = EXAM_SPEC[pack.slug] || {};
@@ -327,6 +403,7 @@ export function fullQuizzes(pack, perQuizArg, count = 10) {
   const pool = [];
   for (const ch of pack.chapters) for (const q of (pack.quiz.bab?.[ch.id] || [])) { if (q.rev) continue; for (const it of q.items) pool.push({ ...it, bab: ch.id }); }   // q.rev = kuis ulangan (soalnya sudah ada di kuis subbab)
   if (!pool.length) return [];
+  if (spec.paket && spec.mix) return paketKuis(pool, spec, pack.slug, spec.paket);
   const out = [];
   const isImg = (x) => !!x.img, isMB = (x) => !!x.mb && !x.img, isMC = (x) => !x.mb && !x.img;
   const stripTags = (t) => String(t || "").replace(/\{([^|}]*)\|[^}]*\}/g, "$1");

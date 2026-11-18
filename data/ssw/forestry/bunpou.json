@@ -1,0 +1,246 @@
+{
+ "items": [
+  {
+   "id": "g-ba",
+   "pola": "〜ば",
+   "rx": "れば|ければ|えば|けば|げば|てば|べば|めば|せば|ねば",
+   "arti": "jika …; kalau …",
+   "cara": "KK/Kata sifat bentuk ば",
+   "jml": 15,
+   "contoh": "保護帽に亀裂があっても小さければ使える。",
+   "arti_contoh": "Helm yang retak boleh dipakai bila retaknya kecil.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-temo",
+   "pola": "〜ても",
+   "rx": "ても|でも(?!あり)",
+   "arti": "meskipun …",
+   "cara": "KK bentuk て + も",
+   "jml": 15,
+   "contoh": "丸太輪切りでは回し切りを行ってもよい。",
+   "arti_contoh": "Pada tugas 3, memutar bar (回し切り) diperbolehkan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toki",
+   "pola": "〜とき",
+   "rx": "(る|た|い|だ|の)とき|ときは",
+   "arti": "ketika …; saat …",
+   "cara": "KK/Kata sifat bentuk biasa + とき",
+   "jml": 13,
+   "contoh": "エンジンを始動するときは股掛けをしてもよい。",
+   "arti_contoh": "Chainsaw boleh dinyalakan dengan 股掛け (di paha).",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-temoii",
+   "pola": "〜てもいいです",
+   "rx": "てもいい|てもよい|てもかまいま",
+   "arti": "boleh …",
+   "cara": "KK bentuk て + もいいです",
+   "jml": 10,
+   "contoh": "丸太輪切りでは回し切りを行ってもよい。",
+   "arti_contoh": "Pada tugas 3, memutar bar (回し切り) diperbolehkan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-yasui",
+   "pola": "〜やすい / 〜にくい",
+   "rx": "やすい|にくい|やすく|にくく",
+   "arti": "mudah … / sulit …",
+   "cara": "KK bentuk ます (tanpa ます) + やすい/にくい",
+   "jml": 7,
+   "contoh": "林業では、すべりにくい安全靴をはきます。",
+   "arti_contoh": "Di kehutanan, pakai sepatu pengaman yang tidak licin.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toiu",
+   "pola": "〜という",
+   "rx": "という",
+   "arti": "yang disebut …",
+   "cara": "Kutipan + という + kata benda",
+   "jml": 6,
+   "contoh": "職場で、整理・整頓・清掃・清潔を徹底する活動を4S活動という。",
+   "arti_contoh": "Kegiatan menegakkan seiri, seiton, seisou, seiketsu di tempat kerja disebut 4S.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-noni",
+   "pola": "〜のに",
+   "rx": "のに",
+   "arti": "padahal …; untuk …",
+   "cara": "Bentuk biasa + のに",
+   "jml": 5,
+   "contoh": "輪切りの厚さを定めるのに物差しを使ってよい。",
+   "arti_contoh": "Penggaris boleh dipakai menentukan tebal potongan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-teoku",
+   "pola": "〜ておきます",
+   "rx": "ておきま|ておく",
+   "arti": "… dulu (persiapan)",
+   "cara": "KK bentuk て + おきます",
+   "jml": 4,
+   "contoh": "在留資格の期限を確認しておきます。",
+   "arti_contoh": "Pastikan masa berlaku status tinggal.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-baai",
+   "pola": "〜場合は",
+   "rx": "場合は|場合に|場合、|ばあいは",
+   "arti": "dalam hal …; jika …",
+   "cara": "Bentuk biasa + 場合は",
+   "jml": 4,
+   "contoh": "怪我があった場合、軽傷なら失格にならない。",
+   "arti_contoh": "Peserta yang cedera saat ujian tetap bisa lulus bila lukanya ringan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kunaru",
+   "pola": "〜くなる / 〜になる",
+   "rx": "(く|に)なる|(く|に)なり|(く|に)なっ|(く|に)なら",
+   "arti": "menjadi …",
+   "cara": "Kata sifat い (い→く) / な (→に) + なる",
+   "jml": 4,
+   "contoh": "怪我があった場合、軽傷なら失格にならない。",
+   "arti_contoh": "Peserta yang cedera saat ujian tetap bisa lulus bila lukanya ringan.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-tehaikenai",
+   "pola": "〜てはいけません",
+   "rx": "てはいけ|てはならな",
+   "arti": "tidak boleh …; dilarang",
+   "cara": "KK bentuk て + はいけません",
+   "jml": 3,
+   "contoh": "人力で、材を引きずって木寄せするときは、とびを使用してはならない。",
+   "arti_contoh": "Saat menarik kayu (木寄せ) dengan tenaga manusia, とび tidak boleh dipakai.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kotogadekiru",
+   "pola": "〜ことができます",
+   "rx": "ことができ",
+   "arti": "dapat …; bisa …",
+   "cara": "KK bentuk kamus + ことができます",
+   "jml": 3,
+   "contoh": "枝打ちの時、のこぎりを使用すると、切断位置を正確にすることができる。",
+   "arti_contoh": "Memakai gergaji tangan saat 枝打ち membuat posisi potong lebih akurat.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-nagara",
+   "pola": "〜ながら",
+   "rx": "ながら",
+   "arti": "sambil …",
+   "cara": "KK bentuk ます (tanpa ます) + ながら",
+   "jml": 3,
+   "contoh": "筋刈り地拵えは、全刈りに比べて人工数の削減につながらない。",
+   "arti_contoh": "Pembersihan lahan strip (筋刈り地拵え) tidak mengurangi jumlah tenaga dibanding pembabatan total.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-toshite",
+   "pola": "〜として",
+   "rx": "として",
+   "arti": "sebagai …",
+   "cara": "Kata benda + として",
+   "jml": 3,
+   "contoh": "熱中症の救急対策として、1人作業はできるだけ避ける。",
+   "arti_contoh": "Sebagai langkah pertolongan/pencegahan kelelahan panas, hindari kerja sendirian.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-teiru",
+   "pola": "〜ています",
+   "rx": "ています|ている|ていた|ていない",
+   "arti": "sedang …; dalam keadaan …",
+   "cara": "KK bentuk て + います",
+   "jml": 3,
+   "contoh": "作業ごとに標準時間が決められています。",
+   "arti_contoh": "Untuk tiap pekerjaan ditetapkan waktu standar.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-gotoni",
+   "pola": "〜ごとに",
+   "rx": "ごとに",
+   "arti": "setiap …",
+   "cara": "Kata benda + ごとに",
+   "jml": 3,
+   "contoh": "作業ごとに標準時間が決められています。",
+   "arti_contoh": "Untuk tiap pekerjaan ditetapkan waktu standar.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-kiwotsukete",
+   "pola": "〜に気をつける",
+   "rx": "に気をつけ|に注意",
+   "arti": "berhati-hati terhadap …",
+   "cara": "Kata benda + に気をつける",
+   "jml": 3,
+   "contoh": "玉切り作業は、造材木の転動に注意し、必ず造材木の斜面上部で行う。",
+   "arti_contoh": "玉切り harus dilakukan di sisi atas lereng dari batang, sambil waspada batang menggelinding.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-nakerebanaranai",
+   "pola": "〜なければなりません",
+   "rx": "なければなり|なければいけ|なくてはならな|なくてはいけ",
+   "arti": "harus …; wajib",
+   "cara": "KK bentuk ない (buang い) + ければなりません",
+   "jml": 2,
+   "contoh": "エンジンを始動させるときは、チェーンブレーキをかけていなければなりません。",
+   "arti_contoh": "Saat menyalakan mesin, rem rantai harus aktif.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-nioite",
+   "pola": "〜において",
+   "rx": "において|における",
+   "arti": "di …; pada … (tempat/situasi formal)",
+   "cara": "Kata benda + において",
+   "jml": 2,
+   "contoh": "試験日において18歳以上であることが必要です。",
+   "arti_contoh": "Peserta ujian harus berumur 18 tahun ke atas pada hari ujian.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-rareru",
+   "pola": "〜られる / 〜れる",
+   "rx": "られる|られて|られた|られま",
+   "arti": "dapat …; di- (pasif/potensial)",
+   "cara": "KK grup 2: 〜られる; grup 1: 〜れる/〜われる",
+   "jml": 2,
+   "contoh": "作業ごとに標準時間が決められています。",
+   "arti_contoh": "Untuk tiap pekerjaan ditetapkan waktu standar.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-saseru",
+   "pola": "〜させる",
+   "rx": "させる|させて|させた|させま",
+   "arti": "menyuruh/membuat … (kausatif)",
+   "cara": "KK 〜させる",
+   "jml": 2,
+   "contoh": "エンジンを始動させるときは、チェーンブレーキをかけていなければなりません。",
+   "arti_contoh": "Saat menyalakan mesin, rem rantai harus aktif.",
+   "contoh_dari": "materi"
+  },
+  {
+   "id": "g-node",
+   "pola": "〜ので",
+   "rx": "ので",
+   "arti": "karena …",
+   "cara": "Bentuk biasa + ので",
+   "jml": 1,
+   "contoh": "エンジンの音が大きいので、イヤマフを着けます。",
+   "arti_contoh": "Karena suara mesin keras, pakai earmuff.",
+   "contoh_dari": "materi"
+  }
+ ]
+}

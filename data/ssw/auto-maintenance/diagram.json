@@ -1,0 +1,1002 @@
+{
+ "schema": 1,
+ "note": "Diagram skematis orisinal Shirose; tiap bagian menunjuk kosakata di vocab.json (vid).",
+ "diagrams": [
+  {
+   "id": "mesin",
+   "title": {
+    "id": "Mesin: piston, silinder, dan katup",
+    "jp": "エンジンの中（ピストンとバルブ）"
+   },
+   "intro": "Potongan skematis satu silinder mesin bensin 4 langkah. Ketuk bagian untuk melihat nama Jepang dan fungsinya.",
+   "svg": "assets/ssw/auto-maintenance/diagram/mesin.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-322",
+     "jp": "シリンダーヘッド",
+     "kana": "しりんだーへっど",
+     "romaji": "shirindaaheddo",
+     "arti": "kepala silinder",
+     "fungsi": "Penutup bagian atas silinder; tempat katup, busi, dan lubang hisap/buang."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-314",
+     "jp": "カムシャフト",
+     "kana": "かむしゃふと",
+     "romaji": "kamushafuto",
+     "arti": "poros bubungan (camshaft)",
+     "fungsi": "Poros bubungan: menekan katup agar membuka tepat waktu."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-335",
+     "jp": "スパークプラグ",
+     "kana": "すぱーくぷらぐ",
+     "romaji": "supaakupuragu",
+     "arti": "busi",
+     "fungsi": "Memercikkan api untuk membakar campuran udara dan bahan bakar."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-312",
+     "jp": "インテーク・バルブ",
+     "kana": "いんてーくばるぶ",
+     "romaji": "inteeku barubu",
+     "arti": "katup hisap",
+     "fungsi": "Katup hisap: membuka agar udara dan bahan bakar masuk ke ruang bakar."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-313",
+     "jp": "エキゾースト・バルブ",
+     "kana": "えきぞーすとばるぶ",
+     "romaji": "ekizoosuto barubu",
+     "arti": "katup buang",
+     "fungsi": "Katup buang: membuka agar gas hasil pembakaran keluar."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-310",
+     "jp": "燃焼室",
+     "kana": "ねんしょうしつ",
+     "romaji": "nenshoushitsu",
+     "arti": "ruang bakar",
+     "fungsi": "Ruang tempat campuran dibakar sehingga menghasilkan tenaga."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-311",
+     "jp": "シリンダー",
+     "kana": "しりんだー",
+     "romaji": "shirindaa",
+     "arti": "silinder",
+     "fungsi": "Tabung tempat piston bergerak naik-turun."
+    },
+    {
+     "pid": "p8",
+     "vid": "am-316",
+     "jp": "ピストン",
+     "kana": "ぴすとん",
+     "romaji": "pisuton",
+     "arti": "torak (piston)",
+     "fungsi": "Terdorong tekanan pembakaran, lalu menggerakkan poros engkol lewat batang penghubung."
+    },
+    {
+     "pid": "p9",
+     "vid": "am-317",
+     "jp": "ピストンリング",
+     "kana": "ぴすとんりんぐ",
+     "romaji": "pisutonringu",
+     "arti": "ring piston",
+     "fungsi": "Ring penyekat: mencegah gas bocor dan mengatur lapisan oli di dinding silinder."
+    },
+    {
+     "pid": "p10",
+     "vid": "am-318",
+     "jp": "コンロッド",
+     "kana": "こんろっど",
+     "romaji": "konroddo",
+     "arti": "batang penghubung (connecting rod)",
+     "fungsi": "Batang penghubung: meneruskan gerak naik-turun piston ke poros engkol."
+    },
+    {
+     "pid": "p11",
+     "vid": "am-319",
+     "jp": "クランクシャフト",
+     "kana": "くらんくしゃふと",
+     "romaji": "kurankushafuto",
+     "arti": "poros engkol",
+     "fungsi": "Poros engkol: mengubah gerak naik-turun piston menjadi gerak putar."
+    }
+   ]
+  },
+  {
+   "id": "pendingin",
+   "title": {
+    "id": "Sistem pendingin mesin",
+    "jp": "冷却装置"
+   },
+   "intro": "Cairan pendingin mengalir dari mesin ke radiator lewat selang, lalu kembali ke mesin.",
+   "svg": "assets/ssw/auto-maintenance/diagram/pendingin.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-078",
+     "jp": "エンジン",
+     "kana": "えんじん",
+     "romaji": "enjin",
+     "arti": "mesin",
+     "fungsi": "Sumber panas yang perlu didinginkan."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-347",
+     "jp": "ウォーターポンプ",
+     "kana": "うぉーたーぽんぷ",
+     "romaji": "uぉぉtaaponpu",
+     "arti": "pompa air",
+     "fungsi": "Pompa air: mengalirkan cairan pendingin ke seluruh sistem."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-350",
+     "jp": "サーモスタット",
+     "kana": "さーもすたっと",
+     "romaji": "saamosutatto",
+     "arti": "termostat",
+     "fungsi": "Katup pengatur suhu: menutup saat mesin dingin, membuka saat sudah panas."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-094",
+     "jp": "アッパー・ホース",
+     "kana": "あっぱーほーす",
+     "romaji": "appaa hoosu",
+     "arti": "selang atas radiator",
+     "fungsi": "Selang atas: mengalirkan cairan panas dari mesin ke radiator."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-130",
+     "jp": "ロア・ホース",
+     "kana": "ろあほーす",
+     "romaji": "roa hoosu",
+     "arti": "selang bawah radiator",
+     "fungsi": "Selang bawah: mengalirkan cairan yang sudah dingin dari radiator kembali ke mesin."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-085",
+     "jp": "冷却ファン",
+     "kana": "れいきゃくふぁん",
+     "romaji": "reikyakufuぁn",
+     "arti": "kipas pendingin",
+     "fungsi": "Kipas: meniupkan udara melewati radiator agar lebih cepat dingin."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-349",
+     "jp": "ラジエーター",
+     "kana": "らじえーたー",
+     "romaji": "rajieetaa",
+     "arti": "radiator",
+     "fungsi": "Radiator: melepaskan panas cairan pendingin ke udara."
+    },
+    {
+     "pid": "p8",
+     "vid": "am-348",
+     "jp": "リザーバータンク",
+     "kana": "りざーばーたんく",
+     "romaji": "rizaabaatanku",
+     "arti": "tangki cadangan",
+     "fungsi": "Tangki cadangan: menampung cairan pendingin yang memuai dan menambah saat berkurang."
+    }
+   ]
+  },
+  {
+   "id": "pelumasan",
+   "title": {
+    "id": "Sistem pelumasan mesin",
+    "jp": "潤滑装置"
+   },
+   "intro": "Oli diambil dari karter, disaring, lalu dialirkan ke bagian mesin yang bergesekan.",
+   "svg": "assets/ssw/auto-maintenance/diagram/pelumasan.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-099",
+     "jp": "フィラー・キャップ",
+     "kana": "ふぃらーきゃっぷ",
+     "romaji": "fuぃraa kyappu",
+     "arti": "tutup pengisian oli",
+     "fungsi": "Tutup lubang pengisian oli di atas mesin."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-100",
+     "jp": "レベル・ゲージ",
+     "kana": "れべるげーじ",
+     "romaji": "reberu geeji",
+     "arti": "batang celup oli (dipstick)",
+     "fungsi": "Batang celup: mengecek jumlah dan kondisi oli."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-346",
+     "jp": "オイルフィルター",
+     "kana": "おいるふぃるたー",
+     "romaji": "oirufuぃrutaa",
+     "arti": "filter oli",
+     "fungsi": "Menyaring kotoran dan serpihan logam dari oli."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-345",
+     "jp": "オイルポンプ",
+     "kana": "おいるぽんぷ",
+     "romaji": "oiruponpu",
+     "arti": "pompa oli",
+     "fungsi": "Pompa oli: menekan oli ke bagian-bagian mesin."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-131",
+     "jp": "オイルパン",
+     "kana": "おいるぱん",
+     "romaji": "oirupan",
+     "arti": "karter oli",
+     "fungsi": "Karter: wadah penampung oli di bagian bawah mesin."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-079",
+     "jp": "エンジン・オイル",
+     "kana": "えんじんおいる",
+     "romaji": "enjin oiru",
+     "arti": "oli mesin",
+     "fungsi": "Pelumas: mengurangi gesekan, mendinginkan, dan membersihkan bagian dalam mesin."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-132",
+     "jp": "ドレーンボルト",
+     "kana": "どれーんぼると",
+     "romaji": "doreenboruto",
+     "arti": "baut pembuang oli",
+     "fungsi": "Baut pembuang: dilepas untuk menguras oli bekas."
+    }
+   ]
+  },
+  {
+   "id": "rem-hidrolik",
+   "title": {
+    "id": "Sistem rem hidrolik",
+    "jp": "ブレーキの油圧の流れ"
+   },
+   "intro": "Injakan pedal diubah menjadi tekanan minyak rem yang dikirim ke tiap roda.",
+   "svg": "assets/ssw/auto-maintenance/diagram/rem-hidrolik.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-021",
+     "jp": "ブレーキ・ペダル",
+     "kana": "ぶれーきぺだる",
+     "romaji": "bureeki pedaru",
+     "arti": "pedal rem",
+     "fungsi": "Diinjak pengemudi untuk memperlambat kendaraan."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-382",
+     "jp": "マスター・シリンダ",
+     "kana": "ますたーしりんだ",
+     "romaji": "masutaa shirinda",
+     "arti": "master silinder",
+     "fungsi": "Mengubah tenaga injakan menjadi tekanan minyak rem."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-080",
+     "jp": "ブレーキ・リザーバ・タンク",
+     "kana": "ぶれーきりざーばたんく",
+     "romaji": "bureeki rizaaba tanku",
+     "arti": "tangki cadangan minyak rem",
+     "fungsi": "Tangki penampung minyak rem."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-139",
+     "jp": "ブレーキ・パイプ",
+     "kana": "ぶれーきぱいぷ",
+     "romaji": "bureeki paipu",
+     "arti": "pipa rem",
+     "fungsi": "Pipa logam yang menyalurkan minyak rem bertekanan."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-124",
+     "jp": "ブレーキ・ホース",
+     "kana": "ぶれーきほーす",
+     "romaji": "bureeki hoosu",
+     "arti": "selang rem",
+     "fungsi": "Selang fleksibel di dekat roda (mengikuti gerak suspensi)."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-113",
+     "jp": "ブレーキ・ディスク",
+     "kana": "ぶれーきでぃすく",
+     "romaji": "bureeki deぃsuku",
+     "arti": "cakram rem",
+     "fungsi": "Cakram yang berputar bersama roda dan dijepit pad."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-114",
+     "jp": "ブレーキ・ディスク・キャリパ",
+     "kana": "ぶれーきでぃすくきゃりぱ",
+     "romaji": "bureeki deぃsuku kyaripa",
+     "arti": "kaliper cakram rem",
+     "fungsi": "Kaliper: rumah piston yang menjepitkan pad ke cakram."
+    }
+   ]
+  },
+  {
+   "id": "rem-cakram",
+   "title": {
+    "id": "Rem cakram (tampak samping roda)",
+    "jp": "ディスクブレーキ"
+   },
+   "intro": "Pad dijepitkan ke cakram yang berputar sehingga roda melambat.",
+   "svg": "assets/ssw/auto-maintenance/diagram/rem-cakram.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-113",
+     "jp": "ブレーキ・ディスク",
+     "kana": "ぶれーきでぃすく",
+     "romaji": "bureeki deぃsuku",
+     "arti": "cakram rem",
+     "fungsi": "Cakram besi yang ikut berputar bersama roda."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-111",
+     "jp": "ホイール・ナット",
+     "kana": "ほいーるなっと",
+     "romaji": "hoiiru natto",
+     "arti": "mur roda",
+     "fungsi": "Mur pengikat roda ke hub."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-114",
+     "jp": "ブレーキ・ディスク・キャリパ",
+     "kana": "ぶれーきでぃすくきゃりぱ",
+     "romaji": "bureeki deぃsuku kyaripa",
+     "arti": "kaliper cakram rem",
+     "fungsi": "Kaliper menjepit cakram dari kedua sisi dengan tekanan minyak."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-115",
+     "jp": "ブレーキ・パッド",
+     "kana": "ぶれーきぱっど",
+     "romaji": "bureeki paddo",
+     "arti": "kampas rem cakram",
+     "fungsi": "Kampas rem cakram: bergesekan dengan cakram untuk menahan putaran."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-124",
+     "jp": "ブレーキ・ホース",
+     "kana": "ぶれーきほーす",
+     "romaji": "bureeki hoosu",
+     "arti": "selang rem",
+     "fungsi": "Selang yang menyalurkan minyak rem ke kaliper."
+    }
+   ]
+  },
+  {
+   "id": "rem-tromol",
+   "title": {
+    "id": "Rem tromol",
+    "jp": "ドラムブレーキ"
+   },
+   "intro": "Sepatu rem mengembang menekan bagian dalam tromol yang ikut berputar bersama roda.",
+   "svg": "assets/ssw/auto-maintenance/diagram/rem-tromol.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-116",
+     "jp": "ブレーキ・ドラム",
+     "kana": "ぶれーきどらむ",
+     "romaji": "bureeki doramu",
+     "arti": "tromol rem",
+     "fungsi": "Tromol: drum berputar bersama roda; sepatu menekan dinding dalamnya."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-118",
+     "jp": "ブレーキ・シュー",
+     "kana": "ぶれーきしゅー",
+     "romaji": "bureeki shuu",
+     "arti": "sepatu rem (kampas rem tromol)",
+     "fungsi": "Sepatu rem (kampas rem tromol): menekan dinding dalam tromol."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-117",
+     "jp": "ブレーキ・ホイール・シリンダ",
+     "kana": "ぶれーきほいーるしりんだ",
+     "romaji": "bureeki hoiiru shirinda",
+     "arti": "silinder roda rem",
+     "fungsi": "Silinder roda: piston di dalamnya mendorong kedua sepatu keluar."
+    }
+   ]
+  },
+  {
+   "id": "penerus",
+   "title": {
+    "id": "Penerus tenaga (mesin depan, penggerak belakang)",
+    "jp": "動力伝達装置（FR）"
+   },
+   "intro": "Tenaga mesin diteruskan ke roda belakang lewat kopling, transmisi, poros propeller, dan diferensial (tampak atas).",
+   "svg": "assets/ssw/auto-maintenance/diagram/penerus.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-078",
+     "jp": "エンジン",
+     "kana": "えんじん",
+     "romaji": "enjin",
+     "arti": "mesin",
+     "fungsi": "Menghasilkan tenaga putar."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-356",
+     "jp": "クラッチ",
+     "kana": "くらっち",
+     "romaji": "kuracchi",
+     "arti": "kopling",
+     "fungsi": "Kopling: menyambung dan memutus tenaga dari mesin ke transmisi."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-125",
+     "jp": "トランスミッション",
+     "kana": "とらんすみっしょん",
+     "romaji": "toransumisshon",
+     "arti": "transmisi",
+     "fungsi": "Transmisi: mengubah perbandingan gigi sesuai kecepatan dan beban."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-365",
+     "jp": "プロペラシャフト",
+     "kana": "ぷろぺらしゃふと",
+     "romaji": "puroperashafuto",
+     "arti": "poros propeller",
+     "fungsi": "Poros propeller: menyalurkan putaran ke bagian belakang."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-366",
+     "jp": "ユニバーサルジョイント",
+     "kana": "ゆにばーさるじょいんと",
+     "romaji": "yunibaasarujointo",
+     "arti": "sambungan universal",
+     "fungsi": "Sambungan universal: memungkinkan poros tetap berputar walau sudutnya berubah."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-126",
+     "jp": "ディファレンシャル",
+     "kana": "でぃふぁれんしゃる",
+     "romaji": "deぃfuぁrensharu",
+     "arti": "diferensial (gardan)",
+     "fungsi": "Diferensial: membagi tenaga ke roda kiri-kanan dan memungkinkan beda putaran saat belok."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-121",
+     "jp": "ドライブ・シャフト",
+     "kana": "どらいぶしゃふと",
+     "romaji": "doraibu shafuto",
+     "arti": "poros penggerak (drive shaft)",
+     "fungsi": "Poros penggerak: menyalurkan tenaga dari diferensial ke roda."
+    },
+    {
+     "pid": "p8",
+     "vid": "am-109",
+     "jp": "タイヤ",
+     "kana": "たいや",
+     "romaji": "taiya",
+     "arti": "ban",
+     "fungsi": "Ban: satu-satunya bagian yang menyentuh jalan."
+    }
+   ]
+  },
+  {
+   "id": "listrik",
+   "title": {
+    "id": "Sistem kelistrikan mesin",
+    "jp": "電装品"
+   },
+   "intro": "Aki menyuplai listrik; alternator mengisi ulang; ECU mengatur pengapian dan injeksi.",
+   "svg": "assets/ssw/auto-maintenance/diagram/listrik.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-392",
+     "jp": "バッテリー",
+     "kana": "ばってりー",
+     "romaji": "batterii",
+     "arti": "aki",
+     "fungsi": "Aki: menyimpan listrik untuk menghidupkan mesin dan perlengkapan."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-390",
+     "jp": "スターターモーター",
+     "kana": "すたーたーもーたー",
+     "romaji": "sutaataamootaa",
+     "arti": "motor starter",
+     "fungsi": "Motor starter: memutar mesin saat dihidupkan."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-391",
+     "jp": "オルタネーター",
+     "kana": "おるたねーたー",
+     "romaji": "orutaneetaa",
+     "arti": "alternator",
+     "fungsi": "Alternator: membangkitkan listrik dan mengisi aki saat mesin hidup."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-337",
+     "jp": "ECU",
+     "kana": "いーしーゆー",
+     "romaji": "iishiiyuu",
+     "arti": "unit kontrol elektronik",
+     "fungsi": "Unit kontrol elektronik: otak yang mengatur pengapian, injeksi bahan bakar, dan sensor."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-389",
+     "jp": "ワイヤーハーネス",
+     "kana": "わいやーはーねす",
+     "romaji": "waiyaahaanesu",
+     "arti": "rangkaian kabel (wire harness)",
+     "fungsi": "Rangkaian kabel: menghubungkan semua komponen listrik."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-336",
+     "jp": "イグニッションコイル",
+     "kana": "いぐにっしょんこいる",
+     "romaji": "igunisshonkoiru",
+     "arti": "koil pengapian",
+     "fungsi": "Koil pengapian: menaikkan tegangan listrik untuk memercikkan busi."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-335",
+     "jp": "スパークプラグ",
+     "kana": "すぱーくぷらぐ",
+     "romaji": "supaakupuragu",
+     "arti": "busi",
+     "fungsi": "Busi: memercikkan api di dalam ruang bakar."
+    }
+   ]
+  },
+  {
+   "id": "ruang-mesin",
+   "title": {
+    "id": "Isi ruang mesin (tampak atas)",
+    "jp": "エンジンルームの中"
+   },
+   "intro": "Bagian-bagian yang sering dicek saat pemeriksaan harian: cairan, aki, saringan udara, dan sabuk.",
+   "svg": "assets/ssw/auto-maintenance/diagram/ruang-mesin.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-078",
+     "jp": "エンジン",
+     "kana": "えんじん",
+     "romaji": "enjin",
+     "arti": "mesin",
+     "fungsi": "Mesin utama."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-099",
+     "jp": "フィラー・キャップ",
+     "kana": "ふぃらーきゃっぷ",
+     "romaji": "fuぃraa kyappu",
+     "arti": "tutup pengisian oli",
+     "fungsi": "Tutup pengisian oli mesin."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-100",
+     "jp": "レベル・ゲージ",
+     "kana": "れべるげーじ",
+     "romaji": "reberu geeji",
+     "arti": "batang celup oli (dipstick)",
+     "fungsi": "Batang celup untuk mengecek oli mesin."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-096",
+     "jp": "エア・クリーナー・ボックス",
+     "kana": "えあくりーなーぼっくす",
+     "romaji": "ea kuriinaa bokkusu",
+     "arti": "kotak saringan udara",
+     "fungsi": "Kotak saringan udara: menyaring udara sebelum masuk mesin."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-087",
+     "jp": "バッテリ",
+     "kana": "ばってり",
+     "romaji": "batteri",
+     "arti": "aki",
+     "fungsi": "Aki."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-080",
+     "jp": "ブレーキ・リザーバ・タンク",
+     "kana": "ぶれーきりざーばたんく",
+     "romaji": "bureeki rizaaba tanku",
+     "arti": "tangki cadangan minyak rem",
+     "fungsi": "Tangki minyak rem."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-083",
+     "jp": "ラジエータ・リザーバ・タンク",
+     "kana": "らじえーたりざーばたんく",
+     "romaji": "rajieeta rizaaba tanku",
+     "arti": "tangki cadangan radiator",
+     "fungsi": "Tangki cadangan cairan pendingin."
+    },
+    {
+     "pid": "p8",
+     "vid": "am-101",
+     "jp": "ウィンド・ウォッシャ液のリザーバ・タンク",
+     "kana": "うぃんどうぉっしゃえきのりざーばたんく",
+     "romaji": "uぃndo uぉsshaekinorizaaba tanku",
+     "arti": "tangki cairan penyemprot kaca",
+     "fungsi": "Tangki cairan penyemprot kaca."
+    },
+    {
+     "pid": "p9",
+     "vid": "am-090",
+     "jp": "ファン・ベルト",
+     "kana": "ふぁんべると",
+     "romaji": "fuぁn beruto",
+     "arti": "sabuk kipas",
+     "fungsi": "Sabuk kipas: memutar alternator dan pompa air dari poros engkol."
+    },
+    {
+     "pid": "p10",
+     "vid": "am-103",
+     "jp": "オルタネータ",
+     "kana": "おるたねーた",
+     "romaji": "orutaneeta",
+     "arti": "alternator (dinamo pengisi)",
+     "fungsi": "Alternator (pembangkit listrik)."
+    }
+   ]
+  },
+  {
+   "id": "suspensi",
+   "title": {
+    "id": "Suspensi dan roda depan (tampak depan)",
+    "jp": "フロント・サスペンション"
+   },
+   "intro": "Pegas dan peredam kejut meredam guncangan; lengan bawah dan knuckle menahan roda.",
+   "svg": "assets/ssw/auto-maintenance/diagram/suspensi.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-140",
+     "jp": "ショック・アブソーバー",
+     "kana": "しょっくあぶそーばー",
+     "romaji": "shokku abusoobaa",
+     "arti": "peredam kejut",
+     "fungsi": "Peredam kejut: meredam ayunan pegas agar kendaraan stabil."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-138",
+     "jp": "コイル・スプリング",
+     "kana": "こいるすぷりんぐ",
+     "romaji": "koiru supuringu",
+     "arti": "pegas keong",
+     "fungsi": "Pegas keong: menahan beban dan menyerap benturan jalan."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-123",
+     "jp": "ナックル",
+     "kana": "なっくる",
+     "romaji": "nakkuru",
+     "arti": "knuckle (penyangga roda)",
+     "fungsi": "Knuckle: penyangga roda; titik sambung strut, lengan bawah, dan tie rod."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-127",
+     "jp": "ロア・アーム",
+     "kana": "ろああーむ",
+     "romaji": "roa aamu",
+     "arti": "lengan bawah",
+     "fungsi": "Lengan bawah: menghubungkan roda ke rangka dan menahan gaya samping."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-136",
+     "jp": "タイロッド",
+     "kana": "たいろっど",
+     "romaji": "tairoddo",
+     "arti": "tie rod (batang kemudi)",
+     "fungsi": "Tie rod: meneruskan gerakan setir untuk membelokkan roda."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-113",
+     "jp": "ブレーキ・ディスク",
+     "kana": "ぶれーきでぃすく",
+     "romaji": "bureeki deぃsuku",
+     "arti": "cakram rem",
+     "fungsi": "Cakram rem (tampak samping)."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-110",
+     "jp": "ホイール",
+     "kana": "ほいーる",
+     "romaji": "hoiiru",
+     "arti": "pelek",
+     "fungsi": "Pelek: tempat ban terpasang."
+    },
+    {
+     "pid": "p8",
+     "vid": "am-109",
+     "jp": "タイヤ",
+     "kana": "たいや",
+     "romaji": "taiya",
+     "arti": "ban",
+     "fungsi": "Ban."
+    }
+   ]
+  },
+  {
+   "id": "kabin",
+   "title": {
+    "id": "Kabin pengemudi",
+    "jp": "運転席まわり"
+   },
+   "intro": "Alat kendali yang dipakai pengemudi (setir kiri/kanan sama bentuk dasarnya).",
+   "svg": "assets/ssw/auto-maintenance/diagram/kabin.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-012",
+     "jp": "メーター",
+     "kana": "めーたー",
+     "romaji": "meetaa",
+     "arti": "panel instrumen (meteran)",
+     "fungsi": "Panel instrumen: menampilkan kecepatan, putaran mesin, bahan bakar, dan lampu peringatan."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-007",
+     "jp": "ハンドル",
+     "kana": "はんどる",
+     "romaji": "handoru",
+     "arti": "setir",
+     "fungsi": "Setir: mengarahkan kendaraan."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-008",
+     "jp": "ホーン",
+     "kana": "ほーん",
+     "romaji": "hoon",
+     "arti": "klakson",
+     "fungsi": "Klakson: di tengah setir; memberi peringatan."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-009",
+     "jp": "ウィンカー・レバー",
+     "kana": "うぃんかーればー",
+     "romaji": "uぃnkaa rebaa",
+     "arti": "tuas lampu sein",
+     "fungsi": "Tuas lampu sein (juga lampu utama/wiper pada sebagian mobil)."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-018",
+     "jp": "ハザード・スイッチ",
+     "kana": "はざーどすいっち",
+     "romaji": "hazaado suicchi",
+     "arti": "saklar lampu hazard",
+     "fungsi": "Tombol lampu hazard: menyalakan semua lampu sein bersamaan."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-019",
+     "jp": "シフト・レバー",
+     "kana": "しふとればー",
+     "romaji": "shifuto rebaa",
+     "arti": "tuas persneling",
+     "fungsi": "Tuas persneling: memilih gigi transmisi."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-023",
+     "jp": "パーキング・ブレーキ",
+     "kana": "ぱーきんぐぶれーき",
+     "romaji": "paakingu bureeki",
+     "arti": "rem parkir",
+     "fungsi": "Rem parkir: menahan mobil saat berhenti/parkir."
+    },
+    {
+     "pid": "p8",
+     "vid": "am-022",
+     "jp": "クラッチ・ペダル",
+     "kana": "くらっちぺだる",
+     "romaji": "kuracchi pedaru",
+     "arti": "pedal kopling",
+     "fungsi": "Pedal kopling (mobil manual): memutus tenaga mesin ke transmisi."
+    },
+    {
+     "pid": "p9",
+     "vid": "am-021",
+     "jp": "ブレーキ・ペダル",
+     "kana": "ぶれーきぺだる",
+     "romaji": "bureeki pedaru",
+     "arti": "pedal rem",
+     "fungsi": "Pedal rem."
+    },
+    {
+     "pid": "p10",
+     "vid": "am-020",
+     "jp": "アクセル・ペダル",
+     "kana": "あくせるぺだる",
+     "romaji": "akuseru pedaru",
+     "arti": "pedal gas",
+     "fungsi": "Pedal gas: mengatur tenaga mesin."
+    }
+   ]
+  },
+  {
+   "id": "perkakas",
+   "title": {
+    "id": "Perkakas dasar bengkel",
+    "jp": "基本工具"
+   },
+   "intro": "Perkakas yang paling sering dipakai pembelajar baru. Gambar skematis (bukan skala).",
+   "svg": "assets/ssw/auto-maintenance/diagram/perkakas.svg",
+   "parts": [
+    {
+     "pid": "p1",
+     "vid": "am-170",
+     "jp": "スパナ",
+     "kana": "すぱな",
+     "romaji": "supana",
+     "arti": "kunci pas",
+     "fungsi": "Kunci pas: mengencangkan/mengendurkan mur dan baut dengan satu ujung terbuka."
+    },
+    {
+     "pid": "p2",
+     "vid": "am-171",
+     "jp": "モンキーレンチ",
+     "kana": "もんきーれんち",
+     "romaji": "monkiirenchi",
+     "arti": "kunci inggris",
+     "fungsi": "Kunci inggris: rahangnya bisa disetel mengikuti ukuran mur."
+    },
+    {
+     "pid": "p3",
+     "vid": "am-172",
+     "jp": "眼鏡レンチ",
+     "kana": "めがねれんち",
+     "romaji": "meganerenchi",
+     "arti": "kunci ring",
+     "fungsi": "Kunci ring: kedua ujungnya berbentuk cincin; cengkeraman kuat."
+    },
+    {
+     "pid": "p4",
+     "vid": "am-176",
+     "jp": "ラチェット・ハンドル",
+     "kana": "らちぇっとはんどる",
+     "romaji": "rachiぇtto handoru",
+     "arti": "tangkai ratchet",
+     "fungsi": "Tangkai ratchet: mengencangkan baut tanpa melepas socket tiap putaran."
+    },
+    {
+     "pid": "p5",
+     "vid": "am-182",
+     "jp": "プラス・ドライバ",
+     "kana": "ぷらすどらいば",
+     "romaji": "purasu doraiba",
+     "arti": "obeng plus",
+     "fungsi": "Obeng plus (+): untuk sekrup berkepala bentuk silang."
+    },
+    {
+     "pid": "p6",
+     "vid": "am-183",
+     "jp": "マイナス・ドライバ",
+     "kana": "まいなすどらいば",
+     "romaji": "mainasu doraiba",
+     "arti": "obeng minus",
+     "fungsi": "Obeng minus (−): untuk sekrup berkepala alur lurus."
+    },
+    {
+     "pid": "p7",
+     "vid": "am-188",
+     "jp": "ハンマ",
+     "kana": "はんま",
+     "romaji": "hanma",
+     "arti": "palu",
+     "fungsi": "Palu: memukul, memasang, atau melepas bagian yang macet."
+    },
+    {
+     "pid": "p8",
+     "vid": "am-196",
+     "jp": "ペンチ",
+     "kana": "ぺんち",
+     "romaji": "penchi",
+     "arti": "tang potong",
+     "fungsi": "Tang: memegang, menekuk, atau memotong kawat."
+    },
+    {
+     "pid": "p9",
+     "vid": "am-198",
+     "jp": "ニッパ",
+     "kana": "にっぱ",
+     "romaji": "nippa",
+     "arti": "tang pemotong (nipper)",
+     "fungsi": "Tang pemotong (nipper): memotong kawat dan kabel kecil."
+    },
+    {
+     "pid": "p10",
+     "vid": "am-214",
+     "jp": "ノギス",
+     "kana": "のぎす",
+     "romaji": "nogisu",
+     "arti": "jangka sorong",
+     "fungsi": "Jangka sorong: mengukur panjang, diameter dalam/luar, dan kedalaman."
+    },
+    {
+     "pid": "p11",
+     "vid": "am-215",
+     "jp": "マイクロメータ",
+     "kana": "まいくろめーた",
+     "romaji": "maikuromeeta",
+     "arti": "mikrometer",
+     "fungsi": "Mikrometer: mengukur ketebalan/diameter kecil dengan ketelitian tinggi."
+    },
+    {
+     "pid": "p12",
+     "vid": "am-232",
+     "jp": "ジャッキ",
+     "kana": "じゃっき",
+     "romaji": "jakki",
+     "arti": "dongkrak",
+     "fungsi": "Dongkrak: mengangkat kendaraan sementara untuk dikerjakan bagian bawahnya."
+    }
+   ]
+  }
+ ]
+}

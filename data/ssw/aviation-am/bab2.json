@@ -1,0 +1,150 @@
+{
+ "schema": 1,
+ "bidang": "aviation-am",
+ "source": "JAEA 特定技能評価試験テキスト 航空機整備 (3 buku, Rev. ORG 2019.9.13) (diringkas Shirose). Ringkasan ID/JP ditulis ulang oleh Shirose Nihongo (bukan terjemahan resmi, bukan dari JAEA). Soal contoh resmi JAEA disertakan.",
+ "markup": "Teks JP memakai {kanji|furigana} untuk ruby.",
+ "bab": {
+  "id": "bab2",
+  "no": 2,
+  "title": {
+   "id": "Teknik Dasar: Pengukuran Listrik",
+   "jp": "{航空機|こうくうき}の{基本技術|きほんぎじゅつ}：{電気計測一般|でんきけいそくいっぱん}"
+  },
+  "intro": {
+   "id": "Penggunaan tester (circuit tester): tegangan DC/AC, resistansi (Ω), dan arus DC."
+  },
+  "pages": [
+   21,
+   23
+  ],
+  "pagesJp": [
+   21,
+   23
+  ],
+  "subs": [
+   {
+    "id": "b2s1",
+    "no": 1,
+    "title": {
+     "id": "Tester & Pengukuran Tegangan",
+     "jp": "テスター・{電圧|でんあつ}の{測定|そくてい}"
+    },
+    "pages": [
+     9,
+     9
+    ],
+    "pagesJp": [
+     21,
+     22
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Tester (回路計, Circuit Tester)**: kecil, mudah dibawa (pocket tester), tipe **analog** dan **digital**; **akurasinya rendah** sehingga tidak cocok untuk pengukuran presisi.",
+        "**Larangan/aturan:** ① cek **posisi nol** sebelum mengukur ② hindari **medan magnet kuat** (saat dipakai dan disimpan) ③ bila nilai tak terduga, **mulai dari range tertinggi lalu turun** ④ cek posisi **range knob** ⑤ ganti range knob **hanya setelah test pin dilepas** dari objek ⑥ pada DC cek **polaritas** ⑦ hindari **paralaks** ⑧ tester lemah terhadap **getaran/benturan** ⑨ warna test lead (+)/(−) — hati-hati pada uji semikonduktor ⑩ setelah dipakai, bila tak ada OFF, set ke **range tegangan AC/DC tertinggi**."
+       ]
+      },
+      {
+       "h": "Tegangan"
+      },
+      {
+       "ul": [
+        "**DCV**: knob ke DCV → test pin **paralel** dengan rangkaian → baca jarum. Baca di **skala sisi kanan** agar galat kecil.",
+        "**ACV**: knob ke ACV → test pin **paralel** → baca jarum; juga di skala kanan."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "テスター（{回路計|かいろけい}）は{持|も}ち{運|はこ}びやすいですが、{精度|せいど}が{低|ひく}いので{精密|せいみつ}な{測定|そくてい}には{向|む}きません。アナログ{式|しき}とデジタル{式|しき}があります。",
+        "{測定前|そくていまえ}にゼロ{位置|いち}を{確認|かくにん}します。{強|つよ}い{磁界|じかい}の{近|ちか}くを{避|さ}けます。{測定値|そくていち}がわからないときは、レンジを{高|たか}い{値|あたい}から{順|じゅん}に{下|さ}げます。レンジを{変|か}えるときは、{必|かなら}ずテスト・ピンを{測|はか}るものから{外|はず}します。",
+        "{直流|ちょくりゅう}の{測定|そくてい}では{極性|きょくせい}を{確認|かくにん}します。{使|つか}い{終|お}わったら、OFFがなければ、{電圧|でんあつ}レンジの{高|たか}い{位置|いち}に{合|あ}わせておきます。",
+        "{直流電圧|ちょくりゅうでんあつ}（DCV）・{交流電圧|こうりゅうでんあつ}（ACV）は、テスト・ピンを{回路|かいろ}に{並列|へいれつ}につなぎます。{右側|みぎがわ}の{目盛|めもり}で{読|よ}むと{誤差|ごさ}が{少|すく}なくなります。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Tester (回路計, Circuit Tester): kecil, mudah dibawa (pocket tester), tipe analog dan digital; akurasinya rendah sehingga tidak cocok untuk pengukuran presisi.",
+      "points": [
+       "Larangan/aturan: ① cek posisi nol sebelum mengukur ② hindari medan magnet kuat (saat dipakai dan disimpan) ③ bila nilai tak terduga, mulai dari range tertinggi lalu turun…",
+       "DCV: knob ke DCV → test pin paralel dengan rangkaian → baca jarum. Baca di skala sisi kanan agar galat kecil.",
+       "ACV: knob ke ACV → test pin paralel → baca jarum; juga di skala kanan."
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "テスター（{回路計|かいろけい}）は{持|も}ち{運|はこ}びやすいですが、{精度|せいど}が{低|ひく}いので{精密|せいみつ}な{測定|そくてい}には{向|む}きません。アナログ{式|しき}とデジタル{式|しき}があります。",
+      "points": [
+       "{測定前|そくていまえ}にゼロ{位置|いち}を{確認|かくにん}します。{強|つよ}い{磁界|じかい}の{近|ちか}くを{避|さ}けます。{測定値|そくていち}がわからないときは、レンジを{高|たか}い{値|あたい}から{順|じゅん}に{下|さ}げます。レンジを{変|か}えるときは、{必|かなら}ずテスト・ピンを{測|はか}るものから{外|はず}します。",
+       "{直流|ちょくりゅう}の{測定|そくてい}では{極性|きょくせい}を{確認|かくにん}します。{使|つか}い{終|お}わったら、OFFがなければ、{電圧|でんあつ}レンジの{高|たか}い{位置|いち}に{合|あ}わせておきます。",
+       "{直流電圧|ちょくりゅうでんあつ}（DCV）・{交流電圧|こうりゅうでんあつ}（ACV）は、テスト・ピンを{回路|かいろ}に{並列|へいれつ}につなぎます。{右側|みぎがわ}の{目盛|めもり}で{読|よ}むと{誤差|ごさ}が{少|すく}なくなります。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b2s2",
+    "no": 2,
+    "title": {
+     "id": "Pengukuran Resistansi & Arus",
+     "jp": "{抵抗|ていこう}・{電流|でんりゅう}の{測定|そくてい}"
+    },
+    "pages": [
+     10,
+     10
+    ],
+    "pagesJp": [
+     22,
+     23
+    ],
+    "full": {
+     "id": [
+      {
+       "ul": [
+        "**Penyetelan Ω nol (ゼロΩ調整)**: sebelum mengukur resistansi, putar knob penyetel agar jarum menunjuk **0** saat test pin dihubung-singkat. Mencegah galat akibat baterai habis dan perubahan arus beban. Ulangi **setiap berganti range Ω** dan saat pengukuran terus-menerus.",
+        "**Resistansi**: knob ke Ω → test pin (+)(−) dihubung singkat → setel nol → buka → sambungkan ke resistor → baca. Baca di **tengah skala** agar galat kecil. **Jangan menyentuh test pin dengan jari** (arus tubuh menimbulkan galat).",
+        "**Polaritas pada range Ω terbalik**: terminal (+) tersambung ke (−) baterai internal. Penting pada **uji semikonduktor**.",
+        "**Arus DC (mA)**: knob ke DC mA → test pin dihubung **seri** dengan rangkaian → baca jarum. Untuk keamanan, sambungkan di **sisi ground** rangkaian. Arus yang terukur umumnya **DC saja, hanya sampai ratusan mA**."
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "ul": [
+        "{抵抗|ていこう}を{測|はか}る{前|まえ}に、テスト・ピンをショートさせて、{指針|ししん}が0になるように「ゼロΩ{調整|ちょうせい}」をします。Ωレンジを{変|か}えたときは、そのたびに{調整|ちょうせい}します。",
+        "{抵抗|ていこう}は{目盛|めもり}の{中央|ちゅうおう}で{読|よ}むと{誤差|ごさ}が{少|すく}なくなります。{指|ゆび}でテスト・ピンにさわると{誤差|ごさ}が{出|で}ます。",
+        "Ωレンジのときだけ、テスト・ピンの（＋）（－）が{逆|ぎゃく}になります。{半導体|はんどうたい}のテストで{大切|たいせつ}です。",
+        "{直流電流|ちょくりゅうでんりゅう}（DC mA）は、テスト・ピンを{回路|かいろ}に{直列|ちょくれつ}につなぎます。テスターで{測|はか}れる{電流|でんりゅう}は{直流|ちょくりゅう}で、{数百|すうひゃく}mA{程度|ていど}までです。"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Penyetelan Ω nol (ゼロΩ調整): sebelum mengukur resistansi, putar knob penyetel agar jarum menunjuk 0 saat test pin dihubung-singkat. Mencegah galat akibat baterai habis dan p…",
+      "points": [
+       "Resistansi: knob ke Ω → test pin (+)(−) dihubung singkat → setel nol → buka → sambungkan ke resistor → baca. Baca di tengah skala agar galat kecil. Jangan menyentuh test …",
+       "Polaritas pada range Ω terbalik: terminal (+) tersambung ke (−) baterai internal. Penting pada uji semikonduktor.",
+       "Arus DC (mA): knob ke DC mA → test pin dihubung seri dengan rangkaian → baca jarum. Untuk keamanan, sambungkan di sisi ground rangkaian. Arus yang terukur umumnya DC saja…"
+      ],
+      "avoid": [],
+      "exam": []
+     },
+     "jp": {
+      "core": "{抵抗|ていこう}を{測|はか}る{前|まえ}に、テスト・ピンをショートさせて、{指針|ししん}が0になるように「ゼロΩ{調整|ちょうせい}」をします。Ωレンジを{変|か}えたときは、そのたびに{調整|ちょうせい}します。",
+      "points": [
+       "{抵抗|ていこう}は{目盛|めもり}の{中央|ちゅうおう}で{読|よ}むと{誤差|ごさ}が{少|すく}なくなります。{指|ゆび}でテスト・ピンにさわると{誤差|ごさ}が{出|で}ます。",
+       "Ωレンジのときだけ、テスト・ピンの（＋）（－）が{逆|ぎゃく}になります。{半導体|はんどうたい}のテストで{大切|たいせつ}です。",
+       "{直流電流|ちょくりゅうでんりゅう}（DC mA）は、テスト・ピンを{回路|かいろ}に{直列|ちょくれつ}につなぎます。テスターで{測|はか}れる{電流|でんりゅう}は{直流|ちょくりゅう}で、{数百|すうひゃく}mA{程度|ていど}までです。"
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

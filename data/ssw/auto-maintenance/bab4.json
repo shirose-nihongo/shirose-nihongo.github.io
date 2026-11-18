@@ -1,148 +1,201 @@
 {
  "schema": 1,
  "bidang": "auto-maintenance",
- "source": "Shirose Nihongo — tulisan orisinal berdasarkan ruang lingkup ujian resmi bidang 自動車整備 (MLIT, MOJ/ISA); bukan salinan buku mana pun. Soal = Latihan Shirose Nihongo, bukan soal resmi.",
- "markup": "Teks JP memakai {kanji|furigana} untuk ruby. Teks ID/JP memakai **tebal**.",
+ "source": "JICA「みてまなぶ！自動車整備の日本語」(2023年12月30日第1版) https://www.jica.go.jp/activities/issues/transport/mechanic/health_safety_text/index.html",
+ "markup": "Teks JP memakai {kanji|furigana}; **tebal**.",
  "bab": {
   "id": "bab4",
   "no": 4,
   "title": {
-   "id": "Kelistrikan",
-   "jp": "{電気|でんき}{装置|そうち}"
+   "id": "Komponen mobil",
+   "jp": "{自動車|じどうしゃ}の{部品|ぶひん}"
   },
   "intro": {
-   "id": "Aki, starter dan alternator, lampu, sekring dan dasar listrik, serta keselamatan hybrid dan EV.",
-   "jp": "バッテリ、スタータとオルタネータ、ライト、ヒューズと{電気|でんき}の{基本|きほん}、ハイブリッド{車|しゃ}と{電気|でんき}{自動|じどう}{車|くるま}の{安全|あんぜん}を{学|まな}びます。"
+   "id": "Nama komponen mesin, bahan bakar, hisap-buang, pelumasan, pendingin, penerus tenaga, kemudi, rem, listrik, dan bodi.",
+   "jp": "エンジン・{燃料|ねんりょう}・{冷却|れいきゃく}・{動力伝達|どうりょくでんたつ}・ブレーキ・{電気|でんき}・ボデーの{部品|ぶひん}をおぼえます。"
   },
   "pages": [
-   1,
-   1
+   45,
+   66
   ],
   "subs": [
    {
     "id": "b4s1",
     "no": 1,
     "title": {
-     "id": "Aki (Baterai)",
-     "jp": "バッテリ"
+     "id": "Sekitar mesin",
+     "jp": "エンジンまわり"
     },
     "pages": [
-     1,
-     1
+     45,
+     50
     ],
     "full": {
      "id": [
       {
-       "h": "Dasar"
+       "h": "Hal. 45 — Pendahuluan bab 4 (video JAPIA)"
       },
       {
-       "p": "Aki mobil biasa bertegangan **12 V**. Isinya **elektrolit (cairan aki: asam sulfat encer)** dan pelat timbal. Aki menyimpan listrik untuk menyalakan mesin dan menyuplai listrik saat mesin mati."
+       "p": "Bab 4 mengacu pada video \"Belajar dengan Video – Dasar Otomotif\" dari JAPIA (Asosiasi Industri Komponen Otomotif Jepang) yang memiliki subtitle Indonesia, Khmer, Vietnam, Myanmar, dan Jepang."
       },
       {
-       "h": "Memasang dan melepas terminal"
+       "h": "Hal. 46 — Sekitar mesin (1)"
       },
       {
        "ul": [
-        "Saat **melepas**: lepas terminal **minus (−)** dulu, lalu plus (+).",
-        "Saat **memasang**: pasang terminal **plus (+)** dulu, **minus (−)** paling akhir.",
-        "Alasannya: jika kunci menyentuh bodi saat terminal plus dipegang, bisa terjadi hubung singkat dan percikan."
+        "① **エンジン** (えんじん · enjin) — mesin",
+        "② **直列型エンジン** (ちょくれつがたえんじん · chokuretsugataenjin) — mesin segaris (inline). Keterangan: Silinder disusun satu baris; jumlah silinder 3, 4, atau 6.",
+        "③ **V型エンジン** (ぶいがたえんじん · buigataenjin) — mesin tipe V. Keterangan: Silinder diletakkan membentuk V di sekitar poros engkol.",
+        "④ **ボクサーエンジン** (ぼくさーえんじん · bokusaaenjin) — mesin boxer. Keterangan: Silinder saling berhadapan mendatar kiri-kanan."
        ]
       },
       {
-       "h": "Keselamatan"
+       "h": "Hal. 47 — Sekitar mesin (2)"
       },
       {
        "ul": [
-        "Aki mengeluarkan **gas hidrogen yang mudah terbakar**. **Jauhkan api dan percikan.**",
-        "Cairan aki adalah **asam**; jika kena kulit atau mata, bilas dengan banyak air dan segera cari pertolongan.",
-        "Jangan menyentuh kedua terminal dengan logam sekaligus.",
-        "Pakai **kacamata pelindung dan sarung tangan**."
+        "⑤ **サイクル** (さいくる · saikuru) — siklus. Keterangan: Hisap → kompresi → pembakaran → buang.",
+        "⑥ **ディーゼルエンジン** (でぃーぜるえんじん · deぃぃzeruenjin) — mesin diesel. Keterangan: Bahan bakar solar.",
+        "⑦ **燃焼室** (ねんしょうしつ · nenshoushitsu) — ruang bakar",
+        "⑧ **シリンダー** (しりんだー · shirindaa) — silinder; alias/keterangan: シリンダ",
+        "⑨ **インテーク・バルブ** (いんてーくばるぶ · inteeku barubu) — katup hisap",
+        "⑩ **エキゾースト・バルブ** (えきぞーすとばるぶ · ekizoosuto barubu) — katup buang"
        ]
       },
       {
-       "h": "Pemeriksaan"
+       "h": "Hal. 48 — Sekitar mesin (3)"
       },
       {
        "ul": [
-        "Cairan di antara **UPPER** dan **LOWER**.",
-        "Terminal berkarat atau longgar.",
-        "Retak atau cairan bocor dari badan aki."
+        "⑪ **カムシャフト** (かむしゃふと · kamushafuto) — poros bubungan (camshaft)",
+        "⑫ **プラグ** (ぷらぐ · puragu) — busi; alias/keterangan: スパークプラグ",
+        "⑬ **ピストン** (ぴすとん · pisuton) — torak (piston)",
+        "⑭ **ピストンリング** (ぴすとんりんぐ · pisutonringu) — ring piston",
+        "⑮ **コンロッド** (こんろっど · konroddo) — batang penghubung (connecting rod)",
+        "⑯ **クランクシャフト** (くらんくしゃふと · kurankushafuto) — poros engkol"
+       ]
+      },
+      {
+       "h": "Hal. 49 — Sekitar mesin (4)"
+      },
+      {
+       "ul": [
+        "⑰ **フライホイール** (ふらいほいーる · furaihoiiru) — roda gila (flywheel)",
+        "⑱ **クランクプーリー** (くらんくぷーりー · kurankupuurii) — puli poros engkol",
+        "⑲ **シリンダーヘッド** (しりんだーへっど · shirindaaheddo) — kepala silinder",
+        "⑳ **カムシャフトカバー** (かむしゃふとかばー · kamushafutokabaa) — tutup poros bubungan",
+        "21. **シリンダーヘッド本体** (しりんだーへっどほんたい · shirindaaheddohontai) — bodi kepala silinder",
+        "22. **シリンダーヘッドガスケット** (しりんだーへっどがすけっと · shirindaaheddogasuketto) — paking kepala silinder",
+        "23. **ピストン** (ぴすとん · pisuton) — torak (piston)",
+        "24. **ピストンリング** (ぴすとんりんぐ · pisutonringu) — ring piston"
+       ]
+      },
+      {
+       "h": "Hal. 50 — Sekitar mesin (5)"
+      },
+      {
+       "ul": [
+        "25. **シリンダーブロック** (しりんだーぶろっく · shirindaaburokku) — blok silinder"
        ]
       }
      ],
      "jp": [
       {
-       "h": "きほん"
+       "h": "ページ 45"
       },
       {
-       "p": "ふつうの{自動|じどう}{車|くるま}のバッテリは**12V**です。{中|なか}に**バッテリ{液|えき}（うすい{硫酸|りゅうさん}）**と{鉛|なまり}の{板|いた}があります。エンジンをかけるための{電気|でんき}をためておき、エンジンが{止|と}まっているときも{電気|でんき}をおくります。"
-      },
-      {
-       "h": "{端子|たんし}のはずし{方|かた}・つけ{方|かた}"
+       "h": "ページ 46"
       },
       {
        "ul": [
-        "**はずす**とき：**マイナス（−）**を{先|さき}に、つぎにプラス（+）。",
-        "**つける**とき：**プラス（+）**を{先|さき}に、**マイナス（−）**を{最後|さいご}に。",
-        "{理由|りゆう}：プラスを{持|も}っているときに{工具|こうぐ}が{車体|しゃたい}にふれると、ショートして{火花|ひばな}が{出|で}るから。"
+        "① **エンジン**",
+        "② **{直列型エンジン|ちょくれつがたえんじん}**：シリンダを一列にならべたもの。シリンダの数は３、４、６。",
+        "③ **{V型エンジン|ぶいがたえんじん}**：クランクシャフトを中心にシリンダをV型においたもの。",
+        "④ **ボクサーエンジン**：水平対向エンジン：クランクシャフトを中心にシリンダを左右水平にむきあって置いたもの。"
        ]
       },
       {
-       "h": "あんぜん"
+       "h": "ページ 47"
       },
       {
        "ul": [
-        "バッテリから**{燃|も}えやすい{水素|すいそ}ガス**が{出|で}る。**{火|ひ}や{火花|ひばな}を{近|ちか}づけない。**",
-        "バッテリ{液|えき}は**{酸|さん}**。{体|からだ}や{目|め}についたら、たくさんの{水|みず}で{洗|あら}い、すぐ{医者|いしゃ}に{行|い}く。",
-        "{工具|こうぐ}で、2つの{端子|たんし}に{同時|どうじ}にふれない。",
-        "**{保護|ほご}めがねと{手|て}ぶくろ**を{使|つか}う。"
+        "⑤ **サイクル**：吸入→圧縮→燃焼→排気",
+        "⑥ **ディーゼルエンジン**：燃料が軽油。ジーゼルエンジンともいう。",
+        "⑦ **{燃焼室|ねんしょうしつ}**",
+        "⑧ **シリンダー** (シリンダ)",
+        "⑨ **インテーク・バルブ**",
+        "⑩ **エキゾースト・バルブ**"
        ]
       },
       {
-       "h": "{点検|てんけん}"
+       "h": "ページ 48"
       },
       {
        "ul": [
-        "{液|えき}が**UPPER**と**LOWER**のあいだにあるか。",
-        "{端子|たんし}がさびていないか、ゆるんでいないか。",
-        "{本体|ほんたい}にひびがないか、{液|えき}がもれていないか。"
+        "⑪ **カムシャフト**",
+        "⑫ **プラグ** (スパークプラグ)",
+        "⑬ **ピストン**",
+        "⑭ **ピストンリング**",
+        "⑮ **コンロッド**",
+        "⑯ **クランクシャフト**"
+       ]
+      },
+      {
+       "h": "ページ 49"
+      },
+      {
+       "ul": [
+        "⑰ **フライホイール**",
+        "⑱ **クランクプーリー**",
+        "⑲ **シリンダーヘッド**",
+        "⑳ **カムシャフトカバー**",
+        "21. **{シリンダーヘッド本体|しりんだーへっどほんたい}**",
+        "22. **シリンダーヘッドガスケット**",
+        "23. **ピストン**",
+        "24. **ピストンリング**"
+       ]
+      },
+      {
+       "h": "ページ 50"
+      },
+      {
+       "ul": [
+        "25. **シリンダーブロック**"
        ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Aki 12 V; lepas minus dulu, pasang plus dulu; ada gas hidrogen, jauhkan api; cairan aki asam; periksa antara UPPER dan LOWER.",
+      "core": "Subbab ini memuat 25 istilah Jepang dari buku JICA (hal. 45–50).",
       "points": [
-       "Lepas: minus (−) dulu.",
-       "Pasang: plus (+) dulu.",
-       "Gas hidrogen → jauhkan api.",
-       "Cairan aki = asam."
+       "**エンジン** = mesin",
+       "**直列型エンジン** = mesin segaris (inline)",
+       "**V型エンジン** = mesin tipe V",
+       "**ボクサーエンジン** = mesin boxer",
+       "**サイクル** = siklus"
       ],
       "avoid": [
-       "Melepas terminal plus lebih dulu.",
-       "Menyalakan api dekat aki."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Urutan lepas/pasang terminal.",
-       "Bahaya aki."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "バッテリは12Vです。はずすときはマイナスから、つけるときはプラスからです。{水素|すいそ}ガスと{酸|さん}に{注意|ちゅうい}します。",
+      "core": "このところのことばを25こおぼえます。",
       "points": [
-       "はずすときはマイナスから。",
-       "つけるときはプラスから。",
-       "{水素|すいそ}ガス→{火|ひ}を{近|ちか}づけない。",
-       "バッテリ{液|えき}は{酸|さん}。"
+       "**エンジン**",
+       "**{直列型エンジン|ちょくれつがたえんじん}**",
+       "**{V型エンジン|ぶいがたえんじん}**",
+       "**ボクサーエンジン**",
+       "**サイクル**"
       ],
       "avoid": [
-       "プラス{端子|たんし}を{先|さき}にはずすこと。",
-       "バッテリの{近|ちか}くで{火|ひ}を{使|つか}うこと。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "{端子|たんし}をはずす、つける{順番|じゅんばん}。",
-       "バッテリのきけん。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -151,100 +204,70 @@
     "id": "b4s2",
     "no": 2,
     "title": {
-     "id": "Sistem Start dan Pengisian",
-     "jp": "{始動|しどう}{装置|そうち}と{充電装置|じゅうでんそうち}"
+     "id": "Sistem bahan bakar",
+     "jp": "{燃料装置|ねんりょうそうち}"
     },
     "pages": [
-     1,
-     1
+     50,
+     50
     ],
     "full": {
      "id": [
       {
-       "h": "Starter (始動装置)"
-      },
-      {
-       "p": "**スタータ (セルモータ)** adalah motor listrik yang memutar mesin saat start. Giginya (**ピニオンギヤ**) mengait **リングギヤ** di **フライホイール** dan memutarkan poros engkol."
+       "h": "Hal. 50 — Sistem bahan bakar"
       },
       {
        "ul": [
-        "Starter diputar oleh listrik dari aki.",
-        "Jika starter tidak berputar sama sekali: aki lemah, terminal longgar, atau starter rusak.",
-        "Jika starter berputar tetapi mesin tidak hidup: periksa bahan bakar dan pengapian."
-       ]
-      },
-      {
-       "h": "Pengisian (充電装置)"
-      },
-      {
-       "p": "**オルタネータ (発電機)** diputar oleh sabuk dari mesin dan menghasilkan listrik untuk mengisi aki dan menyuplai perlengkapan listrik."
-      },
-      {
-       "ul": [
-        "Lampu **充電警告灯** (bergambar aki) menyala saat mesin hidup berarti pengisian bermasalah.",
-        "Penyebab umum: sabuk kendur atau putus, alternator rusak, kabel longgar.",
-        "Jika pengisian berhenti, aki akan habis dan mesin akhirnya mati."
+        "① **フューエルタンク** (ふゅーえるたんく · fyuuerutanku) — tangki bahan bakar; alias/keterangan: 燃料タンク",
+        "② **フューエルポンプ** (ふゅーえるぽんぷ · fyuueruponpu) — pompa bahan bakar; alias/keterangan: 燃料ポンプ",
+        "③ **フューエルフィルター** (ふゅーえるふぃるたー · fyuuerufuぃrutaa) — filter bahan bakar; alias/keterangan: 燃料フィルター",
+        "④ **インジェクター** (いんじぇくたー · injiぇkutaa) — injektor"
        ]
       }
      ],
      "jp": [
       {
-       "h": "{始動|しどう}{装置|そうち}"
-      },
-      {
-       "p": "**スタータ（セルモータ）**は、エンジンをかけるときにエンジンをまわす{電気|でんき}のモータです。**ピニオンギヤ**が、**フライホイール**の**リングギヤ**にかみあって、クランクシャフトをまわします。"
+       "h": "ページ 50"
       },
       {
        "ul": [
-        "スタータは、バッテリの{電気|でんき}で{回|まわ}る。",
-        "スタータがまったく{回|まわ}らない：バッテリが{弱|よわ}い、{端子|たんし}がゆるい、スタータがこわれた。",
-        "スタータは{回|まわ}るがエンジンがかからない：{燃料|ねんりょう}と{点火|てんか}を{調|しら}べる。"
-       ]
-      },
-      {
-       "h": "{充電装置|じゅうでんそうち}"
-      },
-      {
-       "p": "**オルタネータ（{発電機|はつでんき}）**は、ベルトでエンジンにまわされ、{電気|でんき}をつくります。バッテリに{電気|でんき}を{入|い}れ、{電気|でんき}{製|せい}{品|ひん}にも{送|おく}ります。"
-      },
-      {
-       "ul": [
-        "エンジン{中|なか}に**{充電警告灯|じゅうでんけいこくとう}**（バッテリの{絵|え}）がついたら、{充電|じゅうでん}のふぐあい。",
-        "よくある{原因|げんいん}：ベルトのゆるみやきれ、オルタネータのこわれ、{配線|はいせん}のゆるみ。",
-        "{充電|じゅうでん}されないと、バッテリがなくなり、エンジンがとまる。"
+        "① **フューエルタンク** (燃料タンク)",
+        "② **フューエルポンプ** (燃料ポンプ)",
+        "③ **フューエルフィルター** (燃料フィルター)",
+        "④ **インジェクター**"
        ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Starter memutar mesin saat start; alternator membuat listrik dan mengisi aki; 充電警告灯 menyala = pengisian bermasalah.",
+      "core": "Subbab ini memuat 4 istilah Jepang dari buku JICA (hal. 50–50).",
       "points": [
-       "スタータ: ピニオンギヤ mengait リングギヤ.",
-       "オルタネータ diputar sabuk.",
-       "充電警告灯 menyala → cek sabuk & alternator."
+       "**フューエルタンク** = tangki bahan bakar",
+       "**フューエルポンプ** = pompa bahan bakar",
+       "**フューエルフィルター** = filter bahan bakar",
+       "**インジェクター** = injektor"
       ],
       "avoid": [
-       "Mengabaikan 充電警告灯."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Fungsi スタータ dan オルタネータ.",
-       "Arti 充電警告灯."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "スタータはエンジンをまわし、オルタネータは{発電|はつでん}してバッテリに{充電|じゅうでん}します。{充電警告灯|じゅうでんけいこくとう}がついたら{充電|じゅうでん}のふぐあいです。",
+      "core": "このところのことばを4こおぼえます。",
       "points": [
-       "ピニオンギヤがリングギヤにかみあう。",
-       "オルタネータはベルトでまわる。",
-       "{充電警告灯|じゅうでんけいこくとう}→ベルトとオルタネータを{調|しら}べる。"
+       "**フューエルタンク**",
+       "**フューエルポンプ**",
+       "**フューエルフィルター**",
+       "**インジェクター**"
       ],
       "avoid": [
-       "{充電警告灯|じゅうでんけいこくとう}をむしすること。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "スタータとオルタネータのはたらき。",
-       "{充電警告灯|じゅうでんけいこくとう}の{意味|いみ}。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -253,124 +276,114 @@
     "id": "b4s3",
     "no": 3,
     "title": {
-     "id": "Lampu, Sekring, dan Dasar Listrik",
-     "jp": "ライト・ヒューズ・{電気|でんき}のきほん"
+     "id": "Sistem hisap dan buang",
+     "jp": "{吸気装置|きゅうきそうち}・{排気装置|はいきそうち}"
     },
     "pages": [
-     1,
-     1
+     51,
+     52
     ],
     "full": {
      "id": [
       {
-       "h": "Lampu"
+       "h": "Hal. 51 — Sistem hisap dan buang (1)"
       },
       {
        "ul": [
-        "**ヘッドライト**: lampu depan. **テールランプ**: lampu belakang. **ブレーキランプ**: menyala saat rem diinjak.",
-        "**ウインカ (方向指示器)**: lampu sein. **ハザード**: lampu darurat.",
-        "Di pemeriksaan harian, pastikan semua lampu menyala dan lensa tidak pecah."
+        "① **エレメント** (えれめんと · eremento) — elemen (filter udara); alias/keterangan: エア・フィルター、エア・クリーナー・エレメント",
+        "② **エアクリ** (えあくり · eakuri) — saringan udara (singkatan); alias/keterangan: エアクリーナー",
+        "③ **エアフローメーター** (えあふろーめーたー · eafuroomeetaa) — pengukur aliran udara",
+        "④ **スロットルボディ** (すろっとるぼでぃ · surottorubodeぃ) — throttle body; alias/keterangan: スロットル",
+        "⑤ **インマニ** (いんまに · inmani) — manifold hisap (singkatan); alias/keterangan: インテークマニホールド",
+        "⑥ **スパークプラグ** (すぱーくぷらぐ · supaakupuragu) — busi; alias/keterangan: プラグ",
+        "⑦ **イグニッションコイル** (いぐにっしょんこいる · igunisshonkoiru) — koil pengapian; alias/keterangan: 点火コイル",
+        "⑧ **ECU** (いーしーゆー · iishiiyuu) — unit kontrol elektronik; alias/keterangan: Electronic Control Unit"
        ]
       },
       {
-       "h": "Sekring (ヒューズ) dan relay"
+       "h": "Hal. 52 — Sistem hisap dan buang (2)"
       },
       {
        "ul": [
-        "**ヒューズ** putus jika arus terlalu besar dan melindungi kabel.",
-        "Ganti dengan sekring **berkapasitas (A) yang sama**. **Jangan memakai kapasitas lebih besar** atau kawat, karena kabel bisa terbakar.",
-        "**リレー** adalah sakelar listrik: arus kecil mengendalikan arus besar."
+        "⑨ **エキマニ** (えきまに · ekimani) — manifold buang (singkatan); alias/keterangan: エキゾーストマニホールド",
+        "⑩ **エキゾースト・パイプ** (えきぞーすとぱいぷ · ekizoosuto paipu) — pipa gas buang",
+        "⑪ **マフラー** (まふらー · mafuraa) — knalpot",
+        "⑫ **窒素** (ちっそ · chisso) — nitrogen (N)",
+        "⑬ **水** (みず · mizu) — air (H₂O)",
+        "⑭ **二酸化炭素** (にさんかたんそ · nisankatanso) — karbon dioksida (CO₂)",
+        "⑮ **一酸化炭素** (いっさんかたんそ · issankatanso) — karbon monoksida (CO)",
+        "⑯ **炭化水素** (たんかすいそ · tankasuiso) — hidrokarbon (HC)",
+        "⑰ **窒素酸化物** (ちっそさんかぶつ · chissosankabutsu) — oksida nitrogen (NOx)",
+        "⑱ **触媒コンバータ** (しょくばいこんばーた · shokubaikonbaata) — konverter katalis"
        ]
-      },
-      {
-       "h": "Dasar listrik"
-      },
-      {
-       "ul": [
-        "**電圧 (V)** volt, **電流 (A)** ampere, **抵抗 (Ω)** ohm.",
-        "**オームの法則**: **V = I × R** (tegangan = arus × hambatan).",
-        "**ショート (短絡)**: arus mengalir lewat jalan pintas dan menjadi sangat besar. **断線**: kabel putus dan arus tidak mengalir."
-       ]
-      },
-      {
-       "h": "Alat ukur"
-      },
-      {
-       "p": "**回路計 (テスタ)** dipakai untuk mengukur tegangan, arus, hambatan, dan memeriksa kontinuitas."
       }
      ],
      "jp": [
       {
-       "h": "ライト"
+       "h": "ページ 51"
       },
       {
        "ul": [
-        "**ヘッドライト**：{前|まえ}のライト。**テールランプ**：{後|うし}ろのライト。**ブレーキランプ**：ブレーキをふむとつく。",
-        "**ウインカ（{方向|ほうこう}{指示|しじ}{器|き}）**。**ハザード**：きんきゅうのライト。",
-        "{日常点検|にちじょうてんけん}では、ライトがぜんぶつくか、レンズがわれていないかを{見|み}る。"
+        "① **エレメント** (エア・フィルター、エア・クリーナー・エレメント)",
+        "② **エアクリ** (エアクリーナー)",
+        "③ **エアフローメーター**",
+        "④ **スロットルボディ** (スロットル)",
+        "⑤ **インマニ** (インテークマニホールド)",
+        "⑥ **スパークプラグ** (プラグ)",
+        "⑦ **イグニッションコイル** (点火コイル)",
+        "⑧ **ECU** (Electronic Control Unit)"
        ]
       },
       {
-       "h": "ヒューズとリレー"
+       "h": "ページ 52"
       },
       {
        "ul": [
-        "**ヒューズ**は、{電流|でんりゅう}が{大|おお}きすぎると{切|き}れて、{配線|はいせん}を{守|まも}る。",
-        "{交換|こうかん}するときは、**{同|おな}じ{容量|ようりょう}（A）**のものを{使|つか}う。**{大|おお}きい{容量|ようりょう}のヒューズや{針金|はりがね}は{使|つか}わない**。{配線|はいせん}が{燃|も}えるから。",
-        "**リレー**は、{電気|でんき}のスイッチ。{小|ちい}さい{電流|でんりゅう}で、{大|おお}きい{電流|でんりゅう}を{入|い}り{切|き}りする。"
+        "⑨ **エキマニ** (エキゾーストマニホールド)",
+        "⑩ **エキゾースト・パイプ**",
+        "⑪ **マフラー**",
+        "⑫ **{窒素|ちっそ}**",
+        "⑬ **{水|みず}**",
+        "⑭ **{二酸化炭素|にさんかたんそ}**",
+        "⑮ **{一酸化炭素|いっさんかたんそ}**",
+        "⑯ **{炭化水素|たんかすいそ}**",
+        "⑰ **{窒素酸化物|ちっそさんかぶつ}**",
+        "⑱ **{触媒コンバータ|しょくばいこんばーた}**"
        ]
-      },
-      {
-       "h": "{電気|でんき}のきほん"
-      },
-      {
-       "ul": [
-        "**{電圧|でんあつ}（V）**ボルト、**{電流|でんりゅう}（A）**アンペア、**{抵抗|ていこう}（Ω）**オーム。",
-        "**オームの{法則|ほうそく}**：**V = I × R**（{電圧|でんあつ}＝{電流|でんりゅう}×{抵抗|ていこう}）。",
-        "**ショート（{短絡|たんらく}）**：ちかみちを{電気|でんき}が{流|なが}れて、{電流|でんりゅう}がとても{大|おお}きくなること。**{断線|だんせん}**：{配線|はいせん}が{切|き}れて、{電気|でんき}が{流|なが}れないこと。"
-       ]
-      },
-      {
-       "h": "はかる{道具|どうぐ}"
-      },
-      {
-       "p": "**{回路計|かいろけい}（テスタ）**で、{電圧|でんあつ}、{電流|でんりゅう}、{抵抗|ていこう}をはかり、つながっているかを{調|しら}べます。"
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "Sekring melindungi kabel; ganti dengan kapasitas sama; V = I × R; ショート = jalan pintas, 断線 = kabel putus; テスタ untuk mengukur.",
+      "core": "Subbab ini memuat 18 istilah Jepang dari buku JICA (hal. 51–52).",
       "points": [
-       "ヒューズ: kapasitas sama.",
-       "V = I × R.",
-       "ショート ≠ 断線.",
-       "テスタ mengukur V, A, Ω."
+       "**エレメント** = elemen (filter udara)",
+       "**エアクリ** = saringan udara (singkatan)",
+       "**エアフローメーター** = pengukur aliran udara",
+       "**スロットルボディ** = throttle body",
+       "**インマニ** = manifold hisap (singkatan)"
       ],
       "avoid": [
-       "Memakai sekring berkapasitas lebih besar atau kawat."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Hukum Ohm.",
-       "Beda ショート dan 断線.",
-       "Aturan mengganti ヒューズ."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "ヒューズは{配線|はいせん}を{守|まも}ります。{同|おな}じ{容量|ようりょう}のものと{交換|こうかん}します。オームの{法則|ほうそく}はV＝I×Rです。",
+      "core": "このところのことばを18こおぼえます。",
       "points": [
-       "ヒューズは{同|おな}じ{容量|ようりょう}。",
-       "V＝I×R。",
-       "ショートと{断線|だんせん}はちがう。",
-       "テスタで{電圧|でんあつ}、{電流|でんりゅう}、{抵抗|ていこう}をはかる。"
+       "**エレメント**",
+       "**エアクリ**",
+       "**エアフローメーター**",
+       "**スロットルボディ**",
+       "**インマニ**"
       ],
       "avoid": [
-       "{大|おお}きい{容量|ようりょう}のヒューズや{針金|はりがね}を{使|つか}うこと。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "オームの{法則|ほうそく}。",
-       "ショートと{断線|だんせん}のちがい。",
-       "ヒューズ{交換|こうかん}の{決|き}まり。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }
@@ -379,114 +392,604 @@
     "id": "b4s4",
     "no": 4,
     "title": {
-     "id": "Hybrid dan EV: Dasar Keselamatan",
-     "jp": "ハイブリッド{車|しゃ}・{電気|でんき}{自動|じどう}{車|くるま}のあんぜん"
+     "id": "Pelumasan dan pendinginan",
+     "jp": "{潤滑装置|じゅんかつそうち}・{冷却装置|れいきゃくそうち}"
     },
     "pages": [
-     1,
-     1
+     53,
+     55
     ],
     "full": {
      "id": [
       {
-       "h": "Ciri"
+       "h": "Hal. 53 — Sistem pelumasan dan pendingin"
       },
       {
        "ul": [
-        "**ハイブリッド車 (HEV)** memakai mesin dan **motor listrik**. **電気自動車 (EV)** hanya motor listrik.",
-        "Memiliki **aki tegangan tinggi (beberapa ratus volt)** untuk menggerakkan motor. Aki 12 V biasa tetap ada untuk lampu dan lain-lain.",
-        "**回生ブレーキ**: saat memperlambat, motor berubah menjadi generator dan mengisi aki."
+        "① **オイルパン** (おいるぱん · oirupan) — karter oli",
+        "② **オイルポンプ** (おいるぽんぷ · oiruponpu) — pompa oli",
+        "③ **オイルフィルター** (おいるふぃるたー · oirufuぃrutaa) — filter oli; alias/keterangan: オイルエレメント",
+        "④ **クーラント** (くーらんと · kuuranto) — cairan pendingin; alias/keterangan: 冷却水",
+        "⑤ **ウォーターポンプ** (うぉーたーぽんぷ · uぉぉtaaponpu) — pompa air",
+        "⑥ **リザーバータンク** (りざーばーたんく · rizaabaatanku) — tangki cadangan",
+        "⑦ **ラジエーター** (らじえーたー · rajieetaa) — radiator",
+        "⑧ **冷却ファン** (れいきゃくふぁん · reikyakufuぁn) — kipas pendingin",
+        "⑨ **サーモスタット** (さーもすたっと · saamosutatto) — termostat"
        ]
       },
       {
-       "h": "Bahaya"
+       "h": "Hal. 54 — Kolom 9: ban musim dingin"
+      },
+      {
+       "p": "Di Jepang ada kota yang bersalju. Sebelum salju turun ban diganti dengan ban musim dingin; ada スタッドレスタイヤ (ban studless) dan kadang rantai ban dipasang."
       },
       {
        "ul": [
-        "Listrik tegangan tinggi **bisa membunuh**.",
-        "Kabel tegangan tinggi biasanya berwarna **oranye**.",
-        "Mobil hybrid yang **diam tanpa suara** belum tentu mati. Mesin atau motor bisa tiba-tiba aktif."
+        "**冬用タイヤ** (ふゆようたいや · fuyuyoutaiya) — ban musim dingin",
+        "**スタッドレスタイヤ** (すたっどれすたいや · sutaddoresutaiya) — ban studless"
        ]
       },
       {
-       "h": "Aturan kerja"
+       "h": "Hal. 55 — Kolom 10: mobil bagi orang Jepang"
+      },
+      {
+       "p": "Mobil termasuk tiga belanjaan termahal orang Jepang dan dianggap harta berharga seperti permata. Goresan kecil pada bemper, pintu, atau noda pada jok sangat dihindari. Mobil pelanggan lebih diutamakan daripada mobil sendiri."
+      },
+      {
+       "p": "Saat bekerja: bemper atau pintu yang dilepas tidak boleh diletakkan langsung di tanah — alasi dulu atau taruh di tempat aman. Jangan duduk di jok mobil pelanggan dengan pakaian kotor; pakai pelindung jok. Jangan duduk di mobil pelanggan saat istirahat. Rapikan penampilan."
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 53"
       },
       {
        "ul": [
-        "**Hanya orang yang sudah menjalani pelatihan khusus** yang boleh mengerjakan sistem tegangan tinggi.",
-        "Ikuti buku pedoman: **matikan sistem**, lepas **サービスプラグ**, tunggu sampai kapasitor kosong, pakai **sarung tangan isolasi**.",
-        "Jangan menyentuh kabel oranye atau komponen tegangan tinggi tanpa izin dan pelatihan.",
-        "Jika belum dilatih, **jangan menyentuhnya**. Laporkan ke atasan."
+        "① **オイルパン**",
+        "② **オイルポンプ**",
+        "③ **オイルフィルター** (オイルエレメント)",
+        "④ **クーラント** (冷却水)",
+        "⑤ **ウォーターポンプ**",
+        "⑥ **リザーバータンク**",
+        "⑦ **ラジエーター**",
+        "⑧ **{冷却ファン|れいきゃくふぁん}**",
+        "⑨ **サーモスタット**"
+       ]
+      },
+      {
+       "h": "ページ 54"
+      },
+      {
+       "ul": [
+        "**{冬用タイヤ|ふゆようたいや}**",
+        "**スタッドレスタイヤ**"
+       ]
+      },
+      {
+       "h": "ページ 55"
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 11 istilah Jepang dari buku JICA (hal. 53–55).",
+      "points": [
+       "**オイルパン** = karter oli",
+       "**オイルポンプ** = pompa oli",
+       "**オイルフィルター** = filter oli",
+       "**クーラント** = cairan pendingin",
+       "**ウォーターポンプ** = pompa air"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを11こおぼえます。",
+      "points": [
+       "**オイルパン**",
+       "**オイルポンプ**",
+       "**オイルフィルター**",
+       "**クーラント**",
+       "**ウォーターポンプ**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s5",
+    "no": 5,
+    "title": {
+     "id": "Penerus tenaga dan suspensi",
+     "jp": "{動力伝達装置|どうりょくでんたつそうち}"
+    },
+    "pages": [
+     56,
+     58
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 56 — Penerus tenaga (1)"
+      },
+      {
+       "ul": [
+        "① **FF** (えふえふ · efuefu) — penggerak roda depan (mesin depan); alias/keterangan: フロントエンジン・フロントドライブ",
+        "② **FR** (えふあーる · efuaaru) — mesin depan penggerak roda belakang; alias/keterangan: フロントエンジン・リアドライブ",
+        "③ **4WD** (よんだぶりゅーでぃー · yondaburyuudeぃぃ) — penggerak empat roda; alias/keterangan: 四輪駆動、四駆、AWD",
+        "④ **クラッチ** (くらっち · kuracchi) — kopling",
+        "⑤ **クラッチディスク** (くらっちでぃすく · kuracchideぃsuku) — cakram kopling",
+        "⑥ **クラッチペダル** (くらっちぺだる · kuracchipedaru) — pedal kopling",
+        "⑦ **フライホイール** (ふらいほいーる · furaihoiiru) — roda gila (flywheel)",
+        "⑧ **メインドライブシャフト** (めいんどらいぶしゃふと · meindoraibushafuto) — poros penggerak utama",
+        "⑨ **トランスミッション** (とらんすみっしょん · toransumisshon) — transmisi",
+        "⑩ **マニュアルトランスミッション** (まにゅあるとらんすみっしょん · manyuarutoransumisshon) — transmisi manual",
+        "⑪ **AT** (えーてぃー · eeteぃぃ) — transmisi otomatis; alias/keterangan: オートマチックトランスミッション"
+       ]
+      },
+      {
+       "h": "Hal. 57 — Penerus tenaga (2)"
+      },
+      {
+       "ul": [
+        "⑬ **トルクコンバータ** (とるくこんばーた · torukukonbaata) — konverter torsi",
+        "⑭ **CVT** (しーぶいてぃー · shiibuiteぃぃ) — transmisi variabel kontinu; alias/keterangan: 無段階変速機（Continuously Variable Transmission）",
+        "⑮ **プーリー** (ぷーりー · puurii) — puli",
+        "⑯ **プロペラシャフト** (ぷろぺらしゃふと · puroperashafuto) — poros propeller",
+        "⑰ **ユニバーサルジョイント** (ゆにばーさるじょいんと · yunibaasarujointo) — sambungan universal",
+        "⑱ **ファイナルギア** (ふぁいなるぎあ · fuぁinarugia) — gigi akhir",
+        "⑲ **内輪差** (ないりんさ · nairinsa) — selisih lintasan roda dalam. Keterangan: Selisih lintasan ban depan dan belakang saat berbelok; sisi luar = 外輪差, sisi dalam = 内輪差.",
+        "⑳ **サイドギア** (さいどぎあ · saidogia) — gigi samping",
+        "21. **ピニオン** (ぴにおん · pinion) — pinion",
+        "22. **リングギア** (りんぐぎあ · ringugia) — gigi cincin (ring gear)"
+       ]
+      },
+      {
+       "h": "Hal. 58 — Penerus tenaga (3) dan suspensi"
+      },
+      {
+       "ul": [
+        "26. **ディファレンシャルギア** (でぃふぁれんしゃるぎあ · deぃfuぁrensharugia) — gigi diferensial",
+        "27. **ドライブ・シャフト** (どらいぶしゃふと · doraibu shafuto) — poros penggerak",
+        "28. **フロント・アクスル** (ふろんとあくする · furonto akusuru) — as roda depan",
+        "29. **ハブ** (はぶ · habu) — hub (naf roda)",
+        "30. **ホイール** (ほいーる · hoiiru) — pelek",
+        "31. **タイヤ** (たいや · taiya) — ban",
+        "32. **サスペンション** (さすぺんしょん · sasupenshon) — suspensi",
+        "33. **ストラット型フロント・サスペンション** (すとらっとがたふろんとさすぺんしょん · sutorattogatafuronto sasupenshon) — suspensi depan tipe strut",
+        "34. **ショック・アブソーバー** (しょっくあぶそーばー · shokku abusoobaa) — peredam kejut; alias/keterangan: ショック",
+        "35. **コイル・スプリング** (こいるすぷりんぐ · koiru supuringu) — pegas keong",
+        "36. **ロアー・アーム** (ろあーあーむ · roaa aamu) — lengan bawah",
+        "37. **アッパー・アーム** (あっぱーあーむ · appaa aamu) — lengan atas"
        ]
       }
      ],
      "jp": [
       {
-       "h": "とくちょう"
+       "h": "ページ 56"
       },
       {
        "ul": [
-        "**ハイブリッド{車|しゃ}（HEV）**はエンジンと**モーター**を{使|つか}う。**{電気|でんき}{自動|じどう}{車|くるま}（EV）**はモーターだけ。",
-        "モーターを{動|うご}かす**{高|こう}{電圧|でんあつ}のバッテリ（{数百|すうひゃく}ボルト）**がある。ライトなどのための12Vバッテリもある。",
-        "**{回|かい}{生|せい}ブレーキ**：スピードを{落|お}とすとき、モーターが{発電機|はつでんき}になって、バッテリに{電気|でんき}を{入|い}れる。"
+        "① **FF** (フロントエンジン・フロントドライブ)",
+        "② **FR** (フロントエンジン・リアドライブ)",
+        "③ **4WD** (四輪駆動、四駆、AWD)",
+        "④ **クラッチ**",
+        "⑤ **クラッチディスク**",
+        "⑥ **クラッチペダル**",
+        "⑦ **フライホイール**",
+        "⑧ **メインドライブシャフト**",
+        "⑨ **トランスミッション**",
+        "⑩ **マニュアルトランスミッション**",
+        "⑪ **AT** (オートマチックトランスミッション)"
        ]
       },
       {
-       "h": "きけん"
+       "h": "ページ 57"
       },
       {
        "ul": [
-        "{高|こう}{電圧|でんあつ}は**{命|いのち}にかかわる**。",
-        "{高|こう}{電圧|でんあつ}の{配線|はいせん}は、ふつう**オレンジ{色|いろ}**。",
-        "ハイブリッド{車|しゃ}は、**{音|おと}がしなくても**、{止|と}まっているとはかぎらない。エンジンやモーターが{急|きゅう}に{動|うご}くことがある。"
+        "⑬ **トルクコンバータ**",
+        "⑭ **CVT** (無段階変速機（Continuously Variable Transmission）)",
+        "⑮ **プーリー**",
+        "⑯ **プロペラシャフト**",
+        "⑰ **ユニバーサルジョイント**",
+        "⑱ **ファイナルギア**",
+        "⑲ **{内輪差|ないりんさ}**：外輪差：車で右や左にまがるとき、前のタイヤと後ろのタイヤが通る道のずれ。",
+        "⑳ **サイドギア**",
+        "21. **ピニオン**",
+        "22. **リングギア**"
        ]
       },
       {
-       "h": "{作業|さぎょう}のルール"
+       "h": "ページ 58"
       },
       {
        "ul": [
-        "**{特別|とくべつ}な{教育|きょういく}を{受|う}けた{人|ひと}**だけが、{高|こう}{電圧|でんあつ}の{部分|ぶぶん}の{作業|さぎょう}をする。",
-        "{作業書|さぎょうしょ}どおりに、**システムを{切|き}り**、**サービスプラグ**をはずし、{電気|でんき}がなくなるまで{待|ま}ち、**{絶縁|ぜつえん}{手|て}ぶくろ**を{使|つか}う。",
-        "{許可|きょか}と{教育|きょういく}がなければ、オレンジ{色|いろ}の{配線|はいせん}や{高|こう}{電圧|でんあつ}の{部品|ぶひん}にふれない。",
-        "{教育|きょういく}を{受|う}けていないときは、**さわらない**。{上|うえ}の{人|ひと}に{報告|ほうこく}する。"
+        "26. **ディファレンシャルギア**",
+        "27. **ドライブ・シャフト**",
+        "28. **フロント・アクスル**",
+        "29. **ハブ**",
+        "30. **ホイール**",
+        "31. **タイヤ**",
+        "32. **サスペンション**",
+        "33. **{ストラット型フロント・サスペンション|すとらっとがたふろんとさすぺんしょん}**",
+        "34. **ショック・アブソーバー** (ショック)",
+        "35. **コイル・スプリング**",
+        "36. **ロアー・アーム**",
+        "37. **アッパー・アーム**"
        ]
       }
      ]
     },
     "summary": {
      "id": {
-      "core": "HEV dan EV punya aki tegangan tinggi (beberapa ratus volt), kabel oranye; hanya orang terlatih yang boleh mengerjakan; senyap bukan berarti mati.",
+      "core": "Subbab ini memuat 33 istilah Jepang dari buku JICA (hal. 56–58).",
       "points": [
-       "Kabel oranye = tegangan tinggi.",
-       "Hanya orang terlatih.",
-       "Pakai sarung tangan isolasi.",
-       "回生ブレーキ mengisi aki saat memperlambat."
+       "**FF** = penggerak roda depan (mesin depan)",
+       "**FR** = mesin depan penggerak roda belakang",
+       "**4WD** = penggerak empat roda",
+       "**クラッチ** = kopling",
+       "**クラッチディスク** = cakram kopling"
       ],
       "avoid": [
-       "Menyentuh kabel oranye tanpa pelatihan.",
-       "Mengira mobil hybrid yang senyap pasti mati."
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
       ],
       "exam": [
-       "Warna kabel tegangan tinggi.",
-       "Siapa yang boleh mengerjakan."
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
       ]
      },
      "jp": {
-      "core": "ハイブリッド{車|しゃ}と{電気|でんき}{自動|じどう}{車|くるま}には{高|こう}{電圧|でんあつ}のバッテリがあります。{教育|きょういく}を{受|う}けた{人|ひと}だけが{作業|さぎょう}します。{音|おと}がしなくても{止|と}まっているとはかぎりません。",
+      "core": "このところのことばを33こおぼえます。",
       "points": [
-       "オレンジ{色|いろ}の{配線|はいせん}＝{高|こう}{電圧|でんあつ}。",
-       "{教育|きょういく}を{受|う}けた{人|ひと}だけ。",
-       "{絶縁|ぜつえん}{手|て}ぶくろを{使|つか}う。",
-       "{回|かい}{生|せい}ブレーキは{減速|げんそく}で{充電|じゅうでん}する。"
+       "**FF**",
+       "**FR**",
+       "**4WD**",
+       "**クラッチ**",
+       "**クラッチディスク**"
       ],
       "avoid": [
-       "{教育|きょういく}なしでオレンジ{色|いろ}の{配線|はいせん}にさわること。",
-       "{音|おと}がしないハイブリッド{車|しゃ}を{止|と}まっていると{思|おも}うこと。"
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
       ],
       "exam": [
-       "{高|こう}{電圧|でんあつ}の{配線|はいせん}の{色|いろ}。",
-       "{作業|さぎょう}してよい{人|ひと}。"
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s6",
+    "no": 6,
+    "title": {
+     "id": "Kemudi dan rem",
+     "jp": "ステアリング{装置|そうち}・ブレーキ{装置|そうち}"
+    },
+    "pages": [
+     59,
+     60
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 59 — Kemudi"
+      },
+      {
+       "ul": [
+        "① **ステアリング装置** (すてありんぐそうち · sutearingusouchi) — sistem kemudi",
+        "② **ステアリング・ホイール** (すてありんぐほいーる · sutearingu hoiiru) — roda kemudi (setir); alias/keterangan: ハンドル",
+        "③ **パワステ** (ぱわすて · pawasute) — power steering; alias/keterangan: パワーステアリング・システム"
+       ]
+      },
+      {
+       "h": "Hal. 60 — Rem"
+      },
+      {
+       "ul": [
+        "① **ブレーキ装置** (ぶれーきそうち · bureekisouchi) — sistem rem; alias/keterangan: 制動装置",
+        "② **ブレーキ・ペダル** (ぶれーきぺだる · bureeki pedaru) — pedal rem; alias/keterangan: フット・ペダル",
+        "③ **マスター・シリンダ** (ますたーしりんだ · masutaa shirinda) — master silinder; alias/keterangan: ブレーキ・マスターシリンダ",
+        "④ **ブレーキ・ホース** (ぶれーきほーす · bureeki hoosu) — selang rem",
+        "⑤ **ドラム・ブレーキ** (どらむぶれーき · doramu bureeki) — rem tromol",
+        "⑥ **ブレーキ・ホイール・シリンダー** (ぶれーきほいーるしりんだー · bureeki hoiiru shirindaa) — silinder roda rem",
+        "⑦ **ブレーキ・シュー** (ぶれーきしゅー · bureeki shuu) — sepatu rem; alias/keterangan: ブレーキ・ライニング",
+        "⑧ **ブレーキ・ドラム** (ぶれーきどらむ · bureeki doramu) — tromol rem",
+        "⑨ **ディスクブレーキ** (でぃすくぶれーき · deぃsukubureeki) — rem cakram",
+        "⑩ **ブレーキパッド** (ぶれーきぱっど · bureekipaddo) — kampas rem cakram",
+        "⑪ **ブレーキ・キャリパー** (ぶれーききゃりぱー · bureeki kyaripaa) — kaliper rem",
+        "⑫ **ブレーキ・ピストン** (ぶれーきぴすとん · bureeki pisuton) — piston rem"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 59"
+      },
+      {
+       "ul": [
+        "① **{ステアリング装置|すてありんぐそうち}**",
+        "② **ステアリング・ホイール** (ハンドル)",
+        "③ **パワステ** (パワーステアリング・システム)"
+       ]
+      },
+      {
+       "h": "ページ 60"
+      },
+      {
+       "ul": [
+        "① **{ブレーキ装置|ぶれーきそうち}** (制動装置)",
+        "② **ブレーキ・ペダル** (フット・ペダル)",
+        "③ **マスター・シリンダ** (ブレーキ・マスターシリンダ)",
+        "④ **ブレーキ・ホース**",
+        "⑤ **ドラム・ブレーキ**",
+        "⑥ **ブレーキ・ホイール・シリンダー**",
+        "⑦ **ブレーキ・シュー** (ブレーキ・ライニング)",
+        "⑧ **ブレーキ・ドラム**",
+        "⑨ **ディスクブレーキ**",
+        "⑩ **ブレーキパッド**",
+        "⑪ **ブレーキ・キャリパー**",
+        "⑫ **ブレーキ・ピストン**"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 15 istilah Jepang dari buku JICA (hal. 59–60).",
+      "points": [
+       "**ステアリング装置** = sistem kemudi",
+       "**ステアリング・ホイール** = roda kemudi (setir)",
+       "**パワステ** = power steering",
+       "**ブレーキ装置** = sistem rem",
+       "**ブレーキ・ペダル** = pedal rem"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを15こおぼえます。",
+      "points": [
+       "**{ステアリング装置|すてありんぐそうち}**",
+       "**ステアリング・ホイール**",
+       "**パワステ**",
+       "**{ブレーキ装置|ぶれーきそうち}**",
+       "**ブレーキ・ペダル**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s7",
+    "no": 7,
+    "title": {
+     "id": "Kelistrikan, rangka, dan bodi",
+     "jp": "{電気装置|でんきそうち}・フレーム・ボディ"
+    },
+    "pages": [
+     61,
+     63
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 61 — Kelistrikan"
+      },
+      {
+       "ul": [
+        "① **ワイヤーハーネス** (わいやーはーねす · waiyaahaanesu) — rangkaian kabel (wire harness)",
+        "② **O2センサー** (おーつーせんさー · ootsuusensaa) — sensor oksigen (O2). Keterangan: Dipasang di manifold buang untuk mengukur oksigen.",
+        "③ **触媒コンバータ** (しょくばいこんばーた · shokubaikonbaata) — konverter katalis. Keterangan: Menghilangkan NOx, HC, dan CO yang beracun.",
+        "④ **スターターモーター** (すたーたーもーたー · sutaataamootaa) — motor starter",
+        "⑤ **オルタネーター** (おるたねーたー · orutaneetaa) — alternator; alias/keterangan: オルタネータ",
+        "⑥ **バッテリー** (ばってりー · batterii) — aki"
+       ]
+      },
+      {
+       "h": "Hal. 62 — Rangka dan bodi (1)"
+      },
+      {
+       "ul": [
+        "① **ラダーフレーム** (らだーふれーむ · radaafureemu) — rangka tangga. Keterangan: Kabin diletakkan di atas rangka; dipakai pada truk dan bus.",
+        "② **モノコックボディ** (ものこっくぼでぃ · monokokkubodeぃ) — bodi monokok. Keterangan: Rangka dan kabin menyatu; lebih kuat dan ringan.",
+        "③ **バンパー** (ばんぱー · banpaa) — bemper",
+        "④ **ドアミラー** (どあみらー · doamiraa) — spion pintu",
+        "⑤ **ワイパー** (わいぱー · waipaa) — wiper; alias/keterangan: ウィンド・シールド・ワイパ",
+        "⑥ **ワイパーブレード** (わいぱーぶれーど · waipaabureedo) — bilah wiper",
+        "⑦ **ワイパーアーム** (わいぱーあーむ · waipaaaamu) — lengan wiper",
+        "⑧ **ウィンドウォッシャー** (うぃんどうぉっしゃー · uぃndouぉsshaa) — penyemprot kaca"
+       ]
+      },
+      {
+       "h": "Hal. 63 — Rangka dan bodi (2)"
+      },
+      {
+       "ul": [
+        "⑨ **シート** (しーと · shiito) — jok",
+        "⑩ **メーター** (めーたー · meetaa) — panel instrumen",
+        "⑪ **インパネ** (いんぱね · inpane) — dasbor (singkatan); alias/keterangan: インストールメント・パネル",
+        "⑫ **サンバイザー** (さんばいざー · sanbaizaa) — pelindung silau",
+        "⑬ **ルーム・ミラー** (るーむみらー · ruumu miraa) — spion tengah; alias/keterangan: バック・ミラー",
+        "⑭ **エアバッグ** (えあばっぐ · eabaggu) — kantong udara",
+        "⑮ **シートベルト** (しーとべると · shiitoberuto) — sabuk pengaman"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 61"
+      },
+      {
+       "ul": [
+        "① **ワイヤーハーネス**",
+        "② **O2センサー**：エキゾーストマニホールドにとりつけられ、さんそをはかります。",
+        "③ **{触媒コンバータ|しょくばいこんばーた}**：有毒なNOx、HC、COをとりのぞく",
+        "④ **スターターモーター**",
+        "⑤ **オルタネーター** (オルタネータ)",
+        "⑥ **バッテリー**"
+       ]
+      },
+      {
+       "h": "ページ 62"
+      },
+      {
+       "ul": [
+        "① **ラダーフレーム**：キャビン（人や荷物をのせる場所）をのせる。トラックやバスに使う。",
+        "② **モノコックボディ**：フレームとキャビンをくっつけた形で、より強く、より軽い。",
+        "③ **バンパー**",
+        "④ **ドアミラー**",
+        "⑤ **ワイパー** (ウィンド・シールド・ワイパ)",
+        "⑥ **ワイパーブレード**",
+        "⑦ **ワイパーアーム**",
+        "⑧ **ウィンドウォッシャー**"
+       ]
+      },
+      {
+       "h": "ページ 63"
+      },
+      {
+       "ul": [
+        "⑨ **シート**",
+        "⑩ **メーター**",
+        "⑪ **インパネ** (インストールメント・パネル)",
+        "⑫ **サンバイザー**",
+        "⑬ **ルーム・ミラー** (バック・ミラー)",
+        "⑭ **エアバッグ**",
+        "⑮ **シートベルト**"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 21 istilah Jepang dari buku JICA (hal. 61–63).",
+      "points": [
+       "**ワイヤーハーネス** = rangkaian kabel (wire harness)",
+       "**O2センサー** = sensor oksigen (O2)",
+       "**触媒コンバータ** = konverter katalis",
+       "**スターターモーター** = motor starter",
+       "**オルタネーター** = alternator"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを21こおぼえます。",
+      "points": [
+       "**ワイヤーハーネス**",
+       "**O2センサー**",
+       "**{触媒コンバータ|しょくばいこんばーた}**",
+       "**スターターモーター**",
+       "**オルタネーター**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
+      ]
+     }
+    }
+   },
+   {
+    "id": "b4s8",
+    "no": 8,
+    "title": {
+     "id": "Aplikasi dan pembuangan limbah",
+     "jp": "{応用編|おうようへん}・ゴミのすてかた"
+    },
+    "pages": [
+     65,
+     66
+    ],
+    "full": {
+     "id": [
+      {
+       "h": "Hal. 65 — Aplikasi: kendaraan ramah lingkungan"
+      },
+      {
+       "p": "Bagian lanjutan: video \"Belajar dengan Video – Kendaraan Berteknologi Maju dan Ramah Lingkungan\" (dengan subtitle Indonesia)."
+      },
+      {
+       "h": "Hal. 66 — Kolom 11: cara membuang sampah di bengkel"
+      },
+      {
+       "p": "Di bengkel Jepang sampah dipisah rinci menurut hukum: oli, coolant, plastik, besi bekas, logam langka, ban, aki, sampah bakar, sampah tak terbakar, dan lainnya. Coolant mengandung zat beracun (etilen glikol); pernah terjadi ledakan pabrik karena oli dicampur bahan bakar."
+      },
+      {
+       "p": "Dengarkan petunjuk senior dan pembimbing. Jika tidak mengerti, katakan 分かりません dan minta: もういちど、せつめいおねがいします / 書いてください. Jangan menjawab 分かりました jika belum paham — salah membuang bisa menyebabkan kecelakaan besar."
+      },
+      {
+       "ul": [
+        "**分かりません** (わかりません · wakarimasen) — saya tidak mengerti",
+        "**もういちど、せつめいおねがいします** (もういちど、せつめいおねがいします · mouichido、setsumeionegaishimasu) — tolong jelaskan sekali lagi",
+        "**書いてください** (かいてください · kaitekudasai) — tolong tuliskan"
+       ]
+      }
+     ],
+     "jp": [
+      {
+       "h": "ページ 65"
+      },
+      {
+       "h": "ページ 66"
+      },
+      {
+       "ul": [
+        "**{分かりません|わかりません}**",
+        "**もういちど、せつめいおねがいします**",
+        "**{書いてください|かいてください}**"
+       ]
+      }
+     ]
+    },
+    "summary": {
+     "id": {
+      "core": "Subbab ini memuat 3 istilah Jepang dari buku JICA (hal. 65–66).",
+      "points": [
+       "**分かりません** = saya tidak mengerti",
+       "**もういちど、せつめいおねがいします** = tolong jelaskan sekali lagi",
+       "**書いてください** = tolong tuliskan"
+      ],
+      "avoid": [
+       "Nama bisa berbeda di tiap bengkel/daerah — tanyakan juga ke rekan kerja."
+      ],
+      "exam": [
+       "Menyebutkan nama Jepang dari bagian/alat/pekerjaan yang ditunjukkan."
+      ]
+     },
+     "jp": {
+      "core": "このところのことばを3こおぼえます。",
+      "points": [
+       "**{分かりません|わかりません}**",
+       "**もういちど、せつめいおねがいします**",
+       "**{書いてください|かいてください}**"
+      ],
+      "avoid": [
+       "{工場|こうじょう}によって{言|い}い{方|かた}がちがうことがあります。"
+      ],
+      "exam": [
+       "{名前|なまえ}を{日本語|にほんご}で{言|い}います。"
       ]
      }
     }

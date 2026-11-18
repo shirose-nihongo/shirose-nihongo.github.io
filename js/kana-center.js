@@ -662,6 +662,11 @@ const KC = window.KC = {
     const no = 100000 + (Number.isFinite(it.no) ? it.no : idx + 1);   // jauh dari nomor kanji agar progres tidak bentrok
     openWriter({ kind: "kanji", entry: { kanji: kata, kana: it.kana || it.f || "", arti: it.arti || it.a || "" }, level: st.level, no, tab: tab || "latihan", list: null });
   },
+  async openVocab(kata, kana, arti, no, tab) {   // latihan menulis kosakata contoh Kanji (N3): tiap karakter berurutan
+    await ensureProgress(); await loadKana().catch(() => {});
+    if (!writableChars(kata).some(c => c.codePointAt(0) >= 0x3400)) { toast("Kata ini tidak berisi kanji"); return; }
+    openWriter({ kind: "kanji", entry: { kanji: kata, kana: kana || "", arti: arti || "" }, level: S().level, no, tab: tab || "latihan", list: null });
+  },
   close() { closeWriter(); },
   step(d) {
     if (!WS || !WS.list) return;
