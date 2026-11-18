@@ -8,14 +8,10 @@ import { H } from "./character-more.js";
 const { build, SK } = H;
 
 /* ---------- profil lebar (skala X terhadap sumbu x=200) per tinggi y ---------- */
-<<<<<<< Updated upstream
-const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [204, .67], [222, .76], [240, .82], [262, .65], [284, .54], [310, .72], [334, .87], [352, .91], [390, .87], [999, .83]];
-=======
-const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [198, .6], [208, .6], [218, .68], [230, .82], [242, .93], [262, .74], [284, .62], [310, .82], [334, 1.0], [352, 1.05], [390, .99], [999, .93]];
->>>>>>> Stashed changes
+const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [198, .6], [208, .62], [222, .72], [240, .82], [262, .65], [284, .54], [310, .72], [334, .87], [352, .91], [390, .87], [999, .83]];
 const fy = (y) => { for (let i = 1; i < PROF.length; i++) if (y <= PROF[i][0]) { const [y0, f0] = PROF[i - 1], [y1, f1] = PROF[i]; return f0 + (f1 - f0) * (y - y0) / (y1 - y0); } return 1; };
 const wx = (x, y) => {   // lengan (jauh dari sumbu) ikut lebih sedikit supaya tidak menyusut ke badan
-  const f = fy(y), k = Math.min(1, Math.max(0, (y - 250) / 40)), dx = Math.abs(x - 200), t = Math.min(1, Math.max(0, (dx - 58) / 30));
+  const f = fy(y), k = Math.min(1, Math.max(0, (y - 235) / 80)), dx = Math.abs(x - 200), t = Math.min(1, Math.max(0, (dx - 58) / 30));
   return 200 + (x - 200) * (f * (1 - t) + (f * (1 - k) + .9 * k) * t);
 };
 const r2 = (n) => Math.round(n * 10) / 10;
