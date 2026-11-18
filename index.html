@@ -1398,7 +1398,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/shirose-extra.css?v=20261116m"/>
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
-<link rel="stylesheet" href="./css/ssw.css?v=20261118p"/>
+<link rel="stylesheet" href="./css/ssw.css?v=20261118r"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261116c"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261114f"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261117a"/>
@@ -2389,11 +2389,12 @@ window.sswCharaPanel = function(){
 };
 window.sswCharaOpen = function(){
   if (document.getElementById("sw-chara-ov")) return;
-  const nama = state.siswa?.nama || "Tamu";
+  const eq = state.siswa?.karakter?.equipped || DEFAULT_EQUIPPED;
+  const skin = state.siswa?.karakter?.skinTone || "light";
+  const chara = renderCharacter(eq, skin, { hairColor: state.siswa?.karakter?.hairColor });
   const d = document.createElement("div"); d.id = "sw-chara-ov";
-  d.innerHTML = `<div class="sco-box"><button class="sco-x" onclick="closeTopOverlay()" aria-label="Tutup">✕</button>${_sscStage(true)}<div class="sc-name big">${nama} · Lv ${state.gami.level_karakter} · ${state.gami.koin} 🪙</div>
-    <div class="sc-row"><button class="btn" onclick="sswGo('shop')">🛒 Shop</button>${GACHA_ON ? `<button class="btn gold" onclick="sswGo('gacha')">🎰 Gacha</button>` : ""}<button class="btn ghost" onclick="closeTopOverlay()">Tutup</button></div></div>`;
-  d.addEventListener("click", e => { if (e.target === d) d.remove(); });
+  d.innerHTML = `<button class="sco-x" onclick="closeTopOverlay()" aria-label="Tutup">✕</button><div class="sco-chara">${chara}</div>`;
+  d.addEventListener("click", () => d.remove());
   document.body.appendChild(d);
 };
 window.__gachaOn = GACHA_ON;
