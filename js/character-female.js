@@ -8,7 +8,7 @@ import { H } from "./character-more.js";
 const { build, SK } = H;
 
 /* ---------- profil lebar (skala X terhadap sumbu x=200) per tinggi y ---------- */
-const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [204, .7], [238, .8], [272, .62], [306, .78], [336, .9], [380, .85], [999, .85]];
+const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [204, .68], [236, .8], [268, .58], [292, .58], [312, .72], [336, .9], [380, .85], [999, .85]];
 const fy = (y) => { for (let i = 1; i < PROF.length; i++) if (y <= PROF[i][0]) { const [y0, f0] = PROF[i - 1], [y1, f1] = PROF[i]; return f0 + (f1 - f0) * (y - y0) / (y1 - y0); } return 1; };
 const wx = (x, y) => 200 + (x - 200) * fy(y);
 const r2 = (n) => Math.round(n * 10) / 10;
@@ -61,9 +61,7 @@ export const femFace = (blush = "#f4a3b5") => `<g data-slot="wajah-cewek">
   <path d="M168 110 Q177 106 186 110 M214 110 Q223 106 232 110" stroke="#4a2c17" stroke-width="2" fill="none" stroke-linecap="round"/>
   <ellipse cx="166" cy="149" rx="8" ry="4.5" fill="${blush}" opacity=".45"/><ellipse cx="234" cy="149" rx="8" ry="4.5" fill="${blush}" opacity=".45"/>
   <path d="M192 158 Q200 167 208 158 Q200 161 192 158Z" fill="#e0607e"/></g>`;
-export const femBust = `<g data-slot="dada" fill="none" stroke-linecap="round">
-  <path d="M168 248 Q183 268 198 250" stroke="#000" stroke-opacity=".13" stroke-width="2.4"/><path d="M202 250 Q217 268 232 248" stroke="#000" stroke-opacity=".13" stroke-width="2.4"/>
-  <path d="M172 244 Q181 249 189 246" stroke="#fff" stroke-opacity=".22" stroke-width="2"/><path d="M211 246 Q219 249 228 244" stroke="#fff" stroke-opacity=".22" stroke-width="2"/></g>`;
+export const femBust = "";   // tanpa garis dada — lekuk badan cukup dari siluet
 
 /* ---------- RAMBUT ---------- */
 const cap = (c) => `<path d="M146 152 Q138 58 200 53 Q262 58 254 152 L246 152 L246 103 Q200 110 154 103 L154 152Z" fill="${c}"/><path d="M164 100 Q200 106 236 100" stroke="#fff" stroke-opacity=".14" stroke-width="2" fill="none"/>`;
