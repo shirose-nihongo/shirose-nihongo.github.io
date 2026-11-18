@@ -8,7 +8,7 @@ import { H } from "./character-more.js";
 const { build, SK } = H;
 
 /* ---------- profil lebar (skala X terhadap sumbu x=200) per tinggi y ---------- */
-const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [198, .6], [208, .62], [222, .72], [240, .82], [262, .65], [284, .54], [310, .72], [334, .87], [352, .91], [390, .87], [999, .83]];
+const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [198, .6], [208, .62], [222, .72], [240, .8], [262, .62], [284, .5], [310, .66], [334, .79], [352, .83], [390, .78], [999, .75]];
 const fy = (y) => { for (let i = 1; i < PROF.length; i++) if (y <= PROF[i][0]) { const [y0, f0] = PROF[i - 1], [y1, f1] = PROF[i]; return f0 + (f1 - f0) * (y - y0) / (y1 - y0); } return 1; };
 const wx = (x, y) => {   // lengan (jauh dari sumbu) ikut lebih sedikit supaya tidak menyusut ke badan
   const f = fy(y), k = Math.min(1, Math.max(0, (y - 235) / 80)), dx = Math.abs(x - 200), t = Math.min(1, Math.max(0, (dx - 58) / 30));
