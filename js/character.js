@@ -917,7 +917,10 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   let base = baseBody(skinKey);
   // Celana (kategori baru) digambar di bawah baju: disisipkan sebelum grup pakaian bawaan
   const celanaSvg = (eq.celana && eq.celana !== "none" && CELANA[eq.celana]?.svg) ? `<g data-slot="celana">${CELANA[eq.celana].svg()}</g>` : "";
-  if (celanaSvg) base = base.replace("<!--@C-->", celanaSvg);
+  let celanaOverlay = "";
+  const femC = (opts.body || _body) === "female";
+  if (celanaSvg && femC) celanaOverlay = `<g data-slot="celana-overlay" transform="translate(200 0) scale(1.15 1) translate(-200 0)">${celanaSvg}</g>`;   // cewek: bawahan digambar DI ATAS baju (tidak tertutup)
+  else if (celanaSvg) base = base.replace("<!--@C-->", celanaSvg);
   // Sayap (baru) — di belakang badan, setelah aura
   const sayapSvg = (eq.sayap && eq.sayap !== "none" && SAYAP[eq.sayap]?.svg) ? `<g data-slot="sayap">${SAYAP[eq.sayap].svg()}</g>` : "";
 
@@ -962,7 +965,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   if (eq.jepit && eq.jepit !== "none" && CATALOG.jepit?.[eq.jepit]?.svg) jepitSvg = `<g data-slot="jepit">${CATALOG.jepit[eq.jepit].svg()}</g>`;
   if (eq.anting && eq.anting !== "none" && CATALOG.anting?.[eq.anting]?.svg) antingSvg = `<g data-slot="anting">${CATALOG.anting[eq.anting].svg()}</g>`;
   const skinC = (SKIN_TONES[skinKey] || SKIN_TONES.light).skin;
-  if (skinC !== SKIN_TONES.light.skin) { const fix = (x) => x ? x.split("#f5d4b3").join(skinC) : x; base = fix(base); pakaianOverlay = fix(pakaianOverlay); sepatuOverlay = fix(sepatuOverlay); }
+  if (skinC !== SKIN_TONES.light.skin) { const fix = (x) => x ? x.split("#f5d4b3").join(skinC) : x; base = fix(base); pakaianOverlay = fix(pakaianOverlay); sepatuOverlay = fix(sepatuOverlay); celanaOverlay = fix(celanaOverlay); }
 
   const bigHand = (x) => x ? x.replace(/<circle cx="(123|277)" cy="325" r="11"/g, '<circle cx="$1" cy="325" r="14"') : x;
   base = bigHand(base); pakaianOverlay = bigHand(pakaianOverlay);
@@ -971,7 +974,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     const hem = (x) => x ? x.split("L270 345 L130 345").join("L262 334 L138 334") : x;   // baju cewek berhenti di pinggang, tidak longgar sampai pinggul
     base = hem(base); pakaianOverlay = hem(pakaianOverlay);
     base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, "");
-    sepatuOverlay = femWarp(sepatuOverlay);
+    sepatuOverlay = femWarp(sepatuOverlay); celanaOverlay = femWarp(celanaOverlay);
     base = femWarp(base); pakaianOverlay = femWarp(pakaianOverlay); hairSvg = femWarp(hairSvg); aksesoriSvg = femWarp(aksesoriSvg);
     jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
     femFaceSvg = femFace(); femBustSvg = femBust;
@@ -983,6 +986,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
       ${base}
       ${femFaceSvg}
       ${pakaianOverlay}
+      ${celanaOverlay}
       ${femBustSvg}
       ${sepatuOverlay}
       ${hairSvg}
@@ -1010,7 +1014,7 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118f";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118g";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);

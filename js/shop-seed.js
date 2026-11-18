@@ -1,5 +1,5 @@
 /* Shop items that match character.js CATALOG. Seeded at runtime. */
-import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261118s";
+import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261118t";
 
 export function allShopItems(termasukGacha = false) {
   const out = [];
