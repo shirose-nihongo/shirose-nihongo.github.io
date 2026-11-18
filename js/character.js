@@ -864,6 +864,8 @@ export const CATALOG_LABELS = {
   aura: "Aura",
   celana: "Celana",
   sayap: "Sayap",
+  jepit: "Jepit Rambut",
+  anting: "Anting",
 };
 
 /* ====== Default equipped state (botak, kaos putih + celana putih polos, sepatu standar) ====== */
@@ -876,7 +878,15 @@ export const DEFAULT_EQUIPPED = {
   aura: "none",
   celana: "none",
   sayap: "none",
+  jepit: "none",
+  anting: "none",
 };
+
+/* ====== Tipe badan: "male" (default) | "female" — disimpan di perangkat + akun ====== */
+let _body = "male";
+try { _body = localStorage.getItem("shirose_body") === "female" ? "female" : "male"; } catch (e) {}
+export const getBody = () => _body;
+export function setBody(b) { _body = b === "female" ? "female" : "male"; try { localStorage.setItem("shirose_body", _body); } catch (e) {} return _body; }
 
 /* ====== Render the full character given equipped state ====== */
 
@@ -898,6 +908,7 @@ function flatten2D(svg) {
 
 export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const eq = { ...DEFAULT_EQUIPPED, ...equipped };
+  const fem = (opts.body || _body) === "female";
 
   const auraSvg = (eq.aura && eq.aura !== "none" && AURAS[eq.aura]?.svg) ? AURAS[eq.aura].svg() : "";
 
@@ -941,16 +952,33 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     else handheldSvg = `<g data-slot="item_tangan">${hItem.svg()}</g>`;
   }
 
+  // Jepit & anting (slot baru)
+  let jepitSvg = "", antingSvg = "";
+  if (eq.jepit && eq.jepit !== "none" && CATALOG.jepit?.[eq.jepit]?.svg) jepitSvg = `<g data-slot="jepit">${CATALOG.jepit[eq.jepit].svg()}</g>`;
+  if (eq.anting && eq.anting !== "none" && CATALOG.anting?.[eq.anting]?.svg) antingSvg = `<g data-slot="anting">${CATALOG.anting[eq.anting].svg()}</g>`;
+  const skinC = (SKIN_TONES[skinKey] || SKIN_TONES.light).skin;
+  if (skinC !== SKIN_TONES.light.skin) { const fix = (x) => x ? x.split("#f5d4b3").join(skinC) : x; base = fix(base); pakaianOverlay = fix(pakaianOverlay); sepatuOverlay = fix(sepatuOverlay); }
+
   const bigHand = (x) => x ? x.replace(/<circle cx="(123|277)" cy="325" r="11"/g, '<circle cx="$1" cy="325" r="14"') : x;
   base = bigHand(base); pakaianOverlay = bigHand(pakaianOverlay);
+  let femFaceSvg = "", femBustSvg = "";
+  if (fem) {
+    base = femWarp(base); pakaianOverlay = femWarp(pakaianOverlay); hairSvg = femWarp(hairSvg); aksesoriSvg = femWarp(aksesoriSvg);
+    jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
+    femFaceSvg = femFace(); femBustSvg = femBust;
+  }
   return flatten2D(`
     <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
       ${sayapSvg}
       ${base}
+      ${femFaceSvg}
       ${pakaianOverlay}
+      ${femBustSvg}
       ${sepatuOverlay}
       ${hairSvg}
+      ${jepitSvg}
+      ${antingSvg}
       ${aksesoriSvg}
       ${handheldSvg}
     </svg>
@@ -973,11 +1001,13 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
+import { extendFemale, femWarp, femFace, femBust } from "./character-female.js?v=20261118a";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
+extendFemale(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
-CATALOG.celana = CELANA; CATALOG.sayap = SAYAP;
+CATALOG.celana = CELANA; CATALOG.sayap = SAYAP; CATALOG.jepit = __X.JEPIT; CATALOG.anting = __X.ANTING;
 
 /* ====== Penyesuaian harga (Nov 2026): item termahal = 25.000 🪙, sisanya turun mengikuti.
    Kurva pangkat 0,6 — urutan harga lama tetap terjaga. Mythic juga maksimal 25.000. Berjalan sekali per item (_rp). ====== */

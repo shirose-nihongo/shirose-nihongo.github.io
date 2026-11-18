@@ -480,6 +480,11 @@ export async function beliItem(kategori, itemId, harga, level) {
   currentSiswaDoc.karakter.inventory = inv;
   return { newKoin: gami.koin, unlimited };
 }
+export async function setBodyType(b) {
+  if (!currentUser) return;
+  await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.body": b });
+  if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.body = b;
+}
 export async function equipItem(kategori, itemId) {
   if (!currentUser) return;
   const eq = currentSiswaDoc.karakter.equipped || {};
@@ -1710,7 +1715,7 @@ export async function saveSaveData(ui = {}) {
   snaps.forEach((s, i) => { if (s && s.exists()) { const d = s.data(); const lv = d.level_karakter || 1; mx = Math.max(mx, lv); gami[WALLET_LVLS[i]] = { xp: d.xp || 0, level_karakter: lv, streak: d.streak || 0 }; } });
   const sd = currentSiswaDoc || {}, k = sd.karakter || {};
   const data = { savedAt: Date.now(), ts: serverTimestamp(), levelAkun: mx, gami,
-    karakter: { equipped: k.equipped || {}, inventory: k.inventory || [], skinTone: k.skinTone || null, hairColor: k.hairColor || null }, ui };
+    karakter: { equipped: k.equipped || {}, inventory: k.inventory || [], skinTone: k.skinTone || null, hairColor: k.hairColor || null, body: k.body || null }, ui };
   await setDoc(doc(db, "siswa", uid, "save", "main"), data);
   _lvSet(mx);
   return { ...data, ts: null };

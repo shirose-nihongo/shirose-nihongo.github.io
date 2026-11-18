@@ -406,6 +406,7 @@ html{overflow-x:hidden;}
 }
 @media (max-width:860px){ .shop-preview{position:relative; top:auto;} }
 
+.shop-body-pick{display:flex;gap:8px;align-items:center;margin:0 0 10px;font-size:14px;color:var(--gray);flex-wrap:wrap}
 .shop-char{
   width:100%; aspect-ratio:7/10; max-height:380px;
   display:flex; align-items:center; justify-content:center;
@@ -1458,7 +1459,7 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js?v=20261118q";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody } from "./js/character.js?v=20261118r";
 import { allShopItems } from "./js/shop-seed.js?v=20261116m";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
@@ -4958,7 +4959,9 @@ async function renderShop(){
     { key: "aksesori",    label: "🎩 Aksesori" },
     { key: "item_tangan", label: "⚔️ Senjata" },
     { key: "aura",        label: "✨ Aura" },
-    { key: "celana",      label: "👖 Celana" },
+    { key: "celana",      label: "👖 Celana / Rok" },
+    { key: "jepit",       label: "📎 Jepit Rambut" },
+    { key: "anting",      label: "💎 Anting" },
     { key: "sayap",       label: "🪽 Sayap (Epic+)" },
   ];
   const activeCat = state._shopCat && CAT_TABS.some(t => t.key === state._shopCat) ? state._shopCat : "rambut";
@@ -4978,21 +4981,29 @@ async function renderShop(){
   const eq = state.siswa?.karakter?.equipped || {};
   const skin = state.siswa?.karakter?.skinTone || "light";
   const hairColor = state.siswa?.karakter?.hairColor;
+  const body = getBody();
+  // Pilihan "Tidak memakai" (kosongkan slot) — selalu tersedia di tiap kategori
+  const NONE_MAP = { rambut: null, pakaian: "seragam_default", sepatu: "shoes_default" };
+  const noneId = activeCat in NONE_MAP ? NONE_MAP[activeCat] : "none", NK = "__none";
+  const noneLabel = { rambut: "Botak (tanpa rambut)", pakaian: "Tanpa baju tambahan (kaos polos)", sepatu: "Sepatu polos bawaan", celana: "Tanpa celana / rok", sayap: "Tanpa sayap", item_tangan: "Tangan kosong" }[activeCat] || "Tidak memakai";
+  const noneItem = { kategori: activeCat, id: NK, nama: "🚫 " + noneLabel, harga: 0, rarity: null, unlock_lv: 0, none: true };
+  const noneEquipped = (eq[activeCat] ?? null) === noneId || (noneId === null && !eq[activeCat]) || (activeCat === "pakaian" && !eq.pakaian) || (activeCat === "sepatu" && !eq.sepatu) || (noneId === "none" && !eq[activeCat]);
+  const eqVal = (id) => id === NK ? noneId : id;
 
   // Per-category preview: user's choice, or equipped, or first available.
   const prevKey = `shopPrev_${activeCat}`;
-  const preview = state[prevKey] && items.some(it => it.id === state[prevKey])
+  const preview = state[prevKey] && (state[prevKey] === NK || items.some(it => it.id === state[prevKey]))
     ? state[prevKey]
     : (items.some(it => it.id === eq[activeCat]) ? eq[activeCat] : (items[0]?.id || null));
   state[prevKey] = preview;
 
   // Character with the previewed slot swapped in
-  const previewEq = { ...DEFAULT_EQUIPPED, ...eq, [activeCat]: preview };
+  const previewEq = { ...DEFAULT_EQUIPPED, ...eq, [activeCat]: eqVal(preview) };
   const charaSvg = renderCharacter(previewEq, skin, { hairColor, wstate: "showcase" });
 
-  const previewItem = items.find(it => it.id === preview);
-  const isOwned = preview && inv.includes(preview);
-  const isEquipped = eq[activeCat] === preview;
+  const previewItem = preview === NK ? noneItem : items.find(it => it.id === preview);
+  const isOwned = preview && (preview === NK || inv.includes(preview));
+  const isEquipped = preview === NK ? noneEquipped : eq[activeCat] === preview;
   const locked = previewItem && !isOwned && state.gami.level_karakter < previewItem.unlock_lv;
   const unlimitedCoins = FB.hasUnlimitedCoins && FB.hasUnlimitedCoins();
   const canAfford = unlimitedCoins || (state.gami.koin || 0) >= (previewItem?.harga || 0);
@@ -5023,7 +5034,7 @@ async function renderShop(){
 
   // Thumbnail for each item (character SVG with just that slot populated)
   const _tc = (window.__thumbCache = window.__thumbCache || new Map());
-  const thumbFor = (it) => { const ck = activeCat + "|" + it.id + "|" + skin + "|" + (hairColor || ""); let v = _tc.get(ck); if (v === undefined) { v = renderCharacter({ ...DEFAULT_EQUIPPED, [activeCat]: it.id }, skin, { hairColor, wide: true }); if (_tc.size > 600) _tc.clear(); _tc.set(ck, v); } return v; };
+  const thumbFor = (it) => { const ck = activeCat + "|" + it.id + "|" + skin + "|" + body + "|" + (hairColor || ""); let v = _tc.get(ck); if (v === undefined) { v = renderCharacter({ ...DEFAULT_EQUIPPED, [activeCat]: eqVal(it.id) }, skin, { hairColor, wide: true, body }); if (_tc.size > 600) _tc.clear(); _tc.set(ck, v); } return v; };
 
   const tabHtml = CAT_TABS.map(t => `
     <button class="shop-tab ${activeCat===t.key?'on':''}" onclick="shopSetCat('${t.key}')">${t.label}</button>
@@ -5036,6 +5047,11 @@ async function renderShop(){
         Pilih item, lihat di karakter, lalu klik <b>BELI</b>. Pembelian hanya memotong coin setelah konfirmasi.
       </p>
 
+      <div class="shop-body-pick">
+        <span>Karakter:</span>
+        <button class="shop-rchip ${body==='male'?'on':''}" onclick="shopSetBody('male')">♂ Cowok</button>
+        <button class="shop-rchip ${body==='female'?'on':''}" onclick="shopSetBody('female')">♀ Cewek</button>
+      </div>
       <div class="shop-tabs">${tabHtml}</div>
 
       <div class="shop-layout">
@@ -5061,8 +5077,8 @@ async function renderShop(){
           ${items.length ? `
             ${(() => {
               const tile = (it) => {
-                const owned = inv.includes(it.id);
-                const equipped = eq[activeCat] === it.id;
+                const owned = it.none || inv.includes(it.id);
+                const equipped = it.none ? noneEquipped : eq[activeCat] === it.id;
                 const locked = !owned && state.gami.level_karakter < it.unlock_lv;   // item yang sudah dimiliki tidak terkunci level
                 const selected = it.id === preview;
                 return `
@@ -5071,7 +5087,7 @@ async function renderShop(){
                     <div class="shop-tile-thumb">${thumbFor(it)}</div>
                     <div class="shop-tile-name">${it.nama}</div>
                     <div class="shop-tile-price">
-                      ${equipped ? "✓ Dipakai" : owned ? "Dimiliki · bisa dipakai" : locked ? `🔒 Lv ${it.unlock_lv}` : `🪙 ${it.harga.toLocaleString("id-ID")}`}
+                      ${equipped ? "✓ Dipakai" : it.none ? "Lepas item ini" : owned ? "Dimiliki · bisa dipakai" : locked ? `🔒 Lv ${it.unlock_lv}` : `🪙 ${it.harga.toLocaleString("id-ID")}`}
                     </div>
                     ${it.rarity && it.rarity !== "common" ? `<span class="shop-tile-rarity rarity-${it.rarity}"></span>` : ""}
                   </div>`;
@@ -5091,7 +5107,7 @@ async function renderShop(){
                 body = RAR_ORD.map(r => (pick === "all" || pick === r) ? sec(RL[r] + (ownOnly ? " · dimiliki" : ""), base.filter(it => it.rarity === r)) : "").join("");
                 if (!body) body = `<div class="empty" style="padding:18px 0;color:var(--gray)">Tidak ada item${ownOnly ? " yang kamu miliki" : ""} di pilihan ini.</div>`;
               }
-              return chips + body;
+              return `<h4 class="shop-sec">Tidak memakai</h4><div class="shop-items-grid">${tile(noneItem)}</div>` + chips + body;
             })()}
           ` : `<div class="empty"><div class="emoji">📭</div>Kategori ini masih kosong.</div>`}
         </div>
@@ -5135,7 +5151,15 @@ window.__lvOk = (kat, id) => {
   if ((state.gami?.level_karakter || 1) >= need) return true;
   toast(`🔒 Sayap baru terbuka di Level ${need}`); return false;
 };
+window.shopSetBody = async (b) => {
+  setBody(b); window.__thumbCache && window.__thumbCache.clear();
+  if (state.siswa) { state.siswa.karakter = state.siswa.karakter || {}; state.siswa.karakter.body = b; }
+  try { if (FB.setBodyType && state.user) await FB.setBodyType(b); } catch (e) {}
+  toast(b === "female" ? "♀ Karakter cewek dipilih" : "♂ Karakter cowok dipilih");
+  if (window._curName === "wardrobe") route("wardrobe"); else renderShop().then(h => document.getElementById("app").innerHTML = h);
+};
 window.shopEquip = async (cat, id) => {
+  if (id === "__none") id = ({ rambut: null, pakaian: "seragam_default", sepatu: "shoes_default" })[cat] ?? (cat in { rambut: 1, pakaian: 1, sepatu: 1 } ? null : "none");
   if (!state.user) return;
   if (!__lvOk(cat, id)) return;
   try {
@@ -5229,7 +5253,10 @@ async function renderWardrobe(){
   return `
     <div class="panel">
       <h2>👔 Wardrobe</h2>
-      <p style="color:var(--gray); font-size:13px;">Preview langsung — klik item untuk pakai.</p>
+      <p style="color:var(--gray); font-size:13px;">Preview langsung — klik item untuk pakai. Tiap kategori punya pilihan 🚫 untuk tidak memakai apa-apa.</p>
+      <div class="shop-body-pick"><span>Karakter:</span>
+        <button class="shop-rchip ${getBody()==='male'?'on':''}" onclick="shopSetBody('male')">♂ Cowok</button>
+        <button class="shop-rchip ${getBody()==='female'?'on':''}" onclick="shopSetBody('female')">♀ Cewek</button></div>
       <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:12px;">
         <div style="width:240px; flex-shrink:0;">
           <div style="aspect-ratio:4/5; background:rgba(255,255,255,.04); border-radius:14px; display:flex; align-items:center;">
@@ -5917,6 +5944,7 @@ FB.onAuth(async (user, siswa) => {
   _authFiredOnce = true;
 
   state.user = user; state.siswa = siswa;
+  try { const b = siswa?.karakter?.body; if (b) setBody(b); } catch(e) {}
   try { window.SHIROSE_THEME_FREE = !!(user && (FB.userIsGuru() || FB.hasUnlimitedCoins())); if (window.SHIROSE_THEME) window.SHIROSE_THEME.refresh(); } catch(e){}
   const btn = document.getElementById("btn-auth");
   if (user) {
