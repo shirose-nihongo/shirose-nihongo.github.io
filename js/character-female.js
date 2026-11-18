@@ -66,7 +66,7 @@ export const femBust = `<g data-slot="dada" fill="none" stroke-linecap="round">
   <path d="M172 244 Q181 249 189 246" stroke="#fff" stroke-opacity=".22" stroke-width="2"/><path d="M211 246 Q219 249 228 244" stroke="#fff" stroke-opacity=".22" stroke-width="2"/></g>`;
 
 /* ---------- RAMBUT ---------- */
-const cap = (c) => `<path d="M147 128 Q139 60 200 55 Q261 60 253 128 Q252 102 233 86 Q214 104 190 93 Q168 99 160 122 Q151 112 147 128Z" fill="${c}"/>`;
+const cap = (c) => `<path d="M146 152 Q138 58 200 53 Q262 58 254 152 L246 152 L246 103 Q200 110 154 103 L154 152Z" fill="${c}"/><path d="M164 100 Q200 106 236 100" stroke="#fff" stroke-opacity=".14" stroke-width="2" fill="none"/>`;
 const sideL = (c, y, w = 20) => `<path d="M147 110 Q${132 - 0} ${(110 + y) / 2} ${138} ${y} L${138 + w} ${y - 4} Q${158} ${(110 + y) / 2} 162 128Z" fill="${c}"/>`;
 const sideR = (c, y, w = 20) => `<path d="M253 110 Q268 ${(110 + y) / 2} 262 ${y} L${262 - w} ${y - 4} Q242 ${(110 + y) / 2} 238 128Z" fill="${c}"/>`;
 const tie = (x, y, c = "#ef6a9a") => `<circle cx="${x}" cy="${y}" r="6" fill="${c}"/>`;
