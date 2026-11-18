@@ -1,5 +1,5 @@
 /* Shop items that match character.js CATALOG. Seeded at runtime. */
-import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261118r";
+import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261118s";
 
 export function allShopItems(termasukGacha = false) {
   const out = [];
@@ -17,6 +17,7 @@ export function allShopItems(termasukGacha = false) {
         rarity: item.rarity || "common",
         unlock_lv: item.unlock_lv || 1,
         gachaOnly: !!item.gachaOnly,
+        g: item.g || null,
       });
     }
   }

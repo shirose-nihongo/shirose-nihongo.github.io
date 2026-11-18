@@ -8,7 +8,7 @@ import { H } from "./character-more.js";
 const { build, SK } = H;
 
 /* ---------- profil lebar (skala X terhadap sumbu x=200) per tinggi y ---------- */
-const PROF = [[0, 1], [60, .96], [100, .92], [135, .9], [170, .85], [188, .8], [200, .88], [236, .94], [272, .78], [306, .9], [335, 1], [999, 1]];
+const PROF = [[0, 1], [60, 1], [100, 1.03], [135, 1.04], [165, .98], [180, .8], [192, .6], [204, .7], [238, .8], [272, .62], [306, .78], [336, .9], [380, .85], [999, .85]];
 const fy = (y) => { for (let i = 1; i < PROF.length; i++) if (y <= PROF[i][0]) { const [y0, f0] = PROF[i - 1], [y1, f1] = PROF[i]; return f0 + (f1 - f0) * (y - y0) / (y1 - y0); } return 1; };
 const wx = (x, y) => 200 + (x - 200) * fy(y);
 const r2 = (n) => Math.round(n * 10) / 10;
@@ -32,13 +32,13 @@ export function femWarp(svg) {
     }
     if (name === "rect") {
       const x = attr(tag, "x"), y = attr(tag, "y"), w = attr(tag, "width"), h = attr(tag, "height");
-      if ([x, y, w, h].some(isNaN) || y >= 335) return tag;
+      if ([x, y, w, h].some(isNaN)) return tag;
       const f = fy(y + h / 2); const nx = 200 + (x - 200) * f;
       return tag.replace(/\sx="[^"]*"/, ` x="${r2(nx)}"`).replace(/\swidth="[^"]*"/, ` width="${r2(w * f)}"`);
     }
     const cx = attr(tag, "cx"), cy = attr(tag, "cy"); if (isNaN(cx) || isNaN(cy)) return tag;
     const rx = name === "circle" ? attr(tag, "r") : attr(tag, "rx"), ry = name === "circle" ? rx : attr(tag, "ry");
-    if (isNaN(rx) || isNaN(ry) || cy - ry >= 335) return tag;
+    if (isNaN(rx) || isNaN(ry)) return tag;
     if (Math.max(rx, ry) > 24) {                                              // bentuk besar → poligon agar ikut melengkung
       let d = ""; for (let i = 0; i < 32; i++) { const a = i / 32 * Math.PI * 2, px = cx + rx * Math.cos(a), py = cy + ry * Math.sin(a); d += (i ? "L" : "M") + r2(wx(px, py)) + " " + r2(py) + " "; }
       return dropAttr(tag.replace(/^<\w+/, "<path"), ["cx", "cy", "rx", "ry", "r"]).replace(/\s*\/?>$/, ` d="${d}Z"/>`);
@@ -51,11 +51,16 @@ export function femWarp(svg) {
 
 /* ---------- detail wajah & dada (koordinat SETELAH warp) ---------- */
 export const femFace = (blush = "#f4a3b5") => `<g data-slot="wajah-cewek">
-  <path d="M168 123 Q177 117 187 123" stroke="#2a1810" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M213 123 Q223 117 232 123" stroke="#2a1810" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M168 123 L163 119 M232 123 L237 119" stroke="#2a1810" stroke-width="2.2" stroke-linecap="round"/>
-  <ellipse cx="170" cy="148" rx="8" ry="4.5" fill="${blush}" opacity=".35"/><ellipse cx="230" cy="148" rx="8" ry="4.5" fill="${blush}" opacity=".35"/>
-  <path d="M192 158 Q200 166 208 158 Q200 160 192 158Z" fill="#e0607e"/></g>`;
+  <ellipse cx="177" cy="132" rx="9" ry="11" fill="#fff"/><ellipse cx="223" cy="132" rx="9" ry="11" fill="#fff"/>
+  <ellipse cx="177" cy="134" rx="6.6" ry="8.6" fill="#3b5bdb"/><ellipse cx="223" cy="134" rx="6.6" ry="8.6" fill="#3b5bdb"/>
+  <ellipse cx="177" cy="135" rx="3.2" ry="5" fill="#0f172a"/><ellipse cx="223" cy="135" rx="3.2" ry="5" fill="#0f172a"/>
+  <circle cx="174" cy="130" r="2.6" fill="#fff"/><circle cx="220" cy="130" r="2.6" fill="#fff"/><circle cx="180" cy="138" r="1.3" fill="#fff"/><circle cx="226" cy="138" r="1.3" fill="#fff"/>
+  <path d="M166 127 Q177 117 188 126" stroke="#1a1008" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+  <path d="M212 126 Q223 117 234 127" stroke="#1a1008" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+  <path d="M166 127 L160 123 M166 130 L160 130 M234 127 L240 123 M234 130 L240 130" stroke="#1a1008" stroke-width="2" stroke-linecap="round"/>
+  <path d="M168 110 Q177 106 186 110 M214 110 Q223 106 232 110" stroke="#4a2c17" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="166" cy="149" rx="8" ry="4.5" fill="${blush}" opacity=".45"/><ellipse cx="234" cy="149" rx="8" ry="4.5" fill="${blush}" opacity=".45"/>
+  <path d="M192 158 Q200 167 208 158 Q200 161 192 158Z" fill="#e0607e"/></g>`;
 export const femBust = `<g data-slot="dada" fill="none" stroke-linecap="round">
   <path d="M168 248 Q183 268 198 250" stroke="#000" stroke-opacity=".13" stroke-width="2.4"/><path d="M202 250 Q217 268 232 248" stroke="#000" stroke-opacity=".13" stroke-width="2.4"/>
   <path d="M172 244 Q181 249 189 246" stroke="#fff" stroke-opacity=".22" stroke-width="2"/><path d="M211 246 Q219 249 228 244" stroke="#fff" stroke-opacity=".22" stroke-width="2"/></g>`;
@@ -214,12 +219,35 @@ const HEELS = [
   ["heels_kristal", "Heels Kristal Cinderella", "legendary", () => heel({ c: "#bae6fd", d: "#0284c7", h: 15, strap: "#e0f2fe" })],
 ];
 
+/* ---------- versi CEWEK dari baju cowok: atasan pas badan + rok plisket + (kadang) stoking paha ---------- */
+const lum = (h) => { const n = parseInt(h.slice(1), 16); return (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255; };
+const dark = (h, k) => { const n = parseInt(h.slice(1), 16); const f = (v) => Math.max(0, Math.round(v * k)).toString(16).padStart(2, "0"); return "#" + f(n >> 16) + f((n >> 8) & 255) + f(n & 255); };
+export function femOutfit(svg, id, skirtOn = true) {
+  const m = svg.match(/<path d="M135 200[^"]*"[^>]*fill="(#[0-9a-fA-F]{6})"/) || svg.match(/fill="(#[0-9a-fA-F]{6})"/);
+  const main = m ? m[1] : "#1e2a4a", L = lum(main);
+  if (!skirtOn) return svg;
+  const skirt = L < .3 ? "#111827" : dark(main, .5), edge = dark(skirt, .6);
+  let h = 0; for (const ch of String(id)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  const stock = h % 2 === 0, leg = stock ? "#2f2222" : SK;
+  let o = `<rect x="165.5" y="372" width="30" height="92" rx="11" fill="${leg}"/><rect x="204.6" y="372" width="30" height="92" rx="11" fill="${leg}"/>`;
+  if (stock) o += `<path d="M166 384 H196 M205 384 H235" stroke="#5a3d3d" stroke-width="3"/>`;
+  o += `<path d="M136 294 L264 294 Q272 336 282 382 Q200 396 118 382 Q128 336 136 294Z" fill="${skirt}" stroke="${edge}" stroke-width="1.8"/>`;
+  for (let i = 0; i < 7; i++) { const t = (i - 3) / 3; o += `<path d="M${200 + t * 50} 300 L${200 + t * 76} 388" stroke="${edge}" stroke-opacity=".6" stroke-width="1.5"/>`; }
+  o += `<rect x="134" y="290" width="132" height="9" rx="2" fill="${dark(main, L < .3 ? 2.2 : .8)}" stroke="${edge}" stroke-width="1.2"/>`;
+  return svg + o;
+}
+
+const GCOL = [["pink", "#f9a8d4", "rare"], ["biru", "#60a5fa", "rare"], ["perak", "#e5e7eb", "epic"], ["merah", "#dc2626", "rare"], ["ungu", "#a78bfa", "epic"], ["pirang", "#fde68a", "uncommon"], ["cokelat", "#7c4a2d", "uncommon"]];
+const HAIRCOL = []; for (const [id, nama, , fn] of HAIR.filter(h => !["pixie", "putri_panjang", "twin_bergelombang_pink", "hime"].includes(h[0]) || h[0] === "hime")) for (const [cn, hex, r] of GCOL) HAIRCOL.push([id + "_" + cn, nama.replace(/^Rambut /, "") + " " + cn[0].toUpperCase() + cn.slice(1), r, () => fn(hex)]);
+const mark = (o) => { Object.values(o).forEach(x => { if (!x.equipped_default) x.g = "f"; }); return o; };
+export const FEM_DEFAULT_HAIR = (c) => HAIR[1][3](c);
+
 export function extendFemale(C) {
-  Object.assign(C.HAIR_STYLES, build(HAIR, "fh_"));
-  Object.assign(C.OUTFITS, build(DRESS, "gn_"));
-  Object.assign(C.CELANA, build(ROK, "rk_"));
-  Object.assign(C.SHOES, build(HEELS, "hl_"));
-  Object.assign(C.ACCESSORIES, build(ACC, "fa_"));
-  C.JEPIT = { none: { nama: "Tanpa jepit", harga: 0, equipped_default: true, svg: null }, ...build(JEPIT, "jp_") };
-  C.ANTING = { none: { nama: "Tanpa anting", harga: 0, equipped_default: true, svg: null }, ...build(ANTING, "an_") };
+  Object.assign(C.HAIR_STYLES, mark(build(HAIR, "fh_")), mark(build(HAIRCOL, "fh_")));
+  Object.assign(C.OUTFITS, mark(build(DRESS, "gn_")));
+  Object.assign(C.CELANA, mark(build(ROK, "rk_")));
+  Object.assign(C.SHOES, mark(build(HEELS, "hl_")));
+  Object.assign(C.ACCESSORIES, mark(build(ACC, "fa_")));
+  C.JEPIT = { none: { nama: "Tanpa jepit", harga: 0, equipped_default: true, svg: null }, ...mark(build(JEPIT, "jp_")) };
+  C.ANTING = { none: { nama: "Tanpa anting", harga: 0, equipped_default: true, svg: null }, ...mark(build(ANTING, "an_")) };
 }

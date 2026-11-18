@@ -909,6 +909,8 @@ function flatten2D(svg) {
 export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const eq = { ...DEFAULT_EQUIPPED, ...equipped };
   const fem = (opts.body || _body) === "female";
+  // item khusus cewek tidak dipakai di badan cowok
+  if (!fem) for (const k of Object.keys(eq)) { const it = CATALOG[k]?.[eq[k]]; if (it && it.g === "f") eq[k] = k === "rambut" ? null : DEFAULT_EQUIPPED[k]; }
 
   const auraSvg = (eq.aura && eq.aura !== "none" && AURAS[eq.aura]?.svg) ? AURAS[eq.aura].svg() : "";
 
@@ -922,8 +924,11 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   // Overlay pakaian (replace default)
   let pakaianOverlay = "";
   if (eq.pakaian && eq.pakaian !== "seragam_default" && OUTFITS[eq.pakaian]?.svg) {
-    pakaianOverlay = `<g data-slot="pakaian-overlay">${OUTFITS[eq.pakaian].svg()}</g>`;
+    const oi = OUTFITS[eq.pakaian];
+    pakaianOverlay = `<g data-slot="pakaian-overlay">${fem && oi.g !== "f" ? femOutfit(oi.svg(), eq.pakaian, !(eq.celana && eq.celana !== "none")) : oi.svg()}</g>`;
   }
+
+  if (fem && !pakaianOverlay && !(eq.celana && eq.celana !== "none")) pakaianOverlay = `<g data-slot="pakaian-overlay">${femOutfit("", "kaos")}</g>`;   // kaos bawaan cewek + rok
 
   // Overlay sepatu
   let sepatuOverlay = "";
@@ -933,9 +938,9 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
 
   // Hair (OPTIONAL — default botak)
   let hairSvg = "";
-  if (eq.rambut && HAIR_STYLES[eq.rambut]?.svg) {
+  if (eq.rambut && eq.rambut !== "none" && HAIR_STYLES[eq.rambut]?.svg && (!fem || HAIR_STYLES[eq.rambut].g === "f")) {
     hairSvg = `<g data-slot="rambut">${HAIR_STYLES[eq.rambut].svg(opts.hairColor)}</g>`;
-  }
+  } else if (fem && eq.rambut !== "none") hairSvg = `<g data-slot="rambut">${FEM_DEFAULT_HAIR(opts.hairColor)}</g>`;   // cewek: rambut bawaan (pilih "Tidak memakai" untuk botak)
 
   // Accessories
   let aksesoriSvg = "";
@@ -963,6 +968,8 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   base = bigHand(base); pakaianOverlay = bigHand(pakaianOverlay);
   let femFaceSvg = "", femBustSvg = "";
   if (fem) {
+    base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, "");
+    sepatuOverlay = femWarp(sepatuOverlay);
     base = femWarp(base); pakaianOverlay = femWarp(pakaianOverlay); hairSvg = femWarp(hairSvg); aksesoriSvg = femWarp(aksesoriSvg);
     jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
     femFaceSvg = femFace(); femBustSvg = femBust;
@@ -1001,7 +1008,7 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendFemale, femWarp, femFace, femBust } from "./character-female.js?v=20261118a";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118b";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
@@ -1016,4 +1023,11 @@ const _bulat = (v) => v < 2000 ? Math.round(v / 50) * 50 : v < 10000 ? Math.roun
 export const hargaBaru = (lama) => Math.min(HARGA_MAX_BARU, Math.max(50, _bulat(HARGA_MAX_BARU * Math.pow(lama / HARGA_MAX_LAMA, 0.6))));
 for (const kat of Object.values(CATALOG)) for (const it of Object.values(kat)) {
   if (it && it.harga > 0 && !it._rp) { it.harga = hargaBaru(it.harga); it._rp = 1; }
+}
+
+/* Filter item per tipe badan: item cewek disembunyikan untuk cowok; rambut dipisah. */
+export function itemOk(kat, id, body = _body) {
+  const it = CATALOG[kat]?.[id]; if (!it) return false;
+  if (kat === "rambut") return body === "female" ? it.g === "f" : it.g !== "f";
+  return body === "female" || it.g !== "f";
 }

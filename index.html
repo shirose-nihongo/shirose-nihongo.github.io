@@ -1459,7 +1459,7 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody } from "./js/character.js?v=20261118r";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk } from "./js/character.js?v=20261118s";
 import { allShopItems } from "./js/shop-seed.js?v=20261116m";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
@@ -4964,12 +4964,13 @@ async function renderShop(){
     { key: "anting",      label: "💎 Anting" },
     { key: "sayap",       label: "🪽 Sayap (Epic+)" },
   ];
+  if (getBody() !== "female") CAT_TABS.splice(0, CAT_TABS.length, ...CAT_TABS.filter(t => t.key !== "jepit" && t.key !== "anting"));
   const activeCat = state._shopCat && CAT_TABS.some(t => t.key === state._shopCat) ? state._shopCat : "rambut";
   state._shopCat = activeCat;
 
   const inv = invEfektif();
   // Item dijual + hadiah gacha yang SUDAH dimiliki (gachaOnly yang belum dimiliki tetap tersembunyi)
-  const allItems = allShopItems(true).filter(it => !it.gachaOnly || inv.includes(it.id));
+  const allItems = allShopItems(true).filter(it => (!it.gachaOnly || inv.includes(it.id)) && itemOk(it.kategori, it.id, getBody()));
   const RAR_ORD = ["mythic","legendary","epic","rare","uncommon","common"];
   const items = allItems.filter(it => it.kategori === activeCat).sort((a, b) => {
     const oa = inv.includes(a.id) ? 0 : 1, ob = inv.includes(b.id) ? 0 : 1;
@@ -4983,11 +4984,11 @@ async function renderShop(){
   const hairColor = state.siswa?.karakter?.hairColor;
   const body = getBody();
   // Pilihan "Tidak memakai" (kosongkan slot) — selalu tersedia di tiap kategori
-  const NONE_MAP = { rambut: null, pakaian: "seragam_default", sepatu: "shoes_default" };
+  const NONE_MAP = { rambut: "none", pakaian: "seragam_default", sepatu: "shoes_default" };
   const noneId = activeCat in NONE_MAP ? NONE_MAP[activeCat] : "none", NK = "__none";
   const noneLabel = { rambut: "Botak (tanpa rambut)", pakaian: "Tanpa baju tambahan (kaos polos)", sepatu: "Sepatu polos bawaan", celana: "Tanpa celana / rok", sayap: "Tanpa sayap", item_tangan: "Tangan kosong" }[activeCat] || "Tidak memakai";
   const noneItem = { kategori: activeCat, id: NK, nama: "🚫 " + noneLabel, harga: 0, rarity: null, unlock_lv: 0, none: true };
-  const noneEquipped = (eq[activeCat] ?? null) === noneId || (noneId === null && !eq[activeCat]) || (activeCat === "pakaian" && !eq.pakaian) || (activeCat === "sepatu" && !eq.sepatu) || (noneId === "none" && !eq[activeCat]);
+  const noneEquipped = (eq[activeCat] ?? null) === noneId || (activeCat === "rambut" && !eq.rambut && body === "male") || (activeCat === "pakaian" && !eq.pakaian) || (activeCat === "sepatu" && !eq.sepatu) || (noneId === "none" && activeCat !== "rambut" && !eq[activeCat]);
   const eqVal = (id) => id === NK ? noneId : id;
 
   // Per-category preview: user's choice, or equipped, or first available.
@@ -5159,7 +5160,7 @@ window.shopSetBody = async (b) => {
   if (window._curName === "wardrobe") route("wardrobe"); else renderShop().then(h => document.getElementById("app").innerHTML = h);
 };
 window.shopEquip = async (cat, id) => {
-  if (id === "__none") id = ({ rambut: null, pakaian: "seragam_default", sepatu: "shoes_default" })[cat] ?? (cat in { rambut: 1, pakaian: 1, sepatu: 1 } ? null : "none");
+  if (id === "__none") id = ({ pakaian: "seragam_default", sepatu: "shoes_default" })[cat] ?? "none";
   if (!state.user) return;
   if (!__lvOk(cat, id)) return;
   try {
@@ -5267,17 +5268,17 @@ async function renderWardrobe(){
           </div>
         </div>
         <div style="flex:1; min-width:280px;">
-          ${Object.keys(CATALOG).map(kat => {
-            const items = inv.filter(id => CATALOG[kat][id]);
-            const NONE = { rambut: null, pakaian: "seragam_default", sepatu: "shoes_default" }, noneId = kat in NONE ? NONE[kat] : "none";
+          ${Object.keys(CATALOG).filter(k => getBody() === "female" || (k !== "jepit" && k !== "anting")).map(kat => {
+            const items = inv.filter(id => CATALOG[kat][id] && itemOk(kat, id, getBody()));
+            const NONE = { rambut: "none", pakaian: "seragam_default", sepatu: "shoes_default" }, noneId = kat in NONE ? NONE[kat] : "none";
             const noneNama = { rambut: "Botak (Default)", pakaian: "Kaos Putih (Default)", sepatu: "Sepatu Sekolah (Default)", celana: "Tanpa celana (Default)", sayap: "Tanpa sayap (Default)" }[kat] || "Tidak memakai (Default)";
-            const noneEq = (eq[kat] ?? null) === noneId || (noneId === null && !eq[kat]);
+            const noneEq = (eq[kat] ?? null) === noneId || (noneId === null && !eq[kat]) || (kat === "rambut" && !eq.rambut && getBody() === "male");
             const arg = noneId === null ? "null" : `'${noneId}'`;
             return `
               <h3>${CATALOG_LABELS[kat]}</h3>
               <div class="grid grid-3">
                 <div class="item-card ${noneEq?'equipped':''}" onclick="equipThenWardrobe('${kat}',${arg})">
-                  <div class="icon-wrap">${renderCharacter({ ...DEFAULT_EQUIPPED, [kat]: noneId })}</div>
+                  <div class="icon-wrap">${renderCharacter({ ...DEFAULT_EQUIPPED, [kat]: noneId }, "light", { wide: true })}</div>
                   <div class="nama">🚫 ${noneNama}</div>
                   <div class="harga">${noneEq?"✓ Dipakai":"Klik pakai"}</div>
                 </div>
