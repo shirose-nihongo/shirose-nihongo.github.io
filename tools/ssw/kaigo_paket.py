@@ -4,6 +4,7 @@ Paket 20 soal tanpa duplikat dirakit di js/ssw-core.js (fullQuizzes, EXAM_SPEC.m
 import json, sys, pathlib, hashlib, random, re
 sys.path.insert(0, str(pathlib.Path(__file__).parent / "qx")); sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import kaigo_id_new as ID, kaigo_jp_new as JP
+import kaigo_id_build as GEN
 from quiz_extra import ruby
 R = pathlib.Path("data/ssw")
 def shuf(opts, key):
@@ -30,6 +31,9 @@ def run_id():
         o, a = shuf(list(r[2:6]), f"kidg{i}")
         gi.append({"q": {"id": r[1]}, "img": {"src": f"assets/ssw/kaigo/quiz/{r[0]}.webp"}, "opts": [{"id": t} for _, t in o], "a": a, "exp": {"id": r[6]}, "cat": "gb"}); n += 1
     put(q, "bab4", "ex-gambar", {"id": "Soal Bergambar (判断等)", "jp": "{絵|え}を{見|み}て{答|こた}える"}, gi)
+    gens = GEN.build(); babof = {"kb": "bab1", "kk": "bab2", "kom": "bab3", "sj": "bab4"}
+    for cat, its in gens.items():
+        put(q, babof[cat], f"ex-gen-{babof[cat]}", {"id": "Soal Latihan Tambahan (pilihan ganda)", "jp": "{追加練習|ついかれんしゅう}"}, its); n += len(its)
     json.dump(q, open(p, "w"), ensure_ascii=False, separators=(",", ":")); print("kaigo +", n)
 def plain(t): return re.sub(r"\{([^|}]*)\|[^}]*\}", r"\1", t)
 def run_jp():

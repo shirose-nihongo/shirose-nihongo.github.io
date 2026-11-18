@@ -168,3 +168,14 @@ G = [
 ("g-musim", "Gambar kiri dan kanan menunjukkan pakaian yang sesuai dengan…", "Musim (panas dan dingin)", "Jenis kelamin saja", "Ukuran sepatu", "Pekerjaan", "Pakaian dipilih sesuai musim dan suhu."),
 ("g-musim", "Pakaian sebelah kanan lebih cocok dipakai ketika…", "Cuaca dingin", "Cuaca sangat panas", "Mandi", "Tidur di kasur", "Pakaian berlapis dan tebal dipakai saat dingin."),
 ]
+
+G += [
+("g-handuk-perut", "Pada gambar, perawat menaruh handuk pada perut pengguna yang berbaring. Tujuannya adalah…", "Menjaga privasi pengguna", "Menghangatkan kepala", "Menutup mata pengguna", "Menghentikan perdarahan", "Handuk di perut menjaga privasi saat pispot dipasang."),
+("g-lap-bersih", "Tindakan pada gambar adalah…", "Membersihkan area kotor pengguna yang berbaring dengan kain", "Memotong kuku", "Menyisir rambut", "Mengukur tekanan darah", "Setelah ekskresi di tempat tidur area kotor dibersihkan."),
+("g-celana-berdiri", "Pada gambar, pengguna berdiri berpegangan pada susuran sementara perawat membantu. Tujuan berpegangan adalah…", "Menjaga kestabilan dan mencegah jatuh", "Mempercepat berjalan", "Menahan pintu", "Mengurangi suhu badan", "Pegangan membuat berdiri lebih stabil."),
+("g-bantu-berdiri", "Pada gambar, perawat menopang pengguna yang berdiri dengan berpegangan. Hal yang diperhatikan adalah…", "Keseimbangan dan keselamatan pengguna", "Kecepatan menyelesaikan", "Warna pakaian", "Suhu ruangan saja", "Keselamatan dan keseimbangan adalah prioritas."),
+("g-miring-baju", "Pada gambar, pengguna hemiplegia dimiringkan di tempat tidur saat ganti baju. Sisi yang sebaiknya tidak berada di bawah adalah…", "Sisi yang lumpuh (sakit)", "Sisi yang sehat", "Kedua sisi", "Tidak ada sisi", "Hindari menindih sisi sakit terlalu lama."),
+("g-lepas-lengan", "Pada gambar, perawat melepas lengan pakaian pengguna yang berbaring. Pada hemiplegia, lengan yang dilepas terakhir adalah sisi…", "Sakit (lumpuh)", "Sehat", "Mana saja", "Tidak ada", "Lepas sehat dulu, sakit terakhir."),
+("g-gigi-duduk", "Pada gambar, perawat membersihkan mulut pengguna yang duduk. Posisi duduk tegak berguna untuk…", "Mencegah aspirasi (air/ludah masuk saluran napas)", "Mempercepat tidur", "Menurunkan suhu badan", "Mengurangi tinggi badan", "Postur tegak mencegah aspirasi."),
+("g-spons", "Alat berujung spons pada gambar dipakai untuk…", "Membersihkan mulut pengguna yang tidak bisa disikat giginya", "Menyisir rambut", "Memotong kuku", "Mengukur suhu", "Sikat spons dipakai bila tidak dapat memakai sikat gigi biasa."),
+]
