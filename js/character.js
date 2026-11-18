@@ -1021,7 +1021,7 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118p";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z1";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
