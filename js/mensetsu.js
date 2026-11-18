@@ -1,5 +1,5 @@
 /* =====================================================================
- * MENSETSU 面接 — persiapan wawancara kerja Jepang untuk 8 bidang SSW (jawaban + koreksi AI + prompt Claude/ChatGPT)
+ * MENSETSU 面接 — persiapan wawancara kerja Jepang untuk 20 bidang SSW (jawaban + koreksi AI + prompt Claude/ChatGPT)
  * ---------------------------------------------------------------------
  * Berdiri sendiri (pola sama dengan Kana Center), tidak mengubah sistem lama.
  * Route : #mensetsu, #mensetsu-bidang/{key}, #mensetsu-bank/{key},
@@ -42,6 +42,18 @@ const BIDANG = {
   construction: { jp: "建設", id: "Construction", emoji: "🏗️", co: "建設会社", c: ["#fb923c", "#9a3412"] },
   accommodation: { jp: "宿泊", id: "Accommodation", emoji: "🏨", co: "ホテル・旅館", c: ["#a78bfa", "#5b21b6"] },
   livestock: { jp: "畜産業", id: "Livestock", emoji: "🐄", co: "畜産農家", c: ["#a3e635", "#3f6212"] },
+  fishery: { jp: "漁業", id: "Fishery", emoji: "🐟", co: "漁業会社", c: ["#22d3ee", "#0e7490"] },
+  auto_maintenance: { jp: "自動車整備", id: "Auto Maintenance", emoji: "🔧", co: "自動車整備工場", c: ["#94a3b8", "#334155"] },
+  industrial_mfg: { jp: "工業製品製造業", id: "Industrial Manufacturing", emoji: "⚙️", co: "製造工場", c: ["#a1a1aa", "#3f3f46"] },
+  wood_industry: { jp: "木材産業", id: "Wood Industry", emoji: "🪵", co: "製材所・木材加工会社", c: ["#d6a76b", "#78350f"] },
+  auto_transport: { jp: "自動車運送業", id: "Auto Transport", emoji: "🚚", co: "運送会社", c: ["#f59e0b", "#92400e"] },
+  forestry: { jp: "林業", id: "Forestry", emoji: "🌲", co: "林業会社・森林組合", c: ["#34d399", "#065f46"] },
+  linen_supply: { jp: "リネンサプライ", id: "Linen Supply", emoji: "🛏️", co: "リネンサプライ会社", c: ["#c4b5fd", "#6d28d9"] },
+  railway: { jp: "鉄道", id: "Railway", emoji: "🚆", co: "鉄道会社", c: ["#60a5fa", "#1e3a8a"] },
+  shipbuilding: { jp: "造船・舶用工業", id: "Shipbuilding", emoji: "🚢", co: "造船所", c: ["#38bdf8", "#075985"] },
+  logistics: { jp: "物流倉庫", id: "Logistics", emoji: "📦", co: "物流会社・倉庫", c: ["#fb923c", "#c2410c"] },
+  recycling: { jp: "資源循環", id: "Recycling", emoji: "♻️", co: "リサイクル会社", c: ["#4ade80", "#14532d"] },
+  aviation: { jp: "航空", id: "Aviation", emoji: "✈️", co: "空港・航空会社", c: ["#7dd3fc", "#0c4a6e"] },
 };
 const ORDER = Object.keys(BIDANG);
 const MODE = {

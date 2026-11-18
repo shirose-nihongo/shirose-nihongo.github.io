@@ -1,0 +1,1859 @@
+{
+ "bidang": "forestry",
+ "nama": "Forestry",
+ "jp": "林業",
+ "emoji": "🌲",
+ "kategori": [
+  {
+   "k": "jiko",
+   "jp": "自己紹介",
+   "id": "Perkenalan diri"
+  },
+  {
+   "k": "shibou",
+   "jp": "志望動機",
+   "id": "Alasan melamar"
+  },
+  {
+   "k": "shigoto",
+   "jp": "仕事への理解",
+   "id": "Pemahaman pekerjaan"
+  },
+  {
+   "k": "seikatsu",
+   "jp": "日本での生活",
+   "id": "Kehidupan di Jepang"
+  },
+  {
+   "k": "mokuhyou",
+   "jp": "将来の目標",
+   "id": "Tujuan masa depan"
+  },
+  {
+   "k": "taiou",
+   "jp": "職場での対応",
+   "id": "Situasi di tempat kerja"
+  },
+  {
+   "k": "tim",
+   "jp": "チームワーク",
+   "id": "Kerja sama tim"
+  },
+  {
+   "k": "anzen",
+   "jp": "安全・衛生",
+   "id": "Keselamatan & kebersihan"
+  },
+  {
+   "k": "saigo",
+   "jp": "最後の質問",
+   "id": "Pertanyaan penutup"
+  }
+ ],
+ "soal": [
+  {
+   "i": "forestry-jiko-01",
+   "k": "jiko",
+   "l": 1,
+   "ja": "自己紹介をお願いします。",
+   "id": "Tolong perkenalkan diri Anda.",
+   "v": [
+    [
+     "自己紹介",
+     "perkenalan diri"
+    ],
+    [
+     "〜と申します",
+     "nama saya (sopan)"
+    ],
+    [
+     "よろしくお願いします",
+     "mohon bantuannya"
+    ]
+   ],
+   "m": "Melihat apakah kandidat bisa memperkenalkan diri dengan sopan dan jelas.",
+   "aj": "はじめまして。アリと申します。インドネシアのジャワ島から来ました。二十四歳です。林業の仕事に興味があって、日本で働きたいと思っています。一生懸命がんばりますので、よろしくお願いします。",
+   "ai": "Perkenalkan, nama saya Ali. Saya dari pulau Jawa, Indonesia. Usia saya 24 tahun. Saya tertarik pada pekerjaan di bidang Forestry dan ingin bekerja di Jepang. Saya akan berusaha sungguh-sungguh, mohon bantuannya.",
+   "c": "Suara jelas, sopan, nama-asal-usia-motivasi singkat.",
+   "b": "forestry",
+   "jf": "自己紹介[じこしょうかい]をお願[ねが]いします。",
+   "ajf": "はじめまして。アリと申[もう]します。インドネシアのジャワ島[とう]から来[き]ました。二十四歳[にじゅうよんさい]です。林業[りんぎょう]の仕事[しごと]に興味[きょうみ]があって、日本[にほん]で働[はたら]きたいと思[おも]っています。一生懸命[いっしょうけんめい]がんばりますので、よろしくお願[ねが]いします。"
+  },
+  {
+   "i": "forestry-jiko-02",
+   "k": "jiko",
+   "l": 1,
+   "ja": "お名前を教えてください。",
+   "id": "Tolong sebutkan nama Anda.",
+   "v": [
+    [
+     "お名前",
+     "nama (hormat)"
+    ],
+    [
+     "〜と呼んでください",
+     "tolong panggil saya ..."
+    ],
+    [
+     "フルネーム",
+     "nama lengkap"
+    ]
+   ],
+   "m": "Memastikan nama dan kemampuan menyebutkannya dengan jelas.",
+   "aj": "アリ・プラセティョと申します。アリと呼んでください。",
+   "ai": "Nama saya Ali Prasetyo. Silakan panggil saya Ali.",
+   "c": "Sebut nama pelan dan jelas. Gunakan 〜と申します, bukan 〜です, di wawancara resmi.",
+   "jf": "お名前[なまえ]を教[おし]えてください。",
+   "ajf": "アリ・プラセティョと申[もう]します。アリと呼[よ]んでください。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-jiko-03",
+   "k": "jiko",
+   "l": 1,
+   "ja": "何歳ですか。",
+   "id": "Berapa usia Anda?",
+   "v": [
+    [
+     "歳",
+     "tahun (usia)"
+    ],
+    [
+     "二十四歳",
+     "24 tahun"
+    ],
+    [
+     "来月",
+     "bulan depan"
+    ]
+   ],
+   "m": "Cek informasi dasar dan kemampuan menyebut angka/usia dalam bahasa Jepang.",
+   "aj": "二十四歳です。来月、二十五歳になります。",
+   "ai": "Saya 24 tahun. Bulan depan saya genap 25 tahun.",
+   "c": "Latih angka dan hitungan usia (〜歳). Usia khusus: 20歳 = はたち.",
+   "jf": "何歳[なんさい]ですか。",
+   "ajf": "二十四歳[にじゅうよんさい]です。来月[らいげつ]、二十五歳[にじゅうごさい]になります。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-jiko-04",
+   "k": "jiko",
+   "l": 1,
+   "ja": "出身はどこですか。",
+   "id": "Anda berasal dari mana?",
+   "v": [
+    [
+     "出身",
+     "asal"
+    ],
+    [
+     "〜から来ました",
+     "datang dari ..."
+    ],
+    [
+     "近い",
+     "dekat"
+    ]
+   ],
+   "m": "Mengetahui latar belakang dan membuka obrolan ringan.",
+   "aj": "インドネシアの中部ジャワのスマランです。海に近い町です。",
+   "ai": "Saya dari Semarang, Jawa Tengah, Indonesia. Kotanya dekat laut.",
+   "c": "Boleh tambah satu kalimat tentang daerah asal. Pewawancara sering menanggapinya.",
+   "jf": "出身[しゅっしん]はどこですか。",
+   "ajf": "インドネシアの中部[ちゅうぶ]ジャワのスマランです。海[うみ]に近[ちか]い町[まち]です。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-jiko-05",
+   "k": "jiko",
+   "l": 1,
+   "ja": "趣味は何ですか。",
+   "id": "Apa hobi Anda?",
+   "v": [
+    [
+     "趣味",
+     "hobi"
+    ],
+    [
+     "体を動かす",
+     "bergerak/berolahraga"
+    ],
+    [
+     "週末",
+     "akhir pekan"
+    ]
+   ],
+   "m": "Melihat kepribadian dan apakah kandidat sehat dan aktif.",
+   "aj": "趣味はサッカーです。週末に友達とサッカーをします。体を動かすのが好きです。",
+   "ai": "Hobi saya sepak bola. Di akhir pekan saya bermain bola dengan teman. Saya suka bergerak.",
+   "c": "Hindari jawaban yang terkesan malas atau begadang (mis. main game sampai malam). Pilih hobi sehat.",
+   "jf": "趣味[しゅみ]は何[なん]ですか。",
+   "ajf": "趣味[しゅみ]はサッカーです。週末[しゅうまつ]に友達[ともだち]とサッカーをします。体[からだ]を動[うご]かすのが好[す]きです。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-jiko-06",
+   "k": "jiko",
+   "l": 3,
+   "ja": "自分の長所と短所を教えてください。",
+   "id": "Sebutkan kelebihan dan kekurangan Anda.",
+   "v": [
+    [
+     "長所",
+     "kelebihan"
+    ],
+    [
+     "短所",
+     "kekurangan"
+    ],
+    [
+     "まじめ",
+     "rajin/serius"
+    ],
+    [
+     "心配しすぎる",
+     "terlalu khawatir"
+    ]
+   ],
+   "m": "Menilai kejujuran dan kesadaran diri, serta usaha memperbaiki kekurangan.",
+   "aj": "長所はまじめなところです。短所は、少し心配しすぎるところです。でも、メモを取ってミスを減らすようにしています。",
+   "ai": "Kelebihan saya rajin. Kekurangan saya agak terlalu khawatir. Tetapi saya mencatat supaya mengurangi kesalahan.",
+   "c": "Selalu sebut kekurangan + usaha memperbaikinya. Jangan sebut kekurangan fatal (mis. malas, tidak disiplin).",
+   "jf": "自分[じぶん]の長所[ちょうしょ]と短所[たんしょ]を教[おし]えてください。",
+   "ajf": "長所[ちょうしょ]はまじめなところです。短所[たんしょ]は、少[すこ]し心配[しんぱい]しすぎるところです。でも、メモを取[と]ってミスを減[へ]らすようにしています。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-jiko-07",
+   "k": "jiko",
+   "l": 2,
+   "ja": "日本語はどのくらい勉強しましたか。",
+   "id": "Sudah berapa lama Anda belajar bahasa Jepang?",
+   "v": [
+    [
+     "勉強する",
+     "belajar"
+    ],
+    [
+     "毎日",
+     "setiap hari"
+    ],
+    [
+     "単語",
+     "kosakata"
+    ],
+    [
+     "練習する",
+     "berlatih"
+    ]
+   ],
+   "m": "Memperkirakan kemampuan bahasa dan kesungguhan belajar.",
+   "aj": "八か月勉強しました。毎日一時間、単語と会話を練習しています。",
+   "ai": "Saya belajar 8 bulan. Setiap hari saya berlatih kosakata dan percakapan selama satu jam.",
+   "c": "Sebut lama belajar dan cara belajar. Jawaban jujur lebih baik daripada melebih-lebihkan.",
+   "jf": "日本語[にほんご]はどのくらい勉強[べんきょう]しましたか。",
+   "ajf": "八[はち]か月[がつ]勉強[べんきょう]しました。毎日[まいにち]一時間[いちじかん]、単語[たんご]と会話[かいわ]を練習[れんしゅう]しています。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-jiko-08",
+   "k": "jiko",
+   "l": 1,
+   "ja": "健康状態はどうですか。",
+   "id": "Bagaimana kondisi kesehatan Anda?",
+   "v": [
+    [
+     "健康",
+     "sehat"
+    ],
+    [
+     "丈夫",
+     "kuat"
+    ],
+    [
+     "大きな病気",
+     "penyakit berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memastikan kandidat sanggup bekerja secara fisik.",
+   "aj": "はい、元気です。大きな病気はありません。毎朝、軽い運動をしています。",
+   "ai": "Ya, saya sehat. Tidak ada penyakit berat. Setiap pagi saya berolahraga ringan.",
+   "c": "Jawab jujur. Perusahaan khawatir soal cuti panjang karena sakit.",
+   "jf": "健康状態[けんこうじょうたい]はどうですか。",
+   "ajf": "はい、元気[げんき]です。大[おお]きな病気[びょうき]はありません。毎朝[まいあさ]、軽[かる]い運動[うんどう]をしています。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-shibou-01",
+   "k": "shibou",
+   "l": 1,
+   "ja": "なぜ林業の仕事を選びましたか。",
+   "id": "Mengapa Anda memilih pekerjaan kehutanan?",
+   "v": [
+    [
+     "林業",
+     "kehutanan"
+    ],
+    [
+     "森",
+     "hutan"
+    ],
+    [
+     "育てる",
+     "menumbuhkan"
+    ],
+    [
+     "守る",
+     "menjaga"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "自然の中で、体を動かして働くのが好きです。森を守りながら、木を育てる仕事に興味があります。",
+   "ai": "Saya suka bekerja bergerak di alam. Saya tertarik pada pekerjaan merawat pohon sambil menjaga hutan.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "forestry",
+   "jf": "なぜ林業[りんぎょう]の仕事[しごと]を選[えら]びましたか。",
+   "ajf": "自然[しぜん]の中[なか]で、体[からだ]を動[うご]かして働[はたら]くのが好[す]きです。森[もり]を守[まも]りながら、木[き]を育[そだ]てる仕事[しごと]に興味[きょうみ]があります。"
+  },
+  {
+   "i": "forestry-shibou-02",
+   "k": "shibou",
+   "l": 2,
+   "ja": "なぜ日本で林業を学びたいですか。",
+   "id": "Mengapa Anda ingin belajar kehutanan di Jepang?",
+   "v": [
+    [
+     "技術",
+     "teknik"
+    ],
+    [
+     "植える",
+     "menanam"
+    ],
+    [
+     "学ぶ",
+     "belajar"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "日本は国の多くが森で、木を植えて育てる技術が進んでいると聞きました。その方法を学びたいです。",
+   "ai": "Saya dengar sebagian besar wilayah Jepang adalah hutan dan teknik menanam serta merawat pohonnya maju. Saya ingin mempelajarinya.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "forestry",
+   "jf": "なぜ日本[にほん]で林業[りんぎょう]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]は国[くに]の多[おお]くが森[もり]で、木[き]を植[う]えて育[そだ]てる技術[ぎじゅつ]が進[すす]んでいると聞[き]きました。その方法[ほうほう]を学[まな]びたいです。"
+  },
+  {
+   "i": "forestry-shibou-03",
+   "k": "shibou",
+   "l": 3,
+   "ja": "なぜ当社に応募しましたか。",
+   "id": "Mengapa Anda melamar ke perusahaan kami?",
+   "v": [
+    [
+     "応募する",
+     "melamar"
+    ],
+    [
+     "御社",
+     "perusahaan Anda"
+    ],
+    [
+     "指導",
+     "bimbingan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "御社は、山の仕事の安全をとても大切にしていると聞きました。丁寧に指導してもらえると思って、応募しました。",
+   "ai": "Saya dengar perusahaan Anda sangat mengutamakan keselamatan kerja di hutan. Saya pikir saya akan dibimbing dengan baik, jadi saya melamar.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "forestry",
+   "jf": "なぜ当社[とうしゃ]に応募[おうぼ]しましたか。",
+   "ajf": "御社[おんしゃ]は、山[やま]の仕事[しごと]の安全[あんぜん]をとても大切[たいせつ]にしていると聞[き]きました。丁寧[ていねい]に指導[しどう]してもらえると思[おも]って、応募[おうぼ]しました。"
+  },
+  {
+   "i": "forestry-shibou-04",
+   "k": "shibou",
+   "l": 1,
+   "ja": "この仕事に興味を持った理由は何ですか。",
+   "id": "Apa alasan Anda tertarik pada pekerjaan ini?",
+   "v": [
+    [
+     "世代",
+     "generasi"
+    ],
+    [
+     "残す",
+     "mewariskan"
+    ],
+    [
+     "やりがい",
+     "rasa bermakna"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "木が少しずつ大きくなるのを見るのが好きです。森を次の世代に残す仕事に、やりがいを感じます。",
+   "ai": "Saya suka melihat pohon tumbuh sedikit demi sedikit. Saya merasa pekerjaan mewariskan hutan kepada generasi berikutnya itu bermakna.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "forestry",
+   "jf": "この仕事[しごと]に興味[きょうみ]を持[も]った理由[りゆう]は何[なん]ですか。",
+   "ajf": "木[き]が少[すこ]しずつ大[おお]きくなるのを見[み]るのが好[す]きです。森[もり]を次[つぎ]の世代[せだい]に残[のこ]す仕事[しごと]に、やりがいを感[かん]じます。"
+  },
+  {
+   "i": "forestry-shibou-05",
+   "k": "shibou",
+   "l": 2,
+   "ja": "林業の仕事で、一番楽しみなことは何ですか。",
+   "id": "Apa yang paling Anda nantikan dari pekerjaan kehutanan?",
+   "v": [
+    [
+     "植林",
+     "penanaman pohon"
+    ],
+    [
+     "育つ",
+     "tumbuh"
+    ],
+    [
+     "楽しみ",
+     "dinantikan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "木を植えて、大きく育つのを見ることです。日本の山の仕事の方法も学びたいです。",
+   "ai": "Menanam pohon dan melihatnya tumbuh besar. Saya juga ingin belajar cara kerja di hutan Jepang.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "forestry",
+   "jf": "林業[りんぎょう]の仕事[しごと]で、一番楽[いちばんたの]しみなことは何[なん]ですか。",
+   "ajf": "木[き]を植[う]えて、大[おお]きく育[そだ]つのを見[み]ることです。日本[にほん]の山[やま]の仕事[しごと]の方法[ほうほう]も学[まな]びたいです。"
+  },
+  {
+   "i": "forestry-shigoto-01",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "林業の主な仕事は何だと思いますか。",
+   "id": "Menurut Anda, apa pekerjaan utama kehutanan?",
+   "v": [
+    [
+     "植林",
+     "penanaman pohon"
+    ],
+    [
+     "伐採",
+     "penebangan"
+    ],
+    [
+     "下刈り",
+     "pembabatan rumput"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "木を植えたり、草を刈ったり、木を切って運んだりする仕事だと思います。",
+   "ai": "Saya kira pekerjaannya menanam pohon, memotong rumput, serta menebang dan mengangkut kayu.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "林業[りんぎょう]の主[おも]な仕事[しごと]は何[なん]だと思[おも]いますか。",
+   "ajf": "木[き]を植[う]えたり、草[くさ]を刈[か]ったり、木[き]を切[き]って運[はこ]んだりする仕事[しごと]だと思[おも]います。"
+  },
+  {
+   "i": "forestry-shigoto-02",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "朝早くから働くことはできますか。",
+   "id": "Apakah Anda bisa bekerja dari pagi buta?",
+   "v": [
+    [
+     "早朝",
+     "pagi buta"
+    ],
+    [
+     "準備",
+     "persiapan"
+    ],
+    [
+     "山",
+     "gunung/hutan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。山の仕事は朝が早いと聞いています。早く寝て、準備をします。",
+   "ai": "Ya, bisa. Saya dengar kerja di hutan dimulai pagi sekali. Saya tidur lebih awal dan bersiap.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "朝早[あさはや]くから働[はたら]くことはできますか。",
+   "ajf": "はい、できます。山[やま]の仕事[しごと]は朝[あさ]が早[はや]いと聞[き]いています。早[はや]く寝[ね]て、準備[じゅんび]をします。"
+  },
+  {
+   "i": "forestry-shigoto-03",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "暑い日や寒い日でも、山で働けますか。",
+   "id": "Bisakah Anda bekerja di hutan walau cuaca panas atau dingin?",
+   "v": [
+    [
+     "暑い",
+     "panas"
+    ],
+    [
+     "寒い",
+     "dingin"
+    ],
+    [
+     "こまめに",
+     "sering/rutin"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。暑い日はこまめに水を飲んで、寒い日は服をたくさん着ます。",
+   "ai": "Ya, tidak masalah. Saat panas saya sering minum air dan saat dingin memakai banyak lapis pakaian.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "暑[あつ]い日[ひ]や寒[さむ]い日[ひ]でも、山[やま]で働[はたら]けますか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。暑[あつ]い日[ひ]はこまめに水[みず]を飲[の]んで、寒[さむ]い日[ひ]は服[ふく]をたくさん着[つ]ます。"
+  },
+  {
+   "i": "forestry-shigoto-04",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "雨や雪の日は、どう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang hari hujan atau salju?",
+   "v": [
+    [
+     "すべる",
+     "licin"
+    ],
+    [
+     "判断",
+     "keputusan"
+    ],
+    [
+     "危ない",
+     "berbahaya"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "山の道は、すべりやすくて危ないです。天気が悪い日は、責任者の判断に従って、無理をしません。",
+   "ai": "Jalan di hutan licin dan berbahaya. Saat cuaca buruk, saya mengikuti keputusan penanggung jawab dan tidak memaksakan diri.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "雨[あめ]や雪[ゆき]の日[ひ]は、どう思[おも]いますか。",
+   "ajf": "山[やま]の道[みち]は、すべりやすくて危[あぶ]ないです。天気[てんき]が悪[わる]い日[ひ]は、責任者[せきにんしゃ]の判断[はんだん]に従[したが]って、無理[むり]をしません。"
+  },
+  {
+   "i": "forestry-shigoto-05",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "山を歩いたり、重い道具を持ったりする体力はありますか。",
+   "id": "Apakah Anda punya stamina untuk berjalan di gunung dan membawa alat berat?",
+   "v": [
+    [
+     "体力",
+     "stamina"
+    ],
+    [
+     "山道",
+     "jalan gunung"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、あります。毎日運動をして、体力をつけています。山を歩くのも、少しずつ慣れたいです。",
+   "ai": "Ya, ada. Saya berolahraga setiap hari. Saya juga ingin terbiasa berjalan di gunung sedikit demi sedikit.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "山[やま]を歩[ある]いたり、重[おも]い道具[どうぐ]を持[も]ったりする体力[たいりょく]はありますか。",
+   "ajf": "はい、あります。毎日運動[まいにちうんどう]をして、体力[たいりょく]をつけています。山[やま]を歩[ある]くのも、少[すこ]しずつ慣[な]れたいです。"
+  },
+  {
+   "i": "forestry-shigoto-06",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "山の近くで、家に帰れない日や、寮で生活する期間があっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja bila tidak bisa pulang beberapa hari atau tinggal di asrama dekat hutan?",
+   "v": [
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ],
+    [
+     "協力",
+     "kerja sama"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。家族とは、連絡をとります。みんなで協力して、がんばります。",
+   "ai": "Ya, tidak masalah. Saya akan menghubungi keluarga. Kami akan bekerja sama dan berusaha.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "山[やま]の近[ちか]くで、家[いえ]に帰[かえ]れない日[ひ]や、寮[りょう]で生活[せいかつ]する期間[きかん]があっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。家族[かぞく]とは、連絡[れんらく]をとります。みんなで協力[きょうりょく]して、がんばります。"
+  },
+  {
+   "i": "forestry-shigoto-07",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "チェーンソーや道具を使うとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat memakai gergaji mesin dan alat?",
+   "v": [
+    [
+     "チェーンソー",
+     "gergaji mesin"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "まわり",
+     "sekitar"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "必ず使い方を教えてもらってから使います。使う前に、道具の状態を確認します。まわりに人がいないか、見ます。",
+   "ai": "Saya memakainya hanya setelah diajari cara pakainya. Sebelum dipakai saya memeriksa kondisi alat. Saya melihat apakah ada orang di sekitar.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "チェーンソーや道具[どうぐ]を使[つか]うとき、何[なに]に気[き]をつけますか。",
+   "ajf": "必[かなら]ず使[つか]い方[ほう]を教[おし]えてもらってから使[つか]います。使[つか]う前[まえ]に、道具[どうぐ]の状態[じょうたい]を確認[かくにん]します。まわりに人[ひと]がいないか、見[み]ます。"
+  },
+  {
+   "i": "forestry-shigoto-08",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "虫や動物が近くにいる環境でも大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja di lingkungan yang dekat serangga dan hewan liar?",
+   "v": [
+    [
+     "虫よけ",
+     "anti-serangga"
+    ],
+    [
+     "動物",
+     "hewan"
+    ],
+    [
+     "近づく",
+     "mendekat"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。長そでの服を着て、虫よけを使います。動物を見たら、近づかないで先輩に知らせます。",
+   "ai": "Ya, tidak masalah. Saya memakai baju lengan panjang dan obat anti-serangga. Kalau melihat hewan, saya tidak mendekat dan memberi tahu senior.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "虫[むし]や動物[どうぶつ]が近[ちか]くにいる環境[かんきょう]でも大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。長[なが]そでの服[ふく]を着[つ]て、虫[むし]よけを使[つか]います。動物[どうぶつ]を見[み]たら、近[ちか]づかないで先輩[せんぱい]に知[し]らせます。"
+  },
+  {
+   "i": "forestry-shigoto-09",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "森の仕事で、大切なことは何だと思いますか。",
+   "id": "Menurut Anda, apa yang penting dalam pekerjaan hutan?",
+   "v": [
+    [
+     "安全",
+     "keselamatan"
+    ],
+    [
+     "ていねい",
+     "teliti"
+    ],
+    [
+     "長い時間",
+     "waktu lama"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "安全に作業することだと思います。木は、育つのに長い時間がかかるので、ていねいに仕事をすることも大切です。",
+   "ai": "Menurut saya, bekerja dengan aman. Karena pohon butuh waktu lama untuk tumbuh, bekerja dengan teliti juga penting.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "森[もり]の仕事[しごと]で、大切[たいせつ]なことは何[なん]だと思[おも]いますか。",
+   "ajf": "安全[あんぜん]に作業[さぎょう]することだと思[おも]います。木[き]は、育[そだ]つのに長[なが]い時間[じかん]がかかるので、ていねいに仕事[しごと]をすることも大切[たいせつ]です。"
+  },
+  {
+   "i": "forestry-shigoto-10",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "木を植えてから、切るまで、どんな作業がありますか。",
+   "id": "Pekerjaan apa saja sejak menanam sampai menebang pohon?",
+   "v": [
+    [
+     "枝打ち",
+     "pemangkasan cabang"
+    ],
+    [
+     "間伐",
+     "penjarangan"
+    ],
+    [
+     "何十年",
+     "puluhan tahun"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "木を植えて、草を刈って、枝を切ります。大きくなったら、切って運びます。何十年もかかります。",
+   "ai": "Menanam pohon, memotong rumput, dan memangkas cabang. Setelah besar, pohon ditebang dan diangkut. Butuh puluhan tahun.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "木[き]を植[う]えてから、切[き]るまで、どんな作業[さぎょう]がありますか。",
+   "ajf": "木[き]を植[う]えて、草[くさ]を刈[か]って、枝[えだ]を切[き]ります。大[おお]きくなったら、切[き]って運[はこ]びます。何十年[なんじゅうねん]もかかります。"
+  },
+  {
+   "i": "forestry-shigoto-11",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "木を切るとき、まわりの人と、どのように安全を守りますか。",
+   "id": "Bagaimana Anda menjaga keselamatan dengan orang sekitar saat menebang pohon?",
+   "v": [
+    [
+     "倒れる",
+     "tumbang"
+    ],
+    [
+     "方向",
+     "arah"
+    ],
+    [
+     "合図",
+     "aba-aba"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "木を切る前に、大きい声で知らせます。倒れる方向に、人がいないか確認します。",
+   "ai": "Sebelum menebang, saya memberi tahu dengan suara keras. Saya memastikan tidak ada orang di arah pohon akan tumbang.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "木[き]を切[き]るとき、まわりの人[ひと]と、どのように安全[あんぜん]を守[まも]りますか。",
+   "ajf": "木[き]を切[き]る前[まえ]に、大[おお]きい声[こえ]で知[し]らせます。倒[たお]れる方向[ほうこう]に、人[ひと]がいないか確認[かくにん]します。"
+  },
+  {
+   "i": "forestry-shigoto-12",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "山で、道に迷ったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau tersesat di gunung?",
+   "v": [
+    [
+     "迷う",
+     "tersesat"
+    ],
+    [
+     "あわてる",
+     "panik"
+    ],
+    [
+     "場所",
+     "lokasi"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "あわてないで、その場に止まります。すぐに責任者に連絡して、場所を伝えます。",
+   "ai": "Saya tidak panik dan berhenti di tempat. Saya segera menghubungi penanggung jawab dan menyampaikan lokasi.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "山[やま]で、道[みち]に迷[まよ]ったら、どうしますか。",
+   "ajf": "あわてないで、その場[ば]に止[と]まります。すぐに責任者[せきにんしゃ]に連絡[れんらく]して、場所[ばしょ]を伝[つた]えます。"
+  },
+  {
+   "i": "forestry-shigoto-13",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "日本の森や、木の仕事について、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang hutan dan pekerjaan kayu di Jepang?",
+   "v": [
+    [
+     "スギ",
+     "sugi"
+    ],
+    [
+     "ヒノキ",
+     "hinoki"
+    ],
+    [
+     "森林",
+     "hutan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "日本には、スギやヒノキの森が多いと聞きました。木を切るだけでなく、植えて育てることも大切だと思います。",
+   "ai": "Saya dengar di Jepang banyak hutan sugi dan hinoki. Menurut saya bukan hanya menebang, menanam dan merawat juga penting.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "forestry",
+   "jf": "日本[にほん]の森[もり]や、木[き]の仕事[しごと]について、知[し]っていることはありますか。",
+   "ajf": "日本[にほん]には、スギやヒノキの森[もり]が多[おお]いと聞[き]きました。木[き]を切[き]るだけでなく、植[う]えて育[そだ]てることも大切[たいせつ]だと思[おも]います。"
+  },
+  {
+   "i": "forestry-seikatsu-01",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で行ってみたい場所はどこですか。",
+   "id": "Tempat mana di Jepang yang ingin Anda kunjungi?",
+   "v": [
+    [
+     "行ってみたい",
+     "ingin mencoba pergi"
+    ],
+    [
+     "富士山",
+     "Gunung Fuji"
+    ],
+    [
+     "休みの日",
+     "hari libur"
+    ],
+    [
+     "電車",
+     "kereta"
+    ]
+   ],
+   "m": "Mengobrol ringan; melihat ketertarikan pada Jepang.",
+   "aj": "富士山に行ってみたいです。写真で見て、とてもきれいだと思いました。休みの日に電車で行きたいです。",
+   "ai": "Saya ingin pergi ke Gunung Fuji. Saya melihat fotonya dan menurut saya sangat indah. Saya ingin pergi naik kereta di hari libur.",
+   "c": "Tambahkan alasan (なぜなら / 〜からです). Jawaban satu kata terlalu singkat.",
+   "jf": "日本[にほん]で行[い]ってみたい場所[ばしょ]はどこですか。",
+   "ajf": "富士山[ふじさん]に行[い]ってみたいです。写真[しゃしん]で見[み]て、とてもきれいだと思[おも]いました。休[やす]みの日[にち]に電車[でんしゃ]で行[い]きたいです。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-seikatsu-02",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で何をしたいですか。",
+   "id": "Apa yang ingin Anda lakukan di Jepang?",
+   "v": [
+    [
+     "がんばる",
+     "berusaha keras"
+    ],
+    [
+     "上手になる",
+     "menjadi mahir"
+    ],
+    [
+     "いろいろな",
+     "bermacam-macam"
+    ],
+    [
+     "町",
+     "kota"
+    ]
+   ],
+   "m": "Melihat motivasi di luar pekerjaan; apakah kandidat realistis.",
+   "aj": "仕事をがんばって、日本語も上手になりたいです。休みの日には、いろいろな町を見たいです。",
+   "ai": "Saya ingin bekerja keras dan juga mahir berbahasa Jepang. Di hari libur saya ingin melihat berbagai kota.",
+   "c": "Utamakan pekerjaan dan belajar, baru hiburan.",
+   "jf": "日本[にほん]で何[なに]をしたいですか。",
+   "ajf": "仕事[しごと]をがんばって、日本語[にほんご]も上手[じょうず]になりたいです。休[やす]みの日[にち]には、いろいろな町[まち]を見[み]たいです。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-seikatsu-03",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の生活についてどう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang kehidupan di Jepang?",
+   "v": [
+    [
+     "ルール",
+     "aturan"
+    ],
+    [
+     "ごみの分け方",
+     "cara memilah sampah"
+    ],
+    [
+     "きれい",
+     "bersih"
+    ],
+    [
+     "覚える",
+     "menghafal"
+    ]
+   ],
+   "m": "Melihat kesiapan beradaptasi dengan budaya dan aturan Jepang.",
+   "aj": "ルールが多くて、とてもきれいな国だと思います。ごみの分け方など、早く覚えたいです。",
+   "ai": "Menurut saya Jepang punya banyak aturan dan sangat bersih. Saya ingin cepat menghafal hal seperti cara memilah sampah.",
+   "c": "Tunjukkan kemauan mengikuti aturan. Jangan hanya mengeluh soal biaya hidup/cuaca.",
+   "jf": "日本[にほん]の生活[せいかつ]についてどう思[おも]いますか。",
+   "ajf": "ルールが多[おお]くて、とてもきれいな国[くに]だと思[おも]います。ごみの分[わ]け方[ほう]など、早[はや]く覚[おぼ]えたいです。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-seikatsu-04",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本の文化で興味があることは何ですか。",
+   "id": "Apa budaya Jepang yang Anda minati?",
+   "v": [
+    [
+     "文化",
+     "budaya"
+    ],
+    [
+     "お辞儀",
+     "membungkuk (salam)"
+    ],
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "すばらしい",
+     "luar biasa"
+    ]
+   ],
+   "m": "Melihat apakah kandidat menghargai budaya Jepang.",
+   "aj": "お辞儀と、あいさつの文化に興味があります。みんなが丁寧に話すので、すばらしいと思います。",
+   "ai": "Saya tertarik pada budaya membungkuk dan salam. Semua orang berbicara dengan sopan, menurut saya itu luar biasa.",
+   "c": "Budaya kerja (salam, tepat waktu) lebih disukai daripada hanya anime atau game.",
+   "jf": "日本[にほん]の文化[ぶんか]で興味[きょうみ]があることは何[なん]ですか。",
+   "ajf": "お辞儀[じぎ]と、あいさつの文化[ぶんか]に興味[きょうみ]があります。みんなが丁寧[ていねい]に話[はな]すので、すばらしいと思[おも]います。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-seikatsu-05",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "家族は日本で働くことに賛成していますか。",
+   "id": "Apakah keluarga Anda setuju Anda bekerja di Jepang?",
+   "v": [
+    [
+     "賛成する",
+     "setuju"
+    ],
+    [
+     "応援する",
+     "mendukung"
+    ],
+    [
+     "両親",
+     "orang tua"
+    ],
+    [
+     "電話",
+     "telepon"
+    ]
+   ],
+   "m": "Memastikan kandidat tidak akan pulang cepat karena tekanan keluarga.",
+   "aj": "はい、賛成しています。両親は私の夢を応援してくれています。毎週、電話で話すつもりです。",
+   "ai": "Ya, mereka setuju. Orang tua saya mendukung impian saya. Saya berencana menelepon mereka setiap minggu.",
+   "c": "Jawaban 'ya, mendukung' paling aman. Jika keluarga ragu, jelaskan dengan tenang.",
+   "jf": "家族[かぞく]は日本[にほん]で働[はたら]くことに賛成[さんせい]していますか。",
+   "ajf": "はい、賛成[さんせい]しています。両親[りょうしん]は私[わたし]の夢[ゆめ]を応援[おうえん]してくれています。毎週[まいしゅう]、電話[でんわ]で話[はな]すつもりです。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-seikatsu-06",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本で困ったことがあったら、どうしますか。",
+   "id": "Kalau mengalami kesulitan di Jepang, apa yang akan Anda lakukan?",
+   "v": [
+    [
+     "困る",
+     "kesulitan"
+    ],
+    [
+     "相談する",
+     "berkonsultasi"
+    ],
+    [
+     "担当者",
+     "penanggung jawab"
+    ],
+    [
+     "先輩",
+     "senior"
+    ]
+   ],
+   "m": "Menilai apakah kandidat tahu cara meminta bantuan, bukan memendam masalah.",
+   "aj": "まず、会社の担当者や先輩に相談します。わからないままにしないようにします。",
+   "ai": "Pertama, saya akan berkonsultasi dengan penanggung jawab perusahaan atau senior. Saya tidak akan membiarkannya tanpa dipahami.",
+   "c": "Kata kunci: 相談する (konsultasi). Pewawancara suka kandidat yang melapor lebih awal.",
+   "jf": "日本[にほん]で困[こま]ったことがあったら、どうしますか。",
+   "ajf": "まず、会社[かいしゃ]の担当者[たんとうしゃ]や先輩[せんぱい]に相談[そうだん]します。わからないままにしないようにします。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-seikatsu-07",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "山の近くの町での生活に、不便なことがあっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan ketidaknyamanan hidup di kota dekat pegunungan?",
+   "v": [
+    [
+     "不便",
+     "tidak nyaman"
+    ],
+    [
+     "まとめて",
+     "sekaligus"
+    ],
+    [
+     "調べる",
+     "mengecek"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "大丈夫です。お店が遠いときは、まとめて買い物をします。バスの時間も調べます。",
+   "ai": "Tidak masalah. Kalau toko jauh, saya belanja sekaligus. Saya juga mengecek jadwal bus.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "forestry",
+   "jf": "山[やま]の近[ちか]くの町[まち]での生活[せいかつ]に、不便[ふべん]なことがあっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "大丈夫[だいじょうぶ]です。お店[みせ]が遠[とお]いときは、まとめて買[か]い物[もの]をします。バスの時間[じかん]も調[しら]べます。"
+  },
+  {
+   "i": "forestry-seikatsu-08",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の山や、季節について、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang gunung dan musim di Jepang?",
+   "v": [
+    [
+     "四季",
+     "empat musim"
+    ],
+    [
+     "雪",
+     "salju"
+    ],
+    [
+     "様子",
+     "keadaan"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "日本には、春夏秋冬があって、山の様子が変わると聞きました。冬は雪が多い所もあると知っています。",
+   "ai": "Saya dengar Jepang punya empat musim dan pemandangan gunung berubah. Saya tahu ada daerah yang bersalju lebat di musim dingin.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "forestry",
+   "jf": "日本[にほん]の山[やま]や、季節[きせつ]について、知[し]っていることはありますか。",
+   "ajf": "日本[にほん]には、春夏秋冬[しゅんかしゅうとう]があって、山[やま]の様子[ようす]が変[か]わると聞[き]きました。冬[ふゆ]は雪[ゆき]が多[おお]い所[ところ]もあると知[し]っています。"
+  },
+  {
+   "i": "forestry-mokuhyou-01",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "将来の目標は何ですか。",
+   "id": "Apa tujuan Anda di masa depan?",
+   "v": [
+    [
+     "目標",
+     "tujuan"
+    ],
+    [
+     "身につける",
+     "menguasai"
+    ],
+    [
+     "家族を支える",
+     "menopang keluarga"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "林業の仕事の技術をしっかり身につけて、仕事に自信を持てる人になりたいです。そして、将来は家族を支えたいです。",
+   "ai": "Saya ingin menguasai keterampilan di bidang Forestry dan menjadi orang yang percaya diri dalam bekerja. Lalu di masa depan saya ingin menopang keluarga.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "forestry",
+   "jf": "将来[しょうらい]の目標[もくひょう]は何[なん]ですか。",
+   "ajf": "林業[りんぎょう]の仕事[しごと]の技術[ぎじゅつ]をしっかり身[み]につけて、仕事[しごと]に自信[じしん]を持[も]てる人[ひと]になりたいです。そして、将来[しょうらい]は家族[かぞく]を支[ささ]えたいです。"
+  },
+  {
+   "i": "forestry-mokuhyou-02",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で何年間働きたいですか。",
+   "id": "Berapa tahun Anda ingin bekerja di Jepang?",
+   "v": [
+    [
+     "〜年間",
+     "selama ... tahun"
+    ],
+    [
+     "まず",
+     "pertama"
+    ],
+    [
+     "チャンス",
+     "kesempatan"
+    ],
+    [
+     "長く",
+     "lama"
+    ]
+   ],
+   "m": "Perusahaan ingin tenaga kerja yang bertahan lama dan tidak berhenti di tengah jalan.",
+   "aj": "まず五年間、がんばりたいです。その後、チャンスがあれば、もっと長く働きたいと思っています。",
+   "ai": "Pertama, saya ingin berusaha selama lima tahun. Setelah itu, jika ada kesempatan, saya ingin bekerja lebih lama.",
+   "c": "Jawaban 'sebentar saja' memberi kesan buruk. Tunjukkan komitmen.",
+   "jf": "日本[にほん]で何年間[なんねんかん]働[はたら]きたいですか。",
+   "ajf": "まず五年間[ごねんかん]、がんばりたいです。その後[のち]、チャンスがあれば、もっと長[なが]く働[はたら]きたいと思[おも]っています。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-mokuhyou-03",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で働いて何を学びたいですか。",
+   "id": "Apa yang ingin Anda pelajari dengan bekerja di Jepang?",
+   "v": [
+    [
+     "学ぶ",
+     "belajar"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "時間を守る",
+     "tepat waktu"
+    ],
+    [
+     "習慣",
+     "kebiasaan"
+    ]
+   ],
+   "m": "Melihat sikap belajar dan penghargaan pada etos kerja Jepang.",
+   "aj": "日本の仕事のやり方と、時間を守る習慣を学びたいです。日本語ももっと上手になりたいです。",
+   "ai": "Saya ingin belajar cara kerja Jepang dan kebiasaan menepati waktu. Saya juga ingin lebih mahir berbahasa Jepang.",
+   "c": "Jawaban tentang uang saja kurang baik. Tonjolkan skill dan sikap kerja.",
+   "jf": "日本[にほん]で働[はたら]いて何[なに]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の仕事[しごと]のやり方[ほう]と、時間[じかん]を守[まも]る習慣[しゅうかん]を学[まな]びたいです。日本語[にほんご]ももっと上手[じょうず]になりたいです。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-mokuhyou-04",
+   "k": "mokuhyou",
+   "l": 3,
+   "ja": "5年後、どうなりたいですか。",
+   "id": "Lima tahun lagi, Anda ingin menjadi seperti apa?",
+   "v": [
+    [
+     "五年後",
+     "lima tahun lagi"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "後輩",
+     "junior"
+    ],
+    [
+     "合格する",
+     "lulus"
+    ]
+   ],
+   "m": "Melihat rencana karier realistis dan keinginan berkembang.",
+   "aj": "五年後は、仕事に慣れて、後輩に教えられるようになりたいです。日本語もN3に合格したいです。",
+   "ai": "Lima tahun lagi saya ingin terbiasa dengan pekerjaan dan bisa mengajari junior. Saya juga ingin lulus JLPT N3.",
+   "c": "Pakai target konkret (mis. lulus N3, jadi senior yang dipercaya).",
+   "jf": "5年後[ねんご]、どうなりたいですか。",
+   "ajf": "五年[ごねん]後[のち]は、仕事[しごと]に慣[な]れて、後輩[こうはい]に教[おし]えられるようになりたいです。日本語[にほんご]もN3に合格[ごうかく]したいです。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-mokuhyou-05",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で林業を学んだあと、自分の国でどんなことをしたいですか。",
+   "id": "Setelah belajar kehutanan di Jepang, apa yang ingin Anda lakukan di negara sendiri?",
+   "v": [
+    [
+     "森",
+     "hutan"
+    ],
+    [
+     "守る",
+     "menjaga"
+    ],
+    [
+     "安全",
+     "keselamatan"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "日本で学んだ木の育て方や、山での安全の方法を使って、自分の国の森も守りたいです。",
+   "ai": "Saya ingin menjaga hutan di negara saya dengan memakai cara menumbuhkan pohon dan cara keselamatan di hutan yang saya pelajari di Jepang.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "forestry",
+   "jf": "日本[にほん]で林業[りんぎょう]を学[まな]んだあと、自分[じぶん]の国[くに]でどんなことをしたいですか。",
+   "ajf": "日本[にほん]で学[まな]んだ木[き]の育[そだ]て方[ほう]や、山[やま]での安全[あんぜん]の方法[ほうほう]を使[つか]って、自分[じぶん]の国[くに]の森[もり]も守[まも]りたいです。"
+  },
+  {
+   "i": "forestry-taiou-01",
+   "k": "taiou",
+   "l": 2,
+   "ja": "先輩や上司から注意されたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ditegur senior atau atasan?",
+   "v": [
+    [
+     "注意される",
+     "ditegur"
+    ],
+    [
+     "素直",
+     "terbuka"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "素直に聞いて、「はい、わかりました」と言います。やり方をメモして、次から気をつけます。",
+   "ai": "Saya mendengarkan dengan terbuka dan berkata \"Ya, saya mengerti\". Saya mencatat caranya dan lebih berhati-hati berikutnya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "先輩[せんぱい]や上司[じょうし]から注意[ちゅうい]されたら、どうしますか。",
+   "ajf": "素直[すなお]に聞[き]いて、「はい、わかりました」と言[い]います。やり方[ほう]をメモして、次[つぎ]から気[き]をつけます。"
+  },
+  {
+   "i": "forestry-taiou-02",
+   "k": "taiou",
+   "l": 2,
+   "ja": "木や道具を、だめにしてしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak pohon atau alat?",
+   "v": [
+    [
+     "だめにする",
+     "merusak"
+    ],
+    [
+     "報告",
+     "melapor"
+    ],
+    [
+     "原因",
+     "penyebab"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに正直に報告します。どうしてそうなったか考えて、次は同じことをしないようにします。",
+   "ai": "Saya segera melapor jujur. Saya memikirkan penyebabnya dan berusaha tidak mengulangi.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "木[き]や道具[どうぐ]を、だめにしてしまったら、どうしますか。",
+   "ajf": "すぐに正直[しょうじき]に報告[ほうこく]します。どうしてそうなったか考[かんが]えて、次[つぎ]は同[おな]じことをしないようにします。"
+  },
+  {
+   "i": "forestry-taiou-03",
+   "k": "taiou",
+   "l": 3,
+   "ja": "同僚と作業の方法で意見が合わなかったら、どうしますか。",
+   "id": "Jika pendapat Anda berbeda dengan rekan soal cara kerja, apa yang Anda lakukan?",
+   "v": [
+    [
+     "意見",
+     "pendapat"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "従う",
+     "mengikuti"
+    ]
+   ],
+   "m": "Menilai kerja sama dan kepatuhan.",
+   "aj": "まず相手の意見を聞きます。決まらないときは、責任者に聞いて、その指示に従います。",
+   "ai": "Pertama saya mendengar pendapat rekan. Jika tidak selesai, saya bertanya pada penanggung jawab dan mengikuti instruksinya.",
+   "c": "Ikuti instruksi penanggung jawab.",
+   "jf": "同僚[どうりょう]と作業[さぎょう]の方法[ほうほう]で意見[いけん]が合[あ]わなかったら、どうしますか。",
+   "ajf": "まず相手[あいて]の意見[いけん]を聞[き]きます。決[き]まらないときは、責任者[せきにんしゃ]に聞[き]いて、その指示[しじ]に従[したが]います。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-taiou-04",
+   "k": "taiou",
+   "l": 1,
+   "ja": "やり方が分からないとき、どうしますか。",
+   "id": "Jika Anda tidak tahu caranya, apa yang Anda lakukan?",
+   "v": [
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "勝手",
+     "sembarangan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Memastikan kandidat bertanya, tidak asal bekerja.",
+   "aj": "勝手にやらないで、すぐに聞きます。教えてもらったことはメモして、次は自分でできるようにします。",
+   "ai": "Saya tidak bekerja sembarangan dan segera bertanya. Yang diajarkan saya catat agar lain kali bisa sendiri.",
+   "c": "Kata kunci: 質問・メモ.",
+   "jf": "やり方[ほう]が分[わ]からないとき、どうしますか。",
+   "ajf": "勝手[かって]にやらないで、すぐに聞[き]きます。教[おし]えてもらったことはメモして、次[つぎ]は自分[じぶん]でできるようにします。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-taiou-05",
+   "k": "taiou",
+   "l": 2,
+   "ja": "体調が悪いときは、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau kondisi badan buruk?",
+   "v": [
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "無理",
+     "memaksakan"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "無理をしないで、すぐに上司に連絡します。体調が悪いまま作業すると、事故やミスにつながるからです。",
+   "ai": "Saya tidak memaksakan diri dan segera menghubungi atasan. Bekerja dalam kondisi buruk bisa menyebabkan kecelakaan atau kesalahan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "体調[たいちょう]が悪[わる]いときは、どうしますか。",
+   "ajf": "無理[むり]をしないで、すぐに上司[じょうし]に連絡[れんらく]します。体調[たいちょう]が悪[わる]いまま作業[さぎょう]すると、事故[じこ]やミスにつながるからです。"
+  },
+  {
+   "i": "forestry-taiou-06",
+   "k": "taiou",
+   "l": 3,
+   "ja": "天気が急に悪くなって、予定が変わったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau cuaca mendadak memburuk dan rencana berubah?",
+   "v": [
+    [
+     "急に",
+     "mendadak"
+    ],
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "山を下りる",
+     "turun gunung"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "責任者の指示をよく聞いて、安全を第一に動きます。すぐに山から下りるときもあります。",
+   "ai": "Saya mendengarkan instruksi penanggung jawab dan bergerak dengan mengutamakan keselamatan. Kadang harus segera turun gunung.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "天気[てんき]が急[きゅう]に悪[わる]くなって、予定[よてい]が変[か]わったら、どうしますか。",
+   "ajf": "責任者[せきにんしゃ]の指示[しじ]をよく聞[き]いて、安全[あんぜん]を第一[だいいち]に動[うご]きます。すぐに山[やま]から下[した]りるときもあります。"
+  },
+  {
+   "i": "forestry-taiou-07",
+   "k": "taiou",
+   "l": 2,
+   "ja": "日本人の同僚と、うまく話せなかったらどうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak bisa berbicara lancar dengan rekan kerja orang Jepang?",
+   "v": [
+    [
+     "うまく",
+     "dengan baik"
+    ],
+    [
+     "もう一度",
+     "sekali lagi"
+    ],
+    [
+     "ゆっくり",
+     "pelan-pelan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "もう一度ゆっくり話してもらうようにお願いします。わからなかった言葉は、メモして勉強します。",
+   "ai": "Saya minta mereka mengulang lebih pelan. Kata yang tidak saya pahami saya catat dan pelajari.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "日本人[にほんじん]の同僚[どうりょう]と、うまく話[はな]せなかったらどうしますか。",
+   "ajf": "もう一度[いちど]ゆっくり話[はな]してもらうようにお願[ねが]いします。わからなかった言葉[ことば]は、メモして勉強[べんきょう]します。"
+  },
+  {
+   "i": "forestry-taiou-08",
+   "k": "taiou",
+   "l": 2,
+   "ja": "山の作業が、急に早く終わったり、遅くなったりしたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau pekerjaan di hutan mendadak selesai lebih awal atau lebih lambat?",
+   "v": [
+    [
+     "片づける",
+     "membereskan"
+    ],
+    [
+     "準備",
+     "persiapan"
+    ],
+    [
+     "連絡",
+     "pemberitahuan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "連絡をよく聞いて、すぐに準備します。道具の片づけも、きちんとします。",
+   "ai": "Saya mendengar pemberitahuan dan segera bersiap. Saya juga membereskan alat dengan benar.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "山[やま]の作業[さぎょう]が、急[きゅう]に早[はや]く終[お]わったり、遅[おそ]くなったりしたら、どうしますか。",
+   "ajf": "連絡[れんらく]をよく聞[き]いて、すぐに準備[じゅんび]します。道具[どうぐ]の片[かた]づけも、きちんとします。"
+  },
+  {
+   "i": "forestry-taiou-09",
+   "k": "taiou",
+   "l": 2,
+   "ja": "作業のペースが遅いと言われたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau dibilang kerja Anda lambat?",
+   "v": [
+    [
+     "ペース",
+     "kecepatan"
+    ],
+    [
+     "コツ",
+     "trik"
+    ],
+    [
+     "練習",
+     "latihan"
+    ]
+   ],
+   "m": "Menerima kritik.",
+   "aj": "まず、「すみません」と言って、早い人のやり方をよく見ます。コツを教えてもらって、毎日練習します。",
+   "ai": "Pertama saya bilang \"maaf\" dan mengamati cara orang yang cepat. Saya minta diajari triknya dan berlatih tiap hari.",
+   "c": "Terima kritik dengan baik.",
+   "jf": "作業[さぎょう]のペースが遅[おそ]いと言[い]われたら、どうしますか。",
+   "ajf": "まず、「すみません」と言[い]って、早[はや]い人[にん]のやり方[ほう]をよく見[み]ます。コツを教[おし]えてもらって、毎日[まいにち]練習[れんしゅう]します。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-taiou-10",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械や道具を壊してしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak mesin atau alat?",
+   "v": [
+    [
+     "壊す",
+     "merusak"
+    ],
+    [
+     "正直に",
+     "dengan jujur"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに作業を止めて、正直に責任者に報告します。隠さないで、謝って、どうすればいいか聞きます。",
+   "ai": "Saya segera menghentikan pekerjaan dan melapor jujur kepada penanggung jawab. Saya tidak menyembunyikannya, meminta maaf, dan bertanya apa yang harus dilakukan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "機械[きかい]や道具[どうぐ]を壊[こわ]してしまったら、どうしますか。",
+   "ajf": "すぐに作業[さぎょう]を止[と]めて、正直[しょうじき]に責任者[せきにんしゃ]に報告[ほうこく]します。隠[かく]さないで、謝[あやま]って、どうすればいいか聞[き]きます。"
+  },
+  {
+   "i": "forestry-taiou-11",
+   "k": "taiou",
+   "l": 3,
+   "ja": "山の仕事で疲れているとき、どう気持ちを保ちますか。",
+   "id": "Bagaimana Anda menjaga semangat saat lelah bekerja di hutan?",
+   "v": [
+    [
+     "疲れる",
+     "lelah"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "休む",
+     "istirahat"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "疲れたときは、無理をしないで、休みます。しっかり寝て、食事をとって、体調を保ちます。",
+   "ai": "Saat lelah, saya tidak memaksakan diri dan beristirahat. Saya tidur cukup, makan baik, dan menjaga kondisi badan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "山[やま]の仕事[しごと]で疲[つか]れているとき、どう気持[きも]ちを保[たも]ちますか。",
+   "ajf": "疲[つか]れたときは、無理[むり]をしないで、休[やす]みます。しっかり寝[ね]て、食事[しょくじ]をとって、体調[たいちょう]を保[たも]ちます。"
+  },
+  {
+   "i": "forestry-taiou-12",
+   "k": "taiou",
+   "l": 1,
+   "ja": "山の人に、方言で話されて分からないとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau orang di desa gunung berbicara dialek dan Anda tidak paham?",
+   "v": [
+    [
+     "方言",
+     "dialek"
+    ],
+    [
+     "ゆっくり",
+     "pelan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "「すみません、ゆっくりお願いします」と言います。分からない言葉は、メモして、あとで聞きます。",
+   "ai": "Saya bilang \"Maaf, tolong lebih pelan\". Kata yang tidak paham saya catat dan tanyakan nanti.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "forestry",
+   "jf": "山[やま]の人[ひと]に、方言[ほうげん]で話[はな]されて分[わ]からないとき、どうしますか。",
+   "ajf": "「すみません、ゆっくりお願[ねが]いします」と言[い]います。分[わ]からない言葉[ことば]は、メモして、あとで聞[き]きます。"
+  },
+  {
+   "i": "forestry-tim-01",
+   "k": "tim",
+   "l": 1,
+   "ja": "山の作業で、チームの人と、どのように作業を分けますか。",
+   "id": "Dalam pekerjaan hutan, bagaimana Anda membagi tugas dengan tim?",
+   "v": [
+    [
+     "分担",
+     "pembagian tugas"
+    ],
+    [
+     "声をかけ合う",
+     "saling memberi aba-aba"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "責任者の指示で、木を切る人、運ぶ人などに分かれます。声をかけ合って、安全に作業します。",
+   "ai": "Sesuai instruksi penanggung jawab, ada yang menebang dan ada yang mengangkut. Kami saling memberi aba-aba agar aman.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "forestry",
+   "jf": "山[やま]の作業[さぎょう]で、チームの人[ひと]と、どのように作業[さぎょう]を分[わ]けますか。",
+   "ajf": "責任者[せきにんしゃ]の指示[しじ]で、木[き]を切[き]る人[ひと]、運[はこ]ぶ人[ひと]などに分[わ]かれます。声[こえ]をかけ合[あ]って、安全[あんぜん]に作業[さぎょう]します。"
+  },
+  {
+   "i": "forestry-tim-02",
+   "k": "tim",
+   "l": 2,
+   "ja": "先輩の指示が分からなかったとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak paham instruksi senior?",
+   "v": [
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "危ない",
+     "berbahaya"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "すぐに「もう一度お願いします」と聞きます。山では、分からないまま動くと、とても危ないからです。",
+   "ai": "Saya segera meminta \"Tolong ulangi\". Di hutan, bergerak tanpa paham sangat berbahaya.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "forestry",
+   "jf": "先輩[せんぱい]の指示[しじ]が分[わ]からなかったとき、どうしますか。",
+   "ajf": "すぐに「もう一度[いちど]お願[ねが]いします」と聞[き]きます。山[やま]では、分[わ]からないまま動[うご]くと、とても危[あぶ]ないからです。"
+  },
+  {
+   "i": "forestry-tim-03",
+   "k": "tim",
+   "l": 2,
+   "ja": "山の中で、離れた場所にいる仲間と、どのように連絡しますか。",
+   "id": "Bagaimana Anda berkomunikasi dengan rekan yang berjauhan di hutan?",
+   "v": [
+    [
+     "無線",
+     "radio komunikasi"
+    ],
+    [
+     "合図",
+     "isyarat"
+    ],
+    [
+     "伝える",
+     "menyampaikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "決められた合図や、無線を使います。大きい声ではっきり伝えます。",
+   "ai": "Saya memakai isyarat yang ditentukan atau radio. Saya menyampaikan dengan jelas dan suara keras.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "forestry",
+   "jf": "山[やま]の中[なか]で、離[はな]れた場所[ばしょ]にいる仲間[なかま]と、どのように連絡[れんらく]しますか。",
+   "ajf": "決[き]められた合図[あいず]や、無線[むせん]を使[つか]います。大[おお]きい声[こえ]ではっきり伝[つた]えます。"
+  },
+  {
+   "i": "forestry-tim-04",
+   "k": "tim",
+   "l": 1,
+   "ja": "山の仲間と、どのように仲良くなりたいですか。",
+   "id": "Bagaimana Anda ingin akrab dengan rekan di hutan?",
+   "v": [
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "仲間",
+     "rekan"
+    ],
+    [
+     "感謝",
+     "rasa terima kasih"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "毎日、元気にあいさつをします。仕事のやり方を教えてもらったときは、「ありがとうございます」と言います。",
+   "ai": "Setiap hari saya menyapa dengan semangat. Saat diajari cara kerja, saya mengatakan \"Terima kasih\".",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "forestry",
+   "jf": "山[やま]の仲間[なかま]と、どのように仲良[なかよ]くなりたいですか。",
+   "ajf": "毎日[まいにち]、元気[げんき]にあいさつをします。仕事[しごと]のやり方[ほう]を教[おし]えてもらったときは、「ありがとうございます」と言[い]います。"
+  },
+  {
+   "i": "forestry-anzen-01",
+   "k": "anzen",
+   "l": 1,
+   "ja": "山で作業するとき、必ず身につけるものは何ですか。",
+   "id": "Apa yang wajib dikenakan saat bekerja di hutan?",
+   "v": [
+    [
+     "ヘルメット",
+     "helm"
+    ],
+    [
+     "保護ズボン",
+     "celana pelindung"
+    ],
+    [
+     "安全靴",
+     "sepatu keselamatan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "ヘルメット、安全靴、手袋を必ず着けます。チェーンソーを使うときは、保護ズボンも着けます。",
+   "ai": "Saya wajib memakai helm, sepatu keselamatan, dan sarung tangan. Saat memakai gergaji mesin saya juga memakai celana pelindung.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "forestry",
+   "jf": "山[やま]で作業[さぎょう]するとき、必[かなら]ず身[み]につけるものは何[なん]ですか。",
+   "ajf": "ヘルメット、安全靴[あんぜんぐつ]、手袋[てぶくろ]を必[かなら]ず着[つ]けます。チェーンソーを使[つか]うときは、保護[ほご]ズボンも着[つ]けます。"
+  },
+  {
+   "i": "forestry-anzen-02",
+   "k": "anzen",
+   "l": 2,
+   "ja": "チェーンソーを使うとき、事故を防ぐために何をしますか。",
+   "id": "Apa yang Anda lakukan untuk mencegah kecelakaan saat memakai gergaji mesin?",
+   "v": [
+    [
+     "エンジンを止める",
+     "mematikan mesin"
+    ],
+    [
+     "両手",
+     "dua tangan"
+    ],
+    [
+     "事故",
+     "kecelakaan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "必ず両手で持ちます。動いているときは、まわりに人を近づけません。置くときは、エンジンを止めます。",
+   "ai": "Saya selalu memegang dengan dua tangan. Saat menyala, saya tidak membiarkan orang mendekat. Saat meletakkannya, saya mematikan mesin.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "forestry",
+   "jf": "チェーンソーを使[つか]うとき、事故[じこ]を防[ふせ]ぐために何[なに]をしますか。",
+   "ajf": "必[かなら]ず両手[りょうて]で持[も]ちます。動[うご]いているときは、まわりに人[ひと]を近[ちか]づけません。置[お]くときは、エンジンを止[と]めます。"
+  },
+  {
+   "i": "forestry-anzen-03",
+   "k": "anzen",
+   "l": 2,
+   "ja": "木が倒れるとき、どうやって安全を守りますか。",
+   "id": "Bagaimana Anda menjaga keselamatan saat pohon tumbang?",
+   "v": [
+    [
+     "倒れる",
+     "tumbang"
+    ],
+    [
+     "避難",
+     "menyelamatkan diri"
+    ],
+    [
+     "方向",
+     "arah"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "木が倒れる方向を、よく確認します。倒れ始めたら、決められた逃げる道に、すぐ避難します。",
+   "ai": "Saya memastikan arah tumbang dengan baik. Begitu mulai tumbang, saya segera menyelamatkan diri lewat jalur yang ditentukan.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "forestry",
+   "jf": "木[き]が倒[たお]れるとき、どうやって安全[あんぜん]を守[まも]りますか。",
+   "ajf": "木[き]が倒[たお]れる方向[ほうこう]を、よく確認[かくにん]します。倒[たお]れ始[はじ]めたら、決[き]められた逃[に]げる道[みち]に、すぐ避難[ひなん]します。"
+  },
+  {
+   "i": "forestry-anzen-04",
+   "k": "anzen",
+   "l": 3,
+   "ja": "ハチやヘビ、クマを見つけたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau menemukan tawon, ular, atau beruang?",
+   "v": [
+    [
+     "ハチ",
+     "tawon"
+    ],
+    [
+     "ヘビ",
+     "ular"
+    ],
+    [
+     "クマ",
+     "beruang"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "近づかないで、ゆっくり離れます。大きい声は出さないで、すぐに責任者に知らせます。",
+   "ai": "Saya tidak mendekat dan menjauh pelan-pelan. Saya tidak berteriak dan segera memberi tahu penanggung jawab.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "forestry",
+   "jf": "ハチやヘビ、クマを見[み]つけたら、どうしますか。",
+   "ajf": "近[ちか]づかないで、ゆっくり離[はな]れます。大[おお]きい声[こえ]は出[だ]さないで、すぐに責任者[せきにんしゃ]に知[し]らせます。"
+  },
+  {
+   "i": "forestry-saigo-01",
+   "k": "saigo",
+   "l": 2,
+   "ja": "最後に何か質問はありますか。",
+   "id": "Terakhir, apakah ada yang ingin Anda tanyakan?",
+   "v": [
+    [
+     "最後に",
+     "terakhir"
+    ],
+    [
+     "質問",
+     "pertanyaan"
+    ],
+    [
+     "入社前",
+     "sebelum bergabung"
+    ],
+    [
+     "勉強しておく",
+     "belajar lebih dulu"
+    ]
+   ],
+   "m": "Melihat antusiasme dan kemampuan bertanya dengan sopan.",
+   "aj": "はい、一つあります。仕事を早く覚えるために、入社前に勉強しておいたほうがいいことはありますか。",
+   "ai": "Ya, ada satu. Agar cepat menguasai pekerjaan, apakah ada hal yang sebaiknya saya pelajari sebelum bergabung?",
+   "c": "Jangan menjawab 'tidak ada' begitu saja. Bertanya tentang belajar menunjukkan semangat. Hindari bertanya soal gaji di awal.",
+   "jf": "最後[さいご]に何[なに]か質問[しつもん]はありますか。",
+   "ajf": "はい、一[ひと]つあります。仕事[しごと]を早[はや]く覚[おぼ]えるために、入社前[にゅうしゃまえ]に勉強[べんきょう]しておいたほうがいいことはありますか。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-saigo-02",
+   "k": "saigo",
+   "l": 2,
+   "ja": "当社について何か聞きたいことはありますか。",
+   "id": "Adakah yang ingin Anda ketahui tentang perusahaan kami?",
+   "v": [
+    [
+     "当社",
+     "perusahaan kami"
+    ],
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "pergi-pulang kerja"
+    ],
+    [
+     "教えていただけますか",
+     "boleh tolong beritahu saya?"
+    ]
+   ],
+   "m": "Melihat apakah kandidat sudah mencari tahu tentang perusahaan.",
+   "aj": "寮や通勤の方法について、教えていただけますか。",
+   "ai": "Boleh tolong beritahu saya tentang asrama dan cara pergi ke tempat kerja?",
+   "c": "Tanyakan hal praktis dan sopan (asrama, pelatihan). AI tidak akan mengarang info perusahaan.",
+   "jf": "当社[とうしゃ]について何[なに]か聞[き]きたいことはありますか。",
+   "ajf": "寮[りょう]や通勤[つうきん]の方法[ほうほう]について、教[おし]えていただけますか。",
+   "b": "forestry"
+  },
+  {
+   "i": "forestry-saigo-03",
+   "k": "saigo",
+   "l": 1,
+   "ja": "仕事の前に、どんな服や持ち物を用意したらいいですか。",
+   "id": "Pakaian dan barang apa yang sebaiknya saya siapkan sebelum bekerja?",
+   "v": [
+    [
+     "持ち物",
+     "barang bawaan"
+    ],
+    [
+     "準備する",
+     "menyiapkan"
+    ],
+    [
+     "服",
+     "pakaian"
+    ]
+   ],
+   "m": "Memberi kesempatan bertanya; menilai antusiasme.",
+   "aj": "はい、仕事の前に、どんな服や靴、持ち物を準備したらいいか、教えてください。",
+   "ai": "Ya, tolong beri tahu pakaian, sepatu, dan barang apa yang sebaiknya saya siapkan sebelum bekerja.",
+   "c": "Siapkan satu pertanyaan sopan tentang pekerjaan.",
+   "b": "forestry",
+   "jf": "仕事[しごと]の前[まえ]に、どんな服[ふく]や持[も]ち物[もの]を用意[ようい]したらいいですか。",
+   "ajf": "はい、仕事[しごと]の前[まえ]に、どんな服[ふく]や靴[くつ]、持[も]ち物[もの]を準備[じゅんび]したらいいか、教[おし]えてください。"
+  }
+ ]
+}

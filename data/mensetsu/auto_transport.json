@@ -1,0 +1,1859 @@
+{
+ "bidang": "auto_transport",
+ "nama": "Auto Transport",
+ "jp": "自動車運送業",
+ "emoji": "🚚",
+ "kategori": [
+  {
+   "k": "jiko",
+   "jp": "自己紹介",
+   "id": "Perkenalan diri"
+  },
+  {
+   "k": "shibou",
+   "jp": "志望動機",
+   "id": "Alasan melamar"
+  },
+  {
+   "k": "shigoto",
+   "jp": "仕事への理解",
+   "id": "Pemahaman pekerjaan"
+  },
+  {
+   "k": "seikatsu",
+   "jp": "日本での生活",
+   "id": "Kehidupan di Jepang"
+  },
+  {
+   "k": "mokuhyou",
+   "jp": "将来の目標",
+   "id": "Tujuan masa depan"
+  },
+  {
+   "k": "taiou",
+   "jp": "職場での対応",
+   "id": "Situasi di tempat kerja"
+  },
+  {
+   "k": "tim",
+   "jp": "チームワーク",
+   "id": "Kerja sama tim"
+  },
+  {
+   "k": "anzen",
+   "jp": "安全・衛生",
+   "id": "Keselamatan & kebersihan"
+  },
+  {
+   "k": "saigo",
+   "jp": "最後の質問",
+   "id": "Pertanyaan penutup"
+  }
+ ],
+ "soal": [
+  {
+   "i": "auto_transport-jiko-01",
+   "k": "jiko",
+   "l": 1,
+   "ja": "自己紹介をお願いします。",
+   "id": "Tolong perkenalkan diri Anda.",
+   "v": [
+    [
+     "自己紹介",
+     "perkenalan diri"
+    ],
+    [
+     "〜と申します",
+     "nama saya (sopan)"
+    ],
+    [
+     "よろしくお願いします",
+     "mohon bantuannya"
+    ]
+   ],
+   "m": "Melihat apakah kandidat bisa memperkenalkan diri dengan sopan dan jelas.",
+   "aj": "はじめまして。アリと申します。インドネシアのジャワ島から来ました。二十四歳です。自動車運送業の仕事に興味があって、日本で働きたいと思っています。一生懸命がんばりますので、よろしくお願いします。",
+   "ai": "Perkenalkan, nama saya Ali. Saya dari pulau Jawa, Indonesia. Usia saya 24 tahun. Saya tertarik pada pekerjaan di bidang Auto Transport dan ingin bekerja di Jepang. Saya akan berusaha sungguh-sungguh, mohon bantuannya.",
+   "c": "Suara jelas, sopan, nama-asal-usia-motivasi singkat.",
+   "b": "auto_transport",
+   "jf": "自己紹介[じこしょうかい]をお願[ねが]いします。",
+   "ajf": "はじめまして。アリと申[もう]します。インドネシアのジャワ島[とう]から来[き]ました。二十四歳[にじゅうよんさい]です。自動車運送業[じどうしゃうんそうぎょう]の仕事[しごと]に興味[きょうみ]があって、日本[にほん]で働[はたら]きたいと思[おも]っています。一生懸命[いっしょうけんめい]がんばりますので、よろしくお願[ねが]いします。"
+  },
+  {
+   "i": "auto_transport-jiko-02",
+   "k": "jiko",
+   "l": 1,
+   "ja": "お名前を教えてください。",
+   "id": "Tolong sebutkan nama Anda.",
+   "v": [
+    [
+     "お名前",
+     "nama (hormat)"
+    ],
+    [
+     "〜と呼んでください",
+     "tolong panggil saya ..."
+    ],
+    [
+     "フルネーム",
+     "nama lengkap"
+    ]
+   ],
+   "m": "Memastikan nama dan kemampuan menyebutkannya dengan jelas.",
+   "aj": "アリ・プラセティョと申します。アリと呼んでください。",
+   "ai": "Nama saya Ali Prasetyo. Silakan panggil saya Ali.",
+   "c": "Sebut nama pelan dan jelas. Gunakan 〜と申します, bukan 〜です, di wawancara resmi.",
+   "jf": "お名前[なまえ]を教[おし]えてください。",
+   "ajf": "アリ・プラセティョと申[もう]します。アリと呼[よ]んでください。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-jiko-03",
+   "k": "jiko",
+   "l": 1,
+   "ja": "何歳ですか。",
+   "id": "Berapa usia Anda?",
+   "v": [
+    [
+     "歳",
+     "tahun (usia)"
+    ],
+    [
+     "二十四歳",
+     "24 tahun"
+    ],
+    [
+     "来月",
+     "bulan depan"
+    ]
+   ],
+   "m": "Cek informasi dasar dan kemampuan menyebut angka/usia dalam bahasa Jepang.",
+   "aj": "二十四歳です。来月、二十五歳になります。",
+   "ai": "Saya 24 tahun. Bulan depan saya genap 25 tahun.",
+   "c": "Latih angka dan hitungan usia (〜歳). Usia khusus: 20歳 = はたち.",
+   "jf": "何歳[なんさい]ですか。",
+   "ajf": "二十四歳[にじゅうよんさい]です。来月[らいげつ]、二十五歳[にじゅうごさい]になります。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-jiko-04",
+   "k": "jiko",
+   "l": 1,
+   "ja": "出身はどこですか。",
+   "id": "Anda berasal dari mana?",
+   "v": [
+    [
+     "出身",
+     "asal"
+    ],
+    [
+     "〜から来ました",
+     "datang dari ..."
+    ],
+    [
+     "近い",
+     "dekat"
+    ]
+   ],
+   "m": "Mengetahui latar belakang dan membuka obrolan ringan.",
+   "aj": "インドネシアの中部ジャワのスマランです。海に近い町です。",
+   "ai": "Saya dari Semarang, Jawa Tengah, Indonesia. Kotanya dekat laut.",
+   "c": "Boleh tambah satu kalimat tentang daerah asal. Pewawancara sering menanggapinya.",
+   "jf": "出身[しゅっしん]はどこですか。",
+   "ajf": "インドネシアの中部[ちゅうぶ]ジャワのスマランです。海[うみ]に近[ちか]い町[まち]です。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-jiko-05",
+   "k": "jiko",
+   "l": 1,
+   "ja": "趣味は何ですか。",
+   "id": "Apa hobi Anda?",
+   "v": [
+    [
+     "趣味",
+     "hobi"
+    ],
+    [
+     "体を動かす",
+     "bergerak/berolahraga"
+    ],
+    [
+     "週末",
+     "akhir pekan"
+    ]
+   ],
+   "m": "Melihat kepribadian dan apakah kandidat sehat dan aktif.",
+   "aj": "趣味はサッカーです。週末に友達とサッカーをします。体を動かすのが好きです。",
+   "ai": "Hobi saya sepak bola. Di akhir pekan saya bermain bola dengan teman. Saya suka bergerak.",
+   "c": "Hindari jawaban yang terkesan malas atau begadang (mis. main game sampai malam). Pilih hobi sehat.",
+   "jf": "趣味[しゅみ]は何[なん]ですか。",
+   "ajf": "趣味[しゅみ]はサッカーです。週末[しゅうまつ]に友達[ともだち]とサッカーをします。体[からだ]を動[うご]かすのが好[す]きです。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-jiko-06",
+   "k": "jiko",
+   "l": 3,
+   "ja": "自分の長所と短所を教えてください。",
+   "id": "Sebutkan kelebihan dan kekurangan Anda.",
+   "v": [
+    [
+     "長所",
+     "kelebihan"
+    ],
+    [
+     "短所",
+     "kekurangan"
+    ],
+    [
+     "まじめ",
+     "rajin/serius"
+    ],
+    [
+     "心配しすぎる",
+     "terlalu khawatir"
+    ]
+   ],
+   "m": "Menilai kejujuran dan kesadaran diri, serta usaha memperbaiki kekurangan.",
+   "aj": "長所はまじめなところです。短所は、少し心配しすぎるところです。でも、メモを取ってミスを減らすようにしています。",
+   "ai": "Kelebihan saya rajin. Kekurangan saya agak terlalu khawatir. Tetapi saya mencatat supaya mengurangi kesalahan.",
+   "c": "Selalu sebut kekurangan + usaha memperbaikinya. Jangan sebut kekurangan fatal (mis. malas, tidak disiplin).",
+   "jf": "自分[じぶん]の長所[ちょうしょ]と短所[たんしょ]を教[おし]えてください。",
+   "ajf": "長所[ちょうしょ]はまじめなところです。短所[たんしょ]は、少[すこ]し心配[しんぱい]しすぎるところです。でも、メモを取[と]ってミスを減[へ]らすようにしています。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-jiko-07",
+   "k": "jiko",
+   "l": 2,
+   "ja": "日本語はどのくらい勉強しましたか。",
+   "id": "Sudah berapa lama Anda belajar bahasa Jepang?",
+   "v": [
+    [
+     "勉強する",
+     "belajar"
+    ],
+    [
+     "毎日",
+     "setiap hari"
+    ],
+    [
+     "単語",
+     "kosakata"
+    ],
+    [
+     "練習する",
+     "berlatih"
+    ]
+   ],
+   "m": "Memperkirakan kemampuan bahasa dan kesungguhan belajar.",
+   "aj": "八か月勉強しました。毎日一時間、単語と会話を練習しています。",
+   "ai": "Saya belajar 8 bulan. Setiap hari saya berlatih kosakata dan percakapan selama satu jam.",
+   "c": "Sebut lama belajar dan cara belajar. Jawaban jujur lebih baik daripada melebih-lebihkan.",
+   "jf": "日本語[にほんご]はどのくらい勉強[べんきょう]しましたか。",
+   "ajf": "八[はち]か月[がつ]勉強[べんきょう]しました。毎日[まいにち]一時間[いちじかん]、単語[たんご]と会話[かいわ]を練習[れんしゅう]しています。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-jiko-08",
+   "k": "jiko",
+   "l": 1,
+   "ja": "健康状態はどうですか。",
+   "id": "Bagaimana kondisi kesehatan Anda?",
+   "v": [
+    [
+     "健康",
+     "sehat"
+    ],
+    [
+     "丈夫",
+     "kuat"
+    ],
+    [
+     "大きな病気",
+     "penyakit berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memastikan kandidat sanggup bekerja secara fisik.",
+   "aj": "はい、元気です。大きな病気はありません。毎朝、軽い運動をしています。",
+   "ai": "Ya, saya sehat. Tidak ada penyakit berat. Setiap pagi saya berolahraga ringan.",
+   "c": "Jawab jujur. Perusahaan khawatir soal cuti panjang karena sakit.",
+   "jf": "健康状態[けんこうじょうたい]はどうですか。",
+   "ajf": "はい、元気[げんき]です。大[おお]きな病気[びょうき]はありません。毎朝[まいあさ]、軽[かる]い運動[うんどう]をしています。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-shibou-01",
+   "k": "shibou",
+   "l": 1,
+   "ja": "なぜ運送の仕事を選びましたか。",
+   "id": "Mengapa Anda memilih pekerjaan transportasi?",
+   "v": [
+    [
+     "運送",
+     "pengangkutan"
+    ],
+    [
+     "運転",
+     "mengemudi"
+    ],
+    [
+     "荷物",
+     "barang"
+    ],
+    [
+     "安全",
+     "keselamatan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "小さいころから、大きいトラックやバスが好きでした。人や荷物を安全に運ぶ仕事がしたいです。",
+   "ai": "Sejak kecil saya suka truk dan bus besar. Saya ingin bekerja mengangkut orang dan barang dengan aman.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "auto_transport",
+   "jf": "なぜ運送[うんそう]の仕事[しごと]を選[えら]びましたか。",
+   "ajf": "小[ちい]さいころから、大[おお]きいトラックやバスが好[す]きでした。人[ひと]や荷物[にもつ]を安全[あんぜん]に運[はこ]ぶ仕事[しごと]がしたいです。"
+  },
+  {
+   "i": "auto_transport-shibou-02",
+   "k": "shibou",
+   "l": 2,
+   "ja": "なぜ日本で運転の仕事を学びたいですか。",
+   "id": "Mengapa Anda ingin belajar pekerjaan mengemudi di Jepang?",
+   "v": [
+    [
+     "運転手",
+     "pengemudi"
+    ],
+    [
+     "時間",
+     "waktu"
+    ],
+    [
+     "考え方",
+     "cara berpikir"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "日本の運転手は、時間と安全をとても大切にしていると聞きました。その考え方を学びたいです。",
+   "ai": "Saya dengar pengemudi Jepang sangat mengutamakan ketepatan waktu dan keselamatan. Saya ingin belajar cara berpikir itu.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "auto_transport",
+   "jf": "なぜ日本[にほん]で運転[うんてん]の仕事[しごと]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の運転手[うんてんしゅ]は、時間[じかん]と安全[あんぜん]をとても大切[たいせつ]にしていると聞[き]きました。その考[かんが]え方[ほう]を学[まな]びたいです。"
+  },
+  {
+   "i": "auto_transport-shibou-03",
+   "k": "shibou",
+   "l": 3,
+   "ja": "なぜ当社に応募しましたか。",
+   "id": "Mengapa Anda melamar ke perusahaan kami?",
+   "v": [
+    [
+     "応募する",
+     "melamar"
+    ],
+    [
+     "御社",
+     "perusahaan Anda"
+    ],
+    [
+     "指導",
+     "bimbingan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "御社は、安全運転とお客様への責任を大切にしていると聞きました。丁寧に指導してもらえると思って、応募しました。",
+   "ai": "Saya dengar perusahaan Anda mengutamakan keselamatan berkendara dan tanggung jawab kepada pelanggan. Saya pikir saya akan dibimbing dengan baik, jadi saya melamar.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "auto_transport",
+   "jf": "なぜ当社[とうしゃ]に応募[おうぼ]しましたか。",
+   "ajf": "御社[おんしゃ]は、安全運転[あんぜんうんてん]とお客様[きゃくさま]への責任[せきにん]を大切[たいせつ]にしていると聞[き]きました。丁寧[ていねい]に指導[しどう]してもらえると思[おも]って、応募[おうぼ]しました。"
+  },
+  {
+   "i": "auto_transport-shibou-04",
+   "k": "shibou",
+   "l": 1,
+   "ja": "この仕事に興味を持った理由は何ですか。",
+   "id": "Apa alasan Anda tertarik pada pekerjaan ini?",
+   "v": [
+    [
+     "届ける",
+     "mengantarkan"
+    ],
+    [
+     "社会",
+     "masyarakat"
+    ],
+    [
+     "支える",
+     "menopang"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "荷物がお客様に届いたとき、「ありがとう」と言われるのがうれしいと思いました。社会を支える仕事に、興味があります。",
+   "ai": "Saya kira senang kalau barang sampai dan pelanggan berkata \"terima kasih\". Saya tertarik pada pekerjaan yang menopang masyarakat.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "auto_transport",
+   "jf": "この仕事[しごと]に興味[きょうみ]を持[も]った理由[りゆう]は何[なん]ですか。",
+   "ajf": "荷物[にもつ]がお客様[きゃくさま]に届[とど]いたとき、「ありがとう」と言[い]われるのがうれしいと思[おも]いました。社会[しゃかい]を支[ささ]える仕事[しごと]に、興味[きょうみ]があります。"
+  },
+  {
+   "i": "auto_transport-shibou-05",
+   "k": "shibou",
+   "l": 2,
+   "ja": "運転の仕事で、一番楽しみなことは何ですか。",
+   "id": "Apa yang paling Anda nantikan dari pekerjaan mengemudi?",
+   "v": [
+    [
+     "道",
+     "jalan"
+    ],
+    [
+     "運転",
+     "mengemudi"
+    ],
+    [
+     "喜ぶ",
+     "senang"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "日本のいろいろな道を、安全に運転できるようになることです。お客様に喜んでもらいたいです。",
+   "ai": "Bisa mengemudi dengan aman di berbagai jalan Jepang. Saya ingin pelanggan merasa senang.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "auto_transport",
+   "jf": "運転[うんてん]の仕事[しごと]で、一番楽[いちばんたの]しみなことは何[なん]ですか。",
+   "ajf": "日本[にほん]のいろいろな道[みち]を、安全[あんぜん]に運転[うんてん]できるようになることです。お客様[きゃくさま]に喜[よろこ]んでもらいたいです。"
+  },
+  {
+   "i": "auto_transport-shigoto-01",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "自動車運送の主な仕事は何だと思いますか。",
+   "id": "Menurut Anda, apa pekerjaan utama transportasi kendaraan?",
+   "v": [
+    [
+     "トラック",
+     "truk"
+    ],
+    [
+     "バス",
+     "bus"
+    ],
+    [
+     "お客様",
+     "penumpang/pelanggan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "トラックで荷物を運んだり、バスやタクシーでお客様を運んだりする仕事だと思います。",
+   "ai": "Saya kira pekerjaannya mengangkut barang dengan truk, atau mengangkut penumpang dengan bus dan taksi.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "自動車運送[じどうしゃうんそう]の主[おも]な仕事[しごと]は何[なん]だと思[おも]いますか。",
+   "ajf": "トラックで荷物[にもつ]を運[はこ]んだり、バスやタクシーでお客様[きゃくさま]を運[はこ]んだりする仕事[しごと]だと思[おも]います。"
+  },
+  {
+   "i": "auto_transport-shigoto-02",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "朝早くや、夜遅くに働くことはできますか。",
+   "id": "Bisakah Anda bekerja sangat pagi atau larut malam?",
+   "v": [
+    [
+     "早朝",
+     "pagi buta"
+    ],
+    [
+     "深夜",
+     "tengah malam"
+    ],
+    [
+     "体調を整える",
+     "menjaga kondisi"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。仕事の前は、しっかり寝て、体調を整えます。",
+   "ai": "Ya, bisa. Sebelum bekerja saya tidur cukup dan menjaga kondisi badan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "朝早[あさはや]くや、夜遅[よるおそ]くに働[はたら]くことはできますか。",
+   "ajf": "はい、できます。仕事[しごと]の前[まえ]は、しっかり寝[ね]て、体調[たいちょう]を整[ととの]えます。"
+  },
+  {
+   "i": "auto_transport-shigoto-03",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "長い時間、座って運転できますか。",
+   "id": "Bisakah Anda mengemudi sambil duduk dalam waktu lama?",
+   "v": [
+    [
+     "休けい",
+     "istirahat"
+    ],
+    [
+     "座る",
+     "duduk"
+    ],
+    [
+     "体を動かす",
+     "menggerakkan badan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。決まった休けいを取って、ときどき体を動かします。",
+   "ai": "Ya, bisa. Saya mengambil istirahat yang ditentukan dan sesekali menggerakkan badan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "長[なが]い時間[じかん]、座[すわ]って運転[うんてん]できますか。",
+   "ajf": "はい、できます。決[き]まった休[やす]けいを取[と]って、ときどき体[からだ]を動[うご]かします。"
+  },
+  {
+   "i": "auto_transport-shigoto-04",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "雨や雪の日の運転について、どう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang mengemudi saat hujan atau salju?",
+   "v": [
+    [
+     "雪",
+     "salju"
+    ],
+    [
+     "すべる",
+     "licin"
+    ],
+    [
+     "スピード",
+     "kecepatan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "道がすべりやすいので、とても注意が必要です。スピードを出さないで、ゆっくり運転します。",
+   "ai": "Karena jalan licin, perlu sangat berhati-hati. Saya tidak ngebut dan mengemudi pelan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "雨[あめ]や雪[ゆき]の日[ひ]の運転[うんてん]について、どう思[おも]いますか。",
+   "ajf": "道[みち]がすべりやすいので、とても注意[ちゅうい]が必要[ひつよう]です。スピードを出[だ]さないで、ゆっくり運転[うんてん]します。"
+  },
+  {
+   "i": "auto_transport-shigoto-05",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "荷物を持ったり、運んだりする体力はありますか。",
+   "id": "Apakah Anda punya stamina untuk mengangkat dan memindahkan barang?",
+   "v": [
+    [
+     "体力",
+     "stamina"
+    ],
+    [
+     "重い",
+     "berat"
+    ],
+    [
+     "腰",
+     "pinggang"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、あります。毎日運動をして、体力をつけています。重い荷物は、腰に気をつけて持ちます。",
+   "ai": "Ya, ada. Saya berolahraga setiap hari. Barang berat saya angkat dengan menjaga pinggang.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "荷物[にもつ]を持[も]ったり、運[はこ]んだりする体力[たいりょく]はありますか。",
+   "ajf": "はい、あります。毎日運動[まいにちうんどう]をして、体力[たいりょく]をつけています。重[おも]い荷物[にもつ]は、腰[こし]に気[き]をつけて持[も]ちます。"
+  },
+  {
+   "i": "auto_transport-shigoto-06",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "忙しい時期や、帰りが遅い日があっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan musim sibuk dan hari pulang larut?",
+   "v": [
+    [
+     "繁忙期",
+     "musim sibuk"
+    ],
+    [
+     "帰り",
+     "pulang"
+    ],
+    [
+     "休み",
+     "libur"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。ただ、決められた休けいや休みは、必ず守ります。",
+   "ai": "Ya, tidak masalah. Namun saya pasti mematuhi istirahat dan libur yang ditentukan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "忙[いそが]しい時期[じき]や、帰[かえ]りが遅[おそ]い日[ひ]があっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。ただ、決[き]められた休[やす]けいや休[やす]みは、必[かなら]ず守[まも]ります。"
+  },
+  {
+   "i": "auto_transport-shigoto-07",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "車に乗る前に、何を確認しますか。",
+   "id": "Apa yang Anda periksa sebelum menaiki kendaraan?",
+   "v": [
+    [
+     "点検",
+     "pemeriksaan"
+    ],
+    [
+     "ブレーキ",
+     "rem"
+    ],
+    [
+     "ミラー",
+     "spion"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "タイヤ、ライト、ブレーキ、ミラーなどを確認します。問題があったら、すぐに責任者に伝えます。",
+   "ai": "Saya memeriksa ban, lampu, rem, dan kaca spion. Kalau ada masalah, segera saya sampaikan kepada penanggung jawab.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "車[くるま]に乗[の]る前[まえ]に、何[なに]を確認[かくにん]しますか。",
+   "ajf": "タイヤ、ライト、ブレーキ、ミラーなどを確認[かくにん]します。問題[もんだい]があったら、すぐに責任者[せきにんしゃ]に伝[つた]えます。"
+  },
+  {
+   "i": "auto_transport-shigoto-08",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "知らない道を運転するとき、どうしますか。",
+   "id": "Apa yang Anda lakukan saat mengemudi di jalan yang tidak dikenal?",
+   "v": [
+    [
+     "ナビ",
+     "navigasi"
+    ],
+    [
+     "地図",
+     "peta"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "出発する前に、地図やナビで道を確認します。分からなくなったら、安全な場所で止まって、会社に連絡します。",
+   "ai": "Sebelum berangkat saya memeriksa rute dengan peta atau navigasi. Kalau bingung, saya berhenti di tempat aman dan menghubungi perusahaan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "知[し]らない道[みち]を運転[うんてん]するとき、どうしますか。",
+   "ajf": "出発[しゅっぱつ]する前[まえ]に、地図[ちず]やナビで道[みち]を確認[かくにん]します。分[わ]からなくなったら、安全[あんぜん]な場所[ばしょ]で止[と]まって、会社[かいしゃ]に連絡[れんらく]します。"
+  },
+  {
+   "i": "auto_transport-shigoto-09",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "運転の仕事で、大切なことは何だと思いますか。",
+   "id": "Menurut Anda, apa yang penting dalam pekerjaan mengemudi?",
+   "v": [
+    [
+     "交通ルール",
+     "aturan lalu lintas"
+    ],
+    [
+     "時間を守る",
+     "tepat waktu"
+    ],
+    [
+     "あわてる",
+     "tergesa-gesa"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "安全に、約束の時間を守ることだと思います。交通ルールを守って、あわてずに運転します。",
+   "ai": "Menurut saya, mengemudi dengan aman dan tepat waktu. Saya menaati aturan lalu lintas dan mengemudi tanpa tergesa-gesa.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "運転[うんてん]の仕事[しごと]で、大切[たいせつ]なことは何[なん]だと思[おも]いますか。",
+   "ajf": "安全[あんぜん]に、約束[やくそく]の時間[じかん]を守[まも]ることだと思[おも]います。交通[こうつう]ルールを守[まも]って、あわてずに運転[うんてん]します。"
+  },
+  {
+   "i": "auto_transport-shigoto-10",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "荷物を届けるまで、どんな作業がありますか。",
+   "id": "Pekerjaan apa saja sampai barang diantar?",
+   "v": [
+    [
+     "積む",
+     "memuat"
+    ],
+    [
+     "降ろす",
+     "menurunkan"
+    ],
+    [
+     "受け取り",
+     "penerimaan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "荷物を積んで、運転して、届け先で降ろします。受け取りのサインをもらって、会社に報告します。",
+   "ai": "Memuat barang, mengemudi, lalu menurunkannya di tujuan. Mendapatkan tanda tangan penerimaan lalu melapor ke perusahaan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "荷物[にもつ]を届[とど]けるまで、どんな作業[さぎょう]がありますか。",
+   "ajf": "荷物[にもつ]を積[つ]んで、運転[うんてん]して、届[とど]け先[さき]で降[お]ろします。受[う]け取[と]りのサインをもらって、会社[かいしゃ]に報告[ほうこく]します。"
+  },
+  {
+   "i": "auto_transport-shigoto-11",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "お客様や、届け先の人と話すとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat berbicara dengan pelanggan atau penerima barang?",
+   "v": [
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "ていねい",
+     "sopan"
+    ],
+    [
+     "渡す",
+     "menyerahkan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "元気にあいさつをして、ていねいな言葉で話します。荷物は、両手でていねいに渡します。",
+   "ai": "Saya menyapa dengan semangat dan berbicara sopan. Barang saya serahkan dengan dua tangan dengan hati-hati.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "お客様[きゃくさま]や、届[とど]け先[さき]の人[ひと]と話[はな]すとき、何[なに]に気[き]をつけますか。",
+   "ajf": "元気[げんき]にあいさつをして、ていねいな言葉[ことば]で話[はな]します。荷物[にもつ]は、両手[りょうて]でていねいに渡[わた]します。"
+  },
+  {
+   "i": "auto_transport-shigoto-12",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "運転日報や、記録を書くことはできますか。",
+   "id": "Apakah Anda bisa menulis laporan harian dan catatan mengemudi?",
+   "v": [
+    [
+     "日報",
+     "laporan harian"
+    ],
+    [
+     "記録",
+     "catatan"
+    ],
+    [
+     "正しく",
+     "dengan benar"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。走った時間や、休けいの時間を、毎日正しく書きます。",
+   "ai": "Ya, bisa. Saya menulis waktu perjalanan dan waktu istirahat dengan benar setiap hari.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "運転日報[うんてんにっぽう]や、記録[きろく]を書[か]くことはできますか。",
+   "ajf": "はい、できます。走[はし]った時間[じかん]や、休[やす]けいの時間[じかん]を、毎日正[まいにちただ]しく書[か]きます。"
+  },
+  {
+   "i": "auto_transport-shigoto-13",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "日本の運転免許について、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang SIM di Jepang?",
+   "v": [
+    [
+     "免許",
+     "SIM"
+    ],
+    [
+     "取る",
+     "mendapatkan"
+    ],
+    [
+     "教えてもらう",
+     "diajari"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "運転するためには、日本の免許が必要だと聞いています。会社の人に、取り方を教えてもらいたいです。",
+   "ai": "Saya dengar untuk mengemudi dibutuhkan SIM Jepang. Saya ingin diajari cara mendapatkannya oleh orang perusahaan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "auto_transport",
+   "jf": "日本[にほん]の運転免許[うんてんめんきょ]について、知[し]っていることはありますか。",
+   "ajf": "運転[うんてん]するためには、日本[にほん]の免許[めんきょ]が必要[ひつよう]だと聞[き]いています。会社[かいしゃ]の人[ひと]に、取[と]り方[ほう]を教[おし]えてもらいたいです。"
+  },
+  {
+   "i": "auto_transport-seikatsu-01",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で行ってみたい場所はどこですか。",
+   "id": "Tempat mana di Jepang yang ingin Anda kunjungi?",
+   "v": [
+    [
+     "行ってみたい",
+     "ingin mencoba pergi"
+    ],
+    [
+     "富士山",
+     "Gunung Fuji"
+    ],
+    [
+     "休みの日",
+     "hari libur"
+    ],
+    [
+     "電車",
+     "kereta"
+    ]
+   ],
+   "m": "Mengobrol ringan; melihat ketertarikan pada Jepang.",
+   "aj": "富士山に行ってみたいです。写真で見て、とてもきれいだと思いました。休みの日に電車で行きたいです。",
+   "ai": "Saya ingin pergi ke Gunung Fuji. Saya melihat fotonya dan menurut saya sangat indah. Saya ingin pergi naik kereta di hari libur.",
+   "c": "Tambahkan alasan (なぜなら / 〜からです). Jawaban satu kata terlalu singkat.",
+   "jf": "日本[にほん]で行[い]ってみたい場所[ばしょ]はどこですか。",
+   "ajf": "富士山[ふじさん]に行[い]ってみたいです。写真[しゃしん]で見[み]て、とてもきれいだと思[おも]いました。休[やす]みの日[にち]に電車[でんしゃ]で行[い]きたいです。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-seikatsu-02",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で何をしたいですか。",
+   "id": "Apa yang ingin Anda lakukan di Jepang?",
+   "v": [
+    [
+     "がんばる",
+     "berusaha keras"
+    ],
+    [
+     "上手になる",
+     "menjadi mahir"
+    ],
+    [
+     "いろいろな",
+     "bermacam-macam"
+    ],
+    [
+     "町",
+     "kota"
+    ]
+   ],
+   "m": "Melihat motivasi di luar pekerjaan; apakah kandidat realistis.",
+   "aj": "仕事をがんばって、日本語も上手になりたいです。休みの日には、いろいろな町を見たいです。",
+   "ai": "Saya ingin bekerja keras dan juga mahir berbahasa Jepang. Di hari libur saya ingin melihat berbagai kota.",
+   "c": "Utamakan pekerjaan dan belajar, baru hiburan.",
+   "jf": "日本[にほん]で何[なに]をしたいですか。",
+   "ajf": "仕事[しごと]をがんばって、日本語[にほんご]も上手[じょうず]になりたいです。休[やす]みの日[にち]には、いろいろな町[まち]を見[み]たいです。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-seikatsu-03",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の生活についてどう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang kehidupan di Jepang?",
+   "v": [
+    [
+     "ルール",
+     "aturan"
+    ],
+    [
+     "ごみの分け方",
+     "cara memilah sampah"
+    ],
+    [
+     "きれい",
+     "bersih"
+    ],
+    [
+     "覚える",
+     "menghafal"
+    ]
+   ],
+   "m": "Melihat kesiapan beradaptasi dengan budaya dan aturan Jepang.",
+   "aj": "ルールが多くて、とてもきれいな国だと思います。ごみの分け方など、早く覚えたいです。",
+   "ai": "Menurut saya Jepang punya banyak aturan dan sangat bersih. Saya ingin cepat menghafal hal seperti cara memilah sampah.",
+   "c": "Tunjukkan kemauan mengikuti aturan. Jangan hanya mengeluh soal biaya hidup/cuaca.",
+   "jf": "日本[にほん]の生活[せいかつ]についてどう思[おも]いますか。",
+   "ajf": "ルールが多[おお]くて、とてもきれいな国[くに]だと思[おも]います。ごみの分[わ]け方[ほう]など、早[はや]く覚[おぼ]えたいです。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-seikatsu-04",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本の文化で興味があることは何ですか。",
+   "id": "Apa budaya Jepang yang Anda minati?",
+   "v": [
+    [
+     "文化",
+     "budaya"
+    ],
+    [
+     "お辞儀",
+     "membungkuk (salam)"
+    ],
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "すばらしい",
+     "luar biasa"
+    ]
+   ],
+   "m": "Melihat apakah kandidat menghargai budaya Jepang.",
+   "aj": "お辞儀と、あいさつの文化に興味があります。みんなが丁寧に話すので、すばらしいと思います。",
+   "ai": "Saya tertarik pada budaya membungkuk dan salam. Semua orang berbicara dengan sopan, menurut saya itu luar biasa.",
+   "c": "Budaya kerja (salam, tepat waktu) lebih disukai daripada hanya anime atau game.",
+   "jf": "日本[にほん]の文化[ぶんか]で興味[きょうみ]があることは何[なん]ですか。",
+   "ajf": "お辞儀[じぎ]と、あいさつの文化[ぶんか]に興味[きょうみ]があります。みんなが丁寧[ていねい]に話[はな]すので、すばらしいと思[おも]います。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-seikatsu-05",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "家族は日本で働くことに賛成していますか。",
+   "id": "Apakah keluarga Anda setuju Anda bekerja di Jepang?",
+   "v": [
+    [
+     "賛成する",
+     "setuju"
+    ],
+    [
+     "応援する",
+     "mendukung"
+    ],
+    [
+     "両親",
+     "orang tua"
+    ],
+    [
+     "電話",
+     "telepon"
+    ]
+   ],
+   "m": "Memastikan kandidat tidak akan pulang cepat karena tekanan keluarga.",
+   "aj": "はい、賛成しています。両親は私の夢を応援してくれています。毎週、電話で話すつもりです。",
+   "ai": "Ya, mereka setuju. Orang tua saya mendukung impian saya. Saya berencana menelepon mereka setiap minggu.",
+   "c": "Jawaban 'ya, mendukung' paling aman. Jika keluarga ragu, jelaskan dengan tenang.",
+   "jf": "家族[かぞく]は日本[にほん]で働[はたら]くことに賛成[さんせい]していますか。",
+   "ajf": "はい、賛成[さんせい]しています。両親[りょうしん]は私[わたし]の夢[ゆめ]を応援[おうえん]してくれています。毎週[まいしゅう]、電話[でんわ]で話[はな]すつもりです。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-seikatsu-06",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本で困ったことがあったら、どうしますか。",
+   "id": "Kalau mengalami kesulitan di Jepang, apa yang akan Anda lakukan?",
+   "v": [
+    [
+     "困る",
+     "kesulitan"
+    ],
+    [
+     "相談する",
+     "berkonsultasi"
+    ],
+    [
+     "担当者",
+     "penanggung jawab"
+    ],
+    [
+     "先輩",
+     "senior"
+    ]
+   ],
+   "m": "Menilai apakah kandidat tahu cara meminta bantuan, bukan memendam masalah.",
+   "aj": "まず、会社の担当者や先輩に相談します。わからないままにしないようにします。",
+   "ai": "Pertama, saya akan berkonsultasi dengan penanggung jawab perusahaan atau senior. Saya tidak akan membiarkannya tanpa dipahami.",
+   "c": "Kata kunci: 相談する (konsultasi). Pewawancara suka kandidat yang melapor lebih awal.",
+   "jf": "日本[にほん]で困[こま]ったことがあったら、どうしますか。",
+   "ajf": "まず、会社[かいしゃ]の担当者[たんとうしゃ]や先輩[せんぱい]に相談[そうだん]します。わからないままにしないようにします。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-seikatsu-07",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "車が多い町や、雪の多い地域での生活に、不便なことがあっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan ketidaknyamanan hidup di kota padat kendaraan atau daerah bersalju?",
+   "v": [
+    [
+     "天気予報",
+     "prakiraan cuaca"
+    ],
+    [
+     "準備",
+     "persiapan"
+    ],
+    [
+     "雪",
+     "salju"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "大丈夫です。天気予報をよく見て、準備をします。雪の日の運転や歩き方も、勉強します。",
+   "ai": "Tidak masalah. Saya akan sering melihat prakiraan cuaca dan bersiap. Saya juga akan belajar cara mengemudi dan berjalan di hari bersalju.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "auto_transport",
+   "jf": "車[くるま]が多[おお]い町[まち]や、雪[ゆき]の多[おお]い地域[ちいき]での生活[せいかつ]に、不便[ふべん]なことがあっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "大丈夫[だいじょうぶ]です。天気予報[てんきよほう]をよく見[み]て、準備[じゅんび]をします。雪[ゆき]の日[ひ]の運転[うんてん]や歩[ある]き方[ほう]も、勉強[べんきょう]します。"
+  },
+  {
+   "i": "auto_transport-seikatsu-08",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の道路や、交通のルールについて、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang jalan dan aturan lalu lintas di Jepang?",
+   "v": [
+    [
+     "左側",
+     "sisi kiri"
+    ],
+    [
+     "標識",
+     "rambu"
+    ],
+    [
+     "信号",
+     "lampu lalu lintas"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "日本では、車は左側を走ると聞きました。信号や標識を、しっかり守る国だと思います。",
+   "ai": "Saya dengar di Jepang kendaraan melaju di sisi kiri. Menurut saya Jepang negara yang sangat menaati lampu lalu lintas dan rambu.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "auto_transport",
+   "jf": "日本[にほん]の道路[どうろ]や、交通[こうつう]のルールについて、知[し]っていることはありますか。",
+   "ajf": "日本[にほん]では、車[くるま]は左側[ひだりがわ]を走[はし]ると聞[き]きました。信号[しんごう]や標識[ひょうしき]を、しっかり守[まも]る国[くに]だと思[おも]います。"
+  },
+  {
+   "i": "auto_transport-mokuhyou-01",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "将来の目標は何ですか。",
+   "id": "Apa tujuan Anda di masa depan?",
+   "v": [
+    [
+     "目標",
+     "tujuan"
+    ],
+    [
+     "身につける",
+     "menguasai"
+    ],
+    [
+     "家族を支える",
+     "menopang keluarga"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "自動車運送業の仕事の技術をしっかり身につけて、仕事に自信を持てる人になりたいです。そして、将来は家族を支えたいです。",
+   "ai": "Saya ingin menguasai keterampilan di bidang Auto Transport dan menjadi orang yang percaya diri dalam bekerja. Lalu di masa depan saya ingin menopang keluarga.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "auto_transport",
+   "jf": "将来[しょうらい]の目標[もくひょう]は何[なん]ですか。",
+   "ajf": "自動車運送業[じどうしゃうんそうぎょう]の仕事[しごと]の技術[ぎじゅつ]をしっかり身[み]につけて、仕事[しごと]に自信[じしん]を持[も]てる人[ひと]になりたいです。そして、将来[しょうらい]は家族[かぞく]を支[ささ]えたいです。"
+  },
+  {
+   "i": "auto_transport-mokuhyou-02",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で何年間働きたいですか。",
+   "id": "Berapa tahun Anda ingin bekerja di Jepang?",
+   "v": [
+    [
+     "〜年間",
+     "selama ... tahun"
+    ],
+    [
+     "まず",
+     "pertama"
+    ],
+    [
+     "チャンス",
+     "kesempatan"
+    ],
+    [
+     "長く",
+     "lama"
+    ]
+   ],
+   "m": "Perusahaan ingin tenaga kerja yang bertahan lama dan tidak berhenti di tengah jalan.",
+   "aj": "まず五年間、がんばりたいです。その後、チャンスがあれば、もっと長く働きたいと思っています。",
+   "ai": "Pertama, saya ingin berusaha selama lima tahun. Setelah itu, jika ada kesempatan, saya ingin bekerja lebih lama.",
+   "c": "Jawaban 'sebentar saja' memberi kesan buruk. Tunjukkan komitmen.",
+   "jf": "日本[にほん]で何年間[なんねんかん]働[はたら]きたいですか。",
+   "ajf": "まず五年間[ごねんかん]、がんばりたいです。その後[のち]、チャンスがあれば、もっと長[なが]く働[はたら]きたいと思[おも]っています。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-mokuhyou-03",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で働いて何を学びたいですか。",
+   "id": "Apa yang ingin Anda pelajari dengan bekerja di Jepang?",
+   "v": [
+    [
+     "学ぶ",
+     "belajar"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "時間を守る",
+     "tepat waktu"
+    ],
+    [
+     "習慣",
+     "kebiasaan"
+    ]
+   ],
+   "m": "Melihat sikap belajar dan penghargaan pada etos kerja Jepang.",
+   "aj": "日本の仕事のやり方と、時間を守る習慣を学びたいです。日本語ももっと上手になりたいです。",
+   "ai": "Saya ingin belajar cara kerja Jepang dan kebiasaan menepati waktu. Saya juga ingin lebih mahir berbahasa Jepang.",
+   "c": "Jawaban tentang uang saja kurang baik. Tonjolkan skill dan sikap kerja.",
+   "jf": "日本[にほん]で働[はたら]いて何[なに]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の仕事[しごと]のやり方[ほう]と、時間[じかん]を守[まも]る習慣[しゅうかん]を学[まな]びたいです。日本語[にほんご]ももっと上手[じょうず]になりたいです。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-mokuhyou-04",
+   "k": "mokuhyou",
+   "l": 3,
+   "ja": "5年後、どうなりたいですか。",
+   "id": "Lima tahun lagi, Anda ingin menjadi seperti apa?",
+   "v": [
+    [
+     "五年後",
+     "lima tahun lagi"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "後輩",
+     "junior"
+    ],
+    [
+     "合格する",
+     "lulus"
+    ]
+   ],
+   "m": "Melihat rencana karier realistis dan keinginan berkembang.",
+   "aj": "五年後は、仕事に慣れて、後輩に教えられるようになりたいです。日本語もN3に合格したいです。",
+   "ai": "Lima tahun lagi saya ingin terbiasa dengan pekerjaan dan bisa mengajari junior. Saya juga ingin lulus JLPT N3.",
+   "c": "Pakai target konkret (mis. lulus N3, jadi senior yang dipercaya).",
+   "jf": "5年後[ねんご]、どうなりたいですか。",
+   "ajf": "五年[ごねん]後[のち]は、仕事[しごと]に慣[な]れて、後輩[こうはい]に教[おし]えられるようになりたいです。日本語[にほんご]もN3に合格[ごうかく]したいです。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-mokuhyou-05",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で運送の仕事を学んだあと、自分の国でどんなことをしたいですか。",
+   "id": "Setelah belajar pekerjaan transportasi di Jepang, apa yang ingin Anda lakukan di negara sendiri?",
+   "v": [
+    [
+     "安全運転",
+     "mengemudi aman"
+    ],
+    [
+     "習慣",
+     "kebiasaan"
+    ],
+    [
+     "運転",
+     "mengemudi"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "日本で学んだ安全運転と、時間を守る習慣を使って、自分の国でも運転の仕事をしたいです。",
+   "ai": "Saya ingin bekerja sebagai pengemudi di negara saya dengan memakai kebiasaan mengemudi aman dan tepat waktu yang saya pelajari di Jepang.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "auto_transport",
+   "jf": "日本[にほん]で運送[うんそう]の仕事[しごと]を学[まな]んだあと、自分[じぶん]の国[くに]でどんなことをしたいですか。",
+   "ajf": "日本[にほん]で学[まな]んだ安全運転[あんぜんうんてん]と、時間[じかん]を守[まも]る習慣[しゅうかん]を使[つか]って、自分[じぶん]の国[くに]でも運転[うんてん]の仕事[しごと]をしたいです。"
+  },
+  {
+   "i": "auto_transport-taiou-01",
+   "k": "taiou",
+   "l": 2,
+   "ja": "先輩や上司から注意されたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ditegur senior atau atasan?",
+   "v": [
+    [
+     "注意される",
+     "ditegur"
+    ],
+    [
+     "素直",
+     "terbuka"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "素直に聞いて、「はい、わかりました」と言います。やり方をメモして、次から気をつけます。",
+   "ai": "Saya mendengarkan dengan terbuka dan berkata \"Ya, saya mengerti\". Saya mencatat caranya dan lebih berhati-hati berikutnya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "先輩[せんぱい]や上司[じょうし]から注意[ちゅうい]されたら、どうしますか。",
+   "ajf": "素直[すなお]に聞[き]いて、「はい、わかりました」と言[い]います。やり方[ほう]をメモして、次[つぎ]から気[き]をつけます。"
+  },
+  {
+   "i": "auto_transport-taiou-02",
+   "k": "taiou",
+   "l": 2,
+   "ja": "荷物を壊してしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak barang kiriman?",
+   "v": [
+    [
+     "壊す",
+     "merusak"
+    ],
+    [
+     "謝る",
+     "meminta maaf"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに正直に会社に報告します。お客様にも、ていねいに謝って、会社の指示に従います。",
+   "ai": "Saya segera melapor jujur kepada perusahaan. Saya juga meminta maaf dengan sopan kepada pelanggan dan mengikuti instruksi perusahaan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "荷物[にもつ]を壊[こわ]してしまったら、どうしますか。",
+   "ajf": "すぐに正直[しょうじき]に会社[かいしゃ]に報告[ほうこく]します。お客様[きゃくさま]にも、ていねいに謝[あやま]って、会社[かいしゃ]の指示[しじ]に従[したが]います。"
+  },
+  {
+   "i": "auto_transport-taiou-03",
+   "k": "taiou",
+   "l": 3,
+   "ja": "同僚と作業の方法で意見が合わなかったら、どうしますか。",
+   "id": "Jika pendapat Anda berbeda dengan rekan soal cara kerja, apa yang Anda lakukan?",
+   "v": [
+    [
+     "意見",
+     "pendapat"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "従う",
+     "mengikuti"
+    ]
+   ],
+   "m": "Menilai kerja sama dan kepatuhan.",
+   "aj": "まず相手の意見を聞きます。決まらないときは、責任者に聞いて、その指示に従います。",
+   "ai": "Pertama saya mendengar pendapat rekan. Jika tidak selesai, saya bertanya pada penanggung jawab dan mengikuti instruksinya.",
+   "c": "Ikuti instruksi penanggung jawab.",
+   "jf": "同僚[どうりょう]と作業[さぎょう]の方法[ほうほう]で意見[いけん]が合[あ]わなかったら、どうしますか。",
+   "ajf": "まず相手[あいて]の意見[いけん]を聞[き]きます。決[き]まらないときは、責任者[せきにんしゃ]に聞[き]いて、その指示[しじ]に従[したが]います。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-taiou-04",
+   "k": "taiou",
+   "l": 1,
+   "ja": "やり方が分からないとき、どうしますか。",
+   "id": "Jika Anda tidak tahu caranya, apa yang Anda lakukan?",
+   "v": [
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "勝手",
+     "sembarangan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Memastikan kandidat bertanya, tidak asal bekerja.",
+   "aj": "勝手にやらないで、すぐに聞きます。教えてもらったことはメモして、次は自分でできるようにします。",
+   "ai": "Saya tidak bekerja sembarangan dan segera bertanya. Yang diajarkan saya catat agar lain kali bisa sendiri.",
+   "c": "Kata kunci: 質問・メモ.",
+   "jf": "やり方[ほう]が分[わ]からないとき、どうしますか。",
+   "ajf": "勝手[かって]にやらないで、すぐに聞[き]きます。教[おし]えてもらったことはメモして、次[つぎ]は自分[じぶん]でできるようにします。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-taiou-05",
+   "k": "taiou",
+   "l": 2,
+   "ja": "体調が悪いときは、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau kondisi badan buruk?",
+   "v": [
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "無理",
+     "memaksakan"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "無理をしないで、すぐに上司に連絡します。体調が悪いまま作業すると、事故やミスにつながるからです。",
+   "ai": "Saya tidak memaksakan diri dan segera menghubungi atasan. Bekerja dalam kondisi buruk bisa menyebabkan kecelakaan atau kesalahan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "体調[たいちょう]が悪[わる]いときは、どうしますか。",
+   "ajf": "無理[むり]をしないで、すぐに上司[じょうし]に連絡[れんらく]します。体調[たいちょう]が悪[わる]いまま作業[さぎょう]すると、事故[じこ]やミスにつながるからです。"
+  },
+  {
+   "i": "auto_transport-taiou-06",
+   "k": "taiou",
+   "l": 3,
+   "ja": "道が工事や事故で、通れなくなったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau jalan tidak bisa dilalui karena perbaikan atau kecelakaan?",
+   "v": [
+    [
+     "工事",
+     "perbaikan jalan"
+    ],
+    [
+     "事故",
+     "kecelakaan"
+    ],
+    [
+     "別の道",
+     "jalan lain"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "安全な場所に止まって、会社に連絡します。会社の指示を聞いて、別の道を行きます。",
+   "ai": "Saya berhenti di tempat aman dan menghubungi perusahaan. Saya mendengar instruksi perusahaan dan memakai jalan lain.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "道[みち]が工事[こうじ]や事故[じこ]で、通[とお]れなくなったら、どうしますか。",
+   "ajf": "安全[あんぜん]な場所[ばしょ]に止[と]まって、会社[かいしゃ]に連絡[れんらく]します。会社[かいしゃ]の指示[しじ]を聞[き]いて、別[べつ]の道[みち]を行[い]きます。"
+  },
+  {
+   "i": "auto_transport-taiou-07",
+   "k": "taiou",
+   "l": 2,
+   "ja": "日本人の同僚と、うまく話せなかったらどうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak bisa berbicara lancar dengan rekan kerja orang Jepang?",
+   "v": [
+    [
+     "うまく",
+     "dengan baik"
+    ],
+    [
+     "もう一度",
+     "sekali lagi"
+    ],
+    [
+     "ゆっくり",
+     "pelan-pelan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "もう一度ゆっくり話してもらうようにお願いします。わからなかった言葉は、メモして勉強します。",
+   "ai": "Saya minta mereka mengulang lebih pelan. Kata yang tidak saya pahami saya catat dan pelajari.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "日本人[にほんじん]の同僚[どうりょう]と、うまく話[はな]せなかったらどうしますか。",
+   "ajf": "もう一度[いちど]ゆっくり話[はな]してもらうようにお願[ねが]いします。わからなかった言葉[ことば]は、メモして勉強[べんきょう]します。"
+  },
+  {
+   "i": "auto_transport-taiou-08",
+   "k": "taiou",
+   "l": 2,
+   "ja": "約束の時間に間に合わなくなりそうなとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau sepertinya tidak sempat tiba tepat waktu?",
+   "v": [
+    [
+     "間に合う",
+     "sempat"
+    ],
+    [
+     "あせる",
+     "panik"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "あせらないで、すぐに会社に連絡します。スピードを出さないで、安全に運転します。",
+   "ai": "Saya tidak panik dan segera menghubungi perusahaan. Saya tidak ngebut dan tetap mengemudi dengan aman.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "約束[やくそく]の時間[じかん]に間[ま]に合[あ]わなくなりそうなとき、どうしますか。",
+   "ajf": "あせらないで、すぐに会社[かいしゃ]に連絡[れんらく]します。スピードを出[だ]さないで、安全[あんぜん]に運転[うんてん]します。"
+  },
+  {
+   "i": "auto_transport-taiou-09",
+   "k": "taiou",
+   "l": 2,
+   "ja": "作業のペースが遅いと言われたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau dibilang kerja Anda lambat?",
+   "v": [
+    [
+     "ペース",
+     "kecepatan"
+    ],
+    [
+     "コツ",
+     "trik"
+    ],
+    [
+     "練習",
+     "latihan"
+    ]
+   ],
+   "m": "Menerima kritik.",
+   "aj": "まず、「すみません」と言って、早い人のやり方をよく見ます。コツを教えてもらって、毎日練習します。",
+   "ai": "Pertama saya bilang \"maaf\" dan mengamati cara orang yang cepat. Saya minta diajari triknya dan berlatih tiap hari.",
+   "c": "Terima kritik dengan baik.",
+   "jf": "作業[さぎょう]のペースが遅[おそ]いと言[い]われたら、どうしますか。",
+   "ajf": "まず、「すみません」と言[い]って、早[はや]い人[にん]のやり方[ほう]をよく見[み]ます。コツを教[おし]えてもらって、毎日[まいにち]練習[れんしゅう]します。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-taiou-10",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械や道具を壊してしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak mesin atau alat?",
+   "v": [
+    [
+     "壊す",
+     "merusak"
+    ],
+    [
+     "正直に",
+     "dengan jujur"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに作業を止めて、正直に責任者に報告します。隠さないで、謝って、どうすればいいか聞きます。",
+   "ai": "Saya segera menghentikan pekerjaan dan melapor jujur kepada penanggung jawab. Saya tidak menyembunyikannya, meminta maaf, dan bertanya apa yang harus dilakukan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "機械[きかい]や道具[どうぐ]を壊[こわ]してしまったら、どうしますか。",
+   "ajf": "すぐに作業[さぎょう]を止[と]めて、正直[しょうじき]に責任者[せきにんしゃ]に報告[ほうこく]します。隠[かく]さないで、謝[あやま]って、どうすればいいか聞[き]きます。"
+  },
+  {
+   "i": "auto_transport-taiou-11",
+   "k": "taiou",
+   "l": 3,
+   "ja": "長い運転で、疲れたり、眠くなったりしたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau lelah atau mengantuk saat mengemudi jauh?",
+   "v": [
+    [
+     "眠い",
+     "mengantuk"
+    ],
+    [
+     "休む",
+     "istirahat"
+    ],
+    [
+     "無理",
+     "memaksakan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "無理をしないで、安全な場所で車を止めて、休みます。眠いまま運転はしません。",
+   "ai": "Saya tidak memaksakan diri, berhenti di tempat aman, dan beristirahat. Saya tidak mengemudi dalam keadaan mengantuk.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "長[なが]い運転[うんてん]で、疲[つか]れたり、眠[ねむ]くなったりしたら、どうしますか。",
+   "ajf": "無理[むり]をしないで、安全[あんぜん]な場所[ばしょ]で車[くるま]を止[と]めて、休[やす]みます。眠[ねむ]いまま運転[うんてん]はしません。"
+  },
+  {
+   "i": "auto_transport-taiou-12",
+   "k": "taiou",
+   "l": 1,
+   "ja": "お客様に、日本語が分からなくて、聞き返されたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau pelanggan menanyakan ulang karena bahasa Jepang Anda kurang jelas?",
+   "v": [
+    [
+     "聞き返す",
+     "bertanya ulang"
+    ],
+    [
+     "ゆっくり",
+     "pelan"
+    ],
+    [
+     "代わる",
+     "menggantikan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "ゆっくり、もう一度言います。それでも分からないときは、会社の人に代わってもらいます。",
+   "ai": "Saya mengulang dengan pelan. Kalau tetap tidak paham, saya minta orang perusahaan menggantikan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "auto_transport",
+   "jf": "お客様[きゃくさま]に、日本語[にほんご]が分[わ]からなくて、聞[き]き返[かえ]されたら、どうしますか。",
+   "ajf": "ゆっくり、もう一度言[いちどい]います。それでも分[わ]からないときは、会社[かいしゃ]の人[ひと]に代[か]わってもらいます。"
+  },
+  {
+   "i": "auto_transport-tim-01",
+   "k": "tim",
+   "l": 1,
+   "ja": "荷物の積み下ろしのとき、チームの人と、どのように作業しますか。",
+   "id": "Saat memuat dan membongkar barang, bagaimana Anda bekerja dengan tim?",
+   "v": [
+    [
+     "積み下ろし",
+     "bongkar muat"
+    ],
+    [
+     "声をかけ合う",
+     "saling memberi aba-aba"
+    ],
+    [
+     "順番",
+     "bergantian"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "声をかけ合って、順番に作業します。重い荷物は、二人で運びます。",
+   "ai": "Kami saling memberi aba-aba dan bekerja bergantian. Barang berat dibawa berdua.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "auto_transport",
+   "jf": "荷物[にもつ]の積[つ]み下[した]ろしのとき、チームの人[ひと]と、どのように作業[さぎょう]しますか。",
+   "ajf": "声[こえ]をかけ合[あ]って、順番[じゅんばん]に作業[さぎょう]します。重[おも]い荷物[にもつ]は、二人[ふたり]で運[はこ]びます。"
+  },
+  {
+   "i": "auto_transport-tim-02",
+   "k": "tim",
+   "l": 2,
+   "ja": "配車の担当者の指示が分からなかったとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak paham instruksi petugas penjadwalan kendaraan?",
+   "v": [
+    [
+     "配車",
+     "penjadwalan kendaraan"
+    ],
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "出発",
+     "berangkat"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "出発する前に、「もう一度お願いします」と聞きます。分からないまま出発しないようにします。",
+   "ai": "Sebelum berangkat saya meminta \"Tolong ulangi\". Saya tidak berangkat dalam keadaan tidak paham.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "auto_transport",
+   "jf": "配車[はいしゃ]の担当者[たんとうしゃ]の指示[しじ]が分[わ]からなかったとき、どうしますか。",
+   "ajf": "出発[しゅっぱつ]する前[まえ]に、「もう一度[いちど]お願[ねが]いします」と聞[き]きます。分[わ]からないまま出発[しゅっぱつ]しないようにします。"
+  },
+  {
+   "i": "auto_transport-tim-03",
+   "k": "tim",
+   "l": 2,
+   "ja": "運転中に、会社と、どのように連絡をとりますか。",
+   "id": "Bagaimana Anda berkomunikasi dengan perusahaan saat mengemudi?",
+   "v": [
+    [
+     "連絡",
+     "menghubungi"
+    ],
+    [
+     "運転中",
+     "saat mengemudi"
+    ],
+    [
+     "止まる",
+     "berhenti"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "運転中は、電話を使いません。安全な場所に止まってから、連絡します。",
+   "ai": "Saat mengemudi, saya tidak memakai telepon. Saya berhenti di tempat aman lalu menghubungi.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "auto_transport",
+   "jf": "運転中[うんてんちゅう]に、会社[かいしゃ]と、どのように連絡[れんらく]をとりますか。",
+   "ajf": "運転中[うんてんちゅう]は、電話[でんわ]を使[つか]いません。安全[あんぜん]な場所[ばしょ]に止[と]まってから、連絡[れんらく]します。"
+  },
+  {
+   "i": "auto_transport-tim-04",
+   "k": "tim",
+   "l": 1,
+   "ja": "会社の運転手の仲間と、どのように仲良くなりたいですか。",
+   "id": "Bagaimana Anda ingin akrab dengan sesama pengemudi di perusahaan?",
+   "v": [
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "コツ",
+     "trik"
+    ],
+    [
+     "仲間",
+     "rekan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "毎日、元気にあいさつをします。道や運転のコツを教えてもらったときは、「ありがとうございます」と言います。",
+   "ai": "Setiap hari saya menyapa dengan semangat. Saat diberi tips jalan atau mengemudi, saya mengatakan \"Terima kasih\".",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "auto_transport",
+   "jf": "会社[かいしゃ]の運転手[うんてんしゅ]の仲間[なかま]と、どのように仲良[なかよ]くなりたいですか。",
+   "ajf": "毎日[まいにち]、元気[げんき]にあいさつをします。道[みち]や運転[うんてん]のコツを教[おし]えてもらったときは、「ありがとうございます」と言[い]います。"
+  },
+  {
+   "i": "auto_transport-anzen-01",
+   "k": "anzen",
+   "l": 1,
+   "ja": "運転するとき、必ず守ることは何ですか。",
+   "id": "Apa yang wajib dipatuhi saat mengemudi?",
+   "v": [
+    [
+     "シートベルト",
+     "sabuk pengaman"
+    ],
+    [
+     "飲酒運転",
+     "mengemudi sambil mabuk"
+    ],
+    [
+     "スピード",
+     "kecepatan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "交通ルールとスピードを守ります。シートベルトを必ず着けます。お酒を飲んだら、絶対に運転しません。",
+   "ai": "Saya menaati aturan lalu lintas dan batas kecepatan. Saya selalu memakai sabuk pengaman. Kalau minum alkohol, saya sama sekali tidak mengemudi.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "auto_transport",
+   "jf": "運転[うんてん]するとき、必[かなら]ず守[まも]ることは何[なん]ですか。",
+   "ajf": "交通[こうつう]ルールとスピードを守[まも]ります。シートベルトを必[かなら]ず着[つ]けます。お酒[さけ]を飲[の]んだら、絶対[ぜったい]に運転[うんてん]しません。"
+  },
+  {
+   "i": "auto_transport-anzen-02",
+   "k": "anzen",
+   "l": 2,
+   "ja": "バックするとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat memundurkan kendaraan?",
+   "v": [
+    [
+     "バック",
+     "mundur"
+    ],
+    [
+     "死角",
+     "titik buta"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "ミラーとカメラをよく見ます。まわりに人がいないか、車から降りて確認するときもあります。",
+   "ai": "Saya melihat spion dan kamera dengan teliti. Kadang saya turun untuk memastikan tidak ada orang di sekitar.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "auto_transport",
+   "jf": "バックするとき、何[なに]に気[き]をつけますか。",
+   "ajf": "ミラーとカメラをよく見[み]ます。まわりに人[ひと]がいないか、車[くるま]から降[お]りて確認[かくにん]するときもあります。"
+  },
+  {
+   "i": "auto_transport-anzen-03",
+   "k": "anzen",
+   "l": 2,
+   "ja": "荷物を積むとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat memuat barang?",
+   "v": [
+    [
+     "重さ",
+     "berat"
+    ],
+    [
+     "固定",
+     "mengikat/mengunci"
+    ],
+    [
+     "積む",
+     "memuat"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "決められた重さを超えないようにします。荷物が動かないように、しっかり固定します。",
+   "ai": "Saya tidak melebihi berat yang ditentukan. Saya mengikat barang dengan kuat agar tidak bergeser.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "auto_transport",
+   "jf": "荷物[にもつ]を積[つ]むとき、何[なに]に気[き]をつけますか。",
+   "ajf": "決[き]められた重[おも]さを超[こ]えないようにします。荷物[にもつ]が動[うご]かないように、しっかり固定[こてい]します。"
+  },
+  {
+   "i": "auto_transport-anzen-04",
+   "k": "anzen",
+   "l": 3,
+   "ja": "事故を起こしそうになったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau hampir terjadi kecelakaan?",
+   "v": [
+    [
+     "ヒヤリハット",
+     "nyaris celaka"
+    ],
+    [
+     "報告",
+     "melapor"
+    ],
+    [
+     "落ち着く",
+     "tenang"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "安全な場所に止まって、落ち着きます。そのあと、会社に報告します。小さいことでも、必ず報告します。",
+   "ai": "Saya berhenti di tempat aman dan menenangkan diri. Setelah itu saya melapor ke perusahaan. Sekecil apa pun, saya pasti melapor.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "auto_transport",
+   "jf": "事故[じこ]を起[お]こしそうになったら、どうしますか。",
+   "ajf": "安全[あんぜん]な場所[ばしょ]に止[と]まって、落[お]ち着[つ]きます。そのあと、会社[かいしゃ]に報告[ほうこく]します。小[ちい]さいことでも、必[かなら]ず報告[ほうこく]します。"
+  },
+  {
+   "i": "auto_transport-saigo-01",
+   "k": "saigo",
+   "l": 2,
+   "ja": "最後に何か質問はありますか。",
+   "id": "Terakhir, apakah ada yang ingin Anda tanyakan?",
+   "v": [
+    [
+     "最後に",
+     "terakhir"
+    ],
+    [
+     "質問",
+     "pertanyaan"
+    ],
+    [
+     "入社前",
+     "sebelum bergabung"
+    ],
+    [
+     "勉強しておく",
+     "belajar lebih dulu"
+    ]
+   ],
+   "m": "Melihat antusiasme dan kemampuan bertanya dengan sopan.",
+   "aj": "はい、一つあります。仕事を早く覚えるために、入社前に勉強しておいたほうがいいことはありますか。",
+   "ai": "Ya, ada satu. Agar cepat menguasai pekerjaan, apakah ada hal yang sebaiknya saya pelajari sebelum bergabung?",
+   "c": "Jangan menjawab 'tidak ada' begitu saja. Bertanya tentang belajar menunjukkan semangat. Hindari bertanya soal gaji di awal.",
+   "jf": "最後[さいご]に何[なに]か質問[しつもん]はありますか。",
+   "ajf": "はい、一[ひと]つあります。仕事[しごと]を早[はや]く覚[おぼ]えるために、入社前[にゅうしゃまえ]に勉強[べんきょう]しておいたほうがいいことはありますか。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-saigo-02",
+   "k": "saigo",
+   "l": 2,
+   "ja": "当社について何か聞きたいことはありますか。",
+   "id": "Adakah yang ingin Anda ketahui tentang perusahaan kami?",
+   "v": [
+    [
+     "当社",
+     "perusahaan kami"
+    ],
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "pergi-pulang kerja"
+    ],
+    [
+     "教えていただけますか",
+     "boleh tolong beritahu saya?"
+    ]
+   ],
+   "m": "Melihat apakah kandidat sudah mencari tahu tentang perusahaan.",
+   "aj": "寮や通勤の方法について、教えていただけますか。",
+   "ai": "Boleh tolong beritahu saya tentang asrama dan cara pergi ke tempat kerja?",
+   "c": "Tanyakan hal praktis dan sopan (asrama, pelatihan). AI tidak akan mengarang info perusahaan.",
+   "jf": "当社[とうしゃ]について何[なに]か聞[き]きたいことはありますか。",
+   "ajf": "寮[りょう]や通勤[つうきん]の方法[ほうほう]について、教[おし]えていただけますか。",
+   "b": "auto_transport"
+  },
+  {
+   "i": "auto_transport-saigo-03",
+   "k": "saigo",
+   "l": 1,
+   "ja": "仕事の前に、どんな服や持ち物を用意したらいいですか。",
+   "id": "Pakaian dan barang apa yang sebaiknya saya siapkan sebelum bekerja?",
+   "v": [
+    [
+     "持ち物",
+     "barang bawaan"
+    ],
+    [
+     "準備する",
+     "menyiapkan"
+    ],
+    [
+     "服",
+     "pakaian"
+    ]
+   ],
+   "m": "Memberi kesempatan bertanya; menilai antusiasme.",
+   "aj": "はい、仕事の前に、どんな服や靴、持ち物を準備したらいいか、教えてください。",
+   "ai": "Ya, tolong beri tahu pakaian, sepatu, dan barang apa yang sebaiknya saya siapkan sebelum bekerja.",
+   "c": "Siapkan satu pertanyaan sopan tentang pekerjaan.",
+   "b": "auto_transport",
+   "jf": "仕事[しごと]の前[まえ]に、どんな服[ふく]や持[も]ち物[もの]を用意[ようい]したらいいですか。",
+   "ajf": "はい、仕事[しごと]の前[まえ]に、どんな服[ふく]や靴[くつ]、持[も]ち物[もの]を準備[じゅんび]したらいいか、教[おし]えてください。"
+  }
+ ]
+}

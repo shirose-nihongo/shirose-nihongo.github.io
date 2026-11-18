@@ -72,7 +72,7 @@ Catatan: file `jlpt/*.json` bersifat publik (situs statis), jadi kunci jawaban s
 
 ## MENSETSU 面接 — persiapan wawancara kerja SSW
 
-Untuk 8 bidang SSW. Siswa memilih pertanyaan (自己紹介 selalu pertama), menulis jawaban Jepang, memeriksanya dengan AI (benar/salah + perbaikan), mendengarkan audionya, menghafal, lalu berlatih wawancara di **Claude / ChatGPT** memakai prompt siap pakai yang dibuat dari pilihan mereka.
+Untuk 20 bidang SSW. Siswa memilih pertanyaan (自己紹介 selalu pertama), menulis jawaban Jepang, memeriksanya dengan AI (benar/salah + perbaikan), mendengarkan audionya, menghafal, lalu berlatih wawancara di **Claude / ChatGPT** memakai prompt siap pakai yang dibuat dari pilihan mereka.
 
 - Halaman: `#mensetsu`, `#mensetsu-bidang/{bidang}`, `#mensetsu-bank/{bidang}`, `#mensetsu-persiapan/{bidang}`, `#mensetsu-hafalan/{bidang}`, `#mensetsu-prompt/{bidang}`.
 - Data siswa: Firestore `siswa/{uid}/mensetsu_persiapan/{bidang}` (+ cadangan localStorage). Aturan Firestore tidak perlu diubah.
