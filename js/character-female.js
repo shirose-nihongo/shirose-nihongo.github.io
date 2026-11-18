@@ -231,8 +231,8 @@ export function femOutfit(svg, id, skirtOn = true) {
   if (stock) o += `<path d="M166 384 H196 M205 384 H235" stroke="#5a3d3d" stroke-width="3"/>`;
   o += `<path d="M136 294 L264 294 Q272 336 282 382 Q200 396 118 382 Q128 336 136 294Z" fill="${skirt}" stroke="${edge}" stroke-width="1.8"/>`;
   for (let i = 0; i < 7; i++) { const t = (i - 3) / 3; o += `<path d="M${200 + t * 50} 300 L${200 + t * 76} 388" stroke="${edge}" stroke-opacity=".6" stroke-width="1.5"/>`; }
-  o += `<rect x="134" y="290" width="132" height="9" rx="2" fill="${dark(main, L < .3 ? 2.2 : .8)}" stroke="${edge}" stroke-width="1.2"/>`;
-  return svg + o;
+  if (!svg) return o;
+  return o + svg;   // rok di BAWAH baju → baju tidak dimasukkan
 }
 
 const GCOL = [["pink", "#f9a8d4", "rare"], ["biru", "#60a5fa", "rare"], ["perak", "#e5e7eb", "epic"], ["merah", "#dc2626", "rare"], ["ungu", "#a78bfa", "epic"], ["pirang", "#fde68a", "uncommon"], ["cokelat", "#7c4a2d", "uncommon"]];

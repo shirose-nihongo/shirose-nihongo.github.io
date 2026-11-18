@@ -931,7 +931,8 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     pakaianOverlay = `<g data-slot="pakaian-overlay">${fem && oi.g !== "f" ? femOutfit(oi.svg(), eq.pakaian, !(eq.celana && eq.celana !== "none")) : oi.svg()}</g>`;
   }
 
-  if (fem && !pakaianOverlay && !(eq.celana && eq.celana !== "none")) pakaianOverlay = `<g data-slot="pakaian-overlay">${femOutfit("", "kaos")}</g>`;   // kaos bawaan cewek + rok
+  let femUnder = "";
+  if (fem && !pakaianOverlay && !(eq.celana && eq.celana !== "none")) { femUnder = femOutfit("", "kaos"); base = base.replace(/<g data-slot="legs">[\s\S]*?<\/g>/, ""); }   // kaos bawaan cewek menjuntai di atas rok
 
   // Overlay sepatu
   let sepatuOverlay = "";
@@ -971,22 +972,27 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   base = bigHand(base); pakaianOverlay = bigHand(pakaianOverlay);
   let femFaceSvg = "", femBustSvg = "";
   if (fem) {
-    const hem = (x) => x ? x.split("L270 345 L130 345").join("L262 334 L138 334") : x;   // baju cewek berhenti di pinggang, tidak longgar sampai pinggul
+    const hem = (x) => x ? x.split("L270 345 L130 345").join("L267 346 L133 346") : x;   // baju cewek berhenti di pinggang, tidak longgar sampai pinggul
     base = hem(base); pakaianOverlay = hem(pakaianOverlay);
     base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, "");
     sepatuOverlay = femWarp(sepatuOverlay); celanaOverlay = femWarp(celanaOverlay);
     base = femWarp(base); pakaianOverlay = femWarp(pakaianOverlay); hairSvg = femWarp(hairSvg); aksesoriSvg = femWarp(aksesoriSvg);
     jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
-    femFaceSvg = femFace(); femBustSvg = femBust;
+    femFaceSvg = femFace(); femBustSvg = femBust; femUnder = femWarp(femUnder);
   }
+  // bawahan di bawah baju (baju menjuntai, tidak dimasukkan); khusus gaun, bawahan di atas
+  const gaun = eq.pakaian && OUTFITS[eq.pakaian]?.g === "f";
+  const celanaUnder = fem && !gaun ? celanaOverlay : "", celanaOver = fem && gaun ? celanaOverlay : "";
   return flatten2D(`
     <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
       ${sayapSvg}
+      ${femUnder}
       ${base}
       ${femFaceSvg}
+      ${celanaUnder}
       ${pakaianOverlay}
-      ${celanaOverlay}
+      ${celanaOver}
       ${femBustSvg}
       ${sepatuOverlay}
       ${hairSvg}
@@ -1014,7 +1020,7 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose } from "./weapon-anim.js?v=20261116m";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118g";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118j";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
