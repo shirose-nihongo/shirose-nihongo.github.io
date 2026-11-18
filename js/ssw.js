@@ -44,11 +44,11 @@ const PDF_SUMBER = {
     { t: "介護特定技能評価試験(技能) 試験実施要領 (MHLW)", u: "https://www.mhlw.go.jp/content/001706488.pdf", ext: true }
   ],
   "railway-electrical": [
-    { t: "受験案内 電気設備整備 (resmi 鉄道電業安全協会)", u: "https://www.railecr.com/news/20241101/zyuken_annai.pdf", ext: true },
-    { t: "試験実施要領 電気設備整備 (resmi)", u: "https://www.railecr.com/news/20241101/shikenn_youryou.pdf", ext: true },
-    { t: "学科 試験サンプル (resmi)", u: "https://www.railecr.com/news/20241101/denki_gakka_tokuteiginou.pdf", ext: true },
-    { t: "実技 試験サンプル (resmi)", u: "https://www.railecr.com/news/20241101/denki_jitsugi_tokuteiginou.pdf", ext: true },
-    { t: "試験結果 2025年度 (resmi)", u: "https://www.railecr.com/news/20241101/shikenn_kekka.pdf", ext: true }
+    { t: "受験案内 電気設備整備 (resmi 鉄道電業安全協会)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-juken-annai.pdf" },
+    { t: "試験実施要領 電気設備整備 (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-shiken-jisshi-youryou.pdf" },
+    { t: "学科 試験サンプル (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-gakka-sample.pdf" },
+    { t: "実技 試験サンプル (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-jitsugi-sample.pdf" },
+    { t: "試験結果 2025年度 (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-shiken-kekka.pdf" }
   ],
   "railway-track": [
     { t: "受験案内 軌道整備 (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_efac198c2698498586d88991447b6152.pdf", ext: true },
@@ -968,12 +968,12 @@ const SSW = window.SSW = {
         } catch (e) { /* lewati */ }
       }
     }
-    /* tambahan: kanji yang belum ada di kosakata -> ketuk untuk arti kanji; pola tata bahasa -> ketuk untuk penjelasan */
-    if (pack.kanji) root.querySelectorAll("ruby").forEach((ru) => {
+    /* tambahan: ruby yang belum ada di kosakata -> ketuk untuk arti KATA (kamus), bukan per-huruf kanji; pola tata bahasa -> penjelasan */
+    root.querySelectorAll("ruby").forEach((ru) => {
       if (ru.closest(".sw-w,.sw-k")) return;
       const base = [...ru.childNodes].filter(n => n.nodeType === 3).map(n => n.nodeValue).join("");
-      if (![...base].some(c => pack.kanji[c])) return;
       const sp = document.createElement("span"); sp.className = "sw-k"; sp.dataset.k = base; sp.dataset.r = ru.querySelector("rt")?.textContent || ""; sp.tabIndex = 0; sp.setAttribute("role", "button");
+      const nx = ru.nextSibling; sp.dataset.o = nx && nx.nodeType === 3 ? ((nx.nodeValue.match(/^[\u3041-\u3096]{0,6}/) || [""])[0]) : "";
       ru.replaceWith(sp); sp.appendChild(ru);
     });
     if (pack.bunpou && pack.bunpou.length) {
@@ -988,17 +988,26 @@ const SSW = window.SSW = {
           sp.appendChild(r.extractContents()); r.insertNode(sp); } catch (e) { /* lewati */ }
       }
     }
-    const open = (e) => { const k = e.target.closest?.(".sw-k"); if (k) { e.preventDefault(); SSW.ksheet(slug, k.dataset.k, k.dataset.r); return; } const g = e.target.closest?.(".sw-g"); if (g) { e.preventDefault(); SSW.gsheet(slug, g.dataset.g); return; } const w = e.target.closest?.(".sw-w"); if (!w) return; e.preventDefault(); SSW.vsheet(slug, w.dataset.v); };
+    const open = (e) => { const k = e.target.closest?.(".sw-k"); if (k) { e.preventDefault(); SSW.ksheet(slug, k.dataset.k, k.dataset.r, k.dataset.o || ""); return; } const g = e.target.closest?.(".sw-g"); if (g) { e.preventDefault(); SSW.gsheet(slug, g.dataset.g); return; } const w = e.target.closest?.(".sw-w"); if (!w) return; e.preventDefault(); SSW.vsheet(slug, w.dataset.v); };
     root.addEventListener("click", open); root.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") open(e); });
   },
-  async ksheet(slug, kata, rd) {
-    const pack = await loadPack(slug); if (!pack.kanji) return;
-    const rows = [...kata].filter(c => pack.kanji[c]).map(c => `<p class="sw-kr"><span class="jp sw-kc">${esc(c)}</span> <b>${esc(pack.kanji[c])}</b></p>`).join("");
-    const rel = (pack.vocab || []).filter(v => [...kata].some(c => v.kata.includes(c)) && v.kata !== kata).slice(0, 6).map(v => `<button class="sw-vc" onclick="SSW.vsheet('${slug}','${v.id}')"><span class="jp">${esc(v.kata)}</span><small>${esc(v.arti)}</small></button>`).join("");
+  async ksheet(slug, kata, rd, ok = "") {
+    const pack = await loadPack(slug);
+    const KD = await kamusLoad();
+    const hit = kamusLookup(KD, kata, rd, ok);
+    const parts = !hit && kata.length > 1 ? kamusSeg(KD, kata) : null;
+    let body = "";
+    if (hit) body = `<div class="sw-vs-m"><b>${esc(hit.a)}</b></div><div class="sw-vs-r"><span>Kata: <b class="jp">${esc(hit.k)}</b></span>${hit.r ? `<span>Bacaan: <b class="jp">${esc(hit.r)}</b></span>` : ""}</div>${hit.en ? '<p class="sw-muted" style="font-size:12px">Arti dari kamus umum (bahasa Inggris); arti Indonesia belum ada.</p>' : ""}`;
+    else if (parts) body = `<p class="sw-muted">Kata gabungan — arti per kata:</p>` + parts.map(x => `<p class="sw-kr"><span class="jp sw-kc" style="font-size:18px">${esc(x.k)}</span> <small class="jp">${esc(x.r)}</small> <b>${esc(x.a)}</b></p>`).join("");
+    else {
+      const rows = pack.kanji ? [...kata].filter(c => pack.kanji[c]).map(c => `<p class="sw-kr"><span class="jp sw-kc">${esc(c)}</span> <b>${esc(pack.kanji[c])}</b></p>`).join("") : "";
+      body = `<p class="sw-muted">Arti kata ini belum ada di kamus.${rows ? " Arti tiap huruf kanji:" : ""}</p>${rows}`;
+    }
+    const rel = (pack.vocab || []).filter(v => [...kata].some(c => v.kata.includes(c)) && v.kata !== kata && v.kata.length > 1).slice(0, 6).map(v => `<button class="sw-vc" onclick="SSW.vsheet('${slug}','${v.id}')"><span class="jp">${esc(v.kata)}</span><small>${esc(v.arti)}</small></button>`).join("");
     let sh = document.getElementById("sw-vs"); if (!sh) { sh = document.createElement("div"); sh.id = "sw-vs"; document.body.append(sh); }
-    sh.innerHTML = `<div class="sw-vs-bg" onclick="SSW.vclose()"></div><div class="sw-vs-in" role="dialog" aria-label="Arti kanji">
-      <div class="sw-vs-h"><div class="jp k"><ruby>${esc(kata)}<rt>${esc(rd)}</rt></ruby></div><button type="button" class="sw-vs-x" onclick="SSW.vclose()" aria-label="Tutup">✕</button></div>
-      <div class="sw-vs-m">${rows}</div>${rel ? `<p class="sw-muted">Kata lain dengan kanji ini:</p><div class="sw-vchips">${rel}</div>` : ""}
+    sh.innerHTML = `<div class="sw-vs-bg" onclick="SSW.vclose()"></div><div class="sw-vs-in" role="dialog" aria-label="Arti kata">
+      <div class="sw-vs-h"><div class="jp k"><ruby>${esc(kata)}<rt>${esc(rd)}</rt></ruby>${hit && hit.k.length > kata.length && hit.k.startsWith(kata) ? esc(hit.k.slice(kata.length)) : ""}</div><button type="button" class="sw-vs-x" onclick="SSW.vclose()" aria-label="Tutup">✕</button></div>
+      ${body}${rel ? `<p class="sw-muted">Kata terkait di bidang ini:</p><div class="sw-vchips">${rel}</div>` : ""}
       <div class="sw-vs-b"><button class="btn ghost" onclick="SSW.vclose()">↩ Kembali ke materi</button></div></div>`;
     sh.hidden = false; document.body.classList.add("sw-lbopen");
   },
@@ -1348,6 +1357,24 @@ async function renderDiagram([slug, did]) {
       <div class="sw-actions left"><button class="btn" onclick="SSW.dgFlash()">🃏 Flashcard diagram ini</button><button class="btn ghost" onclick="route('ssw-hafal/${slug}')">📚 Semua hafalan</button></div></div>`);
 }
 
+
+
+/* ---- kamus kata (arti kata utuh untuk pop-up ketuk di materi) ---- */
+let _kamus = null;
+const kamusLoad = () => _kamus || (_kamus = Promise.all([fetch("./data/ssw/kamus.json").then(r => r.json()), fetch("./data/ssw/kamus-en.json").then(r => r.json())]).then(([a, e]) => ({ a, e })).catch(() => ({ a: {}, e: {} })));
+const _GEND = "うくぐすつぬぶむる";
+function kamusGet(KD, k) { const x = KD.a[k]; if (x) return { k, r: x[0], a: x[1] }; const y = KD.e[k]; return y ? { k, r: y[0], a: y[1], en: 1 } : null; }
+function kamusLookup(KD, base, rd, ok) {
+  for (let n = ok.length; n >= 0; n--) { const h = kamusGet(KD, base + ok.slice(0, n)); if (h) return h; }
+  for (const e of _GEND) { const h = kamusGet(KD, base + e); if (h && h.r && (rd + ok).startsWith(h.r.slice(0, -1))) return h; }
+  if (ok) { const h = kamusGet(KD, base + ok[0] + "る"); if (h && h.r && (rd + ok).startsWith(h.r.slice(0, -1))) return h; }
+  return null;
+}
+function kamusSeg(KD, base) {
+  const out = []; let i = 0;
+  while (i < base.length) { let f = null; for (let j = base.length; j > i; j--) { const h = kamusGet(KD, base.slice(i, j)); if (h) { f = h; i = j; break; } } if (!f) return null; out.push(f); }
+  return out;
+}
 
 /* ============================== PUSTAKA: Katakana / Kanji / Bunpou (daftar + flashcard) ============================== */
 const _pus = {};
