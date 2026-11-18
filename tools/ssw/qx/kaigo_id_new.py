@@ -179,3 +179,9 @@ G += [
 ("g-gigi-duduk", "Pada gambar, perawat membersihkan mulut pengguna yang duduk. Posisi duduk tegak berguna untuk…", "Mencegah aspirasi (air/ludah masuk saluran napas)", "Mempercepat tidur", "Menurunkan suhu badan", "Mengurangi tinggi badan", "Postur tegak mencegah aspirasi."),
 ("g-spons", "Alat berujung spons pada gambar dipakai untuk…", "Membersihkan mulut pengguna yang tidak bisa disikat giginya", "Menyisir rambut", "Memotong kuku", "Mengukur suhu", "Sikat spons dipakai bila tidak dapat memakai sikat gigi biasa."),
 ]
+
+
+import os, sys
+sys.path.insert(0, os.path.dirname(__file__))
+import kaigo_id_gambar2 as _g2
+G += _g2.G2 + _g2.G3
