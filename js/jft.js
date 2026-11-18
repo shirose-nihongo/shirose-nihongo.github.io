@@ -422,7 +422,7 @@ async function renderHub() {
         <span class="desc">Simulasi ujian penuh JFT-Basic: 50 soal · 60 menit · 4 bagian, tanpa kembali ke bagian sebelumnya.<br><small>${(await tryoutD()).paket.length} paket orisinal</small></span>
         <span class="st">Mulai tryout →</span>
       </div></div>
-    <div style="text-align:center;margin:14px 0"><button class="btn gold" onclick="route('jft-slide')">🎞️ Slide Bunpou Irodori (A1 · A2) — dengan audio</button> <button class="btn ghost" onclick="route('jft-rangkuman')">📒 Rangkuman JFT</button></div>
+    <div style="text-align:center;margin:14px 0"><button class="btn gold" onclick="route('jft-slide')">🎞️ Slide Bunpou Irodori (A1 · A2) — dengan audio</button> <button class="btn ghost" onclick="route('jft-rangkuman')">📒 Rangkuman JFT</button> <button class="btn gold" onclick="route('jft-dengar/ir0')">🎧 Latihan Dengar (audio saja)</button></div>
     <div class="foot"><small style="color:var(--gray-dim)">Kosakata bersumber dari buku Irodori — The Japan Foundation (pemakaian edukasi non-komersial). Skor di sini hanya perkiraan latihan, bukan skor resmi JFT-Basic.</small></div>
   </div>`;
 }
@@ -561,7 +561,7 @@ function renderHasil() {
   </div>`;
 }
 
-import { JFTS_ROUTES } from "./jft-slide.js?v=20261119b";
+import { JFTS_ROUTES } from "./jft-slide.js?v=20261119c";
 export const JFT_ROUTES = {
   ...JFTS_ROUTES,
   jft: () => renderHub(),

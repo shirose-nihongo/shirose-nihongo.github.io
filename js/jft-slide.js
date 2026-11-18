@@ -182,7 +182,32 @@ function bind() {
   st.addEventListener("touchstart", (e) => { tx = e.changedTouches[0].clientX; }, { passive: true });
   st.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 60) JFTS.go(dx < 0 ? 1 : -1); }, { passive: true });
 }
+let DG = null;
+function dgStop() { if (DG) { try { DG.a.pause(); } catch (e) {} DG.b?.classList.remove("on"); DG = null; } }
+async function renderDengar(lv) {
+  if (!S().user) { setTimeout(() => route("login"), 0); return '<div class="loading">Memuat…</div>'; }
+  const idx = (await dat("./data/jft/ppt/index.json")).filter(x => x.lv === lv);
+  const tabs = Object.keys(LV).map(k => `<button class="btn ${k === lv ? "gold" : "ghost"} sm" onclick="route('jft-dengar/${k}')">${esc(LV[k].jp)} ${esc(LV[k].ke)}</button>`).join(" ");
+  return `<div class="panel"><h2>🎧 Latihan Dengar (audio Irodori)</h2>
+    <p style="color:var(--gray);font-size:13px">Cuma audio. Tanpa naskah, soal, atau jawaban. Ketuk ▶ untuk memutar, ketuk lagi untuk berhenti.</p>
+    <div style="margin:8px 0">${tabs}</div>
+    ${idx.map(x => `<details class="jfs-dg" ontoggle="if(this.open)JFTS.dgBuka('${x.id}',this)"><summary><b>${esc(x.judul)}</b></summary><div class="jfs-dgbox">Memuat…</div></details>`).join("") || "<small>Belum ada audio.</small>"}
+    <div style="margin-top:12px"><button class="btn ghost" onclick="route('jft')">← Kembali</button></div></div>`;
+}
 const JFTS = window.JFTS = {
+  async dgBuka(id, el) {
+    const box = el.querySelector(".jfs-dgbox"); if (box.dataset.ok) return;
+    const m = await fetch(`./data/jft/ppt/${id}/m.json`).then(r => r.json()).catch(() => null);
+    if (!m) { box.textContent = "Gagal memuat."; return; }
+    const au = [...new Set(m.slides.flatMap(s => s.au.map(a => a.src)))].sort((a, b) => parseInt(a.match(/\d+/)) - parseInt(b.match(/\d+/)));
+    box.dataset.ok = 1;
+    box.innerHTML = au.map((a, i) => `<button class="jfs-dgb" onclick="JFTS.dgPutar('${id}','${a}',this)">▶ ${i + 1}</button>`).join("");
+  },
+  dgPutar(id, src, b) {
+    const sama = DG && DG.b === b; dgStop(); if (sama) return;
+    const a = new Audio(`./data/jft/ppt/${id}/${src}`); DG = { a, b }; b.classList.add("on");
+    a.onended = a.onerror = () => { b.classList.remove("on"); if (DG && DG.a === a) DG = null; }; a.play().catch(() => b.classList.remove("on"));
+  },
   say(b) { document.querySelectorAll(".sv-playing").forEach(x => x.classList.remove("sv-playing")); b.classList.add("sv-playing"); window.SV?.speak(b.dataset.say, { role: b.dataset.role, level: SL?.lv }); },
   ppGo(d) { if (!PP) return; ppStop(); PP.i = Math.max(0, Math.min(PP.m.slides.length - 1, PP.i + d)); ppPaint(); },
   ppPlay(k, el) { if (!PP) return; if (el?.classList.contains("on")) { ppStop(); return; } ppPlay(PP.m.slides[PP.i].au[k].src, el); },
@@ -256,8 +281,9 @@ function ppBind() {
   b.addEventListener("touchstart", (e) => { x0 = e.changedTouches[0].clientX; }, { passive: true });
   b.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 70) JFTS.ppGo(dx < 0 ? 1 : -1); }, { passive: true });
 }
-window.addEventListener("hashchange", () => ppStop());
+window.addEventListener("hashchange", () => { ppStop(); dgStop(); });
 export const JFTS_ROUTES = {
+  "jft-dengar": (p) => renderDengar((Array.isArray(p) ? p[0] : String(p || "")) in LV ? (Array.isArray(p) ? p[0] : String(p)) : "ir0"),
   "jft-ppt": (p) => renderPpt(Array.isArray(p) ? p[0] : String(p || "")),
   "jft-slide": (p) => { const [lv, bab] = Array.isArray(p) ? p : String(p || "").split("/"); return LV[lv] && +bab ? renderSlides(lv, +bab) : renderList(lv); },
 };
