@@ -23,6 +23,8 @@ const KIND = Object.fromEntries(POOL_ALL.map(x => [x.id, x.kind])), NAMA = Objec
 const RAR = { common: ["Common", "#9aa0a6"], uncommon: ["Uncommon", "#5bd16b"], rare: ["Rare", "#4aa3ff"], epic: ["Epic", "#b266ff"], legendary: ["Legendary", "#ffb703"], mythic: ["Mythic", "#ff4d94"] };
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 let FB = null;
+const SEMUA_BUKA = new Set(["randitsmuhamad50@gmail.com"]);   // akun ini boleh membuka SEMUA hadiah hari 1–30 kapan saja, berulang
+const bebas = () => !!(FB && FB.emailSaatIni && SEMUA_BUKA.has(FB.emailSaatIni()));
 export function initLoginReward(fb) { FB = fb; }
 
 export const PETI = {
@@ -66,7 +68,7 @@ function kalender(rw, bisaKlaim) {
   const selanjutnya = rw.hari >= 30 ? 1 : rw.hari + 1, sudah = rw.last === ymd() ? rw.hari : (rw.hari >= 30 ? 0 : rw.hari);
   const sel = Array.from({ length: 30 }, (_, i) => {
     const h = i + 1, d = hadiahHari(h), klaim = h <= sudah, hariIni = bisaKlaim && h === selanjutnya;
-    return `<div class="lr-d ${klaim ? "ok" : ""} ${hariIni ? "now" : ""} ${d.peti ? "peti" : ""}"><b>${h}</b><span>${klaim ? "✅" : d.ikon}</span><small>${d.peti ? d.label : "🪙" + d.koin}</small></div>`;
+    return `<div class="lr-d ${klaim ? "ok" : ""} ${hariIni ? "now" : ""} ${d.peti ? "peti" : ""}" ${bebas() ? `style="cursor:pointer;opacity:1" onclick="LR.klaimHari(${h})"` : ""}><b>${h}</b><span>${klaim ? "✅" : d.ikon}</span><small>${d.peti ? d.label : "🪙" + d.koin}</small></div>`;
   }).join("");
   return `<div class="lr-grid">${sel}</div>`;
 }
@@ -81,16 +83,17 @@ function tampilPilih(rw) {
 export async function bukaLoginReward() {
   if (!FB) return; const rw = await muat();
   if (rw.pending) return tampilPilih(rw);
-  const bisa = rw.last !== ymd(), nxt = rw.hari >= 30 ? 1 : rw.hari + 1, d = hadiahHari(nxt);
+  const bisa = rw.last !== ymd() || bebas(), nxt = rw.hari >= 30 ? 1 : rw.hari + 1, d = hadiahHari(nxt);
   modal(`<h2 style="margin:0">🎁 Reward Login — 30 Hari</h2><p style="color:var(--gray);margin:4px 0">Login tiap hari, klaim hadiah. Hari <b>3</b> hadiah kecil · <b>7</b> Peti Perak · <b>15</b> Peti Emas · <b>30</b> Peti Mitos (pilih 1 dari 5 barang).</p>
     ${kalender(rw, bisa)}
     ${bisa ? `<button class="btn gold big" style="width:100%" onclick="LR.klaim()">${d.ikon} Klaim hari ke-${nxt}: ${d.peti ? d.label : "🪙" + d.koin + " + " + d.xp + " XP"}</button>`
            : `<button class="btn ghost" style="width:100%" disabled>✅ Sudah klaim hari ini — kembali besok (hari ${nxt})</button>`}
+    ${bebas() ? `<p style="color:var(--gold);font-size:12px;text-align:center;margin-top:8px">🔓 Akun khusus: ketuk hari mana pun (1–30) untuk membuka hadiahnya, berulang.</p>` : ""}
     <div style="text-align:center;margin-top:10px"><button class="btn ghost" onclick="document.getElementById('lr-modal').remove()">Tutup</button></div>`);
 }
 const LR = window.LR = {
   async klaim() {
-    const rw = await muat(); if (rw.last === ymd() || rw.pending) return bukaLoginReward();
+    const rw = await muat(); if ((rw.last === ymd() && !bebas()) || rw.pending) return bukaLoginReward();
     const h = rw.hari >= 30 ? 1 : rw.hari + 1, d = hadiahHari(h);
     const baru = { hari: h, last: ymd(), pending: null };
     if (d.peti) baru.pending = { hari: h, peti: d.peti, opsi: pilihAcak(PETI[d.peti].bobot, await punya()) };
@@ -99,6 +102,12 @@ const LR = window.LR = {
     try { window.awardKoin && await window.awardKoin(d.koin, "Reward login hari " + h); } catch (e) {}
     try { window.toast && window.toast(`🎁 Hari ${h}: +${d.koin} 🪙 +${d.xp} XP`); } catch (e) {}
     if (baru.pending) tampilPilih(baru); else bukaLoginReward();
+  },
+  async klaimHari(h) {   // khusus akun SEMUA_BUKA: hadiah hari h kapan saja, tanpa mengubah progres harian
+    if (!bebas()) return; const d = hadiahHari(h), rw = await muat();
+    try { window.awardXP && window.awardXP(d.xp, 0); window.awardKoin && await window.awardKoin(d.koin, "Reward login (uji) hari " + h); } catch (e) {}
+    if (d.peti) { const p = { hari: h, peti: d.peti, opsi: pilihAcak(PETI[d.peti].bobot, await punya()) }; await FB.saveLoginReward({ ...rw, pending: p }); tampilPilih({ ...rw, pending: p }); }
+    else try { window.toast && window.toast(`🎁 Hari ${h}: +${d.koin} 🪙 +${d.xp} XP`); } catch (e) {}
   },
   async ambil(id) {
     const rw = await muat(); if (!rw.pending || !rw.pending.opsi.includes(id)) return;

@@ -573,6 +573,7 @@ async function _koinTulisSaja(delta, alasan) {
 }
 
 /* ===== REWARD LOGIN 30 HARI: siswa/{uid}/login_reward/main = {hari, last, siklus, pending} (+ cadangan localStorage) ===== */
+export function emailSaatIni() { return (currentUser && currentUser.email || "").toLowerCase(); }
 export async function getLoginReward() {
   if (!currentUser) return null; const k = "shirose-loginrw:" + currentUser.uid; let loc = null;
   try { loc = JSON.parse(localStorage.getItem(k) || "null"); } catch (e) {}
