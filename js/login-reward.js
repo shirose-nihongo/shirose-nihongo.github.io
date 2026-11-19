@@ -34,14 +34,11 @@ export const PETI = {
 };
 /* Jadwal 30 hari */
 export function hadiahHari(h) {
-  if (h === 3)  return { koin: 100, xp: 50, label: "Hadiah kecil", ikon: "🎁" };
-  if (h === 7)  return { koin: 150, xp: 80, peti: "perak", label: "Peti Perak", ikon: "🥈" };
-  if (h === 15) return { koin: 300, xp: 150, peti: "emas", label: "Peti Emas", ikon: "🥇" };
-  if (h === 30) return { koin: 1000, xp: 400, peti: "mitos", label: "Peti Mitos", ikon: "👑" };
-  if (h === 10) return { koin: 300, xp: 100, label: "Bonus besar", ikon: "💰" };
-  if (h === 20) return { koin: 500, xp: 200, label: "Bonus besar", ikon: "💰" };
-  if (h === 25) return { koin: 700, xp: 250, label: "Bonus besar", ikon: "💎" };
-  return { koin: 20 + h * 2, xp: 10 + Math.floor(h / 2), label: "Koin & XP", ikon: "🪙" };
+  if (h === 30) return { koin: 2000, xp: 1000, peti: "mitos", label: "Peti Mitos", ikon: "👑" };
+  if (h === 15 || h === 14 || h === 28) return { koin: 600 + h * 10, xp: 400 + h * 5, peti: "emas", label: "Peti Emas", ikon: "🥇" };
+  if (h % 5 === 0 || h % 7 === 0) return { koin: 300 + h * 10, xp: 200 + h * 5, peti: "perak", label: "Peti Perak", ikon: "🥈" };   // 5,7,10,20,21,25
+  if (h % 3 === 0) return { koin: 200 + h * 10, xp: 100 + h * 5, label: "Hadiah besar", ikon: "🎁" };   // 3,6,9,12,18,24,27
+  return { koin: 50 + h * 5, xp: 30 + h * 3, label: "Koin & XP", ikon: "🪙" };
 }
 const ymd = (d = new Date()) => `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
 const punya = async () => { const g = (FB.getGachaState ? await FB.getGachaState() : null) || { inv: [] }; return new Set([...(g.inv || []), ...(FB.ownedShopIds ? FB.ownedShopIds() : [])]); };
@@ -84,7 +81,7 @@ export async function bukaLoginReward() {
   if (!FB) return; const rw = await muat();
   if (rw.pending) return tampilPilih(rw);
   const bisa = rw.last !== ymd() || bebas(), nxt = rw.hari >= 30 ? 1 : rw.hari + 1, d = hadiahHari(nxt);
-  modal(`<h2 style="margin:0">🎁 Reward Login — 30 Hari</h2><p style="color:var(--gray);margin:4px 0">Login tiap hari, klaim hadiah. Hari <b>3</b> hadiah kecil · <b>7</b> Peti Perak · <b>15</b> Peti Emas · <b>30</b> Peti Mitos (pilih 1 dari 5 barang).</p>
+  modal(`<h2 style="margin:0">🎁 Reward Login — 30 Hari</h2><p style="color:var(--gray);margin:4px 0">Login tiap hari, klaim hadiah. Kelipatan 3 hadiah besar · hari 5, 7, 10, 20, 21, 25 Peti Perak · hari 14, 15, 28 Peti Emas · hari 30 Peti Mitos (pilih 1 dari 5 barang).</p>
     ${kalender(rw, bisa)}
     ${bisa ? `<button class="btn gold big" style="width:100%" onclick="LR.klaim()">${d.ikon} Klaim hari ke-${nxt}: ${d.peti ? d.label : "🪙" + d.koin + " + " + d.xp + " XP"}</button>`
            : `<button class="btn ghost" style="width:100%" disabled>✅ Sudah klaim hari ini — kembali besok (hari ${nxt})</button>`}
