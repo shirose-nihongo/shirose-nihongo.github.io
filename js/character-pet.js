@@ -1,6 +1,6 @@
 /* PET (kategori shop "pet") — hewan peliharaan kecil di samping kaki karakter. SVG datar, kotak 80×64 (alas di y=64).
  * Harga dasar (sebelum diskon 50%): keong < kura-kura < kelinci < kucing/anjing < rubah < kapibara < koala < burung < serigala < ular < NAGA (paling mahal). */
-const E = (x, y, r = 2.2) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#1b1b2a"/><circle cx="${x + .7}" cy="${y - .7}" r=".7" fill="#fff"/>`;
+const E = (x, y, r = 2.2) => `<circle class="pe" style="animation:petBlink 4.2s infinite;transform-box:fill-box;transform-origin:center" cx="${x}" cy="${y}" r="${r}" fill="#1b1b2a"/><circle cx="${x + .7}" cy="${y - .7}" r=".7" fill="#fff"/>`;
 const shadow = `<ellipse cx="40" cy="62" rx="26" ry="3" fill="#000" opacity=".14"/>`;
 const kucing = () => `${shadow}<path d="M58 52 Q80 52 74 30 Q72 24 68 28 Q72 42 56 44Z" fill="#e8913a"/><ellipse cx="38" cy="46" rx="20" ry="16" fill="#f0a24e"/><ellipse cx="38" cy="54" rx="11" ry="8" fill="#fff3e0"/>
 <path d="M22 20 L24 4 L36 14Z M58 20 L56 4 L44 14Z" fill="#f0a24e"/><path d="M25 16 L26 8 L32 13Z M55 16 L54 8 L48 13Z" fill="#f7b3b3"/><circle cx="40" cy="26" r="17" fill="#f0a24e"/>
@@ -55,6 +55,19 @@ export const PET = {
   naga:     { nama: "🐉 Naga Terbang", svg: naga,     behind: true, lebar: true, tf: "translate(-125 160) scale(2.5)", harga: 40000, rarity: "legendary", unlock_lv: 20 },
 };
 
+/* ===== UKURAN ASLI relatif tinggi karakter (±1,7 m ≈ 400 satuan): skala per hewan, kaki sejajar tanah ===== */
+const SKALA = { keong: .5, kura: .8, burung: .75, kelinci: 1.0, kucing: 1.2, koala: 1.5, rubah: 1.6, anjing: 1.85, ular: 1.35, kapibara: 2.0, serigala: 2.2 };
+for (const [k, sc] of Object.entries(SKALA)) { const x = Math.round(150 - 80 * sc), y = Math.round(466 - 64 * sc); PET[k].tf = `translate(${x} ${y}) scale(${sc})`; if (x < 0) PET[k].lebar = true; }
+
+/* ===== ANIMASI IDLE semua pet (CSS; sumbu di dasar badan). Naga punya animasi sendiri (terbang). ===== */
+const ANIM = {
+  keong: "petCrawl 3.4s ease-in-out infinite", kura: "petCrawl 4.2s ease-in-out infinite", kelinci: "petHop 1.3s ease-in-out infinite",
+  kucing: "petBreath 2.4s ease-in-out infinite", anjing: "petHop 1.1s ease-in-out infinite", rubah: "petSway 2.2s ease-in-out infinite",
+  kapibara: "petBreath 3.2s ease-in-out infinite", koala: "petBreath 3.6s ease-in-out infinite", burung: "petPeck 1.5s ease-in-out infinite",
+  serigala: "petSway 2.8s ease-in-out infinite", ular: "petSlither 1.8s ease-in-out infinite",
+};
+for (const [k, a] of Object.entries(ANIM)) { const raw = PET[k].svg; PET[k].svg = () => `<g style="animation:${a};transform-box:fill-box;transform-origin:50% 100%">${raw()}</g>`; }
+
 /* ===== MATA (gratis, bebas ganti) — mengganti grup data-slot="mata" (cowok) / mata di wajah cewek ===== */
 const BR = (c = "#3a2518") => `<path d="M170 118 Q178 115 186 118" stroke="${c}" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M214 118 Q222 115 230 118" stroke="${c}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
 export const MATA = {
@@ -70,4 +83,4 @@ export const MATA = {
 };
 
 if (typeof document !== "undefined" && !document.getElementById("pet-css")) { const st = document.createElement("style"); st.id = "pet-css";
-  st.textContent = "@keyframes petFly{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes petFlap{from{transform:scaleY(1) rotate(0)}to{transform:scaleY(.62) rotate(-6deg)}}@keyframes petFire{from{transform:scale(1,.9)}to{transform:scale(1.12,1.1)}}"; document.head.appendChild(st); }
+  st.textContent = "@keyframes petHop{0%,100%{transform:translateY(0) scale(1,1)}20%{transform:translateY(0) scale(1.06,.92)}50%{transform:translateY(-9px) scale(.97,1.05)}80%{transform:translateY(0) scale(1.05,.94)}}@keyframes petBreath{0%,100%{transform:scale(1,1)}50%{transform:scale(1.03,1.06)}}@keyframes petSway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg) translateY(-2px)}}@keyframes petCrawl{0%,100%{transform:translateX(-3px) scale(1,1)}50%{transform:translateX(4px) scale(1.04,.97)}}@keyframes petPeck{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(9deg) translateY(1px)}80%{transform:rotate(-2deg) translateY(-5px)}}@keyframes petSlither{0%,100%{transform:skewX(-7deg)}50%{transform:skewX(7deg)}}@keyframes petBlink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}@keyframes petFly{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes petFlap{from{transform:scaleY(1) rotate(0)}to{transform:scaleY(.62) rotate(-6deg)}}@keyframes petFire{from{transform:scale(1,.9)}to{transform:scale(1.12,1.1)}}"; document.head.appendChild(st); }

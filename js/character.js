@@ -1056,7 +1056,7 @@ import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
 import { extendSet, SET } from "./character-set.js?v=20261119r";
-import { PET, MATA } from "./character-pet.js?v=20261119s";
+import { PET, MATA } from "./character-pet.js?v=20261119u";
 import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
