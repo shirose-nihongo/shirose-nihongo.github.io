@@ -1459,12 +1459,12 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261119n";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261119p";
 import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261119n";
+import * as FB from "./js/firebase-sync.js?v=20261119p";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261119k";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
@@ -4953,6 +4953,7 @@ async function renderShop(){
   // Category tabs — shop now sells hairstyle PLUS pakaian/sepatu/aksesori/senjata.
   // "senjata" maps to the item_tangan slot in the character catalog.
   const CAT_TABS = [
+    { key: "set",         label: "🦸 Paket Kostum (10rb)" },
     { key: "rambut",      label: "💇 Rambut" },
     { key: "pakaian",     label: "👕 Pakaian" },
     { key: "sepatu",      label: "👟 Sepatu" },
@@ -4988,7 +4989,7 @@ async function renderShop(){
   // Pilihan "Tidak memakai" (kosongkan slot) — selalu tersedia di tiap kategori
   const NONE_MAP = { rambut: "none", pakaian: "seragam_default", sepatu: "shoes_default" };
   const noneId = activeCat in NONE_MAP ? NONE_MAP[activeCat] : "none", NK = "__none";
-  const noneLabel = { rambut: "Botak (tanpa rambut)", pakaian: "Tanpa baju tambahan (kaos polos)", sepatu: "Sepatu polos bawaan", celana: "Tanpa celana / rok", sayap: "Tanpa sayap", item_tangan: "Tangan kosong" }[activeCat] || "Tidak memakai";
+  const noneLabel = { rambut: "Botak (tanpa rambut)", pakaian: "Tanpa baju tambahan (kaos polos)", sepatu: "Sepatu polos bawaan", celana: "Tanpa celana / rok", sayap: "Tanpa sayap", set: "Lepas paket kostum", item_tangan: "Tangan kosong" }[activeCat] || "Tidak memakai";
   const noneItem = { kategori: activeCat, id: NK, nama: "🚫 " + noneLabel, harga: 0, rarity: null, unlock_lv: 0, none: true };
   const noneEquipped = (eq[activeCat] ?? null) === noneId || (activeCat === "rambut" && !eq.rambut && body === "male") || (activeCat === "pakaian" && !eq.pakaian) || (activeCat === "sepatu" && !eq.sepatu) || (noneId === "none" && activeCat !== "rambut" && !eq[activeCat]);
   const eqVal = (id) => id === NK ? noneId : id;

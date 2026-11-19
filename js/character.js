@@ -928,6 +928,7 @@ function flatten2D(svg) {
 
 export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const eq = { ...DEFAULT_EQUIPPED, ...equipped };
+  if (eq.set && eq.set !== "none" && CATALOG.set[eq.set]) Object.assign(eq, CATALOG.set[eq.set].parts);   // paket kostum menimpa slot bagiannya
   const fem = (opts.body || _body) === "female";
   // item khusus cewek tidak dipakai di badan cowok
   if (!fem) for (const k of Object.keys(eq)) { const it = CATALOG[k]?.[eq[k]]; if (it && it.g === "f") eq[k] = k === "rambut" ? null : DEFAULT_EQUIPPED[k]; }
@@ -1053,6 +1054,7 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z6";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
+import { extendSet, SET } from "./character-set.js?v=20261119p";
 import { PET, MATA } from "./character-pet.js?v=20261119n";
 import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
@@ -1061,6 +1063,7 @@ extendShirose(__X);
 extendFemale(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 for (const p of Object.values(PET)) p._rp = 1;   // harga pet tetap (tidak ikut kurva penyesuaian)
+extendSet(__X); CATALOG.set = SET; CATALOG_LABELS.set = "Paket Kostum"; DEFAULT_EQUIPPED.set = "none";
 CATALOG.pet = PET; CATALOG_LABELS.pet = "Pet"; DEFAULT_EQUIPPED.pet = "none";
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP; CATALOG.jepit = __X.JEPIT; CATALOG.anting = __X.ANTING;
 
@@ -1076,6 +1079,7 @@ for (const kat of Object.values(CATALOG)) for (const it of Object.values(kat)) {
 /* Filter item per tipe badan: item cewek disembunyikan untuk cowok; rambut dipisah. */
 export function itemOk(kat, id, body = _body) {
   const it = CATALOG[kat]?.[id]; if (!it) return false;
+  if (kat === "set") return it.g === (body === "female" ? "f" : "m");
   if (kat === "rambut") return body === "female" ? it.g === "f" : it.g !== "f";
   return body === "female" || it.g !== "f";
 }

@@ -7,7 +7,7 @@
 // v12 — halaman hasil ujian rombak total: skor besar dengan %, breakdown
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
-const CACHE = "shirose-nihongo-v396";
+const CACHE = "shirose-nihongo-v397";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
@@ -44,7 +44,7 @@ const CORE = [
   "./js/ssw.js",
   "./js/jft.js",
   "./js/login-reward.js",
-  "./js/character-pet.js",
+  "./js/character-pet.js", "./js/character-set.js",
   "./cloudflare/gacha-core.js",
   "./cloudflare/gacha-items.js",
   "./css/jft.css",

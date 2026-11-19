@@ -1,8 +1,8 @@
 /* REWARD LOGIN 30 HARI + PETI PILIH-1-DARI-5. Hari 3 hadiah kecil, hari 7/15/30 peti. Satu klaim per hari kalender (lokal).
  * Progres: siswa/{uid}/login_reward/main {hari,last,pending}. Peti: 5 barang acak (belum dimiliki) → pilih 1 → masuk inventaris. */
 import { ITEMS } from "../cloudflare/gacha-items.js";
-import { PET } from "./character-pet.js?v=20261119n";
-import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261119n";
+import { PET } from "./character-pet.js?v=20261119p";
+import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261119p";
 /* gambar barang: karakter memakai barang itu (SVG animasi bawaan item + efek melayang/bersinar per kelangkaan) */
 const KAT_OF = {}; for (const [k, o] of Object.entries(CATALOG)) for (const id of Object.keys(o)) if (id !== "none") KAT_OF[id] = k;
 const ANIM = { item_tangan: "gaSwing", aura: "gaPulse", sayap: "gaFlap", aksesori: "gaBob", pakaian: "gaBob", celana: "gaBob", sepatu: "gaBob", rambut: "gaBob" };
