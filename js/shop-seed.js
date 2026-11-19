@@ -1,6 +1,7 @@
 /* Shop items that match character.js CATALOG. Seeded at runtime. */
-import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261118z6";
+import { CATALOG, CATALOG_LABELS } from "./character.js?v=20261119p";
 
+export const HARGA_FAKTOR = 0.5;
 export function allShopItems(termasukGacha = false) {
   const out = [];
   for (const [kategori, items] of Object.entries(CATALOG)) {
@@ -13,7 +14,7 @@ export function allShopItems(termasukGacha = false) {
         kategori_label: CATALOG_LABELS[kategori],
         id,
         nama: item.nama,
-        harga: item.harga,
+        harga: Math.max(1, Math.round(item.harga * HARGA_FAKTOR)),   // diskon permanen 50% (ubah HARGA_FAKTOR untuk mengatur)
         rarity: item.rarity || "common",
         unlock_lv: item.unlock_lv || 1,
         gachaOnly: !!item.gachaOnly,

@@ -1,0 +1,1899 @@
+{
+ "bidang": "fishery",
+ "nama": "Fishery",
+ "jp": "漁業",
+ "emoji": "🐟",
+ "kategori": [
+  {
+   "k": "jiko",
+   "jp": "自己紹介",
+   "id": "Perkenalan diri"
+  },
+  {
+   "k": "shibou",
+   "jp": "志望動機",
+   "id": "Alasan melamar"
+  },
+  {
+   "k": "shigoto",
+   "jp": "仕事への理解",
+   "id": "Pemahaman pekerjaan"
+  },
+  {
+   "k": "seikatsu",
+   "jp": "日本での生活",
+   "id": "Kehidupan di Jepang"
+  },
+  {
+   "k": "mokuhyou",
+   "jp": "将来の目標",
+   "id": "Tujuan masa depan"
+  },
+  {
+   "k": "taiou",
+   "jp": "職場での対応",
+   "id": "Situasi di tempat kerja"
+  },
+  {
+   "k": "tim",
+   "jp": "チームワーク",
+   "id": "Kerja sama tim"
+  },
+  {
+   "k": "anzen",
+   "jp": "安全・衛生",
+   "id": "Keselamatan & kebersihan"
+  },
+  {
+   "k": "saigo",
+   "jp": "最後の質問",
+   "id": "Pertanyaan penutup"
+  }
+ ],
+ "soal": [
+  {
+   "i": "fishery-jiko-01",
+   "k": "jiko",
+   "l": 1,
+   "ja": "自己紹介をお願いします。",
+   "id": "Tolong perkenalkan diri Anda.",
+   "v": [
+    [
+     "自己紹介",
+     "perkenalan diri"
+    ],
+    [
+     "〜と申します",
+     "nama saya (sopan)"
+    ],
+    [
+     "よろしくお願いします",
+     "mohon bantuannya"
+    ]
+   ],
+   "m": "Melihat apakah kandidat bisa memperkenalkan diri dengan sopan dan jelas.",
+   "aj": "はじめまして。アリと申します。インドネシアのジャワ島から来ました。二十四歳です。漁業の仕事に興味があって、日本で働きたいと思っています。一生懸命がんばりますので、よろしくお願いします。",
+   "ai": "Perkenalkan, nama saya Ali. Saya dari pulau Jawa, Indonesia. Usia saya 24 tahun. Saya tertarik pada pekerjaan di bidang Fishery dan ingin bekerja di Jepang. Saya akan berusaha sungguh-sungguh, mohon bantuannya.",
+   "c": "Suara jelas, sopan, nama-asal-usia-motivasi singkat.",
+   "b": "fishery",
+   "jf": "自己紹介[じこしょうかい]をお願[ねが]いします。",
+   "ajf": "はじめまして。アリと申[もう]します。インドネシアのジャワ島[とう]から来[き]ました。二十四歳[にじゅうよんさい]です。漁業[ぎょぎょう]の仕事[しごと]に興味[きょうみ]があって、日本[にほん]で働[はたら]きたいと思[おも]っています。一生懸命[いっしょうけんめい]がんばりますので、よろしくお願[ねが]いします。"
+  },
+  {
+   "i": "fishery-jiko-02",
+   "k": "jiko",
+   "l": 1,
+   "ja": "お名前を教えてください。",
+   "id": "Tolong sebutkan nama Anda.",
+   "v": [
+    [
+     "お名前",
+     "nama (hormat)"
+    ],
+    [
+     "〜と呼んでください",
+     "tolong panggil saya ..."
+    ],
+    [
+     "フルネーム",
+     "nama lengkap"
+    ]
+   ],
+   "m": "Memastikan nama dan kemampuan menyebutkannya dengan jelas.",
+   "aj": "アリ・プラセティョと申します。アリと呼んでください。",
+   "ai": "Nama saya Ali Prasetyo. Silakan panggil saya Ali.",
+   "c": "Sebut nama pelan dan jelas. Gunakan 〜と申します, bukan 〜です, di wawancara resmi.",
+   "jf": "お名前[なまえ]を教[おし]えてください。",
+   "ajf": "アリ・プラセティョと申[もう]します。アリと呼[よ]んでください。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-jiko-03",
+   "k": "jiko",
+   "l": 1,
+   "ja": "何歳ですか。",
+   "id": "Berapa usia Anda?",
+   "v": [
+    [
+     "歳",
+     "tahun (usia)"
+    ],
+    [
+     "二十四歳",
+     "24 tahun"
+    ],
+    [
+     "来月",
+     "bulan depan"
+    ]
+   ],
+   "m": "Cek informasi dasar dan kemampuan menyebut angka/usia dalam bahasa Jepang.",
+   "aj": "二十四歳です。来月、二十五歳になります。",
+   "ai": "Saya 24 tahun. Bulan depan saya genap 25 tahun.",
+   "c": "Latih angka dan hitungan usia (〜歳). Usia khusus: 20歳 = はたち.",
+   "jf": "何歳[なんさい]ですか。",
+   "ajf": "二十四歳[にじゅうよんさい]です。来月[らいげつ]、二十五歳[にじゅうごさい]になります。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-jiko-04",
+   "k": "jiko",
+   "l": 1,
+   "ja": "出身はどこですか。",
+   "id": "Anda berasal dari mana?",
+   "v": [
+    [
+     "出身",
+     "asal"
+    ],
+    [
+     "〜から来ました",
+     "datang dari ..."
+    ],
+    [
+     "近い",
+     "dekat"
+    ]
+   ],
+   "m": "Mengetahui latar belakang dan membuka obrolan ringan.",
+   "aj": "インドネシアの中部ジャワのスマランです。海に近い町です。",
+   "ai": "Saya dari Semarang, Jawa Tengah, Indonesia. Kotanya dekat laut.",
+   "c": "Boleh tambah satu kalimat tentang daerah asal. Pewawancara sering menanggapinya.",
+   "jf": "出身[しゅっしん]はどこですか。",
+   "ajf": "インドネシアの中部[ちゅうぶ]ジャワのスマランです。海[うみ]に近[ちか]い町[まち]です。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-jiko-05",
+   "k": "jiko",
+   "l": 1,
+   "ja": "趣味は何ですか。",
+   "id": "Apa hobi Anda?",
+   "v": [
+    [
+     "趣味",
+     "hobi"
+    ],
+    [
+     "体を動かす",
+     "bergerak/berolahraga"
+    ],
+    [
+     "週末",
+     "akhir pekan"
+    ]
+   ],
+   "m": "Melihat kepribadian dan apakah kandidat sehat dan aktif.",
+   "aj": "趣味はサッカーです。週末に友達とサッカーをします。体を動かすのが好きです。",
+   "ai": "Hobi saya sepak bola. Di akhir pekan saya bermain bola dengan teman. Saya suka bergerak.",
+   "c": "Hindari jawaban yang terkesan malas atau begadang (mis. main game sampai malam). Pilih hobi sehat.",
+   "jf": "趣味[しゅみ]は何[なん]ですか。",
+   "ajf": "趣味[しゅみ]はサッカーです。週末[しゅうまつ]に友達[ともだち]とサッカーをします。体[からだ]を動[うご]かすのが好[す]きです。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-jiko-06",
+   "k": "jiko",
+   "l": 3,
+   "ja": "自分の長所と短所を教えてください。",
+   "id": "Sebutkan kelebihan dan kekurangan Anda.",
+   "v": [
+    [
+     "長所",
+     "kelebihan"
+    ],
+    [
+     "短所",
+     "kekurangan"
+    ],
+    [
+     "まじめ",
+     "rajin/serius"
+    ],
+    [
+     "心配しすぎる",
+     "terlalu khawatir"
+    ]
+   ],
+   "m": "Menilai kejujuran dan kesadaran diri, serta usaha memperbaiki kekurangan.",
+   "aj": "長所はまじめなところです。短所は、少し心配しすぎるところです。でも、メモを取ってミスを減らすようにしています。",
+   "ai": "Kelebihan saya rajin. Kekurangan saya agak terlalu khawatir. Tetapi saya mencatat supaya mengurangi kesalahan.",
+   "c": "Selalu sebut kekurangan + usaha memperbaikinya. Jangan sebut kekurangan fatal (mis. malas, tidak disiplin).",
+   "jf": "自分[じぶん]の長所[ちょうしょ]と短所[たんしょ]を教[おし]えてください。",
+   "ajf": "長所[ちょうしょ]はまじめなところです。短所[たんしょ]は、少[すこ]し心配[しんぱい]しすぎるところです。でも、メモを取[と]ってミスを減[へ]らすようにしています。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-jiko-07",
+   "k": "jiko",
+   "l": 2,
+   "ja": "日本語はどのくらい勉強しましたか。",
+   "id": "Sudah berapa lama Anda belajar bahasa Jepang?",
+   "v": [
+    [
+     "勉強する",
+     "belajar"
+    ],
+    [
+     "毎日",
+     "setiap hari"
+    ],
+    [
+     "単語",
+     "kosakata"
+    ],
+    [
+     "練習する",
+     "berlatih"
+    ]
+   ],
+   "m": "Memperkirakan kemampuan bahasa dan kesungguhan belajar.",
+   "aj": "八か月勉強しました。毎日一時間、単語と会話を練習しています。",
+   "ai": "Saya belajar 8 bulan. Setiap hari saya berlatih kosakata dan percakapan selama satu jam.",
+   "c": "Sebut lama belajar dan cara belajar. Jawaban jujur lebih baik daripada melebih-lebihkan.",
+   "jf": "日本語[にほんご]はどのくらい勉強[べんきょう]しましたか。",
+   "ajf": "八[はち]か月[がつ]勉強[べんきょう]しました。毎日[まいにち]一時間[いちじかん]、単語[たんご]と会話[かいわ]を練習[れんしゅう]しています。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-jiko-08",
+   "k": "jiko",
+   "l": 1,
+   "ja": "健康状態はどうですか。",
+   "id": "Bagaimana kondisi kesehatan Anda?",
+   "v": [
+    [
+     "健康",
+     "sehat"
+    ],
+    [
+     "丈夫",
+     "kuat"
+    ],
+    [
+     "大きな病気",
+     "penyakit berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memastikan kandidat sanggup bekerja secara fisik.",
+   "aj": "はい、元気です。大きな病気はありません。毎朝、軽い運動をしています。",
+   "ai": "Ya, saya sehat. Tidak ada penyakit berat. Setiap pagi saya berolahraga ringan.",
+   "c": "Jawab jujur. Perusahaan khawatir soal cuti panjang karena sakit.",
+   "jf": "健康状態[けんこうじょうたい]はどうですか。",
+   "ajf": "はい、元気[げんき]です。大[おお]きな病気[びょうき]はありません。毎朝[まいあさ]、軽[かる]い運動[うんどう]をしています。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-shibou-01",
+   "k": "shibou",
+   "l": 1,
+   "ja": "なぜ漁業の仕事を選びましたか。",
+   "id": "Mengapa Anda memilih pekerjaan perikanan?",
+   "v": [
+    [
+     "漁業",
+     "perikanan"
+    ],
+    [
+     "漁師",
+     "nelayan"
+    ],
+    [
+     "海",
+     "laut"
+    ],
+    [
+     "あこがれる",
+     "mengagumi"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "私の町は海の近くで、小さいころから漁師さんを見ていました。魚を取る仕事にあこがれていました。",
+   "ai": "Kota saya dekat laut dan sejak kecil saya melihat nelayan. Saya mengagumi pekerjaan menangkap ikan.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "fishery",
+   "jf": "なぜ漁業[ぎょぎょう]の仕事[しごと]を選[えら]びましたか。",
+   "ajf": "私[わたし]の町[まち]は海[うみ]の近[ちか]くで、小[ちい]さいころから漁師[りょうし]さんを見[み]ていました。魚[さかな]を取[と]る仕事[しごと]にあこがれていました。"
+  },
+  {
+   "i": "fishery-shibou-02",
+   "k": "shibou",
+   "l": 2,
+   "ja": "なぜ日本で漁業を学びたいですか。",
+   "id": "Mengapa Anda ingin belajar perikanan di Jepang?",
+   "v": [
+    [
+     "技術",
+     "teknik"
+    ],
+    [
+     "品質",
+     "kualitas"
+    ],
+    [
+     "学ぶ",
+     "belajar"
+    ],
+    [
+     "生かす",
+     "memanfaatkan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "日本の漁業は、魚の品質を守る技術が高いと聞きました。その技術を学んで、将来に生かしたいです。",
+   "ai": "Saya dengar perikanan Jepang punya teknik tinggi untuk menjaga kualitas ikan. Saya ingin mempelajarinya dan memanfaatkannya di masa depan.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "fishery",
+   "jf": "なぜ日本[にほん]で漁業[ぎょぎょう]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の漁業[ぎょぎょう]は、魚[さかな]の品質[ひんしつ]を守[まも]る技術[ぎじゅつ]が高[たか]いと聞[き]きました。その技術[ぎじゅつ]を学[まな]んで、将来[しょうらい]に生[い]かしたいです。"
+  },
+  {
+   "i": "fishery-shibou-03",
+   "k": "shibou",
+   "l": 3,
+   "ja": "なぜ当社に応募しましたか。",
+   "id": "Mengapa Anda melamar ke perusahaan kami?",
+   "v": [
+    [
+     "応募する",
+     "melamar"
+    ],
+    [
+     "御社",
+     "perusahaan Anda"
+    ],
+    [
+     "指導",
+     "bimbingan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "御社は、魚の扱いや船の安全にしっかり気をつけて仕事をしていると聞きました。丁寧に指導してもらえると思って、応募しました。",
+   "ai": "Saya dengar perusahaan Anda bekerja dengan memperhatikan penanganan ikan dan keselamatan kapal. Saya pikir saya akan dibimbing dengan baik, jadi saya melamar.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "fishery",
+   "jf": "なぜ当社[とうしゃ]に応募[おうぼ]しましたか。",
+   "ajf": "御社[おんしゃ]は、魚[さかな]の扱[あつか]いや船[ふね]の安全[あんぜん]にしっかり気[き]をつけて仕事[しごと]をしていると聞[き]きました。丁寧[ていねい]に指導[しどう]してもらえると思[おも]って、応募[おうぼ]しました。"
+  },
+  {
+   "i": "fishery-shibou-04",
+   "k": "shibou",
+   "l": 1,
+   "ja": "この仕事に興味を持った理由は何ですか。",
+   "id": "Apa alasan Anda tertarik pada pekerjaan ini?",
+   "v": [
+    [
+     "興味",
+     "minat"
+    ],
+    [
+     "自然",
+     "alam"
+    ],
+    [
+     "やりがい",
+     "rasa bermakna"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "自然の中で働くのが好きです。取った魚を、みんなに食べてもらえるのがうれしいです。",
+   "ai": "Saya suka bekerja di alam. Saya senang ikan yang saya tangkap bisa dimakan banyak orang.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "fishery",
+   "jf": "この仕事[しごと]に興味[きょうみ]を持[も]った理由[りゆう]は何[なん]ですか。",
+   "ajf": "自然[しぜん]の中[なか]で働[はたら]くのが好[す]きです。取[と]った魚[さかな]を、みんなに食[た]べてもらえるのがうれしいです。"
+  },
+  {
+   "i": "fishery-shibou-05",
+   "k": "shibou",
+   "l": 2,
+   "ja": "漁業の仕事で、一番楽しみなことは何ですか。",
+   "id": "Apa yang paling Anda nantikan dari pekerjaan perikanan?",
+   "v": [
+    [
+     "楽しみ",
+     "dinantikan"
+    ],
+    [
+     "漁",
+     "penangkapan ikan"
+    ],
+    [
+     "喜び",
+     "kegembiraan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "大きな魚が取れたときの喜びを味わいたいです。日本の漁の方法も学びたいです。",
+   "ai": "Saya ingin merasakan kegembiraan saat mendapat ikan besar. Saya juga ingin belajar cara menangkap ikan di Jepang.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "fishery",
+   "jf": "漁業[ぎょぎょう]の仕事[しごと]で、一番楽[いちばんたの]しみなことは何[なん]ですか。",
+   "ajf": "大[おお]きな魚[さかな]が取[と]れたときの喜[よろこ]びを味[あじ]わいたいです。日本[にほん]の漁[りょう]の方法[ほうほう]も学[まな]びたいです。"
+  },
+  {
+   "i": "fishery-shigoto-01",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "漁業の主な仕事は何だと思いますか。",
+   "id": "Menurut Anda, apa pekerjaan utama perikanan?",
+   "v": [
+    [
+     "漁",
+     "penangkapan ikan"
+    ],
+    [
+     "養殖",
+     "budidaya"
+    ],
+    [
+     "水揚げ",
+     "pendaratan hasil tangkapan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "船で魚を取ったり、貝や海藻を育てたりする仕事だと思います。取ったあとの整理も大切だと思います。",
+   "ai": "Saya kira pekerjaannya menangkap ikan dengan kapal atau membudidayakan kerang dan rumput laut. Merapikan hasil tangkapan juga penting.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "漁業[ぎょぎょう]の主[おも]な仕事[しごと]は何[なん]だと思[おも]いますか。",
+   "ajf": "船[ふね]で魚[さかな]を取[と]ったり、貝[かい]や海藻[かいそう]を育[そだ]てたりする仕事[しごと]だと思[おも]います。取[と]ったあとの整理[せいり]も大切[たいせつ]だと思[おも]います。"
+  },
+  {
+   "i": "fishery-shigoto-02",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "朝早くから働くことはできますか。",
+   "id": "Apakah Anda bisa bekerja dari pagi buta?",
+   "v": [
+    [
+     "早朝",
+     "pagi buta"
+    ],
+    [
+     "準備",
+     "persiapan"
+    ],
+    [
+     "早く寝る",
+     "tidur lebih awal"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。漁は朝がとても早いと聞いています。夜は早く寝て、準備します。",
+   "ai": "Ya, bisa. Saya dengar melaut dimulai sangat pagi. Malamnya saya tidur lebih awal untuk bersiap.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "朝早[あさはや]くから働[はたら]くことはできますか。",
+   "ajf": "はい、できます。漁[りょう]は朝[あさ]がとても早[はや]いと聞[き]いています。夜[よる]は早[はや]く寝[ね]て、準備[じゅんび]します。"
+  },
+  {
+   "i": "fishery-shigoto-03",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "寒い日や暑い日でも、海の上で働けますか。",
+   "id": "Bisakah Anda bekerja di laut walau cuaca dingin atau panas?",
+   "v": [
+    [
+     "寒い",
+     "dingin"
+    ],
+    [
+     "暑い",
+     "panas"
+    ],
+    [
+     "こまめに",
+     "sering/rutin"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。寒い日は服をたくさん着て、暑い日はこまめに水を飲みます。",
+   "ai": "Ya, tidak masalah. Saat dingin saya memakai banyak lapis pakaian, saat panas saya sering minum air.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "寒[さむ]い日[ひ]や暑[あつ]い日[ひ]でも、海[うみ]の上[うえ]で働[はたら]けますか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。寒[さむ]い日[ひ]は服[ふく]をたくさん着[つ]て、暑[あつ]い日[ひ]はこまめに水[みず]を飲[の]みます。"
+  },
+  {
+   "i": "fishery-shigoto-04",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "波が高い日や天気が悪い日は、どう思いますか。",
+   "id": "Bagaimana pendapat Anda saat ombak tinggi atau cuaca buruk?",
+   "v": [
+    [
+     "波",
+     "ombak"
+    ],
+    [
+     "危ない",
+     "berbahaya"
+    ],
+    [
+     "船長",
+     "kapten kapal"
+    ],
+    [
+     "判断",
+     "keputusan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "危ないので、無理をしてはいけないと思います。船長の判断を守ります。",
+   "ai": "Karena berbahaya, menurut saya tidak boleh memaksakan diri. Saya akan mengikuti keputusan kapten.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "波[なみ]が高[たか]い日[ひ]や天気[てんき]が悪[わる]い日[ひ]は、どう思[おも]いますか。",
+   "ajf": "危[あぶ]ないので、無理[むり]をしてはいけないと思[おも]います。船長[せんちょう]の判断[はんだん]を守[まも]ります。"
+  },
+  {
+   "i": "fishery-shigoto-05",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "体力が必要な仕事ですが、大丈夫ですか。",
+   "id": "Pekerjaan ini butuh stamina, apakah Anda baik-baik saja?",
+   "v": [
+    [
+     "体力",
+     "stamina"
+    ],
+    [
+     "ジョギング",
+     "jogging"
+    ],
+    [
+     "健康",
+     "kesehatan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。毎朝ジョギングをして、体力をつけています。",
+   "ai": "Ya, tidak masalah. Setiap pagi saya jogging untuk membangun stamina.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "体力[たいりょく]が必要[ひつよう]な仕事[しごと]ですが、大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。毎朝[まいあさ]ジョギングをして、体力[たいりょく]をつけています。"
+  },
+  {
+   "i": "fishery-shigoto-06",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "船の上で、何日も帰れないことがあっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja bila beberapa hari tidak bisa pulang dari kapal?",
+   "v": [
+    [
+     "何日も",
+     "berhari-hari"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ],
+    [
+     "協力",
+     "kerja sama"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "大丈夫です。家族とはメッセージで連絡します。みんなで協力して、がんばります。",
+   "ai": "Tidak masalah. Saya akan menghubungi keluarga lewat pesan. Kami akan bekerja sama dan berusaha.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "船[ふね]の上[うえ]で、何日[なんひ]も帰[かえ]れないことがあっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "大丈夫[だいじょうぶ]です。家族[かぞく]とはメッセージで連絡[れんらく]します。みんなで協力[きょうりょく]して、がんばります。"
+  },
+  {
+   "i": "fishery-shigoto-07",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "船や漁の道具を使うとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat memakai kapal atau alat tangkap?",
+   "v": [
+    [
+     "道具",
+     "alat"
+    ],
+    [
+     "網",
+     "jaring"
+    ],
+    [
+     "ロープ",
+     "tali"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "使う前に、道具に問題がないか確認します。ロープや網には、手や足を引っかけないように気をつけます。",
+   "ai": "Sebelum dipakai, saya memeriksa apakah alatnya bermasalah. Saya berhati-hati agar tangan dan kaki tidak tersangkut tali atau jaring.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "船[ふね]や漁[りょう]の道具[どうぐ]を使[つか]うとき、何[なに]に気[き]をつけますか。",
+   "ajf": "使[つか]う前[まえ]に、道具[どうぐ]に問題[もんだい]がないか確認[かくにん]します。ロープや網[あみ]には、手[て]や足[あし]を引[ひ]っかけないように気[き]をつけます。"
+  },
+  {
+   "i": "fishery-shigoto-08",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "魚のにおいや汚れがある環境でも大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan lingkungan yang berbau dan kotor oleh ikan?",
+   "v": [
+    [
+     "におい",
+     "bau"
+    ],
+    [
+     "汚れ",
+     "kotoran"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "洗う",
+     "mencuci"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。仕事のあとで、きれいに洗います。においにも、すぐ慣れると思います。",
+   "ai": "Ya, tidak masalah. Setelah kerja saya mencuci bersih. Saya kira saya akan cepat terbiasa dengan baunya.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "魚[さかな]のにおいや汚[よご]れがある環境[かんきょう]でも大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。仕事[しごと]のあとで、きれいに洗[あら]います。においにも、すぐ慣[な]れると思[おも]います。"
+  },
+  {
+   "i": "fishery-shigoto-09",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "魚を新鮮に保つために、大切なことは何だと思いますか。",
+   "id": "Menurut Anda, apa yang penting untuk menjaga ikan tetap segar?",
+   "v": [
+    [
+     "新鮮",
+     "segar"
+    ],
+    [
+     "氷",
+     "es"
+    ],
+    [
+     "冷やす",
+     "mendinginkan"
+    ],
+    [
+     "扱う",
+     "menangani"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "取ったあと、すぐに氷で冷やすことだと思います。魚をていねいに扱うことも大切です。",
+   "ai": "Menurut saya, segera mendinginkan ikan dengan es setelah ditangkap. Menangani ikan dengan hati-hati juga penting.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "魚[さかな]を新鮮[しんせん]に保[たも]つために、大切[たいせつ]なことは何[なん]だと思[おも]いますか。",
+   "ajf": "取[と]ったあと、すぐに氷[こおり]で冷[ひ]やすことだと思[おも]います。魚[さかな]をていねいに扱[あつか]うことも大切[たいせつ]です。"
+  },
+  {
+   "i": "fishery-shigoto-10",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "船が港を出てから戻るまで、どんな作業がありますか。",
+   "id": "Pekerjaan apa saja sejak kapal meninggalkan pelabuhan sampai kembali?",
+   "v": [
+    [
+     "出港",
+     "berangkat dari pelabuhan"
+    ],
+    [
+     "水揚げ",
+     "pendaratan ikan"
+    ],
+    [
+     "選別",
+     "pemilahan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "出港して、網を入れて、魚を取ります。そのあと、魚を分けて、氷に入れます。港に戻ったら、水揚げをします。",
+   "ai": "Berangkat dari pelabuhan, menurunkan jaring, dan menangkap ikan. Lalu memilah ikan dan memasukkannya ke es. Setelah kembali ke pelabuhan, ikan didaratkan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "船[ふね]が港[みなと]を出[で]てから戻[もど]るまで、どんな作業[さぎょう]がありますか。",
+   "ajf": "出港[しゅっこう]して、網[あみ]を入[い]れて、魚[さかな]を取[と]ります。そのあと、魚[さかな]を分[わ]けて、氷[こおり]に入[い]れます。港[みなと]に戻[もど]ったら、水揚[みずあ]げをします。"
+  },
+  {
+   "i": "fishery-shigoto-11",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "魚の種類を、どうやって分けますか。",
+   "id": "Bagaimana Anda memilah jenis ikan?",
+   "v": [
+    [
+     "種類",
+     "jenis"
+    ],
+    [
+     "大きさ",
+     "ukuran"
+    ],
+    [
+     "形",
+     "bentuk"
+    ],
+    [
+     "分ける",
+     "memilah"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "先輩に教えてもらって、大きさや形を見て分けます。分からない魚は、すぐに聞きます。",
+   "ai": "Saya diajari senior dan memilah menurut ukuran dan bentuk. Kalau tidak tahu jenis ikan, saya segera bertanya.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "魚[さかな]の種類[しゅるい]を、どうやって分[わ]けますか。",
+   "ajf": "先輩[せんぱい]に教[おし]えてもらって、大[おお]きさや形[かたち]を見[み]て分[わ]けます。分[わ]からない魚[さかな]は、すぐに聞[き]きます。"
+  },
+  {
+   "i": "fishery-shigoto-12",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "海の上で、天気や波の様子を見ることは、なぜ大切ですか。",
+   "id": "Mengapa penting memperhatikan cuaca dan keadaan ombak di laut?",
+   "v": [
+    [
+     "天気",
+     "cuaca"
+    ],
+    [
+     "急に",
+     "mendadak"
+    ],
+    [
+     "安全",
+     "keselamatan"
+    ],
+    [
+     "港",
+     "pelabuhan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "天気が急に変わると、とても危ないからです。早めに分かれば、安全に港へ戻れます。",
+   "ai": "Karena jika cuaca berubah mendadak sangat berbahaya. Kalau tahu lebih awal, kita bisa kembali ke pelabuhan dengan selamat.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "海[うみ]の上[うえ]で、天気[てんき]や波[なみ]の様子[ようす]を見[み]ることは、なぜ大切[たいせつ]ですか。",
+   "ajf": "天気[てんき]が急[きゅう]に変[か]わると、とても危[あぶ]ないからです。早[はや]めに分[わ]かれば、安全[あんぜん]に港[みなと]へ戻[もど]れます。"
+  },
+  {
+   "i": "fishery-shigoto-13",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "貝や海藻を育てる仕事で、大切なことは何だと思いますか。",
+   "id": "Menurut Anda, apa yang penting dalam budidaya kerang atau rumput laut?",
+   "v": [
+    [
+     "養殖",
+     "budidaya"
+    ],
+    [
+     "水温",
+     "suhu air"
+    ],
+    [
+     "記録",
+     "pencatatan"
+    ],
+    [
+     "様子を見る",
+     "mengamati keadaan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "毎日、様子を見ることだと思います。水の温度やきれいさにも気をつけて、記録します。",
+   "ai": "Menurut saya, memeriksa keadaannya setiap hari. Saya juga memperhatikan suhu dan kebersihan air serta mencatatnya.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "fishery",
+   "jf": "貝[かい]や海藻[かいそう]を育[そだ]てる仕事[しごと]で、大切[たいせつ]なことは何[なん]だと思[おも]いますか。",
+   "ajf": "毎日[まいにち]、様子[ようす]を見[み]ることだと思[おも]います。水[みず]の温度[おんど]やきれいさにも気[き]をつけて、記録[きろく]します。"
+  },
+  {
+   "i": "fishery-seikatsu-01",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で行ってみたい場所はどこですか。",
+   "id": "Tempat mana di Jepang yang ingin Anda kunjungi?",
+   "v": [
+    [
+     "行ってみたい",
+     "ingin mencoba pergi"
+    ],
+    [
+     "富士山",
+     "Gunung Fuji"
+    ],
+    [
+     "休みの日",
+     "hari libur"
+    ],
+    [
+     "電車",
+     "kereta"
+    ]
+   ],
+   "m": "Mengobrol ringan; melihat ketertarikan pada Jepang.",
+   "aj": "富士山に行ってみたいです。写真で見て、とてもきれいだと思いました。休みの日に電車で行きたいです。",
+   "ai": "Saya ingin pergi ke Gunung Fuji. Saya melihat fotonya dan menurut saya sangat indah. Saya ingin pergi naik kereta di hari libur.",
+   "c": "Tambahkan alasan (なぜなら / 〜からです). Jawaban satu kata terlalu singkat.",
+   "jf": "日本[にほん]で行[い]ってみたい場所[ばしょ]はどこですか。",
+   "ajf": "富士山[ふじさん]に行[い]ってみたいです。写真[しゃしん]で見[み]て、とてもきれいだと思[おも]いました。休[やす]みの日[にち]に電車[でんしゃ]で行[い]きたいです。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-seikatsu-02",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で何をしたいですか。",
+   "id": "Apa yang ingin Anda lakukan di Jepang?",
+   "v": [
+    [
+     "がんばる",
+     "berusaha keras"
+    ],
+    [
+     "上手になる",
+     "menjadi mahir"
+    ],
+    [
+     "いろいろな",
+     "bermacam-macam"
+    ],
+    [
+     "町",
+     "kota"
+    ]
+   ],
+   "m": "Melihat motivasi di luar pekerjaan; apakah kandidat realistis.",
+   "aj": "仕事をがんばって、日本語も上手になりたいです。休みの日には、いろいろな町を見たいです。",
+   "ai": "Saya ingin bekerja keras dan juga mahir berbahasa Jepang. Di hari libur saya ingin melihat berbagai kota.",
+   "c": "Utamakan pekerjaan dan belajar, baru hiburan.",
+   "jf": "日本[にほん]で何[なに]をしたいですか。",
+   "ajf": "仕事[しごと]をがんばって、日本語[にほんご]も上手[じょうず]になりたいです。休[やす]みの日[にち]には、いろいろな町[まち]を見[み]たいです。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-seikatsu-03",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の生活についてどう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang kehidupan di Jepang?",
+   "v": [
+    [
+     "ルール",
+     "aturan"
+    ],
+    [
+     "ごみの分け方",
+     "cara memilah sampah"
+    ],
+    [
+     "きれい",
+     "bersih"
+    ],
+    [
+     "覚える",
+     "menghafal"
+    ]
+   ],
+   "m": "Melihat kesiapan beradaptasi dengan budaya dan aturan Jepang.",
+   "aj": "ルールが多くて、とてもきれいな国だと思います。ごみの分け方など、早く覚えたいです。",
+   "ai": "Menurut saya Jepang punya banyak aturan dan sangat bersih. Saya ingin cepat menghafal hal seperti cara memilah sampah.",
+   "c": "Tunjukkan kemauan mengikuti aturan. Jangan hanya mengeluh soal biaya hidup/cuaca.",
+   "jf": "日本[にほん]の生活[せいかつ]についてどう思[おも]いますか。",
+   "ajf": "ルールが多[おお]くて、とてもきれいな国[くに]だと思[おも]います。ごみの分[わ]け方[ほう]など、早[はや]く覚[おぼ]えたいです。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-seikatsu-04",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本の文化で興味があることは何ですか。",
+   "id": "Apa budaya Jepang yang Anda minati?",
+   "v": [
+    [
+     "文化",
+     "budaya"
+    ],
+    [
+     "お辞儀",
+     "membungkuk (salam)"
+    ],
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "すばらしい",
+     "luar biasa"
+    ]
+   ],
+   "m": "Melihat apakah kandidat menghargai budaya Jepang.",
+   "aj": "お辞儀と、あいさつの文化に興味があります。みんなが丁寧に話すので、すばらしいと思います。",
+   "ai": "Saya tertarik pada budaya membungkuk dan salam. Semua orang berbicara dengan sopan, menurut saya itu luar biasa.",
+   "c": "Budaya kerja (salam, tepat waktu) lebih disukai daripada hanya anime atau game.",
+   "jf": "日本[にほん]の文化[ぶんか]で興味[きょうみ]があることは何[なん]ですか。",
+   "ajf": "お辞儀[じぎ]と、あいさつの文化[ぶんか]に興味[きょうみ]があります。みんなが丁寧[ていねい]に話[はな]すので、すばらしいと思[おも]います。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-seikatsu-05",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "家族は日本で働くことに賛成していますか。",
+   "id": "Apakah keluarga Anda setuju Anda bekerja di Jepang?",
+   "v": [
+    [
+     "賛成する",
+     "setuju"
+    ],
+    [
+     "応援する",
+     "mendukung"
+    ],
+    [
+     "両親",
+     "orang tua"
+    ],
+    [
+     "電話",
+     "telepon"
+    ]
+   ],
+   "m": "Memastikan kandidat tidak akan pulang cepat karena tekanan keluarga.",
+   "aj": "はい、賛成しています。両親は私の夢を応援してくれています。毎週、電話で話すつもりです。",
+   "ai": "Ya, mereka setuju. Orang tua saya mendukung impian saya. Saya berencana menelepon mereka setiap minggu.",
+   "c": "Jawaban 'ya, mendukung' paling aman. Jika keluarga ragu, jelaskan dengan tenang.",
+   "jf": "家族[かぞく]は日本[にほん]で働[はたら]くことに賛成[さんせい]していますか。",
+   "ajf": "はい、賛成[さんせい]しています。両親[りょうしん]は私[わたし]の夢[ゆめ]を応援[おうえん]してくれています。毎週[まいしゅう]、電話[でんわ]で話[はな]すつもりです。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-seikatsu-06",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本で困ったことがあったら、どうしますか。",
+   "id": "Kalau mengalami kesulitan di Jepang, apa yang akan Anda lakukan?",
+   "v": [
+    [
+     "困る",
+     "kesulitan"
+    ],
+    [
+     "相談する",
+     "berkonsultasi"
+    ],
+    [
+     "担当者",
+     "penanggung jawab"
+    ],
+    [
+     "先輩",
+     "senior"
+    ]
+   ],
+   "m": "Menilai apakah kandidat tahu cara meminta bantuan, bukan memendam masalah.",
+   "aj": "まず、会社の担当者や先輩に相談します。わからないままにしないようにします。",
+   "ai": "Pertama, saya akan berkonsultasi dengan penanggung jawab perusahaan atau senior. Saya tidak akan membiarkannya tanpa dipahami.",
+   "c": "Kata kunci: 相談する (konsultasi). Pewawancara suka kandidat yang melapor lebih awal.",
+   "jf": "日本[にほん]で困[こま]ったことがあったら、どうしますか。",
+   "ajf": "まず、会社[かいしゃ]の担当者[たんとうしゃ]や先輩[せんぱい]に相談[そうだん]します。わからないままにしないようにします。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-seikatsu-07",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "海の近くの町での生活に、不便なことがあっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan ketidaknyamanan hidup di kota pesisir?",
+   "v": [
+    [
+     "不便",
+     "tidak nyaman"
+    ],
+    [
+     "まとめて",
+     "sekaligus"
+    ],
+    [
+     "調べる",
+     "mengecek"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "大丈夫です。お店が遠いときは、まとめて買い物をします。バスの時間も調べます。",
+   "ai": "Tidak masalah. Kalau toko jauh, saya belanja sekaligus. Saya juga mengecek jadwal bus.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "fishery",
+   "jf": "海[うみ]の近[ちか]くの町[まち]での生活[せいかつ]に、不便[ふべん]なことがあっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "大丈夫[だいじょうぶ]です。お店[みせ]が遠[とお]いときは、まとめて買[か]い物[もの]をします。バスの時間[じかん]も調[しら]べます。"
+  },
+  {
+   "i": "fishery-seikatsu-08",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の漁業や、海の食べ物について、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang perikanan dan makanan laut Jepang?",
+   "v": [
+    [
+     "刺身",
+     "sashimi"
+    ],
+    [
+     "季節",
+     "musim"
+    ],
+    [
+     "魚介類",
+     "hasil laut"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "日本では、寿司や刺身など、魚をよく食べると聞きました。季節によって、取れる魚が違うことも知っています。",
+   "ai": "Saya dengar orang Jepang sering makan ikan, seperti sushi dan sashimi. Saya juga tahu ikan yang ditangkap berbeda menurut musim.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "fishery",
+   "jf": "日本[にほん]の漁業[ぎょぎょう]や、海[うみ]の食[た]べ物[もの]について、知[し]っていることはありますか。",
+   "ajf": "日本[にほん]では、寿司[すし]や刺身[さしみ]など、魚[さかな]をよく食[た]べると聞[き]きました。季節[きせつ]によって、取[と]れる魚[さかな]が違[ちが]うことも知[し]っています。"
+  },
+  {
+   "i": "fishery-mokuhyou-01",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "将来の目標は何ですか。",
+   "id": "Apa tujuan Anda di masa depan?",
+   "v": [
+    [
+     "目標",
+     "tujuan"
+    ],
+    [
+     "身につける",
+     "menguasai"
+    ],
+    [
+     "家族を支える",
+     "menopang keluarga"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "漁業の仕事の技術をしっかり身につけて、仕事に自信を持てる人になりたいです。そして、将来は家族を支えたいです。",
+   "ai": "Saya ingin menguasai keterampilan di bidang Fishery dan menjadi orang yang percaya diri dalam bekerja. Lalu di masa depan saya ingin menopang keluarga.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "fishery",
+   "jf": "将来[しょうらい]の目標[もくひょう]は何[なん]ですか。",
+   "ajf": "漁業[ぎょぎょう]の仕事[しごと]の技術[ぎじゅつ]をしっかり身[み]につけて、仕事[しごと]に自信[じしん]を持[も]てる人[ひと]になりたいです。そして、将来[しょうらい]は家族[かぞく]を支[ささ]えたいです。"
+  },
+  {
+   "i": "fishery-mokuhyou-02",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で何年間働きたいですか。",
+   "id": "Berapa tahun Anda ingin bekerja di Jepang?",
+   "v": [
+    [
+     "〜年間",
+     "selama ... tahun"
+    ],
+    [
+     "まず",
+     "pertama"
+    ],
+    [
+     "チャンス",
+     "kesempatan"
+    ],
+    [
+     "長く",
+     "lama"
+    ]
+   ],
+   "m": "Perusahaan ingin tenaga kerja yang bertahan lama dan tidak berhenti di tengah jalan.",
+   "aj": "まず五年間、がんばりたいです。その後、チャンスがあれば、もっと長く働きたいと思っています。",
+   "ai": "Pertama, saya ingin berusaha selama lima tahun. Setelah itu, jika ada kesempatan, saya ingin bekerja lebih lama.",
+   "c": "Jawaban 'sebentar saja' memberi kesan buruk. Tunjukkan komitmen.",
+   "jf": "日本[にほん]で何年間[なんねんかん]働[はたら]きたいですか。",
+   "ajf": "まず五年間[ごねんかん]、がんばりたいです。その後[のち]、チャンスがあれば、もっと長[なが]く働[はたら]きたいと思[おも]っています。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-mokuhyou-03",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で働いて何を学びたいですか。",
+   "id": "Apa yang ingin Anda pelajari dengan bekerja di Jepang?",
+   "v": [
+    [
+     "学ぶ",
+     "belajar"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "時間を守る",
+     "tepat waktu"
+    ],
+    [
+     "習慣",
+     "kebiasaan"
+    ]
+   ],
+   "m": "Melihat sikap belajar dan penghargaan pada etos kerja Jepang.",
+   "aj": "日本の仕事のやり方と、時間を守る習慣を学びたいです。日本語ももっと上手になりたいです。",
+   "ai": "Saya ingin belajar cara kerja Jepang dan kebiasaan menepati waktu. Saya juga ingin lebih mahir berbahasa Jepang.",
+   "c": "Jawaban tentang uang saja kurang baik. Tonjolkan skill dan sikap kerja.",
+   "jf": "日本[にほん]で働[はたら]いて何[なに]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の仕事[しごと]のやり方[ほう]と、時間[じかん]を守[まも]る習慣[しゅうかん]を学[まな]びたいです。日本語[にほんご]ももっと上手[じょうず]になりたいです。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-mokuhyou-04",
+   "k": "mokuhyou",
+   "l": 3,
+   "ja": "5年後、どうなりたいですか。",
+   "id": "Lima tahun lagi, Anda ingin menjadi seperti apa?",
+   "v": [
+    [
+     "五年後",
+     "lima tahun lagi"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "後輩",
+     "junior"
+    ],
+    [
+     "合格する",
+     "lulus"
+    ]
+   ],
+   "m": "Melihat rencana karier realistis dan keinginan berkembang.",
+   "aj": "五年後は、仕事に慣れて、後輩に教えられるようになりたいです。日本語もN3に合格したいです。",
+   "ai": "Lima tahun lagi saya ingin terbiasa dengan pekerjaan dan bisa mengajari junior. Saya juga ingin lulus JLPT N3.",
+   "c": "Pakai target konkret (mis. lulus N3, jadi senior yang dipercaya).",
+   "jf": "5年後[ねんご]、どうなりたいですか。",
+   "ajf": "五年[ごねん]後[のち]は、仕事[しごと]に慣[な]れて、後輩[こうはい]に教[おし]えられるようになりたいです。日本語[にほんご]もN3に合格[ごうかく]したいです。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-mokuhyou-05",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で漁業を学んだあと、自分の国でどんなことをしたいですか。",
+   "id": "Setelah belajar perikanan di Jepang, apa yang ingin Anda lakukan di negara sendiri?",
+   "v": [
+    [
+     "扱い方",
+     "cara menangani"
+    ],
+    [
+     "安全",
+     "keselamatan"
+    ],
+    [
+     "漁業",
+     "perikanan"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "日本で学んだ魚の扱い方や、安全の方法を使って、自分の町の漁業をよくしたいです。",
+   "ai": "Saya ingin menggunakan cara menangani ikan dan keselamatan yang saya pelajari di Jepang untuk memperbaiki perikanan di kota saya.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "fishery",
+   "jf": "日本[にほん]で漁業[ぎょぎょう]を学[まな]んだあと、自分[じぶん]の国[くに]でどんなことをしたいですか。",
+   "ajf": "日本[にほん]で学[まな]んだ魚[さかな]の扱[あつか]い方[ほう]や、安全[あんぜん]の方法[ほうほう]を使[つか]って、自分[じぶん]の町[まち]の漁業[ぎょぎょう]をよくしたいです。"
+  },
+  {
+   "i": "fishery-taiou-01",
+   "k": "taiou",
+   "l": 2,
+   "ja": "先輩や上司から注意されたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ditegur senior atau atasan?",
+   "v": [
+    [
+     "注意される",
+     "ditegur"
+    ],
+    [
+     "素直",
+     "terbuka"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "素直に聞いて、「はい、わかりました」と言います。やり方をメモして、次から気をつけます。",
+   "ai": "Saya mendengarkan dengan terbuka dan berkata \"Ya, saya mengerti\". Saya mencatat caranya dan lebih berhati-hati berikutnya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "先輩[せんぱい]や上司[じょうし]から注意[ちゅうい]されたら、どうしますか。",
+   "ajf": "素直[すなお]に聞[き]いて、「はい、わかりました」と言[い]います。やり方[ほう]をメモして、次[つぎ]から気[き]をつけます。"
+  },
+  {
+   "i": "fishery-taiou-02",
+   "k": "taiou",
+   "l": 2,
+   "ja": "取った魚を、だめにしてしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ikan hasil tangkapan jadi rusak?",
+   "v": [
+    [
+     "だめにする",
+     "merusak"
+    ],
+    [
+     "報告",
+     "melapor"
+    ],
+    [
+     "原因",
+     "penyebab"
+    ],
+    [
+     "温度",
+     "suhu"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに正直に報告します。どうしてそうなったか考えて、次は氷や温度に気をつけます。",
+   "ai": "Saya segera melapor jujur. Saya memikirkan penyebabnya dan lebih memperhatikan es dan suhu berikutnya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "取[と]った魚[さかな]を、だめにしてしまったら、どうしますか。",
+   "ajf": "すぐに正直[しょうじき]に報告[ほうこく]します。どうしてそうなったか考[かんが]えて、次[つぎ]は氷[こおり]や温度[おんど]に気[き]をつけます。"
+  },
+  {
+   "i": "fishery-taiou-03",
+   "k": "taiou",
+   "l": 3,
+   "ja": "同僚と作業の方法で意見が合わなかったら、どうしますか。",
+   "id": "Jika pendapat Anda berbeda dengan rekan soal cara kerja, apa yang Anda lakukan?",
+   "v": [
+    [
+     "意見",
+     "pendapat"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "従う",
+     "mengikuti"
+    ]
+   ],
+   "m": "Menilai kerja sama dan kepatuhan.",
+   "aj": "まず相手の意見を聞きます。決まらないときは、責任者に聞いて、その指示に従います。",
+   "ai": "Pertama saya mendengar pendapat rekan. Jika tidak selesai, saya bertanya pada penanggung jawab dan mengikuti instruksinya.",
+   "c": "Ikuti instruksi penanggung jawab.",
+   "jf": "同僚[どうりょう]と作業[さぎょう]の方法[ほうほう]で意見[いけん]が合[あ]わなかったら、どうしますか。",
+   "ajf": "まず相手[あいて]の意見[いけん]を聞[き]きます。決[き]まらないときは、責任者[せきにんしゃ]に聞[き]いて、その指示[しじ]に従[したが]います。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-taiou-04",
+   "k": "taiou",
+   "l": 1,
+   "ja": "やり方が分からないとき、どうしますか。",
+   "id": "Jika Anda tidak tahu caranya, apa yang Anda lakukan?",
+   "v": [
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "勝手",
+     "sembarangan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Memastikan kandidat bertanya, tidak asal bekerja.",
+   "aj": "勝手にやらないで、すぐに聞きます。教えてもらったことはメモして、次は自分でできるようにします。",
+   "ai": "Saya tidak bekerja sembarangan dan segera bertanya. Yang diajarkan saya catat agar lain kali bisa sendiri.",
+   "c": "Kata kunci: 質問・メモ.",
+   "jf": "やり方[ほう]が分[わ]からないとき、どうしますか。",
+   "ajf": "勝手[かって]にやらないで、すぐに聞[き]きます。教[おし]えてもらったことはメモして、次[つぎ]は自分[じぶん]でできるようにします。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-taiou-05",
+   "k": "taiou",
+   "l": 2,
+   "ja": "体調が悪いときは、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau kondisi badan buruk?",
+   "v": [
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "無理",
+     "memaksakan"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "無理をしないで、すぐに上司に連絡します。体調が悪いまま作業すると、事故やミスにつながるからです。",
+   "ai": "Saya tidak memaksakan diri dan segera menghubungi atasan. Bekerja dalam kondisi buruk bisa menyebabkan kecelakaan atau kesalahan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "体調[たいちょう]が悪[わる]いときは、どうしますか。",
+   "ajf": "無理[むり]をしないで、すぐに上司[じょうし]に連絡[れんらく]します。体調[たいちょう]が悪[わる]いまま作業[さぎょう]すると、事故[じこ]やミスにつながるからです。"
+  },
+  {
+   "i": "fishery-taiou-06",
+   "k": "taiou",
+   "l": 3,
+   "ja": "天気が急に悪くなって、予定が変わったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau cuaca mendadak buruk dan rencana berubah?",
+   "v": [
+    [
+     "急に",
+     "mendadak"
+    ],
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "安全第一",
+     "keselamatan utama"
+    ],
+    [
+     "予定",
+     "rencana"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "船長の指示をよく聞いて、安全を第一に動きます。わからないときは、すぐに聞きます。",
+   "ai": "Saya mendengarkan instruksi kapten dan bergerak dengan mengutamakan keselamatan. Kalau tidak paham, saya langsung bertanya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "天気[てんき]が急[きゅう]に悪[わる]くなって、予定[よてい]が変[か]わったら、どうしますか。",
+   "ajf": "船長[せんちょう]の指示[しじ]をよく聞[き]いて、安全[あんぜん]を第一[だいいち]に動[うご]きます。わからないときは、すぐに聞[き]きます。"
+  },
+  {
+   "i": "fishery-taiou-07",
+   "k": "taiou",
+   "l": 2,
+   "ja": "日本人の同僚と、うまく話せなかったらどうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak bisa berbicara lancar dengan rekan kerja orang Jepang?",
+   "v": [
+    [
+     "うまく",
+     "dengan baik"
+    ],
+    [
+     "もう一度",
+     "sekali lagi"
+    ],
+    [
+     "ゆっくり",
+     "pelan-pelan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "もう一度ゆっくり話してもらうようにお願いします。わからなかった言葉は、メモして勉強します。",
+   "ai": "Saya minta mereka mengulang lebih pelan. Kata yang tidak saya pahami saya catat dan pelajari.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "日本人[にほんじん]の同僚[どうりょう]と、うまく話[はな]せなかったらどうしますか。",
+   "ajf": "もう一度[いちど]ゆっくり話[はな]してもらうようにお願[ねが]いします。わからなかった言葉[ことば]は、メモして勉強[べんきょう]します。"
+  },
+  {
+   "i": "fishery-taiou-08",
+   "k": "taiou",
+   "l": 2,
+   "ja": "出港の時間が、急に早くなったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau jam berangkat mendadak dimajukan?",
+   "v": [
+    [
+     "出港",
+     "keberangkatan kapal"
+    ],
+    [
+     "準備",
+     "persiapan"
+    ],
+    [
+     "連絡",
+     "pemberitahuan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "連絡をよく聞いて、すぐに準備します。前の日に、道具や服を用意しておきます。",
+   "ai": "Saya mendengar pemberitahuan dan segera bersiap. Sehari sebelumnya saya menyiapkan alat dan pakaian.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "出港[しゅっこう]の時間[じかん]が、急[きゅう]に早[はや]くなったら、どうしますか。",
+   "ajf": "連絡[れんらく]をよく聞[き]いて、すぐに準備[じゅんび]します。前[まえ]の日[ひ]に、道具[どうぐ]や服[ふく]を用意[ようい]しておきます。"
+  },
+  {
+   "i": "fishery-taiou-09",
+   "k": "taiou",
+   "l": 2,
+   "ja": "作業のペースが遅いと言われたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau dibilang kerja Anda lambat?",
+   "v": [
+    [
+     "ペース",
+     "kecepatan"
+    ],
+    [
+     "コツ",
+     "trik"
+    ],
+    [
+     "練習",
+     "latihan"
+    ]
+   ],
+   "m": "Menerima kritik.",
+   "aj": "まず、「すみません」と言って、早い人のやり方をよく見ます。コツを教えてもらって、毎日練習します。",
+   "ai": "Pertama saya bilang \"maaf\" dan mengamati cara orang yang cepat. Saya minta diajari triknya dan berlatih tiap hari.",
+   "c": "Terima kritik dengan baik.",
+   "jf": "作業[さぎょう]のペースが遅[おそ]いと言[い]われたら、どうしますか。",
+   "ajf": "まず、「すみません」と言[い]って、早[はや]い人[にん]のやり方[ほう]をよく見[み]ます。コツを教[おし]えてもらって、毎日[まいにち]練習[れんしゅう]します。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-taiou-10",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械や道具を壊してしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak mesin atau alat?",
+   "v": [
+    [
+     "壊す",
+     "merusak"
+    ],
+    [
+     "正直に",
+     "dengan jujur"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに作業を止めて、正直に責任者に報告します。隠さないで、謝って、どうすればいいか聞きます。",
+   "ai": "Saya segera menghentikan pekerjaan dan melapor jujur kepada penanggung jawab. Saya tidak menyembunyikannya, meminta maaf, dan bertanya apa yang harus dilakukan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "機械[きかい]や道具[どうぐ]を壊[こわ]してしまったら、どうしますか。",
+   "ajf": "すぐに作業[さぎょう]を止[と]めて、正直[しょうじき]に責任者[せきにんしゃ]に報告[ほうこく]します。隠[かく]さないで、謝[あやま]って、どうすればいいか聞[き]きます。"
+  },
+  {
+   "i": "fishery-taiou-11",
+   "k": "taiou",
+   "l": 3,
+   "ja": "忙しい漁の時期に、休みが少なくなったとき、どう気持ちを保ちますか。",
+   "id": "Bagaimana Anda menjaga semangat saat musim ikan sibuk dan libur sedikit?",
+   "v": [
+    [
+     "繁忙期",
+     "musim sibuk"
+    ],
+    [
+     "休む",
+     "istirahat"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "忙しい時期は短いと理解しています。短い休みでも、しっかり寝て、食事をとって、体調を保ちます。",
+   "ai": "Saya paham musim sibuk itu singkat. Walau liburnya singkat, saya tidur cukup, makan baik, dan menjaga kondisi badan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "忙[いそが]しい漁[りょう]の時期[じき]に、休[やす]みが少[すこ]なくなったとき、どう気持[きも]ちを保[たも]ちますか。",
+   "ajf": "忙[いそが]しい時期[じき]は短[みじか]いと理解[りかい]しています。短[みじか]い休[やす]みでも、しっかり寝[ね]て、食事[しょくじ]をとって、体調[たいちょう]を保[たも]ちます。"
+  },
+  {
+   "i": "fishery-taiou-12",
+   "k": "taiou",
+   "l": 1,
+   "ja": "港の人に、方言で話されて分からないとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau orang di pelabuhan berbicara dialek dan Anda tidak paham?",
+   "v": [
+    [
+     "方言",
+     "dialek"
+    ],
+    [
+     "ゆっくり",
+     "pelan"
+    ],
+    [
+     "意味",
+     "arti"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "「すみません、ゆっくりお願いします」と言います。分からない言葉は、メモして、あとで意味を聞きます。",
+   "ai": "Saya bilang \"Maaf, tolong lebih pelan\". Kata yang tidak saya paham saya catat dan tanyakan artinya nanti.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "fishery",
+   "jf": "港[みなと]の人[ひと]に、方言[ほうげん]で話[はな]されて分[わ]からないとき、どうしますか。",
+   "ajf": "「すみません、ゆっくりお願[ねが]いします」と言[い]います。分[わ]からない言葉[ことば]は、メモして、あとで意味[いみ]を聞[き]きます。"
+  },
+  {
+   "i": "fishery-tim-01",
+   "k": "tim",
+   "l": 1,
+   "ja": "漁のとき、チームの人と、どのように作業を分けますか。",
+   "id": "Saat melaut, bagaimana Anda membagi tugas dengan tim?",
+   "v": [
+    [
+     "分担",
+     "pembagian tugas"
+    ],
+    [
+     "網を引く",
+     "menarik jaring"
+    ],
+    [
+     "手伝う",
+     "membantu"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "船長の指示で、網を引く人、魚を分ける人などに分かれます。終わった人は、他の人を手伝います。",
+   "ai": "Sesuai instruksi kapten, ada yang menarik jaring dan ada yang memilah ikan. Yang selesai membantu yang lain.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "fishery",
+   "jf": "漁[りょう]のとき、チームの人[ひと]と、どのように作業[さぎょう]を分[わ]けますか。",
+   "ajf": "船長[せんちょう]の指示[しじ]で、網[あみ]を引[ひ]く人[ひと]、魚[さかな]を分[わ]ける人[ひと]などに分[わ]かれます。終[お]わった人[ひと]は、他[ほか]の人[ひと]を手伝[てつだ]います。"
+  },
+  {
+   "i": "fishery-tim-02",
+   "k": "tim",
+   "l": 2,
+   "ja": "船長の指示が分からなかったとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak paham instruksi kapten?",
+   "v": [
+    [
+     "船長",
+     "kapten"
+    ],
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "すぐに「もう一度お願いします」と聞きます。海の上では、わからないまま動くと危ないからです。",
+   "ai": "Saya segera meminta \"Tolong ulangi\". Di laut, bergerak tanpa paham itu berbahaya.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "fishery",
+   "jf": "船長[せんちょう]の指示[しじ]が分[わ]からなかったとき、どうしますか。",
+   "ajf": "すぐに「もう一度[いちど]お願[ねが]いします」と聞[き]きます。海[うみ]の上[うえ]では、わからないまま動[うご]くと危[あぶ]ないからです。"
+  },
+  {
+   "i": "fishery-tim-03",
+   "k": "tim",
+   "l": 2,
+   "ja": "船の上で、一緒に働く人と、どのようにコミュニケーションをとりますか。",
+   "id": "Bagaimana Anda berkomunikasi dengan rekan kerja di atas kapal?",
+   "v": [
+    [
+     "大きい声",
+     "suara keras"
+    ],
+    [
+     "返事",
+     "jawaban"
+    ],
+    [
+     "伝える",
+     "menyampaikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "短い言葉と、大きい声で伝えます。分かったときは「はい」とはっきり返事をします。",
+   "ai": "Saya menyampaikan dengan kata singkat dan suara keras. Saat paham, saya menjawab \"Ya\" dengan jelas.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "fishery",
+   "jf": "船[ふね]の上[うえ]で、一緒[いっしょ]に働[はたら]く人[ひと]と、どのようにコミュニケーションをとりますか。",
+   "ajf": "短[みじか]い言葉[ことば]と、大[おお]きい声[こえ]で伝[つた]えます。分[わ]かったときは「はい」とはっきり返事[へんじ]をします。"
+  },
+  {
+   "i": "fishery-tim-04",
+   "k": "tim",
+   "l": 1,
+   "ja": "船の上の先輩や仲間と、どのように仲良くなりたいですか。",
+   "id": "Bagaimana Anda ingin akrab dengan senior dan rekan di kapal?",
+   "v": [
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "仲間",
+     "rekan"
+    ],
+    [
+     "仲良くなる",
+     "menjadi akrab"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "毎日、元気にあいさつをします。教えてもらったときは、「ありがとうございます」と言います。",
+   "ai": "Setiap hari saya menyapa dengan semangat. Saat diajari, saya mengatakan \"Terima kasih\".",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "fishery",
+   "jf": "船[ふね]の上[うえ]の先輩[せんぱい]や仲間[なかま]と、どのように仲良[なかよ]くなりたいですか。",
+   "ajf": "毎日[まいにち]、元気[げんき]にあいさつをします。教[おし]えてもらったときは、「ありがとうございます」と言[い]います。"
+  },
+  {
+   "i": "fishery-anzen-01",
+   "k": "anzen",
+   "l": 1,
+   "ja": "船の上では、何を必ず身につけますか。",
+   "id": "Apa yang wajib dikenakan di atas kapal?",
+   "v": [
+    [
+     "ライフジャケット",
+     "jaket pelampung"
+    ],
+    [
+     "長靴",
+     "sepatu bot"
+    ],
+    [
+     "すべる",
+     "licin"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "ライフジャケットを必ず着ます。すべりにくい長靴と手袋も使います。",
+   "ai": "Saya wajib memakai jaket pelampung. Saya juga memakai sepatu bot anti-licin dan sarung tangan.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "fishery",
+   "jf": "船[ふね]の上[うえ]では、何[なに]を必[かなら]ず身[み]につけますか。",
+   "ajf": "ライフジャケットを必[かなら]ず着[つ]ます。すべりにくい長靴[ながぐつ]と手袋[てぶくろ]も使[つか]います。"
+  },
+  {
+   "i": "fishery-anzen-02",
+   "k": "anzen",
+   "l": 2,
+   "ja": "船の上で、海に落ちないために、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan agar tidak jatuh ke laut?",
+   "v": [
+    [
+     "甲板",
+     "dek"
+    ],
+    [
+     "手すり",
+     "pegangan/pagar"
+    ],
+    [
+     "すべりやすい",
+     "mudah licin"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "甲板は、ぬれてすべりやすいので、ゆっくり歩きます。揺れるときは、手すりを持ちます。",
+   "ai": "Karena dek basah dan licin, saya berjalan pelan. Saat kapal bergoyang saya berpegangan pada pagar.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "fishery",
+   "jf": "船[ふね]の上[うえ]で、海[うみ]に落[お]ちないために、何[なに]に気[き]をつけますか。",
+   "ajf": "甲板[かんぱん]は、ぬれてすべりやすいので、ゆっくり歩[ある]きます。揺[ゆ]れるときは、手[て]すりを持[も]ちます。"
+  },
+  {
+   "i": "fishery-anzen-03",
+   "k": "anzen",
+   "l": 2,
+   "ja": "機械や網を使うとき、事故を防ぐために何をしますか。",
+   "id": "Apa yang Anda lakukan untuk mencegah kecelakaan saat memakai mesin dan jaring?",
+   "v": [
+    [
+     "機械",
+     "mesin"
+    ],
+    [
+     "ロープ",
+     "tali"
+    ],
+    [
+     "近づく",
+     "mendekat"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "使う前に、機械の状態を確認します。動いているときは、近づきすぎません。ロープに足を入れないようにします。",
+   "ai": "Sebelum dipakai, saya memeriksa kondisi mesin. Saat bergerak, saya tidak mendekat terlalu dekat. Saya menghindari memasukkan kaki ke tali.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "fishery",
+   "jf": "機械[きかい]や網[あみ]を使[つか]うとき、事故[じこ]を防[ふせ]ぐために何[なに]をしますか。",
+   "ajf": "使[つか]う前[まえ]に、機械[きかい]の状態[じょうたい]を確認[かくにん]します。動[うご]いているときは、近[ちか]づきすぎません。ロープに足[あし]を入[い]れないようにします。"
+  },
+  {
+   "i": "fishery-anzen-04",
+   "k": "anzen",
+   "l": 3,
+   "ja": "もし仲間が海に落ちたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau rekan jatuh ke laut?",
+   "v": [
+    [
+     "落ちる",
+     "jatuh"
+    ],
+    [
+     "浮き輪",
+     "pelampung"
+    ],
+    [
+     "知らせる",
+     "memberi tahu"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "大きい声で「落ちた」と知らせて、すぐ船長に言います。自分で飛び込まないで、浮き輪を投げます。",
+   "ai": "Saya berteriak \"Ada yang jatuh\" dan segera memberi tahu kapten. Saya tidak melompat sendiri, tetapi melempar pelampung.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "fishery",
+   "jf": "もし仲間[なかま]が海[うみ]に落[お]ちたら、どうしますか。",
+   "ajf": "大[おお]きい声[こえ]で「落[お]ちた」と知[し]らせて、すぐ船長[せんちょう]に言[い]います。自分[じぶん]で飛[と]び込[こ]まないで、浮[う]き輪[わ]を投[な]げます。"
+  },
+  {
+   "i": "fishery-saigo-01",
+   "k": "saigo",
+   "l": 2,
+   "ja": "最後に何か質問はありますか。",
+   "id": "Terakhir, apakah ada yang ingin Anda tanyakan?",
+   "v": [
+    [
+     "最後に",
+     "terakhir"
+    ],
+    [
+     "質問",
+     "pertanyaan"
+    ],
+    [
+     "入社前",
+     "sebelum bergabung"
+    ],
+    [
+     "勉強しておく",
+     "belajar lebih dulu"
+    ]
+   ],
+   "m": "Melihat antusiasme dan kemampuan bertanya dengan sopan.",
+   "aj": "はい、一つあります。仕事を早く覚えるために、入社前に勉強しておいたほうがいいことはありますか。",
+   "ai": "Ya, ada satu. Agar cepat menguasai pekerjaan, apakah ada hal yang sebaiknya saya pelajari sebelum bergabung?",
+   "c": "Jangan menjawab 'tidak ada' begitu saja. Bertanya tentang belajar menunjukkan semangat. Hindari bertanya soal gaji di awal.",
+   "jf": "最後[さいご]に何[なに]か質問[しつもん]はありますか。",
+   "ajf": "はい、一[ひと]つあります。仕事[しごと]を早[はや]く覚[おぼ]えるために、入社前[にゅうしゃまえ]に勉強[べんきょう]しておいたほうがいいことはありますか。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-saigo-02",
+   "k": "saigo",
+   "l": 2,
+   "ja": "当社について何か聞きたいことはありますか。",
+   "id": "Adakah yang ingin Anda ketahui tentang perusahaan kami?",
+   "v": [
+    [
+     "当社",
+     "perusahaan kami"
+    ],
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "pergi-pulang kerja"
+    ],
+    [
+     "教えていただけますか",
+     "boleh tolong beritahu saya?"
+    ]
+   ],
+   "m": "Melihat apakah kandidat sudah mencari tahu tentang perusahaan.",
+   "aj": "寮や通勤の方法について、教えていただけますか。",
+   "ai": "Boleh tolong beritahu saya tentang asrama dan cara pergi ke tempat kerja?",
+   "c": "Tanyakan hal praktis dan sopan (asrama, pelatihan). AI tidak akan mengarang info perusahaan.",
+   "jf": "当社[とうしゃ]について何[なに]か聞[き]きたいことはありますか。",
+   "ajf": "寮[りょう]や通勤[つうきん]の方法[ほうほう]について、教[おし]えていただけますか。",
+   "b": "fishery"
+  },
+  {
+   "i": "fishery-saigo-03",
+   "k": "saigo",
+   "l": 1,
+   "ja": "仕事の前に、どんな服や持ち物を用意したらいいですか。",
+   "id": "Pakaian dan barang apa yang sebaiknya saya siapkan sebelum bekerja?",
+   "v": [
+    [
+     "持ち物",
+     "barang bawaan"
+    ],
+    [
+     "準備する",
+     "menyiapkan"
+    ],
+    [
+     "服",
+     "pakaian"
+    ]
+   ],
+   "m": "Memberi kesempatan bertanya; menilai antusiasme.",
+   "aj": "はい、仕事の前に、どんな服や靴、持ち物を準備したらいいか、教えてください。",
+   "ai": "Ya, tolong beri tahu pakaian, sepatu, dan barang apa yang sebaiknya saya siapkan sebelum bekerja.",
+   "c": "Siapkan satu pertanyaan sopan tentang pekerjaan.",
+   "b": "fishery",
+   "jf": "仕事[しごと]の前[まえ]に、どんな服[ふく]や持[も]ち物[もの]を用意[ようい]したらいいですか。",
+   "ajf": "はい、仕事[しごと]の前[まえ]に、どんな服[ふく]や靴[くつ]、持[も]ち物[もの]を準備[じゅんび]したらいいか、教[おし]えてください。"
+  }
+ ]
+}

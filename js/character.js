@@ -888,6 +888,26 @@ try { _body = localStorage.getItem("shirose_body") === "female" ? "female" : "ma
 export const getBody = () => _body;
 export function setBody(b) { _body = b === "female" ? "female" : "male"; try { localStorage.setItem("shirose_body", _body); } catch (e) {} return _body; }
 
+/* ====== Bentuk tubuh & mata (GRATIS, bebas diubah): wajah/badan/kaki = skala lebar 0.75–1.35, mata = kunci MATA. Disimpan di perangkat + akun (karakter.bentuk) ====== */
+export const BENTUK_DEFAULT = { wajah: 1, badan: 1, kaki: 1, mata: "bulat" };
+let _bentuk = { ...BENTUK_DEFAULT };
+try { const o = JSON.parse(localStorage.getItem("shirose_bentuk") || "null"); if (o) _bentuk = { ...BENTUK_DEFAULT, ...o }; } catch (e) {}
+const _klem = (v) => Math.min(1.35, Math.max(0.75, Number(v) || 1));
+export const getBentuk = () => ({ ..._bentuk });
+export function setBentuk(b) {
+  _bentuk = { wajah: _klem(b && b.wajah), badan: _klem(b && b.badan), kaki: _klem(b && b.kaki), mata: (b && MATA[b.mata]) ? b.mata : "bulat" };
+  try { localStorage.setItem("shirose_bentuk", JSON.stringify(_bentuk)); } catch (e) {} return getBentuk();
+}
+export const MATA_LIST = MATA;
+let _cid = 0;
+function bentukkan(inner, b) {   // tiga pita (kepala / badan / kaki) masing-masing diskalakan lebarnya terhadap garis tengah
+  if (b.wajah === 1 && b.badan === 1 && b.kaki === 1) return inner;
+  const n = ++_cid, T = (v) => `translate(200 0) scale(${v} 1) translate(-200 0)`;
+  const band = (id, y, h, v) => `<clipPath id="bk${n}${id}"><rect x="-300" y="${y}" width="1000" height="${h}"/></clipPath>`;
+  const use = (id, v) => `<g clip-path="url(#bk${n}${id})"><g transform="${T(v)}">${inner}</g></g>`;
+  return `<defs>${band("h", -300, 472, 0)}${band("b", 172, 173, 0)}${band("k", 345, 400, 0)}</defs>${use("h", b.wajah)}${use("b", b.badan)}${use("k", b.kaki)}`;
+}
+
 /* ====== Render the full character given equipped state ====== */
 
 /* ====== Mode 2D datar: tanpa gradasi & filter (tidak 3D); animasi pose senjata tetap ====== */
@@ -908,6 +928,7 @@ function flatten2D(svg) {
 
 export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const eq = { ...DEFAULT_EQUIPPED, ...equipped };
+  if (eq.set && eq.set !== "none" && CATALOG.set[eq.set]) Object.assign(eq, CATALOG.set[eq.set].parts);   // paket kostum menimpa slot bagiannya
   const fem = (opts.body || _body) === "female";
   // item khusus cewek tidak dipakai di badan cowok
   if (!fem) for (const k of Object.keys(eq)) { const it = CATALOG[k]?.[eq[k]]; if (it && it.g === "f") eq[k] = k === "rambut" ? null : DEFAULT_EQUIPPED[k]; }
@@ -944,7 +965,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   let hairSvg = "";
   if (eq.rambut && eq.rambut !== "none" && HAIR_STYLES[eq.rambut]?.svg && (!fem || HAIR_STYLES[eq.rambut].g === "f")) {
     hairSvg = `<g data-slot="rambut">${HAIR_STYLES[eq.rambut].svg(opts.hairColor)}</g>`;
-  } else if (fem && eq.rambut !== "none") hairSvg = `<g data-slot="rambut">${FEM_DEFAULT_HAIR(opts.hairColor)}</g>`;   // cewek: rambut bawaan (pilih "Tidak memakai" untuk botak)
+  }   // cewek pun BOTAK di awal: rambut harus dibeli
 
   // Accessories
   let aksesoriSvg = "";
@@ -985,6 +1006,13 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
     femFaceSvg = femFace(); femBustSvg = femBust; femUnder = femWarp(femUnder);
   }
+  // mata pilihan (gratis): ganti grup mata bawaan
+  const _bt = { ..._bentuk, ...(opts.bentuk || {}) }, _mt = MATA[_bt.mata] && _bt.mata !== "bulat" ? MATA[_bt.mata].svg() : "";
+  if (_mt) {
+    if (fem) { const ln = femFaceSvg.split("\n"); femFaceSvg = [ln[0], `<g data-slot="mata">${_mt}</g>`, ...ln.slice(9)].join("\n"); }
+    else base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, `<g data-slot="mata">${_mt}</g>`);
+  }
+  const petSvg = (eq.pet && eq.pet !== "none" && PET[eq.pet]?.svg) ? `<g data-slot="pet" transform="${PET[eq.pet].tf || "translate(14 398) scale(1.3)"}">${PET[eq.pet].svg()}</g>` : "";
   // bawahan di bawah baju (baju menjuntai, tidak dimasukkan); khusus gaun, bawahan di atas
   const gaun = eq.pakaian && OUTFITS[eq.pakaian]?.g === "f";
   const celanaUnder = fem && !gaun ? celanaOverlay : "", celanaOver = fem && gaun ? celanaOverlay : "";
@@ -992,7 +1020,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
       ${sayapSvg}
-      ${femUnder}
+      ${bentukkan(`${femUnder}
       ${base}
       ${femFaceSvg}
       ${celanaUnder}
@@ -1004,7 +1032,8 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
       ${jepitSvg}
       ${antingSvg}
       ${aksesoriSvg}
-      ${handheldSvg}
+      ${handheldSvg}`, _bt)}
+      ${petSvg}
     </svg>
   `);
 }
@@ -1025,12 +1054,17 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z6";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
+import { extendSet, SET } from "./character-set.js?v=20261119p";
+import { PET, MATA } from "./character-pet.js?v=20261119n";
 import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
 extendFemale(__X);
 export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
+for (const p of Object.values(PET)) p._rp = 1;   // harga pet tetap (tidak ikut kurva penyesuaian)
+extendSet(__X); CATALOG.set = SET; CATALOG_LABELS.set = "Paket Kostum"; DEFAULT_EQUIPPED.set = "none";
+CATALOG.pet = PET; CATALOG_LABELS.pet = "Pet"; DEFAULT_EQUIPPED.pet = "none";
 CATALOG.celana = CELANA; CATALOG.sayap = SAYAP; CATALOG.jepit = __X.JEPIT; CATALOG.anting = __X.ANTING;
 
 /* ====== Penyesuaian harga (Nov 2026): item termahal = 25.000 🪙, sisanya turun mengikuti.
@@ -1045,6 +1079,7 @@ for (const kat of Object.values(CATALOG)) for (const it of Object.values(kat)) {
 /* Filter item per tipe badan: item cewek disembunyikan untuk cowok; rambut dipisah. */
 export function itemOk(kat, id, body = _body) {
   const it = CATALOG[kat]?.[id]; if (!it) return false;
+  if (kat === "set") return it.g === (body === "female" ? "f" : "m");
   if (kat === "rambut") return body === "female" ? it.g === "f" : it.g !== "f";
   return body === "female" || it.g !== "f";
 }

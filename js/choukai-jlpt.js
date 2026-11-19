@@ -196,8 +196,8 @@ window.ckAnswer = async (lvl, id, qi, oi) => {
     const sk = `${pfx(lvl, pk)}-m${sec.mondai}`;
     if (!got[sk] && typeof window.awardXP === "function"){
       got[sk] = 1; LS.set(doneKey, got);
-      const xp = 5 + pr.ok * 2;
-      try { await window.awardXP(xp, Math.ceil(pr.ok / 2)); } catch(e){}
+      const xp = 5 + pr.ok * 10;
+      try { await window.awardXP(xp, pr.ok * 10); } catch(e){}
       window.toast && window.toast(`🎧 ${pk > 1 ? `Paket ${pk} · ` : ""}問題${sec.mondai} selesai: ${pr.ok}/${pr.total} · +${xp} XP`);
     }
   }

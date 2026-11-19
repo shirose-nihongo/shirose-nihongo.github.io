@@ -1,0 +1,1859 @@
+{
+ "bidang": "recycling",
+ "nama": "Recycling",
+ "jp": "資源循環",
+ "emoji": "♻️",
+ "kategori": [
+  {
+   "k": "jiko",
+   "jp": "自己紹介",
+   "id": "Perkenalan diri"
+  },
+  {
+   "k": "shibou",
+   "jp": "志望動機",
+   "id": "Alasan melamar"
+  },
+  {
+   "k": "shigoto",
+   "jp": "仕事への理解",
+   "id": "Pemahaman pekerjaan"
+  },
+  {
+   "k": "seikatsu",
+   "jp": "日本での生活",
+   "id": "Kehidupan di Jepang"
+  },
+  {
+   "k": "mokuhyou",
+   "jp": "将来の目標",
+   "id": "Tujuan masa depan"
+  },
+  {
+   "k": "taiou",
+   "jp": "職場での対応",
+   "id": "Situasi di tempat kerja"
+  },
+  {
+   "k": "tim",
+   "jp": "チームワーク",
+   "id": "Kerja sama tim"
+  },
+  {
+   "k": "anzen",
+   "jp": "安全・衛生",
+   "id": "Keselamatan & kebersihan"
+  },
+  {
+   "k": "saigo",
+   "jp": "最後の質問",
+   "id": "Pertanyaan penutup"
+  }
+ ],
+ "soal": [
+  {
+   "i": "recycling-jiko-01",
+   "k": "jiko",
+   "l": 1,
+   "ja": "自己紹介をお願いします。",
+   "id": "Tolong perkenalkan diri Anda.",
+   "v": [
+    [
+     "自己紹介",
+     "perkenalan diri"
+    ],
+    [
+     "〜と申します",
+     "nama saya (sopan)"
+    ],
+    [
+     "よろしくお願いします",
+     "mohon bantuannya"
+    ]
+   ],
+   "m": "Melihat apakah kandidat bisa memperkenalkan diri dengan sopan dan jelas.",
+   "aj": "はじめまして。アリと申します。インドネシアのジャワ島から来ました。二十四歳です。資源循環の仕事に興味があって、日本で働きたいと思っています。一生懸命がんばりますので、よろしくお願いします。",
+   "ai": "Perkenalkan, nama saya Ali. Saya dari pulau Jawa, Indonesia. Usia saya 24 tahun. Saya tertarik pada pekerjaan di bidang Recycling dan ingin bekerja di Jepang. Saya akan berusaha sungguh-sungguh, mohon bantuannya.",
+   "c": "Suara jelas, sopan, nama-asal-usia-motivasi singkat.",
+   "b": "recycling",
+   "jf": "自己紹介[じこしょうかい]をお願[ねが]いします。",
+   "ajf": "はじめまして。アリと申[もう]します。インドネシアのジャワ島[とう]から来[き]ました。二十四歳[にじゅうよんさい]です。資源循環[しげんじゅんかん]の仕事[しごと]に興味[きょうみ]があって、日本[にほん]で働[はたら]きたいと思[おも]っています。一生懸命[いっしょうけんめい]がんばりますので、よろしくお願[ねが]いします。"
+  },
+  {
+   "i": "recycling-jiko-02",
+   "k": "jiko",
+   "l": 1,
+   "ja": "お名前を教えてください。",
+   "id": "Tolong sebutkan nama Anda.",
+   "v": [
+    [
+     "お名前",
+     "nama (hormat)"
+    ],
+    [
+     "〜と呼んでください",
+     "tolong panggil saya ..."
+    ],
+    [
+     "フルネーム",
+     "nama lengkap"
+    ]
+   ],
+   "m": "Memastikan nama dan kemampuan menyebutkannya dengan jelas.",
+   "aj": "アリ・プラセティョと申します。アリと呼んでください。",
+   "ai": "Nama saya Ali Prasetyo. Silakan panggil saya Ali.",
+   "c": "Sebut nama pelan dan jelas. Gunakan 〜と申します, bukan 〜です, di wawancara resmi.",
+   "jf": "お名前[なまえ]を教[おし]えてください。",
+   "ajf": "アリ・プラセティョと申[もう]します。アリと呼[よ]んでください。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-jiko-03",
+   "k": "jiko",
+   "l": 1,
+   "ja": "何歳ですか。",
+   "id": "Berapa usia Anda?",
+   "v": [
+    [
+     "歳",
+     "tahun (usia)"
+    ],
+    [
+     "二十四歳",
+     "24 tahun"
+    ],
+    [
+     "来月",
+     "bulan depan"
+    ]
+   ],
+   "m": "Cek informasi dasar dan kemampuan menyebut angka/usia dalam bahasa Jepang.",
+   "aj": "二十四歳です。来月、二十五歳になります。",
+   "ai": "Saya 24 tahun. Bulan depan saya genap 25 tahun.",
+   "c": "Latih angka dan hitungan usia (〜歳). Usia khusus: 20歳 = はたち.",
+   "jf": "何歳[なんさい]ですか。",
+   "ajf": "二十四歳[にじゅうよんさい]です。来月[らいげつ]、二十五歳[にじゅうごさい]になります。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-jiko-04",
+   "k": "jiko",
+   "l": 1,
+   "ja": "出身はどこですか。",
+   "id": "Anda berasal dari mana?",
+   "v": [
+    [
+     "出身",
+     "asal"
+    ],
+    [
+     "〜から来ました",
+     "datang dari ..."
+    ],
+    [
+     "近い",
+     "dekat"
+    ]
+   ],
+   "m": "Mengetahui latar belakang dan membuka obrolan ringan.",
+   "aj": "インドネシアの中部ジャワのスマランです。海に近い町です。",
+   "ai": "Saya dari Semarang, Jawa Tengah, Indonesia. Kotanya dekat laut.",
+   "c": "Boleh tambah satu kalimat tentang daerah asal. Pewawancara sering menanggapinya.",
+   "jf": "出身[しゅっしん]はどこですか。",
+   "ajf": "インドネシアの中部[ちゅうぶ]ジャワのスマランです。海[うみ]に近[ちか]い町[まち]です。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-jiko-05",
+   "k": "jiko",
+   "l": 1,
+   "ja": "趣味は何ですか。",
+   "id": "Apa hobi Anda?",
+   "v": [
+    [
+     "趣味",
+     "hobi"
+    ],
+    [
+     "体を動かす",
+     "bergerak/berolahraga"
+    ],
+    [
+     "週末",
+     "akhir pekan"
+    ]
+   ],
+   "m": "Melihat kepribadian dan apakah kandidat sehat dan aktif.",
+   "aj": "趣味はサッカーです。週末に友達とサッカーをします。体を動かすのが好きです。",
+   "ai": "Hobi saya sepak bola. Di akhir pekan saya bermain bola dengan teman. Saya suka bergerak.",
+   "c": "Hindari jawaban yang terkesan malas atau begadang (mis. main game sampai malam). Pilih hobi sehat.",
+   "jf": "趣味[しゅみ]は何[なん]ですか。",
+   "ajf": "趣味[しゅみ]はサッカーです。週末[しゅうまつ]に友達[ともだち]とサッカーをします。体[からだ]を動[うご]かすのが好[す]きです。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-jiko-06",
+   "k": "jiko",
+   "l": 3,
+   "ja": "自分の長所と短所を教えてください。",
+   "id": "Sebutkan kelebihan dan kekurangan Anda.",
+   "v": [
+    [
+     "長所",
+     "kelebihan"
+    ],
+    [
+     "短所",
+     "kekurangan"
+    ],
+    [
+     "まじめ",
+     "rajin/serius"
+    ],
+    [
+     "心配しすぎる",
+     "terlalu khawatir"
+    ]
+   ],
+   "m": "Menilai kejujuran dan kesadaran diri, serta usaha memperbaiki kekurangan.",
+   "aj": "長所はまじめなところです。短所は、少し心配しすぎるところです。でも、メモを取ってミスを減らすようにしています。",
+   "ai": "Kelebihan saya rajin. Kekurangan saya agak terlalu khawatir. Tetapi saya mencatat supaya mengurangi kesalahan.",
+   "c": "Selalu sebut kekurangan + usaha memperbaikinya. Jangan sebut kekurangan fatal (mis. malas, tidak disiplin).",
+   "jf": "自分[じぶん]の長所[ちょうしょ]と短所[たんしょ]を教[おし]えてください。",
+   "ajf": "長所[ちょうしょ]はまじめなところです。短所[たんしょ]は、少[すこ]し心配[しんぱい]しすぎるところです。でも、メモを取[と]ってミスを減[へ]らすようにしています。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-jiko-07",
+   "k": "jiko",
+   "l": 2,
+   "ja": "日本語はどのくらい勉強しましたか。",
+   "id": "Sudah berapa lama Anda belajar bahasa Jepang?",
+   "v": [
+    [
+     "勉強する",
+     "belajar"
+    ],
+    [
+     "毎日",
+     "setiap hari"
+    ],
+    [
+     "単語",
+     "kosakata"
+    ],
+    [
+     "練習する",
+     "berlatih"
+    ]
+   ],
+   "m": "Memperkirakan kemampuan bahasa dan kesungguhan belajar.",
+   "aj": "八か月勉強しました。毎日一時間、単語と会話を練習しています。",
+   "ai": "Saya belajar 8 bulan. Setiap hari saya berlatih kosakata dan percakapan selama satu jam.",
+   "c": "Sebut lama belajar dan cara belajar. Jawaban jujur lebih baik daripada melebih-lebihkan.",
+   "jf": "日本語[にほんご]はどのくらい勉強[べんきょう]しましたか。",
+   "ajf": "八[はち]か月[がつ]勉強[べんきょう]しました。毎日[まいにち]一時間[いちじかん]、単語[たんご]と会話[かいわ]を練習[れんしゅう]しています。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-jiko-08",
+   "k": "jiko",
+   "l": 1,
+   "ja": "健康状態はどうですか。",
+   "id": "Bagaimana kondisi kesehatan Anda?",
+   "v": [
+    [
+     "健康",
+     "sehat"
+    ],
+    [
+     "丈夫",
+     "kuat"
+    ],
+    [
+     "大きな病気",
+     "penyakit berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memastikan kandidat sanggup bekerja secara fisik.",
+   "aj": "はい、元気です。大きな病気はありません。毎朝、軽い運動をしています。",
+   "ai": "Ya, saya sehat. Tidak ada penyakit berat. Setiap pagi saya berolahraga ringan.",
+   "c": "Jawab jujur. Perusahaan khawatir soal cuti panjang karena sakit.",
+   "jf": "健康状態[けんこうじょうたい]はどうですか。",
+   "ajf": "はい、元気[げんき]です。大[おお]きな病気[びょうき]はありません。毎朝[まいあさ]、軽[かる]い運動[うんどう]をしています。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-shibou-01",
+   "k": "shibou",
+   "l": 1,
+   "ja": "なぜリサイクルの仕事を選びましたか。",
+   "id": "Mengapa Anda memilih pekerjaan daur ulang?",
+   "v": [
+    [
+     "リサイクル",
+     "daur ulang"
+    ],
+    [
+     "環境",
+     "lingkungan"
+    ],
+    [
+     "資源",
+     "sumber daya"
+    ],
+    [
+     "守る",
+     "menjaga"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "環境を守る仕事に、興味があります。ごみを、もう一度使えるものにする仕事がしたいです。",
+   "ai": "Saya tertarik pada pekerjaan menjaga lingkungan. Saya ingin bekerja mengubah sampah menjadi sesuatu yang bisa dipakai lagi.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "recycling",
+   "jf": "なぜリサイクルの仕事[しごと]を選[えら]びましたか。",
+   "ajf": "環境[かんきょう]を守[まも]る仕事[しごと]に、興味[きょうみ]があります。ごみを、もう一度使[いちどつか]えるものにする仕事[しごと]がしたいです。"
+  },
+  {
+   "i": "recycling-shibou-02",
+   "k": "shibou",
+   "l": 2,
+   "ja": "なぜ日本でリサイクルを学びたいですか。",
+   "id": "Mengapa Anda ingin belajar daur ulang di Jepang?",
+   "v": [
+    [
+     "分別",
+     "pemilahan"
+    ],
+    [
+     "技術",
+     "teknologi"
+    ],
+    [
+     "学ぶ",
+     "belajar"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "日本は、ごみの分け方が細かくて、リサイクルの技術も進んでいると聞きました。その方法を学びたいです。",
+   "ai": "Saya dengar di Jepang cara memilah sampah sangat rinci dan teknologi daur ulangnya maju. Saya ingin mempelajari caranya.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "recycling",
+   "jf": "なぜ日本[にほん]でリサイクルを学[まな]びたいですか。",
+   "ajf": "日本[にほん]は、ごみの分[わ]け方[ほう]が細[こま]かくて、リサイクルの技術[ぎじゅつ]も進[すす]んでいると聞[き]きました。その方法[ほうほう]を学[まな]びたいです。"
+  },
+  {
+   "i": "recycling-shibou-03",
+   "k": "shibou",
+   "l": 3,
+   "ja": "なぜ当社に応募しましたか。",
+   "id": "Mengapa Anda melamar ke perusahaan kami?",
+   "v": [
+    [
+     "応募する",
+     "melamar"
+    ],
+    [
+     "御社",
+     "perusahaan Anda"
+    ],
+    [
+     "指導",
+     "bimbingan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "御社は、ごみを正しく分けて、資源として生かしていると聞きました。丁寧に指導してもらえると思って、応募しました。",
+   "ai": "Saya dengar perusahaan Anda memilah sampah dengan benar dan memanfaatkannya sebagai sumber daya. Saya pikir saya akan dibimbing dengan baik, jadi saya melamar.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "recycling",
+   "jf": "なぜ当社[とうしゃ]に応募[おうぼ]しましたか。",
+   "ajf": "御社[おんしゃ]は、ごみを正[ただ]しく分[わ]けて、資源[しげん]として生[い]かしていると聞[き]きました。丁寧[ていねい]に指導[しどう]してもらえると思[おも]って、応募[おうぼ]しました。"
+  },
+  {
+   "i": "recycling-shibou-04",
+   "k": "shibou",
+   "l": 1,
+   "ja": "この仕事に興味を持った理由は何ですか。",
+   "id": "Apa alasan Anda tertarik pada pekerjaan ini?",
+   "v": [
+    [
+     "材料",
+     "bahan"
+    ],
+    [
+     "地球",
+     "bumi"
+    ],
+    [
+     "役に立つ",
+     "berguna"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "ごみが、新しい製品の材料になることを知って、おもしろいと思いました。地球のために、役に立ちたいです。",
+   "ai": "Saya merasa menarik setelah tahu sampah bisa menjadi bahan produk baru. Saya ingin berguna bagi bumi.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "recycling",
+   "jf": "この仕事[しごと]に興味[きょうみ]を持[も]った理由[りゆう]は何[なん]ですか。",
+   "ajf": "ごみが、新[あたら]しい製品[せいひん]の材料[ざいりょう]になることを知[し]って、おもしろいと思[おも]いました。地球[ちきゅう]のために、役[やく]に立[た]ちたいです。"
+  },
+  {
+   "i": "recycling-shibou-05",
+   "k": "shibou",
+   "l": 2,
+   "ja": "リサイクルの仕事で、一番楽しみなことは何ですか。",
+   "id": "Apa yang paling Anda nantikan dari pekerjaan daur ulang?",
+   "v": [
+    [
+     "分別",
+     "pemilahan"
+    ],
+    [
+     "機械",
+     "mesin"
+    ],
+    [
+     "取り組み",
+     "upaya"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "分別の方法や、機械の使い方を覚えて、正しく仕事ができるようになることです。日本の環境の取り組みも学びたいです。",
+   "ai": "Belajar cara memilah dan memakai mesin sehingga bisa bekerja dengan benar. Saya juga ingin belajar upaya lingkungan Jepang.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "recycling",
+   "jf": "リサイクルの仕事[しごと]で、一番楽[いちばんたの]しみなことは何[なん]ですか。",
+   "ajf": "分別[ぶんべつ]の方法[ほうほう]や、機械[きかい]の使[つか]い方[ほう]を覚[おぼ]えて、正[ただ]しく仕事[しごと]ができるようになることです。日本[にほん]の環境[かんきょう]の取[と]り組[く]みも学[まな]びたいです。"
+  },
+  {
+   "i": "recycling-shigoto-01",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "リサイクルの主な仕事は何だと思いますか。",
+   "id": "Menurut Anda, apa pekerjaan utama daur ulang?",
+   "v": [
+    [
+     "分別",
+     "pemilahan"
+    ],
+    [
+     "種類",
+     "jenis"
+    ],
+    [
+     "資源",
+     "sumber daya"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "集まったごみや、使い終わったものを、種類ごとに分けて、資源として使えるようにする仕事だと思います。",
+   "ai": "Saya kira pekerjaannya memilah sampah dan barang bekas menurut jenis sehingga bisa dimanfaatkan sebagai sumber daya.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "リサイクルの主[おも]な仕事[しごと]は何[なん]だと思[おも]いますか。",
+   "ajf": "集[あつ]まったごみや、使[つか]い終[お]わったものを、種類[しゅるい]ごとに分[わ]けて、資源[しげん]として使[つか]えるようにする仕事[しごと]だと思[おも]います。"
+  },
+  {
+   "i": "recycling-shigoto-02",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "朝早くから働くことはできますか。",
+   "id": "Apakah Anda bisa bekerja dari pagi buta?",
+   "v": [
+    [
+     "早起き",
+     "bangun pagi"
+    ],
+    [
+     "準備",
+     "persiapan"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。早く寝て、朝の準備をしっかりします。",
+   "ai": "Ya, bisa. Saya tidur lebih awal dan bersiap dengan baik di pagi hari.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "朝早[あさはや]くから働[はたら]くことはできますか。",
+   "ajf": "はい、できます。早[はや]く寝[ね]て、朝[あさ]の準備[じゅんび]をしっかりします。"
+  },
+  {
+   "i": "recycling-shigoto-03",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "においや汚れがある環境でも、大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja di lingkungan yang berbau dan kotor?",
+   "v": [
+    [
+     "におい",
+     "bau"
+    ],
+    [
+     "汚れ",
+     "kotoran"
+    ],
+    [
+     "マスク",
+     "masker"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。マスクや手袋をつけて、作業のあとで、手や体をきれいに洗います。",
+   "ai": "Ya, tidak masalah. Saya memakai masker dan sarung tangan, lalu mencuci tangan dan badan hingga bersih setelah bekerja.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "においや汚[よご]れがある環境[かんきょう]でも、大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。マスクや手袋[てぶくろ]をつけて、作業[さぎょう]のあとで、手[て]や体[からだ]をきれいに洗[あら]います。"
+  },
+  {
+   "i": "recycling-shigoto-04",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "夏の暑い日や、冬の寒い日に、外や工場で働けますか。",
+   "id": "Bisakah Anda bekerja di luar atau di pabrik saat musim panas yang terik dan musim dingin?",
+   "v": [
+    [
+     "暑い",
+     "panas"
+    ],
+    [
+     "寒い",
+     "dingin"
+    ],
+    [
+     "こまめに",
+     "sering/rutin"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。夏は、こまめに水を飲んで、冬は服をたくさん着ます。",
+   "ai": "Ya, tidak masalah. Saat musim panas saya sering minum air dan saat dingin memakai banyak lapis pakaian.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "夏[なつ]の暑[あつ]い日[ひ]や、冬[ふゆ]の寒[さむ]い日[ひ]に、外[そと]や工場[こうじょう]で働[はたら]けますか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。夏[なつ]は、こまめに水[みず]を飲[の]んで、冬[ふゆ]は服[ふく]をたくさん着[つ]ます。"
+  },
+  {
+   "i": "recycling-shigoto-05",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "重いものを持ったり、立って作業したりする体力はありますか。",
+   "id": "Apakah Anda punya stamina untuk mengangkat barang berat dan bekerja sambil berdiri?",
+   "v": [
+    [
+     "体力",
+     "stamina"
+    ],
+    [
+     "重い",
+     "berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、あります。毎日運動をして、体力をつけています。重いものは、一人で持たないようにします。",
+   "ai": "Ya, ada. Saya berolahraga setiap hari. Barang berat tidak saya angkat sendirian.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "重[おも]いものを持[も]ったり、立[た]って作業[さぎょう]したりする体力[たいりょく]はありますか。",
+   "ajf": "はい、あります。毎日運動[まいにちうんどう]をして、体力[たいりょく]をつけています。重[おも]いものは、一人[ひとり]で持[も]たないようにします。"
+  },
+  {
+   "i": "recycling-shigoto-06",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "ごみが多い時期に、残業があっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan lembur saat sampah sedang banyak?",
+   "v": [
+    [
+     "繁忙期",
+     "musim sibuk"
+    ],
+    [
+     "残業",
+     "lembur"
+    ],
+    [
+     "チーム",
+     "tim"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。忙しい時期は、チームでがんばります。体調にも気をつけます。",
+   "ai": "Ya, tidak masalah. Saat sibuk kami berusaha bersama. Saya juga menjaga kondisi badan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "ごみが多[おお]い時期[じき]に、残業[ざんぎょう]があっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。忙[いそが]しい時期[じき]は、チームでがんばります。体調[たいちょう]にも気[き]をつけます。"
+  },
+  {
+   "i": "recycling-shigoto-07",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "機械や、道具を使うとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat memakai mesin dan alat?",
+   "v": [
+    [
+     "機械",
+     "mesin"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "手を入れる",
+     "memasukkan tangan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "使う前に、機械の状態を確認します。動いている部分には、手を入れません。使い方が分からないときは、使いません。",
+   "ai": "Sebelum dipakai saya memeriksa kondisi mesin. Saya tidak memasukkan tangan ke bagian yang bergerak. Kalau tidak tahu cara pakainya, saya tidak memakainya.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "機械[きかい]や、道具[どうぐ]を使[つか]うとき、何[なに]に気[き]をつけますか。",
+   "ajf": "使[つか]う前[まえ]に、機械[きかい]の状態[じょうたい]を確認[かくにん]します。動[うご]いている部分[ぶぶん]には、手[て]を入[い]れません。使[つか]い方[ほう]が分[わ]からないときは、使[つか]いません。"
+  },
+  {
+   "i": "recycling-shigoto-08",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "ごみの中の、危ないものに気づいたとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau menemukan benda berbahaya di dalam sampah?",
+   "v": [
+    [
+     "危険物",
+     "benda berbahaya"
+    ],
+    [
+     "ガラス",
+     "kaca"
+    ],
+    [
+     "知らせる",
+     "memberi tahu"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "さわらないで、すぐに責任者に知らせます。ガラスや、針などは、特に気をつけます。",
+   "ai": "Saya tidak menyentuhnya dan segera memberi tahu penanggung jawab. Saya sangat berhati-hati pada pecahan kaca dan jarum.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "ごみの中[なか]の、危[あぶ]ないものに気[き]づいたとき、どうしますか。",
+   "ajf": "さわらないで、すぐに責任者[せきにんしゃ]に知[し]らせます。ガラスや、針[はり]などは、特[とく]に気[き]をつけます。"
+  },
+  {
+   "i": "recycling-shigoto-09",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "リサイクルの仕事で、大切なことは何だと思いますか。",
+   "id": "Menurut Anda, apa yang penting dalam pekerjaan daur ulang?",
+   "v": [
+    [
+     "分別",
+     "pemilahan"
+    ],
+    [
+     "間違える",
+     "keliru"
+    ],
+    [
+     "正しく",
+     "dengan benar"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "ごみを、正しく分けることだと思います。分け方を間違えると、リサイクルできなくなります。",
+   "ai": "Menurut saya, memilah sampah dengan benar. Kalau salah memilah, barang itu tidak bisa didaur ulang.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "リサイクルの仕事[しごと]で、大切[たいせつ]なことは何[なん]だと思[おも]いますか。",
+   "ajf": "ごみを、正[ただ]しく分[わ]けることだと思[おも]います。分[わ]け方[ほう]を間違[まちが]えると、リサイクルできなくなります。"
+  },
+  {
+   "i": "recycling-shigoto-10",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "ごみが届いてから、資源になるまで、どんな作業がありますか。",
+   "id": "Pekerjaan apa saja sejak sampah tiba sampai menjadi sumber daya?",
+   "v": [
+    [
+     "破砕",
+     "pencacahan"
+    ],
+    [
+     "選別",
+     "pemilahan"
+    ],
+    [
+     "材料",
+     "bahan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "ごみを受け取って、種類ごとに分けます。機械で細かくしたり、洗ったりして、新しい材料にします。",
+   "ai": "Sampah diterima dan dipilah menurut jenis. Lalu dicacah dengan mesin atau dicuci, dan diubah menjadi bahan baru.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "ごみが届[とど]いてから、資源[しげん]になるまで、どんな作業[さぎょう]がありますか。",
+   "ajf": "ごみを受[う]け取[と]って、種類[しゅるい]ごとに分[わ]けます。機械[きかい]で細[こま]かくしたり、洗[あら]ったりして、新[あたら]しい材料[ざいりょう]にします。"
+  },
+  {
+   "i": "recycling-shigoto-11",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "日本のごみの分け方を、知っていますか。",
+   "id": "Apakah Anda tahu cara memilah sampah di Jepang?",
+   "v": [
+    [
+     "燃えるごみ",
+     "sampah terbakar"
+    ],
+    [
+     "プラスチック",
+     "plastik"
+    ],
+    [
+     "びん・かん",
+     "botol dan kaleng"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "燃えるごみ、燃えないごみ、プラスチック、びん、かんなどに分けると聞きました。これから、しっかり勉強します。",
+   "ai": "Saya dengar sampah dipilah menjadi sampah terbakar, tidak terbakar, plastik, botol, kaleng, dan sebagainya. Saya akan belajar dengan sungguh-sungguh.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "日本[にほん]のごみの分[わ]け方[ほう]を、知[し]っていますか。",
+   "ajf": "燃[も]えるごみ、燃[も]えないごみ、プラスチック、びん、かんなどに分[わ]けると聞[き]きました。これから、しっかり勉強[べんきょう]します。"
+  },
+  {
+   "i": "recycling-shigoto-12",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "金属や、プラスチックなど、いろいろな種類を見分けることはできますか。",
+   "id": "Apakah Anda bisa membedakan berbagai jenis seperti logam dan plastik?",
+   "v": [
+    [
+     "金属",
+     "logam"
+    ],
+    [
+     "見分ける",
+     "membedakan"
+    ],
+    [
+     "覚える",
+     "menghafal"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "まだ分からないものもありますが、勉強します。先輩に教えてもらって、少しずつ覚えます。",
+   "ai": "Masih ada yang belum saya kenali, tetapi saya akan belajar. Saya diajari senior dan menghafal sedikit demi sedikit.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "金属[きんぞく]や、プラスチックなど、いろいろな種類[しゅるい]を見分[みわ]けることはできますか。",
+   "ajf": "まだ分[わ]からないものもありますが、勉強[べんきょう]します。先輩[せんぱい]に教[おし]えてもらって、少[すこ]しずつ覚[おぼ]えます。"
+  },
+  {
+   "i": "recycling-shigoto-13",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "環境を守るために、あなたができることは何ですか。",
+   "id": "Apa yang bisa Anda lakukan untuk menjaga lingkungan?",
+   "v": [
+    [
+     "減らす",
+     "mengurangi"
+    ],
+    [
+     "むだ",
+     "sia-sia"
+    ],
+    [
+     "大切にする",
+     "menghargai"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "ごみを、決まりのとおりに分けることです。ものを大切に使って、むだなごみを減らします。",
+   "ai": "Memilah sampah sesuai aturan. Saya memakai barang dengan hati-hati dan mengurangi sampah yang sia-sia.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "recycling",
+   "jf": "環境[かんきょう]を守[まも]るために、あなたができることは何[なん]ですか。",
+   "ajf": "ごみを、決[き]まりのとおりに分[わ]けることです。ものを大切[たいせつ]に使[つか]って、むだなごみを減[へ]らします。"
+  },
+  {
+   "i": "recycling-seikatsu-01",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で行ってみたい場所はどこですか。",
+   "id": "Tempat mana di Jepang yang ingin Anda kunjungi?",
+   "v": [
+    [
+     "行ってみたい",
+     "ingin mencoba pergi"
+    ],
+    [
+     "富士山",
+     "Gunung Fuji"
+    ],
+    [
+     "休みの日",
+     "hari libur"
+    ],
+    [
+     "電車",
+     "kereta"
+    ]
+   ],
+   "m": "Mengobrol ringan; melihat ketertarikan pada Jepang.",
+   "aj": "富士山に行ってみたいです。写真で見て、とてもきれいだと思いました。休みの日に電車で行きたいです。",
+   "ai": "Saya ingin pergi ke Gunung Fuji. Saya melihat fotonya dan menurut saya sangat indah. Saya ingin pergi naik kereta di hari libur.",
+   "c": "Tambahkan alasan (なぜなら / 〜からです). Jawaban satu kata terlalu singkat.",
+   "jf": "日本[にほん]で行[い]ってみたい場所[ばしょ]はどこですか。",
+   "ajf": "富士山[ふじさん]に行[い]ってみたいです。写真[しゃしん]で見[み]て、とてもきれいだと思[おも]いました。休[やす]みの日[にち]に電車[でんしゃ]で行[い]きたいです。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-seikatsu-02",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で何をしたいですか。",
+   "id": "Apa yang ingin Anda lakukan di Jepang?",
+   "v": [
+    [
+     "がんばる",
+     "berusaha keras"
+    ],
+    [
+     "上手になる",
+     "menjadi mahir"
+    ],
+    [
+     "いろいろな",
+     "bermacam-macam"
+    ],
+    [
+     "町",
+     "kota"
+    ]
+   ],
+   "m": "Melihat motivasi di luar pekerjaan; apakah kandidat realistis.",
+   "aj": "仕事をがんばって、日本語も上手になりたいです。休みの日には、いろいろな町を見たいです。",
+   "ai": "Saya ingin bekerja keras dan juga mahir berbahasa Jepang. Di hari libur saya ingin melihat berbagai kota.",
+   "c": "Utamakan pekerjaan dan belajar, baru hiburan.",
+   "jf": "日本[にほん]で何[なに]をしたいですか。",
+   "ajf": "仕事[しごと]をがんばって、日本語[にほんご]も上手[じょうず]になりたいです。休[やす]みの日[にち]には、いろいろな町[まち]を見[み]たいです。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-seikatsu-03",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の生活についてどう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang kehidupan di Jepang?",
+   "v": [
+    [
+     "ルール",
+     "aturan"
+    ],
+    [
+     "ごみの分け方",
+     "cara memilah sampah"
+    ],
+    [
+     "きれい",
+     "bersih"
+    ],
+    [
+     "覚える",
+     "menghafal"
+    ]
+   ],
+   "m": "Melihat kesiapan beradaptasi dengan budaya dan aturan Jepang.",
+   "aj": "ルールが多くて、とてもきれいな国だと思います。ごみの分け方など、早く覚えたいです。",
+   "ai": "Menurut saya Jepang punya banyak aturan dan sangat bersih. Saya ingin cepat menghafal hal seperti cara memilah sampah.",
+   "c": "Tunjukkan kemauan mengikuti aturan. Jangan hanya mengeluh soal biaya hidup/cuaca.",
+   "jf": "日本[にほん]の生活[せいかつ]についてどう思[おも]いますか。",
+   "ajf": "ルールが多[おお]くて、とてもきれいな国[くに]だと思[おも]います。ごみの分[わ]け方[ほう]など、早[はや]く覚[おぼ]えたいです。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-seikatsu-04",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本の文化で興味があることは何ですか。",
+   "id": "Apa budaya Jepang yang Anda minati?",
+   "v": [
+    [
+     "文化",
+     "budaya"
+    ],
+    [
+     "お辞儀",
+     "membungkuk (salam)"
+    ],
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "すばらしい",
+     "luar biasa"
+    ]
+   ],
+   "m": "Melihat apakah kandidat menghargai budaya Jepang.",
+   "aj": "お辞儀と、あいさつの文化に興味があります。みんなが丁寧に話すので、すばらしいと思います。",
+   "ai": "Saya tertarik pada budaya membungkuk dan salam. Semua orang berbicara dengan sopan, menurut saya itu luar biasa.",
+   "c": "Budaya kerja (salam, tepat waktu) lebih disukai daripada hanya anime atau game.",
+   "jf": "日本[にほん]の文化[ぶんか]で興味[きょうみ]があることは何[なん]ですか。",
+   "ajf": "お辞儀[じぎ]と、あいさつの文化[ぶんか]に興味[きょうみ]があります。みんなが丁寧[ていねい]に話[はな]すので、すばらしいと思[おも]います。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-seikatsu-05",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "家族は日本で働くことに賛成していますか。",
+   "id": "Apakah keluarga Anda setuju Anda bekerja di Jepang?",
+   "v": [
+    [
+     "賛成する",
+     "setuju"
+    ],
+    [
+     "応援する",
+     "mendukung"
+    ],
+    [
+     "両親",
+     "orang tua"
+    ],
+    [
+     "電話",
+     "telepon"
+    ]
+   ],
+   "m": "Memastikan kandidat tidak akan pulang cepat karena tekanan keluarga.",
+   "aj": "はい、賛成しています。両親は私の夢を応援してくれています。毎週、電話で話すつもりです。",
+   "ai": "Ya, mereka setuju. Orang tua saya mendukung impian saya. Saya berencana menelepon mereka setiap minggu.",
+   "c": "Jawaban 'ya, mendukung' paling aman. Jika keluarga ragu, jelaskan dengan tenang.",
+   "jf": "家族[かぞく]は日本[にほん]で働[はたら]くことに賛成[さんせい]していますか。",
+   "ajf": "はい、賛成[さんせい]しています。両親[りょうしん]は私[わたし]の夢[ゆめ]を応援[おうえん]してくれています。毎週[まいしゅう]、電話[でんわ]で話[はな]すつもりです。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-seikatsu-06",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本で困ったことがあったら、どうしますか。",
+   "id": "Kalau mengalami kesulitan di Jepang, apa yang akan Anda lakukan?",
+   "v": [
+    [
+     "困る",
+     "kesulitan"
+    ],
+    [
+     "相談する",
+     "berkonsultasi"
+    ],
+    [
+     "担当者",
+     "penanggung jawab"
+    ],
+    [
+     "先輩",
+     "senior"
+    ]
+   ],
+   "m": "Menilai apakah kandidat tahu cara meminta bantuan, bukan memendam masalah.",
+   "aj": "まず、会社の担当者や先輩に相談します。わからないままにしないようにします。",
+   "ai": "Pertama, saya akan berkonsultasi dengan penanggung jawab perusahaan atau senior. Saya tidak akan membiarkannya tanpa dipahami.",
+   "c": "Kata kunci: 相談する (konsultasi). Pewawancara suka kandidat yang melapor lebih awal.",
+   "jf": "日本[にほん]で困[こま]ったことがあったら、どうしますか。",
+   "ajf": "まず、会社[かいしゃ]の担当者[たんとうしゃ]や先輩[せんぱい]に相談[そうだん]します。わからないままにしないようにします。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-seikatsu-07",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "工場が多い地域での生活に、不便なことがあっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan ketidaknyamanan hidup di kawasan industri?",
+   "v": [
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "まとめて",
+     "sekaligus"
+    ],
+    [
+     "調べる",
+     "mengecek"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "大丈夫です。寮から会社までの行き方を、調べておきます。お店が遠いときは、まとめて買い物をします。",
+   "ai": "Tidak masalah. Saya akan mengecek rute dari asrama ke perusahaan. Kalau toko jauh, saya belanja sekaligus.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "recycling",
+   "jf": "工場[こうじょう]が多[おお]い地域[ちいき]での生活[せいかつ]に、不便[ふべん]なことがあっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "大丈夫[だいじょうぶ]です。寮[りょう]から会社[かいしゃ]までの行[い]き方[ほう]を、調[しら]べておきます。お店[みせ]が遠[とお]いときは、まとめて買[か]い物[もの]をします。"
+  },
+  {
+   "i": "recycling-seikatsu-08",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本のリサイクルや、ごみの出し方について、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang daur ulang dan cara membuang sampah di Jepang?",
+   "v": [
+    [
+     "ごみの日",
+     "hari pembuangan sampah"
+    ],
+    [
+     "決まり",
+     "aturan"
+    ],
+    [
+     "守る",
+     "mematuhi"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "日本では、ごみの日が決まっていて、種類ごとに出すと聞きました。みんなが決まりを守る国だと思います。",
+   "ai": "Saya dengar di Jepang hari pembuangan sampah ditentukan dan sampah dibuang menurut jenis. Menurut saya ini negara yang warganya mematuhi aturan.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "recycling",
+   "jf": "日本[にほん]のリサイクルや、ごみの出[だ]し方[ほう]について、知[し]っていることはありますか。",
+   "ajf": "日本[にほん]では、ごみの日[ひ]が決[き]まっていて、種類[しゅるい]ごとに出[で]すと聞[き]きました。みんなが決[き]まりを守[まも]る国[くに]だと思[おも]います。"
+  },
+  {
+   "i": "recycling-mokuhyou-01",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "将来の目標は何ですか。",
+   "id": "Apa tujuan Anda di masa depan?",
+   "v": [
+    [
+     "目標",
+     "tujuan"
+    ],
+    [
+     "身につける",
+     "menguasai"
+    ],
+    [
+     "家族を支える",
+     "menopang keluarga"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "資源循環の仕事の技術をしっかり身につけて、仕事に自信を持てる人になりたいです。そして、将来は家族を支えたいです。",
+   "ai": "Saya ingin menguasai keterampilan di bidang Recycling dan menjadi orang yang percaya diri dalam bekerja. Lalu di masa depan saya ingin menopang keluarga.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "recycling",
+   "jf": "将来[しょうらい]の目標[もくひょう]は何[なん]ですか。",
+   "ajf": "資源循環[しげんじゅんかん]の仕事[しごと]の技術[ぎじゅつ]をしっかり身[み]につけて、仕事[しごと]に自信[じしん]を持[も]てる人[ひと]になりたいです。そして、将来[しょうらい]は家族[かぞく]を支[ささ]えたいです。"
+  },
+  {
+   "i": "recycling-mokuhyou-02",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で何年間働きたいですか。",
+   "id": "Berapa tahun Anda ingin bekerja di Jepang?",
+   "v": [
+    [
+     "〜年間",
+     "selama ... tahun"
+    ],
+    [
+     "まず",
+     "pertama"
+    ],
+    [
+     "チャンス",
+     "kesempatan"
+    ],
+    [
+     "長く",
+     "lama"
+    ]
+   ],
+   "m": "Perusahaan ingin tenaga kerja yang bertahan lama dan tidak berhenti di tengah jalan.",
+   "aj": "まず五年間、がんばりたいです。その後、チャンスがあれば、もっと長く働きたいと思っています。",
+   "ai": "Pertama, saya ingin berusaha selama lima tahun. Setelah itu, jika ada kesempatan, saya ingin bekerja lebih lama.",
+   "c": "Jawaban 'sebentar saja' memberi kesan buruk. Tunjukkan komitmen.",
+   "jf": "日本[にほん]で何年間[なんねんかん]働[はたら]きたいですか。",
+   "ajf": "まず五年間[ごねんかん]、がんばりたいです。その後[のち]、チャンスがあれば、もっと長[なが]く働[はたら]きたいと思[おも]っています。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-mokuhyou-03",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で働いて何を学びたいですか。",
+   "id": "Apa yang ingin Anda pelajari dengan bekerja di Jepang?",
+   "v": [
+    [
+     "学ぶ",
+     "belajar"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "時間を守る",
+     "tepat waktu"
+    ],
+    [
+     "習慣",
+     "kebiasaan"
+    ]
+   ],
+   "m": "Melihat sikap belajar dan penghargaan pada etos kerja Jepang.",
+   "aj": "日本の仕事のやり方と、時間を守る習慣を学びたいです。日本語ももっと上手になりたいです。",
+   "ai": "Saya ingin belajar cara kerja Jepang dan kebiasaan menepati waktu. Saya juga ingin lebih mahir berbahasa Jepang.",
+   "c": "Jawaban tentang uang saja kurang baik. Tonjolkan skill dan sikap kerja.",
+   "jf": "日本[にほん]で働[はたら]いて何[なに]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の仕事[しごと]のやり方[ほう]と、時間[じかん]を守[まも]る習慣[しゅうかん]を学[まな]びたいです。日本語[にほんご]ももっと上手[じょうず]になりたいです。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-mokuhyou-04",
+   "k": "mokuhyou",
+   "l": 3,
+   "ja": "5年後、どうなりたいですか。",
+   "id": "Lima tahun lagi, Anda ingin menjadi seperti apa?",
+   "v": [
+    [
+     "五年後",
+     "lima tahun lagi"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "後輩",
+     "junior"
+    ],
+    [
+     "合格する",
+     "lulus"
+    ]
+   ],
+   "m": "Melihat rencana karier realistis dan keinginan berkembang.",
+   "aj": "五年後は、仕事に慣れて、後輩に教えられるようになりたいです。日本語もN3に合格したいです。",
+   "ai": "Lima tahun lagi saya ingin terbiasa dengan pekerjaan dan bisa mengajari junior. Saya juga ingin lulus JLPT N3.",
+   "c": "Pakai target konkret (mis. lulus N3, jadi senior yang dipercaya).",
+   "jf": "5年後[ねんご]、どうなりたいですか。",
+   "ajf": "五年[ごねん]後[のち]は、仕事[しごと]に慣[な]れて、後輩[こうはい]に教[おし]えられるようになりたいです。日本語[にほんご]もN3に合格[ごうかく]したいです。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-mokuhyou-05",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本でリサイクルを学んだあと、自分の国でどんなことをしたいですか。",
+   "id": "Setelah belajar daur ulang di Jepang, apa yang ingin Anda lakukan di negara sendiri?",
+   "v": [
+    [
+     "分別",
+     "pemilahan"
+    ],
+    [
+     "環境",
+     "lingkungan"
+    ],
+    [
+     "きれいにする",
+     "membersihkan"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "日本で学んだ分別の方法や、環境を守る考え方を使って、自分の国の町を、きれいにしたいです。",
+   "ai": "Saya ingin membuat kota di negara saya lebih bersih dengan memakai cara memilah dan cara berpikir menjaga lingkungan yang saya pelajari di Jepang.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "recycling",
+   "jf": "日本[にほん]でリサイクルを学[まな]んだあと、自分[じぶん]の国[くに]でどんなことをしたいですか。",
+   "ajf": "日本[にほん]で学[まな]んだ分別[ぶんべつ]の方法[ほうほう]や、環境[かんきょう]を守[まも]る考[かんが]え方[ほう]を使[つか]って、自分[じぶん]の国[くに]の町[まち]を、きれいにしたいです。"
+  },
+  {
+   "i": "recycling-taiou-01",
+   "k": "taiou",
+   "l": 2,
+   "ja": "先輩や上司から注意されたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ditegur senior atau atasan?",
+   "v": [
+    [
+     "注意される",
+     "ditegur"
+    ],
+    [
+     "素直",
+     "terbuka"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "素直に聞いて、「はい、わかりました」と言います。やり方をメモして、次から気をつけます。",
+   "ai": "Saya mendengarkan dengan terbuka dan berkata \"Ya, saya mengerti\". Saya mencatat caranya dan lebih berhati-hati berikutnya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "先輩[せんぱい]や上司[じょうし]から注意[ちゅうい]されたら、どうしますか。",
+   "ajf": "素直[すなお]に聞[き]いて、「はい、わかりました」と言[い]います。やり方[ほう]をメモして、次[つぎ]から気[き]をつけます。"
+  },
+  {
+   "i": "recycling-taiou-02",
+   "k": "taiou",
+   "l": 2,
+   "ja": "ごみを、間違った所に分けてしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau keliru memilah sampah ke tempat yang salah?",
+   "v": [
+    [
+     "間違える",
+     "keliru"
+    ],
+    [
+     "分別表",
+     "tabel pemilahan"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに正直に報告します。どうして間違えたか考えて、次は、分別表をよく確認します。",
+   "ai": "Saya segera melapor jujur. Saya memikirkan penyebabnya dan lain kali memeriksa tabel pemilahan dengan teliti.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "ごみを、間違[まちが]った所[ところ]に分[わ]けてしまったら、どうしますか。",
+   "ajf": "すぐに正直[しょうじき]に報告[ほうこく]します。どうして間違[まちが]えたか考[かんが]えて、次[つぎ]は、分別表[ぶんべつひょう]をよく確認[かくにん]します。"
+  },
+  {
+   "i": "recycling-taiou-03",
+   "k": "taiou",
+   "l": 3,
+   "ja": "同僚と作業の方法で意見が合わなかったら、どうしますか。",
+   "id": "Jika pendapat Anda berbeda dengan rekan soal cara kerja, apa yang Anda lakukan?",
+   "v": [
+    [
+     "意見",
+     "pendapat"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "従う",
+     "mengikuti"
+    ]
+   ],
+   "m": "Menilai kerja sama dan kepatuhan.",
+   "aj": "まず相手の意見を聞きます。決まらないときは、責任者に聞いて、その指示に従います。",
+   "ai": "Pertama saya mendengar pendapat rekan. Jika tidak selesai, saya bertanya pada penanggung jawab dan mengikuti instruksinya.",
+   "c": "Ikuti instruksi penanggung jawab.",
+   "jf": "同僚[どうりょう]と作業[さぎょう]の方法[ほうほう]で意見[いけん]が合[あ]わなかったら、どうしますか。",
+   "ajf": "まず相手[あいて]の意見[いけん]を聞[き]きます。決[き]まらないときは、責任者[せきにんしゃ]に聞[き]いて、その指示[しじ]に従[したが]います。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-taiou-04",
+   "k": "taiou",
+   "l": 1,
+   "ja": "やり方が分からないとき、どうしますか。",
+   "id": "Jika Anda tidak tahu caranya, apa yang Anda lakukan?",
+   "v": [
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "勝手",
+     "sembarangan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Memastikan kandidat bertanya, tidak asal bekerja.",
+   "aj": "勝手にやらないで、すぐに聞きます。教えてもらったことはメモして、次は自分でできるようにします。",
+   "ai": "Saya tidak bekerja sembarangan dan segera bertanya. Yang diajarkan saya catat agar lain kali bisa sendiri.",
+   "c": "Kata kunci: 質問・メモ.",
+   "jf": "やり方[ほう]が分[わ]からないとき、どうしますか。",
+   "ajf": "勝手[かって]にやらないで、すぐに聞[き]きます。教[おし]えてもらったことはメモして、次[つぎ]は自分[じぶん]でできるようにします。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-taiou-05",
+   "k": "taiou",
+   "l": 2,
+   "ja": "体調が悪いときは、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau kondisi badan buruk?",
+   "v": [
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "無理",
+     "memaksakan"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "無理をしないで、すぐに上司に連絡します。体調が悪いまま作業すると、事故やミスにつながるからです。",
+   "ai": "Saya tidak memaksakan diri dan segera menghubungi atasan. Bekerja dalam kondisi buruk bisa menyebabkan kecelakaan atau kesalahan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "体調[たいちょう]が悪[わる]いときは、どうしますか。",
+   "ajf": "無理[むり]をしないで、すぐに上司[じょうし]に連絡[れんらく]します。体調[たいちょう]が悪[わる]いまま作業[さぎょう]すると、事故[じこ]やミスにつながるからです。"
+  },
+  {
+   "i": "recycling-taiou-06",
+   "k": "taiou",
+   "l": 3,
+   "ja": "急に、ごみの量が増えたり、予定が変わったりしたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau jumlah sampah mendadak bertambah atau rencana berubah?",
+   "v": [
+    [
+     "急に",
+     "mendadak"
+    ],
+    [
+     "量",
+     "jumlah"
+    ],
+    [
+     "指示",
+     "instruksi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "責任者の指示をよく聞いて、作業の順番を変えます。分からないときは、すぐに聞きます。",
+   "ai": "Saya mendengarkan instruksi penanggung jawab dan mengubah urutan kerja. Kalau tidak paham, saya langsung bertanya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "急[きゅう]に、ごみの量[りょう]が増[ふ]えたり、予定[よてい]が変[か]わったりしたら、どうしますか。",
+   "ajf": "責任者[せきにんしゃ]の指示[しじ]をよく聞[き]いて、作業[さぎょう]の順番[じゅんばん]を変[か]えます。分[わ]からないときは、すぐに聞[き]きます。"
+  },
+  {
+   "i": "recycling-taiou-07",
+   "k": "taiou",
+   "l": 2,
+   "ja": "日本人の同僚と、うまく話せなかったらどうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak bisa berbicara lancar dengan rekan kerja orang Jepang?",
+   "v": [
+    [
+     "うまく",
+     "dengan baik"
+    ],
+    [
+     "もう一度",
+     "sekali lagi"
+    ],
+    [
+     "ゆっくり",
+     "pelan-pelan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "もう一度ゆっくり話してもらうようにお願いします。わからなかった言葉は、メモして勉強します。",
+   "ai": "Saya minta mereka mengulang lebih pelan. Kata yang tidak saya pahami saya catat dan pelajari.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "日本人[にほんじん]の同僚[どうりょう]と、うまく話[はな]せなかったらどうしますか。",
+   "ajf": "もう一度[いちど]ゆっくり話[はな]してもらうようにお願[ねが]いします。わからなかった言葉[ことば]は、メモして勉強[べんきょう]します。"
+  },
+  {
+   "i": "recycling-taiou-08",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械が急に止まったり、変な音がしたりしたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau mesin mendadak berhenti atau berbunyi aneh?",
+   "v": [
+    [
+     "止まる",
+     "berhenti"
+    ],
+    [
+     "変な音",
+     "bunyi aneh"
+    ],
+    [
+     "知らせる",
+     "memberi tahu"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに機械を止めて、責任者に知らせます。自分で直さないようにします。",
+   "ai": "Saya segera menghentikan mesin dan memberi tahu penanggung jawab. Saya tidak memperbaikinya sendiri.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "機械[きかい]が急[きゅう]に止[と]まったり、変[へん]な音[おと]がしたりしたら、どうしますか。",
+   "ajf": "すぐに機械[きかい]を止[と]めて、責任者[せきにんしゃ]に知[し]らせます。自分[じぶん]で直[なお]さないようにします。"
+  },
+  {
+   "i": "recycling-taiou-09",
+   "k": "taiou",
+   "l": 2,
+   "ja": "作業のペースが遅いと言われたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau dibilang kerja Anda lambat?",
+   "v": [
+    [
+     "ペース",
+     "kecepatan"
+    ],
+    [
+     "コツ",
+     "trik"
+    ],
+    [
+     "練習",
+     "latihan"
+    ]
+   ],
+   "m": "Menerima kritik.",
+   "aj": "まず、「すみません」と言って、早い人のやり方をよく見ます。コツを教えてもらって、毎日練習します。",
+   "ai": "Pertama saya bilang \"maaf\" dan mengamati cara orang yang cepat. Saya minta diajari triknya dan berlatih tiap hari.",
+   "c": "Terima kritik dengan baik.",
+   "jf": "作業[さぎょう]のペースが遅[おそ]いと言[い]われたら、どうしますか。",
+   "ajf": "まず、「すみません」と言[い]って、早[はや]い人[にん]のやり方[ほう]をよく見[み]ます。コツを教[おし]えてもらって、毎日[まいにち]練習[れんしゅう]します。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-taiou-10",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械や道具を壊してしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak mesin atau alat?",
+   "v": [
+    [
+     "壊す",
+     "merusak"
+    ],
+    [
+     "正直に",
+     "dengan jujur"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに作業を止めて、正直に責任者に報告します。隠さないで、謝って、どうすればいいか聞きます。",
+   "ai": "Saya segera menghentikan pekerjaan dan melapor jujur kepada penanggung jawab. Saya tidak menyembunyikannya, meminta maaf, dan bertanya apa yang harus dilakukan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "機械[きかい]や道具[どうぐ]を壊[こわ]してしまったら、どうしますか。",
+   "ajf": "すぐに作業[さぎょう]を止[と]めて、正直[しょうじき]に責任者[せきにんしゃ]に報告[ほうこく]します。隠[かく]さないで、謝[あやま]って、どうすればいいか聞[き]きます。"
+  },
+  {
+   "i": "recycling-taiou-11",
+   "k": "taiou",
+   "l": 3,
+   "ja": "忙しい時期で、疲れているとき、どう気持ちを保ちますか。",
+   "id": "Bagaimana Anda menjaga semangat saat sibuk dan lelah?",
+   "v": [
+    [
+     "疲れる",
+     "lelah"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "睡眠",
+     "tidur"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "忙しい時期は短いと理解しています。しっかり寝て、食事をとって、体調を保ちます。",
+   "ai": "Saya paham musim sibuk itu singkat. Saya tidur cukup, makan baik, dan menjaga kondisi badan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "忙[いそが]しい時期[じき]で、疲[つか]れているとき、どう気持[きも]ちを保[たも]ちますか。",
+   "ajf": "忙[いそが]しい時期[じき]は短[みじか]いと理解[りかい]しています。しっかり寝[ね]て、食事[しょくじ]をとって、体調[たいちょう]を保[たも]ちます。"
+  },
+  {
+   "i": "recycling-taiou-12",
+   "k": "taiou",
+   "l": 1,
+   "ja": "先輩の説明が早くて、分からないとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau penjelasan senior terlalu cepat dan tidak Anda pahami?",
+   "v": [
+    [
+     "説明",
+     "penjelasan"
+    ],
+    [
+     "ゆっくり",
+     "pelan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "「すみません、もう一度ゆっくりお願いします」と言います。分からない言葉は、メモして、あとで聞きます。",
+   "ai": "Saya bilang \"Maaf, tolong ulangi lebih pelan\". Kata yang tidak paham saya catat dan tanyakan nanti.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "recycling",
+   "jf": "先輩[せんぱい]の説明[せつめい]が早[はや]くて、分[わ]からないとき、どうしますか。",
+   "ajf": "「すみません、もう一度[いちど]ゆっくりお願[ねが]いします」と言[い]います。分[わ]からない言葉[ことば]は、メモして、あとで聞[き]きます。"
+  },
+  {
+   "i": "recycling-tim-01",
+   "k": "tim",
+   "l": 1,
+   "ja": "ごみが多いとき、チームの人と、どのように作業を分けますか。",
+   "id": "Saat sampah banyak, bagaimana Anda membagi kerja dengan tim?",
+   "v": [
+    [
+     "分担",
+     "pembagian tugas"
+    ],
+    [
+     "分ける",
+     "memilah"
+    ],
+    [
+     "手伝う",
+     "membantu"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "責任者の指示で、受け取る人、分ける人、運ぶ人などに分かれます。早く終わったら、ほかの人を手伝います。",
+   "ai": "Sesuai instruksi penanggung jawab, ada yang menerima, memilah, dan mengangkut. Kalau selesai lebih dulu, saya membantu yang lain.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "recycling",
+   "jf": "ごみが多[おお]いとき、チームの人[ひと]と、どのように作業[さぎょう]を分[わ]けますか。",
+   "ajf": "責任者[せきにんしゃ]の指示[しじ]で、受[う]け取[と]る人[ひと]、分[わ]ける人[ひと]、運[はこ]ぶ人[ひと]などに分[わ]かれます。早[はや]く終[お]わったら、ほかの人[ひと]を手伝[てつだ]います。"
+  },
+  {
+   "i": "recycling-tim-02",
+   "k": "tim",
+   "l": 2,
+   "ja": "分け方が分からないものがあったとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ada barang yang tidak tahu cara memilahnya?",
+   "v": [
+    [
+     "判断",
+     "keputusan"
+    ],
+    [
+     "先輩",
+     "senior"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "勝手に判断しないで、すぐに先輩に聞きます。間違えたまま分けると、ほかの人が困るからです。",
+   "ai": "Saya tidak memutuskan sendiri dan segera bertanya kepada senior. Karena salah memilah akan menyulitkan orang lain.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "recycling",
+   "jf": "分[わ]け方[ほう]が分[わ]からないものがあったとき、どうしますか。",
+   "ajf": "勝手[かって]に判断[はんだん]しないで、すぐに先輩[せんぱい]に聞[き]きます。間違[まちが]えたまま分[わ]けると、ほかの人[ひと]が困[こま]るからです。"
+  },
+  {
+   "i": "recycling-tim-03",
+   "k": "tim",
+   "l": 2,
+   "ja": "機械を使うとき、まわりの人と、どのようにコミュニケーションをとりますか。",
+   "id": "Bagaimana Anda berkomunikasi dengan orang sekitar saat memakai mesin?",
+   "v": [
+    [
+     "声をかける",
+     "memberi aba-aba"
+    ],
+    [
+     "離れる",
+     "menjauh"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "動かす前に、大きい声で「動かします」と言います。まわりの人が離れたか、必ず見ます。",
+   "ai": "Sebelum menyalakan, saya berkata keras \"Saya nyalakan\". Saya selalu memeriksa apakah orang sekitar sudah menjauh.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "recycling",
+   "jf": "機械[きかい]を使[つか]うとき、まわりの人[ひと]と、どのようにコミュニケーションをとりますか。",
+   "ajf": "動[うご]かす前[まえ]に、大[おお]きい声[こえ]で「動[うご]かします」と言[い]います。まわりの人[ひと]が離[はな]れたか、必[かなら]ず見[み]ます。"
+  },
+  {
+   "i": "recycling-tim-04",
+   "k": "tim",
+   "l": 1,
+   "ja": "職場の仲間と、どのように仲良くなりたいですか。",
+   "id": "Bagaimana Anda ingin akrab dengan rekan kerja?",
+   "v": [
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "仲間",
+     "rekan"
+    ],
+    [
+     "仲良くなる",
+     "menjadi akrab"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "毎日、元気にあいさつをします。教えてもらったときは、「ありがとうございます」と言います。",
+   "ai": "Setiap hari saya menyapa dengan semangat. Saat diajari, saya mengatakan \"Terima kasih\".",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "recycling",
+   "jf": "職場[しょくば]の仲間[なかま]と、どのように仲良[なかよ]くなりたいですか。",
+   "ajf": "毎日[まいにち]、元気[げんき]にあいさつをします。教[おし]えてもらったときは、「ありがとうございます」と言[い]います。"
+  },
+  {
+   "i": "recycling-anzen-01",
+   "k": "anzen",
+   "l": 1,
+   "ja": "作業をするとき、必ず身につけるものは何ですか。",
+   "id": "Apa yang wajib dikenakan saat bekerja?",
+   "v": [
+    [
+     "ヘルメット",
+     "helm"
+    ],
+    [
+     "手袋",
+     "sarung tangan"
+    ],
+    [
+     "保護めがね",
+     "kacamata pelindung"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "ヘルメット、安全靴、手袋、マスクを必ず着けます。必要なときは、保護めがねも使います。",
+   "ai": "Saya wajib memakai helm, sepatu keselamatan, sarung tangan, dan masker. Bila perlu saya juga memakai kacamata pelindung.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "recycling",
+   "jf": "作業[さぎょう]をするとき、必[かなら]ず身[み]につけるものは何[なん]ですか。",
+   "ajf": "ヘルメット、安全靴[あんぜんぐつ]、手袋[てぶくろ]、マスクを必[かなら]ず着[つ]けます。必要[ひつよう]なときは、保護[ほご]めがねも使[つか]います。"
+  },
+  {
+   "i": "recycling-anzen-02",
+   "k": "anzen",
+   "l": 2,
+   "ja": "ごみの中の、ガラスや針などで、けがをしないために、何をしますか。",
+   "id": "Apa yang Anda lakukan agar tidak terluka oleh kaca dan jarum di dalam sampah?",
+   "v": [
+    [
+     "厚い手袋",
+     "sarung tangan tebal"
+    ],
+    [
+     "針",
+     "jarum"
+    ],
+    [
+     "けが",
+     "luka"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "厚い手袋をつけて、手で直接さわりません。見つけたら、すぐに責任者に知らせます。",
+   "ai": "Saya memakai sarung tangan tebal dan tidak menyentuhnya langsung dengan tangan. Kalau menemukannya, saya segera memberi tahu penanggung jawab.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "recycling",
+   "jf": "ごみの中[なか]の、ガラスや針[はり]などで、けがをしないために、何[なに]をしますか。",
+   "ajf": "厚[あつ]い手袋[てぶくろ]をつけて、手[て]で直接[ちょくせつ]さわりません。見[み]つけたら、すぐに責任者[せきにんしゃ]に知[し]らせます。"
+  },
+  {
+   "i": "recycling-anzen-03",
+   "k": "anzen",
+   "l": 2,
+   "ja": "機械の近くで作業するとき、事故を防ぐために何をしますか。",
+   "id": "Apa yang Anda lakukan untuk mencegah kecelakaan saat bekerja dekat mesin?",
+   "v": [
+    [
+     "電源",
+     "daya listrik"
+    ],
+    [
+     "巻き込まれる",
+     "terjerat"
+    ],
+    [
+     "近づく",
+     "mendekat"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "動いている機械には、手や服を近づけません。掃除や直すときは、必ず電源を切ります。",
+   "ai": "Saya tidak mendekatkan tangan atau pakaian ke mesin yang bergerak. Saat membersihkan atau memperbaiki, saya selalu mematikan daya.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "recycling",
+   "jf": "機械[きかい]の近[ちか]くで作業[さぎょう]するとき、事故[じこ]を防[ふせ]ぐために何[なに]をしますか。",
+   "ajf": "動[うご]いている機械[きかい]には、手[て]や服[ふく]を近[ちか]づけません。掃除[そうじ]や直[なお]すときは、必[かなら]ず電源[でんげん]を切[き]ります。"
+  },
+  {
+   "i": "recycling-anzen-04",
+   "k": "anzen",
+   "l": 3,
+   "ja": "もし、火事や、変なにおいがしたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ada api atau bau aneh?",
+   "v": [
+    [
+     "火事",
+     "kebakaran"
+    ],
+    [
+     "避難",
+     "mengungsi"
+    ],
+    [
+     "知らせる",
+     "memberi tahu"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "すぐに作業をやめて、大きい声で知らせます。責任者の指示で、決められた場所に避難します。",
+   "ai": "Saya segera menghentikan pekerjaan dan memberi tahu dengan suara keras. Saya mengungsi ke tempat yang ditentukan sesuai instruksi penanggung jawab.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "recycling",
+   "jf": "もし、火事[かじ]や、変[へん]なにおいがしたら、どうしますか。",
+   "ajf": "すぐに作業[さぎょう]をやめて、大[おお]きい声[こえ]で知[し]らせます。責任者[せきにんしゃ]の指示[しじ]で、決[き]められた場所[ばしょ]に避難[ひなん]します。"
+  },
+  {
+   "i": "recycling-saigo-01",
+   "k": "saigo",
+   "l": 2,
+   "ja": "最後に何か質問はありますか。",
+   "id": "Terakhir, apakah ada yang ingin Anda tanyakan?",
+   "v": [
+    [
+     "最後に",
+     "terakhir"
+    ],
+    [
+     "質問",
+     "pertanyaan"
+    ],
+    [
+     "入社前",
+     "sebelum bergabung"
+    ],
+    [
+     "勉強しておく",
+     "belajar lebih dulu"
+    ]
+   ],
+   "m": "Melihat antusiasme dan kemampuan bertanya dengan sopan.",
+   "aj": "はい、一つあります。仕事を早く覚えるために、入社前に勉強しておいたほうがいいことはありますか。",
+   "ai": "Ya, ada satu. Agar cepat menguasai pekerjaan, apakah ada hal yang sebaiknya saya pelajari sebelum bergabung?",
+   "c": "Jangan menjawab 'tidak ada' begitu saja. Bertanya tentang belajar menunjukkan semangat. Hindari bertanya soal gaji di awal.",
+   "jf": "最後[さいご]に何[なに]か質問[しつもん]はありますか。",
+   "ajf": "はい、一[ひと]つあります。仕事[しごと]を早[はや]く覚[おぼ]えるために、入社前[にゅうしゃまえ]に勉強[べんきょう]しておいたほうがいいことはありますか。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-saigo-02",
+   "k": "saigo",
+   "l": 2,
+   "ja": "当社について何か聞きたいことはありますか。",
+   "id": "Adakah yang ingin Anda ketahui tentang perusahaan kami?",
+   "v": [
+    [
+     "当社",
+     "perusahaan kami"
+    ],
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "pergi-pulang kerja"
+    ],
+    [
+     "教えていただけますか",
+     "boleh tolong beritahu saya?"
+    ]
+   ],
+   "m": "Melihat apakah kandidat sudah mencari tahu tentang perusahaan.",
+   "aj": "寮や通勤の方法について、教えていただけますか。",
+   "ai": "Boleh tolong beritahu saya tentang asrama dan cara pergi ke tempat kerja?",
+   "c": "Tanyakan hal praktis dan sopan (asrama, pelatihan). AI tidak akan mengarang info perusahaan.",
+   "jf": "当社[とうしゃ]について何[なに]か聞[き]きたいことはありますか。",
+   "ajf": "寮[りょう]や通勤[つうきん]の方法[ほうほう]について、教[おし]えていただけますか。",
+   "b": "recycling"
+  },
+  {
+   "i": "recycling-saigo-03",
+   "k": "saigo",
+   "l": 1,
+   "ja": "仕事の前に、どんな服や持ち物を用意したらいいですか。",
+   "id": "Pakaian dan barang apa yang sebaiknya saya siapkan sebelum bekerja?",
+   "v": [
+    [
+     "持ち物",
+     "barang bawaan"
+    ],
+    [
+     "準備する",
+     "menyiapkan"
+    ],
+    [
+     "服",
+     "pakaian"
+    ]
+   ],
+   "m": "Memberi kesempatan bertanya; menilai antusiasme.",
+   "aj": "はい、仕事の前に、どんな服や靴、持ち物を準備したらいいか、教えてください。",
+   "ai": "Ya, tolong beri tahu pakaian, sepatu, dan barang apa yang sebaiknya saya siapkan sebelum bekerja.",
+   "c": "Siapkan satu pertanyaan sopan tentang pekerjaan.",
+   "b": "recycling",
+   "jf": "仕事[しごと]の前[まえ]に、どんな服[ふく]や持[も]ち物[もの]を用意[ようい]したらいいですか。",
+   "ajf": "はい、仕事[しごと]の前[まえ]に、どんな服[ふく]や靴[くつ]、持[も]ち物[もの]を準備[じゅんび]したらいいか、教[おし]えてください。"
+  }
+ ]
+}

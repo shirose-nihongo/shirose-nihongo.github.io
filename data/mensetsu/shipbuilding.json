@@ -1,0 +1,1859 @@
+{
+ "bidang": "shipbuilding",
+ "nama": "Shipbuilding",
+ "jp": "造船・舶用工業",
+ "emoji": "🚢",
+ "kategori": [
+  {
+   "k": "jiko",
+   "jp": "自己紹介",
+   "id": "Perkenalan diri"
+  },
+  {
+   "k": "shibou",
+   "jp": "志望動機",
+   "id": "Alasan melamar"
+  },
+  {
+   "k": "shigoto",
+   "jp": "仕事への理解",
+   "id": "Pemahaman pekerjaan"
+  },
+  {
+   "k": "seikatsu",
+   "jp": "日本での生活",
+   "id": "Kehidupan di Jepang"
+  },
+  {
+   "k": "mokuhyou",
+   "jp": "将来の目標",
+   "id": "Tujuan masa depan"
+  },
+  {
+   "k": "taiou",
+   "jp": "職場での対応",
+   "id": "Situasi di tempat kerja"
+  },
+  {
+   "k": "tim",
+   "jp": "チームワーク",
+   "id": "Kerja sama tim"
+  },
+  {
+   "k": "anzen",
+   "jp": "安全・衛生",
+   "id": "Keselamatan & kebersihan"
+  },
+  {
+   "k": "saigo",
+   "jp": "最後の質問",
+   "id": "Pertanyaan penutup"
+  }
+ ],
+ "soal": [
+  {
+   "i": "shipbuilding-jiko-01",
+   "k": "jiko",
+   "l": 1,
+   "ja": "自己紹介をお願いします。",
+   "id": "Tolong perkenalkan diri Anda.",
+   "v": [
+    [
+     "自己紹介",
+     "perkenalan diri"
+    ],
+    [
+     "〜と申します",
+     "nama saya (sopan)"
+    ],
+    [
+     "よろしくお願いします",
+     "mohon bantuannya"
+    ]
+   ],
+   "m": "Melihat apakah kandidat bisa memperkenalkan diri dengan sopan dan jelas.",
+   "aj": "はじめまして。アリと申します。インドネシアのジャワ島から来ました。二十四歳です。造船・舶用工業の仕事に興味があって、日本で働きたいと思っています。一生懸命がんばりますので、よろしくお願いします。",
+   "ai": "Perkenalkan, nama saya Ali. Saya dari pulau Jawa, Indonesia. Usia saya 24 tahun. Saya tertarik pada pekerjaan di bidang Shipbuilding dan ingin bekerja di Jepang. Saya akan berusaha sungguh-sungguh, mohon bantuannya.",
+   "c": "Suara jelas, sopan, nama-asal-usia-motivasi singkat.",
+   "b": "shipbuilding",
+   "jf": "自己紹介[じこしょうかい]をお願[ねが]いします。",
+   "ajf": "はじめまして。アリと申[もう]します。インドネシアのジャワ島[とう]から来[き]ました。二十四歳[にじゅうよんさい]です。造船[ぞうせん]・舶用工業[はくようこうぎょう]の仕事[しごと]に興味[きょうみ]があって、日本[にほん]で働[はたら]きたいと思[おも]っています。一生懸命[いっしょうけんめい]がんばりますので、よろしくお願[ねが]いします。"
+  },
+  {
+   "i": "shipbuilding-jiko-02",
+   "k": "jiko",
+   "l": 1,
+   "ja": "お名前を教えてください。",
+   "id": "Tolong sebutkan nama Anda.",
+   "v": [
+    [
+     "お名前",
+     "nama (hormat)"
+    ],
+    [
+     "〜と呼んでください",
+     "tolong panggil saya ..."
+    ],
+    [
+     "フルネーム",
+     "nama lengkap"
+    ]
+   ],
+   "m": "Memastikan nama dan kemampuan menyebutkannya dengan jelas.",
+   "aj": "アリ・プラセティョと申します。アリと呼んでください。",
+   "ai": "Nama saya Ali Prasetyo. Silakan panggil saya Ali.",
+   "c": "Sebut nama pelan dan jelas. Gunakan 〜と申します, bukan 〜です, di wawancara resmi.",
+   "jf": "お名前[なまえ]を教[おし]えてください。",
+   "ajf": "アリ・プラセティョと申[もう]します。アリと呼[よ]んでください。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-jiko-03",
+   "k": "jiko",
+   "l": 1,
+   "ja": "何歳ですか。",
+   "id": "Berapa usia Anda?",
+   "v": [
+    [
+     "歳",
+     "tahun (usia)"
+    ],
+    [
+     "二十四歳",
+     "24 tahun"
+    ],
+    [
+     "来月",
+     "bulan depan"
+    ]
+   ],
+   "m": "Cek informasi dasar dan kemampuan menyebut angka/usia dalam bahasa Jepang.",
+   "aj": "二十四歳です。来月、二十五歳になります。",
+   "ai": "Saya 24 tahun. Bulan depan saya genap 25 tahun.",
+   "c": "Latih angka dan hitungan usia (〜歳). Usia khusus: 20歳 = はたち.",
+   "jf": "何歳[なんさい]ですか。",
+   "ajf": "二十四歳[にじゅうよんさい]です。来月[らいげつ]、二十五歳[にじゅうごさい]になります。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-jiko-04",
+   "k": "jiko",
+   "l": 1,
+   "ja": "出身はどこですか。",
+   "id": "Anda berasal dari mana?",
+   "v": [
+    [
+     "出身",
+     "asal"
+    ],
+    [
+     "〜から来ました",
+     "datang dari ..."
+    ],
+    [
+     "近い",
+     "dekat"
+    ]
+   ],
+   "m": "Mengetahui latar belakang dan membuka obrolan ringan.",
+   "aj": "インドネシアの中部ジャワのスマランです。海に近い町です。",
+   "ai": "Saya dari Semarang, Jawa Tengah, Indonesia. Kotanya dekat laut.",
+   "c": "Boleh tambah satu kalimat tentang daerah asal. Pewawancara sering menanggapinya.",
+   "jf": "出身[しゅっしん]はどこですか。",
+   "ajf": "インドネシアの中部[ちゅうぶ]ジャワのスマランです。海[うみ]に近[ちか]い町[まち]です。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-jiko-05",
+   "k": "jiko",
+   "l": 1,
+   "ja": "趣味は何ですか。",
+   "id": "Apa hobi Anda?",
+   "v": [
+    [
+     "趣味",
+     "hobi"
+    ],
+    [
+     "体を動かす",
+     "bergerak/berolahraga"
+    ],
+    [
+     "週末",
+     "akhir pekan"
+    ]
+   ],
+   "m": "Melihat kepribadian dan apakah kandidat sehat dan aktif.",
+   "aj": "趣味はサッカーです。週末に友達とサッカーをします。体を動かすのが好きです。",
+   "ai": "Hobi saya sepak bola. Di akhir pekan saya bermain bola dengan teman. Saya suka bergerak.",
+   "c": "Hindari jawaban yang terkesan malas atau begadang (mis. main game sampai malam). Pilih hobi sehat.",
+   "jf": "趣味[しゅみ]は何[なん]ですか。",
+   "ajf": "趣味[しゅみ]はサッカーです。週末[しゅうまつ]に友達[ともだち]とサッカーをします。体[からだ]を動[うご]かすのが好[す]きです。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-jiko-06",
+   "k": "jiko",
+   "l": 3,
+   "ja": "自分の長所と短所を教えてください。",
+   "id": "Sebutkan kelebihan dan kekurangan Anda.",
+   "v": [
+    [
+     "長所",
+     "kelebihan"
+    ],
+    [
+     "短所",
+     "kekurangan"
+    ],
+    [
+     "まじめ",
+     "rajin/serius"
+    ],
+    [
+     "心配しすぎる",
+     "terlalu khawatir"
+    ]
+   ],
+   "m": "Menilai kejujuran dan kesadaran diri, serta usaha memperbaiki kekurangan.",
+   "aj": "長所はまじめなところです。短所は、少し心配しすぎるところです。でも、メモを取ってミスを減らすようにしています。",
+   "ai": "Kelebihan saya rajin. Kekurangan saya agak terlalu khawatir. Tetapi saya mencatat supaya mengurangi kesalahan.",
+   "c": "Selalu sebut kekurangan + usaha memperbaikinya. Jangan sebut kekurangan fatal (mis. malas, tidak disiplin).",
+   "jf": "自分[じぶん]の長所[ちょうしょ]と短所[たんしょ]を教[おし]えてください。",
+   "ajf": "長所[ちょうしょ]はまじめなところです。短所[たんしょ]は、少[すこ]し心配[しんぱい]しすぎるところです。でも、メモを取[と]ってミスを減[へ]らすようにしています。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-jiko-07",
+   "k": "jiko",
+   "l": 2,
+   "ja": "日本語はどのくらい勉強しましたか。",
+   "id": "Sudah berapa lama Anda belajar bahasa Jepang?",
+   "v": [
+    [
+     "勉強する",
+     "belajar"
+    ],
+    [
+     "毎日",
+     "setiap hari"
+    ],
+    [
+     "単語",
+     "kosakata"
+    ],
+    [
+     "練習する",
+     "berlatih"
+    ]
+   ],
+   "m": "Memperkirakan kemampuan bahasa dan kesungguhan belajar.",
+   "aj": "八か月勉強しました。毎日一時間、単語と会話を練習しています。",
+   "ai": "Saya belajar 8 bulan. Setiap hari saya berlatih kosakata dan percakapan selama satu jam.",
+   "c": "Sebut lama belajar dan cara belajar. Jawaban jujur lebih baik daripada melebih-lebihkan.",
+   "jf": "日本語[にほんご]はどのくらい勉強[べんきょう]しましたか。",
+   "ajf": "八[はち]か月[がつ]勉強[べんきょう]しました。毎日[まいにち]一時間[いちじかん]、単語[たんご]と会話[かいわ]を練習[れんしゅう]しています。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-jiko-08",
+   "k": "jiko",
+   "l": 1,
+   "ja": "健康状態はどうですか。",
+   "id": "Bagaimana kondisi kesehatan Anda?",
+   "v": [
+    [
+     "健康",
+     "sehat"
+    ],
+    [
+     "丈夫",
+     "kuat"
+    ],
+    [
+     "大きな病気",
+     "penyakit berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memastikan kandidat sanggup bekerja secara fisik.",
+   "aj": "はい、元気です。大きな病気はありません。毎朝、軽い運動をしています。",
+   "ai": "Ya, saya sehat. Tidak ada penyakit berat. Setiap pagi saya berolahraga ringan.",
+   "c": "Jawab jujur. Perusahaan khawatir soal cuti panjang karena sakit.",
+   "jf": "健康状態[けんこうじょうたい]はどうですか。",
+   "ajf": "はい、元気[げんき]です。大[おお]きな病気[びょうき]はありません。毎朝[まいあさ]、軽[かる]い運動[うんどう]をしています。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-shibou-01",
+   "k": "shibou",
+   "l": 1,
+   "ja": "なぜ造船の仕事を選びましたか。",
+   "id": "Mengapa Anda memilih pekerjaan pembuatan kapal?",
+   "v": [
+    [
+     "造船",
+     "pembuatan kapal"
+    ],
+    [
+     "船",
+     "kapal"
+    ],
+    [
+     "島",
+     "pulau"
+    ],
+    [
+     "あこがれる",
+     "mengagumi"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "私の国は島が多くて、船が生活に大切です。大きい船を作る仕事に、あこがれていました。",
+   "ai": "Negara saya banyak pulau dan kapal penting bagi kehidupan. Saya mengagumi pekerjaan membuat kapal besar.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "shipbuilding",
+   "jf": "なぜ造船[ぞうせん]の仕事[しごと]を選[えら]びましたか。",
+   "ajf": "私[わたし]の国[くに]は島[しま]が多[おお]くて、船[ふね]が生活[せいかつ]に大切[たいせつ]です。大[おお]きい船[ふね]を作[つく]る仕事[しごと]に、あこがれていました。"
+  },
+  {
+   "i": "shipbuilding-shibou-02",
+   "k": "shibou",
+   "l": 2,
+   "ja": "なぜ日本で造船を学びたいですか。",
+   "id": "Mengapa Anda ingin belajar pembuatan kapal di Jepang?",
+   "v": [
+    [
+     "技術",
+     "teknologi"
+    ],
+    [
+     "品質",
+     "kualitas"
+    ],
+    [
+     "生かす",
+     "memanfaatkan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "日本の造船は、技術が高くて、品質がとても良いと聞きました。その技術を学んで、将来に生かしたいです。",
+   "ai": "Saya dengar pembuatan kapal Jepang berteknologi tinggi dan berkualitas sangat baik. Saya ingin mempelajarinya dan memanfaatkannya kelak.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "shipbuilding",
+   "jf": "なぜ日本[にほん]で造船[ぞうせん]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の造船[ぞうせん]は、技術[ぎじゅつ]が高[たか]くて、品質[ひんしつ]がとても良[よ]いと聞[き]きました。その技術[ぎじゅつ]を学[まな]んで、将来[しょうらい]に生[い]かしたいです。"
+  },
+  {
+   "i": "shipbuilding-shibou-03",
+   "k": "shibou",
+   "l": 3,
+   "ja": "なぜ当社に応募しましたか。",
+   "id": "Mengapa Anda melamar ke perusahaan kami?",
+   "v": [
+    [
+     "応募する",
+     "melamar"
+    ],
+    [
+     "御社",
+     "perusahaan Anda"
+    ],
+    [
+     "指導",
+     "bimbingan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "御社は、安全と品質を大切にして、大きな船を作っていると聞きました。丁寧に指導してもらえると思って、応募しました。",
+   "ai": "Saya dengar perusahaan Anda membuat kapal besar dengan mengutamakan keselamatan dan kualitas. Saya pikir saya akan dibimbing dengan baik, jadi saya melamar.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "shipbuilding",
+   "jf": "なぜ当社[とうしゃ]に応募[おうぼ]しましたか。",
+   "ajf": "御社[おんしゃ]は、安全[あんぜん]と品質[ひんしつ]を大切[たいせつ]にして、大[おお]きな船[ふね]を作[つく]っていると聞[き]きました。丁寧[ていねい]に指導[しどう]してもらえると思[おも]って、応募[おうぼ]しました。"
+  },
+  {
+   "i": "shipbuilding-shibou-04",
+   "k": "shibou",
+   "l": 1,
+   "ja": "この仕事に興味を持った理由は何ですか。",
+   "id": "Apa alasan Anda tertarik pada pekerjaan ini?",
+   "v": [
+    [
+     "協力",
+     "kerja sama"
+    ],
+    [
+     "完成",
+     "selesai"
+    ],
+    [
+     "魅力",
+     "daya tarik"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "みんなで協力して、大きいものを作ることに、魅力を感じます。完成した船が海に出るのを見たいです。",
+   "ai": "Saya tertarik pada kerja sama membuat sesuatu yang besar. Saya ingin melihat kapal jadi berlayar ke laut.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "shipbuilding",
+   "jf": "この仕事[しごと]に興味[きょうみ]を持[も]った理由[りゆう]は何[なん]ですか。",
+   "ajf": "みんなで協力[きょうりょく]して、大[おお]きいものを作[つく]ることに、魅力[みりょく]を感[かん]じます。完成[かんせい]した船[ふね]が海[うみ]に出[で]るのを見[み]たいです。"
+  },
+  {
+   "i": "shipbuilding-shibou-05",
+   "k": "shibou",
+   "l": 2,
+   "ja": "造船の仕事で、一番楽しみなことは何ですか。",
+   "id": "Apa yang paling Anda nantikan dari pekerjaan pembuatan kapal?",
+   "v": [
+    [
+     "進水",
+     "peluncuran kapal"
+    ],
+    [
+     "溶接",
+     "pengelasan"
+    ],
+    [
+     "楽しみ",
+     "dinantikan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "船が完成して、進水するときの喜びです。溶接などの技術も学びたいです。",
+   "ai": "Kegembiraan saat kapal selesai dan diluncurkan. Saya juga ingin belajar teknik seperti pengelasan.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "shipbuilding",
+   "jf": "造船[ぞうせん]の仕事[しごと]で、一番楽[いちばんたの]しみなことは何[なん]ですか。",
+   "ajf": "船[ふね]が完成[かんせい]して、進水[しんすい]するときの喜[よろこ]びです。溶接[ようせつ]などの技術[ぎじゅつ]も学[まな]びたいです。"
+  },
+  {
+   "i": "shipbuilding-shigoto-01",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "造船の主な仕事は何だと思いますか。",
+   "id": "Menurut Anda, apa pekerjaan utama pembuatan kapal?",
+   "v": [
+    [
+     "溶接",
+     "pengelasan"
+    ],
+    [
+     "塗装",
+     "pengecatan"
+    ],
+    [
+     "鉄板",
+     "pelat besi"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "鉄の板を切ったり、溶接したり、塗装したりして、船を作る仕事だと思います。",
+   "ai": "Saya kira pekerjaannya memotong pelat besi, mengelas, dan mengecat untuk membuat kapal.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "造船[ぞうせん]の主[おも]な仕事[しごと]は何[なん]だと思[おも]いますか。",
+   "ajf": "鉄[てつ]の板[いた]を切[き]ったり、溶接[ようせつ]したり、塗装[とそう]したりして、船[ふね]を作[つく]る仕事[しごと]だと思[おも]います。"
+  },
+  {
+   "i": "shipbuilding-shigoto-02",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "朝早くから働くことはできますか。",
+   "id": "Apakah Anda bisa bekerja dari pagi buta?",
+   "v": [
+    [
+     "早起き",
+     "bangun pagi"
+    ],
+    [
+     "準備",
+     "persiapan"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。早く寝て、朝の準備をしっかりします。",
+   "ai": "Ya, bisa. Saya tidur lebih awal dan bersiap dengan baik di pagi hari.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "朝早[あさはや]くから働[はたら]くことはできますか。",
+   "ajf": "はい、できます。早[はや]く寝[ね]て、朝[あさ]の準備[じゅんび]をしっかりします。"
+  },
+  {
+   "i": "shipbuilding-shigoto-03",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "暑い日や寒い日でも、外や船の中で働けますか。",
+   "id": "Bisakah Anda bekerja di luar atau di dalam kapal walau panas atau dingin?",
+   "v": [
+    [
+     "暑い",
+     "panas"
+    ],
+    [
+     "寒い",
+     "dingin"
+    ],
+    [
+     "こまめに",
+     "sering/rutin"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。夏はこまめに水を飲んで、冬は服をたくさん着ます。",
+   "ai": "Ya, tidak masalah. Saat musim panas saya sering minum air, saat dingin memakai banyak lapis pakaian.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "暑[あつ]い日[ひ]や寒[さむ]い日[ひ]でも、外[そと]や船[ふね]の中[なか]で働[はたら]けますか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。夏[なつ]はこまめに水[みず]を飲[の]んで、冬[ふゆ]は服[ふく]をたくさん着[つ]ます。"
+  },
+  {
+   "i": "shipbuilding-shigoto-04",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "高い所や、せまい所で作業することがありますが、大丈夫ですか。",
+   "id": "Ada pekerjaan di tempat tinggi atau sempit, apakah Anda baik-baik saja?",
+   "v": [
+    [
+     "高所",
+     "tempat tinggi"
+    ],
+    [
+     "せまい",
+     "sempit"
+    ],
+    [
+     "安全帯",
+     "sabuk pengaman"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。安全帯などをつけて、安全の決まりを守って作業します。",
+   "ai": "Ya, tidak masalah. Saya memakai sabuk pengaman dan bekerja sesuai aturan keselamatan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "高[たか]い所[ところ]や、せまい所[ところ]で作業[さぎょう]することがありますが、大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。安全帯[あんぜんたい]などをつけて、安全[あんぜん]の決[き]まりを守[まも]って作業[さぎょう]します。"
+  },
+  {
+   "i": "shipbuilding-shigoto-05",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "体力が必要な仕事ですが、大丈夫ですか。",
+   "id": "Pekerjaan ini butuh stamina, apakah Anda baik-baik saja?",
+   "v": [
+    [
+     "体力",
+     "stamina"
+    ],
+    [
+     "重い",
+     "berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。毎日運動をして、体力をつけています。重いものは、一人で持たないようにします。",
+   "ai": "Ya, tidak masalah. Saya berolahraga setiap hari. Barang berat tidak saya angkat sendirian.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "体力[たいりょく]が必要[ひつよう]な仕事[しごと]ですが、大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。毎日運動[まいにちうんどう]をして、体力[たいりょく]をつけています。重[おも]いものは、一人[ひとり]で持[も]たないようにします。"
+  },
+  {
+   "i": "shipbuilding-shigoto-06",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "船の完成の前など、忙しいとき、残業があっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan lembur saat sibuk, misalnya menjelang kapal selesai?",
+   "v": [
+    [
+     "残業",
+     "lembur"
+    ],
+    [
+     "完成",
+     "selesai"
+    ],
+    [
+     "チーム",
+     "tim"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。忙しい時期は、チームでがんばります。体調にも気をつけます。",
+   "ai": "Ya, tidak masalah. Saat sibuk kami berusaha bersama. Saya juga menjaga kondisi badan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "船[ふね]の完成[かんせい]の前[まえ]など、忙[いそが]しいとき、残業[ざんぎょう]があっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。忙[いそが]しい時期[じき]は、チームでがんばります。体調[たいちょう]にも気[き]をつけます。"
+  },
+  {
+   "i": "shipbuilding-shigoto-07",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "溶接や、機械を使うとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat mengelas dan memakai mesin?",
+   "v": [
+    [
+     "保護めん",
+     "pelindung wajah"
+    ],
+    [
+     "火花",
+     "percikan api"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "必ず使い方を教えてもらってから使います。保護めんや手袋をつけて、まわりに燃えやすいものがないか確認します。",
+   "ai": "Saya memakainya hanya setelah diajari cara pakainya. Saya memakai pelindung wajah dan sarung tangan, serta memeriksa tidak ada benda mudah terbakar di sekitar.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "溶接[ようせつ]や、機械[きかい]を使[つか]うとき、何[なに]に気[き]をつけますか。",
+   "ajf": "必[かなら]ず使[つか]い方[ほう]を教[おし]えてもらってから使[つか]います。保護[ほご]めんや手袋[てぶくろ]をつけて、まわりに燃[も]えやすいものがないか確認[かくにん]します。"
+  },
+  {
+   "i": "shipbuilding-shigoto-08",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "火花や、大きい音、においがある環境でも大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja di lingkungan dengan percikan api, suara keras, dan bau?",
+   "v": [
+    [
+     "火花",
+     "percikan api"
+    ],
+    [
+     "騒音",
+     "kebisingan"
+    ],
+    [
+     "マスク",
+     "masker"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。必要なときは、耳せんやマスクをつけます。",
+   "ai": "Ya, tidak masalah. Bila perlu saya memakai penyumbat telinga dan masker.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "火花[ひばな]や、大[おお]きい音[おと]、においがある環境[かんきょう]でも大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。必要[ひつよう]なときは、耳[みみ]せんやマスクをつけます。"
+  },
+  {
+   "i": "shipbuilding-shigoto-09",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "船を作る仕事で、大切なことは何だと思いますか。",
+   "id": "Menurut Anda, apa yang penting dalam membuat kapal?",
+   "v": [
+    [
+     "正確",
+     "akurat"
+    ],
+    [
+     "事故",
+     "kecelakaan"
+    ],
+    [
+     "安全",
+     "keselamatan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "安全と、正確さだと思います。船は海で使うので、小さい間違いが大きい事故になることがあります。",
+   "ai": "Menurut saya, keselamatan dan ketelitian. Karena kapal dipakai di laut, kesalahan kecil bisa menjadi kecelakaan besar.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "船[ふね]を作[つく]る仕事[しごと]で、大切[たいせつ]なことは何[なん]だと思[おも]いますか。",
+   "ajf": "安全[あんぜん]と、正確[せいかく]さだと思[おも]います。船[ふね]は海[うみ]で使[つか]うので、小[ちい]さい間違[まちが]いが大[おお]きい事故[じこ]になることがあります。"
+  },
+  {
+   "i": "shipbuilding-shigoto-10",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "船ができるまで、どんな作業がありますか。",
+   "id": "Pekerjaan apa saja sampai kapal selesai dibuat?",
+   "v": [
+    [
+     "組み立て",
+     "perakitan"
+    ],
+    [
+     "検査",
+     "inspeksi"
+    ],
+    [
+     "塗装",
+     "pengecatan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "鉄の板を切って、組み立てて、溶接します。そのあと、塗装をして、機械を入れて、検査をします。",
+   "ai": "Pelat besi dipotong, dirakit, dan dilas. Setelah itu dicat, mesin dipasang, lalu diperiksa.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "船[ふね]ができるまで、どんな作業[さぎょう]がありますか。",
+   "ajf": "鉄[てつ]の板[いた]を切[き]って、組[く]み立[た]てて、溶接[ようせつ]します。そのあと、塗装[とそう]をして、機械[きかい]を入[い]れて、検査[けんさ]をします。"
+  },
+  {
+   "i": "shipbuilding-shigoto-11",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "図面を見て、作業することはできますか。",
+   "id": "Apakah Anda bisa bekerja sambil membaca gambar kerja?",
+   "v": [
+    [
+     "図面",
+     "gambar kerja"
+    ],
+    [
+     "勉強",
+     "belajar"
+    ],
+    [
+     "先輩",
+     "senior"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "まだ難しいところもありますが、勉強しています。分からないところは、すぐに先輩に聞きます。",
+   "ai": "Masih ada bagian sulit, tetapi saya sedang belajar. Bagian yang tidak paham segera saya tanyakan kepada senior.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "図面[ずめん]を見[み]て、作業[さぎょう]することはできますか。",
+   "ajf": "まだ難[むずか]しいところもありますが、勉強[べんきょう]しています。分[わ]からないところは、すぐに先輩[せんぱい]に聞[き]きます。"
+  },
+  {
+   "i": "shipbuilding-shigoto-12",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "クレーンで、重いものを動かすとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat memindahkan barang berat dengan derek?",
+   "v": [
+    [
+     "クレーン",
+     "derek"
+    ],
+    [
+     "吊る",
+     "menggantung"
+    ],
+    [
+     "合図",
+     "isyarat"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "吊っているものの下には、入りません。合図をする人の指示を、必ず守ります。",
+   "ai": "Saya tidak masuk ke bawah barang yang digantung. Saya selalu mematuhi instruksi petugas pemberi isyarat.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "クレーンで、重[おも]いものを動[うご]かすとき、何[なに]に気[き]をつけますか。",
+   "ajf": "吊[つ]っているものの下[した]には、入[はい]りません。合図[あいず]をする人[ひと]の指示[しじ]を、必[かなら]ず守[まも]ります。"
+  },
+  {
+   "i": "shipbuilding-shigoto-13",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "寸法や、数を測ったり、確認したりする作業は、得意ですか。",
+   "id": "Apakah Anda pandai mengukur dan memeriksa ukuran dan jumlah?",
+   "v": [
+    [
+     "寸法",
+     "ukuran"
+    ],
+    [
+     "測る",
+     "mengukur"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、得意です。ミスをしないように、二回確認します。分からないときは、先輩に聞きます。",
+   "ai": "Ya, saya pandai. Agar tidak salah, saya memeriksa dua kali. Kalau tidak paham, saya bertanya kepada senior.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "shipbuilding",
+   "jf": "寸法[すんぽう]や、数[かず]を測[はか]ったり、確認[かくにん]したりする作業[さぎょう]は、得意[とくい]ですか。",
+   "ajf": "はい、得意[とくい]です。ミスをしないように、二回確認[にかいかくにん]します。分[わ]からないときは、先輩[せんぱい]に聞[き]きます。"
+  },
+  {
+   "i": "shipbuilding-seikatsu-01",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で行ってみたい場所はどこですか。",
+   "id": "Tempat mana di Jepang yang ingin Anda kunjungi?",
+   "v": [
+    [
+     "行ってみたい",
+     "ingin mencoba pergi"
+    ],
+    [
+     "富士山",
+     "Gunung Fuji"
+    ],
+    [
+     "休みの日",
+     "hari libur"
+    ],
+    [
+     "電車",
+     "kereta"
+    ]
+   ],
+   "m": "Mengobrol ringan; melihat ketertarikan pada Jepang.",
+   "aj": "富士山に行ってみたいです。写真で見て、とてもきれいだと思いました。休みの日に電車で行きたいです。",
+   "ai": "Saya ingin pergi ke Gunung Fuji. Saya melihat fotonya dan menurut saya sangat indah. Saya ingin pergi naik kereta di hari libur.",
+   "c": "Tambahkan alasan (なぜなら / 〜からです). Jawaban satu kata terlalu singkat.",
+   "jf": "日本[にほん]で行[い]ってみたい場所[ばしょ]はどこですか。",
+   "ajf": "富士山[ふじさん]に行[い]ってみたいです。写真[しゃしん]で見[み]て、とてもきれいだと思[おも]いました。休[やす]みの日[にち]に電車[でんしゃ]で行[い]きたいです。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-seikatsu-02",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で何をしたいですか。",
+   "id": "Apa yang ingin Anda lakukan di Jepang?",
+   "v": [
+    [
+     "がんばる",
+     "berusaha keras"
+    ],
+    [
+     "上手になる",
+     "menjadi mahir"
+    ],
+    [
+     "いろいろな",
+     "bermacam-macam"
+    ],
+    [
+     "町",
+     "kota"
+    ]
+   ],
+   "m": "Melihat motivasi di luar pekerjaan; apakah kandidat realistis.",
+   "aj": "仕事をがんばって、日本語も上手になりたいです。休みの日には、いろいろな町を見たいです。",
+   "ai": "Saya ingin bekerja keras dan juga mahir berbahasa Jepang. Di hari libur saya ingin melihat berbagai kota.",
+   "c": "Utamakan pekerjaan dan belajar, baru hiburan.",
+   "jf": "日本[にほん]で何[なに]をしたいですか。",
+   "ajf": "仕事[しごと]をがんばって、日本語[にほんご]も上手[じょうず]になりたいです。休[やす]みの日[にち]には、いろいろな町[まち]を見[み]たいです。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-seikatsu-03",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の生活についてどう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang kehidupan di Jepang?",
+   "v": [
+    [
+     "ルール",
+     "aturan"
+    ],
+    [
+     "ごみの分け方",
+     "cara memilah sampah"
+    ],
+    [
+     "きれい",
+     "bersih"
+    ],
+    [
+     "覚える",
+     "menghafal"
+    ]
+   ],
+   "m": "Melihat kesiapan beradaptasi dengan budaya dan aturan Jepang.",
+   "aj": "ルールが多くて、とてもきれいな国だと思います。ごみの分け方など、早く覚えたいです。",
+   "ai": "Menurut saya Jepang punya banyak aturan dan sangat bersih. Saya ingin cepat menghafal hal seperti cara memilah sampah.",
+   "c": "Tunjukkan kemauan mengikuti aturan. Jangan hanya mengeluh soal biaya hidup/cuaca.",
+   "jf": "日本[にほん]の生活[せいかつ]についてどう思[おも]いますか。",
+   "ajf": "ルールが多[おお]くて、とてもきれいな国[くに]だと思[おも]います。ごみの分[わ]け方[ほう]など、早[はや]く覚[おぼ]えたいです。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-seikatsu-04",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本の文化で興味があることは何ですか。",
+   "id": "Apa budaya Jepang yang Anda minati?",
+   "v": [
+    [
+     "文化",
+     "budaya"
+    ],
+    [
+     "お辞儀",
+     "membungkuk (salam)"
+    ],
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "すばらしい",
+     "luar biasa"
+    ]
+   ],
+   "m": "Melihat apakah kandidat menghargai budaya Jepang.",
+   "aj": "お辞儀と、あいさつの文化に興味があります。みんなが丁寧に話すので、すばらしいと思います。",
+   "ai": "Saya tertarik pada budaya membungkuk dan salam. Semua orang berbicara dengan sopan, menurut saya itu luar biasa.",
+   "c": "Budaya kerja (salam, tepat waktu) lebih disukai daripada hanya anime atau game.",
+   "jf": "日本[にほん]の文化[ぶんか]で興味[きょうみ]があることは何[なん]ですか。",
+   "ajf": "お辞儀[じぎ]と、あいさつの文化[ぶんか]に興味[きょうみ]があります。みんなが丁寧[ていねい]に話[はな]すので、すばらしいと思[おも]います。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-seikatsu-05",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "家族は日本で働くことに賛成していますか。",
+   "id": "Apakah keluarga Anda setuju Anda bekerja di Jepang?",
+   "v": [
+    [
+     "賛成する",
+     "setuju"
+    ],
+    [
+     "応援する",
+     "mendukung"
+    ],
+    [
+     "両親",
+     "orang tua"
+    ],
+    [
+     "電話",
+     "telepon"
+    ]
+   ],
+   "m": "Memastikan kandidat tidak akan pulang cepat karena tekanan keluarga.",
+   "aj": "はい、賛成しています。両親は私の夢を応援してくれています。毎週、電話で話すつもりです。",
+   "ai": "Ya, mereka setuju. Orang tua saya mendukung impian saya. Saya berencana menelepon mereka setiap minggu.",
+   "c": "Jawaban 'ya, mendukung' paling aman. Jika keluarga ragu, jelaskan dengan tenang.",
+   "jf": "家族[かぞく]は日本[にほん]で働[はたら]くことに賛成[さんせい]していますか。",
+   "ajf": "はい、賛成[さんせい]しています。両親[りょうしん]は私[わたし]の夢[ゆめ]を応援[おうえん]してくれています。毎週[まいしゅう]、電話[でんわ]で話[はな]すつもりです。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-seikatsu-06",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本で困ったことがあったら、どうしますか。",
+   "id": "Kalau mengalami kesulitan di Jepang, apa yang akan Anda lakukan?",
+   "v": [
+    [
+     "困る",
+     "kesulitan"
+    ],
+    [
+     "相談する",
+     "berkonsultasi"
+    ],
+    [
+     "担当者",
+     "penanggung jawab"
+    ],
+    [
+     "先輩",
+     "senior"
+    ]
+   ],
+   "m": "Menilai apakah kandidat tahu cara meminta bantuan, bukan memendam masalah.",
+   "aj": "まず、会社の担当者や先輩に相談します。わからないままにしないようにします。",
+   "ai": "Pertama, saya akan berkonsultasi dengan penanggung jawab perusahaan atau senior. Saya tidak akan membiarkannya tanpa dipahami.",
+   "c": "Kata kunci: 相談する (konsultasi). Pewawancara suka kandidat yang melapor lebih awal.",
+   "jf": "日本[にほん]で困[こま]ったことがあったら、どうしますか。",
+   "ajf": "まず、会社[かいしゃ]の担当者[たんとうしゃ]や先輩[せんぱい]に相談[そうだん]します。わからないままにしないようにします。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-seikatsu-07",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "海の近くの町での生活に、不便なことがあっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan ketidaknyamanan hidup di kota pesisir?",
+   "v": [
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "berangkat kerja"
+    ],
+    [
+     "まとめて",
+     "sekaligus"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "大丈夫です。寮から造船所までの行き方を、調べておきます。休みの日は、買い物や勉強をします。",
+   "ai": "Tidak masalah. Saya akan mengecek rute dari asrama ke galangan. Saat libur saya berbelanja dan belajar.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "shipbuilding",
+   "jf": "海[うみ]の近[ちか]くの町[まち]での生活[せいかつ]に、不便[ふべん]なことがあっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "大丈夫[だいじょうぶ]です。寮[りょう]から造船所[ぞうせんじょ]までの行[い]き方[ほう]を、調[しら]べておきます。休[やす]みの日[ひ]は、買[か]い物[もの]や勉強[べんきょう]をします。"
+  },
+  {
+   "i": "shipbuilding-seikatsu-08",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の船や、造船について、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang kapal dan pembuatan kapal di Jepang?",
+   "v": [
+    [
+     "盛ん",
+     "maju/berkembang"
+    ],
+    [
+     "タンカー",
+     "kapal tanker"
+    ],
+    [
+     "昔から",
+     "sejak dulu"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "日本は、昔から造船が盛んな国だと聞きました。大きいタンカーや、船の機械も作っていると知っています。",
+   "ai": "Saya dengar Jepang sejak dulu negara dengan industri kapal yang maju. Saya tahu mereka membuat kapal tanker besar dan mesin kapal.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "shipbuilding",
+   "jf": "日本[にほん]の船[ふね]や、造船[ぞうせん]について、知[し]っていることはありますか。",
+   "ajf": "日本[にほん]は、昔[むかし]から造船[ぞうせん]が盛[も]んな国[くに]だと聞[き]きました。大[おお]きいタンカーや、船[ふね]の機械[きかい]も作[つく]っていると知[し]っています。"
+  },
+  {
+   "i": "shipbuilding-mokuhyou-01",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "将来の目標は何ですか。",
+   "id": "Apa tujuan Anda di masa depan?",
+   "v": [
+    [
+     "目標",
+     "tujuan"
+    ],
+    [
+     "身につける",
+     "menguasai"
+    ],
+    [
+     "家族を支える",
+     "menopang keluarga"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "造船・舶用工業の仕事の技術をしっかり身につけて、仕事に自信を持てる人になりたいです。そして、将来は家族を支えたいです。",
+   "ai": "Saya ingin menguasai keterampilan di bidang Shipbuilding dan menjadi orang yang percaya diri dalam bekerja. Lalu di masa depan saya ingin menopang keluarga.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "shipbuilding",
+   "jf": "将来[しょうらい]の目標[もくひょう]は何[なん]ですか。",
+   "ajf": "造船[ぞうせん]・舶用工業[はくようこうぎょう]の仕事[しごと]の技術[ぎじゅつ]をしっかり身[み]につけて、仕事[しごと]に自信[じしん]を持[も]てる人[ひと]になりたいです。そして、将来[しょうらい]は家族[かぞく]を支[ささ]えたいです。"
+  },
+  {
+   "i": "shipbuilding-mokuhyou-02",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で何年間働きたいですか。",
+   "id": "Berapa tahun Anda ingin bekerja di Jepang?",
+   "v": [
+    [
+     "〜年間",
+     "selama ... tahun"
+    ],
+    [
+     "まず",
+     "pertama"
+    ],
+    [
+     "チャンス",
+     "kesempatan"
+    ],
+    [
+     "長く",
+     "lama"
+    ]
+   ],
+   "m": "Perusahaan ingin tenaga kerja yang bertahan lama dan tidak berhenti di tengah jalan.",
+   "aj": "まず五年間、がんばりたいです。その後、チャンスがあれば、もっと長く働きたいと思っています。",
+   "ai": "Pertama, saya ingin berusaha selama lima tahun. Setelah itu, jika ada kesempatan, saya ingin bekerja lebih lama.",
+   "c": "Jawaban 'sebentar saja' memberi kesan buruk. Tunjukkan komitmen.",
+   "jf": "日本[にほん]で何年間[なんねんかん]働[はたら]きたいですか。",
+   "ajf": "まず五年間[ごねんかん]、がんばりたいです。その後[のち]、チャンスがあれば、もっと長[なが]く働[はたら]きたいと思[おも]っています。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-mokuhyou-03",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で働いて何を学びたいですか。",
+   "id": "Apa yang ingin Anda pelajari dengan bekerja di Jepang?",
+   "v": [
+    [
+     "学ぶ",
+     "belajar"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "時間を守る",
+     "tepat waktu"
+    ],
+    [
+     "習慣",
+     "kebiasaan"
+    ]
+   ],
+   "m": "Melihat sikap belajar dan penghargaan pada etos kerja Jepang.",
+   "aj": "日本の仕事のやり方と、時間を守る習慣を学びたいです。日本語ももっと上手になりたいです。",
+   "ai": "Saya ingin belajar cara kerja Jepang dan kebiasaan menepati waktu. Saya juga ingin lebih mahir berbahasa Jepang.",
+   "c": "Jawaban tentang uang saja kurang baik. Tonjolkan skill dan sikap kerja.",
+   "jf": "日本[にほん]で働[はたら]いて何[なに]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の仕事[しごと]のやり方[ほう]と、時間[じかん]を守[まも]る習慣[しゅうかん]を学[まな]びたいです。日本語[にほんご]ももっと上手[じょうず]になりたいです。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-mokuhyou-04",
+   "k": "mokuhyou",
+   "l": 3,
+   "ja": "5年後、どうなりたいですか。",
+   "id": "Lima tahun lagi, Anda ingin menjadi seperti apa?",
+   "v": [
+    [
+     "五年後",
+     "lima tahun lagi"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "後輩",
+     "junior"
+    ],
+    [
+     "合格する",
+     "lulus"
+    ]
+   ],
+   "m": "Melihat rencana karier realistis dan keinginan berkembang.",
+   "aj": "五年後は、仕事に慣れて、後輩に教えられるようになりたいです。日本語もN3に合格したいです。",
+   "ai": "Lima tahun lagi saya ingin terbiasa dengan pekerjaan dan bisa mengajari junior. Saya juga ingin lulus JLPT N3.",
+   "c": "Pakai target konkret (mis. lulus N3, jadi senior yang dipercaya).",
+   "jf": "5年後[ねんご]、どうなりたいですか。",
+   "ajf": "五年[ごねん]後[のち]は、仕事[しごと]に慣[な]れて、後輩[こうはい]に教[おし]えられるようになりたいです。日本語[にほんご]もN3に合格[ごうかく]したいです。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-mokuhyou-05",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で造船を学んだあと、自分の国でどんなことをしたいですか。",
+   "id": "Setelah belajar pembuatan kapal di Jepang, apa yang ingin Anda lakukan di negara sendiri?",
+   "v": [
+    [
+     "溶接",
+     "pengelasan"
+    ],
+    [
+     "安全",
+     "keselamatan"
+    ],
+    [
+     "役に立つ",
+     "berguna"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "日本で学んだ溶接や、安全の方法を使って、自分の国の造船の仕事で、役に立ちたいです。",
+   "ai": "Saya ingin berguna di pekerjaan pembuatan kapal di negara saya dengan memakai pengelasan dan cara keselamatan yang saya pelajari di Jepang.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "shipbuilding",
+   "jf": "日本[にほん]で造船[ぞうせん]を学[まな]んだあと、自分[じぶん]の国[くに]でどんなことをしたいですか。",
+   "ajf": "日本[にほん]で学[まな]んだ溶接[ようせつ]や、安全[あんぜん]の方法[ほうほう]を使[つか]って、自分[じぶん]の国[くに]の造船[ぞうせん]の仕事[しごと]で、役[やく]に立[た]ちたいです。"
+  },
+  {
+   "i": "shipbuilding-taiou-01",
+   "k": "taiou",
+   "l": 2,
+   "ja": "先輩や上司から注意されたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ditegur senior atau atasan?",
+   "v": [
+    [
+     "注意される",
+     "ditegur"
+    ],
+    [
+     "素直",
+     "terbuka"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "素直に聞いて、「はい、わかりました」と言います。やり方をメモして、次から気をつけます。",
+   "ai": "Saya mendengarkan dengan terbuka dan berkata \"Ya, saya mengerti\". Saya mencatat caranya dan lebih berhati-hati berikutnya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "先輩[せんぱい]や上司[じょうし]から注意[ちゅうい]されたら、どうしますか。",
+   "ajf": "素直[すなお]に聞[き]いて、「はい、わかりました」と言[い]います。やり方[ほう]をメモして、次[つぎ]から気[き]をつけます。"
+  },
+  {
+   "i": "shipbuilding-taiou-02",
+   "k": "taiou",
+   "l": 2,
+   "ja": "部品を間違って、つけてしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau keliru memasang bagian?",
+   "v": [
+    [
+     "部品",
+     "bagian/suku cadang"
+    ],
+    [
+     "図面",
+     "gambar kerja"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに正直に報告します。どうして間違えたか考えて、次は図面を二回確認します。",
+   "ai": "Saya segera melapor jujur. Saya memikirkan penyebabnya dan lain kali memeriksa gambar kerja dua kali.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "部品[ぶひん]を間違[まちが]って、つけてしまったら、どうしますか。",
+   "ajf": "すぐに正直[しょうじき]に報告[ほうこく]します。どうして間違[まちが]えたか考[かんが]えて、次[つぎ]は図面[ずめん]を二回確認[にかいかくにん]します。"
+  },
+  {
+   "i": "shipbuilding-taiou-03",
+   "k": "taiou",
+   "l": 3,
+   "ja": "同僚と作業の方法で意見が合わなかったら、どうしますか。",
+   "id": "Jika pendapat Anda berbeda dengan rekan soal cara kerja, apa yang Anda lakukan?",
+   "v": [
+    [
+     "意見",
+     "pendapat"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "従う",
+     "mengikuti"
+    ]
+   ],
+   "m": "Menilai kerja sama dan kepatuhan.",
+   "aj": "まず相手の意見を聞きます。決まらないときは、責任者に聞いて、その指示に従います。",
+   "ai": "Pertama saya mendengar pendapat rekan. Jika tidak selesai, saya bertanya pada penanggung jawab dan mengikuti instruksinya.",
+   "c": "Ikuti instruksi penanggung jawab.",
+   "jf": "同僚[どうりょう]と作業[さぎょう]の方法[ほうほう]で意見[いけん]が合[あ]わなかったら、どうしますか。",
+   "ajf": "まず相手[あいて]の意見[いけん]を聞[き]きます。決[き]まらないときは、責任者[せきにんしゃ]に聞[き]いて、その指示[しじ]に従[したが]います。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-taiou-04",
+   "k": "taiou",
+   "l": 1,
+   "ja": "やり方が分からないとき、どうしますか。",
+   "id": "Jika Anda tidak tahu caranya, apa yang Anda lakukan?",
+   "v": [
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "勝手",
+     "sembarangan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Memastikan kandidat bertanya, tidak asal bekerja.",
+   "aj": "勝手にやらないで、すぐに聞きます。教えてもらったことはメモして、次は自分でできるようにします。",
+   "ai": "Saya tidak bekerja sembarangan dan segera bertanya. Yang diajarkan saya catat agar lain kali bisa sendiri.",
+   "c": "Kata kunci: 質問・メモ.",
+   "jf": "やり方[ほう]が分[わ]からないとき、どうしますか。",
+   "ajf": "勝手[かって]にやらないで、すぐに聞[き]きます。教[おし]えてもらったことはメモして、次[つぎ]は自分[じぶん]でできるようにします。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-taiou-05",
+   "k": "taiou",
+   "l": 2,
+   "ja": "体調が悪いときは、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau kondisi badan buruk?",
+   "v": [
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "無理",
+     "memaksakan"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "無理をしないで、すぐに上司に連絡します。体調が悪いまま作業すると、事故やミスにつながるからです。",
+   "ai": "Saya tidak memaksakan diri dan segera menghubungi atasan. Bekerja dalam kondisi buruk bisa menyebabkan kecelakaan atau kesalahan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "体調[たいちょう]が悪[わる]いときは、どうしますか。",
+   "ajf": "無理[むり]をしないで、すぐに上司[じょうし]に連絡[れんらく]します。体調[たいちょう]が悪[わる]いまま作業[さぎょう]すると、事故[じこ]やミスにつながるからです。"
+  },
+  {
+   "i": "shipbuilding-taiou-06",
+   "k": "taiou",
+   "l": 3,
+   "ja": "雨や風で、仕事の予定が急に変わったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau rencana kerja mendadak berubah karena hujan atau angin?",
+   "v": [
+    [
+     "急に",
+     "mendadak"
+    ],
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "安全第一",
+     "keselamatan utama"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "責任者の指示をよく聞いて、安全を第一に動きます。わからないときは、すぐに聞きます。",
+   "ai": "Saya mendengarkan instruksi penanggung jawab dan bergerak dengan mengutamakan keselamatan. Kalau tidak paham, saya langsung bertanya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "雨[あめ]や風[かぜ]で、仕事[しごと]の予定[よてい]が急[きゅう]に変[か]わったら、どうしますか。",
+   "ajf": "責任者[せきにんしゃ]の指示[しじ]をよく聞[き]いて、安全[あんぜん]を第一[だいいち]に動[うご]きます。わからないときは、すぐに聞[き]きます。"
+  },
+  {
+   "i": "shipbuilding-taiou-07",
+   "k": "taiou",
+   "l": 2,
+   "ja": "日本人の同僚と、うまく話せなかったらどうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak bisa berbicara lancar dengan rekan kerja orang Jepang?",
+   "v": [
+    [
+     "うまく",
+     "dengan baik"
+    ],
+    [
+     "もう一度",
+     "sekali lagi"
+    ],
+    [
+     "ゆっくり",
+     "pelan-pelan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "もう一度ゆっくり話してもらうようにお願いします。わからなかった言葉は、メモして勉強します。",
+   "ai": "Saya minta mereka mengulang lebih pelan. Kata yang tidak saya pahami saya catat dan pelajari.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "日本人[にほんじん]の同僚[どうりょう]と、うまく話[はな]せなかったらどうしますか。",
+   "ajf": "もう一度[いちど]ゆっくり話[はな]してもらうようにお願[ねが]いします。わからなかった言葉[ことば]は、メモして勉強[べんきょう]します。"
+  },
+  {
+   "i": "shipbuilding-taiou-08",
+   "k": "taiou",
+   "l": 2,
+   "ja": "溶接のあとで、不良に気づいたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau menyadari cacat setelah pengelasan?",
+   "v": [
+    [
+     "不良",
+     "cacat"
+    ],
+    [
+     "報告",
+     "melapor"
+    ],
+    [
+     "直す",
+     "memperbaiki"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "勝手に直さないで、すぐに先輩に報告します。やり方を教えてもらって、直します。",
+   "ai": "Saya tidak memperbaikinya sembarangan, segera melapor kepada senior. Saya diajari caranya lalu memperbaiki.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "溶接[ようせつ]のあとで、不良[ふりょう]に気[き]づいたら、どうしますか。",
+   "ajf": "勝手[かって]に直[なお]さないで、すぐに先輩[せんぱい]に報告[ほうこく]します。やり方[ほう]を教[おし]えてもらって、直[なお]します。"
+  },
+  {
+   "i": "shipbuilding-taiou-09",
+   "k": "taiou",
+   "l": 2,
+   "ja": "作業のペースが遅いと言われたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau dibilang kerja Anda lambat?",
+   "v": [
+    [
+     "ペース",
+     "kecepatan"
+    ],
+    [
+     "コツ",
+     "trik"
+    ],
+    [
+     "練習",
+     "latihan"
+    ]
+   ],
+   "m": "Menerima kritik.",
+   "aj": "まず、「すみません」と言って、早い人のやり方をよく見ます。コツを教えてもらって、毎日練習します。",
+   "ai": "Pertama saya bilang \"maaf\" dan mengamati cara orang yang cepat. Saya minta diajari triknya dan berlatih tiap hari.",
+   "c": "Terima kritik dengan baik.",
+   "jf": "作業[さぎょう]のペースが遅[おそ]いと言[い]われたら、どうしますか。",
+   "ajf": "まず、「すみません」と言[い]って、早[はや]い人[にん]のやり方[ほう]をよく見[み]ます。コツを教[おし]えてもらって、毎日[まいにち]練習[れんしゅう]します。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-taiou-10",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械や道具を壊してしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak mesin atau alat?",
+   "v": [
+    [
+     "壊す",
+     "merusak"
+    ],
+    [
+     "正直に",
+     "dengan jujur"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに作業を止めて、正直に責任者に報告します。隠さないで、謝って、どうすればいいか聞きます。",
+   "ai": "Saya segera menghentikan pekerjaan dan melapor jujur kepada penanggung jawab. Saya tidak menyembunyikannya, meminta maaf, dan bertanya apa yang harus dilakukan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "機械[きかい]や道具[どうぐ]を壊[こわ]してしまったら、どうしますか。",
+   "ajf": "すぐに作業[さぎょう]を止[と]めて、正直[しょうじき]に責任者[せきにんしゃ]に報告[ほうこく]します。隠[かく]さないで、謝[あやま]って、どうすればいいか聞[き]きます。"
+  },
+  {
+   "i": "shipbuilding-taiou-11",
+   "k": "taiou",
+   "l": 3,
+   "ja": "忙しい時期で、疲れているとき、どう気持ちを保ちますか。",
+   "id": "Bagaimana Anda menjaga semangat saat sibuk dan lelah?",
+   "v": [
+    [
+     "疲れる",
+     "lelah"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "睡眠",
+     "tidur"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "忙しい時期は短いと理解しています。しっかり寝て、食事をとって、体調を保ちます。",
+   "ai": "Saya paham musim sibuk itu singkat. Saya tidur cukup, makan baik, dan menjaga kondisi badan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "忙[いそが]しい時期[じき]で、疲[つか]れているとき、どう気持[きも]ちを保[たも]ちますか。",
+   "ajf": "忙[いそが]しい時期[じき]は短[みじか]いと理解[りかい]しています。しっかり寝[ね]て、食事[しょくじ]をとって、体調[たいちょう]を保[たも]ちます。"
+  },
+  {
+   "i": "shipbuilding-taiou-12",
+   "k": "taiou",
+   "l": 1,
+   "ja": "先輩の説明が専門用語ばかりで、分からないとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau penjelasan senior penuh istilah teknis yang tidak Anda pahami?",
+   "v": [
+    [
+     "専門用語",
+     "istilah teknis"
+    ],
+    [
+     "意味",
+     "arti"
+    ],
+    [
+     "復習",
+     "mengulang pelajaran"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "「すみません、この言葉の意味を教えてください」と聞きます。メモして、あとで復習します。",
+   "ai": "Saya bertanya \"Maaf, tolong jelaskan arti kata ini\". Saya mencatatnya dan mengulang pelajaran nanti.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "shipbuilding",
+   "jf": "先輩[せんぱい]の説明[せつめい]が専門用語[せんもんようご]ばかりで、分[わ]からないとき、どうしますか。",
+   "ajf": "「すみません、この言葉[ことば]の意味[いみ]を教[おし]えてください」と聞[き]きます。メモして、あとで復習[ふくしゅう]します。"
+  },
+  {
+   "i": "shipbuilding-tim-01",
+   "k": "tim",
+   "l": 1,
+   "ja": "大きい部品を運ぶとき、チームの人と、どのように作業しますか。",
+   "id": "Saat memindahkan bagian besar, bagaimana Anda bekerja dengan tim?",
+   "v": [
+    [
+     "合図",
+     "isyarat"
+    ],
+    [
+     "役割",
+     "peran"
+    ],
+    [
+     "声をかけ合う",
+     "saling memberi aba-aba"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "声をかけ合って、合図を決めてから運びます。責任者の指示で、役割を分けます。",
+   "ai": "Kami saling memberi aba-aba dan menentukan isyarat sebelum memindahkan. Peran dibagi sesuai instruksi penanggung jawab.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "shipbuilding",
+   "jf": "大[おお]きい部品[ぶひん]を運[はこ]ぶとき、チームの人[ひと]と、どのように作業[さぎょう]しますか。",
+   "ajf": "声[こえ]をかけ合[あ]って、合図[あいず]を決[き]めてから運[はこ]びます。責任者[せきにんしゃ]の指示[しじ]で、役割[やくわり]を分[わ]けます。"
+  },
+  {
+   "i": "shipbuilding-tim-02",
+   "k": "tim",
+   "l": 2,
+   "ja": "先輩の指示が分からなかったとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak paham instruksi senior?",
+   "v": [
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "危ない",
+     "berbahaya"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "すぐに「もう一度お願いします」と聞きます。分からないまま作業すると、とても危ないからです。",
+   "ai": "Saya segera meminta \"Tolong ulangi\". Bekerja tanpa paham sangat berbahaya.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "shipbuilding",
+   "jf": "先輩[せんぱい]の指示[しじ]が分[わ]からなかったとき、どうしますか。",
+   "ajf": "すぐに「もう一度[いちど]お願[ねが]いします」と聞[き]きます。分[わ]からないまま作業[さぎょう]すると、とても危[あぶ]ないからです。"
+  },
+  {
+   "i": "shipbuilding-tim-03",
+   "k": "tim",
+   "l": 2,
+   "ja": "いろいろな会社や、職人さんと、どのようにコミュニケーションをとりますか。",
+   "id": "Bagaimana Anda berkomunikasi dengan berbagai perusahaan dan tukang?",
+   "v": [
+    [
+     "職人",
+     "tukang ahli"
+    ],
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "確認し合う",
+     "saling memastikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "元気にあいさつをします。作業の予定や、危ない所を、お互いに確認し合います。",
+   "ai": "Saya menyapa dengan semangat. Kami saling memastikan rencana kerja dan tempat berbahaya.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "shipbuilding",
+   "jf": "いろいろな会社[かいしゃ]や、職人[しょくにん]さんと、どのようにコミュニケーションをとりますか。",
+   "ajf": "元気[げんき]にあいさつをします。作業[さぎょう]の予定[よてい]や、危[あぶ]ない所[ところ]を、お互[たが]いに確認[かくにん]し合[あ]います。"
+  },
+  {
+   "i": "shipbuilding-tim-04",
+   "k": "tim",
+   "l": 1,
+   "ja": "造船所の仲間と、どのように仲良くなりたいですか。",
+   "id": "Bagaimana Anda ingin akrab dengan rekan di galangan kapal?",
+   "v": [
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "仲間",
+     "rekan"
+    ],
+    [
+     "仲良くなる",
+     "menjadi akrab"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "毎日、元気にあいさつをします。教えてもらったときは、「ありがとうございます」と言います。",
+   "ai": "Setiap hari saya menyapa dengan semangat. Saat diajari, saya mengatakan \"Terima kasih\".",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "shipbuilding",
+   "jf": "造船所[ぞうせんじょ]の仲間[なかま]と、どのように仲良[なかよ]くなりたいですか。",
+   "ajf": "毎日[まいにち]、元気[げんき]にあいさつをします。教[おし]えてもらったときは、「ありがとうございます」と言[い]います。"
+  },
+  {
+   "i": "shipbuilding-anzen-01",
+   "k": "anzen",
+   "l": 1,
+   "ja": "造船所で、必ず身につけるものは何ですか。",
+   "id": "Apa yang wajib dikenakan di galangan kapal?",
+   "v": [
+    [
+     "ヘルメット",
+     "helm"
+    ],
+    [
+     "安全帯",
+     "sabuk pengaman"
+    ],
+    [
+     "安全靴",
+     "sepatu keselamatan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "ヘルメット、安全靴、保護めがね、手袋を必ず着けます。高い所では、安全帯も使います。",
+   "ai": "Saya wajib memakai helm, sepatu keselamatan, kacamata pelindung, dan sarung tangan. Di tempat tinggi saya juga memakai sabuk pengaman.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "shipbuilding",
+   "jf": "造船所[ぞうせんじょ]で、必[かなら]ず身[み]につけるものは何[なん]ですか。",
+   "ajf": "ヘルメット、安全靴[あんぜんぐつ]、保護[ほご]めがね、手袋[てぶくろ]を必[かなら]ず着[つ]けます。高[たか]い所[ところ]では、安全帯[あんぜんたい]も使[つか]います。"
+  },
+  {
+   "i": "shipbuilding-anzen-02",
+   "k": "anzen",
+   "l": 2,
+   "ja": "溶接をするとき、火事ややけどを防ぐために、何をしますか。",
+   "id": "Apa yang Anda lakukan saat mengelas untuk mencegah kebakaran dan luka bakar?",
+   "v": [
+    [
+     "火事",
+     "kebakaran"
+    ],
+    [
+     "保護めん",
+     "pelindung wajah"
+    ],
+    [
+     "やけど",
+     "luka bakar"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "まわりに燃えやすいものがないか、確認します。保護めんと手袋をつけます。作業のあとで、火が残っていないか見ます。",
+   "ai": "Saya memeriksa tidak ada benda mudah terbakar di sekitar. Saya memakai pelindung wajah dan sarung tangan. Setelah kerja saya memastikan tidak ada bara yang tertinggal.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "shipbuilding",
+   "jf": "溶接[ようせつ]をするとき、火事[かじ]ややけどを防[ふせ]ぐために、何[なに]をしますか。",
+   "ajf": "まわりに燃[も]えやすいものがないか、確認[かくにん]します。保護[ほご]めんと手袋[てぶくろ]をつけます。作業[さぎょう]のあとで、火[ひ]が残[のこ]っていないか見[み]ます。"
+  },
+  {
+   "i": "shipbuilding-anzen-03",
+   "k": "anzen",
+   "l": 2,
+   "ja": "高い所で作業するとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat bekerja di tempat tinggi?",
+   "v": [
+    [
+     "安全帯",
+     "sabuk pengaman"
+    ],
+    [
+     "足元",
+     "pijakan"
+    ],
+    [
+     "落とす",
+     "menjatuhkan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "安全帯をかけて、足元をよく見ます。道具を落とさないように、ひもでつなぎます。",
+   "ai": "Saya memasang sabuk pengaman dan memperhatikan pijakan. Alat saya ikat dengan tali agar tidak jatuh.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "shipbuilding",
+   "jf": "高[たか]い所[ところ]で作業[さぎょう]するとき、何[なに]に気[き]をつけますか。",
+   "ajf": "安全帯[あんぜんたい]をかけて、足元[あしもと]をよく見[み]ます。道具[どうぐ]を落[お]とさないように、ひもでつなぎます。"
+  },
+  {
+   "i": "shipbuilding-anzen-04",
+   "k": "anzen",
+   "l": 3,
+   "ja": "せまい船の中で作業するとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat bekerja di ruang sempit dalam kapal?",
+   "v": [
+    [
+     "換気",
+     "ventilasi"
+    ],
+    [
+     "酸欠",
+     "kekurangan oksigen"
+    ],
+    [
+     "声をかけ合う",
+     "saling memberi aba-aba"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "空気が足りているか、確認します。必ず二人以上で作業して、中の人と声をかけ合います。",
+   "ai": "Saya memastikan udara cukup. Saya bekerja minimal berdua dan saling berkomunikasi dengan orang di dalam.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "shipbuilding",
+   "jf": "せまい船[ふね]の中[なか]で作業[さぎょう]するとき、何[なに]に気[き]をつけますか。",
+   "ajf": "空気[くうき]が足[た]りているか、確認[かくにん]します。必[かなら]ず二人以上[ににんいじょう]で作業[さぎょう]して、中[なか]の人[ひと]と声[こえ]をかけ合[あ]います。"
+  },
+  {
+   "i": "shipbuilding-saigo-01",
+   "k": "saigo",
+   "l": 2,
+   "ja": "最後に何か質問はありますか。",
+   "id": "Terakhir, apakah ada yang ingin Anda tanyakan?",
+   "v": [
+    [
+     "最後に",
+     "terakhir"
+    ],
+    [
+     "質問",
+     "pertanyaan"
+    ],
+    [
+     "入社前",
+     "sebelum bergabung"
+    ],
+    [
+     "勉強しておく",
+     "belajar lebih dulu"
+    ]
+   ],
+   "m": "Melihat antusiasme dan kemampuan bertanya dengan sopan.",
+   "aj": "はい、一つあります。仕事を早く覚えるために、入社前に勉強しておいたほうがいいことはありますか。",
+   "ai": "Ya, ada satu. Agar cepat menguasai pekerjaan, apakah ada hal yang sebaiknya saya pelajari sebelum bergabung?",
+   "c": "Jangan menjawab 'tidak ada' begitu saja. Bertanya tentang belajar menunjukkan semangat. Hindari bertanya soal gaji di awal.",
+   "jf": "最後[さいご]に何[なに]か質問[しつもん]はありますか。",
+   "ajf": "はい、一[ひと]つあります。仕事[しごと]を早[はや]く覚[おぼ]えるために、入社前[にゅうしゃまえ]に勉強[べんきょう]しておいたほうがいいことはありますか。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-saigo-02",
+   "k": "saigo",
+   "l": 2,
+   "ja": "当社について何か聞きたいことはありますか。",
+   "id": "Adakah yang ingin Anda ketahui tentang perusahaan kami?",
+   "v": [
+    [
+     "当社",
+     "perusahaan kami"
+    ],
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "pergi-pulang kerja"
+    ],
+    [
+     "教えていただけますか",
+     "boleh tolong beritahu saya?"
+    ]
+   ],
+   "m": "Melihat apakah kandidat sudah mencari tahu tentang perusahaan.",
+   "aj": "寮や通勤の方法について、教えていただけますか。",
+   "ai": "Boleh tolong beritahu saya tentang asrama dan cara pergi ke tempat kerja?",
+   "c": "Tanyakan hal praktis dan sopan (asrama, pelatihan). AI tidak akan mengarang info perusahaan.",
+   "jf": "当社[とうしゃ]について何[なに]か聞[き]きたいことはありますか。",
+   "ajf": "寮[りょう]や通勤[つうきん]の方法[ほうほう]について、教[おし]えていただけますか。",
+   "b": "shipbuilding"
+  },
+  {
+   "i": "shipbuilding-saigo-03",
+   "k": "saigo",
+   "l": 1,
+   "ja": "仕事の前に、どんな服や持ち物を用意したらいいですか。",
+   "id": "Pakaian dan barang apa yang sebaiknya saya siapkan sebelum bekerja?",
+   "v": [
+    [
+     "持ち物",
+     "barang bawaan"
+    ],
+    [
+     "準備する",
+     "menyiapkan"
+    ],
+    [
+     "服",
+     "pakaian"
+    ]
+   ],
+   "m": "Memberi kesempatan bertanya; menilai antusiasme.",
+   "aj": "はい、仕事の前に、どんな服や靴、持ち物を準備したらいいか、教えてください。",
+   "ai": "Ya, tolong beri tahu pakaian, sepatu, dan barang apa yang sebaiknya saya siapkan sebelum bekerja.",
+   "c": "Siapkan satu pertanyaan sopan tentang pekerjaan.",
+   "b": "shipbuilding",
+   "jf": "仕事[しごと]の前[まえ]に、どんな服[ふく]や持[も]ち物[もの]を用意[ようい]したらいいですか。",
+   "ajf": "はい、仕事[しごと]の前[まえ]に、どんな服[ふく]や靴[くつ]、持[も]ち物[もの]を準備[じゅんび]したらいいか、教[おし]えてください。"
+  }
+ ]
+}

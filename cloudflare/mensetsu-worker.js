@@ -89,6 +89,18 @@ const BIDANG = {
   construction: { jp: "建設", id: "Construction", co: "建設会社", fokus: "安全第一、ヘルメットなど保護具、指示を守ること、屋外作業、体力、高所、チーム作業、職人との連携" },
   accommodation: { jp: "宿泊", id: "Accommodation", co: "ホテル・旅館", fokus: "おもてなし、フロント対応、客室清掃、外国人のお客様への対応、シフト、身だしなみ、礼儀" },
   livestock: { jp: "畜産業", id: "Livestock", co: "畜産農家", fokus: "動物の世話、早朝・休日の作業、臭いや汚れへの耐性、衛生と病気予防、体力、命を扱う責任感" },
+  fishery: { jp: "漁業", id: "Fishery", co: "漁業会社", fokus: "魚の扱い、早朝の出港、波や天気の判断、船の上の安全、体力、チームワーク、命を守る意識" },
+  auto_maintenance: { jp: "自動車整備", id: "Auto Maintenance", co: "自動車整備工場", fokus: "点検・整備の確認、工具の安全な扱い、油や汚れ、お客様の車への責任、報連相、丁寧な作業" },
+  industrial_mfg: { jp: "工業製品製造業", id: "Industrial Manufacturing", co: "製造工場", fokus: "機械の安全な扱い、品質と寸法の確認、5S、同じ作業をくり返す集中力、交替勤務、チーム作業" },
+  wood_industry: { jp: "木材産業", id: "Wood Industry", co: "製材所・木材加工会社", fokus: "木材の加工、のこぎりや機械の安全、木くずやほこり、寸法の正確さ、体力、保護具" },
+  auto_transport: { jp: "自動車運送業", id: "Auto Transport", co: "運送会社", fokus: "安全運転、交通ルール、時間を守ること、荷物の扱い、点検、長時間の運転と休けい、お客様への対応" },
+  forestry: { jp: "林業", id: "Forestry", co: "林業会社・森林組合", fokus: "山での安全、チェーンソーなどの道具、天気と体力、植林から伐採までの流れ、虫や動物、チームの合図" },
+  linen_supply: { jp: "リネンサプライ", id: "Linen Supply", co: "リネンサプライ会社", fokus: "清潔と衛生、洗濯・乾燥・アイロンの機械の安全、数の確認、立ち仕事、暑さ、チームの流れ作業" },
+  railway: { jp: "鉄道", id: "Railway", co: "鉄道会社", fokus: "安全第一、夜間作業、点検と確認、指差呼称、線路や電気設備の安全、時間の正確さ、報連相" },
+  shipbuilding: { jp: "造船・舶用工業", id: "Shipbuilding", co: "造船所", fokus: "溶接や機械の安全、高所作業、図面と寸法の確認、クレーン作業の合図、体力、チームワーク" },
+  logistics: { jp: "物流倉庫", id: "Logistics", co: "物流会社・倉庫", fokus: "荷物の仕分けと正確さ、フォークリフトの安全、立ち仕事、繁忙期、確認と報連相、体力" },
+  recycling: { jp: "資源循環", id: "Recycling", co: "リサイクル会社", fokus: "分別の正確さ、においや汚れ、機械と危険物の安全、保護具、環境への意識、チームワーク" },
+  aviation: { jp: "航空", id: "Aviation", co: "空港・航空会社", fokus: "安全と確認、時間の正確さ、飛行機の近くでのルール、荷物の扱い、早朝や夜の勤務、外国語での指示" },
 };
 
 const SYS_BASE = (b, mode) => `あなたは日本の${b.co}（${b.jp}分野・特定技能）の面接官「田中（人事担当）」です。外国人候補者（インドネシア人、日本語は初級〜N4程度）を面接しています。

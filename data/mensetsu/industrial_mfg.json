@@ -1,0 +1,1859 @@
+{
+ "bidang": "industrial_mfg",
+ "nama": "Industrial Manufacturing",
+ "jp": "工業製品製造業",
+ "emoji": "⚙️",
+ "kategori": [
+  {
+   "k": "jiko",
+   "jp": "自己紹介",
+   "id": "Perkenalan diri"
+  },
+  {
+   "k": "shibou",
+   "jp": "志望動機",
+   "id": "Alasan melamar"
+  },
+  {
+   "k": "shigoto",
+   "jp": "仕事への理解",
+   "id": "Pemahaman pekerjaan"
+  },
+  {
+   "k": "seikatsu",
+   "jp": "日本での生活",
+   "id": "Kehidupan di Jepang"
+  },
+  {
+   "k": "mokuhyou",
+   "jp": "将来の目標",
+   "id": "Tujuan masa depan"
+  },
+  {
+   "k": "taiou",
+   "jp": "職場での対応",
+   "id": "Situasi di tempat kerja"
+  },
+  {
+   "k": "tim",
+   "jp": "チームワーク",
+   "id": "Kerja sama tim"
+  },
+  {
+   "k": "anzen",
+   "jp": "安全・衛生",
+   "id": "Keselamatan & kebersihan"
+  },
+  {
+   "k": "saigo",
+   "jp": "最後の質問",
+   "id": "Pertanyaan penutup"
+  }
+ ],
+ "soal": [
+  {
+   "i": "industrial_mfg-jiko-01",
+   "k": "jiko",
+   "l": 1,
+   "ja": "自己紹介をお願いします。",
+   "id": "Tolong perkenalkan diri Anda.",
+   "v": [
+    [
+     "自己紹介",
+     "perkenalan diri"
+    ],
+    [
+     "〜と申します",
+     "nama saya (sopan)"
+    ],
+    [
+     "よろしくお願いします",
+     "mohon bantuannya"
+    ]
+   ],
+   "m": "Melihat apakah kandidat bisa memperkenalkan diri dengan sopan dan jelas.",
+   "aj": "はじめまして。アリと申します。インドネシアのジャワ島から来ました。二十四歳です。工業製品製造業の仕事に興味があって、日本で働きたいと思っています。一生懸命がんばりますので、よろしくお願いします。",
+   "ai": "Perkenalkan, nama saya Ali. Saya dari pulau Jawa, Indonesia. Usia saya 24 tahun. Saya tertarik pada pekerjaan di bidang Industrial Manufacturing dan ingin bekerja di Jepang. Saya akan berusaha sungguh-sungguh, mohon bantuannya.",
+   "c": "Suara jelas, sopan, nama-asal-usia-motivasi singkat.",
+   "b": "industrial_mfg",
+   "jf": "自己紹介[じこしょうかい]をお願[ねが]いします。",
+   "ajf": "はじめまして。アリと申[もう]します。インドネシアのジャワ島[とう]から来[き]ました。二十四歳[にじゅうよんさい]です。工業製品製造業[こうぎょうせいひんせいぞうぎょう]の仕事[しごと]に興味[きょうみ]があって、日本[にほん]で働[はたら]きたいと思[おも]っています。一生懸命[いっしょうけんめい]がんばりますので、よろしくお願[ねが]いします。"
+  },
+  {
+   "i": "industrial_mfg-jiko-02",
+   "k": "jiko",
+   "l": 1,
+   "ja": "お名前を教えてください。",
+   "id": "Tolong sebutkan nama Anda.",
+   "v": [
+    [
+     "お名前",
+     "nama (hormat)"
+    ],
+    [
+     "〜と呼んでください",
+     "tolong panggil saya ..."
+    ],
+    [
+     "フルネーム",
+     "nama lengkap"
+    ]
+   ],
+   "m": "Memastikan nama dan kemampuan menyebutkannya dengan jelas.",
+   "aj": "アリ・プラセティョと申します。アリと呼んでください。",
+   "ai": "Nama saya Ali Prasetyo. Silakan panggil saya Ali.",
+   "c": "Sebut nama pelan dan jelas. Gunakan 〜と申します, bukan 〜です, di wawancara resmi.",
+   "jf": "お名前[なまえ]を教[おし]えてください。",
+   "ajf": "アリ・プラセティョと申[もう]します。アリと呼[よ]んでください。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-jiko-03",
+   "k": "jiko",
+   "l": 1,
+   "ja": "何歳ですか。",
+   "id": "Berapa usia Anda?",
+   "v": [
+    [
+     "歳",
+     "tahun (usia)"
+    ],
+    [
+     "二十四歳",
+     "24 tahun"
+    ],
+    [
+     "来月",
+     "bulan depan"
+    ]
+   ],
+   "m": "Cek informasi dasar dan kemampuan menyebut angka/usia dalam bahasa Jepang.",
+   "aj": "二十四歳です。来月、二十五歳になります。",
+   "ai": "Saya 24 tahun. Bulan depan saya genap 25 tahun.",
+   "c": "Latih angka dan hitungan usia (〜歳). Usia khusus: 20歳 = はたち.",
+   "jf": "何歳[なんさい]ですか。",
+   "ajf": "二十四歳[にじゅうよんさい]です。来月[らいげつ]、二十五歳[にじゅうごさい]になります。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-jiko-04",
+   "k": "jiko",
+   "l": 1,
+   "ja": "出身はどこですか。",
+   "id": "Anda berasal dari mana?",
+   "v": [
+    [
+     "出身",
+     "asal"
+    ],
+    [
+     "〜から来ました",
+     "datang dari ..."
+    ],
+    [
+     "近い",
+     "dekat"
+    ]
+   ],
+   "m": "Mengetahui latar belakang dan membuka obrolan ringan.",
+   "aj": "インドネシアの中部ジャワのスマランです。海に近い町です。",
+   "ai": "Saya dari Semarang, Jawa Tengah, Indonesia. Kotanya dekat laut.",
+   "c": "Boleh tambah satu kalimat tentang daerah asal. Pewawancara sering menanggapinya.",
+   "jf": "出身[しゅっしん]はどこですか。",
+   "ajf": "インドネシアの中部[ちゅうぶ]ジャワのスマランです。海[うみ]に近[ちか]い町[まち]です。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-jiko-05",
+   "k": "jiko",
+   "l": 1,
+   "ja": "趣味は何ですか。",
+   "id": "Apa hobi Anda?",
+   "v": [
+    [
+     "趣味",
+     "hobi"
+    ],
+    [
+     "体を動かす",
+     "bergerak/berolahraga"
+    ],
+    [
+     "週末",
+     "akhir pekan"
+    ]
+   ],
+   "m": "Melihat kepribadian dan apakah kandidat sehat dan aktif.",
+   "aj": "趣味はサッカーです。週末に友達とサッカーをします。体を動かすのが好きです。",
+   "ai": "Hobi saya sepak bola. Di akhir pekan saya bermain bola dengan teman. Saya suka bergerak.",
+   "c": "Hindari jawaban yang terkesan malas atau begadang (mis. main game sampai malam). Pilih hobi sehat.",
+   "jf": "趣味[しゅみ]は何[なん]ですか。",
+   "ajf": "趣味[しゅみ]はサッカーです。週末[しゅうまつ]に友達[ともだち]とサッカーをします。体[からだ]を動[うご]かすのが好[す]きです。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-jiko-06",
+   "k": "jiko",
+   "l": 3,
+   "ja": "自分の長所と短所を教えてください。",
+   "id": "Sebutkan kelebihan dan kekurangan Anda.",
+   "v": [
+    [
+     "長所",
+     "kelebihan"
+    ],
+    [
+     "短所",
+     "kekurangan"
+    ],
+    [
+     "まじめ",
+     "rajin/serius"
+    ],
+    [
+     "心配しすぎる",
+     "terlalu khawatir"
+    ]
+   ],
+   "m": "Menilai kejujuran dan kesadaran diri, serta usaha memperbaiki kekurangan.",
+   "aj": "長所はまじめなところです。短所は、少し心配しすぎるところです。でも、メモを取ってミスを減らすようにしています。",
+   "ai": "Kelebihan saya rajin. Kekurangan saya agak terlalu khawatir. Tetapi saya mencatat supaya mengurangi kesalahan.",
+   "c": "Selalu sebut kekurangan + usaha memperbaikinya. Jangan sebut kekurangan fatal (mis. malas, tidak disiplin).",
+   "jf": "自分[じぶん]の長所[ちょうしょ]と短所[たんしょ]を教[おし]えてください。",
+   "ajf": "長所[ちょうしょ]はまじめなところです。短所[たんしょ]は、少[すこ]し心配[しんぱい]しすぎるところです。でも、メモを取[と]ってミスを減[へ]らすようにしています。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-jiko-07",
+   "k": "jiko",
+   "l": 2,
+   "ja": "日本語はどのくらい勉強しましたか。",
+   "id": "Sudah berapa lama Anda belajar bahasa Jepang?",
+   "v": [
+    [
+     "勉強する",
+     "belajar"
+    ],
+    [
+     "毎日",
+     "setiap hari"
+    ],
+    [
+     "単語",
+     "kosakata"
+    ],
+    [
+     "練習する",
+     "berlatih"
+    ]
+   ],
+   "m": "Memperkirakan kemampuan bahasa dan kesungguhan belajar.",
+   "aj": "八か月勉強しました。毎日一時間、単語と会話を練習しています。",
+   "ai": "Saya belajar 8 bulan. Setiap hari saya berlatih kosakata dan percakapan selama satu jam.",
+   "c": "Sebut lama belajar dan cara belajar. Jawaban jujur lebih baik daripada melebih-lebihkan.",
+   "jf": "日本語[にほんご]はどのくらい勉強[べんきょう]しましたか。",
+   "ajf": "八[はち]か月[がつ]勉強[べんきょう]しました。毎日[まいにち]一時間[いちじかん]、単語[たんご]と会話[かいわ]を練習[れんしゅう]しています。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-jiko-08",
+   "k": "jiko",
+   "l": 1,
+   "ja": "健康状態はどうですか。",
+   "id": "Bagaimana kondisi kesehatan Anda?",
+   "v": [
+    [
+     "健康",
+     "sehat"
+    ],
+    [
+     "丈夫",
+     "kuat"
+    ],
+    [
+     "大きな病気",
+     "penyakit berat"
+    ],
+    [
+     "運動",
+     "olahraga"
+    ]
+   ],
+   "m": "Memastikan kandidat sanggup bekerja secara fisik.",
+   "aj": "はい、元気です。大きな病気はありません。毎朝、軽い運動をしています。",
+   "ai": "Ya, saya sehat. Tidak ada penyakit berat. Setiap pagi saya berolahraga ringan.",
+   "c": "Jawab jujur. Perusahaan khawatir soal cuti panjang karena sakit.",
+   "jf": "健康状態[けんこうじょうたい]はどうですか。",
+   "ajf": "はい、元気[げんき]です。大[おお]きな病気[びょうき]はありません。毎朝[まいあさ]、軽[かる]い運動[うんどう]をしています。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-shibou-01",
+   "k": "shibou",
+   "l": 1,
+   "ja": "なぜ工業製品製造の仕事を選びましたか。",
+   "id": "Mengapa Anda memilih pekerjaan manufaktur industri?",
+   "v": [
+    [
+     "製造",
+     "manufaktur"
+    ],
+    [
+     "機械",
+     "mesin"
+    ],
+    [
+     "製品",
+     "produk"
+    ],
+    [
+     "作る",
+     "membuat"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "小さいころから、機械や物を作ることが好きでした。自分が作った製品が使われるのが楽しみです。",
+   "ai": "Sejak kecil saya suka mesin dan membuat sesuatu. Saya senang membayangkan produk buatan saya dipakai orang.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "industrial_mfg",
+   "jf": "なぜ工業製品製造[こうぎょうせいひんせいぞう]の仕事[しごと]を選[えら]びましたか。",
+   "ajf": "小[ちい]さいころから、機械[きかい]や物[もの]を作[つく]ることが好[す]きでした。自分[じぶん]が作[つく]った製品[せいひん]が使[つか]われるのが楽[たの]しみです。"
+  },
+  {
+   "i": "industrial_mfg-shibou-02",
+   "k": "shibou",
+   "l": 2,
+   "ja": "なぜ日本で製造の仕事を学びたいですか。",
+   "id": "Mengapa Anda ingin belajar manufaktur di Jepang?",
+   "v": [
+    [
+     "品質管理",
+     "pengendalian kualitas"
+    ],
+    [
+     "安全管理",
+     "manajemen keselamatan"
+    ],
+    [
+     "学ぶ",
+     "belajar"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "日本の工場は、品質管理や安全管理がとても進んでいると聞きました。その方法を学びたいです。",
+   "ai": "Saya dengar pabrik Jepang sangat maju dalam pengendalian kualitas dan keselamatan. Saya ingin mempelajari metodenya.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "industrial_mfg",
+   "jf": "なぜ日本[にほん]で製造[せいぞう]の仕事[しごと]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の工場[こうじょう]は、品質管理[ひんしつかんり]や安全管理[あんぜんかんり]がとても進[すす]んでいると聞[き]きました。その方法[ほうほう]を学[まな]びたいです。"
+  },
+  {
+   "i": "industrial_mfg-shibou-03",
+   "k": "shibou",
+   "l": 3,
+   "ja": "なぜ当社に応募しましたか。",
+   "id": "Mengapa Anda melamar ke perusahaan kami?",
+   "v": [
+    [
+     "応募する",
+     "melamar"
+    ],
+    [
+     "御社",
+     "perusahaan Anda"
+    ],
+    [
+     "指導",
+     "bimbingan"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "御社は、安全と品質をとても大切にして製品を作っていると聞きました。丁寧に指導してもらえると思って、応募しました。",
+   "ai": "Saya dengar perusahaan Anda membuat produk dengan sangat mengutamakan keselamatan dan kualitas. Saya pikir saya akan dibimbing dengan baik, jadi saya melamar.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "industrial_mfg",
+   "jf": "なぜ当社[とうしゃ]に応募[おうぼ]しましたか。",
+   "ajf": "御社[おんしゃ]は、安全[あんぜん]と品質[ひんしつ]をとても大切[たいせつ]にして製品[せいひん]を作[つく]っていると聞[き]きました。丁寧[ていねい]に指導[しどう]してもらえると思[おも]って、応募[おうぼ]しました。"
+  },
+  {
+   "i": "industrial_mfg-shibou-04",
+   "k": "shibou",
+   "l": 1,
+   "ja": "この仕事に興味を持った理由は何ですか。",
+   "id": "Apa alasan Anda tertarik pada pekerjaan ini?",
+   "v": [
+    [
+     "部品",
+     "suku cadang"
+    ],
+    [
+     "正確",
+     "akurat"
+    ],
+    [
+     "やりがい",
+     "rasa bermakna"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "部品から製品ができあがるのを見るのが好きです。正確に作る仕事に、やりがいを感じます。",
+   "ai": "Saya suka melihat suku cadang menjadi produk jadi. Saya merasa pekerjaan membuat dengan akurat itu bermakna.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "industrial_mfg",
+   "jf": "この仕事[しごと]に興味[きょうみ]を持[も]った理由[りゆう]は何[なん]ですか。",
+   "ajf": "部品[ぶひん]から製品[せいひん]ができあがるのを見[み]るのが好[す]きです。正確[せいかく]に作[つく]る仕事[しごと]に、やりがいを感[かん]じます。"
+  },
+  {
+   "i": "industrial_mfg-shibou-05",
+   "k": "shibou",
+   "l": 2,
+   "ja": "製造の仕事で、一番楽しみなことは何ですか。",
+   "id": "Apa yang paling Anda nantikan dari pekerjaan manufaktur?",
+   "v": [
+    [
+     "使い方",
+     "cara pakai"
+    ],
+    [
+     "覚える",
+     "menghafal/menguasai"
+    ],
+    [
+     "技術",
+     "teknologi"
+    ]
+   ],
+   "m": "Menggali motivasi dan alasan yang tulus untuk bidang ini.",
+   "aj": "新しい機械の使い方を覚えて、できる仕事が増えることです。日本の技術も学びたいです。",
+   "ai": "Mempelajari cara memakai mesin baru sehingga pekerjaan yang bisa saya lakukan bertambah. Saya juga ingin belajar teknologi Jepang.",
+   "c": "Jujur dan spesifik; hubungkan dengan bidang ini, bukan hanya gaji.",
+   "b": "industrial_mfg",
+   "jf": "製造[せいぞう]の仕事[しごと]で、一番楽[いちばんたの]しみなことは何[なん]ですか。",
+   "ajf": "新[あたら]しい機械[きかい]の使[つか]い方[ほう]を覚[おぼ]えて、できる仕事[しごと]が増[ふ]えることです。日本[にほん]の技術[ぎじゅつ]も学[まな]びたいです。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-01",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "工業製品製造の主な仕事は何だと思いますか。",
+   "id": "Menurut Anda, apa pekerjaan utama manufaktur industri?",
+   "v": [
+    [
+     "加工",
+     "pemrosesan"
+    ],
+    [
+     "組み立て",
+     "perakitan"
+    ],
+    [
+     "検査",
+     "inspeksi"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "機械を使って、金属や部品を加工したり、組み立てたりする仕事だと思います。完成した製品の検査もあります。",
+   "ai": "Saya kira pekerjaannya memproses logam dan suku cadang dengan mesin, merakitnya, dan juga memeriksa produk jadi.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "工業製品製造[こうぎょうせいひんせいぞう]の主[おも]な仕事[しごと]は何[なん]だと思[おも]いますか。",
+   "ajf": "機械[きかい]を使[つか]って、金属[きんぞく]や部品[ぶひん]を加工[かこう]したり、組[く]み立[た]てたりする仕事[しごと]だと思[おも]います。完成[かんせい]した製品[せいひん]の検査[けんさ]もあります。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-02",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "朝早くから、または交替で働くことはできますか。",
+   "id": "Bisakah Anda bekerja dari pagi buta atau bergantian shift?",
+   "v": [
+    [
+     "交替勤務",
+     "kerja shift"
+    ],
+    [
+     "リズム",
+     "ritme"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、できます。生活のリズムを作って、体調に気をつけます。",
+   "ai": "Ya, bisa. Saya akan membuat ritme hidup yang teratur dan menjaga kondisi badan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "朝早[あさはや]くから、または交替[こうたい]で働[はたら]くことはできますか。",
+   "ajf": "はい、できます。生活[せいかつ]のリズムを作[つく]って、体調[たいちょう]に気[き]をつけます。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-03",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "工場の中で、一日中立って働けますか。",
+   "id": "Bisakah Anda berdiri bekerja seharian di dalam pabrik?",
+   "v": [
+    [
+     "立つ",
+     "berdiri"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "休み時間",
+     "waktu istirahat"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。立つ仕事に慣れています。休み時間には、足を休めます。",
+   "ai": "Ya, tidak masalah. Saya terbiasa berdiri saat kerja. Saat istirahat saya mengistirahatkan kaki.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "工場[こうじょう]の中[なか]で、一日中立[いちにちじゅうた]って働[はたら]けますか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。立[た]つ仕事[しごと]に慣[な]れています。休[やす]み時間[じかん]には、足[あし]を休[やす]めます。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-04",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "同じ作業を、毎日くり返す仕事ですが、大丈夫ですか。",
+   "id": "Pekerjaan ini mengulang tugas yang sama setiap hari, apakah Anda baik-baik saja?",
+   "v": [
+    [
+     "くり返す",
+     "mengulang"
+    ],
+    [
+     "集中",
+     "konsentrasi"
+    ],
+    [
+     "ていねい",
+     "teliti"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。同じ作業でも、毎回、集中してていねいにやります。",
+   "ai": "Ya, tidak masalah. Walau tugasnya sama, setiap kali saya fokus dan mengerjakannya dengan teliti.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "同[おな]じ作業[さぎょう]を、毎日[まいにち]くり返[かえ]す仕事[しごと]ですが、大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。同[おな]じ作業[さぎょう]でも、毎回[まいかい]、集中[しゅうちゅう]してていねいにやります。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-05",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "機械の音や、油のにおいがある環境でも大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan suara mesin dan bau oli?",
+   "v": [
+    [
+     "音",
+     "suara"
+    ],
+    [
+     "油",
+     "oli"
+    ],
+    [
+     "耳せん",
+     "penyumbat telinga"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。必要なときは、耳せんやマスクをつけます。",
+   "ai": "Ya, tidak masalah. Bila perlu saya memakai penyumbat telinga dan masker.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "機械[きかい]の音[おと]や、油[あぶら]のにおいがある環境[かんきょう]でも大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。必要[ひつよう]なときは、耳[みみ]せんやマスクをつけます。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-06",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "注文が多い時期に、残業があっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan lembur saat pesanan banyak?",
+   "v": [
+    [
+     "注文",
+     "pesanan"
+    ],
+    [
+     "残業",
+     "lembur"
+    ],
+    [
+     "協力",
+     "kerja sama"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。忙しい時期は、チームで協力してがんばります。体調にも気をつけます。",
+   "ai": "Ya, tidak masalah. Saat sibuk kami bekerja sama dan berusaha. Saya juga menjaga kondisi badan.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "注文[ちゅうもん]が多[おお]い時期[じき]に、残業[ざんぎょう]があっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。忙[いそが]しい時期[じき]は、チームで協力[きょうりょく]してがんばります。体調[たいちょう]にも気[き]をつけます。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-07",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "機械を使うとき、何に気をつけますか。",
+   "id": "Apa yang Anda perhatikan saat memakai mesin?",
+   "v": [
+    [
+     "機械",
+     "mesin"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "手を入れる",
+     "memasukkan tangan"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "使う前に、機械の状態を確認します。動いている部分には、手を入れません。使い方が分からないときは、使いません。",
+   "ai": "Sebelum dipakai saya memeriksa kondisi mesin. Saya tidak memasukkan tangan ke bagian yang bergerak. Kalau tidak tahu cara pakainya, saya tidak memakainya.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "機械[きかい]を使[つか]うとき、何[なに]に気[き]をつけますか。",
+   "ajf": "使[つか]う前[まえ]に、機械[きかい]の状態[じょうたい]を確認[かくにん]します。動[うご]いている部分[ぶぶん]には、手[て]を入[い]れません。使[つか]い方[ほう]が分[わ]からないときは、使[つか]いません。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-08",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "熱や火花が出る作業でも大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan pekerjaan yang menghasilkan panas dan percikan api?",
+   "v": [
+    [
+     "火花",
+     "percikan api"
+    ],
+    [
+     "保護めがね",
+     "kacamata pelindung"
+    ],
+    [
+     "熱",
+     "panas"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "はい、大丈夫です。保護めがねや手袋をつけて、先輩の方法を守って作業します。",
+   "ai": "Ya, tidak masalah. Saya memakai kacamata pelindung dan sarung tangan serta mengikuti cara senior.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "熱[あつ]や火花[ひばな]が出[で]る作業[さぎょう]でも大丈夫[だいじょうぶ]ですか。",
+   "ajf": "はい、大丈夫[だいじょうぶ]です。保護[ほご]めがねや手袋[てぶくろ]をつけて、先輩[せんぱい]の方法[ほうほう]を守[まも]って作業[さぎょう]します。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-09",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "製品を作る仕事で、大切なことは何だと思いますか。",
+   "id": "Menurut Anda, apa yang penting dalam pekerjaan membuat produk?",
+   "v": [
+    [
+     "寸法",
+     "ukuran"
+    ],
+    [
+     "手順",
+     "prosedur"
+    ],
+    [
+     "品質",
+     "kualitas"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "決められた寸法や手順を守ることだと思います。ミスがあったら、すぐに報告します。",
+   "ai": "Menurut saya, mematuhi ukuran dan prosedur yang ditentukan. Kalau ada kesalahan saya segera melapor.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "製品[せいひん]を作[つく]る仕事[しごと]で、大切[たいせつ]なことは何[なん]だと思[おも]いますか。",
+   "ajf": "決[き]められた寸法[すんぽう]や手順[てじゅん]を守[まも]ることだと思[おも]います。ミスがあったら、すぐに報告[ほうこく]します。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-10",
+   "k": "shigoto",
+   "l": 1,
+   "ja": "図面や、作業指示書を見ることはできますか。",
+   "id": "Apakah Anda bisa membaca gambar kerja dan lembar instruksi kerja?",
+   "v": [
+    [
+     "図面",
+     "gambar kerja"
+    ],
+    [
+     "指示書",
+     "lembar instruksi"
+    ],
+    [
+     "勉強する",
+     "belajar"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "まだ難しいところもありますが、勉強しています。分からないところは、先輩に聞きます。",
+   "ai": "Masih ada bagian yang sulit, tetapi saya sedang belajar. Bagian yang tidak paham saya tanyakan kepada senior.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "図面[ずめん]や、作業指示書[さぎょうしじしょ]を見[み]ることはできますか。",
+   "ajf": "まだ難[むずか]しいところもありますが、勉強[べんきょう]しています。分[わ]からないところは、先輩[せんぱい]に聞[き]きます。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-11",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "品質に問題がある製品を見つけたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau menemukan produk bermasalah?",
+   "v": [
+    [
+     "不良品",
+     "produk cacat"
+    ],
+    [
+     "報告",
+     "melapor"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "勝手に直したり、捨てたりしないで、すぐに責任者に報告します。",
+   "ai": "Saya tidak memperbaiki atau membuangnya sembarangan, tetapi segera melapor kepada penanggung jawab.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "品質[ひんしつ]に問題[もんだい]がある製品[せいひん]を見[み]つけたら、どうしますか。",
+   "ajf": "勝手[かって]に直[なお]したり、捨[す]てたりしないで、すぐに責任者[せきにんしゃ]に報告[ほうこく]します。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-12",
+   "k": "shigoto",
+   "l": 2,
+   "ja": "5Sという言葉を知っていますか。",
+   "id": "Apakah Anda tahu istilah 5S?",
+   "v": [
+    [
+     "整理整頓",
+     "rapi dan tertata"
+    ],
+    [
+     "清掃",
+     "pembersihan"
+    ],
+    [
+     "職場",
+     "tempat kerja"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "整理、整頓、清掃、清潔、しつけのことだと聞きました。きれいで安全な職場のための大切な決まりだと思います。",
+   "ai": "Saya dengar itu seiri, seiton, seisō, seiketsu, dan shitsuke. Saya kira itu aturan penting untuk tempat kerja yang bersih dan aman.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "5Sという言葉[ことば]を知[し]っていますか。",
+   "ajf": "整理[せいり]、整頓[せいとん]、清掃[せいそう]、清潔[せいけつ]、しつけのことだと聞[き]きました。きれいで安全[あんぜん]な職場[しょくば]のための大切[たいせつ]な決[き]まりだと思[おも]います。"
+  },
+  {
+   "i": "industrial_mfg-shigoto-13",
+   "k": "shigoto",
+   "l": 3,
+   "ja": "測定する道具を使ったことはありますか。",
+   "id": "Apakah Anda pernah memakai alat ukur?",
+   "v": [
+    [
+     "ノギス",
+     "jangka sorong"
+    ],
+    [
+     "測る",
+     "mengukur"
+    ],
+    [
+     "正確",
+     "akurat"
+    ]
+   ],
+   "m": "Memeriksa pemahaman dasar dan kesiapan kandidat terhadap pekerjaan.",
+   "aj": "ノギスや定規を少し使ったことがあります。正しい使い方を、これから勉強します。",
+   "ai": "Saya pernah sedikit memakai jangka sorong dan penggaris. Saya akan mempelajari cara pakai yang benar.",
+   "c": "Jawab singkat dan jujur; tidak perlu jargon teknis.",
+   "b": "industrial_mfg",
+   "jf": "測定[そくてい]する道具[どうぐ]を使[つか]ったことはありますか。",
+   "ajf": "ノギスや定規[じょうぎ]を少[すこ]し使[つか]ったことがあります。正[ただ]しい使[つか]い方[ほう]を、これから勉強[べんきょう]します。"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-01",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で行ってみたい場所はどこですか。",
+   "id": "Tempat mana di Jepang yang ingin Anda kunjungi?",
+   "v": [
+    [
+     "行ってみたい",
+     "ingin mencoba pergi"
+    ],
+    [
+     "富士山",
+     "Gunung Fuji"
+    ],
+    [
+     "休みの日",
+     "hari libur"
+    ],
+    [
+     "電車",
+     "kereta"
+    ]
+   ],
+   "m": "Mengobrol ringan; melihat ketertarikan pada Jepang.",
+   "aj": "富士山に行ってみたいです。写真で見て、とてもきれいだと思いました。休みの日に電車で行きたいです。",
+   "ai": "Saya ingin pergi ke Gunung Fuji. Saya melihat fotonya dan menurut saya sangat indah. Saya ingin pergi naik kereta di hari libur.",
+   "c": "Tambahkan alasan (なぜなら / 〜からです). Jawaban satu kata terlalu singkat.",
+   "jf": "日本[にほん]で行[い]ってみたい場所[ばしょ]はどこですか。",
+   "ajf": "富士山[ふじさん]に行[い]ってみたいです。写真[しゃしん]で見[み]て、とてもきれいだと思[おも]いました。休[やす]みの日[にち]に電車[でんしゃ]で行[い]きたいです。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-02",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本で何をしたいですか。",
+   "id": "Apa yang ingin Anda lakukan di Jepang?",
+   "v": [
+    [
+     "がんばる",
+     "berusaha keras"
+    ],
+    [
+     "上手になる",
+     "menjadi mahir"
+    ],
+    [
+     "いろいろな",
+     "bermacam-macam"
+    ],
+    [
+     "町",
+     "kota"
+    ]
+   ],
+   "m": "Melihat motivasi di luar pekerjaan; apakah kandidat realistis.",
+   "aj": "仕事をがんばって、日本語も上手になりたいです。休みの日には、いろいろな町を見たいです。",
+   "ai": "Saya ingin bekerja keras dan juga mahir berbahasa Jepang. Di hari libur saya ingin melihat berbagai kota.",
+   "c": "Utamakan pekerjaan dan belajar, baru hiburan.",
+   "jf": "日本[にほん]で何[なに]をしたいですか。",
+   "ajf": "仕事[しごと]をがんばって、日本語[にほんご]も上手[じょうず]になりたいです。休[やす]みの日[にち]には、いろいろな町[まち]を見[み]たいです。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-03",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本の生活についてどう思いますか。",
+   "id": "Bagaimana pendapat Anda tentang kehidupan di Jepang?",
+   "v": [
+    [
+     "ルール",
+     "aturan"
+    ],
+    [
+     "ごみの分け方",
+     "cara memilah sampah"
+    ],
+    [
+     "きれい",
+     "bersih"
+    ],
+    [
+     "覚える",
+     "menghafal"
+    ]
+   ],
+   "m": "Melihat kesiapan beradaptasi dengan budaya dan aturan Jepang.",
+   "aj": "ルールが多くて、とてもきれいな国だと思います。ごみの分け方など、早く覚えたいです。",
+   "ai": "Menurut saya Jepang punya banyak aturan dan sangat bersih. Saya ingin cepat menghafal hal seperti cara memilah sampah.",
+   "c": "Tunjukkan kemauan mengikuti aturan. Jangan hanya mengeluh soal biaya hidup/cuaca.",
+   "jf": "日本[にほん]の生活[せいかつ]についてどう思[おも]いますか。",
+   "ajf": "ルールが多[おお]くて、とてもきれいな国[くに]だと思[おも]います。ごみの分[わ]け方[ほう]など、早[はや]く覚[おぼ]えたいです。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-04",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "日本の文化で興味があることは何ですか。",
+   "id": "Apa budaya Jepang yang Anda minati?",
+   "v": [
+    [
+     "文化",
+     "budaya"
+    ],
+    [
+     "お辞儀",
+     "membungkuk (salam)"
+    ],
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "すばらしい",
+     "luar biasa"
+    ]
+   ],
+   "m": "Melihat apakah kandidat menghargai budaya Jepang.",
+   "aj": "お辞儀と、あいさつの文化に興味があります。みんなが丁寧に話すので、すばらしいと思います。",
+   "ai": "Saya tertarik pada budaya membungkuk dan salam. Semua orang berbicara dengan sopan, menurut saya itu luar biasa.",
+   "c": "Budaya kerja (salam, tepat waktu) lebih disukai daripada hanya anime atau game.",
+   "jf": "日本[にほん]の文化[ぶんか]で興味[きょうみ]があることは何[なん]ですか。",
+   "ajf": "お辞儀[じぎ]と、あいさつの文化[ぶんか]に興味[きょうみ]があります。みんなが丁寧[ていねい]に話[はな]すので、すばらしいと思[おも]います。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-05",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "家族は日本で働くことに賛成していますか。",
+   "id": "Apakah keluarga Anda setuju Anda bekerja di Jepang?",
+   "v": [
+    [
+     "賛成する",
+     "setuju"
+    ],
+    [
+     "応援する",
+     "mendukung"
+    ],
+    [
+     "両親",
+     "orang tua"
+    ],
+    [
+     "電話",
+     "telepon"
+    ]
+   ],
+   "m": "Memastikan kandidat tidak akan pulang cepat karena tekanan keluarga.",
+   "aj": "はい、賛成しています。両親は私の夢を応援してくれています。毎週、電話で話すつもりです。",
+   "ai": "Ya, mereka setuju. Orang tua saya mendukung impian saya. Saya berencana menelepon mereka setiap minggu.",
+   "c": "Jawaban 'ya, mendukung' paling aman. Jika keluarga ragu, jelaskan dengan tenang.",
+   "jf": "家族[かぞく]は日本[にほん]で働[はたら]くことに賛成[さんせい]していますか。",
+   "ajf": "はい、賛成[さんせい]しています。両親[りょうしん]は私[わたし]の夢[ゆめ]を応援[おうえん]してくれています。毎週[まいしゅう]、電話[でんわ]で話[はな]すつもりです。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-06",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本で困ったことがあったら、どうしますか。",
+   "id": "Kalau mengalami kesulitan di Jepang, apa yang akan Anda lakukan?",
+   "v": [
+    [
+     "困る",
+     "kesulitan"
+    ],
+    [
+     "相談する",
+     "berkonsultasi"
+    ],
+    [
+     "担当者",
+     "penanggung jawab"
+    ],
+    [
+     "先輩",
+     "senior"
+    ]
+   ],
+   "m": "Menilai apakah kandidat tahu cara meminta bantuan, bukan memendam masalah.",
+   "aj": "まず、会社の担当者や先輩に相談します。わからないままにしないようにします。",
+   "ai": "Pertama, saya akan berkonsultasi dengan penanggung jawab perusahaan atau senior. Saya tidak akan membiarkannya tanpa dipahami.",
+   "c": "Kata kunci: 相談する (konsultasi). Pewawancara suka kandidat yang melapor lebih awal.",
+   "jf": "日本[にほん]で困[こま]ったことがあったら、どうしますか。",
+   "ajf": "まず、会社[かいしゃ]の担当者[たんとうしゃ]や先輩[せんぱい]に相談[そうだん]します。わからないままにしないようにします。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-07",
+   "k": "seikatsu",
+   "l": 1,
+   "ja": "工場が多い町での生活に、不便なことがあっても大丈夫ですか。",
+   "id": "Apakah Anda baik-baik saja dengan ketidaknyamanan hidup di kota industri?",
+   "v": [
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "berangkat kerja"
+    ],
+    [
+     "調べる",
+     "mengecek"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "大丈夫です。寮から工場までの行き方を、事前に調べます。休みの日は、買い物や勉強をします。",
+   "ai": "Tidak masalah. Saya akan mengecek rute dari asrama ke pabrik sebelumnya. Saat libur saya berbelanja dan belajar.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "industrial_mfg",
+   "jf": "工場[こうじょう]が多[おお]い町[まち]での生活[せいかつ]に、不便[ふべん]なことがあっても大丈夫[だいじょうぶ]ですか。",
+   "ajf": "大丈夫[だいじょうぶ]です。寮[りょう]から工場[こうじょう]までの行[い]き方[ほう]を、事前[じぜん]に調[しら]べます。休[やす]みの日[ひ]は、買[か]い物[もの]や勉強[べんきょう]をします。"
+  },
+  {
+   "i": "industrial_mfg-seikatsu-08",
+   "k": "seikatsu",
+   "l": 2,
+   "ja": "日本のものづくりについて、知っていることはありますか。",
+   "id": "Apa yang Anda ketahui tentang monozukuri (pembuatan barang) Jepang?",
+   "v": [
+    [
+     "ものづくり",
+     "pembuatan barang"
+    ],
+    [
+     "品質",
+     "kualitas"
+    ],
+    [
+     "ていねい",
+     "teliti"
+    ]
+   ],
+   "m": "Melihat kesiapan hidup di Jepang.",
+   "aj": "日本の製品は、品質が高くて、長く使えると聞きました。細かいところまで、ていねいに作ることが大切だと思います。",
+   "ai": "Saya dengar produk Jepang berkualitas tinggi dan awet. Menurut saya penting membuat dengan teliti sampai detail kecil.",
+   "c": "Tunjukkan sikap terbuka dan siap beradaptasi.",
+   "b": "industrial_mfg",
+   "jf": "日本[にほん]のものづくりについて、知[し]っていることはありますか。",
+   "ajf": "日本[にほん]の製品[せいひん]は、品質[ひんしつ]が高[たか]くて、長[なが]く使[つか]えると聞[き]きました。細[こま]かいところまで、ていねいに作[つく]ることが大切[たいせつ]だと思[おも]います。"
+  },
+  {
+   "i": "industrial_mfg-mokuhyou-01",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "将来の目標は何ですか。",
+   "id": "Apa tujuan Anda di masa depan?",
+   "v": [
+    [
+     "目標",
+     "tujuan"
+    ],
+    [
+     "身につける",
+     "menguasai"
+    ],
+    [
+     "家族を支える",
+     "menopang keluarga"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "工業製品製造業の仕事の技術をしっかり身につけて、仕事に自信を持てる人になりたいです。そして、将来は家族を支えたいです。",
+   "ai": "Saya ingin menguasai keterampilan di bidang Industrial Manufacturing dan menjadi orang yang percaya diri dalam bekerja. Lalu di masa depan saya ingin menopang keluarga.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "industrial_mfg",
+   "jf": "将来[しょうらい]の目標[もくひょう]は何[なん]ですか。",
+   "ajf": "工業製品製造業[こうぎょうせいひんせいぞうぎょう]の仕事[しごと]の技術[ぎじゅつ]をしっかり身[み]につけて、仕事[しごと]に自信[じしん]を持[も]てる人[ひと]になりたいです。そして、将来[しょうらい]は家族[かぞく]を支[ささ]えたいです。"
+  },
+  {
+   "i": "industrial_mfg-mokuhyou-02",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で何年間働きたいですか。",
+   "id": "Berapa tahun Anda ingin bekerja di Jepang?",
+   "v": [
+    [
+     "〜年間",
+     "selama ... tahun"
+    ],
+    [
+     "まず",
+     "pertama"
+    ],
+    [
+     "チャンス",
+     "kesempatan"
+    ],
+    [
+     "長く",
+     "lama"
+    ]
+   ],
+   "m": "Perusahaan ingin tenaga kerja yang bertahan lama dan tidak berhenti di tengah jalan.",
+   "aj": "まず五年間、がんばりたいです。その後、チャンスがあれば、もっと長く働きたいと思っています。",
+   "ai": "Pertama, saya ingin berusaha selama lima tahun. Setelah itu, jika ada kesempatan, saya ingin bekerja lebih lama.",
+   "c": "Jawaban 'sebentar saja' memberi kesan buruk. Tunjukkan komitmen.",
+   "jf": "日本[にほん]で何年間[なんねんかん]働[はたら]きたいですか。",
+   "ajf": "まず五年間[ごねんかん]、がんばりたいです。その後[のち]、チャンスがあれば、もっと長[なが]く働[はたら]きたいと思[おも]っています。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-mokuhyou-03",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で働いて何を学びたいですか。",
+   "id": "Apa yang ingin Anda pelajari dengan bekerja di Jepang?",
+   "v": [
+    [
+     "学ぶ",
+     "belajar"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "時間を守る",
+     "tepat waktu"
+    ],
+    [
+     "習慣",
+     "kebiasaan"
+    ]
+   ],
+   "m": "Melihat sikap belajar dan penghargaan pada etos kerja Jepang.",
+   "aj": "日本の仕事のやり方と、時間を守る習慣を学びたいです。日本語ももっと上手になりたいです。",
+   "ai": "Saya ingin belajar cara kerja Jepang dan kebiasaan menepati waktu. Saya juga ingin lebih mahir berbahasa Jepang.",
+   "c": "Jawaban tentang uang saja kurang baik. Tonjolkan skill dan sikap kerja.",
+   "jf": "日本[にほん]で働[はたら]いて何[なに]を学[まな]びたいですか。",
+   "ajf": "日本[にほん]の仕事[しごと]のやり方[ほう]と、時間[じかん]を守[まも]る習慣[しゅうかん]を学[まな]びたいです。日本語[にほんご]ももっと上手[じょうず]になりたいです。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-mokuhyou-04",
+   "k": "mokuhyou",
+   "l": 3,
+   "ja": "5年後、どうなりたいですか。",
+   "id": "Lima tahun lagi, Anda ingin menjadi seperti apa?",
+   "v": [
+    [
+     "五年後",
+     "lima tahun lagi"
+    ],
+    [
+     "慣れる",
+     "terbiasa"
+    ],
+    [
+     "後輩",
+     "junior"
+    ],
+    [
+     "合格する",
+     "lulus"
+    ]
+   ],
+   "m": "Melihat rencana karier realistis dan keinginan berkembang.",
+   "aj": "五年後は、仕事に慣れて、後輩に教えられるようになりたいです。日本語もN3に合格したいです。",
+   "ai": "Lima tahun lagi saya ingin terbiasa dengan pekerjaan dan bisa mengajari junior. Saya juga ingin lulus JLPT N3.",
+   "c": "Pakai target konkret (mis. lulus N3, jadi senior yang dipercaya).",
+   "jf": "5年後[ねんご]、どうなりたいですか。",
+   "ajf": "五年[ごねん]後[のち]は、仕事[しごと]に慣[な]れて、後輩[こうはい]に教[おし]えられるようになりたいです。日本語[にほんご]もN3に合格[ごうかく]したいです。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-mokuhyou-05",
+   "k": "mokuhyou",
+   "l": 2,
+   "ja": "日本で製造の仕事を学んだあと、自分の国でどんなことをしたいですか。",
+   "id": "Setelah belajar manufaktur di Jepang, apa yang ingin Anda lakukan di negara sendiri?",
+   "v": [
+    [
+     "機械",
+     "mesin"
+    ],
+    [
+     "品質",
+     "kualitas"
+    ],
+    [
+     "工場",
+     "pabrik"
+    ]
+   ],
+   "m": "Melihat tujuan jangka panjang yang realistis.",
+   "aj": "日本で学んだ機械の使い方や、品質を守る考え方を使って、自分の国の工場で働きたいです。",
+   "ai": "Saya ingin bekerja di pabrik di negara saya dengan memakai cara pakai mesin dan cara berpikir menjaga kualitas yang saya pelajari di Jepang.",
+   "c": "Sebut target konkret dan realistis.",
+   "b": "industrial_mfg",
+   "jf": "日本[にほん]で製造[せいぞう]の仕事[しごと]を学[まな]んだあと、自分[じぶん]の国[くに]でどんなことをしたいですか。",
+   "ajf": "日本[にほん]で学[まな]んだ機械[きかい]の使[つか]い方[ほう]や、品質[ひんしつ]を守[まも]る考[かんが]え方[ほう]を使[つか]って、自分[じぶん]の国[くに]の工場[こうじょう]で働[はたら]きたいです。"
+  },
+  {
+   "i": "industrial_mfg-taiou-01",
+   "k": "taiou",
+   "l": 2,
+   "ja": "先輩や上司から注意されたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ditegur senior atau atasan?",
+   "v": [
+    [
+     "注意される",
+     "ditegur"
+    ],
+    [
+     "素直",
+     "terbuka"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "素直に聞いて、「はい、わかりました」と言います。やり方をメモして、次から気をつけます。",
+   "ai": "Saya mendengarkan dengan terbuka dan berkata \"Ya, saya mengerti\". Saya mencatat caranya dan lebih berhati-hati berikutnya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "先輩[せんぱい]や上司[じょうし]から注意[ちゅうい]されたら、どうしますか。",
+   "ajf": "素直[すなお]に聞[き]いて、「はい、わかりました」と言[い]います。やり方[ほう]をメモして、次[つぎ]から気[き]をつけます。"
+  },
+  {
+   "i": "industrial_mfg-taiou-02",
+   "k": "taiou",
+   "l": 2,
+   "ja": "製品を間違えて作ってしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau keliru membuat produk?",
+   "v": [
+    [
+     "間違える",
+     "keliru"
+    ],
+    [
+     "報告",
+     "melapor"
+    ],
+    [
+     "確認",
+     "pengecekan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに正直に報告します。どうして間違えたか考えて、次は確認を一回多くします。",
+   "ai": "Saya segera melapor jujur. Saya memikirkan penyebab kesalahannya dan lain kali menambah satu kali pengecekan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "製品[せいひん]を間違[まちが]えて作[つく]ってしまったら、どうしますか。",
+   "ajf": "すぐに正直[しょうじき]に報告[ほうこく]します。どうして間違[まちが]えたか考[かんが]えて、次[つぎ]は確認[かくにん]を一回多[いっかいおお]くします。"
+  },
+  {
+   "i": "industrial_mfg-taiou-03",
+   "k": "taiou",
+   "l": 3,
+   "ja": "同僚と作業の方法で意見が合わなかったら、どうしますか。",
+   "id": "Jika pendapat Anda berbeda dengan rekan soal cara kerja, apa yang Anda lakukan?",
+   "v": [
+    [
+     "意見",
+     "pendapat"
+    ],
+    [
+     "責任者",
+     "penanggung jawab"
+    ],
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "従う",
+     "mengikuti"
+    ]
+   ],
+   "m": "Menilai kerja sama dan kepatuhan.",
+   "aj": "まず相手の意見を聞きます。決まらないときは、責任者に聞いて、その指示に従います。",
+   "ai": "Pertama saya mendengar pendapat rekan. Jika tidak selesai, saya bertanya pada penanggung jawab dan mengikuti instruksinya.",
+   "c": "Ikuti instruksi penanggung jawab.",
+   "jf": "同僚[どうりょう]と作業[さぎょう]の方法[ほうほう]で意見[いけん]が合[あ]わなかったら、どうしますか。",
+   "ajf": "まず相手[あいて]の意見[いけん]を聞[き]きます。決[き]まらないときは、責任者[せきにんしゃ]に聞[き]いて、その指示[しじ]に従[したが]います。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-taiou-04",
+   "k": "taiou",
+   "l": 1,
+   "ja": "やり方が分からないとき、どうしますか。",
+   "id": "Jika Anda tidak tahu caranya, apa yang Anda lakukan?",
+   "v": [
+    [
+     "やり方",
+     "cara"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ],
+    [
+     "勝手",
+     "sembarangan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Memastikan kandidat bertanya, tidak asal bekerja.",
+   "aj": "勝手にやらないで、すぐに聞きます。教えてもらったことはメモして、次は自分でできるようにします。",
+   "ai": "Saya tidak bekerja sembarangan dan segera bertanya. Yang diajarkan saya catat agar lain kali bisa sendiri.",
+   "c": "Kata kunci: 質問・メモ.",
+   "jf": "やり方[ほう]が分[わ]からないとき、どうしますか。",
+   "ajf": "勝手[かって]にやらないで、すぐに聞[き]きます。教[おし]えてもらったことはメモして、次[つぎ]は自分[じぶん]でできるようにします。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-taiou-05",
+   "k": "taiou",
+   "l": 2,
+   "ja": "体調が悪いときは、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau kondisi badan buruk?",
+   "v": [
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "無理",
+     "memaksakan"
+    ],
+    [
+     "連絡",
+     "menghubungi"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "無理をしないで、すぐに上司に連絡します。体調が悪いまま作業すると、事故やミスにつながるからです。",
+   "ai": "Saya tidak memaksakan diri dan segera menghubungi atasan. Bekerja dalam kondisi buruk bisa menyebabkan kecelakaan atau kesalahan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "体調[たいちょう]が悪[わる]いときは、どうしますか。",
+   "ajf": "無理[むり]をしないで、すぐに上司[じょうし]に連絡[れんらく]します。体調[たいちょう]が悪[わる]いまま作業[さぎょう]すると、事故[じこ]やミスにつながるからです。"
+  },
+  {
+   "i": "industrial_mfg-taiou-06",
+   "k": "taiou",
+   "l": 3,
+   "ja": "急に、作業の予定が変わったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau rencana kerja berubah mendadak?",
+   "v": [
+    [
+     "急に",
+     "mendadak"
+    ],
+    [
+     "指示",
+     "instruksi"
+    ],
+    [
+     "予定",
+     "rencana"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "責任者の指示をよく聞いて、新しい作業を始めます。分からないときは、すぐに聞きます。",
+   "ai": "Saya mendengarkan instruksi penanggung jawab dan memulai pekerjaan baru. Kalau tidak paham, saya langsung bertanya.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "急[きゅう]に、作業[さぎょう]の予定[よてい]が変[か]わったら、どうしますか。",
+   "ajf": "責任者[せきにんしゃ]の指示[しじ]をよく聞[き]いて、新[あたら]しい作業[さぎょう]を始[はじ]めます。分[わ]からないときは、すぐに聞[き]きます。"
+  },
+  {
+   "i": "industrial_mfg-taiou-07",
+   "k": "taiou",
+   "l": 2,
+   "ja": "日本人の同僚と、うまく話せなかったらどうしますか。",
+   "id": "Apa yang Anda lakukan kalau tidak bisa berbicara lancar dengan rekan kerja orang Jepang?",
+   "v": [
+    [
+     "うまく",
+     "dengan baik"
+    ],
+    [
+     "もう一度",
+     "sekali lagi"
+    ],
+    [
+     "ゆっくり",
+     "pelan-pelan"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "もう一度ゆっくり話してもらうようにお願いします。わからなかった言葉は、メモして勉強します。",
+   "ai": "Saya minta mereka mengulang lebih pelan. Kata yang tidak saya pahami saya catat dan pelajari.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "日本人[にほんじん]の同僚[どうりょう]と、うまく話[はな]せなかったらどうしますか。",
+   "ajf": "もう一度[いちど]ゆっくり話[はな]してもらうようにお願[ねが]いします。わからなかった言葉[ことば]は、メモして勉強[べんきょう]します。"
+  },
+  {
+   "i": "industrial_mfg-taiou-08",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械が急に止まったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau mesin mendadak berhenti?",
+   "v": [
+    [
+     "止まる",
+     "berhenti"
+    ],
+    [
+     "電源",
+     "daya listrik"
+    ],
+    [
+     "知らせる",
+     "memberi tahu"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "自分で直さないで、すぐに電源を切って、責任者に知らせます。",
+   "ai": "Saya tidak memperbaikinya sendiri, segera mematikan daya dan memberi tahu penanggung jawab.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "機械[きかい]が急[きゅう]に止[と]まったら、どうしますか。",
+   "ajf": "自分[じぶん]で直[なお]さないで、すぐに電源[でんげん]を切[き]って、責任者[せきにんしゃ]に知[し]らせます。"
+  },
+  {
+   "i": "industrial_mfg-taiou-09",
+   "k": "taiou",
+   "l": 2,
+   "ja": "作業のペースが遅いと言われたら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau dibilang kerja Anda lambat?",
+   "v": [
+    [
+     "ペース",
+     "kecepatan"
+    ],
+    [
+     "コツ",
+     "trik"
+    ],
+    [
+     "練習",
+     "latihan"
+    ]
+   ],
+   "m": "Menerima kritik.",
+   "aj": "まず、「すみません」と言って、早い人のやり方をよく見ます。コツを教えてもらって、毎日練習します。",
+   "ai": "Pertama saya bilang \"maaf\" dan mengamati cara orang yang cepat. Saya minta diajari triknya dan berlatih tiap hari.",
+   "c": "Terima kritik dengan baik.",
+   "jf": "作業[さぎょう]のペースが遅[おそ]いと言[い]われたら、どうしますか。",
+   "ajf": "まず、「すみません」と言[い]って、早[はや]い人[にん]のやり方[ほう]をよく見[み]ます。コツを教[おし]えてもらって、毎日[まいにち]練習[れんしゅう]します。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-taiou-10",
+   "k": "taiou",
+   "l": 2,
+   "ja": "機械や道具を壊してしまったら、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau merusak mesin atau alat?",
+   "v": [
+    [
+     "壊す",
+     "merusak"
+    ],
+    [
+     "正直に",
+     "dengan jujur"
+    ],
+    [
+     "報告",
+     "melapor"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "すぐに作業を止めて、正直に責任者に報告します。隠さないで、謝って、どうすればいいか聞きます。",
+   "ai": "Saya segera menghentikan pekerjaan dan melapor jujur kepada penanggung jawab. Saya tidak menyembunyikannya, meminta maaf, dan bertanya apa yang harus dilakukan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "機械[きかい]や道具[どうぐ]を壊[こわ]してしまったら、どうしますか。",
+   "ajf": "すぐに作業[さぎょう]を止[と]めて、正直[しょうじき]に責任者[せきにんしゃ]に報告[ほうこく]します。隠[かく]さないで、謝[あやま]って、どうすればいいか聞[き]きます。"
+  },
+  {
+   "i": "industrial_mfg-taiou-11",
+   "k": "taiou",
+   "l": 3,
+   "ja": "忙しい時期で、疲れているとき、どう気持ちを保ちますか。",
+   "id": "Bagaimana Anda menjaga semangat saat sibuk dan lelah?",
+   "v": [
+    [
+     "疲れる",
+     "lelah"
+    ],
+    [
+     "体調",
+     "kondisi badan"
+    ],
+    [
+     "睡眠",
+     "tidur"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "忙しい時期は短いと理解しています。しっかり寝て、食事をとって、体調を保ちます。",
+   "ai": "Saya paham musim sibuk itu singkat. Saya tidur cukup, makan baik, dan menjaga kondisi badan.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "忙[いそが]しい時期[じき]で、疲[つか]れているとき、どう気持[きも]ちを保[たも]ちますか。",
+   "ajf": "忙[いそが]しい時期[じき]は短[みじか]いと理解[りかい]しています。しっかり寝[ね]て、食事[しょくじ]をとって、体調[たいちょう]を保[たも]ちます。"
+  },
+  {
+   "i": "industrial_mfg-taiou-12",
+   "k": "taiou",
+   "l": 1,
+   "ja": "先輩の説明が専門用語ばかりで、分からないとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau penjelasan senior penuh istilah teknis yang tidak Anda pahami?",
+   "v": [
+    [
+     "専門用語",
+     "istilah teknis"
+    ],
+    [
+     "意味",
+     "arti"
+    ],
+    [
+     "復習",
+     "mengulang pelajaran"
+    ]
+   ],
+   "m": "Menilai sikap dan respons kandidat di tempat kerja.",
+   "aj": "「すみません、この言葉の意味を教えてください」と聞きます。メモして、あとで復習します。",
+   "ai": "Saya bertanya \"Maaf, tolong jelaskan arti kata ini\". Saya mencatatnya dan mengulang pelajarannya nanti.",
+   "c": "Kata kunci: 報告・連絡・相談, jujur, dan utamakan keselamatan.",
+   "b": "industrial_mfg",
+   "jf": "先輩[せんぱい]の説明[せつめい]が専門用語[せんもんようご]ばかりで、分[わ]からないとき、どうしますか。",
+   "ajf": "「すみません、この言葉[ことば]の意味[いみ]を教[おし]えてください」と聞[き]きます。メモして、あとで復習[ふくしゅう]します。"
+  },
+  {
+   "i": "industrial_mfg-tim-01",
+   "k": "tim",
+   "l": 1,
+   "ja": "ラインで、チームの人と、どのように作業を分けますか。",
+   "id": "Di lini produksi, bagaimana Anda membagi kerja dengan tim?",
+   "v": [
+    [
+     "工程",
+     "proses"
+    ],
+    [
+     "担当",
+     "penanggung jawab tugas"
+    ],
+    [
+     "手伝う",
+     "membantu"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "責任者の指示で、担当の工程が決まります。早く終わったら、遅れている人を手伝います。",
+   "ai": "Sesuai instruksi penanggung jawab, proses yang menjadi tugas saya ditentukan. Kalau selesai lebih dulu, saya membantu yang tertinggal.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "industrial_mfg",
+   "jf": "ラインで、チームの人[ひと]と、どのように作業[さぎょう]を分[わ]けますか。",
+   "ajf": "責任者[せきにんしゃ]の指示[しじ]で、担当[たんとう]の工程[こうてい]が決[き]まります。早[はや]く終[お]わったら、遅[おそ]れている人[ひと]を手伝[てつだ]います。"
+  },
+  {
+   "i": "industrial_mfg-tim-02",
+   "k": "tim",
+   "l": 2,
+   "ja": "前の工程の人にミスがあったとき、どうしますか。",
+   "id": "Apa yang Anda lakukan kalau ada kesalahan dari proses sebelumnya?",
+   "v": [
+    [
+     "工程",
+     "proses"
+    ],
+    [
+     "知らせる",
+     "memberi tahu"
+    ],
+    [
+     "確認",
+     "memastikan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "責めないで、すぐに責任者に知らせます。次の人が困らないように、確認します。",
+   "ai": "Saya tidak menyalahkan, tetapi segera memberi tahu penanggung jawab. Saya memeriksa agar orang berikutnya tidak kesulitan.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "industrial_mfg",
+   "jf": "前[まえ]の工程[こうてい]の人[ひと]にミスがあったとき、どうしますか。",
+   "ajf": "責[せ]めないで、すぐに責任者[せきにんしゃ]に知[し]らせます。次[つぎ]の人[ひと]が困[こま]らないように、確認[かくにん]します。"
+  },
+  {
+   "i": "industrial_mfg-tim-03",
+   "k": "tim",
+   "l": 2,
+   "ja": "交替の時、次の人に、どのように引き継ぎますか。",
+   "id": "Bagaimana Anda serah terima kepada orang shift berikutnya?",
+   "v": [
+    [
+     "引き継ぎ",
+     "serah terima"
+    ],
+    [
+     "進み具合",
+     "kemajuan"
+    ],
+    [
+     "メモ",
+     "catatan"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "機械の様子と、作業の進み具合を、はっきり伝えます。メモも残します。",
+   "ai": "Saya menyampaikan kondisi mesin dan kemajuan pekerjaan dengan jelas. Saya juga meninggalkan catatan.",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "industrial_mfg",
+   "jf": "交替[こうたい]の時[じ]、次[つぎ]の人[ひと]に、どのように引[ひ]き継[つ]ぎますか。",
+   "ajf": "機械[きかい]の様子[ようす]と、作業[さぎょう]の進[すす]み具合[ぐあい]を、はっきり伝[つた]えます。メモも残[のこ]します。"
+  },
+  {
+   "i": "industrial_mfg-tim-04",
+   "k": "tim",
+   "l": 1,
+   "ja": "工場の仲間と、どのように仲良くなりたいですか。",
+   "id": "Bagaimana Anda ingin akrab dengan rekan di pabrik?",
+   "v": [
+    [
+     "あいさつ",
+     "salam"
+    ],
+    [
+     "仲間",
+     "rekan"
+    ],
+    [
+     "仲良くなる",
+     "menjadi akrab"
+    ]
+   ],
+   "m": "Menilai kerja sama dan komunikasi dalam tim.",
+   "aj": "毎日、元気にあいさつをします。教えてもらったときは、「ありがとうございます」と言います。",
+   "ai": "Setiap hari saya menyapa dengan semangat. Saat diajari, saya mengatakan \"Terima kasih\".",
+   "c": "Tunjukkan kerja sama, bertanya, dan berterima kasih.",
+   "b": "industrial_mfg",
+   "jf": "工場[こうじょう]の仲間[なかま]と、どのように仲良[なかよ]くなりたいですか。",
+   "ajf": "毎日[まいにち]、元気[げんき]にあいさつをします。教[おし]えてもらったときは、「ありがとうございます」と言[い]います。"
+  },
+  {
+   "i": "industrial_mfg-anzen-01",
+   "k": "anzen",
+   "l": 1,
+   "ja": "工場に入るとき、必ず身につけるものは何ですか。",
+   "id": "Apa yang wajib dikenakan saat memasuki pabrik?",
+   "v": [
+    [
+     "安全靴",
+     "sepatu keselamatan"
+    ],
+    [
+     "保護めがね",
+     "kacamata pelindung"
+    ],
+    [
+     "作業服",
+     "pakaian kerja"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "ヘルメットや帽子、作業服、安全靴を必ず着けます。必要なときは、保護めがねや手袋も使います。",
+   "ai": "Saya wajib memakai helm atau topi, pakaian kerja, dan sepatu keselamatan. Bila perlu saya juga memakai kacamata pelindung dan sarung tangan.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "industrial_mfg",
+   "jf": "工場[こうじょう]に入[はい]るとき、必[かなら]ず身[み]につけるものは何[なん]ですか。",
+   "ajf": "ヘルメットや帽子[ぼうし]、作業服[さぎょうふく]、安全靴[あんぜんぐつ]を必[かなら]ず着[つ]けます。必要[ひつよう]なときは、保護[ほご]めがねや手袋[てぶくろ]も使[つか]います。"
+  },
+  {
+   "i": "industrial_mfg-anzen-02",
+   "k": "anzen",
+   "l": 2,
+   "ja": "機械を掃除したり、直したりするとき、何をしますか。",
+   "id": "Apa yang Anda lakukan saat membersihkan atau memperbaiki mesin?",
+   "v": [
+    [
+     "電源",
+     "daya listrik"
+    ],
+    [
+     "札",
+     "tanda/label"
+    ],
+    [
+     "止める",
+     "menghentikan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "必ず機械を止めて、電源を切ります。「作業中」の札を付けて、ほかの人が動かさないようにします。",
+   "ai": "Saya pasti menghentikan mesin dan mematikan daya. Saya memasang tanda \"sedang dikerjakan\" agar orang lain tidak menyalakannya.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "industrial_mfg",
+   "jf": "機械[きかい]を掃除[そうじ]したり、直[なお]したりするとき、何[なに]をしますか。",
+   "ajf": "必[かなら]ず機械[きかい]を止[と]めて、電源[でんげん]を切[き]ります。「作業中[さぎょうちゅう]」の札[ふだ]を付[つ]けて、ほかの人[ひと]が動[うご]かさないようにします。"
+  },
+  {
+   "i": "industrial_mfg-anzen-03",
+   "k": "anzen",
+   "l": 2,
+   "ja": "機械で、指や服が巻き込まれないために、何をしますか。",
+   "id": "Apa yang Anda lakukan agar jari dan pakaian tidak terjerat mesin?",
+   "v": [
+    [
+     "巻き込まれる",
+     "terjerat"
+    ],
+    [
+     "髪",
+     "rambut"
+    ],
+    [
+     "ゆるい",
+     "longgar"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "回っている部分には、手を近づけません。手袋やゆるい服は、使わないときもあります。長い髪は、まとめます。",
+   "ai": "Saya tidak mendekatkan tangan ke bagian yang berputar. Kadang sarung tangan dan pakaian longgar tidak dipakai. Rambut panjang saya ikat.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "industrial_mfg",
+   "jf": "機械[きかい]で、指[ゆび]や服[ふく]が巻[ま]き込[こ]まれないために、何[なに]をしますか。",
+   "ajf": "回[まわ]っている部分[ぶぶん]には、手[て]を近[ちか]づけません。手袋[てぶくろ]やゆるい服[ふく]は、使[つか]わないときもあります。長[なが]い髪[かみ]は、まとめます。"
+  },
+  {
+   "i": "industrial_mfg-anzen-04",
+   "k": "anzen",
+   "l": 3,
+   "ja": "重いものを運ぶとき、どうしますか。",
+   "id": "Apa yang Anda lakukan saat mengangkat barang berat?",
+   "v": [
+    [
+     "腰",
+     "pinggang"
+    ],
+    [
+     "ひざ",
+     "lutut"
+    ],
+    [
+     "頼む",
+     "meminta bantuan"
+    ]
+   ],
+   "m": "Menilai kesadaran keselamatan dan kebersihan.",
+   "aj": "一人で持てないときは、ほかの人に頼みます。腰を曲げないで、ひざを使って持ち上げます。",
+   "ai": "Kalau tidak sanggup sendiri, saya minta bantuan orang lain. Saya mengangkat dengan menekuk lutut, bukan membungkuk dari pinggang.",
+   "c": "Sebut APD/aturan keselamatan dan lapor bila ada bahaya.",
+   "b": "industrial_mfg",
+   "jf": "重[おも]いものを運[はこ]ぶとき、どうしますか。",
+   "ajf": "一人[ひとり]で持[も]てないときは、ほかの人[ひと]に頼[たの]みます。腰[こし]を曲[ま]げないで、ひざを使[つか]って持[も]ち上[うえ]げます。"
+  },
+  {
+   "i": "industrial_mfg-saigo-01",
+   "k": "saigo",
+   "l": 2,
+   "ja": "最後に何か質問はありますか。",
+   "id": "Terakhir, apakah ada yang ingin Anda tanyakan?",
+   "v": [
+    [
+     "最後に",
+     "terakhir"
+    ],
+    [
+     "質問",
+     "pertanyaan"
+    ],
+    [
+     "入社前",
+     "sebelum bergabung"
+    ],
+    [
+     "勉強しておく",
+     "belajar lebih dulu"
+    ]
+   ],
+   "m": "Melihat antusiasme dan kemampuan bertanya dengan sopan.",
+   "aj": "はい、一つあります。仕事を早く覚えるために、入社前に勉強しておいたほうがいいことはありますか。",
+   "ai": "Ya, ada satu. Agar cepat menguasai pekerjaan, apakah ada hal yang sebaiknya saya pelajari sebelum bergabung?",
+   "c": "Jangan menjawab 'tidak ada' begitu saja. Bertanya tentang belajar menunjukkan semangat. Hindari bertanya soal gaji di awal.",
+   "jf": "最後[さいご]に何[なに]か質問[しつもん]はありますか。",
+   "ajf": "はい、一[ひと]つあります。仕事[しごと]を早[はや]く覚[おぼ]えるために、入社前[にゅうしゃまえ]に勉強[べんきょう]しておいたほうがいいことはありますか。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-saigo-02",
+   "k": "saigo",
+   "l": 2,
+   "ja": "当社について何か聞きたいことはありますか。",
+   "id": "Adakah yang ingin Anda ketahui tentang perusahaan kami?",
+   "v": [
+    [
+     "当社",
+     "perusahaan kami"
+    ],
+    [
+     "寮",
+     "asrama"
+    ],
+    [
+     "通勤",
+     "pergi-pulang kerja"
+    ],
+    [
+     "教えていただけますか",
+     "boleh tolong beritahu saya?"
+    ]
+   ],
+   "m": "Melihat apakah kandidat sudah mencari tahu tentang perusahaan.",
+   "aj": "寮や通勤の方法について、教えていただけますか。",
+   "ai": "Boleh tolong beritahu saya tentang asrama dan cara pergi ke tempat kerja?",
+   "c": "Tanyakan hal praktis dan sopan (asrama, pelatihan). AI tidak akan mengarang info perusahaan.",
+   "jf": "当社[とうしゃ]について何[なに]か聞[き]きたいことはありますか。",
+   "ajf": "寮[りょう]や通勤[つうきん]の方法[ほうほう]について、教[おし]えていただけますか。",
+   "b": "industrial_mfg"
+  },
+  {
+   "i": "industrial_mfg-saigo-03",
+   "k": "saigo",
+   "l": 1,
+   "ja": "仕事の前に、どんな服や持ち物を用意したらいいですか。",
+   "id": "Pakaian dan barang apa yang sebaiknya saya siapkan sebelum bekerja?",
+   "v": [
+    [
+     "持ち物",
+     "barang bawaan"
+    ],
+    [
+     "準備する",
+     "menyiapkan"
+    ],
+    [
+     "服",
+     "pakaian"
+    ]
+   ],
+   "m": "Memberi kesempatan bertanya; menilai antusiasme.",
+   "aj": "はい、仕事の前に、どんな服や靴、持ち物を準備したらいいか、教えてください。",
+   "ai": "Ya, tolong beri tahu pakaian, sepatu, dan barang apa yang sebaiknya saya siapkan sebelum bekerja.",
+   "c": "Siapkan satu pertanyaan sopan tentang pekerjaan.",
+   "b": "industrial_mfg",
+   "jf": "仕事[しごと]の前[まえ]に、どんな服[ふく]や持[も]ち物[もの]を用意[ようい]したらいいですか。",
+   "ajf": "はい、仕事[しごと]の前[まえ]に、どんな服[ふく]や靴[くつ]、持[も]ち物[もの]を準備[じゅんび]したらいいか、教[おし]えてください。"
+  }
+ ]
+}

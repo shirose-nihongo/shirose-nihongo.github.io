@@ -8,6 +8,22 @@ import * as EN from "./mensetsu-engine.js";
 
 let X = null;   // konteks dari mensetsu.js
 export function initPrep(ctx) { X = ctx; }
+export const getX = () => X;
+/* Hadiah XP + koin (dompet tunggal lewat window.awardXP). harian=false → sekali seumur akun per (jenis,bidang,id);
+ * harian=true → sekali per hari. cap = batas jumlah hadiah/hari untuk jenis itu (anti-farming). */
+export function bayar(jenis, key, id, xp, koin, { harian = false, cap = 60 } = {}) {
+  try {
+    if (!window.awardXP) return false;
+    const u = X.uid(), tgl = new Date().toISOString().slice(0, 10);
+    const kS = "shirose-mx-bayar:" + u, kH = "shirose-mx-bayar-h:" + u + ":" + tgl + ":" + jenis;
+    const S = X.LS.get(kS, {}), H = X.LS.get(kH, { n: 0, s: {} }), ik = key + "|" + id;
+    if (harian ? H.s[ik] : S[jenis + "|" + ik]) return false;
+    if (H.n >= cap) return false;
+    H.n++; if (harian) H.s[ik] = 1; else S[jenis + "|" + ik] = 1;
+    X.LS.set(kS, S); X.LS.set(kH, H);
+    window.awardXP(xp, koin); return true;
+  } catch (e) { return false; }
+}
 const esc = (s) => X.esc(s);
 const toast = (m) => X.toast(m);
 const isJiko = (q) => /^自己紹介/.test(q.ja);
@@ -328,7 +344,8 @@ const PP = {
     a.asli = ta.value; a.updated = Date.now(); if (a.diterima && a.koreksi) { /* edit setelah menerima: tetap pakai versi perbaikan sampai ditolak */ }
     persist();
   },
-  async simpan(id) { flushTextarea(); const ok = await persist(true); toast(ok ? "Jawaban disimpan." : "Disimpan di perangkat; sinkron akun gagal."); },
+  async simpan(id) { flushTextarea(); const ok = await persist(true); toast(ok ? "Jawaban disimpan." : "Disimpan di perangkat; sinkron akun gagal."); PP._bayarJawab(id); },
+  _bayarJawab(id) { const a = P.data.answers[id]; if (a && /[ぁ-んァ-ン一-鿿]/.test(a.asli || "") && (a.asli || "").trim().length >= 8) bayar("jawab", P.key, id, 60, 20, { cap: 40 }); },
   contoh(id) {
     const q = qOf(id), box = document.getElementById("pp-contoh"); if (!box) return;
     box.classList.toggle("hidden"); box.innerHTML = `<b>Contoh dari bank soal (hanya referensi — jangan dihafal mentah):</b><p class="jp">${ajh(q)}</p><p class="ms-note">${esc(q.ai || "")}</p>${q.aj ? `<button class="btn ghost sm" onclick="PP.pakaiContoh('${id}')">Salin contoh ke editor</button>` : ""}`;
@@ -348,7 +365,7 @@ const PP = {
     if (!ev) ev = cekDasar(text, q);
     a.ev = ev; a.koreksi = ev.benar || a.koreksi; if (ev.benar) a.diterima = false;
     a.riwayat = [...(a.riwayat || []), { t: Date.now(), asli: text, koreksi: ev.benar, skor: ev.kealamian.skor, sumber: ev.sumber, keputusan: "" }].slice(-MAXHIST);
-    a.updated = Date.now(); await persist(true); P.open = id; await rerender();
+    a.updated = Date.now(); await persist(true); PP._bayarJawab(id); if (ev.sumber && ev.sumber !== "dasar") bayar("ai", P.key, id, 60, 20, { harian: true, cap: 30 }); P.open = id; await rerender();
     document.getElementById("pp-evwrap")?.scrollIntoView({ behavior: "smooth", block: "start" });
   },
   pakai(id, yes) {
@@ -573,7 +590,7 @@ Object.assign(PP, {
   pm(k, v) { const o = pmOpt(); o[k] = v; X.LS.set(PM_KEY, o); rerender(); },
   async pmCopy() {
     const t = document.getElementById("pm-text")?.value || ""; if (!t) return;
-    try { await navigator.clipboard.writeText(t); toast("Prompt disalin. Tempel di chat baru."); }
+    try { await navigator.clipboard.writeText(t); toast("Prompt disalin. Tempel di chat baru."); bayar("prompt", (location.hash.split("/")[1] || "x"), "salin", 40, 20, { harian: true, cap: 3 }); }
     catch (e) { const el = document.getElementById("pm-text"); el.removeAttribute("readonly"); el.select(); let ok = false; try { ok = document.execCommand("copy"); } catch (e2) {} el.setAttribute("readonly", ""); toast(ok ? "Prompt disalin. Tempel di chat baru." : "Gagal menyalin otomatis — teks sudah terpilih, salin manual."); }
   },
 });
