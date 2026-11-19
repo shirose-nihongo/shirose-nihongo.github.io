@@ -574,6 +574,17 @@ async function _koinTulisSaja(delta, alasan) {
 
 /* ===== REWARD LOGIN 30 HARI: siswa/{uid}/login_reward/main = {hari, last, siklus, pending} (+ cadangan localStorage) ===== */
 export function emailSaatIni() { return (currentUser && currentUser.email || "").toLowerCase(); }
+export function namaSaatIni() { return String((currentSiswaDoc && currentSiswaDoc.nama) || (currentUser && currentUser.displayName) || ""); }
+export async function getRewardFlag(id) {   // penanda sekali-pakai (mis. refund) di siswa/{uid}/login_reward/{id} + cadangan lokal
+  if (!currentUser) return true; const k = "shirose-rwflag:" + currentUser.uid + ":" + id;
+  try { if (localStorage.getItem(k)) return true; } catch (e) {}
+  try { const sn = await getDoc(doc(db, "siswa", currentUser.uid, "login_reward", id)); if (sn.exists()) { try { localStorage.setItem(k, "1"); } catch (e) {} return true; } } catch (e) { return true; }   // gagal baca → jangan beri (aman)
+  return false;
+}
+export async function setRewardFlag(id) {
+  if (!currentUser) return; try { localStorage.setItem("shirose-rwflag:" + currentUser.uid + ":" + id, "1"); } catch (e) {}
+  await setDoc(doc(db, "siswa", currentUser.uid, "login_reward", id), { t: Date.now(), ok: true });
+}
 export async function getLoginReward() {
   if (!currentUser) return null; const k = "shirose-loginrw:" + currentUser.uid; let loc = null;
   try { loc = JSON.parse(localStorage.getItem(k) || "null"); } catch (e) {}

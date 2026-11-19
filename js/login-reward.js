@@ -1,8 +1,8 @@
 /* REWARD LOGIN 30 HARI + PETI PILIH-1-DARI-5. Hari 3 hadiah kecil, hari 7/15/30 peti. Satu klaim per hari kalender (lokal).
  * Progres: siswa/{uid}/login_reward/main {hari,last,pending}. Peti: 5 barang acak (belum dimiliki) → pilih 1 → masuk inventaris. */
 import { ITEMS } from "../cloudflare/gacha-items.js";
-import { PET } from "./character-pet.js?v=20261119j";
-import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261119j";
+import { PET } from "./character-pet.js?v=20261119n";
+import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261119n";
 /* gambar barang: karakter memakai barang itu (SVG animasi bawaan item + efek melayang/bersinar per kelangkaan) */
 const KAT_OF = {}; for (const [k, o] of Object.entries(CATALOG)) for (const id of Object.keys(o)) if (id !== "none") KAT_OF[id] = k;
 const ANIM = { item_tangan: "gaSwing", aura: "gaPulse", sayap: "gaFlap", aksesori: "gaBob", pakaian: "gaBob", celana: "gaBob", sepatu: "gaBob", rambut: "gaBob" };
@@ -118,7 +118,19 @@ const LR = window.LR = {
 };
 /* Auto-buka sekali per sesi bila ada klaim/peti tertunda */
 let _auto = false;
+/* Refund sekali: akun "nufus" kehilangan koin gacha → +1000 koin (penanda disimpan SEBELUM koin diberikan agar tidak ganda) */
+async function refundCek() {
+  try {
+    const id = "refund_gacha_1000", em = (FB.emailSaatIni ? FB.emailSaatIni() : ""), nm = (FB.namaSaatIni ? FB.namaSaatIni() : "");
+    if (!/nufus/i.test(em + " " + nm)) return;
+    if (await FB.getRewardFlag(id)) return;
+    await FB.setRewardFlag(id);
+    await window.awardKoin(1000, "Refund koin gacha hilang");
+    window.toast && window.toast("💰 Refund koin gacha: +1000 🪙");
+  } catch (e) { console.warn("refund:", e.message); }
+}
 export async function cekLoginReward() {
+  refundCek();
   if (_auto || !FB) return; _auto = true;
   try { const rw = await muat(); if (rw.pending || rw.last !== ymd()) setTimeout(bukaLoginReward, 800); } catch (e) {}
 }

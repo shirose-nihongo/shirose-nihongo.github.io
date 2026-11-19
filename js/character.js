@@ -1011,7 +1011,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     if (fem) { const ln = femFaceSvg.split("\n"); femFaceSvg = [ln[0], `<g data-slot="mata">${_mt}</g>`, ...ln.slice(9)].join("\n"); }
     else base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, `<g data-slot="mata">${_mt}</g>`);
   }
-  const petSvg = (eq.pet && eq.pet !== "none" && PET[eq.pet]?.svg) ? `<g data-slot="pet" transform="translate(14 398) scale(1.3)">${PET[eq.pet].svg()}</g>` : "";
+  const petSvg = (eq.pet && eq.pet !== "none" && PET[eq.pet]?.svg) ? `<g data-slot="pet" transform="${PET[eq.pet].tf || "translate(14 398) scale(1.3)"}">${PET[eq.pet].svg()}</g>` : "";
   // bawahan di bawah baju (baju menjuntai, tidak dimasukkan); khusus gaun, bawahan di atas
   const gaun = eq.pakaian && OUTFITS[eq.pakaian]?.g === "f";
   const celanaUnder = fem && !gaun ? celanaOverlay : "", celanaOver = fem && gaun ? celanaOverlay : "";
@@ -1053,7 +1053,7 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z6";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { PET, MATA } from "./character-pet.js?v=20261119j";
+import { PET, MATA } from "./character-pet.js?v=20261119n";
 import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
