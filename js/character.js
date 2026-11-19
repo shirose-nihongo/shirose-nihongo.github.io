@@ -1017,9 +1017,10 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   const gaun = eq.pakaian && OUTFITS[eq.pakaian]?.g === "f";
   const celanaUnder = fem && !gaun ? celanaOverlay : "", celanaOver = fem && gaun ? celanaOverlay : "";
   return flatten2D(`
-    <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
+    <svg viewBox="${sayapSvg && opts.wide ? "-110 -60 620 580" : PET[eq.pet]?.lebar ? "-135 0 535 500" : "0 0 400 500"}" style="overflow:visible" xmlns="http://www.w3.org/2000/svg" class="chara-svg">
       ${auraSvg}
       ${sayapSvg}
+      ${PET[eq.pet]?.behind ? petSvg : ""}
       ${bentukkan(`${femUnder}
       ${base}
       ${femFaceSvg}
@@ -1033,7 +1034,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
       ${antingSvg}
       ${aksesoriSvg}
       ${handheldSvg}`, _bt)}
-      ${petSvg}
+      ${PET[eq.pet]?.behind ? "" : petSvg}
     </svg>
   `);
 }
@@ -1054,8 +1055,8 @@ import { extend } from "./character-more.js?v=20261116m";
 import { extendWeaponAnim, applyWeaponPose, restArms, stripArms } from "./weapon-anim.js?v=20261118z6";
 import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
-import { extendSet, SET } from "./character-set.js?v=20261119p";
-import { PET, MATA } from "./character-pet.js?v=20261119n";
+import { extendSet, SET } from "./character-set.js?v=20261119r";
+import { PET, MATA } from "./character-pet.js?v=20261119s";
 import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
