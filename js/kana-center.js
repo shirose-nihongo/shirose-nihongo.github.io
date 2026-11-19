@@ -786,7 +786,7 @@ const bacaDraw = () => {
 function bacaRecord(w, ok) {
   const o = P.baca[KB.t][w.k] || (P.baca[KB.t][w.k] = { ok: 0, ng: 0 }); if (ok) o.ok++; else o.ng++; o.last = ok ? 1 : 0; o.ts = Date.now(); touch();
   if (ok) KB.sc.ok++; else KB.sc.ng++;
-  if (ok && window.awardXP) window.awardXP(2, 1);   // koin & XP langsung bertambah tiap bacaan benar
+  if (ok && window.awardXP) window.awardXP(10, 10);   // koin & XP langsung bertambah tiap bacaan benar
 }
 Object.assign(KC, {
   bacaSet(v) { KB.set = v; const h = location.hash; route(h.replace(/^#/, "")); },

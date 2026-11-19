@@ -1313,7 +1313,7 @@ const SSW = window.SSW = {
   },
   qzRuby() { LSset("shirose-ssw-ruby", ruby() ? "0" : "1"); applyRuby(); if (QZ) SSW.qzDraw(); },
   qzLang(l) { if (!QZ) return; QZ.lang = l; setLang(l); SSW.qzDraw(); },
-  qzPick(k) { if (!QZ || QZ.sel != null) return; const it = QZ.items[QZ.i]; QZ.sel = k; if (k === it.a) { QZ.score++; window.awardXP && window.awardXP(2, 1); } else QZ.wrong.push(it); SSW.qzDraw(); },
+  qzPick(k) { if (!QZ || QZ.sel != null) return; const it = QZ.items[QZ.i]; QZ.sel = k; if (k === it.a) { QZ.score++; window.awardXP && window.awardXP(10, 10); } else QZ.wrong.push(it); SSW.qzDraw(); },
   qzRetryWrong() {
     if (!QZ || !QZ.wrong.length) return;
     const items = shuffle(QZ.wrong.map(w => ({ ...w, order: w.mb ? w.opts.map((_, k) => k) : shuffle(w.opts.map((_, k) => k)) })));

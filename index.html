@@ -1464,17 +1464,17 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261119j";
-import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
+import * as FB from "./js/firebase-sync.js?v=20261119k";
+import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261119k";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
-import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261114f";
+import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261119k";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
-import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261116m";
+import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261119k";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261118s";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261119k";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261119f";
-import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261119i";
+import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261119k";
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
 import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261119j";
 initJlpt(FB);
@@ -4308,7 +4308,7 @@ async function matchAfterPair(correct, iInBatch){
   if (correct){
     _autoSpeakJP(it.fraw || it.front);
     playJurus();
-    _hafAdd(3, justMastered ? 2 : 1);
+    _hafAdd(3, justMastered ? 3 : 2);
     if (justMastered) toast(`🏆 ${it.front} — MASTERED! +1 🪙`);
     if (state.user) {
       const actType = it.tipe === "kanji" ? "kanji" : "kosakata";
@@ -4417,7 +4417,7 @@ window.mcPick = async (encoded, btn) => {
     fb.style.border = "1px solid var(--green)";
     fb.innerHTML = `<b>✓ Benar!</b> ${state.mc_correct}`;
     state.hafalan_score.benar++;
-    _hafAdd(3, 1);
+    _hafAdd(3, 2);
   } else {
     fb.style.background = "rgba(239,68,68,.15)";
     fb.style.border = "1px solid var(--red)";
@@ -4799,7 +4799,7 @@ window.ujianSelesai = async () => {
   const skor = Math.round((benar / total) * 100);
   const durasi = Math.round((Date.now() - u.mulai) / 1000);
   await FB.catatNilai({ kategoriId: u.kategoriId, skor, benar, salah, waktu: durasi });
-  await awardXP(benar * 5, benar > 0 ? Math.ceil(benar / 4) : 0);
+  await awardXP(benar * 10, benar * 10);   // 10 XP + 10 koin per soal benar
   let lulusReward = { firstTime:false, rewardKoin:0 };
   if (state.user){
     try { lulusReward = await FB.claimUjianLulusReward(u.kategoriId, skor, lulusMin); } catch(e){}

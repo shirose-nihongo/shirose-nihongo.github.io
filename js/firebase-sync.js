@@ -836,7 +836,7 @@ export async function simpanHasilMensetsu(hasil) {
   const d = await addDoc(collection(db, "siswa", currentUser.uid, "mensetsu_hasil"), { ...clean, uid: currentUser.uid, tgl: serverTimestamp() });
   // Hadiah koin simulasi (dompet tunggal): +20, maks 3x per hari per perangkat.
   try { const k = "shirose-mx-koin:" + currentUser.uid + ":" + new Date().toISOString().slice(0, 10), n = +(localStorage.getItem(k) || 0);
-    if (n < 3) { localStorage.setItem(k, String(n + 1)); const sd = await tambahKoin(20, "mensetsu"); if (sd !== null && window.__koinBaru) window.__koinBaru(sd, 20); if (window.awardXP) window.awardXP(40, 0); } } catch (e) {}
+    if (n < 3) { localStorage.setItem(k, String(n + 1)); const sd = await tambahKoin(20, "mensetsu"); if (sd !== null && window.__koinBaru) window.__koinBaru(sd, 20); if (window.awardXP) window.awardXP(150, 0); } } catch (e) {}
   return d.id;
 }
 export async function listHasilMensetsu(limitN = 50) {

@@ -4,9 +4,9 @@
  * Hadiah: 30 XP + 1 koin tiap kartu "Hafal" (10× XP flashcard biasa = 3 XP), sekali per kartu per hari.
  * ===================================================================== */
 import * as EN from "./mensetsu-engine.js";
-import { getX, bayar, qj, ajh, ttsPlay, ttsStop, loadPrep, aktif } from "./mensetsu-prep.js?v=20261119i";
+import { getX, bayar, qj, ajh, ttsPlay, ttsStop, loadPrep, aktif } from "./mensetsu-prep.js?v=20261119k";
 
-export const XP_FLASH = 30, KOIN_FLASH = 1;   // XP flashcard biasa = 3 per kartu benar → ×10
+export const XP_FLASH = 30, KOIN_FLASH = 2;   // XP flashcard biasa = 3 per kartu benar → ×10
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 let F = null;   // { key, bank, deck, i, open, ok, ulang, cat, prep }
 const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };

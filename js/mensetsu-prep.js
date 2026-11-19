@@ -345,7 +345,7 @@ const PP = {
     persist();
   },
   async simpan(id) { flushTextarea(); const ok = await persist(true); toast(ok ? "Jawaban disimpan." : "Disimpan di perangkat; sinkron akun gagal."); PP._bayarJawab(id); },
-  _bayarJawab(id) { const a = P.data.answers[id]; if (a && /[ぁ-んァ-ン一-鿿]/.test(a.asli || "") && (a.asli || "").trim().length >= 8) bayar("jawab", P.key, id, 15, 3, { cap: 40 }); },
+  _bayarJawab(id) { const a = P.data.answers[id]; if (a && /[ぁ-んァ-ン一-鿿]/.test(a.asli || "") && (a.asli || "").trim().length >= 8) bayar("jawab", P.key, id, 60, 20, { cap: 40 }); },
   contoh(id) {
     const q = qOf(id), box = document.getElementById("pp-contoh"); if (!box) return;
     box.classList.toggle("hidden"); box.innerHTML = `<b>Contoh dari bank soal (hanya referensi — jangan dihafal mentah):</b><p class="jp">${ajh(q)}</p><p class="ms-note">${esc(q.ai || "")}</p>${q.aj ? `<button class="btn ghost sm" onclick="PP.pakaiContoh('${id}')">Salin contoh ke editor</button>` : ""}`;
@@ -365,7 +365,7 @@ const PP = {
     if (!ev) ev = cekDasar(text, q);
     a.ev = ev; a.koreksi = ev.benar || a.koreksi; if (ev.benar) a.diterima = false;
     a.riwayat = [...(a.riwayat || []), { t: Date.now(), asli: text, koreksi: ev.benar, skor: ev.kealamian.skor, sumber: ev.sumber, keputusan: "" }].slice(-MAXHIST);
-    a.updated = Date.now(); await persist(true); PP._bayarJawab(id); if (ev.sumber && ev.sumber !== "dasar") bayar("ai", P.key, id, 10, 2, { harian: true, cap: 30 }); P.open = id; await rerender();
+    a.updated = Date.now(); await persist(true); PP._bayarJawab(id); if (ev.sumber && ev.sumber !== "dasar") bayar("ai", P.key, id, 60, 20, { harian: true, cap: 30 }); P.open = id; await rerender();
     document.getElementById("pp-evwrap")?.scrollIntoView({ behavior: "smooth", block: "start" });
   },
   pakai(id, yes) {
@@ -590,7 +590,7 @@ Object.assign(PP, {
   pm(k, v) { const o = pmOpt(); o[k] = v; X.LS.set(PM_KEY, o); rerender(); },
   async pmCopy() {
     const t = document.getElementById("pm-text")?.value || ""; if (!t) return;
-    try { await navigator.clipboard.writeText(t); toast("Prompt disalin. Tempel di chat baru."); bayar("prompt", (location.hash.split("/")[1] || "x"), "salin", 10, 2, { harian: true, cap: 3 }); }
+    try { await navigator.clipboard.writeText(t); toast("Prompt disalin. Tempel di chat baru."); bayar("prompt", (location.hash.split("/")[1] || "x"), "salin", 40, 20, { harian: true, cap: 3 }); }
     catch (e) { const el = document.getElementById("pm-text"); el.removeAttribute("readonly"); el.select(); let ok = false; try { ok = document.execCommand("copy"); } catch (e2) {} el.setAttribute("readonly", ""); toast(ok ? "Prompt disalin. Tempel di chat baru." : "Gagal menyalin otomatis — teks sudah terpilih, salin manual."); }
   },
 });

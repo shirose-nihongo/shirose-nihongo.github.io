@@ -525,7 +525,7 @@ async function kumpulkan(timeout) {
     }
     _hist = null;
     // XP kecil sebagai apresiasi (memakai sistem gami yang sudah ada)
-    try { if (window.awardXP && n.benar) await window.awardXP(n.benar * 3, 0); } catch (e) {}
+    try { if (window.awardXP && n.benar) await window.awardXP(n.benar * 10, n.benar * 10); } catch (e) {}
     try { FB.recordActivity && FB.recordActivity("ujian", Math.max(1, n.benar + n.salah)).catch(() => {}); } catch (e) {}
     R = { hasil, pkg, filter: "semua", pos: 0, tersimpan };
     E = null;
