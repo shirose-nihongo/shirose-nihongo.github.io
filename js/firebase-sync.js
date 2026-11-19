@@ -485,6 +485,11 @@ export async function setBodyType(b) {
   await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.body": b });
   if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.body = b;
 }
+export async function setBentukKarakter(b) {
+  if (!currentUser) return;
+  await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.bentuk": b });
+  if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.bentuk = b;
+}
 export async function equipItem(kategori, itemId) {
   if (!currentUser) return;
   const eq = currentSiswaDoc.karakter.equipped || {};
@@ -565,6 +570,20 @@ async function _koinTulisSaja(delta, alasan) {
   { const b = _baseGet(); if (b !== null) _baseSet(b + delta); }
   try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || "") + " (mode tulis)", saldo: baru }); } catch (e) {}
   return baru;
+}
+
+/* ===== REWARD LOGIN 30 HARI: siswa/{uid}/login_reward/main = {hari, last, siklus, pending} (+ cadangan localStorage) ===== */
+export async function getLoginReward() {
+  if (!currentUser) return null; const k = "shirose-loginrw:" + currentUser.uid; let loc = null;
+  try { loc = JSON.parse(localStorage.getItem(k) || "null"); } catch (e) {}
+  let srv = null; try { const sn = await getDoc(doc(db, "siswa", currentUser.uid, "login_reward", "main")); srv = sn.exists() ? sn.data() : null; } catch (e) {}
+  const pilih = [srv, loc].filter(Boolean).sort((a, b) => (Number(b.t) || 0) - (Number(a.t) || 0))[0];
+  return pilih || { hari: 0, last: "", siklus: 0, pending: null };
+}
+export async function saveLoginReward(o) {
+  if (!currentUser) return; o = { ...o, t: Date.now() };
+  try { localStorage.setItem("shirose-loginrw:" + currentUser.uid, JSON.stringify(o)); } catch (e) {}
+  try { await setDoc(doc(db, "siswa", currentUser.uid, "login_reward", "main"), o); } catch (e) { console.warn("login_reward:", e.message); }
 }
 export async function getGachaState() {
   if (!currentUser) return null;
@@ -1742,7 +1761,7 @@ export async function saveSaveData(ui = {}) {
   snaps.forEach((s, i) => { if (s && s.exists()) { const d = s.data(); const lv = d.level_karakter || 1; mx = Math.max(mx, lv); gami[WALLET_LVLS[i]] = { xp: d.xp || 0, level_karakter: lv, streak: d.streak || 0 }; } });
   const sd = currentSiswaDoc || {}, k = sd.karakter || {};
   const data = { savedAt: Date.now(), ts: serverTimestamp(), levelAkun: mx, gami,
-    karakter: { equipped: k.equipped || {}, inventory: k.inventory || [], skinTone: k.skinTone || null, hairColor: k.hairColor || null, body: k.body || null }, ui };
+    karakter: { equipped: k.equipped || {}, inventory: k.inventory || [], skinTone: k.skinTone || null, hairColor: k.hairColor || null, body: k.body || null, bentuk: k.bentuk || null }, ui };
   await setDoc(doc(db, "siswa", uid, "save", "main"), data);
   _lvSet(mx);
   return { ...data, ts: null };
