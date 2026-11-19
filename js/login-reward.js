@@ -122,7 +122,7 @@ let _auto = false;
 async function refundCek() {
   try {
     const id = "refund_gacha_1000", em = (FB.emailSaatIni ? FB.emailSaatIni() : ""), nm = (FB.namaSaatIni ? FB.namaSaatIni() : "");
-    if (!/nufus/i.test(em + " " + nm)) return;
+    if (em !== "nufus1234@gmail.com") return;
     if (await FB.getRewardFlag(id)) return;
     await FB.setRewardFlag(id);
     await window.awardKoin(1000, "Refund koin gacha hilang");
