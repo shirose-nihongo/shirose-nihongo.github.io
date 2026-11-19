@@ -9,7 +9,8 @@
  * Global: window.MS (dipakai onclick di HTML)
  * ===================================================================== */
 import * as EN from "./mensetsu-engine.js";
-import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ } from "./mensetsu-prep.js?v=20261118t";
+import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ } from "./mensetsu-prep.js?v=20261119i";
+import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261119i";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
 import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261118s";
 
@@ -186,6 +187,7 @@ async function renderBidang(p) {
     <section class="ms-panel"><h2>Pilih yang ingin kamu lakukan</h2>
       <div class="ms-modes">
         ${card("✍️", "Persiapan jawaban", "Pilih pertanyaan, tulis jawaban Jepang, periksa dengan AI (benar/salah + perbaikan), dengarkan audionya.", "mensetsu-persiapan")}
+        ${card("🃏", "Flashcard (EXP 10×)", "Ketuk kartu untuk melihat jawaban. Tiap kartu hafal = 30 XP + 1 koin — 10× lipat flashcard biasa.", "mensetsu-flash")}
         ${card("🧠", "Mode hafalan", "Lihat pertanyaan, coba jawab, buka jawaban, dengar, shadowing, tandai hafal/sulit.", "mensetsu-hafalan")}
         ${card("🤖", "Wawancara di Claude / ChatGPT", "お願いします — pilih pertanyaan yang ingin ditanyakan, lalu salin prompt siap pakai ke Claude atau ChatGPT.", "mensetsu-prompt")}
       </div>
@@ -239,6 +241,6 @@ export const MENSETSU_ROUTES = {
   mensetsu: () => renderHub(),
   "mensetsu-bidang": jaga(renderBidang),
   "mensetsu-bank": jaga(renderBank),
-  ...Object.fromEntries(Object.entries(PREP_ROUTES).map(([r, f]) => [r, jaga(f)])),
+  ...Object.fromEntries(Object.entries({ ...PREP_ROUTES, ...FLASH_ROUTES }).map(([r, f]) => [r, jaga(f)])),
 };
 export const MENSETSU_PUBLIC = Object.keys(MENSETSU_ROUTES);
