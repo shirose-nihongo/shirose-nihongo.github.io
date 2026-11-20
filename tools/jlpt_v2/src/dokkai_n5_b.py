@@ -14,12 +14,12 @@ PAKET = {
 11: dict(passages={
     "d1": (T + " — memo", "（会社で）<br>ハンさんの つくえの 上に この メモが あります。<br><br>ハンさん<br>あしたの あさ、わたしは びょういんへ 行きますから、会社に 来るのは 十一時ごろです。九時に おきゃくさんが 来ます。わたしの かわりに、この 本を わたして ください。<br>山田",
            "Han, besok pagi saya ke rumah sakit, jadi baru datang ke kantor sekitar jam 11. Jam 9 ada tamu; tolong serahkan buku ini menggantikan saya. — Yamada"),
-    "d2": (T, "わたしは 毎日 ばんごはんの 後で 日本語の テレビを 見ます。はじめは ぜんぜん わかりませんでしたが、今は 半分ぐらい わかります。ニュースは まだ むずかしいです。",
-           "Setiap hari setelah makan malam saya menonton TV berbahasa Jepang. Awalnya sama sekali tidak paham, sekarang sekitar setengahnya paham. Berita masih sulit."),
-    "d3": (T + " — メール", "マリーさん<br>きょうの 日本語の じゅぎょうは 先生が 休みですから、ありません。あしたの じゅぎょうは いつもと おなじ 時間に あります。<br>じむしつ",
-           "Marie, pelajaran bahasa Jepang hari ini tidak ada karena guru libur. Pelajaran besok ada pada jam yang sama seperti biasa. — Kantor administrasi"),
-    "d4": (C, "わたしは 先月 新しい アパートに ひっこしました。前の アパートは 駅から あるいて 二十分でしたが、今の アパートは 五分です。<br>へやは 前より 少し せまいです。でも、まどが 大きくて、とても あかるいです。<br>アパートの 下に 小さい 花やが あります。わたしは 毎週 そこで 花を 一本 買って、へやに かざって います。<br>花やの 人は とても しんせつで、花の 名前を いろいろ おしえて くれます。きのうは 小さい 白い 花を 買いました。",
-           "Bulan lalu saya pindah ke apartemen baru. Apartemen lama 20 menit jalan kaki dari stasiun, yang sekarang 5 menit. Kamarnya sedikit lebih sempit, tetapi jendelanya besar dan sangat terang. Di bawah apartemen ada toko bunga kecil; setiap minggu saya membeli satu tangkai bunga di sana dan menghiasi kamar. Penjual bunga sangat ramah dan mengajari berbagai nama bunga. Kemarin saya membeli bunga putih kecil."),
+    "d2": (T, "わたしは 毎日 ばんごはんの 後で 日本語の テレビを 見ます。はじめは ぜんぜん わかりませんでしたが、今は 半分ぐらい わかります。いつか ニュースも わかる ように なりたいです。ニュースは まだ むずかしいです。",
+           "Setiap hari setelah makan malam saya menonton TV berbahasa Jepang. Awalnya sama sekali tidak paham, sekarang sekitar setengahnya paham. Suatu hari saya ingin bisa mengerti berita juga. Berita masih sulit."),
+    "d3": (T + " — メール", "マリーさん<br>きょうの 日本語の じゅぎょうは 先生が 休みですから、ありません。あしたの じゅぎょうは いつもと おなじ 時間に あります。よろしく おねがいします。<br>じむしつ",
+           "Marie, pelajaran bahasa Jepang hari ini tidak ada karena guru libur. Pelajaran besok ada pada jam yang sama seperti biasa. Mohon bantuannya. — Kantor administrasi"),
+    "d4": (C, "わたしは 先月 新しい アパートに ひっこしました。前の アパートは 駅から あるいて 二十分でしたが、今の アパートは 五分です。<br>へやは 前より 少し せまいです。でも、まどが 大きくて、とても あかるいです。<br>アパートの 下に 小さい 花やが あります。わたしは 毎週 そこで 花を 一本 買って、へやに かざって います。<br>花やの 人は とても しんせつで、花の 名前を いろいろ おしえて くれます。へやに 花が あると、気もちが いいです。友だちが あそびに 来た ときも、よろこびます。きのうは 小さい 白い 花を 買いました。",
+           "Bulan lalu saya pindah ke apartemen baru. Apartemen lama 20 menit jalan kaki dari stasiun, yang sekarang 5 menit. Kamarnya sedikit lebih sempit, tetapi jendelanya besar dan sangat terang. Di bawah apartemen ada toko bunga kecil; setiap minggu saya membeli satu tangkai bunga di sana dan menghiasi kamar. Penjual bunga sangat ramah dan mengajari berbagai nama bunga. Kalau ada bunga di kamar, perasaan terasa enak. Saat teman datang bermain pun, mereka senang. Kemarin saya membeli bunga putih kecil."),
     "d5": (J, "<b>ゆうびんきょくの 時間</b><br>" + tbl(["", "月～金", "土", "日"], [
                ["手かみ・にもつ", "午前9時～午後7時", "午前9時～午後3時", "休み"], ["お金の まどぐち", "午前9時～午後4時", "休み", "休み"]]) +
            "・にもつを 外国へ おくる ときは、名前と じゅうしょを えいごで 書いて ください。",
@@ -51,12 +51,12 @@ PAKET = {
 12: dict(passages={
     "d1": (T + " — memo", "（学校で）<br>きょうしつの 前に この かみが あります。<br><br>一年生の みなさんへ<br>あしたの 三時間目は、きょうしつでは なくて、二かいの コンピューターの へやで じゅぎょうを します。きょうかしょは いりません。ノートと ペンを もって きて ください。",
            "Untuk siswa kelas 1: jam pelajaran ke-3 besok bukan di kelas, tetapi di ruang komputer lantai 2. Buku pelajaran tidak perlu; bawa buku catatan dan pulpen."),
-    "d2": (T, "わたしは まいあさ 一ぱいの 水を 飲んでから 学校へ 行きます。ひるごはんの 後は 少し ねます。よるは 十時に ねますから、毎日 げんきです。",
-           "Setiap pagi saya minum segelas air sebelum berangkat sekolah. Setelah makan siang saya tidur sebentar. Malam saya tidur jam 10, jadi setiap hari sehat."),
-    "d3": (T + " — メール", "ロンさん<br>来週の 日曜日、山へ 行きませんか。わたしの 車で 行きます。あさ 八時に ロンさんの アパートの 前へ 行きますね。おべんとうは わたしが つくります。<br>ゆうこ",
-           "Ron, mau ke gunung Minggu depan? Kita pergi dengan mobil saya. Saya datang ke depan apartemenmu jam 8 pagi. Bekal saya yang buat. — Yuko"),
-    "d4": (C, "わたしの しゅみは しゃしんです。休みの 日は カメラを もって、いろいろな ところへ 行きます。<br>先週は 古い おてらへ 行きました。おてらの 前に 大きい 木が ありました。その 木の 下で、ねこが ねて いました。わたしは その ねこの しゃしんを たくさん とりました。<br>いちばん いい しゃしんを 大学の 友だちに 見せたら、「大きく して、へやに かざりたい」と 言いました。<br>来月は 友だちと いっしょに うみへ 行って、しゃしんを とる つもりです。",
-           "Hobi saya fotografi; tiap libur saya membawa kamera ke berbagai tempat. Minggu lalu saya ke kuil tua; di depannya ada pohon besar dan seekor kucing tidur di bawahnya. Saya memotret kucing itu banyak kali. Saat foto terbaik saya tunjukkan ke teman kuliah, ia berkata 'ingin diperbesar dan dipajang di kamar'. Bulan depan saya berencana ke laut bersama teman untuk memotret."),
+    "d2": (T, "わたしは まいあさ 一ぱいの 水を 飲んでから 学校へ 行きます。ひるごはんの 後は 少し ねます。からだに いい せいかつを つづけたいです。よるは 十時に ねますから、毎日 げんきです。",
+           "Setiap pagi saya minum segelas air sebelum berangkat sekolah. Setelah makan siang saya tidur sebentar. Saya ingin melanjutkan hidup yang baik untuk badan. Malam saya tidur jam 10, jadi setiap hari sehat."),
+    "d3": (T + " — メール", "ロンさん<br>来週の 日曜日、山へ 行きませんか。わたしの 車で 行きます。あさ 八時に ロンさんの アパートの 前へ 行きますね。おべんとうは わたしが つくります。たのしみに して います。<br>ゆうこ",
+           "Ron, mau ke gunung Minggu depan? Kita pergi dengan mobil saya. Saya datang ke depan apartemenmu jam 8 pagi. Bekal saya yang buat. Saya menantikannya. — Yuko"),
+    "d4": (C, "わたしの しゅみは しゃしんです。休みの 日は カメラを もって、いろいろな ところへ 行きます。<br>先週は 古い おてらへ 行きました。おてらの 前に 大きい 木が ありました。その 木の 下で、ねこが ねて いました。わたしは その ねこの しゃしんを たくさん とりました。<br>いちばん いい しゃしんを 大学の 友だちに 見せたら、「大きく して、へやに かざりたい」と 言いました。ねこは とても かわいかったです。また おてらへ 行って、ねこに 会いたいです。<br>来月は 友だちと いっしょに うみへ 行って、しゃしんを とる つもりです。",
+           "Hobi saya fotografi; tiap libur saya membawa kamera ke berbagai tempat. Minggu lalu saya ke kuil tua; di depannya ada pohon besar dan seekor kucing tidur di bawahnya. Saya memotret kucing itu banyak kali. Saat foto terbaik saya tunjukkan ke teman kuliah, ia berkata 'ingin diperbesar dan dipajang di kamar'. Kucingnya sangat lucu. Saya ingin pergi ke kuil lagi dan bertemu kucing itu. Bulan depan saya berencana ke laut bersama teman untuk memotret."),
     "d5": (J, "<b>えきまえ ホテル　へやの お金（一ぱく）</b><br>" + tbl(["へや", "日～木", "金・土"], [
                ["一人べや", "6,000円", "8,000円"], ["二人べや", "9,000円", "12,000円"], ["わしつ（四人まで）", "15,000円", "18,000円"]]) +
            "・あさごはんは 一人 800円です。<br>・小学生 までの 子どもは へやの お金が いりません。",
@@ -88,12 +88,12 @@ PAKET = {
 13: dict(passages={
     "d1": (T + " — memo", "（いえで）<br>あきらさんが この メモを 読みました。<br><br>あきら<br>おばあちゃんの いえへ 行って きます。七時ごろ 帰ります。せんたくものが 外に ありますから、雨が ふったら 中に 入れて ください。<br>母",
            "Akira, ibu pergi ke rumah nenek dan pulang sekitar jam 7. Jemuran ada di luar; kalau hujan, tolong masukkan ke dalam. — Ibu"),
-    "d2": (T, "わたしの 国は なつ とても あついです。でも、日本の なつも あついですね。わたしは 毎日 つめたい おちゃを 三本ぐらい 飲みます。日本の おちゃは おいしいです。",
-           "Di negara saya musim panas sangat panas. Tetapi musim panas Jepang juga panas ya. Setiap hari saya minum sekitar tiga botol teh dingin. Teh Jepang enak."),
-    "d3": (T + " — メール", "はやしさん<br>きのうの パーティーで はやしさんの かさを まちがえて もって 帰りました。すみません。あした 学校で かえします。わたしの かさは あおくて 長い かさです。<br>ディン",
-           "Hayashi, di pesta kemarin saya salah membawa pulang payungmu. Maaf. Besok saya kembalikan di sekolah. Payung saya biru dan panjang. — Dinh"),
-    "d4": (C, "わたしは 毎年 ふゆやすみに 北の 山へ スキーに 行きます。ことしは はじめて おとうとと いっしょに 行きました。<br>おとうとは スキーが はじめてでしたから、一日目は 何かいも ころびました。でも、二日目は 先生に ならって、少し 上手に なりました。<br>よるは 二人で あたたかい ラーメンを 食べました。おとうとは「来年も 来たい」と 言って います。<br>スキーの 後で、ホテルの ちかくの 店で 母に おみやげを 買いました。",
-           "Setiap liburan musim dingin saya bermain ski di gunung di utara. Tahun ini untuk pertama kali bersama adik laki-laki. Adik baru pertama kali ski sehingga hari pertama berkali-kali jatuh. Tetapi hari kedua belajar dari instruktur dan sedikit lebih mahir. Malamnya kami makan ramen hangat. Adik bilang 'tahun depan mau datang lagi'. Setelah ski, kami membeli oleh-oleh untuk ibu di toko dekat hotel."),
+    "d2": (T, "わたしの 国は なつ とても あついです。でも、日本の なつも あついですね。わたしは 毎日 つめたい おちゃを 三本ぐらい 飲みます。日本の なつは あついですが、花火が きれいです。日本の おちゃは おいしいです。",
+           "Di negara saya musim panas sangat panas. Tetapi musim panas Jepang juga panas ya. Setiap hari saya minum sekitar tiga botol teh dingin. Musim panas Jepang panas, tetapi kembang apinya indah. Teh Jepang enak."),
+    "d3": (T + " — メール", "はやしさん<br>きのうの パーティーで はやしさんの かさを まちがえて もって 帰りました。すみません。あした 学校で かえします。わたしの かさは あおくて 長い かさです。ほんとうに すみません。<br>ディン",
+           "Hayashi, di pesta kemarin saya salah membawa pulang payungmu. Maaf. Besok saya kembalikan di sekolah. Payung saya biru dan panjang. Sungguh maaf. — Dinh"),
+    "d4": (C, "わたしは 毎年 ふゆやすみに 北の 山へ スキーに 行きます。ことしは はじめて おとうとと いっしょに 行きました。<br>おとうとは スキーが はじめてでしたから、一日目は 何かいも ころびました。でも、二日目は 先生に ならって、少し 上手に なりました。<br>よるは 二人で あたたかい ラーメンを 食べました。おとうとは「来年も 来たい」と 言って います。来年は 母も いっしょに 行きたいです。母は スキーを した ことが ありません。<br>スキーの 後で、ホテルの ちかくの 店で 母に おみやげを 買いました。",
+           "Setiap liburan musim dingin saya bermain ski di gunung di utara. Tahun ini untuk pertama kali bersama adik laki-laki. Adik baru pertama kali ski sehingga hari pertama berkali-kali jatuh. Tetapi hari kedua belajar dari instruktur dan sedikit lebih mahir. Malamnya kami makan ramen hangat. Adik bilang 'tahun depan mau datang lagi'. Tahun depan saya ingin pergi bersama ibu juga. Ibu belum pernah bermain ski. Setelah ski, kami membeli oleh-oleh untuk ibu di toko dekat hotel."),
     "d5": (J, "<b>りょうりきょうしつ　十一月</b><br>" + tbl(["日", "りょうり", "時間", "お金"], [
                ["3日（土）", "てんぷら", "午前10時～12時", "2,000円"], ["10日（土）", "すし", "午前10時～12時", "2,500円"],
                ["17日（土）", "ケーキ", "午後2時～4時", "1,500円"], ["24日（土）", "カレー", "午後2時～4時", "1,000円"]]) +
@@ -126,12 +126,12 @@ PAKET = {
 14: dict(passages={
     "d1": (T + " — memo", "（会社で）<br>キムさんが この メモを 読みました。<br><br>キムさん<br>コピーきが こわれて います。今日の 午後 三時に 店の 人が 来ます。それまで 三かいの コピーきを つかって ください。<br>たなか",
            "Kim, mesin fotokopi rusak. Hari ini jam 3 siang petugas toko datang. Sampai saat itu, pakai mesin fotokopi di lantai 3. — Tanaka (bagian umum)"),
-    "d2": (T, "わたしは きのう 友だちと カラオケに 行きました。友だちは 日本の うたを 上手に うたいました。わたしは まだ 日本の うたを しりませんから、国の うたを うたいました。",
-           "Kemarin saya karaoke bersama teman. Teman menyanyikan lagu Jepang dengan bagus. Saya belum tahu lagu Jepang, jadi saya menyanyikan lagu negara saya."),
-    "d3": (T + " — メール", "ジョンさん<br>あしたの あさの じゅぎょうに おくれます。電車の じこが あって、電車が とまって います。先生に 話して ください。十時ごろ 学校に つくと おもいます。<br>ミン",
-           "John, saya terlambat pelajaran pagi besok. Ada kecelakaan kereta dan keretanya berhenti. Tolong sampaikan ke guru. Saya kira sampai sekolah sekitar jam 10. — Min"),
-    "d4": (C, "わたしは 日本へ 来てから、毎日 にっきを 書いて います。はじめは えいごで 書いて いましたが、三か月前から 日本語で 書いて います。<br>日本語で 書く ときは、じしょを たくさん つかいますから、時間が かかります。でも、新しい ことばを たくさん おぼえる ことが できます。<br>一週間に 一かい、日本人の 友だちに にっきを 見せて、まちがいを なおして もらって います。<br>にっきを 読みかえすと、来た ばかりの ころの ことを おもい出して、たのしく なります。",
-           "Sejak datang ke Jepang saya menulis buku harian setiap hari. Awalnya dalam bahasa Inggris, tetapi sejak tiga bulan lalu dalam bahasa Jepang. Menulis dalam bahasa Jepang perlu banyak memakai kamus sehingga makan waktu, tetapi saya bisa menghafal banyak kata baru. Seminggu sekali saya menunjukkan buku harian ke teman Jepang dan minta kesalahan saya dibetulkan. Saat membaca ulang buku harian, saya teringat masa baru datang dan merasa senang."),
+    "d2": (T, "わたしは きのう 友だちと カラオケに 行きました。友だちは 日本の うたを 上手に うたいました。つぎは 日本の うたも れんしゅうして、友だちと いっしょに うたいたいです。わたしは まだ 日本の うたを しりませんから、国の うたを うたいました。",
+           "Kemarin saya karaoke bersama teman. Teman menyanyikan lagu Jepang dengan bagus. Lain kali saya juga akan berlatih lagu Jepang dan ingin bernyanyi bersama teman. Saya belum tahu lagu Jepang, jadi saya menyanyikan lagu negara saya."),
+    "d3": (T + " — メール", "ジョンさん<br>あしたの あさの じゅぎょうに おくれます。電車の じこが あって、電車が とまって います。先生に 話して ください。十時ごろ 学校に つくと おもいます。どうぞ よろしく おねがいします。<br>ミン",
+           "John, saya terlambat pelajaran pagi besok. Ada kecelakaan kereta dan keretanya berhenti. Tolong sampaikan ke guru. Saya kira sampai sekolah sekitar jam 10. Mohon bantuannya. — Min"),
+    "d4": (C, "わたしは 日本へ 来てから、毎日 にっきを 書いて います。はじめは えいごで 書いて いましたが、三か月前から 日本語で 書いて います。<br>日本語で 書く ときは、じしょを たくさん つかいますから、時間が かかります。でも、新しい ことばを たくさん おぼえる ことが できます。<br>一週間に 一かい、日本人の 友だちに にっきを 見せて、まちがいを なおして もらって います。いつか 日本語で てがみを 書いて、国の 友だちに おくりたいです。<br>にっきを 読みかえすと、来た ばかりの ころの ことを おもい出して、たのしく なります。",
+           "Sejak datang ke Jepang saya menulis buku harian setiap hari. Awalnya dalam bahasa Inggris, tetapi sejak tiga bulan lalu dalam bahasa Jepang. Menulis dalam bahasa Jepang perlu banyak memakai kamus sehingga makan waktu, tetapi saya bisa menghafal banyak kata baru. Seminggu sekali saya menunjukkan buku harian ke teman Jepang dan minta kesalahan saya dibetulkan. Suatu hari saya ingin menulis surat dalam bahasa Jepang dan mengirimnya ke teman di negara saya. Saat membaca ulang buku harian, saya teringat masa baru datang dan merasa senang."),
     "d5": (J, "<b>みどり こうえん　ボートの お金</b><br>" + tbl(["ボート", "30分", "1時間", "のれる 人"], [
                ["小さい ボート", "500円", "800円", "二人まで"], ["大きい ボート", "800円", "1,300円", "四人まで"], ["スワンボート", "1,000円", "1,800円", "三人まで"]]) +
            "・ボートは 午前9時から 午後5時までです。<br>・小学生は 大人と いっしょに のって ください。",
@@ -163,12 +163,12 @@ PAKET = {
 15: dict(passages={
     "d1": (T + " — memo", "（りょうで）<br>りょうの 入り口に この かみが あります。<br><br>みなさんへ<br>あしたの 午前中、水が 出ません。シャワーは 今ばん つかって ください。午後 一時からは つかう ことが できます。<br>りょうの かんりにん",
            "Untuk semua: besok pagi air tidak keluar. Pakai shower malam ini. Mulai jam 1 siang bisa dipakai lagi. — Pengelola asrama"),
-    "d2": (T, "わたしは いぬが すきですが、アパートで いぬを かう ことが できません。それで、休みの 日は ちかくの いぬの カフェへ 行きます。そこで いぬと あそびます。",
-           "Saya suka anjing, tetapi tidak boleh memelihara anjing di apartemen. Jadi pada hari libur saya pergi ke kafe anjing di dekat rumah dan bermain dengan anjing di sana."),
-    "d3": (T + " — メール", "先生<br>レポートを 出しました。でも、二ページ目の 名前を 書くのを わすれました。すみません。あした 先生の へやへ 行って、名前を 書いても いいですか。<br>アナ",
-           "Pak/Bu guru, saya sudah mengumpulkan laporan, tetapi lupa menulis nama di halaman 2. Maaf. Bolehkah besok saya ke ruangan Anda untuk menuliskannya? — Ana"),
-    "d4": (C, "わたしの 大学には 大きい しょくどうが あります。安くて おいしいですから、ひるは いつも 学生が たくさん います。<br>わたしは 前は 毎日 しょくどうで 食べて いました。でも、人が 多くて すわる ところが ありませんから、先月から いえで おべんとうを つくって います。<br>おべんとうは 天気が いい 日は こうえんで、雨の 日は きょうしつで 食べます。<br>おべんとうは 前の 日の よるに つくります。ごはんと やさいと たまごを 入れます。からだにも いいです。",
-           "Kampus saya punya kantin besar; murah dan enak sehingga siang hari selalu ramai mahasiswa. Dulu saya makan di kantin setiap hari, tetapi karena ramai dan tidak ada tempat duduk, sejak bulan lalu saya membuat bekal di rumah. Bekal saya makan di taman kalau cuaca bagus, dan di kelas kalau hujan. Bekal saya buat malam sebelumnya, isinya nasi, sayur, dan telur. Baik juga untuk kesehatan."),
+    "d2": (T, "わたしは いぬが すきですが、アパートで いぬを かう ことが できません。それで、休みの 日は ちかくの いぬの カフェへ 行きます。休みの 日が いつも たのしみです。そこで いぬと あそびます。",
+           "Saya suka anjing, tetapi tidak boleh memelihara anjing di apartemen. Saya selalu menantikan hari libur. Jadi pada hari libur saya pergi ke kafe anjing di dekat rumah dan bermain dengan anjing di sana."),
+    "d3": (T + " — メール", "先生<br>レポートを 出しました。でも、二ページ目の 名前を 書くのを わすれました。すみません。あした 先生の へやへ 行って、名前を 書いても いいですか。ほんとうに すみませんでした。<br>アナ",
+           "Pak/Bu guru, saya sudah mengumpulkan laporan, tetapi lupa menulis nama di halaman 2. Maaf. Sungguh maaf. Bolehkah besok saya ke ruangan Anda untuk menuliskannya? — Ana"),
+    "d4": (C, "わたしの 大学には 大きい しょくどうが あります。安くて おいしいですから、ひるは いつも 学生が たくさん います。<br>わたしは 前は 毎日 しょくどうで 食べて いました。でも、人が 多くて すわる ところが ありませんから、先月から いえで おべんとうを つくって います。<br>おべんとうは 天気が いい 日は こうえんで、雨の 日は きょうしつで 食べます。<br>おべんとうは 前の 日の よるに つくります。ごはんと やさいと たまごを 入れます。がっこうの ちかくには 安い パンやも あります。つぎは そこで パンを 買って みたいです。からだにも いいです。",
+           "Kampus saya punya kantin besar; murah dan enak sehingga siang hari selalu ramai mahasiswa. Dulu saya makan di kantin setiap hari, tetapi karena ramai dan tidak ada tempat duduk, sejak bulan lalu saya membuat bekal di rumah. Bekal saya makan di taman kalau cuaca bagus, dan di kelas kalau hujan. Bekal saya buat malam sebelumnya, isinya nasi, sayur, dan telur. Dekat sekolah ada juga toko roti murah. Lain kali saya ingin mencoba membeli roti di sana. Baik juga untuk kesehatan."),
     "d5": (J, "<b>ABCスーパー　こんしゅうの 安い もの</b><br>" + tbl(["しなもの", "いつもの ねだん", "こんしゅうの ねだん"], [
                ["たまご（10こ）", "250円", "200円"], ["ぎゅうにゅう（1本）", "220円", "180円"], ["パン（1ふくろ）", "200円", "200円"], ["バナナ（1ふさ）", "180円", "150円"]]) +
            "・日曜日は ぜんぶ もう 10円 安く なります。",
@@ -200,12 +200,12 @@ PAKET = {
 16: dict(passages={
     "d1": (T + " — memo", "（学校で）<br>サムさんの つくえに この メモが あります。<br><br>サムさん<br>きょうの 四時から サッカーの れんしゅうが ありますが、雨ですから、たいいくかんで します。くつは 白い くつを もって きて ください。<br>コーチ",
            "Sam, latihan sepak bola mulai jam 4 hari ini, tetapi karena hujan diadakan di gedung olahraga. Bawa sepatu putih. — Pelatih"),
-    "d2": (T, "わたしの 母は 先月から ピアノを ならって います。母は 六十さいですが、毎日 一時間 れんしゅうして います。来月 小さい コンサートに 出ます。",
-           "Ibu saya belajar piano sejak bulan lalu. Ibu berusia 60 tahun, tetapi berlatih satu jam setiap hari. Bulan depan ia tampil di konser kecil."),
-    "d3": (T + " — メール", "ゆりさん<br>あしたの えいがですが、三時の えいがは 人が 多くて、きっぷが ありませんでした。五時の えいがの きっぷを 二まい 買いました。四時半に えいがかんの 前で 会いましょう。<br>トム",
-           "Yuri, tiket film jam 3 besok habis karena ramai. Saya membeli 2 tiket film jam 5. Ayo bertemu jam 4.30 di depan bioskop. — Tom"),
-    "d4": (C, "わたしの いえの ちかくに 小さい 川が あります。なつに なると、よる ほたるが 見えます。<br>先週の 土曜日、父と いもうとと 三人で ほたるを 見に 行きました。いもうとは はじめて ほたるを 見ましたから、とても よろこびました。<br>ほたるは 水が きれいな ところに しか いません。わたしは この 川を ずっと きれいに したいと おもいました。<br>帰る とき、父が 「むかしは この 川に ほたるが もっと たくさん いた」と 言いました。",
-           "Dekat rumah saya ada sungai kecil. Kalau musim panas, malam hari kunang-kunang terlihat. Sabtu lalu saya, ayah, dan adik perempuan melihat kunang-kunang; adik baru pertama kali melihatnya dan sangat senang. Kunang-kunang hanya ada di tempat yang airnya bersih. Saya ingin sungai ini terus bersih. Saat pulang ayah berkata, 'Dulu di sungai ini kunang-kunangnya jauh lebih banyak.'"),
+    "d2": (T, "わたしの 母は 先月から ピアノを ならって います。母は 六十さいですが、毎日 一時間 れんしゅうして います。コンサートには かぞくも 見に 行きます。来月 小さい コンサートに 出ます。",
+           "Ibu saya belajar piano sejak bulan lalu. Ibu berusia 60 tahun, tetapi berlatih satu jam setiap hari. Keluarga juga akan datang menonton konser. Bulan depan ia tampil di konser kecil."),
+    "d3": (T + " — メール", "ゆりさん<br>あしたの えいがですが、三時の えいがは 人が 多くて、きっぷが ありませんでした。五時の えいがの きっぷを 二まい 買いました。四時半に えいがかんの 前で 会いましょう。たのしみです。<br>トム",
+           "Yuri, tiket film jam 3 besok habis karena ramai. Saya membeli 2 tiket film jam 5. Ayo bertemu jam 4.30 di depan bioskop. Saya menantikannya. — Tom"),
+    "d4": (C, "わたしの いえの ちかくに 小さい 川が あります。なつに なると、よる ほたるが 見えます。<br>先週の 土曜日、父と いもうとと 三人で ほたるを 見に 行きました。いもうとは はじめて ほたるを 見ましたから、とても よろこびました。<br>ほたるは 水が きれいな ところに しか いません。わたしは この 川を ずっと きれいに したいと おもいました。ほたるは ひかりが きれいで、しずかでした。わたしは いえに 帰って、国の 母に 電話を しました。<br>帰る とき、父が 「むかしは この 川に ほたるが もっと たくさん いた」と 言いました。",
+           "Dekat rumah saya ada sungai kecil. Kalau musim panas, malam hari kunang-kunang terlihat. Sabtu lalu saya, ayah, dan adik perempuan melihat kunang-kunang; adik baru pertama kali melihatnya dan sangat senang. Kunang-kunang hanya ada di tempat yang airnya bersih. Saya ingin sungai ini terus bersih. Kunang-kunang bercahaya indah dan tenang. Saya pulang ke rumah dan menelepon ibu di negara saya. Saat pulang ayah berkata, 'Dulu di sungai ini kunang-kunangnya jauh lebih banyak.'"),
     "d5": (J, "<b>じてんしゃ かします</b><br>" + tbl(["", "3時間まで", "1日", "あずかる お金"], [
                ["ふつうの じてんしゃ", "300円", "800円", "1,000円"], ["子どもの じてんしゃ", "200円", "500円", "1,000円"], ["でんきの じてんしゃ", "600円", "1,500円", "3,000円"]]) +
            "・あずかる お金は、じてんしゃを かえす とき かえします。<br>・午前8時から 午後6時までです。",
@@ -237,12 +237,12 @@ PAKET = {
 17: dict(passages={
     "d1": (T + " — memo", "（会社で）<br>リンさんが この メモを 読みました。<br><br>リンさん<br>あした おおさかから おきゃくさんが 二人 来ます。十二時に 駅に つきますから、駅まで 車で むかえに 行って ください。ひるごはんは 会社の ちかくの 店を よやくして あります。<br>ぶちょう",
            "Lin, besok dua tamu dari Osaka datang dan tiba di stasiun jam 12. Tolong jemput ke stasiun dengan mobil. Makan siang sudah dipesan di restoran dekat kantor. — Manajer"),
-    "d2": (T, "きのう、駅で さいふを おとしました。こまって いたら、えきいんさんが 「さいふが ありましたよ」と 言って、もって きて くれました。とても うれしかったです。",
-           "Kemarin saya menjatuhkan dompet di stasiun. Saat sedang bingung, petugas stasiun berkata 'dompetnya ditemukan' dan membawakannya. Saya sangat senang."),
-    "d3": (T + " — メール", "マークさん<br>あしたの テストの 時間が かわりました。午前十時からでは なくて、午後一時からです。ばしょは 三かいの 301きょうしつです。<br>山本",
-           "Mark, jadwal ujian besok berubah: bukan jam 10 pagi tetapi jam 1 siang. Tempatnya ruang 301 lantai 3. — Yamamoto"),
-    "d4": (C, "わたしは 日本で はじめて ゆきを 見ました。わたしの 国は あついですから、ゆきが ふりません。<br>ゆきの 日、わたしは うれしくて、すぐ 外へ 出ました。でも、くつが すべって、ころんで しまいました。いたかったですが、ゆきは つめたくて、きもちが よかったです。<br>つぎの 日、ゆきの 日に はく くつを 買いに 行きました。<br>今は ゆきの 日も すべらないで あるく ことが できます。国の かぞくに ゆきの しゃしんを 見せたら、とても おどろいて いました。",
-           "Di Jepang saya pertama kali melihat salju; negara saya panas sehingga tidak turun salju. Di hari bersalju saya senang dan langsung keluar, tetapi sepatu saya licin dan saya jatuh. Sakit, tetapi saljunya dingin dan rasanya menyenangkan. Keesokan harinya saya membeli sepatu untuk hari bersalju. Sekarang di hari bersalju saya bisa berjalan tanpa terpeleset. Keluarga di negara asal sangat terkejut melihat foto salju."),
+    "d2": (T, "きのう、駅で さいふを おとしました。こまって いたら、えきいんさんが 「さいふが ありましたよ」と 言って、もって きて くれました。えきいんさんに ありがとうを 言いました。とても うれしかったです。",
+           "Kemarin saya menjatuhkan dompet di stasiun. Saat sedang bingung, petugas stasiun berkata 'dompetnya ditemukan' dan membawakannya. Saya mengucapkan terima kasih kepada petugas stasiun. Saya sangat senang."),
+    "d3": (T + " — メール", "マークさん<br>あしたの テストの 時間が かわりました。午前十時からでは なくて、午後一時からです。ばしょは 三かいの 301きょうしつです。よろしく おねがいします。<br>山本",
+           "Mark, jadwal ujian besok berubah: bukan jam 10 pagi tetapi jam 1 siang. Tempatnya ruang 301 lantai 3. Mohon bantuannya. — Yamamoto"),
+    "d4": (C, "わたしは 日本で はじめて ゆきを 見ました。わたしの 国は あついですから、ゆきが ふりません。<br>ゆきの 日、わたしは うれしくて、すぐ 外へ 出ました。でも、くつが すべって、ころんで しまいました。いたかったですが、ゆきは つめたくて、きもちが よかったです。<br>つぎの 日、ゆきの 日に はく くつを 買いに 行きました。<br>今は ゆきの 日も すべらないで あるく ことが できます。日本の ふゆは さむいですが、わたしは ゆきが 大すきに なりました。来年も また ゆきを 見たいです。国の かぞくに ゆきの しゃしんを 見せたら、とても おどろいて いました。",
+           "Di Jepang saya pertama kali melihat salju; negara saya panas sehingga tidak turun salju. Di hari bersalju saya senang dan langsung keluar, tetapi sepatu saya licin dan saya jatuh. Sakit, tetapi saljunya dingin dan rasanya menyenangkan. Keesokan harinya saya membeli sepatu untuk hari bersalju. Sekarang di hari bersalju saya bisa berjalan tanpa terpeleset. Musim dingin Jepang dingin, tetapi saya jadi sangat suka salju. Tahun depan pun saya ingin melihat salju lagi. Keluarga di negara asal sangat terkejut melihat foto salju."),
     "d5": (J, "<b>やまの おんせん　バスの 時間</b><br>" + tbl(["駅 → おんせん", "おんせん → 駅"], [
                ["9:00 → 9:40", "10:30 → 11:10"], ["11:00 → 11:40", "13:00 → 13:40"], ["13:30 → 14:10", "15:30 → 16:10"], ["16:00 → 16:40", "18:00 → 18:40"]]) +
            "・バスの お金は 大人 400円、子ども 200円です。<br>・おんせんは 午前10時から 午後8時までです。",
@@ -274,12 +274,12 @@ PAKET = {
 18: dict(passages={
     "d1": (T + " — memo", "（いえで）<br>ケンさんが この メモを 読みました。<br><br>ケン<br>しゅくだいが おわったら、スーパーで ぎゅうにゅうを 二本 買って きて ください。お金は テーブルの 上に あります。ゲームは しゅくだいの 後で して ね。<br>父",
            "Ken, kalau PR sudah selesai, tolong belikan dua botol susu di supermarket. Uangnya di atas meja. Main gim setelah PR ya. — Ayah"),
-    "d2": (T, "わたしは 毎週 水曜日に プールで およぎます。きょねんは 五十メートル しか およげませんでしたが、今は 五百メートル およぐ ことが できます。",
-           "Setiap Rabu saya berenang di kolam. Tahun lalu hanya bisa 50 meter, sekarang bisa berenang 500 meter."),
-    "d3": (T + " — メール", "ハナさん<br>来週の 月曜日は 先生の たんじょうびです。じゅぎょうの 前に、みんなで ケーキを 食べましょう。ハナさんは 九時に きょうしつに 来て、つくえを ならべて ください。<br>リサ",
-           "Hana, Senin depan ulang tahun guru. Sebelum pelajaran, mari makan kue bersama. Hana tolong datang ke kelas jam 9 dan menata meja. — Lisa"),
-    "d4": (C, "わたしの まちには 毎週 日曜日の あさに 小さい いちが あります。ちかくの のうかの 人が やさいや くだものを うって います。<br>スーパーより 少し 高いですが、とても 新しくて おいしいです。わたしは 毎週 トマトと たまごを 買います。<br>店の おばあさんは いつも 「これ、食べて ね」と 言って、りんごを 一つ くれます。<br>いちは あさ 七時から 十時までです。はやく 行かないと、たまごは すぐ なくなります。",
-           "Di kota saya setiap Minggu pagi ada pasar kecil; petani sekitar menjual sayur dan buah. Sedikit lebih mahal dari supermarket, tetapi sangat segar dan enak. Setiap minggu saya membeli tomat dan telur. Nenek penjual selalu berkata 'makan ini ya' dan memberi satu apel. Pasarnya jam 7–10 pagi. Kalau tidak datang awal, telur cepat habis."),
+    "d2": (T, "わたしは 毎週 水曜日に プールで およぎます。水曜日の よるは いつも よく ねむれます。きょねんは 五十メートル しか およげませんでしたが、今は 五百メートル およぐ ことが できます。",
+           "Setiap Rabu saya berenang di kolam. Rabu malam saya selalu bisa tidur nyenyak. Tahun lalu hanya bisa 50 meter, sekarang bisa berenang 500 meter."),
+    "d3": (T + " — メール", "ハナさん<br>来週の 月曜日は 先生の たんじょうびです。じゅぎょうの 前に、みんなで ケーキを 食べましょう。ハナさんは 九時に きょうしつに 来て、つくえを ならべて ください。よろしく おねがいします。<br>リサ",
+           "Hana, Senin depan ulang tahun guru. Sebelum pelajaran, mari makan kue bersama. Hana tolong datang ke kelas jam 9 dan menata meja. Mohon bantuannya. — Lisa"),
+    "d4": (C, "わたしの まちには 毎週 日曜日の あさに 小さい いちが あります。ちかくの のうかの 人が やさいや くだものを うって います。<br>スーパーより 少し 高いですが、とても 新しくて おいしいです。わたしは 毎週 トマトと たまごを 買います。<br>店の おばあさんは いつも 「これ、食べて ね」と 言って、りんごを 一つ くれます。<br>いちは あさ 七時から 十時までです。たまごは あさの うちに うって いますから、八時に 行くと もう ありません。今月は 七時に 行きました。はやく 行かないと、たまごは すぐ なくなります。",
+           "Di kota saya setiap Minggu pagi ada pasar kecil; petani sekitar menjual sayur dan buah. Sedikit lebih mahal dari supermarket, tetapi sangat segar dan enak. Setiap minggu saya membeli tomat dan telur. Nenek penjual selalu berkata 'makan ini ya' dan memberi satu apel. Pasarnya jam 7–10 pagi. Telur dijual di pagi hari, jadi kalau datang jam delapan sudah habis. Bulan ini saya datang jam tujuh. Kalau tidak datang awal, telur cepat habis."),
     "d5": (J, "<b>日本語 スピーチ たいかい</b><br>" + tbl(["", "日", "ばしょ", "テーマ"], [
                ["しょきゅう", "7月6日（土）", "しの ホール", "わたしの まち"], ["ちゅうきゅう", "7月7日（日）", "しの ホール", "日本で おどろいた こと"]]) +
            "・スピーチは 三分です。<br>・もうしこみは 六月二十日までに、じむしつで して ください。<br>・見に 来る 人は お金が いりません。",
@@ -311,12 +311,12 @@ PAKET = {
 19: dict(passages={
     "d1": (T + " — memo", "（会社で）<br>トンさんの つくえに この メモが あります。<br><br>トンさん<br>あしたは 会社の 前の 道で こうじが あります。車は 会社の 前に とめる ことが できません。駅の ちかくの ちゅうしゃじょうを つかって ください。<br>中川",
            "Ton, besok ada pekerjaan jalan di depan kantor. Mobil tidak bisa diparkir di depan kantor. Pakai parkiran dekat stasiun. — Nakagawa"),
-    "d2": (T, "わたしは まいばん ねる 前に 母に 電話を します。母は 国に いますから、日本より 二時間 おそいです。わたしが 十時に 電話を すると、母の 国は 八時です。",
-           "Setiap malam sebelum tidur saya menelepon ibu. Ibu di negara asal, waktunya dua jam lebih lambat dari Jepang. Kalau saya menelepon jam 10, di negara ibu jam 8."),
-    "d3": (T + " — メール", "けいこさん<br>こんどの 土曜日、うちで たこやきパーティーを します。四時からです。何も もって こなくて いいですよ。来る ことが できるか、木曜日までに おしえて ください。<br>ベン",
-           "Keiko, Sabtu ini saya mengadakan pesta takoyaki di rumah mulai jam 4. Tidak perlu membawa apa-apa. Tolong kabari paling lambat Kamis apakah bisa datang. — Ben"),
-    "d4": (C, "わたしは まいあさ こうえんで ラジオ たいそうを します。六時半から 十分だけですが、毎日 二十人ぐらいの 人が 来ます。<br>はじめは 一人で 行きましたから、少し はずかしかったです。でも、となりの おじいさんが 「いっしょに しましょう」と 言って くれました。<br>今は たいそうの 後で、おじいさんと 少し 話してから 学校へ 行きます。日本語の れんしゅうにも なります。<br>おじいさんは まいあさ いぬと いっしょに 来ます。いぬの 名前は 「タロウ」です。",
-           "Setiap pagi saya senam radio di taman, mulai jam 6.30 hanya 10 menit, dan setiap hari datang sekitar 20 orang. Awalnya saya datang sendiri sehingga agak malu, tetapi kakek di sebelah berkata 'ayo senam bersama'. Sekarang setelah senam saya mengobrol sebentar dengan kakek itu sebelum ke sekolah; sekaligus latihan bahasa Jepang. Kakek itu datang setiap pagi bersama anjingnya yang bernama 'Taro'."),
+    "d2": (T, "わたしは まいばん ねる 前に 母に 電話を します。母は 国に いますから、日本より 二時間 おそいです。母の こえを 聞くと、あんしんします。わたしが 十時に 電話を すると、母の 国は 八時です。",
+           "Setiap malam sebelum tidur saya menelepon ibu. Ibu di negara asal, waktunya dua jam lebih lambat dari Jepang. Mendengar suara ibu, saya merasa tenang. Kalau saya menelepon jam 10, di negara ibu jam 8."),
+    "d3": (T + " — メール", "けいこさん<br>こんどの 土曜日、うちで たこやきパーティーを します。四時からです。何も もって こなくて いいですよ。来る ことが できるか、木曜日までに おしえて ください。たのしみに して います。<br>ベン",
+           "Keiko, Sabtu ini saya mengadakan pesta takoyaki di rumah mulai jam 4. Tidak perlu membawa apa-apa. Tolong kabari paling lambat Kamis apakah bisa datang. Saya menantikannya. — Ben"),
+    "d4": (C, "わたしは まいあさ こうえんで ラジオ たいそうを します。六時半から 十分だけですが、毎日 二十人ぐらいの 人が 来ます。<br>はじめは 一人で 行きましたから、少し はずかしかったです。でも、となりの おじいさんが 「いっしょに しましょう」と 言って くれました。<br>今は たいそうの 後で、おじいさんと 少し 話してから 学校へ 行きます。日本語の れんしゅうにも なります。<br>おじいさんは まいあさ いぬと いっしょに 来ます。わたしは タロウと もう ともだちです。まいあさ タロウが わたしを 見て、うれしそうに します。いぬの 名前は 「タロウ」です。",
+           "Setiap pagi saya senam radio di taman, mulai jam 6.30 hanya 10 menit, dan setiap hari datang sekitar 20 orang. Awalnya saya datang sendiri sehingga agak malu, tetapi kakek di sebelah berkata 'ayo senam bersama'. Sekarang setelah senam saya mengobrol sebentar dengan kakek itu sebelum ke sekolah; sekaligus latihan bahasa Jepang. Saya dan Taro sudah berteman. Tiap pagi Taro melihat saya dan tampak senang. Kakek itu datang setiap pagi bersama anjingnya yang bernama 'Taro'."),
     "d5": (J, "<b>びじゅつかんの おしらせ</b><br>" + tbl(["", "大人", "大学生", "高校生 いか"], [
                ["お金", "1,200円", "800円", "0円"]]) +
            "・月曜日は 休みです。月曜日が 休みの 日の ときは、つぎの 日が 休みです。<br>・金曜日は 午後8時まで あいて います（ほかの 日は 午後5時まで）。<br>・十人 いじょうで 来る ときは、一人 200円 安く なります。",
@@ -348,12 +348,12 @@ PAKET = {
 20: dict(passages={
     "d1": (T + " — memo", "（学校で）<br>きょうしつの ドアに この かみが あります。<br><br>二年 Aクラスの みなさんへ<br>あした、田中先生は 休みです。一時間目と 二時間目は としょしつで じぶんで べんきょうして ください。三時間目からは いつもの じゅぎょうです。",
            "Untuk kelas 2A: besok Pak/Bu Tanaka libur. Jam ke-1 dan ke-2 belajar mandiri di ruang perpustakaan. Mulai jam ke-3 pelajaran seperti biasa."),
-    "d2": (T, "わたしの へやには テレビが ありません。ニュースは スマホで 見ます。えいがは しゅうまつに 友だちの いえで 見ます。テレビが なくても、こまりません。",
-           "Di kamar saya tidak ada TV. Berita saya lihat di ponsel. Film saya tonton di rumah teman saat akhir pekan. Tanpa TV pun saya tidak kesulitan."),
-    "d3": (T + " — メール", "マイさん<br>きのうは しゅくだいを おしえて くれて、ありがとう。おかげで、ぜんぶ できました。こんどは わたしが ばんごはんを ごちそうします。来週 いつが いいですか。<br>ルカ",
-           "Mai, terima kasih kemarin sudah membantu PR. Berkatmu semuanya selesai. Lain kali saya traktir makan malam. Minggu depan kapan kamu bisa? — Luca"),
-    "d4": (C, "わたしの クラスには いろいろな 国の 学生が います。先週、みんなで じぶんの 国の りょうりを 一つずつ もって きて、パーティーを しました。<br>わたしは 母に 電話で つくりかたを 聞いて、国の スープを つくりました。少し からかったですが、みんな「おいしい」と 言って くれました。<br>いちばん 人気が あったのは、タイの 学生の あまい おかしでした。わたしも つくりかたを 聞きました。<br>来月は 日本人の 友だちも よんで、もう いちど パーティーを する つもりです。",
-           "Di kelas saya ada mahasiswa dari berbagai negara. Minggu lalu setiap orang membawa satu masakan negaranya dan kami berpesta. Saya menanyakan cara membuat lewat telepon ke ibu, lalu membuat sup negara saya. Agak pedas, tetapi semua bilang enak. Yang paling populer adalah kue manis dari mahasiswa Thailand; saya pun menanyakan cara membuatnya. Bulan depan kami berencana berpesta lagi dengan mengundang teman Jepang juga."),
+    "d2": (T, "わたしの へやには テレビが ありません。ニュースは スマホで 見ます。えいがは しゅうまつに 友だちの いえで 見ます。でも、本は 毎日 読んで います。テレビが なくても、こまりません。",
+           "Di kamar saya tidak ada TV. Berita saya lihat di ponsel. Film saya tonton di rumah teman saat akhir pekan. Tetapi saya membaca buku setiap hari. Tanpa TV pun saya tidak kesulitan."),
+    "d3": (T + " — メール", "マイさん<br>きのうは しゅくだいを おしえて くれて、ありがとう。おかげで、ぜんぶ できました。こんどは わたしが ばんごはんを ごちそうします。来週 いつが いいですか。ほんとうに ありがとう。<br>ルカ",
+           "Mai, terima kasih kemarin sudah membantu PR. Berkatmu semuanya selesai. Lain kali saya traktir makan malam. Terima kasih banyak. Minggu depan kapan kamu bisa? — Luca"),
+    "d4": (C, "わたしの クラスには いろいろな 国の 学生が います。先週、みんなで じぶんの 国の りょうりを 一つずつ もって きて、パーティーを しました。<br>わたしは 母に 電話で つくりかたを 聞いて、国の スープを つくりました。少し からかったですが、みんな「おいしい」と 言って くれました。<br>いちばん 人気が あったのは、タイの 学生の あまい おかしでした。わたしも つくりかたを 聞きました。来月の パーティーでは、わたしは かんたんな おかしを つくって みたいです。<br>来月は 日本人の 友だちも よんで、もう いちど パーティーを する つもりです。",
+           "Di kelas saya ada mahasiswa dari berbagai negara. Minggu lalu setiap orang membawa satu masakan negaranya dan kami berpesta. Saya menanyakan cara membuat lewat telepon ke ibu, lalu membuat sup negara saya. Agak pedas, tetapi semua bilang enak. Yang paling populer adalah kue manis dari mahasiswa Thailand; saya pun menanyakan cara membuatnya. Di pesta bulan depan, saya ingin mencoba membuat kue sederhana. Bulan depan kami berencana berpesta lagi dengan mengundang teman Jepang juga."),
     "d5": (J, "<b>ゴミの 出しかた（さくらまち）</b><br>" + tbl(["ゴミ", "出す 日"], [
                ["もえる ゴミ", "月曜日・木曜日"], ["もえない ゴミ", "だい1・だい3 水曜日"], ["びん・かん", "金曜日"], ["古い 新聞・本", "だい2・だい4 土曜日"]]) +
            "・ゴミは あさ 八時までに 出して ください。<br>・前の 日の よるに 出しては いけません。",

@@ -29,9 +29,9 @@
   - D. 田中さんに 電話を します — Salah. Tidak ada permintaan menelepon.
 
 > **Teks pendek (短文)**  
-> わたしは まいあさ 七時に おきます。いつもは パンを 食べますが、けさは パンが ありませんでしたから、ごはんを 食べました。それから、えきまで あるいて 行きました。
+> わたしは まいあさ 七時に おきます。いつもは パンを 食べますが、けさは パンが ありませんでしたから、ごはんを 食べました。えきまで 十五分 かかります。それから、えきまで あるいて 行きました。
 
-<sub>Setiap pagi saya bangun jam 7. Biasanya makan roti, tetapi pagi ini roti tidak ada, jadi saya makan nasi. Lalu saya berjalan kaki ke stasiun.</sub>
+<sub>Setiap pagi saya bangun jam 7. Biasanya makan roti, tetapi pagi ini roti tidak ada, jadi saya makan nasi. Ke stasiun butuh lima belas menit. Lalu saya berjalan kaki ke stasiun.</sub>
 
 **55. 「わたし」は けさ 何を 食べましたか。**
 
@@ -49,10 +49,10 @@
 
 > **Teks pendek (短文) — surat**  
 > 山田さん  
-> きのうは 日本語の 本を かして くれて、ありがとう ございました。とても おもしろいです。今 半分 読みました。来週の 金曜日に かえしても いいですか。  
+> きのうは 日本語の 本を かして くれて、ありがとう ございました。とても おもしろいです。今 半分 読みました。来週の 金曜日に かえしても いいですか。へんじを まって います。  
 > キム
 
-<sub>Yamada, terima kasih kemarin sudah meminjamkan buku bahasa Jepang. Sangat menarik. Sekarang baru setengah saya baca. Bolehkah saya kembalikan Jumat minggu depan? — Kim</sub>
+<sub>Yamada, terima kasih kemarin sudah meminjamkan buku bahasa Jepang. Sangat menarik. Sekarang baru setengah saya baca. Saya menunggu balasan. Bolehkah saya kembalikan Jumat minggu depan? — Kim</sub>
 
 **56. キムさんは 本を いつ かえしたいですか。**
 
@@ -72,9 +72,9 @@
 > わたしの かぞくは 父と 母と いもうとと わたしの 四人です。父は ぎんこうで はたらいて います。毎日 おそく 帰りますから、月曜日から 金曜日までは いっしょに ばんごはんを 食べません。  
 > でも、日曜日は 父が ばんごはんを つくります。父の カレーは とても おいしいです。いもうとは カレーが あまり すきでは ありませんが、父の カレーは よく 食べます。  
 > 来月、母の たんじょうびが あります。いもうとと わたしは 母に 花を あげたいです。  
-> 花は 駅の 前の 花やで 買います。母は 白い 花が すきですから、白い 花を 買う つもりです。
+> 花は 駅の 前の 花やで 買います。花を あげたら、母は きっと よろこびます。いもうとは 花より ケーキが すきです。母は 白い 花が すきですから、白い 花を 買う つもりです。
 
-<sub>Keluarga saya empat orang. Ayah bekerja di bank dan pulang malam setiap hari, jadi Senin–Jumat kami tidak makan malam bersama. Tetapi hari Minggu ayah memasak makan malam; karinya sangat enak. Adik tidak begitu suka kari, tetapi kari ayah ia makan dengan lahap. Bulan depan ibu berulang tahun; saya dan adik ingin memberi ibu bunga. Bunga akan dibeli di toko bunga depan stasiun; ibu suka bunga putih, jadi kami berencana membeli bunga putih.</sub>
+<sub>Keluarga saya empat orang. Ayah bekerja di bank dan pulang malam setiap hari, jadi Senin–Jumat kami tidak makan malam bersama. Tetapi hari Minggu ayah memasak makan malam; karinya sangat enak. Adik tidak begitu suka kari, tetapi kari ayah ia makan dengan lahap. Bulan depan ibu berulang tahun; saya dan adik ingin memberi ibu bunga. Bunga akan dibeli di toko bunga depan stasiun; Kalau bunga diberikan, ibu pasti senang. Adik lebih suka kue daripada bunga. ibu suka bunga putih, jadi kami berencana membeli bunga putih.</sub>
 
 **57. お父さんは どうして 月曜日から 金曜日まで いっしょに ばんごはんを 食べませんか。**
 
@@ -173,9 +173,9 @@
   - D. おべんとうと 水 — BENAR. Benar.
 
 > **Teks pendek (短文)**  
-> わたしは 先週 新しい くつを 買いました。白い くつです。でも、すこし 小さかったです。きのう 店へ 行って、大きい くつに かえて もらいました。今は 足が いたくないです。
+> わたしは 先週 新しい くつを 買いました。白い くつです。でも、すこし 小さかったです。きのう 店へ 行って、大きい くつに かえて もらいました。あたらしい くつは とても あるきやすいです。今は 足が いたくないです。
 
-<sub>Minggu lalu saya membeli sepatu putih baru, tetapi agak kecil. Kemarin saya ke toko dan menukarnya dengan yang lebih besar. Sekarang kaki saya tidak sakit.</sub>
+<sub>Minggu lalu saya membeli sepatu putih baru, tetapi agak kecil. Kemarin saya ke toko dan menukarnya dengan yang lebih besar. Sepatu baru sangat nyaman dipakai berjalan. Sekarang kaki saya tidak sakit.</sub>
 
 **55. 「わたし」は きのう 何を しましたか。**
 
@@ -193,10 +193,10 @@
 
 > **Teks pendek (短文) — pesan**  
 > ジョンさん  
-> レストランの よやくを しました。土曜日の 午後六時です。店は 駅の 前の 「さくら」です。おくれる ときは わたしに 電話して ください。  
+> レストランの よやくを しました。土曜日の 午後六時です。店は 駅の 前の 「さくら」です。おくれる ときは わたしに 電話して ください。ありがとう ございます。よろしく おねがいします。  
 > ゆき
 
-<sub>John, saya sudah reservasi restoran: Sabtu jam 6 sore, restoran 'Sakura' di depan stasiun. Kalau terlambat, telepon saya. — Yuki</sub>
+<sub>John, saya sudah reservasi restoran: Sabtu jam 6 sore, restoran 'Sakura' di depan stasiun. Kalau terlambat, telepon saya. Terima kasih. Mohon bantuannya. — Yuki</sub>
 
 **56. ジョンさんは 土曜日 どこへ 行きますか。**
 
@@ -216,9 +216,9 @@
 > わたしは 毎週 日曜日に 川の ちかくの こうえんへ 行きます。そこで 友だちと テニスを します。  
 > 先週の 日曜日は 雨でしたから、テニスが できませんでした。それで、友だちと えいがを 見に 行きました。えいがは ちょっと 長かったですが、おもしろかったです。  
 > えいがの 後で、駅の ちかくの 店で コーヒーを 飲みました。来週は 天気が いいと いいです。  
-> こうえんの テニスコートは あさ 九時から あいて います。来週は 九時に 行って、二時間 テニスを する つもりです。
+> こうえんの テニスコートは あさ 九時から あいて います。来週も 天気が よかったら、友だちと また テニスを したいです。テニスは からだに いいです。来週は 九時に 行って、二時間 テニスを する つもりです。
 
-<sub>Setiap Minggu saya ke taman dekat sungai dan bermain tenis dengan teman. Minggu lalu hujan sehingga tidak bisa main tenis, jadi kami menonton film. Filmnya agak panjang tetapi menarik. Setelah itu kami minum kopi di toko dekat stasiun. Semoga minggu depan cuacanya bagus. Lapangan tenis taman buka jam 9 pagi. Minggu depan kami berencana datang jam 9 dan bermain tenis dua jam.</sub>
+<sub>Setiap Minggu saya ke taman dekat sungai dan bermain tenis dengan teman. Minggu lalu hujan sehingga tidak bisa main tenis, jadi kami menonton film. Filmnya agak panjang tetapi menarik. Setelah itu kami minum kopi di toko dekat stasiun. Semoga minggu depan cuacanya bagus. Lapangan tenis taman buka jam 9 pagi. Kalau minggu depan juga cerah, saya ingin main tenis lagi dengan teman. Tenis baik untuk badan. Minggu depan kami berencana datang jam 9 dan bermain tenis dua jam.</sub>
 
 **57. 先週の 日曜日、どうして テニスが できませんでしたか。**
 
@@ -315,9 +315,9 @@
   - D. おさらを あらいます — Salah. Ayah yang mencuci piring.
 
 > **Teks pendek (短文)**  
-> きょうは わたしの たんじょうびでした。あさ 友だちから メールが 来ました。ひるは 母と いっしょに レストランで 食べました。よるは いえで ケーキを 食べました。とても たのしい 一日でした。
+> きょうは わたしの たんじょうびでした。あさ 友だちから メールが 来ました。ひるは 母と いっしょに レストランで 食べました。よるは いえで ケーキを 食べました。あしたは 学校へ 行きます。とても たのしい 一日でした。
 
-<sub>Hari ini ulang tahun saya. Pagi ada email dari teman; siang makan di restoran bersama ibu; malam makan kue di rumah. Hari yang sangat menyenangkan.</sub>
+<sub>Hari ini ulang tahun saya. Pagi ada email dari teman; siang makan di restoran bersama ibu; malam makan kue di rumah. Besok saya pergi ke sekolah. Hari yang sangat menyenangkan.</sub>
 
 **55. 「わたし」は ひる 何を しましたか。**
 
@@ -335,10 +335,10 @@
 
 > **Teks pendek (短文) — pesan**  
 > 田中さん  
-> あしたの テストは 九時からです。でも、わたしは 先生と 話を しますから、八時半に きょうしつへ 行きます。田中さんも いっしょに 行きませんか。  
+> あしたの テストは 九時からです。でも、わたしは 先生と 話を しますから、八時半に きょうしつへ 行きます。田中さんも いっしょに 行きませんか。へんじを まって います。  
 > ワン
 
-<sub>Tanaka, ujian besok mulai jam 9. Tetapi saya akan berbicara dengan guru, jadi saya ke kelas jam 8.30. Mau pergi bersama? — Wang</sub>
+<sub>Tanaka, ujian besok mulai jam 9. Tetapi saya akan berbicara dengan guru, jadi saya ke kelas jam 8.30. Saya menunggu balasan. Mau pergi bersama? — Wang</sub>
 
 **56. ワンさんは あした 何時に きょうしつへ 行きますか。**
 
@@ -358,9 +358,9 @@
 > わたしは きょねんの 四月に 日本へ 来ました。はじめは 日本語が 少ししか わかりませんでしたから、買いものが たいへんでした。  
 > 今は 大学の ちかくの スーパーで アルバイトを して います。毎日 おきゃくさんと 話しますから、日本語が 上手に なりました。  
 > でも、かんじは まだ むずかしいです。それで、まいばん かんじを 五つ ノートに 書いて います。  
-> 先週、アルバイトの 店長さんが 「かんじの 本を あげます」と 言って、古い 本を くれました。とても うれしかったです。
+> 先週、アルバイトの 店長さんが 「かんじの 本を あげます」と 言って、古い 本を くれました。日本語の べんきょうは たいへんですが、たのしいです。毎日 少しずつ がんばって います。とても うれしかったです。
 
-<sub>Saya datang ke Jepang April tahun lalu. Awalnya hanya paham sedikit bahasa Jepang, jadi belanja itu sulit. Sekarang saya kerja paruh waktu di supermarket dekat kampus; karena setiap hari berbicara dengan pelanggan, bahasa Jepang saya membaik. Tetapi kanji masih sulit, jadi setiap malam saya menulis 5 kanji di buku catatan. Minggu lalu manajer toko tempat kerja memberi saya buku kanji bekas. Saya sangat senang.</sub>
+<sub>Saya datang ke Jepang April tahun lalu. Awalnya hanya paham sedikit bahasa Jepang, jadi belanja itu sulit. Sekarang saya kerja paruh waktu di supermarket dekat kampus; karena setiap hari berbicara dengan pelanggan, bahasa Jepang saya membaik. Tetapi kanji masih sulit, jadi setiap malam saya menulis 5 kanji di buku catatan. Minggu lalu manajer toko tempat kerja memberi saya buku kanji bekas. Belajar bahasa Jepang berat tetapi menyenangkan. Saya berusaha sedikit demi sedikit setiap hari. Saya sangat senang.</sub>
 
 **57. 「わたし」は どうして 日本語が 上手に なりましたか。**
 
@@ -458,9 +458,9 @@
   - D. 三時ごろ また 電話を します — BENAR. Benar.
 
 > **Teks pendek (短文)**  
-> わたしの へやは 二かいに あります。まどから 大きい 木が 見えます。へやは あまり ひろくないですが、あかるくて しずかです。わたしは この へやが とても すきです。
+> わたしの へやは 二かいに あります。まどから 大きい 木が 見えます。へやは あまり ひろくないですが、あかるくて しずかです。よるは まどを あけて、そとの おとを 聞きます。わたしは この へやが とても すきです。
 
-<sub>Kamar saya di lantai dua. Dari jendela terlihat pohon besar. Kamarnya tidak begitu luas, tetapi terang dan tenang. Saya sangat suka kamar ini.</sub>
+<sub>Kamar saya di lantai dua. Dari jendela terlihat pohon besar. Kamarnya tidak begitu luas, tetapi terang dan tenang. Malam hari saya membuka jendela dan mendengarkan suara di luar. Saya sangat suka kamar ini.</sub>
 
 **55. 「わたし」の へやは どんな へやですか。**
 
@@ -478,10 +478,10 @@
 
 > **Teks pendek (短文) — surat**  
 > ケンさん  
-> 来週の 水曜日は 先生の たんじょうびです。クラスの みんなで 先生に 本を あげます。一人 三百円 ください。金曜日までに わたしに わたして ください。  
+> 来週の 水曜日は 先生の たんじょうびです。クラスの みんなで 先生に 本を あげます。一人 三百円 ください。金曜日までに わたしに わたして ください。おかねを わすれないで くださいね。  
 > サラ
 
-<sub>Ken, Rabu depan ulang tahun guru. Satu kelas akan memberi guru buku. Tiap orang 300 yen; tolong serahkan ke saya paling lambat Jumat. — Sarah</sub>
+<sub>Ken, Rabu depan ulang tahun guru. Satu kelas akan memberi guru buku. Tiap orang 300 yen; tolong serahkan ke saya paling lambat Jumat. Jangan lupa uangnya ya. — Sarah</sub>
 
 **56. ケンさんは 金曜日までに 何を しますか。**
 
@@ -501,9 +501,9 @@
 > わたしは まいあさ 電車で 会社へ 行きます。電車の 中は 人が とても 多いです。  
 > 先月から、わたしは いつもより 一時間 はやく いえを 出て います。はやい 電車は 人が 少ないですから、すわる ことが できます。電車の 中で 本を 読んだり、日本語の べんきょうを したり します。  
 > 会社に はやく つきますから、ちかくの 店で コーヒーを 飲んでから しごとを はじめます。  
-> 前は まいあさ つかれて いましたが、今は あさの 時間が たのしいです。来月から、電車の 中で 新しい 本を 読む つもりです。
+> 前は まいあさ つかれて いましたが、今は あさの 時間が たのしいです。あしたも はやい 電車に のる つもりです。あさの 時間は とても たいせつです。来月から、電車の 中で 新しい 本を 読む つもりです。
 
-<sub>Setiap pagi saya naik kereta ke kantor, dan keretanya sangat penuh. Sejak bulan lalu saya keluar rumah satu jam lebih awal. Kereta pagi sepi sehingga bisa duduk; saya membaca buku atau belajar bahasa Jepang. Karena tiba lebih awal, saya minum kopi di toko dekat kantor sebelum mulai kerja. Dulu setiap pagi saya lelah, sekarang waktu pagi menyenangkan. Mulai bulan depan saya berencana membaca buku baru di kereta.</sub>
+<sub>Setiap pagi saya naik kereta ke kantor, dan keretanya sangat penuh. Sejak bulan lalu saya keluar rumah satu jam lebih awal. Kereta pagi sepi sehingga bisa duduk; saya membaca buku atau belajar bahasa Jepang. Karena tiba lebih awal, saya minum kopi di toko dekat kantor sebelum mulai kerja. Dulu setiap pagi saya lelah, sekarang waktu pagi menyenangkan. Besok pun saya berencana naik kereta pagi. Waktu pagi sangat penting. Mulai bulan depan saya berencana membaca buku baru di kereta.</sub>
 
 **57. 「わたし」は どうして はやく いえを 出ますか。**
 
@@ -601,9 +601,9 @@
   - D. マイさんに じしょを かします — Salah. Tidak disebut.
 
 > **Teks pendek (短文)**  
-> わたしは 毎日 いぬと さんぽを します。あさは 時間が ありませんから、十分だけです。でも、よるは 川の ちかくまで 行きますから、一時間ぐらい あるきます。
+> わたしは 毎日 いぬと さんぽを します。あさは 時間が ありませんから、十分だけです。いぬは さんぽが 大すきです。でも、よるは 川の ちかくまで 行きますから、一時間ぐらい あるきます。
 
-<sub>Setiap hari saya jalan-jalan dengan anjing. Pagi tidak ada waktu, jadi hanya 10 menit. Tetapi malam kami pergi sampai dekat sungai, jadi berjalan sekitar satu jam.</sub>
+<sub>Setiap hari saya jalan-jalan dengan anjing. Pagi tidak ada waktu, jadi hanya 10 menit. Anjing sangat suka jalan-jalan. Tetapi malam kami pergi sampai dekat sungai, jadi berjalan sekitar satu jam.</sub>
 
 **55. 「わたし」は よる どのぐらい さんぽを しますか。**
 
@@ -621,10 +621,10 @@
 
 > **Teks pendek (短文) — pesan**  
 > ナナさん  
-> あしたの パーティーですが、わたしは 飲みものを 買って 行きます。ナナさんは くだものを おねがいします。おかしは 田中さんが もって 来ます。  
+> あしたの パーティーですが、わたしは 飲みものを 買って 行きます。ナナさんは くだものを おねがいします。おかしは 田中さんが もって 来ます。よろしく おねがいします。  
 > みき
 
-<sub>Nana, untuk pesta besok saya akan membeli minuman. Nana tolong buah. Camilan dibawa Tanaka. — Miki</sub>
+<sub>Nana, untuk pesta besok saya akan membeli minuman. Nana tolong buah. Camilan dibawa Tanaka. Mohon bantuannya. — Miki</sub>
 
 **56. ナナさんは パーティーに 何を もって 行きますか。**
 
@@ -644,9 +644,9 @@
 > 先週の 土曜日、わたしは はじめて 日本の りょうりを つくりました。友だちの まりさんが つくりかたを おしえて くれました。  
 > まず、まりさんと いっしょに スーパーへ 行って、やさいと さかなを 買いました。それから、まりさんの いえで さかなを やいて、やさいの スープを つくりました。  
 > りょうりは むずかしかったですが、とても おいしかったです。こんどは 国の りょうりを まりさんに つくって あげたいです。  
-> まりさんの いえは 駅から あるいて 十分の ところに あります。まどから 山が 見えて、とても いい いえです。
+> まりさんの いえは 駅から あるいて 十分の ところに あります。また 友だちと いっしょに りょうりを つくりたいです。つぎは 何を つくりましょうか。まどから 山が 見えて、とても いい いえです。
 
-<sub>Sabtu lalu saya pertama kali memasak masakan Jepang; teman saya Mari mengajari. Pertama kami ke supermarket membeli sayur dan ikan, lalu di rumah Mari memanggang ikan dan membuat sup sayur. Memasaknya sulit tetapi sangat enak. Lain kali saya ingin memasakkan masakan negara saya untuk Mari. Rumah Mari 10 menit jalan kaki dari stasiun; dari jendelanya terlihat gunung, rumah yang bagus.</sub>
+<sub>Sabtu lalu saya pertama kali memasak masakan Jepang; teman saya Mari mengajari. Pertama kami ke supermarket membeli sayur dan ikan, lalu di rumah Mari memanggang ikan dan membuat sup sayur. Memasaknya sulit tetapi sangat enak. Lain kali saya ingin memasakkan masakan negara saya untuk Mari. Rumah Mari 10 menit jalan kaki dari stasiun; Saya ingin memasak lagi bersama teman. Lain kali masak apa ya? dari jendelanya terlihat gunung, rumah yang bagus.</sub>
 
 **57. 「わたし」と まりさんは さいしょに 何を しましたか。**
 
@@ -743,9 +743,9 @@
   - D. びょういんへ 行く こと — Salah. Yang ke rumah sakit adalah ibu.
 
 > **Teks pendek (短文)**  
-> わたしの まちには 古い おてらが あります。はるは さくらの 花が きれいですから、たくさんの 人が 来ます。わたしは 人が 多い はるより、しずかな ふゆの おてらが すきです。
+> わたしの まちには 古い おてらが あります。はるは さくらの 花が きれいですから、たくさんの 人が 来ます。ふゆの おてらは 空気が きれいです。わたしは 人が 多い はるより、しずかな ふゆの おてらが すきです。
 
-<sub>Di kota saya ada kuil tua. Musim semi bunga sakuranya indah sehingga banyak orang datang. Saya lebih suka kuil di musim dingin yang tenang daripada musim semi yang ramai.</sub>
+<sub>Di kota saya ada kuil tua. Musim semi bunga sakuranya indah sehingga banyak orang datang. Udara di kuil saat musim dingin bersih. Saya lebih suka kuil di musim dingin yang tenang daripada musim semi yang ramai.</sub>
 
 **55. 「わたし」は いつの おてらが すきですか。**
 
@@ -763,10 +763,10 @@
 
 > **Teks pendek (短文) — email**  
 > 先生  
-> すみません。きょうは かぜを ひきましたから、学校を 休みます。あしたは 行く ことが できると おもいます。きょうの しゅくだいを メールで おしえて ください。  
+> すみません。きょうは かぜを ひきましたから、学校を 休みます。あしたは 行く ことが できると おもいます。きょうの しゅくだいを メールで おしえて ください。おねがいします。  
 > リン
 
-<sub>Bu guru, maaf. Hari ini saya flu, jadi tidak masuk sekolah. Besok saya kira bisa masuk. Tolong beri tahu PR hari ini lewat email. — Lin</sub>
+<sub>Bu guru, maaf. Hari ini saya flu, jadi tidak masuk sekolah. Besok saya kira bisa masuk. Tolong beri tahu PR hari ini lewat email. Mohon bantuannya. — Lin</sub>
 
 **56. リンさんは 先生に 何を たのみましたか。**
 
@@ -786,9 +786,9 @@
 > わたしは じてんしゃが すきです。休みの 日は いつも じてんしゃで うみまで 行きます。いえから うみまで 一時間ぐらい かかります。  
 > 先週、わたしの じてんしゃが こわれました。新しい じてんしゃは 高いですから、すぐ 買う ことが できません。それで、今は あにの じてんしゃを かりて います。  
 > あにの じてんしゃは 少し 大きいですが、とても はやいです。  
-> 来月、アルバイトの お金で 新しい じてんしゃを 買う つもりです。あおい じてんしゃが ほしいです。
+> 来月、アルバイトの お金で 新しい じてんしゃを 買う つもりです。あおい じてんしゃは 高いですが、とても かっこいいです。はやく 買って、うみまで 行きたいです。あおい じてんしゃが ほしいです。
 
-<sub>Saya suka sepeda; setiap hari libur saya bersepeda ke laut (sekitar satu jam dari rumah). Minggu lalu sepeda saya rusak. Sepeda baru mahal sehingga tidak bisa langsung dibeli, jadi sekarang saya meminjam sepeda kakak. Sepedanya agak besar tetapi sangat cepat. Bulan depan saya berencana membeli sepeda baru dengan uang kerja paruh waktu. Saya ingin sepeda biru.</sub>
+<sub>Saya suka sepeda; setiap hari libur saya bersepeda ke laut (sekitar satu jam dari rumah). Minggu lalu sepeda saya rusak. Sepeda baru mahal sehingga tidak bisa langsung dibeli, jadi sekarang saya meminjam sepeda kakak. Sepedanya agak besar tetapi sangat cepat. Bulan depan saya berencana membeli sepeda baru dengan uang kerja paruh waktu. Sepeda biru memang mahal, tetapi sangat keren. Saya ingin cepat membelinya dan pergi ke laut. Saya ingin sepeda biru.</sub>
 
 **57. 「わたし」は どうして あにの じてんしゃを かりて いますか。**
 
@@ -887,9 +887,9 @@
   - D. きむらさんに 電話を します — Salah. Tidak disebut.
 
 > **Teks pendek (短文)**  
-> わたしは まいばん 十一時に ねます。でも、きのうは おもしろい 本を 読んで いましたから、ねたのは 一時でした。けさは 七時に おきましたが、とても ねむかったです。
+> わたしは まいばん 十一時に ねます。でも、きのうは おもしろい 本を 読んで いましたから、ねたのは 一時でした。きょうは はやく ねる つもりです。けさは 七時に おきましたが、とても ねむかったです。
 
-<sub>Setiap malam saya tidur jam 11. Tetapi kemarin saya membaca buku menarik, jadi baru tidur jam 1. Pagi ini saya bangun jam 7, tetapi sangat mengantuk.</sub>
+<sub>Setiap malam saya tidur jam 11. Tetapi kemarin saya membaca buku menarik, jadi baru tidur jam 1. Hari ini saya berencana tidur lebih awal. Pagi ini saya bangun jam 7, tetapi sangat mengantuk.</sub>
 
 **55. 「わたし」は きのう 何時に ねましたか。**
 
@@ -907,10 +907,10 @@
 
 > **Teks pendek (短文) — surat**  
 > おばあさん  
-> おかしを ありがとう ございました。とても おいしかったです。なつ休みに なったら、父と 母と いっしょに あそびに 行きます。たのしみです。  
+> おかしを ありがとう ございました。とても おいしかったです。なつ休みに なったら、父と 母と いっしょに あそびに 行きます。たのしみです。では、また 会いましょう。  
 > ゆうた
 
-<sub>Nenek, terima kasih untuk kuenya, sangat enak. Saat liburan musim panas, saya akan berkunjung bersama ayah dan ibu. Tidak sabar. — Yuta</sub>
+<sub>Nenek, terima kasih untuk kuenya, sangat enak. Saat liburan musim panas, saya akan berkunjung bersama ayah dan ibu. Tidak sabar. Baiklah, sampai jumpa lagi. — Yuta</sub>
 
 **56. ゆうたさんは なつ休みに 何を しますか。**
 
@@ -930,9 +930,9 @@
 > わたしの 学校の ちかくに 小さい パンやが あります。おばあさんが 一人で パンを つくって います。  
 > この 店の パンは 安くて おいしいですから、あさ はやく 行かないと、すぐ なくなります。わたしは 毎週 月曜日に 行きます。月曜日は 学校が 十時からですから、あさ 八時に 店へ 行く ことが できます。  
 > いちばん すきな パンは チーズの パンです。  
-> 店は あさ 七時に あいて、パンが なくなったら しまります。日曜日は 休みです。
+> 店は あさ 七時に あいて、パンが なくなったら しまります。パンやの おばあさんは いつも えがおで 話して くれます。わたしは その 店が 大すきです。日曜日は 休みです。
 
-<sub>Dekat sekolah ada toko roti kecil yang dikelola seorang nenek. Rotinya murah dan enak, jadi kalau tidak datang pagi-pagi cepat habis. Saya pergi setiap Senin karena hari Senin sekolah mulai jam 10, jadi bisa ke toko jam 8 pagi. Roti favorit saya roti keju. Toko buka jam 7 pagi dan tutup kalau roti habis. Minggu libur.</sub>
+<sub>Dekat sekolah ada toko roti kecil yang dikelola seorang nenek. Rotinya murah dan enak, jadi kalau tidak datang pagi-pagi cepat habis. Saya pergi setiap Senin karena hari Senin sekolah mulai jam 10, jadi bisa ke toko jam 8 pagi. Roti favorit saya roti keju. Toko buka jam 7 pagi dan tutup kalau roti habis. Nenek toko roti selalu berbicara dengan senyum. Saya sangat suka toko itu. Minggu libur.</sub>
 
 **57. この パンやの パンは どうして すぐ なくなりますか。**
 
@@ -1030,9 +1030,9 @@
   - D. 木曜日に じむしつへ 名前を 書きに 行きます — Salah. Kamis adalah hari acaranya.
 
 > **Teks pendek (短文)**  
-> わたしは あさごはんの 後で、いつも コーヒーを 飲みます。でも、きのうから いしゃに 「コーヒーは 一日 一ぱいだけに して ください」と 言われましたから、ひるは おちゃを 飲んで います。
+> わたしは あさごはんの 後で、いつも コーヒーを 飲みます。ひるは おちゃが おいしいです。でも、きのうから いしゃに 「コーヒーは 一日 一ぱいだけに して ください」と 言われましたから、ひるは おちゃを 飲んで います。
 
-<sub>Saya selalu minum kopi setelah sarapan. Tetapi sejak kemarin dokter bilang 'kopi cukup satu gelas sehari', jadi siang hari saya minum teh.</sub>
+<sub>Saya selalu minum kopi setelah sarapan. Teh enak saat siang. Tetapi sejak kemarin dokter bilang 'kopi cukup satu gelas sehari', jadi siang hari saya minum teh.</sub>
 
 **55. 「わたし」は 今 ひる 何を 飲んで いますか。**
 
@@ -1050,10 +1050,10 @@
 
 > **Teks pendek (短文) — pesan**  
 > ジャンさん  
-> きょうの よる いっしょに ばんごはんを 食べませんか。七時に 駅の 北口で まって います。行く ことが できなかったら、六時までに 電話を ください。  
+> きょうの よる いっしょに ばんごはんを 食べませんか。七時に 駅の 北口で まって います。行く ことが できなかったら、六時までに 電話を ください。よろしく おねがいします。  
 > えみ
 
-<sub>Jean, mau makan malam bersama malam ini? Saya tunggu jam 7 di pintu utara stasiun. Kalau tidak bisa, telepon saya paling lambat jam 6. — Emi</sub>
+<sub>Jean, mau makan malam bersama malam ini? Saya tunggu jam 7 di pintu utara stasiun. Kalau tidak bisa, telepon saya paling lambat jam 6. Mohon bantuannya. — Emi</sub>
 
 **56. ジャンさんが ばんごはんに 行く ことが できない ときは、どう しますか。**
 
@@ -1073,9 +1073,9 @@
 > 先月、わたしは 友だちと 山へ 行きました。あさ 六時に 駅で 会って、電車で 二時間 行きました。  
 > 山の 上は とても さむかったです。わたしは うすい ふくしか もって いませんでしたから、友だちが 大きい ジャケットを かして くれました。  
 > 山の 上から 見た まちは 小さくて、きれいでした。今どは もっと あつい ふくを もって 行きます。  
-> 山の 上で 食べた おにぎりは、とても おいしかったです。帰りの 電車では、二人とも ずっと ねて いました。
+> 山の 上で 食べた おにぎりは、とても おいしかったです。ことしの なつは、友だちと また 山へ 行く つもりです。こんどは あつい ふくを もって 行きます。帰りの 電車では、二人とも ずっと ねて いました。
 
-<sub>Bulan lalu saya ke gunung bersama teman. Kami bertemu di stasiun jam 6 pagi dan naik kereta dua jam. Puncak gunung sangat dingin; saya hanya membawa baju tipis, jadi teman meminjamkan jaket besar. Kota yang terlihat dari puncak kecil dan indah. Lain kali saya akan membawa baju yang lebih tebal. Onigiri yang dimakan di puncak sangat enak. Di kereta pulang kami berdua tertidur terus.</sub>
+<sub>Bulan lalu saya ke gunung bersama teman. Kami bertemu di stasiun jam 6 pagi dan naik kereta dua jam. Puncak gunung sangat dingin; saya hanya membawa baju tipis, jadi teman meminjamkan jaket besar. Kota yang terlihat dari puncak kecil dan indah. Lain kali saya akan membawa baju yang lebih tebal. Onigiri yang dimakan di puncak sangat enak. Musim panas ini saya berencana naik gunung lagi dengan teman. Kali ini saya membawa baju hangat. Di kereta pulang kami berdua tertidur terus.</sub>
 
 **57. 友だちは どうして ジャケットを かして くれましたか。**
 
@@ -1173,9 +1173,9 @@
   - D. にもつを おくります — Salah. Paketnya diterima, bukan dikirim.
 
 > **Teks pendek (短文)**  
-> わたしは 毎年 十二月に 国へ 帰ります。でも、ことしは 一月に 大学の テストが ありますから、帰りません。日本で 友だちと あたらしい 年を むかえます。
+> わたしは 毎年 十二月に 国へ 帰ります。でも、ことしは 一月に 大学の テストが ありますから、帰りません。日本の おしょうがつを 見るのが たのしみです。日本で 友だちと あたらしい 年を むかえます。
 
-<sub>Setiap tahun saya pulang ke negara saya di bulan Desember. Tetapi tahun ini ada ujian universitas bulan Januari, jadi saya tidak pulang. Saya akan menyambut tahun baru di Jepang bersama teman.</sub>
+<sub>Setiap tahun saya pulang ke negara saya di bulan Desember. Tetapi tahun ini ada ujian universitas bulan Januari, jadi saya tidak pulang. Saya menantikan melihat tahun baru Jepang. Saya akan menyambut tahun baru di Jepang bersama teman.</sub>
 
 **55. 「わたし」は ことし どうして 国へ 帰りませんか。**
 
@@ -1193,10 +1193,10 @@
 
 > **Teks pendek (短文) — メール**  
 > やまださん  
-> 来週の 日本語の べんきょう会は、火曜日では なくて、水曜日に なりました。時間と ばしょは おなじです。じしょを わすれないで くださいね。  
+> 来週の 日本語の べんきょう会は、火曜日では なくて、水曜日に なりました。時間と ばしょは おなじです。じしょを わすれないで くださいね。では、あした 会いましょう。  
 > アン
 
-<sub>Yamada, kelompok belajar bahasa Jepang minggu depan bukan hari Selasa tetapi Rabu. Waktu dan tempatnya sama. Jangan lupa bawa kamus ya. — An</sub>
+<sub>Yamada, kelompok belajar bahasa Jepang minggu depan bukan hari Selasa tetapi Rabu. Waktu dan tempatnya sama. Jangan lupa bawa kamus ya. Baiklah, sampai bertemu besok. — An</sub>
 
 **56. べんきょう会に ついて、かわった ことは 何ですか。**
 
@@ -1215,10 +1215,10 @@
 > **Teks menengah (中文)**  
 > わたしの クラスに ブラジルから 来た ルイスさんが います。ルイスさんは サッカーが とても 上手です。  
 > 先週、クラスの みんなで サッカーを しました。わたしは サッカーが 下手ですから、あまり したく ありませんでした。でも、ルイスさんが ボールの けりかたを ていねいに おしえて くれました。  
-> ゲームは まけましたが、とても たのしかったです。今は 毎週 ルイスさんと れんしゅうして います。  
+> ゲームは まけましたが、とても たのしかったです。今は 毎週 ルイスさんと れんしゅうして います。ルイスさんは サッカーの 本も かして くれました。わたしは 毎日 少し 読んで います。  
 > れんしゅうの 後は、いつも 二人で 学校の ちかくの 店で ジュースを 飲みます。
 
-<sub>Di kelas saya ada Luis dari Brasil yang sangat jago sepak bola. Minggu lalu satu kelas bermain sepak bola. Saya payah sepak bola jadi kurang ingin ikut, tetapi Luis dengan sabar mengajari cara menendang bola. Kami kalah, tetapi sangat menyenangkan. Sekarang saya berlatih setiap minggu bersama Luis. Setelah latihan kami berdua selalu minum jus di toko dekat sekolah.</sub>
+<sub>Di kelas saya ada Luis dari Brasil yang sangat jago sepak bola. Minggu lalu satu kelas bermain sepak bola. Saya payah sepak bola jadi kurang ingin ikut, tetapi Luis dengan sabar mengajari cara menendang bola. Kami kalah, tetapi sangat menyenangkan. Sekarang saya berlatih setiap minggu bersama Luis. Luis juga meminjamkan buku sepak bola. Saya membacanya sedikit setiap hari. Setelah latihan kami berdua selalu minum jus di toko dekat sekolah.</sub>
 
 **57. 「わたし」は はじめ どうして サッカーを したく ありませんでしたか。**
 
@@ -1316,9 +1316,9 @@
   - D. テレビを つかう こと — BENAR. Benar.
 
 > **Teks pendek (短文)**  
-> きのうは 雨でしたから、どこにも 出かけませんでした。いえで そうじを して、それから 母に 手かみを 書きました。よるは はやく ねました。
+> きのうは 雨でしたから、どこにも 出かけませんでした。いえで そうじを して、それから 母に 手かみを 書きました。よるに 母から 電話が ありました。よるは はやく ねました。
 
-<sub>Kemarin hujan, jadi saya tidak pergi ke mana-mana. Saya membersihkan rumah, lalu menulis surat untuk ibu. Malam saya tidur cepat.</sub>
+<sub>Kemarin hujan, jadi saya tidak pergi ke mana-mana. Saya membersihkan rumah, lalu menulis surat untuk ibu. Malamnya ada telepon dari ibu. Malam saya tidur cepat.</sub>
 
 **55. 「わたし」は きのう 何を しましたか。**
 
@@ -1336,10 +1336,10 @@
 
 > **Teks pendek (短文) — メール**  
 > 先生  
-> 来週の 月曜日の 午後、先生の へやへ 行っても いいですか。じゅぎょうで わからなかった ところを 聞きたいです。先生の 時間が ある 日を おしえて ください。  
+> 来週の 月曜日の 午後、先生の へやへ 行っても いいですか。じゅぎょうで わからなかった ところを 聞きたいです。先生の 時間が ある 日を おしえて ください。よろしく おねがいします。  
 > ホアン
 
-<sub>Bu/Pak guru, bolehkah saya ke ruangan Anda Senin depan siang? Saya ingin menanyakan bagian pelajaran yang tidak saya pahami. Tolong beri tahu hari Anda ada waktu. — Hoang</sub>
+<sub>Bu/Pak guru, bolehkah saya ke ruangan Anda Senin depan siang? Saya ingin menanyakan bagian pelajaran yang tidak saya pahami. Tolong beri tahu hari Anda ada waktu. Mohon bantuannya. — Hoang</sub>
 
 **56. ホアンさんは 先生に 何を して ほしいですか。**
 
@@ -1359,9 +1359,9 @@
 > わたしの まちでは、毎年 八月に 大きい 花火の 日が あります。川の ちかくで、よる 七時から 九時まで 花火を 見る ことが できます。  
 > きょねんは 友だちと 行きましたが、人が とても 多くて、花火が よく 見えませんでした。  
 > それで、ことしは 友だちの アパートの 五かいから 見ました。人も 少なくて、花火が 大きく 見えました。とても きれいでした。  
-> 友だちの アパートの まどからは、川も まちも よく 見えます。来年も そこで 見たいと おもいます。
+> 友だちの アパートの まどからは、川も まちも よく 見えます。花火の 日は、まちが とても にぎやかです。たくさんの 人が ゆかたを きて います。来年も そこで 見たいと おもいます。
 
-<sub>Di kota saya setiap Agustus ada hari kembang api besar; bisa dilihat dekat sungai jam 19.00–21.00. Tahun lalu saya pergi bersama teman, tetapi sangat ramai sehingga kembang api tidak terlihat jelas. Jadi tahun ini kami melihat dari lantai 5 apartemen teman. Tidak ramai dan kembang api terlihat besar, sangat indah. Dari jendela apartemen teman, sungai dan kota terlihat jelas. Tahun depan saya ingin melihat dari sana lagi.</sub>
+<sub>Di kota saya setiap Agustus ada hari kembang api besar; bisa dilihat dekat sungai jam 19.00–21.00. Tahun lalu saya pergi bersama teman, tetapi sangat ramai sehingga kembang api tidak terlihat jelas. Jadi tahun ini kami melihat dari lantai 5 apartemen teman. Tidak ramai dan kembang api terlihat besar, sangat indah. Dari jendela apartemen teman, sungai dan kota terlihat jelas. Di hari kembang api, kota sangat ramai. Banyak orang memakai yukata. Tahun depan saya ingin melihat dari sana lagi.</sub>
 
 **57. きょねん 花火が よく 見えなかったのは どうしてですか。**
 
@@ -1461,9 +1461,9 @@
   - D. びょういんへ 行きます — Salah. Yang ke rumah sakit adalah Yamada.
 
 > **Teks pendek (短文)**  
-> わたしは 毎日 ばんごはんの 後で 日本語の テレビを 見ます。はじめは ぜんぜん わかりませんでしたが、今は 半分ぐらい わかります。ニュースは まだ むずかしいです。
+> わたしは 毎日 ばんごはんの 後で 日本語の テレビを 見ます。はじめは ぜんぜん わかりませんでしたが、今は 半分ぐらい わかります。いつか ニュースも わかる ように なりたいです。ニュースは まだ むずかしいです。
 
-<sub>Setiap hari setelah makan malam saya menonton TV berbahasa Jepang. Awalnya sama sekali tidak paham, sekarang sekitar setengahnya paham. Berita masih sulit.</sub>
+<sub>Setiap hari setelah makan malam saya menonton TV berbahasa Jepang. Awalnya sama sekali tidak paham, sekarang sekitar setengahnya paham. Suatu hari saya ingin bisa mengerti berita juga. Berita masih sulit.</sub>
 
 **55. 「わたし」は 今 日本語の テレビが どのぐらい わかりますか。**
 
@@ -1481,10 +1481,10 @@
 
 > **Teks pendek (短文) — メール**  
 > マリーさん  
-> きょうの 日本語の じゅぎょうは 先生が 休みですから、ありません。あしたの じゅぎょうは いつもと おなじ 時間に あります。  
+> きょうの 日本語の じゅぎょうは 先生が 休みですから、ありません。あしたの じゅぎょうは いつもと おなじ 時間に あります。よろしく おねがいします。  
 > じむしつ
 
-<sub>Marie, pelajaran bahasa Jepang hari ini tidak ada karena guru libur. Pelajaran besok ada pada jam yang sama seperti biasa. — Kantor administrasi</sub>
+<sub>Marie, pelajaran bahasa Jepang hari ini tidak ada karena guru libur. Pelajaran besok ada pada jam yang sama seperti biasa. Mohon bantuannya. — Kantor administrasi</sub>
 
 **56. この メールから わかる ことは 何ですか。**
 
@@ -1504,9 +1504,9 @@
 > わたしは 先月 新しい アパートに ひっこしました。前の アパートは 駅から あるいて 二十分でしたが、今の アパートは 五分です。  
 > へやは 前より 少し せまいです。でも、まどが 大きくて、とても あかるいです。  
 > アパートの 下に 小さい 花やが あります。わたしは 毎週 そこで 花を 一本 買って、へやに かざって います。  
-> 花やの 人は とても しんせつで、花の 名前を いろいろ おしえて くれます。きのうは 小さい 白い 花を 買いました。
+> 花やの 人は とても しんせつで、花の 名前を いろいろ おしえて くれます。へやに 花が あると、気もちが いいです。友だちが あそびに 来た ときも、よろこびます。きのうは 小さい 白い 花を 買いました。
 
-<sub>Bulan lalu saya pindah ke apartemen baru. Apartemen lama 20 menit jalan kaki dari stasiun, yang sekarang 5 menit. Kamarnya sedikit lebih sempit, tetapi jendelanya besar dan sangat terang. Di bawah apartemen ada toko bunga kecil; setiap minggu saya membeli satu tangkai bunga di sana dan menghiasi kamar. Penjual bunga sangat ramah dan mengajari berbagai nama bunga. Kemarin saya membeli bunga putih kecil.</sub>
+<sub>Bulan lalu saya pindah ke apartemen baru. Apartemen lama 20 menit jalan kaki dari stasiun, yang sekarang 5 menit. Kamarnya sedikit lebih sempit, tetapi jendelanya besar dan sangat terang. Di bawah apartemen ada toko bunga kecil; setiap minggu saya membeli satu tangkai bunga di sana dan menghiasi kamar. Penjual bunga sangat ramah dan mengajari berbagai nama bunga. Kalau ada bunga di kamar, perasaan terasa enak. Saat teman datang bermain pun, mereka senang. Kemarin saya membeli bunga putih kecil.</sub>
 
 **57. 今の アパートは 前の アパートと くらべて どうですか。**
 
@@ -1601,9 +1601,9 @@
   - D. きょうかしょと ノート — Salah. Buku pelajaran tidak perlu.
 
 > **Teks pendek (短文)**  
-> わたしは まいあさ 一ぱいの 水を 飲んでから 学校へ 行きます。ひるごはんの 後は 少し ねます。よるは 十時に ねますから、毎日 げんきです。
+> わたしは まいあさ 一ぱいの 水を 飲んでから 学校へ 行きます。ひるごはんの 後は 少し ねます。からだに いい せいかつを つづけたいです。よるは 十時に ねますから、毎日 げんきです。
 
-<sub>Setiap pagi saya minum segelas air sebelum berangkat sekolah. Setelah makan siang saya tidur sebentar. Malam saya tidur jam 10, jadi setiap hari sehat.</sub>
+<sub>Setiap pagi saya minum segelas air sebelum berangkat sekolah. Setelah makan siang saya tidur sebentar. Saya ingin melanjutkan hidup yang baik untuk badan. Malam saya tidur jam 10, jadi setiap hari sehat.</sub>
 
 **55. 「わたし」は 学校へ 行く 前に 何を しますか。**
 
@@ -1621,10 +1621,10 @@
 
 > **Teks pendek (短文) — メール**  
 > ロンさん  
-> 来週の 日曜日、山へ 行きませんか。わたしの 車で 行きます。あさ 八時に ロンさんの アパートの 前へ 行きますね。おべんとうは わたしが つくります。  
+> 来週の 日曜日、山へ 行きませんか。わたしの 車で 行きます。あさ 八時に ロンさんの アパートの 前へ 行きますね。おべんとうは わたしが つくります。たのしみに して います。  
 > ゆうこ
 
-<sub>Ron, mau ke gunung Minggu depan? Kita pergi dengan mobil saya. Saya datang ke depan apartemenmu jam 8 pagi. Bekal saya yang buat. — Yuko</sub>
+<sub>Ron, mau ke gunung Minggu depan? Kita pergi dengan mobil saya. Saya datang ke depan apartemenmu jam 8 pagi. Bekal saya yang buat. Saya menantikannya. — Yuko</sub>
 
 **56. 日曜日の あさ、ゆうこさんは 何を しますか。**
 
@@ -1643,10 +1643,10 @@
 > **Teks menengah (中文)**  
 > わたしの しゅみは しゃしんです。休みの 日は カメラを もって、いろいろな ところへ 行きます。  
 > 先週は 古い おてらへ 行きました。おてらの 前に 大きい 木が ありました。その 木の 下で、ねこが ねて いました。わたしは その ねこの しゃしんを たくさん とりました。  
-> いちばん いい しゃしんを 大学の 友だちに 見せたら、「大きく して、へやに かざりたい」と 言いました。  
+> いちばん いい しゃしんを 大学の 友だちに 見せたら、「大きく して、へやに かざりたい」と 言いました。ねこは とても かわいかったです。また おてらへ 行って、ねこに 会いたいです。  
 > 来月は 友だちと いっしょに うみへ 行って、しゃしんを とる つもりです。
 
-<sub>Hobi saya fotografi; tiap libur saya membawa kamera ke berbagai tempat. Minggu lalu saya ke kuil tua; di depannya ada pohon besar dan seekor kucing tidur di bawahnya. Saya memotret kucing itu banyak kali. Saat foto terbaik saya tunjukkan ke teman kuliah, ia berkata 'ingin diperbesar dan dipajang di kamar'. Bulan depan saya berencana ke laut bersama teman untuk memotret.</sub>
+<sub>Hobi saya fotografi; tiap libur saya membawa kamera ke berbagai tempat. Minggu lalu saya ke kuil tua; di depannya ada pohon besar dan seekor kucing tidur di bawahnya. Saya memotret kucing itu banyak kali. Saat foto terbaik saya tunjukkan ke teman kuliah, ia berkata 'ingin diperbesar dan dipajang di kamar'. Kucingnya sangat lucu. Saya ingin pergi ke kuil lagi dan bertemu kucing itu. Bulan depan saya berencana ke laut bersama teman untuk memotret.</sub>
 
 **57. 「わたし」は 先週 何の しゃしんを とりましたか。**
 
@@ -1744,9 +1744,9 @@
   - D. 母に 電話を します — Salah. Tidak disebut.
 
 > **Teks pendek (短文)**  
-> わたしの 国は なつ とても あついです。でも、日本の なつも あついですね。わたしは 毎日 つめたい おちゃを 三本ぐらい 飲みます。日本の おちゃは おいしいです。
+> わたしの 国は なつ とても あついです。でも、日本の なつも あついですね。わたしは 毎日 つめたい おちゃを 三本ぐらい 飲みます。日本の なつは あついですが、花火が きれいです。日本の おちゃは おいしいです。
 
-<sub>Di negara saya musim panas sangat panas. Tetapi musim panas Jepang juga panas ya. Setiap hari saya minum sekitar tiga botol teh dingin. Teh Jepang enak.</sub>
+<sub>Di negara saya musim panas sangat panas. Tetapi musim panas Jepang juga panas ya. Setiap hari saya minum sekitar tiga botol teh dingin. Musim panas Jepang panas, tetapi kembang apinya indah. Teh Jepang enak.</sub>
 
 **55. 「わたし」は 毎日 何を 飲みますか。**
 
@@ -1764,10 +1764,10 @@
 
 > **Teks pendek (短文) — メール**  
 > はやしさん  
-> きのうの パーティーで はやしさんの かさを まちがえて もって 帰りました。すみません。あした 学校で かえします。わたしの かさは あおくて 長い かさです。  
+> きのうの パーティーで はやしさんの かさを まちがえて もって 帰りました。すみません。あした 学校で かえします。わたしの かさは あおくて 長い かさです。ほんとうに すみません。  
 > ディン
 
-<sub>Hayashi, di pesta kemarin saya salah membawa pulang payungmu. Maaf. Besok saya kembalikan di sekolah. Payung saya biru dan panjang. — Dinh</sub>
+<sub>Hayashi, di pesta kemarin saya salah membawa pulang payungmu. Maaf. Besok saya kembalikan di sekolah. Payung saya biru dan panjang. Sungguh maaf. — Dinh</sub>
 
 **56. ディンさんは どうして メールを 書きましたか。**
 
@@ -1786,10 +1786,10 @@
 > **Teks menengah (中文)**  
 > わたしは 毎年 ふゆやすみに 北の 山へ スキーに 行きます。ことしは はじめて おとうとと いっしょに 行きました。  
 > おとうとは スキーが はじめてでしたから、一日目は 何かいも ころびました。でも、二日目は 先生に ならって、少し 上手に なりました。  
-> よるは 二人で あたたかい ラーメンを 食べました。おとうとは「来年も 来たい」と 言って います。  
+> よるは 二人で あたたかい ラーメンを 食べました。おとうとは「来年も 来たい」と 言って います。来年は 母も いっしょに 行きたいです。母は スキーを した ことが ありません。  
 > スキーの 後で、ホテルの ちかくの 店で 母に おみやげを 買いました。
 
-<sub>Setiap liburan musim dingin saya bermain ski di gunung di utara. Tahun ini untuk pertama kali bersama adik laki-laki. Adik baru pertama kali ski sehingga hari pertama berkali-kali jatuh. Tetapi hari kedua belajar dari instruktur dan sedikit lebih mahir. Malamnya kami makan ramen hangat. Adik bilang 'tahun depan mau datang lagi'. Setelah ski, kami membeli oleh-oleh untuk ibu di toko dekat hotel.</sub>
+<sub>Setiap liburan musim dingin saya bermain ski di gunung di utara. Tahun ini untuk pertama kali bersama adik laki-laki. Adik baru pertama kali ski sehingga hari pertama berkali-kali jatuh. Tetapi hari kedua belajar dari instruktur dan sedikit lebih mahir. Malamnya kami makan ramen hangat. Adik bilang 'tahun depan mau datang lagi'. Tahun depan saya ingin pergi bersama ibu juga. Ibu belum pernah bermain ski. Setelah ski, kami membeli oleh-oleh untuk ibu di toko dekat hotel.</sub>
 
 **57. おとうとは どうして 一日目に 何かいも ころびましたか。**
 
@@ -1888,9 +1888,9 @@
   - D. 三かいの コピーきを つかいます — BENAR. Benar.
 
 > **Teks pendek (短文)**  
-> わたしは きのう 友だちと カラオケに 行きました。友だちは 日本の うたを 上手に うたいました。わたしは まだ 日本の うたを しりませんから、国の うたを うたいました。
+> わたしは きのう 友だちと カラオケに 行きました。友だちは 日本の うたを 上手に うたいました。つぎは 日本の うたも れんしゅうして、友だちと いっしょに うたいたいです。わたしは まだ 日本の うたを しりませんから、国の うたを うたいました。
 
-<sub>Kemarin saya karaoke bersama teman. Teman menyanyikan lagu Jepang dengan bagus. Saya belum tahu lagu Jepang, jadi saya menyanyikan lagu negara saya.</sub>
+<sub>Kemarin saya karaoke bersama teman. Teman menyanyikan lagu Jepang dengan bagus. Lain kali saya juga akan berlatih lagu Jepang dan ingin bernyanyi bersama teman. Saya belum tahu lagu Jepang, jadi saya menyanyikan lagu negara saya.</sub>
 
 **55. 「わたし」は カラオケで 何を うたいましたか。**
 
@@ -1908,10 +1908,10 @@
 
 > **Teks pendek (短文) — メール**  
 > ジョンさん  
-> あしたの あさの じゅぎょうに おくれます。電車の じこが あって、電車が とまって います。先生に 話して ください。十時ごろ 学校に つくと おもいます。  
+> あしたの あさの じゅぎょうに おくれます。電車の じこが あって、電車が とまって います。先生に 話して ください。十時ごろ 学校に つくと おもいます。どうぞ よろしく おねがいします。  
 > ミン
 
-<sub>John, saya terlambat pelajaran pagi besok. Ada kecelakaan kereta dan keretanya berhenti. Tolong sampaikan ke guru. Saya kira sampai sekolah sekitar jam 10. — Min</sub>
+<sub>John, saya terlambat pelajaran pagi besok. Ada kecelakaan kereta dan keretanya berhenti. Tolong sampaikan ke guru. Saya kira sampai sekolah sekitar jam 10. Mohon bantuannya. — Min</sub>
 
 **56. ミンさんは ジョンさんに 何を たのみましたか。**
 
@@ -1930,10 +1930,10 @@
 > **Teks menengah (中文)**  
 > わたしは 日本へ 来てから、毎日 にっきを 書いて います。はじめは えいごで 書いて いましたが、三か月前から 日本語で 書いて います。  
 > 日本語で 書く ときは、じしょを たくさん つかいますから、時間が かかります。でも、新しい ことばを たくさん おぼえる ことが できます。  
-> 一週間に 一かい、日本人の 友だちに にっきを 見せて、まちがいを なおして もらって います。  
+> 一週間に 一かい、日本人の 友だちに にっきを 見せて、まちがいを なおして もらって います。いつか 日本語で てがみを 書いて、国の 友だちに おくりたいです。  
 > にっきを 読みかえすと、来た ばかりの ころの ことを おもい出して、たのしく なります。
 
-<sub>Sejak datang ke Jepang saya menulis buku harian setiap hari. Awalnya dalam bahasa Inggris, tetapi sejak tiga bulan lalu dalam bahasa Jepang. Menulis dalam bahasa Jepang perlu banyak memakai kamus sehingga makan waktu, tetapi saya bisa menghafal banyak kata baru. Seminggu sekali saya menunjukkan buku harian ke teman Jepang dan minta kesalahan saya dibetulkan. Saat membaca ulang buku harian, saya teringat masa baru datang dan merasa senang.</sub>
+<sub>Sejak datang ke Jepang saya menulis buku harian setiap hari. Awalnya dalam bahasa Inggris, tetapi sejak tiga bulan lalu dalam bahasa Jepang. Menulis dalam bahasa Jepang perlu banyak memakai kamus sehingga makan waktu, tetapi saya bisa menghafal banyak kata baru. Seminggu sekali saya menunjukkan buku harian ke teman Jepang dan minta kesalahan saya dibetulkan. Suatu hari saya ingin menulis surat dalam bahasa Jepang dan mengirimnya ke teman di negara saya. Saat membaca ulang buku harian, saya teringat masa baru datang dan merasa senang.</sub>
 
 **57. 日本語で にっきを 書くと、どうして 時間が かかりますか。**
 
@@ -2031,9 +2031,9 @@
   - D. 午前12時 — Salah. Pagi air mati.
 
 > **Teks pendek (短文)**  
-> わたしは いぬが すきですが、アパートで いぬを かう ことが できません。それで、休みの 日は ちかくの いぬの カフェへ 行きます。そこで いぬと あそびます。
+> わたしは いぬが すきですが、アパートで いぬを かう ことが できません。それで、休みの 日は ちかくの いぬの カフェへ 行きます。休みの 日が いつも たのしみです。そこで いぬと あそびます。
 
-<sub>Saya suka anjing, tetapi tidak boleh memelihara anjing di apartemen. Jadi pada hari libur saya pergi ke kafe anjing di dekat rumah dan bermain dengan anjing di sana.</sub>
+<sub>Saya suka anjing, tetapi tidak boleh memelihara anjing di apartemen. Saya selalu menantikan hari libur. Jadi pada hari libur saya pergi ke kafe anjing di dekat rumah dan bermain dengan anjing di sana.</sub>
 
 **55. 「わたし」は どうして いぬの カフェへ 行きますか。**
 
@@ -2051,10 +2051,10 @@
 
 > **Teks pendek (短文) — メール**  
 > 先生  
-> レポートを 出しました。でも、二ページ目の 名前を 書くのを わすれました。すみません。あした 先生の へやへ 行って、名前を 書いても いいですか。  
+> レポートを 出しました。でも、二ページ目の 名前を 書くのを わすれました。すみません。あした 先生の へやへ 行って、名前を 書いても いいですか。ほんとうに すみませんでした。  
 > アナ
 
-<sub>Pak/Bu guru, saya sudah mengumpulkan laporan, tetapi lupa menulis nama di halaman 2. Maaf. Bolehkah besok saya ke ruangan Anda untuk menuliskannya? — Ana</sub>
+<sub>Pak/Bu guru, saya sudah mengumpulkan laporan, tetapi lupa menulis nama di halaman 2. Maaf. Sungguh maaf. Bolehkah besok saya ke ruangan Anda untuk menuliskannya? — Ana</sub>
 
 **56. アナさんは あした 何を したいですか。**
 
@@ -2074,9 +2074,9 @@
 > わたしの 大学には 大きい しょくどうが あります。安くて おいしいですから、ひるは いつも 学生が たくさん います。  
 > わたしは 前は 毎日 しょくどうで 食べて いました。でも、人が 多くて すわる ところが ありませんから、先月から いえで おべんとうを つくって います。  
 > おべんとうは 天気が いい 日は こうえんで、雨の 日は きょうしつで 食べます。  
-> おべんとうは 前の 日の よるに つくります。ごはんと やさいと たまごを 入れます。からだにも いいです。
+> おべんとうは 前の 日の よるに つくります。ごはんと やさいと たまごを 入れます。がっこうの ちかくには 安い パンやも あります。つぎは そこで パンを 買って みたいです。からだにも いいです。
 
-<sub>Kampus saya punya kantin besar; murah dan enak sehingga siang hari selalu ramai mahasiswa. Dulu saya makan di kantin setiap hari, tetapi karena ramai dan tidak ada tempat duduk, sejak bulan lalu saya membuat bekal di rumah. Bekal saya makan di taman kalau cuaca bagus, dan di kelas kalau hujan. Bekal saya buat malam sebelumnya, isinya nasi, sayur, dan telur. Baik juga untuk kesehatan.</sub>
+<sub>Kampus saya punya kantin besar; murah dan enak sehingga siang hari selalu ramai mahasiswa. Dulu saya makan di kantin setiap hari, tetapi karena ramai dan tidak ada tempat duduk, sejak bulan lalu saya membuat bekal di rumah. Bekal saya makan di taman kalau cuaca bagus, dan di kelas kalau hujan. Bekal saya buat malam sebelumnya, isinya nasi, sayur, dan telur. Dekat sekolah ada juga toko roti murah. Lain kali saya ingin mencoba membeli roti di sana. Baik juga untuk kesehatan.</sub>
 
 **57. 「わたし」は どうして おべんとうを つくるように なりましたか。**
 
@@ -2174,9 +2174,9 @@
   - D. たいいくかん — BENAR. Benar.
 
 > **Teks pendek (短文)**  
-> わたしの 母は 先月から ピアノを ならって います。母は 六十さいですが、毎日 一時間 れんしゅうして います。来月 小さい コンサートに 出ます。
+> わたしの 母は 先月から ピアノを ならって います。母は 六十さいですが、毎日 一時間 れんしゅうして います。コンサートには かぞくも 見に 行きます。来月 小さい コンサートに 出ます。
 
-<sub>Ibu saya belajar piano sejak bulan lalu. Ibu berusia 60 tahun, tetapi berlatih satu jam setiap hari. Bulan depan ia tampil di konser kecil.</sub>
+<sub>Ibu saya belajar piano sejak bulan lalu. Ibu berusia 60 tahun, tetapi berlatih satu jam setiap hari. Keluarga juga akan datang menonton konser. Bulan depan ia tampil di konser kecil.</sub>
 
 **55. 母に ついて、ただしい ものは どれですか。**
 
@@ -2194,10 +2194,10 @@
 
 > **Teks pendek (短文) — メール**  
 > ゆりさん  
-> あしたの えいがですが、三時の えいがは 人が 多くて、きっぷが ありませんでした。五時の えいがの きっぷを 二まい 買いました。四時半に えいがかんの 前で 会いましょう。  
+> あしたの えいがですが、三時の えいがは 人が 多くて、きっぷが ありませんでした。五時の えいがの きっぷを 二まい 買いました。四時半に えいがかんの 前で 会いましょう。たのしみです。  
 > トム
 
-<sub>Yuri, tiket film jam 3 besok habis karena ramai. Saya membeli 2 tiket film jam 5. Ayo bertemu jam 4.30 di depan bioskop. — Tom</sub>
+<sub>Yuri, tiket film jam 3 besok habis karena ramai. Saya membeli 2 tiket film jam 5. Ayo bertemu jam 4.30 di depan bioskop. Saya menantikannya. — Tom</sub>
 
 **56. ゆりさんと トムさんは 何時に 会いますか。**
 
@@ -2216,10 +2216,10 @@
 > **Teks menengah (中文)**  
 > わたしの いえの ちかくに 小さい 川が あります。なつに なると、よる ほたるが 見えます。  
 > 先週の 土曜日、父と いもうとと 三人で ほたるを 見に 行きました。いもうとは はじめて ほたるを 見ましたから、とても よろこびました。  
-> ほたるは 水が きれいな ところに しか いません。わたしは この 川を ずっと きれいに したいと おもいました。  
+> ほたるは 水が きれいな ところに しか いません。わたしは この 川を ずっと きれいに したいと おもいました。ほたるは ひかりが きれいで、しずかでした。わたしは いえに 帰って、国の 母に 電話を しました。  
 > 帰る とき、父が 「むかしは この 川に ほたるが もっと たくさん いた」と 言いました。
 
-<sub>Dekat rumah saya ada sungai kecil. Kalau musim panas, malam hari kunang-kunang terlihat. Sabtu lalu saya, ayah, dan adik perempuan melihat kunang-kunang; adik baru pertama kali melihatnya dan sangat senang. Kunang-kunang hanya ada di tempat yang airnya bersih. Saya ingin sungai ini terus bersih. Saat pulang ayah berkata, 'Dulu di sungai ini kunang-kunangnya jauh lebih banyak.'</sub>
+<sub>Dekat rumah saya ada sungai kecil. Kalau musim panas, malam hari kunang-kunang terlihat. Sabtu lalu saya, ayah, dan adik perempuan melihat kunang-kunang; adik baru pertama kali melihatnya dan sangat senang. Kunang-kunang hanya ada di tempat yang airnya bersih. Saya ingin sungai ini terus bersih. Kunang-kunang bercahaya indah dan tenang. Saya pulang ke rumah dan menelepon ibu di negara saya. Saat pulang ayah berkata, 'Dulu di sungai ini kunang-kunangnya jauh lebih banyak.'</sub>
 
 **57. いもうとは どうして とても よろこびましたか。**
 
@@ -2317,9 +2317,9 @@
   - D. おおさかへ 行きます — Salah. Tamu yang datang dari Osaka.
 
 > **Teks pendek (短文)**  
-> きのう、駅で さいふを おとしました。こまって いたら、えきいんさんが 「さいふが ありましたよ」と 言って、もって きて くれました。とても うれしかったです。
+> きのう、駅で さいふを おとしました。こまって いたら、えきいんさんが 「さいふが ありましたよ」と 言って、もって きて くれました。えきいんさんに ありがとうを 言いました。とても うれしかったです。
 
-<sub>Kemarin saya menjatuhkan dompet di stasiun. Saat sedang bingung, petugas stasiun berkata 'dompetnya ditemukan' dan membawakannya. Saya sangat senang.</sub>
+<sub>Kemarin saya menjatuhkan dompet di stasiun. Saat sedang bingung, petugas stasiun berkata 'dompetnya ditemukan' dan membawakannya. Saya mengucapkan terima kasih kepada petugas stasiun. Saya sangat senang.</sub>
 
 **55. えきいんさんは 何を しましたか。**
 
@@ -2337,10 +2337,10 @@
 
 > **Teks pendek (短文) — メール**  
 > マークさん  
-> あしたの テストの 時間が かわりました。午前十時からでは なくて、午後一時からです。ばしょは 三かいの 301きょうしつです。  
+> あしたの テストの 時間が かわりました。午前十時からでは なくて、午後一時からです。ばしょは 三かいの 301きょうしつです。よろしく おねがいします。  
 > 山本
 
-<sub>Mark, jadwal ujian besok berubah: bukan jam 10 pagi tetapi jam 1 siang. Tempatnya ruang 301 lantai 3. — Yamamoto</sub>
+<sub>Mark, jadwal ujian besok berubah: bukan jam 10 pagi tetapi jam 1 siang. Tempatnya ruang 301 lantai 3. Mohon bantuannya. — Yamamoto</sub>
 
 **56. テストは 何時から ですか。**
 
@@ -2360,9 +2360,9 @@
 > わたしは 日本で はじめて ゆきを 見ました。わたしの 国は あついですから、ゆきが ふりません。  
 > ゆきの 日、わたしは うれしくて、すぐ 外へ 出ました。でも、くつが すべって、ころんで しまいました。いたかったですが、ゆきは つめたくて、きもちが よかったです。  
 > つぎの 日、ゆきの 日に はく くつを 買いに 行きました。  
-> 今は ゆきの 日も すべらないで あるく ことが できます。国の かぞくに ゆきの しゃしんを 見せたら、とても おどろいて いました。
+> 今は ゆきの 日も すべらないで あるく ことが できます。日本の ふゆは さむいですが、わたしは ゆきが 大すきに なりました。来年も また ゆきを 見たいです。国の かぞくに ゆきの しゃしんを 見せたら、とても おどろいて いました。
 
-<sub>Di Jepang saya pertama kali melihat salju; negara saya panas sehingga tidak turun salju. Di hari bersalju saya senang dan langsung keluar, tetapi sepatu saya licin dan saya jatuh. Sakit, tetapi saljunya dingin dan rasanya menyenangkan. Keesokan harinya saya membeli sepatu untuk hari bersalju. Sekarang di hari bersalju saya bisa berjalan tanpa terpeleset. Keluarga di negara asal sangat terkejut melihat foto salju.</sub>
+<sub>Di Jepang saya pertama kali melihat salju; negara saya panas sehingga tidak turun salju. Di hari bersalju saya senang dan langsung keluar, tetapi sepatu saya licin dan saya jatuh. Sakit, tetapi saljunya dingin dan rasanya menyenangkan. Keesokan harinya saya membeli sepatu untuk hari bersalju. Sekarang di hari bersalju saya bisa berjalan tanpa terpeleset. Musim dingin Jepang dingin, tetapi saya jadi sangat suka salju. Tahun depan pun saya ingin melihat salju lagi. Keluarga di negara asal sangat terkejut melihat foto salju.</sub>
 
 **57. 「わたし」は どうして ころびましたか。**
 
@@ -2461,9 +2461,9 @@
   - D. ぎゅうにゅうを 買います — Salah. Setelah PR.
 
 > **Teks pendek (短文)**  
-> わたしは 毎週 水曜日に プールで およぎます。きょねんは 五十メートル しか およげませんでしたが、今は 五百メートル およぐ ことが できます。
+> わたしは 毎週 水曜日に プールで およぎます。水曜日の よるは いつも よく ねむれます。きょねんは 五十メートル しか およげませんでしたが、今は 五百メートル およぐ ことが できます。
 
-<sub>Setiap Rabu saya berenang di kolam. Tahun lalu hanya bisa 50 meter, sekarang bisa berenang 500 meter.</sub>
+<sub>Setiap Rabu saya berenang di kolam. Rabu malam saya selalu bisa tidur nyenyak. Tahun lalu hanya bisa 50 meter, sekarang bisa berenang 500 meter.</sub>
 
 **55. 「わたし」は 今 どのぐらい およぐ ことが できますか。**
 
@@ -2481,10 +2481,10 @@
 
 > **Teks pendek (短文) — メール**  
 > ハナさん  
-> 来週の 月曜日は 先生の たんじょうびです。じゅぎょうの 前に、みんなで ケーキを 食べましょう。ハナさんは 九時に きょうしつに 来て、つくえを ならべて ください。  
+> 来週の 月曜日は 先生の たんじょうびです。じゅぎょうの 前に、みんなで ケーキを 食べましょう。ハナさんは 九時に きょうしつに 来て、つくえを ならべて ください。よろしく おねがいします。  
 > リサ
 
-<sub>Hana, Senin depan ulang tahun guru. Sebelum pelajaran, mari makan kue bersama. Hana tolong datang ke kelas jam 9 dan menata meja. — Lisa</sub>
+<sub>Hana, Senin depan ulang tahun guru. Sebelum pelajaran, mari makan kue bersama. Hana tolong datang ke kelas jam 9 dan menata meja. Mohon bantuannya. — Lisa</sub>
 
 **56. ハナさんは 月曜日に 何を しますか。**
 
@@ -2504,9 +2504,9 @@
 > わたしの まちには 毎週 日曜日の あさに 小さい いちが あります。ちかくの のうかの 人が やさいや くだものを うって います。  
 > スーパーより 少し 高いですが、とても 新しくて おいしいです。わたしは 毎週 トマトと たまごを 買います。  
 > 店の おばあさんは いつも 「これ、食べて ね」と 言って、りんごを 一つ くれます。  
-> いちは あさ 七時から 十時までです。はやく 行かないと、たまごは すぐ なくなります。
+> いちは あさ 七時から 十時までです。たまごは あさの うちに うって いますから、八時に 行くと もう ありません。今月は 七時に 行きました。はやく 行かないと、たまごは すぐ なくなります。
 
-<sub>Di kota saya setiap Minggu pagi ada pasar kecil; petani sekitar menjual sayur dan buah. Sedikit lebih mahal dari supermarket, tetapi sangat segar dan enak. Setiap minggu saya membeli tomat dan telur. Nenek penjual selalu berkata 'makan ini ya' dan memberi satu apel. Pasarnya jam 7–10 pagi. Kalau tidak datang awal, telur cepat habis.</sub>
+<sub>Di kota saya setiap Minggu pagi ada pasar kecil; petani sekitar menjual sayur dan buah. Sedikit lebih mahal dari supermarket, tetapi sangat segar dan enak. Setiap minggu saya membeli tomat dan telur. Nenek penjual selalu berkata 'makan ini ya' dan memberi satu apel. Pasarnya jam 7–10 pagi. Telur dijual di pagi hari, jadi kalau datang jam delapan sudah habis. Bulan ini saya datang jam tujuh. Kalau tidak datang awal, telur cepat habis.</sub>
 
 **57. いちの やさいは スーパーと くらべて どうですか。**
 
@@ -2604,9 +2604,9 @@
   - D. 会社の 前の ちゅうしゃじょう — Salah. Tidak boleh parkir di depan kantor.
 
 > **Teks pendek (短文)**  
-> わたしは まいばん ねる 前に 母に 電話を します。母は 国に いますから、日本より 二時間 おそいです。わたしが 十時に 電話を すると、母の 国は 八時です。
+> わたしは まいばん ねる 前に 母に 電話を します。母は 国に いますから、日本より 二時間 おそいです。母の こえを 聞くと、あんしんします。わたしが 十時に 電話を すると、母の 国は 八時です。
 
-<sub>Setiap malam sebelum tidur saya menelepon ibu. Ibu di negara asal, waktunya dua jam lebih lambat dari Jepang. Kalau saya menelepon jam 10, di negara ibu jam 8.</sub>
+<sub>Setiap malam sebelum tidur saya menelepon ibu. Ibu di negara asal, waktunya dua jam lebih lambat dari Jepang. Mendengar suara ibu, saya merasa tenang. Kalau saya menelepon jam 10, di negara ibu jam 8.</sub>
 
 **55. 「わたし」が 十一時に 電話を すると、母の 国は 何時ですか。**
 
@@ -2624,10 +2624,10 @@
 
 > **Teks pendek (短文) — メール**  
 > けいこさん  
-> こんどの 土曜日、うちで たこやきパーティーを します。四時からです。何も もって こなくて いいですよ。来る ことが できるか、木曜日までに おしえて ください。  
+> こんどの 土曜日、うちで たこやきパーティーを します。四時からです。何も もって こなくて いいですよ。来る ことが できるか、木曜日までに おしえて ください。たのしみに して います。  
 > ベン
 
-<sub>Keiko, Sabtu ini saya mengadakan pesta takoyaki di rumah mulai jam 4. Tidak perlu membawa apa-apa. Tolong kabari paling lambat Kamis apakah bisa datang. — Ben</sub>
+<sub>Keiko, Sabtu ini saya mengadakan pesta takoyaki di rumah mulai jam 4. Tidak perlu membawa apa-apa. Tolong kabari paling lambat Kamis apakah bisa datang. Saya menantikannya. — Ben</sub>
 
 **56. けいこさんは 木曜日までに 何を しますか。**
 
@@ -2647,9 +2647,9 @@
 > わたしは まいあさ こうえんで ラジオ たいそうを します。六時半から 十分だけですが、毎日 二十人ぐらいの 人が 来ます。  
 > はじめは 一人で 行きましたから、少し はずかしかったです。でも、となりの おじいさんが 「いっしょに しましょう」と 言って くれました。  
 > 今は たいそうの 後で、おじいさんと 少し 話してから 学校へ 行きます。日本語の れんしゅうにも なります。  
-> おじいさんは まいあさ いぬと いっしょに 来ます。いぬの 名前は 「タロウ」です。
+> おじいさんは まいあさ いぬと いっしょに 来ます。わたしは タロウと もう ともだちです。まいあさ タロウが わたしを 見て、うれしそうに します。いぬの 名前は 「タロウ」です。
 
-<sub>Setiap pagi saya senam radio di taman, mulai jam 6.30 hanya 10 menit, dan setiap hari datang sekitar 20 orang. Awalnya saya datang sendiri sehingga agak malu, tetapi kakek di sebelah berkata 'ayo senam bersama'. Sekarang setelah senam saya mengobrol sebentar dengan kakek itu sebelum ke sekolah; sekaligus latihan bahasa Jepang. Kakek itu datang setiap pagi bersama anjingnya yang bernama 'Taro'.</sub>
+<sub>Setiap pagi saya senam radio di taman, mulai jam 6.30 hanya 10 menit, dan setiap hari datang sekitar 20 orang. Awalnya saya datang sendiri sehingga agak malu, tetapi kakek di sebelah berkata 'ayo senam bersama'. Sekarang setelah senam saya mengobrol sebentar dengan kakek itu sebelum ke sekolah; sekaligus latihan bahasa Jepang. Saya dan Taro sudah berteman. Tiap pagi Taro melihat saya dan tampak senang. Kakek itu datang setiap pagi bersama anjingnya yang bernama 'Taro'.</sub>
 
 **57. 「わたし」は はじめ どうして はずかしかったですか。**
 
@@ -2745,9 +2745,9 @@
   - D. 三時間目に 学校へ 来ます — Salah. Harus datang dari jam ke-1.
 
 > **Teks pendek (短文)**  
-> わたしの へやには テレビが ありません。ニュースは スマホで 見ます。えいがは しゅうまつに 友だちの いえで 見ます。テレビが なくても、こまりません。
+> わたしの へやには テレビが ありません。ニュースは スマホで 見ます。えいがは しゅうまつに 友だちの いえで 見ます。でも、本は 毎日 読んで います。テレビが なくても、こまりません。
 
-<sub>Di kamar saya tidak ada TV. Berita saya lihat di ponsel. Film saya tonton di rumah teman saat akhir pekan. Tanpa TV pun saya tidak kesulitan.</sub>
+<sub>Di kamar saya tidak ada TV. Berita saya lihat di ponsel. Film saya tonton di rumah teman saat akhir pekan. Tetapi saya membaca buku setiap hari. Tanpa TV pun saya tidak kesulitan.</sub>
 
 **55. 「わたし」は ニュースを 何で 見ますか。**
 
@@ -2765,10 +2765,10 @@
 
 > **Teks pendek (短文) — メール**  
 > マイさん  
-> きのうは しゅくだいを おしえて くれて、ありがとう。おかげで、ぜんぶ できました。こんどは わたしが ばんごはんを ごちそうします。来週 いつが いいですか。  
+> きのうは しゅくだいを おしえて くれて、ありがとう。おかげで、ぜんぶ できました。こんどは わたしが ばんごはんを ごちそうします。来週 いつが いいですか。ほんとうに ありがとう。  
 > ルカ
 
-<sub>Mai, terima kasih kemarin sudah membantu PR. Berkatmu semuanya selesai. Lain kali saya traktir makan malam. Minggu depan kapan kamu bisa? — Luca</sub>
+<sub>Mai, terima kasih kemarin sudah membantu PR. Berkatmu semuanya selesai. Lain kali saya traktir makan malam. Terima kasih banyak. Minggu depan kapan kamu bisa? — Luca</sub>
 
 **56. ルカさんは どうして メールを 書きましたか。**
 
@@ -2787,10 +2787,10 @@
 > **Teks menengah (中文)**  
 > わたしの クラスには いろいろな 国の 学生が います。先週、みんなで じぶんの 国の りょうりを 一つずつ もって きて、パーティーを しました。  
 > わたしは 母に 電話で つくりかたを 聞いて、国の スープを つくりました。少し からかったですが、みんな「おいしい」と 言って くれました。  
-> いちばん 人気が あったのは、タイの 学生の あまい おかしでした。わたしも つくりかたを 聞きました。  
+> いちばん 人気が あったのは、タイの 学生の あまい おかしでした。わたしも つくりかたを 聞きました。来月の パーティーでは、わたしは かんたんな おかしを つくって みたいです。  
 > 来月は 日本人の 友だちも よんで、もう いちど パーティーを する つもりです。
 
-<sub>Di kelas saya ada mahasiswa dari berbagai negara. Minggu lalu setiap orang membawa satu masakan negaranya dan kami berpesta. Saya menanyakan cara membuat lewat telepon ke ibu, lalu membuat sup negara saya. Agak pedas, tetapi semua bilang enak. Yang paling populer adalah kue manis dari mahasiswa Thailand; saya pun menanyakan cara membuatnya. Bulan depan kami berencana berpesta lagi dengan mengundang teman Jepang juga.</sub>
+<sub>Di kelas saya ada mahasiswa dari berbagai negara. Minggu lalu setiap orang membawa satu masakan negaranya dan kami berpesta. Saya menanyakan cara membuat lewat telepon ke ibu, lalu membuat sup negara saya. Agak pedas, tetapi semua bilang enak. Yang paling populer adalah kue manis dari mahasiswa Thailand; saya pun menanyakan cara membuatnya. Di pesta bulan depan, saya ingin mencoba membuat kue sederhana. Bulan depan kami berencana berpesta lagi dengan mengundang teman Jepang juga.</sub>
 
 **57. 「わたし」は どうやって スープの つくりかたを ならいましたか。**
 

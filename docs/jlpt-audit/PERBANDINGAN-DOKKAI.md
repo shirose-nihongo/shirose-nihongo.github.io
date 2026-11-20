@@ -13,9 +13,9 @@ Dibuat otomatis oleh `tools/jlpt_v2/compare_dokkai.mjs`. Panjang = karakter tanp
 | Soal Dokkai per paket | 7 | 7 | (tetap, sesuai desain paket) |
 | Bacaan per paket (rata-rata) | 6.0 | 5.0 | — |
 | Soal per bacaan | 1.2 | 1.4 | median 2 (rata-rata 3.43) |
-| Median panjang semua bacaan | 96 | 89 | 158 (p25 107, p75 226) |
-| Median 短文 | 58 | 70 | 85 |
-| Median 中文 | 110 | 185 | 235 |
+| Median panjang semua bacaan | 96 | 91 | 158 (p25 107, p75 226) |
+| Median 短文 | 58 | 83 | 85 |
+| Median 中文 | 110 | 221 | 235 |
 | Bacaan ditandai "terlalu pendek" (paket) | 36 soal | 0 | — |
 | Soal dgn kunci paling panjang | 9 | 0 | tidak ada pola ini |
 | Sebaran kunci A/B/C/D | 43/39/27/31 | 35/35/35/35 | acak merata |
@@ -25,8 +25,8 @@ Dibuat otomatis oleh `tools/jlpt_v2/compare_dokkai.mjs`. Panjang = karakter tanp
 | Paket | Bacaan lama | Bacaan baru | Panjang lama → baru | Soal/bacaan lama → baru | Kunci terpanjang lama → baru |
 |---|---|---|---|---|---|
 | 01 | 6 | 5 | 95 → 84 | 1.2 → 1.4 | 0 → 0 |
-| 02 | 6 | 5 | 99 → 82 | 1.2 → 1.4 | 0 → 0 |
-| 03 | 6 | 5 | 97 → 89 | 1.2 → 1.4 | 0 → 0 |
+| 02 | 6 | 5 | 99 → 88 | 1.2 → 1.4 | 0 → 0 |
+| 03 | 6 | 5 | 97 → 91 | 1.2 → 1.4 | 0 → 0 |
 | 04 | 6 | 5 | 96 → 91 | 1.2 → 1.4 | 1 → 0 |
 | 05 | 6 | 5 | 97 → 92 | 1.2 → 1.4 | 1 → 0 |
 | 06 | 6 | 5 | 96 → 106 | 1.2 → 1.4 | 0 → 0 |
@@ -36,12 +36,12 @@ Dibuat otomatis oleh `tools/jlpt_v2/compare_dokkai.mjs`. Panjang = karakter tanp
 | 10 | 6 | 5 | 101 → 91 | 1.2 → 1.4 | 2 → 0 |
 | 11 | 6 | 5 | 97 → 94 | 1.2 → 1.4 | 0 → 0 |
 | 12 | 6 | 5 | 95 → 100 | 1.2 → 1.4 | 1 → 0 |
-| 13 | 6 | 5 | 97 → 77 | 1.2 → 1.4 | 1 → 0 |
-| 14 | 6 | 5 | 107 → 73 | 1.2 → 1.4 | 0 → 0 |
+| 13 | 6 | 5 | 97 → 86 | 1.2 → 1.4 | 1 → 0 |
+| 14 | 6 | 5 | 107 → 102 | 1.2 → 1.4 | 0 → 0 |
 | 15 | 6 | 5 | 102 → 81 | 1.2 → 1.4 | 1 → 0 |
 | 16 | 6 | 5 | 99 → 84 | 1.2 → 1.4 | 0 → 0 |
 | 17 | 6 | 5 | 99 → 99 | 1.2 → 1.4 | 0 → 0 |
-| 18 | 6 | 5 | 104 → 84 | 1.2 → 1.4 | 1 → 0 |
+| 18 | 6 | 5 | 104 → 85 | 1.2 → 1.4 | 1 → 0 |
 | 19 | 6 | 5 | 92 → 87 | 1.2 → 1.4 | 1 → 0 |
 | 20 | 6 | 5 | 99 → 94 | 1.2 → 1.4 | 0 → 0 |
 
