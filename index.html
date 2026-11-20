@@ -279,6 +279,8 @@ body.auth-mode .companion{display:none !important;}
 }
 @media (max-width:640px){ .brand{font-size:18px; gap:6px;} }
 .brand .rose{color:var(--pink); font-size:26px;}
+.brand-logo{display:block; height:44px; width:auto; border-radius:10px;}
+@media (max-width:640px){ .brand-logo{height:38px;} }
 .topbar-right{margin-left:auto; display:flex; gap:8px; align-items:center;}
 .chip{
   display:inline-flex; align-items:center; gap:6px;
@@ -1408,7 +1410,7 @@ html{overflow-x:hidden;}
 
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
-  <a href="./landing.html" class="brand" title="SHIROSE NIHONGO by SSW no Ou">シ<span class="rose">🌹</span>ロセ <span style="font-family:var(--font-sans); font-size:13px; letter-spacing:.5px;">NIHONGO</span></a>
+  <a href="./landing.html" class="brand" title="SHIROSE NIHONGO by SSW no Ou" aria-label="Shirose Nihongo"><img class="brand-logo" src="./img/brand/logo-shirose-nihongo.png" alt="Shirose Nihongo" width="262" height="84"/></a>
   <div class="lvl-pill-group" id="lvl-pills">
     <!-- JS filled -->
   </div>
