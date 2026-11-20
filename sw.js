@@ -1,5 +1,5 @@
 /* Service worker: network-first, cache fallback */
-// v406 — logo header baru (img/brand/logo-shirose-nihongo.png) ditambahkan ke CORE.
+// v407 — logo header native (SVG + teks, ikut warna tema), tanpa file gambar.
 // v226 — Kosakata Kanji N3 (js/kanji-vocab.js): kartu hafalan = kosakata contoh, Kanji satuan = indeks.
 // v149 — MENSETSU 面接 (js/mensetsu*.js, css/mensetsu.css, data/mensetsu/index.json); fungsi Netlify tidak pernah dicache.
 // v26 — SSW 特定技能 (ssw.js, ssw-core.js, ssw-art.js, css/ssw.css; data & gambar halaman buku dicache saat dibuka).
@@ -9,7 +9,7 @@
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
 // v405 — Konfirmasi keluar sesi hafalan (JLPT/JFT/SSW, Kana, Mensetsu flashcard).
-const CACHE = "shirose-nihongo-v406";
+const CACHE = "shirose-nihongo-v407";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
@@ -20,7 +20,6 @@ const CORE = [
   "./teacher.html",
   "./manifest.webmanifest",
   "./icon-192.png",
-  "./img/brand/logo-shirose-nihongo.png",
   "./icon-512.png",
   "./icon-maskable-512.png",
   "./apple-touch-icon.png",

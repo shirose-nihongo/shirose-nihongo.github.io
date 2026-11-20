@@ -192,3 +192,6 @@ html[data-theme="putih"] .flash-card .contoh{background:rgba(0,0,0,.04);color:#3
 html[data-theme="putih"] .flash-card .tap-hint{color:#666}
 html[data-theme="putih"] .flash-card .no-pill{background:#f0f0f0;color:#111}
 html[data-theme="putih"] .flash-card .fungsi,html[data-theme="putih"] .flash-card .jpname{color:#222}
+/* logo: daun ikut warna tema untuk tema monokrom */
+html[data-theme="mono"]{--logo-leaf:var(--gray)}
+html[data-theme="putih"]{--logo-leaf:var(--gray)}
