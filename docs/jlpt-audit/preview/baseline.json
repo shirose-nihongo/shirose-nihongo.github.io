@@ -1,0 +1,1745 @@
+{
+ "dibuat": "2026-11-20T11:24:33.404Z",
+ "levels": [
+  "n2"
+ ],
+ "summary": {
+  "n2": {
+   "total": 2945,
+   "flagged": 942,
+   "bersih": 2003,
+   "perSeverity": {
+    "B": 0,
+    "M": 521,
+    "m": 421
+   },
+   "ansPos": [
+    752,
+    770,
+    782,
+    641
+   ],
+   "byCat": {
+    "bunpou/文法形式の判断": {
+     "total": 422,
+     "flagged": 2
+    },
+    "bunpou/文の組み立て": {
+     "total": 213,
+     "flagged": 3
+    },
+    "dokkai/読解": {
+     "total": 350,
+     "flagged": 89
+    },
+    "kanji/漢字読み": {
+     "total": 280,
+     "flagged": 156
+    },
+    "kanji/表記": {
+     "total": 320,
+     "flagged": 70
+    },
+    "kotoba/接頭辞・接尾辞": {
+     "total": 80,
+     "flagged": 1
+    },
+    "kotoba/文脈規定": {
+     "total": 180,
+     "flagged": 0
+    },
+    "kotoba/言い換え類義": {
+     "total": 180,
+     "flagged": 0
+    },
+    "kotoba/用法": {
+     "total": 160,
+     "flagged": 0
+    },
+    "bunpou/文章の文法": {
+     "total": 40,
+     "flagged": 0
+    },
+    "choukai/課題理解": {
+     "total": 100,
+     "flagged": 100
+    },
+    "choukai/ポイント理解": {
+     "total": 120,
+     "flagged": 120
+    },
+    "choukai/概要理解": {
+     "total": 100,
+     "flagged": 100
+    },
+    "choukai/即時応答": {
+     "total": 220,
+     "flagged": 220
+    },
+    "choukai/統合理解": {
+     "total": 80,
+     "flagged": 80
+    },
+    "kotoba/語彙の意味": {
+     "total": 100,
+     "flagged": 1
+    }
+   },
+   "byKode": {
+    "JAWABAN_TERPANJANG": 211,
+    "BACAAN_PENDEK": 5,
+    "PENJELASAN_GENERIK": 806,
+    "DIALOG_PENDEK": 386,
+    "PENGECOH_TIDAK_DISEBUT": 34,
+    "JAWABAN_DISEBUT_VERBATIM": 7,
+    "DUPLIKAT_LEVEL": 5,
+    "KOSAKATA_DI_ATAS_LEVEL": 125
+   },
+   "choukaiDialogLen": {
+    "課題理解": {
+     "n": 100,
+     "min": 68,
+     "p25": 99,
+     "med": 114,
+     "p75": 144,
+     "max": 210
+    },
+    "ポイント理解": {
+     "n": 120,
+     "min": 54,
+     "p25": 74,
+     "med": 88,
+     "p75": 106,
+     "max": 152
+    },
+    "概要理解": {
+     "n": 100,
+     "min": 73,
+     "p25": 96,
+     "med": 117,
+     "p75": 130,
+     "max": 150
+    },
+    "統合理解": {
+     "n": 80,
+     "min": 65,
+     "p25": 111,
+     "med": 149,
+     "p75": 208,
+     "max": 342
+    }
+   },
+   "choukaiTurns": {
+    "n": 400,
+    "min": 1,
+    "p25": 1,
+    "med": 4,
+    "p75": 5,
+    "max": 8
+   },
+   "choukaiSpeakers": {
+    "n": 400,
+    "min": 1,
+    "p25": 1,
+    "med": 2,
+    "p75": 2,
+    "max": 3
+   },
+   "choukaiStemTop": [
+    [
+     "このあとXをしますか。",
+     41
+    ],
+    [
+     "このあとまずXをしなければなりませんか。",
+     11
+    ],
+    [
+     "このあとまずXをしますか。",
+     10
+    ],
+    [
+     "このあとどうしますか。",
+     8
+    ],
+    [
+     "このあとXをしなければなりませんか。",
+     7
+    ],
+    [
+     "どうしてXをXえたのですか。",
+     3
+    ],
+    [
+     "なぜですか。",
+     3
+    ],
+    [
+     "、どうしてそのXをXびましたか。",
+     3
+    ]
+   ],
+   "dokkaiPassLen": {
+    "n": 185,
+    "min": 134,
+    "p25": 201,
+    "med": 251,
+    "p75": 480,
+    "max": 762
+   },
+   "dokkaiJenis": {
+    "Teks menengah / opini (中文)": 2,
+    "Teks panjang / esai (長文)": 1,
+    "Mencari informasi (情報検索)": 21,
+    "Email bisnis (ビジネスメール)": 1,
+    "Teks pendek (内容理解・短文) — ビジネス文書": 20,
+    "Teks pendek (内容理解・短文)": 40,
+    "Teks pendek (内容理解・短文) — お知らせ": 20,
+    "Teks menengah (内容理解・中文)": 40,
+    "Bacaan gabungan (統合理解)": 20,
+    "Teks panjang / opini (主張理解・長文)": 20
+   },
+   "files": {
+    "bunpou-01.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-02.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-03.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 1,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 1
+      }
+     },
+     "kode": {
+      "JAWABAN_TERPANJANG": 1
+     }
+    },
+    "bunpou-04.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-05.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-06.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-07.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-08.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-09.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-10.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-11.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-12.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-13.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-14.json": {
+     "jenis": "bunpou",
+     "total": 12,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 12,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-15.json": {
+     "jenis": "bunpou",
+     "total": 13,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 13,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-16.json": {
+     "jenis": "bunpou",
+     "total": 11,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 11,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-17.json": {
+     "jenis": "bunpou",
+     "total": 10,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 10,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-18.json": {
+     "jenis": "bunpou",
+     "total": 8,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 8,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-19.json": {
+     "jenis": "bunpou",
+     "total": 6,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 6,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "bunpou-20.json": {
+     "jenis": "bunpou",
+     "total": 6,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 6,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "dokkai-01.json": {
+     "jenis": "dokkai",
+     "total": 10,
+     "flagged": 5,
+     "byCat": {
+      "dokkai": {
+       "total": 10,
+       "flagged": 5
+      }
+     },
+     "kode": {
+      "BACAAN_PENDEK": 5,
+      "JAWABAN_TERPANJANG": 2
+     }
+    },
+    "full-01.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 43,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 7
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 43,
+      "DIALOG_PENDEK": 18,
+      "JAWABAN_TERPANJANG": 9,
+      "PENGECOH_TIDAK_DISEBUT": 2
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-02.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 42,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 6
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 42,
+      "JAWABAN_TERPANJANG": 12,
+      "DIALOG_PENDEK": 18,
+      "PENGECOH_TIDAK_DISEBUT": 1
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-03.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 42,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 6
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 42,
+      "DIALOG_PENDEK": 18,
+      "JAWABAN_TERPANJANG": 4
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-04.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 40,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 4
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 40,
+      "DIALOG_PENDEK": 18,
+      "PENGECOH_TIDAK_DISEBUT": 1,
+      "JAWABAN_DISEBUT_VERBATIM": 1,
+      "JAWABAN_TERPANJANG": 7
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-05.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 41,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 5
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 41,
+      "DIALOG_PENDEK": 18,
+      "PENGECOH_TIDAK_DISEBUT": 1,
+      "JAWABAN_TERPANJANG": 8
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-06.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 40,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 4
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 40,
+      "JAWABAN_TERPANJANG": 11,
+      "DIALOG_PENDEK": 18,
+      "JAWABAN_DISEBUT_VERBATIM": 1
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-07.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 41,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 5
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 41,
+      "JAWABAN_TERPANJANG": 10,
+      "DIALOG_PENDEK": 20,
+      "PENGECOH_TIDAK_DISEBUT": 1
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-08.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 39,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 3
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 39,
+      "DIALOG_PENDEK": 20,
+      "JAWABAN_TERPANJANG": 13,
+      "JAWABAN_DISEBUT_VERBATIM": 2
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-09.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 39,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 3
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 39,
+      "DIALOG_PENDEK": 18,
+      "PENGECOH_TIDAK_DISEBUT": 3,
+      "JAWABAN_TERPANJANG": 8
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-10.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 40,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 4
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 40,
+      "JAWABAN_TERPANJANG": 15,
+      "DIALOG_PENDEK": 20,
+      "JAWABAN_DISEBUT_VERBATIM": 1,
+      "PENGECOH_TIDAK_DISEBUT": 1
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-11.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 38,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 1
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 1
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 37,
+      "DUPLIKAT_LEVEL": 1,
+      "DIALOG_PENDEK": 20,
+      "JAWABAN_TERPANJANG": 15
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-12.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 42,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 6
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 42,
+      "JAWABAN_TERPANJANG": 14,
+      "DIALOG_PENDEK": 20,
+      "PENGECOH_TIDAK_DISEBUT": 4
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-13.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 41,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 5
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 41,
+      "JAWABAN_TERPANJANG": 15,
+      "DIALOG_PENDEK": 20,
+      "PENGECOH_TIDAK_DISEBUT": 1
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-14.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 40,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 4
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 40,
+      "DIALOG_PENDEK": 20,
+      "PENGECOH_TIDAK_DISEBUT": 3,
+      "JAWABAN_TERPANJANG": 13
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-15.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 41,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 5
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 41,
+      "DIALOG_PENDEK": 20,
+      "PENGECOH_TIDAK_DISEBUT": 3,
+      "JAWABAN_TERPANJANG": 10,
+      "JAWABAN_DISEBUT_VERBATIM": 1
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-16.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 40,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 4
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 40,
+      "DIALOG_PENDEK": 20,
+      "PENGECOH_TIDAK_DISEBUT": 4,
+      "JAWABAN_TERPANJANG": 7
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-17.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 40,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 4
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 40,
+      "JAWABAN_TERPANJANG": 11,
+      "DIALOG_PENDEK": 20,
+      "PENGECOH_TIDAK_DISEBUT": 2
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-18.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 39,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 3
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 39,
+      "DIALOG_PENDEK": 20,
+      "JAWABAN_TERPANJANG": 9,
+      "PENGECOH_TIDAK_DISEBUT": 2
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-19.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 39,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 1
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 0
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 2
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 38,
+      "DUPLIKAT_LEVEL": 1,
+      "DIALOG_PENDEK": 20,
+      "JAWABAN_TERPANJANG": 8,
+      "JAWABAN_DISEBUT_VERBATIM": 1,
+      "PENGECOH_TIDAK_DISEBUT": 2
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "full-20.v2.json": {
+     "jenis": "full",
+     "total": 91,
+     "flagged": 40,
+     "byCat": {
+      "kanji": {
+       "total": 10,
+       "flagged": 5
+      },
+      "kotoba": {
+       "total": 15,
+       "flagged": 0
+      },
+      "bunpou": {
+       "total": 18,
+       "flagged": 1
+      },
+      "dokkai": {
+       "total": 17,
+       "flagged": 3
+      },
+      "choukai": {
+       "total": 31,
+       "flagged": 31
+      }
+     },
+     "kode": {
+      "PENJELASAN_GENERIK": 39,
+      "DUPLIKAT_LEVEL": 1,
+      "DIALOG_PENDEK": 20,
+      "JAWABAN_TERPANJANG": 9,
+      "PENGECOH_TIDAK_DISEBUT": 3
+     },
+     "formatChoukai": "即時応答 11/12"
+    },
+    "kanji-01.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 7,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 7
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 7
+     }
+    },
+    "kanji-02.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 5,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 5
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 5
+     }
+    },
+    "kanji-03.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 6,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 6
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 6
+     }
+    },
+    "kanji-04.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 4,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 4
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 4
+     }
+    },
+    "kanji-05.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 4,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 4
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 4
+     }
+    },
+    "kanji-06.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 7,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 7
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 5,
+      "PENJELASAN_GENERIK": 2
+     }
+    },
+    "kanji-07.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 9,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 9
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 9
+     }
+    },
+    "kanji-08.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 7,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 7
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 7
+     }
+    },
+    "kanji-09.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 7,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 7
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 7
+     }
+    },
+    "kanji-10.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 8,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 8
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 8
+     }
+    },
+    "kanji-11.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 5,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 5
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 5
+     }
+    },
+    "kanji-12.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 6,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 6
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 6
+     }
+    },
+    "kanji-13.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 10,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 10
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 10
+     }
+    },
+    "kanji-14.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 6,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 6
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 6
+     }
+    },
+    "kanji-15.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 6,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 6
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 6
+     }
+    },
+    "kanji-16.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 7,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 7
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 7
+     }
+    },
+    "kanji-17.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 3,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 3
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 3
+     }
+    },
+    "kanji-18.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 8,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 8
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 8
+     }
+    },
+    "kanji-19.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 7,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 7
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 7
+     }
+    },
+    "kanji-20.json": {
+     "jenis": "kanji",
+     "total": 20,
+     "flagged": 4,
+     "byCat": {
+      "kanji": {
+       "total": 20,
+       "flagged": 4
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 4
+     }
+    },
+    "kotoba-01.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-02.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-03.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-04.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-05.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 1,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 1
+      }
+     },
+     "kode": {
+      "KOSAKATA_DI_ATAS_LEVEL": 1
+     }
+    },
+    "kotoba-06.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-07.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-08.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-09.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-10.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-11.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-12.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-13.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-14.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-15.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-16.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-17.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-18.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-19.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "kotoba-20.json": {
+     "jenis": "kotoba",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "kotoba": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "star-01.json": {
+     "jenis": "star",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "star-02.json": {
+     "jenis": "star",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "star-03.json": {
+     "jenis": "star",
+     "total": 20,
+     "flagged": 0,
+     "byCat": {
+      "bunpou": {
+       "total": 20,
+       "flagged": 0
+      }
+     },
+     "kode": {}
+    },
+    "star-04.json": {
+     "jenis": "star",
+     "total": 20,
+     "flagged": 2,
+     "byCat": {
+      "bunpou": {
+       "total": 20,
+       "flagged": 2
+      }
+     },
+     "kode": {
+      "DUPLIKAT_LEVEL": 2
+     }
+    }
+   }
+  }
+ },
+ "severity": {
+  "STRUKTUR": "B",
+  "KUNCI_TIDAK_COCOK": "B",
+  "OPSI_DUPLIKAT": "B",
+  "AUDIO_HILANG": "B",
+  "OPSI_AUDIO_BEDA": "B",
+  "KANJI_DI_ATAS_LEVEL": "m",
+  "KOSAKATA_DI_ATAS_LEVEL": "M",
+  "DUPLIKAT_LEVEL": "M",
+  "DUPLIKAT_LINTAS_LEVEL": "M",
+  "YOMI_FORMAT": "M",
+  "HYOUKI_FORMAT": "M",
+  "JAWABAN_TERPANJANG": "m",
+  "PENJELASAN_GENERIK": "m",
+  "PENJELASAN_KOSONG": "M",
+  "PENGECOH_TIDAK_DISEBUT": "M",
+  "JAWABAN_DISEBUT_VERBATIM": "m",
+  "DIALOG_PENDEK": "M",
+  "DIALOG_PANJANG": "m",
+  "BACAAN_PENDEK": "M",
+  "BACAAN_PANJANG": "m",
+  "SATU_PEMBICARA": "m",
+  "PERTANYAAN_TIDAK_DIULANG": "m"
+ }
+}

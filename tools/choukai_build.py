@@ -199,8 +199,10 @@ def main(levels):
                 for it in sec["items"]: attach(it, sec["type"], it["id"], it["set"], it["opts"])
         json.dump(data, open(os.path.join(OUT, f"{lvl}-p{pk}.json"), "w", encoding="utf-8"),
                   ensure_ascii=False, separators=(",", ":"))
-        pk_list = sorted(set(index.get(lvl, []) + [pk]))
-        index[lvl] = pk_list
+        # Paket ≥ 200 = versi revisi Full Exam (mis. p211 = paket 11 v2, lihat docs/jlpt-audit/):
+        # dibangun + diberi audio, tetapi TIDAK didaftarkan di Choukai Center.
+        if pk < 200:
+            index[lvl] = sorted(set(index.get(lvl, []) + [pk]))
         dist = collections.Counter(q["ans"] + 1 for s in data["sections"] for i in s["items"] for q in i["qs"])
         n = sum(len(s["items"]) for s in data["sections"])
         print(f"OK {lvl}-p{pk}: {n} soal · sebaran kunci {dict(sorted(dist.items()))}")

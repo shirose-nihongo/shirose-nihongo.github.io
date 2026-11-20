@@ -1,0 +1,1209 @@
+{
+ "dibuat": "2026-11-20T00:21:29.380Z",
+ "catatan": "Hanya statistik. Panjang = jumlah karakter tanpa spasi/tanda baca. Referensi: ekspor soal JLPT asli (tidak disimpan di repo).",
+ "levels": {
+  "n5": {
+   "ref": {
+    "ujian": 2,
+    "choukai": {},
+    "dokkaiChars": {
+     "n": 7,
+     "p25": 107,
+     "med": 158,
+     "p75": 226,
+     "mean": 170.57
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 7,
+     "p25": 1,
+     "med": 2,
+     "p75": 6,
+     "mean": 3.43
+    },
+    "keishikiChars": {
+     "n": 34,
+     "p25": 16,
+     "med": 21,
+     "p75": 27,
+     "mean": 22.38
+    },
+    "yomiChars": null
+   },
+   "bank": {
+    "choukai": {
+     "課題理解": {
+      "dialogChars": {
+       "n": 140,
+       "p25": 60,
+       "med": 73,
+       "p75": 83,
+       "mean": 71.9
+      },
+      "turns": {
+       "n": 140,
+       "p25": 4,
+       "med": 5,
+       "p75": 5,
+       "mean": 4.71
+      },
+      "speakers": {
+       "n": 140,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.97
+      },
+      "monologPct": 2.9,
+      "optLen": {
+       "n": 140,
+       "p25": 3,
+       "med": 4.25,
+       "p75": 6,
+       "mean": 4.8
+      },
+      "pengecohDisebutPct": 73,
+      "semuaPengecohDisebutPct": 45.7
+     },
+     "ポイント理解": {
+      "dialogChars": {
+       "n": 120,
+       "p25": 49,
+       "med": 54,
+       "p75": 63,
+       "mean": 55.84
+      },
+      "turns": {
+       "n": 120,
+       "p25": 4,
+       "med": 4,
+       "p75": 4,
+       "mean": 4.16
+      },
+      "speakers": {
+       "n": 120,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 2
+      },
+      "monologPct": 0,
+      "optLen": {
+       "n": 120,
+       "p25": 2.5,
+       "med": 4.25,
+       "p75": 7,
+       "mean": 4.93
+      },
+      "pengecohDisebutPct": 58.9,
+      "semuaPengecohDisebutPct": 33.3
+     },
+     "発話表現": {
+      "dialogChars": {
+       "n": 100,
+       "p25": 0,
+       "med": 0,
+       "p75": 0,
+       "mean": 0
+      },
+      "turns": {
+       "n": 100,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 100,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "即時応答": {
+      "dialogChars": {
+       "n": 120,
+       "p25": 8,
+       "med": 10,
+       "p75": 12,
+       "mean": 10.2
+      },
+      "turns": {
+       "n": 120,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 120,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     }
+    },
+    "dokkaiChars": {
+     "n": 122,
+     "p25": 57,
+     "med": 96,
+     "p75": 102,
+     "mean": 85.98
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 122,
+     "p25": 1,
+     "med": 1,
+     "p75": 1,
+     "mean": 1.23
+    },
+    "keishikiChars": {
+     "n": 437,
+     "p25": 10,
+     "med": 12,
+     "p75": 14,
+     "mean": 12.25
+    },
+    "yomiChars": {
+     "n": 225,
+     "p25": 9,
+     "med": 11,
+     "p75": 13,
+     "mean": 11.18
+    }
+   }
+  },
+  "n4": {
+   "ref": {
+    "ujian": 10,
+    "choukai": {
+     "課題理解": {
+      "dialogChars": {
+       "n": 32,
+       "p25": 112,
+       "med": 144,
+       "p75": 170,
+       "mean": 138.38
+      },
+      "turns": {
+       "n": 32,
+       "p25": 1,
+       "med": 4,
+       "p75": 7,
+       "mean": 3.94
+      },
+      "speakers": {
+       "n": 32,
+       "p25": 1,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.59
+      },
+      "monologPct": 40.6,
+      "optLen": {
+       "n": 17,
+       "p25": 2,
+       "med": 3,
+       "p75": 6,
+       "mean": 4.65
+      },
+      "pengecohDisebutPct": 16.7,
+      "semuaPengecohDisebutPct": 5.9
+     },
+     "ポイント理解": {
+      "dialogChars": {
+       "n": 28,
+       "p25": 101,
+       "med": 151,
+       "p75": 195,
+       "mean": 140.14
+      },
+      "turns": {
+       "n": 28,
+       "p25": 1,
+       "med": 2,
+       "p75": 6,
+       "mean": 3.71
+      },
+      "speakers": {
+       "n": 28,
+       "p25": 1,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.5
+      },
+      "monologPct": 50,
+      "optLen": {
+       "n": 27,
+       "p25": 6,
+       "med": 9,
+       "p75": 13,
+       "mean": 9.37
+      },
+      "pengecohDisebutPct": 51.2,
+      "semuaPengecohDisebutPct": 25.9
+     },
+     "発話表現": {
+      "dialogChars": {
+       "n": 20,
+       "p25": 0,
+       "med": 12,
+       "p75": 30,
+       "mean": 14.2
+      },
+      "turns": {
+       "n": 20,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 20,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "即時応答": {
+      "dialogChars": {
+       "n": 40,
+       "p25": 18,
+       "med": 20,
+       "p75": 25,
+       "mean": 19.63
+      },
+      "turns": {
+       "n": 40,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1.18
+      },
+      "speakers": {
+       "n": 40,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1.18
+      },
+      "monologPct": 82.5,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     }
+    },
+    "dokkaiChars": {
+     "n": 52,
+     "p25": 126,
+     "med": 270,
+     "p75": 364,
+     "mean": 249.62
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 52,
+     "p25": 1,
+     "med": 2,
+     "p75": 4,
+     "mean": 3.02
+    },
+    "keishikiChars": {
+     "n": 128,
+     "p25": 21,
+     "med": 26,
+     "p75": 38,
+     "mean": 29.94
+    },
+    "yomiChars": {
+     "n": 98,
+     "p25": 12,
+     "med": 14,
+     "p75": 16,
+     "mean": 14.04
+    }
+   },
+   "bank": {
+    "choukai": {
+     "課題理解": {
+      "dialogChars": {
+       "n": 160,
+       "p25": 64,
+       "med": 79,
+       "p75": 92,
+       "mean": 79.41
+      },
+      "turns": {
+       "n": 160,
+       "p25": 4,
+       "med": 5,
+       "p75": 5,
+       "mean": 4.63
+      },
+      "speakers": {
+       "n": 160,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.96
+      },
+      "monologPct": 4.4,
+      "optLen": {
+       "n": 160,
+       "p25": 3,
+       "med": 4.25,
+       "p75": 6.75,
+       "mean": 4.96
+      },
+      "pengecohDisebutPct": 74.3,
+      "semuaPengecohDisebutPct": 47.5
+     },
+     "ポイント理解": {
+      "dialogChars": {
+       "n": 140,
+       "p25": 51,
+       "med": 62,
+       "p75": 72,
+       "mean": 61.79
+      },
+      "turns": {
+       "n": 140,
+       "p25": 4,
+       "med": 4,
+       "p75": 4,
+       "mean": 3.95
+      },
+      "speakers": {
+       "n": 140,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 2
+      },
+      "monologPct": 0,
+      "optLen": {
+       "n": 140,
+       "p25": 3.25,
+       "med": 5.75,
+       "p75": 8,
+       "mean": 5.74
+      },
+      "pengecohDisebutPct": 58,
+      "semuaPengecohDisebutPct": 27.1
+     },
+     "発話表現": {
+      "dialogChars": {
+       "n": 100,
+       "p25": 0,
+       "med": 0,
+       "p75": 0,
+       "mean": 0
+      },
+      "turns": {
+       "n": 100,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 100,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "即時応答": {
+      "dialogChars": {
+       "n": 160,
+       "p25": 9,
+       "med": 12,
+       "p75": 14,
+       "mean": 11.74
+      },
+      "turns": {
+       "n": 160,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 160,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     }
+    },
+    "dokkaiChars": {
+     "n": 150,
+     "p25": 68,
+     "med": 96,
+     "p75": 101,
+     "mean": 94.2
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 150,
+     "p25": 1,
+     "med": 1,
+     "p75": 2,
+     "mean": 1.27
+    },
+    "keishikiChars": {
+     "n": 549,
+     "p25": 11,
+     "med": 14,
+     "p75": 16,
+     "mean": 13.89
+    },
+    "yomiChars": {
+     "n": 324,
+     "p25": 10,
+     "med": 13,
+     "p75": 15,
+     "mean": 12.67
+    }
+   }
+  },
+  "n3": {
+   "ref": {
+    "ujian": 29,
+    "choukai": {
+     "課題理解": {
+      "dialogChars": {
+       "n": 168,
+       "p25": 178,
+       "med": 213,
+       "p75": 258,
+       "mean": 217.02
+      },
+      "turns": {
+       "n": 168,
+       "p25": 1,
+       "med": 7,
+       "p75": 9,
+       "mean": 5.89
+      },
+      "speakers": {
+       "n": 168,
+       "p25": 1,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.71
+      },
+      "monologPct": 28.6,
+      "optLen": {
+       "n": 147,
+       "p25": 6,
+       "med": 9,
+       "p75": 10.75,
+       "mean": 8.32
+      },
+      "pengecohDisebutPct": 62.4,
+      "semuaPengecohDisebutPct": 39.5
+     },
+     "ポイント理解": {
+      "dialogChars": {
+       "n": 168,
+       "p25": 176,
+       "med": 213,
+       "p75": 252,
+       "mean": 214.76
+      },
+      "turns": {
+       "n": 168,
+       "p25": 1,
+       "med": 6,
+       "p75": 7,
+       "mean": 5.22
+      },
+      "speakers": {
+       "n": 168,
+       "p25": 1,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.68
+      },
+      "monologPct": 31.5,
+      "optLen": {
+       "n": 168,
+       "p25": 9.75,
+       "med": 12,
+       "p75": 14,
+       "mean": 11.77
+      },
+      "pengecohDisebutPct": 62.3,
+      "semuaPengecohDisebutPct": 32.1
+     },
+     "概要理解": {
+      "dialogChars": {
+       "n": 60,
+       "p25": 170,
+       "med": 189,
+       "p75": 218,
+       "mean": 195.25
+      },
+      "turns": {
+       "n": 60,
+       "p25": 1,
+       "med": 1,
+       "p75": 6,
+       "mean": 3.1
+      },
+      "speakers": {
+       "n": 60,
+       "p25": 1,
+       "med": 1,
+       "p75": 2,
+       "mean": 1.42
+      },
+      "monologPct": 58.3,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "発話表現": {
+      "dialogChars": {
+       "n": 112,
+       "p25": 0,
+       "med": 12,
+       "p75": 33,
+       "mean": 16.09
+      },
+      "turns": {
+       "n": 112,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 112,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "即時応答": {
+      "dialogChars": {
+       "n": 250,
+       "p25": 19,
+       "med": 24,
+       "p75": 28,
+       "mean": 23.66
+      },
+      "turns": {
+       "n": 250,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 250,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     }
+    },
+    "dokkaiChars": {
+     "n": 257,
+     "p25": 202,
+     "med": 360,
+     "p75": 443,
+     "mean": 347.51
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 257,
+     "p25": 1,
+     "med": 3,
+     "p75": 5,
+     "mean": 2.79
+    },
+    "keishikiChars": {
+     "n": 338,
+     "p25": 27,
+     "med": 37,
+     "p75": 47,
+     "mean": 37.95
+    },
+    "yomiChars": {
+     "n": 223,
+     "p25": 13,
+     "med": 15,
+     "p75": 18,
+     "mean": 15.39
+    }
+   },
+   "bank": {
+    "choukai": {
+     "課題理解": {
+      "dialogChars": {
+       "n": 120,
+       "p25": 79,
+       "med": 92,
+       "p75": 108,
+       "mean": 94.96
+      },
+      "turns": {
+       "n": 120,
+       "p25": 5,
+       "med": 5,
+       "p75": 6,
+       "mean": 5.03
+      },
+      "speakers": {
+       "n": 120,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.99
+      },
+      "monologPct": 0.8,
+      "optLen": {
+       "n": 120,
+       "p25": 4,
+       "med": 6.25,
+       "p75": 8,
+       "mean": 6.2
+      },
+      "pengecohDisebutPct": 78.2,
+      "semuaPengecohDisebutPct": 51.7
+     },
+     "ポイント理解": {
+      "dialogChars": {
+       "n": 120,
+       "p25": 63,
+       "med": 75,
+       "p75": 84,
+       "mean": 75.23
+      },
+      "turns": {
+       "n": 120,
+       "p25": 4,
+       "med": 4,
+       "p75": 4,
+       "mean": 3.83
+      },
+      "speakers": {
+       "n": 120,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.88
+      },
+      "monologPct": 12.5,
+      "optLen": {
+       "n": 120,
+       "p25": 7.25,
+       "med": 8.5,
+       "p75": 9.5,
+       "mean": 8.12
+      },
+      "pengecohDisebutPct": 57.4,
+      "semuaPengecohDisebutPct": 25.8
+     },
+     "概要理解": {
+      "dialogChars": {
+       "n": 60,
+       "p25": 68,
+       "med": 87,
+       "p75": 111,
+       "mean": 89.38
+      },
+      "turns": {
+       "n": 60,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 60,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "発話表現": {
+      "dialogChars": {
+       "n": 80,
+       "p25": 0,
+       "med": 0,
+       "p75": 0,
+       "mean": 0
+      },
+      "turns": {
+       "n": 80,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 80,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "即時応答": {
+      "dialogChars": {
+       "n": 180,
+       "p25": 9,
+       "med": 12,
+       "p75": 14,
+       "mean": 12.18
+      },
+      "turns": {
+       "n": 180,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 180,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     }
+    },
+    "dokkaiChars": {
+     "n": 187,
+     "p25": 78,
+     "med": 90,
+     "p75": 133,
+     "mean": 117.34
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 187,
+     "p25": 1,
+     "med": 1,
+     "p75": 2,
+     "mean": 1.44
+    },
+    "keishikiChars": {
+     "n": 330,
+     "p25": 11,
+     "med": 14,
+     "p75": 17,
+     "mean": 14.69
+    },
+    "yomiChars": {
+     "n": 348,
+     "p25": 11,
+     "med": 13,
+     "p75": 16,
+     "mean": 13.59
+    }
+   }
+  },
+  "n2": {
+   "ref": {
+    "ujian": 30,
+    "choukai": {
+     "課題理解": {
+      "dialogChars": {
+       "n": 150,
+       "p25": 218,
+       "med": 266,
+       "p75": 312,
+       "mean": 269.28
+      },
+      "turns": {
+       "n": 150,
+       "p25": 6,
+       "med": 8,
+       "p75": 9,
+       "mean": 7.33
+      },
+      "speakers": {
+       "n": 150,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.81
+      },
+      "monologPct": 18.7,
+      "optLen": {
+       "n": 147,
+       "p25": 8.5,
+       "med": 10.75,
+       "p75": 12.75,
+       "mean": 10.39
+      },
+      "pengecohDisebutPct": 72.1,
+      "semuaPengecohDisebutPct": 47.6
+     },
+     "ポイント理解": {
+      "dialogChars": {
+       "n": 175,
+       "p25": 203,
+       "med": 264,
+       "p75": 306,
+       "mean": 257.23
+      },
+      "turns": {
+       "n": 175,
+       "p25": 2,
+       "med": 6,
+       "p75": 8,
+       "mean": 5.51
+      },
+      "speakers": {
+       "n": 175,
+       "p25": 1,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.71
+      },
+      "monologPct": 28.6,
+      "optLen": {
+       "n": 175,
+       "p25": 11.5,
+       "med": 14,
+       "p75": 16.5,
+       "mean": 14.06
+      },
+      "pengecohDisebutPct": 70.7,
+      "semuaPengecohDisebutPct": 40
+     },
+     "概要理解": {
+      "dialogChars": {
+       "n": 149,
+       "p25": 201,
+       "med": 229,
+       "p75": 257,
+       "mean": 228.46
+      },
+      "turns": {
+       "n": 149,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 2.24
+      },
+      "speakers": {
+       "n": 149,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1.23
+      },
+      "monologPct": 77.2,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "即時応答": {
+      "dialogChars": {
+       "n": 332,
+       "p25": 21,
+       "med": 26,
+       "p75": 31,
+       "mean": 25.97
+      },
+      "turns": {
+       "n": 332,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 332,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "統合理解": {
+      "dialogChars": {
+       "n": 98,
+       "p25": 121,
+       "med": 407,
+       "p75": 485,
+       "mean": 331.6
+      },
+      "turns": {
+       "n": 98,
+       "p25": 1,
+       "med": 7,
+       "p75": 9,
+       "mean": 6
+      },
+      "speakers": {
+       "n": 98,
+       "p25": 1,
+       "med": 2,
+       "p75": 3,
+       "mean": 1.97
+      },
+      "monologPct": 32.7,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     }
+    },
+    "dokkaiChars": {
+     "n": 301,
+     "p25": 230,
+     "med": 432,
+     "p75": 617,
+     "mean": 427.59
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 301,
+     "p25": 1,
+     "med": 2,
+     "p75": 2,
+     "mean": 1.75
+    },
+    "keishikiChars": null,
+    "yomiChars": {
+     "n": 180,
+     "p25": 14,
+     "med": 18,
+     "p75": 20,
+     "mean": 17.8
+    }
+   },
+   "bank": {
+    "choukai": {
+     "課題理解": {
+      "dialogChars": {
+       "n": 100,
+       "p25": 98,
+       "med": 114,
+       "p75": 144,
+       "mean": 120.65
+      },
+      "turns": {
+       "n": 100,
+       "p25": 5,
+       "med": 5,
+       "p75": 6,
+       "mean": 5.4
+      },
+      "speakers": {
+       "n": 100,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.99
+      },
+      "monologPct": 1,
+      "optLen": {
+       "n": 100,
+       "p25": 7,
+       "med": 8.25,
+       "p75": 10,
+       "mean": 8.37
+      },
+      "pengecohDisebutPct": 84.9,
+      "semuaPengecohDisebutPct": 67
+     },
+     "ポイント理解": {
+      "dialogChars": {
+       "n": 120,
+       "p25": 74,
+       "med": 88,
+       "p75": 106,
+       "mean": 91.49
+      },
+      "turns": {
+       "n": 120,
+       "p25": 4,
+       "med": 4,
+       "p75": 4,
+       "mean": 3.54
+      },
+      "speakers": {
+       "n": 120,
+       "p25": 2,
+       "med": 2,
+       "p75": 2,
+       "mean": 1.85
+      },
+      "monologPct": 15,
+      "optLen": {
+       "n": 120,
+       "p25": 8.5,
+       "med": 9.75,
+       "p75": 10.5,
+       "mean": 9.38
+      },
+      "pengecohDisebutPct": 70.8,
+      "semuaPengecohDisebutPct": 31.7
+     },
+     "概要理解": {
+      "dialogChars": {
+       "n": 100,
+       "p25": 96,
+       "med": 117,
+       "p75": 130,
+       "mean": 114.07
+      },
+      "turns": {
+       "n": 100,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1.03
+      },
+      "speakers": {
+       "n": 100,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1.01
+      },
+      "monologPct": 99,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "即時応答": {
+      "dialogChars": {
+       "n": 220,
+       "p25": 15,
+       "med": 18,
+       "p75": 21,
+       "mean": 18.18
+      },
+      "turns": {
+       "n": 220,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "speakers": {
+       "n": 220,
+       "p25": 1,
+       "med": 1,
+       "p75": 1,
+       "mean": 1
+      },
+      "monologPct": 100,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     },
+     "統合理解": {
+      "dialogChars": {
+       "n": 80,
+       "p25": 111,
+       "med": 148,
+       "p75": 208,
+       "mean": 159.5
+      },
+      "turns": {
+       "n": 80,
+       "p25": 4,
+       "med": 5,
+       "p75": 6,
+       "mean": 5.04
+      },
+      "speakers": {
+       "n": 80,
+       "p25": 3,
+       "med": 3,
+       "p75": 3,
+       "mean": 2.91
+      },
+      "monologPct": 0,
+      "optLen": null,
+      "pengecohDisebutPct": null,
+      "semuaPengecohDisebutPct": null
+     }
+    },
+    "dokkaiChars": {
+     "n": 217,
+     "p25": 115,
+     "med": 184,
+     "p75": 191,
+     "mean": 168.67
+    },
+    "dokkaiSoalPerBacaan": {
+     "n": 217,
+     "p25": 1,
+     "med": 1,
+     "p75": 2,
+     "mean": 1.61
+    },
+    "keishikiChars": {
+     "n": 422,
+     "p25": 12,
+     "med": 15,
+     "p75": 18,
+     "mean": 16.79
+    },
+    "yomiChars": {
+     "n": 280,
+     "p25": 12,
+     "med": 15,
+     "p75": 18,
+     "mean": 15.16
+    }
+   }
+  }
+ }
+}
