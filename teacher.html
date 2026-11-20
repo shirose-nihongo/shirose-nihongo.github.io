@@ -229,6 +229,7 @@ tr.stat-row td{padding-top:0; border-top:none;}
 <div class="modal-backdrop" id="modal"><div class="modal" id="modal-body"></div></div>
 
 <!-- XLSX: SheetJS CDN resmi. jsdelivr/npm sudah 404 sejak SheetJS keluar dari npm. -->
+<style>.ba-sec{margin-top:14px; padding-bottom:4px; border-bottom:1px solid rgba(255,255,255,.12); font-size:13px;} .ba-row{display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:8px; font-size:13px;} .ba-row label{cursor:pointer;}</style>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script type="module">
@@ -519,18 +520,38 @@ async function renderSiswaTab(){
       <p style="color:var(--gray); font-size:13px; margin-bottom:10px;">Akun siswa hanya dibuat di sini (pendaftaran mandiri ditutup). Klik N5–N1 untuk buka/tutup akses — dicek juga oleh Firestore Rules di server.</p>
       <details style="margin-bottom:14px; padding:12px; border:1px solid var(--pink); border-radius:10px;" ${state.siswaList.length <= 1 ? "open" : ""}>
         <summary style="cursor:pointer; font-weight:700; color:var(--pink);">➕ Buat akun baru</summary>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:8px; margin-top:10px;">
-          <input type="email" id="ba-email" placeholder="Email siswa" autocomplete="off"/>
-          <input type="text" id="ba-pwd" placeholder="Password awal (min. 6)" autocomplete="off"/>
-          <input type="text" id="ba-nama" placeholder="Nama"/>
-          <input type="text" id="ba-kelas" placeholder="Kelas (opsional)"/>
+        <div class="ba-sec"><b>1. Data akun</b></div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:8px; margin-top:6px;">
+          <input type="email" id="ba-email" placeholder="Email siswa *" autocomplete="off"/>
+          <div style="display:flex; gap:6px;"><input type="text" id="ba-pwd" placeholder="Password awal * (min. 6)" autocomplete="off" style="flex:1; min-width:0;"/><button type="button" class="btn sm ghost" onclick="baBuatPwd()" title="Buat password acak">🎲</button></div>
+          <input type="text" id="ba-nama" placeholder="Nama lengkap *"/>
+          <input type="text" id="ba-kelas" list="ba-kelas-list" placeholder="Kelas (pilih / ketik baru)"/>
+          <datalist id="ba-kelas-list">${(state.kelasList || []).map(k => `<option value="${escHtml(k.nama || "")}">`).join("")}</datalist>
           ${FB.userIsAdmin() ? `<select id="ba-role"><option value="student">Role: Siswa</option><option value="guru">Role: Guru</option></select>` : ""}
         </div>
-        <div style="margin-top:10px; font-size:13px;">Akses awal:
-          ${["n5","n4","n3","n2","n1"].map(l => `<label style="margin-right:10px;"><input type="checkbox" id="ba-${l}" ${l==="n5"?"checked":""}/> ${l.toUpperCase()}</label>`).join("")}
+        <div class="ba-sec"><b>2. Akses JLPT</b> <small style="color:var(--gray);">— centang level yang dibuka</small>
+          <span style="float:right;"><a href="#" onclick="baSemua('ba-lv',true);return false;">semua</a> · <a href="#" onclick="baSemua('ba-lv',false);return false;">kosongkan</a></span></div>
+        <div class="ba-row">${["n5","n4","n3","n2","n1"].map(l => `<label><input type="checkbox" class="ba-lv" id="ba-${l}" ${l==="n5"?"checked":""}/> ${l.toUpperCase()}</label>`).join("")}</div>
+        <div class="ba-sec"><b>3. Akses JFT-Basic</b></div>
+        <div class="ba-row">
+          <label><input type="checkbox" id="ba-jft" checked onchange="baToggleJft()"/> JFT dibuka</label>
+          <span id="ba-jft-lv">${JFT_LV.map(([l, n]) => `<label><input type="checkbox" class="ba-jl" id="ba-jl-${l}" checked/> ${n}</label>`).join("")}</span>
         </div>
-        <button class="btn" style="margin-top:10px;" id="ba-submit" onclick="buatAkunBaru()">Buat akun</button>
-        <span id="ba-msg" style="margin-left:10px; font-size:13px;"></span>
+        <div class="ba-sec"><b>4. Akses SSW *</b> <small style="color:var(--gray);">— wajib dipilih untuk siswa baru</small></div>
+        <div class="ba-row">
+          <label><input type="radio" name="ba-ssw" value="" checked onchange="baSswMode(this.value)"/> — pilih —</label>
+          <label><input type="radio" name="ba-ssw" value="tidak" onchange="baSswMode(this.value)"/> Tidak ada SSW</label>
+          <label><input type="radio" name="ba-ssw" value="semua" onchange="baSswMode(this.value)"/> Semua bidang</label>
+          <label><input type="radio" name="ba-ssw" value="pilih" onchange="baSswMode(this.value)"/> Pilih bidang…</label>
+        </div>
+        <div id="ba-ssw-box" style="display:none; margin-top:6px;">
+          <div style="font-size:12px; margin-bottom:4px;"><a href="#" onclick="baSemua('ba-sb',true);return false;">centang semua</a> · <a href="#" onclick="baSemua('ba-sb',false);return false;">kosongkan</a></div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:4px 12px; max-height:240px; overflow:auto; padding:8px; border:1px solid var(--border,#334); border-radius:8px; font-size:13px;">
+            ${DEFAULT_BIDANG.map(b => `<label><input type="checkbox" class="ba-sb" data-slug="${b.slug}"/> ${escHtml((b.nama || b.slug) + (b.jp ? " · " + b.jp : ""))}</label>`).join("")}
+          </div>
+        </div>
+        <div style="margin-top:12px;"><button class="btn" id="ba-submit" onclick="buatAkunBaru()">Buat akun</button>
+        <span id="ba-msg" style="margin-left:10px; font-size:13px;"></span></div>
       </details>
       <details style="margin-bottom:14px; padding:12px; border:1px solid var(--gold); border-radius:10px;" ${state.importSiswa ? "open" : ""}>
         <summary style="cursor:pointer; font-weight:700; color:var(--gold);">📊 Import banyak siswa dari Excel</summary>
@@ -861,21 +882,44 @@ window.toggleStat = async (uid, btn) => {
   slot.innerHTML = html + `<div style="margin-top:4px;"><a href="#" style="color:var(--pink-light); font-size:11.5px;" onclick="studentProfile('${uid}'); return false;">Lihat profil lengkap (nilai ujian & hafalan) →</a></div>`;
   slot.dataset.loaded = "1";
 };
+window.baSemua = (cls, on) => document.querySelectorAll("." + cls).forEach(c => c.checked = on);
+window.baToggleJft = () => { const on = document.getElementById("ba-jft").checked; document.querySelectorAll(".ba-jl").forEach(c => { c.disabled = !on; }); };
+window.baSswMode = (m) => { document.getElementById("ba-ssw-box").style.display = m === "pilih" ? "block" : "none"; };
+window.baBuatPwd = () => { const c = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789"; let p = ""; const r = crypto.getRandomValues(new Uint32Array(10)); r.forEach(n => p += c[n % c.length]); document.getElementById("ba-pwd").value = p; };
 window.buatAkunBaru = async () => {
   const v = id => (document.getElementById(id)?.value || "").trim();
   const msg = document.getElementById("ba-msg");
   const btn = document.getElementById("ba-submit");
+  const role = v("ba-role") || "student";
   const aksesLevel = {};
   ["n5","n4","n3","n2","n1"].forEach(l => aksesLevel[l] = !!document.getElementById("ba-"+l)?.checked);
+  const gagal = (t) => { msg.style.color = "var(--red)"; msg.textContent = t; };
+  if (!v("ba-nama")) return gagal("Nama wajib diisi");
+  const mode = document.querySelector('input[name="ba-ssw"]:checked')?.value || "";
+  const bidang = [...document.querySelectorAll(".ba-sb:checked")].map(c => c.dataset.slug);
+  if (role === "student") {
+    if (!mode) return gagal("Akses SSW wajib dipilih (Tidak ada / Semua bidang / Pilih bidang)");
+    if (mode === "pilih" && !bidang.length) return gagal("Pilih minimal 1 bidang SSW (atau pilih 'Tidak ada SSW')");
+  }
   btn.disabled = true; msg.style.color = "var(--gray)"; msg.textContent = "Membuat akun…";
   try {
-    await FB.buatAkunSiswa({ email: v("ba-email"), password: v("ba-pwd"), nama: v("ba-nama"), kelas: v("ba-kelas"),
-                             aksesLevel, role: v("ba-role") || "student" });
-    toast("✓ Akun " + v("ba-email") + " dibuat");
+    const uid = await FB.buatAkunSiswa({ email: v("ba-email"), password: v("ba-pwd"), nama: v("ba-nama"), kelas: v("ba-kelas"), aksesLevel, role });
+    let peringatan = "";
+    if (role === "student" && uid) {
+      try {
+        const jft = !!document.getElementById("ba-jft").checked;
+        await FB.setAksesJft(uid, jft);
+        if (jft) { const jl = {}; JFT_LV.forEach(([l]) => jl[l] = !!document.getElementById("ba-jl-" + l)?.checked); await FB.setAksesJftLevel(uid, jl); }
+        await FB.setAksesSsw(uid, mode !== "tidak");
+        if (mode === "semua") for (const sl of SSW_SLUGS) await FB.setAksesSswBidang(uid, sl, true);
+        else if (mode === "pilih") for (const sl of bidang) await FB.setAksesSswBidang(uid, sl, true);
+      } catch (e) { peringatan = " (akun dibuat, tapi akses JFT/SSW gagal diatur: " + (e.message || e) + " — atur ulang di daftar siswa)"; }
+    }
+    toast("✓ Akun " + v("ba-email") + " dibuat" + peringatan);
     state.siswaStale = true;
     renderTab();
   } catch(e){
-    msg.style.color = "var(--red)"; msg.textContent = e.message || String(e);
+    gagal(e.message || String(e));
     btn.disabled = false;
   }
 };
