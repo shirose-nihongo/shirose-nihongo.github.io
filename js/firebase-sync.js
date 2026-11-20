@@ -776,6 +776,21 @@ export async function listHasilJLPTOf(uid, limitN = 100) {
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
+/* ========== HASIL UJIAN JFT-Basic ==========
+ * siswa/{uid}/jft_hasil/{t} — salinan hasil Latihan Bab / Simulasi / Tryout supaya guru bisa melihat
+ * nilainya (sebelumnya hanya tersimpan di HP siswa). Tercakup rules wildcard /siswa/{sid}/{sub}/{docId}.
+ * ID dokumen = waktu selesai → aman dikirim ulang (tidak dobel). Soal/jawaban (review) TIDAK ikut disimpan. */
+export async function simpanHasilJft(rec) {
+  if (!currentUser || currentUser.isAnonymous || !rec || !rec.t) return;
+  const { review, ...r } = rec;
+  await setDoc(doc(db, "siswa", currentUser.uid, "jft_hasil", String(rec.t)), { ...r, uid: currentUser.uid, tgl: serverTimestamp() });
+}
+export async function listHasilJftOf(uid, limitN = 300) {
+  if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  const q = query(collection(db, "siswa", uid, "jft_hasil"), orderBy("tgl", "desc"), limit(limitN));
+  const snap = await getDocs(q);
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+}
 export async function getHasilJLPT(uid, id) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
   const s = await getDoc(doc(db, "siswa", uid, "jlpt_hasil", id));

@@ -348,6 +348,7 @@ function selesaiSesi() {
     const best = LS.get(BEST_KEY(), {}); const bk = `${J.lv}:${J.kode}`; if (!best[bk] && pct >= 0.6 && window.awardKoin) { try { window.awardKoin(J.mode === "sim" ? 100 : 30, "jft " + bk); } catch (e) {} }
     if (!best[bk] || pct > best[bk].pct) best[bk] = { pct, skor: rec.skor, t: rec.t }; LS.set(BEST_KEY(), best);
   }
+  if (J.mode !== "latihan" && _FB && _FB.simpanHasilJft && S().user && !S().user.isAnonymous) { _FB.simpanHasilJft(rec).catch(e => console.warn("simpan hasil JFT:", e && e.message)); sinkronLama(); }
   LS.set(HIS_KEY() + ":last", rec);
   LS.del(SESI_KEY());
   route("jft-hasil");
@@ -569,4 +570,18 @@ export const JFT_ROUTES = {
   "jft-tes": () => renderTes(),
   "jft-hasil": () => renderHasil(),
 };
-export function initJft(fb, loadMateri) { window.__loadMateri = loadMateri; }
+let _FB = null;
+// Kirim riwayat JFT lama (tersimpan di HP) ke Firestore sekali saja, supaya guru bisa melihat nilainya.
+function sinkronLama() {
+  try {
+    if (!_FB || !_FB.simpanHasilJft || !S().user || S().user.isAnonymous) return false;
+    const fk = "shirose-jft-synced:" + uid(); if (LS.get(fk, false)) return true;
+    const his = LS.get(HIS_KEY(), []);
+    Promise.all(his.map(h => _FB.simpanHasilJft(h).catch(() => {}))).then(() => LS.set(fk, true));
+    return true;
+  } catch (e) { return false; }
+}
+export function initJft(fb, loadMateri) {
+  window.__loadMateri = loadMateri; _FB = fb;
+  [6000, 25000, 60000].forEach(ms => setTimeout(sinkronLama, ms));
+}

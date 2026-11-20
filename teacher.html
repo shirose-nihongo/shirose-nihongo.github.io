@@ -229,7 +229,16 @@ tr.stat-row td{padding-top:0; border-top:none;}
 <div class="modal-backdrop" id="modal"><div class="modal" id="modal-body"></div></div>
 
 <!-- XLSX: SheetJS CDN resmi. jsdelivr/npm sudah 404 sejak SheetJS keluar dari npm. -->
-<style>.ba-sec{margin-top:14px; padding-bottom:4px; border-bottom:1px solid rgba(255,255,255,.12); font-size:13px;} .ba-row{display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:8px; font-size:13px;} .ba-row label{cursor:pointer;}</style>
+<style>.pn{font-size:13px; color:var(--white); line-height:1.5; padding:6px 2px;} .pn h4{margin:10px 0 6px; font-size:14px; color:var(--pink-light);}
+.pn-profil{display:flex; align-items:center; gap:18px; flex-wrap:wrap;} .pn-av{width:150px; max-width:40vw;} .pn-av svg{width:100%; height:auto; display:block;} .pn-lv{font-size:22px;} .pn-lv b{color:var(--gold); font-size:34px;}
+.pn-row{display:flex; align-items:center; gap:10px; margin:6px 0;} .pn-row>b{min-width:120px; max-width:200px;} .pn-grow{flex:1; min-width:0;} .pn-grow small{color:var(--gray); font-size:11.5px;} .pn-pc{font-weight:800; min-width:44px; text-align:right;}
+.pn-bar{height:9px; border-radius:6px; background:rgba(255,255,255,.12); overflow:hidden; margin-bottom:2px;} .pn-bar i{display:block; height:100%; background:var(--pink); border-radius:6px;}
+.pn-det{margin:8px 0; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:8px 10px;} .pn-det>summary{cursor:pointer; font-weight:700;} .pn-det small{color:var(--gray); font-weight:400;}
+.pn-jenis{margin-top:8px;} .pn-jh{font-weight:700; font-size:12.5px; margin-bottom:3px;} .pn-chips{display:flex; flex-wrap:wrap; gap:5px; align-items:center;} .pn-kat{margin:2px 0 4px; font-size:12px; color:var(--gray);}
+.pn-chip{display:inline-block; padding:2px 8px; border-radius:99px; font-size:12px; background:rgba(255,255,255,.08); color:var(--gray);} .pn-chip.ok{background:rgba(34,197,94,.22); color:#86efac;} .pn-chip.ng{background:rgba(239,68,68,.22); color:#fca5a5;} .pn-chip b{color:inherit;}
+.pn-t{width:100%; border-collapse:collapse; margin:4px 0; font-size:12.5px;} .pn-t th,.pn-t td{padding:3px 6px; text-align:left; border-bottom:1px solid rgba(255,255,255,.08);}
+.pn-btns{display:inline-flex; gap:4px; flex-wrap:wrap;} .pn-btns .btn.on{background:var(--pink); color:#fff;}
+.ba-sec{margin-top:14px; padding-bottom:4px; border-bottom:1px solid rgba(255,255,255,.12); font-size:13px;} .ba-row{display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:8px; font-size:13px;} .ba-row label{cursor:pointer;}</style>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script type="module">
@@ -240,9 +249,10 @@ window.aturKoinSiswa = async (uid, lama) => {
   try { await FB.setWalletKoinOf(uid, n, "pengembalian koin gacha oleh guru"); alert("✅ Saldo sekarang " + n.toLocaleString("id-ID") + ". Siswa melihatnya saat membuka aplikasi lagi."); location.reload(); } catch (e) { alert("❌ " + e.message); }
 };
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261118a";
+import * as FB from "./js/firebase-sync.js?v=20261121a";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
 import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261118s";
+import { renderCharacter, DEFAULT_EQUIPPED, setBody, setBentuk, BENTUK_DEFAULT } from "./js/character.js?v=20261119u";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
 
 const state = {
@@ -618,12 +628,11 @@ function renderSiswaDaftarTabel(){
                 <td data-label="SSW">${role === "student" ? _chipSsw(s) : "—"}</td>
                 <td data-label="JFT">${role === "student" ? _chipJft(s) : "—"}</td>
                 <td class="aksi">
-                  ${role === "student" ? `<button class="btn sm ghost" onclick="toggleStat('${s.uid}', this)">📊 Detail</button>` : ""}
-                  <button class="btn sm ghost" onclick="lihatGami('${s.uid}', '${(s.nama||s.email).replace(/'/g,'')}')">Progres</button>
+                  ${role === "student" ? `${_btnDetail(s.uid)}` : ""}
                   ${_bolehHapus(s) ? `<button class="btn sm danger" onclick="hapusSiswa('${s.uid}')">🗑️ Hapus</button>` : ""}
                 </td>
               </tr>
-              ${role === "student" ? `<tr class="stat-row" hidden style="${nonaktif?'opacity:.55;':''}"><td colspan="7"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;">Memuat statistik…</div></td></tr>` : ""}`; }).join("")}
+              ${role === "student" ? `<tr class="stat-row" hidden style="${nonaktif?'opacity:.55;':''}"><td colspan="7"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;"></div></td></tr>` : ""}`; }).join("")}
           </tbody>
         </table>
       </div>`;
@@ -652,10 +661,10 @@ function _barisSiswaKelas(s){
     ${_chipSsw(s)}
     ${_chipJft(s)}
     ${_chipStatus(s)}
-    <button class="btn sm ghost" onclick="toggleStat('${s.uid}', this)">📊 Detail</button>
+    ${_btnDetail(s.uid)}
     <button class="btn sm ghost" onclick="pindahKelas('${s.uid}', '')">↩︎ Keluarkan</button>
     ${_bolehHapus(s) ? `<button class="btn sm danger" onclick="hapusSiswa('${s.uid}')">🗑️ Hapus</button>` : ""}
-    <div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;">Memuat statistik…</div>
+    <div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;"></div>
   </div>`;
 }
 function _isiKelas(i){
@@ -682,11 +691,11 @@ function renderSiswaPerKelas(){
           <td data-label="JFT">${_chipJft(s)}</td>
           <td data-label="Kelas">${nama.length ? `<select onchange="pindahKelas('${s.uid}', this.value)"><option value="">— pilih kelas —</option>${opsiKelas}</select>` : `<span style="color:var(--gray); font-size:12px;">Belum ada kelas</span>`}</td>
           <td class="aksi">
-            <button class="btn sm ghost" onclick="toggleStat('${s.uid}', this)">📊 Detail</button>
+            ${_btnDetail(s.uid)}
             ${_bolehHapus(s) ? `<button class="btn sm danger" onclick="hapusSiswa('${s.uid}')">🗑️ Hapus</button>` : ""}
           </td>
         </tr>
-        <tr class="stat-row" hidden><td colspan="8"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;">Memuat statistik…</div></td></tr>`;
+        <tr class="stat-row" hidden><td colspan="8"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;"></div></td></tr>`;
       }).join("")}</tbody>
     </table></div>${_tombolLebih(tanpa.length)}` : `<div style="color:var(--gray); padding:8px 0;">Semua siswa sudah punya kelas ✓</div>`;
   const blokTanpa = `<div class="sg-kelas" style="border-color:#f59e0b;">
@@ -854,34 +863,192 @@ async function isiStatSlots(){
   await Promise.all([kerja(), kerja(), kerja()]);
 }
 window.isiStatSlots = isiStatSlots;
-// Statistik baru muncul di bawah siswa setelah tombol Profil/Detail diklik.
-window.toggleStat = async (uid, btn) => {
+/* ===== Detail siswa: 3 tombol — Profil / Progres / Nilai (dimuat hanya saat dipencet) =====
+ * Hanya menampilkan yang DIIKUTI siswa: level JLPT yang dibuka, bidang SSW yang boleh diakses, level JFT yang dibuka. */
+const _panelCache = {};
+const _btnDetail = (uid) => `<span class="pn-btns">${[["profil","👤 Profil"],["progres","📈 Progres"],["nilai","📝 Nilai"]].map(([k, l]) => `<button class="btn sm ghost" onclick="bukaPanel('${uid}','${k}',this)">${l}</button>`).join("")}</span>`;
+const _e = (t) => escHtml(t);
+const _bar2 = (p, warna) => `<div class="pn-bar"><i style="width:${Math.max(0, Math.min(100, p))}%;${warna ? `background:${warna};` : ""}"></i></div>`;
+const _pct = (a, b) => b > 0 ? Math.min(100, Math.round(a / b * 100)) : 0;
+const _chipNilai = (label, v, ok = 60, tip = "") => `<span class="pn-chip ${v == null ? "" : v >= ok ? "ok" : "ng"}" title="${_e(tip)}">${_e(label)} <b>${v == null ? "–" : v}</b></span>`;
+const _jsonCache = {};
+const _getJson = (u) => (_jsonCache[u] = _jsonCache[u] || fetch(u).then(r => { if (!r.ok) throw new Error(u + " " + r.status); return r.json(); }).catch(e => { delete _jsonCache[u]; throw e; }));
+const _lvAktif = (s) => ["n5","n4","n3","n2","n1"].filter(l => s.aksesLevel?.[l]);
+const _jftAktif = (s) => s.aksesJft === false ? [] : JFT_LV.filter(([l]) => _jftOn(s, l));
+// Bidang SSW yang boleh diakses siswa & punya materi (data/ssw/{slug}/index.json).
+async function _sswAktif(s){
+  if (s.aksesSsw === false) return [];
+  const kls = state.kelasList || [];
+  const kand = DEFAULT_BIDANG.filter(b => _sswEfektif(s, kls, b.slug));
+  const ok = await Promise.all(kand.map(b => _getJson(`data/ssw/${b.slug}/index.json`).then(() => b).catch(() => null)));
+  return ok.filter(Boolean);
+}
+async function _sswPack(slug){
+  const base = `data/ssw/${slug}`;
+  const idx = await _getJson(`${base}/index.json`);
+  const [babs, quiz] = await Promise.all([
+    Promise.all((idx.bab || []).map(b => _getJson(`${base}/${b.file}`).then(x => x.bab).catch(() => null))),
+    _getJson(`${base}/quiz.json`).catch(() => ({ bab: {} })),
+  ]);
+  return { babs: babs.filter(Boolean), quiz };
+}
+const _plainJ = (x) => { const t = (x && typeof x === "object") ? (x.id || x.ja || Object.values(x)[0]) : x; return plainT(t); };
+
+async function _panelProfil(s){
+  const gami = await FB.getSiswaGami(s.uid).catch(() => ({}));
+  const lv = Math.max(1, ...Object.values(gami).filter(Boolean).map(x => x.level_karakter || 1));
+  const k = s.karakter || {};
+  let svg = "";
+  try { setBody(k.body || "male"); setBentuk(k.bentuk || BENTUK_DEFAULT); svg = renderCharacter({ ...DEFAULT_EQUIPPED, ...(k.equipped || {}) }, k.skinTone || "light", { hairColor: k.hairColor, body: k.body || "male" }); } catch(e){ console.warn("avatar:", e); }
+  return `<div class="pn-profil"><div class="pn-av">${svg || '<div style="color:var(--gray); padding:30px;">Avatar belum tersedia</div>'}</div>
+    <div class="pn-lv">Level <b>${lv}</b></div></div>`;
+}
+
+async function _panelProgres(s){
+  const out = [];
+  const lvls = _lvAktif(s);
+  if (lvls.length){
+    const srs = await FB.getSiswaSrsAll(s.uid).catch(() => ({}));
+    const bag = await Promise.all(lvls.map(async l => {
+      const { kos, knj } = await _jumlahMateri(l);
+      const bun = await _getJson(`./data/bunpou-${l}.json`).then(d => Array.isArray(d) ? d.length : (d.items?.length || 0)).catch(() => 0);
+      const kartu = srs[l] || {};
+      let mk = 0, mb = 0; for (const [key, c] of Object.entries(kartu)) if (c && c.mastered) { if (key[0] === "k") mk++; else if (key[0] === "b") mb++; }
+      const tot = kos + knj + bun, p = _pct(mk + mb, tot);
+      return `<div class="pn-row"><b>${l.toUpperCase()}</b><div class="pn-grow">${_bar2(p)}<small>Hafalan flashcard: ${mk + mb} dari ${tot} item hafal (kosakata + kanji ${Math.min(mk, kos + knj)}/${kos + knj}, bunpou ${Math.min(mb, bun)}/${bun})</small></div><span class="pn-pc">${p}%</span></div>`;
+    }));
+    out.push(`<h4>📘 JLPT — hafalan</h4>${bag.join("")}`);
+  }
+  const sb = await _sswAktif(s);
+  if (sb.length){
+    const core = await import("./js/ssw-core.js?v=20261118s");
+    const rows = await Promise.all(sb.map(async b => {
+      let P = null; try { P = await FB.loadSswProgres(b.slug, s.uid); } catch(e){}
+      let pk = null; try { pk = await _sswPack(b.slug); } catch(e){}
+      const Pn = P || { read:{}, cards:{}, quiz:{} };
+      const bp = (pk?.babs || []).map(x => core.babProgress({ read: Pn.read || {}, cards: Pn.cards || {}, quiz: Pn.quiz || {} }, x, []));
+      const p = bp.length ? Math.round(bp.reduce((a, x) => a + x.pct, 0) / bp.length) : 0;
+      const baca = bp.reduce((a, x) => a + (x.read || 0), 0), tot = bp.reduce((a, x) => a + (x.subsTotal || 0), 0);
+      const kartu = Object.keys(Pn.cards || {}).length;
+      return `<div class="pn-row"><b>${_e(b.nama)}</b><div class="pn-grow">${_bar2(p)}<small>Baca materi: ${baca}/${tot} subbab · kosakata dipelajari: ${kartu}</small></div><span class="pn-pc">${p}%</span></div>`;
+    }));
+    out.push(`<h4>🌏 SSW</h4>${rows.join("")}`);
+  }
+  const jl = _jftAktif(s);
+  if (jl.length){
+    const h = await FB.listHasilJftOf(s.uid).catch(() => []);
+    const rows = jl.map(([l, n]) => {
+      const sel = new Set(h.filter(x => x.lv === l && x.mode === "bab").map(x => x.kode));
+      const p = _pct(sel.size, 9);
+      return `<div class="pn-row"><b>JFT ${n}</b><div class="pn-grow">${_bar2(p)}<small>Paket latihan bab selesai: ${sel.size}/9${l === "ir2" ? ` · simulasi penuh dikerjakan: ${new Set(h.filter(x => x.lv === l && x.mode === "sim").map(x => x.kode)).size}/5` : ""}</small></div><span class="pn-pc">${p}%</span></div>`;
+    });
+    out.push(`<h4>📝 JFT-Basic</h4>${rows.join("")}`);
+  }
+  return out.length ? out.join("") : `<div style="color:var(--gray);">Belum ada materi yang diikuti siswa ini.</div>`;
+}
+
+const _JENIS_JLPT = [["full","🏯 Full Exam"],["kanji","漢 Kanji"],["kotoba","語 Kotoba"],["bunpou","文 Bunpou"],["dokkai","読 Dokkai"],["star","★ Bintang"]];
+const _CAT_JLPT = { kanji:"Kanji", kotoba:"Kotoba", bunpou:"Bunpou", dokkai:"Dokkai", choukai:"Choukai" };
+async function _panelNilai(s){
+  const out = [];
+  const lvls = _lvAktif(s);
+  if (lvls.length){
+    const [idx, hasil] = await Promise.all([_getJson("./jlpt/index.json").catch(() => null), FB.listHasilJLPTOf(s.uid, 400).catch(() => [])]);
+    const best = {}; hasil.forEach(h => { const b = best[h.pkgId]; if (!b || (h.skor || 0) > (b.skor || 0)) best[h.pkgId] = h; });
+    const bag = lvls.map(l => {
+      const lv = idx?.level?.[l] || {};
+      const baris = _JENIS_JLPT.map(([j, lab]) => {
+        const pk = lv[j] || []; if (!pk.length) return "";
+        const done = pk.filter(p => best[p.id]).length;
+        let kat = "";
+        if (j === "full" && done){
+          const agg = {}; pk.forEach(p => { const h = best[p.id]; Object.entries(h?.perKategori || {}).forEach(([c, v]) => { agg[c] = agg[c] || { b: 0, t: 0 }; agg[c].b += v.benar || 0; agg[c].t += v.total || 0; }); });
+          kat = `<div class="pn-kat">Rata-rata per bagian: ${Object.keys(_CAT_JLPT).filter(c => agg[c]).map(c => _chipNilai(_CAT_JLPT[c], _pct(agg[c].b, agg[c].t))).join("")}</div>`;
+        }
+        return `<div class="pn-jenis"><div class="pn-jh">${lab} <small>(${done}/${pk.length} paket dikerjakan)</small></div>${kat}<div class="pn-chips">${pk.map(p => { const h = best[p.id]; return _chipNilai(p.id.split("-").pop(), h ? h.skor : null, 60, `${p.judul}${h ? ` · ${h.benar}/${h.total} benar` : " · belum dikerjakan"}`); }).join("")}</div></div>`;
+      }).join("");
+      return `<details class="pn-det" open><summary>📘 JLPT ${l.toUpperCase()}</summary>${baris || '<div style="color:var(--gray);">Belum ada paket ujian.</div>'}</details>`;
+    });
+    out.push(bag.join(""));
+  }
+  const sb = await _sswAktif(s);
+  if (sb.length){
+    const pr = await Promise.all(sb.map(async b => { try { return await FB.loadSswProgres(b.slug, s.uid); } catch(e){ return null; } }));
+    window._pnSsw = window._pnSsw || {}; window._pnSsw[s.uid] = Object.fromEntries(sb.map((b, i) => [b.slug, pr[i]]));
+    out.push(sb.map((b, i) => {
+      const qz = Object.values(pr[i]?.quiz || {}).filter(q => q && q.best >= 0);
+      const rata = qz.length ? Math.round(qz.reduce((a, q) => a + q.best, 0) / qz.length) : null;
+      return `<details class="pn-det" ontoggle="pnBukaSsw('${s.uid}','${b.slug}',this)"><summary>🌏 SSW ${_e(b.nama)} <small>${qz.length ? `· ${qz.length} kuis dikerjakan · rata-rata ${rata}%` : "· belum ada kuis"}</small></summary><div class="pn-isi">Memuat…</div></details>`;
+    }).join(""));
+  }
+  const jl = _jftAktif(s);
+  if (jl.length){
+    const h = await FB.listHasilJftOf(s.uid).catch(() => []);
+    const bestJ = {}; h.forEach(x => { const key = x.lv + ":" + x.kode; const sc = x.mode === "sim" && x.skor != null ? x.skor : Math.round((x.pct || 0) * 100); if (!bestJ[key] || sc > bestJ[key].sc) bestJ[key] = { sc, x }; });
+    const bagJ = jl.map(([l, n]) => {
+      const blok = [["Bab 1–6", 0], ["Bab 7–12", 1], ["Bab 13–18", 2]].map(([lab, b]) => {
+        const ps = [0, 1, 2].map(p => bestJ[`${l}:b${b}p${p}`]);
+        const ada = ps.filter(Boolean), rata = ada.length ? Math.round(ada.reduce((a, x) => a + x.sc, 0) / ada.length) : null;
+        return `<div class="pn-jenis"><div class="pn-jh">${lab} <small>${rata != null ? `· rata-rata ${rata}%` : ""}</small></div><div class="pn-chips">${ps.map((x, p) => _chipNilai("Paket " + (p + 1), x ? x.sc : null, 60)).join("")}</div></div>`;
+      }).join("");
+      const sim = l === "ir2" ? `<div class="pn-jenis"><div class="pn-jh">🏁 Simulasi penuh JFT-Basic <small>(skor 10–250, lulus ≥ 200)</small></div><div class="pn-chips">${[0,1,2,3,4].map(p => { const x = bestJ[`ir2:sim${p}`]; return _chipNilai("Paket " + (p + 1), x ? x.sc : null, 200); }).join("")}</div></div>` : "";
+      return `<details class="pn-det" open><summary>📝 JFT ${n}</summary>${blok}${sim}</details>`;
+    }).join("");
+    const tr = [0,1,2,3,4,5].map(p => bestJ[`tryout:try${p}`]);
+    const tryout = tr.some(Boolean) ? `<details class="pn-det" open><summary>🏁 JFT Tryout</summary><div class="pn-chips">${tr.map((x, p) => x ? _chipNilai("Paket " + (p + 1), x.sc, 200) : "").join("")}</div></details>` : "";
+    out.push(bagJ + tryout);
+  }
+  return out.length ? out.join("") : `<div style="color:var(--gray);">Belum ada materi yang diikuti siswa ini.</div>`;
+}
+// Rincian nilai SSW per subbab / kuis bab / ujian penuh — dimuat saat bidang dibuka.
+window.pnBukaSsw = async (uid, slug, det) => {
+  if (!det.open || det.dataset.ok) return;
+  const box = det.querySelector(".pn-isi"); det.dataset.ok = "1";
+  try {
+    const P = (window._pnSsw?.[uid] || {})[slug] || { quiz: {} }; const Q = P.quiz || {};
+    const pk = await _sswPack(slug);
+    const qbab = pk.quiz?.bab || {};
+    const sc = (id, n) => { const q = Q[id]; return q && q.best >= 0 ? `${q.best}%` : "–"; };
+    const nOf = (babId, id) => ((qbab[babId] || []).find(x => x.id === id)?.items || []).length;
+    const chip = (lab, id, babId) => { const q = Q[id]; const n = babId ? nOf(babId, id) : 0; return _chipNilai(lab, q && q.best >= 0 ? q.best : null, 60, n ? `${n} soal` : ""); };
+    const pakai = new Set();
+    const bagBab = pk.babs.map(b => {
+      const subs = (b.subs || []).map(sb => { const id = sb.id + "-q"; const n = nOf(b.id, id); if (!n) return ""; pakai.add(id); return `<tr><td>${_e(_plainJ(sb.title))}</td><td>${n} soal</td><td>${_chipNilai("terbaik", Q[id] && Q[id].best >= 0 ? Q[id].best : null)}</td></tr>`; }).join("");
+      const kb = [1,2,3].map(n => { const id = `${b.id}-q${n}`; if (Q[id] || nOf(b.id, id)) pakai.add(id); return nOf(b.id, id) || Q[id] ? chip("Kuis " + n, id, b.id) : ""; }).join("");
+      return `<div class="pn-jenis"><div class="pn-jh">Bab ${b.no ?? ""} — ${_e(_plainJ(b.title))}</div>${subs ? `<table class="pn-t"><thead><tr><th>Subbab (latihan)</th><th>Soal</th><th>Nilai</th></tr></thead><tbody>${subs}</tbody></table>` : ""}${kb ? `<div class="pn-chips">Kuis bab: ${kb}</div>` : ""}</div>`;
+    }).join("");
+    const full = Object.keys(Q).filter(k => /^full-q\d+$/.test(k)).sort((a, b) => parseInt(a.slice(6)) - parseInt(b.slice(6)));
+    full.forEach(k => pakai.add(k));
+    const lain = Object.keys(Q).filter(k => !pakai.has(k) && Q[k] && Q[k].best >= 0);
+    box.innerHTML = bagBab
+      + `<div class="pn-jenis"><div class="pn-jh">🏁 Ujian penuh / paket soal</div><div class="pn-chips">${full.length ? full.map(k => _chipNilai("Paket " + k.slice(6), Q[k].best, 60, `dikerjakan ${Q[k].n || 1}×`)).join("") : '<span style="color:var(--gray);">Belum dikerjakan</span>'}</div></div>`
+      + (lain.length ? `<div class="pn-jenis"><div class="pn-jh">Lainnya</div><div class="pn-chips">${lain.map(k => _chipNilai(k, Q[k].best)).join("")}</div></div>` : "");
+  } catch (e) { box.textContent = "Gagal memuat: " + (e.message || e); }
+};
+
+window.bukaPanel = async (uid, jenis, btn) => {
   let slot = null, rowWrap = null;
   const sg = btn.closest(".sg-row");
   if (sg) slot = sg.querySelector(".stat-slot");
-  else {
-    rowWrap = btn.closest("tr")?.nextElementSibling;
-    if (rowWrap && rowWrap.classList.contains("stat-row")) slot = rowWrap.querySelector(".stat-slot");
-  }
-  if (!slot) return studentProfile(uid);
-  const buka = slot.style.display === "none";
-  slot.style.display = buka ? "" : "none";
-  if (rowWrap) rowWrap.hidden = !buka;
-  btn.classList.toggle("on", buka);
-  if (!buka || slot.dataset.loaded) return;
-  const daftar = state.siswaList?.length ? state.siswaList : await FB.listSiswa().catch(() => []);
-  const s = daftar.find(x => x.uid === uid);
+  else { rowWrap = btn.closest("tr")?.nextElementSibling; if (rowWrap && rowWrap.classList.contains("stat-row")) slot = rowWrap.querySelector(".stat-slot"); }
+  if (!slot) return;
+  const grup = btn.closest(".pn-btns");
+  const sama = slot.dataset.panel === jenis && slot.style.display !== "none";
+  grup.querySelectorAll("button").forEach(b => b.classList.toggle("on", !sama && b === btn));
+  if (sama){ slot.style.display = "none"; slot.dataset.panel = ""; if (rowWrap) rowWrap.hidden = true; return; }
+  slot.style.display = ""; slot.dataset.panel = jenis; if (rowWrap) rowWrap.hidden = false;
+  const key = uid + "|" + jenis, c = _panelCache[key];
+  if (c && Date.now() - c.t < 120000){ slot.innerHTML = c.html; return; }
+  slot.innerHTML = '<div style="color:var(--gray);">Memuat…</div>';
+  const s = (state.siswaList || []).find(x => x.uid === uid);
   if (!s){ slot.textContent = "Siswa tidak ditemukan"; return; }
-  const c = _statCache[uid];
-  let html;
-  if (c && Date.now() - c.t < 120000 && c.akses === JSON.stringify(s.aksesLevel || {})) html = c.html;
-  else {
-    try { html = await statsRingkas(s); _statCache[uid] = { t: Date.now(), html, akses: JSON.stringify(s.aksesLevel || {}) }; }
-    catch(e){ html = "Statistik gagal dimuat"; }
-  }
-  slot.innerHTML = html + `<div style="margin-top:4px;"><a href="#" style="color:var(--pink-light); font-size:11.5px;" onclick="studentProfile('${uid}'); return false;">Lihat profil lengkap (nilai ujian & hafalan) →</a></div>`;
-  slot.dataset.loaded = "1";
+  try {
+    const html = `<div class="pn">${await ({ profil: _panelProfil, progres: _panelProgres, nilai: _panelNilai })[jenis](s)}</div>`;
+    _panelCache[key] = { t: Date.now(), html };
+    if (slot.dataset.panel === jenis) slot.innerHTML = html;
+  } catch (e) { if (slot.dataset.panel === jenis) slot.innerHTML = `<div style="color:var(--red);">Gagal memuat: ${_e(e.message || e)}</div>`; }
 };
+
 window.baSemua = (cls, on) => document.querySelectorAll("." + cls).forEach(c => c.checked = on);
 window.baToggleJft = () => { const on = document.getElementById("ba-jft").checked; document.querySelectorAll(".ba-jl").forEach(c => { c.disabled = !on; }); };
 window.baSswMode = (m) => { document.getElementById("ba-ssw-box").style.display = m === "pilih" ? "block" : "none"; };
@@ -1798,11 +1965,11 @@ async function renderKelasTab(){
                         <td>${_chipSsw(s)}</td>
                         <td>${_chipJft(s)}</td>
                         <td>
-                          <button class="btn sm" onclick="toggleStat('${s.uid}', this)">📊 Profil</button>
+                          ${_btnDetail(s.uid)}
                           <button class="btn sm danger" onclick="keluarkanDariKelas('${s.uid}')">Keluarkan</button>
                         </td>
                       </tr>
-                      <tr class="stat-row" hidden><td colspan="6"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;">Memuat statistik…</div></td></tr>`).join("")}
+                      <tr class="stat-row" hidden><td colspan="6"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;"></div></td></tr>`).join("")}
                   </tbody>
                 </table>
               </div>
@@ -1832,8 +1999,8 @@ async function renderKelasTab(){
               <tbody>
                 ${unassigned.map(s => `
                   <tr><td>${s.nama||"-"}</td><td>${s.email}</td>
-                      <td><button class="btn sm" onclick="toggleStat('${s.uid}', this)">📊 Profil</button></td></tr>
-                  <tr class="stat-row" hidden><td colspan="3"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;">Memuat statistik…</div></td></tr>`).join("")}
+                      <td>${_btnDetail(s.uid)}</td></tr>
+                  <tr class="stat-row" hidden><td colspan="3"><div class="sg-stats stat-slot" data-uid="${s.uid}" style="display:none;"></div></td></tr>`).join("")}
               </tbody>
             </table>
           </div>
