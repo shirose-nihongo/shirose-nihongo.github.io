@@ -34,7 +34,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "ls-081",
+    "ls-082"
+   ],
+   "pecah": "特定 (spesifik) + 技能 (keterampilan)"
   },
   {
    "id": "ls-003",
@@ -52,7 +57,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "ls-083",
+    "ls-084"
+   ],
+   "pecah": "評価 (penilaian) + 試験 (ujian)"
   },
   {
    "id": "ls-004",
@@ -106,7 +116,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "ls-085",
+    "ls-084"
+   ],
+   "pecah": "学科 (jurusan) + 試験 (ujian)"
   },
   {
    "id": "ls-007",
@@ -178,7 +193,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "shirose"
+   "contoh_dari": "shirose",
+   "bagian": [
+    "ls-086",
+    "ls-087"
+   ],
+   "pecah": "直接 (langsung) + 雇用 (ketenagakerjaan)"
   },
   {
    "id": "ls-011",
@@ -376,7 +396,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "shirose"
+   "contoh_dari": "shirose",
+   "bagian": [
+    "ls-044",
+    "ls-088"
+   ],
+   "pecah": "検品 (inspeksi barang) + 装置 (perangkat)"
   },
   {
    "id": "ls-022",
@@ -394,7 +419,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "ls-089",
+    "ls-090"
+   ],
+   "pecah": "金属 (logam) + 探知機 (detektor)"
   },
   {
    "id": "ls-023",
@@ -466,7 +496,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "ls-091",
+    "ls-092"
+   ],
+   "pecah": "非常 (darurat) + 停止 (berhenti)"
   },
   {
    "id": "ls-027",
@@ -772,7 +807,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "shirose"
+   "contoh_dari": "shirose",
+   "bagian": [
+    "ls-093",
+    "ls-094"
+   ],
+   "pecah": "機械 (mesin) + 投入 (memasukkan, menebar)"
   },
   {
    "id": "ls-044",
@@ -970,7 +1010,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "ls-095",
+    "ls-096"
+   ],
+   "pecah": "安全 (keselamatan) + 衛生 (kebersihan)"
   },
   {
    "id": "ls-055",
@@ -1006,7 +1051,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
-   "contoh_dari": "shirose"
+   "contoh_dari": "shirose",
+   "bagian": [
+    "ls-097",
+    "ls-098"
+   ],
+   "pecah": "応急 (pertolongan darurat) + 措置 (tindakan)"
   },
   {
    "id": "ls-057",
@@ -1097,6 +1147,573 @@
    "status_validasi": "perlu review ahli",
    "sumber": "JLSA 試験基準・学科サンプル",
    "contoh_dari": "shirose"
+  },
+  {
+   "id": "ls-062",
+   "kata": "ロール機",
+   "kana": "ロールき",
+   "romaji": "rooruki",
+   "arti": "mesin setrika rol (ironer)",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-063",
+   "kata": "フォルダー",
+   "kana": "フォルダー",
+   "romaji": "fuorudaa",
+   "arti": "mesin pelipat",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-064",
+   "kata": "ホテルリネン",
+   "kana": "ホテルリネン",
+   "romaji": "hoterurinen",
+   "arti": "linen hotel",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-065",
+   "kata": "デュベ",
+   "kana": "デュベ",
+   "romaji": "deyube",
+   "arti": "selimut duvet",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-066",
+   "kata": "羽毛布団",
+   "kana": "うもうぶとん",
+   "romaji": "umoubuton",
+   "arti": "selimut bulu",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "ls-099",
+    "ls-100",
+    "ls-101"
+   ],
+   "pecah": "羽 (sayap, bulu) + 毛 (bulu) + 布団 (kasur)"
+  },
+  {
+   "id": "ls-067",
+   "kata": "カバー",
+   "kana": "カバー",
+   "romaji": "kabaa",
+   "arti": "sarung/penutup",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-068",
+   "kata": "タオル",
+   "kana": "タオル",
+   "romaji": "taoru",
+   "arti": "handuk",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1",
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-069",
+   "kata": "サービスウェア",
+   "kana": "サービスウェア",
+   "romaji": "saabisuuea",
+   "arti": "seragam layanan",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-070",
+   "kata": "ワーキングウェア",
+   "kana": "ワーキングウェア",
+   "romaji": "waakinguuea",
+   "arti": "pakaian kerja",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-071",
+   "kata": "病院寝具",
+   "kana": "びょういんしんぐ",
+   "romaji": "byouinshingu",
+   "arti": "perlengkapan tidur rumah sakit",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-072",
+   "kata": "パジャマ",
+   "kana": "パジャマ",
+   "romaji": "pajama",
+   "arti": "piyama",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-073",
+   "kata": "事由別分類",
+   "kana": "じゆうべつぶんるい",
+   "romaji": "jiyuubetsubunrui",
+   "arti": "klasifikasi menurut alasan",
+   "cat": "Pekerjaan Finishing & Perawatan Mesin",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "ls-074",
+   "kata": "ロール",
+   "kana": "ロール",
+   "romaji": "rooru",
+   "arti": "rol/gulungan",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "ls-075",
+   "kata": "ユニフォーム",
+   "kana": "ユニフォーム",
+   "romaji": "yunifuoomu",
+   "arti": "seragam",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "ls-076",
+   "kata": "ガウンフォルダー",
+   "kana": "がうんふぉるだー",
+   "romaji": "gaunfuorudaa",
+   "arti": "mesin pelipat gaun",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "ls-077",
+   "kata": "チェストロール",
+   "kana": "チェストロール",
+   "romaji": "chiesutorooru",
+   "arti": "rol dada (mesin setrika linen)",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "ls-078",
+   "kata": "カレンダーロール",
+   "kana": "カレンダーロール",
+   "romaji": "karendaarooru",
+   "arti": "rol kalender (pengepres/setrika linen)",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "ls-079",
+   "kata": "ワックス",
+   "kana": "ワックス",
+   "romaji": "wakkusu",
+   "arti": "wax (pelapis lantai)",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "ls-080",
+   "kata": "チョコ",
+   "kana": "チョコ",
+   "romaji": "choko",
+   "arti": "coklat",
+   "cat": "Umum",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "ls-081",
+   "kata": "特定",
+   "kana": "とくてい",
+   "romaji": "tokutei",
+   "arti": "spesifik; tertentu",
+   "cat": "Gambaran Bidang & Ujian",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-082",
+   "kata": "技能",
+   "kana": "ぎのう",
+   "romaji": "ginou",
+   "arti": "keterampilan",
+   "cat": "Gambaran Bidang & Ujian",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-083",
+   "kata": "評価",
+   "kana": "ひょうか",
+   "romaji": "hyouka",
+   "arti": "penilaian",
+   "cat": "Gambaran Bidang & Ujian",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-084",
+   "kata": "試験",
+   "kana": "しけん",
+   "romaji": "shiken",
+   "arti": "ujian",
+   "cat": "Gambaran Bidang & Ujian",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-085",
+   "kata": "学科",
+   "kana": "がっか",
+   "romaji": "gakka",
+   "arti": "jurusan",
+   "cat": "Gambaran Bidang & Ujian",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-086",
+   "kata": "直接",
+   "kana": "ちょくせつ",
+   "romaji": "chokusetsu",
+   "arti": "langsung",
+   "cat": "Gambaran Bidang & Ujian",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-087",
+   "kata": "雇用",
+   "kana": "こよう",
+   "romaji": "koyou",
+   "arti": "ketenagakerjaan",
+   "cat": "Gambaran Bidang & Ujian",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-088",
+   "kata": "装置",
+   "kana": "そうち",
+   "romaji": "souchi",
+   "arti": "perangkat",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-089",
+   "kata": "金属",
+   "kana": "きんぞく",
+   "romaji": "kinzoku",
+   "arti": "logam",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-090",
+   "kata": "探知機",
+   "kana": "たんちき",
+   "romaji": "tanchiki",
+   "arti": "detektor; Locator",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-091",
+   "kata": "非常",
+   "kana": "ひじょう",
+   "romaji": "hijou",
+   "arti": "darurat; luar biasa",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-092",
+   "kata": "停止",
+   "kana": "ていし",
+   "romaji": "teishi",
+   "arti": "berhenti",
+   "cat": "Mesin & Operasinya",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-093",
+   "kata": "機械",
+   "kana": "きかい",
+   "romaji": "kikai",
+   "arti": "mesin",
+   "cat": "Pekerjaan Finishing & Perawatan Mesin",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-094",
+   "kata": "投入",
+   "kana": "とうにゅう",
+   "romaji": "tounyuu",
+   "arti": "memasukkan, menebar",
+   "cat": "Pekerjaan Finishing & Perawatan Mesin",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-095",
+   "kata": "安全",
+   "kana": "あんぜん",
+   "romaji": "anzen",
+   "arti": "keselamatan; aman",
+   "cat": "Keselamatan & Kesehatan Kerja",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-096",
+   "kata": "衛生",
+   "kana": "えいせい",
+   "romaji": "eisei",
+   "arti": "kebersihan; sanitasi",
+   "cat": "Keselamatan & Kesehatan Kerja",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-097",
+   "kata": "応急",
+   "kana": "おうきゅう",
+   "romaji": "oukyuu",
+   "arti": "pertolongan darurat",
+   "cat": "Keselamatan & Kesehatan Kerja",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-098",
+   "kata": "措置",
+   "kana": "そち",
+   "romaji": "sochi",
+   "arti": "tindakan; langkah",
+   "cat": "Keselamatan & Kesehatan Kerja",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-099",
+   "kata": "羽",
+   "kana": "はね",
+   "romaji": "hane",
+   "arti": "sayap, bulu",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-100",
+   "kata": "毛",
+   "kana": "け",
+   "romaji": "ke",
+   "arti": "bulu",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "ls-101",
+   "kata": "布団",
+   "kana": "ふとん",
+   "romaji": "futon",
+   "arti": "kasur",
+   "cat": "Pengetahuan Linen",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
   }
  ]
 }

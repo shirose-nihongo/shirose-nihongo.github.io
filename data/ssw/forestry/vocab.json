@@ -34,7 +34,13 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "shirose"
+   "contoh_dari": "shirose",
+   "bagian": [
+    "fo-081",
+    "fo-082",
+    "fo-083"
+   ],
+   "pecah": "技能 (keterampilan) + 測定 (pengukuran) + 試験 (ujian)"
   },
   {
    "id": "fo-003",
@@ -52,7 +58,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "shirose"
+   "contoh_dari": "shirose",
+   "bagian": [
+    "fo-084",
+    "fo-085"
+   ],
+   "pecah": "特別 (khusus) + 教育 (pendidikan)"
   },
   {
    "id": "fo-004",
@@ -88,7 +99,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-070",
+    "fo-083"
+   ],
+   "pecah": "学科 (ujian teori) + 試験 (ujian)"
   },
   {
    "id": "fo-006",
@@ -106,7 +122,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-069",
+    "fo-083"
+   ],
+   "pecah": "実技 (ujian praktik) + 試験 (ujian)"
   },
   {
    "id": "fo-007",
@@ -142,7 +163,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-086",
+    "fo-087"
+   ],
+   "pecah": "合格 (lulus (ujian)) + 基準 (standar)"
   },
   {
    "id": "fo-009",
@@ -394,7 +420,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "shirose"
+   "contoh_dari": "shirose",
+   "bagian": [
+    "fo-088",
+    "fo-089"
+   ],
+   "pecah": "標準 (standar) + 時間 (waktu)"
   },
   {
    "id": "fo-023",
@@ -412,7 +443,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-090",
+    "fo-091"
+   ],
+   "pecah": "検定 (ujian sertifikasi) + 委員 (Anggota komite)"
   },
   {
    "id": "fo-024",
@@ -538,7 +574,13 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-092",
+    "fo-093",
+    "fo-094"
+   ],
+   "pecah": "地下 (basement) + 足 (kaki) + 袋 (kantong)"
   },
   {
    "id": "fo-031",
@@ -952,7 +994,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-095",
+    "fo-096"
+   ],
+   "pecah": "退避 (evakuasi) + 場所 (tempat)"
   },
   {
    "id": "fo-054",
@@ -1060,7 +1107,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-097",
+    "fo-098"
+   ],
+   "pecah": "労働 (tenaga kerja manual) + 災害 (bencana)"
   },
   {
    "id": "fo-060",
@@ -1078,7 +1130,12 @@
    "fungsi": "",
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
-   "contoh_dari": "materi"
+   "contoh_dari": "materi",
+   "bagian": [
+    "fo-099",
+    "fo-100"
+   ],
+   "pecah": "連絡 (komunikasi) + 責任者 (penanggung jawab (PIC))"
   },
   {
    "id": "fo-061",
@@ -1169,6 +1226,555 @@
    "status_validasi": "perlu review ahli",
    "sumber": "林業技能向上センター 実技試験問題2026・学科サンプル",
    "contoh_dari": "materi"
+  },
+  {
+   "id": "fo-066",
+   "kata": "林業技能測定試験",
+   "kana": "りんぎょうぎのうそくていしけん",
+   "romaji": "ringyouginousokuteishiken",
+   "arti": "ujian pengukuran keterampilan kehutanan",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "fo-001",
+    "fo-002"
+   ],
+   "pecah": "林業 (kehutanan) + 技能測定試験 (ujian pengukuran keterampilan)"
+  },
+  {
+   "id": "fo-067",
+   "kata": "伐木等特別教育",
+   "kana": "ばつぼくとうとくべつきょういく",
+   "romaji": "batsubokutoutokubetsukyouiku",
+   "arti": "pelatihan khusus penebangan pohon dll.",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-068",
+   "kata": "技能検定",
+   "kana": "ぎのうけんてい",
+   "romaji": "ginoukentei",
+   "arti": "uji kompetensi keterampilan",
+   "cat": "Umum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "fo-081",
+    "fo-090"
+   ],
+   "pecah": "技能 (keterampilan) + 検定 (ujian sertifikasi)"
+  },
+  {
+   "id": "fo-069",
+   "kata": "実技",
+   "kana": "じつぎ",
+   "romaji": "jitsugi",
+   "arti": "ujian praktik",
+   "cat": "Umum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-070",
+   "kata": "学科",
+   "kana": "がっか",
+   "romaji": "gakka",
+   "arti": "ujian teori",
+   "cat": "Umum",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-071",
+   "kata": "丸太輪切り",
+   "kana": "まるたわぎり",
+   "romaji": "marutawagiri",
+   "arti": "memotong gelondong melintang",
+   "cat": "Ujian Praktik: 3 Tugas Chainsaw",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-072",
+   "kata": "ガイドライン",
+   "kana": "ガイドライン",
+   "romaji": "gaidorain",
+   "arti": "pedoman",
+   "cat": "Umum",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-073",
+   "kata": "ロングハンドル",
+   "kana": "ロングハンドル",
+   "romaji": "ronguhandoru",
+   "arti": "gagang panjang",
+   "cat": "APD, Alat & Syarat Diskualifikasi",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-074",
+   "kata": "フロントハンドガード",
+   "kana": "フロントハンドガード",
+   "romaji": "furontohandogaado",
+   "arti": "pelindung tangan depan",
+   "cat": "Umum",
+   "bab": "bab3",
+   "src": [
+    "b3s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-075",
+   "kata": "人工数",
+   "kana": "にんくすう",
+   "romaji": "ninkusuu",
+   "arti": "jumlah tenaga kerja (orang-hari)",
+   "cat": "Ujian Tulis: Silvikultur (Poin dari Soal Contoh)",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-076",
+   "kata": "正三角形植え",
+   "kana": "せいさんかっけいうえ",
+   "romaji": "seisankakkeiue",
+   "arti": "penanaman pola segitiga sama sisi",
+   "cat": "Ujian Tulis: Silvikultur (Poin dari Soal Contoh)",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-077",
+   "kata": "ササ",
+   "kana": "ささ",
+   "romaji": "sasa",
+   "arti": "rumpun bambu pendek (sasa)",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-078",
+   "kata": "転動",
+   "kana": "てんどう",
+   "romaji": "tendou",
+   "arti": "menggelinding",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "fo-079",
+   "kata": "肩掛式刈払機",
+   "kana": "かたかけしきかりはらいき",
+   "romaji": "katakakeshikikariharaiki",
+   "arti": "mesin pemangkas bahu",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "fo-101",
+    "fo-102",
+    "fo-103",
+    "fo-058"
+   ],
+   "pecah": "肩 (bahu) + 掛 (menggantung (unsur kata)) + 式 (persamaan) + 刈払機 (sabit mesin (brush cutter))"
+  },
+  {
+   "id": "fo-080",
+   "kata": "センター",
+   "kana": "センター",
+   "romaji": "sentaa",
+   "arti": "tengah",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "fo-081",
+   "kata": "技能",
+   "kana": "ぎのう",
+   "romaji": "ginou",
+   "arti": "keterampilan",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-082",
+   "kata": "測定",
+   "kana": "そくてい",
+   "romaji": "sokutei",
+   "arti": "pengukuran",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-083",
+   "kata": "試験",
+   "kana": "しけん",
+   "romaji": "shiken",
+   "arti": "ujian",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-084",
+   "kata": "特別",
+   "kana": "とくべつ",
+   "romaji": "tokubetsu",
+   "arti": "khusus",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-085",
+   "kata": "教育",
+   "kana": "きょういく",
+   "romaji": "kyouiku",
+   "arti": "pendidikan",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-086",
+   "kata": "合格",
+   "kana": "ごうかく",
+   "romaji": "goukaku",
+   "arti": "lulus (ujian)",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-087",
+   "kata": "基準",
+   "kana": "きじゅん",
+   "romaji": "kijun",
+   "arti": "standar; dasar",
+   "cat": "Gambaran Ujian 林業技能測定試験",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-088",
+   "kata": "標準",
+   "kana": "ひょうじゅん",
+   "romaji": "hyoujun",
+   "arti": "standar",
+   "cat": "Ujian Praktik: 3 Tugas Chainsaw",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-089",
+   "kata": "時間",
+   "kana": "じかん",
+   "romaji": "jikan",
+   "arti": "waktu",
+   "cat": "Ujian Praktik: 3 Tugas Chainsaw",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-090",
+   "kata": "検定",
+   "kana": "けんてい",
+   "romaji": "kentei",
+   "arti": "ujian sertifikasi",
+   "cat": "Ujian Praktik: 3 Tugas Chainsaw",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-091",
+   "kata": "委員",
+   "kana": "いいん",
+   "romaji": "iin",
+   "arti": "Anggota komite; anggota dewan",
+   "cat": "Ujian Praktik: 3 Tugas Chainsaw",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-092",
+   "kata": "地下",
+   "kana": "ちか",
+   "romaji": "chika",
+   "arti": "basement; gudang di bawah tanah",
+   "cat": "APD, Alat & Syarat Diskualifikasi",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-093",
+   "kata": "足",
+   "kana": "あし",
+   "romaji": "ashi",
+   "arti": "kaki",
+   "cat": "APD, Alat & Syarat Diskualifikasi",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-094",
+   "kata": "袋",
+   "kana": "ふくろ",
+   "romaji": "fukuro",
+   "arti": "kantong",
+   "cat": "APD, Alat & Syarat Diskualifikasi",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-095",
+   "kata": "退避",
+   "kana": "たいひ",
+   "romaji": "taihi",
+   "arti": "evakuasi",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-096",
+   "kata": "場所",
+   "kana": "ばしょ",
+   "romaji": "basho",
+   "arti": "tempat",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-097",
+   "kata": "労働",
+   "kana": "ろうどう",
+   "romaji": "roudou",
+   "arti": "tenaga kerja manual; bekerja keras",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-098",
+   "kata": "災害",
+   "kana": "さいがい",
+   "romaji": "saigai",
+   "arti": "bencana",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-099",
+   "kata": "連絡",
+   "kana": "れんらく",
+   "romaji": "renraku",
+   "arti": "komunikasi; menghubungi",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-100",
+   "kata": "責任者",
+   "kana": "せきにんしゃ",
+   "romaji": "sekininsha",
+   "arti": "penanggung jawab (PIC); atasan",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-101",
+   "kata": "肩",
+   "kana": "かた",
+   "romaji": "kata",
+   "arti": "bahu",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-102",
+   "kata": "掛",
+   "kana": "かけ",
+   "romaji": "kake",
+   "arti": "menggantung (unsur kata)",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "fo-103",
+   "kata": "式",
+   "kana": "しき",
+   "romaji": "shiki",
+   "arti": "persamaan; rumus",
+   "cat": "Ujian Tulis: Penebangan, Chainsaw & K3",
+   "bab": "bab5",
+   "src": [
+    "b5s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
   }
  ]
 }

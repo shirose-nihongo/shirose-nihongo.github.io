@@ -641,7 +641,7 @@ let FC = null;
 const figLinks = (v) => (v.fig || []).map(f => `<button type="button" class="btn ghost sm" style="margin:2px 4px 2px 0" onclick="event.stopPropagation();SSW.zoomPage('${esc(f.src)}')">🖼 Gambar ${f.n} · no. ${f.p} — ${esc(f.t)}</button>`).join("");
 /* Fungsi komponen + sumber halaman (bila ada di data). Fungsi = materi buatan Shirose (ORIGINAL LEARNING CONTENT). */
 const fungsiInfo = (v) => (v.fungsi ? `<p class="sw-muted" style="margin:6px 0 0"><b>Fungsi:</b> ${esc(v.fungsi)}</p>` : "") + (v.hal_sumber ? `<p class="sw-muted" style="margin:2px 0 0;font-size:12px">Sumber gambar: JICA「かいて おぼえる イラスト集」hal. ${esc(v.hal_sumber.hal_cetak)}</p>` : "");
-const hafItems = (vocab) => vocab.map(v => ({ tipe: "ssw", idx: vnum(v) - 1, no: vnum(v), front: v.kata, reading: v.kana || "", back: v.arti || "", vid: v.id }));
+const hafItems = (vocab) => vocab.map(v => ({ tipe: "ssw", idx: vnum(v) - 1, no: vnum(v), front: v.kata, reading: v.kana || "", back: (v.arti || "") + (v.pecah ? "\n＝ " + v.pecah : ""), vid: v.id }));
 /** Flashcard/hafalan = mesin JLPT (index.html: sswHafalStart). Rute lama ssw-kartu hanya meluncurkan mesin itu. */
 async function renderKartu([slug, scope = "all", mode = "semua"]) {
   const g = await gate(slug); if (g.err) return g.err;
@@ -1047,6 +1047,7 @@ const SSW = window.SSW = {
     sh.innerHTML = `<div class="sw-vs-bg" onclick="SSW.vclose()"></div><div class="sw-vs-in" role="dialog" aria-label="Detail kosakata">
       <div class="sw-vs-h"><div class="jp k">${k}</div><button type="button" class="sw-vs-x" onclick="SSW.vclose()" aria-label="Tutup">✕</button></div>
       <div class="sw-vs-m"><b>${esc(v.arti)}</b></div>
+      ${(v.bagian || []).length ? `<p class="sw-muted">Dipecah per kata:</p><div class="sw-vchips">${v.bagian.map(i => pack.vocab.find(x => x.id === i)).filter(Boolean).map(p => `<button type="button" class="sw-vc" onclick="SSW.vsheet('${slug}','${p.id}')"><span class="jp">${esc(p.kata)}</span><small>${esc(p.arti)}</small></button>`).join("")}</div>` : ""}
       <div class="sw-vs-r"><span>Bacaan: <b class="jp">${esc(v.kana || "")}</b></span>${v.romaji ? `<span>Romaji: <b>${esc(v.romaji)}</b></span>` : ""}<span>Status: <b>${stl}</b></span></div>
       ${v.contoh ? `<div class="sw-vs-ex"><p class="jp">${rich(v.contoh)}</p><p class="sw-muted">${esc(v.arti_contoh || "")}</p></div>` : ""}
       ${fungsiInfo(v)}${v.fig ? `<p class="sw-muted">Lihat pada gambar (cari bagian bernomor):</p><div>${figLinks(v)}</div>` : ""}${v.cat ? `<p class="sw-muted">Kategori: ${esc(v.cat)}</p>` : ""}${srcs ? `<p class="sw-muted">Muncul di: ${srcs}</p>` : ""}

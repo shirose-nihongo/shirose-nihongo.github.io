@@ -2459,7 +2459,12 @@
     "b1s9"
    ],
    "sumber": "JICA",
-   "catatan": "Di Jepang mobil diperiksa secara berkala dan komponen yang akan memburuk diganti sebelum rusak."
+   "catatan": "Di Jepang mobil diperiksa secara berkala dan komponen yang akan memburuk diganti sebelum rusak.",
+   "bagian": [
+    "am-695",
+    "am-544"
+   ],
+   "pecah": "定期 (periode tetap) + 点検 (inspeksi/pemeriksaan)"
   },
   {
    "id": "am-155",
@@ -2473,7 +2478,12 @@
     "b1s9"
    ],
    "sumber": "JICA",
-   "alias": "この考えかたを予防保全といいます。"
+   "alias": "この考えかたを予防保全といいます。",
+   "bagian": [
+    "am-696",
+    "am-697"
+   ],
+   "pecah": "予防 (pencegahan) + 保全 (Pengertian Pemeliharaan)"
   },
   {
    "id": "am-156",
@@ -3749,7 +3759,12 @@
     "b2s5"
    ],
    "sumber": "JICA",
-   "catatan": "Las busur dengan gas pelindung seperti CO2."
+   "catatan": "Las busur dengan gas pelindung seperti CO2.",
+   "bagian": [
+    "am-698",
+    "am-699"
+   ],
+   "pecah": "半自動溶接 (las semi-otomatis (SW)) + 機 (mesin)"
   },
   {
    "id": "am-249",
@@ -5321,7 +5336,13 @@
    "src": [
     "b4s3"
    ],
-   "sumber": "JICA"
+   "sumber": "JICA",
+   "bagian": [
+    "am-700",
+    "am-701",
+    "am-702"
+   ],
+   "pecah": "二 (dua) + 酸化 (oksidasi) + 炭素 (karbon)"
   },
   {
    "id": "am-341",
@@ -5334,7 +5355,13 @@
    "src": [
     "b4s3"
    ],
-   "sumber": "JICA"
+   "sumber": "JICA",
+   "bagian": [
+    "am-703",
+    "am-701",
+    "am-702"
+   ],
+   "pecah": "一 (satu) + 酸化 (oksidasi) + 炭素 (karbon)"
   },
   {
    "id": "am-342",
@@ -5360,7 +5387,12 @@
    "src": [
     "b4s3"
    ],
-   "sumber": "JICA"
+   "sumber": "JICA",
+   "bagian": [
+    "am-338",
+    "am-704"
+   ],
+   "pecah": "窒素 (nitrogen (N)) + 酸化物 (oksida)"
   },
   {
    "id": "am-344",
@@ -7597,7 +7629,13 @@
     "hal_pdf": 22
    },
    "status_validasi": "gambar: nomor bagian cocok dengan kunci jawaban PDF JICA; fungsi: ORIGINAL LEARNING CONTENT, perlu review",
-   "fungsi": "Rangkaian yang menyalurkan tenaga dari mesin ke roda."
+   "fungsi": "Rangkaian yang menyalurkan tenaga dari mesin ke roda.",
+   "bagian": [
+    "am-705",
+    "am-706",
+    "am-707"
+   ],
+   "pecah": "動力 (kekuatan) + 伝達 (penyampaian) + 装置 (perangkat)"
   },
   {
    "id": "am-449",
@@ -7625,7 +7663,12 @@
     "hal_pdf": 22
    },
    "status_validasi": "gambar: nomor bagian cocok dengan kunci jawaban PDF JICA; fungsi: ORIGINAL LEARNING CONTENT, perlu review",
-   "fungsi": "Sistem lampu kendaraan untuk penerangan, isyarat, dan keselamatan."
+   "fungsi": "Sistem lampu kendaraan untuk penerangan, isyarat, dan keselamatan.",
+   "bagian": [
+    "am-708",
+    "am-707"
+   ],
+   "pecah": "灯火 (lampu, cahaya) + 装置 (perangkat)"
   },
   {
    "id": "am-450",
@@ -8198,6 +8241,3918 @@
    },
    "status_validasi": "gambar: nomor bagian cocok dengan kunci jawaban PDF JICA; fungsi: ORIGINAL LEARNING CONTENT, perlu review",
    "fungsi": "Rongga di blok dan kepala silinder tempat air pendingin mengalir untuk menyerap panas mesin."
+  },
+  {
+   "id": "am-470",
+   "kata": "ブレーキ",
+   "kana": "ブレーキ",
+   "romaji": "bureeki",
+   "arti": "rem",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s4",
+    "b1s5",
+    "b1s6",
+    "b1s7",
+    "b2s5",
+    "b3s3",
+    "b3s5",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-471",
+   "kata": "ヘッドライト",
+   "kana": "ヘッドライト",
+   "romaji": "heddoraito",
+   "arti": "lampu depan",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2",
+    "b2s5",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-472",
+   "kata": "ファン",
+   "kana": "ファン",
+   "romaji": "fuan",
+   "arti": "kipas",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-473",
+   "kata": "センサー",
+   "kana": "センサー",
+   "romaji": "sensaa",
+   "arti": "sensor",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-474",
+   "kata": "エンジンルーム",
+   "kana": "エンジンルーム",
+   "romaji": "enjinruumu",
+   "arti": "ruang mesin",
+   "cat": "Jenis kendaraan",
+   "bab": "bab1",
+   "src": [
+    "b1s8",
+    "b3s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-475",
+   "kata": "ラチェット",
+   "kana": "ラチェット",
+   "romaji": "rachietto",
+   "arti": "ratchet (kunci pas bergerigi)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1",
+    "b3s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-476",
+   "kata": "ディーゼル",
+   "kana": "ディーゼル",
+   "romaji": "deiizeru",
+   "arti": "diesel",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3",
+    "b2s5",
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-477",
+   "kata": "オイル",
+   "kana": "オイル",
+   "romaji": "oiru",
+   "arti": "oli",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s5",
+    "b1s7",
+    "b3s2",
+    "b3s3",
+    "b3s4",
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-478",
+   "kata": "ボルト",
+   "kana": "ボルト",
+   "romaji": "boruto",
+   "arti": "baut",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b2s1",
+    "b3s3",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-479",
+   "kata": "エキゾーストマニホールド",
+   "kana": "エキゾーストマニホールド",
+   "romaji": "ekizoosutomanihoorudo",
+   "arti": "manifold buang",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-480",
+   "kata": "コンバータ",
+   "kana": "コンバータ",
+   "romaji": "konbaata",
+   "arti": "konverter (katalitik)",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3",
+    "b4s5",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-481",
+   "kata": "ドライバー",
+   "kana": "ドライバー",
+   "romaji": "doraibaa",
+   "arti": "obeng",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-482",
+   "kata": "クラクション",
+   "kana": "クラクション",
+   "romaji": "kurakushon",
+   "arti": "klakson",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-483",
+   "kata": "マニュアル",
+   "kana": "マニュアル",
+   "romaji": "manyuaru",
+   "arti": "manual/buku petunjuk",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-484",
+   "kata": "レバー",
+   "kana": "レバー",
+   "romaji": "rebaa",
+   "arti": "tuas",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-485",
+   "kata": "バックル",
+   "kana": "バックル",
+   "romaji": "bakkuru",
+   "arti": "gesper sabuk pengaman",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-486",
+   "kata": "ナンバー",
+   "kana": "ナンバー",
+   "romaji": "nanbaa",
+   "arti": "nomor (pelat nomor)",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2",
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-487",
+   "kata": "パワーステアリング",
+   "kana": "パワーステアリング",
+   "romaji": "pawaasutearingu",
+   "arti": "power steering",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-488",
+   "kata": "ラジエーターファン",
+   "kana": "ラジエーターファン",
+   "romaji": "rajieetaafuan",
+   "arti": "kipas radiator",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-489",
+   "kata": "ターミナル",
+   "kana": "ターミナル",
+   "romaji": "taaminaru",
+   "arti": "terminal (aki)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-490",
+   "kata": "ディストリビュータ",
+   "kana": "ディストリビュータ",
+   "romaji": "deisutoribyuuta",
+   "arti": "distributor (pembagi api)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-491",
+   "kata": "キャップ",
+   "kana": "キャップ",
+   "romaji": "kyappu",
+   "arti": "tutup",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-492",
+   "kata": "ドレーンプラグ",
+   "kana": "ドレーンプラグ",
+   "romaji": "doreenpuragu",
+   "arti": "baut pembuangan oli",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-493",
+   "kata": "トランクルーム",
+   "kana": "トランクルーム",
+   "romaji": "torankuruumu",
+   "arti": "bagasi",
+   "cat": "Jenis kendaraan",
+   "bab": "bab1",
+   "src": [
+    "b1s8"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-494",
+   "kata": "ボックスカー",
+   "kana": "ボックスカー",
+   "romaji": "bokkusukaa",
+   "arti": "mobil boks",
+   "cat": "Jenis kendaraan",
+   "bab": "bab1",
+   "src": [
+    "b1s8"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-495",
+   "kata": "レンチ",
+   "kana": "レンチ",
+   "romaji": "renchi",
+   "arti": "kunci pas",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-496",
+   "kata": "ヒンジハンドル",
+   "kana": "ヒンジハンドル",
+   "romaji": "hinjihandoru",
+   "arti": "gagang engsel",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-497",
+   "kata": "ソケット",
+   "kana": "ソケット",
+   "romaji": "soketto",
+   "arti": "kunci sok",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-498",
+   "kata": "スライドハンドル",
+   "kana": "スライドハンドル",
+   "romaji": "suraidohandoru",
+   "arti": "gagang geser",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-499",
+   "kata": "モクハン",
+   "kana": "もくはん",
+   "romaji": "mokuhan",
+   "arti": "palu kayu",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-500",
+   "kata": "ゴムハン",
+   "kana": "ごむはん",
+   "romaji": "gomuhan",
+   "arti": "palu karet",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-501",
+   "kata": "ドウハン",
+   "kana": "どうはん",
+   "romaji": "douhan",
+   "arti": "palu tembaga",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-502",
+   "kata": "プラハン",
+   "kana": "ぷらはん",
+   "romaji": "purahan",
+   "arti": "palu plastik",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-503",
+   "kata": "プレス",
+   "kana": "プレス",
+   "romaji": "puresu",
+   "arti": "pres",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-504",
+   "kata": "ベアリング",
+   "kana": "ベアリング",
+   "romaji": "bearingu",
+   "arti": "bantalan (bearing)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-505",
+   "kata": "ブッシュ",
+   "kana": "ブッシュ",
+   "romaji": "busshu",
+   "arti": "bushing (selongsong)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-506",
+   "kata": "シャフト",
+   "kana": "シャフト",
+   "romaji": "shafuto",
+   "arti": "poros",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b2s2",
+    "b4s1",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-507",
+   "kata": "テスタ",
+   "kana": "テスタ",
+   "romaji": "tesuta",
+   "arti": "tester (alat uji listrik)",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3",
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-508",
+   "kata": "ガレージジャッキ",
+   "kana": "ガレージジャッキ",
+   "romaji": "gareejijakki",
+   "arti": "dongkrak garasi",
+   "cat": "Alat pelumasan dan pengangkat",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-509",
+   "kata": "サイドスリップ",
+   "kana": "サイドスリップ",
+   "romaji": "saidosurippu",
+   "arti": "side slip (selip samping)",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-510",
+   "kata": "スピードメーター",
+   "kana": "スピードメーター",
+   "romaji": "supiidomeetaa",
+   "arti": "spidometer",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-511",
+   "kata": "ヘッドランプ",
+   "kana": "ヘッドランプ",
+   "romaji": "heddoranpu",
+   "arti": "lampu depan (headlamp)",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-512",
+   "kata": "アンバランス",
+   "kana": "アンバランス",
+   "romaji": "anbaransu",
+   "arti": "tidak seimbang",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-513",
+   "kata": "ボディ",
+   "kana": "ボディ",
+   "romaji": "bodei",
+   "arti": "bodi",
+   "cat": "Kata kerja: keselamatan & kebersihan",
+   "bab": "bab3",
+   "src": [
+    "b3s1",
+    "b4s3",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-514",
+   "kata": "フロアマット",
+   "kana": "フロアマット",
+   "romaji": "furoamatto",
+   "arti": "karpet lantai",
+   "cat": "Kata kerja: keselamatan & kebersihan",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-515",
+   "kata": "ベルト",
+   "kana": "ベルト",
+   "romaji": "beruto",
+   "arti": "sabuk/belt",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s5",
+    "b3s2",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-516",
+   "kata": "イグニッション",
+   "kana": "イグニッション",
+   "romaji": "igunisshon",
+   "arti": "pengapian (ignition)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b3s2",
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-517",
+   "kata": "ローテーション",
+   "kana": "ローテーション",
+   "romaji": "rooteeshon",
+   "arti": "rotasi (ban)",
+   "cat": "Kata kerja: kaki-kaki",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-518",
+   "kata": "ドラム",
+   "kana": "ドラム",
+   "romaji": "doramu",
+   "arti": "tromol/drum",
+   "cat": "Kaki-kaki",
+   "bab": "bab1",
+   "src": [
+    "b1s6",
+    "b3s3",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-519",
+   "kata": "ドラムブレーキ",
+   "kana": "ドラムブレーキ",
+   "romaji": "doramubureeki",
+   "arti": "rem tromol",
+   "cat": "Kata kerja: kaki-kaki",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-520",
+   "kata": "ナット",
+   "kana": "ナット",
+   "romaji": "natto",
+   "arti": "mur",
+   "cat": "Kaki-kaki",
+   "bab": "bab1",
+   "src": [
+    "b1s6",
+    "b2s1",
+    "b3s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-521",
+   "kata": "ドレーン",
+   "kana": "ドレーン",
+   "romaji": "doreen",
+   "arti": "pembuangan (drain)",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b3s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-522",
+   "kata": "ブレーキシュー",
+   "kana": "ブレーキシュー",
+   "romaji": "bureekishuu",
+   "arti": "kampas rem tromol",
+   "cat": "Kata kerja: kaki-kaki",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-523",
+   "kata": "コネクター",
+   "kana": "コネクター",
+   "romaji": "konekutaa",
+   "arti": "konektor",
+   "cat": "Kata kerja: bagian bawah",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-524",
+   "kata": "アッパーホース",
+   "kana": "アッパーホース",
+   "romaji": "appaahoosu",
+   "arti": "selang radiator atas",
+   "cat": "Kata kerja lain",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-525",
+   "kata": "ジーゼルエンジン",
+   "kana": "ジーゼルエンジン",
+   "romaji": "jiizeruenjin",
+   "arti": "mesin diesel",
+   "cat": "Sekitar mesin",
+   "bab": "bab4",
+   "src": [
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-526",
+   "kata": "タンク",
+   "kana": "タンク",
+   "romaji": "tanku",
+   "arti": "tangki",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b1s8",
+    "b4s2",
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-527",
+   "kata": "ポンプ",
+   "kana": "ポンプ",
+   "romaji": "ponpu",
+   "arti": "pompa",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1",
+    "b4s2",
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-528",
+   "kata": "フィルター",
+   "kana": "フィルター",
+   "romaji": "fuirutaa",
+   "arti": "filter/saringan",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b3s2",
+    "b4s2",
+    "b4s3",
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-529",
+   "kata": "エアクリーナー",
+   "kana": "エアクリーナー",
+   "romaji": "eakuriinaa",
+   "arti": "saringan udara",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-530",
+   "kata": "スロットル",
+   "kana": "スロットル",
+   "romaji": "surottoru",
+   "arti": "katup gas (throttle)",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-531",
+   "kata": "インテークマニホールド",
+   "kana": "インテークマニホールド",
+   "romaji": "inteekumanihoorudo",
+   "arti": "manifold isap",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-532",
+   "kata": "コイル",
+   "kana": "コイル",
+   "romaji": "koiru",
+   "arti": "koil",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b1s7",
+    "b4s3",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-533",
+   "kata": "オイルエレメント",
+   "kana": "オイルエレメント",
+   "romaji": "oirueremento",
+   "arti": "elemen filter oli",
+   "cat": "Pelumasan dan pendinginan",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-534",
+   "kata": "オートマチックトランスミッション",
+   "kana": "オートマチックトランスミッション",
+   "romaji": "ootomachikkutoransumisshon",
+   "arti": "transmisi otomatis",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-535",
+   "kata": "ストラット",
+   "kana": "ストラット",
+   "romaji": "sutoratto",
+   "arti": "strut (peredam suspensi)",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-536",
+   "kata": "ステアリング",
+   "kana": "ステアリング",
+   "romaji": "sutearingu",
+   "arti": "kemudi",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4",
+    "b1s5",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-537",
+   "kata": "キャビン",
+   "kana": "キャビン",
+   "romaji": "kyabin",
+   "arti": "kabin",
+   "cat": "Kelistrikan, rangka, dan bodi",
+   "bab": "bab4",
+   "src": [
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-538",
+   "kata": "フレーム",
+   "kana": "フレーム",
+   "romaji": "fureemu",
+   "arti": "rangka",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-539",
+   "kata": "工場",
+   "kana": "こうじょう",
+   "romaji": "koujou",
+   "arti": "pabrik; tanaman; bengkel",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s2",
+    "b1s3",
+    "b1s4",
+    "b1s5",
+    "b1s6",
+    "b1s7",
+    "b1s8",
+    "b1s9",
+    "b2s1",
+    "b2s2",
+    "b2s3",
+    "b2s4",
+    "b2s5",
+    "b3s1",
+    "b3s2",
+    "b3s3",
+    "b3s4",
+    "b3s5",
+    "b4s1",
+    "b4s2",
+    "b4s3",
+    "b4s4",
+    "b4s5",
+    "b4s6",
+    "b4s7",
+    "b4s8"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-540",
+   "kata": "名前",
+   "kana": "なまえ",
+   "romaji": "namae",
+   "arti": "nama",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s2",
+    "b1s3",
+    "b1s4",
+    "b1s5",
+    "b1s6",
+    "b1s7",
+    "b1s8",
+    "b1s9",
+    "b2s1",
+    "b2s2",
+    "b2s3",
+    "b2s4",
+    "b2s5",
+    "b3s1",
+    "b3s2",
+    "b3s3",
+    "b3s4",
+    "b3s5",
+    "b4s1",
+    "b4s2",
+    "b4s3",
+    "b4s4",
+    "b4s5",
+    "b4s6",
+    "b4s7",
+    "b4s8"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-541",
+   "kata": "日本語で",
+   "kana": "にほんごで",
+   "romaji": "nihongode",
+   "arti": "dalam bahasa Jepang",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s2",
+    "b1s3",
+    "b1s4",
+    "b1s5",
+    "b1s6",
+    "b1s7",
+    "b1s8",
+    "b1s9",
+    "b2s1",
+    "b2s2",
+    "b2s3",
+    "b2s4",
+    "b2s5",
+    "b3s1",
+    "b3s2",
+    "b3s3",
+    "b3s4",
+    "b3s5",
+    "b4s1",
+    "b4s2",
+    "b4s3",
+    "b4s4",
+    "b4s5",
+    "b4s6",
+    "b4s7",
+    "b4s8"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-542",
+   "kata": "工具",
+   "kana": "こうぐ",
+   "romaji": "kougu",
+   "arti": "perkakas; alat kerja",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-543",
+   "kata": "道具",
+   "kana": "どうぐ",
+   "romaji": "dougu",
+   "arti": "alat",
+   "cat": "Alat ukur",
+   "bab": "bab2",
+   "src": [
+    "b2s2",
+    "b2s3",
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-544",
+   "kata": "点検",
+   "kana": "てんけん",
+   "romaji": "tenken",
+   "arti": "inspeksi/pemeriksaan",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3",
+    "b3s3",
+    "b3s4"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-545",
+   "kata": "使う",
+   "kana": "つかう",
+   "romaji": "tsukau",
+   "arti": "memakai",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-546",
+   "kata": "給油",
+   "kana": "きゅうゆ",
+   "romaji": "kyuuyu",
+   "arti": "pengisian bahan bakar",
+   "cat": "Alat pelumasan dan pengangkat",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-547",
+   "kata": "持ち",
+   "kana": "もち",
+   "romaji": "mochi",
+   "arti": "tahan; mengenakan biaya; tetap memiliki",
+   "cat": "Alat pelumasan dan pengangkat",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-548",
+   "kata": "検査用",
+   "kana": "けんさよう",
+   "romaji": "kensayou",
+   "arti": "untuk inspeksi",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-549",
+   "kata": "機械",
+   "kana": "きかい",
+   "romaji": "kikai",
+   "arti": "mesin",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-550",
+   "kata": "安全衛生",
+   "kana": "あんぜんえいせい",
+   "romaji": "anzeneisei",
+   "arti": "keselamatan & kesehatan kerja",
+   "cat": "Kata kerja: keselamatan & kebersihan",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose",
+   "bagian": [
+    "am-709",
+    "am-710"
+   ],
+   "pecah": "安全 (keselamatan) + 衛生 (kebersihan)"
+  },
+  {
+   "id": "am-551",
+   "kata": "清掃",
+   "kana": "せいそう",
+   "romaji": "seisou",
+   "arti": "membersihkan",
+   "cat": "Kata kerja: keselamatan & kebersihan",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · kamus Shirose"
+  },
+  {
+   "id": "am-552",
+   "kata": "車種",
+   "kana": "しゃしゅ",
+   "romaji": "shashu",
+   "arti": "tipe kendaraan",
+   "cat": "Jenis kendaraan",
+   "bab": "bab1",
+   "src": [
+    "b1s8"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-553",
+   "kata": "動詞",
+   "kana": "どうし",
+   "romaji": "doushi",
+   "arti": "kata kerja",
+   "cat": "Kata kerja: keselamatan & kebersihan",
+   "bab": "bab3",
+   "src": [
+    "b3s1",
+    "b3s2",
+    "b3s3",
+    "b3s4",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-554",
+   "kata": "燃料装置",
+   "kana": "ねんりょうそうち",
+   "romaji": "nenryousouchi",
+   "arti": "sistem bahan bakar",
+   "cat": "Sistem bahan bakar",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "am-711",
+    "am-707"
+   ],
+   "pecah": "燃料 (bahan bakar) + 装置 (perangkat)"
+  },
+  {
+   "id": "am-555",
+   "kata": "吸気装置",
+   "kana": "きゅうきそうち",
+   "romaji": "kyuukisouchi",
+   "arti": "sistem isap udara",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "am-712",
+    "am-707"
+   ],
+   "pecah": "吸気 (udara masuk) + 装置 (perangkat)"
+  },
+  {
+   "id": "am-556",
+   "kata": "排気装置",
+   "kana": "はいきそうち",
+   "romaji": "haikisouchi",
+   "arti": "sistem pembuangan",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "am-713",
+    "am-707"
+   ],
+   "pecah": "排気 (gas buang) + 装置 (perangkat)"
+  },
+  {
+   "id": "am-557",
+   "kata": "潤滑装置",
+   "kana": "じゅんかつそうち",
+   "romaji": "junkatsusouchi",
+   "arti": "sistem pelumasan",
+   "cat": "Pelumasan dan pendinginan",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "am-714",
+    "am-707"
+   ],
+   "pecah": "潤滑 (pelumasan) + 装置 (perangkat)"
+  },
+  {
+   "id": "am-558",
+   "kata": "冷却装置",
+   "kana": "れいきゃくそうち",
+   "romaji": "reikyakusouchi",
+   "arti": "sistem pendingin",
+   "cat": "Pelumasan dan pendinginan",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "am-715",
+    "am-707"
+   ],
+   "pecah": "冷却 (pendinginan) + 装置 (perangkat)"
+  },
+  {
+   "id": "am-559",
+   "kata": "電気装置",
+   "kana": "でんきそうち",
+   "romaji": "denkisouchi",
+   "arti": "sistem kelistrikan",
+   "cat": "Kelistrikan, rangka, dan bodi",
+   "bab": "bab4",
+   "src": [
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose",
+   "bagian": [
+    "am-716",
+    "am-707"
+   ],
+   "pecah": "電気 (listrik) + 装置 (perangkat)"
+  },
+  {
+   "id": "am-560",
+   "kata": "応用編",
+   "kana": "おうようへん",
+   "romaji": "ouyouhen",
+   "arti": "bagian penerapan",
+   "cat": "Aplikasi dan pembuangan limbah",
+   "bab": "bab4",
+   "src": [
+    "b4s8"
+   ],
+   "audit": true,
+   "sumber": "audit materi Shirose"
+  },
+  {
+   "id": "am-561",
+   "kata": "方",
+   "kana": "かた",
+   "romaji": "kata",
+   "arti": "cara; arah; pihak",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s2",
+    "b1s3",
+    "b1s4",
+    "b1s5",
+    "b1s6",
+    "b1s7",
+    "b1s8",
+    "b1s9",
+    "b2s1",
+    "b2s2",
+    "b2s3",
+    "b2s4",
+    "b2s5",
+    "b3s1",
+    "b3s2",
+    "b3s3",
+    "b3s4",
+    "b3s5",
+    "b4s1",
+    "b4s2",
+    "b4s3",
+    "b4s4",
+    "b4s5",
+    "b4s6",
+    "b4s7",
+    "b4s8"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-562",
+   "kata": "車",
+   "kana": "くるま",
+   "romaji": "kuruma",
+   "arti": "mobil; kendaraan; roda",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s2",
+    "b1s3",
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-563",
+   "kata": "中",
+   "kana": "なか",
+   "romaji": "naka",
+   "arti": "tengah, dalam",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-564",
+   "kata": "外",
+   "kana": "そと",
+   "romaji": "soto",
+   "arti": "luar",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2",
+    "b1s3",
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-565",
+   "kata": "足",
+   "kana": "あし",
+   "romaji": "ashi",
+   "arti": "kaki",
+   "cat": "Kata kerja: kaki-kaki",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-566",
+   "kata": "下",
+   "kana": "した",
+   "romaji": "shita",
+   "arti": "bawah",
+   "cat": "Kata kerja: bagian bawah",
+   "bab": "bab3",
+   "src": [
+    "b3s4"
+   ],
+   "audit": true,
+   "sumber": "kata materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-567",
+   "kata": "バック",
+   "kana": "バック",
+   "romaji": "bakku",
+   "arti": "punggung; cadangan",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s4",
+    "b1s5",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-568",
+   "kata": "ミラー",
+   "kana": "ミラー",
+   "romaji": "miraa",
+   "arti": "cermin",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s3",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-569",
+   "kata": "ルーム",
+   "kana": "るーむ",
+   "romaji": "ruumu",
+   "arti": "ruang",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-570",
+   "kata": "ナビゲーションシステム",
+   "kana": "なびげーしょんしすてむ",
+   "romaji": "nabigeeshonshisutemu",
+   "arti": "sistem navigasi",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-571",
+   "kata": "ライティング",
+   "kana": "らいてぃんぐ",
+   "romaji": "raiteingu",
+   "arti": "pencahayaan",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-572",
+   "kata": "スイッチ",
+   "kana": "スイッチ",
+   "romaji": "suitchi",
+   "arti": "saklar",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-573",
+   "kata": "パッシング",
+   "kana": "ぱっしんぐ",
+   "romaji": "passhingu",
+   "arti": "menyalakan lampu isyarat (passing)",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-574",
+   "kata": "ライト",
+   "kana": "ライト",
+   "romaji": "raito",
+   "arti": "lampu",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-575",
+   "kata": "ウォッシャー",
+   "kana": "うぉっしゃー",
+   "romaji": "uosshaa",
+   "arti": "penyemprot air kaca",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-576",
+   "kata": "グローブ",
+   "kana": "ぐろーぶ",
+   "romaji": "guroobu",
+   "arti": "sarung tangan",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-577",
+   "kata": "ボックス",
+   "kana": "ボックス",
+   "romaji": "bokkusu",
+   "arti": "kotak",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-578",
+   "kata": "センター",
+   "kana": "センター",
+   "romaji": "sentaa",
+   "arti": "tengah",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-579",
+   "kata": "パネル",
+   "kana": "パネル",
+   "romaji": "paneru",
+   "arti": "panel",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s4",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-580",
+   "kata": "ハザード",
+   "kana": "はざーど",
+   "romaji": "hazaado",
+   "arti": "hazard/bahaya",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-581",
+   "kata": "シフト",
+   "kana": "シフト",
+   "romaji": "shifuto",
+   "arti": "shift",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-582",
+   "kata": "アクセル",
+   "kana": "あくせる",
+   "romaji": "akuseru",
+   "arti": "pedal gas",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-583",
+   "kata": "ペダル",
+   "kana": "ぺだる",
+   "romaji": "pedaru",
+   "arti": "pedal",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-584",
+   "kata": "フット",
+   "kana": "ふっと",
+   "romaji": "futto",
+   "arti": "kaki (foot)",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-585",
+   "kata": "パーキング",
+   "kana": "ぱーきんぐ",
+   "romaji": "paakingu",
+   "arti": "parkir",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-586",
+   "kata": "バイザー",
+   "kana": "ばいざー",
+   "romaji": "baizaa",
+   "arti": "pelindung sinar (visor)",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-587",
+   "kata": "コンソール",
+   "kana": "こんそーる",
+   "romaji": "konsooru",
+   "arti": "konsol",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-588",
+   "kata": "ヘッド",
+   "kana": "ヘッド",
+   "romaji": "heddo",
+   "arti": "kepala (alat)",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-589",
+   "kata": "レスト",
+   "kana": "れすと",
+   "romaji": "resuto",
+   "arti": "sandaran",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-590",
+   "kata": "チェック",
+   "kana": "ちぇっく",
+   "romaji": "chiekku",
+   "arti": "pemeriksaan; mengecek",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-591",
+   "kata": "ランプ",
+   "kana": "ランプ",
+   "romaji": "ranpu",
+   "arti": "lampu",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s2",
+    "b1s4",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-592",
+   "kata": "ウォーニング",
+   "kana": "うぉーにんぐ",
+   "romaji": "uooningu",
+   "arti": "peringatan",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-593",
+   "kata": "オイルプレッシャー",
+   "kana": "おいるぷれっしゃー",
+   "romaji": "oirupuresshaa",
+   "arti": "tekanan oli",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-594",
+   "kata": "ページ",
+   "kana": "ぺーじ",
+   "romaji": "peeji",
+   "arti": "halaman",
+   "cat": "Di dalam mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s1",
+    "b1s2",
+    "b1s3",
+    "b1s4",
+    "b1s5",
+    "b1s6",
+    "b1s7",
+    "b1s8",
+    "b1s9",
+    "b2s1",
+    "b2s2",
+    "b2s3",
+    "b2s4",
+    "b2s5",
+    "b3s1",
+    "b3s2",
+    "b3s3",
+    "b3s4",
+    "b3s5",
+    "b4s1",
+    "b4s2",
+    "b4s3",
+    "b4s4",
+    "b4s5",
+    "b4s6",
+    "b4s7",
+    "b4s8"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-595",
+   "kata": "フロント",
+   "kana": "フロント",
+   "romaji": "furonto",
+   "arti": "depan (aspek, cuaca, front perang, dll.); Resepsi (mis. Di hotel)",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2",
+    "b1s3",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-596",
+   "kata": "グリル",
+   "kana": "グリル",
+   "romaji": "guriru",
+   "arti": "gril",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-597",
+   "kata": "プレート",
+   "kana": "プレート",
+   "romaji": "pureeto",
+   "arti": "piring (sering seperti pada \"pelat tektonik\")",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-598",
+   "kata": "アーム",
+   "kana": "アーム",
+   "romaji": "aamu",
+   "arti": "lengan; arm",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2",
+    "b1s7",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-599",
+   "kata": "ガラス",
+   "kana": "ガラス",
+   "romaji": "garasu",
+   "arti": "kaca/serpihan kaca",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2",
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-600",
+   "kata": "フォグ",
+   "kana": "ふぉぐ",
+   "romaji": "fuogu",
+   "arti": "kabut (lampu kabut)",
+   "cat": "Luar mobil: depan",
+   "bab": "bab1",
+   "src": [
+    "b1s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-601",
+   "kata": "フューエル",
+   "kana": "ふゅーえる",
+   "romaji": "fuyuueru",
+   "arti": "bahan bakar",
+   "cat": "Luar mobil: samping",
+   "bab": "bab1",
+   "src": [
+    "b1s3",
+    "b1s8"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-602",
+   "kata": "リッド",
+   "kana": "りっど",
+   "romaji": "riddo",
+   "arti": "tutup",
+   "cat": "Luar mobil: samping",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-603",
+   "kata": "ピラー",
+   "kana": "ぴらー",
+   "romaji": "piraa",
+   "arti": "tiang (pilar) bodi",
+   "cat": "Luar mobil: samping",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-604",
+   "kata": "サイド",
+   "kana": "さいど",
+   "romaji": "saido",
+   "arti": "sisi",
+   "cat": "Luar mobil: samping",
+   "bab": "bab1",
+   "src": [
+    "b1s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-605",
+   "kata": "ゲート",
+   "kana": "ゲート",
+   "romaji": "geeto",
+   "arti": "gerbang/pintu masuk (gate)",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-606",
+   "kata": "クオーター",
+   "kana": "くおーたー",
+   "romaji": "kuootaa",
+   "arti": "panel samping belakang (quarter)",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-607",
+   "kata": "ライセンス",
+   "kana": "らいせんす",
+   "romaji": "raisensu",
+   "arti": "lisensi/pelat nomor",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-608",
+   "kata": "ストップ",
+   "kana": "すとっぷ",
+   "romaji": "sutoppu",
+   "arti": "berhenti (lampu rem)",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-609",
+   "kata": "マウント",
+   "kana": "まうんと",
+   "romaji": "maunto",
+   "arti": "dudukan (mounting)",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4",
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-610",
+   "kata": "テール",
+   "kana": "てーる",
+   "romaji": "teeru",
+   "arti": "belakang (tail)",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-611",
+   "kata": "レンズ",
+   "kana": "れんず",
+   "romaji": "renzu",
+   "arti": "lensa",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-612",
+   "kata": "クォータ",
+   "kana": "くぉーた",
+   "romaji": "kuoota",
+   "arti": "panel samping belakang",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-613",
+   "kata": "カーナビゲーション",
+   "kana": "かーなびげーしょん",
+   "romaji": "kaanabigeeshon",
+   "arti": "navigasi mobil",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-614",
+   "kata": "コンディショナー",
+   "kana": "こんでぃしょなー",
+   "romaji": "kondeishonaa",
+   "arti": "pengkondisi (AC)",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-615",
+   "kata": "エキゾースト",
+   "kana": "えきぞーすと",
+   "romaji": "ekizoosuto",
+   "arti": "gas buang",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4",
+    "b1s8",
+    "b4s1",
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-616",
+   "kata": "マニホールド",
+   "kana": "まにほーるど",
+   "romaji": "manihoorudo",
+   "arti": "manifold",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4",
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-617",
+   "kata": "インテーク",
+   "kana": "いんてーく",
+   "romaji": "inteeku",
+   "arti": "intake (sisi hisap udara mesin)",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4",
+    "b1s5",
+    "b4s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-618",
+   "kata": "ナビゲーション",
+   "kana": "なびげーしょん",
+   "romaji": "nabigeeshon",
+   "arti": "navigasi",
+   "cat": "Luar mobil: belakang",
+   "bab": "bab1",
+   "src": [
+    "b1s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-619",
+   "kata": "リザーバ",
+   "kana": "りざーば",
+   "romaji": "rizaaba",
+   "arti": "tangki cadangan (reservoir)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-620",
+   "kata": "フルード",
+   "kana": "ふるーど",
+   "romaji": "furuudo",
+   "arti": "cairan (fluid)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-621",
+   "kata": "ウィンド",
+   "kana": "うぃんど",
+   "romaji": "uindo",
+   "arti": "angin/kaca (window)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-622",
+   "kata": "ウォッシャ",
+   "kana": "うぉっしゃ",
+   "romaji": "uossha",
+   "arti": "penyemprot kaca",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-623",
+   "kata": "パワー",
+   "kana": "パワー",
+   "romaji": "pawaa",
+   "arti": "tenaga; power",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-624",
+   "kata": "スパーク",
+   "kana": "すぱーく",
+   "romaji": "supaaku",
+   "arti": "percikan api",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-625",
+   "kata": "コントロール",
+   "kana": "コントロール",
+   "romaji": "kontorooru",
+   "arti": "kontrol",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-626",
+   "kata": "ユニット",
+   "kana": "ユニット",
+   "romaji": "yunitto",
+   "arti": "unit",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-627",
+   "kata": "アッパー",
+   "kana": "あっぱー",
+   "romaji": "appaa",
+   "arti": "bagian atas",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-628",
+   "kata": "ホース",
+   "kana": "ホース",
+   "romaji": "hoosu",
+   "arti": "selang",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b1s7",
+    "b3s2",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-629",
+   "kata": "クリーナー",
+   "kana": "くりーなー",
+   "romaji": "kuriinaa",
+   "arti": "pembersih",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b3s2",
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-630",
+   "kata": "カバー",
+   "kana": "カバー",
+   "romaji": "kabaa",
+   "arti": "penutup",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-631",
+   "kata": "フィラー",
+   "kana": "フィラー",
+   "romaji": "fuiraa",
+   "arti": "filler; pengisi",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-632",
+   "kata": "レベル",
+   "kana": "レベル",
+   "romaji": "reberu",
+   "arti": "tingkat (level)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-633",
+   "kata": "ゲージ",
+   "kana": "ゲージ",
+   "romaji": "geeji",
+   "arti": "alat ukur (gauge)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b1s6",
+    "b2s2",
+    "b2s3",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-634",
+   "kata": "マスタ",
+   "kana": "ますた",
+   "romaji": "masuta",
+   "arti": "master (silinder utama)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-635",
+   "kata": "マスター",
+   "kana": "ますたー",
+   "romaji": "masutaa",
+   "arti": "master (silinder utama)",
+   "cat": "Di dalam ruang mesin",
+   "bab": "bab1",
+   "src": [
+    "b1s5",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-636",
+   "kata": "エアー",
+   "kana": "エアー",
+   "romaji": "eaa",
+   "arti": "udara",
+   "cat": "Kaki-kaki",
+   "bab": "bab1",
+   "src": [
+    "b1s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-637",
+   "kata": "シュー",
+   "kana": "しゅー",
+   "romaji": "shuu",
+   "arti": "sepatu rem (shoe)",
+   "cat": "Kaki-kaki",
+   "bab": "bab1",
+   "src": [
+    "b1s6",
+    "b3s5",
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-638",
+   "kata": "ドライブ",
+   "kana": "ドライブ",
+   "romaji": "doraibu",
+   "arti": "penggerak/mengemudi",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-639",
+   "kata": "プロペラ",
+   "kana": "プロペラ",
+   "romaji": "puropera",
+   "arti": "baling-baling",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-640",
+   "kata": "コンプレッサー",
+   "kana": "コンプレッサー",
+   "romaji": "konpuressaa",
+   "arti": "kompresor",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-641",
+   "kata": "パイプ",
+   "kana": "パイプ",
+   "romaji": "paipu",
+   "arti": "pipa",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b1s8",
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-642",
+   "kata": "ショック",
+   "kana": "ショック",
+   "romaji": "shokku",
+   "arti": "kejutan",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b2s1",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-643",
+   "kata": "アブソーバー",
+   "kana": "あぶそーばー",
+   "romaji": "abusoobaa",
+   "arti": "peredam (absorber)",
+   "cat": "Bagian bawah mobil",
+   "bab": "bab1",
+   "src": [
+    "b1s7",
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-644",
+   "kata": "ラジオ",
+   "kana": "らじお",
+   "romaji": "rajio",
+   "arti": "radio",
+   "cat": "Istilah lain di bengkel",
+   "bab": "bab1",
+   "src": [
+    "b1s9",
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-645",
+   "kata": "オフセット",
+   "kana": "おふせっと",
+   "romaji": "ofusetto",
+   "arti": "offset (bergeser)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-646",
+   "kata": "ヘキサゴン",
+   "kana": "へきさごん",
+   "romaji": "hekisagon",
+   "arti": "segi enam (hexagon)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-647",
+   "kata": "プラス",
+   "kana": "プラス",
+   "romaji": "purasu",
+   "arti": "plus",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-648",
+   "kata": "ドライバ",
+   "kana": "ドライバ",
+   "romaji": "doraiba",
+   "arti": "obeng",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-649",
+   "kata": "マイナス",
+   "kana": "マイナス",
+   "romaji": "mainasu",
+   "arti": "minus",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-650",
+   "kata": "スタッビ",
+   "kana": "すたっび",
+   "romaji": "sutabbi",
+   "arti": "stubby (pendek)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-651",
+   "kata": "プラスチック",
+   "kana": "プラスチック",
+   "romaji": "purasuchikku",
+   "arti": "plastik",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-652",
+   "kata": "テスト",
+   "kana": "テスト",
+   "romaji": "tesuto",
+   "arti": "tes; ujian; pemeriksaan (seperti ujian sekolah atau pengujian)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-653",
+   "kata": "コンビネーション",
+   "kana": "こんびねーしょん",
+   "romaji": "konbineeshon",
+   "arti": "kombinasi",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-654",
+   "kata": "スナップ",
+   "kana": "スナップ",
+   "romaji": "sunappu",
+   "arti": "kait cepat (snap)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-655",
+   "kata": "リング",
+   "kana": "リング",
+   "romaji": "ringu",
+   "arti": "cincin",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-656",
+   "kata": "スライド",
+   "kana": "すらいど",
+   "romaji": "suraido",
+   "arti": "geser",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-657",
+   "kata": "ベンチ",
+   "kana": "べんち",
+   "romaji": "benchi",
+   "arti": "bangku",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-658",
+   "kata": "グラインダ",
+   "kana": "ぐらいんだ",
+   "romaji": "gurainda",
+   "arti": "gerinda",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-659",
+   "kata": "カッティング",
+   "kana": "かってぃんぐ",
+   "romaji": "katteingu",
+   "arti": "pemotongan",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-660",
+   "kata": "ボール",
+   "kana": "ボール",
+   "romaji": "booru",
+   "arti": "mangkuk",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-661",
+   "kata": "デジタル",
+   "kana": "デジタル",
+   "romaji": "dejitaru",
+   "arti": "digital",
+   "cat": "Alat ukur",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-662",
+   "kata": "ダイヤル",
+   "kana": "ダイヤル",
+   "romaji": "daiyaru",
+   "arti": "dial/tombol putar",
+   "cat": "Alat ukur",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-663",
+   "kata": "シックネス",
+   "kana": "しっくねす",
+   "romaji": "shikkunesu",
+   "arti": "ketebalan (thickness gauge)",
+   "cat": "Alat ukur",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-664",
+   "kata": "クリアランス",
+   "kana": "くりあらんす",
+   "romaji": "kuriaransu",
+   "arti": "celah (clearance)",
+   "cat": "Alat ukur",
+   "bab": "bab2",
+   "src": [
+    "b2s2"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-665",
+   "kata": "コンプレッション",
+   "kana": "こんぷれっしょん",
+   "romaji": "konpuresshon",
+   "arti": "kompresi",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-666",
+   "kata": "サーキット",
+   "kana": "さーきっと",
+   "romaji": "saakitto",
+   "arti": "sirkuit",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-667",
+   "kata": "オパシ",
+   "kana": "おぱし",
+   "romaji": "opashi",
+   "arti": "opasimeter (alat ukur kepekatan asap)",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-668",
+   "kata": "メータ",
+   "kana": "めーた",
+   "romaji": "meeta",
+   "arti": "meter",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-669",
+   "kata": "デプス",
+   "kana": "です",
+   "romaji": "desu",
+   "arti": "kedalaman (depth)",
+   "cat": "Alat pemeriksaan mesin, ban, aki",
+   "bab": "bab2",
+   "src": [
+    "b2s3",
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-670",
+   "kata": "チェーン",
+   "kana": "チェーン",
+   "romaji": "chieen",
+   "arti": "rantai",
+   "cat": "Alat pelumasan dan pengangkat",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-671",
+   "kata": "ブロック",
+   "kana": "ブロック",
+   "romaji": "burokku",
+   "arti": "blok",
+   "cat": "Alat pelumasan dan pengangkat",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-672",
+   "kata": "リジット",
+   "kana": "りじっと",
+   "romaji": "rijitto",
+   "arti": "kaku (rigid)",
+   "cat": "Alat pelumasan dan pengangkat",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-673",
+   "kata": "ラック",
+   "kana": "ラック",
+   "romaji": "rakku",
+   "arti": "rak",
+   "cat": "Alat pelumasan dan pengangkat",
+   "bab": "bab2",
+   "src": [
+    "b2s4"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-674",
+   "kata": "スピード",
+   "kana": "スピード",
+   "romaji": "supiido",
+   "arti": "kecepatan",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-675",
+   "kata": "バランサ",
+   "kana": "ばらんさ",
+   "romaji": "baransa",
+   "arti": "penyeimbang",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-676",
+   "kata": "チェンジャ",
+   "kana": "ちぇんじゃ",
+   "romaji": "chienja",
+   "arti": "pengganti (changer)",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-677",
+   "kata": "アーク",
+   "kana": "アーク",
+   "romaji": "aaku",
+   "arti": "busur api (las busur)",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-678",
+   "kata": "アセチレン",
+   "kana": "アセチレン",
+   "romaji": "asechiren",
+   "arti": "asetilena",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-679",
+   "kata": "ドレーナー",
+   "kana": "どれーなー",
+   "romaji": "doreenaa",
+   "arti": "alat pembuang cairan (drainer)",
+   "cat": "Kata kerja: kaki-kaki",
+   "bab": "bab3",
+   "src": [
+    "b3s3"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-680",
+   "kata": "ロック",
+   "kana": "ロック",
+   "romaji": "rokku",
+   "arti": "musik rock",
+   "cat": "Kata kerja lain",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-681",
+   "kata": "マーク",
+   "kana": "マーク",
+   "romaji": "maaku",
+   "arti": "tanda; simbol",
+   "cat": "Kata kerja lain",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-682",
+   "kata": "シニア",
+   "kana": "しにあ",
+   "romaji": "shinia",
+   "arti": "senior",
+   "cat": "Kata kerja lain",
+   "bab": "bab3",
+   "src": [
+    "b3s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-683",
+   "kata": "フロントエンジン",
+   "kana": "ふろんとえんじん",
+   "romaji": "furontoenjin",
+   "arti": "mesin depan",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-684",
+   "kata": "フロントドライブ",
+   "kana": "ふろんとどらいぶ",
+   "romaji": "furontodoraibu",
+   "arti": "penggerak roda depan",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-685",
+   "kata": "リアドライブ",
+   "kana": "りあどらいぶ",
+   "romaji": "riadoraibu",
+   "arti": "penggerak roda belakang",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-686",
+   "kata": "アクスル",
+   "kana": "あくする",
+   "romaji": "akusuru",
+   "arti": "gandar (axle)",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-687",
+   "kata": "ロアー",
+   "kana": "ろあー",
+   "romaji": "roaa",
+   "arti": "bagian bawah (lower)",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-688",
+   "kata": "システム",
+   "kana": "システム",
+   "romaji": "shisutemu",
+   "arti": "sistem",
+   "cat": "Kemudi dan rem",
+   "bab": "bab4",
+   "src": [
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-689",
+   "kata": "マスターシリンダ",
+   "kana": "ますたーしりんだ",
+   "romaji": "masutaashirinda",
+   "arti": "silinder rem utama",
+   "cat": "Kemudi dan rem",
+   "bab": "bab4",
+   "src": [
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-690",
+   "kata": "ライニング",
+   "kana": "らいにんぐ",
+   "romaji": "rainingu",
+   "arti": "Lining (pelapisan) — Melapisi permukaan pipa dan saluran dengan film tipis dan juga disebut “coating”. Bergantung pada ketebalan pelapis, pelapis yang lebih…",
+   "cat": "Kemudi dan rem",
+   "bab": "bab4",
+   "src": [
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-691",
+   "kata": "キャリパー",
+   "kana": "きゃりぱー",
+   "romaji": "kyaripaa",
+   "arti": "kaliper rem",
+   "cat": "Kemudi dan rem",
+   "bab": "bab4",
+   "src": [
+    "b4s6"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-692",
+   "kata": "シールド",
+   "kana": "シールド",
+   "romaji": "shiirudo",
+   "arti": "shield (perisai terowongan)",
+   "cat": "Kelistrikan, rangka, dan bodi",
+   "bab": "bab4",
+   "src": [
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-693",
+   "kata": "ワイパ",
+   "kana": "わいぱ",
+   "romaji": "waipa",
+   "arti": "penyeka kaca (wiper)",
+   "cat": "Kelistrikan, rangka, dan bodi",
+   "bab": "bab4",
+   "src": [
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-694",
+   "kata": "インストールメント",
+   "kana": "いんすとーるめんと",
+   "romaji": "insutoorumento",
+   "arti": "panel instrumen",
+   "cat": "Kelistrikan, rangka, dan bodi",
+   "bab": "bab4",
+   "src": [
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-695",
+   "kata": "定期",
+   "kana": "ていき",
+   "romaji": "teiki",
+   "arti": "periode tetap; Istilah tetap",
+   "cat": "Istilah lain di bengkel",
+   "bab": "bab1",
+   "src": [
+    "b1s9"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-696",
+   "kata": "予防",
+   "kana": "よぼう",
+   "romaji": "yobou",
+   "arti": "pencegahan; tindakan pencegahan",
+   "cat": "Istilah lain di bengkel",
+   "bab": "bab1",
+   "src": [
+    "b1s9"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-697",
+   "kata": "保全",
+   "kana": "ほぜん",
+   "romaji": "hozen",
+   "arti": "Pengertian Pemeliharaan",
+   "cat": "Istilah lain di bengkel",
+   "bab": "bab1",
+   "src": [
+    "b1s9"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-698",
+   "kata": "半自動溶接",
+   "kana": "はんじどうようせつ",
+   "romaji": "hanjidouyousetsu",
+   "arti": "las semi-otomatis (SW)",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang",
+   "bagian": [
+    "am-725",
+    "am-726",
+    "am-727"
+   ],
+   "pecah": "半 (setengah) + 自動 (otomatis) + 溶接 (pengelasan)"
+  },
+  {
+   "id": "am-699",
+   "kata": "機",
+   "kana": "き",
+   "romaji": "ki",
+   "arti": "mesin",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-700",
+   "kata": "二",
+   "kana": "に",
+   "romaji": "ni",
+   "arti": "dua",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-701",
+   "kata": "酸化",
+   "kana": "さんか",
+   "romaji": "sanka",
+   "arti": "oksidasi",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-702",
+   "kata": "炭素",
+   "kana": "たんそ",
+   "romaji": "tanso",
+   "arti": "karbon",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-703",
+   "kata": "一",
+   "kana": "いち",
+   "romaji": "ichi",
+   "arti": "satu",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-704",
+   "kata": "酸化物",
+   "kana": "さんかぶつ",
+   "romaji": "sankabutsu",
+   "arti": "oksida",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-705",
+   "kata": "動力",
+   "kana": "どうりょく",
+   "romaji": "douryoku",
+   "arti": "kekuatan; kekuatan motif",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-706",
+   "kata": "伝達",
+   "kana": "でんたつ",
+   "romaji": "dentatsu",
+   "arti": "penyampaian",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-707",
+   "kata": "装置",
+   "kana": "そうち",
+   "romaji": "souchi",
+   "arti": "perangkat",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-708",
+   "kata": "灯火",
+   "kana": "とうか",
+   "romaji": "touka",
+   "arti": "lampu, cahaya",
+   "cat": "Penerus tenaga dan suspensi",
+   "bab": "bab4",
+   "src": [
+    "b4s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-709",
+   "kata": "安全",
+   "kana": "あんぜん",
+   "romaji": "anzen",
+   "arti": "keselamatan; aman",
+   "cat": "Kata kerja: keselamatan & kebersihan",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-710",
+   "kata": "衛生",
+   "kana": "えいせい",
+   "romaji": "eisei",
+   "arti": "kebersihan; sanitasi",
+   "cat": "Kata kerja: keselamatan & kebersihan",
+   "bab": "bab3",
+   "src": [
+    "b3s1"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-711",
+   "kata": "燃料",
+   "kana": "ねんりょう",
+   "romaji": "nenryou",
+   "arti": "bahan bakar",
+   "cat": "Sistem bahan bakar",
+   "bab": "bab4",
+   "src": [
+    "b4s2"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-712",
+   "kata": "吸気",
+   "kana": "きゅうき",
+   "romaji": "kyuuki",
+   "arti": "udara masuk",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-713",
+   "kata": "排気",
+   "kana": "はいき",
+   "romaji": "haiki",
+   "arti": "gas buang",
+   "cat": "Sistem hisap dan buang",
+   "bab": "bab4",
+   "src": [
+    "b4s3"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-714",
+   "kata": "潤滑",
+   "kana": "じゅんかつ",
+   "romaji": "junkatsu",
+   "arti": "pelumasan",
+   "cat": "Pelumasan dan pendinginan",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-715",
+   "kata": "冷却",
+   "kana": "れいきゃく",
+   "romaji": "reikyaku",
+   "arti": "pendinginan",
+   "cat": "Pelumasan dan pendinginan",
+   "bab": "bab4",
+   "src": [
+    "b4s4"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-716",
+   "kata": "電気",
+   "kana": "でんき",
+   "romaji": "denki",
+   "arti": "listrik; (listrik) cahaya",
+   "cat": "Kelistrikan, rangka, dan bodi",
+   "bab": "bab4",
+   "src": [
+    "b4s7"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-717",
+   "kata": "マフラ",
+   "kana": "まふら",
+   "romaji": "mafura",
+   "arti": "knalpot",
+   "cat": "Jenis kendaraan",
+   "bab": "bab1",
+   "src": [
+    "b1s8"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-718",
+   "kata": "モンキー",
+   "kana": "もんきー",
+   "romaji": "monkii",
+   "arti": "kunci inggris (monkey)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-719",
+   "kata": "モンキ",
+   "kana": "もんき",
+   "romaji": "monki",
+   "arti": "kunci inggris (monkey)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-720",
+   "kata": "スピンナ",
+   "kana": "すぴんな",
+   "romaji": "supinna",
+   "arti": "gagang putar (spinner)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-721",
+   "kata": "ディープ",
+   "kana": "でぃーぷ",
+   "romaji": "deiipu",
+   "arti": "dalam (deep socket)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-722",
+   "kata": "インパクト",
+   "kana": "いんぱくと",
+   "romaji": "inpakuto",
+   "arti": "impak (impact)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-723",
+   "kata": "パイレン",
+   "kana": "ぱいれん",
+   "romaji": "pairen",
+   "arti": "kunci pipa",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-724",
+   "kata": "ラジペン",
+   "kana": "らじぺん",
+   "romaji": "rajipen",
+   "arti": "tang lancip (radio pliers)",
+   "cat": "Perkakas dasar",
+   "bab": "bab2",
+   "src": [
+    "b2s1"
+   ],
+   "audit": true,
+   "sumber": "katakana materi (ketuk) · audit lanjutan"
+  },
+  {
+   "id": "am-725",
+   "kata": "半",
+   "kana": "はん",
+   "romaji": "han",
+   "arti": "setengah",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-726",
+   "kata": "自動",
+   "kana": "じどう",
+   "romaji": "jidou",
+   "arti": "otomatis; ↔Manual",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
+  },
+  {
+   "id": "am-727",
+   "kata": "溶接",
+   "kana": "ようせつ",
+   "romaji": "yousetsu",
+   "arti": "pengelasan",
+   "cat": "Alat uji kendaraan dan mesin bengkel",
+   "bab": "bab2",
+   "src": [
+    "b2s5"
+   ],
+   "audit": true,
+   "sumber": "bagian dari kata panjang"
   }
  ]
 }
