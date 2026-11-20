@@ -69,6 +69,8 @@ function tampil() {
 }
 async function ulangRender() { const h = tampil(); const app = document.getElementById("app"); if (app) app.innerHTML = h; }
 const MF = window.MF = {
+  // Dipakai pengaman keluar di index.html: sesi yang sudah dimulai & belum selesai → info, selain itu null.
+  active() { return F && F.deck && !F.pilih && !F.selesai && F.i < F.deck.length && (F.i > 0 || F.open) ? { pos: F.i + 1, total: F.deck.length, score: F.ok ? `${F.ok} kartu hafal` : "", note: "XP kartu yang sudah Hafal tetap tersimpan, tapi urutan sesi ini hilang." } : null; },
   cek(id, v) { v ? F.sel.add(id) : F.sel.delete(id); simpanSel(); const n = F.sel.size; const e = document.getElementById("mf-n"); if (e) e.innerHTML = `<b>${n}</b> kartu dipilih`; const g = document.getElementById("mf-go"); if (g) g.disabled = !n; },
   grup(k, v) { F.bank.soal.filter(q => q.k === k).forEach(q => v ? F.sel.add(q.i) : F.sel.delete(q.i)); simpanSel(); ulangRender(); },
   semua(v) { F.bank.soal.forEach(q => v ? F.sel.add(q.i) : F.sel.delete(q.i)); simpanSel(); ulangRender(); },

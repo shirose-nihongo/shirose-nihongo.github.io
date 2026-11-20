@@ -710,7 +710,14 @@ const KC = window.KC = {
   },
   fcRepeat() { const c = FC.q[FC.i]; if (!c) return; FC.rep++; FC.q.splice(Math.min(FC.q.length, FC.i + 4), 0, { t: c.t, k: c.k, again: true }); FC.i++; FC.shown = false; paintFlash(); },
   fcNext() { FC.i++; FC.shown = false; paintFlash(); },
-  fcBack() { if (FC.phase === "run" && FC.ok + FC.ng > 0) { fcFinish(); FC.phase = "setup"; } FC.phase = "setup"; paintFlash(); },
+  fcBack(ok) {
+    // Tombol "Selesai ✕" di tengah sesi → konfirmasi dulu (anti salah pencet).
+    if (!ok && KC.fcActive() && window.confirmExit) { window.confirmExit({ title: "Akhiri hafalan?", ...KC.fcActive() }, () => KC.fcBack(true)); return; }
+    if (FC.phase === "run" && FC.ok + FC.ng > 0) { fcFinish(); FC.phase = "setup"; } FC.phase = "setup"; paintFlash();
+  },
+  // Dipakai pengaman keluar di index.html: info sesi yang sedang berjalan, atau null.
+  fcActive() { return FC.phase === "run" && FC.i < FC.q.length ? { pos: FC.i + 1, total: FC.q.length, score: FC.ok + FC.ng ? `${FC.ok} hafal · ${FC.ng} belum` : "", note: "Kartu yang sudah kamu nilai tetap tersimpan, tapi sesi ini berhenti." } : null; },
+  tqActive() { return TQ.phase === "run" && TQ.i < TQ.qs.length ? { pos: TQ.i + 1, total: TQ.qs.length, note: "Kalau keluar sekarang, tes ini berhenti dan nilainya tidak disimpan." } : null; },
   /* tes */
   tqSet(k, v) { TQ[k] = v; paintTest(); },
   tqStart() {
@@ -727,7 +734,10 @@ const KC = window.KC = {
     } else TQ.i++;
     paintTest();
   },
-  tqQuit() { TQ.phase = "setup"; paintTest(); },
+  tqQuit(ok) {
+    if (!ok && KC.tqActive() && window.confirmExit) { window.confirmExit({ title: "Keluar dari tes?", ...KC.tqActive() }, () => KC.tqQuit(true)); return; }
+    TQ.phase = "setup"; paintTest();
+  },
   tqBack() { TQ.phase = "setup"; paintTest(); },
   ensure: ensureProgress, kanjiState, kanjiCounts, flush,
 };

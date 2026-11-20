@@ -10,7 +10,7 @@
  * ===================================================================== */
 import * as EN from "./mensetsu-engine.js?v=20261120cv3";
 import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ, fz } from "./mensetsu-prep.js?v=20261120cv3";
-import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261120cv3";
+import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261120ex";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
 import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261118s";
 

@@ -1470,11 +1470,11 @@ import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261119k";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
-import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261119k";
+import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261120ex";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261119k";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261119f";
-import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120cv3";
+import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120ex";
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
 import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261119o";
 initJlpt(FB);
@@ -2243,6 +2243,7 @@ window.closeTopOverlay = () => {
 window.goBack = () => {
   if (!state.user) { location.href = "./landing.html"; return; }   // belum login: kembali = web penjelasan Shirose Nihongo
   if (window.closeTopOverlay()) return;   // popup terbuka: tutup popup-nya saja, halaman di belakang tetap
+  if (window._exitGuard && window._exitGuard(() => window.goBack())) return;   // konfirmasi dulu, sebelum _routeStack diubah
   if (window._materiDetail && (location.hash.slice(1) || "") === window._materiDetail.back){ window.backFromDetail(); return; }
   const here = location.hash.slice(1) || "home";
   const cur = here.split("/")[0];
@@ -2273,6 +2274,7 @@ window.goBack = () => {
 window.goHomeFab = () => {
   if (!state.user) { location.href = "./landing.html"; return; }
   for (let i = 0; i < 6 && window.closeTopOverlay(); i++) {}
+  if (window._exitGuard && window._exitGuard(() => window.goHomeFab())) return;
   const here = location.hash.slice(1) || "home";
   const cur = here.split("/")[0];
   const sub = _subjectOf(here);
@@ -2315,6 +2317,9 @@ function _renderRoute(name, rest){
 }
 
 window.route = (path) => {
+  // Sesi hafalan/latihan sedang berjalan → minta konfirmasi dulu sebelum pindah halaman (anti salah pencet).
+  if (path !== window._curPath && window._exitGuard && window._exitGuard(() => route(path))) return;
+  window._curPath = path;
   window._materiDetail = null;
   if (location.hash.slice(1) !== path) window._navByRoute = true;   // hashchange ini dari route(), bukan tombol back
   { const _n = path.split("/")[0], _h = location.hash.slice(1) || "";
@@ -3916,6 +3921,67 @@ const _hafDirBtn = () => `<button class="btn ghost sm" onclick="hafToggleDir()" 
 const _hafMenu = () => (_hafSSW() && state.hafalan_back) || ((state.hafalan && state.hafalan.tipe === "rangkuman" && state._rkRoute) ? state._rkRoute : "hafalan");
 const _hafHome = () => (_hafSSW() && state.hafalan_back) || "home";
 const _hafHomeLbl = () => _hafSSW() ? "↩ Kembali" : "🏠 Home";
+
+/* ===== Konfirmasi keluar sesi hafalan / latihan (anti salah pencet) =====
+ * Berlaku untuk: hafalan JLPT · JFT · SSW (flashcard, pasangkan, pilihan ganda — #hafalan/go),
+ * hafalan & tes Kana (#kana-hafalan, #kana-tes), dan flashcard Mensetsu (#mensetsu-flash).
+ * Semua jalan keluar (tombol ← / Home di halaman, tombol melayang, tombol back HP → hashchange → route)
+ * lewat route()/goBack()/goHomeFab(), jadi cukup dijaga di sana. */
+window._exitOk = false;
+function _exitActive(){
+  const p = window._curPath || "", n = p.split("/")[0];
+  if (p === "hafalan/go") {
+    const q = state.hafalan_queue || [], pos = state.hafalan_pos || 0, s = state.hafalan_score || { benar: 0, salah: 0 };
+    if (!q.length || pos >= q.length) return null;
+    return { title: "Keluar dari hafalan?", pos: Math.min(pos + 1, q.length), total: q.length, score: (s.benar + s.salah) ? `${s.benar} benar · ${s.salah} salah` : "" };
+  }
+  if (n === "kana-hafalan" && window.KC && window.KC.fcActive) { const a = window.KC.fcActive(); return a && { title: "Keluar dari hafalan?", ...a }; }
+  if (n === "kana-tes" && window.KC && window.KC.tqActive) { const a = window.KC.tqActive(); return a && { title: "Keluar dari tes?", ...a }; }
+  if (n === "mensetsu-flash" && window.MF && window.MF.active) { const a = window.MF.active(); return a && { title: "Keluar dari flashcard?", ...a }; }
+  return null;
+}
+// true = navigasi ditahan & dialog konfirmasi ditampilkan; proceed() dipanggil kalau siswa memilih keluar.
+window._exitGuard = (proceed) => {
+  if (window._exitOk) return false;
+  const info = _exitActive(); if (!info) return false;
+  // Tombol back HP/browser sudah mengganti hash → kembalikan alamatnya tanpa render ulang (sesi tetap utuh).
+  const cur = window._curPath || "";
+  if ((location.hash.slice(1) || "") !== cur) { try { history.pushState(null, "", "#" + cur); } catch (_) {} }
+  window.confirmExit(info, proceed);
+  return true;
+};
+// Dialog konfirmasi; juga dipakai tombol ✕ di dalam halaman (Kana).
+window.confirmExit = (info, proceed) => {
+  if (document.getElementById("exit-confirm")) return;
+  info = info || {};
+  const wrap = document.createElement("div");
+  wrap.className = "modal-backdrop open"; wrap.id = "exit-confirm";
+  wrap.setAttribute("role", "dialog"); wrap.setAttribute("aria-modal", "true"); wrap.setAttribute("aria-labelledby", "exit-confirm-title");
+  wrap.innerHTML = `
+    <div class="modal" style="max-width:420px; text-align:center;">
+      <h2 id="exit-confirm-title">${info.title || "Keluar dari sesi ini?"}</h2>
+      ${info.total ? `<p style="color:var(--gray); margin-bottom:6px;">Kamu sedang di soal <b style="color:var(--white)">${info.pos} / ${info.total}</b>.</p>` : ""}
+      ${info.score ? `<p style="color:var(--gray); margin-bottom:6px;">Skor sementara: ${info.score}</p>` : ""}
+      <p style="color:var(--gray); margin-bottom:18px;">${info.note || "Kalau keluar sekarang, sesi ini berhenti dan harus dimulai lagi dari awal."}</p>
+      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+        <button class="btn" data-a="stay">Lanjut belajar</button>
+        <button class="btn ghost" data-a="exit">Ya, keluar</button>
+      </div>
+    </div>`;
+  const close = () => { document.removeEventListener("keydown", onKey); wrap.remove(); };
+  const onKey = (e) => { if (e.key === "Escape") close(); };
+  wrap.addEventListener("click", (e) => {
+    if (e.target === wrap) return close();
+    const a = e.target.closest("[data-a]"); if (!a) return;
+    close();
+    if (a.dataset.a === "exit") { window._exitOk = true; try { proceed && proceed(); } finally { window._exitOk = false; } }
+  });
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(wrap);
+  const stay = wrap.querySelector('[data-a="stay"]'); if (stay) stay.focus();
+};
+// Tutup tab / refresh di tengah sesi → peringatan bawaan browser.
+window.addEventListener("beforeunload", (e) => { if (!window._exitOk && _exitActive()) { e.preventDefault(); e.returnValue = ""; } });
 // Dokumen SRS per bidang SSW: Building Cleaning tetap "ssw-bc" (data lama), bidang lain "ssw-<slug>".
 const _sswLvl = (slug) => { slug = slug || (window.__sswSlug && window.__sswSlug()) || "building-cleaning"; return slug === "building-cleaning" ? "ssw-bc" : "ssw-" + slug; };
 const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.fb ? "KANJI (belum ada kosakata)" : it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${(it.kv || it.fb) ? _kvLv() : state.level.toUpperCase()}`;
