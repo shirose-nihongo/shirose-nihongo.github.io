@@ -1526,10 +1526,10 @@ async function _loadComments(tipe, lvl, no, hostId){
       <div class="cmt-item">
         <div class="cmt-head">
           <div>
-            <span class="cmt-nama">${(c.nama||"Anon").toString().slice(0,40)}</span>
-            <span class="cmt-meta">${c.jlpt ? `· ${c.jlpt.toUpperCase()}` : ""} ${c.kelas ? `· ${c.kelas}` : ""} ${when ? `· ${when}` : ""}</span>
+            <span class="cmt-nama">${_escapeHtml((c.nama||"Anon").toString().slice(0,40))}</span>
+            <span class="cmt-meta">${c.jlpt ? `· ${_escapeHtml(String(c.jlpt).toUpperCase())}` : ""} ${c.kelas ? `· ${_escapeHtml(c.kelas)}` : ""} ${when ? `· ${when}` : ""}</span>
           </div>
-          ${canDel ? `<button class="cmt-delete" onclick="hapusKomentar('${tipe}','${lvl}',${no},'${c.id}','${c.uid||""}')">🗑 Hapus</button>` : ""}
+          ${canDel && _idAman(c.id) && _idAman(c.uid||"") ? `<button class="cmt-delete" onclick="hapusKomentar('${tipe}','${lvl}',${no},'${c.id}','${c.uid||""}')">🗑 Hapus</button>` : ""}
         </div>
         <div class="cmt-text">${_escapeHtml(c.text||"")}</div>
       </div>`;
@@ -1551,6 +1551,8 @@ async function _loadComments(tipe, lvl, no, hostId){
     ${formHtml}
   `;
 }
+// ID Firestore (doc id / uid) dimasukkan ke atribut onclick: hanya izinkan karakter aman.
+function _idAman(s){ return /^[A-Za-z0-9_-]*$/.test(String(s)); }
 function _escapeHtml(s){
   return (s||"").toString()
     .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
@@ -5971,7 +5973,7 @@ FB.onAuth(async (user, siswa) => {
   const btn = document.getElementById("btn-auth");
   if (user) {
     try { localStorage.setItem("shirose-returning","1"); } catch(e){}
-    btn.innerHTML = `👋 ${siswa?.nama || user.email.split("@")[0]}`;
+    btn.innerHTML = `👋 ${_escapeHtml(siswa?.nama || user.email.split("@")[0])}`;
     btn.onclick = () => route("profile");
     try { document.getElementById("btn-out").classList.remove("hidden"); } catch (_) {}
     document.getElementById("guru-link").classList.toggle("hidden", !FB.userIsGuru());

@@ -32,6 +32,8 @@ service cloud.firestore {
     }
     function diubah()     { return request.resource.data.diff(resource.data).affectedKeys(); }
     function targetSiswa(){ return resource.data.get('role', 'student') == 'student'; }
+    // Teks tampilan (nama/kelas) yang ditulis siswa: string pendek tanpa karakter HTML.
+    function teksAman(v, maks) { return v is string && v.size() <= maks && !v.matches('.*[<>"`].*'); }
 
     // ---------- /siswa/{uid} : profil akun ----------
     match /siswa/{sid} {
@@ -44,9 +46,17 @@ service cloud.firestore {
                     || (me() == sid && ownerEmail());
 
       allow update: if
-          // Siswa: profil ringan saja (nama, karakter, aktif), tidak boleh ubah hak akses.
+          // Siswa: HANYA field yang ada di daftar-izin ini (bukan daftar larangan),
+          // jadi field baru (mis. saldo/premium) otomatis tertutup untuk siswa.
+          //   nama        → teks pendek tanpa karakter HTML
+          //   aktif       → stempel waktu login
+          //   karakter    → avatar/inventaris (fitur kosmetik, dihitung di browser)
+          //   permissions → hanya audio_autoplay
           (me() == sid && aktif()
-             && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh', 'demoSejak']))
+             && diubah().hasOnly(['nama', 'aktif', 'karakter', 'permissions'])
+             && (!diubah().hasAny(['nama']) || teksAman(request.resource.data.nama, 60))
+             && (!diubah().hasAny(['permissions'])
+                 || request.resource.data.permissions.diff(resource.data.get('permissions', {})).affectedKeys().hasOnly(['audio_autoplay'])))
           // Moderator boleh memperbaiki profilnya sendiri.
           || (me() == sid && ownerEmail())
           // Guru: atur akses/kelas/status/nama siswa (bukan role, bukan akun guru lain).
@@ -57,11 +67,22 @@ service cloud.firestore {
       // Admin/moderator: semua. Guru: hanya akun siswa (role student).
       allow delete: if isAdmin() || (isGuru() && targetSiswa());
 
-      // Sub-koleksi milik siswa: srs, gami, activity, nilai, misi_harian,
-      // rangkuman, ujian_rewards, dll.
+      // Sub-koleksi milik siswa. Guru/admin tetap boleh menulis semuanya.
+      // Siswa hanya ke sub-koleksi yang dikenal; nama lain DITOLAK.
       match /{sub}/{docId} {
         allow read: if signedIn() && ((me() == sid && terdaftar()) || isGuru());
-        allow write: if signedIn() && ((me() == sid && terdaftar()) || isGuru());
+        allow write: if isGuru();
+        // Progres belajar, dompet, dan simpanan: siswa boleh tulis/ubah/hapus miliknya.
+        allow write: if signedIn() && me() == sid && terdaftar()
+          && sub in ['srs', 'gami', 'activity', 'misi_harian', 'rangkuman', 'kana_progres',
+                     'ssw_progres', 'mensetsu_hasil', 'mensetsu_persiapan', 'save', 'wallet', 'login_reward'];
+        // Riwayat nilai, hasil ujian, klaim hadiah lulus, dan log dompet:
+        // siswa hanya boleh MENAMBAH. Tidak bisa mengubah atau menghapus riwayat lama.
+        allow create: if signedIn() && me() == sid && terdaftar()
+          && sub in ['nilai', 'jlpt_hasil', 'ujian_rewards', 'wallet_log']
+          && (sub != 'nilai' || (request.resource.data.skor is number
+                                 && request.resource.data.skor >= 0
+                                 && request.resource.data.skor <= 100));
       }
     }
 
@@ -126,8 +147,11 @@ service cloud.firestore {
       allow read: if terdaftar();
       allow create: if terdaftar()
                     && request.resource.data.uid == me()
+                    && request.resource.data.keys().hasOnly(['uid', 'nama', 'kelas', 'text', 'jlpt', 'tipe', 'no', 'created'])
                     && request.resource.data.text is string
-                    && request.resource.data.text.size() <= 1000;
+                    && request.resource.data.text.size() <= 1000
+                    && teksAman(request.resource.data.get('nama', ''), 60)
+                    && teksAman(request.resource.data.get('kelas', ''), 60);
       allow delete: if signedIn() && (resource.data.uid == me() || isGuru());
       allow update: if false;
     }
