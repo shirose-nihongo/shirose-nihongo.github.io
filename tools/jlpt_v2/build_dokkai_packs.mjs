@@ -19,26 +19,30 @@ if (A.has("--rollback")) {
 const rng = (seed) => () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 const shuffle = (a, r) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const rank = (j) => (/情報/.test(j) ? 4 : /統合|主張|長文/.test(j) ? 3 : /中文/.test(j) ? 2 : 1);
-const SEED = { n5: 5005, n4: 4004, n3: 3003, n2: 2002 };
+const SEED = { n5: 5005, n4: 4004, n3: 3003, n2: 2002, n1: 1001 };
+// Jumlah paket Latihan Dokkai = jumlah paket Full Exam (N1 punya 30). N1: Full Exam asli (tidak diubah) dipakai apa adanya.
+const CFG = { n5: { n: 20, ext: ".v2.json" }, n4: { n: 20, ext: ".v2.json" }, n3: { n: 20, ext: ".v2.json" }, n2: { n: 20, ext: ".v2.json" }, n1: { n: 30, ext: ".json" } };
+const ONLY = (process.argv.find((a) => a.startsWith("--levels=")) || "").slice(9).split(",").filter(Boolean);
+const LEVELS = Object.keys(CFG).filter((lv) => (ONLY.length ? ONLY.includes(lv) : lv !== "n1"));
 const result = {};
-for (const lv of ["n5", "n4", "n3", "n2"]) {
-  const groups = [];
-  for (let p = 1; p <= 20; p++) {
-    const nn = String(p).padStart(2, "0"), f = `jlpt/${lv}/full-${nn}.v2.json`;
+for (const lv of LEVELS) {
+  const N = CFG[lv].n; const groups = [];
+  for (let p = 1; p <= N; p++) {
+    const nn = String(p).padStart(2, "0"), f = `jlpt/${lv}/full-${nn}${CFG[lv].ext}`;
     if (!fs.existsSync(path.join(ROOT, f))) throw new Error("tidak ada " + f);
     const j = R(f); const by = new Map();
     for (const s of j.sections) if (s.cat === "dokkai") for (const it of s.items) { if (!by.has(it.pid)) by.set(it.pid, []); by.get(it.pid).push(it); }
     for (const [pid, its] of by) groups.push({ from: `${lv}-full-${nn}`, passage: j.passages[pid], items: its });
   }
   const total = groups.reduce((s, g) => s + g.items.length, 0);
-  if (total % 20) throw new Error(`${lv}: ${total} soal tidak habis dibagi 20`);
-  const size = total / 20;
+  if (total % N) throw new Error(`${lv}: ${total} soal tidak habis dibagi ${N}`);
+  const size = total / N;
   let bins = null;
   for (let attempt = 0; attempt < 5000 && !bins; attempt++) {
     const r = rng(SEED[lv] + attempt);
     const gs = shuffle([...groups], r).sort((a, b) => b.items.length - a.items.length || 0);
     // acak urutan di dalam ukuran yang sama sudah dari shuffle; sort stabil mempertahankannya
-    const B = Array.from({ length: 20 }, () => ({ left: size, g: [] }));
+    const B = Array.from({ length: N }, () => ({ left: size, g: [] }));
     let ok = true;
     for (const g of gs) {
       const c = B.filter((b) => b.left >= g.items.length);
@@ -62,7 +66,7 @@ for (const lv of ["n5", "n4", "n3", "n2"]) {
     return { id: `${lv}-dokkai-${nn}`, lv, jenis: "dokkai", judul: `Dokkai Practice ${nn}`, durasi, sections: [sec], passages, jumlah: items.length, versi: 2, _from: gs.map((g) => g.from) };
   });
   result[lv] = { packs, size, total, groups: groups.length };
-  console.log(`${lv}: ${groups.length} bacaan, ${total} soal → 20 paket × ${size} soal`);
+  console.log(`${lv}: ${groups.length} bacaan, ${total} soal → ${N} paket × ${size} soal`);
 }
 if (A.has("--write") || A.has("--apply")) {
   for (const [lv, r] of Object.entries(result)) for (const p of r.packs) {
