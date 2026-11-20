@@ -1,4 +1,5 @@
 /* Service worker: network-first, cache fallback */
+// v409 — landing baru (orbit karakter, statistik nyata, demo, pulau SSW, CTA WhatsApp).
 // v408 — logo native juga di landing, teacher & kartu login; css/logo.css dibagi bersama.
 // v407 — logo header native (SVG + teks, ikut warna tema), tanpa file gambar.
 // v226 — Kosakata Kanji N3 (js/kanji-vocab.js): kartu hafalan = kosakata contoh, Kanji satuan = indeks.
@@ -10,7 +11,7 @@
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
 // v405 — Konfirmasi keluar sesi hafalan (JLPT/JFT/SSW, Kana, Mensetsu flashcard).
-const CACHE = "shirose-nihongo-v408";
+const CACHE = "shirose-nihongo-v409";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
@@ -18,6 +19,7 @@ const CORE = [
   "./index.html",
   "./landing.html",
   "./js/landing-config.js",
+  "./js/landing-stats.js",
   "./teacher.html",
   "./manifest.webmanifest",
   "./css/logo.css",

@@ -2,6 +2,9 @@
  * Edit file ini saja — tidak perlu menyentuh landing.html.
  */
 window.LANDING_CONFIG = {
+  /* Grup WhatsApp untuk klaim akun demo 7 hari. Kosong = tombol Join nonaktif. */
+  whatsapp: { url: "https://chat.whatsapp.com/BzXsGV00RumLlFs1rnpABT" },
+
   /* Isi URL asli akun kamu. Kosong ("") = tombol tampil nonaktif "Segera hadir".
      Contoh: instagram: "https://instagram.com/akunkamu" */
   social: [
