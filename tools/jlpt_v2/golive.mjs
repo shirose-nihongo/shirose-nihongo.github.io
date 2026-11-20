@@ -40,7 +40,7 @@ function plan() {
       let nonDokkaiBeda = 0;
       for (let i = 0; i < Math.min(A.length, B.length); i++)
         if (A[i].cat !== "dokkai" && JSON.stringify(A[i]) !== JSON.stringify(B[i])) nonDokkaiBeda++;
-      const pilot = tag.includes("n3-full-11");
+      const pilot = false; // N3-11 kini v2 hanya-Dokkai (Choukai lama + audio lama), diperlakukan seperti paket lain
       // Pilot N3-11 mengubah Choukai & butuh audio baru (audio/choukai/n3/p211) — dilewati kecuali --with-pilot dan audio ada.
       if (pilot && !(WITH_PILOT && fs.existsSync(path.join(ROOT, "audio", "choukai", "n3", "p211")))) { rows.push({ lv, m, v2rel, status: "DITAHAN (pilot, audio belum ada)" }); continue; }
       if (nonDokkaiBeda && !pilot) bad(`${nonDokkaiBeda} soal non-dokkai berubah`);
