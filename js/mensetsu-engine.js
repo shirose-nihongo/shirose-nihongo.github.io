@@ -36,13 +36,13 @@ export function aizuchi() { let a; do { a = rnd(AIZUCHI); } while (a === _lastAi
 /* ---------------- bank soal ---------------- */
 const _bank = {};
 export async function loadIndex() {
-  const r = await fetch("./data/mensetsu/index.json");
+  const r = await fetch("./data/mensetsu/index.json", { cache: "no-cache" });   // selalu cek versi terbaru (ETag), jangan pakai cache 10 menit
   if (!r.ok) throw new Error("Data Mensetsu belum tersedia");
   return r.json();
 }
 export async function loadBank(key) {
   if (_bank[key]) return _bank[key];
-  const r = await fetch(`./data/mensetsu/${encodeURIComponent(key)}.json`);
+  const r = await fetch(`./data/mensetsu/${encodeURIComponent(key)}.json`, { cache: "no-cache" });
   if (!r.ok) throw new Error("Bank soal bidang ini belum tersedia");
   const b = await r.json();
   b.byId = Object.fromEntries(b.soal.map(q => [q.i, q]));

@@ -8,9 +8,9 @@
  * Simpan: Firestore siswa/{uid}/mensetsu_persiapan/{bidang} (+ cadangan localStorage)
  * Global: window.MS (dipakai onclick di HTML)
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js?v=20261120cv2";
-import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ, fz } from "./mensetsu-prep.js?v=20261120cv2";
-import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261120cv2";
+import * as EN from "./mensetsu-engine.js?v=20261120cv3";
+import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ, fz } from "./mensetsu-prep.js?v=20261120cv3";
+import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261120cv3";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
 import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261118s";
 

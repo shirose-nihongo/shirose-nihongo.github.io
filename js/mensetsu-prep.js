@@ -4,7 +4,7 @@
  * Simpan: Firestore siswa/{uid}/mensetsu_persiapan/{bidang} (+ cadangan localStorage)
  * Suara : speechSynthesis ja-JP milik browser/HP (gratis, tanpa API)
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js?v=20261120cv2";
+import * as EN from "./mensetsu-engine.js?v=20261120cv3";
 
 let X = null;   // konteks dari mensetsu.js
 export function initPrep(ctx) { X = ctx; }

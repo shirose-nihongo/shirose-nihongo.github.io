@@ -3,8 +3,8 @@
  * Depan: pertanyaan wawancara (JP + furigana). Ketuk → belakang: terjemah, contoh jawaban JP + arti, jawabanmu (bila ada), suara.
  * Hadiah: 30 XP + 1 koin tiap kartu "Hafal" (10× XP flashcard biasa = 3 XP), sekali per kartu per hari.
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js?v=20261120cv2";
-import { getX, bayar, qj, ajh, fz, ttsPlay, ttsStop, loadPrep, aktif } from "./mensetsu-prep.js?v=20261120cv2";
+import * as EN from "./mensetsu-engine.js?v=20261120cv3";
+import { getX, bayar, qj, ajh, fz, ttsPlay, ttsStop, loadPrep, aktif } from "./mensetsu-prep.js?v=20261120cv3";
 
 export const XP_FLASH = 30, KOIN_FLASH = 2;   // XP flashcard biasa = 3 per kartu benar → ×10
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
