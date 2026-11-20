@@ -2,6 +2,7 @@
 // Persona contoh jawaban: fiktif ("リナ", 22 tahun, Bandung) — tidak memakai data siswa sungguhan.
 const KAT = [
   { k: "jiko", jp: "自己紹介・基本情報", id: "Perkenalan & data diri" },
+  { k: "karada", jp: "体のサイズ", id: "Data fisik & ukuran" },
   { k: "kazoku", jp: "家族構成", id: "Susunan keluarga" },
   { k: "gakureki", jp: "学歴", id: "Riwayat pendidikan" },
   { k: "shokureki", jp: "職歴", id: "Pengalaman kerja" },
@@ -56,7 +57,7 @@ q("jiko", 1, "結婚[けっこん]していますか。お子[こ]さんはい�
   "Tidak, saya belum menikah. Saya lajang. Saya juga belum punya anak.",
   "Kalau sudah menikah/punya anak: sebutkan siapa yang mengurus anak selama kamu di Jepang dan bahwa keluarga mendukung. Contoh: 夫と子供が一人います。子供は母が世話をしてくれます。家族はみんな応援してくれています。",
   [["ご家族[かぞく]は、日本[にほん]で働[はたら]くことに賛成[さんせい]していますか。", "Apakah keluarga setuju Anda bekerja di Jepang?"]]);
-q("jiko", 2, "身長[しんちょう]と体重[たいじゅう]はどのくらいですか。", "Berapa tinggi dan berat badan Anda?",
+q("karada", 2, "身長[しんちょう]と体重[たいじゅう]はどのくらいですか。", "Berapa tinggi dan berat badan Anda?",
   [["身長", "tinggi badan"], ["体重", "berat badan"], ["センチ", "cm"], ["キロ", "kg"]],
   "Ada di CV (untuk ukuran seragam & pekerjaan fisik). Mengecek kemampuan menyebut angka.",
   "身長[しんちょう]は百五十五[ひゃくごじゅうご]センチで、体重[たいじゅう]は四十九[よんじゅうきゅう]キロです。",
@@ -68,6 +69,49 @@ q("jiko", 2, "履歴書[りれきしょ]は自分[じぶん]で書[か]きまし
   "はい、内容[ないよう]は自分[じぶん]で考[かんが]えて書[か]きました。日本語[にほんご]は先生[せんせい]に確認[かくにん]してもらいました。",
   "Ya, isinya saya pikirkan dan tulis sendiri. Bahasa Jepangnya saya minta dicek oleh guru.",
   "Jujur lebih baik. Yang penting: kamu bisa menjelaskan SEMUA isi CV-mu dengan kata-katamu sendiri. Baca ulang CV-mu sebelum wawancara!");
+
+/* ---------------- 体のサイズ (data fisik: 体重・血液型・服・腰・靴) ---------------- */
+q("karada", 1, "体重[たいじゅう]は何[なん]キロですか。", "Berat badan Anda berapa kilo?",
+  [["体重", "berat badan"], ["キロ", "kilogram"], ["増える・減る", "naik・turun"], ["変わらない", "tidak berubah"]],
+  "Kolom 体重 di CV. Pewawancara mencocokkan dengan CV dan kadang menanyakan apakah berat badanmu berubah (untuk kesehatan & seragam).",
+  "四十九[よんじゅうきゅう]キロです。この一年[いちねん]は、あまり変[か]わっていません。",
+  "49 kilo. Setahun terakhir tidak banyak berubah.",
+  "Angka harus sama dengan CV. Kalau berubah, katakan: 前より三キロ増えました／減りました。Latih angka: 四十・七十・九.",
+  [["何[なに]かスポーツをしていますか。", "Apakah Anda berolahraga?"]]);
+q("karada", 1, "血液型[けつえきがた]は何型[なにがた]ですか。", "Golongan darah Anda apa?",
+  [["血液型", "golongan darah"], ["A型", "golongan A (エーがた)"], ["B型", "golongan B (ビーがた)"], ["O型", "golongan O (オーがた)"], ["AB型", "golongan AB (エービーがた)"]],
+  "Di Jepang golongan darah sering ditanyakan (untuk keadaan darurat, dan juga obrolan santai karena orang Jepang suka mengaitkannya dengan sifat).",
+  "私[わたし]はO型[がた]です。",
+  "Golongan darah saya O.",
+  "Baca huruf dengan cara Jepang: A=エー, B=ビー, O=オー, AB=エービー + 型. Kalau belum tahu, cek dulu sebelum wawancara. Kalau terpaksa: まだ調べたことがありません。すぐに調べます。",
+  [["O型[がた]の人[ひと]は、どんな性格[せいかく]だと言[い]われますか。", "Orang bergolongan darah O katanya berkepribadian seperti apa?"]]);
+q("karada", 1, "服[ふく]のサイズは何[なん]ですか。", "Ukuran baju Anda apa?",
+  [["服", "baju"], ["サイズ", "ukuran"], ["制服", "seragam"], ["作業着", "baju kerja"], ["S・M・L", "エス・エム・エル"]],
+  "Kolom 服 di CV. Perusahaan menyiapkan seragam/baju kerja (作業着) sebelum kamu datang, jadi ukurannya harus tepat.",
+  "Mサイズです。制服[せいふく]もMで大丈夫[だいじょうぶ]です。",
+  "Ukuran M. Seragam juga ukuran M tidak masalah.",
+  "Ukuran Jepang cenderung lebih kecil dari ukuran Indonesia — kalau ragu, sebutkan: Mですが、日本のサイズならLかもしれません。",
+  [["ズボンのサイズは分[わ]かりますか。", "Tahu ukuran celana Anda?"]]);
+q("karada", 2, "腰回[こしまわ]り（ウエスト）は何[なん]センチですか。", "Lingkar pinggang Anda berapa sentimeter?",
+  [["腰回り", "lingkar pinggang"], ["ウエスト", "pinggang (waist)"], ["腰", "pinggang"], ["センチ", "sentimeter"], ["ズボン", "celana"]],
+  "Kolom 腰 di CV. Dipakai untuk menyiapkan celana seragam/baju kerja.",
+  "腰回[こしまわ]りは七十五[ななじゅうご]センチです。",
+  "Lingkar pinggang saya 75 cm.",
+  "Ukur dulu sebelum wawancara dan samakan dengan CV. Kalau tahu ukuran celana dalam inci: ウエストは三十インチです。 Ingat 七十 dibaca ななじゅう, bukan しちじゅう.",
+  [["体重[たいじゅう]は変[か]わりましたか。", "Apakah berat badan Anda berubah?"]]);
+q("karada", 1, "靴[くつ]のサイズは何[なん]センチですか。", "Ukuran sepatu Anda berapa sentimeter?",
+  [["靴", "sepatu"], ["安全靴", "sepatu safety"], ["センチ", "sentimeter (ukuran sepatu Jepang)"], ["〜センチ半", "… setengah cm (mis. 23,5)"]],
+  "Perusahaan menyiapkan sepatu kerja / sepatu safety (安全靴). Di Jepang ukuran sepatu memakai SENTIMETER, bukan nomor 37–43.",
+  "二十三[にじゅうさん]センチ半[はん]です。インドネシアのサイズでは三十七[さんじゅうなな]です。",
+  "Ukuran 23,5 cm. Kalau ukuran Indonesia, nomor 37.",
+  "Hafalkan konversi kasar: 36=23, 37=23.5, 38=24, 39=24.5, 40=25, 41=25.5〜26, 42=26.5, 43=27 (センチ). 23.5 dibaca にじゅうさんセンチはん atau にじゅうさんてんご.",
+  [["安全靴[あんぜんぐつ]を履[は]いたことがありますか。", "Pernah memakai sepatu safety?"]]);
+q("karada", 2, "利[き]き手[て]はどちらですか。", "Tangan dominan Anda yang mana?",
+  [["利き手", "tangan dominan"], ["右利き", "tidak kidal (kanan)"], ["左利き", "kidal"], ["両手", "kedua tangan"]],
+  "Kadang ditanyakan untuk pekerjaan yang memakai alat/mesin. Jawaban singkat saja.",
+  "右利[みぎき]きです。",
+  "Saya tidak kidal (tangan kanan).",
+  "Kalau kidal: 左利きですが、右手も使えます。 (Saya kidal, tapi bisa pakai tangan kanan juga.)");
 
 /* ---------------- 家族構成 ---------------- */
 q("kazoku", 1, "家族構成[かぞくこうせい]を教[おし]えてください。", "Tolong jelaskan susunan keluarga Anda.",
