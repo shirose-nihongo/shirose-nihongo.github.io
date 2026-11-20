@@ -8,9 +8,9 @@
  * Simpan: Firestore siswa/{uid}/mensetsu_persiapan/{bidang} (+ cadangan localStorage)
  * Global: window.MS (dipakai onclick di HTML)
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js?v=20261120cv";
-import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ } from "./mensetsu-prep.js?v=20261120cv";
-import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261120cv";
+import * as EN from "./mensetsu-engine.js?v=20261120cv2";
+import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ, fz } from "./mensetsu-prep.js?v=20261120cv2";
+import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261120cv2";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
 import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261118s";
 
@@ -56,7 +56,7 @@ const BIDANG = {
   recycling: { jp: "資源循環", id: "Recycling", emoji: "♻️", co: "リサイクル会社", c: ["#4ade80", "#14532d"] },
   aviation: { jp: "航空", id: "Aviation", emoji: "✈️", co: "空港・航空会社", c: ["#7dd3fc", "#0c4a6e"] },
   // Bukan bidang SSW: pertanyaan seputar isi CV (履歴書) — berlaku untuk semua bidang, selalu terbuka.
-  rirekisho: { jp: "履歴書", id: "Pertanyaan CV (Rirekisho)", emoji: "📄", co: "受け入れ企業", c: ["#f9a8d4", "#be185d"], umum: true },
+  rirekisho: { jp: "履歴書", id: "Pertanyaan CV (Rirekisho)", emoji: "📄", co: "受け入れ企業", c: ["#f9a8d4", "#be185d"], umum: true, jf: "履歴書[りれきしょ]" },
 };
 const ORDER = Object.keys(BIDANG).filter(k => !BIDANG[k].umum);
 const MODE = {
@@ -160,8 +160,8 @@ async function renderHub() {
       <p>Pilih bidang SSW. Setiap bidang punya bank pertanyaan sendiri — fokus pada pertanyaan wawancara dasar, bukan materi teknis.</p></div>
     <button class="ms-cvcard" onclick="route('mensetsu-bidang/rirekisho')">
       <span class="ms-cv-ico">📄</span>
-      <span class="ms-cv-txt"><span class="ms-isl-jp">履歴書についての質問</span><b>Pertanyaan tentang CV (Rirekisho)</b>
-        <small>家族構成・長所・短所・学歴・職歴・アピール… pertanyaan yang ditanyakan pewawancara dari isi CV-mu. Untuk semua bidang.</small></span>
+      <span class="ms-cv-txt"><span class="ms-isl-jp">${fz("履歴書[りれきしょ]についての質問[しつもん]")}</span><b>Pertanyaan tentang CV (Rirekisho)</b>
+        <small>${fz("家族構成[かぞくこうせい]・長所[ちょうしょ]・短所[たんしょ]・学歴[がくれき]・職歴[しょくれき]・アピール")}… pertanyaan yang ditanyakan pewawancara dari isi CV-mu. Untuk semua bidang.</small></span>
       <span class="ms-isl-st ok">${jml.rirekisho ? `✓ ${jml.rirekisho} soal` : "Buka"}</span>
     </button>
     <div class="ms-grid">${cards}</div>
@@ -190,7 +190,7 @@ async function renderBidang(p) {
     <div class="ms-crumbs"><a onclick="route('mensetsu')">MENSETSU</a> › <b>${b.id}</b></div>
     <div class="ms-bhead" style="--c1:${b.c[0]};--c2:${b.c[1]}">
       <span class="ms-isl-art sm">${islandSvg(key)}</span>
-      <div><div class="ms-isl-jp">${b.jp}</div><h1>${b.id}</h1><p>${bank.soal.length} ${b.umum ? "pertanyaan wawancara tentang isi CV (履歴書) — cocok untuk semua bidang" : "pertanyaan wawancara khusus bidang ini"}</p></div>
+      <div><div class="ms-isl-jp">${fz(b.jf, b.jp)}</div><h1>${b.id}</h1><p>${bank.soal.length} ${b.umum ? "pertanyaan wawancara tentang isi CV (履歴書) — cocok untuk semua bidang" : "pertanyaan wawancara khusus bidang ini"}</p></div>
     </div>
     <section class="ms-panel"><h2>Pilih yang ingin kamu lakukan</h2>
       <div class="ms-modes">
@@ -211,7 +211,7 @@ async function renderBank(p) {
   const bank = await EN.loadBank(key).catch(() => null);
   if (!bank) return `<div class="ms-wrap"><div class="panel"><h2>Bank soal belum tersedia</h2></div></div>`;
   const CK = EN.catsOf(bank); if (!CK.some(x => x.k === BANKCAT)) BANKCAT = CK[0].k;
-  const tabs = CK.map(x => `<button class="ms-chip ${BANKCAT === x.k ? "on" : ""}" onclick="MS.bankCat('${x.k}')">${x.jp} <small>${bank.soal.filter(q => q.k === x.k).length}</small></button>`).join("");
+  const tabs = CK.map(x => `<button class="ms-chip ${BANKCAT === x.k ? "on" : ""}" onclick="MS.bankCat('${x.k}')">${fz(x.jf, x.jp)} <small>${bank.soal.filter(q => q.k === x.k).length}</small></button>`).join("");
   const lvl = ["", "Mudah", "Sedang", "Sulit"];
   const list = bank.soal.filter(q => q.k === BANKCAT).map(q => `
     <details class="ms-q">
@@ -219,18 +219,18 @@ async function renderBank(p) {
         <button class="ms-say" onclick="event.stopPropagation(); MS.say(this)" data-t="${esc(q.ja)}" title="Dengarkan">🔊</button></summary>
       <div class="ms-q-body">
         <p class="ms-q-id">${esc(q.id)}</p>
-        <h4>Kosakata penting</h4><ul class="ms-voc">${q.v.map(([j, i]) => `<li><b>${esc(j)}</b> — ${esc(i)}</li>`).join("")}</ul>
-        <h4>Maksud pertanyaan</h4><p>${esc(q.m)}</p>
+        <h4>Kosakata penting</h4><ul class="ms-voc">${q.v.map(([j, i], n) => `<li><b>${fz(q.vf && q.vf[n], j)}</b> — ${esc(i)}</li>`).join("")}</ul>
+        <h4>Maksud pertanyaan</h4><p>${fz(q.mf, q.m)}</p>
         <h4>Contoh jawaban <small>(referensi, jangan dihafal mentah-mentah)</small></h4>
         <p class="ms-ans">${ajh(q)} <button class="ms-say" onclick="MS.say(this)" data-t="${esc(q.aj)}" title="Dengarkan">🔊</button></p>
         <p class="ms-ans-id">${esc(q.ai)}</p>
-        <h4>Yang ingin diketahui pewawancara</h4><p>${esc(q.c)}</p>
+        <h4>Yang ingin diketahui pewawancara</h4><p>${fz(q.cf, q.c)}</p>
         ${q.f && q.f.length ? `<h4>Pertanyaan lanjutan yang mungkin muncul</h4><ul class="ms-voc">${q.f.map(x => `<li><b>${furiQ() && x.jf ? furiHtml(x.jf) : esc(x.ja)}</b> — ${esc(x.id)}</li>`).join("")}</ul>` : ""}
       </div>
     </details>`).join("");
   return `<div class="ms-wrap">
     <div class="ms-crumbs"><a onclick="route('mensetsu')">MENSETSU</a> › <a onclick="route('mensetsu-bidang/${key}')">${b.id}</a> › <b>Bank soal</b></div>
-    <div class="ms-head compact"><div class="jp">${b.jp}</div><h1>Bank soal · ${b.id}</h1></div>
+    <div class="ms-head compact"><div class="jp">${fz(b.jf, b.jp)}</div><h1>Bank soal · ${b.id}</h1></div>
     <div class="ms-chips">${tabs}${furiToggleHtml()}</div>
     <div class="ms-qlist">${list}</div>
     <div class="ms-actions"><button class="btn big" onclick="route('mensetsu-persiapan/${key}')">✍️ Siapkan jawabanku</button></div>

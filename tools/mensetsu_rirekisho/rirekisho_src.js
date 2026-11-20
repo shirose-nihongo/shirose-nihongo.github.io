@@ -35,7 +35,7 @@ q("jiko", 1, "生年月日[せいねんがっぴ]と年齢[ねんれい]を教[�
   "Mengecek kecocokan dengan CV dan kemampuan menyebut angka/tanggal dalam bahasa Jepang.",
   "2004年[ねん]3月[がつ]15日[にち]に生[う]まれました。今[いま]、二十二歳[にじゅうにさい]です。",
   "Saya lahir tanggal 15 Maret 2004. Sekarang usia saya 22 tahun.",
-  "Latih cara baca tanggal: 一日(ついたち), 二日(ふつか), 三日(みっか), 四日(よっか), 八日(ようか), 十日(とおか), 二十日(はつか). Jangan salah urutan: tahun → bulan → tanggal.");
+  "Latih cara baca tanggal: 一日・二日・三日・四日・八日・十日・二十日. Jangan salah urutan: tahun → bulan → tanggal.");
 q("jiko", 1, "出身地[しゅっしんち]はどこですか。どんな所[ところ]ですか。", "Dari mana asal Anda? Tempat seperti apa itu?",
   [["出身地", "daerah asal"], ["〜州", "provinsi …"], ["有名", "terkenal"], ["涼しい", "sejuk"]],
   "Kolom 出身地 di CV. Pewawancara ingin obrolan ringan dan melihat apakah kamu bisa menjelaskan sesuatu dengan sederhana.",
@@ -61,7 +61,7 @@ q("jiko", 2, "身長[しんちょう]と体重[たいじゅう]はどのくら�
   "Ada di CV (untuk ukuran seragam & pekerjaan fisik). Mengecek kemampuan menyebut angka.",
   "身長[しんちょう]は百五十五[ひゃくごじゅうご]センチで、体重[たいじゅう]は四十九[よんじゅうきゅう]キロです。",
   "Tinggi badan saya 155 cm dan berat badan 49 kg.",
-  "Jawab langsung dengan angka yang sama seperti di CV. Latih angka ratusan: 百五十(ひゃくごじゅう), 百六十(ひゃくろくじゅう).");
+  "Jawab langsung dengan angka yang sama seperti di CV. Latih angka ratusan: 百五十・百六十.");
 q("jiko", 2, "履歴書[りれきしょ]は自分[じぶん]で書[か]きましたか。", "Apakah CV ini Anda tulis sendiri?",
   [["履歴書", "CV / daftar riwayat hidup"], ["自分で", "sendiri"], ["先生に手伝ってもらう", "dibantu guru"]],
   "Pewawancara ingin tahu apakah kamu benar-benar memahami isi CV-mu. Jawablah jujur.",

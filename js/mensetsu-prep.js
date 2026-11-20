@@ -4,7 +4,7 @@
  * Simpan: Firestore siswa/{uid}/mensetsu_persiapan/{bidang} (+ cadangan localStorage)
  * Suara : speechSynthesis ja-JP milik browser/HP (gratis, tanpa API)
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js?v=20261120cv";
+import * as EN from "./mensetsu-engine.js?v=20261120cv2";
 
 let X = null;   // konteks dari mensetsu.js
 export function initPrep(ctx) { X = ctx; }
@@ -87,6 +87,8 @@ const hasKanji = (t) => /[㐀-鿿]/.test(t);
 /* Furigana pertanyaan & contoh jawaban: data statis (jf/ajf), tanpa AI. Bawaan: HIDUP. */
 export const furiQ = () => X.LS.get("shirose-mensetsu-furi", true) !== false;
 export const qj = (q) => (furiQ() && q.jf ? furiHtml(q.jf) : esc(q.ja));
+/** Teks bermarkup furigana (kanji[baca]) bila ada & furigana hidup; selain itu teks polos. */
+export const fz = (m, plain) => (furiQ() && m ? furiHtml(m) : esc(plain ?? stripFuri(m || "")));
 export const ajh = (q) => (furiQ() && q.ajf ? furiHtml(q.ajf) : esc(q.aj || "—"));
 export const furiToggleHtml = () => `<label class="ck ms-furi-tg"><input type="checkbox" ${furiQ() ? "checked" : ""} onchange="PP.furiQ(this.checked)"/> ふりがな</label>`;
 
@@ -200,7 +202,7 @@ export async function renderPersiapan(p) {
   const b = X.BIDANG[key]; const { bank, data } = P; const cats = EN.catsOf(P.bank).filter(c => c.k !== "saigo");
   const jiko = jikoOf(bank);
   const filled = data.order.filter(i => aktif(data.answers[i]).trim()).length;
-  const chips = [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
+  const chips = [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${fz(c.jf, c.jp)} <small>${bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
   const pool = bank.soal.filter(q => q.k !== "saigo" && (P.cat === "semua" || q.k === P.cat));
   const checklist = pool.map(q => {
     const on = data.sel.includes(q.i); const lock = jiko && q.i === jiko.i;
@@ -548,7 +550,7 @@ async function pmData(key) {
 }
 function chipsHtml() {
   const cats = EN.catsOf(P.bank).filter(c => c.k !== "saigo");
-  return [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${P.bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
+  return [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${fz(c.jf, c.jp)} <small>${P.bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
 }
 function checkHtml() {
   const jiko = jikoOf(P.bank);
