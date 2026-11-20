@@ -11,9 +11,10 @@
 > 株式会社みどり商事　営業部　田中様  
 > いつもお世話になっております。先日ご注文いただいた事務用のいす二十脚ですが、工場の都合により、お届けが予定より一週間遅れて、来月十日になります。大変申し訳ございません。もしお急ぎの場合は、在庫がある別の色のいすでしたら、予定どおりお届けできます。ご希望をお知らせください。  
 > ひかり家具　山本  
-> なお、別の色のいすの写真は、このメールに付けてお送りします。
+> なお、別の色のいすの写真は、このメールに付けてお送りします。  
+> どうぞよろしくお願いいたします。
 
-<sub>Kepada Tanaka: 20 kursi kantor yang dipesan terlambat seminggu karena kondisi pabrik, menjadi tanggal 10 bulan depan. Mohon maaf. Jika mendesak, kursi warna lain yang ada di gudang bisa dikirim sesuai jadwal. Mohon beri tahu keinginan Anda. — Hikari Furniture, Yamamoto Foto kursi warna lain dilampirkan di email ini.</sub>
+<sub>Kepada Tanaka: 20 kursi kantor yang dipesan terlambat seminggu karena kondisi pabrik, menjadi tanggal 10 bulan depan. Mohon maaf. Jika mendesak, kursi warna lain yang ada di gudang bisa dikirim sesuai jadwal. Mohon beri tahu keinginan Anda. — Hikari Furniture, Yamamoto Foto kursi warna lain dilampirkan di email ini. Mohon kerja samanya.</sub>
 
 **48. このメールで、山本さんが田中さんに一番伝えたいことは何か。**
 
@@ -30,10 +31,10 @@
   - D. 別の色のいすを注文してほしい — Salah. Hanya ditawarkan sebagai pilihan, bukan diminta.
 
 > **Teks pendek (内容理解・短文)**  
-> 最近、駅や店で「セルフレジ」を見かけることが多くなった。客が自分で商品の値段を読み取って、お金を払うしくみだ。店にとっては働く人が少なくてすむし、客にとっても並ぶ時間が短くなる。しかし、使い方がわからなくて困っているお年寄りもよく見かける。便利な機械を増やすだけでなく、近くで手伝う人を一人置くなど、だれもが安心して使えるようにすることも必要ではないだろうか。  
+> 最近、駅や店で「セルフレジ」を見かけることが多くなった。客が自分で商品の値段を読み取って、お金を払うしくみだ。店にとっては働く人が少なくてすむし、客にとっても並ぶ時間が短くなる。しかし、使い方がわからなくて困っているお年寄りもよく見かける。便利な機械を増やすだけでなく、近くで手伝う人を一人置くなど、だれもが安心して使えるようにすることも必要ではないだろうか。実際、機械の前で何度も止まってしまい、後ろに並ぶ人に気を使って、あせってしまう人もいる。  
 > 機械がどんなに便利になっても、それを使うのは人間なのだから。
 
-<sub>Belakangan kasir swalayan makin sering terlihat di stasiun dan toko: pelanggan memindai harga sendiri dan membayar. Bagi toko pegawai lebih sedikit, bagi pelanggan antrean lebih singkat. Tetapi sering terlihat lansia kebingungan cara memakainya. Bukankah selain menambah mesin praktis, perlu juga misalnya menempatkan satu orang yang membantu di dekatnya agar semua orang bisa memakainya dengan tenang? Sebab, sepraktis apa pun mesinnya, yang memakainya tetap manusia.</sub>
+<sub>Belakangan kasir swalayan makin sering terlihat di stasiun dan toko: pelanggan memindai harga sendiri dan membayar. Bagi toko pegawai lebih sedikit, bagi pelanggan antrean lebih singkat. Tetapi sering terlihat lansia kebingungan cara memakainya. Ada pula orang yang berkali-kali berhenti di depan mesin dan jadi panik karena sungkan pada orang yang antre di belakang. Bukankah selain menambah mesin praktis, perlu juga misalnya menempatkan satu orang yang membantu di dekatnya agar semua orang bisa memakainya dengan tenang? Sebab, sepraktis apa pun mesinnya, yang memakainya tetap manusia.</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -53,9 +54,10 @@
 > マンション住民の皆様へ  
 > 来月から、粗大ごみの出し方が変わります。これまでは毎月第一月曜日に回収していましたが、来月からは事前に市のホームページか電話で申し込んだ人だけが出せるようになります。申し込みをすると、回収日と料金が知らされます。料金分のシールをコンビニで買って、ごみにはってから出してください。  
 > 管理組合  
-> 申し込みをしないで出された粗大ごみは回収されませんので、ご注意ください。
+> 申し込みをしないで出された粗大ごみは回収されませんので、ご注意ください。  
+> ご不明な点は、管理人室までお問い合わせください。ご迷惑をおかけしますが、よろしくお願いします。
 
-<sub>Untuk penghuni: mulai bulan depan cara membuang sampah besar berubah. Selama ini diangkut setiap Senin pertama, mulai bulan depan hanya yang mendaftar lebih dulu lewat website atau telepon kota yang boleh membuang. Setelah mendaftar diberi tahu tanggal angkut dan tarifnya. Beli stiker seharga tarif di minimarket, tempelkan, lalu buang. — Pengurus Perhatikan: sampah besar yang dibuang tanpa mendaftar tidak akan diangkut.</sub>
+<sub>Untuk penghuni: mulai bulan depan cara membuang sampah besar berubah. Selama ini diangkut setiap Senin pertama, mulai bulan depan hanya yang mendaftar lebih dulu lewat website atau telepon kota yang boleh membuang. Setelah mendaftar diberi tahu tanggal angkut dan tarifnya. Beli stiker seharga tarif di minimarket, tempelkan, lalu buang. — Pengurus Perhatikan: sampah besar yang dibuang tanpa mendaftar tidak akan diangkut. Bila ada yang kurang jelas, tanyakan ke ruang pengelola. Mohon maaf atas ketidaknyamanan.</sub>
 
 **50. 来月から粗大ごみを出したい人は、まず何をしなければならないか。**
 
@@ -76,11 +78,11 @@
 > ゼミの学生の机の上に、このメモが置いてある。  
 >   
 > 林さんへ  
-> 来週の発表の資料、読みました。内容はよくまとまっていると思います。ただ、グラフの数字が古いので、最新のデータに直してください。それから、発表時間は十五分なので、今のままだと少し長すぎます。最後の部分を短くしてみてください。直したら、金曜日までにメールで送ってくれれば、もう一度見ます。  
+> 来週の発表の資料、読みました。内容はよくまとまっていると思います。ただ、グラフの数字が古いので、最新のデータに直してください。それから、発表時間は十五分なので、今のままだと少し長すぎます。最後の部分を短くしてみてください。直したら、金曜日までにメールで送ってくれれば、もう一度見ます。お忙しいところすみませんが、よろしくお願いします。  
 > 佐々木  
 > グラフのデータは、大学の図書館のデータベースで調べられます。
 
-<sub>Untuk Hayashi: saya sudah membaca materi presentasi minggu depan. Isinya tersusun rapi. Hanya saja angka grafiknya lama, perbarui dengan data terbaru. Waktu presentasi 15 menit, kalau begini agak terlalu panjang; coba pendekkan bagian akhir. Setelah diperbaiki, kirim lewat email paling lambat Jumat, akan saya lihat lagi. — Sasaki Data grafik bisa dicari di basis data perpustakaan kampus.</sub>
+<sub>Untuk Hayashi: saya sudah membaca materi presentasi minggu depan. Isinya tersusun rapi. Hanya saja angka grafiknya lama, perbarui dengan data terbaru. Waktu presentasi 15 menit, kalau begini agak terlalu panjang; coba pendekkan bagian akhir. Setelah diperbaiki, kirim lewat email paling lambat Jumat, akan saya lihat lagi. Maaf mengganggu kesibukan Anda, mohon bantuannya. — Sasaki Data grafik bisa dicari di basis data perpustakaan kampus.</sub>
 
 **51. このメモを読んで、林さんがしなければならないことは何か。**
 
@@ -152,9 +154,9 @@
 > そんな私が本を好きになったのは、中学二年生のときである。担任の先生が、授業の最初の十分間、毎日本を読んでくれたのだ。先生が選ぶ本は、冒険の話もあれば、短い詩もあった。先生はいつも、一番おもしろいところで読むのをやめて、「続きは図書室にあるよ」と言った。①私は続きが気になって、しかたなく図書室に行った。  
 > 最初は先生が読んだ本の続きだけを読んでいたが、そのうち、同じ作家のほかの本も手に取るようになった。一冊読み終わるたびに、自分が少し遠くまで旅をしてきたような気持ちになった。  
 > 大人になった今、私は小学校の先生をしている。そして、私も毎朝、子どもたちに本を読んでいる。もちろん、一番おもしろいところで止めるのも忘れない。子どもたちは「えー」と言って不満そうな顔をするが、休み時間になると、何人かが図書室へ走っていく。  
-> 本を好きになるかどうかは、②最初の一冊との出会い方で決まるのではないかと私は思う。「読みなさい」と言われて読む本は、なかなかおもしろく感じられない。読みたいという気持ちが自然にわいてくるような出会いを、これからも子どもたちに用意していきたい。
+> 本を好きになるかどうかは、②最初の一冊との出会い方で決まるのではないかと私は思う。「読みなさい」と言われて読む本は、なかなかおもしろく感じられない。子どものころの私のように、本が嫌いな子どもは、きっとクラスにもいるはずだ。読みたいという気持ちが自然にわいてくるような出会いを、これからも子どもたちに用意していきたい。
 
-<sub>Waktu kecil saya sangat benci membaca; melihat deretan huruf saja sudah mengantuk, dan laporan buku liburan musim panas saya tulis hanya dengan membaca awal dan akhir buku. Saya mulai suka buku di kelas 2 SMP: wali kelas setiap hari membacakan buku di 10 menit awal pelajaran — cerita petualangan maupun puisi pendek — dan selalu berhenti di bagian paling seru sambil berkata 'lanjutannya ada di perpustakaan'. ① Karena penasaran, saya terpaksa pergi ke perpustakaan. Awalnya hanya membaca lanjutan buku itu, lalu mulai mengambil buku lain dari penulis yang sama; setiap selesai satu buku saya merasa seperti habis bepergian jauh. Kini saya guru SD dan setiap pagi membacakan buku untuk anak-anak, tentu tidak lupa berhenti di bagian paling seru. Anak-anak berseru kecewa, tetapi saat istirahat beberapa berlari ke perpustakaan. Saya rasa suka atau tidaknya seseorang pada buku ditentukan oleh ② cara bertemu dengan buku pertamanya. Buku yang dibaca karena disuruh sulit terasa menarik. Saya ingin terus menyiapkan pertemuan yang membuat keinginan membaca tumbuh dengan sendirinya.</sub>
+<sub>Waktu kecil saya sangat benci membaca; melihat deretan huruf saja sudah mengantuk, dan laporan buku liburan musim panas saya tulis hanya dengan membaca awal dan akhir buku. Saya mulai suka buku di kelas 2 SMP: wali kelas setiap hari membacakan buku di 10 menit awal pelajaran — cerita petualangan maupun puisi pendek — dan selalu berhenti di bagian paling seru sambil berkata 'lanjutannya ada di perpustakaan'. ① Karena penasaran, saya terpaksa pergi ke perpustakaan. Awalnya hanya membaca lanjutan buku itu, lalu mulai mengambil buku lain dari penulis yang sama; setiap selesai satu buku saya merasa seperti habis bepergian jauh. Kini saya guru SD dan setiap pagi membacakan buku untuk anak-anak, tentu tidak lupa berhenti di bagian paling seru. Anak-anak berseru kecewa, tetapi saat istirahat beberapa berlari ke perpustakaan. Saya rasa suka atau tidaknya seseorang pada buku ditentukan oleh ② cara bertemu dengan buku pertamanya. Buku yang dibaca karena disuruh sulit terasa menarik. Anak yang tak suka buku seperti saya dulu pasti ada juga di kelas. Saya ingin terus menyiapkan pertemuan yang membuat keinginan membaca tumbuh dengan sendirinya.</sub>
 
 **55. ＿①私は続きが気になって、しかたなく図書室に行った＿とあるが、なぜ「しかたなく」なのか。**
 
@@ -224,9 +226,16 @@
 > ・申し込みは9月1日から15日まで、市のホームページで受け付けます。定員を超えた場合は抽選です。  
 > ・Cはカメラかスマートフォンを各自持ってきてください。  
 > ・受講料は、抽選の結果が届いてから一週間以内に、市役所の窓口か銀行で払ってください。  
-> ・一回目の講座を休んだ場合でも、受講料は返しません。
+> ・一回目の講座を休んだ場合でも、受講料は返しません。  
+> ・申し込みの結果は、9月20日ごろ、はがきでお知らせします。  
+> ・Aでは、自分のスマートフォンを使って練習します。持っていない人は、貸し出しもできます（無料）。  
+> ・Dは、雨の日も行います。ただし、台風などのときは、前の日にお知らせします。  
+> ・Bは、作った和菓子を持って帰って、家で食べることができます。  
+> ・どの講座も、途中で休んでも、次の回から参加できます。  
+> ・駐車場はありませんので、バスか電車で来てください。  
+> ・見学や体験をしたい人は、講座の始まる前に、市民大学の事務室に来てください。
 
-<sub>Kursus musim gugur universitas warga kota Sakura: A kelas ponsel (Sel 10.00–11.30, 4x, 2.000 yen, 15 orang); B membuat wagashi (Sab 13–15, 3x, 4.500 yen termasuk bahan, 12 orang); C fotografi pemula (Kam 19.00–20.30, 5x, 3.000 yen, 20 orang); D jalan menyusuri sejarah lokal (Min 9–12, 3x, 1.500 yen, 25 orang). Untuk warga atau yang bekerja/sekolah di kota Sakura. Usia 65+ biaya setengah (tidak termasuk bahan; bahan B 500 yen per kali). Daftar 1–15 September lewat website kota; jika melebihi kuota diundi. C bawa kamera atau ponsel sendiri. Biaya kursus dibayar di loket balai kota atau bank dalam seminggu setelah hasil undian diterima. Biaya tidak dikembalikan meski absen di pertemuan pertama.</sub>
+<sub>Kursus musim gugur universitas warga kota Sakura: A kelas ponsel (Sel 10.00–11.30, 4x, 2.000 yen, 15 orang); B membuat wagashi (Sab 13–15, 3x, 4.500 yen termasuk bahan, 12 orang); C fotografi pemula (Kam 19.00–20.30, 5x, 3.000 yen, 20 orang); D jalan menyusuri sejarah lokal (Min 9–12, 3x, 1.500 yen, 25 orang). Untuk warga atau yang bekerja/sekolah di kota Sakura. Usia 65+ biaya setengah (tidak termasuk bahan; bahan B 500 yen per kali). Daftar 1–15 September lewat website kota; jika melebihi kuota diundi. C bawa kamera atau ponsel sendiri. Biaya kursus dibayar di loket balai kota atau bank dalam seminggu setelah hasil undian diterima. Biaya tidak dikembalikan meski absen di pertemuan pertama. Hasil pendaftaran diberitahukan lewat kartu pos sekitar 20 September. Di A, berlatih memakai ponsel sendiri; yang tak punya bisa meminjam (gratis). D tetap berjalan saat hujan; bila badai, diberitahukan sehari sebelumnya. Di B, kue Jepang yang dibuat bisa dibawa pulang. Di kursus mana pun, meski absen, bisa ikut lagi dari pertemuan berikutnya. Tak ada parkir; datanglah dengan bus atau kereta. Yang ingin melihat atau mencoba, datanglah ke kantor universitas warga sebelum kursus dimulai.</sub>
 
 **59. さくら市の会社に通っている会社員のリンさん（30歳）は、平日は午後六時まで仕事がある。週末は日曜日しか空いていない。受けられる講座はどれか。**
 
@@ -261,9 +270,9 @@
 ## Paket 02 (13 soal)
 
 > **Teks pendek (内容理解・短文)**  
-> 「早起きは三文の得」ということわざがある。早く起きると、少しだけいいことがあるという意味だ。私も去年から、毎朝五時に起きるようにしている。最初はつらかったが、朝の静かな時間に本を読んだり、その日の予定を考えたりできるので、一日を落ち着いて始められるようになった。ただ、無理に早く起きて、昼間に眠くなっては意味がない。大切なのは、何時に起きるかより、自分に合った生活のリズムを作ることだと思う。
+> 「早起きは三文の得」ということわざがある。早く起きると、少しだけいいことがあるという意味だ。私も去年から、毎朝五時に起きるようにしている。最初はつらかったが、朝の静かな時間に本を読んだり、その日の予定を考えたりできるので、一日を落ち着いて始められるようになった。ただ、無理に早く起きて、昼間に眠くなっては意味がない。実際、早く起きるために夜の十時に寝ると、家族と過ごす時間が短くなってしまう人もいる。大切なのは、何時に起きるかより、自分に合った生活のリズムを作ることだと思う。
 
-<sub>Ada peribahasa 'bangun pagi untung tiga mon' — bangun pagi membawa sedikit keuntungan. Sejak tahun lalu saya bangun jam 5 setiap pagi; awalnya berat, tetapi karena bisa membaca dan memikirkan jadwal di pagi yang tenang, saya bisa memulai hari dengan tenang. Namun tidak ada artinya memaksa bangun pagi lalu mengantuk di siang hari. Yang penting bukan jam berapa bangun, tetapi membuat ritme hidup yang cocok untuk diri sendiri.</sub>
+<sub>Ada peribahasa 'bangun pagi untung tiga mon' — bangun pagi membawa sedikit keuntungan. Sejak tahun lalu saya bangun jam 5 setiap pagi; awalnya berat, tetapi karena bisa membaca dan memikirkan jadwal di pagi yang tenang, saya bisa memulai hari dengan tenang. Namun tidak ada artinya memaksa bangun pagi lalu mengantuk di siang hari. Ada pula orang yang tidur pukul 10 malam agar bisa bangun pagi sehingga waktu bersama keluarga jadi pendek. Yang penting bukan jam berapa bangun, tetapi membuat ritme hidup yang cocok untuk diri sendiri.</sub>
 
 **48. 筆者の考えに合うものはどれか。**
 
@@ -306,9 +315,10 @@
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 中央図書館からのお知らせ  
 > 中央図書館は、建物の工事のため、十二月一日から来年二月末まで休館します。休館中は、本の貸し出しと返却は、駅前の分館で行います。また、インターネットで予約した本も、分館で受け取ることができます。なお、休館中に返却期限が来る本は、期限を三月十五日まで延長しますので、急いで返す必要はありません。  
-> 分館の開館時間は午前十時から午後六時までで、月曜日は休みです。
+> 分館の開館時間は午前十時から午後六時までで、月曜日は休みです。  
+> ご不明な点は、中央図書館の受付までお問い合わせください。ご迷惑をおかけしますが、よろしくお願いします。
 
-<sub>Pemberitahuan perpustakaan pusat: tutup 1 Desember sampai akhir Februari tahun depan karena renovasi. Selama tutup, peminjaman dan pengembalian di cabang depan stasiun; buku yang dipesan lewat internet juga bisa diambil di cabang. Buku yang batas kembalinya jatuh selama penutupan diperpanjang sampai 15 Maret, jadi tidak perlu buru-buru dikembalikan. Cabang buka jam 10.00–18.00, tutup hari Senin.</sub>
+<sub>Pemberitahuan perpustakaan pusat: tutup 1 Desember sampai akhir Februari tahun depan karena renovasi. Selama tutup, peminjaman dan pengembalian di cabang depan stasiun; buku yang dipesan lewat internet juga bisa diambil di cabang. Buku yang batas kembalinya jatuh selama penutupan diperpanjang sampai 15 Maret, jadi tidak perlu buru-buru dikembalikan. Cabang buka jam 10.00–18.00, tutup hari Senin. Bila ada yang kurang jelas, tanyakan ke resepsionis perpustakaan pusat. Mohon maaf atas ketidaknyamanan.</sub>
 
 **50. このお知らせから、休館中についてわかることは何か。**
 
@@ -329,11 +339,11 @@
 > 課長から部下の机に置かれたメモである。  
 >   
 > キムさん  
-> 明日の会議で使う売り上げの表、ありがとう。わかりやすくできていました。一つだけお願いがあります。先月の数字だけでなく、去年の同じ月の数字も並べてもらえますか。比べられるようにしたいので。会議は十時からなので、九時半までに二十部コピーして、会議室の机に置いておいてください。  
+> 明日の会議で使う売り上げの表、ありがとう。わかりやすくできていました。一つだけお願いがあります。先月の数字だけでなく、去年の同じ月の数字も並べてもらえますか。比べられるようにしたいので。会議は十時からなので、九時半までに二十部コピーして、会議室の机に置いておいてください。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。  
 > 中島  
 > 表の色は今のままで大丈夫です。
 
-<sub>Kim, terima kasih untuk tabel penjualan rapat besok, sangat mudah dipahami. Satu permintaan: selain angka bulan lalu, bisakah dijajarkan juga angka bulan yang sama tahun lalu agar bisa dibandingkan? Rapat jam 10, jadi fotokopi 20 rangkap paling lambat 9.30 dan taruh di meja ruang rapat. — Nakajima Warna tabel biarkan seperti sekarang.</sub>
+<sub>Kim, terima kasih untuk tabel penjualan rapat besok, sangat mudah dipahami. Satu permintaan: selain angka bulan lalu, bisakah dijajarkan juga angka bulan yang sama tahun lalu agar bisa dibandingkan? Rapat jam 10, jadi fotokopi 20 rangkap paling lambat 9.30 dan taruh di meja ruang rapat. Maaf mengganggu kesibukan Anda, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. — Nakajima Warna tabel biarkan seperti sekarang.</sub>
 
 **51. このメモを読んで、キムさんがしなければならないことは何か。**
 
@@ -476,9 +486,18 @@
 > おまかせ ｜ Lプラン＋箱づめ・片づけも全部 ｜ 60,000円 ｜ 70,000円 ｜ ・同じ市の中の引っ越しの料金です。ほかの市へは、10kmごとに3,000円かかります。  
 > ・段ボールは無料でお届けします。  
 > ・ご予約が引っ越しの日の一か月以上前の場合、料金が10％安くなります。  
-> ・エアコンの取り外しは、別に1台8,000円かかります。
+> ・エアコンの取り外しは、別に1台8,000円かかります。  
+> ・引っ越しの当日は、スタッフが三人で伺います。作業の時間は、荷物の量によって、二時間から五時間ぐらいです。  
+> ・ピアノや大きな金庫など、特別な荷物は、別の料金がかかります。ご予約のときに相談してください。  
+> ・お金は、引っ越しが終わったあと、その場で現金でお払いください。  
+> ・キャンセルする場合は、引っ越しの日の三日前まで無料です。それより後は、料金の半分がかかります。  
+> ・荷物がこわれたときは、お知らせください。保険で弁償します。  
+> ・土日祝日は、予約がいっぱいになりやすいので、早めにご連絡ください。  
+> ・段ボールの回収を希望する場合は、引っ越しの日から一週間以内に、ご連絡ください。  
+> ・引っ越しの日の天気が悪くても、作業は予定どおり行います。  
+> ・エレベーターのない建物では、3階以上の場合、追加料金が1,000円かかります。
 
-<sub>Paket pindahan perorangan Aoba Moving: S (≤10 kardus, tanpa perabot) hari kerja 15.000 / Sab-Min-libur 18.000 yen; M (≤20 kardus + ≤3 perabot kecil) 25.000 / 30.000 yen; L (≤30 kardus + semua perabot & elektronik) 40.000 / 48.000 yen; Serahkan-pada-kami (L + pengemasan & penataan) 60.000 / 70.000 yen. Tarif untuk pindahan dalam kota yang sama; ke kota lain tambah 3.000 yen per 10 km. Kardus diantar gratis. Reservasi lebih dari sebulan sebelumnya diskon 10%. Pelepasan AC tambah 8.000 yen per unit.</sub>
+<sub>Paket pindahan perorangan Aoba Moving: S (≤10 kardus, tanpa perabot) hari kerja 15.000 / Sab-Min-libur 18.000 yen; M (≤20 kardus + ≤3 perabot kecil) 25.000 / 30.000 yen; L (≤30 kardus + semua perabot & elektronik) 40.000 / 48.000 yen; Serahkan-pada-kami (L + pengemasan & penataan) 60.000 / 70.000 yen. Tarif untuk pindahan dalam kota yang sama; ke kota lain tambah 3.000 yen per 10 km. Kardus diantar gratis. Reservasi lebih dari sebulan sebelumnya diskon 10%. Pelepasan AC tambah 8.000 yen per unit. Pada hari pindahan, tiga staf datang; waktu kerja sekitar 2–5 jam tergantung jumlah barang. Barang khusus seperti piano dan brankas besar dikenai biaya terpisah; konsultasikan saat reservasi. Bayar tunai di tempat setelah pindahan selesai. Pembatalan gratis sampai tiga hari sebelumnya; setelah itu dikenai setengah biaya. Bila barang rusak, beri tahu kami; diganti dengan asuransi. Akhir pekan dan hari libur cepat penuh, jadi hubungi lebih awal. Bila ingin kardus dijemput, hubungi dalam seminggu sejak hari pindahan. Meski cuaca buruk di hari pindahan, pekerjaan tetap sesuai rencana. Untuk gedung tanpa lift, lantai 3 ke atas dikenai tambahan 1.000 yen.</sub>
 
 **59. 同じ市の中で、土曜日に引っ越す。段ボールは15箱で、小さい家具が2つある。予約は引っ越しの二か月前にする。料金はいくらか。**
 
@@ -518,9 +537,10 @@
 > 学生の皆さん  
 > 来月の校外学習は、雨の予報のため、行き先を山の公園から市内の科学館に変更します。集合時間と場所は変わらず、朝九時に学校の正門前です。科学館の入館料は学校が払いますが、昼食は各自で用意してください。科学館の中のレストランを使ってもかまいません。参加できない人は、今週の金曜日までに担任に知らせてください。  
 > 事務室  
-> なお、科学館では午後に特別な実験のショーを見る予定です。
+> なお、科学館では午後に特別な実験のショーを見る予定です。  
+> どうぞよろしくお願いします。
 
-<sub>Untuk siswa: karena prakiraan hujan, tujuan studi luar bulan depan diganti dari taman gunung ke museum sains kota. Waktu dan tempat kumpul tetap: jam 9 pagi di gerbang utama sekolah. Tiket museum dibayar sekolah, makan siang siapkan sendiri; boleh memakai restoran di dalam museum. Yang tidak bisa ikut, beri tahu wali kelas paling lambat Jumat ini. — Kantor Di museum, siang harinya dijadwalkan menonton pertunjukan eksperimen khusus.</sub>
+<sub>Untuk siswa: karena prakiraan hujan, tujuan studi luar bulan depan diganti dari taman gunung ke museum sains kota. Waktu dan tempat kumpul tetap: jam 9 pagi di gerbang utama sekolah. Tiket museum dibayar sekolah, makan siang siapkan sendiri; boleh memakai restoran di dalam museum. Yang tidak bisa ikut, beri tahu wali kelas paling lambat Jumat ini. — Kantor Di museum, siang harinya dijadwalkan menonton pertunjukan eksperimen khusus. Mohon kerja samanya.</sub>
 
 **48. このメールの内容と合っているものはどれか。**
 
@@ -537,10 +557,10 @@
   - D. 昼食は科学館のレストランで食べなければならない — Salah. Boleh, tetapi tidak wajib.
 
 > **Teks pendek (内容理解・短文)**  
-> 最近、仕事の合間に短い昼寝をする人が増えているという。昼ご飯のあと、十五分から二十分ほど目を閉じるだけで、午後の仕事がはかどるそうだ。社員のために昼寝用の部屋を作った会社もある。ただし、三十分以上眠ってしまうと、かえって頭がぼんやりして、夜も眠れなくなることがある。昼寝は「短く」がポイントなのだ。私も明日から、昼休みの最後の十五分、机で目を閉じてみようと思う。  
+> 最近、仕事の合間に短い昼寝をする人が増えているという。昼ご飯のあと、十五分から二十分ほど目を閉じるだけで、午後の仕事がはかどるそうだ。社員のために昼寝用の部屋を作った会社もある。ただし、三十分以上眠ってしまうと、かえって頭がぼんやりして、夜も眠れなくなることがある。昼寝は「短く」がポイントなのだ。私も明日から、昼休みの最後の十五分、机で目を閉じてみようと思う。短い昼寝のあとは、気持ちもすっきりして、人との会話も楽しくなるという人もいる。  
 > 忙しい人ほど、短い休みを上手に取ることが大切なのかもしれない。
 
-<sub>Katanya makin banyak orang tidur siang singkat di sela pekerjaan. Hanya memejamkan mata 15–20 menit setelah makan siang membuat pekerjaan sore lebih lancar; ada perusahaan yang membuat ruang tidur siang untuk karyawan. Namun jika tertidur lebih dari 30 menit, kepala justru jadi linglung dan malam bisa sulit tidur. Kuncinya 'singkat'. Mulai besok saya pun akan mencoba memejamkan mata di meja 15 menit terakhir istirahat siang. Mungkin justru orang sibuk yang perlu pandai mengambil istirahat singkat.</sub>
+<sub>Katanya makin banyak orang tidur siang singkat di sela pekerjaan. Hanya memejamkan mata 15–20 menit setelah makan siang membuat pekerjaan sore lebih lancar; ada perusahaan yang membuat ruang tidur siang untuk karyawan. Namun jika tertidur lebih dari 30 menit, kepala justru jadi linglung dan malam bisa sulit tidur. Kuncinya 'singkat'. Mulai besok saya pun akan mencoba memejamkan mata di meja 15 menit terakhir istirahat siang. Ada yang bilang setelah tidur siang singkat perasaan segar dan bicara dengan orang pun jadi menyenangkan. Mungkin justru orang sibuk yang perlu pandai mengambil istirahat singkat.</sub>
 
 **49. 筆者によると、昼寝をするとき大切なことは何か。**
 
@@ -560,9 +580,10 @@
 > マンションの駐輪場について  
 > 駐輪場が自転車でいっぱいになり、新しく入居した方が自転車を置けなくて困っています。そこで、来月から駐輪場は登録制にします。自転車を置きたい方は、管理室で登録用紙に記入して、シールを受け取ってください。登録料は一台年間千円です。来月末までにシールがはられていない自転車は、移動させていただきます。  
 > 管理人  
-> 二台以上置きたい場合は、一台ずつ登録してください。
+> 二台以上置きたい場合は、一台ずつ登録してください。  
+> ご不明な点は、管理人室までお問い合わせください。ご迷惑をおかけしますが、よろしくお願いします。
 
-<sub>Parkiran sepeda penuh sehingga penghuni baru kesulitan memarkir. Maka mulai bulan depan parkiran memakai sistem pendaftaran: isi formulir di ruang pengelola dan ambil stiker. Biaya 1.000 yen per sepeda per tahun. Sepeda tanpa stiker sampai akhir bulan depan akan dipindahkan. — Pengelola Jika ingin memarkir dua sepeda atau lebih, daftarkan satu per satu.</sub>
+<sub>Parkiran sepeda penuh sehingga penghuni baru kesulitan memarkir. Maka mulai bulan depan parkiran memakai sistem pendaftaran: isi formulir di ruang pengelola dan ambil stiker. Biaya 1.000 yen per sepeda per tahun. Sepeda tanpa stiker sampai akhir bulan depan akan dipindahkan. — Pengelola Jika ingin memarkir dua sepeda atau lebih, daftarkan satu per satu. Bila ada yang kurang jelas, tanyakan ke ruang pengelola. Mohon maaf atas ketidaknyamanan.</sub>
 
 **50. 駐輪場に自転車を置き続けたい人は、どうしなければならないか。**
 
@@ -583,11 +604,11 @@
 > 母が、高校生の娘の部屋のドアにはったメモである。  
 >   
 > あやへ  
-> 今日、塾から電話がありました。来週の模擬試験の申込書がまだ出ていないそうです。机の上に置いておいたので、名前と受けたい科目を書いて、明日塾に持っていってください。お金はもう振り込んでおきました。それから、夕飯のカレーは温めて食べてね。お母さんは九時ごろ帰ります。  
+> 今日、塾から電話がありました。来週の模擬試験の申込書がまだ出ていないそうです。机の上に置いておいたので、名前と受けたい科目を書いて、明日塾に持っていってください。お金はもう振り込んでおきました。それから、夕飯のカレーは温めて食べてね。お母さんは九時ごろ帰ります。寒くなってきたから、温かくして寝てね。ごはんは、ちゃんと食べてね。  
 > 母  
 > わからないことがあったら、お母さんの携帯に電話してね。
 
-<sub>Aya, hari ini tempat les menelepon: formulir ujian simulasi minggu depan belum diserahkan. Sudah ibu taruh di meja; tulis nama dan mata pelajaran yang ingin diambil, lalu bawa ke tempat les besok. Uangnya sudah ibu transfer. Kari makan malam hangatkan dan makan ya. Ibu pulang sekitar jam 9. — Ibu Kalau ada yang tidak jelas, telepon ponsel ibu ya.</sub>
+<sub>Aya, hari ini tempat les menelepon: formulir ujian simulasi minggu depan belum diserahkan. Sudah ibu taruh di meja; tulis nama dan mata pelajaran yang ingin diambil, lalu bawa ke tempat les besok. Uangnya sudah ibu transfer. Kari makan malam hangatkan dan makan ya. Ibu pulang sekitar jam 9. Sudah mulai dingin, tidurlah dengan hangat. Makanlah dengan baik ya. — Ibu Kalau ada yang tidak jelas, telepon ponsel ibu ya.</sub>
 
 **51. あやさんが明日しなければならないことは何か。**
 
@@ -729,9 +750,21 @@
 > 1か月定期券 ｜ 4,500円 ｜ 1,800円 ｜ 2,200円 ｜ ・営業時間：9:00～21:00（土日祝は9:00～18:00）。毎月第3水曜日は休館日です。  
 > ・みなと区に住んでいる人・区内の会社に通っている人は、1回券が100円引きになります（受付で身分証明書を見せてください）。  
 > ・小学生以下は保護者と一緒に入ってください。  
-> ・水泳帽をかぶっていない人は入れません。帽子は受付で200円で売っています。
+> ・水泳帽をかぶっていない人は入れません。帽子は受付で200円で売っています。  
+> ・ロッカーは、100円玉が必要です。使い終わったら、お金は戻ってきます。  
+> ・シャワーは、プールに入る前に、必ず浴びてください。  
+> ・病気のときや、食事のすぐあとは、泳がないでください。  
+> ・プールの中では、写真やビデオをとることは禁止されています。  
+> ・忘れ物は、受付で一か月間あずかります。  
+> ・11回券の有効期限は、買った日から六か月間です。  
+> ・プールの水の温度は、夏は28度、冬は30度です。  
+> ・1か月定期券は、買った日から30日間使えます。  
+> ・定期券を買うときは、写真と身分証明書が必要です。写真は、受付で撮ることもできます。  
+> ・子ども用の浅いプールには、小学生以下の子どもだけが入れます。  
+> ・水着は、体にぴったりした物を着てください。ジーンズなどの服で入ることはできません。  
+> ・プールの近くでは、走らないでください。
 
-<sub>Panduan kolam renang warga kecamatan Minato: tiket sekali umum (SMA ke atas) 500 / SMP ke bawah 200 / 65+ 250 yen; tiket 11x 5.000 / 2.000 / 2.500 yen; tiket bulanan 4.500 / 1.800 / 2.200 yen. Buka 09.00–21.00 (Sab/Min/libur 09.00–18.00); tutup Rabu minggu ke-3 tiap bulan. Warga atau yang bekerja di kecamatan Minato: tiket sekali potong 100 yen (tunjukkan identitas). Anak SD ke bawah masuk bersama orang tua. Wajib topi renang; dijual 200 yen di resepsionis.</sub>
+<sub>Panduan kolam renang warga kecamatan Minato: tiket sekali umum (SMA ke atas) 500 / SMP ke bawah 200 / 65+ 250 yen; tiket 11x 5.000 / 2.000 / 2.500 yen; tiket bulanan 4.500 / 1.800 / 2.200 yen. Buka 09.00–21.00 (Sab/Min/libur 09.00–18.00); tutup Rabu minggu ke-3 tiap bulan. Warga atau yang bekerja di kecamatan Minato: tiket sekali potong 100 yen (tunjukkan identitas). Anak SD ke bawah masuk bersama orang tua. Wajib topi renang; dijual 200 yen di resepsionis. Loker memerlukan koin 100 yen, dan uang kembali setelah dipakai. Mandi shower dulu sebelum masuk kolam. Jangan berenang saat sakit atau segera setelah makan. Memotret atau merekam video di dalam kolam dilarang. Barang tertinggal disimpan di resepsionis selama sebulan. Kupon 11 kali berlaku enam bulan sejak pembelian. Suhu air kolam 28 derajat saat musim panas dan 30 derajat saat musim dingin. Langganan satu bulan berlaku 30 hari sejak pembelian. Membeli langganan memerlukan foto dan identitas; foto bisa diambil di resepsionis. Kolam dangkal anak hanya untuk anak SD ke bawah. Pakailah baju renang yang pas di badan; tak boleh masuk dengan pakaian seperti jins. Jangan berlari di dekat kolam.</sub>
 
 **59. みなと区の会社に通っている40歳の会社員が、1回券で泳ぐ。帽子を持っていない。いくら払うか。**
 
@@ -769,10 +802,10 @@
 > これは、会社の総務課から社員に届いたメールである。  
 >   
 > 社員の皆様  
-> 来月から、会社の健康診断の受け方が変わります。これまでは全員が会社の会議室で受けていましたが、来月からは、会社が契約している近くの三つの病院の中から、自分で選んで予約することになります。予約は各自で病院に電話をしてください。診断の費用は会社が払いますので、病院では受付で社員証を見せるだけで結構です。結果は病院から直接自宅に送られます。期限は十一月末までです。  
+> 来月から、会社の健康診断の受け方が変わります。これまでは全員が会社の会議室で受けていましたが、来月からは、会社が契約している近くの三つの病院の中から、自分で選んで予約することになります。予約は各自で病院に電話をしてください。診断の費用は会社が払いますので、病院では受付で社員証を見せるだけで結構です。結果は病院から直接自宅に送られます。期限は十一月末までです。どうぞよろしくお願いします。  
 > 総務課
 
-<sub>Kepada karyawan: mulai bulan depan cara cek kesehatan berubah. Dulu semua diperiksa di ruang rapat kantor; mulai bulan depan masing-masing memilih dan mereservasi salah satu dari tiga rumah sakit mitra di dekat kantor. Reservasi telepon sendiri ke rumah sakit. Biaya ditanggung perusahaan, cukup menunjukkan kartu karyawan di resepsionis. Hasil dikirim langsung ke rumah. Tenggat akhir November. — Bagian umum</sub>
+<sub>Kepada karyawan: mulai bulan depan cara cek kesehatan berubah. Dulu semua diperiksa di ruang rapat kantor; mulai bulan depan masing-masing memilih dan mereservasi salah satu dari tiga rumah sakit mitra di dekat kantor. Reservasi telepon sendiri ke rumah sakit. Biaya ditanggung perusahaan, cukup menunjukkan kartu karyawan di resepsionis. Hasil dikirim langsung ke rumah. Tenggat akhir November. Mohon kerja samanya. — Bagian umum</sub>
 
 **48. 来月から、社員は健康診断をどのように受けるか。**
 
@@ -789,9 +822,9 @@
   - D. 会社の会議室で、決められた日に受ける — Salah. Itu cara lama.
 
 > **Teks pendek (内容理解・短文)**  
-> スーパーで野菜を買うとき、私はいつも形のきれいなものを選んでいた。しかし、農家の友人によると、形が悪いというだけで売られずに捨てられる野菜がたくさんあるそうだ。味や栄養は、きれいな野菜とほとんど変わらないのにである。最近は、そうした野菜を安く売る店も出てきた。少し曲がったきゅうりでも、料理してしまえば見た目はわからない。私たち買う側が見た目だけで選ぶのをやめれば、捨てられる野菜を減らすことができるのではないだろうか。
+> スーパーで野菜を買うとき、私はいつも形のきれいなものを選んでいた。しかし、農家の友人によると、形が悪いというだけで売られずに捨てられる野菜がたくさんあるそうだ。味や栄養は、きれいな野菜とほとんど変わらないのにである。最近は、そうした野菜を安く売る店も出てきた。少し曲がったきゅうりでも、料理してしまえば見た目はわからない。売られている野菜の形が少し悪くても、味は変わらないことを、もっと多くの人に知ってほしい。私たち買う側が見た目だけで選ぶのをやめれば、捨てられる野菜を減らすことができるのではないだろうか。
 
-<sub>Saat membeli sayur di supermarket saya selalu memilih yang bentuknya bagus. Tetapi menurut teman petani, banyak sayur dibuang tanpa dijual hanya karena bentuknya jelek, padahal rasa dan gizinya hampir sama. Belakangan muncul toko yang menjual sayur seperti itu dengan murah; mentimun yang agak bengkok pun setelah dimasak tidak kelihatan bedanya. Bukankah jika kita pembeli berhenti memilih hanya dari tampilan, sayur yang dibuang bisa berkurang?</sub>
+<sub>Saat membeli sayur di supermarket saya selalu memilih yang bentuknya bagus. Tetapi menurut teman petani, banyak sayur dibuang tanpa dijual hanya karena bentuknya jelek, padahal rasa dan gizinya hampir sama. Belakangan muncul toko yang menjual sayur seperti itu dengan murah; mentimun yang agak bengkok pun setelah dimasak tidak kelihatan bedanya. Saya ingin lebih banyak orang tahu bahwa meski bentuk sayur yang dijual agak buruk, rasanya tak berubah. Bukankah jika kita pembeli berhenti memilih hanya dari tampilan, sayur yang dibuang bisa berkurang?</sub>
 
 **49. 筆者が一番言いたいことは何か。**
 
@@ -809,9 +842,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 市民会館からのお知らせ  
-> 市民会館の大ホールは、照明の工事のため、四月一日から六月三十日まで使えません。この期間に予約をしていた団体には、すでに電話でお知らせしました。小ホールと会議室はいつもどおり使えます。なお、七月以降の大ホールの予約は、五月一日から受け付けます。予約は窓口でのみ受け付け、電話やインターネットではできませんので、ご注意ください。
+> 市民会館の大ホールは、照明の工事のため、四月一日から六月三十日まで使えません。この期間に予約をしていた団体には、すでに電話でお知らせしました。小ホールと会議室はいつもどおり使えます。なお、七月以降の大ホールの予約は、五月一日から受け付けます。予約は窓口でのみ受け付け、電話やインターネットではできませんので、ご注意ください。  
+> ご不明な点は、市民会館の事務室にお問い合わせください。ご迷惑をおかけしますが、ご協力をお願いします。ご利用の皆様のご理解に感謝します。
 
-<sub>Pemberitahuan gedung warga: aula besar tidak bisa dipakai 1 April–30 Juni karena pekerjaan pencahayaan. Kelompok yang sudah reservasi pada periode itu sudah diberi tahu lewat telepon. Aula kecil dan ruang rapat bisa dipakai seperti biasa. Reservasi aula besar untuk Juli dan seterusnya diterima mulai 1 Mei, hanya di loket — tidak lewat telepon atau internet.</sub>
+<sub>Pemberitahuan gedung warga: aula besar tidak bisa dipakai 1 April–30 Juni karena pekerjaan pencahayaan. Kelompok yang sudah reservasi pada periode itu sudah diberi tahu lewat telepon. Aula kecil dan ruang rapat bisa dipakai seperti biasa. Reservasi aula besar untuk Juli dan seterusnya diterima mulai 1 Mei, hanya di loket — tidak lewat telepon atau internet. Bila ada yang kurang jelas, tanyakan ke kantor gedung warga. Mohon maaf atas ketidaknyamanan dan mohon kerja sama; kami berterima kasih atas pengertian para pengguna.</sub>
 
 **50. 八月に大ホールを使いたい団体は、どうすればいいか。**
 
@@ -832,10 +866,10 @@
 > 研究室の掲示板にはってあるメモである。  
 >   
 > ゼミの皆さんへ  
-> 来週の水曜日のゼミは、私が学会に出席するため休みにします。そのかわり、翌週の月曜日の三時から補講をします。教室はいつもと同じです。補講までに、配った論文を読んで、自分の意見をA4一枚にまとめてきてください。当日はそれをもとに話し合います。どうしても都合が悪い人は、メールで連絡してください。  
+> 来週の水曜日のゼミは、私が学会に出席するため休みにします。そのかわり、翌週の月曜日の三時から補講をします。教室はいつもと同じです。補講までに、配った論文を読んで、自分の意見をA4一枚にまとめてきてください。当日はそれをもとに話し合います。どうしても都合が悪い人は、メールで連絡してください。お忙しいところすみませんが、みなさん、よろしくお願いします。わからないことがあれば、いつでも聞いてください。  
 > 森田
 
-<sub>Untuk anggota seminar: seminar Rabu depan diliburkan karena saya menghadiri konferensi. Sebagai gantinya ada kelas pengganti Senin minggu berikutnya jam 3 di ruang yang sama. Sebelum itu baca makalah yang dibagikan dan rangkum pendapat Anda dalam satu lembar A4; kita akan berdiskusi berdasarkan itu. Yang benar-benar berhalangan hubungi saya lewat email. — Morita</sub>
+<sub>Untuk anggota seminar: seminar Rabu depan diliburkan karena saya menghadiri konferensi. Sebagai gantinya ada kelas pengganti Senin minggu berikutnya jam 3 di ruang yang sama. Sebelum itu baca makalah yang dibagikan dan rangkum pendapat Anda dalam satu lembar A4; kita akan berdiskusi berdasarkan itu. Yang benar-benar berhalangan hubungi saya lewat email. Maaf mengganggu kesibukan Anda, mohon bantuannya semua. Bila ada yang tak jelas, tanyakan kapan saja. — Morita</sub>
 
 **51. ゼミの学生が、補講までにしなければならないことは何か。**
 
@@ -906,9 +940,9 @@
 > 初めて登ったのは、家から電車で一時間ほどの、それほど高くない山だった。歩き始めてすぐに息が切れて、何度も休んだ。若い人にも、年配の人にも、どんどん追い抜かれた。①最初は恥ずかしかったが、だんだん気にならなくなった。周りの人と競争しているわけではないのだから、自分のペースで歩けばいいのだと思えたからだ。  
 > 頂上に着いたのは、予定より一時間も遅かった。それでも、そこから見えた景色は、それまでの疲れを忘れさせてくれた。遠くに自分の住んでいる町が小さく見えた。あの中で、私は毎日小さなことで悩んでいたのかと思うと、少し笑ってしまった。  
 > それ以来、月に一度は山に行っている。山では、時計を見ないようにしている。疲れたら休み、きれいな花があれば立ち止まって写真を撮る。仕事では、いつも時間に追われているので、②山で過ごす時間はとてもぜいたくに感じる。  
-> 山に登っても、仕事の悩みがなくなるわけではない。しかし、山から帰った次の日は、不思議と落ち着いて仕事に向き合える。自分のペースで一歩ずつ進めばいい。山が教えてくれたのは、そういうことだったのかもしれない。
+> 山に登っても、仕事の悩みがなくなるわけではない。しかし、山から帰った次の日は、不思議と落ち着いて仕事に向き合える。自分のペースで一歩ずつ進めばいい。山の上では、知らない人とも自然に「こんにちは」とあいさつをする。町では、あまりないことなので、うれしくなる。山が教えてくれたのは、そういうことだったのかもしれない。
 
-<sub>Sejak tahun lalu saya mendaki gunung sendirian. Awalnya, saat saya gagal di pekerjaan dan muak dengan segalanya, teman berkata 'coba jalan-jalan ke gunung'. Gunung pertama tidak terlalu tinggi, satu jam naik kereta dari rumah. Baru mulai berjalan napas sudah habis dan berkali-kali istirahat; disalip orang muda maupun tua. ① Awalnya malu, tetapi lama-lama tidak peduli lagi, karena toh tidak sedang berlomba dengan orang lain — cukup berjalan dengan kecepatan sendiri. Saya tiba di puncak satu jam lebih lambat dari rencana, tetapi pemandangannya membuat lelah terlupakan; kota tempat tinggal saya tampak kecil di kejauhan, dan saya tertawa sedikit memikirkan betapa di dalam sana saya setiap hari risau oleh hal-hal kecil. Sejak itu sebulan sekali saya ke gunung, berusaha tidak melihat jam: lelah ya istirahat, ada bunga indah ya berhenti memotret. Di pekerjaan saya selalu dikejar waktu, sehingga ② waktu di gunung terasa sangat mewah. Mendaki tidak menghapus masalah pekerjaan, tetapi keesokan harinya saya anehnya bisa menghadapi pekerjaan dengan tenang. Melangkah setapak demi setapak dengan kecepatan sendiri — mungkin itulah yang diajarkan gunung.</sub>
+<sub>Sejak tahun lalu saya mendaki gunung sendirian. Awalnya, saat saya gagal di pekerjaan dan muak dengan segalanya, teman berkata 'coba jalan-jalan ke gunung'. Gunung pertama tidak terlalu tinggi, satu jam naik kereta dari rumah. Baru mulai berjalan napas sudah habis dan berkali-kali istirahat; disalip orang muda maupun tua. ① Awalnya malu, tetapi lama-lama tidak peduli lagi, karena toh tidak sedang berlomba dengan orang lain — cukup berjalan dengan kecepatan sendiri. Saya tiba di puncak satu jam lebih lambat dari rencana, tetapi pemandangannya membuat lelah terlupakan; kota tempat tinggal saya tampak kecil di kejauhan, dan saya tertawa sedikit memikirkan betapa di dalam sana saya setiap hari risau oleh hal-hal kecil. Sejak itu sebulan sekali saya ke gunung, berusaha tidak melihat jam: lelah ya istirahat, ada bunga indah ya berhenti memotret. Di pekerjaan saya selalu dikejar waktu, sehingga ② waktu di gunung terasa sangat mewah. Mendaki tidak menghapus masalah pekerjaan, tetapi keesokan harinya saya anehnya bisa menghadapi pekerjaan dengan tenang. Di atas gunung, kita menyapa 'selamat siang' kepada orang yang tak dikenal dengan wajar. Di kota hal itu jarang, jadi terasa menyenangkan. Melangkah setapak demi setapak dengan kecepatan sendiri — mungkin itulah yang diajarkan gunung.</sub>
 
 **55. 筆者が山に登るようになったきっかけは何か。**
 
@@ -976,9 +1010,18 @@
 > 週末ビジネス ｜ 中級以上 ｜ 土 10:00～12:00 ｜ 12,000円 ｜ ・入会金は5,000円です。ただし、10月中に入会した人は入会金が無料になります。  
 > ・教材費は、グループと週末ビジネスは3,000円、個人レッスンはかかりません。  
 > ・初めての人は、無料のレベルチェック（20分）を受けてからコースを決めてください。  
-> ・学生証を見せると、1か月の料金が10％安くなります（入会金・教材費は除く）。
+> ・学生証を見せると、1か月の料金が10％安くなります（入会金・教材費は除く）。  
+> ・体験レッスンは、30分で、無料です。ご予約は、お電話かホームページでお願いします。  
+> ・グループレッスンの人数は、一クラス6人までです。  
+> ・個人レッスンは、先生を選ぶことができます。  
+> ・お休みするときは、前の日までに連絡してください。お休みした分は、同じ月の中に、別の日のクラスで受けることができます。  
+> ・月の途中で入会した場合は、料金は日割りになります。  
+> ・スクールは、駅から歩いて三分のところにあります。  
+> ・入会したあとで、ほかのコースに変えたいときは、前の月の20日までに、受付に言ってください。  
+> ・夏休みと冬休みには、小学生や中学生のための特別コースもあります。  
+> ・スクールが休みの日は、毎週日曜日と祝日です。
 
-<sub>Panduan kursus Sekolah Percakapan Inggris Himawari: Grup pemula (Sen & Kam 19–20, 8.000 yen/bulan); Grup menengah (Sel & Jum 19–20, 8.000 yen); Les privat (semua level, hari & jam bebas, 4x sebulan @50 menit, 16.000 yen); Bisnis akhir pekan (menengah ke atas, Sab 10–12, 12.000 yen). Uang pendaftaran 5.000 yen, gratis bagi yang mendaftar dalam bulan Oktober. Bahan ajar: grup & bisnis akhir pekan 3.000 yen, les privat tidak ada. Pendaftar baru ikut tes level gratis (20 menit) dulu sebelum memilih kursus. Kartu pelajar: biaya bulanan diskon 10% (tidak termasuk pendaftaran & bahan).</sub>
+<sub>Panduan kursus Sekolah Percakapan Inggris Himawari: Grup pemula (Sen & Kam 19–20, 8.000 yen/bulan); Grup menengah (Sel & Jum 19–20, 8.000 yen); Les privat (semua level, hari & jam bebas, 4x sebulan @50 menit, 16.000 yen); Bisnis akhir pekan (menengah ke atas, Sab 10–12, 12.000 yen). Uang pendaftaran 5.000 yen, gratis bagi yang mendaftar dalam bulan Oktober. Bahan ajar: grup & bisnis akhir pekan 3.000 yen, les privat tidak ada. Pendaftar baru ikut tes level gratis (20 menit) dulu sebelum memilih kursus. Kartu pelajar: biaya bulanan diskon 10% (tidak termasuk pendaftaran & bahan). Pelajaran percobaan 30 menit, gratis; reservasi lewat telepon atau website. Satu kelas grup maksimal 6 orang. Di pelajaran pribadi, guru bisa dipilih. Bila absen, hubungi sampai sehari sebelumnya; pelajaran yang terlewat bisa diganti di kelas lain dalam bulan yang sama. Bila masuk di tengah bulan, biaya dihitung harian. Sekolah berjarak tiga menit jalan dari stasiun. Bila setelah mendaftar ingin pindah kursus lain, sampaikan ke resepsionis paling lambat tanggal 20 bulan sebelumnya. Saat liburan musim panas dan dingin ada kursus khusus untuk anak SD dan SMP. Sekolah libur tiap Minggu dan hari libur nasional.</sub>
 
 **59. 大学生のアンさんは、10月に初めてこのスクールに入会し、中級のグループコースに入る。最初の月に払う金額はいくらか。**
 
@@ -1016,10 +1059,10 @@
 > これは、通信販売の会社から客に届いたメールである。  
 >   
 > 佐藤様  
-> このたびは、当店の電気ポットをお買い上げいただき、ありがとうございます。お客様からご連絡いただいた「ふたがうまく閉まらない」という件につきまして、確認いたしましたところ、製品の不良でございました。大変申し訳ございません。新しい商品を明日お送りいたしますので、届きましたら、お手元の商品を同じ箱に入れて、配達員にお渡しください。送料はかかりません。  
+> このたびは、当店の電気ポットをお買い上げいただき、ありがとうございます。お客様からご連絡いただいた「ふたがうまく閉まらない」という件につきまして、確認いたしましたところ、製品の不良でございました。大変申し訳ございません。新しい商品を明日お送りいたしますので、届きましたら、お手元の商品を同じ箱に入れて、配達員にお渡しください。送料はかかりません。どうぞよろしくお願いいたします。何かご不明な点があれば、お気軽にご連絡ください。  
 > くらしの店　お客様係
 
-<sub>Kepada Sato: terima kasih telah membeli teko listrik di toko kami. Soal 'tutupnya tidak bisa menutup rapat' yang Anda laporkan, setelah dicek ternyata produk cacat. Mohon maaf. Produk baru kami kirim besok; setelah tiba, masukkan produk yang ada di tangan Anda ke kotak yang sama dan serahkan ke kurir. Tanpa ongkos kirim. — Layanan pelanggan Kurashi no Mise</sub>
+<sub>Kepada Sato: terima kasih telah membeli teko listrik di toko kami. Soal 'tutupnya tidak bisa menutup rapat' yang Anda laporkan, setelah dicek ternyata produk cacat. Mohon maaf. Produk baru kami kirim besok; setelah tiba, masukkan produk yang ada di tangan Anda ke kotak yang sama dan serahkan ke kurir. Tanpa ongkos kirim. Mohon kerja samanya. Bila ada yang kurang jelas, silakan hubungi kami dengan leluasa. — Layanan pelanggan Kurashi no Mise</sub>
 
 **48. このメールを読んで、佐藤さんがしなければならないことは何か。**
 
@@ -1036,9 +1079,9 @@
   - D. 新しい商品が届いたら、今の商品を配達員に渡す — BENAR. Benar.
 
 > **Teks pendek (内容理解・短文)**  
-> 日本の電車の忘れ物で一番多いのは、かさだそうだ。ある鉄道会社では、一年間に三十万本ものかさが届けられるという。そのうち、持ち主が取りに来るのは一割ほどしかない。安いビニールがさが多いので、なくしてもまた買えばいいと考える人が多いのだろう。しかし、残ったかさの多くは、最後にはごみになってしまう。少し高くても、長く使えるかさを大切に使うことが、ごみを減らす第一歩になるのではないか。
+> 日本の電車の忘れ物で一番多いのは、かさだそうだ。ある鉄道会社では、一年間に三十万本ものかさが届けられるという。そのうち、持ち主が取りに来るのは一割ほどしかない。安いビニールがさが多いので、なくしてもまた買えばいいと考える人が多いのだろう。しかし、残ったかさの多くは、最後にはごみになってしまう。友だちが傘を電車に忘れたときも、「また買えばいいよ」と笑っていた。便利さに慣れてしまうと、物を大切にする気持ちが少しずつ薄れてしまうのかもしれない。少し高くても、長く使えるかさを大切に使うことが、ごみを減らす第一歩になるのではないか。
 
-<sub>Barang tertinggal terbanyak di kereta Jepang katanya payung; satu perusahaan kereta menerima 300.000 payung setahun, dan hanya sekitar 10% yang diambil pemiliknya. Banyak payung plastik murah, sehingga mungkin banyak yang berpikir kalau hilang tinggal beli lagi. Tetapi payung yang tersisa kebanyakan akhirnya menjadi sampah. Bukankah memakai dengan sayang payung yang awet meski agak mahal menjadi langkah pertama mengurangi sampah?</sub>
+<sub>Barang tertinggal terbanyak di kereta Jepang katanya payung; satu perusahaan kereta menerima 300.000 payung setahun, dan hanya sekitar 10% yang diambil pemiliknya. Banyak payung plastik murah, sehingga mungkin banyak yang berpikir kalau hilang tinggal beli lagi. Tetapi payung yang tersisa kebanyakan akhirnya menjadi sampah. Saat teman saya meninggalkan payung di kereta pun, ia tertawa, 'Beli lagi saja.' Bila terbiasa dengan kemudahan, rasa menghargai barang mungkin perlahan memudar. Bukankah memakai dengan sayang payung yang awet meski agak mahal menjadi langkah pertama mengurangi sampah?</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -1056,10 +1099,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 学生の皆さんへ（学習室の利用について）  
-> 試験期間中は学習室がたいへん混雑します。そこで、一月十日から三十一日までは、学習室の席を一人二時間までとします。席を使う人は、入り口の機械で学生証を読み取ってください。二時間がたったら、次の人に席を譲ってください。ただし、空いている席がある場合は、続けて使ってもかまいません。荷物だけを置いて席を取ることは禁止です。  
+> 試験期間中は学習室がたいへん混雑します。そこで、一月十日から三十一日までは、学習室の席を一人二時間までとします。席を使う人は、入り口の機械で学生証を読み取ってください。二時間がたったら、次の人に席を譲ってください。ただし、空いている席がある場合は、続けて使ってもかまいません。荷物だけを置いて席を取ることは禁止です。試験が近い時期は、特に混み合います。みなさん、静かに、気持ちよく使えるように、協力してください。  
 > 学生課
 
-<sub>Untuk mahasiswa (pemakaian ruang belajar): saat masa ujian ruang belajar sangat penuh. Maka 10–31 Januari kursi dibatasi dua jam per orang. Pindai kartu mahasiswa di mesin pintu masuk. Setelah dua jam, berikan kursi kepada orang berikutnya; tetapi jika ada kursi kosong boleh dilanjutkan. Dilarang mengklaim kursi hanya dengan menaruh barang. — Bagian kemahasiswaan</sub>
+<sub>Untuk mahasiswa (pemakaian ruang belajar): saat masa ujian ruang belajar sangat penuh. Maka 10–31 Januari kursi dibatasi dua jam per orang. Pindai kartu mahasiswa di mesin pintu masuk. Setelah dua jam, berikan kursi kepada orang berikutnya; tetapi jika ada kursi kosong boleh dilanjutkan. Dilarang mengklaim kursi hanya dengan menaruh barang. Menjelang ujian, ruangan terutama ramai. Semua, mohon bekerja sama agar bisa dipakai dengan tenang dan nyaman. — Bagian kemahasiswaan</sub>
 
 **50. 一月十五日に学習室を使う学生について、正しいものはどれか。**
 
@@ -1080,10 +1123,10 @@
 > 課長が新入社員の机に置いたメモである。  
 >   
 > 田村さん  
-> 来週の新商品の説明会の準備をお願いします。会場の予約と資料の印刷はもう済んでいます。田村さんには、参加するお客様に送る案内のはがきを書いてもらいたいです。住所のリストは共有フォルダにあります。はがきは今週中に出してください。わからないことがあれば、隣の席の高橋さんに聞いてください。  
+> 来週の新商品の説明会の準備をお願いします。会場の予約と資料の印刷はもう済んでいます。田村さんには、参加するお客様に送る案内のはがきを書いてもらいたいです。住所のリストは共有フォルダにあります。はがきは今週中に出してください。わからないことがあれば、隣の席の高橋さんに聞いてください。最初は大変だと思いますが、あせらなくて大丈夫です。わからないことがあれば、遠慮しないで聞いてください。  
 > 課長　大川
 
-<sub>Tamura, tolong siapkan presentasi produk baru minggu depan. Reservasi tempat dan pencetakan materi sudah beres. Saya ingin Tamura menulis kartu pos undangan untuk pelanggan peserta. Daftar alamat ada di folder bersama. Kirim kartu posnya minggu ini. Kalau ada yang tidak jelas, tanya Takahashi di meja sebelah. — Kepala bagian Okawa</sub>
+<sub>Tamura, tolong siapkan presentasi produk baru minggu depan. Reservasi tempat dan pencetakan materi sudah beres. Saya ingin Tamura menulis kartu pos undangan untuk pelanggan peserta. Daftar alamat ada di folder bersama. Kirim kartu posnya minggu ini. Kalau ada yang tidak jelas, tanya Takahashi di meja sebelah. Awalnya mungkin terasa berat, tetapi jangan terburu-buru. Bila ada yang tak jelas, jangan sungkan bertanya. — Kepala bagian Okawa</sub>
 
 **51. 田村さんがしなければならないことは何か。**
 
@@ -1155,9 +1198,9 @@
 > それから私は、①できるだけ方言を使わないように気をつけた。テレビのアナウンサーの話し方をまねして、一人で練習もした。しかし、言葉に気をつけるほど、うまく話せなくなっていった。言いたいことがあっても、言葉を選んでいるうちに、話の流れが変わってしまうのだ。  
 > そんなある日、同じゼミの友人が「この前の発表、方言が出てたけど、すごく気持ちが伝わってきたよ」と言ってくれた。私は驚いた。発表の最中は緊張していて、自分が方言で話していることにも気づいていなかったからだ。  
 > 友人の話では、方言には、標準語では表しにくい気持ちを伝える力があるのだという。たしかに、私の町の言葉には、相手を思いやる柔らかい言い方がたくさんある。  
-> 今では、②場面によって言葉を使い分けるようにしている。授業の発表や就職の面接では標準語を使うが、友人と話すときは、無理に方言を隠さない。自分が育った町の言葉は、私の一部なのだ。それを大切にしながら、新しい言葉も身につけていきたいと思っている。
+> 今では、②場面によって言葉を使い分けるようにしている。授業の発表や就職の面接では標準語を使うが、友人と話すときは、無理に方言を隠さない。自分が育った町の言葉は、私の一部なのだ。方言も標準語も、私にとっては、どちらも大切な言葉だ。そのことに気づいてから、人前で話すのが少し楽になった。それを大切にしながら、新しい言葉も身につけていきたいと思っている。
 
-<sub>Saat masuk universitas di Tokyo, yang pertama menyulitkan saya adalah cara bicara. Saya tumbuh di kota kecil di Kyushu sehingga dialek keluar dengan sendirinya. Saat memperkenalkan diri di kelas pertama memakai dialek, beberapa orang tertawa; saya tahu tidak bermaksud jahat, tetapi sangat malu. Sejak itu ① saya berusaha sebisa mungkin tidak memakai dialek, meniru cara bicara penyiar TV dan berlatih sendiri. Tetapi makin hati-hati, makin tidak lancar bicara; sementara memilih kata, alur pembicaraan sudah berganti. Suatu hari teman seminar berkata 'presentasimu tempo hari keluar dialeknya, tapi perasaanmu benar-benar sampai.' Saya terkejut karena saat itu gugup dan tidak sadar memakai dialek. Kata teman, dialek punya kekuatan menyampaikan perasaan yang sulit diungkapkan dengan bahasa standar; memang bahasa kota saya punya banyak ungkapan lembut yang penuh perhatian. Kini ② saya memakai bahasa sesuai situasi: di presentasi dan wawancara kerja bahasa standar, dengan teman tidak memaksa menyembunyikan dialek. Bahasa kota tempat saya tumbuh adalah bagian dari diri saya; sambil menghargainya saya ingin terus menguasai bahasa baru.</sub>
+<sub>Saat masuk universitas di Tokyo, yang pertama menyulitkan saya adalah cara bicara. Saya tumbuh di kota kecil di Kyushu sehingga dialek keluar dengan sendirinya. Saat memperkenalkan diri di kelas pertama memakai dialek, beberapa orang tertawa; saya tahu tidak bermaksud jahat, tetapi sangat malu. Sejak itu ① saya berusaha sebisa mungkin tidak memakai dialek, meniru cara bicara penyiar TV dan berlatih sendiri. Tetapi makin hati-hati, makin tidak lancar bicara; sementara memilih kata, alur pembicaraan sudah berganti. Suatu hari teman seminar berkata 'presentasimu tempo hari keluar dialeknya, tapi perasaanmu benar-benar sampai.' Saya terkejut karena saat itu gugup dan tidak sadar memakai dialek. Kata teman, dialek punya kekuatan menyampaikan perasaan yang sulit diungkapkan dengan bahasa standar; memang bahasa kota saya punya banyak ungkapan lembut yang penuh perhatian. Kini ② saya memakai bahasa sesuai situasi: di presentasi dan wawancara kerja bahasa standar, dengan teman tidak memaksa menyembunyikan dialek. Bahasa kota tempat saya tumbuh adalah bagian dari diri saya; Dialek maupun bahasa baku sama-sama bahasa penting bagi saya. Sejak menyadari itu, bicara di depan orang jadi sedikit lebih ringan. sambil menghargainya saya ingin terus menguasai bahasa baru.</sub>
 
 **55. 筆者が＿①できるだけ方言を使わないように気をつけた＿のは、なぜか。**
 
@@ -1225,9 +1268,20 @@
 > ・使用期間は4月1日から翌年3月31日までです。  
 > ・農具（くわ・スコップなど）は無料で貸し出します。種と肥料は各自で用意してください。  
 > ・申し込みは2月1日から20日まで、市役所の農業課の窓口か郵便で受け付けます。応募が多い場合は抽選です。  
-> ・初めての人には、4月に無料の野菜づくり講習会があります。
+> ・初めての人には、4月に無料の野菜づくり講習会があります。  
+> ・農園には、水道とトイレがあります。道具を入れる倉庫もあり、利用者なら自由に使えます。  
+> ・農薬や化学肥料は使えません。育てる野菜は、自由に選べます。  
+> ・収穫した野菜を売ることは、禁止されています。  
+> ・三か月以上畑に来なかったときは、使用をやめてもらうことがあります。  
+> ・使用料は、使用が始まる前の三月末までに、銀行で払ってください。  
+> ・畑を人に貸したり、ほかの人にゆずったりしてはいけません。  
+> ・駐車場は農園の入り口にあります（無料）。  
+> ・応募の結果は、2月25日までに、郵便でお知らせします。  
+> ・使用料を払ったあとで、使用をやめても、お金は返しません。  
+> ・畑で出た枯れ草や、野菜のくずは、農園の決まった場所に捨ててください。  
+> ・毎月第一土曜日の午前に、みんなで農園の掃除をします。できるだけ参加してください。
 
-<sub>Pendaftaran kebun warga kota Midori: petak A 10 m² 6.000 yen/tahun (40 petak); B 20 m² 10.000 yen (30 petak); C kebun tinggi bisa dari kursi roda 5 m² 3.000 yen (10 petak). Untuk warga kota Midori, satu keluarga maksimal satu petak. Masa pakai 1 April–31 Maret tahun berikutnya. Alat (cangkul, sekop) dipinjamkan gratis; benih dan pupuk siapkan sendiri. Daftar 1–20 Februari di loket bagian pertanian balai kota atau lewat pos; jika banyak peminat diundi. Pemula ada pelatihan menanam sayur gratis di bulan April.</sub>
+<sub>Pendaftaran kebun warga kota Midori: petak A 10 m² 6.000 yen/tahun (40 petak); B 20 m² 10.000 yen (30 petak); C kebun tinggi bisa dari kursi roda 5 m² 3.000 yen (10 petak). Untuk warga kota Midori, satu keluarga maksimal satu petak. Masa pakai 1 April–31 Maret tahun berikutnya. Alat (cangkul, sekop) dipinjamkan gratis; benih dan pupuk siapkan sendiri. Daftar 1–20 Februari di loket bagian pertanian balai kota atau lewat pos; jika banyak peminat diundi. Pemula ada pelatihan menanam sayur gratis di bulan April. Kebun punya keran air dan toilet, juga gudang alat yang bebas dipakai pengguna. Pestisida dan pupuk kimia tak boleh dipakai; sayur yang ditanam bebas dipilih. Menjual hasil panen dilarang. Yang tak datang ke ladang lebih dari tiga bulan bisa diminta berhenti memakai. Bayar biaya lewat bank paling lambat akhir Maret sebelum mulai. Dilarang menyewakan atau mengalihkan ladang. Parkir ada di pintu masuk kebun (gratis). Hasil lamaran diberitahukan lewat pos paling lambat 25 Februari. Bila berhenti memakai setelah membayar, uang tak dikembalikan. Buang rumput kering dan sisa sayur di tempat yang ditentukan. Tiap Sabtu pertama pagi hari semua membersihkan kebun bersama; usahakan ikut.</sub>
 
 **59. みどり市に住む家族が、20㎡の区画を借りたい。正しいものはどれか。**
 
@@ -1265,10 +1319,10 @@
 > これは、レストランから客に届いたメールである。  
 >   
 > ワン様  
-> 昨日はご来店いただき、ありがとうございました。お客様がお座りになっていた席に、黒い手袋が片方だけ落ちておりました。お客様のものでしたら、店でお預かりしておりますので、ご都合のよいときにお越しください。営業時間は午前十一時から午後十時まで、水曜日は定休日です。お越しになれない場合は、着払いでお送りすることもできますので、ご住所をお知らせください。  
+> 昨日はご来店いただき、ありがとうございました。お客様がお座りになっていた席に、黒い手袋が片方だけ落ちておりました。お客様のものでしたら、店でお預かりしておりますので、ご都合のよいときにお越しください。営業時間は午前十一時から午後十時まで、水曜日は定休日です。お越しになれない場合は、着払いでお送りすることもできますので、ご住所をお知らせください。ご不便をおかけして、本当に申し訳ありません。  
 > レストラン　ひかり
 
-<sub>Kepada Wang: terima kasih atas kunjungan kemarin. Di kursi tempat Anda duduk tertinggal sebelah sarung tangan hitam. Jika milik Anda, kami simpan di restoran; silakan datang kapan saja. Buka 11.00–22.00, libur Rabu. Jika tidak bisa datang, bisa kami kirim dengan ongkos dibayar penerima; mohon beri tahu alamat Anda. — Restoran Hikari</sub>
+<sub>Kepada Wang: terima kasih atas kunjungan kemarin. Di kursi tempat Anda duduk tertinggal sebelah sarung tangan hitam. Jika milik Anda, kami simpan di restoran; silakan datang kapan saja. Buka 11.00–22.00, libur Rabu. Jika tidak bisa datang, bisa kami kirim dengan ongkos dibayar penerima; mohon beri tahu alamat Anda. Kami benar-benar mohon maaf atas ketidaknyamanan ini. — Restoran Hikari</sub>
 
 **48. ワンさんがこの手袋を受け取る方法として、メールに書かれていないものはどれか。**
 
@@ -1307,10 +1361,10 @@
 > 停電のお知らせ  
 > マンションの電気設備の点検のため、次の日時に停電します。  
 > 日時：五月二十日（日）午前九時から午後一時まで  
-> 停電中は、エレベーターと各部屋の電気が使えません。インターホンも使えませんので、来客の予定がある方はご注意ください。冷蔵庫の電源は切らなくても大丈夫ですが、なるべく扉を開けないようにしてください。点検が早く終わった場合は、予定より早く電気が戻ります。  
+> 停電中は、エレベーターと各部屋の電気が使えません。インターホンも使えませんので、来客の予定がある方はご注意ください。冷蔵庫の電源は切らなくても大丈夫ですが、なるべく扉を開けないようにしてください。点検が早く終わった場合は、予定より早く電気が戻ります。ご迷惑をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、管理会社にお問い合わせください。  
 > 管理会社
 
-<sub>Pemberitahuan pemadaman listrik untuk pemeriksaan instalasi apartemen: Minggu 20 Mei jam 09.00–13.00. Selama padam, lift dan listrik tiap kamar tidak bisa dipakai, interkom juga mati, jadi perhatikan jika ada tamu. Kulkas tidak perlu dimatikan, tetapi sebisa mungkin jangan dibuka. Jika pemeriksaan selesai lebih cepat, listrik menyala lebih awal. — Perusahaan pengelola</sub>
+<sub>Pemberitahuan pemadaman listrik untuk pemeriksaan instalasi apartemen: Minggu 20 Mei jam 09.00–13.00. Selama padam, lift dan listrik tiap kamar tidak bisa dipakai, interkom juga mati, jadi perhatikan jika ada tamu. Kulkas tidak perlu dimatikan, tetapi sebisa mungkin jangan dibuka. Jika pemeriksaan selesai lebih cepat, listrik menyala lebih awal. Mohon maaf atas ketidaknyamanan, mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke perusahaan pengelola. — Perusahaan pengelola</sub>
 
 **50. 停電の日について、正しいものはどれか。**
 
@@ -1331,10 +1385,10 @@
 > 担任の先生が学生に渡したメモである。  
 >   
 > チャンさんへ  
-> 来月の作文コンテストに出す作文を読みました。テーマに合っていて、とてもおもしろい内容です。ただ、八百字以内という決まりなのに、千字近くあります。最後の段落の例を一つ減らせば、ちょうどよくなると思います。直したものは、来週の月曜日の授業のときに、紙で出してください。  
+> 来月の作文コンテストに出す作文を読みました。テーマに合っていて、とてもおもしろい内容です。ただ、八百字以内という決まりなのに、千字近くあります。最後の段落の例を一つ減らせば、ちょうどよくなると思います。直したものは、来週の月曜日の授業のときに、紙で出してください。お忙しいところすみませんが、期限は必ず守ってください。わからないことがあれば、いつでも先生に聞いてください。  
 > 山口
 
-<sub>Untuk Chan: saya sudah membaca karangan untuk lomba bulan depan. Sesuai tema dan isinya sangat menarik. Hanya saja aturannya maksimal 800 karakter, sedangkan karanganmu hampir 1.000. Kalau satu contoh di paragraf terakhir dikurangi, saya rasa pas. Serahkan yang sudah diperbaiki dalam bentuk kertas saat pelajaran Senin depan. — Yamaguchi</sub>
+<sub>Untuk Chan: saya sudah membaca karangan untuk lomba bulan depan. Sesuai tema dan isinya sangat menarik. Hanya saja aturannya maksimal 800 karakter, sedangkan karanganmu hampir 1.000. Kalau satu contoh di paragraf terakhir dikurangi, saya rasa pas. Serahkan yang sudah diperbaiki dalam bentuk kertas saat pelajaran Senin depan. Maaf mengganggu, tetapi mohon patuhi tenggatnya. Bila ada yang tak jelas, tanyakan ke guru kapan saja. — Yamaguchi</sub>
 
 **51. チャンさんは、作文をどう直せばいいか。**
 
@@ -1353,10 +1407,10 @@
 > **Teks menengah (内容理解・中文)**  
 > 大学を卒業して就職したとき、私は会社の近くのシェアハウスに住むことにした。一つの家に、六人の若者が自分の部屋を持ち、台所やリビングは共同で使う。家賃が安いことが一番の理由だった。  
 > 住み始めたころは、①不便なことも多かった。朝はシャワーを使う時間が重なるし、冷蔵庫に入れておいた自分の食べ物を、だれかに食べられてしまったこともある。一人暮らしのほうが気楽だったかもしれないと、何度も思った。  
-> そこで、住んでいる人たちで話し合い、いくつかのルールを決めた。シャワーの時間を順番に決め、冷蔵庫の物には名前を書く。それから、毎月一回、みんなで夕食を作って食べることにした。  
+> そこで、住んでいる人たちで話し合い、いくつかのルールを決めた。シャワーの時間を順番に決め、冷蔵庫の物には名前を書く。それから、毎月一回、みんなで夕食を作って食べることにした。シェアハウスには、ほかにも楽しいことがあった。休みの日に、みんなで近くの公園へお弁当を持っていったことや、だれかの誕生日に、小さなパーティーを開いたことは、今でも大切な思い出だ。  
 > この夕食会が始まってから、生活が大きく変わった。仕事の悩みを聞いてもらったり、料理を教え合ったりするうちに、家族のような関係になったのだ。会社で嫌なことがあった日も、家に帰ればだれかが「おかえり」と言ってくれる。②それが、今の私にとって一番の家賃以上の価値である。
 
-<sub>Saat lulus dan mulai bekerja, saya memutuskan tinggal di share house dekat kantor: enam anak muda punya kamar masing-masing dan berbagi dapur serta ruang tengah. Alasan utama: sewanya murah. Awalnya ① banyak ketidaknyamanan: pagi hari jadwal mandi bertabrakan, makanan saya di kulkas pernah dimakan orang lain; berkali-kali saya berpikir tinggal sendiri mungkin lebih santai. Maka para penghuni berdiskusi dan membuat aturan: jadwal mandi bergiliran, barang di kulkas diberi nama, dan sebulan sekali memasak serta makan malam bersama. Sejak acara makan malam itu dimulai, hidup berubah besar: saling mendengar masalah pekerjaan dan saling mengajari masak, hubungan kami jadi seperti keluarga. Di hari ada hal tidak enak di kantor pun, pulang ada yang menyambut 'okaeri'. ② Itulah, bagi saya kini, nilai yang melebihi harga sewa.</sub>
+<sub>Saat lulus dan mulai bekerja, saya memutuskan tinggal di share house dekat kantor: enam anak muda punya kamar masing-masing dan berbagi dapur serta ruang tengah. Alasan utama: sewanya murah. Awalnya ① banyak ketidaknyamanan: pagi hari jadwal mandi bertabrakan, makanan saya di kulkas pernah dimakan orang lain; berkali-kali saya berpikir tinggal sendiri mungkin lebih santai. Maka para penghuni berdiskusi dan membuat aturan: jadwal mandi bergiliran, barang di kulkas diberi nama, dan sebulan sekali memasak serta makan malam bersama. Di rumah bersama ada juga hal-hal menyenangkan lain. Membawa bekal ke taman dekat sana bersama-sama di hari libur dan mengadakan pesta kecil di ulang tahun seseorang masih menjadi kenangan berharga. Sejak acara makan malam itu dimulai, hidup berubah besar: saling mendengar masalah pekerjaan dan saling mengajari masak, hubungan kami jadi seperti keluarga. Di hari ada hal tidak enak di kantor pun, pulang ada yang menyambut 'okaeri'. ② Itulah, bagi saya kini, nilai yang melebihi harga sewa.</sub>
 
 **52. ＿①不便なこと＿の例として、合っているものはどれか。**
 
@@ -1405,9 +1459,9 @@
 > 私も旅行のときには翻訳アプリをよく使う。道を聞いたり、レストランで注文したりするには、十分役に立つ。しかし、先日、タイの友人の家に招かれたとき、アプリだけでは足りないと感じる出来事があった。  
 > 友人のお母さんは、私のために伝統的な料理を作ってくれた。私はアプリを使って「おいしいです」と伝えた。お母さんはにっこり笑ってくれたが、その後の会話は続かなかった。アプリに話しかけて、訳された文を見せて、また返事を待つ。そのくり返しの間に、話したいという気持ちがだんだん小さくなってしまったのだ。  
 > 帰りに、友人が「母は、あなたがタイ語で一言でも言ってくれたら、すごく喜んだと思うよ」と言った。私ははっとした。②相手の言葉で話そうとすること自体が、相手を大切に思っているというメッセージになるのだ。  
-> 翻訳アプリは便利な道具だが、人と人の心をつなぐのは、やはり自分の口から出た言葉なのだと思う。私は今、少しずつタイ語を勉強している。次に友人の家を訪ねるときには、お母さんに自分の言葉でお礼を言いたい。
+> 翻訳アプリは便利な道具だが、人と人の心をつなぐのは、やはり自分の口から出た言葉なのだと思う。私は今、少しずつタイ語を勉強している。言葉を覚えるのは大変だが、相手の国のあいさつを一つ知っているだけでも、会話のきっかけになる。次に友人の家を訪ねるときには、お母さんに自分の言葉でお礼を言いたい。
 
-<sub>Belakangan aplikasi terjemahan ponsel sangat praktis: bicara dalam bahasa asing langsung diterjemahkan, mengarahkan kamera ke papan atau menu pun langsung paham artinya. ① Ada yang bilang 'tidak perlu lagi belajar bahasa asing'. Saya juga sering memakainya saat bepergian; untuk bertanya jalan atau memesan di restoran sudah cukup. Tetapi saat diundang ke rumah teman Thailand, terjadi hal yang membuat saya merasa aplikasi saja tidak cukup. Ibu teman memasak hidangan tradisional untuk saya; saya menyampaikan 'enak' lewat aplikasi. Ia tersenyum, tetapi percakapan tidak berlanjut — bicara ke aplikasi, menunjukkan terjemahan, menunggu jawaban; di antara pengulangan itu keinginan untuk bicara perlahan mengecil. Saat pulang teman berkata 'ibuku pasti sangat senang kalau kamu bilang satu kata saja dalam bahasa Thai.' Saya tersentak: ② berusaha berbicara dalam bahasa lawan bicara itu sendiri sudah menjadi pesan bahwa kita menghargai orang itu. Aplikasi terjemahan alat yang praktis, tetapi yang menghubungkan hati manusia tetaplah kata-kata yang keluar dari mulut sendiri. Kini saya pelan-pelan belajar bahasa Thai; saat berkunjung lagi, saya ingin berterima kasih kepada ibunya dengan kata-kata saya sendiri.</sub>
+<sub>Belakangan aplikasi terjemahan ponsel sangat praktis: bicara dalam bahasa asing langsung diterjemahkan, mengarahkan kamera ke papan atau menu pun langsung paham artinya. ① Ada yang bilang 'tidak perlu lagi belajar bahasa asing'. Saya juga sering memakainya saat bepergian; untuk bertanya jalan atau memesan di restoran sudah cukup. Tetapi saat diundang ke rumah teman Thailand, terjadi hal yang membuat saya merasa aplikasi saja tidak cukup. Ibu teman memasak hidangan tradisional untuk saya; saya menyampaikan 'enak' lewat aplikasi. Ia tersenyum, tetapi percakapan tidak berlanjut — bicara ke aplikasi, menunjukkan terjemahan, menunggu jawaban; di antara pengulangan itu keinginan untuk bicara perlahan mengecil. Saat pulang teman berkata 'ibuku pasti sangat senang kalau kamu bilang satu kata saja dalam bahasa Thai.' Saya tersentak: ② berusaha berbicara dalam bahasa lawan bicara itu sendiri sudah menjadi pesan bahwa kita menghargai orang itu. Aplikasi terjemahan alat yang praktis, tetapi yang menghubungkan hati manusia tetaplah kata-kata yang keluar dari mulut sendiri. Kini saya pelan-pelan belajar bahasa Thai; Menghafal bahasa itu berat, tetapi hanya dengan mengetahui satu salam dari negara lawan bicara, itu bisa menjadi pemicu percakapan. saat berkunjung lagi, saya ingin berterima kasih kepada ibunya dengan kata-kata saya sendiri.</sub>
 
 **55. ＿①「もう外国語を勉強する必要はない」と言う人もいる＿とあるが、なぜそう言うのか。**
 
@@ -1473,9 +1527,20 @@
 > 団体（20人以上）1人 ｜ 600円 ｜ 400円 ｜ 無料 ｜ ・団体で見学する場合は、見学日の2週間前までに電話で予約してください。  
 > ・団体には、学芸員による30分の解説（無料）をつけることができます。予約のときにお申し込みください（1日2回まで、先着順）。  
 > ・開館時間：9:30～17:00（入館は16:30まで）。月曜日休館（祝日の場合は翌日）。  
-> ・館内での飲食はできません。お弁当は1階の休憩室で食べることができます（団体は予約が必要）。
+> ・館内での飲食はできません。お弁当は1階の休憩室で食べることができます（団体は予約が必要）。  
+> ・団体見学の予約は、午前九時から午後五時まで、電話で受け付けています。  
+> ・車いすやベビーカーは、受付で貸し出しています（無料）。  
+> ・館内の写真撮影は、フラッシュを使わなければ、できます。  
+> ・ミュージアムショップは、一階にあり、午後四時半まで開いています。  
+> ・団体のバスは、博物館の裏の駐車場に止めることができます。駐車券は、受付でお渡しします。  
+> ・解説を希望する団体は、見学の日に、受付で団体名をお伝えください。  
+> ・見学の途中で、トイレや休憩のために、館外に出ることもできます。出るときは、スタッフに声をかけてください。  
+> ・館内では、走ったり、大きな声で話したりしないでください。  
+> ・展示の中には、さわってもよいものがあります。スタッフに聞いてください。  
+> ・館内には、荷物を預けるロッカーがあります（100円・返却式）。  
+> ・雨の日は、かさを入り口のかさ立てに入れてください。
 
-<sub>Panduan kunjungan rombongan Museum Sejarah Sakura: tiket perorangan umum 800 / mahasiswa & SMA 500 / SMP ke bawah gratis; rombongan (20 orang ke atas) per orang 600 / 400 / gratis. Rombongan reservasi lewat telepon paling lambat 2 minggu sebelum hari kunjungan. Rombongan bisa mendapat penjelasan 30 menit oleh kurator (gratis), daftar saat reservasi (maks 2 kali sehari, siapa cepat). Buka 09.30–17.00 (masuk sampai 16.30); tutup Senin (jika libur nasional, keesokan harinya). Dilarang makan-minum di dalam; bekal bisa dimakan di ruang istirahat lantai 1 (rombongan perlu reservasi).</sub>
+<sub>Panduan kunjungan rombongan Museum Sejarah Sakura: tiket perorangan umum 800 / mahasiswa & SMA 500 / SMP ke bawah gratis; rombongan (20 orang ke atas) per orang 600 / 400 / gratis. Rombongan reservasi lewat telepon paling lambat 2 minggu sebelum hari kunjungan. Rombongan bisa mendapat penjelasan 30 menit oleh kurator (gratis), daftar saat reservasi (maks 2 kali sehari, siapa cepat). Buka 09.30–17.00 (masuk sampai 16.30); tutup Senin (jika libur nasional, keesokan harinya). Dilarang makan-minum di dalam; bekal bisa dimakan di ruang istirahat lantai 1 (rombongan perlu reservasi). Reservasi kunjungan rombongan diterima lewat telepon pukul 09.00–17.00. Kursi roda dan kereta bayi dipinjamkan di resepsionis (gratis). Memotret di dalam boleh asal tak memakai lampu kilat. Toko museum ada di lantai satu dan buka sampai pukul 16.30. Bus rombongan bisa parkir di tempat parkir belakang museum; karcis diberikan di resepsionis. Rombongan yang ingin penjelasan, sebutkan nama rombongan di resepsionis pada hari kunjungan. Di tengah kunjungan, Anda boleh keluar gedung untuk toilet atau istirahat; beri tahu staf saat keluar. Di dalam gedung jangan berlari atau bicara keras. Ada pameran yang boleh disentuh; tanyakan ke staf. Di dalam gedung ada loker penitipan barang (100 yen, dikembalikan). Saat hujan, taruh payung di tempat payung dekat pintu masuk.</sub>
 
 **59. 大学生25人と先生2人が、団体で見学する。入館料は全部でいくらか。**
 
@@ -1513,138 +1578,140 @@
 > これは、大学の国際交流センターから留学生に届いたメールである。  
 >   
 > 留学生の皆さん  
-> 来月、地域の小学校で国際交流イベントが開かれます。自分の国の遊びや料理を子どもたちに紹介してくれる留学生を、十人募集します。時間は土曜日の午前九時から十二時までで、交通費として二千円をお渡しします。参加したい人は、紹介したい内容を簡単に書いて、今月二十日までにセンターにメールで送ってください。応募が多い場合は、内容を見て決めます。  
+> 来月、地域の小学校で国際交流イベントが開かれます。自分の国の遊びや料理を子どもたちに紹介してくれる留学生を、十人募集します。時間は土曜日の午前九時から十二時までで、交通費として二千円をお渡しします。参加したい人は、紹介したい内容を簡単に書いて、今月二十日までにセンターにメールで送ってください。応募が多い場合は、内容を見て決めます。どうぞよろしくお願いします。  
 > 国際交流センター
 
-<sub>Untuk mahasiswa asing: bulan depan ada acara pertukaran internasional di SD setempat. Dicari 10 mahasiswa yang mau memperkenalkan permainan atau masakan negaranya kepada anak-anak. Sabtu 09.00–12.00, diberi 2.000 yen untuk transportasi. Yang ingin ikut, tulis singkat isi yang ingin diperkenalkan dan kirim lewat email ke pusat paling lambat tanggal 20 bulan ini. Jika pendaftar banyak, dipilih berdasarkan isinya. — Pusat pertukaran internasional</sub>
+<sub>Untuk mahasiswa asing: bulan depan ada acara pertukaran internasional di SD setempat. Dicari 10 mahasiswa yang mau memperkenalkan permainan atau masakan negaranya kepada anak-anak. Sabtu 09.00–12.00, diberi 2.000 yen untuk transportasi. Yang ingin ikut, tulis singkat isi yang ingin diperkenalkan dan kirim lewat email ke pusat paling lambat tanggal 20 bulan ini. Jika pendaftar banyak, dipilih berdasarkan isinya. Mohon kerja samanya. — Pusat pertukaran internasional</sub>
 
 **48. このイベントに参加したい留学生は、まず何をしなければならないか。**
 
-- ✓ A. 内容を書いて、センターにメールで送る
-- 　 B. 交通費の二千円を払う
+- 　 A. 交通費の二千円を払う
+- ✓ B. 内容を書いて、センターにメールで送る
 - 　 C. 自分の国の料理を作って持っていく
 - 　 D. 小学校に電話して、参加を申し込む
 
 *Alasan:* Tulis isi yang ingin diperkenalkan, kirim email paling lambat tanggal 20. — *bukti:* 「紹介したい内容を簡単に書いて…メールで送ってください」
 
-  - A. 内容を書いて、センターにメールで送る — BENAR. Benar.
-  - B. 交通費の二千円を払う — Salah. 2.000 yen diberikan, bukan dibayar.
+  - A. 交通費の二千円を払う — Salah. 2.000 yen diberikan, bukan dibayar.
+  - B. 内容を書いて、センターにメールで送る — BENAR. Benar.
   - C. 自分の国の料理を作って持っていく — Salah. Itu nanti saat acara jika terpilih.
   - D. 小学校に電話して、参加を申し込む — Salah. Lewat pusat, bukan SD.
 
 > **Teks pendek (内容理解・短文)**  
-> 毎年、年末になると、多くの人が「来年こそは」と目標を立てる。しかし、その目標を一年間続けられる人は少ないという。目標が大きすぎて、途中でいやになってしまうからだ。たとえば「毎日一時間勉強する」より、「毎日単語を五つ覚える」のほうが続けやすい。小さな目標でも、できたことを毎日カレンダーに書いていくと、自信になる。大切なのは、目標の大きさではなく、続けることなのだ。
+> 毎年、年末になると、多くの人が「来年こそは」と目標を立てる。しかし、その目標を一年間続けられる人は少ないという。目標が大きすぎて、途中でいやになってしまうからだ。たとえば「毎日一時間勉強する」より、「毎日単語を五つ覚える」のほうが続けやすい。小さな目標でも、できたことを毎日カレンダーに書いていくと、自信になる。目標を立てるときは、紙に書いて、よく見える所にはっておくのもいい。毎日目に入ると、忘れにくくなるからだ。大切なのは、目標の大きさではなく、続けることなのだ。
 
-<sub>Setiap akhir tahun banyak orang membuat target 'tahun depan pasti'. Tetapi katanya sedikit yang bisa mempertahankannya setahun, karena targetnya terlalu besar sehingga di tengah jalan bosan. Misalnya 'menghafal lima kosakata setiap hari' lebih mudah dipertahankan daripada 'belajar satu jam setiap hari'. Target kecil pun, jika yang berhasil dicatat setiap hari di kalender, menjadi kepercayaan diri. Yang penting bukan besarnya target, melainkan keberlanjutannya.</sub>
+<sub>Setiap akhir tahun banyak orang membuat target 'tahun depan pasti'. Tetapi katanya sedikit yang bisa mempertahankannya setahun, karena targetnya terlalu besar sehingga di tengah jalan bosan. Misalnya 'menghafal lima kosakata setiap hari' lebih mudah dipertahankan daripada 'belajar satu jam setiap hari'. Target kecil pun, jika yang berhasil dicatat setiap hari di kalender, menjadi kepercayaan diri. Saat menetapkan target, menulisnya di kertas dan menempelnya di tempat yang mudah terlihat juga baik; bila terlihat tiap hari, tak mudah terlupa. Yang penting bukan besarnya target, melainkan keberlanjutannya.</sub>
 
 **49. 筆者によると、目標を続けるために大切なことは何か。**
 
-- 　 A. 大きな目標を立てること
-- 　 B. 一日一時間勉強すること
-- ✓ C. 小さな目標を毎日続けること
-- 　 D. 年末に目標を見直すこと
+- 　 A. 年末に目標を見直すこと
+- 　 B. 大きな目標を立てること
+- 　 C. 一日一時間勉強すること
+- ✓ D. 小さな目標を毎日続けること
 
 *Alasan:* Kalimat terakhir. — *bukti:* 「大切なのは、目標の大きさではなく、続けることなのだ」
 
-  - A. 大きな目標を立てること — Salah. Justru penyebab gagal.
-  - B. 一日一時間勉強すること — Salah. Contoh target yang sulit dipertahankan.
-  - C. 小さな目標を毎日続けること — BENAR. Benar.
-  - D. 年末に目標を見直すこと — Salah. Tidak disebut.
+  - A. 年末に目標を見直すこと — Salah. Tidak disebut.
+  - B. 大きな目標を立てること — Salah. Justru penyebab gagal.
+  - C. 一日一時間勉強すること — Salah. Contoh target yang sulit dipertahankan.
+  - D. 小さな目標を毎日続けること — BENAR. Benar.
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 市立病院からのお知らせ  
-> 来月から、外来の受付時間が変わります。午前の受付は八時半から十一時まで（これまでは十一時半まで）、午後の受付は一時半から四時までです。土曜日の午後と日曜日、祝日は休みです。急な病気やけがの場合は、休日でも救急外来で診察します。ただし、救急外来は混雑することがありますので、事前に電話で連絡してください。
+> 来月から、外来の受付時間が変わります。午前の受付は八時半から十一時まで（これまでは十一時半まで）、午後の受付は一時半から四時までです。土曜日の午後と日曜日、祝日は休みです。急な病気やけがの場合は、休日でも救急外来で診察します。ただし、救急外来は混雑することがありますので、事前に電話で連絡してください。  
+> ・受付時間が変わる日は、病院の入り口にも、お知らせをはっておきます。  
+> ・ご迷惑をおかけしますが、ご理解とご協力をお願いします。
 
-<sub>Pemberitahuan RS kota: mulai bulan depan jam pendaftaran rawat jalan berubah. Pagi 08.30–11.00 (sebelumnya sampai 11.30), siang 13.30–16.00. Sabtu siang, Minggu, dan libur nasional tutup. Untuk sakit atau cedera mendadak, di hari libur pun diperiksa di IGD; tetapi IGD bisa ramai, jadi hubungi lewat telepon terlebih dahulu.</sub>
+<sub>Pemberitahuan RS kota: mulai bulan depan jam pendaftaran rawat jalan berubah. Pagi 08.30–11.00 (sebelumnya sampai 11.30), siang 13.30–16.00. Sabtu siang, Minggu, dan libur nasional tutup. Untuk sakit atau cedera mendadak, di hari libur pun diperiksa di IGD; tetapi IGD bisa ramai, jadi hubungi lewat telepon terlebih dahulu. Pada hari jam pendaftaran berubah, pengumuman juga ditempel di pintu masuk rumah sakit. Mohon maaf atas ketidaknyamanan, mohon pengertian dan kerja sama.</sub>
 
 **50. 来月、平日の午前十一時十五分に病院に行った人は、どうなるか。**
 
-- ✓ A. 午後の受付が始まるまで待つ
-- 　 B. 救急外来で診察を受ける
-- 　 C. そのまま受付で診察を受けられる
-- 　 D. 次の日に来なければならない
+- 　 A. 次の日に来なければならない
+- 　 B. そのまま受付で診察を受けられる
+- ✓ C. 午後の受付が始まるまで待つ
+- 　 D. 救急外来で診察を受ける
 
 *Alasan:* Pendaftaran pagi sampai 11.00; siang mulai 13.30. — *bukti:* 「午前の受付は八時半から十一時まで」
 
-  - A. 午後の受付が始まるまで待つ — BENAR. Benar.
-  - B. 救急外来で診察を受ける — Salah. IGD untuk kasus mendadak.
-  - C. そのまま受付で診察を受けられる — Salah. Sudah lewat jam 11.
-  - D. 次の日に来なければならない — Salah. Masih bisa siang hari.
+  - A. 次の日に来なければならない — Salah. Masih bisa siang hari.
+  - B. そのまま受付で診察を受けられる — Salah. Sudah lewat jam 11.
+  - C. 午後の受付が始まるまで待つ — BENAR. Benar.
+  - D. 救急外来で診察を受ける — Salah. IGD untuk kasus mendadak.
 
 > **Teks pendek (内容理解・短文) — メモ**  
 > （会社で）  
 > 部長が、部下の机に置いたメモである。  
 >   
 > 中村さん  
-> 来週月曜日の取引先との打ち合わせですが、先方の都合で、場所が向こうの会社に変わりました。時間は変わらず午後二時からです。向こうの会社までは電車で四十分かかるので、一時には会社を出たほうがいいでしょう。新商品のサンプルは私が持っていきますので、中村さんは見積書を三部用意しておいてください。  
+> 来週月曜日の取引先との打ち合わせですが、先方の都合で、場所が向こうの会社に変わりました。時間は変わらず午後二時からです。向こうの会社までは電車で四十分かかるので、一時には会社を出たほうがいいでしょう。新商品のサンプルは私が持っていきますので、中村さんは見積書を三部用意しておいてください。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。  
 > 部長　石井
 
-<sub>Nakamura, rapat dengan mitra Senin depan dipindah ke kantor mereka karena kondisi pihak sana. Waktunya tetap jam 2 siang. Ke kantor mereka 40 menit naik kereta, sebaiknya berangkat dari kantor jam 1. Sampel produk baru saya yang bawa; Nakamura siapkan tiga rangkap surat penawaran harga. — Manajer Ishii</sub>
+<sub>Nakamura, rapat dengan mitra Senin depan dipindah ke kantor mereka karena kondisi pihak sana. Waktunya tetap jam 2 siang. Ke kantor mereka 40 menit naik kereta, sebaiknya berangkat dari kantor jam 1. Sampel produk baru saya yang bawa; Nakamura siapkan tiga rangkap surat penawaran harga. Maaf mengganggu, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. — Manajer Ishii</sub>
 
 **51. 中村さんが打ち合わせの前にしなければならないことは何か。**
 
-- 　 A. 新商品のサンプルを用意する
-- ✓ B. 見積書を三部用意する
-- 　 C. 取引先の会社に電話する
-- 　 D. 打ち合わせの時間を変える
+- ✓ A. 見積書を三部用意する
+- 　 B. 取引先の会社に電話する
+- 　 C. 打ち合わせの時間を変える
+- 　 D. 新商品のサンプルを用意する
 
 *Alasan:* Diminta menyiapkan tiga rangkap surat penawaran. — *bukti:* 「見積書を三部用意しておいてください」
 
-  - A. 新商品のサンプルを用意する — Salah. Sampel dibawa manajer.
-  - B. 見積書を三部用意する — BENAR. Benar.
-  - C. 取引先の会社に電話する — Salah. Tidak diminta.
-  - D. 打ち合わせの時間を変える — Salah. Waktunya tetap.
+  - A. 見積書を三部用意する — BENAR. Benar.
+  - B. 取引先の会社に電話する — Salah. Tidak diminta.
+  - C. 打ち合わせの時間を変える — Salah. Waktunya tetap.
+  - D. 新商品のサンプルを用意する — Salah. Sampel dibawa manajer.
 
 > **Teks menengah (内容理解・中文)**  
 > 私の祖父は、八十歳を過ぎた今も、毎朝五時に起きて、家の前の道を掃除している。落ち葉を集めたり、ごみを拾ったりして、三十分ほどで終わる。  
 > 子どものころ、私は①祖父がなぜ毎朝そんなことをするのか、不思議に思っていた。家の前の道は、家族だけの物ではない。近所の人も使う道なのに、どうして祖父だけが掃除をするのだろうと思っていたのだ。  
 > ある朝、祖父に聞いてみると、祖父は「道がきれいだと、通る人が気持ちよく一日を始められるだろう」と答えた。そして、「それに、毎朝掃除をしていると、近所の人とあいさつができる。それが楽しいんだよ」と笑った。  
-> 実際、祖父が掃除をしていると、通学する子どもたちや、会社に行く人たちが「おはようございます」と声をかけていく。中には、一緒にごみを拾ってくれる人もいる。  
+> 実際、祖父が掃除をしていると、通学する子どもたちや、会社に行く人たちが「おはようございます」と声をかけていく。中には、一緒にごみを拾ってくれる人もいる。近所の人が、「いつもありがとう」と、祖父にお菓子や野菜を持ってくることもある。祖父はそれを、また別の人に分けている。  
 > 最近、私も週末だけ、祖父と一緒に掃除をするようになった。早起きはつらいが、近所の人の顔と名前を少しずつ覚えるのが楽しい。②祖父が言っていたことの意味が、今になってやっとわかってきた気がする。
 
-<sub>Kakek saya, kini lebih dari 80 tahun, masih bangun jam 5 setiap pagi dan menyapu jalan depan rumah — mengumpulkan daun gugur dan memungut sampah, selesai sekitar 30 menit. Waktu kecil ① saya heran kenapa kakek melakukannya setiap pagi: jalan itu bukan milik keluarga saja, dipakai tetangga juga, kenapa hanya kakek yang membersihkan? Suatu pagi saya bertanya; kakek menjawab 'kalau jalannya bersih, orang yang lewat bisa memulai hari dengan senang', lalu tertawa, 'lagi pula, membersihkan setiap pagi membuatku bisa bertegur sapa dengan tetangga; itu menyenangkan.' Memang saat kakek menyapu, anak-anak berangkat sekolah dan orang berangkat kerja menyapa 'selamat pagi'; ada pula yang ikut memungut sampah. Belakangan saya ikut membersihkan bersama kakek di akhir pekan. Bangun pagi memang berat, tetapi menyenangkan sedikit demi sedikit mengingat wajah dan nama tetangga. ② Rasanya baru sekarang saya mulai memahami maksud ucapan kakek.</sub>
+<sub>Kakek saya, kini lebih dari 80 tahun, masih bangun jam 5 setiap pagi dan menyapu jalan depan rumah — mengumpulkan daun gugur dan memungut sampah, selesai sekitar 30 menit. Waktu kecil ① saya heran kenapa kakek melakukannya setiap pagi: jalan itu bukan milik keluarga saja, dipakai tetangga juga, kenapa hanya kakek yang membersihkan? Suatu pagi saya bertanya; kakek menjawab 'kalau jalannya bersih, orang yang lewat bisa memulai hari dengan senang', lalu tertawa, 'lagi pula, membersihkan setiap pagi membuatku bisa bertegur sapa dengan tetangga; itu menyenangkan.' Memang saat kakek menyapu, anak-anak berangkat sekolah dan orang berangkat kerja menyapa 'selamat pagi'; ada pula yang ikut memungut sampah. Kadang tetangga membawakan kue atau sayur untuk kakek sambil berkata, 'Terima kasih selalu.' Kakek membaginya lagi kepada orang lain. Belakangan saya ikut membersihkan bersama kakek di akhir pekan. Bangun pagi memang berat, tetapi menyenangkan sedikit demi sedikit mengingat wajah dan nama tetangga. ② Rasanya baru sekarang saya mulai memahami maksud ucapan kakek.</sub>
 
 **52. ＿①祖父がなぜ毎朝そんなことをするのか、不思議に思っていた＿とあるが、なぜ不思議だったのか。**
 
 - 　 A. 道があまり汚れていなかったから
 - 　 B. 祖父がとても朝早く起きていたから
-- ✓ C. みんなの道なのに、祖父だけが掃除していたから
-- 　 D. 祖父が掃除をするのが嫌いだったから
+- 　 C. 祖父が掃除をするのが嫌いだったから
+- ✓ D. みんなの道なのに、祖父だけが掃除していたから
 
 *Alasan:* Kalimat sesudahnya menjelaskan. — *bukti:* 「近所の人も使う道なのに、どうして祖父だけが掃除をするのだろう」
 
   - A. 道があまり汚れていなかったから — Salah. Tidak disebut.
   - B. 祖父がとても朝早く起きていたから — Salah. Bukan inti keheranannya.
-  - C. みんなの道なのに、祖父だけが掃除していたから — BENAR. Benar.
-  - D. 祖父が掃除をするのが嫌いだったから — Salah. Kakek justru menikmatinya.
+  - C. 祖父が掃除をするのが嫌いだったから — Salah. Kakek justru menikmatinya.
+  - D. みんなの道なのに、祖父だけが掃除していたから — BENAR. Benar.
 
 **53. 祖父が掃除を続けている理由として、合っているものはどれか。**
 
-- 　 A. 家族に頼まれたから
-- 　 B. 町から掃除をするように言われたから
-- 　 C. 早起きの練習をしたいから
-- ✓ D. 通る人が気持ちよく過ごせ、あいさつもできるから
+- 　 A. 町から掃除をするように言われたから
+- 　 B. 早起きの練習をしたいから
+- ✓ C. 通る人が気持ちよく過ごせ、あいさつもできるから
+- 　 D. 家族に頼まれたから
 
 *Alasan:* Dua alasan kakek. — *bukti:* 「通る人が気持ちよく一日を始められる…近所の人とあいさつができる」
 
-  - A. 家族に頼まれたから — Salah. Tidak disebut.
-  - B. 町から掃除をするように言われたから — Salah. Tidak disebut.
-  - C. 早起きの練習をしたいから — Salah. Tidak disebut.
-  - D. 通る人が気持ちよく過ごせ、あいさつもできるから — BENAR. Benar.
+  - A. 町から掃除をするように言われたから — Salah. Tidak disebut.
+  - B. 早起きの練習をしたいから — Salah. Tidak disebut.
+  - C. 通る人が気持ちよく過ごせ、あいさつもできるから — BENAR. Benar.
+  - D. 家族に頼まれたから — Salah. Tidak disebut.
 
 **54. ＿②祖父が言っていたことの意味＿がわかってきたのは、なぜだと考えられるか。**
 
-- 　 A. 祖父が年を取って掃除をやめたから
-- 　 B. 近所の人に掃除を手伝うよう頼まれたから
-- 　 C. 早起きが楽になったから
-- ✓ D. 近所の人と知り合う楽しさを感じたから
+- 　 A. 早起きが楽になったから
+- ✓ B. 近所の人と知り合う楽しさを感じたから
+- 　 C. 祖父が年を取って掃除をやめたから
+- 　 D. 近所の人に掃除を手伝うよう頼まれたから
 
 *Alasan:* Penulis kini juga merasakan senangnya mengenal tetangga. — *bukti:* 「近所の人の顔と名前を少しずつ覚えるのが楽しい」
 
-  - A. 祖父が年を取って掃除をやめたから — Salah. Tidak disebut.
-  - B. 近所の人に掃除を手伝うよう頼まれたから — Salah. Tidak disebut.
-  - C. 早起きが楽になったから — Salah. Bangun pagi masih berat.
-  - D. 近所の人と知り合う楽しさを感じたから — BENAR. Benar.
+  - A. 早起きが楽になったから — Salah. Bangun pagi masih berat.
+  - B. 近所の人と知り合う楽しさを感じたから — BENAR. Benar.
+  - C. 祖父が年を取って掃除をやめたから — Salah. Tidak disebut.
+  - D. 近所の人に掃除を手伝うよう頼まれたから — Salah. Tidak disebut.
 
 > **Teks panjang (内容理解・長文)**  
 > 私は小さいころからピアノを習っていたが、中学生になってやめてしまった。毎日の練習がつらく、上手な友だちと比べられるのもいやだったからだ。  
@@ -1652,64 +1719,64 @@
 > 教室に行くと、生徒は私と同じくらいの年の会社員や、定年退職した人たちだった。先生は「上手にひくことより、楽しむことを大切にしましょう」と言った。子どものころは、間違えずにひくことばかり考えていたので、その言葉を聞いて、肩の力が抜けたような気がした。  
 > レッスンは週に一回、三十分だけだ。家にピアノはないので、電子ピアノを買って、夜にヘッドホンをつけて練習している。指は子どものころのようには動かない。それでも、一曲ひけるようになるたびに、子どものころには感じなかったうれしさがある。  
 > 先月、教室の発表会で、初めて人の前でひいた。途中で二回間違えたが、ひき終わったとき、ほかの生徒たちが大きな拍手をしてくれた。②子どものころの私なら、間違えたことが恥ずかしくて、泣いていたかもしれない。  
-> 大人になってから何かを始めるのは、遅すぎることはないのだと思う。むしろ、比べる相手がいない分、自分のために楽しめるのかもしれない。
+> 大人になってから何かを始めるのは、遅すぎることはないのだと思う。発表会のあと、先生が「また来年も、一緒に出ましょう」と言ってくださったことも、うれしかった。むしろ、比べる相手がいない分、自分のために楽しめるのかもしれない。
 
-<sub>Saya les piano sejak kecil, tetapi berhenti saat SMP karena latihan setiap hari berat dan tidak suka dibandingkan dengan teman yang mahir. Dua puluh tahun kemudian, tahun lalu, lewat depan sekolah musik dekat kantor saya melihat poster 'kelas piano untuk dewasa'. ① Saya ragu, tetapi nekat ikut les percobaan. Muridnya karyawan seumuran saya dan pensiunan. Guru berkata 'lebih utamakan menikmati daripada bermain dengan mahir'; waktu kecil saya hanya memikirkan bermain tanpa salah, jadi mendengar itu bahu saya terasa ringan. Les seminggu sekali hanya 30 menit; karena tidak ada piano di rumah saya membeli piano elektrik dan berlatih malam memakai headphone. Jari tidak bergerak seperti waktu kecil, tetapi setiap bisa memainkan satu lagu ada kegembiraan yang dulu tidak saya rasakan. Bulan lalu di konser kelas saya pertama kali bermain di depan orang; salah dua kali, tetapi saat selesai murid lain bertepuk tangan keras. ② Kalau saya yang dulu, mungkin sudah menangis karena malu salah. Memulai sesuatu setelah dewasa tidak pernah terlambat; justru karena tidak ada yang dibandingkan, mungkin bisa dinikmati untuk diri sendiri.</sub>
+<sub>Saya les piano sejak kecil, tetapi berhenti saat SMP karena latihan setiap hari berat dan tidak suka dibandingkan dengan teman yang mahir. Dua puluh tahun kemudian, tahun lalu, lewat depan sekolah musik dekat kantor saya melihat poster 'kelas piano untuk dewasa'. ① Saya ragu, tetapi nekat ikut les percobaan. Muridnya karyawan seumuran saya dan pensiunan. Guru berkata 'lebih utamakan menikmati daripada bermain dengan mahir'; waktu kecil saya hanya memikirkan bermain tanpa salah, jadi mendengar itu bahu saya terasa ringan. Les seminggu sekali hanya 30 menit; karena tidak ada piano di rumah saya membeli piano elektrik dan berlatih malam memakai headphone. Jari tidak bergerak seperti waktu kecil, tetapi setiap bisa memainkan satu lagu ada kegembiraan yang dulu tidak saya rasakan. Bulan lalu di konser kelas saya pertama kali bermain di depan orang; salah dua kali, tetapi saat selesai murid lain bertepuk tangan keras. ② Kalau saya yang dulu, mungkin sudah menangis karena malu salah. Memulai sesuatu setelah dewasa tidak pernah terlambat; Saya juga senang karena setelah resital, guru berkata, 'Tahun depan ikut lagi bersama ya.' justru karena tidak ada yang dibandingkan, mungkin bisa dinikmati untuk diri sendiri.</sub>
 
 **55. 筆者が中学生のときにピアノをやめたのは、なぜか。**
 
 - ✓ A. 練習がつらく、人と比べられたから
-- 　 B. 先生が厳しかったから
-- 　 C. 家にピアノがなかったから
+- 　 B. 家にピアノがなかったから
+- 　 C. 先生が厳しかったから
 - 　 D. 勉強が忙しくなったから
 
 *Alasan:* Paragraf 1. — *bukti:* 「毎日の練習がつらく、上手な友だちと比べられるのもいやだった」
 
   - A. 練習がつらく、人と比べられたから — BENAR. Benar.
-  - B. 先生が厳しかったから — Salah. Tidak disebut.
-  - C. 家にピアノがなかったから — Salah. Itu keadaan sekarang.
+  - B. 家にピアノがなかったから — Salah. Itu keadaan sekarang.
+  - C. 先生が厳しかったから — Salah. Tidak disebut.
   - D. 勉強が忙しくなったから — Salah. Tidak disebut.
 
 **56. ＿①迷ったが＿とあるが、筆者が迷ったのはなぜだと考えられるか。**
 
-- 　 A. 教室が会社から遠かったから
+- 　 A. レッスンの料金が高かったから
 - ✓ B. 昔ピアノをやめた経験があったから
-- 　 C. レッスンの料金が高かったから
+- 　 C. 教室が会社から遠かったから
 - 　 D. 先生を知らなかったから
 
 *Alasan:* Pernah berhenti karena pengalaman tidak menyenangkan, jadi ragu memulai lagi. — *bukti:* 「中学生になってやめてしまった」
 
-  - A. 教室が会社から遠かったから — Salah. Dekat kantor.
+  - A. レッスンの料金が高かったから — Salah. Tidak disebut.
   - B. 昔ピアノをやめた経験があったから — BENAR. Benar.
-  - C. レッスンの料金が高かったから — Salah. Tidak disebut.
+  - C. 教室が会社から遠かったから — Salah. Dekat kantor.
   - D. 先生を知らなかったから — Salah. Tidak disebut sebagai alasan.
 
 **57. ＿②子どものころの私なら…泣いていたかもしれない＿とあるが、今の筆者はどうだったか。**
 
-- 　 A. 一度も間違えずにひけた
-- 　 B. 恥ずかしくて、途中でやめた
-- ✓ C. 間違えても、拍手をもらえてうれしかった
-- 　 D. ほかの生徒と比べて落ち込んだ
+- 　 A. 恥ずかしくて、途中でやめた
+- 　 B. 一度も間違えずにひけた
+- 　 C. ほかの生徒と比べて落ち込んだ
+- ✓ D. 間違えても、拍手をもらえてうれしかった
 
 *Alasan:* Kini salah dua kali tetapi mendapat tepuk tangan dan tidak menangis. — *bukti:* 「ほかの生徒たちが大きな拍手をしてくれた」
 
-  - A. 一度も間違えずにひけた — Salah. Salah dua kali.
-  - B. 恥ずかしくて、途中でやめた — Salah. Ia main sampai selesai.
-  - C. 間違えても、拍手をもらえてうれしかった — BENAR. Benar.
-  - D. ほかの生徒と比べて落ち込んだ — Salah. Tidak disebut.
+  - A. 恥ずかしくて、途中でやめた — Salah. Ia main sampai selesai.
+  - B. 一度も間違えずにひけた — Salah. Salah dua kali.
+  - C. ほかの生徒と比べて落ち込んだ — Salah. Tidak disebut.
+  - D. 間違えても、拍手をもらえてうれしかった — BENAR. Benar.
 
 **58. 筆者が一番言いたいことは何か。**
 
-- 　 A. 子どものころから習い事を続けるべきだ
-- 　 B. ピアノは毎日長い時間練習するべきだ
-- ✓ C. 大人になってから何かを始めても遅くはない
+- ✓ A. 大人になってから何かを始めても遅くはない
+- 　 B. 子どものころから習い事を続けるべきだ
+- 　 C. ピアノは毎日長い時間練習するべきだ
 - 　 D. 人と比べることで上手になれる
 
 *Alasan:* Paragraf terakhir. — *bukti:* 「大人になってから何かを始めるのは、遅すぎることはない」
 
-  - A. 子どものころから習い事を続けるべきだ — Salah. Tidak disebut.
-  - B. ピアノは毎日長い時間練習するべきだ — Salah. Les hanya 30 menit seminggu.
-  - C. 大人になってから何かを始めても遅くはない — BENAR. Benar.
+  - A. 大人になってから何かを始めても遅くはない — BENAR. Benar.
+  - B. 子どものころから習い事を続けるべきだ — Salah. Tidak disebut.
+  - C. ピアノは毎日長い時間練習するべきだ — Salah. Les hanya 30 menit seminggu.
   - D. 人と比べることで上手になれる — Salah. Kebalikannya.
 
 > **Mencari informasi (情報検索)**  
@@ -1723,9 +1790,18 @@
 > ・手数料はコンビニで「粗大ごみ処理券」を買って払います。券に名前を書いて、ごみにはってください。  
 > ・収集日の朝八時までに、玄関の前など決められた場所に出してください。  
 > ・テレビ・冷蔵庫・洗濯機・エアコンは町では収集しません。買った店か、専門の業者に頼んでください。  
-> ・一回に出せるのは五点までです。
+> ・一回に出せるのは五点までです。  
+> ・粗大ごみ処理券は、コンビニのほか、町役場の窓口でも買えます。  
+> ・同じ日に、複数の品物を出す場合は、品物ごとに券をはってください。  
+> ・出し忘れたときは、次の収集日に、もう一度申し込んでください。  
+> ・まだ使える家具は、リサイクルセンターに持っていくこともできます。リサイクルセンターは、毎週土曜日の午前だけ開いています。  
+> ・申し込みの電話は、月曜日から金曜日の午前九時から午後五時まで受け付けます。  
+> ・収集日が祝日の場合は、次の日に収集します。  
+> ・手数料は、品物の大きさではなく、種類によって決まります。わからない品物は、電話で聞いてください。  
+> ・五点より多く出したいときは、ごみ受付センターに相談してください。  
+> ・粗大ごみの中に、お金や大切な物が入っていないか、出す前に確認してください。
 
-<sub>Pengangkutan sampah besar per rumah kota Asahi: kursi/rak kecil 500 yen; meja/sepeda/futon 1.000 yen; sofa/ranjang/lemari 2.000 yen; microwave/pemanas 1.000 yen. Diangkut setiap Rabu; daftar ke pusat penerimaan sampah lewat telepon atau internet paling lambat seminggu sebelumnya. Biaya dibayar dengan membeli 'tiket pengolahan sampah besar' di minimarket; tulis nama di tiket dan tempelkan. Taruh di tempat yang ditentukan seperti depan pintu paling lambat jam 8 pagi hari angkut. TV, kulkas, mesin cuci, AC tidak diangkut kota; minta ke toko tempat membeli atau perusahaan khusus. Sekali buang maksimal 5 barang.</sub>
+<sub>Pengangkutan sampah besar per rumah kota Asahi: kursi/rak kecil 500 yen; meja/sepeda/futon 1.000 yen; sofa/ranjang/lemari 2.000 yen; microwave/pemanas 1.000 yen. Diangkut setiap Rabu; daftar ke pusat penerimaan sampah lewat telepon atau internet paling lambat seminggu sebelumnya. Biaya dibayar dengan membeli 'tiket pengolahan sampah besar' di minimarket; tulis nama di tiket dan tempelkan. Taruh di tempat yang ditentukan seperti depan pintu paling lambat jam 8 pagi hari angkut. TV, kulkas, mesin cuci, AC tidak diangkut kota; minta ke toko tempat membeli atau perusahaan khusus. Sekali buang maksimal 5 barang. Karcis pengolahan sampah besar bisa dibeli di minimarket maupun loket kantor kota. Bila mengeluarkan beberapa barang di hari yang sama, tempel karcis untuk tiap barang. Bila lupa mengeluarkan, ajukan lagi untuk hari pengangkutan berikutnya. Perabot yang masih layak bisa dibawa ke pusat daur ulang, yang hanya buka pagi hari tiap Sabtu. Telepon pendaftaran diterima Senin–Jumat pukul 09.00–17.00. Bila hari pengangkutan jatuh pada hari libur, diangkut keesokan harinya. Biaya ditentukan oleh jenis barang, bukan ukurannya; untuk barang yang tak jelas, tanyakan lewat telepon. Bila ingin mengeluarkan lebih dari lima barang, konsultasikan ke pusat pendaftaran sampah. Sebelum dikeluarkan, pastikan tak ada uang atau barang penting di dalam sampah besar.</sub>
 
 **59. 机とソファーといすを一つずつ出したい。手数料は全部でいくらか。**
 
@@ -1743,17 +1819,17 @@
 
 **60. この案内について、正しいものはどれか。**
 
-- 　 A. 一回に何点でも出せる
-- ✓ B. 一週間前までに申し込む必要がある
-- 　 C. 手数料は収集の日に現金で払う
-- 　 D. 冷蔵庫は町が収集する
+- 　 A. 冷蔵庫は町が収集する
+- 　 B. 一回に何点でも出せる
+- ✓ C. 一週間前までに申し込む必要がある
+- 　 D. 手数料は収集の日に現金で払う
 
 *Alasan:* Daftar paling lambat seminggu sebelumnya. — *bukti:* 「収集日の一週間前までに…申し込んでください」
 
-  - A. 一回に何点でも出せる — Salah. Maksimal 5 barang.
-  - B. 一週間前までに申し込む必要がある — BENAR. Benar.
-  - C. 手数料は収集の日に現金で払う — Salah. Lewat tiket di minimarket.
-  - D. 冷蔵庫は町が収集する — Salah. Tidak diangkut kota.
+  - A. 冷蔵庫は町が収集する — Salah. Tidak diangkut kota.
+  - B. 一回に何点でも出せる — Salah. Maksimal 5 barang.
+  - C. 一週間前までに申し込む必要がある — BENAR. Benar.
+  - D. 手数料は収集の日に現金で払う — Salah. Lewat tiket di minimarket.
 
 ---
 
@@ -1763,10 +1839,10 @@
 > これは、旅行会社から客に届いたメールである。  
 >   
 > グエン様  
-> 来月の北海道ツアーにお申し込みいただき、ありがとうございます。出発の三日前までに、旅行代金の残り（八万円）をお支払いください。お支払いの確認ができましたら、飛行機のチケットとホテルの予約確認書をメールでお送りします。なお、北海道は朝晩冷えますので、上着をお持ちください。お客様のご都合で出発の七日前以降にキャンセルされる場合は、代金の三割をいただきます。  
+> 来月の北海道ツアーにお申し込みいただき、ありがとうございます。出発の三日前までに、旅行代金の残り（八万円）をお支払いください。お支払いの確認ができましたら、飛行機のチケットとホテルの予約確認書をメールでお送りします。なお、北海道は朝晩冷えますので、上着をお持ちください。お客様のご都合で出発の七日前以降にキャンセルされる場合は、代金の三割をいただきます。どうぞよろしくお願いいたします。ご不明な点は、お気軽にご連絡ください。  
 > さくらツーリスト
 
-<sub>Kepada Nguyen: terima kasih telah mendaftar tur Hokkaido bulan depan. Bayar sisa biaya (80.000 yen) paling lambat tiga hari sebelum keberangkatan. Setelah pembayaran dikonfirmasi, tiket pesawat dan konfirmasi hotel dikirim lewat email. Hokkaido dingin pagi dan malam, bawa jaket. Pembatalan karena alasan pelanggan mulai tujuh hari sebelum keberangkatan dikenai 30% biaya. — Sakura Tourist</sub>
+<sub>Kepada Nguyen: terima kasih telah mendaftar tur Hokkaido bulan depan. Bayar sisa biaya (80.000 yen) paling lambat tiga hari sebelum keberangkatan. Setelah pembayaran dikonfirmasi, tiket pesawat dan konfirmasi hotel dikirim lewat email. Hokkaido dingin pagi dan malam, bawa jaket. Pembatalan karena alasan pelanggan mulai tujuh hari sebelum keberangkatan dikenai 30% biaya. Mohon kerja samanya. Bila ada yang kurang jelas, hubungi kami dengan leluasa. — Sakura Tourist</sub>
 
 **48. このメールの内容と合っているものはどれか。**
 
@@ -1783,9 +1859,9 @@
   - D. 残りの代金を払えば、チケットなどがメールで届く — BENAR. Benar.
 
 > **Teks pendek (内容理解・短文)**  
-> スーパーのレジで、自分のお金を払う前に、レジ袋がいるかどうか聞かれることが多くなった。数年前にレジ袋が有料になってから、エコバッグを持ち歩く人が増えた。私も最初は忘れてばかりいたが、今では、かばんに小さく畳めるエコバッグを入れておくのが習慣になった。初めは面倒だと思ったことも、続けているうちに当たり前になる。環境のための行動は、無理なく続けられる工夫をすることが大切だと思う。
+> スーパーのレジで、自分のお金を払う前に、レジ袋がいるかどうか聞かれることが多くなった。数年前にレジ袋が有料になってから、エコバッグを持ち歩く人が増えた。私も最初は忘れてばかりいたが、今では、かばんに小さく畳めるエコバッグを入れておくのが習慣になった。初めは面倒だと思ったことも、続けているうちに当たり前になる。一人一人の行動は小さくても、多くの人が続ければ、大きな変化になるはずだ。環境のための行動は、無理なく続けられる工夫をすることが大切だと思う。
 
-<sub>Di kasir supermarket makin sering ditanya perlu kantong plastik atau tidak. Sejak kantong plastik berbayar beberapa tahun lalu, orang yang membawa tas belanja sendiri bertambah. Awalnya saya sering lupa, kini menaruh tas lipat kecil di dalam tas sudah jadi kebiasaan. Yang awalnya terasa merepotkan, lama-lama jadi biasa. Untuk tindakan demi lingkungan, penting membuat cara agar bisa dilakukan terus tanpa memaksakan diri.</sub>
+<sub>Di kasir supermarket makin sering ditanya perlu kantong plastik atau tidak. Sejak kantong plastik berbayar beberapa tahun lalu, orang yang membawa tas belanja sendiri bertambah. Awalnya saya sering lupa, kini menaruh tas lipat kecil di dalam tas sudah jadi kebiasaan. Yang awalnya terasa merepotkan, lama-lama jadi biasa. Meski tindakan tiap orang kecil, bila banyak orang melanjutkannya, itu akan menjadi perubahan besar. Untuk tindakan demi lingkungan, penting membuat cara agar bisa dilakukan terus tanpa memaksakan diri.</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -1803,9 +1879,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 中央公園　バーベキュー広場のご利用について  
-> 夏の間、バーベキュー広場を利用する人がとても多くなっています。そのため、七月と八月の土曜日・日曜日は、事前予約制とします。予約は利用日の一か月前から、公園の管理事務所で受け付けます（電話不可）。平日は予約なしで利用できます。どの日も、ごみは必ず持ち帰ってください。また、夜九時以降は利用できません。
+> 夏の間、バーベキュー広場を利用する人がとても多くなっています。そのため、七月と八月の土曜日・日曜日は、事前予約制とします。予約は利用日の一か月前から、公園の管理事務所で受け付けます（電話不可）。平日は予約なしで利用できます。どの日も、ごみは必ず持ち帰ってください。また、夜九時以降は利用できません。  
+> ご不便をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、公園管理事務所にお問い合わせください。ご利用の皆様のご協力に感謝します。
 
-<sub>Pemakaian area barbekyu Taman Pusat: selama musim panas pemakai sangat banyak, maka Sabtu–Minggu di bulan Juli & Agustus memakai sistem reservasi. Reservasi mulai sebulan sebelum hari pemakaian di kantor pengelola taman (tidak bisa lewat telepon). Hari kerja bisa dipakai tanpa reservasi. Setiap hari sampah wajib dibawa pulang. Tidak bisa dipakai lewat jam 9 malam.</sub>
+<sub>Pemakaian area barbekyu Taman Pusat: selama musim panas pemakai sangat banyak, maka Sabtu–Minggu di bulan Juli & Agustus memakai sistem reservasi. Reservasi mulai sebulan sebelum hari pemakaian di kantor pengelola taman (tidak bisa lewat telepon). Hari kerja bisa dipakai tanpa reservasi. Setiap hari sampah wajib dibawa pulang. Tidak bisa dipakai lewat jam 9 malam. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke kantor pengelola taman. Kami berterima kasih atas kerja sama para pengguna.</sub>
 
 **50. 八月の日曜日にバーベキュー広場を使いたい人は、どうすればいいか。**
 
@@ -1826,10 +1903,10 @@
 > 夫が妻にあてて書いたメモである。  
 >   
 > ゆかへ  
-> 今朝、銀行から電話があって、来週引っ越す前に、住所変更の手続きをしてほしいそうだ。必要な書類は、新しい住所がわかるものと、通帳と印鑑。俺は今週ずっと出張だから、悪いけど、行ってもらえるかな。窓口は午後三時までだから、気をつけてね。通帳は机の引き出しに入っている。  
+> 今朝、銀行から電話があって、来週引っ越す前に、住所変更の手続きをしてほしいそうだ。必要な書類は、新しい住所がわかるものと、通帳と印鑑。俺は今週ずっと出張だから、悪いけど、行ってもらえるかな。窓口は午後三時までだから、気をつけてね。通帳は机の引き出しに入っている。夜は戸締まりをして、早めに寝てね。何かあったら、すぐに電話してね。ごはんは、ちゃんと食べてね。  
 > 健太
 
-<sub>Untuk Yuka: tadi pagi bank menelepon, katanya ingin kita mengurus perubahan alamat sebelum pindah minggu depan. Dokumen yang perlu: bukti alamat baru, buku tabungan, dan stempel. Aku dinas seminggu ini, maaf, bisakah kamu yang pergi? Loket hanya sampai jam 3 sore, hati-hati ya. Buku tabungan ada di laci meja. — Kenta</sub>
+<sub>Untuk Yuka: tadi pagi bank menelepon, katanya ingin kita mengurus perubahan alamat sebelum pindah minggu depan. Dokumen yang perlu: bukti alamat baru, buku tabungan, dan stempel. Aku dinas seminggu ini, maaf, bisakah kamu yang pergi? Loket hanya sampai jam 3 sore, hati-hati ya. Buku tabungan ada di laci meja. Kunci pintu di malam hari dan tidurlah lebih awal. Bila ada apa-apa, segera telepon. Makanlah dengan baik. — Kenta</sub>
 
 **51. ゆかさんが銀行に行くとき、必要ではないものはどれか。**
 
@@ -1848,10 +1925,10 @@
 > **Teks menengah (内容理解・中文)**  
 > 私が勤めている会社では、三年前から、社員が自分の机を持たない「フリーアドレス」という働き方を始めた。毎朝、空いている席を自由に選んで座るのである。  
 > この制度が始まったとき、社員の多くは不安に思った。毎日違う席に座ると、仕事に集中できないのではないか、必要な書類をどこに置けばいいのか、といった声が多かった。  
-> しかし、実際に始めてみると、①思っていなかった効果があった。毎日違う人の隣に座るので、ほかの部署の人と話す機会が増えたのだ。それまで名前しか知らなかった人と雑談をするうちに、仕事のアイデアが生まれることもあった。また、机に物を置けないので、紙の書類を減らしてデータで保存するようになり、オフィスがすっきりした。  
+> しかし、実際に始めてみると、①思っていなかった効果があった。毎日違う人の隣に座るので、ほかの部署の人と話す機会が増えたのだ。それまで名前しか知らなかった人と雑談をするうちに、仕事のアイデアが生まれることもあった。また、机に物を置けないので、紙の書類を減らしてデータで保存するようになり、オフィスがすっきりした。新しい仕組みに慣れるまでは、戸惑う社員も多かった。しかし、半年がたつと、「席を選ぶのが楽しい」「違う部署の人と話すきっかけになった」という声が増えてきた。  
 > 一方で、②困ったこともある。急いで同じチームの人と相談したいとき、その人がどこにいるのか探さなければならないのだ。そこで、今ではチームごとに座る場所の目安を決め、さらにチャットで居場所を知らせ合うようにしている。
 
-<sub>Sejak tiga tahun lalu kantor saya menerapkan cara kerja 'free address' tanpa meja pribadi: setiap pagi bebas memilih kursi kosong. Saat dimulai banyak karyawan cemas — apakah bisa berkonsentrasi jika duduk di tempat berbeda setiap hari, di mana menaruh dokumen yang diperlukan. Namun setelah dijalankan ① ada efek yang tak terduga: karena setiap hari duduk di sebelah orang berbeda, kesempatan bicara dengan bagian lain bertambah; mengobrol dengan orang yang sebelumnya hanya dikenal namanya kadang melahirkan ide pekerjaan. Karena tidak bisa menaruh barang di meja, dokumen kertas dikurangi dan disimpan sebagai data sehingga kantor rapi. Di sisi lain ② ada juga kesulitan: saat ingin segera berdiskusi dengan rekan satu tim, harus mencari di mana orangnya. Maka kini ditentukan perkiraan area duduk per tim, dan lokasi saling diberitahukan lewat chat.</sub>
+<sub>Sejak tiga tahun lalu kantor saya menerapkan cara kerja 'free address' tanpa meja pribadi: setiap pagi bebas memilih kursi kosong. Saat dimulai banyak karyawan cemas — apakah bisa berkonsentrasi jika duduk di tempat berbeda setiap hari, di mana menaruh dokumen yang diperlukan. Namun setelah dijalankan ① ada efek yang tak terduga: karena setiap hari duduk di sebelah orang berbeda, kesempatan bicara dengan bagian lain bertambah; mengobrol dengan orang yang sebelumnya hanya dikenal namanya kadang melahirkan ide pekerjaan. Karena tidak bisa menaruh barang di meja, dokumen kertas dikurangi dan disimpan sebagai data sehingga kantor rapi. Sampai terbiasa dengan sistem baru, banyak karyawan yang bingung. Namun setelah setengah tahun, suara seperti 'memilih tempat duduk itu menyenangkan' dan 'jadi kesempatan bicara dengan orang bagian lain' bertambah. Di sisi lain ② ada juga kesulitan: saat ingin segera berdiskusi dengan rekan satu tim, harus mencari di mana orangnya. Maka kini ditentukan perkiraan area duduk per tim, dan lokasi saling diberitahukan lewat chat.</sub>
 
 **52. ＿①思っていなかった効果＿として、合っているものはどれか。**
 
@@ -1970,9 +2047,17 @@
 > 子育て相談会 ｜ 11/21（金）13:00～15:00 ｜ 子育て中の人 ｜ なし ｜ 無料 ｜ ・あおば市に住んでいる人が対象です。  
 > ・定員がある講座は、11月1日から電話で申し込んでください（先着順）。  
 > ・「離乳食の作り方」は、子どもを預けることができます（無料・要予約）。  
-> ・相談会は申し込み不要です。直接会場に来てください。
+> ・相談会は申し込み不要です。直接会場に来てください。  
+> ・どの講座も、会場は、あおば市子育て支援センター（駅から歩いて5分）です。  
+> ・赤ちゃんと一緒に来るので、おむつやミルクは、各自で持ってきてください。  
+> ・電話での申し込みは、月曜日から金曜日の午前九時から午後五時までです。  
+> ・「パパと一緒に工作」は、父親だけでなく、祖父も参加できます。  
+> ・講座に参加できなくなった場合は、前の日までに、センターに電話してください。  
+> ・センターの中では、写真をとってもいいですが、ほかの親子が写らないように、気をつけてください。  
+> ・講座の日は、センターの駐車場は使えません。自転車か電車で来てください。  
+> ・講座のあとで、ほかの親子と交流する時間があります。参加は自由です。
 
-<sub>Kursus November pusat dukungan pengasuhan kota Aoba: bermain bersama bayi (5 Nov Rab 10–11, bayi 0 tahun & orang tua, 15 pasang, gratis); membuat MPASI (12 Nov Rab 10.30–12.00, orang tua anak usia 5–8 bulan, 12 orang, 300 yen bahan); prakarya bersama ayah (16 Nov Min 14.00–15.30, anak 3–6 tahun & ayah, 10 pasang, 500 yen); konsultasi pengasuhan (21 Nov Jum 13–15, siapa pun yang mengasuh anak, tanpa kuota, gratis). Untuk warga kota Aoba. Kursus berkuota daftar lewat telepon mulai 1 November (siapa cepat). Di kelas MPASI anak bisa dititipkan (gratis, perlu reservasi). Konsultasi tidak perlu daftar, langsung datang.</sub>
+<sub>Kursus November pusat dukungan pengasuhan kota Aoba: bermain bersama bayi (5 Nov Rab 10–11, bayi 0 tahun & orang tua, 15 pasang, gratis); membuat MPASI (12 Nov Rab 10.30–12.00, orang tua anak usia 5–8 bulan, 12 orang, 300 yen bahan); prakarya bersama ayah (16 Nov Min 14.00–15.30, anak 3–6 tahun & ayah, 10 pasang, 500 yen); konsultasi pengasuhan (21 Nov Jum 13–15, siapa pun yang mengasuh anak, tanpa kuota, gratis). Untuk warga kota Aoba. Kursus berkuota daftar lewat telepon mulai 1 November (siapa cepat). Di kelas MPASI anak bisa dititipkan (gratis, perlu reservasi). Konsultasi tidak perlu daftar, langsung datang. Semua kursus diadakan di pusat dukungan pengasuhan Aoba (5 menit jalan dari stasiun). Karena datang bersama bayi, bawa sendiri popok dan susu. Pendaftaran telepon Senin–Jumat pukul 09.00–17.00. 'Membuat kerajinan bersama ayah' bukan hanya untuk ayah, kakek pun boleh ikut. Bila tak bisa ikut, telepon pusat paling lambat sehari sebelumnya. Di dalam pusat boleh memotret, tetapi jangan sampai orang tua-anak lain ikut terfoto. Pada hari kursus, parkir pusat tak bisa dipakai; datanglah dengan sepeda atau kereta. Setelah kursus ada waktu bergaul dengan orang tua-anak lain; ikut bebas.</sub>
 
 **59. あおば市に住んでいて、生後6か月の子どもを育てている母親が、「離乳食の作り方」に参加し、子どもを預けたい。どうすればいいか。**
 
@@ -2010,10 +2095,10 @@
 > これは、マンションの管理会社から住民に届いたメールである。  
 >   
 > 住民の皆様  
-> 来月十五日に、建物の外壁の工事が始まります。工事は約二か月続く予定です。工事中は、ベランダに足場を組むため、洗濯物をベランダに干すことができません。また、平日の午前九時から午後五時までは、ドリルなどの大きな音がすることがあります。窓は工事の人が外にいる時間は、カーテンを閉めていただくようお願いします。ご迷惑をおかけしますが、ご理解をお願いいたします。  
+> 来月十五日に、建物の外壁の工事が始まります。工事は約二か月続く予定です。工事中は、ベランダに足場を組むため、洗濯物をベランダに干すことができません。また、平日の午前九時から午後五時までは、ドリルなどの大きな音がすることがあります。窓は工事の人が外にいる時間は、カーテンを閉めていただくようお願いします。ご迷惑をおかけしますが、ご理解をお願いいたします。どうぞよろしくお願いいたします。  
 > みなと管理
 
-<sub>Kepada penghuni: tanggal 15 bulan depan dimulai pekerjaan dinding luar gedung, sekitar dua bulan. Selama pekerjaan, karena dipasang perancah di balkon, cucian tidak bisa dijemur di balkon. Hari kerja 09.00–17.00 bisa ada suara keras seperti bor. Saat pekerja ada di luar, mohon tutup gorden. Mohon maaf dan pengertiannya. — Minato Kanri</sub>
+<sub>Kepada penghuni: tanggal 15 bulan depan dimulai pekerjaan dinding luar gedung, sekitar dua bulan. Selama pekerjaan, karena dipasang perancah di balkon, cucian tidak bisa dijemur di balkon. Hari kerja 09.00–17.00 bisa ada suara keras seperti bor. Saat pekerja ada di luar, mohon tutup gorden. Mohon maaf dan pengertiannya. Mohon kerja samanya. — Minato Kanri</sub>
 
 **48. 工事の間、住民ができないことは何か。**
 
@@ -2030,9 +2115,9 @@
   - D. ベランダに洗濯物を干すこと — BENAR. Benar.
 
 > **Teks pendek (内容理解・短文)**  
-> 最近、家で料理をしない若い人が増えているという。コンビニやスーパーで、安くておいしいお弁当が手軽に買えるからだ。確かに、忙しいときには便利である。しかし、毎日買った物ばかり食べていると、同じような味つけに慣れてしまい、塩分や油が多くなりがちだ。週に一、二回だけでも自分で料理をすれば、体のことを考えた食事ができるし、料理する楽しさも味わえる。すべてを自分で作る必要はないが、上手に使い分けることが大切だろう。
+> 最近、家で料理をしない若い人が増えているという。コンビニやスーパーで、安くておいしいお弁当が手軽に買えるからだ。確かに、忙しいときには便利である。しかし、毎日買った物ばかり食べていると、同じような味つけに慣れてしまい、塩分や油が多くなりがちだ。週に一、二回だけでも自分で料理をすれば、体のことを考えた食事ができるし、料理する楽しさも味わえる。忙しい日はお弁当を買い、時間がある日は自分で作るなど、無理のない形を見つけたい。すべてを自分で作る必要はないが、上手に使い分けることが大切だろう。
 
-<sub>Katanya makin banyak anak muda yang tidak memasak di rumah karena bekal murah dan enak mudah dibeli di minimarket dan supermarket. Memang praktis saat sibuk. Tetapi jika setiap hari hanya makan yang dibeli, kita terbiasa dengan rasa yang mirip dan cenderung kebanyakan garam dan minyak. Memasak sendiri satu-dua kali seminggu saja sudah memungkinkan makan dengan memperhatikan kesehatan dan menikmati serunya memasak. Tidak perlu membuat semuanya sendiri, yang penting pandai menggabungkan keduanya.</sub>
+<sub>Katanya makin banyak anak muda yang tidak memasak di rumah karena bekal murah dan enak mudah dibeli di minimarket dan supermarket. Memang praktis saat sibuk. Tetapi jika setiap hari hanya makan yang dibeli, kita terbiasa dengan rasa yang mirip dan cenderung kebanyakan garam dan minyak. Memasak sendiri satu-dua kali seminggu saja sudah memungkinkan makan dengan memperhatikan kesehatan dan menikmati serunya memasak. Saya ingin menemukan cara yang tak memaksa, misalnya membeli bekal di hari sibuk dan memasak sendiri di hari senggang. Tidak perlu membuat semuanya sendiri, yang penting pandai menggabungkan keduanya.</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -2050,9 +2135,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 図書館の新しいサービスについて  
-> 四月から、インターネットで予約した本を、駅前の「本の受け取りロッカー」で受け取れるようになります。ロッカーは二十四時間使えます。予約した本がロッカーに届くと、メールでお知らせします。その後、三日以内に受け取ってください。受け取りには図書館カードが必要です。なお、本の返却はロッカーではできませんので、図書館か駅前の返却ポストに返してください。
+> 四月から、インターネットで予約した本を、駅前の「本の受け取りロッカー」で受け取れるようになります。ロッカーは二十四時間使えます。予約した本がロッカーに届くと、メールでお知らせします。その後、三日以内に受け取ってください。受け取りには図書館カードが必要です。なお、本の返却はロッカーではできませんので、図書館か駅前の返却ポストに返してください。  
+> ご不明な点は、図書館のカウンターまでお問い合わせください。ご不便をおかけしますが、ご理解とご協力をお願いします。
 
-<sub>Layanan baru perpustakaan: mulai April buku yang dipesan lewat internet bisa diambil di 'loker pengambilan buku' depan stasiun yang bisa dipakai 24 jam. Saat buku tiba di loker kami beri tahu lewat email; ambil dalam tiga hari. Pengambilan perlu kartu perpustakaan. Pengembalian tidak bisa lewat loker, kembalikan ke perpustakaan atau kotak pengembalian depan stasiun.</sub>
+<sub>Layanan baru perpustakaan: mulai April buku yang dipesan lewat internet bisa diambil di 'loker pengambilan buku' depan stasiun yang bisa dipakai 24 jam. Saat buku tiba di loker kami beri tahu lewat email; ambil dalam tiga hari. Pengambilan perlu kartu perpustakaan. Pengembalian tidak bisa lewat loker, kembalikan ke perpustakaan atau kotak pengembalian depan stasiun. Bila ada yang kurang jelas, tanyakan ke konter perpustakaan. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama.</sub>
 
 **50. ロッカーで本を受け取る人について、正しいものはどれか。**
 
@@ -2073,10 +2159,10 @@
 > 先輩が後輩の机に置いたメモである。  
 >   
 > ホアンさん  
-> 明日の朝の会議で使うプロジェクター、会議室にあったものが故障していました。総務課に聞いたら、別の部屋のプロジェクターを貸してもらえるそうです。明日の八時半までに、三階の総務課に取りに行ってください。使い終わったら、その日のうちに返すのを忘れないでね。私は明日は直接お客さんの会社に行きます。  
+> 明日の朝の会議で使うプロジェクター、会議室にあったものが故障していました。総務課に聞いたら、別の部屋のプロジェクターを貸してもらえるそうです。明日の八時半までに、三階の総務課に取りに行ってください。使い終わったら、その日のうちに返すのを忘れないでね。私は明日は直接お客さんの会社に行きます。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。  
 > 岡田
 
-<sub>Hoang, proyektor di ruang rapat untuk rapat besok pagi rusak. Saya tanya bagian umum, katanya bisa pinjam proyektor dari ruangan lain. Ambil di bagian umum lantai 3 paling lambat jam 8.30 besok. Setelah dipakai jangan lupa kembalikan hari itu juga. Besok saya langsung ke kantor klien. — Okada</sub>
+<sub>Hoang, proyektor di ruang rapat untuk rapat besok pagi rusak. Saya tanya bagian umum, katanya bisa pinjam proyektor dari ruangan lain. Ambil di bagian umum lantai 3 paling lambat jam 8.30 besok. Setelah dipakai jangan lupa kembalikan hari itu juga. Besok saya langsung ke kantor klien. Maaf mengganggu kesibukan Anda, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. — Okada</sub>
 
 **51. ホアンさんが明日の朝しなければならないことは何か。**
 
@@ -2095,10 +2181,10 @@
 > **Teks menengah (内容理解・中文)**  
 > 私の町の駅前には、大きな本屋が一軒だけあった。ところが去年、その本屋が閉店することになった。インターネットで本を買う人が増えて、客が減ったのが理由だという。  
 > 閉店のニュースを聞いて、①町の人たちはとても残念がった。そこで、町の商店街の人たちが中心になって、新しい本屋を作ろうという話が始まった。店を開くお金は、町の人たちから少しずつ集めた。本を選ぶのも、町の人たちである。それぞれが「この本をほかの人にも読んでほしい」と思う本を推薦し、その本に手書きの紹介文をつけて並べている。  
-> 新しい本屋は、前の店よりずっと小さい。置いてある本の数も、前の十分の一ほどだ。それでも、店にはいつも人がいる。紹介文を読んで、ふだんなら手に取らない本を買っていく人が多いという。  
+> 新しい本屋は、前の店よりずっと小さい。置いてある本の数も、前の十分の一ほどだ。それでも、店にはいつも人がいる。紹介文を読んで、ふだんなら手に取らない本を買っていく人が多いという。最初は、店員が選ぶ本を、客がおもしろいと感じるか心配だったという。しかし、「店員のおすすめ」という手書きのカードをつけて棚に並べてみると、思いがけない本が売れるようになった。客が店員と本の話をする姿も、よく見かけるようになった。  
 > 店の人は「この店は本を売るだけでなく、②町の人どうしが本を通して知り合う場所にしたい」と話している。月に一度は、推薦した人が自分の本について話す会も開かれている。
 
-<sub>Di depan stasiun kota saya dulu hanya ada satu toko buku besar, tetapi tahun lalu toko itu tutup karena pembeli berkurang seiring banyaknya orang membeli buku lewat internet. Mendengar kabar itu ① warga sangat menyayangkannya. Maka para pedagang di pertokoan memimpin rencana membuat toko buku baru; modal dikumpulkan sedikit-sedikit dari warga, dan buku pun dipilih warga: masing-masing merekomendasikan buku yang 'ingin dibaca orang lain juga', lalu dipajang dengan tulisan pengantar tangan. Toko baru jauh lebih kecil, jumlah bukunya sekitar sepersepuluh toko lama, tetapi selalu ada pengunjung; katanya banyak yang membeli buku yang biasanya tak akan diambil setelah membaca pengantarnya. Pengelola berkata 'toko ini bukan hanya menjual buku; kami ingin menjadikannya ② tempat warga saling mengenal lewat buku.' Sebulan sekali diadakan juga acara di mana perekomendasi bercerita tentang bukunya.</sub>
+<sub>Di depan stasiun kota saya dulu hanya ada satu toko buku besar, tetapi tahun lalu toko itu tutup karena pembeli berkurang seiring banyaknya orang membeli buku lewat internet. Mendengar kabar itu ① warga sangat menyayangkannya. Maka para pedagang di pertokoan memimpin rencana membuat toko buku baru; modal dikumpulkan sedikit-sedikit dari warga, dan buku pun dipilih warga: masing-masing merekomendasikan buku yang 'ingin dibaca orang lain juga', lalu dipajang dengan tulisan pengantar tangan. Toko baru jauh lebih kecil, jumlah bukunya sekitar sepersepuluh toko lama, tetapi selalu ada pengunjung; katanya banyak yang membeli buku yang biasanya tak akan diambil setelah membaca pengantarnya. Awalnya ia cemas apakah pelanggan akan tertarik pada buku pilihan pegawai. Namun setelah dipajang di rak dengan kartu tulisan tangan 'rekomendasi pegawai', buku yang tak terduga mulai laku. Pelanggan yang mengobrol soal buku dengan pegawai pun sering terlihat. Pengelola berkata 'toko ini bukan hanya menjual buku; kami ingin menjadikannya ② tempat warga saling mengenal lewat buku.' Sebulan sekali diadakan juga acara di mana perekomendasi bercerita tentang bukunya.</sub>
 
 **52. ＿①町の人たちはとても残念がった＿とあるが、そのあと町の人たちはどうしたか。**
 
@@ -2147,9 +2233,9 @@
 > すぐに上司に報告した。きっとひどく怒られるだろうと思っていた。ところが上司は、①怒るより先に「わかった。まず、お客様のところへ一緒に謝りに行こう」と言った。その日の午後、上司と二人でお客様の会社を訪ね、頭を下げた。お客様は「正直に連絡してくれてよかった」と言って、取引を続けてくれることになった。  
 > 会社に戻ってから、上司は私に、どうして間違えたのかを一緒に考えようと言った。調べてみると、私は数字をパソコンに入力したあと、一度も見直していなかった。上司は「人間はだれでも間違える。大事なのは、同じ間違いをしないしくみを作ることだ」と言った。それから、私たちのチームでは、お客様に送る書類は必ず別の人がもう一度確認することにした。  
 > あれから五年がたち、今では私も後輩を指導する立場になった。先日、後輩が小さなミスをして、青い顔で私のところに来た。私は、あのときの上司のように、まず一緒にどうするかを考えることにした。  
-> ②失敗をしたとき、人はつい自分を責めたり、だれかのせいにしたりしてしまう。しかし、本当に必要なのは、失敗から何を学ぶかということなのだと、今は思う。
+> ②失敗をしたとき、人はつい自分を責めたり、だれかのせいにしたりしてしまう。失敗したとき、そばにいてくれた先輩の一言を、私は今でも覚えている。しかし、本当に必要なのは、失敗から何を学ぶかということなのだと、今は思う。
 
-<sub>Musim semi tahun kedua di perusahaan, saya pertama kali membuat kesalahan besar: salah satu digit di nominal surat penawaran untuk pelanggan. Saat menyadarinya dari telepon pelanggan, kepala saya kosong. Saya segera melapor ke atasan, mengira pasti dimarahi habis-habisan; tetapi atasan, ① alih-alih marah, berkata 'baik, pertama mari kita minta maaf bersama ke pelanggan.' Siang itu kami berdua berkunjung dan menunduk meminta maaf; pelanggan berkata 'untung Anda menghubungi dengan jujur' dan bersedia melanjutkan transaksi. Kembali ke kantor, atasan mengajak memikirkan bersama kenapa saya salah; ternyata saya tidak pernah mengecek ulang angka setelah mengetiknya. Atasan berkata 'semua manusia bisa salah; yang penting membuat sistem agar tidak mengulangi kesalahan yang sama.' Sejak itu di tim kami dokumen untuk pelanggan selalu dicek ulang oleh orang lain. Lima tahun berlalu, kini saya membimbing junior. Beberapa hari lalu seorang junior membuat kesalahan kecil dan datang dengan wajah pucat; seperti atasan saya dulu, saya memutuskan memikirkan bersama apa yang harus dilakukan. ② Saat gagal, orang cenderung menyalahkan diri sendiri atau orang lain. Tetapi kini saya pikir yang benar-benar perlu adalah apa yang dipelajari dari kegagalan.</sub>
+<sub>Musim semi tahun kedua di perusahaan, saya pertama kali membuat kesalahan besar: salah satu digit di nominal surat penawaran untuk pelanggan. Saat menyadarinya dari telepon pelanggan, kepala saya kosong. Saya segera melapor ke atasan, mengira pasti dimarahi habis-habisan; tetapi atasan, ① alih-alih marah, berkata 'baik, pertama mari kita minta maaf bersama ke pelanggan.' Siang itu kami berdua berkunjung dan menunduk meminta maaf; pelanggan berkata 'untung Anda menghubungi dengan jujur' dan bersedia melanjutkan transaksi. Kembali ke kantor, atasan mengajak memikirkan bersama kenapa saya salah; ternyata saya tidak pernah mengecek ulang angka setelah mengetiknya. Atasan berkata 'semua manusia bisa salah; yang penting membuat sistem agar tidak mengulangi kesalahan yang sama.' Sejak itu di tim kami dokumen untuk pelanggan selalu dicek ulang oleh orang lain. Lima tahun berlalu, kini saya membimbing junior. Beberapa hari lalu seorang junior membuat kesalahan kecil dan datang dengan wajah pucat; seperti atasan saya dulu, saya memutuskan memikirkan bersama apa yang harus dilakukan. ② Saat gagal, orang cenderung menyalahkan diri sendiri atau orang lain. Saya masih ingat sepatah kata senior yang mendampingi saya saat gagal. Tetapi kini saya pikir yang benar-benar perlu adalah apa yang dipelajari dari kegagalan.</sub>
 
 **55. ＿①怒るより先に＿、上司がしたことは何か。**
 
@@ -2216,9 +2302,18 @@
 > 子ども用（小学生まで） ｜ 200円 ｜ 300円 ｜ 1,000円 ｜ ・貸し出し場所：駅前観光案内所（9:00～19:00）。  
 > ・保証金は、自転車を返すときに返金します。返却が19時を過ぎた場合は、保証金は返金しません。  
 > ・借りるときは、運転免許証などの身分証明書を見せてください。  
-> ・市内のホテルに泊まっている方は、宿泊カードを見せると料金が半額になります（保証金は除く）。
+> ・市内のホテルに泊まっている方は、宿泊カードを見せると料金が半額になります（保証金は除く）。  
+> ・自転車は、午前九時から午後七時の間に、観光案内所に返してください。別の場所に返すことはできません。  
+> ・ヘルメットは、無料で貸し出しています。  
+> ・雨の日や、強い風の日は、貸し出しを中止することがあります。  
+> ・電動アシスト自転車は、バッテリーの時間が約五時間です。長い距離を走る人は、案内所で相談してください。  
+> ・自転車をこわしたり、なくしたりしたときは、修理代や弁償代を払っていただくことがあります。  
+> ・予約は、電話かホームページで、前の日まで受け付けます。団体の予約は、一週間前までにお願いします。  
+> ・雨でぬれた自転車は、そのまま返してください。  
+> ・乗る前に、ブレーキとタイヤの空気を確認してください。  
+> ・カゴがついていますが、重い荷物は入れないでください。
 
-<sub>Penyewaan sepeda kota Hikari: sepeda biasa sampai 4 jam 300 yen / sehari (09.00–19.00) 500 yen / deposit 1.000 yen; sepeda listrik 600 / 1.000 / 3.000 yen; sepeda anak (sampai SD) 200 / 300 / 1.000 yen. Tempat sewa: pusat info wisata depan stasiun (09.00–19.00). Deposit dikembalikan saat sepeda dikembalikan; jika lewat jam 19.00, deposit tidak dikembalikan. Tunjukkan identitas seperti SIM saat menyewa. Tamu hotel di kota yang menunjukkan kartu menginap mendapat setengah harga (tidak termasuk deposit).</sub>
+<sub>Penyewaan sepeda kota Hikari: sepeda biasa sampai 4 jam 300 yen / sehari (09.00–19.00) 500 yen / deposit 1.000 yen; sepeda listrik 600 / 1.000 / 3.000 yen; sepeda anak (sampai SD) 200 / 300 / 1.000 yen. Tempat sewa: pusat info wisata depan stasiun (09.00–19.00). Deposit dikembalikan saat sepeda dikembalikan; jika lewat jam 19.00, deposit tidak dikembalikan. Tunjukkan identitas seperti SIM saat menyewa. Tamu hotel di kota yang menunjukkan kartu menginap mendapat setengah harga (tidak termasuk deposit). Kembalikan sepeda ke pusat informasi wisata antara pukul 09.00 dan 19.00; tak bisa dikembalikan di tempat lain. Helm dipinjamkan gratis. Saat hujan atau angin kencang, peminjaman bisa dihentikan. Baterai sepeda listrik tahan sekitar lima jam; yang menempuh jarak jauh sebaiknya konsultasi di pusat informasi. Bila sepeda rusak atau hilang, bisa diminta membayar biaya perbaikan atau ganti rugi. Reservasi lewat telepon atau website diterima sampai sehari sebelumnya; rombongan paling lambat seminggu sebelumnya. Sepeda yang basah karena hujan kembalikan apa adanya. Sebelum naik, periksa rem dan angin ban. Ada keranjang, tetapi jangan memasukkan barang berat.</sub>
 
 **59. 市内のホテルに泊まっている旅行者が、電動アシスト自転車を1日借りる。借りるときに払うお金は、全部でいくらか。**
 
@@ -2256,10 +2351,10 @@
 > これは、スポーツクラブから会員に届いたメールである。  
 >   
 > 会員の皆様  
-> いつもご利用ありがとうございます。来月一日から、プールの営業時間を変更いたします。平日は午前七時から午後十時まで（これまでは午後九時まで）、土日祝日は午前九時から午後七時までとなります。また、毎週火曜日の午前中は、子ども向け水泳教室のため、二つのコースしか使えません。ご了承ください。会費の変更はありません。  
+> いつもご利用ありがとうございます。来月一日から、プールの営業時間を変更いたします。平日は午前七時から午後十時まで（これまでは午後九時まで）、土日祝日は午前九時から午後七時までとなります。また、毎週火曜日の午前中は、子ども向け水泳教室のため、二つのコースしか使えません。ご了承ください。会費の変更はありません。お忙しいところ申し訳ありませんが、どうぞよろしくお願いいたします。ご不明な点は、お気軽にご連絡ください。  
 > アクアスポーツクラブ
 
-<sub>Kepada anggota: mulai tanggal 1 bulan depan jam kolam renang berubah: hari kerja 07.00–22.00 (sebelumnya sampai 21.00), Sabtu/Minggu/libur 09.00–19.00. Selasa pagi setiap minggu hanya dua lintasan yang bisa dipakai karena kelas renang anak. Mohon maklum. Iuran tidak berubah. — Aqua Sports Club</sub>
+<sub>Kepada anggota: mulai tanggal 1 bulan depan jam kolam renang berubah: hari kerja 07.00–22.00 (sebelumnya sampai 21.00), Sabtu/Minggu/libur 09.00–19.00. Selasa pagi setiap minggu hanya dua lintasan yang bisa dipakai karena kelas renang anak. Mohon maklum. Iuran tidak berubah. Maaf mengganggu kesibukan Anda, mohon kerja samanya. Bila ada yang kurang jelas, hubungi kami dengan leluasa. — Aqua Sports Club</sub>
 
 **48. 来月から、このプールについて正しいものはどれか。**
 
@@ -2276,9 +2371,9 @@
   - D. 土日は夜十時まで泳げる — Salah. Sabtu–Minggu sampai 19.00.
 
 > **Teks pendek (内容理解・短文)**  
-> 旅行に行くと、私は必ず地元の市場に行くことにしている。観光地の有名な店もいいが、市場では、その土地の人が毎日食べている野菜や魚を見ることができる。値段を聞いたり、珍しい果物の食べ方を教えてもらったりするうちに、自然と店の人と話がはずむ。ガイドブックには載っていない、おいしい店を教えてもらえることもある。市場は、その町の暮らしを一番よく知ることができる場所だと思う。
+> 旅行に行くと、私は必ず地元の市場に行くことにしている。観光地の有名な店もいいが、市場では、その土地の人が毎日食べている野菜や魚を見ることができる。値段を聞いたり、珍しい果物の食べ方を教えてもらったりするうちに、自然と店の人と話がはずむ。ガイドブックには載っていない、おいしい店を教えてもらえることもある。市場の人と話していると、観光案内には出ていない、おいしい店や、その土地の習慣を教えてもらえることもある。市場は、その町の暮らしを一番よく知ることができる場所だと思う。
 
-<sub>Saat bepergian saya selalu pergi ke pasar lokal. Toko terkenal di tempat wisata juga bagus, tetapi di pasar kita bisa melihat sayur dan ikan yang dimakan warga setempat sehari-hari. Sambil menanyakan harga atau diajari cara makan buah langka, obrolan dengan penjual mengalir sendiri; kadang diberi tahu restoran enak yang tidak ada di buku panduan. Menurut saya pasar adalah tempat terbaik untuk mengenal kehidupan suatu kota.</sub>
+<sub>Saat bepergian saya selalu pergi ke pasar lokal. Toko terkenal di tempat wisata juga bagus, tetapi di pasar kita bisa melihat sayur dan ikan yang dimakan warga setempat sehari-hari. Sambil menanyakan harga atau diajari cara makan buah langka, obrolan dengan penjual mengalir sendiri; kadang diberi tahu restoran enak yang tidak ada di buku panduan. Bila bercakap dengan orang pasar, kita kadang diberi tahu toko enak dan kebiasaan daerah yang tak ada di panduan wisata. Menurut saya pasar adalah tempat terbaik untuk mengenal kehidupan suatu kota.</sub>
 
 **49. 筆者が旅行先で市場に行くのは、なぜか。**
 
@@ -2297,9 +2392,10 @@
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 社員食堂のメニュー変更について  
 > 社員の皆さんから「野菜が少ない」という意見が多かったため、来月から日替わり定食に、小さな野菜のおかずを一品増やします。そのため、定食の値段は四百五十円から五百円になります。なお、ご飯の量を少なめにした場合は、これまでどおり三十円引きです。麺類とカレーの値段は変わりません。  
-> 総務課　食堂担当
+> 総務課　食堂担当  
+> ご不便をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、総務課にお問い合わせください。みなさんの意見を聞きながら、これからもよいメニューを考えていきます。
 
-<sub>Perubahan menu kantin karyawan: karena banyak pendapat 'sayurnya kurang', mulai bulan depan set menu harian ditambah satu lauk sayur kecil, sehingga harganya naik dari 450 menjadi 500 yen. Porsi nasi sedikit tetap potong 30 yen seperti biasa. Harga mi dan kari tidak berubah. — Bagian umum, urusan kantin</sub>
+<sub>Perubahan menu kantin karyawan: karena banyak pendapat 'sayurnya kurang', mulai bulan depan set menu harian ditambah satu lauk sayur kecil, sehingga harganya naik dari 450 menjadi 500 yen. Porsi nasi sedikit tetap potong 30 yen seperti biasa. Harga mi dan kari tidak berubah. — Bagian umum, urusan kantin Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke bagian umum. Kami akan terus memikirkan menu yang baik sambil mendengar pendapat semua.</sub>
 
 **50. 来月から、ご飯を少なめにして日替わり定食を食べると、いくらになるか。**
 
@@ -2320,10 +2416,10 @@
 > 教授が研究室のドアにはったメモである。  
 >   
 > 卒業論文を書いている四年生の皆さんへ  
-> 論文の一回目の締め切りは十一月三十日です。それまでに、半分以上書いたものを、メールではなく、印刷して私の部屋の前の箱に入れてください。書き方について相談したい人は、毎週木曜日の三時から五時に研究室に来てください。それ以外の時間に相談したい場合は、事前にメールで予約してください。  
+> 論文の一回目の締め切りは十一月三十日です。それまでに、半分以上書いたものを、メールではなく、印刷して私の部屋の前の箱に入れてください。書き方について相談したい人は、毎週木曜日の三時から五時に研究室に来てください。それ以外の時間に相談したい場合は、事前にメールで予約してください。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、メールで連絡してください。  
 > 佐藤
 
-<sub>Untuk mahasiswa tingkat 4 yang menulis skripsi: tenggat pertama 30 November. Sebelum itu, cetak tulisan yang sudah lebih dari setengah dan masukkan ke kotak depan ruangan saya — bukan lewat email. Yang ingin konsultasi cara menulis datang ke ruang dosen setiap Kamis jam 3–5. Di luar waktu itu, reservasi dulu lewat email. — Sato</sub>
+<sub>Untuk mahasiswa tingkat 4 yang menulis skripsi: tenggat pertama 30 November. Sebelum itu, cetak tulisan yang sudah lebih dari setengah dan masukkan ke kotak depan ruangan saya — bukan lewat email. Yang ingin konsultasi cara menulis datang ke ruang dosen setiap Kamis jam 3–5. Di luar waktu itu, reservasi dulu lewat email. Maaf mengganggu, mohon bantuannya. Bila ada yang tak jelas, hubungi lewat email. — Sato</sub>
 
 **51. 論文について相談したい学生が、水曜日に相談したい場合、どうすればいいか。**
 
@@ -2395,9 +2491,9 @@
 > ある日、娘の担任の先生と話す機会があった。私がゲームのことを相談すると、先生は「ゲームを取り上げるより、ゲームの時間を自分で決めさせてみてはどうでしょう」と言った。①私は半信半疑だった。自分で決めさせたら、一日中ゲームをするのではないかと思ったからだ。  
 > それでも試してみることにした。娘と話し合い、「ゲームは一日一時間。何時からするかは自分で決める」というルールを作った。娘は紙に自分で時間割を書いて、冷蔵庫にはった。  
 > 最初の一週間は、約束の時間を過ぎてもやめないことが何度かあった。そのたびに、私は怒らずに、時間割の紙を一緒に見るようにした。すると、だんだん娘は自分でタイマーをかけるようになった。今では、宿題を先に終わらせてから、ゲームの時間を楽しんでいる。  
-> 先日、娘が「自分で決めたことだから、守らなきゃって思うんだ」と言った。私は驚いた。②親が決めたルールより、自分で決めたルールのほうが守れるのだ。子どもを信じて任せることは、怒ることよりずっと難しい。しかし、それが子どもを育てるということなのかもしれない。
+> 先日、娘が「自分で決めたことだから、守らなきゃって思うんだ」と言った。私は驚いた。②親が決めたルールより、自分で決めたルールのほうが守れるのだ。子どもを信じて任せることは、怒ることよりずっと難しい。最近は、学校の話を自分から少しずつしてくれるようになった。「今日ね、こんなことがあったんだよ」と話す娘の顔を見ていると、見守ることの大切さを感じる。しかし、それが子どもを育てるということなのかもしれない。
 
-<sub>Putri saya kelas 3 SD. Sampai tahun lalu, pulang sekolah ia langsung main gim; disuruh mengerjakan PR pun tidak berhenti, dan hampir setiap hari saya marah. Suatu hari ada kesempatan bicara dengan wali kelasnya; saat saya konsultasi, guru berkata 'daripada menyita gim, bagaimana kalau ia sendiri yang menentukan waktu bermain?' ① Saya setengah percaya setengah ragu — jangan-jangan kalau dia yang menentukan, ia main seharian. Tetapi saya mencobanya: kami berdiskusi dan membuat aturan 'gim satu jam sehari, mulai jam berapa ditentukan sendiri'. Ia menulis jadwalnya sendiri di kertas dan menempelnya di kulkas. Minggu pertama beberapa kali ia tidak berhenti meski lewat waktu; setiap kali saya tidak marah, tetapi melihat kertas jadwal bersama. Lama-lama ia memasang timer sendiri, dan kini menyelesaikan PR dulu lalu menikmati waktu gimnya. Beberapa hari lalu ia berkata 'karena aku sendiri yang menentukan, rasanya harus kutepati.' Saya terkejut: ② aturan yang ditentukan sendiri lebih bisa ditepati daripada aturan dari orang tua. Mempercayai dan menyerahkan kepada anak jauh lebih sulit daripada marah; tetapi mungkin itulah artinya membesarkan anak.</sub>
+<sub>Putri saya kelas 3 SD. Sampai tahun lalu, pulang sekolah ia langsung main gim; disuruh mengerjakan PR pun tidak berhenti, dan hampir setiap hari saya marah. Suatu hari ada kesempatan bicara dengan wali kelasnya; saat saya konsultasi, guru berkata 'daripada menyita gim, bagaimana kalau ia sendiri yang menentukan waktu bermain?' ① Saya setengah percaya setengah ragu — jangan-jangan kalau dia yang menentukan, ia main seharian. Tetapi saya mencobanya: kami berdiskusi dan membuat aturan 'gim satu jam sehari, mulai jam berapa ditentukan sendiri'. Ia menulis jadwalnya sendiri di kertas dan menempelnya di kulkas. Minggu pertama beberapa kali ia tidak berhenti meski lewat waktu; setiap kali saya tidak marah, tetapi melihat kertas jadwal bersama. Lama-lama ia memasang timer sendiri, dan kini menyelesaikan PR dulu lalu menikmati waktu gimnya. Beberapa hari lalu ia berkata 'karena aku sendiri yang menentukan, rasanya harus kutepati.' Saya terkejut: ② aturan yang ditentukan sendiri lebih bisa ditepati daripada aturan dari orang tua. Mempercayai dan menyerahkan kepada anak jauh lebih sulit daripada marah; Belakangan ia mulai bercerita tentang sekolah dengan sendirinya. Melihat wajah putri saya yang bercerita, 'Hari ini ada kejadian begini lho', saya merasa pentingnya mengawasi dari kejauhan. tetapi mungkin itulah artinya membesarkan anak.</sub>
 
 **55. ＿①私は半信半疑だった＿とあるが、なぜか。**
 
@@ -2464,9 +2560,17 @@
 > 乳幼児用セット（ミルク・おむつ） ｜ 3歳以下の子どもがいる世帯 ｜ 区役所1階のみ ｜   
 > 高齢者用セット（やわらかい非常食） ｜ 75歳以上の人がいる世帯 ｜ 区役所1階のみ ｜ ・配布期間：9月1日～9月30日（土日祝を除く）、9:00～17:00  
 > ・受け取りには、区から届いた「引換券」が必要です。引換券をなくした場合は、区役所1階で再発行します（本人確認書類が必要）。  
-> ・家族以外の人が代わりに受け取る場合は、引換券と委任状が必要です。
+> ・家族以外の人が代わりに受け取る場合は、引換券と委任状が必要です。  
+> ・引換券は、9月の初めごろに、区から封筒で送られます。9月10日になっても届かない場合は、区役所に連絡してください。  
+> ・受け取りの日は、混み合います。午前中のほうが、待ち時間が短いです。  
+> ・乳幼児用セットと高齢者用セットは、対象の世帯の人が、区役所に来て受け取ってください。  
+> ・非常食セットの中身は、水、乾パン、ようかん、缶詰などです。賞味期限は、5年間です。  
+> ・配布期間が終わったあとは、受け取ることができません。  
+> ・非常食セットは、一つ約3キロです。重いので、家族と一緒に取りに来ることをおすすめします。  
+> ・受け取ったあとは、保管の場所を家族で話し合っておいてください。  
+> ・使い方についての説明のチラシも、一緒にお渡しします。
 
-<sub>Pembagian perlengkapan siaga bencana kecamatan Minato: set makanan darurat (3 hari) untuk semua rumah tangga warga (1 per rumah tangga), diambil di lantai 1 kantor kecamatan atau pusat setiap distrik; toilet darurat (10 kali pakai) sama; set bayi (susu, popok) untuk rumah tangga dengan anak ≤3 tahun, hanya di lantai 1 kantor kecamatan; set lansia (makanan darurat lunak) untuk rumah tangga dengan anggota ≥75 tahun, hanya di lantai 1 kantor kecamatan. Periode 1–30 September (kecuali Sab/Min/libur) 09.00–17.00. Perlu 'kupon penukaran' yang dikirim kecamatan; jika hilang, diterbitkan ulang di lantai 1 kantor kecamatan (perlu identitas). Jika diambil orang selain keluarga, perlu kupon dan surat kuasa.</sub>
+<sub>Pembagian perlengkapan siaga bencana kecamatan Minato: set makanan darurat (3 hari) untuk semua rumah tangga warga (1 per rumah tangga), diambil di lantai 1 kantor kecamatan atau pusat setiap distrik; toilet darurat (10 kali pakai) sama; set bayi (susu, popok) untuk rumah tangga dengan anak ≤3 tahun, hanya di lantai 1 kantor kecamatan; set lansia (makanan darurat lunak) untuk rumah tangga dengan anggota ≥75 tahun, hanya di lantai 1 kantor kecamatan. Periode 1–30 September (kecuali Sab/Min/libur) 09.00–17.00. Perlu 'kupon penukaran' yang dikirim kecamatan; jika hilang, diterbitkan ulang di lantai 1 kantor kecamatan (perlu identitas). Jika diambil orang selain keluarga, perlu kupon dan surat kuasa. Kupon tukar dikirim lewat amplop dari kecamatan awal September; bila belum tiba sampai 10 September, hubungi kantor kecamatan. Hari pengambilan ramai; pagi hari waktu tunggunya lebih singkat. Paket bayi dan paket lansia diambil sendiri oleh orang dari rumah tangga sasaran di kantor kecamatan. Isi paket makanan darurat adalah air, biskuit kering, yokan, makanan kaleng, dan sebagainya, dengan masa simpan 5 tahun. Setelah masa pembagian berakhir, tak bisa diambil. Satu paket makanan darurat sekitar 3 kg; karena berat, disarankan datang bersama keluarga. Setelah menerima, bicarakan tempat penyimpanannya dalam keluarga. Selebaran penjelasan cara pakai juga diberikan.</sub>
 
 **59. 80歳の母と二人で暮らしている人が、地区センターで受け取れる物はどれか。**
 
@@ -2747,10 +2851,10 @@
 > これは、語学学校から学生に届いたメールである。  
 >   
 > 学生の皆さん  
-> 来月から、授業の出席の取り方が変わります。これまでは先生が名前を呼んでいましたが、来月からは、教室に入るときに入り口の機械に学生カードをかざしてください。授業開始から十五分を過ぎてかざした場合は遅刻、三十分を過ぎた場合は欠席になります。カードを忘れた人は、授業の前に事務室で仮のカードを受け取ってください。  
+> 来月から、授業の出席の取り方が変わります。これまでは先生が名前を呼んでいましたが、来月からは、教室に入るときに入り口の機械に学生カードをかざしてください。授業開始から十五分を過ぎてかざした場合は遅刻、三十分を過ぎた場合は欠席になります。カードを忘れた人は、授業の前に事務室で仮のカードを受け取ってください。お忙しいところ申し訳ありませんが、どうぞよろしくお願いいたします。ご不明な点は、お気軽にお問い合わせください。  
 > 事務室
 
-<sub>Untuk siswa: mulai bulan depan cara absensi berubah. Dulu guru memanggil nama; mulai bulan depan tempelkan kartu siswa ke mesin di pintu saat masuk kelas. Lewat 15 menit dari mulai pelajaran dihitung terlambat, lewat 30 menit dihitung absen. Yang lupa kartu, ambil kartu sementara di kantor sebelum pelajaran. — Kantor</sub>
+<sub>Untuk siswa: mulai bulan depan cara absensi berubah. Dulu guru memanggil nama; mulai bulan depan tempelkan kartu siswa ke mesin di pintu saat masuk kelas. Lewat 15 menit dari mulai pelajaran dihitung terlambat, lewat 30 menit dihitung absen. Yang lupa kartu, ambil kartu sementara di kantor sebelum pelajaran. Maaf mengganggu kesibukan Anda, mohon kerja samanya. Bila ada yang kurang jelas, tanyakan dengan leluasa. — Kantor</sub>
 
 **48. 来月から、授業に二十分遅れて教室に入った学生はどうなるか。**
 
@@ -2767,9 +2871,9 @@
   - D. 欠席になる — Salah. Absen hanya jika lewat 30 menit.
 
 > **Teks pendek (内容理解・短文)**  
-> 最近、家の近くに大型のショッピングモールができた。服も食べ物も映画も、一か所で何でもそろうので、休みの日はいつも人でいっぱいだ。便利になったのはうれしいが、その一方で、昔からある駅前の小さな店が次々に閉まっている。子どものころによく通った文房具屋も、先月閉店してしまった。便利さと引きかえに、町の個性がなくなっていくようで、少しさびしい気がする。
+> 最近、家の近くに大型のショッピングモールができた。服も食べ物も映画も、一か所で何でもそろうので、休みの日はいつも人でいっぱいだ。便利になったのはうれしいが、その一方で、昔からある駅前の小さな店が次々に閉まっている。子どものころによく通った文房具屋も、先月閉店してしまった。同じ店が並ぶモールは、どこに行っても同じような景色だ。商店街の店には、店主の好みや、その町ならではの品物があり、歩くだけで楽しかったのを、私は覚えている。便利さと引きかえに、町の個性がなくなっていくようで、少しさびしい気がする。
 
-<sub>Belakangan dekat rumah dibuka mal besar; baju, makanan, bioskop, semuanya ada di satu tempat, sehingga hari libur selalu ramai. Senang jadi praktis, tetapi di sisi lain toko-toko kecil lama di depan stasiun tutup satu per satu; toko alat tulis yang sering saya datangi waktu kecil juga tutup bulan lalu. Rasanya seperti ciri khas kota hilang sebagai ganti kepraktisan, dan saya agak sedih.</sub>
+<sub>Belakangan dekat rumah dibuka mal besar; baju, makanan, bioskop, semuanya ada di satu tempat, sehingga hari libur selalu ramai. Senang jadi praktis, tetapi di sisi lain toko-toko kecil lama di depan stasiun tutup satu per satu; toko alat tulis yang sering saya datangi waktu kecil juga tutup bulan lalu. Mal dengan toko yang sama di mana-mana punya pemandangan yang sama. Toko di pertokoan punya selera pemiliknya dan barang khas kota itu; saya ingat berjalan di sana saja sudah menyenangkan. Rasanya seperti ciri khas kota hilang sebagai ganti kepraktisan, dan saya agak sedih.</sub>
 
 **49. 筆者は、ショッピングモールができたことについてどう思っているか。**
 
@@ -2787,10 +2891,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > マンションの宅配ボックスについて  
-> 先月、一階に宅配ボックスを設置しました。不在のときに届いた荷物は、ボックスに入れられます。荷物が入ると、部屋の郵便受けに番号と暗証番号を書いた紙が入ります。荷物はなるべく二日以内に取り出してください。最近、何日も荷物を入れたままの方がいて、ほかの方が使えなくなっています。冷蔵・冷凍の荷物は入れられませんので、ご注意ください。  
+> 先月、一階に宅配ボックスを設置しました。不在のときに届いた荷物は、ボックスに入れられます。荷物が入ると、部屋の郵便受けに番号と暗証番号を書いた紙が入ります。荷物はなるべく二日以内に取り出してください。最近、何日も荷物を入れたままの方がいて、ほかの方が使えなくなっています。冷蔵・冷凍の荷物は入れられませんので、ご注意ください。ご不明な点は、管理人室までお問い合わせください。ご迷惑をおかけしますが、ご協力をお願いします。  
 > 管理組合
 
-<sub>Kotak penerimaan paket apartemen: bulan lalu dipasang di lantai 1. Paket yang datang saat tidak di rumah bisa dimasukkan; setelah itu di kotak surat kamar dimasukkan kertas berisi nomor kotak dan PIN. Ambil paket sebisa mungkin dalam dua hari; belakangan ada yang membiarkan paket berhari-hari sehingga orang lain tidak bisa memakai. Paket dingin/beku tidak bisa dimasukkan. — Pengurus</sub>
+<sub>Kotak penerimaan paket apartemen: bulan lalu dipasang di lantai 1. Paket yang datang saat tidak di rumah bisa dimasukkan; setelah itu di kotak surat kamar dimasukkan kertas berisi nomor kotak dan PIN. Ambil paket sebisa mungkin dalam dua hari; belakangan ada yang membiarkan paket berhari-hari sehingga orang lain tidak bisa memakai. Paket dingin/beku tidak bisa dimasukkan. Bila ada yang kurang jelas, tanyakan ke ruang pengelola. Mohon maaf atas ketidaknyamanan, mohon kerja sama. — Pengurus</sub>
 
 **50. 宅配ボックスについて、正しいものはどれか。**
 
@@ -2811,10 +2915,10 @@
 > 課長が部下の机に置いたメモである。  
 >   
 > ペレスさん  
-> 来週の展示会の受付をお願いします。当日は朝八時半に会場の入り口に集合してください。受付では、来場者に名刺をいただいて、パンフレットを渡すだけで大丈夫です。英語での質問があったら、ペレスさんに答えてもらえると助かります。昼休みは交代で取りましょう。服装はスーツでお願いします。  
+> 来週の展示会の受付をお願いします。当日は朝八時半に会場の入り口に集合してください。受付では、来場者に名刺をいただいて、パンフレットを渡すだけで大丈夫です。英語での質問があったら、ペレスさんに答えてもらえると助かります。昼休みは交代で取りましょう。服装はスーツでお願いします。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。ほかに必要な物があれば、教えてください。  
 > 課長　前田
 
-<sub>Perez, tolong jaga meja penerimaan di pameran minggu depan. Hari-H berkumpul jam 8.30 pagi di pintu masuk lokasi. Di meja cukup meminta kartu nama pengunjung dan memberikan brosur. Kalau ada pertanyaan dalam bahasa Inggris, akan sangat membantu jika Perez yang menjawab. Istirahat siang bergiliran. Pakai jas. — Kepala bagian Maeda</sub>
+<sub>Perez, tolong jaga meja penerimaan di pameran minggu depan. Hari-H berkumpul jam 8.30 pagi di pintu masuk lokasi. Di meja cukup meminta kartu nama pengunjung dan memberikan brosur. Kalau ada pertanyaan dalam bahasa Inggris, akan sangat membantu jika Perez yang menjawab. Istirahat siang bergiliran. Pakai jas. Maaf mengganggu, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. Bila ada barang lain yang diperlukan, beri tahu saya. — Kepala bagian Maeda</sub>
 
 **51. ペレスさんが展示会の受付でしなければならないことは何か。**
 
@@ -2835,10 +2939,10 @@
 > 始めたころは、①失敗の連続だった。水をやりすぎて根を腐らせたり、虫に葉を全部食べられたりした。インターネットで調べても、うまくいかなかった。  
 > 困っていた私に声をかけてくれたのが、隣の畑のおじいさんだった。おじいさんは四十年以上野菜を作っている。土の作り方や、虫が付きにくい野菜の並べ方など、本には書いていないことをたくさん教えてくれた。何より、「失敗しても、来年また植えればいい」という言葉に救われた。  
 > 今年の夏、初めてたくさんのトマトがとれた。おじいさんにお礼に持っていくと、「よくがんばったね」と言って、自分の畑でとれたすいかをくれた。  
-> 野菜作りは、すぐに結果が出るものではない。しかし、②一年かけてゆっくり育てる時間の中で、人とのつながりも一緒に育っていくのだと思う。  
+> 野菜作りは、すぐに結果が出るものではない。しかし、②一年かけてゆっくり育てる時間の中で、人とのつながりも一緒に育っていくのだと思う。収穫した野菜を近所の人に分けると、「おいしかった」と声をかけてもらえて、うれしくなる。  
 > 来年は、おじいさんに教わったことを、畑を始めたばかりの人にも伝えていきたいと思っている。
 
-<sub>Sejak dua tahun lalu, setiap akhir pekan saya menanam sayur di kebun warga. Lahannya kecil, tetapi tiap musim panen berbagai sayur: tomat, terong, mentimun. Awalnya ① gagal terus: kebanyakan menyiram sampai akar busuk, daun habis dimakan serangga; mencari di internet pun tidak berhasil. Yang menyapa saya saat kesulitan adalah kakek di lahan sebelah yang sudah lebih dari 40 tahun bertani. Ia mengajari banyak hal yang tidak ada di buku — cara mengolah tanah, cara menata sayur agar tidak mudah diserang serangga — dan terutama kata-katanya 'gagal pun tidak apa, tahun depan tanam lagi' menyelamatkan saya. Musim panas ini untuk pertama kali panen tomat banyak; saat saya bawakan sebagai ucapan terima kasih, kakek berkata 'kau sudah berusaha keras' dan memberi semangka dari lahannya. Bertani bukan hal yang cepat membuahkan hasil, tetapi ② dalam waktu setahun merawat perlahan, hubungan dengan orang lain pun ikut tumbuh. Tahun depan saya ingin meneruskan apa yang diajarkan kakek kepada orang yang baru mulai berkebun.</sub>
+<sub>Sejak dua tahun lalu, setiap akhir pekan saya menanam sayur di kebun warga. Lahannya kecil, tetapi tiap musim panen berbagai sayur: tomat, terong, mentimun. Awalnya ① gagal terus: kebanyakan menyiram sampai akar busuk, daun habis dimakan serangga; mencari di internet pun tidak berhasil. Yang menyapa saya saat kesulitan adalah kakek di lahan sebelah yang sudah lebih dari 40 tahun bertani. Ia mengajari banyak hal yang tidak ada di buku — cara mengolah tanah, cara menata sayur agar tidak mudah diserang serangga — dan terutama kata-katanya 'gagal pun tidak apa, tahun depan tanam lagi' menyelamatkan saya. Musim panas ini untuk pertama kali panen tomat banyak; saat saya bawakan sebagai ucapan terima kasih, kakek berkata 'kau sudah berusaha keras' dan memberi semangka dari lahannya. Bertani bukan hal yang cepat membuahkan hasil, tetapi ② dalam waktu setahun merawat perlahan, hubungan dengan orang lain pun ikut tumbuh. Bila membagikan sayur hasil panen ke tetangga, kita disapa 'enak sekali' dan jadi senang. Tahun depan saya ingin meneruskan apa yang diajarkan kakek kepada orang yang baru mulai berkebun.</sub>
 
 **52. ＿①失敗の連続だった＿とあるが、失敗の例として挙げられていないものはどれか。**
 
@@ -2887,9 +2991,9 @@
 > 私も一人暮らしを始めてから、テレビを買わなかった。最初は特に困らなかった。見たい番組は好きな時間に見られるし、コマーシャルもない。①自分に必要な情報だけを選べるのは、とても便利だと思っていた。  
 > しかし、ある日、実家に帰って家族とテレビを見ていたとき、意外なことに気づいた。テレビでは、自分が興味を持っていなかった分野のニュースや番組が、次々に流れてくる。遠い国の災害のニュース、地方の伝統工芸の特集、知らないスポーツの試合。家族とそれを見ながら話しているうちに、私は自分がいかに狭い世界の情報しか見ていなかったかを知った。  
 > インターネットでは、自分が前に見た物と似た情報が、次々にすすめられる。それは便利だが、②気づかないうちに、自分の好きな物だけに囲まれてしまう危険もある。  
-> テレビとインターネットのどちらがいいということではない。大切なのは、自分が今どんな情報に触れているのかを意識して、ときには自分から違う種類の情報を探してみることだと思う。最近、私は週に一度、新聞の、ふだんは読まない面を読むようにしている。
+> テレビとインターネットのどちらがいいということではない。大切なのは、自分が今どんな情報に触れているのかを意識して、ときには自分から違う種類の情報を探してみることだと思う。新聞なら、自分では選ばない話題にも出会える。その偶然が、考えを広げてくれるのだと思う。最近、私は週に一度、新聞の、ふだんは読まない面を読むようにしている。
 
-<sub>Sering dikatakan 'anak muda sekarang tidak menonton TV'. Memang banyak mahasiswa di sekitar saya tidak punya TV: berita dibaca di ponsel, drama dan film ditonton di layanan streaming. Saya pun tidak membeli TV sejak tinggal sendiri, dan awalnya tidak kesulitan: acara yang ingin dilihat bisa ditonton kapan saja, tanpa iklan. ① Saya kira bisa memilih hanya informasi yang saya perlukan itu sangat praktis. Tetapi suatu hari saat menonton TV bersama keluarga di rumah orang tua, saya menyadari hal tak terduga: di TV mengalir berita dan acara dari bidang yang tidak saya minati — bencana di negeri jauh, liputan kerajinan tradisional daerah, pertandingan olahraga yang tak saya kenal. Sambil mengobrol dengan keluarga, saya sadar betapa sempitnya dunia informasi yang selama ini saya lihat. Di internet, informasi yang mirip dengan yang pernah dilihat terus direkomendasikan; praktis, tetapi ② ada bahaya tanpa sadar kita hanya dikelilingi hal yang kita sukai. Bukan soal mana yang lebih baik antara TV dan internet; yang penting menyadari informasi apa yang sedang kita sentuh, dan sesekali mencari sendiri informasi jenis lain. Belakangan seminggu sekali saya membaca halaman koran yang biasanya tidak saya baca.</sub>
+<sub>Sering dikatakan 'anak muda sekarang tidak menonton TV'. Memang banyak mahasiswa di sekitar saya tidak punya TV: berita dibaca di ponsel, drama dan film ditonton di layanan streaming. Saya pun tidak membeli TV sejak tinggal sendiri, dan awalnya tidak kesulitan: acara yang ingin dilihat bisa ditonton kapan saja, tanpa iklan. ① Saya kira bisa memilih hanya informasi yang saya perlukan itu sangat praktis. Tetapi suatu hari saat menonton TV bersama keluarga di rumah orang tua, saya menyadari hal tak terduga: di TV mengalir berita dan acara dari bidang yang tidak saya minati — bencana di negeri jauh, liputan kerajinan tradisional daerah, pertandingan olahraga yang tak saya kenal. Sambil mengobrol dengan keluarga, saya sadar betapa sempitnya dunia informasi yang selama ini saya lihat. Di internet, informasi yang mirip dengan yang pernah dilihat terus direkomendasikan; praktis, tetapi ② ada bahaya tanpa sadar kita hanya dikelilingi hal yang kita sukai. Bukan soal mana yang lebih baik antara TV dan internet; yang penting menyadari informasi apa yang sedang kita sentuh, dan sesekali mencari sendiri informasi jenis lain. Dengan koran, kita bertemu topik yang tak kita pilih sendiri; kebetulan itu menurut saya memperluas pemikiran. Belakangan seminggu sekali saya membaca halaman koran yang biasanya tidak saya baca.</sub>
 
 **55. ＿①自分に必要な情報だけを選べる＿とあるが、筆者は最初それをどう思っていたか。**
 
@@ -2956,9 +3060,19 @@
 > ・年間パスポートを持っている人は、園内のレストランで食事代が10％引きになります。  
 > ・未就学児（小学校に入る前の子ども）は無料です。  
 > ・年間パスポートは、入り口の窓口で買えます。顔写真を撮影しますので、本人が来てください。  
-> ・休園日：毎週月曜日（祝日の場合は翌日）
+> ・休園日：毎週月曜日（祝日の場合は翌日）  
+> ・年間パスポートは、本人だけが使えます。ほかの人に貸すことはできません。  
+> ・パスポートをなくしたときは、再発行ができます（手数料500円）。身分証明書を持って、窓口に来てください。  
+> ・入園料は、現金のほか、交通系ICカードでも払えます。  
+> ・動物にえさをやることは、禁止です。ただし、「ふれあい広場」では、決まった時間に、えさやり体験ができます（100円）。  
+> ・園内には、ベビーカーを貸し出す場所があります（無料）。  
+> ・雨の日は、一部の動物は見られないことがあります。  
+> ・年間パスポートの期限が終わる一か月前から、新しいパスポートを買うことができます。  
+> ・入り口の窓口は、午前9時30分から午後4時30分まで開いています。  
+> ・何回来るかによって、1回券のほうが安い場合もあります。よく考えて選んでください。  
+> ・パスポートは、期限が切れたあとも、記念として持っておくことができます。
 
-<sub>Paspor tahunan Kebun Binatang Midori: tiket sekali dewasa (SMA ke atas) 600 / SD-SMP 200 / 65+ 300 yen; paspor tahunan 2.400 / 800 / 1.200 yen. Paspor berlaku setahun sejak dibeli, bebas masuk berapa kali pun. Pemegang paspor diskon 10% makan di restoran kebun binatang. Anak belum sekolah gratis. Paspor dibeli di loket pintu masuk; foto wajah diambil, jadi yang bersangkutan harus datang. Tutup setiap Senin (jika libur nasional, keesokan harinya).</sub>
+<sub>Paspor tahunan Kebun Binatang Midori: tiket sekali dewasa (SMA ke atas) 600 / SD-SMP 200 / 65+ 300 yen; paspor tahunan 2.400 / 800 / 1.200 yen. Paspor berlaku setahun sejak dibeli, bebas masuk berapa kali pun. Pemegang paspor diskon 10% makan di restoran kebun binatang. Anak belum sekolah gratis. Paspor dibeli di loket pintu masuk; foto wajah diambil, jadi yang bersangkutan harus datang. Tutup setiap Senin (jika libur nasional, keesokan harinya). Paspor tahunan hanya bisa dipakai pemiliknya dan tak bisa dipinjamkan. Bila hilang, bisa diterbitkan ulang (biaya 500 yen); bawa identitas ke loket. Tiket masuk bisa dibayar tunai atau kartu IC transportasi. Memberi makan hewan dilarang, tetapi di 'Taman Interaksi' ada pengalaman memberi makan pada jam tertentu (100 yen). Di dalam kebun ada tempat meminjam kereta bayi (gratis). Saat hujan sebagian hewan mungkin tak terlihat. Paspor baru bisa dibeli mulai sebulan sebelum masa berlaku habis. Loket pintu masuk buka pukul 09.30–16.30. Tergantung berapa kali datang, tiket sekali masuk bisa lebih murah; pilih dengan pertimbangan. Paspor boleh disimpan sebagai kenang-kenangan setelah masa berlaku habis.</sub>
 
 **59. 大人二人と小学生一人が、年間パスポートを買う。全部でいくらか。**
 
@@ -2996,10 +3110,10 @@
 > これは、病院から患者に届いたメールである。  
 >   
 > キム様  
-> 来週火曜日の午前十時に、検査のご予約をいただいております。検査の前の日の夜九時以降は、何も食べないでください。水やお茶は飲んでもかまいません。当日は、保険証と、先週お渡しした問診票を書いてお持ちください。検査は一時間ほどで終わりますが、結果は一週間後にお知らせします。ご予約を変更される場合は、前日の午後五時までにお電話ください。  
+> 来週火曜日の午前十時に、検査のご予約をいただいております。検査の前の日の夜九時以降は、何も食べないでください。水やお茶は飲んでもかまいません。当日は、保険証と、先週お渡しした問診票を書いてお持ちください。検査は一時間ほどで終わりますが、結果は一週間後にお知らせします。ご予約を変更される場合は、前日の午後五時までにお電話ください。お忙しいところ申し訳ありませんが、どうぞよろしくお願いいたします。  
 > さくら病院　検査室
 
-<sub>Kepada Kim: Anda terjadwal pemeriksaan Selasa depan jam 10 pagi. Sehari sebelumnya mulai jam 9 malam jangan makan apa pun; air dan teh boleh. Hari-H bawa kartu asuransi dan kuesioner medis yang diberikan minggu lalu dalam keadaan terisi. Pemeriksaan sekitar satu jam; hasil diberitahukan seminggu kemudian. Untuk mengubah jadwal, telepon paling lambat jam 5 sore sehari sebelumnya. — RS Sakura, ruang pemeriksaan</sub>
+<sub>Kepada Kim: Anda terjadwal pemeriksaan Selasa depan jam 10 pagi. Sehari sebelumnya mulai jam 9 malam jangan makan apa pun; air dan teh boleh. Hari-H bawa kartu asuransi dan kuesioner medis yang diberikan minggu lalu dalam keadaan terisi. Pemeriksaan sekitar satu jam; hasil diberitahukan seminggu kemudian. Untuk mengubah jadwal, telepon paling lambat jam 5 sore sehari sebelumnya. Maaf mengganggu kesibukan Anda, mohon kerja samanya. — RS Sakura, ruang pemeriksaan</sub>
 
 **48. このメールの内容と合っているものはどれか。**
 
@@ -3016,9 +3130,9 @@
   - D. 予約の変更は当日でもできる — Salah. Paling lambat jam 5 sore sehari sebelumnya.
 
 > **Teks pendek (内容理解・短文)**  
-> 私は毎朝、通勤の電車の中で、英語の単語を十個覚えることにしている。片道三十分の電車の時間は、何もしなければすぐに過ぎてしまう。しかし、毎日続ければ、一年で三千個以上の単語を覚えられる計算だ。もちろん、全部を覚えていられるわけではない。それでも、半年前には読めなかった英語のニュースが、少しずつわかるようになってきた。短い時間でも、積み重ねれば大きな力になるのだと実感している。
+> 私は毎朝、通勤の電車の中で、英語の単語を十個覚えることにしている。片道三十分の電車の時間は、何もしなければすぐに過ぎてしまう。しかし、毎日続ければ、一年で三千個以上の単語を覚えられる計算だ。もちろん、全部を覚えていられるわけではない。それでも、半年前には読めなかった英語のニュースが、少しずつわかるようになってきた。最初の一か月は、十個覚えられない日もあった。それでも、やめないで続けたことで、今では電車の中で単語を見る時間が、一日の楽しみになっている。短い時間でも、積み重ねれば大きな力になるのだと実感している。
 
-<sub>Setiap pagi di kereta menuju kantor saya menghafal sepuluh kosakata bahasa Inggris. Perjalanan 30 menit sekali jalan cepat berlalu jika tidak melakukan apa-apa; tetapi jika rutin, setahun hitungannya lebih dari 3.000 kata. Tentu tidak semuanya teringat, tetapi berita bahasa Inggris yang setengah tahun lalu tak terbaca kini sedikit demi sedikit bisa dipahami. Saya merasakan bahwa waktu singkat pun, jika ditumpuk, menjadi kekuatan besar.</sub>
+<sub>Setiap pagi di kereta menuju kantor saya menghafal sepuluh kosakata bahasa Inggris. Perjalanan 30 menit sekali jalan cepat berlalu jika tidak melakukan apa-apa; tetapi jika rutin, setahun hitungannya lebih dari 3.000 kata. Tentu tidak semuanya teringat, tetapi berita bahasa Inggris yang setengah tahun lalu tak terbaca kini sedikit demi sedikit bisa dipahami. Di bulan pertama ada hari saya tak bisa menghafal sepuluh. Namun karena tak berhenti, kini waktu melihat kosakata di kereta menjadi kesenangan sehari-hari. Saya merasakan bahwa waktu singkat pun, jika ditumpuk, menjadi kekuatan besar.</sub>
 
 **49. 筆者が実感していることは何か。**
 
@@ -3036,9 +3150,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 市営駐車場の料金変更について  
-> 四月一日から、駅前の市営駐車場の料金が変わります。最初の三十分は無料、その後は三十分ごとに百五十円です（これまでは二百円）。ただし、夜十時から朝八時までは、一時間ごとに百円です。一日の最大料金は千二百円です。駅前の商店街で二千円以上買い物をした人は、レシートを見せると、一時間分が無料になります。
+> 四月一日から、駅前の市営駐車場の料金が変わります。最初の三十分は無料、その後は三十分ごとに百五十円です（これまでは二百円）。ただし、夜十時から朝八時までは、一時間ごとに百円です。一日の最大料金は千二百円です。駅前の商店街で二千円以上買い物をした人は、レシートを見せると、一時間分が無料になります。  
+> ご迷惑をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、市役所の窓口までお問い合わせください。新しい料金は、駐車場の入り口にも書いてあります。
 
-<sub>Perubahan tarif parkir kota depan stasiun mulai 1 April: 30 menit pertama gratis, selanjutnya 150 yen per 30 menit (sebelumnya 200 yen). Namun jam 22.00–08.00 100 yen per jam. Maksimum sehari 1.200 yen. Yang belanja ≥2.000 yen di pertokoan depan stasiun dan menunjukkan struk, gratis satu jam.</sub>
+<sub>Perubahan tarif parkir kota depan stasiun mulai 1 April: 30 menit pertama gratis, selanjutnya 150 yen per 30 menit (sebelumnya 200 yen). Namun jam 22.00–08.00 100 yen per jam. Maksimum sehari 1.200 yen. Yang belanja ≥2.000 yen di pertokoan depan stasiun dan menunjukkan struk, gratis satu jam. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke loket balai kota. Tarif baru juga tertulis di pintu masuk tempat parkir.</sub>
 
 **50. 四月から、昼の十二時から一時間、車を止めた。買い物はしなかった。料金はいくらか。**
 
@@ -3059,10 +3174,10 @@
 > 姉が弟にあてて書いたメモである。  
 >   
 > だいき  
-> お母さんに頼まれて、明日のおばあちゃんの誕生日のケーキを駅前の店に予約しておいた。明日の四時に受け取りに行ってくれる？お金はもう払ってあるから、店の人に名前を言えば大丈夫。私は部活の試合で遅くなるから、先におばあちゃんの家に行っててね。ケーキは横にしないように気をつけて。  
+> お母さんに頼まれて、明日のおばあちゃんの誕生日のケーキを駅前の店に予約しておいた。明日の四時に受け取りに行ってくれる？お金はもう払ってあるから、店の人に名前を言えば大丈夫。私は部活の試合で遅くなるから、先におばあちゃんの家に行っててね。ケーキは横にしないように気をつけて。帰りが遅くなりそうなときは、電話してね。夜は戸締まりをして、早めに寝てね。ありがとう。  
 > 姉
 
-<sub>Daiki, atas permintaan ibu, kakak sudah memesan kue ulang tahun nenek untuk besok di toko depan stasiun. Bisa tolong ambil jam 4 besok? Sudah dibayar, cukup sebut nama ke pegawai. Kakak pulang telat karena pertandingan klub, kamu duluan ke rumah nenek ya. Hati-hati jangan dimiringkan kuenya. — Kakak</sub>
+<sub>Daiki, atas permintaan ibu, kakak sudah memesan kue ulang tahun nenek untuk besok di toko depan stasiun. Bisa tolong ambil jam 4 besok? Sudah dibayar, cukup sebut nama ke pegawai. Kakak pulang telat karena pertandingan klub, kamu duluan ke rumah nenek ya. Hati-hati jangan dimiringkan kuenya. Bila sepertinya pulang terlambat, telepon ya. Kunci pintu di malam hari dan tidurlah lebih awal. Terima kasih. — Kakak</sub>
 
 **51. だいきさんが明日しなければならないことは何か。**
 
@@ -3135,9 +3250,9 @@
 > 大学生のとき、私は就職活動がうまくいかず、毎日落ち込んでいた。何をしても楽しくなかった。そんなとき、実家に帰って祖母と話していると、祖母が「どんな日にも、一つはいいことがあるものだよ。それを見つけるのが、元気に生きるコツなんだ」と言った。  
 > 私は半信半疑で、祖母のまねをして日記を書き始めた。最初は「よかったこと」がなかなか見つからなかった。しかし、探そうとすると、「駅で知らない人が道を譲ってくれた」「昼ご飯のパンがおいしかった」など、小さなことに気づくようになった。そして、少しずつ気持ちが明るくなっていった。  
 > あれから十年、私は今も日記を続けている。祖母の日記が小さなことばかりだったのは、②小さな幸せに気づく力を、毎日育てていたからなのだと、今ならわかる。  
-> 先日、祖母にそのことを話すと、「やっとわかったかい」と笑って、新しいノートをくれた。今、そのノートに、今日の「よかったこと」を書いている。
+> 先日、祖母にそのことを話すと、「やっとわかったかい」と笑って、新しいノートをくれた。祖母は、「書くと、いやなことも少し軽くなるんだよ」と笑って言う。今、そのノートに、今日の「よかったこと」を書いている。
 
-<sub>Nenek saya, kini 90 tahun, masih menulis buku harian setiap hari — hanya tiga baris sehari di buku catatan: cuaca hari itu, makanan yang dimakan, dan satu 'hal baik hari ini'. Waktu kecil ① saya heran melihatnya: isinya itu-itu saja, dan 'hal baik'-nya hal kecil seperti 'bunga di halaman mekar', 'tetangga memberi jeruk'. Saya pikir apa gunanya menulis hal seperti itu. Saat kuliah, pencarian kerja saya tidak lancar dan setiap hari saya murung; apa pun terasa tidak menyenangkan. Saat pulang ke rumah orang tua dan berbincang, nenek berkata 'di hari apa pun pasti ada satu hal baik. Menemukannya adalah kunci hidup bersemangat.' Setengah ragu, saya mulai meniru menulis buku harian. Awalnya sulit menemukan 'hal baik', tetapi saat mencarinya saya mulai menyadari hal-hal kecil — 'orang tak dikenal memberi jalan di stasiun', 'roti makan siang enak' — dan perlahan perasaan saya jadi cerah. Sepuluh tahun berlalu, saya masih menulis. Kini saya paham: buku harian nenek berisi hal kecil karena ia ② setiap hari melatih kemampuan menyadari kebahagiaan kecil. Beberapa hari lalu saat saya ceritakan ke nenek, ia tertawa, 'akhirnya kau paham juga', lalu memberi buku catatan baru. Kini di buku itu saya menulis 'hal baik' hari ini.</sub>
+<sub>Nenek saya, kini 90 tahun, masih menulis buku harian setiap hari — hanya tiga baris sehari di buku catatan: cuaca hari itu, makanan yang dimakan, dan satu 'hal baik hari ini'. Waktu kecil ① saya heran melihatnya: isinya itu-itu saja, dan 'hal baik'-nya hal kecil seperti 'bunga di halaman mekar', 'tetangga memberi jeruk'. Saya pikir apa gunanya menulis hal seperti itu. Saat kuliah, pencarian kerja saya tidak lancar dan setiap hari saya murung; apa pun terasa tidak menyenangkan. Saat pulang ke rumah orang tua dan berbincang, nenek berkata 'di hari apa pun pasti ada satu hal baik. Menemukannya adalah kunci hidup bersemangat.' Setengah ragu, saya mulai meniru menulis buku harian. Awalnya sulit menemukan 'hal baik', tetapi saat mencarinya saya mulai menyadari hal-hal kecil — 'orang tak dikenal memberi jalan di stasiun', 'roti makan siang enak' — dan perlahan perasaan saya jadi cerah. Sepuluh tahun berlalu, saya masih menulis. Kini saya paham: buku harian nenek berisi hal kecil karena ia ② setiap hari melatih kemampuan menyadari kebahagiaan kecil. Beberapa hari lalu saat saya ceritakan ke nenek, ia tertawa, 'akhirnya kau paham juga', lalu memberi buku catatan baru. Nenek berkata sambil tertawa, 'Kalau ditulis, hal yang tak enak pun jadi sedikit lebih ringan.' Kini di buku itu saya menulis 'hal baik' hari ini.</sub>
 
 **55. ＿①祖母の日記を見て、不思議に思った＿とあるが、なぜか。**
 
@@ -3205,9 +3320,18 @@
 > 男性のための料理 ｜ 毎週日曜 10:00～12:00 ｜ 簡単な家庭料理 ｜ 1,500円 ｜ ・体験レッスンは、一人一回、一つのコースだけ受けられます。  
 > ・体験レッスンを受けた日に入会すると、入会金（5,000円）が無料になります。  
 > ・エプロンとタオルを持ってきてください。持っていない人には、エプロンを200円で貸し出します。  
-> ・予約は前の日までに電話でお願いします。
+> ・予約は前の日までに電話でお願いします。  
+> ・体験レッスンの材料費は、料金に含まれています。  
+> ・作った料理は、その場で食べることも、持ち帰ることもできます。持ち帰る場合は、入れ物を持ってきてください。  
+> ・食物アレルギーがある人は、予約のときに必ず教えてください。  
+> ・教室は、駅から歩いて五分のところにあります。  
+> ・体験レッスンを受けたあとで、入会しない場合も、お金はかかりません。  
+> ・体験レッスンの日に、教室で、入会の説明を三十分ぐらい聞いていただきます。  
+> ・体験レッスンの時間は、コースによって、1時間半から2時間です。  
+> ・予約が多い場合は、日にちを変えていただくことがあります。  
+> ・料理の道具や材料は、教室が用意します。
 
-<sub>Les percobaan kelas memasak ABC: masakan Jepang (setiap Senin 10–12, rebusan musiman & sup miso, 1.500 yen); roti (setiap Rabu 19–21, roti tawar & croissant, 2.000 yen); kue (setiap Sabtu 13–15, kue & kukis, 2.000 yen); masakan untuk pria (setiap Minggu 10–12, masakan rumahan sederhana, 1.500 yen). Les percobaan sekali per orang, satu kursus saja. Mendaftar di hari les percobaan: uang pendaftaran (5.000 yen) gratis. Bawa celemek dan handuk; yang tidak punya bisa sewa celemek 200 yen. Reservasi lewat telepon paling lambat sehari sebelumnya.</sub>
+<sub>Les percobaan kelas memasak ABC: masakan Jepang (setiap Senin 10–12, rebusan musiman & sup miso, 1.500 yen); roti (setiap Rabu 19–21, roti tawar & croissant, 2.000 yen); kue (setiap Sabtu 13–15, kue & kukis, 2.000 yen); masakan untuk pria (setiap Minggu 10–12, masakan rumahan sederhana, 1.500 yen). Les percobaan sekali per orang, satu kursus saja. Mendaftar di hari les percobaan: uang pendaftaran (5.000 yen) gratis. Bawa celemek dan handuk; yang tidak punya bisa sewa celemek 200 yen. Reservasi lewat telepon paling lambat sehari sebelumnya. Biaya bahan pelajaran percobaan sudah termasuk dalam tarif. Masakan yang dibuat boleh dimakan di tempat atau dibawa pulang; bawa wadah bila ingin dibawa. Yang punya alergi makanan wajib memberi tahu saat reservasi. Kelas berjarak lima menit jalan dari stasiun. Bila tak mendaftar setelah pelajaran percobaan, tak ada biaya. Di hari pelajaran percobaan, Anda mendengar penjelasan pendaftaran sekitar 30 menit. Waktu pelajaran percobaan 1,5–2 jam tergantung kursus. Bila reservasi banyak, hari bisa diminta diubah. Alat dan bahan masak disiapkan sekolah.</sub>
 
 **59. 会社員のトムさんは平日の夜しか時間がない。体験レッスンを受けて、その日に入会するつもりだ。エプロンは持っていない。体験の日に払う金額はいくらか。**
 
@@ -3245,10 +3369,10 @@
 > これは、アルバイト先の店長から届いたメールである。  
 >   
 > アルバイトの皆さん  
-> 来月から、店の制服が新しくなります。新しい制服は、今月二十五日から事務所で配りますので、自分のサイズを確認して受け取ってください。古い制服は、新しい制服を受け取るときに、洗濯してから返してください。サイズが合わない場合は、受け取った日から一週間以内なら交換できます。名札は今までのものを使います。  
+> 来月から、店の制服が新しくなります。新しい制服は、今月二十五日から事務所で配りますので、自分のサイズを確認して受け取ってください。古い制服は、新しい制服を受け取るときに、洗濯してから返してください。サイズが合わない場合は、受け取った日から一週間以内なら交換できます。名札は今までのものを使います。ご不明な点があれば、いつでも連絡してください。どうぞよろしくお願いいたします。  
 > 店長　松本
 
-<sub>Untuk pekerja paruh waktu: mulai bulan depan seragam toko baru. Seragam baru dibagikan di kantor mulai tanggal 25 bulan ini; cek ukuran dan ambil. Seragam lama dikembalikan setelah dicuci saat mengambil yang baru. Jika ukuran tidak cocok, bisa ditukar dalam seminggu sejak diterima. Papan nama memakai yang lama. — Manajer Matsumoto</sub>
+<sub>Untuk pekerja paruh waktu: mulai bulan depan seragam toko baru. Seragam baru dibagikan di kantor mulai tanggal 25 bulan ini; cek ukuran dan ambil. Seragam lama dikembalikan setelah dicuci saat mengambil yang baru. Jika ukuran tidak cocok, bisa ditukar dalam seminggu sejak diterima. Papan nama memakai yang lama. Bila ada yang kurang jelas, hubungi kapan saja. Mohon kerja samanya. — Manajer Matsumoto</sub>
 
 **48. アルバイトの人が新しい制服を受け取るとき、しなければならないことは何か。**
 
@@ -3265,9 +3389,9 @@
   - D. 新しい名札を受け取る — Salah. Papan nama memakai yang lama.
 
 > **Teks pendek (内容理解・短文)**  
-> 外国語を勉強するとき、多くの人は文法や単語を覚えることから始める。もちろんそれも大切だ。しかし、私が一番役に立ったと思うのは、その国の人と実際に話す経験だった。教科書どおりの文を作ろうとして黙ってしまうより、間違えてもいいから話してみるほうが、ずっと早く上達する。相手は、文法の間違いよりも、伝えようとする気持ちのほうを受け止めてくれるものだ。
+> 外国語を勉強するとき、多くの人は文法や単語を覚えることから始める。もちろんそれも大切だ。しかし、私が一番役に立ったと思うのは、その国の人と実際に話す経験だった。教科書どおりの文を作ろうとして黙ってしまうより、間違えてもいいから話してみるほうが、ずっと早く上達する。間違えることを恐れて話さないでいるより、間違えてもいいから話してみたほうが、早く上達する。話しているうちに、相手が言い直して教えてくれることもある。相手は、文法の間違いよりも、伝えようとする気持ちのほうを受け止めてくれるものだ。
 
-<sub>Saat belajar bahasa asing, banyak orang mulai dengan menghafal tata bahasa dan kosakata; tentu itu penting. Tetapi yang menurut saya paling berguna adalah pengalaman benar-benar berbicara dengan orang dari negara itu. Daripada diam karena berusaha menyusun kalimat sesuai buku, berani bicara meski salah membuat kemajuan jauh lebih cepat. Lawan bicara lebih menangkap niat untuk menyampaikan daripada kesalahan tata bahasa.</sub>
+<sub>Saat belajar bahasa asing, banyak orang mulai dengan menghafal tata bahasa dan kosakata; tentu itu penting. Tetapi yang menurut saya paling berguna adalah pengalaman benar-benar berbicara dengan orang dari negara itu. Daripada diam karena berusaha menyusun kalimat sesuai buku, berani bicara meski salah membuat kemajuan jauh lebih cepat. Daripada tak bicara karena takut salah, mencoba bicara meski salah membuat kita lebih cepat maju. Sambil bicara, lawan bicara kadang mengulang dengan benar dan mengajari kita. Lawan bicara lebih menangkap niat untuk menyampaikan daripada kesalahan tata bahasa.</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -3285,9 +3409,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 市民体育館　トレーニング室の利用について  
-> トレーニング室を初めて利用する方は、利用前に三十分の講習を受ける必要があります。講習は毎日午前十時と午後六時に行います。予約はいりません。講習を受けると「利用カード」が発行され、次回からはカードを見せるだけで利用できます。中学生以下は利用できません。利用料は一回三百円です。
+> トレーニング室を初めて利用する方は、利用前に三十分の講習を受ける必要があります。講習は毎日午前十時と午後六時に行います。予約はいりません。講習を受けると「利用カード」が発行され、次回からはカードを見せるだけで利用できます。中学生以下は利用できません。利用料は一回三百円です。  
+> ご不便をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、体育館の受付までお問い合わせください。トレーニング室の利用時間は、体育館の入り口にも書いてあります。
 
-<sub>Pemakaian ruang latihan beban gedung olahraga warga: pemakai pertama wajib ikut pelatihan 30 menit sebelum memakai, setiap hari jam 10.00 dan 18.00, tanpa reservasi. Setelah ikut pelatihan diterbitkan 'kartu pemakai', berikutnya cukup menunjukkan kartu. SMP ke bawah tidak boleh memakai. Biaya 300 yen sekali pakai.</sub>
+<sub>Pemakaian ruang latihan beban gedung olahraga warga: pemakai pertama wajib ikut pelatihan 30 menit sebelum memakai, setiap hari jam 10.00 dan 18.00, tanpa reservasi. Setelah ikut pelatihan diterbitkan 'kartu pemakai', berikutnya cukup menunjukkan kartu. SMP ke bawah tidak boleh memakai. Biaya 300 yen sekali pakai. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke resepsionis gedung olahraga. Jam pemakaian ruang latihan juga tertulis di pintu masuk gedung olahraga.</sub>
 
 **50. トレーニング室を初めて利用する大学生は、どうすればいいか。**
 
@@ -3308,10 +3433,10 @@
 > サークルの部長が、部室の机に置いたメモである。  
 >   
 > 一年生の皆さんへ  
-> 来月の学園祭で、私たちのサークルは焼きそばの店を出します。準備のため、来週の土曜日の午後一時に部室に集まってください。当日の仕事の分担を決めます。料理が得意な人は、私に事前に教えてくれると助かります。土曜日に来られない人は、金曜日までに連絡をください。  
+> 来月の学園祭で、私たちのサークルは焼きそばの店を出します。準備のため、来週の土曜日の午後一時に部室に集まってください。当日の仕事の分担を決めます。料理が得意な人は、私に事前に教えてくれると助かります。土曜日に来られない人は、金曜日までに連絡をください。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。みんなで楽しく活動しましょう。  
 > 部長　竹内
 
-<sub>Untuk anggota tahun pertama: di festival kampus bulan depan klub kita membuka kios yakisoba. Untuk persiapan, berkumpul di ruang klub Sabtu depan jam 1 siang; kita akan membagi tugas hari-H. Yang pandai memasak, akan membantu jika memberi tahu saya lebih dulu. Yang tidak bisa datang Sabtu, hubungi paling lambat Jumat. — Ketua Takeuchi</sub>
+<sub>Untuk anggota tahun pertama: di festival kampus bulan depan klub kita membuka kios yakisoba. Untuk persiapan, berkumpul di ruang klub Sabtu depan jam 1 siang; kita akan membagi tugas hari-H. Yang pandai memasak, akan membantu jika memberi tahu saya lebih dulu. Yang tidak bisa datang Sabtu, hubungi paling lambat Jumat. Maaf mengganggu, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. Mari berkegiatan dengan gembira bersama. — Ketua Takeuchi</sub>
 
 **51. 土曜日の集まりに行けない一年生は、どうすればいいか。**
 
@@ -3331,10 +3456,10 @@
 > 最近、私の住む町では、空き家が増えている。住んでいた人が亡くなったり、子どもの家に引っ越したりして、だれも住まなくなった家だ。そのままにしておくと、建物が古くなって危ないし、町の景色も寂しくなる。  
 > そこで、町の若い人たちが、①空き家を新しい形で使う活動を始めた。古い家を少しずつ修理して、カフェや、子どもたちが勉強できる場所、お年寄りが集まって話せる場所にしているのだ。修理には、地元の大工さんや、ボランティアの大学生も参加している。  
 > 私も先月、ある空き家を改修したカフェに行ってみた。古い木の柱や窓がそのまま残されていて、どこか懐かしい感じがした。店には、近所のお年寄りから小さな子ども連れの家族まで、いろいろな人が来ていた。  
-> 空き家は、町にとって②問題であると同時に、新しい可能性でもあるのかもしれない。使い方を工夫すれば、人が集まる場所に生まれ変わることができるのだ。  
+> 空き家は、町にとって②問題であると同時に、新しい可能性でもあるのかもしれない。使い方を工夫すれば、人が集まる場所に生まれ変わることができるのだ。町は、空き家を直して住みたい人に、お金の一部を出す制度も始めた。実際にその制度を使って、古い家を店に変えた若い夫婦もいる。  
 > 町は来年から、空き家の持ち主と、使いたい人をつなぐ窓口を作る予定だという。
 
-<sub>Belakangan rumah kosong bertambah di kota saya — rumah yang tak dihuni lagi karena penghuninya meninggal atau pindah ke rumah anaknya. Jika dibiarkan, bangunan menua dan berbahaya, dan pemandangan kota jadi sepi. Maka anak muda kota memulai ① kegiatan memakai rumah kosong dengan cara baru: rumah tua diperbaiki sedikit demi sedikit menjadi kafe, tempat belajar anak, atau tempat lansia berkumpul mengobrol; tukang kayu lokal dan relawan mahasiswa ikut memperbaiki. Bulan lalu saya mengunjungi kafe hasil renovasi rumah kosong; tiang kayu dan jendela lama dibiarkan apa adanya sehingga terasa nostalgia. Pengunjungnya beragam, dari lansia sekitar sampai keluarga dengan anak kecil. Rumah kosong mungkin ② sekaligus masalah dan kemungkinan baru bagi kota; dengan cara pemakaian yang kreatif, ia bisa terlahir kembali menjadi tempat orang berkumpul. Kota berencana mulai tahun depan membuka loket yang menghubungkan pemilik rumah kosong dengan orang yang ingin memakainya.</sub>
+<sub>Belakangan rumah kosong bertambah di kota saya — rumah yang tak dihuni lagi karena penghuninya meninggal atau pindah ke rumah anaknya. Jika dibiarkan, bangunan menua dan berbahaya, dan pemandangan kota jadi sepi. Maka anak muda kota memulai ① kegiatan memakai rumah kosong dengan cara baru: rumah tua diperbaiki sedikit demi sedikit menjadi kafe, tempat belajar anak, atau tempat lansia berkumpul mengobrol; tukang kayu lokal dan relawan mahasiswa ikut memperbaiki. Bulan lalu saya mengunjungi kafe hasil renovasi rumah kosong; tiang kayu dan jendela lama dibiarkan apa adanya sehingga terasa nostalgia. Pengunjungnya beragam, dari lansia sekitar sampai keluarga dengan anak kecil. Rumah kosong mungkin ② sekaligus masalah dan kemungkinan baru bagi kota; dengan cara pemakaian yang kreatif, ia bisa terlahir kembali menjadi tempat orang berkumpul. Kota juga mulai sistem menanggung sebagian dana bagi yang ingin memperbaiki dan menempati rumah kosong. Ada pasangan muda yang memakai sistem itu dan mengubah rumah tua menjadi toko. Kota berencana mulai tahun depan membuka loket yang menghubungkan pemilik rumah kosong dengan orang yang ingin memakainya.</sub>
 
 **52. ＿①空き家を新しい形で使う活動＿として、文章に書かれていないものはどれか。**
 
@@ -3384,9 +3509,9 @@
 > 先輩は続けて、「会議は、完成した意見を発表する場所じゃない。みんなで考えを育てる場所なんだ。半分の意見でも、だれかがそれに付け足してくれれば、いいアイデアになる」と教えてくれた。  
 > 次の会議で、私は思い切って、まだまとまっていない考えを話してみた。すると、ほかの人が「それなら、こういうのはどうだろう」と意見を重ねてくれて、最後には一つの企画にまとまった。その企画は、翌年、実際に商品になった。  
 > 今では、若い社員が会議で黙っていると、私も声をかけるようにしている。ただし、先輩のように厳しい言い方はしない。「途中の考えでもいいから、聞かせて」と言うのだ。②話しやすい雰囲気を作ることも、上の立場にいる人の大切な仕事だと思うからである。  
-> 先日、新人の一人が会議で、まだ途中の案を出してくれた。そこに何人かが意見を足して、思いがけない企画が生まれた。私はそれを見て、あの日の先輩の言葉を思い出した。
+> 先日、新人の一人が会議で、まだ途中の案を出してくれた。そこに何人かが意見を足して、思いがけない企画が生まれた。先輩は、「失敗を恐れていたら、新しい物は何も作れないよ」と笑っていた。私はそれを見て、あの日の先輩の言葉を思い出した。
 
-<sub>Di kantor saya bertanggung jawab merencanakan produk baru. Saat baru masuk, saya hampir tak pernah bicara di rapat — memikirkan malu jika pendapat saya salah, saya tak berani mengangkat tangan. Suatu hari senior berkata setelah rapat 'diam itu terlihat sama dengan tidak berpikir apa-apa.' Saya terkejut; bukan berarti saya tidak berpikir, ① hanya saja saya mengira tidak boleh bicara kalau pendapatnya belum sempurna. Senior melanjutkan 'rapat bukan tempat mengumumkan pendapat yang sudah jadi, melainkan tempat menumbuhkan pemikiran bersama; setengah pendapat pun, jika ada yang menambahkannya, bisa jadi ide bagus.' Di rapat berikutnya saya nekat menyampaikan pemikiran yang belum matang; orang lain menimpali 'kalau begitu, bagaimana kalau begini', dan akhirnya terbentuk satu rencana yang tahun berikutnya benar-benar menjadi produk. Kini jika karyawan muda diam di rapat, saya pun menyapanya — tetapi tidak sekeras senior saya; saya bilang 'pemikiran setengah jadi pun boleh, ceritakan'. ② Karena saya rasa menciptakan suasana yang membuat orang mudah bicara juga tugas penting orang yang berada di posisi atas. Beberapa hari lalu seorang karyawan baru menyampaikan usulan setengah jadi di rapat; beberapa orang menambahkan pendapat dan lahirlah rencana tak terduga. Melihatnya saya teringat kata-kata senior hari itu.</sub>
+<sub>Di kantor saya bertanggung jawab merencanakan produk baru. Saat baru masuk, saya hampir tak pernah bicara di rapat — memikirkan malu jika pendapat saya salah, saya tak berani mengangkat tangan. Suatu hari senior berkata setelah rapat 'diam itu terlihat sama dengan tidak berpikir apa-apa.' Saya terkejut; bukan berarti saya tidak berpikir, ① hanya saja saya mengira tidak boleh bicara kalau pendapatnya belum sempurna. Senior melanjutkan 'rapat bukan tempat mengumumkan pendapat yang sudah jadi, melainkan tempat menumbuhkan pemikiran bersama; setengah pendapat pun, jika ada yang menambahkannya, bisa jadi ide bagus.' Di rapat berikutnya saya nekat menyampaikan pemikiran yang belum matang; orang lain menimpali 'kalau begitu, bagaimana kalau begini', dan akhirnya terbentuk satu rencana yang tahun berikutnya benar-benar menjadi produk. Kini jika karyawan muda diam di rapat, saya pun menyapanya — tetapi tidak sekeras senior saya; saya bilang 'pemikiran setengah jadi pun boleh, ceritakan'. ② Karena saya rasa menciptakan suasana yang membuat orang mudah bicara juga tugas penting orang yang berada di posisi atas. Beberapa hari lalu seorang karyawan baru menyampaikan usulan setengah jadi di rapat; beberapa orang menambahkan pendapat dan lahirlah rencana tak terduga. Senior itu tertawa, 'Kalau takut gagal, tak ada hal baru yang bisa dibuat.' Melihatnya saya teringat kata-kata senior hari itu.</sub>
 
 **55. 筆者が入社したころ、会議で発言できなかったのはなぜか。**
 
@@ -3454,9 +3579,17 @@
 > プログラミング入門 ｜ 8/6（水）・8/7（木）13:00～16:00（2日間） ｜ 小学5年生～中学生 ｜ 12人 ｜ 1,000円（2日分） ｜ ・さくら市に住んでいる子どもが対象です。  
 > ・申し込みは7月10日までに、市のホームページから。定員を超えた場合は抽選です。  
 > ・「川の生き物観察」は、ぬれてもいい服と靴で参加してください。雨の場合は中止です。  
-> ・「星空観察会」は、保護者一人につき子ども三人まで参加できます。
+> ・「星空観察会」は、保護者一人につき子ども三人まで参加できます。  
+> ・どの教室も、保護者の送り迎えをお願いします。  
+> ・「パン作り」では、作ったパンを持って帰ります。入れ物を持ってきてください。  
+> ・「プログラミング入門」では、パソコンを貸し出します。自分のパソコンを持ってくる必要はありません。  
+> ・申し込みの結果は、7月15日までに、メールでお知らせします。  
+> ・体調が悪いときは、無理をしないで、お休みしてください。休んだ場合の参加費は、返しません。  
+> ・教室の様子を写真にとって、市の広報に使うことがあります。  
+> ・「川の生き物観察」では、帽子と飲み物を持ってきてください。  
+> ・「星空観察会」は、天気が悪い場合、科学館の中で、星の映像を見る内容に変わります。
 
-<sub>Kelas pengalaman liburan musim panas anak kota Sakura: pengamatan makhluk sungai (25 Jul Jum 9–12, kelas 3–6 SD, 20 orang, 300 yen asuransi); membuat roti (30 Jul Rab 10–13, kelas 1–6 SD, 15 orang, 800 yen); pengamatan bintang (2 Agu Sab 19–21, anak SD & orang tua, 30 pasang, gratis); pengantar pemrograman (6 & 7 Agu Rab–Kam 13–16, dua hari, kelas 5 SD sampai SMP, 12 orang, 1.000 yen untuk dua hari). Untuk anak warga kota Sakura. Daftar paling lambat 10 Juli lewat website kota; jika melebihi kuota diundi. Pengamatan sungai pakai baju dan sepatu yang boleh basah; batal jika hujan. Pengamatan bintang: satu orang tua maksimal tiga anak.</sub>
+<sub>Kelas pengalaman liburan musim panas anak kota Sakura: pengamatan makhluk sungai (25 Jul Jum 9–12, kelas 3–6 SD, 20 orang, 300 yen asuransi); membuat roti (30 Jul Rab 10–13, kelas 1–6 SD, 15 orang, 800 yen); pengamatan bintang (2 Agu Sab 19–21, anak SD & orang tua, 30 pasang, gratis); pengantar pemrograman (6 & 7 Agu Rab–Kam 13–16, dua hari, kelas 5 SD sampai SMP, 12 orang, 1.000 yen untuk dua hari). Untuk anak warga kota Sakura. Daftar paling lambat 10 Juli lewat website kota; jika melebihi kuota diundi. Pengamatan sungai pakai baju dan sepatu yang boleh basah; batal jika hujan. Pengamatan bintang: satu orang tua maksimal tiga anak. Mohon orang tua mengantar-jemput di semua kelas. Di 'membuat roti', roti dibawa pulang; bawa wadah. Di 'pengantar pemrograman', komputer dipinjamkan; tak perlu membawa sendiri. Hasil pendaftaran diberitahukan lewat email paling lambat 15 Juli. Bila kurang sehat, jangan memaksakan diri dan istirahatlah; biaya tak dikembalikan. Suasana kelas kadang difoto dan dipakai untuk buletin kota. Di 'pengamatan makhluk sungai', bawa topi dan minuman. 'Pengamatan bintang', bila cuaca buruk, diganti dengan melihat video bintang di dalam pusat sains.</sub>
 
 **59. さくら市に住む小学四年生のりょうたさんが参加できる教室はどれか。**
 
@@ -3494,10 +3627,10 @@
 > これは、会社の人事部から新入社員に届いたメールである。  
 >   
 > 新入社員の皆さん  
-> 来週の月曜日から三日間、新入社員研修を行います。場所は本社ビル五階の大会議室です。初日は午前九時に集合してください。二日目と三日目は九時半からです。研修中の昼食は会社で用意します。ノートパソコンを一人一台貸し出しますので、自分のパソコンを持ってくる必要はありません。服装は、初日だけスーツで、二日目からは自由です。  
+> 来週の月曜日から三日間、新入社員研修を行います。場所は本社ビル五階の大会議室です。初日は午前九時に集合してください。二日目と三日目は九時半からです。研修中の昼食は会社で用意します。ノートパソコンを一人一台貸し出しますので、自分のパソコンを持ってくる必要はありません。服装は、初日だけスーツで、二日目からは自由です。お忙しいところ申し訳ありませんが、どうぞよろしくお願いいたします。  
 > 人事部
 
-<sub>Untuk karyawan baru: mulai Senin depan selama tiga hari ada pelatihan karyawan baru di ruang rapat besar lantai 5 gedung kantor pusat. Hari pertama berkumpul jam 9 pagi; hari kedua dan ketiga mulai jam 9.30. Makan siang selama pelatihan disediakan. Setiap orang dipinjami satu laptop, jadi tidak perlu membawa sendiri. Pakaian: jas hanya di hari pertama, mulai hari kedua bebas. — Bagian SDM</sub>
+<sub>Untuk karyawan baru: mulai Senin depan selama tiga hari ada pelatihan karyawan baru di ruang rapat besar lantai 5 gedung kantor pusat. Hari pertama berkumpul jam 9 pagi; hari kedua dan ketiga mulai jam 9.30. Makan siang selama pelatihan disediakan. Setiap orang dipinjami satu laptop, jadi tidak perlu membawa sendiri. Pakaian: jas hanya di hari pertama, mulai hari kedua bebas. Maaf mengganggu kesibukan Anda, mohon kerja samanya. — Bagian SDM</sub>
 
 **48. 研修について、このメールの内容と合っているものはどれか。**
 
@@ -3514,9 +3647,9 @@
   - D. 三日間とも九時に集まる — Salah. Hari kedua & ketiga jam 9.30.
 
 > **Teks pendek (内容理解・短文)**  
-> 最近、駅のホームに「ホームドア」が付けられることが多くなった。ホームと線路の間に壁のようなドアがあり、電車が止まったときだけ開くしくみだ。これによって、人がホームから落ちる事故が大きく減ったという。しかし、すべての駅に付けるには、たくさんのお金と時間がかかる。ホームドアがない駅では、私たち一人一人が、ホームの端を歩かないなど、気をつけることが必要だろう。
+> 最近、駅のホームに「ホームドア」が付けられることが多くなった。ホームと線路の間に壁のようなドアがあり、電車が止まったときだけ開くしくみだ。これによって、人がホームから落ちる事故が大きく減ったという。しかし、すべての駅に付けるには、たくさんのお金と時間がかかる。ホームドアがあれば、線路に落ちる事故を防ぐことができる。けれども、設置には一つの駅で何億円もかかるそうで、すべての駅につけるには長い時間が必要だ。ホームドアがない駅では、私たち一人一人が、ホームの端を歩かないなど、気をつけることが必要だろう。
 
-<sub>Belakangan makin banyak peron stasiun dipasangi 'pintu peron' — pintu seperti dinding antara peron dan rel yang hanya terbuka saat kereta berhenti. Dengan ini kecelakaan orang jatuh dari peron katanya berkurang drastis. Tetapi memasangnya di semua stasiun butuh banyak biaya dan waktu. Di stasiun tanpa pintu peron, kita masing-masing perlu berhati-hati, misalnya tidak berjalan di tepi peron.</sub>
+<sub>Belakangan makin banyak peron stasiun dipasangi 'pintu peron' — pintu seperti dinding antara peron dan rel yang hanya terbuka saat kereta berhenti. Dengan ini kecelakaan orang jatuh dari peron katanya berkurang drastis. Tetapi memasangnya di semua stasiun butuh banyak biaya dan waktu. Dengan pintu peron, kecelakaan jatuh ke rel bisa dicegah. Namun pemasangan konon menelan beberapa ratus juta yen per stasiun sehingga memasangnya di semua stasiun butuh waktu lama. Di stasiun tanpa pintu peron, kita masing-masing perlu berhati-hati, misalnya tidak berjalan di tepi peron.</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -3534,9 +3667,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 保育園からのお知らせ  
-> 来月十日の土曜日に、保育園の運動会を行います。雨の場合は、次の日の日曜日に行います。日曜日も雨の場合は中止です。当日は、子どもたちは朝八時半までに保育園に来てください。保護者の方の席は、園庭のテントの中に用意します。お弁当は家族と一緒に食べますので、ご家族の分もご用意ください。駐車場はありませんので、車では来ないでください。
+> 来月十日の土曜日に、保育園の運動会を行います。雨の場合は、次の日の日曜日に行います。日曜日も雨の場合は中止です。当日は、子どもたちは朝八時半までに保育園に来てください。保護者の方の席は、園庭のテントの中に用意します。お弁当は家族と一緒に食べますので、ご家族の分もご用意ください。駐車場はありませんので、車では来ないでください。  
+> ご不便をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、保育園の事務室までお問い合わせください。
 
-<sub>Pemberitahuan TK/penitipan: festival olahraga diadakan Sabtu tanggal 10 bulan depan; jika hujan, Minggu keesokan harinya; jika Minggu juga hujan, dibatalkan. Hari-H anak-anak datang paling lambat 8.30. Kursi orang tua disiapkan di tenda halaman. Bekal dimakan bersama keluarga, jadi siapkan juga untuk keluarga. Tidak ada parkir, jangan datang dengan mobil.</sub>
+<sub>Pemberitahuan TK/penitipan: festival olahraga diadakan Sabtu tanggal 10 bulan depan; jika hujan, Minggu keesokan harinya; jika Minggu juga hujan, dibatalkan. Hari-H anak-anak datang paling lambat 8.30. Kursi orang tua disiapkan di tenda halaman. Bekal dimakan bersama keluarga, jadi siapkan juga untuk keluarga. Tidak ada parkir, jangan datang dengan mobil. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke kantor penitipan.</sub>
 
 **50. 運動会の日について、正しいものはどれか。**
 
@@ -3557,10 +3691,10 @@
 > 同僚が机の上に置いたメモである。  
 >   
 > リンさん  
-> 午前中に、ABC社の山口様から電話がありました。来週の打ち合わせの資料を、事前に送ってほしいとのことです。資料が完成していたら、今日中にメールで送ってください。まだの場合は、いつ送れるかを山口様に電話で連絡してほしいそうです。山口様の電話番号は、名刺入れにあります。  
+> 午前中に、ABC社の山口様から電話がありました。来週の打ち合わせの資料を、事前に送ってほしいとのことです。資料が完成していたら、今日中にメールで送ってください。まだの場合は、いつ送れるかを山口様に電話で連絡してほしいそうです。山口様の電話番号は、名刺入れにあります。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。できるだけ早めに、確認してください。  
 > 小林
 
-<sub>Lin, tadi pagi ada telepon dari Ibu/Bapak Yamaguchi dari perusahaan ABC; ingin materi rapat minggu depan dikirim lebih dulu. Jika materinya sudah selesai, kirim lewat email hari ini. Jika belum, mohon kabari lewat telepon kapan bisa dikirim. Nomornya ada di tempat kartu nama. — Kobayashi</sub>
+<sub>Lin, tadi pagi ada telepon dari Ibu/Bapak Yamaguchi dari perusahaan ABC; ingin materi rapat minggu depan dikirim lebih dulu. Jika materinya sudah selesai, kirim lewat email hari ini. Jika belum, mohon kabari lewat telepon kapan bisa dikirim. Nomornya ada di tempat kartu nama. Maaf mengganggu, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. Mohon dicek secepat mungkin. — Kobayashi</sub>
 
 **51. 資料がまだ完成していない場合、リンさんはどうすればいいか。**
 
@@ -3580,10 +3714,10 @@
 > 私の会社には、毎週金曜日の午後四時から三十分、「雑談タイム」がある。仕事の手を止めて、休憩室でお茶を飲みながら、自由に話す時間だ。  
 > 最初にこの時間ができたとき、①多くの社員は戸惑った。忙しいのに、話をするために仕事を止めるのはもったいないと思ったのだ。私も最初の数回は、自分の席で仕事を続けていた。  
 > しかし、ある金曜日、上司に誘われて参加してみると、意外なことがあった。別の部署の人と話しているうちに、私が一週間悩んでいた問題を、その人が以前に解決したことがあるとわかったのだ。教えてもらった方法を試すと、問題はすぐに解決した。  
-> それから、私は毎週雑談タイムに参加するようになった。話の内容は、週末の予定や趣味のことがほとんどだが、ときどき仕事のヒントが見つかる。何より、ふだん話さない人と知り合いになれるのがいい。②むだに見える時間が、実は仕事を助けているのだと思う。  
+> それから、私は毎週雑談タイムに参加するようになった。話の内容は、週末の予定や趣味のことがほとんどだが、ときどき仕事のヒントが見つかる。何より、ふだん話さない人と知り合いになれるのがいい。②むだに見える時間が、実は仕事を助けているのだと思う。最初は、何を話せばいいかわからず、黙っている社員もいた。しかし、飲み物やお菓子を用意するようになってから、少しずつ会話が増えた。  
 > 最近は、ほかの会社から「うちでも始めてみたい」という問い合わせも来ているそうだ。
 
-<sub>Di kantor saya ada 'waktu ngobrol' setiap Jumat jam 4 sore selama 30 menit: berhenti bekerja dan bebas mengobrol sambil minum teh di ruang istirahat. Saat waktu ini dibuat, ① banyak karyawan bingung: sedang sibuk, rasanya sayang menghentikan pekerjaan hanya untuk mengobrol; saya pun beberapa kali pertama tetap bekerja di meja. Tetapi suatu Jumat, diajak atasan ikut, terjadi hal tak terduga: saat mengobrol dengan orang bagian lain, ternyata masalah yang seminggu saya pusingkan pernah ia pecahkan; saya mencoba caranya dan masalah segera beres. Sejak itu saya ikut setiap minggu. Kebanyakan obrolannya soal rencana akhir pekan dan hobi, tetapi kadang ditemukan petunjuk pekerjaan; terlebih, bisa berkenalan dengan orang yang biasanya tidak diajak bicara. ② Waktu yang tampak sia-sia ternyata membantu pekerjaan. Katanya belakangan perusahaan lain pun menanyakan 'kami juga ingin mencobanya'.</sub>
+<sub>Di kantor saya ada 'waktu ngobrol' setiap Jumat jam 4 sore selama 30 menit: berhenti bekerja dan bebas mengobrol sambil minum teh di ruang istirahat. Saat waktu ini dibuat, ① banyak karyawan bingung: sedang sibuk, rasanya sayang menghentikan pekerjaan hanya untuk mengobrol; saya pun beberapa kali pertama tetap bekerja di meja. Tetapi suatu Jumat, diajak atasan ikut, terjadi hal tak terduga: saat mengobrol dengan orang bagian lain, ternyata masalah yang seminggu saya pusingkan pernah ia pecahkan; saya mencoba caranya dan masalah segera beres. Sejak itu saya ikut setiap minggu. Kebanyakan obrolannya soal rencana akhir pekan dan hobi, tetapi kadang ditemukan petunjuk pekerjaan; terlebih, bisa berkenalan dengan orang yang biasanya tidak diajak bicara. ② Waktu yang tampak sia-sia ternyata membantu pekerjaan. Awalnya ada karyawan yang diam karena tak tahu harus bicara apa. Namun setelah minuman dan kue disediakan, percakapan perlahan bertambah. Katanya belakangan perusahaan lain pun menanyakan 'kami juga ingin mencobanya'.</sub>
 
 **52. ＿①多くの社員は戸惑った＿とあるが、なぜか。**
 
@@ -3702,9 +3836,18 @@
 > ・利用するときは、カウンターで図書館カードを見せて、席の番号札を受け取ってください。  
 > ・利用時間が終わったら、番号札をカウンターに返してください。空いている席があれば、続けて利用できます。  
 > ・パソコンを使う人は、窓側の「パソコン席」を利用してください（電源あり、10席）。  
-> ・飲み物はふたのある物だけ持ち込めます。食べ物は持ち込めません。
+> ・飲み物はふたのある物だけ持ち込めます。食べ物は持ち込めません。  
+> ・席は、全部で四十席あります。席の数には限りがあるので、混み合う日は、お待ちいただくことがあります。  
+> ・席を離れるときは、番号札を持って行ってください。荷物だけを置いて席を取ることは禁止されています。  
+> ・テスト期間中は、開室時間を延長することがあります。延長の予定は、図書館のホームページでお知らせします。  
+> ・おしゃべりや電話は、ほかの人の迷惑になりますので、やめてください。  
+> ・図書館の休館日は、学習室も使えません。  
+> ・パソコンを使う人は、イヤホンをつけてください。  
+> ・席の予約はできません。来た順に、番号札をお渡しします。  
+> ・平日の夕方は、学生が多く、混み合います。  
+> ・持ち込みの電気スタンドは、使えません。
 
-<sub>Panduan ruang belajar perpustakaan kota Aoba: buka hari kerja 09.00–20.00, Sab/Min/libur 09.00–17.00; pemakaian sekali maksimal 3 jam (hari kerja) / 2 jam (Sab/Min/libur). Untuk SMP ke atas. Tunjukkan kartu perpustakaan di loket dan ambil papan nomor kursi; setelah selesai kembalikan papan nomor; jika ada kursi kosong boleh lanjut. Yang memakai laptop gunakan 'kursi laptop' di sisi jendela (ada stopkontak, 10 kursi). Minuman hanya yang bertutup; makanan dilarang.</sub>
+<sub>Panduan ruang belajar perpustakaan kota Aoba: buka hari kerja 09.00–20.00, Sab/Min/libur 09.00–17.00; pemakaian sekali maksimal 3 jam (hari kerja) / 2 jam (Sab/Min/libur). Untuk SMP ke atas. Tunjukkan kartu perpustakaan di loket dan ambil papan nomor kursi; setelah selesai kembalikan papan nomor; jika ada kursi kosong boleh lanjut. Yang memakai laptop gunakan 'kursi laptop' di sisi jendela (ada stopkontak, 10 kursi). Minuman hanya yang bertutup; makanan dilarang. Ada total 40 kursi; karena terbatas, di hari ramai mungkin harus menunggu. Saat meninggalkan kursi, bawa nomor kursi; menaruh barang saja untuk menandai kursi dilarang. Saat masa ujian, jam buka bisa diperpanjang; rencananya diumumkan di website perpustakaan. Mengobrol dan menelepon mengganggu orang lain, jadi hindari. Pada hari libur perpustakaan, ruang belajar juga tak bisa dipakai. Pengguna komputer wajib memakai earphone. Kursi tak bisa dipesan; nomor diberikan sesuai urutan datang. Sore hari kerja ramai oleh pelajar. Lampu meja bawaan tak boleh dipakai.</sub>
 
 **59. 高校生のケイさんは、土曜日に学習室でパソコンを使って勉強したい。正しいものはどれか。**
 
@@ -3742,10 +3885,10 @@
 > これは、市のスポーツセンターから届いたメールである。  
 >   
 > テニス教室に申し込んだ皆様  
-> ご応募ありがとうございました。定員を超えるお申し込みがあったため、抽選を行いました。当選された方には、このメールに続いて「受講決定のお知らせ」をお送りします。受講料は、教室が始まる一週間前までに、センターの窓口でお支払いください。期限までにお支払いがない場合は、受講を取り消し、次の方に順番をお譲りします。  
+> ご応募ありがとうございました。定員を超えるお申し込みがあったため、抽選を行いました。当選された方には、このメールに続いて「受講決定のお知らせ」をお送りします。受講料は、教室が始まる一週間前までに、センターの窓口でお支払いください。期限までにお支払いがない場合は、受講を取り消し、次の方に順番をお譲りします。お忙しいところ申し訳ありませんが、どうぞよろしくお願いいたします。  
 > みどり市スポーツセンター
 
-<sub>Kepada pendaftar kelas tenis: terima kasih. Karena pendaftar melebihi kuota, dilakukan undian. Yang terpilih akan menerima 'pemberitahuan penetapan peserta' setelah email ini. Biaya kursus dibayar di loket pusat paling lambat seminggu sebelum kelas dimulai; jika tidak dibayar sampai tenggat, keikutsertaan dibatalkan dan diberikan ke urutan berikutnya. — Pusat olahraga kota Midori</sub>
+<sub>Kepada pendaftar kelas tenis: terima kasih. Karena pendaftar melebihi kuota, dilakukan undian. Yang terpilih akan menerima 'pemberitahuan penetapan peserta' setelah email ini. Biaya kursus dibayar di loket pusat paling lambat seminggu sebelum kelas dimulai; jika tidak dibayar sampai tenggat, keikutsertaan dibatalkan dan diberikan ke urutan berikutnya. Maaf mengganggu kesibukan Anda, mohon kerja samanya. — Pusat olahraga kota Midori</sub>
 
 **48. このメールの内容と合っているものはどれか。**
 
@@ -3762,9 +3905,9 @@
   - D. 受講料は銀行で払う — Salah. Di loket pusat.
 
 > **Teks pendek (内容理解・短文)**  
-> 日本の家では、玄関で靴を脱ぐ。外国から来た友人は最初、「なぜわざわざ脱ぐのか」と不思議がっていた。しかし、しばらく日本で暮らすうちに、「家の中がきれいに保てるし、家に帰ってきたという気持ちになれる」と言うようになった。習慣にはそれぞれ理由がある。初めは不便に感じることでも、その意味がわかると、受け入れやすくなるのではないだろうか。
+> 日本の家では、玄関で靴を脱ぐ。外国から来た友人は最初、「なぜわざわざ脱ぐのか」と不思議がっていた。しかし、しばらく日本で暮らすうちに、「家の中がきれいに保てるし、家に帰ってきたという気持ちになれる」と言うようになった。習慣にはそれぞれ理由がある。最初は、家の中でも靴をはいていたほうが楽だと言っていた友人も、日本の家に何度か来るうちに、靴を脱ぐと気持ちがいいと言うようになった。初めは不便に感じることでも、その意味がわかると、受け入れやすくなるのではないだろうか。
 
-<sub>Di rumah Jepang sepatu dilepas di pintu masuk. Teman dari luar negeri awalnya heran 'kenapa repot-repot dilepas?', tetapi setelah tinggal di Jepang beberapa lama ia mulai berkata 'rumah tetap bersih, dan terasa benar-benar sudah pulang'. Setiap kebiasaan punya alasan; yang awalnya terasa merepotkan pun, bukankah lebih mudah diterima setelah dipahami maknanya?</sub>
+<sub>Di rumah Jepang sepatu dilepas di pintu masuk. Teman dari luar negeri awalnya heran 'kenapa repot-repot dilepas?', tetapi setelah tinggal di Jepang beberapa lama ia mulai berkata 'rumah tetap bersih, dan terasa benar-benar sudah pulang'. Setiap kebiasaan punya alasan; Teman saya yang awalnya bilang lebih nyaman memakai sepatu di dalam rumah, setelah beberapa kali datang ke rumah Jepang mulai berkata melepas sepatu itu menyenangkan. yang awalnya terasa merepotkan pun, bukankah lebih mudah diterima setelah dipahami maknanya?</sub>
 
 **49. 筆者が言いたいことは何か。**
 
@@ -3782,10 +3925,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > マンションの皆様へ（ごみ置き場について）  
-> 最近、ごみの収集日ではない日に、ごみを出す人がいます。そのため、カラスがごみ袋を破り、ごみ置き場の周りが汚れています。ごみは、収集日の朝八時までに出してください。前の日の夜に出すことはやめてください。夜勤などで朝出すことが難しい方は、管理人室にご相談ください。ふた付きのボックスを用意しています。  
+> 最近、ごみの収集日ではない日に、ごみを出す人がいます。そのため、カラスがごみ袋を破り、ごみ置き場の周りが汚れています。ごみは、収集日の朝八時までに出してください。前の日の夜に出すことはやめてください。夜勤などで朝出すことが難しい方は、管理人室にご相談ください。ふた付きのボックスを用意しています。ご迷惑をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、管理人室までお問い合わせください。  
 > 管理人
 
-<sub>Untuk penghuni (tempat sampah): belakangan ada yang membuang sampah di luar hari angkut, sehingga gagak merobek kantong dan sekitar tempat sampah kotor. Buang sampah paling lambat jam 8 pagi di hari angkut; jangan membuang malam sebelumnya. Yang sulit membuang pagi karena kerja malam dan sebagainya, konsultasikan ke ruang pengelola; tersedia kotak bertutup. — Pengelola</sub>
+<sub>Untuk penghuni (tempat sampah): belakangan ada yang membuang sampah di luar hari angkut, sehingga gagak merobek kantong dan sekitar tempat sampah kotor. Buang sampah paling lambat jam 8 pagi di hari angkut; jangan membuang malam sebelumnya. Yang sulit membuang pagi karena kerja malam dan sebagainya, konsultasikan ke ruang pengelola; tersedia kotak bertutup. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke ruang pengelola. — Pengelola</sub>
 
 **50. 夜勤で、収集日の朝にごみを出せない人は、どうすればいいか。**
 
@@ -3806,10 +3949,10 @@
 > 母が大学生の息子にあてて書いたメモである。  
 >   
 > ゆうと  
-> 今朝、大学から郵便が届いていたので、机の上に置いておきました。奨学金の書類みたいだから、よく読んでね。書類の締め切りは今月の二十日だそうです。必要なら、お父さんの給料の証明書を会社でもらってきてもらうから、早めに言ってね。  
+> 今朝、大学から郵便が届いていたので、机の上に置いておきました。奨学金の書類みたいだから、よく読んでね。書類の締め切りは今月の二十日だそうです。必要なら、お父さんの給料の証明書を会社でもらってきてもらうから、早めに言ってね。夜は戸締まりをして、早めに寝てね。ごはんは、ちゃんと食べてね。何かあったら、すぐに電話してね。体に気をつけてがんばってね。お父さんも心配しているよ。  
 > 母
 
-<sub>Yuto, tadi pagi ada surat dari kampus, ibu taruh di meja. Sepertinya dokumen beasiswa, baca baik-baik ya. Katanya tenggatnya tanggal 20 bulan ini. Kalau perlu surat keterangan gaji ayah, nanti ayah ambilkan dari kantornya, jadi bilang cepat-cepat ya. — Ibu</sub>
+<sub>Yuto, tadi pagi ada surat dari kampus, ibu taruh di meja. Sepertinya dokumen beasiswa, baca baik-baik ya. Katanya tenggatnya tanggal 20 bulan ini. Kalau perlu surat keterangan gaji ayah, nanti ayah ambilkan dari kantornya, jadi bilang cepat-cepat ya. Kunci pintu di malam hari dan tidurlah lebih awal. Makanlah dengan baik. Bila ada apa-apa, segera telepon. Jaga kesehatan dan semangat ya. Ayah juga khawatir. — Ibu</sub>
 
 **51. ゆうとさんがしなければならないことは何か。**
 
@@ -3830,10 +3973,10 @@
 > しかし、最近は①山車を引く人が足りなくなっている。若い人が町を出て、都会で働くようになったからだ。このままではお祭りが続けられなくなると、町の人たちは心配していた。  
 > そこで、町は数年前から、町の外の人にも山車引きに参加してもらうことにした。インターネットで参加者を募集すると、全国から、さらには外国からも人が集まった。参加者は、町の家に泊まって、地元の人と一緒にお祭りの準備をする。  
 > 初めは、伝統を大切にする年配の人の中に、外の人が参加することに反対する声もあった。しかし、参加者が熱心に練習し、お祭りを楽しむ姿を見て、考えが変わった人も多いという。中には、お祭りがきっかけで、この町に引っ越してきた若い夫婦もいる。  
-> ②伝統を守るためには、変わることも必要なのかもしれない。  
+> ②伝統を守るためには、変わることも必要なのかもしれない。祭りの当日は、町の人が朝早くから集まって、みんなで準備をする。大変だが、笑い声が絶えない。  
 > 今年のお祭りには、去年参加した人の多くが、また来てくれることになっている。
 
-<sub>Di kota saya setiap musim gugur ada festival besar yang sudah berlangsung lebih dari 300 tahun; warga menarik kereta hias besar keliling kota. Namun belakangan ① penarik kereta kurang karena anak muda meninggalkan kota untuk bekerja di kota besar; warga khawatir festival tak bisa dilanjutkan. Maka beberapa tahun lalu kota mulai mengajak orang luar ikut menarik kereta: saat peserta dicari lewat internet, orang datang dari seluruh negeri, bahkan luar negeri. Peserta menginap di rumah warga dan menyiapkan festival bersama penduduk. Awalnya di antara warga senior yang menjunjung tradisi ada yang menentang keterlibatan orang luar, tetapi katanya banyak yang berubah pikiran melihat peserta berlatih tekun dan menikmati festival; bahkan ada pasangan muda yang pindah ke kota ini karena festival. ② Untuk menjaga tradisi, mungkin perubahan juga diperlukan. Di festival tahun ini, banyak peserta tahun lalu dijadwalkan datang lagi.</sub>
+<sub>Di kota saya setiap musim gugur ada festival besar yang sudah berlangsung lebih dari 300 tahun; warga menarik kereta hias besar keliling kota. Namun belakangan ① penarik kereta kurang karena anak muda meninggalkan kota untuk bekerja di kota besar; warga khawatir festival tak bisa dilanjutkan. Maka beberapa tahun lalu kota mulai mengajak orang luar ikut menarik kereta: saat peserta dicari lewat internet, orang datang dari seluruh negeri, bahkan luar negeri. Peserta menginap di rumah warga dan menyiapkan festival bersama penduduk. Awalnya di antara warga senior yang menjunjung tradisi ada yang menentang keterlibatan orang luar, tetapi katanya banyak yang berubah pikiran melihat peserta berlatih tekun dan menikmati festival; bahkan ada pasangan muda yang pindah ke kota ini karena festival. ② Untuk menjaga tradisi, mungkin perubahan juga diperlukan. Pada hari festival, warga berkumpul sejak pagi dan menyiapkan bersama. Memang berat, tetapi tawa tak putus. Di festival tahun ini, banyak peserta tahun lalu dijadwalkan datang lagi.</sub>
 
 **52. ＿①山車を引く人が足りなくなっている＿のは、なぜか。**
 
@@ -3883,9 +4026,9 @@
 > その一言が忘れられなかった。自分の作った物で、だれかの毎日を少し明るくできる。それが自分のしたいことなのだと気づいたのだ。  
 > それから三年間、私は会社で働きながら、夜と週末にパン作りの学校に通った。お金をためて、店を開く場所を探した。決して楽な道ではなかった。  
 > 店を開いた今、朝は四時に起きてパンを焼き、夜は次の日の準備をする。会社員のころより、働く時間はむしろ長い。収入も前より少ない。それでも、②毎日疲れを感じない。お客さんの「また来るね」という言葉が、明日も頑張ろうという力になるからだ。  
-> 人によって、何を大切にして働くかは違う。安定を選ぶことも、決して間違いではない。ただ、私にとっては、自分の仕事がだれかの役に立っていると実感できることが、何よりも大切だったのだと思う。
+> 人によって、何を大切にして働くかは違う。安定を選ぶことも、決して間違いではない。忙しくて、家族と食事をする時間もあまりなかった。今は、店のおいしそうなにおいの中で、家族と話す時間が増えた。ただ、私にとっては、自分の仕事がだれかの役に立っていると実感できることが、何よりも大切だったのだと思う。
 
-<sub>Bulan lalu saya berhenti dari perusahaan tempat bekerja sepuluh tahun dan membuka toko roti kecil. Orang di sekitar berkali-kali bertanya ① 'kenapa berhenti dari pekerjaan yang stabil?' Saat menjadi karyawan saya bekerja sampai larut setiap hari; pekerjaannya bermakna, tetapi kadang saya tidak tahu untuk apa bekerja. Saat itu, roti yang saya buat sebagai hobi di hari libur saya bagikan ke tetangga; keesokan harinya seorang nenek sengaja datang berkata 'enak sekali. Sudah lama aku tak menanti sarapan seperti ini.' Kata-kata itu tak terlupakan; saya sadar yang ingin saya lakukan adalah membuat hari seseorang sedikit lebih cerah dengan buatan saya. Tiga tahun berikutnya, sambil bekerja saya sekolah membuat roti di malam dan akhir pekan, menabung, dan mencari tempat — bukan jalan yang mudah. Kini saya bangun jam 4 untuk memanggang roti dan malam menyiapkan hari berikutnya; jam kerja justru lebih panjang dan penghasilan lebih kecil. Meski begitu ② saya tidak merasa lelah setiap hari, karena ucapan pelanggan 'nanti datang lagi ya' menjadi tenaga untuk berusaha besok. Apa yang dihargai dalam bekerja berbeda-beda; memilih stabilitas sama sekali bukan kesalahan. Hanya saja bagi saya, merasakan bahwa pekerjaan saya berguna bagi seseorang adalah yang terpenting.</sub>
+<sub>Bulan lalu saya berhenti dari perusahaan tempat bekerja sepuluh tahun dan membuka toko roti kecil. Orang di sekitar berkali-kali bertanya ① 'kenapa berhenti dari pekerjaan yang stabil?' Saat menjadi karyawan saya bekerja sampai larut setiap hari; pekerjaannya bermakna, tetapi kadang saya tidak tahu untuk apa bekerja. Saat itu, roti yang saya buat sebagai hobi di hari libur saya bagikan ke tetangga; keesokan harinya seorang nenek sengaja datang berkata 'enak sekali. Sudah lama aku tak menanti sarapan seperti ini.' Kata-kata itu tak terlupakan; saya sadar yang ingin saya lakukan adalah membuat hari seseorang sedikit lebih cerah dengan buatan saya. Tiga tahun berikutnya, sambil bekerja saya sekolah membuat roti di malam dan akhir pekan, menabung, dan mencari tempat — bukan jalan yang mudah. Kini saya bangun jam 4 untuk memanggang roti dan malam menyiapkan hari berikutnya; jam kerja justru lebih panjang dan penghasilan lebih kecil. Meski begitu ② saya tidak merasa lelah setiap hari, karena ucapan pelanggan 'nanti datang lagi ya' menjadi tenaga untuk berusaha besok. Apa yang dihargai dalam bekerja berbeda-beda; memilih stabilitas sama sekali bukan kesalahan. Dulu saya sibuk hingga hampir tak punya waktu makan bersama keluarga. Kini di tengah aroma roti dari toko, waktu bicara dengan keluarga bertambah. Hanya saja bagi saya, merasakan bahwa pekerjaan saya berguna bagi seseorang adalah yang terpenting.</sub>
 
 **55. ＿①「どうして安定した仕事を辞めるのか」＿と聞かれたのに対して、筆者が会社を辞めた理由は何か。**
 
@@ -3951,9 +4094,21 @@
 > 土・日・祝 ｜ 1,000円 ｜ 500円 ｜ 無料 ｜ ・営業時間：10:00～21:00（最終受付20:00）。毎月第2火曜日は休みです。  
 > ・タオルは持ってきてください。受付で販売もしています（200円）。  
 > ・65歳以上の方は、平日のみ大人料金から200円引きです。  
-> ・入浴後に館内のレストランで2,000円以上食事をした方は、次回使える半額券をお渡しします。
+> ・入浴後に館内のレストランで2,000円以上食事をした方は、次回使える半額券をお渡しします。  
+> ・日帰り入浴の最終受付は、午後八時ですが、お風呂は午後九時まで入れます。  
+> ・シャンプーとボディーソープは、浴室にあります。ドライヤーは、一回20円です。  
+> ・小さな子どもは、必ず大人と一緒にお風呂に入ってください。  
+> ・ロッカーは、100円玉が必要です（使用後に返却されます）。  
+> ・体の具合が悪いときや、お酒に酔っているときは、入浴できません。  
+> ・レストランは、午前11時から午後8時までです。  
+> ・駐車場は無料です。  
+> ・休憩室は、午前10時から午後8時まで利用できます。飲み物は、館内の自動販売機で買えます。  
+> ・サウナは、別の料金（300円）がかかります。  
+> ・お湯は、毎朝入れかえています。  
+> ・貸し切りの家族風呂は、予約制です（1時間2,000円）。予約は、電話で受け付けています。  
+> ・ご利用のお客様の持ち物は、お客様自身で管理してください。
 
-<sub>Pemandian air panas harian Yamanami: hari kerja dewasa (SMP ke atas) 800 / anak SD 400 / balita gratis; Sab-Min-libur 1.000 / 500 / gratis. Buka 10.00–21.00 (resepsi terakhir 20.00); tutup Selasa minggu ke-2 setiap bulan. Bawa handuk sendiri; dijual 200 yen di resepsionis. Usia 65+ diskon 200 yen dari harga dewasa hanya hari kerja. Yang makan ≥2.000 yen di restoran setelah berendam mendapat kupon setengah harga untuk kunjungan berikutnya.</sub>
+<sub>Pemandian air panas harian Yamanami: hari kerja dewasa (SMP ke atas) 800 / anak SD 400 / balita gratis; Sab-Min-libur 1.000 / 500 / gratis. Buka 10.00–21.00 (resepsi terakhir 20.00); tutup Selasa minggu ke-2 setiap bulan. Bawa handuk sendiri; dijual 200 yen di resepsionis. Usia 65+ diskon 200 yen dari harga dewasa hanya hari kerja. Yang makan ≥2.000 yen di restoran setelah berendam mendapat kupon setengah harga untuk kunjungan berikutnya. Pendaftaran terakhir mandi harian pukul 20.00, tetapi bisa berendam sampai pukul 21.00. Sampo dan sabun mandi tersedia di kamar mandi; pengering rambut 20 yen sekali pakai. Anak kecil harus mandi bersama orang dewasa. Loker memerlukan koin 100 yen (dikembalikan setelah dipakai). Tak bisa mandi saat tak enak badan atau mabuk. Restoran buka pukul 11.00–20.00. Parkir gratis. Ruang istirahat bisa dipakai pukul 10.00–20.00; minuman dibeli di mesin penjual. Sauna dikenai biaya terpisah (300 yen). Air pemandian diganti tiap pagi. Pemandian keluarga privat dengan reservasi (2.000 yen per jam), lewat telepon. Jaga sendiri barang bawaan Anda.</sub>
 
 **59. 70歳の祖母と40歳の母と小学生の私が、水曜日に温泉に行く。祖母と母はタオルを買う。全部でいくらか。**
 
@@ -3991,10 +4146,10 @@
 > これは、大学の図書館から学生に届いたメールである。  
 >   
 > カーン様  
-> お借りになっている本「日本の経済史」の返却期限が、昨日で過ぎております。ほかの方から予約が入っておりますので、三日以内にご返却ください。返却が遅れている間は、新しい本を借りることができません。なお、すでに返却された場合は、このメールは気になさらないでください。  
+> お借りになっている本「日本の経済史」の返却期限が、昨日で過ぎております。ほかの方から予約が入っておりますので、三日以内にご返却ください。返却が遅れている間は、新しい本を借りることができません。なお、すでに返却された場合は、このメールは気になさらないでください。お忙しいところ申し訳ありませんが、どうぞよろしくお願いいたします。ご不明な点がございましたら、お気軽にご連絡ください。  
 > 中央図書館　カウンター
 
-<sub>Kepada Khan: batas pengembalian buku 'Sejarah Ekonomi Jepang' yang Anda pinjam sudah lewat kemarin. Ada orang lain yang memesan, jadi mohon kembalikan dalam tiga hari. Selama pengembalian terlambat, Anda tidak bisa meminjam buku baru. Jika sudah dikembalikan, abaikan email ini. — Loket perpustakaan pusat</sub>
+<sub>Kepada Khan: batas pengembalian buku 'Sejarah Ekonomi Jepang' yang Anda pinjam sudah lewat kemarin. Ada orang lain yang memesan, jadi mohon kembalikan dalam tiga hari. Selama pengembalian terlambat, Anda tidak bisa meminjam buku baru. Jika sudah dikembalikan, abaikan email ini. Maaf mengganggu kesibukan Anda, mohon kerja samanya. Bila ada yang kurang jelas, hubungi kami dengan leluasa. — Loket perpustakaan pusat</sub>
 
 **48. このメールを読んで、カーンさんがしなければならないことは何か。**
 
@@ -4011,9 +4166,9 @@
   - D. 三日以内に本を返す — BENAR. Benar.
 
 > **Teks pendek (内容理解・短文)**  
-> 子どものころ、私は算数が苦手だった。計算を間違えるたびに、自分は頭が悪いのだと思っていた。ところが、ある先生が「間違えた問題こそ、一番の先生だよ」と教えてくれた。それから、間違えた問題をノートに書いて、なぜ間違えたのかを考えるようにした。すると、同じ間違いをしなくなった。間違いを恐れるより、間違いから学ぶほうが、ずっと大切なのだと思う。
+> 子どものころ、私は算数が苦手だった。計算を間違えるたびに、自分は頭が悪いのだと思っていた。ところが、ある先生が「間違えた問題こそ、一番の先生だよ」と教えてくれた。それから、間違えた問題をノートに書いて、なぜ間違えたのかを考えるようにした。すると、同じ間違いをしなくなった。先生は、間違えた問題を一緒に見て、「どこで考え方が変わったのかな」と聞いてくれた。そう言われると、間違いは恥ずかしいものではなく、考えるきっかけだと思えるようになった。間違いを恐れるより、間違いから学ぶほうが、ずっと大切なのだと思う。
 
-<sub>Waktu kecil saya lemah di matematika; setiap salah hitung saya merasa bodoh. Tetapi seorang guru berkata 'soal yang salah justru guru terbaik.' Sejak itu saya menulis soal yang salah di buku catatan dan memikirkan kenapa salah; hasilnya saya tidak mengulang kesalahan yang sama. Menurut saya belajar dari kesalahan jauh lebih penting daripada takut salah.</sub>
+<sub>Waktu kecil saya lemah di matematika; setiap salah hitung saya merasa bodoh. Tetapi seorang guru berkata 'soal yang salah justru guru terbaik.' Sejak itu saya menulis soal yang salah di buku catatan dan memikirkan kenapa salah; hasilnya saya tidak mengulang kesalahan yang sama. Guru melihat soal yang salah bersama saya dan bertanya, 'Di mana cara berpikirnya berubah ya?' Dengan begitu saya jadi bisa menganggap kesalahan bukan hal memalukan, melainkan kesempatan berpikir. Menurut saya belajar dari kesalahan jauh lebih penting daripada takut salah.</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -4031,9 +4186,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > みなと駅　自由通路の工事について  
-> 来月一日から三か月間、駅の北口と南口をつなぐ自由通路の工事を行います。工事中は、通路の半分が通れなくなりますので、混雑する朝の時間は、時間に余裕を持ってお越しください。自転車を押して通ることはできません。自転車の方は、駅の西側の地下道をご利用ください。
+> 来月一日から三か月間、駅の北口と南口をつなぐ自由通路の工事を行います。工事中は、通路の半分が通れなくなりますので、混雑する朝の時間は、時間に余裕を持ってお越しください。自転車を押して通ることはできません。自転車の方は、駅の西側の地下道をご利用ください。  
+> ご不便をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、駅事務室までお問い合わせください。工事の予定は、駅の掲示板やホームページでもお知らせします。ご利用のみなさんのご理解に、心から感謝します。
 
-<sub>Pekerjaan jalur penghubung Stasiun Minato: mulai tanggal 1 bulan depan selama tiga bulan ada pekerjaan di jalur penghubung pintu utara dan selatan. Selama pekerjaan setengah jalur tidak bisa dilewati, jadi di jam pagi yang ramai datanglah dengan waktu longgar. Tidak boleh melintas sambil menuntun sepeda; pengguna sepeda gunakan terowongan di sisi barat stasiun.</sub>
+<sub>Pekerjaan jalur penghubung Stasiun Minato: mulai tanggal 1 bulan depan selama tiga bulan ada pekerjaan di jalur penghubung pintu utara dan selatan. Selama pekerjaan setengah jalur tidak bisa dilewati, jadi di jam pagi yang ramai datanglah dengan waktu longgar. Tidak boleh melintas sambil menuntun sepeda; pengguna sepeda gunakan terowongan di sisi barat stasiun. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke kantor stasiun. Rencana pekerjaan juga diumumkan di papan stasiun dan website. Kami berterima kasih dari hati atas pengertian para pengguna.</sub>
 
 **50. 工事中、自転車で駅の北口から南口へ行きたい人は、どうすればいいか。**
 
@@ -4054,10 +4210,10 @@
 > 上司が部下の机に置いたメモである。  
 >   
 > ナムさん  
-> 明日の出張、私は急な会議が入ったので、行けなくなりました。お客様との打ち合わせは、ナムさん一人でお願いします。資料は私のパソコンの共有フォルダに入れておきました。打ち合わせが終わったら、内容を簡単にまとめて、メールで送ってください。何かあったら、携帯に電話をください。  
+> 明日の出張、私は急な会議が入ったので、行けなくなりました。お客様との打ち合わせは、ナムさん一人でお願いします。資料は私のパソコンの共有フォルダに入れておきました。打ち合わせが終わったら、内容を簡単にまとめて、メールで送ってください。何かあったら、携帯に電話をください。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。できれば、早めに確認してください。  
 > 部長　西田
 
-<sub>Nam, dinas besok saya tidak bisa ikut karena mendadak ada rapat. Tolong rapat dengan klien Nam sendiri. Materi sudah saya taruh di folder bersama di komputer saya. Setelah rapat selesai, ringkas isinya dan kirim lewat email. Kalau ada apa-apa, telepon ponsel saya. — Manajer Nishida</sub>
+<sub>Nam, dinas besok saya tidak bisa ikut karena mendadak ada rapat. Tolong rapat dengan klien Nam sendiri. Materi sudah saya taruh di folder bersama di komputer saya. Setelah rapat selesai, ringkas isinya dan kirim lewat email. Kalau ada apa-apa, telepon ponsel saya. Maaf mengganggu, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. Bila bisa, mohon dicek lebih awal. — Manajer Nishida</sub>
 
 **51. ナムさんが明日しなければならないことは何か。**
 
@@ -4077,10 +4233,10 @@
 > 最近、私の大学では、授業の資料を紙ではなく、データで配るようになった。学生は、自分のパソコンやタブレットで資料を見ながら授業を受ける。  
 > ①この変化に、私は最初、賛成だった。重い教科書や資料を持ち歩かなくてすむし、紙のむだも減る。資料をなくす心配もない。  
 > しかし、しばらくすると、困ったことが出てきた。画面で資料を見ながら、同じ画面でメモを取ろうとすると、どちらも見にくいのだ。また、授業中にパソコンを開いていると、つい関係のないサイトを見てしまうこともあった。  
-> そこで私は、資料はタブレットで見て、メモは紙のノートに手で書くことにした。手で書くと、内容が頭に残りやすい気がする。②便利な道具も、使い方を工夫しなければ、かえって勉強のじゃまになるのだと思う。  
+> そこで私は、資料はタブレットで見て、メモは紙のノートに手で書くことにした。手で書くと、内容が頭に残りやすい気がする。②便利な道具も、使い方を工夫しなければ、かえって勉強のじゃまになるのだと思う。紙の資料は、書き込みができたり、全体を見渡しやすかったりするという良さがある。一方、データなら、重い荷物を持ち歩かなくても、必要なときに検索して探せる。  
 > 友人にこの方法を話すと、「私もやってみる」と言って、次の授業からノートを持ってくるようになった。道具の数を減らすより、それぞれの道具をどう使うかを考えることが大切なのだろう。
 
-<sub>Belakangan di kampus saya materi kuliah dibagikan dalam bentuk data, bukan kertas; mahasiswa mengikuti kuliah sambil melihat materi di laptop atau tablet. ① Awalnya saya mendukung perubahan ini: tidak perlu membawa buku dan materi yang berat, pemborosan kertas berkurang, dan tidak khawatir materi hilang. Namun lama-lama muncul masalah: melihat materi sambil mencatat di layar yang sama membuat keduanya sulit dilihat; membuka laptop saat kuliah juga kadang membuat saya membuka situs yang tidak berkaitan. Maka saya memutuskan melihat materi di tablet dan menulis catatan dengan tangan di buku. Rasanya menulis tangan membuat isi lebih mudah tertinggal di kepala. ② Alat yang praktis pun, jika cara pakainya tidak dipikirkan, justru bisa mengganggu belajar. Saat saya ceritakan cara ini ke teman, ia berkata 'aku juga mau coba' dan sejak kuliah berikutnya membawa buku catatan. Yang penting mungkin bukan mengurangi alat, tetapi memikirkan bagaimana memakai masing-masing alat.</sub>
+<sub>Belakangan di kampus saya materi kuliah dibagikan dalam bentuk data, bukan kertas; mahasiswa mengikuti kuliah sambil melihat materi di laptop atau tablet. ① Awalnya saya mendukung perubahan ini: tidak perlu membawa buku dan materi yang berat, pemborosan kertas berkurang, dan tidak khawatir materi hilang. Namun lama-lama muncul masalah: melihat materi sambil mencatat di layar yang sama membuat keduanya sulit dilihat; membuka laptop saat kuliah juga kadang membuat saya membuka situs yang tidak berkaitan. Maka saya memutuskan melihat materi di tablet dan menulis catatan dengan tangan di buku. Rasanya menulis tangan membuat isi lebih mudah tertinggal di kepala. ② Alat yang praktis pun, jika cara pakainya tidak dipikirkan, justru bisa mengganggu belajar. Materi kertas punya kelebihan bisa dicoret-coret dan mudah dilihat keseluruhannya. Sebaliknya, dengan data, kita bisa mencari saat perlu tanpa membawa barang berat. Saat saya ceritakan cara ini ke teman, ia berkata 'aku juga mau coba' dan sejak kuliah berikutnya membawa buku catatan. Yang penting mungkin bukan mengurangi alat, tetapi memikirkan bagaimana memakai masing-masing alat.</sub>
 
 **52. ＿①この変化に、私は最初、賛成だった＿とあるが、その理由として合わないものはどれか。**
 
@@ -4130,9 +4286,9 @@
 > 元日の朝は、おせち料理を食べた。一つ一つの料理に、お金が増えるように、子どもが元気に育つように、などの願いがこめられていることを知って、①私は驚いた。私の国のお正月にも特別な料理はあるが、そのような意味を考えて食べたことはなかったからだ。  
 > 午後は、家族と一緒に神社へ初詣に行った。たくさんの人が並んでいて、お参りをするまでに一時間もかかった。寒かったが、待っている間、家族といろいろな話ができて楽しかった。  
 > 国に帰ってから、私は自分の国のお正月の料理について、祖母に聞いてみた。すると、私の国の料理にも、家族の幸せを願う意味がたくさんあることがわかった。②日本のお正月を経験したことで、自分の国の文化を見直すことができたのである。  
-> 今年のお正月、私は国の家族と一緒に、祖母から聞いた料理を作ってみた。料理の意味を説明すると、弟や妹も興味深そうに聞いていた。
+> 今年のお正月、私は国の家族と一緒に、祖母から聞いた料理を作ってみた。日本で迎える初めてのお正月は、国の家族と離れていてさびしかったが、この家庭のおかげで、心があたたかくなった。料理の意味を説明すると、弟や妹も興味深そうに聞いていた。
 
-<sub>Musim dingin tahun kedua kuliah di Jepang, saya pertama kali melewatkan tahun baru di keluarga Jepang; keluarga homestay mengundang saya karena 'tahun baru dilewatkan bersama keluarga'. Malam tahun baru seluruh keluarga makan soba; ibu menjelaskan artinya 'agar hidup sehat, tipis dan panjang'. Menjelang tengah malam terdengar lonceng dari kuil terdekat — lonceng untuk melupakan hal buruk setahun dan menyambut tahun baru. Pagi tahun baru kami makan osechi; ① saya terkejut mengetahui setiap masakan berisi harapan seperti agar uang bertambah atau anak tumbuh sehat, karena di negara saya pun ada masakan khusus tahun baru tetapi saya tak pernah memakannya sambil memikirkan maknanya. Siangnya kami ke kuil Shinto untuk kunjungan pertama; antrean panjang sampai satu jam, dingin, tetapi menyenangkan bisa mengobrol banyak dengan keluarga sambil menunggu. Setelah pulang, saya bertanya kepada nenek tentang masakan tahun baru di negara saya, dan ternyata banyak makna yang mengharapkan kebahagiaan keluarga. ② Dengan mengalami tahun baru Jepang, saya bisa melihat kembali budaya negara sendiri. Tahun baru ini saya mencoba membuat masakan yang diceritakan nenek bersama keluarga di negara saya. Saat saya jelaskan maknanya, adik-adik mendengarkan dengan tertarik.</sub>
+<sub>Musim dingin tahun kedua kuliah di Jepang, saya pertama kali melewatkan tahun baru di keluarga Jepang; keluarga homestay mengundang saya karena 'tahun baru dilewatkan bersama keluarga'. Malam tahun baru seluruh keluarga makan soba; ibu menjelaskan artinya 'agar hidup sehat, tipis dan panjang'. Menjelang tengah malam terdengar lonceng dari kuil terdekat — lonceng untuk melupakan hal buruk setahun dan menyambut tahun baru. Pagi tahun baru kami makan osechi; ① saya terkejut mengetahui setiap masakan berisi harapan seperti agar uang bertambah atau anak tumbuh sehat, karena di negara saya pun ada masakan khusus tahun baru tetapi saya tak pernah memakannya sambil memikirkan maknanya. Siangnya kami ke kuil Shinto untuk kunjungan pertama; antrean panjang sampai satu jam, dingin, tetapi menyenangkan bisa mengobrol banyak dengan keluarga sambil menunggu. Setelah pulang, saya bertanya kepada nenek tentang masakan tahun baru di negara saya, dan ternyata banyak makna yang mengharapkan kebahagiaan keluarga. ② Dengan mengalami tahun baru Jepang, saya bisa melihat kembali budaya negara sendiri. Tahun baru ini saya mencoba membuat masakan yang diceritakan nenek bersama keluarga di negara saya. Tahun baru pertama di Jepang terasa sepi karena jauh dari keluarga di negeri sendiri, tetapi berkat keluarga ini hati saya menjadi hangat. Saat saya jelaskan maknanya, adik-adik mendengarkan dengan tertarik.</sub>
 
 **55. 大晦日の夜のことについて、合っているものはどれか。**
 
@@ -4199,9 +4355,18 @@
 > C ｜ 駅南口すぐ（屋根あり） ｜ 1,800円 ｜ 4,800円 ｜ あり ｜   
 > D ｜ 駅南口から徒歩5分 ｜ 1,000円 ｜ 2,700円 ｜ あり ｜ ・学生は、学生証を見せると料金が半額になります。  
 > ・申し込みは、各駐車場の管理室で受け付けます。身分証明書を持ってきてください。  
-> ・原付バイクは、上の料金に500円（1か月）を加えた金額です。Aは原付バイクを止められません。
+> ・原付バイクは、上の料金に500円（1か月）を加えた金額です。Aは原付バイクを止められません。  
+> ・定期の利用は、申し込みをした日から始まります。月の途中で始める場合も、料金は同じです。  
+> ・定期券は、駐車場の入り口で、機械に見せて使います。なくした場合は、再発行に1,000円かかります。  
+> ・Aのキャンセル待ちは、管理室で受け付けています。空いたときに、電話で連絡します。  
+> ・利用をやめるときは、使用期間が終わる十日前までに、管理室に言ってください。  
+> ・盗難に備えて、自転車には、必ず鍵をかけてください。管理室は、盗難の責任を負いません。  
+> ・申し込みの際、自転車の防犯登録の番号を書いてもらいます。  
+> ・管理室は、午前8時から午後6時まで開いています。日曜日と祝日は休みです。  
+> ・定期を3か月分払ったあとで、使用をやめても、お金は返しません。  
+> ・大きな荷物がついた自転車や、三輪の自転車は、止められません。
 
-<sub>Parkir sepeda langganan kota Hikari: A dekat pintu utara stasiun (beratap) 2.000 / 3 bulan 5.400 yen, penuh (daftar tunggu); B 3 menit jalan dari pintu utara 1.500 / 4.000 yen, ada tempat; C dekat pintu selatan (beratap) 1.800 / 4.800 yen, ada; D 5 menit jalan dari pintu selatan 1.000 / 2.700 yen, ada. Pelajar dengan kartu pelajar setengah harga. Daftar di ruang pengelola masing-masing parkiran, bawa identitas. Motor kecil (gensuki) tambah 500 yen per bulan; A tidak bisa untuk motor.</sub>
+<sub>Parkir sepeda langganan kota Hikari: A dekat pintu utara stasiun (beratap) 2.000 / 3 bulan 5.400 yen, penuh (daftar tunggu); B 3 menit jalan dari pintu utara 1.500 / 4.000 yen, ada tempat; C dekat pintu selatan (beratap) 1.800 / 4.800 yen, ada; D 5 menit jalan dari pintu selatan 1.000 / 2.700 yen, ada. Pelajar dengan kartu pelajar setengah harga. Daftar di ruang pengelola masing-masing parkiran, bawa identitas. Motor kecil (gensuki) tambah 500 yen per bulan; A tidak bisa untuk motor. Pemakaian langganan dimulai sejak hari mendaftar; meski mulai di tengah bulan, tarifnya sama. Kartu langganan diperlihatkan ke mesin di pintu masuk parkir; bila hilang, penerbitan ulang 1.000 yen. Daftar tunggu A diterima di ruang pengelola dan dihubungi lewat telepon saat kosong. Bila berhenti memakai, sampaikan ke ruang pengelola paling lambat 10 hari sebelum masa berakhir. Kunci sepeda selalu; ruang pengelola tak bertanggung jawab atas pencurian. Saat mendaftar, Anda menulis nomor registrasi anti-pencurian sepeda. Ruang pengelola buka pukul 08.00–18.00; libur Minggu dan hari libur. Bila berhenti memakai setelah membayar tiga bulan, uang tak dikembalikan. Sepeda dengan muatan besar atau roda tiga tak bisa diparkir.</sub>
 
 **59. 大学生のミンさんは、屋根のある駐車場に自転車を3か月止めたい。今すぐ使える所で、いくらになるか。**
 
@@ -4239,10 +4404,10 @@
 > これは、日本語学校から学生に届いたメールである。  
 >   
 > 学生の皆さん  
-> 来週の金曜日に、JLPTの模擬試験を行います。試験は午前九時から始まり、午後一時に終わる予定です。当日は、筆記用具と時計を持ってきてください。携帯電話を時計の代わりに使うことはできません。試験の結果は、二週間後に担任から渡します。模擬試験を受けない人は、通常の授業に出てください。  
+> 来週の金曜日に、JLPTの模擬試験を行います。試験は午前九時から始まり、午後一時に終わる予定です。当日は、筆記用具と時計を持ってきてください。携帯電話を時計の代わりに使うことはできません。試験の結果は、二週間後に担任から渡します。模擬試験を受けない人は、通常の授業に出てください。お忙しいところ申し訳ありませんが、どうぞよろしくお願いいたします。ご不明な点は、教務課までお気軽にお問い合わせください。  
 > 教務課
 
-<sub>Untuk siswa: Jumat depan ada ujian simulasi JLPT, mulai jam 9 pagi dan direncanakan selesai jam 1 siang. Bawa alat tulis dan jam. Ponsel tidak boleh dipakai sebagai pengganti jam. Hasil ujian diberikan wali kelas dua minggu kemudian. Yang tidak ikut ujian simulasi, ikuti pelajaran biasa. — Bagian akademik</sub>
+<sub>Untuk siswa: Jumat depan ada ujian simulasi JLPT, mulai jam 9 pagi dan direncanakan selesai jam 1 siang. Bawa alat tulis dan jam. Ponsel tidak boleh dipakai sebagai pengganti jam. Hasil ujian diberikan wali kelas dua minggu kemudian. Yang tidak ikut ujian simulasi, ikuti pelajaran biasa. Maaf mengganggu kesibukan Anda, mohon kerja samanya. Bila ada yang kurang jelas, tanyakan ke bagian pengajaran dengan leluasa. — Bagian akademik</sub>
 
 **48. 模擬試験の日に持っていかなければならない物はどれか。**
 
@@ -4259,9 +4424,9 @@
   - D. 筆記用具と携帯電話 — Salah. Ponsel tidak boleh sebagai jam.
 
 > **Teks pendek (内容理解・短文)**  
-> 最近、仕事の連絡に、メールではなくチャットを使う会社が増えている。チャットは短い文で気軽にやりとりできるので、返事が早く来る。しかし、その手軽さのせいで、夜や休みの日にも連絡が来て、仕事から離れられないと感じる人もいるそうだ。便利な道具を使うときこそ、連絡してもいい時間などのルールを、みんなで決めておくことが大切ではないだろうか。
+> 最近、仕事の連絡に、メールではなくチャットを使う会社が増えている。チャットは短い文で気軽にやりとりできるので、返事が早く来る。しかし、その手軽さのせいで、夜や休みの日にも連絡が来て、仕事から離れられないと感じる人もいるそうだ。チャットは、短い言葉で気軽に送れるので、返事も早くなる。しかし、短いからこそ、文の意味が誤解されることもある。冷たい言い方だと感じる人もいる。便利な道具を使うときこそ、連絡してもいい時間などのルールを、みんなで決めておくことが大切ではないだろうか。
 
-<sub>Belakangan makin banyak perusahaan yang memakai chat, bukan email, untuk komunikasi kerja. Chat bisa saling berbalas santai dengan kalimat pendek sehingga balasan cepat. Tetapi karena mudahnya, katanya ada yang merasa tidak bisa lepas dari pekerjaan karena pesan datang malam atau di hari libur. Justru saat memakai alat praktis, bukankah penting bersama-sama menetapkan aturan seperti jam boleh menghubungi?</sub>
+<sub>Belakangan makin banyak perusahaan yang memakai chat, bukan email, untuk komunikasi kerja. Chat bisa saling berbalas santai dengan kalimat pendek sehingga balasan cepat. Tetapi karena mudahnya, katanya ada yang merasa tidak bisa lepas dari pekerjaan karena pesan datang malam atau di hari libur. Chat bisa dikirim ringan dengan kata singkat sehingga balasan pun cepat. Namun justru karena singkat, arti kalimat kadang salah dipahami, dan ada yang merasa nadanya dingin. Justru saat memakai alat praktis, bukankah penting bersama-sama menetapkan aturan seperti jam boleh menghubungi?</sub>
 
 **49. 筆者の考えに合うものはどれか。**
 
@@ -4279,9 +4444,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 市民病院の面会について  
-> 入院している方への面会時間は、平日は午後二時から八時まで、土日祝日は午前十時から午後八時までです。面会は一回三十分以内、一度に三人までとさせていただきます。小学生以下のお子様の面会は、ご遠慮ください。面会の前に、一階の受付で名前を書いて、面会カードを受け取ってください。
+> 入院している方への面会時間は、平日は午後二時から八時まで、土日祝日は午前十時から午後八時までです。面会は一回三十分以内、一度に三人までとさせていただきます。小学生以下のお子様の面会は、ご遠慮ください。面会の前に、一階の受付で名前を書いて、面会カードを受け取ってください。  
+> ご迷惑をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、病院の受付までお問い合わせください。入院している方の健康のために、ご協力をお願いいたします。
 
-<sub>Kunjungan pasien RS warga: jam besuk hari kerja 14.00–20.00, Sab/Min/libur 10.00–20.00. Sekali besuk maksimal 30 menit dan maksimal tiga orang sekaligus. Anak SD ke bawah mohon tidak ikut membesuk. Sebelum membesuk tulis nama di resepsionis lantai 1 dan ambil kartu kunjungan.</sub>
+<sub>Kunjungan pasien RS warga: jam besuk hari kerja 14.00–20.00, Sab/Min/libur 10.00–20.00. Sekali besuk maksimal 30 menit dan maksimal tiga orang sekaligus. Anak SD ke bawah mohon tidak ikut membesuk. Sebelum membesuk tulis nama di resepsionis lantai 1 dan ambil kartu kunjungan. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke resepsionis rumah sakit. Demi kesehatan pasien rawat inap, mohon kerja samanya.</sub>
 
 **50. 日曜日の午前十一時に、母と小学生の弟と三人で面会に行きたい。どうなるか。**
 
@@ -4302,10 +4468,10 @@
 > 研究室の先輩が、後輩の机に置いたメモである。  
 >   
 > アリさん  
-> 来週の研究発表会の会場の準備をお願いします。発表会は木曜日の午後一時からなので、十二時までに教室にプロジェクターとマイクを用意してください。プロジェクターは事務室で借りられます。いすは五十脚並べてください。私は午前中授業があるので、十二時半ごろに行きます。  
+> 来週の研究発表会の会場の準備をお願いします。発表会は木曜日の午後一時からなので、十二時までに教室にプロジェクターとマイクを用意してください。プロジェクターは事務室で借りられます。いすは五十脚並べてください。私は午前中授業があるので、十二時半ごろに行きます。お忙しいところすみませんが、よろしくお願いします。わからないことがあれば、いつでも聞いてください。  
 > 田中
 
-<sub>Ali, tolong siapkan ruang untuk presentasi penelitian minggu depan. Acaranya Kamis jam 1 siang, jadi siapkan proyektor dan mikrofon di kelas paling lambat jam 12. Proyektor bisa dipinjam di kantor administrasi. Tata 50 kursi. Saya ada kuliah pagi, datang sekitar jam 12.30. — Tanaka</sub>
+<sub>Ali, tolong siapkan ruang untuk presentasi penelitian minggu depan. Acaranya Kamis jam 1 siang, jadi siapkan proyektor dan mikrofon di kelas paling lambat jam 12. Proyektor bisa dipinjam di kantor administrasi. Tata 50 kursi. Saya ada kuliah pagi, datang sekitar jam 12.30. Maaf mengganggu, mohon bantuannya. Bila ada yang tak jelas, tanyakan kapan saja. — Tanaka</sub>
 
 **51. アリさんが木曜日の十二時までにしなければならないことは何か。**
 
@@ -4326,9 +4492,9 @@
 > 出発する前、私は①不安でいっぱいだった。道に迷ったらどうしよう、病気になったらどうしよう、と心配ばかりしていた。そこで、ガイドブックを何冊も読み、行く場所や乗る電車の時間を細かく計画した。  
 > しかし、現地に着いて二日目、乗る予定だったバスが、急に運休になってしまった。計画が崩れて、私はどうしたらいいかわからなくなった。そのとき、バス停にいた地元の女性が、身ぶり手ぶりで別のバスの乗り方を教えてくれた。さらに、自分の行く方向と同じだからと、一緒にバスに乗ってくれた。  
 > その後の旅行では、私は計画どおりに行動するのをやめて、地元の人に話しかけ、すすめられた場所に行くようにした。予定にはなかった小さな村の市場や、地元の人しか知らない食堂など、②ガイドブックには載っていない経験がたくさんできた。  
-> 計画を立てることは大切だ。しかし、思いどおりにいかないときこそ、旅の楽しさが生まれるのかもしれない。
+> 計画を立てることは大切だ。予定どおりにならなかったことも、今では、旅の大切な思い出の一部になっている。しかし、思いどおりにいかないときこそ、旅の楽しさが生まれるのかもしれない。
 
-<sub>Musim panas lalu saya pertama kali bepergian ke luar negeri sendirian, ke negara Asia Tenggara yang bahasanya hampir tak saya pahami. Sebelum berangkat ① saya penuh kecemasan — bagaimana kalau tersesat, kalau sakit — jadi saya membaca banyak buku panduan dan merencanakan detail tempat tujuan dan jadwal kereta. Tetapi hari kedua, bus yang akan saya naiki tiba-tiba tidak beroperasi; rencana berantakan dan saya bingung. Saat itu seorang wanita lokal di halte, dengan bahasa isyarat, mengajari cara naik bus lain, bahkan ikut naik bersama karena searah. Selanjutnya saya berhenti bertindak sesuai rencana, menyapa warga, dan pergi ke tempat yang mereka sarankan; saya mendapat banyak ② pengalaman yang tidak ada di buku panduan — pasar desa kecil yang tidak direncanakan, warung yang hanya diketahui warga. Merencanakan itu penting, tetapi mungkin justru saat tidak berjalan sesuai harapan, keasyikan perjalanan lahir.</sub>
+<sub>Musim panas lalu saya pertama kali bepergian ke luar negeri sendirian, ke negara Asia Tenggara yang bahasanya hampir tak saya pahami. Sebelum berangkat ① saya penuh kecemasan — bagaimana kalau tersesat, kalau sakit — jadi saya membaca banyak buku panduan dan merencanakan detail tempat tujuan dan jadwal kereta. Tetapi hari kedua, bus yang akan saya naiki tiba-tiba tidak beroperasi; rencana berantakan dan saya bingung. Saat itu seorang wanita lokal di halte, dengan bahasa isyarat, mengajari cara naik bus lain, bahkan ikut naik bersama karena searah. Selanjutnya saya berhenti bertindak sesuai rencana, menyapa warga, dan pergi ke tempat yang mereka sarankan; saya mendapat banyak ② pengalaman yang tidak ada di buku panduan — pasar desa kecil yang tidak direncanakan, warung yang hanya diketahui warga. Hal yang tak berjalan sesuai rencana pun kini menjadi bagian kenangan perjalanan yang berharga. Merencanakan itu penting, tetapi mungkin justru saat tidak berjalan sesuai harapan, keasyikan perjalanan lahir.</sub>
 
 **52. ＿①不安でいっぱいだった＿筆者は、出発前に何をしたか。**
 
@@ -4377,9 +4543,9 @@
 > 子どものころ、私は父の仕事にあまり興味がなかった。店には古い時計がたくさん並んでいて、いつもカチカチと音がしていた。父は一日中、小さな部品を見ながら、だまって時計を直していた。①そんな地味な仕事の何がおもしろいのだろうと思っていた。  
 > 高校生のとき、私の大切にしていた腕時計が動かなくなった。祖母が入学祝いにくれた時計だった。新しい時計を買えばいいと思ったが、父は「直してみよう」と言って、三日かけて直してくれた。時計がまた動き出したとき、私は思わず泣いてしまった。時計と一緒に、祖母との思い出も戻ってきたような気がしたのだ。  
 > 父によると、店に時計の修理を頼みに来るお客さんの多くは、高い時計を持っているわけではないそうだ。親からもらった時計、結婚の記念に買った時計など、②その人にとって特別な意味がある時計を持ってくるのだという。「時計を直すのは、その人の大切な時間を直すことなんだ」と父は言った。  
-> 今、私は大学で機械工学を勉強している。卒業したら、父の店で修理の技術を学ぶつもりだ。新しい物を買うことが簡単な時代だからこそ、物に込められた思いを大切にする仕事を続けていきたい。
+> 今、私は大学で機械工学を勉強している。卒業したら、父の店で修理の技術を学ぶつもりだ。父は、「古い時計は、直せば何十年でも使える。物を大切にする気持ちも、同じだよ」と言う。新しい物を買うことが簡単な時代だからこそ、物に込められた思いを大切にする仕事を続けていきたい。
 
-<sub>Ayah saya mengelola toko jam kecil di kota yang sudah berjalan sejak kakek, lebih dari 60 tahun. Waktu kecil saya tidak tertarik pada pekerjaan ayah: toko penuh jam tua yang selalu berdetak, dan ayah seharian diam memperbaiki jam sambil melihat komponen kecil. ① Saya heran apa menariknya pekerjaan sesederhana itu. Saat SMA, jam tangan kesayangan saya — hadiah nenek saat masuk sekolah — berhenti. Saya pikir beli baru saja, tetapi ayah berkata 'ayo coba perbaiki' dan memperbaikinya selama tiga hari. Saat jam itu bergerak lagi, tanpa sadar saya menangis; rasanya kenangan bersama nenek ikut kembali. Kata ayah, kebanyakan pelanggan yang minta perbaikan bukan membawa jam mahal, melainkan ② jam yang punya arti khusus bagi mereka — pemberian orang tua, kenang-kenangan pernikahan. 'Memperbaiki jam berarti memperbaiki waktu berharga orang itu,' kata ayah. Kini saya kuliah teknik mesin; setelah lulus saya akan belajar teknik reparasi di toko ayah. Justru di zaman membeli barang baru itu mudah, saya ingin meneruskan pekerjaan yang menghargai perasaan yang tersimpan dalam barang.</sub>
+<sub>Ayah saya mengelola toko jam kecil di kota yang sudah berjalan sejak kakek, lebih dari 60 tahun. Waktu kecil saya tidak tertarik pada pekerjaan ayah: toko penuh jam tua yang selalu berdetak, dan ayah seharian diam memperbaiki jam sambil melihat komponen kecil. ① Saya heran apa menariknya pekerjaan sesederhana itu. Saat SMA, jam tangan kesayangan saya — hadiah nenek saat masuk sekolah — berhenti. Saya pikir beli baru saja, tetapi ayah berkata 'ayo coba perbaiki' dan memperbaikinya selama tiga hari. Saat jam itu bergerak lagi, tanpa sadar saya menangis; rasanya kenangan bersama nenek ikut kembali. Kata ayah, kebanyakan pelanggan yang minta perbaikan bukan membawa jam mahal, melainkan ② jam yang punya arti khusus bagi mereka — pemberian orang tua, kenang-kenangan pernikahan. 'Memperbaiki jam berarti memperbaiki waktu berharga orang itu,' kata ayah. Kini saya kuliah teknik mesin; setelah lulus saya akan belajar teknik reparasi di toko ayah. Ayah berkata, 'Jam tua kalau diperbaiki bisa dipakai puluhan tahun. Perasaan menghargai barang juga sama.' Justru di zaman membeli barang baru itu mudah, saya ingin meneruskan pekerjaan yang menghargai perasaan yang tersimpan dalam barang.</sub>
 
 **55. ＿①そんな地味な仕事の何がおもしろいのだろう＿と思っていたのは、いつか。**
 
@@ -4447,9 +4613,18 @@
 > 燃えないごみ ｜ なべ、かさ、電球 ｜ 第2金 ｜ ・ごみは、収集日の朝8時までに、決められた場所に出してください。  
 > ・ペットボトルは、ラベルとふたを取り、中を洗ってから出してください。  
 > ・電池・スプレー缶は、燃えないごみの日に、別の袋に入れて出してください。  
-> ・市の指定袋を使ってください（スーパー・コンビニで販売）。
+> ・市の指定袋を使ってください（スーパー・コンビニで販売）。  
+> ・紙は、月に一度の資源ごみの日に、ひもでしばって出してください。  
+> ・プラスチックと燃えるごみを、一緒に出さないでください。分けていないごみは、持って行かれません。  
+> ・びんと缶は、中を水で洗ってから出してください。  
+> ・大きなごみ（粗大ごみ）は、電話で予約が必要です。  
+> ・ごみの分け方の説明は、英語、中国語、ベトナム語でも、市役所のホームページに書いてあります。  
+> ・わからないことがあるときは、市役所の環境課に、電話で聞いてください。  
+> ・ごみ収集の日は、地域によって、一部変わることがあります。市のごみカレンダーで、自分の地域の予定を、確認してください。  
+> ・市役所の窓口には、月曜日と木曜日に、通訳の人がいます。  
+> ・間違って出したごみには、シールがはってあります。シールの理由を読んで、出し直してください。
 
-<sub>Cara memilah sampah rumah tangga kota Asahi (sebagian): sampah bakar (sisa makanan, kertas, kain) setiap Sen & Kam; plastik (wadah makanan, label & tutup botol PET) setiap Rab; botol kaca/kaleng/botol PET (badan botol) Jumat minggu ke-1 & ke-3; sampah tak bakar (panci, payung, bohlam) Jumat minggu ke-2. Buang paling lambat jam 8 pagi di tempat yang ditentukan. Botol PET: lepas label & tutup, cuci dalamnya. Baterai & kaleng semprot dibuang di hari sampah tak bakar dalam kantong terpisah. Pakai kantong resmi kota (dijual di supermarket & minimarket).</sub>
+<sub>Cara memilah sampah rumah tangga kota Asahi (sebagian): sampah bakar (sisa makanan, kertas, kain) setiap Sen & Kam; plastik (wadah makanan, label & tutup botol PET) setiap Rab; botol kaca/kaleng/botol PET (badan botol) Jumat minggu ke-1 & ke-3; sampah tak bakar (panci, payung, bohlam) Jumat minggu ke-2. Buang paling lambat jam 8 pagi di tempat yang ditentukan. Botol PET: lepas label & tutup, cuci dalamnya. Baterai & kaleng semprot dibuang di hari sampah tak bakar dalam kantong terpisah. Pakai kantong resmi kota (dijual di supermarket & minimarket). Kertas dikeluarkan pada hari sampah daur ulang sebulan sekali dengan diikat tali. Jangan mencampur plastik dengan sampah mudah terbakar; sampah yang tak dipilah tak akan diambil. Cuci bagian dalam botol dan kaleng sebelum dikeluarkan. Sampah besar memerlukan reservasi lewat telepon. Penjelasan cara memilah juga ada dalam bahasa Inggris, Mandarin, dan Vietnam di website balai kota. Bila ada yang tak jelas, tanyakan lewat telepon ke bagian lingkungan balai kota. Hari pengangkutan sampah bisa berbeda sebagian menurut wilayah; cek jadwal wilayah Anda di kalender sampah kota. Di loket balai kota ada penerjemah pada hari Senin dan Kamis. Sampah yang keliru dikeluarkan ditempeli stiker; baca alasannya dan keluarkan ulang.</sub>
 
 **59. 使い終わったペットボトルを出したい。正しい出し方はどれか。**
 
@@ -4487,10 +4662,10 @@
 > これは、オンラインショップから客に届いたメールである。  
 >   
 > ロペス様  
-> ご注文いただいたスニーカー（白・25cm）ですが、在庫がなくなってしまいました。大変申し訳ございません。同じ商品の黒でしたら、すぐにお送りできます。また、白は来月中旬に入荷する予定です。黒に変更するか、入荷を待つか、それとも注文を取り消すか、三日以内にご返信ください。ご返信がない場合は、注文を取り消させていただきます。  
+> ご注文いただいたスニーカー（白・25cm）ですが、在庫がなくなってしまいました。大変申し訳ございません。同じ商品の黒でしたら、すぐにお送りできます。また、白は来月中旬に入荷する予定です。黒に変更するか、入荷を待つか、それとも注文を取り消すか、三日以内にご返信ください。ご返信がない場合は、注文を取り消させていただきます。お忙しいところ申し訳ありませんが、ご確認をお願いいたします。  
 > シューズショップ・ラン
 
-<sub>Kepada Lopez: sepatu sneakers (putih, 25 cm) yang Anda pesan stoknya habis. Mohon maaf. Produk yang sama warna hitam bisa segera dikirim; warna putih dijadwalkan masuk pertengahan bulan depan. Mohon balas dalam tiga hari: ganti hitam, menunggu stok, atau batalkan pesanan. Jika tidak ada balasan, pesanan akan dibatalkan. — Shoes Shop Run</sub>
+<sub>Kepada Lopez: sepatu sneakers (putih, 25 cm) yang Anda pesan stoknya habis. Mohon maaf. Produk yang sama warna hitam bisa segera dikirim; warna putih dijadwalkan masuk pertengahan bulan depan. Mohon balas dalam tiga hari: ganti hitam, menunggu stok, atau batalkan pesanan. Jika tidak ada balasan, pesanan akan dibatalkan. Maaf mengganggu kesibukan Anda, mohon dicek. — Shoes Shop Run</sub>
 
 **48. ロペスさんが三日以内に返信しなかったら、どうなるか。**
 
@@ -4507,9 +4682,9 @@
   - D. 注文が取り消される — BENAR. Benar.
 
 > **Teks pendek (内容理解・短文)**  
-> 私は毎年、年の初めに、その年に読みたい本のリストを作る。リストには十冊ほど書くが、全部読めたことは一度もない。途中でほかに読みたい本が見つかって、そちらを先に読んでしまうからだ。最初は、計画どおりにいかない自分が嫌だった。しかし今は、それでもいいと思っている。リストは、自分の興味を知るための地図のようなもので、必ずその通りに進む必要はないのだ。
+> 私は毎年、年の初めに、その年に読みたい本のリストを作る。リストには十冊ほど書くが、全部読めたことは一度もない。途中でほかに読みたい本が見つかって、そちらを先に読んでしまうからだ。最初は、計画どおりにいかない自分が嫌だった。しかし今は、それでもいいと思っている。リストは、ただ読む本を決めるためだけではなく、自分が何に興味を持っているのかを知る手がかりにもなる。読み終えた本に印をつけていくと、一年の終わりに、小さな達成感がある。リストは、自分の興味を知るための地図のようなもので、必ずその通りに進む必要はないのだ。
 
-<sub>Setiap awal tahun saya membuat daftar buku yang ingin dibaca tahun itu, sekitar sepuluh judul, tetapi tak sekali pun semuanya terbaca karena di tengah jalan menemukan buku lain yang ingin dibaca dan membacanya duluan. Awalnya saya kesal pada diri yang tidak sesuai rencana, tetapi kini saya rasa tidak apa-apa: daftar itu seperti peta untuk mengenali minat sendiri, tidak harus diikuti persis.</sub>
+<sub>Setiap awal tahun saya membuat daftar buku yang ingin dibaca tahun itu, sekitar sepuluh judul, tetapi tak sekali pun semuanya terbaca karena di tengah jalan menemukan buku lain yang ingin dibaca dan membacanya duluan. Daftar bukan sekadar menentukan buku yang dibaca, tetapi juga petunjuk untuk mengetahui apa yang kita minati. Bila buku yang selesai dibaca diberi tanda, di akhir tahun ada rasa pencapaian kecil. Awalnya saya kesal pada diri yang tidak sesuai rencana, tetapi kini saya rasa tidak apa-apa: daftar itu seperti peta untuk mengenali minat sendiri, tidak harus diikuti persis.</sub>
 
 **49. 筆者は、読みたい本のリストについて、今どう考えているか。**
 
@@ -4527,9 +4702,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > みどり市　献血のお願い  
-> 来月五日（土）、市役所前の広場に献血バスが来ます。受付時間は午前十時から十二時、午後一時半から四時までです。献血できるのは、十六歳から六十九歳までの健康な方です。ただし、体重が五十キロ未満の方、前の日に十分に眠っていない方は、献血できない場合があります。献血の前には、食事をとってきてください。
+> 来月五日（土）、市役所前の広場に献血バスが来ます。受付時間は午前十時から十二時、午後一時半から四時までです。献血できるのは、十六歳から六十九歳までの健康な方です。ただし、体重が五十キロ未満の方、前の日に十分に眠っていない方は、献血できない場合があります。献血の前には、食事をとってきてください。  
+> ご協力いただいた方には、小さなお礼の品をお渡しします。ご不明な点は、市役所の健康課までお問い合わせください。みなさんのご協力を、心よりお待ちしています。
 
-<sub>Permohonan donor darah kota Midori: tanggal 5 bulan depan (Sabtu) bus donor darah datang ke lapangan depan balai kota. Penerimaan 10.00–12.00 dan 13.30–16.00. Donor: orang sehat usia 16–69 tahun. Namun yang berat badan di bawah 50 kg atau kurang tidur malam sebelumnya mungkin tidak bisa donor. Makanlah sebelum donor.</sub>
+<sub>Permohonan donor darah kota Midori: tanggal 5 bulan depan (Sabtu) bus donor darah datang ke lapangan depan balai kota. Penerimaan 10.00–12.00 dan 13.30–16.00. Donor: orang sehat usia 16–69 tahun. Namun yang berat badan di bawah 50 kg atau kurang tidur malam sebelumnya mungkin tidak bisa donor. Makanlah sebelum donor. Yang membantu akan menerima bingkisan terima kasih kecil. Bila ada yang kurang jelas, tanyakan ke bagian kesehatan balai kota. Kami menantikan kerja sama Anda dari hati.</sub>
 
 **50. 献血について、正しいものはどれか。**
 
@@ -4550,10 +4726,10 @@
 > 父が高校生の娘にあてて書いたメモである。  
 >   
 > はるか  
-> 明日の朝、お父さんは早く家を出るので、車で駅まで送れなくなった。ごめん。バスで行ってください。バスは七時十五分と七時四十分にあります。七時四十分のバスだと学校に遅れるかもしれないから、早いほうに乗ってね。バス代は玄関の机の上に置いておきます。  
+> 明日の朝、お父さんは早く家を出るので、車で駅まで送れなくなった。ごめん。バスで行ってください。バスは七時十五分と七時四十分にあります。七時四十分のバスだと学校に遅れるかもしれないから、早いほうに乗ってね。バス代は玄関の机の上に置いておきます。夜は戸締まりをして、早めに寝てね。ごはんは、ちゃんと食べてね。何かあったら、すぐに電話してね。気をつけて行ってきてね。  
 > 父
 
-<sub>Haruka, besok pagi ayah berangkat lebih awal, jadi tidak bisa mengantar ke stasiun dengan mobil. Maaf. Naik bus ya. Bus ada jam 7.15 dan 7.40; yang 7.40 mungkin membuatmu terlambat ke sekolah, jadi naik yang lebih awal. Ongkos bus ayah taruh di meja dekat pintu masuk. — Ayah</sub>
+<sub>Haruka, besok pagi ayah berangkat lebih awal, jadi tidak bisa mengantar ke stasiun dengan mobil. Maaf. Naik bus ya. Bus ada jam 7.15 dan 7.40; yang 7.40 mungkin membuatmu terlambat ke sekolah, jadi naik yang lebih awal. Ongkos bus ayah taruh di meja dekat pintu masuk. Kunci pintu di malam hari dan tidurlah lebih awal. Makanlah dengan baik. Bila ada apa-apa, segera telepon. Hati-hati di jalan ya. — Ayah</sub>
 
 **51. はるかさんは、明日の朝どうするか。**
 
@@ -4573,10 +4749,10 @@
 > 私の会社では、二年前から、社員がペットの犬を会社に連れてきてもいいことになった。最初は「仕事中に犬がいたら、集中できないのではないか」という声もあった。  
 > しかし、実際に始めてみると、①会社の雰囲気が大きく変わった。犬がいると、自然に笑顔が増え、ふだん話さない人とも犬をきっかけに話すようになった。忙しくて疲れているときも、犬をなでると気持ちが落ち着くという社員も多い。  
 > もちろん、ルールもある。犬を連れてくる人は、事前に申し込みをして、決められた部屋で仕事をする。犬が苦手な人やアレルギーのある人がいるので、ほかの部屋には犬を入れない。また、一日に連れてこられる犬は三匹までだ。  
-> ペットと一緒に働くことには、よい点もあれば、気をつけなければならない点もある。②みんなが気持ちよく働けるように、お互いを思いやることが大切なのだと思う。  
+> ペットと一緒に働くことには、よい点もあれば、気をつけなければならない点もある。②みんなが気持ちよく働けるように、お互いを思いやることが大切なのだと思う。犬を連れてくる日は、事前に会社に連絡をして、ほかの社員の許可も取っている。犬が苦手な人のために、犬が入れない部屋も作った。  
 > 最近は、近くの会社の人が見学に来ることもある。ルールをきちんと決めておけば、ほかの職場でも同じようなことができるかもしれない。
 
-<sub>Sejak dua tahun lalu kantor saya membolehkan karyawan membawa anjing peliharaan. Awalnya ada suara 'kalau ada anjing saat bekerja, tidak bisa konsentrasi'. Tetapi setelah dijalankan ① suasana kantor berubah besar: dengan adanya anjing, senyum bertambah dan orang yang jarang bicara mulai mengobrol berkat anjing; banyak juga yang bilang mengelus anjing menenangkan saat sibuk dan lelah. Tentu ada aturan: yang membawa anjing mendaftar dulu dan bekerja di ruang yang ditentukan; karena ada yang takut anjing atau alergi, anjing tidak boleh masuk ruang lain; dan sehari maksimal tiga anjing. Bekerja bersama hewan peliharaan ada sisi baiknya dan ada hal yang perlu diperhatikan. ② Saya rasa penting saling memikirkan perasaan agar semua bisa bekerja dengan nyaman. Belakangan orang dari perusahaan sekitar kadang datang melihat. Jika aturannya ditetapkan dengan baik, mungkin tempat kerja lain pun bisa melakukan hal serupa.</sub>
+<sub>Sejak dua tahun lalu kantor saya membolehkan karyawan membawa anjing peliharaan. Awalnya ada suara 'kalau ada anjing saat bekerja, tidak bisa konsentrasi'. Tetapi setelah dijalankan ① suasana kantor berubah besar: dengan adanya anjing, senyum bertambah dan orang yang jarang bicara mulai mengobrol berkat anjing; banyak juga yang bilang mengelus anjing menenangkan saat sibuk dan lelah. Tentu ada aturan: yang membawa anjing mendaftar dulu dan bekerja di ruang yang ditentukan; karena ada yang takut anjing atau alergi, anjing tidak boleh masuk ruang lain; dan sehari maksimal tiga anjing. Bekerja bersama hewan peliharaan ada sisi baiknya dan ada hal yang perlu diperhatikan. ② Saya rasa penting saling memikirkan perasaan agar semua bisa bekerja dengan nyaman. Pada hari membawa anjing, karyawan memberi tahu perusahaan lebih dulu dan juga meminta izin karyawan lain. Untuk yang tak suka anjing, dibuat juga ruangan yang tak bisa dimasuki anjing. Belakangan orang dari perusahaan sekitar kadang datang melihat. Jika aturannya ditetapkan dengan baik, mungkin tempat kerja lain pun bisa melakukan hal serupa.</sub>
 
 **52. ＿①会社の雰囲気が大きく変わった＿とあるが、どう変わったか。**
 
@@ -4625,9 +4801,9 @@
 > ①その理由の一つは、間違いを恐れる気持ちだと思う。日本の学校では、正しい答えを出すことが大切にされてきた。だから、生徒たちは、完璧な英語でなければ話してはいけないと思ってしまうのだ。  
 > そこで、私は三年前から、授業の最初の十分間、「間違えてもいいタイム」を作った。この時間は、どんなに文法が間違っていても、決して直さない。大切なのは、伝えようとすることだからだ。生徒たちは最初、なかなか話さなかった。しかし、私自身がわざと間違えた英語で楽しそうに話すと、少しずつ生徒も話し始めた。  
 > 一年がたつと、教室の様子は大きく変わった。生徒たちは、言いたいことがあると、身ぶりや知っている単語を使って、なんとか伝えようとするようになった。驚いたことに、その年のテストの点数も、前の年より上がった。話そうとする気持ちが、勉強への意欲にもつながったのだろう。  
-> ②言葉は、人とつながるための道具である。正しく使うことも大切だが、まず使ってみなければ、上手になることはない。生徒たちには、間違いを恐れず、言葉で人とつながる楽しさを知ってほしいと思う。
+> ②言葉は、人とつながるための道具である。正しく使うことも大切だが、まず使ってみなければ、上手になることはない。生徒の間違いを笑わない教室で、安心して英語を話してほしい。生徒たちには、間違いを恐れず、言葉で人とつながる楽しさを知ってほしいと思う。
 
-<sub>Saya mengajar bahasa Inggris di SMP. Lima belas tahun menjadi guru, ada yang selalu saya pikirkan: banyak siswa tidak percaya diri berbicara bahasa Inggris — nilai ujian bagus, tetapi diam saat diajak bicara guru asing. ① Salah satu sebabnya menurut saya rasa takut salah: di sekolah Jepang menjawab dengan benar sangat dihargai, sehingga siswa mengira tidak boleh bicara jika bahasanya belum sempurna. Maka sejak tiga tahun lalu saya membuat 'waktu boleh salah' di sepuluh menit awal pelajaran: sesalah apa pun tata bahasanya tidak pernah dikoreksi, karena yang penting niat menyampaikan. Awalnya siswa sulit bicara, tetapi ketika saya sendiri berbicara gembira dengan bahasa Inggris yang sengaja salah, sedikit demi sedikit mereka mulai bicara. Setahun kemudian kelas berubah besar: jika ingin menyampaikan sesuatu, siswa berusaha dengan isyarat dan kata yang mereka tahu. Mengejutkan, nilai ujian tahun itu juga naik dibanding tahun sebelumnya; mungkin keinginan bicara terhubung dengan semangat belajar. ② Bahasa adalah alat untuk terhubung dengan orang lain. Memakainya dengan benar memang penting, tetapi tanpa mencoba memakainya kita tak akan mahir. Saya ingin siswa mengenal serunya terhubung dengan orang lewat bahasa tanpa takut salah.</sub>
+<sub>Saya mengajar bahasa Inggris di SMP. Lima belas tahun menjadi guru, ada yang selalu saya pikirkan: banyak siswa tidak percaya diri berbicara bahasa Inggris — nilai ujian bagus, tetapi diam saat diajak bicara guru asing. ① Salah satu sebabnya menurut saya rasa takut salah: di sekolah Jepang menjawab dengan benar sangat dihargai, sehingga siswa mengira tidak boleh bicara jika bahasanya belum sempurna. Maka sejak tiga tahun lalu saya membuat 'waktu boleh salah' di sepuluh menit awal pelajaran: sesalah apa pun tata bahasanya tidak pernah dikoreksi, karena yang penting niat menyampaikan. Awalnya siswa sulit bicara, tetapi ketika saya sendiri berbicara gembira dengan bahasa Inggris yang sengaja salah, sedikit demi sedikit mereka mulai bicara. Setahun kemudian kelas berubah besar: jika ingin menyampaikan sesuatu, siswa berusaha dengan isyarat dan kata yang mereka tahu. Mengejutkan, nilai ujian tahun itu juga naik dibanding tahun sebelumnya; mungkin keinginan bicara terhubung dengan semangat belajar. ② Bahasa adalah alat untuk terhubung dengan orang lain. Memakainya dengan benar memang penting, tetapi tanpa mencoba memakainya kita tak akan mahir. Saya ingin siswa berbicara bahasa Inggris dengan tenang di kelas yang tak menertawakan kesalahan mereka. Saya ingin siswa mengenal serunya terhubung dengan orang lewat bahasa tanpa takut salah.</sub>
 
 **55. ＿①その理由の一つ＿とあるが、筆者は何の理由だと考えているか。**
 
@@ -4695,9 +4871,18 @@
 > 親子ラン（2km） ｜ 10:00 ｜ 小学生とその保護者（2人1組） ｜ 300組 ｜ 1組2,000円 ｜ ・申し込みは8月1日から9月15日まで、大会ホームページで受け付けます（先着順）。  
 > ・ひかり市に住んでいる人は、参加料が500円引きです（親子ランは1組500円引き）。  
 > ・参加者には、記念のTシャツをお送りします。  
-> ・雨でも行います。台風などで中止になった場合、参加料は返しません。
+> ・雨でも行います。台風などで中止になった場合、参加料は返しません。  
+> ・フルマラソンの制限時間は、6時間です。  
+> ・参加者全員に、ゼッケン（番号札）を郵送します。当日、胸につけてください。  
+> ・荷物は、会場の荷物預かり所で預かります（無料）。大切な物は、持ってこないでください。  
+> ・会場には駐車場がありません。電車かバスで来てください。  
+> ・体の具合が悪いときは、無理をしないで、参加をやめてください。  
+> ・大会の写真は、市の広報に使うことがあります。  
+> ・給水所は、5キロごとにあります。  
+> ・スタートの30分前までに、会場に着いてください。  
+> ・フルマラソンのコースは、市内を一周します。
 
-<sub>Maraton warga kota Hikari: full marathon (start 8.30, usia 18+, 3.000 orang, 6.000 yen); 10 km (9.00, SMP ke atas, 2.000 orang, 3.500 yen); 5 km (9.30, kelas 5 SD ke atas, 1.000 orang, 2.000 yen; SMP ke bawah 1.000 yen); lari orang tua-anak 2 km (10.00, anak SD + orang tua berpasangan, 300 pasang, 2.000 yen per pasang). Daftar 1 Agustus–15 September lewat website (siapa cepat). Warga kota Hikari diskon 500 yen (lari orang tua-anak diskon 500 yen per pasang). Peserta dikirimi kaus kenang-kenangan. Tetap diadakan meski hujan; jika batal karena topan dan sebagainya, biaya tidak dikembalikan.</sub>
+<sub>Maraton warga kota Hikari: full marathon (start 8.30, usia 18+, 3.000 orang, 6.000 yen); 10 km (9.00, SMP ke atas, 2.000 orang, 3.500 yen); 5 km (9.30, kelas 5 SD ke atas, 1.000 orang, 2.000 yen; SMP ke bawah 1.000 yen); lari orang tua-anak 2 km (10.00, anak SD + orang tua berpasangan, 300 pasang, 2.000 yen per pasang). Daftar 1 Agustus–15 September lewat website (siapa cepat). Warga kota Hikari diskon 500 yen (lari orang tua-anak diskon 500 yen per pasang). Peserta dikirimi kaus kenang-kenangan. Tetap diadakan meski hujan; jika batal karena topan dan sebagainya, biaya tidak dikembalikan. Batas waktu maraton penuh adalah 6 jam. Nomor dada dikirim lewat pos ke semua peserta; pasang di dada saat lomba. Barang dititipkan di penitipan lokasi (gratis); jangan membawa barang penting. Tak ada parkir di lokasi; datanglah dengan kereta atau bus. Bila kurang sehat, jangan memaksakan diri dan batalkan keikutsertaan. Foto lomba kadang dipakai untuk buletin kota. Pos air ada tiap 5 km. Tiba di lokasi paling lambat 30 menit sebelum start. Rute maraton penuh mengelilingi kota.</sub>
 
 **59. ひかり市に住む中学二年生のゆうきさんが、5kmに出る。参加料はいくらか。**
 
@@ -4735,10 +4920,10 @@
 > これは、町内会の会長から住民に届いたメールである。  
 >   
 > 町内会の皆様  
-> 毎年行っている夏祭りの準備について、お知らせします。今年は、お祭りの前の日に、会場のテント張りや飾りつけを手伝ってくださる方を募集します。作業は午後二時から五時までの予定です。高校生以上の方ならどなたでも参加できます。参加できる方は、今月末までに、町内会の掲示板にある用紙に名前を書いてください。作業のあとには、簡単な食事を用意しています。  
+> 毎年行っている夏祭りの準備について、お知らせします。今年は、お祭りの前の日に、会場のテント張りや飾りつけを手伝ってくださる方を募集します。作業は午後二時から五時までの予定です。高校生以上の方ならどなたでも参加できます。参加できる方は、今月末までに、町内会の掲示板にある用紙に名前を書いてください。作業のあとには、簡単な食事を用意しています。ご不明な点は、お気軽にお問い合わせください。  
 > 町内会長　大川
 
-<sub>Kepada warga: pemberitahuan persiapan festival musim panas tahunan. Tahun ini dicari yang mau membantu memasang tenda dan dekorasi lokasi sehari sebelum festival, jam 14.00–17.00. Siapa pun usia SMA ke atas boleh ikut. Yang bisa ikut, tulis nama di formulir di papan pengumuman rukun warga paling lambat akhir bulan ini. Setelah bekerja disediakan makanan sederhana. — Ketua RW Okawa</sub>
+<sub>Kepada warga: pemberitahuan persiapan festival musim panas tahunan. Tahun ini dicari yang mau membantu memasang tenda dan dekorasi lokasi sehari sebelum festival, jam 14.00–17.00. Siapa pun usia SMA ke atas boleh ikut. Yang bisa ikut, tulis nama di formulir di papan pengumuman rukun warga paling lambat akhir bulan ini. Setelah bekerja disediakan makanan sederhana. Bila ada yang kurang jelas, tanyakan dengan leluasa. — Ketua RW Okawa</sub>
 
 **48. お祭りの準備を手伝いたい人は、どうすればいいか。**
 
@@ -4755,9 +4940,9 @@
   - D. 今月末までに、掲示板の用紙に名前を書く — BENAR. Benar.
 
 > **Teks pendek (内容理解・短文)**  
-> 雨の日が続くと、気分まで暗くなるという人は多い。私も以前はそうだった。しかし、ある友人が「雨の日は、家で本を読んだり、料理に時間をかけたりできる特別な日だよ」と言うのを聞いて、考え方が変わった。天気は自分では変えられない。それなら、その日にしかできない楽しみ方を探したほうがいい。今では、雨の音を聞きながら過ごす休日が、少し楽しみになっている。
+> 雨の日が続くと、気分まで暗くなるという人は多い。私も以前はそうだった。しかし、ある友人が「雨の日は、家で本を読んだり、料理に時間をかけたりできる特別な日だよ」と言うのを聞いて、考え方が変わった。天気は自分では変えられない。それなら、その日にしかできない楽しみ方を探したほうがいい。雨の日は、窓の外をぼんやり眺めたり、温かいお茶を入れたりして、いつもよりゆっくり時間を使う。そうしていると、気分も少しずつ落ち着いてくる。今では、雨の音を聞きながら過ごす休日が、少し楽しみになっている。
 
-<sub>Banyak orang merasa suasana hati ikut muram jika hujan terus-menerus; saya pun dulu begitu. Tetapi mendengar teman berkata 'hari hujan adalah hari istimewa untuk membaca di rumah atau meluangkan waktu memasak', cara pandang saya berubah. Cuaca tidak bisa diubah sendiri; kalau begitu lebih baik mencari cara menikmati yang hanya bisa di hari itu. Kini hari libur sambil mendengar suara hujan sedikit saya nantikan.</sub>
+<sub>Banyak orang merasa suasana hati ikut muram jika hujan terus-menerus; saya pun dulu begitu. Tetapi mendengar teman berkata 'hari hujan adalah hari istimewa untuk membaca di rumah atau meluangkan waktu memasak', cara pandang saya berubah. Cuaca tidak bisa diubah sendiri; kalau begitu lebih baik mencari cara menikmati yang hanya bisa di hari itu. Di hari hujan, saya memandangi luar jendela atau menyeduh teh hangat dan memakai waktu lebih santai dari biasanya. Dengan begitu perasaan perlahan menjadi tenang. Kini hari libur sambil mendengar suara hujan sedikit saya nantikan.</sub>
 
 **49. 筆者の考えが変わったきっかけは何か。**
 
@@ -4775,9 +4960,10 @@
 
 > **Teks pendek (内容理解・短文) — お知らせ**  
 > 図書館の休館日変更のお知らせ  
-> これまで毎週月曜日だった休館日を、来月から毎週火曜日に変更します。月曜日が祝日の場合も、開館します。また、毎月最後の金曜日は、本の整理のため午後五時で閉館します（通常は午後八時まで）。休館日に本を返す場合は、正面入り口の横にある返却ポストをご利用ください。ただし、CDとDVDは返却ポストに入れないでください。
+> これまで毎週月曜日だった休館日を、来月から毎週火曜日に変更します。月曜日が祝日の場合も、開館します。また、毎月最後の金曜日は、本の整理のため午後五時で閉館します（通常は午後八時まで）。休館日に本を返す場合は、正面入り口の横にある返却ポストをご利用ください。ただし、CDとDVDは返却ポストに入れないでください。  
+> ご不便をおかけしますが、ご理解とご協力をお願いします。ご不明な点は、図書館の受付までお問い合わせください。これからも、みなさんに使いやすい図書館を目指します。
 
-<sub>Perubahan hari tutup perpustakaan: hari tutup yang selama ini setiap Senin, mulai bulan depan menjadi setiap Selasa. Jika Senin hari libur nasional, tetap buka. Jumat terakhir setiap bulan tutup jam 17.00 untuk menata buku (biasanya sampai 20.00). Pengembalian di hari tutup lewat kotak di samping pintu depan, tetapi CD dan DVD jangan dimasukkan ke kotak.</sub>
+<sub>Perubahan hari tutup perpustakaan: hari tutup yang selama ini setiap Senin, mulai bulan depan menjadi setiap Selasa. Jika Senin hari libur nasional, tetap buka. Jumat terakhir setiap bulan tutup jam 17.00 untuk menata buku (biasanya sampai 20.00). Pengembalian di hari tutup lewat kotak di samping pintu depan, tetapi CD dan DVD jangan dimasukkan ke kotak. Mohon maaf atas ketidaknyamanan; mohon pengertian dan kerja sama. Bila ada yang kurang jelas, tanyakan ke resepsionis perpustakaan. Kami akan terus berupaya menjadi perpustakaan yang mudah dipakai semua.</sub>
 
 **50. 来月から、この図書館について正しいものはどれか。**
 
@@ -4798,10 +4984,10 @@
 > 先輩が新入社員の机に置いたメモである。  
 >   
 > ソンさん  
-> 来週の月曜日から、ソンさんにも電話の受付をお願いすることになりました。電話を受けたら、会社の名前を言って、相手の名前と用件をメモしてください。担当者が席にいないときは、こちらから折り返し電話すると伝えて、相手の電話番号を聞いてください。わからないことがあったら、遠慮しないで聞いてね。  
+> 来週の月曜日から、ソンさんにも電話の受付をお願いすることになりました。電話を受けたら、会社の名前を言って、相手の名前と用件をメモしてください。担当者が席にいないときは、こちらから折り返し電話すると伝えて、相手の電話番号を聞いてください。わからないことがあったら、遠慮しないで聞いてね。お忙しいところすみませんが、よろしくお願いします。時間があるときに、確認してください。  
 > 鈴木
 
-<sub>Song, mulai Senin depan Song juga diminta menerima telepon. Saat menerima, sebut nama perusahaan, lalu catat nama penelepon dan keperluannya. Jika petugas terkait tidak ada di meja, sampaikan bahwa kami akan menelepon balik dan tanyakan nomor teleponnya. Kalau ada yang tidak jelas, jangan sungkan bertanya ya. — Suzuki</sub>
+<sub>Song, mulai Senin depan Song juga diminta menerima telepon. Saat menerima, sebut nama perusahaan, lalu catat nama penelepon dan keperluannya. Jika petugas terkait tidak ada di meja, sampaikan bahwa kami akan menelepon balik dan tanyakan nomor teleponnya. Kalau ada yang tidak jelas, jangan sungkan bertanya ya. Maaf mengganggu, mohon bantuannya. Mohon dicek saat ada waktu. — Suzuki</sub>
 
 **51. 電話を受けたとき、担当者がいない場合、ソンさんはどうするか。**
 
@@ -4820,10 +5006,10 @@
 > **Teks menengah (内容理解・中文)**  
 > 私の住んでいるマンションでは、去年から「本の交換棚」を始めた。一階のロビーに小さな本棚を置き、住民が読み終わった本を自由に置いたり、持って帰ったりできるようにしたのだ。  
 > 始めたのは、三階に住む七十代の女性だった。①「家にある本を捨てるのはもったいないから」というのが理由だったそうだ。最初は彼女の本が十冊ほど並んでいるだけだったが、少しずつほかの住民も本を置くようになった。今では、小説から子ども向けの絵本、料理の本まで、二百冊以上の本が並んでいる。  
-> 本棚の横には、一冊のノートが置いてある。本を借りた人が感想を書いたり、おすすめの本を紹介したりするノートだ。ノートを読むと、同じマンションに、こんな本が好きな人がいるのかと驚くことも多い。中には、ノートをきっかけに、エレベーターで本の話をするようになった人もいる。  
+> 本棚の横には、一冊のノートが置いてある。本を借りた人が感想を書いたり、おすすめの本を紹介したりするノートだ。ノートを読むと、同じマンションに、こんな本が好きな人がいるのかと驚くことも多い。中には、ノートをきっかけに、エレベーターで本の話をするようになった人もいる。棚の本は、だれが持ってきてもいいし、だれが持って帰ってもいい。小さなメモをはさんで、「この本はおもしろかった」と感想を書く人もいる。  
 > 同じ建物に住んでいても、住民どうしが話す機会は少ない。②小さな本棚が、その距離を少しずつ縮めているのだと思う。
 
-<sub>Di apartemen saya, sejak tahun lalu dimulai 'rak tukar buku': rak kecil di lobi lantai 1 tempat penghuni bebas menaruh buku yang sudah dibaca atau membawanya pulang. Yang memulai adalah wanita usia 70-an di lantai 3, katanya karena ① 'sayang kalau buku di rumah dibuang'. Awalnya hanya sekitar sepuluh bukunya, lalu sedikit demi sedikit penghuni lain ikut menaruh; kini lebih dari 200 buku, dari novel, buku bergambar anak, sampai buku masak. Di samping rak ada buku catatan untuk menulis kesan atau merekomendasikan buku; membacanya sering membuat terkejut, ternyata di apartemen yang sama ada orang yang menyukai buku seperti itu. Ada pula yang mulai mengobrol soal buku di lift berkat catatan itu. Meski tinggal di gedung yang sama, kesempatan penghuni berbicara sedikit. ② Rak kecil itu, menurut saya, sedikit demi sedikit memperpendek jarak itu.</sub>
+<sub>Di apartemen saya, sejak tahun lalu dimulai 'rak tukar buku': rak kecil di lobi lantai 1 tempat penghuni bebas menaruh buku yang sudah dibaca atau membawanya pulang. Yang memulai adalah wanita usia 70-an di lantai 3, katanya karena ① 'sayang kalau buku di rumah dibuang'. Awalnya hanya sekitar sepuluh bukunya, lalu sedikit demi sedikit penghuni lain ikut menaruh; kini lebih dari 200 buku, dari novel, buku bergambar anak, sampai buku masak. Di samping rak ada buku catatan untuk menulis kesan atau merekomendasikan buku; membacanya sering membuat terkejut, ternyata di apartemen yang sama ada orang yang menyukai buku seperti itu. Ada pula yang mulai mengobrol soal buku di lift berkat catatan itu. Buku di rak boleh dibawa siapa pun dan boleh dibawa pulang siapa pun. Ada yang menyelipkan memo kecil berisi kesan, 'buku ini seru'. Meski tinggal di gedung yang sama, kesempatan penghuni berbicara sedikit. ② Rak kecil itu, menurut saya, sedikit demi sedikit memperpendek jarak itu.</sub>
 
 **52. ＿①「家にある本を捨てるのはもったいないから」＿とあるが、これは何の理由か。**
 
@@ -4942,9 +5128,16 @@
 > D ｜ 日曜 10:00～12:00 ｜ 駅前センター（オンライン参加も可） ｜ JLPT N3～N2を目指す人 ｜ ・さくら市に住んでいるか、さくら市で働いている外国人の方が対象です。  
 > ・参加費は無料です。教科書代（1,000円）だけかかります。  
 > ・初めての方は、最初の授業の30分前に来て、レベルチェックを受けてください。  
-> ・小さいお子さんがいる方は、Bクラスの時間だけ、ボランティアがお子さんを見ています（事前に申し込みが必要）。
+> ・小さいお子さんがいる方は、Bクラスの時間だけ、ボランティアがお子さんを見ています（事前に申し込みが必要）。  
+> ・クラスの人数は、一クラス10人ぐらいです。ボランティアの先生が、一人か二人つきます。  
+> ・教室では、日本語だけでなく、ごみの出し方や、病院の行き方など、生活に必要な情報も勉強します。  
+> ・Dのオンライン参加は、パソコンかスマートフォンがあれば、できます。  
+> ・クラスを変えたいときは、先生か事務の人に言ってください。  
+> ・教室は、年間を通して、新しい学習者を受け付けます。途中から参加することもできます。  
+> ・日本語の先生がいない日は、ボランティアの人が、生活の相談に乗ります。  
+> ・毎年12月に、学習者とボランティアが一緒に参加するパーティーがあります。
 
-<sub>Kelas relawan bahasa Jepang Sakura mencari peserta: A Senin 19.00–20.30 di balai warga pusat, untuk yang mulai dari hiragana; B Rabu 10.00–11.30 di pusat depan stasiun, bisa percakapan sederhana; C Sabtu 14.00–15.30 di balai warga pusat, bisa bicara tanpa kesulitan untuk kerja & hidup; D Minggu 10.00–12.00 di pusat depan stasiun (bisa daring), menargetkan JLPT N3–N2. Untuk orang asing yang tinggal atau bekerja di kota Sakura. Gratis, hanya biaya buku 1.000 yen. Pendaftar baru datang 30 menit sebelum kelas pertama untuk tes level. Yang punya anak kecil: hanya di jam kelas B relawan menjaga anak (perlu daftar dulu).</sub>
+<sub>Kelas relawan bahasa Jepang Sakura mencari peserta: A Senin 19.00–20.30 di balai warga pusat, untuk yang mulai dari hiragana; B Rabu 10.00–11.30 di pusat depan stasiun, bisa percakapan sederhana; C Sabtu 14.00–15.30 di balai warga pusat, bisa bicara tanpa kesulitan untuk kerja & hidup; D Minggu 10.00–12.00 di pusat depan stasiun (bisa daring), menargetkan JLPT N3–N2. Untuk orang asing yang tinggal atau bekerja di kota Sakura. Gratis, hanya biaya buku 1.000 yen. Pendaftar baru datang 30 menit sebelum kelas pertama untuk tes level. Yang punya anak kecil: hanya di jam kelas B relawan menjaga anak (perlu daftar dulu). Satu kelas berisi sekitar 10 orang dengan satu atau dua guru relawan. Di kelas dipelajari bukan hanya bahasa Jepang, tetapi juga informasi hidup seperti cara membuang sampah dan ke rumah sakit. Kelas D daring bisa diikuti dengan komputer atau ponsel. Bila ingin pindah kelas, sampaikan ke guru atau petugas. Kelas menerima pelajar baru sepanjang tahun; bisa ikut dari tengah. Pada hari tanpa guru bahasa Jepang, relawan menerima konsultasi hidup. Tiap Desember ada pesta yang diikuti pelajar dan relawan bersama.</sub>
 
 **59. さくら市の会社で働いているマリアさんは、日常会話はできるが、平日は昼も夜も仕事がある。小さい子どもはいない。参加できるクラスはどれか。**
 

@@ -17,6 +17,7 @@ for (const [k, pid, mode, jp, tr] of JSON.parse(fs.readFileSync(addf, "utf8"))) 
   const jpEnd = t.indexOf('",\n', q1);
   const trStart = t.indexOf('"', jpEnd + 3) + 1;
   const trEnd = t.indexOf('"),', trStart);
+  if (jpEnd < 0 || trEnd < 0 || trStart < 1) throw new Error(`format? ${k} ${pid} jpEnd=${jpEnd} trEnd=${trEnd}`);
   let J = t.slice(q1, jpEnd), T = t.slice(trStart, trEnd);
   if (mode === "end") { J += "<br>" + jp; T += " " + tr; }
   else if (mode === "pre") {
