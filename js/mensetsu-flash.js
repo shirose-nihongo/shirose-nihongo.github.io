@@ -3,8 +3,8 @@
  * Depan: pertanyaan wawancara (JP + furigana). Ketuk → belakang: terjemah, contoh jawaban JP + arti, jawabanmu (bila ada), suara.
  * Hadiah: 30 XP + 1 koin tiap kartu "Hafal" (10× XP flashcard biasa = 3 XP), sekali per kartu per hari.
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js";
-import { getX, bayar, qj, ajh, ttsPlay, ttsStop, loadPrep, aktif } from "./mensetsu-prep.js?v=20261119k";
+import * as EN from "./mensetsu-engine.js?v=20261120cv";
+import { getX, bayar, qj, ajh, ttsPlay, ttsStop, loadPrep, aktif } from "./mensetsu-prep.js?v=20261120cv";
 
 export const XP_FLASH = 30, KOIN_FLASH = 2;   // XP flashcard biasa = 3 per kartu benar → ×10
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -34,7 +34,7 @@ export async function renderFlash(p) {
 }
 function tampilPilih() {
   const X = getX(), key = F.key, b = X.BIDANG[key], n = F.sel.size;
-  const grup = EN.CATS.map(c => { const qs = F.bank.soal.filter(q => q.k === c.k); if (!qs.length) return ""; const on = qs.filter(q => F.sel.has(q.i)).length;
+  const grup = EN.catsOf(F.bank).map(c => { const qs = F.bank.soal.filter(q => q.k === c.k); if (!qs.length) return ""; const on = qs.filter(q => F.sel.has(q.i)).length;
     return `<section class="ms-panel" style="margin:8px 0"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><b>${esc(c.jp)} · ${esc(c.id)} <small>(${on}/${qs.length})</small></b><span><button class="ms-chip" onclick="MF.grup('${c.k}',true)">Pilih semua</button> <button class="ms-chip" onclick="MF.grup('${c.k}',false)">Kosongkan</button></span></div>
       ${qs.map(q => `<label class="mf-pick"><input type="checkbox" ${F.sel.has(q.i) ? "checked" : ""} onchange="MF.cek('${q.i}',this.checked)"/> <span class="jp">${qj(q)}</span></label>`).join("")}</section>`; }).join("");
   return `<div class="ms-wrap pp">${crumbs(key, "Flashcard")}<div class="ms-head compact"><div class="jp">単語帳</div><h1>Pilih Flashcard — ${esc(b.id)}</h1><p>Centang pertanyaan yang mau dipelajari. Tiap kartu <b>Hafal</b> = <b>+${XP_FLASH} XP</b> &amp; +${KOIN_FLASH} 🪙.</p></div>
@@ -56,7 +56,7 @@ function tampil() {
       <div class="pp-act"><button class="btn big" onclick="MF.acak()">🔁 Main lagi</button><button class="btn ghost" onclick="route('mensetsu-persiapan/${key}')">✍️ Persiapan jawaban</button></div></section>` + foot;
   }
   const q = qOf(F.deck[F.i]), mine = F.prep && F.prep.answers && F.prep.answers[q.i]; const mineT = mine ? aktif(mine) : "";
-  const cat = EN.CATS.find(c => c.k === q.k);
+  const cat = EN.catsOf(F.bank).find(c => c.k === q.k);
   const depan = `<div class="mf-cat">${esc(cat ? cat.jp + " · " + cat.id : "")}</div><div class="mf-q jp">${qj(q)}</div>
     <div class="mf-hint">Ketuk untuk melihat jawaban</div>`;
   const belakang = `<div class="mf-cat">${esc(cat ? cat.jp : "")}</div><div class="mf-q sm jp">${qj(q)}</div><div class="ms-note">${esc(q.id || "")}</div><hr/>

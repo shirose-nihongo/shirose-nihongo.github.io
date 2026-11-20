@@ -8,9 +8,9 @@
  * Simpan: Firestore siswa/{uid}/mensetsu_persiapan/{bidang} (+ cadangan localStorage)
  * Global: window.MS (dipakai onclick di HTML)
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js";
-import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ } from "./mensetsu-prep.js?v=20261119k";
-import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261119q";
+import * as EN from "./mensetsu-engine.js?v=20261120cv";
+import { initPrep, PREP_ROUTES, qj, ajh, furiHtml, furiToggleHtml, furiQ } from "./mensetsu-prep.js?v=20261120cv";
+import { FLASH_ROUTES } from "./mensetsu-flash.js?v=20261120cv";
 // Akses Mensetsu = akses SSW bidang yang sama (satu sumber aturan: ssw-core.js). Versi ?v= harus sama dengan yang dipakai ssw.js.
 import { initSswCore, sswAllowed, loadKelasAkses } from "./ssw-core.js?v=20261118s";
 
@@ -55,8 +55,10 @@ const BIDANG = {
   logistics: { jp: "物流倉庫", id: "Logistics", emoji: "📦", co: "物流会社・倉庫", c: ["#fb923c", "#c2410c"] },
   recycling: { jp: "資源循環", id: "Recycling", emoji: "♻️", co: "リサイクル会社", c: ["#4ade80", "#14532d"] },
   aviation: { jp: "航空", id: "Aviation", emoji: "✈️", co: "空港・航空会社", c: ["#7dd3fc", "#0c4a6e"] },
+  // Bukan bidang SSW: pertanyaan seputar isi CV (履歴書) — berlaku untuk semua bidang, selalu terbuka.
+  rirekisho: { jp: "履歴書", id: "Pertanyaan CV (Rirekisho)", emoji: "📄", co: "受け入れ企業", c: ["#f9a8d4", "#be185d"], umum: true },
 };
-const ORDER = Object.keys(BIDANG);
+const ORDER = Object.keys(BIDANG).filter(k => !BIDANG[k].umum);
 const MODE = {
   latihan: { jp: "練習モード", nm: "Practice", d: "AI membantu: boleh pakai bahasa Indonesia, ada contoh jawaban & koreksi singkat." },
   nyata: { jp: "本番モード", nm: "Real Interview", d: "Seperti perusahaan sungguhan: tanpa bantuan & koreksi. Penilaian di akhir." },
@@ -129,7 +131,7 @@ async function refresh() {
  * Mengunci hanya menyembunyikan latihan; riwayat (mensetsu_hasil), persiapan & transkrip tidak dihapus dan kembali tersedia saat dibuka. */
 const slugOf = (key) => String(key).replace(/_/g, "-");
 async function bolehBidang(key) {
-  if (isGuest()) return true;
+  if (isGuest() || BIDANG[key]?.umum) return true;
   try { await loadKelasAkses(); return sswAllowed(slugOf(key)); } catch (e) { console.warn("mensetsu: cek akses gagal:", e.message || e); return false; }
 }
 const terkunciHtml = (key) => `<div class="ms-wrap"><div class="ms-panel" style="text-align:center">
@@ -156,6 +158,12 @@ async function renderHub() {
   return `<div class="ms-wrap">
     <div class="ms-head"><div class="jp">面接</div><h1>MENSETSU · Persiapan wawancara kerja Jepang</h1>
       <p>Pilih bidang SSW. Setiap bidang punya bank pertanyaan sendiri — fokus pada pertanyaan wawancara dasar, bukan materi teknis.</p></div>
+    <button class="ms-cvcard" onclick="route('mensetsu-bidang/rirekisho')">
+      <span class="ms-cv-ico">📄</span>
+      <span class="ms-cv-txt"><span class="ms-isl-jp">履歴書についての質問</span><b>Pertanyaan tentang CV (Rirekisho)</b>
+        <small>家族構成・長所・短所・学歴・職歴・アピール… pertanyaan yang ditanyakan pewawancara dari isi CV-mu. Untuk semua bidang.</small></span>
+      <span class="ms-isl-st ok">${jml.rirekisho ? `✓ ${jml.rirekisho} soal` : "Buka"}</span>
+    </button>
     <div class="ms-grid">${cards}</div>
     <div class="ms-flow"><b>Alur:</b> Pilih pertanyaan → Tulis jawaban Jepang → Koreksi AI → Dengar &amp; hafalkan → Latihan wawancara di Claude / ChatGPT</div>
     <div class="ms-hubfoot"><button class="btn ghost" onclick="goBack()">← Kembali</button></div>
@@ -182,7 +190,7 @@ async function renderBidang(p) {
     <div class="ms-crumbs"><a onclick="route('mensetsu')">MENSETSU</a> › <b>${b.id}</b></div>
     <div class="ms-bhead" style="--c1:${b.c[0]};--c2:${b.c[1]}">
       <span class="ms-isl-art sm">${islandSvg(key)}</span>
-      <div><div class="ms-isl-jp">${b.jp}</div><h1>${b.id}</h1><p>${bank.soal.length} pertanyaan wawancara khusus bidang ini</p></div>
+      <div><div class="ms-isl-jp">${b.jp}</div><h1>${b.id}</h1><p>${bank.soal.length} ${b.umum ? "pertanyaan wawancara tentang isi CV (履歴書) — cocok untuk semua bidang" : "pertanyaan wawancara khusus bidang ini"}</p></div>
     </div>
     <section class="ms-panel"><h2>Pilih yang ingin kamu lakukan</h2>
       <div class="ms-modes">
@@ -202,7 +210,8 @@ async function renderBank(p) {
   setPage(renderBank, p);
   const bank = await EN.loadBank(key).catch(() => null);
   if (!bank) return `<div class="ms-wrap"><div class="panel"><h2>Bank soal belum tersedia</h2></div></div>`;
-  const tabs = EN.CATS.map(x => `<button class="ms-chip ${BANKCAT === x.k ? "on" : ""}" onclick="MS.bankCat('${x.k}')">${x.jp} <small>${bank.soal.filter(q => q.k === x.k).length}</small></button>`).join("");
+  const CK = EN.catsOf(bank); if (!CK.some(x => x.k === BANKCAT)) BANKCAT = CK[0].k;
+  const tabs = CK.map(x => `<button class="ms-chip ${BANKCAT === x.k ? "on" : ""}" onclick="MS.bankCat('${x.k}')">${x.jp} <small>${bank.soal.filter(q => q.k === x.k).length}</small></button>`).join("");
   const lvl = ["", "Mudah", "Sedang", "Sulit"];
   const list = bank.soal.filter(q => q.k === BANKCAT).map(q => `
     <details class="ms-q">

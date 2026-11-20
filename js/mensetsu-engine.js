@@ -20,6 +20,8 @@ export const CATS = [
   { k: "anzen", jp: "安全・衛生", id: "Keselamatan & kebersihan" },
   { k: "saigo", jp: "最後の質問", id: "Pertanyaan penutup" },
 ];
+/** Kategori sebuah bank: pakai daftar milik bank (mis. 履歴書) bila ada, selain itu CATS umum. */
+export const catsOf = (bank) => (bank && Array.isArray(bank.kategori) && bank.kategori.length ? bank.kategori : CATS);
 export const BOBOT = { isi: 25, tata_bahasa: 20, kosakata: 15, kelancaran: 15, artikulasi: 15, kesopanan: 10 };
 export const AIZUCHI = ["はい、ありがとうございます。", "そうですか。", "なるほど。", "分かりました。", "ありがとうございます。", "はい、そうですか。"];
 export const OPENING = "それでは、面接を始めます。よろしくお願いします。";
@@ -50,7 +52,8 @@ export async function loadBank(key) {
 /* ---------------- perencana pertanyaan ---------------- */
 /** cfg: {cats:[k], n, level:0|1|2|3, random:bool, mode}; weakIds: Set (mode lemah). */
 export function planQuestions(bank, cfg, weakIds = new Set()) {
-  const cats = cfg.cats && cfg.cats.length ? cfg.cats : CATS.map(c => c.k);
+  const CK = catsOf(bank);
+  const cats = cfg.cats && cfg.cats.length ? cfg.cats : CK.map(c => c.k);
   let pool = bank.soal.filter(q => cats.includes(q.k) && q.k !== "saigo");
   if (cfg.level) pool = pool.filter(q => q.l === cfg.level);
   if (cfg.mode === "lemah" && weakIds.size) {
@@ -65,7 +68,7 @@ export function planQuestions(bank, cfg, weakIds = new Set()) {
   const intro = cats.includes("jiko") ? pool.find(q => q.ja.startsWith("自己紹介")) : null;
   if (intro) pool = pool.filter(q => q !== intro);
   const per = {}; for (const c of cats) per[c] = shuffle(pool.filter(q => q.k === c));
-  const order = CATS.map(c => c.k).filter(k => per[k] && per[k].length);
+  const order = CK.map(c => c.k).filter(k => per[k] && per[k].length);
   const out = intro ? [intro] : []; let guard = 0;
   while (out.length < n && guard++ < 500) {
     let added = false;
@@ -73,7 +76,7 @@ export function planQuestions(bank, cfg, weakIds = new Set()) {
     if (!added) break;
   }
   // urutan alur: perkenalan → ... (stabil terhadap CATS); 自己紹介 tetap pertama
-  const rank = Object.fromEntries(CATS.map((c, i) => [c.k, i]));
+  const rank = Object.fromEntries(CK.map((c, i) => [c.k, i]));
   const rest = out.filter(q => q !== intro).sort((a, b) => rank[a.k] - rank[b.k]);
   return intro ? [intro, ...rest] : rest;
 }

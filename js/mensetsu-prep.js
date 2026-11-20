@@ -4,7 +4,7 @@
  * Simpan: Firestore siswa/{uid}/mensetsu_persiapan/{bidang} (+ cadangan localStorage)
  * Suara : speechSynthesis ja-JP milik browser/HP (gratis, tanpa API)
  * ===================================================================== */
-import * as EN from "./mensetsu-engine.js";
+import * as EN from "./mensetsu-engine.js?v=20261120cv";
 
 let X = null;   // konteks dari mensetsu.js
 export function initPrep(ctx) { X = ctx; }
@@ -197,7 +197,7 @@ export async function renderPersiapan(p) {
   X.setPage(renderPersiapan, p);
   if (!P || P.key !== key || !P.bank) { const r = await init(key); if (!r) return `<div class="ms-wrap"><div class="ms-panel"><h2>Bank soal belum tersedia</h2><button class="btn" onclick="route('mensetsu')">← Kembali</button></div></div>`; }
   if (!X.getProv()) { X.loadProviders().then(() => {}).catch(() => {}); }
-  const b = X.BIDANG[key]; const { bank, data } = P; const cats = EN.CATS.filter(c => c.k !== "saigo");
+  const b = X.BIDANG[key]; const { bank, data } = P; const cats = EN.catsOf(P.bank).filter(c => c.k !== "saigo");
   const jiko = jikoOf(bank);
   const filled = data.order.filter(i => aktif(data.answers[i]).trim()).length;
   const chips = [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
@@ -504,7 +504,7 @@ export function buildMensetsuPrompt({ b, qs, prep, mode, jawaban, furi }) {
   const nyata = mode === "nyata";
   const daftar = qs.map((q, i) => `${i + 1}. ${q.ja}  (${q.id})`).join("\n");
   const persiapan = jawaban ? qs.filter(q => prep[q.i]).map(q => `- ${q.ja}\n  Jawaban persiapanku: ${prep[q.i]}`).join("\n") : "";
-  return `Kamu adalah 田中 誠 (Tanaka Makoto), staf HRD (人事担当) di ${b.co} bidang ${b.jp} (${b.id}), program Tokutei Ginou / SSW di Jepang. Kamu mewawancarai aku, kandidat dari Indonesia dengan bahasa Jepang tingkat pemula (sekitar N5–N4). Tugasmu: jadi pewawancara mensetsu (面接) yang realistis agar aku bisa berlatih.
+  return `Kamu adalah 田中 誠 (Tanaka Makoto), staf HRD (人事担当) di ${b.umum ? "perusahaan penerima (受け入れ企業)" : `${b.co} bidang ${b.jp} (${b.id})`}, program Tokutei Ginou / SSW di Jepang.${b.umum ? " Fokus wawancara ini: pertanyaan tentang isi CV-ku (履歴書) — data diri, susunan keluarga (家族構成), pendidikan & pengalaman kerja, kelebihan & kekurangan (長所・短所), hobi, kesehatan, rencana di Jepang, dan self-PR. Kalau aku menempelkan isi CV-ku, gunakan untuk pertanyaan lanjutan yang spesifik." : ""} Kamu mewawancarai aku, kandidat dari Indonesia dengan bahasa Jepang tingkat pemula (sekitar N5–N4). Tugasmu: jadi pewawancara mensetsu (面接) yang realistis agar aku bisa berlatih.
 
 ATURAN WAWANCARA
 1. Berbicara dalam bahasa Jepang sopan dan sederhana (です・ます, kosakata mudah). ${furi ? "Tulis hiragana di dalam kurung setelah kanji pada kalimatmu, contoh: 自己紹介(じこしょうかい)." : "Tidak perlu furigana."}
@@ -536,7 +536,7 @@ async function pmData(key) {
   let qs = d.order.map(i => bank.soal.find(q => q.i === i)).filter(Boolean), auto = false;
   if (qs.length < 2) {
     const j = jikoOf(bank); const rest = bank.soal.filter(q => q !== j && q.k !== "saigo" && q.k !== "jiko");
-    const rank = Object.fromEntries(EN.CATS.map((c, i) => [c.k, i]));
+    const rank = Object.fromEntries(EN.catsOf(bank).map((c, i) => [c.k, i]));
     const pick = []; const seen = new Set();
     for (const q of rest) if (!seen.has(q.k) || pick.length >= 5) { /* satu per kategori dulu */ if (!seen.has(q.k)) { seen.add(q.k); pick.push(q); } }
     for (const q of rest) { if (pick.length >= 9) break; if (!pick.includes(q)) pick.push(q); }
@@ -547,7 +547,7 @@ async function pmData(key) {
   return { qs, prep, auto };
 }
 function chipsHtml() {
-  const cats = EN.CATS.filter(c => c.k !== "saigo");
+  const cats = EN.catsOf(P.bank).filter(c => c.k !== "saigo");
   return [`<button class="ms-chip ${P.cat === "semua" ? "on" : ""}" onclick="PP.cat('semua')">Semua</button>`, ...cats.map(c => `<button class="ms-chip ${P.cat === c.k ? "on" : ""}" onclick="PP.cat('${c.k}')">${c.jp} <small>${P.bank.soal.filter(q => q.k === c.k).length}</small></button>`), furiToggleHtml()].join("");
 }
 function checkHtml() {
