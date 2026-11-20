@@ -279,20 +279,6 @@ body.auth-mode .companion{display:none !important;}
 }
 @media (max-width:640px){ .brand{font-size:18px; gap:6px;} }
 .brand .rose{color:var(--pink); font-size:26px;}
-/* LOGO native (SVG + teks): warna ikut variabel tema (--pink*, --white). Dipakai: <a class="brand logo"> */
-:root{--logo-leaf:var(--green);}
-.logo{gap:10px;}
-.logo-rose{display:block; width:34px; height:37px; flex:none; overflow:visible; filter:drop-shadow(0 2px 6px color-mix(in srgb,var(--pink) 35%,transparent));}
-.logo-rose .r-body{fill:var(--pink);}
-.logo-rose .r-light{fill:var(--pink-light);}
-.logo-rose .r-dark{fill:var(--pink-dark);}
-.logo-rose .r-line{fill:none; stroke:var(--pink-dark); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
-.logo-rose .r-leaf{fill:var(--logo-leaf);}
-.logo-text{display:flex; align-items:center; gap:9px; line-height:1;}
-.logo-jp{font-family:var(--font-jp); font-weight:800; font-size:25px; letter-spacing:.06em; color:var(--white);}
-.logo-en{font-family:var(--font-sans); font-weight:700; font-size:12.5px; letter-spacing:.32em; color:var(--pink); margin-right:-.32em;}
-@media (max-width:640px){ .logo{gap:8px;} .logo-rose{width:29px; height:32px;} .logo-jp{font-size:20px;} .logo-en{font-size:10.5px;} }
-@media (max-width:400px){ .logo-en{display:none;} }
 .topbar-right{margin-left:auto; display:flex; gap:8px; align-items:center;}
 .chip{
   display:inline-flex; align-items:center; gap:6px;
@@ -1416,6 +1402,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/ssw.css?v=20261118s"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261120cv3"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261119f"/>
+<link rel="stylesheet" href="./css/logo.css?v=20261120b"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261120a"/>
 </head>
 <body>
@@ -1827,7 +1814,16 @@ function renderLogin(){
   return `
     <div class="auth-page">
       <div class="auth-card">
-        <div class="brand-row">シ<span class="rose">🌹</span>ロセ NIHONGO</div>
+        <div class="brand-row"><span class="logo logo-lg" role="img" aria-label="Shirose Nihongo"><svg class="logo-rose" viewBox="0 0 48 52" aria-hidden="true" focusable="false">
+              <path class="r-leaf" d="M24 39C16 38 10 42 7 49c9 1 16-3 17-10Z"/>
+              <path class="r-leaf" d="M24 39c8-1 14 3 17 10-9 1-16-3-17-10Z"/>
+              <path class="r-line" d="M24 33v17"/>
+              <path class="r-body" d="M7.5 19C6 10 14 3 24 3s18 7 16.5 16C42 29 34 37 24 37S6 29 7.5 19Z"/>
+              <path class="r-dark" d="M9 24c4 7 9 11 15 11s11-4 15-11c-4 3-9 4-15 2-6 2-11 1-15-2Z" opacity=".55"/>
+              <path class="r-light" d="M13 14c2-5 7-8 13-8-6 2-10 5-12 10Z"/>
+              <path class="r-line" d="M24 12c6 0 9 5 6 9s-10 2-10-3c0-4 6-4 7-1"/>
+              <path class="r-line" d="M13 20c1 5 5 9 11 9" opacity=".7"/>
+            </svg><span class="logo-text"><span class="logo-jp">シロセ</span><span class="logo-en">NIHONGO</span></span></span></div>
         <h2 id="auth-page-title">${isDaftar ? "Buat akun baru" : "Masuk ke akunmu"}</h2>
         <p class="sub" id="auth-page-sub">${isDaftar
           ? "Daftar sekali, progres belajar kamu tersimpan otomatis."
