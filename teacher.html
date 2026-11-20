@@ -241,6 +241,7 @@ window.aturKoinSiswa = async (uid, lama) => {
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
 import * as FB from "./js/firebase-sync.js?v=20261118a";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
+import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261118s";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
 
 const state = {
@@ -534,7 +535,7 @@ async function renderSiswaTab(){
       <details style="margin-bottom:14px; padding:12px; border:1px solid var(--gold); border-radius:10px;" ${state.importSiswa ? "open" : ""}>
         <summary style="cursor:pointer; font-weight:700; color:var(--gold);">📊 Import banyak siswa dari Excel</summary>
         <ol style="font-size:13px; color:var(--gray); margin:10px 0 10px 18px; line-height:1.7;">
-          <li>Download format Excel, isi 1 baris = 1 siswa (Email, Password, Nama, Kelas, akses N5–N1 isi <b>Ya</b>/<b>Tidak</b>).</li>
+          <li>Download format Excel, isi 1 baris = 1 siswa (Email, Password, Nama, Kelas, akses N5–N1 isi <b>Ya</b>/<b>Tidak</b>, dan kolom <b>SSW wajib diisi</b>: Ya / Tidak / Semua).</li>
           <li>Upload file → cek preview → klik <b>Buat akun</b>. Akun dibuat satu per satu di sistem login yang sama.</li>
         </ol>
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
@@ -720,11 +721,12 @@ function renderDemoPanel(){
     .sort((a, b) => (Number(a.demoSejak) || 9e15) - (Number(b.demoSejak) || 9e15));
   const aktif = demo.filter(s => Number(s.demoSejak));
   const terdekat = aktif.length ? aktif[0].demoSejak + _DEMO_MS - Date.now() : null;
-  return `<div style="margin-bottom:14px; padding:12px 14px; border:1px solid #f59e0b; border-radius:12px; background:rgba(245,158,11,.08);">
-    <b>⏳ Kelas Demo — akun otomatis terhapus ${FB.DEMO_HARI || 7} hari</b> setelah masuk kelas "Demo".
-    <div style="font-size:13px; color:var(--gray); margin-top:4px;">${demo.length ? `${demo.length} akun demo${terdekat != null ? ` · yang paling dekat habis: <b class="demo-cd" data-since="${aktif[0].demoSejak}">${_fmtSisa(terdekat)}</b>` : ""}` : "Belum ada akun di kelas Demo."} Penghapusan dijalankan saat dashboard ini dibuka dan saat akun demo mencoba login setelah masa habis.</div>
-    ${demo.length ? `<div style="margin-top:8px; display:grid; gap:6px;">${demo.map(s => `<div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;"><span style="flex:1 1 180px;"><b>${escHtml(s.nama || s.email || "")}</b> <small style="color:var(--gray);">${escHtml(s.email || "")}</small>${_demoBadge(s)}</span><button class="btn sm ghost" onclick="ulangDemo('${s.uid}')">🔄 Ulang 7 hari</button><button class="btn sm danger" onclick="hapusSiswa('${s.uid}')">🗑️ Hapus sekarang</button></div>`).join("")}</div>` : ""}
-  </div>`;
+  const ringkas = demo.length ? `${demo.length} akun${terdekat != null ? ` · terdekat habis: <b class="demo-cd" data-since="${aktif[0].demoSejak}">${_fmtSisa(terdekat)}</b>` : ""}` : "belum ada akun";
+  return `<details ${state.demoOpen ? "open" : ""} ontoggle="state.demoOpen=this.open" style="margin-bottom:14px; padding:10px 14px; border:1px solid #f59e0b; border-radius:12px; background:rgba(245,158,11,.08);">
+    <summary style="cursor:pointer; font-weight:700;">⏳ Akun Demo <span style="font-weight:400; font-size:13px; color:var(--gray);">· ${ringkas}</span></summary>
+    <div style="font-size:12px; color:var(--gray); margin:6px 0;">Akun kelas "Demo" otomatis terhapus ${FB.DEMO_HARI || 7} hari setelah masuk kelas. Penghapusan dijalankan saat dashboard dibuka dan saat akun demo mencoba login setelah masa habis.</div>
+    ${demo.length ? `<div style="margin-top:6px; display:grid; gap:6px; max-height:320px; overflow:auto;">${demo.map(s => `<div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;"><span style="flex:1 1 180px;"><b>${escHtml(s.nama || s.email || "")}</b> <small style="color:var(--gray);">${escHtml(s.email || "")}</small>${_demoBadge(s)}</span><button class="btn sm ghost" onclick="ulangDemo('${s.uid}')">🔄 Ulang 7 hari</button><button class="btn sm danger" onclick="hapusSiswa('${s.uid}')">🗑️ Hapus</button></div>`).join("")}</div>` : ""}
+  </details>`;
 }
 window.ulangDemo = async (uid) => {
   try { const t = await FB.mulaiDemo(uid); const s = state.siswaList.find(x => x.uid === uid); if (s) s.demoSejak = t; toast("✓ Hitung mundur diulang 7 hari"); renderTab(); } catch(e){ toast("Gagal: " + (e.message || e)); }
@@ -882,16 +884,22 @@ const _ya = (v) => /^(ya|y|yes|1|true|aktif|v|✓|x)$/i.test(String(v ?? "").tri
 // Kolom akses SSW di Excel → slug bidang. Kosong = tidak diatur (TIDAK otomatis diberi akses).
 const SSW_KOLOM = [["SSW Building Cleaning","building-cleaning"],["SSW Kaigo","kaigo"],["SSW Kaigo Indonesia","kaigo"],["SSW Kaigo Jepang","kaigo"],["SSW Food Manufacturing","food-manufacturing"],
   ["SSW Food Service","food-service"],["SSW Food Service Indonesia","food-service"],["SSW Food Service Jepang","food-service"],["SSW Agriculture","agriculture"],["SSW Construction","construction"],["SSW Construction Sipil","construction"],["SSW Construction Bangunan","construction-bangunan"],["SSW Construction Lifeline","construction-lifeline"],["SSW Accommodation","accommodation"],["SSW Livestock","livestock"]];
+// Semua bidang SSW (dari daftar bawaan) otomatis jadi kolom "SSW <slug>" di template.
+const SSW_SLUGS = DEFAULT_BIDANG.map(b => b.slug);
+for (const slug of SSW_SLUGS) if (!SSW_KOLOM.some(k => k[0] === "SSW " + slug)) SSW_KOLOM.push(["SSW " + slug, slug]);
 const _tri = (v) => _ya(v) ? true : _tidak(v) ? false : undefined;
 const _tidak = (v) => /^(tidak|t|no|n|0|false|blokir)$/i.test(String(v ?? "").trim());
-function _bacaSsw(r){ const o = {}; for (const [kol, slug] of SSW_KOLOM){ const v = r[kol] ?? r[kol.toLowerCase()]; if (_ya(v)) o[slug] = true; else if (_tidak(v)) o[slug] = false; } return o; }
+function _bacaSsw(r){ const o = {}; if (/^(semua|all)$/i.test(String(r.SSW ?? r.ssw ?? r.Ssw ?? "").trim())) SSW_SLUGS.forEach(sl => o[sl] = true); for (const [kol, slug] of SSW_KOLOM){ const v = r[kol] ?? r[kol.toLowerCase()]; if (_ya(v)) o[slug] = true; else if (_tidak(v)) o[slug] = false; } return o; }
 window.downloadFormatSiswa = () => {
+  const kolSsw = SSW_SLUGS.map(sl => "SSW " + sl);
+  const baris = (o) => { const r = { ...o }; kolSsw.forEach(k => { if (!(k in r)) r[k] = ""; }); return r; };
   const data = [
-    { No:1, Email:"siswa1@contoh.com", Password:"rahasia123", Nama:"Budi Santoso", Kelas:"Kelas A", N5:"Ya", N4:"Tidak", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", "JFT A1":"Ya", "JFT A2.1":"Ya", "JFT A2.2":"Tidak", SSW:"Ya", "SSW Building Cleaning":"Ya", "SSW Kaigo":"Ya", "SSW Food Manufacturing":"", "SSW Food Service":"", "SSW Agriculture":"", "SSW Construction":"", "SSW Accommodation":"", "SSW Livestock":"" },
-    { No:2, Email:"siswa2@contoh.com", Password:"rahasia456", Nama:"Siti Aminah",  Kelas:"Kelas A", N5:"Ya", N4:"Ya",    N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", SSW:"Tidak" },
+    baris({ No:1, Email:"siswa1@contoh.com", Password:"rahasia123", Nama:"Budi Santoso", Kelas:"Kelas A", N5:"Ya", N4:"Tidak", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", "JFT A1":"Ya", "JFT A2.1":"Ya", "JFT A2.2":"Tidak", SSW:"Ya", "SSW building-cleaning":"Ya", "SSW kaigo":"Ya" }),
+    baris({ No:2, Email:"siswa2@contoh.com", Password:"rahasia456", Nama:"Siti Aminah", Kelas:"Kelas A", N5:"Ya", N4:"Ya", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", SSW:"Tidak" }),
+    baris({ No:3, Email:"siswa3@contoh.com", Password:"rahasia789", Nama:"Andi Wijaya", Kelas:"Kelas B", N5:"Ya", N4:"Tidak", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Tidak", SSW:"Semua" }),
   ];
   const ws = XLSX.utils.json_to_sheet(data);
-  ws["!cols"] = [{wch:5},{wch:28},{wch:16},{wch:22},{wch:12},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:9},{wch:9},{wch:9},{wch:7}];
+  ws["!cols"] = [{wch:5},{wch:28},{wch:16},{wch:22},{wch:12},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:9},{wch:9},{wch:9},{wch:9}, ...kolSsw.map(k => ({ wch: Math.max(12, k.length + 2) }))];
   const inst = XLSX.utils.aoa_to_sheet([
     ["FORMAT IMPORT SISWA — SHIROSE NIHONGO"], [""],
     ["Isi sheet 'Siswa': 1 baris = 1 akun. Hapus 2 baris contoh sebelum upload."],
@@ -902,9 +910,10 @@ window.downloadFormatSiswa = () => {
     ["- N5, N4, N3, N2, N1: isi Ya / Tidak. Ya = level dibuka untuk siswa ini. Kosong = Tidak."],
     ["- JFT: Ya / Tidak. Tidak = SEMUA level JFT ditutup untuk siswa ini. Kosong = tidak diatur (JFT tetap terbuka)."],
     ["- JFT A1, JFT A2.1, JFT A2.2: Ya / Tidak per level JFT (Starter, Shokyuu 1, Shokyuu 2). Kosong = tidak diatur."],
-    ["- SSW: Ya / Tidak. Tidak = SELURUH menu SSW ditutup. Kosong = tidak diatur (ikut kolom per bidang di bawah)."],
-    ["- SSW ... (per bidang): isi Ya / Tidak. Kosong = tidak diatur (ikut pengaturan kelas / bawaan; TIDAK otomatis dibuka)."],
-    ["- Email yang SUDAH terdaftar: tidak dibuat ulang. Hanya kolom akses SSW yang terisi (dan Kelas bila terisi) yang diperbarui. XP, koin, dan progres tidak disentuh."],
+    ["- SSW (WAJIB untuk akun baru): isi Ya / Tidak / Semua. Tidak = SELURUH menu SSW ditutup. Semua = semua bidang SSW dibuka. Ya = hanya bidang yang diisi Ya di kolom 'SSW <bidang>'."],
+    ["- SSW <bidang> (per bidang): isi Ya / Tidak. Jika SSW = Ya, minimal 1 bidang harus Ya. Daftar bidang: " + SSW_SLUGS.join(", ") + "."],
+    ["- Akun baru dengan kolom SSW kosong akan DITOLAK saat preview (supaya tidak ada siswa baru tanpa pengaturan SSW)."],
+    ["- Email yang SUDAH terdaftar: tidak dibuat ulang (kolom SSW tidak wajib untuk akun lama). Hanya kolom akses SSW yang terisi (dan Kelas bila terisi) yang diperbarui. XP, koin, dan progres tidak disentuh."],
     [""], ["Akun dibuat di sistem login yang sama dengan website siswa & dashboard guru."],
   ]);
   inst["!cols"] = [{ wch:100 }];
@@ -930,7 +939,7 @@ window.bacaExcelSiswa = async (file) => {
       const aksesLevel = {}; ["n5","n4","n3","n2","n1"].forEach(l => aksesLevel[l] = _ya(r[l.toUpperCase()] ?? r[l]));
       const ssw = _bacaSsw(r);
       const jft = _tri(r.JFT ?? r.jft ?? r.Jft), jftLv = {}; JFT_LV.forEach(([l, n]) => { const v = _tri(r["JFT " + n] ?? r["jft " + n]); if (v !== undefined) jftLv[l] = v; });
-      const sswAll = _tri(r.SSW ?? r.ssw ?? r.Ssw);
+      const sswAll = /^(semua|all)$/i.test(g("SSW")) ? true : _tri(r.SSW ?? r.ssw ?? r.Ssw);
       const lama = state.siswaList.find(x => (x.email||"").toLowerCase() === email);
       if (lama && !dipakai.has(email)) {   // akun lama → hanya perbarui akses SSW / kelas
         dipakai.add(email);
@@ -945,6 +954,8 @@ window.bacaExcelSiswa = async (file) => {
       else if (!nama) err = "Nama kosong";
       else if (sudahAda.has(email)) err = "Email sudah terdaftar";
       else if (dipakai.has(email)) err = "Email dobel di file";
+      else if (sswAll === undefined && !/^(semua|all)$/i.test(g("SSW"))) err = "Kolom SSW wajib diisi (Ya / Tidak / Semua)";
+      else if (sswAll === true && !Object.values(ssw).some(v => v === true)) err = "SSW = Ya tapi belum ada bidang SSW yang diisi Ya (atau tulis Semua)";
       dipakai.add(email);
       return { baris: i + 2, email, password, nama, kelas, aksesLevel, ssw, jft, jftLv, sswAll, err, hasil: "" };
     }).filter(Boolean);
