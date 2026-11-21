@@ -9,10 +9,11 @@
  * Route: #profile, #profile/akses, #profile/nilai
  * Hanya MEMBACA data yang sudah ada (tidak mengubah aturan akses).
  * ===================================================================== */
-import { loadBidang, sswAllowed, loadKelasAkses, loadPack, fullQuizzes, esc, plain } from "./ssw-core.js?v=20261113zl";
+import { initSswCore, loadBidang, sswAllowed, loadKelasAkses, loadPack, fullQuizzes, esc, plain } from "./ssw-core.js?v=20261118s";
 
+const LOADERS = {};
 let C = null;   // { FB, state, renderCharacter, DEFAULT_EQUIPPED, canAccessLevel }
-export function initHub(ctx) { C = ctx; }
+export function initHub(ctx) { C = ctx; try { initSswCore(ctx.FB); } catch (e) {} }   // jaga-jaga bila versi modul ssw-core beda dengan ssw.js
 
 const LVS = ["n5", "n4", "n3", "n2", "n1"];
 const JFT_LV = { ir0: { nama: "Starter · A1", jp: "入門" }, ir1: { nama: "Shokyuu 1 · A2.1", jp: "初級1" }, ir2: { nama: "Shokyuu 2 · A2.2", jp: "初級2" } };
@@ -53,7 +54,7 @@ const CSS = `<style>
 .hub-body{display:none; padding:4px 14px 14px;} .hub-card.open .hub-body{display:block;}
 .hub-full{display:grid; grid-template-columns:repeat(auto-fill,minmax(64px,1fr)); gap:6px;}
 .hub-full div{padding:8px 4px; border-radius:8px; text-align:center; border:1px solid var(--border); font-size:12px; background:rgba(0,0,0,.18);}
-.hub-full div b{display:block; font-size:15px;}
+.hub-full div b{display:block; font-size:15px;} .hub-full div small{display:block; font-size:10px; color:var(--gray);}
 .hub-row{display:flex; justify-content:space-between; gap:10px; padding:8px 2px; border-bottom:1px solid rgba(255,255,255,.07); font-size:13px;}
 .hub-row b{white-space:nowrap;}
 .hub-h{margin:12px 0 6px; font-size:13px; color:var(--pink-light); font-weight:700;}
@@ -153,12 +154,17 @@ async function tabAkses() {
     </div>
     <p style="font-size:12px; color:var(--gray); margin:10px 0 0">${guru ? "Peran, kelas, dan akses siswa diatur di Dashboard Guru." : "Kelas, peran, dan hak akses diatur oleh guru/admin supaya akunmu aman."}</p>
     ${guru ? `<a class="btn sm" style="margin-top:8px; display:inline-block" href="./teacher.html">🛠️ Atur kelas, status &amp; akses siswa</a>` : ""}`;
+  const dasar = `<button class="hub-tile" onclick="route('kana')"><b>あ・ア Hiragana &amp; Katakana</b><small>Dasar menulis · tanpa pilih level</small></button>
+    <button class="hub-tile" onclick="route('mensetsu')"><b>面接 Mensetsu</b><small>Wawancara kerja · mengikuti akses SSW</small></button>${guru ? `<button class="hub-tile" onclick="location.href='./teacher.html'"><b>師 Dashboard Guru</b><small>Bank soal, laporan, siswa</small></button>` : ""}`;
+  LOADERS["kelola"] = kelolaLoader;
+  const kelola = guru ? `<div class="hub-card" id="hc-kelola" style="margin-top:18px"><button onclick="hubNilai('kelola')"><span><b>⚙️ Kelola akses kelas &amp; siswa</b><small>Atur akses JLPT, JFT, tiap bidang SSW, kelas, status &amp; peran — langsung dari sini</small></span><span class="car">▶</span></button><div class="hub-body"></div></div>` : "";
   return `
     <h3 class="hub-grp" style="margin-top:4px">Akun</h3>${akunInfo}
+    ${kelola}
     <h3 class="hub-grp">🎌 JLPT</h3><div class="hub-grid">${jlpt}</div>
     <h3 class="hub-grp">📘 JFT-Basic</h3><div class="hub-grid">${jft}</div>
-    <h3 class="hub-grp">🛠️ SSW 特定技能 ${sswUmumTutup ? '<span class="hub-badge no">Semua SSW ditutup</span>' : ""}</h3><div class="hub-grid">${ssw || '<div class="empty">Belum ada bidang.</div>'}</div>
-    <p style="font-size:12px; color:var(--gray); margin-top:12px">Mensetsu (wawancara) mengikuti akses SSW per bidang.</p>`;
+    <h3 class="hub-grp">🛠️ SSW 特定技能 <small style="color:var(--gray); font-weight:400">(${bidang.length} bidang, akses tiap bidang terpisah)</small> ${sswUmumTutup ? '<span class="hub-badge no">Semua SSW ditutup</span>' : ""}</h3><div class="hub-grid">${ssw || '<div class="empty">Belum ada bidang.</div>'}</div>
+    <h3 class="hub-grp">🎴 Dasar &amp; Wawancara</h3><div class="hub-grid">${dasar}</div>`;
 }
 
 /* =============================== TAB 3: NILAI =============================== */
@@ -174,19 +180,36 @@ async function jlptHasil() {
   return rows;
 }
 
+// Penilaian ala JLPT resmi — sama dengan js/jlpt-center.js (hitungJLPT): skor seksi 0–60/0–120, total /180, ambang lulus total + tiap seksi.
+const JLPT_PASS = { n5: { overall: 80, cefr: "A1" }, n4: { overall: 90, cefr: "A2" }, n3: { overall: 95, cefr: "B1" }, n2: { overall: 90, cefr: "B2" }, n1: { overall: 100, cefr: "C1" } };
+const jlptSecs = (lv) => (lv === "n5" || lv === "n4")
+  ? [{ label: "言語知識・読解", max: 120, pass: 38, cats: ["kanji", "kotoba", "bunpou", "dokkai"] }, { label: "聴解", max: 60, pass: 19, cats: ["choukai"] }]
+  : [{ label: "言語知識", max: 60, pass: 19, cats: ["kanji", "kotoba", "bunpou"] }, { label: "読解", max: 60, pass: 19, cats: ["dokkai"] }, { label: "聴解", max: 60, pass: 19, cats: ["choukai"] }];
+function skorJlpt(h) {
+  const cfg = JLPT_PASS[h.lv] || { overall: 90, cefr: "-" }, per = h.perKategori;
+  if (!per || !Object.keys(per).length) return { total: Math.round((Number(h.skor) || 0) * 1.8), lulus: null, secs: [], cfg };   // data lama tanpa rincian → estimasi
+  const secs = jlptSecs(h.lv).map(s => { let b = 0, t = 0; s.cats.forEach(c => { if (per[c]) { b += per[c].benar || 0; t += per[c].total || 0; } }); const skor = t ? Math.round(b / t * s.max) : 0; return { ...s, skor, lulus: skor >= s.pass }; });
+  const total = secs.reduce((a, s) => a + s.skor, 0);
+  return { total, secs, cfg, lulus: total >= cfg.overall && secs.every(s => s.lulus) };
+}
 async function detailJlpt(lv) {
   const rows = (await jlptHasil()).filter(r => r.lv === lv && r.jenis === "full");
   const best = {};
   for (const r of rows) {
     const m = /full-(\d+)/.exec(r.pkgId || ""); if (!m) continue;
-    const n = +m[1], p = Number(r.skor);
-    if (!best[n] || p > best[n].p) best[n] = { p, benar: r.benar, total: r.total };
+    const n = +m[1], sc = skorJlpt(r);
+    if (!best[n] || sc.total > best[n].total) best[n] = sc;
   }
-  const sel = Object.keys(best).length;
+  const ada = Object.values(best), cfg = JLPT_PASS[lv];
+  const lulusN = ada.filter(x => x.lulus).length, tertinggi = ada.length ? Math.max(...ada.map(x => x.total)) : null;
   let kotak = "";
-  for (let n = 1; n <= 20; n++) { const b = best[n]; kotak += `<div title="${b ? `${b.benar}/${b.total} benar` : "Belum dikerjakan"}">${String(n).padStart(2, "0")}<b style="color:${warna(b?.p)}">${pctTxt(b?.p)}</b></div>`; }
-  const rata = sel ? Object.values(best).reduce((a, x) => a + x.p, 0) / sel : null;
-  return { ringkas: `${sel}/20 Full Exam · rata-rata ${pctTxt(rata)}`, html: `<p style="font-size:12px; color:var(--gray); margin:0 0 8px">Skor terbaik tiap Full Exam (1–20).</p><div class="hub-full">${kotak}</div>` };
+  for (let n = 1; n <= 20; n++) {
+    const b = best[n];
+    const tip = b ? (b.secs.length ? b.secs.map(s => `${s.label} ${s.skor}/${s.max}${s.lulus ? "" : " ✗"}`).join(" · ") + (b.lulus ? " · LULUS" : " · belum lulus") : "estimasi (data lama)") : "Belum dikerjakan";
+    kotak += `<div title="${esc(tip)}" style="${b ? `border-color:${b.lulus === false ? "var(--red)" : b.lulus ? "var(--green)" : "var(--border)"}` : ""}">${String(n).padStart(2, "0")}<b style="color:${b ? (b.lulus === false ? "var(--red)" : b.lulus ? "var(--green)" : "var(--orange)") : "var(--gray-dim)"}">${b ? b.total : "–"}</b>${b && b.lulus != null ? `<small>${b.lulus ? "✔ lulus" : "✗"}</small>` : ""}</div>`;
+  }
+  return { ringkas: `${ada.length}/20 Full Exam · ${lulusN} lulus · tertinggi ${tertinggi ?? "–"}/180`,
+    html: `<p style="font-size:12px; color:var(--gray); margin:0 0 8px">Skor memakai penilaian ala JLPT resmi: <b>/180</b>, lulus bila total ≥ <b>${cfg.overall}</b> (CEFR ≈ ${cfg.cefr}) <u>dan</u> tiap seksi di atas batas minimum. Tertinggi dari tiap Full Exam (1–20). Ketuk/tahan kotak untuk rincian seksi.</p><div class="hub-full">${kotak}</div>` };
 }
 
 async function bestJft() {
@@ -206,7 +229,7 @@ async function detailJft(lv) {
   });
   let simInfo = "";
   if (lv === "ir2") {
-    html += `<div class="hub-h">JFT Akhir · Simulasi Penuh (skor 10–250)</div><div class="hub-full">${[0, 1, 2, 3, 4].map(p => { const x = best[`${lv}_sim${p}`]; if (x) done++; return `<div>Paket ${p + 1}<b style="color:${x ? (x.skor >= 200 ? "var(--green)" : x.skor >= 175 ? "var(--orange)" : "var(--red)") : "var(--gray-dim)"}">${x ? x.skor : "–"}</b></div>`; }).join("")}</div><p style="font-size:11px; color:var(--gray); margin-top:8px">Skor simulasi hanya estimasi latihan, bukan skor resmi JFT-Basic.</p>`;
+    html += `<div class="hub-h">JFT Akhir · Simulasi Penuh (skor 10–250 · lulus A2 ≥ 200)</div><div class="hub-full">${[0, 1, 2, 3, 4].map(p => { const x = best[`${lv}_sim${p}`]; if (x) done++; return `<div>Paket ${p + 1}<b style="color:${x ? (x.skor >= 200 ? "var(--green)" : x.skor >= 175 ? "var(--orange)" : "var(--red)") : "var(--gray-dim)"}">${x ? x.skor : "–"}</b></div>`; }).join("")}</div><p style="font-size:11px; color:var(--gray); margin-top:8px">Skor simulasi hanya estimasi latihan, bukan skor resmi JFT-Basic.</p>`;
   }
   return { ringkas: `${done} paket sudah dikerjakan`, html: html || '<div class="empty">Belum ada data.</div>' };
 }
@@ -219,7 +242,7 @@ async function detailSsw(slug) {
   if (lokal && (!P || (lokal.u || 0) > (P.u || 0))) P = lokal;
   const Q = (P && P.quiz) || {};
   const sk = (id) => Q[id] && Q[id].best >= 0 ? Q[id] : null;
-  const row = (id, label) => { const q = sk(id); return `<div class="hub-row"><span>${label}</span><b style="color:${warna(q ? q.best : null)}">${q ? q.best + "%" : "–"}${q && q.n > 1 ? ` <small style="color:var(--gray); font-weight:400">(${q.n}×)</small>` : ""}</b></div>`; };
+  const row = (id, label, lulus) => { const q = sk(id); const w = q ? (lulus ? (q.best >= lulus ? "var(--green)" : "var(--red)") : warna(q.best)) : "var(--gray-dim)"; return `<div class="hub-row"><span>${label}</span><b style="color:${w}">${q ? q.best + "%" : "–"}${q && lulus ? (q.best >= lulus ? " ✔ lulus" : " ✗") : ""}${q && q.n > 1 ? ` <small style="color:var(--gray); font-weight:400">(${q.n}×)</small>` : ""}</b></div>`; };
   let html = "", total = 0, selesai = 0, sum = 0;
   const hitung = (id) => { total++; const q = sk(id); if (q) { selesai++; sum += q.best; } };
   for (const ch of pack.chapters) {
@@ -232,11 +255,10 @@ async function detailSsw(slug) {
   if (tema.length) { html += `<div class="hub-h">Tema</div>`; for (const q of tema) { hitung(q.id); html += row(q.id, tt(q)); } }
   let fulls = [];
   try { fulls = fullQuizzes(pack); } catch (e) {}
-  if (fulls.length) { html += `<div class="hub-h">Ujian Penuh (semua bab)</div>`; for (const q of fulls) { hitung(q.id); html += row(q.id, tt(q)); } }
+  if (fulls.length) { html += `<div class="hub-h">Ujian Penuh (semua bab) · lulus ≥ 65%</div>`; for (const q of fulls) { hitung(q.id); html += row(q.id, tt(q), 65); } }
   return { ringkas: `${selesai}/${total} kuis dikerjakan · rata-rata ${selesai ? Math.round(sum / selesai) + "%" : "–"}`, html: html || '<div class="empty">Belum ada kuis.</div>' };
 }
 
-const LOADERS = {};
 async function tabNilai() {
   const { state } = C;
   if (!state.user) return `<div class="empty">Masuk dulu.</div>`;
@@ -264,3 +286,68 @@ window.hubNilai = async (key) => {
     body.innerHTML = r.html; if (sub) sub.textContent = r.ringkas; body.dataset.ok = "1";
   } catch (e) { body.innerHTML = `<div class="empty">Gagal memuat nilai: ${esc(e.message || e)}</div>`; }
 };
+
+/* =============== KELOLA AKSES (guru/admin) — dari dalam profil =============== */
+const tri = (v) => typeof v === "boolean" ? (v ? "1" : "0") : "";
+const triVal = (s) => s === "1" ? true : s === "0" ? false : null;
+const toast = (m) => (window.toast ? window.toast(m) : console.log(m));
+const K = { siswa: [], kelas: [], bidang: [], uid: null, kid: null, q: "" };
+const triSel = (cur, on, off = "Bawaan / ikut kelas") => `<select onchange="${on}" style="min-height:36px"><option value="" ${cur === "" ? "selected" : ""}>${off}</option><option value="1" ${cur === "1" ? "selected" : ""}>Buka</option><option value="0" ${cur === "0" ? "selected" : ""}>Tutup</option></select>`;
+async function kelolaLoader() {
+  const { FB } = C;
+  [K.siswa, K.kelas] = await Promise.all([FB.listSiswa().catch(() => []), FB.listKelas().catch(() => [])]);
+  K.bidang = await sswTersedia();
+  K.siswa.sort((a, b) => String(a.nama || "").localeCompare(String(b.nama || "")));
+  K.kid = K.kelas[0]?.id || null; K.uid = null; K.q = "";
+  return { ringkas: `${K.siswa.length} siswa · ${K.kelas.length} kelas`, html: `<div id="hk-root">${kelolaHtml()}</div>` };
+}
+const kelolaRender = () => { const r = document.getElementById("hk-root"); if (r) r.innerHTML = kelolaHtml(); };
+function kelolaHtml() {
+  const kls = K.kelas.find(k => k.id === K.kid);
+  const kelasBox = kls ? `<p style="font-size:12px; color:var(--gray); margin:6px 0">Akses SSW untuk SEMUA siswa di kelas ini (kecuali siswa yang diatur sendiri).</p>` + K.bidang.map(b => `<div class="hub-row"><span>${esc(b.nama || b.slug)}</span>${triSel(tri((kls.aksesSswBidang || {})[b.slug]), `hubKelasSet('${kls.id}','${b.slug}',this.value)`, "Bawaan")}</div>`).join("") : '<div class="empty">Belum ada kelas.</div>';
+  const q = K.q.toLowerCase();
+  const daftar = K.siswa.filter(s => !q || (s.nama || "").toLowerCase().includes(q) || (s.email || "").toLowerCase().includes(q)).slice(0, 60);
+  const s = K.siswa.find(x => x.uid === K.uid);
+  return `<div class="hub-h">🎓 Akses per KELAS</div>
+    <select onchange="hubKelasPilih(this.value)" style="min-height:40px; width:100%">${K.kelas.map(k => `<option value="${k.id}" ${k.id === K.kid ? "selected" : ""}>${esc(k.nama || k.id)}</option>`).join("")}</select>
+    ${kelasBox}
+    <div class="hub-h" style="margin-top:18px">👤 Akses per SISWA</div>
+    <input type="search" placeholder="Cari nama / email…" value="${esc(K.q)}" oninput="hubSiswaCari(this.value)" style="width:100%; min-height:40px; margin-bottom:6px"/>
+    <select onchange="hubSiswaPilih(this.value)" style="min-height:40px; width:100%"><option value="">— pilih siswa (${daftar.length}${K.siswa.length > daftar.length ? "+" : ""}) —</option>${daftar.map(x => `<option value="${x.uid}" ${x.uid === K.uid ? "selected" : ""}>${esc(x.nama || x.email)}${x.kelas ? " · " + esc(x.kelas) : ""}</option>`).join("")}</select>
+    ${s ? siswaHtml(s) : ""}`;
+}
+function siswaHtml(s) {
+  const { FB } = C, admin = FB.userIsAdmin(), dev = FB.userIsDeveloper(), role = s.role || "student", self = s.uid === C.state.user?.uid;
+  const jftTutup = s.aksesJft === false;
+  const chip = (on, label, fn) => `<span class="chip btn-chip ${on ? "on" : ""}" style="cursor:pointer; padding:8px 12px; display:inline-block; margin:2px" onclick="${fn}">${label}</span>`;
+  const bol = (slug) => { const a = (s.aksesSswBidang || {})[slug]; return tri(a); };
+  const kelasOpt = `<option value="">— tanpa kelas —</option>${K.kelas.map(k => `<option value="${esc(k.nama)}" ${k.nama === s.kelas ? "selected" : ""}>${esc(k.nama)}</option>`).join("")}`;
+  return `<div style="margin-top:10px; padding:10px; border:1px solid var(--border-light); border-radius:10px">
+    <b>${esc(s.nama || "")}</b> <small style="color:var(--gray)">${esc(s.email || "")}</small>
+    <div class="hub-h">Kelas &amp; status</div>
+    <div class="hub-row"><span>Kelas</span><select onchange="hubSiswaKelas(this.value)" style="min-height:36px">${kelasOpt}</select></div>
+    <div class="hub-row"><span>Status akun</span><select onchange="hubSiswaStatus(this.value)" style="min-height:36px" ${self ? "disabled" : ""}><option value="aktif" ${s.status !== "nonaktif" ? "selected" : ""}>Aktif</option><option value="nonaktif" ${s.status === "nonaktif" ? "selected" : ""}>Nonaktif</option></select></div>
+    <div class="hub-row"><span>Peran</span>${admin && !self ? `<select onchange="hubSiswaRole(this.value)" style="min-height:36px"><option value="student" ${role === "student" ? "selected" : ""}>Siswa</option><option value="guru" ${role === "guru" ? "selected" : ""}>Guru</option>${dev ? `<option value="admin" ${role === "admin" ? "selected" : ""}>Admin</option>` : ""}</select>` : `<b>${role === "student" ? "Siswa" : role === "guru" ? "Guru" : "Admin"}</b>`}</div>
+    <div class="hub-h">JLPT</div>
+    <div>${LVS.map(l => chip(!!s.aksesLevel?.[l], l.toUpperCase(), `hubSiswaLv('${l}')`)).join("")}</div>
+    <div class="hub-h">JFT-Basic</div>
+    <div>${chip(!jftTutup, "JFT " + (jftTutup ? "Tutup" : "Buka"), "hubSiswaJft()")}${Object.entries(JFT_LV).map(([l, v]) => chip(!jftTutup && s.aksesJftLevel?.[l] !== false, v.jp, `hubSiswaJftLv('${l}')`)).join("")}</div>
+    <div class="hub-h">SSW — tiap bidang <span style="font-weight:400; color:var(--gray)">(Bawaan = ikut kelas)</span></div>
+    <div class="hub-row"><span>Semua SSW (saklar utama)</span>${chip(s.aksesSsw !== false, s.aksesSsw === false ? "Ditutup" : "Terbuka", "hubSiswaSsw()")}</div>
+    ${K.bidang.map(b => `<div class="hub-row"><span>${esc(b.nama || b.slug)}</span>${triSel(bol(b.slug), `hubSiswaBidang('${b.slug}',this.value)`)}</div>`).join("")}
+  </div>`;
+}
+const cur = () => K.siswa.find(x => x.uid === K.uid);
+const jalan = async (fn, ok) => { try { await fn(); toast("✓ " + ok); } catch (e) { toast("❌ " + (e.message || e)); } kelolaRender(); };
+window.hubKelasPilih = (id) => { K.kid = id; kelolaRender(); };
+window.hubKelasSet = (id, slug, v) => jalan(async () => { await C.FB.setAksesSswKelas(id, slug, triVal(v)); const k = K.kelas.find(x => x.id === id); k.aksesSswBidang = { ...(k.aksesSswBidang || {}) }; const t = triVal(v); if (t === null) delete k.aksesSswBidang[slug]; else k.aksesSswBidang[slug] = t; }, "Akses kelas disimpan");
+window.hubSiswaCari = (q) => { K.q = q; const r = document.getElementById("hk-root"); const sel = r && r.querySelectorAll("select")[1]; if (!sel) return; const l = q.toLowerCase(); const d = K.siswa.filter(s => !l || (s.nama || "").toLowerCase().includes(l) || (s.email || "").toLowerCase().includes(l)).slice(0, 60); sel.innerHTML = `<option value="">— pilih siswa (${d.length}) —</option>` + d.map(x => `<option value="${x.uid}">${esc(x.nama || x.email)}${x.kelas ? " · " + esc(x.kelas) : ""}</option>`).join(""); };
+window.hubSiswaPilih = (uid) => { K.uid = uid || null; kelolaRender(); };
+window.hubSiswaKelas = (v) => { const s = cur(); jalan(async () => { await C.FB.updateKelasSiswa(s.uid, v); s.kelas = v; }, "Kelas disimpan"); };
+window.hubSiswaStatus = (v) => { const s = cur(); jalan(async () => { await C.FB.setStatusSiswa(s.uid, v === "aktif"); s.status = v; }, "Status disimpan"); };
+window.hubSiswaRole = (v) => { const s = cur(); jalan(async () => { await C.FB.setRole(s.uid, v); s.role = v; }, "Peran disimpan"); };
+window.hubSiswaLv = (l) => { const s = cur(); jalan(async () => { const m = { n5: false, n4: false, n3: false, n2: false, n1: false, ...(s.aksesLevel || {}) }; m[l] = !m[l]; await C.FB.updateAksesSiswa(s.uid, m); s.aksesLevel = m; }, "Akses JLPT " + l.toUpperCase() + " disimpan"); };
+window.hubSiswaJft = () => { const s = cur(); jalan(async () => { const baru = s.aksesJft === false; await C.FB.setAksesJft(s.uid, baru); s.aksesJft = baru; }, "Akses JFT disimpan"); };
+window.hubSiswaJftLv = (l) => { const s = cur(); jalan(async () => { const tutup = s.aksesJft === false, peta = {}; Object.keys(JFT_LV).forEach(k => peta[k] = tutup ? false : s.aksesJftLevel?.[k] !== false); peta[l] = !peta[l]; if (tutup) { await C.FB.setAksesJft(s.uid, true); s.aksesJft = true; } await C.FB.setAksesJftLevel(s.uid, peta); s.aksesJftLevel = peta; }, "Akses JFT disimpan"); };
+window.hubSiswaSsw = () => { const s = cur(); jalan(async () => { const baru = s.aksesSsw === false; await C.FB.setAksesSsw(s.uid, baru); s.aksesSsw = baru; }, "Saklar SSW disimpan"); };
+window.hubSiswaBidang = (slug, v) => { const s = cur(); jalan(async () => { const t = triVal(v); await C.FB.setAksesSswBidang(s.uid, slug, t); s.aksesSswBidang = { ...(s.aksesSswBidang || {}) }; if (t === null) delete s.aksesSswBidang[slug]; else s.aksesSswBidang[slug] = t; }, "Akses bidang disimpan"); };

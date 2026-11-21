@@ -1487,7 +1487,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261120ex";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261119k";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261121b";
-import { initHub, renderHub } from "./js/siswa-hub.js?v=20261121c";
+import { initHub, renderHub } from "./js/siswa-hub.js?v=20261121e";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120ex";
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
 import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261119o";
@@ -2574,6 +2574,8 @@ const JLPT_INFO = {
 };
 function renderPilihLevel(){
   if (!state.user){ setTimeout(() => route("login"), 0); return '<div class="loading">Memuat…</div>'; }
+  // Semua akses (JLPT/JFT/SSW/kelas) sekarang dari Profil → tab Akses (js/siswa-hub.js); halaman ini hanya meneruskan.
+  setTimeout(() => route("profile/akses"), 0); return '<div class="loading">Memuat…</div>';
   const sudah = levelSudahDipilih();
   const nama = state.siswa?.nama || "";
   const cards = ["n5","n4","n3","n2","n1"].map(l => {
