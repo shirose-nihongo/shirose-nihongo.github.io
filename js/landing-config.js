@@ -2,14 +2,16 @@
  * Edit file ini saja — tidak perlu menyentuh landing.html.
  */
 window.LANDING_CONFIG = {
-  /* Grup WhatsApp untuk klaim akun demo 7 hari. Kosong = tombol Join nonaktif. */
+  /* Grup WhatsApp untuk klaim akun demo 7 hari. Isi link undangan asli,
+     contoh: "https://chat.whatsapp.com/XXXXXXXX" atau "https://wa.me/62812xxxxxxx".
+     Kosong = semua tombol Join tampil nonaktif "Link grup segera dibuka". */
   whatsapp: { url: "https://chat.whatsapp.com/BzXsGV00RumLlFs1rnpABT" },
 
   /* Isi URL asli akun kamu. Kosong ("") = tombol tampil nonaktif "Segera hadir".
      Contoh: instagram: "https://instagram.com/akunkamu" */
   social: [
-    { id: "instagram", label: "Instagram", url: "https://www.instagram.com/shirose.nihongo" },
-    { id: "tiktok",    label: "TikTok",    url: "https://www.tiktok.com/@shirose.nihongo" },
+    { id: "instagram", label: "Instagram", url: "" },
+    { id: "tiktok",    label: "TikTok",    url: "" },
     { id: "youtube",   label: "YouTube",   url: "" }   // opsional; hapus baris jika tidak dipakai
   ],
 
@@ -18,7 +20,6 @@ window.LANDING_CONFIG = {
      "Pembaruan sistem" | "Perbaikan" | "Program baru".
      tanggal diisi hanya jika benar (format "2026-11-14"), boleh dikosongkan. */
   updates: [
-    { kategori: "Fitur baru", judul: "Halaman pengenalan Shirose Nihongo", isi: "Halaman depan baru yang memperkenalkan program JLPT, JFT-Basic, Hiragana & Katakana, SSW, dan MENSETSU.", tanggal: "2026-11-14" },
-    { kategori: "Fitur baru", judul: "Tema tampilan", isi: "Pilih tema Ungu (bawaan), Cerah, Hujan, Salju, Gugur, Panas, Semi, atau Badai lewat tombol Ganti tema di aplikasi.", tanggal: "2026-11-14" }
+    // { kategori: "Fitur baru", judul: "Judul pembaruan", isi: "Penjelasan singkat.", tanggal: "" }
   ]
 };
