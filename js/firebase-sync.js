@@ -15,6 +15,7 @@
    ============================================================ */
 
 import { initializeApp, deleteApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app-check.js";
 import {
   getAuth, onAuthStateChanged,
   signInWithEmailAndPassword, createUserWithEmailAndPassword,
@@ -68,7 +69,17 @@ export function publicNama(u, siswaDoc){
   return siswaDoc?.nama || (u?.email ? u.email.split("@")[0] : "") || "Anon";
 }
 
+// reCAPTCHA v3 lewat Firebase App Check: membuktikan permintaan datang dari
+// situs ini (bukan bot/skrip). Isi site key reCAPTCHA v3 yang sudah didaftarkan
+// di Firebase Console → App Check. Kosong = dilewati.
+const RECAPTCHA_SITE_KEY = "";
+function _pasangAppCheck(a){
+  if (!RECAPTCHA_SITE_KEY) return;
+  try { initializeAppCheck(a, { provider: new ReCaptchaV3Provider(RECAPTCHA_SITE_KEY), isTokenAutoRefreshEnabled: true }); }
+  catch (e) { console.warn("App Check gagal diinisialisasi:", e?.message || e); }
+}
 const app = initializeApp(firebaseConfig);
+_pasangAppCheck(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -187,33 +198,90 @@ export function onAuth(cb) {
   if (!authListenerSet) {
     authListenerSet = true;
     onAuthStateChanged(auth, async (u) => {
-      currentUser = u;
-      if (!u) { currentSiswaDoc = null; onReadyCallbacks.forEach(c => c(u, null)); return; }
-      // Cepat: kalau profil terakhir tersimpan di perangkat, tampilkan langsung (tanpa menunggu Firestore),
-      // lalu verifikasi ke server di latar belakang.
-      const cached = _bacaCacheSiswa(u.uid);
-      if (cached) {
-        currentSiswaDoc = cached;
-        lastSiswaDocStatus = "ok";
-        onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
-        const before = JSON.stringify([cached.aksesLevel, cached.role, cached.status]);
-        await ensureSiswaDoc(u);
-        if (_siswaDitolak()) return _tolakAkun(u);
-        if (currentSiswaDoc) _simpanCacheSiswa(u.uid, currentSiswaDoc);
-        const after = currentSiswaDoc ? JSON.stringify([currentSiswaDoc.aksesLevel, currentSiswaDoc.role, currentSiswaDoc.status]) : "";
-        if (after !== before) onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
-        return;
-      }
-      await ensureSiswaDoc(u);
-      // Pendaftaran ditutup: akun tanpa profil / dinonaktifkan langsung dikeluarkan
-      // (Firestore Rules juga menolak akses datanya).
-      if (_siswaDitolak()) return _tolakAkun(u);
-      if (currentSiswaDoc && lastSiswaDocStatus === "ok") _simpanCacheSiswa(u.uid, currentSiswaDoc);
-      onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
+      // Saat klaim akun demo berjalan, profil dibuat SETELAH akun Auth jadi —
+      // tahan dulu supaya tidak dianggap "belum terdaftar".
+      if (_demoCreating) { currentUser = u; return; }
+      await _prosesAuthUser(u);
     });
   }
   onReadyCallbacks.push(cb);
 }
+
+async function _prosesAuthUser(u) {
+  currentUser = u;
+  if (!u) { currentSiswaDoc = null; onReadyCallbacks.forEach(c => c(u, null)); return; }
+  // Cepat: kalau profil terakhir tersimpan di perangkat, tampilkan langsung (tanpa menunggu Firestore),
+  // lalu verifikasi ke server di latar belakang.
+  const cached = _bacaCacheSiswa(u.uid);
+  if (cached) {
+    currentSiswaDoc = cached;
+    lastSiswaDocStatus = "ok";
+    onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
+    const before = JSON.stringify([cached.aksesLevel, cached.role, cached.status]);
+    await ensureSiswaDoc(u);
+    if (_siswaDitolak()) return _tolakAkun(u);
+    if (currentSiswaDoc) _simpanCacheSiswa(u.uid, currentSiswaDoc);
+    const after = currentSiswaDoc ? JSON.stringify([currentSiswaDoc.aksesLevel, currentSiswaDoc.role, currentSiswaDoc.status]) : "";
+    if (after !== before) onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
+    return;
+  }
+  await ensureSiswaDoc(u);
+  // Pendaftaran ditutup: akun tanpa profil / dinonaktifkan langsung dikeluarkan
+  // (Firestore Rules juga menolak akses datanya).
+  if (_siswaDitolak()) return _tolakAkun(u);
+  if (currentSiswaDoc && lastSiswaDocStatus === "ok") _simpanCacheSiswa(u.uid, currentSiswaDoc);
+  onReadyCallbacks.forEach(c => c(u, currentSiswaDoc));
+}
+
+/* ========== KLAIM AKUN DEMO 7 HARI (mandiri) ========== */
+// Email  : <nama>demo1234@gmail.com   Password: <nama>1234   (nama = huruf/angka kecil)
+// Masuk kelas "demo" (akses penuh); masa 7 hari memakai mekanisme demoSejak yang
+// sudah ada. Firestore Rules membatasi profil yang boleh dibuat sendiri & menolak
+// akses setelah 7 hari.
+let _demoCreating = false;
+export function demoKredensial(namaRaw) {
+  const slug = String(namaRaw || "").toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 20);
+  if (slug.length < 2) throw new Error("Nama minimal 2 huruf/angka (tanpa spasi atau simbol).");
+  return { slug, email: `${slug}demo1234@gmail.com`, password: `${slug}1234` };
+}
+export async function klaimAkunDemo(namaRaw) {
+  const { email, password } = demoKredensial(namaRaw);
+  const namaTampil = String(namaRaw).trim().slice(0, 30) || email.split("@")[0];
+  _demoCreating = true;
+  let user = null;
+  try {
+    try {
+      const cred = await createUserWithEmailAndPassword(auth, email, password);
+      user = cred.user;
+      try {
+        await setDoc(doc(db, "siswa", user.uid), {
+          ..._profilBaru(user.uid, email, namaTampil, "demo", { n5:true, n4:true, n3:true, n2:true, n1:true }, "student"),
+          aksesJft: true, aksesSsw: true,
+          dibuatOleh: user.uid,
+        });
+      } catch (e) {
+        try { await user.delete(); } catch(_) {}
+        const err = new Error("Gagal menyimpan profil demo (" + (e.code || e.message) + "). Aturan Firestore untuk akun demo mungkin belum dipublikasikan.");
+        err.code = "demo-profil-gagal";
+        throw err;
+      }
+    } catch (e) {
+      if (e.code !== "auth/email-already-in-use") throw e;
+      // Nama yang sama sudah pernah klaim: masuk ke akun itu (kredensial sama).
+      try { user = (await signInWithEmailAndPassword(auth, email, password)).user; }
+      catch (e2) {
+        const err = new Error("Nama itu sudah dipakai orang lain. Tambahkan angka/nama belakang, mis. budi2.");
+        err.code = "demo-nama-dipakai";
+        throw err;
+      }
+    }
+  } finally {
+    _demoCreating = false;
+  }
+  await _prosesAuthUser(user);
+  return { email, password };
+}
+
 
 // What role should a brand-new siswa doc carry? Guru / developer emails get
 // elevated automatically so the first login already behaves as teacher, which
@@ -1369,6 +1437,7 @@ export async function buatAkunSiswa({ email, password, nama, kelas, aksesLevel, 
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new Error("Email tidak valid");
   if (!password || password.length < 6) throw new Error("Password minimal 6 karakter");
   const sec = initializeApp(firebaseConfig, "akun-creator-" + Date.now());
+  _pasangAppCheck(sec);
   const secAuth = getAuth(sec);
   try {
     await setPersistence(secAuth, inMemoryPersistence);

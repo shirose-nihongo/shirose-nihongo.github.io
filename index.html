@@ -1477,7 +1477,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261121a";
+import * as FB from "./js/firebase-sync.js?v=20261121c";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261119k";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
@@ -1846,9 +1846,16 @@ function renderLogin(){
         <button class="btn" id="auth-page-submit" onclick="submitAuthPage()">${isDaftar ? "Daftar Sekarang" : "Masuk"}</button>
         <button class="btn ghost" onclick="kirimResetPassword()" style="font-size:12px;">Lupa password?</button>
         <p style="font-size:13px; color:var(--gray); margin:10px 0 0; text-align:center;">Belum punya akun? Akun siswa dibuat oleh guru/moderator.</p>
-        <button class="btn ghost" onclick="location.href='./landing.html'" style="margin-top:12px;">← Kembali ke beranda</button>
-
         <div id="auth-page-err" class="auth-err">${deniedMsg}</div>
+
+        <div style="margin-top:16px; padding:14px; border:1px dashed var(--pink); border-radius:12px; text-align:left;">
+          <b>🎁 Coba gratis 7 hari</b>
+          <p style="font-size:12px; color:var(--gray); margin:6px 0 10px;">Semua materi terbuka. Isi namamu, akun demo dibuat otomatis lalu kamu langsung masuk.</p>
+          <input type="text" id="demo-nama" placeholder="Nama kamu (mis. budi)" maxlength="30" autocomplete="given-name" onkeydown="if(event.key==='Enter') klaimDemoNow()"/>
+          <button class="btn" id="demo-btn" onclick="klaimDemoNow()" style="margin-top:8px;">Klaim Akun Demo 7 Hari</button>
+          <div id="demo-info" style="font-size:12px; margin-top:8px;"></div>
+        </div>
+        <button class="btn ghost" onclick="location.href='./landing.html'" style="margin-top:12px;">← Kembali ke beranda</button>
 
       </div>
     </div>
@@ -1877,6 +1884,27 @@ window.masukTamuNow = async () => {
     } else {
       if (err) err.textContent = "Gagal masuk sebagai tamu: " + (e.message||e);
     }
+  }
+};
+
+// Klaim akun demo 7 hari: buat akun otomatis (<nama>demo1234@gmail.com /
+// <nama>1234) lalu langsung login.
+window.klaimDemoNow = async () => {
+  const info = document.getElementById("demo-info");
+  const btn = document.getElementById("demo-btn");
+  const nama = document.getElementById("demo-nama")?.value || "";
+  if (info) info.textContent = "";
+  try { FB.demoKredensial(nama); }
+  catch (e) { if (info) { info.style.color = "var(--red)"; info.textContent = e.message; } return; }
+  if (btn){ btn.disabled = true; btn.textContent = "Membuat akun demo…"; }
+  try {
+    await FB.klaimAkunDemo(nama);
+    toast("Akun demo aktif 7 hari 🎉");
+    // onAuth listener memindahkan ke home setelah login.
+  } catch (e) {
+    console.error("Demo error:", e);
+    if (info){ info.style.color = "var(--red)"; info.textContent = e.code?.startsWith("demo-") ? e.message : friendlyAuthError(e); }
+    if (btn){ btn.disabled = false; btn.textContent = "Klaim Akun Demo 7 Hari"; }
   }
 };
 

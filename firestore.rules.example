@@ -22,7 +22,26 @@ service cloud.firestore {
     function profilPath(u){ return /databases/$(database)/documents/siswa/$(u); }
     function adaProfil()  { return signedIn() && exists(profilPath(me())); }
     function profil()     { return get(profilPath(me())).data; }
-    function aktif()      { return adaProfil() && profil().get('status', 'aktif') != 'nonaktif'; }
+    // Akun demo (kelas "demo"): demoSejak = epoch ms mulai; lewat 7 hari → ditolak semua.
+    function demoMasihAktif(){
+      let t = profil().get('demoSejak', null);
+      return t == null || !(t is number) || request.time.toMillis() < t + 604800000;
+    }
+    function aktif()      { return adaProfil() && profil().get('status', 'aktif') != 'nonaktif' && demoMasihAktif(); }
+    // Klaim demo mandiri: siswa membuat profilnya sendiri, hanya dengan bentuk ini.
+    function demoBaru(sid) {
+      let d = request.resource.data;
+      return signedIn() && me() == sid
+        && request.auth.token.email.matches('.*demo1234@gmail[.]com')
+        && d.get('email', '') == request.auth.token.email
+        && d.get('role', 'student') == 'student'
+        && d.get('status', 'aktif') == 'aktif'
+        && d.get('kelas', '') == 'demo'
+        && d.get('demoSejak', null) is number
+        && d.demoSejak >= request.time.toMillis() - 3600000
+        && d.demoSejak <= request.time.toMillis() + 3600000
+        && !d.keys().hasAny(['permissions']);
+    }
     function role()       { return profil().get('role', 'student'); }
     function isAdmin()    { return ownerEmail() || (aktif() && role() in ['admin', 'developer']); }
     function isGuru()     { return isAdmin() || (aktif() && role() == 'guru'); }
@@ -41,7 +60,9 @@ service cloud.firestore {
       // atau moderator mem-bootstrap profilnya sendiri.
       allow create: if (isGuru() && request.resource.data.get('role', 'student') == 'student')
                     || (isAdmin() && request.resource.data.get('role', 'student') in ['student', 'guru'])
-                    || (me() == sid && ownerEmail());
+                    || (me() == sid && ownerEmail())
+                    // Klaim akun demo 7 hari (lihat demoBaru).
+                    || demoBaru(sid);
 
       allow update: if
           // Siswa: profil ringan saja (nama, karakter, aktif), tidak boleh ubah hak akses.
