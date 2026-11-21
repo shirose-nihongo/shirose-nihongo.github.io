@@ -1,4 +1,5 @@
 /* Service worker: network-first, cache fallback */
+// v414 — hub siswa 3 tab (js/siswa-hub.js): Profil / Akses / Nilai.
 // v412 — landing: tema interaktif, pulau 20 bidang, buku scan multi-bidang, latihan menulis kanji.
 // v409 — landing baru (orbit karakter, statistik nyata, demo, pulau SSW, CTA WhatsApp).
 // v408 — logo native juga di landing, teacher & kartu login; css/logo.css dibagi bersama.
@@ -12,7 +13,7 @@
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
 // v405 — Konfirmasi keluar sesi hafalan (JLPT/JFT/SSW, Kana, Mensetsu flashcard).
-const CACHE = "shirose-nihongo-v413";
+const CACHE = "shirose-nihongo-v414";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
@@ -61,6 +62,7 @@ const CORE = [
   "./css/themes.css",
   "./js/themes.js",
   "./js/ssw-core.js",
+  "./js/siswa-hub.js",
   "./js/ssw-art.js",
   "./css/ssw.css",
   "./js/mensetsu.js",
