@@ -98,7 +98,7 @@ function setPlayBtn(id, on, mode){
   if (m && mode !== undefined) m.textContent = mode;
 }
 window.addEventListener("sv:stop", (e) => { if (_playingId && e.detail?.next !== _playingId){ setPlayBtn(_playingId, false, ""); _playingId = null; } });
-const DEF_VOICES = { N: "aoyama", M: "kurita", F: "mochiko", M2: "sourin", F2: "no7" };
+const DEF_VOICES = { N: "aoyama", M: "kurita", F: "mochiko", M2: "sourin", F2: "goki" };
 async function playItem(lvl, id){
   if (_playingId === id){ SV.stop(); return; }
   const pk = pkOf(id);

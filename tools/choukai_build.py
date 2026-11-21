@@ -16,7 +16,7 @@ FORMAT NASKAH
   S 教室で先生と学生が話しています。   ← situasi (hatsuwa: kalimat situasi + 何と言いますか)
   Q 学生は明日何を持ってきますか。     ← pertanyaan (統合理解 2 soal: "Q 質問1　…=1" dst.)
   V F=no7 M=kurita      ← (opsional) petunjuk suara. Narator N selalu aoyama; pembicara lain
-                          diacak dari mochiko/goki/no7/nana (F) dan kurita/sourin (M)
+                          diacak dari mochiko/goki/nana (F); no7 khusus anak kecil dan kurita/sourin (M)
   C Kamu ingin …         ← (hatsuwa) keterangan gambar dalam bahasa Indonesia
   R M                   ← (opsional) siapa yang membacakan pilihan (hatsuwa / sokuji)
   F: …  M: …  F2: …  M2: …  N: …       ← baris percakapan
@@ -31,19 +31,20 @@ import json, os, re, sys, glob, collections, hashlib, random
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "tools", "choukai-src")
 OUT = os.path.join(ROOT, "choukai", "paket")
-DEF_V = {"N": "aoyama", "M": "kurita", "F": "mochiko", "M2": "sourin", "F2": "no7"}
+DEF_V = {"N": "aoyama", "M": "kurita", "F": "mochiko", "M2": "sourin", "F2": "goki"}
 SPK = re.compile(r"^(N|M2|F2|M|F)[:：]\s*(.+)$")
 ROMAN = {"kadai", "point"}
 NUMERIC = re.compile(r"[0-9０-９一二三四五六七八九十百千万]|時|分|円|曜日|階|番|ページ|歳|年|月")
 
 
-FEMALE = ["mochiko", "goki", "no7", "nana"]
+FEMALE = ["mochiko", "goki", "nana"]   # no7 = suara anak kecil (tidak dipakai untuk dewasa)
+CHILD = ["no7"]
 MALE = ["kurita", "sourin"]
 
 
 def assign_voices(seed, it):
     """Narator (N) SELALU aoyama. Pembicara lain diacak dari 6 karakter lain
-    (perempuan: mochiko/goki/no7/nana, laki-laki: kurita/sourin), tidak dobel dalam satu soal.
+    (perempuan: mochiko/goki/nana, laki-laki: kurita/sourin), tidak dobel dalam satu soal.
     Baris V hanya dipakai sebagai petunjuk peran bila suaranya bukan aoyama."""
     rnd = random.Random(seed)
     hint = {}

@@ -232,6 +232,8 @@ function bicara(teks, onend) {
 
 /* ---------- sesi ujian ---------- */
 let J = null, _tick = null;
+const _srcLbl = {};   // sumber suara terakhir per nomor soal (label di tombol putar)
+const setSrc = (idx, t) => { _srcLbl[idx] = t; const e = $("jft-src"); if (e) e.textContent = t; };
 const simpanSesi = () => { if (J && J.mode !== "latihan" && !J.selesai) LS.set(SESI_KEY(), J); };
 function pulihSesi() { const s = LS.get(SESI_KEY(), null); if (s && !s.selesai && s.endAt > Date.now()) return s; LS.del(SESI_KEY()); return null; }
 const rentang = (sek) => { const idx = []; J.qs.forEach((q, i) => { if (q.sec === sek) idx.push(i); }); return idx; };
@@ -300,6 +302,7 @@ function renderSoal() {
   const teks = q.fl ? renderFlyer(q.fl) : q.p ? `<div class="jft-passage">${nl(q.p)}</div>` : "";
   const audio = dengar ? `<div class="jft-audio">
       <button class="btn" id="jft-play" ${main >= maxPlay ? "disabled" : ""} onclick="JFT.play()">▶ Putar audio ${sim ? `(${main}/${maxPlay})` : ""}</button>
+      <span id="jft-src" class="jft-hint" style="margin-left:8px">${_srcLbl[J.idx] || ""}</span>
       <div class="jft-hint">${sim ? "Audio hanya bisa diputar 2 kali. Soal tidak bisa kembali." : "Latihan: audio bisa diputar berulang."} Teks audio tidak ditampilkan saat ujian.</div></div>` : "";
   const isi = q.tipe === "isi"; const latih = J.mode === "latihan"; const sudahCek = latih && J.cek && J.cek[J.idx];
   const picO = !isi && isPicOpts(q.o);
@@ -369,9 +372,10 @@ window.JFT = {
     const b = $("jft-play"); if (b) { b.disabled = true; b.textContent = "🔊 Memutar…"; }
     const q = J.qs[J.idx];
     const selesai = (ok) => { if (!J || J.selesai) return; draw(); if (ok === false) toastP("Audio tidak bisa diputar di perangkat ini"); };
-    const cadangan = () => bicara(q.say, selesai);
+    const idx = J.idx;
+    const cadangan = () => { setSrc(idx, "🤖 suara browser (cadangan, bukan VOICEVOX)"); bicara(q.say, selesai); };
     if (q.audio) {
-      try { try { speechSynthesis.cancel(); } catch (e) {} const a = new Audio("./" + q.audio); window.__jftAudio = a; a.onended = () => selesai(true); a.onerror = cadangan; const pr = a.play(); if (pr && pr.catch) pr.catch(cadangan); } catch (e) { cadangan(); }
+      try { try { speechSynthesis.cancel(); } catch (e) {} const a = new Audio("./" + q.audio); window.__jftAudio = a; a.onplaying = () => setSrc(idx, "🎙️ VOICEVOX"); a.onended = () => selesai(true); a.onerror = cadangan; const pr = a.play(); if (pr && pr.catch) pr.catch(cadangan); } catch (e) { cadangan(); }
     } else cadangan();
   },
   minta() { J.konfirm = true; draw(); },
