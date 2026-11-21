@@ -1851,7 +1851,10 @@ function renderLogin(){
         <div style="margin-top:16px; padding:14px; border:1px dashed var(--pink); border-radius:12px; text-align:left;">
           <b>🎁 Coba gratis 7 hari</b>
           <p style="font-size:12px; color:var(--gray); margin:6px 0 10px;">Semua materi terbuka. Isi namamu, akun demo dibuat otomatis lalu kamu langsung masuk.</p>
-          <input type="text" id="demo-nama" placeholder="Nama kamu (mis. budi)" maxlength="30" autocomplete="given-name" onkeydown="if(event.key==='Enter') klaimDemoNow()"/>
+          <div class="form-group" style="margin-bottom:10px;">
+            <label>Nama</label>
+            <input type="text" id="demo-nama" placeholder="Nama kamu (mis. budi)" maxlength="30" autocomplete="given-name" onkeydown="if(event.key==='Enter') klaimDemoNow()"/>
+          </div>
           <button class="btn" id="demo-btn" onclick="klaimDemoNow()" style="margin-top:8px;">Klaim Akun Demo 7 Hari</button>
           <div id="demo-info" style="font-size:12px; margin-top:8px;"></div>
         </div>
