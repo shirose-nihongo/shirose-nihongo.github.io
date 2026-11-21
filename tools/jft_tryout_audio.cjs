@@ -25,7 +25,7 @@ t.paket.forEach((pk, pi) => {
       return { s: "F", t: l.replace(/^（[^）]*）/, "") };   // pengumuman/siaran: suara perempuan
     });
     const h = hash(id);
-    const voices = { N: "aoyama", F: FEMALE[h % FEMALE.length], M: MALE[(h >> 3) % MALE.length] };
+    const voices = { N: "aoyama", F: FEMALE[h % FEMALE.length], M: MALE[(h >>> 3) % MALE.length] };
     const used = [...new Set(lines.map((l) => l.s))];
     const audio = `audio/choukai/jft/try/${id}.mp3`;
     const it = { id, no: n, audio, q: x.q, script: [{ s: "N", t: x.q }, ...lines, { s: "N", t: x.q }],
