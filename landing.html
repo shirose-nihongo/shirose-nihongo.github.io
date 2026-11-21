@@ -99,7 +99,7 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .st-node{display:flex;flex-direction:column;align-items:center;gap:1px;padding:1.5cqw 2.6cqw;border-radius:3.6cqw;background:rgba(22,27,54,.92);border:1px solid var(--c,#3a4080);box-shadow:0 6px 18px rgba(0,0,0,.35);white-space:nowrap;text-align:center}
 .st-node b{font-family:var(--font-jp);font-size:4.2cqw;line-height:1.1;color:var(--c,#fff)}
 .st-node small{font-size:2.5cqw;color:var(--gray);line-height:1.1}
-.hero-char{position:absolute;left:50%;top:50%;width:27%;transform:translate(-50%,-50%);animation:bob 4.5s ease-in-out infinite;filter:drop-shadow(0 10px 22px rgba(0,0,0,.45))}
+.hero-char{position:absolute;left:50%;top:50%;width:38%;transform:translate(-50%,-50%);animation:bob 4.5s ease-in-out infinite;filter:drop-shadow(0 10px 22px rgba(0,0,0,.45))}
 .hero-char svg{width:100%;height:auto;display:block}
 .hero-fallback{width:100%;aspect-ratio:.8;border-radius:20px;background:#1f2650;border:3px solid var(--pink);display:flex;align-items:center;justify-content:center;font-family:var(--font-jp);font-weight:800;font-size:12cqw}
 @keyframes bob{50%{transform:translate(-50%,-52%)}}
@@ -648,8 +648,9 @@ import {islandSVG} from "./js/ssw-art.js";
   });
 })();
 var $ = function(s){return document.querySelector(s)};
-var heroEq = {rambut:"anime_boy", pakaian:"hoodie_pink", sepatu:"sneakers_putih", aksesori:"headband_pink", item_tangan:"buku_emas", aura:"aura_pink"};
-try { $("#heroChar").innerHTML = renderCharacter(heroEq, "light"); } catch(e){}
+var heroEq = {rambut:"hr_perak", pakaian:"o_armor_surya", celana:"cl_emas_kaisar", sepatu:"sh_emas", aksesori:"none", sayap:"sy2_emas_agung", item_tangan:"hh_pedang_naga", aura:"au2_emas_bintang"};
+var BODY = {body:"male"};   // selalu cowok, tidak ikut pilihan tersimpan di perangkat
+try { $("#heroChar").innerHTML = renderCharacter(heroEq, "light", BODY); } catch(e){}
 
 var eq = Object.assign({}, DEFAULT_EQUIPPED, heroEq), skin = "light";
 /* Slot & item diambil langsung dari katalog karakter aplikasi (ikut bertambah saat katalog bertambah). */
@@ -660,7 +661,7 @@ function pickIds(k){
   var cat = CATALOG[k], ids = Object.keys(cat).filter(function(id){ return id!=="none" && cat[id] && cat[id].svg && cat[id].g!=="f"; });
   return ["none"].concat(ids.slice(0,7));
 }
-function draw(){ $("#stage").innerHTML = renderCharacter(eq, skin); }
+function draw(){ $("#stage").innerHTML = renderCharacter(eq, skin, BODY); }
 function build(){
   var box = $("#slots"); box.textContent = "";
   var s0 = document.createElement("div"); s0.className = "slot";
