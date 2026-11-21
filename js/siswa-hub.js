@@ -63,6 +63,10 @@ const CSS = `<style>
 const tabBar = (t) => `<div class="hub-tabs">${[["profil", "👤 Profil"], ["akses", "🔑 Akses"], ["nilai", "📊 Nilai"]].map(([k, l]) => `<button class="${t === k ? "on" : ""}" onclick="route('profile${k === "profil" ? "" : "/" + k}')">${l}</button>`).join("")}</div>`;
 
 export async function renderHub(rest) {
+  // Halaman Profil polos: hanya tombol Keluar. (Tab Akses/Nilai tetap bisa dibuka langsung lewat #profile/akses atau #profile/nilai.)
+  if (!["akses", "nilai"].includes(rest && rest[0])) {
+    return `<div class="panel" style="text-align:center"><h2>👤 Profil</h2><button class="btn ghost danger" style="margin-top:12px" onclick="logout()">⎋ Keluar</button></div>`;
+  }
   const tab = ["akses", "nilai"].includes(rest && rest[0]) ? rest[0] : "profil";
   const body = tab === "akses" ? await tabAkses() : tab === "nilai" ? await tabNilai() : await tabProfil();
   return `<div class="panel">${CSS}<h2>👤 Akun Saya</h2>${tabBar(tab)}${body}</div>`;

@@ -995,7 +995,7 @@ async function _panelNilai(s){
         return `<div class="pn-jenis"><div class="pn-jh">${lab} <small>(${done}/${pk.length} paket dikerjakan)</small></div>${kat}<div class="pn-chips">${pk.map(p => { const h = best[p.id]; if (j === "full"){ const sc = h ? _skorJlpt(h) : null; const rinci = sc && sc.secs.length ? " · " + sc.secs.map(s => `${s.l} ${s.skor}/${s.max}${s.lulus ? "" : " ✗"}`).join(" · ") + (sc.lulus ? " · LULUS" : " · belum lulus") : (sc ? " · estimasi (data lama)" : " · belum dikerjakan"); return _chipNilai(p.id.split("-").pop(), sc ? sc.total : null, _JLPT_PASS[l] || 90, `${p.judul}${rinci}`, 180); }
           return _chipNilai(p.id.split("-").pop(), h ? h.skor : null, 60, `${p.judul}${h ? ` · ${h.benar}/${h.total} benar` : " · belum dikerjakan"}`); }).join("")}</div></div>`;
       }).join("");
-      return `<details class="pn-det" open><summary>📘 JLPT ${l.toUpperCase()}</summary>${baris || '<div style="color:var(--gray);">Belum ada paket ujian.</div>'}</details>`;
+      return `<details class="pn-det"><summary>📘 JLPT ${l.toUpperCase()}</summary>${baris || '<div style="color:var(--gray);">Belum ada paket ujian.</div>'}</details>`;
     });
     out.push(bag.join(""));
   }
@@ -1020,10 +1020,10 @@ async function _panelNilai(s){
         return `<div class="pn-jenis"><div class="pn-jh">${lab} <small>${rata != null ? `· rata-rata ${rata}%` : ""}</small></div><div class="pn-chips">${ps.map((x, p) => _chipNilai("Paket " + (p + 1), x ? x.sc : null, 60)).join("")}</div></div>`;
       }).join("");
       const sim = l === "ir2" ? `<div class="pn-jenis"><div class="pn-jh">🏁 Simulasi penuh JFT-Basic <small>(skor 10–250, lulus ≥ 200)</small></div><div class="pn-chips">${[0,1,2,3,4].map(p => { const x = bestJ[`ir2:sim${p}`]; return _chipNilai("Paket " + (p + 1), x ? x.sc : null, 200, "", 250); }).join("")}</div></div>` : "";
-      return `<details class="pn-det" open><summary>📝 JFT ${n}</summary>${blok}${sim}</details>`;
+      return `<details class="pn-det"><summary>📝 JFT ${n}</summary>${blok}${sim}</details>`;
     }).join("");
     const tr = [0,1,2,3,4,5].map(p => bestJ[`tryout:try${p}`]);
-    const tryout = tr.some(Boolean) ? `<details class="pn-det" open><summary>🏁 JFT Tryout</summary><div class="pn-chips">${tr.map((x, p) => x ? _chipNilai("Paket " + (p + 1), x.sc, 200, "", 250) : "").join("")}</div></details>` : "";
+    const tryout = tr.some(Boolean) ? `<details class="pn-det"><summary>🏁 JFT Tryout</summary><div class="pn-chips">${tr.map((x, p) => x ? _chipNilai("Paket " + (p + 1), x.sc, 200, "", 250) : "").join("")}</div></details>` : "";
     out.push(bagJ + tryout);
   }
   return out.length ? out.join("") : `<div style="color:var(--gray);">Belum ada materi yang diikuti siswa ini.</div>`;
