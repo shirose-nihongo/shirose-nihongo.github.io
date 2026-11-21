@@ -151,6 +151,22 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .sswtabs span{font-size:12.5px;padding:5px 12px;border-radius:999px;border:1px solid var(--navy-3);color:var(--gray)}
 .sswtabs span.on{background:rgba(245,158,11,.16);border-color:rgba(245,158,11,.55);color:var(--orange);font-weight:700}
 
+/* kanji goresan */
+.kc-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.kc-cols{grid-template-columns:1fr}}
+.kc-lbl{font-size:12.5px;color:var(--gray-dim);margin-bottom:6px;font-weight:700}
+.kc-box{aspect-ratio:1;border-radius:14px;overflow:hidden;background:#fdfbf4;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.kc-box svg{width:100%;height:100%;display:block}
+.kc-canvas{display:block;touch-action:none;cursor:crosshair;width:100%;height:100%}
+.kc-tools{display:flex;gap:6px;margin-top:8px}.kc-tools .btn{flex:1;padding-left:8px;padding-right:8px}
+.kc-res{margin-top:10px;font-size:14px;color:var(--gray);min-height:44px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.05)}
+.kc-res b{color:#fff}
+.bk-sel{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;scrollbar-width:thin}
+.bk-sel button{flex:none}
+.bk-tabs{display:flex;gap:6px;margin-bottom:10px}
+.bk-sum{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:14px;padding:14px 16px;font-size:14.5px;color:var(--gray);min-height:200px}
+.bk-sum h4{color:#fff;font-size:16px;margin-bottom:6px;font-family:var(--font-jp)}
+.bk-sum ul{margin:8px 0 0 18px;display:grid;gap:5px}
 /* quiz demo */
 .qz-q{font-size:19px;line-height:1.7;margin:6px 0 14px;font-family:var(--font-jp)}
 .qz-q u{text-decoration-color:var(--pink);text-underline-offset:4px;text-decoration-thickness:2px}
@@ -225,6 +241,9 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .themes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
 @media(max-width:700px){.themes{grid-template-columns:repeat(2,1fr)}}
 .th{border:1px solid var(--border);border-radius:16px;padding:20px 12px;text-align:center;transition:transform .2s}
+.th[data-t="putih"] b{color:#161b36}
+button.th{cursor:pointer;font:inherit;color:#fff;background-clip:padding-box}
+.th[aria-pressed="true"]{outline:3px solid var(--gold);outline-offset:2px}
 .th:hover{transform:translateY(-3px)}.th span{display:block;font-size:30px}.th b{font-family:var(--font-jp);font-size:15px}
 
 /* WA CTA band */
@@ -281,6 +300,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 <link rel="stylesheet" href="./css/logo.css?v=20261120b"/>
+<link rel="stylesheet" href="./css/themes.css?v=20261120a"/>
 </head>
 <body>
 
@@ -304,6 +324,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     </div>
     <div class="nav-cta">
       <a class="btn wa sm" data-wa href="#demo">Demo 7 Hari</a>
+      <a class="btn ghost sm" href="#tema" aria-label="Ganti tema">🎨 Tema</a>
       <a class="btn ghost sm" href="./index.html#login">Login</a>
     </div>
   </div>
@@ -377,6 +398,30 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       </div>
     </div>
 
+    <!-- 1b. KANJI GORESAN -->
+    <div class="show flip rv">
+      <div class="txt">
+        <span class="badge">Kanji &amp; Kana</span>
+        <h3>Lihat urutan goresan, lalu tulis sendiri</h3>
+        <p>Setiap kanji punya animasi urutan goresan. Ikuti garis bayangan di kanvas, dan tiap goresanmu langsung diperiksa bentuk dan arahnya. Bisa dengan jari, mouse, atau stylus.</p>
+        <ul class="tick">
+          <li><b data-count="total.kanjiJlpt">2.256</b> kanji dengan goresan, plus Hiragana &amp; Katakana</li>
+          <li>Mode ikuti bayangan atau tulis dari ingatan</li>
+          <li>Penilaian perkiraan: bentuk, arah, urutan, dan posisi</li>
+        </ul>
+      </div>
+      <div class="demo" id="kc-demo">
+        <div class="demo-h"><div class="seg" id="kc-pick" role="group" aria-label="Pilih kanji"></div></div>
+        <div class="kc-cols">
+          <div><div class="kc-lbl">Urutan goresan</div><div class="kc-box" id="kc-stage"></div><button class="btn ghost sm" id="kc-replay" style="margin-top:8px;width:100%">▶ Putar ulang</button></div>
+          <div><div class="kc-lbl">Tulis di sini</div><div class="kc-box" id="kc-cv"></div>
+            <div class="kc-tools"><button class="btn ghost sm" id="kc-undo">↶ Batal</button><button class="btn ghost sm" id="kc-clear">Hapus</button><button class="btn primary sm" id="kc-check">Periksa</button></div></div>
+        </div>
+        <div class="seg" style="margin-top:10px"><button id="kc-m-trace" aria-pressed="true">Ikuti bayangan</button><button id="kc-m-mem" aria-pressed="false">Dari ingatan</button></div>
+        <div class="kc-res" id="kc-res">Tulis kanjinya, lalu ketuk Periksa.</div>
+      </div>
+    </div>
+
     <!-- 2. SSW BOOK -->
     <div class="show flip rv">
       <div class="txt">
@@ -384,15 +429,17 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         <h3>Buku scan andalan, jadi interaktif</h3>
         <p>Buku teks resmi SSW dipindai halaman demi halaman dan dilengkapi ringkasan Indonesia &amp; Jepang, kosakata, dan kuis di tiap subbab. Baca seperti buku asli, belajar seperti aplikasi.</p>
         <ul class="tick">
-          <li><span><b data-count="total.sswBidang">8</b> bidang · <b data-count="total.sswBab">55</b> bab · <b data-count="total.sswSub">269</b> subbab</span></li>
+          <li><span><b data-count="total.sswBidang">20</b> bidang · <b data-count="total.sswBab">55</b> bab · <b data-count="total.sswSub">269</b> subbab</span></li>
           <li><b data-count="total.sswHalamanBuku">2.404</b> halaman buku scan siap dibaca</li>
           <li>Kuis per bab: <b data-count="total.sswQuiz">5.529</b> soal</li>
         </ul>
       </div>
       <div class="demo">
-        <div class="sswtabs"><span class="on">📖 Buku</span><span>📝 Ringkasan</span><span>🔤 Kosakata</span><span>✅ Kuis</span></div>
+        <div class="bk-sel seg" id="bk-sel" role="group" aria-label="Pilih bidang"></div>
+        <div class="demo-h" style="margin-bottom:10px"><div class="seg" id="bk-tabs"><button data-t="buku" aria-pressed="true">📖 Buku scan</button><button data-t="ring" aria-pressed="false">📝 Ringkasan</button></div><div class="seg" id="bk-lang" style="margin-left:auto"></div></div>
         <div class="book" id="book"><div class="pg"><img alt="Halaman buku SSW kiri" loading="lazy"></div><div class="pg"><img alt="Halaman buku SSW kanan" loading="lazy"></div></div>
-        <div class="book-bar"><button class="btn ghost sm" id="bk-prev" aria-label="Halaman sebelumnya">←</button><div class="pos" id="bk-pos">Kaigo · halaman</div><button class="btn primary sm" id="bk-next" aria-label="Halaman berikutnya">→</button></div>
+        <div class="bk-sum" id="bk-sum" hidden></div>
+        <div class="book-bar" id="bk-bar"><button class="btn ghost sm" id="bk-prev" aria-label="Halaman sebelumnya">←</button><div class="pos" id="bk-pos">Kaigo · halaman</div><button class="btn primary sm" id="bk-next" aria-label="Halaman berikutnya">→</button></div>
       </div>
     </div>
 
@@ -464,8 +511,9 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 <section id="tema">
   <div class="wrap">
     <div class="center rv"><div class="eyebrow">テーマ</div><h2>Tema tampilan</h2>
-      <p class="lead">Ganti suasana belajar sesuai seleniamu. Tersedia tema Ungu (bawaan) dan tema cuaca dengan latar bergerak.</p></div>
-    <div class="themes rv" aria-hidden="true"><div class="th" style="background:linear-gradient(145deg,#161b36 55%,#8b5cf6)"><span>🟣</span><b>Ungu</b></div><div class="th" style="background:linear-gradient(145deg,#12345f 55%,#4aa3ff)"><span>☀️</span><b>Cerah</b></div><div class="th" style="background:linear-gradient(145deg,#1c2733 55%,#5b7a93)"><span>🌧️</span><b>Hujan</b></div><div class="th" style="background:linear-gradient(145deg,#243a52 55%,#bfe3ff)"><span>❄️</span><b>Salju</b></div><div class="th" style="background:linear-gradient(145deg,#2d1a14 55%,#f08a24)"><span>🍁</span><b>Gugur</b></div><div class="th" style="background:linear-gradient(145deg,#0b3b5c 55%,#22d3ee)"><span>🌊</span><b>Panas</b></div><div class="th" style="background:linear-gradient(145deg,#2e1f4a 55%,#ffb3d6)"><span>🌸</span><b>Semi</b></div><div class="th" style="background:linear-gradient(145deg,#1a1a24 55%,#ffd60a)"><span>⛈️</span><b>Badai</b></div></div>
+      <p class="lead">Ganti suasana belajar sesuai seleramu. Coba langsung: seluruh halaman ini ikut berubah, termasuk latar cuaca yang bergerak.</p></div>
+    <div class="themes rv" id="th-grid"></div>
+    <p class="note center" id="th-note" style="margin-top:14px">Ketuk tema untuk mencobanya. Pilihanmu ikut tersimpan dan dipakai juga di aplikasi.</p>
   </div>
 </section>
 
@@ -584,6 +632,8 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 
 <div class="wa-float"><a class="btn wa" data-wa href="#demo">💬 Klaim Demo 7 Hari Gratis</a></div>
 
+<script>window.SHIROSE_THEME_FREE = true;  /* di landing semua tema terbuka untuk dicoba */</script>
+<script src="./js/themes.js?v=20261118c"></script>
 <script src="./js/landing-config.js"></script>
 <script src="./js/landing-stats.js"></script>
 <script>
@@ -637,17 +687,55 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 /* Karakter asli aplikasi (js/character.js) dipakai di hero & Studio Karakter. */
 import {renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED} from "./js/character.js";
 import {islandSVG} from "./js/ssw-art.js";
+import {loadGlyph, createPlayer, WriteCanvas, labelFor} from "./js/writer.js";
 (function(){
   var G = document.getElementById("isl-grid"); if (!G) return;
-  [["Building Cleaning","ビルクリーニング","building"],["Kaigo","介護","kaigo"],["Food Manufacturing","飲食料品製造業","factory"],["Food Service","外食業","restaurant"],["Agriculture","農業","farm"],["Construction","建設","construction"],["Accommodation","宿泊","hotel"],["Livestock","畜産業","farm"]].forEach(function(b,i){
-    var d = document.createElement("div"); d.className = "isl"; d.style.setProperty("--d",(i*0.7).toFixed(1)+"s");
-    try { d.innerHTML = islandSVG(b[2]); } catch(e){}
-    var n = document.createElement("b"); n.textContent = b[0]; var j = document.createElement("i"); j.textContent = b[1];
-    var s = document.createElement("small"); s.textContent = "Tersedia";
+  var L = ((window.LANDING_STATS || {}).ssw || {}).islands || [];
+  L.forEach(function(b,i){
+    var d = document.createElement("div"); d.className = "isl"; d.style.setProperty("--d",((i%8)*0.7).toFixed(1)+"s");
+    try { d.innerHTML = islandSVG(b.tema); } catch(e){}
+    var n = document.createElement("b"); n.textContent = b.nama; var j = document.createElement("i"); j.textContent = b.jp;
+    var s = document.createElement("small"); s.textContent = b.sub ? b.sub+" sub-bidang" : "Tersedia";
     d.appendChild(n); d.appendChild(j); d.appendChild(s); G.appendChild(d);
   });
 })();
 var $ = function(s){return document.querySelector(s)};
+/* ---- kanji: animasi goresan + kanvas menulis (js/writer.js, data/kanji-strokes) ---- */
+(function(){
+  var host = $("#kc-stage"), cvHost = $("#kc-cv"); if (!host || !cvHost) return;
+  var KS = ["日","本","学","生","水","山","人","大"], cur = null, player = null, wc = null, mode = "trace", started = false;
+  var res = $("#kc-res");
+  function say(h){ res.textContent = ""; if (typeof h === "string") res.textContent = h; else res.appendChild(h); }
+  function setPressed(btns, on){ btns.forEach(function(b){ b.setAttribute("aria-pressed", String(b===on)); }); }
+  function show(ch, btn){
+    var pick = $("#kc-pick"); pick.querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", String(b===btn)); });
+    loadGlyph(ch, "./").then(function(g){
+      cur = g;
+      if (player) player.destroy(); player = createPlayer(host, g); player.play();
+      if (!wc) wc = new WriteCanvas(cvHost, {});
+      wc.setGlyph(g); wc.setMode(mode);
+      say("Tulis kanjinya, lalu ketuk Periksa.");
+    }).catch(function(e){ say("Data goresan belum bisa dimuat."); });
+  }
+  KS.forEach(function(ch, i){
+    var b = document.createElement("button"); b.textContent = ch; b.style.fontFamily = "var(--font-jp)"; b.style.fontSize = "18px"; b.setAttribute("aria-pressed","false");
+    b.onclick = function(){ show(ch, b); }; $("#kc-pick").appendChild(b);
+  });
+  var first = $("#kc-pick").firstChild;
+  function start(){ if (started) return; started = true; show(KS[0], first); }
+  $("#kc-replay").onclick = function(){ if (player) player.replay(); };
+  $("#kc-undo").onclick = function(){ if (wc) wc.undo(); };
+  $("#kc-clear").onclick = function(){ if (wc) wc.clear(); say("Tulis kanjinya, lalu ketuk Periksa."); };
+  $("#kc-m-trace").onclick = function(){ mode = "trace"; setPressed([$("#kc-m-trace"),$("#kc-m-mem")], $("#kc-m-trace")); if (wc) wc.setMode(mode); };
+  $("#kc-m-mem").onclick = function(){ mode = "memory"; setPressed([$("#kc-m-trace"),$("#kc-m-mem")], $("#kc-m-mem")); if (wc) wc.setMode(mode); say("Mode ingatan: tulis tanpa bayangan. Butuh petunjuk? Ketuk Periksa setelah menulis."); };
+  $("#kc-check").onclick = function(){
+    if (!wc || !cur) return; var r = wc.result();
+    if (!r || !r.total && !wc.strokes.length) return say("Belum ada goresan. Tulis dulu di kanvas.");
+    var d = document.createElement("div"); var b = document.createElement("b"); b.textContent = "Perkiraan " + r.total + "/100 · " + labelFor(r.total);
+    d.appendChild(b); d.appendChild(document.createElement("br")); d.appendChild(document.createTextNode((r.tips && r.tips[0]) || "")); say(d);
+  };
+  if ("IntersectionObserver" in window){ var o = new IntersectionObserver(function(es){ if (es[0].isIntersecting){ start(); o.disconnect(); } }, {rootMargin:"250px"}); o.observe($("#kc-demo")); } else start();
+})();
 var heroEq = {rambut:"hr_perak", pakaian:"o_armor_surya", celana:"cl_emas_kaisar", sepatu:"sh_emas", aksesori:"none", sayap:"sy2_emas_agung", item_tangan:"hh_pedang_naga", aura:"au2_emas_bintang"};
 var BODY = {body:"male"};   // selalu cowok, tidak ikut pilihan tersimpan di perangkat
 try { $("#heroChar").innerHTML = renderCharacter(heroEq, "light", BODY); } catch(e){}
@@ -744,17 +832,55 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
   var fcStarted = false;
   function startFc(){ if (fcStarted) return; fcStarted = true; fcLoad(); }
 
-  /* ---- buku SSW (halaman scan asli assets/ssw/kaigo/id/pNN.webp) ---- */
-  var bk = {slug:"kaigo", from:20, step:2, i:0, total:271};
-  function bkShow(){
-    var imgs = document.querySelectorAll("#book img"), p = bk.from + bk.i*bk.step;
-    imgs.forEach(function(im,k){ im.src = "./assets/ssw/"+bk.slug+"/id/p"+String(p+k).padStart(2,"0")+".webp"; });
-    $("#bk-pos").textContent = "Kaigo · halaman "+p+"–"+(p+1)+" dari "+bk.total;
+  /* ---- buku SSW: halaman scan asli assets/ssw/{bidang}/{id|jp}/pNN.webp ---- */
+  var BK = ((ST.ssw || {}).book) || [], bk = {i:0, lang:"id", pg:10, tab:"buku"};
+  function bkCur(){ return BK[bk.i]; }
+  function bkInfo(){ var b = bkCur(); return b && b.langs[bk.lang]; }
+  function strip(s){ return String(s||"").replace(/\{([^|{}]+)\|[^{}]*\}/g,"$1").replace(/\*\*/g,""); }
+  function bkLangUi(){
+    var b = bkCur(), box = $("#bk-lang"); box.textContent = "";
+    ["id","jp"].forEach(function(lg){
+      if (!b.langs[lg]) return;
+      var x = el("button",null,lg==="jp"?"日本語":"ID"); x.setAttribute("aria-pressed",String(lg===bk.lang));
+      x.onclick = function(){ bk.lang = lg; bk.pg = b.langs[lg].start; bkLangUi(); bkShow(); }; box.appendChild(x);
+    });
   }
-  $("#bk-prev").onclick = function(){ if (bk.i>0){bk.i--;bkShow();} };
-  $("#bk-next").onclick = function(){ if (bk.from+(bk.i+1)*bk.step+1<=bk.total){bk.i++;bkShow();} };
+  function bkShow(){
+    var b = bkCur(), inf = bkInfo(); if (!b || !inf) return;
+    var imgs = document.querySelectorAll("#book img");
+    imgs.forEach(function(im,k){ im.src = "./assets/ssw/"+b.slug+"/"+bk.lang+"/p"+String(bk.pg+k).padStart(2,"0")+".webp"; });
+    $("#bk-pos").textContent = b.nama+" · halaman "+bk.pg+"–"+(bk.pg+1)+" dari "+inf.total;
+  }
+  function bkSummary(){
+    var b = bkCur(), box = $("#bk-sum"); box.textContent = "Memuat ringkasan…";
+    fetch("./data/ssw/"+b.slug+"/index.json").then(function(r){return r.json()}).then(function(ix){
+      return fetch("./data/ssw/"+b.slug+"/"+ix.bab[0].file).then(function(r){return r.json()});
+    }).then(function(d){
+      var s = (d.bab.subs||[])[0], lg = bk.lang==="jp" ? "jp" : "id";
+      var sm = s && s.summary && (s.summary[lg] || s.summary.id);
+      box.textContent = "";
+      if (!s || !sm){ box.textContent = "Ringkasan bidang ini tersedia di dalam aplikasi."; return; }
+      box.appendChild(el("h4",null,strip((s.title && (s.title[lg]||s.title.id))||"")));
+      if (sm.core) box.appendChild(el("p",null,strip(sm.core)));
+      if (sm.points && sm.points.length){ var ul = el("ul"); sm.points.slice(0,3).forEach(function(p){ ul.appendChild(el("li",null,strip(p))); }); box.appendChild(ul); }
+    }).catch(function(){ box.textContent = "Ringkasan bidang ini tersedia di dalam aplikasi."; });
+  }
+  function bkTab(t){
+    bk.tab = t; document.querySelectorAll("#bk-tabs button").forEach(function(x){ x.setAttribute("aria-pressed",String(x.getAttribute("data-t")===t)); });
+    $("#book").hidden = t!=="buku"; $("#bk-bar").hidden = t!=="buku"; $("#bk-sum").hidden = t!=="ring";
+    if (t==="ring") bkSummary();
+  }
+  document.querySelectorAll("#bk-tabs button").forEach(function(x){ x.onclick = function(){ bkTab(x.getAttribute("data-t")); }; });
+  function bkPick(i){
+    bk.i = i; var b = bkCur(); bk.lang = b.langs.id ? "id" : "jp"; bk.pg = b.langs[bk.lang].start;
+    document.querySelectorAll("#bk-sel button").forEach(function(x,k){ x.setAttribute("aria-pressed",String(k===i)); });
+    bkLangUi(); bkTab(bk.tab); bkShow();
+  }
+  BK.forEach(function(b,i){ var x = el("button",null,b.nama); x.setAttribute("aria-pressed","false"); x.onclick = function(){ bkPick(i); }; $("#bk-sel").appendChild(x); });
+  $("#bk-prev").onclick = function(){ if (bk.pg > 2){ bk.pg = Math.max(2, bk.pg-2); bkShow(); } };
+  $("#bk-next").onclick = function(){ var inf = bkInfo(); if (inf && bk.pg+3 <= inf.total){ bk.pg += 2; bkShow(); } };
   var bkStarted = false;
-  function startBk(){ if (bkStarted) return; bkStarted = true; bkShow(); }
+  function startBk(){ if (bkStarted) return; bkStarted = true; if (BK.length) bkPick(0); }
 
   /* ---- kuis demo (soal asli: jlpt/n5/kotoba-01.json) ---- */
   var qs = [], qi = -1;
@@ -790,6 +916,21 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
     }).catch(function(){ $("#qz-q").textContent = "Soal tidak dapat dimuat."; });
   }
   $("#qz-next").onclick = qShow;
+
+  /* ---- tema: daftar & penerapan dari js/themes.js (sama dengan aplikasi) ---- */
+  (function(){
+    var T = window.SHIROSE_THEME, grid = $("#th-grid"); if (!T || !grid) return;
+    var BG = {ungu:"#8b5cf6",cerah:"#4aa3ff",hujan:"#5b7a93",salju:"#bfe3ff",gugur:"#f08a24",panas:"#22d3ee",semi:"#ffb3d6",badai:"#ffd60a",putih:"#ffffff",mono:"#555555"};
+    function mark(){ var cur = T.get(); grid.querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed",String(b.getAttribute("data-t")===cur)); }); }
+    T.list.forEach(function(t){
+      var b = el("button","th"); b.type = "button"; b.setAttribute("data-t",t[0]);
+      b.style.background = "linear-gradient(145deg,"+t[3]+" 55%,"+(BG[t[0]]||t[3])+")";
+      b.appendChild(el("span",null,t[1])); b.appendChild(el("b",null,t[2].replace(" (bawaan)","")));
+      b.onclick = function(){ T.set(t[0]); mark(); };
+      grid.appendChild(b);
+    });
+    mark();
+  })();
 
   /* ---- sosial & pembaruan ---- */
   var soc = $("#social-list");
