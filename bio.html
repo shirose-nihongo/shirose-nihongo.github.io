@@ -58,6 +58,11 @@ h1{font-family:var(--font-jp);font-size:26px;line-height:1.25;font-weight:800;ma
 .lk.wa:hover{box-shadow:0 12px 38px rgba(37,211,102,.5)}
 .lk.wa .ic{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.35)}
 .lk.wa b{font-size:17.5px}.lk.wa small{color:#eafff1}.lk.wa .ar{color:#fff}
+.lk.ig{border:0;background:linear-gradient(135deg,rgba(131,58,180,.55),rgba(225,48,108,.5) 55%,rgba(253,163,60,.45));box-shadow:0 8px 26px rgba(225,48,108,.22)}
+.lk.ig:hover{box-shadow:0 10px 32px rgba(225,48,108,.4)}
+.lk.ig .ic{background:linear-gradient(45deg,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 100%);border:0;color:#fff}
+.lk.ig .ic svg{width:22px;height:22px}
+.lk.ig small{color:#ffe9f3}
 .lk.off{opacity:.55;pointer-events:none;filter:grayscale(.4)}
 .chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:22px}
 .chips a,.chips span{font-size:13px;padding:6px 14px;border-radius:999px;border:1px solid var(--border-light);color:var(--gray);background:rgba(255,255,255,.04)}
@@ -73,7 +78,7 @@ h1{font-family:var(--font-jp);font-size:26px;line-height:1.25;font-weight:800;ma
     <a class="logo" href="./landing.html" aria-label="Shirose Nihongo"><span style="font-family:var(--font-jp);font-weight:800;font-size:26px;letter-spacing:.06em">シロセ</span><span style="font-weight:700;font-size:12.5px;letter-spacing:.32em;color:var(--pink)">NIHONGO</span></a>
     <h1>Belajar Jepang <span class="grad">seru &amp; terstruktur</span></h1>
     <div class="tag">日本語を学び、未来を広げよう。</div>
-    <p class="sub">JLPT N5–N1, JFT-Basic, SSW dengan buku interaktif, kanji, dan latihan wawancara kerja.</p>
+    <p class="sub">Kelas Bahasa Jepang Online · Hiragana sampai JLPT N1, SSW, dan wawancara kerja. Daftar trial gratis 👇</p>
     <div class="stats" id="stats" aria-label="Isi aplikasi"></div>
   </section>
 
@@ -82,6 +87,11 @@ h1{font-family:var(--font-jp);font-size:26px;line-height:1.25;font-weight:800;ma
       <span class="ic" aria-hidden="true">💬</span>
       <span class="tx"><b data-wa-label>Join Grup WhatsApp</b><small>Klaim akun demo 7 hari gratis, coba semua fitur</small></span>
       <span class="ar" aria-hidden="true">→</span>
+    </a>
+    <a class="lk ig" id="lk-ig" href="#" hidden>
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+      <span class="tx"><b>Ikuti Instagram <span id="ig-handle"></span></b><small>Info kelas, materi, dan pengumuman terbaru</small></span>
+      <span class="ar" aria-hidden="true">›</span>
     </a>
     <a class="lk" href="./landing.html"><span class="ic" aria-hidden="true">🌸</span><span class="tx"><b>Kenali Shirose Nihongo</b><small>Fitur, level, pulau SSW, dan coba tema</small></span><span class="ar" aria-hidden="true">›</span></a>
     <a class="lk" href="./index.html#login"><span class="ic" aria-hidden="true">🔑</span><span class="tx"><b>Login siswa</b><small>Sudah punya akun? Masuk di sini</small></span><span class="ar" aria-hidden="true">›</span></a>
@@ -109,6 +119,12 @@ h1{font-family:var(--font-jp);font-size:26px;line-height:1.25;font-weight:800;ma
   var so = document.getElementById("social");
   (C.social || []).forEach(function(s){
     if (!/^https:\/\//i.test(s.url || "")) return;
+    if (s.id === "instagram"){
+      var ig = document.getElementById("lk-ig"), m = /instagram\.com\/([A-Za-z0-9._]+)/i.exec(s.url);
+      ig.href = s.url; ig.target = "_blank"; ig.rel = "noopener noreferrer"; ig.hidden = false;
+      document.getElementById("ig-handle").textContent = m ? "@" + m[1] : "";
+      return;
+    }
     var l = el("a",null,s.label); l.href = s.url; l.target = "_blank"; l.rel = "noopener noreferrer"; so.appendChild(l);
   });
 })();
