@@ -90,7 +90,17 @@ def parse(path):
     return secs
 
 
+_EXISTING = {}
+def _load_existing(lvl, pk):
+    p = os.path.join(OUT, f"{lvl}-p{pk}.json")
+    _EXISTING.clear()
+    if os.path.exists(p):
+        for sec in json.load(open(p, encoding="utf-8"))["sections"]:
+            for i in sec["items"]: _EXISTING[i["id"]] = i.get("voices") or {}
+
+
 def build(lvl, pk):
+    _load_existing(lvl, pk)
     path = os.path.join(SRC, f"{lvl}-p{pk}.txt")
     base = json.load(open(os.path.join(ROOT, "choukai", f"jlpt-{lvl}.json"), encoding="utf-8"))
     meta = {s["mondai"]: s for s in base["sections"]}
@@ -131,6 +141,8 @@ def build(lvl, pk):
                 tgt = [3, 0, 2, 1, 0, 3, 1, 2][(no - 1 + pk * 3 + mn) % 8]
                 good = opts.pop(qs[0]["ans"]); opts.insert(tgt, good); qs[0]["ans"] = tgt
             voices = assign_voices(f"{lvl}-{pk}-{mn}-{no}", it)
+            _old = _EXISTING.get(f"{lvl}-p{pk}-m{mn}-{no:02d}")   # soal yang MP3-nya sudah ada: jangan ganti suara
+            if _old: voices = dict(voices, **_old)
             dialog = it["lines"]
             set_ = it.get("S", "")
             q0 = qs[0]["q"]
