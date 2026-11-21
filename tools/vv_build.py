@@ -29,7 +29,7 @@ def _req(path, data=None, ctype=None):
             if ctype: req.add_header("Content-Type", ctype)
             return urllib.request.urlopen(req, timeout=120).read()
         except Exception as e:
-            if attempt == 29: raise
+            if attempt == 29 or (isinstance(e, urllib.error.HTTPError) and attempt >= 1): raise   # error dari engine (mis. teks aneh) tidak perlu diulang 30x
             print("  engine belum siap, coba lagi…", type(e).__name__, flush=True); time.sleep(5)
 
 _speakers = None
@@ -105,11 +105,14 @@ def _choukai_file(lvl, d):
             for it in sec["items"]:
                 out = os.path.join(ROOT, it["audio"])
                 if os.path.exists(out): continue
-                pcm = silence(.3)
-                for i, l in enumerate(it["script"]):
-                    pcm += synth(l["t"], it["voices"][l["s"]], sp)
-                    nxt = it["script"][i + 1]["s"] if i + 1 < len(it["script"]) else None
-                    pcm += silence(1.0 if l["s"] == "N" or nxt == "N" else 0.45)
+                try:
+                    pcm = silence(.3)
+                    for i, l in enumerate(it["script"]):
+                        pcm += synth(l["t"], it["voices"][l["s"]], sp)
+                        nxt = it["script"][i + 1]["s"] if i + 1 < len(it["script"]) else None
+                        pcm += silence(1.0 if l["s"] == "N" or nxt == "N" else 0.45)
+                except Exception as e:   # satu soal gagal jangan membuang audio soal lain
+                    log("GAGAL", it["id"], type(e).__name__, e); continue
                 to_mp3(pcm, out)
                 log("choukai", it["id"])
 
