@@ -64,7 +64,7 @@ tr:hover td{background:rgba(255,255,255,.03);}
 .chip.off{background:#444;}
 .chip.btn-chip{cursor:pointer; background:#333;}
 .chip.btn-chip.on{background:var(--green);}
-.pn-akses{margin-top:14px; padding-top:10px; border-top:1px dashed rgba(255,255,255,.12);} .pn-ak{margin:6px 0; display:flex; flex-wrap:wrap; gap:4px; align-items:center;} .pn-ak b{min-width:48px;} .pn-ak2{display:flex; flex-wrap:wrap; gap:4px; margin:4px 0 0;} .pn-ak2 .chip{font-size:10.5px;}
+.pn-akses{margin-top:14px; padding-top:10px; border-top:1px dashed rgba(255,255,255,.12);} .pn-ak{margin:6px 0; display:flex; flex-wrap:wrap; gap:4px; align-items:center;} .pn-ak b{min-width:48px;} .pn-ak2{display:flex; flex-wrap:wrap; gap:4px; margin:4px 0 0;} .pn-ak2 .chip{font-size:10.5px;} .pn-ssw{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:4px 14px; margin-top:4px;} .pn-sr{display:flex; justify-content:space-between; align-items:center; gap:8px; padding:5px 0; border-bottom:1px solid rgba(255,255,255,.07); font-size:13px;}
 
 .form-row{display:flex; gap:10px; align-items:center; margin-bottom:10px; flex-wrap:wrap;}
 .form-row label{font-size:12px; color:var(--gray); min-width:100px;}
@@ -891,8 +891,8 @@ const _aksesPanel = (s) => {
   return `<div class="pn-akses" id="pn-akses-${s.uid}"><h4>🔑 Akses</h4>
     <div class="pn-ak"><b>JLPT</b>${["n5","n4","n3","n2","n1"].map(l => chip(!!s.aksesLevel?.[l], l.toUpperCase(), `pnAkses('${s.uid}','lv','${l}')`)).join("")}</div>
     <div class="pn-ak"><b>JFT</b>${JFT_LV.map(([l, n]) => chip(_jftOn(s, l), "JFT " + n, `pnAkses('${s.uid}','jft','${l}')`, "klik untuk buka/tutup")).join("")}</div>
-    <div class="pn-ak"><b>SSW</b>${chip(sswOn, "Semua SSW " + (sswOn ? "Buka" : "Tutup"), `pnAkses('${s.uid}','ssw')`, "Saklar utama: tutup = semua bidang & Mensetsu terkunci")} <small style="color:var(--gray)">${nb}/${_SSW_8.length} bidang terbuka</small></div>
-    <div class="pn-ak2">${_SSW_8.map(([slug, nama]) => chip(sswOn && _sswEfektif(s, kl, slug), nama.replace(/s*(.*)/, ""), `pnAkses('${s.uid}','bid','${slug}')`, nama)).join("")}</div>
+    <div class="pn-ak" style="align-items:flex-start"><b>SSW</b><small style="color:var(--gray)">${nb}/${_SSW_8.length} bidang terbuka — atur tiap bidang sendiri</small></div>
+    <div class="pn-ssw">${_SSW_8.map(([slug, nama]) => { const on = sswOn && _sswEfektif(s, kl, slug); return `<div class="pn-sr"><span>${_e(nama)}</span>${chip(on, on ? "Buka" : "Tutup", `pnAkses('${s.uid}','bid','${slug}')`, nama)}</div>`; }).join("")}</div>
   </div>`;
 };
 window.pnAkses = async (uid, kind, arg) => {
@@ -901,7 +901,8 @@ window.pnAkses = async (uid, kind, arg) => {
     if (kind === "lv") { const m = { n5:false, n4:false, n3:false, n2:false, n1:false, ...(s.aksesLevel || {}) }; m[arg] = !m[arg]; await FB.updateAksesSiswa(uid, m); s.aksesLevel = m; }
     else if (kind === "jft") { const tutup = s.aksesJft === false, peta = {}; JFT_LV.forEach(([l]) => peta[l] = tutup ? false : s.aksesJftLevel?.[l] !== false); peta[arg] = !peta[arg]; if (tutup) { await FB.setAksesJft(uid, true); s.aksesJft = true; } await FB.setAksesJftLevel(uid, peta); s.aksesJftLevel = peta; }
     else if (kind === "ssw") { const baru = s.aksesSsw === false; await FB.setAksesSsw(uid, baru); s.aksesSsw = baru; }
-    else if (kind === "bid") { const baru = !_sswEfektif(s, state.kelasList || [], arg); await FB.setAksesSswBidang(uid, arg, baru); s.aksesSswBidang = { ...(s.aksesSswBidang || {}), [arg]: baru }; }
+    else if (kind === "bid") { const sswOn0 = s.aksesSsw !== false; const baru = !(sswOn0 && _sswEfektif(s, state.kelasList || [], arg)); if (!sswOn0 && baru) { await FB.setAksesSsw(uid, true); s.aksesSsw = true; }   /* saklar utama lama dibuka otomatis bila membuka satu bidang */
+      await FB.setAksesSswBidang(uid, arg, baru); s.aksesSswBidang = { ...(s.aksesSswBidang || {}), [arg]: baru }; }
     toast("✓ Akses disimpan");
   } catch (e) { toast("❌ Gagal simpan akses: " + (e.message || e)); }
   Object.keys(_panelCache).filter(k => k.startsWith(uid + "|")).forEach(k => delete _panelCache[k]);   // progres/nilai ikut berubah
