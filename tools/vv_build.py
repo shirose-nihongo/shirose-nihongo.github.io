@@ -29,7 +29,7 @@ def _req(path, data=None, ctype=None):
             if ctype: req.add_header("Content-Type", ctype)
             return urllib.request.urlopen(req, timeout=120).read()
         except Exception as e:
-            if attempt == 29 or (isinstance(e, urllib.error.HTTPError) and attempt >= 1): raise   # error dari engine (mis. teks aneh) tidak perlu diulang 30x
+            if attempt == 29 or (isinstance(e, urllib.error.HTTPError) and attempt >= 4): raise   # error dari engine (mis. teks aneh) tidak perlu diulang 30x
             print("  engine belum siap, coba lagi…", type(e).__name__, flush=True); time.sleep(5)
 
 _speakers = None
