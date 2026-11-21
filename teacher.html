@@ -64,7 +64,7 @@ tr:hover td{background:rgba(255,255,255,.03);}
 .chip.off{background:#444;}
 .chip.btn-chip{cursor:pointer; background:#333;}
 .chip.btn-chip.on{background:var(--green);}
-.pn-akses{margin-top:14px; padding-top:10px; border-top:1px dashed rgba(255,255,255,.12);} .pn-ak{margin:6px 0; display:flex; flex-wrap:wrap; gap:4px; align-items:center;} .pn-ak b{min-width:48px;} .pn-ak2{display:flex; flex-wrap:wrap; gap:4px; margin:4px 0 0;} .pn-ak2 .chip{font-size:10.5px;} .pn-ssw{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:4px 14px; margin-top:4px;} .pn-sr{display:flex; justify-content:space-between; align-items:center; gap:8px; padding:5px 0; border-bottom:1px solid rgba(255,255,255,.07); font-size:13px;}
+.pn-akses{margin-top:14px; padding-top:10px; border-top:1px dashed rgba(255,255,255,.12);} .pn-ak{margin:6px 0; display:flex; flex-wrap:wrap; gap:4px; align-items:center;} .pn-ak b{min-width:48px;} .pn-ak2{display:flex; flex-wrap:wrap; gap:4px; margin:4px 0 0;} .pn-ak2 .chip{font-size:10.5px;} .pn-ssw{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:4px 14px; margin-top:4px;} .pn-sr .chip{min-width:62px; justify-content:center; padding:6px 12px; font-size:12px;} .pn-sr .chip:not(.on){background:#7f1d1d; color:#fecaca;} .pn-sr span:first-child{font-weight:600;} .pn-sr{display:flex; justify-content:space-between; align-items:center; gap:8px; padding:5px 0; border-bottom:1px solid rgba(255,255,255,.07); font-size:13px;}
 
 .form-row{display:flex; gap:10px; align-items:center; margin-bottom:10px; flex-wrap:wrap;}
 .form-row label{font-size:12px; color:var(--gray); min-width:100px;}
@@ -859,7 +859,7 @@ const _btnDetail = (uid) => `<span class="pn-btns">${[["profil","👤 Profil"],[
 const _e = (t) => escHtml(t);
 const _bar2 = (p, warna) => `<div class="pn-bar"><i style="width:${Math.max(0, Math.min(100, p))}%;${warna ? `background:${warna};` : ""}"></i></div>`;
 const _pct = (a, b) => b > 0 ? Math.min(100, Math.round(a / b * 100)) : 0;
-const _chipNilai = (label, v, ok = 60, tip = "") => `<span class="pn-chip ${v == null ? "" : v >= ok ? "ok" : "ng"}" title="${_e(tip)}">${_e(label)} <b>${v == null ? "–" : v}</b></span>`;
+const _chipNilai = (label, v, ok = 60, tip = "", max = 100) => `<span class="pn-chip ${v == null ? "" : v >= ok ? "ok" : "ng"}" title="${_e(tip)}">${_e(label)} <b>${v == null ? "–" : v}</b><small>/${max}</small></span>`;
 const _jsonCache = {};
 const _getJson = (u) => (_jsonCache[u] = _jsonCache[u] || fetch(u).then(r => { if (!r.ok) throw new Error(u + " " + r.status); return r.json(); }).catch(e => { delete _jsonCache[u]; throw e; }));
 const _lvAktif = (s) => ["n5","n4","n3","n2","n1"].filter(l => s.aksesLevel?.[l]);
@@ -961,6 +961,19 @@ async function _panelProgres(s){
   return out.length ? out.join("") : `<div style="color:var(--gray);">Belum ada materi yang diikuti siswa ini.</div>`;
 }
 
+// Penilaian ala JLPT resmi (sama dengan js/jlpt-center.js hitungJLPT): skor /180, lulus bila total >= ambang DAN tiap seksi >= batas minimum.
+const _JLPT_PASS = { n5:80, n4:90, n3:95, n2:90, n1:100 };
+const _jlptSecs = (lv) => (lv === "n5" || lv === "n4")
+  ? [{ l:"言語知識・読解", max:120, pass:38, cats:["kanji","kotoba","bunpou","dokkai"] }, { l:"聴解", max:60, pass:19, cats:["choukai"] }]
+  : [{ l:"言語知識", max:60, pass:19, cats:["kanji","kotoba","bunpou"] }, { l:"読解", max:60, pass:19, cats:["dokkai"] }, { l:"聴解", max:60, pass:19, cats:["choukai"] }];
+function _skorJlpt(h){
+  const per = h.perKategori;
+  if (!per || !Object.keys(per).length) return { total: Math.round((h.skor || 0) * 1.8), est: true, secs: [] };   // data lama tanpa rincian → estimasi
+  const secs = _jlptSecs(h.lv).map(s => { let b = 0, n = 0; s.cats.forEach(c => { if (per[c]){ b += per[c].benar || 0; n += per[c].total || 0; } }); const skor = n ? Math.round(b / n * s.max) : 0; return { ...s, skor, lulus: skor >= s.pass }; });
+  const total = secs.reduce((a, s) => a + s.skor, 0);
+  return { total, secs, lulus: total >= (_JLPT_PASS[h.lv] || 90) && secs.every(s => s.lulus) };
+}
+const _poinJlpt = (h) => h.jenis === "full" ? _skorJlpt(h).total : (h.skor || 0);
 const _JENIS_JLPT = [["full","🏯 Full Exam"],["kanji","漢 Kanji"],["kotoba","語 Kotoba"],["bunpou","文 Bunpou"],["dokkai","読 Dokkai"],["star","★ Bintang"]];
 const _CAT_JLPT = { kanji:"Kanji", kotoba:"Kotoba", bunpou:"Bunpou", dokkai:"Dokkai", choukai:"Choukai" };
 async function _panelNilai(s){
@@ -968,7 +981,7 @@ async function _panelNilai(s){
   const lvls = _lvAktif(s);
   if (lvls.length){
     const [idx, hasil] = await Promise.all([_getJson("./jlpt/index.json").catch(() => null), FB.listHasilJLPTOf(s.uid, 400).catch(() => [])]);
-    const best = {}; hasil.forEach(h => { const b = best[h.pkgId]; if (!b || (h.skor || 0) > (b.skor || 0)) best[h.pkgId] = h; });
+    const best = {}; hasil.forEach(h => { const b = best[h.pkgId]; if (!b || _poinJlpt(h) > _poinJlpt(b)) best[h.pkgId] = h; });
     const bag = lvls.map(l => {
       const lv = idx?.level?.[l] || {};
       const baris = _JENIS_JLPT.map(([j, lab]) => {
@@ -979,7 +992,8 @@ async function _panelNilai(s){
           const agg = {}; pk.forEach(p => { const h = best[p.id]; Object.entries(h?.perKategori || {}).forEach(([c, v]) => { agg[c] = agg[c] || { b: 0, t: 0 }; agg[c].b += v.benar || 0; agg[c].t += v.total || 0; }); });
           kat = `<div class="pn-kat">Rata-rata per bagian: ${Object.keys(_CAT_JLPT).filter(c => agg[c]).map(c => _chipNilai(_CAT_JLPT[c], _pct(agg[c].b, agg[c].t))).join("")}</div>`;
         }
-        return `<div class="pn-jenis"><div class="pn-jh">${lab} <small>(${done}/${pk.length} paket dikerjakan)</small></div>${kat}<div class="pn-chips">${pk.map(p => { const h = best[p.id]; return _chipNilai(p.id.split("-").pop(), h ? h.skor : null, 60, `${p.judul}${h ? ` · ${h.benar}/${h.total} benar` : " · belum dikerjakan"}`); }).join("")}</div></div>`;
+        return `<div class="pn-jenis"><div class="pn-jh">${lab} <small>(${done}/${pk.length} paket dikerjakan)</small></div>${kat}<div class="pn-chips">${pk.map(p => { const h = best[p.id]; if (j === "full"){ const sc = h ? _skorJlpt(h) : null; const rinci = sc && sc.secs.length ? " · " + sc.secs.map(s => `${s.l} ${s.skor}/${s.max}${s.lulus ? "" : " ✗"}`).join(" · ") + (sc.lulus ? " · LULUS" : " · belum lulus") : (sc ? " · estimasi (data lama)" : " · belum dikerjakan"); return _chipNilai(p.id.split("-").pop(), sc ? sc.total : null, _JLPT_PASS[l] || 90, `${p.judul}${rinci}`, 180); }
+          return _chipNilai(p.id.split("-").pop(), h ? h.skor : null, 60, `${p.judul}${h ? ` · ${h.benar}/${h.total} benar` : " · belum dikerjakan"}`); }).join("")}</div></div>`;
       }).join("");
       return `<details class="pn-det" open><summary>📘 JLPT ${l.toUpperCase()}</summary>${baris || '<div style="color:var(--gray);">Belum ada paket ujian.</div>'}</details>`;
     });
@@ -998,18 +1012,18 @@ async function _panelNilai(s){
   const jl = _jftAktif(s);
   if (jl.length){
     const h = await FB.listHasilJftOf(s.uid).catch(() => []);
-    const bestJ = {}; h.forEach(x => { const key = x.lv + ":" + x.kode; const sc = x.mode === "sim" && x.skor != null ? x.skor : Math.round((x.pct || 0) * 100); if (!bestJ[key] || sc > bestJ[key].sc) bestJ[key] = { sc, x }; });
+    const bestJ = {}; h.forEach(x => { const key = x.lv + ":" + x.kode; const sc = x.skor != null ? x.skor : Math.round((x.pct || 0) * 100); if (!bestJ[key] || sc > bestJ[key].sc) bestJ[key] = { sc, x }; });
     const bagJ = jl.map(([l, n]) => {
       const blok = [["Bab 1–6", 0], ["Bab 7–12", 1], ["Bab 13–18", 2]].map(([lab, b]) => {
         const ps = [0, 1, 2].map(p => bestJ[`${l}:b${b}p${p}`]);
         const ada = ps.filter(Boolean), rata = ada.length ? Math.round(ada.reduce((a, x) => a + x.sc, 0) / ada.length) : null;
         return `<div class="pn-jenis"><div class="pn-jh">${lab} <small>${rata != null ? `· rata-rata ${rata}%` : ""}</small></div><div class="pn-chips">${ps.map((x, p) => _chipNilai("Paket " + (p + 1), x ? x.sc : null, 60)).join("")}</div></div>`;
       }).join("");
-      const sim = l === "ir2" ? `<div class="pn-jenis"><div class="pn-jh">🏁 Simulasi penuh JFT-Basic <small>(skor 10–250, lulus ≥ 200)</small></div><div class="pn-chips">${[0,1,2,3,4].map(p => { const x = bestJ[`ir2:sim${p}`]; return _chipNilai("Paket " + (p + 1), x ? x.sc : null, 200); }).join("")}</div></div>` : "";
+      const sim = l === "ir2" ? `<div class="pn-jenis"><div class="pn-jh">🏁 Simulasi penuh JFT-Basic <small>(skor 10–250, lulus ≥ 200)</small></div><div class="pn-chips">${[0,1,2,3,4].map(p => { const x = bestJ[`ir2:sim${p}`]; return _chipNilai("Paket " + (p + 1), x ? x.sc : null, 200, "", 250); }).join("")}</div></div>` : "";
       return `<details class="pn-det" open><summary>📝 JFT ${n}</summary>${blok}${sim}</details>`;
     }).join("");
     const tr = [0,1,2,3,4,5].map(p => bestJ[`tryout:try${p}`]);
-    const tryout = tr.some(Boolean) ? `<details class="pn-det" open><summary>🏁 JFT Tryout</summary><div class="pn-chips">${tr.map((x, p) => x ? _chipNilai("Paket " + (p + 1), x.sc, 200) : "").join("")}</div></details>` : "";
+    const tryout = tr.some(Boolean) ? `<details class="pn-det" open><summary>🏁 JFT Tryout</summary><div class="pn-chips">${tr.map((x, p) => x ? _chipNilai("Paket " + (p + 1), x.sc, 200, "", 250) : "").join("")}</div></details>` : "";
     out.push(bagJ + tryout);
   }
   return out.length ? out.join("") : `<div style="color:var(--gray);">Belum ada materi yang diikuti siswa ini.</div>`;

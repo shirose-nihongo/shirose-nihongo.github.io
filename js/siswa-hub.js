@@ -206,7 +206,7 @@ async function detailJlpt(lv) {
   for (let n = 1; n <= 20; n++) {
     const b = best[n];
     const tip = b ? (b.secs.length ? b.secs.map(s => `${s.label} ${s.skor}/${s.max}${s.lulus ? "" : " ✗"}`).join(" · ") + (b.lulus ? " · LULUS" : " · belum lulus") : "estimasi (data lama)") : "Belum dikerjakan";
-    kotak += `<div title="${esc(tip)}" style="${b ? `border-color:${b.lulus === false ? "var(--red)" : b.lulus ? "var(--green)" : "var(--border)"}` : ""}">${String(n).padStart(2, "0")}<b style="color:${b ? (b.lulus === false ? "var(--red)" : b.lulus ? "var(--green)" : "var(--orange)") : "var(--gray-dim)"}">${b ? b.total : "–"}</b>${b && b.lulus != null ? `<small>${b.lulus ? "✔ lulus" : "✗"}</small>` : ""}</div>`;
+    kotak += `<div title="${esc(tip)}" style="${b ? `border-color:${b.lulus === false ? "var(--red)" : b.lulus ? "var(--green)" : "var(--border)"}` : ""}">${String(n).padStart(2, "0")}<b style="color:${b ? (b.lulus === false ? "var(--red)" : b.lulus ? "var(--green)" : "var(--orange)") : "var(--gray-dim)"}">${b ? b.total : "–"}</b><small style="display:inline">/180</small>${b && b.lulus != null ? `<small>${b.lulus ? "✔ lulus" : "✗"}</small>` : ""}</div>`;
   }
   return { ringkas: `${ada.length}/20 Full Exam · ${lulusN} lulus · tertinggi ${tertinggi ?? "–"}/180`,
     html: `<p style="font-size:12px; color:var(--gray); margin:0 0 8px">Skor memakai penilaian ala JLPT resmi: <b>/180</b>, lulus bila total ≥ <b>${cfg.overall}</b> (CEFR ≈ ${cfg.cefr}) <u>dan</u> tiap seksi di atas batas minimum. Tertinggi dari tiap Full Exam (1–20). Ketuk/tahan kotak untuk rincian seksi.</p><div class="hub-full">${kotak}</div>` };
@@ -225,11 +225,11 @@ async function detailJft(lv) {
   const best = await bestJft();
   let html = ""; let done = 0;
   BLOK.forEach((r, b) => {
-    html += `<div class="hub-h">Bab ${r[0]}–${r[1]}</div><div class="hub-full">${[0, 1, 2].map(p => { const x = best[`${lv}_b${b}p${p}`]; if (x) done++; return `<div>Paket ${p + 1}<b style="color:${warna(x ? x.pct * 100 : null)}">${x ? Math.round(x.pct * 100) + "%" : "–"}</b></div>`; }).join("")}</div>`;
+    html += `<div class="hub-h">Bab ${r[0]}–${r[1]}</div><div class="hub-full">${[0, 1, 2].map(p => { const x = best[`${lv}_b${b}p${p}`]; if (x) done++; return `<div>Paket ${p + 1}<b style="color:${warna(x ? x.pct * 100 : null)}">${x ? Math.round(x.pct * 100) + "/100" : "–/100"}</b></div>`; }).join("")}</div>`;
   });
   let simInfo = "";
   if (lv === "ir2") {
-    html += `<div class="hub-h">JFT Akhir · Simulasi Penuh (skor 10–250 · lulus A2 ≥ 200)</div><div class="hub-full">${[0, 1, 2, 3, 4].map(p => { const x = best[`${lv}_sim${p}`]; if (x) done++; return `<div>Paket ${p + 1}<b style="color:${x ? (x.skor >= 200 ? "var(--green)" : x.skor >= 175 ? "var(--orange)" : "var(--red)") : "var(--gray-dim)"}">${x ? x.skor : "–"}</b></div>`; }).join("")}</div><p style="font-size:11px; color:var(--gray); margin-top:8px">Skor simulasi hanya estimasi latihan, bukan skor resmi JFT-Basic.</p>`;
+    html += `<div class="hub-h">JFT Akhir · Simulasi Penuh (skor 10–250 · lulus A2 ≥ 200)</div><div class="hub-full">${[0, 1, 2, 3, 4].map(p => { const x = best[`${lv}_sim${p}`]; if (x) done++; return `<div>Paket ${p + 1}<b style="color:${x ? (x.skor >= 200 ? "var(--green)" : x.skor >= 175 ? "var(--orange)" : "var(--red)") : "var(--gray-dim)"}">${x ? x.skor + "/250" : "–/250"}</b></div>`; }).join("")}</div><p style="font-size:11px; color:var(--gray); margin-top:8px">Skor simulasi hanya estimasi latihan, bukan skor resmi JFT-Basic.</p>`;
   }
   return { ringkas: `${done} paket sudah dikerjakan`, html: html || '<div class="empty">Belum ada data.</div>' };
 }
@@ -242,7 +242,7 @@ async function detailSsw(slug) {
   if (lokal && (!P || (lokal.u || 0) > (P.u || 0))) P = lokal;
   const Q = (P && P.quiz) || {};
   const sk = (id) => Q[id] && Q[id].best >= 0 ? Q[id] : null;
-  const row = (id, label, lulus) => { const q = sk(id); const w = q ? (lulus ? (q.best >= lulus ? "var(--green)" : "var(--red)") : warna(q.best)) : "var(--gray-dim)"; return `<div class="hub-row"><span>${label}</span><b style="color:${w}">${q ? q.best + "%" : "–"}${q && lulus ? (q.best >= lulus ? " ✔ lulus" : " ✗") : ""}${q && q.n > 1 ? ` <small style="color:var(--gray); font-weight:400">(${q.n}×)</small>` : ""}</b></div>`; };
+  const row = (id, label, lulus) => { const q = sk(id); const w = q ? (lulus ? (q.best >= lulus ? "var(--green)" : "var(--red)") : warna(q.best)) : "var(--gray-dim)"; return `<div class="hub-row"><span>${label}</span><b style="color:${w}">${q ? q.best + "/100" : "–/100"}${q && lulus ? (q.best >= lulus ? " ✔ lulus" : " ✗") : ""}${q && q.n > 1 ? ` <small style="color:var(--gray); font-weight:400">(${q.n}×)</small>` : ""}</b></div>`; };
   let html = "", total = 0, selesai = 0, sum = 0;
   const hitung = (id) => { total++; const q = sk(id); if (q) { selesai++; sum += q.best; } };
   for (const ch of pack.chapters) {
