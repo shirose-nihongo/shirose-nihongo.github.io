@@ -17,7 +17,7 @@
 <style>
 :root{
   --navy:#161b36; --navy-2:#1f2650; --navy-3:#2a3270; --navy-4:#0d1024;
-  --pink:#ef6a9a; --pink-light:#f58bb0; --gold:#ffd700; --purple:#8b5cf6; --cyan:#22d3ee; --green:#10b981; --orange:#f59e0b;
+  --pink:#ef6a9a; --pink-light:#f58bb0; --gold:#ffd700; --purple:#f9a8c9; --sakura:#ffb7c5; --cyan:#22d3ee; --green:#10b981; --orange:#f59e0b;
   --wa:#25d366; --wa-d:#128c4a;
   --white:#fff; --gray:#b9bfd9; --gray-dim:#7a80a0; --border:#2a3060;
   --font-jp:'Shippori Mincho B1','Noto Serif JP',serif;
@@ -26,9 +26,9 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{font-family:var(--font-sans);color:var(--white);line-height:1.6;overflow-x:hidden;
-  background:radial-gradient(ellipse at 15% 10%,rgba(139,92,246,.16),transparent 55%),
-             radial-gradient(ellipse at 85% 45%,rgba(239,106,154,.13),transparent 55%),
-             linear-gradient(to bottom,var(--navy-4),var(--navy));
+  background:radial-gradient(ellipse at 15% 10%,rgba(255,183,213,.16),transparent 55%),
+             radial-gradient(ellipse at 85% 45%,rgba(255,150,190,.16),transparent 55%),
+             linear-gradient(to bottom,#1c0e1e,#2b1631);
   background-attachment:fixed}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit}
@@ -86,7 +86,7 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 
 /* orbit hero */
 .orbit{position:relative;width:100%;max-width:540px;aspect-ratio:1;margin:0 auto;container-type:inline-size}
-.orbit .glow{position:absolute;inset:10%;border-radius:50%;background:radial-gradient(circle,rgba(239,106,154,.42),rgba(139,92,246,.16) 55%,transparent 72%)}
+.orbit .glow{position:absolute;inset:10%;border-radius:50%;background:radial-gradient(circle,rgba(239,106,154,.42),rgba(255,183,213,.16) 55%,transparent 72%)}
 .orbit .ring{position:absolute;border:1px dashed #3a4080;border-radius:50%}
 .orbit .ring.r2{inset:12%}
 .orbit .spin{position:absolute;inset:0;animation:spin var(--d,70s) linear infinite}
@@ -211,7 +211,7 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 /* character studio */
 .studio{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:30px}
 @media(max-width:820px){.studio{grid-template-columns:1fr}}
-.stage{position:relative;aspect-ratio:1;max-width:340px;margin:0 auto;width:100%;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.35),transparent 68%);display:flex;align-items:center;justify-content:center}
+.stage{position:relative;aspect-ratio:1;max-width:340px;margin:0 auto;width:100%;border-radius:50%;background:radial-gradient(circle,rgba(255,183,213,.35),transparent 68%);display:flex;align-items:center;justify-content:center}
 .stage svg{height:92%;width:auto;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4))}
 .slot{margin-bottom:14px}
 .slot h4{font-size:13px;color:var(--gray-dim);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
@@ -253,7 +253,7 @@ button.th{cursor:pointer;font:inherit;color:#fff;background-clip:padding-box}
 
 /* WA CTA band */
 .cta-band{padding:30px 0}
-.cta-box{position:relative;overflow:hidden;border-radius:28px;padding:44px 28px;text-align:center;background:linear-gradient(135deg,rgba(18,140,74,.32),rgba(139,92,246,.28) 60%,rgba(239,106,154,.28));border:1.5px solid rgba(37,211,102,.55);box-shadow:0 20px 70px rgba(37,211,102,.14)}
+.cta-box{position:relative;overflow:hidden;border-radius:28px;padding:44px 28px;text-align:center;background:linear-gradient(135deg,rgba(18,140,74,.32),rgba(255,183,213,.28) 60%,rgba(239,106,154,.28));border:1.5px solid rgba(37,211,102,.55);box-shadow:0 20px 70px rgba(37,211,102,.14)}
 .cta-box::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-120px;top:-180px;background:radial-gradient(circle,rgba(37,211,102,.28),transparent 65%)}
 .cta-box>*{position:relative}
 .cta-box h2{font-size:clamp(26px,4.4vw,42px)}
@@ -271,7 +271,7 @@ button.th{cursor:pointer;font:inherit;color:#fff;background-clip:padding-box}
 .step h3{font-size:18px;font-family:var(--font-jp);margin-bottom:6px}.step p{color:var(--gray);font-size:15px}
 
 /* about, social, news */
-.about{background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(239,106,154,.14));border:1px solid var(--border);border-radius:24px;padding:36px;text-align:center}
+.about{background:linear-gradient(135deg,rgba(255,183,213,.18),rgba(239,106,154,.14));border:1px solid var(--border);border-radius:24px;padding:36px;text-align:center}
 .about .big{font-family:var(--font-jp);font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:10px}
 .about p{max-width:680px;margin:0 auto 10px;color:var(--gray)}
 .about .vision{color:#fff;font-style:italic}
@@ -303,6 +303,19 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 .rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+.sheet{position:relative;background:#fffaf3;color:#2a2230;border-radius:10px;padding:18px 18px 14px;font-family:var(--font-jp);box-shadow:inset 0 0 0 1px #e8dccb,0 10px 30px rgba(0,0,0,.35);overflow:hidden}
+.sheet::after{content:"";position:absolute;left:0;right:0;top:-30%;height:30%;background:linear-gradient(to bottom,transparent,rgba(255,183,197,.55),transparent);opacity:0;pointer-events:none}
+.sheet.scan::after{animation:scanline .9s ease-out}
+@keyframes scanline{0%{top:-30%;opacity:1}100%{top:110%;opacity:1}}
+.sheet .sh-h{display:flex;justify-content:space-between;font-size:12px;color:#8a7a86;border-bottom:1px dashed #d9c9bb;padding-bottom:6px;margin-bottom:10px}
+.sheet .sh-p{font-size:15.5px;line-height:1.9;white-space:pre-wrap}
+.sheet .sh-q{margin-top:12px;font-weight:800;font-size:15px}
+.sheet .sh-o{display:grid;gap:6px;margin-top:8px}
+.sheet .sh-o button{text-align:left;font:inherit;font-size:14.5px;padding:8px 12px;border-radius:8px;border:1.5px solid #e3d3c4;background:#fff;color:#2a2230;cursor:pointer}
+.sheet .sh-o button.ok{border-color:#10b981;background:#e8fbf3}
+.sheet .sh-o button.no{border-color:#ef4444;background:#fdecec}
+.sheet .sh-w{margin-top:10px;font-size:13px;color:#6b5a66;background:#fff0f4;border-radius:8px;padding:8px 10px;font-family:var(--font-sans)}
 </style>
 <link rel="stylesheet" href="./css/logo.css?v=20261120b"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261120a"/>
@@ -412,12 +425,14 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         <p>Setiap kanji punya animasi urutan goresan. Ikuti garis bayangan di kanvas, dan tiap goresanmu langsung diperiksa bentuk dan arahnya. Bisa dengan jari, mouse, atau stylus.</p>
         <ul class="tick">
           <li><b data-count="total.kanjiJlpt">2.256</b> kanji dengan goresan, plus Hiragana &amp; Katakana</li>
+          <li>Contoh kanji tiap level N5, N4, N3, N2, N1</li>
           <li>Mode ikuti bayangan atau tulis dari ingatan</li>
           <li>Penilaian perkiraan: bentuk, arah, urutan, dan posisi</li>
         </ul>
       </div>
       <div class="demo" id="kc-demo">
-        <div class="demo-h"><div class="seg" id="kc-pick" role="group" aria-label="Pilih kanji"></div></div>
+        <div class="demo-h"><div class="seg" id="kc-lv" role="group" aria-label="Pilih level"></div><span class="lbl">Tulis sendiri, per level N5–N1</span></div>
+        <div class="demo-h" style="margin-top:-4px"><div class="seg" id="kc-pick" role="group" aria-label="Pilih kanji"></div></div>
         <div class="kc-cols">
           <div><div class="kc-lbl">Urutan goresan</div><div class="kc-box" id="kc-stage"></div><button class="btn ghost sm" id="kc-replay" style="margin-top:8px;width:100%">▶ Putar ulang</button></div>
           <div><div class="kc-lbl">Tulis di sini</div><div class="kc-box" id="kc-cv"></div>
@@ -467,6 +482,25 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         <div class="qz-opts" id="qz-opts"></div>
         <div class="qz-ex" id="qz-ex"></div>
         <div class="qz-bar"><span class="pos" id="qz-pos"></span><button class="btn primary sm" id="qz-next">Soal lain →</button></div>
+      </div>
+    </div>
+
+    <!-- 4. CONTOH MATERI JLPT (scan + ganti bahasa) -->
+    <div class="show rv">
+      <div class="txt">
+        <span class="badge">Contoh materi JLPT</span>
+        <h3>Scan lembar soal, lalu ganti bahasanya</h3>
+        <p>Lihat contoh lembar soal JLPT N5 sampai N1. Ketuk Scan untuk membaca lembarnya, lalu pindah antara bahasa Jepang dan bahasa Indonesia untuk melihat teks asli atau terjemahannya.</p>
+        <ul class="tick">
+          <li>Contoh bacaan untuk tiap level N5, N4, N3, N2, N1</li>
+          <li>Ganti 日本語 / Indonesia dengan satu ketukan</li>
+          <li>Jawab soalnya, lalu baca pembahasannya</li>
+        </ul>
+      </div>
+      <div class="demo" id="jx-demo">
+        <div class="demo-h"><div class="seg" id="jx-lv" role="group" aria-label="Level"></div><div class="seg" id="jx-lang" style="margin-left:auto" role="group" aria-label="Bahasa"><button data-l="jp" aria-pressed="true">日本語</button><button data-l="id" aria-pressed="false">Indonesia</button></div></div>
+        <div class="sheet" id="jx-sheet"><div class="sh-h"><span id="jx-t"></span><span>読解</span></div><div class="sh-p" id="jx-p"></div><div class="sh-q" id="jx-q"></div><div class="sh-o" id="jx-o"></div><div class="sh-w" id="jx-w" hidden></div></div>
+        <div class="qz-bar" style="margin-top:12px"><span class="pos">Contoh dari paket Dokkai 01</span><button class="btn primary sm" id="jx-scan">📷 Scan lembar</button></div>
       </div>
     </div>
   </div>
@@ -709,7 +743,7 @@ var $ = function(s){return document.querySelector(s)};
 /* ---- kanji: animasi goresan + kanvas menulis (js/writer.js, data/kanji-strokes) ---- */
 (function(){
   var host = $("#kc-stage"), cvHost = $("#kc-cv"); if (!host || !cvHost) return;
-  var KS = ["日","本","学","生","水","山","人","大"], cur = null, player = null, wc = null, mode = "trace", started = false;
+  var KSL = {n5:["日","本","学","生","水","山","人","大"],n4:["早","田","犬","音","力","夕","文","字"],n3:["民","市","内","合","定","回","部","対"],n2:["虫","玉","竹","糸","貝","角","毛","谷"],n1:["矢","里","弓","刀","丁","宮","羊","詩"]}, KS = KSL.n5, cur = null, player = null, wc = null, mode = "trace", started = false;
   var res = $("#kc-res");
   function say(h){ res.textContent = ""; if (typeof h === "string") res.textContent = h; else res.appendChild(h); }
   function setPressed(btns, on){ btns.forEach(function(b){ b.setAttribute("aria-pressed", String(b===on)); }); }
@@ -723,11 +757,21 @@ var $ = function(s){return document.querySelector(s)};
       say("Tulis kanjinya, lalu ketuk Periksa.");
     }).catch(function(e){ say("Data goresan belum bisa dimuat."); });
   }
-  KS.forEach(function(ch, i){
-    var b = document.createElement("button"); b.textContent = ch; b.style.fontFamily = "var(--font-jp)"; b.style.fontSize = "18px"; b.setAttribute("aria-pressed","false");
-    b.onclick = function(){ show(ch, b); }; $("#kc-pick").appendChild(b);
+  function buildPick(lv){
+    KS = KSL[lv]; var pk = $("#kc-pick"); pk.textContent = "";
+    KS.forEach(function(ch){
+      var b = document.createElement("button"); b.textContent = ch; b.style.fontFamily = "var(--font-jp)"; b.style.fontSize = "18px"; b.setAttribute("aria-pressed","false");
+      b.onclick = function(){ show(ch, b); }; pk.appendChild(b);
+    });
+    return pk.firstChild;
+  }
+  var first = buildPick("n5");
+  var lvBox = $("#kc-lv");
+  ["n5","n4","n3","n2","n1"].forEach(function(lv){
+    var b = document.createElement("button"); b.textContent = lv.toUpperCase(); b.setAttribute("aria-pressed", String(lv==="n5"));
+    b.onclick = function(){ lvBox.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); }); var f = buildPick(lv); show(KS[0], f); };
+    lvBox.appendChild(b);
   });
-  var first = $("#kc-pick").firstChild;
   function start(){ if (started) return; started = true; show(KS[0], first); }
   $("#kc-replay").onclick = function(){ if (player) player.replay(); };
   $("#kc-undo").onclick = function(){ if (wc) wc.undo(); };
@@ -742,6 +786,7 @@ var $ = function(s){return document.querySelector(s)};
   };
   if ("IntersectionObserver" in window){ var o = new IntersectionObserver(function(es){ if (es[0].isIntersecting){ start(); o.disconnect(); } }, {rootMargin:"250px"}); o.observe($("#kc-demo")); } else start();
 })();
+
 var heroEq = {rambut:"hr_perak", pakaian:"o_armor_surya", celana:"cl_emas_kaisar", sepatu:"sh_emas", aksesori:"none", sayap:"sy2_emas_agung", item_tangan:"hh_pedang_naga", aura:"au2_emas_bintang"};
 var BODY = {body:"male"};   // selalu cowok, tidak ikut pilihan tersimpan di perangkat
 try { $("#heroChar").innerHTML = renderCharacter(heroEq, "light", BODY); } catch(e){}
@@ -789,7 +834,7 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
   var fmt = function(n){return Number(n).toLocaleString("id-ID")};
 
   /* ---- level grid (angka dari landing-stats.js) ---- */
-  var lvc = {n5:"#8b5cf6",n4:"#22d3ee",n3:"#ef6a9a",n2:"#f59e0b",n1:"#10b981"}, g = $("#lvgrid");
+  var lvc = {n5:"#f9a8c9",n4:"#22d3ee",n3:"#ef6a9a",n2:"#f59e0b",n1:"#10b981"}, g = $("#lvgrid");
   ["n5","n4","n3","n2","n1"].forEach(function(l){
     var d = (ST.jlpt||{})[l]; if (!d) return;
     var c = el("div","lvc rv"); c.style.setProperty("--c",lvc[l]); c.appendChild(el("div","n",l.toUpperCase()));
@@ -1000,6 +1045,38 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
     help.textContent=ios?"iPhone/iPad: buka di Safari, ketuk tombol Bagikan (kotak dengan panah ke atas), lalu pilih “Tambahkan ke Layar Utama”.":"Buka menu browser (⋮), lalu pilih “Instal aplikasi” atau “Tambahkan ke layar utama”. Kalau tombolnya belum muncul, buka halaman ini di Chrome/Edge.";
     help.hidden=false;
   });
+})();
+</script>
+<script>
+/* ---- contoh materi JLPT: scan + ganti bahasa (soal asli: jlpt/nX/dokkai-01.v2.json) ---- */
+(function(){
+  var $ = function(s){return document.querySelector(s)};
+  var D = {"n5": {"jp": "わたしは きのう 友だちと カラオケに 行きました。友だちは 日本の うたを 上手に うたいました。つぎは 日本の うたも れんしゅうして、友だちと いっしょに うたいたいです。わたしは まだ 日本の うたを しりませんから、国の うたを うたいました。", "id": "Kemarin saya karaoke bersama teman. Teman menyanyikan lagu Jepang dengan bagus. Lain kali saya juga akan berlatih lagu Jepang dan ingin bernyanyi bersama teman. Saya belum tahu lagu Jepang, jadi saya menyanyikan lagu negara saya.", "q": "「わたし」は カラオケで 何を うたいましたか。", "o": ["国の うた", "えいごの うた", "何も うたいませんでした", "日本の うた"], "a": 0, "w": "Belum tahu lagu Jepang, jadi menyanyikan lagu negaranya."}, "n4": {"jp": "私は毎週日曜日に、近くの川のそばを掃除するボランティアをしています。毎回二十人ぐらい集まって、一時間ほどごみを拾います。最近はごみが少なくなってきて、川で遊ぶ子どもが増えました。ボランティアの日は、朝六時に起きなければなりませんが、終わったあとの朝ご飯が楽しみです。それを見ると、続けてよかったと思います。<br>これからも続けていきたいと思います。", "id": "Setiap Minggu saya ikut relawan membersihkan tepi sungai dekat rumah; sekitar 20 orang berkumpul dan memungut sampah sekitar satu jam. Belakangan sampah berkurang dan anak-anak yang bermain di sungai bertambah. Di hari relawan saya harus bangun pukul enam pagi, tetapi menanti sarapan setelah selesai. Melihat itu saya merasa senang sudah terus melakukannya. Saya ingin terus melanjutkannya.", "q": "「私」が、続けてよかったと思うのはどうしてですか。", "o": ["川がきれいになって、遊ぶ子どもが増えたから", "友だちがたくさんできたから", "毎週日曜日が休みだから", "ボランティアの人が二十人になったから"], "a": 0, "w": "Sampah berkurang dan anak-anak bermain di sungai bertambah."}, "n3": {"jp": "（家で）<br>父が高校生の娘にあてて書いたメモである。<br><br>はるか<br>明日の朝、お父さんは早く家を出るので、車で駅まで送れなくなった。ごめん。バスで行ってください。バスは七時十五分と七時四十分にあります。七時四十分のバスだと学校に遅れるかもしれないから、早いほうに乗ってね。バス代は玄関の机の上に置いておきます。夜は戸締まりをして、早めに寝てね。ごはんは、ちゃんと食べてね。何かあったら、すぐに電話してね。気をつけて行ってきてね。<br>父", "id": "Haruka, besok pagi ayah berangkat lebih awal, jadi tidak bisa mengantar ke stasiun dengan mobil. Maaf. Naik bus ya. Bus ada jam 7.15 dan 7.40; yang 7.40 mungkin membuatmu terlambat ke sekolah, jadi naik yang lebih awal. Ongkos bus ayah taruh di meja dekat pintu masuk. Kunci pintu di malam hari dan tidurlah lebih awal. Makanlah dengan baik. Bila ada apa-apa, segera telepon. Hati-hati di jalan ya. — Ayah", "q": "はるかさんは、明日の朝どうするか。", "o": ["七時十五分のバスに乗る", "七時四十分のバスに乗る", "父の車で駅へ行く", "歩いて学校へ行く"], "a": 0, "w": "Naik bus yang lebih awal (7.15)."}, "n2": {"jp": "数字で示された目標は、成果をはっきり測れるという点で便利だ。売上を一割伸ばす、ミスを半分にする。そうした目標は、達成できたかどうかが誰の目にも明らかである。しかし、数字ばかりを追いかけると、数字に表れない大切なものが見落とされやすい。例えば、客との信頼関係や、職場の雰囲気といったものだ。数字を上げることに必死になり、同僚と協力しなくなる人も出てくる。例えば、売上の数字を上げるために、客に必要のない商品まで勧めてしまうこともある。目標を立てる際には、数字で測れることと測れないことの両方に目を配る必要があるだろう。", "id": "Target berupa angka praktis karena hasilnya jelas terukur — menaikkan penjualan 10%, mengurangi kesalahan setengahnya — tercapai atau tidak tampak jelas bagi siapa pun. Tetapi jika hanya mengejar angka, hal penting yang tak tampak dalam angka mudah terlewat, misalnya hubungan kepercayaan dengan pelanggan atau suasana tempat kerja. Ada pula yang mati-matian menaikkan angka hingga tak lagi bekerja sama dengan rekan. Misalnya, demi menaikkan angka penjualan, orang bisa menawarkan barang yang tak dibutuhkan pelanggan. Saat menetapkan target, perlu memperhatikan baik yang bisa maupun yang tidak bisa diukur dengan angka.", "q": "筆者の考えに合うものはどれか。", "o": ["職場の雰囲気は数字で測れる", "目標はすべて数字で示すべきだ", "数字で示された目標は役に立たない", "数字で測れないことにも目を配るべきだ"], "a": 3, "w": "Kalimat terakhir."}, "n1": {"jp": "歴史を学ぶ意義は、過去の出来事を暗記することにあるのではない。過去の人々が、どのような状況で、何を考え、どう判断したのかを知ることで、現在の問題に対する見方が深まる点にある。歴史は、未来を予言するものではないが、同じ過ちを繰り返さないための、貴重な手がかりを与えてくれる。", "id": "Makna belajar sejarah bukan menghafal peristiwa masa lalu. Terletak pada pandangan terhadap masalah masa kini yang mendalam dengan mengetahui dalam situasi apa orang masa lalu berpikir apa dan memutuskan bagaimana. Sejarah bukan meramal masa depan, tetapi memberi petunjuk berharga agar tak mengulang kesalahan yang sama.", "q": "筆者は 歴史を 学ぶ 意義を どう 述べて いるか。", "o": ["昔の 人を 批判する こと", "未来を 正確に 予言できる こと", "過去の 出来事を 暗記する こと", "現在の 問題への 見方が 深まり、過ちを 繰り返さない 手がかりに なる"], "a": 3, "w": "Makna belajar sejarah."}};
+  var box = $("#jx-demo"); if (!box) return;
+  var lv = "n5", lang = "jp", done = false;
+  function render(){
+    var d = D[lv], o = $("#jx-o"); done = false;
+    $("#jx-t").textContent = lv.toUpperCase() + " · 読解 · " + (lang==="jp" ? "日本語" : "Indonesia");
+    $("#jx-p").textContent = d[lang]; $("#jx-q").textContent = d.q; o.textContent = ""; $("#jx-w").hidden = true;
+    d.o.forEach(function(t,i){
+      var b = document.createElement("button"); b.textContent = (i+1)+". "+t;
+      b.onclick = function(){ if (done) return; done = true;
+        o.querySelectorAll("button").forEach(function(x,k){ if (k===d.a) x.classList.add("ok"); else if (x===b) x.classList.add("no"); });
+        var w = $("#jx-w"); w.textContent = (i===d.a ? "✅ Benar. " : "❌ Belum tepat. ") + (d.w || ""); w.hidden = false; };
+      o.appendChild(b);
+    });
+  }
+  function scan(){ var s = $("#jx-sheet"); s.classList.remove("scan"); void s.offsetWidth; s.classList.add("scan"); }
+  ["n5","n4","n3","n2","n1"].forEach(function(l){
+    var b = document.createElement("button"); b.textContent = l.toUpperCase(); b.setAttribute("aria-pressed", String(l===lv));
+    b.onclick = function(){ lv = l; $("#jx-lv").querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); }); render(); scan(); };
+    $("#jx-lv").appendChild(b);
+  });
+  $("#jx-lang").querySelectorAll("button").forEach(function(b){
+    b.onclick = function(){ lang = b.getAttribute("data-l"); $("#jx-lang").querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); }); render(); scan(); };
+  });
+  $("#jx-scan").onclick = function(){ scan(); };
+  render();
 })();
 </script>
 </body>
