@@ -35,7 +35,7 @@
   const ctaHtml = () =>
     `<div class="demo-cta">` +
       paketList().map((p) => `<a class="btn gold" href="${esc(waUrl(p.teks))}" target="_blank" rel="noopener noreferrer">${esc(p.label)}</a>`).join("") +
-      `<a class="btn ghost" href="${HARGA_URL}" target="_blank" rel="noopener">💰 Lihat harga akses</a></div>`;
+      `<a class="btn ghost" href="${HARGA_URL}" data-open-pricing target="_blank" rel="noopener">💰 Lihat harga akses</a></div>`;
   /** Dipanggil saat tombol/kartu terkunci ditekan: popup ajakan beli akses. */
   const lockToast = (extra) => {
     const old = document.getElementById("demo-lock-modal"); if (old) old.remove();
@@ -69,7 +69,7 @@
       const app = document.getElementById("app");
       if (app && app.parentNode) app.parentNode.insertBefore(el, app); else document.body.prepend(el);
     }
-    el.innerHTML = `🎁 <b>MODE DEMO</b> · semua materi dibuka sebatas 10% — <span>hubungi admin untuk membeli akses penuh · <a href="${HARGA_URL}" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">lihat harga</a></span>`;
+    el.innerHTML = `🎁 <b>MODE DEMO</b> · semua materi dibuka sebatas 10% — <span>hubungi admin untuk membeli akses penuh · <a href="${HARGA_URL}" data-open-pricing target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">lihat harga</a></span>`;
   }
 
   // Gaya (disuntik sekali; tidak perlu mengubah file CSS lain).
