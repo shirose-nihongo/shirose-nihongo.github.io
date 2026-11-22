@@ -24,7 +24,7 @@
     const C = window.LANDING_CONFIG || {}, sub = C.langganan || {}, wa = C.whatsapp || {};
     const u = String(sub.url || "").trim();
     if (u) return u + (u.indexOf("?") < 0 ? "?" : "&") + "text=" + encodeURIComponent(sub.teks || "Halo admin Shirose Nihongo, saya mau membeli akses penuh. Mohon info paket dan harganya.");
-    return String(wa.url || "").trim();
+    return "https://wa.me/6285173269876?text=" + encodeURIComponent("Halo admin Shirose Nihongo, saya mau membeli akses penuh. Mohon info paket dan harganya.");   // chat pribadi admin (bukan grup)
   };
   const ctaHtml = () => {
     const u = waUrl();
