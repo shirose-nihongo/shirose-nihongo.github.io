@@ -300,7 +300,15 @@ async function gate(slug) {
   if (P.pref) { const lp = getPrefs(); setPrefs({ ...lp, ...P.pref }); }
   return { b, pack, P };
 }
-const visibleChapters = (b, pack) => pack.chapters.filter(c => siswaBolehBab(b, c.id));
+const _dm = () => !!(window.DEMO && window.DEMO.on());
+// Demo: hanya Bab 1, subbab 1–3.
+const visibleChapters = (b, pack) => {
+  const l = pack.chapters.filter(c => siswaBolehBab(b, c.id));
+  return _dm() ? l.slice(0, 1).map(c => ({ ...c, subs: c.subs.slice(0, 3) })) : l;
+};
+// Demo: kosakata/flashcard dibatasi 10% dari seluruh kosakata bidang.
+const dv = (pack, vocab) => _dm() ? vocab.slice(0, window.DEMO.cap(pack.vocab.length)) : vocab;
+const demoBanner = (txt) => _dm() ? `<div class="demo-note">🎁 <b>Akun Demo</b> — ${txt}</div>` : "";
 
 /* ============================== HUB: pulau melayang ============================== */
 async function renderHub() {
@@ -376,7 +384,7 @@ async function renderPeta([slug]) {
   });
   const qDone = Object.keys(P.quiz || {}).length;
   nodes.push({ bld: "exam", st: qDone ? "proses" : "belum", label: "EVALUASI", sub: "試験センター", pct: null, go: `route('ssw-kuis/${slug}')` });
-  const st = cardStats(P, pack.vocab);
+  const st = cardStats(P, dv(pack, pack.vocab));
   const last = P.last;
   const draftNote = isGuru() && pack.chapters.some(c => babStatus(b, c.id) !== "published") ? `<div class="sw-note">Mode guru: bab Draft/Hidden tetap terlihat di sini sebagai pratinjau.</div>` : "";
   return `<div class="sw-wrap sw-mapwrap">
@@ -384,6 +392,7 @@ async function renderPeta([slug]) {
     ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama) }])}
     ${charaPanel()}
     <div class="sw-head compact"><div class="jp">${esc(b.jp || "")}</div><h1>${esc(b.nama)}</h1><p>Ketuk sebuah bangunan untuk masuk ke babnya.</p></div>
+    ${demoBanner("hanya Bab 1 (subbab 1–3), kosakata &amp; flashcard 10%, dan 1 ujian penuh yang dibuka.")}
     ${draftNote}
     <div class="sw-map sw-map-p">${mapSVG(nodes, true)}</div>
     <div class="sw-map sw-map-l">${mapSVG(nodes, false)}</div>
@@ -392,7 +401,7 @@ async function renderPeta([slug]) {
       <button class="btn ghost" onclick="route('ssw-hafal/${slug}')">🃏 Flashcard${st.due ? ` · ${st.due} jatuh tempo` : ""}</button>
       <button class="btn ghost" onclick="route('ssw-kosa/${slug}/all')">📚 Kosakata (${st.total})</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/katakana')">カ Katakana</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/kanji')">字 Kanji</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/bunpou')">文 Bunpou</button>
       ${pack.idx.diagram ? `<button class="btn ghost" onclick="route('ssw-diagram/${slug}')">🔧 Diagram Interaktif</button>` : ""}
-      ${pack.idx.nobook ? "" : `<button class="btn ghost" onclick="route('ssw-buku/${slug}/${getLang()}/1')">📖 Buku interaktif</button>`}
+      ${pack.idx.nobook || _dm() ? "" : `<button class="btn ghost" onclick="route('ssw-buku/${slug}/${getLang()}/1')">📖 Buku interaktif</button>`}
       <button class="btn ghost" onclick="route('ssw-kuis/${slug}')">📝 Kuis</button>
       <button class="btn" onclick="route('ssw-hafal/${slug}')">🃏 Hafalan</button>
       <button class="btn gold" onclick="route('ssw-rank/${slug}')">🏆 Leaderboard</button>
@@ -408,8 +417,9 @@ async function renderBab([slug, babId]) {
   applyRuby();
   const g = await gate(slug); if (g.err) return g.err;
   const { b, pack, P } = g;
-  const c = pack.chapters.find(x => x.id === babId);
+  let c = pack.chapters.find(x => x.id === babId);
   if (!c) return msgPage("🧭", "Bab tidak ditemukan", "Bab ini tidak ada.", `route('ssw-peta/${slug}')`);
+  if (_dm()) { c = visibleChapters(b, pack).find(x => x.id === c.id); if (!c) return msgPage("🔒", "Bab terkunci (Demo)", window.DEMO.MSG, `ssw-peta/${slug}`); }
   if (!siswaBolehBab(b, c.id)) return msgPage("🔒", "Bab belum dibuka", "Guru belum mempublikasikan bab ini.", `route('ssw-peta/${slug}')`);
   const lang = getLang(), mode = getMode();
   const pr = babProgress(P, c, pack.vocab);
@@ -507,7 +517,7 @@ async function renderBaca([slug, subId, mode, lang]) {
   setMode(mode); setLang(lang); applyRuby();
   const flat = flatSubs(b, pack);
   const idx = flat.findIndex(x => x.s.id === subId);
-  if (idx < 0) return msgPage("🧭", "Subbab tidak ditemukan", "Subbab ini tidak ada atau belum dipublikasikan.", `route('ssw-peta/${slug}')`);
+  if (idx < 0) return _dm() ? msgPage("🔒", "Subbab terkunci (Demo)", window.DEMO.MSG, `ssw-peta/${slug}`) : msgPage("🧭", "Subbab tidak ditemukan", "Subbab ini tidak ada atau belum dipublikasikan.", `route('ssw-peta/${slug}')`);
   const { c, s } = flat[idx], prev = flat[idx - 1], next = flat[idx + 1];
   const link = (x) => `SSW.go('${slug}','${x.s.id}')`;
   P.last = { route: `ssw-baca/${slug}/${subId}/${mode}/${lang}`, label: `BAB ${c.no} · ${plain(L(s.title, "id"))}`, t: Date.now() };
@@ -567,6 +577,7 @@ const BOOK = { zoom: 1 };
 const bookMode = () => { try { return localStorage.getItem("shirose-ssw-bookmode") === "page" ? "page" : "scroll"; } catch (e) { return "scroll"; } };
 async function renderBuku([slug, lang, page]) {
   const g = await gate(slug); if (g.err) return g.err;
+  if (_dm()) return msgPage("🔒", "Buku interaktif terkunci (Demo)", window.DEMO.MSG, `ssw-peta/${slug}`);
   const { b, pack } = g;
   lang = lang === "jp" ? "jp" : "id";
   const total = pack.idx.pages?.[lang] || pack.idx.pages?.[pack.idx.book] || 85;
@@ -609,6 +620,7 @@ async function renderKosa([slug, scope = "all"]) {
   if (scope.startsWith("s:")) { const ss = scope.slice(2).split("+"); vocab = vocab.filter(v => (v.src || []).some(x => ss.includes(x))); }
   else if (scope.startsWith("w:")) { const ws = scope.slice(2).split("+"); vocab = pack.vocab.filter(v => ws.includes(v.id)); }
   else if (scope !== "all") vocab = vocab.filter(v => v.bab === scope);
+  vocab = dv(pack, vocab);
   const cats = [...new Set(vocab.map(v => v.cat).filter(Boolean))];
   const st = cardStats(P, vocab);
   window.__swVocab = { slug, vocab }; window.__swVF = {};
@@ -652,6 +664,7 @@ async function renderKartu([slug, scope = "all", mode = "semua"]) {
   if (scope.startsWith("s:")) { const ss = scope.slice(2).split("+"); vocab = vocab.filter(v => (v.src || []).some(x => ss.includes(x))); }
   else if (scope.startsWith("w:")) { const ws = scope.slice(2).split("+"); vocab = pack.vocab.filter(v => ws.includes(v.id)); }
   else if (scope !== "all") vocab = vocab.filter(v => v.bab === scope);
+  vocab = dv(pack, vocab);
   vocab = filterByState(P, vocab, mode);
   if (!window.sswHafalStart) return msgPage("🚧", "Mesin hafalan belum siap", "Muat ulang halaman.", `ssw-peta/${slug}`);
   P.last = { route: `ssw-hafal/${slug}`, label: "Hafalan kosakata", t: Date.now() }; touch(slug);
@@ -670,7 +683,7 @@ async function renderHafal([slug, pre]) {
   const { b, pack, P } = g;
   const chs = visibleChapters(b, pack);
   const okBab = new Set(chs.map(c => c.id));
-  HF = { slug, vocab: pack.vocab.filter(v => okBab.has(v.bab)), P, f: "semua", sel: [], n: 0, mode: "flashcard" };
+  HF = { slug, vocab: dv(pack, pack.vocab.filter(v => okBab.has(v.bab))), P, f: "semua", sel: [], n: 0, mode: "flashcard" };
   const cnt = (sid) => HF.vocab.filter(w => (w.src || []).includes(sid)).length;
   const st = cardStats(P, HF.vocab);
   const groups = chs.map(c => `<div class="sw-panel hf-g"><label class="hf-bab"><input type="checkbox" ${(!pre || pre === c.id) ? "checked" : ""} onchange="SSW.hafalBab('${c.id}',this.checked)"> <b>BAB ${c.no} — ${esc(plain(L(c.title, "id")))}</b></label>
@@ -733,19 +746,20 @@ async function renderKuis([slug, quizId]) {
   const g = await gate(slug); if (g.err) return g.err;
   const { b, pack, P } = g;
   const chs = visibleChapters(b, pack);
-  const full = fullQuizzes(pack);
+  const full = _dm() ? fullQuizzes(pack).slice(0, 1) : fullQuizzes(pack);   // demo: hanya 1 ujian penuh
+  const tema = _dm() ? [] : tema;
   const row = (q, label) => { const r = P.quiz[q.id]; return `<button class="sw-qrow" onclick="route('ssw-kuis/${slug}/${q.id}')"><span><b>${label}</b><small>${q.items.length} soal</small></span><span class="sc ${r ? (r.best >= 60 ? "ok" : "ng") : ""}">${r ? r.best + "%" : "Belum"}</span></button>`; };
   if (!quizId) {
     return wrap(`
       ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Kuis & Evaluasi" }])}
       <div class="sw-head compact"><div class="jp">試験センター</div><h1>Evaluasi — Examination Center</h1><p class="sw-label own">🏷️ Soal di sini adalah <b>latihan buatan Shirose</b> (bukan soal resmi ujian SSW), kecuali kuis yang diberi label <b>Soal resmi</b>.</p><p>Kuis tiap subbab, 3 kuis tiap bab, dan 10 ujian penuh (pilihan ganda, ○× dan soal bergambar). Skor terbaik tersimpan di akunmu.</p></div>
       ${chs.map(c => `<div class="sw-panel"><h2>BAB ${c.no} — ${esc(L(c.title, "id"))}</h2><div class="sw-qlist">${(pack.quiz.bab?.[c.id] || []).map((q, i) => row(q, `Kuis ${i + 1} · ${esc(L(q.title, "id"))}${q.title && q.title.jp ? ` <span class="jp sw-tsub">${rich(q.title.jp, { ruby: false })}</span>` : ""}`)).join("") || '<p class="sw-muted">Belum ada kuis.</p>'}</div></div>`).join("")}
-      ${(pack.quiz.tema || []).length ? `<div class="sw-panel"><h2>Kuis Tema</h2><p class="sw-muted">${slug === "building-cleaning" ? "Satu kuis untuk satu topik: rute pembersihan, jenis lantai, karpet, dan pH." : "Latihan kosakata per kategori: arti ↔ kata Jepang (10 soal tiap kuis)."}</p><div class="sw-qlist">${pack.quiz.tema.map(q => row(q, esc(L(q.title, "id")))).join("")}</div></div>` : ""}
-      ${slug === "kaigo" ? "" : `<div class="sw-panel"><h2>Tes Membaca Kosakata</h2><p class="sw-muted">Kanji dari kosakata buku → pilih bacaannya (hiragana/katakana). 15 soal acak.</p><div class="sw-qlist">${row({ id: "baca-kosakata", items: { length: 15 } }, "読み方テスト · Tes Membaca")}</div></div>`}
+      ${tema.length ? `<div class="sw-panel"><h2>Kuis Tema</h2><p class="sw-muted">${slug === "building-cleaning" ? "Satu kuis untuk satu topik: rute pembersihan, jenis lantai, karpet, dan pH." : "Latihan kosakata per kategori: arti ↔ kata Jepang (10 soal tiap kuis)."}</p><div class="sw-qlist">${pack.quiz.tema.map(q => row(q, esc(L(q.title, "id")))).join("")}</div></div>` : ""}
+      ${slug === "kaigo" ? "" : `<div class="sw-panel" ${_dm() ? "hidden" : ""}><h2>Tes Membaca Kosakata</h2><p class="sw-muted">Kanji dari kosakata buku → pilih bacaannya (hiragana/katakana). 15 soal acak.</p><div class="sw-qlist">${row({ id: "baca-kosakata", items: { length: 15 } }, "読み方テスト · Tes Membaca")}</div></div>`}
       <div class="sw-panel"><h2>${EXAM_SPEC[slug] && EXAM_SPEC[slug].paket ? `Paket Soal (${EXAM_SPEC[slug].n} soal per paket, ${EXAM_SPEC[slug].paket} paket)` : "Ujian Penuh (semua bab)"}</h2>${EXAM_SPEC[slug] ? `<p class="sw-muted">${EXAM_SPEC[slug].info} Ujian di sini mengikuti format itu.</p>` : ""}<div class="sw-qlist">${full.map((q, i) => row(q, EXAM_SPEC[slug] && EXAM_SPEC[slug].paket ? `Paket Soal ${i + 1} · tanpa soal yang sama dengan paket lain` : `Ujian Penuh ${i + 1}`)).join("") || '<p class="sw-muted">Belum ada soal.</p>'}</div></div>`);
   }
-  const q = quizId === "baca-kosakata" ? readingQuiz(pack) : [...chs.flatMap(c => pack.quiz.bab?.[c.id] || []), ...full, ...(pack.quiz.tema || [])].find(x => x.id === quizId);
-  if (!q) return msgPage("🧭", "Kuis tidak ditemukan", "Kuis ini tidak ada atau belum dipublikasikan.", `route('ssw-kuis/${slug}')`);
+  const q = quizId === "baca-kosakata" ? (_dm() ? null : readingQuiz(pack)) : [...chs.flatMap(c => pack.quiz.bab?.[c.id] || []), ...full, ...tema].find(x => x.id === quizId);
+  if (!q) return _dm() ? msgPage("🔒", "Kuis terkunci (Demo)", window.DEMO.MSG, `ssw-kuis/${slug}`) : msgPage("🧭", "Kuis tidak ditemukan", "Kuis ini tidak ada atau belum dipublikasikan.", `route('ssw-kuis/${slug}')`);
   const lang = getLang();
   const rnd = seeded(quizId + Date.now());
   const items = q.items.map((it, i) => {

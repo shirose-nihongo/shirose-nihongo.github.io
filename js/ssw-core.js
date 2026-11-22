@@ -179,6 +179,7 @@ export async function loadKelasAkses() {
 }
 export function sswAllowed(slug) {
   if (isGuru()) return true;
+  if (window.DEMO && window.DEMO.on()) return true;   // demo: semua bidang aktif terbuka, tapi isinya dibatasi 10% (ssw.js)
   try { if (FB && FB.hasFullAccess && FB.hasFullAccess()) return true; } catch (e) {}   // grup demo: semua bidang SSW terbuka
   let d = null; try { d = FB && FB.getSiswaDoc && FB.getSiswaDoc(); } catch (e) {}
   if (d && d.aksesSsw === false) return false;
@@ -203,7 +204,7 @@ export function points(P) {
 }
 const _rankT = {};
 export function syncRank(slug) {
-  if (isGuru() || isGuest() || !(FB && FB.saveSswRank)) return;
+  if (isGuru() || isGuest() || (window.DEMO && window.DEMO.on()) || !(FB && FB.saveSswRank)) return;
   const e = PS[slug]; if (!e) return;
   clearTimeout(_rankT[slug]);
   _rankT[slug] = setTimeout(async () => {

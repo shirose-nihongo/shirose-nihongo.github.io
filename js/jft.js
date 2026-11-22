@@ -249,7 +249,10 @@ function parseKode(kode) {
 }
 const judulKode = (lv, k) => k.jenis === "try" ? `Tryout JFT-Basic · Paket ${k.p + 1}` : k.jenis === "bab" ? `${LV[lv].nama} · Bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]} · Paket ${k.p + 1}` : `Simulasi JFT-Basic · Paket ${k.p + 1}${k.p === 4 ? " (ulangan Paket 1)" : ""}`;
 
+/** Akun demo: hanya paket b0p0 & b0p1 (Bab 1–6, Paket 1–2) yang terbuka. */
+const demoOk = (kode) => !(window.DEMO && window.DEMO.on()) || kode === "b0p0" || kode === "b0p1";
 async function mulaiPaket(kode, menit) {
+  if (!demoOk(kode)) { window.DEMO.lockToast(); return false; }
   const k = parseKode(kode); const lv = k && k.jenis === "try" ? "tryout" : S().level;
   if (!k || (k.jenis !== "try" && !LV[lv])) return false;
   let qs, daftar, flat, mode, judulT;
@@ -260,6 +263,7 @@ async function mulaiPaket(kode, menit) {
   simpanSesi(); return true;
 }
 async function mulaiLatihan(sek) {
+  if (!demoOk("latihan")) { window.DEMO.lockToast(); return; }
   setSeed("x" + Math.random()); unseed();
   let qs = await soalSek(sek, SEK[sek].n, [S().level && LV[S().level] ? S().level : "ir0"]);
   const isi = pick(((await isiD())[sek]) || [], 4).map(x => ({ ...x }));
@@ -438,10 +442,13 @@ async function renderUjian() {
   const lv = st.level;
   if (!LV[lv]) return `<div class="panel"><h2>📝 Ujian JFT-Basic</h2><p style="color:var(--gray)">Pilih level Irodori dulu:</p><div class="jft-latihan">${Object.keys(LV).map(l => `<button class="btn" onclick="JFT.keUjian('${l}')">${LV[l].jp} ${LV[l].nama}</button>`).join("")}</div></div>`;
   const sesi = pulihSesi();
+  const DM = !!(window.DEMO && window.DEMO.on());
   const blok = BLOK.map((r, b) => `
     <div class="panel jft-blok"><h3>Bab ${r[0]}–${r[1]}</h3>
       <div class="jft-sub">Kotoba · Kanji · Bunpou dari bab ${r[0]}–${r[1]} (23 soal per paket)</div>
-      <div class="jft-paket">${[0, 1, 2].map(p => `<button class="jft-pk" onclick="route('jft-paket/b${b}p${p}')"><b>Paket ${p + 1}</b>${lencana(lv, `b${b}p${p}`)}</button>`).join("")}</div>
+      <div class="jft-paket">${[0, 1, 2].map(p => (DM && !demoOk(`b${b}p${p}`))
+        ? `<button class="jft-pk demo-lock" onclick="DEMO.lockToast()"><b>Paket ${p + 1}</b><small>🔒 Demo</small></button>`
+        : `<button class="jft-pk" onclick="route('jft-paket/b${b}p${p}')"><b>Paket ${p + 1}</b>${lencana(lv, `b${b}p${p}`)}</button>`).join("")}</div>
     </div>`).join("");
   const sim = lv === "ir2" ? `
     <div class="panel jft-blok jft-simcard"><h3>🏁 Simulasi Penuh JFT-Basic</h3>
@@ -454,6 +461,7 @@ async function renderUjian() {
   <div class="jft-wrap">
     <div class="jft-crumb">JFT-Basic › ${LV[lv].nama}</div>
     <h2 style="margin:4px 0 12px">📝 Ujian ${LV[lv].jp} · ${LV[lv].nama}</h2>
+    ${DM ? window.DEMO.note(2, 14, "paket ujian") : ""}
     ${sesi ? `<div class="panel"><button class="btn" onclick="JFT.lanjutSesi()">▶ Lanjutkan ujian: ${esc(sesi.judul)} (sisa ${mmss(Math.max(0, Math.round((sesi.endAt - Date.now()) / 1000)))})</button></div>` : ""}
     ${blok}${sim}
     <div class="panel" style="margin-top:12px"><h3>Latihan cepat per bagian JFT</h3><div class="jft-latihan">${URUT.map(s => `<button class="btn ghost" onclick="JFT.latihan('${s}')">${SEK[s].jp} ${SEK[s].nama.split(" ")[0]} (${SEK[s].n})</button>`).join("")}</div></div>
@@ -491,6 +499,7 @@ async function renderPaket(params) {
   const st = S(); const kode = (params || [])[0]; const k = parseKode(kode); const lv = k && k.jenis === "try" ? "tryout" : st.level;
   if (!st.user || !k || (k.jenis !== "try" && !LV[lv])) { setTimeout(() => route(k && k.jenis === "try" ? "jft-tryout" : "jft-ujian"), 0); return '<div class="loading">Memuat…</div>'; }
   if (k.jenis === "try" && !(await tryoutD()).paket[k.p]) { setTimeout(() => route("jft-tryout"), 0); return '<div class="loading">Memuat…</div>'; }
+  if (!demoOk(kode)) return window.DEMO.lockedPanel("Paket JFT terkunci (Demo)", "jft-ujian", "Akun Demo hanya membuka 2 paket ujian JFT (Bab 1–6, Paket 1 & 2).");
   window.__jftMenit = 25;
   let isi = "";
   if (k.jenis === "bab") isi = `<li>語彙 Kotoba (8)</li><li>漢字 Kanji (6)</li><li>文法 Bunpou (6)</li><li>聴解 Choukai (5) — suara VOICEVOX</li><li>読解 Dokkai (4) — panflet</li><li>Total <b>29 soal</b> dari bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]}</li>`;
