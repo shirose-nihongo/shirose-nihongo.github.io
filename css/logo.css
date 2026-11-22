@@ -32,3 +32,7 @@
 .l2-en i{display:block;flex:1;min-width:8px;height:1.5px;background:var(--pink,#ef6a9a);border-radius:2px}
 @media (max-width:640px){.l2-jp{font-size:21px}.l2-en{font-size:7px}.logo-rose{width:30px;height:33px}}
 @media (max-width:400px){.logo-en{display:none}}
+
+.logo-rose-img{position:relative}
+.logo-rose-img img{position:absolute;left:0;top:0;width:100%;height:100%;display:block}
+.logo-rose-img .lr-pet{filter:hue-rotate(var(--rose-hue,0deg)) saturate(var(--rose-sat,1)) brightness(var(--rose-br,1))}
