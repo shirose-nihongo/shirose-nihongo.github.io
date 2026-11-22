@@ -2997,10 +2997,7 @@ async function renderMateriList(tipe){
   const kanjiBar = tipe !== "kanji" ? "" : (() => {
     const c = (window.KC && window.KC.kanjiCounts(state.level)) || { studied: 0, mastered: 0 };
     const _jft = String(state.level).startsWith("ir");   // JFT: tanpa pilihan level JLPT N5–N1
-    return `<div class="kc-kwrap">${_jft ? "" : `<span class="lv">Level:</span>${["n5","n4","n3","n2","n1"].map(l => {
-      const ok = canAccessLevel(l);
-      return `<button class="kc-lvchip ${l === state.level ? "on" : ""} ${ok ? "" : "lock"}" onclick="kanjiSetLevel('${l}')">${l.toUpperCase()}${ok ? "" : " 🔒"}</button>`;
-    }).join("")}`}<span class="lv">· ${c.studied}/${data.length} dipelajari · ${c.mastered} hafal</span></div>
+    return `<div class="kc-kwrap"><span class="lv">${String(state.level).toUpperCase()}</span><span class="lv">· ${c.studied}/${data.length} dipelajari · ${c.mastered} hafal</span></div>
       <div class="kc-note" style="margin:0 0 8px;">Klik kanji untuk detail, lalu <b>書き順を見る</b> (animasi urutan goresan) atau <b>書いてみよう</b> (latihan menulis).</div>`;
   })();
   return `
@@ -3066,23 +3063,23 @@ window.showMateri = async (tipe, idx, vno) => {
         </div>
         <div style="font-size:16px; margin:12px 0;"><b>${arti}</b></div>
         ${kvList ? (kvList.length === 1 && kvList[0].fallback ? `<p class="kv-note">Kanji <b>${k}</b> belum punya kosakata di database, jadi kartu hafalannya berisi <b>Kanji ini sendiri</b> (bacaan + arti).</p>` : `<p class="kv-note">Kanji <b>${k}</b> adalah <b>kategori</b>. Yang dihafalkan adalah <b>kosakata</b> di bawah (ketuk untuk belajar).</p>`) : ""}
-        ${kvList ? (kvList.length ? `<div class="contoh-list">
-          <h3>${kvList.length === 1 && kvList[0].fallback ? "Kartu hafalan" : "Kosakata dengan Kanji ini"} <small style="color:var(--gray-dim); font-weight:400;">(${kvList.length})</small></h3>
+        ${kvList ? (kvList.length ? `<details class="contoh-list">
+          <summary style="cursor:pointer; font-weight:700; font-size:15px; padding:8px 0;">📖 ${kvList.length === 1 && kvList[0].fallback ? "Kartu hafalan" : "Kosakata dengan Kanji ini"} <small style="color:var(--gray-dim); font-weight:400;">(${kvList.length}) · klik untuk buka</small></summary>
           ${kvList.map((v, vi) => `<div class="contoh-item kv-item" role="button" tabindex="0" onclick="kvOpen(${idx},${vi})" onkeydown="if(event.key==='Enter')kvOpen(${idx},${vi})">
             <div><div class="jp">${_kvEsc(v.kata)} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(v.kata)}" data-read="${SV.escAttr(v.kana||v.kata)}" data-role="kanji-contoh" onclick="event.stopPropagation();SV.btn(this)">🔊</button></div><div class="r">${_kvEsc(v.kana)}</div></div>
             <div class="id">${_kvEsc(v.arti)} <span class="kv-go">›</span></div>
           </div>`).join("")}
-        </div>
+        </details>
         <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
           <button class="btn gold" onclick="kvStudy(${idx},'flashcard')">🃏 Flashcard kosakata Kanji ini</button>
           <button class="btn ghost" onclick="kvStudy(${idx},'multiple')">✅ Pilihan ganda</button>
-        </div>` : `<p class="kv-note">Belum ada kosakata untuk Kanji ini di database.</p>`) : (contoh.length ? `<div class="contoh-list">
-          <h3>Contoh kosakata</h3>
+        </div>` : `<p class="kv-note">Belum ada kosakata untuk Kanji ini di database.</p>`) : (contoh.length ? `<details class="contoh-list">
+          <summary style="cursor:pointer; font-weight:700; font-size:15px; padding:8px 0;">📖 Contoh kosakata (${contoh.length}) · klik untuk buka</summary>
           ${contoh.map(c => `<div class="contoh-item">
             <div><div class="jp">${c.k} <button class="say-mini" title="Dengarkan" data-say="${SV.escAttr(c.k)}" data-read="${SV.escAttr(c.r||c.k)}" data-role="kanji-contoh" onclick="SV.btn(this)">🔊</button></div><div class="r">${c.r||""}</div></div>
             <div class="id">${c.a||""}</div>
           </div>`).join("")}
-        </div>` : "")}
+        </details>` : "")}
         <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:16px;">
           <button class="btn" data-say="${SV.escAttr(k)}" data-role="kanji" onclick="SV.btn(this)">🔊 Dengar</button>
           <button class="btn ghost" onclick="showStrokeOrder('${(k||"").replace(/'/g,"")}')">書き順を見る</button>
