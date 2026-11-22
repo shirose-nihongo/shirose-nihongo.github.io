@@ -865,6 +865,7 @@ export const CATALOG_LABELS = {
   celana: "Celana",
   sayap: "Sayap",
   jepit: "Jepit Rambut",
+  poni: "Poni",
   anting: "Anting",
 };
 
@@ -879,6 +880,7 @@ export const DEFAULT_EQUIPPED = {
   celana: "none",
   sayap: "none",
   jepit: "none",
+  poni: "none",
   anting: "none",
 };
 
@@ -987,8 +989,9 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
   }
 
   // Jepit & anting (slot baru)
-  let jepitSvg = "", antingSvg = "";
+  let jepitSvg = "", antingSvg = "", poniSvg = "";
   if (eq.jepit && eq.jepit !== "none" && CATALOG.jepit?.[eq.jepit]?.svg) jepitSvg = `<g data-slot="jepit">${CATALOG.jepit[eq.jepit].svg()}</g>`;
+  if (fem && eq.poni && eq.poni !== "none" && CATALOG.poni?.[eq.poni]?.svg) { const hc = opts.hairColor || ((hairSvg.match(/fill="(#[0-9a-fA-F]{6})"/) || [])[1]) || undefined; poniSvg = `<g data-slot="poni">${CATALOG.poni[eq.poni].svg(hc)}</g>`; }
   if (eq.anting && eq.anting !== "none" && CATALOG.anting?.[eq.anting]?.svg) antingSvg = `<g data-slot="anting">${CATALOG.anting[eq.anting].svg()}</g>`;
   const skinC = (SKIN_TONES[skinKey] || SKIN_TONES.light).skin;
   if (skinC !== SKIN_TONES.light.skin) { const fix = (x) => x ? x.split("#f5d4b3").join(skinC) : x; base = fix(base); pakaianOverlay = fix(pakaianOverlay); sepatuOverlay = fix(sepatuOverlay); celanaOverlay = fix(celanaOverlay); }
@@ -1003,7 +1006,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
     base = base.replace(/<g data-slot="mata">[\s\S]*?<\/g>/, "");
     sepatuOverlay = femWarp(sepatuOverlay); celanaOverlay = femWarp(celanaOverlay);
     base = femWarp(base); pakaianOverlay = femWarp(pakaianOverlay); hairSvg = femWarp(hairSvg); aksesoriSvg = femWarp(aksesoriSvg);
-    jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
+    poniSvg = femWarp(poniSvg); jepitSvg = femWarp(jepitSvg); antingSvg = femWarp(antingSvg); handheldSvg = femWarp(handheldSvg);
     femFaceSvg = femFace(); femBustSvg = femBust; femUnder = femWarp(femUnder);
   }
   // mata pilihan (gratis): ganti grup mata bawaan
@@ -1030,6 +1033,7 @@ export function renderCharacter(equipped = {}, skinKey = "light", opts = {}) {
       ${femBustSvg}
       ${sepatuOverlay}
       ${hairSvg}
+      ${poniSvg}
       ${jepitSvg}
       ${antingSvg}
       ${aksesoriSvg}
@@ -1057,7 +1061,7 @@ import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
 import { extendSet, SET } from "./character-set.js?v=20261119r";
 import { PET, MATA } from "./character-pet.js?v=20261119u";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261118z6";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261122p";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
@@ -1066,7 +1070,7 @@ export const CELANA = __X.CELANA, SAYAP = __X.SAYAP;
 for (const p of Object.values(PET)) p._rp = 1;   // harga pet tetap (tidak ikut kurva penyesuaian)
 extendSet(__X); CATALOG.set = SET; CATALOG_LABELS.set = "Paket Kostum"; DEFAULT_EQUIPPED.set = "none";
 CATALOG.pet = PET; CATALOG_LABELS.pet = "Pet"; DEFAULT_EQUIPPED.pet = "none";
-CATALOG.celana = CELANA; CATALOG.sayap = SAYAP; CATALOG.jepit = __X.JEPIT; CATALOG.anting = __X.ANTING;
+CATALOG.celana = CELANA; CATALOG.sayap = SAYAP; CATALOG.jepit = __X.JEPIT; CATALOG.poni = __X.PONI; CATALOG.anting = __X.ANTING;
 
 /* ====== Penyesuaian harga (Nov 2026): item termahal = 25.000 🪙, sisanya turun mengikuti.
    Kurva pangkat 0,6 — urutan harga lama tetap terjaga. Mythic juga maksimal 25.000. Berjalan sekali per item (_rp). ====== */

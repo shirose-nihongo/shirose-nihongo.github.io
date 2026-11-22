@@ -2,7 +2,7 @@
  * Progres: siswa/{uid}/login_reward/main {hari,last,pending}. Peti: 5 barang acak (belum dimiliki) → pilih 1 → masuk inventaris. */
 import { ITEMS } from "../cloudflare/gacha-items.js";
 import { PET } from "./character-pet.js?v=20261119u";
-import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261119u";
+import { CATALOG, DEFAULT_EQUIPPED, renderCharacter } from "./character.js?v=20261122p";
 /* gambar barang: karakter memakai barang itu (SVG animasi bawaan item + efek melayang/bersinar per kelangkaan) */
 const KAT_OF = {}; for (const [k, o] of Object.entries(CATALOG)) for (const id of Object.keys(o)) if (id !== "none") KAT_OF[id] = k;
 const ANIM = { item_tangan: "gaSwing", aura: "gaPulse", sayap: "gaFlap", aksesori: "gaBob", pakaian: "gaBob", celana: "gaBob", sepatu: "gaBob", rambut: "gaBob" };
@@ -10,7 +10,7 @@ function gambarItem(id, rar, px = 96, stat = false) {
   const c = ({ common: "#9aa0a6", uncommon: "#5bd16b", rare: "#4aa3ff", epic: "#b266ff", legendary: "#ffb703", mythic: "#ff4d94" })[rar] || "#999";
   if (String(id).startsWith("theme_")) return `<div class="ga-fig" style="width:${px}px;height:${px}px;--gc:${c};animation:gaBob 2s ease-in-out infinite"><div style="font-size:${px * .5}px;display:flex;align-items:center;justify-content:center;height:100%">🎨</div></div>`;
   const k = KAT_OF[id]; if (!k) return `<div class="ga-fig" style="width:${px}px;height:${px}px;--gc:${c}"></div>`;
-  const VB = { jepit: "110 40 180 190", anting: "110 60 180 150", rambut: "110 40 180 190", aksesori: "110 20 180 200", pakaian: "90 170 220 190", celana: "130 330 140 140", sepatu: "120 405 160 90", item_tangan: "70 150 260 240", sayap: "-110 -40 620 520" };
+  const VB = { poni: "110 40 180 190", jepit: "110 40 180 190", anting: "110 60 180 150", rambut: "110 40 180 190", aksesori: "110 20 180 200", pakaian: "90 170 220 190", celana: "130 330 140 140", sepatu: "120 405 160 90", item_tangan: "70 150 260 240", sayap: "-110 -40 620 520" };
   const svg = renderCharacter({ ...DEFAULT_EQUIPPED, [k]: id }).replace(/viewBox="[^"]*"/, 'viewBox="' + (VB[k] || "0 0 400 500") + '"').replace('style="overflow:visible"', 'style="overflow:hidden"');   // potong sesuai viewBox, jangan meluber keluar kartu
   return `<div class="ga-fig${stat ? " ga-st" : ""}" style="width:${px}px;height:${px * 1.15}px;--gc:${c};${stat ? "" : `animation:${ANIM[k] || "gaBob"} ${k === "item_tangan" ? "1.6s" : "2.2s"} ease-in-out infinite`}">${svg}</div>`;
 }

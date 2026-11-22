@@ -1560,7 +1560,7 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
-import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261119u";
+import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261122p";
 import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
@@ -5322,13 +5322,14 @@ async function renderShop(){
     { key: "item_tangan", label: "⚔️ Senjata" },
     { key: "aura",        label: "✨ Aura" },
     { key: "celana",      label: "👖 Celana / Rok" },
+    { key: "poni",        label: "🎀 Poni" },
     { key: "jepit",       label: "📎 Jepit Rambut" },
     { key: "anting",      label: "💎 Anting" },
     { key: "sayap",       label: "🪽 Sayap (Epic+)" },
     { key: "pet",         label: "🐾 Pet" },
     { key: "bentuk",      label: "🪞 Bentuk & Mata (GRATIS)" },
   ];
-  if (getBody() !== "female") CAT_TABS.splice(0, CAT_TABS.length, ...CAT_TABS.filter(t => t.key !== "jepit" && t.key !== "anting"));
+  if (getBody() !== "female") CAT_TABS.splice(0, CAT_TABS.length, ...CAT_TABS.filter(t => t.key !== "jepit" && t.key !== "anting" && t.key !== "poni"));
   const activeCat = state._shopCat && CAT_TABS.some(t => t.key === state._shopCat) ? state._shopCat : "rambut";
   state._shopCat = activeCat;
 
@@ -5399,7 +5400,7 @@ async function renderShop(){
 
   // Thumbnail for each item (character SVG with just that slot populated)
   const _tc = (window.__thumbCache = window.__thumbCache || new Map());
-  const thumbFor = (it) => { const ck = activeCat + "|" + it.id + "|" + skin + "|" + body + "|" + (hairColor || ""); let v = _tc.get(ck); if (v === undefined) { v = renderCharacter({ ...DEFAULT_EQUIPPED, [activeCat]: eqVal(it.id) }, skin, { hairColor, wide: true, body }); if (_tc.size > 600) _tc.clear(); _tc.set(ck, v); } return v; };
+  const thumbFor = (it) => { const ck = activeCat + "|" + it.id + "|" + skin + "|" + body + "|" + (hairColor || ""); let v = _tc.get(ck); if (v === undefined) { v = renderCharacter({ ...DEFAULT_EQUIPPED, ...(activeCat === "poni" ? { rambut: "fh_lurus_panjang" } : {}), [activeCat]: eqVal(it.id) }, skin, { hairColor, wide: true, body }); if (_tc.size > 600) _tc.clear(); _tc.set(ck, v); } return v; };
 
   const bt = getBentuk();
   const slider = (k, lbl) => `<label style="display:block;margin:10px 0 2px;font-weight:700">${lbl} <small style="color:var(--gray)">(${Math.round(bt[k] * 100)}%)</small></label><input type="range" min="75" max="135" step="1" value="${Math.round(bt[k] * 100)}" style="width:100%" oninput="shopBentuk('${k}',this.value/100,true)" onchange="shopBentuk('${k}',this.value/100)"/><div style="display:flex;justify-content:space-between;font-size:11px;color:var(--gray)"><span>← Kurus</span><span>Gemuk →</span></div>`;
@@ -5648,7 +5649,7 @@ async function renderWardrobe(){
           </div>
         </div>
         <div style="flex:1; min-width:280px;">
-          ${Object.keys(CATALOG).filter(k => getBody() === "female" || (k !== "jepit" && k !== "anting")).map(kat => {
+          ${Object.keys(CATALOG).filter(k => getBody() === "female" || (k !== "jepit" && k !== "anting" && k !== "poni")).map(kat => {
             const items = inv.filter(id => CATALOG[kat][id] && itemOk(kat, id, getBody()));
             const NONE = { rambut: "none", pakaian: "seragam_default", sepatu: "shoes_default" }, noneId = kat in NONE ? NONE[kat] : "none";
             const noneNama = { rambut: "Botak (Default)", pakaian: "Kaos Putih (Default)", sepatu: "Sepatu Sekolah (Default)", celana: "Tanpa celana (Default)", sayap: "Tanpa sayap (Default)" }[kat] || "Tidak memakai (Default)";

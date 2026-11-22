@@ -860,7 +860,7 @@ try { $("#heroChar").innerHTML = renderCharacter(heroEq, "light"); } catch(e){}
 
 var eq = Object.assign({}, DEFAULT_EQUIPPED, heroEq), skin = "light";
 /* Slot & item diambil langsung dari katalog karakter aplikasi (ikut bertambah saat katalog bertambah). */
-var ORDER = ["rambut","pakaian","celana","sepatu","aksesori","jepit","anting","sayap","item_tangan","aura"];
+var ORDER = ["rambut","pakaian","celana","sepatu","aksesori","jepit","poni","anting","sayap","item_tangan","aura"];
 var LBL = Object.assign({}, CATALOG_LABELS);
 var SLOTS = ORDER.filter(function(k){ return CATALOG[k] && Object.keys(CATALOG[k]).length; }).map(function(k){ return [k, LBL[k] || k]; });
 function pickIds(k){

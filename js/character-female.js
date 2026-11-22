@@ -117,6 +117,22 @@ const JEPIT = [
   ["mahkota_mini", "Jepit Mahkota Mini Emas", "legendary", () => `<path d="M218 98 l2 -14 6 7 4 -10 4 10 6 -7 2 14z" fill="#facc15" stroke="#a16207" stroke-width="1.4"/><circle cx="230" cy="92" r="2" fill="#ef4444"/>`],
 ];
 
+
+/* ---------- PONI (slot baru, hanya cewek) — dijual Rp-koin 1.000 per poni, warna ikut rambut ---------- */
+const hl = (d) => `<path d="${d}" stroke="#fff" stroke-opacity=".16" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+const sk = (d) => `<path d="${d}" stroke="#000" stroke-opacity=".13" stroke-width="1.4" fill="none" stroke-linecap="round"/>`;
+const P1000 = { harga: 1000, _rp: 1 };   // _rp: lewati penyesuaian harga global (tetap 1.000 koin)
+const PONI = [
+  ["lurus", "Poni Depan Lurus", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 116 Q226 123 200 118 Q174 123 149 116Z" fill="${c}"/>` + hl("M166 96 Q200 86 234 96") + sk("M176 78 L174 116 M200 70 L200 118 M224 78 L226 116"), P1000],
+  ["tipis", "Poni Tipis (See-through)", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 100 Q200 108 149 100Z" fill="${c}"/>` + [162, 176, 190, 204, 218, 232, 244].map((x, i) => `<path d="M${x - 5} ${96 - (i % 2) * 2} Q${x} ${112 + (i % 3) * 3} ${x + 4} ${97}Z" fill="${c}"/>`).join(""), P1000],
+  ["samping", "Poni Samping Menyapu", "common", (c = "#3a2518") => `<path d="M150 74 Q200 52 250 74 L252 100 Q222 98 196 112 Q168 128 150 146 L147 120Z" fill="${c}"/>` + hl("M176 80 Q205 82 228 98") + sk("M160 120 Q190 104 232 98"), P1000],
+  ["belah_tengah", "Poni Belah Tengah (Curtain)", "common", (c = "#3a2518") => `<path d="M200 66 Q150 66 149 112 Q147 140 150 160 Q168 132 182 108 Q194 90 200 66Z" fill="${c}"/><path d="M200 66 Q250 66 251 112 Q253 140 250 160 Q232 132 218 108 Q206 90 200 66Z" fill="${c}"/>` + hl("M162 100 Q158 124 160 140") + hl("M238 100 Q242 124 240 140"), P1000],
+  ["hime", "Poni Hime + Sisi Panjang", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 116 Q226 123 200 118 Q174 123 149 116Z" fill="${c}"/><path d="M149 100 Q138 170 146 230 L160 228 Q158 170 164 120Z" fill="${c}"/><path d="M251 100 Q262 170 254 230 L240 228 Q242 170 236 120Z" fill="${c}"/>` + hl("M168 96 Q200 86 232 96") + sk("M200 70 L200 118"), P1000],
+  ["pendek", "Poni Pendek (Baby Bangs)", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L250 96 Q226 102 200 98 Q174 102 150 96Z" fill="${c}"/>` + hl("M170 84 Q200 76 230 84") + sk("M186 74 L184 98 M214 74 L216 98"), P1000],
+  ["miring", "Poni Miring Asimetris", "common", (c = "#3a2518") => `<path d="M150 74 Q200 52 250 74 L251 96 Q232 100 214 112 Q184 124 152 126 L148 106Z" fill="${c}"/>` + hl("M170 82 Q206 80 238 94") + sk("M166 112 Q200 108 232 96"), P1000],
+  ["gerigi", "Poni Bergerigi (Choppy)", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 112 L240 100 L232 119 L220 102 L210 121 L200 103 L190 121 L180 102 L168 119 L160 100 L149 112Z" fill="${c}"/>` + hl("M168 90 Q200 80 232 90"), P1000],
+];
+
 /* ---------- ANTING (slot baru) — telinga di x=148 / 252, y=135 ---------- */
 const ear = (f) => f(148, 145) + f(252, 145);
 const ANTING = [
@@ -265,5 +281,6 @@ export function extendFemale(C) {
   Object.assign(C.SHOES, mark(build(HEELS, "hl_")));
   Object.assign(C.ACCESSORIES, mark(build(ACC, "fa_")));
   C.JEPIT = { none: { nama: "Tanpa jepit", harga: 0, equipped_default: true, svg: null }, ...mark(build(JEPIT, "jp_")) };
+  C.PONI = { none: { nama: "Tanpa poni", harga: 0, equipped_default: true, svg: null }, ...mark(build(PONI, "pn_")) };
   C.ANTING = { none: { nama: "Tanpa anting", harga: 0, equipped_default: true, svg: null }, ...mark(build(ANTING, "an_")) };
 }
