@@ -323,6 +323,8 @@ body.auth-mode .companion{display:none !important;}
 .lvl-badge:hover{background:rgba(239,106,154,.25);}
 body.pick-mode .lvl-pill-group{visibility:hidden;}
 @media (max-width:520px){ .lvl-badge{padding:6px 12px; font-size:14px;} .lvl-badge .ganti{display:none;} }
+/* tombol ⚙ Pengaturan hanya di HP */
+.mset-wrap{display:none;}
 /* Topbar HP: tidak boleh melebar keluar layar (tanpa scroll horizontal) */
 @media (max-width:560px){
   .topbar{flex-wrap:wrap; row-gap:6px;}
@@ -340,7 +342,21 @@ body.pick-mode .lvl-pill-group{visibility:hidden;}
   .topbar .lvl-pill-group{flex:0 1 auto; min-width:0;}
   /* menu tema/font/dll: lebar penuh layar HP (tidak kepotong kiri/kanan), menempel di bawah topbar */
   @media (min-width:400px){ #btn-auth{max-width:150px;} }
-  .topbar .th-wrap{position:static;}
+  .topbar .th-wrap{display:contents;}
+  .topbar .th-wrap > #mb-btn{order:5;}
+  .topbar .th-wrap > .th-btn:not(#mb-btn){display:none;}   /* tema/font/simpan: dibuka lewat tombol ⚙ Pengaturan */
+  .topbar .th-wrap > #mb-btn .th-txt{display:none;}   /* Berlangganan: ikon saja di HP agar topbar cukup 2 baris */
+  .topbar .th-wrap > #mb-btn{padding:6px 9px; min-height:34px;}
+  .topbar-right .chip{padding:3px 8px; min-height:32px; font-size:13px; gap:4px;}
+  .topbar .sosmed-top a, .topbar a[class*="sm-"]{transform:scale(.9);}
+  @media (max-width:380px){ .mset-txt{display:none;} .mset-btn{padding:6px 11px; font-size:15px;} }
+  .mset-wrap{display:block; order:5; position:static;}
+  .mset-btn{display:inline-flex; align-items:center; gap:4px; padding:6px 10px; font-size:13px; min-height:34px;}
+  .mset-panel{display:none; position:absolute; left:8px; right:8px; top:calc(100% + 4px); z-index:81; background:var(--navy-2); border:1px solid var(--border-light); border-radius:14px; padding:6px; box-shadow:0 12px 30px rgba(0,0,0,.45);}
+  .mset-panel.open{display:block;}
+  .mset-panel button{display:flex; width:100%; align-items:center; gap:10px; background:none; border:0; color:var(--white); font:inherit; font-size:15px; padding:12px; border-radius:10px; cursor:pointer; text-align:left;}
+  .mset-panel button:hover,.mset-panel button:active{background:var(--navy-3);}
+  .mset-panel button[hidden]{display:none;}
   .topbar .th-menu{left:8px; right:8px; top:calc(100% + 4px); min-width:0; width:auto; max-width:none;}
   .brand:not(.logo) > span:last-child{display:none;}
 }
@@ -1530,10 +1546,11 @@ html{overflow-x:hidden;}
 
 <!-- ============ TOASTS ============ -->
 <div class="toast-wrap" id="toasts"></div>
-<script src="./js/themes.js?v=20261122a"></script>
+<script src="./js/themes.js?v=20261122b"></script>
 <script src="./js/landing-config.js"></script>
 <script src="./js/demo.js?v=20261122c"></script>
 <script src="./js/membership.js"></script>
+<script src="./js/mobile-bar.js?v=1"></script>
 
 <!-- ============ LEVEL UP OVERLAY ============ -->
 <div class="levelup-overlay" id="levelup">
