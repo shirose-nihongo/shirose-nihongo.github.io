@@ -306,13 +306,59 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 .kj-box svg.hide-guide .g{opacity:0}
 .kj-box canvas{cursor:crosshair}
 .kj-info{text-align:center;font-size:13.5px;color:var(--gray);margin-top:10px;min-height:20px}
+.sw-body{background:rgba(255,255,255,.04);border:1px solid var(--navy-3);border-radius:14px;padding:6px 16px}
+.sw-body p{font-size:16px;line-height:2.2;margin:8px 0;color:var(--white,#fff);font-family:var(--font-jp)}
+.sw-body p.id{line-height:1.8;font-family:inherit;font-size:15px}
+.sw-body ruby rt{font-size:.55em;color:var(--pink-light)}
+.sw-body .sw-w{border-bottom:2px dotted var(--pink);cursor:pointer;border-radius:3px}
+.sw-body .sw-w:hover,.sw-body .sw-w.on{background:rgba(239,106,154,.22)}
+.sw-hint{font-size:12.5px;color:var(--gray-dim);margin:8px 2px}
+.sw-card{background:rgba(239,106,154,.1);border:1px solid var(--pink);border-radius:14px;padding:12px 14px;margin-top:6px}
+.sw-card .k{font-family:var(--font-jp);font-size:26px;font-weight:800}
+.sw-card .m{font-size:15px;margin:2px 0 6px}
+.sw-card .r{font-size:13px;color:var(--gray)}
+.sw-card .ex{font-size:13.5px;color:var(--gray);margin-top:8px;line-height:1.9}
+.sw-card .ex .jpx{font-family:var(--font-jp);color:var(--white,#fff)}
+.sw-card .btn{margin-top:10px}
+.sw-fl{font-size:13px;color:var(--gray);margin-top:10px;min-height:20px}
+.sw-fl b{color:var(--pink-light)}
+
+.logo-rose .r-hl{fill:none;stroke:#fff;stroke-opacity:.75;stroke-width:1.2;stroke-linecap:round}
+.logo-text.l2{flex-direction:column;align-items:center;gap:3px}
+.l2-jp{font-family:var(--font-jp,'Shippori Mincho B1',serif);font-weight:800;font-size:27px;letter-spacing:.1em;line-height:1;color:var(--white,#fff);padding-left:.1em}
+.l2-en{display:flex;align-items:center;gap:6px;font-family:var(--font-sans,system-ui,sans-serif);font-weight:700;font-size:8.5px;letter-spacing:.38em;line-height:1;color:var(--pink-light,#f58bb0)}
+.l2-en i{display:block;flex:1;min-width:8px;height:1.5px;background:var(--pink,#ef6a9a);border-radius:2px}
+@media (max-width:640px){.l2-jp{font-size:21px}.l2-en{font-size:7px}.logo-rose{width:30px;height:33px}}
+@media (max-width:400px){.logo-en{display:none}}
+.brand.logo{gap:10px;font-size:inherit;letter-spacing:0}
+.logo-rose{display:block;width:34px;height:37px;flex:none;overflow:visible}
+.logo-rose .r-leaf{fill:var(--green,#10b981)}
+.logo-rose .r-line{fill:none;stroke:var(--green,#10b981);stroke-width:1.8;stroke-linecap:round}
+.logo-text{display:flex;white-space:nowrap}
 </style>
 </head>
 <body>
 
 <nav class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="./assets/logo-shirose.png" alt="Shirose Nihongo" width="106" height="40"/></a>
+    <a class="brand logo" href="#top" aria-label="Shirose Nihongo"><svg class="logo-rose" viewBox="0 0 48 52" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="lg-bl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--pink-light,#f58bb0)"/><stop offset="1" style="stop-color:var(--pink,#ef6a9a)"/></linearGradient>
+        <linearGradient id="lg-dl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--pink,#ef6a9a)"/><stop offset="1" style="stop-color:var(--pink-dark,#c8325a)"/></linearGradient>
+        <radialGradient id="lg-cl" cx=".4" cy=".3" r=".8"><stop offset="0" style="stop-color:var(--pink-light,#f58bb0)"/><stop offset="1" style="stop-color:var(--pink,#ef6a9a)"/></radialGradient>
+      </defs>
+      <path class="r-line" d="M24 37v14"/>
+      <path class="r-leaf" d="M24 44c-6-4-12-2-16 3 7 2 13 0 16-3Z"/>
+      <path class="r-leaf" d="M24 46c5-3 10-2 14 2-6 2-11 1-14-2Z"/>
+      <path fill="url(#lg-dl)" d="M5.5 20C4 10.5 12 4.5 21 6.5 15 11 14 19 17.5 28 11 28.5 6.5 25.5 5.5 20Z"/>
+      <path fill="url(#lg-dl)" d="M42.5 20C44 10.5 36 4.5 27 6.5 33 11 34 19 30.5 28 37 28.5 41.5 25.5 42.5 20Z"/>
+      <ellipse cx="24" cy="15.5" rx="10" ry="11" fill="url(#lg-cl)"/>
+      <path class="r-hl" d="M19.5 12c1.2-3 5-4 7.6-2.2 2.4 1.8 1.4 5.3-1.4 5.6-2.2.2-3.6-1.8-2.4-3.2"/>
+      <path fill="url(#lg-bl)" d="M7.5 22.5C14 28 34 28 40.5 22.5 42 32 34 40 24 40S6 32 7.5 22.5Z"/>
+      <path class="r-hl" d="M10 24.5C17 29.5 31 29.5 38 24.5" opacity=".9"/>
+      <path class="r-line" d="M24 30v9" opacity=".45"/>
+    </svg>
+    <span class="logo-text l2"><span class="l2-jp">シロセ</span><span class="l2-en"><i></i>NIHONGO<i></i></span></span></a>
     <div class="links">
       <a href="#fitur">Fitur</a><a href="#level">Level JLPT</a><a href="#ssw">SSW</a><a href="#karakter">Karakter</a><a href="#demo">Coba Gratis</a><a href="#mulai">Cara Mulai</a><a href="#faq">FAQ</a>
     </div>
@@ -431,6 +477,28 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       </div>
     </div>
 
+
+
+    <!-- SSW: materi ganti bahasa + ketuk kata -> flashcard -->
+    <div class="show flip rv" id="sw-show">
+      <div class="txt">
+        <span class="badge">Materi SSW</span>
+        <h3>Ganti bahasa sekali ketuk, ketuk kata untuk artinya</h3>
+        <p>Materi SSW di aplikasi bisa dibaca dalam bahasa Jepang atau Indonesia. Pindah dengan satu tombol, ketuk kata bergaris bawah untuk melihat arti dan bacaannya, lalu masukkan ke flashcard.</p>
+        <ul class="tick">
+          <li>Ganti 日本語 / Indonesia dengan satu ketukan</li>
+          <li>Ketuk kata: arti, bacaan, romaji, dan contoh kalimat</li>
+          <li>Satu tombol untuk memasukkan kata ke flashcard</li>
+        </ul>
+      </div>
+      <div class="demo" id="sw-demo">
+        <div class="demo-h"><div class="seg" id="sw-lang" role="group" aria-label="Bahasa materi"></div><span class="lbl">Truk · Apa itu KYT</span></div>
+        <div class="sw-body" id="sw-body"></div>
+        <div class="sw-hint" id="sw-hint">Ketuk kata bergaris bawah.</div>
+        <div class="sw-card" id="sw-card" hidden></div>
+        <div class="sw-fl" id="sw-fl"></div>
+      </div>
+    </div>
 
     <!-- CHOUKAI: suara + soal asli -->
     <div class="show flip rv" id="ck-show">
@@ -1055,6 +1123,35 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
     $("#kj-info").textContent="Goresan kamu: "+strokes+" / "+n+(strokes===n?" ✓ jumlahnya pas":strokes>n?" (kelebihan, coba hapus lalu ulangi)":"");}
   cv.addEventListener("pointerup",up);cv.addEventListener("pointercancel",up);
   kjDraw();
+})();
+</script>
+<script>
+/* ---- demo landing: materi SSW (data asli: data/ssw/auto-transport bab4 b4s1 + vocab.json) ---- */
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  var D={"w":{"tr-101":{"kata":"危険予知","kana":"きけんよち","romaji":"kikenyochi","arti":"prediksi bahaya","contoh":"{危険予知|きけんよち}をします。","arti_contoh":"Memprediksi bahaya."},"tr-102":{"kata":"事故パターン","kana":"じこぱたーん","romaji":"jikopataan","arti":"pola kecelakaan","contoh":"{事故パターン|じこぱたーん}を{考|かんが}えます。","arti_contoh":"Memikirkan pola kecelakaan."},"tr-103":{"kata":"危険要因","kana":"きけんよういん","romaji":"kikenyouin","arti":"faktor bahaya","contoh":"{危険要因|きけんよういん}を{見|み}つけます。","arti_contoh":"Menemukan faktor bahaya."},"tr-104":{"kata":"安全運転","kana":"あんぜんうんてん","romaji":"anzen'unten","arti":"mengemudi aman","contoh":"{安全運転|あんぜんうんてん}をします。","arti_contoh":"Mengemudi dengan aman."},"tr-192":{"kata":"運転方法","kana":"うんてんほうほう","romaji":"untenhouhou","arti":"cara mengemudi","contoh":"","arti_contoh":""},"tr-198":{"kata":"シート","kana":"シート","romaji":"shiito","arti":"terpal penutup muatan","contoh":"","arti_contoh":""},"tr-368":{"kata":"場面","kana":"ばめん","romaji":"bamen","arti":"situasi; adegan","contoh":"","arti_contoh":""},"tr-369":{"kata":"予測","kana":"よそく","romaji":"yosoku","arti":"ramalan; perkiraan","contoh":"","arti_contoh":""},"tr-370":{"kata":"考える","kana":"かんがえる","romaji":"kangaeru","arti":"memikirkan","contoh":"","arti_contoh":""},"tr-433":{"kata":"練習","kana":"れんしゅう","romaji":"renshuu","arti":"latihan","contoh":"","arti_contoh":""},"tr-539":{"kata":"トレーニング","kana":"トレーニング","romaji":"toreeningu","arti":"pelatihan","contoh":"","arti_contoh":""}},"jp":["KYTは、{運転|うんてん}の[tr-368:{場面|ばめん}]の{危険|きけん}を[tr-369:{予測|よそく}]して、{安全|あんぜん}な[tr-192:{運転方法|うんてんほうほう}]を[tr-370:{考|かんが}える][tr-433:{練習|れんしゅう}]です。","「どのような{危険|きけん}がありますか？」と「どのような{運転|うんてん}をすれば{安全|あんぜん}ですか？」を{考|かんが}えます。","KYT[tr-198:シート]には、[tr-102:{事故パターン|じこぱたーん}]と[tr-103:{危険要因|きけんよういん}]と[tr-104:{安全運転|あんぜんうんてん}]の{方法|ほうほう}があります。"],"id":["**危険予知トレーニング (KYT)**: melatih **memprediksi bahaya** pada situasi mengemudi dan memikirkan cara menghindarinya.","Dua pertanyaan dasar: **「どのような危険がありますか?」** dan **「どのような運転をすれば安全ですか?」**.","Setiap lembar KYT dilengkapi **事故パターン**, **危険要因**, dan **安全運転の方法**."]};
+  var lang="jp",picked={},open=null,esc=function(t){return String(t).replace(/[&<>]/g,"")};
+  function ruby(t){return esc(t).replace(/\{([^|}]+)\|([^}]+)\}/g,"<ruby>$1<rt>$2</rt></ruby>")}
+  function render(){
+    var h=D[lang].map(function(t){
+      if(lang==="jp"){return "<p>"+ruby(t).replace(/\[(tr-\d+):([^\]]*)\]/g,function(_,id,x){return '<span class="sw-w'+(open===id?" on":"")+'" data-id="'+id+'" role="button" tabindex="0">'+x+"</span>"})+"</p>"}
+      return '<p class="id">'+esc(t).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>")+"</p>"}).join("");
+    $("#sw-body").innerHTML=h;$("#sw-hint").style.display=lang==="jp"?"":"none";
+    if(lang!=="jp")$("#sw-card").hidden=true;
+  }
+  function card(id){
+    open=id;var w=D.w[id],on=!!picked[id],c=$("#sw-card");
+    c.innerHTML='<div class="k">'+esc(w.kata)+'</div><div class="m"><b>'+esc(w.arti)+'</b></div><div class="r">Bacaan: <b>'+esc(w.kana)+'</b> · Romaji: <b>'+esc(w.romaji)+"</b></div>"+(w.contoh?'<div class="ex"><span class="jpx">'+ruby(w.contoh)+"</span><br>"+esc(w.arti_contoh)+"</div>":"")+
+      '<button type="button" class="btn '+(on?"":"primary ")+'sm" id="sw-add">'+(on?"✓ Ada di flashcard (ketuk = hapus)":"🃏 Masukkan ke flashcard")+"</button>";
+    c.hidden=false;$("#sw-add").onclick=function(){if(picked[id])delete picked[id];else picked[id]=1;card(id);fl();render()};render();
+  }
+  function fl(){var ks=Object.keys(picked);$("#sw-fl").innerHTML=ks.length?"Flashcard kamu ("+ks.length+"): <b>"+ks.map(function(i){return esc(D.w[i].kata)}).join("</b>, <b>")+"</b>":""}
+  $("#sw-body").addEventListener("click",function(e){var s=e.target.closest(".sw-w");if(s)card(s.dataset.id)});
+  $("#sw-body").addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){var s=e.target.closest(".sw-w");if(s){e.preventDefault();card(s.dataset.id)}}});
+  var seg=$("#sw-lang");
+  [["jp","日本語"],["id","Indonesia"]].forEach(function(l){var b=document.createElement("button");b.type="button";b.textContent=l[1];b.setAttribute("aria-pressed",String(l[0]===lang));
+    b.onclick=function(){lang=l[0];[].forEach.call(seg.children,function(x){x.setAttribute("aria-pressed",String(x===b))});render()};seg.appendChild(b)});
+  render();
 })();
 </script>
 <div id="sak" aria-hidden="true"></div>
