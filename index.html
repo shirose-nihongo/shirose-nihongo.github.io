@@ -326,10 +326,22 @@ body.pick-mode .lvl-pill-group{visibility:hidden;}
 /* Topbar HP: tidak boleh melebar keluar layar (tanpa scroll horizontal) */
 @media (max-width:560px){
   .topbar{flex-wrap:wrap; row-gap:6px;}
-  .topbar-right{flex-wrap:wrap; justify-content:flex-end; gap:6px; min-width:0; max-width:100%;}
+  /* HP: nama akun (btn-auth) + tombol keluar naik ke baris atas, di samping logo & level; sisanya (tema, font, chip) wrap di bawahnya */
+  .topbar{padding-left:max(10px, env(safe-area-inset-left)); padding-right:max(10px, env(safe-area-inset-right)); column-gap:6px;}
+  .topbar-right{display:contents;}
+  .topbar > *, .topbar-right > *{order:5;}
+  .topbar > .brand, .topbar > .lvl-pill-group, .topbar #btn-auth, .topbar #btn-out{order:1;}
   .topbar-right .chip{min-height:34px; font-size:14px; padding:4px 10px;}
   .topbar-right .install-btn{padding:6px 10px; font-size:12px;}
-  #btn-auth{max-width:118px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:6px 10px; font-size:14px;}
+  #btn-auth{margin-left:auto; flex:0 1 auto; min-width:0; max-width:88px; min-height:0; height:36px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:4px 8px; font-size:12.5px;}
+  #btn-out{flex:none; min-height:0; height:36px; padding:4px 8px !important;}
+  .topbar .lvl-pill-group .lvl-badge{padding:5px 10px; font-size:13px;}
+  .topbar .brand.logo{flex:none;}
+  .topbar .lvl-pill-group{flex:0 1 auto; min-width:0;}
+  /* menu tema/font/dll: lebar penuh layar HP (tidak kepotong kiri/kanan), menempel di bawah topbar */
+  @media (min-width:400px){ #btn-auth{max-width:150px;} }
+  .topbar .th-wrap{position:static;}
+  .topbar .th-menu{left:8px; right:8px; top:calc(100% + 4px); min-width:0; width:auto; max-width:none;}
   .brand:not(.logo) > span:last-child{display:none;}
 }
 html{overflow-x:hidden;}
