@@ -35,7 +35,7 @@
   "penjelasan": "は (dibaca wa) menandai topik yang dibicarakan; hal yang dijelaskan ada di belakangnya.",
   "rumus": [
    "KB (topik) + は + penjelasan",
-   "例: 私は 学生です"
+   "例[れい]: 私[わたし]は 学生[がくせい]です"
   ],
   "contoh": "私[わたし]はトムです。",
   "arti_contoh": "Saya adalah Tom."
@@ -74,7 +74,7 @@
   "penjelasan": "の menyambung dua kata benda: kata benda pertama menerangkan kata benda kedua (kepunyaan, jenis, asal).",
   "rumus": [
    "KB1 + の + KB2",
-   "例: 私の ペン = pena saya / 日本語の 先生 = guru bahasa Jepang"
+   "例[れい]: 私[わたし]の ペン = pena saya / 日本[にほん]語[ご]の 先生[せんせい] = guru bahasa Jepang"
   ],
   "contoh": "これは 私[わたし]のペンです。",
   "arti_contoh": "Ini adalah pena saya."
@@ -164,10 +164,13 @@
   "penjelasan": "KK2 berakhir る dengan batang berbunyi い/え sebelum る. Untuk bentuk sopan, buang る lalu tambah ます.",
   "rumus": [
    "KK2 kamus: buang る + ます",
-   "例: 見る → 見ます / 食べる → 食べます"
+   "例[れい]: 見[み]る → 見[み]ます / 食[た]べる → 食[た]べます"
   ],
   "contoh": "見[み]る→ 見[み]ます",
-  "arti_contoh": "Melihat → melihat (sopan)."
+  "arti_contoh": "Melihat → melihat (sopan).",
+  "kk": [
+   "masu"
+  ]
  },
  {
   "pola": "がある",
@@ -270,7 +273,7 @@
   "penjelasan": "あれ menunjuk benda yang jauh dari pembicara dan lawan bicara.",
   "rumus": [
    "あれ + は + KB + です",
-   "あれ + は + 何ですか"
+   "あれ + は + 何[なん]ですか"
   ],
   "contoh": "あれは 何[なに]？",
   "arti_contoh": "Itu apa?"
@@ -296,7 +299,7 @@
   "penjelasan": "を menandai objek langsung dari kata kerja.",
   "rumus": [
    "KB + を + KK (transitif)",
-   "Tempat + を + KK gerak (歩く・渡る)"
+   "Tempat + を + KK gerak (歩[ある]く・渡[わた]る)"
   ],
   "contoh": "漢字[かんじ]を 覚[おぼ]える。",
   "arti_contoh": "Menghafal kanji."
@@ -309,7 +312,7 @@
   "penjelasan": "する 'melakukan', dipakai sendiri atau dengan kata benda (kata benda + する). KK3 tak beraturan.",
   "rumus": [
    "KB + を + する",
-   "KB (kegiatan) + する → 勉強する・料理する",
+   "KB (kegiatan) + する → 勉強[べんきょう]する・料理[りょうり]する",
    "する → します / して / した / しない"
   ],
   "contoh": "サッカーをする。",
@@ -362,10 +365,13 @@
   "penjelasan": "KK1 berakhir う-baris (う・く・ぐ・す・つ・ぬ・ぶ・む・る). Untuk sopan: ubah akhiran dari baris U ke baris I, lalu tambah ます.",
   "rumus": [
    "KK1 kamus: baris U → baris I + ます",
-   "例: 聞く → 聞きます / 話す → 話します"
+   "例[れい]: 聞[き]く → 聞[き]きます / 話[はな]す → 話[はな]します"
   ],
   "contoh": "聞[き]く →  聞[き]きます",
-  "arti_contoh": "Mendengar → mendengar (sopan)."
+  "arti_contoh": "Mendengar → mendengar (sopan).",
+  "kk": [
+   "masu"
+  ]
  },
  {
   "pola": "ている①",
@@ -414,10 +420,10 @@
   "kata": "へいく",
   "kana": "へいく",
   "arti": "Pergi ke ... (行く)",
-  "penjelasan": "へ / に menandai tujuan; 行く pergi.",
+  "penjelasan": "へ / に menandai tujuan; 行[い]く pergi.",
   "rumus": [
-   "KB (tempat) + へ / に + 行く",
-   "KB (tempat) + へ + KK 行きます"
+   "KB (tempat) + へ / に + 行[い]く",
+   "KB (tempat) + へ + KK 行[い]きます"
   ],
   "contoh": "学校[がっこう]へ 行[い]く。",
   "arti_contoh": "Pergi ke sekolah."
@@ -431,7 +437,7 @@
   "rumus": [
    "Tempat + に + いる / ある",
    "Waktu + に + KK",
-   "Tujuan + に + 行く / 来る",
+   "Tujuan + に + 行[い]く / 来[く]る",
    "Penerima + に + あげる"
   ],
   "contoh": "彼[かれ]はあそこにいます。",
@@ -490,7 +496,7 @@
   "penjelasan": "で menandai alat, cara, atau kendaraan.",
   "rumus": [
    "KB (alat / kendaraan) + で + KK",
-   "例: バスで 行く"
+   "例[れい]: バスで 行[い]く"
   ],
   "contoh": "バスで 行[い]く。",
   "arti_contoh": "Pergi naik bus."
@@ -502,7 +508,7 @@
   "arti": "Partikel へ (arah / tujuan)",
   "penjelasan": "へ (dibaca e) menandai arah atau tujuan perjalanan.",
   "rumus": [
-   "KB (tempat) + へ + 行く / 来る / 帰る"
+   "KB (tempat) + へ + 行[い]く / 来[く]る / 帰[かえ]る"
   ],
   "contoh": "大阪[おおさか]へようこそ。",
   "arti_contoh": "Selamat datang di Osaka."
@@ -512,10 +518,10 @@
   "kata": "くる",
   "kana": "くる",
   "arti": "Datang (来る)",
-  "penjelasan": "来る 'datang'. KK3 tak beraturan: 来る → 来ます / 来て / 来た / 来ない (こない).",
+  "penjelasan": "来[く]る 'datang'. KK3 tak beraturan: 来[く]る → 来[き]ます / 来[き]て / 来[き]た / 来[こ]ない (こない).",
   "rumus": [
-   "KB (tempat) + に / へ + 来る",
-   "来る → 来ます (きます) / 来て (きて) / 来ない (こない)"
+   "KB (tempat) + に / へ + 来[く]る",
+   "来[く]る → 来[き]ます (きます) / 来[き]て (きて) / 来[こ]ない (こない)"
   ],
   "contoh": "トムはここに 来[く]る。",
   "arti_contoh": "Tom datang ke sini."
@@ -579,7 +585,7 @@
    "KK / KS + だけ",
    "Jumlah + だけ"
   ],
-  "contoh": "一 人[にん]だけです。",
+  "contoh": "一人[ひとり]だけです。",
   "arti_contoh": "Hanya satu orang."
  },
  {
@@ -591,7 +597,7 @@
   "rumus": [
    "KK / KSい bentuk sopan + が、+ kalimat",
    "KB / KSな + ですが、+ kalimat",
-   "例: 難しいですが、頑張ります"
+   "例[れい]: 難[むずか]しいですが、頑張[がんば]ります"
   ],
   "contoh": "難[むずか]しいですが、 頑張[がんば]ります。",
   "arti_contoh": "Ini sulit, tetapi saya akan berusaha."
@@ -651,8 +657,8 @@
   "arti": "Pergi untuk ... (tujuan)",
   "penjelasan": "Bentuk ます dicoret + に menyatakan tujuan perjalanan.",
   "rumus": [
-   "KK bentuk ます dicoret + に + 行く / 来る",
-   "KB (kegiatan) + に + 行く"
+   "KK bentuk ます dicoret + に + 行[い]く / 来[く]る",
+   "KB (kegiatan) + に + 行[い]く"
   ],
   "kk": [
    "masu"
@@ -723,9 +729,9 @@
   "arti": "Sebelum ... (まえに)",
   "penjelasan": "〜まえに: kegiatan di belakang berlangsung sebelum kegiatan di depan. KK selalu bentuk kamus.",
   "rumus": [
-   "KK bentuk kamus + 前に",
-   "KB + の + 前に",
-   "Jumlah waktu + 前に"
+   "KK bentuk kamus + 前[まえ]に",
+   "KB + の + 前[まえ]に",
+   "Jumlah waktu + 前[まえ]に"
   ],
   "kk": [
    "jisho"
@@ -756,10 +762,10 @@
   "kata": "のなかで",
   "kana": "のなかで",
   "arti": "Di antara ... (paling ...)",
-  "penjelasan": "KB + の中で + いちばん ...: 'di antara ... yang paling'.",
+  "penjelasan": "KB + の中[なか]で + いちばん ...: 'di antara ... yang paling'.",
   "rumus": [
-   "KB + の中で + 〜が一番 + KS",
-   "KB1 + の中で + KB2 + が一番"
+   "KB + の中[なか]で + 〜が一番[いちばん] + KS",
+   "KB1 + の中[なか]で + KB2 + が一番[いちばん]"
   ],
   "contoh": "この 中[なか]で 一番[いちばん]好[す]きな 食[た]べ 物[もの]は 何[なに]？",
   "arti_contoh": "Di antara ini, makanan apa yang paling kamu suka?"
@@ -771,7 +777,7 @@
   "arti": "Di mana / ke mana",
   "penjelasan": "どこ 'di mana'. Seri tempat: ここ・そこ・あそこ・どこ.",
   "rumus": [
-   "どこ + に / へ + 行きますか",
+   "どこ + に / へ + 行[い]きますか",
    "どこ + で + KK"
   ],
   "contoh": "どこに 行[い]きますか。",
@@ -816,7 +822,7 @@
   "kk": [
    "masu"
   ],
-  "contoh": "日本[にっぽん]に 行[い]きたい。",
+  "contoh": "日本[にほん]に 行[い]きたい。",
   "arti_contoh": "Saya ingin pergi ke Jepang."
  },
  {
@@ -900,7 +906,7 @@
   "kk": [
    "te"
   ],
-  "contoh": "日本語[にほんご]の 勉強[べんきょう]をしてから、 日本[にっぽん]に 行[い]きます。",
+  "contoh": "日本語[にほんご]の 勉強[べんきょう]をしてから、 日本[にほん]に 行[い]きます。",
   "arti_contoh": "Setelah belajar bahasa Jepang, saya akan pergi ke Jepang."
  },
  {
@@ -927,7 +933,7 @@
   "penjelasan": "KK kamus + な = larangan kasar. Dipakai antar teman atau saat darurat.",
   "rumus": [
    "KK bentuk kamus + な",
-   "例: 行くな!  食べるな!"
+   "例[れい]: 行[い]くな!  食[た]べるな!"
   ],
   "kk": [
    "jisho"
@@ -991,7 +997,7 @@
   "penjelasan": "〜ましょう mengajak lawan bicara melakukan sesuatu bersama.",
   "rumus": [
    "KK bentuk ます dicoret + ましょう",
-   "Biasa: bentuk volisional 意向形"
+   "Biasa: bentuk volisional 意向[いこう]形[けい]"
   ],
   "kk": [
    "masu",
@@ -1036,8 +1042,8 @@
   "arti": "A lebih ... daripada B",
   "penjelasan": "Pola perbandingan: A lebih ... dari B.",
   "rumus": [
-   "B + より + A + の方が + KS",
-   "A + の方が + B + より + KS"
+   "B + より + A + の方[ほう]が + KS",
+   "A + の方[ほう]が + B + より + KS"
   ],
   "contoh": "このパンよりそのパンの 方[ほう]が 美味[おい]しいです。",
   "arti_contoh": "Roti ini lebih enak daripada roti itu."
@@ -1097,8 +1103,8 @@
   "arti": "Pandai dalam ...",
   "penjelasan": "のがじょうず: pandai melakukan sesuatu.",
   "rumus": [
-   "KK bentuk kamus + の + が + 上手です",
-   "KB + が + 上手です"
+   "KK bentuk kamus + の + が + 上手[じょうず]です",
+   "KB + が + 上手[じょうず]です"
   ],
   "kk": [
    "jisho"
@@ -1149,7 +1155,7 @@
    "jisho",
    "nai"
   ],
-  "contoh": "日本[にっぽん]に 行[い]くつもりだ。",
+  "contoh": "日本[にほん]に 行[い]くつもりだ。",
   "arti_contoh": "Saya berencana pergi ke Jepang."
  },
  {
@@ -1213,8 +1219,8 @@
   "arti": "Buruk dalam ...",
   "penjelasan": "のがへた: tidak pandai melakukan sesuatu.",
   "rumus": [
-   "KK bentuk kamus + の + が + 下手だ",
-   "KB + が + 下手だ"
+   "KK bentuk kamus + の + が + 下手[へた]だ",
+   "KB + が + 下手[へた]だ"
   ],
   "kk": [
    "jisho"
@@ -1247,8 +1253,8 @@
   "arti": "Kutipan: 'berkata ...' (と)",
   "penjelasan": "と mengutip ucapan atau pikiran.",
   "rumus": [
-   "Kutipan + と + 言う / 思う",
-   "KK bentuk biasa + と + 言う / 思う"
+   "Kutipan + と + 言[い]う / 思[おも]う",
+   "KK bentuk biasa + と + 言[い]う / 思[おも]う"
   ],
   "kk": [
    "jisho",
@@ -1266,7 +1272,7 @@
   "penjelasan": "Bentuk た dipakai langsung sebelum kata benda untuk menerangkan benda itu.",
   "rumus": [
    "KK bentuk た + KB",
-   "例: 勉強した 生徒"
+   "例[れい]: 勉強[べんきょう]した 生徒[せいと]"
   ],
   "kk": [
    "ta"
@@ -1281,8 +1287,8 @@
   "arti": "Kutipan lisan: って (= と)",
   "penjelasan": "って adalah bentuk lisan dari と untuk mengutip.",
   "rumus": [
-   "KK / KS bentuk biasa + って + 言う / 思う",
-   "KB / KSな + だって + 言う"
+   "KK / KS bentuk biasa + って + 言[い]う / 思[おも]う",
+   "KB / KSな + だって + 言[い]う"
   ],
   "contoh": "彼[かれ]は「 彼女[かのじょ]が 綺麗[きれい]になった」って 言[い]った。",
   "arti_contoh": "Dia bilang, 'Dia sudah jadi cantik.'",
@@ -1414,8 +1420,8 @@
   "arti": "Suka (すき)",
   "penjelasan": "すき 'suka', KSな. Objek dengan が.",
   "rumus": [
-   "KB + が + 好きです",
-   "KK bentuk kamus + の + が + 好きです"
+   "KB + が + 好[す]きです",
+   "KK bentuk kamus + の + が + 好[す]きです"
   ],
   "kk": [
    "jisho"
@@ -1430,7 +1436,7 @@
   "arti": "Tidak suka (きらい)",
   "penjelasan": "きらい 'tidak suka', KSな.",
   "rumus": [
-   "KB + が + 嫌いです"
+   "KB + が + 嫌[きら]いです"
   ],
   "contoh": "パイナップルが 嫌[きら]い？",
   "arti_contoh": "Apakah kamu tidak suka nanas?"
@@ -1440,10 +1446,10 @@
   "kata": "なにか・なにも",
   "kana": "なにか・なにも",
   "arti": "Sesuatu / tidak ada apa pun",
-  "penjelasan": "何か 'sesuatu' (tanya), 何も + negatif 'tidak ada apa pun'.",
+  "penjelasan": "何[なん]か 'sesuatu' (tanya), 何[なん]も + negatif 'tidak ada apa pun'.",
   "rumus": [
-   "何か + KK / ありますか",
-   "何も + KK bentuk ない"
+   "何[なん]か + KK / ありますか",
+   "何[なん]も + KK bentuk ない"
   ],
   "kk": [
    "nai"
@@ -1478,14 +1484,14 @@
   "arti_contoh": "Topi itu punya putri saya."
  },
  {
-  "pola": "誰か・どこか・誰も・どこも",
+  "pola": "誰[だれ]か・どこか・誰[だれ]も・どこも",
   "kata": "誰か・どこか・誰も・どこも",
   "kana": "誰か・どこか・誰も・どこも",
   "arti": "Seseorang / di suatu tempat / tidak ada siapa pun",
   "penjelasan": "Seri: だれか・どこか (ada) dan だれも・どこにも (tidak ada).",
   "rumus": [
-   "だれか / どこか / 何か",
-   "だれも / どこにも / 何も + KK bentuk ない"
+   "だれか / どこか / 何[なん]か",
+   "だれも / どこにも / 何[なん]も + KK bentuk ない"
   ],
   "kk": [
    "nai"
@@ -1512,7 +1518,7 @@
   "arti": "Diberi (くれる)",
   "penjelasan": "くれる: orang lain memberi kepada pembicara (atau kelompoknya).",
   "rumus": [
-   "Pemberi + は + 私に + KB + を + くれる"
+   "Pemberi + は + 私[わたし]に + KB + を + くれる"
   ],
   "contoh": "母[はは]は 僕[ぼく]にかっこいいペンをくれた。",
   "arti_contoh": "Ibu memberi saya pena yang keren."
@@ -1537,12 +1543,12 @@
   "penjelasan": "ている juga menyatakan hasil atau keadaan yang masih berlangsung (datang, pergi, menikah).",
   "rumus": [
    "KK (gerak / perubahan) bentuk て + いる",
-   "例: 来ている / 結婚している"
+   "例[れい]: 来[き]ている / 結婚[けっこん]している"
   ],
   "kk": [
    "te"
   ],
-  "contoh": "バスは 今[こん]大阪[おおさか]に 来[き]ています。",
+  "contoh": "バスは 今[いま]大阪[おおさか]に 来[き]ています。",
   "arti_contoh": "Bus sekarang sedang menuju Osaka."
  },
  {
@@ -1553,7 +1559,7 @@
   "penjelasan": "ている juga menyatakan kegiatan yang berulang atau kebiasaan.",
   "rumus": [
    "Keterangan waktu + KK bentuk て + いる",
-   "例: 毎週 行っている"
+   "例[れい]: 毎週[まいしゅう] 行[い]っている"
   ],
   "kk": [
    "te"

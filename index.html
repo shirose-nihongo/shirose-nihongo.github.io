@@ -1340,6 +1340,12 @@ html{overflow-x:hidden;}
 .bp-slide-l{animation:bpSL .22s ease-out;} .bp-slide-r{animation:bpSR .22s ease-out;}
 @keyframes bpSL{from{opacity:0; transform:translateX(40px);}to{opacity:1; transform:none;}}
 @keyframes bpSR{from{opacity:0; transform:translateX(-40px);}to{opacity:1; transform:none;}}
+.kk-inline{margin-top:8px;}
+.kk-inl{background:rgba(236,72,153,.07); border:1px solid rgba(236,72,153,.35); border-radius:12px; padding:9px 11px; margin-top:8px; font-size:13px; line-height:1.9;}
+.kk-inl-h{font-weight:800; font-size:13.5px; margin-bottom:2px;} .kk-inl-h small{font-weight:600; opacity:.75; margin-left:4px;}
+.kk-inl-r{margin:2px 0 4px; padding-left:18px; font-size:12.5px; opacity:.92;}
+.kk-inl-ex{display:flex; flex-wrap:wrap; gap:4px 12px;} .kk-pair{white-space:nowrap;}
+.kk-inl rt,.kk-box rt,.bp-card rt{font-size:.55em;}
 .kk-open{margin-top:8px; width:100%; border:1px dashed var(--pink,#ec4899); background:rgba(236,72,153,.08); color:inherit; border-radius:10px; padding:9px 12px; font-size:13px; font-weight:700; cursor:pointer; text-align:left;}
 .kk-ov{position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.65); display:flex; align-items:flex-end; justify-content:center;}
 .kk-box{background:var(--bg-card,#1b1d2b); color:inherit; width:min(720px,100%); max-height:88vh; overflow:auto; border-radius:18px 18px 0 0; padding:16px 14px 24px; text-align:left;}
@@ -3051,7 +3057,7 @@ async function renderMateriList(tipe){
       const arti = it.arti || it.e || it.penjelasan || "";
       return `<div class="materi-item${_lk(idx) ? " demo-lock" : ""}" ${chunkAttr(idx)} onclick="${_lk(idx) ? "DEMO.lockToast()" : `showMateri('${tipe}', ${idx})`}">
         <span class="no-badge">${no}</span>
-        <div class="kanji" style="font-size:22px;">${pola}</div>
+        <div class="kanji" style="font-size:22px;">${_ruby(pola)}</div>
         <div class="meaning">${arti.slice(0, 120)}${arti.length > 120 ? "…" : ""}</div>
       </div>`;
     }
@@ -3212,17 +3218,17 @@ window.showMateri = async (tipe, idx, vno) => {
       <div class="kanji-detail bp-card" data-bp="1">
         ${_nav}
         <div class="no-pill">${no} · ${state.level.toUpperCase()}</div>
-        <div class="big-k" style="font-size:${pola.length > 12 ? 34 : 60}px;">${pola}</div>
+        <div class="big-k" style="font-size:${_cleanKata(pola).length > 12 ? 34 : 60}px;">${_ruby(pola)}</div>
         ${kana && kana !== pola ? `<div class="readings"><div class="r">${kana}</div></div>` : ""}
         ${baru ? `
-        <div class="bp-sec"><div class="bp-h">Arti</div><div class="bp-b"><b>${it.arti || ""}</b></div></div>
-        <div class="bp-sec"><div class="bp-h">Penjelasan</div><div class="bp-b">${penjelasan}</div></div>
-        <div class="bp-sec"><div class="bp-h">Rumus Bunpou</div><ul class="bp-rumus">${rumus.map(r => `<li>${r}</li>`).join("")}</ul>${_kkBtn}</div>
+        <div class="bp-sec"><div class="bp-h">Arti</div><div class="bp-b"><b>${_ruby(it.arti || "")}</b></div></div>
+        <div class="bp-sec"><div class="bp-h">Penjelasan</div><div class="bp-b">${_ruby(penjelasan)}</div></div>
+        <div class="bp-sec"><div class="bp-h">Rumus Bunpou</div><ul class="bp-rumus">${rumus.map(r => `<li>${_ruby(r)}</li>`).join("")}</ul>${_kk.length ? `<div class="kk-inline" data-kk="${_kk.join(",")}"></div>` : ""}${_kkBtn}</div>
         <div class="bp-sec"><div class="bp-h">Contoh</div>${contohHtml}</div>` : `
-        <div style="font-size:14px; margin:12px 0; line-height:1.6; text-align:left; background:rgba(255,255,255,.04); padding:14px; border-radius:10px; white-space:pre-wrap;">${penjelasan}</div>
+        <div style="font-size:14px; margin:12px 0; line-height:1.6; text-align:left; background:rgba(255,255,255,.04); padding:14px; border-radius:10px; white-space:pre-wrap;">${_ruby(penjelasan)}</div>
         ${contohHtml}`}
         <div style="margin-top:14px; text-align:center;">
-          <button class="btn gold" onclick='rangkumCepat({jp:"${(pola||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Masukkan pola ke rangkuman</button>
+          <button class="btn gold" onclick='rangkumCepat({jp:"${_cleanKata(pola).replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Masukkan pola ke rangkuman</button>
           <button class="btn ghost" onclick="route('rangkuman')">📒 Buka rangkuman</button>
         </div>
         <div class="bp-hint">⟵ geser kiri / kanan untuk pindah pola ⟶</div>
@@ -3240,7 +3246,26 @@ window.showMateri = async (tipe, idx, vno) => {
     </div>
   `;
   window.scrollTo(0, 0);
+  if (tipe === "bunpou") _kkFillInline();
 };
+/* ===== Furigana: teks "漢字[かんじ]" → <ruby> (dipakai bunpou JLPT + Perubahan Kata Kerja) ===== */
+function _ruby(t){ return String(t == null ? "" : t).replace(/([\u3400-\u9fff々]+)\[([^\]]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>"); }
+/* Selipan penjelasan Perubahan Kata Kerja di kartu bunpou: aturan tiap golongan + contoh berkanji/furigana. */
+async function _kkFillInline(){
+  const boxes = document.querySelectorAll(".kk-inline[data-kk]:not([data-done])");
+  if (!boxes.length) return;
+  let D; try { D = await _kkLoad(); } catch (e) { return; }
+  boxes.forEach(b => {
+    b.dataset.done = "1";
+    b.innerHTML = String(b.dataset.kk).split(",").filter(k => D.forms[k]).map(k => {
+      const f = D.forms[k], ex = (D.inline && D.inline[k]) || [];
+      const rules = f.groups.map(g => `<li><b>${g.g}</b> ${g.aturan}</li>`).join("");
+      const exs = ex.map(e => `<span class="kk-pair">${e[0]} → <b>${e[1]}</b></span>`).join("");
+      return `<div class="kk-inl"><div class="kk-inl-h">💡 Perubahan kata kerja: ${f.jp} <small>${f.nama}</small></div>
+        <ul class="kk-inl-r">${rules}</ul><div class="kk-inl-ex">${exs}</div></div>`;
+    }).map(_ruby).join("");
+  });
+}
 /* ===== Bunpou: geser kiri/kanan (flashcard) + tabel Perubahan Kata Kerja ===== */
 window.bpNav = (dir) => {
   const d = window._materiDetail;
@@ -3287,8 +3312,8 @@ function _kkRender(D, key){
     <table class="kk-t"><thead><tr>${f.cols.map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>
     ${g.rows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("")}
     </tbody></table>`).join("");
-  return `<div class="kk-fn"><b>${f.jp}</b> — ${f.nama}<br>${f.fungsi}</div>${groups}
-    ${f.catatan.map(c => `<div class="kk-note">• ${c}</div>`).join("")}`;
+  return _ruby(`<div class="kk-fn"><b>${f.jp}</b> — ${f.nama}<br>${f.fungsi}</div>${groups}
+    ${f.catatan.map(c => `<div class="kk-note">• ${c}</div>`).join("")}`);
 }
 window.openKKLesson = async (lv) => {
   let D; try { D = await _kkLoad(); } catch (e) { alert("Pelajaran belum bisa dimuat. Cek koneksi."); return; }
@@ -3312,6 +3337,7 @@ window.openKKLesson = async (lv) => {
       <div class="kk-rule" style="margin-top:8px">${g.pengecualian}</div></div></details>
     <details class="kk-ls" open><summary><span>Ringkasan satu tabel</span></summary><div class="kk-in">${sumHtml}</div></details>
     ${secs}</div>`;
+  ov.innerHTML = _ruby(ov.innerHTML);
   ov.querySelector(".kk-x").onclick = () => ov.remove();
   ov.addEventListener("click", (e) => { if (e.target === ov) ov.remove(); });
   document.body.appendChild(ov);
@@ -3327,6 +3353,7 @@ window.openKK = async (keys) => {
       <div class="kk-tabs">${ks.map(k => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${D.forms[k].jp}</button>`).join("")}
       <button data-k="*" class="${cur === "*" ? "on" : ""}">Semua bentuk</button></div>
       <div class="kk-body">${cur === "*" ? D.order.map(k => `<div style="margin-bottom:18px">${_kkRender(D, k)}</div>`).join("") : _kkRender(D, cur)}</div></div>`;
+    ov.innerHTML = _ruby(ov.innerHTML);
     ov.querySelector(".kk-x").onclick = () => ov.remove();
     ov.querySelectorAll(".kk-tabs button").forEach(b => b.onclick = () => draw(b.dataset.k));
   };
