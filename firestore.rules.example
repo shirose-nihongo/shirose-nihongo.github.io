@@ -123,6 +123,17 @@ service cloud.firestore {
       allow delete: if isGuru();
     }
 
+    // Leaderboard ringkas (level & poin saja): siswa terdaftar membaca; siswa hanya menulis dokumennya sendiri.
+    match /lb/{uid} {
+      allow read: if terdaftar();
+      allow create, update: if (signedIn() && aktif() && uid == me()
+          && request.resource.data.uid == me()
+          && request.resource.data.keys().hasOnly(['uid', 'nama', 'kelas', 'xp', 'total', 'lv', 'upd'])
+          && request.resource.data.total is number && request.resource.data.total >= 0 && request.resource.data.total <= 100000000)
+          || isGuru();
+      allow delete: if isGuru();
+    }
+
     // ---------- Kelas kata kosakata (override guru) ----------
     match /kosakata_pos/{lvl} {
       allow read: if terdaftar();

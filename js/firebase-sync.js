@@ -791,6 +791,7 @@ export async function tambahXP(level, dXP, dKoin = 0) {
     if (dKoin) { try { saldo = await tambahKoin(dKoin, "hadiah belajar"); } catch (e) {} }
     if (dKoin && saldo === null) cur.koin = (cur.koin || 0) + dKoin;   // fallback lama
     await setDoc(ref, cur, { merge: true });
+    _lbPush(level, cur.xp, cur.level_karakter);
     if (saldo !== null) cur.koin = saldo; else { const k = await getWalletKoin(); cur.koin = k !== null ? k : _koinFallback(cur.koin); }
     cur.level_level_ini = cur.level_karakter; cur.level_karakter = Math.max(cur.level_karakter, _lvGet()); _lvSet(cur.level_karakter);
     return cur;
@@ -1688,80 +1689,83 @@ export async function leaderboard(level, topN = 20) {
  *   kind = "global"                 — sum XP across all 5 JLPTs
  *   kind = "weekly" / "monthly"     — ranked by activity count in window
  */
-const _LB_TTL = 15 * 60 * 1000;   // cache 15 menit: hemat kuota baca Firestore (tiap buka leaderboard = ribuan baca)
-export async function leaderboardAdvanced(kind = "global", topN = 20, { force = false } = {}) {
-  const ck = "shirose-lb:" + kind + ":" + topN;
-  if (!force) { try { const c = JSON.parse(localStorage.getItem(ck) || "null"); if (c && Date.now() - c.t < _LB_TTL) return c.v; } catch (e) {} }
-  const v = await _leaderboardAdvancedRaw(kind, topN);
-  if (v && v.length) { try { localStorage.setItem(ck, JSON.stringify({ t: Date.now(), v })); } catch (e) {} }
-  else { try { const c = JSON.parse(localStorage.getItem(ck) || "null"); if (c) return c.v; } catch (e) {} }   // gagal/kosong → pakai cache lama
-  return v;
+/* ---- Leaderboard ringkas: lb/{uid} = { uid, nama, kelas, xp:{n5..n1}, total, lv, upd } ----
+ * Hanya level & poin. Ditulis siswa sendiri tiap dapat XP; dibaca dengan limit(20) / satu kelas. */
+const _lbCache = new Map();           // key -> {t, data}
+const LB_TTL = 60000;                 // 1 menit
+const LVLS = ["n5","n4","n3","n2","n1"];
+let _lbMine = null;                   // cache dokumen lb milik sendiri
+export function clearLeaderboardCache(){ _lbCache.clear(); }
+
+function _lbNama(){ return _isOwnerEmail(currentUser?.email) ? BRAND_NAME : (currentSiswaDoc?.nama || "Anonim"); }
+function _lbBuild(xp, lv){
+  const total = LVLS.reduce((t,l) => t + (xp[l]||0), 0);
+  return { uid: currentUser.uid, nama: _lbNama(), kelas: currentSiswaDoc?.kelas || "",
+           xp, total, lv: lv || 1, upd: Date.now() };
 }
-async function _leaderboardAdvancedRaw(kind = "global", topN = 20) {
+async function _lbPush(level, xpVal, lvVal){
   try {
-    const snap = await getDocs(collection(db, "siswa"));
-    const result = [];
-    for (const d of snap.docs) {
-      const sdata = d.data();
-      const entry = {
-        uid: d.id,
-        nama: _isOwnerEmail(sdata.email) ? BRAND_NAME : (sdata.nama || "Anonim"),
-        kelas: sdata.kelas || "",
-        avatar: sdata.karakter?.equipped || null,
-        score: 0, meta: "",
-      };
-      try {
-        if (kind.startsWith("jlpt-")){
-          const lvl = kind.slice(5);
-          const g = await getDoc(doc(db, "siswa", d.id, "gami", lvl));
-          if (!g.exists()) continue;
-          const gd = g.data();
-          entry.score = gd.xp || 0;
-          entry.level_karakter = gd.level_karakter || 1;
-          entry.streak = gd.streak || 0;
-          entry.meta = `Lv ${gd.level_karakter||1} · ${gd.streak||0}🔥`;
-        } else if (kind === "global"){
-          let total = 0, maxStreak = 0, maxLv = 1;
-          for (const lvl of ["n5","n4","n3","n2","n1"]){
-            const g = await getDoc(doc(db, "siswa", d.id, "gami", lvl));
-            if (!g.exists()) continue;
-            const gd = g.data();
-            total += gd.xp || 0;
-            if ((gd.streak||0) > maxStreak) maxStreak = gd.streak;
-            if ((gd.level_karakter||1) > maxLv) maxLv = gd.level_karakter;
-          }
-          if (total === 0) continue;
-          entry.score = total;
-          entry.level_karakter = maxLv;
-          entry.streak = maxStreak;
-          entry.meta = `Lv ${maxLv} · ${maxStreak}🔥`;
-        } else if (kind === "weekly" || kind === "monthly"){
-          // Sum activity counts within window
-          const now = new Date();
-          const windowDays = kind === "weekly" ? 7 : 30;
-          const _p = (x) => String(x.getFullYear()) + String(x.getMonth() + 1).padStart(2, "0") + String(x.getDate()).padStart(2, "0");
-          const col = await getDocs(query(collection(db, "siswa", d.id, "activity"), where(documentId(), ">=", _p(new Date(now.getTime() - windowDays * 86400000)))));
-          let total = 0, days = 0;
-          col.forEach(ad => {
-            const ymd = ad.id;
-            if (ymd.length !== 8) return;
-            const y = +ymd.slice(0,4), m = +ymd.slice(4,6)-1, da = +ymd.slice(6,8);
-            const diff = (now - new Date(y, m, da)) / 86400000;
-            if (diff >= 0 && diff < windowDays){
-              const a = ad.data();
-              const dayTotal = (a.kanji||0)+(a.kosakata||0)+(a.latihan||0)+(a.ujian||0);
-              if (dayTotal > 0){ total += dayTotal; days++; }
-            }
-          });
-          if (total === 0) continue;
-          entry.score = total;
-          entry.meta = `${days} hari aktif`;
-        }
-      } catch(e){ continue; }
-      result.push(entry);
-    }
-    result.sort((a,b) => (b.score||0) - (a.score||0));
-    return result.slice(0, topN);
+    if (!currentUser) return;
+    if (!_lbMine){ const g = await getDoc(doc(db, "lb", currentUser.uid)); _lbMine = g.exists() ? g.data() : { xp:{}, lv:1 }; }
+    const xp = { ...(_lbMine.xp||{}), [level]: xpVal };
+    const d = _lbBuild(xp, Math.max(_lbMine.lv||1, lvVal||1));
+    await setDoc(doc(db, "lb", currentUser.uid), d);
+    _lbMine = d; _lbCache.clear();
+  } catch(e){ console.warn("lb push failed:", e.message); }
+}
+// Sinkron sekali (per sesi) dari data gami sendiri, supaya siswa lama langsung muncul.
+let _lbSynced = false;
+export async function syncMyLeaderboard(){
+  if (_lbSynced || !currentUser) return;
+  _lbSynced = true;
+  try {
+    const gs = await Promise.all(LVLS.map(l => getDoc(doc(db, "siswa", currentUser.uid, "gami", l)).catch(() => null)));
+    const xp = {}; let lv = 1;
+    gs.forEach((g, i) => { if (g && g.exists()){ const d = g.data(); xp[LVLS[i]] = d.xp || 0; lv = Math.max(lv, d.level_karakter || 1); } });
+    const d = _lbBuild(xp, lv);
+    if (d.total === 0) return;
+    await setDoc(doc(db, "lb", currentUser.uid), d);
+    _lbMine = d; _lbCache.clear();
+  } catch(e){ console.warn("lb sync failed:", e.message); _lbSynced = false; }
+}
+// Guru/admin: isi ulang ringkasan untuk SEMUA siswa (sekali jalan, mis. dari console: FB.backfillLeaderboard()).
+export async function backfillLeaderboard(){
+  const snap = await getDocs(collection(db, "siswa"));
+  let n = 0;
+  await Promise.all(snap.docs.map(async d => {
+    const sd = d.data();
+    if ((sd.role || "student") !== "student") return;
+    const gs = await Promise.all(LVLS.map(l => getDoc(doc(db, "siswa", d.id, "gami", l)).catch(() => null)));
+    const xp = {}; let lv = 1;
+    gs.forEach((g, i) => { if (g && g.exists()){ const x = g.data(); xp[LVLS[i]] = x.xp || 0; lv = Math.max(lv, x.level_karakter || 1); } });
+    const total = LVLS.reduce((t,l) => t + (xp[l]||0), 0);
+    if (!total) return;
+    await setDoc(doc(db, "lb", d.id), { uid: d.id, nama: sd.nama || "Anonim", kelas: sd.kelas || "", xp, total, lv, upd: Date.now() });
+    n++;
+  }));
+  _lbCache.clear();
+  return n;
+}
+
+// kind: "global" | "jlpt-n5".."jlpt-n1". kelas (opsional) membatasi ke satu kelas.
+export async function leaderboardAdvanced(kind = "global", topN = 20, kelas = "") {
+  const key = kind + "|" + (kelas || "*") + "|" + topN;
+  const hit = _lbCache.get(key);
+  if (hit && Date.now() - hit.t < LB_TTL) return hit.data;
+  try {
+    const field = kind.startsWith("jlpt-") ? "xp." + kind.slice(5) : "total";
+    const base = collection(db, "lb");
+    // Per kelas: satu kelas kecil -> urut di klien (tanpa indeks gabungan). Semua kelas: orderBy + limit.
+    const snap = await getDocs(kelas ? query(base, where("kelas", "==", kelas))
+                                     : query(base, orderBy(field, "desc"), limit(topN)));
+    const get = d => field === "total" ? (d.total || 0) : (d.xp?.[field.slice(3)] || 0);
+    const result = snap.docs.map(x => x.data())
+      .map(d => ({ uid: d.uid, nama: d.nama || "Anonim", kelas: d.kelas || "", score: get(d), meta: "Lv " + (d.lv || 1) }))
+      .filter(r => r.score > 0)
+      .sort((a,b) => b.score - a.score)
+      .slice(0, topN);
+    _lbCache.set(key, { t: Date.now(), data: result });
+    return result;
   } catch (e) { console.warn("leaderboardAdvanced failed:", e.message); return []; }
 }
 
