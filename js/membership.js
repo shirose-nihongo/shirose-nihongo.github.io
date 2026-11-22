@@ -202,6 +202,15 @@
     var t = e.target.closest && e.target.closest("[data-open-pricing]");
     if (t) { e.preventDefault(); e.stopPropagation(); openPricing(); }
   });
+  /* Browser dalam aplikasi (Instagram, TikTok, Facebook, Line, dll.) sering memblokir tab baru ke wa.me.
+     Di sana link WhatsApp dibuka di tab yang sama (WhatsApp tetap terbuka lewat link universal). */
+  var INAPP = /Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|BytedanceWebview|Line\/|MicroMessenger|Snapchat|Twitter/i.test(navigator.userAgent || "");
+  document.addEventListener("click", function (e) {
+    if (!INAPP || e.defaultPrevented) return;
+    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"]');
+    if (!a) return;
+    e.preventDefault(); location.href = a.href;
+  }, true);
   window.openPricing = openPricing; window.closePricing = closePricing;
 
   /* ---------- tombol di topbar aplikasi, tepat di samping tombol Tema ---------- */
