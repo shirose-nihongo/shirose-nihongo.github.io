@@ -23,3 +23,12 @@
 .logo-lg .logo-jp{font-size:40px;}
 .logo-lg .logo-en{font-size:16px;}
 @media (max-width:640px){ .logo-lg{gap:10px;} .logo-lg .logo-rose{width:44px; height:48px;} .logo-lg .logo-jp{font-size:30px;} .logo-lg .logo-en{font-size:13px; display:inline;} }
+
+
+.logo-rose .r-hl{fill:none;stroke:#fff;stroke-opacity:.75;stroke-width:1.2;stroke-linecap:round}
+.logo-text.l2{flex-direction:column;align-items:center;gap:3px}
+.l2-jp{font-family:var(--font-jp,'Shippori Mincho B1',serif);font-weight:800;font-size:27px;letter-spacing:.1em;line-height:1;color:var(--white,#fff);padding-left:.1em}
+.l2-en{display:flex;align-items:center;gap:6px;font-family:var(--font-sans,system-ui,sans-serif);font-weight:700;font-size:8.5px;letter-spacing:.38em;line-height:1;color:var(--pink-light,#f58bb0)}
+.l2-en i{display:block;flex:1;min-width:8px;height:1.5px;background:var(--pink,#ef6a9a);border-radius:2px}
+@media (max-width:640px){.l2-jp{font-size:21px}.l2-en{font-size:7px}.logo-rose{width:30px;height:33px}}
+@media (max-width:400px){.logo-en{display:none}}
