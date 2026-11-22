@@ -425,14 +425,12 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         <p>Setiap kanji punya animasi urutan goresan. Ikuti garis bayangan di kanvas, dan tiap goresanmu langsung diperiksa bentuk dan arahnya. Bisa dengan jari, mouse, atau stylus.</p>
         <ul class="tick">
           <li><b data-count="total.kanjiJlpt">2.256</b> kanji dengan goresan, plus Hiragana &amp; Katakana</li>
-          <li>Contoh kanji tiap level N5, N4, N3, N2, N1</li>
           <li>Mode ikuti bayangan atau tulis dari ingatan</li>
           <li>Penilaian perkiraan: bentuk, arah, urutan, dan posisi</li>
         </ul>
       </div>
       <div class="demo" id="kc-demo">
-        <div class="demo-h"><div class="seg" id="kc-lv" role="group" aria-label="Pilih level"></div><span class="lbl">Tulis sendiri, per level N5–N1</span></div>
-        <div class="demo-h" style="margin-top:-4px"><div class="seg" id="kc-pick" role="group" aria-label="Pilih kanji"></div></div>
+        <div class="demo-h"><div class="seg" id="kc-pick" role="group" aria-label="Pilih kanji"></div></div>
         <div class="kc-cols">
           <div><div class="kc-lbl">Urutan goresan</div><div class="kc-box" id="kc-stage"></div><button class="btn ghost sm" id="kc-replay" style="margin-top:8px;width:100%">▶ Putar ulang</button></div>
           <div><div class="kc-lbl">Tulis di sini</div><div class="kc-box" id="kc-cv"></div>
@@ -743,7 +741,7 @@ var $ = function(s){return document.querySelector(s)};
 /* ---- kanji: animasi goresan + kanvas menulis (js/writer.js, data/kanji-strokes) ---- */
 (function(){
   var host = $("#kc-stage"), cvHost = $("#kc-cv"); if (!host || !cvHost) return;
-  var KSL = {n5:["日","本","学","生","水","山","人","大"],n4:["早","田","犬","音","力","夕","文","字"],n3:["民","市","内","合","定","回","部","対"],n2:["虫","玉","竹","糸","貝","角","毛","谷"],n1:["矢","里","弓","刀","丁","宮","羊","詩"]}, KS = KSL.n5, cur = null, player = null, wc = null, mode = "trace", started = false;
+  var KS = ["日","本","学","生","水","山","人","大"], cur = null, player = null, wc = null, mode = "trace", started = false;
   var res = $("#kc-res");
   function say(h){ res.textContent = ""; if (typeof h === "string") res.textContent = h; else res.appendChild(h); }
   function setPressed(btns, on){ btns.forEach(function(b){ b.setAttribute("aria-pressed", String(b===on)); }); }
@@ -757,21 +755,11 @@ var $ = function(s){return document.querySelector(s)};
       say("Tulis kanjinya, lalu ketuk Periksa.");
     }).catch(function(e){ say("Data goresan belum bisa dimuat."); });
   }
-  function buildPick(lv){
-    KS = KSL[lv]; var pk = $("#kc-pick"); pk.textContent = "";
-    KS.forEach(function(ch){
-      var b = document.createElement("button"); b.textContent = ch; b.style.fontFamily = "var(--font-jp)"; b.style.fontSize = "18px"; b.setAttribute("aria-pressed","false");
-      b.onclick = function(){ show(ch, b); }; pk.appendChild(b);
-    });
-    return pk.firstChild;
-  }
-  var first = buildPick("n5");
-  var lvBox = $("#kc-lv");
-  ["n5","n4","n3","n2","n1"].forEach(function(lv){
-    var b = document.createElement("button"); b.textContent = lv.toUpperCase(); b.setAttribute("aria-pressed", String(lv==="n5"));
-    b.onclick = function(){ lvBox.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); }); var f = buildPick(lv); show(KS[0], f); };
-    lvBox.appendChild(b);
+  KS.forEach(function(ch, i){
+    var b = document.createElement("button"); b.textContent = ch; b.style.fontFamily = "var(--font-jp)"; b.style.fontSize = "18px"; b.setAttribute("aria-pressed","false");
+    b.onclick = function(){ show(ch, b); }; $("#kc-pick").appendChild(b);
   });
+  var first = $("#kc-pick").firstChild;
   function start(){ if (started) return; started = true; show(KS[0], first); }
   $("#kc-replay").onclick = function(){ if (player) player.replay(); };
   $("#kc-undo").onclick = function(){ if (wc) wc.undo(); };
