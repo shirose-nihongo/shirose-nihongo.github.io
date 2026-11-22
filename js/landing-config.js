@@ -9,8 +9,14 @@ window.LANDING_CONFIG = {
 
   /* Berlangganan lewat WhatsApp (chat pribadi admin). Isi link wa.me, contoh:
      "https://wa.me/62812xxxxxxxx". Kosong = tombol berlangganan memakai link grup di atas. */
-  langganan: { url: "https://wa.me/6285173269876", teks: "Halo admin Shirose Nihongo, saya mau berlangganan. Mohon info paket dan cara pembayarannya." },
+  langganan: { url: "https://wa.me/6285173269876", teks: "Halo admin Shirose Nihongo, saya mau tanya harga paket berlangganan. Mohon info pilihan paket dan cara pembayarannya." },
 
+  /* Pilihan paket yang tampil di popup akun demo (js/demo.js). Tiap tombol membuka chat pribadi admin
+     dengan pesan sesuai paket yang dipencet. Tambah/ubah/hapus baris sesuai paket yang dijual. */
+  paket: [
+    { id: "bulanan",  label: "📅 Paket Bulanan",  teks: "Halo admin Shirose Nihongo, saya mau membeli Paket BULANAN. Mohon info harga dan cara pembayarannya." },
+    { id: "lifetime", label: "♾️ Paket Lifetime", teks: "Halo admin Shirose Nihongo, saya mau membeli Paket LIFETIME. Mohon info harga dan cara pembayarannya." }
+  ],
 
   /* MEMBERSHIP / BERLANGGANAN (halaman daftar harga dari js/membership.js).
      Harga dalam angka rupiah tanpa titik. Hapus bulanan atau lifetime kalau paket

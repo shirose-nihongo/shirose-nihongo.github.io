@@ -108,6 +108,7 @@ export async function renderJlpt(params = []) {
     if (lv !== cur) { lv = cur; jenis = undefined; pkgId = undefined; }
   }
   try {
+    if (pkgId && await demoTerkunci(lv, jenis, pkgId)) return window.DEMO.lockedPanel("Paket terkunci (Demo)", `jlpt/${lv}/${jenis}`, "Akun Demo hanya membuka 10% paket tiap jenis latihan. Hubungi admin untuk membeli akses penuh.");
     if (sesi && !sesi.selesai && pkgId && sesi.pkgId === pkgId) return await mulaiAtauLanjut(sesi);
     if (!lv) return await viewLevel(sesi);
     if (!LV.includes(lv)) return viewLevel(sesi);
@@ -124,6 +125,14 @@ export async function renderJlpt(params = []) {
 export async function renderRiwayatJlpt() { stopTimer(); return await viewRiwayat(); }
 export async function renderReviewJlpt(params = []) { stopTimer(); return await viewReviewDariRiwayat(params[0]); }
 
+/** Akun demo: hanya 10% paket pertama tiap jenis yang boleh dibuka (Full 10 → 1, latihan 20 → 2). */
+async function demoTerkunci(lv, jenis, pkgId) {
+  if (!(window.DEMO && window.DEMO.on())) return false;
+  const idx = await loadIndex();
+  const list = idx.level[lv]?.[jenis] || [];
+  const i = list.findIndex(p => p.id === pkgId);
+  return i < 0 || i >= window.DEMO.cap(list.length);
+}
 const curLevel = () => { const l = String(S().level || "").toLowerCase(); return LV.includes(l) ? l : null; };
 function bolehLevel(lv) {
   return typeof window.canAccessLevel === "function" ? window.canAccessLevel(lv) : true;
@@ -208,6 +217,11 @@ async function viewPaket(lv, jenis, sesi) {
     const last = mine[0];
     const best = mine.length ? Math.max(...mine.map(h => h.skor || 0)) : null;
     const aktif = sesi && !sesi.selesai && sesi.pkgId === p.id;
+    if (window.DEMO && window.DEMO.on() && i >= window.DEMO.cap(list.length)) {
+      return `<div class="jx-pkg demo-lock" onclick="DEMO.lockToast()"><div class="no">${String(i + 1).padStart(2, "0")}</div>
+      <div class="info"><div class="ttl">${esc(p.judul)}</div><div class="sub">${p.jumlah} soal · ${p.durasi} menit</div></div>
+      <div class="st"><span class="tag">🔒 Demo</span></div></div>`;
+    }
     return `<div class="jx-pkg ${last ? "done" : ""} ${aktif ? "aktif" : ""}" onclick="route('jlpt/${lv}/${jenis}/${p.id}')">
       <div class="no">${String(i + 1).padStart(2, "0")}</div>
       <div class="info"><div class="ttl">${esc(p.judul)}</div>
@@ -221,6 +235,7 @@ async function viewPaket(lv, jenis, sesi) {
     <div class="panel jx">
       ${crumbs([["JLPT Center", "jlpt"], [`JLPT ${lv.toUpperCase()}`, `jlpt/${lv}`], [JENIS[jenis].nama]])}
       <h2>${JENIS[jenis].ico} ${JENIS[jenis].nama} ${lv.toUpperCase()}</h2>
+      ${window.DEMO ? window.DEMO.note(Math.min(list.length, window.DEMO.cap(list.length)), list.length, "paket") : ""}
       <p class="jx-muted">${JENIS[jenis].desc}. Pilih paket untuk melihat detail dan mengatur waktu.</p>
       <div class="jx-pkglist">${cards || `<div class="empty">Belum ada paket.</div>`}</div>
     </div>`;
@@ -280,6 +295,7 @@ async function mulai(lv, jenis, pkgId) {
     menit = parseInt(document.getElementById("jx-menit").value);
     if (!menit || menit < 1 || menit > 300) { toast("Masukkan durasi 1–300 menit"); return; }
   }
+  if (await demoTerkunci(lv, jenis, pkgId)) { window.DEMO.lockToast(); return; }
   const idx = await loadIndex();
   const meta = findMeta(idx, pkgId);
   const now = Date.now();
