@@ -506,7 +506,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         <audio id="ck-au" controls preload="none" style="width:100%;margin:8px 0 12px"></audio>
         <div class="qz-q" id="ck-q"></div>
         <div class="qz-opts" id="ck-o"></div>
-        <div class="qz-ex" id="ck-ex"></div>
+        <div class="qz-ex" id="ck-res"></div>
         <div class="qz-bar"><button class="btn sm" id="ck-sc" type="button" hidden>Lihat naskah</button></div>
         <div class="ck-sc" id="ck-scr" hidden></div>
       </div>
@@ -541,6 +541,25 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
   </div>
 </section>
 
+<section id="choukai">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">聴解 · Choukai</div>
+      <h2>Latihan mendengar dengan <span class="grad">suara anime yang lucu</span></h2>
+      <p class="lead">Soal choukai dibacakan dengan suara karakter. Putar audionya, lalu pilih jawabannya.</p>
+    </div>
+    <div class="studio rv" style="grid-template-columns:1fr;max-width:680px;margin:28px auto 0">
+      <div class="demo">
+        <div class="demo-h"><span class="badge">N5 · Choukai</span><span class="lbl">Dengarkan, lalu jawab ↓</span></div>
+        <div class="qz-q" id="ck-scene">教室で先生と学生が話しています。学生は明日何を持ってきますか。</div>
+        <button class="btn wa sm" id="ck-play" type="button">▶ Putar audio</button>
+        <div class="qz-opts" id="ck-opts" style="margin-top:12px"></div>
+        <div class="qz-ex" id="ck-ex"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="level" style="padding-top:30px">
   <div class="wrap">
     <div class="center rv">
@@ -563,29 +582,6 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
   </div>
 </section>
 
-<section id="choukai">
-  <div class="wrap">
-    <div class="center rv">
-      <div class="eyebrow">聴解 · Choukai</div>
-      <h2>Latihan mendengar dengan <span class="grad">suara anime yang lucu</span></h2>
-      <p class="lead">Soal choukai dibacakan karakter-karakter berbeda: ada narator, guru, ibu, bapak, siswi, siswa, sampai suara anak kecil. Dengarkan contoh soalnya, lalu pilih jawabannya.</p>
-    </div>
-    <div class="studio rv" style="grid-template-columns:1.1fr .9fr;align-items:start">
-      <div class="demo">
-        <div class="demo-h"><span class="badge">N5 · Choukai</span><span class="lbl">Dengarkan, lalu jawab ↓</span></div>
-        <div class="qz-q" id="ck-scene">教室で先生と学生が話しています。学生は明日何を持ってきますか。</div>
-        <button class="btn wa sm" id="ck-play" type="button">▶ Putar audio</button>
-        <div class="qz-opts" id="ck-opts" style="margin-top:12px"></div>
-        <div class="qz-ex" id="ck-ex"></div>
-      </div>
-      <div class="demo">
-        <div class="demo-h"><span class="badge">Suara karakter</span><span class="lbl">Ketuk untuk dengar ↓</span></div>
-        <div class="ck-voices" id="ck-voices"></div>
-        <p style="font-size:13px;color:var(--gray-dim);margin-top:12px">Tiap soal memakai karakter yang cocok dengan situasinya, jadi telingamu terbiasa dengan banyak gaya bicara.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="langganan">
   <div class="wrap">
@@ -796,7 +792,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 
   /* ---- contoh soal choukai + suara karakter (audio asli aplikasi) ---- */
   (function(){
-    var play = $("#ck-play"), box = $("#ck-opts"), ex = $("#ck-ex"), vb = $("#ck-voices"); if (!play) return;
+    var play = $("#ck-play"), box = $("#ck-opts"), ex = $("#ck-ex"); if (!play) return;
     var cur = null;
     function stop(){ if (cur){ try{cur.pause();}catch(e){} cur = null; } document.querySelectorAll(".ck-voices button.on").forEach(function(b){b.classList.remove("on")}); play.textContent = "▶ Putar audio"; }
     function go(src, btn){ var was = cur && cur.__src===src; stop(); if (was) return;
@@ -813,10 +809,6 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         ex.textContent = (i===ANS ? "✅ Benar! " : "❌ Belum tepat. ") + "Jawaban: えんぴつと 消しゴムと 色えんぴつ. Guru bilang bawa pensil dan penghapus; kertas sudah ada di sekolah; pensil warna juga harus dibawa.";
       };
       box.appendChild(b);
-    });
-    [["aoyama","Pak Guru","Narator & instruksi"],["mochiko","Kakak Ceria","Percakapan sehari-hari"],["goki","Ibu Guru","Suara dewasa yang lembut"],["sourin","Kakek","Tokoh senior"],["nana","Siswi","Suara cewek manis"],["kurita","Siswa","Suara cowok santai"],["no7","Si Kecil","Suara anak-anak"]].forEach(function(v){
-      var b = el("button"); b.type = "button"; b.appendChild(el("b",null,"🔊 "+v[1])); b.appendChild(el("small",null,v[2]));
-      b.onclick = function(){ go("./audio/vv/test/"+v[0]+".mp3", b); }; vb.appendChild(b);
     });
   })();
 
@@ -1058,13 +1050,13 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
   function ckRender(){
     var d=CK[lv];done=false;
     $("#ck-set").textContent=d.set;au.pause();au.src=d.au;
-    $("#ck-q").textContent=d.q;$("#ck-ex").textContent="";$("#ck-sc").hidden=true;$("#ck-scr").hidden=true;
+    $("#ck-q").textContent=d.q;$("#ck-res").textContent="";$("#ck-sc").hidden=true;$("#ck-scr").hidden=true;
     var o=$("#ck-o");o.innerHTML="";
     d.o.forEach(function(t,i){var b=document.createElement("button");b.type="button";b.textContent=(i+1)+". "+t;
       b.onclick=function(){if(done)return;done=true;
         [].forEach.call(o.children,function(x,j){x.disabled=true;if(j===d.a)x.classList.add("ok")});
         if(i!==d.a)b.classList.add("no");
-        $("#ck-ex").textContent=(i===d.a?"Benar! ":"Kurang tepat. ")+d.e;$("#ck-sc").hidden=false};
+        $("#ck-res").textContent=(i===d.a?"Benar! ":"Kurang tepat. ")+d.e;$("#ck-sc").hidden=false};
       o.appendChild(b)});
   }
   var lvb=$("#ck-lv");
