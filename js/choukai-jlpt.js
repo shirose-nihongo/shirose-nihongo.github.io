@@ -67,7 +67,8 @@ async function packList(lvl){
     try { const r = await fetch("./choukai/paket/index.json", { cache: "no-cache" }); _pkIndex = r.ok ? await r.json() : {}; }
     catch(e){ _pkIndex = {}; }
   }
-  return [1, ...((_pkIndex[lvl] || []).filter(n => n > 1))];
+  const all = [1, ...((_pkIndex[lvl] || []).filter(n => n > 1))];
+  return (window.DEMO && window.DEMO.on()) ? all.slice(0, window.DEMO.cap(all.length)) : all;   // demo: 10% paket pertama
 }
 /** Paket dari id soal: "n5-m1-01" → 1, "n5-p3-m1-01" → 3 */
 const pkOf = (id) => { const m = /^n\d-p(\d+)-/.exec(id); return m ? +m[1] : 1; };
@@ -98,7 +99,7 @@ function setPlayBtn(id, on, mode){
   if (m && mode !== undefined) m.textContent = mode;
 }
 window.addEventListener("sv:stop", (e) => { if (_playingId && e.detail?.next !== _playingId){ setPlayBtn(_playingId, false, ""); _playingId = null; } });
-const DEF_VOICES = { N: "aoyama", M: "kurita", F: "mochiko", M2: "sourin", F2: "no7" };
+const DEF_VOICES = { N: "aoyama", M: "kurita", F: "mochiko", M2: "sourin", F2: "goki" };
 async function playItem(lvl, id){
   if (_playingId === id){ SV.stop(); return; }
   const pk = pkOf(id);
@@ -236,6 +237,8 @@ export async function renderChoukaiJLPT(params){
   if (/^p\d+$/.test(params[0] || "")){ pk = +params[0].slice(1); mn = parseInt(params[1]); }
   else if (params[0]){ pk = 1; mn = parseInt(params[0]); }
 
+  if (pk && window.DEMO && window.DEMO.on() && !(await packList(lvl)).includes(pk))
+    return window.DEMO.lockedPanel("Paket choukai terkunci (Demo)", "choukai");
   if (!pk){
     setTimeout(fillVoiceGallery, 300);
     const list = await packList(lvl);
@@ -259,6 +262,7 @@ export async function renderChoukaiJLPT(params){
     const types = base.sections.map(s => `問題${s.mondai} ${esc(s.jp)}`).join(" · ");
     return `
       <div class="panel ck-wrap">
+        ${window.DEMO && window.DEMO.on() ? '<div class="demo-note">🎁 <b>Akun Demo</b> — hanya 10% paket choukai yang dibuka.</div>' : ""}
         <h2>🎧 聴解 Choukai · ${esc(base.title)}</h2>
         <p class="ck-intro">${esc(base.karakter)}</p>
         <p class="ck-intro">📦 ${ok.length} paket soal · tiap paket: ${types}</p>

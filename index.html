@@ -266,6 +266,8 @@ body.auth-mode .companion{display:none !important;}
 }
 @media (max-width:640px){ .brand{font-size:18px; gap:6px;} }
 .brand .rose{color:var(--pink); font-size:26px;}
+.brand .brand-logo{height:40px; width:auto; display:block;}
+@media (max-width:640px){ .brand .brand-logo{height:34px;} }
 .topbar-right{margin-left:auto; display:flex; gap:8px; align-items:center;}
 .chip{
   display:inline-flex; align-items:center; gap:6px;
@@ -1365,14 +1367,14 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261113zk"/>
 <link rel="stylesheet" href="./css/ssw.css?v=20261112zh"/>
-<link rel="stylesheet" href="./css/mensetsu.css?v=20261113b"/>
+<link rel="stylesheet" href="./css/mensetsu.css?v=20261113d"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261113zk"/>
 </head>
 <body>
 
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
-  <a href="#" class="brand" onclick="route('home'); return false;" title="SHIROSE NIHONGO by SSW no Ou">シ<span class="rose">🌹</span>ロセ <span style="font-family:var(--font-sans); font-size:13px; letter-spacing:.5px;">NIHONGO</span></a>
+  <a href="#" class="brand" onclick="route('home'); return false;" title="SHIROSE NIHONGO by SSW no Ou"><img src="./assets/logo-shirose.png" alt="Shirose Nihongo" class="brand-logo" height="40"/></a>
   <div class="lvl-pill-group" id="lvl-pills">
     <!-- JS filled -->
   </div>
@@ -1412,27 +1414,29 @@ html{overflow-x:hidden;}
   </div>
 </div>
 
+<script src="./js/demo.js?v=20261122a"></script>
 <script type="module">
 import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED } from "./js/character.js";
 import { allShopItems } from "./js/shop-seed.js";
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261113zk";
-import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261109c";
+import * as FB from "./js/firebase-sync.js?v=20261122a";
+import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261122a";
 import SV from "./js/voice.js?v=20261109c";
-import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261113zk";
+import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261122a";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261113zk";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261113zk";
-import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261113n";
-import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113b";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261122a";
+import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261122a";
+import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261113d";
+import { initHub, renderHub } from "./js/siswa-hub.js?v=20261121a";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
 // MENSETSU 面接: simulasi wawancara kerja Jepang 8 bidang SSW (js/mensetsu.js)
 initMensetsu(FB);
-initJft(FB, (t, l) => loadMateri(t, l));
+initJft(FB, (t, l) => loadMateri(t, l, { full: true }));   // mesin ujian JFT butuh bank kata penuh (pembatas demo ada di paket ujian)
 
 /* ========== STATE ========== */
 const state = {
@@ -1759,6 +1763,8 @@ function renderLogin(){
         <button class="btn" id="auth-page-submit" onclick="submitAuthPage()">${isDaftar ? "Daftar Sekarang" : "Masuk"}</button>
         <button class="btn ghost" onclick="kirimResetPassword()" style="font-size:12px;">Lupa password?</button>
         <p style="font-size:13px; color:var(--gray); margin:10px 0 0; text-align:center;">Belum punya akun? Akun siswa dibuat oleh guru/moderator.</p>
+        <button class="btn gold" id="btn-demo" onclick="masukDemoNow()" style="margin-top:12px;">🎁 Coba Demo Gratis</button>
+        <p style="font-size:11.5px; color:var(--gray-dim); margin:6px 0 0; text-align:center;">Tanpa daftar · 1 perangkat = 1 akun demo · semua materi dibuka 10%.</p>
         <button class="btn ghost" onclick="route('home')" style="margin-top:12px;">← Kembali ke beranda</button>
 
         <div id="auth-page-err" class="auth-err">${deniedMsg}</div>
@@ -1793,6 +1799,23 @@ window.masukTamuNow = async () => {
   }
 };
 
+// Akun DEMO: 1 perangkat = 1 akun (email/password diturunkan dari sidik jari perangkat).
+// Perangkat yang sudah punya akun demo langsung masuk ke akun yang sama.
+window.masukDemoNow = async () => {
+  const err = document.getElementById("auth-page-err");
+  const btn = document.getElementById("btn-demo");
+  if (err) err.innerHTML = "";
+  if (btn) { btn.disabled = true; btn.textContent = "Menyiapkan akun demo…"; }
+  try {
+    await FB.masukDemo();
+    toast("Selamat datang di mode Demo! 🎁");
+    setTimeout(() => route("home"), 400);
+  } catch(e){
+    if (btn) { btn.disabled = false; btn.textContent = "🎁 Coba Demo Gratis"; }
+    if (err) err.textContent = friendlyAuthError(e);
+  }
+};
+
 // Kirim email reset password — dipakai user yang lupa password atau
 // mau ubah password akun yang tidak bisa login.
 window.kirimResetPassword = async () => {
@@ -1819,6 +1842,8 @@ window.kirimResetPassword = async () => {
 // tapi siswa doc gagal dibuat). Firebase Auth butuh "recent login"
 // sebelum delete, jadi urutannya login → delete.
 window.hapusAkunRusak = async () => {
+  // Dinonaktifkan: tidak ada lagi alur hapus akun untuk siswa.
+  return;
   const email = (document.getElementById("auth-page-email")?.value || "").trim();
   const pwd = document.getElementById("auth-page-pwd")?.value || "";
   const err = document.getElementById("auth-page-err");
@@ -2016,7 +2041,12 @@ function updateChips(){
 window.awardXP = awardXP;
 
 /* ========== DATA LOAD (cached) ========== */
-async function loadMateri(tipe, lvl){
+// Akun demo hanya melihat 10% pertama (window.DEMO, js/demo.js); {full:true} = bank penuh untuk mesin ujian.
+async function loadMateri(tipe, lvl, opts){
+  const d = await _loadMateriFull(tipe, lvl);
+  return (window.DEMO && window.DEMO.on() && !(opts && opts.full)) ? window.DEMO.slice(d) : d;
+}
+async function _loadMateriFull(tipe, lvl){
   const key = `${tipe}-${lvl}`;
   if (state.materi[tipe][lvl]) return state.materi[tipe][lvl];
   try {
@@ -2037,6 +2067,8 @@ async function loadMateri(tipe, lvl){
 }
 
 window.__SHIROSE_STATE = state;
+// Hub siswa (#profile): 3 tab Profil / Akses / Nilai — js/siswa-hub.js
+initHub({ FB, state, renderCharacter, DEFAULT_EQUIPPED, canAccessLevel });
 /* ========== ROUTES ========== */
 const routes = {
   "pilih-level": renderPilihLevel,
@@ -2060,7 +2092,7 @@ const routes = {
   sylabus: renderSylabus,
   syl: (params) => renderSylabusChapter(params),
   kalender: renderKalender,
-  profile: renderProfile,
+  profile: (params) => renderHub(params),
   achievements: renderAchievements,
   leaderboard: renderLeaderboard,
   choukai: (params) => renderChoukaiJLPT(params),
@@ -2805,6 +2837,7 @@ async function renderMateriList(tipe){
       <div class="search-bar">
         <input type="text" id="search-${tipe}" placeholder="Cari di semua nomor..." oninput="filterMateri('${tipe}', this.value)"/>
       </div>
+      ${window.DEMO && window.DEMO.on() ? window.DEMO.note(data.length, (await loadMateri(tipe, state.level, { full: true })).length, label) : ""}
       ${posUI}
       ${tipe === "kosakata" && data.some(x => x.km) ? `<div class="vf-row">Bentuk kata kerja: ${_vfBtn("setVerbFormMateri")}</div>` : ""}
       ${displayBar("materi")}
@@ -4121,11 +4154,14 @@ function renderHafalanDone(){
  */
 async function renderUjianList(){
   const kategori = state.user ? await FB.listKategori(state.level) : [];
-  const pub = kategori.filter(k => k.publish);
+  const pubAll = kategori.filter(k => k.publish);
+  const pub = window.DEMO ? window.DEMO.slice(pubAll) : pubAll;   // demo: 10% kategori pertama
+  state._demoUjianOk = new Set(pub.map(k => k.id));
 
   return `
     <div class="panel">
       <h2>📝 Ujian ${state.level.toUpperCase()}</h2>
+      ${window.DEMO ? window.DEMO.note(pub.length, pubAll.length, "kategori ujian") : ""}
       <div class="hub-card jx-home" onclick="route('jlpt/${state.level}')" style="margin-bottom:14px;">
         <div class="ico">🏯</div>
         <div class="info"><div class="ttl">JLPT Center ${state.level.toUpperCase()}</div><div class="sub">10 Full Exam + 60 paket latihan (Kanji · Kotoba · Bunpou) dengan timer &amp; pembahasan lengkap</div></div>
@@ -4190,6 +4226,11 @@ function _startUjianTimer(){
 async function renderUjian(params){
   const kategoriId = params[0];
   if (!kategoriId){ _stopUjianTimer(); return renderUjianList(); }
+  // Akun demo: hanya kategori yang lolos 10% di daftar ujian.
+  if (window.DEMO && window.DEMO.on()){
+    const ok = state.user ? (await FB.listKategori(state.level)).filter(k => k.publish) : [];
+    if (!window.DEMO.slice(ok).some(k => k.id === kategoriId)) return window.DEMO.lockedPanel("Ujian terkunci", "ujian");
+  }
 
   // Guest juga boleh ngerjain ujian — kalau belum sign-in sama sekali,
   // auto-coba anonymous sign-in. Kalau anonymous provider belum di-enable
@@ -5389,14 +5430,13 @@ function showOrphanBannerIfNeeded(){
         <span style="color:#d9d9e0;">
           Login berhasil, tapi Firestore ${status === "write_blocked" ? "menolak membuat profil siswa baru" : "menolak membaca profil siswa"}
           — biasanya karena Firestore Rules belum ter-deploy sesuai <code>firestore.rules.example</code>.
-          ${guruMode ? "Deploy rules dulu di Firebase Console, lalu klik Coba Lagi." : "Hubungi guru untuk deploy rules, atau klik Reset Akun untuk daftar ulang."}
+          ${guruMode ? "Deploy rules dulu di Firebase Console, lalu klik Coba Lagi." : "Hubungi guru untuk memperbaiki profil akunmu. Akunmu tidak perlu dihapus."}
         </span>
       </div>
       <button onclick="hideOrphanBanner()" style="background:transparent; border:none; color:#aaa; font-size:20px; cursor:pointer; padding:0 6px;">×</button>
     </div>
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
       <button class="btn" onclick="cobaReparasiAkun()">🔄 Coba Lagi</button>
-      <button class="btn danger" onclick="resetAkunSekarang()">🗑️ Reset Akun (hapus & daftar ulang)</button>
       <button class="btn ghost" onclick="logout()">Keluar</button>
     </div>
   `;
@@ -5420,6 +5460,9 @@ window.cobaReparasiAkun = async () => {
 };
 
 window.resetAkunSekarang = async () => {
+  // Dinonaktifkan: siswa tidak boleh diminta menghapus akun.
+  toast("Hubungi guru untuk memperbaiki akunmu. Akun tidak perlu dihapus.");
+  return;
   if (!confirm("HAPUS akun kamu? Email kamu bisa dipakai daftar ulang setelah ini. Tindakan ini tidak bisa dibatalkan.")) return;
   try {
     await FB.hapusAkunSendiri();
@@ -5442,6 +5485,7 @@ FB.onAuth(async (user, siswa) => {
   _authFiredOnce = true;
 
   state.user = user; state.siswa = siswa;
+  if (window.DEMO) window.DEMO.bar();   // pita "MODE DEMO" (hanya tampil untuk akun demo)
   const btn = document.getElementById("btn-auth");
   if (user) {
     btn.innerHTML = `👋 ${siswa?.nama || user.email.split("@")[0]}`;

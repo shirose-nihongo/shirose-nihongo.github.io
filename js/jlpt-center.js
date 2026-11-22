@@ -108,6 +108,7 @@ export async function renderJlpt(params = []) {
     if (lv !== cur) { lv = cur; jenis = undefined; pkgId = undefined; }
   }
   try {
+    if (pkgId && await demoTerkunci(lv, jenis, pkgId)) return window.DEMO.lockedPanel("Paket terkunci (Demo)", `jlpt/${lv}/${jenis}`, "Akun Demo hanya membuka 10% paket tiap jenis latihan. Minta akun lengkap ke guru/moderator.");
     if (sesi && !sesi.selesai && pkgId && sesi.pkgId === pkgId) return await mulaiAtauLanjut(sesi);
     if (!lv) return await viewLevel(sesi);
     if (!LV.includes(lv)) return viewLevel(sesi);
@@ -124,6 +125,14 @@ export async function renderJlpt(params = []) {
 export async function renderRiwayatJlpt() { stopTimer(); return await viewRiwayat(); }
 export async function renderReviewJlpt(params = []) { stopTimer(); return await viewReviewDariRiwayat(params[0]); }
 
+/** Akun demo: hanya 10% paket pertama tiap jenis yang boleh dibuka (Full 10 → 1, latihan 20 → 2). */
+async function demoTerkunci(lv, jenis, pkgId) {
+  if (!(window.DEMO && window.DEMO.on())) return false;
+  const idx = await loadIndex();
+  const list = idx.level[lv]?.[jenis] || [];
+  const i = list.findIndex(p => p.id === pkgId);
+  return i < 0 || i >= window.DEMO.cap(list.length);
+}
 const curLevel = () => { const l = String(S().level || "").toLowerCase(); return LV.includes(l) ? l : null; };
 function bolehLevel(lv) {
   return typeof window.canAccessLevel === "function" ? window.canAccessLevel(lv) : true;
@@ -208,6 +217,11 @@ async function viewPaket(lv, jenis, sesi) {
     const last = mine[0];
     const best = mine.length ? Math.max(...mine.map(h => h.skor || 0)) : null;
     const aktif = sesi && !sesi.selesai && sesi.pkgId === p.id;
+    if (window.DEMO && window.DEMO.on() && i >= window.DEMO.cap(list.length)) {
+      return `<div class="jx-pkg demo-lock" onclick="DEMO.lockToast()"><div class="no">${String(i + 1).padStart(2, "0")}</div>
+      <div class="info"><div class="ttl">${esc(p.judul)}</div><div class="sub">${p.jumlah} soal · ${p.durasi} menit</div></div>
+      <div class="st"><span class="tag">🔒 Demo</span></div></div>`;
+    }
     return `<div class="jx-pkg ${last ? "done" : ""} ${aktif ? "aktif" : ""}" onclick="route('jlpt/${lv}/${jenis}/${p.id}')">
       <div class="no">${String(i + 1).padStart(2, "0")}</div>
       <div class="info"><div class="ttl">${esc(p.judul)}</div>
@@ -221,6 +235,7 @@ async function viewPaket(lv, jenis, sesi) {
     <div class="panel jx">
       ${crumbs([["JLPT Center", "jlpt"], [`JLPT ${lv.toUpperCase()}`, `jlpt/${lv}`], [JENIS[jenis].nama]])}
       <h2>${JENIS[jenis].ico} ${JENIS[jenis].nama} ${lv.toUpperCase()}</h2>
+      ${window.DEMO ? window.DEMO.note(Math.min(list.length, window.DEMO.cap(list.length)), list.length, "paket") : ""}
       <p class="jx-muted">${JENIS[jenis].desc}. Pilih paket untuk melihat detail dan mengatur waktu.</p>
       <div class="jx-pkglist">${cards || `<div class="empty">Belum ada paket.</div>`}</div>
     </div>`;
@@ -280,6 +295,7 @@ async function mulai(lv, jenis, pkgId) {
     menit = parseInt(document.getElementById("jx-menit").value);
     if (!menit || menit < 1 || menit > 300) { toast("Masukkan durasi 1–300 menit"); return; }
   }
+  if (await demoTerkunci(lv, jenis, pkgId)) { window.DEMO.lockToast(); return; }
   const idx = await loadIndex();
   const meta = findMeta(idx, pkgId);
   const now = Date.now();
@@ -940,6 +956,66 @@ async function viewRiwayat() {
 export async function ringkasanTerakhir() {
   try { const c = curLevel(); const l = (await riwayat()).filter(h => !c || h.lv === c); return l[0] || null; } catch (e) { return null; }
 }
+
+/* ---------------- 8c. DETAIL KANJI & KOSAKATA: contoh kata + kalimat bisa dipencet ---------------- */
+(function jxAutoLink() {
+  if (window.__jxAuto) return; window.__jxAuto = true;
+  const kjCache = {};
+  const getKj = (lv) => kjCache[lv] || (kjCache[lv] = fetch(`./data/kanji-${lv}.json`).then(r => r.ok ? r.json() : []).catch(() => []));
+  const cleanK = (s) => String(s || "").replace(/[（(][^）)]*[）)]|[～〜○]/g, "").trim();
+  function linkBoxes(boxes, D) {
+    for (const box of boxes) {
+      const tw = document.createTreeWalker(box, NodeFilter.SHOW_TEXT, { acceptNode: (n) => n.parentElement.closest("rt,rp,.jx-w,script,style,button") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+      const nodes = []; let n; while ((n = tw.nextNode())) if (hasKj(n.nodeValue)) nodes.push(n);
+      for (const nd of nodes) {
+        const whole = cleanK(nd.nodeValue);
+        let toks;
+        if (box.classList.contains("jx-cw") && D.words.has(whole) && whole === nd.nodeValue.trim()) toks = [{ t: nd.nodeValue, ty: "w", key: whole }];
+        else toks = tokenKanji(nd.nodeValue, D);
+        if (!toks.some(t => t.ty)) continue;
+        const fr = document.createDocumentFragment();
+        for (const t of toks) {
+          if (!t.ty) { fr.append(t.t); continue; }
+          const sp = document.createElement("span"); sp.className = "jx-w"; sp.dataset.ty = t.ty; sp.dataset.key = t.key; sp.tabIndex = 0; sp.setAttribute("role", "button");
+          sp.textContent = t.t; fr.append(sp);
+        }
+        nd.replaceWith(fr);
+      }
+    }
+  }
+  async function enhance(box) {
+    if (box.dataset.jxa) return; box.dataset.jxa = "1";
+    try {
+      const lv = String(S().level || "n5").toLowerCase();
+      const D = await loadKD(lv); if (!D || !box.isConnected) return;
+      const isKanji = !!box.querySelector(".contoh-list") || !!box.querySelector(".readings .lbl");
+      const boxes = [];
+      if (isKanji) {
+        box.querySelectorAll(".contoh-list .contoh-item .jp").forEach(el => { el.classList.add("jx-cw"); boxes.push(el); });
+        const ch = (box.querySelector(".big-k")?.textContent || "").trim();
+        const items = await getKj(lv);
+        const e = items.find(x => (x.k || x.kanji) === ch);
+        const kal = (e && e.kal) || [];
+        if (kal.length && !box.querySelector(".jx-kal")) {
+          const sec = document.createElement("div"); sec.className = "contoh-list jx-kal";
+          sec.innerHTML = `<h3>Contoh kalimat</h3>` + kal.map(k => `<div class="contoh-item" style="flex-direction:column; align-items:flex-start; text-align:left;">
+            <div class="jp" style="font-size:22px; line-height:2;">${brRuby(k.j)} <button class="say-mini" title="Dengarkan" data-say="${esc(String(k.j).replace(/\[[^\]]*\]/g, "").replace(/\s+/g, ""))}" data-role="kosakata-contoh" onclick="SV.btn(this)">🔊</button></div>
+            <div class="id" style="text-align:left; font-size:16px;">${esc(k.a)}</div></div>`).join("");
+          const anchor = box.querySelector(".contoh-list:not(.jx-kal)");
+          if (anchor) anchor.after(sec); else (box.querySelector(".kanji-detail > div:last-of-type") || box).before(sec);
+          sec.querySelectorAll(".contoh-item .jp").forEach(el => boxes.push(el));
+        }
+      } else {
+        box.querySelectorAll(".contoh-item .jp").forEach(el => boxes.push(el));
+      }
+      linkBoxes(boxes, D);
+    } catch (_) { /* tampilan tetap jalan tanpa fitur pencet */ }
+  }
+  let t = 0;
+  const scan = () => { t = 0; document.querySelectorAll(".kanji-detail:not([data-jxa])").forEach(enhance); };
+  new MutationObserver(() => { if (!t) t = setTimeout(scan, 60); }).observe(document.documentElement, { childList: true, subtree: true });
+  scan();
+})();
 
 window.JLPT = {
   pilihWaktu, mulai, batalSesi, jawab, geser, lompat, tandai, putar: () => putar(), konfirmasi,

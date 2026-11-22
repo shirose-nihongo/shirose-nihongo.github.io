@@ -32,6 +32,11 @@ service cloud.firestore {
     }
     function diubah()     { return request.resource.data.diff(resource.data).affectedKeys(); }
     function targetSiswa(){ return resource.data.get('role', 'student') == 'student'; }
+    // Akun DEMO (1 perangkat = 1 akun): email demo-<24 hex>@demo.shirose.app dibuat
+    // sendiri oleh pengunjung dari tombol "Coba Demo". Profilnya dikunci: role student,
+    // isDemo true, kelas DEMO. Pembatas 10% materi ada di sisi klien (js/demo.js).
+    function emailDemo()  { return signedIn() && request.auth.token.email != null
+                                   && request.auth.token.email.matches('^demo-[0-9a-f]{24}@demo[.]shirose[.]app$'); }
 
     // ---------- /siswa/{uid} : profil akun ----------
     match /siswa/{sid} {
@@ -41,12 +46,19 @@ service cloud.firestore {
       // atau moderator mem-bootstrap profilnya sendiri.
       allow create: if (isGuru() && request.resource.data.get('role', 'student') == 'student')
                     || (isAdmin() && request.resource.data.get('role', 'student') in ['student', 'guru'])
-                    || (me() == sid && ownerEmail());
+                    || (me() == sid && ownerEmail())
+                    // Akun demo membuat profilnya sendiri (sekali; tidak bisa menimpa).
+                    || (me() == sid && emailDemo()
+                        && request.resource.data.get('role', 'student') == 'student'
+                        && request.resource.data.get('isDemo', false) == true
+                        && request.resource.data.get('kelas', '') == 'DEMO'
+                        && request.resource.data.get('status', 'aktif') == 'aktif'
+                        && !('permissions' in request.resource.data.keys()));
 
       allow update: if
           // Siswa: profil ringan saja (nama, karakter, aktif), tidak boleh ubah hak akses.
           (me() == sid && aktif()
-             && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh']))
+             && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh', 'isDemo']))
           // Moderator boleh memperbaiki profilnya sendiri.
           || (me() == sid && ownerEmail())
           // Guru: atur akses/kelas/status/nama siswa (bukan role, bukan akun guru lain).

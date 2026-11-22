@@ -406,6 +406,93 @@ export function isGuestUser(){
   return !!(currentUser && currentUser.isAnonymous);
 }
 
+/* ========== AKUN DEMO (1 perangkat = 1 akun, batas 10% materi) ==========
+ * Email & password demo diturunkan dari sidik jari perangkat (hash), BUKAN dari
+ * penyimpanan browser. Artinya: menghapus cache/cookie tidak membuat akun baru,
+ * dan perangkat yang sama selalu masuk ke akun demo yang sama.
+ * Pembatasan 10% dilakukan di sisi klien (js/demo.js); lihat catatan di sana.
+ */
+export const DEMO_DOMAIN = "demo.shirose.app";
+async function _sha256Hex(str){
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+}
+function _canvasFp(){
+  try {
+    const c = document.createElement("canvas"); c.width = 220; c.height = 40;
+    const x = c.getContext("2d");
+    x.textBaseline = "top"; x.font = "16px 'Arial'"; x.fillStyle = "#f60"; x.fillRect(10, 2, 80, 20);
+    x.fillStyle = "#069"; x.fillText("Shirose 日本語 🌹 demo", 4, 8);
+    x.fillStyle = "rgba(102,204,0,.7)"; x.fillText("Shirose 日本語 🌹 demo", 6, 12);
+    return c.toDataURL();
+  } catch (_) { return "nocanvas"; }
+}
+function _webglFp(){
+  try {
+    const gl = document.createElement("canvas").getContext("webgl");
+    if (!gl) return "nogl";
+    const ext = gl.getExtension("WEBGL_debug_renderer_info");
+    return ext ? gl.getParameter(ext.UNMASKED_VENDOR_WEBGL) + "|" + gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.VERSION);
+  } catch (_) { return "nogl"; }
+}
+/** Sidik jari perangkat → hash 64 hex. Tidak memakai UA / zoom (berubah saat update browser / zoom). */
+export async function deviceHash(){
+  const n = navigator, s = screen;
+  const parts = [
+    n.platform, n.vendor, n.hardwareConcurrency, n.deviceMemory, n.maxTouchPoints,
+    Math.max(s.width, s.height) + "x" + Math.min(s.width, s.height) + "x" + s.colorDepth,
+    (Intl.DateTimeFormat().resolvedOptions().timeZone || ""), (n.language || ""),
+    _webglFp(), _canvasFp(),
+  ];
+  return _sha256Hex(parts.join("¦") + "¦shirose-demo-v1");
+}
+export function isDemoUser(){ return !!(currentSiswaDoc && currentSiswaDoc.isDemo === true); }
+
+/**
+ * Masuk / buat akun demo untuk perangkat ini.
+ *  - Sudah ada akun demo untuk perangkat ini → langsung masuk (tidak membuat baru).
+ *  - Belum ada → buat akun Auth + profil siswa (isDemo:true) memakai app kedua
+ *    supaya sesi tab ini tidak tergantikan, lalu masuk.
+ */
+export async function masukDemo(){
+  const h = await deviceHash();
+  const email = `demo-${h.slice(0, 24)}@${DEMO_DOMAIN}`;
+  const pwd = h.slice(24, 56);
+  const gagalLogin = ["auth/invalid-credential", "auth/user-not-found", "auth/wrong-password", "auth/invalid-login-credentials"];
+  try {
+    return await signInWithEmailAndPassword(auth, email, pwd);
+  } catch (e) {
+    if (!gagalLogin.includes(e.code)) throw e;
+  }
+  // Belum ada → buat.
+  const sec = initializeApp(firebaseConfig, "demo-creator-" + Date.now());
+  const secAuth = getAuth(sec);
+  try {
+    await setPersistence(secAuth, inMemoryPersistence);
+    let cred;
+    try { cred = await createUserWithEmailAndPassword(secAuth, email, pwd); }
+    catch (e) {
+      if (e.code === "auth/email-already-in-use")
+        throw new Error("Perangkat ini sudah punya akun demo, tetapi tidak bisa dibuka. Hubungi guru/moderator.");
+      throw e;
+    }
+    try {
+      const secDb = getFirestore(sec);
+      const profil = _profilBaru(cred.user.uid, email, "Demo-" + h.slice(0, 4).toUpperCase(), "DEMO",
+        { n5:true, n4:true, n3:true, n2:true, n1:true }, "student", { isDemo: true, aksesJft: true, aksesSsw: true });
+      profil.dibuatOleh = cred.user.uid;
+      await setDoc(doc(secDb, "siswa", cred.user.uid), profil);
+    } catch (e) {
+      try { await cred.user.delete(); } catch (_) {}
+      throw new Error("Akun demo gagal dibuat — Firestore Rules belum diperbarui (" + (e.code || e.message) + ").");
+    }
+  } finally {
+    try { await signOut(secAuth); } catch (_) {}
+    try { await deleteApp(sec); } catch (_) {}
+  }
+  return await signInWithEmailAndPassword(auth, email, pwd);
+}
+
 /* ========== CHARACTER / INVENTORY ========== */
 export async function updateKarakter(karakter) {
   if (!currentUser) return;
@@ -573,6 +660,21 @@ export async function saveSswProgres(slug, data) {
   if (!currentUser) return;
   await setDoc(doc(db, "siswa", currentUser.uid, "ssw_progres", slug),
     { ...data, uid: currentUser.uid, updated: serverTimestamp() });
+}
+
+/* ========== JFT — skor terbaik per paket ==========
+ * siswa/{uid}/jft_hasil/best  { "ir0_b0p0": {pct, skor, t}, ... }  — sub-koleksi milik siswa (tercakup rules {sub}/{docId}). */
+export async function simpanBestJft(key, val) {
+  if (!currentUser || !/^ir[0-2]_(b[0-2]p[0-2]|sim[0-4])$/.test(key)) return;
+  const v = { pct: +val.pct || 0, skor: val.skor == null ? null : +val.skor, t: +val.t || Date.now() };
+  await setDoc(doc(db, "siswa", currentUser.uid, "jft_hasil", "best"), { [key]: v, uid: currentUser.uid, updated: serverTimestamp() }, { merge: true });
+}
+export async function loadBestJft(uidOverride = null) {
+  const id = uidOverride || currentUser?.uid; if (!id) return {};
+  if (uidOverride && uidOverride !== currentUser?.uid && !userIsGuru()) throw new Error("Tidak diizinkan");
+  const snap = await getDoc(doc(db, "siswa", id, "jft_hasil", "best"));
+  if (!snap.exists()) return {};
+  const d = snap.data(); delete d.uid; delete d.updated; return d;
 }
 
 /* ========== MENSETSU 面接 — hasil simulasi wawancara ==========
@@ -1048,8 +1150,9 @@ export async function diagnosaRules(){
 }
 const LEVELS = ["n5","n4","n3","n2","n1"];
 function _normAkses(a){ const r = {}; LEVELS.forEach(l => r[l] = !!(a && a[l])); return r; }
-function _profilBaru(uid, email, nama, kelas, aksesLevel, role){
+function _profilBaru(uid, email, nama, kelas, aksesLevel, role, extra){
   return {
+    ...(extra || {}),
     nama: (nama || "").trim() || email.split("@")[0],
     email, isTamu: false, kelas: kelas || "",
     aksesLevel: _normAkses(aksesLevel || { n5:true }),
@@ -1070,7 +1173,7 @@ function _profilBaru(uid, email, nama, kelas, aksesLevel, role){
  * sesi login guru di tab ini tidak tergantikan oleh akun yang baru dibuat.
  * role "guru" hanya boleh dibuat oleh admin/moderator.
  */
-export async function buatAkunSiswa({ email, password, nama, kelas, aksesLevel, role = "student" }) {
+export async function buatAkunSiswa({ email, password, nama, kelas, aksesLevel, role = "student", aksesJft, aksesSswBidang, aksesSsw }) {
   if (!userIsGuru()) throw new Error("Hanya guru/moderator");
   if (role !== "student" && !userIsAdmin()) throw new Error("Hanya moderator yang bisa membuat akun guru");
   if (!["student","guru"].includes(role)) throw new Error("Role tidak valid");
@@ -1084,7 +1187,11 @@ export async function buatAkunSiswa({ email, password, nama, kelas, aksesLevel, 
     const cred = await createUserWithEmailAndPassword(secAuth, email, password);
     const uid = cred.user.uid;
     try {
-      await setDoc(doc(db, "siswa", uid), _profilBaru(uid, email, nama, kelas, aksesLevel, role));
+      const extra = {};
+      if (typeof aksesJft === "boolean") extra.aksesJft = aksesJft;
+      if (typeof aksesSsw === "boolean") extra.aksesSsw = aksesSsw;
+      if (aksesSswBidang && typeof aksesSswBidang === "object") { extra.aksesSswBidang = {}; for (const [k, v] of Object.entries(aksesSswBidang)) if (/^[a-z0-9-]+$/.test(k) && typeof v === "boolean") extra.aksesSswBidang[k] = v; }
+      await setDoc(doc(db, "siswa", uid), _profilBaru(uid, email, nama, kelas, aksesLevel, role, extra));
     } catch (e) {
       // Rollback supaya tidak ada akun Auth yatim tanpa profil.
       try { await cred.user.delete(); } catch(_){}
@@ -1114,7 +1221,7 @@ export async function daftarkanAkunExisting({ uid, email, nama, kelas, aksesLeve
  * terhapus (itu butuh Admin SDK / Firebase Console). Tanpa profil, akun itu tidak
  * bisa membaca data apa pun (status "belum terdaftar" di Rules).
  */
-const _SUB_SISWA = ["activity","gami","jlpt_hasil","kana_progres","mensetsu_hasil","mensetsu_persiapan","misi_harian","nilai","rangkuman","srs","ujian_rewards"];
+const _SUB_SISWA = ["activity","gami","jlpt_hasil","jft_hasil","kana_progres","mensetsu_hasil","mensetsu_persiapan","misi_harian","nilai","rangkuman","srs","ujian_rewards"];
 export async function hapusSiswa(uid) {
   if (!userIsGuru()) throw new Error("Hanya guru/moderator");
   if (!uid) throw new Error("UID kosong");

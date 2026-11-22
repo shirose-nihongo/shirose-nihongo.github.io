@@ -1,4 +1,7 @@
 /* Service worker: network-first, cache fallback */
+// v177 — hub siswa 3 tab (js/siswa-hub.js), akses SSW Fishery di form akun.
+// v176 — landing baru (orbit karakter, statistik nyata, demo, CTA WhatsApp).
+// v174 — landing page publik (landing.html, js/landing-config.js).
 // v149 — MENSETSU 面接 (js/mensetsu*.js, css/mensetsu.css, data/mensetsu/index.json); fungsi Netlify tidak pernah dicache.
 // v26 — SSW 特定技能 (ssw.js, ssw-core.js, ssw-art.js, css/ssw.css; data & gambar halaman buku dicache saat dibuka).
 // v25 — Hiragana & Katakana (kana-center, writer, data kana + goresan), cache goresan KanjiVG.
@@ -6,12 +9,15 @@
 // v12 — halaman hasil ujian rombak total: skor besar dengan %, breakdown
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
-const CACHE = "shirose-nihongo-v171";
+const CACHE = "shirose-nihongo-v178";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
   "./",
   "./index.html",
+  "./landing.html",
+  "./js/landing-config.js",
+  "./js/landing-stats.js",
   "./teacher.html",
   "./manifest.webmanifest",
   "./icon-192.png",
@@ -33,10 +39,12 @@ const CORE = [
   "./data/kana.json",
   "./data/kana-baca.json",
   "./data/kana-strokes.json",
+  "./js/demo.js",
   "./js/ssw.js",
   "./js/jft.js",
   "./css/jft.css",
   "./js/ssw-core.js",
+  "./js/siswa-hub.js",
   "./js/ssw-art.js",
   "./css/ssw.css",
   "./js/mensetsu.js",
