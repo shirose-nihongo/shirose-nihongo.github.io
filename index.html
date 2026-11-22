@@ -1332,6 +1332,32 @@ html{overflow-x:hidden;}
 .bp-b{font-size:15px; line-height:1.6;}
 .bp-rumus{margin:0; padding-left:0; list-style:none; display:grid; gap:6px;}
 .bp-rumus li{background:rgba(255,255,255,.05); border-left:3px solid var(--pink,#ec4899); border-radius:8px; padding:8px 10px; font-size:14px; line-height:1.5; font-family:var(--font-jp,inherit);}
+.bp-nav{display:flex; align-items:center; justify-content:space-between; gap:8px; margin:0 0 12px; padding-right:34px;}
+.bp-nav button{flex:0 0 auto; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:inherit; border-radius:10px; padding:8px 12px; font-size:13px; font-weight:700; cursor:pointer;}
+.bp-nav button:disabled{opacity:.3; cursor:default;}
+.bp-nav .bp-cnt{font-size:12px; opacity:.7; text-align:center; flex:1;}
+.bp-hint{font-size:11px; opacity:.5; text-align:center; margin-top:6px;}
+.bp-slide-l{animation:bpSL .22s ease-out;} .bp-slide-r{animation:bpSR .22s ease-out;}
+@keyframes bpSL{from{opacity:0; transform:translateX(40px);}to{opacity:1; transform:none;}}
+@keyframes bpSR{from{opacity:0; transform:translateX(-40px);}to{opacity:1; transform:none;}}
+.kk-open{margin-top:8px; width:100%; border:1px dashed var(--pink,#ec4899); background:rgba(236,72,153,.08); color:inherit; border-radius:10px; padding:9px 12px; font-size:13px; font-weight:700; cursor:pointer; text-align:left;}
+.kk-ov{position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.65); display:flex; align-items:flex-end; justify-content:center;}
+.kk-box{background:var(--bg-card,#1b1d2b); color:inherit; width:min(720px,100%); max-height:88vh; overflow:auto; border-radius:18px 18px 0 0; padding:16px 14px 24px; text-align:left;}
+.kk-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;}
+.kk-top b{font-size:16px;}
+.kk-x{border:0; background:transparent; color:inherit; font-size:20px; cursor:pointer;}
+.kk-tabs{display:flex; gap:6px; flex-wrap:wrap; margin:6px 0 10px;}
+.kk-tabs button{border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:inherit; border-radius:999px; padding:5px 11px; font-size:12px; font-weight:700; cursor:pointer;}
+.kk-tabs button.on{background:var(--pink,#ec4899); border-color:var(--pink,#ec4899); color:#fff;}
+.kk-fn{font-size:13px; line-height:1.55; opacity:.9; margin-bottom:8px;}
+.kk-g{margin:10px 0 4px; font-size:12px; font-weight:800; color:var(--gold,#fbbf24);}
+.kk-rule{font-size:13px; background:rgba(255,255,255,.05); border-left:3px solid var(--pink,#ec4899); border-radius:8px; padding:6px 9px; margin-bottom:6px;}
+.kk-t{width:100%; border-collapse:collapse; font-size:14px; font-family:var(--font-jp,inherit);}
+.kk-t th{font-size:11px; opacity:.6; text-align:left; padding:4px 6px;}
+.kk-t td{padding:5px 6px; border-top:1px solid rgba(255,255,255,.08);}
+.kk-t td:nth-child(2){font-weight:800; color:var(--gold,#fbbf24);}
+.kk-t td:nth-child(3){font-size:11px; opacity:.65;}
+.kk-note{font-size:12px; line-height:1.55; opacity:.85; margin:3px 0;}
 .exam-area ruby rt{transition:opacity .2s;}
 .exam-area.no-furigana ruby rt{opacity:0; visibility:hidden;}
 .flash-card .front ruby rt,.haf-r ruby rt{display:none; font-size:.45em; font-weight:600; color:var(--pink-light,#f9a8c9);} body.haf-furi-on .flash-card .front ruby rt,body.haf-furi-on .haf-r ruby rt{display:revert;}
@@ -3141,15 +3167,20 @@ window.showMateri = async (tipe, idx, vno) => {
           <div class="jp">${_rb(c.jp)} <button class="say-mini" title="Dengarkan contoh" data-say="${SV.escAttr(c.jp)}" data-role="bunpou-contoh" onclick="SV.btn(this)">🔊</button></div>
           <div class="id" style="text-align:left; align-self:stretch;">${c.id || ""}</div>
         </div>`).join("");
+    const _kk = (Array.isArray(it.kk) ? it.kk : []).filter(Boolean);
+    const _kkBtn = _kk.length ? `<button class="kk-open" onclick="openKK('${_kk.join(",")}')">📋 Perubahan Kata Kerja (${_kk.length}) — ketuk untuk lihat tabel</button>` : "";
+    const _bn = data.length;
+    const _nav = `<div class="bp-nav"><button onclick="bpNav(-1)" ${idx <= 0 ? "disabled" : ""}>‹ Sebelum</button><span class="bp-cnt">${idx + 1} / ${_bn}</span><button onclick="bpNav(1)" ${idx >= _bn - 1 ? "disabled" : ""}>Lanjut ›</button></div>`;
     body = `
-      <div class="kanji-detail">
+      <div class="kanji-detail bp-card" data-bp="1">
+        ${_nav}
         <div class="no-pill">${no} · ${state.level.toUpperCase()}</div>
         <div class="big-k" style="font-size:${pola.length > 12 ? 34 : 60}px;">${pola}</div>
         ${kana && kana !== pola ? `<div class="readings"><div class="r">${kana}</div></div>` : ""}
         ${baru ? `
         <div class="bp-sec"><div class="bp-h">Arti</div><div class="bp-b"><b>${it.arti || ""}</b></div></div>
         <div class="bp-sec"><div class="bp-h">Penjelasan</div><div class="bp-b">${penjelasan}</div></div>
-        <div class="bp-sec"><div class="bp-h">Rumus Bunpou</div><ul class="bp-rumus">${rumus.map(r => `<li>${r}</li>`).join("")}</ul></div>
+        <div class="bp-sec"><div class="bp-h">Rumus Bunpou</div><ul class="bp-rumus">${rumus.map(r => `<li>${r}</li>`).join("")}</ul>${_kkBtn}</div>
         <div class="bp-sec"><div class="bp-h">Contoh</div>${contohHtml}</div>` : `
         <div style="font-size:14px; margin:12px 0; line-height:1.6; text-align:left; background:rgba(255,255,255,.04); padding:14px; border-radius:10px; white-space:pre-wrap;">${penjelasan}</div>
         ${contohHtml}`}
@@ -3157,6 +3188,7 @@ window.showMateri = async (tipe, idx, vno) => {
           <button class="btn gold" onclick='rangkumCepat({jp:"${(pola||"").replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Masukkan pola ke rangkuman</button>
           <button class="btn ghost" onclick="route('rangkuman')">📒 Buka rangkuman</button>
         </div>
+        <div class="bp-hint">⟵ geser kiri / kanan untuk pindah pola ⟶</div>
         ${_commentsPlaceholder("bunpou", state.level, itemNo(it, idx))}
       </div>
     `;
@@ -3172,6 +3204,73 @@ window.showMateri = async (tipe, idx, vno) => {
   `;
   window.scrollTo(0, 0);
 };
+/* ===== Bunpou: geser kiri/kanan (flashcard) + tabel Perubahan Kata Kerja ===== */
+window.bpNav = (dir) => {
+  const d = window._materiDetail;
+  if (!d || d.tipe !== "bunpou") return;
+  const list = state.materi.bunpou[state.level] || [];
+  const n = d.idx + dir;
+  if (n < 0 || n >= list.length) return;
+  window._bpDir = dir;
+  showMateri("bunpou", n).then(() => {
+    const c = document.querySelector(".bp-card");
+    if (c) c.classList.add(dir > 0 ? "bp-slide-l" : "bp-slide-r");
+  });
+};
+(function(){
+  let x0 = null, y0 = 0, t0 = 0;
+  const inCard = (e) => e.target && e.target.closest && e.target.closest(".bp-card") && !e.target.closest(".kk-ov");
+  document.addEventListener("touchstart", (e) => {
+    if (!inCard(e) || e.touches.length !== 1) { x0 = null; return; }
+    x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; t0 = Date.now();
+  }, { passive:true });
+  document.addEventListener("touchend", (e) => {
+    if (x0 === null) return;
+    const t = e.changedTouches[0]; const dx = t.clientX - x0, dy = t.clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5 && Date.now() - t0 < 700) window.bpNav(dx < 0 ? 1 : -1);
+  }, { passive:true });
+  document.addEventListener("keydown", (e) => {
+    if (!document.querySelector(".bp-card") || document.querySelector(".kk-ov")) return;
+    if (/INPUT|TEXTAREA|SELECT/.test((e.target && e.target.tagName) || "")) return;
+    if (e.key === "ArrowRight") window.bpNav(1);
+    else if (e.key === "ArrowLeft") window.bpNav(-1);
+  });
+})();
+let _kkData = null;
+async function _kkLoad(){
+  if (_kkData) return _kkData;
+  const r = await fetch("./data/kk-forms.json"); _kkData = await r.json(); return _kkData;
+}
+function _kkRender(D, key){
+  const f = D.forms[key]; if (!f) return "";
+  const groups = f.groups.map(g => `
+    <div class="kk-g">${g.label}</div>
+    <div class="kk-rule">${g.aturan}</div>
+    <table class="kk-t"><thead><tr>${f.cols.map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>
+    ${g.rows.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("")}
+    </tbody></table>`).join("");
+  return `<div class="kk-fn"><b>${f.jp}</b> — ${f.nama}<br>${f.fungsi}</div>${groups}
+    ${f.catatan.map(c => `<div class="kk-note">• ${c}</div>`).join("")}`;
+}
+window.openKK = async (keys) => {
+  let D; try { D = await _kkLoad(); } catch (e) { alert("Tabel belum bisa dimuat. Cek koneksi."); return; }
+  const ks = String(keys).split(",").filter(k => D.forms[k]);
+  if (!ks.length) return;
+  document.querySelector(".kk-ov")?.remove();
+  const ov = document.createElement("div"); ov.className = "kk-ov";
+  const draw = (cur) => {
+    ov.innerHTML = `<div class="kk-box"><div class="kk-top"><b>📋 Perubahan Kata Kerja</b><button class="kk-x" aria-label="Tutup">✕</button></div>
+      <div class="kk-tabs">${ks.map(k => `<button data-k="${k}" class="${k === cur ? "on" : ""}">${D.forms[k].jp}</button>`).join("")}
+      <button data-k="*" class="${cur === "*" ? "on" : ""}">Semua bentuk</button></div>
+      <div class="kk-body">${cur === "*" ? D.order.map(k => `<div style="margin-bottom:18px">${_kkRender(D, k)}</div>`).join("") : _kkRender(D, cur)}</div></div>`;
+    ov.querySelector(".kk-x").onclick = () => ov.remove();
+    ov.querySelectorAll(".kk-tabs button").forEach(b => b.onclick = () => draw(b.dataset.k));
+  };
+  ov.addEventListener("click", (e) => { if (e.target === ov) ov.remove(); });
+  draw(ks[0]); document.body.appendChild(ov);
+};
+
 /* ========== CHARACTER JOURNEY / COMPANION / JURUS (Part 4 + 24 + 25) ========== */
 // Per-JLPT character descriptor. Signature weapons come from the master prompt:
 //   N5 school student → Nihongo Book
