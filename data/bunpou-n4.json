@@ -556,11 +556,17 @@
   "arti": "... sebanyak itu! (bahkan)",
   "penjelasan": "Jumlah + も: menekankan jumlah yang banyak dari yang diharapkan.",
   "rumus": [
-   "Jumlah + も",
+   "KB (jumlah) + も + KK",
+   "KK bentuk biasa + のに + 三時間も ... (jumlah + も)",
    "例: 三時間も 待った"
   ],
   "contoh": "１０ 万[まん]円[えん]も 払[はら]わなくてはいけない。",
-  "arti_contoh": "Saya harus membayar sampai 100.000 yen."
+  "arti_contoh": "Saya harus membayar sampai 100.000 yen.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "かな",
@@ -955,7 +961,7 @@
   "arti": "... kali per ... (frekuensi)",
   "penjelasan": "に: 'per', menunjukkan frekuensi.",
   "rumus": [
-   "Jangka waktu + に + Jumlah kali",
+   "KB (jangka waktu) + に + KB (jumlah kali)",
    "例: 一週間に 三回"
   ],
   "contoh": "一 年[ねん]に三 回[かい]ぐらい 海外[かいがい]旅行[りょこう]に 行[い]く。",
@@ -1200,11 +1206,17 @@
   "arti": "Saya dengar bahwa ...",
   "penjelasan": "と聞いた: mengutip kabar yang didengar.",
   "rumus": [
-   "Klausa bentuk biasa + と + 聞いた",
+   "KK / KSい bentuk biasa + と + 聞いた",
+   "KB / KSな + だ + と + 聞いた",
    "Mirip: そうだ (kabar)"
   ],
   "contoh": "明日[あした]はテストがあると 聞[き]いた。",
-  "arti_contoh": "Saya mendengar bahwa besok ada ujian."
+  "arti_contoh": "Saya mendengar bahwa besok ada ujian.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "ようにする",
@@ -1621,10 +1633,16 @@
   "arti": "Dikatakan bahwa ...",
   "penjelasan": "と言われている: katanya (umum).",
   "rumus": [
-   "Klausa bentuk biasa + と言われている"
+   "KK / KSい bentuk biasa + と言われている",
+   "KB / KSな + だ + と言われている"
   ],
   "contoh": "この 町[まち]はたくさん 有名[ゆうめい]な 食[た]べ 物[もの]があると 言[い]われている。",
-  "arti_contoh": "Dikatakan bahwa kota ini memiliki banyak makanan terkenal."
+  "arti_contoh": "Dikatakan bahwa kota ini memiliki banyak makanan terkenal.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "ということ",
@@ -1633,10 +1651,16 @@
   "arti": "Hal bahwa ...",
   "penjelasan": "ということ: isi atau hal.",
   "rumus": [
-   "Klausa bentuk biasa + ということ"
+   "KK / KSい bentuk biasa + ということ",
+   "KB / KSな + だ + ということ"
   ],
   "contoh": "この 店[みせ]は 美味[おい]しいということをよく 聞[き]きます。",
-  "arti_contoh": "Saya sering mendengar bahwa toko ini enak."
+  "arti_contoh": "Saya sering mendengar bahwa toko ini enak.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "それでも",
@@ -1645,6 +1669,7 @@
   "arti": "Meskipun begitu ...",
   "penjelasan": "それでも: kontras 'walaupun begitu'.",
   "rumus": [
+   "それでも + KK / KS",
    "Kalimat 1。 + それでも + kalimat 2"
   ],
   "contoh": "このコーヒーは 甘[あま]いですが、それでも 砂糖[さとう]を 加[くわ]える。",
@@ -1719,12 +1744,15 @@
   "arti": "Ada / pergi / datang (hormat)",
   "penjelasan": "いらっしゃる adalah kata kerja hormat khusus pengganti いる, 行く, dan 来る untuk orang yang ditinggikan.",
   "rumus": [
-   "いる / 行く / 来る → いらっしゃる",
-   "いらっしゃいます (sopan) / いらっしゃって (bentuk て)",
-   "Salam: いらっしゃいませ"
+   "KK いる / 行く / 来る → いらっしゃる",
+   "KB (orang) + が + いらっしゃる",
+   "いらっしゃいます (sopan) / いらっしゃって (bentuk て)"
   ],
   "contoh": "分[わ]からない 人[ひと]はいらっしゃいますか。",
-  "arti_contoh": "Apakah ada orang yang tidak paham?"
+  "arti_contoh": "Apakah ada orang yang tidak paham?",
+  "kk": [
+   "te"
+  ]
  },
  {
   "pola": "いたす",
@@ -1874,7 +1902,7 @@
   "arti": "Tetapi; namun (sopan)",
   "penjelasan": "だが adalah kata sambung 'tetapi' dalam bentuk biasa/tulisan. Bentuk sopannya ですが.",
   "rumus": [
-   "Kalimat 1。 + だが / ですが / しかし + kalimat 2",
+   "Kalimat 1。 + だが / ですが + kalimat 2 (KK / KS / KB)",
    "Biasa: だが / sopan: ですが"
   ],
   "contoh": "大統領[だいとうりょう]が 言[い]いました。ですが、 私[わたし]は 信[しん]じません。",
@@ -2116,8 +2144,8 @@
   "arti": "Akhiran jamak: ~ (mereka)",
   "penjelasan": "ら ditambahkan pada kata ganti orang untuk membuat bentuk jamak: 彼ら, 彼女ら, 私ら.",
   "rumus": [
-   "彼 / 彼女 / 私 / 君 + ら",
-   "Lebih umum: たち (私たち, あなたたち)"
+   "KB (彼 / 彼女 / 私 / 君) + ら",
+   "Lebih umum: KB + たち (私たち, あなたたち)"
   ],
   "contoh": "彼[かれ]らは 十分[じゅうぶん]に 勉強[べんきょう]をしたから、 試験[しけん]が 簡単[かんたん]だった。",
   "arti_contoh": "Mereka sudah belajar dengan cukup, jadi ujian itu mudah."
@@ -2178,9 +2206,8 @@
   "arti": "Selain itu; tambahan lagi",
   "penjelasan": "それに menambah informasi yang sejenis (alasan, sifat, keadaan) setelah kalimat sebelumnya.",
   "rumus": [
-   "Kalimat 1。 + それに + kalimat 2",
-   "Kalimat 1、 + それに + kalimat 2 (lisan)",
-   "Mirip: そのうえ / おまけに"
+   "Kalimat 1。 + それに + KK / KS / KB",
+   "Lisan: Kalimat 1、 + それに + kalimat 2"
   ],
   "contoh": "運動[うんどう]は 楽[たの]しいです。それに 体[からだ]にいいです。",
   "arti_contoh": "Olahraga itu menyenangkan. Selain itu, baik untuk tubuh."
@@ -2296,8 +2323,8 @@
   "arti": "Beberapa ... (なん + pencacah + か)",
   "penjelasan": "何 + pencacah + か menyatakan jumlah yang tidak pasti tapi beberapa.",
   "rumus": [
-   "何 + pencacah + か (何人か, 何回か, 何冊か)",
-   "何 + pencacah + も (sebanyak itu)"
+   "何 + pencacah (KB) + か (何人か, 何回か, 何冊か)",
+   "何 + pencacah (KB) + も (sebanyak itu)"
   ],
   "contoh": "選手[せんしゅ]の 何[なん]人[にん]かが 負傷[ふしょう]したことに 気[き]が 付[つ]いた。",
   "arti_contoh": "Saya menyadari bahwa beberapa pemain telah cedera."
@@ -2374,7 +2401,7 @@
   "arti": "Karena itu ...",
   "penjelasan": "それで: akibat atau hasil dari hal yang baru disebut.",
   "rumus": [
-   "Kalimat 1。 + それで + kalimat 2 (hasil)",
+   "Kalimat 1。 + それで + KK / KS / KB (hasil)",
    "Tanya: それで? (lalu bagaimana?)"
   ],
   "contoh": "この 辺[あた]りには 多[おお]くの 桜[さくら]が 植[う]わっている。それで 外国[がいこく]人[じん]が 花見[はなみ]に 来[く]る 人気[にんき]の 観光[かんこう]スポットになった。",
@@ -2515,8 +2542,8 @@
   "arti": "Dekade ...; usia ...",
   "penjelasan": "〜代: dekade (1980年代) atau kelompok usia (20代).",
   "rumus": [
-   "Angka + 年代",
-   "Angka + 代 (usia)",
+   "KB (angka) + 年代",
+   "KB (angka) + 代 (usia)",
    "例: 1980年代 / 30代"
   ],
   "contoh": "街頭[がいとう]インタビュー、 通行人[つうこうにん]：「1980 年代[ねんだい]ころからここに 住[す]んでいます。」",

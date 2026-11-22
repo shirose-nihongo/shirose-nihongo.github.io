@@ -100,12 +100,17 @@
   "arti": "Partikel tanya: ...kah?",
   "penjelasan": "か di akhir kalimat mengubah pernyataan menjadi pertanyaan.",
   "rumus": [
-   "Kalimat sopan + か",
-   "例: ですか / ますか",
-   "Pertanyaan biasa: kalimat biasa + か? (naik nada)"
+   "KK / KSい bentuk sopan + か",
+   "KB / KSな (batang) + ですか",
+   "Biasa: KK / KS bentuk biasa + か (nada naik)"
   ],
   "contoh": "これは 本[ほん]ですか。",
-  "arti_contoh": "Apakah ini buku?"
+  "arti_contoh": "Apakah ini buku?",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "でしょう",
@@ -277,8 +282,8 @@
   "arti": "Di sana (dekat lawan bicara)",
   "penjelasan": "そこ menunjuk tempat yang dekat lawan bicara.",
   "rumus": [
-   "そこ + です",
-   "そこ + に + いる / ある"
+   "そこ + KB + です",
+   "そこ + に + KB + が + ある / いる"
   ],
   "contoh": "そこ。",
   "arti_contoh": "Di sana."
@@ -398,8 +403,8 @@
   "arti": "Di sana (jauh dari keduanya)",
   "penjelasan": "あそこ menunjuk tempat yang jauh dari pembicara dan lawan bicara.",
   "rumus": [
-   "あそこ + です",
-   "あそこ + に + いる / ある"
+   "あそこ + KB + です",
+   "あそこ + に + KB + が + ある / いる"
   ],
   "contoh": "あそこがいい。",
   "arti_contoh": "Di sana bagus."
@@ -411,8 +416,8 @@
   "arti": "Pergi ke ... (行く)",
   "penjelasan": "へ / に menandai tujuan; 行く pergi.",
   "rumus": [
-   "Tempat + へ / に + 行く",
-   "Tempat + へ + 行きます"
+   "KB (tempat) + へ / に + 行く",
+   "KB (tempat) + へ + KK 行きます"
   ],
   "contoh": "学校[がっこう]へ 行[い]く。",
   "arti_contoh": "Pergi ke sekolah."
@@ -497,7 +502,7 @@
   "arti": "Partikel へ (arah / tujuan)",
   "penjelasan": "へ (dibaca e) menandai arah atau tujuan perjalanan.",
   "rumus": [
-   "Tempat + へ + 行く / 来る / 帰る"
+   "KB (tempat) + へ + 行く / 来る / 帰る"
   ],
   "contoh": "大阪[おおさか]へようこそ。",
   "arti_contoh": "Selamat datang di Osaka."
@@ -509,7 +514,7 @@
   "arti": "Datang (来る)",
   "penjelasan": "来る 'datang'. KK3 tak beraturan: 来る → 来ます / 来て / 来た / 来ない (こない).",
   "rumus": [
-   "Tempat + に / へ + 来る",
+   "KB (tempat) + に / へ + 来る",
    "来る → 来ます (きます) / 来て (きて) / 来ない (こない)"
   ],
   "contoh": "トムはここに 来[く]る。",
@@ -584,7 +589,8 @@
   "arti": "Tetapi; meskipun (が)",
   "penjelasan": "が di akhir klausa menyatakan kontras: 'tetapi'.",
   "rumus": [
-   "Kalimat sopan + が、+ kalimat",
+   "KK / KSい bentuk sopan + が、+ kalimat",
+   "KB / KSな + ですが、+ kalimat",
    "例: 難しいですが、頑張ります"
   ],
   "contoh": "難[むずか]しいですが、 頑張[がんば]ります。",
@@ -1001,7 +1007,8 @@
   "arti": "Ya? / ..., ya (meminta persetujuan)",
   "penjelasan": "ね di akhir kalimat meminta persetujuan atau menekankan perasaan.",
   "rumus": [
-   "Kalimat + ね"
+   "KK / KS / KB bentuk sopan + ね",
+   "KB / KSな (batang) + ですね"
   ],
   "contoh": "いいですね。",
   "arti_contoh": "Bagus, ya."
@@ -1106,7 +1113,8 @@
   "arti": "Partikel akhir よ: menegaskan / memberi tahu",
   "penjelasan": "よ dipakai untuk memberi tahu hal baru kepada lawan bicara.",
   "rumus": [
-   "Kalimat + よ"
+   "KK / KS / KB bentuk sopan + よ",
+   "KB / KSな (batang) + ですよ"
   ],
   "contoh": "トムはあそこにいたよ。",
   "arti_contoh": "Tom tadi ada di sana, lho."
@@ -1273,10 +1281,16 @@
   "arti": "Kutipan lisan: って (= と)",
   "penjelasan": "って adalah bentuk lisan dari と untuk mengutip.",
   "rumus": [
-   "Kutipan + って + 言う / 思う"
+   "KK / KS bentuk biasa + って + 言う / 思う",
+   "KB / KSな + だって + 言う"
   ],
   "contoh": "彼[かれ]は「 彼女[かのじょ]が 綺麗[きれい]になった」って 言[い]った。",
-  "arti_contoh": "Dia bilang, 'Dia sudah jadi cantik.'"
+  "arti_contoh": "Dia bilang, 'Dia sudah jadi cantik.'",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "けっこう",
@@ -1349,8 +1363,8 @@
   "arti": "Yang mana (dari 3+)",
   "penjelasan": "どれ menanyakan 'yang mana' dari tiga hal atau lebih.",
   "rumus": [
-   "どれ + が / を + ...",
-   "どれ + ですか"
+   "どれ + が / を + KK / KS",
+   "どれ + KB + ですか"
   ],
   "contoh": "どれがいいですか",
   "arti_contoh": "Yang mana yang baik?"
@@ -1374,8 +1388,8 @@
   "arti": "Siapa",
   "penjelasan": "だれ menanyakan orang. Sopan: どなた.",
   "rumus": [
-   "だれ + ですか",
-   "だれ + が / と / に + ..."
+   "だれ + KB + ですか",
+   "だれ + が / と / に + KK"
   ],
   "contoh": "誰[だれ]ですか。",
   "arti_contoh": "Siapa?"

@@ -105,7 +105,7 @@
   "arti": "Sebaliknya; justru",
   "penjelasan": "逆に: hasilnya berlawanan dengan dugaan.",
   "rumus": [
-   "逆に + klausa",
+   "逆に + KK / KS / KB",
    "Mirip: かえって / むしろ"
   ],
   "contoh": "あの 話[はなし]は 事実[じじつ]らしいが、 逆[ぎゃく]に 信[しん]じにくい。",
@@ -238,7 +238,7 @@
   "arti": "Lagi pula; terlebih lagi",
   "penjelasan": "しかも: menambah informasi yang sejenis atau lebih kuat.",
   "rumus": [
-   "Klausa 1。 + しかも + klausa 2"
+   "Kalimat 1。 + しかも + KK / KS / KB"
   ],
   "contoh": "私[わたし]の 鼻[はな]はとても 大[おお]きく、しかも 曲[ま]がっている。",
   "arti_contoh": "Hidung saya sangat besar, dan selain itu bengkok."
@@ -250,7 +250,7 @@
   "arti": "Ngomong-ngomong",
   "penjelasan": "そういえば: teringat sesuatu terkait hal yang baru dibicarakan.",
   "rumus": [
-   "そういえば + kalimat"
+   "そういえば + KK / KS / KB"
   ],
   "contoh": "そういえば、 昨夜[さくや]は 何[なん]時[じ]に 家[いえ]に 帰[かえ]ったの？",
   "arti_contoh": "Ngomong-ngomong, jam berapa kamu pulang ke rumah semalam?"
@@ -463,10 +463,16 @@
   "arti": "Berarti bahwa ...",
   "penjelasan": "ということは: berarti, artinya.",
   "rumus": [
-   "Klausa bentuk biasa + ということは + ...ということだ"
+   "KK / KSい bentuk biasa + ということは",
+   "KB / KSな + だ + ということは + ...ということだ"
   ],
   "contoh": "彼[かれ]が一 人[にん]で 旅[たび]に 行[い]くということは、 大人[おとな]になったということだ。",
-  "arti_contoh": "Bahwa dia pergi berlibur sendirian, itu berarti bahwa dia telah menjadi dewasa."
+  "arti_contoh": "Bahwa dia pergi berlibur sendirian, itu berarti bahwa dia telah menjadi dewasa.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "ものだから",
@@ -536,7 +542,7 @@
   "arti": "Meski begitu ...",
   "penjelasan": "それにしても: walaupun demikian.",
   "rumus": [
-   "それにしても + kalimat"
+   "それにしても + KK / KS / KB"
   ],
   "contoh": "彼[かれ]らは 問題[もんだい]の 解決[かいけつ]に 手[て]を 貸[か]しているが、それにしてもそれは 難問[なんもん]です。",
   "arti_contoh": "Mereka sedang membantu menyelesaikan masalah, tetapi meskipun begitu, itu adalah masalah yang sulit."
@@ -548,7 +554,7 @@
   "arti": "Memang ...; tentu",
   "penjelasan": "確かに: mengakui, 'memang benar'.",
   "rumus": [
-   "確かに + klausa (+ しかし ...)"
+   "確かに + KK / KS / KB (+ しかし ...)"
   ],
   "contoh": "確[たし]かに 彼[かれ]は 信頼[しんらい]できます。",
   "arti_contoh": "Tentu saja, dia dapat dipercaya."
@@ -705,10 +711,16 @@
   "arti": "Tidak berarti ...",
   "penjelasan": "ことにはならない: tidak sampai pada kesimpulan itu.",
   "rumus": [
-   "Klausa bentuk biasa + ことにはならない"
+   "KK / KSい bentuk biasa + ことにはならない",
+   "KB / KSな + である + ことにはならない"
   ],
   "contoh": "母親[ははおや]が 美[うつく]しいと 言[い]われても、 必[かなら]ずその 娘[むすめ]が 成長[せいちょう]して 美人[びじん]になるということにはならない。",
-  "arti_contoh": "Meskipun ibu dikatakan cantik, itu bukan berarti bahwa putrinya pasti akan tumbuh menjadi seorang wanita cantik."
+  "arti_contoh": "Meskipun ibu dikatakan cantik, itu bukan berarti bahwa putrinya pasti akan tumbuh menjadi seorang wanita cantik.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "ないわけにはいかない",
@@ -732,10 +744,16 @@
   "arti": "Bukankah ...? (dugaan)",
   "penjelasan": "ではないだろうか: dugaan lembut.",
   "rumus": [
-   "Klausa bentuk biasa + ではないだろうか"
+   "KK / KSい bentuk biasa + ではないだろうか",
+   "KB / KSな + ではないだろうか"
   ],
   "contoh": "彼[かれ]はもしかして、あきれているのではないだろうか。",
-  "arti_contoh": "Dia mungkin, tidak aneh jika dia merasa terkejut."
+  "arti_contoh": "Dia mungkin, tidak aneh jika dia merasa terkejut.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "ものがある",
@@ -761,7 +779,7 @@
   "arti": "Bagaimanapun juga",
   "penjelasan": "何といっても: yang paling penting.",
   "rumus": [
-   "何といっても + klausa"
+   "何といっても + KK / KS / KB"
   ],
   "contoh": "別府[べっぷ]は 空気[くうき]や 雰囲気[ふんいき]がいい。 何[なに]といってもいろんな 温泉[おんせん]が 楽[たの]しめることだ。",
   "arti_contoh": "Beppu memiliki udara dan suasana yang baik. Yang terpenting, Anda bisa menikmati berbagai onsen."
@@ -785,7 +803,7 @@
   "arti": "Namun demikian ...",
   "penjelasan": "それなのに: hasil berlawanan dari harapan.",
   "rumus": [
-   "Kalimat 1。+ それなのに + kalimat 2"
+   "Kalimat 1。 + それなのに + KK / KS / KB"
   ],
   "contoh": "私[わたし]は 努力[どりょく]していると 思[おも]う。それなのにうまくいかないの？",
   "arti_contoh": "Saya pikir saya sedang berusaha. Meskipun begitu, kenapa tidak berhasil?"
@@ -889,7 +907,7 @@
   "arti": "Selain itu; tambahan lagi",
   "penjelasan": "その上: menambah hal yang lebih berat.",
   "rumus": [
-   "Kalimat 1。+ その上 + kalimat 2"
+   "Kalimat 1。 + その上 + KK / KS / KB"
   ],
   "contoh": "昨日[きのう]は 夜[よる]遅[おそ]くまで 編[あ]み 物[もの]をしてしまった。その 上[うえ]、 朝[あさ]早[はや]くから 電話[でんわ]で 起[お]こされたのでとても 眠[ねむ]いです。",
   "arti_contoh": "Kemarin saya sampai larut malam mengerjakan kerajinan rajutan. Selain itu, saya terbangun pagi-pagi karena telepon, jadi saya sangat mengantuk."
@@ -1093,7 +1111,7 @@
   "arti": "Kalau begitu ...",
   "penjelasan": "それなら: menanggapi lawan bicara.",
   "rumus": [
-   "それなら + kalimat"
+   "それなら + KK / KS / KB"
   ],
   "contoh": "田中[たなか]:「 彼女[かのじょ]はとても 優秀[ゆうしゅう]な 秘書[ひしょ]です。」 山田[やまだ]:「それなら、この 仕事[しごと]は 彼女[かのじょ]に 任[まか]せましょう。」",
   "arti_contoh": "\"Tanaka: \"\"Dia adalah sekretaris yang sangat hebat.\"\" Yamada: \"\"Kalau begitu, mari kita percayakan pekerjaan ini kepadanya.\"\"\""
@@ -1150,7 +1168,7 @@
   "arti": "Memang ...; ternyata ...",
   "penjelasan": "さすが: sesuai reputasi, kagum.",
   "rumus": [
-   "さすが + (に) + ..."
+   "さすが + (に) + KK / KS / KB"
   ],
   "contoh": "さすがに 食[く]いすぎたな。 椅子[いす]から 立[た]てない。",
   "arti_contoh": "Ternyata aku makan terlalu banyak. Aku tidak bisa berdiri dari kursi."
@@ -1291,7 +1309,7 @@
   "arti": "Atau ... (pilihan)",
   "penjelasan": "それとも: atau (pertanyaan).",
   "rumus": [
-   "A? それとも B?"
+   "KB / KK + ですか? それとも + KB / KK + ですか"
   ],
   "contoh": "今夜[こんや]はカラオケに 行[い]く？それとも 映画[えいが]館[かん]？",
   "arti_contoh": "Malam ini mau pergi karaoke? Atau ke bioskop?"
@@ -1334,10 +1352,16 @@
   "arti": "Tidak berarti ... begitu saja",
   "penjelasan": "というものでもない: tidak selalu.",
   "rumus": [
-   "Klausa bentuk biasa + というものでもない"
+   "KK / KSい bentuk biasa + というものでもない",
+   "KB / KSな + (だ) + というものでもない"
   ],
   "contoh": "愛[あい]があれば 結婚[けっこん]できるというものではない。",
-  "arti_contoh": "Tidak berarti bahwa jika ada cinta, maka bisa menikah."
+  "arti_contoh": "Tidak berarti bahwa jika ada cinta, maka bisa menikah.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "～ところに/～ところへ",
@@ -1377,7 +1401,7 @@
   "arti": "Singkatnya ...",
   "penjelasan": "要するに: ringkasnya.",
   "rumus": [
-   "要するに + klausa"
+   "要するに + KK / KS / KB"
   ],
   "contoh": "行員[こういん]： 要[よう]するにお 金[かね]が 足[た]りない 場合[ばあい]デビットカードを 使[つか]えないということです。",
   "arti_contoh": "Petugas bank: Singkatnya, jika uang tidak cukup, maka Anda tidak dapat menggunakan kartu debit."
@@ -1389,7 +1413,7 @@
   "arti": "Kalau-kalau; andai terjadi",
   "penjelasan": "万が一: kemungkinan sangat kecil.",
   "rumus": [
-   "万が一 + (の場合) ..."
+   "万が一 + KK / KB + の場合 ..."
   ],
   "contoh": "万[まん]が 一[いち]のことがあったら、おばあちゃんの 家[いえ]に 子[こ]どもを 預[あづ]けることになっている。",
   "arti_contoh": "Jika terjadi hal yang tidak diinginkan, saya akan menitipkan anak saya di rumah nenek."
@@ -1443,10 +1467,16 @@
   "arti": "Sepertinya ...",
   "penjelasan": "どうやら: tampaknya.",
   "rumus": [
-   "どうやら + 〜ようだ / らしい"
+   "どうやら + KK / KSい bentuk biasa + ようだ / らしい",
+   "どうやら + KB + らしい"
   ],
   "contoh": "どうやら、 俺[おれ]は 電気[でんき]をつけっぱなしにしたらしい。すみません。",
-  "arti_contoh": "Sepertinya, saya telah meninggalkan lampu menyala. Maaf."
+  "arti_contoh": "Sepertinya, saya telah meninggalkan lampu menyala. Maaf.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "に気をつける",
@@ -1966,7 +1996,7 @@
   "arti": "Oleh karena itu; maka",
   "penjelasan": "したがって: kesimpulan logis (tulisan formal).",
   "rumus": [
-   "Kalimat 1。 + したがって + kalimat 2",
+   "Kalimat 1。 + したがって + KK / KS / KB",
    "Mirip: だから / そのため"
   ],
   "contoh": "銅[どう]には 多[おお]くの 用途[ようと]があるにもかかわらず 生産[せいさん]量[りょう]がかなり 少[すく]ない 金属[きんぞく]である。したがってトン 当[あ]たりの 価格[かかく]が 非常[ひじょう]に 高[たか]い。",
@@ -2169,7 +2199,7 @@
   "arti": "Catatan: selain itu",
   "penjelasan": "なお②: menambahkan keterangan tambahan di akhir pengumuman.",
   "rumus": [
-   "なお、 + keterangan",
+   "なお、 + KK / KS / KB (keterangan)",
    "Mirip: ちなみに"
   ],
   "contoh": "２０２X  年[とし]７月[しちがつ]２４ 日[にち]にマンション 周辺[しゅうへん]の 草取[くさと]りを 行[おこな]います。なお、 同時[どうじ]に、 住人[じゅうにん]の 子供[こども]向[む]きのイベントも 行[おこな]います。",
@@ -2274,10 +2304,16 @@
   "arti": "Maklum; bagaimanapun ...",
   "penjelasan": "何しろ: alasan kuat.",
   "rumus": [
-   "何しろ + alasan + (から / ので)"
+   "何しろ + KK / KS bentuk biasa + から / ので",
+   "何しろ + KB + だから"
   ],
   "contoh": "文法[ぶんぽう]ちゃん：どうしてそんなに 悲[かな]しそうにしてるの？メガネくん： 悲[かな]しいのも 当然[とうぜん]だろ。 何[なに]しろガールフレンドにフラれたんだから。",
-  "arti_contoh": "Bunpo-chan: Kenapa kamu terlihat begitu sedih? Megane-kun: Sedih itu wajar. Lagipula, aku baru saja ditinggal pacar."
+  "arti_contoh": "Bunpo-chan: Kenapa kamu terlihat begitu sedih? Megane-kun: Sedih itu wajar. Lagipula, aku baru saja ditinggal pacar.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "たって",
@@ -2516,10 +2552,16 @@
   "arti": "Mungkin ...",
   "penjelasan": "おそらく: dugaan kuat.",
   "rumus": [
-   "おそらく + 〜だろう / でしょう"
+   "おそらく + KK / KSい bentuk biasa + だろう",
+   "おそらく + KB / KSな + でしょう"
   ],
   "contoh": "おそらく 彼[かれ]はここにいないだろう。",
-  "arti_contoh": "Dia mungkin tidak ada di sini."
+  "arti_contoh": "Dia mungkin tidak ada di sini.",
+  "kk": [
+   "jisho",
+   "ta",
+   "nai"
+  ]
  },
  {
   "pola": "に先立ち",
@@ -2543,7 +2585,7 @@
   "arti": "Paling banyak ...",
   "penjelasan": "せいぜい: paling tinggi; terkesan rendah.",
   "rumus": [
-   "せいぜい + jumlah"
+   "せいぜい + KB (jumlah)"
   ],
   "contoh": "証人[しょうにん]：「 加害[かがい]者[しゃ]はたぶんせいぜい３０ 歳[さい]ぐらいでしょ。」",
   "arti_contoh": "\"Saksi: \"\"Pelakunya mungkin berumur paling banyak sekitar 30 tahun, bukan?\"\"\""
@@ -2776,7 +2818,7 @@
   "arti": "Namun demikian (formal)",
   "penjelasan": "しかしながら: bentuk formal 'tetapi' dalam tulisan atau pidato.",
   "rumus": [
-   "Kalimat 1。 + しかしながら + kalimat 2",
+   "Kalimat 1。 + しかしながら + KK / KS / KB",
    "Mirip: けれども / しかし"
   ],
   "contoh": "記事[きじ]：「 親[おや]は 自分[じぶん]の 子供[こども]を 客観[きゃっかん]視[し]しにくいというのは 事実[じじつ]である。しかしながら、 必要[ひつよう]がある 場合[ばあい]は、 脇[わき]から 見[み]ることもできるのではないだろうか。」",
@@ -2990,7 +3032,7 @@
   "arti": "Selain itu; ditambah lagi",
   "penjelasan": "おまけに: menambah hal yang sejenis, sering bernuansa negatif.",
   "rumus": [
-   "Kalimat 1。 + おまけに + kalimat 2",
+   "Kalimat 1。 + おまけに + KK / KS / KB",
    "Mirip: そのうえ / しかも"
   ],
   "contoh": "家[いえ]を 掃除[そうじ]した。おまけにランチを 作[つく]っといた。",
@@ -3033,8 +3075,8 @@
   "arti": "Untungnya ...",
   "penjelasan": "幸い: keadaan beruntung sehingga terhindar dari hal yang lebih buruk.",
   "rumus": [
-   "幸い + klausa",
-   "幸いなことに + klausa"
+   "幸い + KK / KS / KB",
+   "幸いなことに + KK / KS / KB"
   ],
   "contoh": "彼[かれ]は 幸[さいわ]い、エアバッグのおかげで 怪我[けが]をせずに 済[す]んだ。",
   "arti_contoh": "Dia, beruntung, tidak mengalami cedera berkat airbags."
@@ -3135,8 +3177,8 @@
   "arti": "Hanya ...; cuma ...",
   "penjelasan": "たった(の): hanya sebanyak itu, terasa sedikit.",
   "rumus": [
-   "たった + jumlah + しか / だけ",
-   "たったの + jumlah"
+   "たった + KB (jumlah) + しか / だけ",
+   "たったの + KB (jumlah)"
   ],
   "contoh": "友達[ともだち]１：「 千[せん]円[えん]を 貸[か]してくれる？」 友達[ともだち]２：「たった５００ 円[えん]しかないよ。」",
   "arti_contoh": "\"Teman 1: \"\"Bisakah kamu meminjamkan saya seribu yen?\"\" Teman 2: \"\"Saya hanya punya lima ratus yen.\"\"\""
