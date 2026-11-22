@@ -233,6 +233,21 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .cta-pills span{font-size:13px;padding:5px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18)}
 .cta-note{margin-top:14px;font-size:13px;color:var(--gray)}
 
+.ck-voices{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.ck-voices button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:10px 12px;border-radius:14px;border:1.5px solid var(--navy-3);background:rgba(255,255,255,.04);color:#fff;cursor:pointer;font-family:inherit;transition:border-color .2s,transform .15s}
+.ck-voices button:hover{border-color:var(--pink);transform:translateY(-2px)}
+.ck-voices button.on{border-color:var(--pink);background:rgba(239,106,154,.14)}
+.ck-voices b{font-size:14px}.ck-voices small{font-size:12px;color:var(--gray-dim)}
+.dguide{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+@media(max-width:760px){.dguide{grid-template-columns:1fr}}
+.dg{margin:0;background:linear-gradient(160deg,rgba(42,50,112,.45),rgba(31,38,80,.5));border:1px solid var(--border);border-radius:18px;overflow:hidden}
+.dg img{display:block;width:100%;height:auto;background:#0d1024}
+.dg figcaption{padding:16px 18px}
+.dg figcaption>b{display:block;font-size:16px;margin-bottom:4px}
+.dg figcaption>span{font-size:14px;color:var(--gray-dim);line-height:1.55}
+.dg-n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));font-size:13px;margin-right:8px}
+.drules{list-style:none;margin:26px auto 0;max-width:720px;padding:0;display:grid;gap:10px}
+.drules li{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:14px;padding:12px 16px;font-size:14.5px;line-height:1.55}
 /* steps */
 .steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
 @media(max-width:760px){.steps{grid-template-columns:1fr}}
@@ -416,9 +431,50 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     <div class="center rv">
       <div class="eyebrow">特定技能 · 世界の学習島</div>
       <h2>Satu pulau, satu <span class="grad">bidang kerja SSW</span></h2>
-      <p class="lead">Jelajahi pulau melayang seperti di aplikasi: tiap bidang punya peta bab, buku interaktif, kosakata, flashcard, dan kuis sendiri.</p>
+      <p class="lead">Semua bidang SSW tersedia. Tiap bidang punya peta bab, buku interaktif, kosakata, flashcard, dan kuis sendiri.</p>
     </div>
     <div class="sky rv"><div class="isl-grid" id="isl-grid" aria-hidden="true"></div></div>
+  </div>
+</section>
+
+<section id="choukai">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">聴解 · Choukai</div>
+      <h2>Latihan mendengar dengan <span class="grad">suara anime yang lucu</span></h2>
+      <p class="lead">Soal choukai dibacakan karakter-karakter berbeda: ada narator, guru, ibu, bapak, siswi, siswa, sampai suara anak kecil. Dengarkan contoh soalnya, lalu pilih jawabannya.</p>
+    </div>
+    <div class="studio rv" style="grid-template-columns:1.1fr .9fr;align-items:start">
+      <div class="demo">
+        <div class="demo-h"><span class="badge">N5 · Choukai</span><span class="lbl">Dengarkan, lalu jawab ↓</span></div>
+        <div class="qz-q" id="ck-scene">教室で先生と学生が話しています。学生は明日何を持ってきますか。</div>
+        <button class="btn wa sm" id="ck-play" type="button">▶ Putar audio</button>
+        <div class="qz-opts" id="ck-opts" style="margin-top:12px"></div>
+        <div class="qz-ex" id="ck-ex"></div>
+      </div>
+      <div class="demo">
+        <div class="demo-h"><span class="badge">Suara karakter</span><span class="lbl">Ketuk untuk dengar ↓</span></div>
+        <div class="ck-voices" id="ck-voices"></div>
+        <p style="font-size:13px;color:var(--gray-dim);margin-top:12px">Tiap soal memakai karakter yang cocok dengan situasinya, jadi telingamu terbiasa dengan banyak gaya bicara.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="langganan">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <div class="eyebrow">LANGGANAN · WhatsApp</div>
+      <h2>Mau lanjut belajar setelah demo?<br><span class="grad">Berlangganan lewat WhatsApp.</span></h2>
+      <p>Chat admin Shirose Nihongo lewat WhatsApp, pilih paket yang cocok, lalu akun siswamu diaktifkan.</p>
+      <ul class="drules" style="margin-top:18px;text-align:left">
+        <li>1️⃣ Klik tombol di bawah. Pesan sudah terisi otomatis, tinggal kirim.</li>
+        <li>2️⃣ Admin membalas dengan pilihan paket dan cara pembayaran.</li>
+        <li>3️⃣ Setelah pembayaran dikonfirmasi, akun siswamu diaktifkan dan siap dipakai.</li>
+      </ul>
+      <a class="btn wa big" id="sub-wa" style="margin-top:18px" target="_blank" rel="noopener noreferrer"><span id="sub-wa-label">💬 Berlangganan via WhatsApp</span></a>
+      <div class="cta-note" id="sub-note"></div>
+    </div>
   </div>
 </section>
 
@@ -488,6 +544,28 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       <li>Kelas Demo: akun otomatis berakhir 7 hari, bisa diperpanjang guru</li>
       <li>Atur role dan hak akses pengelola</li>
     </ul>
+  </div>
+</section>
+
+<section id="klaim-demo">
+  <div class="wrap">
+    <div class="center rv"><div class="eyebrow">無料デモ · 7日間</div><h2>Klaim akun demo <span class="grad">langsung dari web</span></h2>
+      <p class="lead">Nggak perlu lewat grup WhatsApp lagi. Cukup isi nama, akun demo 7 harimu langsung jadi dan kamu otomatis masuk.</p></div>
+    <div class="dguide">
+      <figure class="dg rv"><img src="./assets/landing/demo-1-tombol.png" alt="Tombol Join Akun Demo 7 Hari di beranda" loading="lazy"/>
+        <figcaption><b><span class="dg-n">1</span>Klik “Join Akun Demo 7 Hari”</b><span>Tombol pink ada di beranda, di bawah tombol Komunitas dan Login. Kamu langsung dibawa ke halaman login.</span></figcaption></figure>
+      <figure class="dg rv"><img src="./assets/landing/demo-2-klaim.png" alt="Form Coba gratis 7 hari: isi nama lalu Klaim Akun Demo 7 Hari" loading="lazy"/>
+        <figcaption><b><span class="dg-n">2</span>Isi nama, lalu klaim</b><span>Di kotak “Coba gratis 7 hari”, ketik namamu (mis. budi) dan tekan “Klaim Akun Demo 7 Hari”. Akun dibuat otomatis dan kamu langsung masuk.</span></figcaption></figure>
+    </div>
+    <ul class="drules rv">
+      <li>⏳ <b>Berlaku 7 hari</b> sejak klaim. Setelah itu akun demo otomatis berakhir dan dihapus.</li>
+      <li>🔓 <b>Semua materi terbuka</b>: JLPT N5–N1, JFT-Basic, dan SSW.</li>
+      <li>✍️ <b>Nama minimal 2 huruf/angka</b>, tanpa spasi atau simbol. Kalau namamu sudah dipakai orang lain, tambahkan angka, mis. <i>budi2</i>.</li>
+      <li>🔑 <b>Catat akunmu</b>: email <i>namamudemo1234@gmail.com</i>, password <i>namamu1234</i>. Pakai ini untuk login lagi di hari berikutnya.</li>
+      <li>🎁 <b>Reward login harian</b> muncul setelah kamu masuk, jadi klaim hadiahnya dari dalam aplikasi.</li>
+      <li>🧑‍🏫 Mau lanjut setelah 7 hari? Hubungi guru untuk akun siswa.</li>
+    </ul>
+    <div class="center" style="margin-top:28px"><a class="btn primary" href="./index.html#login">🎁 Klaim akun demo sekarang</a></div>
   </div>
 </section>
 
@@ -579,6 +657,41 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
   var lab = $("[data-wa-label]"); if (lab && !waOk) lab.textContent = "Link grup segera dibuka";
   if (!waOk) $("#wa-note").textContent = "Link grup WhatsApp belum diisi (js/landing-config.js → whatsapp.url).";
 
+  /* ---- berlangganan via WhatsApp (landing-config.js → langganan.url) ---- */
+  (function(){
+    var sub = C.langganan || {}, a = $("#sub-wa"); if (!a) return;
+    var url = /^https:\/\/wa\.me\//i.test(sub.url || "") ? sub.url : "";
+    if (url){ a.href = url + (url.indexOf("?")<0 ? "?" : "&") + "text=" + encodeURIComponent(sub.teks || "Halo admin Shirose Nihongo, saya mau berlangganan."); }
+    else if (waOk){ a.href = wa.url; $("#sub-note").textContent = "Buka grup WhatsApp, lalu chat admin untuk berlangganan."; }
+    else { a.classList.add("off"); a.setAttribute("aria-disabled","true"); $("#sub-wa-label").textContent = "Nomor WhatsApp segera dibuka"; }
+  })();
+
+  /* ---- contoh soal choukai + suara karakter (audio asli aplikasi) ---- */
+  (function(){
+    var play = $("#ck-play"), box = $("#ck-opts"), ex = $("#ck-ex"), vb = $("#ck-voices"); if (!play) return;
+    var cur = null;
+    function stop(){ if (cur){ try{cur.pause();}catch(e){} cur = null; } document.querySelectorAll(".ck-voices button.on").forEach(function(b){b.classList.remove("on")}); play.textContent = "▶ Putar audio"; }
+    function go(src, btn){ var was = cur && cur.__src===src; stop(); if (was) return;
+      var au = new Audio(src); au.__src = src; cur = au; if (btn){ btn.classList.add("on"); } else { play.textContent = "⏸ Berhenti"; }
+      au.onended = stop; au.onerror = function(){ stop(); ex.textContent = "Audio belum bisa diputar. Coba lagi."; };
+      au.play().catch(function(){ stop(); }); }
+    play.onclick = function(){ go("./audio/choukai/n5/m1_01.mp3"); };
+    var OPTS = ["えんぴつと 消しゴムと 色えんぴつ","紙と 色えんぴつ","えんぴつと 紙","えんぴつと 消しゴムと 紙"], ANS = 0;
+    OPTS.forEach(function(t,i){
+      var b = el("button",null,t); b.type = "button";
+      b.onclick = function(){
+        box.querySelectorAll("button").forEach(function(x,k){ x.disabled = true; if (k===ANS) x.classList.add("ok"); });
+        if (i!==ANS) b.classList.add("no");
+        ex.textContent = (i===ANS ? "✅ Benar! " : "❌ Belum tepat. ") + "Jawaban: えんぴつと 消しゴムと 色えんぴつ. Guru bilang bawa pensil dan penghapus; kertas sudah ada di sekolah; pensil warna juga harus dibawa.";
+      };
+      box.appendChild(b);
+    });
+    [["aoyama","Pak Guru","Narator & instruksi"],["mochiko","Kakak Ceria","Percakapan sehari-hari"],["goki","Ibu Guru","Suara dewasa yang lembut"],["sourin","Kakek","Tokoh senior"],["nana","Siswi","Suara cewek manis"],["kurita","Siswa","Suara cowok santai"],["no7","Si Kecil","Suara anak-anak"]].forEach(function(v){
+      var b = el("button"); b.type = "button"; b.appendChild(el("b",null,"🔊 "+v[1])); b.appendChild(el("small",null,v[2]));
+      b.onclick = function(){ go("./audio/vv/test/"+v[0]+".mp3", b); }; vb.appendChild(b);
+    });
+  })();
+
   /* ---- angka statistik (nyata, dari js/landing-stats.js) + count-up ---- */
   var counters = document.querySelectorAll("[data-count]");
   counters.forEach(function(e){ var v = stat(e.getAttribute("data-count")); if (v != null) e.textContent = fmt(v); else e.removeAttribute("data-count"); });
@@ -613,11 +726,11 @@ import {renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED} from "./js/c
 import {islandSVG} from "./js/ssw-art.js";
 (function(){
   var G = document.getElementById("isl-grid"); if (!G) return;
-  [["Building Cleaning","ビルクリーニング","building"],["Kaigo","介護","kaigo"],["Food Manufacturing","飲食料品製造業","factory"],["Food Service","外食業","restaurant"],["Agriculture","農業","farm"],["Construction","建設","construction"],["Accommodation","宿泊","hotel"],["Livestock","畜産業","farm"]].forEach(function(b,i){
-    var d = document.createElement("div"); d.className = "isl"; d.style.setProperty("--d",(i*0.7).toFixed(1)+"s");
+  [["Building Cleaning","ビルクリーニング","building"],["Kaigo","介護","kaigo","+ Bahasa Jepang Kaigo"],["Food Manufacturing","飲食料品製造業","factory"],["Food Service","外食業","restaurant"],["Agriculture","農業","farm"],["Construction","建設","construction","Sipil · Bangunan · Lifeline"],["Accommodation","宿泊","hotel"],["Livestock","畜産業","farm"],["Fishery","漁業","fishery"],["Auto Maintenance","自動車整備","automobile"],["Industrial Manufacturing","工業製品製造業","machine","Mesin Logam · Elektronik · Permukaan Logam"],["Wood Industry","木材産業","wood"],["Auto Transport","自動車運送業","truck"],["Forestry","林業","forestry"],["Linen Supply","リネンサプライ","linen"],["Railway","鉄道","railway","Jalur · Listrik · Kereta"],["Shipbuilding","造船・舶用工業","ship"],["Logistics","物流倉庫","logistics"],["Recycling","資源循環","recycling"],["Aviation","航空","aviation","Ground Handling · Aircraft Maint."]].forEach(function(b,i){
+    var d = document.createElement("div"); d.className = "isl"; d.style.setProperty("--d",((i%8)*0.7).toFixed(1)+"s");
     try { d.innerHTML = islandSVG(b[2]); } catch(e){}
     var n = document.createElement("b"); n.textContent = b[0]; var j = document.createElement("i"); j.textContent = b[1];
-    var s = document.createElement("small"); s.textContent = "Tersedia";
+    var s = document.createElement("small"); s.textContent = b[3] || "Tersedia";
     d.appendChild(n); d.appendChild(j); d.appendChild(s); G.appendChild(d);
   });
 })();

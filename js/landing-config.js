@@ -7,6 +7,10 @@ window.LANDING_CONFIG = {
      Kosong = semua tombol Join tampil nonaktif "Link grup segera dibuka". */
   whatsapp: { url: "https://chat.whatsapp.com/BzXsGV00RumLlFs1rnpABT" },
 
+  /* Berlangganan lewat WhatsApp (chat pribadi admin). Isi link wa.me, contoh:
+     "https://wa.me/62812xxxxxxxx". Kosong = tombol berlangganan memakai link grup di atas. */
+  langganan: { url: "", teks: "Halo admin Shirose Nihongo, saya mau berlangganan. Mohon info paket dan cara pembayarannya." },
+
   /* Isi URL asli akun kamu. Kosong ("") = tombol tampil nonaktif "Segera hadir".
      Contoh: instagram: "https://instagram.com/akunkamu" */
   social: [
