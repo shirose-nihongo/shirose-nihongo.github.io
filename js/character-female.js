@@ -118,45 +118,46 @@ const JEPIT = [
 ];
 
 
-/* ---------- PONI (slot baru, hanya cewek) — dijual Rp-koin 1.000 per poni, warna ikut rambut ---------- */
+/* ---------- PONI (slot baru, hanya cewek) — PNG raster + CSS filter recolor ---------- */
 const P1000 = { harga: 1000, _rp: 1 };   // _rp: lewati penyesuaian harga global (tetap 1.000 koin)
-/* ====== gaya poni: massa berwarna gradasi + helai berurat (gelap & kilau), ujung runcing/terpotong ====== */
-const mixc = (h, t, to = 255) => { const n = parseInt(String(h).replace("#", "").padEnd(6, "0").slice(0, 6), 16), ch = [n >> 16 & 255, n >> 8 & 255, n & 255].map(v => Math.round(v + (to - v) * t)); return "#" + ch.map(v => v.toString(16).padStart(2, "0")).join(""); };
-let _pg = 0;
-const pgrad = (c) => { const id = "pg" + (++_pg); return [id, `<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${mixc(c, .22, 0)}"/><stop offset=".55" stop-color="${c}"/><stop offset="1" stop-color="${mixc(c, .09)}"/></linearGradient></defs>`]; };
-const strand = (c, r, t, bow = 4) => {
-  const mx = (r[0] + t[0]) / 2, my = (r[1] + t[1]) / 2, dx = t[0] - r[0], dy = t[1] - r[1], L = Math.hypot(dx, dy) || 1, nx = -dy / L * bow, ny = dx / L * bow;
-  const d = `M${r[0]} ${r[1]} Q${mx + nx} ${my + ny} ${t[0]} ${t[1]}`;
-  return `<path d="${d}" stroke="${mixc(c, .5, 0)}" stroke-opacity=".38" stroke-width="1" fill="none" stroke-linecap="round"/>`
-    + `<path d="M${r[0] + 2} ${r[1] + 2} Q${mx + nx + 2} ${my + ny} ${t[0] + 1.5} ${t[1] - 3}" stroke="${mixc(c, .38)}" stroke-opacity=".3" stroke-width="1.4" fill="none" stroke-linecap="round"/>`;
+
+/* ====== Recolor: hue-rotate + saturate + brightness dari base coklat ke warna target ====== */
+const _h2hsl = (hex) => {
+  const n = parseInt((hex || "").replace("#", "").padEnd(6, "0"), 16);
+  const r = (n >> 16) / 255, g = ((n >> 8) & 255) / 255, b = (n & 255) / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b); let h = 0, s = 0, l = (mx + mn) / 2;
+  if (mx !== mn) { const d = mx - mn; s = l > .5 ? d / (2 - mx - mn) : d / (mx + mn);
+    if (mx === r) h = ((g - b) / d + (g < b ? 6 : 0)) * 60; else if (mx === g) h = ((b - r) / d + 2) * 60; else h = ((r - g) / d + 4) * 60; }
+  return [h, s, l];
 };
-/* tepi bawah bergelombang runcing lewat deretan ujung */
-const edge = (tips) => tips.slice(1).map((t, i) => { const q = tips[i]; return `Q${(q[0] + t[0]) / 2} ${(q[1] + t[1]) / 2 - 5} ${t[0]} ${t[1]}`; }).join(" ");
-const massPath = (top, tips, tail) => `${top} L${tips[0][0]} ${tips[0][1]} ${edge(tips)} ${tail}Z`;
-const dense = (tips) => tips.flatMap((t, i) => i ? [[(tips[i - 1][0] + t[0]) / 2, (tips[i - 1][1] + t[1]) / 2 - 2], t] : [t]);
-const mass = (c, d, roots, tips0, bow) => { const [id, df] = pgrad(c), tips = dense(tips0); return df + `<path d="${d}" fill="url(#${id})"/>` + tips.map((t, i) => strand(c, typeof roots === "function" ? roots(t) : roots[i % roots.length], t, bow * ((i % 2) ? -1 : 1))).join(""); };
-const spread = (n, x0, x1, y, jit) => Array.from({ length: n }, (_, i) => [x0 + (x1 - x0) * i / (n - 1), y + jit[i % jit.length]]);
-const blunt = (c, y, n = 11, j = [0, -3, 2, -2, 3, -4, 1]) => { const tips = spread(n, 153, 247, y, j).map(t => [t[0], t[1] - Math.abs(t[0] - 200) * .06]); return mass(c, massPath("M149 98 Q200 58 251 98", tips.slice().reverse(), ""), (t) => [200 + (t[0] - 200) * .55, 62], tips, 2); };
-const sweptMass = (c, P, tips, topL, topR) => mass(c, massPath(`M${topL[0]} ${topL[1]} Q${(topL[0] + topR[0]) / 2} 52 ${topR[0]} ${topR[1]}`, tips, ""), [P], tips, 6);
-const side = (c, topStart, part, innerTip, tips, mirror) => {
-  const [id, df] = pgrad(c), all = [innerTip, ...tips], dall = dense(all);
-  const d = `M${topStart[0]} ${topStart[1]} Q${topStart[0] + 6} 60 ${part[0]} ${part[1]} Q${part[0] - 8} ${(part[1] + innerTip[1]) / 2} ${innerTip[0]} ${innerTip[1]} ${edge(all)} L${topStart[0] - 4} ${topStart[1] + 30}Z`;
-  const g = df + `<path d="${d}" fill="url(#${id})"/>` + dall.map((t, i) => strand(c, [part[0] - 1 - (i % 3), part[1] + 2], t, 5 * (i % 2 ? -1 : 1))).join("");
-  return mirror ? `<g transform="translate(400 0) scale(-1 1)">${g}</g>` : g;
+let _pf = 0;
+/* Base PNG color: #3a2518 → HSL ≈ (20°, 0.42, 0.16) */
+const _BH = 20, _BS = .42, _BL = .16;
+const poniImg = (file, c, pos) => {
+  const { x, y, w, h } = pos;
+  const href = `assets/poni/${file}.png`;
+  if (!c || c === "#3a2518") return `<image href="${href}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="xMidYMin meet"/>`;
+  const [th, ts, tl] = _h2hsl(c);
+  const dh = Math.round(th - _BH);
+  const ds = (ts / _BS || 1).toFixed(1);
+  const dl = Math.min(3.5, tl / _BL || 1).toFixed(1);
+  const fid = "pf" + (++_pf);
+  return `<defs><filter id="${fid}" color-interpolation-filters="sRGB"><feColorMatrix type="hueRotate" values="${dh}"/><feColorMatrix type="saturate" values="${ds}"/><feComponentTransfer><feFuncR type="linear" slope="${dl}"/><feFuncG type="linear" slope="${dl}"/><feFuncB type="linear" slope="${dl}"/></feComponentTransfer></filter></defs><image href="${href}" x="${x}" y="${y}" width="${w}" height="${h}" filter="url(#${fid})" preserveAspectRatio="xMidYMin meet"/>`;
 };
-const curtain = (c, tipsL, inner) => side(c, [150, 92], [199, 63], inner, tipsL, false) + side(c, [150, 92], [199, 63], inner, tipsL.map(t => [t[0], t[1] - 3]), true);
-const wisp = (c, n) => { let o = ""; const [id, df] = pgrad(c); o += df + `<path d="M152 90 Q200 56 248 90 L248 84 L152 84Z" fill="url(#${id})"/>`; for (let i = 0; i < n; i++) { const x = 156 + 88 * i / (n - 1), tx = x + (200 - x) * .1 + (i % 2 ? 3 : -3), ty = 108 + [0, -8, 4, -5, 7, -9, 2, -4][i % 8]; o += `<path d="M${x - 4} 80 Q${x - 5} ${(80 + ty) / 2} ${tx - 1.5} ${ty} L${tx + 2.5} ${ty - 3} Q${x + 3} ${(80 + ty) / 2} ${x + 4} 80Z" fill="url(#${id})"/>` + strand(c, [x, 82], [tx, ty - 3], 2); } return o; };
-const sidelocks = (c) => { const [id, df] = pgrad(c); const one = (x, dir) => `<path d="M${x} 96 Q${x + dir * 6} 160 ${x + dir * 2} 222 L${x + dir * 16} 218 Q${x + dir * 20} 160 ${x + dir * 14} 110Z" fill="url(#${id})"/>` + strand(c, [x + dir * 6, 112], [x + dir * 9, 214], 2); return df + one(148, -1) + one(252, 1); };
+
+/* Posisi per gaya (koordinat SVG viewBox 0 0 400 500, disesuaikan agar pas di kepala karakter cewek) */
+const PP = { x: 138, y: 48, w: 124, h: 115 };   // default box
 const PONI = [
-  ["lurus", "Poni Depan Lurus", "common", (c = "#3a2518") => blunt(c, 118), P1000],
-  ["tipis", "Poni Tipis (Wispy)", "common", (c = "#3a2518") => wisp(c, 10), P1000],
-  ["curtain", "Poni Curtain Kiri-Kanan", "common", (c = "#3a2518") => curtain(c, [[176, 126], [165, 144], [155, 162]], [188, 106]), P1000],
-  ["curtain_panjang", "Poni Curtain Panjang", "common", (c = "#3a2518") => curtain(c, [[178, 134], [168, 158], [158, 182], [150, 204]], [189, 112]), P1000],
-  ["samping", "Poni Samping Menyapu", "common", (c = "#3a2518") => sweptMass(c, [236, 60], [[250, 100], [238, 106], [222, 110], [204, 114], [186, 118], [168, 126], [152, 148]], [149, 96], [251, 74]), P1000],
-  ["miring", "Poni Miring Panjang", "common", (c = "#3a2518") => sweptMass(c, [216, 60], [[250, 110], [236, 116], [220, 120], [202, 124], [184, 124], [166, 140], [150, 168]], [149, 98], [251, 80]), P1000],
-  ["hime", "Poni Hime + Sisi Panjang", "common", (c = "#3a2518") => blunt(c, 118) + sidelocks(c), P1000],
-  ["pendek", "Poni Pendek (Baby Bangs)", "common", (c = "#3a2518") => blunt(c, 102, 11, [0, -2, 1, -1, 2]), P1000],
-  ["gerigi", "Poni Bergerigi (Choppy)", "common", (c = "#3a2518") => blunt(c, 116, 13, [0, -9, 4, -6, 8, -12, 2, -7]), P1000],
+  ["samping",         "Poni Samping Menyapu",  "common",  (c) => poniImg("pn_samping",          c, { x: 130, y: 44, w: 140, h: 148 }), P1000],
+  ["lurus",           "Poni Depan Lurus",       "common",  (c) => poniImg("pn_lurus",            c, { x: 140, y: 50, w: 120, h: 112 }), P1000],
+  ["curtain",         "Poni Curtain Kiri-Kanan","common",  (c) => poniImg("pn_curtain",          c, { x: 135, y: 46, w: 130, h: 125 }), P1000],
+  ["miring",          "Poni Miring Panjang",    "common",  (c) => poniImg("pn_miring",           c, { x: 130, y: 44, w: 140, h: 148 }), P1000],
+  ["curtain_panjang", "Poni Curtain Panjang",   "common",  (c) => poniImg("pn_curtain_panjang",  c, { x: 135, y: 50, w: 130, h: 118 }), P1000],
+  ["tipis",           "Poni Tipis (Wispy)",     "common",  (c) => poniImg("pn_tipis",            c, { x: 132, y: 46, w: 136, h: 140 }), P1000],
+  ["curtain2",        "Poni Curtain Pendek",    "common",  (c) => poniImg("pn_curtain2",         c, { x: 135, y: 48, w: 130, h: 125 }), P1000],
+  ["blunt",           "Poni Rata Tebal (Blunt)","common",  (c) => poniImg("pn_blunt",            c, { x: 132, y: 46, w: 136, h: 140 }), P1000],
+  ["hime",            "Poni Hime + Kepang",     "uncommon",(c) => poniImg("pn_hime",             c, { x: 132, y: 44, w: 136, h: 128 }), P1000],
+  ["pendek",          "Poni Pendek Gerigi",     "common",  (c) => poniImg("pn_pendek",           c, { x: 134, y: 44, w: 132, h: 148 }), P1000],
 ];
 
 /* ---------- ANTING (slot baru) — telinga di x=148 / 252, y=135 ---------- */

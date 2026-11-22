@@ -922,9 +922,9 @@ function flatten2D(svg) {
   });
   return svg
     .replace(/<(linear|radial)Gradient\b[\s\S]*?<\/\1Gradient>/g, "")
-    .replace(/<filter\b[\s\S]*?<\/filter>/g, "")
-    .replace(/\s(?:filter|style)="[^"]*(?:filter|blur)[^"]*"/g, "")
-    .replace(/\sfilter="[^"]*"/g, "")
+    .replace(/<filter\b(?![^>]*\bid="pf\d+")[\s\S]*?<\/filter>/g, "")
+    .replace(/\s(?:filter|style)="[^"]*(?:filter|blur)[^"]*"/g, (m) => m.includes("url(#pf") ? m : "")
+    .replace(/\sfilter="(?!url\(#pf)[^"]*"/g, "")
     .replace(/\b(fill|stroke)="url\(#([^)]+)\)"/g, (m, a, id) => { const v = col[id]; return v ? `${a}="${v[0]}"${v[1] < 1 ? ` ${a}-opacity="${v[1]}"` : ""}` : `${a}="#888"`; });
 }
 
@@ -1061,7 +1061,7 @@ import { extendShirose } from "./shirose-set.js?v=20261116m";
 import { extend2 } from "./character-more2.js?v=20261116m";
 import { extendSet, SET } from "./character-set.js?v=20261119r";
 import { PET, MATA } from "./character-pet.js?v=20261119u";
-import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261122v";
+import { extendFemale, femWarp, femFace, femBust, femOutfit, FEM_DEFAULT_HAIR } from "./character-female.js?v=20261123a";
 const __X = { OUTFITS, SHOES, ACCESSORIES, HANDHELD, AURAS, HAIR_STYLES };
 extend(__X); extend2(__X); extendWeaponAnim(__X);
 extendShirose(__X);
