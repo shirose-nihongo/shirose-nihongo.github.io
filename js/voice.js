@@ -106,7 +106,7 @@ function _play(url, { start = 0, dur = 0, label = "", onend } = {}, my){
 /* ---------------- Cache offline voice pack ---------------- */
 // Semua MP3 voice pack yang pernah diputar (atau diunduh lewat "Simpan offline")
 // disimpan di Cache Storage "shirose-audio", lalu diputar dari sana tanpa internet.
-export const AUDIO_CACHE = "shirose-audio-v1";
+export const AUDIO_CACHE = "shirose-audio-v2";
 const _blobUrls = {};
 async function offlineUrl(url){
   const abs = new URL(url, location.href).href;

@@ -12,6 +12,8 @@ Semua suara di website memakai **7 karakter VOICEVOX** (daftar dan pengaturannya
 | nana | 春歌ナナ | siswi |
 | kurita | 栗田まろん | cowok / siswa laki-laki |
 
+> **Update 22 Nov 2026:** semua audio materi (kosakata, kanji, contoh, bunpou, kana, JFT, SSW) sekarang HANYA suara **青山龍星 (aoyama)**. Karakter lain hanya dipakai untuk dialog Choukai (ujian dengar butuh banyak pembicara).
+
 ## Cara kerja di website
 1. Website mencari file voice pack (`audio/choukai/...` dan `audio/vv/{level}/...`).
 2. Kalau belum ada dan guru menyalakan VOICEVOX di komputernya, suara dibuat langsung oleh VOICEVOX lokal.
