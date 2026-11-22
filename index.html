@@ -3136,6 +3136,15 @@ window.setMateriChunk = (tipe, c) => {
   filterMateri(tipe, "");
   document.getElementById(`chunk-tabs-${tipe}`)?.scrollIntoView({ block:"start", behavior:"smooth" });
 };
+function _mvOrder(tipe, data){
+  const all = data.map((_, i) => i);
+  if (tipe === "kosakata" && POS_DEF.some(d => d.k === state.posFilter)) return all.filter(i => posHas(data[i], state.posFilter));
+  return all;
+}
+function _mvNav(tipe, idx, data){
+  const ord = _mvOrder(tipe, data); let p = ord.indexOf(idx); if (p < 0) { ord.push(idx); p = ord.length - 1; }
+  return `<div class="bp-nav"><button onclick="bpNav(-1)" ${p <= 0 ? "disabled" : ""}>‹ Sebelum</button><span class="bp-cnt">${p + 1} / ${ord.length}</span><button onclick="bpNav(1)" ${p >= ord.length - 1 ? "disabled" : ""}>Lanjut ›</button></div>`;
+}
 window.showMateri = async (tipe, idx, vno) => {
   const data = state.materi[tipe][state.level];
   if (window.DEMO && window.DEMO.on() && Array.isArray(data) && idx >= window.DEMO.cap(data.length)) { window.DEMO.lockToast(); return; }   // demo: item di luar 10% terkunci
@@ -3153,7 +3162,8 @@ window.showMateri = async (tipe, idx, vno) => {
     const contoh = it.c || [];
     const bagikana = it.kana || "";
     body = `
-      <div class="kanji-detail">
+      <div class="kanji-detail bp-card" data-bp="1">
+        ${_mvNav(tipe, idx, data)}
         <div class="no-pill">${no} · ${state.level.toUpperCase()}</div>
         <div class="big-k">${k}</div>
         <div class="readings">
@@ -3201,7 +3211,8 @@ window.showMateri = async (tipe, idx, vno) => {
     // contoh yang hanya mengulang kata itu sendiri (tanpa terjemahan) tidak ditampilkan
     const contoh = (_c0 && (contohArti || _c0.replace(/\[[^\]]*\]/g, "").replace(/\s/g, "") !== _cleanKata(kata).replace(/\s/g, ""))) ? _c0 : "";
     body = `
-      <div class="kanji-detail">
+      <div class="kanji-detail bp-card" data-bp="1">
+        ${_mvNav(tipe, idx, data)}
         <div class="no-pill">${no} · ${state.level.toUpperCase()}</div>
         <div class="big-k" style="font-size:72px;">${_cleanKata(kata)}</div>
         <div class="readings"><div class="r">${kana}</div></div>
@@ -3297,12 +3308,13 @@ async function _kkFillInline(){
 /* ===== Bunpou: geser kiri/kanan (flashcard) + tabel Perubahan Kata Kerja ===== */
 window.bpNav = (dir) => {
   const d = window._materiDetail;
-  if (!d || d.tipe !== "bunpou") return;
-  const list = state.materi.bunpou[state.level] || [];
-  const n = d.idx + dir;
-  if (n < 0 || n >= list.length) return;
+  if (!d || !["bunpou", "kanji", "kosakata"].includes(d.tipe)) return;
+  const list = state.materi[d.tipe][state.level] || [];
+  const ord = _mvOrder(d.tipe, list); const p = ord.indexOf(d.idx);
+  const n = p < 0 ? -1 : ord[p + dir];
+  if (n === undefined || n < 0) return;
   window._bpDir = dir;
-  showMateri("bunpou", n).then(() => {
+  showMateri(d.tipe, n).then(() => {
     const c = document.querySelector(".bp-card");
     if (c) c.classList.add(dir > 0 ? "bp-slide-l" : "bp-slide-r");
   });
