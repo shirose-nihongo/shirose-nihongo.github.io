@@ -81,6 +81,7 @@
       "#demo-bar span{opacity:.92}" +
       ".demo-note{background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.45);border-radius:10px;padding:8px 12px;margin:0 0 10px;font-size:13px}" +
       ".demo-lock{opacity:.5;filter:grayscale(.6);cursor:pointer!important}" +
+      ".materi-item.demo-lock{position:relative}.materi-item.demo-lock::after{content:\"🔒\";position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:16px}" +
       ".demo-cta{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0}" +
       ".demo-cta .btn{text-decoration:none}" +
       "#demo-lock-modal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px}" +
