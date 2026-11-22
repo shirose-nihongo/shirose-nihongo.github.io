@@ -24,6 +24,7 @@ const CORE = [
   "./bio.html",
   "./js/landing-config.js",
   "./js/membership.js",
+  "./js/mobile-bar.js",
   "./js/landing-stats.js",
   "./teacher.html",
   "./manifest.webmanifest",
