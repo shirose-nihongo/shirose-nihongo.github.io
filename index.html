@@ -1501,7 +1501,7 @@ html{overflow-x:hidden;}
 <div class="toast-wrap" id="toasts"></div>
 <script src="./js/themes.js?v=20261122a"></script>
 <script src="./js/landing-config.js"></script>
-<script src="./js/demo.js?v=20261122b"></script>
+<script src="./js/demo.js?v=20261122c"></script>
 <script src="./js/membership.js"></script>
 
 <!-- ============ LEVEL UP OVERLAY ============ -->
@@ -2910,9 +2910,9 @@ async function _fillHomeCalendar(){
 
 /* ========== MATERI HUB ========== */
 async function renderMateriHub(){
-  const kosakata = await loadMateri("kosakata", state.level);
-  const kanji = await loadMateri("kanji", state.level);
-  const bunpou = await loadMateri("bunpou", state.level);
+  const kosakata = await loadMateri("kosakata", state.level, { full: true });   // demo: jumlah tetap penuh (isi dikunci per item)
+  const kanji = await loadMateri("kanji", state.level, { full: true });
+  const bunpou = await loadMateri("bunpou", state.level, { full: true });
   return `
     <div class="panel">
       <h2>📚 Materi ${window.levelLabel(state.level, true)}</h2>
@@ -2982,7 +2982,11 @@ function posBar(arr, cur, fn){
 window.setPosFilter = (k) => { state.posFilter = k; state.materiChunk = state.materiChunk || {}; state.materiChunk[`kosakata-${state.level}`] = 0; renderMateriList("kosakata").then(h => { document.getElementById("app").innerHTML = h; }); };
 
 async function renderMateriList(tipe){
-  const data = await loadMateri(tipe, state.level);
+  // Akun demo: semua item tampil (jumlah sama), hanya 10% pertama yang bisa dibuka; sisanya terkunci.
+  const data = await loadMateri(tipe, state.level, { full: true });
+  const _dm = !!(window.DEMO && window.DEMO.on());
+  const _capN = _dm ? window.DEMO.cap(data.length) : data.length;
+  const _lk = (i) => _dm && i >= _capN;
   if (tipe === "kanji") { try { await window.KC?.ensure?.(); } catch(_){} }   // progres menulis (lencana ●/★)
   const label = {kosakata:"Kosakata", kanji:"Kanji", bunpou:"Bunpou"}[tipe];
   if (!data.length) return `<div class="panel"><h2>${label}</h2><div class="empty"><div class="emoji">📭</div>Belum ada data untuk level ini.</div></div>`;
@@ -3010,7 +3014,7 @@ async function renderMateriList(tipe){
       const kana = _v.kana;
       const kata = _v.kata;
       const arti = it.arti || it.a || "";
-      return `<div class="materi-item" ${chunkAttr(cidx)} onclick="showMateri('${tipe}', ${idx}${posCur === "all" ? "" : ", " + (vi + 1)})">
+      return `<div class="materi-item${_lk(idx) ? " demo-lock" : ""}" ${chunkAttr(cidx)} onclick="${_lk(idx) ? "DEMO.lockToast()" : `showMateri('${tipe}', ${idx}${posCur === "all" ? "" : ", " + (vi + 1)})`}">
         <span class="no-badge">${no}</span>
         <div class="kanji">${_cleanKata(kata)}</div>
         <div class="reading">${kana}</div>
@@ -3022,7 +3026,7 @@ async function renderMateriList(tipe){
       const kana = it.kana || `${it.on || ""} ${it.kun || ""}`.trim();
       const arti = it.arti || it.a || "";
       const ks = (window.KC && window.KC.kanjiState(state.level, itemNo(it, idx))) || "";
-      return `<div class="materi-item ${ks === "mastered" ? "kc-m" : ""}" ${chunkAttr(idx)} onclick="showMateri('${tipe}', ${idx})">
+      return `<div class="materi-item ${ks === "mastered" ? "kc-m" : ""}${_lk(idx) ? " demo-lock" : ""}" ${chunkAttr(idx)} onclick="${_lk(idx) ? "DEMO.lockToast()" : `showMateri('${tipe}', ${idx})`}">
         <span class="no-badge">${no}</span>${ks ? `<i class="kc-kbadge" title="${ks === "mastered" ? "Sudah hafal" : "Sudah dipelajari"}">${ks === "mastered" ? "★" : "●"}</i>` : ""}
         <div class="kanji">${k}</div>
         <div class="reading">${kana}</div>
@@ -3032,7 +3036,7 @@ async function renderMateriList(tipe){
     if (tipe === "bunpou") {
       const pola = it.pola || it.p || it.kata || "";
       const arti = it.arti || it.e || it.penjelasan || "";
-      return `<div class="materi-item" ${chunkAttr(idx)} onclick="showMateri('${tipe}', ${idx})">
+      return `<div class="materi-item${_lk(idx) ? " demo-lock" : ""}" ${chunkAttr(idx)} onclick="${_lk(idx) ? "DEMO.lockToast()" : `showMateri('${tipe}', ${idx})`}">
         <span class="no-badge">${no}</span>
         <div class="kanji" style="font-size:22px;">${pola}</div>
         <div class="meaning">${arti.slice(0, 120)}${arti.length > 120 ? "…" : ""}</div>
@@ -3053,7 +3057,7 @@ async function renderMateriList(tipe){
       <div class="search-bar">
         <input type="text" id="search-${tipe}" placeholder="Cari di semua nomor..." oninput="filterMateri('${tipe}', this.value)"/>
       </div>
-      ${window.DEMO && window.DEMO.on() ? window.DEMO.note(data.length, (await loadMateri(tipe, state.level, { full: true })).length, label) : ""}
+      ${window.DEMO && window.DEMO.on() ? window.DEMO.note(_capN, data.length, label) : ""}
       ${posUI}
       ${tipe === "kosakata" && data.some(x => x.km) ? `<div class="vf-row">Bentuk kata kerja: ${_vfBtn("setVerbFormMateri")}</div>` : ""}
       ${displayBar("materi")}
@@ -3088,6 +3092,7 @@ window.setMateriChunk = (tipe, c) => {
 };
 window.showMateri = async (tipe, idx, vno) => {
   const data = state.materi[tipe][state.level];
+  if (window.DEMO && window.DEMO.on() && Array.isArray(data) && idx >= window.DEMO.cap(data.length)) { window.DEMO.lockToast(); return; }   // demo: item di luar 10% terkunci
   const it = data[idx];
   const no = fmtNo(vno || itemNo(it, idx));   // vno = nomor dalam daftar terfilter (kelas kata)
   const app = document.getElementById("app");
