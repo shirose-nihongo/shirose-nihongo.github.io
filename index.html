@@ -1362,6 +1362,7 @@ html{overflow-x:hidden;}
 .bp-nav button{flex:0 0 auto; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:inherit; border-radius:10px; padding:8px 12px; font-size:13px; font-weight:700; cursor:pointer;}
 .bp-nav button:disabled{opacity:.3; cursor:default;}
 .bp-nav .bp-cnt{font-size:12px; opacity:.7; text-align:center; flex:1;}
+.bp-card{touch-action:pan-y; -webkit-user-select:none; user-select:none;} .bp-card input,.bp-card textarea,.bp-card .kk-inline{-webkit-user-select:text; user-select:text;}
 .bp-hint{font-size:11px; opacity:.5; text-align:center; margin-top:6px;}
 .bp-slide-l{animation:bpSL .22s ease-out;} .bp-slide-r{animation:bpSR .22s ease-out;}
 @keyframes bpSL{from{opacity:0; transform:translateX(40px);}to{opacity:1; transform:none;}}
@@ -3164,6 +3165,7 @@ window.showMateri = async (tipe, idx, vno) => {
     body = `
       <div class="kanji-detail bp-card" data-bp="1">
         ${_mvNav(tipe, idx, data)}
+        <div class="bp-hint" style="margin:-6px 0 8px;">⟵ geser kiri / kanan ⟶</div>
         <div class="no-pill">${no} · ${state.level.toUpperCase()}</div>
         <div class="big-k">${k}</div>
         <div class="readings">
@@ -3213,6 +3215,7 @@ window.showMateri = async (tipe, idx, vno) => {
     body = `
       <div class="kanji-detail bp-card" data-bp="1">
         ${_mvNav(tipe, idx, data)}
+        <div class="bp-hint" style="margin:-6px 0 8px;">⟵ geser kiri / kanan ⟶</div>
         <div class="no-pill">${no} · ${state.level.toUpperCase()}</div>
         <div class="big-k" style="font-size:72px;">${_cleanKata(kata)}</div>
         <div class="readings"><div class="r">${kana}</div></div>
@@ -3330,7 +3333,7 @@ window.bpNav = (dir) => {
     if (x0 === null) return;
     const t = e.changedTouches[0]; const dx = t.clientX - x0, dy = t.clientY - y0;
     x0 = null;
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5 && Date.now() - t0 < 700) window.bpNav(dx < 0 ? 1 : -1);
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.1 && Date.now() - t0 < 1500) window.bpNav(dx < 0 ? 1 : -1);
   }, { passive:true });
   document.addEventListener("keydown", (e) => {
     if (!document.querySelector(".bp-card") || document.querySelector(".kk-ov")) return;
