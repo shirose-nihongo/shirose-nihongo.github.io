@@ -6088,7 +6088,7 @@ FB.onAuth(async (user, siswa) => {
   state.user = user; state.siswa = siswa;
   try { const b = siswa?.karakter?.body; if (b) setBody(b); } catch(e) {}
   try { const bk = siswa?.karakter?.bentuk; if (bk) setBentuk(bk); } catch(e) {}
-  try { cekLoginReward(); } catch(e) {}
+  if (user) { try { cekLoginReward(); } catch(e) {} }   // reward login hanya muncul SESUDAH login
   try { window.SHIROSE_THEME_FREE = !!(user && (FB.userIsGuru() || FB.hasUnlimitedCoins())); if (window.SHIROSE_THEME) window.SHIROSE_THEME.refresh(); } catch(e){}
   const btn = document.getElementById("btn-auth");
   if (user) {
