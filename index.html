@@ -1358,6 +1358,18 @@ html{overflow-x:hidden;}
 .kk-t td:nth-child(2){font-weight:800; color:var(--gold,#fbbf24);}
 .kk-t td:nth-child(3){font-size:11px; opacity:.65;}
 .kk-note{font-size:12px; line-height:1.55; opacity:.85; margin:3px 0;}
+.kk-lesson-card{display:block; width:100%; text-align:left; margin:8px 0 12px; padding:12px 14px; border-radius:14px; border:1px solid var(--pink,#ec4899); background:linear-gradient(135deg,rgba(236,72,153,.16),rgba(139,92,246,.14)); color:inherit; cursor:pointer;}
+.kk-lesson-card b{display:block; font-size:15px; margin-bottom:3px;}
+.kk-lesson-card span{font-size:12px; opacity:.8; line-height:1.45;}
+.kk-ls{margin:10px 0; border:1px solid rgba(255,255,255,.12); border-radius:12px; background:rgba(255,255,255,.04);}
+.kk-ls > summary{cursor:pointer; padding:11px 12px; font-weight:800; font-size:14px; list-style:none; display:flex; justify-content:space-between; align-items:center;}
+.kk-ls > summary::after{content:"▾"; opacity:.6;}
+.kk-ls[open] > summary::after{content:"▴";}
+.kk-ls .kk-in{padding:0 12px 12px;}
+.kk-ex{margin:6px 0; padding:7px 9px; border-radius:8px; background:rgba(255,255,255,.05);}
+.kk-ex .jp{font-size:15px; font-family:var(--font-jp,inherit);} .kk-ex .id{font-size:12px; opacity:.75; margin-top:2px;}
+.kk-sum{overflow-x:auto;} .kk-sum table{min-width:420px;}
+.kk-sum .gol{font-size:11px; opacity:.7;}
 .exam-area ruby rt{transition:opacity .2s;}
 .exam-area.no-furigana ruby rt{opacity:0; visibility:hidden;}
 .flash-card .front ruby rt,.haf-r ruby rt{display:none; font-size:.45em; font-weight:600; color:var(--pink-light,#f9a8c9);} body.haf-furi-on .flash-card .front ruby rt,body.haf-furi-on .haf-r ruby rt{display:revert;}
@@ -3036,6 +3048,7 @@ async function renderMateriList(tipe){
       ${posUI}
       ${tipe === "kosakata" && data.some(x => x.km) ? `<div class="vf-row">Bentuk kata kerja: ${_vfBtn("setVerbFormMateri")}</div>` : ""}
       ${displayBar("materi")}
+      ${tipe === "bunpou" && (state.level === "n5" || state.level === "n4") ? `<button class="kk-lesson-card" onclick="openKKLesson('${state.level}')"><b>📘 Pelajaran: Perubahan Kata Kerja ${state.level.toUpperCase()}</b><span>Tabel rumus, penjelasan singkat, dan banyak contoh kalimat. Ketuk untuk membuka.</span></button>` : ""}
       ${tabs}
       <div class="materi-list" id="materi-list-${tipe}">${list}</div>${emptyPos}
     </div>
@@ -3250,6 +3263,32 @@ function _kkRender(D, key){
   return `<div class="kk-fn"><b>${f.jp}</b> — ${f.nama}<br>${f.fungsi}</div>${groups}
     ${f.catatan.map(c => `<div class="kk-note">• ${c}</div>`).join("")}`;
 }
+window.openKKLesson = async (lv) => {
+  let D; try { D = await _kkLoad(); } catch (e) { alert("Pelajaran belum bisa dimuat. Cek koneksi."); return; }
+  const L = D.lesson && D.lesson[lv]; if (!L) return;
+  document.querySelector(".kk-ov")?.remove();
+  const ov = document.createElement("div"); ov.className = "kk-ov";
+  const g = D.lesson.golongan;
+  const sum = L.ringkas;
+  const sumHtml = `<div class="kk-sum"><table class="kk-t"><thead><tr>${sum.cols.map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>
+    ${sum.rows.map(r => `<tr><td>${r[0]}</td><td class="gol">${r[1]}</td>${r.slice(2).map(x => `<td style="font-weight:700">${x}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  const secs = L.order.map((k, i) => { const f = D.forms[k]; if (!f) return "";
+    return `<details class="kk-ls" ${i === 0 ? "open" : ""}><summary><span>${f.jp} — ${f.nama}</span></summary><div class="kk-in">
+      <div class="kk-fn">${f.intro || f.fungsi}</div>
+      ${_kkRender(D, k).replace(/<div class="kk-fn">[\s\S]*?<\/div>/, "")}
+      <div class="kk-g">Contoh kalimat</div>
+      ${(f.contoh || []).map(c => `<div class="kk-ex"><div class="jp">${c[0]}</div><div class="id">${c[1]}</div></div>`).join("")}
+    </div></details>`; }).join("");
+  ov.innerHTML = `<div class="kk-box"><div class="kk-top"><b>📘 ${L.judul}</b><button class="kk-x" aria-label="Tutup">✕</button></div>
+    <details class="kk-ls" open><summary><span>${g.judul}</span></summary><div class="kk-in">
+      ${g.isi.map(t => `<div class="kk-note">• ${t}</div>`).join("")}
+      <div class="kk-rule" style="margin-top:8px">${g.pengecualian}</div></div></details>
+    <details class="kk-ls" open><summary><span>Ringkasan satu tabel</span></summary><div class="kk-in">${sumHtml}</div></details>
+    ${secs}</div>`;
+  ov.querySelector(".kk-x").onclick = () => ov.remove();
+  ov.addEventListener("click", (e) => { if (e.target === ov) ov.remove(); });
+  document.body.appendChild(ov);
+};
 window.openKK = async (keys) => {
   let D; try { D = await _kkLoad(); } catch (e) { alert("Tabel belum bisa dimuat. Cek koneksi."); return; }
   const ks = String(keys).split(",").filter(k => D.forms[k]);
