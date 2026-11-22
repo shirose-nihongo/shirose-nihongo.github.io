@@ -3092,7 +3092,7 @@ async function renderMateriList(tipe){
       ${posUI}
       ${tipe === "kosakata" && data.some(x => x.km) ? `<div class="vf-row">Bentuk kata kerja: ${_vfBtn("setVerbFormMateri")}</div>` : ""}
       ${displayBar("materi")}
-      ${tipe === "bunpou" && (state.level === "n5" || state.level === "n4") ? `<button class="kk-lesson-card" onclick="openKKLesson('${state.level}')"><b>📘 Pelajaran: Perubahan Kata Kerja ${state.level.toUpperCase()}</b><span>Tabel rumus, penjelasan singkat, dan banyak contoh kalimat. Ketuk untuk membuka.</span></button>` : ""}
+      ${tipe === "bunpou" && ["n5", "n4", "ir0", "ir1", "ir2"].includes(state.level) ? `<button class="kk-lesson-card" onclick="openKKLesson('${state.level}')"><b>📘 Pelajaran: Perubahan Kata Kerja ${({ ir0: "JFT · Starter A1", ir1: "JFT · Shokyuu 1", ir2: "JFT · Shokyuu 2" })[state.level] || state.level.toUpperCase()}</b><span>Tabel rumus, penjelasan singkat, dan banyak contoh kalimat. Ketuk untuk membuka.</span></button>` : ""}
       ${tabs}
       <div class="materi-list" id="materi-list-${tipe}">${list}</div>${emptyPos}
     </div>
@@ -3238,6 +3238,7 @@ window.showMateri = async (tipe, idx, vno) => {
         <div class="bp-sec"><div class="bp-h">Rumus Bunpou</div><ul class="bp-rumus">${rumus.map(r => `<li>${_ruby(r)}</li>`).join("")}</ul>${_kk.length ? `<div class="kk-inline" data-kk="${_kk.join(",")}"></div>` : ""}${_kkBtn}</div>
         <div class="bp-sec"><div class="bp-h">Contoh</div>${contohHtml}</div>` : `
         <div style="font-size:14px; margin:12px 0; line-height:1.6; text-align:left; background:rgba(255,255,255,.04); padding:14px; border-radius:10px; white-space:pre-wrap;">${_ruby(penjelasan)}</div>
+        ${_kk.length ? `<div class="bp-sec"><div class="bp-h">Perubahan Kata Kerja</div><div class="kk-inline" data-kk="${_kk.join(",")}"></div>${_kkBtn}</div>` : ""}
         ${contohHtml}`}
         <div style="margin-top:14px; text-align:center;">
           <button class="btn gold" onclick='rangkumCepat({jp:"${_cleanKata(pola).replace(/"/g,"\\&quot;")}",kana:"${(kana||"").replace(/"/g,"\\&quot;")}",arti:"${((it.arti||it.e||"")+"").slice(0,80).replace(/"/g,"\\&quot;")}"}, "Bunpou ${no}")'>➕ Masukkan pola ke rangkuman</button>

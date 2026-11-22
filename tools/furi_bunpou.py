@@ -51,8 +51,8 @@ def walk(o):
     if isinstance(o,list): return [walk(x) for x in o]
     if isinstance(o,dict): return {k:walk(v) for k,v in o.items()}
     return o
-STYLES=[dict(ensure_ascii=False,separators=(',',':')),dict(ensure_ascii=False),dict(ensure_ascii=False,indent=1),dict(ensure_ascii=False,indent=2)]
+STYLES=[dict(ensure_ascii=False,indent=0),dict(ensure_ascii=False,separators=(',',':')),dict(ensure_ascii=False),dict(ensure_ascii=False,indent=1),dict(ensure_ascii=False,indent=2)]
 def dump_like(raw,d):
     for st in STYLES:
         if json.dumps(json.loads(raw),**st) in (raw,raw.rstrip('\n')): return json.dumps(d,**st)+('\n' if raw.endswith('\n') else '')
-    sys.exit('gaya JSON tidak dikenali')
+    raise SystemExit('gaya JSON tidak dikenali')
