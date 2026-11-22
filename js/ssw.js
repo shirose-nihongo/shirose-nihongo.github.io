@@ -304,10 +304,16 @@ const _dm = () => !!(window.DEMO && window.DEMO.on());
 // Demo: hanya Bab 1, subbab 1–3.
 const visibleChapters = (b, pack) => {
   const l = pack.chapters.filter(c => siswaBolehBab(b, c.id));
-  return _dm() ? l.slice(0, 1).map(c => ({ ...c, subs: c.subs.slice(0, 3) })) : l;
+  return l;   // demo: semua bab tetap tampil; yang di luar batas 10% hanya dikunci (lihat subOpen / vOpen / qOpen)
 };
+const _lk = () => ' onclick="DEMO.lockToast()"';
+// Demo: subbab yang bisa dibuka = 10% pertama (urutan buku); sisanya tampil tapi terkunci.
+const _subIds = (pack) => pack.chapters.flatMap(c => c.subs.map(s => s.id));
+const subOpen = (pack, id) => { if (!_dm()) return true; const a = _subIds(pack); return a.slice(0, window.DEMO.cap(a.length)).includes(id); };
+const vOpenSet = (pack) => new Set(pack.vocab.slice(0, window.DEMO.cap(pack.vocab.length)).map(v => v.id));
+const qOpenSet = (pack) => { const f = fullQuizzes(pack)[0]; return new Set([...(pack.quiz.bab?.[pack.chapters[0]?.id] || []).map(q => q.id), ...(f ? [f.id] : [])]); };
 // Demo: kosakata/flashcard dibatasi 10% dari seluruh kosakata bidang.
-const dv = (pack, vocab) => _dm() ? vocab.slice(0, window.DEMO.cap(pack.vocab.length)) : vocab;
+const dv = (pack, vocab) => { if (!_dm()) return vocab; const o = vOpenSet(pack); return vocab.filter(v => o.has(v.id)); };
 const demoBanner = (txt) => _dm() ? `<div class="demo-note">🎁 <b>Akun Demo</b> — ${txt}</div>` : "";
 
 /* ============================== HUB: pulau melayang ============================== */
@@ -392,7 +398,7 @@ async function renderPeta([slug]) {
     ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama) }])}
     ${charaPanel()}
     <div class="sw-head compact"><div class="jp">${esc(b.jp || "")}</div><h1>${esc(b.nama)}</h1><p>Ketuk sebuah bangunan untuk masuk ke babnya.</p></div>
-    ${demoBanner("hanya Bab 1 (subbab 1–3), kosakata &amp; flashcard 10%, dan 1 ujian penuh yang dibuka.")}
+    ${demoBanner("semua bab, subbab, kosakata &amp; kuis tampil, tapi hanya 10% pertama yang bisa dibuka (Bab 1 subbab awal, kosakata 10%, 1 ujian penuh). Sisanya terkunci 🔒.")}
     ${draftNote}
     <div class="sw-map sw-map-p">${mapSVG(nodes, true)}</div>
     <div class="sw-map sw-map-l">${mapSVG(nodes, false)}</div>
@@ -419,11 +425,10 @@ async function renderBab([slug, babId]) {
   const { b, pack, P } = g;
   let c = pack.chapters.find(x => x.id === babId);
   if (!c) return msgPage("🧭", "Bab tidak ditemukan", "Bab ini tidak ada.", `route('ssw-peta/${slug}')`);
-  if (_dm()) { c = visibleChapters(b, pack).find(x => x.id === c.id); if (!c) return msgPage("🔒", "Bab terkunci (Demo)", window.DEMO.MSG, `ssw-peta/${slug}`); }
   if (!siswaBolehBab(b, c.id)) return msgPage("🔒", "Bab belum dibuka", "Guru belum mempublikasikan bab ini.", `route('ssw-peta/${slug}')`);
   const lang = getLang(), mode = getMode();
   const pr = babProgress(P, c, pack.vocab);
-  const subs = c.subs.map(s => `<li><a onclick="SSW.go('${slug}','${s.id}')" class="${P.read[s.id] ? "done" : ""}"><span class="n">${s.no}</span><span class="t">${rich(L(s.title, "id"), { ruby: false })}<small class="jp">${rich(L(s.title, "jp"))}</small></span><span class="ck">${P.read[s.id] ? "✓" : "›"}</span></a></li>`).join("");
+  const subs = c.subs.map(s => { const lk = !subOpen(pack, s.id); return `<li><a ${lk ? 'onclick="DEMO.lockToast()"' : `onclick="SSW.go('${slug}','${s.id}')"`} class="${P.read[s.id] ? "done" : ""}${lk ? " demo-lock" : ""}"><span class="n">${s.no}</span><span class="t">${rich(L(s.title, "id"), { ruby: false })}<small class="jp">${rich(L(s.title, "jp"))}</small></span><span class="ck">${lk ? "🔒" : P.read[s.id] ? "✓" : "›"}</span></a></li>`; }).join("");
   const qz = (pack.quiz.bab?.[c.id] || []);
   const words = pack.vocab.filter(v => v.bab === c.id);
   return wrap(`
@@ -436,7 +441,7 @@ async function renderBab([slug, babId]) {
         <button class="${mode === "ringkas" ? "on" : ""}" data-v="ringkas" onclick="SSW.setM('ringkas')"><b>B. Ringkasan Materi</b><span>Inti, poin penting, kesalahan, potensi soal ujian.</span></button>
       </div>
       <div class="sw-seg" id="sw-lang"><button class="${lang === "jp" ? "on" : ""}" data-v="jp" onclick="SSW.setL('jp')">日本語</button><button class="${lang === "id" ? "on" : ""}" data-v="id" onclick="SSW.setL('id')">Indonesia</button></div>
-      <button class="btn sw-big" onclick="SSW.go('${slug}','${c.subs[0].id}')">Mulai belajar ›</button>
+      <button class="btn sw-big" onclick="${(() => { const o = c.subs.find(x => subOpen(pack, x.id)); return o ? `SSW.go('${slug}','${o.id}')` : "DEMO.lockToast()"; })()}">Mulai belajar ›</button>
     </div>
     <div class="sw-panel"><h2>Subbab</h2><ol class="sw-subs">${subs}</ol></div>
     <div class="sw-panel"><h2>Latihan bab ini</h2><div class="sw-actions left"><button class="btn" onclick="route('ssw-hafal/${slug}/${c.id}')">🃏 HAFALAN KOSAKATA · 単語暗記</button>
@@ -518,6 +523,7 @@ async function renderBaca([slug, subId, mode, lang]) {
   const flat = flatSubs(b, pack);
   const idx = flat.findIndex(x => x.s.id === subId);
   if (idx < 0) return _dm() ? msgPage("🔒", "Subbab terkunci (Demo)", window.DEMO.MSG, `ssw-peta/${slug}`) : msgPage("🧭", "Subbab tidak ditemukan", "Subbab ini tidak ada atau belum dipublikasikan.", `route('ssw-peta/${slug}')`);
+  if (_dm() && !subOpen(pack, subId)) return msgPage("🔒", "Subbab terkunci (Demo)", window.DEMO.MSG, `ssw-peta/${slug}`);
   const { c, s } = flat[idx], prev = flat[idx - 1], next = flat[idx + 1];
   const link = (x) => `SSW.go('${slug}','${x.s.id}')`;
   P.last = { route: `ssw-baca/${slug}/${subId}/${mode}/${lang}`, label: `BAB ${c.no} · ${plain(L(s.title, "id"))}`, t: Date.now() };
@@ -536,7 +542,7 @@ async function renderBaca([slug, subId, mode, lang]) {
     <div class="sw-rtool ${LSget("shirose-ssw-tb", "1") === "0" ? "min" : ""}">
       <div class="r1">
         ${prev ? `<button class="btn ghost" onclick="${link(prev)}" aria-label="Subbab sebelumnya">‹</button>` : `<button class="btn ghost" onclick="route('ssw-bab/${slug}/${c.id}')" aria-label="Pengantar bab">‹</button>`}
-        <select aria-label="Pilih subbab" onchange="if(this.value)SSW.go('${slug}',this.value)">${(() => { let g = null, h = ""; for (const x of flat) { if (g !== x.c.id) { if (g) h += "</optgroup>"; g = x.c.id; h += `<optgroup label="BAB ${x.c.no} — ${esc(plain(L(x.c.title, "id")))}">`; } h += `<option value="${x.s.id}" ${x.s.id === subId ? "selected" : ""}>${P.read[x.s.id] ? "✓ " : ""}${x.c.no}.${x.s.no} ${esc(plain(L(x.s.title, "id")))}</option>`; } return h + "</optgroup>"; })()}</select>
+        <select aria-label="Pilih subbab" onchange="if(this.value)SSW.go('${slug}',this.value)">${(() => { let g = null, h = ""; for (const x of flat) { if (g !== x.c.id) { if (g) h += "</optgroup>"; g = x.c.id; h += `<optgroup label="BAB ${x.c.no} — ${esc(plain(L(x.c.title, "id")))}">`; } h += `<option value="${x.s.id}" ${x.s.id === subId ? "selected" : ""}>${!subOpen(pack, x.s.id) ? "🔒 " : P.read[x.s.id] ? "✓ " : ""}${x.c.no}.${x.s.no} ${esc(plain(L(x.s.title, "id")))}</option>`; } return h + "</optgroup>"; })()}</select>
         ${next ? `<button class="btn" onclick="SSW.finish('${slug}','${s.id}','${next.s.id}')" aria-label="Subbab berikutnya">›</button>` : `<button class="btn" onclick="SSW.finish('${slug}','${s.id}',null)" aria-label="Selesai bab">✓</button>`}
         <button class="btn ghost tbt" onclick="SSW.toolbarToggle()" aria-label="Tampilkan/sembunyikan pengaturan">⚙</button>
       </div>
@@ -620,13 +626,14 @@ async function renderKosa([slug, scope = "all"]) {
   if (scope.startsWith("s:")) { const ss = scope.slice(2).split("+"); vocab = vocab.filter(v => (v.src || []).some(x => ss.includes(x))); }
   else if (scope.startsWith("w:")) { const ws = scope.slice(2).split("+"); vocab = pack.vocab.filter(v => ws.includes(v.id)); }
   else if (scope !== "all") vocab = vocab.filter(v => v.bab === scope);
-  vocab = dv(pack, vocab);
+  const vOpen = _dm() ? vOpenSet(pack) : null;   // demo: semua kata tampil, hanya 10% pertama yang bisa dibuka
   const cats = [...new Set(vocab.map(v => v.cat).filter(Boolean))];
   const st = cardStats(P, vocab);
-  window.__swVocab = { slug, vocab }; window.__swVF = {};
+  window.__swVocab = { slug, vocab, vOpen }; window.__swVF = {};
   setTimeout(() => window.SSW.vFilter(), 0);
   return wrap(`
     ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Kosakata" }])}
+    ${vOpen ? demoBanner(`Kosakata: ${pack.vocab.filter(v => vOpen.has(v.id)).length} dari ${pack.vocab.length} dibuka (10%). Sisanya terkunci 🔒.`) : ""}
     <div class="sw-head compact"><div class="jp">VOCABULARY COLLECTION</div><h1>${esc(b.nama)} Vocabulary</h1>
       <p>${vocab.length} kata · ${st.hafal + st.kuasa} hafal · ${st.belum + st.ulang} perlu review · ${st.baru} baru</p></div>
     <div class="sw-tabs"><button class="${scope === "all" ? "on" : ""}" onclick="route('ssw-kosa/${slug}/all')">All Vocabulary</button>${chs.map(c => `<button class="${scope === c.id ? "on" : ""}" onclick="route('ssw-kosa/${slug}/${c.id}')">BAB ${c.no} Vocabulary</button>`).join("")}</div>
@@ -638,7 +645,8 @@ async function renderKosa([slug, scope = "all"]) {
       <div class="sw-vfg"><span id="sw-vcount" class="sw-muted"></span><button class="btn ghost" onclick="SSW.vHafal('flashcard')">🃏 Flashcard</button><button class="btn ghost" onclick="SSW.vHafal('multiple')">✅ Pilihan ganda</button><button class="btn ghost" onclick="SSW.vHafal('matching')">🔗 Matching</button><button class="btn ghost" onclick="SSW.vHafal('mixed')">🎲 Campur</button></div></div>` : ""}
     <div class="sw-vlist" id="sw-vlist"></div>`);
 }
-function vRow(v, P, slug) {
+function vRow(v, P, slug, locked) {
+  if (locked) return `<details class="sw-vrow demo-lock" onclick="event.preventDefault();DEMO.lockToast()"><summary><span class="jp k">${esc(v.kata)}</span><span class="m"><b>${esc(v.arti)}</b><small>${esc(v.kana)}${v.romaji ? " · " + esc(v.romaji) : ""}</small></span><i class="b">🔒</i></summary></details>`;
   const s = cardState(P.cards[v.id]);
   const lbl = { baru: "Baru", belum: "Belum hafal", ulang: "Perlu ulang", hafal: "Hafal", kuasa: "Dikuasai" }[s];
   const srcs = (v.src || []).map(id => `<a onclick="SSW.go('${slug}','${id}')">${esc(id.replace(/^b(\d+)s(\d+)$/, "BAB $1.$2"))}</a>`).join(" · ");
@@ -746,19 +754,21 @@ async function renderKuis([slug, quizId]) {
   const g = await gate(slug); if (g.err) return g.err;
   const { b, pack, P } = g;
   const chs = visibleChapters(b, pack);
-  const full = _dm() ? fullQuizzes(pack).slice(0, 1) : fullQuizzes(pack);   // demo: hanya 1 ujian penuh
-  const tema = _dm() ? [] : tema;
-  const row = (q, label) => { const r = P.quiz[q.id]; return `<button class="sw-qrow" onclick="route('ssw-kuis/${slug}/${q.id}')"><span><b>${label}</b><small>${q.items.length} soal</small></span><span class="sc ${r ? (r.best >= 60 ? "ok" : "ng") : ""}">${r ? r.best + "%" : "Belum"}</span></button>`; };
+  const full = fullQuizzes(pack);
+  const tema = pack.quiz.tema || [];
+  const qOpen = _dm() ? qOpenSet(pack) : null;   // demo: semua kuis tampil, hanya Bab 1 + 1 ujian penuh yang bisa dibuka
+  const qLk = (q) => !!qOpen && !qOpen.has(q.id);
+  const row = (q, label) => { const r = P.quiz[q.id]; return `<button class="sw-qrow${qLk(q) ? " demo-lock" : ""}" onclick="${qLk(q) ? "DEMO.lockToast()" : `route('ssw-kuis/${slug}/${q.id}')`}"><span><b>${label}</b><small>${q.items.length} soal</small></span><span class="sc ${r ? (r.best >= 60 ? "ok" : "ng") : ""}">${r ? r.best + "%" : "Belum"}</span></button>`; };
   if (!quizId) {
     return wrap(`
       ${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Kuis & Evaluasi" }])}
       <div class="sw-head compact"><div class="jp">試験センター</div><h1>Evaluasi — Examination Center</h1><p class="sw-label own">🏷️ Soal di sini adalah <b>latihan buatan Shirose</b> (bukan soal resmi ujian SSW), kecuali kuis yang diberi label <b>Soal resmi</b>.</p><p>Kuis tiap subbab, 3 kuis tiap bab, dan 10 ujian penuh (pilihan ganda, ○× dan soal bergambar). Skor terbaik tersimpan di akunmu.</p></div>
       ${chs.map(c => `<div class="sw-panel"><h2>BAB ${c.no} — ${esc(L(c.title, "id"))}</h2><div class="sw-qlist">${(pack.quiz.bab?.[c.id] || []).map((q, i) => row(q, `Kuis ${i + 1} · ${esc(L(q.title, "id"))}${q.title && q.title.jp ? ` <span class="jp sw-tsub">${rich(q.title.jp, { ruby: false })}</span>` : ""}`)).join("") || '<p class="sw-muted">Belum ada kuis.</p>'}</div></div>`).join("")}
       ${tema.length ? `<div class="sw-panel"><h2>Kuis Tema</h2><p class="sw-muted">${slug === "building-cleaning" ? "Satu kuis untuk satu topik: rute pembersihan, jenis lantai, karpet, dan pH." : "Latihan kosakata per kategori: arti ↔ kata Jepang (10 soal tiap kuis)."}</p><div class="sw-qlist">${pack.quiz.tema.map(q => row(q, esc(L(q.title, "id")))).join("")}</div></div>` : ""}
-      ${slug === "kaigo" ? "" : `<div class="sw-panel" ${_dm() ? "hidden" : ""}><h2>Tes Membaca Kosakata</h2><p class="sw-muted">Kanji dari kosakata buku → pilih bacaannya (hiragana/katakana). 15 soal acak.</p><div class="sw-qlist">${row({ id: "baca-kosakata", items: { length: 15 } }, "読み方テスト · Tes Membaca")}</div></div>`}
+      ${slug === "kaigo" ? "" : `<div class="sw-panel"><h2>Tes Membaca Kosakata</h2><p class="sw-muted">Kanji dari kosakata buku → pilih bacaannya (hiragana/katakana). 15 soal acak.</p><div class="sw-qlist">${row({ id: "baca-kosakata", items: { length: 15 } }, "読み方テスト · Tes Membaca")}</div></div>`}
       <div class="sw-panel"><h2>${EXAM_SPEC[slug] && EXAM_SPEC[slug].paket ? `Paket Soal (${EXAM_SPEC[slug].n} soal per paket, ${EXAM_SPEC[slug].paket} paket)` : "Ujian Penuh (semua bab)"}</h2>${EXAM_SPEC[slug] ? `<p class="sw-muted">${EXAM_SPEC[slug].info} Ujian di sini mengikuti format itu.</p>` : ""}<div class="sw-qlist">${full.map((q, i) => row(q, EXAM_SPEC[slug] && EXAM_SPEC[slug].paket ? `Paket Soal ${i + 1} · tanpa soal yang sama dengan paket lain` : `Ujian Penuh ${i + 1}`)).join("") || '<p class="sw-muted">Belum ada soal.</p>'}</div></div>`);
   }
-  const q = quizId === "baca-kosakata" ? (_dm() ? null : readingQuiz(pack)) : [...chs.flatMap(c => pack.quiz.bab?.[c.id] || []), ...full, ...tema].find(x => x.id === quizId);
+  const q = _dm() && quizId !== "baca-kosakata" && !qOpenSet(pack).has(quizId) ? null : quizId === "baca-kosakata" ? (_dm() ? null : readingQuiz(pack)) : [...chs.flatMap(c => pack.quiz.bab?.[c.id] || []), ...full, ...(pack.quiz.tema || [])].find(x => x.id === quizId);
   if (!q) return _dm() ? msgPage("🔒", "Kuis terkunci (Demo)", window.DEMO.MSG, `ssw-kuis/${slug}`) : msgPage("🧭", "Kuis tidak ditemukan", "Kuis ini tidak ada atau belum dipublikasikan.", `route('ssw-kuis/${slug}')`);
   const lang = getLang();
   const rnd = seeded(quizId + Date.now());
@@ -1163,7 +1173,11 @@ const SSW = window.SSW = {
   /* --- bab --- */
   setM(m) { setMode(m); document.querySelectorAll("#sw-mode button").forEach(b => b.classList.toggle("on", b.dataset.v === m)); },
   setL(l) { setLang(l); document.querySelectorAll("#sw-lang button").forEach(b => b.classList.toggle("on", b.dataset.v === l)); },
-  go(slug, subId) { route(`ssw-baca/${slug}/${subId}/${getMode()}/${getLang()}`); },
+  go(slug, subId) {
+    const dst = () => route(`ssw-baca/${slug}/${subId}/${getMode()}/${getLang()}`);
+    if (!_dm()) return dst();
+    return loadPack(slug).then(pack => { if (subOpen(pack, subId)) dst(); else window.DEMO.lockToast(); }).catch(dst);
+  },
   toggleRuby() { LSset("shirose-ssw-ruby", ruby() ? "0" : "1"); applyRuby(); const h = location.hash.replace(/^#/, ""); route(h); },
   async finish(slug, subId, nextId) {
     const P = await getProgress(slug);
@@ -1226,13 +1240,13 @@ const SSW = window.SSW = {
   },
   vFilter() {
     const box = document.getElementById("sw-vlist"); if (!box || !window.__swVocab) return;
-    const { slug, vocab } = window.__swVocab;
+    const { slug, vocab, vOpen } = window.__swVocab;
     const q = (document.getElementById("sw-q")?.value || "").toLowerCase().trim(), cat = document.getElementById("sw-cat")?.value || "";
     getProgress(slug).then(P => {
       const f = window.__swVF || {}, scr = f.scr || "", pos = f.pos || "";
       const rows = vocab.filter(v => (!cat || v.cat === cat) && (!q || [v.kata, v.kana, v.romaji, v.arti].some(x => String(x || "").toLowerCase().includes(q))) && (!scr || vScript(v.kata) === scr) && (!pos || (pos === "tek" ? v.tek : (v.pos || []).some(t => t.startsWith(pos)))));
       window.__swRows = rows; const cEl = document.getElementById("sw-vcount"); if (cEl) cEl.textContent = rows.length + " kata";
-      box.innerHTML = rows.length ? rows.map(v => vRow(v, P, slug)).join("") : '<div class="sw-muted sw-center">Tidak ada kata yang cocok.</div>';
+      box.innerHTML = rows.length ? rows.map(v => vRow(v, P, slug, !!vOpen && !vOpen.has(v.id))).join("") : '<div class="sw-muted sw-center">Tidak ada kata yang cocok.</div>';
     });
   },
   /* --- flashcard --- */
