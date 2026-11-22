@@ -121,43 +121,34 @@ const JEPIT = [
 /* ---------- PONI (slot baru, hanya cewek) — PNG raster + CSS filter recolor ---------- */
 const P1000 = { harga: 1000, _rp: 1 };   // _rp: lewati penyesuaian harga global (tetap 1.000 koin)
 
-/* ====== Recolor: hue-rotate + saturate + brightness dari base coklat ke warna target ====== */
-const _h2hsl = (hex) => {
-  const n = parseInt((hex || "").replace("#", "").padEnd(6, "0"), 16);
-  const r = (n >> 16) / 255, g = ((n >> 8) & 255) / 255, b = (n & 255) / 255;
-  const mx = Math.max(r, g, b), mn = Math.min(r, g, b); let h = 0, s = 0, l = (mx + mn) / 2;
-  if (mx !== mn) { const d = mx - mn; s = l > .5 ? d / (2 - mx - mn) : d / (mx + mn);
-    if (mx === r) h = ((g - b) / d + (g < b ? 6 : 0)) * 60; else if (mx === g) h = ((b - r) / d + 2) * 60; else h = ((r - g) / d + 4) * 60; }
-  return [h, s, l];
-};
+/* ====== Recolor: grayscale → gamma color-tint (vivid, tanpa blow-out) ====== */
 let _pf = 0;
-/* Base PNG color: #3a2518 → HSL ≈ (20°, 0.42, 0.16) */
-const _BH = 20, _BS = .42, _BL = .16;
+/* K tuned so mid-tone (gray≈0.16) → 100% target: K = 0.16^(-E) with E=0.45 → K≈2.28 */
+const _EXP = 0.45, _K = 2.28;
 const poniImg = (file, c, pos) => {
   const { x, y, w, h } = pos;
   const href = `assets/poni/${file}.png`;
   if (!c || c === "#3a2518") return `<image href="${href}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="xMidYMin meet"/>`;
-  const [th, ts, tl] = _h2hsl(c);
-  const dh = Math.round(th - _BH);
-  const ds = (ts / _BS || 1).toFixed(1);
-  const dl = Math.min(3.5, tl / _BL || 1).toFixed(1);
+  const n = parseInt((c || "").replace("#", "").padEnd(6, "0"), 16);
+  const tr = ((n >> 16) & 255) / 255, tg = ((n >> 8) & 255) / 255, tb = (n & 255) / 255;
+  const ar = (_K * tr).toFixed(2), ag = (_K * tg).toFixed(2), ab = (_K * tb).toFixed(2);
   const fid = "pf" + (++_pf);
-  return `<defs><filter id="${fid}" color-interpolation-filters="sRGB"><feColorMatrix type="hueRotate" values="${dh}"/><feColorMatrix type="saturate" values="${ds}"/><feComponentTransfer><feFuncR type="linear" slope="${dl}"/><feFuncG type="linear" slope="${dl}"/><feFuncB type="linear" slope="${dl}"/></feComponentTransfer></filter></defs><image href="${href}" x="${x}" y="${y}" width="${w}" height="${h}" filter="url(#${fid})" preserveAspectRatio="xMidYMin meet"/>`;
+  return `<defs><filter id="${fid}" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="gamma" amplitude="${ar}" exponent="${_EXP}" offset="0"/><feFuncG type="gamma" amplitude="${ag}" exponent="${_EXP}" offset="0"/><feFuncB type="gamma" amplitude="${ab}" exponent="${_EXP}" offset="0"/></feComponentTransfer></filter></defs><image href="${href}" x="${x}" y="${y}" width="${w}" height="${h}" filter="url(#${fid})" preserveAspectRatio="xMidYMin meet"/>`;
 };
 
 /* Posisi per gaya (koordinat SVG viewBox 0 0 400 500, disesuaikan agar pas di kepala karakter cewek) */
 const PP = { x: 138, y: 48, w: 124, h: 115 };   // default box
 const PONI = [
-  ["samping",         "Poni Samping Menyapu",  "common",  (c) => poniImg("pn_samping",          c, { x: 130, y: 44, w: 140, h: 148 }), P1000],
-  ["lurus",           "Poni Depan Lurus",       "common",  (c) => poniImg("pn_lurus",            c, { x: 140, y: 50, w: 120, h: 112 }), P1000],
-  ["curtain",         "Poni Curtain Kiri-Kanan","common",  (c) => poniImg("pn_curtain",          c, { x: 135, y: 46, w: 130, h: 125 }), P1000],
-  ["miring",          "Poni Miring Panjang",    "common",  (c) => poniImg("pn_miring",           c, { x: 130, y: 44, w: 140, h: 148 }), P1000],
-  ["curtain_panjang", "Poni Curtain Panjang",   "common",  (c) => poniImg("pn_curtain_panjang",  c, { x: 135, y: 50, w: 130, h: 118 }), P1000],
-  ["tipis",           "Poni Tipis (Wispy)",     "common",  (c) => poniImg("pn_tipis",            c, { x: 132, y: 46, w: 136, h: 140 }), P1000],
-  ["curtain2",        "Poni Curtain Pendek",    "common",  (c) => poniImg("pn_curtain2",         c, { x: 135, y: 48, w: 130, h: 125 }), P1000],
-  ["blunt",           "Poni Rata Tebal (Blunt)","common",  (c) => poniImg("pn_blunt",            c, { x: 132, y: 46, w: 136, h: 140 }), P1000],
-  ["hime",            "Poni Hime + Kepang",     "uncommon",(c) => poniImg("pn_hime",             c, { x: 132, y: 44, w: 136, h: 128 }), P1000],
-  ["pendek",          "Poni Pendek Gerigi",     "common",  (c) => poniImg("pn_pendek",           c, { x: 134, y: 44, w: 132, h: 148 }), P1000],
+  ["samping",         "Poni Samping Menyapu",  "common",  (c) => poniImg("pn_samping",          c, { x: 138, y: 48, w: 124, h: 130 }), P1000],
+  ["lurus",           "Poni Depan Lurus",       "common",  (c) => poniImg("pn_lurus",            c, { x: 142, y: 52, w: 116, h: 108 }), P1000],
+  ["curtain",         "Poni Curtain Kiri-Kanan","common",  (c) => poniImg("pn_curtain",          c, { x: 138, y: 48, w: 124, h: 118 }), P1000],
+  ["miring",          "Poni Miring Panjang",    "common",  (c) => poniImg("pn_miring",           c, { x: 136, y: 46, w: 128, h: 134 }), P1000],
+  ["curtain_panjang", "Poni Curtain Panjang",   "common",  (c) => poniImg("pn_curtain_panjang",  c, { x: 140, y: 50, w: 120, h: 110 }), P1000],
+  ["tipis",           "Poni Tipis (Wispy)",     "common",  (c) => poniImg("pn_tipis",            c, { x: 140, y: 50, w: 120, h: 118 }), P1000],
+  ["curtain2",        "Poni Curtain Pendek",    "common",  (c) => poniImg("pn_curtain2",         c, { x: 140, y: 50, w: 120, h: 112 }), P1000],
+  ["blunt",           "Poni Rata Tebal (Blunt)","common",  (c) => poniImg("pn_blunt",            c, { x: 140, y: 50, w: 120, h: 118 }), P1000],
+  ["hime",            "Poni Hime + Kepang",     "uncommon",(c) => poniImg("pn_hime",             c, { x: 144, y: 52, w: 112, h: 104 }), P1000],
+  ["pendek",          "Poni Pendek Gerigi",     "common",  (c) => poniImg("pn_pendek",           c, { x: 142, y: 50, w: 116, h: 118 }), P1000],
 ];
 
 /* ---------- ANTING (slot baru) — telinga di x=148 / 252, y=135 ---------- */
