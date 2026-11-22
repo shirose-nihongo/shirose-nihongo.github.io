@@ -1,4 +1,5 @@
 /* Service worker: network-first, cache fallback */
+// v416 — Bunpou: geser kiri/kanan, tabel Perubahan Kata Kerja (data/kk-forms.json).
 // v414 — hub siswa 3 tab (js/siswa-hub.js): Profil / Akses / Nilai.
 // v412 — landing: tema interaktif, pulau 20 bidang, buku scan multi-bidang, latihan menulis kanji.
 // v409 — landing baru (orbit karakter, statistik nyata, demo, pulau SSW, CTA WhatsApp).
