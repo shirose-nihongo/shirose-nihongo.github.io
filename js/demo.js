@@ -19,19 +19,23 @@
   const slice = (arr) => (on() && Array.isArray(arr)) ? arr.slice(0, cap(arr.length)) : arr;
   const MSG = "Fitur ini terkunci di akun Demo. Silakan hubungi admin untuk membeli akses penuh (WhatsApp), atau lihat harga akses di halaman Langganan.";
   const HARGA_URL = "./landing.html#langganan";   // bagian "Langganan" di landing = info paket & harga
-  /** Link WhatsApp admin: langganan.url (chat pribadi) → grup WA → kosong. */
-  const waUrl = () => {
-    const C = window.LANDING_CONFIG || {}, sub = C.langganan || {}, wa = C.whatsapp || {};
-    const u = String(sub.url || "").trim();
-    if (u) return u + (u.indexOf("?") < 0 ? "?" : "&") + "text=" + encodeURIComponent(sub.teks || "Halo admin Shirose Nihongo, saya mau membeli akses penuh. Mohon info paket dan harganya.");
-    return "https://wa.me/6285173269876?text=" + encodeURIComponent("Halo admin Shirose Nihongo, saya mau membeli akses penuh. Mohon info paket dan harganya.");   // chat pribadi admin (bukan grup)
+  const ADMIN_WA = "https://wa.me/6285173269876";   // chat pribadi admin (bukan grup)
+  const PAKET_DEFAULT = [
+    { id: "bulanan",  label: "📅 Paket Bulanan",  teks: "Halo admin Shirose Nihongo, saya mau membeli Paket BULANAN. Mohon info harga dan cara pembayarannya." },
+    { id: "lifetime", label: "♾️ Paket Lifetime", teks: "Halo admin Shirose Nihongo, saya mau membeli Paket LIFETIME. Mohon info harga dan cara pembayarannya." }
+  ];
+  const paketList = () => { const C = window.LANDING_CONFIG || {}; return (Array.isArray(C.paket) && C.paket.length) ? C.paket : PAKET_DEFAULT; };
+  const adminUrl = () => { const C = window.LANDING_CONFIG || {}; return String((C.langganan && C.langganan.url) || ADMIN_WA).trim(); };
+  /** Link WhatsApp admin dengan pesan sesuai paket yang dipilih (+ konteks: halaman yang terkunci). */
+  const waUrl = (teks) => {
+    const u = adminUrl();
+    const ctx = location.hash ? ` (dari akun Demo, halaman ${location.hash})` : " (dari akun Demo)";
+    return u + (u.indexOf("?") < 0 ? "?" : "&") + "text=" + encodeURIComponent((teks || paketList()[0].teks) + ctx);
   };
-  const ctaHtml = () => {
-    const u = waUrl();
-    return `<div class="demo-cta">` +
-      (u ? `<a class="btn gold" href="${esc(u)}" target="_blank" rel="noopener noreferrer">💬 Hubungi Admin (WhatsApp)</a>` : "") +
+  const ctaHtml = () =>
+    `<div class="demo-cta">` +
+      paketList().map((p) => `<a class="btn gold" href="${esc(waUrl(p.teks))}" target="_blank" rel="noopener noreferrer">${esc(p.label)}</a>`).join("") +
       `<a class="btn ghost" href="${HARGA_URL}" target="_blank" rel="noopener">💰 Lihat harga akses</a></div>`;
-  };
   /** Dipanggil saat tombol/kartu terkunci ditekan: popup ajakan beli akses. */
   const lockToast = (extra) => {
     const old = document.getElementById("demo-lock-modal"); if (old) old.remove();
@@ -39,7 +43,7 @@
     m.id = "demo-lock-modal";
     m.innerHTML = `<div class="demo-lock-box"><div class="demo-lock-ico">🔒</div>` +
       `<h3>Fitur terkunci di akun Demo</h3>` +
-      `<p>${esc(extra || "Silakan hubungi admin untuk membeli akses penuh, atau lihat harga akses di bawah.")}</p>` +
+      `<p>${esc(extra || "Pilih paket di bawah untuk membeli akses penuh lewat chat admin, atau lihat harga akses.")}</p>` +
       ctaHtml() + `<button class="btn ghost" data-x>Tutup</button></div>`;
     m.addEventListener("click", (e) => { if (e.target === m || (e.target.closest && e.target.closest("[data-x]"))) m.remove(); });
     document.body.appendChild(m);
@@ -48,7 +52,7 @@
 
   /** Banner kecil di atas daftar materi: "Demo: tampil X dari Y". */
   const note = (shown, total, what) => !on() ? "" :
-    `<div class="demo-note">🎁 <b>Akun Demo</b> — ${esc(what || "materi")}: ${shown} dari ${total} dibuka (10%). Sisanya terkunci.<br><small>Mau akses penuh? Hubungi admin untuk membeli akses.</small>${ctaHtml()}</div>`;
+    `<div class="demo-note">🎁 <b>Akun Demo</b> — ${esc(what || "materi")}: ${shown} dari ${total} dibuka (10%). Sisanya terkunci.<br><small>Mau akses penuh? Pilih paket lalu chat admin.</small>${ctaHtml()}</div>`;
 
   /** Panel "terkunci" untuk halaman penuh. */
   const lockedPanel = (title, backRoute, extra) =>
