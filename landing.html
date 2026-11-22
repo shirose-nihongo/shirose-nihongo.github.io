@@ -302,6 +302,11 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 .sheet .sh-o button.ok{border-color:#10b981;background:#e8fbf3}
 .sheet .sh-o button.no{border-color:#ef4444;background:#fdecec}
 .sheet .sh-w{margin-top:10px;font-size:13px;color:#6b5a66;background:#fff0f4;border-radius:8px;padding:8px 10px;font-family:var(--font-sans)}
+#sak{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+#sak i{position:absolute;top:-8vh;width:1em;height:1em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0.3' y2='1'%3E%3Cstop offset='0' stop-color='%23fff0f6'/%3E%3Cstop offset='1' stop-color='%23ff9fc8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12 22C5 18 3 10 8 4c1.5-1.5 3-1 4 1 1-2 2.5-2.5 4-1 5 6 3 14-4 18z' fill='url%28%23g%29'/%3E%3Cpath d='M12 21c-.6-5 0-9 .5-12' stroke='%23fff' stroke-opacity='.45' stroke-width='.6' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 1px 2px rgba(240,100,160,.35));animation:sakfall linear infinite}
+#sak i.p1{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0.3' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd3e6'/%3E%3Cstop offset='1' stop-color='%23f06aa6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12 22C5 18 3 10 8 4c1.5-1.5 3-1 4 1 1-2 2.5-2.5 4-1 5 6 3 14-4 18z' fill='url%28%23g%29'/%3E%3Cpath d='M12 21c-.6-5 0-9 .5-12' stroke='%23fff' stroke-opacity='.45' stroke-width='.6' fill='none'/%3E%3C/svg%3E")}
+@keyframes sakfall{0%{transform:translate(0,0) rotate(0)}50%{transform:translate(40px,55vh) rotate(180deg)}100%{transform:translate(-20px,112vh) rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#sak{display:none}}
 </style>
 </head>
 <body>
@@ -983,5 +988,7 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
   render();
 })();
 </script>
+<div id="sak" aria-hidden="true"></div>
+<script>(function(){var w=document.getElementById('sak'),h='',i,r=function(a,b){return a+Math.random()*(b-a)};try{if(localStorage.getItem('shirose-anim-theme')==='0')return}catch(e){}for(i=0;i<22;i++)h+='<i class="p'+(i%2)+'" style="left:'+r(0,100).toFixed(1)+'%;font-size:'+r(14,26).toFixed(0)+'px;animation-duration:'+r(8,15).toFixed(1)+'s;animation-delay:-'+r(0,14).toFixed(1)+'s;opacity:.85"></i>';w.innerHTML=h})();</script>
 </body>
 </html>
