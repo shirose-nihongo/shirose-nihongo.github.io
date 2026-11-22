@@ -17,17 +17,42 @@
   const on = () => { const s = state(); const k = s.siswa && String(s.siswa.kelas || "").trim().toLowerCase(); return !!(s.user && s.siswa && (s.siswa.isDemo === true || k === "demo") && (s.siswa.role || "student") === "student"); };
   const cap = (n) => Math.max(1, Math.ceil((Number(n) || 0) * PCT));
   const slice = (arr) => (on() && Array.isArray(arr)) ? arr.slice(0, cap(arr.length)) : arr;
-  const MSG = "Fitur ini terkunci di akun Demo. Minta akun lengkap ke guru/moderator untuk membuka semua materi.";
-  const lockToast = (extra) => { if (window.toast) window.toast("🔒 " + (extra || MSG)); };
+  const MSG = "Fitur ini terkunci di akun Demo. Silakan hubungi admin untuk membeli akses penuh (WhatsApp), atau lihat harga akses di halaman Langganan.";
+  const HARGA_URL = "./landing.html#langganan";   // bagian "Langganan" di landing = info paket & harga
+  /** Link WhatsApp admin: langganan.url (chat pribadi) → grup WA → kosong. */
+  const waUrl = () => {
+    const C = window.LANDING_CONFIG || {}, sub = C.langganan || {}, wa = C.whatsapp || {};
+    const u = String(sub.url || "").trim();
+    if (u) return u + (u.indexOf("?") < 0 ? "?" : "&") + "text=" + encodeURIComponent(sub.teks || "Halo admin Shirose Nihongo, saya mau membeli akses penuh. Mohon info paket dan harganya.");
+    return String(wa.url || "").trim();
+  };
+  const ctaHtml = () => {
+    const u = waUrl();
+    return `<div class="demo-cta">` +
+      (u ? `<a class="btn gold" href="${esc(u)}" target="_blank" rel="noopener noreferrer">💬 Hubungi Admin (WhatsApp)</a>` : "") +
+      `<a class="btn ghost" href="${HARGA_URL}" target="_blank" rel="noopener">💰 Lihat harga akses</a></div>`;
+  };
+  /** Dipanggil saat tombol/kartu terkunci ditekan: popup ajakan beli akses. */
+  const lockToast = (extra) => {
+    const old = document.getElementById("demo-lock-modal"); if (old) old.remove();
+    const m = document.createElement("div");
+    m.id = "demo-lock-modal";
+    m.innerHTML = `<div class="demo-lock-box"><div class="demo-lock-ico">🔒</div>` +
+      `<h3>Fitur terkunci di akun Demo</h3>` +
+      `<p>${esc(extra || "Silakan hubungi admin untuk membeli akses penuh, atau lihat harga akses di bawah.")}</p>` +
+      ctaHtml() + `<button class="btn ghost" data-x>Tutup</button></div>`;
+    m.addEventListener("click", (e) => { if (e.target === m || (e.target.closest && e.target.closest("[data-x]"))) m.remove(); });
+    document.body.appendChild(m);
+  };
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   /** Banner kecil di atas daftar materi: "Demo: tampil X dari Y". */
   const note = (shown, total, what) => !on() ? "" :
-    `<div class="demo-note">🎁 <b>Akun Demo</b> — ${esc(what || "materi")}: ${shown} dari ${total} dibuka (10%). Sisanya terkunci.</div>`;
+    `<div class="demo-note">🎁 <b>Akun Demo</b> — ${esc(what || "materi")}: ${shown} dari ${total} dibuka (10%). Sisanya terkunci.<br><small>Mau akses penuh? Hubungi admin untuk membeli akses.</small>${ctaHtml()}</div>`;
 
   /** Panel "terkunci" untuk halaman penuh. */
   const lockedPanel = (title, backRoute, extra) =>
-    `<div class="panel"><h2>🔒 ${esc(title || "Terkunci")}</h2><div class="empty"><div class="emoji">🔒</div>${esc(extra || MSG)}</div>` +
+    `<div class="panel"><h2>🔒 ${esc(title || "Terkunci")}</h2><div class="empty"><div class="emoji">🔒</div>${esc(extra || MSG)}</div>` + ctaHtml() +
     `<button class="btn ghost" onclick="route('${backRoute || "home"}')">← Kembali</button></div>`;
 
   /** Pita DEMO tetap di atas halaman (dipanggil dari onAuth). */
@@ -40,7 +65,7 @@
       const app = document.getElementById("app");
       if (app && app.parentNode) app.parentNode.insertBefore(el, app); else document.body.prepend(el);
     }
-    el.innerHTML = `🎁 <b>MODE DEMO</b> · semua materi dibuka sebatas 10% — <span>minta akun lengkap ke guru untuk akses penuh</span>`;
+    el.innerHTML = `🎁 <b>MODE DEMO</b> · semua materi dibuka sebatas 10% — <span>hubungi admin untuk membeli akses penuh · <a href="${HARGA_URL}" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">lihat harga</a></span>`;
   }
 
   // Gaya (disuntik sekali; tidak perlu mengubah file CSS lain).
@@ -51,9 +76,14 @@
       "#demo-bar{background:linear-gradient(90deg,#f59e0b,#ef4444);color:#fff;text-align:center;font-size:12.5px;padding:6px 12px;position:sticky;top:0;z-index:50}" +
       "#demo-bar span{opacity:.92}" +
       ".demo-note{background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.45);border-radius:10px;padding:8px 12px;margin:0 0 10px;font-size:13px}" +
-      ".demo-lock{opacity:.5;filter:grayscale(.6);cursor:not-allowed!important}";
+      ".demo-lock{opacity:.5;filter:grayscale(.6);cursor:pointer!important}" +
+      ".demo-cta{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0}" +
+      ".demo-cta .btn{text-decoration:none}" +
+      "#demo-lock-modal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px}" +
+      ".demo-lock-box{background:var(--card,#1e1b2e);color:var(--text,#fff);border-radius:16px;padding:22px 18px;max-width:380px;width:100%;text-align:center}" +
+      ".demo-lock-ico{font-size:40px}.demo-lock-box h3{margin:6px 0}.demo-lock-box p{font-size:14px;opacity:.85}";
     document.head.appendChild(st);
   }
 
-  window.DEMO = { PCT, on, cap, slice, MSG, lockToast, note, lockedPanel, bar };
+  window.DEMO = { PCT, on, cap, slice, MSG, lockToast, note, lockedPanel, bar, waUrl };
 })();

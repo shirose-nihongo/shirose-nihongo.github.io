@@ -108,7 +108,7 @@ export async function renderJlpt(params = []) {
     if (lv !== cur) { lv = cur; jenis = undefined; pkgId = undefined; }
   }
   try {
-    if (pkgId && await demoTerkunci(lv, jenis, pkgId)) return window.DEMO.lockedPanel("Paket terkunci (Demo)", `jlpt/${lv}/${jenis}`, "Akun Demo hanya membuka 10% paket tiap jenis latihan. Minta akun lengkap ke guru/moderator.");
+    if (pkgId && await demoTerkunci(lv, jenis, pkgId)) return window.DEMO.lockedPanel("Paket terkunci (Demo)", `jlpt/${lv}/${jenis}`, "Akun Demo hanya membuka 10% paket tiap jenis latihan. Hubungi admin untuk membeli akses penuh.");
     if (sesi && !sesi.selesai && pkgId && sesi.pkgId === pkgId) return await mulaiAtauLanjut(sesi);
     if (!lv) return await viewLevel(sesi);
     if (!LV.includes(lv)) return viewLevel(sesi);
