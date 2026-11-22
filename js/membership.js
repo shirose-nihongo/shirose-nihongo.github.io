@@ -67,6 +67,17 @@
       "@media(prefers-reduced-motion:reduce){.mb-isl svg{animation:none}}",
       ".mb-name{font-size:20px;font-weight:800;line-height:1.2;color:#fff}",
       ".mb-d{font-size:14px;color:#cdb8d3;line-height:1.5}",
+      ".mb-det{margin:4px 0 2px;font-size:13px;color:#e7cfe0;line-height:1.5;background:rgba(10,6,20,.28);border-radius:12px;padding:10px 12px}",
+      ".mb-det b{display:block;margin-bottom:3px;color:#ffb7c5;font-size:12px;letter-spacing:.08em;text-transform:uppercase}",
+      ".mb-det ul{margin:0;padding-left:17px}.mb-det li{margin:3px 0}",
+      /* kartu besar (JFT-Basic): selebar daftar, huruf lebih besar, harga di samping isi */
+      ".mb-k.besar{grid-column:1/-1;padding:26px}",
+      ".mb-k.besar .mb-big{font-size:clamp(46px,9vw,68px)}",
+      ".mb-k.besar .mb-sub{font-size:20px}",
+      ".mb-k.besar .mb-d{font-size:16px}",
+      ".mb-k.besar .mb-det{font-size:15px;padding:14px 16px}",
+      ".mb-k.besar .mb-det li{margin:6px 0}",
+      "@media(min-width:760px){.mb-k.besar .mb-opts{flex-direction:row}.mb-k.besar .mb-opt{flex:1}}",
       ".mb-opts{display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:10px}",
       ".mb-opt{display:flex;flex-direction:column;gap:6px;background:rgba(10,6,20,.45);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px 12px}",
       ".mb-opt.na{background:transparent;border-style:dashed;color:#9c8aa6;font-size:13px;align-items:center;justify-content:center;min-height:44px}",
@@ -105,7 +116,7 @@
   var ART = null;   // modul gambar pulau SSW (js/ssw-art.js), dimuat sekali dan hanya untuk tab SSW
   function loadArt() { if (!ART) { try { ART = import("./ssw-art.js").catch(function () { return null; }); } catch (e) { ART = Promise.resolve(null); } } return ART; }
   function kotak(p, prefix) {
-    var nama = (prefix || "") + p.nama, k = el("div", "mb-k");
+    var nama = (prefix || "") + p.nama, k = el("div", "mb-k" + (p.besar ? " besar" : ""));
     if (p.warna) k.style.setProperty("--ac", p.warna);
     if (p.wm) k.appendChild(el("div", "mb-wm", p.wm));
     if (p.tema) {
@@ -118,6 +129,10 @@
       k.appendChild(el("div", "mb-sub", p.nama));
     }
     var d = p.ket || p.desc; if (d) k.appendChild(el("div", "mb-d", d));
+    if (p.rincian && p.rincian.length) {
+      var det = el("div", "mb-det"); det.appendChild(el("b", null, "Isi paket"));
+      var dl = el("ul"); p.rincian.forEach(function (t) { dl.appendChild(el("li", null, t)); }); det.appendChild(dl); k.appendChild(det);
+    }
     var o = el("div", "mb-opts");
     o.appendChild(optCell(nama, "Bulanan", p.bulanan));
     o.appendChild(optCell(nama, "Lifetime", p.lifetime));
