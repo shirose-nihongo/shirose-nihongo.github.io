@@ -17,8 +17,7 @@
   const on = () => { const s = state(); const k = s.siswa && String(s.siswa.kelas || "").trim().toLowerCase(); return !!(s.user && s.siswa && (s.siswa.isDemo === true || k === "demo") && (s.siswa.role || "student") === "student"); };
   const cap = (n) => Math.max(1, Math.ceil((Number(n) || 0) * PCT));
   const slice = (arr) => (on() && Array.isArray(arr)) ? arr.slice(0, cap(arr.length)) : arr;
-  const MSG = "Fitur ini terkunci di akun Demo. Silakan hubungi admin untuk membeli akses penuh (WhatsApp), atau lihat harga akses di halaman Langganan.";
-  const HARGA_URL = "./landing.html#langganan";   // bagian "Langganan" di landing = info paket & harga
+  const MSG = "Fitur ini terkunci di akun Demo. Silakan hubungi admin untuk membeli akses penuh (WhatsApp), atau lihat daftar harga akses.";
   const ADMIN_WA = "https://wa.me/6285173269876";   // chat pribadi admin (bukan grup)
   const PAKET_DEFAULT = [
     { id: "bulanan",  label: "📅 Paket Bulanan",  teks: "Halo admin Shirose Nihongo, saya mau membeli Paket BULANAN. Mohon info harga dan cara pembayarannya." },
@@ -32,10 +31,16 @@
     const ctx = location.hash ? ` (dari akun Demo, halaman ${location.hash})` : " (dari akun Demo)";
     return u + (u.indexOf("?") < 0 ? "?" : "&") + "text=" + encodeURIComponent((teks || paketList()[0].teks) + ctx);
   };
+  /** Cadangan bila daftar harga (membership.js) tidak termuat: chat pribadi admin, bukan landing. */
+  const hargaUrl = () => {
+    const C = window.LANDING_CONFIG || {}, u = adminUrl();
+    const t = (C.langganan && C.langganan.teks) || "Halo admin Shirose Nihongo, saya mau tanya harga paket berlangganan.";
+    return u + (u.indexOf("?") < 0 ? "?" : "&") + "text=" + encodeURIComponent(t + " (dari akun Demo)");
+  };
   const ctaHtml = () =>
     `<div class="demo-cta">` +
       paketList().map((p) => `<a class="btn gold" href="${esc(waUrl(p.teks))}" target="_blank" rel="noopener noreferrer">${esc(p.label)}</a>`).join("") +
-      `<a class="btn ghost" href="${HARGA_URL}" data-open-pricing target="_blank" rel="noopener">💰 Lihat harga akses</a></div>`;
+      `<a class="btn ghost" href="${esc(hargaUrl())}" data-open-pricing target="_blank" rel="noopener noreferrer">💰 Lihat harga akses</a></div>`;
   /** Dipanggil saat tombol/kartu terkunci ditekan: popup ajakan beli akses. */
   const lockToast = (extra) => {
     const old = document.getElementById("demo-lock-modal"); if (old) old.remove();
@@ -69,7 +74,7 @@
       const app = document.getElementById("app");
       if (app && app.parentNode) app.parentNode.insertBefore(el, app); else document.body.prepend(el);
     }
-    el.innerHTML = `🎁 <b>MODE DEMO</b> · semua materi dibuka sebatas 10% — <span>hubungi admin untuk membeli akses penuh · <a href="${HARGA_URL}" data-open-pricing target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">lihat harga</a></span>`;
+    el.innerHTML = `🎁 <b>MODE DEMO</b> · semua materi dibuka sebatas 10% — <span>hubungi admin untuk membeli akses penuh · <a href="${esc(hargaUrl())}" data-open-pricing target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">lihat harga</a></span>`;
   }
 
   // Gaya (disuntik sekali; tidak perlu mengubah file CSS lain).
