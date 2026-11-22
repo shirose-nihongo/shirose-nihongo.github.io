@@ -37,7 +37,7 @@ window.LANDING_CONFIG = {
       { nama: "JFT-Basic Complete Access", big: "JFT", warna: "#22d3ee", wm: "試", desc: "Seluruh materi Irodori dalam satu membership.", ket: "Termasuk seluruh materi Irodori: Paket 1 (Bab 1–6), Paket 2 (Bab 7–12), Paket 3 (Bab 13–18). Ketiga paket menjadi satu membership.", bulanan: 50000, lifetime: 250000 }
     ],
     ssw: [
-      { nama: "Building Cleaning", tema: "building", jp: "ビルクリーニング", ket: "+ Bonus latihan Mensetsu Building Cleaning.", bulanan: 50000, lifetime: 250000 },
+      { nama: "Building Cleaning + Mensetsu", tema: "building", jp: "ビルクリーニング", bulanan: 50000, lifetime: 250000 },
       { nama: "Kaigo", tema: "kaigo", jp: "介護", ket: "Mencakup materi Bahasa Indonesia dan Bahasa Jepang.", bulanan: 50000, lifetime: 250000 },
       { nama: "Food Manufacturing", tema: "factory", jp: "飲食料品製造業", bulanan: 50000, lifetime: 250000 },
       { nama: "Food Service", tema: "restaurant", jp: "外食業", bulanan: 50000, lifetime: 250000 },
