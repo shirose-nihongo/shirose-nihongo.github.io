@@ -345,11 +345,9 @@ body.pick-mode .lvl-pill-group{visibility:hidden;}
   .topbar .th-wrap{display:contents;}
   .topbar .th-wrap > #mb-btn{order:5;}
   .topbar .th-wrap > .th-btn:not(#mb-btn){display:none;}   /* tema/font/simpan: dibuka lewat tombol ⚙ Pengaturan */
-  .topbar .th-wrap > #mb-btn .th-txt{display:none;}   /* Berlangganan: ikon saja di HP agar topbar cukup 2 baris */
   .topbar .th-wrap > #mb-btn{padding:6px 9px; min-height:34px;}
-  .topbar-right .chip{padding:3px 8px; min-height:32px; font-size:13px; gap:4px;}
+  .topbar-right .chip{display:none;}   /* bintang/koin/streak: sudah ada di kartu profil, disembunyikan di HP */
   .topbar .sosmed-top a, .topbar a[class*="sm-"]{transform:scale(.9);}
-  @media (max-width:380px){ .mset-txt{display:none;} .mset-btn{padding:6px 11px; font-size:15px;} }
   .mset-wrap{display:block; order:5; position:static;}
   .mset-btn{display:inline-flex; align-items:center; gap:4px; padding:6px 10px; font-size:13px; min-height:34px;}
   .mset-panel{display:none; position:absolute; left:8px; right:8px; top:calc(100% + 4px); z-index:81; background:var(--navy-2); border:1px solid var(--border-light); border-radius:14px; padding:6px; box-shadow:0 12px 30px rgba(0,0,0,.45);}
