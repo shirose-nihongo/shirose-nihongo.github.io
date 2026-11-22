@@ -1462,6 +1462,7 @@ html{overflow-x:hidden;}
 <!-- ============ TOASTS ============ -->
 <div class="toast-wrap" id="toasts"></div>
 <script src="./js/themes.js?v=20261118c"></script>
+<script src="./js/demo.js?v=20261122a"></script>
 
 <!-- ============ LEVEL UP OVERLAY ============ -->
 <div class="levelup-overlay" id="levelup">
@@ -2145,7 +2146,12 @@ window.awardKoin = async (d, alasan) => {
 };
 
 /* ========== DATA LOAD (cached) ========== */
-async function loadMateri(tipe, lvl){
+// Akun demo hanya melihat 10% pertama (window.DEMO, js/demo.js); {full:true} = bank penuh untuk mesin ujian.
+async function loadMateri(tipe, lvl, opts){
+  const d = await _loadMateriCached(tipe, lvl);
+  return (window.DEMO && window.DEMO.on() && !(opts && opts.full)) ? window.DEMO.slice(d) : d;
+}
+async function _loadMateriCached(tipe, lvl){
   const key = `${tipe}-${lvl}`;
   if (state.materi[tipe][lvl]) return state.materi[tipe][lvl];
   window.__mPending = window.__mPending || {};
@@ -3007,6 +3013,7 @@ async function renderMateriList(tipe){
       <div class="search-bar">
         <input type="text" id="search-${tipe}" placeholder="Cari di semua nomor..." oninput="filterMateri('${tipe}', this.value)"/>
       </div>
+      ${window.DEMO && window.DEMO.on() ? window.DEMO.note(data.length, (await loadMateri(tipe, state.level, { full: true })).length, label) : ""}
       ${posUI}
       ${tipe === "kosakata" && data.some(x => x.km) ? `<div class="vf-row">Bentuk kata kerja: ${_vfBtn("setVerbFormMateri")}</div>` : ""}
       ${displayBar("materi")}
@@ -4666,11 +4673,13 @@ function renderHafalanDone(){
  */
 async function renderUjianList(){
   const kategori = state.user ? await FB.listKategori(state.level) : [];
-  const pub = kategori.filter(k => k.publish);
+  const pubAll = kategori.filter(k => k.publish);
+  const pub = window.DEMO ? window.DEMO.slice(pubAll) : pubAll;   // demo: 10% kategori pertama
 
   return `
     <div class="panel">
       <h2>📝 Ujian ${state.level.toUpperCase()}</h2>
+      ${window.DEMO ? window.DEMO.note(pub.length, pubAll.length, "kategori ujian") : ""}
       ${String(state.level).startsWith("ir") ? "" : `<div class="hub-card jx-home" onclick="route('jlpt/${state.level}')" style="margin-bottom:14px;">
         <div class="ico">🏯</div>
         <div class="info"><div class="ttl">JLPT Center ${state.level.toUpperCase()}</div><div class="sub">10 Full Exam + 60 paket latihan (Kanji · Kotoba · Bunpou) dengan timer &amp; pembahasan lengkap</div></div>
@@ -4735,6 +4744,11 @@ function _startUjianTimer(){
 async function renderUjian(params){
   const kategoriId = params[0];
   if (!kategoriId){ _stopUjianTimer(); return renderUjianList(); }
+  // Akun demo: hanya kategori yang lolos 10% di daftar ujian.
+  if (window.DEMO && window.DEMO.on()){
+    const ok = state.user ? (await FB.listKategori(state.level)).filter(k => k.publish) : [];
+    if (!window.DEMO.slice(ok).some(k => k.id === kategoriId)) return window.DEMO.lockedPanel("Ujian terkunci", "ujian");
+  }
 
   // Guest juga boleh ngerjain ujian — kalau belum sign-in sama sekali,
   // auto-coba anonymous sign-in. Kalau anonymous provider belum di-enable
@@ -6089,6 +6103,7 @@ FB.onAuth(async (user, siswa) => {
   _authFiredOnce = true;
 
   state.user = user; state.siswa = siswa;
+  if (window.DEMO) window.DEMO.bar();   // pita "MODE DEMO" (hanya tampil untuk akun demo)
   try { const b = siswa?.karakter?.body; if (b) setBody(b); } catch(e) {}
   try { const bk = siswa?.karakter?.bentuk; if (bk) setBentuk(bk); } catch(e) {}
   if (user) { try { cekLoginReward(); } catch(e) {} }   // reward login hanya muncul SESUDAH login
