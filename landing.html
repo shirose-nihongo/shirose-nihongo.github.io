@@ -290,18 +290,6 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 
-.sheet{position:relative;background:#fffaf3;color:#2a2230;border-radius:10px;padding:18px 18px 14px;font-family:var(--font-jp);box-shadow:inset 0 0 0 1px #e8dccb,0 10px 30px rgba(0,0,0,.35);overflow:hidden}
-.sheet::after{content:"";position:absolute;left:0;right:0;top:-30%;height:30%;background:linear-gradient(to bottom,transparent,rgba(255,183,197,.55),transparent);opacity:0;pointer-events:none}
-.sheet.scan::after{animation:scanline .9s ease-out}
-@keyframes scanline{0%{top:-30%;opacity:1}100%{top:110%;opacity:1}}
-.sheet .sh-h{display:flex;justify-content:space-between;font-size:12px;color:#8a7a86;border-bottom:1px dashed #d9c9bb;padding-bottom:6px;margin-bottom:10px}
-.sheet .sh-p{font-size:15.5px;line-height:1.9;white-space:pre-wrap}
-.sheet .sh-q{margin-top:12px;font-weight:800;font-size:15px}
-.sheet .sh-o{display:grid;gap:6px;margin-top:8px}
-.sheet .sh-o button{text-align:left;font:inherit;font-size:14.5px;padding:8px 12px;border-radius:8px;border:1.5px solid #e3d3c4;background:#fff;color:#2a2230;cursor:pointer}
-.sheet .sh-o button.ok{border-color:#10b981;background:#e8fbf3}
-.sheet .sh-o button.no{border-color:#ef4444;background:#fdecec}
-.sheet .sh-w{margin-top:10px;font-size:13px;color:#6b5a66;background:#fff0f4;border-radius:8px;padding:8px 10px;font-family:var(--font-sans)}
 #sak{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:1}
 #sak i{position:absolute;top:-8vh;width:1em;height:1em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0.3' y2='1'%3E%3Cstop offset='0' stop-color='%23fff0f6'/%3E%3Cstop offset='1' stop-color='%23ff9fc8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12 22C5 18 3 10 8 4c1.5-1.5 3-1 4 1 1-2 2.5-2.5 4-1 5 6 3 14-4 18z' fill='url%28%23g%29'/%3E%3Cpath d='M12 21c-.6-5 0-9 .5-12' stroke='%23fff' stroke-opacity='.45' stroke-width='.6' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 1px 2px rgba(240,100,160,.35));animation:sakfall linear infinite}
 #sak i.p1{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0.3' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd3e6'/%3E%3Cstop offset='1' stop-color='%23f06aa6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12 22C5 18 3 10 8 4c1.5-1.5 3-1 4 1 1-2 2.5-2.5 4-1 5 6 3 14-4 18z' fill='url%28%23g%29'/%3E%3Cpath d='M12 21c-.6-5 0-9 .5-12' stroke='%23fff' stroke-opacity='.45' stroke-width='.6' fill='none'/%3E%3C/svg%3E")}
@@ -432,24 +420,6 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       </div>
     </div>
 
-    <!-- 4. CONTOH MATERI JLPT (scan + ganti bahasa) -->
-    <div class="show rv">
-      <div class="txt">
-        <span class="badge">Contoh materi JLPT</span>
-        <h3>Scan lembar soal, lalu ganti bahasanya</h3>
-        <p>Lihat contoh lembar soal JLPT N5 sampai N1. Ketuk Scan untuk membaca lembarnya, lalu pindah antara bahasa Jepang dan bahasa Indonesia untuk melihat teks asli atau terjemahannya.</p>
-        <ul class="tick">
-          <li>Contoh bacaan untuk tiap level N5, N4, N3, N2, N1</li>
-          <li>Ganti 日本語 / Indonesia dengan satu ketukan</li>
-          <li>Jawab soalnya, lalu baca pembahasannya</li>
-        </ul>
-      </div>
-      <div class="demo" id="jx-demo">
-        <div class="demo-h"><div class="seg" id="jx-lv" role="group" aria-label="Level"></div><div class="seg" id="jx-lang" style="margin-left:auto" role="group" aria-label="Bahasa"><button data-l="jp" aria-pressed="true">日本語</button><button data-l="id" aria-pressed="false">Indonesia</button></div></div>
-        <div class="sheet" id="jx-sheet"><div class="sh-h"><span id="jx-t"></span><span>読解</span></div><div class="sh-p" id="jx-p"></div><div class="sh-q" id="jx-q"></div><div class="sh-o" id="jx-o"></div><div class="sh-w" id="jx-w" hidden></div></div>
-        <div class="qz-bar" style="margin-top:12px"><span class="pos">Contoh dari paket Dokkai 01</span><button class="btn primary sm" id="jx-scan">📷 Scan lembar</button></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -957,38 +927,6 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
     document.querySelectorAll(".rv").forEach(function(e){ e.classList.add("in"); });
     startFc(); startBk(); startQz();
   }
-})();
-</script>
-<script>
-/* ---- contoh materi JLPT: scan + ganti bahasa (soal asli: jlpt/nX/dokkai-01.v2.json) ---- */
-(function(){
-  var $ = function(s){return document.querySelector(s)};
-  var D = {"n5": {"jp": "わたしは きのう 友だちと カラオケに 行きました。友だちは 日本の うたを 上手に うたいました。つぎは 日本の うたも れんしゅうして、友だちと いっしょに うたいたいです。わたしは まだ 日本の うたを しりませんから、国の うたを うたいました。", "id": "Kemarin saya karaoke bersama teman. Teman menyanyikan lagu Jepang dengan bagus. Lain kali saya juga akan berlatih lagu Jepang dan ingin bernyanyi bersama teman. Saya belum tahu lagu Jepang, jadi saya menyanyikan lagu negara saya.", "q": "「わたし」は カラオケで 何を うたいましたか。", "o": ["国の うた", "えいごの うた", "何も うたいませんでした", "日本の うた"], "a": 0, "w": "Belum tahu lagu Jepang, jadi menyanyikan lagu negaranya."}, "n4": {"jp": "私は毎週日曜日に、近くの川のそばを掃除するボランティアをしています。毎回二十人ぐらい集まって、一時間ほどごみを拾います。最近はごみが少なくなってきて、川で遊ぶ子どもが増えました。ボランティアの日は、朝六時に起きなければなりませんが、終わったあとの朝ご飯が楽しみです。それを見ると、続けてよかったと思います。<br>これからも続けていきたいと思います。", "id": "Setiap Minggu saya ikut relawan membersihkan tepi sungai dekat rumah; sekitar 20 orang berkumpul dan memungut sampah sekitar satu jam. Belakangan sampah berkurang dan anak-anak yang bermain di sungai bertambah. Di hari relawan saya harus bangun pukul enam pagi, tetapi menanti sarapan setelah selesai. Melihat itu saya merasa senang sudah terus melakukannya. Saya ingin terus melanjutkannya.", "q": "「私」が、続けてよかったと思うのはどうしてですか。", "o": ["川がきれいになって、遊ぶ子どもが増えたから", "友だちがたくさんできたから", "毎週日曜日が休みだから", "ボランティアの人が二十人になったから"], "a": 0, "w": "Sampah berkurang dan anak-anak bermain di sungai bertambah."}, "n3": {"jp": "（家で）<br>父が高校生の娘にあてて書いたメモである。<br><br>はるか<br>明日の朝、お父さんは早く家を出るので、車で駅まで送れなくなった。ごめん。バスで行ってください。バスは七時十五分と七時四十分にあります。七時四十分のバスだと学校に遅れるかもしれないから、早いほうに乗ってね。バス代は玄関の机の上に置いておきます。夜は戸締まりをして、早めに寝てね。ごはんは、ちゃんと食べてね。何かあったら、すぐに電話してね。気をつけて行ってきてね。<br>父", "id": "Haruka, besok pagi ayah berangkat lebih awal, jadi tidak bisa mengantar ke stasiun dengan mobil. Maaf. Naik bus ya. Bus ada jam 7.15 dan 7.40; yang 7.40 mungkin membuatmu terlambat ke sekolah, jadi naik yang lebih awal. Ongkos bus ayah taruh di meja dekat pintu masuk. Kunci pintu di malam hari dan tidurlah lebih awal. Makanlah dengan baik. Bila ada apa-apa, segera telepon. Hati-hati di jalan ya. — Ayah", "q": "はるかさんは、明日の朝どうするか。", "o": ["七時十五分のバスに乗る", "七時四十分のバスに乗る", "父の車で駅へ行く", "歩いて学校へ行く"], "a": 0, "w": "Naik bus yang lebih awal (7.15)."}, "n2": {"jp": "数字で示された目標は、成果をはっきり測れるという点で便利だ。売上を一割伸ばす、ミスを半分にする。そうした目標は、達成できたかどうかが誰の目にも明らかである。しかし、数字ばかりを追いかけると、数字に表れない大切なものが見落とされやすい。例えば、客との信頼関係や、職場の雰囲気といったものだ。数字を上げることに必死になり、同僚と協力しなくなる人も出てくる。例えば、売上の数字を上げるために、客に必要のない商品まで勧めてしまうこともある。目標を立てる際には、数字で測れることと測れないことの両方に目を配る必要があるだろう。", "id": "Target berupa angka praktis karena hasilnya jelas terukur — menaikkan penjualan 10%, mengurangi kesalahan setengahnya — tercapai atau tidak tampak jelas bagi siapa pun. Tetapi jika hanya mengejar angka, hal penting yang tak tampak dalam angka mudah terlewat, misalnya hubungan kepercayaan dengan pelanggan atau suasana tempat kerja. Ada pula yang mati-matian menaikkan angka hingga tak lagi bekerja sama dengan rekan. Misalnya, demi menaikkan angka penjualan, orang bisa menawarkan barang yang tak dibutuhkan pelanggan. Saat menetapkan target, perlu memperhatikan baik yang bisa maupun yang tidak bisa diukur dengan angka.", "q": "筆者の考えに合うものはどれか。", "o": ["職場の雰囲気は数字で測れる", "目標はすべて数字で示すべきだ", "数字で示された目標は役に立たない", "数字で測れないことにも目を配るべきだ"], "a": 3, "w": "Kalimat terakhir."}, "n1": {"jp": "歴史を学ぶ意義は、過去の出来事を暗記することにあるのではない。過去の人々が、どのような状況で、何を考え、どう判断したのかを知ることで、現在の問題に対する見方が深まる点にある。歴史は、未来を予言するものではないが、同じ過ちを繰り返さないための、貴重な手がかりを与えてくれる。", "id": "Makna belajar sejarah bukan menghafal peristiwa masa lalu. Terletak pada pandangan terhadap masalah masa kini yang mendalam dengan mengetahui dalam situasi apa orang masa lalu berpikir apa dan memutuskan bagaimana. Sejarah bukan meramal masa depan, tetapi memberi petunjuk berharga agar tak mengulang kesalahan yang sama.", "q": "筆者は 歴史を 学ぶ 意義を どう 述べて いるか。", "o": ["昔の 人を 批判する こと", "未来を 正確に 予言できる こと", "過去の 出来事を 暗記する こと", "現在の 問題への 見方が 深まり、過ちを 繰り返さない 手がかりに なる"], "a": 3, "w": "Makna belajar sejarah."}};
-  var box = $("#jx-demo"); if (!box) return;
-  var lv = "n5", lang = "jp", done = false;
-  function render(){
-    var d = D[lv], o = $("#jx-o"); done = false;
-    $("#jx-t").textContent = lv.toUpperCase() + " · 読解 · " + (lang==="jp" ? "日本語" : "Indonesia");
-    $("#jx-p").textContent = d[lang]; $("#jx-q").textContent = d.q; o.textContent = ""; $("#jx-w").hidden = true;
-    d.o.forEach(function(t,i){
-      var b = document.createElement("button"); b.textContent = (i+1)+". "+t;
-      b.onclick = function(){ if (done) return; done = true;
-        o.querySelectorAll("button").forEach(function(x,k){ if (k===d.a) x.classList.add("ok"); else if (x===b) x.classList.add("no"); });
-        var w = $("#jx-w"); w.textContent = (i===d.a ? "✅ Benar. " : "❌ Belum tepat. ") + (d.w || ""); w.hidden = false; };
-      o.appendChild(b);
-    });
-  }
-  function scan(){ var s = $("#jx-sheet"); s.classList.remove("scan"); void s.offsetWidth; s.classList.add("scan"); }
-  ["n5","n4","n3","n2","n1"].forEach(function(l){
-    var b = document.createElement("button"); b.textContent = l.toUpperCase(); b.setAttribute("aria-pressed", String(l===lv));
-    b.onclick = function(){ lv = l; $("#jx-lv").querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); }); render(); scan(); };
-    $("#jx-lv").appendChild(b);
-  });
-  $("#jx-lang").querySelectorAll("button").forEach(function(b){
-    b.onclick = function(){ lang = b.getAttribute("data-l"); $("#jx-lang").querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", String(x===b)); }); render(); scan(); };
-  });
-  $("#jx-scan").onclick = function(){ scan(); };
-  render();
 })();
 </script>
 <div id="sak" aria-hidden="true"></div>
