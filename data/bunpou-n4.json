@@ -1599,10 +1599,11 @@
   "kata": "ございます",
   "kana": "ございます",
   "arti": "Ada / adalah (sangat sopan)",
-  "penjelasan": "ございます: bentuk hormat dari あります.",
+  "penjelasan": "ございます adalah bentuk hormat (丁寧語) dari あります. Dipakai pelayan toko, pengumuman, dan salam formal.",
   "rumus": [
    "あります → ございます",
-   "おはようございます / ありがとうございます"
+   "KB + が + ございます",
+   "Salam: おはようございます / ありがとうございます (bentuk sopan dari ありがとう)"
   ],
   "contoh": "ありがとうございます。",
   "arti_contoh": "Terima kasih."
@@ -1612,9 +1613,11 @@
   "kata": "でございます",
   "kana": "でございます",
   "arti": "Adalah (sangat sopan)",
-  "penjelasan": "でございます: bentuk hormat dari です.",
+  "penjelasan": "でございます adalah bentuk hormat dari です, dipakai saat memperkenalkan orang atau barang kepada tamu.",
   "rumus": [
-   "KB + でございます"
+   "KB + です → KB + でございます",
+   "例: こちらは 田中でございます",
+   "Tanya: ですか → でございますか"
   ],
   "contoh": "この 方[ほう]は 田中[たなか]さんでございます。",
   "arti_contoh": "Orang ini adalah Tanaka-san."
@@ -1623,11 +1626,12 @@
   "pola": "お～ください",
   "kata": "お～ください",
   "kana": "お～ください",
-  "arti": "Silakan ... (hormat)",
-  "penjelasan": "お〜ください: permintaan hormat.",
+  "arti": "Silakan ... (permintaan hormat)",
+  "penjelasan": "お〜ください meminta lawan bicara melakukan sesuatu dengan hormat. Untuk kata benda 〜する dipakai ご.",
   "rumus": [
    "お + KK bentuk ます dicoret + ください",
-   "する-KK: ご + KB + ください"
+   "ご + KB (する-KK) + ください",
+   "例: お待ちください / ご確認ください"
   ],
   "kk": [
    "masu"
@@ -1639,11 +1643,12 @@
   "pola": "お～になる",
   "kata": "お～になる",
   "kana": "お～になる",
-  "arti": "Hormat (sonkeigo): お〜になる",
-  "penjelasan": "Meninggikan orang yang dibicarakan.",
+  "arti": "Hormat (尊敬語): Bapak/Ibu ... melakukan",
+  "penjelasan": "お〜になる meninggikan orang yang melakukan perbuatan (guru, tamu, atasan). Jangan dipakai untuk diri sendiri.",
   "rumus": [
-   "お + KK bentuk ます dicoret + になる",
-   "する-KK: ご + KB + になる"
+   "お + KK bentuk ます dicoret + になる / になります",
+   "ご + KB (する-KK) + になる",
+   "例: 帰る → お帰りになる / 読む → お読みになる"
   ],
   "kk": [
    "masu"
@@ -1656,10 +1661,11 @@
   "kata": "いらっしゃる",
   "kana": "いらっしゃる",
   "arti": "Ada / pergi / datang (hormat)",
-  "penjelasan": "いらっしゃる: bentuk hormat dari いる / 行く / 来る.",
+  "penjelasan": "いらっしゃる adalah kata kerja hormat khusus pengganti いる, 行く, dan 来る untuk orang yang ditinggikan.",
   "rumus": [
    "いる / 行く / 来る → いらっしゃる",
-   "いらっしゃる → いらっしゃいます"
+   "いらっしゃいます (sopan) / いらっしゃって (bentuk て)",
+   "Salam: いらっしゃいませ"
   ],
   "contoh": "分[わ]からない 人[ひと]はいらっしゃいますか。",
   "arti_contoh": "Apakah ada orang yang tidak paham?"
@@ -1669,10 +1675,14 @@
   "kata": "いたす",
   "kana": "いたす",
   "arti": "Melakukan (rendah hati)",
-  "penjelasan": "いたす: bentuk rendah hati dari する.",
+  "penjelasan": "いたす adalah bentuk rendah hati (謙譲語) dari する. Dipakai untuk merendahkan diri saat berbicara dengan tamu atau atasan.",
   "rumus": [
-   "する → いたす",
-   "KB + いたします"
+   "する → いたす / いたします",
+   "お + KK bentuk ます dicoret + いたします",
+   "ご + KB + いたします"
+  ],
+  "kk": [
+   "masu"
   ],
   "contoh": "ご 案内[あんない]いたします。",
   "arti_contoh": "Saya akan memberi tahu Anda."
@@ -1681,10 +1691,12 @@
   "pola": "どんどん",
   "kata": "どんどん",
   "kana": "どんどん",
-  "arti": "Semakin lama semakin ...",
-  "penjelasan": "どんどん: bertambah terus.",
+  "arti": "Semakin lama semakin ...; terus-menerus",
+  "penjelasan": "どんどん menyatakan keadaan atau perbuatan yang berlangsung terus dan makin cepat atau makin banyak.",
   "rumus": [
-   "どんどん + KK / KS"
+   "どんどん + KK",
+   "どんどん + KS bentuk なる (どんどん暑くなる)",
+   "どんどん + 〜ていく / 〜てくる"
   ],
   "contoh": "どんどん 暑[あつ]くなる。",
   "arti_contoh": "Semakin lama semakin panas."
@@ -1694,9 +1706,10 @@
   "kata": "まず",
   "kana": "まず",
   "arti": "Pertama-tama ...",
-  "penjelasan": "まず: lebih dahulu.",
+  "penjelasan": "まず dipakai sebagai kata penghubung untuk menyebut urutan pertama. Biasanya diikuti それから / つぎに.",
   "rumus": [
-   "まず + KK"
+   "まず + KK (+ それから / つぎに ...)",
+   "例: まず 手を洗ってください"
   ],
   "contoh": "まず 踊[おど]りに 行[い]こう。",
   "arti_contoh": "Pertama, mari kita pergi menari."
@@ -1706,10 +1719,11 @@
   "kata": "また",
   "kana": "また",
   "arti": "Lagi; juga",
-  "penjelasan": "また: 'lagi' atau 'juga'.",
+  "penjelasan": "また bisa berarti 'lagi (kembali terjadi)' atau 'juga (menambah hal baru)'.",
   "rumus": [
-   "また + KK",
-   "また + KB"
+   "また + KK (terjadi lagi)",
+   "KB + も + また (juga)",
+   "Kata sambung: また、 + kalimat (selain itu)"
   ],
   "contoh": "また 寝坊[ねぼう]してしまったの？",
   "arti_contoh": "Kamu terlambat lagi?"
@@ -1718,11 +1732,12 @@
   "pola": "そういう",
   "kata": "そういう",
   "kana": "そういう",
-  "arti": "Seperti itu (そういう)",
-  "penjelasan": "そういう + KB: 'KB seperti itu'.",
+  "arti": "Yang seperti itu",
+  "penjelasan": "そういう + KB: 'KB seperti itu', merujuk hal yang baru disebut lawan bicara. Seri: こういう / そういう / ああいう / どういう.",
   "rumus": [
    "そういう + KB",
-   "こういう / ああいう / どういう"
+   "こういう / ああいう / どういう + KB",
+   "Lisan: そんな / こんな / あんな + KB"
   ],
   "contoh": "そういう 人[ひと]もいるよ。",
   "arti_contoh": "Ada orang seperti itu juga."
@@ -1731,11 +1746,12 @@
   "pola": "～のだろうか",
   "kata": "～のだろうか",
   "kana": "～のだろうか",
-  "arti": "Mungkinkah ...? (のだろうか)",
-  "penjelasan": "のだろうか: bertanya pada diri sendiri.",
+  "arti": "Mungkinkah ...? (bertanya pada diri sendiri)",
+  "penjelasan": "のだろうか dipakai untuk bertanya pada diri sendiri atau meragukan sesuatu. Dalam tulisan terdengar reflektif.",
   "rumus": [
-   "KK / KS bentuk biasa + のだろうか",
-   "KB / KSな + なのだろうか"
+   "KK / KSい bentuk biasa + のだろうか",
+   "KB / KSな (batang) + なのだろうか",
+   "Lisan: かな / のかな"
   ],
   "kk": [
    "jisho",
@@ -1749,13 +1765,15 @@
   "pola": "ほとんど",
   "kata": "ほとんど",
   "kana": "ほとんど",
-  "arti": "Hampir semua",
-  "penjelasan": "ほとんど: 'hampir'.",
+  "arti": "Hampir semua; hampir ...",
+  "penjelasan": "ほとんど berarti 'hampir seluruhnya'. Dengan negatif berarti 'hampir tidak'.",
   "rumus": [
-   "ほとんど + KK / KB",
-   "ほとんど + KK bentuk ない"
+   "ほとんど + KK bentuk た / ている",
+   "ほとんど + KK bentuk ない (hampir tidak)",
+   "KB + の + ほとんど (sebagian besar ...)"
   ],
   "kk": [
+   "ta",
    "nai"
   ],
   "contoh": "みんなは、ほとんど 帰[かえ]りました。",
@@ -1765,10 +1783,16 @@
   "pola": "とうとう",
   "kata": "とうとう",
   "kana": "とうとう",
-  "arti": "Akhirnya ...",
-  "penjelasan": "とうとう: pada akhirnya.",
+  "arti": "Akhirnya ... (setelah lama menanti)",
+  "penjelasan": "とうとう menyatakan hasil akhir yang akhirnya terjadi setelah proses atau penantian panjang.",
   "rumus": [
-   "とうとう + KK"
+   "とうとう + KK bentuk た",
+   "とうとう + KK bentuk ない (akhirnya tidak jadi)",
+   "Mirip: ついに / やっと"
+  ],
+  "kk": [
+   "ta",
+   "nai"
   ],
   "contoh": "とうとう 休[やす]むことができる。",
   "arti_contoh": "Akhirnya saya bisa beristirahat."
@@ -1777,13 +1801,12 @@
   "pola": "そんな・こんな・あんな・どんな",
   "kata": "そんな・こんな・あんな・どんな",
   "kana": "そんな・こんな・あんな・どんな",
-  "arti": "Seperti itu / ini / itu jauh / yang mana",
-  "penjelasan": "Seri: そんな, こんな, あんな, どんな + KB.",
+  "arti": "... seperti itu / ini / itu jauh / yang mana",
+  "penjelasan": "Seri kata penunjuk jenis: そんな, こんな, あんな, どんな. Selalu langsung di depan kata benda.",
   "rumus": [
-   "そんな + KB",
-   "こんな + KB",
-   "あんな + KB",
-   "どんな + KB"
+   "こんな / そんな / あんな / どんな + KB",
+   "例: こんな 部屋に 住みたい",
+   "Lisan dari: このような / そのような ..."
   ],
   "contoh": "大体[だいたい]こんな 畳[たたみ]が 寝[ね]やすい。",
   "arti_contoh": "Kira-kira, tatami seperti ini sangat nyaman untuk tidur."
@@ -1792,10 +1815,11 @@
   "pola": "だが",
   "kata": "だが",
   "kana": "だが",
-  "arti": "Tetapi ... (だが)",
-  "penjelasan": "だが: 'tetapi' di awal kalimat.",
+  "arti": "Tetapi; namun (sopan)",
+  "penjelasan": "だが adalah kata sambung 'tetapi' dalam bentuk biasa/tulisan. Bentuk sopannya ですが.",
   "rumus": [
-   "Kalimat 1。 + だが / ですが + kalimat 2"
+   "Kalimat 1。 + だが / ですが / しかし + kalimat 2",
+   "Biasa: だが / sopan: ですが"
   ],
   "contoh": "大統領[だいとうりょう]が 言[い]いました。ですが、 私[わたし]は 信[しん]じません。",
   "arti_contoh": "Presiden berkata. Namun, saya tidak percaya."
@@ -1804,11 +1828,12 @@
   "pola": "てくれてありがとう",
   "kata": "てくれてありがとう",
   "kana": "てくれてありがとう",
-  "arti": "Terima kasih telah ...",
-  "penjelasan": "てくれてありがとう: berterima kasih atas jasa.",
+  "arti": "Terima kasih telah ... (untukku)",
+  "penjelasan": "てくれてありがとう: berterima kasih atas sesuatu yang dilakukan orang lain demi pembicara.",
   "rumus": [
    "KK bentuk て + くれて + ありがとう",
-   "Sopan: てくれてありがとうございます"
+   "Sopan: KK bentuk て + くれて + ありがとうございます",
+   "Orang yang melakukan: KB + が / は"
   ],
   "kk": [
    "te"
@@ -1820,10 +1845,12 @@
   "pola": "まで",
   "kata": "まで",
   "kana": "まで",
-  "arti": "Sampai ... (まで)",
-  "penjelasan": "まで: batas akhir kegiatan berlangsung.",
+  "arti": "Sampai ... (batas akhir)",
+  "penjelasan": "まで menandai batas akhir kegiatan yang berlangsung terus (bukan sekali). Beda dengan までに (batas waktu).",
   "rumus": [
-   "KB / KK bentuk kamus + まで"
+   "KB (waktu / tempat) + まで",
+   "KK bentuk kamus + まで (sampai ...)",
+   "A から B まで"
   ],
   "kk": [
    "jisho"
@@ -1835,16 +1862,12 @@
   "pola": "のように・のような",
   "kata": "のように・のような",
   "kana": "のように・のような",
-  "arti": "Seperti ini (のように)",
-  "penjelasan": "のように / のような: perumpamaan.",
+  "arti": "Seperti ini (menyatakan cara / contoh)",
+  "penjelasan": "のように / のような: 'seperti ...'. Dipakai untuk cara melakukan sesuatu atau perumpamaan benda.",
   "rumus": [
-   "KB + のように / のような",
-   "KK bentuk biasa + ように"
-  ],
-  "kk": [
-   "jisho",
-   "ta",
-   "nai"
+   "KB + のように + KK",
+   "KB + のような + KB",
+   "このように / そのように / あのように + KK"
   ],
   "contoh": "お 箸[はし]はこのように 使[つか]います。",
   "arti_contoh": "Sumpit digunakan dengan cara seperti ini."
@@ -1854,9 +1877,11 @@
   "kata": "あまり～ない",
   "kana": "あまり～ない",
   "arti": "Tidak terlalu ...",
-  "penjelasan": "あまり + negatif: kurang ...",
+  "penjelasan": "あまり + negatif menyatakan tingkat yang tidak tinggi. Tidak dipakai dengan bentuk positif untuk arti ini.",
   "rumus": [
-   "あまり + KS / KK bentuk ない"
+   "あまり + KS bentuk ない",
+   "あまり + KK bentuk ない",
+   "Positif: とても / すごく"
   ],
   "kk": [
    "nai"
@@ -1869,9 +1894,10 @@
   "kata": "ぜんぜん",
   "kana": "ぜんぜん",
   "arti": "Sama sekali tidak ...",
-  "penjelasan": "ぜんぜん + negatif.",
+  "penjelasan": "ぜんぜん + negatif menyatakan 'sama sekali tidak'. Dalam percakapan sekarang kadang dengan positif ('sangat').",
   "rumus": [
-   "全然 + KK bentuk ない / KS (negatif)"
+   "全然 + KS / KK bentuk ない",
+   "例: 全然 わからない"
   ],
   "kk": [
    "nai"
@@ -1884,9 +1910,11 @@
   "kata": "たとえば",
   "kana": "たとえば",
   "arti": "Misalnya ...",
-  "penjelasan": "たとえば: memberi contoh.",
+  "penjelasan": "たとえば dipakai untuk memberi contoh dari sesuatu yang dibicarakan. Biasanya diikuti 〜など / 〜や.",
   "rumus": [
-   "例えば + kalimat contoh"
+   "例えば + kalimat contoh",
+   "KB1 + や + KB2 + など (contoh)",
+   "Bentuk kutipan: 例えば〜とか"
   ],
   "contoh": "例[たと]えば、「 英語[えいご]が 好[す]きですか。」と 聞[き]いてみたら？",
   "arti_contoh": "\"Misalnya, \"\"Apakah Anda suka bahasa Inggris?\"\"\""
@@ -1895,10 +1923,18 @@
   "pola": "もし",
   "kata": "もし",
   "kana": "もし",
-  "arti": "Jika (andai) ...",
-  "penjelasan": "もし: kata keterangan untuk pengandaian.",
+  "arti": "Jika (seandainya) ...",
+  "penjelasan": "もし adalah kata keterangan pengandaian, dipakai bersama たら / なら / ば.",
   "rumus": [
-   "もし + 〜たら / 〜なら / 〜ば"
+   "もし + KK bentuk た + ら",
+   "もし + KK / KS bentuk biasa + なら",
+   "もし + KK bentuk ば"
+  ],
+  "kk": [
+   "jisho",
+   "ta",
+   "nai",
+   "ba"
   ],
   "contoh": "もしこのパソコンを 彼女[かのじょ]にあげるなら、 説明[せつめい]書[しょ]も 渡[わた]してね。",
   "arti_contoh": "Jika kamu memberi komputer ini kepada dia, tolong serahkan juga buku petunjuknya."
@@ -1907,10 +1943,12 @@
   "pola": "～ない～はない",
   "kata": "～ない～はない",
   "kana": "～ない～はない",
-  "arti": "Tidak ada ... yang tidak ...",
-  "penjelasan": "〜ない〜はない: tidak ada satu pun.",
+  "arti": "Tidak ada satu pun ... yang tidak ...",
+  "penjelasan": "〜ない〜はない menyatakan 'tidak ada yang tidak ...' sehingga artinya semua ... (penegasan ganda).",
   "rumus": [
-   "KK bentuk ない + KB + は + いない / ない"
+   "KK bentuk ない + KB + は + いない / ない",
+   "KB + の + 中で + KK bentuk ない + 人 + は + いない",
+   "例: 嫌いじゃない人はいない"
   ],
   "kk": [
    "nai"
@@ -1923,9 +1961,16 @@
   "kata": "ように～てほしい",
   "kana": "ように～てほしい",
   "arti": "Ingin ... menjadi seperti ...",
-  "penjelasan": "ように〜てほしい: harapan ke orang lain.",
+  "penjelasan": "ように〜てほしい menyatakan harapan agar seseorang menjadi atau bersikap seperti sesuatu.",
   "rumus": [
-   "KB + のように + なってほしい"
+   "KB + のように + なってほしい",
+   "KK bentuk kamus + ように + KK bentuk て + ほしい",
+   "Negatif: KK bentuk ない + でほしい"
+  ],
+  "kk": [
+   "jisho",
+   "te",
+   "nai"
   ],
   "contoh": "私[わたし]たちの 子供[こども]には 君[きみ]のようになってほしい。",
   "arti_contoh": "Saya ingin anak kita menjadi seperti kamu."
@@ -1935,10 +1980,11 @@
   "kata": "だけでなく",
   "kana": "だけでなく",
   "arti": "Tidak hanya ... tetapi juga ...",
-  "penjelasan": "だけでなく: bukan hanya.",
+  "penjelasan": "だけでなく menambah hal kedua yang sama pentingnya dengan hal pertama; biasanya diikuti も.",
   "rumus": [
    "KB + だけでなく + KB + も",
-   "KK bentuk biasa + だけでなく"
+   "KK / KS bentuk biasa + だけでなく + ...も",
+   "Mirip: のみならず (lebih formal)"
   ],
   "kk": [
    "jisho",
@@ -1953,9 +1999,11 @@
   "kata": "すこしも～ない",
   "kana": "すこしも～ない",
   "arti": "Sedikit pun tidak ...",
-  "penjelasan": "すこしも〜ない.",
+  "penjelasan": "すこしも〜ない menegaskan negatif: 'sama sekali tidak'. Selalu dengan bentuk negatif.",
   "rumus": [
-   "すこしも + KK bentuk ない"
+   "すこしも + KK bentuk ない",
+   "すこしも + KS bentuk ない",
+   "Mirip: ぜんぜん〜ない / ちっとも〜ない"
   ],
   "kk": [
    "nai"
@@ -1967,10 +2015,12 @@
   "pola": "以上 ①",
   "kata": "以上 ①",
   "kana": "以上 ①",
-  "arti": "... atau lebih (以上)",
-  "penjelasan": "以上: batas bawah termasuk angkanya.",
+  "arti": "... atau lebih (termasuk angka itu)",
+  "penjelasan": "以上 menyatakan batas bawah, angkanya sendiri termasuk. Lawan: 以下.",
   "rumus": [
-   "Jumlah + 以上"
+   "Jumlah + 以上",
+   "KB (jumlah / orang) + 以上 (+ の + KB)",
+   "Lawan: 以下 / 未満 (kurang dari, tidak termasuk)"
   ],
   "contoh": "その 時[とき]に100 人[にん]以上[いじょう]も 参加[さんか]した。",
   "arti_contoh": "Pada saat itu, lebih dari 100 orang berpartisipasi."
@@ -1979,10 +2029,12 @@
   "pola": "いか",
   "kata": "いか",
   "kana": "いか",
-  "arti": "... atau kurang (以下)",
-  "penjelasan": "以下: batas atas termasuk angkanya.",
+  "arti": "... atau kurang (termasuk angka itu)",
+  "penjelasan": "以下 menyatakan batas atas, angkanya sendiri termasuk.",
   "rumus": [
-   "Jumlah + 以下"
+   "Jumlah + 以下",
+   "KB + 以下 (di bawah ...)",
+   "Lawan: 以上"
   ],
   "contoh": "この 家[いえ]は２０００ 万[まん]円[えん]以下[いか]です。",
   "arti_contoh": "Rumah ini harganya 20 juta yen atau kurang."
@@ -1991,10 +2043,12 @@
   "pola": "なるべく",
   "kata": "なるべく",
   "kana": "なるべく",
-  "arti": "Sebisa mungkin",
-  "penjelasan": "なるべく: sedapat mungkin.",
+  "arti": "Sebisa mungkin; sedapat mungkin",
+  "penjelasan": "なるべく: sedapat mungkin melakukan sesuatu, biasanya saat memberi saran atau permintaan.",
   "rumus": [
-   "なるべく + KK / permintaan"
+   "なるべく + KK / 〜てください",
+   "なるべく + 〜ようにする",
+   "Sama makna: できるだけ"
   ],
   "contoh": "インフルエンザにかかったら、なるべくゆっくり 休[やす]むほうがいい。",
   "arti_contoh": "Jika kamu terkena flu, sebaiknya beristirahat sebaik mungkin."
@@ -2003,11 +2057,11 @@
   "pola": "～ら",
   "kata": "～ら",
   "kana": "～ら",
-  "arti": "Kata jamak: 〜ら",
-  "penjelasan": "ら: akhiran jamak ('mereka').",
+  "arti": "Akhiran jamak: ~ (mereka)",
+  "penjelasan": "ら ditambahkan pada kata ganti orang untuk membuat bentuk jamak: 彼ら, 彼女ら, 私ら.",
   "rumus": [
-   "彼 + ら",
-   "彼女 + ら"
+   "彼 / 彼女 / 私 / 君 + ら",
+   "Lebih umum: たち (私たち, あなたたち)"
   ],
   "contoh": "彼[かれ]らは 十分[じゅうぶん]に 勉強[べんきょう]をしたから、 試験[しけん]が 簡単[かんたん]だった。",
   "arti_contoh": "Mereka sudah belajar dengan cukup, jadi ujian itu mudah."
@@ -2016,11 +2070,12 @@
   "pola": "ようにいう",
   "kata": "ようにいう",
   "kana": "ようにいう",
-  "arti": "Berkata agar ...",
-  "penjelasan": "ようにいう: menyuruh agar.",
+  "arti": "Berkata agar ...; menyuruh supaya ...",
+  "penjelasan": "ようにいう: menyuruh atau mengingatkan orang melakukan atau tidak melakukan sesuatu (permintaan tidak langsung).",
   "rumus": [
    "KK bentuk kamus + ように + 言う",
-   "KK bentuk ない + ように + 言う"
+   "KK bentuk ない + ように + 言う",
+   "例: 忘れないように 言った"
   ],
   "kk": [
    "jisho",
@@ -2033,10 +2088,12 @@
   "pola": "〜でも 〜でも",
   "kata": "〜でも 〜でも",
   "kana": "〜でも 〜でも",
-  "arti": "Baik ... maupun ...",
-  "penjelasan": "でも〜でも: 'baik A maupun B'.",
+  "arti": "Baik ... maupun ...; apa pun",
+  "penjelasan": "でも〜でも: menyebut beberapa kemungkinan; semuanya boleh. Juga 'kata tanya + でも' = apa pun.",
   "rumus": [
-   "KB1 + でも + KB2 + でも"
+   "KB1 + でも + KB2 + でも",
+   "何 / いつ / だれ / どこ + でも",
+   "KB + でも + いい (… pun boleh)"
   ],
   "contoh": "これでも、それでも、 何[なに]でもいいです！",
   "arti_contoh": "Baik ini, maupun itu, atau apapun juga tidak masalah!"
@@ -2045,11 +2102,12 @@
   "pola": "ごとに",
   "kata": "ごとに",
   "kana": "ごとに",
-  "arti": "Setiap ... (ごとに)",
-  "penjelasan": "ごとに: setiap kali.",
+  "arti": "Setiap ... (tiap kali)",
+  "penjelasan": "ごとに menyatakan sesuatu terjadi setiap interval tertentu atau setiap kali ada hal itu.",
   "rumus": [
    "KB + ごとに",
-   "KK bentuk kamus + ごとに"
+   "KK bentuk kamus + ごとに",
+   "Jumlah (waktu) + ごとに: 一時間ごとに"
   ],
   "kk": [
    "jisho"
@@ -2061,10 +2119,12 @@
   "pola": "それに",
   "kata": "それに",
   "kana": "それに",
-  "arti": "Selain itu ...",
-  "penjelasan": "それに: menambahkan keterangan.",
+  "arti": "Selain itu; tambahan lagi",
+  "penjelasan": "それに menambah informasi yang sejenis (alasan, sifat, keadaan) setelah kalimat sebelumnya.",
   "rumus": [
-   "Kalimat 1。+ それに + kalimat 2"
+   "Kalimat 1。 + それに + kalimat 2",
+   "Kalimat 1、 + それに + kalimat 2 (lisan)",
+   "Mirip: そのうえ / おまけに"
   ],
   "contoh": "運動[うんどう]は 楽[たの]しいです。それに 体[からだ]にいいです。",
   "arti_contoh": "Olahraga itu menyenangkan. Selain itu, baik untuk tubuh."
@@ -2073,10 +2133,15 @@
   "pola": "いがい",
   "kata": "いがい",
   "kana": "いがい",
-  "arti": "Kecuali ...",
-  "penjelasan": "以外: selain.",
+  "arti": "Selain ...; kecuali ...",
+  "penjelasan": "以外 menyatakan pengecualian: 'selain / kecuali'. Biasanya dengan negatif.",
   "rumus": [
-   "KB + 以外"
+   "KB + 以外 + (は) + KK bentuk ない",
+   "KB + 以外 + の + KB",
+   "例: メアリー以外だれも来なかった"
+  ],
+  "kk": [
+   "nai"
   ],
   "contoh": "メアリー 以外[いがい]、 誰[だれ]も 来[こ]なかった。",
   "arti_contoh": "Kecuali Mary, tidak ada yang datang."
@@ -2086,9 +2151,10 @@
   "kata": "～は～の一つだ",
   "kana": "～は～の一つだ",
   "arti": "... adalah salah satu dari ...",
-  "penjelasan": "〜は〜の一つだ.",
+  "penjelasan": "KB + は + KB + の一つだ: menyatakan sesuatu termasuk dalam kelompok tertentu.",
   "rumus": [
-   "KB1 + は + KB2 + の + 一つだ"
+   "KB1 + は + KB2 + の + 一つ + です",
+   "KB1 + は + KB2 + の + 一つ + だ"
   ],
   "contoh": "ホンダは 車[くるま]のメーカーの 一[ひと]つだ。",
   "arti_contoh": "Honda adalah salah satu produsen mobil."
@@ -2097,10 +2163,12 @@
   "pola": "とかんがえられている",
   "kata": "とかんがえられている",
   "kana": "とかんがえられている",
-  "arti": "Dianggap ...",
-  "penjelasan": "とかんがえられている: dianggap bahwa.",
+  "arti": "Dianggap ...; dipikirkan bahwa ...",
+  "penjelasan": "と考えられている: pendapat umum atau hasil kajian (dalam tulisan formal).",
   "rumus": [
-   "Klausa bentuk biasa + と考えられている"
+   "Klausa bentuk biasa + と + 考えられている",
+   "KB / KSな + (だ) + と + 考えられている",
+   "Mirip: と思われている / と言われている"
   ],
   "contoh": "英語[えいご]はアメリカだけでなく、 世界中[せかいじゅう]で 使[つか]われる 言語[げんご](だ)と 考[かんが]えられている。",
   "arti_contoh": "Bahasa Inggris diperkirakan digunakan tidak hanya di Amerika, tetapi di seluruh dunia."
@@ -2109,10 +2177,11 @@
   "pola": "なおす",
   "kata": "なおす",
   "kana": "なおす",
-  "arti": "... ulang (なおす)",
-  "penjelasan": "なおす: melakukan lagi, memperbaiki.",
+  "arti": "... ulang; memperbaiki (なおす)",
+  "penjelasan": "なおす: mengulang atau memperbaiki apa yang sudah dilakukan salah atau kurang.",
   "rumus": [
-   "KK bentuk ます dicoret + なおす"
+   "KK bentuk ます dicoret + なおす",
+   "例: 書き直す / やり直す / 見直す"
   ],
   "kk": [
    "masu"
@@ -2124,11 +2193,11 @@
   "pola": "ま(っ)",
   "kata": "ま(っ)",
   "kana": "ま(っ)",
-  "arti": "Awalan ま(っ): 'tepat / sungguh'",
-  "penjelasan": "ま(っ) menegaskan: 'tepat di'.",
+  "arti": "Awalan ま(っ): tepat / sungguh-sungguh",
+  "penjelasan": "ま / まっ + KB menegaskan bahwa sesuatu persis di tempat atau keadaan itu.",
   "rumus": [
-   "ま + KB",
-   "真ん中 / 真っ赤"
+   "ま + KB: 真ん中 / 真上 / 真夏",
+   "まっ + KB: 真っ赤 / 真っ白 / 真っ暗"
   ],
   "contoh": "道[みち]の 真[ま]ん 中[なか]に 居[い]る 鹿[しか]を 見[み]てよかったです。",
   "arti_contoh": "Saya senang bisa melihat rusa yang ada di tengah jalan."
@@ -2138,9 +2207,14 @@
   "kata": "ほかに(も)・ほか(に)は",
   "kana": "ほかに(も)・ほか(に)は",
   "arti": "Selain itu juga ...",
-  "penjelasan": "ほかに(も): selain itu.",
+  "penjelasan": "ほかに(も) / ほかには: menambah hal lain di luar yang sudah disebut.",
   "rumus": [
-   "他に(も) + KK / KB"
+   "他に(も) + KB + が + ある / いる",
+   "他には + KK bentuk ない",
+   "他に + なにか + ...ますか"
+  ],
+  "kk": [
+   "nai"
   ],
   "contoh": "他[た]に、 行[い]きたいところはありますか？",
   "arti_contoh": "Apakah ada tempat lain yang ingin kamu kunjungi?"
@@ -2150,10 +2224,11 @@
   "kata": "でできる・からできる",
   "kana": "でできる・からできる",
   "arti": "Terbuat dari ...",
-  "penjelasan": "でできる: bahan masih terlihat. から: bahan berubah.",
+  "penjelasan": "でできる: bahan masih terlihat bentuk asalnya. からできる: bahan berubah wujud.",
   "rumus": [
    "KB (bahan) + で + できている",
-   "KB (bahan) + から + できている"
+   "KB (bahan) + から + できている",
+   "例: 木でできている / 米からできている"
   ],
   "contoh": "裏面[りめん]がガラスでできるスマホは 最近[さいきん]売行[うれゆ]きがいい。",
   "arti_contoh": "Smartphone yang terbuat dari kaca di bagian belakang belakangan ini laku terjual dengan baik."
@@ -2162,10 +2237,11 @@
   "pola": "なん + counter + か",
   "kata": "なん + counter + か",
   "kana": "なん + counter + か",
-  "arti": "Beberapa ... (なん + counter + か)",
-  "penjelasan": "なん + pencacah + か: sejumlah.",
+  "arti": "Beberapa ... (なん + pencacah + か)",
+  "penjelasan": "何 + pencacah + か menyatakan jumlah yang tidak pasti tapi beberapa.",
   "rumus": [
-   "何 + pencacah + か"
+   "何 + pencacah + か (何人か, 何回か, 何冊か)",
+   "何 + pencacah + も (sebanyak itu)"
   ],
   "contoh": "選手[せんしゅ]の 何[なん]人[にん]かが 負傷[ふしょう]したことに 気[き]が 付[つ]いた。",
   "arti_contoh": "Saya menyadari bahwa beberapa pemain telah cedera."
@@ -2174,10 +2250,12 @@
   "pola": "がみられる",
   "kata": "がみられる",
   "kana": "がみられる",
-  "arti": "Bisa terlihat ... (がみられる)",
-  "penjelasan": "がみられる: terlihat atau dapat dilihat.",
+  "arti": "Bisa dilihat; terlihat (di tempat)",
+  "penjelasan": "が見られる: sesuatu bisa dilihat atau dijumpai. Bentuk potensial dari 見る.",
   "rumus": [
-   "KB + が + 見られる"
+   "KB + が + 見られる",
+   "Tempat + で + KB + が + 見られる",
+   "Lawan: 見えない"
   ],
   "contoh": "夏[なつ]には、ここでクマが 見[み]られます。",
   "arti_contoh": "Pada musim panas, kamu dapat melihat beruang di sini."
@@ -2186,10 +2264,11 @@
   "pola": "まい～のように",
   "kata": "まい～のように",
   "kana": "まい～のように",
-  "arti": "Hampir setiap ... (まい〜のように)",
-  "penjelasan": "まい〜のように: hampir tiap.",
+  "arti": "Hampir setiap ...",
+  "penjelasan": "毎〜のように: hampir tiap, nyaris tiap kali.",
   "rumus": [
-   "毎 + KB + のように"
+   "毎 + KB + のように",
+   "例: 毎日のように / 毎週のように"
   ],
   "contoh": "彼女[かのじょ]は 彼[かれ]に 出会[であ]う 前[まえ]は、 毎日[まいにち]のように 高校[こうこう]をサボっていた。",
   "arti_contoh": "Sebelum dia bertemu dengannya, dia sering bolos sekolah hampir setiap hari."
@@ -2198,15 +2277,17 @@
   "pola": "ように",
   "kata": "ように",
   "kana": "ように",
-  "arti": "Supaya ... (ように)",
-  "penjelasan": "ように: tujuan.",
+  "arti": "Supaya ... (tujuan / harapan)",
+  "penjelasan": "ように: tujuan dengan hal yang bukan kehendak (potensial, negatif) atau keadaan.",
   "rumus": [
    "KK bentuk kamus + ように + KK",
-   "KK bentuk ない + ように"
+   "KK bentuk ない + ように + KK",
+   "KK bentuk potensial + ように"
   ],
   "kk": [
    "jisho",
-   "nai"
+   "nai",
+   "kanou"
   ],
   "contoh": "例[たと]えば 風邪[かぜ]を 引[ひ]かないように、 暖[あたた]かい 服装[ふくそう]をする。",
   "arti_contoh": "Misalnya, agar tidak terkena flu, pakailah pakaian yang hangat."
@@ -2215,11 +2296,12 @@
   "pola": "んだけど・んですが",
   "kata": "んだけど・んですが",
   "kana": "んだけど・んですが",
-  "arti": "..., tetapi ... (halus)",
-  "penjelasan": "んだけど: menyampaikan alasan atau basa-basi.",
+  "arti": "..., tetapi ... (halus / ragu-ragu)",
+  "penjelasan": "んだけど / んですが: menyampaikan latar atau alasan sebelum meminta atau menolak dengan halus.",
   "rumus": [
-   "KK / KS bentuk biasa + んだけど",
-   "KB / KSな + なんだけど"
+   "KK / KSい bentuk biasa + んだけど",
+   "KB / KSな + なんだけど",
+   "Sopan: んですが"
   ],
   "kk": [
    "jisho",
@@ -2234,9 +2316,10 @@
   "kata": "それで",
   "kana": "それで",
   "arti": "Karena itu ...",
-  "penjelasan": "それで: akibat dari kalimat sebelumnya.",
+  "penjelasan": "それで: akibat atau hasil dari hal yang baru disebut.",
   "rumus": [
-   "Kalimat 1。 + それで + kalimat 2"
+   "Kalimat 1。 + それで + kalimat 2 (hasil)",
+   "Tanya: それで? (lalu bagaimana?)"
   ],
   "contoh": "この 辺[あた]りには 多[おお]くの 桜[さくら]が 植[う]わっている。それで 外国[がいこく]人[じん]が 花見[はなみ]に 来[く]る 人気[にんき]の 観光[かんこう]スポットになった。",
   "arti_contoh": "Di sekitar sini, banyak pohon sakura yang ditanam. Karena itu, tempat ini menjadi spot wisata populer bagi orang asing untuk melakukan hanami."
@@ -2245,10 +2328,12 @@
   "pola": "Angka / Jumlah + は",
   "kata": "Angka / Jumlah + は",
   "kana": "Angka / Jumlah + は",
-  "arti": "Angka + は: setidaknya",
-  "penjelasan": "Angka + は: jumlah setidaknya.",
+  "arti": "Setidaknya ... (angka + は)",
+  "penjelasan": "Jumlah + は: menyatakan 'sedikitnya', batas minimum yang tidak boleh kurang.",
   "rumus": [
-   "Jumlah + は"
+   "Jumlah + は + KK",
+   "少なくとも + jumlah + は",
+   "Lawan: せいぜい (paling banyak)"
   ],
   "contoh": "この 食[た]べ 物[もの]は 少[すく]なくとも 床[ゆか]に3 秒[びょう]は 落[お]ちていたから 食[た]べられない。",
   "arti_contoh": "Makanan ini tidak bisa dimakan karena telah jatuh di lantai setidaknya selama 3 detik."
@@ -2257,10 +2342,11 @@
   "pola": "かする",
   "kata": "かする",
   "kana": "かする",
-  "arti": "Berubah menjadi ... (〜化する)",
-  "penjelasan": "化する: berubah menjadi.",
+  "arti": "Menjadi ... (〜化する)",
+  "penjelasan": "〜化する: berubah menjadi sifat tertentu.",
   "rumus": [
-   "KB + 化 + する"
+   "KB + 化 + する / される / した",
+   "例: 単純化 / 国際化 / 温暖化"
   ],
   "contoh": "それは 単純[たんじゅん]化[か]した 英語[えいご]のように 見[み]える。",
   "arti_contoh": "Itu terlihat seperti bahasa Inggris yang telah disederhanakan."
@@ -2269,10 +2355,12 @@
   "pola": "らしい ②",
   "kata": "らしい ②",
   "kana": "らしい ②",
-  "arti": "Khas ...; pantas ...",
-  "penjelasan": "らしい② : sesuai sifat.",
+  "arti": "Khas ...; pantas sebagai ...",
+  "penjelasan": "KB + らしい: sesuai dengan sifat khas KB itu (bukan untuk dugaan).",
   "rumus": [
-   "KB + らしい"
+   "KB + らしい + KB",
+   "KB + らしく + KK",
+   "例: 子供らしい / 男らしい"
   ],
   "contoh": "父親[ちちおや]：「 学校[がっこう]に 行[い]きたくなくなることは 子供[こども]らしい。オレもそうだったよ。」",
   "arti_contoh": "\"Ayah: \"\"Kehilangan keinginan untuk pergi ke sekolah itu sepertinya karakteristik anak-anak. Aku juga begitu.\"\"\""
@@ -2282,12 +2370,16 @@
   "kata": "ようにいのる",
   "kana": "ようにいのる",
   "arti": "Berdoa agar ...",
-  "penjelasan": "ようにいのる: berdoa agar.",
+  "penjelasan": "ようにいのる: berdoa atau berharap agar sesuatu terjadi.",
   "rumus": [
-   "KK bentuk kamus + ように + 祈る"
+   "KK bentuk kamus + ように + 祈る",
+   "KK bentuk potensial + ように + 祈る",
+   "KK bentuk ない + ように + 祈る"
   ],
   "kk": [
-   "jisho"
+   "jisho",
+   "nai",
+   "kanou"
   ],
   "contoh": "生[い]きてここを 出[で]れるように 祈[いの]っているんだ。",
   "arti_contoh": "Aku berdoa agar bisa hidup dan keluar dari sini."
@@ -2296,10 +2388,12 @@
   "pola": "すくなくない",
   "kata": "すくなくない",
   "kana": "すくなくない",
-  "arti": "Tidak sedikit",
-  "penjelasan": "すくなくない: banyak.",
+  "arti": "Tidak sedikit; cukup banyak",
+  "penjelasan": "少なくない: bentuk negatif dari 少ない, artinya jumlahnya banyak.",
   "rumus": [
-   "KB + は + 少なくない"
+   "KB + は + 少なくない",
+   "少なくない + KB",
+   "Mirip: 多い (banyak)"
   ],
   "contoh": "アニメと 漫画[まんが]が 好[す]きな 人[ひと]は 少[すく]なくないですよ。",
   "arti_contoh": "Orang yang suka anime dan manga itu tidak sedikit."
@@ -2308,10 +2402,11 @@
   "pola": "各",
   "kata": "各",
   "kana": "各",
-  "arti": "Setiap ... (各)",
-  "penjelasan": "各: tiap.",
+  "arti": "Setiap ... (tiap-tiap)",
+  "penjelasan": "各 + KB: 'masing-masing / setiap'. Dibaca かく.",
   "rumus": [
-   "各 + KB"
+   "各 + KB: 各国 / 各自 / 各製品",
+   "Mirip: それぞれ / おのおの"
   ],
   "contoh": "ここに 並[なら]んでいる 各[かく]製品[せいひん]はアルミでできています。",
   "arti_contoh": "Setiap produk yang berbaris di sini terbuat dari aluminium."
@@ -2321,9 +2416,10 @@
   "kata": "風",
   "kana": "風",
   "arti": "Bergaya ... (〜風)",
-  "penjelasan": "風: gaya.",
+  "penjelasan": "〜風 (ふう) menyatakan gaya atau corak.",
   "rumus": [
-   "KB + 風"
+   "KB + 風: 和風 / 洋風 / 中華風",
+   "KB + 風 + の + KB"
   ],
   "contoh": "日本[にっぽん]では 洋風[ようふう]の 結婚式[けっこんしき]が 人気[にんき]です。",
   "arti_contoh": "Di Jepang, pernikahan bergaya barat populer."
@@ -2332,10 +2428,12 @@
   "pola": "とされている",
   "kata": "とされている",
   "kana": "とされている",
-  "arti": "Dianggap ... (とされている)",
-  "penjelasan": "とされている: dianggap, ditetapkan.",
+  "arti": "Dianggap ...; ditetapkan ...",
+  "penjelasan": "とされている: dianggap atau ditetapkan secara umum atau menurut aturan.",
   "rumus": [
-   "Klausa bentuk biasa + とされている"
+   "Klausa bentuk biasa + とされている",
+   "KB + とされている",
+   "Mirip: と言われている / と考えられている"
   ],
   "contoh": "論文[ろんぶん]：「ポーランド 人[じん]にとって13という 数字[すうじ]は 不吉[ふきつ]な 数字[すうじ]とされている。」",
   "arti_contoh": "Dalam konteks orang Polandia, angka 13 dianggap sebagai angka yang sial."
@@ -2344,10 +2442,12 @@
   "pola": "ずっと ①",
   "kata": "ずっと ①",
   "kana": "ずっと ①",
-  "arti": "Terus-menerus (ずっと)",
-  "penjelasan": "ずっと: terus, jauh lebih.",
+  "arti": "Terus-menerus; jauh lebih ...",
+  "penjelasan": "ずっと: ① berlangsung terus, ② jauh lebih (perbandingan).",
   "rumus": [
-   "ずっと + KK / KS"
+   "ずっと + KK (terus)",
+   "KB1 + より + KB2 + の方が + ずっと + KS",
+   "例: 朝からずっと 忙しい"
   ],
   "contoh": "朝[あさ]からずっと 忙[いそが]しいですよ。",
   "arti_contoh": "Saya sibuk dari pagi hingga sekarang."
@@ -2356,11 +2456,12 @@
   "pola": "～代",
   "kata": "～代",
   "kana": "～代",
-  "arti": "Dekade ... (〜代)",
-  "penjelasan": "〜代: dekade atau usia.",
+  "arti": "Dekade ...; usia ...",
+  "penjelasan": "〜代: dekade (1980年代) atau kelompok usia (20代).",
   "rumus": [
    "Angka + 年代",
-   "Angka + 代"
+   "Angka + 代 (usia)",
+   "例: 1980年代 / 30代"
   ],
   "contoh": "街頭[がいとう]インタビュー、 通行人[つうこうにん]：「1980 年代[ねんだい]ころからここに 住[す]んでいます。」",
   "arti_contoh": "\"Interview di jalan, pejalan kaki: \"\"Saya telah tinggal di sini sejak sekitar tahun 1980-an.\"\"\""
@@ -2369,10 +2470,12 @@
   "pola": "だんだん",
   "kata": "だんだん",
   "kana": "だんだん",
-  "arti": "Sedikit demi sedikit",
-  "penjelasan": "だんだん: perlahan.",
+  "arti": "Sedikit demi sedikit; perlahan",
+  "penjelasan": "だんだん: perubahan yang bertahap.",
   "rumus": [
-   "だんだん + KK"
+   "だんだん + KS bentuk なる",
+   "だんだん + KK bentuk ようになる",
+   "Mirip: しだいに / どんどん"
   ],
   "contoh": "先輩[せんぱい]が 後輩[こうはい]に 話[はな]している：「でも 大丈夫[だいじょうぶ]、だんだん 分[わ]かるようになるよ。」",
   "arti_contoh": "\"Kakak kelas sedang berbicara kepada adik kelas: \"\"Tapi tidak apa-apa, kamu akan mulai memahaminya sedikit demi sedikit.\"\"\""
@@ -2381,10 +2484,12 @@
   "pola": "だいたい",
   "kata": "だいたい",
   "kana": "だいたい",
-  "arti": "Sebagian besar",
-  "penjelasan": "だいたい: pada umumnya.",
+  "arti": "Pada umumnya; sebagian besar",
+  "penjelasan": "だいたい: kira-kira, hampir.",
   "rumus": [
-   "だいたい + KK"
+   "だいたい + KK",
+   "だいたい + angka",
+   "例: だいたい わかる"
   ],
   "contoh": "「 日本語[にほんご]がだいたいわかる。」",
   "arti_contoh": "\"\"\"Saya kebanyakan mengerti bahasa Jepang.\"\"\""
@@ -2393,11 +2498,12 @@
   "pola": "てくれない・てもらえない",
   "kata": "てくれない・てもらえない",
   "kana": "てくれない・てもらえない",
-  "arti": "Tolong ... (て くれない?)",
-  "penjelasan": "てくれない? / てもらえない?: meminta.",
+  "arti": "Maukah kamu ...? (permintaan akrab)",
+  "penjelasan": "てくれない? / てもらえない?: meminta dengan akrab. てもらえない lebih sopan.",
   "rumus": [
-   "KK bentuk て + くれない",
-   "KK bentuk て + もらえない"
+   "KK bentuk て + くれない?",
+   "KK bentuk て + もらえない?",
+   "Sopan: てくださいませんか / ていただけませんか"
   ],
   "kk": [
    "te"
@@ -2410,9 +2516,11 @@
   "kata": "Number + しか〜ない",
   "kana": "Number + しか〜ない",
   "arti": "Hanya ... (angka + しか)",
-  "penjelasan": "Angka + しか + negatif.",
+  "penjelasan": "Jumlah + しか + negatif: hanya sebanyak itu, terasa sedikit.",
   "rumus": [
-   "Jumlah + しか + KK bentuk ない"
+   "Jumlah + しか + KK bentuk ない",
+   "KB + しか + KK bentuk ない",
+   "Bandingkan: だけ (netral)"
   ],
   "kk": [
    "nai"
@@ -2425,9 +2533,11 @@
   "kata": "お〜する",
   "kana": "お〜する",
   "arti": "Saya akan ... (rendah hati)",
-  "penjelasan": "お〜する: merendah.",
+  "penjelasan": "お〜する: merendahkan diri sambil melayani atau melakukan sesuatu untuk orang yang ditinggikan.",
   "rumus": [
-   "お + KK bentuk ます dicoret + する"
+   "お + KK bentuk ます dicoret + する / します",
+   "ご + KB + する / します",
+   "例: お持ちします / ご案内します"
   ],
   "kk": [
    "masu"
@@ -2439,10 +2549,12 @@
   "pola": "Question-phrase + か",
   "kata": "Question-phrase + か",
   "kana": "Question-phrase + か",
-  "arti": "Kalimat tanya sebagai klausa (〜か)",
-  "penjelasan": "Kata tanya + か dalam kalimat.",
+  "arti": "Kata tanya + か: kalimat tanya dalam klausa",
+  "penjelasan": "Kata tanya + か dipakai di dalam kalimat besar: 'tahu / bertanya apakah ...'.",
   "rumus": [
-   "Kata tanya + KK bentuk biasa + か + わかる / 知る"
+   "Kata tanya + KK bentuk biasa + か + わかる / 知っている",
+   "KB + が + どこ / だれ / いつ + か",
+   "Sopan: ... か + わかりますか"
   ],
   "kk": [
    "jisho",
@@ -2457,10 +2569,11 @@
   "kata": "～にする・～くする",
   "kana": "～にする・～くする",
   "arti": "Membuat menjadi ... (にする・くする)",
-  "penjelasan": "にする / くする: membuat jadi.",
+  "penjelasan": "KS + にする / くする: mengubah sesuatu menjadi keadaan tertentu.",
   "rumus": [
-   "KSな (batang) + にする",
-   "KSい (buang い) + くする"
+   "KSな (batang) + に + する",
+   "KSい (buang い) + く + する",
+   "KB + に + する"
   ],
   "contoh": "頑張[がんば]って 部品[ぶひん]を 小[ちい]さくしてください。",
   "arti_contoh": "Silakan kecilkan bagian tersebut dengan baik."
@@ -2469,10 +2582,12 @@
   "pola": "かた",
   "kata": "かた",
   "kana": "かた",
-  "arti": "Cara melakukan ...",
-  "penjelasan": "かた: cara.",
+  "arti": "Cara ... (cara melakukan)",
+  "penjelasan": "〜かた: cara melakukan sesuatu.",
   "rumus": [
-   "KK bentuk ます dicoret + 方"
+   "KK bentuk ます dicoret + 方 (かた)",
+   "例: 食べ方 / 使い方 / 泳ぎ方",
+   "KB + の + KK + 方"
   ],
   "kk": [
    "masu"
@@ -2484,10 +2599,12 @@
   "pola": "ないと",
   "kata": "ないと",
   "kana": "ないと",
-  "arti": "Kalau tidak ... (ないと)",
-  "penjelasan": "ないと: harus (lisan).",
+  "arti": "Kalau tidak ... (harus)",
+  "penjelasan": "〜ないと: bentuk lisan dari 〜なければならない / 〜ないといけない.",
   "rumus": [
-   "KK bentuk ない + と + いけない"
+   "KK bentuk ない + と + いけない",
+   "Lisan: KK bentuk ない + と (dihilangkan bagian belakang)",
+   "Sopan: ないといけません"
   ],
   "kk": [
    "nai"
@@ -2500,9 +2617,11 @@
   "kata": "聞こえる",
   "kana": "聞こえる",
   "arti": "Terdengar (聞こえる)",
-  "penjelasan": "聞こえる: tanpa sengaja terdengar.",
+  "penjelasan": "聞こえる: bunyi masuk ke telinga tanpa disengaja; bukan perbuatan sadar.",
   "rumus": [
-   "KB + が + 聞こえる"
+   "KB + が + 聞こえる",
+   "KB + が + 聞こえない",
+   "Bandingkan: 聞く (sengaja mendengar)"
   ],
   "contoh": "「 西山[にしやま]さんは 生[う]まれつき 耳[みみ]が 聞[き]こえないんです。」",
   "arti_contoh": "\"\"\"Nishiyama-san sejak lahir tidak bisa mendengar.\"\"\""
@@ -2512,9 +2631,11 @@
   "kata": "見える",
   "kana": "見える",
   "arti": "Terlihat (見える)",
-  "penjelasan": "見える: terlihat.",
+  "penjelasan": "見える: terlihat tanpa disengaja; bukan perbuatan sadar.",
   "rumus": [
-   "KB + が + 見える"
+   "KB + が + 見える",
+   "Tempat + から + KB + が + 見える",
+   "Bandingkan: 見る (sengaja melihat)"
   ],
   "contoh": "「あの 看板[かんばん]は 大[おお]きいのでどこからでもよく 見[み]える。」",
   "arti_contoh": "\"\"\"Papan iklan itu besar, jadi terlihat jelas dari mana saja.\"\"\""
@@ -2523,10 +2644,12 @@
   "pola": "kata kerja[て] + tindakan kedua",
   "kata": "kata kerja[て] + tindakan kedua",
   "kana": "kata kerja[て] + tindakan kedua",
-  "arti": "KK bentuk て: sebab-akibat",
-  "penjelasan": "Menyambung kegiatan sebab dan akibat.",
+  "arti": "KK bentuk て: menyatakan sebab",
+  "penjelasan": "Bentuk て dipakai menyambung dua klausa; klausa pertama menjadi sebab dari keadaan di klausa kedua.",
   "rumus": [
-   "KK bentuk て + akibat"
+   "KK bentuk て + keadaan / perasaan",
+   "例: 食べすぎて お腹が 痛い",
+   "Bentuk て: lihat tabel perubahan kata kerja"
   ],
   "kk": [
    "te"
@@ -2538,10 +2661,12 @@
   "pola": "kata kerja[て]・kata benda[で] + tindakan kedua",
   "kata": "kata kerja[て]・kata benda[で] + tindakan kedua",
   "kana": "kata kerja[て]・kata benda[で] + tindakan kedua",
-  "arti": "KK て / KB で: cara",
-  "penjelasan": "Menyatakan cara atau alat.",
+  "arti": "KK bentuk て / KB で: menyatakan cara atau alat",
+  "penjelasan": "Bentuk て atau KB + で menyatakan cara melakukan sesuatu.",
   "rumus": [
-   "KK bentuk て / KB + で + KK"
+   "KK bentuk て + KK (cara)",
+   "KB + で + KK (alat)",
+   "例: フライパンを 使って 料理する"
   ],
   "kk": [
    "te"
@@ -2554,9 +2679,10 @@
   "kata": "なくて",
   "kana": "なくて",
   "arti": "KK bentuk なくて",
-  "penjelasan": "なくて: menyambung alasan negatif.",
+  "penjelasan": "なくて: bentuk て dari ない; menyambung 'tidak ... dan ...'.",
   "rumus": [
-   "KK bentuk ない (buang い) + くて"
+   "KK bentuk ない (buang い) + くて",
+   "Contoh: 来ない → 来なくて"
   ],
   "kk": [
    "nai"
@@ -2569,10 +2695,14 @@
   "kata": "なくて",
   "kana": "なくて",
   "arti": "Karena tidak ada ... (なくて)",
-  "penjelasan": "なくて menyatakan sebab keadaan.",
+  "penjelasan": "なくて menyatakan sebab berupa tidak adanya sesuatu; hasilnya biasanya perasaan atau masalah.",
   "rumus": [
-   "KB + が + なくて",
-   "KS bentuk ない + くて"
+   "KB + が + なくて + KS / KK",
+   "KS bentuk ない + くて",
+   "例: お金がなくて 困る"
+  ],
+  "kk": [
+   "nai"
   ],
   "contoh": "店[みせ]にトイレットペーパーがなくて 大変[たいへん]です。",
   "arti_contoh": "Di toko tidak ada tisu toilet, jadi itu sangat merepotkan."
@@ -2581,10 +2711,15 @@
   "pola": "kata kerja[て] + tindakan kedua",
   "kata": "kata kerja[て] + tindakan kedua",
   "kana": "kata kerja[て] + tindakan kedua",
-  "arti": "KK て: dua kegiatan berurutan / berbeda",
-  "penjelasan": "Menyambung dua klausa.",
+  "arti": "KK bentuk て: dua kegiatan berurutan atau berbeda",
+  "penjelasan": "Bentuk て menyambung beberapa kegiatan atau keadaan dalam satu kalimat.",
   "rumus": [
-   "Klausa 1 bentuk て + klausa 2"
+   "Klausa 1 bentuk て + klausa 2",
+   "KK bentuk て + KK bentuk て + KK (urutan)",
+   "Bentuk て: lihat tabel perubahan kata kerja"
+  ],
+  "kk": [
+   "te"
   ],
   "contoh": "おばあさんはいつもラジオを 聴[き]いておじいさんはいつもテレビを 観[み]る。",
   "arti_contoh": "Nenek selalu mendengarkan radio tetapi kakek selalu menonton televisi."
@@ -2593,10 +2728,12 @@
   "pola": "kata kerja[て]",
   "kata": "kata kerja[て]",
   "kana": "kata kerja[て]",
-  "arti": "Permintaan lisan: KK bentuk て",
-  "penjelasan": "KK て akrab untuk meminta.",
+  "arti": "Permintaan akrab: KK bentuk て",
+  "penjelasan": "Bentuk て saja (tanpa ください) dipakai untuk meminta secara akrab kepada teman atau keluarga.",
   "rumus": [
-   "KK bentuk て"
+   "KK bentuk て (permintaan akrab)",
+   "Sopan: KK bentuk て + ください",
+   "Bentuk て: lihat tabel perubahan kata kerja"
   ],
   "kk": [
    "te"
@@ -2608,10 +2745,12 @@
   "pola": "kata kerja[ないで]",
   "kata": "kata kerja[ないで]",
   "kana": "kata kerja[ないで]",
-  "arti": "Tolong jangan ... (ないで)",
-  "penjelasan": "ないで akrab untuk larangan halus.",
+  "arti": "Tolong jangan ... (akrab)",
+  "penjelasan": "KK bentuk ない + で: larangan atau permintaan halus yang akrab. Sopannya ないでください.",
   "rumus": [
-   "KK bentuk ない + で"
+   "KK bentuk ない + で",
+   "Sopan: KK bentuk ない + でください",
+   "Bentuk ない: lihat tabel perubahan kata kerja"
   ],
   "kk": [
    "nai"
