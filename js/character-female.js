@@ -119,18 +119,35 @@ const JEPIT = [
 
 
 /* ---------- PONI (slot baru, hanya cewek) — dijual Rp-koin 1.000 per poni, warna ikut rambut ---------- */
-const hl = (d) => `<path d="${d}" stroke="#fff" stroke-opacity=".16" stroke-width="2" fill="none" stroke-linecap="round"/>`;
-const sk = (d) => `<path d="${d}" stroke="#000" stroke-opacity=".13" stroke-width="1.4" fill="none" stroke-linecap="round"/>`;
 const P1000 = { harga: 1000, _rp: 1 };   // _rp: lewati penyesuaian harga global (tetap 1.000 koin)
+/* satu helai: pangkal lebar, ujung dipotong miring (kepotong sedikit), garis tengah + kilau */
+const lock = (c, xt, yt, xb, yb, w = 7, cut = 2.5) => {
+  const mx = (xt + xb) / 2 + (xb - xt) * .12, my = (yt + yb) / 2, y0 = yt + (yb - yt) * .3;
+  return `<path d="M${xt - w} ${yt} Q${mx - w} ${my} ${xb - cut} ${yb} L${xb + cut + 1.5} ${yb - 2.5} Q${mx + w} ${my} ${xt + w} ${yt}Z" fill="${c}"/>`
+    + `<path d="M${xt + w * .35} ${y0} Q${mx + w * .35} ${my + 4} ${xb + 1} ${yb - 4}" stroke="#000" stroke-opacity=".2" stroke-width="1.1" fill="none" stroke-linecap="round"/>`
+    + `<path d="M${xt - w * .5} ${y0 + 2} Q${mx - w * .5} ${my + 4} ${xb - cut * .7} ${yb - 6}" stroke="#fff" stroke-opacity=".2" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+};
+const JIT = [0, -5, 3, -3, 5, -6, 2];
+const fan = (c, n, x0, x1, yt, yb, lean = .06, w = 8, jit = JIT) => { let o = ""; for (let i = 0; i < n; i++) { const xt = x0 + (x1 - x0) * i / (n - 1); o += lock(c, xt, yt, xt + (200 - xt) * lean, yb + jit[i % jit.length], w); } return o; };
+const topFill = (c, y = 92) => `<path d="M152 ${y} Q145 62 200 53 Q255 62 248 ${y}Z" fill="${c}"/>`;
+const swept = (c, n, x0, x1, yt, yb0, yb1, dx, w = 8) => { let o = ""; for (let i = 0; i < n; i++) { const t = n > 1 ? i / (n - 1) : 0, xt = x0 + (x1 - x0) * t; o += lock(c, xt, yt, xt + dx, yb0 + (yb1 - yb0) * t + JIT[i % JIT.length], w); } return o; };
+/* curtain: belah tengah, helai menyapu ke kiri dan kanan */
+const curtain = (c, yEnd, n = 5) => {
+  let o = topFill(c, 80);
+  for (let i = n - 1; i >= 0; i--) { const t = i / (n - 1), j = JIT[i % JIT.length], yb = 108 + (yEnd - 108) * t + j;
+    o += lock(c, 190 - 30 * t, 66, 182 - 44 * t, yb, 10, 3) + lock(c, 210 + 30 * t, 66, 218 + 44 * t, yb - j * .6 + 2, 10, 3); }
+  return o;
+};
 const PONI = [
-  ["lurus", "Poni Depan Lurus", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 116 Q226 123 200 118 Q174 123 149 116Z" fill="${c}"/>` + hl("M166 96 Q200 86 234 96") + sk("M176 78 L174 116 M200 70 L200 118 M224 78 L226 116"), P1000],
-  ["tipis", "Poni Tipis (See-through)", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 100 Q200 108 149 100Z" fill="${c}"/>` + [162, 176, 190, 204, 218, 232, 244].map((x, i) => `<path d="M${x - 5} ${96 - (i % 2) * 2} Q${x} ${112 + (i % 3) * 3} ${x + 4} ${97}Z" fill="${c}"/>`).join(""), P1000],
-  ["samping", "Poni Samping Menyapu", "common", (c = "#3a2518") => `<path d="M150 74 Q200 52 250 74 L252 100 Q222 98 196 112 Q168 128 150 146 L147 120Z" fill="${c}"/>` + hl("M176 80 Q205 82 228 98") + sk("M160 120 Q190 104 232 98"), P1000],
-  ["belah_tengah", "Poni Belah Tengah (Curtain)", "common", (c = "#3a2518") => `<path d="M200 66 Q150 66 149 112 Q147 140 150 160 Q168 132 182 108 Q194 90 200 66Z" fill="${c}"/><path d="M200 66 Q250 66 251 112 Q253 140 250 160 Q232 132 218 108 Q206 90 200 66Z" fill="${c}"/>` + hl("M162 100 Q158 124 160 140") + hl("M238 100 Q242 124 240 140"), P1000],
-  ["hime", "Poni Hime + Sisi Panjang", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 116 Q226 123 200 118 Q174 123 149 116Z" fill="${c}"/><path d="M149 100 Q138 170 146 230 L160 228 Q158 170 164 120Z" fill="${c}"/><path d="M251 100 Q262 170 254 230 L240 228 Q242 170 236 120Z" fill="${c}"/>` + hl("M168 96 Q200 86 232 96") + sk("M200 70 L200 118"), P1000],
-  ["pendek", "Poni Pendek (Baby Bangs)", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L250 96 Q226 102 200 98 Q174 102 150 96Z" fill="${c}"/>` + hl("M170 84 Q200 76 230 84") + sk("M186 74 L184 98 M214 74 L216 98"), P1000],
-  ["miring", "Poni Miring Asimetris", "common", (c = "#3a2518") => `<path d="M150 74 Q200 52 250 74 L251 96 Q232 100 214 112 Q184 124 152 126 L148 106Z" fill="${c}"/>` + hl("M170 82 Q206 80 238 94") + sk("M166 112 Q200 108 232 96"), P1000],
-  ["gerigi", "Poni Bergerigi (Choppy)", "common", (c = "#3a2518") => `<path d="M150 74 Q200 54 250 74 L251 112 L240 100 L232 119 L220 102 L210 121 L200 103 L190 121 L180 102 L168 119 L160 100 L149 112Z" fill="${c}"/>` + hl("M168 90 Q200 80 232 90"), P1000],
+  ["lurus", "Poni Depan Lurus", "common", (c = "#3a2518") => topFill(c) + fan(c, 9, 156, 244, 66, 116, .05, 8), P1000],
+  ["tipis", "Poni Tipis (See-through)", "common", (c = "#3a2518") => topFill(c, 88) + fan(c, 8, 158, 242, 70, 112, .06, 5.5, [0, -6, 3, -4, 6, -2, 4, -5]), P1000],
+  ["curtain", "Poni Curtain Kiri-Kanan", "common", (c = "#3a2518") => curtain(c, 168), P1000],
+  ["curtain_panjang", "Poni Curtain Panjang", "common", (c = "#3a2518") => curtain(c, 196, 6), P1000],
+  ["samping", "Poni Samping Menyapu", "common", (c = "#3a2518") => topFill(c, 88) + swept(c, 8, 162, 246, 66, 106, 136, -34), P1000],
+  ["miring", "Poni Miring Asimetris", "common", (c = "#3a2518") => topFill(c, 88) + swept(c, 9, 156, 244, 66, 120, 100, -14, 7.5), P1000],
+  ["hime", "Poni Hime + Sisi Panjang", "common", (c = "#3a2518") => topFill(c) + fan(c, 9, 156, 244, 66, 116, .05, 8) + lock(c, 152, 90, 144, 226, 9, 3) + lock(c, 160, 96, 158, 220, 6, 2.5) + lock(c, 248, 90, 256, 226, 9, 3) + lock(c, 240, 96, 242, 220, 6, 2.5), P1000],
+  ["pendek", "Poni Pendek (Baby Bangs)", "common", (c = "#3a2518") => topFill(c, 84) + fan(c, 9, 156, 244, 66, 98, .03, 8, [0, -3, 2, -2, 3]), P1000],
+  ["gerigi", "Poni Bergerigi (Choppy)", "common", (c = "#3a2518") => topFill(c, 88) + fan(c, 11, 154, 246, 66, 112, .08, 6.5, [0, -9, 4, -6, 8, -11, 2, -7]), P1000],
 ];
 
 /* ---------- ANTING (slot baru) — telinga di x=148 / 252, y=135 ---------- */
