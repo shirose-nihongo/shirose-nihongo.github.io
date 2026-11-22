@@ -67,6 +67,18 @@
       "@media(prefers-reduced-motion:reduce){.mb-isl svg{animation:none}}",
       ".mb-name{font-size:20px;font-weight:800;line-height:1.2;color:#fff}",
       ".mb-d{font-size:14px;color:#cdb8d3;line-height:1.5}",
+      ".mb-sum{margin:4px 0 2px}",
+      ".mb-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(86px,1fr));gap:8px}",
+      ".mb-chip{font:inherit;color:#fff;background:rgba(10,6,20,.4);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:9px 6px 8px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.15}",
+      ".mb-chip .mb-ci{font-size:17px}.mb-chip b{font-size:17px;font-weight:800;color:var(--ac,#fff)}.mb-chip small{font-size:11.5px;color:#cdb8d3}",
+      ".mb-chip:hover{border-color:var(--ac,#ef6a9a)}.mb-chip.on{background:rgba(255,255,255,.1);border-color:var(--ac,#ef6a9a)}",
+      ".mb-chip:focus-visible{outline:2px solid var(--ac,#ef6a9a);outline-offset:2px}",
+      ".mb-pan{margin-top:8px;background:rgba(10,6,20,.38);border-radius:12px;padding:10px 12px;font-size:13px;color:#e7cfe0;line-height:1.5}",
+      ".mb-pan-h b{color:#ffb7c5;font-size:13.5px}.mb-pan ul{margin:6px 0 0;padding-left:17px}.mb-pan li{margin:3px 0}",
+      ".mb-pan ul.mb-sl{list-style:none;padding:0}.mb-sl li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed rgba(255,255,255,.12);padding:4px 0}.mb-sl li b{white-space:nowrap;color:#fff}",
+      ".mb-pan-s{margin-top:8px;font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#ffb7c5}",
+      ".mb-tags{font-family:'Shippori Mincho B1',serif;font-size:13px;color:#f3dff0;line-height:1.7}.mb-pan-n{margin-top:8px;color:#cdb8d3}",
+      ".mb-all{margin-top:8px;font-size:13px;color:#e7cfe0}.mb-all summary{cursor:pointer;color:#ffb7c5;font-weight:700;font-size:12.5px}.mb-all ul{margin:6px 0 0;padding-left:17px}.mb-all li{margin:3px 0}",
       ".mb-det{margin:4px 0 2px;font-size:13px;color:#e7cfe0;line-height:1.5;background:rgba(10,6,20,.28);border-radius:12px;padding:10px 12px}",
       ".mb-det b{display:block;margin-bottom:3px;color:#ffb7c5;font-size:12px;letter-spacing:.08em;text-transform:uppercase}",
       ".mb-det ul{margin:0;padding-left:17px}.mb-det li{margin:3px 0}",
@@ -115,6 +127,97 @@
   }
   var ART = null;   // modul gambar pulau SSW (js/ssw-art.js), dimuat sekali dan hanya untuk tab SSW
   function loadArt() { if (!ART) { try { ART = import("./ssw-art.js").catch(function () { return null; }); } catch (e) { ART = Promise.resolve(null); } } return ART; }
+
+  /* ---------- ringkasan kartu: 4 angka utama (ketuk = detail), dihitung dari teks rincian ---------- */
+  function num(x) { return parseInt(String(x).replace(/\./g, ""), 10) || 0; }
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+  function stats(p) {
+    var L = p.rincian || [], T = L.join("\n"), m, st = { chips: [], det: {} };
+    var kk = /([\d.]+) kosakata/.exec(L.filter(function (l) { return /^Total/.test(l); }).join("\n") || T);
+    var kj = /([\d.]+) kanji/.exec(L.filter(function (l) { return /^Total/.test(l); }).join("\n") || T);
+    var bp = /([\d.]+) pola bunpou/.exec(L.filter(function (l) { return /^Total/.test(l); }).join("\n") || T);
+    var soal = [], total = 0;
+    function add(label, n, note) { soal.push([label, n, note || ""]); total += n; }
+    if (/Full Exam/.test(T) && /Latihan per bagian/.test(T)) {            // JLPT satu level
+      if ((m = /Full Exam: (\d+) paket \(([\d.]+) soal\)/.exec(T))) add("Full Exam", num(m[2]), m[1] + " paket");
+      var re = /(Kanji|Kotoba|Bunpou|Dokkai|Bintang ★) (\d+) paket \(([\d.]+) soal\)/g, x;
+      while ((x = re.exec(T))) add("Latihan " + x[1], num(x[3]), x[2] + " paket");
+      if ((m = /Choukai: (\d+) paket audio \(([\d.]+) soal\)/.exec(T))) add("Choukai (audio)", num(m[2]), m[1] + " paket");
+    } else if (/paket Full Exam/.test(T)) {                               // JLPT bundling
+      if ((m = /(\d+) paket Full Exam \(([\d.]+) soal\) \+ ([\d.]+) soal latihan/.exec(T))) { add("Full Exam", num(m[2]), m[1] + " paket"); add("Latihan per bagian", num(m[3]), "Kanji, Kotoba, Bunpou, Dokkai, Bintang ★"); }
+      if ((m = /Choukai: (\d+) paket audio \(([\d.]+) soal\)/.exec(T))) add("Choukai (audio)", num(m[2]), m[1] + " paket");
+    } else if (/Tryout/.test(T)) {                                        // JFT
+      if ((m = /\((\d+) paket, ([\d.]+) soal\)/.exec(T))) add("Ujian per blok bab", num(m[2]), m[1] + " paket");
+      if ((m = /Simulasi penuh[^:]*: (\d+) paket × (\d+) soal/.exec(T))) add("Simulasi penuh", num(m[1]) * num(m[2]), m[1] + " paket × " + m[2] + " soal");
+      if ((m = /Tryout: (\d+) paket[^=]*= ([\d.]+) soal/.exec(T))) add("Tryout", num(m[2]), m[1] + " paket");
+      if ((m = /Latihan cepat[^\n]*/.exec(T))) { var q = 0; (m[0].match(/\((\d+)(?: soal)?\)/g) || []).forEach(function (t) { q += num(t.replace(/\D/g, "")); }); if (q) add("Latihan cepat", q, "per bagian"); }
+    } else if (/set kuis/.test(T)) {                                      // SSW
+      if ((m = /([\d.]+) soal latihan dalam (\d+) set kuis/.exec(T))) add("Latihan per bab", num(m[1]), m[2] + " set kuis");
+      if ((m = /(\d+) (?:ujian|paket) × (\d+) soal/.exec(T))) add("Ujian penuh simulasi", num(m[1]) * num(m[2]), m[1] + " × " + m[2] + " soal");
+    }
+    var mb = /([\d.]+) bab · ([\d.]+) subbab/.exec(T), mz = /(\d+) pertanyaan wawancara/.exec(T);
+    if (mb) st.chips.push(["📖", mb[1] + " bab", "materi", "bab", { bab: mb[1], sub: mb[2] }]);
+    if (kk) st.chips.push(["📚", kk[1], "kosakata", "kosa", null]);
+    if (kj) st.chips.push(["🈶", kj[1], "kanji", "kanji", null]);
+    if (bp) st.chips.push(["📐", bp[1], "pola bunpou", "bunpou", null]);
+    if (soal.length) st.chips.push(["📝", fmt(total), "soal", "soal", soal]);
+    if (mz) st.chips.push(["🗣", mz[1], "tanya wawancara", "mensetsu", null]);
+    st.lines = L; st.T = T;
+    return st;
+  }
+  var FITUR = {
+    kosa: ["Tiap kata punya bacaan (kana), arti Bahasa Indonesia, dan contoh kalimat.", "Bisa dihafal lewat flashcard dan mode hafalan.", "Ada suara untuk melatih pengucapan."],
+    kanji: ["Arti, bacaan On dan Kun, serta contoh kata tiap kanji.", "Animasi urutan goresan, dengan nomor tiap goresan.", "Bisa latihan menulis di kanvas dengan penilaian perkiraan."],
+    bunpou: ["Tiap pola: arti, penjelasan singkat, rumus, dan contoh kalimat beserta artinya.", "Tombol tabel perubahan kata kerja (bentuk masu, te, ta, nai, dan lainnya).", "Bisa digeser kiri dan kanan seperti kartu."],
+    soal: [],
+    bab: ["Materi dalam teks lengkap dan ringkas.", "Bisa ganti Bahasa Indonesia dan Jepang dengan satu ketukan.", "Ketuk kata di teks untuk melihat arti, lalu masukkan ke flashcard."],
+    mensetsu: ["Latihan pertanyaan wawancara kerja, dengan contoh jawaban.", "Format Rirekisho (riwayat hidup) untuk dilatih."]
+  };
+  function detailPanel(st, key, p) {
+    var c = st.chips.filter(function (x) { return x[3] === key; })[0];
+    var box = el("div", "mb-pan"), h = el("div", "mb-pan-h");
+    h.appendChild(el("b", null, c[0] + " " + c[1] + " " + c[2])); box.appendChild(h);
+    if (key === "soal") {
+      var ul = el("ul", "mb-sl"); c[4].forEach(function (r) { var li = el("li"); li.appendChild(el("span", null, r[0] + (r[2] ? " · " + r[2] : ""))); li.appendChild(el("b", null, fmt(r[1]) + " soal")); ul.appendChild(li); });
+      box.appendChild(ul);
+      var tipe = /Tipe soal Full Exam: ([^\n]+)/.exec(st.T);
+      if (tipe) { box.appendChild(el("div", "mb-pan-s", "Tipe soal Full Exam")); box.appendChild(el("div", "mb-tags", tipe[1])); }
+      var fmtU = /(tiap paket[^\n]*|60 menit[^\n]*)/.exec(st.T);
+      if (/Simulasi penuh JFT/.test(st.T)) box.appendChild(el("div", "mb-pan-n", "Simulasi penuh: 60 menit, 4 bagian (Script & Vocabulary, Conversation & Expression, Listening, Reading)."));
+      else if (fmtU && /Full Exam/.test(st.T)) box.appendChild(el("div", "mb-pan-n", "Satu paket Full Exam ±70 menit, format seperti ujian aslinya."));
+    } else {
+      var ul2 = el("ul"); (FITUR[key] || []).forEach(function (t) { ul2.appendChild(el("li", null, t)); });
+      if (key === "bab" && c[4]) ul2.insertBefore(el("li", null, c[4].bab + " bab, " + c[4].sub + " subbab."), ul2.firstChild);
+      if (key === "mensetsu") ul2.insertBefore(el("li", null, c[1] + " pertanyaan wawancara kerja."), ul2.firstChild);
+      box.appendChild(ul2);
+      if ((key === "kosa" || key === "kanji" || key === "bunpou") && /Starter A1/.test(st.T)) {
+        var per = el("ul", "mb-sl"); st.lines.forEach(function (l) { var mm = /^(Starter A1|Shokyuu \d): ([\d.]+) kosakata · ([\d.]+) kanji · ([\d.]+) pola bunpou/.exec(l); if (mm) { var li = el("li"); li.appendChild(el("span", null, mm[1])); li.appendChild(el("b", null, key === "kosa" ? mm[2] : key === "kanji" ? mm[3] : mm[4])); per.appendChild(li); } });
+        box.appendChild(el("div", "mb-pan-s", "Per level Irodori")); box.appendChild(per);
+      }
+    }
+    return box;
+  }
+  function ringkas(p, k) {
+    var st = stats(p); if (!st.chips.length) return null;
+    var wrap = el("div", "mb-sum"), row = el("div", "mb-chips"), slot = el("div", "mb-pan-slot"), cur = null;
+    st.chips.forEach(function (c) {
+      var b = el("button", "mb-chip"); b.type = "button"; b.setAttribute("aria-expanded", "false");
+      b.appendChild(el("span", "mb-ci", c[0])); b.appendChild(el("b", null, c[1])); b.appendChild(el("small", null, c[2]));
+      b.onclick = function () {
+        var open = cur === c[3]; cur = open ? null : c[3];
+        [].forEach.call(row.children, function (x) { x.setAttribute("aria-expanded", "false"); x.classList.remove("on"); });
+        slot.textContent = "";
+        if (!open) { b.setAttribute("aria-expanded", "true"); b.classList.add("on"); slot.appendChild(detailPanel(st, c[3], p)); }
+      };
+      row.appendChild(b);
+    });
+    wrap.appendChild(row); wrap.appendChild(slot);
+    if (p.rincian.length) {
+      var all = el("details", "mb-all"); all.appendChild(el("summary", null, "Lihat semua isi paket"));
+      var ul = el("ul"); p.rincian.forEach(function (t) { ul.appendChild(el("li", null, t)); }); all.appendChild(ul); wrap.appendChild(all);
+    }
+    return wrap;
+  }
   function kotak(p, prefix) {
     var nama = (prefix || "") + p.nama, k = el("div", "mb-k" + (p.besar ? " besar" : ""));
     if (p.warna) k.style.setProperty("--ac", p.warna);
@@ -130,8 +233,8 @@
     }
     var d = p.ket || p.desc; if (d) k.appendChild(el("div", "mb-d", d));
     if (p.rincian && p.rincian.length) {
-      var det = el("div", "mb-det"); det.appendChild(el("b", null, "Isi paket"));
-      var dl = el("ul"); p.rincian.forEach(function (t) { dl.appendChild(el("li", null, t)); }); det.appendChild(dl); k.appendChild(det);
+      var sm = ringkas(p);
+      if (sm) k.appendChild(sm);
     }
     var o = el("div", "mb-opts");
     o.appendChild(optCell(nama, "Bulanan", p.bulanan));
@@ -171,7 +274,7 @@
     back.onclick = function () { closePricing(); };
     bar.appendChild(back); bar.appendChild(el("div", "mb-ttl", "Berlangganan Shirose Nihongo")); root.appendChild(bar);
     var wrap = el("div", "mb-wrap");
-    wrap.appendChild(el("p", "mb-lead", "Pilih kategori, pilih paket dan durasi, lalu ketuk Berlangganan Sekarang. Pesanmu terisi otomatis di WhatsApp admin."));
+    wrap.appendChild(el("p", "mb-lead", "Pilih kategori, pilih paket dan durasi, lalu ketuk Berlangganan Sekarang. Ketuk angka di tiap paket untuk melihat isinya. Pesanmu terisi otomatis di WhatsApp admin."));
     if (!waBase()) wrap.appendChild(el("div", "mb-off-note", "Nomor WhatsApp admin belum diisi (js/landing-config.js → langganan.url). Tombol berlangganan nonaktif sementara."));
     var tabs = el("div", "mb-tabs"); tabs.setAttribute("role", "tablist");
     var body = el("div"); body.id = "mb-body";
