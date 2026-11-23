@@ -1848,6 +1848,33 @@ export async function bankJlptDelete(id) {
   await deleteDoc(doc(db, "guru_bank_jlpt", id));
 }
 
+/* ========== DECK HAFALAN GURU (ala Anki) ==========
+   guru_deck/_index : { list:[{id,nama,n,updated}], updated }
+   guru_deck/{id}   : { nama, cards[], updated }   (cards: {k,y,a,c,ca,n,t, + SRS: iv,ez,r,l,due,last})
+   Aturan Firestore: read/write hanya isGuru(). */
+export async function deckIndex() {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const d = await getDoc(doc(db, "guru_deck", "_index"));
+  return d.exists() ? (d.data().list || []) : [];
+}
+export async function deckGet(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const d = await getDoc(doc(db, "guru_deck", id));
+  return d.exists() ? { id, ...d.data() } : null;
+}
+export async function deckPut(deck) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "guru_deck", deck.id), { nama: deck.nama, cards: deck.cards, updated: serverTimestamp() });
+}
+export async function deckSetIndex(list) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "guru_deck", "_index"), { list, updated: serverTimestamp() });
+}
+export async function deckDelete(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await deleteDoc(doc(db, "guru_deck", id));
+}
+
 export { db, auth };
 
 /* ========== SAVE DATA (tombol 💾 Simpan) ==========
