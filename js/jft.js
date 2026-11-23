@@ -353,8 +353,12 @@ function selesaiSesi() {
   rec.review = J.qs.map((q, i) => ({ sec: q.sec, tipe: q.tipe || "mc", alt: q.alt || [], ref: q.ref || "", q: q.q, o: q.o || [], a: q.a, u: J.ans[i] ?? null, n: q.n || "", p: q.p || "", fl: q.fl || null, emo: q.emo || "", say: q.say || "", pre: q.pre || "" }));
   if (J.mode !== "latihan") {
     const his = LS.get(HIS_KEY(), []); his.unshift({ ...rec, review: undefined }); LS.set(HIS_KEY(), his.slice(0, 40));
-    // Simpan kunci & pembahasan 12 ujian terakhir supaya bisa dibuka lagi dari Riwayat (yang lebih lama hanya nilai).
-    LS.set(REV_KEY(rec.t), rec.review); his.slice(12, 40).forEach(h => LS.del(REV_KEY(h.t)));
+    // Simpan kunci & pembahasan 30 ujian terakhir supaya bisa dibuka lagi dari Riwayat. Kalau memori HP penuh,
+    // pembahasan yang paling lama dibuang satu per satu (nilainya tetap ada) sampai yang baru muat.
+    his.slice(30, 40).forEach(h => LS.del(REV_KEY(h.t)));
+    const simpanRev = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } };
+    let urut = his.slice(1, 30).reverse();
+    while (!simpanRev(REV_KEY(rec.t), rec.review) && urut.length) { const o = urut.shift(); LS.del(REV_KEY(o.t)); }
     const best = LS.get(BEST_KEY(), {}); const bk = `${J.lv}:${J.kode}`; if (!best[bk] && pct >= 0.6 && window.awardKoin) { try { window.awardKoin(J.mode === "sim" ? 100 : 30, "jft " + bk); } catch (e) {} }
     if (!best[bk] || pct > best[bk].pct) best[bk] = { pct, skor: rec.skor, t: rec.t }; LS.set(BEST_KEY(), best);
   }
