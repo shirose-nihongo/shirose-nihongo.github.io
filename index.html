@@ -1529,6 +1529,7 @@ html{overflow-x:hidden;}
   <span class="sm-lead">Ikuti kami</span>
   <a class="sm-ig" href="https://www.instagram.com/shirose.nihongo" target="_blank" rel="noopener" aria-label="Instagram shirose.nihongo"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-2.4.1-3.4 1.2-3.5 3.5-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 2.3 1.1 3.4 3.5 3.5 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c2.3-.1 3.4-1.1 3.5-3.5.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-2.3-1.1-3.4-3.5-3.5C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-2.1a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>Instagram</a>
   <a class="sm-tt" href="https://www.tiktok.com/@shirose.nihongo" target="_blank" rel="noopener" aria-label="TikTok shirose.nihongo"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.1a6.1 6.1 0 1 0 5.3 6.1V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-4.3-4.8z"/></svg>TikTok</a>
+  <a class="sm-saran" href="#" role="button" onclick="bukaSaran();return false;" aria-label="Kotak saran"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm3 4v2h10V8H7zm0 4v2h7v-2H7z"/></svg>Kotak Saran</a>
   <span class="sm-id">@shirose.nihongo</span>
 </footer>
 
@@ -1860,6 +1861,45 @@ function toast(msg){
   setTimeout(()=>t.remove(), 3100);
 }
 window.toast = toast;
+
+/* ===== Kotak saran (footer sosmed) ===== */
+window.bukaSaran = () => {
+  if (document.getElementById("saran-modal")) return;
+  const w = document.createElement("div"); w.id = "saran-modal";
+  w.style.cssText = "position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;padding:16px;";
+  w.innerHTML = `<div class="panel" style="max-width:440px;width:100%;margin:0;max-height:92vh;overflow:auto;">
+    <h3 style="margin:0 0 6px;">💬 Kotak Saran</h3>
+    <p style="font-size:12px;color:var(--gray);margin:0 0 10px;">Tulis saran, kritik, atau laporan bug. Pesan dikirim langsung ke guru.</p>
+    <textarea id="sr-pesan" maxlength="600" rows="5" placeholder="Tulis saranmu di sini…" style="width:100%;box-sizing:border-box;"></textarea>
+    <div id="sr-cnt" style="font-size:11px;color:var(--gray);text-align:right;">0/600</div>
+    <input id="sr-nama" maxlength="60" placeholder="Nama (boleh dikosongkan)" style="width:100%;box-sizing:border-box;margin-top:6px;">
+    <input id="sr-kontak" maxlength="80" placeholder="Kontak/WA (opsional, kalau mau dibalas)" style="width:100%;box-sizing:border-box;margin-top:6px;">
+    <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end;">
+      <button class="btn ghost" onclick="document.getElementById('saran-modal').remove()">Batal</button>
+      <button class="btn gold" id="sr-kirim" onclick="kirimSaranUI()">Kirim</button></div></div>`;
+  w.addEventListener("click", e => { if (e.target === w) w.remove(); });
+  document.body.appendChild(w);
+  const ta = document.getElementById("sr-pesan");
+  ta.addEventListener("input", () => { document.getElementById("sr-cnt").textContent = ta.value.length + "/600"; });
+  ta.focus();
+};
+window.kirimSaranUI = async () => {
+  const pesan = document.getElementById("sr-pesan").value.trim();
+  if (pesan.length < 3) return toast("Tulis sarannya dulu ya");
+  if (!state.user) return toast("Masuk dengan akunmu dulu untuk mengirim saran");
+  // batas per perangkat: jeda 60 detik & maks 5 saran per hari (cegah spam, hemat kuota)
+  let h = {}; try { h = JSON.parse(localStorage.getItem("shirose-saran") || "{}"); } catch (_) {}
+  const hari = new Date().toISOString().slice(0, 10), now = Date.now();
+  if (h.hari !== hari) h = { hari, n: 0, t: 0 };
+  if (now - (h.t || 0) < 60000) return toast("Tunggu sebentar sebelum kirim lagi");
+  if ((h.n || 0) >= 5) return toast("Batas 5 saran per hari tercapai");
+  const btn = document.getElementById("sr-kirim"); btn.disabled = true;
+  try {
+    await FB.kirimSaran({ pesan, nama: document.getElementById("sr-nama").value, kontak: document.getElementById("sr-kontak").value, kelas: (state.siswa && state.siswa.kelas) || "" });
+    h.n = (h.n || 0) + 1; h.t = now; try { localStorage.setItem("shirose-saran", JSON.stringify(h)); } catch (_) {}
+    document.getElementById("saran-modal").remove(); toast("✅ Terima kasih! Saranmu terkirim");
+  } catch (e) { btn.disabled = false; toast("Gagal kirim: " + (e && e.message ? e.message : e)); }
+};
 
 /* ========== AUTH: dedicated page (replaces modal) ========== */
 // All earlier call-sites that opened the modal now route to the dedicated

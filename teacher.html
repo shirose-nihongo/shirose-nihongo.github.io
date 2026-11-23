@@ -357,7 +357,7 @@ window.guruLogout = async () => {
 // script ini adalah ES module — jadi state & renderTab harus diekspos ke window.
 window.state = state;
 /* ===== Menu bawah (HP) + sheet "Lainnya" ===== */
-const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["ssw","🌏","SSW"],["laporan","📈","Laporan"],["bankjlpt","📚","Bank JLPT"]];
+const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["ssw","🌏","SSW"],["laporan","📈","Laporan"],["bankjlpt","📚","Bank JLPT"],["saran","💬","Saran"]];
 const MENU_LAIN = [];   // menu lain dihapus dari tampilan (fungsi backend tetap ada)
 function renderBottomNav(){
   const lain = MENU_LAIN.filter(m => m[0] !== "admin" || FB.userIsAdmin());
@@ -385,6 +385,7 @@ function renderApp(){
         <div class="nav-item ${state.tab==='ssw'?'active':''}" onclick="setTab('ssw')"><span class="ico">🌏</span> SSW</div>
         <div class="nav-item ${state.tab==='laporan'?'active':''}" onclick="setTab('laporan')"><span class="ico">📈</span> Laporan</div>
         <div class="nav-item ${state.tab==='bankjlpt'?'active':''}" onclick="setTab('bankjlpt')"><span class="ico">📚</span> Bank JLPT</div>
+        <div class="nav-item ${state.tab==='saran'?'active':''}" onclick="setTab('saran')"><span class="ico">💬</span> Saran</div>
       </div>
       <div class="main" id="main"></div>
     </div>
@@ -392,7 +393,7 @@ function renderApp(){
   `;
   renderTab();
 }
-const TAB_BOLEH = ["siswa","kelas","ssw","laporan","bankjlpt"];
+const TAB_BOLEH = ["siswa","kelas","ssw","laporan","bankjlpt","saran"];
 window.setTab = (t) => { state.tab = TAB_BOLEH.includes(t) ? t : "siswa"; state.siswaStale = true; renderApp(); };
 
 window.renderTab = (...a) => renderTab(...a);
@@ -411,6 +412,7 @@ async function renderTab(){
     else if (state.tab === "bankjlpt") mount.innerHTML = await renderBankJlptTab(FB, { toast, rerender: () => renderTab() });
     else if (state.tab === "mensetsu") mount.innerHTML = await renderMensetsuTab();
     else if (state.tab === "laporan") mount.innerHTML = await renderLaporanTab();
+    else if (state.tab === "saran") mount.innerHTML = await renderSaranTab();
     else if (state.tab === "jlpt") mount.innerHTML = await renderJlptTab();
     else if (state.tab === "diagnostik") mount.innerHTML = await renderDiagnostikTab();
     else if (state.tab === "admin")   mount.innerHTML = await renderAdminTab();
@@ -2433,6 +2435,26 @@ window.importStarterChoukai = async () => {
 };
 
 /* ========== TAB: LAPORAN ========== */
+/* ========== TAB: KOTAK SARAN ========== */
+let _saranList = [];
+const _saranTgl = (x) => { const t = x.tgl && x.tgl.toMillis ? x.tgl.toMillis() : (x.tgl && x.tgl.seconds ? x.tgl.seconds * 1000 : 0); return t ? new Date(t).toLocaleString("id-ID", { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }) : "-"; };
+async function renderSaranTab(){
+  try { _saranList = await FB.listSaran(200); } catch (e) { return `<div class="alert alert-err">Gagal memuat saran: ${_e(e.message || e)}<br><small>Pastikan aturan Firestore <code>saran</code> sudah dipublish.</small></div>`; }
+  const rows = _saranList.map(x => `<div class="card" style="margin-bottom:8px;"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--gray);"><span>${_saranTgl(x)} · <b>${_e(x.nama || "Anonim")}</b>${x.kelas ? " · " + _e(x.kelas) : ""}${x.kontak ? " · 📞 " + _e(x.kontak) : ""}</span><a href="#" onclick="hapusSaranUI('${x.id}');return false;" style="color:var(--red);">hapus</a></div><div style="margin-top:6px;white-space:pre-wrap;">${_e(x.pesan)}</div></div>`).join("");
+  return `<div class="card"><h2>💬 Kotak Saran</h2>
+    <p style="color:var(--gray);font-size:13px;">${_saranList.length} saran (maks. 200 terbaru). Dibaca sekali saat tab ini dibuka.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;"><button class="btn" onclick="unduhSaran('xlsx')" ${_saranList.length ? "" : "disabled"}>⬇ Unduh Excel</button><button class="btn ghost" onclick="unduhSaran('csv')" ${_saranList.length ? "" : "disabled"}>⬇ Unduh CSV</button><button class="btn ghost" onclick="renderTab()">↻ Muat ulang</button></div>
+    ${rows || '<div style="color:var(--gray);">Belum ada saran masuk.</div>'}</div>`;
+}
+window.hapusSaranUI = async (id) => { if (!confirm("Hapus saran ini?")) return; try { await FB.hapusSaran(id); toast("Saran dihapus"); renderTab(); } catch (e) { toast("Gagal: " + (e.message || e)); } };
+window.unduhSaran = (fmt) => {
+  const data = _saranList.map(x => ({ Tanggal: _saranTgl(x), Nama: x.nama || "", Kelas: x.kelas || "", Kontak: x.kontak || "", Saran: x.pesan || "" }));
+  const nama = `kotak-saran-${new Date().toISOString().slice(0, 10)}`;
+  const ws = XLSX.utils.json_to_sheet(data); ws["!cols"] = [{ wch: 20 }, { wch: 18 }, { wch: 16 }, { wch: 18 }, { wch: 80 }];
+  if (fmt === "csv") { const blob = new Blob(["\ufeff" + XLSX.utils.sheet_to_csv(ws)], { type: "text/csv;charset=utf-8" }); const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = nama + ".csv"; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); return; }
+  const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, "Saran"); XLSX.writeFile(wb, nama + ".xlsx");
+};
+
 async function renderLaporanTab(){
   const siswa = await FB.listSiswa();
   // Fetch gami per siswa

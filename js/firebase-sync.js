@@ -1588,6 +1588,28 @@ export async function getSiswaMasteryCounts(uid) {
   return result;
 }
 
+/* ========== KOTAK SARAN ========== */
+// Siswa/pengunjung yang login boleh MENULIS (create saja). Hanya guru yang boleh membaca/menghapus.
+// 1 saran = 1 dokumen kecil (1 write). Guru membaca saat membuka tab Saran (maks. 200 dokumen).
+export async function kirimSaran({ pesan, nama = "", kontak = "", kelas = "" }) {
+  if (!currentUser) throw new Error("Masuk dulu untuk mengirim saran");
+  const p = String(pesan || "").trim().slice(0, 600);
+  if (p.length < 3) throw new Error("Saran terlalu pendek");
+  await addDoc(collection(db, "saran"), {
+    pesan: p, nama: String(nama || "").trim().slice(0, 60), kontak: String(kontak || "").trim().slice(0, 80),
+    kelas: String(kelas || "").trim().slice(0, 60), uid: currentUser.uid, tgl: serverTimestamp(),
+  });
+}
+export async function listSaran(limitN = 200) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const snap = await getDocs(query(collection(db, "saran"), orderBy("tgl", "desc"), limit(limitN)));
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+}
+export async function hapusSaran(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await deleteDoc(doc(db, "saran", id));
+}
+
 /* ========== KELAS ========== */
 export async function listKelas() {
   const snap = await getDocs(collection(db, "kelas"));
