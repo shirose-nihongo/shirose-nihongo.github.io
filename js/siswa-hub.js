@@ -124,6 +124,8 @@ async function tabProfil() {
       <input type="checkbox" ${window.isAutoPlayAudio && window.isAutoPlayAudio() ? "checked" : ""} onchange="setAutoPlayAudio(this.checked)" style="width:20px; height:20px;"/>
       <span style="flex:1;"><b>🔊 Auto-play audio Jepang</b><br><small style="color:var(--gray);">Pelafalan diputar otomatis setelah kamu rate flashcard</small></span>
     </label>
+    <button type="button" onclick="bukaSaran()" style="display:flex; align-items:center; gap:10px; width:100%; margin-top:10px; text-align:left; cursor:pointer; padding:12px; background:rgba(244,114,182,.12); border:1px solid rgba(244,114,182,.5); border-radius:14px; color:inherit; font:inherit;">
+      <span style="font-size:22px;">💬</span><span style="flex:1;"><b>Kotak Saran</b><br><small style="color:var(--gray);">Kirim saran, kritik, atau laporan bug ke guru</small></span></button>
     ${guruBox}
     <button class="btn ghost danger" style="margin-top:16px;" onclick="logout()">Keluar</button>`;
 }

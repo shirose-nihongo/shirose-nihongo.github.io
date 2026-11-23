@@ -96,6 +96,7 @@
 @media (prefers-reduced-motion:reduce){ .ms-isl-art,.ms-eyes,.ms-avatar .ms-ring,.ms-avatar.talk .ms-mouth,.ms-mic.on{animation:none !important;} }
 
 /* kartu di halaman pilih level */
+.jlpt-card.saran{--acc:#f472b6; border-color:rgba(244,114,182,.55);} .jlpt-card.saran .lv{color:#f9a8d4;} .jlpt-card.saran:hover{border-color:#f472b6 !important; box-shadow:0 14px 36px rgba(244,114,182,.3) !important;}
 .jlpt-card.mensetsu{--acc:#38bdf8; border-color:rgba(56,189,248,.55);} .jlpt-card.mensetsu .lv{color:#7dd3fc;} .jlpt-card.mensetsu:hover{border-color:#38bdf8 !important; box-shadow:0 14px 36px rgba(56,189,248,.3) !important;}
 
 /* ---- persiapan jawaban / hafalan (.pp-) ---- */

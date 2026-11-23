@@ -249,10 +249,22 @@ async function viewSetup(lv, jenis, pkgId, sesi) {
   const def = meta.durasi || JENIS[jenis].durasi;
   const pilihan = [...new Set([...(jenis === "full" ? [30, 45, 60, 70] : [5, 10, 15, 20]), def])].sort((a, b) => a - b);
   const lain = sesi && !sesi.selesai && sesi.pkgId !== pkgId;
+  // Hasil sebelumnya untuk paket ini: tampil dulu, bisa direview sebelum memulai ulang.
+  let lalu = [];
+  try { lalu = (await riwayat()).filter(h => h.pkgId === pkgId); } catch (e) {}
+  const h0 = lalu[0];
+  const lastBox = h0 ? `<div class="jx-box" style="margin-bottom:12px;border-color:var(--gold,#f5b942);">
+      <h4>📌 Hasil ujian sebelumnya</h4>
+      <div style="font-size:34px;font-weight:800;line-height:1.1;">${h0.skor}<small style="font-size:16px;">%</small> <span style="font-size:14px;font-weight:600;color:var(--gray);">${h0.benar}/${h0.total} benar · ${fmtJam(tglMs(h0))}</span></div>
+      ${lalu.length > 1 ? `<div class="jx-muted" style="margin-top:6px;">Percobaan lain: ${lalu.slice(1, 5).map(x => `<a onclick="route('jlpt-review/${x.id || x.localId}')" style="cursor:pointer;text-decoration:underline;">${x.skor}% (${fmtJam(tglMs(x)).split(",")[0]})</a>`).join(" · ")}</div>` : ""}
+      <div class="jx-row wrap"><button class="btn gold" onclick="route('jlpt-review/${h0.id || h0.localId}')">📖 Review hasil sebelumnya</button>
+        <button class="btn ghost" onclick="route('jlpt-riwayat')">📊 Semua riwayat</button></div>
+      <div class="jx-muted">Mau coba lagi? Atur waktu di bawah lalu tekan <b>Mulai ujian ulang</b>. Nilai lama tetap tersimpan.</div></div>` : "";
   return `
     <div class="panel jx">
       ${crumbs([["JLPT Center", "jlpt"], [`JLPT ${lv.toUpperCase()}`, `jlpt/${lv}`], [JENIS[jenis].nama, `jlpt/${lv}/${jenis}`], [meta.judul]])}
       <h2>${esc(meta.judul)}</h2>
+      ${lastBox}
       <div class="jx-setup">
         <div class="jx-box">
           <h4>Isi paket</h4>
@@ -277,7 +289,7 @@ async function viewSetup(lv, jenis, pkgId, sesi) {
             <li>Kunci jawaban baru tampil setelah ujian dikumpulkan.</li>
           </ul>
           ${lain ? `<div class="jx-warn">⚠️ Ada ujian lain yang belum selesai (${esc(sesi.judul)}). Memulai paket ini akan membatalkan ujian tersebut.</div>` : ""}
-          <button class="btn gold jx-start" onclick="JLPT.mulai('${lv}','${jenis}','${pkgId}')">▶ Mulai ${jenis === "full" ? "Ujian" : "Latihan"}</button>
+          <button class="btn gold jx-start" onclick="JLPT.mulai('${lv}','${jenis}','${pkgId}')">▶ ${h0 ? "Mulai ujian ulang" : "Mulai " + (jenis === "full" ? "Ujian" : "Latihan")}</button>
         </div>
       </div>
     </div>`;

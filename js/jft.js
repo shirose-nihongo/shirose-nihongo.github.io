@@ -513,15 +513,24 @@ async function renderPaket(params) {
       <div class="jft-wk">${[15, 20, 25, 30].map(m => `<button class="${m === 25 ? "on" : ""}" onclick="JFT.waktu(${m},this)">${m} menit${m === 25 ? " ★" : ""}</button>`).join("")}<button id="jft-wk-c" onclick="JFT.waktuCustom()">Custom</button></div>`
     : `<h3>⏱ Waktu</h3><div class="jft-sub">60 menit (tetap, seperti ujian asli).</div>`;
   const aturan = k.jenis === "bab" ? `<li>Soal bebas dibuka ulang sebelum dikumpulkan.</li>` : `<li>Dalam satu bagian soal bebas dibuka ulang; bagian yang sudah selesai terkunci.</li><li>Listening: audio 2× putar, tidak bisa kembali ke soal sebelumnya.</li><li>Skor dihitung estimasi skala 10–250 (lulus A2 ≥ 200).</li>`;
+  // Hasil sebelumnya untuk paket ini: tampil dulu, bisa direview sebelum mengulang.
+  const lalu = LS.get(HIS_KEY(), []).filter(h => h.kode === kode);
+  const h0 = lalu[0];
+  const lastBox = h0 ? `<div class="panel" style="margin-bottom:12px;border:1px solid var(--gold,#f5b942);"><h3>📌 Hasil ujian sebelumnya</h3>
+      <div style="font-size:30px;font-weight:800;">${h0.skor ?? Math.round(h0.pct * 100) + "%"} <span style="font-size:13px;font-weight:600;color:var(--gray);">${h0.benar}/${h0.total} benar · ${new Date(h0.t).toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" })}</span></div>
+      ${lalu.length > 1 ? `<div class="jft-sub">Percobaan lain: ${lalu.slice(1, 5).map(x => `<a style="cursor:pointer;text-decoration:underline" onclick="route('jft-hasil/${x.t}')">${x.skor ?? Math.round(x.pct * 100) + "%"}</a>`).join(" · ")}</div>` : ""}
+      <div class="jft-aksi" style="margin-top:8px"><button class="btn" onclick="route('jft-hasil/${h0.t}')">📖 Lihat hasil &amp; review</button> <button class="btn ghost" onclick="route('jft-riwayat')">📊 Semua riwayat</button></div>
+      <div class="jft-sub">Mau coba lagi? Tekan <b>Mulai</b> di bawah. Nilai lama tetap tersimpan.</div></div>` : "";
   return `
   <div class="jft-wrap">
     <div class="jft-crumb">JFT-Basic › ${namaLv} › ${k.jenis === "bab" ? `Bab ${BLOK[k.blok][0]}–${BLOK[k.blok][1]}` : k.jenis === "try" ? "Paket " + (k.p + 1) : "Simulasi"}</div>
     <h2 style="margin:4px 0 12px">${esc(k.jenis === "try" ? judulKode(lv, k) + " — " + (await tryoutD()).paket[k.p].judul.replace(/^Paket \d+ · /, "") : judulKode(lv, k))}</h2>
+    ${lastBox}
     <div class="jft-grid2">
       <div class="panel"><h3>Isi paket</h3><ul class="jft-ul">${isi}</ul></div>
       <div class="panel">${waktu}
         <ul class="jft-ul"><li>Timer tetap berjalan walau halaman di-refresh atau ditutup.</li><li>Jawaban tersimpan otomatis di perangkat ini.</li><li>Jika waktu habis, ujian dikumpulkan otomatis.</li><li>Kunci jawaban tampil setelah ujian dikumpulkan.</li>${aturan}</ul>
-        <button class="btn jft-go" onclick="JFT.mulaiDariIntro('${kode}')">▶ Mulai Ujian</button></div>
+        <button class="btn jft-go" onclick="JFT.mulaiDariIntro('${kode}')">▶ ${h0 ? "Mulai ujian ulang" : "Mulai Ujian"}</button></div>
     </div>
   </div>`;
 }

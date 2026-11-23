@@ -346,6 +346,7 @@ body.pick-mode .lvl-pill-group{visibility:hidden;}
   .topbar .th-wrap > #mb-btn{order:5;}
   .topbar .th-wrap > .th-btn:not(#mb-btn){display:none;}   /* tema/font/simpan: dibuka lewat tombol ⚙ Pengaturan */
   .topbar .th-wrap > #mb-btn{padding:6px 9px; min-height:34px;}
+  #saran-btn{display:none;}   /* di HP: lewat ⚙ Pengaturan */
   .topbar-right .chip{display:none;}   /* bintang/koin/streak: sudah ada di kartu profil, disembunyikan di HP */
   .topbar .sosmed-top a, .topbar a[class*="sm-"]{transform:scale(.9);}
   .mset-wrap{display:block; order:5; position:static;}
@@ -1471,7 +1472,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
 <link rel="stylesheet" href="./css/ssw.css?v=20261118s"/>
-<link rel="stylesheet" href="./css/mensetsu.css?v=20261120cv3"/>
+<link rel="stylesheet" href="./css/mensetsu.css?v=20261123s"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261119f"/>
 <link rel="stylesheet" href="./css/logo.css?v=20261122c"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261122a"/>
@@ -1550,7 +1551,7 @@ html{overflow-x:hidden;}
 <script src="./js/landing-config.js"></script>
 <script src="./js/demo.js?v=20261122c"></script>
 <script src="./js/membership.js"></script>
-<script src="./js/mobile-bar.js?v=1"></script>
+<script src="./js/mobile-bar.js?v=20261123s"></script>
 
 <!-- ============ LEVEL UP OVERLAY ============ -->
 <div class="levelup-overlay" id="levelup">
@@ -1576,7 +1577,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261120ex";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261122a";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261123m";
-import { initHub, renderHub } from "./js/siswa-hub.js?v=20261121h";
+import { initHub, renderHub } from "./js/siswa-hub.js?v=20261123s";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120ex";
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
 import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261119o";
@@ -2786,6 +2787,13 @@ function renderPilihLevel(){
         <span class="desc">Simulasi wawancara perusahaan Jepang untuk 20 bidang SSW: pewawancara AI berbasis suara, bantuan bahasa Indonesia, dan penilaian otomatis.</span>
         <span class="st">20 bidang SSW</span>
       </button>`;
+  const kartuSaran = `
+      <button class="jlpt-card saran" data-kanji="声" onclick="bukaSaran()">
+        <span class="lv">💬</span>
+        <span class="jpname">Kotak Saran · ご意見</span>
+        <span class="desc">Punya saran, kritik, atau menemukan bug? Tulis di sini, langsung sampai ke guru.</span>
+        <span class="st">Kirim pesan</span>
+      </button>`;
   const kartuGuru = FB.userIsGuru() ? `
       <button class="jlpt-card guru" data-kanji="師" onclick="location.href='./teacher.html'">
         <span class="lv">師</span>
@@ -2800,7 +2808,7 @@ function renderPilihLevel(){
         <h1>${nama ? `Halo, ${nama}! ` : ""}Pilih level JLPT</h1>
         <p>Semua materi, hafalan, dan ujian akan mengikuti level yang kamu pilih.</p>
       </div>
-      <div class="jlpt-grid">${cards}${kartuJft}${kartuKana}${kartuSsw}${kartuMensetsu}${kartuGuru}</div>
+      <div class="jlpt-grid">${cards}${kartuJft}${kartuKana}${kartuSsw}${kartuMensetsu}${kartuSaran}${kartuGuru}</div>
       <div class="foot">
         ${adaYangBuka ? "Level bergembok dibuka oleh guru." : "Belum ada level yang dibuka untukmu — hubungi guru."}
         <div style="margin-top:12px;"><button class="btn ghost" onclick="logout()">Keluar</button></div>
@@ -4941,7 +4949,7 @@ function renderHafalanDone(){
  * Quest dihilangkan dari home orbit (permintaan guru, Nov 2026). Hash lama
  * `#quest` masih bekerja — route map mengarahkannya ke fungsi ini.
  */
-window.ujianUlangi = (kid) => { if (confirm("Ulangi ujian ini sekali lagi? Nilai sebelumnya tetap tersimpan di Riwayat.")) route("ujian/" + kid); };
+window.ujianUlangi = (kid) => { if (confirm("Ulangi ujian ini sekali lagi? Nilai sebelumnya tetap tersimpan di Riwayat.")) route("ujian/" + kid + "/mulai"); };
 async function renderUjianRiwayat(){
   if (!state.user) return `<div class="panel"><h2>📊 Riwayat Ujian</h2><div class="empty">Masuk dengan akun dulu untuk melihat riwayat nilai.</div><button class="btn ghost" onclick="route('ujian')">← Daftar Ujian</button></div>`;
   let list = [], kat = [];
@@ -5068,6 +5076,27 @@ async function renderUjian(params){
   if (!soal.length){ _stopUjianTimer(); return `<div class="panel"><h2>Ujian</h2><div class="empty"><div class="emoji">📭</div>Belum ada soal tersedia. Silakan tunggu guru mengunggah soal.</div></div>`; }
 
   _stopUjianTimer();
+  // Kalau pernah mengerjakan ujian ini: tampilkan hasil sebelumnya dulu, mulai ulang hanya kalau dipilih.
+  if (params[1] !== "mulai" && state.user){
+    let lalu = [];
+    try { lalu = (await FB.listNilai(100)).filter(x => x.kategoriId === kategoriId); } catch(e){}
+    if (lalu.length){
+      const ms = (x) => (x.tgl && x.tgl.toMillis) ? x.tgl.toMillis() : (x.tgl && x.tgl.seconds ? x.tgl.seconds * 1000 : 0);
+      const fmt = (x) => ms(x) ? new Date(ms(x)).toLocaleString("id-ID", { dateStyle:"medium", timeStyle:"short" }) : "-";
+      const l0 = lalu[0], lulus = (kat?.lulus || 60);
+      return `<div class="panel" style="text-align:center;">
+        <h2>📝 ${(kat?.nama || "Ujian").toString().replace(/</g,"&lt;")}</h2>
+        <div style="color:var(--gray);font-size:13px;">📌 Hasil ujian sebelumnya · ${fmt(l0)}</div>
+        <div style="font-size:60px;font-weight:800;line-height:1.1;color:${l0.skor >= lulus ? "var(--green)" : "var(--red)"};">${l0.skor}<span style="font-size:26px;color:var(--gray);">%</span></div>
+        <div style="font-size:14px;"><b>${l0.benar ?? "-"} benar</b> · ${l0.salah ?? "-"} salah${l0.waktu ? " · ⏱ " + Math.floor(l0.waktu/60) + "m " + (l0.waktu%60) + "s" : ""}</div>
+        ${lalu.length > 1 ? `<div style="color:var(--gray);font-size:12px;margin-top:8px;">Percobaan sebelumnya: ${lalu.slice(1, 6).map(x => x.skor + "%").join(" · ")}</div>` : ""}
+        <p style="font-size:12px;color:var(--gray);margin:10px 0 0;">Nilai lama tetap tersimpan di Riwayat. Mau coba lagi?</p>
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+          <button class="btn gold" onclick="route('ujian/${kategoriId}/mulai')">🔄 Mulai ujian ulang (${durasiMenit} menit)</button>
+          <button class="btn ghost" onclick="route('ujian-riwayat')">📊 Riwayat nilai</button>
+          <button class="btn ghost" onclick="route('ujian')">← Daftar Ujian</button></div></div>`;
+    }
+  }
   // Soal TIDAK diacak — urutan harus sesuai Excel yang di-upload guru.
   // listSoal() sudah sort by field `urutan` di client, jadi tinggal pakai apa adanya.
   state.ujian = {
