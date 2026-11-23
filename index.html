@@ -1471,7 +1471,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/jlpt-center.css?v=20261109j"/>
 <link rel="stylesheet" href="./css/kana-center.css?v=20261114f"/>
 <link rel="stylesheet" href="./css/ssw.css?v=20261118s"/>
-<link rel="stylesheet" href="./css/mensetsu.css?v=20261120cv3"/>
+<link rel="stylesheet" href="./css/mensetsu.css?v=20261123hf"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261119f"/>
 <link rel="stylesheet" href="./css/logo.css?v=20261122c"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261122a"/>
@@ -1577,6 +1577,7 @@ import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261122a";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261121b";
 import { initHub, renderHub } from "./js/siswa-hub.js?v=20261121h";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120ex";
+import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa } from "./js/deck-siswa.js?v=20261123f";
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
 import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261119o";
 initJlpt(FB);
@@ -1584,6 +1585,7 @@ initKana(FB);
 initSsw(FB);
 // MENSETSU 面接: simulasi wawancara kerja Jepang 20 bidang SSW (js/mensetsu.js)
 initMensetsu(FB);
+initDeckSiswa(FB);   // HAFALAN 暗記: deck kosakata buatan guru per kelas (js/deck-siswa.js → js/deck-teacher.js)
 initLoginReward(FB);
 initJft(FB, (t, l) => loadMateri(t, l));
 
@@ -2306,6 +2308,8 @@ const routes = {
   ...SSW_ROUTES,
   // MENSETSU: #mensetsu, #mensetsu-bidang/{key}, #mensetsu-bank/{key}, #mensetsu-sesi/{key}, #mensetsu-hasil/{id}, #mensetsu-riwayat
   ...MENSETSU_ROUTES,
+  // HAFALAN / ANKI: #anki (deck dari guru untuk kelas siswa, hanya baca)
+  ...DECK_ROUTES,
   gacha: () => { setTimeout(() => route("shop"), 0); return '<div class="loading">Memuat…</div>'; },
   // JFT-Basic / Irodori (js/jft.js)
   ...JFT_ROUTES,
@@ -2364,6 +2368,7 @@ const _parentOf = (path) => {
   if (n === "jft-paket" && /^try/.test(slug)) return "jft-tryout";
   if (n.startsWith("jft-")) return "jft-ujian";
   if (n === "kana") return "pilih-level";
+  if (n === "anki") return "pilih-level";
   if (n.startsWith("kana-")) return "kana";
   return null;
 };
@@ -2674,7 +2679,7 @@ function renderCharaOrbital(){
 const BEBAS_PILIH_LEVEL = new Set(["pilih-level","jft","login","masuk","daftar","profile",
   "kana","kana-baca","kana-aturan","kana-tabel","kana-order","kana-tulis","kana-hafalan","kana-tes","kana-progres",
   "ssw","ssw-peta","ssw-bab","ssw-baca","ssw-buku","ssw-kosa","ssw-kartu","ssw-kuis","ssw-progres",
-  ...MENSETSU_PUBLIC]);
+  ...MENSETSU_PUBLIC, ...DECK_PUBLIC]);
 const _KEY_PILIH = "shirose-level-dipilih";   // sessionStorage: uid yang sudah memilih di sesi ini
 function levelSudahDipilih(){
   if (!state.user) return false;
@@ -2744,6 +2749,14 @@ function renderPilihLevel(){
         <span class="desc">Simulasi wawancara perusahaan Jepang untuk 20 bidang SSW: pewawancara AI berbasis suara, bantuan bahasa Indonesia, dan penilaian otomatis.</span>
         <span class="st">20 bidang SSW</span>
       </button>`;
+  // HAFALAN 暗記 — deck kosakata buatan guru untuk kelas siswa (flashcard/pilihan ganda/cocokkan/ketik). Siswa tidak bisa menambah/mengubah.
+  const kartuHafalan = `
+      <button class="jlpt-card hafalan" data-kanji="暗" onclick="route('anki')">
+        <span class="lv">暗記</span>
+        <span class="jpname">HAFALAN · Anki dari guru</span>
+        <span class="desc">Deck kosakata yang disiapkan gurumu untuk kelasmu: flashcard geser, pilihan ganda, cocokkan, dan ketik dengan jadwal ulang otomatis.</span>
+        <span class="st">Deck untuk kelasmu</span>
+      </button>`;
   const kartuGuru = FB.userIsGuru() ? `
       <button class="jlpt-card guru" data-kanji="師" onclick="location.href='./teacher.html'">
         <span class="lv">師</span>
@@ -2758,7 +2771,7 @@ function renderPilihLevel(){
         <h1>${nama ? `Halo, ${nama}! ` : ""}Pilih level JLPT</h1>
         <p>Semua materi, hafalan, dan ujian akan mengikuti level yang kamu pilih.</p>
       </div>
-      <div class="jlpt-grid">${cards}${kartuJft}${kartuKana}${kartuSsw}${kartuMensetsu}${kartuGuru}</div>
+      <div class="jlpt-grid">${cards}${kartuJft}${kartuKana}${kartuSsw}${kartuMensetsu}${kartuHafalan}${kartuGuru}</div>
       <div class="foot">
         ${adaYangBuka ? "Level bergembok dibuka oleh guru." : "Belum ada level yang dibuka untukmu — hubungi guru."}
         <div style="margin-top:12px;"><button class="btn ghost" onclick="logout()">Keluar</button></div>

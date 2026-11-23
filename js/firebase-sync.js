@@ -1875,6 +1875,40 @@ export async function deckDelete(id) {
   await deleteDoc(doc(db, "guru_deck", id));
 }
 
+/* ========== DECK HAFALAN: TERBIT KE KELAS ==========
+   deck_kelas/_index : { list:[{id,nama,n,kelas:[nama kelas],semua,aktif}], updated }  (dibaca semua siswa terdaftar; hanya metadata)
+   deck_kelas/{id}   : { nama, cards[{id,k,y,a,c,ca,n,t}], kelas[], semua, aktif, updated }  (siswa hanya boleh baca bila kelasnya dipilih / semua=true)
+   siswa/{uid}/deck_progres/{id} : { m:{ [cardId]:{iv,ez,r,l,due,last} }, t }   (progres SRS siswa; subkoleksi siswa sudah boleh tulis oleh pemiliknya) */
+export async function deckPubIndex() {
+  const d = await getDoc(doc(db, "deck_kelas", "_index"));
+  return d.exists() ? (d.data().list || []) : [];
+}
+export async function deckPubGet(id) {
+  const d = await getDoc(doc(db, "deck_kelas", id));
+  return d.exists() ? { id, ...d.data() } : null;
+}
+export async function deckPubPut(id, data) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "deck_kelas", id), { ...data, updated: serverTimestamp() });
+}
+export async function deckPubSetIndex(list) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "deck_kelas", "_index"), { list, updated: serverTimestamp() });
+}
+export async function deckPubDelete(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await deleteDoc(doc(db, "deck_kelas", id));
+}
+export async function deckProgresGet(id) {
+  if (!currentUser) return {};
+  const d = await getDoc(doc(db, "siswa", currentUser.uid, "deck_progres", id));
+  return d.exists() ? (d.data().m || {}) : {};
+}
+export async function deckProgresSet(id, m) {
+  if (!currentUser) throw new Error("Belum masuk");
+  await setDoc(doc(db, "siswa", currentUser.uid, "deck_progres", id), { m, t: Date.now() });
+}
+
 export { db, auth };
 
 /* ========== SAVE DATA (tombol 💾 Simpan) ==========

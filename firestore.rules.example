@@ -149,6 +149,17 @@ service cloud.firestore {
     match /guru_deck/{id} {
       allow read, write: if isGuru();
     }
+    // Deck hafalan yang diterbitkan guru ke kelas. _index = daftar metadata (dibaca semua siswa terdaftar).
+    // Isi kartu hanya terbaca siswa yang kelasnya dipilih (atau deck "semua siswa"). Hanya guru yang menulis.
+    // Progres SRS siswa ada di siswa/{uid}/deck_progres/{id} (sudah tercakup aturan subkoleksi siswa).
+    match /deck_kelas/{id} {
+      allow read: if isGuru()
+        || (terdaftar() && id == '_index')
+        || (terdaftar() && id != '_index' && resource.data.get('aktif', true) == true
+            && (resource.data.get('semua', false) == true
+                || profil().get('kelas', '') in resource.data.get('kelas', [])));
+      allow write: if isGuru();
+    }
 
     match /kelas/{kid} {
       allow read: if terdaftar();

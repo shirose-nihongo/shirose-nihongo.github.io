@@ -18,7 +18,7 @@ const IDB = {
   del(id) { return this.tx("readwrite", s => s.delete(id)); },
 };
 let LOKAL = false, FB = null, CTX = { toast: () => {}, rerender: () => {} };
-const meta = d => ({ id: d.id, nama: d.nama, n: d.cards.length, updated: Date.now() });
+const meta = d => ({ id: d.id, nama: d.nama, n: d.cards.length, updated: Date.now(), pub: d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: d.pub.kelas || [] } : null });
 const ST = {
   async index() {
     if (!LOKAL) { try { return await FB.deckIndex(); } catch (e) { LOKAL = true; } }
@@ -35,7 +35,7 @@ const ST = {
 
 /* ---------- State ---------- */
 let IDX = [], LOKALN = 0;
-const V = { view: "list", id: "", deck: null, q: "", page: 0, edit: null, stage: null, busy: false, S: null,
+const V = { ro: false, kelasList: [], pubDraft: null, pubList: [], pubErr: "", view: "list", id: "", deck: null, q: "", page: 0, edit: null, stage: null, busy: false, S: null,
   cfg: { mode: "flash", arah: "jp", sumber: "due", jumlah: 20, urut: "acak" }, sort: "asli" };
 const MODES = { flash: "🃏 Flashcard (SRS)", pg: "🔘 Pilihan ganda", cocok: "🧩 Cocokkan", ketik: "⌨️ Ketik" };
 const toast = m => CTX.toast(m);
@@ -50,7 +50,18 @@ const furiBtn = () => `<button class="btn ghost sm" id="dk-furi-btn" onclick="DK
 const paint = () => { const r = document.getElementById("dk-root"); if (r) { r.innerHTML = view(); setTimeout(() => { const i = document.getElementById("dk-in"); if (i) i.focus(); bindSwipe(); fit(); }, 0); } };
 let _tm = null;
 const simpanTunda = () => { clearTimeout(_tm); _tm = setTimeout(async () => { try { await simpan(); } catch (e) { toast("❌ Gagal menyimpan: " + (e.message || e)); } }, 700); };
-const simpan = async () => { const d = V.deck; await ST.put(d); const m = meta(d); IDX = [...IDX.filter(x => x.id !== d.id), m]; await ST.setIndex(IDX); };
+const simpan = async () => {
+  const d = V.deck;
+  if (V.ro) {   // siswa: hanya progres SRS pribadi yang disimpan (isi deck milik guru, tidak berubah)
+    const m = {}; d.cards.forEach(c => { if (c.r || c.l || c.due) m[c.id] = { iv: c.iv, ez: c.ez, r: c.r, l: c.l, due: c.due, last: c.last }; });
+    await FB.deckProgresSet(d.id, JSON.parse(JSON.stringify(m))); return;
+  }
+  await ST.put(d); const m = meta(d); IDX = [...IDX.filter(x => x.id !== d.id), m]; await ST.setIndex(IDX);
+};
+/* hash kecil: id kartu stabil (kunci progres siswa) + tanda tangan isi deck (deteksi "belum diterbitkan ulang") */
+const hash = str => { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return (h >>> 0).toString(36) + str.length.toString(36); };
+const cid = c => "c" + hash([c.k, c.y, c.a].join("\u0001"));
+const sigOf = d => hash(d.nama + "\u0002" + d.cards.filter(c => !c.x).map(c => [c.k, c.y, c.a, c.c, c.ca, c.n, c.t].join("\u0001")).join("\u0002"));
 
 /* ---------- Impor / ekspor Excel ---------- */
 const norm = s => String(s == null ? "" : s).toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -238,14 +249,14 @@ const chip = (on, js, txt) => `<button class="chip btn-chip ${on ? "on" : ""}" o
 function view() {
   if (V.view === "study" && V.S) return CSS + viewStudy();
   if (V.view === "deck" && V.deck) return CSS + viewDeck();
-  return CSS + viewList();
+  return CSS + (V.ro ? viewListSiswa() : viewList());
 }
 
 function viewList() {
   const lokal = LOKAL ? `<div class="alert" style="background:rgba(245,158,11,.12);border:1px solid #f59e0b;color:#fde68a;">● <b>Mode lokal</b>: deck tersimpan di browser ini saja (aturan Firestore <code>guru_deck</code> belum dipublish). Ganti browser/perangkat = deck tidak ikut. Tambahkan aturan dari <code>firestore.rules.example</code> supaya tersimpan di cloud.</div>` : "";
   const mig = !LOKAL && LOKALN ? `<div class="alert alert-ok">☁️ Ada <b>${LOKALN}</b> deck lokal di browser ini. <button class="btn sm" onclick="DK.migrasi()">Pindahkan ke cloud</button></div>` : "";
   const decks = [...IDX].sort((a, b) => String(a.nama).localeCompare(String(b.nama))).map(x => `<div class="dk-deck" onclick="DK.buka('${esc(x.id)}')">
-      <b style="font-size:16px;">${esc(x.nama)}</b><div class="dk-sm" style="margin-top:4px;">${x.n} kartu</div></div>`).join("");
+      <b style="font-size:16px;">${esc(x.nama)}</b><div class="dk-sm" style="margin-top:4px;">${x.n} kartu</div><div class="dk-sm" style="margin-top:2px;">${x.pub ? (x.pub.aktif === false ? "⏸ Nonaktif" : x.pub.semua ? "🌐 Semua siswa" : "🏫 " + esc((x.pub.kelas || []).join(", "))) : "📝 Draft (belum diterbitkan)"}</div></div>`).join("");
   return `<div class="panel">
     <h2>🗂️ Deck Hafalan <small style="font-size:12px;color:var(--gray);font-weight:400;">ala Anki · khusus guru</small></h2>
     <p class="dk-sm" style="margin-bottom:12px;">Isi kosakata sendiri, satu deck per file. Belajar pakai Flashcard (jadwal SRS), Pilihan ganda, Cocokkan, atau Ketik. Masukkan kartu manual, tempel massal, atau impor Excel.</p>
@@ -255,6 +266,35 @@ function viewList() {
       <button class="btn ghost" onclick="DK.template()">⬇ Template Excel</button>
     </div></div>${lokal}${mig}${V.stage ? viewStage() : ""}
     ${decks ? `<div class="dk-grid">${decks}</div>` : `<div class="panel" style="color:var(--gray);">Belum ada deck. Klik <b>➕ Deck baru</b> atau <b>⬆ Impor Excel</b>. Unduh <b>Template Excel</b> dulu untuk format kolomnya.</div>`}`;
+}
+
+let PUBNAMES = [];
+function viewTerbit() {
+  const d = V.deck, pd = V.pubDraft || { aktif: true, semua: false, kelas: [] }, pub = d.pub, dirty = pub && pub.sig !== sigOf(d);
+  PUBNAMES = [...new Set([...V.kelasList, ...(pd.kelas || [])])];
+  const status = !pub ? `<span class="chip">📝 Belum diterbitkan ke siswa</span>`
+    : `<span class="chip on">${pub.aktif === false ? "⏸ Nonaktif" : "✅ Terbit"} · ${pub.semua ? "semua siswa" : esc((pub.kelas || []).join(", "))} · ${pub.n} kartu</span>${dirty ? `<span class="chip" style="background:#f59e0b;">⚠ Ada perubahan yang belum diterbitkan</span>` : ""}`;
+  const kelasBox = PUBNAMES.length ? PUBNAMES.map((n, i) => `<label style="display:flex;gap:6px;align-items:center;padding:6px 10px;border:1px solid var(--border);border-radius:10px;cursor:pointer;"><input type="checkbox" ${pd.kelas.includes(n) ? "checked" : ""} ${pd.semua ? "disabled" : ""} onchange="DK.pubKelas(${i},this.checked)"> ${esc(n)}</label>`).join("")
+    : `<span class="dk-sm">Belum ada kelas. Buat kelas di tab <b>Kelas</b> dulu, atau pakai "Semua siswa".</span>`;
+  return `<div class="panel"><h2>🏫 Kelas &amp; Terbit</h2>
+    <div style="margin-bottom:8px;">${status}</div>
+    ${LOKAL ? `<div class="alert" style="background:rgba(245,158,11,.12);border:1px solid #f59e0b;color:#fde68a;">Menerbitkan ke siswa butuh Firestore. Publish aturan <code>guru_deck</code> dan <code>deck_kelas</code> dari <code>firestore.rules.example</code> dulu.</div>` : ""}
+    <p class="dk-sm" style="margin-bottom:8px;">Siswa hanya bisa <b>belajar</b> (tidak bisa menambah / mengubah kartu). Yang diterbitkan hanya kartu yang <b>dicentang (Hafal?)</b>. Setelah mengubah kartu, tekan terbitkan lagi.</p>
+    <div class="dk-row" style="margin-bottom:8px;"><label style="display:flex;gap:6px;align-items:center;cursor:pointer;"><input type="checkbox" ${pd.aktif !== false ? "checked" : ""} onchange="DK.pubSet('aktif',this.checked)"> <b>Aktif</b> (tampil di menu Hafalan siswa)</label>
+      <label style="display:flex;gap:6px;align-items:center;cursor:pointer;"><input type="checkbox" ${pd.semua ? "checked" : ""} onchange="DK.pubSet('semua',this.checked)"> 🌐 <b>Semua siswa</b></label></div>
+    <div class="dk-sm" style="margin-bottom:6px;">Untuk kelas:</div>
+    <div class="dk-row" style="margin-bottom:12px;">${kelasBox}</div>
+    <div class="dk-row"><button class="btn" onclick="DK.terbit()" ${V.busy ? "disabled" : ""}>${V.busy ? "Menyimpan…" : pub ? "💾 Simpan &amp; terbitkan ulang" : "🚀 Terbitkan ke siswa"}</button>${pub ? `<button class="btn ghost" onclick="DK.tarik()">🚫 Tarik dari siswa</button>` : ""}</div></div>`;
+}
+
+function viewListSiswa() {
+  const l = V.pubList;
+  const kelas = CTX.kelas ? `Kelas: <b>${esc(CTX.kelas)}</b>` : "Kamu belum punya kelas (hubungi guru)";
+  const head = `<div class="panel"><div class="dk-row" style="margin-bottom:8px;"><button class="btn ghost" onclick="route('pilih-level')">← Kembali</button></div>
+    <h2>暗記 Hafalan · Anki dari guru</h2><p class="dk-sm">${kelas}. Deck disiapkan gurumu; kamu tinggal menghafal (flashcard geser, pilihan ganda, cocokkan, ketik). Kemajuanmu tersimpan otomatis.</p></div>`;
+  if (l === null) return head + `<div class="alert alert-err">Gagal memuat deck${V.pubErr ? ` (${esc(V.pubErr)})` : ""}. Coba muat ulang; kalau tetap gagal, hubungi guru.</div>`;
+  if (!l.length) return head + `<div class="panel" style="color:var(--gray);">Belum ada deck untuk ${CTX.kelas ? "kelasmu" : "akunmu"}. Tunggu gurumu menerbitkannya.</div>`;
+  return head + `<div class="dk-grid">${[...l].sort((a, b) => String(a.nama).localeCompare(String(b.nama))).map(x => `<div class="dk-deck" onclick="DK.buka('${esc(x.id)}')"><b style="font-size:16px;">${esc(x.nama)}</b><div class="dk-sm" style="margin-top:4px;">${x.n} kartu</div></div>`).join("")}</div>`;
 }
 
 function viewStage() {
@@ -275,30 +315,30 @@ function viewStage() {
 }
 
 function viewDeck() {
-  const d = V.deck, h = hitung(d), cfg = V.cfg;
+  const ro = V.ro, d = V.deck, h = hitung(d), cfg = V.cfg;
   const q = V.q.trim().toLowerCase();
   const all = d.cards.map((c, i) => ({ c, i })).filter(x => !q || [x.c.k, x.c.y, x.c.a, x.c.c, x.c.t, x.c.n].join(" ").toLowerCase().includes(q));
   const cmp = { kana: (a, b) => String(a.c.y || a.c.k).localeCompare(String(b.c.y || b.c.k), "ja"), arti: (a, b) => String(a.c.a).localeCompare(String(b.c.a), "id"), tag: (a, b) => String(a.c.t).localeCompare(String(b.c.t), "id") || a.i - b.i }[V.sort];
   if (cmp) all.sort(cmp);
   const per = 50, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(V.page, pages - 1);
-  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr onclick="DK.aktif(${i},${c.x ? "true" : "false"})" style="cursor:pointer;${c.x ? "opacity:.5;" : "box-shadow:inset 5px 0 0 var(--green);"}"><td><input type="checkbox" style="width:26px;height:26px;pointer-events:none;accent-color:var(--green);" ${c.x ? "" : "checked"} tabindex="-1"></td>
+  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr${ro ? "" : ` onclick="DK.aktif(${i},${c.x ? "true" : "false"})" style="cursor:pointer;${c.x ? "opacity:.5;" : "box-shadow:inset 5px 0 0 var(--green);"}"`}>${ro ? "" : `<td><input type="checkbox" style="width:26px;height:26px;pointer-events:none;accent-color:var(--green);" ${c.x ? "" : "checked"} tabindex="-1"></td>`}
       <td style="font-family:var(--font-jp);font-size:16px;">${esc(pk(c))}</td><td>${esc(c.y)}</td><td>${esc(c.a)}</td>
       <td class="dk-sm">${esc(c.c)}</td><td class="dk-sm">${esc(c.t)}</td>
-      <td style="white-space:nowrap;" onclick="event.stopPropagation()"><button class="btn sm ghost" onclick="DK.edit(${i})">✏️</button> <button class="btn sm ghost" onclick="DK.hapusKartu(${i})">🗑</button></td></tr>`).join("");
+      ${ro ? "" : `      <td style="white-space:nowrap;" onclick="event.stopPropagation()"><button class="btn sm ghost" onclick="DK.edit(${i})">✏️</button> <button class="btn sm ghost" onclick="DK.hapusKartu(${i})">🗑</button></td>`}</tr>`).join("");
   const ed = V.edit;
   const cEd = ed !== null && ed >= 0 ? d.cards[ed] : null;
   const fv = f => esc(cEd ? cEd[f] || "" : "");
   const srcN = { due: h.due + h.baru, semua: h.on, lemah: h.lemah };
-  const stat = `<span class="chip on">Dihafalkan ${h.on}/${h.n}</span><span class="chip on">Baru ${h.baru}</span><span class="chip" style="background:#f59e0b;">Jatuh tempo ${h.due}</span><span class="chip" style="background:#ef4444;">Lemah ${h.lemah}</span><span class="chip on" style="background:#6366f1;">Hafal ${h.hafal}</span>`;
+  const stat = `${ro ? "" : `<span class="chip on">Dihafalkan ${h.on}/${h.n}</span>`}<span class="chip on">Baru ${h.baru}</span><span class="chip" style="background:#f59e0b;">Jatuh tempo ${h.due}</span><span class="chip" style="background:#ef4444;">Lemah ${h.lemah}</span><span class="chip on" style="background:#6366f1;">Hafal ${h.hafal}</span>`;
   const sumberTombol = (cfg.mode === "flash" ? [["due", "📅 Jadwal Anki"], ["semua", "Semua"], ["lemah", "Lemah"]] : [["semua", "Semua"], ["lemah", "Lemah"]])
     .map(([k, t]) => chip((cfg.mode !== "flash" && cfg.sumber === "due" ? "semua" : cfg.sumber) === k, `DK.cfg('sumber','${k}')`, `${t} (${srcN[k]})`)).join("");
   return `<div class="dk-row" style="margin-bottom:12px;">
       <button class="btn ghost" onclick="DK.list()">← Daftar deck</button>
-      <b style="font-size:18px;">${esc(d.nama)}</b><span class="dk-sm">${h.n} kartu</span>
+      <b style="font-size:18px;">${esc(d.nama)}</b><span class="dk-sm">${h.n} kartu</span>${!ro && d.pub && d.pub.sig !== sigOf(d) ? `<span class="chip" style="background:#f59e0b;">⚠ belum diterbitkan ulang</span>` : ""}
       <span style="flex:1"></span>
-      <button class="btn sm ghost" onclick="DK.rename()">✏️ Nama</button>
+      ${ro ? "" : `      <button class="btn sm ghost" onclick="DK.rename()">✏️ Nama</button>
       <button class="btn sm ghost" onclick="DK.ekspor()">⬇ Ekspor Excel</button>
-      <button class="btn sm ghost" style="color:var(--red);" onclick="DK.hapusDeck()">🗑 Hapus deck</button></div>
+      <button class="btn sm ghost" style="color:var(--red);" onclick="DK.hapusDeck()">🗑 Hapus deck</button>`}</div>
     <div class="panel"><h2>🎯 Belajar</h2>
       <div style="margin-bottom:8px;">${stat}</div>
       <div class="dk-row" style="margin-bottom:8px;">${Object.entries(MODES).map(([k, t]) => chip(cfg.mode === k, `DK.cfg('mode','${k}')`, t)).join("")}</div>
@@ -308,7 +348,8 @@ function viewDeck() {
       <div class="dk-row" style="margin-bottom:12px;"><span class="dk-sm">Jumlah:</span>${[10, 20, 50, 0].map(n => chip(cfg.jumlah === n, `DK.cfg('jumlah',${n})`, n || "Semua")).join("")}</div>
       <button class="btn" onclick="DK.mulai()" ${h.n ? "" : "disabled"}>▶ Mulai</button>
       ${cfg.mode === "flash" ? `<span class="dk-sm" style="margin-left:8px;">Geser kartu / ← Lupa · → Ingat · Spasi balik · Backspace kembali</span>` : ""}</div>
-    <div class="panel"><h2>${cEd ? "✏️ Edit kartu" : "➕ Tambah kartu"}</h2>
+    ${ro ? "" : viewTerbit()}
+    ${ro ? "" : `    <div class="panel"><h2>${cEd ? "✏️ Edit kartu" : "➕ Tambah kartu"}</h2>
       <div class="dk-frm">
         <input id="dk-k" placeholder="Kata (kanji/kana) *" value="${fv("k")}">
         <input id="dk-y" placeholder="Kana / bacaan" value="${fv("y")}">
@@ -321,18 +362,19 @@ function viewDeck() {
         <p class="dk-sm" style="margin:8px 0;">Format: <code>kata | kana | arti</code> atau <code>kata | arti</code>. Pemisah boleh <code>|</code>, Tab (tempel dari Excel), atau <code>;</code>.</p>
         <textarea id="dk-bulk" class="dk-ta" rows="6" placeholder="食べる | たべる | makan&#10;学校 | がっこう | sekolah"></textarea>
         <button class="btn" style="margin-top:8px;" onclick="DK.bulk()">➕ Tambahkan semua</button></details>`}</div>
+`}
     <div class="panel"><h2>📇 Kartu <small style="font-size:12px;color:var(--gray);font-weight:400;">${all.length}${q ? "/" + h.n : ""}</small></h2>
       <div class="dk-row" style="margin-bottom:10px;"><input placeholder="Cari kata / arti / tag…" value="${esc(V.q)}" onchange="DK.cari(this.value)" style="max-width:260px;">
         <select onchange="DK.urutTabel(this.value)" title="Urutkan daftar">${[["asli", "🔢 Urutan masuk"], ["kana", "あ→ん Kana"], ["arti", "A→Z Arti"], ["tag", "🏷 Tag"]].map(([k, t]) => `<option value="${k}" ${V.sort === k ? "selected" : ""}>${t}</option>`).join("")}</select>
-        <button class="btn sm ghost" onclick="DK.pilihSemua(true)">☑ Centang semua${q ? " hasil" : ""}</button><button class="btn sm ghost" onclick="DK.pilihSemua(false)">☐ Kosongkan${q ? " hasil" : ""}</button>${q ? `<button class="btn sm ghost" onclick="DK.hanyaTampil()" title="Hanya kartu hasil pencarian ini yang dihafalkan">🎯 Hafalkan hanya hasil ini</button>` : ""}</div>
-      <div class="dk-sm" style="margin-bottom:8px;"><b>Ketuk kartu</b> = centang / batal centang (hijau = ikut dihafalkan, ${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>
-      <div class="table-wrap"><table><thead><tr><th title="Ikut dihafalkan?">Hafal?</th><th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="7" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
+        ${ro ? "" : `        <button class="btn sm ghost" onclick="DK.pilihSemua(true)">☑ Centang semua${q ? " hasil" : ""}</button><button class="btn sm ghost" onclick="DK.pilihSemua(false)">☐ Kosongkan${q ? " hasil" : ""}</button>${q ? `<button class="btn sm ghost" onclick="DK.hanyaTampil()" title="Hanya kartu hasil pencarian ini yang dihafalkan">🎯 Hafalkan hanya hasil ini</button>` : ""}`}</div>
+      ${ro ? "" : `      <div class="dk-sm" style="margin-bottom:8px;"><b>Ketuk kartu</b> = centang / batal centang (hijau = ikut dihafalkan, ${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>`}
+      <div class="table-wrap"><table><thead><tr>${ro ? "" : "<th title=\"Ikut dihafalkan?\">Hafal?</th>"}<th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th>${ro ? "" : "<th></th>"}</tr></thead><tbody>${rows || `<tr><td colspan="${ro ? 5 : 7}" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
       ${pages > 1 ? `<div class="dk-row" style="margin-top:10px;"><button class="btn sm ghost" ${pg ? "" : "disabled"} onclick="DK.page(${pg - 1})">‹</button><span class="dk-sm">${pg + 1} / ${pages}</span><button class="btn sm ghost" ${pg < pages - 1 ? "" : "disabled"} onclick="DK.page(${pg + 1})">›</button></div>` : ""}</div>`;
 }
 
 function viewStudy() {
   const S = V.S, total = S.q.length, pct = Math.min(100, Math.round(S.i / total * 100));
-  const top = `<div class="dk-row" style="margin-bottom:4px;"><button class="btn sm ghost" onclick="DK.keluar()">← Keluar</button><b>${MODES[S.mode]}</b><span class="dk-sm">${Math.min(S.i + 1, total)} / ${total}</span><span style="flex:1"></span>${arahBtn()}${furiBtn()}${S.mode !== "cocok" && S.i < total ? `<button class="btn ghost sm" onclick="DK.lewati()" title="Kartu ini tidak dihafalkan lagi (bisa dicentang lagi di daftar kartu)">🚫 Skip kartu</button>` : ""}<span class="chip on">✓ ${S.b}</span><span class="chip" style="background:var(--red);">✗ ${S.s}</span></div><div class="dk-bar"><i style="width:${pct}%"></i></div>`;
+  const top = `<div class="dk-row" style="margin-bottom:4px;"><button class="btn sm ghost" onclick="DK.keluar()">← Keluar</button><b>${MODES[S.mode]}</b><span class="dk-sm">${Math.min(S.i + 1, total)} / ${total}</span><span style="flex:1"></span>${arahBtn()}${furiBtn()}${!V.ro && S.mode !== "cocok" && S.i < total ? `<button class="btn ghost sm" onclick="DK.lewati()" title="Kartu ini tidak dihafalkan lagi (bisa dicentang lagi di daftar kartu)">🚫 Skip kartu</button>` : ""}<span class="chip on">✓ ${S.b}</span><span class="chip" style="background:var(--red);">✗ ${S.s}</span></div><div class="dk-bar"><i style="width:${pct}%"></i></div>`;
   if (S.mode === "cocok") return top + viewCocok();
   if (S.i >= total) return top + viewSelesai();
   const it = S.q[S.i], c = it.c;
@@ -341,7 +383,7 @@ function viewStudy() {
   if (S.mode === "flash") {
     const rev = it.ar === "id", ada = c.y && c.y !== pk(c);
     const reading = ada ? `<div class="reading">${esc(c.y)}</div>` : "";
-    const extra = `${c.c ? `<div class="contoh">${rubyBr(c.c)}${c.ca ? `<br><i style="font-family:var(--font-sans);">${esc(c.ca)}</i>` : ""}</div>` : ""}${c.n ? `<div class="dk-sm" style="margin-top:8px;">📝 ${esc(c.n)}</div>` : ""}`;
+    const extra = `${c.c ? `<div class="contoh dk-furi">${rubyBr(c.c)}${c.ca ? `<br><i style="font-family:var(--font-sans);">${esc(c.ca)}</i>` : ""}</div>` : ""}${c.n ? `<div class="dk-sm" style="margin-top:8px;">📝 ${esc(c.n)}</div>` : ""}`;
     const front = rev ? `<div class="front" style="font-size:clamp(26px,7vw,48px);font-family:var(--font-sans);">${esc(c.a)}</div>` : `<div class="front f-jp dk-furi">${furi(c)}</div>`;
     const back = rev ? `<div class="front f-jp dk-furi" style="font-size:clamp(34px,10vw,64px);margin-top:0;">${furi(c)}</div>${reading}${extra}` : `${reading}<div class="arti">${esc(c.a)}</div>${extra}`;
     const kembali = S.hist && S.hist.length ? `<button class="flash-btn back" onclick="DK.undo()" title="Kembali ke kartu sebelumnya">↶ Kembali</button>` : `<button class="flash-btn back" disabled>↶ Kembali</button>`;
@@ -426,6 +468,7 @@ function bindSwipe() {
 let keyOn = false;
 function installKeys() {
   if (keyOn) return; keyOn = true;
+  document.addEventListener("visibilitychange", () => { if (document.hidden) simpanSesi(); });
   document.addEventListener("keydown", e => {
     if (!document.getElementById("dk-root") || V.view !== "study" || !V.S) return;
     const t = e.target && e.target.tagName; if (t === "INPUT" || t === "TEXTAREA" || t === "SELECT") return;
@@ -443,16 +486,46 @@ function installKeys() {
 }
 
 export async function renderDeckTab(fb, ctx) {
-  FB = fb; CTX = ctx;
+  FB = fb; CTX = ctx; V.ro = false;
   if (!FB.userIsGuru()) return `<div class="card">Khusus guru.</div>`;
+  try { V.kelasList = (await FB.listKelas()).map(k => String(k.nama || "").trim()).filter(Boolean).sort((a, b) => a.localeCompare(b, "id")); } catch (e) { V.kelasList = []; }
   try { IDX = await ST.index(); } catch (e) { return `<div class="alert alert-err">Gagal memuat deck: ${esc(e.message || e)}</div>`; }
   LOKALN = 0;
   if (!LOKAL) { try { const ids = new Set(IDX.map(x => x.id)); LOKALN = (await IDB.all()).filter(x => !ids.has(x.id)).length; } catch (e) {} }
   if (V.view === "study" && !V.S) V.view = V.deck ? "deck" : "list";
   if (V.view === "deck" && !V.deck) V.view = "list";
-  window.DK = {
+  window.DK = buatDK();
+  installKeys(); applyFuri();
+  return `<div id="dk-root">${view()}</div>`;
+}
+
+/* ---------- Mode SISWA: daftar deck dari guru untuk kelasnya, hanya baca. ctx = { toast, kelas, guru } ---------- */
+export async function renderDeckSiswa(fb, ctx) {
+  FB = fb; CTX = ctx; V.ro = true; V.view = "list"; V.deck = null; V.S = null; V.edit = null; V.stage = null; V.q = ""; V.page = 0; V.sort = "asli";
+  window.DK = buatDK();
+  for (const k of ["baru", "rename", "hapusDeck", "simpanKartu", "hapusKartu", "bulk", "pilihFile", "submit", "template", "ekspor", "edit", "batalEdit", "aktif", "pilihSemua", "hanyaTampil", "lewati", "terbit", "tarik", "pubSet", "pubKelas", "migrasi", "stOn", "stTarget", "stNama", "batalStage"]) window.DK[k] = () => {};
+  installKeys(); applyFuri();
+  try { V.pubList = (await FB.deckPubIndex()).filter(x => x.aktif !== false && (ctx.guru || x.semua || (x.kelas || []).includes(ctx.kelas))); V.pubErr = ""; }
+  catch (e) { V.pubList = null; V.pubErr = String((e && (e.code || e.message)) || e); }
+  return `<div id="dk-root">${view()}</div>`;
+}
+
+function buatDK() {
+  return {
     list() { V.view = "list"; V.deck = null; V.id = ""; V.q = ""; V.page = 0; V.edit = null; paint(); },
-    async buka(id) { try { const d = await ST.get(id); if (!d) return toast("Deck tidak ditemukan"); d.cards = d.cards || []; V.deck = d; V.id = id; V.view = "deck"; V.q = ""; V.page = 0; V.edit = null; paint(); } catch (e) { toast("❌ " + (e.message || e)); } },
+    async buka(id) {
+      try {
+        let d;
+        if (V.ro) {
+          d = await FB.deckPubGet(id); if (!d) return toast("Deck tidak tersedia");
+          d.cards = d.cards || []; let m = {}; try { m = await FB.deckProgresGet(id); } catch (e) {}
+          d.cards.forEach(c => { const pr = m[c.id]; if (pr) Object.assign(c, pr); });
+        } else { d = await ST.get(id); if (!d) return toast("Deck tidak ditemukan"); d.cards = d.cards || []; }
+        V.deck = d; V.id = id; V.view = "deck"; V.q = ""; V.page = 0; V.edit = null;
+        V.pubDraft = d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: [...(d.pub.kelas || [])] } : { aktif: true, semua: false, kelas: [] };
+        paint();
+      } catch (e) { toast("❌ " + (e.message || e)); }
+    },
     async baru() {
       const nama = (prompt("Nama deck baru:") || "").trim(); if (!nama) return;
       V.deck = { id: newId(), nama, cards: [] };
@@ -461,7 +534,7 @@ export async function renderDeckTab(fb, ctx) {
     async rename() { const nama = (prompt("Nama deck:", V.deck.nama) || "").trim(); if (!nama) return; V.deck.nama = nama; try { await simpan(); paint(); } catch (e) { toast("❌ " + (e.message || e)); } },
     async hapusDeck() {
       if (!confirm(`Hapus deck "${V.deck.nama}" beserta ${V.deck.cards.length} kartu? Tidak bisa dibatalkan.`)) return;
-      try { await ST.del(V.deck.id); IDX = IDX.filter(x => x.id !== V.deck.id); await ST.setIndex(IDX); toast("🗑 Deck dihapus"); DK.list(); } catch (e) { toast("❌ " + (e.message || e)); }
+      try { if (V.deck.pub && !LOKAL) { try { await FB.deckPubDelete(V.deck.id); await FB.deckPubSetIndex((await FB.deckPubIndex()).filter(x => x.id !== V.deck.id)); } catch (e) {} } await ST.del(V.deck.id); IDX = IDX.filter(x => x.id !== V.deck.id); await ST.setIndex(IDX); toast("🗑 Deck dihapus"); DK.list(); } catch (e) { toast("❌ " + (e.message || e)); }
     },
     urutTabel(v) { V.sort = v; V.page = 0; paint(); },
     cari(v) { V.q = v; V.page = 0; paint(); }, page(n) { V.page = n; paint(); },
@@ -529,7 +602,7 @@ export async function renderDeckTab(fb, ctx) {
       if (q === 0) { c.l = (c.l || 0) + 1; if (!S.salah.includes(c)) { S.salah.push(c); S.s++; h.salahBaru = true; } h.ins = Math.min(S.i + 4, S.q.length); S.q.splice(h.ins, 0, it); }
       else { c.r = (c.r || 0) + 1; if (!S.salah.includes(c)) S.b++; }
       (S.hist = S.hist || []).push(h);
-      S.dirty++; selesaiItem(); if (S.dirty >= 10 || S.i >= S.q.length) simpanSesi(); paint();
+      S.dirty++; selesaiItem(); if (S.dirty >= (V.ro ? 4 : 10) || S.i >= S.q.length) simpanSesi(); paint();
     },
     undo() {
       const S = V.S, h = S.hist && S.hist.pop(); if (!h) return;
@@ -565,6 +638,34 @@ export async function renderDeckTab(fb, ctx) {
       if (S.mode === "cocok" && S.round) mulaiRonde();
       S.flip = false; S.pick = -1; S.cek = null; paint();
     },
+    // --- terbit ke kelas ---
+    pubSet(k, v) { V.pubDraft[k] = v; paint(); },
+    pubKelas(i, on) { const n = PUBNAMES[i], l = V.pubDraft.kelas; if (on && !l.includes(n)) l.push(n); if (!on) V.pubDraft.kelas = l.filter(x => x !== n); paint(); },
+    async terbit() {
+      if (LOKAL) return toast("Terbit butuh Firestore: publish aturan guru_deck & deck_kelas dulu");
+      const d = V.deck, pd = V.pubDraft;
+      if (!pd.semua && !pd.kelas.length) return toast("Pilih minimal satu kelas, atau centang Semua siswa");
+      const act = d.cards.filter(c => !c.x); if (!act.length) return toast("Tidak ada kartu yang dicentang untuk diterbitkan");
+      const used = new Set(), cards = act.map(c => { let id = cid(c); while (used.has(id)) id += "_"; used.add(id); const o = { id, k: c.k }; ["y", "a", "c", "ca", "n", "t"].forEach(f => { if (c[f]) o[f] = c[f]; }); return o; });
+      if (JSON.stringify(cards).length > MAXB) return toast("Deck terlalu besar untuk diterbitkan. Pecah jadi beberapa deck.");
+      const info = { nama: d.nama, kelas: [...pd.kelas], semua: !!pd.semua, aktif: pd.aktif !== false };
+      V.busy = true; paint();
+      try {
+        await FB.deckPubPut(d.id, { ...info, cards });
+        const list = (await FB.deckPubIndex()).filter(x => x.id !== d.id); list.push({ id: d.id, n: cards.length, ...info });
+        await FB.deckPubSetIndex(list);
+        d.pub = { ...info, n: cards.length, sig: sigOf(d), at: Date.now() }; await simpan();
+        toast(`✅ Diterbitkan: ${cards.length} kartu → ${info.semua ? "semua siswa" : info.kelas.join(", ")}`);
+      } catch (e) { toast("❌ Gagal menerbitkan: " + (e.message || e)); }
+      V.busy = false; paint();
+    },
+    async tarik() {
+      const d = V.deck; if (!d.pub || !confirm(`Tarik deck "${d.nama}" dari siswa? Progres belajar siswa tetap tersimpan.`)) return;
+      try {
+        await FB.deckPubDelete(d.id); await FB.deckPubSetIndex((await FB.deckPubIndex()).filter(x => x.id !== d.id));
+        d.pub = null; V.pubDraft = { aktif: true, semua: false, kelas: [] }; await simpan(); toast("🚫 Deck ditarik dari siswa"); paint();
+      } catch (e) { toast("❌ " + (e.message || e)); }
+    },
     furi() { try { localStorage.setItem("shirose-haf-furi", furiOn() ? "0" : "1"); } catch (e) {} applyFuri(); const b = document.getElementById("dk-furi-btn"); if (b) { b.textContent = furiOn() ? "ふりがな ON" : "ふりがな OFF"; b.setAttribute("aria-pressed", String(furiOn())); } fit(); },
     pilih(i) { const S = V.S, it = S.q[S.i]; if (S.pick >= 0) return; S.pick = i; if (i === it.ans) S.b++; else { S.s++; S.salah.push(it.c); } paint(); },
     cek() {
@@ -597,6 +698,4 @@ export async function renderDeckTab(fb, ctx) {
     },
     suara() { try { const S = V.S, it = S.q[S.i], u = new SpeechSynthesisUtterance(it.c.y || pk(it.c)); u.lang = "ja-JP"; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch (e) { toast("Suara tidak didukung browser ini"); } },
   };
-  installKeys(); applyFuri();
-  return `<div id="dk-root">${view()}</div>`;
 }

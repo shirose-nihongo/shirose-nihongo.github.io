@@ -163,3 +163,5 @@
 .mf-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}.mf-done{text-align:center}
 .mf-pick{display:flex;gap:8px;align-items:flex-start;padding:7px 4px;border-top:1px solid var(--border);cursor:pointer;line-height:1.7}.mf-pick input{margin-top:7px;width:18px;height:18px;flex:none}
 .mf-bar{position:sticky;top:0;z-index:5;display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px;background:rgba(22,27,54,.95);border-radius:12px;margin:8px 0}.mf-bar #mf-n{margin-left:auto}
+
+.jlpt-card.hafalan{--acc:#34d399; border-color:rgba(52,211,153,.55);} .jlpt-card.hafalan .lv{color:#6ee7b7;} .jlpt-card.hafalan:hover{border-color:#34d399 !important; box-shadow:0 14px 36px rgba(52,211,153,.3) !important;}
