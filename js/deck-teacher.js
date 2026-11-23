@@ -45,8 +45,11 @@ const rubyBr = t => esc(t).replace(/([\u3400-\u9fff々〆]+)\[([^\]]+)\]/g, "<ru
 const furi = c => { const k = String(c.k || ""); if (/\[[^\]]+\]/.test(k)) return rubyBr(k); if (c.y && c.y !== k && /[\u3400-\u9fff]/.test(k)) return `<ruby>${esc(k)}<rt>${esc(c.y)}</rt></ruby>`; return esc(k); };
 const furiOn = () => { try { return localStorage.getItem("shirose-haf-furi") === "1"; } catch (e) { return false; } };
 const applyFuri = () => document.body.classList.toggle("dk-furi-on", furiOn());
+const arahBtn = () => { const it = V.S && (V.S.q[V.S.i] || V.S.q[0]); return it ? `<button class="btn ghost sm" onclick="DK.arah()" title="Balik arah hafalan">🔁 ${it.ar === "jp" ? "Jepang → Arti" : "Arti → Jepang"}</button>` : ""; };
 const furiBtn = () => `<button class="btn ghost sm" id="dk-furi-btn" onclick="DK.furi()" aria-pressed="${furiOn()}">${furiOn() ? "ふりがな ON" : "ふりがな OFF"}</button>`;
 const paint = () => { const r = document.getElementById("dk-root"); if (r) { r.innerHTML = view(); setTimeout(() => { const i = document.getElementById("dk-in"); if (i) i.focus(); bindSwipe(); fit(); }, 0); } };
+let _tm = null;
+const simpanTunda = () => { clearTimeout(_tm); _tm = setTimeout(async () => { try { await simpan(); } catch (e) { toast("❌ Gagal menyimpan: " + (e.message || e)); } }, 700); };
 const simpan = async () => { const d = V.deck; await ST.put(d); const m = meta(d); IDX = [...IDX.filter(x => x.id !== d.id), m]; await ST.setIndex(IDX); };
 
 /* ---------- Impor / ekspor Excel ---------- */
@@ -130,11 +133,11 @@ const baru = c => !c.r;
 const jatuhTempo = c => c.r > 0 && (c.due || 0) <= Date.now();
 const lemah = c => (c.l || 0) > 0 || (c.r > 0 && (c.iv || 0) < 3);
 const hafal = c => (c.iv || 0) >= 21;
-const hitung = d => ({ n: d.cards.length, baru: d.cards.filter(baru).length, due: d.cards.filter(jatuhTempo).length, lemah: d.cards.filter(lemah).length, hafal: d.cards.filter(hafal).length });
+const aktif = d => d.cards.filter(c => !c.x);
+const hitung = d => { const a = aktif(d); return { n: d.cards.length, on: a.length, baru: a.filter(baru).length, due: a.filter(jatuhTempo).length, lemah: a.filter(lemah).length, hafal: a.filter(hafal).length }; };
 
 /* ---------- Sesi belajar ---------- */
-const sumberKartu = (d, s) => s === "due" ? [...d.cards.filter(jatuhTempo).sort((a, b) => (a.due || 0) - (b.due || 0)), ...d.cards.filter(baru)]
-  : s === "lemah" ? d.cards.filter(lemah) : d.cards;
+const sumberKartu = (d, s) => { const a = aktif(d); return s === "due" ? [...a.filter(jatuhTempo).sort((x, y) => (x.due || 0) - (y.due || 0)), ...a.filter(baru)] : s === "lemah" ? a.filter(lemah) : a; };
 const arahItem = (c, ar) => ({ c, ar: ar === "acak" ? (Math.random() < .5 ? "jp" : "id") : ar });
 const teksJawab = (c, ar) => ar === "jp" ? (c.a || c.y) : (c.y && c.y !== pk(c) ? `${pk(c)}（${c.y}）` : pk(c));
 function mulai() {
@@ -143,8 +146,8 @@ function mulai() {
   let pool = sumberKartu(d, sumber);
   if (cfg.mode !== "flash" || sumber !== "due") pool = rnd(pool);
   if (cfg.jumlah > 0) pool = pool.slice(0, cfg.jumlah);
-  if (!pool.length) return toast("Tidak ada kartu untuk sumber ini");
-  if ((cfg.mode === "pg") && d.cards.length < 2) return toast("Pilihan ganda butuh minimal 2 kartu di deck");
+  if (!pool.length) return toast(hitung(d).on ? "Tidak ada kartu untuk sumber ini" : "Semua kartu dimatikan. Centang kartu yang mau dihafalkan dulu.");
+  if (cfg.mode === "pg" && d.cards.length < 2) return toast("Pilihan ganda butuh minimal 2 kartu di deck");
   if (cfg.mode === "cocok" && pool.length < 2) return toast("Cocokkan butuh minimal 2 kartu");
   let items = pool.map(c => arahItem(c, cfg.arah));
   if (cfg.mode === "ketik") items = items.filter(it => tujuanKetik(it).length);
@@ -276,15 +279,15 @@ function viewDeck() {
   const q = V.q.trim().toLowerCase();
   const all = d.cards.map((c, i) => ({ c, i })).filter(x => !q || [x.c.k, x.c.y, x.c.a, x.c.c, x.c.t, x.c.n].join(" ").toLowerCase().includes(q));
   const per = 50, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(V.page, pages - 1);
-  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr>
+  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr style="${c.x ? "opacity:.45;" : ""}"><td><input type="checkbox" title="Ikut dihafalkan" ${c.x ? "" : "checked"} onchange="DK.aktif(${i},this.checked)"></td>
       <td style="font-family:var(--font-jp);font-size:16px;">${esc(pk(c))}</td><td>${esc(c.y)}</td><td>${esc(c.a)}</td>
       <td class="dk-sm">${esc(c.c)}</td><td class="dk-sm">${esc(c.t)}</td>
       <td style="white-space:nowrap;"><button class="btn sm ghost" onclick="DK.edit(${i})">✏️</button> <button class="btn sm ghost" onclick="DK.hapusKartu(${i})">🗑</button></td></tr>`).join("");
   const ed = V.edit;
   const cEd = ed !== null && ed >= 0 ? d.cards[ed] : null;
   const fv = f => esc(cEd ? cEd[f] || "" : "");
-  const srcN = { due: h.due + h.baru, semua: h.n, lemah: h.lemah };
-  const stat = `<span class="chip on">Baru ${h.baru}</span><span class="chip" style="background:#f59e0b;">Jatuh tempo ${h.due}</span><span class="chip" style="background:#ef4444;">Lemah ${h.lemah}</span><span class="chip on" style="background:#6366f1;">Hafal ${h.hafal}</span>`;
+  const srcN = { due: h.due + h.baru, semua: h.on, lemah: h.lemah };
+  const stat = `<span class="chip on">Dihafalkan ${h.on}/${h.n}</span><span class="chip on">Baru ${h.baru}</span><span class="chip" style="background:#f59e0b;">Jatuh tempo ${h.due}</span><span class="chip" style="background:#ef4444;">Lemah ${h.lemah}</span><span class="chip on" style="background:#6366f1;">Hafal ${h.hafal}</span>`;
   const sumberTombol = (cfg.mode === "flash" ? [["due", "📅 Jadwal Anki"], ["semua", "Semua"], ["lemah", "Lemah"]] : [["semua", "Semua"], ["lemah", "Lemah"]])
     .map(([k, t]) => chip((cfg.mode !== "flash" && cfg.sumber === "due" ? "semua" : cfg.sumber) === k, `DK.cfg('sumber','${k}')`, `${t} (${srcN[k]})`)).join("");
   return `<div class="dk-row" style="margin-bottom:12px;">
@@ -316,14 +319,16 @@ function viewDeck() {
         <textarea id="dk-bulk" class="dk-ta" rows="6" placeholder="食べる | たべる | makan&#10;学校 | がっこう | sekolah"></textarea>
         <button class="btn" style="margin-top:8px;" onclick="DK.bulk()">➕ Tambahkan semua</button></details>`}</div>
     <div class="panel"><h2>📇 Kartu <small style="font-size:12px;color:var(--gray);font-weight:400;">${all.length}${q ? "/" + h.n : ""}</small></h2>
-      <input placeholder="Cari kata / arti / tag…" value="${esc(V.q)}" onchange="DK.cari(this.value)" style="margin-bottom:10px;max-width:320px;">
-      <div class="table-wrap"><table><thead><tr><th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="6" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
+      <div class="dk-row" style="margin-bottom:10px;"><input placeholder="Cari kata / arti / tag…" value="${esc(V.q)}" onchange="DK.cari(this.value)" style="max-width:260px;">
+        <button class="btn sm ghost" onclick="DK.pilihSemua(true)">☑ Centang semua${q ? " hasil" : ""}</button><button class="btn sm ghost" onclick="DK.pilihSemua(false)">☐ Kosongkan${q ? " hasil" : ""}</button>${q ? `<button class="btn sm ghost" onclick="DK.hanyaTampil()" title="Hanya kartu hasil pencarian ini yang dihafalkan">🎯 Hafalkan hanya hasil ini</button>` : ""}</div>
+      <div class="dk-sm" style="margin-bottom:8px;">Centang = ikut dihafalkan (${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>
+      <div class="table-wrap"><table><thead><tr><th title="Ikut dihafalkan?">Hafal?</th><th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="7" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
       ${pages > 1 ? `<div class="dk-row" style="margin-top:10px;"><button class="btn sm ghost" ${pg ? "" : "disabled"} onclick="DK.page(${pg - 1})">‹</button><span class="dk-sm">${pg + 1} / ${pages}</span><button class="btn sm ghost" ${pg < pages - 1 ? "" : "disabled"} onclick="DK.page(${pg + 1})">›</button></div>` : ""}</div>`;
 }
 
 function viewStudy() {
   const S = V.S, total = S.q.length, pct = Math.min(100, Math.round(S.i / total * 100));
-  const top = `<div class="dk-row" style="margin-bottom:4px;"><button class="btn sm ghost" onclick="DK.keluar()">← Keluar</button><b>${MODES[S.mode]}</b><span class="dk-sm">${Math.min(S.i + 1, total)} / ${total}</span><span style="flex:1"></span>${furiBtn()}<span class="chip on">✓ ${S.b}</span><span class="chip" style="background:var(--red);">✗ ${S.s}</span></div><div class="dk-bar"><i style="width:${pct}%"></i></div>`;
+  const top = `<div class="dk-row" style="margin-bottom:4px;"><button class="btn sm ghost" onclick="DK.keluar()">← Keluar</button><b>${MODES[S.mode]}</b><span class="dk-sm">${Math.min(S.i + 1, total)} / ${total}</span><span style="flex:1"></span>${arahBtn()}${furiBtn()}${S.mode !== "cocok" && S.i < total ? `<button class="btn ghost sm" onclick="DK.lewati()" title="Kartu ini tidak dihafalkan lagi (bisa dicentang lagi di daftar kartu)">🚫 Skip kartu</button>` : ""}<span class="chip on">✓ ${S.b}</span><span class="chip" style="background:var(--red);">✗ ${S.s}</span></div><div class="dk-bar"><i style="width:${pct}%"></i></div>`;
   if (S.mode === "cocok") return top + viewCocok();
   if (S.i >= total) return top + viewSelesai();
   const it = S.q[S.i], c = it.c;
@@ -532,6 +537,28 @@ export async function renderDeckTab(fb, ctx) {
       if (swiped) { swiped = false; return; }
       const S = V.S, card = document.getElementById("flash-card"); if (!card) return;
       S.flip = !S.flip; card.classList.toggle("revealed", S.flip); fit();
+    },
+    aktif(i, on) { const c = V.deck.cards[i]; if (on) delete c.x; else c.x = 1; simpanTunda(); const y = window.scrollY; paint(); window.scrollTo(0, y); },
+    pilihSemua(on) {
+      const q = V.q.trim().toLowerCase();
+      V.deck.cards.forEach(c => { if (!q || [c.k, c.y, c.a, c.c, c.t, c.n].join(" ").toLowerCase().includes(q)) { if (on) delete c.x; else c.x = 1; } });
+      simpanTunda(); const y = window.scrollY; paint(); window.scrollTo(0, y);
+    },
+    hanyaTampil() {
+      const q = V.q.trim().toLowerCase();
+      V.deck.cards.forEach(c => { if ([c.k, c.y, c.a, c.c, c.t, c.n].join(" ").toLowerCase().includes(q)) delete c.x; else c.x = 1; });
+      simpanTunda(); const y = window.scrollY; paint(); window.scrollTo(0, y); toast("🎯 Hanya hasil pencarian yang dihafalkan");
+    },
+    lewati() {
+      const S = V.S, it = S.q[S.i]; if (!it) return; const c = it.c; c.x = 1;
+      S.q = S.q.filter((x, k) => k < S.i || x.c !== c); S.hist = []; S.flip = false; S.pick = -1; S.cek = null; S.dirty++;
+      simpanTunda(); toast("🚫 Kartu dilewati (tidak dihafalkan)"); paint();
+    },
+    arah() {
+      const S = V.S, cur = (S.q[S.i] || S.q[0]); if (!cur) return; const n = cur.ar === "jp" ? "id" : "jp"; V.cfg.arah = n;
+      for (let k = S.i; k < S.q.length; k++) { S.q[k].ar = n; if (S.mode === "pg") buatOpsi(S.q[k], V.deck.cards); }
+      if (S.mode === "cocok" && S.round) mulaiRonde();
+      S.flip = false; S.pick = -1; S.cek = null; paint();
     },
     furi() { try { localStorage.setItem("shirose-haf-furi", furiOn() ? "0" : "1"); } catch (e) {} applyFuri(); const b = document.getElementById("dk-furi-btn"); if (b) { b.textContent = furiOn() ? "ふりがな ON" : "ふりがな OFF"; b.setAttribute("aria-pressed", String(furiOn())); } fit(); },
     pilih(i) { const S = V.S, it = S.q[S.i]; if (S.pick >= 0) return; S.pick = i; if (i === it.ans) S.b++; else { S.s++; S.salah.push(it.c); } paint(); },
