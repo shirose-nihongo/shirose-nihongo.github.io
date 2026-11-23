@@ -67,7 +67,7 @@ service cloud.firestore {
       allow update: if
           // Siswa: profil ringan saja (nama, karakter, aktif), tidak boleh ubah hak akses.
           (me() == sid && aktif()
-             && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh', 'demoSejak']))
+             && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'aksesHafalan', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh', 'demoSejak']))
           // Moderator boleh memperbaiki profilnya sendiri.
           || (me() == sid && ownerEmail())
           // Guru: atur akses/kelas/status/nama siswa (bukan role, bukan akun guru lain).
@@ -156,6 +156,7 @@ service cloud.firestore {
       allow read: if isGuru()
         || (terdaftar() && id == '_index')
         || (terdaftar() && id != '_index' && resource.data.get('aktif', true) == true
+            && profil().get('aksesHafalan', true) != false
             && (resource.data.get('semua', false) == true
                 || profil().get('kelas', '') in resource.data.get('kelas', [])));
       allow write: if isGuru();

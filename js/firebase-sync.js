@@ -1616,6 +1616,20 @@ export async function setAksesSsw(uid, on) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   await updateDoc(doc(db, "siswa", uid), { aksesSsw: !!on });
 }
+/* siswa/{uid}.aksesHafalan (boolean; kosong = ikut kelas) dan kelas/{id}.aksesHafalan (boolean; kosong = terbuka)
+   — menu HAFALAN/Anki siswa. Hanya guru yang boleh mengubah (rules). */
+export async function setAksesHafalan(uid, on) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await updateDoc(doc(db, "siswa", uid), { aksesHafalan: !!on });
+}
+export async function resetAksesHafalan(uid) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await updateDoc(doc(db, "siswa", uid), { aksesHafalan: deleteField() });
+}
+export async function setKelasAksesHafalan(kelasId, on) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await updateDoc(doc(db, "kelas", kelasId), { aksesHafalan: !!on });
+}
 /* siswa/{uid}.aksesJft (boolean; kosong = diizinkan) — hanya guru yang boleh mengubah (rules). */
 export async function setAksesJft(uid, on) {
   if (!userIsGuru()) throw new Error("Hanya guru");

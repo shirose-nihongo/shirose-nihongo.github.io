@@ -1577,7 +1577,8 @@ import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261122a";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261121b";
 import { initHub, renderHub } from "./js/siswa-hub.js?v=20261121h";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120ex";
-import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa } from "./js/deck-siswa.js?v=20261123f";
+import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehHafalan } from "./js/deck-siswa.js?v=20261123g";
+window.bukaHafalan = async () => { if (await bolehHafalan()) route("anki"); else toast("🔒 Menu Hafalan dikunci guru. Hubungi guru untuk membuka akses."); };
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
 import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261119o";
 initJlpt(FB);
@@ -2751,7 +2752,7 @@ function renderPilihLevel(){
       </button>`;
   // HAFALAN 暗記 — deck kosakata buatan guru untuk kelas siswa (flashcard/pilihan ganda/cocokkan/ketik). Siswa tidak bisa menambah/mengubah.
   const kartuHafalan = `
-      <button class="jlpt-card hafalan" data-kanji="暗" onclick="route('anki')">
+      <button class="jlpt-card hafalan" data-kanji="暗" onclick="bukaHafalan()">
         <span class="lv">暗記</span>
         <span class="jpname">HAFALAN · Anki dari guru</span>
         <span class="desc">Deck kosakata yang disiapkan gurumu untuk kelasmu: flashcard geser, pilihan ganda, cocokkan, dan ketik dengan jadwal ulang otomatis.</span>
@@ -2764,6 +2765,8 @@ function renderPilihLevel(){
         <span class="desc">Kelola siswa, akses level, bank soal, dan laporan kelas.</span>
         <span class="st">Akun ${FB.userIsDeveloper() ? "moderator" : FB.userIsAdmin() ? "admin" : "guru"}</span>
       </button>` : "";
+  // Tandai kartu Hafalan terkunci bila guru menutup aksesnya (cek async; klik tetap dicek ulang di bukaHafalan).
+  setTimeout(() => { bolehHafalan().then(ok => { const el = document.querySelector(".jlpt-card.hafalan"); if (el && !ok) { el.classList.add("locked"); const st = el.querySelector(".st"); if (st) st.textContent = "🔒 Dikunci guru"; } }).catch(() => {}); }, 60);
   return `
     <div class="jlpt-pick">
       <div class="head">
