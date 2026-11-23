@@ -1866,23 +1866,43 @@ window.toast = toast;
 /* ===== Kotak saran (footer sosmed) ===== */
 window.bukaSaran = () => {
   if (document.getElementById("saran-modal")) return;
+  if (!document.getElementById("saran-css")) {
+    const st = document.createElement("style"); st.id = "saran-css";
+    st.textContent = `
+    #saran-modal{position:fixed;inset:0;z-index:9999;background:rgba(8,4,20,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:18px;animation:srFade .18s ease}
+    #saran-modal .sr-card{width:100%;max-width:420px;max-height:90vh;overflow:auto;border-radius:24px;padding:26px 22px 20px;position:relative;text-align:center;
+      background:linear-gradient(160deg,#2a1b52 0%,#1a1038 60%,#140a2e 100%);border:1px solid rgba(244,114,182,.45);box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 0 4px rgba(244,114,182,.08);animation:srPop .26s cubic-bezier(.2,.9,.3,1.25)}
+    #saran-modal .sr-ico{width:62px;height:62px;margin:0 auto 12px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;background:linear-gradient(135deg,#f472b6,#a855f7);box-shadow:0 10px 26px rgba(244,114,182,.5)}
+    #saran-modal h3{margin:0;font-size:22px;font-weight:800;color:#fff}
+    #saran-modal .sr-sub{margin:6px 0 14px;font-size:13px;line-height:1.5;color:#c4b5fd}
+    #saran-modal textarea{width:100%;box-sizing:border-box;min-height:130px;resize:none;border-radius:16px;padding:14px 15px;font:inherit;font-size:15px;line-height:1.5;color:#fff;background:rgba(10,5,24,.65);border:1.5px solid rgba(168,85,247,.45);outline:none;transition:border-color .2s,box-shadow .2s}
+    #saran-modal textarea::placeholder{color:#8b7bb8}
+    #saran-modal textarea:focus{border-color:#f472b6;box-shadow:0 0 0 4px rgba(244,114,182,.18)}
+    #saran-modal .sr-cnt{margin-top:6px;text-align:right;font-size:11px;color:#8b7bb8}
+    #saran-modal .sr-row{display:flex;gap:10px;margin-top:14px}
+    #saran-modal .sr-row button{flex:1;border:0;border-radius:14px;padding:13px 10px;font:inherit;font-size:15px;font-weight:800;cursor:pointer;transition:transform .15s,filter .15s}
+    #saran-modal .sr-row button:active{transform:scale(.97)}
+    #saran-modal .sr-no{flex:.8!important;color:#ddd6fe;background:rgba(255,255,255,.08)}
+    #saran-modal .sr-ok{color:#2a0a1e;background:linear-gradient(135deg,#fbcfe8,#f472b6)}
+    #saran-modal .sr-ok:disabled{filter:grayscale(.6);opacity:.6;cursor:default}
+    #saran-modal .sr-done{padding:14px 4px 6px}
+    #saran-modal .sr-done .big{font-size:54px}
+    @keyframes srFade{from{opacity:0}to{opacity:1}} @keyframes srPop{from{transform:translateY(14px) scale(.96);opacity:0}to{transform:none;opacity:1}}`;
+    document.head.appendChild(st);
+  }
   const w = document.createElement("div"); w.id = "saran-modal";
-  w.style.cssText = "position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;padding:16px;";
-  w.innerHTML = `<div class="panel" style="max-width:440px;width:100%;margin:0;max-height:92vh;overflow:auto;">
-    <h3 style="margin:0 0 6px;">💬 Kotak Saran</h3>
-    <p style="font-size:12px;color:var(--gray);margin:0 0 10px;">Tulis saran, kritik, atau laporan bug. Pesan dikirim langsung ke guru.</p>
-    <textarea id="sr-pesan" maxlength="600" rows="5" placeholder="Tulis saranmu di sini…" style="width:100%;box-sizing:border-box;"></textarea>
-    <div id="sr-cnt" style="font-size:11px;color:var(--gray);text-align:right;">0/600</div>
-    <input id="sr-nama" maxlength="60" placeholder="Nama (boleh dikosongkan)" style="width:100%;box-sizing:border-box;margin-top:6px;">
-    <input id="sr-kontak" maxlength="80" placeholder="Kontak/WA (opsional, kalau mau dibalas)" style="width:100%;box-sizing:border-box;margin-top:6px;">
-    <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end;">
-      <button class="btn ghost" onclick="document.getElementById('saran-modal').remove()">Batal</button>
-      <button class="btn gold" id="sr-kirim" onclick="kirimSaranUI()">Kirim</button></div></div>`;
+  w.innerHTML = `<div class="sr-card">
+    <div class="sr-ico">💬</div>
+    <h3>Kotak Saran</h3>
+    <p class="sr-sub">Ada ide, kritik, atau bug yang kamu temukan?<br>Tulis di sini, langsung dibaca guru.</p>
+    <textarea id="sr-pesan" maxlength="600" placeholder="Tulis sarannya di sini…"></textarea>
+    <div class="sr-cnt" id="sr-cnt">0/600</div>
+    <div class="sr-row"><button class="sr-no" onclick="document.getElementById('saran-modal').remove()">Batal</button><button class="sr-ok" id="sr-kirim" onclick="kirimSaranUI()">Kirim saran ✨</button></div></div>`;
   w.addEventListener("click", e => { if (e.target === w) w.remove(); });
   document.body.appendChild(w);
   const ta = document.getElementById("sr-pesan");
   ta.addEventListener("input", () => { document.getElementById("sr-cnt").textContent = ta.value.length + "/600"; });
-  ta.focus();
+  setTimeout(() => ta.focus(), 50);
 };
 window.kirimSaranUI = async () => {
   const pesan = document.getElementById("sr-pesan").value.trim();
@@ -1896,9 +1916,9 @@ window.kirimSaranUI = async () => {
   if ((h.n || 0) >= 5) return toast("Batas 5 saran per hari tercapai");
   const btn = document.getElementById("sr-kirim"); btn.disabled = true;
   try {
-    await FB.kirimSaran({ pesan, nama: document.getElementById("sr-nama").value, kontak: document.getElementById("sr-kontak").value, kelas: (state.siswa && state.siswa.kelas) || "" });
+    await FB.kirimSaran({ pesan, kelas: (state.siswa && state.siswa.kelas) || "" });
     h.n = (h.n || 0) + 1; h.t = now; try { localStorage.setItem("shirose-saran", JSON.stringify(h)); } catch (_) {}
-    document.getElementById("saran-modal").remove(); toast("✅ Terima kasih! Saranmu terkirim");
+    document.querySelector("#saran-modal .sr-card").innerHTML = `<div class="sr-done"><div class="big">💌</div><h3>Terima kasih!</h3><p class="sr-sub">Saranmu sudah terkirim ke guru.</p><div class="sr-row"><button class="sr-ok" onclick="document.getElementById('saran-modal').remove()">Tutup</button></div></div>`;
   } catch (e) { btn.disabled = false; toast("Gagal kirim: " + (e && e.message ? e.message : e)); }
 };
 
