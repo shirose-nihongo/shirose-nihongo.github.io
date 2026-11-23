@@ -23,6 +23,7 @@ const LS = {
 const uid = () => S().user?.uid || "guest";
 const HIS_KEY = () => `shirose-jft-hasil:${uid()}`;
 const BEST_KEY = () => `shirose-jft-best:${uid()}`;
+const REV_KEY = (t) => `shirose-jft-rev:${uid()}:${t}`;
 const SESI_KEY = () => `shirose-jft-sesi:${uid()}`;
 
 const LV = { ir0: { nama: "Starter · A1", jp: "入門", ke: "A1" }, ir1: { nama: "Shokyuu 1 · A2.1", jp: "初級1", ke: "A2.1" }, ir2: { nama: "Shokyuu 2 · A2.2", jp: "初級2", ke: "A2.2" } };
@@ -352,6 +353,8 @@ function selesaiSesi() {
   rec.review = J.qs.map((q, i) => ({ sec: q.sec, tipe: q.tipe || "mc", alt: q.alt || [], ref: q.ref || "", q: q.q, o: q.o || [], a: q.a, u: J.ans[i] ?? null, n: q.n || "", p: q.p || "", fl: q.fl || null, emo: q.emo || "", say: q.say || "", pre: q.pre || "" }));
   if (J.mode !== "latihan") {
     const his = LS.get(HIS_KEY(), []); his.unshift({ ...rec, review: undefined }); LS.set(HIS_KEY(), his.slice(0, 40));
+    // Simpan kunci & pembahasan 12 ujian terakhir supaya bisa dibuka lagi dari Riwayat (yang lebih lama hanya nilai).
+    LS.set(REV_KEY(rec.t), rec.review); his.slice(12, 40).forEach(h => LS.del(REV_KEY(h.t)));
     const best = LS.get(BEST_KEY(), {}); const bk = `${J.lv}:${J.kode}`; if (!best[bk] && pct >= 0.6 && window.awardKoin) { try { window.awardKoin(J.mode === "sim" ? 100 : 30, "jft " + bk); } catch (e) {} }
     if (!best[bk] || pct > best[bk].pct) best[bk] = { pct, skor: rec.skor, t: rec.t }; LS.set(BEST_KEY(), best);
   }
@@ -392,6 +395,7 @@ window.JFT = {
     J.konfirm = false; J.idx = rentang(J.daftar[k + 1])[0]; simpanSesi(); draw();
   },
   async keUjian(lv) { if (S().level !== lv) await window.pilihLevel(lv); route("jft-ujian"); },
+  ulangi(kode) { route("jft-paket/" + kode); },   // buka halaman paket (ada tombol Mulai), bukan langsung mengulang
   hapusRiwayat() { LS.del(HIS_KEY()); LS.del(BEST_KEY()); route("jft-ujian"); },
   tampilReview() { const el = $("jft-review"); if (el) el.hidden = false; },
   waktu(m, btn) { document.querySelectorAll(".jft-wk button").forEach(b => b.classList.remove("on")); btn.classList.add("on"); window.__jftMenit = m; },
@@ -539,12 +543,26 @@ function rekomendasi(r) {
   if (!lemah.length) return `<div class="jft-note" style="border-color:#22c55e">🎯 <b>Rekomendasi belajar:</b> semua bagian ≥ 70%. Coba paket tryout lain untuk menjaga kestabilan skor.</div>`;
   return `<div class="jft-note"><b>🎯 Rekomendasi belajar</b><ul class="jft-ul">${lemah.map(([s, x]) => `<li><b>${SARAN[s][0]}</b> (${Math.round(100 * x.benar / x.total)}%): ${SARAN[s][1]}</li>`).join("")}</ul></div>`;
 }
-function renderHasil() {
-  const r = LS.get(HIS_KEY() + ":last", null);
+function renderRiwayat() {
+  const his = LS.get(HIS_KEY(), []);
+  const nilai = (h) => h.skor ?? Math.round(h.pct * 100) + "%";
+  const rata = his.length ? Math.round(his.reduce((a, h) => a + (h.pct || 0), 0) / his.length * 100) : 0;
+  const terbaik = his.length ? Math.max(...his.map(h => Math.round((h.pct || 0) * 100))) : 0;
+  const rows = his.map(h => `<div class="jft-his" style="cursor:pointer" onclick="route('jft-hasil/${h.t}')"><span>${new Date(h.t).toLocaleString("id-ID", { day: "2-digit", month: "short", year: "2-digit", hour: "2-digit", minute: "2-digit" })}</span><b>${nilai(h)}</b><small>${esc(h.judul)} · ${h.benar}/${h.total}${LS.get(REV_KEY(h.t), null) ? " · 📋" : ""}</small></div>`).join("");
+  return `<div class="jft-wrap"><div class="panel"><h2>📊 Riwayat ujian JFT</h2>
+    ${his.length ? `<div class="jft-sub">${his.length} ujian · rata-rata ${rata}% · terbaik ${terbaik}%</div><div class="jft-sub">Ketuk satu ujian untuk melihat nilainya lagi. Tanda 📋 = kunci &amp; pembahasan masih bisa dibuka.</div>${rows}`
+      : `<div class="jft-sub">Belum ada riwayat. Kerjakan ujian atau tryout dulu.</div>`}
+    <div class="jft-aksi" style="margin-top:12px"><button class="btn ghost" onclick="route('jft-ujian')">↩ Daftar ujian</button> <button class="btn ghost" onclick="route('jft-tryout')">Tryout</button></div>
+  </div></div>`;
+}
+function renderHasil(params) {
+  const t = (params || [])[0];
+  let r = t ? (LS.get(HIS_KEY(), []).find(h => String(h.t) === String(t)) || null) : LS.get(HIS_KEY() + ":last", null);
+  if (r && t) r = { ...r, review: LS.get(REV_KEY(r.t), null) };
   if (!r) { setTimeout(() => route("jft-ujian"), 0); return '<div class="loading">Memuat…</div>'; }
   const sim = r.mode === "sim"; const b = sim ? bandJft(r.skor) : gradeBab(r.pct);
   const bars = Object.entries(r.per).map(([s, x]) => { const p = x.total ? Math.round(100 * x.benar / x.total) : 0; return `<div class="jft-bar"><div class="l">${SEK[s].jp} ${SEK[s].nama}</div><div class="t"><i style="width:${p}%"></i></div><div class="v">${x.benar}/${x.total} · ${p}%</div></div>`; }).join("");
-  const rv = r.review.map((x, i) => {
+  const rv = (r.review || []).map((x, i) => {
     const ok = bener(x, x.u);
     return `<div class="jft-rv ${ok ? "ok" : "ng"}"><div class="h">${i + 1}. ${ok ? "✅" : "❌"} <small>${SEK[x.sec].jp}</small></div>
       ${x.fl ? renderFlyer(x.fl) : x.p ? `<div class="jft-passage">${nl(x.p)}</div>` : ""}${x.say ? `<div class="jft-passage">🎧 ${nl(x.say)}</div>` : ""}${x.emo ? `<div class="jft-bigemo">${x.emo}</div>` : ""}
@@ -567,7 +585,13 @@ function renderHasil() {
       <div class="jft-bars">${bars}</div>
       ${sim ? `<div class="jft-note">⚠ Ini <b>estimasi latihan internal</b> Shirose Nihongo: persentase benar dipetakan secara linear ke skala 10–250 (0%→10, 50%→145, 70%→200, 100%→250). Skor JFT-Basic resmi dihitung Japan Foundation/Prometric dengan metode equating (bobot tiap soal berbeda), jadi angka ini <b>bukan</b> skor atau sertifikasi resmi. Rentang resmi: 145–174 A1 · 175–199 A2.1 · 200–250 A2.2 (A2) · di bawah 145 tidak ditampilkan (*).</div>` : ""}
       ${sim ? rekomendasi(r) : ""}
-      <div class="jft-aksi"><button class="btn" onclick="JFT.tampilReview();this.remove()">📋 Lihat kunci &amp; pembahasan</button> <button class="btn ghost" onclick="route('${r.lv === "tryout" ? "jft-tryout" : "jft-ujian"}')">↩ ${r.lv === "tryout" ? "Daftar tryout" : "Daftar ujian"}</button></div>
+      <div class="jft-sub" style="margin-top:14px"><b>Selanjutnya?</b> Pilih salah satu:</div>
+      <div class="jft-aksi">
+        ${r.review ? `<button class="btn" onclick="JFT.tampilReview();this.remove()">📋 Lihat kunci &amp; pembahasan</button>` : `<span class="jft-sub">Pembahasan ujian lama tidak tersimpan, hanya nilainya.</span>`}
+        ${r.mode !== "latihan" && r.kode ? `<button class="btn gold" onclick="JFT.ulangi('${esc(r.kode)}')">🔄 Ulangi ujian sekali lagi</button>` : ""}
+        <button class="btn ghost" onclick="route('jft-riwayat')">📊 Riwayat nilai sebelumnya</button>
+        <button class="btn ghost" onclick="route('${r.lv === "tryout" ? "jft-tryout" : "jft-ujian"}')">↩ ${r.lv === "tryout" ? "Daftar tryout" : "Daftar ujian"}</button>
+      </div>
     </div>
     <div id="jft-review" hidden>${rv}</div>
   </div>`;
@@ -581,7 +605,8 @@ export const JFT_ROUTES = {
   "jft-tryout": () => renderTryout(),
   "jft-paket": (p) => renderPaket(p),
   "jft-tes": () => renderTes(),
-  "jft-hasil": () => renderHasil(),
+  "jft-hasil": (p) => renderHasil(p),
+  "jft-riwayat": () => renderRiwayat(),
 };
 let _FB = null;
 // Kirim riwayat JFT lama (tersimpan di HP) ke Firestore sekali saja, supaya guru bisa melihat nilainya.

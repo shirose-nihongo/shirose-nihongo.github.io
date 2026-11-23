@@ -649,12 +649,14 @@ function htmlHasil() {
       <div>💪 Paling dikuasai: <b>${CAT_LABEL[a.kuat.k]}</b> (${a.kuat.pct}%)</div>
       <div>🎯 Perlu ditingkatkan: <b>${CAT_LABEL[a.lemah.k]}</b> (${a.lemah.pct}%)</div>
       <ul>${(REKOM[a.lemah.k] || []).map(x => `<li>${x}</li>`).join("")}</ul></div>` : ""}
+    <h3>Selanjutnya?</h3>
     <div class="jx-row wrap">
       <button class="btn gold" onclick="JLPT.bukaReview()">📖 Lihat Pembahasan</button>
-      <button class="btn ghost" onclick="route('jlpt/${h.lv}/${h.jenis}/${h.pkgId}')">🔄 Ulangi</button>
+      <button class="btn ghost" onclick="route('jlpt/${h.lv}/${h.jenis}/${h.pkgId}')">🔄 Ulangi ujian sekali lagi</button>
+      <button class="btn ghost" onclick="route('jlpt-riwayat')">📊 Riwayat &amp; nilai sebelumnya</button>
       <button class="btn ghost" onclick="route('jlpt/${h.lv}/${h.jenis}')">← Daftar paket</button>
-      <button class="btn ghost" onclick="route('jlpt-riwayat')">📊 Riwayat</button>
     </div>
+    <p class="jx-note">Mengulang membuka halaman persiapan dulu (belum langsung mulai). Nilai ini tetap tersimpan di Riwayat dan bisa direview kapan saja.</p>
   </div>`;
 }
 
@@ -945,7 +947,7 @@ async function viewRiwayat() {
       <span class="v">${p.unik}/${p.total} paket · rata ${p.rata}%</span></div>`).join("")}</div>
     ${a.lemah ? `<h3>Rekomendasi latihan</h3><div class="jx-insight"><div>Kategori terlemah: <b>${CAT_LABEL[a.lemah.k]}</b> (${a.lemah.pct}%)</div>
       <ul>${(REKOM[a.lemah.k] || []).map(x => `<li>${x}</li>`).join("")}</ul></div>` : ""}
-    <h3>Semua hasil</h3>
+    <h3>Semua hasil <small style="font-weight:400;color:var(--gray)">· ketuk baris untuk review soal &amp; jawabanmu</small></h3>
     ${list.length ? `<div class="jx-table-wrap"><table class="jx-tbl"><thead><tr><th>Tanggal</th><th>Lv</th><th>Paket</th><th>Nilai</th><th>Benar</th><th>Durasi</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`
                   : `<div class="empty">Belum ada riwayat. Mulai dari <a onclick="route('jlpt')">JLPT Center</a>.</div>`}
     <p class="jx-note">Hanya kamu dan guru yang bisa melihat riwayat ini.</p>
