@@ -255,7 +255,7 @@ import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
 import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261118s";
 import { renderCharacter, DEFAULT_EQUIPPED, setBody, setBentuk, BENTUK_DEFAULT } from "./js/character.js?v=20261122p";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
-import { renderDeckTab } from "./js/deck-teacher.js?v=20261123g";
+import { renderDeckTab } from "./js/deck-teacher.js?v=20261123h";
 
 const state = {
   user: null,
@@ -651,7 +651,7 @@ const _chipAkses = (s) => ["n5","n4","n3","n2","n1"].map(l => `<span class="chip
 const _chipSsw = (s) => { const on = s.aksesSsw !== false; return `<span class="chip btn-chip ${on ? "on" : ""}" title="${on ? "Klik untuk tutup akses SSW" : "Klik untuk buka akses SSW"}" onclick="toggleSsw('${s.uid}')">SSW ${on ? "Buka" : "Tutup"}</span>`; };
 /* Akses menu HAFALAN: siswa.aksesHafalan (true/false) menang; kosong = ikut kelas.aksesHafalan (false = tutup); kosong semua = buka. */
 const _hafKelasOn = (s, kl) => ((kl || []).find(k => (k.nama || "").trim() === (s.kelas || "").trim()) || {}).aksesHafalan !== false;
-const _hafEfektif = (s, kl) => typeof s.aksesHafalan === "boolean" ? s.aksesHafalan : _hafKelasOn(s, kl);
+const _hafEfektif = (s, kl) => (s.role && s.role !== "student") ? true : typeof s.aksesHafalan === "boolean" ? s.aksesHafalan : _hafKelasOn(s, kl);
 const JFT_LV = [["ir0","A1"],["ir1","A2.1"],["ir2","A2.2"]];
 const _jftOn = (s, l) => s.aksesJft !== false && s.aksesJftLevel?.[l] !== false;
 const _chipJft = (s) => JFT_LV.map(([l, n]) => { const on = _jftOn(s, l); return `<span class="chip btn-chip ${on ? "on" : ""}" title="JFT ${n}: klik untuk ${on ? "tutup" : "buka"}" onclick="toggleJft('${s.uid}','${l}')">JFT ${n}</span>`; }).join("");

@@ -488,7 +488,12 @@ function installKeys() {
 export async function renderDeckTab(fb, ctx) {
   FB = fb; CTX = ctx; V.ro = false;
   if (!FB.userIsGuru()) return `<div class="card">Khusus guru.</div>`;
-  try { V.kelasList = (await FB.listKelas()).map(k => String(k.nama || "").trim()).filter(Boolean).sort((a, b) => a.localeCompare(b, "id")); } catch (e) { V.kelasList = []; }
+  { // nama kelas = koleksi kelas + kelas yang tercatat di profil siswa (kelas bisa hanya ada di siswa)
+    const nm = new Set();
+    try { (await FB.listKelas()).forEach(k => { const n = String(k.nama || "").trim(); if (n) nm.add(n); }); } catch (e) {}
+    try { (await FB.listSiswa()).forEach(x => { const n = String(x.kelas || "").trim(); if (n) nm.add(n); }); } catch (e) {}
+    V.kelasList = [...nm].sort((a, b) => a.localeCompare(b, "id"));
+  }
   try { IDX = await ST.index(); } catch (e) { return `<div class="alert alert-err">Gagal memuat deck: ${esc(e.message || e)}</div>`; }
   LOKALN = 0;
   if (!LOKAL) { try { const ids = new Set(IDX.map(x => x.id)); LOKALN = (await IDB.all()).filter(x => !ids.has(x.id)).length; } catch (e) {} }
@@ -505,7 +510,7 @@ export async function renderDeckSiswa(fb, ctx) {
   window.DK = buatDK();
   for (const k of ["baru", "rename", "hapusDeck", "simpanKartu", "hapusKartu", "bulk", "pilihFile", "submit", "template", "ekspor", "edit", "batalEdit", "aktif", "pilihSemua", "hanyaTampil", "lewati", "terbit", "tarik", "pubSet", "pubKelas", "migrasi", "stOn", "stTarget", "stNama", "batalStage"]) window.DK[k] = () => {};
   installKeys(); applyFuri();
-  try { V.pubList = (await FB.deckPubIndex()).filter(x => x.aktif !== false && (ctx.guru || x.semua || (x.kelas || []).includes(ctx.kelas))); V.pubErr = ""; }
+  try { V.pubList = (await FB.deckPubIndex()).filter(x => ctx.guru || (x.aktif !== false && (x.semua || (x.kelas || []).includes(ctx.kelas)))); V.pubErr = ""; }
   catch (e) { V.pubList = null; V.pubErr = String((e && (e.code || e.message)) || e); }
   return `<div id="dk-root">${view()}</div>`;
 }
