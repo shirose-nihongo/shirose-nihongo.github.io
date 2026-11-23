@@ -287,7 +287,7 @@ async function handler(event) {
 }
 
 /* ---------------- adapter Cloudflare Worker ---------------- */
-const ALLOW = ["https://shirose-nihongo.github.io", "http://localhost:8000", "http://127.0.0.1:8000", "http://localhost:8080"];
+const ALLOW = ["https://shirosenihongo.com", "https://www.shirosenihongo.com", "https://shirose-nihongo.github.io", "http://localhost:8000", "http://127.0.0.1:8000", "http://localhost:8080"];
 function corsHeaders(origin) {
   const extra = String(env.ALLOW_ORIGIN || "").split(",").map(x => x.trim()).filter(Boolean);
   const ok = origin && (ALLOW.includes(origin) || extra.includes(origin));
