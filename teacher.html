@@ -255,6 +255,7 @@ import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
 import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261118s";
 import { renderCharacter, DEFAULT_EQUIPPED, setBody, setBentuk, BENTUK_DEFAULT } from "./js/character.js?v=20261119u";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
+import { renderDeckTab } from "./js/deck-teacher.js?v=20261123a";
 
 const state = {
   user: null,
@@ -357,7 +358,7 @@ window.guruLogout = async () => {
 // script ini adalah ES module — jadi state & renderTab harus diekspos ke window.
 window.state = state;
 /* ===== Menu bawah (HP) + sheet "Lainnya" ===== */
-const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["ssw","🌏","SSW"],["laporan","📈","Laporan"],["bankjlpt","📚","Bank JLPT"]];
+const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["ssw","🌏","SSW"],["laporan","📈","Laporan"],["bankjlpt","📚","Bank JLPT"],["deck","🗂️","Deck"]];
 const MENU_LAIN = [];   // menu lain dihapus dari tampilan (fungsi backend tetap ada)
 function renderBottomNav(){
   const lain = MENU_LAIN.filter(m => m[0] !== "admin" || FB.userIsAdmin());
@@ -385,6 +386,7 @@ function renderApp(){
         <div class="nav-item ${state.tab==='ssw'?'active':''}" onclick="setTab('ssw')"><span class="ico">🌏</span> SSW</div>
         <div class="nav-item ${state.tab==='laporan'?'active':''}" onclick="setTab('laporan')"><span class="ico">📈</span> Laporan</div>
         <div class="nav-item ${state.tab==='bankjlpt'?'active':''}" onclick="setTab('bankjlpt')"><span class="ico">📚</span> Bank JLPT</div>
+        <div class="nav-item ${state.tab==='deck'?'active':''}" onclick="setTab('deck')"><span class="ico">🗂️</span> Deck</div>
       </div>
       <div class="main" id="main"></div>
     </div>
@@ -392,7 +394,7 @@ function renderApp(){
   `;
   renderTab();
 }
-const TAB_BOLEH = ["siswa","kelas","ssw","laporan","bankjlpt"];
+const TAB_BOLEH = ["siswa","kelas","ssw","laporan","bankjlpt","deck"];
 window.setTab = (t) => { state.tab = TAB_BOLEH.includes(t) ? t : "siswa"; state.siswaStale = true; renderApp(); };
 
 window.renderTab = (...a) => renderTab(...a);
@@ -409,6 +411,7 @@ async function renderTab(){
     else if (state.tab === "choukai") mount.innerHTML = await renderChoukaiTab();
     else if (state.tab === "ssw") mount.innerHTML = await renderSswTab(FB, { toast, rerender: () => renderTab() });
     else if (state.tab === "bankjlpt") mount.innerHTML = await renderBankJlptTab(FB, { toast, rerender: () => renderTab() });
+    else if (state.tab === "deck") mount.innerHTML = await renderDeckTab(FB, { toast, rerender: () => renderTab() });
     else if (state.tab === "mensetsu") mount.innerHTML = await renderMensetsuTab();
     else if (state.tab === "laporan") mount.innerHTML = await renderLaporanTab();
     else if (state.tab === "jlpt") mount.innerHTML = await renderJlptTab();

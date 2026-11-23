@@ -145,6 +145,10 @@ service cloud.firestore {
     match /guru_bank_jlpt/{id} {
       allow read, write: if isGuru();
     }
+    // Deck hafalan ala Anki di dashboard guru: KHUSUS guru.
+    match /guru_deck/{id} {
+      allow read, write: if isGuru();
+    }
 
     match /kelas/{kid} {
       allow read: if terdaftar();
