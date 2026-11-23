@@ -161,7 +161,7 @@ async function tabAkses() {
     <p style="font-size:12px; color:var(--gray); margin:10px 0 0">${guru ? "Peran, kelas, dan akses siswa diatur di Dashboard Guru." : "Kelas, peran, dan hak akses diatur oleh guru/admin supaya akunmu aman."}</p>
     ${guru ? `<a class="btn sm" style="margin-top:8px; display:inline-block" href="./teacher.html">🛠️ Atur kelas, status &amp; akses siswa</a>` : ""}`;
   const dasar = `<button class="hub-tile" onclick="route('kana')"><b>あ・ア Hiragana &amp; Katakana</b><small>Dasar menulis · tanpa pilih level</small></button>
-    <button class="hub-tile" onclick="route('mensetsu')"><b>面接 Mensetsu</b><small>Wawancara kerja · mengikuti akses SSW</small></button>${guru ? `<button class="hub-tile" onclick="location.href='./teacher.html'"><b>師 Dashboard Guru</b><small>Bank soal, laporan, siswa</small></button>` : ""}`;
+    ${guru ? `<button class="hub-tile" onclick="location.href='./teacher.html'"><b>師 Dashboard Guru</b><small>Bank soal, laporan, siswa</small></button>` : ""}`;
   LOADERS["kelola"] = kelolaLoader;
   const kelola = guru ? `<div class="hub-card" id="hc-kelola" style="margin-top:18px"><button onclick="hubNilai('kelola')"><span><b>⚙️ Kelola akses kelas &amp; siswa</b><small>Atur akses JLPT, JFT, tiap bidang SSW, kelas, status &amp; peran — langsung dari sini</small></span><span class="car">▶</span></button><div class="hub-body"></div></div>` : "";
   return `
