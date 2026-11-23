@@ -39,7 +39,14 @@ const V = { view: "list", id: "", deck: null, q: "", page: 0, edit: null, stage:
   cfg: { mode: "flash", arah: "jp", sumber: "due", jumlah: 20 } };
 const MODES = { flash: "🃏 Flashcard (SRS)", pg: "🔘 Pilihan ganda", cocok: "🧩 Cocokkan", ketik: "⌨️ Ketik" };
 const toast = m => CTX.toast(m);
-const paint = () => { const r = document.getElementById("dk-root"); if (r) { r.innerHTML = view(); setTimeout(() => { const i = document.getElementById("dk-in"); if (i) i.focus(); }, 0); } };
+/* Furigana: "漢字[かんじ]" -> ruby; atau otomatis dari kolom Kana bila Kata berisi kanji. Pilihan ON/OFF dipakai bersama hafalan siswa. */
+const pk = c => String(c.k || "").replace(/\[[^\]]*\]/g, "");
+const rubyBr = t => esc(t).replace(/([\u3400-\u9fff々〆]+)\[([^\]]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>");
+const furi = c => { const k = String(c.k || ""); if (/\[[^\]]+\]/.test(k)) return rubyBr(k); if (c.y && c.y !== k && /[\u3400-\u9fff]/.test(k)) return `<ruby>${esc(k)}<rt>${esc(c.y)}</rt></ruby>`; return esc(k); };
+const furiOn = () => { try { return localStorage.getItem("shirose-haf-furi") === "1"; } catch (e) { return false; } };
+const applyFuri = () => document.body.classList.toggle("dk-furi-on", furiOn());
+const furiBtn = () => `<button class="btn ghost sm" id="dk-furi-btn" onclick="DK.furi()" aria-pressed="${furiOn()}">${furiOn() ? "ふりがな ON" : "ふりがな OFF"}</button>`;
+const paint = () => { const r = document.getElementById("dk-root"); if (r) { r.innerHTML = view(); setTimeout(() => { const i = document.getElementById("dk-in"); if (i) i.focus(); bindSwipe(); fit(); }, 0); } };
 const simpan = async () => { const d = V.deck; await ST.put(d); const m = meta(d); IDX = [...IDX.filter(x => x.id !== d.id), m]; await ST.setIndex(IDX); };
 
 /* ---------- Impor / ekspor Excel ---------- */
@@ -129,7 +136,7 @@ const hitung = d => ({ n: d.cards.length, baru: d.cards.filter(baru).length, due
 const sumberKartu = (d, s) => s === "due" ? [...d.cards.filter(jatuhTempo).sort((a, b) => (a.due || 0) - (b.due || 0)), ...d.cards.filter(baru)]
   : s === "lemah" ? d.cards.filter(lemah) : d.cards;
 const arahItem = (c, ar) => ({ c, ar: ar === "acak" ? (Math.random() < .5 ? "jp" : "id") : ar });
-const teksJawab = (c, ar) => ar === "jp" ? (c.a || c.y) : (c.y && c.y !== c.k ? `${c.k}（${c.y}）` : c.k);
+const teksJawab = (c, ar) => ar === "jp" ? (c.a || c.y) : (c.y && c.y !== pk(c) ? `${pk(c)}（${c.y}）` : pk(c));
 function mulai() {
   const d = V.deck, cfg = V.cfg;
   const sumber = cfg.mode === "flash" ? cfg.sumber : (cfg.sumber === "due" ? "semua" : cfg.sumber);
@@ -153,7 +160,7 @@ function buatOpsi(it, semua) {
   it.opsi = rnd([benar, ...ds]); it.ans = it.opsi.indexOf(benar);
 }
 const pisah = s => String(s || "").split(/[\/;；,、]/).map(x => x.trim()).filter(Boolean);
-function tujuanKetik(it) { const c = it.c; return it.ar === "jp" ? (c.y ? [c.y] : pisah(c.a).concat(c.a ? [c.a] : [])) : [c.k, c.y].filter(Boolean); }
+function tujuanKetik(it) { const c = it.c; return it.ar === "jp" ? (c.y ? [c.y] : pisah(c.a).concat(c.a ? [c.a] : [])) : [pk(c), c.y].filter(Boolean); }
 const n2 = s => String(s || "").toLowerCase().replace(/[\s・.,、。!?！？~〜]/g, "");
 function mulaiRonde() {
   const S = V.S, chunk = S.q.slice(S.i, S.i + 6);
@@ -189,7 +196,38 @@ const CSS = `<style>
 .dk-frm{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;}
 .dk-frm input,.dk-frm textarea,.dk-ta{padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--navy-4);color:var(--white);font:14px var(--font-sans);width:100%;}
 .dk-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
-@media(max-width:640px){.dk-big{font-size:34px;}.dk-rate{grid-template-columns:repeat(2,1fr);}}
+.dk-furi rt{display:none;font-size:.45em;font-weight:600;color:var(--pink-light,#f9a8c9);} body.dk-furi-on .dk-furi rt{display:revert;}
+.flash-stage{position:relative;min-height:min(68vh,520px);display:flex;align-items:center;justify-content:center;margin:10px 0 18px;overflow:visible;user-select:none;-webkit-user-select:none;touch-action:pan-y;}
+.flash-card{position:relative;width:100%;max-width:520px;height:clamp(380px,62vh,500px);overflow-x:hidden;overflow-y:auto;box-sizing:border-box;background:linear-gradient(160deg,rgba(42,50,112,.85),rgba(22,27,54,.85));border:1px solid var(--border);border-radius:24px;padding:32px 24px;text-align:center;box-shadow:0 12px 44px rgba(0,0,0,.4);transition:transform .25s ease,box-shadow .25s ease,opacity .25s ease;cursor:pointer;will-change:transform,opacity;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.flash-card .no-pill{position:absolute;top:14px;left:16px;font-size:12px;color:var(--gray);}
+.flash-card .front{font-family:var(--font-jp);font-weight:800;font-size:min(22vw,120px);line-height:1.05;color:var(--pink-light);margin:14px 0 10px;word-break:break-all;max-width:100%;overflow-wrap:anywhere;}
+.flash-card .reading{display:inline-block;padding:8px 18px;border-radius:999px;background:rgba(42,50,112,.6);color:var(--white);font-family:var(--font-jp);font-size:26px;margin:10px 0 14px;}
+.flash-card .arti{font-size:22px;font-weight:700;color:var(--white);line-height:1.4;margin-top:8px;}
+.flash-card .contoh{font-size:14px;color:var(--gray);margin-top:12px;padding:10px;background:rgba(255,255,255,.04);border-radius:10px;text-align:left;font-family:var(--font-jp);}
+.flash-card .tap-hint{margin-top:18px;font-size:13px;color:var(--gray);animation:dkHint 1.6s ease-in-out infinite;}
+@keyframes dkHint{0%,100%{opacity:.4}50%{opacity:.9}}
+.flash-card .back-face{display:none;}
+.flash-card.revealed .back-face{display:block;animation:dkReveal .25s ease-out;}
+.flash-card.revealed .tap-hint{display:none;}
+.flash-card.revealed .front.f-jp{font-size:72px;margin-top:0;}
+@keyframes dkReveal{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+.flash-card .say-btn{position:absolute;top:12px;right:12px;width:52px;height:52px;border-radius:50%;border:2px solid var(--border);background:rgba(255,255,255,.06);color:var(--white);font-size:24px;cursor:pointer;z-index:3;display:none;}
+.flash-card.revealed .say-btn{display:block;}
+.flash-card.swiping{transition:none;}
+.flash-card.leave-left{transform:translateX(-120%) rotate(-14deg);opacity:0;}
+.flash-card.leave-right{transform:translateX(120%) rotate(14deg);opacity:0;}
+.flash-card.enter{animation:dkEnter .35s ease-out;}
+@keyframes dkEnter{0%{transform:translateY(16px) scale(.96);opacity:0;}100%{transform:translateY(0) scale(1);opacity:1;}}
+.flash-badge{position:absolute;top:24px;padding:6px 16px;border-radius:8px;font-weight:800;font-size:14px;letter-spacing:1px;opacity:0;pointer-events:none;transition:opacity .15s;border:2px solid currentColor;text-transform:uppercase;z-index:4;}
+.flash-badge.left{left:20px;color:#ef5350;transform:rotate(-10deg);} .flash-badge.right{right:20px;color:#10b981;transform:rotate(10deg);}
+.flash-actions{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;margin-top:8px;}
+.flash-btn{padding:20px 16px;border-radius:16px;border:none;font-weight:800;font-size:18px;cursor:pointer;font-family:var(--font-sans);transition:transform .12s,filter .12s;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:76px;color:#fff;}
+.flash-btn .ico{font-size:24px;}
+.flash-btn.lupa{background:linear-gradient(135deg,#ef5350,#c62828);box-shadow:0 6px 18px rgba(239,83,80,.5);}
+.flash-btn.ingat{background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 6px 18px rgba(16,185,129,.5);}
+.flash-btn.back{background:rgba(255,255,255,.08);border:1px solid var(--border);padding:20px 22px;}
+.flash-btn:disabled{opacity:.4;cursor:not-allowed;} .flash-btn:not(:disabled):active{transform:scale(.97);}
+@media(max-width:640px){.dk-big{font-size:34px;}.dk-rate{grid-template-columns:repeat(2,1fr);}.flash-card .reading{font-size:22px;}.flash-card .arti{font-size:20px;}.flash-btn{font-size:16px;padding:18px 12px;min-height:84px;}.flash-card.revealed .front.f-jp{font-size:58px;}}
 </style>`;
 
 const chip = (on, js, txt) => `<button class="chip btn-chip ${on ? "on" : ""}" onclick="${js}">${txt}</button>`;
@@ -228,7 +266,7 @@ function viewStage() {
         <select onchange="DK.stTarget(${i},this.value)"><option value="new" ${s.target === "new" ? "selected" : ""}>➕ Deck baru</option>${opsiDeck.replace(`value="${esc(s.target)}"`, `value="${esc(s.target)}" selected`)}</select>
         ${s.target === "new" ? `<input value="${esc(s.nama)}" onchange="DK.stNama(${i},this.value)" placeholder="Nama deck" style="flex:1;min-width:160px;">` : `<span class="dk-sm">ditambahkan ke deck terpilih (kartu dobel dilewati)</span>`}
       </div>
-      <div class="dk-sm" style="margin-top:8px;">Pratinjau: ${s.cards.slice(0, 4).map(c => `<b>${esc(c.k)}</b> ${esc(c.y && c.y !== c.k ? "(" + c.y + ")" : "")} = ${esc(c.a)}`).join(" · ") || "—"}</div></div>`).join("");
+      <div class="dk-sm" style="margin-top:8px;">Pratinjau: ${s.cards.slice(0, 4).map(c => `<b>${esc(pk(c))}</b> ${esc(c.y && c.y !== pk(c) ? "(" + c.y + ")" : "")} = ${esc(c.a)}`).join(" · ") || "—"}</div></div>`).join("");
   return `<div class="panel"><h2>📥 Pratinjau impor</h2>${rows}
     <div class="dk-row"><button class="btn" onclick="DK.submit()" ${V.busy ? "disabled" : ""}>${V.busy ? "Menyimpan…" : "✅ Submit ke deck"}</button><button class="btn ghost" onclick="DK.batalStage()">Batal</button></div></div>`;
 }
@@ -239,7 +277,7 @@ function viewDeck() {
   const all = d.cards.map((c, i) => ({ c, i })).filter(x => !q || [x.c.k, x.c.y, x.c.a, x.c.c, x.c.t, x.c.n].join(" ").toLowerCase().includes(q));
   const per = 50, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(V.page, pages - 1);
   const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr>
-      <td style="font-family:var(--font-jp);font-size:16px;">${esc(c.k)}</td><td>${esc(c.y)}</td><td>${esc(c.a)}</td>
+      <td style="font-family:var(--font-jp);font-size:16px;">${esc(pk(c))}</td><td>${esc(c.y)}</td><td>${esc(c.a)}</td>
       <td class="dk-sm">${esc(c.c)}</td><td class="dk-sm">${esc(c.t)}</td>
       <td style="white-space:nowrap;"><button class="btn sm ghost" onclick="DK.edit(${i})">✏️</button> <button class="btn sm ghost" onclick="DK.hapusKartu(${i})">🗑</button></td></tr>`).join("");
   const ed = V.edit;
@@ -263,7 +301,7 @@ function viewDeck() {
       <div class="dk-row" style="margin-bottom:8px;"><span class="dk-sm">Sumber:</span>${sumberTombol}</div>
       <div class="dk-row" style="margin-bottom:12px;"><span class="dk-sm">Jumlah:</span>${[10, 20, 50, 0].map(n => chip(cfg.jumlah === n, `DK.cfg('jumlah',${n})`, n || "Semua")).join("")}</div>
       <button class="btn" onclick="DK.mulai()" ${h.n ? "" : "disabled"}>▶ Mulai</button>
-      ${cfg.mode === "flash" ? `<span class="dk-sm" style="margin-left:8px;">Spasi = balik kartu · 1-4 = nilai</span>` : ""}</div>
+      ${cfg.mode === "flash" ? `<span class="dk-sm" style="margin-left:8px;">Geser kartu / ← Lupa · → Ingat · Spasi balik · Backspace kembali</span>` : ""}</div>
     <div class="panel"><h2>${cEd ? "✏️ Edit kartu" : "➕ Tambah kartu"}</h2>
       <div class="dk-frm">
         <input id="dk-k" placeholder="Kata (kanji/kana) *" value="${fv("k")}">
@@ -285,35 +323,39 @@ function viewDeck() {
 
 function viewStudy() {
   const S = V.S, total = S.q.length, pct = Math.min(100, Math.round(S.i / total * 100));
-  const top = `<div class="dk-row" style="margin-bottom:4px;"><button class="btn sm ghost" onclick="DK.keluar()">← Keluar</button><b>${MODES[S.mode]}</b><span class="dk-sm">${Math.min(S.i + 1, total)} / ${total}</span><span style="flex:1"></span><span class="chip on">✓ ${S.b}</span><span class="chip" style="background:var(--red);">✗ ${S.s}</span></div><div class="dk-bar"><i style="width:${pct}%"></i></div>`;
+  const top = `<div class="dk-row" style="margin-bottom:4px;"><button class="btn sm ghost" onclick="DK.keluar()">← Keluar</button><b>${MODES[S.mode]}</b><span class="dk-sm">${Math.min(S.i + 1, total)} / ${total}</span><span style="flex:1"></span>${furiBtn()}<span class="chip on">✓ ${S.b}</span><span class="chip" style="background:var(--red);">✗ ${S.s}</span></div><div class="dk-bar"><i style="width:${pct}%"></i></div>`;
   if (S.mode === "cocok") return top + viewCocok();
   if (S.i >= total) return top + viewSelesai();
   const it = S.q[S.i], c = it.c;
-  const depan = it.ar === "jp" ? c.k : c.a;
+  const depan = it.ar === "jp" ? pk(c) : c.a, depanH = it.ar === "jp" ? `<span class="dk-furi">${furi(c)}</span>` : esc(c.a);
   const speak = it.ar === "jp" ? `<button class="btn sm ghost" onclick="event.stopPropagation();DK.suara()">🔊</button>` : "";
   if (S.mode === "flash") {
-    const belakang = it.ar === "jp"
-      ? `${c.y && c.y !== c.k ? `<div class="dk-mid">${esc(c.y)}</div>` : ""}<div class="dk-big" style="font-size:30px;font-family:var(--font-sans);">${esc(c.a)}</div>`
-      : `<div class="dk-big">${esc(c.k)}</div>${c.y && c.y !== c.k ? `<div class="dk-mid">${esc(c.y)}</div>` : ""}`;
-    const extra = `${c.c ? `<div class="dk-sm" style="margin-top:8px;font-family:var(--font-jp);">${esc(c.c)}${c.ca ? `<br><i>${esc(c.ca)}</i>` : ""}</div>` : ""}${c.n ? `<div class="dk-sm">📝 ${esc(c.n)}</div>` : ""}`;
-    const kartu = `<div class="dk-card" onclick="DK.flip()"><div class="dk-sm">${it.ar === "jp" ? "JEPANG" : "ARTI"}${baru(c) ? " · 🆕" : ""}</div><div class="dk-big" ${it.ar === "id" ? `style="font-size:30px;font-family:var(--font-sans);"` : ""}>${esc(depan)}</div>${speak}
-      ${S.flip ? `<hr style="width:60%;border-color:var(--border);margin:10px 0;">${belakang}${extra}` : `<div class="dk-sm" style="margin-top:14px;">ketuk / Spasi untuk balik</div>`}</div>`;
-    const tombol = S.flip ? `<div class="dk-rate">${[["Lagi", "btn danger"], ["Sulit", "btn ghost"], ["Bagus", "btn"], ["Mudah", "btn gold"]].map(([t, cl], q) => `<button class="${cl}" onclick="DK.rate(${q})">${q + 1}. ${t}<small>${ivLbl(sched(c, q).iv)}</small></button>`).join("")}</div>`
-      : `<div style="margin-top:12px;"><button class="btn" style="width:100%;" onclick="DK.flip()">Tampilkan jawaban</button></div>`;
-    return top + kartu + tombol;
+    const rev = it.ar === "id", ada = c.y && c.y !== pk(c);
+    const reading = ada ? `<div class="reading">${esc(c.y)}</div>` : "";
+    const extra = `${c.c ? `<div class="contoh">${rubyBr(c.c)}${c.ca ? `<br><i style="font-family:var(--font-sans);">${esc(c.ca)}</i>` : ""}</div>` : ""}${c.n ? `<div class="dk-sm" style="margin-top:8px;">📝 ${esc(c.n)}</div>` : ""}`;
+    const front = rev ? `<div class="front" style="font-size:clamp(26px,7vw,48px);font-family:var(--font-sans);">${esc(c.a)}</div>` : `<div class="front f-jp dk-furi">${furi(c)}</div>`;
+    const back = rev ? `<div class="front f-jp dk-furi" style="font-size:clamp(34px,10vw,64px);margin-top:0;">${furi(c)}</div>${reading}${extra}` : `${reading}<div class="arti">${esc(c.a)}</div>${extra}`;
+    const kembali = S.hist && S.hist.length ? `<button class="flash-btn back" onclick="DK.undo()" title="Kembali ke kartu sebelumnya">↶ Kembali</button>` : `<button class="flash-btn back" disabled>↶ Kembali</button>`;
+    return top + `<div class="flash-stage"><span class="flash-badge left" id="badge-lupa">✕ LUPA</span><span class="flash-badge right" id="badge-ingat">✓ INGAT</span>
+      <div class="flash-card enter ${S.flip ? "revealed" : ""}" id="flash-card" data-say="${esc(pk(c) || c.y)}" onclick="DK.tap(event)">
+        <div class="no-pill">${S.i + 1}${baru(c) ? " · 🆕" : ""}${c.t ? " · " + esc(c.t) : ""}</div>
+        ${front}<div class="back-face">${back}</div>
+        <button class="say-btn" title="Dengarkan" onclick="event.stopPropagation();DK.suara()">🔊</button>
+        <div class="tap-hint">👆 Tap kartu = bolak-balik · ← Geser Lupa · Ingat Geser →</div></div></div>
+      <div class="flash-actions"><button class="flash-btn lupa" onclick="DK.rate(0)"><span class="ico">←</span><span>Lupa</span></button>${kembali}<button class="flash-btn ingat" onclick="DK.rate(2)"><span class="ico">→</span><span>Ingat</span></button></div>`;
   }
   if (S.mode === "pg") {
     const opts = it.opsi.map((o, i) => {
       const cl = S.pick < 0 ? "" : i === it.ans ? "ok" : i === S.pick ? "no" : "";
       return `<button class="dk-opt ${cl}" ${S.pick >= 0 ? "disabled" : ""} onclick="DK.pilih(${i})">${i + 1}. ${esc(o)}</button>`;
     }).join("");
-    return top + `<div class="dk-card" style="min-height:160px;cursor:default;"><div class="dk-sm">${it.ar === "jp" ? "Apa artinya?" : "Kata Jepangnya?"}</div><div class="dk-big" ${it.ar === "id" ? `style="font-size:30px;font-family:var(--font-sans);"` : ""}>${esc(depan)}</div>${speak}</div><div style="margin-top:12px;">${opts}</div>
+    return top + `<div class="dk-card" style="min-height:160px;cursor:default;"><div class="dk-sm">${it.ar === "jp" ? "Apa artinya?" : "Kata Jepangnya?"}</div><div class="dk-big" ${it.ar === "id" ? `style="font-size:30px;font-family:var(--font-sans);"` : ""}>${depanH}</div>${speak}</div><div style="margin-top:12px;">${opts}</div>
       ${S.pick >= 0 ? `<button class="btn" style="width:100%;" onclick="DK.lanjut()">Lanjut ›</button>` : ""}`;
   }
   // ketik
   const tj = tujuanKetik(it), tanya = it.ar === "jp" ? (c.y ? "Ketik cara baca (kana)" : "Ketik artinya") : "Ketik kata Jepangnya (kanji/kana)";
   const hasil = S.cek ? `<div class="alert ${S.cek.ok ? "alert-ok" : "alert-err"}" style="margin-top:12px;">${S.cek.ok ? "✓ Benar!" : "✗ Salah"} — jawaban: <b>${esc(tj.join(" / "))}</b>${S.cek.ok ? "" : `<br>Jawabanmu: ${esc(S.cek.val)}`}</div>` : "";
-  return top + `<div class="dk-card" style="min-height:160px;cursor:default;"><div class="dk-sm">${tanya}</div><div class="dk-big" ${it.ar === "id" ? `style="font-size:30px;font-family:var(--font-sans);"` : ""}>${esc(depan)}</div>${speak}</div>
+  return top + `<div class="dk-card" style="min-height:160px;cursor:default;"><div class="dk-sm">${tanya}</div><div class="dk-big" ${it.ar === "id" ? `style="font-size:30px;font-family:var(--font-sans);"` : ""}>${depanH}</div>${speak}</div>
     <div style="margin-top:12px;"><input id="dk-in" class="dk-in" autocomplete="off" ${S.cek ? "disabled" : ""} value="${esc(S.cek ? S.cek.val : "")}" onkeydown="if(event.key==='Enter'&&!event.isComposing){event.preventDefault();DK.cek();}" placeholder="…"></div>
     ${hasil}<div style="margin-top:10px;">${S.cek ? `<button class="btn" style="width:100%;" onclick="DK.lanjut()">Lanjut ›</button>` : `<button class="btn" style="width:100%;" onclick="DK.cek()">Periksa</button>`}</div>`;
 }
@@ -321,11 +363,11 @@ function viewStudy() {
 function viewCocok() {
   const S = V.S, R = S.round;
   if (!R) return viewSelesai();
-  const lt = it => it.ar === "jp" ? it.c.k : it.c.a, rt = it => it.ar === "jp" ? it.c.a : (it.c.y && it.c.y !== it.c.k ? `${it.c.k}（${it.c.y}）` : it.c.k);
+  const lt = it => it.ar === "jp" ? `<span class="dk-furi">${furi(it.c)}</span>` : esc(it.c.a), rt = it => it.ar === "jp" ? esc(it.c.a) : esc(teksJawab(it.c, "id"));
   const tile = (it, side, i) => {
     const key = side + i, done = R.done.has(it), sel = (side === "L" ? R.sl : R.sr) === i;
     const bad = R.bad && R.bad[side] === i;
-    return `<button class="dk-tile ${done ? "ok" : bad ? "bad" : sel ? "sel" : ""}" ${done ? "disabled" : ""} onclick="DK.mt('${side}',${i})">${esc(side === "L" ? lt(it) : rt(it))}</button>`;
+    return `<button class="dk-tile ${done ? "ok" : bad ? "bad" : sel ? "sel" : ""}" ${done ? "disabled" : ""} onclick="DK.mt('${side}',${i})">${side === "L" ? lt(it) : rt(it)}</button>`;
   };
   return `<div class="dk-sm" style="margin-bottom:8px;">Pilih satu di kiri, lalu pasangannya di kanan.</div><div class="dk-mt"><div>${R.L.map((it, i) => `<div style="margin-bottom:8px;">${tile(it, "L", i)}</div>`).join("")}</div><div>${R.R.map((it, i) => `<div style="margin-bottom:8px;">${tile(it, "R", i)}</div>`).join("")}</div></div>
     ${R.done.size === R.L.length ? `<button class="btn" style="width:100%;margin-top:8px;" onclick="DK.lanjut()">${S.i + R.L.length >= S.q.length ? "Selesai ›" : "Ronde berikutnya ›"}</button>` : ""}`;
@@ -340,6 +382,38 @@ function viewSelesai() {
 
 /* ---------- Aksi ---------- */
 const val = id => (document.getElementById(id) || {}).value || "";
+let swiped = false, drag = null, winOn = false;
+const THRESH = 90;
+function fit() {   // kata panjang / banyak furigana dikecilkan sampai muat di kartu
+  const card = document.getElementById("flash-card"), f = card && card.querySelector(".front.f-jp"); if (!f) return;
+  f.style.fontSize = ""; let fs = parseFloat(getComputedStyle(f).fontSize) || 72, n = 0;
+  const over = () => f.scrollWidth > card.clientWidth - 40 || card.scrollHeight > card.clientHeight + 1;
+  while (n++ < 30 && fs > 18 && over()) { fs *= 0.88; f.style.fontSize = fs + "px"; }
+}
+function bindSwipe() {
+  const card = document.getElementById("flash-card"); if (!card) return;
+  const bl = () => document.getElementById("badge-lupa"), br = () => document.getElementById("badge-ingat");
+  const down = (x, y) => { drag = { x, y, dx: 0, card }; swiped = false; card.classList.add("swiping"); };
+  card.addEventListener("touchstart", e => down(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+  card.addEventListener("touchmove", e => move(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+  card.addEventListener("touchend", up); card.addEventListener("touchcancel", cancel);
+  card.addEventListener("mousedown", e => down(e.clientX, e.clientY));
+  if (!winOn) { winOn = true; window.addEventListener("mousemove", e => { if (drag) move(e.clientX, e.clientY); }); window.addEventListener("mouseup", () => { if (drag) up(); }); }
+  function move(x, y) {
+    if (!drag) return; const dx = x - drag.x, dy = y - drag.y; drag.dx = dx;
+    if (Math.abs(dy) > Math.abs(dx) * 1.2 && Math.abs(dy) > 20) return cancel();
+    if (Math.abs(dx) > 8) swiped = true;
+    drag.card.style.transform = `translateX(${dx}px) rotate(${dx / 20}deg)`;
+    if (bl()) bl().style.opacity = dx < 0 ? Math.min(1, -dx / THRESH) : 0; if (br()) br().style.opacity = dx > 0 ? Math.min(1, dx / THRESH) : 0;
+  }
+  function up() {
+    const d = drag; if (!d) return; drag = null; d.card.classList.remove("swiping");
+    if (d.dx <= -THRESH) { d.card.classList.add("leave-left"); setTimeout(() => DK.rate(0), 180); }
+    else if (d.dx >= THRESH) { d.card.classList.add("leave-right"); setTimeout(() => DK.rate(2), 180); }
+    else cancel(d.card);
+  }
+  function cancel(c) { const cd = (c && c.style ? c : drag && drag.card) || card; drag = null; cd.classList.remove("swiping"); cd.style.transform = ""; if (bl()) bl().style.opacity = 0; if (br()) br().style.opacity = 0; }
+}
 let keyOn = false;
 function installKeys() {
   if (keyOn) return; keyOn = true;
@@ -348,8 +422,10 @@ function installKeys() {
     const t = e.target && e.target.tagName; if (t === "INPUT" || t === "TEXTAREA" || t === "SELECT") return;
     const S = V.S;
     if (S.mode === "flash" && S.i < S.q.length) {
-      if (e.key === " " || e.key === "Enter") { e.preventDefault(); if (!S.flip) DK.flip(); }
-      else if (S.flip && /^[1-4]$/.test(e.key)) DK.rate(+e.key - 1);
+      if (e.key === " " || e.key === "Enter") { e.preventDefault(); DK.tap({}); }
+      else if (e.key === "ArrowLeft") DK.rate(0);
+      else if (e.key === "ArrowRight") DK.rate(2);
+      else if (e.key === "Backspace" || e.key === "ArrowUp") { e.preventDefault(); DK.undo(); }
     } else if (S.mode === "pg" && S.i < S.q.length) {
       if (S.pick < 0 && /^[1-4]$/.test(e.key) && +e.key <= S.q[S.i].opsi.length) DK.pilih(+e.key - 1);
       else if (S.pick >= 0 && (e.key === " " || e.key === "Enter")) { e.preventDefault(); DK.lanjut(); }
@@ -391,7 +467,7 @@ export async function renderDeckTab(fb, ctx) {
       else { if (d.cards.some(x => keyOf(x) === keyOf(c))) return toast("Kartu dobel, dilewati"); d.cards.push(c); }
       try { await simpan(); V.edit = null; paint(); toast(ed !== null ? "✓ Kartu diperbarui" : "✓ Kartu ditambah"); setTimeout(() => { const k = document.getElementById("dk-k"); if (k) k.focus(); }, 30); } catch (e) { toast("❌ " + (e.message || e)); }
     },
-    async hapusKartu(i) { const c = V.deck.cards[i]; if (!confirm(`Hapus kartu "${c.k}"?`)) return; V.deck.cards.splice(i, 1); try { await simpan(); paint(); } catch (e) { toast("❌ " + (e.message || e)); } },
+    async hapusKartu(i) { const c = V.deck.cards[i]; if (!confirm(`Hapus kartu "${pk(c)}"?`)) return; V.deck.cards.splice(i, 1); try { await simpan(); paint(); } catch (e) { toast("❌ " + (e.message || e)); } },
     async bulk() {
       const lines = val("dk-bulk").split(/\r?\n/).map(s => s.trim()).filter(Boolean); if (!lines.length) return toast("Kosong");
       const aoa = lines.map(l => (l.includes("\t") ? l.split("\t") : l.includes("|") ? l.split("|") : l.split(";")).map(s => s.trim()));
@@ -436,12 +512,28 @@ export async function renderDeckTab(fb, ctx) {
     keluar() { simpanSesi(); V.S = null; V.view = "deck"; paint(); },
     flip() { V.S.flip = true; paint(); },
     rate(q) {
-      const S = V.S, it = S.q[S.i], c = it.c, r = sched(c, q);
+      const S = V.S, it = S.q[S.i]; if (!it || S.lock) return; const c = it.c;
+      const h = { it, i: S.i, prev: { iv: c.iv, ez: c.ez, r: c.r, l: c.l, due: c.due, last: c.last }, salahBaru: false, ins: -1, b: S.b, s: S.s, dirty: S.dirty };
+      const r = sched(c, q);
       c.iv = r.iv; c.ez = r.ez; c.last = Date.now(); c.due = q === 0 ? Date.now() : Date.now() + r.iv * DAY;
-      if (q === 0) { c.l = (c.l || 0) + 1; if (!S.salah.includes(it.c)) { S.salah.push(it.c); S.s++; } S.q.splice(Math.min(S.i + 4, S.q.length), 0, it); }
-      else { c.r = (c.r || 0) + 1; if (!S.salah.includes(it.c)) S.b++; }
+      if (q === 0) { c.l = (c.l || 0) + 1; if (!S.salah.includes(c)) { S.salah.push(c); S.s++; h.salahBaru = true; } h.ins = Math.min(S.i + 4, S.q.length); S.q.splice(h.ins, 0, it); }
+      else { c.r = (c.r || 0) + 1; if (!S.salah.includes(c)) S.b++; }
+      (S.hist = S.hist || []).push(h);
       S.dirty++; selesaiItem(); if (S.dirty >= 10 || S.i >= S.q.length) simpanSesi(); paint();
     },
+    undo() {
+      const S = V.S, h = S.hist && S.hist.pop(); if (!h) return;
+      const c = h.it.c; for (const k of Object.keys(h.prev)) { if (h.prev[k] === undefined) delete c[k]; else c[k] = h.prev[k]; }
+      if (h.ins >= 0) S.q.splice(h.ins, 1);
+      if (h.salahBaru) S.salah = S.salah.filter(x => x !== c);
+      S.b = h.b; S.s = h.s; S.i = h.i; S.flip = false; S.dirty = h.dirty + 1; paint();
+    },
+    tap(ev) {
+      if (swiped) { swiped = false; return; }
+      const S = V.S, card = document.getElementById("flash-card"); if (!card) return;
+      S.flip = !S.flip; card.classList.toggle("revealed", S.flip); fit();
+    },
+    furi() { try { localStorage.setItem("shirose-haf-furi", furiOn() ? "0" : "1"); } catch (e) {} applyFuri(); const b = document.getElementById("dk-furi-btn"); if (b) { b.textContent = furiOn() ? "ふりがな ON" : "ふりがな OFF"; b.setAttribute("aria-pressed", String(furiOn())); } fit(); },
     pilih(i) { const S = V.S, it = S.q[S.i]; if (S.pick >= 0) return; S.pick = i; if (i === it.ans) S.b++; else { S.s++; S.salah.push(it.c); } paint(); },
     cek() {
       const S = V.S, it = S.q[S.i]; if (S.cek) return;
@@ -466,13 +558,13 @@ export async function renderDeckTab(fb, ctx) {
     },
     ulangSalah() {
       const S = V.S, set = new Set(S.salah), items = S.q.filter((it, i, a) => set.has(it.c) && a.findIndex(x => x.c === it.c) === i);
-      V.S = { ...S, q: rnd(items), i: 0, flip: false, pick: -1, cek: null, b: 0, s: 0, salah: [], round: null, dirty: S.dirty };
+      V.S = { ...S, hist: [], q: rnd(items), i: 0, flip: false, pick: -1, cek: null, b: 0, s: 0, salah: [], round: null, dirty: S.dirty };
       if (V.S.mode === "pg") V.S.q.forEach(it => buatOpsi(it, V.deck.cards));
       if (V.S.mode === "cocok") mulaiRonde();
       paint();
     },
-    suara() { try { const S = V.S, it = S.q[S.i], u = new SpeechSynthesisUtterance(it.c.y || it.c.k); u.lang = "ja-JP"; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch (e) { toast("Suara tidak didukung browser ini"); } },
+    suara() { try { const S = V.S, it = S.q[S.i], u = new SpeechSynthesisUtterance(it.c.y || pk(it.c)); u.lang = "ja-JP"; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch (e) { toast("Suara tidak didukung browser ini"); } },
   };
-  installKeys();
+  installKeys(); applyFuri();
   return `<div id="dk-root">${view()}</div>`;
 }
