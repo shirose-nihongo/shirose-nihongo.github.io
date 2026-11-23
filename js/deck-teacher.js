@@ -279,10 +279,10 @@ function viewDeck() {
   const q = V.q.trim().toLowerCase();
   const all = d.cards.map((c, i) => ({ c, i })).filter(x => !q || [x.c.k, x.c.y, x.c.a, x.c.c, x.c.t, x.c.n].join(" ").toLowerCase().includes(q));
   const per = 50, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(V.page, pages - 1);
-  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr style="${c.x ? "opacity:.45;" : ""}"><td><input type="checkbox" title="Ikut dihafalkan" ${c.x ? "" : "checked"} onchange="DK.aktif(${i},this.checked)"></td>
+  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr onclick="DK.aktif(${i},${c.x ? "true" : "false"})" style="cursor:pointer;${c.x ? "opacity:.5;" : "box-shadow:inset 5px 0 0 var(--green);"}"><td><input type="checkbox" style="width:26px;height:26px;pointer-events:none;accent-color:var(--green);" ${c.x ? "" : "checked"} tabindex="-1"></td>
       <td style="font-family:var(--font-jp);font-size:16px;">${esc(pk(c))}</td><td>${esc(c.y)}</td><td>${esc(c.a)}</td>
       <td class="dk-sm">${esc(c.c)}</td><td class="dk-sm">${esc(c.t)}</td>
-      <td style="white-space:nowrap;"><button class="btn sm ghost" onclick="DK.edit(${i})">✏️</button> <button class="btn sm ghost" onclick="DK.hapusKartu(${i})">🗑</button></td></tr>`).join("");
+      <td style="white-space:nowrap;" onclick="event.stopPropagation()"><button class="btn sm ghost" onclick="DK.edit(${i})">✏️</button> <button class="btn sm ghost" onclick="DK.hapusKartu(${i})">🗑</button></td></tr>`).join("");
   const ed = V.edit;
   const cEd = ed !== null && ed >= 0 ? d.cards[ed] : null;
   const fv = f => esc(cEd ? cEd[f] || "" : "");
@@ -321,7 +321,7 @@ function viewDeck() {
     <div class="panel"><h2>📇 Kartu <small style="font-size:12px;color:var(--gray);font-weight:400;">${all.length}${q ? "/" + h.n : ""}</small></h2>
       <div class="dk-row" style="margin-bottom:10px;"><input placeholder="Cari kata / arti / tag…" value="${esc(V.q)}" onchange="DK.cari(this.value)" style="max-width:260px;">
         <button class="btn sm ghost" onclick="DK.pilihSemua(true)">☑ Centang semua${q ? " hasil" : ""}</button><button class="btn sm ghost" onclick="DK.pilihSemua(false)">☐ Kosongkan${q ? " hasil" : ""}</button>${q ? `<button class="btn sm ghost" onclick="DK.hanyaTampil()" title="Hanya kartu hasil pencarian ini yang dihafalkan">🎯 Hafalkan hanya hasil ini</button>` : ""}</div>
-      <div class="dk-sm" style="margin-bottom:8px;">Centang = ikut dihafalkan (${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>
+      <div class="dk-sm" style="margin-bottom:8px;"><b>Ketuk kartu</b> = centang / batal centang (hijau = ikut dihafalkan, ${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>
       <div class="table-wrap"><table><thead><tr><th title="Ikut dihafalkan?">Hafal?</th><th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="7" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
       ${pages > 1 ? `<div class="dk-row" style="margin-top:10px;"><button class="btn sm ghost" ${pg ? "" : "disabled"} onclick="DK.page(${pg - 1})">‹</button><span class="dk-sm">${pg + 1} / ${pages}</span><button class="btn sm ghost" ${pg < pages - 1 ? "" : "disabled"} onclick="DK.page(${pg + 1})">›</button></div>` : ""}</div>`;
 }
