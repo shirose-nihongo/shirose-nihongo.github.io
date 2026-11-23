@@ -36,7 +36,7 @@ const ST = {
 /* ---------- State ---------- */
 let IDX = [], LOKALN = 0;
 const V = { view: "list", id: "", deck: null, q: "", page: 0, edit: null, stage: null, busy: false, S: null,
-  cfg: { mode: "flash", arah: "jp", sumber: "due", jumlah: 20 } };
+  cfg: { mode: "flash", arah: "jp", sumber: "due", jumlah: 20, urut: "acak" }, sort: "asli" };
 const MODES = { flash: "🃏 Flashcard (SRS)", pg: "🔘 Pilihan ganda", cocok: "🧩 Cocokkan", ketik: "⌨️ Ketik" };
 const toast = m => CTX.toast(m);
 /* Furigana: "漢字[かんじ]" -> ruby; atau otomatis dari kolom Kana bila Kata berisi kanji. Pilihan ON/OFF dipakai bersama hafalan siswa. */
@@ -144,7 +144,7 @@ function mulai() {
   const d = V.deck, cfg = V.cfg;
   const sumber = cfg.mode === "flash" ? cfg.sumber : (cfg.sumber === "due" ? "semua" : cfg.sumber);
   let pool = sumberKartu(d, sumber);
-  if (cfg.mode !== "flash" || sumber !== "due") pool = rnd(pool);
+  if (cfg.urut !== "urut") pool = rnd(pool);   // "urut" = sesuai urutan deck (mode Jadwal: yang jatuh tempo dulu)
   if (cfg.jumlah > 0) pool = pool.slice(0, cfg.jumlah);
   if (!pool.length) return toast(hitung(d).on ? "Tidak ada kartu untuk sumber ini" : "Semua kartu dimatikan. Centang kartu yang mau dihafalkan dulu.");
   if (cfg.mode === "pg" && d.cards.length < 2) return toast("Pilihan ganda butuh minimal 2 kartu di deck");
@@ -278,6 +278,8 @@ function viewDeck() {
   const d = V.deck, h = hitung(d), cfg = V.cfg;
   const q = V.q.trim().toLowerCase();
   const all = d.cards.map((c, i) => ({ c, i })).filter(x => !q || [x.c.k, x.c.y, x.c.a, x.c.c, x.c.t, x.c.n].join(" ").toLowerCase().includes(q));
+  const cmp = { kana: (a, b) => String(a.c.y || a.c.k).localeCompare(String(b.c.y || b.c.k), "ja"), arti: (a, b) => String(a.c.a).localeCompare(String(b.c.a), "id"), tag: (a, b) => String(a.c.t).localeCompare(String(b.c.t), "id") || a.i - b.i }[V.sort];
+  if (cmp) all.sort(cmp);
   const per = 50, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(V.page, pages - 1);
   const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr onclick="DK.aktif(${i},${c.x ? "true" : "false"})" style="cursor:pointer;${c.x ? "opacity:.5;" : "box-shadow:inset 5px 0 0 var(--green);"}"><td><input type="checkbox" style="width:26px;height:26px;pointer-events:none;accent-color:var(--green);" ${c.x ? "" : "checked"} tabindex="-1"></td>
       <td style="font-family:var(--font-jp);font-size:16px;">${esc(pk(c))}</td><td>${esc(c.y)}</td><td>${esc(c.a)}</td>
@@ -302,6 +304,7 @@ function viewDeck() {
       <div class="dk-row" style="margin-bottom:8px;">${Object.entries(MODES).map(([k, t]) => chip(cfg.mode === k, `DK.cfg('mode','${k}')`, t)).join("")}</div>
       <div class="dk-row" style="margin-bottom:8px;"><span class="dk-sm">Arah:</span>${[["jp", "Jepang → Arti"], ["id", "Arti → Jepang"], ["acak", "Acak"]].map(([k, t]) => chip(cfg.arah === k, `DK.cfg('arah','${k}')`, t)).join("")}</div>
       <div class="dk-row" style="margin-bottom:8px;"><span class="dk-sm">Sumber:</span>${sumberTombol}</div>
+      <div class="dk-row" style="margin-bottom:8px;"><span class="dk-sm">Urutan:</span>${[["acak", "🔀 Acak"], ["urut", "🔢 Urut"]].map(([k, t]) => chip(cfg.urut === k, `DK.cfg('urut','${k}')`, t)).join("")}</div>
       <div class="dk-row" style="margin-bottom:12px;"><span class="dk-sm">Jumlah:</span>${[10, 20, 50, 0].map(n => chip(cfg.jumlah === n, `DK.cfg('jumlah',${n})`, n || "Semua")).join("")}</div>
       <button class="btn" onclick="DK.mulai()" ${h.n ? "" : "disabled"}>▶ Mulai</button>
       ${cfg.mode === "flash" ? `<span class="dk-sm" style="margin-left:8px;">Geser kartu / ← Lupa · → Ingat · Spasi balik · Backspace kembali</span>` : ""}</div>
@@ -320,6 +323,7 @@ function viewDeck() {
         <button class="btn" style="margin-top:8px;" onclick="DK.bulk()">➕ Tambahkan semua</button></details>`}</div>
     <div class="panel"><h2>📇 Kartu <small style="font-size:12px;color:var(--gray);font-weight:400;">${all.length}${q ? "/" + h.n : ""}</small></h2>
       <div class="dk-row" style="margin-bottom:10px;"><input placeholder="Cari kata / arti / tag…" value="${esc(V.q)}" onchange="DK.cari(this.value)" style="max-width:260px;">
+        <select onchange="DK.urutTabel(this.value)" title="Urutkan daftar">${[["asli", "🔢 Urutan masuk"], ["kana", "あ→ん Kana"], ["arti", "A→Z Arti"], ["tag", "🏷 Tag"]].map(([k, t]) => `<option value="${k}" ${V.sort === k ? "selected" : ""}>${t}</option>`).join("")}</select>
         <button class="btn sm ghost" onclick="DK.pilihSemua(true)">☑ Centang semua${q ? " hasil" : ""}</button><button class="btn sm ghost" onclick="DK.pilihSemua(false)">☐ Kosongkan${q ? " hasil" : ""}</button>${q ? `<button class="btn sm ghost" onclick="DK.hanyaTampil()" title="Hanya kartu hasil pencarian ini yang dihafalkan">🎯 Hafalkan hanya hasil ini</button>` : ""}</div>
       <div class="dk-sm" style="margin-bottom:8px;"><b>Ketuk kartu</b> = centang / batal centang (hijau = ikut dihafalkan, ${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>
       <div class="table-wrap"><table><thead><tr><th title="Ikut dihafalkan?">Hafal?</th><th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="7" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
@@ -459,6 +463,7 @@ export async function renderDeckTab(fb, ctx) {
       if (!confirm(`Hapus deck "${V.deck.nama}" beserta ${V.deck.cards.length} kartu? Tidak bisa dibatalkan.`)) return;
       try { await ST.del(V.deck.id); IDX = IDX.filter(x => x.id !== V.deck.id); await ST.setIndex(IDX); toast("🗑 Deck dihapus"); DK.list(); } catch (e) { toast("❌ " + (e.message || e)); }
     },
+    urutTabel(v) { V.sort = v; V.page = 0; paint(); },
     cari(v) { V.q = v; V.page = 0; paint(); }, page(n) { V.page = n; paint(); },
     cfg(k, v) { V.cfg[k] = v; if (k === "mode" && v !== "flash" && V.cfg.sumber === "due") V.cfg.sumber = "semua"; if (k === "mode" && v === "flash") V.cfg.sumber = "due"; paint(); },
     mulai, template: buatTemplate, ekspor,
