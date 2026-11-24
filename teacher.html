@@ -2372,6 +2372,7 @@ window.editKelas = (id) => {
     <h2>${id?"Edit Kelas":"Kelas Baru"}</h2>
     <div class="form-row"><label>Nama Kelas</label><input id="kl-nama" value="${k.nama||""}" style="flex:1;"/></div>
     <div class="form-row"><label>Deskripsi</label><textarea id="kl-desc" rows="3" style="flex:1;">${k.deskripsi||""}</textarea></div>
+    <div class="form-row"><label>Akses Hafalan</label><select id="kl-haf" style="flex:1;"><option value="1" ${k.aksesHafalan===false?"":"selected"}>Buka — siswa kelas ini boleh pakai menu Hafalan</option><option value="0" ${k.aksesHafalan===false?"selected":""}>Tutup — menu Hafalan terkunci untuk kelas ini</option></select></div>
     <div style="display:flex; gap:8px; margin-top:16px;">
       <button class="btn" onclick="simpanKelas('${id||""}')">Simpan</button>
       <button class="btn ghost" onclick="closeModal()">Batal</button>
@@ -2382,6 +2383,7 @@ window.simpanKelas = async (id) => {
   const data = {
     nama: document.getElementById("kl-nama").value.trim(),
     deskripsi: document.getElementById("kl-desc").value,
+    aksesHafalan: document.getElementById("kl-haf").value !== "0",
   };
   if (!data.nama) return toast("Isi nama");
   await FB.simpanKelas(data, id || null);
