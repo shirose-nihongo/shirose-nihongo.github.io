@@ -1638,6 +1638,20 @@ export async function setAksesSsw(uid, on) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   await updateDoc(doc(db, "siswa", uid), { aksesSsw: !!on });
 }
+/* siswa/{uid}.aksesHafalan (boolean; kosong = ikut kelas) dan kelas/{id}.aksesHafalan (boolean; kosong = terbuka)
+   — menu HAFALAN/Anki siswa. Hanya guru yang boleh mengubah (rules). */
+export async function setAksesHafalan(uid, on) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await updateDoc(doc(db, "siswa", uid), { aksesHafalan: !!on });
+}
+export async function resetAksesHafalan(uid) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await updateDoc(doc(db, "siswa", uid), { aksesHafalan: deleteField() });
+}
+export async function setKelasAksesHafalan(kelasId, on) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await updateDoc(doc(db, "kelas", kelasId), { aksesHafalan: !!on });
+}
 /* siswa/{uid}.aksesJft (boolean; kosong = diizinkan) — hanya guru yang boleh mengubah (rules). */
 export async function setAksesJft(uid, on) {
   if (!userIsGuru()) throw new Error("Hanya guru");
@@ -1868,6 +1882,67 @@ export async function bankJlptSetIndex(list) {
 export async function bankJlptDelete(id) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   await deleteDoc(doc(db, "guru_bank_jlpt", id));
+}
+
+/* ========== DECK HAFALAN GURU (ala Anki) ==========
+   guru_deck/_index : { list:[{id,nama,n,updated}], updated }
+   guru_deck/{id}   : { nama, cards[], updated }   (cards: {k,y,a,c,ca,n,t, + SRS: iv,ez,r,l,due,last})
+   Aturan Firestore: read/write hanya isGuru(). */
+export async function deckIndex() {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const d = await getDoc(doc(db, "guru_deck", "_index"));
+  return d.exists() ? (d.data().list || []) : [];
+}
+export async function deckGet(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const d = await getDoc(doc(db, "guru_deck", id));
+  return d.exists() ? { id, ...d.data() } : null;
+}
+export async function deckPut(deck) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "guru_deck", deck.id), { nama: deck.nama, cards: deck.cards, updated: serverTimestamp() });
+}
+export async function deckSetIndex(list) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "guru_deck", "_index"), { list, updated: serverTimestamp() });
+}
+export async function deckDelete(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await deleteDoc(doc(db, "guru_deck", id));
+}
+
+/* ========== DECK HAFALAN: TERBIT KE KELAS ==========
+   deck_kelas/_index : { list:[{id,nama,n,kelas:[nama kelas],semua,aktif}], updated }  (dibaca semua siswa terdaftar; hanya metadata)
+   deck_kelas/{id}   : { nama, cards[{id,k,y,a,c,ca,n,t}], kelas[], semua, aktif, updated }  (siswa hanya boleh baca bila kelasnya dipilih / semua=true)
+   siswa/{uid}/deck_progres/{id} : { m:{ [cardId]:{iv,ez,r,l,due,last} }, t }   (progres SRS siswa; subkoleksi siswa sudah boleh tulis oleh pemiliknya) */
+export async function deckPubIndex() {
+  const d = await getDoc(doc(db, "deck_kelas", "_index"));
+  return d.exists() ? (d.data().list || []) : [];
+}
+export async function deckPubGet(id) {
+  const d = await getDoc(doc(db, "deck_kelas", id));
+  return d.exists() ? { id, ...d.data() } : null;
+}
+export async function deckPubPut(id, data) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "deck_kelas", id), { ...data, updated: serverTimestamp() });
+}
+export async function deckPubSetIndex(list) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await setDoc(doc(db, "deck_kelas", "_index"), { list, updated: serverTimestamp() });
+}
+export async function deckPubDelete(id) {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  await deleteDoc(doc(db, "deck_kelas", id));
+}
+export async function deckProgresGet(id) {
+  if (!currentUser) return {};
+  const d = await getDoc(doc(db, "siswa", currentUser.uid, "deck_progres", id));
+  return d.exists() ? (d.data().m || {}) : {};
+}
+export async function deckProgresSet(id, m) {
+  if (!currentUser) throw new Error("Belum masuk");
+  await setDoc(doc(db, "siswa", currentUser.uid, "deck_progres", id), { m, t: Date.now() });
 }
 
 export { db, auth };
