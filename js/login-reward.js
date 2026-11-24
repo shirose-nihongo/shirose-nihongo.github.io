@@ -109,7 +109,12 @@ const LR = window.LR = {
   async ambil(id) {
     const rw = await muat(); if (!rw.pending || !rw.pending.opsi.includes(id)) return;
     const g = (FB.getGachaState ? await FB.getGachaState() : null) || { sinceEpic: 0, sinceLegend: 0, inv: [] };
-    await FB.saveGachaState({ sinceEpic: g.sinceEpic || 0, sinceLegend: g.sinceLegend || 0, inv: Array.from(new Set([...(g.inv || []), id])) }, KIND[id] === "shop" ? [id] : []);
+    try {
+      await FB.saveGachaState({ sinceEpic: g.sinceEpic || 0, sinceLegend: g.sinceLegend || 0, inv: Array.from(new Set([...(g.inv || []), id])) }, KIND[id] === "shop" ? [id] : []);
+    } catch (e) { console.warn("simpan hadiah peti:", e && e.message); window.toast && window.toast("⚠️ Hadiah belum tersimpan, coba pilih lagi"); return; }   // peti tetap terbuka, tidak hangus
+    // Pastikan benar-benar masuk akun siswa (bukan hanya perangkat ini); gagal → peringatan, barang tetap tersimpan di perangkat
+    let diAkun = true; try { diAkun = FB.pastikanHadiahDiAkun ? await FB.pastikanHadiahDiAkun([id]) : true; } catch (e) { diAkun = false; }
+    if (!diAkun) { try { window.toast && window.toast("⚠️ Hadiah tersimpan di perangkat ini, belum tersinkron ke akun. Buka lagi saat online."); } catch (e) {} }
     await FB.saveLoginReward({ ...rw, pending: null });
     try { if (window.SHIROSE_THEME && KIND[id] === "theme") { const g2 = await FB.getGachaState(); window.SHIROSE_THEME.setOwned(g2.inv || []); } } catch (e) {}
     const r = rarOf(id), c = RAR[r][1];

@@ -27,7 +27,7 @@ import {
 import {
   getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc,
   collection, getDocs, onSnapshot, query, orderBy, limit, addDoc,
-  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction, increment
+  where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction, increment, arrayUnion
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -679,6 +679,28 @@ export async function saveGachaState(state, shopIds) {
     currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), ...shopIds]));
     try { await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.inventory": currentSiswaDoc.karakter.inventory, "karakter.gachaInv": o.inv }); } catch (e) { console.warn("simpan hadiah gacha ke akun gagal (tersimpan di perangkat):", e.message); }
   }
+}
+
+/* Hadiah peti login: pastikan barang BENAR-BENAR masuk inventaris akun (Firestore), bukan hanya perangkat.
+ * Memakai arrayUnion (tidak menimpa barang lain). Coba updateDoc dulu, lalu setDoc merge bila dokumen belum ada.
+ * Mengembalikan true bila tersimpan di akun; false bila gagal (barang tetap aman di perangkat). */
+export async function pastikanHadiahDiAkun(ids) {
+  if (!currentUser) return false;
+  ids = (Array.isArray(ids) ? ids : [ids]).filter(x => typeof x === "string" && x);
+  if (!ids.length) return true;
+  const ref = doc(db, "siswa", currentUser.uid), gi = Array.from(new Set([...(_gLocal().inv || []), ...ids]));
+  let ok = false;
+  try { await updateDoc(ref, { "karakter.inventory": arrayUnion(...ids), "karakter.gachaInv": arrayUnion(...gi) }); ok = true; }
+  catch (e1) {
+    try { await setDoc(ref, { karakter: { inventory: arrayUnion(...ids), gachaInv: arrayUnion(...gi) } }, { merge: true }); ok = true; }
+    catch (e2) { console.warn("hadiah peti ke akun gagal:", e2.message); }
+  }
+  if (ok && currentSiswaDoc) {
+    currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
+    currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), ...ids]));
+    currentSiswaDoc.karakter.gachaInv = Array.from(new Set([...(currentSiswaDoc.karakter.gachaInv || []), ...gi]));
+  }
+  return ok;
 }
 
 /* ===== SAVE GACHA (file) — simpan di perangkat + Download Save / Muat Save. Yang dipakai selalu save TERBARU (cap waktu `t`). ===== */

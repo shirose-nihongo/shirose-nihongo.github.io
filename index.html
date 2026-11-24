@@ -1567,7 +1567,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261122b";
+import * as FB from "./js/firebase-sync.js?v=20261124a";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261119k";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
@@ -1582,7 +1582,7 @@ import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js
 import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehHafalan } from "./js/deck-siswa.js?v=20261124h";
 window.bukaHafalan = async () => { if (await bolehHafalan()) route("anki"); else toast("🔒 Menu Hafalan dikunci guru. Hubungi guru untuk membuka akses."); };
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
-import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261119o";
+import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261124a";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
