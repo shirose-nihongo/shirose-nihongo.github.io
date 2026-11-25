@@ -31,6 +31,15 @@ const MAKS = { kosakata: 30, kanji: 20, bunpo: 10 };
 const KAT = ["kosakata", "kanji", "bunpo"];
 const KAT_NAMA = { kosakata: "Kosakata", kanji: "Kanji", bunpo: "Bunpo", dokkai: "Dokkai" };
 const BLOK = 6;
+// Paket Full Exam yang disisihkan untuk hari simulasi (sama dengan CADANGAN di tools/silabus_dokkai.py):
+// bacaannya tidak dipakai di ujian harian, jadi simulasi berisi soal yang belum pernah dilihat.
+const CADANGAN = {
+  n5: [17, 18, 19, 20].map(i => `n5-full-${i}`),
+  n4: [14, 15, 16, 17, 18, 19, 20].map(i => `n4-full-${i}`),
+  n3: [14, 15, 16, 17, 18, 19, 20].map(i => `n3-full-${i}`),
+  n2: [14, 15, 16, 17, 18, 19, 20].map(i => `n2-full-${i}`),
+  n1: [16, 17, 18, 19, 20, 21, 22].map(i => `n1-full-${i}`),
+};
 const LULUS = 0.8;
 const HARI_MS = 86400000;
 
@@ -310,12 +319,24 @@ async function susunUjian(lv, R, p, idx) {
     }
     qs.push(...got);
   }
-  // Dokkai berurutan.
-  const dk = await dat(`./data/silabus/${lv}-dokkai.json`) || [];
-  const flat = dk.flatMap(u => u.qs.map(q => ({ ...q, cat: "dokkai", tipe_jp: "読解", unit: u })));
+  // Dokkai: TIDAK PERNAH BERULANG. Ambil soal paling awal (pendek → panjang) yang id-nya belum pernah dipakai siswa.
+  // Ulang ujian di hari yang sama tidak mengambil dokkai baru; nilai dokkai percobaan pertama dibawa.
   const nD = (h.soal && h.soal.dokkai) || 0;
-  for (let i = 0; i < nD && flat.length; i++) qs.push(flat[((p.dokkaiPos || 0) + i) % flat.length]);
-  return { qs, nDokkai: Math.min(nD, flat.length) };
+  const lalu = (p.dokkaiHari || {})[idx];
+  if (lalu) return { qs, nDokkai: 0, dokkaiLalu: lalu };
+  const dk = await dat(`./data/silabus/${lv}-dokkai.json`) || [];
+  const dipakai = new Set(p.dokkaiPakai || []);
+  const ambil = [];
+  for (const [ui, u] of dk.entries()) {
+    for (const [qi, q] of u.qs.entries()) {
+      if (ambil.length >= nD) break;
+      const id = q.id || `${lv}-${ui}-${qi}`;   // JFT: belum punya id tetap
+      if (dipakai.has(id)) continue;
+      ambil.push({ ...q, item: null, dkId: id, cat: "dokkai", tipe_jp: "読解", unit: u });
+    }
+    if (ambil.length >= nD) break;
+  }
+  return { qs: qs.concat(ambil), nDokkai: ambil.length };
 }
 
 /* ---------- views ---------- */
@@ -489,8 +510,12 @@ async function viewBeranda(lv, p) {
       ? `<button class="btn gold sh-mulai" onclick="route('sylabus-ujian')">📝 ${coba ? "Ulangi ujian hari ini (soal baru)" : "Mulai ujian hari ini"}</button>`
       : `<button class="btn sh-mulai" disabled>🔒 Ujian terbuka setelah semua tes hafalan ≥ 80%</button>`;
   } else if (h.jenis === "simulasi") {
-    isi = `<p>Hari ini ujian penuh format asli ${lv === "jft" ? "JFT-Basic" : esc(NAMA[lv])}. Semua materi sudah kamu pelajari, jadi kerjakan seperti ujian sungguhan: sekali duduk, tanpa membuka catatan.</p>
-      <div class="sh-row"><button class="btn gold" onclick="route('${lv === "jft" ? "jft-tryout" : `jlpt/${lv}`}')">🎯 Buka ujian penuh</button></div>
+    const ke = R.hari.slice(0, idx).filter(x => x.jenis === "simulasi").length;
+    const paket = lv === "jft" ? null : (CADANGAN[lv] || [])[ke];
+    const tujuan = lv === "jft" ? "jft-tryout" : (paket ? `jlpt/${lv}/full/${paket}` : `jlpt/${lv}`);
+    isi = `<p>Hari ini ujian penuh format asli ${lv === "jft" ? "JFT-Basic" : esc(NAMA[lv])}${paket ? ` — <b>Paket ${+paket.split("-").pop()}</b>` : ""}. Semua materi sudah kamu pelajari, jadi kerjakan seperti ujian sungguhan: sekali duduk, tanpa membuka catatan.</p>
+      ${paket ? `<p class="sh-muted small">Paket ini sengaja tidak dipakai di ujian harian, jadi bacaannya belum pernah kamu lihat. Kerjakan paket ini, bukan paket lain.</p>` : ""}
+      <div class="sh-row"><button class="btn gold" onclick="route('${tujuan}')">🎯 Buka ujian penuh</button></div>
       <p class="sh-muted small">Setelah selesai, kembali ke sini dan tandai hari ini selesai.</p>`;
     tombol = `<button class="btn" onclick="SH.tandaiSimulasi('${lv}')">✓ Saya sudah menyelesaikan simulasi</button>`;
   } else {
@@ -631,7 +656,7 @@ function htmlHasil() {
   const { benar, total, lulus, perKat } = U.hasil;
   const pct = persen(benar, total);
   const perlu = Math.ceil(total * LULUS);
-  const rows = Object.entries(perKat).map(([k, v]) => `<tr><td>${KAT_NAMA[k]}</td><td>${v.b}/${v.t}</td></tr>`).join("");
+  const rows = Object.entries(perKat).map(([k, v]) => `<tr><td>${KAT_NAMA[k]}</td><td>${v.b}/${v.t}${v.lalu ? ' <small class="sh-muted">(dari percobaan pertama)</small>' : ""}</td></tr>`).join("");
   let pesan, tombol;
   if (U.mode === "hafal") {
     pesan = lulus
@@ -718,9 +743,9 @@ async function mulaiUjian() {
   if (h.jenis === "belajar" && !hafalTuntas(h, p, p.pos)) { toast("Selesaikan dulu semua tes hafalan (≥ 80%)."); return tungguRoute(); }
   if (U && U.reviewMode && U.mode === "ujian" && U.lv === lv) return `<div id="sh-root">${htmlUjian()}</div>`;
   if (!U || U.mode !== "ujian" || U.lv !== lv || U.idx !== p.pos || U.selesai) {
-    const { qs, nDokkai } = await susunUjian(lv, R, p, p.pos);
+    const { qs, nDokkai, dokkaiLalu } = await susunUjian(lv, R, p, p.pos);
     if (!qs.length) return `<div class="panel sh"><div class="empty">Soal untuk hari ini belum tersedia.</div><button class="btn" onclick="SH.lewati('${lv}')">Lewati hari ini</button></div>`;
-    U = { mode: "ujian", lv, idx: p.pos, jenis: h.jenis, qs, pos: 0, jawab: [], lihat: [], mulai: Date.now(), menit: h.menit, nDokkai };
+    U = { mode: "ujian", lv, idx: p.pos, jenis: h.jenis, qs, pos: 0, jawab: [], lihat: [], mulai: Date.now(), menit: h.menit, nDokkai, dokkaiLalu };
   }
   mulaiTimer();
   return `<div id="sh-root">${htmlUjian()}</div>`;
@@ -741,7 +766,19 @@ async function kumpulkan() {
     if (q.item && U.mode === "ujian") { if (ok && U.jenis !== "belajar") delete p.salah[q.item]; else if (!ok) p.salah[q.item] = (p.salah[q.item] || 0) + 1; }
     U.lihat[i] = true;
   });
-  const total = U.qs.length;
+  let total = U.qs.length;
+  if (U.mode === "ujian") {
+    p.dokkaiHari = p.dokkaiHari || {};
+    if (U.dokkaiLalu) {
+      // percobaan ulang: dokkai tidak diulang, nilai dokkai percobaan pertama ikut dihitung
+      benar += U.dokkaiLalu.b; total += U.dokkaiLalu.t;
+      if (U.dokkaiLalu.t) perKat.dokkai = { b: U.dokkaiLalu.b, t: U.dokkaiLalu.t, lalu: true };
+    } else {
+      const dq = U.qs.map((q, i) => [q, i]).filter(([q]) => q.cat === "dokkai");
+      p.dokkaiHari[U.idx] = { b: dq.filter(([q, i]) => U.jawab[i] === q.ans).length, t: dq.length };
+      p.dokkaiPakai = [...new Set([...(p.dokkaiPakai || []), ...dq.map(([q]) => q.dkId).filter(Boolean)])];
+    }
+  }
   const lulus = total ? benar / total >= LULUS : true;
   const pct = persen(benar, total);
   U.hasil = { benar, total, lulus, perKat };
@@ -756,7 +793,7 @@ async function kumpulkan() {
     p.hasil = p.hasil || {};
     const lama = p.hasil[U.idx];
     p.hasil[U.idx] = { benar, total, lulus, tgl: Date.now(), jenis: U.jenis, coba: (lama?.coba || 0) + 1, terbaik: Math.max(pct, lama?.terbaik || 0) };
-    p.dokkaiPos = (p.dokkaiPos || 0) + (U.nDokkai || 0);
+    p.dokkaiPos = (p.dokkaiPakai || []).length;
     if (lulus) p.pos = U.idx + 1;     // KUNCI: hari berikutnya hanya terbuka bila lulus ≥ 80%
     U.bukaBesok = lulus && tungguTanggal(p) ? tglHari(p, p.pos) : null;
   }
@@ -792,9 +829,9 @@ window.SH = {
       let pos = 0;
       while (pos < R1.hari.length && (!R1.hari[pos].materi || KAT.flatMap(k => R1.hari[pos].materi[k]).every(id => selesai.has(id)))) pos++;
       // Jadwal dihitung ulang: hari "pos" = hari ini.
-      p = { ...lama, tempo, pos, mulai: tglDari(Date.now(), -pos).getTime(), hasil: {}, hafal: {}, _gantiTempo: false };
+      p = { ...lama, tempo, pos, mulai: tglDari(Date.now(), -pos).getTime(), hasil: {}, hafal: {}, dokkaiHari: {}, _gantiTempo: false };
     } else {
-      p = { lv, tempo, mulai: awalHari(Date.now()).getTime(), pos: 0, hasil: {}, hafal: {}, salah: {}, dokkaiPos: 0 };
+      p = { lv, tempo, mulai: awalHari(Date.now()).getTime(), pos: 0, hasil: {}, hafal: {}, salah: {}, dokkaiPos: 0, dokkaiPakai: [], dokkaiHari: {} };
     }
     U = null;
     simpanProgres(lv, p);
