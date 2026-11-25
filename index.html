@@ -1574,7 +1574,7 @@ html{overflow-x:hidden;}
 
 <script type="module">
 import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261122p";
-import Chibi from "./js/chibi.js?v=20261125g";
+import Chibi from "./js/chibi.js?v=20261125h";
 window.Chibi = Chibi;
 // Karakter yang dipakai siswa → teman belajar chibi (hafalan, matching, pilihan ganda, soal, ujian).
 Chibi.setSource(() => { const k = (state && state.siswa && state.siswa.karakter) || {}; return { equipped: k.equipped, skinTone: k.skinTone, hairColor: k.hairColor, body: k.body || getBody(), bentuk: k.bentuk || getBentuk() }; });

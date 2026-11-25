@@ -13,8 +13,23 @@ let _src = () => ({});
 export const setSource = (fn) => { _src = fn; };
 const LS_OFF = "shirose-chibi-off";
 const reduce = () => { try { return matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) { return false; } };
+const LS_PREF = "shirose-chibi-pref";   // "full" (jalan + lompat + terbang tiap ±1 menit) | "walk" (tanpa terbang) | "still" (diam)
+export const chibiPref = () => { try { const v = localStorage.getItem(LS_PREF); return v === "walk" || v === "still" ? v : "full"; } catch (e) { return "full"; } };
+const setPref = (v) => { try { localStorage.setItem(LS_PREF, v); } catch (e) {} };
 export const chibiOff = () => { try { return localStorage.getItem(LS_OFF) === "1"; } catch (e) { return false; } };
-export function chibiToggle(on) { try { localStorage.setItem(LS_OFF, on === false || (on === undefined && !chibiOff()) ? "1" : "0"); } catch (e) {} if (chibiOff()) unmount(); return !chibiOff(); }
+export function chibiToggle(on) {
+  try { localStorage.setItem(LS_OFF, on === false || (on === undefined && !chibiOff()) ? "1" : "0"); } catch (e) {}
+  if (chibiOff()) { unmount(); showChip(); } else { removeChip(); mount(_lastMode); }
+  return !chibiOff();
+}
+let _lastMode = "belajar";
+/* tombol kecil untuk memunculkan karakter lagi setelah disembunyikan */
+function removeChip() { const c = document.getElementById("cb-chip"); if (c) c.remove(); }
+function showChip() {
+  ensureCss(); if (document.getElementById("cb-chip")) return;
+  const b = document.createElement("button"); b.id = "cb-chip"; b.type = "button"; b.title = "Munculkan teman belajar"; b.setAttribute("aria-label", "Munculkan teman belajar"); b.textContent = "🙂";
+  b.onclick = () => chibiToggle(true); document.body.appendChild(b);
+}
 
 /* ---------- gambar ---------- */
 let _n = 0;
@@ -142,6 +157,17 @@ const CSS = `
 .cb.held .cb-arm{display:block;}
 .cb-arm svg{position:absolute;left:0;bottom:0;width:26px;height:40px;animation:cbGrip .5s ease-in-out infinite alternate;}
 @keyframes cbGrip{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+#cb-chip{position:fixed;left:8px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:60;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(40,30,80,.72);color:#fff;font-size:18px;line-height:1;cursor:pointer;opacity:.7;padding:0;}
+#cb-chip:hover{opacity:1}
+.cb-menu{position:absolute;left:50%;bottom:calc(100% + 8px);width:182px;margin-left:-91px;background:#fff;color:#2b2540;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,.4);padding:8px;z-index:5;cursor:default;font:700 13px/1.2 system-ui,sans-serif;touch-action:manipulation;}
+.cb-menu::after{content:"";position:absolute;left:var(--tail,50%);top:100%;margin-left:-7px;border:7px solid transparent;border-top-color:#fff;}
+.cb-menu.D{bottom:auto;top:calc(100% + 4px);}.cb-menu.D::after{top:auto;bottom:100%;border-top-color:transparent;border-bottom-color:#fff;}
+.cb-menu .cb-mt{font-size:11px;font-weight:800;color:#7a6fa8;padding:2px 6px 6px;text-transform:uppercase;letter-spacing:.04em;}
+.cb-menu button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;background:#f3f0ff;color:#2b2540;border:2px solid transparent;border-radius:10px;padding:8px 10px;margin-top:5px;font:700 13px/1.2 system-ui,sans-serif;cursor:pointer;}
+.cb-menu button:hover{background:#e6e0ff}
+.cb-menu button.on{border-color:#ff5c9d;background:#ffe3ef}
+.cb-menu button.on::after{content:"✓";margin-left:auto;color:#d6286f;font-weight:800;}
+.cb-menu button.hide{background:#fff0f0;color:#a02b2b;}
 @media(prefers-reduced-motion:reduce){.cb .cb-in,.cb [data-slot="sayap"],.cb .cb-dz{animation:none !important}}
 `;
 const HAND = (c) => `<svg viewBox="0 0 34 44"><path d="M7 0 H27 V10 H7Z" fill="#fff" stroke="#aab2d0" stroke-width="1.5"/><path d="M9 0 V10" stroke="#d3d8ec" stroke-width="1.5"/><path d="M6 11 H28 V24 Q28 32 22 35 L20 41 H14 L12 35 Q6 32 6 24Z" fill="${c}" stroke="rgba(0,0,0,.25)" stroke-width="1"/><path d="M12 18 V30 M17 17 V31 M22 18 V30" stroke="rgba(0,0,0,.22)" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="6" cy="22" rx="4" ry="7" fill="${c}" stroke="rgba(0,0,0,.25)" stroke-width="1"/></svg>`;
@@ -175,11 +201,13 @@ export function unmount() {
   if (!C) return;
   C.timers.forEach(clearTimeout); cancelAnimationFrame(C.raf); clearTimeout(C.sayT); clearInterval(C.platT); C.unscroll && C.unscroll();
   window.removeEventListener("pointermove", C.mv); window.removeEventListener("pointerup", C.up); window.removeEventListener("pointercancel", C.up);
-  C.el.remove(); C = null;
+  if (C.docDown) document.removeEventListener("pointerdown", C.docDown, true);
+  C.el.remove(); C = null; removeChip();
 }
 
 export function mount(mode = "belajar") {
-  if (chibiOff()) { unmount(); return; }
+  _lastMode = mode;
+  if (chibiOff()) { unmount(); showChip(); return; }
   if (C && C.mode === mode && document.body.contains(C.el)) return;
   unmount(); ensureCss();
   const kar = _src() || {};
@@ -187,7 +215,7 @@ export function mount(mode = "belajar") {
   el.className = "cb st-idle" + (hasWings(kar) ? " wing" : "");
   el.innerHTML = `<div class="cb-say"></div><div class="cb-arm">${HAND((SKIN_TONES[kar.skinTone || "light"] || SKIN_TONES.light).skin)}</div><div class="cb-flip"><div class="cb-in"></div></div>`;
   document.body.appendChild(el);
-  C = { el, mode, kar, exp: "netral", timers: [], raf: 0, st: "idle", wing: hasWings(kar), x: 0, y: 0, vx: 0, vy: 0, dir: 1, plats: [], on: null, busy: 0, held: false };
+  C = { el, mode, kar, exp: "netral", timers: [], raf: 0, st: "idle", wing: hasWings(kar), pref: chibiPref(), nextFly: performance.now() + 25000 + Math.random() * 20000, menuOpen: false, x: 0, y: 0, vx: 0, vy: 0, dir: 1, plats: [], on: null, busy: 0, held: false };
   paint(mode === "ujian" ? "cheer" : "netral");
   startLife();
 }
@@ -246,17 +274,18 @@ function startLife() {
     const r0 = C.on && rectOf(C.on); const cur = r0 || gnd;
     const opts = [];
     // jalan di platform sekarang
-    opts.push({ w: C.wing ? 1 : 3, f: () => { const hw = W() / 2 + 4, l = Math.max(cur.left, 0) + hw, r = Math.min(cur.right, window.innerWidth) - hw; C.goal = r > l ? l + Math.random() * (r - l) : (l + r) / 2; } });
+    const canFly = C.wing && C.pref === "full" && t >= C.nextFly;      // terbang hanya sekitar 1× per menit
+    opts.push({ w: canFly ? 1 : 3, f: () => { const hw = W() / 2 + 4, l = Math.max(cur.left, 0) + hw, r = Math.min(cur.right, window.innerWidth) - hw; C.goal = r > l ? l + Math.random() * (r - l) : (l + r) / 2; } });
     // lompat / terbang ke platform lain
     const here = C.on;
     for (const p of allPlats()) {
       if (p === here) continue; const r = rectOf(p); if (!r) continue;
       const left = Math.max(r.left, 8), right = Math.min(r.right, window.innerWidth - 8); if (right - left < 40) continue;
       const tx = left + 20 + Math.random() * Math.max(1, right - left - 40), dy = C.y - r.top, gx = Math.abs(tx - C.x);
-      if (C.wing) { if (gx < 520 && Math.abs(dy) < 520) opts.push({ w: dy > 0 ? 4 : 2.4, f: () => { C.fly = { tx, ty: r.top - 2, pl: p }; } }); }
+      if (canFly) { if (gx < 520 && Math.abs(dy) < 520) opts.push({ w: dy > 0 ? 4 : 2.4, f: () => { C.fly = { tx, ty: r.top - 2, pl: p }; C.nextFly = t + 55000 + Math.random() * 20000; } }); }
       else if (dy <= 175 && gx <= 260 && (dy > -420)) opts.push({ w: dy > 20 ? 4 : 1.2, f: () => jump(tx, r.top, dy) });
     }
-    if (C.wing) opts.push({ w: 5, f: () => { C.fly = { tx: 60 + Math.random() * (window.innerWidth - 120), ty: window.innerHeight * (.3 + Math.random() * .55), pl: null, hover: 2000 + Math.random() * 3500 }; } });
+    if (canFly) opts.push({ w: 5, f: () => { C.nextFly = t + 55000 + Math.random() * 20000; C.fly = { tx: 60 + Math.random() * (window.innerWidth - 120), ty: window.innerHeight * (.3 + Math.random() * .55), pl: null, hover: 2000 + Math.random() * 3500 }; } });
     let sum = opts.reduce((a, o) => a + o.w, 0), x = Math.random() * sum;
     for (const o of opts) { x -= o.w; if (x <= 0) { o.f(); break; } }
     think = t + 1400 + Math.random() * 2600;
@@ -297,7 +326,8 @@ function startLife() {
       }
     } else if (C.on) {
       // ---- di atas platform: jalan / diam ----
-      const busy = t < C.busy;
+      const busy = t < C.busy || C.menuOpen || C.pref === "still";
+      if (C.pref === "still" && C.goal != null) C.goal = null;
       if (!busy && t > think) { if (C.goal == null) decide(t); }
       if (C.on && !C.fly && !busy && C.goal != null) {
         const dx = C.goal - C.x;
@@ -305,7 +335,7 @@ function startLife() {
         else { C.dir = dx > 0 ? 1 : -1; C.x += C.dir * 40 * dt; setSt("walk"); }
         // batasi dalam platform sekarang
         const r = rectOf(C.on); if (r && !C.on.ground) C.x = Math.max(r.left + 6, Math.min(r.right - 6, C.x));
-      } else if (!busy && C.st !== "idle" && !C.vy) setSt("idle");
+      } else if (C.st !== "idle" && !C.vy && C.goal == null) setSt("idle");
       // keputusan mungkin memicu lompatan atau terbang → ditangani di iterasi berikutnya
     }
     // ---- udara: fisika ----
@@ -318,12 +348,41 @@ function startLife() {
         if (best) { land(best, bt); setSt("idle"); think = t + 700; if (C.hardFall) { C.hardFall = false; stun(t, C.fellFrom ? Math.max(0, bt - C.fellFrom) : 0); } }
       }
     }
-    if (t > nextSay && C.st !== "stun") { say(tgtSay(), 2400); nextSay = t + 9000 + Math.random() * 9000; }
+    if (t > nextSay && C.st !== "stun" && !C.menuOpen && C.pref !== "still") { say(tgtSay(), 2400); nextSay = t + 9000 + Math.random() * 9000; }
     C.x = Math.max(W() / 2, Math.min(vw - W() / 2, C.x));
     put(); C.raf = requestAnimationFrame(step);
   };
   const stun = (t, h) => { C.stunUntil = t + 1800 + Math.min(1800, h * 5); setSt("stun"); paint("dizzy"); say(pick(SAY_STUN), 1800); };
   C.raf = requestAnimationFrame(step);
+
+  // ---- menu pilihan (balon percakapan) ----
+  const closeMenu = (silent) => { const m = el.querySelector(".cb-menu"); if (m) m.remove(); C.menuOpen = false; if (C.docDown) { document.removeEventListener("pointerdown", C.docDown, true); C.docDown = null; } clearTimeout(C.menuT); };
+  const choose = (a) => {
+    if (a === "hide") { closeMenu(); chibiToggle(false); return; }
+    C.pref = a; setPref(a); closeMenu(); C.goal = null;
+    if (a !== "full" && C.fly) { const r = rectOf(gnd); C.fly = { tx: C.x, ty: r.top, pl: gnd }; }
+    if (a === "still") { C.vx = 0; say("Oke, aku diam di sini~", 1800); }
+    else if (a === "walk") say(C.wing ? "Oke, nggak terbang lagi!" : "Siap, jalan-jalan!", 1800);
+    else say(C.wing ? "Yeay, boleh terbang!" : "Siap, jalan & lompat!", 1800);
+    think = performance.now() + 600;
+  };
+  const openMenu = () => {
+    closeMenu(); C.menuOpen = true; C.vx = 0; C.goal = null; clearTimeout(C.sayT); const sb = el.querySelector(".cb-say"); if (sb) sb.classList.remove("on");
+    const items = [["full", C.wing ? "🕊️ Terbang & jalan-jalan" : "🚶 Jalan & lompat"], ...(C.wing ? [["walk", "🚶 Jalan-jalan saja"]] : []), ["still", "🧍 Diam saja"], ["hide", "🙈 Sembunyikan"]];
+    const m = document.createElement("div"); m.className = "cb-menu";
+    m.innerHTML = `<div class="cb-mt">Teman belajar</div>` + items.map(([k, l]) => `<button type="button" data-a="${k}" class="${k === "hide" ? "hide" : (k === C.pref || (k === "full" && !C.wing && C.pref === "walk") ? "on" : "")}">${l}</button>`).join("");
+    m.addEventListener("pointerdown", (e) => e.stopPropagation());
+    m.addEventListener("click", (e) => { const b = e.target.closest("button[data-a]"); if (b) choose(b.dataset.a); });
+    el.appendChild(m);
+    // jaga tetap di dalam layar
+    const rc = el.getBoundingClientRect(), mw = 182, cx = rc.left + rc.width / 2; let sh = 0;
+    if (cx - mw / 2 < 6) sh = 6 - (cx - mw / 2); else if (cx + mw / 2 > window.innerWidth - 6) sh = window.innerWidth - 6 - (cx + mw / 2);
+    m.style.marginLeft = (-91 + sh) + "px"; m.style.setProperty("--tail", (91 - sh) + "px");
+    if (rc.top - m.offsetHeight - 14 < 6) m.classList.add("D");
+    C.docDown = (e) => { if (!el.contains(e.target)) closeMenu(); };
+    document.addEventListener("pointerdown", C.docDown, true);
+    C.menuT = setTimeout(() => { if (C && C.menuOpen) closeMenu(); }, 12000);
+  };
 
   // ---- dipencet & dipindah ----
   let ox = 0, oy = 0, moved = 0, sx = 0, sy = 0;
@@ -336,18 +395,18 @@ function startLife() {
   C.up = () => {
     if (!C || !C.held) return; C.held = false; el.classList.remove("held");
     C.fly = null; C.on = null; C.vx = 0; C.vy = 0; C.fellFrom = C.y;
-    if (moved < 6) { C.hardFall = false; paint(C.mode === "ujian" ? "cheer" : "netral"); setSt("air"); say(pick(["Hehe!", "Hai hai~", "Jangan digelitikin!"]), 1500); C.vy = -300; }
+    if (moved < 6) { C.hardFall = false; paint(C.mode === "ujian" ? "cheer" : "netral"); setSt("air"); C.dropOnly = true; if (C.menuOpen) closeMenu(); else openMenu(); }
     else { C.hardFall = true; setSt("air"); paint("panic"); }
     last = performance.now(); think = last + 600;
   };
   el.addEventListener("pointerdown", (e) => {
     if (!C || C.held) return; e.preventDefault();
     const r = el.getBoundingClientRect(); C.held = true; C.fly = null; C.goal = null; C.on = null; moved = 0; sx = e.clientX; sy = e.clientY; ox = e.clientX - r.left; oy = e.clientY - r.top;
-    C.stunUntil = 0; el.classList.remove("hop", "droop"); setSt("held"); el.classList.add("held"); paint("panic"); say(pick(SAY_HELD), 1800);
+    C.stunUntil = 0; el.classList.remove("hop", "droop"); setSt("held"); if (C.menuOpen) closeMenu(true); el.classList.add("held"); paint("panic"); say(pick(SAY_HELD), 1800);
     try { el.setPointerCapture(e.pointerId); } catch (_) {}
   });
   window.addEventListener("pointermove", C.mv); window.addEventListener("pointerup", C.up); window.addEventListener("pointercancel", C.up);
 }
 
-const Chibi = { setSource, chibiSvg, charSvg, mount, unmount, react, say, chibiToggle, chibiOff };
+const Chibi = { setSource, chibiSvg, charSvg, mount, unmount, react, say, chibiToggle, chibiOff, chibiPref };
 export default Chibi;
