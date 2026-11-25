@@ -2534,9 +2534,12 @@ function _updateFabNav(name){
 
 /* Chibi di halaman yang tidak punya pemasangan sendiri: hiragana/katakana (hafalan & tes ada benar/salah → belajar),
    mensetsu (latihan wawancara, tanpa benar/salah → jalan-jalan "ganbatte"; kartu hafalan mensetsu → belajar). */
+// Layar baca materi (SSW / JFT / JLPT / kana): teman belajar ikut menemani.
+const _CHIBI_BACA = new Set(["materi","kosakata","kanji","bunpou","rangkuman","ssw-rangkuman","jft-rangkuman","sylabus","syl",
+  "ssw-pustaka","ssw-peta","ssw-bab","ssw-baca","ssw-buku","ssw-kosa","ssw-kartu","ssw-diagram","ssw-progres","kana-baca","kana-aturan","kana-tabel","kana-order","kana-tulis"]);
 function _autoChibi(name){
   try {
-    if (name === "kana-hafalan" || name === "kana-tes" || name === "mensetsu-flash") Chibi.mount("belajar");
+    if (name === "kana-hafalan" || name === "kana-tes" || name === "mensetsu-flash" || _CHIBI_BACA.has(name)) Chibi.mount("belajar");
     else if (typeof name === "string" && name.startsWith("mensetsu-")) Chibi.mount("ujian");
   } catch (e) {}
 }
