@@ -73,3 +73,31 @@
 .sh-ex ul{padding-left:18px; margin:4px 0;}
 .sh-tab{border-collapse:collapse; margin:8px 0;}
 .sh-tab td{padding:4px 14px 4px 0;}
+
+/* kunci harian, target & jadwal */
+.sh-dot.lock{opacity:.55;}
+.sh-target{padding:12px 14px; border-radius:14px; background:var(--navy-3); border:1px solid var(--border); margin-bottom:14px;}
+.sh-target p{margin:6px 0; font-size:14px; line-height:1.55;}
+.sh-target a{color:var(--gold);}
+.sh-pill{font-size:12px; padding:3px 10px; border-radius:99px; font-weight:700; white-space:nowrap;}
+.sh-pill.ok{background:rgba(34,197,94,.15); color:var(--green);}
+.sh-pill.ng{background:rgba(245,158,11,.15); color:var(--gold);}
+.sh-steps{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
+.sh-step{display:flex; flex-direction:column; padding:8px 12px; border-radius:12px; background:var(--navy-3); border:1px solid var(--border); color:var(--white); font-size:13.5px; text-decoration:none; font-weight:700;}
+.sh-step small{font-weight:400; color:var(--gray); font-size:12px;}
+.sh-step.ok{border-color:var(--green);}
+.sh-step.lock{opacity:.6;}
+.sh-jt{width:100%; border-collapse:collapse; font-size:13px; margin:6px 0 10px;}
+.sh-jt th{text-align:left; color:var(--gray); font-weight:600; padding:6px 8px; border-bottom:1px solid var(--border);}
+.sh-jt td{padding:6px 8px; border-bottom:1px solid rgba(255,255,255,.05); vertical-align:top;}
+.sh-jt tr.done td{color:var(--gray);}
+.sh-jt tr.now td{background:rgba(239,106,154,.12);}
+.sh-jt tr.today td:nth-child(2){color:var(--gold);}
+.sh-jt tr.akhir td{font-weight:700;}
+.sh-scroll{overflow-x:auto;}
+.sh-minggu{margin:6px 0; padding:8px 10px; border-radius:12px; background:var(--navy-3); border:1px solid var(--border);}
+.sh-minggu summary{cursor:pointer; font-size:14px;}
+.sh-mulai[disabled]{opacity:.6; cursor:not-allowed;}
+.sh-jt th{white-space:nowrap;}
+.sh-jt.harian{min-width:560px;}
+.sh-jt.harian td:nth-child(1),.sh-jt.harian td:nth-child(2),.sh-jt.harian td:nth-child(5){white-space:nowrap;}

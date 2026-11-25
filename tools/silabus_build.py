@@ -2,8 +2,9 @@
 """Bangun silabus harian Shirose (JLPT N5-N1 + JFT).
 
 Patokan = beban harian standar per level (bukan durasi). Durasi dihitung dari
-beban itu. Pola minggu: 6 hari belajar + hari ke-7 fukushu. Tiap minggu ke-4,
-hari ke-7 jadi ujian bulanan (kumulatif). Setelah materi habis: fase simulasi.
+beban itu. Pola minggu: 6 hari belajar + hari ke-7 fukushu. Setelah materi
+habis: fase simulasi. Hari terkunci berurutan: hafalan tiap kategori >= 80%
+lalu ujian harian >= 80% baru hari berikutnya terbuka.
 
 Pemakaian:
     python tools/silabus_build.py            # tulis data/silabus/<lv>.json (standar)
@@ -175,26 +176,18 @@ def bangun(lv, tempo):
                     "bunpo": {"n": n_soal(5), "format": FORMAT["bunpo"][fmt_key]},
                     "dokkai": {"n": 2, "sumber": "bank dokkai level ini, berurutan"},
                     "waktu_menit": None if fase == "awal" else (20 if fase == "tengah" else 15),
-                    "lulus": 0.7,
+                    "lulus": 0.8,
                 },
             })
             minggu_ini.append(len(hari))
             b += 1
-        no_minggu = (len(hari) // 7) + 1
-        bulanan = no_minggu % 4 == 0
         hari.append({
             "hari": len(hari) + 1,
-            "jenis": "ujian_bulanan" if bulanan else "fukushu",
-            "materi_dari_hari": (semua_sebelumnya + minggu_ini) if bulanan else list(minggu_ini),
-            "ujian": (
-                {"sumber": "kumulatif sejak hari 1, porsi lebih besar untuk 4 minggu terakhir dan soal yang pernah salah",
-                 "kosakata": {"n": 10}, "kanji": {"n": 10}, "bunpo": {"n": 10},
-                 "dokkai": {"n": 3}, "format": "format JLPT/JFT asli", "waktu_menit": 40, "lulus": 0.7}
-                if bulanan else
-                {"sumber": "materi 6 hari minggu ini, prioritas soal yang salah",
-                 "kosakata": {"n": 6}, "kanji": {"n": 6}, "bunpo": {"n": 6},
-                 "dokkai": {"n": 2}, "waktu_menit": 25, "lulus": 0.7}
-            ),
+            "jenis": "fukushu",
+            "materi_dari_hari": list(minggu_ini),
+            "ujian": {"sumber": "materi 6 hari minggu ini, prioritas soal yang salah",
+                      "kosakata": {"n": 6}, "kanji": {"n": 6}, "bunpo": {"n": 6},
+                      "dokkai": {"n": 2}, "waktu_menit": 25, "lulus": 0.8},
         })
         semua_sebelumnya += minggu_ini
         minggu_ini = []
@@ -206,10 +199,10 @@ def bangun(lv, tempo):
             "jenis": "simulasi" if simul else "perbaikan",
             "ujian": (
                 {"sumber": "ujian penuh format asli (bank full-* boleh dipakai karena semua materi sudah dipelajari)",
-                 "format": "JFT-Basic" if lv == "jft" else f"JLPT {lv.upper()} penuh", "lulus": 0.7}
+                 "format": "JFT-Basic" if lv == "jft" else f"JLPT {lv.upper()} penuh", "lulus": 0.8}
                 if simul else
                 {"sumber": "materi dan pola soal yang salah di simulasi kemarin", "kosakata": {"n": 8},
-                 "kanji": {"n": 8}, "bunpo": {"n": 8}, "dokkai": {"n": 2}, "lulus": 0.7}
+                 "kanji": {"n": 8}, "bunpo": {"n": 8}, "dokkai": {"n": 2}, "lulus": 0.8}
             ),
         })
 
