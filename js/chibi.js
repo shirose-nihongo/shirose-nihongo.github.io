@@ -48,29 +48,34 @@ const EXP = {
     <path d="M188 156 Q200 170 212 156" stroke="#8b4a3a" stroke-width="3" fill="#7a1f2b" stroke-linejoin="round"/>`; },
 };
 
-/** SVG chibi dari data karakter { equipped, skinTone, hairColor, body, bentuk }. exp: netral | happy | sad | panic | cheer */
+/** SVG chibi dari data karakter { equipped, skinTone, hairColor, body, bentuk }. exp: netral | happy | sad | panic | cheer
+ *  Dua lapis: (1) seluruh karakter (baju, senjata, dll.) pada skala badan kecil, tanpa dipotong; (2) kepala saja (tanpa senjata)
+ *  pada skala besar di atasnya. Aura, sayap, dan pet digambar terpisah supaya tidak terpotong/terskala ganda. */
 export function chibiSvg(kar = {}, exp = "netral") {
   const skin = kar.skinTone || "light", s = (SKIN_TONES[skin] || SKIN_TONES.light).skin;
-  let full = "";
   const eqp = { ...DEFAULT_EQUIPPED, ...(kar.equipped || {}) };
-  let auraSvg = ""; const auraKey = eqp.aura; if (auraKey && auraKey !== "none" && AURAS[auraKey] && AURAS[auraKey].svg) { try { auraSvg = AURAS[auraKey].svg(); } catch (e) {} eqp.aura = "none"; }
-  let sayapSvg = ""; if (eqp.sayap && eqp.sayap !== "none" && SAYAP && SAYAP[eqp.sayap] && SAYAP[eqp.sayap].svg) { try { sayapSvg = SAYAP[eqp.sayap].svg(); } catch (e) {} eqp.sayap = "none"; }
-  let petSvg = "", petBehind = false;
-  if (eqp.pet && eqp.pet !== "none" && PET[eqp.pet] && PET[eqp.pet].svg) { try { petSvg = `<g transform="${PET[eqp.pet].tf || "translate(14 398) scale(1.3)"}">${PET[eqp.pet].svg()}</g>`; petBehind = !!PET[eqp.pet].behind; } catch (e) {} eqp.pet = "none"; }
-  try { full = renderCharacter(eqp, skin, { hairColor: kar.hairColor, body: kar.body, bentuk: kar.bentuk }); }
-  catch (e) { try { full = renderCharacter({ ...DEFAULT_EQUIPPED }, "light", {}); } catch (e2) { return ""; } }
-  const inner = full.replace(/^\s*<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
+  let auraSvg = "", sayapSvg = "", petSvg = "", petBehind = false;
+  if (eqp.aura && eqp.aura !== "none" && AURAS[eqp.aura] && AURAS[eqp.aura].svg) { try { auraSvg = AURAS[eqp.aura].svg(); } catch (e) {} }
+  if (eqp.sayap && eqp.sayap !== "none" && SAYAP && SAYAP[eqp.sayap] && SAYAP[eqp.sayap].svg) { try { sayapSvg = SAYAP[eqp.sayap].svg(); } catch (e) {} }
+  if (eqp.pet && eqp.pet !== "none" && PET[eqp.pet] && PET[eqp.pet].svg) { try { petSvg = `<g transform="${PET[eqp.pet].tf || "translate(14 398) scale(1.3)"}">${PET[eqp.pet].svg()}</g>`; petBehind = !!PET[eqp.pet].behind; } catch (e) {} }
+  const eqB = { ...eqp, aura: "none", sayap: "none", pet: "none" }, eqH = { ...eqB, item_tangan: "none" };
+  const opt = { hairColor: kar.hairColor, body: kar.body, bentuk: kar.bentuk };
+  const strip = (x) => x.replace(/^\s*<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
+  let innerB = "", innerH = "";
+  try { innerB = strip(renderCharacter(eqB, skin, opt)); innerH = strip(renderCharacter(eqH, skin, opt)); }
+  catch (e) { try { innerB = innerH = strip(renderCharacter({ ...DEFAULT_EQUIPPED }, "light", {})); } catch (e2) { return ""; } }
   const id = "cb" + (++_n), face = EXP[exp] ? EXP[exp](s) : "";
-  const head = `translate(110 100) scale(1.3) translate(-200 -130)`, body = `translate(110 166) scale(.42) translate(-200 -184)`;
-  return `<svg class="cb-svg" viewBox="0 -52 220 352" xmlns="http://www.w3.org/2000/svg" style="overflow:visible" aria-hidden="true">
-    <defs><g id="${id}">${inner}</g>
-      <clipPath id="${id}h"><rect x="-600" y="-300" width="1400" height="466"/><ellipse cx="200" cy="130" rx="66" ry="68"/></clipPath><clipPath id="${id}b"><rect x="-600" y="170" width="1400" height="700"/></clipPath></defs>
-    ${auraSvg ? `<clipPath id="${id}a"><rect x="-6" y="-46" width="232" height="346" rx="40"/></clipPath><g clip-path="url(#${id}a)"><g transform="translate(110 150) scale(.55) translate(-200 -250)">${auraSvg}</g></g>` : ""}
-    ${sayapSvg ? `<clipPath id="${id}w"><rect x="-30" y="-46" width="280" height="350" rx="30"/></clipPath><g clip-path="url(#${id}w)"><g transform="${body}">${sayapSvg}</g></g>` : ""}
-    ${petBehind ? (petSvg ? `<g transform="${body}"><g transform="translate(200 470) scale(1.45) translate(-200 -470)">${petSvg}</g></g>` : "") : ""}
-    <g transform="${body}"><g clip-path="url(#${id}b)"><use href="#${id}"/></g></g>
-    ${petBehind ? "" : (petSvg ? `<g transform="${body}"><g transform="translate(200 470) scale(1.45) translate(-200 -470)">${petSvg}</g></g>` : "")}
-    <g transform="${head}"><g clip-path="url(#${id}h)"><use href="#${id}"/></g>${face}</g>
+  const head = `translate(110 100) scale(1.3) translate(-200 -130)`, body = `translate(110 166) scale(.54) translate(-200 -184)`;
+  const petG = petSvg ? `<g transform="${body}"><g transform="translate(200 470) scale(1.45) translate(-200 -470)">${petSvg}</g></g>` : "";
+  return `<svg class="cb-svg" viewBox="0 -52 220 376" xmlns="http://www.w3.org/2000/svg" style="overflow:visible" aria-hidden="true">
+    <defs><g id="${id}b">${innerB}</g><g id="${id}h">${innerH}</g>
+      <clipPath id="${id}c"><rect x="-600" y="-300" width="1400" height="466"/><ellipse cx="200" cy="130" rx="66" ry="68"/></clipPath></defs>
+    ${auraSvg ? `<clipPath id="${id}a"><rect x="-6" y="-46" width="232" height="352" rx="40"/></clipPath><g clip-path="url(#${id}a)"><g transform="translate(110 150) scale(.72) translate(-200 -250)">${auraSvg}</g></g>` : ""}
+    ${sayapSvg ? `<clipPath id="${id}w"><rect x="-30" y="-46" width="280" height="356" rx="30"/></clipPath><g clip-path="url(#${id}w)"><g transform="${body}">${sayapSvg}</g></g>` : ""}
+    ${petBehind ? petG : ""}
+    <g transform="${body}"><use href="#${id}b"/></g>
+    ${petBehind ? "" : petG}
+    <g transform="${head}"><g clip-path="url(#${id}c)"><use href="#${id}h"/></g>${face}</g>
     ${exp === "happy" ? `<g class="cb-spark" fill="#ffd54a"><path d="M24 24 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/><path d="M190 10 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/></g>` : ""}
   </svg>`;
 }
