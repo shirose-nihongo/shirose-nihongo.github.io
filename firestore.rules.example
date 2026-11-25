@@ -169,7 +169,8 @@ service cloud.firestore {
         || (terdaftar() && id != '_index' && resource.data.get('aktif', true) == true
             && profil().get('aksesHafalan', true) != false
             && (resource.data.get('semua', false) == true
-                || profil().get('kelas', '') in resource.data.get('kelas', [])));
+                || profil().get('kelas', '') in resource.data.get('kelas', [])
+                || me() in resource.data.get('siswa', [])));
       allow write: if isGuru();
     }
 
@@ -184,7 +185,8 @@ service cloud.firestore {
         || (terdaftar() && id == '_index')
         || (terdaftar() && id != '_index' && resource.data.get('aktif', true) == true
             && (resource.data.get('semua', false) == true
-                || profil().get('kelas', '') in resource.data.get('kelas', [])));
+                || profil().get('kelas', '') in resource.data.get('kelas', [])
+                || me() in resource.data.get('siswa', [])));
       allow write: if isGuru();
     }
 

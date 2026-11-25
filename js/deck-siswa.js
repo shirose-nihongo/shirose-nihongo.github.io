@@ -15,7 +15,7 @@ export async function bolehPelajaran() {
   return !!k && k.aksesHafalan === true;
 }
 export const bolehHafalan = bolehPelajaran;   // nama lama (kompatibel)
-const V = "20261126a";
+const V = "20261126b";
 const CSS = `
 .pj{--pj:#4cc9f0}
 .pj .pj-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding:14px 16px;border-radius:16px;background:linear-gradient(135deg,rgba(76,201,240,.18),rgba(139,92,246,.18));border:1px solid rgba(76,201,240,.35)}
@@ -26,10 +26,10 @@ const CSS = `
 .pj .pj-tab.on{border-color:var(--pj);background:rgba(76,201,240,.16);color:var(--pj)}
 `;
 const ensureCss = () => { if (document.getElementById("pj-css")) return; const st = document.createElement("style"); st.id = "pj-css"; st.textContent = CSS; document.head.appendChild(st); };
-const ctxSiswa = () => ({ toast: t => (window.toast ? window.toast(t) : console.log(t)), kelas: String((S().siswa && S().siswa.kelas) || "").trim(), guru: FB.userIsGuru() });
+const ctxSiswa = () => ({ toast: t => (window.toast ? window.toast(t) : console.log(t)), uid: String((S().user && S().user.uid) || ""), kelas: String((S().siswa && S().siswa.kelas) || "").trim(), guru: FB.userIsGuru() });
 async function isiTab(t) {
   if (t === "soal") { const m = await import("./soal-siswa.js?v=" + V); return m.renderSoalSiswa(FB, ctxSiswa()); }
-  const m = await import("./deck-teacher.js?v=20261125a"); return m.renderDeckSiswa(FB, ctxSiswa());
+  const m = await import("./deck-teacher.js?v=20261126b"); return m.renderDeckSiswa(FB, ctxSiswa());
 }
 const kepala = (t) => `<div class="pj-top"><span class="pj-k">授業</span><div><b>Pelajaran · Jyugyou</b><small>Materi dari gurumu untuk kelasmu</small></div></div>
   <div class="pj-tabs"><button class="pj-tab ${t === "hafalan" ? "on" : ""}" onclick="pjTab('hafalan')">🗂️ Hafalan</button><button class="pj-tab ${t === "soal" ? "on" : ""}" onclick="pjTab('soal')">📝 Soal</button></div>`;

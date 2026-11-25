@@ -8,8 +8,8 @@ const MAXB = 900000;
 
 let FB = null, CTX = { toast: () => {}, rerender: () => {} };
 const toast = (m) => CTX.toast(m);
-let IDX = [], KELAS = [], ERR = "";
-const V = { view: "list", set: null, edit: null, q: "", pubDraft: null };
+let IDX = [], KELAS = [], SISWA = [], ERR = "";
+const V = { view: "list", set: null, edit: null, q: "", pubDraft: null, pubQ: "" };
 
 const CSS = `
 #sg-root .sg-card{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;border:1px solid var(--border-light,#4b3b86);border-left:5px solid #4cc9f0;background:var(--navy-2,#241a4d);margin-bottom:10px;cursor:pointer}
@@ -27,7 +27,7 @@ const CSS = `
 `;
 const ensureCss = () => { if (document.getElementById("sg-css")) return; const st = document.createElement("style"); st.id = "sg-css"; st.textContent = CSS; document.head.appendChild(st); };
 const paint = () => { const r = document.getElementById("sg-root"); if (r) r.innerHTML = view(); };
-const meta = (d) => ({ id: d.id, nama: d.nama, n: (d.items || []).length, updated: Date.now(), pub: d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: d.pub.kelas || [] } : null });
+const meta = (d) => ({ id: d.id, nama: d.nama, n: (d.items || []).length, updated: Date.now(), pub: d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: d.pub.kelas || [], siswa: d.pub.siswa || [] } : null });
 const val = (id) => (document.getElementById(id) || {}).value || "";
 
 /* ---------- penyimpanan ---------- */
@@ -40,9 +40,9 @@ async function simpan() {
 }
 async function terbitkan(diam) {
   const d = V.set, p = d.pub; if (!p) return;
-  await FB.soalPubPut(d.id, { nama: d.nama, items: d.items, kelas: p.kelas || [], semua: !!p.semua, aktif: p.aktif !== false });
+  await FB.soalPubPut(d.id, { nama: d.nama, items: d.items, kelas: p.kelas || [], siswa: p.siswa || [], semua: !!p.semua, aktif: p.aktif !== false });
   const pi = (await FB.soalPubIndex()).filter((x) => x.id !== d.id);
-  pi.push({ id: d.id, nama: d.nama, n: d.items.length, kelas: p.kelas || [], semua: !!p.semua, aktif: p.aktif !== false });
+  pi.push({ id: d.id, nama: d.nama, n: d.items.length, kelas: p.kelas || [], siswa: p.siswa || [], semua: !!p.semua, aktif: p.aktif !== false });
   await FB.soalPubSetIndex(pi); if (!diam) toast("✅ Diterbitkan");
 }
 
@@ -80,7 +80,7 @@ function parseBaris(rows) {
 function viewList() {
   if (ERR) return `<div class="alert alert-err" style="padding:12px;border-radius:10px;background:rgba(231,76,60,.12);border:1px solid #e74c3c">⚠️ ${esc(ERR)}<br><small>Kemungkinan aturan Firestore untuk <b>guru_soal</b> &amp; <b>soal_kelas</b> belum dipublish. Salin dari <code>firestore.rules.example</code> ke Firebase Console → Firestore → Rules → Publish.</small></div>`;
   return `<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px"><h3 style="margin:0">📝 Set Soal</h3><button class="btn" style="margin-left:auto" onclick="SG.baru()">➕ Set soal baru</button></div>
-    ${IDX.length ? [...IDX].sort((a, b) => String(a.nama).localeCompare(String(b.nama), "id")).map((x) => `<div class="sg-card" onclick="SG.buka('${esc(x.id)}')"><div style="flex:1"><b>${esc(x.nama)}</b><small>${x.n || 0} soal · ${x.pub ? (x.pub.aktif === false ? "⏸️ Terbit (nonaktif)" : "✅ Terbit: " + (x.pub.semua ? "semua siswa" : (x.pub.kelas || []).map(esc).join(", ") || "belum pilih kelas")) : "Belum terbit"}</small></div><span style="color:#4cc9f0">Buka ›</span></div>`).join("") : `<div class="empty"><div class="emoji">📝</div>Belum ada set soal. Buat set pertama.</div>`}`;
+    ${IDX.length ? [...IDX].sort((a, b) => String(a.nama).localeCompare(String(b.nama), "id")).map((x) => `<div class="sg-card" onclick="SG.buka('${esc(x.id)}')"><div style="flex:1"><b>${esc(x.nama)}</b><small>${x.n || 0} soal · ${x.pub ? (x.pub.aktif === false ? "⏸️ Terbit (nonaktif)" : "✅ Terbit: " + (x.pub.semua ? "semua siswa" : [...(x.pub.kelas || []).map(esc), ...((x.pub.siswa || []).length ? [x.pub.siswa.length + " siswa"] : [])].join(", ") || "belum pilih")) : "Belum terbit"}</small></div><span style="color:#4cc9f0">Buka ›</span></div>`).join("") : `<div class="empty"><div class="emoji">📝</div>Belum ada set soal. Buat set pertama.</div>`}`;
 }
 function formSoal() {
   const ed = V.edit, it = ed != null && ed >= 0 ? V.set.items[ed] : { q: "", o: ["", "", "", ""], a: 0, e: "" };
@@ -91,14 +91,23 @@ function formSoal() {
     <label class="sg-l">Penjelasan (tampil di bawah jawaban siswa)</label><textarea id="sg-e" rows="3">${esc(it.e)}</textarea>
     <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="SG.simpanSoal()">${ed != null && ed >= 0 ? "Simpan perubahan" : "Tambah"}</button>${ed != null ? `<button class="btn ghost" onclick="SG.batalEdit()">Batal</button>` : ""}</div></div>`;
 }
+function boxSiswa(p) {
+  const q = String(V.pubQ || "").trim().toLowerCase(), pil = new Set(p.siswa || []);
+  const l = SISWA.filter((x) => pil.has(x.uid) || !q || (x.nama + " " + x.kelas).toLowerCase().includes(q)).sort((a, b) => (pil.has(b.uid) - pil.has(a.uid)) || String(a.nama).localeCompare(String(b.nama), "id")).slice(0, 80);
+  if (!l.length) return `<small style="color:var(--gray)">${SISWA.length ? "Tidak ada siswa yang cocok." : "Belum ada siswa."}</small>`;
+  return l.map((x) => `<label style="display:flex;gap:8px;align-items:center;padding:5px 6px;cursor:pointer;margin:0"><input type="checkbox" ${pil.has(x.uid) ? "checked" : ""} ${p.semua ? "disabled" : ""} onchange="SG.pubSiswa('${esc(x.uid)}',this.checked)"/> <span>${esc(x.nama || x.uid)}</span><span style="margin-left:auto;color:var(--gray);font-size:12px">${esc(x.kelas || "tanpa kelas")}</span></label>`).join("");
+}
 function viewSet() {
-  const d = V.set, p = V.pubDraft || { aktif: true, semua: false, kelas: [] };
+  const d = V.set, p = V.pubDraft || { aktif: true, semua: false, kelas: [], siswa: [] };
   const items = d.items.map((x, i) => ({ x, i })).filter(({ x }) => !V.q || (x.q + " " + x.o.join(" ")).toLowerCase().includes(V.q.toLowerCase()));
   return `<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px"><button class="btn ghost sm" onclick="SG.daftar()">← Daftar set</button><h3 style="margin:0">${esc(d.nama)}</h3><span style="color:var(--gray)">${d.items.length} soal</span>
       <button class="btn ghost sm" style="margin-left:auto" onclick="SG.rename()">✏️ Nama</button><button class="btn ghost sm" onclick="SG.hapusSet()" style="color:#e74c3c">🗑️ Hapus set</button></div>
     <div class="sg-pub"><b>📤 Terbitkan ke siswa</b> <small style="color:var(--gray)">— siswa hanya melihat set yang kelasnya dipilih (dan yang punya akses Pelajaran).</small><div style="margin-top:8px">
       <label><input type="checkbox" ${p.aktif ? "checked" : ""} onchange="SG.pub('aktif',this.checked)"/> Aktif</label><label><input type="checkbox" ${p.semua ? "checked" : ""} onchange="SG.pub('semua',this.checked)"/> Semua siswa</label></div>
       <div style="margin-top:4px">${KELAS.length ? KELAS.map((k) => `<label><input type="checkbox" ${(p.kelas || []).includes(k) ? "checked" : ""} ${p.semua ? "disabled" : ""} onchange="SG.pubKelas('${esc(k).replace(/'/g, "&#39;")}',this.checked)"/> ${esc(k)}</label>`).join("") : `<small style="color:var(--gray)">Belum ada kelas.</small>`}</div>
+      <div style="margin-top:10px"><small style="color:var(--gray)">Atau siswa tertentu (siswa dari kelas lain yang tidak dipilih tidak akan melihat set ini, walau punya akses Pelajaran):</small>
+        <input type="text" id="sg-ps-q" placeholder="Cari nama / kelas siswa…" value="${esc(V.pubQ || "")}" oninput="SG.cariSiswa(this.value)" ${p.semua ? "disabled" : ""} style="margin:6px 0"/>
+        <div id="sg-pubsiswa" style="max-height:200px;overflow:auto;border:1px solid var(--border-light,#4b3b86);border-radius:10px;padding:6px">${boxSiswa(p)}</div></div>
       <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="SG.terbit()">${d.pub ? "Perbarui terbitan" : "Terbitkan"}</button>${d.pub ? `<button class="btn ghost" onclick="SG.tarik()">Tarik dari siswa</button>` : ""}</div></div>
     ${formSoal()}
     <details style="margin:10px 0"><summary style="cursor:pointer;font-weight:700">📥 Tempel massal / impor Excel</summary><div class="panel" style="padding:14px;margin-top:8px">
@@ -118,14 +127,14 @@ const SG = {
   daftar() { V.view = "list"; V.set = null; V.edit = null; V.q = ""; paint(); },
   async baru() {
     const nama = (prompt("Nama set soal baru:") || "").trim(); if (!nama) return;
-    V.set = { id: newId(), nama, items: [] }; V.pubDraft = { aktif: true, semua: false, kelas: [] };
+    V.set = { id: newId(), nama, items: [] }; V.pubDraft = { aktif: true, semua: false, kelas: [], siswa: [] };
     try { await simpan(); V.view = "set"; V.edit = null; V.q = ""; paint(); } catch (e) { toast("❌ " + (e.message || e)); }
   },
   async buka(id) {
     try {
       const d = await FB.soalGet(id); if (!d) return toast("Set tidak ditemukan"); d.items = d.items || [];
       const m = IDX.find((x) => x.id === id); d.pub = m && m.pub ? m.pub : null;
-      V.set = d; V.pubDraft = d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: [...(d.pub.kelas || [])] } : { aktif: true, semua: false, kelas: [] };
+      V.set = d; V.pubDraft = d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: [...(d.pub.kelas || [])], siswa: [...(d.pub.siswa || [])] } : { aktif: true, semua: false, kelas: [], siswa: [] };
       V.view = "set"; V.edit = null; V.q = ""; paint();
     } catch (e) { toast("❌ " + (e.message || e)); }
   },
@@ -171,12 +180,14 @@ const SG = {
     const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, "Soal"); XLSX.writeFile(wb, "template-soal-pelajaran.xlsx");
   },
   pub(k, v) { V.pubDraft = { ...(V.pubDraft || { kelas: [] }), [k]: v }; paint(); },
+  pubSiswa(uid, on) { const d = V.pubDraft || { aktif: true, semua: false, kelas: [], siswa: [] }; const s = new Set(d.siswa || []); on ? s.add(uid) : s.delete(uid); V.pubDraft = { ...d, siswa: [...s] }; },
+  cariSiswa(v) { V.pubQ = v; const b = document.getElementById("sg-pubsiswa"); if (b) b.innerHTML = boxSiswa(V.pubDraft || { siswa: [] }); },
   pubKelas(k, on) { const d = V.pubDraft || { aktif: true, semua: false, kelas: [] }; const s = new Set(d.kelas || []); on ? s.add(k) : s.delete(k); V.pubDraft = { ...d, kelas: [...s] }; },
   async terbit() {
-    const p = V.pubDraft || { aktif: true, semua: false, kelas: [] };
+    const p = V.pubDraft || { aktif: true, semua: false, kelas: [], siswa: [] };
     if (!V.set.items.length) return toast("Set masih kosong");
-    if (!p.semua && !(p.kelas || []).length) return toast("Pilih minimal satu kelas, atau centang 'Semua siswa'");
-    V.set.pub = { aktif: p.aktif !== false, semua: !!p.semua, kelas: p.kelas || [] };
+    if (!p.semua && !(p.kelas || []).length && !(p.siswa || []).length) return toast("Pilih minimal satu kelas atau siswa, atau centang 'Semua siswa'");
+    V.set.pub = { aktif: p.aktif !== false, semua: !!p.semua, kelas: p.kelas || [], siswa: p.siswa || [] };
     try { await terbitkan(false); IDX = [...IDX.filter((x) => x.id !== V.set.id), meta(V.set)]; await FB.soalSetIndex(IDX); paint(); } catch (e) { toast("❌ " + (e.message || e)); }
   },
   async tarik() {
@@ -188,7 +199,7 @@ const SG = {
 export async function renderSoalGuruTab(fb, ctx) {
   FB = fb; CTX = ctx || CTX; ensureCss(); window.SG = SG; ERR = "";
   if (!FB.userIsGuru()) return `<div class="card">Khusus guru.</div>`;
-  { const nm = new Set(); try { (await FB.listKelas()).forEach((k) => { const n = String(k.nama || "").trim(); if (n) nm.add(n); }); } catch (e) {} try { (await FB.listSiswa()).forEach((x) => { const n = String(x.kelas || "").trim(); if (n) nm.add(n); }); } catch (e) {} KELAS = [...nm].sort((a, b) => a.localeCompare(b, "id")); }
+  { SISWA = []; const nm = new Set(); try { (await FB.listKelas()).forEach((k) => { const n = String(k.nama || "").trim(); if (n) nm.add(n); }); } catch (e) {} try { (await FB.listSiswa()).forEach((x) => { const n = String(x.kelas || "").trim(); if (n) nm.add(n); if ((x.role || "student") === "student") SISWA.push({ uid: x.uid, nama: x.nama || x.email || x.uid, kelas: n }); }); } catch (e) {} KELAS = [...nm].sort((a, b) => a.localeCompare(b, "id")); }
   try { IDX = await FB.soalIndex(); } catch (e) { IDX = []; ERR = String((e && (e.code || e.message)) || e); }
   if (V.view === "set" && !V.set) V.view = "list";
   return `<div id="sg-root">${view()}</div>`;

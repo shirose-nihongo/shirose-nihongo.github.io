@@ -109,7 +109,7 @@ export async function renderSoalSiswa(fb, ctx) {
   FB = fb; CTX = ctx || {}; VIEW = "list"; S = null; LIST = null; ERR = ""; ensureCss(); window.SQ = SQ;
   try {
     const idx = await FB.soalPubIndex();
-    LIST = idx.filter((x) => ctx.guru || (x.aktif !== false && (x.semua || (x.kelas || []).includes(ctx.kelas))));
+    LIST = idx.filter((x) => ctx.guru || (x.aktif !== false && (x.semua || (x.kelas || []).includes(ctx.kelas) || (x.siswa || []).includes(ctx.uid))));
     PROG = await FB.soalProgresAll();
   } catch (e) { ERR = String((e && (e.code || e.message)) || e); LIST = []; }
   return `<div class="sq" id="sq-root">${view()}</div>`;

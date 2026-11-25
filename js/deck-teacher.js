@@ -18,7 +18,7 @@ const IDB = {
   del(id) { return this.tx("readwrite", s => s.delete(id)); },
 };
 let LOKAL = false, FB = null, CTX = { toast: () => {}, rerender: () => {} };
-const meta = d => ({ id: d.id, nama: d.nama, n: d.cards.length, updated: Date.now(), pub: d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: d.pub.kelas || [] } : null });
+const meta = d => ({ id: d.id, nama: d.nama, n: d.cards.length, updated: Date.now(), pub: d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: d.pub.kelas || [], siswa: d.pub.siswa || [] } : null });
 const ST = {
   async index() {
     if (!LOKAL) { try { return await FB.deckIndex(); } catch (e) { LOKAL = true; } }
@@ -35,7 +35,7 @@ const ST = {
 
 /* ---------- State ---------- */
 let IDX = [], LOKALN = 0;
-const V = { ro: false, kelasList: [], pubDraft: null, pubList: [], pubErr: "", view: "list", id: "", deck: null, q: "", page: 0, edit: null, stage: null, busy: false, S: null,
+const V = { ro: false, kelasList: [], siswaList: [], pubQ: "", pubDraft: null, pubList: [], pubErr: "", view: "list", id: "", deck: null, q: "", page: 0, edit: null, stage: null, busy: false, S: null,
   cfg: { mode: "flash", arah: "jp", sumber: "due", jumlah: 20, urut: "acak" }, sort: "asli" };
 const MODES = { flash: "🃏 Flashcard (SRS)", pg: "🔘 Pilihan ganda", cocok: "🧩 Cocokkan", ketik: "⌨️ Ketik" };
 const toast = m => CTX.toast(m);
@@ -274,7 +274,7 @@ function viewList() {
   const lokal = LOKAL ? `<div class="alert" style="background:rgba(245,158,11,.12);border:1px solid #f59e0b;color:#fde68a;">● <b>Mode lokal</b>: deck tersimpan di browser ini saja (aturan Firestore <code>guru_deck</code> belum dipublish). Ganti browser/perangkat = deck tidak ikut. Tambahkan aturan dari <code>firestore.rules.example</code> supaya tersimpan di cloud.</div>` : "";
   const mig = !LOKAL && LOKALN ? `<div class="alert alert-ok">☁️ Ada <b>${LOKALN}</b> deck lokal di browser ini. <button class="btn sm" onclick="DK.migrasi()">Pindahkan ke cloud</button></div>` : "";
   const decks = [...IDX].sort((a, b) => String(a.nama).localeCompare(String(b.nama))).map(x => `<div class="dk-deck" onclick="DK.buka('${esc(x.id)}')">
-      <b style="font-size:16px;">${esc(x.nama)}</b><div class="dk-sm" style="margin-top:4px;">${x.n} kartu</div><div class="dk-sm" style="margin-top:2px;">${x.pub ? (x.pub.aktif === false ? "⏸ Nonaktif" : x.pub.semua ? "🌐 Semua siswa" : "🏫 " + esc((x.pub.kelas || []).join(", "))) : "📝 Draft (belum diterbitkan)"}</div></div>`).join("");
+      <b style="font-size:16px;">${esc(x.nama)}</b><div class="dk-sm" style="margin-top:4px;">${x.n} kartu</div><div class="dk-sm" style="margin-top:2px;">${x.pub ? (x.pub.aktif === false ? "⏸ Nonaktif" : x.pub.semua ? "🌐 Semua siswa" : "🏫 " + esc([...(x.pub.kelas || []), ...((x.pub.siswa || []).length ? [(x.pub.siswa.length) + " siswa"] : [])].join(", "))) : "📝 Draft (belum diterbitkan)"}</div></div>`).join("");
   return `<div class="panel">
     <h2>🗂️ Deck Hafalan <small style="font-size:12px;color:var(--gray);font-weight:400;">ala Anki · khusus guru</small></h2>
     <p class="dk-sm" style="margin-bottom:12px;">Isi kosakata sendiri, satu deck per file. Belajar pakai Flashcard (jadwal SRS), Pilihan ganda, Cocokkan, atau Ketik. Masukkan kartu manual, tempel massal, atau impor Excel.</p>
@@ -287,11 +287,17 @@ function viewList() {
 }
 
 let PUBNAMES = [];
+function boxSiswa(pd) {
+  const q = String(V.pubQ || "").trim().toLowerCase(), pil = new Set(pd.siswa || []);
+  const l = V.siswaList.filter(x => pil.has(x.uid) || !q || (x.nama + " " + x.kelas).toLowerCase().includes(q)).sort((a, b) => (pil.has(b.uid) - pil.has(a.uid)) || String(a.nama).localeCompare(String(b.nama), "id")).slice(0, 80);
+  if (!l.length) return `<span class="dk-sm">${V.siswaList.length ? "Tidak ada siswa yang cocok." : "Belum ada siswa."}</span>`;
+  return l.map(x => `<label style="display:flex;gap:8px;align-items:center;padding:5px 6px;cursor:pointer;"><input type="checkbox" ${pil.has(x.uid) ? "checked" : ""} ${pd.semua ? "disabled" : ""} onchange="DK.pubSiswa('${esc(x.uid)}',this.checked)"> <span>${esc(x.nama || x.uid)}</span><span class="dk-sm" style="margin-left:auto">${esc(x.kelas || "tanpa kelas")}</span></label>`).join("");
+}
 function viewTerbit() {
-  const d = V.deck, pd = V.pubDraft || { aktif: true, semua: false, kelas: [] }, pub = d.pub, dirty = pub && pub.sig !== sigOf(d);
+  const d = V.deck, pd = V.pubDraft || { aktif: true, semua: false, kelas: [], siswa: [] }, pub = d.pub, dirty = pub && pub.sig !== sigOf(d);
   PUBNAMES = [...new Set([...V.kelasList, ...(pd.kelas || [])])];
   const status = !pub ? `<span class="chip">📝 Belum diterbitkan ke siswa</span>`
-    : `<span class="chip on">${pub.aktif === false ? "⏸ Nonaktif" : "✅ Terbit"} · ${pub.semua ? "semua siswa" : esc((pub.kelas || []).join(", "))} · ${pub.n} kartu</span>${dirty ? `<span class="chip" style="background:#f59e0b;">⚠ Ada perubahan yang belum diterbitkan</span>` : ""}`;
+    : `<span class="chip on">${pub.aktif === false ? "⏸ Nonaktif" : "✅ Terbit"} · ${pub.semua ? "semua siswa" : esc([...(pub.kelas || []), ...((pub.siswa || []).length ? [pub.siswa.length + " siswa"] : [])].join(", "))} · ${pub.n} kartu</span>${dirty ? `<span class="chip" style="background:#f59e0b;">⚠ Ada perubahan yang belum diterbitkan</span>` : ""}`;
   const kelasBox = PUBNAMES.length ? PUBNAMES.map((n, i) => `<label style="display:flex;gap:6px;align-items:center;padding:6px 10px;border:1px solid var(--border);border-radius:10px;cursor:pointer;"><input type="checkbox" ${pd.kelas.includes(n) ? "checked" : ""} ${pd.semua ? "disabled" : ""} onchange="DK.pubKelas(${i},this.checked)"> ${esc(n)}</label>`).join("")
     : `<span class="dk-sm">Belum ada kelas. Buat kelas di tab <b>Kelas</b> dulu, atau pakai "Semua siswa".</span>`;
   return `<div class="panel"><h2>🏫 Kelas &amp; Terbit</h2>
@@ -302,6 +308,9 @@ function viewTerbit() {
       <label style="display:flex;gap:6px;align-items:center;cursor:pointer;"><input type="checkbox" ${pd.semua ? "checked" : ""} onchange="DK.pubSet('semua',this.checked)"> 🌐 <b>Semua siswa</b></label></div>
     <div class="dk-sm" style="margin-bottom:6px;">Untuk kelas:</div>
     <div class="dk-row" style="margin-bottom:12px;">${kelasBox}</div>
+    <div class="dk-sm" style="margin-bottom:6px;">Atau siswa tertentu <span style="opacity:.7">(siswa dari kelas lain yang tidak dipilih tidak akan melihat deck ini, walau punya akses Pelajaran)</span>:</div>
+    <input type="text" id="dk-ps-q" placeholder="Cari nama / kelas siswa…" value="${esc(V.pubQ || "")}" oninput="DK.pubSiswaCari(this.value)" style="width:100%;box-sizing:border-box;margin-bottom:6px;" ${pd.semua ? "disabled" : ""}/>
+    <div id="dk-pubsiswa" style="max-height:220px;overflow:auto;border:1px solid var(--border);border-radius:10px;padding:6px;margin-bottom:12px;">${boxSiswa(pd)}</div>
     <div class="dk-row"><button class="btn" onclick="DK.terbit()" ${V.busy ? "disabled" : ""}>${V.busy ? "Menyimpan…" : pub ? "💾 Simpan &amp; terbitkan ulang" : "🚀 Terbitkan ke siswa"}</button>${pub ? `<button class="btn ghost" onclick="DK.tarik()">🚫 Tarik dari siswa</button>` : ""}</div></div>`;
 }
 
@@ -516,9 +525,9 @@ export async function renderDeckTab(fb, ctx) {
   FB = fb; CTX = ctx; V.ro = false;
   if (!FB.userIsGuru()) return `<div class="card">Khusus guru.</div>`;
   { // nama kelas = koleksi kelas + kelas yang tercatat di profil siswa (kelas bisa hanya ada di siswa)
-    const nm = new Set();
+    const nm = new Set(); V.siswaList = [];
     try { (await FB.listKelas()).forEach(k => { const n = String(k.nama || "").trim(); if (n) nm.add(n); }); } catch (e) {}
-    try { (await FB.listSiswa()).forEach(x => { const n = String(x.kelas || "").trim(); if (n) nm.add(n); }); } catch (e) {}
+    try { (await FB.listSiswa()).forEach(x => { const n = String(x.kelas || "").trim(); if (n) nm.add(n); if ((x.role || "student") === "student") V.siswaList.push({ uid: x.uid, nama: x.nama || x.email || x.uid, kelas: n }); }); } catch (e) {}
     V.kelasList = [...nm].sort((a, b) => a.localeCompare(b, "id"));
   }
   try { IDX = await ST.index(); } catch (e) { return `<div class="alert alert-err">Gagal memuat deck: ${esc(e.message || e)}</div>`; }
@@ -537,7 +546,7 @@ export async function renderDeckSiswa(fb, ctx) {
   window.DK = buatDK();
   for (const k of ["baru", "rename", "hapusDeck", "simpanKartu", "hapusKartu", "bulk", "pilihFile", "submit", "template", "ekspor", "edit", "batalEdit", "terbit", "tarik", "pubSet", "pubKelas", "migrasi", "stOn", "stTarget", "stNama", "batalStage"]) window.DK[k] = () => {};
   installKeys(); applyFuri();
-  try { V.pubList = (await FB.deckPubIndex()).filter(x => ctx.guru || (x.aktif !== false && (x.semua || (x.kelas || []).includes(ctx.kelas)))); V.pubErr = ""; }
+  try { V.pubList = (await FB.deckPubIndex()).filter(x => ctx.guru || (x.aktif !== false && (x.semua || (x.kelas || []).includes(ctx.kelas) || (x.siswa || []).includes(ctx.uid)))); V.pubErr = ""; }
   catch (e) { V.pubList = null; V.pubErr = String((e && (e.code || e.message)) || e); }
   return `<div id="dk-root">${view()}</div>`;
 }
@@ -554,7 +563,7 @@ function buatDK() {
           d.cards.forEach(c => { const pr = m[c.id]; if (pr) { Object.assign(c, pr); if (!c.x) delete c.x; } });
         } else { d = await ST.get(id); if (!d) return toast("Deck tidak ditemukan"); d.cards = d.cards || []; }
         V.deck = d; V.id = id; V.view = "deck"; V.q = ""; V.page = 0; V.edit = null;
-        V.pubDraft = d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: [...(d.pub.kelas || [])] } : { aktif: true, semua: false, kelas: [] };
+        V.pubDraft = d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: [...(d.pub.kelas || [])], siswa: [...(d.pub.siswa || [])] } : { aktif: true, semua: false, kelas: [], siswa: [] };
         paint();
       } catch (e) { toast("❌ " + (e.message || e)); }
     },
@@ -681,22 +690,24 @@ function buatDK() {
     },
     // --- terbit ke kelas ---
     pubSet(k, v) { V.pubDraft[k] = v; paint(); },
+    pubSiswa(uid, on) { const pd = V.pubDraft; pd.siswa = pd.siswa || []; if (on && !pd.siswa.includes(uid)) pd.siswa.push(uid); if (!on) pd.siswa = pd.siswa.filter(x => x !== uid); const b = document.getElementById("dk-pubsiswa"); if (b) b.innerHTML = boxSiswa(pd); },
+    pubSiswaCari(v) { V.pubQ = v; const b = document.getElementById("dk-pubsiswa"); if (b) b.innerHTML = boxSiswa(V.pubDraft); },
     pubKelas(i, on) { const n = PUBNAMES[i], l = V.pubDraft.kelas; if (on && !l.includes(n)) l.push(n); if (!on) V.pubDraft.kelas = l.filter(x => x !== n); paint(); },
     async terbit() {
       if (LOKAL) return toast("Terbit butuh Firestore: publish aturan guru_deck & deck_kelas dulu");
       const d = V.deck, pd = V.pubDraft;
-      if (!pd.semua && !pd.kelas.length) return toast("Pilih minimal satu kelas, atau centang Semua siswa");
+      if (!pd.semua && !pd.kelas.length && !(pd.siswa || []).length) return toast("Pilih minimal satu kelas atau siswa, atau centang Semua siswa");
       const act = d.cards.filter(c => !c.x); if (!act.length) return toast("Tidak ada kartu yang dicentang untuk diterbitkan");
       const used = new Set(), cards = act.map(c => { let id = cid(c); while (used.has(id)) id += "_"; used.add(id); const o = { id, k: c.k }; ["y", "a", "c", "ca", "n", "t"].forEach(f => { if (c[f]) o[f] = c[f]; }); return o; });
       if (JSON.stringify(cards).length > MAXB) return toast("Deck terlalu besar untuk diterbitkan. Pecah jadi beberapa deck.");
-      const info = { nama: d.nama, kelas: [...pd.kelas], semua: !!pd.semua, aktif: pd.aktif !== false };
+      const info = { nama: d.nama, kelas: [...pd.kelas], siswa: [...(pd.siswa || [])], semua: !!pd.semua, aktif: pd.aktif !== false };
       V.busy = true; paint();
       try {
         await FB.deckPubPut(d.id, { ...info, cards });
         const list = (await FB.deckPubIndex()).filter(x => x.id !== d.id); list.push({ id: d.id, n: cards.length, ...info });
         await FB.deckPubSetIndex(list);
         d.pub = { ...info, n: cards.length, sig: sigOf(d), at: Date.now() }; await simpan();
-        toast(`✅ Diterbitkan: ${cards.length} kartu → ${info.semua ? "semua siswa" : info.kelas.join(", ")}`);
+        toast(`✅ Diterbitkan: ${cards.length} kartu → ${info.semua ? "semua siswa" : [...info.kelas, ...(info.siswa.length ? [info.siswa.length + " siswa"] : [])].join(", ")}`);
       } catch (e) { toast("❌ Gagal menerbitkan: " + (e.message || e)); }
       V.busy = false; paint();
     },
@@ -704,7 +715,7 @@ function buatDK() {
       const d = V.deck; if (!d.pub || !confirm(`Tarik deck "${d.nama}" dari siswa? Progres belajar siswa tetap tersimpan.`)) return;
       try {
         await FB.deckPubDelete(d.id); await FB.deckPubSetIndex((await FB.deckPubIndex()).filter(x => x.id !== d.id));
-        d.pub = null; V.pubDraft = { aktif: true, semua: false, kelas: [] }; await simpan(); toast("🚫 Deck ditarik dari siswa"); paint();
+        d.pub = null; V.pubDraft = { aktif: true, semua: false, kelas: [], siswa: [] }; await simpan(); toast("🚫 Deck ditarik dari siswa"); paint();
       } catch (e) { toast("❌ " + (e.message || e)); }
     },
     furi() { try { localStorage.setItem("shirose-haf-furi", furiOn() ? "0" : "1"); } catch (e) {} applyFuri(); const b = document.getElementById("dk-furi-btn"); if (b) { b.textContent = furiOn() ? "ふりがな ON" : "ふりがな OFF"; b.setAttribute("aria-pressed", String(furiOn())); } fit(); },
