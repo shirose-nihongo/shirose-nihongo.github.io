@@ -169,8 +169,8 @@ def main():
         for b, isi in blok.items():
             with open(os.path.join(OUT, f"{lv}-soal-{b}.json"), "w", encoding="utf-8") as f:
                 json.dump(isi, f, ensure_ascii=False, separators=(",", ":"))
-        dk = dokkai_jlpt(lv)
-        tulis(f"{lv}-dokkai.json", dk)
+        # Bacaan harian JLPT ditulis oleh tools/silabus_dokkai.py (soal unik, tanpa paket simulasi).
+        dk = json.load(open(os.path.join(OUT, f"{lv}-dokkai.json"), encoding="utf-8"))
         tot = {"kosakata": kos, "kanji": kan, "bunpo": bun}
         cov = {k: f"{sum(1 for x in v if x['id'] in pool)}/{len(v)}" for k, v in tot.items()}
         nq = sum(len(v) for v in pool.values())
