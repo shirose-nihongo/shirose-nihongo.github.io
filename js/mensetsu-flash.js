@@ -84,6 +84,7 @@ const MF = window.MF = {
     ttsStop(); const id = F.deck[F.i];
     if (hafal) { F.ok++; bayar("flash", F.key, id, XP_FLASH, KOIN_FLASH, { harian: true, cap: 100 }); }
     else { F.ulang++; F.deck.push(id); }   // kartu yang belum hafal muncul lagi di akhir
+    try { window.Chibi && window.Chibi.react(!!hafal); } catch (e) {}
     F.i++; F.open = false; ulangRender();
   },
 };

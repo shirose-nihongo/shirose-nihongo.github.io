@@ -1588,12 +1588,12 @@ import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
 import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261125c";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
-import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261120ex";
+import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261125d";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261125c";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 import { initHub, renderHub } from "./js/siswa-hub.js?v=20261123s";
-import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120ex";
+import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261125d";
 import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehHafalan } from "./js/deck-siswa.js?v=20261125a";
 window.bukaHafalan = async () => { if (await bolehHafalan()) route("anki"); else toast("🔒 Menu Hafalan dikunci guru. Hubungi guru untuk membuka akses."); };
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
@@ -2532,6 +2532,14 @@ function _updateFabNav(name){
   if (tb) document.documentElement.style.setProperty("--tb-h", tb.offsetHeight + "px");
 }
 
+/* Chibi di halaman yang tidak punya pemasangan sendiri: hiragana/katakana (hafalan & tes ada benar/salah → belajar),
+   mensetsu (latihan wawancara, tanpa benar/salah → jalan-jalan "ganbatte"; kartu hafalan mensetsu → belajar). */
+function _autoChibi(name){
+  try {
+    if (name === "kana-hafalan" || name === "kana-tes" || name === "mensetsu-flash") Chibi.mount("belajar");
+    else if (typeof name === "string" && name.startsWith("mensetsu-")) Chibi.mount("ujian");
+  } catch (e) {}
+}
 function _renderRoute(name, rest){
   const fn = routes[name] || renderHome;
   const app = document.getElementById("app");
@@ -2543,6 +2551,7 @@ function _renderRoute(name, rest){
   Promise.resolve(fn(rest)).then(html => {
     if (typeof html === "string") app.innerHTML = html;
     window.scrollTo(0, 0);
+    _autoChibi(name);
   }).catch(e => {
     app.innerHTML = `<div class="panel"><h2>Error</h2><p>${e.message || e}</p><button class="btn" onclick="route('home')">🏠 Kembali Home</button></div>`;
     console.error(e);

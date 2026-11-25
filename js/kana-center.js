@@ -706,7 +706,7 @@ const KC = window.KC = {
     o.n++; o.s = 1; o.t = now;
     if (ok) { o.ok++; o.box = Math.min(5, o.box + 1); o.due = now + INTERVAL[o.box] * DAY; o.m = o.box >= 3 ? 1 : 0; FC.ok++; }
     else { o.ng++; o.box = 0; o.due = now; o.m = 0; FC.ng++; FC.q.splice(Math.min(FC.q.length, FC.i + 5), 0, { t: c.t, k: c.k, again: true }); }
-    touch(); FC.i++; FC.shown = false; paintFlash();
+    touch(); FC.i++; FC.shown = false; paintFlash(); try { window.Chibi && window.Chibi.react(!!ok); } catch (e) {}
   },
   fcRepeat() { const c = FC.q[FC.i]; if (!c) return; FC.rep++; FC.q.splice(Math.min(FC.q.length, FC.i + 4), 0, { t: c.t, k: c.k, again: true }); FC.i++; FC.shown = false; paintFlash(); },
   fcNext() { FC.i++; FC.shown = false; paintFlash(); },
@@ -725,7 +725,7 @@ const KC = window.KC = {
     if (TQ.qs.length < 4) { toast("Soal belum cukup untuk pengaturan ini"); return; }
     Object.assign(TQ, { i: 0, answers: [], t0: Date.now(), phase: "run" }); paintTest();
   },
-  tqAnswer(i) { if (TQ.answers[TQ.i] != null) return; TQ.answers[TQ.i] = i; const q = TQ.qs[TQ.i]; const o = pk(q.t, q.k); if (q.type !== "C") { o.s = 1; touch(); } paintTest(); },
+  tqAnswer(i) { if (TQ.answers[TQ.i] != null) return; TQ.answers[TQ.i] = i; const q = TQ.qs[TQ.i]; const o = pk(q.t, q.k); if (q.type !== "C") { o.s = 1; touch(); } paintTest(); try { window.Chibi && window.Chibi.react(i === q.correct); } catch (e) {} },
   tqNext() {
     if (TQ.i + 1 >= TQ.qs.length) {
       const total = TQ.qs.length, benar = TQ.answers.filter((a, i) => a === TQ.qs[i].correct).length;
