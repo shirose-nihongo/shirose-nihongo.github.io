@@ -53,7 +53,7 @@ const simpanTunda = () => { clearTimeout(_tm); _tm = setTimeout(async () => { tr
 const simpan = async () => {
   const d = V.deck;
   if (V.ro) {   // siswa: hanya progres SRS pribadi yang disimpan (isi deck milik guru, tidak berubah)
-    const m = {}; d.cards.forEach(c => { if (c.r || c.l || c.due) m[c.id] = { iv: c.iv, ez: c.ez, r: c.r, l: c.l, due: c.due, last: c.last }; });
+    const m = {}; d.cards.forEach(c => { if (c.r || c.l || c.due || c.x) m[c.id] = { iv: c.iv, ez: c.ez, r: c.r, l: c.l, due: c.due, last: c.last, x: c.x ? 1 : 0 }; });
     await FB.deckProgresSet(d.id, JSON.parse(JSON.stringify(m))); return;
   }
   await ST.put(d); const m = meta(d); IDX = [...IDX.filter(x => x.id !== d.id), m]; await ST.setIndex(IDX);
@@ -210,6 +210,24 @@ const CSS = `<style>
 .dk-frm{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;}
 .dk-frm input,.dk-frm textarea,.dk-ta{padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--navy-4);color:var(--white);font:14px var(--font-sans);width:100%;}
 .dk-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+/* tombol pilihan: yang sedang dipilih tetap terlihat — tepi hijau tebal + centang + latar hijau */
+.btn-chip{position:relative;border-width:2px;transition:background .12s,border-color .12s;}
+.btn-chip.on{background:rgba(16,185,129,.22);border-color:var(--green);color:#fff;font-weight:800;box-shadow:inset 7px 0 0 var(--green);padding-left:22px;}
+.btn-chip.on::before{content:"✓ ";color:var(--green);font-weight:900;}
+button[aria-pressed="true"].btn.ghost.sm{background:rgba(16,185,129,.22);border-color:var(--green);box-shadow:inset 6px 0 0 var(--green);padding-left:16px;font-weight:800;}
+/* baris kartu: seluruh baris bisa diketuk */
+tr.dk-pick{cursor:pointer;user-select:none;-webkit-user-select:none;transition:background .1s;}
+tr.dk-pick.on{box-shadow:inset 6px 0 0 var(--green);background:rgba(16,185,129,.12);}
+tr.dk-pick.off{opacity:.5;box-shadow:inset 6px 0 0 transparent;}
+tr.dk-pick:hover{background:rgba(255,255,255,.08);}
+tr.dk-pick td{padding-top:10px;padding-bottom:10px;}
+.dk-ck{width:48px;text-align:center;}
+.dk-tags{margin-bottom:12px;padding:10px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--border);}
+.dk-tag{display:inline-flex;border-radius:999px;border:2px solid var(--border);overflow:hidden;background:var(--navy-2);}
+.dk-tag button{background:none;border:none;color:var(--white);cursor:pointer;font:600 14px var(--font-sans);padding:8px 12px;min-height:40px;}
+.dk-tag.on{border-color:var(--green);background:rgba(16,185,129,.22);box-shadow:inset 6px 0 0 var(--green);}
+.dk-tag.half{border-color:#f59e0b;box-shadow:inset 6px 0 0 #f59e0b;}
+.dk-tag .dk-tag-o{border-left:1px solid var(--border);padding:8px 10px;}
 .dk-furi rt{display:none;font-size:.45em;font-weight:600;color:var(--pink-light,#f9a8c9);} body.dk-furi-on .dk-furi rt{display:revert;}
 .flash-stage{position:relative;min-height:min(68vh,520px);display:flex;align-items:center;justify-content:center;margin:10px 0 18px;overflow:visible;user-select:none;-webkit-user-select:none;touch-action:pan-y;}
 .flash-card{position:relative;width:100%;max-width:520px;height:clamp(380px,62vh,500px);overflow-x:hidden;overflow-y:auto;box-sizing:border-box;background:linear-gradient(160deg,rgba(42,50,112,.85),rgba(22,27,54,.85));border:1px solid var(--border);border-radius:24px;padding:32px 24px;text-align:center;box-shadow:0 12px 44px rgba(0,0,0,.4);transition:transform .25s ease,box-shadow .25s ease,opacity .25s ease;cursor:pointer;will-change:transform,opacity;display:flex;flex-direction:column;align-items:center;justify-content:center;}
@@ -314,6 +332,14 @@ function viewStage() {
     <div class="dk-row"><button class="btn" onclick="DK.submit()" ${V.busy ? "disabled" : ""}>${V.busy ? "Menyimpan…" : "✅ Submit ke deck"}</button><button class="btn ghost" onclick="DK.batalStage()">Batal</button></div></div>`;
 }
 
+/* Pilih per tag: ketuk chip = seluruh kartu tag itu ikut/tidak ikut dihafalkan; 🎯 = hafalkan HANYA tag itu. */
+const tagList = d => { const m = new Map(); d.cards.forEach(c => { const t = String(c.t || "").trim() || "(tanpa tag)"; const e = m.get(t) || { t, n: 0, on: 0 }; e.n++; if (!c.x) e.on++; m.set(t, e); }); return [...m.values()].sort((a, b) => a.t.localeCompare(b.t, "id")); };
+const tagBar = d => {
+  const L = tagList(d); if (L.length < 2) return "";
+  return `<div class="dk-tags"><div class="dk-sm" style="margin-bottom:6px;"><b>Pilih per tag</b> — ketuk tag = seluruh kartu tag itu dihafalkan / dilepas. 🎯 = hafalkan hanya tag itu.</div>
+    <div class="dk-row">${L.map(e => { const st = e.on === e.n ? "on" : e.on ? "half" : ""; const k = encodeURIComponent(e.t);
+      return `<span class="dk-tag ${st}"><button class="dk-tag-b" onclick="DK.tagAktif(decodeURIComponent('${k}'))" aria-pressed="${st === "on"}">${st === "on" ? "✓ " : st === "half" ? "◐ " : ""}${esc(e.t)} <small>${e.on}/${e.n}</small></button><button class="dk-tag-o" title="Hafalkan hanya tag ini" onclick="DK.tagSaja(decodeURIComponent('${k}'))">🎯</button></span>`; }).join("")}</div></div>`;
+};
 function viewDeck() {
   const ro = V.ro, d = V.deck, h = hitung(d), cfg = V.cfg;
   const q = V.q.trim().toLowerCase();
@@ -321,7 +347,7 @@ function viewDeck() {
   const cmp = { kana: (a, b) => String(a.c.y || a.c.k).localeCompare(String(b.c.y || b.c.k), "ja"), arti: (a, b) => String(a.c.a).localeCompare(String(b.c.a), "id"), tag: (a, b) => String(a.c.t).localeCompare(String(b.c.t), "id") || a.i - b.i }[V.sort];
   if (cmp) all.sort(cmp);
   const per = 50, pages = Math.max(1, Math.ceil(all.length / per)), pg = Math.min(V.page, pages - 1);
-  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr${ro ? "" : ` onclick="DK.aktif(${i},${c.x ? "true" : "false"})" style="cursor:pointer;${c.x ? "opacity:.5;" : "box-shadow:inset 5px 0 0 var(--green);"}"`}>${ro ? "" : `<td><input type="checkbox" style="width:26px;height:26px;pointer-events:none;accent-color:var(--green);" ${c.x ? "" : "checked"} tabindex="-1"></td>`}
+  const rows = all.slice(pg * per, pg * per + per).map(({ c, i }) => `<tr class="dk-pick ${c.x ? "off" : "on"}" onclick="DK.aktif(${i},${c.x ? "true" : "false"})" role="checkbox" aria-checked="${c.x ? "false" : "true"}"><td class="dk-ck"><input type="checkbox" style="width:26px;height:26px;pointer-events:none;accent-color:var(--green);" ${c.x ? "" : "checked"} tabindex="-1"></td>
       <td style="font-family:var(--font-jp);font-size:16px;">${esc(pk(c))}</td><td>${esc(c.y)}</td><td>${esc(c.a)}</td>
       <td class="dk-sm">${esc(c.c)}</td><td class="dk-sm">${esc(c.t)}</td>
       ${ro ? "" : `      <td style="white-space:nowrap;" onclick="event.stopPropagation()"><button class="btn sm ghost" onclick="DK.edit(${i})">✏️</button> <button class="btn sm ghost" onclick="DK.hapusKartu(${i})">🗑</button></td>`}</tr>`).join("");
@@ -329,7 +355,7 @@ function viewDeck() {
   const cEd = ed !== null && ed >= 0 ? d.cards[ed] : null;
   const fv = f => esc(cEd ? cEd[f] || "" : "");
   const srcN = { due: h.due + h.baru, semua: h.on, lemah: h.lemah };
-  const stat = `${ro ? "" : `<span class="chip on">Dihafalkan ${h.on}/${h.n}</span>`}<span class="chip on">Baru ${h.baru}</span><span class="chip" style="background:#f59e0b;">Jatuh tempo ${h.due}</span><span class="chip" style="background:#ef4444;">Lemah ${h.lemah}</span><span class="chip on" style="background:#6366f1;">Hafal ${h.hafal}</span>`;
+  const stat = `<span class="chip on">Dihafalkan ${h.on}/${h.n}</span><span class="chip on">Baru ${h.baru}</span><span class="chip" style="background:#f59e0b;">Jatuh tempo ${h.due}</span><span class="chip" style="background:#ef4444;">Lemah ${h.lemah}</span><span class="chip on" style="background:#6366f1;">Hafal ${h.hafal}</span>`;
   const sumberTombol = (cfg.mode === "flash" ? [["due", "📅 Jadwal Anki"], ["semua", "Semua"], ["lemah", "Lemah"]] : [["semua", "Semua"], ["lemah", "Lemah"]])
     .map(([k, t]) => chip((cfg.mode !== "flash" && cfg.sumber === "due" ? "semua" : cfg.sumber) === k, `DK.cfg('sumber','${k}')`, `${t} (${srcN[k]})`)).join("");
   return `<div class="dk-row" style="margin-bottom:12px;">
@@ -366,9 +392,10 @@ function viewDeck() {
     <div class="panel"><h2>📇 Kartu <small style="font-size:12px;color:var(--gray);font-weight:400;">${all.length}${q ? "/" + h.n : ""}</small></h2>
       <div class="dk-row" style="margin-bottom:10px;"><input placeholder="Cari kata / arti / tag…" value="${esc(V.q)}" onchange="DK.cari(this.value)" style="max-width:260px;">
         <select onchange="DK.urutTabel(this.value)" title="Urutkan daftar">${[["asli", "🔢 Urutan masuk"], ["kana", "あ→ん Kana"], ["arti", "A→Z Arti"], ["tag", "🏷 Tag"]].map(([k, t]) => `<option value="${k}" ${V.sort === k ? "selected" : ""}>${t}</option>`).join("")}</select>
-        ${ro ? "" : `        <button class="btn sm ghost" onclick="DK.pilihSemua(true)">☑ Centang semua${q ? " hasil" : ""}</button><button class="btn sm ghost" onclick="DK.pilihSemua(false)">☐ Kosongkan${q ? " hasil" : ""}</button>${q ? `<button class="btn sm ghost" onclick="DK.hanyaTampil()" title="Hanya kartu hasil pencarian ini yang dihafalkan">🎯 Hafalkan hanya hasil ini</button>` : ""}`}</div>
-      ${ro ? "" : `      <div class="dk-sm" style="margin-bottom:8px;"><b>Ketuk kartu</b> = centang / batal centang (hijau = ikut dihafalkan, ${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>`}
-      <div class="table-wrap"><table><thead><tr>${ro ? "" : "<th title=\"Ikut dihafalkan?\">Hafal?</th>"}<th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th>${ro ? "" : "<th></th>"}</tr></thead><tbody>${rows || `<tr><td colspan="${ro ? 5 : 7}" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
+        ${`        <button class="btn sm ghost" onclick="DK.pilihSemua(true)">☑ Centang semua${q ? " hasil" : ""}</button><button class="btn sm ghost" onclick="DK.pilihSemua(false)">☐ Kosongkan${q ? " hasil" : ""}</button>${q ? `<button class="btn sm ghost" onclick="DK.hanyaTampil()" title="Hanya kartu hasil pencarian ini yang dihafalkan">🎯 Hafalkan hanya hasil ini</button>` : ""}`}</div>
+      ${tagBar(d)}
+      ${`      <div class="dk-sm" style="margin-bottom:8px;"><b>Ketuk kartu</b> = centang / batal centang (hijau = ikut dihafalkan, ${h.on} dari ${h.n} kartu). Tips: cari tag/bab lalu "Hafalkan hanya hasil ini".</div>`}
+      <div class="table-wrap"><table><thead><tr><th title="Ikut dihafalkan?">Hafal?</th><th>Kata</th><th>Kana</th><th>Arti</th><th>Contoh</th><th>Tag</th>${ro ? "" : "<th></th>"}</tr></thead><tbody>${rows || `<tr><td colspan="${ro ? 6 : 7}" style="color:var(--gray);">Belum ada kartu.</td></tr>`}</tbody></table></div>
       ${pages > 1 ? `<div class="dk-row" style="margin-top:10px;"><button class="btn sm ghost" ${pg ? "" : "disabled"} onclick="DK.page(${pg - 1})">‹</button><span class="dk-sm">${pg + 1} / ${pages}</span><button class="btn sm ghost" ${pg < pages - 1 ? "" : "disabled"} onclick="DK.page(${pg + 1})">›</button></div>` : ""}</div>`;
 }
 
@@ -508,7 +535,7 @@ export async function renderDeckTab(fb, ctx) {
 export async function renderDeckSiswa(fb, ctx) {
   FB = fb; CTX = ctx; V.ro = true; V.view = "list"; V.deck = null; V.S = null; V.edit = null; V.stage = null; V.q = ""; V.page = 0; V.sort = "asli";
   window.DK = buatDK();
-  for (const k of ["baru", "rename", "hapusDeck", "simpanKartu", "hapusKartu", "bulk", "pilihFile", "submit", "template", "ekspor", "edit", "batalEdit", "aktif", "pilihSemua", "hanyaTampil", "lewati", "terbit", "tarik", "pubSet", "pubKelas", "migrasi", "stOn", "stTarget", "stNama", "batalStage"]) window.DK[k] = () => {};
+  for (const k of ["baru", "rename", "hapusDeck", "simpanKartu", "hapusKartu", "bulk", "pilihFile", "submit", "template", "ekspor", "edit", "batalEdit", "terbit", "tarik", "pubSet", "pubKelas", "migrasi", "stOn", "stTarget", "stNama", "batalStage"]) window.DK[k] = () => {};
   installKeys(); applyFuri();
   try { V.pubList = (await FB.deckPubIndex()).filter(x => ctx.guru || (x.aktif !== false && (x.semua || (x.kelas || []).includes(ctx.kelas)))); V.pubErr = ""; }
   catch (e) { V.pubList = null; V.pubErr = String((e && (e.code || e.message)) || e); }
@@ -524,7 +551,7 @@ function buatDK() {
         if (V.ro) {
           d = await FB.deckPubGet(id); if (!d) return toast("Deck tidak tersedia");
           d.cards = d.cards || []; let m = {}; try { m = await FB.deckProgresGet(id); } catch (e) {}
-          d.cards.forEach(c => { const pr = m[c.id]; if (pr) Object.assign(c, pr); });
+          d.cards.forEach(c => { const pr = m[c.id]; if (pr) { Object.assign(c, pr); if (!c.x) delete c.x; } });
         } else { d = await ST.get(id); if (!d) return toast("Deck tidak ditemukan"); d.cards = d.cards || []; }
         V.deck = d; V.id = id; V.view = "deck"; V.q = ""; V.page = 0; V.edit = null;
         V.pubDraft = d.pub ? { aktif: d.pub.aktif !== false, semua: !!d.pub.semua, kelas: [...(d.pub.kelas || [])] } : { aktif: true, semua: false, kelas: [] };
@@ -626,6 +653,15 @@ function buatDK() {
       const q = V.q.trim().toLowerCase();
       V.deck.cards.forEach(c => { if (!q || [c.k, c.y, c.a, c.c, c.t, c.n].join(" ").toLowerCase().includes(q)) { if (on) delete c.x; else c.x = 1; } });
       simpanTunda(); const y = window.scrollY; paint(); window.scrollTo(0, y);
+    },
+    tagAktif(t) {
+      const cs = V.deck.cards.filter(c => (String(c.t || "").trim() || "(tanpa tag)") === t); const semua = cs.every(c => !c.x);
+      cs.forEach(c => { if (semua) c.x = 1; else delete c.x; });
+      simpanTunda(); const y = window.scrollY; paint(); window.scrollTo(0, y);
+    },
+    tagSaja(t) {
+      V.deck.cards.forEach(c => { if ((String(c.t || "").trim() || "(tanpa tag)") === t) delete c.x; else c.x = 1; });
+      simpanTunda(); const y = window.scrollY; paint(); window.scrollTo(0, y); toast("🎯 Hanya tag \"" + t + "\" yang dihafalkan");
     },
     hanyaTampil() {
       const q = V.q.trim().toLowerCase();

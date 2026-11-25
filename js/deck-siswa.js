@@ -16,7 +16,7 @@ export async function bolehHafalan() {
 export const DECK_ROUTES = {
   anki: async () => {
     if (!(await bolehHafalan())) return `<div class="panel"><h2>🔒 Hafalan dikunci</h2><div class="empty"><div class="emoji">🔒</div>Gurumu belum membuka menu Hafalan untuk akunmu atau kelasmu.<br>Hubungi guru untuk membukanya.</div><button class="btn" onclick="route('pilih-level')">← Kembali</button></div>`;
-    const m = await import("./deck-teacher.js?v=20261124h");
+    const m = await import("./deck-teacher.js?v=20261125a");
     return m.renderDeckSiswa(FB, { toast: t => (window.toast ? window.toast(t) : console.log(t)), kelas: String((S().siswa && S().siswa.kelas) || "").trim(), guru: FB.userIsGuru() });
   },
 };
