@@ -907,6 +907,23 @@ export async function saveKanaProgres(data) {
     { ...data, uid: currentUser.uid, updated: serverTimestamp() });
 }
 
+/* ========== SILABUS HARIAN ==========
+ * siswa/{uid}/silabus/{lv}  progres silabus harian (lv = n5..n1 | jft), lihat js/silabus-harian.js.
+ * Sub-koleksi milik siswa — tercakup rules {sub}/{docId} yang sudah ada.
+ */
+export async function loadSilabusProgres(lv, uidOverride = null) {
+  const id = uidOverride || currentUser?.uid;
+  if (!id) return null;
+  if (uidOverride && uidOverride !== currentUser?.uid && !userIsGuru()) throw new Error("Tidak diizinkan");
+  const snap = await getDoc(doc(db, "siswa", id, "silabus", lv));
+  return snap.exists() ? snap.data() : null;
+}
+export async function saveSilabusProgres(lv, data) {
+  if (!currentUser) return;
+  await setDoc(doc(db, "siswa", currentUser.uid, "silabus", lv),
+    { ...data, uid: currentUser.uid, updated: serverTimestamp() });
+}
+
 /* ========== SSW 特定技能 ==========
  * ssw_bidang/{slug}            konfigurasi bidang (guru menulis, siswa terdaftar membaca):
  *                              { nama, jp, aktif, urut, tema, gambar, hasContent, bab:{babId:"draft|published|hidden"} }

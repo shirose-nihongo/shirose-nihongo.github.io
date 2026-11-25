@@ -1,0 +1,288 @@
+# Contoh kalimat kosakata N3 (data/kosakata-n3.json)
+# Format:
+#   no|contoh|arti_contoh                     ← contoh kalimat (tanpa furigana; furigana ditambah otomatis)
+#   !no|kata|kana|arti                        ← perbaikan data (kosong = tidak diubah)
+#   +no|kata|kana|arti|contoh|arti_contoh     ← entri yang hilang dari data asli (disisipkan urut nomor)
+# Furigana manual boleh ditulis langsung: 今日[きょう]. Diterapkan oleh tools/n3_contoh.py.
+1|冷めたお弁当を電子レンジで温めました。|Saya menghangatkan bekal yang sudah dingin dengan microwave.
+2|このレバーを上げると、水が出ます。|Kalau tuas ini dinaikkan, airnya keluar.
+3|母は台所で夕食を作っています。|Ibu sedang membuat makan malam di dapur.
+4|ボールが当たって、窓ガラスが割れてしまった。|Bola mengenai jendela dan kacanya pecah.
+5|家族はみんな居間でテレビを見ています。|Seluruh keluarga sedang menonton TV di ruang tamu.
+!6|||mangkuk nasi
+6|ご飯は茶わんに軽く一杯で十分です。|Nasi satu mangkuk kecil saja sudah cukup.
+7|ガスコンロの火を消し忘れないでください。|Jangan lupa mematikan api kompor gas.
+8|お客さんにコーヒーカップを二つ出した。|Saya mengeluarkan dua cangkir kopi untuk tamu.
+9|牛乳は冷蔵庫に入れておいてね。|Susunya taruh di kulkas, ya.
+10|料理はキッチンで、食事はリビングでします。|Memasak di dapur, makan di ruang tamu.
+!11|||bak cuci piring (sink)
+11|使ったお皿は流しに置いておいてください。|Piring yang sudah dipakai taruh saja di bak cuci.
+12|割れやすいので、ワイングラスは丁寧に洗ってください。|Gelas anggur mudah pecah, jadi cucilah dengan hati-hati.
+!13|||cangkir teh (tanpa pegangan)
+13|祖父は毎朝、湯のみでお茶を飲みます。|Kakek setiap pagi minum teh dengan cangkir teh.
+14|ガラスのコップに冷たい水を入れた。|Saya menuangkan air dingin ke gelas kaca.
+!15|||daun penutup jendela (dari luar)
+15|台風が来るので、雨戸を閉めておきましょう。|Topan akan datang, jadi mari kita tutup daun jendelanya.
+!16|||memutar keran air
+16|水道の蛇口をひねっても、水が出ない。|Meskipun keran air diputar, airnya tidak keluar.
+17|肉は冷凍して保存すれば、一[いっ]か月[げつ]は大丈夫です。|Kalau daging dibekukan untuk disimpan, satu bulan pun aman.
+18|今朝は寒くて、池の水が凍っていた。|Pagi ini dingin sekali, air kolamnya membeku.
+19|水は0度で氷になる。|Air menjadi es pada suhu 0 derajat.
+!20||のこりものをあたためる|
+20|昼ご飯は、昨日の残り物を温めて食べた。|Untuk makan siang, saya menghangatkan sisa makanan kemarin lalu memakannya.
+21|コンセントにプラグを差し込んでください。|Tolong colokkan stekernya ke stop kontak.
+22|掃除機のコードが短くて、奥まで届かない。|Kabel penyedot debunya pendek, jadi tidak sampai ke ujung ruangan.
+23|寒いので、ヒーターをつけてもいいですか。|Dingin, bolehkah saya menyalakan penghangat?
+24|リビングに新しいカーペットを買った。|Saya membeli karpet baru untuk ruang tamu.
+25|暑いから、エアコンの温度を下げよう。|Panas, ayo turunkan suhu AC-nya.
+26|子どもが床におもちゃを広げて遊んでいる。|Anak-anak bermain dengan menyebarkan mainan di lantai.
+!27|||kasa nyamuk pada pintu/jendela
+27|網戸があるので、窓を開けても虫が入らない。|Karena ada kasa nyamuk, serangga tidak masuk meskipun jendela dibuka.
+!28|||langit-langit
+28|この部屋は天井が高くて、広く見える。|Langit-langit kamar ini tinggi, jadi terlihat luas.
+29|寒くなってきたから、暖房をつけましょう。|Sudah mulai dingin, ayo nyalakan pemanas ruangan.
+!30|||banyak terkena sinar matahari
+30|この部屋は日当たりがいいので、冬でも暖かい。|Kamar ini banyak kena sinar matahari, jadi hangat bahkan di musim dingin.
+!31|||AC (pendingin) bekerja dengan baik / terasa dingin
+31|電車の中は冷房が効いていて、少し寒いくらいだ。|Di dalam kereta AC-nya dingin sekali, sampai agak kedinginan.
+!32|||kurang terkena sinar matahari
+32|日当たりが悪い部屋は、洗濯物がなかなか乾かない。|Di kamar yang kurang kena sinar matahari, cucian lama keringnya.
+33|冬になったので、床にじゅうたんを敷いた。|Karena sudah musim dingin, saya menggelar karpet di lantai.
+!34||へやをあたためる|
+34|お客さんが来る前に、部屋を暖めておこう。|Ayo hangatkan ruangan sebelum tamu datang.
+!35|||menyalakan (alat listrik)
+35|パソコンの電源を入れても、画面が暗いままだ。|Meskipun komputer sudah dinyalakan, layarnya tetap gelap.
+!36|||mematikan (alat listrik)
+36|出かける前に、テレビの電源を切ってください。|Sebelum pergi, tolong matikan TV-nya.
+37|パーティーのために、ビールを冷やしておいた。|Saya sudah mendinginkan bir untuk pesta.
+!38|||birnya sudah dingin
+38|冷蔵庫にビールが冷えているよ。|Ada bir yang sudah dingin di kulkas, lho.
+39|エアコンのリモコンがどこにも見当たらない。|Remot AC-nya tidak ketemu di mana pun.
+40|部屋が暗いので、電気のスイッチを入れた。|Ruangannya gelap, jadi saya menekan sakelar lampu.
+41|砂糖を小さじ一杯入れてください。|Masukkan gula satu sendok teh.
+42|しょうゆを大さじ二杯[にはい]加えます。|Tambahkan kecap asin dua sendok makan.
+!43||まないた|
+43|野菜を切る前に、まな板をきれいに洗った。|Sebelum memotong sayuran, saya mencuci talenan sampai bersih.
+44|小麦粉をはかりで200グラム量ってください。|Timbang tepung terigu 200 gram dengan timbangan.
+!45|||sake; minuman beralkohol
+45|料理に酒を少し入れると、おいしくなる。|Kalau masakan diberi sedikit sake, rasanya jadi enak.
+46|包丁を使うときは、指に気をつけてね。|Kalau memakai pisau, hati-hati dengan jarimu, ya.
+!47|||minyak sayur (salad oil)
+47|フライパンにサラダ油を少し入れて温めます。|Masukkan sedikit minyak sayur ke wajan lalu panaskan.
+!48|||minyak untuk menggoreng tempura
+48|天ぷら油は何回か使ってから捨てます。|Minyak tempura dibuang setelah dipakai beberapa kali.
+49|米を１カップ、水を１カップ半入れます。|Masukkan satu gelas beras dan satu setengah gelas air.
+50|このボトルには１リットルの水が入る。|Botol ini muat satu liter air.
+51|この料理には特別な調味料は必要ありません。|Masakan ini tidak memerlukan bumbu khusus.
+52|サラダに酢を少しかけると、さっぱりする。|Kalau salad diberi sedikit cuka, rasanya jadi segar.
+53|今日の夕食のおかずは焼き魚です。|Lauk makan malam hari ini ikan bakar.
+54|毎日の食事は、栄養のバランスを考えて作っています。|Makanan sehari-hari saya buat dengan memikirkan keseimbangan gizi.
+55|残ったご飯をラップでくるんで、冷凍した。|Nasi sisa saya bungkus dengan plastik wrap lalu dibekukan.
+56|お皿にラップをかけて、冷蔵庫に入れた。|Saya menutup piring dengan plastik wrap lalu memasukkannya ke kulkas.
+57|カロリーが高い食品は、なるべく食べないようにしている。|Saya berusaha sebisa mungkin tidak makan makanan berkalori tinggi.
+58|カレーに入れるじゃがいもは大きめに切ってください。|Kentang untuk kari tolong dipotong agak besar.
+59|まず、材料を細かく刻みます。|Pertama, cincang bahan-bahannya halus-halus.
+60|魚をアルミホイルで包んで焼いた。|Saya membungkus ikan dengan aluminium foil lalu memanggangnya.
+!61||しおをしょうしょういれる|memasukkan sedikit garam
+61|スープに塩を少々入れて、味をととのえます。|Masukkan sedikit garam ke sup untuk menyesuaikan rasanya.
+!62|||sup miso menjadi suam-suam kuku (tidak panas lagi)
+62|話しているうちに、味噌汁がぬるくなってしまった。|Sambil mengobrol, sup misonya jadi tidak panas lagi.
+63|荷物の重さをはかりで量った。|Saya menimbang berat barang dengan timbangan.
+64|大根を３センチ幅に切ってください。|Potong lobak dengan lebar 3 cm.
+65|りんごの皮をむいて、子どもに食べさせた。|Saya mengupas kulit apel lalu memberikannya kepada anak.
+!66|||mendidihkan air
+66|お茶を入れるので、お湯を沸かしてください。|Saya mau membuat teh, tolong didihkan air.
+67|赤ちゃんのミルクを作るときは、お湯を冷ましてから使います。|Saat membuat susu bayi, air panasnya didinginkan dulu sebelum dipakai.
+68|大きな鍋でカレーをたくさん作った。|Saya membuat kari banyak-banyak dengan panci besar.
+!69|||tutup (panci, botol, dll.)
+69|鍋にふたをして、十分ぐらい煮ます。|Tutup pancinya lalu rebus kira-kira sepuluh menit.
+70|おたまでスープをお皿に入れてください。|Tuangkan sup ke piring dengan centong.
+71|フライパンで卵を焼きました。|Saya menggoreng telur dengan wajan.
+72|フライ返しで魚をそっと裏返した。|Saya membalik ikan pelan-pelan dengan spatula.
+73|炊飯器のスイッチを入れ忘れて、ご飯が炊けていなかった。|Saya lupa menyalakan penanak nasi, jadi nasinya belum matang.
+74|しゃもじでご飯を混ぜてから、茶わんによそう。|Aduk nasi dengan sendok nasi, lalu sendokkan ke mangkuk.
+!75|||air mendidih
+75|お湯が沸いたら、パスタを入れてください。|Kalau airnya sudah mendidih, masukkan pastanya.
+76|電話をしているうちに、お湯が冷めてしまった。|Sambil menelepon, airnya jadi dingin.
+77|材料を入れたら、なべを火にかけます。|Setelah bahan dimasukkan, letakkan panci di atas api.
+!78||ごはんをたく|
+78|毎朝六時に起きて、ご飯を炊いています。|Setiap pagi saya bangun jam enam dan menanak nasi.
+79|フライパンで油を熱してから、肉を入れます。|Panaskan minyak di wajan, lalu masukkan dagingnya.
+80|さつまいもを二十分ぐらい蒸すと、甘くなります。|Kalau ubi dikukus sekitar dua puluh menit, rasanya jadi manis.
+81|野菜を洗ったら、よく水を切ってください。|Setelah sayuran dicuci, tiriskan airnya baik-baik.
+!82||あぶらであげる|
+82|えびに衣をつけて、油で揚げます。|Udang dibalut adonan lalu digoreng dengan minyak.
+83|じゃがいもとにんじんを、しょうゆと砂糖で煮た。|Saya merebus kentang dan wortel dengan kecap asin dan gula.
+!84||まぜる|
+84|卵と砂糖をよく混ぜてください。|Campur telur dan gula sampai rata.
+85|卵を十分[じゅっぷん]ゆでると、かたくなります。|Kalau telur direbus sepuluh menit, jadi keras.
+86|話に夢中になっていたら、魚が焦げてしまった。|Karena asyik mengobrol, ikannya gosong.
+87|玉ねぎを茶色になるまで炒めます。|Tumis bawang bombai sampai kecokelatan.
+!88|||membumbui; memberi rasa
+88|最後に塩とこしょうで味をつけます。|Terakhir, bumbui dengan garam dan merica.
+!89|||membalik (bagian bawah jadi di atas)
+89|片面が焼けたら、肉をひっくり返してください。|Kalau satu sisinya sudah matang, balik dagingnya.
+90|味が薄かったら、塩を加えてください。|Kalau rasanya hambar, tambahkan garam.
+!91|||menaburkan merica
+91|焼く前に、肉にこしょうを振っておきます。|Sebelum dipanggang, taburi daging dengan merica.
+92|この漬物はちょっと塩からいね。|Acar ini agak asin, ya.
+93|この店のラーメンは味が濃くて、水がたくさん欲しくなる。|Ramen di toko ini rasanya pekat, jadi ingin minum banyak air.
+94|病院の食事は味が薄くて、あまりおいしくない。|Makanan rumah sakit rasanya hambar, kurang enak.
+!95|||jadi; selesai (masakan, barang buatan)
+95|ケーキができあがったら、みんなで食べましょう。|Kalau kuenya sudah jadi, ayo kita makan bersama.
+96|塩を入れる前に、ちょっと味見をしてみて。|Sebelum memasukkan garam, coba cicipi dulu.
+97|このみかんはまだ酸っぱい。|Jeruk ini masih asam.
+!98|||pedas
+98|私は辛[から]い料理があまり得意ではありません。|Saya kurang kuat makan masakan pedas.
++99|エプロンをする／かける／つける|エプロンをする／かける／つける|memakai celemek|料理をする前に、エプロンをしてください。|Sebelum memasak, pakailah celemek.
+!100|||memindahkan (menyingkirkan) sofa
+100|掃除機をかけるために、ソファーをどけた。|Saya memindahkan sofa untuk menyedot debu.
+101|エプロンが汚れたので、洗濯した。|Celemeknya kotor, jadi saya mencucinya.
+102|玄関の前をほうきできれいにした。|Saya membersihkan depan pintu masuk dengan sapu.
+103|集めたごみをちりとりに入れてください。|Masukkan sampah yang sudah dikumpulkan ke pengki.
+104|ぞうきんで窓をふきました。|Saya mengelap jendela dengan kain lap.
+105|バケツに水を入れて、車を洗った。|Saya mengisi ember dengan air lalu mencuci mobil.
+!106||へやをちらかす|
+106|弟はいつも部屋を散らかしたまま出かける。|Adik laki-laki saya selalu pergi dengan kamar dibiarkan berantakan.
+107|お客さんが来るので、急いで部屋を片付けた。|Tamu akan datang, jadi saya buru-buru merapikan kamar.
+108|ちょっとどいてくれる？そこを掃除したいんだ。|Bisa minggir sebentar? Saya mau membersihkan situ.
+109|机の上が散らかっていて、どこに何があるかわからない。|Meja berantakan, jadi tidak tahu apa ada di mana.
+!110|||(menjadi) rapi; beres
+110|やっと仕事が片付いたので、家に帰ります。|Pekerjaan akhirnya beres, jadi saya pulang.
+111|子どもがジュースをこぼして、服が汚れた。|Anak menumpahkan jus, bajunya jadi kotor.
+!112|||menyedot debu dengan vacuum cleaner
+112|週に二回、部屋に掃除機をかけています。|Saya menyedot debu kamar dua kali seminggu.
+113|しばらく掃除しなかったら、部屋の隅にほこりがたまった。|Karena lama tidak dibersihkan, debu menumpuk di sudut kamar.
+114|使っていない本棚の上に、ほこりがつもっている。|Debu menumpuk di atas rak buku yang tidak dipakai.
+115|エアコンのほこりを取ったら、風がよく出るようになった。|Setelah debu AC dibersihkan, anginnya jadi keluar lancar.
+116|毎朝、店の前をほうきで掃いています。|Setiap pagi saya menyapu depan toko dengan sapu.
+117|ぞうきんをよくしぼってから、机をふいてください。|Peras kain lap dengan baik, lalu lap mejanya.
+118|昔は井戸から水をくんで使っていた。|Dulu orang mengambil air dari sumur untuk dipakai.
+119|ジュースがこぼれたので、床をふいた。|Jusnya tumpah, jadi saya mengelap lantai.
+120|コップを倒して、お茶がこぼれた。|Gelasnya tersenggol jatuh, tehnya tumpah.
+121|雨で靴を濡らしてしまった。|Sepatu saya basah kena hujan.
+122|ブラシでこすったら、汚れがきれいに落ちた。|Setelah digosok dengan sikat, kotorannya hilang bersih.
+123|食事の後、台ふきんでテーブルをふいてね。|Setelah makan, lap mejanya dengan lap meja, ya.
+!124|||mengelap peralatan makan dengan kain lap
+124|洗った食器をふきんでふいて、棚にしまった。|Saya mengelap peralatan makan yang sudah dicuci dengan kain lap lalu menyimpannya di rak.
+!125|||memoles perabot (supaya mengkilap)
+125|年末に、家族で家具をみがいた。|Akhir tahun, sekeluarga memoles perabot rumah.
++126|ゴミを分けるのは面倒くさい|ゴミをわけるのはめんどうくさい|memilah sampah itu merepotkan|ゴミを分けるのは面倒くさいけど、ルールだから仕方がない。|Memilah sampah itu merepotkan, tapi karena aturan, mau bagaimana lagi.
+!127|||menyimpan di gudang
+127|使わない扇風機は物置にしまっておこう。|Kipas angin yang tidak dipakai kita simpan di gudang saja.
+!128|||merapikan sandal (menjajarkan sepasang)
+128|玄関でスリッパをそろえてから、部屋に入った。|Saya merapikan sandal di pintu masuk, lalu masuk ke kamar.
+129|生ゴミは火曜日と金曜日に出してください。|Sampah dapur dibuang hari Selasa dan Jumat.
+130|紙くずは燃えるゴミの日に出します。|Sampah kertas dibuang pada hari sampah yang bisa dibakar.
+131|割れたコップは燃えないゴミです。|Gelas yang pecah termasuk sampah yang tidak bisa dibakar.
+132|公園で遊んで、子どもが服を汚して帰ってきた。|Anak pulang dengan baju kotor setelah bermain di taman.
+133|忙しくて、仕事がたまってしまった。|Karena sibuk, pekerjaan jadi menumpuk.
+134|雨に降られて、髪がぬれている。|Kena hujan, rambut saya basah.
+135|天気がいいから、洗濯物がすぐ乾くだろう。|Cuacanya bagus, jadi cucian pasti cepat kering.
+136|このタオルはまだ少し湿っている。|Handuk ini masih agak lembap.
+137|この洗剤を使うと、シャツが真っ白に仕上がる。|Kalau memakai deterjen ini, kemeja jadi putih bersih.
+138|旅行のために、毎月少しずつお金をためている。|Saya menabung sedikit demi sedikit tiap bulan untuk liburan.
+!139|||mengeringkan dengan mesin cuci (pengering)
+139|雨の日は、洗濯機で乾かしています。|Kalau hari hujan, saya mengeringkannya dengan mesin cuci.
+140|天気がいいので、布団を干しました。|Cuacanya bagus, jadi saya menjemur futon.
+141|乾いた服をたたんで、たんすにしまう。|Saya melipat baju yang sudah kering lalu menyimpannya di lemari.
+!142|||cucian (pakaian yang dicuci)
+142|雨が降りそうだから、洗濯物を中に入れよう。|Sepertinya mau hujan, ayo masukkan cuciannya.
+!143||そでがまっくろによごれる|lengan baju kotor sampai hitam pekat
+143|子どもが外で遊んで、袖が真っ黒に汚れた。|Anak bermain di luar sampai lengan bajunya kotor hitam pekat.
+!144||よごれ|
+144|この汚れは、普通の洗剤ではなかなか落ちない。|Kotoran ini sulit hilang dengan deterjen biasa.
+!145|||untuk cucian / untuk dapur
+145|これは台所用の洗剤だから、服には使わないで。|Ini deterjen untuk dapur, jadi jangan dipakai untuk baju.
+146|洗剤を入れすぎると、泡がたくさん出る。|Kalau deterjennya terlalu banyak, busanya keluar banyak.
+147|しわにならないように、服をハンガーにつるした。|Supaya tidak kusut, saya menggantung baju di hanger.
+148|洗濯機が壊れたので、コインランドリーで洗濯をした。|Mesin cuci rusak, jadi saya mencuci di laundry koin.
+!149|||merapikan kerutan (pakaian)
+149|アイロンでシャツのしわを伸ばした。|Saya merapikan kerutan kemeja dengan setrika.
+!150|||kerutan menjadi licin (hilang)
+150|ハンガーにかけておいたら、しわが伸びた。|Setelah digantung di hanger, kerutannya hilang.
+!151|||mengirim jas ke binatu (dry cleaning)
+151|来週の面接のために、スーツをクリーニングに出した。|Untuk wawancara minggu depan, saya mengirim jas ke binatu.
+!152|||menyetrika kemeja
+152|毎晩、次の日に着るワイシャツにアイロンをかけます。|Setiap malam saya menyetrika kemeja yang akan dipakai besok.
+153|ベランダにタオルを干しておいた。|Saya menjemur handuk di balkon.
+!154||ウールのセーターがちぢむ|
+154|お湯で洗ったら、ウールのセーターが縮んでしまった。|Saya mencucinya dengan air panas, sweater wolnya jadi menyusut.
+155|何回も洗ったので、ジーンズの色が落ちてきた。|Karena sudah dicuci berkali-kali, warna jinsnya mulai luntur.
+156|夜中に隣の家の犬が吠えて、眠れなかった。|Anjing tetangga menggonggong tengah malam, saya jadi tidak bisa tidur.
+157|知らない人が来ると、うちの犬はうなります。|Kalau ada orang tak dikenal datang, anjing kami menggeram.
+158|名前を呼ぶと、犬がうれしそうにしっぽをふった。|Saat namanya dipanggil, anjing itu mengibaskan ekor dengan senang.
+159|子どもたちが砂場で穴を掘って遊んでいる。|Anak-anak bermain menggali lubang di bak pasir.
+!160|||menjadi jinak pada manusia
+160|この猫はまだ人になれていないので、さわると逃げる。|Kucing ini belum jinak pada manusia, jadi kalau disentuh lari.
+161|木を植えたあと、土で穴を埋めた。|Setelah menanam pohon, saya menimbun lubangnya dengan tanah.
+162|妹はかわいらしい人形を大切にしている。|Adik perempuan saya merawat boneka lucunya dengan baik.
+163|雨の中で鳴いている子猫を見て、かわいそうになった。|Saya merasa kasihan melihat anak kucing mengeong di tengah hujan.
+164|この犬はとても利口で、人の言葉がわかるようだ。|Anjing ini sangat pintar, sepertinya mengerti ucapan manusia.
+!165|||sopan; berperilaku baik
+165|田中さんの子どもは、いつも行儀がいいですね。|Anak Pak Tanaka selalu sopan, ya.
+166|うちの犬は人懐っこいので、だれにでもしっぽをふる。|Anjing kami ramah, jadi mengibaskan ekor kepada siapa saja.
+!167|||egois; manja (maunya sendiri)
+167|あの子は一人っ子だからか、少しわがままだ。|Mungkin karena anak tunggal, anak itu agak egois.
+!168|||kurang ajar; sok (tidak sopan pada yang lebih tua)
+168|後輩に生意気[なまいき]なことを言われて、腹が立った。|Saya kesal karena junior saya berkata kurang ajar.
+!169|||sikap kurang ajar; sikap sok
+169|先生に対して、生意気[なまいき]な態度をとってはいけません。|Tidak boleh bersikap kurang ajar kepada guru.
+170|祖母は孫を甘やかしてばかりいる。|Nenek terus saja memanjakan cucunya.
+171|祖父は近所の子どもたちをとてもかわいがっている。|Kakek sangat menyayangi anak-anak tetangga.
+!172|||mendekap/menggendong dalam pelukan
+172|母親は赤ちゃんを腕に抱いて、歌を歌っていた。|Sang ibu mendekap bayinya dan bernyanyi.
+!173|||menggendong di punggung
+173|足が痛いと泣く子どもをおんぶして帰った。|Saya menggendong di punggung anak yang menangis karena kakinya sakit, lalu pulang.
+!174|||menggendong (di depan/dalam pelukan)
+174|赤ちゃんが泣いたので、抱っこしてあやした。|Bayinya menangis, jadi saya menggendongnya untuk menenangkan.
+!175|||mengasuh anak; membesarkan anak
+175|仕事と子育てを両立するのは大変だ。|Menyeimbangkan pekerjaan dan mengasuh anak itu berat.
+!176|||anak kecil (balita)
+176|この絵本は幼児向けです。|Buku bergambar ini untuk anak balita.
+!177||こどもがせいちょうする|anak tumbuh besar
+177|子どもが成長するのは本当に早いですね。|Anak-anak tumbuh besar dengan sangat cepat, ya.
+178|甘やかしすぎると、わがままに育ってしまう。|Kalau terlalu dimanja, anak tumbuh jadi egois.
+!179|||hebat; terpuji (pujian untuk anak)
+179|一人で宿題をしたの？えらいね。|Kamu mengerjakan PR sendiri? Hebat, ya.
+!180|||mengelus kepala
+180|テストで百点を取った息子の頭をなでた。|Saya mengelus kepala anak laki-laki saya yang dapat nilai seratus.
+!181|||anak tersesat (hilang)
+181|デパートで子どもが迷子になって、放送で呼んでもらった。|Anak saya tersesat di toserba, jadi saya minta dia dipanggil lewat pengeras suara.
+!182|||berbuat iseng (jahil)
+182|弟は、いたずらをしてよく母にしかられた。|Adik saya sering dimarahi ibu karena berbuat iseng.
+183|子どものころ、犬を飼いたかった。|Waktu kecil, saya ingin memelihara anjing.
+!184|||memukul pantat
+184|昔は、悪いことをするとお尻をたたかれた。|Dulu kalau berbuat nakal, pantat dipukul.
+185|子どもが母親の後をついていく姿がかわいい。|Anak yang mengikuti ibunya dari belakang terlihat menggemaskan.
+186|道が危ないので、子どもと手をつないで歩いた。|Jalannya berbahaya, jadi saya berjalan sambil menggandeng tangan anak.
+!187|||mengajak (hewan/anak) jalan-jalan
+187|毎朝、犬を散歩に連れて行きます。|Setiap pagi saya mengajak anjing jalan-jalan.
+188|旅行中は、隣の人が犬にえさをやってくれた。|Selama saya berlibur, tetangga memberi makan anjing saya.
+!189|||nakal; jahil
+189|いたずらな猫が、テーブルのコップを落とした。|Kucing yang jahil menjatuhkan gelas di meja.
+!190|||melepaskan
+190|釣った魚を川に放してあげた。|Saya melepaskan ikan yang dipancing ke sungai.
+!191|||tanggal 1 Januari / pagi tahun baru
+191|元日は家族みんなで神社へ行きます。|Pada tanggal 1 Januari seluruh keluarga pergi ke kuil.
+!192|||awal bulan (tanggal 1–10)
+192|来月の上旬に、日本へ出張します。|Awal bulan depan saya dinas ke Jepang.
+!193|||akhir bulan (tanggal 21–akhir)
+193|三月下旬になると、桜が咲き始める。|Memasuki akhir Maret, bunga sakura mulai mekar.
+!194|||pertengahan bulan (tanggal 11–20)
+194|試験の結果は、四月中旬に発表されます。|Hasil ujian diumumkan pertengahan April.
+!195|||akhir bulan (hari terakhir bulan)
+195|家賃は毎月、月末までに払ってください。|Bayar sewa setiap bulan paling lambat akhir bulan.
+!196|||kemarin lusa (bahasa formal)
+196|一昨日[いっさくじつ]、書類をお送りしました。|Saya sudah mengirim dokumennya kemarin lusa.
+!197|||kemarin (bahasa formal)
+197|昨日[さくじつ]は大変お世話になりました。|Terima kasih banyak atas bantuannya kemarin.
+198|今日は朝から雨が降っている。|Hari ini hujan sejak pagi.
+!199|||besok (bahasa formal)
+199|明日[あす]の会議は十時から始まります。|Rapat besok dimulai pukul sepuluh.
+!200|||lusa
+200|レポートの締め切りはあさってです。|Batas waktu laporan adalah lusa.
+!201|||tiga hari lagi (setelah lusa)
+201|しあさっては祝日なので、店は休みです。|Tiga hari lagi hari libur nasional, jadi toko tutup.
+!202|||tiga hari yang lalu
+202|さきおととい、駅で高校の友達に会った。|Tiga hari yang lalu saya bertemu teman SMA di stasiun.
