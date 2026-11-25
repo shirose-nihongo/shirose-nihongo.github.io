@@ -5,7 +5,8 @@
                      Bisa dipencet & dipindah: panik (meronta) dengan tangan kecil yang menjepit, lalu dilepas.
    Dipakai bersama oleh Hafalan, Matching, Pilihan Ganda, JLPT, JFT, SSW. API: window.Chibi
    ======================================================================== */
-import { renderCharacter, DEFAULT_EQUIPPED, SKIN_TONES } from "./character.js?v=20261122p";
+import { renderCharacter, DEFAULT_EQUIPPED, SKIN_TONES, AURAS, SAYAP } from "./character.js?v=20261122p";
+import { PET } from "./character-pet.js";
 
 let _src = () => ({});
 export const setSource = (fn) => { _src = fn; };
@@ -51,7 +52,12 @@ const EXP = {
 export function chibiSvg(kar = {}, exp = "netral") {
   const skin = kar.skinTone || "light", s = (SKIN_TONES[skin] || SKIN_TONES.light).skin;
   let full = "";
-  try { full = renderCharacter({ ...DEFAULT_EQUIPPED, ...(kar.equipped || {}) }, skin, { hairColor: kar.hairColor, body: kar.body, bentuk: kar.bentuk }); }
+  const eqp = { ...DEFAULT_EQUIPPED, ...(kar.equipped || {}) };
+  let auraSvg = ""; const auraKey = eqp.aura; if (auraKey && auraKey !== "none" && AURAS[auraKey] && AURAS[auraKey].svg) { try { auraSvg = AURAS[auraKey].svg(); } catch (e) {} eqp.aura = "none"; }
+  let sayapSvg = ""; if (eqp.sayap && eqp.sayap !== "none" && SAYAP && SAYAP[eqp.sayap] && SAYAP[eqp.sayap].svg) { try { sayapSvg = SAYAP[eqp.sayap].svg(); } catch (e) {} eqp.sayap = "none"; }
+  let petSvg = "", petBehind = false;
+  if (eqp.pet && eqp.pet !== "none" && PET[eqp.pet] && PET[eqp.pet].svg) { try { petSvg = `<g transform="${PET[eqp.pet].tf || "translate(14 398) scale(1.3)"}">${PET[eqp.pet].svg()}</g>`; petBehind = !!PET[eqp.pet].behind; } catch (e) {} eqp.pet = "none"; }
+  try { full = renderCharacter(eqp, skin, { hairColor: kar.hairColor, body: kar.body, bentuk: kar.bentuk }); }
   catch (e) { try { full = renderCharacter({ ...DEFAULT_EQUIPPED }, "light", {}); } catch (e2) { return ""; } }
   const inner = full.replace(/^\s*<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
   const id = "cb" + (++_n), face = EXP[exp] ? EXP[exp](s) : "";
@@ -59,7 +65,11 @@ export function chibiSvg(kar = {}, exp = "netral") {
   return `<svg class="cb-svg" viewBox="0 -52 220 352" xmlns="http://www.w3.org/2000/svg" style="overflow:visible" aria-hidden="true">
     <defs><g id="${id}">${inner}</g>
       <clipPath id="${id}h"><rect x="-600" y="-300" width="1400" height="466"/><ellipse cx="200" cy="130" rx="66" ry="68"/></clipPath><clipPath id="${id}b"><rect x="-600" y="170" width="1400" height="700"/></clipPath></defs>
+    ${auraSvg ? `<clipPath id="${id}a"><rect x="-6" y="-46" width="232" height="346" rx="40"/></clipPath><g clip-path="url(#${id}a)"><g transform="translate(110 150) scale(.55) translate(-200 -250)">${auraSvg}</g></g>` : ""}
+    ${sayapSvg ? `<clipPath id="${id}w"><rect x="-30" y="-46" width="280" height="350" rx="30"/></clipPath><g clip-path="url(#${id}w)"><g transform="${body}">${sayapSvg}</g></g>` : ""}
+    ${petBehind ? (petSvg ? `<g transform="${body}"><g transform="translate(200 470) scale(1.45) translate(-200 -470)">${petSvg}</g></g>` : "") : ""}
     <g transform="${body}"><g clip-path="url(#${id}b)"><use href="#${id}"/></g></g>
+    ${petBehind ? "" : (petSvg ? `<g transform="${body}"><g transform="translate(200 470) scale(1.45) translate(-200 -470)">${petSvg}</g></g>` : "")}
     <g transform="${head}"><g clip-path="url(#${id}h)"><use href="#${id}"/></g>${face}</g>
     ${exp === "happy" ? `<g class="cb-spark" fill="#ffd54a"><path d="M24 24 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/><path d="M190 10 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/></g>` : ""}
   </svg>`;
@@ -92,14 +102,13 @@ const CSS = `
 .cb.ujian.held .cb-in{animation:cbPanic .16s linear infinite;}
 @keyframes cbPanic{0%{transform:translate(-2px,0) rotate(-9deg)}25%{transform:translate(2px,-3px) rotate(8deg)}50%{transform:translate(-3px,1px) rotate(-6deg)}75%{transform:translate(3px,-2px) rotate(10deg)}100%{transform:translate(-2px,0) rotate(-9deg)}}
 .cb.drop{transition:top .55s cubic-bezier(.3,1.5,.5,1);}
-.cb-arm{position:absolute;left:50%;bottom:calc(100% - 22px);width:22px;margin-left:-11px;pointer-events:none;display:none;z-index:2;}
+.cb-arm{position:absolute;left:50%;bottom:calc(100% - 31px);width:30px;height:46px;margin-left:-15px;pointer-events:none;display:none;z-index:2;}
 .cb.held .cb-arm{display:block;}
-.cb-arm .sl{position:absolute;left:0;right:0;top:-40px;bottom:30px;background:linear-gradient(90deg,#e9ecf7,#fff 45%,#d3d8ec);border:1.5px solid #aab2d0;border-bottom:none;border-radius:4px 4px 0 0;}
-.cb-arm svg{position:absolute;left:50%;bottom:0;width:34px;height:44px;margin-left:-17px;animation:cbGrip .18s ease-in-out infinite alternate;}
+.cb-arm svg{position:absolute;left:50%;bottom:0;width:30px;height:46px;margin-left:-15px;animation:cbGrip .18s ease-in-out infinite alternate;}
 @keyframes cbGrip{from{transform:translateX(-1px) rotate(-3deg)}to{transform:translateX(1px) rotate(3deg)}}
 @media(prefers-reduced-motion:reduce){.cb .cb-in,.cb.ujian.walk .cb-in{animation:none !important}}
 `;
-const HAND = (c) => `<svg viewBox="0 0 34 44"><rect x="5" y="0" width="24" height="12" fill="#fff" stroke="#aab2d0" stroke-width="1.5"/><path d="M6 11 H28 V24 Q28 32 22 35 L20 41 H14 L12 35 Q6 32 6 24Z" fill="${c}" stroke="rgba(0,0,0,.25)" stroke-width="1"/><path d="M12 18 V30 M17 17 V31 M22 18 V30" stroke="rgba(0,0,0,.22)" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="6" cy="22" rx="4" ry="7" fill="${c}" stroke="rgba(0,0,0,.25)" stroke-width="1"/></svg>`;
+const HAND = (c) => `<svg viewBox="0 0 34 44"><path d="M7 0 H27 V10 H7Z" fill="#fff" stroke="#aab2d0" stroke-width="1.5"/><path d="M9 0 V10" stroke="#d3d8ec" stroke-width="1.5"/><path d="M6 11 H28 V24 Q28 32 22 35 L20 41 H14 L12 35 Q6 32 6 24Z" fill="${c}" stroke="rgba(0,0,0,.25)" stroke-width="1"/><path d="M12 18 V30 M17 17 V31 M22 18 V30" stroke="rgba(0,0,0,.22)" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="6" cy="22" rx="4" ry="7" fill="${c}" stroke="rgba(0,0,0,.25)" stroke-width="1"/></svg>`;
 
 /* ---------- pengendali ---------- */
 let C = null;      // { el, mode, kar, exp, timers[], raf, x, y, dir, held }
@@ -133,7 +142,7 @@ export function mount(mode = "belajar") {
   const kar = _src() || {};
   const el = document.createElement("div");
   el.className = "cb " + (mode === "ujian" ? "ujian walk" : "");
-  el.innerHTML = `<div class="cb-say"></div><div class="cb-arm"><div class="sl"></div>${HAND((SKIN_TONES[kar.skinTone || "light"] || SKIN_TONES.light).skin)}</div><div class="cb-flip"><div class="cb-in"></div></div>`;
+  el.innerHTML = `<div class="cb-say"></div><div class="cb-arm">${HAND((SKIN_TONES[kar.skinTone || "light"] || SKIN_TONES.light).skin)}</div><div class="cb-flip"><div class="cb-in"></div></div>`;
   document.body.appendChild(el);
   C = { el, mode, kar, exp: "netral", timers: [], raf: 0, x: 20, dir: 1, held: false, pause: 0 };
   paint("netral");
@@ -181,7 +190,6 @@ function startWalk() {
     if (!C || !C.held) return;
     C.x = Math.max(0, Math.min(window.innerWidth - W(), e.clientX - dx)); C.y = Math.max(26, Math.min(window.innerHeight - H(), e.clientY - dy));
     el.style.left = C.x + "px"; el.style.top = C.y + "px";
-    const arm = el.querySelector(".cb-arm"); if (arm) arm.style.height = Math.max(40, C.y + 22) + "px";
     C.dir = 1; const f = el.querySelector(".cb-flip"); if (f) f.style.transform = "scaleX(1)";
   };
   C.up = () => {
@@ -193,7 +201,6 @@ function startWalk() {
     if (!C || C.held) return; e.preventDefault();
     const r = el.getBoundingClientRect(); C.held = true; C.dropped = false; dx = e.clientX - r.left; dy = e.clientY - r.top;
     el.classList.remove("drop", "walk"); el.classList.add("held"); paint("panic"); say(pick(["Waaa!", "Lepasin~!", "Eeeh?!", "Turunin aku!"]), 1800);
-    const arm = el.querySelector(".cb-arm"); if (arm) arm.style.height = Math.max(40, C.y + 22) + "px";
     try { el.setPointerCapture(e.pointerId); } catch (_) {}
   });
   window.addEventListener("pointermove", C.mv); window.addEventListener("pointerup", C.up); window.addEventListener("pointercancel", C.up);
