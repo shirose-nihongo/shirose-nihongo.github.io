@@ -1485,6 +1485,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/ssw.css?v=20261118s"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261124h"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261119f"/>
+<link rel="stylesheet" href="./css/silabus.css?v=20261126a"/>
 <link rel="stylesheet" href="./css/logo.css?v=20261122c"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261122a"/>
 </head>
@@ -1582,7 +1583,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261126a";
+import * as FB from "./js/firebase-sync.js?v=20261126b";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261125c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
@@ -1592,6 +1593,8 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261125d";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261125c";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
+// SILABUS HARIAN: target belajar per hari + ujian harian/fukushu/bulanan/simulasi (js/silabus-harian.js)
+import { SILABUS_ROUTES, initSilabus } from "./js/silabus-harian.js?v=20261126a";
 import { initHub, renderHub } from "./js/siswa-hub.js?v=20261123s";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261125d";
 import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehPelajaran } from "./js/deck-siswa.js?v=20261126b";
@@ -1607,6 +1610,7 @@ initMensetsu(FB);
 initDeckSiswa(FB);   // HAFALAN 暗記: deck kosakata buatan guru per kelas (js/deck-siswa.js → js/deck-teacher.js)
 initLoginReward(FB);
 initJft(FB, (t, l) => loadMateri(t, l));
+initSilabus(FB);
 
 /* ========== STATE ========== */
 const state = {
@@ -2370,7 +2374,9 @@ const routes = {
   inventory: renderInventory,
   wardrobe: renderWardrobe,
   misi: renderMisiHarian,
-  sylabus: renderSylabus,
+  // Peta materi lama (per 50 kata + SRS); #sylabus kini Silabus Harian.
+  "sylabus-peta": renderSylabus,
+  ...SILABUS_ROUTES,
   syl: (params) => renderSylabusChapter(params),
   kalender: renderKalender,
   profile: (params) => renderHub(params),
@@ -2396,7 +2402,7 @@ const routes = {
 
 // Routes that depend on state.level (and therefore on aksesLevel).
 const LEVEL_SCOPED_ROUTES = new Set([
-  "materi","kosakata","kanji","bunpou","hafalan","quest","ujian","choukai"
+  "materi","kosakata","kanji","bunpou","hafalan","quest","ujian","choukai","sylabus","sylabus-ujian","sylabus-peta"
 ]);
 
 // Simple route-history stack so the floating back button can walk through
@@ -2443,6 +2449,7 @@ const _parentOf = (path) => {
   if (n === "ssw-progres" || n === "ssw-rangkuman") return "ssw";
   if (n.startsWith("ssw-")) return `ssw-peta/${slug}`;
   if (n === "ujian-riwayat") return "ujian";
+  if (n === "sylabus-ujian" || n === "sylabus-peta") return "sylabus";
   if (n === "jft") return "pilih-level";
   if (n === "jft-ujian" || n === "jft-tryout" || n === "jft-rangkuman") return "jft";
   if (n === "jft-paket" && /^try/.test(slug)) return "jft-tryout";
@@ -6216,7 +6223,7 @@ async function renderSylabusChapter(params){
   return `
     <div class="panel">
       <div class="haf-topbar">
-        <button class="btn ghost sm" onclick="route('sylabus')">← Sylabus</button>
+        <button class="btn ghost sm" onclick="route('sylabus-peta')">← Peta materi</button>
         <span style="color:var(--gray); font-weight:700;">${headerLabel} · No.${String(lo).padStart(3,"0")}–${String(hi).padStart(3,"0")}</span>
         <button class="btn ghost sm" onclick="route('home')">🏠 Home</button>
       </div>

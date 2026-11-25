@@ -1,4 +1,5 @@
 /* Service worker: network-first, cache fallback */
+// v471 — Silabus Harian (js/silabus-harian.js, css/silabus.css, data/silabus/*): target per hari + ujian bertingkat.
 // v416 — Bunpou: geser kiri/kanan, tabel Perubahan Kata Kerja (data/kk-forms.json).
 // v414 — hub siswa 3 tab (js/siswa-hub.js): Profil / Akses / Nilai.
 // v412 — landing: tema interaktif, pulau 20 bidang, buku scan multi-bidang, latihan menulis kanji.
@@ -14,7 +15,7 @@
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
 // v405 — Konfirmasi keluar sesi hafalan (JLPT/JFT/SSW, Kana, Mensetsu flashcard).
-const CACHE = "shirose-nihongo-v470";
+const CACHE = "shirose-nihongo-v471";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
