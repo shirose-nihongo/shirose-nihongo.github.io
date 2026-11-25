@@ -1582,7 +1582,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261125c";
+import * as FB from "./js/firebase-sync.js?v=20261125f";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261125c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
@@ -6375,6 +6375,7 @@ async function renderLeaderboard(){
 
   const me = state.user?.uid;
   state._lbList = list;
+  const _demoLb = FB.isDemoKelas?.(myKelas);
 
   const scoreLabel = kind === "global" ? "XP total"
                    : kind.startsWith("jlpt-") ? "XP"
@@ -6398,6 +6399,7 @@ async function renderLeaderboard(){
   return `
     <div class="panel">
       <h2>🏆 Leaderboard</h2>
+      ${_demoLb ? `<div style="background:rgba(255,193,7,.12); border:1px solid rgba(255,193,7,.45); border-radius:10px; padding:9px 12px; margin-bottom:12px; font-size:12.5px; line-height:1.5;">ℹ️ <b>Akun demo</b> tidak masuk leaderboard, dan karaktermu tidak ditampilkan ke siswa lain. Kamu tetap bisa melihat ranking siswa reguler di sini.</div>` : ""}
       <p style="color:var(--gray); font-size:13px; margin-bottom:12px;">${scope==="kelas" ? `Ranking kelas ${myKelas}` : "Ranking lintas kelas"} berdasarkan pembelajaran valid. <b>Ketuk nama</b> untuk melihat karakternya 👀</p>
       ${myKelas ? `<div class="lb-tabs">
         <button class="lb-chip ${scope==='kelas'?'on':''}" onclick="lbSetScope('kelas')">🏫 Kelas Saya</button>

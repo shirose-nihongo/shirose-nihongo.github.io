@@ -1763,7 +1763,7 @@ function _lbBuild(xp, lv){
 }
 async function _lbPush(level, xpVal, lvVal){
   try {
-    if (!currentUser) return;
+    if (!currentUser || isDemoKelas(currentSiswaDoc?.kelas)) return;   // akun demo tidak masuk leaderboard
     if (!_lbMine){ const g = await getDoc(doc(db, "lb", currentUser.uid)); _lbMine = g.exists() ? g.data() : { xp:{}, lv:1 }; }
     const xp = { ...(_lbMine.xp||{}), [level]: xpVal };
     const d = _lbBuild(xp, Math.max(_lbMine.lv||1, lvVal||1));
@@ -1777,7 +1777,7 @@ async function _lbPush(level, xpVal, lvVal){
 let _karPub = "";
 export async function publishKarakter(){
   try {
-    if (!currentUser || !currentSiswaDoc) return;
+    if (!currentUser || !currentSiswaDoc || isDemoKelas(currentSiswaDoc.kelas)) return;   // akun demo tidak dipublikasikan
     const k = currentSiswaDoc.karakter || {};
     const d = JSON.parse(JSON.stringify({ uid: currentUser.uid, nama: _lbNama(), eq: k.equipped || {}, sk: k.skinTone || "light", hc: k.hairColor || null, b: k.body || "male", bt: k.bentuk || null }));
     const sig = JSON.stringify([d.nama, d.eq, d.sk, d.hc, d.b, d.bt]); if (sig === _karPub) return;
@@ -1791,7 +1791,7 @@ export async function getKarakterLb(uid){
 let _lbSynced = false;
 export async function syncMyLeaderboard(){
   publishKarakter();
-  if (_lbSynced || !currentUser) return;
+  if (_lbSynced || !currentUser || isDemoKelas(currentSiswaDoc?.kelas)) return;
   _lbSynced = true;
   try {
     const gs = await Promise.all(LVLS.map(l => getDoc(doc(db, "siswa", currentUser.uid, "gami", l)).catch(() => null)));
@@ -1836,7 +1836,7 @@ export async function leaderboardAdvanced(kind = "global", topN = 20, kelas = ""
     const get = d => field === "total" ? (d.total || 0) : (d.xp?.[field.slice(3)] || 0);
     const result = snap.docs.map(x => x.data())
       .map(d => ({ uid: d.uid, nama: d.nama || "Anonim", kelas: d.kelas || "", score: get(d), meta: "Lv " + (d.lv || 1) }))
-      .filter(r => r.score > 0)
+      .filter(r => r.score > 0 && !isDemoKelas(r.kelas))   // siswa kelas demo disembunyikan dari ranking
       .sort((a,b) => b.score - a.score)
       .slice(0, topN);
     _lbCache.set(key, { t: Date.now(), data: result });
