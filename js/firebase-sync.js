@@ -1984,6 +1984,32 @@ export async function deckProgresSet(id, m) {
   await setDoc(doc(db, "siswa", currentUser.uid, "deck_progres", id), { m, t: Date.now() });
 }
 
+/* ========== SOAL PELAJARAN (pilihan ganda A–D + penjelasan, buatan guru) ==========
+   guru_soal/_index   : { list:[{id,nama,n,updated,pub:{aktif,semua,kelas[]}|null}] }   (guru saja)
+   guru_soal/{id}     : { nama, items:[{q,o:[4],a:0-3,e}], updated }
+   soal_kelas/_index  : { list:[{id,nama,n,kelas[],semua,aktif}] }                      (dibaca siswa terdaftar; metadata saja)
+   soal_kelas/{id}    : { nama, items[], kelas[], semua, aktif, updated }               (siswa hanya bila kelasnya dipilih / semua)
+   siswa/{uid}/soal_progres/{id} : { skor, total, t, salah:[idx] }                      (progres siswa; sub-koleksi milik siswa) */
+const _guruSaja = () => { if (!userIsGuru()) throw new Error("Hanya guru"); };
+export async function soalIndex() { _guruSaja(); const d = await getDoc(doc(db, "guru_soal", "_index")); return d.exists() ? (d.data().list || []) : []; }
+export async function soalGet(id) { _guruSaja(); const d = await getDoc(doc(db, "guru_soal", id)); return d.exists() ? { id, ...d.data() } : null; }
+export async function soalPut(set) { _guruSaja(); await setDoc(doc(db, "guru_soal", set.id), { nama: set.nama, items: set.items, updated: serverTimestamp() }); }
+export async function soalSetIndex(list) { _guruSaja(); await setDoc(doc(db, "guru_soal", "_index"), { list, updated: serverTimestamp() }); }
+export async function soalDelete(id) { _guruSaja(); await deleteDoc(doc(db, "guru_soal", id)); }
+export async function soalPubIndex() { const d = await getDoc(doc(db, "soal_kelas", "_index")); return d.exists() ? (d.data().list || []) : []; }
+export async function soalPubGet(id) { const d = await getDoc(doc(db, "soal_kelas", id)); return d.exists() ? { id, ...d.data() } : null; }
+export async function soalPubPut(id, data) { _guruSaja(); await setDoc(doc(db, "soal_kelas", id), { ...data, updated: serverTimestamp() }); }
+export async function soalPubSetIndex(list) { _guruSaja(); await setDoc(doc(db, "soal_kelas", "_index"), { list, updated: serverTimestamp() }); }
+export async function soalPubDelete(id) { _guruSaja(); await deleteDoc(doc(db, "soal_kelas", id)); }
+export async function soalProgresAll() {
+  if (!currentUser) return {};
+  try { const g = await getDocs(collection(db, "siswa", currentUser.uid, "soal_progres")); const o = {}; g.docs.forEach(x => o[x.id] = x.data()); return o; } catch (e) { return {}; }
+}
+export async function soalProgresSet(id, data) {
+  if (!currentUser) throw new Error("Belum masuk");
+  await setDoc(doc(db, "siswa", currentUser.uid, "soal_progres", id), { ...data, t: Date.now() });
+}
+
 export { db, auth };
 
 /* ========== SAVE DATA (tombol 💾 Simpan) ==========

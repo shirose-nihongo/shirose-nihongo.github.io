@@ -173,6 +173,21 @@ service cloud.firestore {
       allow write: if isGuru();
     }
 
+    // PELAJARAN › SOAL (pilihan ganda A–D + penjelasan buatan guru).
+    // guru_soal: KHUSUS guru. soal_kelas: _index = metadata (dibaca siswa terdaftar); isi soal hanya terbaca siswa yang kelasnya dipilih (atau semua=true).
+    // Progres siswa ada di siswa/{uid}/soal_progres/{id} (tercakup aturan sub-koleksi siswa).
+    match /guru_soal/{id} {
+      allow read, write: if isGuru();
+    }
+    match /soal_kelas/{id} {
+      allow read: if isGuru()
+        || (terdaftar() && id == '_index')
+        || (terdaftar() && id != '_index' && resource.data.get('aktif', true) == true
+            && (resource.data.get('semua', false) == true
+                || profil().get('kelas', '') in resource.data.get('kelas', [])));
+      allow write: if isGuru();
+    }
+
     // ---------- /saran/{id} : kotak saran (login boleh kirim, hanya guru yang baca/hapus) ----------
     match /saran/{sid} {
       allow create: if signedIn()

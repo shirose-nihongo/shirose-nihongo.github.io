@@ -256,6 +256,7 @@ import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261118s";
 import { renderCharacter, DEFAULT_EQUIPPED, setBody, setBentuk, BENTUK_DEFAULT } from "./js/character.js?v=20261122p";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
 import { renderDeckTab } from "./js/deck-teacher.js?v=20261124h";
+import { renderSoalGuruTab } from "./js/soal-guru.js?v=20261126a";
 
 const state = {
   user: null,
@@ -357,8 +358,9 @@ window.guruLogout = async () => {
 // Tombol/dropdown memakai atribut onclick/onchange (scope global), sedangkan
 // script ini adalah ES module — jadi state & renderTab harus diekspos ke window.
 window.state = state;
+window.setPjSub = (t) => { state.pjSub = t; renderTab(); };
 /* ===== Menu bawah (HP) + sheet "Lainnya" ===== */
-const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["ssw","🌏","SSW"],["laporan","📈","Laporan"],["bankjlpt","📚","Bank JLPT"],["deck","🗂️","Deck"],["saran","💬","Saran"]];
+const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["ssw","🌏","SSW"],["laporan","📈","Laporan"],["bankjlpt","📚","Bank JLPT"],["deck","🗂️","Pelajaran"],["saran","💬","Saran"]];
 const MENU_LAIN = [];   // menu lain dihapus dari tampilan (fungsi backend tetap ada)
 function renderBottomNav(){
   const lain = MENU_LAIN.filter(m => m[0] !== "admin" || FB.userIsAdmin());
@@ -386,7 +388,7 @@ function renderApp(){
         <div class="nav-item ${state.tab==='ssw'?'active':''}" onclick="setTab('ssw')"><span class="ico">🌏</span> SSW</div>
         <div class="nav-item ${state.tab==='laporan'?'active':''}" onclick="setTab('laporan')"><span class="ico">📈</span> Laporan</div>
         <div class="nav-item ${state.tab==='bankjlpt'?'active':''}" onclick="setTab('bankjlpt')"><span class="ico">📚</span> Bank JLPT</div>
-        <div class="nav-item ${state.tab==='deck'?'active':''}" onclick="setTab('deck')"><span class="ico">🗂️</span> Deck</div>
+        <div class="nav-item ${state.tab==='deck'?'active':''}" onclick="setTab('deck')"><span class="ico">🗂️</span> Pelajaran</div>
         <div class="nav-item ${state.tab==='saran'?'active':''}" onclick="setTab('saran')"><span class="ico">💬</span> Saran</div>
       </div>
       <div class="main" id="main"></div>
@@ -412,7 +414,13 @@ async function renderTab(){
     else if (state.tab === "choukai") mount.innerHTML = await renderChoukaiTab();
     else if (state.tab === "ssw") mount.innerHTML = await renderSswTab(FB, { toast, rerender: () => renderTab() });
     else if (state.tab === "bankjlpt") mount.innerHTML = await renderBankJlptTab(FB, { toast, rerender: () => renderTab() });
-    else if (state.tab === "deck") mount.innerHTML = await renderDeckTab(FB, { toast, rerender: () => renderTab() });
+    else if (state.tab === "deck") {
+      // PELAJARAN 授業: dua sub-tab — Hafalan (deck Anki) dan Soal (pilihan ganda A–D + penjelasan)
+      const sub = state.pjSub === "soal" ? "soal" : "hafalan";
+      const bar = `<div style="display:flex;gap:8px;margin-bottom:14px"><button class="btn ${sub === "hafalan" ? "" : "ghost"}" onclick="setPjSub('hafalan')">🗂️ Hafalan</button><button class="btn ${sub === "soal" ? "" : "ghost"}" onclick="setPjSub('soal')">📝 Soal</button></div>`;
+      const isi = sub === "soal" ? await renderSoalGuruTab(FB, { toast, rerender: () => renderTab() }) : await renderDeckTab(FB, { toast, rerender: () => renderTab() });
+      mount.innerHTML = bar + isi;
+    }
     else if (state.tab === "mensetsu") mount.innerHTML = await renderMensetsuTab();
     else if (state.tab === "laporan") mount.innerHTML = await renderLaporanTab();
     else if (state.tab === "saran") mount.innerHTML = await renderSaranTab();
@@ -439,7 +447,7 @@ function kposDraw(){
   const pages = Math.max(1, Math.ceil(idx.length / PER)); S.page = Math.min(S.page, pages-1);
   const cnt = k => S.rows.filter(it => (it.pos||[]).includes(k)).length;
   return `<div class="panel"><h2>🏷️ Kategori Kosakata</h2>
-    <p style="color:var(--gray);font-size:13px;">Centang kelas kata tiap kosakata (boleh lebih dari satu). Perubahan langsung tampil di Materi &amp; Hafalan siswa. Data asli tidak diubah.</p>
+    <p style="color:var(--gray);font-size:13px;">Centang kelas kata tiap kosakata (boleh lebih dari satu). Perubahan langsung tampil di Materi &amp; Pelajaran siswa. Data asli tidak diubah.</p>
     ${S.err ? `<div class="alert alert-err">Tidak bisa membaca/menulis override: ${escHtml(S.err)}. Publish rule <code>kosakata_pos</code> (lihat firestore.rules.example).</div>` : ""}
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0;">
       <select onchange="kposLv(this.value)">${["n5","n4","n3","n2","n1"].map(l=>`<option value="${l}" ${l===S.lv?"selected":""}>${l.toUpperCase()}</option>`).join("")}</select>
@@ -566,8 +574,8 @@ async function renderSiswaTab(){
             ${DEFAULT_BIDANG.map(b => `<label><input type="checkbox" class="ba-sb" data-slug="${b.slug}"/> ${escHtml((b.nama || b.slug) + (b.jp ? " · " + b.jp : ""))}</label>`).join("")}
           </div>
         </div>
-        <div class="ba-sec"><b>5. Akses Hafalan (Anki)</b> <small style="color:var(--gray);">— menu Hafalan di halaman utama siswa</small></div>
-        <div class="ba-row"><select id="ba-haf"><option value="">Ikut kelas (default)</option><option value="ya">Buka untuk siswa ini</option><option value="tidak">Tutup untuk siswa ini</option></select></div>
+        <div class="ba-sec"><b>5. Akses Pelajaran 授業</b> <small style="color:var(--gray);">— menu Pelajaran (Hafalan + Soal) di halaman utama siswa. Siswa tanpa akses tidak melihat menunya sama sekali.</small></div>
+        <div class="ba-row"><select id="ba-haf"><option value="">Ikut kelas (default: tertutup)</option><option value="ya">Buka untuk siswa ini</option><option value="tidak">Tutup untuk siswa ini</option></select></div>
         <div style="margin-top:12px;"><button class="btn" id="ba-submit" onclick="buatAkunBaru()">Buat akun</button>
         <span id="ba-msg" style="margin-left:10px; font-size:13px;"></span></div>
       </details>
@@ -651,8 +659,9 @@ function _grupSiswa(){
 }
 const _chipAkses = (s) => ["n5","n4","n3","n2","n1"].map(l => `<span class="chip btn-chip ${s.aksesLevel?.[l] ? "on" : ""}" onclick="toggleAkses('${s.uid}','${l}')">${l.toUpperCase()}</span>`).join("");
 const _chipSsw = (s) => { const on = s.aksesSsw !== false; return `<span class="chip btn-chip ${on ? "on" : ""}" title="${on ? "Klik untuk tutup akses SSW" : "Klik untuk buka akses SSW"}" onclick="toggleSsw('${s.uid}')">SSW ${on ? "Buka" : "Tutup"}</span>`; };
-/* Akses menu HAFALAN: siswa.aksesHafalan (true/false) menang; kosong = ikut kelas.aksesHafalan (false = tutup); kosong semua = buka. */
-const _hafKelasOn = (s, kl) => ((kl || []).find(k => (k.nama || "").trim() === (s.kelas || "").trim()) || {}).aksesHafalan !== false;
+/* Akses menu PELAJARAN 授業 (field Firestore tetap "aksesHafalan"): siswa.aksesHafalan (true/false) menang; kosong = ikut kelas.aksesHafalan (hanya true yang membuka); kosong semua = TERTUTUP.
+   Konsepnya: hanya siswa yang diajar langsung oleh guru yang diberi akses. */
+const _hafKelasOn = (s, kl) => ((kl || []).find(k => (k.nama || "").trim() === (s.kelas || "").trim()) || {}).aksesHafalan === true;
 const _hafEfektif = (s, kl) => (s.role && s.role !== "student") ? true : typeof s.aksesHafalan === "boolean" ? s.aksesHafalan : _hafKelasOn(s, kl);
 const JFT_LV = [["ir0","A1"],["ir1","A2.1"],["ir2","A2.2"]];
 const _jftOn = (s, l) => s.aksesJft !== false && s.aksesJftLevel?.[l] !== false;
@@ -901,7 +910,7 @@ const _aksesPanel = (s) => {
   return `<div class="pn-akses" id="pn-akses-${s.uid}"><h4>🔑 Akses</h4>
     <div class="pn-ak"><b>JLPT</b>${["n5","n4","n3","n2","n1"].map(l => chip(!!s.aksesLevel?.[l], l.toUpperCase(), `pnAkses('${s.uid}','lv','${l}')`)).join("")}</div>
     <div class="pn-ak"><b>JFT</b>${JFT_LV.map(([l, n]) => chip(_jftOn(s, l), "JFT " + n, `pnAkses('${s.uid}','jft','${l}')`, "klik untuk buka/tutup")).join("")}</div>
-    <div class="pn-ak"><b>Hafalan</b>${chip(_hafEfektif(s, kl), _hafEfektif(s, kl) ? "Buka" : "Tutup", `pnAkses('${s.uid}','hf','')`, "klik untuk buka/tutup menu Hafalan siswa ini")}<small style="color:var(--gray)">${typeof s.aksesHafalan === "boolean" ? `diatur khusus siswa · <a href="#" onclick="pnAkses('${s.uid}','hfreset','');return false;">ikut kelas</a>` : `ikut kelas${s.kelas ? " " + _e(s.kelas) : ""}`}</small></div>
+    <div class="pn-ak"><b>Pelajaran</b>${chip(_hafEfektif(s, kl), _hafEfektif(s, kl) ? "Buka" : "Tutup", `pnAkses('${s.uid}','hf','')`, "klik untuk buka/tutup menu Pelajaran siswa ini")}<small style="color:var(--gray)">${typeof s.aksesHafalan === "boolean" ? `diatur khusus siswa · <a href="#" onclick="pnAkses('${s.uid}','hfreset','');return false;">ikut kelas</a>` : `ikut kelas${s.kelas ? " " + _e(s.kelas) : ""}`}</small></div>
     <div class="pn-ak" style="align-items:flex-start"><b>SSW</b><small style="color:var(--gray)">${nb}/${_SSW_8.length} bidang terbuka — atur tiap bidang sendiri</small></div>
     <div class="pn-ssw">${_SSW_8.map(([slug, nama]) => { const on = sswOn && _sswEfektif(s, kl, slug); return `<div class="pn-sr"><span>${_e(nama)}</span>${chip(on, on ? "Buka" : "Tutup", `pnAkses('${s.uid}','bid','${slug}')`, nama)}</div>`; }).join("")}</div>
   </div>`;
@@ -1147,9 +1156,9 @@ window.downloadFormatSiswa = () => {
   const kolSsw = SSW_SLUGS.map(sl => "SSW " + sl);
   const baris = (o) => { const r = { ...o }; kolSsw.forEach(k => { if (!(k in r)) r[k] = ""; }); return r; };
   const data = [
-    baris({ No:1, Email:"siswa1@contoh.com", Password:"rahasia123", Nama:"Budi Santoso", Kelas:"Kelas A", N5:"Ya", N4:"Tidak", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", "JFT A1":"Ya", "JFT A2.1":"Ya", "JFT A2.2":"Tidak", Hafalan:"Ya", SSW:"Ya", "SSW building-cleaning":"Ya", "SSW kaigo":"Ya" }),
-    baris({ No:2, Email:"siswa2@contoh.com", Password:"rahasia456", Nama:"Siti Aminah", Kelas:"Kelas A", N5:"Ya", N4:"Ya", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", Hafalan:"", SSW:"Tidak" }),
-    baris({ No:3, Email:"siswa3@contoh.com", Password:"rahasia789", Nama:"Andi Wijaya", Kelas:"Kelas B", N5:"Ya", N4:"Tidak", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Tidak", Hafalan:"Tidak", SSW:"Semua" }),
+    baris({ No:1, Email:"siswa1@contoh.com", Password:"rahasia123", Nama:"Budi Santoso", Kelas:"Kelas A", N5:"Ya", N4:"Tidak", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", "JFT A1":"Ya", "JFT A2.1":"Ya", "JFT A2.2":"Tidak", Pelajaran:"Ya", SSW:"Ya", "SSW building-cleaning":"Ya", "SSW kaigo":"Ya" }),
+    baris({ No:2, Email:"siswa2@contoh.com", Password:"rahasia456", Nama:"Siti Aminah", Kelas:"Kelas A", N5:"Ya", N4:"Ya", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Ya", Pelajaran:"", SSW:"Tidak" }),
+    baris({ No:3, Email:"siswa3@contoh.com", Password:"rahasia789", Nama:"Andi Wijaya", Kelas:"Kelas B", N5:"Ya", N4:"Tidak", N3:"Tidak", N2:"Tidak", N1:"Tidak", JFT:"Tidak", Pelajaran:"Tidak", SSW:"Semua" }),
   ];
   const ws = XLSX.utils.json_to_sheet(data);
   ws["!cols"] = [{wch:5},{wch:28},{wch:16},{wch:22},{wch:12},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:7},{wch:9},{wch:9},{wch:9},{wch:9},{wch:9}, ...kolSsw.map(k => ({ wch: Math.max(12, k.length + 2) }))];
@@ -1163,7 +1172,7 @@ window.downloadFormatSiswa = () => {
     ["- N5, N4, N3, N2, N1: isi Ya / Tidak. Ya = level dibuka untuk siswa ini. Kosong = Tidak."],
     ["- JFT: Ya / Tidak. Tidak = SEMUA level JFT ditutup untuk siswa ini. Kosong = tidak diatur (JFT tetap terbuka)."],
     ["- JFT A1, JFT A2.1, JFT A2.2: Ya / Tidak per level JFT (Starter, Shokyuu 1, Shokyuu 2). Kosong = tidak diatur."],
-    ["- Hafalan: Ya / Tidak. Ya = menu Hafalan (Anki dari guru) dibuka untuk siswa ini. Tidak = ditutup. KOSONG = ikut pengaturan kelasnya (Dashboard → Kelas → chip Hafalan; kelas yang ditutup = siswa tidak bisa buka). Ini cara membatasi Hafalan hanya untuk kelas tertentu."],
+    ["- Pelajaran: Ya / Tidak. Ya = menu Pelajaran 授業 (Hafalan + Soal dari guru) dibuka untuk siswa ini. Tidak = ditutup. KOSONG = ikut pengaturan kelasnya (Dashboard → Kelas → chip Pelajaran; kelas yang tidak dibuka = tertutup). Siswa tanpa akses tidak melihat menu Pelajaran sama sekali. (Kolom lama bernama 'Hafalan' masih terbaca.)"],
     ["- SSW (WAJIB untuk akun baru): isi Ya / Tidak / Semua. Tidak = SELURUH menu SSW ditutup. Semua = semua bidang SSW dibuka. Ya = hanya bidang yang diisi Ya di kolom 'SSW <bidang>'."],
     ["- SSW <bidang> (per bidang): isi Ya / Tidak. Jika SSW = Ya, minimal 1 bidang harus Ya. Daftar bidang: " + SSW_SLUGS.join(", ") + "."],
     ["- Akun baru dengan kolom SSW kosong akan DITOLAK saat preview (supaya tidak ada siswa baru tanpa pengaturan SSW)."],
@@ -1192,7 +1201,7 @@ window.bacaExcelSiswa = async (file) => {
       const kelas = g("Kelas");
       const aksesLevel = {}; ["n5","n4","n3","n2","n1"].forEach(l => aksesLevel[l] = _ya(r[l.toUpperCase()] ?? r[l]));
       const ssw = _bacaSsw(r);
-      const haf = _tri(r.Hafalan ?? r.hafalan ?? r.HAFALAN ?? r["Akses Hafalan"] ?? r["akses hafalan"]);
+      const haf = _tri(r.Pelajaran ?? r.pelajaran ?? r.PELAJARAN ?? r["Akses Pelajaran"] ?? r["akses pelajaran"] ?? r.Hafalan ?? r.hafalan ?? r.HAFALAN ?? r["Akses Hafalan"] ?? r["akses hafalan"]);
       const jft = _tri(r.JFT ?? r.jft ?? r.Jft), jftLv = {}; JFT_LV.forEach(([l, n]) => { const v = _tri(r["JFT " + n] ?? r["jft " + n]); if (v !== undefined) jftLv[l] = v; });
       const sswAll = /^(semua|all)$/i.test(g("SSW")) ? true : _tri(r.SSW ?? r.ssw ?? r.Ssw);
       const lama = state.siswaList.find(x => (x.email||"").toLowerCase() === email);
@@ -1226,7 +1235,7 @@ function renderPreviewSiswa(){
   return `
     <div style="font-size:13px; margin-bottom:8px;"><b>${list.length}</b> baris · <span style="color:var(--green);">${ok.length} siap dibuat</span> · <span style="color:var(--red);">${list.filter(x=>x.err).length} bermasalah (dilewati)</span></div>
     <div class="table-wrap" style="max-height:340px; overflow:auto;"><table>
-      <thead><tr><th>Baris</th><th>Email</th><th>Nama</th><th>Kelas</th><th>Akses</th><th>JFT</th><th>Hafalan</th><th>SSW</th><th>Status</th></tr></thead>
+      <thead><tr><th>Baris</th><th>Email</th><th>Nama</th><th>Kelas</th><th>Akses</th><th>JFT</th><th>Pelajaran</th><th>SSW</th><th>Status</th></tr></thead>
       <tbody>${list.map(x => `<tr>
         <td>${x.baris}</td><td>${esc(x.email)}</td><td>${esc(x.nama)}</td><td>${esc(x.kelas)}</td>
         <td>${["n5","n4","n3","n2","n1"].filter(l => x.aksesLevel[l]).map(l => l.toUpperCase()).join(", ") || "-"}</td>
@@ -1986,7 +1995,7 @@ async function renderKelasTab(){
             <p style="color:var(--gray); font-size:12px; margin:4px 0;">${k.deskripsi||"(tanpa deskripsi)"}</p>
             <div style="display:flex; gap:8px; font-size:12px; color:var(--gray-dim); margin-top:6px;">
               <span>👥 ${members.length} siswa</span>
-              <span class="chip btn-chip ${k.aksesHafalan !== false ? "on" : ""}" title="Menu Hafalan untuk semua siswa kelas ini (bisa dikecualikan per siswa)" onclick="event.stopPropagation();toggleKelasHafalan('${k.id}')">Hafalan ${k.aksesHafalan !== false ? "Buka" : "Tutup"}</span>
+              <span class="chip btn-chip ${k.aksesHafalan === true ? "on" : ""}" title="Menu Pelajaran untuk semua siswa kelas ini (bisa dikecualikan per siswa)" onclick="event.stopPropagation();toggleKelasHafalan('${k.id}')">Pelajaran ${k.aksesHafalan === true ? "Buka" : "Tutup"}</span>
             </div>
           </div>
           <div onclick="event.stopPropagation();">
@@ -2129,8 +2138,8 @@ window.submitAssignSiswa = async (kelasId) => {
 };
 window.toggleKelasHafalan = async (id) => {
   const k = (state.kelasList || []).find(x => x.id === id); if (!k) return;
-  const baru = k.aksesHafalan === false;
-  try { await FB.setKelasAksesHafalan(id, baru); k.aksesHafalan = baru; toast(`Hafalan kelas ${k.nama}: ${baru ? "dibuka" : "ditutup"}`); }
+  const baru = k.aksesHafalan !== true;
+  try { await FB.setKelasAksesHafalan(id, baru); k.aksesHafalan = baru; toast(`Pelajaran kelas ${k.nama}: ${baru ? "dibuka" : "ditutup"}`); }
   catch (e) { toast("Gagal simpan akses kelas: " + (e.message || e)); }
   renderTab();
 };
@@ -2372,7 +2381,7 @@ window.editKelas = (id) => {
     <h2>${id?"Edit Kelas":"Kelas Baru"}</h2>
     <div class="form-row"><label>Nama Kelas</label><input id="kl-nama" value="${k.nama||""}" style="flex:1;"/></div>
     <div class="form-row"><label>Deskripsi</label><textarea id="kl-desc" rows="3" style="flex:1;">${k.deskripsi||""}</textarea></div>
-    <div class="form-row"><label>Akses Hafalan</label><select id="kl-haf" style="flex:1;"><option value="1" ${k.aksesHafalan===false?"":"selected"}>Buka — siswa kelas ini boleh pakai menu Hafalan</option><option value="0" ${k.aksesHafalan===false?"selected":""}>Tutup — menu Hafalan terkunci untuk kelas ini</option></select></div>
+    <div class="form-row"><label>Akses Pelajaran</label><select id="kl-haf" style="flex:1;"><option value="1" ${k.aksesHafalan===true?"selected":""}>Buka — siswa kelas ini melihat menu Pelajaran (Hafalan + Soal)</option><option value="0" ${k.aksesHafalan===true?"":"selected"}>Tutup — menu Pelajaran disembunyikan untuk kelas ini</option></select></div>
     <div style="display:flex; gap:8px; margin-top:16px;">
       <button class="btn" onclick="simpanKelas('${id||""}')">Simpan</button>
       <button class="btn ghost" onclick="closeModal()">Batal</button>
@@ -2383,7 +2392,7 @@ window.simpanKelas = async (id) => {
   const data = {
     nama: document.getElementById("kl-nama").value.trim(),
     deskripsi: document.getElementById("kl-desc").value,
-    aksesHafalan: document.getElementById("kl-haf").value !== "0",
+    aksesHafalan: document.getElementById("kl-haf").value === "1",
   };
   if (!data.nama) return toast("Isi nama");
   await FB.simpanKelas(data, id || null);

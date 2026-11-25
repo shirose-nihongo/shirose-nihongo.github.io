@@ -1594,8 +1594,9 @@ import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261125c";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 import { initHub, renderHub } from "./js/siswa-hub.js?v=20261123s";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261125d";
-import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehHafalan } from "./js/deck-siswa.js?v=20261125a";
-window.bukaHafalan = async () => { if (await bolehHafalan()) route("anki"); else toast("🔒 Menu Hafalan dikunci guru. Hubungi guru untuk membuka akses."); };
+import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehPelajaran } from "./js/deck-siswa.js?v=20261126a";
+window.bukaPelajaran = async () => { if (await bolehPelajaran()) route("pelajaran"); else toast("Menu Pelajaran tidak tersedia untuk akunmu."); };
+window.bukaHafalan = window.bukaPelajaran;
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
 import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261124a";
 initJlpt(FB);
@@ -2447,7 +2448,7 @@ const _parentOf = (path) => {
   if (n === "jft-paket" && /^try/.test(slug)) return "jft-tryout";
   if (n.startsWith("jft-")) return "jft-ujian";
   if (n === "kana") return "pilih-level";
-  if (n === "anki") return "pilih-level";
+  if (n === "anki" || n === "pelajaran") return "pilih-level";
   if (n.startsWith("kana-")) return "kana";
   return null;
 };
@@ -2536,7 +2537,7 @@ function _updateFabNav(name){
    mensetsu (latihan wawancara, tanpa benar/salah → jalan-jalan "ganbatte"; kartu hafalan mensetsu → belajar). */
 // Layar baca materi (SSW / JFT / JLPT / kana): teman belajar ikut menemani.
 const _CHIBI_BACA = new Set(["materi","kosakata","kanji","bunpou","rangkuman","ssw-rangkuman","jft-rangkuman","sylabus","syl",
-  "ssw-pustaka","ssw-peta","ssw-bab","ssw-baca","ssw-buku","ssw-kosa","ssw-kartu","ssw-diagram","ssw-progres","kana-baca","kana-aturan","kana-tabel","kana-order","kana-tulis"]);
+  "pelajaran","anki","ssw-pustaka","ssw-peta","ssw-bab","ssw-baca","ssw-buku","ssw-kosa","ssw-kartu","ssw-diagram","ssw-progres","kana-baca","kana-aturan","kana-tabel","kana-order","kana-tulis"]);
 function _autoChibi(name){
   try {
     if (name === "kana-hafalan" || name === "kana-tes" || name === "mensetsu-flash" || _CHIBI_BACA.has(name)) Chibi.mount("belajar");
@@ -2818,12 +2819,20 @@ function renderPilihLevel(){
         <span class="desc">Hiragana &amp; Katakana dari nol: tabel, urutan goresan, latihan menulis, hafalan, dan tes membaca.</span>
         <span class="st">Tanpa pilih level</span>
       </button>`;
-  const kartuJft = `
+  // JFT: bila tidak ada akses sama sekali → kartu gelap & terkunci sejak awal (tidak bisa dibuka). SSW tetap bisa dimasuki (siswa bisa melihat pulau-pulaunya).
+  const jftBuka = state.siswa?.aksesJft !== false && ["ir0","ir1","ir2"].some(l => state.siswa?.aksesJftLevel?.[l] !== false);
+  const kartuJft = !jftBuka ? `
+      <button class="jlpt-card jft locked" data-kanji="日" aria-disabled="true" onclick="toast('🔒 JFT dikunci guru. Hubungi guru untuk membuka akses.')">
+        <span class="lv">JFT</span>
+        <span class="jpname">JFT-Basic A2 · いろどり</span>
+        <span class="desc">Irodori Starter A1, Shokyuu 1 &amp; 2: kosakata, kanji, bunpou, hafalan, dan simulasi ujian CBT dengan skor 10–250.</span>
+        <span class="st">🔒 Dikunci guru</span>
+      </button>` : `
       <button class="jlpt-card jft" data-kanji="日" onclick="route('jft')">
         <span class="lv">JFT</span>
         <span class="jpname">JFT-Basic A2 · いろどり</span>
         <span class="desc">Irodori Starter A1, Shokyuu 1 &amp; 2: kosakata, kanji, bunpou, hafalan, dan simulasi ujian CBT dengan skor 10–250.</span>
-        <span class="st">Terbuka untuk semua siswa</span>
+        <span class="st">Terbuka</span>
       </button>`;
   const kartuSsw = `
       <button class="jlpt-card ssw" data-kanji="技" onclick="route('ssw')">
@@ -2840,13 +2849,13 @@ function renderPilihLevel(){
         <span class="desc">Simulasi wawancara perusahaan Jepang untuk 20 bidang SSW: pewawancara AI berbasis suara, bantuan bahasa Indonesia, dan penilaian otomatis.</span>
         <span class="st">20 bidang SSW</span>
       </button>`;
-  // HAFALAN 暗記 — deck kosakata buatan guru untuk kelas siswa (flashcard/pilihan ganda/cocokkan/ketik). Siswa tidak bisa menambah/mengubah.
+  // PELAJARAN 授業 — Hafalan (deck) + Soal (pilihan ganda A–D + penjelasan) buatan guru. Hanya terlihat oleh siswa yang diberi akses (disembunyikan, bukan digembok).
   const kartuHafalan = `
-      <button class="jlpt-card hafalan" data-kanji="暗" onclick="bukaHafalan()">
-        <span class="lv">暗記</span>
-        <span class="jpname">HAFALAN · Anki dari guru</span>
-        <span class="desc">Deck kosakata yang disiapkan gurumu untuk kelasmu: flashcard geser, pilihan ganda, cocokkan, dan ketik dengan jadwal ulang otomatis.</span>
-        <span class="st">Deck untuk kelasmu</span>
+      <button class="jlpt-card pelajaran" data-kanji="授" style="display:none" onclick="bukaPelajaran()">
+        <span class="lv">授業</span>
+        <span class="jpname">PELAJARAN · Jyugyou</span>
+        <span class="desc">Materi dari gurumu: hafalan kosakata (flashcard, pilihan ganda, cocokkan, ketik) dan soal pilihan ganda A–D lengkap dengan penjelasan.</span>
+        <span class="st">Hafalan + Soal</span>
       </button>`;
   const kartuSaran = `
       <button class="jlpt-card saran" data-kanji="声" onclick="bukaSaran()">
@@ -2862,8 +2871,8 @@ function renderPilihLevel(){
         <span class="desc">Kelola siswa, akses level, bank soal, dan laporan kelas.</span>
         <span class="st">Akun ${FB.userIsDeveloper() ? "moderator" : FB.userIsAdmin() ? "admin" : "guru"}</span>
       </button>` : "";
-  // Tandai kartu Hafalan terkunci bila guru menutup aksesnya (cek async; klik tetap dicek ulang di bukaHafalan).
-  setTimeout(() => { bolehHafalan().then(ok => { const el = document.querySelector(".jlpt-card.hafalan"); if (el && !ok) { el.classList.add("locked"); const st = el.querySelector(".st"); if (st) st.textContent = "🔒 Dikunci guru"; } }).catch(() => {}); }, 60);
+  // Kartu Pelajaran baru ditampilkan bila siswa diberi akses (cek async karena bisa mengikuti pengaturan kelas).
+  setTimeout(() => { bolehPelajaran().then(ok => { const el = document.querySelector(".jlpt-card.pelajaran"); if (el && ok) el.style.display = ""; }).catch(() => {}); }, 0);
   return `
     <div class="jlpt-pick">
       <div class="head">
