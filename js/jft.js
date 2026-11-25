@@ -282,7 +282,7 @@ function startTick() {
     if (s <= 0) { clearInterval(_tick); selesaiSesi(); }
   }, 1000);
 }
-function draw() { const app = $("app"); if (app) { app.innerHTML = renderSoal(); window.scrollTo(0, 0); } }
+function draw() { const app = $("app"); if (app) { app.innerHTML = renderSoal(); window.scrollTo(0, 0); try { if (J && !J.selesai && window.Chibi) window.Chibi.mount(J.mode === "latihan" ? "belajar" : "ujian"); } catch (e) {} } }
 
 const fmtOpt = (o) => {
   if (String(o).startsWith("pic:")) return `<span class="jft-emo big">${esc(o.slice(4))}</span>`;
@@ -344,7 +344,7 @@ function renderSoal() {
 
 function selesaiSesi() {
   clearInterval(_tick); try { speechSynthesis.cancel(); } catch (e) {}
-  J.selesai = true;
+  J.selesai = true; try { window.Chibi && window.Chibi.unmount(); } catch (e) {}
   const per = {};
   J.daftar.forEach(s => { const gi = rentang(s); per[s] = { benar: gi.filter(i => bener(J.qs[i], J.ans[i])).length, total: gi.length }; });
   const benar = Object.values(per).reduce((a, x) => a + x.benar, 0), total = J.qs.length;
@@ -375,7 +375,7 @@ window.JFT = {
   lanjutSesi() { const s = pulihSesi(); if (!s) return; J = s; history.replaceState(null, "", "#jft-tes"); startTick(); draw(); },
   jawab(i) { J.ans[J.idx] = i; J.konfirm = false; simpanSesi(); draw(); },
   isi(v) { J.ans[J.idx] = v; J.konfirm = false; simpanSesi(); const b = document.querySelector(".jft-cekbar .btn"); if (b) b.disabled = !adaJawab(J.qs[J.idx], v); const no = document.querySelector(".jft-nomor .no.aktif"); if (no) no.classList.toggle("terjawab", adaJawab(J.qs[J.idx], v)); },
-  cek() { if (!J || J.mode !== "latihan" || !adaJawab(J.qs[J.idx], J.ans[J.idx])) return; (J.cek = J.cek || {})[J.idx] = true; draw(); },
+  cek() { if (!J || J.mode !== "latihan" || !adaJawab(J.qs[J.idx], J.ans[J.idx])) return; (J.cek = J.cek || {})[J.idx] = true; draw(); try { window.Chibi && window.Chibi.react(!!bener(J.qs[J.idx], J.ans[J.idx])); } catch (e) {} },
   ke(i) { J.idx = i; J.konfirm = false; simpanSesi(); draw(); },
   play() {
     const sim = J.mode === "sim"; const n = (J.plays[J.idx] || 0);

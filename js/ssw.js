@@ -1314,6 +1314,7 @@ const SSW = window.SSW = {
   /* --- kuis --- */
   qzDraw() {
     const root = document.getElementById("qz-root"); if (!root || !QZ) return;
+    try { window.Chibi && window.Chibi.mount("belajar"); } catch (e) {}
     const Q = QZ, total = Q.items.length;
     if (Q.i >= total) {
       const pct = Q.retry ? Math.round(100 * Q.score / Math.max(1, total)) : recordQuiz(Q.P, Q.q.id, Q.score, total, Q.wrong.map(w => w.id));
@@ -1342,7 +1343,7 @@ const SSW = window.SSW = {
   },
   qzRuby() { LSset("shirose-ssw-ruby", ruby() ? "0" : "1"); applyRuby(); if (QZ) SSW.qzDraw(); },
   qzLang(l) { if (!QZ) return; QZ.lang = l; setLang(l); SSW.qzDraw(); },
-  qzPick(k) { if (!QZ || QZ.sel != null) return; const it = QZ.items[QZ.i]; QZ.sel = k; if (k === it.a) { QZ.score++; window.awardXP && window.awardXP(10, 10); } else QZ.wrong.push(it); SSW.qzDraw(); },
+  qzPick(k) { if (!QZ || QZ.sel != null) return; const it = QZ.items[QZ.i]; QZ.sel = k; if (k === it.a) { QZ.score++; window.awardXP && window.awardXP(10, 10); } else QZ.wrong.push(it); SSW.qzDraw(); try { window.Chibi && window.Chibi.react(k === it.a); } catch (e) {} },
   qzRetryWrong() {
     if (!QZ || !QZ.wrong.length) return;
     const items = shuffle(QZ.wrong.map(w => ({ ...w, order: w.mb ? w.opts.map((_, k) => k) : shuffle(w.opts.map((_, k) => k)) })));

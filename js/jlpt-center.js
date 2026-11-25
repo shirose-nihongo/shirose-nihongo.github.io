@@ -332,6 +332,7 @@ function simpanSesi() { if (E) LS.set(SESI_KEY(), E.sesi); }
 async function mulaiAtauLanjut(sesi) {
   const pkg = await loadPkg(sesi.file);
   E = { sesi, pkg };
+  try { window.Chibi && window.Chibi.mount("ujian"); } catch (e) {}
   if (Date.now() >= sesi.endAt) {
     setTimeout(() => kumpulkan(true), 0);
     return `<div class="panel"><div class="loading">⏰ Waktu habis — mengumpulkan jawaban…</div></div>`;
@@ -521,7 +522,7 @@ let _mengumpulkan = false;
 async function kumpulkan(timeout) {
   if (!E || _mengumpulkan) return;
   _mengumpulkan = true;
-  stopTimer(); stopAudio();
+  stopTimer(); stopAudio(); try { window.Chibi && window.Chibi.unmount(); } catch (e) {}
   try {
     const { sesi: s, pkg } = E;
     const selesai = Math.min(Date.now(), s.endAt);

@@ -79,6 +79,17 @@ body{
 .hscroll::-webkit-scrollbar{display:none;}
 .hscroll > *{scroll-snap-align:start; flex:0 0 auto;}
 
+/* ===== Leaderboard: profil karakter ===== */
+.lb-tap{cursor:pointer;transition:background .12s,transform .12s;} .lb-tap:hover{background:rgba(255,255,255,.07);} .lb-tap:active{transform:scale(.99);}
+.lbp-ov{position:fixed;inset:0;z-index:300;background:rgba(10,8,28,.72);display:flex;align-items:center;justify-content:center;padding:16px;animation:lbpIn .15s ease-out;}
+@keyframes lbpIn{from{opacity:0}to{opacity:1}}
+.lbp-card{position:relative;width:min(380px,100%);max-height:92vh;overflow:auto;background:linear-gradient(160deg,#3b2f78,#251c52);border:2px solid var(--border);border-radius:20px;padding:18px 16px 16px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.5);}
+.lbp-x{position:absolute;top:8px;right:8px;width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.1);color:#fff;font-size:16px;cursor:pointer;}
+.lbp-name{font:800 20px var(--font-sans);color:var(--pink-light,#f9a8c9);} .lbp-sub{font-size:13px;color:var(--gray);margin:2px 0 8px;}
+.lbp-big{width:min(220px,60vw);margin:0 auto;} .lbp-big svg{width:100%;height:auto;display:block;}
+.lbp-minis{display:flex;justify-content:center;gap:10px;margin-top:10px;}
+.lbp-mini{width:78px;padding:8px 4px 6px;border-radius:14px;background:rgba(255,255,255,.07);} .lbp-mc svg{width:100%;height:auto;display:block;} .lbp-mini small{font-size:11px;color:var(--gray);}
+
 /* ========== CHARACTER COMPANION + JURUS BURST (Part 24 + 25) ========== */
 /* Small SVG/emoji avatar in a corner during Hafalan & Ujian. */
 .companion{
@@ -1563,20 +1574,24 @@ html{overflow-x:hidden;}
 
 <script type="module">
 import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261122p";
+import Chibi from "./js/chibi.js?v=20261125c";
+window.Chibi = Chibi;
+// Karakter yang dipakai siswa → teman belajar chibi (hafalan, matching, pilihan ganda, soal, ujian).
+Chibi.setSource(() => { const k = (state && state.siswa && state.siswa.karakter) || {}; return { equipped: k.equipped, skinTone: k.skinTone, hairColor: k.hairColor, body: k.body || getBody(), bentuk: k.bentuk || getBentuk() }; });
 import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261124a";
-import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261119k";
+import * as FB from "./js/firebase-sync.js?v=20261125c";
+import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261125c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
-import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261123m";
+import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261125c";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261120ex";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261122a";
-import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261123m";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261125c";
+import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 import { initHub, renderHub } from "./js/siswa-hub.js?v=20261123s";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261120ex";
 import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehHafalan } from "./js/deck-siswa.js?v=20261125a";
@@ -3522,13 +3537,11 @@ function renderCompanion(){
 window.renderCompanion = renderCompanion;
 
 // Insert / remove the companion overlay. Called from hafalan / exam renderers.
-function _mountCompanion(){
-  _unmountCompanion();
-  const el = document.createElement("div");
-  el.innerHTML = renderCompanion();
-  document.body.appendChild(el.firstElementChild);
+function _mountCompanion(mode){
+  try { Chibi.mount(mode === "ujian" ? "ujian" : "belajar"); } catch (e) { console.warn("chibi:", e && e.message); }
 }
 function _unmountCompanion(){
+  try { Chibi.unmount(); } catch (e) {}
   const existing = document.getElementById("companion");
   if (existing) existing.remove();
 }
@@ -3539,12 +3552,8 @@ window._unmountCompanion = _unmountCompanion;
 // Called on correct-answer events in all three hafalan modes + exam.
 function playJurus(){
   const a = jlptAvatar(state.level);
-  // Make the companion cheer
-  const comp = document.getElementById("companion");
-  if (comp){
-    comp.classList.add("cheer");
-    setTimeout(() => comp.classList.remove("cheer"), 650);
-  }
+  // Chibi ikut senang
+  try { Chibi.react(true); } catch (e) {}
   // Build burst overlay
   const burst = document.createElement("div");
   burst.className = "burst";
@@ -4688,7 +4697,7 @@ window.hafRate = async (rate) => {
   state.hafalan_pos++;
   if (_hafSSW()) _sswSaveSess();
   document.getElementById("app").innerHTML = await renderHafalanSession();
-  if (ingat) { try { playJurus(); } catch (_) {} }
+  if (ingat) { try { playJurus(); } catch (_) {} } else { try { Chibi.react(false); } catch (_) {} }
 
   _hafBg = _hafBg.then(async () => {
     await _saveSrs();
@@ -4766,7 +4775,7 @@ window.matchTap = (side, i) => {
       _hafLog(state.hafalan_pos + L, true);
       matchAfterPair(true, L);
     } else {
-      lb.classList.add("match-bad"); rb.classList.add("match-bad");
+      lb.classList.add("match-bad"); rb.classList.add("match-bad"); try { Chibi.react(false); } catch (_) {}
       setTimeout(() => { lb.classList.remove("match-bad","picked"); rb.classList.remove("match-bad","picked"); }, 500);
       state.hafalan_score.salah++;
       _hafLog(state.hafalan_pos + L, false, ((state.hafalan_queue[state.hafalan_pos + R]) || {}).back);
@@ -4907,7 +4916,7 @@ window.mcPick = async (encoded, btn) => {
   } else {
     fb.style.background = "rgba(239,68,68,.15)";
     fb.style.border = "1px solid var(--red)";
-    fb.innerHTML = `<b>✗ Belum tepat.</b> Jawaban: ${state.mc_correct}`;
+    fb.innerHTML = `<b>✗ Belum tepat.</b> Jawaban: ${state.mc_correct}`; try { Chibi.react(false); } catch (_) {}
     state.hafalan_score.salah++;
     _hafAdd(1, 0);
   }
@@ -5216,7 +5225,7 @@ function renderUjianSoal(){
   const s = u.soal[u.pos];
   const picked = u.jawaban[u.pos];
   const remaining = u.endTime ? Math.max(0, Math.floor((u.endTime - Date.now())/1000)) : 0;
-  setTimeout(_mountCompanion, 0);
+  setTimeout(() => _mountCompanion("ujian"), 0);
   // Gambar soal (hanya embedded base64 dari Excel; URL external tidak didukung lagi).
   const gambarHtml = s.gambar
     ? `<div style="text-align:center; margin:8px 0 14px;">
@@ -6356,6 +6365,7 @@ async function renderLeaderboard(){
   const list = await FB.leaderboardAdvanced(kind, 20, scope === "kelas" ? myKelas : "").catch(() => []);
 
   const me = state.user?.uid;
+  state._lbList = list;
 
   const scoreLabel = kind === "global" ? "XP total"
                    : kind.startsWith("jlpt-") ? "XP"
@@ -6365,7 +6375,7 @@ async function renderLeaderboard(){
     const rankColor = i===0?'var(--gold)':i===1?'#c0c0c0':i===2?'#cd7f32':'var(--gray)';
     const isMe = u.uid === me;
     return `
-      <div class="lb-row ${isMe?'me':''}">
+      <div class="lb-row lb-tap ${isMe?'me':''}" onclick="lbProfil('${u.uid}')" role="button" tabindex="0" title="Lihat karakter">
         <div class="lb-rank" style="color:${rankColor};">#${i+1}</div>
         <div class="lb-user">
           <div class="lb-name">${u.nama}${isMe?' <span style="color:var(--pink); font-size:11px;">(Kamu)</span>':''}</div>
@@ -6379,7 +6389,7 @@ async function renderLeaderboard(){
   return `
     <div class="panel">
       <h2>🏆 Leaderboard</h2>
-      <p style="color:var(--gray); font-size:13px; margin-bottom:12px;">${scope==="kelas" ? `Ranking kelas ${myKelas}` : "Ranking lintas kelas"} berdasarkan pembelajaran valid.</p>
+      <p style="color:var(--gray); font-size:13px; margin-bottom:12px;">${scope==="kelas" ? `Ranking kelas ${myKelas}` : "Ranking lintas kelas"} berdasarkan pembelajaran valid. <b>Ketuk nama</b> untuk melihat karakternya 👀</p>
       ${myKelas ? `<div class="lb-tabs">
         <button class="lb-chip ${scope==='kelas'?'on':''}" onclick="lbSetScope('kelas')">🏫 Kelas Saya</button>
         <button class="lb-chip ${scope==='all'?'on':''}" onclick="lbSetScope('all')">🌍 Semua Kelas</button>
@@ -6410,6 +6420,27 @@ async function renderLeaderboard(){
     </div>
   `;
 }
+/* Profil di leaderboard: karakter yang sedang dipakai orang itu (besar) + versi chibi senang / biasa / sedih. */
+window.lbProfil = async (uid) => {
+  const u = (state._lbList || []).find(x => x.uid === uid) || {};
+  let kar = null;
+  if (uid === state.user?.uid) { const k = state.siswa?.karakter || {}; kar = { eq: k.equipped, sk: k.skinTone, hc: k.hairColor, b: k.body || getBody(), bt: k.bentuk || getBentuk() }; }
+  else kar = await (FB.getKarakterLb ? FB.getKarakterLb(uid) : null);
+  const esc2 = (t) => String(t == null ? "" : t).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+  let body = `<div class="empty" style="padding:24px 8px;"><div class="emoji">🫥</div>Karakter ${esc2(u.nama || "ini")} belum dibagikan.<br><small style="color:var(--gray-dim);">Muncul setelah dia membuka aplikasi lagi.</small></div>`;
+  if (kar) {
+    const eq = { ...DEFAULT_EQUIPPED, ...(kar.eq || {}) };
+    let big = ""; try { big = renderCharacter(eq, kar.sk || "light", { hairColor: kar.hc || undefined, body: kar.b || "male", bentuk: kar.bt || undefined, wide: true }); } catch (e) {}
+    const ck = { equipped: kar.eq, skinTone: kar.sk, hairColor: kar.hc, body: kar.b || "male", bentuk: kar.bt || undefined };
+    const mini = (ex, t) => `<div class="lbp-mini"><div class="lbp-mc">${Chibi.chibiSvg(ck, ex)}</div><small>${t}</small></div>`;
+    body = `<div class="lbp-big">${big}</div><div class="lbp-minis">${mini("happy", "Benar 😄")}${mini("netral", "Biasa")}${mini("sad", "Salah 😢")}</div>`;
+  }
+  const old = document.getElementById("lbp-ov"); if (old) old.remove();
+  const ov = document.createElement("div"); ov.id = "lbp-ov"; ov.className = "lbp-ov"; ov.onclick = (e) => { if (e.target === ov) ov.remove(); };
+  ov.innerHTML = `<div class="lbp-card" role="dialog" aria-label="Profil ${esc2(u.nama || "")}"><button class="lbp-x" onclick="document.getElementById('lbp-ov').remove()" aria-label="Tutup">✕</button>
+    <div class="lbp-name">${esc2(u.nama || "Siswa")}</div><div class="lbp-sub">${u.kelas ? esc2(u.kelas) + " · " : ""}${esc2(u.meta || "")}${u.score != null ? " · " + Number(u.score).toLocaleString("id-ID") + " XP" : ""}</div>${body}</div>`;
+  document.body.appendChild(ov);
+};
 window.lbSetScope = (sc) => { state._lbScope = sc; route("leaderboard"); };
 window.lbSetKind = (kind) => {
   state._lbKind = kind;
@@ -6505,7 +6536,7 @@ FB.onAuth(async (user, siswa) => {
   const firstFire = !_authFiredOnce;
   _authFiredOnce = true;
 
-  state.user = user; state.siswa = siswa;
+  state.user = user; state.siswa = siswa; try { setTimeout(() => FB.publishKarakter && FB.publishKarakter(), 1500); } catch (e) {}
   if (window.DEMO) window.DEMO.bar();   // pita "MODE DEMO" (hanya tampil untuk akun demo)
   try { const b = siswa?.karakter?.body; if (b) setBody(b); } catch(e) {}
   try { const bk = siswa?.karakter?.bentuk; if (bk) setBentuk(bk); } catch(e) {}

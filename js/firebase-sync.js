@@ -518,7 +518,7 @@ export function isGuestUser(){
 export async function updateKarakter(karakter) {
   if (!currentUser) return;
   await updateDoc(doc(db, "siswa", currentUser.uid), { karakter });
-  currentSiswaDoc.karakter = karakter;
+  currentSiswaDoc.karakter = karakter; publishKarakter();
 }
 export async function beliItem(kategori, itemId, harga, level) {
   if (!currentUser) throw new Error("Harus login dulu");
@@ -551,19 +551,19 @@ export async function beliItem(kategori, itemId, harga, level) {
 export async function setBodyType(b) {
   if (!currentUser) return;
   await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.body": b });
-  if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.body = b;
+  if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.body = b; publishKarakter();
 }
 export async function setBentukKarakter(b) {
   if (!currentUser) return;
   await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.bentuk": b });
-  if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.bentuk = b;
+  if (currentSiswaDoc && currentSiswaDoc.karakter) currentSiswaDoc.karakter.bentuk = b; publishKarakter();
 }
 export async function equipItem(kategori, itemId) {
   if (!currentUser) return;
   const eq = currentSiswaDoc.karakter.equipped || {};
   eq[kategori] = itemId;
   await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.equipped": eq });
-  currentSiswaDoc.karakter.equipped = eq;
+  currentSiswaDoc.karakter.equipped = eq; publishKarakter();
 }
 
 /* ========== DOMPET KOIN TUNGGAL ==========
@@ -1771,9 +1771,26 @@ async function _lbPush(level, xpVal, lvVal){
     _lbMine = d; _lbCache.clear();
   } catch(e){ console.warn("lb push failed:", e.message); }
 }
+/* ---- Karakter publik untuk leaderboard: lbk/{uid} = { uid, nama, eq, sk, hc, b, bt, upd } ----
+ * Koleksi terpisah dari lb/{uid} supaya aturan lb lama tidak terganggu. Kalau aturan lbk belum dipasang,
+ * tulis/baca gagal diam-diam (profil tampil tanpa karakter). Hanya dandanan karakter — tidak ada data pribadi. */
+let _karPub = "";
+export async function publishKarakter(){
+  try {
+    if (!currentUser || !currentSiswaDoc) return;
+    const k = currentSiswaDoc.karakter || {};
+    const d = JSON.parse(JSON.stringify({ uid: currentUser.uid, nama: _lbNama(), eq: k.equipped || {}, sk: k.skinTone || "light", hc: k.hairColor || null, b: k.body || "male", bt: k.bentuk || null }));
+    const sig = JSON.stringify([d.nama, d.eq, d.sk, d.hc, d.b, d.bt]); if (sig === _karPub) return;
+    d.upd = Date.now(); await setDoc(doc(db, "lbk", currentUser.uid), d); _karPub = sig;
+  } catch (e) { console.warn("karakter publik gagal:", e && e.message); }
+}
+export async function getKarakterLb(uid){
+  try { const g = await getDoc(doc(db, "lbk", uid)); return g.exists() ? g.data() : null; } catch (e) { return null; }
+}
 // Sinkron sekali (per sesi) dari data gami sendiri, supaya siswa lama langsung muncul.
 let _lbSynced = false;
 export async function syncMyLeaderboard(){
+  publishKarakter();
   if (_lbSynced || !currentUser) return;
   _lbSynced = true;
   try {

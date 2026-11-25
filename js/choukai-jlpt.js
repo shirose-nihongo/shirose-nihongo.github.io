@@ -187,6 +187,7 @@ window.ckAnswer = async (lvl, id, qi, oi) => {
   const it = sec.items.find(x => x.id === id);
   const el = document.getElementById(`ck-card-${id}`);
   if (el) el.outerHTML = cardHtml(lvl, sec, it, ans, !!getPrefs().exam);
+  try { if (window.Chibi) { if (getPrefs().exam) window.Chibi.mount("ujian"); else { window.Chibi.mount("belajar"); window.Chibi.react(oi === it.qs[qi].ans); } } } catch (e) {}
   const pr = secProgress(sec, ans);
   const sc = document.getElementById("ck-score");
   if (sc) sc.innerHTML = scoreHtml(pr);
