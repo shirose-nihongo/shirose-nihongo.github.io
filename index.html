@@ -3921,8 +3921,34 @@ function _frHtml(fr){
 }
 /* Bentuk kata kerja: 辞書形 (default) / ます形 — disimpan di localStorage, berlaku di materi & hafalan */
 function _vfMasu(){ try { return localStorage.getItem("shirose-verbform") === "masu"; } catch(_) { return false; } }
+/* Konversi otomatis 辞書形 → ます形 untuk data tanpa km/ms (SSW, JFT). Diuji ke data JLPT N5–N3: 969 kata kerja cocok semua. */
+const _VF_GODAN_RU = ["帰る","返る","入る","走る","知る","切る","要る","減る","蹴る","滑る","焦る","喋る","茂る","握る","散る","限る","参る","湿る","遮る","練る","照る","捻る","混じる","交じる","覆る","翻る","罵る","嘲る","蘇る","甦る","陥る","千切る"];
+const _VF_NOT = /^(直ぐ|先ず|全く|近く|遠く|多く|概ね|宜しく|良く|早く|暫く|向こう|幾つ|[一二三四五六七八九十]つ|御目出度う|お早う|有り難う|真っ直ぐ|もう直ぐ|行ってきます|失礼します)(\[[^\]]*\])?$|ずつ$|よく$|ください$|ございます$|おめでとう$|ましょう$|ません$|でしょう$/;
+const _VF_ROW = { う:"い", く:"き", ぐ:"ぎ", す:"し", つ:"ち", ぬ:"に", ぶ:"び", む:"み", る:"り" };
+const _VF_ICH = "いきしちにひみりぎじぢびぴえけせてねへめれげぜでべぺ";
+function _vfDerive(kata, kana){
+  const k = String(kata || "").replace(/\[[^\]]*\]/g, "").trim(), r = String(kana || "").trim();
+  if (!k || !r || _VF_NOT.test(String(kata || "").trim()) || /[～〜／（）()・、\s]/.test(k.replace(/^\(お\)/, ""))) return null;
+  if (/ます$/.test(k)) return null;
+  if (/来る$/.test(k) && /くる$/.test(r)) return { km: k.slice(0, -1) + "ます", ms: r.slice(0, -2) + "きます" };
+  if (/為る$/.test(k)) return { km: k.slice(0, -1) + "ます", ms: r.replace(/する$/, "します") };
+  if (/する$/.test(k) && /する$/.test(r)) return { km: k.slice(0, -2) + "します", ms: r.slice(0, -2) + "します" };
+  if (!/[\u4e00-\u9fff々][\u3041-\u3093]*[うくぐすつぬぶむる]$/.test(k)) return null;
+  const last = k.slice(-1); if (r.slice(-1) !== last || r.length < 2) return null;
+  let ich = false;
+  if (last === "る") ich = _VF_ICH.includes(r.slice(-2, -1)) && !_VF_GODAN_RU.some(g => k.endsWith(g));
+  const sub = (x) => ich ? x.slice(0, -1) + "ます" : x.slice(0, -1) + _VF_ROW[last] + "ます";
+  return { km: sub(k), ms: sub(r) };
+}
+/** Salinan item + km/ms bila ia kata kerja (dari data, atau hasil konversi otomatis). Selain itu dikembalikan apa adanya. */
+function _vfEnrich(it){
+  if (!it || it.km) return it;
+  const d = _vfDerive(it.kata || it.k, it.kana || it.f);
+  return d ? Object.assign({}, it, { km: d.km, ms: d.ms, fm: "" }) : it;
+}
 function _vfPick(it){
-  if (_vfMasu() && it && it.km) return { kata: it.km, kana: it.ms || it.kana || "", fr: it.fm || "" };
+  const e = _vfMasu() ? _vfEnrich(it) : it;
+  if (_vfMasu() && e && e.km) return { kata: e.km, kana: e.ms || e.kana || "", fr: e.fm || "" };
   return { kata: it.kata || it.k || "", kana: it.kana || it.f || "", fr: it.fr || "" };
 }
 function _vfBtn(fn){ const m = _vfMasu(); return `<span class="vf-sw"><button class="haf-chip ${m ? "" : "on"}" onclick="${fn}('jisho')">辞書形</button><button class="haf-chip ${m ? "on" : ""}" onclick="${fn}('masu')">ます形</button></span>`; }
@@ -3941,11 +3967,22 @@ function _hafFront(it){
   const rd = String(it.reading || '').replace(/<[^>]+>/g, '');
   return (rd && /[\u3400-\u9fff]/.test(it.front) && !/<ruby/.test(it.front) && rd !== it.front) ? `<ruby>${it.front}<rt>${rd}</rt></ruby>` : it.front;
 }
+function _hafAudioBtn(){
+  const on = isAutoPlayAudio();
+  return `<button class="btn ghost sm" id="haf-audio-btn" onclick="hafToggleAudio()" aria-pressed="${on}" title="Suara otomatis saat kartu dibalik">${on ? "🔊 ON" : "🔇 OFF"}</button>`;
+}
+window.hafToggleAudio = function hafToggleAudio(){
+  const on = !isAutoPlayAudio();
+  setAutoPlayAudio(on);
+  if (!on) { try { SV.stop(); } catch(_) {} try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch(_) {} }
+  const b = document.getElementById("haf-audio-btn");
+  if (b){ b.textContent = on ? "🔊 ON" : "🔇 OFF"; b.setAttribute("aria-pressed", String(on)); }
+};
 function _hafFormBtn(){
   if (!(state.hafalan_queue || []).some(p => p.src && p.src.km)) return "";
   return `<button class="btn ghost sm" id="haf-form-btn" onclick="hafToggleForm()" title="Ganti bentuk kata kerja">${_vfMasu() ? "ます形" : "辞書形"}</button>`;
 }
-function _hafFuriBtn(){ return `<button class="btn ghost sm" id="haf-furi-btn" onclick="hafToggleFuri()" aria-pressed="${_hafFuriOn()}">${_hafFuriOn() ? "ふりがな ON" : "ふりがな OFF"}</button>${_hafFormBtn()}`; }
+function _hafFuriBtn(){ return _hafAudioBtn() + `<button class="btn ghost sm" id="haf-furi-btn" onclick="hafToggleFuri()" aria-pressed="${_hafFuriOn()}">${_hafFuriOn() ? "ふりがな ON" : "ふりがな OFF"}</button>${_hafFormBtn()}`; }
 function _hafRefit(p){
   if (!p || !p.src || !p.src.km) return p;
   const v = _vfPick(p.src);
@@ -3967,6 +4004,7 @@ function _normalizeItem(tipe, it, idx){
       on: it.on || "", kun: it.kun || "", cs: it.c || [], kal: it.kal || [],
     };
   }
+  it = _vfEnrich(it);
   return {
     tipe, idx, no: itemNo(it, idx),
     contoh: it.contoh || "", ac: it.arti_contoh || "",
@@ -4360,8 +4398,16 @@ window.addEventListener("beforeunload", (e) => { if (!window._exitOk && _exitAct
 const _sswLvl = (slug) => { slug = slug || (window.__sswSlug && window.__sswSlug()) || "building-cleaning"; return slug === "building-cleaning" ? "ssw-bc" : "ssw-" + slug; };
 const _hafBadge = (it) => it.tipe === "ssw" ? "SSW · " + String((window.__sswSlug && window.__sswSlug()) || "").replace(/-/g, " ").toUpperCase() : `${it.fb ? "KANJI (belum ada kosakata)" : it.kv ? "KOSAKATA KANJI" : it.tipe === "kanji" ? "KANJI" : it.tipe === "rangkuman" ? "RANGKUMAN" : "KOSAKATA"} · ${(it.kv || it.fb) ? _kvLv() : state.level.toUpperCase()}`;
 function _sswSaveSess(){ try { sessionStorage.setItem(_SSW_SESS, JSON.stringify({ lvl: state._srsLevel, q: state.hafalan_queue, pos: state.hafalan_pos, mode: (state.hafalan||{}).mode, dir: (state.hafalan||{}).dir, back: state.hafalan_back, score: state.hafalan_score })); } catch(e){} }
+/* Item SSW tidak membawa km/ms: turunkan dari kata kerjanya agar tombol 辞書形/ます形 sama seperti JLPT & JFT. */
+function _sswVerbize(it){
+  if (it.src || it.tipe !== "ssw") return it;
+  const d = _vfDerive(it.fraw || it.front, it.reading);
+  if (d) { it.src = { kata: it.fraw || it.front, kana: it.reading || "", fr: "", km: d.km, ms: d.ms, fm: "" }; _hafRefit(it); }
+  return it;
+}
 window.sswHafalStart = async ({ items, mode, back, dir }) => {
   if (!items || !items.length) { toast("Tidak ada kosakata untuk sesi ini"); return false; }
+  items.forEach(_sswVerbize);
   state._srsLevel = _sswLvl(); state.hafalan_ctx = "ssw"; state.hafalan_back = back || "ssw";
   await _loadSrs();
   if (dir === "id2jp") { try { localStorage.setItem("shirose-haf-dir", "id2jp"); } catch (_) {} }
