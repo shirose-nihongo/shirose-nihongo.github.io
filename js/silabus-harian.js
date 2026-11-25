@@ -7,6 +7,8 @@
  * KUNCI HARIAN: hari berikutnya baru terbuka bila hari ini tuntas —
  *   hari belajar: tes hafalan kosakata, kanji, bunpo masing-masing ≥ 80%, lalu ujian harian ≥ 80%;
  *   hari fukushu / perbaikan: ujian ≥ 80%; hari simulasi: ditandai selesai.
+ *   Kunci tanggal: hari ke-i baru terbuka pada tanggal jadwalnya. Siswa yang tertinggal boleh
+ *   mengejar beberapa hari sekaligus; siswa yang sudah sesuai jadwal menunggu sampai besok.
  *
  * Data (dibuat oleh tools/silabus_build.py & tools/silabus_soal.py):
  *   data/silabus/{lv}.json            urutan materi standar per hari
@@ -328,6 +330,7 @@ const tglDari = (mulai, idx) => { const d = awalHari(mulai); d.setDate(d.getDate
 const tglHari = (p, idx) => tglDari(p.mulai || Date.now(), idx);
 const idxHariIni = (p) => Math.round((awalHari(Date.now()) - awalHari(p.mulai || Date.now())) / HARI_MS);
 const persen = (b, t) => (t ? Math.round(b / t * 100) : 0);
+const tungguTanggal = (p) => p.pos > idxHariIni(p);   // sudah tuntas sampai jadwal hari ini → hari berikutnya buka besok
 
 function bulanTempo(R) { return (R.hari.length / 30).toFixed(1).replace(".", ","); }
 
@@ -384,7 +387,7 @@ async function viewSetup(lv) {
     <h2>🗺️ Silabus Harian · ${esc(NAMA[lv])}</h2>
     <p class="sh-muted">Pilih kecepatan belajarmu. Materi ${std.total.kosakata} kosakata, ${std.total.kanji} kanji, dan ${std.total.bunpo} bunpo dibagi rata per hari.
       Setiap minggu: 6 hari belajar + 1 hari fukushu, dan di akhir ada simulasi ujian asli.</p>
-    <p class="sh-muted"><b>🔒 Sistem kunci:</b> hari berikutnya baru terbuka setelah hari ini tuntas — tes hafalan kosakata, kanji, dan bunpo masing-masing ≥ 80%, lalu ujian harian ≥ 80%.</p>
+    <p class="sh-muted"><b>🔒 Sistem kunci:</b> hari berikutnya baru terbuka setelah hari ini tuntas — tes hafalan kosakata, kanji, dan bunpo masing-masing ≥ 80%, lalu ujian harian ≥ 80% — dan materi baru dibuka satu hari per tanggal. Kalau tertinggal, boleh mengejar beberapa hari sekaligus.</p>
     <div class="sh-tempos">${kartu.join("")}</div>
     <details class="sh-custom"><summary>Atur sendiri (maks. 30 kosakata · 20 kanji · 10 bunpo per hari)</summary>
       <div class="sh-row">${KAT.map(k => `<label>${KAT_NAMA[k]}/hari <input type="number" id="sh-in-${k}" min="${tempoMin(std)[k]}" max="${MAKS[k]}" value="${std.standar[k]}"></label>`).join("")}</div>
@@ -415,7 +418,7 @@ function kartuTarget(R, p, tautan = true) {
   const seharusnya = Math.min(hi, n - 1);
   const selisih = p.pos - hi;        // >0 lebih cepat, <0 terlambat
   const status = p.pos >= n ? "" : selisih === 0 ? `<span class="sh-pill ok">✓ Sesuai jadwal</span>`
-    : selisih > 0 ? `<span class="sh-pill ok">🚀 Lebih cepat ${selisih} hari</span>`
+    : selisih > 0 ? `<span class="sh-pill ok">✓ Target hari ini beres</span>`
     : `<span class="sh-pill ng">⚠ Terlambat ${-selisih} hari</span>`;
   const target = kumSampai(R, seharusnya), sudah = kumSampai(R, p.pos - 1);
   return `<div class="sh-target">
@@ -438,6 +441,22 @@ async function viewBeranda(lv, p) {
   const idx = p.pos;
   const h = R.hari[idx];
   const pct = Math.round(idx / R.hari.length * 100);
+  if (tungguTanggal(p)) {
+    const buka = tglHari(p, idx);
+    return `<div class="panel sh">
+      ${kartuTarget(R, p)}
+      <div class="sh-head"><h2>🔒 Hari ${idx + 1} · ${JENIS[h.jenis]}</h2><span class="sh-lv">${esc(NAMA[lv])}</span></div>
+      <div class="sh-prog"><div style="width:${pct}%"></div></div>
+      <p class="sh-muted small">${idx} dari ${R.hari.length} hari tuntas · tempo ${p.tempo.kosakata}/${p.tempo.kanji}/${p.tempo.bunpo}</p>
+      ${stripMinggu(R, p)}
+      <div class="sh-target"><p>🎉 Target hari ini sudah tuntas. <b>Hari ${idx + 1}</b> terbuka <b>${tglPanjang(buka)}</b> pukul 00.00.</p>
+        <p class="sh-muted small">Sambil menunggu, ulangi materi yang sudah dipelajari di menu Hafalan atau Kosakata/Kanji/Bunpou.</p></div>
+      <details class="sh-custom"><summary>Pengaturan</summary>
+        <div class="sh-row"><button class="btn ghost sm" onclick="SH.gantiTempo('${lv}')">Ganti tempo</button>
+        <button class="btn ghost sm" onclick="SH.reset('${lv}')">↺ Ulang dari awal</button></div>
+      </details>
+    </div>`;
+  }
   const coba = p.hasil && p.hasil[idx] && !p.hasil[idx].lulus ? p.hasil[idx] : null;
   const infoCoba = coba ? `<p class="sh-muted small">Percobaan ujian: ${coba.coba || 1}× · nilai terbaik ${coba.terbaik ?? persen(coba.benar, coba.total)}% (perlu ≥ 80%)</p>` : "";
   let isi = "", tombol = "";
@@ -536,7 +555,7 @@ async function viewJadwal() {
     <h3>Target per bulan</h3>
     ${htmlTarget(R, p.mulai)}
     <h3>Rincian per hari</h3>
-    <p class="sh-muted small">Isi materi hari berikutnya baru bisa dibuka setelah hari sebelumnya tuntas (hafalan ≥ 80% + ujian ≥ 80%). Tanggal di bawah adalah jadwal idealmu sejak mulai ${tgl(awalHari(p.mulai))}.</p>
+    <p class="sh-muted small">Hari berikutnya terbuka setelah hari sebelumnya tuntas (hafalan ≥ 80% + ujian ≥ 80%) dan tanggal jadwalnya sudah tiba. Kalau tertinggal, kamu boleh mengejar beberapa hari sekaligus. Tanggal di bawah adalah jadwal idealmu sejak mulai ${tgl(awalHari(p.mulai))}.</p>
     ${minggu.join("")}
   </div>`;
 }
@@ -622,11 +641,12 @@ function htmlHasil() {
       ? `<button class="btn gold" onclick="route('sylabus')">Lanjut →</button>`
       : `<button class="btn gold" onclick="SH.hafal('${U.kat}')">↻ Ulangi tes hafalan</button><button class="btn ghost" onclick="route('sylabus')">📖 Pelajari kartu lagi</button>`;
   } else {
+    const besok = lulus && U.bukaBesok;
     pesan = lulus
-      ? `Hari ${U.idx + 1} tuntas — Hari ${U.idx + 2} sudah terbuka.`
+      ? (besok ? `Hari ${U.idx + 1} tuntas — target hari ini beres! Hari ${U.idx + 2} terbuka besok (${tglPanjang(U.bukaBesok)}).` : `Hari ${U.idx + 1} tuntas — Hari ${U.idx + 2} sudah terbuka (kamu sedang mengejar jadwal).`)
       : `Butuh minimal ${perlu} benar dari ${total} (80%). Hari ${U.idx + 2} masih terkunci. Pelajari lagi materinya lewat pembahasan, lalu ulangi ujian dengan soal baru.`;
     tombol = lulus
-      ? `<button class="btn gold" onclick="route('sylabus')">Lanjut ke Hari ${U.idx + 2} →</button>`
+      ? `<button class="btn gold" onclick="route('sylabus')">${besok ? "Selesai untuk hari ini →" : `Lanjut ke Hari ${U.idx + 2} →`}</button>`
       : `<button class="btn gold" onclick="SH.ulangUjian()">↻ Ulangi ujian (soal baru)</button><button class="btn ghost" onclick="route('sylabus')">📖 Pelajari materi lagi</button>`;
   }
   return `<div class="panel sh">
@@ -674,7 +694,7 @@ async function mulaiHafal() {
   const R = await rencana(lv, p.tempo);
   const h = R.hari[p.pos];
   const kat = _hafalKat;
-  if (!h || h.jenis !== "belajar" || !kat || !h.materi[kat].length) return tungguRoute();
+  if (!h || h.jenis !== "belajar" || !kat || !h.materi[kat].length || tungguTanggal(p)) return tungguRoute();
   if (U && U.reviewMode && U.mode === "hafal" && U.lv === lv) return `<div id="sh-root">${htmlUjian()}</div>`;
   if (!U || U.mode !== "hafal" || U.kat !== kat || U.lv !== lv || U.idx !== p.pos || U.selesai) {
     const qs = await susunHafalan(lv, R, p.pos, kat);
@@ -694,7 +714,7 @@ async function mulaiUjian() {
   if (!p) return tungguRoute();
   const R = await rencana(lv, p.tempo);
   const h = R.hari[p.pos];
-  if (!h || h.jenis === "simulasi") return tungguRoute();
+  if (!h || h.jenis === "simulasi" || tungguTanggal(p)) return tungguRoute();
   if (h.jenis === "belajar" && !hafalTuntas(h, p, p.pos)) { toast("Selesaikan dulu semua tes hafalan (≥ 80%)."); return tungguRoute(); }
   if (U && U.reviewMode && U.mode === "ujian" && U.lv === lv) return `<div id="sh-root">${htmlUjian()}</div>`;
   if (!U || U.mode !== "ujian" || U.lv !== lv || U.idx !== p.pos || U.selesai) {
@@ -738,6 +758,7 @@ async function kumpulkan() {
     p.hasil[U.idx] = { benar, total, lulus, tgl: Date.now(), jenis: U.jenis, coba: (lama?.coba || 0) + 1, terbaik: Math.max(pct, lama?.terbaik || 0) };
     p.dokkaiPos = (p.dokkaiPos || 0) + (U.nDokkai || 0);
     if (lulus) p.pos = U.idx + 1;     // KUNCI: hari berikutnya hanya terbuka bila lulus ≥ 80%
+    U.bukaBesok = lulus && tungguTanggal(p) ? tglHari(p, p.pos) : null;
   }
   simpanProgres(lv, p);
   if (lulus && U.mode === "ujian" && FB && S().user) { try { await FB.tambahXP(S().level, U.jenis === "belajar" ? 20 : 40, U.jenis === "belajar" ? 5 : 10); } catch (e) {} }
@@ -794,6 +815,7 @@ window.SH = {
   },
   async tandaiSimulasi(lv) {
     const p = await muatProgres(lv);
+    if (tungguTanggal(p)) return window.route("sylabus");
     p.hasil = p.hasil || {}; p.hasil[p.pos] = { lulus: true, tgl: Date.now(), jenis: "simulasi" };
     p.pos += 1; simpanProgres(lv, p); window.route("sylabus");
   },
