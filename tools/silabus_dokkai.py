@@ -19,14 +19,16 @@ Format tools/dokkai_baru/<lv>.txt:
     --- (terjemahan Indonesia, boleh beberapa baris)
     ?? pertanyaan
     * pilihan benar
-    - pilihan salah   (total 4 pilihan, urutan bebas; aplikasi tidak mengacak)
+    - pilihan salah   (total 4 pilihan, urutan bebas; diacak otomatis saat build)
     >> alasan / pembahasan (Indonesia)
+    !! kutipan bukti dari teks (opsional)
     ?? pertanyaan berikutnya untuk bacaan yang sama ...
 """
 import glob
 import hashlib
 import json
 import os
+import random
 import re
 import sys
 
@@ -99,6 +101,13 @@ def parse_baru(path):
                 err.append(f"{os.path.basename(path)}:{q['_ln']}: soal harus 4 pilihan dengan tepat satu '*' ({len(q['opts'])} pilihan)")
             else:
                 q.pop("_ln")
+                # Acak urutan pilihan secara deterministik (aplikasi tidak mengacak),
+                # supaya letak jawaban benar tidak menumpuk di satu huruf.
+                benar = q["opts"][q["ans"]]
+                rnd = random.Random(hashlib.sha1(q["q"].encode()).hexdigest())
+                rnd.shuffle(q["opts"])
+                q["ans"] = q["opts"].index(benar)
+                q["ex"]["jawaban"] = f'{"ABCD"[q["ans"]]}. {benar}'
                 cur["qs"].append(q)
         q = None
 
@@ -106,7 +115,10 @@ def parse_baru(path):
         nonlocal cur
         tutup_q()
         if cur is not None:
-            cur["jp"] = "\n".join(cur["jp"]).strip()
+            for k in ("jp", "terj"):
+                while cur[k] and not cur[k][-1].strip():
+                    cur[k].pop()
+            cur["jp"] = "<br>".join(cur["jp"]).strip()
             cur["terj"] = "\n".join(cur["terj"]).strip()
             if not cur["jp"] or not cur["qs"]:
                 err.append(f"{os.path.basename(path)}:{cur['_ln']}: bacaan tanpa teks atau tanpa soal")
@@ -144,7 +156,9 @@ def parse_baru(path):
             q["opts"].append(s[1:].strip())
         elif s.startswith(">>") and q is not None:
             q["ex"]["alasan"] = s[2:].strip()
-            q["ex"]["jawaban"] = q["opts"][q["ans"]] if q["ans"] is not None else ""
+            q["ex"]["jawaban"] = f'{"ABCD"[q["ans"]]}. {q["opts"][q["ans"]]}' if q["ans"] is not None else ""
+        elif s.startswith("!!") and q is not None:
+            q["ex"]["bukti"] = s[2:].strip()
         elif mode == "jp":
             cur["jp"].append(s)
         elif mode == "terj":
