@@ -321,10 +321,21 @@ async function susunUjian(lv, R, p, idx) {
   }
   // Dokkai: TIDAK PERNAH BERULANG. Ambil soal paling awal (pendek → panjang) yang id-nya belum pernah dipakai siswa.
   // Ulang ujian di hari yang sama tidak mengambil dokkai baru; nilai dokkai percobaan pertama dibawa.
-  const nD = (h.soal && h.soal.dokkai) || 0;
   const lalu = (p.dokkaiHari || {})[idx];
   if (lalu) return { qs, nDokkai: 0, dokkaiLalu: lalu };
   const dk = await dat(`./data/silabus/${lv}-dokkai.json`) || [];
+  // Kalau stok bacaan lebih sedikit dari kebutuhan tempo ini, jatah per hari diratakan
+  // supaya bacaan tersebar sampai akhir silabus (bukan habis di tengah, dan tidak pernah diulang).
+  let nD = (h.soal && h.soal.dokkai) || 0;
+  if (nD) {
+    const stok = dk.reduce((s, u) => s + u.qs.length, 0);
+    const per = R.hari.map(x => (x.soal && x.soal.dokkai) || 0);
+    const total = per.reduce((a, b) => a + b, 0);
+    if (stok < total) {
+      const sblm = per.slice(0, idx).reduce((a, b) => a + b, 0);
+      nD = Math.floor(stok * (sblm + nD) / total) - Math.floor(stok * sblm / total);
+    }
+  }
   const dipakai = new Set(p.dokkaiPakai || []);
   const ambil = [];
   for (const [ui, u] of dk.entries()) {
