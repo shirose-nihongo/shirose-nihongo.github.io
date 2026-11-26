@@ -282,10 +282,17 @@ async function kandidat(lv, R, ids, fase, kset, kolam) {
   return per;
 }
 const kunciSoal = (q) => String(q.q || "").replace(/<[^>]+>/g, "").replace(/[\s　]/g, "");
-function ambilMerata(per, ids, n, utama = []) {
+/* Sidik soal untuk riwayat "sudah pernah tampil": kalimat soal + jawaban benar → hash pendek (hemat ruang di progres). */
+function sidikSoal(q) {
+  const t = kunciSoal(q) + "=>" + String((q.opts || [])[q.ans] ?? "").replace(/<[^>]+>/g, "").replace(/[\s　]/g, "");
+  let h = 0x811c9dc5;
+  for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return h.toString(36);
+}
+function ambilMerata(per, ids, n, utama = [], stem = new Set()) {
   // Bergiliran per materi supaya semua materi hari itu teruji; materi "utama" (yang pernah salah) didahulukan.
   const urut = [...utama.filter(id => ids.includes(id)), ...acak(ids.filter(id => !utama.includes(id)))];
-  const out = [], stem = new Set(), sisa = Object.fromEntries(urut.map(id => [id, (per[id] || []).slice()]));
+  const out = [], sisa = Object.fromEntries(urut.map(id => [id, (per[id] || []).slice()]));
   let jalan = true;
   while (out.length < n && jalan) {
     jalan = false;
@@ -314,19 +321,24 @@ async function susunUjian(lv, R, p, idx) {
   if (h.jenis === "belajar") sumber = { ...h.materi };
   else sumber = idsHari(R, h.dari || []);
   const salah = Object.keys(p.salah || {});
+  // TIDAK BERULANG: soal yang pernah tampil di ujian sebelumnya tidak dipakai lagi.
+  // Kalau stok soal baru habis, jumlah soal hari itu dikurangi (bukan mengulang).
+  const pernah = new Set(p.soalPakai || []);
+  const baru = async (ids) => { const per = await kandidat(lv, R, ids, h.fase || "tengah", kset, kolam); for (const id in per) per[id] = per[id].filter(q => !pernah.has(sidikSoal(q))); return per; };
+  const stem = new Set();
   const qs = [];
   for (const k of KAT) {
     const n = h.soal[k];
     let ids = sumber[k];
     if (h.jenis === "perbaikan") ids = salah.filter(id => id.startsWith(k === "bunpo" ? "bunpou" : k)).concat(acak(ids).slice(0, n));
     let got = [];
-    if (ids.length) got = ambilMerata(await kandidat(lv, R, ids, h.fase || "tengah", kset, kolam), ids, n, salah);
+    if (ids.length) got = ambilMerata(await baru(ids), ids, n, salah, stem);
     // Soal kurang (mis. N5 hanya 81 kanji, jadi banyak hari tanpa kanji baru) → ulang materi hari-hari sebelumnya.
-    for (let mundur = 1; got.length < n && mundur <= 30 && idx - mundur >= 0; mundur += 3) {
+    for (let mundur = 1; got.length < n && idx - mundur >= 0; mundur += 3) {
       const lalu = idsHari(R, [idx - mundur, idx - mundur - 1, idx - mundur - 2].filter(i => i >= 0))[k].filter(id => !ids.includes(id));
       if (!lalu.length) continue;
       ids = ids.concat(lalu);
-      const tambahan = ambilMerata(await kandidat(lv, R, lalu, h.fase || "tengah", kset, kolam), lalu, n - got.length, salah);
+      const tambahan = ambilMerata(await baru(lalu), lalu, n - got.length, salah, stem);
       got = got.concat(tambahan.map(q => ({ ...q, ulang: true })));
     }
     qs.push(...got);
@@ -850,6 +862,7 @@ async function kumpulkan() {
       p.dokkaiHari[U.idx] = { b: dq.filter(([q, i]) => U.jawab[i] === q.ans).length, t: dq.length };
       p.dokkaiPakai = [...new Set([...(p.dokkaiPakai || []), ...dq.map(([q]) => q.dkId).filter(Boolean)])];
     }
+    p.soalPakai = [...new Set([...(p.soalPakai || []), ...U.qs.filter(q => q.cat !== "dokkai").map(sidikSoal)])];
   }
   const lulus = total ? benar / total >= LULUS : true;
   const pct = persen(benar, total);
@@ -916,7 +929,7 @@ window.SH = {
       // Jadwal dihitung ulang: hari "pos" = hari ini.
       p = { ...lama, tempo, pos, mulai: tglDari(Date.now(), -pos).getTime(), hasil: {}, hafal: {}, langkah: {}, dokkaiHari: {}, _gantiTempo: false };
     } else {
-      p = { lv, tempo, mulai: awalHari(Date.now()).getTime(), pos: 0, hasil: {}, hafal: {}, salah: {}, dokkaiPos: 0, dokkaiPakai: [], dokkaiHari: {} };
+      p = { lv, tempo, mulai: awalHari(Date.now()).getTime(), pos: 0, hasil: {}, hafal: {}, salah: {}, dokkaiPos: 0, dokkaiPakai: [], dokkaiHari: {}, soalPakai: [] };
     }
     U = null;
     simpanProgres(lv, p);
