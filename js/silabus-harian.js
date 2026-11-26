@@ -27,7 +27,6 @@ const toast = (m) => (window.toast ? window.toast(m) : console.log(m));
 const ABCD = "ABCD";
 const LV_JLPT = ["n5", "n4", "n3", "n2", "n1"];
 const NAMA = { n5: "JLPT N5", n4: "JLPT N4", n3: "JLPT N3", n2: "JLPT N2", n1: "JLPT N1", jft: "JFT-Basic (Irodori A1–A2)" };
-const MAKS = { kosakata: 30, kanji: 20, bunpo: 10 };
 const KAT = ["kosakata", "kanji", "bunpo"];
 const KAT_NAMA = { kosakata: "Kosakata", kanji: "Kanji", bunpo: "Bunpo", dokkai: "Dokkai" };
 const BLOK = 6;
@@ -150,7 +149,7 @@ function bangunRencana(std, tempo) {
     hari.push({ jenis: "fukushu", dari: [...minggu], soal: { kosakata: 6, kanji: 6, bunpo: 6, dokkai: 2 }, menit: 25 });
     semua = semua.concat(minggu); minggu = [];
   }
-  const nSim = std.hari.filter(h => h.jenis === "simulasi" || h.jenis === "perbaikan").length;
+  const nSim = tempo.sim != null ? tempo.sim : simStd(std);
   for (let i = 0; i < nSim; i++) {
     hari.push(i % 2 === 0
       ? { jenis: "simulasi" }
@@ -160,7 +159,7 @@ function bangunRencana(std, tempo) {
 }
 const _rencana = {};
 async function rencana(lv, tempo) {
-  const k = `${lv}:${tempo.kosakata}/${tempo.kanji}/${tempo.bunpo}`;
+  const k = `${lv}:${tempo.kosakata}/${tempo.kanji}/${tempo.bunpo}/${tempo.sim ?? ""}`;
   if (!_rencana[k]) {
     const std = await dat(`./data/silabus/${lv}.json`);
     if (!std) throw new Error("Data silabus belum tersedia.");
@@ -170,13 +169,17 @@ async function rencana(lv, tempo) {
 }
 const tempoStd = (std) => ({ ...std.standar });
 const tempoMin = (std) => Object.fromEntries(KAT.map(k => [k, Math.ceil(std.standar[k] / 2)]));
-/* Tempo supaya silabus selesai ± `bulan` bulan (30 hari/bulan): 6 hari belajar + 1 fukushu per minggu + hari simulasi. */
-function tempoBulan(std, bulan) {
+const simStd = (std) => std.hari.filter(h => h.jenis === "simulasi" || h.jenis === "perbaikan").length;
+/* Tempo supaya silabus selesai dalam ± `D` hari: 6 hari belajar + 1 fukushu per minggu + hari simulasi.
+   Tanpa batas per hari; hari simulasi ikut dipersingkat (±15% durasi) kalau durasinya pendek. */
+function tempoHari(std, D) {
+  D = Math.max(2, Math.round(D));
   const { urut } = urutanStandar(std);
-  const nSim = std.hari.filter(h => h.jenis === "simulasi" || h.jenis === "perbaikan").length;
-  const B = Math.max(1, Math.floor((bulan * 30 - nSim) * 6 / 7));
-  return Object.fromEntries(KAT.map(k => [k, Math.min(MAKS[k], Math.ceil(1000 * urut[k].length / B) / 1000)]));
+  const sim = Math.min(simStd(std), Math.floor(D * 0.15));
+  const B = Math.max(1, Math.floor((D - sim) * 6 / 7));
+  return { ...Object.fromEntries(KAT.map(k => [k, Math.ceil(1000 * urut[k].length / B) / 1000])), sim };
 }
+const SATUAN = { hari: 1, minggu: 7, bulan: 30 };
 const fT = (x) => Number.isInteger(x) ? String(x) : "±" + (Math.round(x * 10) / 10).toString().replace(".", ",");
 const fTempo = (t) => `${fT(t.kosakata)}/${fT(t.kanji)}/${fT(t.bunpo)}`;
 
@@ -428,7 +431,6 @@ async function viewSetup(lv) {
   const pilihan = [
     ["santai", "🐢 Santai", tempoMin(std)],
     ["standar", "📘 Standar", tempoStd(std)],
-    ["cepat", "🚀 Paling cepat", { ...MAKS }],
   ];
   const kartu = [], target = [];
   for (const [k, nm, t] of pilihan) {
@@ -437,17 +439,15 @@ async function viewSetup(lv) {
     const nSoal = KAT.reduce((s, c) => s + b.soal[c], 0) + b.soal.dokkai;
     kartu.push(`<button class="sh-tempo ${k === "standar" ? "on" : ""}" data-k="${k}" onclick="SH.pilihTempo('${k}')">
       <b>${nm}</b><span class="dur">${R.hari.length} hari · ± ${bulanTempo(R)} bulan</span>
-      <span>${t.kosakata} kosakata · ${t.kanji} kanji · ${t.bunpo} bunpo / hari (maks.)</span>
+      <span>${t.kosakata} kosakata · ${t.kanji} kanji · ${t.bunpo} bunpo / hari</span>
       <span>${nSoal} soal ujian harian</span><span class="sel">Selesai ± ${tgl(tambahHari(R.hari.length - 1))}</span></button>`);
     target.push(`<div class="sh-ms" data-k="${k}" ${k === "standar" ? "" : "hidden"}>${htmlTarget(R, Date.now())}</div>`);
   }
   // Pilihan per bulan: tempo dihitung otomatis agar selesai ± N bulan.
-  const RC = await rencana(lv, { ...MAKS });
   const chip = [];
-  for (let n = Math.max(1, Math.ceil(RC.hari.length / 30)); n <= 12; n++) {
-    const t = tempoBulan(std, n), k = `b${n}`;
+  for (let n = 1; n <= 12; n++) {
+    const t = tempoHari(std, n * 30), k = `b${n}`;
     const R = await rencana(lv, t);
-    if (chip.length && Math.ceil(R.hari.length / 30) > 12) break;
     pilihan.push([k, `${n} bulan`, t]);
     chip.push(`<button class="sh-tempo sh-bln" data-k="${k}" onclick="SH.pilihTempo('${k}')"><b>${n} bulan</b>
       <span class="dur">${R.hari.length} hari</span><span>${fT(t.kosakata)} kosa · ${fT(t.kanji)} kanji · ${fT(t.bunpo)} bunpo/hari</span>
@@ -466,12 +466,20 @@ async function viewSetup(lv) {
     <h3>📆 Atau pilih target per bulan</h3>
     <p class="sh-muted small">Pilih mau tuntas dalam berapa bulan — jumlah materi per hari dihitung otomatis.</p>
     <div class="sh-blns">${chip.join("")}</div>
-    <details class="sh-custom"><summary>Atur sendiri (maks. 30 kosakata · 20 kanji · 10 bunpo per hari)</summary>
-      <div class="sh-row">${KAT.map(k => `<label>${KAT_NAMA[k]}/hari <input type="number" id="sh-in-${k}" min="${tempoMin(std)[k]}" max="${MAKS[k]}" value="${std.standar[k]}"></label>`).join("")}</div>
+    <div class="sh-durasi">
+      <h3>⏱️ Atur waktu sendiri</h3>
+      <p class="sh-muted small">Mau tuntas dalam berapa lama? Misalnya 2 minggu, 45 hari, atau 5 bulan — jumlah materi per hari dihitung otomatis, tanpa batas.</p>
+      <div class="sh-row"><input type="number" id="sh-dur-n" min="1" value="2" inputmode="numeric">
+        <select id="sh-dur-u"><option value="hari">hari</option><option value="minggu" selected>minggu</option><option value="bulan">bulan</option></select>
+        <button class="btn ghost sm" onclick="SH.pilihTempo('durasi')">Hitung</button></div>
+      <button class="sh-tempo sh-bln" data-k="durasi" id="sh-dur-kartu" hidden onclick="SH.pilihTempo('durasi')"></button>
+    </div>
+    <details class="sh-custom"><summary>Atur sendiri jumlah materi per hari</summary>
+      <div class="sh-row">${KAT.map(k => `<label>${KAT_NAMA[k]}/hari <input type="number" id="sh-in-${k}" min="1" value="${std.standar[k]}"></label>`).join("")}</div>
       <button class="btn ghost sm" onclick="SH.pilihTempo('custom')">Pakai angka ini</button>
     </details>
     <h3>📅 Target hafalan kalau mulai hari ini</h3>
-    ${target.join("")}<div class="sh-ms" data-k="custom" id="sh-ms-custom" hidden></div>
+    ${target.join("")}<div class="sh-ms" data-k="custom" id="sh-ms-custom" hidden></div><div class="sh-ms" data-k="durasi" id="sh-ms-durasi" hidden></div>
     <button class="btn gold sh-mulai" onclick="SH.mulai('${lv}')">▶ Mulai silabus</button>
     <p class="sh-muted small"><a href="#" onclick="route('sylabus-peta'); return false;">Lihat peta materi lama (per 50 kata) →</a></p>
   </div>`;
@@ -872,11 +880,24 @@ window.SH = {
   async pilihTempo(k) {
     if (k === "custom") {
       const t = {};
-      for (const c of KAT) { const el = document.getElementById(`sh-in-${c}`); t[c] = bulat(parseInt(el && el.value, 10) || MAKS[c], +el.min || 1, MAKS[c]); }
+      for (const c of KAT) { const el = document.getElementById(`sh-in-${c}`); t[c] = Math.max(1, parseInt(el && el.value, 10) || 1); }
       this._pilihan.custom = t;
       toast(`Tempo: ${t.kosakata} kosakata · ${t.kanji} kanji · ${t.bunpo} bunpo per hari`);
       const box = document.getElementById("sh-ms-custom");
       if (box && this._lv) { const R = await rencana(this._lv, t); box.innerHTML = `<p class="sh-muted small">${R.hari.length} hari · selesai ± ${tgl(tambahHari(R.hari.length - 1))}</p>${htmlTarget(R, Date.now())}`; }
+    }
+    if (k === "durasi") {
+      const n = Math.max(1, parseInt((document.getElementById("sh-dur-n") || {}).value, 10) || 1);
+      const u = (document.getElementById("sh-dur-u") || {}).value || "minggu";
+      if (!this._lv) return;
+      const std = await dat(`./data/silabus/${this._lv}.json`);
+      const t = tempoHari(std, n * (SATUAN[u] || 7));
+      this._pilihan.durasi = t;
+      const R = await rencana(this._lv, t);
+      const kartu = document.getElementById("sh-dur-kartu");
+      if (kartu) { kartu.hidden = false; kartu.innerHTML = `<b>${n} ${u}</b><span class="dur">${R.hari.length} hari</span><span>${fT(t.kosakata)} kosa · ${fT(t.kanji)} kanji · ${fT(t.bunpo)} bunpo/hari</span><span class="sel">Selesai ± ${tgl(tambahHari(R.hari.length - 1))}</span>`; }
+      const box = document.getElementById("sh-ms-durasi");
+      if (box) box.innerHTML = htmlTarget(R, Date.now());
     }
     this._pilih = k;
     document.querySelectorAll(".sh-tempo").forEach(b => b.classList.toggle("on", b.dataset.k === k));
