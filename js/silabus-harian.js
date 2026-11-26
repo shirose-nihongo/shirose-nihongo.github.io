@@ -642,21 +642,20 @@ async function viewBeranda(lv, p) {
       if (!h.materi[k].length) return "";
       const r = hf[k];
       const n = h.materi[k].length;
-      const next = langkahBerikut(p, idx, k);
       const aksi = { m: `SH.materi('${k}')`, f: `SH.latih('${k}','flashcard')`, c: `SH.latih('${k}','matching')` };
       const tombolL = LANGKAH.map(([l, ik, nama], i) => {
-        const ok = langkahOk(p, idx, k, l), buka = ok || l === next;
+        const ok = langkahOk(p, idx, k, l), buka = true;   // semua langkah bebas dibuka (tidak dikunci berurutan)
         return `<button class="sh-lk ${ok ? "ok" : buka ? "now" : "lock"}" ${buka ? `onclick="${aksi[l]}"` : "disabled"}>
-          <b>${ok ? "✅" : buka ? ik : "🔒"} ${i + 1}. ${nama}</b><small>${ok ? "selesai · buka lagi" : buka ? (l === "m" ? `${n} item` : "mulai") : "terkunci"}</small></button>`;
+          <b>${ok ? "✅" : ik} ${i + 1}. ${nama}</b><small>${ok ? "selesai · buka lagi" : (l === "m" ? `${n} item` : "mulai")}</small></button>`;
       }).join("");
-      const bukaTes = next === "t";
+      const bukaTes = true;
       const tes = `<button class="sh-lk ${r?.lulus ? "ok" : bukaTes ? "now" : "lock"}" ${bukaTes ? `onclick="SH.hafal('${k}')"` : "disabled"}>
-          <b>${r?.lulus ? "✅" : bukaTes ? "✍️" : "🔒"} 4. Pilihan ganda</b><small>${r?.lulus ? `lulus ${r.terbaik ?? persen(r.b, r.t)}% · ulangi` : r ? `terakhir ${persen(r.b, r.t)}% · perlu ≥ 80%` : bukaTes ? `${n} soal · lulus ≥ 80%` : "terkunci"}</small></button>`;
+          <b>${r?.lulus ? "✅" : bukaTes ? "✍️" : "🔒"} 4. Pilihan ganda</b><small>${r?.lulus ? `lulus ${r.terbaik ?? persen(r.b, r.t)}% · ulangi` : r ? `terakhir ${persen(r.b, r.t)}% · perlu ≥ 80%` : bukaTes ? `${n} soal · lulus ≥ 80%` : ""}</small></button>`;
       return `<h3 id="sh-kat-${k}">${KAT_NAMA[k]} <small>(${n})</small></h3>
         <div class="sh-langkah">${tombolL}${tes}</div>
         ${r && !r.lulus ? `<p class="sh-muted small">Belum 80%: buka lagi materi/flashcard ${KAT_NAMA[k].toLowerCase()}, lalu ulangi pilihan ganda.</p>` : ""}`;
     };
-    isi = `<p class="sh-muted">Fase <b>${h.fase}</b> · Tiap bagian: 📖 materi → 🃏 flashcard → 🔗 cocokkan → ✍️ pilihan ganda sampai ≥ 80%. Setelah semua lulus, ujian harian terbuka: ${nSoal} soal = ${js.kosakata} kosakata + ${js.kanji} cara baca kanji + ${js.bunpo} bunpo${js.dokkai ? ` + ${js.dokkai} dokkai` : ""}${h.menit ? ` (${Math.max(h.menit, Math.ceil(nSoal * 1.2))} menit)` : ""}. Lulus ujian ≥ 80% → Hari ${idx + 2} terbuka.</p>
+    isi = `<p class="sh-muted">Fase <b>${h.fase}</b> · Tiap bagian bebas dibuka: 📖 materi · 🃏 flashcard · 🔗 cocokkan · ✍️ pilihan ganda. Setelah pilihan ganda semua bagian ≥ 80%, ujian harian terbuka: ${nSoal} soal = ${js.kosakata} kosakata + ${js.kanji} cara baca kanji + ${js.bunpo} bunpo${js.dokkai ? ` + ${js.dokkai} dokkai` : ""}${h.menit ? ` (${Math.max(h.menit, Math.ceil(nSoal * 1.2))} menit)` : ""}. Lulus ujian ≥ 80% → Hari ${idx + 2} terbuka.</p>
       <div class="sh-steps">${langkah}<span class="sh-step ${tuntas ? "" : "lock"}">${tuntas ? "📝" : "🔒"} Ujian harian<small>${coba ? `terbaik ${coba.terbaik ?? persen(coba.benar, coba.total)}%` : (tuntas ? "siap" : "terkunci")}</small></span></div>
       ${infoCoba}
       ${KAT.map(blok).join("")}`;
@@ -875,7 +874,6 @@ async function mulaiHafal() {
   const h = R.hari[p.pos];
   const kat = _hafalKat;
   if (!h || h.jenis !== "belajar" || !kat || !h.materi[kat].length || tungguTanggal(p)) return tungguRoute();
-  if (langkahBerikut(p, p.pos, kat) !== "t") { toast("Selesaikan dulu materi, flashcard, dan cocokkan."); return tungguRoute(); }
   if (U && U.reviewMode && U.mode === "hafal" && U.lv === lv) return `<div id="sh-root">${htmlUjian()}</div>`;
   if (!U || U.mode !== "hafal" || U.kat !== kat || U.lv !== lv || U.idx !== p.pos || U.selesai) {
     const qs = await susunHafalan(lv, R, p.pos, kat);
@@ -1037,8 +1035,6 @@ window.SH = {
     const R = await rencana(lv, p.tempo);
     const h = R.hari[p.pos];
     if (!h || h.jenis !== "belajar" || !h.materi[kat].length) return window.route("sylabus");
-    const perlu = mode === "matching" ? "f" : "m";
-    if (!langkahOk(p, p.pos, kat, perlu)) { toast(mode === "matching" ? "Selesaikan flashcard dulu." : "Buka materinya dulu."); return; }
     if (!window.silabusHafalan) { toast("Fitur flashcard belum termuat, muat ulang halaman."); return; }
     window.silabusHafalan(await kartuLatihan(h, kat), mode, { lv, idx: p.pos, kat });
   },
