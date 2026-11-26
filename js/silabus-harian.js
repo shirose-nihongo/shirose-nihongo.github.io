@@ -170,6 +170,15 @@ async function rencana(lv, tempo) {
 }
 const tempoStd = (std) => ({ ...std.standar });
 const tempoMin = (std) => Object.fromEntries(KAT.map(k => [k, Math.ceil(std.standar[k] / 2)]));
+/* Tempo supaya silabus selesai ± `bulan` bulan (30 hari/bulan): 6 hari belajar + 1 fukushu per minggu + hari simulasi. */
+function tempoBulan(std, bulan) {
+  const { urut } = urutanStandar(std);
+  const nSim = std.hari.filter(h => h.jenis === "simulasi" || h.jenis === "perbaikan").length;
+  const B = Math.max(1, Math.floor((bulan * 30 - nSim) * 6 / 7));
+  return Object.fromEntries(KAT.map(k => [k, Math.min(MAKS[k], Math.ceil(1000 * urut[k].length / B) / 1000)]));
+}
+const fT = (x) => Number.isInteger(x) ? String(x) : "±" + (Math.round(x * 10) / 10).toString().replace(".", ",");
+const fTempo = (t) => `${fT(t.kosakata)}/${fT(t.kanji)}/${fT(t.bunpo)}`;
 
 /* ---------- tampilan materi ---------- */
 const hasKanji = (s) => /[一-鿿]/.test(s || "");
@@ -432,6 +441,19 @@ async function viewSetup(lv) {
       <span>${nSoal} soal ujian harian</span><span class="sel">Selesai ± ${tgl(tambahHari(R.hari.length - 1))}</span></button>`);
     target.push(`<div class="sh-ms" data-k="${k}" ${k === "standar" ? "" : "hidden"}>${htmlTarget(R, Date.now())}</div>`);
   }
+  // Pilihan per bulan: tempo dihitung otomatis agar selesai ± N bulan.
+  const RC = await rencana(lv, { ...MAKS });
+  const chip = [];
+  for (let n = Math.max(1, Math.ceil(RC.hari.length / 30)); n <= 12; n++) {
+    const t = tempoBulan(std, n), k = `b${n}`;
+    const R = await rencana(lv, t);
+    if (chip.length && Math.ceil(R.hari.length / 30) > 12) break;
+    pilihan.push([k, `${n} bulan`, t]);
+    chip.push(`<button class="sh-tempo sh-bln" data-k="${k}" onclick="SH.pilihTempo('${k}')"><b>${n} bulan</b>
+      <span class="dur">${R.hari.length} hari</span><span>${fT(t.kosakata)} kosa · ${fT(t.kanji)} kanji · ${fT(t.bunpo)} bunpo/hari</span>
+      <span class="sel">Selesai ± ${tgl(tambahHari(R.hari.length - 1))}</span></button>`);
+    target.push(`<div class="sh-ms" data-k="${k}" hidden>${htmlTarget(R, Date.now())}</div>`);
+  }
   window.SH._pilihan = Object.fromEntries(pilihan.map(([k, , t]) => [k, t]));
   window.SH._pilih = "standar";
   window.SH._lv = lv;
@@ -441,6 +463,9 @@ async function viewSetup(lv) {
       Setiap minggu: 6 hari belajar + 1 hari fukushu, dan di akhir ada simulasi ujian asli.</p>
     <p class="sh-muted"><b>🔒 Sistem kunci:</b> hari berikutnya baru terbuka setelah hari ini tuntas — tes hafalan kosakata, kanji, dan bunpo masing-masing ≥ 80%, lalu ujian harian ≥ 80% — dan materi baru dibuka satu hari per tanggal. Kalau tertinggal, boleh mengejar beberapa hari sekaligus.</p>
     <div class="sh-tempos">${kartu.join("")}</div>
+    <h3>📆 Atau pilih target per bulan</h3>
+    <p class="sh-muted small">Pilih mau tuntas dalam berapa bulan — jumlah materi per hari dihitung otomatis.</p>
+    <div class="sh-blns">${chip.join("")}</div>
     <details class="sh-custom"><summary>Atur sendiri (maks. 30 kosakata · 20 kanji · 10 bunpo per hari)</summary>
       <div class="sh-row">${KAT.map(k => `<label>${KAT_NAMA[k]}/hari <input type="number" id="sh-in-${k}" min="${tempoMin(std)[k]}" max="${MAKS[k]}" value="${std.standar[k]}"></label>`).join("")}</div>
       <button class="btn ghost sm" onclick="SH.pilihTempo('custom')">Pakai angka ini</button>
@@ -499,7 +524,7 @@ async function viewBeranda(lv, p) {
       ${kartuTarget(R, p)}
       <div class="sh-head"><h2>🔒 Hari ${idx + 1} · ${JENIS[h.jenis]}</h2><span class="sh-lv">${esc(NAMA[lv])}</span></div>
       <div class="sh-prog"><div style="width:${pct}%"></div></div>
-      <p class="sh-muted small">${idx} dari ${R.hari.length} hari tuntas · tempo ${p.tempo.kosakata}/${p.tempo.kanji}/${p.tempo.bunpo}</p>
+      <p class="sh-muted small">${idx} dari ${R.hari.length} hari tuntas · tempo ${fTempo(p.tempo)}</p>
       ${stripMinggu(R, p)}
       <div class="sh-target"><p>🎉 Target hari ini sudah tuntas. <b>Hari ${idx + 1}</b> terbuka <b>${tglPanjang(buka)}</b> pukul 00.00.</p>
         <p class="sh-muted small">Sambil menunggu, ulangi materi yang sudah dipelajari di menu Hafalan atau Kosakata/Kanji/Bunpou.</p></div>
@@ -569,7 +594,7 @@ async function viewBeranda(lv, p) {
     <div class="sh-head"><h2>${IKON[h.jenis]} Hari ${idx + 1} · ${JENIS[h.jenis]}</h2><span class="sh-lv">${esc(NAMA[lv])}</span></div>
     <p class="sh-muted small">Jadwal hari ini: ${tglPanjang(tglHari(p, idx))}</p>
     <div class="sh-prog"><div style="width:${pct}%"></div></div>
-    <p class="sh-muted small">${idx} dari ${R.hari.length} hari tuntas · tempo ${p.tempo.kosakata}/${p.tempo.kanji}/${p.tempo.bunpo}${antre ? ` · ${antre} materi di antrean ulang` : ""}</p>
+    <p class="sh-muted small">${idx} dari ${R.hari.length} hari tuntas · tempo ${fTempo(p.tempo)}${antre ? ` · ${antre} materi di antrean ulang` : ""}</p>
     ${stripMinggu(R, p)}
     ${isi}
     <div class="sh-row">${tombol}</div>
