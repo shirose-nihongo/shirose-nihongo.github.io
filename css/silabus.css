@@ -116,3 +116,8 @@
 .sh .sh-blns{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:8px; margin:10px 0 14px;}
 .sh .sh-bln{padding:10px 12px; gap:2px; font-size:12px;}
 .sh .sh-bln b{font-size:15px;}
+.sh .sh-durasi{margin:6px 0 14px;}
+.sh .sh-durasi .sh-row{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:10px;}
+.sh .sh-durasi input,.sh .sh-durasi select{background:var(--navy-3); color:var(--white); border:1px solid var(--border); border-radius:10px; padding:8px 10px; font:inherit;}
+.sh .sh-durasi input{width:80px;}
+.sh .sh-durasi .sh-bln{max-width:260px;}

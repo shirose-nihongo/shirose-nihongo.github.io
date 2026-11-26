@@ -1485,7 +1485,7 @@ html{overflow-x:hidden;}
 <link rel="stylesheet" href="./css/ssw.css?v=20261118s"/>
 <link rel="stylesheet" href="./css/mensetsu.css?v=20261124h"/>
 <link rel="stylesheet" href="./css/jft.css?v=20261119f"/>
-<link rel="stylesheet" href="./css/silabus.css?v=20261126b"/>
+<link rel="stylesheet" href="./css/silabus.css?v=20261126c"/>
 <link rel="stylesheet" href="./css/logo.css?v=20261122c"/>
 <link rel="stylesheet" href="./css/themes.css?v=20261122a"/>
 </head>
@@ -1594,7 +1594,7 @@ import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261125d";
 import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261125c";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 // SILABUS HARIAN: target belajar per hari + hafalan + ujian harian (kunci ≥ 80%), fukushu, simulasi, jadwal bertanggal (js/silabus-harian.js)
-import { SILABUS_ROUTES, initSilabus } from "./js/silabus-harian.js?v=20261126g";
+import { SILABUS_ROUTES, initSilabus } from "./js/silabus-harian.js?v=20261126k";
 import { initHub, renderHub } from "./js/siswa-hub.js?v=20261123s";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261125d";
 import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehPelajaran } from "./js/deck-siswa.js?v=20261126b";
@@ -2402,7 +2402,7 @@ const routes = {
 
 // Routes that depend on state.level (and therefore on aksesLevel).
 const LEVEL_SCOPED_ROUTES = new Set([
-  "materi","kosakata","kanji","bunpou","hafalan","quest","ujian","choukai","sylabus","sylabus-ujian","sylabus-hafal","sylabus-jadwal","sylabus-materi","sylabus-peta"
+  "materi","kosakata","kanji","bunpou","hafalan","quest","ujian","choukai","sylabus","sylabus-ujian","sylabus-hafal","sylabus-jadwal","sylabus-materi","sylabus-hafalan","sylabus-peta"
 ]);
 
 // Simple route-history stack so the floating back button can walk through
@@ -2449,7 +2449,7 @@ const _parentOf = (path) => {
   if (n === "ssw-progres" || n === "ssw-rangkuman") return "ssw";
   if (n.startsWith("ssw-")) return `ssw-peta/${slug}`;
   if (n === "ujian-riwayat") return "ujian";
-  if (n === "sylabus-ujian" || n === "sylabus-hafal" || n === "sylabus-jadwal" || n === "sylabus-materi" || n === "sylabus-peta") return "sylabus";
+  if (n === "sylabus-ujian" || n === "sylabus-hafal" || n === "sylabus-jadwal" || n === "sylabus-materi" || n === "sylabus-hafalan" || n === "sylabus-peta") return "sylabus";
   if (n === "jft") return "pilih-level";
   if (n === "jft-ujian" || n === "jft-tryout" || n === "jft-rangkuman") return "jft";
   if (n === "jft-paket" && /^try/.test(slug)) return "jft-tryout";
@@ -4474,17 +4474,20 @@ async function _sswRestore(){
 }
 /* ===== Jembatan Silabus Harian → materi & mesin hafalan yang sama (flashcard, cocokkan) =====
  * kartu: [{ tipe:"kosakata"|"kanji"|"bunpou", it, idx }] — idx = posisi di data/<tipe>-<level>.json. */
-window.silabusHafalan = (kartu, mode, info) => {
-  const q = kartu.map(({ tipe, it, idx }) => {
+function _silNorm(kartu, lv) {
+  return kartu.map(({ tipe, it, idx }) => {
     if (tipe === "bunpou") {
       const pola = String(it.pola || it.kata || "");
-      return { tipe: "bunpou", idx, no: itemNo(it, idx), skey: `b:${info.lv}:${itemNo(it, idx)}`,
+      return { tipe: "bunpou", idx, no: itemNo(it, idx), skey: `b:${lv}:${itemNo(it, idx)}`,
         front: pola.replace(/\[[^\]]*\]/g, ""), fraw: pola.replace(/\[[^\]]*\]/g, ""), fr: /\[/.test(pola) ? pola : "",
         reading: it.kata && it.kata !== pola ? String(it.kata).replace(/\[[^\]]*\]/g, "") : "", back: it.arti || "",
         contoh: it.contoh || "", ac: it.arti_contoh || "" };
     }
     return _normalizeItem(tipe, it, idx);
   });
+}
+window.silabusHafalan = (kartu, mode, info) => {
+  const q = _silNorm(kartu, info.lv);
   if (!q.length) { toast("Belum ada materi untuk langkah ini."); return; }
   state._srsLevel = null; state.hafalan_ctx = "silabus"; state.hafalan_back = "sylabus";
   state._silabusLangkah = { ...info, mode, kartu };
@@ -4494,12 +4497,99 @@ window.silabusHafalan = (kartu, mode, info) => {
   state.hafalan_score = { benar: 0, salah: 0 };
   _loadSrs().finally(() => route("hafalan/go"));
 };
+/* Menu Hafalan Silabus: sama dengan menu 🧠 Hafalan (filter SRS, daftar kartu + status, 3 mode, arah, audio),
+   tapi kartunya materi silabus: hari ini / minggu ini / semua yang sudah dipelajari. data = { lv, cakupan: {k: {label, kartu}} } */
+window.silabusHafalanMenuHtml = async (data) => {
+  state._silHafData = data;
+  try { await _loadSrs(); } catch (e) { state.srs = state.srs || {}; }
+  const cfg = state.silHaf = Object.assign({ cakupan: "hari", tipe: "semua", filter: "all", mode: "flashcard" }, state.silHaf || {});
+  if (!data.cakupan[cfg.cakupan]) cfg.cakupan = Object.keys(data.cakupan)[0];
+  const preview = _silHafPool();
+  const counters = { mastered:0, review:0, learning:0, fresh:0, new:0 };
+  preview.forEach(p => { counters[_cardStatus(state.srs[_srsKey(p.tipe, {no:p.no, skey:p.skey}, p.idx)]).key]++; });
+  const semuaCak = (data.cakupan[cfg.cakupan] || {}).kartu || [];
+  const jml = (t) => t === "semua" ? semuaCak.length : semuaCak.filter(k => k.tipe === t).length;
+  const chip = (field, v, lbl) => `<button class="haf-chip ${cfg[field]===v?'on':''}" onclick="silHafCfg('${field}','${v}')">${lbl}</button>`;
+  const typeBtn = (v, lbl) => `<button class="haf-pick ${cfg.tipe===v?'on':''}" onclick="silHafCfg('tipe','${v}')"><div class="lbl">${lbl}</div><div class="sub">${jml(v)} item</div></button>`;
+  const modeBtn = (v, ico, lbl, sub) => `<button class="haf-mode ${cfg.mode===v?'on':''}" onclick="silHafCfg('mode','${v}')"><div class="ico">${ico}</div><div class="lbl">${lbl}</div><div class="sub">${sub}</div></button>`;
+  return `
+    <div class="panel">
+      <button class="btn ghost sm" onclick="route('sylabus')">← Silabus</button>
+      <h2 style="margin-top:10px;">🧠 Hafalan Silabus · ${String(data.lv || "").toUpperCase()}</h2>
+      <p style="color:var(--gray); font-size:14px; margin-bottom:14px;">Sama seperti menu Hafalan: pilih materi silabus, filter, lalu mode belajar. Progres hafalan (SRS) menyatu dengan menu Hafalan.</p>
+      <h3 style="margin-bottom:8px;">1. Cakupan</h3>
+      <div class="haf-chip-row">${Object.entries(data.cakupan).map(([k, c]) => chip("cakupan", k, `${c.label} (${c.kartu.length})`)).join("")}</div>
+      <h3 style="margin:16px 0 8px;">2. Pilih materi</h3>
+      <div class="haf-type-row">${typeBtn("kosakata", "📖 Kosakata")}${typeBtn("kanji", "🈷️ Kanji")}${typeBtn("bunpou", "📐 Bunpou")}${typeBtn("semua", "✨ Semua")}</div>
+      <h3 style="margin:16px 0 8px;">3. Filter</h3>
+      <div class="haf-chip-row">${chip("filter","all","Semua")}${chip("filter","new","Baru")}${chip("filter","due","Due hari ini")}${chip("filter","notmastered","Belum mastered")}${chip("filter","mastered","Sudah mastered")}</div>
+      <div class="status-legend">
+        <span class="stat-pill" style="background:rgba(16,185,129,.18); color:#10b981;">● Mastered ${counters.mastered}</span>
+        <span class="stat-pill" style="background:rgba(245,158,11,.18); color:#f59e0b;">● Review ${counters.review}</span>
+        <span class="stat-pill" style="background:rgba(234,179,8,.18); color:#eab308;">● Learning ${counters.learning}</span>
+        <span class="stat-pill" style="background:rgba(239,83,80,.18); color:#ef5350;">● Baru dipelajari ${counters.fresh}</span>
+        <span class="stat-pill" style="background:rgba(255,255,255,.08); color:#fff;">● Belum ${counters.new}</span>
+      </div>
+      ${preview.length ? `<details class="status-preview" ${cfg.filter !== "all" ? "open" : ""}>
+          <summary><b>Lihat daftar kartu (${preview.length})</b> · klik untuk buka/tutup</summary>
+          <div class="status-list">${preview.slice(0, 300).map(p => { const st = _cardStatus(state.srs[_srsKey(p.tipe, {no:p.no, skey:p.skey}, p.idx)]);
+            return `<div class="status-item" style="background:${st.bg}; border-color:${st.color}44;"><span class="no-badge">${fmtNo(p.no)}</span><div class="status-jp">${p.front}</div><div class="status-mean">${p.back}</div><span class="status-chip" style="color:${st.color}; border-color:${st.color};">${st.label}</span></div>`; }).join("")}</div>
+        </details>` : `<p style="text-align:center; color:var(--gray-dim); margin:12px 0;">Tidak ada kartu dengan filter ini.</p>`}
+      <h3 style="margin:16px 0 8px;">4. Mode belajar</h3>
+      <div class="haf-mode-row">${modeBtn("flashcard","🃏","Flashcard","Lihat kartu, tandai hafal")}${modeBtn("matching","🔗","Matching","Pasangkan kata & arti")}${modeBtn("multiple","✅","Pilihan Ganda","Pilih arti yang benar")}</div>
+      <h3 style="margin:16px 0 8px;">5. Arah kartu</h3>
+      <div class="haf-chip-row">
+        <button class="haf-chip ${_hafDir()==='jp2id'?'on':''}" data-hafdir="jp2id" onclick="hafSetDir('jp2id')">🇯🇵 Jepang → 🇮🇩 Indonesia</button>
+        <button class="haf-chip ${_hafDir()==='id2jp'?'on':''}" data-hafdir="id2jp" onclick="hafSetDir('id2jp')">🇮🇩 Indonesia → 🇯🇵 Jepang</button>
+      </div>
+      <h3 style="margin:16px 0 8px;">6. Audio</h3>
+      <label style="display:inline-flex; align-items:center; gap:10px; cursor:pointer; padding:10px 14px; background:rgba(42,50,112,.4); border:1px solid var(--border); border-radius:10px;">
+        <input type="checkbox" ${isAutoPlayAudio()?'checked':''} onchange="setAutoPlayAudio(this.checked)" style="width:20px; height:20px;"/>
+        <span>🔊 Auto-play pelafalan Jepang setelah tiap kartu</span>
+      </label>
+      <div style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;">
+        <button class="btn gold" style="flex:1; min-width:160px;" onclick="silHafStart()">▶ Mulai Hafalan (${preview.length})</button>
+        <button class="btn ghost" onclick="route('sylabus')">← Silabus</button>
+      </div>
+    </div>`;
+};
+function _silHafPool() {
+  const data = state._silHafData, cfg = state.silHaf || {};
+  if (!data) return [];
+  const kartu = ((data.cakupan[cfg.cakupan] || {}).kartu || []).filter(k => cfg.tipe === "semua" || k.tipe === cfg.tipe);
+  const now = Date.now();
+  return _silNorm(kartu, data.lv).filter(p => {
+    const card = state.srs[_srsKey(p.tipe, {no:p.no, skey:p.skey}, p.idx)];
+    if (cfg.filter === "new")         return !card;
+    if (cfg.filter === "due")         return card && card.due <= now;
+    if (cfg.filter === "notmastered") return !card || !card.mastered;
+    if (cfg.filter === "mastered")    return !!card?.mastered;
+    return true;
+  });
+}
+window.silHafCfg = (field, value) => {
+  state.silHaf = state.silHaf || {}; state.silHaf[field] = value;
+  if (state._silHafData) window.silabusHafalanMenuHtml(state._silHafData).then(h => { document.getElementById("app").innerHTML = h; });
+};
+window.silHafStart = () => {
+  const q = _silHafPool();
+  if (!q.length) { toast("Tidak ada item yang cocok dengan filter ini"); return; }
+  const cfg = state.silHaf;
+  state._srsLevel = null; state.hafalan_ctx = "silabus"; state.hafalan_back = "sylabus-hafalan";
+  state._silabusLangkah = null;
+  state.hafalan = { tipe: "kosakata", mode: cfg.mode, dir: _hafDir(), range: "all", filter: cfg.filter, pos: "all" };
+  state.hafalan_queue = q.sort(() => Math.random() - 0.5);
+  state.hafalan_pos = 0;
+  state.hafalan_score = { benar: 0, salah: 0 };
+  route("hafalan/go");
+};
 window.silabusHafalanUlang = () => { const L = state._silabusLangkah; if (L) window.silabusHafalan(L.kartu, L.mode, { lv: L.lv, idx: L.idx, kat: L.kat }); };
 /* Daftar materi hari ini dengan tampilan & detail yang sama seperti #kosakata/#kanji/#bunpou. */
 window.silabusMateriHtml = async (tipe, idxs) => {
   const data = await loadMateri(tipe, state.level, { full: true });
   if (tipe === "kanji") { try { await window.KC?.ensure?.(); } catch (_) {} }
   return `${tipe === "kosakata" && data.some(x => x.km) ? `<div class="vf-row">Bentuk kata kerja: ${_vfBtn("setVerbFormMateri")}</div>` : ""}
+    <div class="search-bar"><input type="text" id="search-${tipe}" placeholder="Cari di materi hari ini..." oninput="filterMateri('${tipe}', this.value)"/></div>
     ${displayBar("materi")}
     <div class="materi-list" id="materi-list-${tipe}">${idxs.filter(i => data[i]).map(i => _materiItemHtml(tipe, data[i], i, fmtNo(itemNo(data[i], i)))).join("")}</div>`;
 };
@@ -5079,7 +5169,9 @@ function renderHafalanDone(){
   if (_hafSil()) {
     const L = state._silabusLangkah;
     if (L && !L.tercatat) { L.tercatat = true; try { window.SH && window.SH.langkahSelesai(L); } catch (e) { console.warn("silabus langkah:", e); } }
-    const nama = (state.hafalan || {}).mode === "matching" ? "Cocokkan" : "Flashcard";
+    const md = (state.hafalan || {}).mode;
+    const nama = md === "matching" ? "Cocokkan" : md === "multiple" ? "Pilihan Ganda" : "Flashcard";
+    const bebas = !L;   // dari menu Hafalan Silabus (latihan bebas, tidak mengubah langkah harian)
     return `
     <div class="panel">
       <h2>🎉 ${nama} selesai!</h2>
@@ -5088,12 +5180,14 @@ function renderHafalanDone(){
         <div style="font-size:42px; font-weight:800; color:var(--pink);">${acc}%</div>
         <div>${s.benar} ${nama === "Flashcard" ? "ingat" : "benar"} · ${s.salah} ${nama === "Flashcard" ? "lupa" : "salah"}</div>
         <div style="color:var(--gray); margin-top:6px;">+${xp} XP · +${koin} 🪙</div>
-        <p style="color:var(--gray); font-size:13px;">Langkah ${nama} hari ini tercatat selesai.</p>
+        <p style="color:var(--gray); font-size:13px;">${bebas ? "Progres hafalan (SRS) tersimpan." : `Langkah ${nama} hari ini tercatat selesai.`}</p>
       </div>
       ${_hafReviewHtml()}
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
-        <button class="btn gold" onclick="route('sylabus')">➜ Lanjut ke langkah berikutnya</button>
-        <button class="btn ghost" onclick="silabusHafalanUlang()">↻ Ulangi ${nama}</button>
+        ${bebas ? `<button class="btn gold" onclick="silHafStart()">↻ Ulangi ${nama}</button>
+        <button class="btn ghost" onclick="route('sylabus-hafalan')">🧠 Menu hafalan silabus</button>
+        <button class="btn ghost" onclick="route('sylabus')">↩ Silabus</button>` : `<button class="btn gold" onclick="route('sylabus')">➜ Lanjut ke langkah berikutnya</button>
+        <button class="btn ghost" onclick="silabusHafalanUlang()">↻ Ulangi ${nama}</button>`}
       </div>
     </div>`;
   }

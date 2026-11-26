@@ -13,7 +13,7 @@
  * Data (dibuat oleh tools/silabus_build.py & tools/silabus_soal.py):
  *   data/silabus/{lv}.json            urutan materi standar per hari
  *   data/silabus/{lv}-soal-{minggu}.json  soal format ujian asli per materi (+ pembahasan)
- *   data/silabus/{lv}-dokkai.json     bacaan berurutan pendek → panjang
+ *   data/silabus/{lv}-dokkai.json     bacaan (TIDAK dipakai di ujian harian: semua soal harian dari materi silabus)
  * Progres: localStorage + Firestore siswa/{uid}/silabus/{lv}.
  * Route: #sylabus (beranda), #sylabus-ujian (ujian hari aktif), #sylabus-hafal (tes hafalan),
  *        #sylabus-jadwal (jadwal bertanggal + target hafalan kumulatif)
@@ -27,7 +27,6 @@ const toast = (m) => (window.toast ? window.toast(m) : console.log(m));
 const ABCD = "ABCD";
 const LV_JLPT = ["n5", "n4", "n3", "n2", "n1"];
 const NAMA = { n5: "JLPT N5", n4: "JLPT N4", n3: "JLPT N3", n2: "JLPT N2", n1: "JLPT N1", jft: "JFT-Basic (Irodori A1–A2)" };
-const MAKS = { kosakata: 30, kanji: 20, bunpo: 10 };
 const KAT = ["kosakata", "kanji", "bunpo"];
 const KAT_NAMA = { kosakata: "Kosakata", kanji: "Kanji", bunpo: "Bunpo", dokkai: "Dokkai" };
 const BLOK = 6;
@@ -143,24 +142,24 @@ function bangunRencana(std, tempo) {
     for (let i = 0; i < 6 && b < nHari; i++, b++) {
       const p = b / nHari;
       const fase = p < 0.3 ? "awal" : (p < 0.8 ? "tengah" : "akhir");
-      hari.push({ jenis: "belajar", fase, materi: belajar[b], soal: { kosakata: nSoal(5), kanji: nSoal(5), bunpo: nSoal(5), dokkai: 2 },
+      hari.push({ jenis: "belajar", fase, materi: belajar[b], soal: { kosakata: nSoal(5), kanji: nSoal(5), bunpo: nSoal(5), dokkai: 0 },
         menit: fase === "awal" ? null : (fase === "tengah" ? 20 : 15) });
       minggu.push(hari.length - 1);
     }
-    hari.push({ jenis: "fukushu", dari: [...minggu], soal: { kosakata: 6, kanji: 6, bunpo: 6, dokkai: 2 }, menit: 25 });
+    hari.push({ jenis: "fukushu", dari: [...minggu], soal: { kosakata: 6, kanji: 6, bunpo: 6, dokkai: 0 }, menit: 25 });
     semua = semua.concat(minggu); minggu = [];
   }
-  const nSim = std.hari.filter(h => h.jenis === "simulasi" || h.jenis === "perbaikan").length;
+  const nSim = tempo.sim != null ? tempo.sim : simStd(std);
   for (let i = 0; i < nSim; i++) {
     hari.push(i % 2 === 0
       ? { jenis: "simulasi" }
-      : { jenis: "perbaikan", dari: [...semua], soal: { kosakata: 8, kanji: 8, bunpo: 8, dokkai: 2 }, menit: 30 });
+      : { jenis: "perbaikan", dari: [...semua], soal: { kosakata: 8, kanji: 8, bunpo: 8, dokkai: 0 }, menit: 30 });
   }
   return { hari, nHari, blok, total: Object.fromEntries(KAT.map(k => [k, urut[k].length])) };
 }
 const _rencana = {};
 async function rencana(lv, tempo) {
-  const k = `${lv}:${tempo.kosakata}/${tempo.kanji}/${tempo.bunpo}`;
+  const k = `${lv}:${tempo.kosakata}/${tempo.kanji}/${tempo.bunpo}/${tempo.sim ?? ""}`;
   if (!_rencana[k]) {
     const std = await dat(`./data/silabus/${lv}.json`);
     if (!std) throw new Error("Data silabus belum tersedia.");
@@ -170,13 +169,17 @@ async function rencana(lv, tempo) {
 }
 const tempoStd = (std) => ({ ...std.standar });
 const tempoMin = (std) => Object.fromEntries(KAT.map(k => [k, Math.ceil(std.standar[k] / 2)]));
-/* Tempo supaya silabus selesai ± `bulan` bulan (30 hari/bulan): 6 hari belajar + 1 fukushu per minggu + hari simulasi. */
-function tempoBulan(std, bulan) {
+const simStd = (std) => std.hari.filter(h => h.jenis === "simulasi" || h.jenis === "perbaikan").length;
+/* Tempo supaya silabus selesai dalam ± `D` hari: 6 hari belajar + 1 fukushu per minggu + hari simulasi.
+   Tanpa batas per hari; hari simulasi ikut dipersingkat (±15% durasi) kalau durasinya pendek. */
+function tempoHari(std, D) {
+  D = Math.max(2, Math.round(D));
   const { urut } = urutanStandar(std);
-  const nSim = std.hari.filter(h => h.jenis === "simulasi" || h.jenis === "perbaikan").length;
-  const B = Math.max(1, Math.floor((bulan * 30 - nSim) * 6 / 7));
-  return Object.fromEntries(KAT.map(k => [k, Math.min(MAKS[k], Math.ceil(1000 * urut[k].length / B) / 1000)]));
+  const sim = Math.min(simStd(std), Math.floor(D * 0.15));
+  const B = Math.max(1, Math.floor((D - sim) * 6 / 7));
+  return { ...Object.fromEntries(KAT.map(k => [k, Math.ceil(1000 * urut[k].length / B) / 1000])), sim };
 }
+const SATUAN = { hari: 1, minggu: 7, bulan: 30 };
 const fT = (x) => Number.isInteger(x) ? String(x) : "±" + (Math.round(x * 10) / 10).toString().replace(".", ",");
 const fTempo = (t) => `${fT(t.kosakata)}/${fT(t.kanji)}/${fT(t.bunpo)}`;
 
@@ -256,6 +259,58 @@ function soalSederhana(kat, id, it, kolam, kset) {
   return out;
 }
 
+/* ---------- cara baca kanji: 1 soal per bacaan (on & kun) ---------- */
+const hira = (s) => String(s || "").replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+function bacaanKanji(it) {
+  const out = [], sudah = new Set();
+  const tambah = (jenis, raw) => {
+    const r = String(raw || "").trim();
+    const polosR = hira(r.replace(/[.\-]/g, ""));
+    if (!polosR || sudah.has(jenis + polosR)) return;
+    sudah.add(jenis + polosR);
+    out.push({ jenis, raw: r, inti: hira(r.split(".")[0].replace(/-/g, "")), tampil: r.replace(/\./, "(").replace(/-/g, "～") + (r.includes(".") ? ")" : "") });
+  };
+  String(it.on || "").split(/[、,]/).forEach(r => tambah("on", r));
+  String(it.kun || "").split(/[、,]/).forEach(r => tambah("kun", r));
+  return out;
+}
+/* Jumlah soal ujian hari belajar = 1 per kosakata + 1 per cara baca kanji + 1 per bunpo. Tanpa dokkai (bacaan tidak terkait materi). */
+async function jumlahSoal(h) {
+  if (h.jenis !== "belajar") return { ...h.soal };
+  const items = await muatItems(h.materi.kanji);
+  const kanji = h.materi.kanji.reduce((s, id) => s + Math.max(1, bacaanKanji(items[id] || {}).length), 0);
+  return { kosakata: h.materi.kosakata.length, kanji, bunpo: h.materi.bunpo.length, dokkai: h.soal.dokkai };
+}
+const totalSoal = (j) => KAT.reduce((s, c) => s + (j[c] || 0), 0) + (j.dokkai || 0);
+/* Per bacaan kanji → daftar alternatif soal (kata contoh berbeda-beda, lalu soal langsung 音読み/訓読み).
+   Penyusun ujian memakai alternatif pertama yang belum pernah tampil. */
+function soalBacaKanji(id, it, kolam) {
+  const kosa = (kolam.kosakata || []).map(x => ({ k: String(x.kata || "").replace(/[\[［]\d+[\]］]/g, "").split("／")[0].trim(), r: x.kana || "", a: x.arti || "" }));
+  const contoh = [...(it.c || []), ...kosa].filter(w => w.k && w.r && w.k.includes(it.k) && /^[ぁ-ゖー]+$/.test(w.r) && !/[\[［×]/.test(w.k));
+  const semuaBaca = (kolam.kanji || []).flatMap(x => bacaanKanji(x));
+  const pool0All = [...new Set((kolam.kanji || []).flatMap(x => (x.c || []).map(y => y.r)).concat(kosa.filter(x => /[一-鿿]/.test(x.k)).map(x => x.r)))].filter(r => r && /^[ぁ-ゖー]+$/.test(r));
+  const out = [];
+  for (const b of bacaanKanji(it)) {
+    const alt = [];
+    const cocok = contoh.filter(w => b.inti && hira(w.r).includes(b.inti));
+    for (const w of [...new Map(cocok.map(w => [w.k, w])).values()].slice(0, 4)) {
+      const benar = w.r;
+      // pengecoh: bacaan kata berkanji lain, panjang mirip; sebagian huruf awal/akhirnya sama supaya tidak terlalu mudah
+      const pool0 = pool0All.filter(r => r !== benar && !benar.startsWith(r) && !r.startsWith(benar) && Math.abs(r.length - benar.length) <= 1);
+      const mirip = pool0.filter(r => r[0] === benar[0] || r.slice(-1) === benar.slice(-1));
+      const pool = mirip.length >= 3 ? acak(mirip).slice(0, 2).concat(acak(pool0.filter(r => !mirip.includes(r))).slice(0, 4)) : pool0;
+      const p = pilihan(benar, pool);
+      if (p) alt.push({ item: id, cat: "kanji", tipe_jp: "漢字読み", q: `<u class="jp">${esc(w.k)}</u> の よみかたは？`, ...p, bacaan: b.raw,
+        ex: { jawaban: benar, alasan: `${w.k} dibaca ${w.r}${w.a ? ` = ${pendek(w.a)}` : ""} — ${it.k}: ${b.jenis === "on" ? "音読み" : "訓読み"} ${b.tampil}` } });
+    }
+    const p = pilihan(b.tampil, semuaBaca.filter(x => x.jenis === b.jenis).map(x => x.tampil));
+    if (p) alt.push({ item: id, cat: "kanji", tipe_jp: "漢字読み", q: `<b class="jp huge-q">${esc(it.k)}</b> の ${b.jenis === "on" ? "音読み（おんよみ）" : "訓読み（くんよみ）"}は？`, ...p, bacaan: b.raw,
+      ex: { jawaban: b.tampil, alasan: `${it.k}: 音 ${it.on || "-"} · 訓 ${it.kun || "-"}` } });
+    if (alt.length) out.push(alt);
+  }
+  return out;
+}
+
 /* ---------- menyusun ujian ---------- */
 async function soalPool(lv, blokNo) {
   if (lv === "jft") return {};
@@ -279,10 +334,17 @@ async function kandidat(lv, R, ids, fase, kset, kolam) {
   return per;
 }
 const kunciSoal = (q) => String(q.q || "").replace(/<[^>]+>/g, "").replace(/[\s　]/g, "");
-function ambilMerata(per, ids, n, utama = []) {
+/* Sidik soal untuk riwayat "sudah pernah tampil": kalimat soal + jawaban benar → hash pendek (hemat ruang di progres). */
+function sidikSoal(q) {
+  const t = kunciSoal(q) + "=>" + String((q.opts || [])[q.ans] ?? "").replace(/<[^>]+>/g, "").replace(/[\s　]/g, "");
+  let h = 0x811c9dc5;
+  for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return h.toString(36);
+}
+function ambilMerata(per, ids, n, utama = [], stem = new Set()) {
   // Bergiliran per materi supaya semua materi hari itu teruji; materi "utama" (yang pernah salah) didahulukan.
   const urut = [...utama.filter(id => ids.includes(id)), ...acak(ids.filter(id => !utama.includes(id)))];
-  const out = [], stem = new Set(), sisa = Object.fromEntries(urut.map(id => [id, (per[id] || []).slice()]));
+  const out = [], sisa = Object.fromEntries(urut.map(id => [id, (per[id] || []).slice()]));
   let jalan = true;
   while (out.length < n && jalan) {
     jalan = false;
@@ -311,19 +373,41 @@ async function susunUjian(lv, R, p, idx) {
   if (h.jenis === "belajar") sumber = { ...h.materi };
   else sumber = idsHari(R, h.dari || []);
   const salah = Object.keys(p.salah || {});
+  // TIDAK BERULANG: soal yang pernah tampil di ujian sebelumnya tidak dipakai lagi.
+  // Kalau stok soal baru habis, jumlah soal hari itu dikurangi (bukan mengulang).
+  const hariIni = new Set(((p.soalHari || {})[idx]) || []);   // ulang ujian di hari yang sama boleh memakai soal hari itu
+  const pernah = new Set((p.soalPakai || []).filter(x => !hariIni.has(x)));
+  const baru = async (ids) => { const per = await kandidat(lv, R, ids, h.fase || "tengah", kset, kolam); for (const id in per) per[id] = per[id].filter(q => !pernah.has(sidikSoal(q))); return per; };
+  const stem = new Set();
   const qs = [];
-  for (const k of KAT) {
+  if (h.jenis === "belajar") {
+    // Hari belajar: soal = materi hari itu. 1 soal per kosakata, 1 soal per cara baca kanji, 1 soal per bunpo.
+    const pk = await baru(h.materi.kosakata);
+    qs.push(...ambilMerata(pk, h.materi.kosakata, h.materi.kosakata.length, salah, stem));
+    const items = await muatItems(h.materi.kanji);
+    for (const id of h.materi.kanji) {
+      const it = items[id]; if (!it) continue;
+      const dipakai = new Set(qs.map(sidikSoal));
+      for (const alt of soalBacaKanji(id, it, kolam)) {
+        const q = alt.find(q => !pernah.has(sidikSoal(q)) && !dipakai.has(sidikSoal(q)));
+        if (q) { qs.push(q); dipakai.add(sidikSoal(q)); }
+      }
+    }
+    const pb = await baru(h.materi.bunpo);
+    qs.push(...ambilMerata(pb, h.materi.bunpo, h.materi.bunpo.length, salah, stem));
+  }
+  for (const k of (h.jenis === "belajar" ? [] : KAT)) {
     const n = h.soal[k];
     let ids = sumber[k];
     if (h.jenis === "perbaikan") ids = salah.filter(id => id.startsWith(k === "bunpo" ? "bunpou" : k)).concat(acak(ids).slice(0, n));
     let got = [];
-    if (ids.length) got = ambilMerata(await kandidat(lv, R, ids, h.fase || "tengah", kset, kolam), ids, n, salah);
+    if (ids.length) got = ambilMerata(await baru(ids), ids, n, salah, stem);
     // Soal kurang (mis. N5 hanya 81 kanji, jadi banyak hari tanpa kanji baru) → ulang materi hari-hari sebelumnya.
-    for (let mundur = 1; got.length < n && mundur <= 30 && idx - mundur >= 0; mundur += 3) {
+    for (let mundur = 1; got.length < n && idx - mundur >= 0; mundur += 3) {
       const lalu = idsHari(R, [idx - mundur, idx - mundur - 1, idx - mundur - 2].filter(i => i >= 0))[k].filter(id => !ids.includes(id));
       if (!lalu.length) continue;
       ids = ids.concat(lalu);
-      const tambahan = ambilMerata(await kandidat(lv, R, lalu, h.fase || "tengah", kset, kolam), lalu, n - got.length, salah);
+      const tambahan = ambilMerata(await baru(lalu), lalu, n - got.length, salah, stem);
       got = got.concat(tambahan.map(q => ({ ...q, ulang: true })));
     }
     qs.push(...got);
@@ -331,6 +415,7 @@ async function susunUjian(lv, R, p, idx) {
   // Dokkai: TIDAK PERNAH BERULANG. Ambil soal paling awal (pendek → panjang) yang id-nya belum pernah dipakai siswa.
   // Ulang ujian di hari yang sama tidak mengambil dokkai baru; nilai dokkai percobaan pertama dibawa.
   const lalu = (p.dokkaiHari || {})[idx];
+  if (!(h.soal && h.soal.dokkai)) return { qs, nDokkai: 0 };   // ujian harian tanpa dokkai: semua soal dari materi silabus
   if (lalu) return { qs, nDokkai: 0, dokkaiLalu: lalu };
   const dk = await dat(`./data/silabus/${lv}-dokkai.json`) || [];
   // Kalau stok bacaan lebih sedikit dari kebutuhan tempo ini, jatah per hari diratakan
@@ -428,26 +513,23 @@ async function viewSetup(lv) {
   const pilihan = [
     ["santai", "🐢 Santai", tempoMin(std)],
     ["standar", "📘 Standar", tempoStd(std)],
-    ["cepat", "🚀 Paling cepat", { ...MAKS }],
   ];
   const kartu = [], target = [];
   for (const [k, nm, t] of pilihan) {
     const R = await rencana(lv, t);
     const b = R.hari.find(h => h.jenis === "belajar");
-    const nSoal = KAT.reduce((s, c) => s + b.soal[c], 0) + b.soal.dokkai;
+    const nSoal = totalSoal(await jumlahSoal(b));
     kartu.push(`<button class="sh-tempo ${k === "standar" ? "on" : ""}" data-k="${k}" onclick="SH.pilihTempo('${k}')">
       <b>${nm}</b><span class="dur">${R.hari.length} hari · ± ${bulanTempo(R)} bulan</span>
-      <span>${t.kosakata} kosakata · ${t.kanji} kanji · ${t.bunpo} bunpo / hari (maks.)</span>
+      <span>${t.kosakata} kosakata · ${t.kanji} kanji · ${t.bunpo} bunpo / hari</span>
       <span>${nSoal} soal ujian harian</span><span class="sel">Selesai ± ${tgl(tambahHari(R.hari.length - 1))}</span></button>`);
     target.push(`<div class="sh-ms" data-k="${k}" ${k === "standar" ? "" : "hidden"}>${htmlTarget(R, Date.now())}</div>`);
   }
   // Pilihan per bulan: tempo dihitung otomatis agar selesai ± N bulan.
-  const RC = await rencana(lv, { ...MAKS });
   const chip = [];
-  for (let n = Math.max(1, Math.ceil(RC.hari.length / 30)); n <= 12; n++) {
-    const t = tempoBulan(std, n), k = `b${n}`;
+  for (let n = 1; n <= 12; n++) {
+    const t = tempoHari(std, n * 30), k = `b${n}`;
     const R = await rencana(lv, t);
-    if (chip.length && Math.ceil(R.hari.length / 30) > 12) break;
     pilihan.push([k, `${n} bulan`, t]);
     chip.push(`<button class="sh-tempo sh-bln" data-k="${k}" onclick="SH.pilihTempo('${k}')"><b>${n} bulan</b>
       <span class="dur">${R.hari.length} hari</span><span>${fT(t.kosakata)} kosa · ${fT(t.kanji)} kanji · ${fT(t.bunpo)} bunpo/hari</span>
@@ -466,12 +548,20 @@ async function viewSetup(lv) {
     <h3>📆 Atau pilih target per bulan</h3>
     <p class="sh-muted small">Pilih mau tuntas dalam berapa bulan — jumlah materi per hari dihitung otomatis.</p>
     <div class="sh-blns">${chip.join("")}</div>
-    <details class="sh-custom"><summary>Atur sendiri (maks. 30 kosakata · 20 kanji · 10 bunpo per hari)</summary>
-      <div class="sh-row">${KAT.map(k => `<label>${KAT_NAMA[k]}/hari <input type="number" id="sh-in-${k}" min="${tempoMin(std)[k]}" max="${MAKS[k]}" value="${std.standar[k]}"></label>`).join("")}</div>
+    <div class="sh-durasi">
+      <h3>⏱️ Atur waktu sendiri</h3>
+      <p class="sh-muted small">Mau tuntas dalam berapa lama? Misalnya 2 minggu, 45 hari, atau 5 bulan — jumlah materi per hari dihitung otomatis, tanpa batas.</p>
+      <div class="sh-row"><input type="number" id="sh-dur-n" min="1" value="2" inputmode="numeric">
+        <select id="sh-dur-u"><option value="hari">hari</option><option value="minggu" selected>minggu</option><option value="bulan">bulan</option></select>
+        <button class="btn ghost sm" onclick="SH.pilihTempo('durasi')">Hitung</button></div>
+      <button class="sh-tempo sh-bln" data-k="durasi" id="sh-dur-kartu" hidden onclick="SH.pilihTempo('durasi')"></button>
+    </div>
+    <details class="sh-custom"><summary>Atur sendiri jumlah materi per hari</summary>
+      <div class="sh-row">${KAT.map(k => `<label>${KAT_NAMA[k]}/hari <input type="number" id="sh-in-${k}" min="1" value="${std.standar[k]}"></label>`).join("")}</div>
       <button class="btn ghost sm" onclick="SH.pilihTempo('custom')">Pakai angka ini</button>
     </details>
     <h3>📅 Target hafalan kalau mulai hari ini</h3>
-    ${target.join("")}<div class="sh-ms" data-k="custom" id="sh-ms-custom" hidden></div>
+    ${target.join("")}<div class="sh-ms" data-k="custom" id="sh-ms-custom" hidden></div><div class="sh-ms" data-k="durasi" id="sh-ms-durasi" hidden></div>
     <button class="btn gold sh-mulai" onclick="SH.mulai('${lv}')">▶ Mulai silabus</button>
     <p class="sh-muted small"><a href="#" onclick="route('sylabus-peta'); return false;">Lihat peta materi lama (per 50 kata) →</a></p>
   </div>`;
@@ -540,7 +630,8 @@ async function viewBeranda(lv, p) {
   if (h.jenis === "belajar") {
     const hf = hafalHari(p, idx);
     const tuntas = hafalTuntas(h, p, idx);
-    const nSoal = KAT.reduce((s, c) => s + h.soal[c], 0) + h.soal.dokkai;
+    const js = await jumlahSoal(h);
+    const nSoal = totalSoal(js);
     const langkah = katHari(h).map(k => {
       const r = hf[k];
       const nOk = r?.lulus ? 4 : LANGKAH.filter(([l]) => langkahOk(p, idx, k, l)).length;
@@ -565,12 +656,12 @@ async function viewBeranda(lv, p) {
         <div class="sh-langkah">${tombolL}${tes}</div>
         ${r && !r.lulus ? `<p class="sh-muted small">Belum 80%: buka lagi materi/flashcard ${KAT_NAMA[k].toLowerCase()}, lalu ulangi pilihan ganda.</p>` : ""}`;
     };
-    isi = `<p class="sh-muted">Fase <b>${h.fase}</b> · Tiap bagian: 📖 materi → 🃏 flashcard → 🔗 cocokkan → ✍️ pilihan ganda sampai ≥ 80%. Setelah semua lulus, ujian harian (${nSoal} soal${h.menit ? `, ${h.menit} menit` : ""}) terbuka. Lulus ujian ≥ 80% → Hari ${idx + 2} terbuka.</p>
+    isi = `<p class="sh-muted">Fase <b>${h.fase}</b> · Tiap bagian: 📖 materi → 🃏 flashcard → 🔗 cocokkan → ✍️ pilihan ganda sampai ≥ 80%. Setelah semua lulus, ujian harian terbuka: ${nSoal} soal = ${js.kosakata} kosakata + ${js.kanji} cara baca kanji + ${js.bunpo} bunpo${js.dokkai ? ` + ${js.dokkai} dokkai` : ""}${h.menit ? ` (${Math.max(h.menit, Math.ceil(nSoal * 1.2))} menit)` : ""}. Lulus ujian ≥ 80% → Hari ${idx + 2} terbuka.</p>
       <div class="sh-steps">${langkah}<span class="sh-step ${tuntas ? "" : "lock"}">${tuntas ? "📝" : "🔒"} Ujian harian<small>${coba ? `terbaik ${coba.terbaik ?? persen(coba.benar, coba.total)}%` : (tuntas ? "siap" : "terkunci")}</small></span></div>
       ${infoCoba}
       ${KAT.map(blok).join("")}`;
     tombol = tuntas
-      ? `<button class="btn gold sh-mulai" onclick="route('sylabus-ujian')">📝 ${coba ? "Ulangi ujian hari ini (soal baru)" : "Mulai ujian hari ini"}</button>`
+      ? `<button class="btn gold sh-mulai" onclick="route('sylabus-ujian')">📝 ${coba ? "Ulangi ujian hari ini" : "Mulai ujian hari ini"}</button>`
       : `<button class="btn sh-mulai" disabled>🔒 Ujian terbuka setelah semua tes hafalan ≥ 80%</button>`;
   } else if (h.jenis === "simulasi") {
     const ke = R.hari.slice(0, idx).filter(x => x.jenis === "simulasi").length;
@@ -596,6 +687,7 @@ async function viewBeranda(lv, p) {
     <div class="sh-prog"><div style="width:${pct}%"></div></div>
     <p class="sh-muted small">${idx} dari ${R.hari.length} hari tuntas · tempo ${fTempo(p.tempo)}${antre ? ` · ${antre} materi di antrean ulang` : ""}</p>
     ${stripMinggu(R, p)}
+    <div class="sh-row"><button class="btn ghost sm" onclick="route('sylabus-hafalan')">🧠 Hafalan silabus (flashcard · matching · pilihan ganda)</button></div>
     ${isi}
     <div class="sh-row">${tombol}</div>
     <details class="sh-custom"><summary>Pengaturan</summary>
@@ -809,7 +901,7 @@ async function mulaiUjian() {
   if (!U || U.mode !== "ujian" || U.lv !== lv || U.idx !== p.pos || U.selesai) {
     const { qs, nDokkai, dokkaiLalu } = await susunUjian(lv, R, p, p.pos);
     if (!qs.length) return `<div class="panel sh"><div class="empty">Soal untuk hari ini belum tersedia.</div><button class="btn" onclick="SH.lewati('${lv}')">Lewati hari ini</button></div>`;
-    U = { mode: "ujian", lv, idx: p.pos, jenis: h.jenis, qs, pos: 0, jawab: [], lihat: [], mulai: Date.now(), menit: h.menit, nDokkai, dokkaiLalu };
+    U = { mode: "ujian", lv, idx: p.pos, jenis: h.jenis, qs, pos: 0, jawab: [], lihat: [], mulai: Date.now(), menit: h.menit ? Math.max(h.menit, Math.ceil(qs.length * 1.2)) : null, nDokkai, dokkaiLalu };
   }
   mulaiTimer();
   return `<div id="sh-root">${htmlUjian()}</div>`;
@@ -842,6 +934,9 @@ async function kumpulkan() {
       p.dokkaiHari[U.idx] = { b: dq.filter(([q, i]) => U.jawab[i] === q.ans).length, t: dq.length };
       p.dokkaiPakai = [...new Set([...(p.dokkaiPakai || []), ...dq.map(([q]) => q.dkId).filter(Boolean)])];
     }
+    const kunciHari = U.qs.filter(q => q.cat !== "dokkai").map(sidikSoal);
+    p.soalPakai = [...new Set([...(p.soalPakai || []), ...kunciHari])];
+    p.soalHari = { [U.idx]: [...new Set([...(((p.soalHari || {})[U.idx]) || []), ...kunciHari])] };   // simpan hari aktif saja
   }
   const lulus = total ? benar / total >= LULUS : true;
   const pct = persen(benar, total);
@@ -872,11 +967,24 @@ window.SH = {
   async pilihTempo(k) {
     if (k === "custom") {
       const t = {};
-      for (const c of KAT) { const el = document.getElementById(`sh-in-${c}`); t[c] = bulat(parseInt(el && el.value, 10) || MAKS[c], +el.min || 1, MAKS[c]); }
+      for (const c of KAT) { const el = document.getElementById(`sh-in-${c}`); t[c] = Math.max(1, parseInt(el && el.value, 10) || 1); }
       this._pilihan.custom = t;
       toast(`Tempo: ${t.kosakata} kosakata · ${t.kanji} kanji · ${t.bunpo} bunpo per hari`);
       const box = document.getElementById("sh-ms-custom");
       if (box && this._lv) { const R = await rencana(this._lv, t); box.innerHTML = `<p class="sh-muted small">${R.hari.length} hari · selesai ± ${tgl(tambahHari(R.hari.length - 1))}</p>${htmlTarget(R, Date.now())}`; }
+    }
+    if (k === "durasi") {
+      const n = Math.max(1, parseInt((document.getElementById("sh-dur-n") || {}).value, 10) || 1);
+      const u = (document.getElementById("sh-dur-u") || {}).value || "minggu";
+      if (!this._lv) return;
+      const std = await dat(`./data/silabus/${this._lv}.json`);
+      const t = tempoHari(std, n * (SATUAN[u] || 7));
+      this._pilihan.durasi = t;
+      const R = await rencana(this._lv, t);
+      const kartu = document.getElementById("sh-dur-kartu");
+      if (kartu) { kartu.hidden = false; kartu.innerHTML = `<b>${n} ${u}</b><span class="dur">${R.hari.length} hari</span><span>${fT(t.kosakata)} kosa · ${fT(t.kanji)} kanji · ${fT(t.bunpo)} bunpo/hari</span><span class="sel">Selesai ± ${tgl(tambahHari(R.hari.length - 1))}</span>`; }
+      const box = document.getElementById("sh-ms-durasi");
+      if (box) box.innerHTML = htmlTarget(R, Date.now());
     }
     this._pilih = k;
     document.querySelectorAll(".sh-tempo").forEach(b => b.classList.toggle("on", b.dataset.k === k));
@@ -895,7 +1003,7 @@ window.SH = {
       // Jadwal dihitung ulang: hari "pos" = hari ini.
       p = { ...lama, tempo, pos, mulai: tglDari(Date.now(), -pos).getTime(), hasil: {}, hafal: {}, langkah: {}, dokkaiHari: {}, _gantiTempo: false };
     } else {
-      p = { lv, tempo, mulai: awalHari(Date.now()).getTime(), pos: 0, hasil: {}, hafal: {}, salah: {}, dokkaiPos: 0, dokkaiPakai: [], dokkaiHari: {} };
+      p = { lv, tempo, mulai: awalHari(Date.now()).getTime(), pos: 0, hasil: {}, hafal: {}, salah: {}, dokkaiPos: 0, dokkaiPakai: [], dokkaiHari: {}, soalPakai: [] };
     }
     U = null;
     simpanProgres(lv, p);
@@ -957,6 +1065,34 @@ window.SH = {
   selesaiReview() { U = null; window.route("sylabus"); },
 };
 
+/* Menu Hafalan Silabus (sama dengan menu 🧠 Hafalan): kartu materi hari ini / minggu ini / semua yang sudah dipelajari. */
+async function viewHafalanMenu() {
+  const lv = levelAktif();
+  const p = await muatProgres(lv);
+  if (!p) return tungguRoute();
+  const R = await rencana(lv, p.tempo);
+  const pos = Math.min(p.pos, R.hari.length - 1);
+  const kumpul = async (idxs) => {
+    const ids = idsHari(R, idxs);
+    const semua = [...ids.kosakata, ...ids.kanji, ...ids.bunpo];
+    const items = await muatItems(semua);
+    return semua.filter(id => items[id]).map(id => {
+      const kat = id.startsWith("kosakata") ? "kosakata" : id.startsWith("kanji") ? "kanji" : "bunpo";
+      return { tipe: TIPE_MATERI[kat], it: items[id], idx: +id.split("#")[1] };
+    });
+  };
+  const h = R.hari[pos];
+  const hariIdx = h && h.materi ? [pos] : (h && h.dari) || [];
+  const awalMinggu = Math.floor(pos / 7) * 7;
+  const cakupan = {
+    hari: { label: h && h.materi ? `Hari ${pos + 1}` : `Hari ${pos + 1} (materi minggu ini)`, kartu: await kumpul(hariIdx) },
+    minggu: { label: "Minggu ini", kartu: await kumpul(Array.from({ length: pos - awalMinggu + 1 }, (_, i) => awalMinggu + i)) },
+    semua: { label: "Semua yang sudah dipelajari", kartu: await kumpul(Array.from({ length: pos + 1 }, (_, i) => i)) },
+  };
+  if (typeof window.silabusHafalanMenuHtml !== "function") return `<div class="panel"><div class="empty">Menu hafalan belum siap. Muat ulang halaman.</div></div>`;
+  return window.silabusHafalanMenuHtml({ lv, cakupan });
+}
+
 async function viewMateri() {
   const lv = levelAktif();
   const p = await muatProgres(lv);
@@ -997,7 +1133,8 @@ export const SILABUS_ROUTES = {
   "sylabus-hafal": () => mulaiHafal(),
   "sylabus-jadwal": () => viewJadwal(),
   "sylabus-materi": () => viewMateri(),
+  "sylabus-hafalan": () => viewHafalanMenu(),
 };
 
 // Untuk uji otomatis (tools / node), tidak dipakai UI.
-export const _uji = { susunUjian, susunHafalan, rencana, kumulatif, get U() { return U; } };
+export const _uji = { susunUjian, soalBacaKanji, bacaanKanji, jumlahSoal, susunHafalan, rencana, kumulatif, get U() { return U; } };

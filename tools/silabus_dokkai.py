@@ -183,9 +183,11 @@ def bangun(lv):
         qs = []
         for q in u["qs"]:
             k = kunci(u["jp"], q["q"], q["opts"])
-            if k in seen:
+            # soal sama dengan pilihan teracak juga dihitung kembar: bacaan + pertanyaan + jawaban benar
+            k2 = ("isi", re.sub(r"\s", "", u["jp"]), re.sub(r"\s", "", q["q"]), re.sub(r"\s", "", str(q["opts"][q["ans"]])))
+            if k in seen or k2 in seen:
                 continue
-            seen.add(k)
+            seen.add(k); seen.add(k2)
             qs.append({**q, "id": f"{lv}-dk-{k}"})
         if qs:
             out.append({**u, "qs": qs})
