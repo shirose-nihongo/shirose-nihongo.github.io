@@ -13,7 +13,7 @@
  * Data (dibuat oleh tools/silabus_build.py & tools/silabus_soal.py):
  *   data/silabus/{lv}.json            urutan materi standar per hari
  *   data/silabus/{lv}-soal-{minggu}.json  soal format ujian asli per materi (+ pembahasan)
- *   data/silabus/{lv}-dokkai.json     bacaan berurutan pendek → panjang
+ *   data/silabus/{lv}-dokkai.json     bacaan (TIDAK dipakai di ujian harian: semua soal harian dari materi silabus)
  * Progres: localStorage + Firestore siswa/{uid}/silabus/{lv}.
  * Route: #sylabus (beranda), #sylabus-ujian (ujian hari aktif), #sylabus-hafal (tes hafalan),
  *        #sylabus-jadwal (jadwal bertanggal + target hafalan kumulatif)
@@ -142,18 +142,18 @@ function bangunRencana(std, tempo) {
     for (let i = 0; i < 6 && b < nHari; i++, b++) {
       const p = b / nHari;
       const fase = p < 0.3 ? "awal" : (p < 0.8 ? "tengah" : "akhir");
-      hari.push({ jenis: "belajar", fase, materi: belajar[b], soal: { kosakata: nSoal(5), kanji: nSoal(5), bunpo: nSoal(5), dokkai: 2 },
+      hari.push({ jenis: "belajar", fase, materi: belajar[b], soal: { kosakata: nSoal(5), kanji: nSoal(5), bunpo: nSoal(5), dokkai: 0 },
         menit: fase === "awal" ? null : (fase === "tengah" ? 20 : 15) });
       minggu.push(hari.length - 1);
     }
-    hari.push({ jenis: "fukushu", dari: [...minggu], soal: { kosakata: 6, kanji: 6, bunpo: 6, dokkai: 2 }, menit: 25 });
+    hari.push({ jenis: "fukushu", dari: [...minggu], soal: { kosakata: 6, kanji: 6, bunpo: 6, dokkai: 0 }, menit: 25 });
     semua = semua.concat(minggu); minggu = [];
   }
   const nSim = tempo.sim != null ? tempo.sim : simStd(std);
   for (let i = 0; i < nSim; i++) {
     hari.push(i % 2 === 0
       ? { jenis: "simulasi" }
-      : { jenis: "perbaikan", dari: [...semua], soal: { kosakata: 8, kanji: 8, bunpo: 8, dokkai: 2 }, menit: 30 });
+      : { jenis: "perbaikan", dari: [...semua], soal: { kosakata: 8, kanji: 8, bunpo: 8, dokkai: 0 }, menit: 30 });
   }
   return { hari, nHari, blok, total: Object.fromEntries(KAT.map(k => [k, urut[k].length])) };
 }
@@ -274,7 +274,7 @@ function bacaanKanji(it) {
   String(it.kun || "").split(/[、,]/).forEach(r => tambah("kun", r));
   return out;
 }
-/* Jumlah soal ujian hari belajar = 1 per kosakata + 1 per cara baca kanji + 1 per bunpo (+ dokkai). */
+/* Jumlah soal ujian hari belajar = 1 per kosakata + 1 per cara baca kanji + 1 per bunpo. Tanpa dokkai (bacaan tidak terkait materi). */
 async function jumlahSoal(h) {
   if (h.jenis !== "belajar") return { ...h.soal };
   const items = await muatItems(h.materi.kanji);
@@ -415,6 +415,7 @@ async function susunUjian(lv, R, p, idx) {
   // Dokkai: TIDAK PERNAH BERULANG. Ambil soal paling awal (pendek → panjang) yang id-nya belum pernah dipakai siswa.
   // Ulang ujian di hari yang sama tidak mengambil dokkai baru; nilai dokkai percobaan pertama dibawa.
   const lalu = (p.dokkaiHari || {})[idx];
+  if (!(h.soal && h.soal.dokkai)) return { qs, nDokkai: 0 };   // ujian harian tanpa dokkai: semua soal dari materi silabus
   if (lalu) return { qs, nDokkai: 0, dokkaiLalu: lalu };
   const dk = await dat(`./data/silabus/${lv}-dokkai.json`) || [];
   // Kalau stok bacaan lebih sedikit dari kebutuhan tempo ini, jatah per hari diratakan
