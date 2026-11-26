@@ -101,3 +101,14 @@
 .sh-jt th{white-space:nowrap;}
 .sh-jt.harian{min-width:560px;}
 .sh-jt.harian td:nth-child(1),.sh-jt.harian td:nth-child(2),.sh-jt.harian td:nth-child(5){white-space:nowrap;}
+
+/* Langkah belajar per bagian: Materi → Flashcard → Cocokkan → Pilihan ganda */
+.sh .sh-langkah { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 6px 0 10px; }
+.sh .sh-lk { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; padding: 10px 12px;
+  border-radius: 12px; border: 1.5px solid var(--border); background: var(--navy-3); color: var(--white); font: inherit; cursor: pointer; }
+.sh .sh-lk b { font-size: 14px; }
+.sh .sh-lk small { font-size: 11.5px; color: var(--gray); }
+.sh .sh-lk.now { border-color: var(--gold, #f5c451); background: rgba(245,196,81,.12); box-shadow: 0 0 0 3px rgba(245,196,81,.12); }
+.sh .sh-lk.ok { border-color: var(--green); }
+.sh .sh-lk.lock { opacity: .5; cursor: not-allowed; }
+@media (max-width: 640px) { .sh .sh-langkah { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

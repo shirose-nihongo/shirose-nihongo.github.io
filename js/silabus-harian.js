@@ -392,6 +392,26 @@ function htmlTarget(R, mulai) {
 const katHari = (h) => (h && h.materi ? KAT.filter(k => h.materi[k].length) : []);
 const hafalHari = (p, idx) => ((p.hafal || {})[idx] || {});
 const hafalTuntas = (h, p, idx) => katHari(h).every(k => hafalHari(p, idx)[k]?.lulus);
+/* Urutan belajar tiap bagian: 📖 Materi → 🃏 Flashcard → 🔗 Cocokkan → ✅ Pilihan ganda (≥ 80%).
+   Materi & latihan memakai halaman materi dan mesin hafalan yang sama dengan menu Kosakata/Kanji/Bunpou. */
+const TIPE_MATERI = { kosakata: "kosakata", kanji: "kanji", bunpo: "bunpou" };
+const LANGKAH = [["m", "📖", "Materi"], ["f", "🃏", "Flashcard"], ["c", "🔗", "Cocokkan"]];
+const langkahHari = (p, idx, kat) => (((p.langkah || {})[idx] || {})[kat] || {});
+const langkahOk = (p, idx, kat, l) => !!(hafalHari(p, idx)[kat]?.lulus || langkahHari(p, idx, kat)[l]);
+const langkahBerikut = (p, idx, kat) => { const x = LANGKAH.find(([l]) => !langkahOk(p, idx, kat, l)); return x ? x[0] : "t"; };
+async function tandaiLangkah(lv, idx, kat, l) {
+  const p = await muatProgres(lv);
+  if (!p || p.pos !== idx) return;
+  const lama = (p.langkah || {})[idx] || {};
+  p.langkah = { [idx]: { ...lama, [kat]: { ...(lama[kat] || {}), [l]: Date.now() } } };   // simpan hari aktif saja
+  simpanProgres(lv, p);
+}
+let _langkahKat = null;
+async function kartuLatihan(h, kat) {
+  const ids = h.materi[kat];
+  const items = await muatItems(ids);
+  return ids.filter(id => items[id]).map(id => ({ tipe: TIPE_MATERI[kat], it: items[id], idx: +id.split("#")[1] }));
+}
 
 async function viewSetup(lv) {
   const std = await dat(`./data/silabus/${lv}.json`);
@@ -493,27 +513,34 @@ async function viewBeranda(lv, p) {
   const infoCoba = coba ? `<p class="sh-muted small">Percobaan ujian: ${coba.coba || 1}× · nilai terbaik ${coba.terbaik ?? persen(coba.benar, coba.total)}% (perlu ≥ 80%)</p>` : "";
   let isi = "", tombol = "";
   if (h.jenis === "belajar") {
-    const kset = await kanjiJlpt();
-    const items = await muatItems(KAT.flatMap(k => h.materi[k]));
     const hf = hafalHari(p, idx);
     const tuntas = hafalTuntas(h, p, idx);
     const nSoal = KAT.reduce((s, c) => s + h.soal[c], 0) + h.soal.dokkai;
     const langkah = katHari(h).map(k => {
       const r = hf[k];
+      const nOk = r?.lulus ? 4 : LANGKAH.filter(([l]) => langkahOk(p, idx, k, l)).length;
       return `<a class="sh-step ${r?.lulus ? "ok" : ""}" href="#sh-kat-${k}" onclick="document.getElementById('sh-kat-${k}')?.scrollIntoView({behavior:'smooth'}); return false;">
-        ${r?.lulus ? "✅" : "🧠"} Hafalan ${KAT_NAMA[k]}<small>${r ? `${r.terbaik ?? persen(r.b, r.t)}%` : "belum"}</small></a>`;
+        ${r?.lulus ? "✅" : "🧠"} ${KAT_NAMA[k]}<small>${r?.lulus ? `${r.terbaik ?? persen(r.b, r.t)}%` : `${nOk}/4 langkah`}</small></a>`;
     }).join("");
     const blok = (k) => {
       if (!h.materi[k].length) return "";
       const r = hf[k];
-      const tb = r?.lulus
-        ? `<button class="btn ghost sm" onclick="SH.hafal('${k}')">✓ Lulus ${r.terbaik ?? persen(r.b, r.t)}% · ulangi tes</button>`
-        : `<button class="btn gold sm" onclick="SH.hafal('${k}')">🧠 Tes hafalan ${KAT_NAMA[k]} (${h.materi[k].length} soal · lulus ≥ 80%)</button>`;
-      return `<h3 id="sh-kat-${k}">${KAT_NAMA[k]} <small>(${h.materi[k].length})</small></h3>
-        <div class="sh-cards">${h.materi[k].map(id => kartuMateri(k, items[id], kset)).join("")}</div>
-        <div class="sh-row">${tb}${r && !r.lulus ? `<span class="sh-muted small">Terakhir ${persen(r.b, r.t)}% — hafalkan lagi kartunya lalu ulangi.</span>` : ""}</div>`;
+      const n = h.materi[k].length;
+      const next = langkahBerikut(p, idx, k);
+      const aksi = { m: `SH.materi('${k}')`, f: `SH.latih('${k}','flashcard')`, c: `SH.latih('${k}','matching')` };
+      const tombolL = LANGKAH.map(([l, ik, nama], i) => {
+        const ok = langkahOk(p, idx, k, l), buka = ok || l === next;
+        return `<button class="sh-lk ${ok ? "ok" : buka ? "now" : "lock"}" ${buka ? `onclick="${aksi[l]}"` : "disabled"}>
+          <b>${ok ? "✅" : buka ? ik : "🔒"} ${i + 1}. ${nama}</b><small>${ok ? "selesai · buka lagi" : buka ? (l === "m" ? `${n} item` : "mulai") : "terkunci"}</small></button>`;
+      }).join("");
+      const bukaTes = next === "t";
+      const tes = `<button class="sh-lk ${r?.lulus ? "ok" : bukaTes ? "now" : "lock"}" ${bukaTes ? `onclick="SH.hafal('${k}')"` : "disabled"}>
+          <b>${r?.lulus ? "✅" : bukaTes ? "✍️" : "🔒"} 4. Pilihan ganda</b><small>${r?.lulus ? `lulus ${r.terbaik ?? persen(r.b, r.t)}% · ulangi` : r ? `terakhir ${persen(r.b, r.t)}% · perlu ≥ 80%` : bukaTes ? `${n} soal · lulus ≥ 80%` : "terkunci"}</small></button>`;
+      return `<h3 id="sh-kat-${k}">${KAT_NAMA[k]} <small>(${n})</small></h3>
+        <div class="sh-langkah">${tombolL}${tes}</div>
+        ${r && !r.lulus ? `<p class="sh-muted small">Belum 80%: buka lagi materi/flashcard ${KAT_NAMA[k].toLowerCase()}, lalu ulangi pilihan ganda.</p>` : ""}`;
     };
-    isi = `<p class="sh-muted">Fase <b>${h.fase}</b> · Hafalkan kartu, lalu tes hafalan tiap bagian sampai ≥ 80%. Setelah semua lulus, ujian harian (${nSoal} soal${h.menit ? `, ${h.menit} menit` : ""}) terbuka. Lulus ujian ≥ 80% → Hari ${idx + 2} terbuka.</p>
+    isi = `<p class="sh-muted">Fase <b>${h.fase}</b> · Tiap bagian: 📖 materi → 🃏 flashcard → 🔗 cocokkan → ✍️ pilihan ganda sampai ≥ 80%. Setelah semua lulus, ujian harian (${nSoal} soal${h.menit ? `, ${h.menit} menit` : ""}) terbuka. Lulus ujian ≥ 80% → Hari ${idx + 2} terbuka.</p>
       <div class="sh-steps">${langkah}<span class="sh-step ${tuntas ? "" : "lock"}">${tuntas ? "📝" : "🔒"} Ujian harian<small>${coba ? `terbaik ${coba.terbaik ?? persen(coba.benar, coba.total)}%` : (tuntas ? "siap" : "terkunci")}</small></span></div>
       ${infoCoba}
       ${KAT.map(blok).join("")}`;
@@ -731,6 +758,7 @@ async function mulaiHafal() {
   const h = R.hari[p.pos];
   const kat = _hafalKat;
   if (!h || h.jenis !== "belajar" || !kat || !h.materi[kat].length || tungguTanggal(p)) return tungguRoute();
+  if (langkahBerikut(p, p.pos, kat) !== "t") { toast("Selesaikan dulu materi, flashcard, dan cocokkan."); return tungguRoute(); }
   if (U && U.reviewMode && U.mode === "hafal" && U.lv === lv) return `<div id="sh-root">${htmlUjian()}</div>`;
   if (!U || U.mode !== "hafal" || U.kat !== kat || U.lv !== lv || U.idx !== p.pos || U.selesai) {
     const qs = await susunHafalan(lv, R, p.pos, kat);
@@ -840,7 +868,7 @@ window.SH = {
       let pos = 0;
       while (pos < R1.hari.length && (!R1.hari[pos].materi || KAT.flatMap(k => R1.hari[pos].materi[k]).every(id => selesai.has(id)))) pos++;
       // Jadwal dihitung ulang: hari "pos" = hari ini.
-      p = { ...lama, tempo, pos, mulai: tglDari(Date.now(), -pos).getTime(), hasil: {}, hafal: {}, dokkaiHari: {}, _gantiTempo: false };
+      p = { ...lama, tempo, pos, mulai: tglDari(Date.now(), -pos).getTime(), hasil: {}, hafal: {}, langkah: {}, dokkaiHari: {}, _gantiTempo: false };
     } else {
       p = { lv, tempo, mulai: awalHari(Date.now()).getTime(), pos: 0, hasil: {}, hafal: {}, salah: {}, dokkaiPos: 0, dokkaiPakai: [], dokkaiHari: {} };
     }
@@ -868,6 +896,20 @@ window.SH = {
     p.pos += 1; simpanProgres(lv, p); window.route("sylabus");
   },
   async lewati(lv) { const p = await muatProgres(lv); p.pos += 1; simpanProgres(lv, p); U = null; window.route("sylabus"); },
+  materi(kat) { _langkahKat = kat; window.route("sylabus-materi"); },
+  async latih(kat, mode) {
+    const lv = levelAktif();
+    const p = await muatProgres(lv);
+    if (!p || tungguTanggal(p)) return window.route("sylabus");
+    const R = await rencana(lv, p.tempo);
+    const h = R.hari[p.pos];
+    if (!h || h.jenis !== "belajar" || !h.materi[kat].length) return window.route("sylabus");
+    const perlu = mode === "matching" ? "f" : "m";
+    if (!langkahOk(p, p.pos, kat, perlu)) { toast(mode === "matching" ? "Selesaikan flashcard dulu." : "Buka materinya dulu."); return; }
+    if (!window.silabusHafalan) { toast("Fitur flashcard belum termuat, muat ulang halaman."); return; }
+    window.silabusHafalan(await kartuLatihan(h, kat), mode, { lv, idx: p.pos, kat });
+  },
+  langkahSelesai(L) { if (L) return tandaiLangkah(L.lv, L.idx, L.kat, L.mode === "matching" ? "c" : "f"); },
   hafal(kat) { _hafalKat = kat; if (U && U.mode === "hafal") U = null; window.route("sylabus-hafal"); },
   ulangUjian() { U = null; window.route("sylabus-ujian"); },
   jawab(i) {
@@ -890,6 +932,30 @@ window.SH = {
   selesaiReview() { U = null; window.route("sylabus"); },
 };
 
+async function viewMateri() {
+  const lv = levelAktif();
+  const p = await muatProgres(lv);
+  if (!p) return tungguRoute();
+  const R = await rencana(lv, p.tempo);
+  const h = R.hari[p.pos], kat = _langkahKat;
+  if (!h || h.jenis !== "belajar" || !kat || !h.materi[kat] || !h.materi[kat].length || tungguTanggal(p)) return tungguRoute();
+  const ids = h.materi[kat], tipe = TIPE_MATERI[kat];
+  const level = String(S().level || "").toLowerCase();
+  const sama = ids.every(id => fileOf(id) === `${tipe}-${level}`);
+  let daftar;
+  if (sama && window.silabusMateriHtml) daftar = await window.silabusMateriHtml(tipe, ids.map(id => +id.split("#")[1]));
+  else { const kset = await kanjiJlpt(); const items = await muatItems(ids); daftar = `<div class="sh-cards">${ids.map(id => kartuMateri(kat, items[id], kset)).join("")}</div>`; }
+  tandaiLangkah(lv, p.pos, kat, "m");
+  const sudahF = langkahOk(p, p.pos, kat, "f");
+  return `<div class="panel sh">
+    <div class="sh-row"><button class="btn ghost sm" onclick="route('sylabus')">← Silabus</button></div>
+    <h2>📖 ${KAT_NAMA[kat]} · Hari ${p.pos + 1} <small>(${ids.length})</small></h2>
+    <p class="sh-muted small">Ketuk kartu untuk detail lengkap (bacaan, contoh kalimat, audio${kat === "kanji" ? ", urutan goresan" : ""}) — sama seperti menu ${tipe === "bunpou" ? "Bunpou" : KAT_NAMA[kat]}.</p>
+    ${daftar}
+    <div class="sh-row"><button class="btn gold sh-mulai" onclick="SH.latih('${kat}','flashcard')">🃏 ${sudahF ? "Flashcard lagi" : "Lanjut: Flashcard"}</button></div>
+  </div>`;
+}
+
 let _modeSetup = false;
 async function renderSilabus() {
   stopTimer();
@@ -905,6 +971,7 @@ export const SILABUS_ROUTES = {
   "sylabus-ujian": () => mulaiUjian(),
   "sylabus-hafal": () => mulaiHafal(),
   "sylabus-jadwal": () => viewJadwal(),
+  "sylabus-materi": () => viewMateri(),
 };
 
 // Untuk uji otomatis (tools / node), tidak dipakai UI.
