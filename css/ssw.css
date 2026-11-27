@@ -406,3 +406,16 @@ body.sw-figopen{padding-bottom:62vh;}
 #sw-chara-ov .sco-x{position:fixed;right:14px;top:14px}
 .sco-chara{height:min(94vh,calc(94vw*10/7));aspect-ratio:7/10;max-width:96vw}
 .sco-chara svg{width:100%;height:100%}
+
+/* ===== Zoom buku ala PDF viewer (in-place, tanpa layar penuh) ===== */
+#bk-scroll, #bk-scroll *, #bk-stage, #bk-stage *{touch-action:pan-x pan-y;}
+#bk-scroll.bk-zoomed{overflow-x:auto; overflow-y:visible; align-items:flex-start; -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain;}
+#bk-scroll.bk-zoomed .bk-pgw{flex:none; margin-inline:auto; width:calc(100% * var(--bkz,1)); max-width:calc(900px * var(--bkz,1)); min-height:calc(60vw * var(--bkz,1)); contain-intrinsic-size:auto calc(130vw * var(--bkz,1));}
+#bk-scroll .bk-pgw img{cursor:default;}
+#bk-stage{cursor:default !important;}
+#bk-stage.bk-zoomed{overflow:auto !important; -webkit-overflow-scrolling:touch; max-height:none; text-align:left;}
+#bk-stage.bk-zoomed img{max-width:none !important; width:calc(100% * var(--bkz,1)); display:block;}
+.bk-zbar{position:fixed; right:10px; bottom:calc(84px + env(safe-area-inset-bottom,0px)); z-index:40; display:flex; gap:2px; background:rgba(15,19,48,.92); border:1px solid var(--border); border-radius:999px; padding:3px; backdrop-filter:blur(6px); box-shadow:0 4px 14px rgba(0,0,0,.35);}
+.bk-zbar button{min-width:40px; height:36px; border:0; border-radius:999px; background:transparent; color:#fff; font-size:18px; font-weight:700; cursor:pointer;}
+.bk-zbar button#bk-zv{font-size:12px; min-width:52px;}
+.bk-zbar button:active{background:rgba(255,255,255,.14);}

@@ -3,9 +3,9 @@
  "nama": "Kaigo (Bahasa Jepang)",
  "jp": "介護の日本語",
  "assets": "kaigo",
- "book": "id",
+ "book": "jp",
  "pages": {
-  "id": 271
+  "jp": 275
  },
  "bab": [
   {
@@ -19,6 +19,10 @@
   {
    "id": "bab3",
    "file": "bab3.json"
+  },
+  {
+   "id": "bab4",
+   "file": "bab4.json"
   }
  ],
  "vocab": "vocab.json",
