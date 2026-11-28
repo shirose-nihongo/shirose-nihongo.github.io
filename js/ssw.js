@@ -17,212 +17,6 @@ import {
 } from "./ssw-core.js?v=20261128d";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118k";
 
-/* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
-const PDF_SUMBER = {
-  "agriculture": [
-    { t: "試験実施要領 1号 農業技能測定試験 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
-    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true },
-    { t: "Soal contoh resmi 農業技能測定試験 (12 soal, termasuk bergambar)", u: "https://asat-nca.jp/jp/ews/uploads/2021/07/sample.pdf", ext: true },
-    { t: "Teks belajar resmi 耕種農業 (JP, 全国農業会議所)", u: "https://asat-nca.jp/jp/images/ASAT_CF_jpn2.pdf", ext: true },
-    { t: "Teks belajar resmi — versi Bahasa Indonesia & bahasa lain", u: "http://asat-nca.jp/id/textbook/", ext: true },
-    { t: "Teks belajar 2号 耕種農業 (JP)", u: "https://asat-nca.jp/jp/images/ASAT_CF2_jpn1.pdf", ext: true }
-  ],
-  "livestock": [
-    { t: "試験実施要領 1号 農業技能測定試験 — 畜産農業 (MAFF)", u: "https://www.moj.go.jp/isa/content/930005135.pdf", ext: true },
-    { t: "試験実施状況報告書 R7 農業分野 (MAFF)", u: "https://www.moj.go.jp/isa/content/001472224.pdf", ext: true },
-    { t: "Soal contoh resmi 農業技能測定試験 (12 soal, termasuk bergambar)", u: "https://asat-nca.jp/jp/ews/uploads/2021/07/sample.pdf", ext: true },
-    { t: "Teks belajar resmi 畜産農業 (JP, 全国農業会議所)", u: "https://asat-nca.jp/jp/images/ASAT_LF_jpn3.pdf", ext: true },
-    { t: "Teks belajar resmi — versi Bahasa Indonesia & bahasa lain", u: "http://asat-nca.jp/id/textbook/", ext: true },
-    { t: "Teks belajar 2号 畜産農業 (JP)", u: "https://asat-nca.jp/jp/images/ASAT_LF2_jpn1.pdf", ext: true }
-  ],
-  "fishery": [
-    { t: "学習用テキスト 漁業一般 (大日本水産会, rev. 2025)", u: "https://suisankai.or.jp/wp-content/uploads/2025/09/%E6%BC%81%E6%A5%AD%E4%B8%80%E8%88%AC2025%E6%9B%B4%E6%96%B0.pdf", ext: true },
-    { t: "学習用テキスト 釣り漁業 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2020/01/%E2%91%A220191218%E9%87%A3%E6%BC%81%E6%A5%AD.pdf", ext: true },
-    { t: "学習用テキスト 漁業安全 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2023/12/%E6%BC%81%E6%A5%AD%E5%AE%89%E5%85%A8.pdf", ext: true },
-    { t: "試験実施状況報告書 R4 漁業分野 (水産庁)", u: "https://www.moj.go.jp/isa/content/001401785.pdf", ext: true },
-    { t: "Soal contoh resmi 1号 学科 + 実技 (大日本水産会)", u: "https://suisankai.or.jp/wp-content/uploads/2022/01/%E5%87%BA%E9%A1%8C%E4%BE%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E5%95%8F%E9%A1%8C.pdf", ext: true },
-    { t: "Halaman resmi ujian & teks belajar (JP/Indonesia) — 大日本水産会", u: "https://suisankai.or.jp/skill/", ext: true }
-  ],
-  "accommodation": [
-    { t: "宿泊分野特定技能1号評価試験 実施要領 (観光庁)", u: "https://www.mlit.go.jp/kankocho/content/001719490.pdf", ext: true },
-    { t: "令和7年 宿泊分野 試験実施状況 (観光庁)", u: "https://www.mlit.go.jp/kankocho/content/002027832.pdf", ext: true }
-  ],
-  "kaigo": [
-    { t: "介護特定技能評価試験(技能) 試験実施要領 (MHLW)", u: "https://www.mhlw.go.jp/content/001706488.pdf", ext: true }
-  ],
-  "kaigo-jp": [
-    { t: "介護特定技能評価試験(技能) 試験実施要領 (MHLW)", u: "https://www.mhlw.go.jp/content/001706488.pdf", ext: true }
-  ],
-  "railway-electrical": [
-    { t: "受験案内 電気設備整備 (resmi 鉄道電業安全協会)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-juken-annai.pdf" },
-    { t: "試験実施要領 電気設備整備 (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-shiken-jisshi-youryou.pdf" },
-    { t: "学科 試験サンプル (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-gakka-sample.pdf" },
-    { t: "実技 試験サンプル (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-jitsugi-sample.pdf" },
-    { t: "試験結果 2025年度 (resmi)", u: "assets/ssw/railway-electrical/pdf/railway-electrical-shiken-kekka.pdf" }
-  ],
-  "railway-track": [
-    { t: "受験案内 軌道整備 (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_efac198c2698498586d88991447b6152.pdf", ext: true },
-    { t: "試験実施要領 軌道整備 (resmi MLIT/MOJ)", u: "https://www.moj.go.jp/isa/content/001435333.pdf", ext: true },
-    { t: "学科 試験問題サンプル (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_fc3a811b535a466087a0367a267e0435.pdf", ext: true },
-    { t: "実技 試験問題サンプル (resmi JRCEA)", u: "https://www.jrcea.or.jp/_files/ugd/348d34_27b103ed718044d8a0937541ff752c9a.pdf", ext: true }
-  ],
-  "shipbuilding": [
-    { t: "溶接 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-guidance.pdf" },
-    { t: "溶接 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-point.pdf" },
-    { t: "溶接 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-welding-sample.pdf" },
-    { t: "塗装 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-guidance.pdf" },
-    { t: "塗装 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-point.pdf" },
-    { t: "塗装 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-painting-sample.pdf" },
-    { t: "鉄工 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-guidance.pdf" },
-    { t: "鉄工 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-point.pdf" },
-    { t: "鉄工 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-ironwork-sample.pdf" },
-    { t: "仕上げ — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-guidance.pdf" },
-    { t: "仕上げ — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-point.pdf" },
-    { t: "仕上げ — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-finish-sample.pdf" },
-    { t: "機械加工 — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-guidance.pdf" },
-    { t: "機械加工 — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-point.pdf" },
-    { t: "機械加工 — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-machining-sample.pdf" },
-    { t: "電気機器組立て — 受験案内 (resmi ClassNK)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-guidance.pdf" },
-    { t: "電気機器組立て — 実技試験実施要領 (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-point.pdf" },
-    { t: "電気機器組立て — 学科試験サンプル (resmi)", u: "assets/ssw/shipbuilding/pdf/shipbuilding-eeassenmbly-sample.pdf" }
-  ],
-  "linen-supply": [
-    { t: "試験基準 初級・専門級 (resmi JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-kizyun181009.pdf" },
-    { t: "Soal contoh 学科 初級 (resmi)", u: "assets/ssw/linen-supply/pdf/jlsa-test2019.pdf" },
-    { t: "Soal contoh 学科 専門級 (resmi)", u: "assets/ssw/linen-supply/pdf/jlsa-test-senmon.pdf" },
-    { t: "Statistik pelaksanaan ujian (JLSA)", u: "assets/ssw/linen-supply/pdf/jlsa-jokyo-r01-r07.pdf" }
-  ],
-  "aviation-gh": [
-    { t: "Teks belajar resmi GH — Text 1: Keselamatan & Kualitas (JP, 26 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text1-anzen-hinshitsu-rev2.pdf" },
-    { t: "Teks belajar resmi GH — Text 2 (JP, 52 hal., Rev. 2)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text2-gh-rev2-1.pdf" },
-    { t: "Teks GH edisi 1 (arsip, 40 hal.)", u: "assets/ssw/aviation-gh/pdf/jaea-gh-text-1go.pdf" },
-    { t: "Soal contoh resmi GH", u: "assets/ssw/aviation-gh/pdf/jaea-gh-sample-questions.pdf" },
-    { t: "Halaman dukungan JAEA (GH) ↗", u: "https://exam.jaea.or.jp/?page_id=356", ext: true }
-  ],
-  "aviation-am": [
-    { t: "Teks 1: Teknik dasar (締結・電気計測)", u: "assets/ssw/aviation-am/pdf/jaea-am-text1-kihon-gijutsu.pdf" },
-    { t: "Teks 2: Keselamatan kerja & kualitas", u: "assets/ssw/aviation-am/pdf/jaea-am-text2-anzen-hinshitsu.pdf" },
-    { t: "Teks 3: Gambaran umum pesawat", u: "assets/ssw/aviation-am/pdf/jaea-am-text3-kokuki-gaiyo.pdf" },
-    { t: "Soal contoh resmi AM", u: "assets/ssw/aviation-am/pdf/jaea-am-sample-questions.pdf" }
-  ],
-  "forestry": [
-    { t: "Soal contoh 学科 + kunci jawaban (resmi)", u: "assets/ssw/forestry/pdf/ringyo_tokutei_gakka_sumple_250724.pdf" },
-    { t: "実技試験問題 2026 (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_test.pdf" },
-    { t: "Prosedur ujian praktik (resmi)", u: "assets/ssw/forestry/pdf/2026_specific_process.pdf" },
-    { t: "Q&A APD & alat kerja (resmi)", u: "assets/ssw/forestry/pdf/specfic_faq_260708.pdf" },
-    { t: "Panduan peserta 2026 (受験案内)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-juken-annai.pdf" },
-    { t: "Ringkasan ujian 2026 (試験概要)", u: "assets/ssw/docs-resmi/forestry/ringyou-gino-2026-shiken-gaiyou.pdf" },
-    { t: "Pedoman pelaksanaan ujian (試験実施要領, Rinya-cho)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-shiken-jisshi-yoryo.pdf" },
-    { t: "Pedoman penerimaan 受入れ手引 (Rinya-cho)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-ukeire-tebiki.pdf" },
-    { t: "Apa itu pekerjaan kehutanan (林業ってどんなもの)", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-tte-donna-mono.pdf" },
-    { t: "Lampiran pedoman operasional bidang", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-unyo-yoryo-bessatsu.pdf" },
-    { t: "Laporan hasil pelatihan kehutanan", u: "assets/ssw/docs-resmi/forestry/rinya-ringyou-seika-hokokusho.pdf" }
-  ],
-  "railway-vehicle": [
-    { t: "Teks belajar resmi 車両製造 (JP, 224 hal.)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakushu-text-1go.pdf" },
-    { t: "Contoh soal 学科 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-gakka-sample.pdf" },
-    { t: "Contoh soal 実技 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-jitsugi-sample.pdf" },
-    { t: "Panduan ujian 試験案内 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-shiken-annai.pdf" },
-    { t: "Hasil ujian 2026 (resmi)", u: "assets/ssw/railway-vehicle/pdf/rail-sharyo-kekka-2026.pdf" }
-  ],
-  "logistics": [
-    { t: "Pedoman ujian 1号 (試験実施要領, MLIT)", u: "assets/ssw/docs-resmi/logistics/jitsushi-yoryo-1go.pdf" },
-    { t: "Lingkup & rincian ujian (試験基準, 1 hal.)", u: "assets/ssw/docs-resmi/logistics/shiken-kijun-1go.pdf" },
-    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/logistics/bunya-unyo-hoshin.pdf" },
-    { t: "Standar & contoh ujian (基準・奨励 特定技能)", u: "assets/ssw/docs-resmi/logistics/kijun-shorei-tokutei.pdf" },
-    { t: "Dokumen resmi MLIT (1)", u: "assets/ssw/docs-resmi/logistics/dokumen-002018512.pdf" },
-    { t: "Dokumen resmi MLIT (2)", u: "assets/ssw/docs-resmi/logistics/dokumen-002027344.pdf" }
-  ],
-  "recycling": [
-    { t: "Program pelatihan & karier (環境省)", u: "assets/ssw/docs-resmi/recycling/ikusei-career-program.pdf" },
-    { t: "Kebijakan operasional bidang", u: "assets/ssw/docs-resmi/recycling/bunya-unyo-hoshin.pdf" },
-    { t: "Semua dokumen resmi (halaman)", u: "dokumen-resmi.html", ext: 1 },
-    { t: "Pedoman pelatihan — naskah utama", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-honbun.pdf" },
-    { t: "Pedoman pelatihan — lampiran tabel (別表)", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-beppyo.pdf" },
-    { t: "Pedoman pelatihan — lampiran (別紙)", u: "assets/ssw/docs-resmi/recycling/ikusei-unyo-bessatsu-besshi.pdf" }
-  ],
-  "wood-industry": [
-    { t: "Teks belajar resmi 木材産業 (JP, 67 hal.)", u: "assets/ssw/wood-industry/pdf/zenmoku-gakushu-text-ja.pdf" },
-    { t: "Buku versi Indonesia (ringkasan Shirose)", u: "assets/ssw/wood-industry/pdf/shirose-ringkasan-indonesia-wood-industry.pdf" }
-  ],
-  "auto-transport": [
-    { t: "Teks resmi Truk (JP, 242 hal.)", u: "assets/ssw/auto-transport/pdf/jta-truck-gakushu-text-ja.pdf" },
-    { t: "Buku versi Indonesia (ringkasan Shirose)", u: "assets/ssw/auto-transport/pdf/shirose-ringkasan-indonesia-auto-transport.pdf" },
-    { t: "Teks resmi Bus (JP, 68 hal.) — situs Asosiasi Bus", u: "https://www.bus.or.jp/news/16554/", ext: 1 }
-  ],
-  "auto-maintenance": [
-    { t: "JICA: みてまなぶ！自動車整備の日本語", u: "assets/ssw/auto-maintenance/pdf/jica-jidosha-seibi-no-nihongo.pdf" },
-    { t: "JICA: Koleksi ilustrasi かいて おぼえる", u: "assets/ssw/auto-maintenance/pdf/jica-illust-shu.pdf" },
-    { t: "Contoh soal resmi 1号 学科 ○× (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-1go-gakka.pdf" },
-    { t: "Contoh soal resmi 1号 実技 二択 (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-1go-jitsugi.pdf" },
-    { t: "Contoh soal resmi 2号 学科 4 pilihan (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-contoh-2go-gakka.pdf" },
-    { t: "Kunci jawaban contoh 2号 学科 (JASPA 日整連)", u: "assets/ssw/auto-maintenance/pdf/jaspa-kunci-2go-gakka.pdf" }
-  ],
-  "jaim-machine-metal": [
-    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-machine-metal/pdf/panduan-belajar-id.pdf" },
-    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-machine-metal/pdf/panduan-belajar-jp.pdf" },
-    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-machine-metal/pdf/errata-jp.pdf" },
-    { t: "Contoh soal resmi 1号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kikai-kinzoku-kako.pdf" },
-    { t: "Contoh soal resmi 2号 — 機械金属加工 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kikai-kinzoku-kako.pdf" },
-    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
-    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
-    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
-    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
-    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
-    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
-    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
-    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
-    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
-    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
-    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
-    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
-    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
-    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
-  ],
-  "jaim-elec-electronic": [
-    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-id.pdf" },
-    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/panduan-belajar-jp.pdf" },
-    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-elec-electronic/pdf/errata-jp.pdf" },
-    { t: "Contoh soal resmi 1号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-denki-denshi-kiki-kumitate.pdf" },
-    { t: "Contoh soal resmi 2号 — 電気電子機器組立て (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-denki-denshi-kiki-kumitate.pdf" },
-    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
-    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
-    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
-    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
-    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
-    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
-    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
-    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
-    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
-    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
-    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
-    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
-    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
-    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
-  ],
-  "jaim-metal-surface": [
-    { t: "Panduan belajar resmi JAIM — Bahasa Indonesia", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-id.pdf" },
-    { t: "Panduan belajar resmi JAIM — Jepang", u: "assets/ssw/jaim-metal-surface/pdf/panduan-belajar-jp.pdf" },
-    { t: "正誤表 (errata) panduan Jepang", u: "assets/ssw/jaim-metal-surface/pdf/errata-jp.pdf" },
-    { t: "Contoh soal resmi 1号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kinzoku-hyomen-shori.pdf" },
-    { t: "Contoh soal resmi 2号 — 金属表面処理 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-2go-kinzoku-hyomen-shori.pdf" },
-    { t: "Contoh soal resmi 1号 — 防食 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-boshoku.pdf" },
-    { t: "Contoh soal resmi 1号 — コンクリート製品 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-concrete-seihin.pdf" },
-    { t: "Contoh soal resmi 1号 — 縫製 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-hosei.pdf" },
-    { t: "Contoh soal resmi 1号 — 電線・ケーブル (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-densen-cable.pdf" },
-    { t: "Contoh soal resmi 1号 — 印刷・製本 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-insatsu-seihon.pdf" },
-    { t: "Contoh soal resmi 1号 — かばん (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kaban.pdf" },
-    { t: "Contoh soal resmi 1号 — 家具 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-kagu.pdf" },
-    { t: "Contoh soal resmi 1号 — 生コン (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-nama-concrete.pdf" },
-    { t: "Contoh soal resmi 1号 — プレハブ住宅 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-prefab-jutaku.pdf" },
-    { t: "Contoh soal resmi 1号 — RPF (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rpf.pdf" },
-    { t: "Contoh soal resmi 1号 — ゴム (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-rubber.pdf" },
-    { t: "Contoh soal resmi 1号 — 紙器・段ボール (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-shiki-danball.pdf" },
-    { t: "Contoh soal resmi 1号 — 耐火物 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-taikabutsu.pdf" },
-    { t: "Contoh soal resmi 1号 — 陶磁器 (JAIM)", u: "assets/ssw/industrial-mfg/pdf/contoh-1go-toji-ki.pdf" }
-  ]
-};
-const pdfButtons = (slug) => (PDF_SUMBER[slug] || []).map(x => `<a class="btn ghost" href="${esc(x.u)}" target="_blank" rel="noopener">📄 ${esc(x.t)}${x.ext ? " ↗" : ""}</a>`).join("");
 
 let FB = null;
 export function initSsw(fb) { FB = fb; initSswCore(fb); }
@@ -408,16 +202,15 @@ async function renderPeta([slug]) {
     <div class="sw-actions">
       ${last ? `<button class="btn" onclick="route('${esc(last.route)}')">▶ Lanjutkan: ${esc(last.label)}</button>` : ""}
       <button class="btn ghost" onclick="route('ssw-hafal/${slug}')">🃏 Flashcard${st.due ? ` · ${st.due} jatuh tempo` : ""}</button>
-      <button class="btn ghost" onclick="route('ssw-kosa/${slug}/all')">📚 Kosakata (${st.total})</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/katakana')">カ Katakana</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/kanji')">字 Kanji</button><button class="btn ghost" onclick="route('ssw-pustaka/${slug}/bunpou')">文 Bunpou</button>
+      <button class="btn ghost" onclick="route('ssw-kosa/${slug}/all')">📚 Kosakata (${st.total})</button>${(await pusAda(slug)).map(k => `<button class="btn ghost" onclick="route('ssw-pustaka/${slug}/${k}')">${PUS_IKON[k]} ${PUS_T[k][1]}</button>`).join("")}
       ${pack.idx.diagram ? `<button class="btn ghost" onclick="route('ssw-diagram/${slug}')">🔧 Diagram Interaktif</button>` : ""}
       ${pack.idx.nobook || _dm() ? "" : `<button class="btn ghost" onclick="route('ssw-buku/${slug}/${getLang()}/1')">📖 Buku interaktif</button>`}
       <button class="btn ghost" onclick="route('ssw-kuis/${slug}')">📝 Kuis</button>
       <button class="btn" onclick="route('ssw-hafal/${slug}')">🃏 Hafalan</button>
       <button class="btn gold" onclick="route('ssw-rank/${slug}')">🏆 Leaderboard</button>
       <button class="btn ghost" onclick="sswGo('shop')">🛒 Shop</button>${window.__gachaOn === false ? "" : `<button class="btn ghost" onclick="sswGo('gacha')">🎰 Gacha</button>`}
-      ${pdfButtons(slug)}
     </div>
-    <div class="sw-attr">Materi: ${esc(pack.chapters[0]?.source || "")}</div>
+
   </div>`;
 }
 
@@ -613,7 +406,7 @@ async function renderBuku([slug, lang, page]) {
       <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
       <button class="btn" onclick="SSW.bookGo(1)">Berikutnya ›</button></div>`}
     <div class="bk-zbar" id="bk-zbar"><button type="button" data-z="-" aria-label="Perkecil">−</button><button type="button" data-z="0" id="bk-zv" title="Kembali 100%">100%</button><button type="button" data-z="+" aria-label="Perbesar">+</button></div>
-    <div class="sw-attr">Sumber: ${esc(pack.chapters[0]?.source || "")}</div>
+
   </div>` + (setTimeout(() => window.__swLangFloat && window.__swLangFloat(slug, "", "", lang, true), 0), "");
 }
 
@@ -1509,6 +1302,10 @@ function kamusSeg(KD, base) {
 const _pus = {};
 const pusLoad = (slug, f) => { const k = slug + "/" + f; return _pus[k] || (_pus[k] = fetch(`./data/ssw/${slug}/${f}.json`, { cache: "no-cache" }).then(r => r.ok ? r.json() : { items: [] }).then(d => d.items || []).catch(() => { delete _pus[k]; return []; })); };
 const PUS_T = { katakana: ["カタカナ", "Katakana"], kanji: ["漢字", "Kanji"], bunpou: ["文法", "Bunpou"] };
+const PUS_FILE = { katakana: "katakana", kanji: "kanji-kartu", bunpou: "bunpou" };
+const PUS_IKON = { katakana: "カ", kanji: "字", bunpou: "文" };
+/** Jenis pustaka yang ada isinya untuk bidang ini (yang kosong tidak diberi tombol). */
+const pusAda = async (slug) => { const k = Object.keys(PUS_T); const n = await Promise.all(k.map(x => pusLoad(slug, PUS_FILE[x]))); return k.filter((_, i) => n[i].length); };
 function pusRow(j, it) {
   if (j === "katakana") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>${esc(it.r || "")}${it.n ? " · muncul " + it.n + "×" : ""}</small></span></summary>${it.contoh ? `<div class="x"><p class="jp">${rich(it.contoh)}</p><p class="sw-muted">${esc(it.arti_contoh || "")}</p></div>` : ""}</details>`;
   if (j === "kanji") return `<details class="sw-vrow"><summary><span class="jp k">${esc(it.k)}</span><span class="m"><b>${esc(it.a)}</b><small>音 ${esc(it.on || "-")} · 訓 ${esc(it.kun || "-")}</small></span></summary><div class="x">${(it.c || []).map(c => `<p><span class="jp">${esc(c.k)}</span> (${esc(c.r)}) — ${esc(c.a)}</p>`).join("") || '<p class="sw-muted">Belum ada contoh kata.</p>'}</div></details>`;
@@ -1522,18 +1319,19 @@ function pusCards(j, items) {
     return { tipe: "ssw", idx: no - 1, no, skey: "bp:" + it.id, front: it.pola, reading: it.cara || "", back: it.arti + (it.contoh ? "\n" + String(it.contoh).replace(/\{([^|}]+)\|[^}]*\}/g, "$1").replace(/\*\*/g, "") + " — " + (it.arti_contoh || "") : "") };
   });
 }
-const PUS_FILE = { katakana: "katakana", kanji: "kanji-kartu", bunpou: "bunpou" };
 async function renderPustaka([slug, j = "katakana"]) {
   applyRuby();
   const g = await gate(slug); if (g.err) return g.err;
   const { b } = g;
   if (!PUS_T[j]) j = "katakana";
+  const ada = await pusAda(slug);
+  if (ada.length && !ada.includes(j)) j = ada[0];
   const items = await pusLoad(slug, PUS_FILE[j]);
   window.__swPus = { slug, j, items, n: 60 };
   setTimeout(() => SSW.pusFilter(), 0);
   return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: PUS_T[j][1] }])}
     <div class="sw-head compact"><div class="jp">${PUS_T[j][0]}</div><h1>${PUS_T[j][1]} ${esc(b.nama)}</h1><p>${items.length} item dari materi bidang ini. Cari, buka detail, atau hafalkan dengan flashcard.</p></div>
-    <div class="sw-tabs"><button onclick="route('ssw-kosa/${slug}/all')">Kosakata</button>${Object.keys(PUS_T).map(k => `<button class="${k === j ? "on" : ""}" onclick="route('ssw-pustaka/${slug}/${k}')">${PUS_T[k][1]}</button>`).join("")}</div>
+    <div class="sw-tabs"><button onclick="route('ssw-kosa/${slug}/all')">Kosakata</button>${ada.map(k => `<button class="${k === j ? "on" : ""}" onclick="route('ssw-pustaka/${slug}/${k}')">${PUS_T[k][1]}</button>`).join("")}</div>
     <div class="sw-tools"><input id="sw-pq" type="search" placeholder="Cari…" oninput="SSW.pusFilter()"><button class="btn" onclick="SSW.pusHafal('flashcard')">🃏 Flashcard</button><button class="btn ghost" onclick="SSW.pusHafal('multiple')">✅ Pilihan ganda</button></div>
     <p class="sw-muted" id="sw-pcount"></p><div class="sw-vlist" id="sw-plist"></div><div class="sw-actions"><button class="btn ghost" id="sw-pmore" onclick="SSW.pusMore()">Tampilkan lebih banyak</button></div>
     <div class="sw-attr">Arti & contoh adalah materi buatan Shirose (perlu review ahli). Arti kanji dari kamus KANJIDIC/N-level.</div>`);
