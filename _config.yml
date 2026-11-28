@@ -1,0 +1,5 @@
+# Jangan publish folder backup (data lama internal, bukan buat publik) dan file kerja.
+exclude:
+  - backup/
+  - tools/
+  - node_modules/
