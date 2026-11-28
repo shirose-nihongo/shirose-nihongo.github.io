@@ -61,7 +61,7 @@ function _tsFix(o) {
   for (const k of Object.keys(o)) { const v = o[k]; if (v && typeof v === "object" && !(v instanceof Timestamp) && typeof v.seconds === "number" && typeof v.nanoseconds === "number" && Object.keys(v).length === 2) o[k] = new Timestamp(v.seconds, v.nanoseconds); }
   return o;
 }
-const _msTs = (t) => t && t.toMillis ? t.toMillis() : (t && typeof t.seconds === "number" ? t.seconds * 1000 : 0);
+const _msTs = (t) => t && t.toMillis ? t.toMillis() : (t && typeof t.seconds === "number" ? t.seconds * 1000 + Math.floor((t.nanoseconds || 0) / 1e6) : 0);
 /** Guru: tombol "Muat ulang" — data berikutnya diambil dari server (hasil ujian hanya yang baru). */
 export function guruMuatUlang() { try { localStorage.setItem("shirose-guru-paksa", String(Date.now())); } catch (e) {} }
 /** Guru: ambil ulang DAFTAR siswa (tombol "Refresh daftar"). */
@@ -806,6 +806,7 @@ export async function setRewardFlag(id) {
 export async function getLoginReward() {
   if (!currentUser) return null; const k = "shirose-loginrw:" + currentUser.uid; let loc = null;
   try { loc = JSON.parse(localStorage.getItem(k) || "null"); } catch (e) {}
+  if (loc && Date.now() - (Number(loc.t) || 0) < 6 * 3600e3) return loc;   // baru disimpan di perangkat ini → tanpa baca
   let srv = null; try { const sn = await getDoc(doc(db, "siswa", currentUser.uid, "login_reward", "main")); srv = sn.exists() ? sn.data() : null; } catch (e) {}
   const pilih = [srv, loc].filter(Boolean).sort((a, b) => (Number(b.t) || 0) - (Number(a.t) || 0))[0];
   return pilih || { hari: 0, last: "", siklus: 0, pending: null };
@@ -1352,14 +1353,26 @@ export async function listActivity(ym /* YYYYMM */){
 /* ========== KOMENTAR (public per-item discussion) ========== */
 // Composite key per detail page (kanji/kosakata/bunpou + level + number).
 function _cmtKey(tipe, lvl, no){ return `${tipe}_${lvl}_${no}`; }
+const _cmtCache = new Map();   // key -> {t, list}  (cache 1 jam per halaman)
 export async function listKomentar(tipe, lvl, no) {
   try {
     const key = _cmtKey(tipe, lvl, no);
+    const lk = "shirose-cmt:" + key;
+    let c = _cmtCache.get(key); if (!c) { try { c = JSON.parse(localStorage.getItem(lk) || "null"); } catch (e) {} }
+    if (c && Date.now() - c.t < 3600e3) return c.list.map(x => _tsFix({ ...x }));
+    const list = await _listKomentarServer(key);
+    const ent = { t: Date.now(), list }; _cmtCache.set(key, ent); try { localStorage.setItem(lk, JSON.stringify(ent)); } catch (e) {}
+    return list;
+  } catch (e) { console.warn("listKomentar failed:", e.message); return []; }
+}
+function _cmtBuang(key) { _cmtCache.delete(key); try { localStorage.removeItem("shirose-cmt:" + key); } catch (e) {} }
+async function _listKomentarServer(key) {
+  try {
     const col = collection(db, "komentar", key, "items");
     const q = query(col, orderBy("created", "desc"), limit(50));
     const snap = await getDocs(q);
     return snap.docs.map(d => { const x = d.data(); return { id: d.id, ...x, nama: _cleanNama(x.nama) }; });
-  } catch (e) { console.warn("listKomentar failed:", e.message); return []; }
+  } catch (e) { throw e; }
 }
 export async function tambahKomentar(tipe, lvl, no, text) {
   if (!currentUser) throw new Error("Harus login dulu");
@@ -1369,6 +1382,7 @@ export async function tambahKomentar(tipe, lvl, no, text) {
   const nama = publicNama(currentUser, currentSiswaDoc);
   const kelas = currentSiswaDoc?.kelas || "";
   const col = collection(db, "komentar", key, "items");
+  _cmtBuang(key);
   return await addDoc(col, {
     uid: currentUser.uid, nama, kelas, text: clean,
     jlpt: lvl, tipe, no, created: serverTimestamp(),
@@ -1380,6 +1394,7 @@ export async function hapusKomentar(tipe, lvl, no, id, ownerUid) {
     throw new Error("Bukan komentarmu");
   }
   const key = _cmtKey(tipe, lvl, no);
+  _cmtBuang(key);
   await deleteDoc(doc(db, "komentar", key, "items", id));
 }
 
@@ -1453,11 +1468,25 @@ export async function listRangkuman(bidang) {
   const merged = new Map();
   Object.entries(local).forEach(([id, v]) => merged.set(id, { id, ...v }));
 
-  // Try to overlay Firestore entries (more authoritative if available)
+  // Sinkron server hemat kuota: ambil yang BERUBAH saja maks. sekali sehari (biasanya 1 baca),
+  // ambil semua seminggu sekali (supaya kata yang dihapus di HP lain ikut hilang).
+  // Perangkat ini menyimpan salinan lengkap di localStorage.
+  const sk = "shirose-rang-sync:" + uid; let sy = {}; try { sy = JSON.parse(localStorage.getItem(sk) || "{}"); } catch (e) {}
+  const penuh = !sy.full || Date.now() - sy.full > 7 * 86400e3;
+  if (!penuh && sy.cek && Date.now() - sy.cek < 86400e3) {
+    let out = Array.from(merged.values()).map(v => ({ ...v, bidang: bidangRangkuman(v) }));
+    if (bidang) out = out.filter(v => v.bidang === bidang);
+    return out.sort((a,b) => (b.updatedMs||0) - (a.updatedMs||0));
+  }
   try {
     const col = collection(db, "siswa", uid, "rangkuman");
-    const snap = await getDocs(col);
-    snap.docs.forEach(d => merged.set(d.id, { id: d.id, ...d.data() }));
+    const snap = await getDocs(penuh ? col : query(col, where("updated", ">", Timestamp.fromMillis(sy.max || 0))));
+    if (penuh) { for (const [id, v] of [...merged]) if (!v._local) merged.delete(id); }
+    let max = sy.max || 0;
+    snap.docs.forEach(d => { const x = d.data(); const { updated, ...rest } = x; const ms = _msTs(updated); if (ms > max) max = ms; merged.set(d.id, { id: d.id, ...rest, updatedMs: rest.updatedMs || ms }); });
+    for (const [id, v] of merged) { const { id: _i, ...rest } = v; local[id] = rest; }
+    for (const id of Object.keys(local)) if (!merged.has(id)) delete local[id];
+    try { localStorage.setItem(sk, JSON.stringify({ cek: Date.now(), full: penuh ? Date.now() : sy.full, max })); } catch (e) {}
 
     // Opportunistic re-upload: if any local entry is marked _local,
     // retry its upload now that Firestore seems reachable.
@@ -1618,8 +1647,12 @@ export async function hapusKategori(id) {
    kosakata_pos/{lvl} = { map: { "<kata>": ["KK"|"KB"|"KSい"|"KSな", ...] | ["-"] } }
    Data JSON asli tidak diubah; override dipasang di memori saat Materi/Hafalan dimuat. */
 export async function getPosOverride(lvl) {
+  const k = "shirose-kpos:" + lvl;
+  if (!userIsGuru()) { const c = _lcGet(k); if (c) return c; }
   const snap = await getDoc(doc(db, "kosakata_pos", lvl));
-  return snap.exists() ? (snap.data().map || {}) : {};
+  const m = snap.exists() ? (snap.data().map || {}) : {};
+  _lcSet(k, m);
+  return m;
 }
 export async function setPosOverride(lvl, kata, tags) {
   if (!userIsGuru()) throw new Error("Hanya guru");
