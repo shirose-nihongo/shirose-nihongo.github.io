@@ -202,6 +202,7 @@ export function onAuth(cb) {
       // tahan dulu supaya tidak dianggap "belum terdaftar".
       if (_demoCreating) { currentUser = u; return; }
       await _prosesAuthUser(u);
+      if (u) setTimeout(() => simpanSekarang(), 5000);   // kirim sisa antrean dari sesi sebelumnya
     });
   }
   onReadyCallbacks.push(cb);
@@ -490,7 +491,7 @@ async function _daftarLamaTidakDipakai(email, pwd, nama) {
   }
   return cred;
 }
-export async function keluar() { return await signOut(auth); }
+export async function keluar() { try { await simpanSekarang(); } catch (e) {} return await signOut(auth); }
 export async function resetPassword(email) { return await sendPasswordResetEmail(auth, email); }
 
 /**
@@ -589,7 +590,13 @@ export function walletError() { return _walletErr; }
 async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   const uid = currentUser.uid, wref = doc(db, "siswa", uid, "wallet", "main");
   const grefs = WALLET_LVLS.map(l => doc(db, "siswa", uid, "gami", l));
-  const out = await runTransaction(db, async (tx) => {
+  // Belanja (delta < 0): koin hadiah yang masih di antrean ikut dikirim di transaksi yang sama, supaya saldo server cukup.
+  let pk = 0;
+  if (delta < 0) { const q = _q(); pk = Number(q.koin) || 0; if (pk) { q.koin = 0; _qSet(q); } }
+  const _balikPk = () => { if (pk) { const q = _q(); q.koin = (Number(q.koin) || 0) + pk; _qSet(q); pk = 0; } };
+  const delta0 = delta; delta = delta + pk;
+  let out;
+  try { out = await runTransaction(db, async (tx) => {
     const ws = await tx.get(wref);
     const w = ws.exists() ? ws.data() : { koin: 0, migrasi: {} }; w.migrasi = { ...(w.migrasi || {}) }; w.koin = w.koin || 0;
     _resetTok = Number(w.spentReset) || 0;
@@ -601,7 +608,9 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
     w.koin += delta;
     tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp() }, { merge: true });
     return w.koin;
-  });
+  }); } catch (e) { _balikPk(); throw e; }
+  if (pk) { try { await addDoc(collection(db, "siswa", uid, "wallet_log"), { t: serverTimestamp(), delta: pk, alasan: "hadiah belajar", saldo: out - delta0 }); } catch (e) {} }
+  delta = delta0;
   _baseSet(out);
   // Guru mengatur ulang koin (spentReset di dompet) → hapus catatan belanja gacha lama di perangkat ini (sekali per penyetelan)
   { const o = _gLocal(); if (_resetTok > (Number(o.spentSeen) || 0)) { o.spent = 0; o.spentSeen = _resetTok; _gSave(o); } }
@@ -609,15 +618,26 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   if (delta) { try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || ""), saldo: out }); } catch (e) {} }
   return _eff;
 }
+/* Cek saldo = BACA SAJA (1 baca, 0 tulis). Transaksi tulis hanya dipakai sekali untuk akun yang belum dimigrasi ke dompet tunggal. */
+async function _walletBaca() {
+  const ws = await getDoc(doc(db, "siswa", currentUser.uid, "wallet", "main"));
+  const w = ws.exists() ? ws.data() : null;
+  if (!w || WALLET_LVLS.some(l => !(w.migrasi || {})[l])) return walletTx(0, "");
+  const out = Number(w.koin) || 0;
+  _resetTok = Number(w.spentReset) || 0;
+  _baseSet(out);
+  { const o = _gLocal(); if (_resetTok > (Number(o.spentSeen) || 0)) { o.spent = 0; o.spentSeen = _resetTok; _gSave(o); } }
+  return Math.max(0, out - _gSpent());
+}
 export async function getWalletKoin() {
   if (!currentUser) return null;
-  try { const k = await walletTx(0, ""); _walletOff = false; _walletErr = ""; return k; } catch (e) { console.warn("wallet gagal, pakai saldo per level:", e.message); _walletErr = e.code || e.message; _walletOff = true; return null; }
+  try { const k = await _walletBaca(); _walletOff = false; _walletErr = ""; return k + _koinAntrean(); } catch (e) { console.warn("wallet gagal, pakai saldo per level:", e.message); _walletErr = e.code || e.message; _walletOff = true; return null; }
 }
 /* Tambah (atau kurangi, delta<0) koin dari fitur apa pun. Mengembalikan saldo baru atau null. */
 export async function tambahKoin(delta, alasan) {
   if (!currentUser || !delta) return null;
   for (let i = 0; i < 2; i++) {   // coba lagi sekali: error jaringan sesaat tidak boleh mematikan dompet
-    try { const k = await walletTx(delta, alasan); _walletOff = false; _walletErr = ""; return k; }
+    try { const k = await walletTx(delta, alasan); _walletOff = false; _walletErr = ""; return k + _koinAntrean(); }
     catch (e) {
       if (/tidak cukup/i.test(e.message)) throw e;
       console.warn("wallet gagal:", e.message); _walletErr = e.code || e.message; _walletOff = true;
@@ -773,13 +793,15 @@ export async function getGami(level) {
       _levelAkun(level).catch(() => 0),
     ]);
     const g = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
-    g.koin = k !== null ? k : _koinFallback(g.koin);
+    g.koin = k !== null ? k : _koinFallback(g.koin) + _koinAntrean();
+    _gamiServer[level] = { ...g };
     // Level karakter = level TERTINGGI di semua level JLPT/JFT (dulu hanya dokumen level aktif -> tampak "turun" saat pindah level)
     g.level_level_ini = g.level_karakter || 1;
     g.level_karakter = Math.max(g.level_karakter || 1, lvMax || 1);
     _lvSet(g.level_karakter);
+    _terapkanAntreanXP(level, g);   // XP yang belum terkirim ikut ditampilkan
     return g;
-  } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:_koinFallback(0), streak:0, level_karakter:Math.max(1, _lvGet()) }; }
+  } catch (e) { console.warn("getGami failed:", e.message); return { xp:0, koin:_koinFallback(0) + _koinAntrean(), streak:0, level_karakter:Math.max(1, _lvGet()) }; }
 }
 // Level akun: cache 6 jam di perangkat; baca dokumen level lain hanya bila cache kedaluwarsa (hemat kuota Firestore).
 const _lvKey = () => "shirose-lvakun-" + (currentUser?.uid || "x");
@@ -795,42 +817,148 @@ async function _levelAkun(aktif) {
   try { localStorage.setItem(_lvKey(), JSON.stringify({ v: mx, t: Date.now() })); } catch (e) {}
   return mx;
 }
+/* XP & koin TIDAK langsung ditulis ke Firestore. Masuk antrean, tampilan dihitung di perangkat,
+ * lalu dikirim sekali oleh simpanSekarang() (akhir kuis/sesi, keluar aplikasi, atau sebelum belanja). */
 export async function tambahXP(level, dXP, dKoin = 0) {
   if (!currentUser) return;
   try {
-    const ref = doc(db, "siswa", currentUser.uid, "gami", level);
-    const snap = await getDoc(ref);
-    const cur = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
-    cur.xp = (cur.xp || 0) + dXP;
-    cur.level_karakter = Math.floor(Math.sqrt(cur.xp / 50)) + 1;
-    const today = new Date().toISOString().slice(0,10);
-    if (cur.lastDate !== today) {
-      const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0,10);
-      cur.streak = cur.lastDate === yesterday ? (cur.streak || 0) + 1 : 1;
-      cur.lastDate = today;
-    }
-    let saldo = null;
-    if (dKoin) { try { saldo = await tambahKoin(dKoin, "hadiah belajar"); } catch (e) {} }
-    if (dKoin && saldo === null) cur.koin = (cur.koin || 0) + dKoin;   // fallback lama
-    await setDoc(ref, cur, { merge: true });
-    _lbPush(level, cur.xp, cur.level_karakter);
-    if (saldo !== null) cur.koin = saldo; else { const k = await getWalletKoin(); cur.koin = k !== null ? k : _koinFallback(cur.koin); }
-    cur.level_level_ini = cur.level_karakter; cur.level_karakter = Math.max(cur.level_karakter, _lvGet()); _lvSet(cur.level_karakter);
+    const q = _q(); const g = q.gami[level] || (q.gami[level] = { xp: 0 });
+    g.xp = (Number(g.xp) || 0) + (Number(dXP) || 0);
+    q.koin = (Number(q.koin) || 0) + (Number(dKoin) || 0); _qSet(q);
+    _jadwalSimpan();
+    if (!_gamiServer[level]) await getGami(level);   // sekali per level per sesi
+    const base = _gamiServer[level] || { xp:0, koin:_koinFallback(0), streak:0, level_karakter:1 };
+    const cur = { ...base, koin: _koinFallback(base.koin) + _koinAntrean() };
+    _terapkanAntreanXP(level, cur);
+    if (!cur.level_level_ini) { cur.level_level_ini = cur.level_karakter || 1; cur.level_karakter = Math.max(cur.level_karakter || 1, _lvGet()); }
     return cur;
   } catch (e) { console.warn("tambahXP failed:", e.message); return null; }
 }
+function _hitungStreak(cur) {
+  const today = new Date().toISOString().slice(0,10);
+  if (cur.lastDate !== today) {
+    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0,10);
+    cur.streak = cur.lastDate === yesterday ? (cur.streak || 0) + 1 : 1;
+    cur.lastDate = today;
+  }
+}
+/* Tambahkan XP antrean ke objek gami (untuk tampilan). */
+function _terapkanAntreanXP(level, cur) {
+  const px = Number((_qGet().gami || {})[level]?.xp) || 0;
+  if (!px) return cur;
+  cur.xp = (cur.xp || 0) + px;
+  cur.level_karakter = Math.floor(Math.sqrt(cur.xp / 50)) + 1;
+  _hitungStreak(cur);
+  cur.level_level_ini = cur.level_karakter; cur.level_karakter = Math.max(cur.level_karakter, _lvGet()); _lvSet(cur.level_karakter);
+  return cur;
+}
+
+/* ========== ANTREAN SIMPAN (hemat kuota Firestore) ==========
+ * Dulu: tiap jawaban benar / kartu hafalan langsung menulis XP, koin, log koin, leaderboard,
+ * misi harian, aktivitas & SRS (±3-4 tulis per klik). Sekarang semuanya dikumpulkan di perangkat
+ * (memori + localStorage) dan dikirim SEKALI lewat simpanSekarang():
+ *   - saat kuis / sesi / ujian selesai (dipanggil dari halaman),
+ *   - saat siswa keluar / pindah aplikasi / menutup tab (tab tersembunyi),
+ *   - cadangan tiap 10 menit bila masih ada antrean, dan sebelum belanja koin / klaim misi / logout.
+ * Antrean ada di localStorage → kalau tab mati mendadak, sisanya dikirim saat aplikasi dibuka lagi. */
+const _gamiServer = {};   // level -> data gami terakhir dari server (tanpa antrean)
+const _qKey = () => "shirose-antrean:" + (currentUser?.uid || "x");
+function _qGet() { try { return JSON.parse(localStorage.getItem(_qKey()) || "null") || {}; } catch (e) { return {}; } }
+function _qSet(q) { try { localStorage.setItem(_qKey(), JSON.stringify(q)); } catch (e) {} }
+function _q() { const q = _qGet(); q.gami = q.gami || {}; q.act = q.act || {}; q.misi = q.misi || {}; return q; }
+function _koinAntrean() { return Number(_qGet().koin) || 0; }
+let _simpanT = 0;
+function _jadwalSimpan() { if (!_simpanT) _simpanT = setTimeout(() => { _simpanT = 0; simpanSekarang(); }, 10 * 60e3); }
+let _rantai = Promise.resolve();
+export function simpanSekarang() {
+  clearTimeout(_simpanT); _simpanT = 0;
+  _rantai = _rantai.then(_kirimAntrean).catch(e => console.warn("simpan antrean gagal:", e && e.message));
+  return _rantai;
+}
+async function _kirimAntrean() {
+  if (!currentUser) return;
+  const uid = currentUser.uid, awal = _q();
+  // 1) Koin: satu transaksi dompet untuk semua hadiah yang terkumpul
+  if (awal.koin) {
+    const d = Number(awal.koin) || 0; { const q = _q(); q.koin = (Number(q.koin) || 0) - d; _qSet(q); }
+    let k = null; try { k = await tambahKoin(d, "hadiah belajar"); } catch (e) {}
+    if (k === null) { const q = _q(); q.koin = (Number(q.koin) || 0) + d; _qSet(q); }
+  }
+  // 2) XP per level: 1 baca + 1 tulis per level (bukan per jawaban)
+  const lbXp = {}; let lbLv = 1;
+  for (const [lv, p] of Object.entries(awal.gami)) {
+    const px = Number(p && p.xp) || 0; if (!px) continue;
+    const ref = doc(db, "siswa", uid, "gami", lv);
+    const snap = await getDoc(ref);
+    const cur = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
+    cur.xp = (cur.xp || 0) + px;
+    cur.level_karakter = Math.floor(Math.sqrt(cur.xp / 50)) + 1;
+    _hitungStreak(cur);
+    await setDoc(ref, cur, { merge: true });
+    { const q = _q(); const g = q.gami[lv]; if (g) { g.xp = (Number(g.xp) || 0) - px; if (g.xp <= 0) delete q.gami[lv]; } _qSet(q); }
+    if (_gamiServer[lv]) Object.assign(_gamiServer[lv], { xp: cur.xp, streak: cur.streak, lastDate: cur.lastDate, level_level_ini: cur.level_karakter });
+    lbXp[lv] = cur.xp; lbLv = Math.max(lbLv, cur.level_karakter);
+  }
+  // 3) Catatan aktivitas: increment (tulis saja, tanpa baca)
+  for (const [ymd, m] of Object.entries(awal.act)) {
+    const upd = { lastTs: serverTimestamp() }; let ada = false;
+    for (const [t, n] of Object.entries(m || {})) if (n) { upd[t] = increment(n); ada = true; }
+    if (ada) await setDoc(doc(db, "siswa", uid, "activity", ymd), upd, { merge: true });
+    { const q = _q(); const a = q.act[ymd] || {}; for (const [t, n] of Object.entries(m || {})) { a[t] = (Number(a[t]) || 0) - n; if (a[t] <= 0) delete a[t]; } if (Object.keys(a).length) q.act[ymd] = a; else delete q.act[ymd]; _qSet(q); }
+  }
+  // 4) Misi harian: 1 baca + 1 tulis per hari
+  for (const [tgl, m] of Object.entries(awal.misi)) {
+    const ref = doc(db, "siswa", uid, "misi_harian", tgl);
+    const snap = await getDoc(ref);
+    if (snap.exists()) {
+      const data = snap.data(); let ubah = false;
+      for (const [id, n] of Object.entries(m || {})) {
+        const x = (data.misi || []).find(z => z.id === id);
+        if (x && !(data.claimed || []).includes(id)) { x.progres = Math.min((x.progres || 0) + n, x.target); ubah = true; }
+      }
+      if (ubah) await setDoc(ref, data);
+    }
+    { const q = _q(); const a = q.misi[tgl] || {}; for (const [id, n] of Object.entries(m || {})) { a[id] = (Number(a[id]) || 0) - n; if (a[id] <= 0) delete a[id]; } if (Object.keys(a).length) q.misi[tgl] = a; else delete q.misi[tgl]; _qSet(q); }
+  }
+  // 5) SRS yang belum terkirim (termasuk sisa sesi lalu di localStorage)
+  try { const pre = `shirose-srs-pend:${uid}:`; for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith(pre)) { const lv = k.slice(pre.length); if (!_srsPend[lv]) _srsPend[lv] = { n: 1, kartu: null }; } } } catch (e) {}
+  for (const lv of Object.keys(_srsPend)) await _srsTulis(lv);
+  // 6) Leaderboard: maksimal sekali sehari
+  if (Object.keys(lbXp).length) await _lbPush(lbXp, lbLv);
+}
+if (typeof window !== "undefined") {
+  window.addEventListener("pagehide", () => simpanSekarang());
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") simpanSekarang(); });
+}
 
 /* ========== SRS (hafalan) ========== */
-export async function saveSRS(level, kartu) {
+/* Progres hafalan dikirim tiap 10 kartu (atau saat simpanSekarang), bukan tiap kartu.
+ * Salinan terbaru disimpan di localStorage supaya tidak hilang kalau tab tertutup. */
+const _srsPend = {};   // level -> { n: jumlah perubahan belum terkirim, kartu }
+const _srsLsKey = (lv) => `shirose-srs-pend:${currentUser?.uid || "x"}:${lv}`;
+export async function saveSRS(level, kartu, { segera = false } = {}) {
   if (!currentUser) return;
+  const p = _srsPend[level] || (_srsPend[level] = { n: 0, kartu: null });
+  p.kartu = kartu; p.n++;
+  try { localStorage.setItem(_srsLsKey(level), JSON.stringify(kartu)); } catch (e) {}
+  _jadwalSimpan();
+  if (segera || p.n >= 10) await _srsTulis(level);
+}
+async function _srsTulis(level) {
+  const p = _srsPend[level]; if (!p || !p.n || !currentUser) return;
+  let kartu = p.kartu;
+  if (!kartu) { try { kartu = JSON.parse(localStorage.getItem(_srsLsKey(level)) || "null"); } catch (e) {} }
+  if (!kartu) { delete _srsPend[level]; return; }
+  const n = p.n; p.n = 0;
   try {
-    await setDoc(doc(db, "siswa", currentUser.uid, "srs", level), {
-      kartu, updated: serverTimestamp()
-    }, { merge: true });
-  } catch (e) { console.warn("saveSRS failed:", e.message); }
+    await setDoc(doc(db, "siswa", currentUser.uid, "srs", level), { kartu, updated: serverTimestamp() }, { merge: true });
+    if (!p.n) { try { localStorage.removeItem(_srsLsKey(level)); } catch (e) {} }
+  } catch (e) { p.n += n; console.warn("saveSRS failed:", e.message); }
 }
 export async function loadSRS(level) {
   if (!currentUser) return {};
+  if (_srsPend[level] && _srsPend[level].kartu) return _srsPend[level].kartu;   // perubahan terbaru belum terkirim
+  try { const lokal = JSON.parse(localStorage.getItem(_srsLsKey(level)) || "null"); if (lokal) { _srsPend[level] = { n: 1, kartu: lokal }; return lokal; } } catch (e) {}
   try {
     const snap = await getDoc(doc(db, "siswa", currentUser.uid, "srs", level));
     return snap.exists() ? (snap.data().kartu || {}) : {};
@@ -1031,14 +1159,9 @@ export async function recordActivity(type, count = 1){
   if (!currentUser) return;
   const allowed = new Set(["kanji","kosakata","latihan","ujian","sesi"]);
   if (!allowed.has(type)) return;
-  try {
-    const ymd = _ymdLocal();
-    const ref = doc(db, "siswa", currentUser.uid, "activity", ymd);
-    const snap = await getDoc(ref);
-    const prev = snap.exists() ? snap.data() : { kanji:0, kosakata:0, latihan:0, ujian:0, sesi:0 };
-    const next = { ...prev, [type]: (prev[type]||0) + count, lastTs: serverTimestamp() };
-    await setDoc(ref, next, { merge: true });
-  } catch (e) { console.warn("recordActivity failed:", e.message); }
+  // Masuk antrean; dikirim sekali (increment, tanpa baca) oleh simpanSekarang().
+  const ymd = _ymdLocal(), q = _q(), a = q.act[ymd] || (q.act[ymd] = {});
+  a[type] = (Number(a[type]) || 0) + (Number(count) || 1); _qSet(q); _jadwalSimpan();
 }
 export async function listActivity(ym /* YYYYMM */){
   if (!currentUser) return {};
@@ -1051,6 +1174,11 @@ export async function listActivity(ym /* YYYYMM */){
     snap.forEach(d => {
       if (d.id.startsWith(ym)) result[d.id] = d.data();
     });
+    // Aktivitas yang masih di antrean ikut ditampilkan
+    for (const [ymd, m] of Object.entries(_q().act)) if (ymd.startsWith(ym)) {
+      const r = result[ymd] = { kanji:0, kosakata:0, latihan:0, ujian:0, sesi:0, ...(result[ymd] || {}) };
+      for (const [t, n] of Object.entries(m || {})) r[t] = (Number(r[t]) || 0) + (Number(n) || 0);
+    }
     return result;
   } catch (e) { console.warn("listActivity failed:", e.message); return {}; }
 }
@@ -1778,14 +1906,23 @@ function _lbBuild(xp, lv){
   return { uid: currentUser.uid, nama: _lbNama(), kelas: currentSiswaDoc?.kelas || "",
            xp, total, lv: lv || 1, upd: Date.now() };
 }
-async function _lbPush(level, xpVal, lvVal){
+/* Leaderboard diperbarui MAKSIMAL SEKALI SEHARI per siswa. XP yang masuk setelah itu
+ * disimpan di perangkat dan ikut terkirim pada pembaruan hari berikutnya. */
+const _lbHariKey = () => "shirose-lb-hari:" + (currentUser?.uid || "x");
+function _lbHariGet(){ try { return JSON.parse(localStorage.getItem(_lbHariKey()) || "{}") || {}; } catch(e){ return {}; } }
+function _lbHariSet(o){ try { localStorage.setItem(_lbHariKey(), JSON.stringify(o)); } catch(e){} }
+async function _lbPush(xpMap, lvVal){
   try {
     if (!currentUser || isDemoKelas(currentSiswaDoc?.kelas)) return;   // akun demo tidak masuk leaderboard
+    const o = _lbHariGet();
+    o.xp = { ...(o.xp || {}), ...(xpMap || {}) }; o.lv = Math.max(o.lv || 1, lvVal || 1);
+    if (o.hari === _ymdLocal()) { _lbHariSet(o); return; }   // sudah update hari ini
     if (!_lbMine){ const g = await getDoc(doc(db, "lb", currentUser.uid)); _lbMine = g.exists() ? g.data() : { xp:{}, lv:1 }; }
-    const xp = { ...(_lbMine.xp||{}), [level]: xpVal };
-    const d = _lbBuild(xp, Math.max(_lbMine.lv||1, lvVal||1));
+    const xp = { ...(_lbMine.xp||{}), ...o.xp };
+    const d = _lbBuild(xp, Math.max(_lbMine.lv||1, o.lv));
     await setDoc(doc(db, "lb", currentUser.uid), d);
     _lbMine = d; _lbCache.clear();
+    _lbHariSet({ hari: _ymdLocal() });
   } catch(e){ console.warn("lb push failed:", e.message); }
 }
 /* ---- Karakter publik untuk leaderboard: lbk/{uid} = { uid, nama, eq, sk, hc, b, bt, upd } ----
@@ -1810,6 +1947,7 @@ export async function syncMyLeaderboard(){
   publishKarakter();
   if (_lbSynced || !currentUser || isDemoKelas(currentSiswaDoc?.kelas)) return;
   _lbSynced = true;
+  if (_lbHariGet().hari === _ymdLocal()) return;   // leaderboard sudah diperbarui hari ini
   try {
     const gs = await Promise.all(LVLS.map(l => getDoc(doc(db, "siswa", currentUser.uid, "gami", l)).catch(() => null)));
     const xp = {}; let lv = 1;
@@ -1818,6 +1956,7 @@ export async function syncMyLeaderboard(){
     if (d.total === 0) return;
     await setDoc(doc(db, "lb", currentUser.uid), d);
     _lbMine = d; _lbCache.clear();
+    _lbHariSet({ hari: _ymdLocal() });
   } catch(e){ console.warn("lb sync failed:", e.message); _lbSynced = false; }
 }
 // Guru/admin: isi ulang ringkasan untuk SEMUA siswa (sekali jalan, mis. dari console: FB.backfillLeaderboard()).
@@ -1867,7 +2006,7 @@ export async function getMisiHariIni() {
   const tgl = new Date().toISOString().slice(0,10);
   const ref = doc(db, "siswa", currentUser.uid, "misi_harian", tgl);
   const snap = await getDoc(ref);
-  if (snap.exists()) return snap.data();
+  if (snap.exists()) return _misiPlusAntrean(tgl, snap.data());
   // Generate 3 misi baru
   const misiPool = [
     { id: "hafalan_10", nama: "Hafalkan 10 kata", target: 10, reward_xp: 30, reward_koin: 10 },
@@ -1883,23 +2022,21 @@ export async function getMisiHariIni() {
   await setDoc(ref, data);
   return data;
 }
+/* Progres misi masuk antrean; dikirim sekali oleh simpanSekarang() (1 baca + 1 tulis per hari). */
 export async function updateMisiProgres(misiId, delta = 1) {
-  if (!currentUser) return;
-  try {
-    const tgl = new Date().toISOString().slice(0,10);
-    const ref = doc(db, "siswa", currentUser.uid, "misi_harian", tgl);
-    const snap = await getDoc(ref);
-    if (!snap.exists()) return;
-    const data = snap.data();
-    const m = data.misi.find(x => x.id === misiId);
-    if (!m || data.claimed.includes(misiId)) return;
-    m.progres = Math.min((m.progres || 0) + delta, m.target);
-    await setDoc(ref, data);
-    return m;
-  } catch (e) { console.warn("updateMisiProgres failed:", e.message); }
+  if (!currentUser || !delta) return;
+  const tgl = new Date().toISOString().slice(0,10), q = _q(), m = q.misi[tgl] || (q.misi[tgl] = {});
+  m[misiId] = (Number(m[misiId]) || 0) + (Number(delta) || 0); _qSet(q); _jadwalSimpan();
+}
+function _misiPlusAntrean(tgl, data) {
+  const m = _q().misi[tgl]; if (!m || !data || !data.misi) return data;
+  const d = JSON.parse(JSON.stringify(data));
+  for (const [id, n] of Object.entries(m)) { const x = d.misi.find(z => z.id === id); if (x && !(d.claimed || []).includes(id)) x.progres = Math.min((x.progres || 0) + n, x.target); }
+  return d;
 }
 export async function claimMisi(misiId, level = "n5") {
   if (!currentUser) return;
+  await simpanSekarang();   // kirim progres misi yang masih di antrean dulu
   const tgl = new Date().toISOString().slice(0,10);
   const ref = doc(db, "siswa", currentUser.uid, "misi_harian", tgl);
   const snap = await getDoc(ref);

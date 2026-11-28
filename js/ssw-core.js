@@ -206,15 +206,23 @@ const _rankT = {};
 export function syncRank(slug) {
   if (isGuru() || isGuest() || (window.DEMO && window.DEMO.on()) || !(FB && FB.saveSswRank)) return;
   const e = PS[slug]; if (!e) return;
+  // Peringkat SSW dikirim MAKSIMAL SEKALI SEHARI per bidang (hemat kuota Firestore).
+  // Poin milik sendiri tetap tampil terbaru lewat loadRank (dihitung di perangkat).
+  const uidNow = (FB.getUser && FB.getUser() || {}).uid || "x", key = `shirose-sswrank-hari:${slug}:${uidNow}`, hari = new Date().toDateString();
+  try { if (localStorage.getItem(key) === hari) return; } catch (err) {}
   clearTimeout(_rankT[slug]);
   _rankT[slug] = setTimeout(async () => {
     try { const d = (FB.getSiswaDoc && FB.getSiswaDoc()) || {}; const r = points(e.P);
-      await FB.saveSswRank(slug, { nama: d.nama || "Siswa", kelas: d.kelas || "", poin: r.poin, rinci: r.rinci }); } catch (err) { console.warn("ssw: rank gagal:", err.message || err); }
+      await FB.saveSswRank(slug, { nama: d.nama || "Siswa", kelas: d.kelas || "", poin: r.poin, rinci: r.rinci });
+      try { localStorage.setItem(key, hari); } catch (err) {} } catch (err) { console.warn("ssw: rank gagal:", err.message || err); }
   }, 1200);
 }
 export async function loadRank(slug) {
   if (!(FB && FB.loadSswRank) || isGuest()) return [];
   const rows = await FB.loadSswRank(slug);
+  // Baris milik sendiri pakai poin terbaru di perangkat (server hanya diperbarui sekali sehari)
+  const me = (FB.getUser && FB.getUser() || {}).uid, e = PS[slug];
+  if (me && e) { const r = points(e.P), row = rows.find(x => x.uid === me); if (row) { row.poin = Math.max(row.poin || 0, r.poin); row.rinci = r.rinci; } }
   return rows.sort((a, b) => (b.poin || 0) - (a.poin || 0) || String(a.nama).localeCompare(String(b.nama)));
 }
 
@@ -255,7 +263,7 @@ export async function syncCards(P, vocab, force) {
 export function touch(slug) {
   const e = PS[slug]; if (!e) return;
   e.P.u = Date.now(); LS.set(LKEY(slug), e.P); syncRank(slug);
-  clearTimeout(_timers[slug]); _timers[slug] = setTimeout(() => flush(slug), 1500);
+  clearTimeout(_timers[slug]); _timers[slug] = setTimeout(() => flush(slug), 60000);   // tiap 60 dtk; keluar/pindah tab tetap langsung simpan
 }
 export async function flush(slug) {
   const e = PS[slug]; if (!e) return;

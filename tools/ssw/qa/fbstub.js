@@ -128,3 +128,4 @@ export async function getPosOverride(){return {}}
 export async function getWalletKoin(){return 1840}
 
 export function getLastSiswaDocStatus(){return "ok"}
+export async function simpanSekarang(){return null}

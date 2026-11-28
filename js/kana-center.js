@@ -73,7 +73,7 @@ export async function ensureProgress() {
   _loading = { id, p };
   try { return await p; } finally { _loading = null; }
 }
-const touch = () => { if (!P) return; P.u = Date.now(); LS.set(LKEY(), P); clearTimeout(_saveT); _saveT = setTimeout(flush, 1500); };
+const touch = () => { if (!P) return; P.u = Date.now(); LS.set(LKEY(), P); clearTimeout(_saveT); _saveT = setTimeout(flush, 60000); };
 async function flush() { clearTimeout(_saveT); if (P && FB && !isGuest()) { try { await FB.saveKanaProgres(P); } catch (e) { console.warn("kana: gagal menyimpan progres:", e.message || e); } } }
 window.addEventListener("pagehide", () => { if (P) { LS.set(LKEY(), P); flush(); } });
 document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") flush(); });
@@ -731,6 +731,7 @@ const KC = window.KC = {
       const total = TQ.qs.length, benar = TQ.answers.filter((a, i) => a === TQ.qs[i].correct).length;
       P.tes.push({ t: Date.now(), jenis: TQ.jenis === "D" ? "Mixed" : JENIS[TQ.jenis], level: LEVELS[TQ.level].n, script: TQ.jenis === "D" ? "both" : TQ.script, skor: Math.round(100 * benar / total), benar, total, detik: Math.round((Date.now() - TQ.t0) / 1000) });
       P.tes = P.tes.slice(-50); touch(); flush(); TQ.phase = "done";
+      try { window.simpanProgres && window.simpanProgres(); } catch (e) {}
     } else TQ.i++;
     paintTest();
   },

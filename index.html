@@ -1585,15 +1585,15 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261126b";
+import * as FB from "./js/firebase-sync.js?v=20261128b";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261125c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
-import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261125c";
+import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261128b";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
-import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261125d";
+import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261128b";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128a";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128b";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 // SILABUS HARIAN: target belajar per hari + hafalan + ujian harian (kunci ≥ 80%), fukushu, simulasi, jadwal bertanggal (js/silabus-harian.js)
 import { SILABUS_ROUTES, initSilabus } from "./js/silabus-harian.js?v=20261126l";
@@ -2311,6 +2311,8 @@ function updateChips(){
   document.getElementById("chip-streak").textContent = state.gami.streak || 0;
 }
 window.awardXP = awardXP;
+/* Kirim semua XP/koin/misi/aktivitas/hafalan yang terkumpul ke server sekali (akhir kuis/sesi/ujian). */
+window.simpanProgres = () => { try { if (state.user && FB.simpanSekarang) return FB.simpanSekarang(); } catch (e) {} };
 /* Koin dari fitur non-JLPT (SSW / JFT / Mensetsu) → dompet tunggal. */
 window.__koinBaru = (saldo, d) => { state.gami.koin = saldo; updateChips(); toast(`+${d} 🪙`); };
 window.awardKoin = async (d, alasan) => {
@@ -5188,7 +5190,7 @@ function renderHafalanDone(){
   const xp = s.xp ?? s.benar * 3 + s.salah, koin = s.koin ?? s.benar;
   if (!s.dibayar && (xp || koin)) {   // hadiah sesi diberikan SEKALI di akhir sesi
     s.dibayar = true;
-    _hafBg = _hafBg.then(() => awardXP(xp, koin)).catch(e => console.warn("hadiah hafalan:", e?.message || e));
+    _hafBg = _hafBg.then(() => awardXP(xp, koin)).then(() => window.simpanProgres()).catch(e => console.warn("hadiah hafalan:", e?.message || e));
   }
   if (_hafSil()) {
     const L = state._silabusLangkah;
@@ -5552,6 +5554,7 @@ window.ujianSelesai = async () => {
   await FB.updateMisiProgres("selesai_sesi", 1).catch(()=>{});
   // Heatmap kalender: hitung soal yang dijawab di ujian ini.
   FB.recordActivity("ujian", Math.max(1, benar + salah)).catch(()=>{});
+  window.simpanProgres();
 
   const rewardLine = lulusReward.firstTime
     ? `+${benar*5} XP · <b style="color:var(--gold);">+${lulusReward.rewardKoin.toLocaleString("id-ID")} 🪙 (BONUS LULUS)</b>`
