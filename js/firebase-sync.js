@@ -653,32 +653,62 @@ export async function updateKarakter(karakter) {
 }
 export async function beliItem(kategori, itemId, harga, level) {
   if (!currentUser) throw new Error("Harus login dulu");
-  const uid = currentUser.uid;
-  const ref = doc(db, "siswa", uid);
-  const siswa = (await getDoc(ref)).data();
-  // Developer / permission-granted accounts bypass coin deduction entirely.
-  const unlimited = isDeveloper(currentUser) || hasFullAccess(currentUser) || !!(siswa?.permissions?.unlimited_coins);
-  const inv0 = siswa.karakter?.inventory || [];
-  if (inv0.includes(itemId)) throw new Error("Sudah dimiliki");
-  const gamiRef = doc(db, "siswa", uid, "gami", level);
-  let gami, saldoW = null;
-  if (!unlimited && !_walletOff) { try { saldoW = await walletTx(-harga, "toko: " + itemId); } catch (e) { if (/tidak cukup/i.test(e.message)) throw e; _walletOff = true; } }
-  if (saldoW !== null) gami = { koin: saldoW };
-  else {
-    const gamiSnap = await getDoc(gamiRef);
-    gami = gamiSnap.exists() ? gamiSnap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
-    if (!unlimited && (gami.koin || 0) < harga) throw new Error("Koin tidak cukup!");
-    if (!unlimited) gami.koin -= harga;
+  const uid = currentUser.uid, ref = doc(db, "siswa", uid), wref = doc(db, "siswa", uid, "wallet", "main");
+  const unlimited = hasUnlimitedCoins();
+  harga = Math.max(0, Math.round(Number(harga) || 0));
+  if (unlimited || !harga) {
+    await updateDoc(ref, { "karakter.inventory": arrayUnion(itemId) });
+  } else {
+    await _walletBaca();   // pastikan dompet sudah dimigrasi (saldo lama per level ikut)
+    var sisa = await runTransaction(db, async (tx) => {
+      const [ws, ss] = [await tx.get(wref), await tx.get(ref)];
+      const inv = ((ss.data() || {}).karakter || {}).inventory || [];
+      if (inv.includes(itemId)) throw new Error("Sudah dimiliki");
+      const koin = ws.exists() ? (Number(ws.data().koin) || 0) : 0;
+      if (koin < harga) throw new Error("Koin tidak cukup!");
+      // Rules: koin harus turun PERSIS sebesar harga di toko/harga, dan hanya 1 barang yang bertambah.
+      tx.set(wref, { koin: koin - harga, updated: serverTimestamp() }, { merge: true });
+      tx.update(ref, { "karakter.inventory": arrayUnion(itemId) });
+      return koin - harga;
+    });
+    _baseSet(sisa);
+    try { await addDoc(collection(db, "siswa", uid, "wallet_log"), { t: serverTimestamp(), delta: -harga, alasan: "toko: " + itemId, saldo: sisa }); } catch (e) {}
   }
-  // Add to inventory
-  const inv = siswa.karakter?.inventory || [];
-  if (inv.includes(itemId)) throw new Error("Sudah dimiliki");
-  inv.push(itemId);
-  if (saldoW === null) await setDoc(gamiRef, gami, { merge: true });
-  await updateDoc(ref, { "karakter.inventory": inv });
-  currentSiswaDoc.karakter.inventory = inv;
-  return { newKoin: gami.koin, unlimited };
+  currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
+  currentSiswaDoc.karakter.inventory = Array.from(new Set([...(currentSiswaDoc.karakter.inventory || []), itemId]));
+  const newKoin = unlimited ? null : (typeof sisa === "number" ? Math.max(0, sisa - _gSpent()) + _koinAntrean() : null);
+  return { newKoin, unlimited };
 }
+/* Guru: daftar harga resmi toko (dibaca rules saat siswa membeli). h = {id: harga}, gratis = barang bawaan. */
+export async function pastikanHargaToko(items, gratis) {
+  if (!userIsGuru() || !Array.isArray(items) || !items.length) return;
+  const h = {}; items.forEach(x => { if (x && x.id) h[x.id] = Math.max(0, Math.round(Number(x.harga) || 0)); });
+  const g = Array.from(new Set((gratis || []).filter(x => typeof x === "string")));
+  const v = String(Object.keys(h).length) + ":" + Object.entries(h).sort().reduce((a, [k, n]) => (a * 31 + n + k.length) % 2147483647, 7) + ":" + g.length;
+  const kunci = "shirose-harga-toko-v";
+  try { if (localStorage.getItem(kunci) === v) return; } catch (e) {}
+  try {
+    const cur = await getDoc(doc(db, "toko", "harga"));
+    if (!cur.exists() || cur.data().v !== v) await _setDoc0(doc(db, "toko", "harga"), { h, gratis: g, v, upd: serverTimestamp() });
+    try { localStorage.setItem(kunci, v); } catch (e) {}
+  } catch (e) { console.warn("harga toko gagal (rules toko belum dipasang?):", e.message); }
+}
+/* Ambil 1 hadiah peti login: barang + penutupan peti dalam SATU tulis (rules mencocokkan dengan pilihan peti di server). */
+export async function ambilHadiahPeti(id, rw, isShop) {
+  if (!currentUser) throw new Error("Belum login");
+  const uid = currentUser.uid, b = writeBatch(db);
+  b.update(doc(db, "siswa", uid), isShop ? { "karakter.gachaInv": arrayUnion(id), "karakter.inventory": arrayUnion(id) } : { "karakter.gachaInv": arrayUnion(id) });
+  const lr = { ...rw, pending: null, t: Date.now() };
+  b.set(doc(db, "siswa", uid, "login_reward", "main"), lr);
+  await b.commit();
+  try { localStorage.setItem("shirose-loginrw:" + uid, JSON.stringify(lr)); } catch (e) {}
+  const o = _gLocal(); o.inv = Array.from(new Set([...(o.inv || []), id])); o.t = Date.now(); _gSave(o);
+  const k = currentSiswaDoc.karakter = currentSiswaDoc.karakter || {};
+  k.gachaInv = Array.from(new Set([...(k.gachaInv || []), id]));
+  if (isShop) k.inventory = Array.from(new Set([...(k.inventory || []), id]));
+  return true;
+}
+export function hariKunci() { return _hk(); }
 export async function setBodyType(b) {
   if (!currentUser) return;
   await updateDoc(doc(db, "siswa", currentUser.uid), { "karakter.body": b });
@@ -819,7 +849,7 @@ export async function getLoginReward() {
 export async function saveLoginReward(o) {
   if (!currentUser) return; o = { ...o, t: Date.now() };
   try { localStorage.setItem("shirose-loginrw:" + currentUser.uid, JSON.stringify(o)); } catch (e) {}
-  try { await setDoc(doc(db, "siswa", currentUser.uid, "login_reward", "main"), o); } catch (e) { console.warn("login_reward:", e.message); }
+  try { await setDoc(doc(db, "siswa", currentUser.uid, "login_reward", "main"), o); return true; } catch (e) { console.warn("login_reward:", e.message); if (_ditolak(e)) { try { localStorage.removeItem("shirose-loginrw:" + currentUser.uid); } catch (e2) {} return false; } return true; }
 }
 export async function getGachaState() {
   if (!currentUser) return null;
