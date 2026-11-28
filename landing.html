@@ -58,7 +58,7 @@ h2{font-family:var(--font-jp);font-size:clamp(26px,4vw,38px);line-height:1.25;ma
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
 /* nav */
-nav.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--navy-4) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding-top:env(safe-area-inset-top)}
+nav.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--navy-4) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding-top:env(safe-area-inset-top)}
 nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-jp);font-weight:800;letter-spacing:.04em;font-size:18px}
 .brand img{height:48px;width:auto;display:block}
@@ -320,12 +320,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 #sak i.mj{background:none;font-style:normal;line-height:1}
 #sak i.sj{background:#fff;border-radius:50%;width:.38em;height:.38em;opacity:.8;box-shadow:0 0 6px rgba(255,255,255,.7)}
 #sak i.gl{background:radial-gradient(circle,rgba(255,240,170,.95),rgba(255,210,63,0) 70%);border-radius:50%;width:.7em;height:.7em}
-/* header bersinar mengikuti warna tema (sama dengan topbar aplikasi) */
-nav.top::after,.topbar::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,var(--pink-light,#f58bb0) 20%,var(--pink,#ef6a9a) 50%,var(--pink-light,#f58bb0) 80%,transparent);background-size:200% 100%;box-shadow:0 0 12px var(--pink,#ef6a9a),0 0 26px color-mix(in srgb,var(--pink,#ef6a9a) 55%,transparent);opacity:.9;animation:navGlow 6s linear infinite}
-@keyframes navGlow{to{background-position:-200% 0}}
-html[data-musim="panas"][data-theme="panas"] body{background:radial-gradient(ellipse at 85% 0%,rgba(255,210,63,.28) 0%,transparent 45%),linear-gradient(170deg,#06304e 0%,#0a4d78 55%,#0e6fae 100%);background-attachment:fixed}
-nav.top{box-shadow:0 6px 26px color-mix(in srgb,var(--pink,#ef6a9a) 18%,transparent)}
-@media(prefers-reduced-motion:reduce){nav.top::after{animation:none}}
+
 .ck-set{font-size:13px;color:var(--gray-dim);margin-bottom:4px}
 .ck-sc{margin-top:10px;font-size:14px;line-height:1.8;color:var(--gray);background:rgba(255,255,255,.04);border:1px solid var(--navy-3);border-radius:12px;padding:10px 14px}
 .ck-sc b{color:var(--pink-light);margin-right:6px}
@@ -375,6 +370,28 @@ nav.top{box-shadow:0 6px 26px color-mix(in srgb,var(--pink,#ef6a9a) 18%,transpar
 </head>
 <body>
 
+<script>
+/* mawar logo: ikut warna tema (--pink) lewat hue-rotate pada lapisan kelopak */
+(function(){
+  var BASE=337.5,r=document.documentElement;
+  function sync(){
+    try{
+      var c=getComputedStyle(document.body).getPropertyValue("--pink").trim(),R,G,B,m;
+      if((m=/^#([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(c))){var h=m[1];if(h.length===3)h=h.replace(/./g,"$&$&");R=parseInt(h.substr(0,2),16);G=parseInt(h.substr(2,2),16);B=parseInt(h.substr(4,2),16)}
+      else if((m=/rgba?\(([^)]+)\)/.exec(c))){var p=m[1].split(/[ ,\/]+/).map(parseFloat);R=p[0];G=p[1];B=p[2]}
+      else return;
+      R/=255;G/=255;B/=255;var mx=Math.max(R,G,B),mn=Math.min(R,G,B),d=mx-mn,hu=0;
+      if(d){hu=mx===R?((G-B)/d)%6:mx===G?(B-R)/d+2:(R-G)/d+4;hu*=60;if(hu<0)hu+=360}
+      var s=mx?d/mx:0;
+      r.style.setProperty("--rose-hue",(hu-BASE).toFixed(1)+"deg");
+      r.style.setProperty("--rose-sat",Math.max(0,Math.min(1.5,s/0.56)).toFixed(2));
+      r.style.setProperty("--rose-br",Math.max(.35,Math.min(1.25,mx/0.94)).toFixed(2));
+    }catch(e){}
+  }
+  sync();document.addEventListener("DOMContentLoaded",sync);window.addEventListener("load",sync);
+  new MutationObserver(function(){setTimeout(sync,30)}).observe(r,{attributes:true,attributeFilter:["data-theme"]});
+})();
+</script>
 <nav class="top">
   <div class="wrap">
     <a class="brand logo" href="#top" aria-label="Shirose Nihongo"><span class="logo-rose logo-rose-img" aria-hidden="true"><img class="lr-leaf" src="./assets/logo-rose-leaf.png" alt="" width="34" height="37"/><img class="lr-pet" src="./assets/logo-rose-petal.png" alt="" width="34" height="37"/></span>
