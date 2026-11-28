@@ -14,7 +14,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet"/>
-<script>try{var __t=localStorage.getItem("shirose-theme");if(__t)document.documentElement.setAttribute("data-theme",__t)}catch(e){}</script>
+<script>/* Landing: tema mengikuti musim Jepang otomatis — 春 Mar–Mei semi · 夏 Jun–Agu panas · 秋 Sep–Nov gugur · 冬 Des–Feb salju */
+(function(){var m=new Date().getMonth()+1,t=m>=3&&m<=5?"semi":m>=6&&m<=8?"panas":m>=9&&m<=11?"gugur":"salju";document.documentElement.setAttribute("data-theme",t);document.documentElement.setAttribute("data-musim",t)})();</script>
 <style>
 :root{
   --navy:#161b36; --navy-2:#1f2650; --navy-3:#2a3270; --navy-4:#0d1024;
@@ -57,7 +58,7 @@ h2{font-family:var(--font-jp);font-size:clamp(26px,4vw,38px);line-height:1.25;ma
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
 /* nav */
-nav.top{position:sticky;top:0;z-index:50;background:rgba(13,16,36,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding-top:env(safe-area-inset-top)}
+nav.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--navy-4) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding-top:env(safe-area-inset-top)}
 nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-jp);font-weight:800;letter-spacing:.04em;font-size:18px}
 .brand img{height:48px;width:auto;display:block}
@@ -127,6 +128,19 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .tick{list-style:none;margin-top:14px;display:grid;gap:8px}
 .tick li{display:flex;gap:10px;color:var(--gray);font-size:15px}
 .tick li::before{content:"✓";color:var(--pink-light);font-weight:800}
+.sil-dur{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.sil-day{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:18px;padding:16px}
+.sil-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-size:15px}
+.sil-top span{font-size:12.5px;color:var(--gray-dim)}
+.sil-row{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.04);margin-bottom:6px;font-size:15px}
+.sil-row b{color:var(--pink-light);font-size:17px}
+.sil-k{color:var(--gray)}
+.sil-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0 10px}
+.sil-steps span{font-size:12px;text-align:center;padding:8px 4px;border-radius:10px;border:1px solid var(--border);color:var(--gray)}
+.sil-steps span.on{border-color:var(--pink);color:#fff;box-shadow:0 0 14px color-mix(in srgb,var(--pink) 40%,transparent)}
+.sil-ujian{font-size:13.5px;color:var(--gray);text-align:center;padding:9px;border-radius:12px;border:1px dashed color-mix(in srgb,var(--pink) 60%,transparent)}
+.sil-ujian b{color:var(--gold)}
+@media(max-width:420px){.sil-steps{grid-template-columns:repeat(2,1fr)}}
 .badge{display:inline-block;font-size:12.5px;padding:4px 12px;border-radius:999px;background:rgba(239,106,154,.14);border:1px solid rgba(239,106,154,.45);color:var(--pink-light);font-weight:700}
 .demo{background:rgba(13,16,36,.6);border:1px solid var(--border);border-radius:24px;padding:20px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
 .demo-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
@@ -303,6 +317,15 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 #sak i.p1{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0.3' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd3e6'/%3E%3Cstop offset='1' stop-color='%23f06aa6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M12 22C5 18 3 10 8 4c1.5-1.5 3-1 4 1 1-2 2.5-2.5 4-1 5 6 3 14-4 18z' fill='url%28%23g%29'/%3E%3Cpath d='M12 21c-.6-5 0-9 .5-12' stroke='%23fff' stroke-opacity='.45' stroke-width='.6' fill='none'/%3E%3C/svg%3E")}
 @keyframes sakfall{0%{transform:translate(0,0) rotate(0)}50%{transform:translate(40px,55vh) rotate(180deg)}100%{transform:translate(-20px,112vh) rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){#sak{display:none}}
+#sak i.mj{background:none;font-style:normal;line-height:1}
+#sak i.sj{background:#fff;border-radius:50%;width:.38em;height:.38em;opacity:.8;box-shadow:0 0 6px rgba(255,255,255,.7)}
+#sak i.gl{background:radial-gradient(circle,rgba(255,240,170,.95),rgba(255,210,63,0) 70%);border-radius:50%;width:.7em;height:.7em}
+/* header bersinar mengikuti warna tema (sama dengan topbar aplikasi) */
+nav.top::after,.topbar::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,var(--pink-light,#f58bb0) 20%,var(--pink,#ef6a9a) 50%,var(--pink-light,#f58bb0) 80%,transparent);background-size:200% 100%;box-shadow:0 0 12px var(--pink,#ef6a9a),0 0 26px color-mix(in srgb,var(--pink,#ef6a9a) 55%,transparent);opacity:.9;animation:navGlow 6s linear infinite}
+@keyframes navGlow{to{background-position:-200% 0}}
+html[data-musim="panas"][data-theme="panas"] body{background:radial-gradient(ellipse at 85% 0%,rgba(255,210,63,.28) 0%,transparent 45%),linear-gradient(170deg,#06304e 0%,#0a4d78 55%,#0e6fae 100%);background-attachment:fixed}
+nav.top{box-shadow:0 6px 26px color-mix(in srgb,var(--pink,#ef6a9a) 18%,transparent)}
+@media(prefers-reduced-motion:reduce){nav.top::after{animation:none}}
 .ck-set{font-size:13px;color:var(--gray-dim);margin-bottom:4px}
 .ck-sc{margin-top:10px;font-size:14px;line-height:1.8;color:var(--gray);background:rgba(255,255,255,.04);border:1px solid var(--navy-3);border-radius:12px;padding:10px 14px}
 .ck-sc b{color:var(--pink-light);margin-right:6px}
@@ -348,7 +371,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 .logo-rose-img img{position:absolute;left:0;top:0;width:100%;height:100%;display:block}
 .logo-rose-img .lr-pet{filter:hue-rotate(var(--rose-hue,0deg)) saturate(var(--rose-sat,1)) brightness(var(--rose-br,1))}
 </style>
-<link rel="stylesheet" href="./css/themes.css?v=20261123l"/>
+<link rel="stylesheet" href="./css/themes.css?v=20261128a"/>
 </head>
 <body>
 
@@ -357,7 +380,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     <a class="brand logo" href="#top" aria-label="Shirose Nihongo"><span class="logo-rose logo-rose-img" aria-hidden="true"><img class="lr-leaf" src="./assets/logo-rose-leaf.png" alt="" width="34" height="37"/><img class="lr-pet" src="./assets/logo-rose-petal.png" alt="" width="34" height="37"/></span>
     <span class="logo-text l2"><span class="l2-jp">シロセ</span><span class="l2-en"><i></i>NIHONGO<i></i></span></span></a>
     <div class="links">
-      <a href="#fitur">Fitur</a><a href="#level">Level JLPT</a><a href="#ssw">SSW</a><a href="#karakter">Karakter</a><a href="#demo">Coba Gratis</a><a href="#mulai">Cara Mulai</a><a href="#faq">FAQ</a>
+      <a href="#fitur">Fitur</a><a href="#silabus">Silabus</a><a href="#level">Level JLPT</a><a href="#ssw">SSW</a><a href="#karakter">Karakter</a><a href="#demo">Coba Gratis</a><a href="#mulai">Cara Mulai</a><a href="#faq">FAQ</a>
     </div>
     <div class="nav-cta">
       <button type="button" class="btn primary sm" data-open-pricing>💳 Berlangganan</button>
@@ -413,6 +436,33 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       <div class="eyebrow">特長</div>
       <h2>Fitur andalan <span class="grad">Shirose Nihongo</span></h2>
       <p class="lead">Bukan sekadar kumpulan soal. Setiap fitur dirancang supaya kamu benar-benar hafal, paham, dan siap ujian.</p>
+    </div>
+
+    <!-- 0. SILABUS HARIAN -->
+    <div class="show flip rv" id="silabus">
+      <div class="txt">
+        <span class="badge">目次 · Silabus Harian</span>
+        <h3>Silabus harian: tahu persis belajar apa hari ini</h3>
+        <p>Pilih level dan target waktumu, misalnya 3 bulan untuk N5 atau 2 minggu untuk kebut. Shirose membagi semua kosakata, kanji, dan bunpou ke jadwal harian yang rata sampai tamat.</p>
+        <ul class="tick">
+          <li>Durasi bebas: 1–12 bulan, atau atur sendiri per hari/minggu</li>
+          <li>Tiap materi: 📖 baca → 🃏 flashcard → 🔗 cocokkan → ✍️ pilihan ganda</li>
+          <li>Ujian harian dari materi hari itu saja. Lulus ≥ 80% membuka hari berikutnya.</li>
+          <li>Soal tidak pernah berulang dari N5 sampai N1</li>
+        </ul>
+      </div>
+      <div class="demo" id="demo-sil">
+        <div class="demo-h"><div class="seg" id="sil-lv" role="group" aria-label="Level"></div><span class="lbl">Atur target ↓</span></div>
+        <div class="seg sil-dur" id="sil-dur" role="group" aria-label="Durasi"></div>
+        <div class="sil-day">
+          <div class="sil-top"><b>📅 Hari 1</b><span id="sil-tot"></span></div>
+          <div class="sil-row"><span class="sil-k">📖 Kosakata</span><b id="sil-kos"></b></div>
+          <div class="sil-row"><span class="sil-k">🈷️ Kanji</span><b id="sil-kan"></b></div>
+          <div class="sil-row"><span class="sil-k">📐 Bunpou</span><b id="sil-bun"></b></div>
+          <div class="sil-steps"><span class="on">📖 Materi</span><span>🃏 Flashcard</span><span>🔗 Cocokkan</span><span>✍️ Pilihan ganda</span></div>
+          <div class="sil-ujian">📝 Ujian harian · lulus ≥ 80% → <b>Hari 2 terbuka</b></div>
+        </div>
+      </div>
     </div>
 
     <!-- 1. FLASHCARD -->
@@ -773,6 +823,18 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 
 <div class="wa-float"><a class="btn wa" data-wa href="#demo">💬 Komunitas Shirose Nihongo</a></div>
 
+<script>(function(){
+  var T={n5:[1077,81,109],n4:[914,191,175],n3:[1203,341,213],n2:[1659,373,210],n1:[2023,1244,113]},D=[["2 minggu",14],["1 bulan",30],["3 bulan",90],["6 bulan",180],["12 bulan",360]],lv="n5",du=90;
+  function seg(id,items,cur,set){var g=document.getElementById(id);if(!g)return;g.innerHTML="";items.forEach(function(x){var b=document.createElement("button");b.type="button";b.textContent=x[0];b.setAttribute("aria-pressed",String(x[1]===cur));b.onclick=function(){set(x[1]);draw()};g.appendChild(b)})}
+  function draw(){var t=T[lv],hb=Math.max(1,Math.round(du*.85)),f=function(n){return Math.ceil(n/hb)};
+    seg("sil-lv",[["N5","n5"],["N4","n4"],["N3","n3"],["N2","n2"],["N1","n1"]],lv,function(v){lv=v});
+    seg("sil-dur",D,du,function(v){du=v});
+    document.getElementById("sil-kos").textContent="± "+f(t[0])+" kata";
+    document.getElementById("sil-kan").textContent="± "+f(t[1])+" kanji";
+    document.getElementById("sil-bun").textContent="± "+f(t[2])+" pola";
+    document.getElementById("sil-tot").textContent=lv.toUpperCase()+" · "+(t[0]+t[1]+t[2]).toLocaleString("id-ID")+" materi";}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",draw);else draw();
+})();</script>
 <script src="./js/landing-config.js"></script>
 <script src="./js/membership.js"></script>
 <script src="./js/landing-stats.js"></script>
@@ -1153,6 +1215,11 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
 })();
 </script>
 <div id="sak" aria-hidden="true"></div>
-<script>(function(){var w=document.getElementById('sak'),h='',i,r=function(a,b){return a+Math.random()*(b-a)};try{if(localStorage.getItem('shirose-anim-theme')==='0')return}catch(e){}for(i=0;i<22;i++)h+='<i class="p'+(i%2)+'" style="left:'+r(0,100).toFixed(1)+'%;font-size:'+r(14,26).toFixed(0)+'px;animation-duration:'+r(8,15).toFixed(1)+'s;animation-delay:-'+r(0,14).toFixed(1)+'s;opacity:.85"></i>';w.innerHTML=h})();</script>
+<script>(function(){var w=document.getElementById('sak'),h='',i,r=function(a,b){return a+Math.random()*(b-a)},t=document.documentElement.getAttribute('data-musim')||'semi';try{if(localStorage.getItem('shirose-anim-theme')==='0')return}catch(e){}
+for(i=0;i<22;i++){var st='left:'+r(0,100).toFixed(1)+'%;font-size:'+r(14,26).toFixed(0)+'px;animation-duration:'+r(8,15).toFixed(1)+'s;animation-delay:-'+r(0,14).toFixed(1)+'s;opacity:.85';
+if(t==='gugur')h+='<i class="mj" style="'+st+'">'+(i%2?'🍂':'🍁')+'</i>';
+else if(t==='salju')h+='<i class="sj" style="'+st+';animation-duration:'+r(7,14).toFixed(1)+'s"></i>';
+else if(t==='panas'){if(i<12)h+='<i class="gl" style="'+st+';animation-duration:'+r(10,18).toFixed(1)+'s"></i>'}
+else h+='<i class="p'+(i%2)+'" style="'+st+'"></i>'}w.innerHTML=h})();</script>
 </body>
 </html>

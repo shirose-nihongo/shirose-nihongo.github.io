@@ -197,3 +197,10 @@ html[data-theme="putih"] .flash-card .fungsi,html[data-theme="putih"] .flash-car
 /* logo: daun ikut warna tema untuk tema monokrom */
 html[data-theme="mono"]{--logo-leaf:var(--gray)}
 html[data-theme="putih"]{--logo-leaf:var(--gray)}
+
+/* Header bersinar mengikuti warna tema (sama dengan header landing) */
+.topbar::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,var(--pink-light,#f58bb0) 20%,var(--pink,#ef6a9a) 50%,var(--pink-light,#f58bb0) 80%,transparent);background-size:200% 100%;box-shadow:0 0 12px var(--pink,#ef6a9a),0 0 26px color-mix(in srgb,var(--pink,#ef6a9a) 55%,transparent);opacity:.9;animation:navGlow 6s linear infinite}
+@keyframes navGlow{to{background-position:-200% 0}}
+.topbar{box-shadow:0 6px 26px color-mix(in srgb,var(--pink,#ef6a9a) 18%,transparent)}
+html[data-anim-theme="off"] .topbar::after{animation:none}
+@media(prefers-reduced-motion:reduce){.topbar::after{animation:none}}
