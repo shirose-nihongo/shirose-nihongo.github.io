@@ -716,6 +716,9 @@ function _baseSet(k) { try { if (currentUser && typeof k === "number") localStor
 function _koinFallback(levelKoin) { const b = _baseGet(); return Math.max(0, (b !== null ? b : (Number(levelKoin) || 0)) - _gSpent()); }
 const WALLET_LVLS = ["n5","n4","n3","n2","n1","ir0","ir1","ir2"];
 let _walletOff = false, _walletErr = "", _resetTok = 0;
+/* Kunci hari (WIB) untuk batas kenaikan koin/XP harian di rules Firestore: floor((ms + 7 jam) / 1 hari). */
+function _hk() { return String(Math.floor((Date.now() + 25200000) / 86400000)); }
+const _ditolak = (e) => /permission|denied|insufficient/i.test(String((e && (e.code || "")) + " " + (e && e.message || "")));
 export function walletError() { return _walletErr; }
 async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   const uid = currentUser.uid, wref = doc(db, "siswa", uid, "wallet", "main");
@@ -729,6 +732,7 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
   try { out = await runTransaction(db, async (tx) => {
     const ws = await tx.get(wref);
     const w = ws.exists() ? ws.data() : { koin: 0, migrasi: {} }; w.migrasi = { ...(w.migrasi || {}) }; w.koin = w.koin || 0;
+    const koinAwal = w.koin;
     _resetTok = Number(w.spentReset) || 0;
     // Baca dokumen gami lama HANYA untuk level yang belum dimigrasi (hemat kuota Firestore: 1 baca, bukan 9, untuk akun yang sudah migrasi)
     const sisa = WALLET_LVLS.map((l, i) => [l, grefs[i]]).filter(([l]) => !w.migrasi[l]);
@@ -736,7 +740,8 @@ async function walletTx(delta, alasan, { allowNegative = false } = {}) {
     sisa.forEach(([l], i) => { w.koin += gs[i].exists() ? (gs[i].data().koin || 0) : 0; w.migrasi[l] = true; });
     if (delta < 0 && !allowNegative && w.koin + delta < 0) throw new Error("Koin tidak cukup!");
     w.koin += delta;
-    tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp() }, { merge: true });
+    const naik = Math.max(0, w.koin - koinAwal, delta > 0 ? delta : 0, pk);
+    tx.set(wref, { koin: w.koin, migrasi: w.migrasi, uid, updated: serverTimestamp(), ...(naik ? { harian: { [_hk()]: increment(naik) } } : {}) }, { merge: true });
     return w.koin;
   }); } catch (e) { _balikPk(); throw e; }
   if (pk) { try { await addDoc(collection(db, "siswa", uid, "wallet_log"), { t: serverTimestamp(), delta: pk, alasan: "hadiah belajar", saldo: out - delta0 }); } catch (e) {} }
@@ -783,7 +788,7 @@ async function _koinTulisSaja(delta, alasan) {
   const st = window.__SHIROSE_STATE; const sekarang = Number(st && st.gami && st.gami.koin) || 0;
   if (delta < 0 && sekarang + delta < 0) throw new Error("Koin tidak cukup!");
   const wref = doc(db, "siswa", currentUser.uid, "wallet", "main");
-  await setDoc(wref, { koin: increment(delta), uid: currentUser.uid, updated: serverTimestamp() }, { merge: true });
+  await setDoc(wref, { koin: increment(delta), uid: currentUser.uid, updated: serverTimestamp(), ...(delta > 0 ? { harian: { [_hk()]: increment(delta) } } : {}) }, { merge: true });
   const baru = sekarang + delta; if (st && st.gami) st.gami.koin = baru;
   { const b = _baseGet(); if (b !== null) _baseSet(b + delta); }
   try { await addDoc(collection(db, "siswa", currentUser.uid, "wallet_log"), { t: serverTimestamp(), delta, alasan: String(alasan || "") + " (mode tulis)", saldo: baru }); } catch (e) {}
@@ -871,7 +876,8 @@ export function gachaImportSave(d) {
   const o = _gLocal(), tl = Number(o.t) || 0, tf = Number(d.t) || 0;
   if (tf < tl) return { status: "lebih-lama", tFile: tf, tLokal: tl };
   if (tf === tl && (o.inv || []).length >= d.inv.length) return { status: "sama", tFile: tf, tLokal: tl };
-  o.inv = d.inv.filter(x => typeof x === "string"); o.sinceEpic = Number(d.sinceEpic) || 0; o.sinceLegend = Number(d.sinceLegend) || 0; o.spent = Math.max(0, Number(d.spent) || 0); o.t = tf; _gSave(o);
+  const akun = _milikAkun();
+  o.inv = Array.from(new Set([...(o.inv || []), ...d.inv.filter(x => typeof x === "string" && akun.has(x))])); o.spent = Math.max(Number(o.spent) || 0, Number(d.spent) || 0); o.t = tf; _gSave(o);
   return { status: "dipakai", n: o.inv.length, tFile: tf, tLokal: tl };
 }
 /* Hadiah gacha di perangkat (id barang toko + tema). Dipakai agar hadiah tak hilang dari "dimiliki". */
@@ -882,9 +888,8 @@ export async function syncGachaInventory(isShop) {
   if (!currentUser || !currentSiswaDoc) return 0;
   // Gabungkan daftar hadiah gacha di akun dengan yang di perangkat (dua arah) → hadiah tidak hilang saat ganti HP/browser
   { const remote = (currentSiswaDoc.karakter && currentSiswaDoc.karakter.gachaInv) || [], o = _gLocal(), loc = o.inv || [];
-    const gab = Array.from(new Set([...loc, ...remote]));
-    if (gab.length !== loc.length) { o.inv = gab; _gSave(o); }
-    if (gab.length !== remote.length) await _gachaInvKeAkun(gab); }
+    const gab = Array.from(new Set([...loc.filter(x => remote.includes(x)), ...remote]));   // barang yang cuma ada di perangkat (bisa diedit) tidak dinaikkan ke akun
+    if (gab.length !== loc.length || loc.some(x => !gab.includes(x))) { o.inv = gab; _gSave(o); } }
   const cur = (currentSiswaDoc.karakter && currentSiswaDoc.karakter.inventory) || [];
   const baru = gachaInvLocal().filter(id => isShop(id) && !cur.includes(id));
   if (!baru.length) return 0;
@@ -1024,7 +1029,8 @@ async function _kirimAntrean() {
   if (awal.koin) {
     const d = Number(awal.koin) || 0; { const q = _q(); q.koin = (Number(q.koin) || 0) - d; _qSet(q); }
     let k = null; try { k = await tambahKoin(d, "hadiah belajar"); } catch (e) {}
-    if (k === null) { const q = _q(); q.koin = (Number(q.koin) || 0) + d; _qSet(q); }
+    if (k === null && !/permission|denied|insufficient/i.test(_walletErr)) { const q = _q(); q.koin = (Number(q.koin) || 0) + d; _qSet(q); }
+    else if (k === null) console.warn("koin ditolak server (batas harian):", d);
   }
   // 2) XP per level: 1 baca + 1 tulis per level (bukan per jawaban)
   const lbXp = {}; let lbLv = 1;
@@ -1036,7 +1042,14 @@ async function _kirimAntrean() {
     cur = { ...cur, xp: (cur.xp || 0) + px };
     cur.level_karakter = Math.floor(Math.sqrt(cur.xp / 50)) + 1;
     _hitungStreak(cur);
-    await setDoc(ref, { xp: increment(px), level_karakter: cur.level_karakter, streak: cur.streak, lastDate: cur.lastDate }, { merge: true });
+    try { await setDoc(ref, { xp: increment(px), level_karakter: cur.level_karakter, streak: cur.streak, lastDate: cur.lastDate, harian: { [_hk()]: increment(px) } }, { merge: true }); }
+    catch (e) {
+      if (!_ditolak(e)) throw e;
+      console.warn("XP ditolak server (batas harian):", lv, px);
+      { const q = _q(); delete q.gami[lv]; _qSet(q); }
+      try { localStorage.removeItem(_gamiKey(lv)); } catch (e2) {}
+      continue;
+    }
     _lcSet(_gamiKey(lv), cur);
     { const q = _q(); const g = q.gami[lv]; if (g) { g.xp = (Number(g.xp) || 0) - px; if (g.xp <= 0) delete q.gami[lv]; } _qSet(q); }
     if (_gamiServer[lv]) Object.assign(_gamiServer[lv], { xp: cur.xp, streak: cur.streak, lastDate: cur.lastDate, level_level_ini: cur.level_karakter });
@@ -2109,7 +2122,7 @@ export async function setAksesSswKelas(kelasId, slug, v) {
 }
 export async function saveSswRank(slug, data) {
   if (!currentUser) return;
-  const d = { uid: currentUser.uid, slug, nama: String(data.nama || "Siswa").slice(0, 60), kelas: String(data.kelas || "").slice(0, 40),
+  const d = { uid: currentUser.uid, slug, nama: _bersih(data.nama || "Siswa", 60) || "Siswa", kelas: _bersih(data.kelas, 40),
     poin: Math.max(0, Math.min(1000000, Math.round(data.poin || 0))), rinci: data.rinci || {}, upd: serverTimestamp() };
   await setDoc(doc(db, "ssw_rank", `${slug}__${currentUser.uid}`), d);
   await _aggTulis(["ssw_rank_agg", slug], currentUser.uid, { n: d.nama, k: d.kelas, p: d.poin, r: d.rinci });
@@ -2176,10 +2189,12 @@ const LVLS = ["n5","n4","n3","n2","n1"];
 let _lbMine = null;                   // cache dokumen lb milik sendiri
 export function clearLeaderboardCache(){ _lbCache.clear(); }
 
-function _lbNama(){ return _isOwnerEmail(currentUser?.email) ? BRAND_NAME : (currentSiswaDoc?.nama || "Anonim"); }
-function _lbBuild(xp, lv){
+const _bersih = (t, n) => String(t == null ? "" : t).replace(/[<>"`]/g, "").slice(0, n);
+function _lbNama(){ return _bersih(_isOwnerEmail(currentUser?.email) ? BRAND_NAME : (currentSiswaDoc?.nama || "Anonim"), 60) || "Anonim"; }
+function _lbBuild(xp0, lv){
+  const xp = {}; LVLS.forEach(l => { const v = Math.max(0, Math.round(Number(xp0 && xp0[l]) || 0)); if (v) xp[l] = v; });
   const total = LVLS.reduce((t,l) => t + (xp[l]||0), 0);
-  return { uid: currentUser.uid, nama: _lbNama(), kelas: currentSiswaDoc?.kelas || "",
+  return { uid: currentUser.uid, nama: _lbNama(), kelas: _bersih(currentSiswaDoc?.kelas, 40),
            xp, total, lv: lv || 1, upd: Date.now() };
 }
 /* Leaderboard diperbarui MAKSIMAL SEKALI SEHARI per siswa. XP yang masuk setelah itu
@@ -2195,8 +2210,16 @@ async function _lbPush(xpMap, lvVal){
     if (o.hari === _ymdLocal()) { _lbHariSet(o); return; }   // sudah update hari ini
     if (!_lbMine){ const g = await getDoc(doc(db, "lb", currentUser.uid)); _lbMine = g.exists() ? g.data() : { xp:{}, lv:1 }; }
     const xp = { ...(_lbMine.xp||{}), ...o.xp };
-    const d = _lbBuild(xp, Math.max(_lbMine.lv||1, o.lv));
-    await setDoc(doc(db, "lb", currentUser.uid), d);
+    let d = _lbBuild(xp, Math.max(_lbMine.lv||1, o.lv));
+    try { await setDoc(doc(db, "lb", currentUser.uid), d); }
+    catch (e) {
+      if (!_ditolak(e)) throw e;
+      // XP di perangkat beda dengan server → pakai XP asli dari gami/{level}
+      const gs = await Promise.all(LVLS.map(l => getDoc(doc(db, "siswa", currentUser.uid, "gami", l)).catch(() => null)));
+      const asli = {}; let lv = 1; gs.forEach((g, i) => { if (g && g.exists()) { asli[LVLS[i]] = Number(g.data().xp) || 0; lv = Math.max(lv, Number(g.data().level_karakter) || 1); } });
+      d = _lbBuild(asli, Math.min(500, lv));
+      await setDoc(doc(db, "lb", currentUser.uid), d);
+    }
     await _aggTulis(["lb_agg", "global"], currentUser.uid, _lbRow(d));
     _lbMine = d; _lbCache.clear();
     _lbHariSet({ hari: _ymdLocal() });
@@ -2274,7 +2297,7 @@ async function _aggBaca(path, paksa) {
   if (rows) { try { localStorage.setItem(key, JSON.stringify({ t: Date.now(), rows })); } catch (e) {} }
   return rows;
 }
-const _lbRow = (d) => ({ n: String(d.nama || "Anonim").slice(0, 40), k: String(d.kelas || "").slice(0, 30), t: Number(d.total) || 0, x: d.xp || {}, lv: Number(d.lv) || 1 });
+const _lbRow = (d) => ({ n: String(d.nama || "Anonim").slice(0, 60), k: String(d.kelas || "").slice(0, 40), t: Number(d.total) || 0, x: d.xp || {}, lv: Number(d.lv) || 1 });
 /** Guru: isi dokumen gabungan dari data lama (lb/* dan ssw_rank/*). Sekali jalan; aman diulang. */
 export async function bangunLeaderboardGabungan() {
   if (!userIsGuru()) throw new Error("Hanya guru");
@@ -2542,10 +2565,11 @@ export async function restoreSaveData(d) {
     if (!WALLET_LVLS.includes(lvl) || !g || typeof g.xp !== "number") continue;
     const ref = doc(db, "siswa", uid, "gami", lvl), cur = await getDoc(ref);
     const curXp = cur.exists() ? (cur.data().xp || 0) : 0;
-    if (g.xp > curXp) { await setDoc(ref, { xp: g.xp, level_karakter: Math.floor(Math.sqrt(g.xp / 50)) + 1 }, { merge: true }); naik++; }
+    if (g.xp > curXp) { try { await setDoc(ref, { xp: g.xp, level_karakter: Math.floor(Math.sqrt(g.xp / 50)) + 1, harian: { [_hk()]: increment(g.xp - curXp) } }, { merge: true }); naik++; } catch (e) { if (!_ditolak(e)) throw e; } }
   }
   const k = d.karakter || {}, sd = currentSiswaDoc || {}, cur = sd.karakter || {};
-  const inv = [...new Set([...(cur.inventory || []), ...(Array.isArray(k.inventory) ? k.inventory : [])])];
+  const akun = new Set(cur.gachaInv || []);
+  const inv = [...new Set([...(cur.inventory || []), ...(Array.isArray(k.inventory) ? k.inventory.filter(x => akun.has(x)) : [])])];
   const upd = { "karakter.inventory": inv };
   if (k.equipped && Object.keys(cur.equipped || {}).length === 0) upd["karakter.equipped"] = k.equipped;
   await updateDoc(doc(db, "siswa", uid), upd);
@@ -2555,12 +2579,12 @@ export async function restoreSaveData(d) {
 }
 
 /* Pulihkan dari file save TANPA Firestore: hadiah gacha → penyimpanan perangkat, level akun → cache perangkat. Hanya menambah. */
+function _milikAkun() { const k = (currentSiswaDoc && currentSiswaDoc.karakter) || {}; return new Set([...(k.gachaInv || []), ...(k.inventory || [])]); }
 export function restoreLokal(o) {
   if (!currentUser || !o) return { gacha: 0 };
-  const g = _gLocal(), lama = g.inv || [], tambahan = Array.isArray(o.gachaInv) ? o.gachaInv.filter(x => typeof x === "string") : [];
+  const akun = _milikAkun();
+  const g = _gLocal(), lama = g.inv || [], tambahan = Array.isArray(o.gachaInv) ? o.gachaInv.filter(x => typeof x === "string" && akun.has(x)) : [];
   const gab = Array.from(new Set([...lama, ...tambahan])); g.inv = gab;
-  if (typeof o.sinceEpic === "number" && !g.sinceEpic) g.sinceEpic = o.sinceEpic;
-  if (typeof o.sinceLegend === "number" && !g.sinceLegend) g.sinceLegend = o.sinceLegend;
   _gSave(g); if (o.levelAkun) _lvSet(o.levelAkun);
   return { gacha: gab.length - lama.length };
 }

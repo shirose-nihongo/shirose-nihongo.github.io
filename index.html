@@ -1585,7 +1585,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261128f";
+import * as FB from "./js/firebase-sync.js?v=20261128g";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261125c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
@@ -1593,7 +1593,7 @@ import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTer
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261128b";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128d";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128e";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 // SILABUS HARIAN: target belajar per hari + hafalan + ujian harian (kunci ≥ 80%), fukushu, simulasi, jadwal bertanggal (js/silabus-harian.js)
 import { SILABUS_ROUTES, initSilabus } from "./js/silabus-harian.js?v=20261126l";
@@ -2708,7 +2708,7 @@ function renderCharaOrbital(){
     <div class="herobar">
       <div class="avatar-mini">${state.user ? "🧑" : "👤"}</div>
       <div class="info">
-        <div class="nama">${state.siswa?.nama || "Tamu"} — ${state.level.toUpperCase()}</div>
+        <div class="nama">${_escapeHtml(state.siswa?.nama || "Tamu")} — ${state.level.toUpperCase()}</div>
         <div class="meta">Lv ${state.gami.level_karakter} · ${state.gami.xp} XP · ${state.gami.koin} 🪙 · 🔥 ${state.gami.streak}</div>
         <div class="xp-bar"><div class="xp-fill" style="width:${(state.gami.xp % 500)/5}%"></div></div>
       </div>
@@ -6578,10 +6578,10 @@ async function renderLeaderboard(){
       <div class="lb-row lb-tap ${isMe?'me':''}" onclick="lbProfil('${u.uid}')" role="button" tabindex="0" title="Lihat karakter">
         <div class="lb-rank" style="color:${rankColor};">#${i+1}</div>
         <div class="lb-user">
-          <div class="lb-name">${u.nama}${isMe?' <span style="color:var(--pink); font-size:11px;">(Kamu)</span>':''}</div>
-          <div class="lb-meta">${u.kelas?`${u.kelas} · `:''}${u.meta||''}</div>
+          <div class="lb-name">${_escapeHtml(u.nama)}${isMe?' <span style="color:var(--pink); font-size:11px;">(Kamu)</span>':''}</div>
+          <div class="lb-meta">${u.kelas?`${_escapeHtml(u.kelas)} · `:''}${_escapeHtml(u.meta||'')}</div>
         </div>
-        <div class="lb-score">${(u.score||0).toLocaleString('id-ID')}<div class="lb-score-lbl">${scoreLabel}</div></div>
+        <div class="lb-score">${(Number(u.score)||0).toLocaleString('id-ID')}<div class="lb-score-lbl">${scoreLabel}</div></div>
       </div>
     `;
   };
@@ -6746,7 +6746,7 @@ FB.onAuth(async (user, siswa) => {
   const btn = document.getElementById("btn-auth");
   if (user) {
     try { localStorage.setItem("shirose-returning","1"); } catch(e){}
-    btn.innerHTML = `👋 ${siswa?.nama || user.email.split("@")[0]}`;
+    btn.textContent = `👋 ${siswa?.nama || user.email.split("@")[0]}`;
     btn.onclick = () => route("profile");
     try { document.getElementById("btn-out").classList.remove("hidden"); } catch (_) {}
     document.getElementById("guru-link").classList.toggle("hidden", !FB.userIsGuru());

@@ -731,9 +731,9 @@ async function renderRank([slug]) {
   const me = uidNow(), my = (FB.getSiswaDoc && FB.getSiswaDoc()) || {};
   const list = RANK_SCOPE === "kelas" && my.kelas ? rows.filter(r => r.kelas === my.kelas) : rows;
   const medal = ["🥇", "🥈", "🥉"];
-  const pod = list.slice(0, 3).map((r, i) => `<div class="sw-pod p${i + 1} ${r.uid === me ? "me" : ""}"><div class="m">${medal[i]}</div><b>${esc(r.nama)}</b><small>${esc(r.kelas || "")}</small><span>${r.poin} poin</span></div>`).join("");
+  const pod = list.slice(0, 3).map((r, i) => `<div class="sw-pod p${i + 1} ${r.uid === me ? "me" : ""}"><div class="m">${medal[i]}</div><b>${esc(r.nama)}</b><small>${esc(r.kelas || "")}</small><span>${Number(r.poin) || 0} poin</span></div>`).join("");
   const idx = list.findIndex(r => r.uid === me);
-  const rowsHtml = list.slice(0, 50).map((r, i) => `<li class="${r.uid === me ? "me" : ""}"><span class="n">${i + 1}</span><span class="nm"><b>${esc(r.nama)}</b><small>${esc(r.kelas || "")} · baca ${r.rinci?.baca ?? 0} · kartu ${r.rinci?.kartu ?? 0} · kuis ${r.rinci?.kuis ?? 0}</small></span><span class="pt">${r.poin}</span></li>`).join("");
+  const rowsHtml = list.slice(0, 50).map((r, i) => `<li class="${r.uid === me ? "me" : ""}"><span class="n">${i + 1}</span><span class="nm"><b>${esc(r.nama)}</b><small>${esc(r.kelas || "")} · baca ${Number(r.rinci?.baca) || 0} · kartu ${Number(r.rinci?.kartu) || 0} · kuis ${Number(r.rinci?.kuis) || 0}</small></span><span class="pt">${Number(r.poin) || 0}</span></li>`).join("");
   return wrap(`${crumbs([{ t: "SSW", go: "route('ssw')" }, { t: esc(b.nama), go: `route('ssw-peta/${slug}')` }, { t: "Leaderboard" }])}
     <div class="sw-head compact"><div class="jp">ランキング</div><h1>🏆 Leaderboard ${esc(b.nama)}</h1>
       <p>${idx >= 0 ? `Peringkatmu: <b>#${idx + 1}</b> dari ${list.length}` : (isGuru() ? "Mode guru: tidak ikut peringkat." : "Belajar dulu untuk masuk peringkat.")}</p></div>
