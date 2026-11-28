@@ -144,6 +144,27 @@ service cloud.firestore {
           || isGuru();
       allow delete: if isGuru();
     }
+    // Leaderboard gabungan: 1 dokumen = 1 baca. Siswa hanya boleh mengubah barisnya sendiri.
+    match /lb_agg/{id} {
+      allow read: if terdaftar();
+      allow create: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.keys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.keys().hasOnly([me()]));
+      allow update: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.diff(resource.data.rows).affectedKeys().hasOnly([me()]));
+      allow delete: if isGuru();
+    }
+    match /ssw_rank_agg/{slug} {
+      allow read: if terdaftar();
+      allow create: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.keys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.keys().hasOnly([me()]));
+      allow update: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.diff(resource.data.rows).affectedKeys().hasOnly([me()]));
+      allow delete: if isGuru();
+    }
 
     // ---------- Kelas kata kosakata (override guru) ----------
     match /kosakata_pos/{lvl} {

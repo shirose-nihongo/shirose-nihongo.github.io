@@ -9,7 +9,7 @@
  * Route: #profile, #profile/akses, #profile/nilai
  * Hanya MEMBACA data yang sudah ada (tidak mengubah aturan akses).
  * ===================================================================== */
-import { initSswCore, loadBidang, sswAllowed, loadKelasAkses, loadPack, fullQuizzes, esc, plain } from "./ssw-core.js?v=20261128b";
+import { initSswCore, loadBidang, sswAllowed, loadKelasAkses, loadPack, fullQuizzes, esc, plain } from "./ssw-core.js?v=20261128c";
 
 const LOADERS = {};
 let C = null;   // { FB, state, renderCharacter, DEFAULT_EQUIPPED, canAccessLevel }

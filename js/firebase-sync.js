@@ -25,8 +25,8 @@ import {
   indexedDBLocalPersistence
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc,
-  collection, getDocs, onSnapshot, query, orderBy, limit, addDoc,
+  getFirestore, doc, getDoc, setDoc as _setDoc0, updateDoc as _updateDoc0, deleteDoc as _deleteDoc0,
+  collection, getDocs, onSnapshot, query, orderBy, limit, addDoc as _addDoc0, Timestamp,
   where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction, increment, arrayUnion
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
@@ -38,6 +38,61 @@ const firebaseConfig = {
   messagingSenderId: "601020682073",
   appId: "1:601020682073:web:adb7adb44e79b17d3d4648",
 };
+
+/* ========== CACHE DASHBOARD GURU (hemat kuota baca Firestore) ==========
+ * Data siswa yang dibaca guru disimpan di browser guru (IndexedDB). Pindah tab / buka ulang
+ * dashboard = 0 baca selama 30 menit. Tombol "🔄 Muat ulang" memaksa cek ulang, dan hasil ujian
+ * (JLPT, JFT, Mensetsu, nilai) hanya mengambil yang BARU sejak cek terakhir.
+ * Setiap tulis dari perangkat ini ke data seorang siswa otomatis membuang cache siswa itu. */
+const GURU_TTL = 30 * 60e3;
+let _idbP = null;
+function _idb() {
+  if (!_idbP) _idbP = new Promise((res, rej) => { try { const r = indexedDB.open("shirose-guru-cache", 1); r.onupgradeneeded = () => r.result.createObjectStore("kv"); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } });
+  return _idbP;
+}
+async function _kvGet(k) { try { const d = await _idb(); return await new Promise(res => { const t = d.transaction("kv").objectStore("kv").get(k); t.onsuccess = () => res(t.result); t.onerror = () => res(undefined); }); } catch (e) { return undefined; } }
+async function _kvSet(k, v) { try { const d = await _idb(); await new Promise(res => { const t = d.transaction("kv", "readwrite"); t.objectStore("kv").put(v, k); t.oncomplete = res; t.onerror = res; }); } catch (e) {} }
+async function _kvHapusAwalan(pre) { try { const d = await _idb(); await new Promise(res => { const t = d.transaction("kv", "readwrite"), st = t.objectStore("kv"), c = st.openCursor(); c.onsuccess = () => { const cur = c.result; if (!cur) return; if (String(cur.key).startsWith(pre)) cur.delete(); cur.continue(); }; t.oncomplete = res; t.onerror = res; }); } catch (e) {} }
+function _paksaGet() { try { return Number(localStorage.getItem("shirose-guru-paksa")) || 0; } catch (e) { return 0; } }
+const _segar = (c) => c && c.cek && Date.now() - c.cek < GURU_TTL && c.cek > _paksaGet();
+/* Timestamp dari cache jadi objek biasa → kembalikan jadi Timestamp (supaya .toDate()/.toMillis() jalan). */
+function _tsFix(o) {
+  if (!o || typeof o !== "object") return o;
+  for (const k of Object.keys(o)) { const v = o[k]; if (v && typeof v === "object" && !(v instanceof Timestamp) && typeof v.seconds === "number" && typeof v.nanoseconds === "number" && Object.keys(v).length === 2) o[k] = new Timestamp(v.seconds, v.nanoseconds); }
+  return o;
+}
+const _msTs = (t) => t && t.toMillis ? t.toMillis() : (t && typeof t.seconds === "number" ? t.seconds * 1000 : 0);
+/** Guru: tombol "Muat ulang" — data berikutnya diambil dari server (hasil ujian hanya yang baru). */
+export function guruMuatUlang() { try { localStorage.setItem("shirose-guru-paksa", String(Date.now())); } catch (e) {} _memSiswa = null; }
+/** Guru: kosongkan seluruh cache (kalau ada data yang terasa tidak cocok). */
+export async function guruKosongkanCache() { guruMuatUlang(); await _kvHapusAwalan(""); }
+let _memSiswa = null;
+function _cacheBuangSiswa(uid) { _memSiswa = null; _kvHapusAwalan("siswa-list"); if (uid) { _kvHapusAwalan("gami:" + uid); _kvHapusAwalan("srs:" + uid); } }
+/* Bungkus fungsi tulis: kalau perangkat ini mengubah data siswa, cache guru untuk siswa itu dibuang. */
+function _setelahTulis(ref) { if (!userIsGuru()) return; try { const m = /^siswa\/([^/]+)(?:\/([^/]+))?/.exec(ref && ref.path || ""); if (m) { _cacheBuangSiswa(m[1]); if (m[2]) _kvHapusAwalan(`hasil:${m[2]}:${m[1]}`); } } catch (e) {} }
+const setDoc = (ref, ...a) => { _setelahTulis(ref); return _setDoc0(ref, ...a); };
+const updateDoc = (ref, ...a) => { _setelahTulis(ref); return _updateDoc0(ref, ...a); };
+const deleteDoc = (ref, ...a) => { _setelahTulis(ref); return _deleteDoc0(ref, ...a); };
+const addDoc = (ref, ...a) => _addDoc0(ref, ...a);
+/* Hasil ujian per siswa: ambil hanya dokumen yang lebih baru dari cache (kueri kosong = 1 baca). */
+async function _hasilGuru(uid, sub, limitN) {
+  const key = `hasil:${sub}:${uid}`, c = await _kvGet(key);
+  if (_segar(c) && (c.items.length >= limitN || c.habis)) return c.items.slice(0, limitN).map(_tsFix);
+  const base = collection(db, "siswa", uid, sub);
+  const lama = (c && c.items) || [];
+  const q = c && c.max && (lama.length >= limitN || c.habis)
+    ? query(base, where("tgl", ">", Timestamp.fromMillis(c.max)), orderBy("tgl", "desc"), limit(limitN))
+    : query(base, orderBy("tgl", "desc"), limit(limitN));
+  const baru = (await getDocs(q)).docs.map(d => ({ id: d.id, ...d.data() }));
+  const ids = new Set(baru.map(x => x.id));
+  const items = [...baru, ...lama.filter(x => !ids.has(x.id))].sort((a, b) => _msTs(b.tgl) - _msTs(a.tgl)).slice(0, Math.max(limitN, 300));
+  const max = items.reduce((m, x) => Math.max(m, _msTs(x.tgl)), 0);
+  const habis = (c && c.habis) || (!c || !c.max || lama.length < limitN ? baru.length < limitN : false);
+  await _kvSet(key, { items, max, cek: Date.now(), habis });
+  return items.slice(0, limitN).map(_tsFix);
+}
+const _guruLihatOrangLain = (uid) => userIsGuru() && uid !== currentUser?.uid;
+
 
 const GURU_EMAIL = "randitsmuhamad50@gmail.com";
 // Developer email (Part 6). Defaults to the same account as guru but kept
@@ -991,6 +1046,7 @@ export async function listHasilJLPT(limitN = 100) {
 }
 export async function listHasilJLPTOf(uid, limitN = 100) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  if (_guruLihatOrangLain(uid)) return _hasilGuru(uid, "jlpt_hasil", limitN);
   const q = query(collection(db, "siswa", uid, "jlpt_hasil"), orderBy("tgl", "desc"), limit(limitN));
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -1006,6 +1062,7 @@ export async function simpanHasilJft(rec) {
 }
 export async function listHasilJftOf(uid, limitN = 300) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  if (_guruLihatOrangLain(uid)) return _hasilGuru(uid, "jft_hasil", limitN);
   const q = query(collection(db, "siswa", uid, "jft_hasil"), orderBy("tgl", "desc"), limit(limitN));
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -1109,6 +1166,7 @@ export async function listHasilMensetsu(limitN = 50) {
 }
 export async function listHasilMensetsuOf(uid, limitN = 100) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  if (_guruLihatOrangLain(uid)) return _hasilGuru(uid, "mensetsu_hasil", limitN);
   const q = query(collection(db, "siswa", uid, "mensetsu_hasil"), orderBy("tgl", "desc"), limit(limitN));
   return (await getDocs(q)).docs.map(d => ({ id: d.id, ...d.data() }));
 }
@@ -1532,8 +1590,13 @@ export async function tambahChoukaiBatch(level, soalArr) {
 export async function listSiswa() {
   if (!userIsGuru()) throw new Error("Hanya guru");
   try {
+    if (_memSiswa && _segar(_memSiswa)) return _memSiswa.items.map(x => _tsFix({ ...x }));
+    const c = await _kvGet("siswa-list");
+    if (_segar(c)) { _memSiswa = c; return c.items.map(x => _tsFix({ ...x })); }
     const snap = await getDocs(collection(db, "siswa"));
-    return snap.docs.map(d => ({ uid:d.id, ...d.data() }));
+    const items = snap.docs.map(d => ({ uid:d.id, ...d.data() }));
+    _memSiswa = { items, cek: Date.now() }; _kvSet("siswa-list", _memSiswa);
+    return items;
   } catch (e){
     // Firestore most likely rejected the collection read because the guru's
     // siswa doc still has role != "guru" (bootstrap not applied). Give a
@@ -1713,16 +1776,19 @@ export async function assignSiswaKeKelas(uids, namaKelas) {
 }
 export async function getSiswaGami(uid) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  const lain = _guruLihatOrangLain(uid), key = "gami:" + uid;
+  if (lain) { const c = await _kvGet(key); if (_segar(c)) return c.data; }
   const result = {};
-  for (const lvl of ["n5","n4","n3","n2","n1"]) {
-    const s = await getDoc(doc(db, "siswa", uid, "gami", lvl));
-    result[lvl] = s.exists() ? s.data() : null;
-  }
+  const lvls = ["n5","n4","n3","n2","n1"];
+  const snaps = await Promise.all(lvls.map(l => getDoc(doc(db, "siswa", uid, "gami", l))));
+  lvls.forEach((l, i) => { result[l] = snaps[i].exists() ? snaps[i].data() : null; });
+  if (lain) _kvSet(key, { data: result, cek: Date.now() });
   return result;
 }
 // Teacher view: all exam records for a specific student (newest first).
 export async function listNilaiOf(uid, limitN = 100) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  if (_guruLihatOrangLain(uid)) return _hasilGuru(uid, "nilai", limitN);
   const q = query(collection(db, "siswa", uid, "nilai"), orderBy("tgl","desc"), limit(limitN));
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -1733,6 +1799,10 @@ export async function listNilaiOf(uid, limitN = 100) {
 // halaman Sylabus siswa.
 export async function getSiswaSrsAll(uid) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
+  if (_guruLihatOrangLain(uid)) { const c = await _kvGet("srs:" + uid); if (_segar(c)) return c.data; const d = await _srsAllServer(uid); _kvSet("srs:" + uid, { data: d, cek: Date.now() }); return d; }
+  return _srsAllServer(uid);
+}
+async function _srsAllServer(uid) {
   const result = {};
   await Promise.all(["n5","n4","n3","n2","n1"].map(async lvl => {
     try {
@@ -1845,15 +1915,24 @@ export async function saveSswRank(slug, data) {
   const d = { uid: currentUser.uid, slug, nama: String(data.nama || "Siswa").slice(0, 60), kelas: String(data.kelas || "").slice(0, 40),
     poin: Math.max(0, Math.min(1000000, Math.round(data.poin || 0))), rinci: data.rinci || {}, upd: serverTimestamp() };
   await setDoc(doc(db, "ssw_rank", `${slug}__${currentUser.uid}`), d);
+  await _aggTulis(["ssw_rank_agg", slug], currentUser.uid, { n: d.nama, k: d.kelas, p: d.poin, r: d.rinci });
 }
-export async function loadSswRank(slug) {
+export async function loadSswRank(slug, { paksa = false } = {}) {
+  // Utama: 1 dokumen gabungan per bidang (cache 6 jam). Cadangan: baca semua baris (cara lama).
+  try {
+    const rows = await _aggBaca(["ssw_rank_agg", slug], paksa);
+    if (rows && Object.keys(rows).length) return Object.entries(rows).map(([uid, r]) => ({ uid, slug, nama: r.n || "Siswa", kelas: r.k || "", poin: Number(r.p) || 0, rinci: r.r || {} }));
+  } catch (e) { console.warn("ssw rank gabungan gagal, pakai cara lama:", e.message); }
   const snap = await getDocs(query(collection(db, "ssw_rank"), where("slug", "==", slug)));
   return snap.docs.map(x => x.data());
 }
 export async function resetSswRank(slug) {
   if (!userIsGuru()) throw new Error("Hanya guru");
-  const rows = await loadSswRank(slug);
+  const snap = await getDocs(query(collection(db, "ssw_rank"), where("slug", "==", slug)));
+  const rows = snap.docs.map(x => x.data());
   for (const r of rows) await deleteDoc(doc(db, "ssw_rank", `${slug}__${r.uid}`));
+  try { await deleteDoc(doc(db, "ssw_rank_agg", slug)); } catch (e) {}
+  try { localStorage.removeItem("shirose-agg:ssw_rank_agg/" + slug); } catch (e) {}
   return rows.length;
 }
 
@@ -1921,6 +2000,7 @@ async function _lbPush(xpMap, lvVal){
     const xp = { ...(_lbMine.xp||{}), ...o.xp };
     const d = _lbBuild(xp, Math.max(_lbMine.lv||1, o.lv));
     await setDoc(doc(db, "lb", currentUser.uid), d);
+    await _aggTulis(["lb_agg", "global"], currentUser.uid, _lbRow(d));
     _lbMine = d; _lbCache.clear();
     _lbHariSet({ hari: _ymdLocal() });
   } catch(e){ console.warn("lb push failed:", e.message); }
@@ -1955,6 +2035,7 @@ export async function syncMyLeaderboard(){
     const d = _lbBuild(xp, lv);
     if (d.total === 0) return;
     await setDoc(doc(db, "lb", currentUser.uid), d);
+    await _aggTulis(["lb_agg", "global"], currentUser.uid, _lbRow(d));
     _lbMine = d; _lbCache.clear();
     _lbHariSet({ hari: _ymdLocal() });
   } catch(e){ console.warn("lb sync failed:", e.message); _lbSynced = false; }
@@ -1975,7 +2056,45 @@ export async function backfillLeaderboard(){
     n++;
   }));
   _lbCache.clear();
+  try { await bangunLeaderboardGabungan(); } catch (e) { console.warn("agg:", e.message); }
   return n;
+}
+
+/* ========== LEADERBOARD GABUNGAN: 1 dokumen = 1 baca ==========
+ * lb_agg/global        = { rows: { uid: { n, k, t, x:{n5..n1}, lv } }, upd }
+ * ssw_rank_agg/{slug}  = { rows: { uid: { n, k, p, r } }, upd }
+ * Tiap siswa hanya menulis barisnya sendiri (sekali sehari). Membaca leaderboard = 1 baca,
+ * lalu disimpan di perangkat 6 jam. Muat ±5.000 siswa per dokumen (batas 1 MiB). */
+const AGG_TTL = 6 * 3600e3;
+async function _aggTulis(path, uid, row) {
+  try { await setDoc(doc(db, ...path), { rows: { [uid]: row }, upd: serverTimestamp() }, { merge: true }); } catch (e) { console.warn("agg tulis gagal:", e.message); }
+}
+async function _aggBaca(path, paksa) {
+  const key = "shirose-agg:" + path.join("/");
+  if (!paksa) { try { const c = JSON.parse(localStorage.getItem(key) || "null"); if (c && Date.now() - c.t < AGG_TTL) return c.rows; } catch (e) {} }
+  const snap = await getDoc(doc(db, ...path));
+  const rows = snap.exists() ? (snap.data().rows || {}) : null;
+  if (rows) { try { localStorage.setItem(key, JSON.stringify({ t: Date.now(), rows })); } catch (e) {} }
+  return rows;
+}
+const _lbRow = (d) => ({ n: String(d.nama || "Anonim").slice(0, 40), k: String(d.kelas || "").slice(0, 30), t: Number(d.total) || 0, x: d.xp || {}, lv: Number(d.lv) || 1 });
+/** Guru: isi dokumen gabungan dari data lama (lb/* dan ssw_rank/*). Sekali jalan; aman diulang. */
+export async function bangunLeaderboardGabungan() {
+  if (!userIsGuru()) throw new Error("Hanya guru");
+  const lb = await getDocs(collection(db, "lb"));
+  const rows = {}; lb.docs.forEach(d => { const x = d.data(); if (x && x.uid) rows[x.uid] = _lbRow(x); });
+  await setDoc(doc(db, "lb_agg", "global"), { rows, upd: serverTimestamp() });
+  const sr = await getDocs(collection(db, "ssw_rank"));
+  const per = {}; sr.docs.forEach(d => { const x = d.data(); if (x && x.uid && x.slug) (per[x.slug] = per[x.slug] || {})[x.uid] = { n: x.nama || "Siswa", k: x.kelas || "", p: Number(x.poin) || 0, r: x.rinci || {} }; });
+  for (const [slug, r] of Object.entries(per)) await setDoc(doc(db, "ssw_rank_agg", slug), { rows: r, upd: serverTimestamp() });
+  try { localStorage.setItem("shirose-agg-dibangun", String(Date.now())); } catch (e) {}
+  return { lb: Object.keys(rows).length, ssw: Object.keys(per).length };
+}
+/** Dipanggil dashboard guru: bangun dokumen gabungan bila belum ada (cek maks. sekali sehari). */
+export async function pastikanLeaderboardGabungan() {
+  if (!userIsGuru()) return;
+  try { if (Date.now() - (Number(localStorage.getItem("shirose-agg-cek")) || 0) < 86400e3) return; localStorage.setItem("shirose-agg-cek", String(Date.now())); } catch (e) {}
+  try { const g = await getDoc(doc(db, "lb_agg", "global")); if (!g.exists()) await bangunLeaderboardGabungan(); } catch (e) { console.warn("agg cek gagal (rules lb_agg belum dipasang?):", e.message); }
 }
 
 // kind: "global" | "jlpt-n5".."jlpt-n1". kelas (opsional) membatasi ke satu kelas.
@@ -1983,6 +2102,24 @@ export async function leaderboardAdvanced(kind = "global", topN = 20, kelas = ""
   const key = kind + "|" + (kelas || "*") + "|" + topN;
   const hit = _lbCache.get(key);
   if (hit && Date.now() - hit.t < LB_TTL) return hit.data;
+  // Utama: dokumen gabungan (1 baca, cache 6 jam). Cadangan: cara lama bila belum tersedia.
+  try {
+    const rows = await _aggBaca(["lb_agg", "global"]);
+    if (rows && Object.keys(rows).length) {
+      const lvl = kind.startsWith("jlpt-") ? kind.slice(5) : "";
+      const me = currentUser?.uid, mine = _lbMine;
+      const all = Object.entries(rows).map(([uid, r]) => ({ uid, ...r }));
+      if (me && mine) { const r = all.find(x => x.uid === me); const m = { uid: me, ..._lbRow(mine) }; if (r) Object.assign(r, { t: Math.max(r.t, m.t), x: { ...r.x, ...m.x } }); }
+      const result = all
+        .filter(r => !kelas || r.k === kelas)
+        .map(r => ({ uid: r.uid, nama: r.n || "Anonim", kelas: r.k || "", score: lvl ? (Number((r.x || {})[lvl]) || 0) : (Number(r.t) || 0), meta: "Lv " + (r.lv || 1) }))
+        .filter(r => r.score > 0 && !isDemoKelas(r.kelas))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, topN);
+      _lbCache.set(key, { t: Date.now(), data: result });
+      return result;
+    }
+  } catch (e) { console.warn("lb gabungan gagal, pakai cara lama:", e.message); }
   try {
     const field = kind.startsWith("jlpt-") ? "xp." + kind.slice(5) : "total";
     const base = collection(db, "lb");
