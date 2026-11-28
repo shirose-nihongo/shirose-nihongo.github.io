@@ -1198,7 +1198,7 @@ const SSW = window.SSW = {
     const sc = document.getElementById("bk-scroll");
     if (sc) {   // mode SCROLL: semua halaman berurutan ke bawah
       const wr = [...sc.querySelectorAll(".bk-pgw")];
-      const cur = () => { const y = window.innerHeight * 0.4; let k = 0; for (let i = 0; i < wr.length; i++) { const r = wr[i].getBoundingClientRect(); if (r.top <= y) k = i; else break; } return k; };
+      const cur = () => { const wr = document.querySelectorAll("#bk-scroll .bk-pgw"), y = window.innerHeight * 0.4; let k = 0; for (let i = 0; i < wr.length; i++) { const r = wr[i].getBoundingClientRect(); if (r.top <= y) k = i; else break; } return k; };
       let raf = 0;
       const upd = () => { raf = 0; if (!document.getElementById("bk-scroll")) { window.removeEventListener("scroll", onS, true); return; } const k = cur(); if (k !== BOOK.pg) { BOOK.pg = k; const el = document.getElementById("bk-n"); if (el) el.textContent = k; const r = document.getElementById("bk-range"); if (r) r.value = k; } };
       const onS = () => { if (!raf) raf = requestAnimationFrame(upd); };
