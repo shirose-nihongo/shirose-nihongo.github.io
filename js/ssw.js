@@ -122,13 +122,13 @@ async function renderHub() {
   const mine = (b) => b.aktif && b.hasContent && sswAllowed(b.slug);
   const base = list.filter(b => !b.induk);
   const ordered = guru ? base : [...base.filter(mine), ...base.filter(b => !mine(b))];   // siswa: bidang yang dipelajari tampil paling depan
-  const myList = guru ? [] : base.filter(mine);
   const isl = ordered.map((b, i) => {
     const open = b.aktif || guru;
     const tag = b.aktif ? (!b.hasContent ? "Segera" : sswAllowed(b.slug) ? "Tersedia" : "Terkunci") : (guru ? "Nonaktif · guru" : "Belum tersedia");
+    const lk = tag === "Terkunci";
     const art = b.gambar ? `<img class="sw-isl-img" src="${esc(b.gambar)}" alt="" loading="lazy">` : islandSVG(b.tema || "generic", { dim: !open });
-    return `<button class="sw-isl ${b.aktif ? "on" : "off"} pos${i % 4}" data-slug="${esc(b.slug)}" style="--d:${(i * 0.7).toFixed(1)}s" onclick="SSW.pick('${esc(b.slug)}')" aria-label="${esc(b.nama)}">
-      ${art}<span class="sw-isl-name"><b>${esc(b.nama)}</b><i class="jp">${esc(b.jp || "")}</i></span><span class="sw-isl-tag ${b.aktif ? "ok" : ""}">${tag}</span></button>`;
+    return `<button class="sw-isl ${b.aktif ? "on" : "off"}${lk ? " lk" : ""} pos${i % 4}" data-slug="${esc(b.slug)}" style="--d:${(i * 0.7).toFixed(1)}s" onclick="SSW.pick('${esc(b.slug)}')" aria-label="${esc(b.nama)}">
+      ${art}<span class="sw-isl-name"><b>${esc(b.nama)}</b><i class="jp">${esc(b.jp || "")}</i></span><span class="sw-isl-tag ${lk ? "lk" : b.aktif ? "ok" : ""}">${lk ? "🔒 " : ""}${tag}</span></button>`;
   }).join("");
   setTimeout(() => { window.__swHubInit && window.__swHubInit(); }, 0);
   return `<div class="sw-wrap sw-hub">
@@ -140,7 +140,6 @@ async function renderHub() {
     ${charaPanel()}
     <div class="sw-head"><div class="jp">特定技能 · 世界の学習島</div><h1>SSW — Pilih Bidang</h1>
       <p>Ketuk sebuah pulau untuk melihat bidangnya. Tiap pulau adalah satu bidang pekerjaan SSW.</p></div>
-    ${myList.length ? `<div class="sw-panel sw-mine"><h2>🎓 Bidangmu</h2><div class="sw-actions left">${myList.map(b => `<button class="btn" onclick="route('ssw-peta/${esc(b.slug)}')">${esc(b.nama)} <span class="jp">${esc(b.jp || "")}</span></button>`).join("")}</div></div>` : ""}
     <div class="sw-world" id="sw-world">${isl || '<div class="sw-muted">Belum ada bidang.</div>'}</div>
     <div class="sw-sheet" id="sw-sheet" hidden></div>
   </div>`;
