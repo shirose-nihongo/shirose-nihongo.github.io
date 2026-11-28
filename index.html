@@ -1631,6 +1631,7 @@ window.state = state;
 // Render a placeholder div + schedule async load. The composite key is
 // baked into the element id so a re-render replaces the right block.
 function _commentsPlaceholder(tipe, lvl, no){
+  return "";   // Fitur komentar di halaman kanji/kosakata dihapus (tidak dipakai, hemat kuota Firestore).
   const id = `cmts-${tipe}-${lvl}-${no}`;
   setTimeout(() => _loadComments(tipe, lvl, no, id), 0);
   return `<div class="comments-block" id="${id}">
