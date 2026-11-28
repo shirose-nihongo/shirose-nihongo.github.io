@@ -1,0 +1,30 @@
+{
+  "_catatan": "Peta proyek Cloudflare Pages. 'base' = alamat proyek. Selama uji pakai *.pages.dev; setelah domain pindah ganti ke subdomain shirosenihongo.com. 'paths' = folder yang dilayani proyek itu (dan di-redirect dari web). Urutan penting: aturan yang lebih spesifik ditulis lebih dulu.",
+  "projects": {
+    "jft-audio": {
+      "base": "https://shirose-jft-audio-1.pages.dev",
+      "paths": ["audio/choukai/jft/", "audio/vv/ir0/", "audio/vv/ir1/", "audio/vv/ir2/", "data/jft/ppt/*/a/"]
+    },
+    "jft-soal": {
+      "base": "https://shirose-jft-soal-1.pages.dev",
+      "paths": ["data/jft/ppt/", "data/jft/slide/"]
+    },
+    "jlpt-audio": {
+      "base": "https://shirose-jlpt-audio-1.pages.dev",
+      "paths": ["audio/choukai/n1/", "audio/choukai/n2/", "audio/choukai/n3/", "audio/choukai/n4/", "audio/choukai/n5/", "audio/vv/n1/", "audio/vv/n2/", "audio/vv/n3/", "audio/vv/n4/", "audio/vv/n5/", "audio/vv/kana/"]
+    },
+    "jlpt-soal": {
+      "base": "https://shirose-jlpt-soal-1.pages.dev",
+      "paths": ["jlpt/", "choukai/", "assets/jlpt/", "data/silabus/", "data/kanji-strokes/"]
+    },
+    "ssw-audio": {
+      "base": "https://shirose-ssw-audio-1.pages.dev",
+      "paths": ["audio/vv/ssw-bc/"]
+    },
+    "ssw-soal": {
+      "base": "https://shirose-ssw-soal-1.pages.dev",
+      "paths": ["assets/ssw/", "data/ssw/", "ssw-materials/"]
+    }
+  },
+  "web_exclude": ["backup/", "tools/", ".github/", ".claude/", "CNAME", "firestore.rules.example", "*.md", "SSW_SOURCE_REGISTRY.json", "audio/vv/test/"]
+}
