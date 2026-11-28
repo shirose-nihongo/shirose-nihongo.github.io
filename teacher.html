@@ -220,6 +220,7 @@ tr.stat-row td{padding-top:0; border-top:none;}
   <div class="topbar-right">
     <a href="./index.html" class="btn ghost" style="text-decoration:none;" title="Kembali ke tampilan siswa">← Student App</a>
     <span id="guru-nama" style="font-size:12px; color:var(--gray); margin:0 10px;"></span>
+    <button class="btn ghost" id="btn-muat-ulang" style="display:none;" onclick="guruMuatUlangData()" title="Ambil data terbaru dari server. Tanpa ini, data disimpan di browser 30 menit supaya hemat kuota Firebase.">🔄 Muat ulang</button>
     <button class="btn ghost" id="btn-logout" style="display:none;" onclick="guruLogout()">Keluar</button>
   </div>
 </div>
@@ -250,9 +251,9 @@ window.aturKoinSiswa = async (uid, lama) => {
   try { await FB.setWalletKoinOf(uid, n, "pengembalian koin gacha oleh guru"); alert("✅ Saldo sekarang " + n.toLocaleString("id-ID") + ". Siswa melihatnya saat membuka aplikasi lagi."); location.reload(); } catch (e) { alert("❌ " + e.message); }
 };
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261128b";
+import * as FB from "./js/firebase-sync.js?v=20261128c";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
-import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261128b";
+import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261128c";
 import { renderCharacter, DEFAULT_EQUIPPED, setBody, setBentuk, BENTUK_DEFAULT } from "./js/character.js?v=20261122p";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
 import { renderDeckTab } from "./js/deck-teacher.js?v=20261126b";
@@ -319,7 +320,9 @@ FB.onAuth(async (user, siswa) => {
   state.user = user;
   document.getElementById("guru-nama").textContent = `👋 ${user.email}`;
   document.getElementById("btn-logout").style.display = "";
+  document.getElementById("btn-muat-ulang").style.display = "";
   renderApp();
+  try { FB.pastikanLeaderboardGabungan && FB.pastikanLeaderboardGabungan(); } catch (e) {}
   // Reveal Admin tab only for admins / developers.
   const navAdmin = document.getElementById("nav-admin");
   if (navAdmin) navAdmin.style.display = FB.userIsAdmin() ? "" : "none";
@@ -348,6 +351,13 @@ window.guruLoginSubmit = async () => {
   } catch(e){
     document.getElementById("lg-err").textContent = e.message;
   }
+};
+window.guruMuatUlangData = () => {
+  FB.guruMuatUlang();
+  state.siswaStale = true;
+  if (state.jx) state.jx.data = null;
+  try { _mx.data = null; } catch (e) {}
+  renderApp();
 };
 window.guruLogout = async () => {
   await FB.keluar();
@@ -618,7 +628,7 @@ function _tombolLebih(total){
     ? `<div style="text-align:center; margin:8px 0;"><button class="btn sm ghost" onclick="lebihBanyak()">Tampilkan lebih banyak (${tampil} dari ${total})</button></div>` : "";
 }
 window.lebihBanyak = () => { state.siswaMax = (state.siswaMax || 100) + 100; renderTab(); };
-window.refreshSiswa = () => { state.siswaStale = true; renderTab(); };
+window.refreshSiswa = () => { FB.guruMuatUlang(); state.siswaStale = true; renderTab(); };
 function renderSiswaDaftarTabel(){
   return `      <div class="table-wrap">
         <table class="cards-m">
@@ -957,7 +967,7 @@ async function _panelProgres(s){
   }
   const sb = await _sswAktif(s);
   if (sb.length){
-    const core = await import("./js/ssw-core.js?v=20261128b");
+    const core = await import("./js/ssw-core.js?v=20261128c");
     const rows = await Promise.all(sb.map(async b => {
       let P = null; try { P = await FB.loadSswProgres(b.slug, s.uid); } catch(e){}
       let pk = null; try { pk = await _sswPack(b.slug); } catch(e){}
@@ -2323,7 +2333,7 @@ window.studentActivity = async (uid, tab) => {
         <h3 style="margin-top:12px;">Ujian JLPT Center (per level &amp; jenis)</h3><div class="table-wrap"><table><thead><tr><th>Ujian</th><th>Dikerjakan</th><th>Terakhir</th><th>Terbaik</th><th>Tanggal terakhir</th></tr></thead><tbody>${jr}</tbody></table></div>
         <h3 style="margin-top:12px;">Riwayat nilai (15 terakhir)</h3><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ujian</th><th>Nilai</th><th>Benar</th></tr></thead><tbody>${nr}</tbody></table></div>`;
     } else if (tab === "ssw") {
-      const core = await import("./js/ssw-core.js?v=20261128b");
+      const core = await import("./js/ssw-core.js?v=20261128c");
       const kls = state.kelasList || [];
       const items = await Promise.all(_SSW_8.map(async ([slug, nama]) => {
         const blokTotal = siswa.aksesSsw === false;
