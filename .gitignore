@@ -23,3 +23,7 @@ wrangler.toml.local
 r2-credentials*
 *secret*
 audio-map.local.json
+.dev.vars
+.dev.vars.*
+*.pem
+service-account*.json

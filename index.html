@@ -1585,7 +1585,7 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261128g";
+import * as FB from "./js/firebase-sync.js?v=20261128h";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261125c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
@@ -1603,7 +1603,7 @@ import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehPelajaran } from "./js/de
 window.bukaPelajaran = async () => { if (await bolehPelajaran()) route("pelajaran"); else toast("Menu Pelajaran tidak tersedia untuk akunmu."); };
 window.bukaHafalan = window.bukaPelajaran;
 const GACHA_ON = false;   // gacha DIHAPUS (Nov 2026) — barang langka kini dari Peti Reward Login
-import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261124a";
+import { initLoginReward, cekLoginReward } from "./js/login-reward.js?v=20261128a";
 initJlpt(FB);
 initKana(FB);
 initSsw(FB);
@@ -5941,9 +5941,9 @@ window.beliItem = async (kat, id, harga, unlock) => {
   if (state.gami.level_karakter < unlock) return toast(`Butuh level ${unlock}`);
   try {
     const r = await FB.beliItem(kat, id, harga, state.level);
-    state.gami.koin = r.newKoin;
+    if (typeof r.newKoin === "number") state.gami.koin = r.newKoin;
     updateChips();
-    if (r.unlimited) toast(`✨ ${state.gami.koin.toLocaleString("id-ID")} 🪙 (unlimited — tidak berkurang)`);
+    if (r.unlimited) toast(`✨ Dibeli (unlimited — koin tidak berkurang)`);
     else toast(`💰 Dibeli! +1 hairstyle ke koleksi`);
     // Update local inventory cache
     if (state.siswa?.karakter){
@@ -5951,7 +5951,7 @@ window.beliItem = async (kat, id, harga, unlock) => {
       if (!inv.includes(id)){ inv.push(id); state.siswa.karakter.inventory = inv; }
     }
     renderShop().then(h => document.getElementById("app").innerHTML = h);
-  } catch(e){ toast("❌ " + e.message); }
+  } catch(e){ toast("❌ " + (/permission|insufficient/i.test(e.message || "") ? "Pembelian ditolak server (harga tidak sesuai). Muat ulang halaman lalu coba lagi." : e.message)); }
 };
 window.equipNow = async (kat, id) => {
   if (!state.user) return;

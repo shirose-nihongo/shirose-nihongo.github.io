@@ -74,6 +74,53 @@ service cloud.firestore {
         && (naik <= 0 || jml3(hb) - jml3(hl) >= naik);
     }
     function pemilikSub(sid) { return signedIn() && me() == sid && terdaftar(); }
+    // Akun yang memang boleh belanja tanpa koin (sama dengan hasUnlimitedCoins di aplikasi).
+    function bebasKoin() {
+      return ownerEmail() || request.auth.token.email == "arumiganteng@gmail.com"
+        || profil().get('permissions', {}).get('unlimited_coins', false) == true
+        || profil().get('permissions', {}).get('full_access', false) == true
+        || profil().get('kelas', '') == 'demo' || role() == 'developer';
+    }
+    function hariPeti(h) { return h == 14 || h == 15 || h == 28 || h % 5 == 0 || h % 7 == 0; }
+    function lrPath(u)   { return /databases/$(database)/documents/siswa/$(u)/login_reward/main; }
+    function dompetPath(u) { return /databases/$(database)/documents/siswa/$(u)/wallet/main; }
+    // Barang baru di karakter.inventory / karakter.gachaInv hanya boleh dari:
+    //  - beli 1 barang: koin di dompet turun PERSIS sebesar harga resmi (toko/harga) dalam tulis yang sama
+    //  - hadiah peti login: barang harus salah satu pilihan peti di server, dan peti ditutup dalam tulis yang sama
+    //  - barang gratis bawaan / barang yang sudah tercatat sebagai hadiah gacha di akun
+    function karakterOk() {
+      let kl = resource.data.get('karakter', {});
+      let kb = request.resource.data.get('karakter', {});
+      let invB = kb.get('inventory', []);
+      let gB = kb.get('gachaInv', []);
+      let tInv = invB.toSet().difference(kl.get('inventory', []).toSet());
+      let tG = gB.toSet().difference(kl.get('gachaInv', []).toSet());
+      return (tInv.size() == 0 && tG.size() == 0) || bebasKoin() || (gachaBaruOk(tG, gB) && invBaruOk(tInv, invB, gB));
+    }
+    function gachaBaruOk(tG, gB) {
+      return tG.size() == 0 || (tG.size() == 1 && tG.hasOnly([gB[gB.size() - 1]])
+        && get(lrPath(me())).data.get('pending', {}).get('opsi', []).hasAny([gB[gB.size() - 1]])
+        && getAfter(lrPath(me())).data.get('pending', null) == null);
+    }
+    function invBaruOk(tInv, invB, gB) {
+      let toko = get(/databases/$(database)/documents/toko/harga).data;
+      let sisa = tInv.difference(gB.toSet()).difference(toko.get('gratis', []).toSet());
+      return sisa.size() == 0 || (sisa.size() == 1 && sisa.hasOnly([invB[invB.size() - 1]])
+        && toko.h.keys().hasAny([invB[invB.size() - 1]])
+        && get(dompetPath(me())).data.koin - getAfter(dompetPath(me())).data.koin == toko.h[invB[invB.size() - 1]]);
+    }
+    // Hadiah login: maju 1 hari, sekali per hari (WIB). Peti hanya di hari peti; pilihan peti tidak bisa diganti.
+    function lrOk() {
+      let o = resource == null ? {} : resource.data;
+      let n = request.resource.data;
+      let hl = o.get('hari', 0);
+      let hb = n.get('hari', 0);
+      let pn = n.get('pending', null);
+      return bebasKoin() || (hb == hl
+        ? (pn == null || pn == o.get('pending', null))
+        : (hb == (hl >= 30 ? 1 : hl + 1) && n.get('hk', '') == hariKe(0) && o.get('hk', '') != hariKe(0)
+           && (pn == null || (hariPeti(hb) && pn.opsi is list && pn.opsi.size() <= 5 && pn.hari == hb))));
+    }
     function gamiXp(l)   { return get(/databases/$(database)/documents/siswa/$(me())/gami/$(l)).data.get('xp', 0); }
     function xpLbOk(l)   { let v = request.resource.data.xp.get(l, 0); return v is number && v >= 0 && (v == 0 || v <= gamiXp(l)); }
 
@@ -93,7 +140,8 @@ service cloud.firestore {
           // Siswa: profil ringan saja (nama, karakter, aktif), tidak boleh ubah hak akses.
           (me() == sid && aktif()
              && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'aksesHafalan', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh', 'demoSejak'])
-             && (!diubah().hasAny(['nama']) || teksAman(request.resource.data.nama, 60)))
+             && (!diubah().hasAny(['nama']) || teksAman(request.resource.data.nama, 60))
+             && (!diubah().hasAny(['karakter']) || karakterOk()))
           // Moderator boleh memperbaiki profilnya sendiri.
           || (me() == sid && ownerEmail())
           // Guru: atur akses/kelas/status/nama siswa (bukan role, bukan akun guru lain).
@@ -130,8 +178,8 @@ service cloud.firestore {
       }
       // Hadiah login: 'main' boleh diperbarui; penanda sekali-pakai (mis. refund) tidak bisa dihapus/diulang.
       match /login_reward/{docId} {
-        allow create: if pemilikSub(sid);
-        allow update: if pemilikSub(sid) && docId == 'main';
+        allow create: if pemilikSub(sid) && (docId != 'main' || lrOk());
+        allow update: if pemilikSub(sid) && docId == 'main' && lrOk();
       }
     }
 
@@ -237,6 +285,11 @@ service cloud.firestore {
     }
 
     // Ujian buatan guru: indeks kategori & paket soal per kategori (1 dokumen) → siswa cukup 1 baca.
+    // Harga resmi toko (ditulis otomatis dari dashboard guru); dipakai rules untuk mengecek pembelian.
+    match /toko/{id} {
+      allow read: if terdaftar();
+      allow write: if isGuru();
+    }
     match /kategori_index/{id} {
       allow read: if terdaftar();
       allow write: if isGuru();

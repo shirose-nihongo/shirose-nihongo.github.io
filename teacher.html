@@ -251,10 +251,12 @@ window.aturKoinSiswa = async (uid, lama) => {
   try { await FB.setWalletKoinOf(uid, n, "pengembalian koin gacha oleh guru"); alert("✅ Saldo sekarang " + n.toLocaleString("id-ID") + ". Siswa melihatnya saat membuka aplikasi lagi."); location.reload(); } catch (e) { alert("❌ " + e.message); }
 };
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261128g";
+import * as FB from "./js/firebase-sync.js?v=20261128h";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
 import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261128d";
 import { renderCharacter, DEFAULT_EQUIPPED, setBody, setBentuk, BENTUK_DEFAULT } from "./js/character.js?v=20261122p";
+import { CATALOG as _KATALOG } from "./js/character.js?v=20261122p";
+import { allShopItems as _barangToko } from "./js/shop-seed.js?v=20261119i";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
 import { renderDeckTab } from "./js/deck-teacher.js?v=20261126b";
 import { renderSoalGuruTab } from "./js/soal-guru.js?v=20261126b";
@@ -323,6 +325,12 @@ FB.onAuth(async (user, siswa) => {
   document.getElementById("btn-muat-ulang").style.display = "";
   renderApp();
   try { FB.pastikanLeaderboardGabungan && FB.pastikanLeaderboardGabungan(); } catch (e) {}
+  // Daftar harga resmi toko → Firestore (rules menolak pembelian yang harganya diubah)
+  try {
+    const gratis = ["none", "seragam_default", "shoes_default"];
+    for (const items of Object.values(_KATALOG)) for (const [id, it] of Object.entries(items)) if (it && (it.equipped_default || it.harga === 0)) gratis.push(id);
+    FB.pastikanHargaToko && FB.pastikanHargaToko(_barangToko(true), gratis);
+  } catch (e) { console.warn("harga toko:", e.message); }
   // Reveal Admin tab only for admins / developers.
   const navAdmin = document.getElementById("nav-admin");
   if (navAdmin) navAdmin.style.display = FB.userIsAdmin() ? "" : "none";

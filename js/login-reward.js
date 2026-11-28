@@ -92,9 +92,10 @@ const LR = window.LR = {
   async klaim() {
     const rw = await muat(); if ((rw.last === ymd() && !bebas()) || rw.pending) return bukaLoginReward();
     const h = rw.hari >= 30 ? 1 : rw.hari + 1, d = hadiahHari(h);
-    const baru = { hari: h, last: ymd(), pending: null };
+    const baru = { hari: h, last: ymd(), hk: FB.hariKunci ? FB.hariKunci() : "", pending: null };
     if (d.peti) baru.pending = { hari: h, peti: d.peti, opsi: pilihAcak(PETI[d.peti].bobot, await punya()) };
-    await FB.saveLoginReward(baru);   // simpan DULU (anti klaim ganda / anti reroll)
+    const ok = await FB.saveLoginReward(baru);   // simpan DULU (anti klaim ganda / anti reroll)
+    if (ok === false) { try { window.toast && window.toast("⚠️ Klaim ditolak server. Cek jam HP lalu coba lagi nanti."); } catch (e) {} return; }
     try { window.awardXP && window.awardXP(d.xp, 0); } catch (e) {}
     try { window.awardKoin && await window.awardKoin(d.koin, "Reward login hari " + h); } catch (e) {}
     try { window.toast && window.toast(`🎁 Hari ${h}: +${d.koin} 🪙 +${d.xp} XP`); } catch (e) {}
@@ -108,14 +109,9 @@ const LR = window.LR = {
   },
   async ambil(id) {
     const rw = await muat(); if (!rw.pending || !rw.pending.opsi.includes(id)) return;
-    const g = (FB.getGachaState ? await FB.getGachaState() : null) || { sinceEpic: 0, sinceLegend: 0, inv: [] };
-    try {
-      await FB.saveGachaState({ sinceEpic: g.sinceEpic || 0, sinceLegend: g.sinceLegend || 0, inv: Array.from(new Set([...(g.inv || []), id])) }, KIND[id] === "shop" ? [id] : []);
-    } catch (e) { console.warn("simpan hadiah peti:", e && e.message); window.toast && window.toast("⚠️ Hadiah belum tersimpan, coba pilih lagi"); return; }   // peti tetap terbuka, tidak hangus
-    // Pastikan benar-benar masuk akun siswa (bukan hanya perangkat ini); gagal → peringatan, barang tetap tersimpan di perangkat
-    let diAkun = true; try { diAkun = FB.pastikanHadiahDiAkun ? await FB.pastikanHadiahDiAkun([id]) : true; } catch (e) { diAkun = false; }
-    if (!diAkun) { try { window.toast && window.toast("⚠️ Hadiah tersimpan di perangkat ini, belum tersinkron ke akun. Buka lagi saat online."); } catch (e) {} }
-    await FB.saveLoginReward({ ...rw, pending: null });
+    // Barang + penutupan peti ditulis SEKALI (server memastikan barang memang salah satu pilihan peti)
+    try { await FB.ambilHadiahPeti(id, rw, KIND[id] === "shop"); }
+    catch (e) { console.warn("simpan hadiah peti:", e && e.message); window.toast && window.toast("⚠️ Hadiah belum tersimpan, coba pilih lagi"); return; }   // peti tetap terbuka, tidak hangus
     try { if (window.SHIROSE_THEME && KIND[id] === "theme") { const g2 = await FB.getGachaState(); window.SHIROSE_THEME.setOwned(g2.inv || []); } } catch (e) {}
     const r = rarOf(id), c = RAR[r][1];
     const m = modal(`<div style="text-align:center"><h2>🎉 Kamu dapat!</h2>${gambarItem(id, r, 130)}<h3 style="color:${c}">${esc(NAMA[id] || id)}</h3><p style="color:var(--gray)">${RAR[r][0]} · masuk inventaris — cek di Shop (tab “Dimiliki”).</p><button class="btn gold" onclick="document.getElementById('lr-modal').remove()">Mantap</button></div>`); delete m.dataset.kunci;
