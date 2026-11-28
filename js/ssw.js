@@ -126,8 +126,7 @@ async function renderHub() {
     const open = b.aktif || guru;
     const tag = b.aktif ? (!b.hasContent ? "Segera" : sswAllowed(b.slug) ? "Tersedia" : "Terkunci") : (guru ? "Nonaktif · guru" : "Belum tersedia");
     const lk = tag === "Terkunci";
-    const art0 = b.gambar ? `<img class="sw-isl-img" src="${esc(b.gambar)}" alt="" loading="lazy">` : islandSVG(b.tema || "generic", { dim: !open });
-    const art = lk ? `<span class="sw-isl-art">${art0}${KUNCI_SVG}</span>` : art0;
+    const art = b.gambar ? `<img class="sw-isl-img" src="${esc(b.gambar)}" alt="" loading="lazy">` : islandSVG(b.tema || "generic", { dim: !open });
     return `<button class="sw-isl ${b.aktif ? "on" : "off"}${lk ? " lk" : ""} pos${i % 4}" data-slug="${esc(b.slug)}" style="--d:${(i * 0.7).toFixed(1)}s" onclick="SSW.pick('${esc(b.slug)}')" aria-label="${esc(b.nama)}">
       ${art}<span class="sw-isl-name"><b>${esc(b.nama)}</b><i class="jp">${esc(b.jp || "")}</i></span><span class="sw-isl-tag ${lk ? "lk" : b.aktif ? "ok" : ""}">${lk ? "🔒 " : ""}${tag}</span></button>`;
   }).join("");
@@ -145,15 +144,6 @@ async function renderHub() {
     <div class="sw-sheet" id="sw-sheet" hidden></div>
   </div>`;
 }
-
-/* Gembok untuk pulau yang terkunci (pulau tetap berwarna asli) */
-const KUNCI_SVG = `<svg class="sw-kunci" viewBox="-40 -40 80 80" aria-hidden="true">
-    <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#5c6470" stroke-width="9" stroke-linecap="round"/>
-    <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#c9d0da" stroke-width="4" stroke-linecap="round"/>
-    <rect x="-24" y="-8" width="48" height="38" rx="8" fill="#f5b83d" stroke="#8a5a12" stroke-width="3"/>
-    <rect x="-24" y="-8" width="48" height="10" rx="5" fill="#ffe08a" opacity=".6"/>
-    <circle cx="0" cy="8" r="5" fill="#5a3a08"/><rect x="-2" y="9" width="4" height="11" rx="2" fill="#5a3a08"/>
-  </svg>`;
 
 /* ============================== PETA PEMBELAJARAN ============================== */
 const NODE_BLD = ["training", "hotel", "maint", "exam"];
