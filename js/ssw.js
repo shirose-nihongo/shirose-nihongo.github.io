@@ -122,7 +122,6 @@ async function renderHub() {
   const mine = (b) => b.aktif && b.hasContent && sswAllowed(b.slug);
   const base = list.filter(b => !b.induk);
   const ordered = guru ? base : [...base.filter(mine), ...base.filter(b => !mine(b))];   // siswa: bidang yang dipelajari tampil paling depan
-  const myList = guru ? [] : base.filter(mine);
   const isl = ordered.map((b, i) => {
     const open = b.aktif || guru;
     const tag = b.aktif ? (!b.hasContent ? "Segera" : sswAllowed(b.slug) ? "Tersedia" : "Terkunci") : (guru ? "Nonaktif · guru" : "Belum tersedia");
@@ -142,33 +141,19 @@ async function renderHub() {
     ${charaPanel()}
     <div class="sw-head"><div class="jp">特定技能 · 世界の学習島</div><h1>SSW — Pilih Bidang</h1>
       <p>Ketuk sebuah pulau untuk melihat bidangnya. Tiap pulau adalah satu bidang pekerjaan SSW.</p></div>
-    ${myList.length ? `<div class="sw-panel sw-mine"><h2>🎓 Bidangmu</h2><div class="sw-actions left">${myList.map(b => `<button class="btn" onclick="route('ssw-peta/${esc(b.slug)}')">${esc(b.nama)} <span class="jp">${esc(b.jp || "")}</span></button>`).join("")}</div></div>` : ""}
     <div class="sw-world" id="sw-world">${isl || '<div class="sw-muted">Belum ada bidang.</div>'}</div>
     <div class="sw-sheet" id="sw-sheet" hidden></div>
   </div>`;
 }
 
-/* Rantai menyilang + gembok merah untuk pulau yang terkunci */
-const KUNCI_SVG = (() => {
-  const rantai = (x1, y1, x2, y2) => {
-    const n = 11, ang = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI; let h = "";
-    for (let i = 0; i <= n; i++) {
-      const x = x1 + (x2 - x1) * i / n, y = y1 + (y2 - y1) * i / n;
-      h += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="9" ry="${i % 2 ? 3 : 5.5}" transform="rotate(${ang.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
-    }
-    return h;
-  };
-  return `<svg class="sw-kunci" viewBox="0 0 200 170" aria-hidden="true">
-    <g fill="none" stroke="#5a0b10" stroke-width="5.5">${rantai(22, 30, 178, 140)}${rantai(178, 30, 22, 140)}</g>
-    <g fill="none" stroke="#e23a3a" stroke-width="3">${rantai(22, 30, 178, 140)}${rantai(178, 30, 22, 140)}</g>
-    <g transform="translate(100 88)">
-      <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#7a0f15" stroke-width="9" stroke-linecap="round"/>
-      <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#ff6b6b" stroke-width="4" stroke-linecap="round"/>
-      <rect x="-24" y="-8" width="48" height="38" rx="8" fill="#c62828" stroke="#5a0b10" stroke-width="3"/>
-      <rect x="-24" y="-8" width="48" height="10" rx="5" fill="#ef5350" opacity=".6"/>
-      <circle cx="0" cy="8" r="5" fill="#3b0508"/><rect x="-2" y="9" width="4" height="11" rx="2" fill="#3b0508"/>
-    </g></svg>`;
-})();
+/* Gembok untuk pulau yang terkunci (pulau tetap berwarna asli) */
+const KUNCI_SVG = `<svg class="sw-kunci" viewBox="-40 -40 80 80" aria-hidden="true">
+    <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#5c6470" stroke-width="9" stroke-linecap="round"/>
+    <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#c9d0da" stroke-width="4" stroke-linecap="round"/>
+    <rect x="-24" y="-8" width="48" height="38" rx="8" fill="#f5b83d" stroke="#8a5a12" stroke-width="3"/>
+    <rect x="-24" y="-8" width="48" height="10" rx="5" fill="#ffe08a" opacity=".6"/>
+    <circle cx="0" cy="8" r="5" fill="#5a3a08"/><rect x="-2" y="9" width="4" height="11" rx="2" fill="#5a3a08"/>
+  </svg>`;
 
 /* ============================== PETA PEMBELAJARAN ============================== */
 const NODE_BLD = ["training", "hotel", "maint", "exam"];
