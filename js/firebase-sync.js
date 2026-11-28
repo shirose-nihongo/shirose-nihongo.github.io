@@ -348,9 +348,35 @@ export function demoKredensial(namaRaw) {
   if (slug.length < 2) throw new Error("Nama minimal 2 huruf/angka (tanpa spasi atau simbol).");
   return { slug, email: `${slug}demo1234@gmail.com`, password: `${slug}1234` };
 }
+/* ===== Batas 1 akun demo per perangkat =====
+ * Setelah membuat demo, perangkat ditandai di 3 tempat (localStorage, IndexedDB, cookie) supaya
+ * tidak hilang hanya karena satu tempat dibersihkan. Masuk lagi ke akun demo yang SAMA tetap boleh. */
+const DEMO_TANDA = "shirose-demo-perangkat";
+function _idbPerangkat() { return new Promise((res, rej) => { try { const r = indexedDB.open("shirose-perangkat", 1); r.onupgradeneeded = () => r.result.createObjectStore("kv"); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); }
+async function _demoTandaBaca() {
+  let v = null;
+  try { v = JSON.parse(localStorage.getItem(DEMO_TANDA) || "null"); } catch (e) {}
+  if (!v) { try { const m = document.cookie.match(new RegExp("(?:^|; )" + DEMO_TANDA + "=([^;]*)")); if (m) v = JSON.parse(decodeURIComponent(m[1])); } catch (e) {} }
+  if (!v) { try { const d = await _idbPerangkat(); v = await new Promise(res => { const t = d.transaction("kv").objectStore("kv").get(DEMO_TANDA); t.onsuccess = () => res(t.result || null); t.onerror = () => res(null); }); } catch (e) {} }
+  return v && v.email ? v : null;
+}
+async function _demoTandaTulis(email) {
+  const v = { email, t: Date.now() }, str = JSON.stringify(v);
+  try { localStorage.setItem(DEMO_TANDA, str); } catch (e) {}
+  try { document.cookie = `${DEMO_TANDA}=${encodeURIComponent(str)}; max-age=${60 * 60 * 24 * 400}; path=/; SameSite=Lax`; } catch (e) {}
+  try { const d = await _idbPerangkat(); await new Promise(res => { const t = d.transaction("kv", "readwrite"); t.objectStore("kv").put(v, DEMO_TANDA); t.oncomplete = res; t.onerror = res; }); } catch (e) {}
+}
 export async function klaimAkunDemo(namaRaw) {
   const { email, password } = demoKredensial(namaRaw);
   const namaTampil = String(namaRaw).trim().slice(0, 30) || email.split("@")[0];
+  const tanda = await _demoTandaBaca();
+  if (tanda && tanda.email !== email) {
+    await _demoTandaTulis(tanda.email);   // pulihkan tanda di tempat yang mungkin sudah dihapus
+    const namaLama = tanda.email.replace(/demo1234@gmail\.com$/, "");
+    const err = new Error(`HP ini sudah pernah dipakai membuat akun demo (nama: "${namaLama}"). Satu HP hanya boleh 1 akun demo. Ketik nama "${namaLama}" untuk masuk lagi ke akun itu.`);
+    err.code = "demo-perangkat-sudah";
+    throw err;
+  }
   _demoCreating = true;
   let user = null;
   try {
@@ -382,6 +408,7 @@ export async function klaimAkunDemo(namaRaw) {
   } finally {
     _demoCreating = false;
   }
+  await _demoTandaTulis(email);
   await _prosesAuthUser(user);
   return { email, password };
 }
