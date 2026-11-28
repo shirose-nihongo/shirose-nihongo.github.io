@@ -419,3 +419,10 @@ body.sw-figopen{padding-bottom:62vh;}
 .bk-zbar button{min-width:40px; height:36px; border:0; border-radius:999px; background:transparent; color:#fff; font-size:18px; font-weight:700; cursor:pointer;}
 .bk-zbar button#bk-zv{font-size:12px; min-width:52px;}
 .bk-zbar button:active{background:rgba(255,255,255,.14);}
+
+/* Buku: tinggi halaman pasti dari page-dims.json (zoom/scroll tidak melompat) + seret untuk geser saat di-zoom */
+.bk-pgw[style*="aspect-ratio"],#bk-scroll.bk-zoomed .bk-pgw[style*="aspect-ratio"]{min-height:0 !important; contain-intrinsic-size:none !important;}
+.bk-pgw[style*="aspect-ratio"] img{height:100%; object-fit:contain;}
+#bk-img[style*="aspect-ratio"]{height:auto;}
+@media (hover:hover) and (pointer:fine){ #bk-scroll.bk-zoomed,#bk-stage.bk-zoomed{cursor:grab !important;} #bk-scroll.bk-zoomed *,#bk-stage.bk-zoomed *{cursor:inherit !important;} }
+#bk-scroll.bk-drag,#bk-stage.bk-drag{cursor:grabbing !important; user-select:none;}
