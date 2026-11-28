@@ -126,9 +126,11 @@ async function renderHub() {
   const isl = ordered.map((b, i) => {
     const open = b.aktif || guru;
     const tag = b.aktif ? (!b.hasContent ? "Segera" : sswAllowed(b.slug) ? "Tersedia" : "Terkunci") : (guru ? "Nonaktif · guru" : "Belum tersedia");
-    const art = b.gambar ? `<img class="sw-isl-img" src="${esc(b.gambar)}" alt="" loading="lazy">` : islandSVG(b.tema || "generic", { dim: !open });
-    return `<button class="sw-isl ${b.aktif ? "on" : "off"} pos${i % 4}" data-slug="${esc(b.slug)}" style="--d:${(i * 0.7).toFixed(1)}s" onclick="SSW.pick('${esc(b.slug)}')" aria-label="${esc(b.nama)}">
-      ${art}<span class="sw-isl-name"><b>${esc(b.nama)}</b><i class="jp">${esc(b.jp || "")}</i></span><span class="sw-isl-tag ${b.aktif ? "ok" : ""}">${tag}</span></button>`;
+    const lk = tag === "Terkunci";
+    const art0 = b.gambar ? `<img class="sw-isl-img" src="${esc(b.gambar)}" alt="" loading="lazy">` : islandSVG(b.tema || "generic", { dim: !open });
+    const art = lk ? `<span class="sw-isl-art">${art0}${KUNCI_SVG}</span>` : art0;
+    return `<button class="sw-isl ${b.aktif ? "on" : "off"}${lk ? " lk" : ""} pos${i % 4}" data-slug="${esc(b.slug)}" style="--d:${(i * 0.7).toFixed(1)}s" onclick="SSW.pick('${esc(b.slug)}')" aria-label="${esc(b.nama)}">
+      ${art}<span class="sw-isl-name"><b>${esc(b.nama)}</b><i class="jp">${esc(b.jp || "")}</i></span><span class="sw-isl-tag ${lk ? "lk" : b.aktif ? "ok" : ""}">${lk ? "🔒 " : ""}${tag}</span></button>`;
   }).join("");
   setTimeout(() => { window.__swHubInit && window.__swHubInit(); }, 0);
   return `<div class="sw-wrap sw-hub">
@@ -145,6 +147,28 @@ async function renderHub() {
     <div class="sw-sheet" id="sw-sheet" hidden></div>
   </div>`;
 }
+
+/* Rantai menyilang + gembok merah untuk pulau yang terkunci */
+const KUNCI_SVG = (() => {
+  const rantai = (x1, y1, x2, y2) => {
+    const n = 11, ang = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI; let h = "";
+    for (let i = 0; i <= n; i++) {
+      const x = x1 + (x2 - x1) * i / n, y = y1 + (y2 - y1) * i / n;
+      h += `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="9" ry="${i % 2 ? 3 : 5.5}" transform="rotate(${ang.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
+    }
+    return h;
+  };
+  return `<svg class="sw-kunci" viewBox="0 0 200 170" aria-hidden="true">
+    <g fill="none" stroke="#5a0b10" stroke-width="5.5">${rantai(22, 30, 178, 140)}${rantai(178, 30, 22, 140)}</g>
+    <g fill="none" stroke="#e23a3a" stroke-width="3">${rantai(22, 30, 178, 140)}${rantai(178, 30, 22, 140)}</g>
+    <g transform="translate(100 88)">
+      <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#7a0f15" stroke-width="9" stroke-linecap="round"/>
+      <path d="M-15 -6 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#ff6b6b" stroke-width="4" stroke-linecap="round"/>
+      <rect x="-24" y="-8" width="48" height="38" rx="8" fill="#c62828" stroke="#5a0b10" stroke-width="3"/>
+      <rect x="-24" y="-8" width="48" height="10" rx="5" fill="#ef5350" opacity=".6"/>
+      <circle cx="0" cy="8" r="5" fill="#3b0508"/><rect x="-2" y="9" width="4" height="11" rx="2" fill="#3b0508"/>
+    </g></svg>`;
+})();
 
 /* ============================== PETA PEMBELAJARAN ============================== */
 const NODE_BLD = ["training", "hotel", "maint", "exam"];

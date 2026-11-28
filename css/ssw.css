@@ -39,6 +39,12 @@
 .sw-isl:active .sw-isl-svg{transform:scale(.97);}
 .sw-isl-name{display:flex; flex-direction:column; align-items:center; margin-top:-4px; text-shadow:0 2px 6px rgba(0,0,0,.6);} .sw-isl-name b{font-size:14px;} .sw-isl-name i{font-style:normal; font-size:12px; opacity:.85;}
 .sw-isl-tag{margin-top:3px; font-size:11px; padding:2px 9px; border-radius:99px; background:rgba(0,0,0,.4); color:#dfe7ff;} .sw-isl-tag.ok{background:#1f9e68; color:#fff;}
+.sw-isl-art{position:relative; display:block; width:100%; max-width:230px; animation:swFloat 5.5s ease-in-out infinite; animation-delay:var(--d,0s);}
+.sw-isl.lk .sw-isl-svg,.sw-isl.lk .sw-isl-img{animation:none; filter:sepia(1) saturate(5) hue-rotate(-45deg) brightness(.62) drop-shadow(0 8px 12px rgba(200,20,30,.45));}
+.sw-kunci{position:absolute; inset:4% 6% 10%; width:88%; height:86%; pointer-events:none; filter:drop-shadow(0 3px 4px rgba(0,0,0,.5));}
+.sw-isl.lk .sw-isl-name b{color:#ff8a8a;}
+.sw-isl-tag.lk{background:#b71c1c; color:#fff; font-weight:700;}
+.sw-isl.lk:hover .sw-isl-svg,.sw-isl.lk:focus-visible .sw-isl-svg{transform:none;}
 .sw-isl.sel .sw-isl-svg,.sw-isl.sel .sw-isl-img{animation-duration:3s; transform:scale(1.08);}
 .sw-world.focus .sw-isl:not(.sel){opacity:.28; filter:blur(1px); pointer-events:none;}
 .sw-sheet{position:fixed; left:0; right:0; bottom:0; z-index:60; padding:12px; animation:swUp .3s ease;} @keyframes swUp{from{transform:translateY(40px); opacity:0}to{transform:none; opacity:1}}
