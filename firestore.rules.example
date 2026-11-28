@@ -134,6 +134,22 @@ service cloud.firestore {
       allow delete: if isGuru();
     }
 
+    // Ujian buatan guru: indeks kategori (1 dokumen) & paket soal per kategori (1 dokumen) → siswa cukup 1 baca.
+    match /kategori_index/{id} {
+      allow read: if terdaftar();
+      allow write: if isGuru();
+    }
+    match /soal_paket/{katId} {
+      allow read: if isGuru()
+        || bolehLevel(get(/databases/$(database)/documents/kategori_ujian/$(katId)).data.get('level', 'n5'));
+      allow write: if isGuru();
+    }
+    // Dashboard guru: SATU kueri untuk hasil baru semua siswa (collection group).
+    match /{path=**}/jlpt_hasil/{id} { allow read: if isGuru(); }
+    match /{path=**}/jft_hasil/{id} { allow read: if isGuru(); }
+    match /{path=**}/mensetsu_hasil/{id} { allow read: if isGuru(); }
+    match /{path=**}/nilai/{id} { allow read: if isGuru(); }
+
     // Karakter publik untuk leaderboard (dandanan saja): siswa terdaftar membaca; siswa hanya menulis dokumennya sendiri.
     match /lbk/{uid} {
       allow read: if terdaftar();
