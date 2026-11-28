@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com https://www.google.com https://cdn.sheetjs.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.gstatic.com https://cdn.jsdelivr.net; media-src 'self' blob: data:; connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firestore.googleapis.com https://www.googleapis.com https://firebaseinstallations.googleapis.com https://content-firebaseappcheck.googleapis.com https://shirose-nihongo.firebaseapp.com https://mensetsu-ai.shirose-nihongo.workers.dev https://cdn.jsdelivr.net https://raw.githubusercontent.com; frame-src 'self' https://shirose-nihongo.firebaseapp.com https://www.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"/>
 <title>SHIROSE NIHONGO — Belajar bahasa Jepang, buka lebih banyak kesempatan</title>
 <meta name="description" content="Shirose Nihongo: platform belajar bahasa Jepang untuk pelajar Indonesia — JLPT N5–N1, flashcard, kanji, SSW dengan buku interaktif, JFT-Basic dan persiapan MENSETSU. Klaim akun demo 7 hari gratis."/>
 <meta name="theme-color" content="#161b36"/>
@@ -206,6 +207,19 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .card h3{font-size:18px;margin-bottom:6px;font-family:var(--font-jp)}
 .card p{color:var(--gray);font-size:15px}
 .card .num{display:inline-block;margin-top:10px;font-size:13px;color:var(--gold);font-weight:700}
+
+/* panduan menu & program */
+button.app-node{font:inherit;color:inherit;cursor:pointer;padding:0}
+button.app-node:hover,button.app-node:focus-visible{border-color:#ffb74d;box-shadow:0 0 0 3px rgba(255,183,77,.35)}
+.orbit:hover .spin,.orbit:hover .node .in,.orbit:focus-within .spin,.orbit:focus-within .node .in{animation-play-state:paused}
+.pg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;margin-top:28px}
+.pg-card{scroll-margin-top:90px;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px;background:rgba(255,255,255,.04);transition:border-color .3s,box-shadow .3s}
+.pg-card .pg-jp{font-size:12px;letter-spacing:2px;color:#ffb74d}.pg-card h3{margin:2px 0 8px}
+.pg-card p,.pg-card li{font-size:14px;line-height:1.6}.pg-card ul{padding-left:18px;margin:10px 0 0}
+.pg-card.sorot{border-color:#ffb74d;box-shadow:0 0 0 4px rgba(255,183,77,.35)}
+#program{scroll-margin-top:90px}
+.pg-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:44px 0 0}
+#pg-prog{max-width:640px;margin:16px auto 0}
 
 /* character studio */
 .studio{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:30px}
@@ -424,9 +438,9 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     <div class="art">
       <div class="jtitle"><div class="jp">日本語への冒険</div><div class="sub">YOUR LEARNING JOURNEY</div></div>
       <div class="herobar" aria-hidden="true"><span>Lv <b>7</b></span><span><b>1.250</b> XP</span><span><b>480</b> 🪙</span><span>🔥 <b>12</b></span></div>
-      <div class="orbit" id="orbit" aria-hidden="true">
-        <div class="glow"></div><div class="ring r2"></div>
-        <div class="hero-char" id="heroChar"><div class="hero-fallback">日</div></div>
+      <div class="orbit" id="orbit">
+        <div class="glow" aria-hidden="true"></div><div class="ring r2" aria-hidden="true"></div>
+        <div class="hero-char" id="heroChar" aria-hidden="true"><div class="hero-fallback">日</div></div>
       </div>
     </div>
   </div>
@@ -443,6 +457,21 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       <div class="stat rv"><b data-count="total.sswQuiz">5.529</b><span>Soal kuis SSW</span></div>
       <div class="stat rv"><b data-count="total.sswHalamanBuku">2.404</b><span>Halaman buku SSW interaktif</span></div>
       <div class="stat rv"><b data-count="total.mensetsu">320</b><span>Pertanyaan wawancara MENSETSU</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="panduan">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">使い方</div>
+      <h2>Kenali setiap <span class="grad">menu di aplikasi</span></h2>
+      <p class="lead">Ketuk salah satu bulatan di sekitar karakter, kamu akan diantar ke penjelasannya di sini.</p>
+    </div>
+    <div class="pg-grid" id="pg-menu"></div>
+    <div id="program">
+      <div class="pg-tabs" role="group" aria-label="Pilih program" id="pg-tabs"></div>
+      <div id="pg-prog"></div>
     </div>
   </div>
 </section>
@@ -622,7 +651,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     <div class="center rv">
       <div class="eyebrow">聴解 · Choukai</div>
       <h2>Latihan mendengar dengan <span class="grad">suara anime yang lucu</span></h2>
-      <p class="lead">Soal choukai dibacakan karakter-karakter berbeda: narator, guru, ibu, bapak, siswi, siswa, sampai suara anak kecil. Dengarkan contohnya, lalu pilih jawabannya.</p>
+      <p class="lead">Soal choukai dibacakan karakter-karakter berbeda: narator, guru, ibu, bapak, sampai siswa. Dengarkan contohnya, lalu pilih jawabannya.</p>
     </div>
     <div class="studio ck2 rv">
       <div class="demo">
@@ -893,7 +922,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
       au.onended = stop; au.onerror = function(){ stop(); ex.textContent = "Audio belum bisa diputar. Coba lagi."; };
       au.play().catch(function(){ stop(); }); }
     play.onclick = function(){ go("./audio/choukai/n5/m1_01.mp3"); };
-    [["aoyama","Pak Guru","Narator & instruksi"],["mochiko","Kakak Ceria","Percakapan sehari-hari"],["goki","Ibu Guru","Suara dewasa yang lembut"],["sourin","Kakek","Tokoh senior"],["nana","Siswi","Suara cewek manis"],["kurita","Siswa","Suara cowok santai"],["no7","Si Kecil","Suara anak-anak"]].forEach(function(v){
+    [["aoyama","Pak Guru","Narator & instruksi"],["mochiko","Kakak Ceria","Percakapan sehari-hari"],["goki","Ibu Guru","Suara dewasa yang lembut"],["sourin","Kakek","Tokoh senior"],["kurita","Siswa","Suara cowok santai"]].forEach(function(v){
       var b = el("button"); b.type = "button"; b.appendChild(el("b",null,"🔊 "+v[1])); b.appendChild(el("small",null,v[2]));
       b.onclick = function(){ go("./audio/vv/test/"+v[0]+".mp3", b); }; vb.appendChild(b);
     });
@@ -932,7 +961,8 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     }
     /* 9 node SAMA dengan orbit di aplikasi (renderCharaOrbital): ikon, kanji, label */
     var NAV=[["📚","学習","MATERI"],["🧠","暗記","HAFALAN"],["📝","試験","UJIAN"],["🎧","聴解","CHOUKAI"],["🗺️","目次","SYLABUS"],["📒","記録","RANGKUMAN"],["🛒","商店","SHOP"],["📅","暦","KALENDER"],["🏆","順位","PERINGKAT"]];
-    ring(38,120,false,NAV.map(function(n){var d=el("div","app-node");d.appendChild(el("div","ico",n[0]));d.appendChild(el("div","jp",n[1]));d.appendChild(el("div","lbl",n[2]));return d}));
+    var KEY={MATERI:"materi",HAFALAN:"hafalan",UJIAN:"ujian",CHOUKAI:"choukai",SYLABUS:"sylabus",RANGKUMAN:"rangkuman",SHOP:"shop",KALENDER:"kalender",PERINGKAT:"leaderboard"};
+    ring(38,120,false,NAV.map(function(n){var d=el("button","app-node");d.type="button";d.dataset.menu=KEY[n[2]];d.setAttribute("aria-label","Penjelasan menu "+n[2]);d.appendChild(el("div","ico",n[0]));d.appendChild(el("div","jp",n[1]));d.appendChild(el("div","lbl",n[2]));return d}));
   })();
 })();
 </script>
@@ -941,6 +971,26 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 /* Karakter asli aplikasi (js/character.js) dipakai di hero & Studio Karakter. */
 import {renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED} from "./js/character.js";
 import {islandSVG} from "./js/ssw-art.js";
+import {MENU, PROGRAM} from "./js/panduan.js";
+(function(){
+  var grid = document.getElementById("pg-menu"), tabs = document.getElementById("pg-tabs"), prog = document.getElementById("pg-prog"); if (!grid) return;
+  function kartu(d){ return '<div class="pg-jp">'+d.jp+'</div><h3>'+d.icon+' '+d.nama+'</h3><p>'+d.ringkas+'</p><ul>'+d.poin.map(function(p){return "<li>"+p+"</li>"}).join("")+'</ul>'; }
+  Object.keys(MENU).forEach(function(k){ var c = document.createElement("article"); c.className = "pg-card"; c.id = "p-"+k; c.innerHTML = kartu(MENU[k]); grid.appendChild(c); });
+  function pilih(k){
+    prog.innerHTML = '<article class="pg-card">'+kartu(PROGRAM[k])+'</article>';
+    tabs.querySelectorAll("button").forEach(function(b){ var on = b.dataset.p===k; b.className = "btn sm "+(on?"primary":"ghost"); b.setAttribute("aria-pressed", String(on)); });
+  }
+  Object.keys(PROGRAM).forEach(function(k){ var b = document.createElement("button"); b.type = "button"; b.dataset.p = k; b.textContent = "Penjelasan "+PROGRAM[k].nama; b.onclick = function(){ pilih(k); }; tabs.appendChild(b); });
+  pilih("jlpt");
+  var timer;
+  document.getElementById("orbit").addEventListener("click", function(e){
+    var n = e.target.closest("[data-menu]"); if (!n) return;
+    var c = document.getElementById("p-"+n.dataset.menu); if (!c) return;
+    c.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"center"});
+    clearTimeout(timer); grid.querySelectorAll(".sorot").forEach(function(x){x.classList.remove("sorot")});
+    c.classList.add("sorot"); timer = setTimeout(function(){ c.classList.remove("sorot"); }, 2600);
+  });
+})();
 (function(){
   var G = document.getElementById("isl-grid"); if (!G) return;
   [["Building Cleaning","ビルクリーニング","building"],["Kaigo","介護","kaigo","+ Bahasa Jepang Kaigo"],["Food Manufacturing","飲食料品製造業","factory"],["Food Service","外食業","restaurant"],["Agriculture","農業","farm"],["Construction","建設","construction","Sipil · Bangunan · Lifeline"],["Accommodation","宿泊","hotel"],["Livestock","畜産業","farm"],["Fishery","漁業","fishery"],["Auto Maintenance","自動車整備","automobile"],["Industrial Manufacturing","工業製品製造業","machine","Mesin Logam · Elektronik · Permukaan Logam"],["Wood Industry","木材産業","wood"],["Auto Transport","自動車運送業","truck"],["Forestry","林業","forestry"],["Linen Supply","リネンサプライ","linen"],["Railway","鉄道","railway","Jalur · Listrik · Kereta"],["Shipbuilding","造船・舶用工業","ship"],["Logistics","物流倉庫","logistics"],["Recycling","資源循環","recycling"],["Aviation","航空","aviation","Ground Handling · Aircraft Maint."]].forEach(function(b,i){
@@ -952,8 +1002,8 @@ import {islandSVG} from "./js/ssw-art.js";
   });
 })();
 var $ = function(s){return document.querySelector(s)};
-var heroEq = {rambut:"hr_emas", pakaian:"seragam_default", aksesori:"ac_halo", sayap:"sy_malaikat", item_tangan:"buku_emas", aura:"au_putih"};
-try { $("#heroChar").innerHTML = renderCharacter(heroEq, "light", {wide:true}); } catch(e){}
+var heroEq = {rambut:"fh_gelombang_cokelat", poni:"pn_tipis", pakaian:"gn_yukata_sakura", sepatu:"hl_balet_pink", jepit:"jp_bunga", anting:"an_bunga", sayap:"sy_malaikat", item_tangan:"buku_emas", aura:"au_putih"};
+try { $("#heroChar").innerHTML = renderCharacter(heroEq, "light", {wide:true, body:"female"}); } catch(e){}
 
 var eq = Object.assign({}, DEFAULT_EQUIPPED, {rambut:"anime_boy", pakaian:"hoodie_pink", sepatu:"sneakers_putih", aksesori:"headband_pink", item_tangan:"buku_emas", aura:"aura_pink"}), skin = "light";
 /* Slot & item diambil langsung dari katalog karakter aplikasi (ikut bertambah saat katalog bertambah). */

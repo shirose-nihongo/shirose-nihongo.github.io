@@ -15,7 +15,7 @@
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
 // v405 — Konfirmasi keluar sesi hafalan (JLPT/JFT/SSW, Kana, Mensetsu flashcard).
-const CACHE = "shirose-nihongo-v508";
+const CACHE = "shirose-nihongo-v511";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
@@ -24,6 +24,7 @@ const CORE = [
   "./landing.html",
   "./bio.html",
   "./js/landing-config.js",
+  "./js/panduan.js",
   "./js/membership.js",
   "./js/mobile-bar.js",
   "./js/landing-stats.js",

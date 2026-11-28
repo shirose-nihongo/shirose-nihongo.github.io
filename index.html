@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com https://www.google.com https://cdn.sheetjs.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.gstatic.com https://cdn.jsdelivr.net; media-src 'self' blob: data:; connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://firestore.googleapis.com https://www.googleapis.com https://firebaseinstallations.googleapis.com https://content-firebaseappcheck.googleapis.com https://shirose-nihongo.firebaseapp.com https://mensetsu-ai.shirose-nihongo.workers.dev https://cdn.jsdelivr.net https://raw.githubusercontent.com; frame-src 'self' https://shirose-nihongo.firebaseapp.com https://www.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"/>
 <script>
 /* Landing page publik: kunjungan pertama tanpa deep-link & tanpa riwayat login -> landing.html.
    Tidak mengubah auth/routing; PWA terpasang & pengguna yang pernah login tetap langsung ke aplikasi. */
@@ -1576,6 +1577,8 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
+import { panduanRute, pilihPanduan } from "./js/panduan.js";
+window.pilihPanduan = pilihPanduan;
 import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261122p";
 import Chibi from "./js/chibi.js?v=20261125h";
 window.Chibi = Chibi;
@@ -1593,7 +1596,7 @@ import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTer
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261128b";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128e";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128f";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 // SILABUS HARIAN: target belajar per hari + hafalan + ujian harian (kunci ≥ 80%), fukushu, simulasi, jadwal bertanggal (js/silabus-harian.js)
 import { SILABUS_ROUTES, initSilabus } from "./js/silabus-harian.js?v=20261126l";
@@ -2558,6 +2561,8 @@ function _autoChibi(name){
 }
 function _renderRoute(name, rest){
   const fn = routes[name] || renderHome;
+  // Panduan menu/program: hanya untuk akun yang sudah login.
+  try { panduanRute(name || "home", { uid: state.user?.uid, level: state.level }); } catch(e){ console.warn("panduan", e); }
   const app = document.getElementById("app");
   app.classList.remove("has-sidepanel");
   app.innerHTML = '<div class="loading">Memuat…</div>';
@@ -2891,7 +2896,7 @@ function renderPilihLevel(){
       <div class="jlpt-grid">${cards}${kartuJft}${kartuKana}${kartuSsw}${kartuMensetsu}${kartuHafalan}${kartuSaran}${kartuGuru}</div>
       <div class="foot">
         ${adaYangBuka ? "Level bergembok dibuka oleh guru." : "Belum ada level yang dibuka untukmu — hubungi guru."}
-        <div style="margin-top:12px;"><button class="btn ghost" onclick="logout()">Keluar</button></div>
+        <div style="margin-top:12px;"><button class="btn ghost" onclick="pilihPanduan()">❓ Panduan</button> <button class="btn ghost" onclick="logout()">Keluar</button></div>
       </div>
     </div>`;
 }
