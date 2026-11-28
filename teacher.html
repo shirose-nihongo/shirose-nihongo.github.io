@@ -268,7 +268,7 @@ const state = {
   excelParsed: null,
   level: "n5",
 };
-if (/^#\/?ssw/.test(location.hash)) state.tab = "ssw";
+// (menu SSW dihapus dari dashboard guru)
 
 /* ===== Level JLPT yang sedang dikelola guru (pembatas tegas N5–N1) ===== */
 const LV = ["n5","n4","n3","n2","n1"];
@@ -370,7 +370,7 @@ window.guruLogout = async () => {
 window.state = state;
 window.setPjSub = (t) => { state.pjSub = t; renderTab(); };
 /* ===== Menu bawah (HP) + sheet "Lainnya" ===== */
-const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["ssw","🌏","SSW"],["laporan","📈","Laporan"],["bankjlpt","📚","Bank JLPT"],["deck","🗂️","Pelajaran"],["saran","💬","Saran"]];
+const MENU_UTAMA = [["siswa","👥","Siswa"],["kelas","🎓","Kelas"],["deck","🗂️","Pelajaran"],["saran","💬","Saran"]];
 const MENU_LAIN = [];   // menu lain dihapus dari tampilan (fungsi backend tetap ada)
 function renderBottomNav(){
   const lain = MENU_LAIN.filter(m => m[0] !== "admin" || FB.userIsAdmin());
@@ -395,9 +395,6 @@ function renderApp(){
       <div class="sidebar">
         <div class="nav-item ${state.tab==='siswa'?'active':''}" onclick="setTab('siswa')"><span class="ico">👥</span> Siswa</div>
         <div class="nav-item ${state.tab==='kelas'?'active':''}" onclick="setTab('kelas')"><span class="ico">🎓</span> Kelas</div>
-        <div class="nav-item ${state.tab==='ssw'?'active':''}" onclick="setTab('ssw')"><span class="ico">🌏</span> SSW</div>
-        <div class="nav-item ${state.tab==='laporan'?'active':''}" onclick="setTab('laporan')"><span class="ico">📈</span> Laporan</div>
-        <div class="nav-item ${state.tab==='bankjlpt'?'active':''}" onclick="setTab('bankjlpt')"><span class="ico">📚</span> Bank JLPT</div>
         <div class="nav-item ${state.tab==='deck'?'active':''}" onclick="setTab('deck')"><span class="ico">🗂️</span> Pelajaran</div>
         <div class="nav-item ${state.tab==='saran'?'active':''}" onclick="setTab('saran')"><span class="ico">💬</span> Saran</div>
       </div>
@@ -407,7 +404,7 @@ function renderApp(){
   `;
   renderTab();
 }
-const TAB_BOLEH = ["siswa","kelas","ssw","laporan","bankjlpt","deck","saran"];
+const TAB_BOLEH = ["siswa","kelas","deck","saran"];   // SSW, Laporan, Bank JLPT dihapus dari menu (kodenya masih ada)
 window.setTab = (t) => { state.tab = TAB_BOLEH.includes(t) ? t : "siswa"; state.siswaStale = true; renderApp(); };
 
 window.renderTab = (...a) => renderTab(...a);
