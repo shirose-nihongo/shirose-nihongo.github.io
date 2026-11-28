@@ -129,6 +129,29 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .tick{list-style:none;margin-top:14px;display:grid;gap:8px}
 .tick li{display:flex;gap:10px;color:var(--gray);font-size:15px}
 .tick li::before{content:"✓";color:var(--pink-light);font-weight:800}
+.qz-hasil{text-align:center;padding:18px 8px}.qz-skor{font-family:var(--font-jp);font-size:48px;font-weight:800;color:var(--gold);line-height:1.1;margin-bottom:8px}.qz-hasil p{color:var(--gray);margin-bottom:14px}
+.mt-list{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
+.mt-list button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:#fff;cursor:pointer;font:inherit}
+.mt-list button b{font-family:var(--font-jp);font-size:20px}.mt-list button small{font-size:11px;color:var(--gray-dim)}
+.mt-list button[aria-pressed="true"]{border-color:var(--pink);box-shadow:0 0 0 2px color-mix(in srgb,var(--pink) 35%,transparent)}
+.mt-det{text-align:center;margin-bottom:10px}.mt-kata{font-family:var(--font-jp);font-size:38px;font-weight:800;line-height:1.2}.mt-baca{color:var(--pink-light);font-size:15px}.mt-arti{color:var(--gray);font-size:15px}
+.rk-kal{font-family:var(--font-jp);font-size:19px;line-height:2.2;margin-bottom:12px}
+.rk-w{display:inline-flex;align-items:center;gap:4px;margin:0 2px;padding:0 6px;border-radius:8px;border:1px dashed var(--border);background:none;color:#fff;font:inherit;cursor:pointer}
+.rk-w i{font-style:normal;font-size:12px;color:var(--pink-light);font-family:var(--font-sans)}.rk-w.on{border-style:solid;border-color:var(--green)}.rk-w.on i{color:var(--green)}
+.rk-h{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:6px}.rk-h span{color:var(--gray-dim);font-size:12.5px}
+.rk-list{display:flex;flex-direction:column;gap:6px;margin-bottom:10px;min-height:44px}
+.rk-row{display:flex;justify-content:space-between;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.05);font-size:14px}.rk-row b{font-family:var(--font-jp)}.rk-row span{color:var(--gray)}
+.rk-kosong{color:var(--gray-dim);font-size:13.5px;text-align:center;margin:8px 0}.rk-fc{min-height:0;height:170px;margin-bottom:10px;cursor:pointer}.rk-fc .fc-w{font-size:30px}
+.kl-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:14px}.kl-h span{color:var(--gray)}
+.kl-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:10px}
+.kl-grid .dw{font-size:11px;color:var(--gray-dim);text-align:center}
+.kl-grid button{aspect-ratio:1;border-radius:8px;border:1px solid transparent;background:rgba(255,255,255,.04);color:var(--gray-dim);font:inherit;font-size:12.5px;cursor:default}
+.kl-grid button.on{background:color-mix(in srgb,var(--pink) calc(var(--lv,1)*22%),transparent);color:#fff;cursor:pointer}
+.kl-grid button[aria-pressed="true"]{border-color:var(--gold)}
+.kl-det{font-size:14px;color:var(--gray);text-align:center;padding:10px;border-radius:12px;background:rgba(255,255,255,.04)}
+.pr-list{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.pr-list button{width:100%;display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:#fff;font:inherit;cursor:pointer;text-align:left}
+.pr-list button[aria-pressed="true"]{border-color:var(--gold)}.pr-list .rk{width:26px;font-weight:800;color:var(--gold)}.pr-list .nm{flex:1}.pr-list .xp{color:var(--gray);font-size:13px}
 .sil-dur{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .sil-day{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:18px;padding:16px}
 .sil-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-size:15px}
@@ -208,18 +231,11 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .card p{color:var(--gray);font-size:15px}
 .card .num{display:inline-block;margin-top:10px;font-size:13px;color:var(--gold);font-weight:700}
 
-/* panduan menu & program */
 button.app-node{font:inherit;color:inherit;cursor:pointer;padding:0}
 button.app-node:hover,button.app-node:focus-visible{border-color:#ffb74d;box-shadow:0 0 0 3px rgba(255,183,77,.35)}
 .orbit:hover .spin,.orbit:hover .node .in,.orbit:focus-within .spin,.orbit:focus-within .node .in{animation-play-state:paused}
-.pg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;margin-top:28px}
-.pg-card{scroll-margin-top:90px;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px;background:rgba(255,255,255,.04);transition:border-color .3s,box-shadow .3s}
-.pg-card .pg-jp{font-size:12px;letter-spacing:2px;color:#ffb74d}.pg-card h3{margin:2px 0 8px}
-.pg-card p,.pg-card li{font-size:14px;line-height:1.6}.pg-card ul{padding-left:18px;margin:10px 0 0}
-.pg-card.sorot{border-color:#ffb74d;box-shadow:0 0 0 4px rgba(255,183,77,.35)}
+.demo.sorot{border-color:#ffb74d;box-shadow:0 0 0 4px rgba(255,183,77,.35)}
 #program{scroll-margin-top:90px}
-.pg-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:44px 0 0}
-#pg-prog{max-width:640px;margin:16px auto 0}
 
 /* character studio */
 .studio{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:30px}
@@ -461,20 +477,6 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
   </div>
 </section>
 
-<section id="panduan">
-  <div class="wrap">
-    <div class="center rv">
-      <div class="eyebrow">使い方</div>
-      <h2>Kenali setiap <span class="grad">menu di aplikasi</span></h2>
-      <p class="lead">Ketuk salah satu bulatan di sekitar karakter, kamu akan diantar ke penjelasannya di sini.</p>
-    </div>
-    <div class="pg-grid" id="pg-menu"></div>
-    <div id="program">
-      <div class="pg-tabs" role="group" aria-label="Pilih program" id="pg-tabs"></div>
-      <div id="pg-prog"></div>
-    </div>
-  </div>
-</section>
 
 <section id="fitur">
   <div class="wrap">
@@ -512,7 +514,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     </div>
 
     <!-- 1. FLASHCARD -->
-    <div class="show rv">
+    <div class="show rv" id="hafalan-demo">
       <div class="txt">
         <span class="badge">Hafalan</span>
         <h3>Flashcard kosakata yang bikin nempel</h3>
@@ -550,7 +552,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     </div>
 
     <!-- 3. SOAL & UJIAN -->
-    <div class="show rv">
+    <div class="show rv" id="ujian-demo">
       <div class="txt">
         <span class="badge">Latihan &amp; Ujian</span>
         <h3>Soal per subbab + ujian lengkap di tiap level</h3>
@@ -562,11 +564,14 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         </ul>
       </div>
       <div class="demo">
-        <div class="demo-h"><span class="badge">N5 · Kotoba</span><span class="lbl">Jawab soal contoh ↓</span></div>
-        <div class="qz-q" id="qz-q">Memuat soal…</div>
-        <div class="qz-opts" id="qz-opts"></div>
-        <div class="qz-ex" id="qz-ex"></div>
-        <div class="qz-bar"><span class="pos" id="qz-pos"></span><button class="btn primary sm" id="qz-next">Soal lain →</button></div>
+        <div class="demo-h"><div class="seg" id="qz-prog" role="group" aria-label="Program"></div><span class="lbl">5 soal, lalu lihat hasil ↓</span></div>
+        <div id="qz-main">
+          <div class="qz-q" id="qz-q">Memuat soal…</div>
+          <div class="qz-opts" id="qz-opts"></div>
+          <div class="qz-ex" id="qz-ex"></div>
+          <div class="qz-bar"><span class="pos" id="qz-pos"></span><button class="btn primary sm" id="qz-next">Lanjut →</button></div>
+        </div>
+        <div class="qz-hasil" id="qz-hasil" hidden></div>
       </div>
     </div>
 
@@ -618,18 +623,15 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     </div>
 
     <!-- KANJI: goresan + tulis -->
-    <div class="show rv" id="kj-show">
+    <div class="show rv" id="materi-demo">
       <div class="txt">
-        <span class="badge">Kanji</span>
-        <h3>Lihat urutan goresan, lalu tulis sendiri</h3>
-        <p>Pilih kanji, lihat animasi urutan goresannya, lalu coba tulis di kotak dengan jari atau mouse. Contoh kanji bisa ditampilkan sebagai panduan atau disembunyikan supaya latihan lebih menantang.</p>
-        <ul class="tick">
-          <li>Animasi goresan satu per satu, lengkap dengan nomor urutan</li>
-          <li>Kotak tulis untuk jari atau mouse, dengan hitungan goresan</li>
-          <li>Di aplikasi tersedia ribuan kanji N5 sampai N1</li>
-        </ul>
+        <span class="badge">学習 · Materi</span>
+        <h3>Ketuk kosakata, lihat kanji, arti, dan cara menulisnya</h3>
+        <p>Di menu Materi ada daftar kosakata, kanji, dan bunpou. Coba ketuk salah satu kata di samping.</p>
       </div>
       <div class="demo" id="kj-demo">
+        <div class="mt-list" id="mt-list" role="list"></div>
+        <div class="mt-det" id="mt-det"></div>
         <div class="demo-h"><div class="seg" id="kj-pick" role="group" aria-label="Pilih kanji"></div></div>
         <div class="kj-box" id="kj-box">
           <svg id="kj-svg" viewBox="0 0 109 109" aria-hidden="true"></svg>
@@ -641,6 +643,50 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
           <button class="btn sm" id="kj-guide" type="button">Sembunyikan panduan</button>
           <button class="btn sm" id="kj-clear" type="button">Hapus tulisan</button>
         </div>
+      </div>
+    </div>
+
+    <!-- RANGKUMAN -->
+    <div class="show flip rv" id="rangkuman-demo">
+      <div class="txt">
+        <span class="badge">記録 · Rangkuman</span>
+        <h3>Simpan kata penting, hafalkan lagi nanti</h3>
+        <p>Ketuk ➕ di kata yang mau kamu ingat, lalu hafalkan dari Rangkuman.</p>
+      </div>
+      <div class="demo">
+        <div class="rk-kal" id="rk-kal"></div>
+        <div class="rk-h"><b>📒 Rangkumanku</b><span id="rk-n">0 kata</span></div>
+        <div class="rk-list" id="rk-list"><p class="rk-kosong">Belum ada kata. Ketuk ➕ di atas.</p></div>
+        <div class="fc rk-fc" id="rk-fc" hidden></div>
+        <div class="qz-bar"><button class="btn primary sm" id="rk-haf" type="button" disabled>🃏 Hafalkan</button><button class="btn sm" id="rk-reset" type="button">Kosongkan</button></div>
+      </div>
+    </div>
+
+    <!-- KALENDER -->
+    <div class="show rv" id="kalender-demo">
+      <div class="txt">
+        <span class="badge">暦 · Kalender</span>
+        <h3>Lihat hari-hari belajarmu</h3>
+        <p>Ketuk tanggal untuk melihat apa saja yang kamu pelajari hari itu.</p>
+      </div>
+      <div class="demo">
+        <div class="kl-h"><b id="kl-bln"></b><span>🔥 streak <b id="kl-st"></b> hari</span></div>
+        <div class="kl-grid" id="kl-grid"></div>
+        <div class="kl-det" id="kl-det">Ketuk tanggal yang berwarna.</div>
+      </div>
+    </div>
+
+    <!-- PERINGKAT -->
+    <div class="show flip rv" id="peringkat-demo">
+      <div class="txt">
+        <span class="badge">順位 · Peringkat</span>
+        <h3>Bersaing sehat dengan teman sekelas</h3>
+        <p>Ketuk nama untuk melihat level dan pencapaiannya.</p>
+      </div>
+      <div class="demo">
+        <div class="demo-h"><div class="seg" id="pr-tab" role="group" aria-label="Lingkup"></div><span class="lbl">Contoh ↓</span></div>
+        <ol class="pr-list" id="pr-list"></ol>
+        <div class="kl-det" id="pr-det">Ketuk salah satu nama.</div>
       </div>
     </div>
   </div>
@@ -881,6 +927,52 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     document.getElementById("sil-tot").textContent=lv.toUpperCase()+" · "+(t[0]+t[1]+t[2]).toLocaleString("id-ID")+" materi";}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",draw);else draw();
 })();</script>
+<script>(function(){
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+  function go(){
+  /* Rangkuman */
+  var RK=[["毎日","まいにち","setiap hari"],["日本語","にほんご","bahasa Jepang"],["勉強","べんきょう","belajar"],["楽しい","たのしい","menyenangkan"]],simpan=[],fi=0,balik=false;
+  var kal=document.getElementById("rk-kal");if(!kal)return;
+  kal.appendChild(document.createTextNode("わたしは "));
+  RK.forEach(function(w,i){var b=el("button","rk-w");b.type="button";b.appendChild(document.createTextNode(w[0]));b.appendChild(el("i",null,"➕"));
+    b.onclick=function(){var k=simpan.indexOf(i);if(k<0)simpan.push(i);else simpan.splice(k,1);b.classList.toggle("on",k<0);b.querySelector("i").textContent=k<0?"✓":"➕";rkDraw()};
+    kal.appendChild(b);kal.appendChild(document.createTextNode(["を ","で ","しています。とても ","です。"][i]))});
+  function rkDraw(){var L=document.getElementById("rk-list");L.innerHTML="";document.getElementById("rk-fc").hidden=true;
+    document.getElementById("rk-n").textContent=simpan.length+" kata";document.getElementById("rk-haf").disabled=!simpan.length;
+    if(!simpan.length){L.appendChild(el("p","rk-kosong","Belum ada kata. Ketuk ➕ di atas."));return}
+    simpan.forEach(function(i){var r=el("div","rk-row");r.appendChild(el("b",null,RK[i][0]+"（"+RK[i][1]+"）"));r.appendChild(el("span",null,RK[i][2]));L.appendChild(r)})}
+  function rkKartu(){var f=document.getElementById("rk-fc"),w=RK[simpan[fi%simpan.length]];f.hidden=false;f.innerHTML="";
+    f.appendChild(el("div","fc-w",w[0]));if(balik){f.appendChild(el("div","fc-r",w[1]));f.appendChild(el("div","fc-m",w[2]))}else f.appendChild(el("div","fc-h","Ketuk untuk membalik"))}
+  document.getElementById("rk-fc").onclick=function(){if(balik){fi++;balik=false}else balik=true;rkKartu()};
+  document.getElementById("rk-haf").onclick=function(){fi=0;balik=false;rkKartu()};
+  document.getElementById("rk-reset").onclick=function(){simpan=[];[].forEach.call(kal.querySelectorAll(".rk-w"),function(b){b.classList.remove("on");b.querySelector("i").textContent="➕"});rkDraw()};
+  /* Kalender: bulan ini, hari belajar contoh */
+  var now=new Date(),Y=now.getFullYear(),M=now.getMonth(),hari=now.getDate(),n=new Date(Y,M+1,0).getDate(),awal=(new Date(Y,M,1).getDay()+6)%7;
+  var BLN=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  document.getElementById("kl-bln").textContent=BLN[M]+" "+Y;
+  var g=document.getElementById("kl-grid"),st=0;["Sn","Sl","Rb","Km","Jm","Sb","Mg"].forEach(function(d){g.appendChild(el("div","dw",d))});
+  for(var i=0;i<awal;i++)g.appendChild(el("span"));
+  for(var d=1;d<=n;d++){(function(d){var b=el("button",null,String(d));b.type="button";var aktif=d<=hari&&((d*7)%5!==0||d>hari-6);
+    if(aktif){var lv=1+(d*3)%4;b.className="on";b.style.setProperty("--lv",lv);b.onclick=function(){[].forEach.call(g.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",String(x===b))});
+      document.getElementById("kl-det").textContent=d+" "+BLN[M]+": "+(lv*3)+" kanji · "+(lv*6)+" kosakata · "+lv+" latihan"+(lv>2?" · 1 ujian":"")}}
+    else b.disabled=true;g.appendChild(b)})(d)}
+  for(var k=hari;k>0;k--){if(k<=hari&&((k*7)%5!==0||k>hari-6))st++;else break}
+  document.getElementById("kl-st").textContent=st;
+  /* Peringkat (contoh) */
+  var PR={kelas:[["Rina","N4",2480],["Budi","N4",2310],["Kamu","N5",1250],["Sari","N5",1120],["Dimas","N5",980]],semua:[["Ayu","N2",8740],["Rizky","N3",7120],["Rina","N4",2480],["Budi","N4",2310],["Kamu","N5",1250]]},tab="kelas";
+  function prDraw(){var L=document.getElementById("pr-list");L.innerHTML="";document.getElementById("pr-det").textContent="Ketuk salah satu nama.";
+    PR[tab].forEach(function(r,i){var li=el("li"),b=el("button");b.type="button";b.appendChild(el("span","rk",["🥇","🥈","🥉"][i]||String(i+1)));b.appendChild(el("span","nm",r[0]+(r[0]==="Kamu"?" (contoh)":"")));b.appendChild(el("span","xp",r[2].toLocaleString("id-ID")+" XP"));
+      b.onclick=function(){[].forEach.call(L.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",String(x===b))});document.getElementById("pr-det").textContent=r[0]+" · level "+r[1]+" · Lv karakter "+Math.round(r[2]/180)+" · streak "+(5+i*3)+" hari"};li.appendChild(b);L.appendChild(li)})}
+  var T=document.getElementById("pr-tab");[["Kelasku","kelas"],["Semua kelas","semua"]].forEach(function(x){var b=el("button",null,x[0]);b.type="button";b.setAttribute("aria-pressed",String(x[1]===tab));b.onclick=function(){tab=x[1];[].forEach.call(T.children,function(y){y.setAttribute("aria-pressed",String(y===b))});prDraw()};T.appendChild(b)});
+  prDraw();
+  /* Orbit: ketuk bulatan → langsung ke demo menu itu */
+  var TUJU={materi:"materi-demo",hafalan:"hafalan-demo",ujian:"ujian-demo",choukai:"choukai",sylabus:"silabus",rangkuman:"rangkuman-demo",shop:"karakter",kalender:"kalender-demo",leaderboard:"peringkat-demo"},tm;
+  var ob=document.getElementById("orbit");if(ob)ob.addEventListener("click",function(e){var nd=e.target.closest("[data-menu]");if(!nd)return;var c=document.getElementById(TUJU[nd.dataset.menu]);if(!c)return;
+    c.classList.add("in");c.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});
+    var dm=c.querySelector(".demo")||c;clearTimeout(tm);document.querySelectorAll(".sorot").forEach(function(x){x.classList.remove("sorot")});dm.classList.add("sorot");tm=setTimeout(function(){dm.classList.remove("sorot")},2600)});
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go();
+})();</script>
 <script src="./js/landing-config.js"></script>
 <script src="./js/membership.js"></script>
 <script src="./js/landing-stats.js"></script>
@@ -971,26 +1063,6 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 /* Karakter asli aplikasi (js/character.js) dipakai di hero & Studio Karakter. */
 import {renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED} from "./js/character.js";
 import {islandSVG} from "./js/ssw-art.js";
-import {MENU, PROGRAM} from "./js/panduan.js";
-(function(){
-  var grid = document.getElementById("pg-menu"), tabs = document.getElementById("pg-tabs"), prog = document.getElementById("pg-prog"); if (!grid) return;
-  function kartu(d){ return '<div class="pg-jp">'+d.jp+'</div><h3>'+d.icon+' '+d.nama+'</h3><p>'+d.ringkas+'</p><ul>'+d.poin.map(function(p){return "<li>"+p+"</li>"}).join("")+'</ul>'; }
-  Object.keys(MENU).forEach(function(k){ var c = document.createElement("article"); c.className = "pg-card"; c.id = "p-"+k; c.innerHTML = kartu(MENU[k]); grid.appendChild(c); });
-  function pilih(k){
-    prog.innerHTML = '<article class="pg-card">'+kartu(PROGRAM[k])+'</article>';
-    tabs.querySelectorAll("button").forEach(function(b){ var on = b.dataset.p===k; b.className = "btn sm "+(on?"primary":"ghost"); b.setAttribute("aria-pressed", String(on)); });
-  }
-  Object.keys(PROGRAM).forEach(function(k){ var b = document.createElement("button"); b.type = "button"; b.dataset.p = k; b.textContent = "Penjelasan "+PROGRAM[k].nama; b.onclick = function(){ pilih(k); }; tabs.appendChild(b); });
-  pilih("jlpt");
-  var timer;
-  document.getElementById("orbit").addEventListener("click", function(e){
-    var n = e.target.closest("[data-menu]"); if (!n) return;
-    var c = document.getElementById("p-"+n.dataset.menu); if (!c) return;
-    c.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"center"});
-    clearTimeout(timer); grid.querySelectorAll(".sorot").forEach(function(x){x.classList.remove("sorot")});
-    c.classList.add("sorot"); timer = setTimeout(function(){ c.classList.remove("sorot"); }, 2600);
-  });
-})();
 (function(){
   var G = document.getElementById("isl-grid"); if (!G) return;
   [["Building Cleaning","ビルクリーニング","building"],["Kaigo","介護","kaigo","+ Bahasa Jepang Kaigo"],["Food Manufacturing","飲食料品製造業","factory"],["Food Service","外食業","restaurant"],["Agriculture","農業","farm"],["Construction","建設","construction","Sipil · Bangunan · Lifeline"],["Accommodation","宿泊","hotel"],["Livestock","畜産業","farm"],["Fishery","漁業","fishery"],["Auto Maintenance","自動車整備","automobile"],["Industrial Manufacturing","工業製品製造業","machine","Mesin Logam · Elektronik · Permukaan Logam"],["Wood Industry","木材産業","wood"],["Auto Transport","自動車運送業","truck"],["Forestry","林業","forestry"],["Linen Supply","リネンサプライ","linen"],["Railway","鉄道","railway","Jalur · Listrik · Kereta"],["Shipbuilding","造船・舶用工業","ship"],["Logistics","物流倉庫","logistics"],["Recycling","資源循環","recycling"],["Aviation","航空","aviation","Ground Handling · Aircraft Maint."]].forEach(function(b,i){
@@ -1109,8 +1181,10 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
   var bkStarted = false;
   function startBk(){ if (bkStarted) return; bkStarted = true; bkShow(); }
 
-  /* ---- kuis demo (soal asli: jlpt/n5/kotoba-01.json) ---- */
-  var qs = [], qi = -1;
+  /* ---- ujian demo: JLPT (jlpt/n5/kotoba-01.json), JFT & SSW (contoh dari bank soal aplikasi) ---- */
+  var UJI = {"jft": [{"q": "「かいしゃ」の いみは どれですか。", "o": ["銀行（bank）", "会社（tempat kerja / perusahaan）", "学校（sekolah）", "病院（rumah sakit）"], "a": 1, "n": "かいしゃ = 会社 = perusahaan."}, {"q": "「あした」と おなじ いみは どれですか。", "o": ["つぎの 日", "きょうの 日", "まえの 日", "きのうの 日"], "a": 0, "n": "あした = besok = hari berikutnya."}, {"q": "「やすみ」の いみは どれですか。", "o": ["しごとや がっこうが ない 日", "おくれた 人", "あたらしい 仕事", "いちばん いそがしい 日"], "a": 0, "n": "やすみ = libur / waktu istirahat."}, {"q": "「せまい」の はんたいの ことばは どれですか。", "o": ["たかい", "ひろい", "ながい", "おもい"], "a": 1, "n": "せまい (sempit) ⇔ ひろい (luas)."}, {"q": "（　）に はいる ことばは どれですか。「かぜを ひいたので、びょういんで くすりを（　）。」", "o": ["あげました", "かりました", "おくりました", "もらいました"], "a": 3, "n": "obat diterima dari rumah sakit = もらう."}], "ssw": [{"q": "Apa arti 「体調」（たいちょう）?", "o": ["hipertensi", "mengubah posisi", "kondisi fisik", "hidung"], "a": 2, "n": "体調 (たいちょう) = kondisi fisik."}, {"q": "Apa arti 「鼻」（はな）?", "o": ["hidung", "leher", "norovirus", "dahi"], "a": 0, "n": "鼻 (はな) = hidung."}, {"q": "Apa arti 「腰」（こし）?", "o": ["kesehatan", "pinggang", "tumit", "posisi supinasi"], "a": 1, "n": "腰 (こし) = pinggang."}, {"q": "Apa arti 「耳」（みみ）?", "o": ["punggung", "gatal", "tanda-tanda vital", "telinga"], "a": 3, "n": "耳 (みみ) = telinga."}, {"q": "Apa arti 「唇」（くちびる）?", "o": ["bibir", "ruam", "telinga", "mengubah posisi"], "a": 0, "n": "唇 (くちびる) = bibir."}]};
+  var BANK = {jlpt:[], jft:UJI.jft.map(function(x){return {q:x.q,opts:x.o,ans:x.a,ex:{terjemahan:x.n}}}), ssw:UJI.ssw.map(function(x){return {q:x.q,opts:x.o,ans:x.a,ex:{terjemahan:x.n}}})};
+  var PROG = [["JLPT N5","jlpt"],["JFT-Basic","jft"],["SSW Kaigo","ssw"]], prog = "jlpt", qs = [], qi = 0, benar = 0, jawab = false;
   function qHtml(box,s){ // izinkan hanya <u>…</u>
     box.textContent = "";
     String(s).split(/(<u>.*?<\/u>)/g).forEach(function(part){
@@ -1120,29 +1194,47 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
   }
   function qShow(){
     if (!qs.length) return;
-    qi = (qi+1)%qs.length; var q = qs[qi];
+    var q = qs[qi]; jawab = false;
+    $("#qz-main").hidden = false; $("#qz-hasil").hidden = true;
     qHtml($("#qz-q"), q.q);
     var o = $("#qz-opts"); o.textContent = ""; $("#qz-ex").textContent = "";
     q.opts.forEach(function(t,i){
       var b = el("button",null,"ABCD"[i]+".  "+t);
       b.onclick = function(){
+        if (jawab) return; jawab = true; if (i===q.ans) benar++;
         o.querySelectorAll("button").forEach(function(x,k){ x.disabled = true; if (k===q.ans) x.classList.add("ok"); });
         if (i!==q.ans) b.classList.add("no");
         var ex = q.ex || {}; $("#qz-ex").textContent = (i===q.ans?"✅ Benar! ":"❌ Belum tepat. ")+(ex.jawaban?("Jawaban: "+ex.jawaban+". "):"")+(ex.terjemahan||"");
       };
       o.appendChild(b);
     });
-    $("#qz-pos").textContent = "Soal "+(qi+1)+" dari "+qs.length+" (contoh)";
+    $("#qz-pos").textContent = "Soal "+(qi+1)+" dari "+qs.length;
+    $("#qz-next").textContent = qi+1 < qs.length ? "Lanjut →" : "Lihat hasil →";
   }
+  function qHasil(){
+    var n = qs.length, h = $("#qz-hasil"), skor = Math.round(benar/n*100);
+    $("#qz-main").hidden = true; h.hidden = false; h.textContent = "";
+    h.appendChild(el("div","qz-skor", prog==="ssw" ? skor+" / 100" : benar+" / "+n));
+    h.appendChild(el("p",null, prog==="ssw" ? "Poin ujian SSW (skala 100). Lulus di aplikasi: ≥ 65 poin." : prog==="jft" ? "Benar "+benar+" dari "+n+" soal · estimasi skor "+Math.round(benar/n*250)+" / 250" : "Benar "+benar+" dari "+n+" soal · "+skor+"%"));
+    var u = el("button","btn primary sm","↻ Ulangi"); u.type="button"; u.onclick = function(){ qMulai(prog); }; h.appendChild(u);
+  }
+  function qMulai(p){
+    prog = p; qi = 0; benar = 0; qs = (BANK[p]||[]).slice(0,5);
+    [].forEach.call($("#qz-prog").children,function(x){ x.setAttribute("aria-pressed", String(x.dataset.p===p)); });
+    if (!qs.length) { $("#qz-q").textContent = "Memuat soal…"; return; }
+    qShow();
+  }
+  PROG.forEach(function(x){ var b = el("button",null,x[0]); b.type="button"; b.dataset.p = x[1]; b.onclick = function(){ qMulai(x[1]); }; $("#qz-prog").appendChild(b); });
   var qzStarted = false;
   function startQz(){
     if (qzStarted) return; qzStarted = true;
     fetch("./jlpt/n5/kotoba-01.json").then(function(r){return r.json()}).then(function(d){
-      d.sections.forEach(function(s){ (s.items||[]).forEach(function(it){ if (it.q && it.opts && typeof it.ans==="number" && qs.length<12) qs.push(it); }); });
-      qShow();
-    }).catch(function(){ $("#qz-q").textContent = "Soal tidak dapat dimuat."; });
+      d.sections.forEach(function(s){ (s.items||[]).forEach(function(it){ if (it.q && it.opts && typeof it.ans==="number" && BANK.jlpt.length<5) BANK.jlpt.push(it); }); });
+      if (prog==="jlpt") qMulai("jlpt");
+    }).catch(function(){ if (prog==="jlpt") $("#qz-q").textContent = "Soal tidak dapat dimuat."; });
+    qMulai(prog);
   }
-  $("#qz-next").onclick = qShow;
+  $("#qz-next").onclick = function(){ if (!jawab) { $("#qz-ex").textContent = "Pilih jawaban dulu ya."; return; } if (qi+1 < qs.length) { qi++; qShow(); } else qHasil(); };
 
   /* ---- sosial & pembaruan ---- */
   var soc = $("#social-list");
@@ -1190,6 +1282,7 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
 /* ---- demo landing: choukai (data & audio asli repo) + kanji goresan/tulis (data KanjiVG dari data/kanji-strokes) ---- */
 (function(){
   var $=function(s){return document.querySelector(s)};
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
   var CK={"n5":{"set":"教室で先生と学生が話しています。","q":"学生は明日何を持ってきますか。","a":0,"o":["えんぴつと 消しゴムと 色えんぴつ","紙と 色えんぴつ","えんぴつと 紙","えんぴつと 消しゴムと 紙"],"au":"audio/choukai/n5/m1_01.mp3","d":[["F","明日は絵をかきますから、えんぴつと消しゴムを持ってきてください。"],["M","先生、紙もいりますか。"],["F","紙は学校にありますから、いりません。"],["M","色えんぴつはどうですか。"],["F","ああ、色えんぴつも持ってきてください。"]],"e":"Kertas tidak perlu (sudah ada di sekolah). Yang dibawa: pensil, penghapus, dan pensil warna."},"n4":{"set":"会社で女の人と男の人が話しています。","q":"男の人はこのあとまず何をしますか。","a":1,"o":["資料を コピーする","部長に 資料を 見せる","会議室の 準備を する","資料を 直す"],"au":"audio/choukai/n4/m1_01.mp3","d":[["F","佐藤さん、午後の会議の資料、もうコピーしましたか。"],["M","いえ、まだです。今からします。"],["F","あ、その前に、部長に資料を見てもらってください。少し直すところがあるかもしれませんから。"],["M","わかりました。そのあとでコピーしますね。"],["F","ええ、お願いします。会議室の準備は私がします。"]],"e":"その前に → sebelum fotokopi, minta direktur memeriksa dulu."},"n3":{"set":"会社で女の人と男の人が話しています。","q":"男の人はこのあとまず何をしなければなりませんか。","a":3,"o":["案内のメールを送る","会場を予約する","説明会の資料を作る","部長に説明会の時間を確認する"],"au":"audio/choukai/n3/m1_01.mp3","d":[["F","木村さん、来週の新製品の説明会のことなんだけど、会場の予約はもう済んでる？"],["M","はい、先週しておきました。"],["F","よかった。じゃあ、お客さんに送る案内のメール、今日中に出してくれる？"],["M","あ、それなんですが、まだ説明会の時間が決まってなくて……。"],["F","そうか、部長に確認しないとね。部長、今日は午後から出かけるって言ってたから、急いだほうがいいよ。"],["M","わかりました。すぐ聞いてきます。"]],"e":"Email belum bisa dikirim karena jam acara belum pasti → tanya direktur dulu."}};
   var KJ={"日":["M31.5,24.5c1.12,1.12,1.74,2.75,1.74,4.75c0,1.6-0.16,38.11-0.09,53.5c0.02,3.82,0.05,6.35,0.09,6.75","M33.48,26c0.8-0.05,37.67-3.01,40.77-3.25c3.19-0.25,5,1.75,5,4.25c0,4-0.22,40.84-0.23,56c0,3.48,0,5.72,0,6","M34.22,55.25c7.78-0.5,35.9-2.5,44.06-2.75","M34.23,86.5c10.52-0.75,34.15-2.12,43.81-2.25"],"月":["M34.25,16.25c1,1,1.48,2.38,1.5,4c0.38,33.62,2.38,59.38-11,73.25","M36.25,19c4.12-0.62,31.49-4.78,33.25-5c4-0.5,5.5,1.12,5.5,4.75c0,2.76-0.5,49.25-0.5,69.5c0,13-6.25,4-8.75,1.75","M37.25,38c10.25-1.5,27.25-3.75,36.25-4.5","M37,58.25c8.75-1.12,27-3.5,36.25-4"],"火":["M24.25,34c3.27,3.33,8.5,13,9.5,17.75","M83,27.25c0.5,1.38,0.22,2.74-0.5,4.25c-2.38,5-7.5,12.12-12.75,17.25","M52.5,14.25c1,1.25,1.5,3.12,1.5,5C54,69,39.62,80,21,91.5","M52.75,50c12.49,14.06,25.01,28.42,33.62,36.13c2.7,2.42,4.9,4.02,8.38,4.87"],"水":["M52.77,15.08c1.08,1.08,1.67,2.49,1.76,5.52c0.4,14.55-0.26,62.16-0.26,67.12c0,9.78-7.52,0.03-9.02-1.22","M17.5,45.75c1.75,0.62,3.73,0.43,5.25,0C25.88,44.88,36.09,41,38.59,40s4.47,1.24,3.75,3.5C39,54,28.25,69,19,74.75","M81.22,27.5c-0.22,1.25-0.72,2.25-1.52,2.97c-5.64,5.1-12.45,9.78-22.45,13.78","M57,46c8.82,10.73,19.23,21.46,28.42,27.42c2.16,1.4,4.52,3,7.08,3.58"],"木":["M19.5,39.86c2.45,0.57,5.23,0.8,8.04,0.57C40.75,39.38,63,36.5,79.78,36.15c2.8-0.06,4.54,0.1,7.34,0.5","M51.75,10.5c1.19,1.19,2,3,2,5c0,8.65,0,55.15-0.14,74.75c-0.03,4.19-0.07,7.15-0.11,8.25","M50.75,39.5c0,1.12-0.61,2.44-1.42,3.95C41.75,57.5,26.7,73.93,15.75,80.25","M54.5,39c4.62,6,23,25.75,31.76,34.61c2.27,2.29,4.61,4.39,7.49,5.64"],"山":["M52.49,15.5c1.38,1.38,2.26,3.5,2.26,5.75c0,0.75-0.22,58.3-0.25,59.25","M21.49,54.5c0.88,0.88,1.39,2.25,1.26,3.75c-0.58,6.99-1,16-2.5,23c-0.7,3.26,0.11,4,2,3.75c17-2.25,47.12-5.12,65.5-6","M89.24,49c0.94,0.94,1.64,2.38,1.51,4.25c-0.25,3.68-1.83,20.3-2.55,28.77c-0.22,2.64-0.39,4.51-0.45,4.98"],"川":["M27.22,25.68c0.91,1.57,1.18,3.45,1.19,5.37C28.5,43.5,28.5,69,17.39,84.15","M53.75,23.63c0.94,0.94,1.41,2.37,1.41,3.9c0,0.58-0.01,28.48-0.08,41.71c-0.02,3.31-0.04,5.74-0.06,6.63","M85.56,15.63c1.09,1.09,1.76,2.62,1.76,4.25c0,0.74,0.23,46.86,0.09,66.12c-0.03,4.31-0.06,7.61-0.09,8.63"],"人":["M54.5,20c0.37,2.12,0.23,4.03-0.22,6.27C51.68,39.48,38.25,72.25,16.5,87.25","M46,54.25c6.12,6,25.51,22.24,35.52,29.72c3.66,2.73,6.94,4.64,11.48,5.53"],"口":["M22.25,33.25c1.25,1.25,2,2.88,2.26,4.43c1.16,7.03,3.15,23.61,4.68,37.85C29.46,78.09,29.73,80.6,30,83","M25.29,35.67c17.46-2.17,41.59-5.04,55.49-5.93c3.94-0.25,6.33,2.72,5.72,5.14c-2.25,8.87-6.62,26.5-9,38.87","M30.25,77.75c10.5-0.5,30.53-2.3,44.99-3.04c2.05-0.11,3.99-0.18,5.76-0.21"],"学":["M29.5,17.25c3.5,3,6.5,7.25,7.75,9.75","M49,12c1.25,2,4.75,8.25,5.25,11.5","M75,11c0.25,1.75-0.12,2.75-0.75,4.25c-1.29,3.1-4.25,7.38-6.5,9.75","M21.25,33.75c-0.12,4.75-2,12.5-3.75,16.25","M23.5,36.5c17-1.62,42.38-5.5,60-5.75c9.5-0.13,4.12,5.12,0,9","M37.25,46.5c1,0.25,3.75,0.25,5.5-0.25s18.25-4,20-4s2.75,0.75,1,2.25S54.5,53.5,53,54.75","M50.75,55.75c4,8.75,7.18,24.67,1.75,38c-2.75,6.75-7.75,1.25-9.75-2","M15.75,67.75c1.75,1,4.64,1.36,7.5,1c15.88-2,44.43-6.25,61.37-5.5c2.5,0.11,4.72,0.25,6.39,1"]};
   /* choukai */
@@ -1236,8 +1329,16 @@ try { draw(); build(); } catch(e){ $("#stage").textContent = ""; }
     timers.push(setTimeout(function(){svg.classList.toggle("hide-guide",!guide);if(!guide)kjDraw();else $("#kj-info").textContent="Sekarang coba tulis sendiri di kotak."},t+300));
   }
   var pk=$("#kj-pick");
-  Object.keys(KJ).forEach(function(k){var b=document.createElement("button");b.type="button";b.textContent=k;b.setAttribute("aria-pressed",String(k===cur));
-    b.onclick=function(){cur=k;[].forEach.call(pk.children,function(x){x.setAttribute("aria-pressed",String(x===b))});kjDraw()};pk.appendChild(b)});
+  function kjPilih(k){cur=k;[].forEach.call(pk.children,function(x){x.setAttribute("aria-pressed",String(x.textContent===k))});kjDraw()}
+  /* Materi: daftar kosakata → kanji + arti + goresan */
+  var MT=[["日","ひ / にち","hari, matahari"],["月","つき","bulan"],["火山","かざん","gunung berapi"],["水","みず","air"],["木","き","pohon"],["山","やま","gunung"],["川","かわ","sungai"],["人口","じんこう","jumlah penduduk"],["学","がく","belajar, ilmu"]];
+  function mtPilih(i){var w=MT[i],d=$("#mt-det");
+    [].forEach.call($("#mt-list").children,function(x,j){x.setAttribute("aria-pressed",String(j===i))});
+    d.innerHTML="";d.appendChild(el("div","mt-kata",w[0]));d.appendChild(el("div","mt-baca",w[1]));d.appendChild(el("div","mt-arti",w[2]));
+    pk.innerHTML="";w[0].split("").forEach(function(k){if(!KJ[k])return;var b=document.createElement("button");b.type="button";b.textContent=k;b.onclick=function(){kjPilih(k)};pk.appendChild(b)});
+    kjPilih(w[0].split("").filter(function(k){return KJ[k]})[0]);}
+  MT.forEach(function(w,i){var b=document.createElement("button");b.type="button";b.setAttribute("role","listitem");b.appendChild(el("b",null,w[0]));b.appendChild(el("small",null,w[2]));b.onclick=function(){mtPilih(i)};$("#mt-list").appendChild(b)});
+  mtPilih(0);
   $("#kj-anim").onclick=kjAnim;$("#kj-clear").onclick=function(){clearCv();$("#kj-info").textContent="Tulisan dihapus."};
   $("#kj-guide").onclick=function(){guide=!guide;this.textContent=guide?"Sembunyikan panduan":"Tampilkan panduan";svg.classList.toggle("hide-guide",!guide)};
   var down=false,lx=0,ly=0;

@@ -1,6 +1,7 @@
 /* =====================================================================
  * Panduan Shirose Nihongo — satu sumber teks penjelasan.
- * Dipakai di landing (bagian #panduan) dan di aplikasi (popup setelah login).
+ * Dipakai di aplikasi (popup setelah login + daftar ❓ Panduan berisi semua fitur).
+ * Landing tidak memakai teks ini lagi: di sana tiap menu langsung berupa demo.
  * Pilihan "Jangan tampilkan lagi" disimpan per akun di perangkat ini.
  * ===================================================================== */
 
@@ -92,6 +93,8 @@ const CSS = `
 .pd-btn{display:block;width:100%;margin-top:8px;padding:11px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;font:inherit;font-weight:700;font-size:14px;cursor:pointer}
 .pd-btn.utama{background:#e8742c;border-color:#e8742c}
 .pd-btn.pilih{text-align:left}.pd-btn.pilih small{display:block;font-weight:400;font-size:12px;color:#c9c4dd;margin-top:2px}
+.pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px}.pd-grid .pd-btn{margin-top:0;font-size:13px;padding:9px 10px;text-align:left}
+.pd-sub{font-size:12px;letter-spacing:1px;color:#ffb74d;margin:14px 0 2px;font-weight:700}
 .pd-note{font-size:11.5px!important;color:#aaa4c4!important;margin-top:10px!important;text-align:center}`;
 
 export function tutup() { if (_el) { _el.remove(); _el = null; } }
@@ -106,12 +109,18 @@ function buka(html) {
 const isi = (d) => `<div class="pd-jp">${d.jp}</div><h2>${d.icon} ${d.nama}</h2><p>${d.ringkas}</p><ul>${d.poin.map(p => `<li>${p}</li>`).join("")}</ul>`;
 
 /** Penjelasan satu menu / program. kembali = fungsi untuk balik ke daftar pilihan. */
+const FITUR = { jlpt: Object.keys(MENU), jft: Object.keys(MENU).filter(k => k !== "choukai"), ssw: ["materi", "hafalan", "ujian", "rangkuman", "shop", "kalender", "leaderboard"] };
+const gridFitur = (keys) => `<div class="pd-grid">${keys.map(k => `<button type="button" class="pd-btn" data-m="${k}">${MENU[k].icon} ${MENU[k].nama}</button>`).join("")}</div>`;
 function jelaskan(key, d, kembali) {
+  const prog = key.startsWith("program:") ? key.slice(8) : null;
+  const ulang = () => jelaskan(key, d, kembali);
   const el = buka(`${isi(d)}
+    ${prog ? `<div class="pd-sub">FITUR DI ${d.nama}</div>${gridFitur(FITUR[prog])}` : ""}
     <button type="button" class="pd-btn utama" data-a="ok">Mengerti (tampilkan lagi nanti)</button>
     <button type="button" class="pd-btn" data-a="off">Mengerti, jangan tampilkan lagi</button>
     ${kembali ? `<button type="button" class="pd-btn" data-a="back">← Pilih penjelasan lain</button>` : ""}`);
   el.onclick = (e) => {
+    const m = e.target.closest("[data-m]")?.dataset.m; if (m) return jelaskan("menu:" + m, MENU[m], ulang);
     const a = e.target.closest("[data-a]")?.dataset.a; if (!a) return;
     if (a === "off") matikan(key);
     if (a === "back") return kembali();
@@ -121,8 +130,10 @@ function jelaskan(key, d, kembali) {
 
 /** Pilihan "mau penjelasan yang mana": JLPT / JFT / SSW. */
 export function pilihPanduan() {
-  const el = buka(`<h2>👋 Mau penjelasan yang mana?</h2><p>Pilih salah satu. Kamu bisa membaca semuanya satu per satu.</p>
+  const el = buka(`<h2>👋 Mau penjelasan yang mana?</h2><p>Pilih program atau fitur. Kamu bisa membaca semuanya satu per satu.</p>
+    <div class="pd-sub">PROGRAM</div>
     ${Object.entries(PROGRAM).map(([k, d]) => `<button type="button" class="pd-btn pilih" data-p="${k}">${d.icon} ${d.nama}<small>${d.ringkas}</small></button>`).join("")}
+    <div class="pd-sub">SEMUA FITUR</div>${gridFitur(Object.keys(MENU))}
     <button type="button" class="pd-btn utama" data-a="ok">Tutup (tampilkan lagi nanti)</button>
     <button type="button" class="pd-btn" data-a="off">Jangan tampilkan lagi</button>
     <button type="button" class="pd-btn" data-a="reset">🔄 Munculkan lagi semua penjelasan</button>
@@ -130,6 +141,7 @@ export function pilihPanduan() {
   el.onclick = (e) => {
     const b = e.target.closest("button"); if (!b) return;
     if (b.dataset.p) return jelaskan("program:" + b.dataset.p, PROGRAM[b.dataset.p], pilihPanduan);
+    if (b.dataset.m) return jelaskan("menu:" + b.dataset.m, MENU[b.dataset.m], pilihPanduan);
     if (b.dataset.a === "off") matikan("pilih");
     if (b.dataset.a === "reset") { nyalakanSemua(); b.textContent = "✓ Semua penjelasan akan muncul lagi"; return; }
     tutup();
