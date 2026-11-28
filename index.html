@@ -1077,6 +1077,8 @@ html{overflow-x:hidden;}
 .flash-card .say-btn{display:none;}               /* suara hanya di sisi belakang */
 .flash-card.revealed .say-btn{display:block;}
 @keyframes revealFade{0%{opacity:0; transform:translateY(8px)}100%{opacity:1; transform:translateY(0)}}
+.flash-card .th-key{display:none;}
+@media (hover:hover) and (pointer:fine){ .flash-card .th-touch{display:none;} .flash-card .th-key{display:inline;} }
 .flash-card.swiping{transition:none;}
 .flash-card.leave-left{transform:translateX(-120%) rotate(-14deg); opacity:0;}
 .flash-card.leave-right{transform:translateX(120%) rotate(14deg); opacity:0;}
@@ -4676,7 +4678,7 @@ function renderHafalanFlashcard(){
             ${it.fungsi ? `<div class="fungsi">${it.fungsi}</div>` : ""}
           </div>
           <button class="say-btn" title="Dengarkan" onclick="event.stopPropagation(); speakJP(this.closest('.flash-card').dataset.say)">🔊</button>
-          <div class="tap-hint">👆 Tap kartu = bolak-balik depan/belakang · ← Geser Lupa · Ingat Geser →</div>
+          <div class="tap-hint"><span class="th-touch">👆 Tap kartu = bolak-balik depan/belakang · ← Geser Lupa · Ingat Geser →</span><span class="th-key">⌨️ Spasi/W = balik · A/← = Lupa · D/→ = Ingat · S/↓ = Kembali</span></div>
         </div>
       </div>
 
@@ -4743,6 +4745,28 @@ window.hafBack = () => {
   state.hafalan_pos--;
   if (_hafSSW()) _sswSaveSess(); renderHafalanSession().then(h => { document.getElementById("app").innerHTML = h; });
 };
+
+// Keyboard laptop: → / D = Ingat · ← / A = Lupa · ↓ / S = Kembali · Spasi / ↑ / W = balik kartu.
+document.addEventListener("keydown", (e) => {
+  const card = document.getElementById("flash-card");
+  if (!card || e.ctrlKey || e.metaKey || e.altKey) return;
+  if (/INPUT|TEXTAREA|SELECT/.test((e.target && e.target.tagName) || "") || (e.target && e.target.isContentEditable)) return;
+  if (document.querySelector(".kk-ov, .modal-backdrop.show")) return;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  let act = null;
+  if (k === "ArrowRight" || k === "d") act = "ingat";
+  else if (k === "ArrowLeft" || k === "a") act = "lupa";
+  else if (k === "ArrowDown" || k === "s") act = "back";
+  else if (k === " " || k === "ArrowUp" || k === "w") act = "flip";
+  if (!act) return;
+  e.preventDefault();
+  if (e.repeat || card.dataset.leaving) return;
+  if (act === "flip") return hafCardTap(e);
+  if (act === "back") return hafBack();
+  card.dataset.leaving = "1";
+  card.classList.add(act === "ingat" ? "leave-right" : "leave-left");
+  setTimeout(() => hafRate(act), 180);
+});
 
 // Attach touch/pointer handlers for the physical swipe.
 function _bindFlashSwipe(card){
