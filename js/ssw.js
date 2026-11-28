@@ -263,6 +263,9 @@ const L = (o, lang) => (o && (o[lang] ?? o.id ?? o.jp)) || "";
 // Buku tiap bidang: index.json boleh menyebut "assets" (folder gambar bidang lain) dan "book" (hanya satu bahasa buku).
 const spages = (s, lang) => (lang === "jp" && s.pagesJp) || s.pages;   // buku Jepang bisa bernomor halaman beda
 const BK = {};   // slug → { dir, one }
+let PDIMS = null;   // ukuran halaman buku (assets/ssw/page-dims.json) → tinggi halaman pasti sebelum gambar termuat
+const loadPageDims = async () => { if (PDIMS) return PDIMS; try { PDIMS = await (await fetch("./assets/ssw/page-dims.json?v=1")).json(); } catch (e) { PDIMS = {}; } return PDIMS; };
+const pageAR = (slug, lang, n) => { const d = PDIMS && PDIMS[`${BK[slug]?.dir || slug}/${BK[slug]?.one || lang}`]; if (!d) return ""; const x = d.x && d.x[n]; return `aspect-ratio:${x ? x[0] : d.w}/${x ? x[1] : d.h}`; };
 const pageFile = (slug, lang, n) => `./assets/ssw/${BK[slug]?.dir || slug}/${BK[slug]?.one || lang}/p${String(n).padStart(2, "0")}.webp`;
 const AUDIO_LEVEL = { "building-cleaning": "ssw-bc" };
 let CUR = "building-cleaning";   // bidang yang sedang dibuka (dipakai jembatan hafalan)
@@ -589,6 +592,7 @@ async function renderBuku([slug, lang, page]) {
   const total = pack.idx.pages?.[lang] || pack.idx.pages?.[pack.idx.book] || 85;
   const pg = Math.max(0, Math.min(total - 1, parseInt(page, 10) || 1));
   setLang(lang); BOOK.zoom = 1;
+  await loadPageDims();
   const mode = bookMode();
   const other = lang === "jp" ? "id" : "jp";
   const chips = flatSubs(b, pack).map(({ c, s }) => `<button class="sw-chip ${pg >= spages(s, lang)[0] && pg <= spages(s, lang)[1] ? "on" : ""}" onclick="SSW.bookTo(${spages(s, lang)[0]})">${c.no}.${s.no}</button>`).join("");
@@ -601,10 +605,10 @@ async function renderBuku([slug, lang, page]) {
       <span class="sw-pg">Hal. <b id="bk-n">${pg}</b> / ${total - 1}</span>
     </div>
     <div class="sw-book-chips">${chips}</div>
-    ${mode === "scroll" ? `<div class="sw-book-scroll" id="bk-scroll">${Array.from({ length: total }, (_, n) => `<div class="bk-pgw" data-p="${n}"><img loading="lazy" decoding="async" alt="Halaman ${n}" src="${pageFile(slug, lang, n + 1)}" draggable="false"><span class="bk-pgno">${n}</span></div>`).join("")}</div>
+    ${mode === "scroll" ? `<div class="sw-book-scroll" id="bk-scroll">${Array.from({ length: total }, (_, n) => `<div class="bk-pgw" data-p="${n}" style="${pageAR(slug, lang, n + 1)}"><img loading="lazy" decoding="async" alt="Halaman ${n}" src="${pageFile(slug, lang, n + 1)}" draggable="false"><span class="bk-pgno">${n}</span></div>`).join("")}</div>
     <div class="sw-book-nav"><button class="btn ghost" onclick="SSW.bookGo(-1)">‹</button>
       <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
-      <button class="btn" onclick="SSW.bookGo(1)">›</button></div>` : `<div class="sw-book-stage" id="bk-stage"><span class="sw-zhint">🔍 Cubit untuk zoom · ketuk 2×</span><img id="bk-img" alt="Halaman ${pg}" src="${pageFile(slug, lang, pg + 1)}" draggable="false"></div>
+      <button class="btn" onclick="SSW.bookGo(1)">›</button></div>` : `<div class="sw-book-stage" id="bk-stage"><span class="sw-zhint">🔍 Cubit / Ctrl+scroll untuk zoom · ketuk 2×</span><img id="bk-img" style="${pageAR(slug, lang, pg + 1)}" alt="Halaman ${pg}" src="${pageFile(slug, lang, pg + 1)}" draggable="false"></div>
     <div class="sw-book-nav"><button class="btn ghost" onclick="SSW.bookGo(-1)">‹ Sebelumnya</button>
       <input id="bk-range" type="range" min="0" max="${total - 1}" value="${pg}" aria-label="Halaman" oninput="SSW.bookJump(this.value)">
       <button class="btn" onclick="SSW.bookGo(1)">Berikutnya ›</button></div>`}
@@ -1202,7 +1206,7 @@ const SSW = window.SSW = {
       BOOK._onS = onS; window.addEventListener("scroll", onS, { passive: true, capture: true });   // body/halaman bisa jadi pemilik scroll → pakai capture
       const go = () => { const t = wr[pg]; if (t) t.scrollIntoView({ block: "start" }); };
       go(); setTimeout(go, 350);   // koreksi setelah gambar di atasnya terukur
-      window.onkeydown = (e) => { if (!document.getElementById("bk-scroll")) { window.onkeydown = null; return; } if (e.key === "ArrowRight") SSW.bookGo(1); if (e.key === "ArrowLeft") SSW.bookGo(-1); if ((e.key === "+" || e.key === "=") && BOOK.setZ) BOOK.setZ(BOOK.z * 1.25, innerWidth / 2, innerHeight / 2); if (e.key === "-" && BOOK.setZ) BOOK.setZ(BOOK.z / 1.25, innerWidth / 2, innerHeight / 2); if (e.key === "0" && BOOK.setZ) BOOK.setZ(1, innerWidth / 2, innerHeight / 2); };
+      window.onkeydown = (e) => { if (!document.getElementById("bk-scroll")) { window.onkeydown = null; return; } if (SSW.bookPanKey(e)) return; if (e.key === "ArrowRight") SSW.bookGo(1); if (e.key === "ArrowLeft") SSW.bookGo(-1); if ((e.key === "+" || e.key === "=") && BOOK.setZ) BOOK.setZ(BOOK.z * 1.25, innerWidth / 2, innerHeight / 2); if (e.key === "-" && BOOK.setZ) BOOK.setZ(BOOK.z / 1.25, innerWidth / 2, innerHeight / 2); if (e.key === "0" && BOOK.setZ) BOOK.setZ(1, innerWidth / 2, innerHeight / 2); };
       return;
     }
     const st = document.getElementById("bk-stage"); if (!st) return;
@@ -1212,14 +1216,15 @@ const SSW = window.SSW = {
       if (x0 == null || multi || BOOK.z > 1.02) { x0 = null; return; } const dx = e.clientX - x0, dy = e.clientY - y0; x0 = null;
       if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) SSW.bookGo(dx < 0 ? 1 : -1);
     };
-    window.onkeydown = (e) => { if (!document.getElementById("bk-stage")) { window.onkeydown = null; return; } if (e.key === "ArrowRight") SSW.bookGo(1); if (e.key === "ArrowLeft") SSW.bookGo(-1); };
+    window.onkeydown = (e) => { if (!document.getElementById("bk-stage")) { window.onkeydown = null; return; } if (SSW.bookPanKey(e)) return; if (e.key === "ArrowRight") SSW.bookGo(1); if (e.key === "ArrowLeft") SSW.bookGo(-1); if ((e.key === "+" || e.key === "=") && BOOK.setZ) BOOK.setZ(BOOK.z * 1.25, innerWidth / 2, innerHeight / 2); if (e.key === "-" && BOOK.setZ) BOOK.setZ(BOOK.z / 1.25, innerWidth / 2, innerHeight / 2); if (e.key === "0" && BOOK.setZ) BOOK.setZ(1, innerWidth / 2, innerHeight / 2); };
   },
   /* --- zoom ala PDF viewer: langsung di halaman, tanpa layar penuh. 100% = scroll biasa; di-zoom = geser ke segala arah; zoom-out = kembali normal --- */
   bookZoomInit() {
     const root = document.getElementById("bk-scroll") || document.getElementById("bk-stage"); if (!root) return;
     const isScroll = root.id === "bk-scroll", MAXZ = 4;
     BOOK.z = 1; BOOK.zroot = root;
-    const vScroller = () => { for (let e = root.parentElement; e && e !== document.body && e !== document.documentElement; e = e.parentElement) { const o = getComputedStyle(e).overflowY; if ((o === "auto" || o === "scroll") && e.scrollHeight > e.clientHeight + 2) return e; } return null; };
+    const vScroller = () => { for (let e = root.parentElement; e; e = e.parentElement) { const o = getComputedStyle(e).overflowY; if ((o === "auto" || o === "scroll") && e.scrollHeight > e.clientHeight + 2) return e; } const se = document.scrollingElement || document.documentElement; return se.scrollHeight > se.clientHeight + 2 ? se : null; };
+    BOOK.vScroller = vScroller;
     const target = (fx, fy) => {
       if (!isScroll) return root.querySelector("img");
       const el = document.elementFromPoint(fx, fy)?.closest?.(".bk-pgw");
@@ -1246,6 +1251,20 @@ const SSW = window.SSW = {
         const vs = vScroller(); if (vs) vs.scrollTop += dy; else window.scrollBy(0, dy);
       }
     };
+    // Geser kertas saat di-zoom: seret mouse ke segala arah (laptop). Sentuh tetap pakai geser bawaan browser.
+    BOOK.pan = (dx, dy) => { root.scrollLeft += dx; const vs = vScroller(); if (vs) vs.scrollTop += dy; else window.scrollBy(0, dy); };
+    let drag = null;
+    root.addEventListener("pointerdown", (e) => {
+      if (e.pointerType !== "mouse" || e.button !== 0 || BOOK.z <= 1.001) return;
+      drag = { x: e.clientX, y: e.clientY, id: e.pointerId }; root.classList.add("bk-drag"); e.preventDefault();
+      try { root.setPointerCapture(e.pointerId); } catch (_) {}
+    });
+    root.addEventListener("pointermove", (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      BOOK.pan(drag.x - e.clientX, drag.y - e.clientY); drag.x = e.clientX; drag.y = e.clientY;
+    });
+    const endDrag = () => { if (!drag) return; drag = null; root.classList.remove("bk-drag"); };
+    root.addEventListener("pointerup", endDrag); root.addEventListener("pointercancel", endDrag); root.addEventListener("lostpointercapture", endDrag);
     BOOK.setZ = setZ;
     const mid = (a, b) => ({ x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }), dist = (a, b) => Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
     let d0 = 0, z0 = 1, pinch = false, raf = 0, pend = null, lastTap = 0, tapX = 0, tapY = 0, moved = false;
@@ -1270,6 +1289,12 @@ const SSW = window.SSW = {
     const bar = document.getElementById("bk-zbar");
     if (bar) bar.addEventListener("click", (e) => { const a = e.target.closest("button")?.dataset.z; if (!a) return; const cx = window.innerWidth / 2, cy = window.innerHeight / 2; setZ(a === "0" ? 1 : a === "+" ? BOOK.z * 1.4 : BOOK.z / 1.4, cx, cy); });
     paint();
+  },
+  bookPanKey(e) {   // saat di-zoom: ← → geser kertas ke samping (↑ ↓ tetap scroll biasa)
+    if (!(BOOK.z > 1.001) || !BOOK.pan || e.ctrlKey || e.metaKey || e.altKey) return false;
+    if (/INPUT|TEXTAREA|SELECT/.test((e.target && e.target.tagName) || "")) return false;
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return false;
+    e.preventDefault(); BOOK.pan((e.key === "ArrowRight" ? 1 : -1) * Math.round(innerWidth * 0.2), 0); return true;
   },
   bookApply() { const i = document.getElementById("bk-img"); if (i) { i.style.width = (BOOK.zoom * 100) + "%"; } },
   bookZoom() { const i = document.getElementById("bk-img"); if (i) SSW.zoomPage(i.src); },
