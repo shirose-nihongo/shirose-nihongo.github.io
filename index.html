@@ -1585,19 +1585,19 @@ import { allShopItems } from "./js/shop-seed.js?v=20261119i";
 import * as KV from "./js/kanji-vocab.js?v=20261116n";   // kosakata berbasis Kanji (N5-N1)
 import { ACHIEVEMENTS } from "./js/achievements.js";
 // ?v=20261108h — cache-buster, lihat catatan sama di teacher.html.
-import * as FB from "./js/firebase-sync.js?v=20261128c";
+import * as FB from "./js/firebase-sync.js?v=20261128d";
 import { renderChoukaiJLPT, displayBar, applyDisplayPrefs } from "./js/choukai-jlpt.js?v=20261125c";
 import SV from "./js/voice.js?v=20261109c";
 import { initSaveData } from "./js/save-data.js?v=20261118a";
-import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261128b";
+import { renderJlpt, renderRiwayatJlpt, renderReviewJlpt, initJlpt, ringkasanTerakhir } from "./js/jlpt-center.js?v=20261128d";
 // Sesi Hiragana & Katakana + latihan menulis (berdiri sendiri, tidak terkait level JLPT)
 import { KANA_ROUTES, initKana } from "./js/kana-center.js?v=20261128b";
 // SSW 特定技能 (Floating Learning Islands, peta bab, materi ID/JP, kosakata, flashcard SM-2, kuis)
-import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128c";
+import { SSW_ROUTES, initSsw } from "./js/ssw.js?v=20261128d";
 import { JFT_ROUTES, initJft } from "./js/jft.js?v=20261125c";
 // SILABUS HARIAN: target belajar per hari + hafalan + ujian harian (kunci ≥ 80%), fukushu, simulasi, jadwal bertanggal (js/silabus-harian.js)
 import { SILABUS_ROUTES, initSilabus } from "./js/silabus-harian.js?v=20261126l";
-import { initHub, renderHub } from "./js/siswa-hub.js?v=20261123s";
+import { initHub, renderHub } from "./js/siswa-hub.js?v=20261128d";
 import { MENSETSU_ROUTES, MENSETSU_PUBLIC, initMensetsu } from "./js/mensetsu.js?v=20261125d";
 import { DECK_ROUTES, DECK_PUBLIC, initDeckSiswa, bolehPelajaran } from "./js/deck-siswa.js?v=20261126b";
 window.bukaPelajaran = async () => { if (await bolehPelajaran()) route("pelajaran"); else toast("Menu Pelajaran tidak tersedia untuk akunmu."); };
@@ -2389,7 +2389,7 @@ const routes = {
   choukai: (params) => _bukanJft(() => renderChoukaiJLPT(params)),
   // JLPT Center: Full Exam + Individual Practice (js/jlpt-center.js)
   jlpt: (params) => _bukanJft(() => renderJlpt(params)),
-  "jlpt-riwayat": () => _bukanJft(() => renderRiwayatJlpt()),
+  "jlpt-riwayat": () => _bukanJft(() => renderJlpt([])),   // halaman Riwayat JLPT dihapus (hemat kuota) → ke JLPT Center
   "jlpt-review": (params) => renderReviewJlpt(params),
   // Hiragana & Katakana (js/kana-center.js): #kana, #kana-tabel, #kana-order, #kana-tulis, #kana-hafalan, #kana-tes, #kana-progres
   ...KANA_ROUTES,
@@ -2740,10 +2740,6 @@ function renderCharaOrbital(){
         </div>` : `        <div class="hub-card jx-home" onclick="route('jlpt')">
           <div class="ico">🏯</div>
           <div class="info"><div class="ttl">JLPT Center</div><div class="sub" id="jx-home-last">Full Exam &amp; latihan Kanji/Kotoba/Bunpou</div></div>
-        </div>
-        <div class="hub-card" onclick="route('jlpt-riwayat')">
-          <div class="ico">📊</div>
-          <div class="info"><div class="ttl">Riwayat JLPT</div><div class="sub">Nilai &amp; grafik perkembangan</div></div>
         </div>`}
         <div class="hub-card" onclick="openLoginReward()">
           <div class="ico">🎁</div>
@@ -5257,7 +5253,7 @@ async function renderUjianRiwayat(){
       <div style="overflow-x:auto"><table style="width:100%; font-size:13px; border-collapse:collapse;"><thead><tr style="text-align:left; color:var(--gray)"><th>Tanggal</th><th>Ujian</th><th>Nilai</th><th>Benar</th><th>Durasi</th></tr></thead><tbody>${rows}</tbody></table></div>
       `
       : `<div class="empty">Belum ada riwayat. Kerjakan ujian dulu.</div>`}
-    <div style="margin-top:12px;"><button class="btn ghost" onclick="route('ujian')">← Daftar Ujian</button> <button class="btn ghost" onclick="route('jlpt-riwayat')">🏯 Riwayat JLPT Center</button></div></div>`;
+    <div style="margin-top:12px;"><button class="btn ghost" onclick="route('ujian')">← Daftar Ujian</button></div></div>`;
 }
 async function renderUjianList(){
   const kategori = state.user ? await FB.listKategori(state.level) : [];

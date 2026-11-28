@@ -169,7 +169,7 @@ async function viewLevel(sesi) {
     <div class="panel jx">
       <div class="jx-head"><div><div class="jx-jp">日本語能力試験 模擬試験センター</div><h2>JLPT Center</h2>
         <p class="jx-muted">Pilih level JLPT. Setiap level berisi 10 paket Full Exam dan 20 paket latihan untuk Kanji, Kotoba, dan Bunpou.</p></div>
-        <button class="btn ghost" onclick="route('jlpt-riwayat')">📊 Riwayat &amp; Nilai</button></div>
+</div>
       <h3>PILIH LEVEL JLPT</h3>
       <div class="jx-lvgrid">${cards}</div>
       <p class="jx-note">Semua soal adalah soal latihan orisinal Shirose Nihongo yang disusun dari materi di website ini. Nilai yang tampil adalah <b>estimasi hasil latihan</b>, bukan nilai resmi JLPT.</p>
@@ -257,8 +257,7 @@ async function viewSetup(lv, jenis, pkgId, sesi) {
       <h4>📌 Hasil ujian sebelumnya</h4>
       <div style="font-size:34px;font-weight:800;line-height:1.1;">${h0.skor}<small style="font-size:16px;">%</small> <span style="font-size:14px;font-weight:600;color:var(--gray);">${h0.benar}/${h0.total} benar · ${fmtJam(tglMs(h0))}</span></div>
       ${lalu.length > 1 ? `<div class="jx-muted" style="margin-top:6px;">Percobaan lain: ${lalu.slice(1, 5).map(x => `<a onclick="route('jlpt-review/${x.id || x.localId}')" style="cursor:pointer;text-decoration:underline;">${x.skor}% (${fmtJam(tglMs(x)).split(",")[0]})</a>`).join(" · ")}</div>` : ""}
-      <div class="jx-row wrap"><button class="btn gold" onclick="route('jlpt-review/${h0.id || h0.localId}')">📖 Review hasil sebelumnya</button>
-        <button class="btn ghost" onclick="route('jlpt-riwayat')">📊 Semua riwayat</button></div>
+      <div class="jx-row wrap"><button class="btn gold" onclick="route('jlpt-review/${h0.id || h0.localId}')">📖 Review hasil sebelumnya</button></div>
       <div class="jx-muted">Mau coba lagi? Atur waktu di bawah lalu tekan <b>Mulai ujian ulang</b>. Nilai lama tetap tersimpan.</div></div>` : "";
   return `
     <div class="panel jx">
@@ -667,7 +666,6 @@ function htmlHasil() {
     <div class="jx-row wrap">
       <button class="btn gold" onclick="JLPT.bukaReview()">📖 Lihat Pembahasan</button>
       <button class="btn ghost" onclick="route('jlpt/${h.lv}/${h.jenis}/${h.pkgId}')">🔄 Ulangi ujian sekali lagi</button>
-      <button class="btn ghost" onclick="route('jlpt-riwayat')">📊 Riwayat &amp; nilai sebelumnya</button>
       <button class="btn ghost" onclick="route('jlpt/${h.lv}/${h.jenis}')">← Daftar paket</button>
     </div>
     <p class="jx-note">Mengulang membuka halaman persiapan dulu (belum langsung mulai). Nilai ini tetap tersimpan di Riwayat dan bisa direview kapan saja.</p>
@@ -893,7 +891,7 @@ function putarReview(i) { putar(R.pkg.flat[i]); }
 async function viewReviewDariRiwayat(id) {
   const list = await riwayat();
   const h = list.find(x => x.id === id || x.localId === id);
-  if (!h) return `<div class="panel"><h2>Pembahasan</h2><div class="empty">Data hasil tidak ditemukan.</div><button class="btn ghost" onclick="route('jlpt-riwayat')">← Riwayat</button></div>`;
+  if (!h) return `<div class="panel"><h2>Pembahasan</h2><div class="empty">Data hasil tidak ditemukan.</div><button class="btn ghost" onclick="route('jlpt')">← JLPT Center</button></div>`;
   const pkg = await loadPkg(h.file);
   R = { hasil: h, pkg, filter: "semua", pos: 0, tersimpan: !h._lokal };
   return htmlHasil();

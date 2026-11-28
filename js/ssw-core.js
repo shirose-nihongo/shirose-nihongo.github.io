@@ -105,10 +105,13 @@ export async function loadBidang(force = false) {
   const _ck = "ssw-bidang-cache";
   try {
     if (FB && FB.loadSswBidang && !isGuest()) {
-      const cached = _lsj(_ck);
-      const fetchP = FB.loadSswBidang().then(r => { _lss(_ck, r); return r; });
-      // Ada cache → pakai langsung, segarkan di latar belakang. Tanpa cache → tunggu maks 4 dtk.
-      remote = cached ? (fetchP.catch(() => {}), cached) : await withTimeout(fetchP, 4000, []);
+      const cached = _lsj(_ck), umur = Date.now() - (Number(_lsj(_ck + "-t")) || 0);
+      // Ada cache < 24 jam → pakai langsung TANPA baca Firestore (hemat kuota). Lebih lama → segarkan di latar belakang.
+      if (cached && umur < 86400e3) remote = cached;
+      else {
+        const fetchP = FB.loadSswBidang().then(r => { _lss(_ck, r); _lss(_ck + "-t", Date.now()); return r; });
+        remote = cached ? (fetchP.catch(() => {}), cached) : await withTimeout(fetchP, 4000, []);
+      }
     }
   } catch (e) { console.warn("ssw: gagal memuat konfigurasi bidang:", e.message || e); }
   const map = new Map(DEFAULT_BIDANG.map(b => [b.slug, { ...b }]));
@@ -168,8 +171,8 @@ export async function loadKelasAkses() {
   let map = {};
   const _kk = "ssw-kelas-" + uidNow() + "-" + d.kelas;
   const _kc = _lsj(_kk);
-  if (_kc) {   // pakai cache dulu, segarkan di latar belakang
-    FB.listKelas().then(l => { const k = l.find(x => x.nama === d.kelas); const m = (k && k.aksesSswBidang) || {}; _lss(_kk, m); if (_kelasAkses) _kelasAkses.map = m; }).catch(() => {});
+  if (_kc) {   // pakai cache dulu; segarkan di latar belakang paling sering tiap 3 jam (akses dari guru tetap cepat terasa)
+    if (Date.now() - (Number(_lsj(_kk + "-t")) || 0) > 3 * 3600e3) FB.listKelas().then(l => { _lss(_kk + "-t", Date.now()); return l; }).then(l => { const k = l.find(x => x.nama === d.kelas); const m = (k && k.aksesSswBidang) || {}; _lss(_kk, m); if (_kelasAkses) _kelasAkses.map = m; }).catch(() => {});
     _kelasAkses = { uid: uidNow(), kelas: d.kelas, map: _kc };
     return _kc;
   }

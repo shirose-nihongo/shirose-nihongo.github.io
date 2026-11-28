@@ -26,7 +26,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {
   getFirestore, doc, getDoc, setDoc as _setDoc0, updateDoc as _updateDoc0, deleteDoc as _deleteDoc0,
-  collection, getDocs, onSnapshot, query, orderBy, limit, addDoc as _addDoc0, Timestamp,
+  collection, collectionGroup, getDocs, onSnapshot, query, orderBy, limit, addDoc as _addDoc0, Timestamp,
   where, writeBatch, serverTimestamp, FieldPath, deleteField, documentId, runTransaction, increment, arrayUnion
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
@@ -63,21 +63,41 @@ function _tsFix(o) {
 }
 const _msTs = (t) => t && t.toMillis ? t.toMillis() : (t && typeof t.seconds === "number" ? t.seconds * 1000 : 0);
 /** Guru: tombol "Muat ulang" — data berikutnya diambil dari server (hasil ujian hanya yang baru). */
-export function guruMuatUlang() { try { localStorage.setItem("shirose-guru-paksa", String(Date.now())); } catch (e) {} _memSiswa = null; }
+export function guruMuatUlang() { try { localStorage.setItem("shirose-guru-paksa", String(Date.now())); } catch (e) {} }
+/** Guru: ambil ulang DAFTAR siswa (tombol "Refresh daftar"). */
+export function guruMuatUlangSiswa() { _memSiswa = null; _kvHapusAwalan("siswa-list"); }
+const _segarSiswa = (c) => c && c.cek && Date.now() - c.cek < 24 * 3600e3;
 /** Guru: kosongkan seluruh cache (kalau ada data yang terasa tidak cocok). */
 export async function guruKosongkanCache() { guruMuatUlang(); await _kvHapusAwalan(""); }
 let _memSiswa = null;
 function _cacheBuangSiswa(uid) { _memSiswa = null; _kvHapusAwalan("siswa-list"); if (uid) { _kvHapusAwalan("gami:" + uid); _kvHapusAwalan("srs:" + uid); } }
 /* Bungkus fungsi tulis: kalau perangkat ini mengubah data siswa, cache guru untuk siswa itu dibuang. */
 function _setelahTulis(ref) { if (!userIsGuru()) return; try { const m = /^siswa\/([^/]+)(?:\/([^/]+))?/.exec(ref && ref.path || ""); if (m) { _cacheBuangSiswa(m[1]); if (m[2]) _kvHapusAwalan(`hasil:${m[2]}:${m[1]}`); } } catch (e) {} }
-const setDoc = (ref, ...a) => { _setelahTulis(ref); return _setDoc0(ref, ...a); };
+/* Hasil milik siswa sendiri (jlpt_hasil, jft_hasil, mensetsu_hasil, nilai) juga disimpan di perangkat.
+ * Saat siswa menyimpan/menghapus hasil, cache ikut diperbarui → membuka riwayat tidak perlu baca ulang. */
+const HASIL_SUBS = new Set(["jlpt_hasil", "jft_hasil", "mensetsu_hasil", "nilai"]);
+function _sayaInfo(path) { const m = /^siswa\/([^/]+)\/([^/]+)(?:\/([^/]+))?$/.exec(path || ""); if (!m || !currentUser || m[1] !== currentUser.uid || !HASIL_SUBS.has(m[2])) return null; return { uid: m[1], sub: m[2], id: m[3] }; }
+function _bersihTs(data) { const o = { ...(data || {}) }; for (const k of Object.keys(o)) { const v = o[k]; if (v && typeof v === "object" && v._methodName === "serverTimestamp") o[k] = Timestamp.now(); } return o; }
+async function _sayaCatat(inf, id, data, merge) {
+  const key = `hasil:${inf.sub}:${inf.uid}`, c = await _kvGet(key); if (!c) return;
+  let items = c.items || []; const i = items.findIndex(x => x.id === id);
+  if (data === null) items = items.filter(x => x.id !== id);
+  else { const row = { id, ..._bersihTs(data) }; if (i >= 0) items[i] = merge ? { ...items[i], ...row } : row; else items = [row, ...items]; c.max = Math.max(c.max || 0, _msTs(row.tgl)); }
+  c.items = items; await _kvSet(key, c);
+}
+const setDoc = (ref, data, o) => { _setelahTulis(ref); const p = _setDoc0(ref, data, o); const inf = _sayaInfo(ref && ref.path); if (inf && inf.id) p.then(() => _sayaCatat(inf, inf.id, data, o && o.merge)).catch(() => {}); return p; };
 const updateDoc = (ref, ...a) => { _setelahTulis(ref); return _updateDoc0(ref, ...a); };
-const deleteDoc = (ref, ...a) => { _setelahTulis(ref); return _deleteDoc0(ref, ...a); };
-const addDoc = (ref, ...a) => _addDoc0(ref, ...a);
+const deleteDoc = (ref, ...a) => { _setelahTulis(ref); const p = _deleteDoc0(ref, ...a); const inf = _sayaInfo(ref && ref.path); if (inf && inf.id) p.then(() => _sayaCatat(inf, inf.id, null)).catch(() => {}); return p; };
+const addDoc = async (ref, data) => { const r = await _addDoc0(ref, data); const inf = _sayaInfo(ref && ref.path); if (inf) { try { await _sayaCatat(inf, r.id, data, false); } catch (e) {} } return r; };
 /* Hasil ujian per siswa: ambil hanya dokumen yang lebih baru dari cache (kueri kosong = 1 baca). */
-async function _hasilGuru(uid, sub, limitN) {
+const SAYA_TTL = 24 * 3600e3;
+const _segarSaya = (c) => c && c.cek && Date.now() - c.cek < SAYA_TTL;
+async function _hasilSaya(sub, limitN) { return _hasilGuru(currentUser.uid, sub, limitN, true); }
+async function _hasilGuru(uid, sub, limitN, saya = false) {
   const key = `hasil:${sub}:${uid}`, c = await _kvGet(key);
-  if (_segar(c) && (c.items.length >= limitN || c.habis)) return c.items.slice(0, limitN).map(_tsFix);
+  const cukup = c && c.items && (c.items.length >= limitN || c.habis);
+  if (cukup && (saya ? _segarSaya(c) : _segar(c))) return c.items.slice(0, limitN).map(x => _tsFix({ ...x }));
+  if (cukup && !saya && await _guruSinkronCG(sub)) { const c2 = (await _kvGet(key)) || c; return c2.items.slice(0, limitN).map(x => _tsFix({ ...x })); }
   const base = collection(db, "siswa", uid, sub);
   const lama = (c && c.items) || [];
   const q = c && c.max && (lama.length >= limitN || c.habis)
@@ -89,8 +109,36 @@ async function _hasilGuru(uid, sub, limitN) {
   const max = items.reduce((m, x) => Math.max(m, _msTs(x.tgl)), 0);
   const habis = (c && c.habis) || (!c || !c.max || lama.length < limitN ? baru.length < limitN : false);
   await _kvSet(key, { items, max, cek: Date.now(), habis });
-  return items.slice(0, limitN).map(_tsFix);
+  return items.slice(0, limitN).map(x => _tsFix({ ...x }));
 }
+/* Guru: SATU kueri collection group untuk semua hasil baru semua siswa (bukan 1 kueri per siswa).
+ * Butuh rules {path=**}/<sub> + indeks tgl (collection group). Kalau belum ada → kembali ke cara per siswa. */
+const _cgJalan = {};
+async function _guruSinkronCG(sub) {
+  if (_cgJalan[sub]) return _cgJalan[sub];
+  return (_cgJalan[sub] = (async () => {
+    const k = "cg:" + sub; let st = (await _kvGet(k)) || {};
+    if (st.cek && st.cek > _paksaGet() && Date.now() - st.cek < GURU_TTL) return true;
+    if (!st.max) {   // pertama kali: mulai dari cek per-siswa paling lama yang tersimpan
+      const semua = await _kvSemua(`hasil:${sub}:`); if (!semua.length) return false;
+      st.max = Math.min(...semua.map(([, v]) => v.cek || 0)) - 5 * 60e3;
+    }
+    try {
+      const snap = await getDocs(query(collectionGroup(db, sub), where("tgl", ">", Timestamp.fromMillis(st.max)), orderBy("tgl", "desc"), limit(1000)));
+      const per = {};
+      snap.docs.forEach(d => { const u = d.ref.parent.parent.id; (per[u] = per[u] || []).push({ id: d.id, ...d.data() }); });
+      for (const [u, baru] of Object.entries(per)) {
+        const key = `hasil:${sub}:${u}`, c = await _kvGet(key); if (!c) continue;
+        const ids = new Set(baru.map(x => x.id));
+        c.items = [...baru, ...c.items.filter(x => !ids.has(x.id))].sort((a, b) => _msTs(b.tgl) - _msTs(a.tgl)).slice(0, Math.max(300, c.items.length));
+        c.max = Math.max(c.max || 0, ...baru.map(x => _msTs(x.tgl))); await _kvSet(key, c);
+      }
+      st = { max: Math.max(st.max, ...snap.docs.map(d => _msTs(d.data().tgl))), cek: Date.now() };
+      await _kvSet(k, st); return true;
+    } catch (e) { console.warn(`[hemat] kueri ${sub} gabungan gagal (rules/indeks collection group belum ada), pakai cara per siswa:`, e.message); return false; }
+  })().finally(() => { setTimeout(() => { delete _cgJalan[sub]; }, 0); }));
+}
+async function _kvSemua(pre) { try { const d = await _idb(); return await new Promise(res => { const out = [], t = d.transaction("kv"), c = t.objectStore("kv").openCursor(); c.onsuccess = () => { const cur = c.result; if (!cur) return; if (String(cur.key).startsWith(pre)) out.push([cur.key, cur.value]); cur.continue(); }; t.oncomplete = () => res(out); t.onerror = () => res(out); }); } catch (e) { return []; } }
 const _guruLihatOrangLain = (uid) => userIsGuru() && uid !== currentUser?.uid;
 
 
@@ -842,12 +890,15 @@ export async function getGami(level) {
   if (!currentUser) return null;
   try {
     // Baca dokumen gami & dompet PARALEL (dulu berurutan → login/ganti akun terasa ngelag).
+    // Cache perangkat 6 jam: buka web / pindah halaman tidak membaca ulang XP & saldo.
+    const cg = _lcGet(_gamiKey(level)), segar = cg && _baseSegar();
     const [snap, k, lvMax] = await Promise.all([
-      getDoc(doc(db, "siswa", currentUser.uid, "gami", level)),
-      getWalletKoin().catch(() => null),
+      segar ? null : getDoc(doc(db, "siswa", currentUser.uid, "gami", level)),
+      segar ? null : getWalletKoin().catch(() => null),
       _levelAkun(level).catch(() => 0),
     ]);
-    const g = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
+    const g = segar ? { ...cg } : (snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 });
+    if (!segar) _lcSet(_gamiKey(level), g);
     g.koin = k !== null ? k : _koinFallback(g.koin) + _koinAntrean();
     _gamiServer[level] = { ...g };
     // Level karakter = level TERTINGGI di semua level JLPT/JFT (dulu hanya dokumen level aktif -> tampak "turun" saat pindah level)
@@ -864,7 +915,7 @@ function _lvGet() { try { return (JSON.parse(localStorage.getItem(_lvKey()) || "
 function _lvSet(v) { try { const o = JSON.parse(localStorage.getItem(_lvKey()) || "{}"); localStorage.setItem(_lvKey(), JSON.stringify({ v: Math.max(v || 0, o.v || 0), t: o.t || 0 })); } catch (e) {} }
 async function _levelAkun(aktif) {
   let o = {}; try { o = JSON.parse(localStorage.getItem(_lvKey()) || "{}"); } catch (e) {}
-  if (o.t && Date.now() - o.t < 6 * 3600e3) return o.v || 0;
+  if (o.t && Date.now() - o.t < 24 * 3600e3) return o.v || 0;
   const uid = currentUser.uid, lvls = WALLET_LVLS.filter(l => l !== aktif);
   const snaps = await Promise.all(lvls.map(l => getDoc(doc(db, "siswa", uid, "gami", l)).catch(() => null)));
   let mx = 0; snaps.forEach(sn => { if (sn && sn.exists()) mx = Math.max(mx, sn.data().level_karakter || 1); });
@@ -917,6 +968,14 @@ function _terapkanAntreanXP(level, cur) {
  *   - cadangan tiap 10 menit bila masih ada antrean, dan sebelum belanja koin / klaim misi / logout.
  * Antrean ada di localStorage → kalau tab mati mendadak, sisanya dikirim saat aplikasi dibuka lagi. */
 const _gamiServer = {};   // level -> data gami terakhir dari server (tanpa antrean)
+/* Cache di perangkat (6 jam) untuk data yang praktis hanya diubah perangkat ini sendiri. */
+const LOKAL_TTL = 6 * 3600e3;
+function _lcGet(k, ttl = LOKAL_TTL) { try { const c = JSON.parse(localStorage.getItem(k) || "null"); return c && (!ttl || Date.now() - c.t < ttl) ? c.d : null; } catch (e) { return null; } }
+function _lcSet(k, d) { try { localStorage.setItem(k, JSON.stringify({ t: Date.now(), d })); } catch (e) {} }
+const _gamiKey = (lv) => `shirose-gami:${currentUser?.uid || "x"}:${lv}`;
+const _misiKey = (tgl) => `shirose-misi:${currentUser?.uid || "x"}:${tgl}`;
+const _actKey = (ym) => `shirose-act:${currentUser?.uid || "x"}:${ym}`;
+function _baseSegar() { try { const v = JSON.parse(localStorage.getItem("shirose-walletbase:" + (currentUser && currentUser.uid)) || "null"); return !!(v && typeof v.koin === "number" && Date.now() - (v.t || 0) < LOKAL_TTL); } catch (e) { return false; } }
 const _qKey = () => "shirose-antrean:" + (currentUser?.uid || "x");
 function _qGet() { try { return JSON.parse(localStorage.getItem(_qKey()) || "null") || {}; } catch (e) { return {}; } }
 function _qSet(q) { try { localStorage.setItem(_qKey(), JSON.stringify(q)); } catch (e) {} }
@@ -944,34 +1003,41 @@ async function _kirimAntrean() {
   for (const [lv, p] of Object.entries(awal.gami)) {
     const px = Number(p && p.xp) || 0; if (!px) continue;
     const ref = doc(db, "siswa", uid, "gami", lv);
-    const snap = await getDoc(ref);
-    const cur = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 };
-    cur.xp = (cur.xp || 0) + px;
+    let cur = _lcGet(_gamiKey(lv));   // data server terakhir yang diketahui → tanpa baca
+    if (!cur) { const snap = await getDoc(ref); cur = snap.exists() ? snap.data() : { xp:0, koin:0, streak:0, level_karakter:1 }; }
+    cur = { ...cur, xp: (cur.xp || 0) + px };
     cur.level_karakter = Math.floor(Math.sqrt(cur.xp / 50)) + 1;
     _hitungStreak(cur);
-    await setDoc(ref, cur, { merge: true });
+    await setDoc(ref, { xp: increment(px), level_karakter: cur.level_karakter, streak: cur.streak, lastDate: cur.lastDate }, { merge: true });
+    _lcSet(_gamiKey(lv), cur);
     { const q = _q(); const g = q.gami[lv]; if (g) { g.xp = (Number(g.xp) || 0) - px; if (g.xp <= 0) delete q.gami[lv]; } _qSet(q); }
     if (_gamiServer[lv]) Object.assign(_gamiServer[lv], { xp: cur.xp, streak: cur.streak, lastDate: cur.lastDate, level_level_ini: cur.level_karakter });
     lbXp[lv] = cur.xp; lbLv = Math.max(lbLv, cur.level_karakter);
   }
   // 3) Catatan aktivitas: increment (tulis saja, tanpa baca)
+  //    Satu dokumen per BULAN (activity/m-YYYYMM) → kalender sebulan = 1 baca.
   for (const [ymd, m] of Object.entries(awal.act)) {
-    const upd = { lastTs: serverTimestamp() }; let ada = false;
-    for (const [t, n] of Object.entries(m || {})) if (n) { upd[t] = increment(n); ada = true; }
-    if (ada) await setDoc(doc(db, "siswa", uid, "activity", ymd), upd, { merge: true });
+    const hari = {}; let ada = false;
+    for (const [t, n] of Object.entries(m || {})) if (n) { hari[t] = increment(n); ada = true; }
+    if (ada) {
+      await setDoc(doc(db, "siswa", uid, "activity", "m-" + ymd.slice(0, 6)), { hari: { [ymd]: hari }, lastTs: serverTimestamp() }, { merge: true });
+      const c = _lcGet(_actKey(ymd.slice(0, 6)), 0);
+      if (c) { const r = c[ymd] = { kanji:0, kosakata:0, latihan:0, ujian:0, sesi:0, ...(c[ymd] || {}) }; for (const [t, n] of Object.entries(m || {})) r[t] = (Number(r[t]) || 0) + (Number(n) || 0); _lcSet(_actKey(ymd.slice(0, 6)), c); }
+    }
     { const q = _q(); const a = q.act[ymd] || {}; for (const [t, n] of Object.entries(m || {})) { a[t] = (Number(a[t]) || 0) - n; if (a[t] <= 0) delete a[t]; } if (Object.keys(a).length) q.act[ymd] = a; else delete q.act[ymd]; _qSet(q); }
   }
   // 4) Misi harian: 1 baca + 1 tulis per hari
   for (const [tgl, m] of Object.entries(awal.misi)) {
     const ref = doc(db, "siswa", uid, "misi_harian", tgl);
-    const snap = await getDoc(ref);
-    if (snap.exists()) {
-      const data = snap.data(); let ubah = false;
+    let data = _lcGet(_misiKey(tgl));
+    if (!data) { const snap = await getDoc(ref); data = snap.exists() ? snap.data() : null; }
+    if (data) {
+      let ubah = false;
       for (const [id, n] of Object.entries(m || {})) {
         const x = (data.misi || []).find(z => z.id === id);
         if (x && !(data.claimed || []).includes(id)) { x.progres = Math.min((x.progres || 0) + n, x.target); ubah = true; }
       }
-      if (ubah) await setDoc(ref, data);
+      if (ubah) { await setDoc(ref, data); _lcSet(_misiKey(tgl), data); }
     }
     { const q = _q(); const a = q.misi[tgl] || {}; for (const [id, n] of Object.entries(m || {})) { a[id] = (Number(a[id]) || 0) - n; if (a[id] <= 0) delete a[id]; } if (Object.keys(a).length) q.misi[tgl] = a; else delete q.misi[tgl]; _qSet(q); }
   }
@@ -987,7 +1053,7 @@ if (typeof window !== "undefined") {
 }
 
 /* ========== SRS (hafalan) ========== */
-/* Progres hafalan dikirim tiap 10 kartu (atau saat simpanSekarang), bukan tiap kartu.
+/* Progres hafalan dikirim tiap 100 kartu (atau saat simpanSekarang), bukan tiap kartu.
  * Salinan terbaru disimpan di localStorage supaya tidak hilang kalau tab tertutup. */
 const _srsPend = {};   // level -> { n: jumlah perubahan belum terkirim, kartu }
 const _srsLsKey = (lv) => `shirose-srs-pend:${currentUser?.uid || "x"}:${lv}`;
@@ -997,7 +1063,7 @@ export async function saveSRS(level, kartu, { segera = false } = {}) {
   p.kartu = kartu; p.n++;
   try { localStorage.setItem(_srsLsKey(level), JSON.stringify(kartu)); } catch (e) {}
   _jadwalSimpan();
-  if (segera || p.n >= 10) await _srsTulis(level);
+  if (segera || p.n >= 100) await _srsTulis(level);
 }
 async function _srsTulis(level) {
   const p = _srsPend[level]; if (!p || !p.n || !currentUser) return;
@@ -1040,6 +1106,7 @@ export async function simpanHasilJLPT(hasil) {
 }
 export async function listHasilJLPT(limitN = 100) {
   if (!currentUser) return [];
+  try { return await _hasilSaya("jlpt_hasil", limitN); } catch (e) { console.warn("cache hasil:", e.message); }
   const q = query(collection(db, "siswa", currentUser.uid, "jlpt_hasil"), orderBy("tgl", "desc"), limit(limitN));
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -1063,6 +1130,7 @@ export async function simpanHasilJft(rec) {
 export async function listHasilJftOf(uid, limitN = 300) {
   if (!userIsGuru() && uid !== currentUser?.uid) throw new Error("Tidak diizinkan");
   if (_guruLihatOrangLain(uid)) return _hasilGuru(uid, "jft_hasil", limitN);
+  if (uid === currentUser?.uid) { try { return await _hasilSaya("jft_hasil", limitN); } catch (e) {} }
   const q = query(collection(db, "siswa", uid, "jft_hasil"), orderBy("tgl", "desc"), limit(limitN));
   const snap = await getDocs(q);
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -1161,6 +1229,7 @@ export async function simpanHasilMensetsu(hasil) {
 }
 export async function listHasilMensetsu(limitN = 50) {
   if (!currentUser) return [];
+  try { return await _hasilSaya("mensetsu_hasil", limitN); } catch (e) { console.warn("cache hasil:", e.message); }
   const q = query(collection(db, "siswa", currentUser.uid, "mensetsu_hasil"), orderBy("tgl", "desc"), limit(limitN));
   return (await getDocs(q)).docs.map(d => ({ id: d.id, ...d.data() }));
 }
@@ -1177,6 +1246,7 @@ export async function hapusHasilMensetsu(id) {
 export async function hapusSemuaHasilMensetsu() {
   if (!currentUser) throw new Error("Belum login");
   const docs = (await getDocs(collection(db, "siswa", currentUser.uid, "mensetsu_hasil"))).docs;
+  _kvHapusAwalan(`hasil:mensetsu_hasil:${currentUser.uid}`);
   for (let i = 0; i < docs.length; i += 400) {
     const b = writeBatch(db); docs.slice(i, i + 400).forEach(d => b.delete(d.ref)); await b.commit();
   }
@@ -1224,14 +1294,25 @@ export async function recordActivity(type, count = 1){
 export async function listActivity(ym /* YYYYMM */){
   if (!currentUser) return {};
   try {
-    // Hanya baca dokumen bulan yang diminta (id = YYYYMMDD), bukan seluruh riwayat.
-    const col = collection(db, "siswa", currentUser.uid, "activity");
-    const q = query(col, where(documentId(), ">=", ym), where(documentId(), "<", ym + "\uf8ff"));
-    const snap = await getDocs(q);
-    const result = {};
-    snap.forEach(d => {
-      if (d.id.startsWith(ym)) result[d.id] = d.data();
-    });
+    // Bulan lalu: cache permanen. Bulan ini: cache 24 jam (+ diperbarui tiap simpan). Server: 1 dokumen per bulan.
+    const bulanIni = _ymdLocal().slice(0, 6);
+    let result = _lcGet(_actKey(ym), ym < bulanIni ? 0 : 24 * 3600e3);
+    if (!result) {
+      const mref = doc(db, "siswa", currentUser.uid, "activity", "m-" + ym);
+      const ms = await getDoc(mref);
+      const md = ms.exists() ? ms.data() : null;
+      result = {};
+      if (!md || !md.lengkap) {
+        // Sekali per bulan: gabungkan dokumen harian lama ke dokumen bulanan.
+        const col = collection(db, "siswa", currentUser.uid, "activity");
+        const snap = await getDocs(query(col, where(documentId(), ">=", ym), where(documentId(), "<", ym + "\uf8ff")));
+        snap.forEach(d => { if (/^\d{8}$/.test(d.id) && d.id.startsWith(ym)) { const { lastTs, ...x } = d.data(); result[d.id] = x; } });
+      }
+      for (const [ymd, x] of Object.entries((md && md.hari) || {})) { const r = result[ymd] = { ...(result[ymd] || {}) }; for (const [t, n] of Object.entries(x || {})) r[t] = (Number(r[t]) || 0) + (Number(n) || 0); }
+      if (!md || !md.lengkap) { try { await setDoc(mref, { hari: result, lengkap: true, lastTs: serverTimestamp() }); } catch (e) {} }
+      _lcSet(_actKey(ym), result);
+    }
+    result = JSON.parse(JSON.stringify(result));
     // Aktivitas yang masih di antrean ikut ditampilkan
     for (const [ymd, m] of Object.entries(_q().act)) if (ymd.startsWith(ym)) {
       const r = result[ymd] = { kanji:0, kosakata:0, latihan:0, ujian:0, sesi:0, ...(result[ymd] || {}) };
@@ -1436,6 +1517,7 @@ export function detectNewMastery(card) {
 }
 export async function listNilai(limitN = 50) {
   if (!currentUser) return [];
+  try { return await _hasilSaya("nilai", limitN); } catch (e) { console.warn("cache hasil:", e.message); }
   const q = query(collection(db, "siswa", currentUser.uid, "nilai"),
                   orderBy("tgl","desc"), limit(limitN));
   const snap = await getDocs(q);
@@ -1443,27 +1525,66 @@ export async function listNilai(limitN = 50) {
 }
 
 /* ========== KATEGORI UJIAN (guru CRUD) ========== */
+/* Daftar kategori ujian: siswa membaca SATU dokumen kategori_index/all (cache 6 jam di perangkat).
+ * Guru tetap membaca koleksi asli, dan setiap guru mengubah kategori/soal → indeks & paket soal dibangun ulang. */
+const KAT_TTL = 6 * 3600e3;
+let _katMem = null;
+async function _kategoriIndex() {
+  if (_katMem && Date.now() - _katMem.t < KAT_TTL) return _katMem.items;
+  const key = "shirose-katidx:" + (currentUser?.uid || "x");
+  try { const c = JSON.parse(localStorage.getItem(key) || "null"); if (c && Date.now() - c.t < KAT_TTL) { _katMem = c; return c.items; } } catch (e) {}
+  const snap = await getDoc(doc(db, "kategori_index", "all"));
+  if (!snap.exists()) return null;
+  const items = snap.data().items || [];
+  _katMem = { t: Date.now(), items };
+  try { localStorage.setItem(key, JSON.stringify(_katMem)); } catch (e) {}
+  return items;
+}
+async function _kategoriKoleksi() { const snap = await getDocs(collection(db, "kategori_ujian")); return snap.docs.map(d => ({ id:d.id, ...d.data() })); }
 export async function listKategori(level = null) {
-  const col = collection(db, "kategori_ujian");
-  const snap = await getDocs(col);
-  let arr = snap.docs.map(d => ({ id:d.id, ...d.data() }));
+  let arr = null;
+  if (!userIsGuru()) { try { arr = await _kategoriIndex(); } catch (e) { console.warn("kategori_index:", e.message); } }
+  if (!arr) arr = await _kategoriKoleksi();
+  arr = arr.map(k => _tsFix({ ...k }));
   if (level) arr = arr.filter(k => k.level === level);
   return arr;
+}
+/** Guru: bangun ulang indeks kategori (1 dokumen) — dipanggil otomatis setelah kategori/soal berubah. */
+export async function bangunKategoriIndex() {
+  if (!userIsGuru()) return;
+  const items = await _kategoriKoleksi();
+  const paket = {};
+  await Promise.all(items.map(async k => { try { const p = await getDoc(doc(db, "soal_paket", k.id)); if (p.exists()) paket[k.id] = Number(p.data().v) || 0; } catch (e) {} }));
+  await setDoc(doc(db, "kategori_index", "all"), { items: items.map(k => ({ ...k, paketV: paket[k.id] || 0 })), upd: serverTimestamp() });
+}
+/** Guru: gabungkan semua soal satu kategori jadi SATU dokumen soal_paket/{id} (siswa cukup 1 baca). */
+export async function bangunPaketSoal(kategoriId, { indeks = true } = {}) {
+  if (!userIsGuru()) return;
+  const snap = await getDocs(collection(db, "soal", kategoriId, "items"));
+  const items = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  const v = Date.now(), data = { items, v, upd: serverTimestamp() };
+  if (JSON.stringify(data).length > 900000) { console.warn("[hemat] soal kategori", kategoriId, "terlalu besar untuk 1 dokumen; siswa pakai cara lama"); try { await deleteDoc(doc(db, "soal_paket", kategoriId)); } catch (e) {} }
+  else await setDoc(doc(db, "soal_paket", kategoriId), data);
+  if (indeks) await bangunKategoriIndex();
 }
 export async function simpanKategori(data, id = null) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   const col = collection(db, "kategori_ujian");
   if (id) {
     await setDoc(doc(col, id), { ...data, updated: serverTimestamp() }, { merge: true });
+    bangunKategoriIndex().catch(e => console.warn("indeks kategori:", e.message));
     return id;
   } else {
     const ref = await addDoc(col, { ...data, created: serverTimestamp() });
+    bangunKategoriIndex().catch(e => console.warn("indeks kategori:", e.message));
     return ref.id;
   }
 }
 export async function hapusKategori(id) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   await deleteDoc(doc(db, "kategori_ujian", id));
+  try { await deleteDoc(doc(db, "soal_paket", id)); } catch (e) {}
+  bangunKategoriIndex().catch(e => console.warn("indeks kategori:", e.message));
 }
 
 /* ========== KELAS KATA KOSAKATA (override guru) ==========
@@ -1486,10 +1607,20 @@ export async function resetPosOverride(lvl, kata) {
 // Urutan soal harus dipertahankan sesuai input Excel — Firestore tidak
 // menjamin urutan dari getDocs, jadi kita simpan field `urutan` di tiap
 // soal dan sort di client.
+async function _soalPaket(kategoriId) {
+  // Versi paket dari indeks kategori → cache soal di perangkat dipakai selama versinya sama.
+  const idx = await _kategoriIndex(); if (!idx) return null;
+  const k = idx.find(x => x.id === kategoriId); if (!k || !k.paketV) return null;
+  const key = `soal:${currentUser?.uid || "x"}:${kategoriId}`, c = await _kvGet(key);
+  if (c && c.v === k.paketV) return c.items;
+  const p = await getDoc(doc(db, "soal_paket", kategoriId)); if (!p.exists()) return null;
+  const d = p.data(); await _kvSet(key, { v: d.v, items: d.items || [] });
+  return d.items || [];
+}
 export async function listSoal(kategoriId) {
-  const col = collection(db, "soal", kategoriId, "items");
-  const snap = await getDocs(col);
-  const arr = snap.docs.map(d => ({ id:d.id, ...d.data() }));
+  let arr = null;
+  if (!userIsGuru()) { try { arr = await _soalPaket(kategoriId); if (arr) arr = arr.map(x => _tsFix({ ...x })); } catch (e) { console.warn("soal_paket:", e.message); } }
+  if (!arr) { const snap = await getDocs(collection(db, "soal", kategoriId, "items")); arr = snap.docs.map(d => ({ id:d.id, ...d.data() })); }
   arr.sort((a, b) => {
     const au = typeof a.urutan === "number" ? a.urutan : Infinity;
     const bu = typeof b.urutan === "number" ? b.urutan : Infinity;
@@ -1535,15 +1666,21 @@ export async function tambahSoalBatch(kategoriId, soalArr) {
     await b.commit();
     total += batch.length;
   }
+  _paketNanti(kategoriId);
   return total;
 }
+/* Guru sering mengedit beberapa soal berturut-turut → paket dibangun ulang 5 detik setelah edit terakhir. */
+const _paketT = {};
+function _paketNanti(kategoriId) { clearTimeout(_paketT[kategoriId]); _paketT[kategoriId] = setTimeout(() => bangunPaketSoal(kategoriId).catch(e => console.warn("paket soal:", e.message)), 5000); }
 export async function hapusSoal(kategoriId, soalId) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   await deleteDoc(doc(db, "soal", kategoriId, "items", soalId));
+  _paketNanti(kategoriId);
 }
 export async function editSoal(kategoriId, soalId, data) {
   if (!userIsGuru()) throw new Error("Hanya guru");
   await updateDoc(doc(db, "soal", kategoriId, "items", soalId), data);
+  _paketNanti(kategoriId);
 }
 
 /* ========== ITEM SHOP (seedable) ========== */
@@ -1590,9 +1727,9 @@ export async function tambahChoukaiBatch(level, soalArr) {
 export async function listSiswa() {
   if (!userIsGuru()) throw new Error("Hanya guru");
   try {
-    if (_memSiswa && _segar(_memSiswa)) return _memSiswa.items.map(x => _tsFix({ ...x }));
+    if (_memSiswa && _segarSiswa(_memSiswa)) return _memSiswa.items.map(x => _tsFix({ ...x }));
     const c = await _kvGet("siswa-list");
-    if (_segar(c)) { _memSiswa = c; return c.items.map(x => _tsFix({ ...x })); }
+    if (_segarSiswa(c)) { _memSiswa = c; return c.items.map(x => _tsFix({ ...x })); }
     const snap = await getDocs(collection(db, "siswa"));
     const items = snap.docs.map(d => ({ uid:d.id, ...d.data() }));
     _memSiswa = { items, cek: Date.now() }; _kvSet("siswa-list", _memSiswa);
@@ -2064,8 +2201,8 @@ export async function backfillLeaderboard(){
  * lb_agg/global        = { rows: { uid: { n, k, t, x:{n5..n1}, lv } }, upd }
  * ssw_rank_agg/{slug}  = { rows: { uid: { n, k, p, r } }, upd }
  * Tiap siswa hanya menulis barisnya sendiri (sekali sehari). Membaca leaderboard = 1 baca,
- * lalu disimpan di perangkat 6 jam. Muat ±5.000 siswa per dokumen (batas 1 MiB). */
-const AGG_TTL = 6 * 3600e3;
+ * lalu disimpan di perangkat 24 jam. Muat ±5.000 siswa per dokumen (batas 1 MiB). */
+const AGG_TTL = 24 * 3600e3;
 async function _aggTulis(path, uid, row) {
   try { await setDoc(doc(db, ...path), { rows: { [uid]: row }, upd: serverTimestamp() }, { merge: true }); } catch (e) { console.warn("agg tulis gagal:", e.message); }
 }
@@ -2095,6 +2232,14 @@ export async function pastikanLeaderboardGabungan() {
   if (!userIsGuru()) return;
   try { if (Date.now() - (Number(localStorage.getItem("shirose-agg-cek")) || 0) < 86400e3) return; localStorage.setItem("shirose-agg-cek", String(Date.now())); } catch (e) {}
   try { const g = await getDoc(doc(db, "lb_agg", "global")); if (!g.exists()) await bangunLeaderboardGabungan(); } catch (e) { console.warn("agg cek gagal (rules lb_agg belum dipasang?):", e.message); }
+  // Paket soal ujian guru + indeks kategori (1 baca untuk siswa)
+  try {
+    const idx = await getDoc(doc(db, "kategori_index", "all"));
+    const ada = idx.exists() ? new Set((idx.data().items || []).filter(k => k.paketV).map(k => k.id)) : new Set();
+    const kat = await _kategoriKoleksi();
+    for (const k of kat) if (!ada.has(k.id)) await bangunPaketSoal(k.id, { indeks: false });
+    if (!idx.exists() || kat.some(k => !ada.has(k.id))) await bangunKategoriIndex();
+  } catch (e) { console.warn("paket soal cek gagal (rules soal_paket/kategori_index belum dipasang?):", e.message); }
 }
 
 // kind: "global" | "jlpt-n5".."jlpt-n1". kelas (opsional) membatasi ke satu kelas.
@@ -2142,8 +2287,10 @@ export async function getMisiHariIni() {
   if (!currentUser) return null;
   const tgl = new Date().toISOString().slice(0,10);
   const ref = doc(db, "siswa", currentUser.uid, "misi_harian", tgl);
+  const c = _lcGet(_misiKey(tgl));
+  if (c) return _misiPlusAntrean(tgl, c);
   const snap = await getDoc(ref);
-  if (snap.exists()) return _misiPlusAntrean(tgl, snap.data());
+  if (snap.exists()) { _lcSet(_misiKey(tgl), snap.data()); return _misiPlusAntrean(tgl, snap.data()); }
   // Generate 3 misi baru
   const misiPool = [
     { id: "hafalan_10", nama: "Hafalkan 10 kata", target: 10, reward_xp: 30, reward_koin: 10 },
@@ -2157,6 +2304,7 @@ export async function getMisiHariIni() {
   const misi = shuffled.slice(0, 3).map(m => ({ ...m, progres: 0 }));
   const data = { misi, claimed: [] };
   await setDoc(ref, data);
+  _lcSet(_misiKey(tgl), data);
   return data;
 }
 /* Progres misi masuk antrean; dikirim sekali oleh simpanSekarang() (1 baca + 1 tulis per hari). */
@@ -2183,6 +2331,7 @@ export async function claimMisi(misiId, level = "n5") {
   if (!m || data.claimed.includes(misiId) || m.progres < m.target) return;
   data.claimed.push(misiId);
   await setDoc(ref, data);
+  _lcSet(_misiKey(tgl), data);
   await tambahXP(level, m.reward_xp, m.reward_koin);
   return m;
 }
