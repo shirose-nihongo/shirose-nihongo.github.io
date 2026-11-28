@@ -143,7 +143,6 @@
     if (hasPrice(harga)) {
       var row = el("div", "mb-prow");
       row.appendChild(el("s", "mb-coret", rupiah(coretOf(harga))));
-      row.appendChild(el("span", "mb-hemat", "HEMAT " + hemat(harga) + "%"));
       pr.appendChild(row);
     }
     pr.appendChild(el("div", "mb-price" + (hasPrice(harga) ? "" : " none"), hasPrice(harga) ? rupiah(harga) : "Harga belum diisi"));
@@ -305,7 +304,7 @@
     back.onclick = function () { closePricing(); };
     bar.appendChild(back); bar.appendChild(el("div", "mb-ttl", "Berlangganan Shirose Nihongo")); root.appendChild(bar);
     var wrap = el("div", "mb-wrap");
-    var pr = el("div", "mb-promo"); pr.innerHTML = "🔥 <b>Harga promo, diskon hingga " + hemat(10000) + "% dari harga normal.</b> Pilih 1 bulan, <b>3 bulan</b> (lebih hemat per bulan), atau <b>Lifetime</b> sekali bayar. Harga promo bisa naik sewaktu-waktu."; wrap.appendChild(pr);
+    var pr = el("div", "mb-promo"); pr.innerHTML = "🔥 <b>Harga promo, jauh di bawah harga normal.</b> Pilih 1 bulan, <b>3 bulan</b> (lebih hemat per bulan), atau <b>Lifetime</b> sekali bayar. Harga promo bisa naik sewaktu-waktu."; wrap.appendChild(pr);
     wrap.appendChild(el("p", "mb-lead", "Pilih kategori, pilih paket dan durasi, lalu ketuk Berlangganan Sekarang. Ketuk angka di tiap paket untuk melihat isinya. Pesanmu terisi otomatis di WhatsApp admin."));
     if (!waBase()) wrap.appendChild(el("div", "mb-off-note", "Nomor WhatsApp admin belum diisi (js/landing-config.js → langganan.url). Tombol berlangganan nonaktif sementara."));
     var tabs = el("div", "mb-tabs"); tabs.setAttribute("role", "tablist");
