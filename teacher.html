@@ -250,9 +250,9 @@ window.aturKoinSiswa = async (uid, lama) => {
   try { await FB.setWalletKoinOf(uid, n, "pengembalian koin gacha oleh guru"); alert("✅ Saldo sekarang " + n.toLocaleString("id-ID") + ". Siswa melihatnya saat membuka aplikasi lagi."); location.reload(); } catch (e) { alert("❌ " + e.message); }
 };
 // ?v=20261108i — cache-buster, lihat catatan sama di index.html.
-import * as FB from "./js/firebase-sync.js?v=20261126a";
+import * as FB from "./js/firebase-sync.js?v=20261128b";
 import { renderSswTab } from "./js/ssw-teacher.js?v=20261117a";
-import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261118s";
+import { DEFAULT_BIDANG } from "./js/ssw-core.js?v=20261128b";
 import { renderCharacter, DEFAULT_EQUIPPED, setBody, setBentuk, BENTUK_DEFAULT } from "./js/character.js?v=20261122p";
 import { renderBankJlptTab } from "./js/jlpt-bank-teacher.js?v=20261118b";
 import { renderDeckTab } from "./js/deck-teacher.js?v=20261126b";
@@ -957,7 +957,7 @@ async function _panelProgres(s){
   }
   const sb = await _sswAktif(s);
   if (sb.length){
-    const core = await import("./js/ssw-core.js?v=20261118s");
+    const core = await import("./js/ssw-core.js?v=20261128b");
     const rows = await Promise.all(sb.map(async b => {
       let P = null; try { P = await FB.loadSswProgres(b.slug, s.uid); } catch(e){}
       let pk = null; try { pk = await _sswPack(b.slug); } catch(e){}
@@ -2323,7 +2323,7 @@ window.studentActivity = async (uid, tab) => {
         <h3 style="margin-top:12px;">Ujian JLPT Center (per level &amp; jenis)</h3><div class="table-wrap"><table><thead><tr><th>Ujian</th><th>Dikerjakan</th><th>Terakhir</th><th>Terbaik</th><th>Tanggal terakhir</th></tr></thead><tbody>${jr}</tbody></table></div>
         <h3 style="margin-top:12px;">Riwayat nilai (15 terakhir)</h3><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ujian</th><th>Nilai</th><th>Benar</th></tr></thead><tbody>${nr}</tbody></table></div>`;
     } else if (tab === "ssw") {
-      const core = await import("./js/ssw-core.js?v=20261118s");
+      const core = await import("./js/ssw-core.js?v=20261128b");
       const kls = state.kelasList || [];
       const items = await Promise.all(_SSW_8.map(async ([slug, nama]) => {
         const blokTotal = siswa.aksesSsw === false;

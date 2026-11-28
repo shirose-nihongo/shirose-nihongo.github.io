@@ -14,7 +14,7 @@
 import {
   initSswCore, esc, rich, plain, spoken, shuffle, seeded, isGuru, loadBidang, bidangBySlug, loadPack, getProgress, touch, flush, logAct,
   babProgress, STATUS_LABEL, babStatus, siswaBolehBab, newCard, cardState, schedule, cardStats, buildQueue, fullQuizzes, EXAM_SPEC, readingQuiz, recordQuiz, sswAllowed, loadKelasAkses, points, syncRank, loadRank, uidNow, syncCards, vnum, DAY
-} from "./ssw-core.js?v=20261118s";
+} from "./ssw-core.js?v=20261128b";
 import { islandSVG, buildingSVG, bldFor } from "./ssw-art.js?v=20261118k";
 
 /* Teks resmi (PDF) per bidang — file di assets/ssw/<slug>/pdf atau tautan situs resmi. */
@@ -1337,6 +1337,7 @@ const SSW = window.SSW = {
     const total = FC.queue.length;
     if (!total) { root.innerHTML = `<div class="sw-panel sw-center"><div class="sw-emoji">🎉</div><h2>Tidak ada kartu untuk direview</h2><p class="sw-muted">Semua kartu sudah dijadwalkan. Coba mode “Semua kartu”.</p><button class="btn" onclick="route('ssw-kartu/${FC.slug}/${FC.scope}/semua')">Latih semua kartu</button></div>`; return; }
     if (FC.i >= total) {
+      try { window.simpanProgres && window.simpanProgres(); } catch (e) {}
       root.innerHTML = `<div class="sw-panel sw-center"><div class="sw-emoji">✅</div><h2>Sesi selesai</h2><p>Hafal: <b>${FC.ok}</b> · Belum hafal: <b>${FC.ng}</b></p>
         <div class="sw-actions">${FC.hist.length ? `<button class="btn ghost" onclick="SSW.fcUndo()">↶ Kembali ke kartu terakhir</button>` : ""}<button class="btn" onclick="route('ssw-kartu/${FC.slug}/${FC.scope}/belum')">Ulangi yang belum hafal</button><button class="btn ghost" onclick="route('ssw-peta/${FC.slug}')">Kembali ke peta</button></div></div>`; return;
     }
@@ -1403,6 +1404,7 @@ const SSW = window.SSW = {
       if (!Q.retry) {
         if (window.awardXP && !Q.paid) { Q.paid = 1; window.awardXP(pct >= 80 ? 5 : 2, pct >= 80 ? 3 : 1); }
         logAct(Q.slug, `Kuis ${plain(L(Q.q.title, "id"))}: ${pct}%`); touch(Q.slug); flush(Q.slug);
+        try { window.simpanProgres && window.simpanProgres(); } catch (e) {}
       }
       root.innerHTML = `<div class="sw-panel sw-center"><div class="sw-emoji">${pct >= 80 ? "🏆" : pct >= 60 ? "👍" : "📖"}</div><h2>Skor: ${pct}%</h2><p>${Q.score} benar dari ${total} soal.</p>
         ${Q.wrong.length ? `<div class="sw-review"><h3>Yang perlu diulang</h3>${Q.wrong.map(w => `<div class="sw-rv"><p>${rich(L(w.q, Q.lang))}</p><p class="ok">✓ ${rich(L(w.opts[w.a], Q.lang))}</p><p class="sw-muted">${rich(L(w.exp, Q.lang))}</p></div>`).join("")}</div>` : '<p class="ok">Sempurna!</p>'}
