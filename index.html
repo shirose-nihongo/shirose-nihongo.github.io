@@ -1576,6 +1576,8 @@ html{overflow-x:hidden;}
 </div>
 
 <script type="module">
+import { panduanRute, pilihPanduan } from "./js/panduan.js";
+window.pilihPanduan = pilihPanduan;
 import { renderCharacter, CATALOG, CATALOG_LABELS, DEFAULT_EQUIPPED, getBody, setBody, itemOk, getBentuk, setBentuk, MATA_LIST } from "./js/character.js?v=20261122p";
 import Chibi from "./js/chibi.js?v=20261125h";
 window.Chibi = Chibi;
@@ -2558,6 +2560,8 @@ function _autoChibi(name){
 }
 function _renderRoute(name, rest){
   const fn = routes[name] || renderHome;
+  // Panduan menu/program: hanya untuk akun yang sudah login.
+  try { panduanRute(name || "home", { uid: state.user?.uid, level: state.level }); } catch(e){ console.warn("panduan", e); }
   const app = document.getElementById("app");
   app.classList.remove("has-sidepanel");
   app.innerHTML = '<div class="loading">Memuat…</div>';
@@ -2891,7 +2895,7 @@ function renderPilihLevel(){
       <div class="jlpt-grid">${cards}${kartuJft}${kartuKana}${kartuSsw}${kartuMensetsu}${kartuHafalan}${kartuSaran}${kartuGuru}</div>
       <div class="foot">
         ${adaYangBuka ? "Level bergembok dibuka oleh guru." : "Belum ada level yang dibuka untukmu — hubungi guru."}
-        <div style="margin-top:12px;"><button class="btn ghost" onclick="logout()">Keluar</button></div>
+        <div style="margin-top:12px;"><button class="btn ghost" onclick="pilihPanduan()">❓ Panduan</button> <button class="btn ghost" onclick="logout()">Keluar</button></div>
       </div>
     </div>`;
 }

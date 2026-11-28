@@ -7,9 +7,9 @@ Semua suara di website memakai **7 karakter VOICEVOX** (daftar dan pengaturannya
 | aoyama | 青山龍星 | narator & instruksi Choukai, guru, contoh kalimat |
 | mochiko | もち子さん | perempuan umum, kosakata |
 | goki | 後鬼 | ibu / perempuan dewasa, guru perempuan |
-| no7 | No.7 | anak kecil (suara anak); sementara masih dipakai materi kanji |
+| no7 | No.7 | TIDAK dipakai untuk konten baru (hanya audio lama) |
 | sourin | 麒ヶ島宗麟 | bapak tua / tokoh senior |
-| nana | 春歌ナナ | siswi |
+| nana | 春歌ナナ | TIDAK dipakai untuk konten baru (hanya audio lama) |
 | kurita | 栗田まろん | cowok / siswa laki-laki |
 
 ## Cara kerja di website
