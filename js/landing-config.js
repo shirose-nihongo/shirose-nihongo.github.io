@@ -14,7 +14,8 @@ window.LANDING_CONFIG = {
   /* Pilihan paket yang tampil di popup akun demo (js/demo.js). Tiap tombol membuka chat pribadi admin
      dengan pesan sesuai paket yang dipencet. Tambah/ubah/hapus baris sesuai paket yang dijual. */
   paket: [
-    { id: "bulanan",  label: "📅 Paket Bulanan",  teks: "Halo admin Shirose Nihongo, saya mau membeli Paket BULANAN. Mohon info harga dan cara pembayarannya." },
+    { id: "bulanan",  label: "📅 Paket 1 Bulan",  teks: "Halo admin Shirose Nihongo, saya mau membeli Paket 1 BULAN. Mohon info harga dan cara pembayarannya." },
+    { id: "tiga",     label: "⭐ Paket 3 Bulan (Rekomendasi)", teks: "Halo admin Shirose Nihongo, saya mau membeli Paket 3 BULAN. Mohon info harga dan cara pembayarannya." },
     { id: "lifetime", label: "♾️ Paket Lifetime", teks: "Halo admin Shirose Nihongo, saya mau membeli Paket LIFETIME. Mohon info harga dan cara pembayarannya." }
   ],
 
@@ -22,6 +23,9 @@ window.LANDING_CONFIG = {
      Harga dalam angka rupiah tanpa titik. Hapus bulanan atau lifetime kalau paket
      itu tidak punya opsi tersebut. "grup" dipakai untuk judul bagian di daftar. */
   membership: {
+    /* Harga 3 bulan = 2,5 x harga bulanan. Harga coret (harga normal) = 5 x harga yang ditawarkan. */
+    tigaBulanKali: 2.5,
+    coretKali: 5,
     jlpt: [
       { nama: "JLPT N5", big: "N5", warna: "#f9a8c9", wm: "日", desc: "Kosakata, kanji, bunpou, latihan, dan ujian penuh N5.", grup: "Per level", bulanan: 20000, lifetime: 99999, rincian: ["1.077 kosakata · 81 kanji · 109 pola bunpou (lengkap dengan contoh)", "Full Exam: 20 paket (1.680 soal), tiap paket ±84 soal / 70 menit", "Tipe soal Full Exam: 漢字読み, 表記, 文脈規定, 言い換え類義, 文法形式の判断, 文の組み立て, 文章の文法, 読解, 課題理解, ポイント理解, 発話表現, 即時応答", "Latihan per bagian: Kanji 20 paket (160 soal) · Kotoba 20 paket (400 soal) · Bunpou 20 paket (120 soal) · Dokkai 20 paket (140 soal) · Bintang ★ 4 paket (80 soal)", "Choukai: 20 paket audio (466 soal)"] },
       { nama: "JLPT N4", big: "N4", warna: "#22d3ee", wm: "日", desc: "Kosakata, kanji, bunpou, latihan, dan ujian penuh N4.", grup: "Per level", bulanan: 20000, lifetime: 99999, rincian: ["914 kosakata · 191 kanji · 175 pola bunpou (lengkap dengan contoh)", "Full Exam: 20 paket (1.760 soal), tiap paket ±88 soal / 70 menit", "Tipe soal Full Exam: 漢字読み, 表記, 文脈規定, 言い換え類義, 用法, 文法形式の判断, 文の組み立て, 文章の文法, 読解, 課題理解, ポイント理解, 発話表現, 即時応答", "Latihan per bagian: Kanji 20 paket (400 soal) · Kotoba 20 paket (400 soal) · Bunpou 20 paket (269 soal) · Dokkai 20 paket (180 soal) · Bintang ★ 4 paket (80 soal)", "Choukai: 20 paket audio (542 soal)"] },

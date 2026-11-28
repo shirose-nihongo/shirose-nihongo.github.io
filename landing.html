@@ -333,6 +333,13 @@ footer{border-top:1px solid var(--border);padding:34px 0 calc(34px + env(safe-ar
 footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bottom:6px}
 
 /* sticky WA (mobile) */
+.hero-promo{margin-top:14px;font-size:15px;line-height:1.7}
+.hero-promo s{color:#ff8f8f;text-decoration-thickness:2px}.hero-promo b{color:var(--pink-light);font-size:19px}
+.hero-promo .hp-off{background:#e11d48;color:#fff;font-weight:800;font-size:11.5px;padding:3px 9px;border-radius:6px;margin-right:6px;letter-spacing:.04em}
+.hero-promo a{color:var(--pink-light);font-weight:700}
+.hg-list{list-style:none;padding:0;margin:20px auto 0;max-width:720px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px 18px;text-align:left}
+.hg-list li{font-size:15px;line-height:1.5}
+.hg-urg{max-width:720px;margin:22px auto 0;background:linear-gradient(135deg,rgba(225,29,72,.22),rgba(255,179,71,.18));border:1px solid rgba(255,143,143,.55);border-radius:14px;padding:12px 16px;font-size:15px}
 .wa-float{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:none}
 .wa-float .btn{width:100%}
 @media(max-width:640px){.wa-float{display:block}body{padding-bottom:76px}}
@@ -427,7 +434,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
     <a class="brand logo" href="#top" aria-label="Shirose Nihongo"><span class="logo-rose logo-rose-img" aria-hidden="true"><img class="lr-leaf" src="./assets/logo-rose-leaf.png" alt="" width="34" height="37"/><img class="lr-pet" src="./assets/logo-rose-petal.png" alt="" width="34" height="37"/></span>
     <span class="logo-text l2"><span class="l2-jp">シロセ</span><span class="l2-en"><i></i>NIHONGO<i></i></span></span></a>
     <div class="links">
-      <a href="#fitur">Fitur</a><a href="#silabus">Silabus</a><a href="#level">Level JLPT</a><a href="#ssw">SSW</a><a href="#karakter">Karakter</a><a href="#demo">Coba Gratis</a><a href="#mulai">Cara Mulai</a><a href="#faq">FAQ</a>
+      <a href="#fitur">Fitur</a><a href="#silabus">Silabus</a><a href="#level">Level JLPT</a><a href="#ssw">SSW</a><a href="#karakter">Karakter</a><a href="#harga">Harga</a><a href="#demo">Coba Gratis</a><a href="#mulai">Cara Mulai</a><a href="#faq">FAQ</a>
     </div>
     <div class="nav-cta">
       <button type="button" class="btn primary sm" data-open-pricing>💳 Berlangganan</button>
@@ -449,6 +456,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
         <a class="btn primary" href="./index.html#login">🎁 Join Akun Demo 7 Hari</a>
       </div>
       <div class="cta-sub">Join grup WhatsApp <b>Shirose Nihongo</b> → dapat akun demo, coba semua fitur.</div>
+      <div class="hero-promo"><span class="hp-off">HEMAT s.d. 80%</span> Berlangganan mulai <s>Rp100.000</s> <b>Rp20.000</b>/bulan · <a href="#harga">lihat harga →</a></div>
       <div class="chips"><span class="chip">JLPT N5–N1</span><span class="chip">Flashcard</span><span class="chip">Kanji</span><span class="chip">JFT-Basic</span><span class="chip">SSW 特定技能</span><span class="chip">面接</span></div>
     </div>
     <div class="art">
@@ -739,11 +747,33 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
 </section>
 
 
+<section id="harga">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <div class="eyebrow">HARGA PROMO · 価格</div>
+      <h2>Belajar sampai lulus,<br><span class="grad">bayarnya cuma seharga beberapa gorengan.</span></h2>
+      <p>Harga normal paket kami lima kali lipat. Sekarang kamu cukup bayar <b>Rp20.000 per bulan</b>, atau ambil <b>3 bulan</b> supaya per bulannya lebih murah, atau <b>Lifetime</b> sekali bayar.</p>
+      <ul class="hg-list">
+        <li>✅ Ribuan soal latihan &amp; ujian lengkap, format seperti ujian asli</li>
+        <li>✅ Kosakata, kanji (animasi goresan), dan bunpou lengkap contoh</li>
+        <li>✅ Audio choukai dengan banyak suara karakter</li>
+        <li>✅ Buku interaktif SSW + simulasi wawancara kerja (Mensetsu)</li>
+        <li>✅ Progres tersimpan, bisa di HP maupun laptop</li>
+        <li>✅ Coba demo 7 hari gratis dulu sebelum bayar</li>
+      </ul>
+      <div class="hg-urg">🔥 <b>Harga promo, bisa naik sewaktu-waktu.</b> Pilih paketnya sekarang, harga yang kamu bayar hari ini tidak berubah untuk masa langgananmu.</div>
+      <div id="harga-teaser"></div>
+      <button type="button" class="btn primary big" data-open-pricing style="margin-top:22px">💳 Lihat Semua Paket &amp; Harga</button>
+      <div class="cta-note">Belum yakin? <a href="#demo" style="color:var(--pink-light)">Coba akun demo 7 hari gratis</a> dulu.</div>
+    </div>
+  </div>
+</section>
+
 <section id="langganan">
   <div class="wrap">
     <div class="cta-box rv">
       <div class="eyebrow">LANGGANAN · WhatsApp</div>
-      <h2>Mau lanjut belajar setelah demo?<br><span class="grad">Berlangganan lewat WhatsApp.</span></h2>
+      <h2>Siap lanjut belajar?<br><span class="grad">Berlangganan lewat WhatsApp.</span></h2>
       <p>Chat admin Shirose Nihongo lewat WhatsApp, pilih paket yang cocok, lalu akun siswamu diaktifkan.</p>
       <ul class="drules" style="margin-top:18px;text-align:left">
         <li>1️⃣ Klik tombol di bawah. Pesan sudah terisi otomatis, tinggal kirim.</li>
@@ -913,7 +943,7 @@ footer .jp{font-family:var(--font-jp);color:var(--gray);font-size:16px;margin-bo
   </div>
 </footer>
 
-<div class="wa-float"><a class="btn wa" data-wa href="#demo">💬 Komunitas Shirose Nihongo</a></div>
+<div class="wa-float"><button type="button" class="btn primary" data-open-pricing>💳 Berlangganan · mulai Rp20.000</button></div>
 
 <script>(function(){
   var T={n5:[1077,81,109],n4:[914,191,175],n3:[1203,341,213],n2:[1659,373,210],n1:[2023,1244,113]},D=[["2 minggu",14],["1 bulan",30],["3 bulan",90],["6 bulan",180],["12 bulan",360]],lv="n5",du=90;

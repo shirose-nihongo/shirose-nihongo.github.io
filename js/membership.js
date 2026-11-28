@@ -19,6 +19,13 @@
   }
   function rupiah(n) { return "Rp" + Number(n).toLocaleString("id-ID"); }
   function hasPrice(v) { return typeof v === "number" && v > 0; }
+  /* Harga 3 bulan = tigaBulanKali (default 2,5) x harga bulanan; harga coret = coretKali (default 5) x harga yang ditawarkan.
+     Per paket boleh diisi manual: tiga: <angka> atau tidak ada 3 bulan dengan tiga: 0. */
+  var KALI3 = typeof M.tigaBulanKali === "number" ? M.tigaBulanKali : 2.5;
+  var KALIC = typeof M.coretKali === "number" ? M.coretKali : 5;
+  function tigaOf(p) { if (typeof p.tiga === "number") return p.tiga > 0 ? p.tiga : undefined; return hasPrice(p.bulanan) ? Math.round(p.bulanan * KALI3) : undefined; }
+  function coretOf(h) { return Math.round(h * KALIC / 1000) * 1000; }
+  function hemat(h) { return Math.round((1 - h / coretOf(h)) * 100); }
   function waLink(nama, durasi, harga) {
     var base = waBase(); if (!base) return "";
     var lines = [
@@ -99,6 +106,21 @@
       ".mb-buy{display:inline-flex;align-items:center;justify-content:center;text-align:center;border:0;border-radius:999px;padding:9px 12px;font:inherit;font-weight:800;font-size:13px;cursor:pointer;text-decoration:none;min-height:42px;background:#1faa59;color:#fff}",
       ".mb-buy:hover{filter:brightness(1.08)}",
       ".mb-buy.off{background:#6b5a66;color:#e5d6de;cursor:not-allowed;pointer-events:none}",
+      ".mb-opt{position:relative}.mb-opt.hot{border-color:var(--pink,#ef6a9a);background:rgba(239,106,154,.12)}",
+      ".mb-badge{position:absolute;top:-10px;right:10px;background:linear-gradient(135deg,#ffb347,#ff6b6b);color:#2a1022;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:3px 9px;border-radius:999px}",
+      ".mb-prow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}",
+      ".mb-coret{font-size:14px;color:#ff8f8f;text-decoration-thickness:2px}",
+      ".mb-hemat{background:#e11d48;color:#fff;font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:6px}",
+      ".mb-per{font-size:12px;color:var(--pink-light,#ffb7c5);font-weight:700}",
+      ".mb-promo{background:linear-gradient(135deg,rgba(225,29,72,.22),rgba(255,179,71,.18));border:1px solid rgba(255,143,143,.55);border-radius:14px;padding:12px 14px;margin:0 0 14px;font-size:14px;line-height:1.55}",
+      ".mb-promo b{color:#ffd3a0}",
+      /* teaser harga di landing */
+      ".mb-tz{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1000px;margin:26px auto 0;text-align:left}",
+      ".mb-tz .mb-k{padding:22px}.mb-tz-lb{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--pink-light,#ffb7c5)}",
+      ".mb-tz-t{font-size:26px;font-weight:800;line-height:1.1;font-family:'Shippori Mincho B1',serif}",
+      ".mb-tz .mb-opt{flex-direction:row;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px}",
+      ".mb-tz .mb-price{font-size:19px}",
+      ".mb-tz .mb-badge{top:-9px}",
       ".mb-note{margin:18px 2px 4px;font-size:13px;color:#ebe9f5;background:rgba(255,255,255,.06);border-left:4px solid var(--pink,#ef6a9a);border-radius:10px;padding:12px 14px}",
       ".mb-note b{display:block;margin-bottom:4px;color:var(--pink-light,#ffb7c5)}",
       ".mb-note ul{margin:0;padding-left:18px}",
@@ -113,11 +135,19 @@
   /* ---------- komponen ---------- */
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 
-  function optCell(nama, durasi, harga) {
+  function optCell(nama, durasi, harga, badge) {
     if (harga === undefined) return el("div", "mb-opt na", durasi + ": tidak tersedia");
-    var c = el("div", "mb-opt"), pr = el("div", "mb-pr");
+    var c = el("div", "mb-opt" + (badge ? " hot" : "")), pr = el("div", "mb-pr");
+    if (badge) c.appendChild(el("div", "mb-badge", badge));
     pr.appendChild(el("div", "mb-dur", durasi));
+    if (hasPrice(harga)) {
+      var row = el("div", "mb-prow");
+      row.appendChild(el("s", "mb-coret", rupiah(coretOf(harga))));
+      row.appendChild(el("span", "mb-hemat", "HEMAT " + hemat(harga) + "%"));
+      pr.appendChild(row);
+    }
     pr.appendChild(el("div", "mb-price" + (hasPrice(harga) ? "" : " none"), hasPrice(harga) ? rupiah(harga) : "Harga belum diisi"));
+    if (durasi === "3 Bulan" && hasPrice(harga)) pr.appendChild(el("div", "mb-per", "≈ " + rupiah(Math.round(harga / 3)) + " per bulan"));
     c.appendChild(pr);
     var href = waLink(nama, durasi, harga);
     var a = el("a", "mb-buy" + (href ? "" : " off"), hasPrice(harga) ? "Berlangganan Sekarang" : "Tanya Harga via WhatsApp");
@@ -237,8 +267,9 @@
       if (sm) k.appendChild(sm);
     }
     var o = el("div", "mb-opts");
-    o.appendChild(optCell(nama, "Bulanan", p.bulanan));
-    o.appendChild(optCell(nama, "Lifetime", p.lifetime));
+    o.appendChild(optCell(nama, "1 Bulan", p.bulanan));
+    o.appendChild(optCell(nama, "3 Bulan", tigaOf(p), tigaOf(p) !== undefined ? "⭐ REKOMENDASI" : ""));
+    o.appendChild(optCell(nama, "Lifetime", p.lifetime, hasPrice(p.lifetime) && !hasPrice(p.bulanan) ? "♾️ SEKALI BAYAR" : ""));
     k.appendChild(o);
     return k;
   }
@@ -262,7 +293,7 @@
   }
   var N = M.catatan || {};
   var TABS = [
-    ["JLPT N5–N1", function () { return pamflet("PAMFLET HARGA", "JLPT N5–N1", "Pilih level atau paket bundling, bulanan atau lifetime.", M.jlpt, "", N.jlpt); }],
+    ["JLPT N5–N1", function () { return pamflet("PAMFLET HARGA", "JLPT N5–N1", "Pilih level atau paket bundling: 1 bulan, 3 bulan, atau lifetime.", M.jlpt, "", N.jlpt); }],
     ["JFT-Basic", function () { return pamflet("PAMFLET HARGA", "JFT-Basic", "Satu membership untuk seluruh materi Irodori.", M.jft, "", N.jft); }],
     ["SSW 特定技能", function () { return pamflet("PAMFLET HARGA", "SSW 特定技能", "Tiap bidang dijual terpisah, sudah termasuk bonus latihan Mensetsu.", M.ssw, "SSW – ", N.ssw); }]
   ];
@@ -274,6 +305,7 @@
     back.onclick = function () { closePricing(); };
     bar.appendChild(back); bar.appendChild(el("div", "mb-ttl", "Berlangganan Shirose Nihongo")); root.appendChild(bar);
     var wrap = el("div", "mb-wrap");
+    var pr = el("div", "mb-promo"); pr.innerHTML = "🔥 <b>Harga promo, diskon hingga " + hemat(10000) + "% dari harga normal.</b> Pilih 1 bulan, <b>3 bulan</b> (lebih hemat per bulan), atau <b>Lifetime</b> sekali bayar. Harga promo bisa naik sewaktu-waktu."; wrap.appendChild(pr);
     wrap.appendChild(el("p", "mb-lead", "Pilih kategori, pilih paket dan durasi, lalu ketuk Berlangganan Sekarang. Ketuk angka di tiap paket untuk melihat isinya. Pesanmu terisi otomatis di WhatsApp admin."));
     if (!waBase()) wrap.appendChild(el("div", "mb-off-note", "Nomor WhatsApp admin belum diisi (js/landing-config.js → langganan.url). Tombol berlangganan nonaktif sementara."));
     var tabs = el("div", "mb-tabs"); tabs.setAttribute("role", "tablist");
@@ -285,13 +317,15 @@
     TABS.forEach(function (t, i) { var b = el("button", "mb-tab", t[0]); b.type = "button"; b.setAttribute("role", "tab"); b.onclick = function () { show(i); }; tabs.appendChild(b); });
     wrap.appendChild(tabs); wrap.appendChild(body);
     wrap.appendChild(el("div", "mb-foot", "Setelah pembayaran dikonfirmasi admin, akses akunmu diaktifkan. Progres belajarmu tetap aman."));
-    root.appendChild(wrap); show(0);
+    root.appendChild(wrap); show(START_TAB);
     return root;
   }
 
   /* ---------- buka / tutup + riwayat browser ---------- */
-  function openPricing() {
+  var START_TAB = 0;
+  function openPricing(i) {
     if (OPEN) return;
+    START_TAB = typeof i === "number" ? i : 0;
     lastFocus = document.activeElement;
     document.body.appendChild(build());
     document.documentElement.style.overflow = "hidden";
@@ -318,7 +352,7 @@
   document.addEventListener("keydown", function (e) { if (OPEN && e.key === "Escape") closePricing(); });
   document.addEventListener("click", function (e) {
     var t = e.target.closest && e.target.closest("[data-open-pricing]");
-    if (t) { e.preventDefault(); e.stopPropagation(); openPricing(); }
+    if (t) { e.preventDefault(); e.stopPropagation(); var ti = parseInt(t.getAttribute("data-open-pricing"), 10); openPricing(isNaN(ti) ? 0 : ti); }
   });
   /* Browser dalam aplikasi (Instagram, TikTok, Facebook, Line, dll.) sering memblokir tab baru ke wa.me.
      Di sana link WhatsApp dibuka di tab yang sama (WhatsApp tetap terbuka lewat link universal). */
@@ -329,6 +363,28 @@
     if (!a) return;
     e.preventDefault(); location.href = a.href;
   }, true);
+
+  /* ---------- teaser harga di landing: <div id="harga-teaser"></div> ---------- */
+  function mountTeaser() {
+    var box = document.getElementById("harga-teaser"); if (!box) return;
+    addStyle(); box.textContent = "";
+    var grid = el("div", "mb-tz");
+    [["JLPT", "Mulai dari N5", (M.jlpt || [])[0], 0, "#f9a8c9"], ["JFT-Basic", "Complete Access", (M.jft || [])[0], 1, "#22d3ee"],
+     ["SSW 特定技能", "Mulai dari Agriculture", (M.ssw || []).filter(function (x) { return /Agriculture/.test(x.nama); })[0], 2, "#10b981"]].forEach(function (c) {
+      var p = c[2]; if (!p) return;
+      var k = el("div", "mb-k"); k.style.setProperty("--ac", c[4]);
+      k.appendChild(el("div", "mb-tz-lb", c[1].toUpperCase())); k.appendChild(el("div", "mb-tz-t", c[0]));
+      var o = el("div", "mb-opts");
+      o.appendChild(optCell(p.nama, "1 Bulan", p.bulanan));
+      o.appendChild(optCell(p.nama, "3 Bulan", tigaOf(p), "⭐ REKOMENDASI"));
+      o.appendChild(optCell(p.nama, "Lifetime", p.lifetime));
+      k.appendChild(o);
+      var more = el("button", "mb-buy", "Lihat semua paket " + c[0]); more.type = "button"; more.style.background = "transparent"; more.style.border = "1.5px solid " + c[4]; more.setAttribute("data-open-pricing", String(c[3]));
+      k.appendChild(more); grid.appendChild(k);
+    });
+    box.appendChild(grid);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mountTeaser); else mountTeaser();
   window.openPricing = openPricing; window.closePricing = closePricing;
 
   /* ---------- tombol di topbar aplikasi, tepat di samping tombol Tema ---------- */
