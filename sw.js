@@ -1,4 +1,5 @@
 /* Service worker: network-first, cache fallback */
+// v513 — landing: bagian Fitur jadi gambar besar + teks singkat, tanpa demo interaktif.
 // v512 — Berlangganan: harga 1 bulan / 3 bulan (2,5x) / lifetime + harga coret 5x, section Harga di landing.
 // v471 — Silabus Harian (js/silabus-harian.js, css/silabus.css, data/silabus/*): target per hari + ujian bertingkat.
 // v416 — Bunpou: geser kiri/kanan, tabel Perubahan Kata Kerja (data/kk-forms.json).
@@ -16,7 +17,7 @@
 // benar/salah/kosong, navigasi pembahasan per-soal dengan grid jump dan
 // tombol prev/next, tombol "Ulangi Ujian".
 // v405 — Konfirmasi keluar sesi hafalan (JLPT/JFT/SSW, Kana, Mensetsu flashcard).
-const CACHE = "shirose-nihongo-v514";
+const CACHE = "shirose-nihongo-v515";
 const AUDIO = "shirose-audio-v1";   // voice pack offline (tidak dihapus saat update)
 const KVG = "shirose-kvg-v1";       // goresan KanjiVG yang pernah dibuka (offline; tidak dihapus saat update)
 const CORE = [
