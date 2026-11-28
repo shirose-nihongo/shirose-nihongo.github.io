@@ -52,6 +52,31 @@ service cloud.firestore {
     function diubah()     { return request.resource.data.diff(resource.data).affectedKeys(); }
     function targetSiswa(){ return resource.data.get('role', 'student') == 'student'; }
 
+    // ---------- Anti-curang ----------
+    // Teks yang tampil ke orang lain (nama/kelas) tidak boleh berisi tanda HTML/script.
+    function teksAman(s, n) { return s is string && s.size() <= n && !s.matches('(?s).*[<>"`].*'); }
+    // Hari (WIB) sebagai teks, d = geser hari. Sama dengan hitungan di aplikasi.
+    function hariKe(d)   { return string(math.floor((request.time.toMillis() + 25200000) / 86400000) + d); }
+    function jml3(h)     { return h.get(hariKe(-1), 0) + h.get(hariKe(0), 0) + h.get(hariKe(1), 0); }
+    // Kenaikan field f (koin/XP) wajib tercatat di peta 'harian' (kunci hari ini ±1), tiap hari maks `cap`.
+    // Penurunan (belanja) selalu boleh, tapi tidak boleh di bawah 0.
+    function naikWajar(f, cap) {
+      let lama = resource == null ? {} : resource.data;
+      let baru = request.resource.data;
+      let hl = lama.get('harian', {});
+      let hb = baru.get('harian', {});
+      let naik = baru.get(f, 0) - lama.get(f, 0);
+      return baru.get(f, 0) is number && baru.get(f, 0) >= 0 && hb is map
+        && hb.diff(hl).affectedKeys().hasOnly([hariKe(-1), hariKe(0), hariKe(1)])
+        && hb.get(hariKe(-1), 0) >= hl.get(hariKe(-1), 0) && hb.get(hariKe(-1), 0) <= cap
+        && hb.get(hariKe(0), 0) >= hl.get(hariKe(0), 0) && hb.get(hariKe(0), 0) <= cap
+        && hb.get(hariKe(1), 0) >= hl.get(hariKe(1), 0) && hb.get(hariKe(1), 0) <= cap
+        && (naik <= 0 || jml3(hb) - jml3(hl) >= naik);
+    }
+    function pemilikSub(sid) { return signedIn() && me() == sid && terdaftar(); }
+    function gamiXp(l)   { return get(/databases/$(database)/documents/siswa/$(me())/gami/$(l)).data.get('xp', 0); }
+    function xpLbOk(l)   { let v = request.resource.data.xp.get(l, 0); return v is number && v >= 0 && (v == 0 || v <= gamiXp(l)); }
+
     // ---------- /siswa/{uid} : profil akun ----------
     match /siswa/{sid} {
       allow read: if signedIn() && (me() == sid || isGuru());
@@ -67,7 +92,8 @@ service cloud.firestore {
       allow update: if
           // Siswa: profil ringan saja (nama, karakter, aktif), tidak boleh ubah hak akses.
           (me() == sid && aktif()
-             && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'aksesHafalan', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh', 'demoSejak']))
+             && !diubah().hasAny(['role', 'aksesLevel', 'aksesSsw', 'aksesJft', 'aksesJftLevel', 'aksesSswBidang', 'aksesHafalan', 'kelas', 'status', 'email', 'permissions', 'dibuatOleh', 'demoSejak'])
+             && (!diubah().hasAny(['nama']) || teksAman(request.resource.data.nama, 60)))
           // Moderator boleh memperbaiki profilnya sendiri.
           || (me() == sid && ownerEmail())
           // Guru: atur akses/kelas/status/nama siswa (bukan role, bukan akun guru lain).
@@ -82,7 +108,30 @@ service cloud.firestore {
       // rangkuman, ujian_rewards, dll.
       match /{sub}/{docId} {
         allow read: if signedIn() && ((me() == sid && terdaftar()) || isGuru());
-        allow write: if signedIn() && ((me() == sid && terdaftar()) || isGuru());
+        allow write: if isGuru()
+          || (pemilikSub(sid) && !(sub in ['wallet', 'gami', 'ujian_rewards', 'login_reward']));
+      }
+      // Dompet koin: koin hanya naik maks 15.000/hari, tidak bisa minus, tidak bisa dihapus siswa.
+      match /wallet/{docId} {
+        allow create, update: if pemilikSub(sid) && docId == 'main'
+          && request.resource.data.get('spentReset', 0) == (resource == null ? 0 : resource.data.get('spentReset', 0))
+          && naikWajar('koin', 15000);
+      }
+      // XP per level: naik maks 10.000/hari per level; koin lama di sini tidak boleh ditambah.
+      match /gami/{lv} {
+        allow create, update: if pemilikSub(sid)
+          && request.resource.data.get('koin', 0) <= (resource == null ? 0 : resource.data.get('koin', 0))
+          && naikWajar('xp', 10000);
+      }
+      // Hadiah lulus ujian: sekali per paket yang benar-benar ada; tidak bisa dihapus/diulang siswa.
+      match /ujian_rewards/{katId} {
+        allow create: if pemilikSub(sid)
+          && exists(/databases/$(database)/documents/kategori_ujian/$(katId));
+      }
+      // Hadiah login: 'main' boleh diperbarui; penanda sekali-pakai (mis. refund) tidak bisa dihapus/diulang.
+      match /login_reward/{docId} {
+        allow create: if pemilikSub(sid);
+        allow update: if pemilikSub(sid) && docId == 'main';
       }
     }
 
@@ -113,28 +162,81 @@ service cloud.firestore {
     }
 
     // Leaderboard SSW: siswa terdaftar membaca; tiap siswa hanya menulis dokumennya sendiri.
+    function sswRankOk(rid) {
+      let d = request.resource.data;
+      return signedIn() && aktif()
+          && d.uid == me()
+          && rid == d.slug + '__' + me()
+          && d.keys().hasOnly(['uid', 'slug', 'nama', 'kelas', 'poin', 'rinci', 'upd'])
+          && teksAman(d.get('nama', ''), 60) && teksAman(d.get('kelas', ''), 40)
+          && d.poin is number && d.poin >= 0 && d.upd == request.time;
+    }
     match /ssw_rank/{rid} {
       allow read: if terdaftar();
-      allow create, update: if signedIn() && aktif()
-          && request.resource.data.uid == me()
-          && rid == request.resource.data.slug + '__' + me()
-          && request.resource.data.keys().hasOnly(['uid', 'slug', 'nama', 'kelas', 'poin', 'rinci', 'upd'])
-          && request.resource.data.poin is number && request.resource.data.poin >= 0 && request.resource.data.poin <= 1000000;
+      // Poin baru maks 20.000; sesudahnya naik maks 3.000 per kirim dan paling cepat tiap 12 jam.
+      allow create: if sswRankOk(rid) && request.resource.data.poin <= 20000;
+      allow update: if sswRankOk(rid)
+          && (request.resource.data.poin <= resource.data.get('poin', 0)
+              || (request.resource.data.poin <= resource.data.get('poin', 0) + 3000
+                  && (!(resource.data.get('upd', null) is timestamp) || request.time > resource.data.upd + duration.value(12, 'h'))));
       allow delete: if isGuru();
     }
 
     // Leaderboard ringkas (level & poin saja): siswa terdaftar membaca; siswa hanya menulis dokumennya sendiri.
     match /lb/{uid} {
       allow read: if terdaftar();
+      // XP di leaderboard tidak boleh melebihi XP asli di gami/{level}; total = jumlah N5–N1.
       allow create, update: if (signedIn() && aktif() && uid == me()
           && request.resource.data.uid == me()
           && request.resource.data.keys().hasOnly(['uid', 'nama', 'kelas', 'xp', 'total', 'lv', 'upd'])
-          && request.resource.data.total is number && request.resource.data.total >= 0 && request.resource.data.total <= 100000000)
+          && teksAman(request.resource.data.get('nama', ''), 60) && teksAman(request.resource.data.get('kelas', ''), 40)
+          && request.resource.data.xp is map && request.resource.data.xp.keys().hasOnly(['n5', 'n4', 'n3', 'n2', 'n1'])
+          && xpLbOk('n5') && xpLbOk('n4') && xpLbOk('n3') && xpLbOk('n2') && xpLbOk('n1')
+          && request.resource.data.total == request.resource.data.xp.get('n5', 0) + request.resource.data.xp.get('n4', 0)
+             + request.resource.data.xp.get('n3', 0) + request.resource.data.xp.get('n2', 0) + request.resource.data.xp.get('n1', 0)
+          && request.resource.data.lv is number && request.resource.data.lv >= 1 && request.resource.data.lv <= 500)
           || isGuru();
       allow delete: if isGuru();
     }
 
-    // Ujian buatan guru: indeks kategori (1 dokumen) & paket soal per kategori (1 dokumen) → siswa cukup 1 baca.
+    // Leaderboard GABUNGAN: 1 dokumen = 1 baca. Siswa hanya boleh mengubah barisnya sendiri.
+    // Baris sendiri di leaderboard gabungan harus sama persis dengan lb/{uid} (yang sudah dicek ke XP asli).
+    function barisLbOk() {
+      let r = request.resource.data.rows[me()];
+      let d = get(/databases/$(database)/documents/lb/$(me())).data;
+      return r.keys().hasOnly(['n', 'k', 't', 'x', 'lv'])
+        && teksAman(r.get('n', ''), 60) && teksAman(r.get('k', ''), 40)
+        && r.get('t', 0) == d.total && r.get('x', {}) == d.xp && r.get('lv', 1) == d.lv;
+    }
+    function barisSswOk(slug) {
+      let r = request.resource.data.rows[me()];
+      let d = get(/databases/$(database)/documents/ssw_rank/$(slug + '__' + me())).data;
+      return r.keys().hasOnly(['n', 'k', 'p', 'r'])
+        && teksAman(r.get('n', ''), 60) && teksAman(r.get('k', ''), 40)
+        && r.get('p', 0) == d.poin;
+    }
+    match /lb_agg/{id} {
+      allow read: if terdaftar();
+      allow create: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.keys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.keys().hasOnly([me()]) && barisLbOk());
+      allow update: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.diff(resource.data.rows).affectedKeys().hasOnly([me()]) && barisLbOk());
+      allow delete: if isGuru();
+    }
+    match /ssw_rank_agg/{slug} {
+      allow read: if terdaftar();
+      allow create: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.keys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.keys().hasOnly([me()]) && barisSswOk(slug));
+      allow update: if isGuru() || (signedIn() && aktif()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['rows', 'upd'])
+          && request.resource.data.rows.diff(resource.data.rows).affectedKeys().hasOnly([me()]) && barisSswOk(slug));
+      allow delete: if isGuru();
+    }
+
+    // Ujian buatan guru: indeks kategori & paket soal per kategori (1 dokumen) → siswa cukup 1 baca.
     match /kategori_index/{id} {
       allow read: if terdaftar();
       allow write: if isGuru();
@@ -144,43 +246,12 @@ service cloud.firestore {
         || bolehLevel(get(/databases/$(database)/documents/kategori_ujian/$(katId)).data.get('level', 'n5'));
       allow write: if isGuru();
     }
+
     // Dashboard guru: SATU kueri untuk hasil baru semua siswa (collection group).
     match /{path=**}/jlpt_hasil/{id} { allow read: if isGuru(); }
     match /{path=**}/jft_hasil/{id} { allow read: if isGuru(); }
     match /{path=**}/mensetsu_hasil/{id} { allow read: if isGuru(); }
     match /{path=**}/nilai/{id} { allow read: if isGuru(); }
-
-    // Karakter publik untuk leaderboard (dandanan saja): siswa terdaftar membaca; siswa hanya menulis dokumennya sendiri.
-    match /lbk/{uid} {
-      allow read: if terdaftar();
-      allow create, update: if (signedIn() && aktif() && uid == me()
-          && request.resource.data.uid == me()
-          && request.resource.data.keys().hasOnly(['uid', 'nama', 'eq', 'sk', 'hc', 'b', 'bt', 'upd'])
-          && request.resource.data.eq is map)
-          || isGuru();
-      allow delete: if isGuru();
-    }
-    // Leaderboard gabungan: 1 dokumen = 1 baca. Siswa hanya boleh mengubah barisnya sendiri.
-    match /lb_agg/{id} {
-      allow read: if terdaftar();
-      allow create: if isGuru() || (signedIn() && aktif()
-          && request.resource.data.keys().hasOnly(['rows', 'upd'])
-          && request.resource.data.rows.keys().hasOnly([me()]));
-      allow update: if isGuru() || (signedIn() && aktif()
-          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['rows', 'upd'])
-          && request.resource.data.rows.diff(resource.data.rows).affectedKeys().hasOnly([me()]));
-      allow delete: if isGuru();
-    }
-    match /ssw_rank_agg/{slug} {
-      allow read: if terdaftar();
-      allow create: if isGuru() || (signedIn() && aktif()
-          && request.resource.data.keys().hasOnly(['rows', 'upd'])
-          && request.resource.data.rows.keys().hasOnly([me()]));
-      allow update: if isGuru() || (signedIn() && aktif()
-          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['rows', 'upd'])
-          && request.resource.data.rows.diff(resource.data.rows).affectedKeys().hasOnly([me()]));
-      allow delete: if isGuru();
-    }
 
     // ---------- Kelas kata kosakata (override guru) ----------
     match /kosakata_pos/{lvl} {
@@ -211,8 +282,8 @@ service cloud.firestore {
       allow write: if isGuru();
     }
 
-    // PELAJARAN › SOAL (pilihan ganda A–D + penjelasan buatan guru).
-    // guru_soal: KHUSUS guru. soal_kelas: _index = metadata (dibaca siswa terdaftar); isi soal hanya terbaca siswa yang kelasnya dipilih (atau semua=true).
+    // PELAJARAN > SOAL (pilihan ganda A-D + penjelasan buatan guru).
+    // guru_soal: KHUSUS guru. soal_kelas: _index = metadata (dibaca siswa terdaftar); isi soal hanya terbaca siswa yang kelasnya dipilih, siswa yang dipilih, atau semua=true.
     // Progres siswa ada di siswa/{uid}/soal_progres/{id} (tercakup aturan sub-koleksi siswa).
     match /guru_soal/{id} {
       allow read, write: if isGuru();
@@ -251,12 +322,21 @@ service cloud.firestore {
     }
     match /komentar/{key}/items/{id} {
       allow read: if terdaftar();
-      allow create: if terdaftar()
-                    && request.resource.data.uid == me()
-                    && request.resource.data.text is string
-                    && request.resource.data.text.size() <= 1000;
-      allow delete: if signedIn() && (resource.data.uid == me() || isGuru());
+      // Fitur komentar sudah dihapus dari aplikasi: tidak ada tulis baru.
+      allow create: if false;
+      allow delete: if isGuru();
       allow update: if false;
+    }
+    // Karakter publik untuk leaderboard (dandanan saja): siswa terdaftar membaca; siswa hanya menulis dokumennya sendiri.
+    match /lbk/{uid} {
+      allow read: if terdaftar();
+      allow create, update: if (signedIn() && aktif() && uid == me()
+          && request.resource.data.uid == me()
+          && request.resource.data.keys().hasOnly(['uid', 'nama', 'eq', 'sk', 'hc', 'b', 'bt', 'upd'])
+          && teksAman(request.resource.data.get('nama', ''), 60)
+          && request.resource.data.eq is map)
+          || isGuru();
+      allow delete: if isGuru();
     }
     // Sengaja TIDAK ada rule catch-all: koleksi yang tidak disebut di atas ditolak.
   }
